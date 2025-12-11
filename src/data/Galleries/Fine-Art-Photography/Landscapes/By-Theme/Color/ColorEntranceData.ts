@@ -1,6 +1,16 @@
 export const entranceData = {
   title: "Color Landscape Photography by Wayne Heim – Fine Art Prints",
   subtitle: "Classic Views, Vivid Color – Timeless Scenes from Near and Far",
+
+  keywords: [
+    "color landscape photography",
+    "traditional fine art landscapes",
+    "classic scenic wall art",
+    "natural color photography",
+    "timeless landscape prints",
+    "Wayne Heim landscape photography"
+  ],
+
   description: `
     Explore the world through Wayne Heim’s color landscape photography—fine art prints capturing the beauty, variety, and emotion of wild places in every season. 
     This gallery features classic scenic views from the American West, Midwest, Iceland, and beyond—each image rendered with natural color, clarity, and traditional photographic artistry.

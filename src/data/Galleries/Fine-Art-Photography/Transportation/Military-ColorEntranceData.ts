@@ -1,6 +1,19 @@
 export const entranceData = {
   title: "Military Vehicles Fine Art Photography by Wayne Heim – Traditional Prints",
   subtitle: "Power, History, and Engineering – Military Machines in Fine Art",
+
+  keywords: [
+    "Military Vehicles Photography",
+    "Military Equipment Collection",
+    "Vintage Military Machines",
+    "Military Transportation Gallery",
+    "Historic Military Vehicles",
+    "tank photography",
+    "jeep photography",
+    "military aviation",
+    "Wayne Heim military photography"
+  ],
+
   description: `
     Explore the strength and legacy of military vehicles through Wayne Heim’s traditional fine art photography. This gallery highlights tanks, planes, jeeps, and armored vehicles — photographed with clarity and respect for their design, engineering, and historical significance.
     <br><br>

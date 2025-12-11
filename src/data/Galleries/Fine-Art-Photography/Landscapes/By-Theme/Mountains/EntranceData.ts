@@ -1,4 +1,14 @@
 export const entranceData = {
+  keywords: [
+    "mountain landscape photography",
+    "traditional mountain prints",
+    "fine art mountain photography",
+    "Grand Teton photography",
+    "Rocky Mountain landscape art",
+    "classic mountain scenery",
+    "Western mountain wall art",
+    "Wayne Heim mountain landscape photography"
+  ],
   title: "Mountain Landscape Photography by Wayne Heim – Fine Art Prints",
   subtitle: "From Wyoming to the World – Classic Mountain Views in Traditional Photographic Style",
   description:

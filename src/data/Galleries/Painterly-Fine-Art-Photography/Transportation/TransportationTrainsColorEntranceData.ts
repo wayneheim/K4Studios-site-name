@@ -3,6 +3,19 @@
 export const entranceData = {
   title: "Color Train Photography by Wayne Heim – Painterly Fine Art Railroad Photos",
   subtitle: "Colorful Locomotives, Railroads, and Trains in Painterly Fine Art Photography",
+
+  keywords: [
+    "Steam Engine Photography",
+    "Railway Photography",
+    "Train Photography Collection",
+    "steam trains",
+    "steam engines",
+    "locomotive photography",
+    "railroad wall art",
+    "vintage train photography",
+    "Wayne Heim train photography"
+  ],
+
   description:
     "Experience the energy and vibrance of color train photography as you journey through Wayne Heim’s painterly fine art gallery. Explore a collection that celebrates classic locomotives, vibrant railcars, and the timeless spirit of trains—all brought to life with a painterly style that blends realism and artistic storytelling. Every image captures the strength, history, and beauty of these powerful machines, inviting you to appreciate their role in shaping our journeys and memories. These are more than photographs; they’re visual stories, evoking emotion and admiration for the golden age and present-day wonder of rail travel. Whether you’re captivated by steam engines, diesel giants, or modern trains, this gallery is a tribute to the artistry of motion in living color.",
   details:

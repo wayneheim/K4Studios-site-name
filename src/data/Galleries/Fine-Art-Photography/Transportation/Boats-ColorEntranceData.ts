@@ -1,6 +1,17 @@
 export const entranceData = {
   title: "Boats & Watercraft Fine Art Photography by Wayne Heim – Traditional Prints",
   subtitle: "From Quiet Harbors to Open Seas – Watercraft Captured in Fine Art",
+
+  keywords: [
+    "boats",
+    "watercraft photography",
+    "sailboat photography",
+    "nautical fine art",
+    "maritime photography",
+    "harbor photography",
+    "Wayne Heim boat photography"
+  ],
+
   description: `
     Discover the timeless beauty of boats, ships, and watercraft through Wayne Heim’s traditional fine art photography. This gallery showcases vessels ranging from rustic fishing boats to elegant sailboats and powerful ships — each image honoring design, craftsmanship, and the relationship between humanity and water.
     <br><br>

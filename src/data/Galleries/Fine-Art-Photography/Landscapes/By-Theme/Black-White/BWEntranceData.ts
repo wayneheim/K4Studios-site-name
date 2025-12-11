@@ -1,6 +1,16 @@
 export const entranceData = {
   title: "Black & White Landscape Photography by Wayne Heim – Fine Art Prints",
   subtitle: "Timeless Scenes in Monochrome – Classic Landscapes, Pure Expression",
+
+  keywords: [
+    "black and white landscape photography",
+    "monochrome landscape art",
+    "classic black and white scenery",
+    "dramatic landscape prints",
+    "timeless monochrome fine art",
+    "Wayne Heim black and white photography"
+  ],
+
   description: `
     Discover the elegance and drama of Wayne Heim’s black & white landscape photography—fine art prints that celebrate the beauty, mood, and detail of wild places in timeless monochrome.
     Each image is carefully crafted in classic photographic style, focusing on shape, light, and atmosphere. Perfect for collectors, interior designers, and anyone who loves the artistry of black and white.

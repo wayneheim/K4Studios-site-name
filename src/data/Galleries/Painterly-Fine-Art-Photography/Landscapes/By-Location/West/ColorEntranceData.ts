@@ -3,6 +3,20 @@
 export const entranceData = {
   title: "Painterly Western Landscape Photography Prints – Fine Art of the American West by Wayne Heim",
   subtitle: "Endless Horizons, Painted Light – Painterly Western Landscapes from Peaks to Prairies",
+
+  keywords: [
+    "Western Painterly Landscapes",
+    "Painterly Western Landscapes",
+    "Mountain West",
+    "mountain west fine art photography",
+    "painterly fine art landscape photography",
+    "western landscape photography",
+    "ethereal landscapes",
+    "American West fine art",
+    "Wyoming & Montana landscapes",
+    "Wayne Heim landscape photography"
+  ],
+
 description: `
   Explore painterly Western landscape photography by Wayne Heim, capturing evocative scenes from towering mountain ranges, vast deserts, wild rivers, and iconic canyons across the American West. These fine art prints turn legendary vistas and hidden outposts into moody, textured visual stories—perfect for collectors, interior designers, and all who are drawn to the spirit of the frontier.
   <br><br>

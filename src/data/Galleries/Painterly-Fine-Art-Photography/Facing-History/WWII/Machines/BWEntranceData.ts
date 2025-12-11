@@ -19,6 +19,21 @@ const featured = previewPool[0] || {};
 export const entranceData = {
   title: "WWII Men & Machines – Black & White Fine Art Photography by Wayne Heim",
   subtitle: "Historic World War II Machines & Crew in Black & White",
+
+  keywords: [
+    "Men & Machines B/W",
+    "Black & White WWII Machines",
+    "WWII Military Equipment B/W",
+    "One-Image Movie",
+    "monochrome military machinery",
+    "tanks and trucks art",
+    "battle-ready machines",
+    "military machinery prints",
+    "Wayne Heim WWII photography",
+    "Facing History photography",
+    "WWII Mechanized Might"
+  ],
+
   description:
     "Explore the stark beauty of WWII military machinery and the people who shaped history. Wayne Heim’s black and white portraits capture the essence of vehicles, equipment, and crew—from tanks and jeeps to pilots and mechanics—in dramatic, painterly light. Each photograph is an homage to engineering, teamwork, and resilience during wartime.",
   details: `

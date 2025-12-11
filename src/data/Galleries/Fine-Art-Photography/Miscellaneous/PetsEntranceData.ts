@@ -1,5 +1,16 @@
 // data/Galleries/Fine-Art-Photography/Miscellaneous/PetsEntranceData.ts
 export const entranceData = {
+  keywords: [
+    "traditional pet photography",
+    "fine art pet portraits",
+    "dog portrait photography",
+    "cat photography prints",
+    "companion animal wall art",
+    "equestrian photography",
+    "pet fine art prints",
+    "beloved companion portraits",
+    "Wayne Heim pet photography"
+  ],
   title: "Traditional Pet Photography by Wayne Heim – Fine Art Animal Portraits",
   subtitle: "Beloved companions captured with dignity, warmth, and timeless artistry",
   description:

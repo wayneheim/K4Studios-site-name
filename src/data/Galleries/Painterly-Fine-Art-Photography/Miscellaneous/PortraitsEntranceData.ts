@@ -3,6 +3,16 @@
 export const entranceData = {
   title: "Misc Portrait Prints by Wayne Heim - Painterly Fine Art Portrait Photography",
   subtitle: "Capturing the Spirit of Individuals in Painterly Style Photography",
+
+  keywords: [
+    "life's raw beauty",
+    "painterly portrait photography",
+    "fine art portraits",
+    "creative painterly art",
+    "character portrait photography",
+    "Wayne Heim portrait photography"
+  ],
+
   description:
     "Discover Wayne's painterly take on classic portrait photography. Each piece is a blend of fine art and photography, capturing the essence of the subject with a painterly touch. These portraits are not just images; they are stories told through the lens, evoking emotion and nostalgia.",
   details:

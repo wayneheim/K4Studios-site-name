@@ -19,6 +19,22 @@ const featured = previewPool[0] || {};
 export const entranceData = {
   title: "WWII Men & Machines – Color Fine Art Photography by Wayne Heim",
   subtitle: "Historic World War II Machines & Crew in Vivid Color",
+
+  keywords: [
+    "Men & Machines",
+    "WWII Military Equipment",
+    "World War II photography",
+    "Life Behind the Lines",
+    "One-Image Movie",
+    "WWII vehicle photography",
+    "military machinery prints",
+    "tanks and trucks art",
+    "battle-ready machines",
+    "Wayne Heim WWII photography",
+    "Facing History photography",
+    "WWII Mechanized Might"
+  ],
+
   description:
     "Discover the vibrant intensity of WWII military machinery and the heroes who operated them. Wayne Heim’s color photographs bring to life the vehicles, equipment, and crew—from tanks and jeeps to pilots and mechanics—in painterly detail. Each image honors the ingenuity, bravery, and teamwork that defined wartime innovation.",
   details: `

@@ -3,6 +3,17 @@
 export const entranceData = {
   title: "Painterly Southern Landscape Photography – Fine Art of the American South by Wayne Heim",
   subtitle: "Southern Light, Timeless Land – Painterly Southern Landscapes from Bayous to Blue Ridges",
+
+  keywords: [
+    "Southern Painterly Landscapes",
+    "southern landscape fine art",
+    "southern landscape photography",
+    "blue ridge painterly landscapes",
+    "South – Light and Legacy",
+    "southern scenery wall art",
+    "Wayne Heim southern photography"
+  ],
+
   description:
     "Experience painterly Southern landscape photography by Wayne Heim, capturing evocative scenes from sun-drenched fields, misty bayous, ancient oaks, and vibrant small towns across the American South. These fine art prints transform iconic Southern settings and hidden gems into moody, textured visual stories—ideal for collectors, interior designers, and anyone who finds magic in southern charm and hospitality.",
   details:

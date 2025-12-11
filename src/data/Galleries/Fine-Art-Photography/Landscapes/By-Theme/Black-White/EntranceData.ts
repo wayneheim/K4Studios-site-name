@@ -1,4 +1,14 @@
 export const entranceData = {
+  keywords: [
+    "black white landscape photography",
+    "monochrome landscape prints",
+    "traditional black and white landscapes",
+    "dramatic BW landscape art",
+    "classic black white fine art",
+    "timeless monochrome scenery",
+    "black white nature photography",
+    "Wayne Heim black white landscapes"
+  ],
   title: "Black & White Landscape Photography by Wayne Heim – Fine Art Prints",
   subtitle: "Timeless Scenes in Monochrome – Classic Landscapes, Pure Expression",
   description: `

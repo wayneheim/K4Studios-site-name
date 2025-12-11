@@ -19,6 +19,21 @@ const featured = previewPool[0] || {};
 export const entranceData = {
   title: "WWII Portraits in Black & White – Painterly Fine Art by Wayne Heim",
   subtitle: "World War II Reenactor Portraits – Classic B&W Style",
+
+  keywords: [
+    "WWII Portraits",
+    "black and white WWII photography",
+    "the Greatest Generation",
+    "monochrome wartime portraits",
+    "One-Image Movie",
+    "painterly WWII portraits",
+    "WWII reenactment photography",
+    "military portrait art",
+    "Wayne Heim WWII photography",
+    "Facing History photography",
+    "WWII Sacrifice & Brotherhood"
+  ],
+
   description:
     "Experience the faces of World War II brought to life in painterly black and white. Wayne Heim’s portrait series captures reenactors, veterans, and historical characters with timeless artistry, focusing on personal stories, expression, and the emotional weight of the era. Every image is carefully crafted to evoke both the grit and humanity of WWII, presented in rich monochrome for maximum mood and authenticity.",
   details: `

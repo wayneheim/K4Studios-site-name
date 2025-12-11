@@ -1,6 +1,19 @@
 export const entranceData = {
   title: "Train & Locomotive Fine Art Photography by Wayne Heim – Traditional Prints",
   subtitle: "Steam, Steel, and Railroads – The Power of Trains in Fine Art",
+
+  keywords: [
+    "Railway Photography",
+    "Train Photography Collection",
+    "Steam Engine Gallery",
+    "Locomotive Art Collection",
+    "Historic Trains",
+    "train photography",
+    "steam engine photography",
+    "railroad wall art",
+    "Wayne Heim train photography"
+  ],
+
   description: `
     Step into the world of railroads with Wayne Heim’s traditional train photography. This gallery features historic steam locomotives, vintage railcars, and modern trains — photographed with clarity, authenticity, and respect for their enduring role in history.
     <br><br>

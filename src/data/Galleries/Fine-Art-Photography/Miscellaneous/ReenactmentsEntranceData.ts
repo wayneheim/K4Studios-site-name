@@ -1,5 +1,16 @@
 // data/Galleries/Fine-Art-Photography/Miscellaneous/ReenactmentsEntranceData.ts
 export const entranceData = {
+  keywords: [
+    "traditional reenactment photography",
+    "historical reenactment photography",
+    "fine art reenactment photography",
+    "Civil War reenactment photography",
+    "Revolutionary War portraits",
+    "Old West reenactors",
+    "living history photography",
+    "historic reenactor prints",
+    "Wayne Heim reenactment photography"
+  ],
   title: "Traditional Reenactment Photography by Wayne Heim – Fine Art of Living History",
   subtitle: "Historic moments and characters brought to life through traditional fine art photography",
   description:

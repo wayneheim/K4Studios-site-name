@@ -1,6 +1,19 @@
 export const entranceData = {
   title: "Classic Cars & Vintage Automotive Photography by Wayne Heim – Traditional Series – Fine Art Prints",
   subtitle: "From Chrome to Rust – Elegance, Grit, and Americana Captured in Fine Art",
+
+  keywords: [
+    "Classic Cars & Trucks Collection",
+    "Route 66 Photography",
+    "vintage cars",
+    "vintage autos",
+    "classic car photography",
+    "automotive fine art",
+    "muscle car prints",
+    "Americana vehicles",
+    "Wayne Heim car photography"
+  ],
+
   description: `
     Explore the timeless beauty of automobiles through Wayne Heim’s traditional fine art car photography. This gallery showcases classic cars, vintage trucks, and chrome-drenched cruisers — each image celebrating design, craftsmanship, and the spirit of the open road.
     <br><br>

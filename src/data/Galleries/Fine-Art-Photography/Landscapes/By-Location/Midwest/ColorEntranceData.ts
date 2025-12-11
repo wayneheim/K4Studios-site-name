@@ -1,8 +1,20 @@
 // data/galleries/Midwest/ColorEntranceData.ts
 
 export const entranceData = {
-  title: "Midwest Landscape Photography by Wayne Heim – Traditional Fine Art from America’s Heartland",
+  title: "Midwest Landscape Photography by Wayne Heim – Traditional Fine Art from America's Heartland",
   subtitle: "Authentic Views of the Midwest – Fields, Rivers, and Rural Heritage in Fine Art Prints",
+
+  keywords: [
+    "Midwest Traditional Landscapes",
+    "Midwest Landscapes – Beauty in Simplicity",
+    "Midwest Rivers & Lakes",
+    "heartland landscape prints",
+    "traditional midwest landscape photography",
+    "Midwest – The Heartland Preserved",
+    "Ohio river valleys",
+    "Wayne Heim midwest photography"
+  ],
+
   description: `
     Wayne Heim’s traditional Midwest landscape photography highlights the honest beauty of America’s heartland. From wide-open prairies and golden fields to still rivers and historic barns, these fine art prints preserve the character of the Midwest in timeless clarity. Ideal for collectors, designers, and anyone who appreciates rural American landscapes.
     <br><br>

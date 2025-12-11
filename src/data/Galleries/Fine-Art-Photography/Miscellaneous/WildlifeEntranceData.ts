@@ -1,5 +1,16 @@
 // data/Galleries/Fine-Art-Photography/Miscellaneous/WildlifeEntranceData.ts
 export const entranceData = {
+  keywords: [
+    "traditional wildlife photography",
+    "wildlife fine art",
+    "animal portraits",
+    "nature wildlife prints",
+    "fauna photography",
+    "wild animal art",
+    "nature wall art wildlife",
+    "mammals and birds photography",
+    "Wayne Heim wildlife photography"
+  ],
   title: "Traditional Wildlife Photography by Wayne Heim – Fine Art of Nature & Animals",
   subtitle: "Wildlife moments captured in timeless traditional fine art photography",
   description:

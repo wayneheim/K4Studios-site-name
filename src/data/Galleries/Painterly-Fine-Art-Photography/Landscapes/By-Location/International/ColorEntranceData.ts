@@ -3,6 +3,20 @@
 export const entranceData = {
   title: "International Landscape Photography by Wayne Heim – Painterly Fine Art from Iceland, Canada, and Beyond",
   subtitle: "Global Vistas Reimagined – Painterly Landscapes from the Edges of the World",
+
+  keywords: [
+    "International Painterly Landscapes",
+    "natural grain",
+    "european landscape art",
+    "painterly international landscapes",
+    "world landscapes fine art",
+    "cinematic landscapes",
+    "Iceland landscape photography",
+    "Faroe Islands fine art",
+    "Canadian landscape prints",
+    "Wayne Heim international photography"
+  ],
+
   description:
     "Explore painterly international landscape photography by Wayne Heim, featuring evocative scenes from Iceland, the Faroe Islands, Canadian coastlines, and other breathtaking locations around the world. These painterly fine art prints transform remote and wild places into moody, textured visual narratives — perfect for collectors, interior designers, and nature lovers with a global eye.",
   details:

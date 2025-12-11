@@ -2,6 +2,17 @@
 export const entranceData = {
   title: "Traditional Black & White Portrait Photography by Wayne Heim – Fine Art Prints",
   subtitle: "Timeless Faces in Monochrome – Character, Expression, and Storytelling",
+
+  keywords: [
+    "Traditional Portraits",
+    "black and white portrait photography",
+    "Fine Art Portraits",
+    "monochrome portraiture",
+    "classic portrait photography",
+    "timeless portrait",
+    "Wayne Heim portrait photography"
+  ],
+
   description:
     "Explore the artistry of black & white portrait photography with Wayne Heim’s traditional fine art collection. These images focus on expression, character, and timeless emotion, using light and shadow to reveal depth and nuance. Each portrait strips away distraction and emphasizes the enduring humanity of its subject, creating fine art prints that are both classic and deeply personal. From reenactors to everyday faces, Wayne’s traditional style preserves authenticity without painterly effects or heavy digital manipulation.",
   details:

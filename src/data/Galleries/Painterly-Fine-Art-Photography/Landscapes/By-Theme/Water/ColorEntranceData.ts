@@ -2,7 +2,18 @@
 
 export const entranceData = {
   title: "Waterfall and Water Photography by Wayne Heim – Painterly Fine Art Prints",
-  subtitle: "From Wild Rivers to Still Lakes – Nature’s Movement Captured in Painterly Detail",
+  subtitle: "From Wild Rivers to Still Lakes – Nature's Movement Captured in Painterly Detail",
+
+  keywords: [
+    "Painterly Water Photography",
+    "fine art waterfall prints",
+    "waterfall landscape photography",
+    "the truth of a moment",
+    "painterly river scenes",
+    "Iceland waterfall photography",
+    "Wayne Heim water photography"
+  ],
+
   description:
     "Discover fine art waterfall and water photography that transforms rushing rivers, misty cascades, and tranquil lakes into timeless painterly works. Wayne Heim’s unique photographic technique blends realism with atmosphere to create emotionally rich images of nature’s most powerful and peaceful forms.",
   details:

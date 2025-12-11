@@ -3,6 +3,18 @@
 export const entranceData = {
   title: "Painterly Style Mountain Landscapes At by Wayne Heim – Fine Art Prints",
   subtitle: "From the Rockies to Iceland – Discover Nature Reimagined in Painterly Form",
+
+  keywords: [
+    "Painterly Mountain Photography",
+    "mountain landscapes fine art",
+    "mountain landscape photography",
+    "painterly mountain art",
+    "Rocky Mountain photography",
+    "Appalachian landscape art",
+    "mountain scenery fine art",
+    "Wayne Heim mountain photography"
+  ],
+
   description:
     "Explore painterly mountain landscape photography that captures the spirit and majesty of nature’s most iconic peaks. From the rugged Rockies to the misty Smokies and dramatic Icelandic cliffs, Wayne Heim transforms scenic mountain views into immersive fine art prints for collectors, western wall art lovers, and nature enthusiasts.",
   details:

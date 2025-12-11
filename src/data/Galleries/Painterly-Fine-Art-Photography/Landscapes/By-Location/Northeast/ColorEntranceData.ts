@@ -3,6 +3,18 @@
 export const entranceData = {
   title: "Painterly Northeast Landscape Photography – Fine Art of New England & Beyond by Wayne Heim",
   subtitle: "Where Morning Mist Meets Memory – Painterly Northeast Landscapes from Coast to Countryside",
+
+  keywords: [
+    "Northeast Painterly Landscapes",
+    "new england landscape art",
+    "The Northeast",
+    "see beauty in simplicity",
+    "autumn in new england",
+    "new england scenery wall art",
+    "Northeast – History and Contrast",
+    "Wayne Heim northeast photography"
+  ],
+
   description:
     "Explore painterly Northeast landscape photography by Wayne Heim, capturing evocative scenes from rocky coastlines, autumn forests, mountain lakes, and historic towns across New England and the greater Northeast. These fine art prints turn iconic vistas and hidden corners into moody, textured visual stories—ideal for collectors, interior designers, and all who find inspiration in the changing seasons.",
   details:

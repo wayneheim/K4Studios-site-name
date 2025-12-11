@@ -3,6 +3,17 @@
 export const entranceData = {
   title: "Mountain Landscape Photography by Wayne Heim – Fine Art Prints (Traditional Series)",
   subtitle: "From the Rockies to Iceland – Timeless Scenes, Classic Process",
+
+  keywords: [
+    "Traditional Mountain Photography",
+    "classic mountain landscape art",
+    "mountain landscape photography",
+    "mountain scenery fine art",
+    "Rocky Mountain photography",
+    "Appalachian landscape prints",
+    "Wayne Heim mountain photography"
+  ],
+
   description: `
     Discover Wayne Heim’s traditional mountain landscape photography—fine art prints that capture the majesty, serenity, and story of nature’s greatest peaks. 
     These museum-quality images are created using classic fine art techniques and are ideal for collectors, mountain home decor lovers, and anyone who appreciates the power of an authentic landscape.

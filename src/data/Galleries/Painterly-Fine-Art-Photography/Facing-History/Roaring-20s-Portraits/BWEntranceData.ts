@@ -1,6 +1,22 @@
 export const entranceData = {
   title: "Roaring 20s Art Prints by Wayne Heim – Painterly Black and White Photography",
   subtitle: "Echoes of a Nation Divided, Captured in Timeless Monochrome",
+
+  keywords: [
+    "Roaring 20s Portraits",
+    "black and white 1920s photography",
+    "jazz age portraits",
+    "One-Image Movie",
+    "monochrome flapper photography",
+    "gatsby era art",
+    "Bootleggers",
+    "speakeasy portraits",
+    "roaring twenties art prints",
+    "vintage 1920s photography",
+    "Wayne Heim 1920s photography",
+    "Facing History photography"
+  ],
+
   description:
     "Step into history with striking black and white Roaring 20s portraits that blend emotional storytelling with painterly texture. Wayne Heim’s fine art photography turns reenacted moments into expressive monochrome works steeped in realism and reverence.",
   details:

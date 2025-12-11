@@ -1,6 +1,17 @@
 // data/galleries/Iceland/ColorEntranceData.ts
 
 export const entranceData = {
+  keywords: [
+    "Iceland Landscapes",
+    "Icelandic volcanoes",
+    "Iceland volcanic rivers",
+    "Iceland Waterfalls",
+    "Iceland fine art photography",
+    "Iceland glacial lagoons",
+    "basalt waterfalls Iceland",
+    "wilds of Iceland",
+    "Wayne Heim Iceland landscape photography"
+  ],
   title: "Iceland Fine Art Landscape Photography by Wayne Heim – Dramatic Nature Prints",
   subtitle: "Fire, Ice, and Ethereal Light – The Spirit of Iceland Captured in Fine Art",
   description: `

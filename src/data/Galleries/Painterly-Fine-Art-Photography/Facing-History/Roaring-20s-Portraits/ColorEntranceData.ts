@@ -2,7 +2,24 @@
 
 export const entranceData = {
   title: "Roaring 20s Art Prints by Wayne Heim – Painterly Fine Art Photography in Color",
-  subtitle: "Reliving America’s Defining Conflict Through Painterly Photography",
+  subtitle: "Reliving America's Defining Conflict Through Painterly Photography",
+
+  keywords: [
+    "Roaring 20s Portraits",
+    "1920s fine art photography",
+    "jazz age portraits",
+    "One-Image Movie",
+    "flapper photography",
+    "gatsby era art",
+    "Bootleggers",
+    "speakeasy portraits",
+    "roaring twenties art prints",
+    "deco era fine art",
+    "Wayne Heim 1920s photography",
+    "Facing History photography",
+    "Step into the Roaring 20s"
+  ],
+
   description:
     "Explore vivid and emotional Roaring 20s art prints that blend historical accuracy with painterly expression. Wayne Heim’s color portraits of Roaring 20s reenactors are crafted with a fine art touch — turning battlefield moments and solemn reflections into collectible photographic artwork.",
   details:

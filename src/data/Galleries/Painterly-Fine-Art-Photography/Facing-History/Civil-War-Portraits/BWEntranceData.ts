@@ -1,6 +1,22 @@
 export const entranceData = {
   title: "Civil War Art Prints by Wayne Heim – Painterly Black and White Photography",
   subtitle: "Echoes of a Nation Divided, Captured in Timeless Monochrome",
+
+  keywords: [
+    "Civil War Portraits",
+    "black and white Civil War photography",
+    "American Civil War",
+    "civil war art prints",
+    "One-Image Movie",
+    "Union and Confederate portraits",
+    "monochrome Civil War art",
+    "historic reenactor prints",
+    "painterly Civil War photography",
+    "Wayne Heim Civil War art",
+    "Facing History photography",
+    "19th-century photography style"
+  ],
+
   description:
     "Step into history with striking black and white Civil War portraits that blend emotional storytelling with painterly texture. Wayne Heim’s fine art photography turns reenacted moments into expressive monochrome works steeped in realism and reverence.",
   details:

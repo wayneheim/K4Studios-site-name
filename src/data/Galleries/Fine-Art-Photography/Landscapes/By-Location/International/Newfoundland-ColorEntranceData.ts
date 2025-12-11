@@ -1,6 +1,17 @@
 // data/galleries/Newfoundland/ColorEntranceData.ts
 
 export const entranceData = {
+  keywords: [
+    "Newfoundland Landscapes",
+    "expanse of Newfoundland",
+    "Newfoundland fine art photography",
+    "Newfoundland rugged coastlines",
+    "fjords of Newfoundland",
+    "Newfoundland coastal photography",
+    "Atlantic coast prints",
+    "coastal village art Newfoundland",
+    "Wayne Heim Newfoundland landscape photography"
+  ],
   title: "Newfoundland Fine Art Landscape Photography by Wayne Heim – Rugged Coastal Prints",
   subtitle: "Edge of the Continent – Wild Shores, Timeless Spirit",
   description: `

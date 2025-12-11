@@ -3,6 +3,17 @@
 export const entranceData = {
   title: "Traditional Landscape Photography of the American South – Fine Art by Wayne Heim",
   subtitle: "Authentic Views of Appalachia, Bayous, and the Southern Countryside in Fine Art Photography",
+
+  keywords: [
+    "Southern Traditional Landscapes",
+    "southern scenery wall art",
+    "traditional southern landscape photography",
+    "South – Light and Legacy",
+    "southern landscape prints",
+    "Appalachian photography",
+    "Wayne Heim southern photography"
+  ],
+
   description: `
     Wayne Heim’s traditional Southern landscape photography captures the South as it truly is — Appalachian ridges glowing in morning light, quiet rivers winding through Tennessee, moss-draped oaks in Georgia, and the lingering haze of Carolina hillsides. Each fine art print preserves the authentic character of the South with timeless clarity, offering collectors, designers, and history lovers an intimate view of one of America’s most storied regions.
     <br><br>

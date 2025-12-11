@@ -2,6 +2,18 @@
 export const entranceData = {
   title: "Traditional Reenactor Portrait Photography by Wayne Heim – Fine Art Prints",
   subtitle: "Historic Characters Brought to Life in Traditional Portraiture",
+
+  keywords: [
+    "historical reenactment photography",
+    "fine art reenactment photography",
+    "Reenactor Portraits",
+    "historic reenactment",
+    "living history portraiture",
+    "living history photography",
+    "fine art reenactor prints",
+    "Wayne Heim reenactor photography"
+  ],
+
   description:
     "Step into the world of living history through Wayne Heim’s traditional reenactor portrait photography. These images capture the authenticity, detail, and presence of reenactors who embody the spirit of past eras. From Civil War soldiers and WWII veterans to Western figures and early Americana, each portrait honors both the individual and the history they represent. Shot in a traditional, non-painterly style, these works preserve expression, costume detail, and the timeless atmosphere of historical storytelling.",
   details:

@@ -2,7 +2,24 @@
 
 export const entranceData = {
   title: "Civil War Art Prints by Wayne Heim – Painterly Fine Art Photography in Color",
-  subtitle: "Reliving America’s Defining Conflict Through Painterly Photography",
+  subtitle: "Reliving America's Defining Conflict Through Painterly Photography",
+
+  keywords: [
+    "Civil War Portraits",
+    "Civil War photography",
+    "American Civil War",
+    "civil war art prints",
+    "One-Image Movie",
+    "civil war reenactment photography",
+    "Faces of Conflict",
+    "Union and Confederate portraits",
+    "historic reenactor prints",
+    "painterly Civil War photography",
+    "Wayne Heim Civil War art",
+    "Facing History photography",
+    "19th-century photography style"
+  ],
+
   description:
     "Explore vivid and emotional Civil War art prints that blend historical accuracy with painterly expression. Wayne Heim’s color portraits of Civil War reenactors are crafted with a fine art touch — turning battlefield moments and solemn reflections into collectible photographic artwork.",
   details:

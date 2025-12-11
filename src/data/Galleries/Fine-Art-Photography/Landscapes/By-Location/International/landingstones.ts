@@ -1,34 +1,35 @@
 import type { ImageData } from "../types";
 
 // ───── Load Gallery Modules ─────
+// Direct .mjs files in International folder (e.g., Iceland.mjs, Canada-Western.mjs)
 const galleryModules = import.meta.glob(
-  "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/**/*.mjs",
+  "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/*.mjs",
   { eager: true }
 );
 
-// Build normalized galleryMap: href path → image[]
+// Build normalized galleryMap: slug → image[]
 const galleryMap: Record<string, ImageData[]> = {};
 
 for (const [path, mod] of Object.entries(galleryModules)) {
-  const galleryPath = path
-    .replace("/src/data", "") // → /Galleries/...
-    .replace(/\.mjs$/, "")
-    .replace(/\/+$/, "")
+  // Extract slug from filename (e.g., "Iceland" from "/International/Iceland.mjs")
+  const slug = path
+    .replace(/^.*\//, "")      // remove path prefix → "Iceland.mjs"
+    .replace(/\.mjs$/, "")     // remove extension → "Iceland"
     .toLowerCase();
 
   const images: ImageData[] = (mod as any).galleryData || [];
   const valid = images.filter((img) => img?.id && img.id !== "i-k4studios");
 
-  galleryMap[galleryPath] = valid;
+  galleryMap[slug] = valid;
 }
 
 // ───── Utility to Pull a Random Image from a Gallery ─────
-function getRandomImage(galleryHref: string): string {
-  const key = galleryHref.replace(/\/+$/, "").toLowerCase();
+function getRandomImage(slug: string): string {
+  const key = slug.toLowerCase();
   const images = galleryMap[key];
 
   if (!images?.length) {
-    console.warn(`🚫 No match for: ${key}`);
+    console.warn(`🚫 No match for slug: ${key}`);
     return "/images/fallback.jpg";
   }
 
@@ -66,13 +67,12 @@ export const landingWestern = {
   `,
 
 tombstones: regions.map(({ title, slug }) => {
-  const dataPath = `${baseHref}/${slug}`;        // used for galleryMap lookup
-  const href = `${dataPath}`;                    // actual link (no /Gallery)
+  const href = `${baseHref}/${slug}`;           // actual link
 
   return {
     title,
     href,
-    thumb: getRandomImage(dataPath),
+    thumb: getRandomImage(slug),                // use slug for galleryMap lookup
   };
 }),
 };

@@ -19,6 +19,22 @@ const featured = previewPool[0] || {};
 export const entranceData = {
   title: "WWII Art of War – Black & White Fine Art Photography by Wayne Heim",
   subtitle: "Painterly World War II Black & White Art of War Portraits",
+
+  keywords: [
+    "The Art of War",
+    "WWII Battle Photography",
+    "black and white WWII photography",
+    "Scenes from the Front",
+    "One-Image Movie",
+    "WWII combat photography",
+    "monochrome wartime art",
+    "the Greatest Generation",
+    "battlefield moments",
+    "Wayne Heim WWII photography",
+    "Facing History photography",
+    "Second World War art"
+  ],
+
   description:
     "Discover the stark drama of World War II in black and white through Wayne Heim’s painterly lens. Each image in the Art of War gallery is a study in contrast and mood, capturing the faces, resolve, and atmosphere of WWII reenactment with classic, cinematic artistry. The absence of color intensifies the emotion and brings history’s details to life in timeless monochrome.",
   details: `

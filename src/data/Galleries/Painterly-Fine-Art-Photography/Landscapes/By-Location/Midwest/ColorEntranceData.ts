@@ -1,7 +1,19 @@
 // data/galleries/Civil-War/ColorEntranceData.ts
 
 export const entranceData = {
-title: "Midwest Landscape Photography by Wayne Heim – Painterly Fine Art from America’s Heartland",
+
+  keywords: [
+    "Midwest Painterly Landscapes",
+    "midwestern landscape art",
+    "midwest landscape photography",
+    "heartland landscape prints",
+    "Great Plains photography",
+    "Ohio river valleys",
+    "Midwest Rivers & Lakes",
+    "Wayne Heim midwest photography"
+  ],
+
+title: "Midwest Landscape Photography by Wayne Heim – Painterly Fine Art from America's Heartland",
 subtitle: "The Heart of the Country Reimagined – Painterly Midwest Landscapes from Prairies to Lakeshores",
 description:
   "Experience painterly Midwest landscape photography by Wayne Heim, showcasing evocative scenes from the rolling prairies, tranquil lakes, deep forests, and timeless farmlands of America’s heartland. These fine art prints turn familiar Midwest places into moody, textured visual stories—perfect for collectors, interior designers, and anyone drawn to the quiet poetry of the heartland.",

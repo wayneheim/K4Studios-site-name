@@ -2,6 +2,18 @@
 export const entranceData = {
   title: "Color Architecture Photography | Fine Art Buildings & Landmarks by Wayne Heim",
   subtitle: "Vivid Fine Art Images of Classic Architecture, Landmarks, and Historic Buildings",
+
+  keywords: [
+    "traditional architecture photography",
+    "fine art architecture photography",
+    "architectural fine art prints",
+    "classic architecture wall art",
+    "timeless architectural studies",
+    "historic building photography",
+    "architecture gallery",
+    "Wayne Heim architecture photography"
+  ],
+
   description:
     "Explore a curated collection of color architecture photography by Wayne Heim, featuring vibrant images of historic landmarks, classic buildings, and timeless structures. Perfect for collectors, designers, and anyone who appreciates the artistry of architectural form in rich color.",
   details:

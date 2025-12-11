@@ -1,6 +1,16 @@
 // data/galleries/Faroe-Islands/ColorEntranceData.ts
 
 export const entranceData = {
+  keywords: [
+    "Faroe Islands Landscapes",
+    "Faroe Islands fine art photography",
+    "Faroe Islands windswept cliffs",
+    "cliffs of the Faroes",
+    "moody seascapes Faroe Islands",
+    "dramatic North Atlantic cliffs",
+    "remote island landscape photography",
+    "Wayne Heim Faroe Islands photography"
+  ],
   title: "Faroe Islands Fine Art Landscape Photography by Wayne Heim – Remote Coastal Prints",
   subtitle: "Islands of Solitude – Power, Mystery, and Untamed Beauty",
   description: `

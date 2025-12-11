@@ -1,4 +1,15 @@
 export const entranceData = {
+  keywords: [
+    "Canada Western Landscapes",
+    "Canadian Rockies",
+    "Canadian West landscape photography",
+    "Western Canada towering peaks",
+    "Canada fine art landscapes",
+    "prairie and mountain art",
+    "Canadian landscape prints",
+    "Banff National Park photography",
+    "Wayne Heim Canadian landscape photography"
+  ],
   title: "Canadian Rockies & Western Canada Landscape Photography by Wayne Heim – Fine Art Prints",
   subtitle: "From Banff to Jasper – Grandeur, Color, and Wilderness Captured in Fine Art",
   description: `

@@ -2,6 +2,18 @@
 export const entranceData = {
   title: "Traditional Color Portrait Photography by Wayne Heim – Fine Art of Buildings & Landmarks",
   subtitle: "Classic Buildings and Landmarks in Traditional Fine Art Photography",
+
+  keywords: [
+    "Traditional Portraits",
+    "Classic Portrait Photography",
+    "Fine Art Portraits",
+    "Timeless Portraits",
+    "portrait photography",
+    "traditional portrait",
+    "Portrait Gallery",
+    "Wayne Heim portrait photography"
+  ],
+
   description:
     "Experience the enduring beauty of Color Portrait with Wayne Heim’s traditional fine art photography. This gallery features classic buildings, historic landmarks, rustic barns, and timeless structures—captured with clarity, reverence, and a deep respect for architectural form. Each image invites you to appreciate the craftsmanship, history, and quiet grandeur of places that have shaped our landscapes and memories. Wayne’s traditional approach preserves every line, texture, and detail, offering collectors and enthusiasts a window into the character and legacy of remarkable buildings from past to present.",
   details:

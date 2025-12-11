@@ -3,6 +3,18 @@
 export const entranceData = {
   title: "Black & White Train Photography by Wayne Heim – Painterly Fine Art Railroad Photos",
   subtitle: "Timeless Steam Engines and Locomotives in Painterly Black & White Fine Art Photography",
+
+  keywords: [
+    "Steam Engine Photography",
+    "black and white train photography",
+    "monochrome locomotive art",
+    "steam trains",
+    "steam engines",
+    "vintage railroad prints",
+    "classic train wall art",
+    "Wayne Heim train photography"
+  ],
+
   description:
     "Step back in time with Wayne Heim’s painterly black and white train photography. This fine art gallery celebrates the power, nostalgia, and classic beauty of steam engines, vintage locomotives, and historic railroads—all rendered in rich monochrome. Each image is crafted to evoke the mood, drama, and elegance of railroad history, blending photographic detail with artistic, painterly technique. Experience the stories and atmosphere of the rails, where every photograph captures the enduring spirit of trains and the artistry of motion in timeless black and white.",
   details:

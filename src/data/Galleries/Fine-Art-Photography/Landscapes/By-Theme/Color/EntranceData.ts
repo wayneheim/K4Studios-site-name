@@ -1,4 +1,14 @@
 export const entranceData = {
+  keywords: [
+    "color landscape photography",
+    "traditional color landscapes",
+    "scenic landscape prints",
+    "fine art color photography",
+    "classic landscape wall art",
+    "natural color scenery",
+    "vivid landscape prints",
+    "Wayne Heim color landscape photography"
+  ],
   title: "Color Landscape Photography by Wayne Heim – Fine Art Prints",
   subtitle: "Classic Views, Vivid Color – Timeless Scenes from Near and Far",
   description: `

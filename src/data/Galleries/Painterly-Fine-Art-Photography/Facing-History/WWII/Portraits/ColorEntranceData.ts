@@ -19,6 +19,22 @@ const featured = previewPool[0] || {};
 export const entranceData = {
   title: "WWII Portraits – Painterly Color Fine Art Prints by Wayne Heim",
   subtitle: "World War II Portrait Photography in Painterly Color",
+
+  keywords: [
+    "WWII Portraits",
+    "World War II photography",
+    "the Greatest Generation",
+    "WWII fine art photography",
+    "One-Image Movie",
+    "wartime portrait photography",
+    "painterly WWII portraits",
+    "WWII reenactment photography",
+    "military portrait art",
+    "Wayne Heim WWII photography",
+    "Facing History photography",
+    "WWII Sacrifice & Brotherhood"
+  ],
+
   description:
     "Discover WWII portraiture reimagined as painterly fine art. Wayne Heim’s color portraits capture the people behind the uniforms—soldiers, nurses, and civilians—each one posed with authenticity and a sense of story. These images blend meticulous reenactment with the drama and depth of classic painting, turning faces of the Greatest Generation into museum-worthy wall art.",
   details: `

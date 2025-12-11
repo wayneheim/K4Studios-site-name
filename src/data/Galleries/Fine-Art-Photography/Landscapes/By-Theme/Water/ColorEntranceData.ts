@@ -3,6 +3,16 @@
 export const entranceData = {
   title: "Traditional Waterfall and Water Photography by Wayne Heim – Fine Art Prints",
   subtitle: "Wild Rivers, Still Waters – Classic Landscape Art for Collectors",
+
+  keywords: [
+    "Traditional Water Photography",
+    "Water & Waterfall Photography – Nature in Motion",
+    "classic water landscape prints",
+    "water landscape photography",
+    "river and waterfall wall art",
+    "Wayne Heim water photography"
+  ],
+
   description: `
     Explore Wayne Heim’s traditional waterfall and water photography—timeless fine art prints featuring the serenity and drama of rivers, waterfalls, and still waters. 
     Each image is crafted with a classic fine art approach, making these works perfect for collectors, nature lovers, and anyone seeking a window to the natural world.

@@ -1,6 +1,19 @@
 export const entranceData = {
   title: "Aviation & Airplane Fine Art Photography by Wayne Heim – Traditional Prints",
   subtitle: "From Propellers to Jets – Aviation History Captured in Fine Art",
+
+  keywords: [
+    "Aviation Photography",
+    "Plane Photography Collection",
+    "Vintage Aircraft Gallery",
+    "Aviation Art Collection",
+    "Historic Planes",
+    "airplane photography",
+    "warbird photography",
+    "aviation history",
+    "Wayne Heim aviation photography"
+  ],
+
   description: `
     Experience the majesty of flight through Wayne Heim’s traditional aviation photography. This gallery features historic warbirds, vintage prop planes, and modern aircraft — each photographed with clarity, precision, and a respect for the engineering that took humanity into the skies.
     <br><br>

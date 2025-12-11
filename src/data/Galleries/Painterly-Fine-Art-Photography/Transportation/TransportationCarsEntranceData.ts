@@ -3,6 +3,19 @@
 export const entranceData = {
   title: "Color Car Photography by Wayne Heim – Painterly Fine Art Classic Car Photos",
   subtitle: "Classic Cars and Automobiles in Painterly Fine Art Photography",
+
+  keywords: [
+    "Classic Cars & Trucks Collection",
+    "Route 66 Photography",
+    "vintage cars",
+    "vintage autos",
+    "painterly transportation photography",
+    "classic car photography",
+    "automotive fine art",
+    "muscle car prints",
+    "Wayne Heim car photography"
+  ],
+
   description:
     "Celebrate the beauty and nostalgia of automobiles with Wayne Heim’s painterly color car photography. This gallery features classic cars, vintage vehicles, and timeless automobiles—each captured in vibrant color and presented in a unique painterly style. Wayne’s fine art approach brings out the personality, design, and spirit of every car, inviting you to experience the golden age of motoring as art. These images are more than photographs; they are expressive stories honoring the legacy and craftsmanship of iconic cars throughout history.",
   details:

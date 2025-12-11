@@ -19,6 +19,22 @@ const featured = previewPool[0] || {};
 export const entranceData = {
   title: "WWII Art of War – Color Fine Art Prints by Wayne Heim",
   subtitle: "Painterly World War II Art of War Photography in Color",
+
+  keywords: [
+    "The Art of War",
+    "WWII Battle Photography",
+    "World War II photography",
+    "Scenes from the Front",
+    "One-Image Movie",
+    "WWII combat photography",
+    "wartime action photography",
+    "the Greatest Generation",
+    "battlefield moments",
+    "Wayne Heim WWII photography",
+    "Facing History photography",
+    "Second World War art"
+  ],
+
   description:
     "Experience World War II through painterly color art prints by Wayne Heim. Each image from the Art of War gallery weaves authentic WWII reenactment with fine art vision, creating immersive portraits of soldiers, battlefields, and the spirit of an era. These artworks capture not only the conflict but the humanity, courage, and complexity of the Greatest Generation.",
   details: `

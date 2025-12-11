@@ -3,6 +3,22 @@
 export const entranceData = {
   title: "Engrained Series by Wayne Heim – Painterly Fine Art on Baltic Birch Wood",
   subtitle: "Historic Americana, Western Portraits, and Landscapes on Wood Panel",
+
+  keywords: [
+    "Engrained Series",
+    "Engrained Prints",
+    "wood print fine art",
+    "fine art wood prints",
+    "stories etched in wood",
+    "engrained wood prints for rustic interiors",
+    "photographic art on wood",
+    "photography printed on wood",
+    "wood panel art",
+    "printed on birch",
+    "baltic birch wall art",
+    "Wayne Heim Engrained Series"
+  ],
+
   description:
     "Experience the spirit of the American West and the legacy of Americana with Wayne Heim’s Engrained Series—fine art photography meticulously printed on Baltic birch wood. Each limited edition panel features painterly portraits, cowboy legends, and iconic Western landscapes, all brought to life with a unique 5-layer UV process that reveals the natural wood grain beneath the art. These are more than images: each piece becomes a one-of-a-kind artifact, blending story, craft, and history in every grain.",
   details:

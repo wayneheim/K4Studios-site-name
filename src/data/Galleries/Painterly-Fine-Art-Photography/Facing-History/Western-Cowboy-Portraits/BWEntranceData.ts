@@ -1,15 +1,35 @@
 export const entranceData = {
   title: "Black and White Cowboy Art Prints – Painterly Western Fine Art Photography by Wayne Heim",
-  subtitle: "Authentic Cowboy Portraits | Spirit of the Old West in Monochrome",
+  subtitle: "Authentic Cowboy Portraits in Monochrome | Timeless Western Fine Art",
+
+  keywords: [
+    "black and white cowboy photography",
+    "Western Cowboy Portraits",
+    "monochrome Western fine art",
+    "painterly cowboy photography",
+    "One-Image Movie",
+    "cowboy art prints",
+    "frontier photography",
+    "vintage western photography",
+    "western grit",
+    "cowboy fine art prints",
+    "authentic cowboy portraits",
+    "Wayne Heim cowboy photography",
+    "Facing History photography"
+  ],
+
   description:
-    "Experience painterly cowboy photography like no other—Wayne Heim’s black and white Western art prints bring the soul, grit, and atmosphere of the frontier to life. These are more than portraits; each image is a vivid story etched in light and shadow, crafted for collectors and lovers of authentic Western fine art.",
+    "Discover painterly black and white cowboy photography that distills the American West into pure light, shadow, and story. Wayne Heim’s Western fine art prints blend cinematic atmosphere with the grit of real frontier life—each portrait a chapter in a larger, unfolding narrative. Perfect for collectors seeking authentic cowboy art, Western wall decor, or story-driven fine art photography.",
+
   details:
-    "Every black and white cowboy photograph in this gallery is made with the true American West in mind—no studio setups, no Hollywood filters, no AI tricks. Wayne works with real cowboys and skilled reenactors on location, using painterly techniques to blend the realism of classic photography with the texture, depth, and timeless feel of fine art painting. Many images also include <strong>Collector Notes</strong>: click the notepad icon to discover what makes each portrait extraordinary.",
+    "Every monochrome cowboy portrait in this gallery is created entirely on location—never in studios, never with AI, and never with Hollywood effects. Wayne works alongside real working cowboys and skilled reenactors, capturing the texture of weathered leather, dust, wind, and lived experience. His painterly fine-art methods merge the intimacy of portraiture with the atmospheric depth of classical illustration, giving each image the feel of a moment suspended in time. Many works include <strong>Collector Notes</strong>, offering insight into composition, narrative cues, artistic influences, and the One-Image Movie storytelling principles that define Wayne's portfolio.",
+
   image: {
     src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qMQf7b6/0/MTpQJGrxzsGkV85F56GkL5dd8jvHKGwVBCbj4d6n8/XL/_O1H0067-Edit-3-Edit-2-Edit-XL.jpg",
     alt: "Painterly black and white cowboy portrait art – Ready for Anything by Wayne Heim",
     caption: "\"Ready for Anything\" – Painterly black and white cowboy art print",
   },
-  breadcrumb: 
+
+  breadcrumb:
     `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='red'" onmouseout="this.style.color='inherit'">Facing History</a> | <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='#4aa8ff'" onmouseout="this.style.color='inherit'">Cowboy Portraits</a> | B/W`,
 };

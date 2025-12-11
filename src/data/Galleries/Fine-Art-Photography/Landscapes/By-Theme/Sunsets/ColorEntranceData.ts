@@ -3,6 +3,16 @@
 export const entranceData = {
   title: "Sunset Photography by Wayne Heim – Traditional Fine Art Photos & Prints",
   subtitle: "Golden Hour, Timeless Skies – Classic Landscape Art for Collectors",
+
+  keywords: [
+    "Traditional Sunset Photography",
+    "sunset landscape wall art",
+    "sunset photography",
+    "classic sunset scenery",
+    "golden hour photography",
+    "Wayne Heim sunset photography"
+  ],
+
   description: `
     Experience Wayne Heim’s traditional sunset photography—a curated gallery of fine art prints capturing the glow, color, and emotional resonance of day’s end. 
     Each image is crafted with a classical eye for light and composition, transforming sunsets, lakes, and silhouetted landscapes into timeless works of art for your home or office.
