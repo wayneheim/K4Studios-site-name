@@ -1,22 +1,10 @@
 // Helper to log UI events to Airtable
-// Uses sendBeacon for reliable exit/unload logging, falls back to fetch
-async function logUIEvent(eventType, details = {}, useBeacon = false) {
-  const payload = JSON.stringify({ eventType, details, timestamp: Date.now() });
-  
-  // Use sendBeacon for beforeunload/visibilitychange (guaranteed delivery)
-  if (useBeacon && navigator.sendBeacon) {
-    const blob = new Blob([payload], { type: "application/json" });
-    navigator.sendBeacon("/.netlify/functions/log-ui-event", blob);
-    return;
-  }
-  
-  // Regular fetch for normal logging
+async function logUIEvent(eventType, details = {}) {
   try {
     await fetch("/.netlify/functions/log-ui-event", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: payload,
-      keepalive: true, // helps with page navigation
+      body: JSON.stringify({ eventType, details, timestamp: Date.now() }),
     });
   } catch (err) {
     console.error("UI event logging failed:", err);
@@ -712,27 +700,13 @@ export default function ChapterGalleryBase({
     let inactivityTimer;
     const INACTIVITY_LIMIT = 5 * 60 * 1000; // 5 minutes
 
-    // Regular flush (inactivity timeout) - uses normal fetch
     const logAndResetEvents = () => {
       Object.entries(eventCounts).forEach(([eventType, count]) => {
         if (count > 0) {
           logUIEvent(eventType, {
             page: window.location.pathname,
             count
-          }, false); // use fetch
-        }
-      });
-      setEventCounts({ next: 0, grid: 0, zoom: 0, like: 0, slideshow: 0, share: 0, prev: 0, exit: 0 });
-    };
-
-    // Exit flush (beforeunload/visibilitychange) - uses sendBeacon for reliable delivery
-    const logAndResetEventsBeacon = () => {
-      Object.entries(eventCounts).forEach(([eventType, count]) => {
-        if (count > 0) {
-          logUIEvent(eventType, {
-            page: window.location.pathname,
-            count
-          }, true); // use sendBeacon
+          });
         }
       });
       setEventCounts({ next: 0, grid: 0, zoom: 0, like: 0, slideshow: 0, share: 0, prev: 0, exit: 0 });
@@ -748,10 +722,10 @@ export default function ChapterGalleryBase({
     window.addEventListener("click", activityHandler);
     window.addEventListener("keydown", activityHandler);
 
-    // Log on tab close or hide - use beacon for guaranteed delivery
-    window.addEventListener("beforeunload", logAndResetEventsBeacon);
+    // Log on tab close or hide
+    window.addEventListener("beforeunload", logAndResetEvents);
     document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "hidden") logAndResetEventsBeacon();
+      if (document.visibilityState === "hidden") logAndResetEvents();
     });
 
     resetTimer();
@@ -759,8 +733,8 @@ export default function ChapterGalleryBase({
       clearTimeout(inactivityTimer);
       window.removeEventListener("click", activityHandler);
       window.removeEventListener("keydown", activityHandler);
-      window.removeEventListener("beforeunload", logAndResetEventsBeacon);
-      // Note: anonymous visibilitychange handler can't be removed, but it's harmless
+      window.removeEventListener("beforeunload", logAndResetEvents);
+      document.removeEventListener("visibilitychange", logAndResetEvents);
     };
   }, [eventCounts]);
 
