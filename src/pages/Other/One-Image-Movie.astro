@@ -86,11 +86,12 @@ function shuffleArray<T>(arr: T[]): T[] {
 }
 
 const visibleImages = painterlyImages.filter(img => img.visibility !== "ghost");
+const galleryBasePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
 const previewImages = shuffleArray(visibleImages).slice(0, 6).map(img => ({
   ...img,
-  galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+  galleryPath: galleryBasePath.replace(/^\//, "") // remove leading slash for BlogGalleryPreviewStrip
 }));
-const previewPath = "/Galleries";
+const previewPath = galleryBasePath;
 
 // Setup for keyword linking
 const galleryDatas = Object.values(galleryDataMap).flat();

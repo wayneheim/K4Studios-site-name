@@ -37,6 +37,10 @@ export default function MobileStoryImages({ images = [] }) {
         img.src = match.srcS || match.srcM || match.srcL || match.src;
         img.alt = match.alt || "";
         img.className = "mobile-inline-img";
+        img.width = 280;  // Explicit dimensions to prevent CLS
+        img.height = 350; // Approximate aspect ratio for portrait images
+        img.loading = "lazy";
+        img.decoding = "async";
 
         const caption = document.createElement("div");
         caption.className = "mobile-caption";
@@ -65,10 +69,14 @@ export default function MobileStoryImages({ images = [] }) {
 
         .mobile-inline-img {
           width: 100%;
+          height: auto;
+          aspect-ratio: 4 / 5;
+          object-fit: cover;
           border-radius: 8px;
           box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           display: block;
+          contain: layout;
         }
 
         .mobile-inline-img:hover {

@@ -132,7 +132,8 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       </div>
     </section>
 
-    <div class="py-5">
+    <!-- Tombstone nav with reserved height to prevent CLS -->
+    <div class="py-5" style="min-height: 280px; contain: layout;">
       <TombstoneNav items={landingWestern.tombstones} />
     </div>
 

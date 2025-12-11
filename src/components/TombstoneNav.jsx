@@ -18,8 +18,11 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
               <img
                 src={item.thumb}
                 alt={item.title}
-                loading="lazy"
+                loading="eager"
+                decoding="async"
                 className="tombstone-img"
+                width="150"
+                height="171"
               />
             </div>
             <p
@@ -52,11 +55,11 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           color: #3e2c1c;
           text-align: center;
           margin-top: 0.5rem;
+          min-height: 1.2em; /* Reserve space to prevent CLS */
         }
 
         .fade-in-up {
           opacity: 0;
-          transform: translateY(-20px);
           animation-name: fadeSlideUp;
           animation-duration: 0.9s;
           animation-timing-function: ease;
@@ -73,6 +76,10 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
         }
 
         @keyframes fadeSlideUp {
+          from {
+            opacity: 0;
+            transform: translateY(-8px); /* Reduced from -20px to minimize CLS */
+          }
           to {
             opacity: 1;
             transform: translateY(0);
@@ -158,6 +165,8 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           justify-content: center;
           width: 100%;
           max-width: 250px;
+          /* Prevent CLS by containing the image space */
+          contain: layout style;
         }
 
         .tombstone-divider {
@@ -174,6 +183,8 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           height: 100%;
           object-fit: cover;
           object-position: center 15%;
+          /* Prevent image load from causing layout shift */
+          content-visibility: auto;
         }
 
         .tile p {
@@ -201,11 +212,11 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
         @keyframes dropIn {
           0% {
             opacity: 0;
-            transform: translateY(-40px) scale(0.95);
+            transform: scale(0.95); /* Removed translateY to prevent CLS */
           }
           100% {
             opacity: 1;
-            transform: translateY(0) scale(1);
+            transform: scale(1);
           }
         }
 
