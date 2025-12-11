@@ -9,7 +9,7 @@ export async function handler(event) {
     };
   }
 
-  const { imageId, page, title, timestamp } = JSON.parse(event.body || '{}');
+  const { imageId, page, title, timestamp, isRepeatLike, sendEmail } = JSON.parse(event.body || '{}');
 
   if (!imageId || !page) {
     return {
@@ -53,7 +53,7 @@ export async function handler(event) {
     .map((s) => s.trim())
     .filter(Boolean)[0] || 'unknown';
 
-  // 📝 Airtable Logging
+  // 📝 Airtable Logging - always log all likes for analytics
   const airtableRes = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/Likes`, {
     method: 'POST',
     headers: {
@@ -66,6 +66,9 @@ export async function handler(event) {
         title: title || 'Untitled',
         Page: page,
         timestamp: likeTime,
+        isRepeat: isRepeatLike ? 'Yes' : 'No',
+        ip,
+        ua,
       },
     }),
   });
@@ -77,12 +80,20 @@ export async function handler(event) {
     console.error('Airtable logging error:', airtableResponseText);
   }
 
-  // 📧 Email Notification
-  if (!NOTIFY_EMAIL || !NOTIFY_EMAIL_PASS) {
-    console.error('Missing NOTIFY_EMAIL or NOTIFY_EMAIL_PASS in environment.');
+  // 📧 Email Notification (optional - only for first-time likes)
+  if (!sendEmail) {
+    console.log('Repeat like - skipping email notification');
     return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Missing email credentials' }),
+      statusCode: 200,
+      body: JSON.stringify({ success: true, emailSent: false, reason: 'repeat_like' }),
+    };
+  }
+  
+  if (!NOTIFY_EMAIL || !NOTIFY_EMAIL_PASS) {
+    console.warn('Missing NOTIFY_EMAIL or NOTIFY_EMAIL_PASS - skipping email notification');
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ success: true, emailSent: false }),
     };
   }
 
@@ -109,13 +120,14 @@ Time: ${likeTime}`,
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ success: true }),
+      body: JSON.stringify({ success: true, emailSent: true }),
     };
   } catch (err) {
-    console.error('Mailer error:', err);
+    console.error('Mailer error (non-fatal):', err);
+    // Still return success since Airtable logged successfully
     return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Failed to send like notification email' }),
+      statusCode: 200,
+      body: JSON.stringify({ success: true, emailSent: false, emailError: err.message }),
     };
   }
 }

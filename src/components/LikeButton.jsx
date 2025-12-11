@@ -16,41 +16,52 @@ export default function LikeButton({ imageId, pageTitle }) {
   }, [imageId]);
 
   const handleLike = async () => {
+    console.log("[LikeButton] Click detected for imageId:", imageId);
+    
     // Track two lists: likedImages (UI), likedNotified (permanent, never notify again)
     const likedImages = JSON.parse(localStorage.getItem("k4-liked-images") || "[]");
     const likedNotified = JSON.parse(localStorage.getItem("k4-liked-notified") || "[]");
 
     const isLiked = likedImages.includes(imageId);
     const isNotified = likedNotified.includes(imageId);
+    
+    console.log("[LikeButton] State:", { isLiked, isNotified, likedImagesCount: likedImages.length });
 
     if (!isLiked) {
       // Liking (turn ON)
       setLiked(true);
       localStorage.setItem("k4-liked-images", JSON.stringify([...likedImages, imageId]));
 
-      // Only notify if never notified before
+      // Always log to Airtable (for analytics), but only email if not notified before
+      const shouldEmail = !isNotified;
       if (!isNotified) {
         localStorage.setItem("k4-liked-notified", JSON.stringify([...likedNotified, imageId]));
-        try {
-          const res = await fetch("/.netlify/functions/image-like", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              imageId,
-              page: window.location.pathname,
-              title: pageTitle || document.title,
-              timestamp: Date.now(),
-            }),
-          });
-          if (!res.ok) {
-            console.error("Like notification failed:", await res.text());
-          }
-        } catch (err) {
-          console.error("Like send error:", err);
+      }
+      
+      console.log("[LikeButton] Sending like to server, shouldEmail:", shouldEmail);
+      try {
+        const res = await fetch("/.netlify/functions/image-like", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            imageId,
+            page: window.location.pathname,
+            title: pageTitle || document.title,
+            timestamp: Date.now(),
+            isRepeatLike: isNotified, // Track if this is a repeat like
+            sendEmail: shouldEmail,   // Only email on first-time likes
+          }),
+        });
+        console.log("[LikeButton] Server response status:", res.status);
+        if (!res.ok) {
+          console.error("Like notification failed:", await res.text());
         }
+      } catch (err) {
+        console.error("Like send error:", err);
       }
     } else {
       // Unliking (turn OFF, remove from UI, don't touch notified list)
+      console.log("[LikeButton] Unliking image");
       setLiked(false);
       const updatedImages = likedImages.filter((id) => id !== imageId);
       localStorage.setItem("k4-liked-images", JSON.stringify(updatedImages));
