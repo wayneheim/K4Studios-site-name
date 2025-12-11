@@ -1,4 +1,4 @@
-export const roaring20sStory = [
+export const westernStory = [
 
   /* ───────────────────────────────────────────── 1 */
   {
