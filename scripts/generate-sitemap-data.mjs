@@ -1,68 +1,122 @@
-// Generates src/data/sitemap.ts from a remote sitemap.xml
-// Usage: node scripts/generate-sitemap-data.mjs [sitemapUrl]
+// Generates src/data/sitemap.ts by scanning local Astro pages
+// Usage: node scripts/generate-sitemap-data.mjs
 
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { XMLParser } from 'fast-xml-parser';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const SITEMAP_URL = process.argv[2] || process.env.SITEMAP_URL || 'https://www.k4studios.com/sitemap.xml';
+const SITE_URL = 'https://www.k4studios.com';
+const PAGES_DIR = path.resolve(__dirname, '..', 'src', 'pages');
+
+// Paths to exclude from sitemap
+const EXCLUDE_PATTERNS = [
+  /^\/api\//,
+  /^\/admin\//,
+  /^\/_/,           // Internal Astro files
+  /\/\[.*\]/,       // Dynamic routes with brackets
+  /\.xml$/,         // XML endpoints like sitemap.xml
+  /\.json$/,        // JSON endpoints
+  /\.js$/,          // JS endpoints
+  /^\/404/,
+  /^\/500/,
+  // Exclude test/draft pages
+  /\/Builder-Test/i,
+  /\/Test-Show/i,
+  /\/Test-show/i,
+  /\/demo-show/i,
+  /\/Template\//i,
+  /backup$/i,
+  /copy$/i,
+];
+
+// Priority rules based on path depth and type
+function getPriority(urlPath) {
+  if (urlPath === '/') return 1.0;
+  if (urlPath === '/Other/One-Image-Movie') return 0.9;
+  if (urlPath === '/Other/Stories') return 0.9;
+  if (urlPath.startsWith('/Galleries/Painterly-Fine-Art-Photography')) return 0.8;
+  if (urlPath.startsWith('/Other/Stories/')) return 0.7;
+  if (urlPath.startsWith('/Galleries/')) return 0.6;
+  
+  const depth = urlPath.split('/').filter(Boolean).length;
+  if (depth === 1) return 0.8;
+  if (depth === 2) return 0.7;
+  if (depth === 3) return 0.6;
+  return 0.5;
+}
+
+// Change frequency hints based on content type
+function getChangeFreq(urlPath) {
+  if (urlPath === '/') return 'weekly';
+  if (urlPath === '/Other/Stories') return 'weekly';
+  if (urlPath.startsWith('/Other/Stories/')) return 'monthly';
+  if (urlPath === '/Other/One-Image-Movie') return 'monthly';
+  if (urlPath.startsWith('/Galleries/')) return 'monthly';
+  if (urlPath === '/Contact') return 'yearly';
+  return 'monthly';
+}
+
+async function walkDir(dir, baseDir = dir) {
+  const entries = [];
+  const items = await readdir(dir, { withFileTypes: true });
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item.name);
+    
+    if (item.isDirectory()) {
+      // Recurse into subdirectories
+      const subEntries = await walkDir(fullPath, baseDir);
+      entries.push(...subEntries);
+    } else if (item.isFile() && item.name.endsWith('.astro')) {
+      // Convert file path to URL path
+      let relativePath = path.relative(baseDir, fullPath);
+      
+      // Convert backslashes to forward slashes (Windows)
+      relativePath = relativePath.replace(/\\/g, '/');
+      
+      // Remove .astro extension
+      relativePath = relativePath.replace(/\.astro$/, '');
+      
+      // Handle index files
+      if (relativePath.endsWith('/index')) {
+        relativePath = relativePath.slice(0, -6); // Remove '/index'
+      } else if (relativePath === 'index') {
+        relativePath = '';
+      }
+      
+      // Build URL path
+      const urlPath = '/' + relativePath;
+      
+      // Check exclusions
+      const shouldExclude = EXCLUDE_PATTERNS.some(pattern => pattern.test(urlPath));
+      if (shouldExclude) continue;
+      
+      // Get file stats for lastmod
+      const stats = await stat(fullPath);
+      
+      entries.push({
+        loc: SITE_URL + urlPath,
+        lastmod: stats.mtime.toISOString(),
+        changefreq: getChangeFreq(urlPath),
+        priority: getPriority(urlPath),
+      });
+    }
+  }
+  
+  return entries;
+}
 
 async function main() {
-  const res = await fetch(SITEMAP_URL);
-  if (!res.ok) {
-    throw new Error(`Failed to fetch sitemap: ${res.status} ${res.statusText}`);
-  }
-  const xml = await res.text();
-
-  const parser = new XMLParser({
-    ignoreAttributes: false,
-    attributeNamePrefix: '',
-    trimValues: true,
-  });
-  const parsed = parser.parse(xml);
-
-  // Support urlset -> url (array or single)
-  const urlset = parsed.urlset || parsed.sitemapindex;
-  if (!urlset) {
-    throw new Error('Unexpected sitemap structure: missing <urlset> or <sitemapindex>');
-  }
-
-  let entries = [];
-  if (urlset.url) {
-    const urls = Array.isArray(urlset.url) ? urlset.url : [urlset.url];
-    entries = urls.map(u => ({
-      loc: u.loc,
-      lastmod: u.lastmod || new Date().toISOString(),
-      changefreq: u.changefreq,
-      priority: u.priority !== undefined ? Number(u.priority) : undefined,
-    })).filter(e => typeof e.loc === 'string' && e.loc.length > 0);
-  } else if (urlset.sitemap) {
-    // It's a sitemap index: flatten by fetching each child sitemap
-    const sitemaps = Array.isArray(urlset.sitemap) ? urlset.sitemap : [urlset.sitemap];
-    const childUrls = sitemaps.map(s => s.loc).filter(Boolean);
-    const childLists = await Promise.all(childUrls.map(async (url) => {
-      const r = await fetch(url);
-      if (!r.ok) return [];
-      const x = await r.text();
-      const p = parser.parse(x);
-      const us = p.urlset && p.urlset.url ? (Array.isArray(p.urlset.url) ? p.urlset.url : [p.urlset.url]) : [];
-      return us.map(u => ({
-        loc: u.loc,
-        lastmod: u.lastmod || new Date().toISOString(),
-        changefreq: u.changefreq,
-        priority: u.priority !== undefined ? Number(u.priority) : undefined,
-      })).filter(e => typeof e.loc === 'string' && e.loc.length > 0);
-    }));
-    entries = childLists.flat();
-  }
-
-  // Sort for stable output
+  console.log('Scanning pages directory:', PAGES_DIR);
+  
+  let entries = await walkDir(PAGES_DIR);
+  
+  // Sort for stable output (by URL)
   entries.sort((a, b) => a.loc.localeCompare(b.loc));
-
+  
   const outDir = path.resolve(__dirname, '..', 'src', 'data');
   await mkdir(outDir, { recursive: true });
   const outFile = path.join(outDir, 'sitemap.ts');
@@ -70,6 +124,7 @@ async function main() {
   const timestamp = new Date().toISOString();
   const content = `// AUTO-GENERATED FILE. Do not edit manually.
 // Generated by scripts/generate-sitemap-data.mjs at ${timestamp}
+// Scanned from local src/pages directory
 
 export type SitemapEntry = {
   loc: string;
@@ -78,7 +133,7 @@ export type SitemapEntry = {
   priority?: number;
 };
 
-export const sitemap: SitemapEntry[] = ${JSON.stringify(entries, null, 2)} as const;
+export const sitemap: SitemapEntry[] = ${JSON.stringify(entries, null, 2)};
 `;
 
   await writeFile(outFile, content, 'utf8');
