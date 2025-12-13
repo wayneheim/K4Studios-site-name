@@ -31,60 +31,55 @@ export async function handler(event) {
         const storiesPath = path.join(dataDir, "stories.mjs");
         let storiesContent = fs.readFileSync(storiesPath, "utf8");
 
-        // Extract story metadata from the saved content
-        const storyModule = { exports: {} };
-        const fn = new Function("exports", "module", content);
-        fn(storyModule.exports, storyModule);
-
-        const { storyMeta, storyData } = storyModule.exports;
         const slug = filename.replace('.mjs', '');
-
-        // Helper function to get the first non-ghost slide's thumbnail image
-        function getFirstSlideThumbnail(storyData) {
-          const firstNonGhostSlide = storyData.find(slide => slide.visibility !== "ghost");
-          if (firstNonGhostSlide) {
-            return firstNonGhostSlide.srcS || firstNonGhostSlide.srcM || firstNonGhostSlide.src || firstNonGhostSlide.srcL || "/images/K4-Stories logo1b.webp";
-          }
-          return "/images/K4-Stories logo1b.webp";
-        }
-
-        // Create the new story entry
-        const newStoryEntry = `  {
-    slug: "${slug}",
-    title: ${JSON.stringify(storyMeta.showTitle)},
-    date: ${storyMeta.savedAt ? `"${new Date(storyMeta.savedAt).toISOString().split('T')[0]}"` : `"${new Date().toISOString().split('T')[0]}"`},
-    excerpt: ${JSON.stringify(storyMeta.description)},
-    cover: ${JSON.stringify(getFirstSlideThumbnail(storyData))},
-    keywords: ${JSON.stringify(storyMeta.keywords || "")},
-    alt: ${JSON.stringify(storyMeta.alt || storyMeta.showTitle)}
-  }`;
+        
+        // Convert slug to camelCase variable name (e.g., "The-Cost-of-the-Journey" -> "theCostOfTheJourney")
+        const toCamelCase = (str) => {
+          return str
+            .split('-')
+            .map((word, idx) => {
+              if (idx === 0) return word.toLowerCase();
+              return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+            })
+            .join('');
+        };
+        
+        const baseName = toCamelCase(slug);
+        const metaVarName = baseName + 'Meta';
+        const dataVarName = baseName + 'Data';
 
         // Check if the story is already in the index
         if (!storiesContent.includes(`slug: "${slug}"`)) {
-          // Add the import at the top
-          const importLine = `import { storyMeta as ${slug.replace(/-/g, '')}Meta, storyData as ${slug.replace(/-/g, '')}Data } from "./${filename}";`;
-
-          // Find the import section and add the new import
-          const importMatch = storiesContent.match(/(\/\/ Stories index data.*?\n)(import .*? from "\.\/.*?\.mjs";\n)*\n/);
-          if (importMatch) {
-            storiesContent = storiesContent.replace(importMatch[0], importMatch[1] + importLine + '\n');
-          }
-
-          // Find the stories array and add the new entry at the beginning (newest first)
-          const arrayMatch = storiesContent.match(/export const stories = \[([\s\S]*?)\];/);
-          if (arrayMatch) {
-            const storiesArray = arrayMatch[1];
-            // Add the new entry at the beginning after the opening bracket
-            const trimmedArray = storiesArray.trim();
-            const insertPoint = trimmedArray.startsWith('\n') ? 1 : 0;
-            const beforeContent = trimmedArray.substring(0, insertPoint);
-            const afterContent = trimmedArray.substring(insertPoint);
-            
+          // Add the import line after the last existing import
+          const importLine = `import { storyMeta as ${metaVarName}, storyData as ${dataVarName} } from "./${filename}";`;
+          
+          // Find the last import line and add after it
+          const lastImportMatch = storiesContent.match(/^import .* from "\.\/.*\.mjs";$/gm);
+          if (lastImportMatch && lastImportMatch.length > 0) {
+            const lastImport = lastImportMatch[lastImportMatch.length - 1];
             storiesContent = storiesContent.replace(
-              /export const stories = \[([\s\S]*?)\];/,
-              `export const stories = [${beforeContent}${newStoryEntry},${afterContent}];`
+              lastImport,
+              lastImport + '\n' + importLine
             );
           }
+
+          // Create the new story entry
+          const newStoryEntry = `
+  {
+    slug: "${slug}",
+    title: ${metaVarName}.showTitle,
+    date: ${metaVarName}.savedAt ? new Date(${metaVarName}.savedAt).toISOString().split('T')[0] : "${new Date().toISOString().split('T')[0]}",
+    excerpt: ${metaVarName}.description,
+    cover: getFirstSlideThumbnail(${dataVarName}),
+    keywords: ${metaVarName}.keywords,
+    alt: ${metaVarName}.alt
+  },`;
+
+          // Add the new entry at the beginning of the stories array (newest first)
+          storiesContent = storiesContent.replace(
+            /export const stories = \[/,
+            `export const stories = [${newStoryEntry}`
+          );
 
           fs.writeFileSync(storiesPath, storiesContent, "utf8");
           console.log("✅ Updated stories index:", storiesPath);

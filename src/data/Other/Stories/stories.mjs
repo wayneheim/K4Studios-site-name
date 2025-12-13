@@ -1,7 +1,9 @@
 // Stories index data for K4 Studios Picture Show Stories
+import { storyMeta as sagebrushGritGraceMeta, storyData as sagebrushGritGraceData } from "./Sagebrush-Grit-and-Grace.mjs";
 import { storyMeta as westernLivingHistoryMeta, storyData as westernLivingHistoryData } from "./Western-Living-History.mjs";
 import { storyMeta as demoShowMeta, storyData as demoShowData } from "./DemoShow.mjs";
 import { storyMeta as outlawsBanditsMeta, storyData as outlawsBanditsData } from "./Outlaws-and-Bandits.mjs";
+import { storyMeta as costOfJourneyMeta, storyData as costOfJourneyData } from "./The-Cost-of-the-Journey.mjs";
 
 // Helper function to get the first non-ghost slide's thumbnail image
 function getFirstSlideThumbnail(storyData) {
@@ -14,6 +16,24 @@ function getFirstSlideThumbnail(storyData) {
 }
 
 export const stories = [
+  {
+    slug: "The-Cost-of-the-Journey",
+    title: costOfJourneyMeta.showTitle,
+    date: costOfJourneyMeta.savedAt ? new Date(costOfJourneyMeta.savedAt).toISOString().split('T')[0] : "2025-12-13",
+    excerpt: costOfJourneyMeta.description,
+    cover: getFirstSlideThumbnail(costOfJourneyData),
+    keywords: costOfJourneyMeta.keywords,
+    alt: costOfJourneyMeta.alt
+  },
+  {
+    slug: "Sagebrush-Grit-and-Grace",
+    title: sagebrushGritGraceMeta.showTitle,
+    date: sagebrushGritGraceMeta.savedAt ? new Date(sagebrushGritGraceMeta.savedAt).toISOString().split('T')[0] : "2025-12-12",
+    excerpt: sagebrushGritGraceMeta.description,
+    cover: getFirstSlideThumbnail(sagebrushGritGraceData),
+    keywords: sagebrushGritGraceMeta.keywords,
+    alt: sagebrushGritGraceMeta.alt
+  },
   {
     slug: "Outlaws-and-Bandits",
     title: outlawsBanditsMeta.showTitle,

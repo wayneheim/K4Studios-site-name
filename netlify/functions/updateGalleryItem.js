@@ -164,6 +164,19 @@ exports.handler = async (event) => {
       if (n != null) setProp(target, "rating", b.numericLiteral(n));
     }
 
+    // audioSrc (string - for picture show audio, stored in gallery for future use)
+    if (patch.audioSrc != null) {
+      if (patch.audioSrc === "" || patch.audioSrc === null) {
+        // Remove audioSrc if cleared
+        const existing = getProp(target, "audioSrc");
+        if (existing) {
+          target.properties = target.properties.filter((p) => p !== existing);
+        }
+      } else {
+        setProp(target, "audioSrc", makeStringNode(patch.audioSrc, usesTemplate));
+      }
+    }
+
     // visibility ("hidden" to hide; falsy/empty -> remove prop to show)
     if (Object.prototype.hasOwnProperty.call(patch, "visibility")) {
       const v = patch.visibility;

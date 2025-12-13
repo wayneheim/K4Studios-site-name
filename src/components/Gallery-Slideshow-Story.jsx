@@ -24,6 +24,8 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
   const fsRef = useRef(null);
   const hasUserUnlockedAudioRef = useRef(false);
   const hasAutoPlayedRef = useRef(false);
+  const hideControlsTimerRef = useRef(null);
+  const showControlsRef = useRef(true);
 
   // ➋ Orientation + pointer detection
   useEffect(() => {
@@ -60,6 +62,64 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
       window.removeEventListener("orientationchange", updateFlags);
     };
   }, []);
+
+  useEffect(() => {
+    showControlsRef.current = showControls;
+  }, [showControls]);
+
+  useEffect(() => {
+    if (hideControlsTimerRef.current) {
+      clearTimeout(hideControlsTimerRef.current);
+      hideControlsTimerRef.current = null;
+    }
+
+    if (isIntro) {
+      if (!showControlsRef.current) {
+        showControlsRef.current = true;
+        setShowControls(true);
+      }
+      return;
+    }
+
+    if (isCoarsePointer) {
+      if (!showControlsRef.current) {
+        showControlsRef.current = true;
+        setShowControls(true);
+      }
+      return;
+    }
+
+    const handlePointerActivity = () => {
+      if (hideControlsTimerRef.current) {
+        clearTimeout(hideControlsTimerRef.current);
+      }
+      if (!showControlsRef.current) {
+        showControlsRef.current = true;
+        setShowControls(true);
+      }
+
+      hideControlsTimerRef.current = setTimeout(() => {
+        showControlsRef.current = false;
+        setShowControls(false);
+      }, 2000);
+    };
+
+    handlePointerActivity();
+
+    window.addEventListener("mousemove", handlePointerActivity);
+    window.addEventListener("mousedown", handlePointerActivity);
+    window.addEventListener("keydown", handlePointerActivity);
+
+    return () => {
+      window.removeEventListener("mousemove", handlePointerActivity);
+      window.removeEventListener("mousedown", handlePointerActivity);
+      window.removeEventListener("keydown", handlePointerActivity);
+      if (hideControlsTimerRef.current) {
+        clearTimeout(hideControlsTimerRef.current);
+        hideControlsTimerRef.current = null;
+      }
+    };
+  }, [isIntro, isCoarsePointer, setShowControls]);
 
   // ➌ Fullscreen helper
   const enterFullScreen = () => {
@@ -138,14 +198,14 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
         initial: { scale: 1, opacity: 0.95, rotate: 0, x: 0, y: 0 },
         animate: { scale: 1.06, opacity: 1, rotate: kenAngle * 0.3, x: kenPan.x * 0.3, y: kenPan.y * 0.3 },
         exit: { opacity: 0 },
-        transition: { duration: 22, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
+        transition: { duration: 44, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
       };
     }
     return {
       initial: { scale: 1.14, opacity: 0.92, rotate: 0, x: 0, y: 0 },
       animate: { scale: 1.5, opacity: 1, rotate: kenAngle, x: kenPan.x, y: kenPan.y },
       exit: { opacity: 0 },
-      transition: { duration: 22, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
+      transition: { duration: 44, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
     };
   }, [isLandscape, isVertical, kenAngle, kenPan]);
 
@@ -182,12 +242,64 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
     return /FBAN|FBAV|Messenger|Instagram/i.test(navigator.userAgent);
   }, []);
 
+  const autoAdvanceTimerRef = useRef(null);
+  const AUTO_ADVANCE_DELAY = 8000; // 8 seconds default if no audio
+  const AUTO_ADVANCE_DELAY_GLOBAL_AUDIO = 11000; // 11 seconds when global background music is playing
+
   // Reset autoplay flag when component unmounts
   useEffect(() => {
     return () => {
       hasAutoPlayedRef.current = false;
+      if (autoAdvanceTimerRef.current) {
+        clearTimeout(autoAdvanceTimerRef.current);
+      }
     };
   }, []);
+
+  // Auto-advance logic: advance when audio ends or after timeout (only if controls are hidden)
+  useEffect(() => {
+    // Clear any existing timer
+    if (autoAdvanceTimerRef.current) {
+      clearTimeout(autoAdvanceTimerRef.current);
+      autoAdvanceTimerRef.current = null;
+    }
+
+    // If controls are showing (user interaction), don't auto-advance
+    if (showControls) return;
+
+    // If current slide has individual audio and it's playing, wait for it to end
+    if (current?.audioSrc && audioRef.current && !isMuted) {
+      const handleAudioEnded = () => {
+        // Small delay after audio ends before advancing
+        autoAdvanceTimerRef.current = setTimeout(() => {
+          goNext();
+        }, 2000);
+      };
+
+      audioRef.current.addEventListener('ended', handleAudioEnded);
+      return () => {
+        audioRef.current?.removeEventListener('ended', handleAudioEnded);
+        if (autoAdvanceTimerRef.current) {
+          clearTimeout(autoAdvanceTimerRef.current);
+        }
+      };
+    } else {
+      // No individual audio or muted - auto-advance after delay
+      // Use longer delay if global background music is playing
+      const hasGlobalAudio = globalAudioSrc && !isMuted;
+      const delay = hasGlobalAudio ? AUTO_ADVANCE_DELAY_GLOBAL_AUDIO : AUTO_ADVANCE_DELAY;
+      
+      autoAdvanceTimerRef.current = setTimeout(() => {
+        goNext();
+      }, delay);
+
+      return () => {
+        if (autoAdvanceTimerRef.current) {
+          clearTimeout(autoAdvanceTimerRef.current);
+        }
+      };
+    }
+  }, [index, showControls, current?.audioSrc, isMuted, globalAudioSrc]);
 
   // Auto-play individual image audio when index changes (but not global audio)
   useEffect(() => {
@@ -199,17 +311,27 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
       audioRef.current.currentTime = 0;
     }
 
+    // Handle audio ended - set speaking to false
+    const handleEnded = () => {
+      setIsSpeaking(false);
+    };
+
     // Play new individual audio
     if (audioRef.current) {
       audioRef.current.src = current.audioSrc;
       audioRef.current.volume = volume;
       hasUserUnlockedAudioRef.current = true;
+      audioRef.current.addEventListener('ended', handleEnded);
       audioRef.current.play().catch((error) => {
         console.error('Error auto-playing individual audio:', error);
         hasUserUnlockedAudioRef.current = false;
       });
       setIsSpeaking(true);
     }
+
+    return () => {
+      audioRef.current?.removeEventListener('ended', handleEnded);
+    };
   }, [index, current?.audioSrc, isMuted, volume]);
 
   function reorderImages(list, startId) {

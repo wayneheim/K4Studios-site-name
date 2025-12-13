@@ -3803,6 +3803,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-NKdPDCg/2/MT4B32V8nfn99ZMRpJ76xzKdTZMz3XgWQ4rXJT49V/S/vintage%20western%20art%20_ANA0964-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NKdPDCg/A",
+
     "keywords": [
       "Western Fine Art",
       "Painterly Photography",
@@ -3815,20 +3816,26 @@ export const galleryData = [
       "Emotional Western Art",
       "Wayne Heim Photography"
     ],
+
     "story": "A watched pot never boils, but she can’t help herself. Faith and hope fade with the last light of day. She tends to her mending, trying to hide one problem in another—threading that needle of distraction. They’re well past due now. He promised he’d be here for dinner. She stands watch — every stitch a silent prayer for there safe return.",
     "notes": "“Darn Socks” draws on the visual language of classical painting—the warm, directional light and quiet interior call to mind the intimacy of Vermeer or Whistler. Yet, the setting and gesture are unmistakably Western, grounding the piece in the daily realities of frontier life.\n\nWayne Heim’s painterly technique softens every edge, inviting the viewer to linger in the hush of this golden moment. The composition’s close framing pulls us into her world, making us feel both the routine of mending and the tension of waiting. There’s subtle storytelling in the balance of light and shadow: the soft glow of hope at the window, and the long shadows of worry cast across her face.\n\nThis image stands apart from typical Western iconography. Rather than mythic action or open landscapes, it honors the unsung heroism of domestic labor and the emotional endurance of those who waited. For the collector, it offers a rare glimpse of the West as lived—quiet, patient, and deeply human.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 89,
+
     "themes": {
       "frontier-women": 22,
       "hardship-sorrow": 14,
       "love-goodbye": 14,
       "whispering-reflection": 31
-    }
+    },
+
+    audioSrc: "/audio/StoryShows/darn-socks 2.mp3"
   },
   {
     "id": "i-LLdZzQW",

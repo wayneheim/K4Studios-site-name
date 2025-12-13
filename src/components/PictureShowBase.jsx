@@ -5,7 +5,7 @@ import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 import ShareDrawer from "./ShareDrawer.jsx";
 import SimpleStoryShow from "./Gallery-Slideshow.jsx";
-import StoryShowWithAudio from "./Gallery-Slideshow-Story-MYSTERY.jsx";
+import StoryShowWithAudio from "./Gallery-Slideshow-Story.jsx";
 
 // Helper function to select the best image source for slideshow display
 const getBestImageSrc = (image) => {

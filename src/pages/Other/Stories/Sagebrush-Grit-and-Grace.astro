@@ -1,0 +1,47 @@
+---
+// Auto-generated Astro page for Sagebrush-Grit-and-Grace
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PictureShowBase from "@/components/PictureShowBase.jsx";
+import { storyMeta, storyData } from "@/data/Other/Stories/Sagebrush-Grit-and-Grace.mjs";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+const structuredDataJSON = getStructuredData({
+  type: "gallery",
+  data: {
+    title: storyMeta.showTitle,
+    description: storyMeta.description,
+    url: `https://k4studios.com/Other/Stories/Sagebrush-Grit-and-Grace`,
+    keywords: storyMeta.keywords,
+    copyrightNotice: "© Wayne Heim, k4studios.com. All rights reserved."
+  },
+  images: storyData,
+  defaults: {
+    copyrightNotice: "© Wayne Heim, k4studios.com. All rights reserved.",
+    license: "https://k4studios.com/licensing",
+    acquireLicensePage: "https://k4studios.com/licensing",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+---
+
+<BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON}>
+  <noscript>
+    <img
+      src="/images/stories/Sagebrush-Grit-and-Grace-hero.jpg"
+      alt="${storyMeta.showTitle} – Cinematic Picture Show"
+      style="width:100%;height:auto;display:block;"
+    />
+  </noscript>
+  <PictureShowBase
+    client:load
+    rawData={storyData}
+    basePath="/Other/Stories/Sagebrush-Grit-and-Grace"
+    titleBase={storyMeta.showTitle}
+    globalAudioSrc={storyMeta.globalAudioSrc || ""}
+    globalAudioMode={storyMeta.globalAudioMode || "score"}
+    introMeta={storyMeta.introMeta || {}}
+    outroMeta={storyMeta.outroMeta || {}}
+  />
+</BaseLayout>
