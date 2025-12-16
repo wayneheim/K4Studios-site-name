@@ -2,6 +2,7 @@
 // Usage: node scripts/generate-sitemap-data.mjs
 
 import { writeFile, mkdir, readdir, stat } from 'node:fs/promises';
+import { execSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 

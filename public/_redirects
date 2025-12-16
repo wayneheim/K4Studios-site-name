@@ -5,5 +5,6 @@
 /Other/Photo-Shoots-and-Themes  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301
 ## */Portraits%20copy/*   /Portraits/:splat   301!
 ## */Portraits copy/*   /Portraits/:splat   301!
-*/Photoshootsandevents/*   /Galleries/Fine-Art-Photography/Miscellaneous/:splat   301!
+# Legacy SmugMug path - redirect to archive on SmugMug
+*/Photoshootsandevents/*   https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat   301!
 /data/system/*  403!
