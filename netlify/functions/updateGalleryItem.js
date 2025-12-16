@@ -103,14 +103,18 @@ exports.handler = async (event) => {
     });
     if (!arrNode) return { statusCode: 400, body: "Could not find export const galleryData = []" };
 
-    // find object with matching id
+    // find object with matching id (case-insensitive to handle URL normalization)
     const items = arrNode.elements || [];
     let target = null;
+    const idLower = id.toLowerCase();
     for (const el of items) {
       if (el?.type !== "ObjectExpression") continue;
       const idProp = getProp(el, "id");
       const idVal = getStringValue(idProp?.value);
-      if (idVal === id) { target = el; break; }
+      if (idVal && idVal.toLowerCase() === idLower) { 
+        target = el; 
+        break; 
+      }
     }
     if (!target) return { statusCode: 404, body: `Item id ${id} not found in ${datasetPath}` };
 

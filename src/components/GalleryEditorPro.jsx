@@ -345,7 +345,12 @@ export default function GalleryEditorPro() {
   function ensureBackup() {
     if (!backupData) return;
     const ts = new Date().toISOString().replace(/[:.]/g, "-");
-    downloadText(buildMjs(backupData, "galleryData"), `BACKUP-${ts}.mjs`);
+    // Extract gallery name from path (e.g., "Color" from ".../Western-Cowboy-Portraits/Color.mjs")
+    const pathParts = selectedPath.split("/").filter(Boolean);
+    const fileName = pathParts.pop()?.replace(".mjs", "") || "gallery";
+    const parentFolder = pathParts.pop() || "";
+    const galleryLabel = parentFolder ? `${parentFolder}-${fileName}`.substring(0, 40) : fileName.substring(0, 40);
+    downloadText(buildMjs(backupData, "galleryData"), `BACKUP-${galleryLabel}-${ts}.mjs`);
     setBackupMade(true);
     setRealBackupMade(true);
     setLastAction(`Backup created — ${new Date().toLocaleTimeString()}`);
@@ -475,11 +480,14 @@ ${collectorNotes}`;
       COLLECTOR_NOTES: "collectorNotes"
     };
     
-    const regex = /<<(\w+)>>\s*([\s\S]*?)(?=<<\w+>>|$)/g;
+    // Accept formats: <<TAG>>, <TAG>, "1. <TAG>", "1.<TAG>" (with optional numbering)
+    // Lookahead also handles numbered next sections like "2. <STORY>"
+    const regex = /(?:\d+\.\s*)?<?<(\w+)>>?\s*([\s\S]*?)(?=(?:\d+\.\s*)?<?<\w+>>?|$)/g;
     let match;
     while ((match = regex.exec(text)) !== null) {
       const tag = match[1].toUpperCase();
-      const content = match[2].trim();
+      // Strip trailing numbered list markers like "\n\n2." or "\n3."
+      let content = match[2].trim().replace(/\n+\d+\.?\s*$/, "").trim();
       if (sections[tag]) {
         result[sections[tag]] = content;
       }
@@ -498,7 +506,11 @@ ${collectorNotes}`;
       }
       // Trigger the backup
       const ts = new Date().toISOString().replace(/[:.]/g, "-");
-      downloadText(buildMjs(backupData, "galleryData"), `BACKUP-${ts}.mjs`);
+      const pathParts = selectedPath.split("/").filter(Boolean);
+      const fileName = pathParts.pop()?.replace(".mjs", "") || "gallery";
+      const parentFolder = pathParts.pop() || "";
+      const galleryLabel = parentFolder ? `${parentFolder}-${fileName}`.substring(0, 40) : fileName.substring(0, 40);
+      downloadText(buildMjs(backupData, "galleryData"), `BACKUP-${galleryLabel}-${ts}.mjs`);
       setBackupMade(true);
       setRealBackupMade(true);
       setLastAction(`Backup created for Turbo Mode — ${new Date().toLocaleTimeString()}`);
