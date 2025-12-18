@@ -281,7 +281,9 @@ const isImagePage = lastSegment.startsWith("i-");
       }
       #gallery-content {
         overflow-x: hidden !important;
-        max-width: 100vw !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box;
       }
       .gallery-landing-title,
       .gallery-landing-subtitle {

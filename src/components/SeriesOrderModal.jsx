@@ -204,8 +204,9 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
                         <button
                           onClick={() => setActiveInfo(seriesKey)}
                           className="group flex items-center gap-1.5 transition-colors"
-                          title={`About the ${def.label} Series`}
+                          title={`About the ${def.label} Series Member`}
                         >
+                          <span className="text-base" style={{ color: "#7c6a5bff" }}>{def.icon}</span>
                           <h4 className="font-semibold text-gray-800 text-sm group-hover:text-red-800">{def.label} Series</h4>
                           <Info className="w-3.5 h-3.5 text-stone-400 group-hover:text-red-800" />
                         </button>

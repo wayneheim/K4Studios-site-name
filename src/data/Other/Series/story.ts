@@ -5,7 +5,8 @@ export const seriesStory = [
     paragraphs: [
       "Every image at K4 Studios begins as a finished work — but not every image carries the same weight, scale, or intent.",
       "This page outlines how images live, evolve, and are offered across distinct collector formats. Each edition reflects a different relationship between the work, the wall, and the person who chooses to live with it — from intimate studies held in the hand to statement works that define a space.",
-      "These structures are not marketing devices. They are rules of authorship, scarcity, and stewardship — designed to protect the integrity of the work while allowing collectors to engage at the level that feels right."
+      "These structures are not marketing devices. They are rules of authorship, scarcity, and stewardship — designed to protect the integrity of the work while allowing collectors to engage at the level that feels right.",
+      "You'll notice subtle symbols accompanying images across the site. These marks indicate which collector formats an image belongs to — from intimate studies to formally issued archive works."
     ]
   },
   {
@@ -19,7 +20,7 @@ export const seriesStory = [
   },
   {
     title: "The Edition Structure",
-    subhead: "The Sketch Series — The Visual Lobby",
+    subhead: "✽ The Sketch Series — The Visual Lobby",
     paragraphs: [
       "The Sketch Series is filled with larger-than-life characters, quiet studies, and fragments of story. Purposefully presented at an intimate scale, each piece is a finished work — carrying its own weight and narrative presence.",
       "Like travelers passing through, some arrive with more grit than grace, others with memories heavier than their baggage. Each Sketch holds a suspended moment — a brief encounter carried forward by the viewer.",
@@ -34,7 +35,7 @@ export const seriesStory = [
   },
   {
     title: null,
-    subhead: "The Foundation Series — Where the Wall Begins",
+    subhead: "✯ The Foundation Series — Where the Wall Begins",
     paragraphs: [
       "Foundation works move from the intimacy of the hand to the presence of the wall — still approachable, still open, but carrying greater balance and composure. Characters linger longer here. Stories unfold more slowly.",
       "Printed on archival paper in collector-friendly sizes, this series introduces scale and refinement without losing the quiet emotional weight that defines the work.",
@@ -49,7 +50,7 @@ export const seriesStory = [
   },
   {
     title: null,
-    subhead: "The Chronicle Series — Where the Story Settles",
+    subhead: "⌘ The Chronicle Series — Where the Story Settles",
     paragraphs: [
       "The Chronicle Series marks the point where an image crosses from open exploration into recorded history. These works are released as signed, limited editions — formally issued, tracked, and preserved as part of the long-term archive.",
       "Presented at a scale meant to be lived with — not glanced past — Chronicle works establish presence. They slow a room and invite pause, becoming part of the story told by the person who chooses them.",
@@ -64,7 +65,7 @@ export const seriesStory = [
   },
   {
     title: null,
-    subhead: "Legends — A Statement of Voice and Legacy",
+    subhead: "❖ Legends — A Statement of Voice and Legacy",
     paragraphs: [
       "Legends exist for works that demand scale, restraint, and finality. These images no longer compete for attention — they command it.",
       "Choosing a Legend is not about what the image depicts, but what it communicates. These works reveal voice, confidence, and intention — reflecting as much about the collector as the story within the frame.",
@@ -78,7 +79,7 @@ export const seriesStory = [
     ]
   },
   {
-    title: "Engrained Series — Where Story Meets Object",
+    title: "◈ Engrained Series — Where Story Meets Object",
     subhead: null,
     paragraphs: [
       "Engrained works fuse image and material into a single object. Printed directly into hand-selected Baltic Birch using a custom 5-layer UV process, the grain of the wood becomes inseparable from the story itself.",

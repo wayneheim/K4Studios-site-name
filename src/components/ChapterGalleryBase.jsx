@@ -36,6 +36,8 @@ import SwipeHint from "./SwipeHint";
 import LikeButton from "@/components/LikeButton.jsx";
 import StoryShow from "./Gallery-Slideshow.jsx";
 import SeriesOrderModal from "./SeriesOrderModal.jsx";
+import SeriesInfoPopup from "./SeriesInfoPopup.jsx";
+import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries } from "../data/seriesDefinitions.js";
 import useHorizontalSwipeNav from "./hooks/useHorizontalSwipeNav.js";
 import { createPortal } from "react-dom";
 import useMetaSwap from "./hooks/useMetaSwap.js";
@@ -485,6 +487,8 @@ export default function ChapterGalleryBase({
   const [showCollectorHint, setShowCollectorHint] = useState(false);
   const [showPricingModal, setShowPricingModal] = useState(false);
   const [showSeriesOrderModal, setShowSeriesOrderModal] = useState(false);
+  const [showSeriesInfoPopup, setShowSeriesInfoPopup] = useState(false);
+  const [seriesInfoScrollTo, setSeriesInfoScrollTo] = useState(null);
 
   const prevIndex = useRef(currentIndex);
   const notesBtnRef = useRef(null);
@@ -813,7 +817,7 @@ export default function ChapterGalleryBase({
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: direction > 0 ? -150 : 150 }}
                   transition={{ duration: 0.6, ease: [0.45, 0, 0.55, 1] }}
-                  className="grid md:grid-cols-2 gap-6 md:gap-12 items-center"
+                  className="grid md:grid-cols-2 gap-6 md:gap-12 items-center md:min-h-[75vh]"
                   {...swipeHandlers}
                   data-image-id={currentId}
                 >
@@ -939,6 +943,50 @@ export default function ChapterGalleryBase({
                               )}
                             </button>
                           )}
+
+                          {/* Desktop Series Icons - stacked below collector notes button */}
+                          {!isMobile && (() => {
+                            const currentImage = galleryData[currentIndex];
+                            const effectiveSeries = getEffectiveSeries(currentImage);
+                            const displaySeries = effectiveSeries
+                              .filter(s => SERIES_DEFINITIONS[s] && s !== "engrained")
+                              .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));
+                            
+                            if (displaySeries.length === 0) return null;
+                            
+                            // Calculate top offset based on whether collector notes button exists
+                            const hasNotes = currentImage?.notes?.trim();
+                            const topOffset = hasNotes ? '56px' : '8px';
+                            
+                            return (
+                              <div
+                                className="absolute right-3 flex flex-col gap-0.5 z-30"
+                                style={{ transform: "translateX(50px)", top: topOffset }}
+                              >
+                                {displaySeries.map((seriesKey) => {
+                                  const def = SERIES_DEFINITIONS[seriesKey];
+                                  return (
+                                    <button
+                                      key={seriesKey}
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setSeriesInfoScrollTo(seriesKey);
+                                        setShowSeriesInfoPopup(true);
+                                      }}
+                                      title={`${def.label} Series Member — Click for details`}
+                                      className="w-8 h-8 flex items-center justify-center text-lg transition-all cursor-pointer hover:scale-110"
+                                      style={{ color: "#3c83b3", opacity: 0.6 }}
+                                      onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+                                      onMouseLeave={(e) => e.currentTarget.style.opacity = '0.6'}
+                                    >
+                                      {def.icon || SERIES_ICONS[seriesKey]}
+                                    </button>
+                                  );
+                                })}
+                              </div>
+                            );
+                          })()}
                         </div>
                         {/* Desktop Collector Notes panel absolutely positioned 20px down from top, right-aligned to image container */}
                         {!isMobile && showNotes && galleryData[currentIndex]?.notes?.trim() && (
@@ -1228,6 +1276,45 @@ export default function ChapterGalleryBase({
                         </button>
                       )}
                     </div>
+
+                    {/* Mobile Series Icons - row below toolbar, above Play Show */}
+                    {isMobile && (() => {
+                      const currentImage = galleryData[currentIndex];
+                      const effectiveSeries = getEffectiveSeries(currentImage);
+                      const displaySeries = effectiveSeries
+                        .filter(s => SERIES_DEFINITIONS[s] && s !== "engrained")
+                        .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));
+                      
+                      if (displaySeries.length === 0) return null;
+                      
+                      return (
+                        <div className="flex items-center justify-center gap-4 my-2 md:hidden">
+                          {displaySeries.map((seriesKey, index) => {
+                            const def = SERIES_DEFINITIONS[seriesKey];
+                            return (
+                              <div key={seriesKey} className="flex items-center">
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setSeriesInfoScrollTo(seriesKey);
+                                    setShowSeriesInfoPopup(true);
+                                  }}
+                                  title={`${def.label} Series Member`}
+                                  className="text-lg p-1 transition-opacity"
+                                  style={{ color: "#3c83b3", opacity: 0.7 }}
+                                >
+                                  {def.icon || SERIES_ICONS[seriesKey]}
+                                </button>
+                                {index < displaySeries.length - 1 && (
+                                  <span className="text-gray-300 text-sm ml-4">|</span>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      );
+                    })()}
 
                     {!showStoryShow && (
                       isMobile ? (
@@ -1837,6 +1924,17 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
         onClose={() => setShowSeriesOrderModal(false)}
         image={galleryData[currentIndex]}
         logUIEvent={logUIEvent}
+      />
+
+      {/* Series Info Popup (all series descriptions) */}
+      <SeriesInfoPopup
+        isOpen={showSeriesInfoPopup}
+        onClose={() => {
+          setShowSeriesInfoPopup(false);
+          setSeriesInfoScrollTo(null);
+        }}
+        scrollToSeries={seriesInfoScrollTo}
+        activeSeries={getEffectiveSeries(galleryData[currentIndex]).filter(s => s !== "engrained")}
       />
     </div>
   );

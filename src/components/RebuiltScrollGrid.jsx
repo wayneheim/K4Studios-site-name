@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries } from "../data/seriesDefinitions.js";
 
 const BATCH_SIZES = { 1: 25, 2: 24, 3: 30 };
 
@@ -315,12 +316,43 @@ export default function RebuiltScrollGrid({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
-                className="h-[3.25rem] mt-4 flex flex-col items-center justify-center"
+                className="h-[4.5rem] mt-4 flex flex-col items-center justify-center"
               >
-                <div className="text-lg sm:text-lg font-semibold text-center text-warm-fade">
+                {/* Series Icons Row */}
+                {(() => {
+                  const effectiveSeries = getEffectiveSeries(entry);
+                  const displaySeries = effectiveSeries
+                    .filter(s => SERIES_DEFINITIONS[s] && s !== "engrained")
+                    .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));
+                  if (displaySeries.length === 0) return null;
+                  return (
+                    <div className="flex items-center gap-4 mb-1">
+                      {displaySeries.map((seriesKey, idx) => {
+                        const def = SERIES_DEFINITIONS[seriesKey];
+                        return (
+                          <span key={seriesKey} className="flex items-center">
+                            <span
+                              className="text-[15px] text-cyan-900/50"
+                              title={`${def.label} Series Member`}
+                            >
+                              {def.icon || SERIES_ICONS[seriesKey]}
+                            </span>
+                            {idx < displaySeries.length - 1 && (
+                              <span className="text-warm-fade text-xs ml-4">|</span>
+                            )}
+                          </span>
+                        );
+                      })}
+                    </div>
+                  );
+                })()}
+                <div className="text-base sm:text-base font-semibold text-center text-warm-fade">
                   {`Chapter ${globalIndex + 1}:`}
                 </div>
-                <h3 className="text-sm sm:text-base font-semibold text-center text-warm-fade">
+                <h3 
+                  className="text-[15px] font-semibold text-center text-warm-fade truncate max-w-full px-2"
+                  title={entry.title}
+                >
                   "{entry.title}"
                 </h3>
               </motion.div>

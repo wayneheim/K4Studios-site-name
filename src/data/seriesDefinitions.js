@@ -2,9 +2,19 @@
 // Used by: SeriesOrderModal, GalleryEditorPro, editionState.js
 // PRICING: Managed in pricingConfig.json via Edit Pricing button in EditorPro
 
+// Series Icons — Unicode symbols for each series level
+export const SERIES_ICONS = {
+  sketch: "✽",       // Six petaled asterisk
+  foundation: "✯",   // Outlined star
+  chronicle: "⌘",    // Place of interest / command
+  legend: "❖",       // Black diamond minus white X
+  engrained: "◈",    // White diamond containing black small diamond
+};
+
 export const SERIES_DEFINITIONS = {
   sketch: {
     label: "Sketch",
+    icon: "✽",
     description: "Open edition proof prints on archival matte paper.",
     showEdition: false,
     fulfillment: "smugmug", // Uses buyLink
@@ -13,6 +23,7 @@ export const SERIES_DEFINITIONS = {
   },
   foundation: {
     label: "Foundation",
+    icon: "✯",
     description: "Open edition archival prints in collector-friendly sizes.",
     showEdition: false,
     fulfillment: "smugmug",
@@ -21,6 +32,7 @@ export const SERIES_DEFINITIONS = {
   },
   chronicle: {
     label: "Chronicle",
+    icon: "⌘",
     description: "Limited edition of 250, unsigned, museum-quality archival print.",
     showEdition: true,
     editionLimit: 250,
@@ -30,6 +42,7 @@ export const SERIES_DEFINITIONS = {
   },
   legend: {
     label: "Legend",
+    icon: "❖",
     description: "Ultra-limited edition of 12, signed, museum-grade canvas.",
     showEdition: true,
     editionLimit: 12,
@@ -40,6 +53,7 @@ export const SERIES_DEFINITIONS = {
   // Engrained — has its own modal, not managed in standard series flow
   engrained: {
     label: "Engrained",
+    icon: "◈",
     description: "One-of-a-kind wood-burned artwork on premium hardwood.",
     showEdition: true,
     editionLimit: 50,
