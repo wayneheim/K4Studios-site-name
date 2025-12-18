@@ -68,8 +68,9 @@ export function getSeriesPricingList(seriesKey, pricingData) {
   }));
 }
 
-// Fetch runtime config (pricing + all copy) from server
+// Fetch runtime config (pricing + all copy) from server or static fallback
 export async function fetchPricingConfig() {
+  // Try Netlify function first (works for local dev and writes)
   try {
     const res = await fetch("/.netlify/functions/pricingConfig", { cache: "no-store" });
     if (res.ok) {
@@ -82,8 +83,25 @@ export async function fetchPricingConfig() {
       };
     }
   } catch (err) {
-    console.error("[seriesDefinitions] Error fetching pricing:", err);
+    console.warn("[seriesDefinitions] Function failed, trying static fallback:", err.message);
   }
+
+  // Fallback to static file (works in production)
+  try {
+    const res = await fetch("/pricingConfig.json", { cache: "no-store" });
+    if (res.ok) {
+      const data = await res.json();
+      return {
+        pricing: data.pricing || null,
+        descriptions: data.descriptions || null,
+        cardCopy: data.cardCopy || null,
+        infoCopy: data.infoCopy || null,
+      };
+    }
+  } catch (err) {
+    console.error("[seriesDefinitions] Static fallback also failed:", err);
+  }
+
   return { pricing: null, descriptions: null, cardCopy: null, infoCopy: null };
 }
 
