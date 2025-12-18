@@ -226,6 +226,12 @@ to = "/Glossary"
 status = 301
 force = true
 
+[[redirects]]
+from = "/glossary"
+to = "/Glossary"
+status = 301
+force = true
+
 
 ##############################
 # ✅ Smart Cache Policy — SEO-Safe & i-Page Compatible
