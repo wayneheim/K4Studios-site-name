@@ -75,12 +75,17 @@ export async function fetchPricingConfig() {
     const res = await fetch("/.netlify/functions/pricingConfig", { cache: "no-store" });
     if (res.ok) {
       const data = await res.json();
-      return {
-        pricing: data.pricing || null,
-        descriptions: data.descriptions || null,
-        cardCopy: data.cardCopy || null,
-        infoCopy: data.infoCopy || null,
-      };
+      // Check if we actually got useful data (not just empty defaults)
+      if (data.infoCopy || data.cardCopy || (data.pricing && Object.keys(data.pricing).length > 0)) {
+        return {
+          pricing: data.pricing || null,
+          descriptions: data.descriptions || null,
+          cardCopy: data.cardCopy || null,
+          infoCopy: data.infoCopy || null,
+        };
+      }
+      // Function returned empty data, fall through to static file
+      console.warn("[seriesDefinitions] Function returned empty data, trying static fallback");
     }
   } catch (err) {
     console.warn("[seriesDefinitions] Function failed, trying static fallback:", err.message);
