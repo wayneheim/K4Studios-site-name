@@ -786,8 +786,8 @@ export default function ChapterGalleryBase({
 
   return (
     <div
-      className="min-h- bg-white text-black font-serif px-5 py-8 overflow-hidden"
-      style={{ fontFamily: "Glegoo, serif" }}
+      className="min-h- bg-white text-black font-serif px-5 py-8 overflow-x-hidden"
+      style={{ fontFamily: "Glegoo, serif", maxWidth: '100%', width: '100%', boxSizing: 'border-box' }}
       onMouseMove={() => setShowArrows(true)}
     >
       {/* 
