@@ -847,17 +847,17 @@ export default function ChapterGalleryBase({
 
                   {/* IMAGE + ARROWS COLUMN */}
                   <div
-                    className="flex flex-col items-center w-full relative"
-                    style={{ marginTop: !isMobile ? '2rem' : 0 }}
+                    className="flex flex-col items-center w-full relative chapter-image-container-mobile"
+                    style={{ marginTop: !isMobile ? '2rem' : 0, ...(isMobile ? { maxWidth: '100%', overflowX: 'hidden' } : {}) }}
                   >
 
-                    <div className="w-full relative flex items-center justify-center mb-0">
+                    <div className="w-full relative flex items-center justify-center mb-0 chapter-image-container-mobile" style={isMobile ? { maxWidth: '100%', overflowX: 'hidden' } : {}}>
                       {/* Removed absolute-positioned mobile arrows; moved to row near slideshow */}
 
-                      <div className="relative w-full md:w-[575px] flex flex-row"> 
+                      <div className="relative w-full md:w-[575px] flex flex-row chapter-image-container-mobile" style={isMobile ? { maxWidth: '100%', overflowX: 'hidden' } : {}}> 
                         {/* Image container with absolutely positioned collector notes button outside/right of image edge */}
                         <div
-                          className="relative flex justify-center items-center"
+                          className="relative flex justify-center items-center chapter-image-container-mobile"
                           style={{ width: 'fit-content', maxWidth: '100%', margin: '0 auto', display: 'inline-block' }}
                         >
                           <img
@@ -871,7 +871,7 @@ export default function ChapterGalleryBase({
                                 if (isMobile) {
                                   return {
                                     cursor: "zoom-in",
-                                    maxWidth: "100%",
+                                    maxWidth: "calc(100vw - 2.5rem)",
                                     width: "auto",
                                     height: "auto",
                                     objectFit: "contain",

@@ -5,6 +5,11 @@
     max-width: calc(100vw - 2.5rem);
     box-sizing: border-box;
   }
+  /* Prevent horizontal overflow from desktop-only elements with translateX during initial render */
+  .chapter-image-container-mobile {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
 }
 .zoom-mat-frame {
   position: relative;
