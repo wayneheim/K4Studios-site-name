@@ -24,11 +24,8 @@ import '@/styles/global.css';
 
 const sectionPath = "/Other/Series";
 const meta = getLandingMeta(sectionPath, "/images/editions-hero.webp");
-meta.title = "Editions & Series – How the Work Is Offered | K4 Studios";
-meta.description = "Explore how images at K4 Studios evolve across editions, materials, and narrative forms — from intimate studies to lasting statement works.";
-meta.ogTitle = meta.title;
-meta.ogDescription = meta.description;
-meta.twitterCard = "summary_large_image";
+// Title for browser tab (meta comes from landingMetaDB)
+meta.title = meta.ogTitle;
 
 const headingCount = seriesStory.filter((block, i) => i > 0 && block.subhead).length;
 
@@ -70,14 +67,45 @@ const featheredImages = getSideImages({
 });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 
+// Build FAQ items from series sections for structured data
+const faqItems = [
+  {
+    question: "What is the Sketch Series at K4 Studios?",
+    answer: "The Sketch Series is our visual lobby — filled with larger-than-life characters, quiet studies, and forgotten stories. These are open edition 5×7 prints, intimate studies meant to be held and revisited. Many collectors begin here."
+  },
+  {
+    question: "What is the Foundation Series?",
+    answer: "Foundation works move from the intimacy of the hand to the presence of the wall. These are open edition archival prints in collector-friendly sizes, introducing scale and refinement while remaining accessible."
+  },
+  {
+    question: "What is the Chronicle Series?",
+    answer: "The Chronicle Series marks where an image crosses from open exploration into recorded history. These are signed, limited editions of 250 — formally issued, tracked, and preserved as part of the artist's long-term archive."
+  },
+  {
+    question: "What is the Legend Series?",
+    answer: "Legend works are ultra-limited signed editions of 12 — monumental statement pieces for collectors who understand that presentation speaks more powerfully than words alone. These works command attention and define a space."
+  },
+  {
+    question: "What is the Engrained Series?",
+    answer: "Engrained works fuse image and material into a single object. Printed directly into hand-selected Baltic Birch using a custom 5-layer UV process, the wood grain becomes inseparable from the story. Limited edition of 50 per image."
+  },
+  {
+    question: "How do images evolve at K4 Studios?",
+    answer: "Images at K4 Studios are curated upward based on their narrative strength and presence. Some remain intimate, while others prove they can carry scale and hold attention over time. Evolution is refinement, not revision."
+  }
+];
+
 const structuredData = getStructuredData({
-  type: "WebPage",
+  type: "Article",
   data: {
     headline: "Editions & Series at K4 Studios",
+    title: "How the Work Is Offered — Edition Structure & Collector Formats",
     description: "An overview of the edition structure, materials, and narrative formats that define how the work at K4 Studios is created, elevated, and collected.",
     url: `https://k4studios.com${sectionPath}`,
-    author: { "@type": "Person", name: "Wayne Heim" },
-    copyrightNotice: "© Wayne Heim"
+    image: "https://k4studios.com/images/editions-hero.webp",
+    articleSection: "Collecting Fine Art Photography",
+    keywords: ["fine art editions", "limited edition photography", "art collecting", "archival prints", "signed prints", "collector editions", "K4 Studios", "Wayne Heim"],
+    faqItems,
   }
 });
 ---

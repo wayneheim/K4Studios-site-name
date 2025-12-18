@@ -322,7 +322,7 @@ export function getStructuredData({
         "@id": `${data.url}#definedterm`,
         name: data.definedTerm.name,
         description: data.definedTerm.description,
-        inDefinedTermSet: data.definedTerm.termSet || "https://k4studios.com/glossary",
+        inDefinedTermSet: data.definedTerm.termSet || "https://k4studios.com/Glossary",
       };
     }
 

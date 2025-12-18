@@ -91,6 +91,58 @@ export const landingMetaDB = {
     twitterImage: "/og/historical-reenactment.jpg",
   },
 
+  "/Other/Series": {
+    ogTitle: "Editions & Series – How the Work Is Offered | K4 Studios",
+    ogDescription:
+      "Explore how images at K4 Studios evolve across editions, materials, and narrative forms—from intimate Sketch studies to signed Legend statement works.",
+    ogImage: "/images/editions-hero.webp",
+    ogType: "article",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Editions & Series – Collector Formats at K4 Studios",
+    twitterDescription:
+      "Discover the edition structure at K4 Studios: Sketch, Foundation, Chronicle, Legend, and Engrained series—each with distinct scale, scarcity, and intent.",
+    twitterImage: "/images/editions-hero.webp",
+  },
+
+  "/Other/Blog": {
+    ogTitle: "Inside the Frame – Wayne Heim's Art Blog",
+    ogDescription:
+      "Conversations about layered storytelling, composition, and painterly photography. Behind-the-scenes insights into Wayne Heim's fine art process.",
+    ogImage: "/og/blog.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Inside the Frame – Art Blog by Wayne Heim",
+    twitterDescription:
+      "Behind-the-scenes insights into painterly photography, storytelling, and fine art composition by Wayne Heim.",
+    twitterImage: "/og/blog.jpg",
+  },
+
+  "/Other/Shows": {
+    ogTitle: "K4 Picture Shows – Interactive Visual Presentations by Wayne Heim",
+    ogDescription:
+      "Experience immersive visual storytelling through K4 Picture Shows—cinematic fine art photography presentations that bring Western themes to life.",
+    ogImage: "/images/K4-Stories logo1b.webp",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "K4 Picture Shows – Visual Storytelling by Wayne Heim",
+    twitterDescription:
+      "Interactive picture shows combining fine art photography with cinematic Western storytelling by Wayne Heim.",
+    twitterImage: "/images/K4-Stories logo1b.webp",
+  },
+
+  "/Other/Stories": {
+    ogTitle: "K4 Picture Show Stories – Cinematic Visual Narratives by Wayne Heim",
+    ogDescription:
+      "Curated visual stories and themed exhibitions featuring Wayne Heim's painterly Western photography—immersive slideshows with narrative depth.",
+    ogImage: "/images/K4-Stories logo1b.webp",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "K4 Picture Show Stories – Themed Visual Collections",
+    twitterDescription:
+      "Experience artist-curated visual stories combining fine art photography with cinematic Western storytelling by Wayne Heim.",
+    twitterImage: "/images/K4-Stories logo1b.webp",
+  },
+
   "/Galleries/Painterly-Fine-Art-Photography": {
     ogTitle:
       "Painterly Fine Art Photography by Wayne Heim",

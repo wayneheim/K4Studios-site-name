@@ -5,12 +5,29 @@ import PictureShowBase from "@/components/PictureShowBase.jsx";
 import { storyMeta, storyData } from "@/data/Other/Stories/The-Cost-of-the-Journey.mjs";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 
+const sectionPath = "/Other/Stories/The-Cost-of-the-Journey";
+const coverImage = storyData.find(s => s.visibility !== "ghost")?.srcM || storyData[0]?.src || "/images/K4-Stories logo1b.webp";
+
+const meta = {
+  description: storyMeta.description,
+  keywords: storyMeta.keywords,
+  ogTitle: `${storyMeta.showTitle} – K4 Picture Show`,
+  ogDescription: storyMeta.description,
+  ogImage: coverImage,
+  ogType: "video.other",
+  ogUrl: `https://k4studios.com${sectionPath}`,
+  twitterCard: "summary_large_image",
+  twitterTitle: `${storyMeta.showTitle} – Picture Show by Wayne Heim`,
+  twitterDescription: storyMeta.description,
+  twitterImage: coverImage
+};
+
 const structuredDataJSON = getStructuredData({
   type: "gallery",
   data: {
     title: storyMeta.showTitle,
     description: storyMeta.description,
-    url: `https://k4studios.com/Other/Stories/The-Cost-of-the-Journey`,
+    url: `https://k4studios.com${sectionPath}`,
     keywords: storyMeta.keywords,
     copyrightNotice: "© Wayne Heim, k4studios.com. All rights reserved."
   },
@@ -26,7 +43,7 @@ const structuredDataJSON = getStructuredData({
 });
 ---
 
-<BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON}>
+<BaseLayout title={storyMeta.showTitle} meta={meta} structuredDataJSON={structuredDataJSON}>
   <noscript>
     <img
       src="/images/stories/The-Cost-of-the-Journey-hero.jpg"
