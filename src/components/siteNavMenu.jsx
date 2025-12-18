@@ -111,13 +111,14 @@ export default function SiteNavMenu({ forceMobile = false }) {
       className={`nav-item${hasKids ? " has-dropdown" : ""}${expanded ? " expanded" : ""}`}
       style={{ animationDelay: `${0.1 + delay}s` }}
     >
-      <div className="menu-row">
+      <div className="menu-row" style={{ display: "flex", alignItems: "center" }}>
         {/* Hamburger for mobile */}
         {hasKids && isMobileView() && (
           <button
             className={`mini-ham-icon hover-collapse mobile-only${expanded ? " rotated" : ""}`}
             onClick={handleToggle}
             aria-label="Toggle Submenu"
+            style={{ marginRight: "0.5rem" }}
           >
             <span className="bar top" />
             <span className="bar mid" />
@@ -129,6 +130,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
         {!hasKids && (
           <span
             className="leaf-prefix"
+            style={{ marginRight: "0.3rem" }}
             aria-hidden="true"
             role="presentation"
           >

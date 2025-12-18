@@ -32,7 +32,7 @@ const DEFAULT_INFO_COPY = {
   },
 };
 
-// Info overlay component (museum label style)
+// Info overlay component (museum label style) - fixed position to float above modal
 function SeriesInfoOverlay({ seriesKey, infoCopy, onClose }) {
   const info = infoCopy?.[seriesKey] || DEFAULT_INFO_COPY[seriesKey];
   if (!info) return null;
@@ -42,7 +42,7 @@ function SeriesInfoOverlay({ seriesKey, infoCopy, onClose }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="absolute inset-0 z-10 flex items-center justify-center p-4"
+      className="fixed inset-0 z-[10001] flex items-center justify-center p-4 bg-black bg-opacity-30"
       onClick={onClose}
     >
       <motion.div
@@ -161,7 +161,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto"
+          className="bg-white rounded-lg shadow-xl max-w-md w-full min-h-[520px] max-h-[90vh] overflow-y-auto"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="p-4 relative">

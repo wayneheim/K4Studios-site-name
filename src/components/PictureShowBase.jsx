@@ -1023,20 +1023,23 @@ const isSpeechActive = () => {
                     </motion.div>
                   </div>
                 ) : (
-                  /* IMAGE */
+                  /* IMAGE - border removed, kept simple to avoid narrow image spacing issues */
                   <div className="w-full px-5 sm:px-6 md:px-8 flex items-start justify-center pt-2 sm:pt-4 md:pt-8" style={{ boxSizing: 'border-box' }}>
-                    <div className="relative" style={{ width: 'fit-content' }}>
+                    <div className="relative" style={{ lineHeight: 0 }}>
                       <img
                         src={getBestImageSrc(currentImage)}
                         alt={currentImage?.title}
-                        className="rounded-lg max-h-[70vh] max-w-full object-contain shadow-md border border-gray-300"
-                        // zoom disabled in this viewer
+                        className="rounded-lg shadow-md"
                         onContextMenu={(e) => e.preventDefault()}
                         style={{
                           WebkitUserDrag: 'none',
                           userSelect: 'none',
                           WebkitTouchCallout: 'none',
-                          display: 'block'
+                          display: 'block',
+                          maxHeight: '70vh',
+                          maxWidth: '100%',
+                          width: 'auto',
+                          height: 'auto'
                         }}
                         draggable={false}
                       />
