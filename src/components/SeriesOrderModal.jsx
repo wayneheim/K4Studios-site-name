@@ -4,37 +4,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CircleX, Info } from "lucide-react";
 import { SERIES_DEFINITIONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig } from "../data/seriesDefinitions.js";
 
-// Default card copy — promise (short, evocative) - used if config not loaded
-const DEFAULT_CARD_COPY = {
-  sketch: "Open edition study prints — intimate, immediate, and tactile.\nA quiet entry point into the work.",
-  foundation: "Open edition archival prints — refined, balanced, and collectible.\nWhere images begin to take their full form.",
-  chronicle: "Signed, limited archival prints — historically recorded and tightly controlled.",
-  legend: "Ultra-limited, signed statement works — the highest expression of the image.",
-};
-
-// Default hover/info copy — reassurance (deeper prose) - used if config not loaded
-const DEFAULT_INFO_COPY = {
-  sketch: {
-    title: "The Sketch Series",
-    body: "These small-format prints are the foundation of the work — intimate studies meant to be held, revisited, and lived with.\n\nPrinted in a single size to preserve immediacy and accessibility, they offer a personal way to engage with the image without ceremony or commitment.\n\nMany collectors begin here.",
-  },
-  foundation: {
-    title: "The Foundation Series",
-    body: "This series represents the first formal presentation of an image as a finished work.\n\nOffered in collector-friendly sizes and printed on archival papers, Foundation pieces retain accessibility while introducing scale, presence, and refinement.\n\nThis series remains open until an image advances into higher collector tiers.",
-  },
-  chronicle: {
-    title: "The Chronicle Series",
-    body: "Each Chronicle image is released as a signed, limited edition and formally recorded as part of the artist's historical archive.\n\nWhile the image may exist in earlier open editions, the Chronicle Series marks the point at which scarcity, provenance, and long-term collectability are introduced.\n\nOnce editions are issued, they remain permanently in circulation.",
-  },
-  legend: {
-    title: "The Legend Series",
-    body: "Legend works represent the final and most complete expression of an image.\n\nProduced in large scale and released in extremely limited quantities, each piece is individually signed and intended as a long-term anchor work for serious collectors and institutions.\n\nCustom sizes and special placements may be considered by request.",
-  },
-};
+// Import config at build time as fallback (auto-synced, no manual copy needed)
+import pricingConfigFallback from "../data/pricingConfig.json";
 
 // Info overlay component (museum label style) - fixed position to float above modal
 function SeriesInfoOverlay({ seriesKey, infoCopy, onClose }) {
-  const info = infoCopy?.[seriesKey] || DEFAULT_INFO_COPY[seriesKey];
+  const info = infoCopy?.[seriesKey] || pricingConfigFallback.infoCopy?.[seriesKey];
   if (!info) return null;
 
   return (
@@ -243,7 +218,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
                       )}
                     </div>
                     <p className="text-xs text-gray-600 mb-2 whitespace-pre-line leading-relaxed">
-                      {cardCopy?.[seriesKey] || DEFAULT_CARD_COPY[seriesKey] || descriptions?.[seriesKey] || def.description}
+                      {cardCopy?.[seriesKey] || pricingConfigFallback.cardCopy?.[seriesKey] || descriptions?.[seriesKey] || def.description}
                     </p>
 
                     {/* Pricing list (stacked format) */}
