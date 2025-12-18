@@ -175,15 +175,12 @@ const isImagePage = lastSegment.startsWith("i-");
         {usedEntranceData.subtitle && (
           <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
         )}
-        <GalleryInfo
-          client:load
-          entranceData={{
-            ...usedEntranceData,
-            title: fixMojibake(usedEntranceData.title),
-            subtitle: fixMojibake(usedEntranceData.subtitle),
-            image: usedEntranceData.image,
-          }}
-        />
+        <GalleryInfo client:load entranceData={{
+          ...usedEntranceData,
+          title: fixMojibake(usedEntranceData.title),
+          subtitle: fixMojibake(usedEntranceData.subtitle),
+          image: usedEntranceData.image
+        }} />
       </div>
     )}
 
@@ -200,13 +197,7 @@ const isImagePage = lastSegment.startsWith("i-");
   <Footer
     previewImages={previewImages}
     previewPath={previewPath}
-    currentImageUrl={
-      selectedImage
-        ? selectedImage.src.startsWith("http")
-          ? selectedImage.src
-          : `${siteBase}${selectedImage.src.startsWith("/") ? selectedImage.src : "/" + selectedImage.src}`
-        : undefined
-    }
+    currentImageUrl={selectedImage ? (selectedImage.src.startsWith('http') ? selectedImage.src : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`) : undefined}
     title={pageTitle}
   />
 
@@ -280,32 +271,6 @@ const isImagePage = lastSegment.startsWith("i-");
 
     #gallery-content p { font-size: 1rem !important; margin-bottom: 1em !important; }
     #gallery-content a { text-decoration: underline !important; color: #85644b !important; }
-
-    /* --- MOBILE OVERFLOW PATCH (2025-11-07) --- */
-    @media (max-width: 767px) {
-      html, body {
-        overflow-x: hidden !important;
-        width: 100% !important;
-        box-sizing: border-box;
-      }
-      #gallery-content {
-        overflow-x: hidden !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        box-sizing: border-box;
-      }
-      .gallery-landing-title,
-      .gallery-landing-subtitle {
-        margin-left: 1.5rem !important;
-        margin-right: 1.5rem !important;
-        width: auto !important;
-      }
-      #intro-section,
-      #chapter-section {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
-    }
   </style>
 
   {!isImagePage && (
