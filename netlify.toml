@@ -174,7 +174,13 @@ force = true
 
 [[redirects]]
 from = "/blog-thoughts-and-ideas*"
-to = "/Blog"
+to = "/Other/Blog"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Blog"
+to = "/Other/Blog"
 status = 301
 force = true
 
