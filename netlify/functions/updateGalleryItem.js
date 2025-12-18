@@ -194,6 +194,50 @@ exports.handler = async (event) => {
       }
     }
 
+    // availableSeries (array of strings - edition tiers beyond default sketch)
+    if (Object.prototype.hasOwnProperty.call(patch, "availableSeries")) {
+      const existing = getProp(target, "availableSeries");
+      if (patch.availableSeries === null || !patch.availableSeries || (Array.isArray(patch.availableSeries) && patch.availableSeries.length === 0)) {
+        // Remove availableSeries prop if null/empty/undefined
+        if (existing) {
+          target.properties = target.properties.filter((p) => p !== existing);
+        }
+      } else if (Array.isArray(patch.availableSeries)) {
+        setProp(target, "availableSeries", makeArrayStringLiterals(patch.availableSeries));
+      }
+    }
+
+    // noSketch (boolean - explicitly exclude from default sketch tier)
+    if (Object.prototype.hasOwnProperty.call(patch, "noSketch")) {
+      const existing = getProp(target, "noSketch");
+      if (!patch.noSketch) {
+        // Remove noSketch prop if false/undefined
+        if (existing) {
+          target.properties = target.properties.filter((p) => p !== existing);
+        }
+      } else {
+        setProp(target, "noSketch", b.booleanLiteral(true));
+      }
+    }
+
+    // status ("active" | "retired" | "removed" - archival lifecycle)
+    if (Object.prototype.hasOwnProperty.call(patch, "status")) {
+      const v = patch.status;
+      const existing = getProp(target, "status");
+      if (!v || v === "active") {
+        // Remove status prop if active (default)
+        if (existing) {
+          target.properties = target.properties.filter((p) => p !== existing);
+        }
+      } else if (v === "retired" || v === "removed") {
+        setProp(target, "status", makeStringNode(v, usesTemplate));
+      }
+    }
+
+    // NOTE: editionsSold is NOT stored in .mjs files.
+    // Edition state is stored in editionState.json via the editionState Netlify function.
+    // This separation protects transactional state from accidental overwrites.
+
     // write back
     const output = recast.print(ast, { quote: "double" }).code;
     await fs.writeFile(absPath, output, "utf8");

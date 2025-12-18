@@ -615,10 +615,10 @@ export const siteNav = [
       "type": "collection"
     },
     {
-      "label": "Print Options",
-      "href": "/Other/Print-Options",
+      "label": "Series & Editions",
+      "href": "/Other/Series",
       "code": "O-S2",
-      "slug": "print-options",
+      "slug": "series-editions",
       "type": "collection"
     },
     {

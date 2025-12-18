@@ -93,7 +93,7 @@ printOptions: {
     { phrase: "gallery wrap", rating: 3, use: true },
     { phrase: "canvas prints", rating: 3, use: true },
     { phrase: "metal prints", rating: 3, use: true },
-    { phrase: "wood prints", rating: 3, use: true },
+    { phrase: "wood prints", rating: 3, use: true, link: "/Other/K4-Select-Series/Engrained" },
     { phrase: "matting options", rating: 3, use: true },
     { phrase: "ordering fine art", rating: 3, use: true },
     { phrase: "how to buy art", rating: 3, use: true }
@@ -513,7 +513,7 @@ roaring20s: {
   ]
 },
 engrained: {
-  path: "/Other/K4-Select-Series/Engrained/Engrained-Series",
+  path: "/Other/K4-Select-Series/Engrained",
   def: "Photographic prints on wood—tone and grain working together for a tactile finish.",
 
   landingPhrases: [
@@ -522,6 +522,7 @@ engrained: {
     { phrase: "Engrained Prints", rating: 5, use: true },
     { phrase: "wood print fine art", rating: 5, use: true },
     { phrase: "fine art wood prints", rating: 5, use: true },
+    { phrase: "natural grain", rating: 5, use: true },
 
     // --- Secondary high-value expansion ---
     { phrase: "stories etched in wood", rating: 4, use: true },
@@ -551,7 +552,6 @@ landscapeIntPainterly: {
 
   landingPhrases: [
     { phrase: "International Painterly Landscapes", rating: 5, use: true },
-    { phrase: "natural grain", rating: 5, use: true },
     { phrase: "european landscape art", rating: 4, use: true },
     { phrase: "painterly international landscapes", rating: 4, use: true },
     { phrase: "world landscapes fine art", rating: 3, use: true },

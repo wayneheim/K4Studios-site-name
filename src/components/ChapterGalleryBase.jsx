@@ -35,6 +35,7 @@ import "../styles/global.css";
 import SwipeHint from "./SwipeHint";
 import LikeButton from "@/components/LikeButton.jsx";
 import StoryShow from "./Gallery-Slideshow.jsx";
+import SeriesOrderModal from "./SeriesOrderModal.jsx";
 import useHorizontalSwipeNav from "./hooks/useHorizontalSwipeNav.js";
 import { createPortal } from "react-dom";
 import useMetaSwap from "./hooks/useMetaSwap.js";
@@ -483,6 +484,7 @@ export default function ChapterGalleryBase({
   const [showStoryShow, setShowStoryShow] = useState(false);
   const [showCollectorHint, setShowCollectorHint] = useState(false);
   const [showPricingModal, setShowPricingModal] = useState(false);
+  const [showSeriesOrderModal, setShowSeriesOrderModal] = useState(false);
 
   const prevIndex = useRef(currentIndex);
   const notesBtnRef = useRef(null);
@@ -1163,26 +1165,23 @@ export default function ChapterGalleryBase({
                           <ShoppingCart className="w-4 h-4" />
                         </button>
                       ) : (
-                        <a
+                        <button
                           data-cart-btn
-                          href={galleryData[currentIndex]?.buyLink || "#"}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="Click to order prints"
+                          title="Click to see order options"
                           className="inline-flex items-center justify-center w-8 h-8 rounded-full text-xs font-semibold shadow transition border border-gray-300 hover:border-red-200"
                           style={{ backgroundColor: "#bbb6b1", color: "#ffffff" }}
-                          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
+                          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#76807b")}
                           onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
                           onClick={() => {
-                            logUIEvent("buy_link_click", {
+                            setShowSeriesOrderModal(true);
+                            logUIEvent("series_order_modal_open", {
                               page: window.location.pathname,
-                              imageId: galleryData[currentIndex]?.id,
-                              buyLink: galleryData[currentIndex]?.buyLink
+                              imageId: galleryData[currentIndex]?.id
                             });
                           }}
                         >
                           <ShoppingCart className="w-4 h-4" />
-                        </a>
+                        </button>
                       )}
 
                       {/* ❤️ Like Button */}
@@ -1831,6 +1830,14 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Series Order Modal (for non-Engrained images) */}
+      <SeriesOrderModal
+        isOpen={showSeriesOrderModal}
+        onClose={() => setShowSeriesOrderModal(false)}
+        image={galleryData[currentIndex]}
+        logUIEvent={logUIEvent}
+      />
     </div>
   );
 }

@@ -1,0 +1,50 @@
+{
+  "pricing": {
+    "sketch": {
+      "5\" x 7\"": 25
+    },
+    "foundation": {
+      "8\" x 10\"": 150,
+      "11\" x 14\"": 175
+    },
+    "chronicle": {
+      "16\" x 20\"": 1250,
+      "20\" x 24\"": 1650
+    },
+    "legend": {
+      "30\" x 40\"": 3800,
+      "40\" x 60\"": 5000
+    }
+  },
+  "descriptions": {
+    "sketch": "Small, open edition prints on paper.",
+    "foundation": "Open edition archival prints in collector-friendly sizes.",
+    "chronicle": "Limited edition archival prints — signed, recorded, and permanently placed in the artist’s historical archive.",
+    "legend": "Ultra-limited, signed statement works printed on museum-grade fine art paper — large-scale pieces designed to command the wall."
+  },
+  "cardCopy": {
+    "sketch": "Open edition study prints — intimate in scale, complete in vision. A personal entry point into the work.",
+    "foundation": "Open edition archival prints — grounded, refined, and quietly assured. Where images begin to speak from the wall.",
+    "chronicle": "Signed, limited editions where the work enters the record — measured, intentional, and built for lasting provenance.",
+    "legend": "Ultra-limited, signed statement works printed on museum-grade fine art paper, offered in large-scale formats designed to command the wall."
+  },
+  "infoCopy": {
+    "sketch": {
+      "title": "The Sketch Series",
+      "body": "The Sketch Series—our visual lobby—is filled with larger-than-life characters, quiet studies, and forgotten stories. Purposefully presented at an intimate scale, each piece in this series is a finished work, carrying its own weight, presence, and sense of narrative discovery.\n\nLike bygone travelers passing through, some arrive with more grit than grace, others with memories heavier than their baggage. Each image holds a moment suspended—a brief encounter, glimpsed and then carried forward by the viewer.\n\nPresented in this restrained format, the work invites close looking. Held in the hand, these images offer a more personal exploration of character, theme, and memory—experienced quietly, directly, and without distance."
+    },
+    "foundation": {
+      "title": "The Foundation Series",
+      "body": "The Foundation Series — where works begins to speak from your wall.\n\nThese images move from the intimacy of the hand to the presence of the wall — still approachable, still open, but carrying a greater sense of balance and composure. Characters linger longer here. Stories unfold more slowly.\n\nPrinted on archival paper in collector-friendly sizes, this series introduces scale and refinement without losing the quiet emotional weight that defines the work.\n\nFoundation Series images remain available in this open format until an image advances further, marking a period where the work is lived with, returned to, and allowed to grow into its next chapter."
+    },
+    "chronicle": {
+      "title": "The Chronicle Series",
+      "body": "These works are released as signed, limited editions — formally issued, tracked, and preserved as part of the artist’s long-term archive. While an image may exist in earlier, more accessible forms, the Chronicle Series marks the point where scarcity, provenance, and permanence are introduced.\n\nThis is the moment the work settles into its place: no longer passing through, no longer provisional. Once issued, Chronicle editions remain in circulation — carrying their history forward, edition by edition, collector by collector.\n\nPrinted on beautiful archival papers and presented at a scale meant to be lived with — not glanced past — Chronicle works establish presence. They slow a room and invite pause. They become part of the story told by the person who chooses them.\n\nMeasured in scale, restrained in quantity, and grounded in intent, the Chronicle Series is built for those who understand that the wall is not decoration — it is declaration. A reflection of taste, values, and the stories one chooses to tell."
+    },
+    "legend": {
+      "title": "Legends — A Statement of Voice & Legacy",
+      "body": "Homes are not decorated — they are revealed.\nAnd walls speak long after voices fall quiet.\n\nThe Legend Series exists for those ready to let their walls carry the weight of their story.\n\nLegend works are created for collectors who understand that presentation speaks more powerfully than words alone. At this scale, these images no longer compete for attention — they command it.\n\nThey establish tone within a space. They slow the room. They change the way people move through it.\n\nChoosing a Legend Series image goes beyond what it depicts. Each work becomes a reflection of the person who chose to live with it — revealing voice, values, and intention. Taste. Restraint. Confidence.\n\nReleased as ultra-limited, signed editions, each Legend is issued with purpose and finality. These works are selected, placed, and allowed to settle into the long arc of a life — where meaning deepens with time, not explanation."
+    }
+  },
+  "updatedAt": "2025-12-17T21:43:32.601Z"
+}

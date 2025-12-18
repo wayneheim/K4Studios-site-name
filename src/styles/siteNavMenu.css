@@ -388,9 +388,25 @@
 /* ---------- Row & arrow styling ---------- */
 
 
-/* Row layout for left/right icons */
+/* Row layout - hanging indent so wrapped text aligns with first line */
 .menu-row {
+  display: flex;
+  align-items: flex-start;
   width: 100%;
+  padding-left: 26px;  /* Space for icon (18px) + margin (8px) */
+}
+
+/* Pull icons back into the padding space */
+.menu-row .leaf-prefix,
+.menu-row .mini-ham-icon {
+  margin-left: -26px;
+}
+
+/* Make anchor take remaining space so wrapped text stays aligned */
+.menu-row .nav-link,
+.menu-row .menu-link {
+  flex: 1;
+  min-width: 0;
 }
 
 /* Make the entire anchor flex layout */
@@ -460,10 +476,15 @@
 }
 
 .leaf-prefix {
-  margin-right: 0.8rem; /* adjust as needed */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 18px;          /* Match hamburger icon width */
+  margin-right: 0.5rem; /* Match hamburger icon margin */
   font-size: x-large;
-  color: #999;          /* optional: tone it down */
-  font-weight: 500;     /* optional: stylistic */
+  color: #999;
+  font-weight: 500;
 }
 
 
@@ -472,10 +493,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 18px;
   height: 18px;
   padding: 0;
-  margin-right: 0.4rem;
+  margin-right: 0.5rem;
   border: none;
   background: transparent;
   cursor: pointer;

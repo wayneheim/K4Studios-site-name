@@ -1,5 +1,6 @@
 // src/components/GalleryEditorPro.jsx
 import { useEffect, useMemo, useRef, useState } from "react";
+import PricingEditorModal from "./PricingEditorModal.jsx";
 
 /* ---------- config: add more roots here if needed ---------- */
 const DATA_ROOTS = [
@@ -129,6 +130,396 @@ const btnTan = "bg-amber-100 border-amber-300 text-amber-900";
 const btnOrange = "bg-orange-100 border-orange-300 text-orange-900";
 const btnBlue = "bg-blue-300 border-blue-700 text-black";
 
+/* ---------- Series Definitions ---------- */
+// Note: Engrained has its own system, not managed here
+const SERIES_DEFINITIONS = {
+  sketch: { label: "Sketch", limit: null, description: "Open edition, 5×7 only" },
+  foundation: { label: "Foundation", limit: null, description: "Open edition, larger formats" },
+  chronicle: { label: "Chronicle", limit: 250, description: "Limited edition of 250" },
+  legend: { label: "Legend", limit: 12, description: "Limited edition of 12" },
+};
+
+/* ---------- Series Resolution Logic ---------- */
+function getEffectiveSeries(image) {
+  const series = image?.availableSeries ? [...image.availableSeries] : [];
+  // Sketch is ALWAYS included unless explicitly suppressed
+  if (!image?.noSketch && !series.includes("sketch")) {
+    series.unshift("sketch");
+  }
+  return series;
+}
+
+/* ---------- Edition Counter (local-only updates + explicit save) ---------- */
+function EditionCounter({ seriesKey, limit, value, serverValue, disabled, onChange, onSave, hasPendingChange }) {
+  const [adjustMode, setAdjustMode] = useState(false);
+  const displayValue = value ?? 0; // 0 = none sold yet
+  
+  function increment() {
+    if (displayValue >= limit) return;
+    onChange(displayValue + 1);
+  }
+
+  function handleAdjust(newVal) {
+    const clamped = Math.max(0, Math.min(limit, newVal));
+    onChange(clamped);
+  }
+  
+  return (
+    <div className="flex items-center gap-1 text-sm">
+      {adjustMode ? (
+        <>
+          <input
+            type="number"
+            min="0"
+            max={limit}
+            value={displayValue}
+            onChange={(e) => handleAdjust(parseInt(e.target.value, 10) || 0)}
+            onBlur={() => setAdjustMode(false)}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === "Escape") setAdjustMode(false); }}
+            disabled={disabled}
+            autoFocus
+            className="w-14 px-2 py-1 border-2 border-amber-400 rounded text-center text-sm bg-amber-50"
+          />
+        </>
+      ) : (
+        <>
+          <span className={`w-10 text-center font-medium ${hasPendingChange ? "text-amber-600" : ""}`}>
+            {displayValue}
+          </span>
+          <button
+            onClick={increment}
+            disabled={disabled || displayValue >= limit}
+            className="px-1.5 py-0.5 border rounded text-xs hover:bg-gray-100 disabled:opacity-40 disabled:cursor-not-allowed"
+            title="Increment (local only)"
+          >▲</button>
+        </>
+      )}
+      <span className="text-gray-500">of {limit} Sold</span>
+      {serverValue > 0 && <span className="text-xs text-red-600 ml-1">🔒</span>}
+      {!adjustMode && (
+        <button
+          onClick={() => setAdjustMode(true)}
+          disabled={disabled}
+          className="text-xs text-amber-600 hover:text-amber-800 ml-1"
+          title="Adjust sold count"
+        >✎</button>
+      )}
+      {/* Save button - only shows when there's a pending change */}
+      {hasPendingChange && (
+        <button
+          onClick={onSave}
+          disabled={disabled}
+          className="px-2 py-0.5 bg-green-600 text-white rounded text-xs hover:bg-green-700 disabled:opacity-40 ml-1"
+          title="Save edition count to server"
+        >💾</button>
+      )}
+    </div>
+  );
+}
+
+/* ---------- Series & Status Panel ---------- */
+function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricing }) {
+  const [editionStates, setEditionStates] = useState({});
+  const [pendingEditions, setPendingEditions] = useState({}); // Local pending changes
+  const [loading, setLoading] = useState(false);
+
+  // Fetch edition states from separate database when current image changes
+  useEffect(() => {
+    if (!current?.id) return;
+    fetchEditionState(current.id);
+    setPendingEditions({}); // Clear pending when switching images
+  }, [current?.id]);
+
+  async function fetchEditionState(imageId) {
+    try {
+      // Add cache-buster to prevent stale data
+      const cacheBuster = Date.now();
+      const res = await fetch(`/.netlify/functions/editionState?imageId=${imageId}&_t=${cacheBuster}`, {
+        cache: "no-store",
+        headers: { "Cache-Control": "no-cache" }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const states = data.states || {};
+        setEditionStates(states);
+      }
+    } catch (err) {
+      console.error("[SeriesStatusPanel] Error fetching edition state:", err);
+    }
+  }
+
+  // Update pending edition locally (no server call)
+  function updatePendingEdition(seriesKey, newCount) {
+    setPendingEditions(prev => ({ ...prev, [seriesKey]: newCount }));
+  }
+
+  // Save a specific series edition to server
+  async function saveEdition(seriesKey) {
+    if (!current?.id) return;
+    const newCount = pendingEditions[seriesKey];
+    if (newCount === undefined) return;
+    
+    setLoading(true);
+    try {
+      // Ensure edition exists first
+      const existing = editionStates[seriesKey];
+      if (!existing) {
+        await fetch("/.netlify/functions/editionState", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            imageId: current.id,
+            series: seriesKey,
+            action: "create"
+          })
+        });
+      }
+      
+      const res = await fetch("/.netlify/functions/editionState", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          imageId: current.id,
+          series: seriesKey,
+          action: "setSold",
+          data: { sold: newCount }
+        })
+      });
+      if (res.ok) {
+        const result = await res.json();
+        // Update local state immediately with the confirmed value
+        if (result.state) {
+          setEditionStates(prev => ({
+            ...prev,
+            [seriesKey]: result.state
+          }));
+        }
+        // Clear this pending change
+        setPendingEditions(prev => {
+          const copy = { ...prev };
+          delete copy[seriesKey];
+          return copy;
+        });
+      }
+    } catch (err) {
+      console.error("[SeriesStatusPanel] Error saving edition:", err);
+    }
+    setLoading(false);
+  }
+
+  // Create/release a series edition
+  async function releaseSeries(seriesKey, limit) {
+    if (!current?.id) return;
+    setLoading(true);
+    try {
+      const res = await fetch("/.netlify/functions/editionState", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          imageId: current.id,
+          series: seriesKey,
+          action: "create"
+        })
+      });
+      if (res.ok) {
+        await fetchEditionState(current.id);
+      }
+    } catch (err) {
+      console.error("[SeriesStatusPanel] Error releasing series:", err);
+    }
+    setLoading(false);
+  }
+
+  const effectiveSeries = getEffectiveSeries(current);
+  const currentStatus = current?.status || "active";
+  const isRetired = currentStatus === "retired";
+  
+  // Calculate lock info from server state
+  // Value represents number sold (not next edition)
+  // Exclude engrained - it has its own system
+  let totalActuallySold = 0;
+  for (const [seriesKey, info] of Object.entries(editionStates)) {
+    if (seriesKey === "engrained") continue; // Engrained managed separately
+    totalActuallySold += info.sold || 0;
+  }
+  const isLocked = totalActuallySold > 0;
+  const canRemove = !isLocked && currentStatus !== "retired";
+  const canRetire = !isRetired;
+
+  // Check if a specific series has sales (locked) - based on SERVER state
+  // Value represents number sold (not next edition)
+  // sold > 0 = at least 1 sold = locked
+  function isSeriesLocked(seriesKey) {
+    const soldCount = editionStates[seriesKey]?.sold || 0;
+    return soldCount > 0;
+  }
+
+  // Toggle series membership
+  function toggleSeries(seriesKey) {
+    if (!backupMade || isRetired) return;
+    if (isSeriesLocked(seriesKey)) return;
+
+    if (seriesKey === "sketch") {
+      onUpdate("noSketch", !current.noSketch);
+    } else {
+      const currentSeries = current.availableSeries || [];
+      let newSeries;
+      if (currentSeries.includes(seriesKey)) {
+        newSeries = currentSeries.filter(s => s !== seriesKey);
+      } else {
+        newSeries = [...currentSeries, seriesKey];
+        // Auto-release edition state when adding a limited series
+        const def = SERIES_DEFINITIONS[seriesKey];
+        if (def?.limit && !editionStates[seriesKey]) {
+          releaseSeries(seriesKey, def.limit);
+        }
+      }
+      onUpdate("availableSeries", newSeries.length > 0 ? newSeries : undefined);
+    }
+  }
+
+  // Change status
+  function changeStatus(newStatus) {
+    if (!backupMade) return;
+    if (newStatus === "removed" && isLocked) return;
+    if (isRetired) return;
+    
+    if (newStatus === "retired") {
+      const ok = confirm(
+        "⚠️ RETIREMENT IS PERMANENT\n\n" +
+        "Once retired, this image:\n" +
+        "• Cannot re-enter any series\n" +
+        "• Cannot have new editions released\n" +
+        "• Cannot be changed back to active\n\n" +
+        "Are you sure you want to retire this image?"
+      );
+      if (!ok) return;
+    }
+    
+    if (newStatus === "removed") {
+      const ok = confirm(
+        "⚠️ REMOVAL CONFIRMATION\n\n" +
+        "This will remove the image from the public archive.\n\n" +
+        "I confirm no editions have ever been sold.\n\n" +
+        "Proceed with removal?"
+      );
+      if (!ok) return;
+    }
+    
+    onUpdate("status", newStatus);
+  }
+
+  if (!current) return null;
+
+  return (
+    <div className="mt-4 p-4 border-2 border-amber-200 rounded-lg bg-amber-50">
+      <h4 className="text-sm font-bold text-amber-800 mb-3 flex items-center gap-2">
+        📊 Series & Status
+        {isLocked && (
+          <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded">
+            🔒 {totalActuallySold} sold — some options locked
+          </span>
+        )}
+        {isRetired && (
+          <span className="text-xs bg-gray-200 text-gray-700 px-2 py-0.5 rounded">
+            ⏸️ Retired — editing disabled
+          </span>
+        )}
+        <button
+          onClick={onOpenPricing}
+          className="ml-auto text-xs bg-slate-100 hover:bg-slate-200 text-slate-600 px-2 py-0.5 rounded border border-slate-300"
+          title="Edit series pricing and descriptions"
+        >
+          💰 Edit Pricing
+        </button>
+      </h4>
+
+      {/* Series Checkboxes */}
+      <div className="mb-4">
+        <label className="block text-xs opacity-70 mb-2">Series Participation</label>
+        <div className="flex flex-col gap-2">
+          {Object.entries(SERIES_DEFINITIONS).map(([key, def]) => {
+            const isActive = effectiveSeries.includes(key);
+            const locked = isSeriesLocked(key);
+            const disabled = !backupMade || isRetired || (locked && isActive);
+            const soldCount = editionStates[key]?.sold || 0;
+            const hasLimit = def.limit !== null;
+            
+            return (
+              <div key={key} className="flex items-center gap-3">
+                {/* Checkbox */}
+                <label
+                  className={`flex items-center gap-2 px-3 py-1.5 rounded border cursor-pointer transition-all min-w-[140px] ${
+                    isActive
+                      ? locked
+                        ? "bg-red-50 border-red-300 text-red-800"
+                        : "bg-green-50 border-green-300 text-green-800"
+                      : "bg-white border-gray-300 text-gray-600"
+                  } ${disabled ? "opacity-60 cursor-not-allowed" : "hover:border-amber-400"}`}
+                  title={locked ? `${soldCount} sold — cannot remove` : def.description}
+                >
+                  <input
+                    type="checkbox"
+                    checked={isActive}
+                    disabled={disabled}
+                    onChange={() => toggleSeries(key)}
+                    className="sr-only"
+                  />
+                  <span className="text-sm font-medium">{def.label}</span>
+                  {isActive && locked && <span className="text-xs">🔒</span>}
+                </label>
+                
+                {/* Edition Counter (only for limited series when active) */}
+                {hasLimit && isActive && (
+                  <EditionCounter
+                    seriesKey={key}
+                    limit={def.limit}
+                    value={pendingEditions[key] !== undefined ? pendingEditions[key] : (soldCount ?? 0)}
+                    serverValue={soldCount ?? 0}
+                    disabled={!backupMade || isRetired || loading}
+                    onChange={(newVal) => updatePendingEdition(key, newVal)}
+                    onSave={() => saveEdition(key)}
+                    hasPendingChange={pendingEditions[key] !== undefined && pendingEditions[key] !== (soldCount ?? 0)}
+                  />
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Status Dropdown */}
+      <div>
+        <label className="block text-xs opacity-70 mb-2">Archive Status</label>
+        <div className="flex items-center gap-3">
+          <select
+            value={currentStatus}
+            onChange={(e) => changeStatus(e.target.value)}
+            disabled={!backupMade || isRetired}
+            className={`px-3 py-1.5 rounded border text-sm ${
+              currentStatus === "active" ? "bg-green-50 border-green-300" :
+              currentStatus === "retired" ? "bg-gray-100 border-gray-300" :
+              "bg-red-50 border-red-300"
+            } ${isRetired ? "cursor-not-allowed opacity-60" : ""}`}
+          >
+            <option value="active">✅ Active — part of living archive</option>
+            <option value="retired" disabled={!canRetire}>⏸️ Retired — visible but closed to sales</option>
+            <option value="removed" disabled={!canRemove}>🗑️ Removed — erased from archive</option>
+          </select>
+          
+          {loading && <span className="text-xs text-gray-500">Saving...</span>}
+        </div>
+        
+        {!canRemove && currentStatus === "active" && (
+          <p className="text-xs text-red-600 mt-1">
+            ⚠️ This image has sales and cannot be removed.
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
 /* ---------- Star Rating (1–5) ---------- */
 function StarRating({ value = 0, onChange }) {
   const v = Math.max(0, Math.min(5, Math.round(Number(value) || 0)));
@@ -215,6 +606,9 @@ export default function GalleryEditorPro() {
   const [realBackupMade, setRealBackupMade] = useState(() => resumeState?.realBackupMade ?? false);
   const [lastTurboIdx, setLastTurboIdx] = useState(-1); // Track last idx for turbo text updates
   const turboTextareaRef = useRef(null); // Ref for turbo mode textarea
+
+  // Pricing Modal state
+  const [pricingModalOpen, setPricingModalOpen] = useState(false);
 
   useEffect(() => {
     if (!lastAction) return;
@@ -683,6 +1077,12 @@ ${collectorNotes}`;
         srcM: current.srcM ?? "",
         srcS: current.srcS ?? "",
         srcOriginal: current.srcOriginal ?? "",
+        // Series & Status fields (use null to remove, undefined gets stripped by JSON)
+        availableSeries: Array.isArray(current.availableSeries) && current.availableSeries.length > 0 ? current.availableSeries : null,
+        noSketch: current.noSketch === true ? true : null,
+        status: current.status && current.status !== "active" ? current.status : null,
+        // NOTE: Edition sold counts are NEVER stored in .mjs files
+        // They are stored in editionState.json via the editionState Netlify function
       },
     };
 
@@ -1099,6 +1499,15 @@ ${collectorNotes}`;
                 <label className="block text-xs opacity-70 mb-1">Collector Notes — Artistic critique for collector confidence</label>
                 <textarea value={current.collectorNotes ?? current.notes ?? ""} onChange={(e) => updateField("collectorNotes", e.target.value)} className="w-full h-28 border rounded-md px-2 py-1" />
               </div>
+
+              {/* Series & Status Panel */}
+              <SeriesStatusPanel
+                current={current}
+                backupMade={backupMade}
+                onUpdate={(field, value) => updateField(field, value)}
+                onSave={saveCurrentOnly}
+                onOpenPricing={() => setPricingModalOpen(true)}
+              />
             </div>
           </div>
         ) : (
@@ -1299,6 +1708,12 @@ ${collectorNotes}`;
           </div>
         </div>
       )}
+
+      {/* Pricing Editor Modal */}
+      <PricingEditorModal
+        isOpen={pricingModalOpen}
+        onClose={() => setPricingModalOpen(false)}
+      />
     </div>
   );
 }
