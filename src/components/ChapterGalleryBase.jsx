@@ -930,7 +930,7 @@ export default function ChapterGalleryBase({
                               }}
                               aria-label="View Collector Notes"
                               title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
-                              className={`absolute top-2 right-3 w-8 h-9 border border-gray-300 bg-white text-gray-400 rounded-md shadow hover:bg-gray-200 transition z-30 flex items-center justify-center ${showCollectorHint ? 'collector-hint-ring' : ''}`}
+                              className={`desktop-only-element absolute top-2 right-3 w-8 h-9 border border-gray-300 bg-white text-gray-400 rounded-md shadow hover:bg-gray-200 transition z-30 flex items-center justify-center ${showCollectorHint ? 'collector-hint-ring' : ''}`}
                               style={{ boxShadow: "0 2px 6px rgba(80,60,30,0.10)", transform: "translateX(50px)" }}
                             >
                               {showNotes ? (
@@ -960,7 +960,7 @@ export default function ChapterGalleryBase({
                             
                             return (
                               <div
-                                className="absolute right-3 flex flex-col gap-0.5 z-30"
+                                className="desktop-only-element absolute right-3 flex flex-col gap-0.5 z-30"
                                 style={{ transform: "translateX(50px)", top: topOffset }}
                               >
                                 {displaySeries.map((seriesKey) => {
@@ -997,7 +997,7 @@ export default function ChapterGalleryBase({
                               animate={{ opacity: 1 }}
                               exit={{ opacity: 0 }}
                               transition={{ duration: 0.20, ease: [0.33, 1, 0.68, 1] }}
-                              className="w-96 border border-gray-300 rounded shadow-2xl p-5 text-sm text-gray-800"
+                              className="desktop-only-element w-96 border border-gray-300 rounded shadow-2xl p-5 text-sm text-gray-800"
                               style={{
                                 position: 'absolute',
                                 zIndex: 100000,

@@ -10,6 +10,10 @@
     overflow-x: hidden !important;
     max-width: 100% !important;
   }
+  /* Hide desktop-only elements immediately via CSS, not waiting for JS hydration */
+  .desktop-only-element {
+    display: none !important;
+  }
 }
 .zoom-mat-frame {
   position: relative;
