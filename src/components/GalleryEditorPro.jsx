@@ -48,6 +48,8 @@ function buildMjs(galleryData, exportName = "galleryData") {
       if (it.buyLink != null) pushStr("buyLink", it.buyLink);
       if (it.contentSource != null) pushStr("contentSource", it.contentSource);
       if (it.themes && typeof it.themes === "object") out.push(`    themes: ${JSON.stringify(it.themes)},`);
+      if (Array.isArray(it.availableSeries) && it.availableSeries.length > 0) out.push(`    availableSeries: ${JSON.stringify(it.availableSeries)},`);
+      if (it.noSketch === true) out.push(`    noSketch: true,`);
       return `  {\n${out.join("\n")}\n  }`;
     })
     .join(",\n");

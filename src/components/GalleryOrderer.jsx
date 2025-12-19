@@ -61,6 +61,9 @@ function normalizeItem(raw) {
   if (raw.visibility != null) out.visibility = raw.visibility;
   if (typeof raw.sortOrder === "number") out.sortOrder = raw.sortOrder;
   if (raw.themes && typeof raw.themes === "object") out.themes = raw.themes;
+  if (raw.contentSource != null) out.contentSource = raw.contentSource;
+  if (Array.isArray(raw.availableSeries) && raw.availableSeries.length > 0) out.availableSeries = raw.availableSeries;
+  if (raw.noSketch === true) out.noSketch = true;
   return out;
 }
 

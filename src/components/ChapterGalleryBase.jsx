@@ -971,6 +971,7 @@ export default function ChapterGalleryBase({
                                       type="button"
                                       onClick={(e) => {
                                         e.stopPropagation();
+                                        logUIEvent("series_info", { page: window.location.pathname, series: seriesKey });
                                         setSeriesInfoScrollTo(seriesKey);
                                         setShowSeriesInfoPopup(true);
                                       }}
@@ -1300,6 +1301,7 @@ export default function ChapterGalleryBase({
                                   type="button"
                                   onClick={(e) => {
                                     e.stopPropagation();
+                                    logUIEvent("series_info", { page: window.location.pathname, series: seriesKey });
                                     setSeriesInfoScrollTo(seriesKey);
                                     setShowSeriesInfoPopup(true);
                                   }}
