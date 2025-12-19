@@ -1189,7 +1189,7 @@ export default function ChapterGalleryBase({
                           style={{ fontSize: "1.0em" }}
                         />
                         <button type="submit" className="bg-gray-100 px-1 py-1 text-gray-400 border border-gray-300 rounded shadow hover:border-red-200 hover:text-gray-500 hover:bg-gray-100">
-                          Go!
+                          ➜
                         </button>
                       </form>
 

@@ -17,17 +17,21 @@ function useIsMobile() {
  * Abbreviates the first breadcrumb segment to initials for mobile.
  * E.g., "Facing History | Cowboy Portraits | Color" → "F H | Cowboy Portraits | Color"
  * Works with HTML breadcrumbs containing anchor tags.
+ * Handles pipes with various whitespace formats (spaces, newlines, etc.)
  */
 function abbreviateFirstSegment(html) {
   if (!html) return html;
   
+  // Normalize the HTML - replace any whitespace around pipes with single spaces
+  const normalized = html.replace(/\s*\|\s*/g, ' | ');
+  
   // Match the first segment's text content (inside or outside anchor tag)
   // Pattern: first text before the first " | " delimiter
-  const firstPipeIndex = html.indexOf(' | ');
+  const firstPipeIndex = normalized.indexOf(' | ');
   if (firstPipeIndex === -1) return html;
   
-  const firstSegment = html.substring(0, firstPipeIndex);
-  const rest = html.substring(firstPipeIndex);
+  const firstSegment = normalized.substring(0, firstPipeIndex);
+  const rest = normalized.substring(firstPipeIndex);
   
   // Check if first segment contains an anchor tag
   const anchorMatch = firstSegment.match(/(<a[^>]*>)([^<]+)(<\/a>)/);

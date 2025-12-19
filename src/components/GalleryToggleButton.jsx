@@ -83,6 +83,10 @@ export default function GalleryToggleButton({ currentPath }) {
         .toggle-pill {
           width: 22px;
           height: 22px;
+          min-width: 22px;
+          min-height: 22px;
+          flex-shrink: 0;
+          aspect-ratio: 1;
           border-radius: 50%;
           font-size: 0.75rem;
           font-weight: 600;
