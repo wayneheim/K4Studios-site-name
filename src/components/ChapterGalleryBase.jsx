@@ -1237,16 +1237,16 @@ export default function ChapterGalleryBase({
                         <LikeButton imageId={galleryData[currentIndex]?.id} pageTitle={galleryData[currentIndex]?.title} />
                       </div>
 
-                      {/* Mobile Guide "?" button: between Like and Exit */}
+                      {/* Mobile Guide "i" button: between Like and Exit */}
                       {isMobile && (
                         <button
                           type="button"
                           aria-label="Open Guide"
                           title="View our brief guided walk-through of all the features of our gallery viewer."
-                          className="inline-flex items-center justify-center w-6 h-6  border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200"
+                          className="inline-flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200"
                           onClick={(e) => { e.stopPropagation(); logUIEvent("guide_open", { page: window.location.pathname, sectionKey }); setTourOpenNonce(n => n + 1); }}
                         >
-                          <span className="font-bold text-gray-300">?</span>
+                          <span className="font-bold text-gray-400 text-sm italic">i</span>
                         </button>
                       )}
 
