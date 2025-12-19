@@ -24,7 +24,7 @@ async function logUIEvent(eventType, details = {}, useBeacon = false) {
 }
 import { useState, useRef, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight } from "lucide-react";
+import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight, Info } from "lucide-react";
 import { getClosingSentence } from "../utils/seoDescriptionAppender.js";
 import { sitemapMatches } from "../data/sitemapMatches.ts";
 import ZoomOverlay from "./ZoomOverlay.jsx";
@@ -1183,7 +1183,7 @@ export default function ChapterGalleryBase({
                           min="1"
                           max={galleryData.length}
                           placeholder="#"
-                          className="w-8 border border-gray-200 rounded px-3 py-1 text-center"
+                          className="w-10 border border-gray-200 rounded px-1 py-1 text-center"
                           style={{ fontSize: "1.0em" }}
                         />
                         <button 
@@ -1249,7 +1249,7 @@ export default function ChapterGalleryBase({
                           className="inline-flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200"
                           onClick={(e) => { e.stopPropagation(); logUIEvent("guide_open", { page: window.location.pathname, sectionKey }); setTourOpenNonce(n => n + 1); }}
                         >
-                          <span className="font-bold text-gray-400 text-sm italic">i</span>
+                          <Info className="w-3.5 h-3.5 text-gray-400" />
                         </button>
                       )}
 
