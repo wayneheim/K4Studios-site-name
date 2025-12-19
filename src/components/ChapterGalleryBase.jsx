@@ -1038,10 +1038,9 @@ export default function ChapterGalleryBase({
                         style={isMobile ? { width: 'calc(100vw - 2.5rem)', maxWidth: 'calc(100vw - 2.5rem)', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly' }}
                       >
                         {/* Menu */}
-                      {/* Menu */}
                       <button
                         type="button"
-                        className="flex items-center justify-center w-8 h-8 border border-gray-200 hover:bg-gray-100 bg-white text-gray-500 text-lg rounded-full shadow-sm transition-colors duration-150 hover:border-red-200 hover:text-gray-700 focus:text-gray-600 hover:border-gray-300 focus:border-gray-300"
+                        className={`flex items-center justify-center w-7 h-7 text-gray-500 text-lg transition-colors duration-150 hover:text-gray-700 ${isMobile ? '' : 'border border-gray-200 hover:bg-gray-100 bg-white rounded-full shadow-sm hover:border-red-200 hover:border-gray-300 focus:border-gray-300'}`}
                         aria-label="Show Menu"
                         title="Show Menu"
                         style={{ fontWeight: 400 }}
@@ -1155,8 +1154,7 @@ export default function ChapterGalleryBase({
                         onClick={goGrid}
                         aria-label="View Grid Mode"
                         title="View Grid Mode"
-                        className="md:hidden flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 shadow hover:bg-gray-200 border border-gray-500 transition-colors"
-                        style={{ border: "1px solid #bebbbaff" }}
+                        className="md:hidden flex items-center justify-center w-7 h-7 transition-colors"
                         data-grid-btn
                       >
                         <Grid className="w-5 h-5" style={{ stroke: "#84766d" }} />
@@ -1188,7 +1186,12 @@ export default function ChapterGalleryBase({
                           className="w-8 border border-gray-200 rounded px-3 py-1 text-center"
                           style={{ fontSize: "1.0em" }}
                         />
-                        <button type="submit" className="bg-gray-100 px-0.5 py-1 text-gray-400 border border-gray-300 rounded shadow hover:border-red-200 hover:text-gray-500 hover:bg-gray-100">
+                        <button 
+                          type="submit" 
+                          className="bg-gray-100 px-0.5 py-1 text-gray-400 border border-gray-300 rounded shadow hover:border-red-200 hover:text-gray-500 hover:bg-gray-100"
+                          aria-label="Jump to image number"
+                          title="Jump to #"
+                        >
                           ➜
                         </button>
                       </form>
