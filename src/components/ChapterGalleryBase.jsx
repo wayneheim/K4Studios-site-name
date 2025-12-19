@@ -1033,9 +1033,9 @@ export default function ChapterGalleryBase({
                       <div
                         className={
                           `flex items-center gap-1 md:gap-6 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1 py-1 select-none ` +
-                          (isMobile ? ' w-full max-w-full' : ' max-w-[1300px]')
+                          (isMobile ? ' w-full' : ' max-w-[1300px]')
                         }
-                        style={isMobile ? { width: '100%', maxWidth: '100%', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly' }}
+                        style={isMobile ? { width: 'calc(100vw - 2.5rem)', maxWidth: 'calc(100vw - 2.5rem)', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly' }}
                       >
                         {/* Menu */}
                       {/* Menu */}

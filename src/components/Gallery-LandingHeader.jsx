@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import SiteNavMenu from "./siteNavMenu.jsx";
 import GalleryToggleButton from "./GalleryToggleButton.jsx";
 
@@ -13,11 +13,54 @@ function useIsMobile() {
   return mobile;
 }
 
+/**
+ * Abbreviates the first breadcrumb segment to initials for mobile.
+ * E.g., "Facing History | Cowboy Portraits | Color" → "F H | Cowboy Portraits | Color"
+ * Works with HTML breadcrumbs containing anchor tags.
+ */
+function abbreviateFirstSegment(html) {
+  if (!html) return html;
+  
+  // Match the first segment's text content (inside or outside anchor tag)
+  // Pattern: first text before the first " | " delimiter
+  const firstPipeIndex = html.indexOf(' | ');
+  if (firstPipeIndex === -1) return html;
+  
+  const firstSegment = html.substring(0, firstPipeIndex);
+  const rest = html.substring(firstPipeIndex);
+  
+  // Check if first segment contains an anchor tag
+  const anchorMatch = firstSegment.match(/(<a[^>]*>)([^<]+)(<\/a>)/);
+  
+  if (anchorMatch) {
+    // Extract text from anchor and abbreviate
+    const [, openTag, text, closeTag] = anchorMatch;
+    const initials = text
+      .split(/\s+/)
+      .filter(word => word.length > 0)
+      .map(word => word[0].toUpperCase())
+      .join(' ');
+    return `${openTag}${initials}${closeTag}${rest}`;
+  } else {
+    // Plain text first segment
+    const initials = firstSegment
+      .trim()
+      .split(/\s+/)
+      .filter(word => word.length > 0)
+      .map(word => word[0].toUpperCase())
+      .join(' ');
+    return `${initials}${rest}`;
+  }
+}
+
 export default function GalleryLandingHeader({ breadcrumb }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [pathname, setPathname] = useState("");
   const [mounted, setMounted] = useState(false);
   const isMobile = useIsMobile();
+
+  // Memoize abbreviated breadcrumb for mobile
+  const mobileBreadcrumb = useMemo(() => abbreviateFirstSegment(breadcrumb), [breadcrumb]);
 
   useEffect(() => {
     setMounted(true);
@@ -77,7 +120,7 @@ export default function GalleryLandingHeader({ breadcrumb }) {
             textAlign: "center"
           }}
         >
-          <span dangerouslySetInnerHTML={{ __html: breadcrumb }} />
+          <span dangerouslySetInnerHTML={{ __html: mobileBreadcrumb }} />
           {pathname && <GalleryToggleButton currentPath={pathname} />}
         </div>
       </div>
