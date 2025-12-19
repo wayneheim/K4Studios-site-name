@@ -15,7 +15,8 @@ function useIsMobile() {
 
 /**
  * Abbreviates the first breadcrumb segment to initials for mobile.
- * E.g., "Facing History | Cowboy Portraits | Color" → "F H | Cowboy Portraits | Color"
+ * If total length > 25 chars, also abbreviates the last segment.
+ * E.g., "Facing History | Cowboy Portraits | Color" → "F H | Cowboy Portraits | C"
  * Works with HTML breadcrumbs containing anchor tags.
  * Handles pipes with various whitespace formats (spaces, newlines, etc.)
  */
@@ -25,36 +26,42 @@ function abbreviateFirstSegment(html) {
   // Normalize the HTML - replace any whitespace around pipes with single spaces
   const normalized = html.replace(/\s*\|\s*/g, ' | ');
   
-  // Match the first segment's text content (inside or outside anchor tag)
-  // Pattern: first text before the first " | " delimiter
-  const firstPipeIndex = normalized.indexOf(' | ');
-  if (firstPipeIndex === -1) return html;
+  // Split into segments by " | "
+  const segments = normalized.split(' | ');
+  if (segments.length < 2) return html;
   
-  const firstSegment = normalized.substring(0, firstPipeIndex);
-  const rest = normalized.substring(firstPipeIndex);
-  
-  // Check if first segment contains an anchor tag
-  const anchorMatch = firstSegment.match(/(<a[^>]*>)([^<]+)(<\/a>)/);
-  
-  if (anchorMatch) {
-    // Extract text from anchor and abbreviate
-    const [, openTag, text, closeTag] = anchorMatch;
-    const initials = text
-      .split(/\s+/)
-      .filter(word => word.length > 0)
-      .map(word => word[0].toUpperCase())
-      .join(' ');
-    return `${openTag}${initials}${closeTag}${rest}`;
-  } else {
-    // Plain text first segment
-    const initials = firstSegment
+  // Helper to abbreviate text (extract initials)
+  const abbreviate = (text) => {
+    return text
       .trim()
       .split(/\s+/)
       .filter(word => word.length > 0)
       .map(word => word[0].toUpperCase())
       .join(' ');
-    return `${initials}${rest}`;
+  };
+  
+  // Helper to abbreviate a segment (handles anchor tags)
+  const abbreviateSegment = (segment) => {
+    const anchorMatch = segment.match(/(<a[^>]*>)([^<]+)(<\/a>)/);
+    if (anchorMatch) {
+      const [, openTag, text, closeTag] = anchorMatch;
+      return `${openTag}${abbreviate(text)}${closeTag}`;
+    }
+    return abbreviate(segment);
+  };
+  
+  // Abbreviate first segment
+  segments[0] = abbreviateSegment(segments[0]);
+  
+  // Check total text length (strip HTML tags for measurement)
+  const textOnly = segments.join(' | ').replace(/<[^>]*>/g, '');
+  
+  // If still too long (>25 chars), abbreviate last segment too
+  if (textOnly.length > 25 && segments.length >= 2) {
+    segments[segments.length - 1] = abbreviateSegment(segments[segments.length - 1]);
   }
+  
+  return segments.join(' | ');
 }
 
 export default function GalleryLandingHeader({ breadcrumb }) {

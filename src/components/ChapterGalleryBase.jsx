@@ -1185,10 +1185,10 @@ export default function ChapterGalleryBase({
                           min="1"
                           max={galleryData.length}
                           placeholder="#"
-                          className="w-8 border border-gray-200 rounded px-2 py-1 text-center"
+                          className="w-8 border border-gray-200 rounded px-3 py-1 text-center"
                           style={{ fontSize: "1.0em" }}
                         />
-                        <button type="submit" className="bg-gray-100 px-1 py-1 text-gray-400 border border-gray-300 rounded shadow hover:border-red-200 hover:text-gray-500 hover:bg-gray-100">
+                        <button type="submit" className="bg-gray-100 px-0.5 py-1 text-gray-400 border border-gray-300 rounded shadow hover:border-red-200 hover:text-gray-500 hover:bg-gray-100">
                           ➜
                         </button>
                       </form>
