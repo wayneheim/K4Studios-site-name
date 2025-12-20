@@ -62,6 +62,28 @@ export const ${exportName} = ${json};
 `;
 }
 
+/* Parse helper that handles both JSON format and JS object literal format with String.raw */
+function extractArrayFromMjs(code) {
+  const m = code.match(/export\s+const\s+galleryData\s*=\s*(\[[\s\S]*\]);?/);
+  if (!m) return null;
+
+  // First try JSON.parse (faster, works for JSON-formatted files)
+  try {
+    return JSON.parse(m[1]);
+  } catch {
+    // Fall back to Function eval with String.raw shim for JS object literal format
+    try {
+      // eslint-disable-next-line no-new-func
+      const fn = new Function(`
+        const String = { raw: (...args) => (Array.isArray(args[0]) ? args[0][0] : String(args[0])) };
+        const x = ${m[1]};
+        return x;
+      `);
+      return fn();
+    } catch { return null; }
+  }
+}
+
 /* ===== handler ===== */
 exports.handler = async (event) => {
   try {
@@ -90,30 +112,38 @@ exports.handler = async (event) => {
       return { statusCode: 404, body: `Dataset not found: ${datasetPath}` };
     }
 
-    // ========== PRESERVE THEMES FROM EXISTING FILE ==========
-    // Read the existing file to extract current themes data
-    // This prevents stale client data from wiping out themes
+    // ========== PRESERVE THEMES, SERIES, AND NOSKETCH FROM EXISTING FILE ==========
+    // Read the existing file to extract current data that might not be in client state
+    // This prevents stale client data from wiping out themes, availableSeries, noSketch
     let existingThemesById = new Map();
+    let existingSeriesById = new Map();
+    let existingNoSketchById = new Map();
     try {
       const existingCode = await fs.readFile(absPath, "utf8");
-      // Extract the array from the file using regex (simple parse)
-      const match = existingCode.match(/export\s+const\s+galleryData\s*=\s*(\[[\s\S]*\]);?\s*$/);
-      if (match) {
-        try {
-          const existingArr = JSON.parse(match[1]);
-          for (const item of existingArr) {
-            if (item && item.id && item.themes && typeof item.themes === "object") {
+      // Extract the array using helper that handles both JSON and JS object literal formats
+      const existingArr = extractArrayFromMjs(existingCode);
+      if (Array.isArray(existingArr)) {
+        for (const item of existingArr) {
+          if (item && item.id) {
+            if (item.themes && typeof item.themes === "object") {
               existingThemesById.set(item.id, item.themes);
             }
+            if (Array.isArray(item.availableSeries) && item.availableSeries.length > 0) {
+              existingSeriesById.set(item.id, item.availableSeries);
+            }
+            if (item.noSketch === true) {
+              existingNoSketchById.set(item.id, true);
+            }
           }
-        } catch (parseErr) {
-          console.warn("Could not parse existing gallery for themes preservation:", parseErr.message);
         }
+        console.log(`Preserved data from existing file: ${existingSeriesById.size} series, ${existingNoSketchById.size} noSketch, ${existingThemesById.size} themes`);
+      } else {
+        console.warn("Could not parse existing gallery for data preservation");
       }
     } catch (readErr) {
-      console.warn("Could not read existing file for themes preservation:", readErr.message);
+      console.warn("Could not read existing file for data preservation:", readErr.message);
     }
-    // =========================================================
+    // =================================================================================
 
     // Need a complete array to rebuild the file
     let working = Array.isArray(fullArray) ? fullArray.slice() : null;
@@ -124,40 +154,54 @@ exports.handler = async (event) => {
       working = sourceArray.slice();
     }
 
-    // ========== MERGE PRESERVED THEMES INTO WORKING DATA ==========
-    // SMART MERGE: Combine existing themes with incoming themes
-    // - Existing themes are preserved unless explicitly overwritten
-    // - Incoming themes add to or update existing themes
-    // - To DELETE a theme, the client must send the key with null or explicitly omit it
-    //   after having it in the existing file (we trust explicit removals from ThemeBuilder)
+    // ========== MERGE PRESERVED DATA INTO WORKING DATA ==========
+    // SMART MERGE: Preserve themes, availableSeries, noSketch from existing file
+    // - Existing data is preserved unless explicitly overwritten by incoming data
     working = working.map((item) => {
       if (!item || !item.id) return item;
       
+      // --- THEMES ---
       const existingThemes = existingThemesById.get(item.id);
       const incomingThemes = item.themes && typeof item.themes === "object" ? item.themes : null;
       
-      // Case 1: No existing themes - just use incoming (or nothing)
-      if (!existingThemes || Object.keys(existingThemes).length === 0) {
-        return item;
-      }
-      
-      // Case 2: No incoming themes - preserve all existing themes
-      if (!incomingThemes || Object.keys(incomingThemes).length === 0) {
-        return { ...item, themes: existingThemes };
-      }
-      
-      // Case 3: Both exist - merge them (incoming overwrites existing for same keys)
-      const mergedThemes = { ...existingThemes, ...incomingThemes };
-      
-      // Clean up any null/undefined values (allows explicit deletion)
-      for (const key of Object.keys(mergedThemes)) {
-        if (mergedThemes[key] == null) {
-          delete mergedThemes[key];
+      let mergedThemes = null;
+      if (existingThemes && Object.keys(existingThemes).length > 0) {
+        if (!incomingThemes || Object.keys(incomingThemes).length === 0) {
+          mergedThemes = existingThemes;
+        } else {
+          mergedThemes = { ...existingThemes, ...incomingThemes };
+          for (const key of Object.keys(mergedThemes)) {
+            if (mergedThemes[key] == null) delete mergedThemes[key];
+          }
         }
+      } else if (incomingThemes) {
+        mergedThemes = incomingThemes;
       }
       
-      const hasThemes = Object.keys(mergedThemes).length > 0;
-      return { ...item, themes: hasThemes ? mergedThemes : undefined };
+      // --- AVAILABLE SERIES ---
+      const existingSeries = existingSeriesById.get(item.id);
+      const incomingSeries = Array.isArray(item.availableSeries) && item.availableSeries.length > 0 
+        ? item.availableSeries 
+        : null;
+      const mergedSeries = incomingSeries || existingSeries || null;
+      
+      // --- NO SKETCH ---
+      const existingNoSketch = existingNoSketchById.get(item.id);
+      const mergedNoSketch = item.noSketch === true ? true : (existingNoSketch === true ? true : undefined);
+      
+      // Build result with preserved/merged data
+      const result = { ...item };
+      if (mergedThemes && Object.keys(mergedThemes).length > 0) {
+        result.themes = mergedThemes;
+      }
+      if (mergedSeries) {
+        result.availableSeries = mergedSeries;
+      }
+      if (mergedNoSketch) {
+        result.noSketch = true;
+      }
+      
+      return result;
     });
     // ==============================================================
 

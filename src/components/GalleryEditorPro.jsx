@@ -83,9 +83,26 @@ function isRealItem(d) { return d && d.id !== "i-k4studios"; }
 
 /* --- Quick Refresh helpers (simple) --- */
 const RESUME_KEY = "k4-editor:resume";
+const BULK_SAVE_KEY = "k4-editor:bulkSaveActive";
+const JUMP_BACK_KEY = "k4-editor:jumpBackTo";
+
+function setJumpBackTo(idx) {
+  try { sessionStorage.setItem(JUMP_BACK_KEY, String(idx)); } catch {}
+}
+function getJumpBackTo() {
+  try {
+    const val = sessionStorage.getItem(JUMP_BACK_KEY);
+    return val !== null ? parseInt(val, 10) : null;
+  } catch { return null; }
+}
+function clearJumpBackTo() {
+  try { sessionStorage.removeItem(JUMP_BACK_KEY); } catch {}
+}
+
 function writeResumeState({ selectedPath, idx, filter, backupMade, realBackupMade, turboMode }) {
   try {
-    localStorage.setItem(
+    // Use sessionStorage - survives HMR but clears on browser close
+    sessionStorage.setItem(
       RESUME_KEY,
       JSON.stringify({ selectedPath, idx, filter, backupMade, realBackupMade, turboMode, ts: Date.now() })
     );
@@ -93,9 +110,20 @@ function writeResumeState({ selectedPath, idx, filter, backupMade, realBackupMad
 }
 function readResumeState() {
   try {
-    const raw = localStorage.getItem(RESUME_KEY);
+    const raw = sessionStorage.getItem(RESUME_KEY);
     return raw ? JSON.parse(raw) : null;
   } catch { return null; }
+}
+function setBulkSaveActive(active) {
+  try {
+    if (active) sessionStorage.setItem(BULK_SAVE_KEY, "1");
+    else sessionStorage.removeItem(BULK_SAVE_KEY);
+  } catch {}
+}
+function isBulkSaveActive() {
+  try {
+    return sessionStorage.getItem(BULK_SAVE_KEY) === "1";
+  } catch { return false; }
 }
 
 /* Clear the per-dataset draft so Editor Pro won’t restore stale order */
@@ -595,6 +623,11 @@ export default function GalleryEditorPro() {
   const [idx, setIdx] = useState(() => resumeState?.idx ?? 0);
   const [filter, setFilter] = useState(() => resumeState?.filter ?? "");
   const [dirty, setDirty] = useState(false);
+  const [dirtyImageIds, setDirtyImageIds] = useState(new Set()); // Track which images have unsaved changes
+  const [autoSaveOnNav, setAutoSaveOnNav] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return localStorage.getItem("galleryEditor-autoSaveOnNav") === "true";
+  });
   const [backupMade, setBackupMade] = useState(() => resumeState?.backupMade ?? false);
   const [lastAction, setLastAction] = useState(null);
 
@@ -649,7 +682,11 @@ export default function GalleryEditorPro() {
       
       // Read resume state BEFORE clearing it
       const resume = readResumeState();
-      const isResumingSamePath = resume && resume.selectedPath === selectedPath && (Date.now() - resume.ts) < 30000;
+      const bulkActive = isBulkSaveActive();
+      // If bulk save is active, ALWAYS restore position (ignore timestamp)
+      // Otherwise, 5 minute window for normal saves
+      const isResumingSamePath = resume && resume.selectedPath === selectedPath && 
+        (bulkActive || (Date.now() - resume.ts) < 300000);
       
       // Now clear stale draft (but not resume key yet - we'll clear it after using)
       try {
@@ -671,7 +708,19 @@ export default function GalleryEditorPro() {
       setData(arr);
       setBackupData(allArr);
       
-      if (isResumingSamePath) {
+      // Check if there's a jump-back position waiting (from bulk save)
+      const jumpBackIdx = getJumpBackTo();
+      
+      if (jumpBackIdx !== null) {
+        // Jump back to saved position after bulk save
+        setIdx(Math.min(jumpBackIdx, arr.length - 1));
+        // DON'T clear immediately - wait 5 seconds for all HMRs to settle
+        setTimeout(() => clearJumpBackTo(), 5000);
+        // Keep other state as-is (backupMade should still be true)
+        setDirty(false);
+        setLastAction("Restored after bulk save");
+        setShowRefreshGuard(false);
+      } else if (isResumingSamePath) {
         // Restore state from resume - don't reset everything
         setIdx(Math.min(resume.idx ?? 0, arr.length - 1));
         setFilter(resume.filter ?? "");
@@ -681,8 +730,12 @@ export default function GalleryEditorPro() {
         setDirty(false);
         setLastAction("Restored after save");
         setShowRefreshGuard(false);
-        // Clear resume state after successfully restoring
-        try { localStorage.removeItem(RESUME_KEY); } catch {}
+        // Only clear resume state if NOT in bulk save mode
+        if (!isBulkSaveActive()) {
+          setTimeout(() => {
+            try { sessionStorage.removeItem(RESUME_KEY); } catch {}
+          }, 30000);
+        }
       } else {
         // Fresh load - reset everything
         setIdx(0);
@@ -693,8 +746,10 @@ export default function GalleryEditorPro() {
         setLastAction(null);
         setShowRefreshGuard(false);
         setTurboMode(false);
-        // Clear any stale resume state
-        try { localStorage.removeItem(RESUME_KEY); } catch {}
+        // Clear any stale resume state (but not if bulk save is active)
+        if (!isBulkSaveActive()) {
+          try { sessionStorage.removeItem(RESUME_KEY); } catch {}
+        }
       }
     }
     load();
@@ -791,6 +846,10 @@ export default function GalleryEditorPro() {
       return copy;
     });
     setDirty(true);
+    // Track this image as having unsaved changes
+    if (current?.id) {
+      setDirtyImageIds(prev => new Set(prev).add(current.id));
+    }
   }
 
   function revertCurrentToBackup() {
@@ -812,6 +871,12 @@ export default function GalleryEditorPro() {
       };
       return copy;
     });
+    // Remove from dirty set since we reverted
+    setDirtyImageIds(prev => {
+      const next = new Set(prev);
+      next.delete(current.id);
+      return next;
+    });
     setDirty(true);
     setLastAction(`Reverted CURRENT (${current.id}) — ${new Date().toLocaleTimeString()}`);
   }
@@ -819,6 +884,7 @@ export default function GalleryEditorPro() {
   function revertAllToBackup() {
     if (!backupData) return;
     if (!confirm("Revert ALL images to the backed-up data?")) return;
+    setDirtyImageIds(new Set()); // Clear all pending changes
     setData(
       backupData.filter(isRealItem).map((orig) => {
         const {
@@ -1028,13 +1094,118 @@ ${collectorNotes}`;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [turboMode, idx]);
 
-  function move(delta) {
+  // Auto-save current image before navigating if enabled and dirty
+  async function move(delta) {
     const len = filtered.length;
     if (!len) return;
+    
+    // Auto-save current image if enabled and it has unsaved changes
+    if (autoSaveOnNav && current?.id && dirtyImageIds.has(current.id)) {
+      await saveImageById(current.id);
+    }
+    
     let n = idx + delta;
     if (n < 0) n = 0;
     if (n > len - 1) n = len - 1;
     setIdx(n);
+  }
+
+  // Save a specific image by ID to the server
+  async function saveImageById(imageId) {
+    if (!backupMade || !selectedPath) return false;
+    const imageData = data.find(d => d.id === imageId);
+    if (!imageData) return false;
+    
+    const payload = {
+      datasetPath: selectedPath.replace(/^\//, ""),
+      id: imageData.id,
+      patch: {
+        title: imageData.title ?? "",
+        alt: imageData.alt ?? "",
+        description: imageData.description ?? "",
+        story: imageData.story ?? "",
+        notes: imageData.collectorNotes ?? imageData.notes ?? "",
+        keywords: Array.isArray(imageData.tags)
+          ? imageData.tags
+          : Array.isArray(imageData.keywords)
+          ? imageData.keywords
+          : String(imageData.tags || imageData.keywords || "")
+              .split(",")
+              .map((s) => s.trim())
+              .filter(Boolean),
+        rating: typeof imageData.rating === "number" ? imageData.rating : undefined,
+        contentSource: imageData.contentSource ?? undefined,
+        srcXL: imageData.srcXL ?? "",
+        srcL: imageData.srcL ?? "",
+        srcM: imageData.srcM ?? "",
+        srcS: imageData.srcS ?? "",
+        srcOriginal: imageData.srcOriginal ?? "",
+        availableSeries: Array.isArray(imageData.availableSeries) && imageData.availableSeries.length > 0 ? imageData.availableSeries : null,
+        noSketch: imageData.noSketch === true ? true : null,
+        status: imageData.status && imageData.status !== "active" ? imageData.status : null,
+      },
+    };
+
+    try {
+      const res = await fetch("/.netlify/functions/updateGalleryItem", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      
+      // Remove from dirty set
+      setDirtyImageIds(prev => {
+        const next = new Set(prev);
+        next.delete(imageId);
+        return next;
+      });
+      return true;
+    } catch (err) {
+      console.error(`Failed to save image ${imageId}:`, err);
+      return false;
+    }
+  }
+
+  // Save ALL dirty images to the server
+  async function saveAllDirtyToServer() {
+    if (!backupMade || !selectedPath || dirtyImageIds.size === 0) return;
+    
+    // Capture current position BEFORE any saves
+    const savedIdx = idx;
+    
+    // Set jump-back position NOW (before any HMR can happen)
+    setJumpBackTo(savedIdx);
+    
+    // Set bulk save mode - prevents resume state from being cleared during HMR
+    setBulkSaveActive(true);
+    writeResumeState({ selectedPath, idx: savedIdx, filter, backupMade, realBackupMade, turboMode });
+    
+    const ids = Array.from(dirtyImageIds);
+    let saved = 0;
+    let failed = 0;
+    
+    for (const id of ids) {
+      // Keep jump-back and resume state fresh before each save
+      setJumpBackTo(savedIdx);
+      writeResumeState({ selectedPath, idx: savedIdx, filter, backupMade, realBackupMade, turboMode });
+      const ok = await saveImageById(id);
+      if (ok) saved++;
+      else failed++;
+    }
+    
+    // Clear bulk save mode but KEEP jump-back key for final HMR
+    setBulkSaveActive(false);
+    try { sessionStorage.removeItem(RESUME_KEY); } catch {}
+    // Re-set jump-back one more time for the final HMR
+    setJumpBackTo(savedIdx);
+    
+    if (failed > 0) {
+      setLastAction(`Saved ${saved}/${ids.length} images (${failed} failed) — ${new Date().toLocaleTimeString()}`);
+    } else {
+      setLastAction(`Saved ALL ${saved} pending images to server — ${new Date().toLocaleTimeString()}`);
+      setDirty(false);
+    }
   }
 
   function saveAllAsMjs() {
@@ -1100,6 +1271,12 @@ ${collectorNotes}`;
       if (!res.ok) throw new Error(await res.text());
       setLastAction(`Patched CURRENT (${current.id}) in-place — ${new Date().toLocaleTimeString()}`);
       setDirty(false);
+      // Remove from dirty set
+      setDirtyImageIds(prev => {
+        const next = new Set(prev);
+        next.delete(current.id);
+        return next;
+      });
     } catch (err) {
       alert("Save failed. Falling back to file download.\n\n" + err.message);
       const filename = selectedPath.split("/").pop() || "gallery.mjs";
@@ -1317,7 +1494,28 @@ ${collectorNotes}`;
           />
           <button onClick={() => move(-1)} className={`${btnBase} bg-green-100 ${btnHover}`}>Prev</button>
           <button onClick={() => move(1)} className={`${btnBase} bg-green-300 ${btnHover}`}>Next</button>
-          <span className="opacity-70">{pos}/{total} (of {data.length})</span>
+          <span className="opacity-70">{pos}/{total}</span>
+          
+          {/* Jump to input */}
+          <span className="opacity-70 ml-2">Jump:</span>
+          <input
+            type="number"
+            min="1"
+            max={total}
+            placeholder="#"
+            className="w-16 border rounded-md px-2 py-1 text-center"
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                const num = parseInt(e.target.value, 10);
+                if (num >= 1 && num <= total) {
+                  setIdx(num - 1);
+                  e.target.value = "";
+                  e.target.blur();
+                }
+              }
+            }}
+          />
+          <span className="opacity-50 text-xs">(of {data.length} total)</span>
         </div>
 
         {/* editor + actions */}
@@ -1351,12 +1549,36 @@ ${collectorNotes}`;
             className={`${btnBase} ${btnBlue} ${itemLocked ? "opacity-50 cursor-not-allowed" : ""} ${btnHover}`}
             title={itemLocked ? "Unlock editing with a backup first" : "Save just this image to the dataset on the server"}
           >
-            Save This Image (.mjs)
+            Save This Image
           </button>
+
+          {/* Save ALL pending changes to server */}
+          <button 
+            onClick={saveAllDirtyToServer} 
+            disabled={dirtyImageIds.size === 0}
+            className={`${btnBase} ${dirtyImageIds.size > 0 ? "bg-green-600 text-white border-green-700 hover:bg-green-700" : "bg-gray-100 text-gray-400 cursor-not-allowed"} ${btnHover}`}
+            title={dirtyImageIds.size > 0 ? `Save ${dirtyImageIds.size} pending image(s) to server` : "No pending changes"}
+          >
+            Save All Changes ({dirtyImageIds.size})
+          </button>
+
+          {/* Auto-save toggle */}
+          <label className="flex items-center gap-1.5 text-xs cursor-pointer select-none" title="Automatically save current image when navigating to next/prev">
+            <input
+              type="checkbox"
+              checked={autoSaveOnNav}
+              onChange={(e) => {
+                setAutoSaveOnNav(e.target.checked);
+                localStorage.setItem("galleryEditor-autoSaveOnNav", e.target.checked);
+              }}
+              className="w-3.5 h-3.5"
+            />
+            Auto-save on nav
+          </label>
 
           {/* These remain available */}
           <button onClick={saveAllAsMjs} className={`${btnBase} bg-white ${btnHover}`}>
-            Save All (.mjs)
+            Download (.mjs)
           </button>
           <button onClick={revertCurrentToBackup} className={`${btnBase} bg-white ${btnHover}`}>
             Revert This Image

@@ -96,12 +96,22 @@ exports.handler = async (event) => {
     const toArr  = extractArrayFromMjs(toCode);
     if (!Array.isArray(toArr)) return { statusCode: 400, body: "Failed to parse target galleryData" };
     
-    // ========== PRESERVE THEMES FROM EXISTING TARGET FILE ==========
-    // Build a map of existing themes by id before we modify anything
+    // ========== PRESERVE DATA FROM EXISTING TARGET FILE ==========
+    // Build maps of existing themes, series, noSketch by id before we modify anything
     const existingThemesById = new Map();
+    const existingSeriesById = new Map();
+    const existingNoSketchById = new Map();
     for (const item of toArr) {
-      if (item && item.id && item.themes && typeof item.themes === "object") {
-        existingThemesById.set(item.id, item.themes);
+      if (item && item.id) {
+        if (item.themes && typeof item.themes === "object") {
+          existingThemesById.set(item.id, item.themes);
+        }
+        if (Array.isArray(item.availableSeries) && item.availableSeries.length > 0) {
+          existingSeriesById.set(item.id, item.availableSeries);
+        }
+        if (item.noSketch === true) {
+          existingNoSketchById.set(item.id, true);
+        }
       }
     }
     // ================================================================
@@ -109,31 +119,53 @@ exports.handler = async (event) => {
     const toGhosts = toArr.filter(isGhost);
     let toVis    = toArr.filter(isReal);
     
-    // ========== SMART MERGE THEMES FOR EXISTING ITEMS ==========
-    // Combine existing themes with any incoming themes
+    // ========== SMART MERGE DATA FOR EXISTING ITEMS ==========
+    // Combine existing themes/series/noSketch with any incoming data
     toVis = toVis.map((item) => {
       if (!item || !item.id) return item;
       
+      // --- THEMES ---
       const existingThemes = existingThemesById.get(item.id);
       const incomingThemes = item.themes && typeof item.themes === "object" ? item.themes : null;
       
-      // No existing themes - just use incoming
-      if (!existingThemes || Object.keys(existingThemes).length === 0) {
-        return item;
+      let mergedThemes = null;
+      if (existingThemes && Object.keys(existingThemes).length > 0) {
+        if (!incomingThemes || Object.keys(incomingThemes).length === 0) {
+          mergedThemes = existingThemes;
+        } else {
+          mergedThemes = { ...existingThemes, ...incomingThemes };
+          for (const key of Object.keys(mergedThemes)) {
+            if (mergedThemes[key] == null) delete mergedThemes[key];
+          }
+        }
+      } else if (incomingThemes) {
+        mergedThemes = incomingThemes;
       }
       
-      // No incoming themes - preserve existing
-      if (!incomingThemes || Object.keys(incomingThemes).length === 0) {
-        return { ...item, themes: existingThemes };
+      // --- AVAILABLE SERIES ---
+      const existingSeries = existingSeriesById.get(item.id);
+      const incomingSeries = Array.isArray(item.availableSeries) && item.availableSeries.length > 0 
+        ? item.availableSeries 
+        : null;
+      const mergedSeries = incomingSeries || existingSeries || null;
+      
+      // --- NO SKETCH ---
+      const existingNoSketch = existingNoSketchById.get(item.id);
+      const mergedNoSketch = item.noSketch === true ? true : (existingNoSketch === true ? true : undefined);
+      
+      // Build result with preserved/merged data
+      const result = { ...item };
+      if (mergedThemes && Object.keys(mergedThemes).length > 0) {
+        result.themes = mergedThemes;
+      }
+      if (mergedSeries) {
+        result.availableSeries = mergedSeries;
+      }
+      if (mergedNoSketch) {
+        result.noSketch = true;
       }
       
-      // Both exist - merge
-      const mergedThemes = { ...existingThemes, ...incomingThemes };
-      for (const key of Object.keys(mergedThemes)) {
-        if (mergedThemes[key] == null) delete mergedThemes[key];
-      }
-      const hasThemes = Object.keys(mergedThemes).length > 0;
-      return { ...item, themes: hasThemes ? mergedThemes : undefined };
+      return result;
     });
     // ==============================================================
 
