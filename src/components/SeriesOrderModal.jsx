@@ -301,15 +301,24 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
               })}
             </div>
 
-            {/* Close button */}
+            {/* Production Notes */}
+            <div className="mt-4 pt-3 border-t border-gray-200">
+              <p className="text-xs text-gray-500 text-center leading-relaxed">
+                <span className="font-semibold text-gray-600">* Production Notes *</span>
+                <br />
+                Standard paper prints include a 1–2 inch archival border. Sizes listed reflect the maximum dimension. Secondary dimension will scale proportionately to preserve the image's actual aspect ratio.
+              </p>
+            </div>
+
+            {/* Close button - top right */}
             <button
               type="button"
-              className="absolute bottom-4 left-4 inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-400 rounded-full shadow-sm hover:bg-gray-100 hover:text-gray-600 focus:outline-none transition-colors cursor-pointer"
+              className="absolute top-3 right-3 inline-flex items-center justify-center w-7 h-7 text-gray-400 rounded-full hover:bg-gray-100 hover:text-gray-600 focus:outline-none transition-colors cursor-pointer"
               aria-label="Close"
               title="Close"
               onClick={onClose}
             >
-              <CircleX className="w-6 h-6" />
+              <CircleX className="w-5 h-5" />
             </button>
           </div>
         </motion.div>

@@ -1247,10 +1247,10 @@ export default function ChapterGalleryBase({
                           type="button"
                           aria-label="Open Guide"
                           title="View our brief guided walk-through of all the features of our gallery viewer."
-                          className="inline-flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200"
+                          className="inline-flex items-center justify-center w-8 h-8 hover:opacity-80 transition-opacity"
                           onClick={(e) => { e.stopPropagation(); logUIEvent("guide_open", { page: window.location.pathname, sectionKey }); setTourOpenNonce(n => n + 1); }}
                         >
-                          <Info className="w-3.5 h-3.5 text-gray-400" />
+                          <Info className="w-7 h-7 text-gray-300" />
                         </button>
                       )}
 
