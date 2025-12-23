@@ -720,13 +720,20 @@ export default function ChapterGalleryBase({
   });
 
   // Inactivity/session-end logging
+  const eventCountsRef = useRef(eventCounts);
+  eventCountsRef.current = eventCounts;
+  
   useEffect(() => {
     let inactivityTimer;
     const INACTIVITY_LIMIT = 5 * 60 * 1000; // 5 minutes
 
     // Regular flush (inactivity timeout) - uses normal fetch
     const logAndResetEvents = () => {
-      Object.entries(eventCounts).forEach(([eventType, count]) => {
+      const counts = eventCountsRef.current;
+      const hasAnyEvents = Object.values(counts).some(c => c > 0);
+      if (!hasAnyEvents) return;
+      
+      Object.entries(counts).forEach(([eventType, count]) => {
         if (count > 0) {
           logUIEvent(eventType, {
             page: window.location.pathname,
@@ -739,7 +746,11 @@ export default function ChapterGalleryBase({
 
     // Exit flush (beforeunload/visibilitychange) - uses sendBeacon for reliable delivery
     const logAndResetEventsBeacon = () => {
-      Object.entries(eventCounts).forEach(([eventType, count]) => {
+      const counts = eventCountsRef.current;
+      const hasAnyEvents = Object.values(counts).some(c => c > 0);
+      if (!hasAnyEvents) return;
+      
+      Object.entries(counts).forEach(([eventType, count]) => {
         if (count > 0) {
           logUIEvent(eventType, {
             page: window.location.pathname,
@@ -774,7 +785,7 @@ export default function ChapterGalleryBase({
       window.removeEventListener("beforeunload", logAndResetEventsBeacon);
       // Note: anonymous visibilitychange handler can't be removed, but it's harmless
     };
-  }, [eventCounts]);
+  }, []); // Empty deps - use ref to access current counts
 
   const direction = currentIndex > prevIndex.current ? 1 : -1;
   prevIndex.current = currentIndex;
