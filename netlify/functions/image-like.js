@@ -1,6 +1,8 @@
 import nodemailer from 'nodemailer';
 import fetch from 'node-fetch';
 
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzyCEvOy7f4sfePpdnNjRLy3HosBoJEUcPcG0bQiFAx8AtvkKxO8_KUrY-3eNZF300/exec';
+
 export async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return {
@@ -23,8 +25,6 @@ export async function handler(event) {
     NOTIFY_EMAIL_PASS,
     NOTIFY_TO,
     NOTIFY_FROM = 'K4 Like Notification',
-    AIRTABLE_API_TOKEN,
-    AIRTABLE_BASE_ID,
   } = process.env;
 
   const likeTime = new Date(timestamp || Date.now()).toLocaleString('en-US', {
@@ -53,31 +53,25 @@ export async function handler(event) {
     .map((s) => s.trim())
     .filter(Boolean)[0] || 'unknown';
 
-  // 📝 Airtable Logging - always log all likes for analytics
-  const airtableRes = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/Likes`, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${AIRTABLE_API_TOKEN}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      fields: {
+  // 📝 Google Sheets Logging - always log all likes for analytics
+  try {
+    const sheetRes = await fetch(GOOGLE_SHEET_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sheet: 'Likes',
+        timestamp: likeTime,
         imageID: imageId,
         title: title || 'Untitled',
-        Page: page,
-        timestamp: likeTime,
+        page,
         isRepeat: isRepeatLike ? 'Yes' : 'No',
         ip,
         ua,
-      },
-    }),
-  });
-
-  const airtableResponseText = await airtableRes.text();
-  console.log('Airtable response:', airtableResponseText);
-
-  if (!airtableRes.ok) {
-    console.error('Airtable logging error:', airtableResponseText);
+      }),
+    });
+    console.log('Google Sheets response:', sheetRes.status);
+  } catch (sheetError) {
+    console.error('Google Sheets logging error:', sheetError);
   }
 
   // 📧 Email Notification (optional - only for first-time likes)

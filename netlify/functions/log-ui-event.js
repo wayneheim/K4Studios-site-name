@@ -1,5 +1,7 @@
 import fetch from 'node-fetch';
 
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzyCEvOy7f4sfePpdnNjRLy3HosBoJEUcPcG0bQiFAx8AtvkKxO8_KUrY-3eNZF300/exec';
+
 export async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return {
@@ -44,19 +46,6 @@ export async function handler(event) {
     .map((s) => s.trim())
     .filter(Boolean)[0] || 'unknown';
 
-  const {
-    AIRTABLE_API_TOKEN,
-    AIRTABLE_BASE_ID,
-  } = process.env;
-
-  if (!AIRTABLE_API_TOKEN || !AIRTABLE_BASE_ID) {
-    console.error('Missing Airtable credentials');
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Server configuration error' }),
-    };
-  }
-
   const eventTime = new Date(timestamp || Date.now()).toLocaleString('en-US', {
     timeZone: 'America/New_York',
     hour: 'numeric',
@@ -68,55 +57,31 @@ export async function handler(event) {
     day: 'numeric',
   });
 
-  // Ensure details is always a string (safeguard against any remaining non-string values)
+  // Ensure details is always a string
   const detailsStr = typeof details === 'string' ? details : JSON.stringify(details || {}, null, 2);
 
-  // Prepare Airtable payload
-  let airtablePayload;
-  
-  if (eventType === 'gallery_session') {
-    // For session summaries, details is already a JSON string from frontend
-    airtablePayload = {
-      fields: {
-        eventType,
-        details: detailsStr,
-        timestamp: eventTime,
-        ip,
-        ua,
-        referer,
-      },
-    };
-  } else {
-    // For individual events, details is already a JSON string from frontend
-    airtablePayload = {
-      fields: {
-        eventType,
-        details: detailsStr,
-        timestamp: eventTime,
-        ip,
-        ua,
-        referer,
-      },
-    };
-  }
-
   try {
-    // Airtable Logging
-    const airtableRes = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/UIEvents`, {
+    // Google Sheets Logging
+    const sheetRes = await fetch(GOOGLE_SHEET_URL, {
       method: 'POST',
-      headers: {
-        Authorization: `Bearer ${AIRTABLE_API_TOKEN}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(airtablePayload),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sheet: 'UIEvents',
+        timestamp: eventTime,
+        eventType,
+        details: detailsStr,
+        ip,
+        ua,
+        referer,
+      }),
     });
 
-    if (!airtableRes.ok) {
-      const airtableResponseText = await airtableRes.text();
-      console.error('Airtable error:', airtableResponseText);
+    if (!sheetRes.ok) {
+      const errorText = await sheetRes.text();
+      console.error('Google Sheets error:', errorText);
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: 'Airtable logging failed' }),
+        body: JSON.stringify({ error: 'Logging failed' }),
       };
     }
 
