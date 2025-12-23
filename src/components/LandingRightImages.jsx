@@ -49,6 +49,8 @@ export default function LandingRightImages({ heading = "", images = [] }) {
           border-radius: 8px;
           box-shadow: 0 7px 16px rgba(0, 0, 0, 0.18);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
+          will-change: transform, box-shadow;
+          backface-visibility: hidden;
         }
 
         .thumb-img:hover {

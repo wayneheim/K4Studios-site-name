@@ -143,6 +143,7 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           max-width: 150px;
           margin: 0 auto;
           transition: transform 0.3s ease;
+          will-change: transform;
         }
 
         .tile:hover .tombstone-card {
@@ -170,6 +171,8 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           max-width: 250px;
           /* Prevent CLS by containing the image space */
           contain: layout style;
+          will-change: transform, box-shadow;
+          backface-visibility: hidden;
         }
 
         .tombstone-divider {
