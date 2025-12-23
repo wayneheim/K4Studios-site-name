@@ -172,7 +172,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
 
   const context =
     (matColor === "no-wood" || matColor === "white3")
-      ? "Click the color icons above to preview different finishing/display options. All images are available for order on a selection of Fine Papers. Aluminum & Acrylic Face Mounting available through custom order. Contact us for details."
+      ? "Click the color icons above to preview different display ideas. Contact us for additional details."
       : matColor === "wood"
       ? "For an unforgetable presentation, order a custom 5-layer UV printed Maple / Baltic-Birch Wood Print"
       : "Additional Finishing/Display Suggestions for your prints. *Matting not included.";
@@ -207,7 +207,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
   };
 
   const longestContext =
-    "Click the color icons above to preview different finishing/display options. All images are available for order on a selection of Fine Papers. Aluminum & Acrylic Face Mounting available through custom order. Contact us for details.";
+    "Click the color icons above to preview different display ideas. Contact us for additional details.";
   const measureRef = useRef(null);
   const [reservedHeight, setReservedHeight] = useState(null);
 
@@ -481,7 +481,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
             </p>
           </div>
 
-          <div style={{ marginTop: 10 }}>
+          <div style={{ marginTop: 10, marginBottom: 15 }}>
             <a
               href="mailto:info@k4studios.com?subject=Custom%20Order%20Inquiry"
               onClick={(e) => e.stopPropagation()}

@@ -1,6 +1,7 @@
 // src/components/GalleryEditorPro.jsx
 import { useEffect, useMemo, useRef, useState } from "react";
 import PricingEditorModal from "./PricingEditorModal.jsx";
+import { generateSmartMetadata } from "../utils/autoTextGenerator.mjs";
 
 /* ---------- config: add more roots here if needed ---------- */
 const DATA_ROOTS = [
@@ -11,8 +12,10 @@ const DATA_ROOTS = [
 
 /* ---------- helpers ---------- */
 function escapeForTemplate(str = "") {
+  // For String.raw templates, backticks cannot be escaped with backslash
+  // Replace backticks with a Unicode lookalike (grave accent → modifier letter grave accent)
   let s = String(str).replace(/\r\n/g, "\n");
-  s = s.replace(/`/g, "\\`");
+  s = s.replace(/`/g, "ˋ"); // Unicode U+02CB (modifier letter grave accent)
   s = s.replace(/\$\{/g, "\\${");
   return s;
 }
@@ -48,7 +51,7 @@ function buildMjs(galleryData, exportName = "galleryData") {
       if (it.buyLink != null) pushStr("buyLink", it.buyLink);
       if (it.contentSource != null) pushStr("contentSource", it.contentSource);
       if (it.themes && typeof it.themes === "object") out.push(`    themes: ${JSON.stringify(it.themes)},`);
-      if (Array.isArray(it.availableSeries) && it.availableSeries.length > 0) out.push(`    availableSeries: ${JSON.stringify(it.availableSeries)},`);
+      // NOTE: availableSeries is NOT written to .mjs files - it's stored only in seriesRegistry.json
       if (it.noSketch === true) out.push(`    noSketch: true,`);
       return `  {\n${out.join("\n")}\n  }`;
     })
@@ -169,6 +172,15 @@ const SERIES_DEFINITIONS = {
   legend: { label: "Legend", limit: 12, description: "Limited edition of 12" },
 };
 
+/* ---------- Available Sizes per Series (from pricingConfig.json) ---------- */
+// Sizes that can be excluded per series for each image
+// Sketch has only one size, so no exclusion checkboxes needed
+const SERIES_SIZES = {
+  foundation: ['8" x 10"', '11" x 14"'],
+  chronicle: ['16" x 20"', '20" x 24"'],
+  legend: ['30" x 40"', '40" x 60"'],
+};
+
 /* ---------- Series Resolution Logic ---------- */
 function getEffectiveSeries(image) {
   const series = image?.availableSeries ? [...image.availableSeries] : [];
@@ -248,10 +260,21 @@ function EditionCounter({ seriesKey, limit, value, serverValue, disabled, onChan
 }
 
 /* ---------- Series & Status Panel ---------- */
-function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricing }) {
+function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricing, galleryPath, onBeforeSave }) {
   const [editionStates, setEditionStates] = useState({});
   const [pendingEditions, setPendingEditions] = useState({}); // Local pending changes
+  const [excludeSizes, setExcludeSizes] = useState({}); // Excluded sizes per series
+  const [pendingExcludeSizes, setPendingExcludeSizes] = useState(false); // Track if size changes need saving
+  const [pendingSeriesChange, setPendingSeriesChange] = useState(false); // Track if series changes need saving
   const [loading, setLoading] = useState(false);
+
+  // Initialize excludeSizes from hydrated data when current image changes
+  useEffect(() => {
+    if (!current?.id) return;
+    setExcludeSizes(current._excludeSizes || {});
+    setPendingExcludeSizes(false);
+    setPendingSeriesChange(false);
+  }, [current?.id, current?._excludeSizes]);
 
   // Fetch edition states from separate database when current image changes
   useEffect(() => {
@@ -368,11 +391,21 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
   // Value represents number sold (not next edition)
   // Exclude engrained - it has its own system
   let totalActuallySold = 0;
+  let chronicleLegendSold = 0;
+  const limitedSeriesWithSales = [];
   for (const [seriesKey, info] of Object.entries(editionStates)) {
     if (seriesKey === "engrained") continue; // Engrained managed separately
-    totalActuallySold += info.sold || 0;
+    const sold = info.sold || 0;
+    totalActuallySold += sold;
+    if (seriesKey === "chronicle" || seriesKey === "legend") {
+      if (sold > 0) {
+        chronicleLegendSold += sold;
+        limitedSeriesWithSales.push(seriesKey);
+      }
+    }
   }
   const isLocked = totalActuallySold > 0;
+  const hasLimitedSales = chronicleLegendSold > 0;
   const canRemove = !isLocked && currentStatus !== "retired";
   const canRetire = !isRetired;
 
@@ -391,6 +424,7 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
 
     if (seriesKey === "sketch") {
       onUpdate("noSketch", !current.noSketch);
+      setPendingSeriesChange(true);
     } else {
       const currentSeries = current.availableSeries || [];
       let newSeries;
@@ -405,7 +439,73 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
         }
       }
       onUpdate("availableSeries", newSeries.length > 0 ? newSeries : undefined);
+      setPendingSeriesChange(true);
+      // NOTE: Series registration happens at save time via batch or individual save
+      // We cannot do immediate registration here because writing to seriesRegistry.json
+      // triggers HMR which causes the component to reload and lose position
     }
+  }
+
+  // Toggle size exclusion for a series (check = available, unchecked = excluded)
+  function toggleSizeExclusion(seriesKey, size) {
+    if (!backupMade || isRetired) return;
+    
+    setExcludeSizes(prev => {
+      const currentExclusions = prev[seriesKey] || [];
+      let newExclusions;
+      if (currentExclusions.includes(size)) {
+        // Remove from exclusions (make available)
+        newExclusions = currentExclusions.filter(s => s !== size);
+      } else {
+        // Add to exclusions (make unavailable)
+        newExclusions = [...currentExclusions, size];
+      }
+      return {
+        ...prev,
+        [seriesKey]: newExclusions
+      };
+    });
+    setPendingExcludeSizes(true);
+  }
+
+  // Save excludeSizes AND series selections to the series registry
+  async function saveSeriesAndSizes() {
+    if (!current?.id || !galleryPath) return;
+    
+    // Signal parent to preserve position before HMR-triggering write
+    onBeforeSave?.();
+    
+    setLoading(true);
+    try {
+      // Build the tiers array from current series state
+      const baseTiers = (current.availableSeries || []).filter(t => ["foundation", "chronicle", "legend"].includes(t));
+      const storedTiers = current.noSketch ? baseTiers : ["sketch", ...baseTiers];
+      
+      // First, register the series (saves tiers + excludeSizes together)
+      const regRes = await fetch("/.netlify/functions/seriesRegistry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "register",
+          imageId: current.id,
+          galleryPath: galleryPath,
+          tiers: storedTiers,
+          excludeSizes: excludeSizes,
+          title: current.title || "",
+          src: current.srcXL || current.src || ""
+        })
+      });
+      
+      if (regRes.ok) {
+        setPendingExcludeSizes(false);
+        setPendingSeriesChange(false);
+        // Update the current image's _excludeSizes to match
+        onUpdate("_excludeSizes", excludeSizes);
+      }
+    } catch (err) {
+      console.error("[SeriesStatusPanel] Error saving series and sizes:", err);
+    }
+    setLoading(false);
   }
 
   // Change status
@@ -441,10 +541,23 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
 
   if (!current) return null;
 
+  const needsResave = current._needsResave;
+  const seriesId = current._seriesId;
+
   return (
     <div className="mt-4 p-4 border-2 border-amber-200 rounded-lg bg-amber-50">
       <h4 className="text-sm font-bold text-amber-800 mb-3 flex items-center gap-2">
         📊 Series & Status
+        {needsResave && (
+          <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded" title="This image exists in series DB from another gallery. Save to add this gallery to the map.">
+            🔗 Found in DB — save to link
+          </span>
+        )}
+        {seriesId && !needsResave && (
+          <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded" title={`Series ID: ${seriesId}`}>
+            ✓ In Series DB
+          </span>
+        )}
         {isLocked && (
           <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded">
             🔒 {totalActuallySold} sold — some options locked
@@ -474,12 +587,14 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
             const disabled = !backupMade || isRetired || (locked && isActive);
             const soldCount = editionStates[key]?.sold || 0;
             const hasLimit = def.limit !== null;
+            const seriesSizes = SERIES_SIZES[key] || [];
+            const hasMultipleSizes = seriesSizes.length > 1;
             
             return (
-              <div key={key} className="flex items-center gap-3">
+              <div key={key} className="flex flex-wrap items-center gap-2">
                 {/* Checkbox */}
                 <label
-                  className={`flex items-center gap-2 px-3 py-1.5 rounded border cursor-pointer transition-all min-w-[140px] ${
+                  className={`flex items-center gap-2 px-3 py-1.5 rounded border cursor-pointer transition-all min-w-[110px] ${
                     isActive
                       ? locked
                         ? "bg-red-50 border-red-300 text-red-800"
@@ -498,6 +613,32 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
                   <span className="text-sm font-medium">{def.label}</span>
                   {isActive && locked && <span className="text-xs">🔒</span>}
                 </label>
+
+                {/* Size Exclusion Checkboxes (inline when series is active and has multiple sizes) */}
+                {isActive && hasMultipleSizes && seriesSizes.map(size => {
+                  const isExcluded = (excludeSizes[key] || []).includes(size);
+                  const isAvailable = !isExcluded;
+                  return (
+                    <label
+                      key={size}
+                      className={`flex items-center gap-1.5 px-2 py-1 rounded border text-xs cursor-pointer transition-all ${
+                        isAvailable
+                          ? "bg-blue-50 border-blue-300 text-blue-800"
+                          : "bg-gray-100 border-gray-300 text-gray-500 line-through"
+                      } ${(!backupMade || isRetired) ? "opacity-60 cursor-not-allowed" : "hover:border-blue-400"}`}
+                      title={isAvailable ? `${size} is available for purchase` : `${size} is excluded from this image`}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={isAvailable}
+                        disabled={!backupMade || isRetired}
+                        onChange={() => toggleSizeExclusion(key, size)}
+                        className="w-3 h-3"
+                      />
+                      {size}
+                    </label>
+                  );
+                })}
                 
                 {/* Edition Counter (only for limited series when active) */}
                 {hasLimit && isActive && (
@@ -515,6 +656,17 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
               </div>
             );
           })}
+          
+          {/* Save button for series & sizes (shown when any series or size changes pending) */}
+          {(pendingSeriesChange || pendingExcludeSizes) && (
+            <button
+              onClick={saveSeriesAndSizes}
+              disabled={loading}
+              className="self-start px-3 py-1.5 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
+            >
+              {loading ? "..." : "💾 Save Series & Sizes"}
+            </button>
+          )}
         </div>
       </div>
 
@@ -543,6 +695,11 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
         {!canRemove && currentStatus === "active" && (
           <p className="text-xs text-red-600 mt-1">
             ⚠️ This image has sales and cannot be removed.
+            {hasLimitedSales && (
+              <span className="block mt-0.5">
+                🔒 {limitedSeriesWithSales.join(", ")} has {chronicleLegendSold} sold — reset count to remove.
+              </span>
+            )}
           </p>
         )}
       </div>
@@ -645,6 +802,17 @@ export default function GalleryEditorPro() {
   // Pricing Modal state
   const [pricingModalOpen, setPricingModalOpen] = useState(false);
 
+  // Context menu state for right-click options
+  const [contextMenu, setContextMenu] = useState({ visible: false, x: 0, y: 0 });
+  const [showGenConfirm, setShowGenConfirm] = useState(false);
+  const [genConfirmType, setGenConfirmType] = useState('data'); // 'data' or 'title'
+
+  // Sync Metadata Modal state
+  const [syncModalOpen, setSyncModalOpen] = useState(false);
+  const [syncSeriesMembers, setSyncSeriesMembers] = useState([]); // Array of { imageId, galleryPath, title, src, data }
+  const [syncMasterId, setSyncMasterId] = useState(null); // The imageId:galleryPath key chosen as master
+  const [syncLoading, setSyncLoading] = useState(false);
+
   useEffect(() => {
     if (!lastAction) return;
     const t = setTimeout(() => setLastAction(null), 6000);
@@ -705,7 +873,70 @@ export default function GalleryEditorPro() {
       const arr = allArr.filter(isRealItem);
       if (cancelled) return;
 
-      setData(arr);
+      // Hydrate availableSeries from seriesRegistry (since it's not stored in .mjs files)
+      // Also flag images that exist in registry but not for THIS gallery (need resave to build map)
+      // NOTE: noSketch is still stored in .mjs files - don't overwrite it from registry
+      let hydratedArr = arr;
+      const needsResaveIds = new Set();
+      
+      try {
+        const regRes = await fetch("/.netlify/functions/seriesRegistry");
+        if (regRes.ok) {
+          const registry = await regRes.json();
+          hydratedArr = arr.map(img => {
+            // Registry v2.0 uses composite keys: "imageId:galleryPath"
+            // First try exact match with current gallery
+            const exactKey = `${img.id}:${selectedPath}`;
+            let seriesId = registry.images?.[exactKey];
+            let foundInOtherGallery = false;
+            
+            // If no exact match, find any key starting with this imageId
+            if (!seriesId) {
+              for (const [key, sId] of Object.entries(registry.images || {})) {
+                if (key.startsWith(img.id + ":")) {
+                  seriesId = sId;
+                  foundInOtherGallery = true; // Found in registry but not THIS gallery
+                  break;
+                }
+              }
+            }
+            
+            if (seriesId && registry.series?.[seriesId]) {
+              const series = registry.series[seriesId];
+              const tiers = series.tiers || [];
+              const excludeSizes = series.excludeSizes || {};
+              
+              // Flag for resave if found in other gallery but not this one
+              // This builds the map of all galleries where this image appears
+              if (foundInOtherGallery) {
+                needsResaveIds.add(img.id);
+              }
+              
+              // Only hydrate foundation/chronicle/legend - sketch status comes from .mjs noSketch field
+              const availableSeries = tiers.filter(t => ["foundation", "chronicle", "legend"].includes(t));
+              if (availableSeries.length > 0) {
+                return { 
+                  ...img, 
+                  availableSeries,
+                  _seriesId: seriesId, // Track for display
+                  _excludeSizes: excludeSizes, // Hydrate excludeSizes from registry
+                  _needsResave: foundInOtherGallery 
+                };
+              }
+            }
+            return img;
+          });
+          
+          // Auto-add to dirty set if needs resave (to build the gallery map)
+          if (needsResaveIds.size > 0) {
+            console.log(`[EditorPro] Found ${needsResaveIds.size} images in series DB needing resave for this gallery`);
+          }
+        }
+      } catch (err) {
+        console.warn("[EditorPro] Failed to hydrate series from registry:", err);
+      }
+
+      setData(hydratedArr);
       setBackupData(allArr);
       
       // Check if there's a jump-back position waiting (from bulk save)
@@ -1052,6 +1283,45 @@ ${collectorNotes}`;
       });
       if (!res.ok) throw new Error(await res.text());
       
+      // Register series (same logic as saveImageById)
+      const baseTiers = (updatedItem.availableSeries || []).filter(t => ["foundation", "chronicle", "legend"].includes(t));
+      const storedTiers = updatedItem.noSketch ? baseTiers : ["sketch", ...baseTiers];
+      try {
+        await fetch("/.netlify/functions/seriesRegistry", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action: "register",
+            imageId: updatedItem.id,
+            galleryPath: selectedPath,
+            tiers: storedTiers,
+            title: updatedItem.title || "",
+            src: updatedItem.srcXL || updatedItem.src || ""
+          }),
+        });
+      } catch (regErr) {
+        console.warn("[EditorPro Turbo] Series registration failed:", regErr);
+      }
+      
+      // Generate visual fingerprint
+      const imageUrl = updatedItem.srcXL || updatedItem.src;
+      if (imageUrl) {
+        try {
+          await fetch("/.netlify/functions/visualIndex", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              action: "index",
+              imageId: updatedItem.id,
+              galleryPath: selectedPath,
+              imageUrl: imageUrl.startsWith('http') ? imageUrl : 'https://photos.smugmug.com' + imageUrl
+            }),
+          });
+        } catch (viErr) {
+          console.warn("[EditorPro Turbo] Visual indexing failed:", viErr);
+        }
+      }
+      
       setDirty(false);
       setTurboApplied(true);
       setLastAction(`Saved ${currentId} — ${new Date().toLocaleTimeString()}`);
@@ -1085,14 +1355,15 @@ ${collectorNotes}`;
   }
 
   // Update turbo text when navigating to a different image in turbo mode
+  // Also rebuild if turboText is empty (e.g., after HMR when current wasn't ready)
   useEffect(() => {
-    if (turboMode && current && idx !== lastTurboIdx) {
+    if (turboMode && current && (idx !== lastTurboIdx || !turboText)) {
       setTurboText(buildTurboText(current));
       setTurboApplied(false);
       setLastTurboIdx(idx);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [turboMode, idx]);
+  }, [turboMode, idx, current]);
 
   // Auto-save current image before navigating if enabled and dirty
   async function move(delta) {
@@ -1111,7 +1382,7 @@ ${collectorNotes}`;
   }
 
   // Save a specific image by ID to the server
-  async function saveImageById(imageId) {
+  async function saveImageById(imageId, options = {}) {
     if (!backupMade || !selectedPath) return false;
     const imageData = data.find(d => d.id === imageId);
     if (!imageData) return false;
@@ -1140,7 +1411,7 @@ ${collectorNotes}`;
         srcM: imageData.srcM ?? "",
         srcS: imageData.srcS ?? "",
         srcOriginal: imageData.srcOriginal ?? "",
-        availableSeries: Array.isArray(imageData.availableSeries) && imageData.availableSeries.length > 0 ? imageData.availableSeries : null,
+        // NOTE: availableSeries is NOT sent to updateGalleryItem - it's stored only in seriesRegistry.json
         noSketch: imageData.noSketch === true ? true : null,
         status: imageData.status && imageData.status !== "active" ? imageData.status : null,
       },
@@ -1153,6 +1424,49 @@ ${collectorNotes}`;
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error(await res.text());
+      
+      // Register series (all tiers including sketch, skip if batch already handled it)
+      if (!options.skipSeriesRegistration) {
+        // Build tiers: foundation/chronicle/legend from availableSeries, plus sketch if not disabled
+        const baseTiers = (imageData.availableSeries || []).filter(t => ["foundation", "chronicle", "legend"].includes(t));
+        const storedTiers = imageData.noSketch ? baseTiers : ["sketch", ...baseTiers];
+        // Always call register to update tiers (including removing limited tiers)
+        try {
+          await fetch("/.netlify/functions/seriesRegistry", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              action: "register",
+              imageId: imageData.id,
+              galleryPath: selectedPath,
+              tiers: storedTiers,
+              title: imageData.title || "",
+              src: imageData.srcXL || imageData.src || ""
+            }),
+          });
+        } catch (regErr) {
+          console.warn("[EditorPro] Series registration failed:", regErr);
+        }
+        
+        // Generate visual fingerprint for similarity detection (if image has a src)
+        const imageUrl = imageData.srcXL || imageData.src;
+        if (imageUrl) {
+          try {
+            await fetch("/.netlify/functions/visualIndex", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                action: "index",
+                imageId: imageData.id,
+                galleryPath: selectedPath,
+                imageUrl: imageUrl.startsWith('http') ? imageUrl : 'https://photos.smugmug.com' + imageUrl
+              }),
+            });
+          } catch (viErr) {
+            console.warn("[EditorPro] Visual indexing failed:", viErr);
+          }
+        }
+      }
       
       // Remove from dirty set
       setDirtyImageIds(prev => {
@@ -1182,6 +1496,64 @@ ${collectorNotes}`;
     writeResumeState({ selectedPath, idx: savedIdx, filter, backupMade, realBackupMade, turboMode });
     
     const ids = Array.from(dirtyImageIds);
+    
+    // CRITICAL: Capture all series data UPFRONT before any .mjs saves trigger HMR
+    // Once HMR fires, data[] will be refreshed from disk and availableSeries will be lost
+    const seriesBatch = [];
+    for (const id of ids) {
+      const img = data.find(d => d.id === id);
+      if (img) {
+        // Build tiers: foundation/chronicle/legend from availableSeries, plus sketch if not disabled
+        const baseTiers = (img.availableSeries || []).filter(t => ["foundation", "chronicle", "legend"].includes(t));
+        const storedTiers = img.noSketch ? baseTiers : ["sketch", ...baseTiers];
+        // Always include in batch - server will handle updates including tier removals
+        seriesBatch.push({
+          imageId: img.id,
+          galleryPath: selectedPath,
+          tiers: storedTiers,
+          title: img.title || "",
+          src: img.srcXL || img.src || ""
+        });
+      }
+    }
+    
+    // Do the batch series registration FIRST (one atomic write)
+    if (seriesBatch.length > 0) {
+      try {
+        await fetch("/.netlify/functions/seriesRegistry", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "batchRegister", batch: seriesBatch, galleryPath: selectedPath }),
+        });
+        console.log(`[EditorPro] Batch registered ${seriesBatch.length} images to seriesRegistry`);
+      } catch (err) {
+        console.warn("[EditorPro] Batch series registration failed:", err);
+      }
+      
+      // Batch generate visual fingerprints (in background, don't block save)
+      (async () => {
+        for (const item of seriesBatch) {
+          if (item.src) {
+            try {
+              await fetch("/.netlify/functions/visualIndex", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  action: "index",
+                  imageId: item.imageId,
+                  galleryPath: item.galleryPath,
+                  imageUrl: item.src.startsWith('http') ? item.src : 'https://photos.smugmug.com' + item.src
+                }),
+              });
+            } catch (viErr) {
+              console.warn(`[EditorPro] Visual indexing failed for ${item.imageId}:`, viErr);
+            }
+          }
+        }
+        console.log(`[EditorPro] Visual indexed ${seriesBatch.length} images`);
+      })();
+    }
+    
     let saved = 0;
     let failed = 0;
     
@@ -1189,7 +1561,7 @@ ${collectorNotes}`;
       // Keep jump-back and resume state fresh before each save
       setJumpBackTo(savedIdx);
       writeResumeState({ selectedPath, idx: savedIdx, filter, backupMade, realBackupMade, turboMode });
-      const ok = await saveImageById(id);
+      const ok = await saveImageById(id, { skipSeriesRegistration: true }); // Skip individual registration
       if (ok) saved++;
       else failed++;
     }
@@ -1269,6 +1641,49 @@ ${collectorNotes}`;
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error(await res.text());
+      
+      // Register series (all tiers including sketch)
+      // Build tiers: foundation/chronicle/legend from availableSeries, plus sketch if not disabled
+      const baseTiers = (current.availableSeries || []).filter(t => ["foundation", "chronicle", "legend"].includes(t));
+      const storedTiers = current.noSketch ? baseTiers : ["sketch", ...baseTiers];
+      if (storedTiers.length > 0) {
+        try {
+          await fetch("/.netlify/functions/seriesRegistry", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              action: "register",
+              imageId: current.id,
+              galleryPath: selectedPath,
+              tiers: storedTiers,
+              title: current.title || "",
+              src: current.srcXL || current.src || ""
+            }),
+          });
+        } catch (regErr) {
+          console.warn("[EditorPro] Series registration failed:", regErr);
+        }
+      }
+      
+      // Generate visual fingerprint for similarity detection
+      const imageUrl = current.srcXL || current.src;
+      if (imageUrl) {
+        try {
+          await fetch("/.netlify/functions/visualIndex", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              action: "index",
+              imageId: current.id,
+              galleryPath: selectedPath,
+              imageUrl: imageUrl.startsWith('http') ? imageUrl : 'https://photos.smugmug.com' + imageUrl
+            }),
+          });
+        } catch (viErr) {
+          console.warn("[EditorPro] Visual indexing failed:", viErr);
+        }
+      }
+      
       setLastAction(`Patched CURRENT (${current.id}) in-place — ${new Date().toLocaleTimeString()}`);
       setDirty(false);
       // Remove from dirty set
@@ -1376,6 +1791,306 @@ ${collectorNotes}`;
     }
   }
 
+  // ---- Context menu for right-click options ----
+  function handleImageContextMenu(e) {
+    e.preventDefault();
+    if (!current || !backupMade) return;
+    setContextMenu({ visible: true, x: e.clientX, y: e.clientY });
+  }
+
+  // Close context menu when clicking outside
+  useEffect(() => {
+    function handleClickOutside() {
+      if (contextMenu.visible) setContextMenu({ visible: false, x: 0, y: 0 });
+    }
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [contextMenu.visible]);
+
+  // ---- Generate Title from K4-Sem ----
+  async function handleGenerateTitle() {
+    if (!current) return;
+    if (!backupMade) {
+      alert("Please create or skip backup first before generating data.");
+      return;
+    }
+    const gen = generateSmartMetadata(current, selectedPath);
+    const newTitle = gen.title || current.title || "Untitled";
+    
+    // Capture current position before any async operations
+    const savedIdx = idx;
+    const currentId = current.id;
+    
+    // Update local state with AI content source
+    const updatedItem = { ...current, title: newTitle, contentSource: "ai" };
+    setData((arr) => {
+      const i = arr.findIndex((d) => d.id === currentId);
+      if (i === -1) return arr;
+      const copy = [...arr];
+      copy[i] = updatedItem;
+      return copy;
+    });
+    
+    // If in turbo mode, update the turbo text to reflect new title
+    if (turboMode) {
+      setTurboText(buildTurboText(updatedItem));
+      setTurboApplied(true);
+    }
+    
+    // Save to server
+    try {
+      const payload = {
+        datasetPath: selectedPath.replace(/^\//, ""),
+        id: currentId,
+        patch: {
+          title: newTitle,
+          contentSource: "ai",
+        },
+      };
+      
+      // Save resume state before API call (preserves state in case of HMR)
+      writeResumeState({ selectedPath, idx: savedIdx, filter, backupMade, realBackupMade, turboMode });
+      
+      const res = await fetch("/.netlify/functions/updateGalleryItem", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      setLastAction(`Generated title for ${currentId} — ${new Date().toLocaleTimeString()}`);
+      setDirty(false);
+    } catch (err) {
+      setDirty(true);
+      alert("Title generation succeeded but save failed.\n\n" + err.message);
+    }
+  }
+
+  // ---- Generate All Data from K4-Sem ----
+  async function handleGenerateAllData() {
+    if (!current) return;
+    if (!backupMade) {
+      alert("Please create or skip backup first before generating data.");
+      return;
+    }
+    const gen = generateSmartMetadata(current, selectedPath);
+    
+    // Capture current position before any async operations
+    const savedIdx = idx;
+    const currentId = current.id;
+    
+    // Build the updated item with all generated fields + AI content source
+    const updatedItem = {
+      ...current,
+      title: gen.title || current.title,
+      alt: gen.alt || current.alt,
+      description: gen.description || current.description,
+      story: gen.story || current.story,
+      tags: gen.keywords || current.tags,
+      keywords: gen.keywords || current.keywords,
+      contentSource: "ai",
+    };
+    
+    // Update local state
+    setData((arr) => {
+      const i = arr.findIndex((d) => d.id === currentId);
+      if (i === -1) return arr;
+      const copy = [...arr];
+      copy[i] = updatedItem;
+      return copy;
+    });
+    
+    // If in turbo mode, update the turbo text to reflect new generated data
+    if (turboMode) {
+      setTurboText(buildTurboText(updatedItem));
+      setTurboApplied(true); // Mark as applied since we're saving directly
+    }
+    
+    // Save to server
+    try {
+      const payload = {
+        datasetPath: selectedPath.replace(/^\//, ""),
+        id: currentId,
+        patch: {
+          title: updatedItem.title ?? "",
+          alt: updatedItem.alt ?? "",
+          description: updatedItem.description ?? "",
+          story: updatedItem.story ?? "",
+          keywords: Array.isArray(updatedItem.tags)
+            ? updatedItem.tags
+            : Array.isArray(updatedItem.keywords)
+            ? updatedItem.keywords
+            : [],
+          contentSource: "ai",
+        },
+      };
+      
+      // Save resume state before API call (preserves state in case of HMR)
+      writeResumeState({ selectedPath, idx: savedIdx, filter, backupMade, realBackupMade, turboMode });
+      
+      const res = await fetch("/.netlify/functions/updateGalleryItem", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      setLastAction(`Generated all data for ${currentId} — ${new Date().toLocaleTimeString()}`);
+      setDirty(false);
+    } catch (err) {
+      setDirty(true);
+      alert("Data generation succeeded but save failed.\n\n" + err.message);
+    }
+  }
+
+  // ---- Sync Metadata across series members ----
+  async function openSyncMetadataModal() {
+    if (!current || !backupMade) return;
+    
+    setSyncLoading(true);
+    setSyncModalOpen(true);
+    setSyncSeriesMembers([]);
+    setSyncMasterId(null);
+    
+    try {
+      // Fetch the series registry
+      const regRes = await fetch("/.netlify/functions/seriesRegistry");
+      if (!regRes.ok) throw new Error("Failed to fetch series registry");
+      const registry = await regRes.json();
+      
+      // Find the series for this image
+      const exactKey = `${current.id}:${selectedPath}`;
+      let seriesId = registry.images?.[exactKey];
+      
+      // If no exact match, find any key starting with this imageId
+      if (!seriesId) {
+        for (const [key, sId] of Object.entries(registry.images || {})) {
+          if (key.startsWith(current.id + ":")) {
+            seriesId = sId;
+            break;
+          }
+        }
+      }
+      
+      if (!seriesId || !registry.series?.[seriesId]) {
+        alert("This image is not registered in a series. Save it first to register it.");
+        setSyncModalOpen(false);
+        setSyncLoading(false);
+        return;
+      }
+      
+      const series = registry.series[seriesId];
+      const occurrences = series.occurrences || [];
+      
+      if (occurrences.length < 2) {
+        alert("This image only appears in one gallery. No other occurrences to sync with.");
+        setSyncModalOpen(false);
+        setSyncLoading(false);
+        return;
+      }
+      
+      // Load the actual data for each occurrence
+      const members = [];
+      for (const occ of occurrences) {
+        try {
+          // Load the gallery data for this occurrence
+          const galleryPath = occ.galleryPath;
+          const mod = await import(/* @vite-ignore */ galleryPath);
+          const galleryData = Array.isArray(mod.galleryData) ? mod.galleryData : Array.isArray(mod?.default) ? mod.default : [];
+          const imgData = galleryData.find(img => img.id === occ.imageId);
+          
+          if (imgData) {
+            members.push({
+              key: `${occ.imageId}:${galleryPath}`,
+              imageId: occ.imageId,
+              galleryPath: galleryPath,
+              title: occ.title || imgData.title || "Untitled",
+              src: occ.src || imgData.src || imgData.srcM || imgData.srcL || "",
+              data: imgData
+            });
+          }
+        } catch (err) {
+          console.warn(`[Sync] Failed to load ${occ.galleryPath}:`, err);
+        }
+      }
+      
+      if (members.length < 2) {
+        alert("Could only find data for 1 gallery occurrence. Cannot sync.");
+        setSyncModalOpen(false);
+        setSyncLoading(false);
+        return;
+      }
+      
+      // Set the current image as master by default
+      setSyncSeriesMembers(members);
+      setSyncMasterId(exactKey);
+      
+    } catch (err) {
+      console.error("[Sync] Error loading series members:", err);
+      alert("Failed to load series members: " + err.message);
+      setSyncModalOpen(false);
+    }
+    
+    setSyncLoading(false);
+  }
+  
+  async function executeSyncMetadata() {
+    if (!syncMasterId || syncSeriesMembers.length < 2) return;
+    
+    const master = syncSeriesMembers.find(m => m.key === syncMasterId);
+    if (!master) {
+      alert("Master image not found.");
+      return;
+    }
+    
+    const targets = syncSeriesMembers.filter(m => m.key !== syncMasterId);
+    setSyncLoading(true);
+    
+    let successCount = 0;
+    let errors = [];
+    
+    for (const target of targets) {
+      try {
+        // Full data replacement - copy ALL metadata fields
+        const patch = {
+          title: master.data.title || "",
+          alt: master.data.alt || "",
+          description: master.data.description || "",
+          story: master.data.story || "",
+          keywords: master.data.tags || master.data.keywords || [],
+          rating: master.data.rating || 0,
+          contentSource: master.data.contentSource || "human",
+        };
+        
+        // Save to the target's gallery
+        const payload = {
+          datasetPath: target.galleryPath.replace(/^\//, ""),
+          id: target.imageId,
+          patch: patch,
+        };
+        
+        const res = await fetch("/.netlify/functions/updateGalleryItem", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        
+        if (!res.ok) throw new Error(await res.text());
+        successCount++;
+        
+      } catch (err) {
+        errors.push(`${target.galleryPath}: ${err.message}`);
+      }
+    }
+    
+    setSyncLoading(false);
+    setSyncModalOpen(false);
+    
+    if (errors.length > 0) {
+      alert(`Synced ${successCount} of ${targets.length} images.\n\nErrors:\n${errors.join("\n")}`);
+    } else {
+      setLastAction(`Synced metadata to ${successCount} galleries — ${new Date().toLocaleTimeString()}`);
+    }
+  }
+
   // ---- Refresh after external action (reorder/import) ----
   function refreshAfterExternal() {
     writeResumeState({ selectedPath, idx, filter, backupMade });
@@ -1469,6 +2184,18 @@ ${collectorNotes}`;
             onMouseLeave={(e) => (e.currentTarget.style.background = '#ebc3e2ff')}
           >
             Import Images…
+          </a>
+
+          <a
+            href="/admin/series-matcher"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${btnBase} ${btnHover}`}
+            style={{ background: '#fce7f3ff', borderColor: '#ec4899ff', color: '#831843ff' }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#fbcfe8ff')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#fce7f3ff')}
+          >
+            🎨 Series Matcher
           </a>
 
           <button
@@ -1614,7 +2341,7 @@ ${collectorNotes}`;
                 const hidden = current?.visibility === "hidden";
                 const contentSource = current?.contentSource || "human"; // Default to human if not set
                 return imgUrl ? (
-                  <div className="relative">
+                  <div className="relative" onContextMenu={handleImageContextMenu}>
                     <img src={imgUrl} alt="" className={`w-full rounded-lg shadow ${hidden ? "opacity-60" : ""}`} />
                     {hidden && (
                       <span className="absolute top-2 left-2 text-xs px-2 py-1 rounded bg-yellow-100 border border-yellow-300 text-yellow-900">
@@ -1731,6 +2458,11 @@ ${collectorNotes}`;
                 onUpdate={(field, value) => updateField(field, value)}
                 onSave={saveCurrentOnly}
                 onOpenPricing={() => setPricingModalOpen(true)}
+                galleryPath={selectedPath}
+                onBeforeSave={() => {
+                  setJumpBackTo(idx);
+                  writeResumeState({ selectedPath, idx, filter, backupMade, realBackupMade, turboMode });
+                }}
               />
             </div>
           </div>
@@ -1778,7 +2510,7 @@ ${collectorNotes}`;
                     const imgUrl = pickImage(current);
                     const contentSource = current?.contentSource || "human";
                     return imgUrl ? (
-                      <div className="relative">
+                      <div className="relative" onContextMenu={handleImageContextMenu}>
                         <img 
                           src={imgUrl} 
                           alt="" 
@@ -1867,6 +2599,22 @@ ${collectorNotes}`;
                     >
                       Clear Text
                     </button>
+                    <button
+                      onClick={handleGenerateTitle}
+                      disabled={!backupMade}
+                      className={`${btnBase} ${backupMade ? "bg-indigo-600 border-indigo-700" : "bg-gray-600 border-gray-500 opacity-50 cursor-not-allowed"} text-white ${backupMade ? btnHover : ""}`}
+                      title={backupMade ? "Generate title from K4-Sem semantic data" : "Create or skip backup first"}
+                    >
+                      🪶 Gen Title
+                    </button>
+                    <button
+                      onClick={handleGenerateAllData}
+                      disabled={!backupMade}
+                      className={`${btnBase} ${backupMade ? "bg-fuchsia-600 border-fuchsia-700" : "bg-gray-600 border-gray-500 opacity-50 cursor-not-allowed"} text-white ${backupMade ? btnHover : ""}`}
+                      title={backupMade ? "Generate all metadata from K4-Sem semantic data" : "Create or skip backup first"}
+                    >
+                      🪶 Gen All Data
+                    </button>
                     
                     <div className="flex-1" />
                     
@@ -1928,6 +2676,233 @@ ${collectorNotes}`;
             </button>
             <div className="mt-3 text-xs text-gray-500">
               This preserves your current gallery, selection, and unlocked state.
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Context menu for right-click options */}
+      {contextMenu.visible && (
+        <div
+          style={{
+            position: "fixed",
+            top: contextMenu.y,
+            left: contextMenu.x,
+            background: "#fff",
+            border: "1px solid #ccc",
+            borderRadius: 8,
+            boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+            zIndex: 9999,
+            minWidth: 200,
+            overflow: "hidden",
+          }}
+        >
+          <div
+            style={{
+              padding: "10px 16px",
+              cursor: "pointer",
+              borderBottom: "1px solid #e5e5e5",
+              background: "#fafafa",
+              fontWeight: "500",
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.background = "#f0f0f0"}
+            onMouseLeave={(e) => e.currentTarget.style.background = "#fafafa"}
+            onClick={() => {
+              setContextMenu({ visible: false, x: 0, y: 0 });
+              handleGenerateTitle();
+            }}
+          >
+            🪶 Generate Title
+          </div>
+          <div
+            style={{
+              padding: "10px 16px",
+              cursor: "pointer",
+              borderBottom: "1px solid #e5e5e5",
+              background: "#fafafa",
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.background = "#f0f0f0"}
+            onMouseLeave={(e) => e.currentTarget.style.background = "#fafafa"}
+            onClick={() => {
+              setContextMenu({ visible: false, x: 0, y: 0 });
+              handleGenerateAllData();
+            }}
+          >
+            🪶 Generate All Data
+          </div>
+          <div
+            style={{
+              padding: "10px 16px",
+              cursor: "pointer",
+              background: "#fafafa",
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.background = "#f0f0f0"}
+            onMouseLeave={(e) => e.currentTarget.style.background = "#fafafa"}
+            onClick={() => {
+              setContextMenu({ visible: false, x: 0, y: 0 });
+              openSyncMetadataModal();
+            }}
+          >
+            🔄 Sync Metadata
+          </div>
+        </div>
+      )}
+
+      {/* Sync Metadata Modal */}
+      {syncModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="bg-white rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-hidden flex flex-col">
+            {/* Modal Header */}
+            <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between bg-gray-50">
+              <h2 className="text-lg font-semibold text-gray-800">🔄 Sync Metadata Across Series</h2>
+              <button
+                onClick={() => setSyncModalOpen(false)}
+                className="text-gray-400 hover:text-gray-600 text-2xl leading-none"
+              >
+                ×
+              </button>
+            </div>
+            
+            {/* Modal Content */}
+            <div className="flex-1 overflow-y-auto p-6">
+              {syncLoading ? (
+                <div className="text-center py-12">
+                  <div className="text-lg text-gray-600">Loading series members...</div>
+                </div>
+              ) : syncSeriesMembers.length === 0 ? (
+                <div className="text-center py-12 text-gray-500">
+                  No series members found.
+                </div>
+              ) : (
+                <>
+                  <p className="text-sm text-gray-600 mb-4">
+                    This image appears in <strong>{syncSeriesMembers.length}</strong> galleries. 
+                    Select the <strong>master</strong> version to copy its metadata to all others.
+                  </p>
+                  
+                  {/* Full Data Replacement Info */}
+                  <div className="mb-6 p-4 bg-gray-50 rounded-lg border">
+                    <div className="text-sm font-medium text-gray-700 mb-1">Full data replacement:</div>
+                    <div className="text-xs text-gray-500">
+                      All metadata fields will be copied: title, alt, description, story, keywords, rating, and contentSource.
+                    </div>
+                  </div>
+                  
+                  {/* Series Members Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {syncSeriesMembers.map((member) => {
+                      const isMaster = syncMasterId === member.key;
+                      const imgUrl = member.src?.startsWith("http") 
+                        ? member.src 
+                        : member.src 
+                          ? `https://photos.smugmug.com${member.src}` 
+                          : "";
+                      
+                      // Extract gallery name from path
+                      const pathParts = member.galleryPath.split("/");
+                      const galleryName = pathParts[pathParts.length - 1]?.replace(".mjs", "") || "Gallery";
+                      const parentName = pathParts[pathParts.length - 2] || "";
+                      const displayName = parentName ? `${parentName} / ${galleryName}` : galleryName;
+                      
+                      return (
+                        <div
+                          key={member.key}
+                          onClick={() => setSyncMasterId(member.key)}
+                          className={`
+                            relative p-4 rounded-lg border-2 cursor-pointer transition-all
+                            ${isMaster 
+                              ? "border-blue-500 bg-blue-50 ring-2 ring-blue-200" 
+                              : "border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50"}
+                          `}
+                        >
+                          {/* Master Badge */}
+                          {isMaster && (
+                            <div className="absolute top-2 right-2 px-2 py-0.5 bg-blue-600 text-white text-xs font-medium rounded-full">
+                              MASTER
+                            </div>
+                          )}
+                          
+                          <div className="flex gap-3">
+                            {/* Thumbnail */}
+                            <div className="w-20 h-20 flex-shrink-0 rounded overflow-hidden bg-gray-100">
+                              {imgUrl && (
+                                <img 
+                                  src={imgUrl} 
+                                  alt="" 
+                                  className="w-full h-full object-cover"
+                                  onError={(e) => e.target.style.display = "none"}
+                                />
+                              )}
+                            </div>
+                            
+                            {/* Info */}
+                            <div className="flex-1 min-w-0">
+                              <div className="font-medium text-gray-800 truncate" title={member.data?.title}>
+                                {member.data?.title || "Untitled"}
+                              </div>
+                              <div className="text-xs text-gray-500 mt-0.5 truncate" title={displayName}>
+                                {displayName.replace(/-/g, " ")}
+                              </div>
+                              <div className="text-xs text-gray-400 mt-1 truncate">
+                                {member.imageId}
+                              </div>
+                              {/* Preview of content */}
+                              {member.data?.description && (
+                                <div className="text-xs text-gray-500 mt-1 line-clamp-2">
+                                  {member.data.description.substring(0, 80)}...
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                          
+                          {/* Radio indicator */}
+                          <div className="absolute bottom-2 left-2">
+                            <div className={`
+                              w-5 h-5 rounded-full border-2 flex items-center justify-center
+                              ${isMaster ? "border-blue-600 bg-blue-600" : "border-gray-300 bg-white"}
+                            `}>
+                              {isMaster && (
+                                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                </svg>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </>
+              )}
+            </div>
+            
+            {/* Modal Footer */}
+            <div className="px-6 py-4 border-t border-gray-200 bg-gray-50 flex items-center justify-between">
+              <div className="text-sm text-gray-500">
+                {syncMasterId && syncSeriesMembers.length > 1 && (
+                  <>Sync will copy from master to <strong>{syncSeriesMembers.length - 1}</strong> other galleries</>
+                )}
+              </div>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setSyncModalOpen(false)}
+                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={executeSyncMetadata}
+                  disabled={!syncMasterId || syncLoading}
+                  className={`
+                    px-5 py-2 text-sm font-medium text-white rounded-lg
+                    ${!syncMasterId || syncLoading
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-blue-600 hover:bg-blue-700"}
+                  `}
+                >
+                  {syncLoading ? "Syncing..." : "Sync Metadata"}
+                </button>
+              </div>
             </div>
           </div>
         </div>

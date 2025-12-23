@@ -20,7 +20,7 @@ export const entranceData = {
     Available on fine art paper, wood panels, acrylic, and metal.
   `,
   image: {
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits/Color/i-XXXXXXX/3/XXXXXX/XL/native-american-preview-XL.jpg", // Replace with actual image ID or path
+    src: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/i-6NQ6hQZ", // Replace with actual image ID or path
     alt: "Painterly color portrait of a Native American reenactor by Wayne Heim",
     caption: "\"The Storyteller\"",
   },

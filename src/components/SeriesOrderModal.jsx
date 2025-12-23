@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CircleX, Info } from "lucide-react";
-import { SERIES_DEFINITIONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig } from "../data/seriesDefinitions.js";
+import { SERIES_DEFINITIONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig, loadSeriesRegistry, getExcludeSizesFromRegistry } from "../data/seriesDefinitions.js";
 
 // Import config at build time as fallback (auto-synced, no manual copy needed)
 import pricingConfigFallback from "../data/pricingConfig.json";
@@ -62,7 +62,7 @@ async function fetchEditionState(imageId) {
 }
 
 // Build mailto link with pre-filled info
-function buildMailtoLink(image, seriesKey, seriesDef, editionNumber) {
+function buildMailtoLink(image, seriesKey, seriesDef, editionNumber, selectedSize = null, price = null) {
   const subject = encodeURIComponent(`Order Inquiry: ${image.title || "Image"} — ${seriesDef.label} Series`);
   
   let body = `Hello,\n\nI am interested in ordering:\n\n`;
@@ -70,8 +70,16 @@ function buildMailtoLink(image, seriesKey, seriesDef, editionNumber) {
   body += `Image ID: ${image.id || "N/A"}\n`;
   body += `Series: ${seriesDef.label}\n`;
   
-  if (seriesDef.showEdition && editionNumber) {
-    body += `Edition: ${editionNumber} of ${seriesDef.editionLimit}\n`;
+  if (selectedSize) {
+    body += `Size: ${selectedSize}`;
+    if (price) {
+      body += ` ($${price.toLocaleString()})`;
+    }
+    body += `\n`;
+  }
+  
+  if (seriesDef.showEdition && editionNumber !== undefined) {
+    body += `Edition: ${editionNumber + 1} of ${seriesDef.editionLimit}\n`;
   }
   
   body += `\nPlease provide ordering information.\n\n`;
@@ -90,6 +98,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
   const [descriptions, setDescriptions] = useState(null);
   const [cardCopy, setCardCopy] = useState(null);
   const [infoCopy, setInfoCopy] = useState(null);
+  const [seriesRegistry, setSeriesRegistry] = useState(null);
   const [loading, setLoading] = useState(false);
   const [activeInfo, setActiveInfo] = useState(null); // Which series info overlay is open
 
@@ -101,12 +110,14 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
       Promise.all([
         fetchEditionState(image.id),
         fetchPricingConfig(),
-      ]).then(([states, config]) => {
+        loadSeriesRegistry(),
+      ]).then(([states, config, registry]) => {
         setEditionStates(states);
         setPricingData(config.pricing);
         setDescriptions(config.descriptions);
         setCardCopy(config.cardCopy);
         setInfoCopy(config.infoCopy);
+        setSeriesRegistry(registry);
         setLoading(false);
       });
     }
@@ -114,7 +125,8 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
 
   if (!isOpen || !image) return null;
 
-  const effectiveSeries = getEffectiveSeries(image);
+  const effectiveSeries = getEffectiveSeries(image, seriesRegistry);
+  const excludeSizes = getExcludeSizesFromRegistry(image?.id, seriesRegistry);
 
   // Filter to only series we have definitions for, then sort by sortOrder
   const displaySeries = effectiveSeries
@@ -181,7 +193,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
 
                 const editionState = editionStates[seriesKey];
                 const editionNumber = editionState?.sold ?? 0;
-                const pricingList = getSeriesPricingList(seriesKey, pricingData);
+                const pricingList = getSeriesPricingList(seriesKey, pricingData, excludeSizes);
 
                 // Progressive shades - Sketch is light green (different medium), then tan progression
                 const bgColors = {
@@ -222,79 +234,121 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
                       {cardCopy?.[seriesKey] || pricingConfigFallback.cardCopy?.[seriesKey] || descriptions?.[seriesKey] || def.description}
                     </p>
 
-                    {/* Pricing list (stacked format) */}
-                    <div className="text-sm mb-2 ml-1">
-                      {pricingList ? (
-                        <ul className="space-y-1">
-                          {pricingList.map(({ size, price }) => (
-                            <li key={size} className="flex items-center gap-1.5">
-                              <span className="text-gray-400">•</span>
-                              <span className="text-gray-700">{size}: ${price.toLocaleString()}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <p className="italic text-gray-600">Pricing: Call</p>
-                      )}
-                    </div>
+                    {/* For SmugMug fulfillment: show pricing list then order button */}
+                    {def.fulfillment === "smugmug" && (
+                      <>
+                        {/* Pricing list (stacked format) */}
+                        <div className="text-sm mb-2 ml-1">
+                          {pricingList ? (
+                            <ul className="space-y-1">
+                              {pricingList.map(({ size, price }) => (
+                                <li key={size} className="flex items-center gap-1.5">
+                                  <span className="text-gray-400">•</span>
+                                  <span className="text-gray-700">{size}: ${price.toLocaleString()}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <p className="italic text-gray-600">Pricing: Call</p>
+                          )}
+                        </div>
 
-                    {/* Order Button */}
-                    {def.fulfillment === "smugmug" ? (
-                      <a
-                        href={image.buyLink || "#"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block w-full text-center px-3 py-1.5 text-white rounded text-sm transition-all font-medium"
-                        style={{
-                          background: "linear-gradient(to bottom, #f59e0b 0%, #d97706 100%)",
-                          boxShadow: "0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3)",
-                          border: "1px solid #b45309",
-                          textShadow: "0 1px 1px rgba(0,0,0,0.2)",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = "linear-gradient(to bottom, #d97706 0%, #b45309 100%)";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = "linear-gradient(to bottom, #f59e0b 0%, #d97706 100%)";
-                        }}
-                        onClick={() => {
-                          logUIEvent?.("series_order_click", {
-                            page: window.location.pathname,
-                            imageId: image.id,
-                            series: seriesKey,
-                            fulfillment: "smugmug",
-                          });
-                        }}
-                      >
-                        {def.buttonLabel}
-                      </a>
-                    ) : (
-                      <a
-                        href={buildMailtoLink(image, seriesKey, def, editionNumber)}
-                        className="inline-block w-full text-center px-3 py-1.5 text-white rounded text-sm transition-all font-medium"
-                        style={{
-                          background: "linear-gradient(to bottom, #64748b 0%, #516474ff 100%)",
-                          boxShadow: "0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3)",
-                          border: "1px solid #334155",
-                          textShadow: "0 1px 1px rgba(0,0,0,0.2)",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = "linear-gradient(to bottom, #475569 0%, #334155 100%)";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = "linear-gradient(to bottom, #64748b 0%, #475569 100%)";
-                        }}
-                        onClick={() => {
-                          logUIEvent?.("series_order_click", {
-                            page: window.location.pathname,
-                            imageId: image.id,
-                            series: seriesKey,
-                            fulfillment: "contact",
-                          });
-                        }}
-                      >
-                        {def.buttonLabel}
-                      </a>
+                        {/* Order Button */}
+                        <a
+                          href={image.buyLink || "#"}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block w-full text-center px-3 py-1.5 text-white rounded text-sm transition-all font-medium"
+                          style={{
+                            background: "linear-gradient(to bottom, #f59e0b 0%, #d97706 100%)",
+                            boxShadow: "0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3)",
+                            border: "1px solid #b45309",
+                            textShadow: "0 1px 1px rgba(0,0,0,0.2)",
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.background = "linear-gradient(to bottom, #d97706 0%, #b45309 100%)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.background = "linear-gradient(to bottom, #f59e0b 0%, #d97706 100%)";
+                          }}
+                          onClick={() => {
+                            logUIEvent?.("series_order_click", {
+                              page: window.location.pathname,
+                              imageId: image.id,
+                              series: seriesKey,
+                              fulfillment: "smugmug",
+                            });
+                          }}
+                        >
+                          {def.buttonLabel}
+                        </a>
+                      </>
+                    )}
+
+                    {/* For contact fulfillment: show clickable size buttons that open mailto */}
+                    {def.fulfillment === "contact" && (
+                      <div className="space-y-1.5">
+                        {pricingList && pricingList.length > 0 ? (
+                          pricingList.map(({ size, price }) => (
+                            <a
+                              key={size}
+                              href={buildMailtoLink(image, seriesKey, def, editionNumber, size, price)}
+                              className="flex items-center justify-between w-full px-3 py-2 text-white rounded text-sm transition-all font-medium"
+                              style={{
+                                background: "linear-gradient(to bottom, #64748b 0%, #516474ff 100%)",
+                                boxShadow: "0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3)",
+                                border: "1px solid #334155",
+                                textShadow: "0 1px 1px rgba(0,0,0,0.2)",
+                              }}
+                              onMouseEnter={(e) => {
+                                e.currentTarget.style.background = "linear-gradient(to bottom, #475569 0%, #334155 100%)";
+                              }}
+                              onMouseLeave={(e) => {
+                                e.currentTarget.style.background = "linear-gradient(to bottom, #64748b 0%, #475469 100%)";
+                              }}
+                              onClick={() => {
+                                logUIEvent?.("series_order_click", {
+                                  page: window.location.pathname,
+                                  imageId: image.id,
+                                  series: seriesKey,
+                                  size: size,
+                                  price: price,
+                                  fulfillment: "contact",
+                                });
+                              }}
+                            >
+                              <span>{size}: ${price.toLocaleString()}</span>
+                            </a>
+                          ))
+                        ) : (
+                          <a
+                            href={buildMailtoLink(image, seriesKey, def, editionNumber)}
+                            className="inline-block w-full text-center px-3 py-1.5 text-white rounded text-sm transition-all font-medium"
+                            style={{
+                              background: "linear-gradient(to bottom, #64748b 0%, #516474ff 100%)",
+                              boxShadow: "0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3)",
+                              border: "1px solid #334155",
+                              textShadow: "0 1px 1px rgba(0,0,0,0.2)",
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.background = "linear-gradient(to bottom, #475569 0%, #334155 100%)";
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.background = "linear-gradient(to bottom, #64748b 0%, #475469 100%)";
+                            }}
+                            onClick={() => {
+                              logUIEvent?.("series_order_click", {
+                                page: window.location.pathname,
+                                imageId: image.id,
+                                series: seriesKey,
+                                fulfillment: "contact",
+                              });
+                            }}
+                          >
+                            {def.buttonLabel}
+                          </a>
+                        )}
+                      </div>
                     )}
                   </div>
                 );

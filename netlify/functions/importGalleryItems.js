@@ -47,7 +47,7 @@ function normalizeItem(raw) {
   if (typeof raw.sortOrder === "number") out.sortOrder = raw.sortOrder;
   if (raw.themes && typeof raw.themes === "object") out.themes = raw.themes;
   if (raw.contentSource != null) out.contentSource = raw.contentSource;
-  if (Array.isArray(raw.availableSeries) && raw.availableSeries.length > 0) out.availableSeries = raw.availableSeries;
+  // NOTE: availableSeries is NOT stored in .mjs files - it's stored only in seriesRegistry.json
   if (raw.noSketch === true) out.noSketch = true;
   return out;
 }
@@ -97,17 +97,14 @@ exports.handler = async (event) => {
     if (!Array.isArray(toArr)) return { statusCode: 400, body: "Failed to parse target galleryData" };
     
     // ========== PRESERVE DATA FROM EXISTING TARGET FILE ==========
-    // Build maps of existing themes, series, noSketch by id before we modify anything
+    // Build maps of existing themes, noSketch by id before we modify anything
+    // NOTE: availableSeries is stored in seriesRegistry.json, NOT in .mjs files
     const existingThemesById = new Map();
-    const existingSeriesById = new Map();
     const existingNoSketchById = new Map();
     for (const item of toArr) {
       if (item && item.id) {
         if (item.themes && typeof item.themes === "object") {
           existingThemesById.set(item.id, item.themes);
-        }
-        if (Array.isArray(item.availableSeries) && item.availableSeries.length > 0) {
-          existingSeriesById.set(item.id, item.availableSeries);
         }
         if (item.noSketch === true) {
           existingNoSketchById.set(item.id, true);
@@ -120,7 +117,8 @@ exports.handler = async (event) => {
     let toVis    = toArr.filter(isReal);
     
     // ========== SMART MERGE DATA FOR EXISTING ITEMS ==========
-    // Combine existing themes/series/noSketch with any incoming data
+    // Combine existing themes/noSketch with any incoming data
+    // NOTE: availableSeries is stored in seriesRegistry.json, NOT in .mjs files
     toVis = toVis.map((item) => {
       if (!item || !item.id) return item;
       
@@ -142,13 +140,6 @@ exports.handler = async (event) => {
         mergedThemes = incomingThemes;
       }
       
-      // --- AVAILABLE SERIES ---
-      const existingSeries = existingSeriesById.get(item.id);
-      const incomingSeries = Array.isArray(item.availableSeries) && item.availableSeries.length > 0 
-        ? item.availableSeries 
-        : null;
-      const mergedSeries = incomingSeries || existingSeries || null;
-      
       // --- NO SKETCH ---
       const existingNoSketch = existingNoSketchById.get(item.id);
       const mergedNoSketch = item.noSketch === true ? true : (existingNoSketch === true ? true : undefined);
@@ -157,9 +148,6 @@ exports.handler = async (event) => {
       const result = { ...item };
       if (mergedThemes && Object.keys(mergedThemes).length > 0) {
         result.themes = mergedThemes;
-      }
-      if (mergedSeries) {
-        result.availableSeries = mergedSeries;
       }
       if (mergedNoSketch) {
         result.noSketch = true;

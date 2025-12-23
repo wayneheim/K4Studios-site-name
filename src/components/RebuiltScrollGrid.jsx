@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries } from "../data/seriesDefinitions.js";
+import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, loadSeriesRegistry } from "../data/seriesDefinitions.js";
 
 const BATCH_SIZES = { 1: 25, 2: 24, 3: 30 };
 
@@ -38,7 +38,13 @@ export default function RebuiltScrollGrid({
   const [anchorOnNextUpdate, setAnchorOnNextUpdate] = useState(true);
   const [pendingPrepend, setPendingPrepend] = useState(false);
   const [headingHover, setHeadingHover] = useState(false);
+  const [seriesRegistry, setSeriesRegistry] = useState(null);
   const rowRefs = useRef({});
+
+  // Load series registry on mount
+  useEffect(() => {
+    loadSeriesRegistry().then(setSeriesRegistry);
+  }, []);
 
   // Prefer a smaller image in the grid for speed; fall back to larger if needed.
   const getPreferredSrc = (entry, cols) => {
@@ -320,7 +326,7 @@ export default function RebuiltScrollGrid({
               >
                 {/* Series Icons Row */}
                 {(() => {
-                  const effectiveSeries = getEffectiveSeries(entry);
+                  const effectiveSeries = getEffectiveSeries(entry, seriesRegistry);
                   const displaySeries = effectiveSeries
                     .filter(s => SERIES_DEFINITIONS[s] && s !== "engrained")
                     .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));

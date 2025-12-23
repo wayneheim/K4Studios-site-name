@@ -71,15 +71,21 @@ export function formatPrice(amount) {
 
 // Get pricing entries as array of {size, price} for a series
 // Returns null if no pricing available (display "Call")
-export function getSeriesPricingList(seriesKey, pricingData) {
+// If excludeSizes is provided, filters out excluded sizes for that series
+export function getSeriesPricingList(seriesKey, pricingData, excludeSizes = null) {
   const pricing = pricingData?.[seriesKey];
   if (!pricing || Object.keys(pricing).length === 0) return null;
   
-  return Object.entries(pricing).map(([size, price]) => ({
-    size,
-    price,
-    display: `${size}: $${price.toLocaleString()}`,
-  }));
+  // Get excluded sizes for this series (if any)
+  const excluded = excludeSizes?.[seriesKey] || [];
+  
+  return Object.entries(pricing)
+    .filter(([size]) => !excluded.includes(size))
+    .map(([size, price]) => ({
+      size,
+      price,
+      display: `${size}: $${price.toLocaleString()}`,
+    }));
 }
 
 // Fetch runtime config (pricing + all copy) from server or static fallback
@@ -124,12 +130,87 @@ export async function fetchPricingConfig() {
   return { pricing: null, descriptions: null, cardCopy: null, infoCopy: null };
 }
 
+// ========== SERIES REGISTRY ==========
+// Chronicle/Legend assignments are stored in seriesRegistry.json, not in .mjs image files.
+// This cache is loaded once and used to enrich image data with series info.
+
+let registryCache = null;
+let registryLoadPromise = null;
+
+// Load series registry (cached)
+export async function loadSeriesRegistry() {
+  if (registryCache) return registryCache;
+  if (registryLoadPromise) return registryLoadPromise;
+  
+  registryLoadPromise = (async () => {
+    try {
+      const res = await fetch("/data/seriesRegistry.json", { cache: "no-store" });
+      if (res.ok) {
+        registryCache = await res.json();
+        return registryCache;
+      }
+    } catch (err) {
+      console.warn("[seriesDefinitions] Failed to load series registry:", err.message);
+    }
+    // Return empty registry on failure
+    registryCache = { images: {}, series: {} };
+    return registryCache;
+  })();
+  
+  return registryLoadPromise;
+}
+
+// Get series ID for an image from the registry
+// Registry v2.0 uses composite keys (imageId:galleryPath), so we search for matching prefix
+function getSeriesIdFromRegistry(imageId, registry = registryCache) {
+  if (!registry || !imageId) return null;
+  
+  // First try direct lookup (old format)
+  let seriesId = registry.images?.[imageId];
+  
+  // If not found, search for composite keys that start with this imageId
+  if (!seriesId && registry.images) {
+    for (const [key, sId] of Object.entries(registry.images)) {
+      if (key.startsWith(imageId + ":")) {
+        seriesId = sId;
+        break;
+      }
+    }
+  }
+  
+  return seriesId;
+}
+
+// Get series tiers for an image ID from the registry
+export function getSeriesTiersFromRegistry(imageId, registry = registryCache) {
+  const seriesId = getSeriesIdFromRegistry(imageId, registry);
+  if (!seriesId) return [];
+  const series = registry.series?.[seriesId];
+  return series?.tiers || [];
+}
+
+// Get excludeSizes for an image ID from the registry
+// Returns an object like { "foundation": ["11\" x 14\""], "chronicle": [] }
+export function getExcludeSizesFromRegistry(imageId, registry = registryCache) {
+  const seriesId = getSeriesIdFromRegistry(imageId, registry);
+  if (!seriesId) return {};
+  const series = registry.series?.[seriesId];
+  return series?.excludeSizes || {};
+}
+
 // Helper to get effective series for an image (includes sketch by default)
-export function getEffectiveSeries(image) {
-  const series = image?.availableSeries ? [...image.availableSeries] : [];
+// Now reads from seriesRegistry instead of image.availableSeries
+export function getEffectiveSeries(image, registry = registryCache) {
+  // Get tiers from registry first, fall back to image.availableSeries for backward compat
+  let series = getSeriesTiersFromRegistry(image?.id, registry);
+  if (series.length === 0 && image?.availableSeries) {
+    // Backward compatibility: if not in registry, check image property
+    series = [...image.availableSeries];
+  }
+  
   // Sketch is ALWAYS included unless explicitly suppressed
   if (!image?.noSketch && !series.includes("sketch")) {
-    series.unshift("sketch");
+    series = ["sketch", ...series];
   }
   // Filter out engrained — it has its own modal
   return series.filter(s => s !== "engrained");

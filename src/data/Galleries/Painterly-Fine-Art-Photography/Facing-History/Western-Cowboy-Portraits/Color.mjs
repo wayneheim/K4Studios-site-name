@@ -63,11 +63,7 @@ export const galleryData = [
       "sketches-of-legends": 0,
       "whispering-reflection": 2
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-RsLmsLZ",
     "title": "Cowboy Art In Fine Art",
@@ -95,11 +91,7 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 1,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-LCspRF4",
     "title": "Day in Review",
@@ -141,11 +133,7 @@ export const galleryData = [
       "firelight-shadow": 21,
       "whispering-reflection": 25
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-B7ZSdfs",
     "title": "Till Death Do Us Part",
@@ -184,11 +172,7 @@ export const galleryData = [
       "love-goodbye": 0,
       "whispering-reflection": 0
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-44jcjTQ",
     "title": "Over My Dead Body: Frontier Stand-off ",
@@ -237,12 +221,7 @@ export const galleryData = [
       "sketches-of-legends": 1,
       "whispering-reflection": 1
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle",
-      "legend"
-    ]
-  },
+},
   {
     "id": "i-Sc9hZGs",
     "title": "Change of Plans",
@@ -279,11 +258,7 @@ export const galleryData = [
     "themes": {
       "law-outlaws": 82
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-4zxZQQ2",
     "title": "Heading Home",
@@ -319,11 +294,7 @@ export const galleryData = [
       "cowboys-and-horses": 1,
       "frontier-women": 1
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-r5Pb7zJ",
     "title": "Signs",
@@ -381,11 +352,7 @@ export const galleryData = [
       "law-outlaws": 7,
       "whispering-reflection": 13
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-NdQnj6P",
     "title": "The Slow Breath of Evening",
@@ -419,11 +386,7 @@ export const galleryData = [
       "firelight-shadow": 4,
       "whispering-reflection": 6
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-kQfftQ2",
     "title": "Pinkerton's Grasp",
@@ -458,11 +421,7 @@ export const galleryData = [
     "themes": {
       "law-outlaws": 83
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-JkFT62C",
     "title": "Long Night",
@@ -500,11 +459,7 @@ export const galleryData = [
       "love-goodbye": 56,
       "whispering-reflection": 106
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Nn7scqm",
     "title": "Do you HEAR me now?!",
@@ -540,11 +495,7 @@ export const galleryData = [
       "women-of-the-west": 6,
       "frontier-women": 7
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-9BhX2Lj",
     "title": "Lenore",
@@ -594,11 +545,7 @@ export const galleryData = [
       "firelight-shadow": 80,
       "law-outlaws": 85
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-NxjDRLV",
     "title": "No coyotes, just a snake!",
@@ -636,10 +583,7 @@ export const galleryData = [
       "women-of-the-west": 56,
       "frontier-women": 100
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-46kWCqc",
     "title": "No Looking Back",
@@ -679,10 +623,7 @@ export const galleryData = [
       "sketches-of-legends": 7,
       "whispering-reflection": 9
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-9wQL5tH",
     "title": "A is for the Aftermath",
@@ -728,10 +669,7 @@ export const galleryData = [
       "love-goodbye": 54,
       "whispering-reflection": 104
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-4XLSsnC",
     "title": "The Essence Of Outlaw Portraits",
@@ -767,11 +705,7 @@ export const galleryData = [
       "cowboys-and-horses": 79,
       "dust-thunder": 3
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-7Mzzbvp",
     "title": "Last Hand",
@@ -802,11 +736,7 @@ export const galleryData = [
       "cowboys-and-horses": 0,
       "dust-thunder": 2
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-rfFBRQM",
     "title": "Untimely Parting",
@@ -848,11 +778,7 @@ export const galleryData = [
       "love-goodbye": 4,
       "whispering-reflection": 11
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-MMmDhV2",
     "title": "Morning Oath of the Trail",
@@ -883,11 +809,7 @@ export const galleryData = [
     "galleries": [],
     "visibility": "",
     "sortOrder": 19,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-5Md3dQ3",
     "title": "\"It's just a one day ride to Spearfish. What could possibly go wrong?\"",
@@ -926,10 +848,7 @@ export const galleryData = [
       "hardship-sorrow": 3,
       "love-goodbye": 3
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-bq4FKvX",
     "title": "End of His Rope",
@@ -964,11 +883,7 @@ export const galleryData = [
       "sketches-of-legends": 2,
       "whispering-reflection": 4
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-X4SH26N",
     "title": "Capturing Cowboy Art",
@@ -1005,10 +920,7 @@ export const galleryData = [
       "love-goodbye": 50,
       "whispering-reflection": 99
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-NDnxRkx",
     "title": "Exploring Outlaw Portraits",
@@ -1052,10 +964,7 @@ export const galleryData = [
       "love-goodbye": 51,
       "sketches-of-legends": 132
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-dsqgfVj",
     "title": "Driven by Dust and Duty",
@@ -1092,11 +1001,7 @@ export const galleryData = [
       "law-outlaws": 5,
       "sketches-of-legends": 8
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-5VZVzTR",
     "title": "Good Riders, Good Company",
@@ -1131,11 +1036,7 @@ export const galleryData = [
       "cowboys-and-horses": 2,
       "law-outlaws": 2
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-f4MSxpP",
     "title": "Through the Water and the Dawn",
@@ -1170,11 +1071,7 @@ export const galleryData = [
       "cowboys-and-horses": 3,
       "law-outlaws": 1
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-VVwZ7gM",
     "title": "Brothers of the Open Country",
@@ -1204,11 +1101,7 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 27,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Wx5scCf",
     "title": "Shadows on the Ridge",
@@ -1242,11 +1135,7 @@ export const galleryData = [
     "themes": {
       "dust-thunder": 5
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-cV5gwWZ",
     "title": "Final Deposit",
@@ -1294,10 +1183,7 @@ export const galleryData = [
       "dust-thunder": 6,
       "frontier-women": 34
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-DczpNpH",
     "title": "If You Want a Job Done Right…",
@@ -1336,10 +1222,7 @@ export const galleryData = [
       "law-outlaws": 3,
       "sketches-of-legends": 4
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-5TtHV8g",
     "title": "Counting Cards",
@@ -1379,10 +1262,7 @@ export const galleryData = [
       "law-outlaws": 4,
       "sketches-of-legends": 3
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-bfKMXS9",
     "title": "Three Wise Men",
@@ -1442,12 +1322,7 @@ export const galleryData = [
     "themes": {
       "law-outlaws": 10
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle",
-      "legend"
-    ]
-  },
+},
   {
     "id": "i-3SxncXS",
     "title": "The Keeper of Old Winds",
@@ -1481,10 +1356,7 @@ export const galleryData = [
       "sketches-of-legends": 5,
       "whispering-reflection": 7
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-bFwNMZK",
     "title": "Marshal",
@@ -1519,10 +1391,7 @@ export const galleryData = [
       "law-outlaws": 84,
       "sketches-of-legends": 134
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-tBPfdxS",
     "title": "Reading the Room",
@@ -1560,10 +1429,7 @@ export const galleryData = [
       "sketches-of-legends": 135,
       "whispering-reflection": 107
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-HBRmWg4",
     "title": "Cough and Covenant",
@@ -1600,11 +1466,7 @@ export const galleryData = [
       "hardship-sorrow": 8,
       "whispering-reflection": 18
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-qB47jJT",
     "title": "A Quiet Understanding",
@@ -1640,10 +1502,7 @@ export const galleryData = [
       "love-goodbye": 5,
       "whispering-reflection": 12
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-gxMVNh3",
     "title": "Tumbleweed Whispers",
@@ -1684,11 +1543,7 @@ export const galleryData = [
       "love-goodbye": 1,
       "whispering-reflection": 5
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-QWcX7JT",
     "title": "Eye Bound Promise",
@@ -1728,10 +1583,7 @@ export const galleryData = [
       "sketches-of-legends": 133,
       "whispering-reflection": 103
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-c98L2bs",
     "title": "Fading Memories",
@@ -1775,10 +1627,7 @@ export const galleryData = [
       "love-goodbye": 53,
       "whispering-reflection": 100
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-rhvQkwh",
     "title": "Tying up Some Loose Ends",
@@ -1838,11 +1687,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 18
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-zHvS5jz",
     "title": "Where the Herd Finds Water",
@@ -1876,11 +1721,7 @@ export const galleryData = [
       "cowboys-and-horses": 7,
       "whispering-reflection": 10
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-CD6rgtF",
     "title": "High Ground Justice",
@@ -1921,11 +1762,7 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 43,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-5rq7gcD",
     "title": "Let No Man Put Asunder",
@@ -1968,10 +1805,7 @@ export const galleryData = [
       "frontier-women": 10,
       "love-goodbye": 6
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Vr8vzjt",
     "title": "This Is Where I Stand",
@@ -2004,10 +1838,7 @@ export const galleryData = [
       "firelight-shadow": 12,
       "frontier-women": 13
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-TwKFdjR",
     "title": "Holding the Line",
@@ -2039,10 +1870,7 @@ export const galleryData = [
     "themes": {
       "law-outlaws": 9
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-MHGPvcs",
     "title": "$3 for a whiskey?",
@@ -2083,11 +1911,7 @@ export const galleryData = [
       "law-outlaws": 12,
       "sketches-of-legends": 11
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-6xn5rMd",
     "title": "Carved in Stone",
@@ -2123,10 +1947,7 @@ export const galleryData = [
       "sketches-of-legends": 10,
       "whispering-reflection": 14
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-fCG2nm8",
     "title": "Three Amigos: Western Cowboy Conference",
@@ -2164,11 +1985,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 49,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-5TGTZ9P",
     "title": "One Clean Shot",
@@ -2201,11 +2018,7 @@ export const galleryData = [
       "cowboys-with-horses": 8,
       "cowboys-and-horses": 10
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-n5BfXBm",
     "title": "10 O’Clock Staging ",
@@ -2245,10 +2058,7 @@ export const galleryData = [
       "cowboys-with-horses": 7,
       "cowboys-and-horses": 11
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-trZrk2w",
     "title": "Night Raid",
@@ -2274,7 +2084,7 @@ export const galleryData = [
     ],
     "story": "Shadows slip across stone. Who will blink first—the men or the night? One ear to the dark, one eye on the sky. Quiet breath, steady hands—tonight, the West holds its secrets close.",
     "notes": "This piece captures not just the figures, but the tension between anticipation and action—the upward glance, the grip on leather and rifle, the silent agreement between men on the edge of danger. It’s a scene that would be at home in the pages of a Howard novel or on the walls of a serious Western art collection. The painterly finish and sculpted light echo traditions, yet there’s a cinematic weight here—a sense that something is about to happen just outside the frame. The details—the dust, the weathered gear, the lookouts’ wary posture—invite collectors to tell their own story, making this piece more than just wall art; it’s a living slice of the American West.",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 52,
@@ -2282,11 +2092,7 @@ export const galleryData = [
       "firelight-shadow": 8,
       "law-outlaws": 8
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-7mFGRtw",
     "title": "The Bill Comes Due",
@@ -2320,11 +2126,7 @@ export const galleryData = [
       "firelight-shadow": 9,
       "law-outlaws": 11
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-fM9qmKW",
     "title": "Just a Sip to Settle My Nerves",
@@ -2369,11 +2171,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 11,
       "sketches-of-legends": 12
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-BGmFfF5",
     "title": "Western Cowboy Art Study",
@@ -2400,7 +2198,7 @@ export const galleryData = [
     ],
     "story": "This image embodies powerful works of art and cowboy portraits, captured by Wayne Heim in his signature style. It reflects cowboy painting art with a touch of historic western prints. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 55,
@@ -2409,11 +2207,7 @@ export const galleryData = [
       "law-outlaws": 86,
       "whispering-reflection": 109
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-7VWX9vk",
     "title": "One Way Out",
@@ -2446,11 +2240,7 @@ export const galleryData = [
       "cowboys-and-horses": 6,
       "firelight-shadow": 10
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-ShhCNkX",
     "title": "Miles to Go",
@@ -2488,10 +2278,7 @@ export const galleryData = [
     "themes": {
       "cowboys-and-horses": 12
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-c3vWMgt",
     "title": "Able Reckoning — The Instant of Consequence",
@@ -2532,10 +2319,7 @@ export const galleryData = [
     "themes": {
       "dust-thunder": 1
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-xqZwcZh",
     "title": "Righteous Pursuit",
@@ -2581,11 +2365,7 @@ export const galleryData = [
       "law-outlaws": 13,
       "sketches-of-legends": 14
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-4bn8bBz",
     "title": "Capturing Frontier Life",
@@ -2611,7 +2391,7 @@ export const galleryData = [
     ],
     "story": "This image embodies western art and cowboy artwork, captured by Wayne Heim in his signature style. It reflects frontier life with a touch of western fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 60,
@@ -2619,11 +2399,7 @@ export const galleryData = [
       "cowboys-and-horses": 80,
       "dust-thunder": 11
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-QB4jLsH",
     "title": "Hell or High Water",
@@ -2661,11 +2437,7 @@ export const galleryData = [
       "dust-thunder": 8,
       "law-outlaws": 15
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-c5K798H",
     "title": "Meant What I Said!",
@@ -2697,7 +2469,7 @@ export const galleryData = [
     ],
     "story": "What’d I say about you and your mouth? I told you—I meant what I said when I said it. Time for words and talking is over. Thinking now you might be better at bleeding than listening. Reckon we ought to find out?",
     "notes": "“Meant What I Said!” is all about Western attitude—coiled tension, sunlit drama, and the weight of a promise made face-to-face. The painterly detail and dynamic composition recall classic film and iconic Western paintings, making this piece a standout for collectors who appreciate stories told without a word.",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 62,
@@ -2706,12 +2478,7 @@ export const galleryData = [
       "law-outlaws": 14,
       "sketches-of-legends": 13
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle",
-      "legend"
-    ]
-  },
+},
   {
     "id": "i-k4b6c5b",
     "title": "What Remains",
@@ -2747,11 +2514,7 @@ export const galleryData = [
       "sketches-of-legends": 17,
       "whispering-reflection": 15
     },
-    "availableSeries": [
-      "chronicle",
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-MvZxkQh",
     "title": "Keeper of the High Country",
@@ -2783,10 +2546,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 9
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-WxQjxQS",
     "title": "What Remains",
@@ -2818,11 +2578,7 @@ export const galleryData = [
       "firelight-shadow": 19,
       "whispering-reflection": 23
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-hrmrhT3",
     "title": "Interruption",
@@ -2857,11 +2613,7 @@ export const galleryData = [
       "firelight-shadow": 15,
       "whispering-reflection": 17
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-VDLVwqr",
     "title": "Strange Bedfellows",
@@ -2907,11 +2659,7 @@ export const galleryData = [
       "love-goodbye": 7,
       "whispering-reflection": 16
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Rx5gLJz",
     "title": "Smoke and Consequence",
@@ -2962,7 +2710,7 @@ export const galleryData = [
     ],
     "story": "Running their mouths like a mountain stream in spring.\nNight after night with these two… nothing but trouble.\n\nMartha always told me to “use my words first.”\nBut I reckon they gotta be deaf or dumb.\n\nNow the sun’s rising on a day that’s bound to go sideways.\nWhiskey, words, and lead are never a good combination.",
     "notes": "This portrait holds tension in every detail. The subject’s stance is relaxed, but his gaze isn’t. That look—quiet, calculating—delivers more narrative than any action could.\n\nHeim’s painterly technique channels the tonal control of Frank Tenney Johnson and the narrative weight of Howard Terpning, rendering not just a figure, but a moment suspended between patience and consequence.\n\nThe lighting isolates the subject without dramatization, allowing texture, expression, and posture to do the storytelling. This is Western art at its most distilled: a single character, a single breath, and everything unsaid.",
-    "rating": 3,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -2975,11 +2723,7 @@ export const galleryData = [
       "sketches-of-legends": 21,
       "whispering-reflection": 29
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-wfqSGcV",
     "title": "Inevitable",
@@ -3017,11 +2761,7 @@ export const galleryData = [
       "firelight-shadow": 13,
       "law-outlaws": 16
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-mLPgSpC",
     "title": "Up to No Good",
@@ -3083,11 +2823,7 @@ export const galleryData = [
       "firelight-shadow": 18,
       "law-outlaws": 17
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-hMXZ8Xh",
     "title": "Lord, show me a sign.",
@@ -3151,11 +2887,7 @@ export const galleryData = [
       "love-goodbye": 9,
       "whispering-reflection": 19
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-8rsG6P9",
     "title": "Every Morning",
@@ -3193,10 +2925,7 @@ export const galleryData = [
       "love-goodbye": 8,
       "whispering-reflection": 20
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-gL3Nnth",
     "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
@@ -3236,11 +2965,7 @@ export const galleryData = [
     "themes": {
       "dust-thunder": 10
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-2D49wp7",
     "title": "The Essence of Cowboy Art",
@@ -3273,10 +2998,7 @@ export const galleryData = [
       "cowboys-and-horses": 9,
       "whispering-reflection": 21
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-v4vRSb8",
     "title": "Chasing the Devil’s Tail",
@@ -3322,11 +3044,7 @@ export const galleryData = [
       "cowboys-and-horses": 18,
       "dust-thunder": 14
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-RT474Nz",
     "title": "The Long Reckoning",
@@ -3350,7 +3068,7 @@ export const galleryData = [
     ],
     "story": "The ground gives nothing for free up here.\nEvery step asks first, then decides.\n\nLet the horse settle.\nLet the hands remember what they’ve done a thousand times before.\n\nNo hurry.\nThe sky isn’t in a rush either.\n\nIf there’s a way through, it won’t announce itself.\nIt never does.\n\nSo we wait.\nMeasure.\nChoose which weight to carry forward—and which to leave among the rocks.",
     "notes": "This piece captures the Western moment before action—the pause where experience outweighs impulse. Heim’s composition emphasizes weight, terrain, and posture, inviting the viewer into a narrative shaped by judgment rather than drama. A contemplative work suited for collectors drawn to psychological depth and lived authenticity in Western art.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 76,
@@ -3358,11 +3076,7 @@ export const galleryData = [
       "cowboys-and-horses": 13,
       "whispering-reflection": 22
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-pNSX6cp",
     "title": "Hired Gun",
@@ -3413,7 +3127,7 @@ export const galleryData = [
     ],
     "story": "Security my ass. Call it what you will. We all know what we signed up for. God forgive us all. Grizzled Texas Ranger cowboy riding the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -3424,11 +3138,7 @@ export const galleryData = [
       "law-outlaws": 44,
       "sketches-of-legends": 49
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-qVZ9m7j",
     "title": "Lord Help Us All",
@@ -3489,11 +3199,7 @@ export const galleryData = [
       "law-outlaws": 18,
       "sketches-of-legends": 15
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-JKnW497",
     "title": "Wounded: Blood on the Bandolier",
@@ -3536,11 +3242,7 @@ export const galleryData = [
       "law-outlaws": 19,
       "sketches-of-legends": 16
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-KBNSftv",
     "title": "Told you to stay away from my sister!",
@@ -3584,10 +3286,7 @@ export const galleryData = [
       "law-outlaws": 24,
       "sketches-of-legends": 23
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-5HpSkgR",
     "title": "Unfinished Business",
@@ -3612,7 +3311,7 @@ export const galleryData = [
     ],
     "story": "“Think about what you’re doing, Mr. Johnson!” Where was the law when they stole my livestock — when they burned my barn? Think of MY family!\n\nNow’s the time to sort out who gets to do the taking —\nand settle the accounts for those who stayed quiet. There’s no talking me out of this. Justice? It will be had today.\n\nJustice and vengeance — that bitter pill — the only cure for this plague of silence and sin. And I bringing enough medicine to go around.",
     "notes": "This painterly color rendering shifts the emotional register from stark to simmering. Where the black-and-white version was a frozen reckoning, this one burns slow — danger wrapped in daylight. Compositionally identical, the tension still builds from the triangular structure: the lone man in the foreground, flanked by two watchful women. Their stance echoes restraint; his, resolve. The cabin, rendered in soft texture and tone, anchors the piece in time — but not in peace.\n\nColor introduces new complexity. The warmth of the palette invites the viewer closer, but the story underneath remains sharp. It’s a study in frontier morality: filtered through memory, weighted with silence. Rockwell meets Leone. This is justice, paused — not in black and white, but in the uneasy hues of consequence.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 81,
@@ -3621,10 +3320,7 @@ export const galleryData = [
       "frontier-women": 20,
       "hardship-sorrow": 2
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-CzWxpvV",
     "title": "Keeping Them Moving",
@@ -3657,11 +3353,7 @@ export const galleryData = [
       "cowboys-with-horses": 13,
       "cowboys-and-horses": 16
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-sTnckb6",
     "title": "Making Their Stand",
@@ -3724,11 +3416,7 @@ export const galleryData = [
       "dust-thunder": 12,
       "law-outlaws": 23
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-5FX3W9r",
     "title": "Morning Joe",
@@ -3788,11 +3476,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 19
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-7dCKHjg",
     "title": "Before the Wind Answers",
@@ -3828,11 +3512,7 @@ export const galleryData = [
       "love-goodbye": 12,
       "whispering-reflection": 30
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-cFhZXJc",
     "title": "Dust or Desperation ",
@@ -3873,10 +3553,7 @@ export const galleryData = [
       "love-goodbye": 10,
       "whispering-reflection": 24
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-7GcQw6R",
     "title": "Exploring Rugged Spirit",
@@ -3904,18 +3581,14 @@ export const galleryData = [
     ],
     "story": "This image embodies frederic remington and painterly cowboy portraits, captured by Wayne Heim in his signature style. It reflects western landscapes fine art with a touch of wild west photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 87,
     "themes": {
       "firelight-shadow": 67
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-mpfG8XF",
     "title": "Trail Hardened",
@@ -3980,11 +3653,7 @@ export const galleryData = [
       "love-goodbye": 11,
       "whispering-reflection": 26
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-PM4d3g3",
     "title": "Fire Side Chat",
@@ -4024,11 +3693,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 3,
       "firelight-shadow": 22
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-pXs6Fhx",
     "title": "Light Work of Things",
@@ -4067,10 +3732,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 5,
       "firelight-shadow": 77
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-gj4hHmL",
     "title": "Night Rescue",
@@ -4105,11 +3767,7 @@ export const galleryData = [
       "dust-thunder": 17,
       "firelight-shadow": 25
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-T7TFJX2",
     "title": "This Is the Hand — I Can Feel It",
@@ -4134,7 +3792,7 @@ export const galleryData = [
     ],
     "story": "It’s not over. Can’t be! Not yet.\n\nI do this and I’m back. Back in her good graces. She’ll have to.\n\nPeople forgive quick when a debt’s repaid. Even faster when there’s something else to show for it.\n\nThat business with the horse — a mistake. Nothing that can’t be smoothed over by Lady Luck.\n\nFunny how quick water can move by — once it’s got somewhere else to turn.",
     "notes": "This work explores the dangerous optimism that precedes reckoning—the belief that one decisive moment can erase accumulated debt, regret, or loss. Heim’s restrained composition and low, intimate lighting emphasize internal negotiation rather than outward drama, inviting viewers to confront the stories people tell themselves when escape still feels possible. A compelling piece for collectors drawn to psychological tension and myth-laden Western storytelling.",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 92,
@@ -4143,11 +3801,7 @@ export const galleryData = [
       "firelight-shadow": 23,
       "whispering-reflection": 27
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-KVxkXrV",
     "title": "Rescue Mission #2",
@@ -4189,11 +3843,7 @@ export const galleryData = [
       "hardship-sorrow": 12,
       "law-outlaws": 22
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-MF3xPCZ",
     "title": "Dead Man’s Reach",
@@ -4227,11 +3877,7 @@ export const galleryData = [
       "law-outlaws": 25,
       "sketches-of-legends": 22
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-6Ffpw9t",
     "title": "Jane",
@@ -4273,11 +3919,7 @@ export const galleryData = [
       "frontier-women": 6,
       "sketches-of-legends": 27
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-NKdPDCg",
     "title": "Darn Socks",
@@ -4316,11 +3958,7 @@ export const galleryData = [
       "love-goodbye": 14,
       "whispering-reflection": 31
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Dw6Z8ff",
     "title": "There's a Storm a Brewin'",
@@ -4387,11 +4025,7 @@ export const galleryData = [
       "sketches-of-legends": 20,
       "whispering-reflection": 28
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-jcLJT4J",
     "title": "Set in her ways",
@@ -4416,7 +4050,7 @@ export const galleryData = [
     ],
     "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 98,
@@ -4426,11 +4060,7 @@ export const galleryData = [
       "sketches-of-legends": 44,
       "whispering-reflection": 46
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-G7csptc",
     "title": "Fine Art Western Photography In Fine Art",
@@ -4457,7 +4087,7 @@ export const galleryData = [
     ],
     "story": "Delving into rustic charm, this work by Wayne Heim highlights painterly cowboy portraits through western fine art and cowboy artwork. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 99,
@@ -4468,11 +4098,7 @@ export const galleryData = [
       "love-goodbye": 26,
       "whispering-reflection": 49
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-LLdZzQW",
     "title": "Tall Tale Stories",
@@ -4533,11 +4159,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 19,
       "law-outlaws": 28
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-M2WdKTL",
     "title": "Still Following",
@@ -4570,11 +4192,7 @@ export const galleryData = [
       "cowboys-with-horses": 11,
       "cowboys-and-horses": 14
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-vFrxmXD",
     "title": "Measured in Lead",
@@ -4615,11 +4233,7 @@ export const galleryData = [
     "themes": {
       "dust-thunder": 13
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-ZRFr8hd",
     "title": "Golden Silence",
@@ -4650,11 +4264,7 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 103,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-P8B2zJj",
     "title": "Armed and Alarmed",
@@ -4701,11 +4311,7 @@ export const galleryData = [
       "sketches-of-legends": 34,
       "whispering-reflection": 38
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-gF8j3Jz",
     "title": "Quality Control",
@@ -4738,11 +4344,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 105,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-ML9dbMj",
     "title": "Claim Jumpers: This Ground’s Spoken For",
@@ -4802,11 +4404,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 25
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-T6bD4w7",
     "title": "Weathered",
@@ -4839,11 +4437,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 30
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Mm3jXFH",
     "title": "Waiting on News",
@@ -4894,7 +4488,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman in hat waiting for good news. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "This portrait draws its strength from stillness rather than action. The subject is framed in pause, allowing posture and gaze to carry the narrative weight.\n\nHer stance suggests endurance more than anticipation—waiting as a condition of frontier life, not a momentary delay. The absence of overt drama keeps the image grounded in lived experience rather than romantic myth.\n\nWithin Western portraiture, this restraint sets the work apart. The story is implied through presence alone, placing the viewer in quiet conversation with time, labor, and unresolved hope.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -4907,10 +4501,7 @@ export const galleryData = [
       "sketches-of-legends": 29,
       "whispering-reflection": 34
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-8BbMZjs",
     "title": "Minding the Herd",
@@ -4961,7 +4552,7 @@ export const galleryData = [
     ],
     "story": "Wind tugs his brim, dust clings to his coat, and the smell of rain permeates the air. \n\nHe scans the horizon, counting what’s his, dreading what’s coming. One day that “devil’s wire” will close the open range, penning in the herds and the men alike. But not today. Victory belongs to the present—if only for a fleeting few.",
     "notes": "This is the moment before the myth. The sheriff’s steady grip, his weathered eyes just off frame, capture not action — but the weight of responsibility that precedes it. It’s that breath before history gets written. Framed with compositional discipline and painterly finesse, this image evokes the tension of a John Ford still with the textural richness of a Wyeth painting.\n\nNotice the chiaroscuro-like lighting that carves dimension into the coat and hat — giving it sculptural presence. The wood backdrop and his upright posture form a visual anchor, letting the figure command the frame without theatrics. This is narrative power without spectacle.\n\nFor collectors, it’s a masterclass in restraint — a rare fusion of cinematic tension and fine art structure. Whether you're building a Western collection or looking for a standout piece with quiet gravitas, this image doesn’t shout… but it lingers long after you've looked away.\n\n",
-    "rating": 3,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -4971,11 +4562,7 @@ export const galleryData = [
       "sketches-of-legends": 28,
       "whispering-reflection": 35
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-xmJ87ZT",
     "title": "Still Standing",
@@ -5008,11 +4595,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 24
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-DwVBJb3",
     "title": "Dead to Rights",
@@ -5073,11 +4656,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 9,
       "law-outlaws": 27
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-sLL3pQG",
     "title": "Cold Inevitability",
@@ -5101,17 +4680,14 @@ export const galleryData = [
     ],
     "story": "The ground ends. All that weight behind him—choices, debts, her—caught in the quiet. He came ready, or so he thought. No more almost.\n\nSteps forward, then a flicker—off to the side. A break in the light. Is that something, or just hope, working its old trick again? Can’t tell. Doesn’t matter. He hesitates.\n\nFunny thing about cliffs: sometimes the only thing sharper than the edge is the doubt that finds you just before you jump.",
     "notes": "This piece distills the Western pause before consequence—where resolve and doubt are twins. Heim’s restraint leaves the story open, letting viewers decide if hesitation is grace, weakness, or simply proof of being alive.",
-    "rating": 2,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 112,
     "themes": {
       "law-outlaws": 26
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-LBSWzcj",
     "title": "What have we here? A cowboy's dilemma. ",
@@ -5149,10 +4725,7 @@ export const galleryData = [
     "themes": {
       "frontier-women": 25
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-ZPmj5Wk",
     "title": "Frontier  Huntress",
@@ -5213,11 +4786,7 @@ export const galleryData = [
       "women-of-the-west": 37,
       "frontier-women": 24
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-b3vCXwR",
     "title": "Cowboy Art: Waiting for Action",
@@ -5280,11 +4849,7 @@ export const galleryData = [
       "sketches-of-legends": 33,
       "whispering-reflection": 37
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-dNgct6r",
     "title": "Three Thousand Reasons",
@@ -5344,11 +4909,7 @@ export const galleryData = [
     "themes": {
       "law-outlaws": 29
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-TLDkd5q",
     "title": "Loaded for Bear",
@@ -5399,7 +4960,7 @@ export const galleryData = [
     ],
     "story": "I tell you Martha, you can't be too carful these days. If them boys come back around here again, I'm going to set things right once and for all. Cowboy sits in his cabin loading his guns for the battle about to start. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "A masterful psychological study in the tradition of Remington and Wyeth, this work subverts the archetype of the action hero by freezing the moment before the storm—capturing tension, solitude, and the ritual of preparation. \n\nNotice the controlled palette and directional light, which draw the viewer’s eye to the subject’s hands and face—conveying both resolve and doubt. The details (the blue ribbon, the worn boots, the rifle’s placement) offer narrative clues and invite close reading. \n\nUnlike typical “shoot-out” scenes, this image lingers in anticipation, elevating the act of arming oneself into a meditation on duty, vulnerability, and the cost of survival. For collectors, it’s a rare example of Western art that finds drama not in the gunfight, but in the silent moments that precede it.",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -5410,11 +4971,7 @@ export const galleryData = [
       "law-outlaws": 35,
       "whispering-reflection": 40
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-z3wvMkB",
     "title": "The Cut of the Cards",
@@ -5447,10 +5004,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 13,
       "firelight-shadow": 26
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-FVHm8VJ",
     "title": "What you mean you're better looking than me?",
@@ -5511,11 +5065,7 @@ export const galleryData = [
       "firelight-shadow": 29,
       "law-outlaws": 34
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-v4TzPgF",
     "title": "Cowboy Art:  Can't Save Them All",
@@ -5566,7 +5116,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of doctor teaching a life lesson to a child. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -5578,10 +5128,7 @@ export const galleryData = [
       "hardship-sorrow": 15,
       "love-goodbye": 19
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-7Jzf69b",
     "title": "Cowboy Decisions",
@@ -5645,11 +5192,7 @@ export const galleryData = [
       "sketches-of-legends": 31,
       "whispering-reflection": 33
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-k6jGzSq",
     "title": "Western Politicking",
@@ -5685,11 +5228,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 1,
       "firelight-shadow": 27
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-GG7mgqM",
     "title": "Cowboy Art: Campfire Counsel",
@@ -5715,7 +5254,7 @@ export const galleryData = [
     ],
     "story": "Flames flicker, faces glow—  \nwhere every stick tossed on the fire brings out another expert.  \nHere, under a canvas sky, the world’s problems are solved one tall tale at a time.  \nNobody remembers who started the story, only how it ends—  \nwith laughter, a warning, or just a little more smoke.",
     "notes": "Unlike the heroic single-rider and lone-gun images that define much of Western art, this scene places collective ritual at its heart. The layered composition—figures gathered in candid debate rather than static pose—invites comparison to the narrative complexity of Rockwell, yet is rare within the cowboy canon.\n\nPainterly light and natural gesture distinguish this piece from more sentimental or action-driven works, emphasizing psychological interplay over spectacle. The firelight acts as both stage and equalizer, inviting the viewer into a shared tradition: where stories, alliances, and the West’s social order were negotiated nightly.\n\nThis is Western art that honors myth while breaking from it—favoring community, negotiation, and realism over isolation or legend. Collectors value such pieces for their narrative depth, compositional sophistication, and their challenge to the conventions of cowboy storytelling.",
-    "rating": 3,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -5725,11 +5264,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 10,
       "firelight-shadow": 28
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-vP376vx",
     "title": "Who Goes There?",
@@ -5765,11 +5300,7 @@ export const galleryData = [
       "law-outlaws": 32,
       "sketches-of-legends": 32
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-8CfzGMc",
     "title": "Last Chance Riders",
@@ -5799,11 +5330,7 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 125,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-mdz2QGr",
     "title": "Cowboy Art:  Quick Draw",
@@ -5854,7 +5381,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of classic Western shootout gunfight. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -5864,11 +5391,7 @@ export const galleryData = [
       "dust-thunder": 18,
       "law-outlaws": 37
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-btSc5RS",
     "title": "Capturing Powerful Works Of Art",
@@ -5917,10 +5440,7 @@ export const galleryData = [
       "love-goodbye": 20,
       "whispering-reflection": 42
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-JM7kNVv",
     "title": "Crossing Quiet Water",
@@ -5955,10 +5475,7 @@ export const galleryData = [
     "themes": {
       "cowboys-and-horses": 20
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-rMkQnM6",
     "title": "After the Work",
@@ -5984,7 +5501,7 @@ export const galleryData = [
     ],
     "story": "Lunch break, or something like it. Hands still, mind running wild.\n\nDust in the air, old rope at my side — hunger gnawing, but regret bites harder.\n\nShe said wait for the rain. But what if there’s only dust, and the taste of all I didn’t say?",
     "notes": "Few Western images capture the honest weight of pause—the unscripted moment between action and obligation. The crouched posture and introspective hands evoke a lineage with painters like Wyeth and Eakins, where narrative resides in what’s withheld as much as revealed. \n\nHere, labor is not mythologized, but felt: dust, fatigue, and the silent reckoning that marks the true heart of the American West. A rare work that privileges contemplation over spectacle—inviting the viewer to linger in the quiet aftermath, where stories are born and burdens are named.",
-    "rating": 3,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -5993,10 +5510,7 @@ export const galleryData = [
     "themes": {
       "whispering-reflection": 36
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-8cXqSjj",
     "title": "Cowboy Art: Smiling Pretty",
@@ -6047,7 +5561,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of classic cowboy. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6056,15 +5570,12 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 36
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-DGtgJJJ",
-    "title": "Frederic Remington Portrait",
-    "description": "Wayne Heim presents frederic remington in this western landscapes fine art work. Embodying cowboy painting art, fine art Western photography, and cowboy art, it's recommended for lovers of frederic remington. © Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
+    "title": "Exploring Cowboy Artwork",
+    "description": "Discover the cowboy artwork in this powerful rustic charm by Wayne Heim. A compelling work that embodies powerful works of art, cowboy art, and Western cowboys. Featuring frederic remington, perfect for art lovers seeking cowboy artwork to enhance their collection. © Wayne Heim",
+    "alt": "cowboy artwork in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/K2CK2CXDLvz3KnK3NCVqVWhjBHZvWh8SD8pmmCWk6/L/_O2H0723-Edit-784-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/K2CK2CXDLvz3KnK3NCVqVWhjBHZvWh8SD8pmmCWk6/L/_O2H0723-Edit-784-L.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/K2CK2CXDLvz3KnK3NCVqVWhjBHZvWh8SD8pmmCWk6/L/_O2H0723-Edit-784-L.jpg",
@@ -6072,6 +5583,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-DGtgJJJ/0/NL4tdpQ7XnXGFVxbKCX8bCz3prPwQnT64NgvwCbZX/S/_O2H0723-Edit-784-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-DGtgJJJ/A",
+
     "keywords": [
       "a",
       "fine art",
@@ -6089,22 +5601,26 @@ export const galleryData = [
       "cowboy artwork",
       "western art",
       "western fine art",
-      "rustic charm"
+      "rustic charm",
+      "powerful works of art",
+      "Western cowboys",
+      "frontier life"
     ],
-    "story": "Delving into cowboy artwork, this work by Wayne Heim highlights western art through western fine art and rustic charm. A powerful statement in photography. © Wayne Heim",
+
+    "story": "Wayne Heim's exploration of frontier life comes alive in this piece, showcasing western fine art and fine art Western photography. A testament to fine art Western photography in fine art.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 131,
+
     "themes": {
       "law-outlaws": 50,
       "sketches-of-legends": 56,
       "whispering-reflection": 51
     },
-    "availableSeries": [
-      "foundation"
-    ]
+
+    contentSource: "ai"
   },
   {
     "id": "i-mHpH7rZ",
@@ -6156,7 +5672,7 @@ export const galleryData = [
     ],
     "story": "Cowboy taking cover behind a tree during a gunfight in the woods. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6165,10 +5681,7 @@ export const galleryData = [
     "themes": {
       "law-outlaws": 36
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-vGkvhmq",
     "title": "Cowboy Art: Watching and Waiting",
@@ -6219,7 +5732,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of settler woman waiting on porch. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6282,16 +5795,13 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of a cowboy wounded by an arrow. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 134,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-8zFZ3jn",
     "title": "Cowboy Art:  Night Light",
@@ -6342,7 +5852,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of smoking cowboy. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6352,10 +5862,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 2,
       "sketches-of-legends": 39
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-6GQxb97",
     "title": "Cowboy Art:  Got your back!",
@@ -6406,7 +5913,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of 2 cowboys in trouble. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6415,10 +5922,7 @@ export const galleryData = [
     "themes": {
       "hardship-sorrow": 17
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-zv8VJBg",
     "title": "Cowboy Art:  Pinned Down",
@@ -6469,7 +5973,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy reloading his gun in a battle. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6478,10 +5982,7 @@ export const galleryData = [
     "themes": {
       "law-outlaws": 39
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-8JSdTGz",
     "title": "Cowboy Art:  Family Portrait",
@@ -6532,7 +6033,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of couple showing off their deadly skills. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6542,10 +6043,7 @@ export const galleryData = [
       "frontier-women": 31,
       "love-goodbye": 21
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-p9FqvPh",
     "title": "Cowboy Art:  Wild West at Old Bedford Village",
@@ -6596,16 +6094,13 @@ export const galleryData = [
     ],
     "story": "Cowboy with saddle and rope exiting the stock yard at the end of the day. Wild West: 1890's comes to Old Bedford Village. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 139,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-rhqqrfz",
     "title": "Cowboy Art:  Schooling",
@@ -6656,7 +6151,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of old school house. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6666,10 +6161,7 @@ export const galleryData = [
       "women-of-the-west": 32,
       "frontier-women": 16
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-D5kv9Q6",
     "title": "Cowboy Art: Snake Oil Sam",
@@ -6720,7 +6212,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of sketch snake oil Sam. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6822,7 +6314,7 @@ export const galleryData = [
     ],
     "story": "Speak to me like that again partner and I'll introduce you to my little negotiator. She don't take kindly to that kind of language. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6832,10 +6324,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 29,
       "law-outlaws": 41
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Dthbn8K",
     "title": "Cowboy Art:  Disbelief",
@@ -6886,7 +6375,7 @@ export const galleryData = [
     ],
     "story": "They talk of peace. However their eyes tell a different story. Old West cowboy reflecting on the current state of affairs. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6895,10 +6384,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 43
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-D3HdMmb",
     "title": "Cowboy Art:  Watchful Eye",
@@ -6949,7 +6435,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy traveler with rifle on the open car of a train watching for trouble. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6958,10 +6444,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 40
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-mJQCXmh",
     "title": "Wetting the Whistle: Between Sips and Silence",
@@ -7021,10 +6504,7 @@ export const galleryData = [
     "themes": {
       "aces-smoke-whiskey": 32
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-FsLKLp3",
     "title": "Cowboy Art: Weighing His Options",
@@ -7075,7 +6555,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy weighing his next move. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7085,10 +6565,7 @@ export const galleryData = [
       "law-outlaws": 45,
       "sketches-of-legends": 50
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-SPTNHnP",
     "title": "I'm Not Done Yet",
@@ -7139,7 +6616,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy drinking his troubles away. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7199,7 +6676,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of sheriff taking 5 in the doorway to the jail house. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7209,11 +6686,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 28,
       "whispering-reflection": 44
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-xNnJTSK",
     "title": "Cowboy Art: Not in My Saloon",
@@ -7264,7 +6737,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of saloon owner standing watch. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7326,7 +6799,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy looking down the barrel of his gun. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7335,10 +6808,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 42
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-zH8SD79",
     "title": "Dead to Rights",
@@ -7389,7 +6859,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy with his Henry. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7399,10 +6869,7 @@ export const galleryData = [
       "law-outlaws": 46,
       "sketches-of-legends": 51
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-dwk4K8v",
     "title": "Now let's see you dance!",
@@ -7453,7 +6920,7 @@ export const galleryData = [
     ],
     "story": "Cowboy with his gun causing trouble. Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7463,10 +6930,7 @@ export const galleryData = [
       "law-outlaws": 47,
       "sketches-of-legends": 52
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-FpH3LXf",
     "title": "Getaway!",
@@ -7497,14 +6961,11 @@ export const galleryData = [
     ],
     "story": "I told you—I wasn’t going back. Ten long years... he had it coming, sure as sunrise. ’Bout time someone did something. No apologies, no looking back. If I’m bound for hell, well…  at least one of you is riding with me.",
     "notes": "“Getaway!” uses diagonal composition and layered dust to convey motion and tension—drawing the viewer into the chaos of flight. The painterly textures mimic historic Western illustration, while careful use of light and shadow keeps each rider distinct. For collectors, this piece stands out for its energy, storytelling, and homage to classic action scenes in Western art.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 154,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-xXQ3gDM",
     "title": " Shoot First",
@@ -7565,10 +7026,7 @@ export const galleryData = [
       "law-outlaws": 40,
       "sketches-of-legends": 41
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-V5WcTqg",
     "title": "Entertaining the Notion",
@@ -7608,10 +7066,7 @@ export const galleryData = [
       "firelight-shadow": 33,
       "law-outlaws": 43
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-ZKCtdPV",
     "title": "Cowboy Art: Trouble Approaching",
@@ -7662,7 +7117,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of settler woman reaching for \"Old Betsy\" as she hears trouble outside the window of her cabin. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7672,11 +7127,7 @@ export const galleryData = [
       "women-of-the-west": 28,
       "frontier-women": 38
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-TtXPkVK",
     "title": "Cowboy Art: Cookie",
@@ -7727,7 +7178,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cook collecting his thoughts between meals. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7736,11 +7187,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 45
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Cg4ZB72",
     "title": "Welcome Home",
@@ -7791,7 +7238,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of a welcome home kiss between a cowboy and his wife by lantern light. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7802,11 +7249,7 @@ export const galleryData = [
       "frontier-women": 15,
       "love-goodbye": 23
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-9bgtdzf",
     "title": "A Quiet Birthday Wish",
@@ -7831,7 +7274,7 @@ export const galleryData = [
     ],
     "story": "She cupped her hands around the tiny flame, guarding it from the draft that slipped through the cabin boards. One small candle, one soft moment, after a long day of chores and cold wind. \n\nThe world outside was wide and wild, but here—lit by the glow of a single birthday treat—she let herself imagine something more. A hope. A dream whispered only to the flame before she breathed it out.\n\nSome wishes are too tender to speak aloud.",
     "notes": "Heim’s controlled use of lamplight creates a chiaroscuro effect reminiscent of classical portraiture, allowing the child’s expression to anchor the emotional narrative. The simplicity of the setting—tin plate, rough-hewn table, warm firelight—echoes the authenticity of frontier domestic life. This piece stands out for its quiet storytelling, offering collectors a rare glimpse into the tenderness and humanity behind the larger Western mythos.",
-    "rating": 3,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 160,
@@ -7840,15 +7283,12 @@ export const galleryData = [
       "firelight-shadow": 7,
       "frontier-women": 12
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-6G4PBd8",
-    "title": "Don't you worry Miss Milly!",
-    "description": "Painterly Wild West themed photography wild west character and a lady traveler in a deep discussion. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art:  Don't you worry Miss Milly!",
+    "title": "Exploring Western Landscapes Fine Art",
+    "description": "This western landscapes fine art artwork by Wayne Heim showcases frontier life in a powerful works of art style. Reflecting rustic charm, western fine art, and western landscapes fine art, it's suited for admirers of frontier life. With powerful works of art elements. © Wayne Heim",
+    "alt": "Fine art photography of western landscapes fine art by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6G4PBd8/1/LnN87Zrbt2KMzbj4H97bWHFjc2Bzbq6MVhV5nhLRq/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20Edit%20_HF27528-197-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6G4PBd8/1/LnN87Zrbt2KMzbj4H97bWHFjc2Bzbq6MVhV5nhLRq/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20Edit%20_HF27528-197-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6G4PBd8/1/KSWjgjdVdrJvF5J2DXBjZPPg3z6H7BzgcxjWkTpFn/L/Vintage%20Themed%20Western%20Portrait%20Photography%20Edit%20_HF27528-197-L.jpg",
@@ -7856,6 +7296,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6G4PBd8/1/LvKwcPL86vtZWmkPrg7chMsdRtXHd36MLFtLd8Q8B/S/Vintage%20Themed%20Western%20Portrait%20Photography%20Edit%20_HF27528-197-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6G4PBd8/A",
+
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -7890,23 +7331,34 @@ export const galleryData = [
       "Wild West Painterly Photography",
       "Wild West Photography",
       "Wild West Portrait Photography",
-      "Wild West Themed Photography"
+      "Wild West Themed Photography",
+      "western landscapes fine art",
+      "frontier life",
+      "powerful works of art",
+      "rustic charm",
+      "western fine art",
+      "Western cowboys",
+      "western cowboy art",
+      "fine art Western photography"
     ],
-    "story": "Painterly Wild West themed photography wild west character and a lady traveler in a deep discussion. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+
+    "story": "Wayne Heim's exploration of Western cowboys comes alive in this piece, showcasing western cowboy art and fine art Western photography. A testament to rustic charm in fine art.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 161,
+
     "themes": {
       "frontier-women": 33,
       "love-goodbye": 24
     },
-    "availableSeries": [
-      "foundation"
-    ]
+
+    contentSource: "ai"
   },
   {
     "id": "i-PPJ9GKf",
@@ -7920,6 +7372,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PPJ9GKf/0/LtjDQhP9fB4wmHkdTNs9xkcjftqJpR5gmpb5wf5Ks/S/_HF26562-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PPJ9GKf/A",
+
     "keywords": [
       "WHO4278",
       "wild west photography",
@@ -7931,20 +7384,21 @@ export const galleryData = [
       "outlaw portraits",
       "cowboy painting art"
     ],
-    "story": "Delving into painterly cowboy portraits, this work by Wayne Heim highlights powerful works of art through outlaw portraits and cowboy painting art. A powerful statement in photography. © Wayne Heim",
+
+    "story": "Delving into painterly cowboy portraits, this work by Wayne Heim highlights powerful works of art through outlaw portraits and cowboy painting art. A powerful statement in photography.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 162,
+
     "themes": {
       "cowboys-and-horses": 21,
       "dust-thunder": 23,
       "frontier-women": 35
     },
-    "availableSeries": [
-      "foundation"
-    ]
+
+    contentSource: "human"
   },
   {
     "id": "i-HHxxcsM",
@@ -7996,7 +7450,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of Victorian woman traveler with parasol. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8057,7 +7511,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of a lady waving goodbye from the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8069,11 +7523,7 @@ export const galleryData = [
       "love-goodbye": 25,
       "sketches-of-legends": 48
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-CgCxXGG",
     "title": "I beg your pardon?",
@@ -8124,7 +7574,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of classic wild west cowboy looking puzzled. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8135,10 +7585,7 @@ export const galleryData = [
       "sketches-of-legends": 53,
       "whispering-reflection": 47
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-TVSQHzg",
     "title": "Doubtful",
@@ -8189,7 +7636,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography western traveler sensing trouble. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8250,16 +7697,13 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of 2 old friends. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 167,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-kBNpRtm",
     "title": "Western Fine Art Cowboy",
@@ -8286,7 +7730,7 @@ export const galleryData = [
     ],
     "story": "This image embodies fine art Western photography and historic western prints, captured by Wayne Heim in his signature style. It reflects powerful works of art with a touch of western art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 168,
@@ -8296,10 +7740,7 @@ export const galleryData = [
       "frontier-women": 42,
       "law-outlaws": 51
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-cKFv3th",
     "title": "Cowboy Art:  Night Rider",
@@ -8350,7 +7791,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman with horse by lantern light at night. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8363,11 +7804,7 @@ export const galleryData = [
       "love-goodbye": 27,
       "whispering-reflection": 50
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-GjZfMXj",
     "title": "Cowboy Art: Out in the Storm",
@@ -8418,7 +7855,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy braving the storm on his horse with lantern. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8427,10 +7864,7 @@ export const galleryData = [
     "themes": {
       "firelight-shadow": 48
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-MDrw6sD",
     "title": "Cowboy Coffee",
@@ -8490,10 +7924,7 @@ export const galleryData = [
     "themes": {
       "firelight-shadow": 36
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-3ppJNtd",
     "title": "Old Guard",
@@ -8555,11 +7986,7 @@ export const galleryData = [
       "firelight-shadow": 37,
       "law-outlaws": 49
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-MnX4pxX",
     "title": "Cowboy Art: Fading Light",
@@ -8610,7 +8037,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman darning socks by the fading light. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8622,11 +8049,7 @@ export const galleryData = [
       "frontier-women": 44,
       "whispering-reflection": 53
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-NBsQ59h",
     "title": "Cowboy Art: Almost Home",
@@ -8677,7 +8100,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy in cowboy hat and slicker on a train deep in thought. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8686,10 +8109,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 55
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-6BgfRxb",
     "title": "Cowboy Art: Gold!",
@@ -8740,16 +8160,13 @@ export const galleryData = [
     ],
     "story": "Cowboy strikes it rich as he finds gold in his gold claim. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 175,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-zXnjqZZ",
     "title": "Cowboy Art: Mr. Twain",
@@ -8800,16 +8217,13 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of Mr. Twain. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 176,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-nLKscbQ",
     "title": "Fine Art Western Photography In Fine Art",
@@ -8842,14 +8256,11 @@ export const galleryData = [
     ],
     "story": "Delving into cowboy painting art, this work by Wayne Heim highlights rugged spirit through Western cowboys and powerful works of art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 177,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Khb37pn",
     "title": "Kiss for Good Measures",
@@ -8900,7 +8311,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of western characters exchanging a kiss for good luck. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8961,7 +8372,7 @@ export const galleryData = [
     ],
     "story": "Wherever this train and the future takes us I know one thing, we are going down that track together. Cowboy and his lady look out the back of the train as they head off to a new adventure. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8972,10 +8383,7 @@ export const galleryData = [
       "love-goodbye": 28,
       "whispering-reflection": 52
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-xr5chJG",
     "title": "Capturing Painterly Cowboy Portraits",
@@ -9001,15 +8409,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of western fine art comes alive in this piece, showcasing cowboy painting art and historic western prints. A testament to cowboy artwork in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 180,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-8VPQmkW",
     "title": "Anticipation - Frontier Woman in Window",
@@ -9073,10 +8477,7 @@ export const galleryData = [
       "sketches-of-legends": 26,
       "whispering-reflection": 32
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-fTHtL25",
     "title": "Outlaw Portraits Moment",
@@ -9108,7 +8509,7 @@ export const galleryData = [
     ],
     "story": "Delving into western fine art, this work by Wayne Heim highlights western landscapes fine art through cowboy art and Western cowboys. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 182,
@@ -9118,10 +8519,7 @@ export const galleryData = [
       "hardship-sorrow": 23,
       "whispering-reflection": 58
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-R2JG4bd",
     "title": "Cowboy Art: I got this.",
@@ -9181,10 +8579,7 @@ export const galleryData = [
     "themes": {
       "firelight-shadow": 45
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-TQw7vC7",
     "title": "Cowboy Art: Traveler",
@@ -9235,7 +8630,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of traveler. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim.",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -9279,7 +8674,7 @@ export const galleryData = [
     ],
     "story": "Delving into fine art Western photography, this work by Wayne Heim highlights cowboy art through cowboy painting art and outlaw portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 185,
@@ -9288,10 +8683,7 @@ export const galleryData = [
       "law-outlaws": 52,
       "whispering-reflection": 55
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-trM4FpR",
     "title": "Music Lessons",
@@ -9342,7 +8734,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of settlers passing time with music lessons. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -9353,10 +8745,7 @@ export const galleryData = [
       "frontier-women": 45,
       "love-goodbye": 30
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-gQ7GZ5s",
     "title": "Cowboy Art:  Ready for Vengeance",
@@ -9407,7 +8796,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of a cowboy getting ready for action in an impending gunfight. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -9418,10 +8807,7 @@ export const galleryData = [
       "law-outlaws": 53,
       "sketches-of-legends": 57
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-52tTd9G",
     "title": "Final Stand",
@@ -9472,7 +8858,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboys making a stand during a classic western gunfight. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -9482,10 +8868,7 @@ export const galleryData = [
       "dust-thunder": 9,
       "law-outlaws": 55
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-mbND55n",
     "title": "In the Crossfire",
@@ -9519,10 +8902,7 @@ export const galleryData = [
       "dust-thunder": 16,
       "law-outlaws": 31
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-TpkTsMg",
     "title": "Western Cowboys Study",
@@ -9555,7 +8935,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy portraits comes alive in this piece, showcasing painterly cowboy portraits and Western cowboys. A testament to frontier life in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 190,
@@ -9614,7 +8994,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy playing cards in the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -9624,10 +9004,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 7,
       "firelight-shadow": 41
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-bN9mRH6",
     "title": "Cowboy Art:  Break in the Storm",
@@ -9684,11 +9061,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 192,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-R3CqrBr",
     "title": "The Essence Of Frederic Remington",
@@ -9720,7 +9093,7 @@ export const galleryData = [
     ],
     "story": "This image embodies rustic charm and frontier life, captured by Wayne Heim in his signature style. It reflects cowboy artwork with a touch of frederic remington. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 193,
@@ -9753,15 +9126,11 @@ export const galleryData = [
     ],
     "story": "Delving into frontier life, this work by Wayne Heim highlights outlaw portraits through historic western prints and painterly cowboy portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 194,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-5BtMrfM",
     "title": "Running Out of Time",
@@ -9812,7 +9181,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy gambler on the porch reflecting on his bout of bad luck. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -9822,11 +9191,7 @@ export const galleryData = [
       "sketches-of-legends": 64,
       "whispering-reflection": 60
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Cz82g6x",
     "title": "Cowboy Art: One for the Road",
@@ -9877,7 +9242,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of drunk cowboy in doorway. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -9916,7 +9281,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of frontier life comes alive in this piece, showcasing rugged spirit and cowboy portraits. A testament to western cowboy art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 197,
@@ -9924,10 +9289,7 @@ export const galleryData = [
       "law-outlaws": 57,
       "sketches-of-legends": 58
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-sDLXtRZ",
     "title": "Cowboy Art: Privateer",
@@ -9978,7 +9340,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of hired gun. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -9987,10 +9349,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 59
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-X9h6sdw",
     "title": "Exploring Wild West Photography",
@@ -10003,6 +9362,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X9h6sdw/0/NG87gcBxk6p9Hm63J9xkCvsCQdD7vcf745L3CMCfm/S/_HF23742-722-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-X9h6sdw/A",
+
     "keywords": [
       "a",
       "fine art",
@@ -10022,16 +9382,20 @@ export const galleryData = [
       "fine art Western photography",
       "rustic charm"
     ],
-    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing powerful works of art and fine art Western photography. A testament to rustic charm in fine art. © Wayne Heim",
+
+    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing powerful works of art and fine art Western photography. A testament to rustic charm in fine art. ",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 199,
+
     "themes": {
       "law-outlaws": 58,
       "sketches-of-legends": 60
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-kh6KWS9",
@@ -10083,16 +9447,13 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of 2 cowboys striking a deal in camp. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 200,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-cF2kLFP",
     "title": "Cowboy Art: Night Light",
@@ -10143,7 +9504,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy lighting up his smokes by lantern light in his tent. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10153,10 +9514,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 33,
       "firelight-shadow": 42
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-spjF4Zd",
     "title": "Cowboy Art: Lawman Portrait",
@@ -10207,7 +9565,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of portrait of the iconic Law Man of the Old West. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10217,11 +9575,7 @@ export const galleryData = [
       "law-outlaws": 68,
       "sketches-of-legends": 75
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-XR9PZT5",
     "title": "Cowboy Art: Late for Dinner",
@@ -10272,7 +9626,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman waiting patiently for the boys to come home. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10286,10 +9640,7 @@ export const galleryData = [
       "sketches-of-legends": 61,
       "whispering-reflection": 56
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-2Z3ZvJS",
     "title": "Interrupted Cowboy",
@@ -10340,7 +9691,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy with the paper. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10349,11 +9700,7 @@ export const galleryData = [
     "themes": {
       "whispering-reflection": 57
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-qXd5779",
     "title": "Cowboy Art: Come Back to Me",
@@ -10404,7 +9751,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy bandit and his lady exchanging a long goodbye. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10416,10 +9763,7 @@ export const galleryData = [
       "hardship-sorrow": 25,
       "love-goodbye": 34
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-hrghzzx",
     "title": "We're Going to be Rich! -Cowboy and his Girl",
@@ -10470,7 +9814,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of couple discussing their gold find. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10480,11 +9824,7 @@ export const galleryData = [
       "frontier-women": 62,
       "love-goodbye": 37
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-6dHrd9m",
     "title": "Cowboy Art:  There's more?!",
@@ -10535,7 +9875,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of couple counting their blessings. Cowboy shows his lady the hat full of gold he found down by the river. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10545,11 +9885,7 @@ export const galleryData = [
       "frontier-women": 48,
       "love-goodbye": 31
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-5LTzhJ6",
     "title": "Western Art Portrait",
@@ -10562,6 +9898,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-5LTzhJ6/0/Kk8VXDW3fdbfTFmJBqg2hq596vJjq3fnSQLLG2q7G/S/_O2H1775-833-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-5LTzhJ6/A",
+
     "keywords": [
       "a",
       "fine art",
@@ -10580,19 +9917,20 @@ export const galleryData = [
       "rustic charm",
       "cowboy portraits"
     ],
-    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing Western cowboys and rustic charm. A testament to cowboy portraits in fine art. © Wayne Heim",
+
+    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing Western cowboys and rustic charm. A testament to cowboy portraits in fine art. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 208,
+
     "themes": {
       "law-outlaws": 59,
       "sketches-of-legends": 63
     },
-    "availableSeries": [
-      "foundation"
-    ]
+
+    contentSource: "human"
   },
   {
     "id": "i-7K9GG9z",
@@ -10644,7 +9982,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman traveler waiting for the Stage. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10656,10 +9994,7 @@ export const galleryData = [
       "sketches-of-legends": 65,
       "whispering-reflection": 61
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-QxFK26w",
     "title": "Cowboy Art: One More Cup",
@@ -10710,7 +10045,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of vintage cowboy drinking coffee by the fire. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10722,10 +10057,7 @@ export const galleryData = [
       "hardship-sorrow": 22,
       "whispering-reflection": 59
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-zW6Zb4W",
     "title": "Cowboy Art:  Keeping Warm",
@@ -10776,7 +10108,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowgirl warming herself by the campfire. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10787,10 +10119,7 @@ export const galleryData = [
       "firelight-shadow": 46,
       "frontier-women": 47
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-bxsRc6q",
     "title": "Wild West Photography Cowboy",
@@ -10822,7 +10151,7 @@ export const galleryData = [
     ],
     "story": "Delving into rustic charm, this work by Wayne Heim highlights wild west photography through historic western prints and western art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 212,
@@ -10881,16 +10210,13 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of a classic old western cowboy in camp. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 213,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-GH7H4LC",
     "title": "Cowboy Art:  I do!",
@@ -10941,7 +10267,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of a big kiss between a cowboy and his lady. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10951,10 +10277,7 @@ export const galleryData = [
       "frontier-women": 51,
       "love-goodbye": 33
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-qzGSQz7",
     "title": "Wild West Photography - Cowboy Painting Art",
@@ -10987,7 +10310,7 @@ export const galleryData = [
     ],
     "story": "This image embodies cowboy art and cowboy portraits, captured by Wayne Heim in his signature style. It reflects frederic remington with a touch of western art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 215,
@@ -10996,10 +10319,7 @@ export const galleryData = [
       "frontier-women": 50,
       "love-goodbye": 32
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-dwVgbxR",
     "title": "Western Fine Art - Frontier Life",
@@ -11032,7 +10352,7 @@ export const galleryData = [
     ],
     "story": "This image embodies cowboy painting art and rustic charm, captured by Wayne Heim in his signature style. It reflects western landscapes fine art with a touch of cowboy art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 216
@@ -11070,7 +10390,7 @@ export const galleryData = [
     ],
     "story": "This image embodies outlaw portraits and cowboy painting art, captured by Wayne Heim in his signature style. It reflects cowboy portraits with a touch of western cowboy art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 217,
@@ -11078,10 +10398,7 @@ export const galleryData = [
       "law-outlaws": 61,
       "sketches-of-legends": 67
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-WD9ZmGH",
     "title": "Cowboy Art:  Western Justice",
@@ -11132,7 +10449,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of martial keeping the peace with his rifle. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -11142,10 +10459,7 @@ export const galleryData = [
       "law-outlaws": 60,
       "sketches-of-legends": 66
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-WCw4qpB",
     "title": "Cowboy Art: Trouble",
@@ -11196,7 +10510,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy bandit during a train robbery. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -11208,9 +10522,9 @@ export const galleryData = [
   },
   {
     "id": "i-xZkmnnx",
-    "title": "Untitled",
-    "description": "From the Wayne Heim A series. New image! More info coming soon.",
-    "alt": "Inevitable",
+    "title": "Western Canon Moment",
+    "description": "Discover the Western cowboys in this powerful cowboy artwork by Wayne Heim. A compelling work that embodies powerful works of art, frontier life, and American frontier portraits. Featuring cowboy artwork, perfect for art lovers seeking Western cowboys to enhance their collection. © Wayne Heim",
+    "alt": "Wayne Heim's Western cowboys artwork",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xZkmnnx/0/MMcGPBjgZqmzZBGQF6M7Wv7NZH6xpwMP4dCpxC4Jq/XL/_HF26232-1141-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xZkmnnx/0/MMcGPBjgZqmzZBGQF6M7Wv7NZH6xpwMP4dCpxC4Jq/XL/_HF26232-1141-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xZkmnnx/0/MMcGPBjgZqmzZBGQF6M7Wv7NZH6xpwMP4dCpxC4Jq/XL/_HF26232-1141-XL.jpg",
@@ -11218,19 +10532,32 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xZkmnnx/0/LVTdFN7Gk8MLGhSjg2hfj475TnWWVxmmfpFzvFMXV/S/_HF26232-1141-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xZkmnnx/A",
+
     "keywords": [
       "HF26225",
-      "1143"
+      "1143",
+      "historic western prints",
+      "fine art Western photography",
+      "cowboy artwork",
+      "Western cowboys",
+      "western canon",
+      "outlaw portraits",
+      "American frontier portraits",
+      "frontier life",
+      "western landscapes fine art",
+      "powerful works of art",
+      "rustic charm",
+      "western cowboy art",
+      "western art"
     ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+
+    "story": "Delving into fine art Western photography, this work by Wayne Heim highlights rustic charm through western cowboy art and western art. A powerful statement in photography.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 220,
-    "availableSeries": [
-      "foundation"
-    ]
+    contentSource: "ai"
   },
   {
     "id": "i-d9znSwP",
@@ -11264,7 +10591,7 @@ export const galleryData = [
     ],
     "story": "Delving into historic western prints, this work by Wayne Heim highlights painterly cowboy portraits through cowboy artwork and outlaw portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 221,
@@ -11322,16 +10649,13 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of wounded cowboy left behind. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 222,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-dnxxDXH",
     "title": "Cowboy Art:  How many shots was that?",
@@ -11382,7 +10706,7 @@ export const galleryData = [
     ],
     "story": "Painterly photo of cowboy troubled by goings on outside. Now, how many shots did they fire? Wild West: 1890's comes to Old Bedford Village. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -11391,10 +10715,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 69
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-PDVZhtZ",
     "title": "Cowboy Art: Joe",
@@ -11445,7 +10766,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of classic cowboy in morning light. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -11456,11 +10777,7 @@ export const galleryData = [
       "firelight-shadow": 49,
       "sketches-of-legends": 70
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-vTp98Z6",
     "title": "Cowboy Art:  Portrait of Red",
@@ -11511,17 +10828,13 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed portrait photography cowboy \"Big Red\" with his pistol and rifle. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 225,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-tWx3N8c",
     "title": "Cowboy Art: I am Smiling",
@@ -11572,7 +10885,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of classic law man of the West. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -11582,11 +10895,7 @@ export const galleryData = [
       "law-outlaws": 62,
       "sketches-of-legends": 71
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-7V4VjNm",
     "title": "Wild West Photography In Fine Art",
@@ -11619,7 +10928,7 @@ export const galleryData = [
     ],
     "story": "Delving into Western cowboys, this work by Wayne Heim highlights cowboy artwork through western cowboy art and historic western prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 227,
@@ -11627,11 +10936,7 @@ export const galleryData = [
       "frontier-women": 56,
       "whispering-reflection": 62
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-2Cj8j9W",
     "title": "Cowboy Art: Morning Constitution",
@@ -11682,7 +10987,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of vintage frontier couple out for a walk. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -11692,10 +10997,7 @@ export const galleryData = [
       "frontier-women": 54,
       "love-goodbye": 35
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-TgkwSbh",
     "title": "Cowboy Art: Say Cheese!",
@@ -11746,7 +11048,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of old time photographer. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -11755,10 +11057,7 @@ export const galleryData = [
     "themes": {
       "frontier-women": 59
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-gs6X2P7",
     "title": "Cowboy Art: Fine, Take My Picture Already",
@@ -11809,7 +11108,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed portrait photography of cowboy posing for a picture. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -11819,11 +11118,7 @@ export const galleryData = [
       "law-outlaws": 63,
       "sketches-of-legends": 72
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-QGCQt7M",
     "title": "Cowboy Art Portrait",
@@ -11856,7 +11151,7 @@ export const galleryData = [
     ],
     "story": "This image embodies painterly cowboy portraits and cowboy portraits, captured by Wayne Heim in his signature style. It reflects western fine art with a touch of historic western prints. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 231,
@@ -11864,10 +11159,7 @@ export const galleryData = [
       "law-outlaws": 67,
       "whispering-reflection": 64
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-n8TX2qS",
     "title": "Cowboy Art:  Sheriff",
@@ -11918,7 +11210,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed portrait photography of sheriff looking displeased with the actions taking place. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -11928,10 +11220,7 @@ export const galleryData = [
       "law-outlaws": 66,
       "sketches-of-legends": 73
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-tVxgfZN",
     "title": "Cowboy Art:  The Kid",
@@ -11982,7 +11271,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of Billy the Kid. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -12042,16 +11331,13 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of troubled cowboy negotiating for a peaceful outcome to the situation at hand. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 234,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-S2sZdJB",
     "title": "Exploring Outlaw Portraits",
@@ -12084,7 +11370,7 @@ export const galleryData = [
     ],
     "story": "Delving into painterly cowboy portraits, this work by Wayne Heim highlights historic western prints through cowboy art and rustic charm. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 235,
@@ -12092,10 +11378,7 @@ export const galleryData = [
       "law-outlaws": 64,
       "whispering-reflection": 63
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-7Kwv8vc",
     "title": "Cowboy Art: Beacon of Hope",
@@ -12146,7 +11429,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of classic cowboy standing guard. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -12155,11 +11438,7 @@ export const galleryData = [
     "themes": {
       "whispering-reflection": 65
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-grM2LkC",
     "title": "Cowboy Art: Orphan",
@@ -12210,7 +11489,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of girl orphan. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -12222,10 +11501,7 @@ export const galleryData = [
       "sketches-of-legends": 74,
       "whispering-reflection": 66
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Lk79jNj",
     "title": "Cowboy Art: Taking 5",
@@ -12276,7 +11552,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of westward bound train traveler. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -12286,10 +11562,7 @@ export const galleryData = [
       "firelight-shadow": 50,
       "whispering-reflection": 67
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-GK7Trs9",
     "title": "Classic Cowboy's Picture Time - Cowboy Art by Wayne Heim",
@@ -12340,16 +11613,13 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy with lasso in classic pose. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 239,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-hKcrxwf",
     "title": "One Way Out",
@@ -12387,11 +11657,7 @@ export const galleryData = [
       "cowboys-and-horses": 62,
       "firelight-shadow": 75
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-S5zV9h4",
     "title": "Cowboy Art: Story Time",
@@ -12442,7 +11708,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman hanging on the traveler's every word of his tale of the big city. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -12452,10 +11718,7 @@ export const galleryData = [
       "firelight-shadow": 51,
       "frontier-women": 55
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-8g6m7tf",
     "title": "Cowboy Rugged Spirit",
@@ -12483,7 +11746,7 @@ export const galleryData = [
     ],
     "story": "Delving into rugged spirit, this work by Wayne Heim highlights frontier life through powerful works of art and wild west photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 242,
@@ -12492,10 +11755,7 @@ export const galleryData = [
       "firelight-shadow": 55,
       "whispering-reflection": 71
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-HZK96qf",
     "title": "Cowboy Frederic Remington",
@@ -12527,7 +11787,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing frederic remington and powerful works of art. A testament to cowboy portraits in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 243,
@@ -12538,11 +11798,7 @@ export const galleryData = [
       "love-goodbye": 39,
       "whispering-reflection": 70
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-V5djX4B",
     "title": "Cowboy Art:  First Light",
@@ -12593,7 +11849,7 @@ export const galleryData = [
     ],
     "story": "As the first light of the day fell across his face Joe took a moment to count his blessings and steady his resolve to what was undoubtably about to come his way. Cowboy stands in front of window in cabin with rifle at the ready. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -12602,13 +11858,10 @@ export const galleryData = [
     "themes": {
       "firelight-shadow": 52
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-xMk6ZJ9",
-    "title": "The Essence Of Frederic Remington",
+    "title": "Won't take me alive!",
     "description": "Explore frederic remington with Wayne Heim's frontier life. This outlaw portraits piece conveys painterly cowboy portraits, cowboy painting art, and frederic remington, perfect for fans of frontier life. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-xMk6ZJ9/1/KxLZ2ZVdssTGCC9zb2M4QFpXN6fKxj6MP8kShZFjG/XL/_HF21431-Edit-XL.jpg",
@@ -12618,6 +11871,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-xMk6ZJ9/1/NZQsSDhVLd59mRdnpCmp2WFDjLNrsVCZ8CWNqQMxt/S/_HF21431-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-xMk6ZJ9/A",
+
     "keywords": [
       "a",
       "fine art",
@@ -12635,18 +11889,19 @@ export const galleryData = [
       "western landscapes fine art",
       "cowboy portraits"
     ],
+
     "story": "Wayne Heim's exploration of cowboy painting art comes alive in this piece, showcasing western landscapes fine art and frontier life. A testament to cowboy portraits in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 245,
+
     "themes": {
       "sketches-of-legends": 85
     },
-    "availableSeries": [
-      "foundation"
-    ]
+
+    contentSource: "human"
   },
   {
     "id": "i-rC7SvgP",
@@ -12698,7 +11953,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of bandit on train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -12755,7 +12010,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of classic cowboy riding the rails and waiting for any sign of trouble. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -12765,10 +12020,7 @@ export const galleryData = [
       "law-outlaws": 69,
       "whispering-reflection": 72
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-7RWxjz3",
     "title": "Cowboy Art: Aunt Mildred",
@@ -12819,7 +12071,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman in a vintage hat. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -12880,7 +12132,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of a morning stroll. Cowboy takes lady from the city on a tour of the camp. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -12892,10 +12144,7 @@ export const galleryData = [
       "love-goodbye": 36,
       "whispering-reflection": 68
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-vrc7KkJ",
     "title": "Western Cowboys - Western Cowboy Art",
@@ -12921,14 +12170,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of historic western prints comes alive in this piece, showcasing cowboy artwork and frontier life. A testament to wild west photography in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 250,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-8W7jxkN",
     "title": "Cowboy Art:  Cow Hand",
@@ -12979,16 +12225,13 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy starting his day on the porch with his saddle and lasso. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 251,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-GSPLsk9",
     "title": "Cowboy Art: Traveling Light",
@@ -13039,7 +12282,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of solo woman traveler in classic black dress. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -13052,9 +12295,9 @@ export const galleryData = [
   },
   {
     "id": "i-9q5B7FX",
-    "title": "Cowboy Western Fine Art",
-    "description": "Immerse yourself in rustic charm with this stunning western fine art by Wayne Heim. Capturing cowboy artwork, powerful works of art, and frontier life, it's a must-have for collectors of rustic charm. © Wayne Heim",
-    "alt": "Photographic artwork © Wayne Heim",
+    "title": "Western Fine Art Portrait",
+    "description": "Immerse yourself in western fine art with this stunning rugged spirit by Wayne Heim. Capturing western canon, wild west photography, and western cowboy art, it's a must-have for collectors of western fine art. Including cowboy painting art themes. © Wayne Heim",
+    "alt": "Fine art photography of western fine art by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-9q5B7FX/0/KpV9MfxjhVQ8Z4bQB5DGxWDsVSwX45kNbPSXChs7g/L/_O2H0586-Edit-Edit-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-9q5B7FX/0/KpV9MfxjhVQ8Z4bQB5DGxWDsVSwX45kNbPSXChs7g/L/_O2H0586-Edit-Edit-Edit-2-L.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-9q5B7FX/0/KpV9MfxjhVQ8Z4bQB5DGxWDsVSwX45kNbPSXChs7g/L/_O2H0586-Edit-Edit-Edit-2-L.jpg",
@@ -13062,6 +12305,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-9q5B7FX/0/NZ8f37dKwDK8bKHD37q49KRsCZQ3gL9wG2tx5bmFp/S/_O2H0586-Edit-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-9q5B7FX/A",
+
     "keywords": [
       "a",
       "fine art",
@@ -13077,17 +12321,27 @@ export const galleryData = [
       "powerful works of art",
       "frontier life",
       "western landscapes fine art",
-      "wild west photography"
+      "wild west photography",
+      "rugged spirit",
+      "western canon",
+      "western cowboy art",
+      "cowboy painting art",
+      "American frontier portraits",
+      "fine art Western photography"
     ],
-    "story": "Wayne Heim's exploration of powerful works of art comes alive in this piece, showcasing western landscapes fine art and wild west photography. A testament to rustic charm in fine art. © Wayne Heim",
+
+    "story": "Wayne Heim's exploration of American frontier portraits comes alive in this piece, showcasing fine art Western photography and western cowboy art. A testament to cowboy artwork in fine art.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 253,
+
     "themes": {
       "sketches-of-legends": 78
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-76Fjxvs",
@@ -13139,7 +12393,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of sketchy law enforcement from the Old West. Could it be one of the Pinkerton's men? Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -13148,10 +12402,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 81
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-WzTZ6Jv",
     "title": "Cowboy Art:  Doesn't Look Good",
@@ -13202,7 +12453,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy peeking out a window to keep a lookout for the law. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -13211,10 +12462,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 80
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-RdTR7GD",
     "title": "Cowboy Art: Saying Goodbye",
@@ -13265,7 +12513,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of sad child saying goodbye. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -13279,11 +12527,7 @@ export const galleryData = [
       "love-goodbye": 42,
       "whispering-reflection": 74
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-z3VScfV",
     "title": "Cowboy Art:  Site for Sore Eyes",
@@ -13334,7 +12578,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy flirting at the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -13345,10 +12589,7 @@ export const galleryData = [
       "firelight-shadow": 56,
       "love-goodbye": 40
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-SBjhvGf",
     "title": "Cowboy Painting Art - Fine Art Western Photography",
@@ -13381,17 +12622,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy portraits comes alive in this piece, showcasing painterly cowboy portraits and western landscapes fine art. A testament to Western cowboys in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 258,
     "themes": {
       "sketches-of-legends": 79
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-MB2KXB3",
     "title": "Cowboy Art:  Losing Patience",
@@ -13442,7 +12680,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of antsy cowboy expecting trouble. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -13451,10 +12689,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 83
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-GKFFQzH",
     "title": "Frederic Remington In Fine Art",
@@ -13487,7 +12722,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing western landscapes fine art and wild west photography. A testament to frontier life in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 260
@@ -13542,7 +12777,7 @@ export const galleryData = [
     ],
     "story": "Ifen's you want a meeting with the sheriff you is going to have to go through me. See, I'm kind of like his secretary, just prettier and better with a gun. Cowboy guarding the door to the jailhouse. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -13551,10 +12786,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 87
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-fJ9WQSS",
     "title": "Cowboy Art:  Draw!",
@@ -13605,7 +12837,7 @@ export const galleryData = [
     ],
     "story": "Cowboy drawing down. Vintage cowboy in had raises his pistol to return fire. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -13614,10 +12846,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 84
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-XnW7ZD5",
     "title": "Western Fine Art Study",
@@ -13645,17 +12874,14 @@ export const galleryData = [
     ],
     "story": "Delving into western cowboy art, this work by Wayne Heim highlights Western cowboys through western art and outlaw portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 263,
     "themes": {
       "law-outlaws": 70
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-b4hnpNn",
     "title": "Cowboy Art And Historic Western Prints",
@@ -13688,14 +12914,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of powerful works of art comes alive in this piece, showcasing cowboy painting art and western cowboy art. A testament to rustic charm in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 264,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-jmNjVwB",
     "title": "Cowboy Art: Hold up!",
@@ -13747,16 +12970,13 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of train robbery by western bandits taking place. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 265,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-48jGpLt",
     "title": "Western Cowboys Moment",
@@ -13790,14 +13010,11 @@ export const galleryData = [
     ],
     "story": "This image embodies outlaw portraits and powerful works of art, captured by Wayne Heim in his signature style. It reflects western landscapes fine art with a touch of cowboy art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "",
     "sortOrder": 266,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-5T9mQqT",
     "title": "Cowboy Artwork Cowboy",
@@ -13823,7 +13040,7 @@ export const galleryData = [
     ],
     "story": "Delving into cowboy portraits, this work by Wayne Heim highlights painterly cowboy portraits through wild west photography and western fine art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 267,
@@ -13831,10 +13048,7 @@ export const galleryData = [
       "sketches-of-legends": 90,
       "whispering-reflection": 73
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-RMTbDRs",
     "title": "Cowboy Art:  Why'd you have to go and do that?!",
@@ -13885,7 +13099,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of upset cowboy getting ready for action. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -13894,10 +13108,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 89
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-2pRkNng",
     "title": "Cowboy Art: 4 More Shots",
@@ -13948,16 +13159,13 @@ export const galleryData = [
     ],
     "story": "Cowboy returning fire as he hides behind a tree for cover. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 269,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-b7HtD4R",
     "title": "Cowboy Art:  Whitty Retort",
@@ -14008,7 +13216,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy taking aim. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -14018,10 +13226,7 @@ export const galleryData = [
       "law-outlaws": 71,
       "sketches-of-legends": 86
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-jDmnnrm",
     "title": "Cowboy Art: All mine!",
@@ -14072,16 +13277,13 @@ export const galleryData = [
     ],
     "story": "Miner protecting his claim standing guard in front of his mine shaft with his gun at the ready. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 271,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-rGpCKkW",
     "title": "Cowboy Art:  Ambush",
@@ -14132,7 +13334,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy ambush. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -14141,15 +13343,12 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 91
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-76PxJSx",
-    "title": "Westwrn Train Travelers",
-    "description": "Painterly Wild West themed photography of old western train travelers. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Westwrn Train Travelers",
+    "title": "Train to Nowhere Fast",
+    "description": "Experience western canon through this evocative rustic charm from Wayne Heim's portfolio. This piece highlights wild west photography with Western cowboys, while conveying painterly cowboy portraits, ideal for those who appreciate western canon. Explore Western cowboys in fine art. © Wayne Heim",
+    "alt": "Fine art photography of western canon by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-76PxJSx/1/NdxQMddkSjrBj47jg8c9RRLKfj866DDrpZBcRbpc2/XL/cowboy%20art_O1H2800-Enhanced-NR-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-76PxJSx/1/NdxQMddkSjrBj47jg8c9RRLKfj866DDrpZBcRbpc2/XL/cowboy%20art_O1H2800-Enhanced-NR-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-76PxJSx/1/KwvvHD6BsBVxhPV4J4bzBggkC4FBcgK36ZNnmDGf9/L/cowboy%20art_O1H2800-Enhanced-NR-Edit-Edit-2-L.jpg",
@@ -14157,6 +13356,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-76PxJSx/1/LpHd2pRWMC7Zq8bqVxdW8hGjdNw8xL4DWzrjnZknW/S/cowboy%20art_O1H2800-Enhanced-NR-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-76PxJSx/A",
+
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -14191,22 +13391,37 @@ export const galleryData = [
       "Wild West Painterly Photography",
       "Wild West Photography",
       "Wild West Portrait Photography",
-      "Wild West Themed Photography"
+      "Wild West Themed Photography",
+      "painterly cowboy portraits",
+      "western art",
+      "frontier life",
+      "historic western prints",
+      "cowboy artwork",
+      "rugged spirit",
+      "cowboy art",
+      "western canon",
+      "rustic charm",
+      "wild west photography",
+      "Western cowboys",
+      "western cowboy art"
     ],
-    "story": "Painterly Wild West themed photography of old western train travelers. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+
+    "story": "This image embodies Western cowboys and cowboy art, captured by Wayne Heim in his signature style. It reflects western cowboy art with a touch of historic western prints.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 273,
+
     "themes": {
       "frontier-women": 65
     },
-    "availableSeries": [
-      "foundation"
-    ]
+
+    contentSource: "human"
   },
   {
     "id": "i-7mLbVvP",
@@ -14258,7 +13473,7 @@ export const galleryData = [
     ],
     "story": "Old West portrait of cowboy and his peace maker pistol and hat. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -14267,10 +13482,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 92
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-gkHPFXR",
     "title": "Cowboy Art:  Sorrow and Disbelief",
@@ -14321,7 +13533,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography drunk prospector at the bar. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -14332,10 +13544,7 @@ export const galleryData = [
       "firelight-shadow": 57,
       "hardship-sorrow": 27
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-3vrhwQ9",
     "title": "Cowboy Art:  Place Your Bets",
@@ -14386,7 +13595,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of vintage game of chance a the western saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -14396,10 +13605,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 14,
       "firelight-shadow": 58
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-SrcM3ZN",
     "title": "Cowboy Art: Who goes there?",
@@ -14450,7 +13656,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman with lantern checking for trouble. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -14460,15 +13666,12 @@ export const galleryData = [
       "firelight-shadow": 59,
       "frontier-women": 67
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-sPkKGnX",
-    "title": "Fine Art Wild West Photography",
-    "description": "Immerse yourself in wild west photography with this stunning painterly cowboy portraits by Wayne Heim. Capturing cowboy artwork, fine art Western photography, and cowboy portraits, it's a must-have for collectors of wild west photography. © Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
+    "title": "Fine Art Rustic Charm",
+    "description": "Immerse yourself in rustic charm with this stunning western landscapes fine art by Wayne Heim. Capturing cowboy artwork, Western cowboys, and American frontier portraits, it's a must-have for collectors of rustic charm. Including western cowboy art themes. © Wayne Heim",
+    "alt": "Fine art photography of rustic charm by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sPkKGnX/0/Kq6m2wzrdBTXH7bXntsvj6b8tSLZD87M6JNNSHTvT/XL/_WHO7515-941-942-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sPkKGnX/0/Kq6m2wzrdBTXH7bXntsvj6b8tSLZD87M6JNNSHTvT/XL/_WHO7515-941-942-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sPkKGnX/0/Kq6m2wzrdBTXH7bXntsvj6b8tSLZD87M6JNNSHTvT/XL/_WHO7515-941-942-XL.jpg",
@@ -14476,6 +13679,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sPkKGnX/0/MLL3XhJs9Rqv5WN6JsM6nHLgdQgJDchsgzSSbB4Z8/S/_WHO7515-941-942-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sPkKGnX/A",
+
     "keywords": [
       "WHO0135",
       "wild west photography",
@@ -14486,21 +13690,31 @@ export const galleryData = [
       "western art",
       "historic western prints",
       "frontier life",
-      "western fine art"
+      "western fine art",
+      "western canon",
+      "American frontier portraits",
+      "cowboy art",
+      "cowboy painting art",
+      "rustic charm",
+      "outlaw portraits",
+      "western landscapes fine art",
+      "Western cowboys",
+      "western cowboy art"
     ],
-    "story": "Delving into western art, this work by Wayne Heim highlights historic western prints through frontier life and western fine art. A powerful statement in photography. © Wayne Heim",
+
+    "story": "This image embodies Western cowboys and western canon, captured by Wayne Heim in his signature style. It reflects American frontier portraits with a touch of cowboy portraits.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 278,
+
     "themes": {
       "firelight-shadow": 60,
       "love-goodbye": 41
     },
-    "availableSeries": [
-      "foundation"
-    ]
+
+    contentSource: "ai"
   },
   {
     "id": "i-PxNFNhQ",
@@ -14514,6 +13728,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/0/NcqfhPNXpZdknwvncrZCQwM9NpKhVHzFW2jLmKr6Q/S/_WHO7504-938-940-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/A",
+
     "keywords": [
       "HF26507",
       "971",
@@ -14526,15 +13741,14 @@ export const galleryData = [
       "Western cowboys",
       "rustic charm"
     ],
-    "story": "This image embodies Western cowboys and cowboy artwork, captured by Wayne Heim in his signature style. It reflects rustic charm with a touch of western cowboy art. © Wayne Heim",
+
+    "story": "This image embodies Western cowboys and cowboy artwork, captured by Wayne Heim in his signature style. It reflects rustic charm with a touch of western cowboy art. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 279,
-    "availableSeries": [
-      "foundation"
-    ]
+    contentSource: "human"
   },
   {
     "id": "i-Ns6ZkrF",
@@ -14586,7 +13800,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman traveler in her cowboy hat. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -14597,10 +13811,7 @@ export const galleryData = [
       "frontier-women": 66,
       "sketches-of-legends": 93
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-nXdBwJF",
     "title": "Cowboy Art: Robber",
@@ -14651,7 +13862,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of a old west robber - bandit. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -14660,10 +13871,7 @@ export const galleryData = [
     "themes": {
       "sketches-of-legends": 88
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-JWGwQ7k",
     "title": "Cowboy Painting Art Moment",
@@ -14696,7 +13904,7 @@ export const galleryData = [
     ],
     "story": "Delving into western landscapes fine art, this work by Wayne Heim highlights rugged spirit through western fine art and outlaw portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 282,
@@ -14739,7 +13947,7 @@ export const galleryData = [
     ],
     "story": "This image embodies historic western prints and frederic remington, captured by Wayne Heim in his signature style. It reflects powerful works of art with a touch of western cowboy art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 283,
@@ -14774,7 +13982,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of western art comes alive in this piece, showcasing western cowboy art and historic western prints. A testament to western landscapes fine art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 284,
@@ -14785,11 +13993,7 @@ export const galleryData = [
       "sketches-of-legends": 106,
       "whispering-reflection": 86
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-NzMs3RH",
     "title": "The Essence Of Western Art",
@@ -14814,17 +14018,14 @@ export const galleryData = [
     ],
     "story": "This image embodies cowboy painting art and wild west photography, captured by Wayne Heim in his signature style. It reflects fine art Western photography with a touch of western landscapes fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 285,
     "themes": {
       "firelight-shadow": 69
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-LVFgBBN",
     "title": "Cowboy Art: Not Happening",
@@ -14875,7 +14076,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of disgruntled western lawman. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -14886,10 +14087,7 @@ export const galleryData = [
       "law-outlaws": 74,
       "sketches-of-legends": 98
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-WNLSRQf",
     "title": "Rugged Spirit In Fine Art",
@@ -14914,17 +14112,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of rugged spirit comes alive in this piece, showcasing rustic charm and western landscapes fine art. A testament to painterly cowboy portraits in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 287,
     "themes": {
       "cowboys-and-horses": 28
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-5fm7Hhr",
     "title": "Making a Run For It",
@@ -14959,11 +14154,7 @@ export const galleryData = [
     "themes": {
       "cowboys-and-horses": 31
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Qx9xbv7",
     "title": "Capturing Cowboy Painting Art",
@@ -14989,17 +14180,14 @@ export const galleryData = [
     ],
     "story": "Delving into Western cowboys, this work by Wayne Heim highlights fine art Western photography through western art and rustic charm. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 289,
     "themes": {
       "cowboys-and-horses": 27
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-jXC3shm",
     "title": "Cowboy Art Portrait",
@@ -15026,15 +14214,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of frederic remington comes alive in this piece, showcasing outlaw portraits and historic western prints. A testament to powerful works of art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 290,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-7DZfRCN",
     "title": "Painterly Cowboy Portraits Cowboy",
@@ -15066,7 +14250,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of Western cowboys comes alive in this piece, showcasing cowboy artwork and fine art Western photography. A testament to outlaw portraits in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 291,
@@ -15074,10 +14258,7 @@ export const galleryData = [
       "frontier-women": 70,
       "love-goodbye": 43
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-VhHKttr",
     "title": "Cowboy Art: Cowboy Battle",
@@ -15128,16 +14309,13 @@ export const galleryData = [
     ],
     "story": "Cowboy in the heat of the battle looking out from behind a tree. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 292,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-fcRrVV5",
     "title": "Cowboy Art:  Settle this once and for all.",
@@ -15188,16 +14366,13 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy reloading his pistol. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 293,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-7Rt89mS",
     "title": "The Essence Of Rugged Spirit",
@@ -15223,7 +14398,7 @@ export const galleryData = [
     ],
     "story": "Delving into western landscapes fine art, this work by Wayne Heim highlights rustic charm through frontier life and cowboy art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 294
@@ -15278,7 +14453,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of towns folk talking. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -15287,10 +14462,7 @@ export const galleryData = [
     "themes": {
       "frontier-women": 73
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-gXvDSdm",
     "title": "Western Cowboys Portrait",
@@ -15320,7 +14492,7 @@ export const galleryData = [
     ],
     "story": "This image embodies fine art Western photography and western fine art, captured by Wayne Heim in his signature style. It reflects cowboy portraits with a touch of Western cowboys. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 296,
@@ -15378,7 +14550,7 @@ export const galleryData = [
     ],
     "story": "Wild West woman standing her ground. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -15388,10 +14560,7 @@ export const galleryData = [
       "frontier-women": 72,
       "sketches-of-legends": 96
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-L2BvxrK",
     "title": "The Essence Of Western Cowboys",
@@ -15418,14 +14587,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing outlaw portraits and western art. A testament to frederic remington in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 298,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-HhKWdh6",
     "title": "Cowboy Art: Rail Tycoon",
@@ -15476,7 +14642,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of railway tycoon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -15489,7 +14655,7 @@ export const galleryData = [
   },
   {
     "id": "i-sVrtDx8",
-    "title": "Cowboy Art:  Self Defense",
+    "title": "Self Defense",
     "description": "Painterly Wild West themed photography of cattle rustler on trial. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "alt": "Cowboy Art:  Self Defense",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sVrtDx8/3/KsZCS95WmHfqdwSLRxqnzTJwPQxQ4Q8fb82pnsbPG/XL/old%20west%20themed%20fine%20art%20photo_O2H3024-Edit-2-XL.jpg",
@@ -15499,6 +14665,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sVrtDx8/3/MVbtKvMc4zBHdzdgVVZ6mmzQ2GjGJf6GZZtpTk9vB/S/old%20west%20themed%20fine%20art%20photo_O2H3024-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sVrtDx8/A",
+
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -15535,18 +14702,24 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
+
     "story": "Painterly Wild West themed photography of cattle rustler on trial. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 300,
+
     "themes": {
       "sketches-of-legends": 100,
       "whispering-reflection": 77
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-pHhRGL6",
@@ -15598,7 +14771,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of determined cowboy. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -15609,10 +14782,7 @@ export const galleryData = [
       "sketches-of-legends": 103,
       "whispering-reflection": 80
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-DK48RWj",
     "title": "Cowboy Art: Longing for Home",
@@ -15663,7 +14833,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy riding the rails. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -15674,10 +14844,7 @@ export const galleryData = [
       "sketches-of-legends": 102,
       "whispering-reflection": 78
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-CFT7PJM",
     "title": "Cowboy Art: Just 6 More Days",
@@ -15728,7 +14895,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman looking off into the distance wearing a black cape. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -15739,10 +14906,7 @@ export const galleryData = [
       "sketches-of-legends": 105,
       "whispering-reflection": 81
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-XpH2QfG",
     "title": "Cowboy Art:  Quick Draw",
@@ -15794,7 +14958,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of a cowboy quick draw shootout. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -15803,10 +14967,7 @@ export const galleryData = [
     "themes": {
       "dust-thunder": 33
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-ZDGhLps",
     "title": "Cowboy Art: Self Defense",
@@ -15857,7 +15018,7 @@ export const galleryData = [
     ],
     "story": "Cowboy returning fire from his smoking pistol. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 2,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -15894,14 +15055,11 @@ export const galleryData = [
     ],
     "story": "This image embodies fine art Western photography and cowboy portraits, captured by Wayne Heim in his signature style. It reflects powerful works of art with a touch of western landscapes fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 306,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-qDkTww8",
     "title": "Powerful Works Of Art - Western Fine Art",
@@ -15927,14 +15085,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of western art comes alive in this piece, showcasing outlaw portraits and cowboy artwork. A testament to western fine art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 307,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-zqZBdJF",
     "title": "Wild West Photography In Fine Art",
@@ -15960,14 +15115,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of western landscapes fine art comes alive in this piece, showcasing frederic remington and cowboy artwork. A testament to western art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 308,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-qJtstjP",
     "title": "Exploring Western Cowboys",
@@ -15994,17 +15146,14 @@ export const galleryData = [
     ],
     "story": "Delving into frontier life, this work by Wayne Heim highlights cowboy art through painterly cowboy portraits and powerful works of art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 309,
     "themes": {
       "cowboys-and-horses": 29
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-9LC3ZrM",
     "title": "Lifted",
@@ -16048,11 +15197,7 @@ export const galleryData = [
       "love-goodbye": 44,
       "whispering-reflection": 85
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-79P6kHT",
     "title": "Cowboy Art: By Lantern Light",
@@ -16103,7 +15248,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman doing some mending by lamp light in her frontier cabin. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -16114,10 +15259,7 @@ export const galleryData = [
       "frontier-women": 76,
       "whispering-reflection": 82
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-V9Jx8D8",
     "title": "Frederic Remington And Western Art",
@@ -16142,15 +15284,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of outlaw portraits comes alive in this piece, showcasing frederic remington and cowboy art. A testament to rustic charm in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 312,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-2s2LtQp",
     "title": "Painterly Cowboy Portraits Moment",
@@ -16176,18 +15314,14 @@ export const galleryData = [
     ],
     "story": "Delving into western cowboy art, this work by Wayne Heim highlights western art through fine art Western photography and cowboy artwork. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 313,
     "themes": {
       "cowboys-and-horses": 42
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-QNLd2xZ",
     "title": "Fine Art Cowboy Artwork",
@@ -16213,17 +15347,14 @@ export const galleryData = [
     ],
     "story": "Delving into frontier life, this work by Wayne Heim highlights powerful works of art through wild west photography and historic western prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 314,
     "themes": {
       "cowboys-and-horses": 32
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-9Qt4nh7",
     "title": "Western Cowboys Cowboy",
@@ -16281,17 +15412,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of Western cowboys comes alive in this piece, showcasing outlaw portraits and cowboy painting art. A testament to cowboy artwork in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 316,
     "themes": {
       "cowboys-and-horses": 33
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-4G9GB3b",
     "title": "Fine Art Frederic Remington",
@@ -16319,7 +15447,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of rustic charm comes alive in this piece, showcasing western fine art and rugged spirit. A testament to cowboy painting art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 317,
@@ -16328,11 +15456,7 @@ export const galleryData = [
       "dust-thunder": 22,
       "law-outlaws": 76
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-DK8t88F",
     "title": "Cowboy Art In Fine Art",
@@ -16361,7 +15485,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy painting art comes alive in this piece, showcasing wild west photography and frontier life. A testament to powerful works of art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 318,
@@ -16370,10 +15494,7 @@ export const galleryData = [
       "dust-thunder": 27,
       "law-outlaws": 75
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-LjBc6N6",
     "title": "Frontier Life Moment",
@@ -16400,18 +15521,14 @@ export const galleryData = [
     ],
     "story": "This image embodies rugged spirit and painterly cowboy portraits, captured by Wayne Heim in his signature style. It reflects powerful works of art with a touch of cowboy portraits. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 319,
     "themes": {
       "cowboys-and-horses": 65
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-qNb7qRw",
     "title": "Capturing Historic Western Prints",
@@ -16438,17 +15555,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing cowboy painting art and wild west photography. A testament to rugged spirit in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 320,
     "themes": {
       "cowboys-and-horses": 40
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-kk6DvMJ",
     "title": "Painterly Cowboy Portraits Moment",
@@ -16476,18 +15590,14 @@ export const galleryData = [
     ],
     "story": "Delving into powerful works of art, this work by Wayne Heim highlights rugged spirit through western fine art and western cowboy art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 321,
     "themes": {
       "cowboys-and-horses": 39
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-CmHHjwV",
     "title": "Western Cowboy Art And Cowboy Art",
@@ -16513,7 +15623,7 @@ export const galleryData = [
     ],
     "story": "Delving into western cowboy art, this work by Wayne Heim highlights painterly cowboy portraits through Western cowboys and wild west photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 322,
@@ -16522,11 +15632,7 @@ export const galleryData = [
       "firelight-shadow": 70,
       "whispering-reflection": 87
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-mWMXhcc",
     "title": "Saying Goodbye - Cowboy Art",
@@ -16558,7 +15664,7 @@ export const galleryData = [
     ],
     "story": "This image embodies cowboy art and western fine art, captured by Wayne Heim in his signature style. It reflects western art with a touch of painterly cowboy portraits. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 323,
@@ -16569,10 +15675,7 @@ export const galleryData = [
       "love-goodbye": 46,
       "whispering-reflection": 93
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Q3Qm4f2",
     "title": "Western Cowboy Art Portrait",
@@ -16598,7 +15701,7 @@ export const galleryData = [
     ],
     "story": "Delving into fine art Western photography, this work by Wayne Heim highlights Western cowboys through wild west photography and cowboy portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 324,
@@ -16608,10 +15711,7 @@ export const galleryData = [
       "sketches-of-legends": 111,
       "whispering-reflection": 88
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-fJmGF7N",
     "title": "Fine Art Western Photography Study",
@@ -16635,7 +15735,7 @@ export const galleryData = [
     ],
     "story": "This image embodies fine art Western photography and wild west photography, captured by Wayne Heim in his signature style. It reflects western art with a touch of painterly cowboy portraits. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 325,
@@ -16644,10 +15744,7 @@ export const galleryData = [
       "sketches-of-legends": 116,
       "whispering-reflection": 90
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-drTwKMw",
     "title": "Cowboy Portraits Moment",
@@ -16674,15 +15771,11 @@ export const galleryData = [
     ],
     "story": "Delving into cowboy artwork, this work by Wayne Heim highlights powerful works of art through western art and cowboy painting art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 326,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-549JVNk",
     "title": "The Essence Of Western Cowboys",
@@ -16710,14 +15803,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing wild west photography and cowboy painting art. A testament to fine art Western photography in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 327,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-KXLmcXW",
     "title": "Fine Art Outlaw Portraits",
@@ -16744,7 +15834,7 @@ export const galleryData = [
     ],
     "story": "This image embodies frontier life and cowboy portraits, captured by Wayne Heim in his signature style. It reflects western landscapes fine art with a touch of cowboy art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 328,
@@ -16776,7 +15866,7 @@ export const galleryData = [
     ],
     "story": "This image embodies cowboy portraits and fine art Western photography, captured by Wayne Heim in his signature style. It reflects frontier life with a touch of powerful works of art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 329,
@@ -16817,7 +15907,7 @@ export const galleryData = [
     ],
     "story": "Delving into frontier life, this work by Wayne Heim highlights western fine art through western art and wild west photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 330,
@@ -16857,14 +15947,11 @@ export const galleryData = [
     ],
     "story": "Delving into frederic remington, this work by Wayne Heim highlights rugged spirit through cowboy portraits and cowboy painting art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 331,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-XLXGHT9",
     "title": "Frederic Remington In Fine Art",
@@ -16889,17 +15976,14 @@ export const galleryData = [
     ],
     "story": "Delving into wild west photography, this work by Wayne Heim highlights cowboy artwork through western art and western landscapes fine art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "",
     "sortOrder": 332,
     "themes": {
       "sketches-of-legends": 113
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-3V4rCN8",
     "title": "Rustic Charm Moment",
@@ -16932,7 +16016,7 @@ export const galleryData = [
     ],
     "story": "Delving into fine art Western photography, this work by Wayne Heim highlights wild west photography through cowboy artwork and western art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 333,
@@ -16940,11 +16024,7 @@ export const galleryData = [
       "aces-smoke-whiskey": 26,
       "firelight-shadow": 71
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-6wMDxdF",
     "title": "Cowboy Art: Winter Blues",
@@ -16995,7 +16075,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman watching the storm rage outside her window in long winter. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -17010,11 +16090,7 @@ export const galleryData = [
       "sketches-of-legends": 107,
       "whispering-reflection": 84
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-msZxHgR",
     "title": "Cowboy Painting Art Moment",
@@ -17048,15 +16124,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing frederic remington and rugged spirit. A testament to fine art Western photography in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 335,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-mn8RKLL",
     "title": "Capturing Outlaw Portraits",
@@ -17084,7 +16156,7 @@ export const galleryData = [
     ],
     "story": "Delving into wild west photography, this work by Wayne Heim highlights western art through western fine art and western landscapes fine art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 336,
@@ -17093,11 +16165,7 @@ export const galleryData = [
       "frontier-women": 80,
       "law-outlaws": 77
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Q2cHRkn",
     "title": "Historic Western Prints Moment",
@@ -17126,7 +16194,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of western landscapes fine art comes alive in this piece, showcasing western fine art and painterly cowboy portraits. A testament to rustic charm in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 337,
@@ -17136,11 +16204,7 @@ export const galleryData = [
       "frontier-women": 81,
       "law-outlaws": 78
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-S9PzB6d",
     "title": "Rustic Charm In Fine Art",
@@ -17166,7 +16230,7 @@ export const galleryData = [
     ],
     "story": "Delving into wild west photography, this work by Wayne Heim highlights frederic remington through outlaw portraits and cowboy painting art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 338,
@@ -17176,11 +16240,7 @@ export const galleryData = [
       "dust-thunder": 30,
       "frontier-women": 89
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-7PMm6sZ",
     "title": "Western Fine Art In Fine Art",
@@ -17208,7 +16268,7 @@ export const galleryData = [
     ],
     "story": "Delving into frontier life, this work by Wayne Heim highlights rugged spirit through western art and historic western prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 339,
@@ -17216,11 +16276,7 @@ export const galleryData = [
       "cowboys-and-horses": 54,
       "frontier-women": 87
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-9frbWfJ",
     "title": "Powerful Works Of Art - Western Fine Art",
@@ -17247,15 +16303,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of wild west photography comes alive in this piece, showcasing frontier life and western cowboy art. A testament to western landscapes fine art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 340,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-3vxbnpZ",
     "title": "Western Cowboys Portrait",
@@ -17283,18 +16335,14 @@ export const galleryData = [
     ],
     "story": "This image embodies wild west photography and historic western prints, captured by Wayne Heim in his signature style. It reflects frontier life with a touch of cowboy artwork. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 341,
     "themes": {
       "cowboys-and-horses": 50
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-bhXQ8Hx",
     "title": "Cowboy Portraits - Painterly Cowboy Portraits",
@@ -17307,12 +16355,10 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhXQ8Hx/1/Nh7tMMT74Mvj3n2CrTvXxmq7Pg86cK9SLRzxdgd8q/S/_HF26210-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhXQ8Hx/A",
-    "keywords": [
-      "HF28249"
-    ],
+    "keywords": ["HF28249"],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 342,
@@ -17321,11 +16367,7 @@ export const galleryData = [
       "frontier-women": 88,
       "whispering-reflection": 94
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-vP7bLLc",
     "title": "Fine Art Cowboy Artwork",
@@ -17356,17 +16398,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of painterly cowboy portraits comes alive in this piece, showcasing cowboy artwork and cowboy portraits. A testament to outlaw portraits in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 343,
     "themes": {
       "cowboys-and-horses": 47
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-FNSvKZz",
     "title": "Western Cowboys In Fine Art",
@@ -17399,7 +16438,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of outlaw portraits comes alive in this piece, showcasing rustic charm and western cowboy art. A testament to frontier life in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 344,
@@ -17407,11 +16446,7 @@ export const galleryData = [
       "cowboys-and-horses": 48,
       "whispering-reflection": 91
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-XTs3sP3",
     "title": "Western Fine Art Portrait",
@@ -17438,17 +16473,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of historic western prints comes alive in this piece, showcasing western landscapes fine art and outlaw portraits. A testament to Western cowboys in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 345,
     "themes": {
       "cowboys-and-horses": 52
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-6FGmZK4",
     "title": "Wild West Photography - Cowboy Art",
@@ -17474,7 +16506,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy painting art comes alive in this piece, showcasing western cowboy art and western landscapes fine art. A testament to wild west photography in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 346,
@@ -17484,10 +16516,7 @@ export const galleryData = [
       "frontier-women": 84,
       "whispering-reflection": 92
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-G9kSt8Q",
     "title": "Outlaw Portraits - Powerful Works Of Art",
@@ -17520,18 +16549,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of western landscapes fine art comes alive in this piece, showcasing wild west photography and cowboy portraits. A testament to cowboy painting art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 347,
     "themes": {
       "cowboys-and-horses": 56
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-N8PLGR4",
     "title": "Cowboy Portraits Cowboy",
@@ -17558,7 +16583,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of outlaw portraits comes alive in this piece, showcasing western landscapes fine art and frontier life. A testament to Western cowboys in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 348,
@@ -17566,10 +16591,7 @@ export const galleryData = [
       "women-of-the-west": 44,
       "frontier-women": 85
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-5XC2cj5",
     "title": "Cowboy Art: Hat Salesman",
@@ -17620,7 +16642,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of old west salesman with beard, hat and pipe. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -17655,7 +16677,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of western art comes alive in this piece, showcasing western cowboy art and western canon. A testament to western canon in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 350,
@@ -17696,7 +16718,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing rustic charm and outlaw portraits. A testament to frederic remington in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "",
     "sortOrder": 351,
@@ -17755,7 +16777,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of man standing his ground in his cabin as trouble brews outside his window. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -17766,11 +16788,7 @@ export const galleryData = [
       "law-outlaws": 80,
       "sketches-of-legends": 121
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-RrRPTZP",
     "title": "Cowboy Art: Classic Cowboy Portrait #1",
@@ -17821,7 +16839,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of a vintage lawman cowboy. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -17831,10 +16849,7 @@ export const galleryData = [
       "law-outlaws": 81,
       "sketches-of-legends": 122
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-pZDmzdq",
     "title": "Cowboy Artwork Moment",
@@ -17867,7 +16882,7 @@ export const galleryData = [
     ],
     "story": "Delving into rustic charm, this work by Wayne Heim highlights rugged spirit through Western cowboys and frederic remington. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 354,
@@ -17876,10 +16891,7 @@ export const galleryData = [
       "firelight-shadow": 73,
       "sketches-of-legends": 124
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-QHN52S6",
     "title": "Rugged Spirit Moment",
@@ -17913,14 +16925,11 @@ export const galleryData = [
     ],
     "story": "This image embodies western cowboy art and western cowboy art, captured by Wayne Heim in his signature style. It reflects historic western prints with a touch of cowboy portraits. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 355,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-xhZhRpL",
     "title": "Frontier Life Moment",
@@ -17947,17 +16956,14 @@ export const galleryData = [
     ],
     "story": "Delving into cowboy portraits, this work by Wayne Heim highlights rustic charm through rugged spirit and wild west photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 356,
     "themes": {
       "sketches-of-legends": 123
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-KgkW54w",
     "title": "Western Cowboys And Frontier Life",
@@ -17991,14 +16997,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of western landscapes fine art comes alive in this piece, showcasing western art and cowboy portraits. A testament to outlaw portraits in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 357,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-T7Sjp7D",
     "title": "Cowboy Art Portrait",
@@ -18024,14 +17027,11 @@ export const galleryData = [
     ],
     "story": "This image embodies fine art Western photography and outlaw portraits, captured by Wayne Heim in his signature style. It reflects outlaw portraits with a touch of frontier life. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 358,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-6QFpvwm",
     "title": "The Essence Of Wild West Photography",
@@ -18063,7 +17063,7 @@ export const galleryData = [
     ],
     "story": "Delving into cowboy painting art, this work by Wayne Heim highlights frontier life through wild west photography and historic western prints. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 359,
@@ -18072,10 +17072,7 @@ export const galleryData = [
       "dust-thunder": 29,
       "law-outlaws": 79
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-f9nZhvM",
     "title": "Cowboy Portraits - Cowboy Artwork",
@@ -18102,14 +17099,11 @@ export const galleryData = [
     ],
     "story": "This image embodies western art and cowboy art, captured by Wayne Heim in his signature style. It reflects fine art Western photography with a touch of fine art Western photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 360,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-h6SnLK4",
     "title": "Powerful Works Of Art And Western Canon",
@@ -18135,18 +17129,14 @@ export const galleryData = [
     ],
     "story": "Delving into western cowboy art, this work by Wayne Heim highlights cowboy portraits through frederic remington and cowboy painting art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 361,
     "themes": {
       "cowboys-and-horses": 57
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Z3sHLGx",
     "title": "Cowboy Portraits Study",
@@ -18172,17 +17162,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of frontier life comes alive in this piece, showcasing historic western prints and cowboy portraits. A testament to rugged spirit in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 362,
     "themes": {
       "cowboys-and-horses": 59
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-JcHKH5f",
     "title": "Painterly Cowboy Portraits Portrait",
@@ -18210,18 +17197,14 @@ export const galleryData = [
     ],
     "story": "This image embodies cowboy art and cowboy portraits, captured by Wayne Heim in his signature style. It reflects frederic remington with a touch of western art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 363,
     "themes": {
       "cowboys-and-horses": 58
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-cRmVc3S",
     "title": "Painterly Cowboy Portraits In Fine Art",
@@ -18245,18 +17228,14 @@ export const galleryData = [
     ],
     "story": "Delving into cowboy portraits, this work by Wayne Heim highlights rustic charm through western cowboy art and rustic charm. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 364,
     "themes": {
       "cowboys-and-horses": 60
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-LBrd53F",
     "title": "Capturing Cowboy Painting Art",
@@ -18289,7 +17268,7 @@ export const galleryData = [
     ],
     "story": "This image embodies painterly cowboy portraits and wild west photography, captured by Wayne Heim in his signature style. It reflects frederic remington with a touch of frontier life. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 365,
@@ -18297,11 +17276,7 @@ export const galleryData = [
       "cowboys-and-horses": 61,
       "dust-thunder": 24
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-7DDFpHQ",
     "title": "Capturing Rugged Spirit",
@@ -18335,14 +17310,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing cowboy portraits and western canon. A testament to painterly cowboy portraits in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 366,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-PzwsgTk",
     "title": "Western Art Study",
@@ -18376,14 +17348,11 @@ export const galleryData = [
     ],
     "story": "Delving into wild west photography, this work by Wayne Heim highlights western cowboy art through outlaw portraits and rugged spirit. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 367,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-7dQdHmC",
     "title": "Capturing Western Cowboys",
@@ -18417,7 +17386,7 @@ export const galleryData = [
     ],
     "story": "This image embodies powerful works of art and western landscapes fine art, captured by Wayne Heim in his signature style. It reflects painterly cowboy portraits with a touch of western fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 368,
@@ -18450,7 +17419,7 @@ export const galleryData = [
     ],
     "story": "Delving into frederic remington, this work by Wayne Heim highlights outlaw portraits through western landscapes fine art and outlaw portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 369,
@@ -18459,11 +17428,7 @@ export const galleryData = [
       "hardship-sorrow": 38,
       "sketches-of-legends": 126
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-cJLTQfD",
     "title": "Cowboy Artwork Moment",
@@ -18490,18 +17455,14 @@ export const galleryData = [
     ],
     "story": "This image embodies outlaw portraits and historic western prints, captured by Wayne Heim in his signature style. It reflects painterly cowboy portraits with a touch of western landscapes fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 370,
     "themes": {
       "cowboys-and-horses": 63
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-3ZxxB7B",
     "title": "Painterly Cowboy Portraits Study",
@@ -18527,7 +17488,7 @@ export const galleryData = [
     ],
     "story": "This image embodies powerful works of art and western fine art, captured by Wayne Heim in his signature style. It reflects western canon with a touch of frederic remington. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 371,
@@ -18536,10 +17497,7 @@ export const galleryData = [
       "love-goodbye": 47,
       "whispering-reflection": 97
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-3Gjqpvz",
     "title": "Capturing Powerful Works Of Art",
@@ -18564,7 +17522,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of frontier life comes alive in this piece, showcasing western canon and cowboy portraits. A testament to western canon in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 372,
@@ -18574,10 +17532,7 @@ export const galleryData = [
       "sketches-of-legends": 128,
       "whispering-reflection": 96
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Vd5VW3L",
     "title": "Wild West Photography Moment",
@@ -18603,7 +17558,7 @@ export const galleryData = [
     ],
     "story": "This image embodies western landscapes fine art and cowboy painting art, captured by Wayne Heim in his signature style. It reflects rustic charm with a touch of rustic charm. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 373,
@@ -18635,7 +17590,7 @@ export const galleryData = [
     ],
     "story": "This image embodies fine art Western photography and wild west photography, captured by Wayne Heim in his signature style. It reflects historic western prints with a touch of historic western prints. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 374,
@@ -18643,10 +17598,7 @@ export const galleryData = [
       "cowboys-and-horses": 64,
       "frontier-women": 93
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-9DLx78V",
     "title": "Western Landscapes Fine Art Portrait",
@@ -18678,7 +17630,7 @@ export const galleryData = [
     ],
     "story": "Delving into western fine art, this work by Wayne Heim highlights cowboy portraits through western canon and western canon. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 375,
@@ -18686,10 +17638,7 @@ export const galleryData = [
       "women-of-the-west": 47,
       "frontier-women": 94
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-WMs24Db",
     "title": "Painterly Cowboy Portraits Moment",
@@ -18727,11 +17676,7 @@ export const galleryData = [
       "hardship-sorrow": 41,
       "love-goodbye": 49
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-r4TQwkx",
     "title": "Western Cowboys Moment",
@@ -18758,7 +17703,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of rustic charm comes alive in this piece, showcasing powerful works of art and cowboy art. A testament to painterly cowboy portraits in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 377,
@@ -18766,11 +17711,7 @@ export const galleryData = [
       "cowboys-and-horses": 66,
       "whispering-reflection": 98
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-pN58VX3",
     "title": "Painterly Cowboy Portraits Moment",
@@ -18806,10 +17747,7 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 378,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-LWJjbct",
     "title": "Historic Western Prints Moment",
@@ -18842,17 +17780,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing historic western prints and historic western prints. A testament to Western cowboys in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 379,
     "themes": {
       "cowboys-and-horses": 68
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-cnqWH7k",
     "title": "The Essence Of Outlaw Portraits",
@@ -18877,7 +17812,7 @@ export const galleryData = [
     ],
     "story": "This image embodies western landscapes fine art and rugged spirit, captured by Wayne Heim in his signature style. It reflects western canon with a touch of frederic remington. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 380,
@@ -18885,10 +17820,7 @@ export const galleryData = [
       "cowboys-and-horses": 81,
       "hardship-sorrow": 48
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-qqVG3fw",
     "title": "Historic Western Prints Portrait",
@@ -18915,7 +17847,7 @@ export const galleryData = [
     ],
     "story": "Delving into western fine art, this work by Wayne Heim highlights frederic remington through western fine art and western art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 381,
@@ -18926,10 +17858,7 @@ export const galleryData = [
       "love-goodbye": 52,
       "whispering-reflection": 102
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-DfmB2Hv",
     "title": "Wild West Photography Study",
@@ -18961,17 +17890,14 @@ export const galleryData = [
     ],
     "story": "This image embodies western fine art and western fine art, captured by Wayne Heim in his signature style. It reflects frederic remington with a touch of cowboy art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 382,
     "themes": {
       "cowboys-and-horses": 69
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-FVZTmxz",
     "title": "The Essence Of Western Canon",
@@ -19005,18 +17931,14 @@ export const galleryData = [
     ],
     "story": "This image embodies cowboy artwork and historic western prints, captured by Wayne Heim in his signature style. It reflects frontier life with a touch of cowboy art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 383,
     "themes": {
       "cowboys-and-horses": 72
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-sc9dBkm",
     "title": "Wild West Photography In Fine Art",
@@ -19086,17 +18008,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of frederic remington comes alive in this piece, showcasing western canon and powerful works of art. A testament to western landscapes fine art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 385,
     "themes": {
       "cowboys-and-horses": 71
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-F6KMqpf",
     "title": "Fine Art Cowboy Portraits",
@@ -19128,7 +18047,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of western fine art comes alive in this piece, showcasing rustic charm and cowboy artwork. A testament to fine art Western photography in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 386,
@@ -19136,11 +18055,7 @@ export const galleryData = [
       "cowboys-and-horses": 73,
       "sketches-of-legends": 130
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-r3Kq9B4",
     "title": "Exploring Fine Art Western Photography",
@@ -19172,15 +18087,11 @@ export const galleryData = [
     ],
     "story": "Delving into western fine art, this work by Wayne Heim highlights cowboy art through historic western prints and western fine art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 387,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Fx7pPGJ",
     "title": "Frederic Remington Moment",
@@ -19212,15 +18123,11 @@ export const galleryData = [
     ],
     "story": "Delving into frontier life, this work by Wayne Heim highlights painterly cowboy portraits through rugged spirit and western landscapes fine art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 388,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-cmH2bkC",
     "title": "Untitled",
@@ -19233,22 +18140,17 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/M8z95fTT77XwzNGwdNDNkCs3rtpS7tjXQrBfmFPmc/S/_WHO8934-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/A",
-    "keywords": [
-      "WHO4466"
-    ],
+    "keywords": ["WHO4466"],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 389,
     "themes": {
       "cowboys-and-horses": 76
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Nm9DNhq",
     "title": "Rustic Charm And Western Fine Art",
@@ -19277,7 +18179,7 @@ export const galleryData = [
     ],
     "story": "Delving into frontier life, this work by Wayne Heim highlights western cowboy art through cowboy artwork and painterly cowboy portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 390,
@@ -19288,10 +18190,7 @@ export const galleryData = [
       "sketches-of-legends": 136,
       "whispering-reflection": 108
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-FkPcsBV",
     "title": "Fine Art Historic Western Prints",
@@ -19315,7 +18214,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing frontier life and outlaw portraits. A testament to rugged spirit in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 391,
@@ -19323,11 +18222,7 @@ export const galleryData = [
       "cowboys-and-horses": 84,
       "frontier-women": 112
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-qCNGgfg",
     "title": "Cowboy Art Portrait",
@@ -19350,17 +18245,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing western canon and cowboy portraits. A testament to rustic charm in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 392,
     "themes": {
       "sketches-of-legends": 137
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-pVMMLRp",
     "title": "Frontier Life Portrait",
@@ -19387,17 +18279,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing wild west photography and western landscapes fine art. A testament to western cowboy art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 393,
     "themes": {
       "cowboys-and-horses": 82
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-66qXms3",
     "title": "Fine Art Fine Art Western Photography",
@@ -19422,18 +18311,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of fine art Western photography comes alive in this piece, showcasing rustic charm and western cowboy art. A testament to frederic remington in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 394,
     "themes": {
       "cowboys-and-horses": 83
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-vc6XQPf",
     "title": "Painterly Cowboy Portraits In Fine Art",
@@ -19467,17 +18352,14 @@ export const galleryData = [
     ],
     "story": "Delving into cowboy painting art, this work by Wayne Heim highlights cowboy portraits through rugged spirit and frontier life. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 395,
     "themes": {
       "sketches-of-legends": 129
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-C5Zh8Ld",
     "title": "Till Death Do Us Part v2",
@@ -19524,10 +18406,7 @@ export const galleryData = [
       "love-goodbye": 55,
       "whispering-reflection": 105
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-tnWbQrT",
     "title": "Once You Commit",
@@ -19552,7 +18431,7 @@ export const galleryData = [
     ],
     "story": "No one said it out loud. Didn’t need to.\n\nThe land narrowed. The air changed. That quiet kind of warning that shows up too late to turn polite.\n\nThis wasn’t the long way. It was the only one left.\n\nWhatever waited beyond the stone — it wasn’t interested in excuses. Only whether you kept moving.\n\nNo looking back now. Not with witnesses. Not with the ground already deciding.",
     "notes": "This piece centers on inevitability rather than action. Heim uses scale and atmosphere to place the viewer inside a moment where retreat is no longer an option, and meaning lies ahead rather than behind. A strong acquisition for collectors drawn to narrative tension, mythic landscapes, and the psychological weight of Western journeys.",
-    "rating": 4,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 397,
@@ -19560,10 +18439,7 @@ export const galleryData = [
       "cowboys-with-horses": 12,
       "cowboys-and-horses": 15
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-bJ9LJtg",
     "title": "Somewhere Else to Turn",
@@ -19597,11 +18473,7 @@ export const galleryData = [
     "themes": {
       "cowboys-and-horses": 19
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-pcP7hcf",
     "title": "Where the Light Settles",
@@ -19639,10 +18511,7 @@ export const galleryData = [
       "sketches-of-legends": 6,
       "whispering-reflection": 8
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-KTGLfqc",
     "title": "Cowboy Art: Is that you Jim?",
@@ -19693,7 +18562,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of woman in the window waiting for Joe to come home. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -19767,10 +18636,7 @@ export const galleryData = [
       "law-outlaws": 42,
       "sketches-of-legends": 46
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-GPq6m5q",
     "title": "Waiting for news from camp",
@@ -19783,9 +18649,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/0/KS6qh3Vd5WDpsfCmH2PRgTL4xbhbdmHC6Jc57TvN7/S/_WHO2874-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GPq6m5q/A",
-    "keywords": [
-      "HF26271"
-    ],
+    "keywords": ["HF26271"],
     "story": "Not much but any shade will do out here in the open. Where could they be? They said they wouldn't be long but it's been hours.",
     "notes": "",
     "rating": 4,
@@ -19795,10 +18659,7 @@ export const galleryData = [
     "themes": {
       "frontier-women": 43
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-WvWvS7x",
     "title": "Capturing Cowboy Portraits",
@@ -19825,7 +18686,7 @@ export const galleryData = [
     ],
     "story": "This image embodies rugged spirit and western fine art, captured by Wayne Heim in his signature style. It reflects western fine art with a touch of fine art Western photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 403,
@@ -19865,7 +18726,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing western fine art and cowboy artwork. A testament to fine art Western photography in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 404,
@@ -19911,7 +18772,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of powerful works of art comes alive in this piece, showcasing rustic charm and western fine art. A testament to western art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 405,
@@ -19920,10 +18781,7 @@ export const galleryData = [
       "dust-thunder": 20,
       "law-outlaws": 73
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-CgTvzgP",
     "title": "The Essence Of Fine Art Western Photography",
@@ -19951,7 +18809,7 @@ export const galleryData = [
     ],
     "story": "Delving into cowboy artwork, this work by Wayne Heim highlights Western cowboys through cowboy portraits and western landscapes fine art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 2,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 406,
@@ -19961,10 +18819,7 @@ export const galleryData = [
       "frontier-women": 110,
       "law-outlaws": 87
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-rdJ6CV7",
     "title": "Fine Art Western Art",
@@ -19997,7 +18852,7 @@ export const galleryData = [
     ],
     "story": "Delving into frederic remington, this work by Wayne Heim highlights cowboy portraits through painterly cowboy portraits and rustic charm. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 407,
@@ -20032,7 +18887,7 @@ export const galleryData = [
     ],
     "story": "Delving into cowboy painting art, this work by Wayne Heim highlights wild west photography through outlaw portraits and western canon. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 408,
@@ -20073,14 +18928,11 @@ export const galleryData = [
     ],
     "story": "Delving into western landscapes fine art, this work by Wayne Heim highlights rugged spirit through western art and fine art Western photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 409,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-CmScKnv",
     "title": "Capturing Powerful Works Of Art",
@@ -20112,17 +18964,14 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of historic western prints comes alive in this piece, showcasing western art and outlaw portraits. A testament to frederic remington in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 410,
     "themes": {
       "frontier-women": 90
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-95vTrrv",
     "title": "Fine Art Western Photography In Fine Art",
@@ -20155,7 +19004,7 @@ export const galleryData = [
     ],
     "story": "Delving into cowboy artwork, this work by Wayne Heim highlights fine art Western photography through wild west photography and western cowboy art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 411,
@@ -20165,10 +19014,7 @@ export const galleryData = [
       "frontier-women": 91,
       "whispering-reflection": 95
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-zN6f785",
     "title": "On the Far Side",
@@ -20201,18 +19047,14 @@ export const galleryData = [
     ],
     "story": "The water—a cold, indifferent jolt to the senses.\nDusk gathering behind him, the horse knows the way; no looking back.\nEvery crossing, every choice of direction, erases something. On the far side—awaits new stories, written by the choices we make at every crossing.",
     "notes": "The true subject here is not the cowboy, nor the horse, but the crossing itself. Heim suspends us in that fleeting, uncertain space between what was and what might be. Note the refusal to indulge in sentimentality: the palette is honest, the composition uncluttered, the posture of the rider neither heroic nor defeated, but simply present.\n\nThere’s a studied restraint at work—echoes of Dixon, perhaps, but more pointedly, a kind of quiet existentialism reminiscent of early American plein air painters, or even the cinematic patience of a Ford western. The reflection in the water? It’s the liminal self, fractured and remade with each crossing. This is narrative photography for those who savor nuance. The image rewards repeated viewing, offering new subtleties with every return—much like the river itself, never the same twice.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 412,
     "themes": {
       "firelight-shadow": 68
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-cKL7kjn",
     "title": "Western Cowboys Moment",
@@ -20247,7 +19089,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy painting art comes alive in this piece, showcasing historic western prints and fine art Western photography. A testament to frederic remington in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 413,
@@ -20283,7 +19125,7 @@ export const galleryData = [
     ],
     "story": "Delving into powerful works of art, this work by Wayne Heim highlights wild west photography through western art and cowboy artwork. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 414,
@@ -20325,7 +19167,7 @@ export const galleryData = [
     ],
     "story": "Delving into western art, this work by Wayne Heim highlights frederic remington through cowboy portraits and rugged spirit. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 2,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 415,
@@ -20365,7 +19207,7 @@ export const galleryData = [
     ],
     "story": "This image embodies rugged spirit and rustic charm, captured by Wayne Heim in his signature style. It reflects western landscapes fine art with a touch of powerful works of art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 2,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 416,
@@ -20407,7 +19249,7 @@ export const galleryData = [
     ],
     "story": "Delving into painterly cowboy portraits, this work by Wayne Heim highlights western landscapes fine art through western cowboy art and outlaw portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 2,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 417,
@@ -20441,7 +19283,7 @@ export const galleryData = [
     ],
     "story": "Delving into rustic charm, this work by Wayne Heim highlights Western cowboys through frederic remington and western art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 418,
@@ -20475,12 +19317,11 @@ export const galleryData = [
 
     "story": "Delving into rugged spirit, this work by Wayne Heim highlights cowboy painting art through rustic charm and cowboy painting art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 419,
-    availableSeries: ["foundation"]
-  },
+},
   {
     "id": "i-PqtMvHt",
     "title": "Fine Art Painterly Cowboy Portraits",
@@ -20513,7 +19354,7 @@ export const galleryData = [
     ],
     "story": "This image embodies western cowboy art and western fine art, captured by Wayne Heim in his signature style. It reflects frederic remington with a touch of powerful works of art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 420,
@@ -20546,7 +19387,7 @@ export const galleryData = [
     ],
     "story": "Delving into cowboy artwork, this work by Wayne Heim highlights outlaw portraits through western fine art and wild west photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 421,
@@ -20585,7 +19426,7 @@ export const galleryData = [
     ],
     "story": "This image embodies rugged spirit and wild west photography, captured by Wayne Heim in his signature style. It reflects frederic remington with a touch of outlaw portraits. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 2,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 422
@@ -20640,7 +19481,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of gunsmith in his tent waiting for a customer. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -20700,7 +19541,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy not being happy. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -20760,7 +19601,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of cowboy counting cards in the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 2,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -20822,7 +19663,7 @@ export const galleryData = [
     ],
     "story": "Painterly Wild West themed photography of weary woman traveler. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 2,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -20862,7 +19703,7 @@ export const galleryData = [
     ],
     "story": "This image embodies frederic remington and rustic charm, captured by Wayne Heim in his signature style. It reflects historic western prints with a touch of cowboy artwork. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 2,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 427,
@@ -20897,7 +19738,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of western fine art comes alive in this piece, showcasing western art and western canon. A testament to western canon in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 2,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 428,
@@ -20975,7 +19816,7 @@ export const galleryData = [
 
     "story": "This image embodies western fine art and cowboy art, captured by Wayne Heim in his signature style. It reflects rustic charm with a touch of rugged spirit. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 430
@@ -21664,8 +20505,5 @@ export const galleryData = [
       "dust-thunder": 28,
       "law-outlaws": 72
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  }
+}
 ];

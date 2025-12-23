@@ -23,28 +23,26 @@ export const galleryData = [
   },
   {
     "id": "i-wxLBqLg",
-    "title": "Sunset Landscape Photography Study",
-    "description": "Experience sunset landscape photography through this evocative sunset landscape photography from Wayne Heim's portfolio. This piece highlights painterly sunset scenes with painterly sunset scenes, while conveying painterly sunset scenes, ideal for those who appreciate sunset landscape photography. © Wayne Heim",
-    "alt": "Grand Sunset Photography by Wayne Heim",
+    "title": "Grand Sunset Photography by Wayne Heim",
+    "description": "Grand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains ©Wayne Heim",
+    "alt": "White Paint - Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-wxLBqLg/A",
+
     "keywords": [
-      "K4Studios",
-      "Wayne Heim",
-      "Jackson Hole",
-      "Wyoming",
-      "Teton Mountsins",
-      "snow covered",
-      "winter",
-      "Western scene",
-      "mountains",
-      "sunset",
-      "color photography",
-      "sunset landscape photography",
-      "painterly sunset scenes"
+      "k4 studios",
+      "wayne heim",
+      "wyoming",
+      "wyoming landscape photography",
+      "wyoming nature photography",
+      "grand tetons",
+      "window",
+      "meadow",
+      "mountains"
     ],
-    "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights sunset landscape photography through painterly sunset scenes and painterly sunset scenes. A powerful statement in photography. © Wayne Heim",
+
+    "story": "Grand Sunset. Jackson Hole Wyoming, sunset lights the sky behind snow covered Grand Teton mountains. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 0,
@@ -53,7 +51,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/Nd9tfNXBDcmB62LHtxrQKxhMHQMrzMctf5CCmP32f/L/P1030095-c-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/M2jNXLjQtQ2RtSS9CbzNhRgsNWSTX8K62tJNqbwPc/M/P1030095-c-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-wxLBqLg/4/KGq92CzBPQt6RQMVCSkZLpMd34hKc3hnmvpPQ6JrX/S/P1030095-c-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-VScCFDQ",
@@ -61,6 +60,7 @@ export const galleryData = [
     "description": "Delve into painterly sunset scenes via this painterly sunset scenes by Wayne Heim. Highlighting sunset landscape photography through sunset landscape photography and sunset landscape photography, it's great for collectors interested in painterly sunset scenes. © Wayne Heim",
     "alt": "Grand Sunset Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-VScCFDQ/A",
+
     "keywords": [
       "K4Studios",
       "Wayne Heim",
@@ -76,9 +76,10 @@ export const galleryData = [
       "painterly sunset scenes",
       "sunset landscape photography"
     ],
-    "story": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography and sunset landscape photography. A testament to painterly sunset scenes in fine art. © Wayne Heim",
+
+    "story": "Wayne Heim's exploration of sunset landscape photography comes alive in this piece, showcasing sunset landscape photography and sunset landscape photography. A testament to painterly sunset scenes in fine art. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 1,
@@ -87,30 +88,31 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/M85tmDppH8PSTPhXbwMMDZFDkgnm7NCRb9rkJZWvq/L/_WHZ7317-Edit-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/KRrR6vTZ2S8ZGjXcsCBNDfVtQQpsNfjqS3R8gLSqg/M/_WHZ7317-Edit-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-VScCFDQ/4/MX2fJ7W3VzkvHvwdmxgBN54RscXqFxbbk2jB7MVsM/S/_WHZ7317-Edit-Edit-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-kcvnCvz",
     "title": "Sunset in Arches. #2 Photography by Wayne Heim",
-    "description": "18 x 24 In StockSunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah ©Wayne Heim",
-    "alt": "Photographic artwork © Wayne Heim",
+    "description": "Sunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah ©Wayne Heim",
+    "alt": "Sunset in Arches  #1   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-kcvnCvz/A",
+
     "keywords": [
-      "K4Studios",
-      "Wayne Heim",
-      "Jackson Hole",
-      "Wyoming",
-      "Teton Mountsins",
-      "snow covered",
-      "winter",
-      "Western scene",
-      "mountains",
-      "sunset",
-      "color photography"
+      "k4 studios",
+      "wayne heim",
+      "wyoming",
+      "wyoming landscape photography",
+      "wyoming nature photography",
+      "grand tetons",
+      "window",
+      "meadow",
+      "mountains"
     ],
-    "story": "18 x 24 In StockSunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah ©Wayne Heim",
+
+    "story": "Sunset in Arches. Sun is setting behind rock formations in Arches National Park, Utah. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 2,
@@ -119,7 +121,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/Lr9gSndB2Ft9ZRXwn9jG9JSjx8cW44NCtDBKpDLVd/L/_WEH0101-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/LP98Pq44tjjxxRxH9rTkW5VL9BksmqX69QrmKMHc6/M/_WEH0101-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Utah-2013/Utah-2013/i-kcvnCvz/11/LXKZQTcjF5LTD24BLC98VwsLZDp8GwQVKjQxtdxcc/S/_WEH0101-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-3jXg4hf",
@@ -127,6 +130,7 @@ export const galleryData = [
     "description": "Wayne Heim presents sunset landscape photography in this painterly sunset scenes work. Embodying painterly sunset scenes, sunset landscape photography, and sunset landscape photography, it's recommended for lovers of sunset landscape photography. © Wayne Heim",
     "alt": "Sunset in Arches. #2 Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-3jXg4hf/A",
+
     "keywords": [
       "K4Studios",
       "Wayne Heim",
@@ -142,9 +146,10 @@ export const galleryData = [
       "sunset landscape photography",
       "painterly sunset scenes"
     ],
-    "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights painterly sunset scenes through painterly sunset scenes and sunset landscape photography. A powerful statement in photography. © Wayne Heim",
+
+    "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights painterly sunset scenes through painterly sunset scenes and sunset landscape photography. A powerful statement in photography. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 3,
@@ -153,7 +158,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/MZ8PNmMfcCrL7SV8WrcRXf8FgFwq2XfXdbcNVz4hW/XL/_OL31305-Edit-Edit_tonemapped-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/M94TQRqWdNNKS6q4zmM7TL69HTk3Z5GWsZb6LDnKw/L/_OL31305-Edit-Edit_tonemapped-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Berea-Falls-Fall-2020/i-3jXg4hf/3/M5hfGp4spMJj8VsjttL4S2n8bnnfMkQS59WhJ36MZ/S/_OL31305-Edit-Edit_tonemapped-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-XmVfrdk",
@@ -161,6 +167,7 @@ export const galleryData = [
     "description": "Explore painterly sunset scenes with Wayne Heim's painterly sunset scenes. This painterly sunset scenes piece conveys sunset landscape photography, painterly sunset scenes, and painterly sunset scenes, perfect for fans of painterly sunset scenes. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/A",
+
     "keywords": [
       "K4Studios",
       "Wayne Heim",
@@ -176,9 +183,10 @@ export const galleryData = [
       "painterly sunset scenes",
       "sunset landscape photography"
     ],
-    "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights painterly sunset scenes through painterly sunset scenes and sunset landscape photography. A powerful statement in photography. © Wayne Heim",
+
+    "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights painterly sunset scenes through painterly sunset scenes and sunset landscape photography. A powerful statement in photography. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 4,
@@ -187,7 +195,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/0/NLDJv8BqmZ4r2gmPQXPsLpS2TbfWLRQHZBwnbHpFV/L/_O1H0365-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/0/KcqJFrhF86kcsTMX94HfrQzBG2rbh7M4qpS65Nh4b/M/_O1H0365-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-XmVfrdk/0/Ls7Rq6SZ3KZn7q34TJpQcbfWh7PSxSdPvnpjXjJwh/S/_O1H0365-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-mcrrSZ2",
@@ -212,9 +221,9 @@ export const galleryData = [
       "sunset photography"
     ],
 
-    "story": "This image embodies classic sunset scenery and classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery with a touch of classic sunset scenery. © Wayne Heim",
+    "story": "This image embodies classic sunset scenery and classic sunset scenery, captured by Wayne Heim in his signature style. It reflects classic sunset scenery with a touch of classic sunset scenery. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 5,
@@ -225,7 +234,8 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-mcrrSZ2/3/KSG4xdkVPDLQdskbXS7MjNjFn7wjBRLFpkMFBzzsw/S/_WHZ7717-S.jpg",
     "srcOriginal": "",
     autoGenerated: true,
-    autoTitle: false
+    autoTitle: false,
+    contentSource: "human"
   },
   {
     "id": "i-hVB6Pxq",
@@ -233,6 +243,7 @@ export const galleryData = [
     "description": "Wayne Heim's sunset landscape photography captures the spirit of painterly sunset scenes in this painterly sunset scenes image. Featuring sunset landscape photography, sunset landscape photography, and sunset landscape photography, it's ideal for painterly sunset scenes enthusiasts. © Wayne Heim",
     "alt": "Another View    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-hVB6Pxq/A",
+
     "keywords": [
       "K4Studios",
       "Wayne Heim",
@@ -248,9 +259,10 @@ export const galleryData = [
       "sunset landscape photography",
       "painterly sunset scenes"
     ],
-    "story": "Delving into sunset landscape photography, this work by Wayne Heim highlights painterly sunset scenes through sunset landscape photography and painterly sunset scenes. A powerful statement in photography. © Wayne Heim",
+
+    "story": "Delving into sunset landscape photography, this work by Wayne Heim highlights painterly sunset scenes through sunset landscape photography and painterly sunset scenes. A powerful statement in photography.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 6,
@@ -259,7 +271,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/KDWp7935CN6Rs2F2hSKjQR5bfxvqDZP52X5qrBMZq/L/_O1H1351-Edit-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/LZzNMqJMRMhmBB8VMrn7FkMJKpBTg5CpzV2QfnjpJ/M/_O1H1351-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-hVB6Pxq/1/NKqPSvXvrL93mHSNHJ2mMPCxRG74nXNbBrGCm9sw9/S/_O1H1351-Edit-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-fJTxRJG",
@@ -267,6 +280,7 @@ export const galleryData = [
     "description": "Sunset over a lonely western road. ©Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-fJTxRJG/A",
+
     "keywords": [
       "K4Studios",
       "Wayne Heim",
@@ -280,9 +294,10 @@ export const galleryData = [
       "sunset",
       "color photography"
     ],
-    "story": "Sunset over a lonely western road. ©Wayne Heim",
+
+    "story": "Sunset over a lonely western road. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 7,
@@ -291,7 +306,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-fJTxRJG/5/KRMPzTZ4mqLt3mZTQJBdT48McS6TzWSxz3vnq2GbH/L/_IMG5989-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-fJTxRJG/5/M2WtrTB4PCFKpHTX2T9LKPKMdVZvMfMznndRmN3bm/M/_IMG5989-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-fJTxRJG/5/MxX429ps3QQCX2GsFSrWTJVgtZzmSd32R3BWJ3TNS/S/_IMG5989-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-zrvTR9s",
@@ -299,6 +315,7 @@ export const galleryData = [
     "description": "Sunset at the Farm -  sunsetting behind a rural farm outlining the buildings.©Wayne Heim",
     "alt": "Sunset Road   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-zrvTR9s/A",
+
     "keywords": [
       "K4Studios",
       "Wayne Heim",
@@ -312,9 +329,10 @@ export const galleryData = [
       "sunset",
       "color photography"
     ],
-    "story": "Sunset at the Farm -  sunsetting behind a rural farm outlining the buildings.©Wayne Heim",
+
+    "story": "Sunset at the Farm -  sunsetting behind a rural farm outlining the buildings.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 8,
@@ -323,7 +341,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-zrvTR9s/4/NgmBM6GRmRP4FrWHgmVZjk8LBdsDqg63ZKctqRpbR/L/_IMG6008-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-zrvTR9s/4/NMGXZCvXvHrTBtjLTCxw9BPh96LD6J8dFZbJRrrNS/M/_IMG6008-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Texas-to-Wyoming/i-zrvTR9s/4/NShVrFDZfVXrSP56VqtgbBkHvSxXcDcwRMtXjx4sj/S/_IMG6008-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-2qqHRQ6",
@@ -331,6 +350,7 @@ export const galleryData = [
     "description": "Angry Sunset - dark gray clouds at sunset seem to warn of storm .©Wayne Heim",
     "alt": "Sunset at the Farm.  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-2qqHRQ6/A",
+
     "keywords": [
       "K4Studios",
       "Wayne Heim",
@@ -344,9 +364,10 @@ export const galleryData = [
       "sunset",
       "color photography"
     ],
-    "story": "Angry Sunset - dark gray clouds at sunset seem to warn of storm .©Wayne Heim",
+
+    "story": "Angry Sunset - dark gray clouds at sunset seem to warn of storm .",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 9,
@@ -355,7 +376,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2qqHRQ6/4/MJQ4DkBVVrc9nPvH5Kd384kz63rkDXS8PRh9FvNdt/L/_IMG6094-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2qqHRQ6/4/KWcFMV2xL7dnSFzSRnRkkRLMX3pQLmJBmDZZf2Cqr/M/_IMG6094-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-2qqHRQ6/4/MWQMW8bfrSFwtWTXDZbQrkJtBZMXD5wNvBmhgtSZq/S/_IMG6094-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-rh75LzX",
@@ -378,7 +400,7 @@ export const galleryData = [
     ],
     "story": "18 x 24 In StockTiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west.©Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 10,
@@ -395,6 +417,7 @@ export const galleryData = [
     "description": "Heading Out -- flock of geese wing their way out over the water at the harbor entrance in Fairport Harbor, Ohio ©Wayne Heim",
     "alt": "Tiny Bubbles  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-hVvx83K/A",
+
     "keywords": [
       "K4Studios",
       "Wayne Heim",
@@ -408,9 +431,10 @@ export const galleryData = [
       "sunset",
       "color photography"
     ],
-    "story": "Heading Out -- flock of geese wing their way out over the water at the harbor entrance in Fairport Harbor, Ohio ©Wayne Heim",
+
+    "story": "Heading Out -- flock of geese wing their way out over the water at the harbor entrance in Fairport Harbor, Ohio ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 11,
@@ -419,7 +443,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/photos/i-hVvx83K/3/KSkrqMXG7WHPw5PbRkkSzD2GtLDjZjgLrrSXMj7HH/L/i-hVvx83K-L.jpg",
     "srcM": "https://photos.smugmug.com/photos/i-hVvx83K/3/LNKgDJw5jp83WX4hqnnm3pCvq89X6WJz7hBC4PjD3/M/i-hVvx83K-M.jpg",
     "srcS": "https://photos.smugmug.com/photos/i-hVvx83K/3/KVwG7sWPX5ZND99TfcFJgv6ThM9VJS2c4p9NvKQvK/S/i-hVvx83K-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-LXP3hD7",
@@ -427,6 +452,7 @@ export const galleryData = [
     "description": "Out of the Rocks - tree appears to be growing out of the rocks on lake shore at unset.©Wayne Heim",
     "alt": "Heading Out   Photography by Wayn Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-LXP3hD7/A",
+
     "keywords": [
       "K4Studios",
       "Wayne Heim",
@@ -440,9 +466,10 @@ export const galleryData = [
       "sunset",
       "color photography"
     ],
-    "story": "Out of the Rocks - tree appears to be growing out of the rocks on lake shore at unset.©Wayne Heim",
+
+    "story": "Out of the Rocks - tree appears to be growing out of the rocks on lake shore at unset.",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 12,
@@ -451,7 +478,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/photos/i-LXP3hD7/4/KP9hz4z4hJqQ6Jfrq6QSNkX5MxRRRHvMVj4XzkPch/XL/i-LXP3hD7-XL.jpg",
     "srcM": "https://photos.smugmug.com/photos/i-LXP3hD7/4/Kn85HQbBRcWtcvRTB5cfJx8KfS2zCvkwW7ZknPZTH/L/i-LXP3hD7-L.jpg",
     "srcS": "https://photos.smugmug.com/photos/i-LXP3hD7/4/NH3QJBWpw7c2fLJxzFSPGnBJxsSHFS24LpdGCrStg/S/i-LXP3hD7-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-6WBNkgx",
@@ -474,7 +502,7 @@ export const galleryData = [
     ],
     "story": "Sunset of Lone Guard tree overlooking Yellowstone River at Artist Point in Yellowstone National Park.",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 13,
@@ -506,7 +534,7 @@ export const galleryData = [
     ],
     "story": "Fine art landscape photography of Iceland Sunset in the Summer.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 14,
@@ -523,6 +551,7 @@ export const galleryData = [
     "description": "Uncover sunset landscape photography through this painterly sunset scenes from Wayne Heim. Showcasing sunset landscape photography, painterly sunset scenes, and painterly sunset scenes, it's perfect for enthusiasts of sunset landscape photography. © Wayne Heim",
     "alt": "Midnight Sun Sunset",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-MwsQPKg/A",
+
     "keywords": [
       "K4Studios",
       "Wayne Heim",
@@ -538,9 +567,10 @@ export const galleryData = [
       "sunset landscape photography",
       "painterly sunset scenes"
     ],
-    "story": "This image embodies painterly sunset scenes and painterly sunset scenes, captured by Wayne Heim in his signature style. It reflects painterly sunset scenes with a touch of sunset landscape photography. © Wayne Heim",
+
+    "story": "This image embodies painterly sunset scenes and painterly sunset scenes, captured by Wayne Heim in his signature style. It reflects painterly sunset scenes with a touch of sunset landscape photography. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 15,
@@ -549,7 +579,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/LBC3997ZWnzqknRd7qPfG8DT6cQbRGwwDqSJhxpt4/L/_K1W2573_tonemapped-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/MGBL9nsW42LjXGnrM8T32MHkMv6kTVH5T6tLWWPvF/M/_K1W2573_tonemapped-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Fall-Color/i-MwsQPKg/6/KHW25wK67c4nF8trQtnpD2KwLbTJt73txZmJNnKWD/S/_K1W2573_tonemapped-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-rWFC3dL",
@@ -572,7 +603,7 @@ export const galleryData = [
     ],
     "story": "Fine art landscape photography of Iceland sunset in the Summer.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 16,
@@ -604,7 +635,7 @@ export const galleryData = [
     ],
     "story": "Fine art landscape sunset photograph of the Faroe Islands.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 17,
@@ -636,7 +667,7 @@ export const galleryData = [
     ],
     "story": "Fine art, black & white, landscape sunset photography of the Faroe Islands.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 18,
@@ -668,7 +699,7 @@ export const galleryData = [
     ],
     "story": "Multi-color spectacular sunrise in Davis West Virginia showcasing natures pallet of painterly color.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 19,
@@ -702,7 +733,7 @@ export const galleryData = [
     ],
     "story": "Delving into painterly sunset scenes, this work by Wayne Heim highlights painterly sunset scenes through painterly sunset scenes and sunset landscape photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 20,
@@ -734,7 +765,7 @@ export const galleryData = [
     ],
     "story": "Multi-color purple and pink and orange sunrise over the sleepy mountain top in Davis West Virginia.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 21,
@@ -804,7 +835,7 @@ export const galleryData = [
     ],
     "story": "Colorful display of natures colors in the sunset as it reflects off of the meandering stream.",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 23,
@@ -836,7 +867,7 @@ export const galleryData = [
     ],
     "story": "Setting sun colors over the iconic Horse Shoe Bend formation in Arizona.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 24,
@@ -868,7 +899,7 @@ export const galleryData = [
     ],
     "story": "Capturing the remaining vibrant blue sky of the end of the day as it mixes with the natural red rock colors and orange, yellow and pink of the setting sun at Horse Shoe Bend Park.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 25,
@@ -938,7 +969,7 @@ export const galleryData = [
     ],
     "story": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain  ©Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 27,
@@ -953,21 +984,20 @@ export const galleryData = [
     "id": "i-VbL6CF7",
     "title": "Shadow Reflection. Photography by Wayne Heim",
     "description": "Shadow Reflection -  tree reflection in water at sunset.©Wayne Heim",
-    "alt": "Mount Hood at Sunset  Photo by Wayne Heim",
+    "alt": "Mill House, Black and White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets/i-VbL6CF7/A",
+
     "keywords": [
-      "K4Studios",
-      "Wayne Heim",
-      "Jackson Hole",
-      "Wyoming",
-      "Teton Mountsins",
-      "snow covered",
-      "winter",
-      "Western scene",
-      "mountains",
-      "sunset",
-      "color photography"
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
     ],
+
     "story": "Shadow Reflection -  tree reflection in water at sunset.©Wayne Heim",
     "notes": "",
     "rating": 0,
@@ -979,6 +1009,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/photos/i-VbL6CF7/4/MsfJb7mj34SDf2fQWMzBRJX5FSjJmTtFqGBsJqSrj/L/i-VbL6CF7-L.jpg",
     "srcM": "https://photos.smugmug.com/photos/i-VbL6CF7/4/MShtTP2rRDP3FZzwVRs2dR38fLPBzZw8MKn4MgN7D/M/i-VbL6CF7-M.jpg",
     "srcS": "https://photos.smugmug.com/photos/i-VbL6CF7/4/MZ7fFzxcWxn27X7NfssJkFF2RhmwtSXFqZKgbGQ4C/S/i-VbL6CF7-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   }
 ];

@@ -86,11 +86,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 0,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-kxnK2MM",
     "title": "10 O’Clock Staging",
@@ -126,11 +122,7 @@ export const galleryData = [
       "cowboys-with-horses": 0,
       "cowboys-horses-b-w": 0
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-kp5NHNw",
     "title": "Under Fire, Over the Line",
@@ -164,11 +156,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 2,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-HfQ5NVR",
     "title": "Morning Joe: Cowboy with His First Coffee of the Day",
@@ -227,17 +215,13 @@ export const galleryData = [
     ],
     "story": "“Well I’ll be… you sure are a sight for sore eyes.”\nHe chuckled low, lifting his cup.\n“Thought this coffee was gonna be the best part of my morning.”\n\nDidn’t think their paths would ever cross again —\nleast of all in a place like this.\n\nEither way…\nthis morning’s looking up.",
     "notes": "This portrait is a rare example of warmth in a genre often defined by grit. But don’t mistake it for softness — there’s history in that smile, and maybe a little trouble too.\n\nThe composition is relaxed but deliberate: soft natural light, a centered frame, and the subtle gesture of a tin cup raised in greeting.\nIt feels candid, but every visual cue points to something larger — a story the viewer has to finish on their own.\n\nThe painterly black-and-white rendering flattens time, placing the moment somewhere between now and memory. It’s part portrait, part daydream — a quiet spark in the Western canon.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 3,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-qMQf7b6",
     "title": "Loading Resolve or Revenge",
@@ -270,11 +254,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 4,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-GSk4JS8",
     "title": "Unfinished Business",
@@ -305,15 +285,11 @@ export const galleryData = [
     ],
     "story": "Where was the law when they burned my barn… when they stole my livestock?\n\nNow’s the time to sort out who gets to take —\nand those who’ve chosen to stay quiet.\n\nNo talking me out of this, ladies.\nJustice… it will be had today.\n\nJustice — that bitter pill — the only cure for this rotten plague of immorality and apathy. And I brought enough to go around.",
     "notes": "Unfinished Business is a masterclass in visual tension.\nThe composition is triangular — anchored by the man in the foreground, and counterbalanced by the two women whose stances echo confrontation and caution. This triangular structure, often found in Renaissance and Baroque painting, builds an invisible pressure in the frame — it feels like something is about to give.\n\nWayne Heim’s painterly black-and-white style strips away distraction and lets gesture, posture, and line do the storytelling. The light wraps the cabin in softness, but the man remains stark and defined — separating action from judgment, and past from present.\n\nThere are echoes of Rockwell’s narrative timing, but the restraint leans more Wyeth or Pictorialist photography, inviting interpretation rather than declaring meaning. This is a conversation piece. A frozen reckoning — not about violence, but about how close we stand to it when justice falters.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 5,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-k5zmxS5",
     "title": "Ridge of Reckoning",
@@ -349,11 +325,7 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 6,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-FXNxqTK",
     "title": "Lord Help You. Time to Meet Your Maker",
@@ -389,17 +361,13 @@ export const galleryData = [
     ],
     "story": "Didn’t come here to preach. But somebody’s gonna need saving before this day’s through.\n\nSteel’s cold. Sun’s just starting to rise.\nI ain’t waitin’ for God. Not for forgiveness.\nJust for the man who thought this town forgot.\n\nJustice? Vengeance?\nMaybe both. That’s between him, his past… and his maker.",
     "notes": "Verticals from the doorway and shotgun anchor the frame; the coat’s triangular fall and lifted chin create a clear, read-at-distance silhouette. Tonality is carved to keep emphasis on gesture and face, with grain calibrated to support form rather than announce itself. Print-first discipline—no theatrics, no filter noise—gives the piece long viewing life and separates it from effect-driven “painterly photography.” ",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 7,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-TzGJNJz",
     "title": "The Silent Pursuit",
@@ -474,10 +442,7 @@ export const galleryData = [
     "galleries": [],
     "visibility": "show",
     "sortOrder": 9,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-dZKzBBQ",
     "title": "Defending the Line",
@@ -536,17 +501,13 @@ export const galleryData = [
     ],
     "story": "In this powerful black and white Western artwork, a cowboy kneels on the firing line, his resolve unshaken as he grips a pistol in each hand, ready for action. The intensity of his stance reflects the high-stakes tension of a classic Western gunfight. With his weapons aimed, he stands prepared to defend his ground, embodying the raw courage and steadfast determination of the Old West. Wayne Heim’s painterly photography style amplifies the emotional depth of this moment, capturing both the vulnerability and resilience of a man caught in a life-or-death showdown. Bring the fierce spirit of the frontier into your space with this timeless cowboy art that immortalizes the enduring legacy of the Wild West. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 10,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-rsPNzJr",
     "title": "Crossfire",
@@ -573,14 +534,11 @@ export const galleryData = [
     ],
     "story": "The air’s thick with gun smoke — can’t see ten feet ahead, but there’s no turning back. He charges forward, rifle shouldered, heart pounding louder than the shots. To his left, the shout comes too late. “Wait—don’t!”\n\nBut the dust is already rising behind him.\nWhatever this was supposed to be…\nit’s become something else now.\n\nThere’s no more strategy.\nOnly instinct. And maybe regret — if there's time for it later.",
     "notes": "Compositionally, Crossfire is a study in opposites: forward vs backward, action vs hesitation, purpose vs instinct.\nThe diagonal tension between the two subjects draws the eye in a controlled zig-zag — a classic device seen in war paintings and 20th-century reportage.\n\nThe grain-softened black-and-white palette pulls it into the realm of memory rather than spectacle, elevating it above simple reenactment.\nWayne Heim balances motion and mood with painterly restraint, delivering a scene that feels ripped from a forgotten frontier legend.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 11,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-cGDk6Nc",
     "title": "Getting the Last Word",
@@ -615,11 +573,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 12,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-qwFCjLp",
     "title": "You Can't Save Them All",
@@ -652,11 +606,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 13,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-RK9HRjR",
     "title": "Three Days Gone – Western fine art photography by Wayne Heim, painterly black and white cowboy and horse scene",
@@ -692,10 +642,7 @@ export const galleryData = [
       "cowboys-with-horses": 3,
       "cowboys-horses-b-w": 3
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-SwhsL2h",
     "title": "Old West Window Light — A Vigil Kept",
@@ -727,17 +674,13 @@ export const galleryData = [
     ],
     "story": "Window light paints her cheek; the cup cools in her hand. She listens and scans the distance for her Henry in a quiet resolve that settles like dust on the floorboards of cabin.",
     "notes": "Window light does the narrative work here: gentle modeling on the cheek and hands, with the interior falling to a quiet mid-shadow that frames the figure. Posture and prop (the cooling cup) carry the tension without theatrics, while restrained contrast protects texture in skin, fabric, and curtain. The print reads best on matte or baryta to maintain micro-contrast in the mid-tones—an honest, carefully controlled study that rewards close viewing and resists cliché.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 15,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-W73hxx4",
     "title": "A Wink and a Nod to the Old West — Calamity Jane in Black & White",
@@ -764,17 +707,13 @@ export const galleryData = [
     ],
     "story": "One wink for the crowd, one for the joke only she knows. Easier to swallow the bitter taste of trouble easier when you meet it with a grin - or whiskey.",
     "notes": "Clean diagonals from elbow and hat brim land on the wink, breaking a formal pose with a precise gesture. Background stays subdued so expression carries the frame; edge detail is kept where it matters (eye, mouth, hand). This is Painterly Fine Art in practice—tonality is shaped and grain calibrated to serve structure, not to decorate. The restraint is what separates it from filter-heavy “painterly photography” and gives it long viewing life.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 16,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-FnZ68h3",
     "title": "Who is Here?",
@@ -803,17 +742,13 @@ export const galleryData = [
     ],
     "story": "Now I wonder who the heck that is? The Millers aren’t supposed to be by till Tuesday.\n\nWonder if it’s that pesty sheriff again… If I done told him once, I told him a dozen times—I said all I was gonna say on the matter. Now wait—Ain’t the sheriff in Lexington all week?",
     "notes": "Every shadow has a story. This image draws from the tradition of narrative portraiture—think Wyeth’s solitude and Remington’s charged stillness—while bringing in the psychological edge of a noir film. The light is sculpted, not just seen; the letter in hand hints at news or memory, but never resolves. There’s a compositional tension between the open space and the subject’s watchful posture. Is he expecting a friend, a stranger, or trouble? Sometimes the West is all about who’s waiting on the other side of the door.",
-    "rating": 4,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 17,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-zTWQkqD",
     "title": "The Devil Comes in Daylight",
@@ -848,11 +783,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 18,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-dLDF4Q6",
     "title": " Waiting for His Return: Black and White Western Portrait",
@@ -885,11 +816,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 19,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-JvnhWXr",
     "title": "Up to No Good",
@@ -923,11 +850,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 20,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-rqk5Kdk",
     "title": " Taking a Stand",
@@ -962,11 +885,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 21,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-TpqkCVk",
     "title": "Holding the Horizon",
@@ -997,10 +916,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 22,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-fvTqCvv",
     "title": "Hoofbeats, Dust & Destiny",
@@ -1035,7 +951,7 @@ export const galleryData = [
     ],
     "story": "Breath sharp, heart wilder than the chase. Hoofbeats drum a warning through the dust—no time for looking back or doubts, only grit and a ghost of what was the plan. In the rush, sweat and thunder, every second writes its own ending. Fate’s on my heels—Destiny calls my name!",
     "notes": "This piece is a masterclass in Western motion—composition, lighting, and painterly dust effects all build the sense of urgency. The diagonal drive of the horse, flying mane, and tense posture channel both Remington’s classic dynamism and modern cinematic flair. For collectors, it’s a centerpiece—energy, narrative, and technique in one dramatic sweep.",
-    "rating": 5,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 23,
@@ -1043,10 +959,7 @@ export const galleryData = [
       "cowboys-with-horses": 4,
       "cowboys-horses-b-w": 4
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-DLnxMgZ",
     "title": "Charge of Reckoning",
@@ -1089,11 +1002,7 @@ export const galleryData = [
       "cowboys-with-horses": 5,
       "cowboys-horses-b-w": 5
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-5GRFtKB",
     "title": "Untitled",
@@ -1118,14 +1027,11 @@ export const galleryData = [
     ],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 25,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-m8pgc8k",
     "title": "Secrets of the Horizon",
@@ -1152,16 +1058,13 @@ export const galleryData = [
     ],
     "story": "I’ve learned patience out here, but some days the horizon feels like it’s holding secrets it won’t share—leaving me to wonder if what I’m waiting for is still coming, or has already passed me by.",
     "notes": "Restrained storytelling lets posture, light, and framing suggest more than they reveal. The muted palette and soft, directional lighting guide the viewer’s attention to her gaze, inviting speculation without overexplaining. Uniquely positioned within the genre, it balances quiet strength with emotional depth—a rare example of painterly Western portraiture that holds its weight in both fine art and narrative appeal.",
-    "rating": 5,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 26,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-5s8Zkrb",
     "title": "A Watchful Eye",
@@ -1174,20 +1077,14 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-5s8Zkrb/0/LmmChKLM4bNV3BJjcxQJkf7fWqqgXXSDFc45L9Xm8/S/_HF23527-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-5s8Zkrb/A",
-    "keywords": [
-      "HF23379",
-      "819"
-    ],
+    "keywords": ["HF23379", "819"],
     "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 27,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-KL9t3Xg",
     "title": "A Joyful Reunion: Cowboy Best Friends",
@@ -1214,17 +1111,13 @@ export const galleryData = [
     ],
     "story": "They stood still as stone, just like the photographer told ’em.\n“No smiles,” he warned, “or the exposure’ll blur.”\n\nTruth is, they were laughing inside the whole time. Not at the camera… but at the memory of all they’d been through to get there. A dozen years, a hundred miles, and more trouble than they ever asked for — and somehow they both made it.\n\nThey didn’t smile for the lens because the story was already there. But this… this was the closest either had come to joy in a long while.",
     "notes": "The symmetry in their stance, the distance between them, the way the log wall frames their reunion — all of it draws the viewer in with quiet intention. Heim’s painterly black-and-white approach lends a historic softness that mimics early frontier portraiture, yet the subtle textures — in the clothing, hands, and faces — give it a deeply human touch.\n\nThere’s lineage here with Pictorialist photography and echoes of Rockwell’s storytelling, but the soul of this piece is all its own.\nIt’s not nostalgia — it’s respect. A nod to the kind of bond that survives time, hardship, and the long road back.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 28,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-M95HTNH",
     "title": "Standing My Ground: Cowgirl’s Defiance in the Old West",
@@ -1289,10 +1182,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 29,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-2VTWJ3R",
     "title": "Roping the Line — A Cowboy in Motion ",
@@ -1328,10 +1218,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 30,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-tbctTrL",
     "title": "Black and White Cowboy Photography: I do!",
@@ -1390,16 +1277,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a big kiss between a lucky lady and her cowboy. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art capture the raw spirit of the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 31,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-PSkctsq",
     "title": "Flatlander: The Straw Cowboy",
@@ -1436,16 +1320,13 @@ export const galleryData = [
     ],
     "story": "The things he’s seen… The decisions that brought him west —\nsome made in haste, others in heartbreak. But all of them led here.\n\nA man doesn’t chase dirt and sky for the thrill. He does it because it’s the only way to shape something lasting.\nTo leave behind more than just stories and regrets.\n\nThis isn’t about posing. It’s about pausing. Long enough to let history catch its breath and etch his mark — not as a hero,\nbut as a man who endured.",
     "notes": "Wayne Heim’s work resists easy categorization. Each image blends the emotional weight of illustration with the immediacy of photography, creating a kind of visual storytelling that feels rooted yet timeless. There’s a deliberate echo of the Pictorialist tradition—softened edges, evocative light, and a painter’s understanding of structure—yet the result is unmistakably his own.\n\nRather than mimic past masters or current trends, Heim is helping to define a new class within the medium. His process is quiet but exacting: a fusion of lived experience, narrative intuition, and fine control over tone and form. Where others chase painterly effects for surface impact, Heim distills deeper truths from his subjects—elevating not just the moment, but the myth it represents.\n\nIn a genre often flattened by cliché, this work stands apart: cinematic, composed, and wholly committed to honoring the legacies that shaped the American West—not as costume, but as character.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 32,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-HjTFKJ7",
     "title": "Black & White Cowboy Art:  Bon Voyage",
@@ -1504,17 +1385,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a woman leaving town on the train and wishing the cowboys well. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 33,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-kp6HLCx",
     "title": "What to Do Next: Cowboy Weighing His Options",
@@ -1573,17 +1450,13 @@ export const galleryData = [
     ],
     "story": "In the mist and smoke of town’s early light, he leans heavy on the rail — bracing his back as much as the thoughts pressing down on him. Her voice still echoes — sharp as broken glass, cutting straight to the bone. Then came the soft goodbye. What did that mean? No promises. Just unspoken words and promises.\n\nWait? Ride? Turn back? The knot in his gut speaks louder than reason. Can he can live with what it’s telling him?",
     "notes": "In today’s Western storytelling, there’s often a rush to the gunfight — swagger, bravado, and spectacle take center stage. But this piece leans into the quiet before all that. It’s not about what a man does, but what he endures. What he carries. What he lets go.\n\nCompositionally, the figure is framed not as a hero in motion, but as a soul caught in reflection — back turned, weight bowed, anchored against the soft blur of morning mist. The palette is subdued, painterly, almost ghostlike — evoking not just place, but memory. Think Wyeth’s restraint or the melancholy solitude of Hopper, rendered in the language of the American frontier.\n\nWhere modern Westerns often paint legends in broad strokes, this image chooses nuance. The emotion is internal. The “story” isn’t told — it’s hinted. A goodbye, a voice that still echoes, a choice that hasn’t quite been made. He may ride. He may stay. The knot in his gut already knows… but living with that truth? That’s the real battle.\n\nThis is Western storytelling not as fantasy — but as elegy. It doesn’t just entertain. It remembers.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 34,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-N77wcxb",
     "title": "Braving the Elements: Cowboy in the Storm",
@@ -1642,16 +1515,13 @@ export const galleryData = [
     ],
     "story": "In this dramatic black and white Western photograph, a lone cowboy faces the fury of a stormy night, relentlessly searching for lost cattle in the wild, unforgiving landscape of the Old West. Wayne Heim’s distinctive painterly photography style brings this moment to life, capturing the cowboy’s determination and grit against the howling wind and torrential rain. The striking contrasts of light and shadow emphasize the rugged beauty of the stormy wilderness, while the use of high-ISO techniques adds texture and depth, enhancing the raw emotion of the scene. This powerful image reflects the harsh realities of life on the frontier, where every minute counts in the struggle to survive. Bring the untamed spirit of the Wild West into your space with this timeless cowboy artwork that honors the strength and resilience of those who braved the elements. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 35,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-KgKZZxg",
     "title": "The Line Between Quiet and Chaos",
@@ -1716,11 +1586,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 36,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-RMdScDd",
     "title": "Make Your Move: A Cowboy Poised for Action",
@@ -1779,16 +1645,13 @@ export const galleryData = [
     ],
     "story": "He’s been standin’ there a while now — not movin’, not speakin’. Just watchin’.\n\nSome say he’s waitin’ on a man who owes him blood.\nOthers think he’s tryin’ to talk himself outta somethin he’s already decided to do. Either way, the hand near his gun hasn’t moved an inch. And whatever’s out there… it sure as hell has his full attention.\n\nLet me know if you want to push it more poetic, more brutal, or more mysterious. Ready for the rest of the metadata when you are.",
     "notes": "This portrait is a masterclass in restrained storytelling. The pose is deceptively calm, but there’s pressure building behind the eyes — a tension that lives between memory and intent. The rough-hewn textures of the wood and the softened grain of the photograph nod to Pictorialist traditions, while the character’s stance and costuming anchor it firmly in the mythos of the American West.\n\nLight and shadow carry equal narrative weight here, turning a quiet moment into a crucible of decision. For collectors, this piece embodies the emotional ambiguity and visual depth that define Western fine art at its highest level — less a picture of a cowboy, more a study in resolve, regret, and reckoning.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 37,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-MTX8mmk",
     "title": "Western Fine Art - Cowboy Art",
@@ -1823,14 +1686,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of frontier life comes alive in this piece, showcasing cowboy artwork and western landscapes fine art. A testament to historic western prints in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 38,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-wS6x5S5",
     "title": "Family Portrait: Cowboy and Cowgirl in the Wild West",
@@ -1889,17 +1749,13 @@ export const galleryData = [
     ],
     "story": "This striking black and white Western art captures a cowboy and cowgirl in an epic pose, standing proudly alongside their conquest. The intensity and pride in their expressions tell the story of a life forged in the unforgiving terrain of the Old West. With Wayne Heim’s unique painterly photography technique, this image transcends the moment, imbuing it with emotional depth that transports viewers to the heart of frontier life. This fine art piece not only honors the spirit of the Wild West but also immortalizes the bond between two strong individuals. Bring the essence of cowboy life into your home with this timeless portrayal of Western grit and determination. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 39,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-DJMTZ8z",
     "title": "Cowboy Art:  Camp Life",
@@ -1958,16 +1814,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy sitting and listening to campfire stories. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 40,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-DQHK8FK",
     "title": "Choose Your Next Words Wisely: A Standoff in the Old West",
@@ -2026,17 +1879,13 @@ export const galleryData = [
     ],
     "story": "In this powerful black and white Western image, an outlaw cowboy aims his pistol directly at the viewer, a moment frozen in time where words and actions carry heavy consequences. Wayne Heim’s unique painterly style captures the intense emotion and tension of this standoff, embodying the raw spirit of the Old West. The stark contrasts of light and shadow bring out the cowboy’s hardened features and the gleaming steel of his weapon, while the high-ISO technique adds a vintage texture to the scene, enhancing its gritty authenticity. This fine art photograph transports you to the heart of a dangerous frontier where every decision could be a matter of life or death. Bring the untamed energy of the Wild West into your space with this striking cowboy artwork that captures the unpredictable essence of frontier justice. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 41,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-4s2pK5Z",
     "title": "Panning for Gold: A Glimpse of the Gold Rush Era",
@@ -2095,17 +1944,13 @@ export const galleryData = [
     ],
     "story": "Water cold. Air crisp with the scent of fall.\nThe stream speaks in circles. His pan answers in kind — slow, deliberate, whispering of riches… or ruin. Hat hung low, eyes fixed on the swirl. Gold, they said. Buried beneath riverglass and silt.\n\nDetermined he stays — not for the sun on his back, not for the ache in his spine — but for the promise, or the lie.\n\nThe pan catches light. Just a trick of the water?\nOr the beginning of everything?",
     "notes": "At first glance, this piece reads like a historical vignette — a lone prospector crouched in a cold stream, sifting water for gold. But beneath the surface, it’s a meditation on something far more contemporary: the human drive to search, to persist, and to believe in the possibility of something better.\n\nThe visual composition is quietly deliberate. The mirrored arc of the pan and hat draws the viewer’s eye into a loop of motion — effort, reflection, anticipation. The painterly black-and-white rendering softens the realism into memory, while the glint of light on the water walks the line between discovery and illusion.\n\nThis is not a portrait of success. It is a portrait of determination — the kind that spans centuries. In an age where people chase opportunity in new forms, this image echoes a familiar truth:\nthe path to fortune, however defined, is often slow, uncertain, and deeply personal.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 42,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-W5d8Ss8",
     "title": "A Timeless Bond in the Old West: Cowgirl and Horse Photography",
@@ -2170,10 +2015,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 43,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-LrfWmg7",
     "title": "Black and White Cowboy Art: Dead to Rights",
@@ -2232,17 +2074,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy looking down the barrel of his Henry rifle. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Fun fact: This striking piece is a self-portrait, reflecting Wayne Heim’s personal connection to the rugged spirit of the Wild West. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 44,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-xfqTp8K",
     "title": "Who Goes There? Gold Rush Cowboy Faces Danger",
@@ -2301,17 +2139,13 @@ export const galleryData = [
     ],
     "story": "This striking black and white Western image captures a tense moment in the life of a gold rush cowboy, interrupted by the sudden appearance of trouble while he’s panning for gold. The shadowy figures of claim jumpers loom in the distance, threatening to steal his hard-earned fortune. The raw energy of the moment is frozen in time, as Wayne Heim’s unique fine art photography style breathes life into this high-stakes encounter. The stark contrasts and textures evoke the harsh realities of the Old West, where every gold-seeking cowboy had to stay vigilant against those who would take what they hadn’t earned. Bring home this dramatic scene and let the spirit of the Wild West enrich your space. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 45,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-MnBn4kW",
     "title": "Cowboy Art: Watching the People",
@@ -2370,16 +2204,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cook watching the cowboys head out for the day, pondering what to make with beans again tonight. Discover the essence of the Old West with Wayne Heim’s cowboy art, where his stunning black and white Western artwork captures the raw spirit of the frontier. Witness the emotional depth in his cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art that immortalizes the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 46,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-bLHTNNg",
     "title": "This One-Horse Town",
@@ -2438,17 +2269,13 @@ export const galleryData = [
     ],
     "story": "After another long night of marshaling and peacekeeping tumbleweeds, the good sheriff straightens his tired bones, dons his trusty hat and six-piece, and ambles to the door.\nHe pauses there—squinting into the rising sun—and mutters to the mice and flies:\n\n“This one-horse town’s got more bars than bakers. Guess either one’ll do for breakfast.”",
     "notes": "This portrait trades in quiet confidence, not cliché. While many Western artworks lean heavily into dramatized standoffs and romanticized outlaws, this piece stands apart—rooted in realism and storytelling subtlety. The sheriff isn’t mythic, he’s human: aging, sharp-witted, and enduring in the face of monotony. The composition, with its soft painterly texture and nuanced lighting, recalls the tonal restraint of 19th-century American illustrators and the Pictorialist tradition.\n\nWayne Heim’s fusion of photographic precision and illustrative depth allows this moment—simple as it may seem—to resonate with the weight of lived experience. It's not about the gun at his side but the grin behind the grit. This is history preserved in brush and lens, elevating the ordinary into the iconic.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 47,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-s5XTxBL",
     "title": "Difficult Choices: A Cowboy’s Journey on the Rails",
@@ -2507,16 +2334,13 @@ export const galleryData = [
     ],
     "story": "He doesn’t remember when the train stopped, or how long he’s been standing there—only that the cold iron rail beneath his boots feels steadier than the thoughts rattling in his head.\n\nThe letter in his coat pocket weighs heavier than his gear.\nA name scratched in ink. A place he’s never been.\nA future that might still be waiting... or one that died the day he left. He could board the next train west, keep running from the past like so many others. Or turn around. Face it.\n\nEither way, he knows— this moment, like all the others, will help decide the man he becomes... or the man he’ll be remembered as.",
     "notes": "This portrait channels the solemn grit of 19th-century Western realism, elevating the solitary rider into a symbol of endurance and introspection. The composition balances the weight of the figure against a misted, abstracted background—evoking the visual language of early pictorialist photographers and tonal realists like Steichen or Eakins.\n\nWayne Heim’s signature painterly technique gives the image a textured, almost hand-rendered depth, marrying the documentary sensibility of historical photography with the narrative charge of fine illustration. Rather than staging spectacle, this work captures the psychological landscape of the West: its silences, its burdens, and its quiet acts of bravery. It invites viewers to look beyond the costume and into the man—mid-thought, mid-journey, mid-decision. This is myth as memory, framed in cinematic stillness.",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 48,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-R7VTGwJ",
     "title": "Snake Oil Salesman",
@@ -2575,7 +2399,7 @@ export const galleryData = [
     ],
     "story": "In this captivating black and white Western art, a snake oil salesman peddles his dubious wares at a bustling town saloon. With an air of charisma, he captivates a crowd, selling false promises under the guise of a miracle cure. Wayne Heim’s painterly photography style brings the scene to life, capturing the tension and charm of this quintessential figure in the Old West. The image conveys both the humor and the harsh reality of frontier life, where con men like this were as much a part of the landscape as the cowboys and settlers. Let this timeless cowboy artwork transport you back to the rugged spirit of the Wild West. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -2640,16 +2464,13 @@ export const galleryData = [
     ],
     "story": "In this compelling black and white Western photograph, two cowboys share a quiet moment over their coffee cups, a pause from the rugged demands of life on the frontier. The texture of the image, captured in Wayne Heim’s distinctive painterly style, brings out the raw emotions and depth of character in each cowboy’s face. The high-contrast lighting highlights the details—the weathered hands wrapped around the coffee cups, the tired but resolute expressions—offering a timeless glimpse into the daily lives of those who shaped the American West. The absence of color allows viewers to focus on the powerful connection between these men and the landscape that defined their lives. Bring the spirit of the Wild West into your home with this evocative piece, where each moment feels like an enduring testament to the past. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 50,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-C9Q7sKR",
     "title": "Eagle Eye: Cowgirl and Her 6-Shooter in the Old West",
@@ -2682,16 +2503,13 @@ export const galleryData = [
     ],
     "story": "She wasn’t bluffing. They will find this out too late.\n\nWith a squint sharper than her aim, she raised that iron six-shooter like she was born with it in her hand.\nNo warning, no trembling—just steady resolve in a world that never handed her a fair deal.\n\nThey called her Eagle Eye.\nLike an Apache arrow let loose from silence—she never misses.\nNo more questions. No more insults. No more mercy.",
     "notes": "In Eagle Eye, Wayne Heim merges the visual language of classic Western portraiture with a contemporary reverence for overlooked strength. The subject is no archetype — she is rendered with all the nuance of a lived life: grit in the gaze, history in the stance, justice in the draw.\n\nHeim’s refined painterly technique, influenced by both pictorialism and narrative illustration, breathes cinematic intensity into the scene. Light pools around her revolver like a spotlight on fate itself. What might feel theatrical in lesser hands becomes, here, an act of quiet authority — a myth given flesh.\n\nThis image doesn’t simply mimic the Western genre. It reshapes it, reclaiming the storytelling space for figures long written out of the frame — and dares the viewer to reconsider who gets to define power in the American West.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 51,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-xsqsCKz",
     "title": "What You Up to Boys?: Calamity Jane Watching the Town",
@@ -2750,7 +2568,7 @@ export const galleryData = [
     ],
     "story": "In this striking black and white Western art, Calamity Jane observes the bustling town, her sharp eyes capturing every detail of the activity around her. With her unmistakable presence, this legendary figure of the Old West keeps a watchful eye on the goings-on, embodying the raw spirit of frontier life. Wayne Heim’s painterly photography technique imbues this scene with depth and emotion, reflecting both the strength and mystery of Calamity Jane. Bring a piece of Wild West history into your space with this timeless cowboy art, honoring the indomitable women of the frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -2815,17 +2633,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a wounded cowboy after a tough fight with rebels. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 53,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-MpBPrZK",
     "title": "Waiting on the Mail: Outlaw Cowboy and the Wanted Poster",
@@ -2884,17 +2698,13 @@ export const galleryData = [
     ],
     "story": "In this captivating black and white Western art, an outlaw cowboy stands at the post office, his steely gaze fixed on a nearby wanted poster. The moment is thick with tension, as the raw, untamed energy of the Old West pulses through Wayne Heim’s fine art photography. His painterly style brings an emotional depth to this piece, capturing the rugged spirit of a time when the line between justice and lawlessness was often blurred. With his unique approach, Heim invites you to step into this historic scene, where every detail tells a story. Add a piece of the Wild West to your space with this timeless cowboy artwork that immortalizes the frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 54,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-ffzG95X",
     "title": "Watchful Eye: The Vigilant Cowboy",
@@ -2953,17 +2763,13 @@ export const galleryData = [
     ],
     "story": "In this striking black and white Western art, a cowboy stands poised and alert, his gaze fixed on the approaching men, his trust already lost. As tension hangs in the air, the cowboy’s readiness speaks volumes of the unpredictable dangers that defined life on the frontier. Captured through Wayne Heim’s unique fine art painterly photography style, this image immerses the viewer in the spirit of the Old West—where vigilance was essential, and every moment could mean the difference between survival and danger. Bring the rugged heart of the Wild West into your space with timeless cowboy art that immortalizes the grit and resilience of the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 55,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-727jVkX",
     "title": "Watching and Waiting: Outlaw Cowboy on the Prowl",
@@ -3022,16 +2828,13 @@ export const galleryData = [
     ],
     "story": "In this striking black and white Western art piece, an outlaw cowboy waits, his sharp eyes scanning for his next move. Captured in the raw spirit of the Old West, this photograph embodies the tension and unpredictability of frontier life. Wayne Heim’s painterly photography style adds emotional depth, transforming a moment of stillness into a compelling narrative of the Wild West. The cowboy’s gaze hints at both caution and resolve, offering a glimpse into the mindset of a man who survives by watching and waiting. Bring this powerful piece into your home, where it will immortalize the fierce spirit of the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 56,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-bvbHPHN",
     "title": "Cowboy Art:  Saying Goodbye",
@@ -3090,16 +2893,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a young girl watching the cowboys leaving town. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 57,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-hMJZN2m",
     "title": "Heading Out from the Bunkhouse",
@@ -3140,10 +2940,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 58,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-BQw2kzC",
     "title": "The Buffalo Hunter: A Cowboy’s Vigil",
@@ -3202,16 +2999,13 @@ export const galleryData = [
     ],
     "story": "In this evocative black and white Western artwork, a cowboy buffalo hunter sits at camp, posing with his trusty rifle, a symbol of his readiness and skill in the untamed frontier. Captured in Wayne Heim’s unique fine art painterly photography style, the image brings the rugged solitude of the Wild West to life, showcasing the quiet moments between the chaos of the hunt. The emotional depth and attention to detail highlight the enduring strength and resolve of this iconic figure. Bring home a piece of history with this timeless cowboy art that immortalizes the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 59,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-tpLxDbH",
     "title": "Black & White Cowboy Photography: Nice and Hot",
@@ -3270,16 +3064,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy grabbing a hot cup of coffee while spending time with his lady friend, only to find something strange in his cup. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 60,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-RdsBKX8",
     "title": "A Long Day",
@@ -3338,16 +3129,13 @@ export const galleryData = [
     ],
     "story": "This Black and White Western Fine Art piece captures a cowboy reflecting on the horizon after a long day’s work. Wayne Heim’s cowboy art perfectly embodies the spirit of the Old West, with each photograph infused with emotional depth and raw storytelling. His unique fine art photography style—blending painterly techniques—brings the frontier’s rugged beauty to life. Immerse yourself in the timeless legacy of cowboy artwork and Western fine art, and bring the heart of the Wild West into your space. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 61,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Z7G9xfp",
     "title": "Black & White Cowboy Art: Don't Move, I am Right Here",
@@ -3406,17 +3194,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy making sure everyone knows he and his double barreled shotgun is present and ready. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 62,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-wpFH7zn",
     "title": "Hold it Right There!",
@@ -3475,17 +3259,13 @@ export const galleryData = [
     ],
     "story": "This Black and White Western Fine Art piece showcases a cowboy drawing his pistol, ensuring he has the unruly individual in his sights. With the tension of the moment captured in striking black and white, Wayne Heim’s cowboy art embodies the raw intensity of the Old West. His fine art cowboy photography is renowned for its emotional depth and painterly style, bringing the gritty, untamed spirit of the frontier to life. Immerse yourself in the heart of the Wild West with timeless cowboy artwork that immortalizes the legacy of the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 63,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-MFBcm7q",
     "title": "Me and My Best Friend: Wanted Poster Cowboy",
@@ -3544,16 +3324,13 @@ export const galleryData = [
     ],
     "story": "In this dramatic black and white Western art, a cowboy poses for his wanted poster, his expression both defiant and contemplative. Capturing the spirit of the frontier, this image embodies the complex life of an outlaw in the Old West. Wayne Heim’s painterly photography technique brings the raw emotions of this cowboy’s journey to life, immortalizing a moment of both danger and legacy. Bring the untamed heart of the Wild West into your space with this iconic cowboy art, preserving the untold stories of the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 64,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-NZLcBqN",
     "title": "They Are Coming: Cowgirl Watching the Cowboys Ride In",
@@ -3612,16 +3389,13 @@ export const galleryData = [
     ],
     "story": "In this evocative black and white Western art, a woman settler — a strong, resilient cowgirl — watches with anticipation as the cowboys ride in for dinner. The dust trails behind them as they approach, their horses weary from a day’s work. Wayne Heim’s unique painterly photography style captures the essence of the Old West, bringing to life the emotions and raw spirit of the frontier. This piece immortalizes a quiet yet powerful moment in the daily rhythm of frontier life. Bring the untamed heart of the Wild West into your home with timeless cowboy art that echoes the history of the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 65,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-gKXZc84",
     "title": "Is There More Coffee?",
@@ -3680,16 +3454,13 @@ export const galleryData = [
     ],
     "story": "This Black and White Western Fine Art piece depicts a cowgirl, caught in a quiet moment of reflection, hoping for more coffee on a crisp morning. Wayne Heim’s cowboy artwork captures the essence of the Old West, blending striking black and white photography with the raw, emotional spirit of the frontier. His fine art cowboy photography tells compelling stories of Western life, all crafted in a unique painterly style that adds depth and character. Bring the timeless allure of cowboy art into your space, and immerse yourself in Western fine art that celebrates the untamed spirit of the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 66,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-t79qS8x",
     "title": "Bedtime Stories",
@@ -3748,17 +3519,13 @@ export const galleryData = [
     ],
     "story": "In this evocative black and white Western art, a woman settler—a cowgirl—sits by the warmth of a crackling fire, lost in the pages of a book. The tranquil moment captures a tender yet resilient spirit of the frontier, where even amidst the harshness of the Wild West, moments of peace and reflection could be found. Wayne Heim’s painterly photography style brings this quiet scene to life, weaving a narrative of both solitude and strength. Feel the warmth of the fire and the calm of the evening, as this timeless cowboy artwork transports you to a quieter, intimate corner of the Old West. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 67,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-hrx5g4S",
     "title": "Black & White Cowboy Art: I am Listening",
@@ -3817,17 +3584,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of the town's cowboy sheriff listening intently to a recap of current events. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art capture the raw spirit of the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 68,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-hXKvJHC",
     "title": "Black and White Cowboy Photography: Ambush",
@@ -3886,16 +3649,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy waiting for revenge in the shadow of an open doorway. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art capture the raw spirit of the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 69,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-BBZjZD6",
     "title": "Western Cowboy Photography: Saddling Up on the Ranch",
@@ -3960,10 +3720,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 70,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-KWLFPL9",
     "title": "Black & White Cowboy Art: Class, Here is the Lesson",
@@ -4022,16 +3779,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a frontier teacher explaining the lesson for the day. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art capture the raw spirit of the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 71,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-x2xNvsM",
     "title": "Black & White Cowboy Art: Looking Tough",
@@ -4090,17 +3844,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a young girl learning to survive with the cowboys in the West. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 72,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-dm5pNmb",
     "title": "Black & White Cowboy Art: Look at Them",
@@ -4159,7 +3909,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy smoking his pipe while watching his comrades play their games. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -4224,16 +3974,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy grabbing a cup of coffee before heading out. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his artwork and stunning black and white Western photography capture the raw spirit of the frontier. Witness the emotional depth in his black and white cowboy images, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art that immortalizes the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 74,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-53b8wQ2",
     "title": "Black & White Cowboy Art: Who Wants What Now?",
@@ -4292,17 +4039,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy being interrupted while trying to enjoy a cup of his favorite beverage. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 75,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-nd3Wr3d",
     "title": "Black & White Cowboy Art: All Smiles",
@@ -4361,16 +4104,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a couple enjoying the day in the cowboy village. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 76,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Bfms6gj",
     "title": "Western Photography: Time Out",
@@ -4429,16 +4169,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cook taking a break before the next round of cowboy meals from his chuckwagon. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his artwork and stunning black and white Western photography capture the raw spirit of the frontier. Witness the emotional depth in his black and white cowboy images, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art that immortalizes the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 77,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Vpmx6ck",
     "title": "Cowboy Art: Lunch Time",
@@ -4497,7 +4234,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a woman homesteader cook making sure the stew is hot and ready for the cowboys' lunch. Discover the essence of the Old West with Wayne Heim’s cowboy artwork; where his stunning black and white Western art captures the raw spirit of the frontier. Witness the emotional depth in his cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art that immortalizes the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -4562,7 +4299,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowgirl taking a break on her long train journey westward. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -4594,7 +4331,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing western cowboy art and Western cowboys. A testament to rugged spirit in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 2,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 80
@@ -4657,16 +4394,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a Civil War era soldier protecting the payroll on the train headed West. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 81,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-w3n5cvx",
     "title": "Fine Art Fine Art Western Photography",
@@ -4699,14 +4433,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of frontier life comes alive in this piece, showcasing western fine art and western landscapes fine art. A testament to cowboy artwork in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 82,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-2tXvL9T",
     "title": "Western Fine Art - Western Art",
@@ -4738,14 +4469,11 @@ export const galleryData = [
     ],
     "story": "Delving into western fine art, this work by Wayne Heim highlights cowboy portraits through painterly cowboy portraits and western fine art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 83,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-qpF8JQN",
     "title": "Black & White Cowboy Art: We Try Our Best",
@@ -4804,17 +4532,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a doctor and young apprentice tending to the wounded. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 84,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-6mQrB7h",
     "title": "Cowboy Art:  Music Lessons",
@@ -4873,16 +4597,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy learning how to play violin. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 85,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-6z4gpF7",
     "title": "The Long Watch: A Sheriff’s Silent Oath",
@@ -4947,10 +4668,7 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 86,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-TM27hkq",
     "title": "Black & White Cowboy Art: An Idea is Percolating",
@@ -5009,7 +4727,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a gentleman who has an idea of how to make cowboy life better. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -5074,7 +4792,7 @@ export const galleryData = [
     ],
     "story": "This Black and White Western Fine Art piece depicts an outlaw cowboy carefully studying a situation that demands serious attention. Wayne Heim’s cowboy art captures the essence of the Old West, where each photograph immerses the viewer in the rugged emotions of frontier life. His unique painterly fine art photography style brings the raw, untamed spirit of the Wild West into focus. Bring the timeless allure of cowboy artwork and Western fine art into your space with pieces that celebrate the enduring legacy of the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -5108,7 +4826,7 @@ export const galleryData = [
     ],
     "story": "This image embodies western landscapes fine art and historic western prints, captured by Wayne Heim in his signature style. It reflects fine art Western photography with a touch of rustic charm. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 89
@@ -5171,7 +4889,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a settler cowgirl offering a smile as she greets passersby. Discover the essence of the Old West with Wayne Heim’s cowboy art, where his stunning black and white artwork captures the raw spirit of the frontier. Experience the emotional depth in his black and white cowboy photos, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -5236,7 +4954,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a Western woman making sure the cowboys know she has an eye on them. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -5301,16 +5019,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a young couple enjoying some quiet reflection time on the train. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 92,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-KHf6d46",
     "title": "Black & White Cowboy Art:  Cards are Being Dealt",
@@ -5369,16 +5084,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a dealer shuffling cards for the next game being played in the cowboy saloon. Wild West: 1890's comes to Old Bedford Village. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 93,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-vgJmVxZ",
     "title": "Black & White Cowboy Art: One More for the Road",
@@ -5437,16 +5149,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy preparing for his next adventure. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 94,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-RKgJWdw",
     "title": "Black & White Cowboy Art: Stories by the Fire",
@@ -5505,17 +5214,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowgirl sitting around the fire listening to stories. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 95,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-k2GK8bz",
     "title": "Black & White Cowboy Art: Evening Storytelling Time",
@@ -5574,16 +5279,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowgirl singing songs at an evening campfire. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 96,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-fP4DjwJ",
     "title": "Cowboy Art: Looking For a Seat",
@@ -5642,7 +5344,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a woman looking for a seat on the train. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -5707,16 +5409,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy watching the scenery pass him by while on the train. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 98,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-tZhtz8w",
     "title": "Capturing Wild West Photography",
@@ -5742,15 +5441,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of powerful works of art comes alive in this piece, showcasing historic western prints and cowboy portraits. A testament to frederic remington in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 99,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-D2fQjDQ",
     "title": "Old West Cowboy in Saddle: A Watchful Eye on the Horizon",
@@ -5809,7 +5504,7 @@ export const galleryData = [
     ],
     "story": "In this dramatic black and white Western photograph, a cowboy on horseback keeps a vigilant eye on the horizon. The intense focus of the cowboy mirrors the constant alertness required to survive on the frontier. Wayne Heim’s unique painterly photography style enhances the powerful emotions conveyed in this quiet yet commanding moment. The absence of color draws attention to the intricate textures of the cowboy’s weathered attire and the contours of his horse, further emphasizing the rugged beauty of the Old West. The high-ISO technique used in this image creates a subtle grain, giving it the timeless feel of a film photograph. This piece transports you to a time when the open range demanded strength, patience, and constant awareness. Bring the heart of the Wild West into your space with this striking cowboy artwork that immortalizes the spirit of the frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -5819,11 +5514,7 @@ export const galleryData = [
       "cowboys-with-horses": 6,
       "cowboys-horses-b-w": 6
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-8PxNHDD",
     "title": "Cowboy Art:  The Kid",
@@ -5882,16 +5573,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a young cowboy leaning on a rail while waiting to make his next move. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 101,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-vHWM5g8",
     "title": "Cowboy Art: All's Quiet in Town",
@@ -5950,16 +5638,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a law man cowboy riding the rails and keeping the piece. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 102,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-8KsLSkd",
     "title": "Cowboy Art: Having a Good Laugh",
@@ -6018,16 +5703,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowgirl enjoying a relaxing moment with a good laugh. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 103,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-sz7RwkR",
     "title": "Cowboy Art: Break Time",
@@ -6086,17 +5768,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy guarding the door to the town jail. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 104,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-8NZ2XjP",
     "title": "Cowboy Art: Texas Ranger",
@@ -6155,16 +5833,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a Texas Ranger making his way into town. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 105,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-QsNP7mR",
     "title": "Cowboy Portraits Portrait",
@@ -6198,7 +5873,7 @@ export const galleryData = [
     ],
     "story": "Delving into rustic charm, this work by Wayne Heim highlights western fine art through cowboy painting art and outlaw portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 106
@@ -6261,17 +5936,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy mountain man settler realizing he has uninvited guests approaching his homestead. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 107,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-H8VZWJM",
     "title": "Cowboy Art: Taking a Break",
@@ -6330,7 +6001,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy in the saddle reflecting on the trail ahead of him. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6395,16 +6066,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy smoking his pipe while leaning on his fence. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 109,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-shXMJQg",
     "title": "Cowboy Art:  Western Justice",
@@ -6463,7 +6131,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a marshal taking a rustler to trial. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -6528,16 +6196,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy enjoying a quiet moment in a doorway. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 111,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-BQ2vH4C",
     "title": "Cowboy Art: Mom",
@@ -6596,16 +6261,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a Victorian woman out for her Sunday constitutional. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 112,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-mBMhRpJ",
     "title": "Cowboy Art: Setting Sights on Next Target",
@@ -6664,17 +6326,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a classic cowboy striking a pose for the camera man. PDiscover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 113,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-CdpCkV4",
     "title": "Cowboy Art:  Plotting Revenge",
@@ -6733,17 +6391,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy planning his next move and getting his revenge. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 114,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-v3xhPgB",
     "title": "Cowboy Art: Waiting Game",
@@ -6802,17 +6456,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a woman waiting for her cowboy guide to come meet her and take her to her new homestead. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 115,
-    "availableSeries": [
-      "chronicle",
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-MCMxmKp",
     "title": "Cowboy Art:  Cheese!",
@@ -6871,16 +6521,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of an old time cowboy photographer. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 116,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-5rV2pQS",
     "title": "Cowboy Art: Out for a Stroll",
@@ -6939,7 +6586,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a city woman on an afternoon stroll through town with her local guide. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7004,17 +6651,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a classic cowboy in camp deciding what to do next. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 118,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-TJbNP4k",
     "title": "Cowboy Art: Holding Up the Door",
@@ -7073,16 +6716,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a deputy cowboy posing for a casual photograph in front of old jailhouse. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 119,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-8DfVtth",
     "title": "Enjoying the Day: A Cowgirl's Quiet Moment",
@@ -7141,7 +6781,7 @@ export const galleryData = [
     ],
     "story": "In this evocative black and white Western artwork, a cowgirl enjoys a peaceful moment on her porch, embodying the calm serenity of life on the frontier. Captured in Wayne Heim’s signature painterly photography style, this image brings to life the simple pleasures of the Old West. The emotional depth in the cowgirl’s expression, combined with the raw spirit of the Western landscape, creates a timeless scene. This piece invites the essence of the Wild West into your space, immortalizing a quiet yet powerful moment of cowboy life. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7206,16 +6846,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of couple enjoying a morning stroll through the cowboy village. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 121,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-8rx6BzZ",
     "title": "Cowboy Art: Winter Blues",
@@ -7274,17 +6911,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowgirl observing the gray, cold winter day. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 122,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-QGW2q8p",
     "title": "Cowboy Art: Strong Woman",
@@ -7343,7 +6976,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowgirl in cowboy hat posing for a portrait. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -7408,17 +7041,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a marshal posing. Wild West: 1890's comes to Old Bedford Village. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 124,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-pdW6WgR",
     "title": "Cowboy Art: Losing Patience",
@@ -7477,16 +7106,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy in a classic portrait pose. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 125,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-sJDHsjN",
     "title": "Cowboy Art: Don't Test Me",
@@ -7545,16 +7171,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy in no mood to be tested. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 126,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Mmszz6d",
     "title": "Western Fine Art Portrait",
@@ -7581,14 +7204,11 @@ export const galleryData = [
     ],
     "story": "This image embodies western art and frontier life, captured by Wayne Heim in his signature style. It reflects Western cowboys with a touch of wild west photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 127,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-KNRMjjD",
     "title": "Cowboy Art:  Let's Go Boys!",
@@ -7647,16 +7267,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy yelling \"run for the hills boys!\" during wild west shoot out. Wild West: 1890's comes to Old Bedford Village. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 128,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-N3S92fb",
     "title": "Cowboy Art: Waiting",
@@ -7715,17 +7332,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy waiting for unwanted people to arrive. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 129,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Gqw3s5s",
     "title": "Cowboy Art: Keeping Watch",
@@ -7784,17 +7397,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy with gun in window protecting his homestead cabin. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 130,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-xMjhQVd",
     "title": "Cowboy Art: Waiting for News",
@@ -7853,17 +7462,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowgirl waiting for the boys to return with news of success. Wild West: 1890's comes to Old Bedford Village. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 131,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-RLZFsxp",
     "title": "Cowboy Art: Sitting and Waiting",
@@ -7922,18 +7527,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy patiently waiting for the day to begin. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 132,
-    "availableSeries": [
-      "foundation",
-      "chronicle",
-      "legend"
-    ]
-  },
+},
   {
     "id": "i-f47g8KM",
     "title": "Cowboy Art: Studying the Scene",
@@ -7992,16 +7592,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a young girl missing her family back East. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 133,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-45kXhng",
     "title": "Cowboy Art: Look Out",
@@ -8060,17 +7657,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy tasked as a lookout for his band of misfits. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 134,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-MSnkjq2",
     "title": "Cowboy Art:  What Are They Saying?",
@@ -8129,16 +7722,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a old Western sheriff studying a group of rowdy cowboys. Wild West: 1890's comes to Old Bedford Village. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 135,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-wdDHfpn",
     "title": "Black and White Cowboy Photography Art: Judgment Day",
@@ -8197,16 +7787,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cattle rustler on trial. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art capture the raw spirit of the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 136,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-CT5ds2V",
     "title": "Cowboy Art: Another Day in the Saddle",
@@ -8265,7 +7852,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy ready for a day on the dusty trail. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8275,10 +7862,7 @@ export const galleryData = [
       "cowboys-with-horses": 7,
       "cowboys-horses-b-w": 7
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Zfp4KwJ",
     "title": "Cowboy Art:  Happy Sights",
@@ -8337,7 +7921,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a woman very pleased to see the cowboys coming finally coming home. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8402,7 +7986,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy and his rifle holding his defensive position. Image done in sepia tones. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -8440,7 +8024,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing western art and historic western prints. A testament to rustic charm in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 140
@@ -8471,14 +8055,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing western landscapes fine art and cowboy portraits. A testament to western landscapes fine art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 141,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-bhb655B",
     "title": "Cowboy Art: Next Move",
@@ -8537,16 +8118,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy playing Faro and drinking his losses away. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 142,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-6Mqqssm",
     "title": "Cowboy Art: Time to be Tough",
@@ -8605,16 +8183,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy law man determining the best time to step in to a situation. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 143,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-B2H9fFs",
     "title": "The Essence Of Western Landscapes Fine Art",
@@ -8648,14 +8223,11 @@ export const galleryData = [
     ],
     "story": "Delving into cowboy painting art, this work by Wayne Heim highlights western fine art through rugged spirit and western canon. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 144,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Bpq96Kr",
     "title": "Cowboy Art: Quiet and Steady",
@@ -8714,16 +8286,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a outlaw cowboy getting ready to make his move. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 145,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-w3rxmgg",
     "title": "Cowboy Art: Comin' Your Way",
@@ -8782,16 +8351,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy walking towards the fight rather than waiting for it to come to him. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 146,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-863RbPv",
     "title": "Frontier Life Moment",
@@ -8825,14 +8391,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of wild west photography comes alive in this piece, showcasing wild west photography and western art. A testament to cowboy painting art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 147,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-qJLHBWD",
     "title": "Cowboy Art: Stick 'em up!",
@@ -8891,17 +8454,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of cowboy renegades robbing the train. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 148,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-Dh8nT9S",
     "title": "Cowboy Art:  Taking Aim",
@@ -8960,17 +8519,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a law man taking aim as the outlaw cowboys that are approaching the town square. Wild West: 1890's comes to Old Bedford Village. Western reenactors at The Old Bedford Historical Village. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 149,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-4sbVfhW",
     "title": "Cowboy Art: Watching and Waiting",
@@ -9029,16 +8584,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art  done in sepia tones of a cowboy in position behind a tree while watching for trouble. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 150,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-rZpSGr2",
     "title": "Cowboy Art: Last Stand",
@@ -9097,16 +8649,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a classic cowboy shoot out. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 151,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-GtR9WBH",
     "title": "Capturing Fine Art Western Photography",
@@ -9138,7 +8687,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of Western cowboys comes alive in this piece, showcasing rugged spirit and wild west photography. A testament to western canon in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 152,
@@ -9146,10 +8695,7 @@ export const galleryData = [
       "cowboys-with-horses": 8,
       "cowboys-horses-b-w": 8
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-pqcmRth",
     "title": "Black & White Cowboy Art: Saying Hello to the Teacher",
@@ -9208,16 +8754,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of Big Jim visiting the teacher that taught him readin' and writin'. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art capture the raw spirit of the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 153,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-gvxp8b8",
     "title": "Cowboy Art:  Crime Doesn't Pay",
@@ -9276,16 +8819,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cattle rustler on his way to justice and to the jail. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 154,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-hM67hBK",
     "title": "Cowboy Art: Watching the Rails",
@@ -9344,16 +8884,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of business man watching the scenery pass him by on while traveling on the train. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 155,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-vnbxvkh",
     "title": "Cowboy Art: Got Your Back",
@@ -9412,16 +8949,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy armed and ready battle it out on the train. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 156,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-FhwDm6k",
     "title": "Cowboy Art: Taking Cover",
@@ -9480,16 +9014,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy taking cover in a gunfight in the woods behind the biggest tree he could find. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 157,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-FKmvVCn",
     "title": "Cowboy Art: Getting Ready",
@@ -9548,17 +9079,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy reloading to return fire from his trusty Henry rifle. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 158,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-9vczZrF",
     "title": "Outlaw Portraits - Western Cowboys",
@@ -9591,7 +9118,7 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of fine art Western photography comes alive in this piece, showcasing powerful works of art and painterly cowboy portraits. A testament to western fine art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 159,
@@ -9599,10 +9126,7 @@ export const galleryData = [
       "cowboys-with-horses": 9,
       "cowboys-horses-b-w": 9
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-58vzHcQ",
     "title": "Cowboy Art: Working the Claim",
@@ -9661,16 +9185,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy striking it rich in the West where the gold was so plentiful you can walk around and pick it up off the ground. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 160,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-6rCCMf9",
     "title": "Rustic Charm Moment",
@@ -9695,15 +9216,11 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of cowboy artwork comes alive in this piece, showcasing rugged spirit and rugged spirit. A testament to cowboy portraits in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 161,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-P5PB5p3",
     "title": "Cowboy Art: Watching the Game",
@@ -9762,16 +9279,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy watching a card game unfold in front of him. Keeping an eye out for cheaters. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 162,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-28HMKqF",
     "title": "Cowboy Art: Nice Work",
@@ -9830,7 +9344,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a business man counting up the money he is going to make on his latest deal. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -9895,16 +9409,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of an outlaw cowboy keeping a watchful eye on those about to be up to no good. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art capture the raw spirit of the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 164,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-R4vHvjb",
     "title": "Cowboy Art: Time to be the Marshal",
@@ -9963,16 +9474,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of the marshal gauging a situation and if he needs to step in. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 165,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-xH6DsjR",
     "title": "Cowboy Art: Looking to the Skies",
@@ -10031,16 +9539,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy enjoying the rays of sun on a train. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 166,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-NcQTPBp",
     "title": "Cowboy Art:  Western Portrait",
@@ -10099,16 +9604,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a settler - traveler - cowgirl posing for a picture. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 167,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-s5VRFGH",
     "title": "Capturing Rustic Charm",
@@ -10135,7 +9637,7 @@ export const galleryData = [
     ],
     "story": "This image embodies western art and frontier life, captured by Wayne Heim in his signature style. It reflects cowboy artwork with a touch of rustic charm. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 168
@@ -10198,17 +9700,13 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of an old cowboy standing guard in front of a mine shaft entrance. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 169,
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-qVVVQPH",
     "title": "Fine Art Western Fine Art",
@@ -10236,14 +9734,11 @@ export const galleryData = [
     ],
     "story": "This image embodies rugged spirit and cowboy portraits, captured by Wayne Heim in his signature style. It reflects painterly cowboy portraits with a touch of western cowboy art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 170,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-Tv9qCJB",
     "title": "Cowboy Art:  How can I help you?",
@@ -10302,7 +9797,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of gunsmith waiting for his next customer while sitting in his tent. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10333,7 +9828,7 @@ export const galleryData = [
     ],
     "story": "This image embodies painterly cowboy portraits and cowboy art, captured by Wayne Heim in his signature style. It reflects western landscapes fine art with a touch of western fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 172
@@ -10396,7 +9891,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of an attorney questioning a cowboy accused of being a cattle rustler. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10428,7 +9923,7 @@ export const galleryData = [
     ],
     "story": "This image embodies western cowboy art and historic western prints, captured by Wayne Heim in his signature style. It reflects fine art Western photography with a touch of cowboy painting art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 174,
@@ -10436,10 +9931,7 @@ export const galleryData = [
       "cowboys-with-horses": 13,
       "cowboys-horses-b-w": 13
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-6xL8p7Z",
     "title": "Cowboy Portraits Moment",
@@ -10471,7 +9963,7 @@ export const galleryData = [
     ],
     "story": "This image embodies western art and frederic remington, captured by Wayne Heim in his signature style. It reflects western art with a touch of frontier life. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 175,
@@ -10479,11 +9971,7 @@ export const galleryData = [
       "cowboys-with-horses": 11,
       "cowboys-horses-b-w": 11
     },
-    "availableSeries": [
-      "foundation",
-      "chronicle"
-    ]
-  },
+},
   {
     "id": "i-sGtzTtH",
     "title": "Fine Art Cowboy Portraits",
@@ -10552,16 +10040,13 @@ export const galleryData = [
     ],
     "story": "Wayne Heim's exploration of western canon comes alive in this piece, showcasing powerful works of art and cowboy artwork. A testament to western fine art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
     "sortOrder": 176,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-NMWM9tP",
     "title": "Exploring Painterly Cowboy Portraits",
@@ -10594,14 +10079,11 @@ export const galleryData = [
     ],
     "story": "Delving into fine art Western photography, this work by Wayne Heim highlights cowboy artwork through western canon and fine art Western photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 177,
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-BzhQxMz",
     "title": "Western Cowboys And Cowboy Portraits",
@@ -10626,7 +10108,7 @@ export const galleryData = [
     ],
     "story": "This image embodies Western cowboys and painterly cowboy portraits, captured by Wayne Heim in his signature style. It reflects powerful works of art with a touch of western fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 178,
@@ -10634,10 +10116,7 @@ export const galleryData = [
       "cowboys-with-horses": 10,
       "cowboys-horses-b-w": 10
     },
-    "availableSeries": [
-      "foundation"
-    ]
-  },
+},
   {
     "id": "i-RHD6KVc",
     "title": "Black & White Cowboy Art: What Are They Doing?",
@@ -10696,7 +10175,7 @@ export const galleryData = [
     ],
     "story": "Black and White Western Art of a cowboy trying to figure out what the youth of today think they are doing. Discover the essence of the Old West with Wayne Heim’s cowboy art; where his cowboy artwork and stunning black and white Western art captures the raw spirit of  the frontier. Witness the emotional depth in his black and white cowboy pictures, crafted in his unique fine art painterly photography style. Bring the heart of the Wild West into your space with timeless cowboy art and cowboy artwork that immortalize the American frontier. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
@@ -10735,7 +10214,7 @@ export const galleryData = [
     ],
     "story": "This image embodies cowboy portraits and cowboy artwork, captured by Wayne Heim in his signature style. It reflects wild west photography with a touch of fine art Western photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 180
@@ -10925,7 +10404,7 @@ export const galleryData = [
     ],
     "story": "Delving into outlaw portraits, this work by Wayne Heim highlights painterly cowboy portraits through powerful works of art and rugged spirit. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 184
@@ -10956,7 +10435,7 @@ export const galleryData = [
 
     "story": "This image embodies cowboy art and cowboy painting art, captured by Wayne Heim in his signature style. It reflects cowboy painting art with a touch of outlaw portraits. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 185,
@@ -10965,9 +10444,7 @@ export const galleryData = [
       "cowboys-with-horses": 14,
       "cowboys-horses-b-w": 14
     },
-
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-smMGtDZ",
     "title": "Wild West Photography And Historic Western Prints",
@@ -10994,7 +10471,7 @@ export const galleryData = [
 
     "story": "Delving into cowboy art, this work by Wayne Heim highlights outlaw portraits through historic western prints and western cowboy art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 186,
@@ -11003,9 +10480,7 @@ export const galleryData = [
       "cowboys-with-horses": 1,
       "cowboys-horses-b-w": 1
     },
-
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-dTzLRVW",
     "title": "Untitled",
@@ -11021,12 +10496,11 @@ export const galleryData = [
     "keywords": ["HF29136"],
     "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 187,
-    availableSeries: ["foundation"]
-  },
+},
   {
     "id": "i-sh8X4Vg",
     "title": "Inevitable",
@@ -11053,12 +10527,11 @@ export const galleryData = [
 
     "story": "Between jagged pillars and slivered light, two paths converge. Shadows conceal a ridge— and the burden of duty. Haunted by a ghost still breathing, time holds its breath. From the cloak of vigilance, the sharp light of judgement catches on dust, leather, and the edge of resolve worn thin. Buttressed by stone and silence, two paths meet— for what, in his soul, was always inevitable.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 188,
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-RRB2hNj",
     "title": "Frederic Remington Study",
@@ -11094,7 +10567,7 @@ export const galleryData = [
 
     "story": "This image embodies western art and western canon, captured by Wayne Heim in his signature style. It reflects western fine art with a touch of painterly cowboy portraits. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 189,
@@ -11103,9 +10576,7 @@ export const galleryData = [
       "cowboys-with-horses": 12,
       "cowboys-horses-b-w": 12
     },
-
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-vc6XQPf",
     "title": "Western Cowboys Moment",
@@ -11141,12 +10612,11 @@ export const galleryData = [
 
     "story": "This image embodies wild west photography and western canon, captured by Wayne Heim in his signature style. It reflects western art with a touch of western art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 190,
-    availableSeries: ["foundation"]
-  },
+},
   {
     "id": "i-xZdZmQs",
     "title": "Fine Art Western Photography In Fine Art",
@@ -11180,7 +10650,7 @@ export const galleryData = [
     ],
     "story": "Delving into western art, this work by Wayne Heim highlights cowboy artwork through rugged spirit and western cowboy art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 191
@@ -11214,12 +10684,11 @@ export const galleryData = [
 
     "story": "This image embodies Western cowboys and western canon, captured by Wayne Heim in his signature style. It reflects wild west photography with a touch of frederic remington. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 192,
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-BLhK5vz",
     "title": "Painterly Cowboy Portraits Study",
@@ -11250,12 +10719,11 @@ export const galleryData = [
 
     "story": "This image embodies powerful works of art and fine art Western photography, captured by Wayne Heim in his signature style. It reflects western cowboy art with a touch of outlaw portraits. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 193,
-    availableSeries: ["foundation"]
-  },
+},
   {
     "id": "i-6wdPMth",
     "title": "Rugged Spirit In Fine Art",
@@ -11283,12 +10751,11 @@ export const galleryData = [
 
     "story": "Delving into powerful works of art, this work by Wayne Heim highlights wild west photography through Western cowboys and powerful works of art. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 194,
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-pmdsNRZ",
     "title": "Rustic Charm And Outlaw Portraits",
@@ -11317,12 +10784,11 @@ export const galleryData = [
 
     "story": "This image embodies rugged spirit and cowboy art, captured by Wayne Heim in his signature style. It reflects wild west photography with a touch of fine art Western photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 195,
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-PvHHPSq",
     "title": "Cowboy Art And Fine Art Western Photography",
@@ -11350,12 +10816,11 @@ export const galleryData = [
 
     "story": "This image embodies cowboy portraits and western fine art, captured by Wayne Heim in his signature style. It reflects outlaw portraits with a touch of western cowboy art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 196,
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-J5qRTMq",
     "title": "Rustic Charm Portrait",
@@ -11384,12 +10849,11 @@ export const galleryData = [
 
     "story": "Wayne Heim's exploration of cowboy painting art comes alive in this piece, showcasing cowboy art and western canon. A testament to cowboy painting art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 197,
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-CcZtSGv",
     "title": "Western Art And Fine Art Western Photography",
@@ -11418,12 +10882,11 @@ export const galleryData = [
 
     "story": "Delving into western art, this work by Wayne Heim highlights historic western prints through cowboy artwork and cowboy portraits. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 198,
-    availableSeries: ["foundation"]
-  },
+},
   {
     "id": "i-dFdV442",
     "title": "Painterly Cowboy Portraits In Fine Art",
@@ -11453,12 +10916,11 @@ export const galleryData = [
 
     "story": "Delving into outlaw portraits, this work by Wayne Heim highlights Western cowboys through cowboy artwork and fine art Western photography. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 199,
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-FqBfMJG",
     "title": "Fine Art Outlaw Portraits",
@@ -11488,12 +10950,11 @@ export const galleryData = [
 
     "story": "This image embodies western canon and cowboy painting art, captured by Wayne Heim in his signature style. It reflects cowboy portraits with a touch of rustic charm. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 200,
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-G7vCDcw",
     "title": "Cowboy Artwork In Fine Art",
@@ -11522,12 +10983,11 @@ export const galleryData = [
 
     "story": "This image embodies fine art Western photography and Western cowboys, captured by Wayne Heim in his signature style. It reflects western art with a touch of frederic remington. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 201,
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-Pd3vWBk",
     "title": "Frederic Remington Portrait",
@@ -11556,12 +11016,11 @@ export const galleryData = [
 
     "story": "Wayne Heim's exploration of powerful works of art comes alive in this piece, showcasing rugged spirit and cowboy portraits. A testament to outlaw portraits in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 202,
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-nnV6qtS",
     "title": "Fine Art Frederic Remington",
@@ -11589,7 +11048,7 @@ export const galleryData = [
 
     "story": "Delving into western art, this work by Wayne Heim highlights historic western prints through powerful works of art and rugged spirit. A powerful statement in photography. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 203,
@@ -11598,9 +11057,7 @@ export const galleryData = [
       "cowboys-with-horses": 15,
       "cowboys-horses-b-w": 15
     },
-
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-phBP9Mt",
     "title": "Western Cowboy Art In Fine Art",
@@ -11636,12 +11093,11 @@ export const galleryData = [
 
     "story": "Wayne Heim's exploration of western landscapes fine art comes alive in this piece, showcasing cowboy artwork and historic western prints. A testament to cowboy art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 204,
-    availableSeries: ["foundation", "chronicle"]
-  },
+},
   {
     "id": "i-5xcvjQJ",
     "title": "Frederic Remington - Cowboy Art",
@@ -11669,10 +11125,9 @@ export const galleryData = [
 
     "story": "Wayne Heim's exploration of western landscapes fine art comes alive in this piece, showcasing western cowboy art and fine art Western photography. A testament to cowboy painting art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 205,
-    availableSeries: ["foundation"]
-  }
+}
 ];

@@ -1,6 +1,21 @@
 export default async (request, context) => {
   const url = new URL(request.url);
 
+  // 🔒 Block /admin/* paths unless running in Netlify dev context
+  if (url.pathname.startsWith('/admin')) {
+    // Netlify sets CONTEXT env var: 'production', 'deploy-preview', 'branch-deploy', or 'dev'
+    // In local dev, it may be undefined or 'dev'
+    const netlifyContext = Deno.env.get('CONTEXT');
+    
+    // Allow if context is 'dev' OR undefined (local dev without full Netlify CLI)
+    const isDev = !netlifyContext || netlifyContext === 'dev';
+    
+    if (!isDev) {
+      console.log('Blocked admin access:', netlifyContext, url.pathname);
+      return new Response(null, { status: 404 });
+    }
+  }
+
   // ✅ Always allow sitemap, robots.txt, IndexNow key, and preflight/HEAD requests
   const alwaysAllowedPaths = [
     '/sitemap.xml',

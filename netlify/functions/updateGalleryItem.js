@@ -3,6 +3,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const recast = require("recast");
 const babelParser = require("@babel/parser");
+const visualIndex = require("./visualIndex");
 
 /* ===== new: path guards & helpers ===== */
 const ALLOWED_ROOTS = ["src/data/Galleries", "src/pages/Other", "src/data/Other"]; // support all trees used by editors
@@ -67,6 +68,66 @@ function setProp(obj, name, valueNode) {
 }
 
 exports.handler = async (event) => {
+  // GET: Fetch gallery data for reading
+  if (event.httpMethod === "GET") {
+    try {
+      const datasetPath = event.queryStringParameters?.datasetPath;
+      if (!datasetPath) return { statusCode: 400, body: "Missing datasetPath query param" };
+      
+      let absPath;
+      try {
+        absPath = resolveDatasetAbsolute(datasetPath);
+      } catch (e) {
+        return { statusCode: 400, body: e.message };
+      }
+      
+      const code = await fs.readFile(absPath, "utf8");
+      const ast = parse(code);
+      
+      // Find the galleryData array
+      let items = [];
+      recast.visit(ast, {
+        visitVariableDeclarator(path) {
+          if (path.node.id.name === "galleryData" && path.node.init?.type === "ArrayExpression") {
+            items = path.node.init.elements.map(elem => {
+              if (elem.type !== "ObjectExpression") return null;
+              const obj = {};
+              for (const prop of elem.properties) {
+                const key = prop.key.name || prop.key.value;
+                const val = getStringValue(prop.value);
+                if (val !== null) obj[key] = val;
+                else if (prop.value.type === "ArrayExpression") {
+                  obj[key] = prop.value.elements.map(e => getStringValue(e)).filter(Boolean);
+                } else if (prop.value.type === "BooleanLiteral") {
+                  obj[key] = prop.value.value;
+                } else if (prop.value.type === "NumericLiteral") {
+                  obj[key] = prop.value.value;
+                }
+              }
+              return obj;
+            }).filter(Boolean);
+            return false;
+          }
+          this.traverse(path);
+        }
+      });
+      
+      return {
+        statusCode: 200,
+        headers: { 
+          "Content-Type": "application/json",
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+          "Pragma": "no-cache",
+          "Expires": "0"
+        },
+        body: JSON.stringify({ items })
+      };
+    } catch (err) {
+      console.error("[updateGalleryItem GET]", err);
+      return { statusCode: 500, body: String(err.message) };
+    }
+  }
+  
   if (event.httpMethod !== "POST") return { statusCode: 405, body: "Method Not Allowed" };
 
   try {
@@ -106,17 +167,61 @@ exports.handler = async (event) => {
     // find object with matching id (case-insensitive to handle URL normalization)
     const items = arrNode.elements || [];
     let target = null;
+    let targetIndex = -1;
     const idLower = id.toLowerCase();
-    for (const el of items) {
+    for (let i = 0; i < items.length; i++) {
+      const el = items[i];
       if (el?.type !== "ObjectExpression") continue;
       const idProp = getProp(el, "id");
       const idVal = getStringValue(idProp?.value);
       if (idVal && idVal.toLowerCase() === idLower) { 
-        target = el; 
+        target = el;
+        targetIndex = i;
         break; 
       }
     }
     if (!target) return { statusCode: 404, body: `Item id ${id} not found in ${datasetPath}` };
+
+    // Check if this is a delete operation (status === "removed")
+    if (patch.status === "removed") {
+      // Remove from series registry first
+      try {
+        const seriesRegistry = require("./seriesRegistry");
+        const mockEvent = {
+          httpMethod: "POST",
+          body: JSON.stringify({
+            action: "removeOccurrence",
+            imageId: id,
+            galleryPath: datasetPath
+          })
+        };
+        await seriesRegistry.handler(mockEvent);
+        console.log(`[updateGalleryItem] Removed ${id} from series registry`);
+      } catch (regErr) {
+        console.warn("[updateGalleryItem] Failed to remove from series registry:", regErr.message);
+      }
+      
+      // Remove from visual index
+      try {
+        await visualIndex.removeImage(id, datasetPath);
+        console.log(`[updateGalleryItem] Removed ${id} from visual index`);
+      } catch (vizErr) {
+        console.warn("[updateGalleryItem] Failed to remove from visual index:", vizErr.message);
+      }
+      
+      // Remove the entire entry from the array
+      arrNode.elements.splice(targetIndex, 1);
+      
+      // Write back
+      const output = recast.print(ast, { quote: "double" }).code;
+      await fs.writeFile(absPath, output, "utf8");
+      
+      return {
+        statusCode: 200,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ok: true, deleted: true, datasetPath, id }),
+      };
+    }
 
     // whether file uses 'notes' or 'collectorNotes'
     const hasNotes = !!getProp(target, "notes");
@@ -194,18 +299,9 @@ exports.handler = async (event) => {
       }
     }
 
-    // availableSeries (array of strings - edition tiers beyond default sketch)
-    if (Object.prototype.hasOwnProperty.call(patch, "availableSeries")) {
-      const existing = getProp(target, "availableSeries");
-      if (patch.availableSeries === null || !patch.availableSeries || (Array.isArray(patch.availableSeries) && patch.availableSeries.length === 0)) {
-        // Remove availableSeries prop if null/empty/undefined
-        if (existing) {
-          target.properties = target.properties.filter((p) => p !== existing);
-        }
-      } else if (Array.isArray(patch.availableSeries)) {
-        setProp(target, "availableSeries", makeArrayStringLiterals(patch.availableSeries));
-      }
-    }
+    // NOTE: availableSeries is NOT stored in .mjs files.
+    // Edition tier assignments (Chronicle/Legend) are stored in seriesRegistry.json via the seriesRegistry function.
+    // This separation ensures edition assignments are protected from accidental overwrites.
 
     // noSketch (boolean - explicitly exclude from default sketch tier)
     if (Object.prototype.hasOwnProperty.call(patch, "noSketch")) {
@@ -220,7 +316,8 @@ exports.handler = async (event) => {
       }
     }
 
-    // status ("active" | "retired" | "removed" - archival lifecycle)
+    // status ("active" | "retired" - archival lifecycle)
+    // Note: "removed" is handled earlier with full entry deletion
     if (Object.prototype.hasOwnProperty.call(patch, "status")) {
       const v = patch.status;
       const existing = getProp(target, "status");
@@ -229,7 +326,7 @@ exports.handler = async (event) => {
         if (existing) {
           target.properties = target.properties.filter((p) => p !== existing);
         }
-      } else if (v === "retired" || v === "removed") {
+      } else if (v === "retired") {
         setProp(target, "status", makeStringNode(v, usesTemplate));
       }
     }
@@ -240,7 +337,30 @@ exports.handler = async (event) => {
 
     // write back
     const output = recast.print(ast, { quote: "double" }).code;
+    console.log('[updateGalleryItem] Writing to', absPath, 'for id:', id);
+    console.log('[updateGalleryItem] Patch applied:', JSON.stringify(patch));
     await fs.writeFile(absPath, output, "utf8");
+    console.log('[updateGalleryItem] File written successfully');
+
+    // Generate visual fingerprint for similarity detection
+    try {
+      const srcProp = getProp(target, "src");
+      const imageUrl = getStringValue(srcProp?.value);
+      if (imageUrl && imageUrl.startsWith("http")) {
+        // Run visual indexing in background (don't block response)
+        visualIndex.indexImage(id, imageUrl, datasetPath)
+          .then(result => {
+            if (result.success) {
+              console.log(`[updateGalleryItem] Indexed visual hash for ${id}`);
+            } else {
+              console.warn(`[updateGalleryItem] Failed to index ${id}:`, result.error);
+            }
+          })
+          .catch(err => console.warn("[updateGalleryItem] Visual index error:", err.message));
+      }
+    } catch (vizErr) {
+      console.warn("[updateGalleryItem] Visual indexing setup error:", vizErr.message);
+    }
 
     return {
       statusCode: 200,

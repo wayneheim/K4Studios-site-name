@@ -118,11 +118,11 @@ export function generateSmartMetadata(item, datasetPath = "") {
   ];
   const description = rand(descTemplates)();
 
-  // --- Story templates ---
+  // --- Story templates (narrative, no copyright - that goes in description) ---
   const storyTemplates = [
-    () => `This image embodies ${storyPhrases[0]} and ${storyPhrases[1]}, captured by Wayne Heim in his signature style${location ? ` in ${location}` : ""}. It reflects ${storyPhrases[2]} with a touch of ${storyPhrases[3]}. © Wayne Heim`,
-    () => `Wayne Heim's exploration of ${storyPhrases[0]} comes alive in this piece, showcasing ${storyPhrases[1]} and ${storyPhrases[2]}${location ? ` from ${location}` : ""}. A testament to ${storyPhrases[3]} in fine art. © Wayne Heim`,
-    () => `Delving into ${storyPhrases[0]}, this work by Wayne Heim highlights ${storyPhrases[1]} through ${storyPhrases[2]} and ${storyPhrases[3]}${location ? ` in ${location}` : ""}. A powerful statement in photography. © Wayne Heim`,
+    () => `This image embodies ${storyPhrases[0]} and ${storyPhrases[1]}, captured by Wayne Heim in his signature style${location ? ` in ${location}` : ""}. It reflects ${storyPhrases[2]} with a touch of ${storyPhrases[3]}.`,
+    () => `Wayne Heim's exploration of ${storyPhrases[0]} comes alive in this piece, showcasing ${storyPhrases[1]} and ${storyPhrases[2]}${location ? ` from ${location}` : ""}. A testament to ${storyPhrases[3]} in fine art.`,
+    () => `Delving into ${storyPhrases[0]}, this work by Wayne Heim highlights ${storyPhrases[1]} through ${storyPhrases[2]} and ${storyPhrases[3]}${location ? ` in ${location}` : ""}. A powerful statement in photography.`,
   ];
   const story = rand(storyTemplates)();
 

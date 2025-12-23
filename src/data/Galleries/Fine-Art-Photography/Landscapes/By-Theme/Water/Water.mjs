@@ -27,6 +27,7 @@ export const galleryData = [
     "description": "Explore painterly river scenes with Wayne Heim's painterly river scenes. This waterfall landscape photography piece conveys waterfall landscape photography, the truth of a moment, and painterly river scenes, perfect for fans of painterly river scenes. © Wayne Heim",
     "alt": "Kirkjufell  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/A",
+
     "keywords": [
       "wayne heim",
       "landscape photography",
@@ -42,9 +43,10 @@ export const galleryData = [
       "waterfall landscape photography",
       "the truth of a moment"
     ],
-    "story": "Wayne Heim's exploration of the truth of a moment comes alive in this piece, showcasing the truth of a moment and waterfall landscape photography. A testament to the truth of a moment in fine art. © Wayne Heim",
+
+    "story": "Wayne Heim's exploration of the truth of a moment comes alive in this piece, showcasing the truth of a moment and waterfall landscape photography. A testament to the truth of a moment in fine art. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 0,
@@ -53,14 +55,16 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/0/NWDQBzptsMrz2wSRx9dm9fjnBGTKJxwWp4Nn8gS7D/L/_WHZ1224-Pano_tonemapped%20v2-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/0/KPDWFVwK7kL2JCFrNvTpM96JWWC2PXjstQNBv98vf/M/_WHZ1224-Pano_tonemapped%20v2-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-XhWrKdZ/0/LF6FG2jCjptDRPsm9MsR8rpVNndZxP6B4jC7D9Tkn/S/_WHZ1224-Pano_tonemapped%20v2-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-3R8rc7C",
     "title": "Strasbourg - Photography by Wayne Heim",
-    "description": "24 x 36 In Stock  Strasbourg Old town Strasbourg showing canal and colorful buildings in the principal city of Alsace in France. ©Wayne Heim",
+    "description": "Strasbourg Old town Strasbourg showing canal and colorful buildings in the principal city of Alsace in France. ©Wayne Heim",
     "alt": "Kirkjufell  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-3R8rc7C/A",
+
     "keywords": [
       "wayne heim",
       "landscape photography",
@@ -73,9 +77,10 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "24 x 36 In Stock  Strasbourg Old town Strasbourg showing canal and colorful buildings in the principal city of Alsace in France. ©Wayne Heim",
+
+    "story": "Strasbourg Old town Strasbourg showing canal and colorful buildings in the principal city of Alsace in France. ",
     "notes": "",
-    "rating": 0,
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 1,
@@ -84,7 +89,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/MBLsnq3KnS8sbBN5nz2rbcTL2Mg5ck69N4QMJXQwD/L/_IMG2241-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/KDs8vdppBwxHJqCx7vMH9DPMVHXSDMsrddc8XZSqR/M/_IMG2241-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/LMfd4hKLM8FchM8pbdHwfRmRCFb84H3GjzWnwnLhk/S/_IMG2241-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-84LZftr",
@@ -106,7 +112,7 @@ export const galleryData = [
     ],
     "story": "Upper Yellowstone waterfall after the storm.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 2,
@@ -123,6 +129,7 @@ export const galleryData = [
     "description": "Explore waterfall landscape photography with Wayne Heim's painterly river scenes. This painterly river scenes piece conveys waterfall landscape photography, the truth of a moment, and waterfall landscape photography, perfect for fans of painterly river scenes. © Wayne Heim",
     "alt": "Upper Yellowstone Falls.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/A",
+
     "keywords": [
       "wayne heim",
       "landscape photography",
@@ -138,9 +145,10 @@ export const galleryData = [
       "painterly river scenes",
       "the truth of a moment"
     ],
-    "story": "This image embodies the truth of a moment and painterly river scenes, captured by Wayne Heim in his signature style. It reflects painterly river scenes with a touch of painterly river scenes. © Wayne Heim",
+
+    "story": "This image embodies the truth of a moment and painterly river scenes, captured by Wayne Heim in his signature style. It reflects painterly river scenes with a touch of painterly river scenes. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 3,
@@ -149,7 +157,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/0/LhWpDmvFpKZ7n2PxQPR5GGmMctptRxNZZMND7ZVxF/L/_WHZ1847-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/0/K4sDXVc9LWRX4h638TK7rQLtXpMVDMs8RWz52JcGq/M/_WHZ1847-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-SxbNjWC/0/KWR6prWRkLNj55cdQmmzrQX2JfLdLWJVr2B5jnRqF/S/_WHZ1847-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-B7S6VwV",
@@ -171,7 +180,7 @@ export const galleryData = [
     ],
     "story": "Old Chrystal Mill watching over the river below. One of Colorado's finest locations.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 4,
@@ -188,6 +197,7 @@ export const galleryData = [
     "description": "Flock of geese seem to be heading south as they pass over the Fairport Lighthouse on Lake Erie.  ©Wayne Heim",
     "alt": "Chrystal Mill - Black and White",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-jMzCqw2/A",
+
     "keywords": [
       "wayne heim",
       "landscape photography",
@@ -200,9 +210,10 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "Flock of geese seem to be heading south as they pass over the Fairport Lighthouse on Lake Erie.  ©Wayne Heim",
+
+    "story": "Flock of geese seem to be heading south as they pass over the Fairport Lighthouse on Lake Erie. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 5,
@@ -211,7 +222,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-jMzCqw2/4/LZjZF4vrfZ5GrFmbdDxPpJvSkwsDSVKx8hZFWtcT5/L/_IMG0369-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-jMzCqw2/4/LBxjTCb3F6BLMBVVWBgkHHdMxnG6msDttvm4qT6MW/M/_IMG0369-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-jMzCqw2/4/Mn2rGShtVXLZpdszm5zv49Xq2qP55wKPh3JQnBCQq/S/_IMG0369-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-nVDRCrB",
@@ -233,7 +245,7 @@ export const galleryData = [
     ],
     "story": "Photograph of the Buffalo Bill Reservoir in Wyoming at sunset.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 6,
@@ -246,25 +258,26 @@ export const galleryData = [
   },
   {
     "id": "i-8hwfnGn",
-    "title": "\"Wandering Stream\". Photography by Wayne Heim",
+    "title": "\"Meandering MountainStream\". Photography by Wayne Heim",
     "description": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming. ©Wayne Heim",
-    "alt": "Buffalo Bill Reservoir at sunset.",
+    "alt": "Deserted Barn photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-8hwfnGn/A",
+
     "keywords": [
+      "k4 studios",
       "wayne heim",
-      "landscape photography",
-      "landscape",
-      "nature photography",
-      "nature",
-      "mountains",
-      "waterfalls",
-      "river",
-      "iceland",
-      "k4 studios"
+      "wyoming",
+      "wyoming landscape photography",
+      "wyoming nature photography",
+      "grand tetons",
+      "window",
+      "meadow",
+      "mountains"
     ],
-    "story": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming. ©Wayne Heim",
+
+    "story": "\"Meandering Stream\". Black and white landscape photography of mountain stream, clouds and trees along \"Mormon Row\", just north of Jackson Hole Wyoming. ",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 7,
@@ -273,26 +286,27 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/LwpFV4ScdtmDKskWgV3bvwS8TwQvXhQRqZVXhHmHs/L/_IMG6007-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MR4QTwLSHppQ52vGGFVhrtZ4HMmVNbbCsSLvczD4Z/M/_IMG6007-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-8hwfnGn/4/MXCtw7kCqmnt6xMWdWGngrFHQMRd7QBNGnr7WR73N/S/_IMG6007-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-vcmfFCM",
     "title": "Middle Falls. Photography by Wayne Heim",
     "description": "\"Middle Falls'. Black and White photo of the Middle Waterfalls at Letchworth State Park. ©Wayne Heim",
-    "alt": "\"Meandering Stream\". Photography by Wayne Heim",
+    "alt": "Snowy Bend. Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-vcmfFCM/A",
+
     "keywords": [
-      "wayne heim",
-      "landscape photography",
-      "landscape",
-      "nature photography",
-      "nature",
-      "mountains",
-      "waterfalls",
-      "river",
-      "iceland",
-      "k4 studios"
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy"
     ],
+
     "story": "\"Middle Falls'. Black and White photo of the Middle Waterfalls at Letchworth State Park. ©Wayne Heim",
     "notes": "",
     "rating": 0,
@@ -304,29 +318,31 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/MzWw7JHnqStF99TFh2K3cTQmGcknnqNdk65WRG2hw/XL/_IMG7044-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/NX5FGcczMzQNddzXDQ7hbm35W87DxdfMfLxP42QkF/L/_IMG7044-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-vcmfFCM/6/KrwR7mpxDdPJLVKwQLmHQSRdzQkTmvfnbZqsfmZVq/S/_IMG7044-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-tF8fFm4",
     "title": "\"Snowcaps\".  B/W Photography by Wayne Heim.",
     "description": "\"Snowcaps.\" B/w nature photo of snow covered rocks in stream in Wyoming. ©Wayne Heim",
-    "alt": "Middle Falls. Photography by Wayne Heim",
+    "alt": "Puff.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-tF8fFm4/A",
+
     "keywords": [
+      "k4 studios",
       "wayne heim",
-      "landscape photography",
-      "landscape",
-      "nature photography",
-      "nature",
-      "mountains",
-      "waterfalls",
-      "river",
-      "iceland",
-      "k4 studios"
+      "wyoming",
+      "wyoming landscape photography",
+      "wyoming nature photography",
+      "grand tetons",
+      "window",
+      "meadow",
+      "mountains"
     ],
-    "story": "\"Snowcaps.\" B/w nature photo of snow covered rocks in stream in Wyoming. ©Wayne Heim",
+
+    "story": "\"Snowcaps.\" B/w nature photo of snow covered rocks in stream in Wyoming. ",
     "notes": "",
-    "rating": 0,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 9,
@@ -335,14 +351,16 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/MDJ47ZnS4JfsHf256vXN64ZhTD5ZKHrdg7WKGSnF2/L/P1020645-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/Lw93LTGwNXgQ7wC3rBxWg58GmvX9PfPjTHGdJb3FQ/M/P1020645-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-tF8fFm4/5/NHx7mjfWPBhqtF7xPQNggSfwMDLHmjHFK39CCKWCW/S/P1020645-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-rh75LzX",
     "title": "Tiny Bubbles  Photography by Wayne Heim",
-    "description": "18 x 24 In StockTiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west.©Wayne Heim",
+    "description": "Tiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west.©Wayne Heim",
     "alt": "\"Snowcaps\".  B/W Photography by Wayne Heim.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rh75LzX/A",
+
     "keywords": [
       "wayne heim",
       "landscape photography",
@@ -355,9 +373,10 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "18 x 24 In StockTiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west.©Wayne Heim",
+
+    "story": "Tiny Bubbles - waves producing frothy bubbles come in on shore of Lake Erie as sunset in the west.©Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 10,
@@ -366,14 +385,16 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/photos/i-rh75LzX/4/NVtPMHM362S54F3ZLmjcP43qRwVMPdhqLC9ZCNStF/XL/i-rh75LzX-XL.jpg",
     "srcM": "https://photos.smugmug.com/photos/i-rh75LzX/4/LcnXGZksnBMnSqJgGTVM6HJmnxCGrtkL5zK694TBD/L/i-rh75LzX-L.jpg",
     "srcS": "https://photos.smugmug.com/photos/i-rh75LzX/4/KQWJMN7d6xrDDgvrRx7CFKpGQG4qfHmGMpxcQxDff/S/i-rh75LzX-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-HzMDDcG",
     "title": "Walk to the Light House . Photography by Wayne Heim",
-    "description": "18 x 24 In StockWalk to the Lighthouse  - rocky seawall leads the the Fairport Harbor Lighthouse in Ohio ©Wayne Heim",
+    "description": "Walk to the Lighthouse  - rocky seawall leads the the Fairport Harbor Lighthouse in Ohio ©Wayne Heim",
     "alt": "Tiny Bubbles  Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-HzMDDcG/A",
+
     "keywords": [
       "wayne heim",
       "landscape photography",
@@ -386,9 +407,10 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "18 x 24 In StockWalk to the Lighthouse  - rocky seawall leads the the Fairport Harbor Lighthouse in Ohio ©Wayne Heim",
+
+    "story": "Walk to the Lighthouse  - rocky seawall leads the the Fairport Harbor Lighthouse in Ohio ©Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 11,
@@ -397,7 +419,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/photos/i-HzMDDcG/4/KVqmwJz5ZtffS4gGtKr8MPVBhLNzr5HGnkfmDqRnM/XL/i-HzMDDcG-XL.jpg",
     "srcM": "https://photos.smugmug.com/photos/i-HzMDDcG/4/M5j376mpvDMS5zHt8XMscBjXwV5T7h3kK5vkCk8pJ/L/i-HzMDDcG-L.jpg",
     "srcS": "https://photos.smugmug.com/photos/i-HzMDDcG/4/KNWTXhGXnSxjfw4sq5Z7gPBnnk6nNnNc88jfPL9Zj/S/i-HzMDDcG-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-rjmZMZt",
@@ -405,6 +428,7 @@ export const galleryData = [
     "description": "A more wide open view of Gullfloss in Iceland.\n©Wayne Heim",
     "alt": "Walk to the Light House . Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/A",
+
     "keywords": [
       "wayne heim",
       "landscape photography",
@@ -417,9 +441,10 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "A more wide open view of Gullfloss in Iceland.\n©Wayne Heim",
+
+    "story": "A more wide open view of Gullfloss in Iceland.\n",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 12,
@@ -428,7 +453,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/0/L778LVrnHbh7Vj3FRTKzvXz9R8LWMZDXbL4BKZ7nw/XL/_WHZ1446-Pano-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/0/Mh9ggfPKGcp4jSkpT2ZvQshxchsKXs5xZxGgk5PCQ/L/_WHZ1446-Pano-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-rjmZMZt/0/LnSvhWXw5wHvDSzcJXrtzBdsZrJ2WsXXtPs9DDQKs/S/_WHZ1446-Pano-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-769JJbV",
@@ -436,6 +462,7 @@ export const galleryData = [
     "description": "A side vied of Kirkjufellfloss in Iceland.© Wayne Heim",
     "alt": "Gullfloss  Black & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/A",
+
     "keywords": [
       "wayne heim",
       "landscape photography",
@@ -448,9 +475,10 @@ export const galleryData = [
       "iceland",
       "k4 studios"
     ],
-    "story": "A side vied of Kirkjufellfloss in Iceland.© Wayne Heim",
+
+    "story": "A side vied of Kirkjufellfloss in Iceland.",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 13,
@@ -459,29 +487,33 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/0/KqVjkH8DnXK3rzFmMgQc8ksx8CtvDpnrp2BBZ38vF/XL/_WHZ1666_tonemapped2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/0/Ld9r4CMCZfR3tqG9mVGMZfJrZWt45Hjf9rTQsxhTF/L/_WHZ1666_tonemapped2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-769JJbV/0/LtbBhTTxxTnhxRChbr8CqmftxJz5cx4DxNkHqj6mK/S/_WHZ1666_tonemapped2-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-vTD9xH2",
-    "title": "Sunset on the Hood(V)  Photography by Wayne Heim",
-    "description": "A view of Mt. Hood at sunset with the lights of the snow cats on the mountain side. ©Wayne Heim",
-    "alt": "Kirkjufellfloss  Black & White Photography",
+    "title": "Mount Hood at Sunset  Photo by Wayne Heim",
+    "description": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain  ©Wayne Heim",
+    "alt": "Field at Sunset     Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/i-vTD9xH2/A",
+
     "keywords": [
-      "wayne heim",
-      "landscape photography",
-      "landscape",
-      "nature photography",
-      "nature",
+      "K4Studios",
+      "Wayne Heim",
+      "Jackson Hole",
+      "Wyoming",
+      "Teton Mountsins",
+      "snow covered",
+      "winter",
+      "Western scene",
       "mountains",
-      "waterfalls",
-      "river",
-      "iceland",
-      "k4 studios"
+      "sunset",
+      "color photography"
     ],
-    "story": "A view of Mt. Hood at sunset with the lights of the snow cats on the mountain side. ©Wayne Heim",
+
+    "story": "Mount Hood at Sunset. Mt Hood in Oregon as the sun is going down. Trillium lake is in the foreground and you can see snow cats grooming the slopes of the mountain  ©Wayne Heim",
     "notes": "",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 14,
@@ -490,7 +522,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-vTD9xH2/3/KhTkvtQQTRnN9TfssRttLTR3VwZGPGn43wCsNVxRz/XL/_IGP5748-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-vTD9xH2/3/L5mjj5dXLGZzShwjPQF928cTL3LMvq7F2cSsRwQZz/L/_IGP5748-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Oregon/Oregon/i-vTD9xH2/3/Lvd3G42wHRs3rz2kvG7C2FLbhBqsbN6Pdwzx7PGsQ/S/_IGP5748-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "human"
   },
   {
     "id": "i-BfZH6vR",

@@ -62,7 +62,7 @@ function normalizeItem(raw) {
   if (typeof raw.sortOrder === "number") out.sortOrder = raw.sortOrder;
   if (raw.themes && typeof raw.themes === "object") out.themes = raw.themes;
   if (raw.contentSource != null) out.contentSource = raw.contentSource;
-  if (Array.isArray(raw.availableSeries) && raw.availableSeries.length > 0) out.availableSeries = raw.availableSeries;
+  // NOTE: availableSeries is NOT stored in .mjs files - it's stored only in seriesRegistry.json
   if (raw.noSketch === true) out.noSketch = true;
   return out;
 }
@@ -161,6 +161,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
   const [backupMade, setBackupMade] = useState(false);
   const [dirty, setDirty] = useState(false);
   const [lastAction, setLastAction] = useState(null);
+  const [deletedIds, setDeletedIds] = useState([]);     // track deleted image IDs for series cleanup
 
   // UI state
   const [thumb, setThumb] = useState(180);
@@ -240,6 +241,7 @@ export default function GalleryOrderer({ datasetPath = "" }) {
       setDirty(false);
       setFilter("");
       setShowTitles(false);
+      setDeletedIds([]); // Clear deleted IDs when switching galleries
       lastMoveRef.current = null;
       setLastAction(null);
     }
@@ -426,6 +428,27 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     const fullArray = JSON.parse(JSON.stringify(buildFinalArray()));
 
     try {
+      // Clean up series registry for any deleted items
+      if (deletedIds.length > 0) {
+        for (const imageId of deletedIds) {
+          try {
+            await fetch("/.netlify/functions/seriesRegistry", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                action: "removeOccurrence",
+                imageId,
+                galleryPath: datasetPathClean
+              })
+            });
+            console.log(`[GalleryOrderer] Removed ${imageId} from series registry`);
+          } catch (err) {
+            console.warn(`[GalleryOrderer] Failed to remove ${imageId} from series registry:`, err.message);
+          }
+        }
+        setDeletedIds([]); // Clear after processing
+      }
+
       const res = await fetch("/.netlify/functions/updateGalleryOrder", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -929,9 +952,12 @@ export default function GalleryOrderer({ datasetPath = "" }) {
             <button
               onClick={() => {
                 if (window.confirm('Are you sure you want to delete this image? This action cannot be undone.')) {
+                  // Track deleted ID for series registry cleanup on save
+                  setDeletedIds(prev => [...prev, contextMenu.itemId]);
                   // Remove the item from items and backupData
                   setItems(items => items.filter(it => it.id !== contextMenu.itemId));
                   setBackupData(data => data.filter(it => it.id !== contextMenu.itemId));
+                  setDirty(true);
                   closeContextMenu();
                 }
               }}

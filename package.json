@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
+    "dev:netlify": "netlify dev",
     "build": "npm run gen:sitemap && npm run gen:master-data && npm run gen:sitemap:matches && npm run copy:pricing && astro build && node scripts/submit-indexnow.mjs && npx cpx \"_redirects\" dist/",
     "copy:pricing": "npx cpx \"src/data/pricingConfig.json\" public/",
     "gen:master-data": "node src/scripts/generateMasterGalleryData.cjs",

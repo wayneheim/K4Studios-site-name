@@ -50,7 +50,7 @@ function normalizeItem(raw) {
   if (typeof raw.sortOrder === "number") out.sortOrder = raw.sortOrder;
   if (raw.themes && typeof raw.themes === "object") out.themes = raw.themes;
   if (raw.contentSource != null) out.contentSource = raw.contentSource;
-  if (Array.isArray(raw.availableSeries) && raw.availableSeries.length > 0) out.availableSeries = raw.availableSeries;
+  // NOTE: availableSeries is NOT stored in .mjs files - it's stored only in seriesRegistry.json
   if (raw.noSketch === true) out.noSketch = true;
   return out;
 }
@@ -112,11 +112,11 @@ exports.handler = async (event) => {
       return { statusCode: 404, body: `Dataset not found: ${datasetPath}` };
     }
 
-    // ========== PRESERVE THEMES, SERIES, AND NOSKETCH FROM EXISTING FILE ==========
+    // ========== PRESERVE THEMES AND NOSKETCH FROM EXISTING FILE ==========
     // Read the existing file to extract current data that might not be in client state
-    // This prevents stale client data from wiping out themes, availableSeries, noSketch
+    // This prevents stale client data from wiping out themes, noSketch
+    // NOTE: availableSeries is stored in seriesRegistry.json, NOT in .mjs files
     let existingThemesById = new Map();
-    let existingSeriesById = new Map();
     let existingNoSketchById = new Map();
     try {
       const existingCode = await fs.readFile(absPath, "utf8");
@@ -128,15 +128,12 @@ exports.handler = async (event) => {
             if (item.themes && typeof item.themes === "object") {
               existingThemesById.set(item.id, item.themes);
             }
-            if (Array.isArray(item.availableSeries) && item.availableSeries.length > 0) {
-              existingSeriesById.set(item.id, item.availableSeries);
-            }
             if (item.noSketch === true) {
               existingNoSketchById.set(item.id, true);
             }
           }
         }
-        console.log(`Preserved data from existing file: ${existingSeriesById.size} series, ${existingNoSketchById.size} noSketch, ${existingThemesById.size} themes`);
+        console.log(`Preserved data from existing file: ${existingNoSketchById.size} noSketch, ${existingThemesById.size} themes`);
       } else {
         console.warn("Could not parse existing gallery for data preservation");
       }
@@ -155,8 +152,8 @@ exports.handler = async (event) => {
     }
 
     // ========== MERGE PRESERVED DATA INTO WORKING DATA ==========
-    // SMART MERGE: Preserve themes, availableSeries, noSketch from existing file
-    // - Existing data is preserved unless explicitly overwritten by incoming data
+    // SMART MERGE: Preserve themes, noSketch from existing file
+    // NOTE: availableSeries is stored in seriesRegistry.json, NOT in .mjs files
     working = working.map((item) => {
       if (!item || !item.id) return item;
       
@@ -178,13 +175,6 @@ exports.handler = async (event) => {
         mergedThemes = incomingThemes;
       }
       
-      // --- AVAILABLE SERIES ---
-      const existingSeries = existingSeriesById.get(item.id);
-      const incomingSeries = Array.isArray(item.availableSeries) && item.availableSeries.length > 0 
-        ? item.availableSeries 
-        : null;
-      const mergedSeries = incomingSeries || existingSeries || null;
-      
       // --- NO SKETCH ---
       const existingNoSketch = existingNoSketchById.get(item.id);
       const mergedNoSketch = item.noSketch === true ? true : (existingNoSketch === true ? true : undefined);
@@ -193,9 +183,6 @@ exports.handler = async (event) => {
       const result = { ...item };
       if (mergedThemes && Object.keys(mergedThemes).length > 0) {
         result.themes = mergedThemes;
-      }
-      if (mergedSeries) {
-        result.availableSeries = mergedSeries;
       }
       if (mergedNoSketch) {
         result.noSketch = true;

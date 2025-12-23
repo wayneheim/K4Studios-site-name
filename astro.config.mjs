@@ -4,6 +4,10 @@ import netlify from '@astrojs/netlify';
 import tailwind from '@astrojs/tailwind';
 import path from 'path';
 
+// Exclude admin pages from production build
+const isProduction = process.env.NODE_ENV === 'production' || process.argv.includes('build');
+const excludePatterns = isProduction ? ['src/pages/admin/**/*'] : [];
+
 export default defineConfig({
  site: 'https://www.k4studios.com',   // 👈 Add this
   // Enforce no trailing slashes for routes
@@ -14,6 +18,8 @@ export default defineConfig({
     react(),
     tailwind(),  // <-- Tailwind goes here!
   ],
+  // Exclude admin utilities from production builds (dev-only)
+  ...(excludePatterns.length > 0 && { exclude: excludePatterns }),
   vite: {
     resolve: {
       alias: {

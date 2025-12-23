@@ -6,6 +6,7 @@ const path = require("path");
 
 // Same pattern as updateGalleryItem.js which works
 const EDITION_STATE_PATH = path.join(process.cwd(), "src/data/editionState.json");
+const SERIES_REGISTRY_PATH = path.join(process.cwd(), "src/data/seriesRegistry.json");
 
 // Series definitions with their edition limits
 const SERIES_DEFINITIONS = {
@@ -16,16 +17,29 @@ const SERIES_DEFINITIONS = {
   engrained: { limit: 50, description: "Limited edition of 50" },
 };
 
+// Read series registry to resolve canonical IDs
+async function readSeriesRegistry() {
+  try {
+    const data = await fs.readFile(SERIES_REGISTRY_PATH, "utf8");
+    return JSON.parse(data);
+  } catch (err) {
+    if (err.code === "ENOENT") {
+      return { images: {}, series: {} };
+    }
+    throw err;
+  }
+}
+
+// Resolve imageId to canonical series ID (or return original if not registered)
+function resolveCanonicalId(imageId, registry) {
+  return registry.images?.[imageId] || imageId;
+}
+
 async function readEditionState() {
   try {
-    console.log("[editionState] Reading from:", EDITION_STATE_PATH);
     const data = await fs.readFile(EDITION_STATE_PATH, "utf8");
-    console.log("[editionState] Raw file content:", data.substring(0, 200));
-    const parsed = JSON.parse(data);
-    console.log("[editionState] Parsed keys:", Object.keys(parsed));
-    return parsed;
+    return JSON.parse(data);
   } catch (err) {
-    console.log("[editionState] Read error:", err.code, err.message);
     if (err.code === "ENOENT") {
       return { _meta: { version: "1.0", lastUpdated: null } };
     }
@@ -78,28 +92,33 @@ exports.handler = async (event) => {
 
   try {
     const state = await readEditionState();
-    console.log("[editionState] Read state, keys:", Object.keys(state));
+    const registry = await readSeriesRegistry();
 
     // GET: Read edition state for an image or all
     if (event.httpMethod === "GET") {
       const imageId = event.queryStringParameters?.imageId;
-      console.log("[editionState] GET request for imageId:", imageId);
       
       if (imageId) {
-        // Return all series states for this image
+        // Resolve to canonical series ID if linked
+        const canonicalId = resolveCanonicalId(imageId, registry);
+        
+        // Return all series states for this image (using canonical ID)
         const imageStates = {};
         for (const [key, value] of Object.entries(state)) {
-          console.log("[editionState] Checking key:", key, "startsWith:", `${imageId}:`);
-          if (key.startsWith(`${imageId}:`)) {
+          if (key.startsWith(`${canonicalId}:`)) {
             const series = key.split(":")[1];
             imageStates[series] = value;
           }
         }
-        console.log("[editionState] Returning imageStates:", imageStates);
         return {
           statusCode: 200,
           headers,
-          body: JSON.stringify({ imageId, states: imageStates, definitions: SERIES_DEFINITIONS }),
+          body: JSON.stringify({ 
+            imageId, 
+            canonicalId,
+            states: imageStates, 
+            definitions: SERIES_DEFINITIONS 
+          }),
         };
       }
       
@@ -120,7 +139,9 @@ exports.handler = async (event) => {
         return { statusCode: 400, headers, body: JSON.stringify({ error: "Missing imageId or series" }) };
       }
 
-      const key = makeKey(imageId, series);
+      // Resolve to canonical series ID if linked
+      const canonicalId = resolveCanonicalId(imageId, registry);
+      const key = makeKey(canonicalId, series);
       const existing = state[key];
 
       switch (action) {
@@ -136,7 +157,8 @@ exports.handler = async (event) => {
           }
 
           state[key] = {
-            imageId,
+            imageId: canonicalId,  // Store canonical ID, not original
+            originalImageId: imageId !== canonicalId ? imageId : undefined,  // Track original if different
             series,
             editionLimit: seriesDef.limit,
             sold: 0,  // Start at 0 (no editions sold yet)
@@ -145,7 +167,7 @@ exports.handler = async (event) => {
           };
           
           await writeEditionState(state);
-          return { statusCode: 200, headers, body: JSON.stringify({ ok: true, state: state[key] }) };
+          return { statusCode: 200, headers, body: JSON.stringify({ ok: true, canonicalId, state: state[key] }) };
         }
 
         case "release": {

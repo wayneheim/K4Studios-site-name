@@ -41,7 +41,7 @@ export const entranceData = {
   `,
 
   image: {
-    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits/Color/i-XXXXXXX/3/XXXXXX/XL/native-american-preview-XL.jpg", // Update as needed
+    src: "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/i-jWFcDHr", // Update as needed
     alt: "Painterly Native American portrait art print in color by Wayne Heim",
     caption: "\"The Storyteller\" – Painterly Native American portrait by Wayne Heim",
   },
@@ -51,7 +51,7 @@ export const entranceData = {
       style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
       onmouseover="this.style.color='red'"
       onmouseout="this.style.color='inherit'">Facing History</a> |
-    <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits"
+    <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
       style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;"
       onmouseover="this.style.color='#4aa8ff'"
       onmouseout="this.style.color='inherit'">Native American Portraits</a> |

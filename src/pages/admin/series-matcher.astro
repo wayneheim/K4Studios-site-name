@@ -1,0 +1,1934 @@
+---
+// Admin page for viewing and managing series registry
+// Shows all registered limited edition images with occurrence info
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Series Matcher | K4 Admin</title>
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #1a1a1a;
+      color: #e5e5e5;
+      min-height: 100vh;
+    }
+    header {
+      background: #222;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { font-size: 1.5rem; font-weight: 600; }
+    .stats {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .stats span { color: #f5a524; font-weight: 600; }
+    .filter-bar {
+      padding: 1rem 2rem;
+      background: #1f1f1f;
+      border-bottom: 1px solid #333;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .filter-bar label { color: #888; font-size: 0.85rem; }
+    .filter-bar select, .filter-bar input {
+      background: #2a2a2a;
+      border: 1px solid #444;
+      color: #e5e5e5;
+      padding: 0.5rem;
+      border-radius: 4px;
+    }
+    .grid-container {
+      padding: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* Card styling with visible border */
+    .card {
+      position: relative;
+      background: #252525;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+      border: 2px solid #555;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      border-color: #777;
+    }
+    .card.multi {
+      border-color: #f5a524;
+    }
+
+    /* Image wrapper for badge positioning */
+    .card-image-wrapper {
+      position: relative;
+    }
+    .card img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: #1a1a1a;
+      display: block;
+    }
+
+    /* Badge circle over image */
+    .badge, .occurrence-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #f5a524;
+      color: #000;
+      font-size: 0.85rem;
+      font-weight: 700;
+      min-width: 28px;
+      height: 28px;
+      padding: 0 6px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+      z-index: 2;
+    }
+
+    .card-info {
+      padding: 0.75rem 1rem;
+      border-top: 1px solid #333;
+    }
+    .card-title {
+      font-size: 0.8rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0.25rem;
+    }
+    .card-meta {
+      font-size: 0.7rem;
+      color: #888;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Tier tags on separate lines */
+    .tier-tags {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .tier {
+      font-size: 0.7rem;
+      font-weight: 500;
+    }
+    .tier.chronicle { color: #fbbf24; } /* light orange */
+    .tier.legend { color: #7dd3fc; } /* light blue */
+    .tier.foundation { color: #34d399; }
+    .tier.sketch { color: #9ca3af; }
+
+    /* Context Menu */
+    .context-menu {
+      position: fixed;
+      background: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+      min-width: 160px;
+      z-index: 1000;
+      display: none;
+    }
+    .context-menu.show { display: block; }
+    .context-menu-item {
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .context-menu-item:hover { background: #3a3a3a; }
+    .context-menu-item:first-child { border-radius: 6px 6px 0 0; }
+    .context-menu-item:last-child { border-radius: 0 0 6px 6px; }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1001;
+    }
+    .modal-overlay.show { display: flex; }
+    .modal {
+      background: #252525;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 90%;
+      max-height: 80vh;
+      overflow: auto;
+    }
+    .modal-header {
+      padding: 1.25rem;
+      border-bottom: 1px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .modal-header h2 { font-size: 1.1rem; font-weight: 600; }
+    .modal-close {
+      background: none;
+      border: none;
+      color: #888;
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .modal-close:hover { color: #fff; }
+    .modal-body { padding: 1.25rem; }
+    .modal-thumb {
+      width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+      background: #1a1a1a;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    .info-row {
+      display: flex;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #333;
+      font-size: 0.85rem;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-label { color: #888; width: 100px; flex-shrink: 0; }
+    .info-value { color: #e5e5e5; }
+    .occurrence-list { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #333; }
+    .occurrence-list h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+      color: #f5a524;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .occurrence-list h3 .count {
+      background: #f5a524;
+      color: #000;
+      font-size: 0.7rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .occurrence-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem;
+      background: #2a2a2a;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      font-size: 0.8rem;
+      transition: background 0.15s;
+    }
+    .occurrence-item:hover { background: #333; }
+    .occurrence-item.excluded {
+      opacity: 0.5;
+      background: #1f1f1f;
+    }
+    .occurrence-item input[type="checkbox"] {
+      accent-color: #f5a524;
+      width: 16px;
+      height: 16px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .occurrence-details { flex: 1; }
+    .occurrence-gallery {
+      font-weight: 500;
+      color: #e5e5e5;
+      margin-bottom: 0.25rem;
+    }
+    .occurrence-url {
+      font-size: 0.7rem;
+      color: #888;
+      word-break: break-all;
+    }
+    .occurrence-url a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+    .occurrence-url a:hover { text-decoration: underline; }
+    .occurrence-url .test-btn {
+      background: #22c55e;
+      color: #000;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-left: 8px;
+      text-decoration: none !important;
+    }
+    .occurrence-url .test-btn:hover {
+      background: #16a34a;
+    }
+    .unlink-btn {
+      background: #dc2626;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+    .unlink-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .unlink-btn:hover:not(:disabled) { background: #b91c1c; }
+
+    /* Selection mode - high specificity */
+    .grid .card.selected,
+    .card.selected.multi,
+    .card.selected {
+      border: 3px solid #22c55e !important;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.5), 0 0 20px rgba(34, 197, 94, 0.3) !important;
+      outline: 3px solid #22c55e !important;
+      outline-offset: 2px;
+      transform: scale(1.02);
+      background: #1a3a1a !important;
+    }
+    .card.selected .card-image-wrapper::before {
+      content: '✓';
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: #22c55e;
+      color: #000;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+      z-index: 10;
+    }
+    .selection-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1f1f1f;
+      border-top: 2px solid #22c55e;
+      padding: 1rem 2rem;
+      display: none;
+      align-items: center;
+      gap: 1rem;
+      z-index: 100;
+    }
+    .selection-bar.show { display: flex; }
+    .selection-bar .count { color: #22c55e; font-weight: 600; }
+    .selection-bar button {
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .link-btn { background: #22c55e; color: #000; }
+    .link-btn:hover { background: #16a34a; }
+    .clear-btn { background: #444; color: #e5e5e5; }
+    .clear-btn:hover { background: #555; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📷 Series Matcher</h1>
+    <div class="stats">
+      <div>Limited: <span id="total-count">-</span></div>
+      <div>Multi-gallery: <span id="multi-count">-</span></div>
+    </div>
+  </header>
+
+  <div class="filter-bar">
+    <label>Filter:</label>
+    <select id="filter-select">
+      <option value="limited" selected>Limited Editions</option>
+      <option value="multi">Multi-gallery Only</option>
+      <option value="chronicle">Chronicle Only</option>
+      <option value="legend">Legend Only</option>
+      <option value="all">All Series</option>
+    </select>
+    <input type="text" id="search-input" placeholder="Search by title or ID..." style="width: 250px;" />
+    <select id="sort-select" style="background: #6366f1; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem;">
+      <option value="">🔀 Sort By...</option>
+      <option value="similarity">🔍 Visual Similarity</option>
+      <optgroup label="By Color">
+        <option value="red">🔴 Reds</option>
+        <option value="orange">🟠 Oranges</option>
+        <option value="yellow">🟡 Yellows / Golds</option>
+        <option value="green">🟢 Greens</option>
+        <option value="blue">🔵 Blues</option>
+        <option value="purple">🟣 Purples</option>
+        <option value="neutral">⚪ Neutrals / B&W</option>
+      </optgroup>
+      <optgroup label="By Tone">
+        <option value="warm">🔥 Warm → Cool</option>
+        <option value="cool">❄️ Cool → Warm</option>
+        <option value="saturated">🌈 Most Saturated</option>
+        <option value="muted">🌫️ Most Muted</option>
+        <option value="bright">☀️ Brightest</option>
+        <option value="dark">🌙 Darkest</option>
+        <option value="highContrast">⬛ High Contrast</option>
+        <option value="lowContrast">🔲 Low Contrast</option>
+        <option value="shadows">🖤 Most Shadows</option>
+        <option value="highlights">💡 Most Highlights</option>
+      </optgroup>
+    </select>
+    <button id="gen-fingerprints-btn" style="background: #059669; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem;" title="Generate visual fingerprints for all images without one">
+      🖼️ Gen Fingerprints
+    </button>
+    <button id="check-mismatches-btn" style="background: #7c3aed; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem;" title="Check for metadata mismatches across galleries">
+      🔍 Check Mismatches
+    </button>
+    <span id="sort-status" style="font-size: 0.8rem; color: #888;"></span>
+    <span style="margin-left: auto; font-size: 0.8rem; color: #888;">💡 Ctrl+Click to select multiple for linking</span>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <!-- Selection Action Bar -->
+  <div class="selection-bar" id="selection-bar">
+    <span><span class="count" id="selection-count">0</span> selected</span>
+    <button class="link-btn" id="link-selected-btn">🔗 Link as Same Artwork</button>
+    <button class="clear-btn" id="clear-selection-btn">✕ Clear Selection</button>
+  </div>
+
+  <!-- Context Menu -->
+  <div class="context-menu" id="context-menu">
+    <div class="context-menu-item" data-action="info">ℹ️ View Info</div>
+    <div class="context-menu-item" data-action="sync" id="ctx-sync-item" style="display: none;">🔄 Sync Metadata</div>
+    <div class="context-menu-item" data-action="copy">📋 Copy Series ID</div>
+    <div class="context-menu-item" data-action="select">☑️ Add to Selection</div>
+  </div>
+
+  <!-- Sync Metadata Modal -->
+  <div class="modal-overlay" id="sync-modal-overlay">
+    <div class="modal" style="max-width: 700px;">
+      <div class="modal-header">
+        <div>
+          <h2>🔄 Sync Metadata</h2>
+          <div style="font-size: 0.75rem; color: #888; margin-top: 0.25rem;">Copy metadata from master to all other galleries</div>
+        </div>
+        <button class="modal-close" id="sync-modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom: 1rem; color: #aaa; font-size: 0.85rem;">
+          This image appears in multiple galleries. Select the <strong>master</strong> version with the best metadata, 
+          choose which fields to copy, then sync to all others.
+        </p>
+        
+        <!-- Mismatch warning (shown when data differs) -->
+        <div id="sync-mismatch-warning" style="display: none; margin-bottom: 1rem; padding: 0.75rem 1rem; background: #7f1d1d; border: 1px solid #dc2626; border-radius: 8px; color: #fca5a5; font-size: 0.85rem;">
+          ⚠️ <strong>Data mismatch detected!</strong> These galleries have different metadata for this image.
+        </div>
+        
+        <!-- Sync info -->
+        <div style="margin-bottom: 1.5rem; padding: 1rem; background: #2a2a2a; border-radius: 8px;">
+          <div style="font-weight: 500; margin-bottom: 0.5rem;">Full data replacement:</div>
+          <div style="color: #888; font-size: 0.85rem;">All metadata fields will be copied from master: title, alt, description, story, keywords, rating, and contentSource.</div>
+        </div>
+        
+        <!-- Gallery occurrences with radio selection -->
+        <div id="sync-occurrences" style="display: flex; flex-direction: column; gap: 0.75rem;"></div>
+        
+        <!-- Actions -->
+        <div style="margin-top: 1.5rem; display: flex; justify-content: flex-end; gap: 1rem;">
+          <button id="sync-cancel-btn" style="padding: 0.5rem 1rem; background: #444; border: none; border-radius: 6px; color: #ccc; cursor: pointer;">Cancel</button>
+          <button id="sync-execute-btn" style="padding: 0.5rem 1.5rem; background: #3b82f6; border: none; border-radius: 6px; color: white; font-weight: 500; cursor: pointer;">Sync Metadata</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <h2 id="modal-title">Image Title</h2>
+          <div style="font-size: 0.75rem; color: #888; margin-top: 0.25rem;" id="modal-ids"></div>
+        </div>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img class="modal-thumb" id="modal-thumb" src="" alt="" />
+        
+        <div class="info-row">
+          <div class="info-label">Series ID</div>
+          <div class="info-value" id="modal-series-id"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Image ID</div>
+          <div class="info-value" id="modal-image-id"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Tiers</div>
+          <div class="info-value tier-tags" id="modal-tiers"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Created</div>
+          <div class="info-value" id="modal-created"></div>
+        </div>
+
+        <div class="occurrence-list" id="occurrence-section">
+          <h3>Gallery Occurrences <span class="count" id="occurrence-count">0</span></h3>
+          <p style="font-size: 0.75rem; color: #888; margin-bottom: 0.75rem;">Uncheck galleries to exclude from shared edition tracking</p>
+          <div id="occurrence-items"></div>
+          <button class="unlink-btn" id="unlink-btn" disabled>Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    let registry = null;
+    let selectedSeriesId = null;
+    let similaritySorted = false;
+    let imageHashes = {};  // seriesId -> hash
+    let mismatchCache = {}; // seriesId -> boolean (true if metadata differs across occurrences)
+    
+    // Normalize title for comparison (remove "Photography by Wayne Heim" etc)
+    function normalizeTitle(title) {
+      if (!title) return '';
+      return title
+        .toLowerCase()
+        .replace(/photography by wayne heim/gi, '')
+        .replace(/by wayne heim/gi, '')
+        .replace(/[^a-z0-9]/g, '')
+        .trim();
+    }
+    
+    // Levenshtein distance for fuzzy title matching
+    function levenshtein(a, b) {
+      if (!a || !b) return Infinity;
+      const matrix = [];
+      for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+      for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+      for (let i = 1; i <= b.length; i++) {
+        for (let j = 1; j <= a.length; j++) {
+          matrix[i][j] = b[i-1] === a[j-1] 
+            ? matrix[i-1][j-1]
+            : Math.min(matrix[i-1][j-1] + 1, matrix[i][j-1] + 1, matrix[i-1][j] + 1);
+        }
+      }
+      return matrix[b.length][a.length];
+    }
+    
+    // Calculate similarity score (0 = identical, higher = more different)
+    function similarityScore(series1, series2) {
+      const title1 = normalizeTitle(series1.title);
+      const title2 = normalizeTitle(series2.title);
+      
+      // Exact title match = very similar
+      if (title1 && title2 && title1 === title2) return 0;
+      
+      // Fuzzy title match
+      if (title1 && title2) {
+        const maxLen = Math.max(title1.length, title2.length);
+        const dist = levenshtein(title1, title2);
+        // Normalize to 0-100 scale
+        return Math.min(100, Math.round((dist / maxLen) * 100));
+      }
+      
+      return 100; // No match
+    }
+    
+    // Visual index cache
+    let visualIndex = null;
+    
+    // Load visual index for hash-based sorting
+    async function loadVisualIndex() {
+      try {
+        const res = await fetch('/.netlify/functions/visualIndex', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'getAll' })
+        });
+        const data = await res.json();
+        if (data.success && data.images) {
+          visualIndex = data.images;
+          console.log('[SeriesMatcher] Loaded visual index:', Object.keys(visualIndex).length, 'images');
+          return true;
+        }
+      } catch (err) {
+        console.warn('[SeriesMatcher] Could not load visual index:', err);
+      }
+      return false;
+    }
+    
+    // Get hash for an image from visual index
+    // Key is now imageId only (one photograph = one fingerprint)
+    function getHash(imageId, galleryPath) {
+      if (!visualIndex) return null;
+      // Key is imageId only
+      if (visualIndex[imageId]) return visualIndex[imageId].dhash;
+      return null;
+    }
+    
+    // Sort series by similarity using visual hashes (preferred) or title matching (fallback)
+    async function sortBySimilarity() {
+      const status = document.getElementById('sort-status');
+      
+      status.textContent = '⏳ Loading visual index...';
+      
+      // Load visual index if not already loaded
+      if (!visualIndex) {
+        await loadVisualIndex();
+      }
+      
+      status.textContent = '⏳ Analyzing...';
+      
+      // Get all series currently matching the filter
+      const filter = document.getElementById('filter-select').value;
+      const seriesEntries = Object.entries(registry.series || {}).filter(([seriesId, series]) => {
+        if (filter === 'limited') {
+          return series.tiers?.includes('chronicle') || series.tiers?.includes('legend');
+        }
+        if (filter === 'multi') {
+          return (series.occurrences?.length || series.linkedCount || 1) > 1;
+        }
+        if (filter === 'chronicle') return series.tiers?.includes('chronicle');
+        if (filter === 'legend') return series.tiers?.includes('legend');
+        return true;
+      });
+      
+      if (seriesEntries.length === 0) {
+        status.textContent = 'No images to sort';
+        return;
+      }
+      
+      const hashCount = visualIndex ? Object.keys(visualIndex).length : 0;
+      status.textContent = `Analyzing ${seriesEntries.length} images (${hashCount} have visual hashes)...`;
+      await new Promise(r => setTimeout(r, 50));
+      
+      // Build groups of similar images
+      // Priority: visual hash match > title match
+      const groups = [];
+      const assigned = new Set();
+      
+      // First pass: group by dHash hamming distance (threshold = 10 bits)
+      // Color/tone is for SORTING only, not similarity matching
+      const HASH_THRESHOLD = 10;
+      
+      for (const [seriesId, series] of seriesEntries) {
+        if (assigned.has(seriesId)) continue;
+        
+        const firstOcc = series.occurrences?.[0];
+        const vd = firstOcc ? getVisualData(firstOcc.imageId, firstOcc.galleryPath) : null;
+        
+        const group = [[seriesId, series]];
+        assigned.add(seriesId);
+        
+        if (vd?.dhash) {
+          // Find similar by pure dHash hamming distance
+          for (const [otherId, otherSeries] of seriesEntries) {
+            if (assigned.has(otherId)) continue;
+            
+            const otherOcc = otherSeries.occurrences?.[0];
+            const otherVd = otherOcc ? getVisualData(otherOcc.imageId, otherOcc.galleryPath) : null;
+            
+            if (otherVd?.dhash && hammingDistance(vd.dhash, otherVd.dhash) <= HASH_THRESHOLD) {
+              group.push([otherId, otherSeries]);
+              assigned.add(otherId);
+            }
+          }
+        }
+        
+        groups.push(group);
+      }
+      
+      // Second pass: within groups of 1, try title matching
+      const titleGroups = {};
+      const multiGroups = [];
+      
+      for (const group of groups) {
+        if (group.length > 1) {
+          multiGroups.push(group);
+        } else {
+          const [seriesId, series] = group[0];
+          const normTitle = normalizeTitle(series.title);
+          if (!titleGroups[normTitle]) titleGroups[normTitle] = [];
+          titleGroups[normTitle].push([seriesId, series]);
+        }
+      }
+      
+      // Merge title groups with >1 entry into multiGroups
+      for (const [normTitle, tGroup] of Object.entries(titleGroups)) {
+        if (tGroup.length > 1) {
+          multiGroups.push(tGroup);
+        }
+      }
+      
+      // Build final sorted order: multi-groups first (potential dupes), then singles sorted by title
+      const sorted = [];
+      const dupeSet = new Set();
+      
+      for (const group of multiGroups) {
+        for (const [seriesId] of group) {
+          sorted.push(seriesId);
+          dupeSet.add(seriesId);
+        }
+      }
+      
+      // Add singles sorted by title
+      const singles = [];
+      for (const [normTitle, tGroup] of Object.entries(titleGroups)) {
+        if (tGroup.length === 1) {
+          singles.push(tGroup[0]);
+        }
+      }
+      singles.sort((a, b) => normalizeTitle(a[1].title).localeCompare(normalizeTitle(b[1].title)));
+      for (const [seriesId] of singles) {
+        if (!dupeSet.has(seriesId)) {
+          sorted.push(seriesId);
+        }
+      }
+      
+      // Build dupePairs for rendering
+      const dupePairs = [];
+      for (const group of multiGroups) {
+        for (let i = 0; i < group.length - 1; i++) {
+          dupePairs.push([group[i][0], group[i + 1][0]]);
+        }
+      }
+      
+      // Re-render grid in sorted order with dupe highlighting
+      similaritySorted = true;
+      renderGridSorted(sorted, dupePairs);
+      
+      const visualMatches = multiGroups.filter(g => {
+        if (g.length < 2) return false;
+        const vd1 = getVisualData(g[0][1].occurrences?.[0]?.imageId, g[0][1].occurrences?.[0]?.galleryPath);
+        const vd2 = getVisualData(g[1][1].occurrences?.[0]?.imageId, g[1][1].occurrences?.[0]?.galleryPath);
+        return vd1 && vd2;
+      }).length;
+      
+      if (multiGroups.length > 0) {
+        status.textContent = `✓ Found ${multiGroups.length} potential duplicate group${multiGroups.length > 1 ? 's' : ''} (${visualMatches} by visual similarity)`;
+      } else {
+        status.textContent = `✓ Sorted! No duplicates found. (${hashCount} images have visual fingerprints)`;
+      }
+    }
+    
+    // Hamming distance (kept for dHash comparison)
+    function hammingDistance(hash1, hash2) {
+      if (!hash1 || !hash2 || hash1.length !== hash2.length) return Infinity;
+      let distance = 0;
+      for (let i = 0; i < hash1.length; i++) {
+        if (hash1[i] !== hash2[i]) distance++;
+      }
+      return distance;
+    }
+    
+    // Composite visual distance - combines structure + color + tone
+    // Returns 0-1 where 0 = identical, 1 = completely different
+    function visualDistance(a, b) {
+      if (!a || !b) return 1;
+      
+      // 1. dHash distance (0–64), normalize to 0–1
+      const hashDist = hammingDistance(a.dhash, b.dhash) / 64;
+
+      // 2. Warm/cool distance
+      const warmCoolDist = Math.abs((a.warmCoolRatio || 0.5) - (b.warmCoolRatio || 0.5));
+
+      // 3. Saturation distance
+      const satDist = Math.abs((a.saturationAvg || 0) - (b.saturationAvg || 0));
+
+      // 4. Brightness distance
+      const brightDist = Math.abs((a.brightnessAvg || 0.5) - (b.brightnessAvg || 0.5));
+
+      // 5. Contrast distance
+      const contrastDist = Math.abs((a.contrastScore || 0.5) - (b.contrastScore || 0.5));
+
+      // Special case: B&W images rely more on structure
+      const isBW = (a.saturationAvg || 0) < 0.05 && (b.saturationAvg || 0) < 0.05;
+      const structureWeight = isBW ? 0.55 : 0.4;
+      const colorWeight = isBW ? 0.1 : 0.2;
+
+      // Weighted sum (ART perception weights)
+      return (
+        hashDist * structureWeight +      // structure
+        warmCoolDist * colorWeight +      // color temperature
+        satDist * 0.15 +                  // color intensity
+        brightDist * 0.15 +               // tonal weight
+        contrastDist * 0.1                // drama
+      );
+    }
+    
+    // Get full visual index entry for an image
+    // Key is now imageId only (one photograph = one fingerprint)
+    function getVisualData(imageId, galleryPath) {
+      if (!visualIndex) return null;
+      // Key is imageId only
+      return visualIndex[imageId] || null;
+    }
+    
+    // Convert hex to HSL for color analysis
+    function hexToHsl(hex) {
+      if (!hex || !hex.startsWith('#')) return { h: 0, s: 0, l: 0.5 };
+      const r = parseInt(hex.slice(1, 3), 16) / 255;
+      const g = parseInt(hex.slice(3, 5), 16) / 255;
+      const b = parseInt(hex.slice(5, 7), 16) / 255;
+      
+      const max = Math.max(r, g, b), min = Math.min(r, g, b);
+      let h, s, l = (max + min) / 2;
+      
+      if (max === min) {
+        h = s = 0;
+      } else {
+        const d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+          case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+          case g: h = ((b - r) / d + 2) / 6; break;
+          case b: h = ((r - g) / d + 4) / 6; break;
+        }
+      }
+      return { h: h * 360, s, l };
+    }
+    
+    // Calculate color score for a specific color category
+    function getColorScore(dominantColors, targetColor) {
+      if (!dominantColors || !dominantColors.length) return 0;
+      
+      // Define hue ranges for each color (0-360)
+      // Hue 60 = yellow/olive (browns, earth), Hue 120 = true green
+      const colorRanges = {
+        red: [[0, 15], [345, 360]],      // Red wraps around
+        orange: [[15, 45]],               // Includes browns/earth tones
+        yellow: [[45, 70]],               // Yellow and olive (includes earth)
+        green: [[70, 165]],               // True greens only (not olive/earth at 60)
+        blue: [[165, 260]],               // Includes cyan/teal
+        purple: [[260, 310]],
+        neutral: null  // Special case - low saturation
+      };
+      
+      let score = 0;
+      const weights = [5, 3, 2, 1, 1]; // Weight by dominance order
+      
+      for (let i = 0; i < Math.min(dominantColors.length, 5); i++) {
+        const hsl = hexToHsl(dominantColors[i]);
+        const weight = weights[i] || 1;
+        
+        if (targetColor === 'neutral') {
+          // Neutral = low saturation
+          if (hsl.s < 0.15) {
+            score += weight * (1 - hsl.s) * 5;
+          }
+        } else {
+          const ranges = colorRanges[targetColor];
+          if (ranges && hsl.s > 0.10) { // Lower threshold to catch natural colors
+            for (const [min, max] of ranges) {
+              if (hsl.h >= min && hsl.h <= max) {
+                // Score based on saturation (more saturated = more that color)
+                score += weight * hsl.s * 5;
+                break;
+              }
+            }
+          }
+        }
+      }
+      
+      return score;
+    }
+    
+    // Sort by color/tone property
+    async function sortByProperty(property) {
+      const status = document.getElementById('sort-status');
+      status.textContent = '⏳ Loading visual index...';
+      
+      if (!visualIndex) {
+        await loadVisualIndex();
+      }
+      
+      status.textContent = '⏳ Sorting...';
+      await new Promise(r => setTimeout(r, 50));
+      
+      const filter = document.getElementById('filter-select').value;
+      const seriesEntries = Object.entries(registry.series || {}).filter(([seriesId, series]) => {
+        if (filter === 'limited') {
+          return series.tiers?.includes('chronicle') || series.tiers?.includes('legend');
+        }
+        if (filter === 'multi') {
+          return (series.occurrences?.length || series.linkedCount || 1) > 1;
+        }
+        if (filter === 'chronicle') return series.tiers?.includes('chronicle');
+        if (filter === 'legend') return series.tiers?.includes('legend');
+        return true;
+      });
+      
+      // Get visual data for each series
+      const withData = seriesEntries.map(([seriesId, series]) => {
+        const occ = series.occurrences?.[0];
+        const vd = occ ? getVisualData(occ.imageId, occ.galleryPath) : null;
+        return { seriesId, series, vd };
+      });
+      
+      // Sort based on property
+      const getValue = (item) => {
+        const vd = item.vd;
+        if (!vd) return property.includes('dark') || property.includes('cool') || property.includes('muted') || property.includes('low') ? Infinity : -Infinity;
+        
+        switch (property) {
+          case 'warm': return -(vd.warmCoolRatio ?? 0.5); // High warm first (descending)
+          case 'cool': return vd.warmCoolRatio ?? 0.5;    // Low warm first (ascending = cool first)
+          case 'saturated': return -(vd.saturationAvg ?? 0.5);
+          case 'muted': return vd.saturationAvg ?? 0.5;
+          case 'bright': return -(vd.brightnessAvg ?? 0.5);
+          case 'dark': return vd.brightnessAvg ?? 0.5;
+          case 'highContrast': return -(vd.contrastScore ?? 0.5);
+          case 'lowContrast': return vd.contrastScore ?? 0.5;
+          case 'shadows': return -(vd.toneDistribution?.shadows ?? 0.33);
+          case 'highlights': return -(vd.toneDistribution?.highlights ?? 0.33);
+          // Color-based sorting using COVERAGE metrics (not hue ranges)
+          case 'green': return -(vd.greenCoverage ?? 0);
+          case 'blue': return -(vd.blueCoverage ?? 0);
+          case 'orange': return -(vd.orangeCoverage ?? 0);
+          case 'red': return -(vd.redCoverage ?? 0);
+          case 'yellow': return -(vd.yellowCoverage ?? 0);
+          case 'purple': return -(vd.purpleCoverage ?? 0);
+          case 'neutral': return vd.saturationAvg ?? 0.5; // Low saturation = neutral
+          default: return 0;
+        }
+      };
+      
+      // Debug: log first 10 scores
+      const debugData = withData.slice(0, 10).map(item => ({
+        id: item.seriesId,
+        greenCov: item.vd?.greenCoverage,
+        blueCov: item.vd?.blueCoverage,
+        score: getValue(item)
+      }));
+      console.log('[Sort Debug] Before sort, first 10:', property, debugData);
+      
+      withData.sort((a, b) => getValue(a) - getValue(b));
+      
+      // Debug: log first 10 after sort
+      const afterSort = withData.slice(0, 10).map(item => ({
+        id: item.seriesId,
+        score: getValue(item)
+      }));
+      console.log('[Sort Debug] After sort, first 10:', afterSort);
+      
+      const sorted = withData.map(item => item.seriesId);
+      similaritySorted = true;
+      renderGridSorted(sorted, []);
+      
+      const labels = {
+        'warm': '🔥 Warmest first',
+        'cool': '❄️ Coolest first',
+        'saturated': '🌈 Most saturated first',
+        'muted': '🌫️ Most muted first',
+        'bright': '☀️ Brightest first',
+        'dark': '🌙 Darkest first',
+        'highContrast': '⬛ Highest contrast first',
+        'lowContrast': '🔲 Lowest contrast first',
+        'shadows': '🖤 Most shadows first',
+        'highlights': '💡 Most highlights first',
+        'red': '🔴 Most red first',
+        'orange': '🟠 Most orange first',
+        'yellow': '🟡 Most yellow/gold first',
+        'green': '🟢 Most green first',
+        'blue': '🔵 Most blue first',
+        'purple': '🟣 Most purple first',
+        'neutral': '⚪ Most neutral/B&W first'
+      };
+      
+      status.textContent = `✓ Sorted: ${labels[property] || property}`;
+    }
+    
+    // Handle sort dropdown change
+    document.getElementById('sort-select').addEventListener('change', async (e) => {
+      const value = e.target.value;
+      if (!value) return;
+      
+      if (value === 'similarity') {
+        await sortBySimilarity();
+      } else {
+        await sortByProperty(value);
+      }
+      
+      // Reset dropdown to placeholder
+      e.target.value = '';
+    });
+    
+    async function loadRegistry() {
+      try {
+        // Fetch from Netlify function to get fresh data (cache-bust)
+        const res = await fetch('/.netlify/functions/seriesRegistry?t=' + Date.now());
+        registry = await res.json();
+        console.log('[SeriesMatcher] Loaded registry:', Object.keys(registry.series || {}).length, 'series');
+        updateStats();
+        renderGrid();
+      } catch (err) {
+        console.error('Failed to load registry:', err);
+      }
+    }
+
+    function updateStats() {
+      const series = Object.values(registry.series || {});
+      // Count limited editions (has chronicle or legend)
+      const limitedCount = series.filter(s => 
+        s.tiers?.includes('chronicle') || s.tiers?.includes('legend')
+      ).length;
+      document.getElementById('total-count').textContent = limitedCount;
+      document.getElementById('multi-count').textContent = 
+        series.filter(s => (s.linkedCount || s.occurrences?.length || 0) > 1).length;
+    }
+
+    function renderGrid() {
+      console.log('[RenderGrid] mismatchCache:', JSON.stringify(mismatchCache));
+      const grid = document.getElementById('grid');
+      const filter = document.getElementById('filter-select').value;
+      const search = document.getElementById('search-input').value.toLowerCase();
+      
+      grid.innerHTML = '';
+      
+      for (const [seriesId, series] of Object.entries(registry.series || {})) {
+        // Get occurrence count (support both old linkedCount and new occurrences array)
+        const occCount = series.occurrences?.length || series.linkedCount || 1;
+        
+        // Apply filters
+        if (filter === 'limited') {
+          // Show only Chronicle or Legend (not Foundation-only)
+          const hasChronicle = series.tiers?.includes('chronicle');
+          const hasLegend = series.tiers?.includes('legend');
+          if (!hasChronicle && !hasLegend) continue;
+        }
+        if (filter === 'multi' && occCount <= 1) continue;
+        if (filter === 'chronicle' && !series.tiers?.includes('chronicle')) continue;
+        if (filter === 'legend' && !series.tiers?.includes('legend')) continue;
+        // 'all' shows everything
+        
+        // Apply search
+        if (search) {
+          const matchTitle = (series.title || '').toLowerCase().includes(search);
+          const matchId = series.primaryImageId?.toLowerCase().includes(search);
+          if (!matchTitle && !matchId) continue;
+        }
+        
+        const card = document.createElement('div');
+        card.className = 'card' + (occCount > 1 ? ' multi' : '');
+        card.dataset.seriesId = seriesId;
+        // Apply border inline
+        card.style.cssText = 'border: 2px solid ' + (occCount > 1 ? '#f5a524' : '#555') + '; border-radius: 8px; overflow: hidden; background: #252525;';
+        
+        // Build thumbnail URL
+        let thumbUrl = series.src || '';
+        if (thumbUrl && !thumbUrl.startsWith('http')) {
+          thumbUrl = 'https://photos.smugmug.com' + thumbUrl;
+        }
+        
+        // Build tier HTML - each on its own line
+        // In Limited Editions view, don't show Foundation tier or Sketch
+        const tiersToShow = filter === 'limited' 
+          ? (series.tiers || []).filter(t => t !== 'foundation' && t !== 'sketch')
+          : (series.tiers || []).filter(t => t !== 'sketch');
+        const tierHtml = tiersToShow.map(t => {
+          const label = t.charAt(0).toUpperCase() + t.slice(1);
+          const color = t === 'chronicle' ? '#fbbf24' : t === 'legend' ? '#7dd3fc' : t === 'foundation' ? '#34d399' : '#9ca3af';
+          return '<div class="tier ' + t + '" style="color: ' + color + '; font-size: 0.7rem; font-weight: 500;">• ' + label + '</div>';
+        }).join('');
+        
+        // Build badge HTML with inline styles - only show if more than 1 occurrence
+        // Include mismatch indicator (red star) when data differs
+        const hasMismatch = mismatchCache[seriesId] === true;
+        const badgeContent = occCount + (hasMismatch ? '<span style="color:#ef4444;margin-left:2px;">★</span>' : '');
+        const badgeHtml = occCount > 1 
+          ? '<div class="occurrence-badge" style="position: absolute; top: 10px; right: 10px; background: #f5a524; color: #000; font-size: 0.85rem; font-weight: 700; min-width: 28px; height: 28px; padding: 0 6px; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.6); z-index: 2;">' + badgeContent + '</div>' 
+          : '';
+        
+        card.innerHTML = 
+          '<div style="position: relative;">' +
+            badgeHtml +
+            '<img src="' + thumbUrl + '" alt="' + (series.title || 'Image') + '" loading="lazy" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block;" />' +
+          '</div>' +
+          '<div class="card-info" style="padding: 0.75rem 1rem;">' +
+            '<div class="card-title">' + (series.title || series.primaryImageId) + '</div>' +
+            '<div class="card-meta">' + (series.occurrences?.[0]?.imageId || series.primaryImageId) + '</div>' +
+            '<div class="tier-tags">' + tierHtml + '</div>' +
+          '</div>';
+        
+        grid.appendChild(card);
+      }
+    }
+
+    // Render grid in a specific sorted order
+    function renderGridSorted(sortedSeriesIds, dupePairs = []) {
+      const grid = document.getElementById('grid');
+      const search = document.getElementById('search-input').value.toLowerCase();
+      
+      // Build a set of series IDs that are part of dupe pairs for quick lookup
+      const dupeSet = new Set();
+      for (const [id1, id2] of dupePairs) {
+        dupeSet.add(id1);
+        dupeSet.add(id2);
+      }
+      
+      grid.innerHTML = '';
+      
+      for (const seriesId of sortedSeriesIds) {
+        const series = registry.series[seriesId];
+        if (!series) continue;
+        
+        const occCount = series.occurrences?.length || series.linkedCount || 1;
+        
+        // Apply search
+        if (search) {
+          const matchTitle = (series.title || '').toLowerCase().includes(search);
+          const matchId = series.primaryImageId?.toLowerCase().includes(search);
+          if (!matchTitle && !matchId) continue;
+        }
+        
+        const card = document.createElement('div');
+        card.className = 'card' + (occCount > 1 ? ' multi' : '');
+        card.dataset.seriesId = seriesId;
+        
+        let thumbUrl = series.src || '';
+        if (thumbUrl && !thumbUrl.startsWith('http')) {
+          thumbUrl = 'https://photos.smugmug.com' + thumbUrl;
+        }
+        
+        const filter = document.getElementById('filter-select').value;
+        const tiersToShow = filter === 'limited' 
+          ? (series.tiers || []).filter(t => t === 'chronicle' || t === 'legend')
+          : (series.tiers || []).filter(t => t !== 'sketch' && t !== 'engrained');
+        const tierHtml = tiersToShow.map(t => {
+          const label = t.charAt(0).toUpperCase() + t.slice(1);
+          return '<span class="tier ' + t + '">' + label + '</span>';
+        }).join('');
+        
+        // Check if this is a potential dupe
+        const isPotentialDupe = dupeSet.has(seriesId);
+        
+        // Set border color
+        let borderColor = occCount > 1 ? '#f5a524' : '#555';
+        let boxShadow = '';
+        if (isPotentialDupe) {
+          borderColor = '#f43f5e';
+          boxShadow = '0 0 10px rgba(244, 63, 94, 0.5)';
+        }
+        card.style.cssText = 'border: 2px solid ' + borderColor + '; border-radius: 8px; overflow: hidden; background: #252525;' + (boxShadow ? ' box-shadow: ' + boxShadow + ';' : '');
+        
+        // Check for mismatch indicator
+        const hasMismatch = mismatchCache[seriesId] === true;
+        const badgeContent = occCount + (hasMismatch ? '<span style=\"color:#ef4444;margin-left:2px;\">★</span>' : '');
+        
+        card.innerHTML =
+          '<div class="card-image-wrapper">' +
+            (thumbUrl ? '<img src="' + thumbUrl + '" alt="" loading="lazy" />' : '<div style="height:120px;background:#333;"></div>') +
+            (occCount > 1 ? '<span class="occurrence-badge">' + badgeContent + '</span>' : '') +
+            (isPotentialDupe ? '<span style="position:absolute;top:8px;left:8px;background:#f43f5e;color:white;padding:2px 6px;border-radius:4px;font-size:0.65rem;font-weight:600;">⚠️ DUPE?</span>' : '') +
+          '</div>' +
+          '<div class="card-info">' +
+            '<div class="card-title">' + (series.title || series.primaryImageId) + '</div>' +
+            '<div class="card-meta">' + (series.occurrences?.[0]?.imageId || series.primaryImageId) + '</div>' +
+            '<div class="tier-tags">' + tierHtml + '</div>' +
+          '</div>';
+        
+        grid.appendChild(card);
+      }
+    }
+    
+    // Batch generate fingerprints for all images
+    async function generateFingerprints() {
+      const btn = document.getElementById('gen-fingerprints-btn');
+      const status = document.getElementById('sort-status');
+      
+      btn.disabled = true;
+      btn.textContent = '⏳ Loading...';
+      
+      // Load current visual index
+      await loadVisualIndex();
+      
+      // Get all series
+      const seriesEntries = Object.entries(registry.series || {});
+      
+      // Find images without fingerprints
+      const needsIndexing = [];
+      for (const [seriesId, series] of seriesEntries) {
+        const occ = series.occurrences?.[0];
+        if (!occ) continue;
+        
+        const hash = getHash(occ.imageId, occ.galleryPath);
+        const imageUrl = series.src || series.thumbnailUrl;
+        if (!hash && imageUrl) {
+          needsIndexing.push({
+            seriesId,
+            imageId: occ.imageId,
+            galleryPath: occ.galleryPath,
+            imageUrl: imageUrl.startsWith('http') ? imageUrl : 'https://photos.smugmug.com' + imageUrl
+          });
+        }
+      }
+      
+      if (needsIndexing.length === 0) {
+        status.textContent = `✓ All ${seriesEntries.length} images have fingerprints!`;
+        btn.disabled = false;
+        btn.textContent = '🖼️ Gen Fingerprints';
+        return;
+      }
+      
+      status.textContent = `Generating fingerprints for ${needsIndexing.length} images...`;
+      
+      let success = 0;
+      let failed = 0;
+      
+      // Process sequentially to avoid file write race conditions
+      for (let i = 0; i < needsIndexing.length; i++) {
+        const { imageId, galleryPath, imageUrl } = needsIndexing[i];
+        
+        btn.textContent = `⏳ ${i + 1}/${needsIndexing.length}`;
+        
+        try {
+          const res = await fetch('/.netlify/functions/visualIndex', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'index',
+              imageId,
+              galleryPath,
+              imageUrl
+            })
+          });
+          const result = await res.json();
+          if (!result.success) throw new Error(result.error || 'Unknown error');
+          success++;
+        } catch (err) {
+          failed++;
+          console.warn('Indexing failed:', err);
+        }
+      }
+      
+      // Reload visual index
+      await loadVisualIndex();
+      
+      btn.disabled = false;
+      btn.textContent = '🖼️ Gen Fingerprints';
+      status.textContent = `✓ Generated ${success} fingerprints${failed > 0 ? ` (${failed} failed)` : ''}`;
+    }
+    
+    document.getElementById('gen-fingerprints-btn').addEventListener('click', generateFingerprints);
+
+    // Check for metadata mismatches across galleries
+    async function checkMismatches() {
+      const btn = document.getElementById('check-mismatches-btn');
+      const status = document.getElementById('sort-status');
+      
+      btn.disabled = true;
+      btn.textContent = '⏳ Checking...';
+      
+      // Get filter and search from current UI state
+      const filter = document.getElementById('filter-select').value;
+      const search = document.getElementById('search-input').value.toLowerCase();
+      
+      // Get series that match current filter AND have multiple occurrences
+      const multiOccSeries = Object.entries(registry.series || {})
+        .filter(([id, s]) => {
+          const occCount = s.occurrences?.length || s.linkedCount || 1;
+          
+          // Must have multiple occurrences to check for mismatch
+          if (occCount <= 1) return false;
+          
+          // Apply same filters as renderGrid
+          if (filter === 'limited') {
+            const hasChronicle = s.tiers?.includes('chronicle');
+            const hasLegend = s.tiers?.includes('legend');
+            if (!hasChronicle && !hasLegend) return false;
+          }
+          if (filter === 'multi' && occCount <= 1) return false;
+          if (filter === 'chronicle' && !s.tiers?.includes('chronicle')) return false;
+          if (filter === 'legend' && !s.tiers?.includes('legend')) return false;
+          
+          // Apply search filter
+          if (search) {
+            const matchTitle = (s.title || '').toLowerCase().includes(search);
+            const matchId = s.primaryImageId?.toLowerCase().includes(search);
+            if (!matchTitle && !matchId) return false;
+          }
+          
+          return true;
+        });
+      
+      let checked = 0;
+      let mismatches = 0;
+      
+      for (const [seriesId, series] of multiOccSeries) {
+        // Load data for each occurrence
+        const loadedOccs = [];
+        for (const occ of series.occurrences) {
+          try {
+            // Add cache-busting param to ensure fresh data
+            const cacheBust = Date.now();
+            const res = await fetch('/.netlify/functions/updateGalleryItem?datasetPath=' + encodeURIComponent(occ.galleryPath.replace(/^\//, '')) + '&_t=' + cacheBust, {
+              cache: 'no-store'
+            });
+            if (res.ok) {
+              const galleryData = await res.json();
+              const imgData = (galleryData.items || []).find(img => img.id === occ.imageId);
+              if (imgData) {
+                loadedOccs.push({ data: imgData, imageId: occ.imageId, galleryPath: occ.galleryPath });
+              } else {
+                console.warn('[Mismatch] Image NOT FOUND in gallery:', occ.imageId, 'in', occ.galleryPath);
+                console.warn('[Mismatch] Gallery has', (galleryData.items || []).length, 'items. First 5 IDs:', 
+                  (galleryData.items || []).slice(0,5).map(x => x.id));
+              }
+            }
+          } catch (err) {
+            console.warn('[Mismatch] Failed to load', occ.galleryPath, err);
+          }
+        }
+        
+        // Check for mismatch - pass seriesId for debug logging
+        const hasMismatch = checkDataMismatch(loadedOccs, seriesId, series.title);
+        mismatchCache[seriesId] = hasMismatch;
+        if (hasMismatch) mismatches++;
+        checked++;
+        
+        // Update progress
+        status.textContent = `Checking ${checked}/${multiOccSeries.length}...`;
+      }
+      
+      btn.disabled = false;
+      btn.textContent = '🔍 Check Mismatches';
+      status.textContent = `✓ Found ${mismatches} mismatches in ${checked} multi-gallery images`;
+      
+      console.log('[Mismatch] Cache after check:', JSON.stringify(mismatchCache));
+      
+      // Re-render grid to show mismatch indicators
+      renderGrid();
+    }
+    
+    document.getElementById('check-mismatches-btn').addEventListener('click', checkMismatches);
+
+    // Context menu handling
+    const contextMenu = document.getElementById('context-menu');
+    const ctxSyncItem = document.getElementById('ctx-sync-item');
+    
+    document.getElementById('grid').addEventListener('contextmenu', function(e) {
+      const card = e.target.closest('.card');
+      if (!card) return;
+      
+      e.preventDefault();
+      selectedSeriesId = card.dataset.seriesId;
+      
+      // Show/hide sync option based on occurrence count
+      const series = registry.series[selectedSeriesId];
+      const occCount = series?.occurrences?.length || 1;
+      ctxSyncItem.style.display = occCount > 1 ? 'block' : 'none';
+      
+      contextMenu.style.left = e.clientX + 'px';
+      contextMenu.style.top = e.clientY + 'px';
+      contextMenu.classList.add('show');
+    });
+
+    // Multi-select handling
+    const selectedSeriesIds = new Set();
+    const selectionBar = document.getElementById('selection-bar');
+    
+    function updateSelectionUI() {
+      document.getElementById('selection-count').textContent = selectedSeriesIds.size;
+      if (selectedSeriesIds.size > 0) {
+        selectionBar.classList.add('show');
+      } else {
+        selectionBar.classList.remove('show');
+      }
+      // Update card visual state with inline styles to guarantee visibility
+      document.querySelectorAll('.card').forEach(card => {
+        if (selectedSeriesIds.has(card.dataset.seriesId)) {
+          card.classList.add('selected');
+          card.style.border = '3px solid #22c55e';
+          card.style.boxShadow = '0 0 0 4px rgba(34, 197, 94, 0.5), 0 0 20px rgba(34, 197, 94, 0.3)';
+          card.style.outline = '3px solid #22c55e';
+          card.style.outlineOffset = '2px';
+        } else {
+          card.classList.remove('selected');
+          card.style.border = '';
+          card.style.boxShadow = '';
+          card.style.outline = '';
+          card.style.outlineOffset = '';
+        }
+      });
+    }
+    
+    function toggleSelection(seriesId) {
+      if (selectedSeriesIds.has(seriesId)) {
+        selectedSeriesIds.delete(seriesId);
+      } else {
+        selectedSeriesIds.add(seriesId);
+      }
+      updateSelectionUI();
+    }
+    
+    function clearSelection() {
+      selectedSeriesIds.clear();
+      updateSelectionUI();
+    }
+    
+    // Click on card - Ctrl+Click to select, regular click does nothing (use context menu)
+    document.getElementById('grid').addEventListener('click', function(e) {
+      const card = e.target.closest('.card');
+      if (!card) return;
+      
+      if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        toggleSelection(card.dataset.seriesId);
+      }
+    });
+    
+    document.getElementById('clear-selection-btn').addEventListener('click', clearSelection);
+    
+    // Link selected series
+    document.getElementById('link-selected-btn').addEventListener('click', async function() {
+      if (selectedSeriesIds.size < 2) {
+        alert('Select at least 2 series to link');
+        return;
+      }
+      
+      const ids = Array.from(selectedSeriesIds);
+      const titles = ids.map(id => registry.series[id]?.title || registry.series[id]?.primaryImageId || id);
+      
+      if (!confirm('Link these ' + ids.length + ' series as the same artwork?\n\n' + titles.join('\n') + '\n\nAfter linking, you will choose which metadata to use as master.')) {
+        return;
+      }
+      
+      this.disabled = true;
+      this.textContent = 'Linking...';
+      
+      try {
+        const res = await fetch('/.netlify/functions/seriesRegistry', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'linkSeries',
+            seriesIds: ids
+          })
+        });
+        
+        if (res.ok) {
+          const result = await res.json();
+          clearSelection();
+          await loadRegistry();
+          
+          // After linking, immediately show sync modal to unify metadata
+          const mergedSeriesId = result.keepSeriesId;
+          if (mergedSeriesId && registry.series[mergedSeriesId]) {
+            // Small delay to ensure registry is loaded
+            setTimeout(() => {
+              showSyncModal(mergedSeriesId);
+            }, 100);
+          }
+        } else {
+          const err = await res.json();
+          alert('Link failed: ' + (err.error || 'Unknown error'));
+        }
+      } catch (err) {
+        alert('Link failed: ' + err.message);
+      }
+      
+      this.disabled = false;
+      this.textContent = '🔗 Link as Same Artwork';
+    });
+
+    document.addEventListener('click', function(e) {
+      // Don't hide if clicking inside context menu
+      if (contextMenu.contains(e.target)) return;
+      contextMenu.classList.remove('show');
+    });
+
+    contextMenu.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const item = e.target.closest('.context-menu-item');
+      if (!item) return;
+      
+      const action = item.dataset.action;
+      const seriesIdToUse = selectedSeriesId; // capture before hiding
+      contextMenu.classList.remove('show');
+      
+      if (action === 'info') {
+        showInfoModal(seriesIdToUse);
+      } else if (action === 'copy') {
+        navigator.clipboard.writeText(seriesIdToUse);
+      } else if (action === 'select') {
+        toggleSelection(seriesIdToUse);
+      } else if (action === 'sync') {
+        showSyncModal(seriesIdToUse);
+      }
+    });
+
+    // Sync Metadata Modal handling
+    const syncModalOverlay = document.getElementById('sync-modal-overlay');
+    let syncMasterKey = null;
+    let syncOccurrencesData = [];
+    let syncCurrentSeriesId = null;  // Track which series is being synced
+    
+    async function showSyncModal(seriesId) {
+      syncCurrentSeriesId = seriesId;  // Store for later use
+      const series = registry.series[seriesId];
+      if (!series || !series.occurrences || series.occurrences.length < 2) {
+        alert('This image only appears in one gallery. Nothing to sync.');
+        return;
+      }
+      
+      syncOccurrencesData = [];
+      syncMasterKey = null;
+      
+      const container = document.getElementById('sync-occurrences');
+      container.innerHTML = '<div style="color: #888; text-align: center; padding: 2rem;">Loading gallery data...</div>';
+      syncModalOverlay.classList.add('show');
+      
+      // Load actual data from each gallery
+      const loadedOccs = [];
+      for (const occ of series.occurrences) {
+        try {
+          // Fetch gallery data via API
+          const galleryPath = occ.galleryPath;
+          const res = await fetch('/.netlify/functions/updateGalleryItem?datasetPath=' + encodeURIComponent(galleryPath.replace(/^\//, '')));
+          
+          if (res.ok) {
+            const galleryData = await res.json();
+            const imgData = (galleryData.items || []).find(img => img.id === occ.imageId);
+            if (imgData) {
+              loadedOccs.push({
+                key: occ.imageId + ':' + galleryPath,
+                imageId: occ.imageId,
+                galleryPath: galleryPath,
+                title: imgData.title || occ.title || 'Untitled',
+                data: imgData
+              });
+            }
+          }
+        } catch (err) {
+          console.warn('[Sync] Failed to load', occ.galleryPath, err);
+        }
+      }
+      
+      if (loadedOccs.length < 2) {
+        container.innerHTML = '<div style="color: #f87171; text-align: center; padding: 2rem;">Could not load data from multiple galleries.</div>';
+        return;
+      }
+      
+      syncOccurrencesData = loadedOccs;
+      syncMasterKey = loadedOccs[0].key; // Default first as master
+      
+      // Check for mismatch and update cache + badge
+      const mismatchWarning = document.getElementById('sync-mismatch-warning');
+      const hasMismatch = checkDataMismatch(loadedOccs);
+      mismatchWarning.style.display = hasMismatch ? 'block' : 'none';
+      
+      // Update mismatch cache and refresh the card's badge
+      mismatchCache[syncCurrentSeriesId] = hasMismatch;
+      updateCardBadge(syncCurrentSeriesId);
+      
+      renderSyncOccurrences();
+    }
+    
+    // Check if metadata differs across occurrences
+    function checkDataMismatch(occurrences, seriesId = '', seriesTitle = '') {
+      if (occurrences.length < 2) return false;
+      
+      const first = occurrences[0];
+      const fieldsToCheck = ['title', 'alt', 'description', 'story'];
+      
+      for (let i = 1; i < occurrences.length; i++) {
+        const other = occurrences[i];
+        for (const field of fieldsToCheck) {
+          // Normalize: trim whitespace, treat null/undefined as empty string
+          const val1 = (first.data[field] || '').toString().trim();
+          const val2 = (other.data[field] || '').toString().trim();
+          if (val1 !== val2) {
+            console.log('[Mismatch]', seriesId, seriesTitle?.substring(0,30), '- Field', field, 'differs:');
+            console.log('  First:', first.imageId, 'in', first.galleryPath?.split('/').pop());
+            console.log('    Value:', JSON.stringify(val1).substring(0,80));
+            console.log('  Other:', other.imageId, 'in', other.galleryPath?.split('/').pop());
+            console.log('    Value:', JSON.stringify(val2).substring(0,80));
+            return true;
+          }
+        }
+        
+        // Rating: normalize to number, treat undefined/null/0 as equivalent
+        const r1 = Number(first.data.rating) || 0;
+        const r2 = Number(other.data.rating) || 0;
+        if (r1 !== r2) {
+          console.log('[Mismatch]', seriesId, '- Rating differs:', r1, 'vs', r2);
+          return true;
+        }
+        
+        // Keywords: normalize - sort and compare as JSON
+        const kw1 = [...(first.data.tags || first.data.keywords || [])].sort();
+        const kw2 = [...(other.data.tags || other.data.keywords || [])].sort();
+        if (JSON.stringify(kw1) !== JSON.stringify(kw2)) {
+          console.log('[Mismatch]', seriesId, '- Keywords differ (after sort)');
+          console.log('  First:', JSON.stringify(kw1).substring(0,80));
+          console.log('  Other:', JSON.stringify(kw2).substring(0,80));
+          return true;
+        }
+      }
+      return false;
+    }
+    
+    // Update a single card's badge to show/hide mismatch star
+    function updateCardBadge(seriesId) {
+      const card = document.querySelector('.card[data-series-id="' + seriesId + '"]');
+      if (!card) return;
+      
+      const series = registry.series[seriesId];
+      const occCount = series?.occurrences?.length || 1;
+      if (occCount <= 1) return;
+      
+      const hasMismatch = mismatchCache[seriesId] === true;
+      const badgeContent = occCount + (hasMismatch ? '<span style="color:#ef4444;margin-left:2px;">★</span>' : '');
+      
+      // Find existing badge or create one
+      let badge = card.querySelector('.occurrence-badge');
+      if (badge) {
+        badge.innerHTML = badgeContent;
+      }
+    }
+    
+    function renderSyncOccurrences() {
+      const container = document.getElementById('sync-occurrences');
+      
+      // Helper to render star rating
+      function renderStars(rating) {
+        const r = Number(rating) || 0;
+        if (r === 0) return '<span style="color: #666;">No rating</span>';
+        let stars = '';
+        for (let i = 1; i <= 5; i++) {
+          stars += '<span style="color: ' + (i <= r ? '#fbbf24' : '#444') + ';">★</span>';
+        }
+        return stars + ' <span style="color: #888;">(' + r + ')</span>';
+      }
+      
+      let html = '';
+      for (const occ of syncOccurrencesData) {
+        const isMaster = syncMasterKey === occ.key;
+        const pathParts = occ.galleryPath.split('/');
+        const galleryName = pathParts.slice(-2).join('/').replace('.mjs', '').replace(/-/g, ' ');
+        
+        html += '<label style="display: flex; gap: 1rem; padding: 1rem; background: ' + (isMaster ? '#1e3a5f' : '#2a2a2a') + '; border: 2px solid ' + (isMaster ? '#3b82f6' : '#444') + '; border-radius: 8px; cursor: pointer; transition: all 0.2s;">';
+        html += '<input type="radio" name="sync-master" value="' + occ.key + '" ' + (isMaster ? 'checked' : '') + ' style="margin-top: 0.25rem;" />';
+        html += '<div style="flex: 1; min-width: 0;">';
+        html += '<div style="font-weight: 500; color: ' + (isMaster ? '#60a5fa' : '#e5e5e5') + ';">' + (occ.data.title || 'Untitled') + (isMaster ? ' <span style="background: #3b82f6; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; margin-left: 0.5rem;">MASTER</span>' : '') + '</div>';
+        html += '<div style="font-size: 0.75rem; color: #888; margin-top: 0.25rem;">' + galleryName + '</div>';
+        html += '<div style="font-size: 0.7rem; color: #666; margin-top: 0.25rem; font-family: monospace;">' + occ.imageId + '</div>';
+        html += '<div style="font-size: 0.85rem; margin-top: 0.5rem;">Rating: ' + renderStars(occ.data.rating) + '</div>';
+        if (occ.data.description) {
+          html += '<div style="font-size: 0.75rem; color: #aaa; margin-top: 0.5rem; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">' + occ.data.description.substring(0, 120) + (occ.data.description.length > 120 ? '...' : '') + '</div>';
+        }
+        html += '</div>';
+        html += '</label>';
+      }
+      
+      container.innerHTML = html;
+      
+      // Attach change listeners
+      container.querySelectorAll('input[name="sync-master"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+          syncMasterKey = this.value;
+          renderSyncOccurrences();
+        });
+      });
+    }
+    
+    document.getElementById('sync-cancel-btn').addEventListener('click', function() {
+      syncModalOverlay.classList.remove('show');
+    });
+    
+    document.getElementById('sync-modal-close').addEventListener('click', function() {
+      syncModalOverlay.classList.remove('show');
+    });
+    
+    syncModalOverlay.addEventListener('click', function(e) {
+      if (e.target === syncModalOverlay) {
+        syncModalOverlay.classList.remove('show');
+      }
+    });
+    
+    document.getElementById('sync-execute-btn').addEventListener('click', async function() {
+      if (!syncMasterKey || syncOccurrencesData.length < 2) return;
+      
+      const master = syncOccurrencesData.find(o => o.key === syncMasterKey);
+      if (!master) return;
+      
+      const targets = syncOccurrencesData.filter(o => o.key !== syncMasterKey);
+      
+      // Full data replacement - all metadata fields
+      const fields = ['title', 'alt', 'description', 'story', 'keywords', 'rating', 'contentSource'];
+      
+      this.disabled = true;
+      this.textContent = 'Syncing...';
+      
+      let success = 0;
+      let errors = [];
+      
+      for (const target of targets) {
+        try {
+          // Build patch with ALL metadata fields (full replacement)
+          const patch = {
+            title: master.data.title || '',
+            alt: master.data.alt || '',
+            description: master.data.description || '',
+            story: master.data.story || '',
+            keywords: master.data.tags || master.data.keywords || [],
+            rating: master.data.rating || 0,
+            contentSource: master.data.contentSource || 'human'
+          };
+          
+          console.log('[Sync] Sending patch to', target.galleryPath, 'for', target.imageId, ':', patch);
+          
+          const res = await fetch('/.netlify/functions/updateGalleryItem', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              datasetPath: target.galleryPath.replace(/^\//, ''),
+              id: target.imageId,
+              patch: patch
+            })
+          });
+          
+          const resText = await res.text();
+          console.log('[Sync] Response:', res.status, resText);
+          
+          if (!res.ok) throw new Error(resText);
+          success++;
+        } catch (err) {
+          console.error('[Sync] Error:', err);
+          errors.push(target.galleryPath + ': ' + err.message);
+        }
+      }
+      
+      this.disabled = false;
+      this.textContent = 'Sync Metadata';
+      syncModalOverlay.classList.remove('show');
+      
+      // Clear mismatch after successful sync
+      if (errors.length === 0 && syncCurrentSeriesId) {
+        console.log('[Sync] Clearing mismatch for', syncCurrentSeriesId);
+        mismatchCache[syncCurrentSeriesId] = false;
+        updateCardBadge(syncCurrentSeriesId);
+        console.log('[Sync] Badge updated, cache now:', JSON.stringify(mismatchCache));
+      }
+      
+      if (errors.length > 0) {
+        alert('Synced ' + success + ' of ' + targets.length + ' galleries.\n\nErrors:\n' + errors.join('\n'));
+      } else {
+        alert('✓ Synced metadata to ' + success + ' galleries!');
+      }
+    });
+
+    // Modal handling
+    const modalOverlay = document.getElementById('modal-overlay');
+    
+    function showInfoModal(seriesId) {
+      const series = registry.series[seriesId];
+      if (!series) return;
+      
+      document.getElementById('modal-title').textContent = series.title || 'Untitled';
+      document.getElementById('modal-series-id').textContent = seriesId;
+      // Show first occurrence's imageId (more accurate than potentially stale primaryImageId)
+      document.getElementById('modal-image-id').textContent = series.occurrences?.[0]?.imageId || series.primaryImageId;
+      
+      // Tiers in modal
+      const tierHtml = (series.tiers || []).map(function(t) {
+        const label = t.charAt(0).toUpperCase() + t.slice(1);
+        return '<div class="tier ' + t + '">' + label + '</div>';
+      }).join('');
+      document.getElementById('modal-tiers').innerHTML = tierHtml;
+      
+      document.getElementById('modal-created').textContent = 
+        series.createdAt ? new Date(series.createdAt).toLocaleDateString() : '-';
+      
+      let thumbUrl = series.src || '';
+      if (thumbUrl && !thumbUrl.startsWith('http')) {
+        thumbUrl = 'https://photos.smugmug.com' + thumbUrl;
+      }
+      document.getElementById('modal-thumb').src = thumbUrl;
+      
+      // Render occurrences
+      const occSection = document.getElementById('occurrence-section');
+      const occItems = document.getElementById('occurrence-items');
+      
+      if (series.occurrences && series.occurrences.length > 0) {
+        occSection.style.display = 'block';
+        document.getElementById('occurrence-count').textContent = series.occurrences.length;
+        
+        let occHtml = '';
+        series.occurrences.forEach(function(occ, idx) {
+          const pathParts = occ.galleryPath.split('/');
+          const galleryName = pathParts[pathParts.length - 1] || pathParts[pathParts.length - 2] || occ.galleryPath;
+          
+          // Convert file path to public URL
+          // e.g. "/src/data/Galleries/Fine-Art/Landscapes/Gallery.mjs" -> "/Galleries/Fine-Art/Landscapes/Gallery"
+          // e.g. "/src/data/Galleries/Fine-Art/Mountains/Mountains.mjs" -> "/Galleries/Fine-Art/Mountains/Mountains" (not duplicated)
+          let publicPath = occ.galleryPath
+            .replace(/^\/?src\/data/, '')  // Remove /src/data prefix
+            .replace(/\.mjs$/, '');         // Remove .mjs extension
+          
+          // Check if filename matches parent folder (e.g., /Mountains/Mountains) and dedupe
+          const parts = publicPath.split('/');
+          if (parts.length >= 2 && parts[parts.length - 1] === parts[parts.length - 2]) {
+            parts.pop(); // Remove duplicate
+            publicPath = parts.join('/');
+          }
+          
+          const galleryUrl = publicPath;
+          const testUrl = publicPath + '/' + occ.imageId;
+          const friendlyName = galleryName.replace(/-/g, ' ').replace(/\.mjs$/, '');
+          
+          occHtml += 
+            '<div class="occurrence-item">' +
+              '<input type="checkbox" checked data-idx="' + idx + '" />' +
+              '<div class="occurrence-details">' +
+                '<div class="occurrence-gallery">' + friendlyName + '</div>' +
+                '<div class="occurrence-url">' +
+                  '<a href="' + galleryUrl + '" target="_blank">' + occ.galleryPath + '</a>' +
+                  ' <a href="' + testUrl + '" target="_blank" class="test-btn">🔗 Test</a>' +
+                '</div>' +
+              '</div>' +
+            '</div>';
+        });
+        occItems.innerHTML = occHtml;
+      } else {
+        occSection.style.display = 'none';
+      }
+      
+      updateUnlinkButton();
+      modalOverlay.classList.add('show');
+      selectedSeriesId = seriesId;
+    }
+
+    function updateUnlinkButton() {
+      const allBoxes = document.querySelectorAll('#occurrence-items input[type="checkbox"]');
+      const unchecked = document.querySelectorAll('#occurrence-items input:not(:checked)');
+      document.getElementById('unlink-btn').disabled = unchecked.length === 0;
+      allBoxes.forEach(function(cb) {
+        const item = cb.closest('.occurrence-item');
+        if (item) {
+          if (cb.checked) {
+            item.classList.remove('excluded');
+          } else {
+            item.classList.add('excluded');
+          }
+        }
+      });
+    }
+
+    document.getElementById('occurrence-items').addEventListener('change', updateUnlinkButton);
+
+    document.getElementById('modal-close').addEventListener('click', function() {
+      modalOverlay.classList.remove('show');
+    });
+
+    modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('show');
+      }
+    });
+
+    document.getElementById('unlink-btn').addEventListener('click', async function() {
+      const series = registry.series[selectedSeriesId];
+      const uncheckedBoxes = document.querySelectorAll('#occurrence-items input:not(:checked)');
+      
+      if (uncheckedBoxes.length === 0) return;
+      
+      const toUnlink = [];
+      uncheckedBoxes.forEach(function(cb) {
+        const idx = parseInt(cb.dataset.idx);
+        const occ = series.occurrences[idx];
+        toUnlink.push({ imageId: occ.imageId, galleryPath: occ.galleryPath });
+      });
+      
+      const confirmMsg = 'Unlink ' + toUnlink.length + ' occurrence(s) from this series?\n\nEach will get its own unique Series ID.\n\n' + 
+        toUnlink.map(o => o.galleryPath).join('\n');
+      
+      if (!confirm(confirmMsg)) return;
+      
+      this.disabled = true;
+      this.textContent = 'Unlinking...';
+      
+      let successCount = 0;
+      for (const item of toUnlink) {
+        try {
+          const res = await fetch('/.netlify/functions/seriesRegistry', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'unlink',
+              imageId: item.imageId,
+              galleryPath: item.galleryPath
+            })
+          });
+          if (res.ok) successCount++;
+        } catch (err) {
+          console.error('Unlink failed:', err);
+        }
+      }
+      
+      alert('Unlinked ' + successCount + '/' + toUnlink.length + ' occurrences.');
+      
+      // Reload registry and refresh
+      await loadRegistry();
+      modalOverlay.classList.remove('show');
+    });
+
+    // Double-click to open modal
+    document.getElementById('grid').addEventListener('dblclick', function(e) {
+      const card = e.target.closest('.card');
+      if (card) {
+        showInfoModal(card.dataset.seriesId);
+      }
+    });
+
+    // Filter handlers
+    document.getElementById('filter-select').addEventListener('change', function() {
+      similaritySorted = false;
+      document.getElementById('sort-status').textContent = '';
+      renderGrid();
+    });
+    document.getElementById('search-input').addEventListener('input', function() {
+      if (!similaritySorted) {
+        renderGrid();
+      }
+    });
+
+    // Init
+    loadRegistry();
+  </script>
+</body>
+</html>

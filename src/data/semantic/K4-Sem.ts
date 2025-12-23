@@ -238,7 +238,9 @@ facingHistory: {
     { phrase: "cowboy painting art", rating: 3, use: true },
     { phrase: "western art", rating: 3, use: true },
     { phrase: "western landscapes fine art", rating: 3, use: true },
-    { phrase: "frederic remington", rating: 3, use: true },
+    // NOTE: "frederic remington" disabled - iconic artist name shouldn't appear in auto-generated titles
+    // Use manually in blog/editorial content with proper context (e.g., "in the tradition of", "a nod to")
+    { phrase: "frederic remington", rating: 3, use: false },
     { phrase: "powerful works of art", rating: 3, use: true },
     { phrase: "rustic charm", rating: 3, use: true },
     { phrase: "western canon", rating: 3, use: true }

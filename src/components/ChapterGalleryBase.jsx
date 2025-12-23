@@ -37,7 +37,7 @@ import LikeButton from "@/components/LikeButton.jsx";
 import StoryShow from "./Gallery-Slideshow.jsx";
 import SeriesOrderModal from "./SeriesOrderModal.jsx";
 import SeriesInfoPopup from "./SeriesInfoPopup.jsx";
-import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries } from "../data/seriesDefinitions.js";
+import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, loadSeriesRegistry } from "../data/seriesDefinitions.js";
 import useHorizontalSwipeNav from "./hooks/useHorizontalSwipeNav.js";
 import { createPortal } from "react-dom";
 import useMetaSwap from "./hooks/useMetaSwap.js";
@@ -278,6 +278,12 @@ export default function ChapterGalleryBase({
   initialImageId
 }) {
   const sectionUrl = findSectionUrl(basePath);
+
+  // Load series registry on mount (for Chronicle/Legend data)
+  const [seriesRegistry, setSeriesRegistry] = useState(null);
+  useEffect(() => {
+    loadSeriesRegistry().then(setSeriesRegistry);
+  }, []);
 
   // Edition context for SEO uniqueness - use basePath for SSR-safe initial render
   const [clientPath, setClientPath] = useState((basePath || "").toLowerCase());
@@ -947,7 +953,7 @@ export default function ChapterGalleryBase({
                           {/* Desktop Series Icons - stacked below collector notes button */}
                           {!isMobile && (() => {
                             const currentImage = galleryData[currentIndex];
-                            const effectiveSeries = getEffectiveSeries(currentImage);
+                            const effectiveSeries = getEffectiveSeries(currentImage, seriesRegistry);
                             const displaySeries = effectiveSeries
                               .filter(s => SERIES_DEFINITIONS[s] && s !== "engrained")
                               .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));
@@ -1284,7 +1290,7 @@ export default function ChapterGalleryBase({
                     {/* Mobile Series Icons - row below toolbar, above Play Show */}
                     {isMobile && (() => {
                       const currentImage = galleryData[currentIndex];
-                      const effectiveSeries = getEffectiveSeries(currentImage);
+                      const effectiveSeries = getEffectiveSeries(currentImage, seriesRegistry);
                       const displaySeries = effectiveSeries
                         .filter(s => SERIES_DEFINITIONS[s] && s !== "engrained")
                         .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));
@@ -1939,7 +1945,7 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
           setSeriesInfoScrollTo(null);
         }}
         scrollToSeries={seriesInfoScrollTo}
-        activeSeries={getEffectiveSeries(galleryData[currentIndex]).filter(s => s !== "engrained")}
+        activeSeries={getEffectiveSeries(galleryData[currentIndex], seriesRegistry).filter(s => s !== "engrained")}
       />
     </div>
   );
