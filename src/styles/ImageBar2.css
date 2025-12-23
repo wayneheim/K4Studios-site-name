@@ -30,6 +30,8 @@
   width:max-content;
   animation:scroll 60s linear infinite;
   animation-delay: 6.7s; /* ← Delay scroll start by 1 second */
+  will-change: transform;
+  backface-visibility: hidden;
 }
 .carousel:hover .carousel-track{ animation-play-state:paused; }
 .carousel-track::-webkit-scrollbar{display:none;}
@@ -47,6 +49,8 @@
   border-left: 14px solid white;
   box-sizing: border-box;
   transition: transform 0.8s ease;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .carousel-slide:hover img {
