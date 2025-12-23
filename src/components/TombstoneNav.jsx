@@ -43,8 +43,13 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
             padding-top: 0.25rem;
             padding-bottom: 1rem;
           }
+          .tile {
+            width: 100px;
+            height: 160px;
+          }
           .tombstone-card {
-            max-width: 120px;
+            width: 100px;
+            height: 114px;
           }
           .tombstone-title {
             font-size: 0.75rem;
@@ -128,8 +133,8 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           flex-direction: column;
           align-items: center;
           text-decoration: none;
-          width: 100%;
-          max-width: 150px;
+          width: 150px;
+          height: 220px; /* Explicit height to prevent CLS */
           margin: 0 auto;
           transition: transform 0.3s ease;
           will-change: transform;
@@ -143,7 +148,8 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
         }
 
         .tombstone-card {
-          aspect-ratio: 3.5 / 4;
+          width: 150px;
+          height: 171px; /* Explicit height matches image dimensions */
           border-radius: 0% 0% 25% 25% / 0% 0% 20% 20%;
           overflow: hidden;
           background: #ffffff;
@@ -156,9 +162,6 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 100%;
-          max-width: 250px;
-          /* Prevent CLS by containing the image space */
           contain: layout style;
           will-change: transform, box-shadow;
           backface-visibility: hidden;
