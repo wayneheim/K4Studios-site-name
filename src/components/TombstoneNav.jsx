@@ -18,11 +18,8 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
               <img
                 src={item.thumb}
                 alt={item.title}
-                loading="eager"
-                decoding="async"
+                loading="lazy"
                 className="tombstone-img"
-                width="150"
-                height="171"
               />
             </div>
             <p
@@ -40,19 +37,11 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
       <style jsx>{`
         @media (max-width: 640px) {
           .tombstone-nav {
+            transform: scale(0.87);
+            transform-origin: top center;
             padding-top: 0.25rem;
-            padding-bottom: 1rem;
-          }
-          .tile {
-            width: 100px;
-            height: 160px;
-          }
-          .tombstone-card {
-            width: 100px;
-            height: 114px;
-          }
-          .tombstone-title {
-            font-size: 0.75rem;
+            margin-bottom: -4.5rem;
+            margin-top: -5pt;
           }
         }
 
@@ -63,23 +52,30 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           color: #3e2c1c;
           text-align: center;
           margin-top: 0.5rem;
-          min-height: 1.2em; /* Reserve space to prevent CLS */
         }
 
         .fade-in-up {
-          opacity: 1;
+          opacity: 0;
+          transform: translateY(-20px);
+          animation-name: fadeSlideUp;
+          animation-duration: 0.9s;
+          animation-timing-function: ease;
+          animation-fill-mode: forwards;
+          animation-delay: 0.6s;
         }
 
         .fade-in-up.pop-effect {
-          opacity: 1;
+          animation-name: fadeSlideUp, pop-highlight;
+          animation-duration: 0.9s, 0.7s;
+          animation-timing-function: ease, ease;
+          animation-fill-mode: forwards, forwards;
+          animation-delay: 0.6s, 1.8s;
         }
 
         @keyframes fadeSlideUp {
-          from {
-            opacity: 1;
-          }
           to {
             opacity: 1;
+            transform: translateY(0);
           }
         }
 
@@ -88,10 +84,10 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
             transform: scale(1);
           }
           30% {
-            transform: scale(1);
+            transform: scale(1.15);
           }
           60% {
-            transform: scale(1);
+            transform: scale(0.95);
           }
           100% {
             transform: scale(1);
@@ -118,7 +114,7 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
 
         .tile-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
           gap: 1.25rem;
           max-width: 900px;
           margin: 0 auto;
@@ -133,11 +129,10 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           flex-direction: column;
           align-items: center;
           text-decoration: none;
-          width: 150px;
-          height: 220px; /* Explicit height to prevent CLS */
+          width: 100%;
+          max-width: 150px;
           margin: 0 auto;
           transition: transform 0.3s ease;
-          will-change: transform;
         }
 
         .tile:hover .tombstone-card {
@@ -148,8 +143,7 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
         }
 
         .tombstone-card {
-          width: 150px;
-          height: 171px; /* Explicit height matches image dimensions */
+          aspect-ratio: 3.5 / 4;
           border-radius: 0% 0% 25% 25% / 0% 0% 20% 20%;
           overflow: hidden;
           background: #ffffff;
@@ -162,9 +156,8 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           display: flex;
           align-items: center;
           justify-content: center;
-          contain: layout style;
-          will-change: transform, box-shadow;
-          backface-visibility: hidden;
+          width: 100%;
+          max-width: 250px;
         }
 
         .tombstone-divider {
@@ -181,8 +174,6 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
           height: 100%;
           object-fit: cover;
           object-position: center 15%;
-          /* Prevent image load from causing layout shift */
-          content-visibility: auto;
         }
 
         .tile p {
@@ -200,7 +191,7 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
         }
 
         .tombstone-animate {
-          opacity: 1;
+          opacity: 0;
           animation-name: dropIn;
           animation-duration: 0.8s;
           animation-fill-mode: forwards;
@@ -209,10 +200,12 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
 
         @keyframes dropIn {
           0% {
-            opacity: 1;
+            opacity: 0;
+            transform: translateY(-40px) scale(0.95);
           }
           100% {
             opacity: 1;
+            transform: translateY(0) scale(1);
           }
         }
 

@@ -24,7 +24,7 @@ function K4Splash({ isMobile }) {
       K4 Studios
       <style jsx>{`
         .k4splash {
-          position: fixed;
+          position: absolute;
           left: 50%;
           top: 50%;
           width: 100%;
@@ -36,13 +36,12 @@ function K4Splash({ isMobile }) {
           letter-spacing: -0.04em;
           color: #5f574bff;
           opacity: 1;
-          z-index: 9999;
+          z-index: 14;
           pointer-events: none;
           transition: opacity 0.8s cubic-bezier(.44, 0, .53, 1);
         }
         .k4splash-out {
           opacity: 0;
-          pointer-events: none;
         }
       `}</style>
     </div>
@@ -50,16 +49,16 @@ function K4Splash({ isMobile }) {
 }
 
 function LogoSlot({ isMobile, triggerStripe }) {
-  const [logoIn, setLogoIn] = useState(false);
+  const [logoIn, setLogoIn] = useState(isMobile);
   useEffect(() => {
-    if (isMobile) {
-      setLogoIn(true);
-    } else {
+    if (!isMobile) {
       const timer = setTimeout(() => {
         setLogoIn(true);
         triggerStripe();
       }, 1300);
       return () => clearTimeout(timer);
+    } else {
+      setLogoIn(true);
     }
   }, [isMobile, triggerStripe]);
   return (
@@ -88,34 +87,30 @@ export default function LandingHeader({ breadcrumb }) {
   const isMobile = useIsMobile();
   const [animateStripes, setAnimateStripes] = useState(false);
   const [showWHLogo, setShowWHLogo] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (mounted && isMobile) {
-      const timer = setTimeout(() => setShowWHLogo(true), 420);
+    if (isMobile) {
+      const timer = setTimeout(() => setShowWHLogo(true), 420); // Delay fade-in
       return () => clearTimeout(timer);
     } else {
       setShowWHLogo(false);
     }
-  }, [mounted, isMobile]);
+  }, [isMobile]);
 
   return (
-    <div
-      role="banner"
-      className={`landing-header${mounted && isMobile ? " mobile-animate" : ""}${mounted && animateStripes ? " desktop-animate" : ""}`}
+    <header
+      className={`landing-header ${isMobile ? "mobile-animate" : ""} ${
+        animateStripes ? "desktop-animate" : ""
+      }`}
       style={{ position: "relative", zIndex: 100 }}
     >
       <div className="breadcrumb-text desktop-only breadcrumb-fade" style={{ animationDelay: "1.2s" }}>
         {breadcrumb}
       </div>
 
-      <K4Splash isMobile={mounted && isMobile} />
-      <LogoSlot isMobile={mounted && isMobile} triggerStripe={() => setAnimateStripes(true)} />
-      {!mounted || isMobile ? (
+      <K4Splash isMobile={isMobile} />
+      <LogoSlot isMobile={isMobile} triggerStripe={() => setAnimateStripes(true)} />
+      {isMobile || typeof window === "undefined" ? (
         <div className="rhs">
           <SiteNavMenu />
         </div>
@@ -123,7 +118,7 @@ export default function LandingHeader({ breadcrumb }) {
         <DelayedRH />
       )}
 
-    {mounted && isMobile && (
+    {isMobile && (
   <a
     href="mailto:wayne@k4studios.com"
     className={`wh-logo-mobile${showWHLogo ? " fade-in" : ""}`}
@@ -292,9 +287,7 @@ export default function LandingHeader({ breadcrumb }) {
           justify-content: center;
           z-index: 1;
           opacity: 0;
-          transition: transform 0.75s cubic-bezier(0.44, 0, 0.53, 1), opacity 0.56s cubic-bezier(0.44, 0, 0.53, 1), box-shadow 0.3s ease;
-          will-change: transform, opacity, box-shadow;
-          backface-visibility: hidden;
+          transition: transform 0.75s cubic-bezier(0.44, 0, 0.53, 1), opacity 0.56s cubic-bezier(0.44, 0, 0.53, 1);
         }
 
         .logo-slot.logo-in {
@@ -307,10 +300,7 @@ export default function LandingHeader({ breadcrumb }) {
           object-fit: contain;
           filter: grayscale(100%);
           opacity: 0.9;
-          transition: filter 0.3s ease, opacity 0.3s ease;
-          will-change: filter, opacity;
-          backface-visibility: hidden;
-          -webkit-backface-visibility: hidden;
+          transition: filter 0.3s, opacity 0.3s;
         }
 
         .logo-slot:hover {
@@ -383,6 +373,6 @@ export default function LandingHeader({ breadcrumb }) {
           opacity: 0.45;
         }
       `}</style>
-    </div>
+    </header>
   );
 }

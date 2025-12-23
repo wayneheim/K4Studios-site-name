@@ -117,14 +117,14 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       {/* --- Carousel/Animated Hero (revealed after overlay fades ) --- */}
       <div style="position:relative;z-index:1;">
         <div class="carousel-fade">
-          <ImageBar2 client:load slides={homeSlides} />
+          <ImageBar2 client:only="react" />
         </div>
       </div>
     </div>
 
     <section class="section-heading-anim-wrap">
       <div class="section-heading-anim">
-        <h2 class="hero-subtitle-anim" id="hero-subtitle" style="min-height: 32px;">
+        <h2 class="hero-subtitle-anim" id="hero-subtitle">
           {landingWestern.subtitle}
         </h2>
         <h1 class="hero-title-anim" id="hero-title">
@@ -133,22 +133,9 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       </div>
     </section>
 
-    <!-- Tombstone nav with reserved height to prevent CLS -->
-    <div class="tombstone-wrapper py-5">
+    <div class="py-5">
       <TombstoneNav items={landingWestern.tombstones} />
     </div>
-
-    <style>
-      .tombstone-wrapper {
-        min-height: 480px;
-        contain: layout style;
-      }
-      @media (max-width: 768px) {
-        .tombstone-wrapper {
-          min-height: 400px;
-        }
-      }
-    </style>
 
     <section class="story-layout">
       <div class="text-column">

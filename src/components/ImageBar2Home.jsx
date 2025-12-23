@@ -1,42 +1,35 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
-
-// Import home carousel - but we'll load it client-side only via useEffect
-// to avoid hydration mismatch from import.meta.glob differences
-const homeCarouselModule = () => import("../data/home/carousel.ts");
+import { slides as homeSlides } from "../data/home/carousel.ts";
 
 export default function ImageBar2Home() {
   const trackRef = useRef(null);
-  const [homeSlides, setHomeSlides] = useState([]);
   const [show, setShow] = useState(false);
   const [fullSize, setFullSize] = useState(false);
+  // Duplicate slides for infinite scroll effect - done in React state, not DOM manipulation
   const [duplicated, setDuplicated] = useState(false);
 
-  // Load slides client-side only to avoid hydration mismatch
   useEffect(() => {
-    homeCarouselModule().then((mod) => {
-      if (mod.slides) {
-        setHomeSlides(mod.slides);
-      }
-    });
-  }, []);
-
-  // Animation timers
-  useEffect(() => {
+    // Mark as duplicated on client (this triggers re-render with doubled slides)
     if (homeSlides.length > 0) {
       setDuplicated(true);
     }
+
+    // Appear *almost instantly* (30ms after mount)
     const fadeTimer = setTimeout(() => setShow(true), 30);
-    const scaleTimer = setTimeout(() => setFullSize(true), 1950);
+
+    // Scale up after hero animation is done
+    const scaleTimer = setTimeout(() => setFullSize(true), 1950); // adjust as needed
+
     return () => {
       clearTimeout(fadeTimer);
       clearTimeout(scaleTimer);
     };
-  }, [homeSlides]);
+  }, []);
 
-  // Return null until slides are loaded (no SSR content = no mismatch)
   if (!homeSlides.length) return null;
 
+  // Double the slides for infinite scroll effect (only after hydration)
   const displaySlides = duplicated ? [...homeSlides, ...homeSlides] : homeSlides;
 
   return (
