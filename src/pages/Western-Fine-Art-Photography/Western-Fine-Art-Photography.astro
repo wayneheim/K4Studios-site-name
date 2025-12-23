@@ -2,9 +2,14 @@
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
 import ImageBar2          from '@/components/ImageBar2.jsx';
+import TombstoneNav       from '@/components/TombstoneNav.jsx';
 import LandingRightImages from '@/components/LandingRightImages.jsx';
+import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
+import StorySlider        from '@/components/StorySlider.tsx';
+import { galleryData as cowboyColorDataFull } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+import { storySliderImageIds } from '@/data/storySlider.ts';
 import { getStructuredData } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
@@ -13,8 +18,9 @@ import { getSideImages } from '@/components/utils/getSideImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
-import { landingSeries } from '@/data/Other/Series/landingstones.ts';
-import { seriesStory } from '@/data/Other/Series/story.ts';
+import { landingWestern } from '@/data/Galleries/Painterly-Fine-Art-Photography/landingstones.ts';
+import { painterlyStory as westernStory } from '@/data/Galleries/Painterly-Fine-Art-Photography/story.ts';
+import { facingFAQ } from '@/data/Galleries/Painterly-Fine-Art-Photography/faq.ts';
 
 import '@/styles/global.css';
 
@@ -22,14 +28,15 @@ import '@/styles/global.css';
 // DYNAMIC LOGIC SECTION
 // ----------------------
 
-const sectionPath = "/Other/Series";
-const meta = getLandingMeta(sectionPath, "/images/editions-hero.webp");
-// Title for browser tab (meta comes from landingMetaDB)
-meta.title = meta.ogTitle;
+const sectionPath = "/Galleries/Painterly-Fine-Art-Photography";
 
-const headingCount = seriesStory.filter((block, i) => i > 0 && block.subhead).length;
+// Filter gallery data for StorySlider (reduce payload)
+const cowboyColorData = cowboyColorDataFull
+  .filter((img: any) => storySliderImageIds.includes(img.id))
+  .map((img: any) => ({ id: img.id, title: img.title, story: img.story }));
 
-// For side images, pull from main galleries
+const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
+
 function findNavEntry(nav, url) {
   for (const entry of nav) {
     if (entry.href === url) return entry;
@@ -40,6 +47,7 @@ function findNavEntry(nav, url) {
   }
   return null;
 }
+
 function recursivelyGatherAllGalleryHrefs(node) {
   let result = [];
   if (!node) return result;
@@ -48,9 +56,7 @@ function recursivelyGatherAllGalleryHrefs(node) {
   return result;
 }
 
-// Use Painterly gallery for side images
-const gallerySectionPath = "/Galleries/Painterly-Fine-Art-Photography";
-const landingNav = findNavEntry(siteNav, gallerySectionPath);
+const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav
   ? recursivelyGatherAllGalleryHrefs(landingNav)
   : [];
@@ -61,71 +67,68 @@ const galleryDatas = galleryPaths.map(path => {
 });
 
 const featheredImages = getSideImages({
-  sectionPath: gallerySectionPath,
+  sectionPath,
   headingCount,
   galleryDatas,
 });
 const featheredImagesSidebar = featheredImages.slice(0, 6);
 
-// Build FAQ items from series sections for structured data
-const faqItems = [
-  {
-    question: "What is the Sketch Series at K4 Studios?",
-    answer: "The Sketch Series is our visual lobby — filled with larger-than-life characters, quiet studies, and forgotten stories. These are open edition 5×7 prints, intimate studies meant to be held and revisited. Many collectors begin here."
-  },
-  {
-    question: "What is the Foundation Series?",
-    answer: "Foundation works move from the intimacy of the hand to the presence of the wall. These are open edition archival prints in collector-friendly sizes, introducing scale and refinement while remaining accessible."
-  },
-  {
-    question: "What is the Chronicle Series?",
-    answer: "The Chronicle Series marks where an image crosses from open exploration into recorded history. These are signed, limited editions of 250 — formally issued, tracked, and preserved as part of the artist's long-term archive."
-  },
-  {
-    question: "What is the Legend Series?",
-    answer: "Legend works are ultra-limited signed editions of 12 — monumental statement pieces for collectors who understand that presentation speaks more powerfully than words alone. These works command attention and define a space."
-  },
-  {
-    question: "What is the Engrained Series?",
-    answer: "Engrained works fuse image and material into a single object. Printed directly into hand-selected Baltic Birch using a custom 5-layer UV process, the wood grain becomes inseparable from the story. Limited edition of 50 per image."
-  },
-  {
-    question: "How do images evolve at K4 Studios?",
-    answer: "Images at K4 Studios are curated upward based on their narrative strength and presence. Some remain intimate, while others prove they can carry scale and hold attention over time. Evolution is refinement, not revision."
-  }
-];
-
+// ----------------------
+// Structured Data
+// ----------------------
 const structuredData = getStructuredData({
-  type: "Article",
+  type: "gallery",
   data: {
-    headline: "Editions & Series at K4 Studios",
-    title: "How the Work Is Offered — Edition Structure & Collector Formats",
-    description: "An overview of the edition structure, materials, and narrative formats that define how the work at K4 Studios is created, elevated, and collected.",
+    title: landingWestern.title,
+    description: landingWestern.subtitle || landingWestern.description,
     url: `https://k4studios.com${sectionPath}`,
-    image: "https://k4studios.com/images/editions-hero.webp",
-    articleSection: "Collecting Fine Art Photography",
-    keywords: ["fine art editions", "limited edition photography", "art collecting", "archival prints", "signed prints", "collector editions", "K4 Studios", "Wayne Heim"],
-    faqItems,
+    keywords: landingWestern.keywords || [],
+    copyrightNotice: "© Wayne Heim"
+  },
+  images: featheredImages,
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    acquireLicensePage: "https://k4studios.com/Other/Print-Options",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
   }
 });
+
+// ----------------------
+// NEW: dynamic OG/Twitter image
+// ----------------------
+function makeAbsoluteUrl(src?: string) {
+  if (!src) return "";
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+}
+
+const landingImg    = featheredImages[0];            // pick first for stability
+const landingImgUrl = makeAbsoluteUrl(landingImg?.src);
+
+const meta = getLandingMeta(sectionPath, landingImgUrl);
+if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
 ---
 
 <BaseLayout
-  title={meta.title}
+  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   structuredDataJSON={structuredData}
   meta={meta}
 >
 
-  <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
-    <link rel="canonical" href={`https://k4studios.com${sectionPath}`} />
 
+  <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
-      <LandingHeader client:load breadcrumb={landingSeries.breadcrumb} />
+      <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />
     </div>
 
     <div class="mobile-breadcrumb-wrapper">
-      <div class="mobile-breadcrumb" set:html={landingSeries.breadcrumb} />
-    </div>
+  <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
+</div>
+
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">
@@ -136,18 +139,22 @@ const structuredData = getStructuredData({
     <section class="section-heading-wrap">
       <div class="section-heading">
         <h1 class="page-title fade-in reveal-on-scroll">
-          {landingSeries.title}
+          {landingWestern.title}
         </h1>
         <h2 class="page-subtitle fade-in reveal-on-scroll">
-          {landingSeries.subtitle}
+          {landingWestern.subtitle}
         </h2>
       </div>
     </section>
 
+    <div class="py-5">
+      <TombstoneNav items={landingWestern.tombstones} />
+    </div>
+
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
-          {seriesStory.map((section, index) => (
+          {westernStory.map((section, index) => (
             <article class="story-block" key={index}>
               {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
               {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />}
@@ -162,6 +169,24 @@ const structuredData = getStructuredData({
                   ))}
                 </ul>
               )}
+              {/* Insert StorySlider after section 1 (One-Image Movie intro) */}
+              {index === 1 && (
+                <div class="story-slider-wrapper reveal-on-scroll mt-8">
+                  {/* Skeleton placeholder to prevent CLS */}
+                  <div class="story-slider-skeleton relative bg-[#ebe5dc] rounded-lg shadow-md px-6 py-5 max-w-2xl mx-auto border-2 border-[#d8d0c4] mb-12 h-[280px] overflow-hidden">
+                    <div class="absolute top-2.5 left-2.5 w-3.5 h-3.5 border-l-2 border-t-2 border-[#c8bfb0]"></div>
+                    <div class="absolute bottom-2.5 right-2.5 w-3.5 h-3.5 border-r-2 border-b-2 border-[#c8bfb0]"></div>
+                    <p class="text-[11px] uppercase tracking-[0.12em] text-[#8c7d6b] mb-3">One-Image Movie™ Preview</p>
+                    <div class="animate-pulse">
+                      <div class="h-5 bg-[#d8d0c4] rounded w-3/4 mb-3"></div>
+                      <div class="h-4 bg-[#d8d0c4] rounded w-full mb-2"></div>
+                      <div class="h-4 bg-[#d8d0c4] rounded w-5/6 mb-2"></div>
+                      <div class="h-4 bg-[#d8d0c4] rounded w-4/6"></div>
+                    </div>
+                  </div>
+                  <StorySlider client:only="react" stories={cowboyColorData} galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" />
+                </div>
+              )}
             </article>
           ))}
         </section>
@@ -172,6 +197,7 @@ const structuredData = getStructuredData({
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
+            client:load
             heading="Collection Samples"
             images={featheredImagesSidebar}
           />
@@ -179,11 +205,22 @@ const structuredData = getStructuredData({
       </div>
     </section>
 
+    <section class="pb-10">
+      <input type="checkbox" id="faq-toggle" class="more-toggle" />
+      <div class="truncate-container" style="min-height:0;">
+        <div class="truncate-text">
+          <FAQAccordion items={facingFAQ} />
+        </div>
+      </div>
+      <label for="faq-toggle" class="more-toggle-label"></label>
+    </section>
+
     <SiteFooter class="pt-8 pb-12" />
   </main>
 
   <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
+      // Reveal-on-scroll logic
       const els = document.querySelectorAll(".reveal-on-scroll, .slide-in-left");
       if ("IntersectionObserver" in window) {
         const observer = new IntersectionObserver(entries => {
@@ -198,26 +235,40 @@ const structuredData = getStructuredData({
         });
         els.forEach(el => observer.observe(el));
       }
+
+      // NEW: auto-expand FAQ box if a question is clicked
+      const faqToggle = document.getElementById("faq-toggle");
+      const truncateContainer = document.querySelector(".truncate-container");
+
+      if (truncateContainer && faqToggle) {
+        truncateContainer.addEventListener("click", (e) => {
+          const summaryClicked = e.target.closest("summary");
+          if (summaryClicked && !faqToggle.checked) {
+            faqToggle.checked = true;
+          }
+        });
+      }
     });
   </script>
 
+
   <style>
-    ul {
-      list-style-type: disc;
-      padding-left: 1.25em;
-    }
 
-    ul li {
-      margin-top: 0.15em;
-      margin-left: 1.5em;
-    }
+  ul {
+  list-style-type: disc;
+  padding-left: 1.25em;
+}
 
-    ul li::marker {
-      margin-top: 0.15em;
-      font-size: 1.2em;
-      color: gray;
-    }
+ul li {
+  margin-top: 0.15em;
+  margin-left: 1.5em;
+}
 
+ul li::marker {
+   margin-top: 0.15em;
+  font-size: 1.2em; /* makes bullet bigger */
+  color: gray;      /* or any tone you want */
+}
     @media (max-width: 768px) {
       .section-heading .page-title {
         font-size: 1.5rem;
@@ -225,10 +276,10 @@ const structuredData = getStructuredData({
       }
 
       .section-heading .page-subtitle {
-        max-width: 42ch;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+          max-width: 42ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
         font-size: 1rem;
         line-height: 1.4;
         letter-spacing: -0.04em;
@@ -312,7 +363,7 @@ const structuredData = getStructuredData({
       font-size: 1.2rem;
       margin-top: -0.5rem;
       margin-bottom: -.025rem;
-      color: #8b5a2b;
+      color: #5a4a3b;
     }
 
     .story-block .tagline {
@@ -337,56 +388,58 @@ const structuredData = getStructuredData({
       margin-bottom: 0.5rem;
       font-size: 1rem;
     }
+.page-subtitle.fade-in {
+  opacity: 0 !important; /* Forces initial hidden state */
+  transform: translateY(-12px);
+  visibility: hidden;
+  transition:
+    opacity 1.1s ease-out,
+    transform 1.1s ease-out,
+    visibility 0s linear 1.1s;
+  transition-delay: 1s;
+}
 
-    .page-subtitle.fade-in {
-      opacity: 0 !important;
-      transform: translateY(-12px);
-      visibility: hidden;
-      transition:
-        opacity 1.1s ease-out,
-        transform 1.1s ease-out,
-        visibility 0s linear 1.1s;
-      transition-delay: 1s;
-    }
+.page-subtitle.fade-in.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0);
+  visibility: visible;
+  transition-delay: 1s;
+}
 
-    .page-subtitle.fade-in.is-visible {
-      opacity: 1 !important;
-      transform: translateY(0);
-      visibility: visible;
-      transition-delay: 1s;
-    }
+.carousel-fade {
+  opacity: 0;
+  transform: translateY(0px);
+  transition:
+    opacity 1.5s ease-out,
+    transform 1.5s ease-out;
+  transition-delay: 0.0s;
+  visibility: hidden;
+}
 
-    .carousel-fade {
-      opacity: 0;
-      transform: translateY(0px);
-      transition:
-        opacity 1.5s ease-out,
-        transform 1.5s ease-out;
-      transition-delay: 0.0s;
-      visibility: hidden;
-    }
+.sample-fade {
+  opacity: 0;
+  transform: translateY(0px);
+  transition:
+    opacity 1.5s ease-out,
+    transform 1.5s ease-out;
+  transition-delay: 0.2s;
+  visibility: hidden;
+    margin-top: -0.75rem; /* <-- this line does the nudge */
+}
 
-    .sample-fade {
-      opacity: 0;
-      transform: translateY(0px);
-      transition:
-        opacity 1.5s ease-out,
-        transform 1.5s ease-out;
-      transition-delay: 0.2s;
-      visibility: hidden;
-      margin-top: -0.75rem;
-    }
+.sample-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
 
-    .sample-fade.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-      visibility: visible;
-    }
 
-    .carousel-fade.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-      visibility: visible;
-    }
+.carousel-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+
   </style>
 </BaseLayout>

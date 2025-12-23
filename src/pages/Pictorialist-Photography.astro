@@ -62,7 +62,7 @@ const featheredImages = getSideImages({
   headingCount: mobileCount,
   galleryDatas,
 });
-const featheredImagesSidebar = featheredImages.slice(0, 5);
+const featheredImagesSidebar = featheredImages.slice(0, 6);
 
 // 🟩 STRUCTURED DATA for this landing (uses all feathered images)
 const structuredData = getStructuredData({
@@ -163,6 +163,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
+            client:load
             heading="Collection Samples"
             images={featheredImagesSidebar}
           />

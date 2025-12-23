@@ -1,12 +1,12 @@
 export default function LandingRightImages({ heading = "", images = [] }) {
   return (
-    <aside className="sidebar-thumbnails">
+    <aside className="sidebar-thumbnails" data-dynamic-sidebar>
       <div className="thumb-heading-wrapper">
         <h3 className="thumb-heading">{heading}</h3>
       </div>
 
-      {images.map(({ href, src, srcS, srcM, srcL, alt, title }) => (
-        <a href={href} key={href}>
+      {images.map(({ href, src, srcS, srcM, srcL, alt, title }, index) => (
+        <a href={href} key={href} data-sidebar-index={index}>
           <img
             src={srcS || srcM || srcL || src}
             alt={alt}
@@ -38,7 +38,7 @@ export default function LandingRightImages({ heading = "", images = [] }) {
           font-weight: 600;
           color: #3e2c1c;
           margin-top: 3rem;
-          margin-bottom: -40px;
+          margin-bottom: -15px;
         }
 
         .thumb-img {
@@ -76,6 +76,52 @@ export default function LandingRightImages({ heading = "", images = [] }) {
    }
         }
       `}</style>
+
+      {/* Vanilla JS for dynamic spacing - runs without React hydration */}
+      <script dangerouslySetInnerHTML={{ __html: `
+        (function() {
+          function calcSidebarSpacing() {
+            var textCol = document.querySelector('.text-column');
+            var sidebar = document.querySelector('[data-dynamic-sidebar]');
+            if (!textCol || !sidebar) return;
+            
+            var links = sidebar.querySelectorAll('a[data-sidebar-index]');
+            if (links.length <= 1) return;
+            
+            var imgs = sidebar.querySelectorAll('.thumb-img');
+            var allLoaded = Array.from(imgs).every(function(img) { return img.complete; });
+            if (!allLoaded) {
+              setTimeout(calcSidebarSpacing, 100);
+              return;
+            }
+            
+            var textHeight = textCol.offsetHeight;
+            var totalImgHeight = Array.from(imgs).reduce(function(sum, img) { return sum + img.offsetHeight; }, 0);
+            var headingArea = 80;
+            var firstGap = 36;
+            var bottomBuffer = 750;
+            var available = textHeight - headingArea - firstGap - totalImgHeight - bottomBuffer;
+            var numGaps = links.length - 1;
+            
+            if (available > 0 && numGaps > 0) {
+              var gap = Math.max(available / numGaps, 36);
+              links.forEach(function(link, i) {
+                if (i > 0) {
+                  link.style.display = 'block';
+                  link.style.marginTop = gap + 'px';
+                }
+              });
+            }
+          }
+          
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() { setTimeout(calcSidebarSpacing, 150); });
+          } else {
+            setTimeout(calcSidebarSpacing, 150);
+          }
+          window.addEventListener('resize', calcSidebarSpacing);
+        })();
+      `}} />
     </aside>
   );
 }

@@ -1813,9 +1813,9 @@ export const galleryData = [
     "alt": "Woman aiming a rifle from a shadowed interior window at dawn, painterly Western fine art portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/NVc5cNFSDXmwWcLZdbGPVDwdfBq2NXWzxbLNWR9LG/XL/_WHO1699-1184-1190-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/NVc5cNFSDXmwWcLZdbGPVDwdfBq2NXWzxbLNWR9LG/XL/_WHO1699-1184-1190-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/MnQhqfD46J3MC4VDcHg842vwqmkdsm5DqdvmzkTV6/M/_WHO1699-1184-1190-M.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/MnnW8ZMzbXgCbwL8BgjP2psZGRFQ4RRpswXRX8RpV/Ti/_WHO1699-1184-1190-Ti.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/MnnW8ZMzbXgCbwL8BgjP2psZGRFQ4RRpswXRX8RpV/Ti/_WHO1699-1184-1190-Ti.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/NKSC5wHZNsCw9zqDFCxwbc9m5KJNJSg5n8qqfpm9P/L/_WHO1699-1184-1190-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/MnQhqfD46J3MC4VDcHg842vwqmkdsm5DqdvmzkTV6/M/_WHO1699-1184-1190-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/LSgDJxtdPPSdfp2WMBDKBJ6cFpXhwMMZzmMMfmRP2/S/_WHO1699-1184-1190-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/A",
     "keywords": [
