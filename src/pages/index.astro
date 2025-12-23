@@ -80,7 +80,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
 
   <main class="bg-white text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
-      <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />
+      <LandingHeader client:only="react" breadcrumb={landingWestern.breadcrumb} />
     </div>
 
     <div class="mobile-breadcrumb-wrapper">
