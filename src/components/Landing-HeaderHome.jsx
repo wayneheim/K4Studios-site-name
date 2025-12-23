@@ -293,7 +293,9 @@ export default function LandingHeader({ breadcrumb }) {
           justify-content: center;
           z-index: 1;
           opacity: 0;
-          transition: transform 0.75s cubic-bezier(0.44, 0, 0.53, 1), opacity 0.56s cubic-bezier(0.44, 0, 0.53, 1);
+          transition: transform 0.75s cubic-bezier(0.44, 0, 0.53, 1), opacity 0.56s cubic-bezier(0.44, 0, 0.53, 1), box-shadow 0.3s ease;
+          will-change: transform, opacity, box-shadow;
+          backface-visibility: hidden;
         }
 
         .logo-slot.logo-in {
@@ -306,7 +308,10 @@ export default function LandingHeader({ breadcrumb }) {
           object-fit: contain;
           filter: grayscale(100%);
           opacity: 0.9;
-          transition: filter 0.3s, opacity 0.3s;
+          transition: filter 0.3s ease, opacity 0.3s ease;
+          will-change: filter, opacity;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
         }
 
         .logo-slot:hover {
