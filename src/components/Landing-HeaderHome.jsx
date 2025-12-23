@@ -24,7 +24,7 @@ function K4Splash({ isMobile }) {
       K4 Studios
       <style jsx>{`
         .k4splash {
-          position: absolute;
+          position: fixed;
           left: 50%;
           top: 50%;
           width: 100%;
@@ -36,12 +36,13 @@ function K4Splash({ isMobile }) {
           letter-spacing: -0.04em;
           color: #5f574bff;
           opacity: 1;
-          z-index: 14;
+          z-index: 9999;
           pointer-events: none;
           transition: opacity 0.8s cubic-bezier(.44, 0, .53, 1);
         }
         .k4splash-out {
           opacity: 0;
+          pointer-events: none;
         }
       `}</style>
     </div>
