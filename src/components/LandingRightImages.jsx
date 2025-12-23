@@ -6,7 +6,7 @@ export default function LandingRightImages({ heading = "", images = [] }) {
       </div>
 
       {images.map(({ href, src, srcS, srcM, srcL, alt, title }, index) => (
-        <a href={href} key={href} data-sidebar-index={index}>
+        <a href={href} key={href} data-sidebar-index={index} style={index > 0 ? { visibility: 'hidden' } : {}}>
           <img
             src={srcS || srcM || srcL || src}
             alt={alt}
@@ -109,8 +109,11 @@ export default function LandingRightImages({ heading = "", images = [] }) {
                 if (i > 0) {
                   link.style.display = 'block';
                   link.style.marginTop = gap + 'px';
+                  link.style.visibility = 'visible';
                 }
               });
+            } else {
+              links.forEach(function(link) { link.style.visibility = 'visible'; });
             }
           }
           

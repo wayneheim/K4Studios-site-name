@@ -8,13 +8,8 @@ import FAQAccordion       from '../components/FAQAccordion.jsx';
 import SiteFooter         from '../components/Footer.astro';
 import MobileStoryImages  from '../components/MobileStoryImages.jsx';
 import StorySlider        from '../components/StorySlider.tsx';
-import { galleryData as cowboyColorDataFull } from '../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
-import { storySliderImageIds } from '../data/storySlider.ts';
-
-// Filter gallery data to only include story slider images (reduce payload)
-const cowboyColorData = cowboyColorDataFull
-  .filter((img: any) => storySliderImageIds.includes(img.id))
-  .map((img: any) => ({ id: img.id, title: img.title, story: img.story }));
+// Pre-built story data (only id, title, story) - avoids shipping full Color.mjs (~115KB) to client
+import { storySliderData as cowboyColorData } from '../data/storySliderData.ts';
 
 import { getStructuredData } from '../components/utils/getStructuredData.ts';
 import { getLandingMeta }    from '../data/landingMeta.ts';
@@ -129,7 +124,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
 
     <section class="section-heading-anim-wrap">
       <div class="section-heading-anim">
-        <h2 class="hero-subtitle-anim" id="hero-subtitle">
+        <h2 class="hero-subtitle-anim" id="hero-subtitle" style="min-height: 1.5em;">
           {landingWestern.subtitle}
         </h2>
         <h1 class="hero-title-anim" id="hero-title">
@@ -139,7 +134,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
     </section>
 
     <!-- Tombstone nav with reserved height to prevent CLS -->
-    <div class="py-5" style="min-height: 280px; contain: layout;">
+    <div class="py-5" style="min-height: 320px; contain: layout style;">
       <TombstoneNav items={landingWestern.tombstones} />
     </div>
 
