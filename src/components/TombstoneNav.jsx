@@ -62,30 +62,19 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
         }
 
         .fade-in-up {
-          opacity: 0;
-          animation-name: fadeSlideUp;
-          animation-duration: 0.9s;
-          animation-timing-function: ease;
-          animation-fill-mode: forwards;
-          animation-delay: 0.6s;
+          opacity: 1;
         }
 
         .fade-in-up.pop-effect {
-          animation-name: fadeSlideUp, pop-highlight;
-          animation-duration: 0.9s, 0.7s;
-          animation-timing-function: ease, ease;
-          animation-fill-mode: forwards, forwards;
-          animation-delay: 0.6s, 1.8s;
+          opacity: 1;
         }
 
         @keyframes fadeSlideUp {
           from {
-            opacity: 0;
-            transform: translateY(-8px);
+            opacity: 1;
           }
           to {
             opacity: 1;
-            transform: translateY(0);
           }
         }
 
@@ -94,10 +83,10 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
             transform: scale(1);
           }
           30% {
-            transform: scale(1.15);
+            transform: scale(1);
           }
           60% {
-            transform: scale(0.95);
+            transform: scale(1);
           }
           100% {
             transform: scale(1);
@@ -124,7 +113,7 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
 
         .tile-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+          grid-template-columns: repeat(3, 1fr);
           gap: 1.25rem;
           max-width: 900px;
           margin: 0 auto;
@@ -208,7 +197,7 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
         }
 
         .tombstone-animate {
-          opacity: 0;
+          opacity: 1;
           animation-name: dropIn;
           animation-duration: 0.8s;
           animation-fill-mode: forwards;
@@ -217,12 +206,10 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
 
         @keyframes dropIn {
           0% {
-            opacity: 0;
-            transform: translateY(8px);
+            opacity: 1;
           }
           100% {
             opacity: 1;
-            transform: translateY(0);
           }
         }
 
