@@ -134,9 +134,21 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
     </section>
 
     <!-- Tombstone nav with reserved height to prevent CLS -->
-    <div class="py-5" style="min-height: 320px; contain: layout style;">
+    <div class="tombstone-wrapper py-5">
       <TombstoneNav items={landingWestern.tombstones} />
     </div>
+
+    <style>
+      .tombstone-wrapper {
+        min-height: 380px;
+        contain: layout style;
+      }
+      @media (max-width: 640px) {
+        .tombstone-wrapper {
+          min-height: 280px;
+        }
+      }
+    </style>
 
     <section class="story-layout">
       <div class="text-column">

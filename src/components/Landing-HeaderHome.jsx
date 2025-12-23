@@ -24,7 +24,7 @@ function K4Splash({ isMobile }) {
       K4 Studios
       <style jsx>{`
         .k4splash {
-          position: absolute;
+          position: fixed;
           left: 50%;
           top: 50%;
           width: 100%;
@@ -39,9 +39,11 @@ function K4Splash({ isMobile }) {
           z-index: 14;
           pointer-events: none;
           transition: opacity 0.8s cubic-bezier(.44, 0, .53, 1);
+          contain: layout style;
         }
         .k4splash-out {
           opacity: 0;
+          visibility: hidden;
         }
       `}</style>
     </div>
