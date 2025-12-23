@@ -40,11 +40,14 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
       <style jsx>{`
         @media (max-width: 640px) {
           .tombstone-nav {
-            transform: scale(0.87);
-            transform-origin: top center;
             padding-top: 0.25rem;
-            margin-bottom: -4.5rem;
-            margin-top: -5pt;
+            padding-bottom: 1rem;
+          }
+          .tombstone-card {
+            max-width: 120px;
+          }
+          .tombstone-title {
+            font-size: 0.75rem;
           }
         }
 
@@ -215,11 +218,11 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
         @keyframes dropIn {
           0% {
             opacity: 0;
-            transform: scale(0.95);
+            transform: translateY(8px);
           }
           100% {
             opacity: 1;
-            transform: scale(1);
+            transform: translateY(0);
           }
         }
 
