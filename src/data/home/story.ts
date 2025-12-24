@@ -97,7 +97,8 @@ export const painterlyStory = [
       "Choose a path:"
     ],
     list: [
-      "Western Fine Art Photography — Cowboy Portraits & Mythic Frontier Stories",
+      "<a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> — Cowboy Portraits & Mythic Frontier Stories",
+      "<a href='/Painterly-Western-Photography'>Painterly Western Photography</a> — Craft, Light & Narrative Discipline",
       "Painterly Landscape Photography — Mountains, Waterfalls, Western Horizons",
       "Facing History — Civil War, WWII, Historical Reenactment Photography",
       "One-Image Movies™ — The signature K4 cinematic storytelling experience",

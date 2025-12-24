@@ -86,7 +86,8 @@ export const painterlyStory = [
     subhead: "Embrace the Past — Live the Story",
     paragraphs: [
       "Painterly Western photography is not about recreating the past. It is about listening to it — and allowing its quiet truths to surface through light, form, and story.",
-      "Each image stands as a single frame from a larger, unfinished narrative — a One-Image Movie™ waiting for you to step inside."
+      "Each image stands as a single frame from a larger, unfinished narrative — a One-Image Movie™ waiting for you to step inside.",
+      "Ready to explore the subjects themselves? <a href='/Western-Fine-Art-Photography'>Discover the Western Fine Art Photography collection</a> — cowboys, frontier characters, and the human landscape of the American West."
     ]
   }
 ];

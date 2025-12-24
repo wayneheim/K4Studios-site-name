@@ -170,6 +170,7 @@ facingHistory: {
 
   landingPhrases: [
     // --- Primary (WritingBrain core; strongest SERP direction) ---
+    { phrase: "Painterly Western photography", rating: 5, use: true },
     { phrase: "Western Cowboy Portraits", rating: 5, use: true },
     { phrase: "Western themed art", rating: 5, use: true },
     { phrase: "Western fine art photography", rating: 5, use: true },
@@ -220,6 +221,7 @@ facingHistory: {
     { phrase: "western cowboy art", rating: 5, use: true },
     { phrase: "cowboy portraits", rating: 5, use: true },
     { phrase: "cowboy art", rating: 5, use: true },
+    { phrase: "cowboys", rating: 5, use: true },
     { phrase: "Western cowboys", rating: 5, use: true },
     { phrase: "cowboy artwork", rating: 5, use: true },
     { phrase: "western fine art", rating: 5, use: true },
@@ -243,9 +245,17 @@ facingHistory: {
     { phrase: "frederic remington", rating: 3, use: false },
     { phrase: "powerful works of art", rating: 3, use: true },
     { phrase: "rustic charm", rating: 3, use: true },
-    { phrase: "western canon", rating: 3, use: true }
+    { phrase: "western canon", rating: 3, use: true },
+
+    // --- Links to Painterly-Western-Photography hub (craft/method page) ---
+    { phrase: "painterly Western photograph", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" },
+    { phrase: "painterly Western images", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" },
+    { phrase: "Pictorialist tradition", rating: 5, use: true, link: "/Painterly-Western-Photography" },
+    { phrase: "narrative Western art", rating: 5, use: true, link: "/Painterly-Western-Photography" },
+    { phrase: "Baltic Birch", rating: 4, use: true, link: "/Other/K4-Select-Series/Engrained" }
   ]
 },
+
 cowboyNativeAmerican: {
   path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
   def: "Painterly portraits honoring Native American heritage—dignity, tradition, and spirit in every image.",

@@ -1,5 +1,22 @@
+import { useState, useEffect } from 'react';
+
 export default function TombstoneNav({ items = [], title, subtitle }) {
   const gridClass = `tile-grid${items.length === 2 ? ' two-tiles' : ''}`;
+
+  // Client-side random thumb selection from thumbs array
+  const [selectedThumbs, setSelectedThumbs] = useState(() => 
+    items.map(item => item.thumbs?.[0] || item.thumb || '')
+  );
+
+  useEffect(() => {
+    // On mount, pick random thumbs from the thumbs array if available
+    setSelectedThumbs(items.map(item => {
+      if (item.thumbs && item.thumbs.length > 0) {
+        return item.thumbs[Math.floor(Math.random() * item.thumbs.length)];
+      }
+      return item.thumb || '';
+    }));
+  }, [items]);
 
   return (
     <section className="tombstone-nav">
@@ -16,7 +33,7 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
               style={{ animationDelay: `${1.05 + index * 0.1}s` }}
             >
               <img
-                src={item.thumb}
+                src={selectedThumbs[index]}
                 alt={item.title}
                 loading="lazy"
                 className="tombstone-img"

@@ -1,99 +1,82 @@
 export const facingFAQ = [
-  // Painterly Fine Art Photography FAQ
   {
-    q: "What is painterly fine art photography?",
+    q: "What is Western fine art photography?",
     a: [
-      "Painterly fine art photography is a distinctive blend of photographic realism and artistic techniques drawn from the world of painting. Wayne Heim’s work channels the tradition of the Pictorialist movement, using soft focus, dramatic lighting, and textured layers to create images that feel timeless, immersive, and evocative.",
-      `Curious how this differs from other styles? <a href="/Galleries/Painterly-Fine-Art-Photography">Read Wayne’s full guide to painterly photography</a>.`
+      "Western fine art photography explores the human experience of the American West — not as icon or cliché, but as lived reality. It emphasizes character, presence, and story rather than spectacle.",
+      "Wayne Heim’s Western fine art photography focuses on individuals shaped by land, labor, weather, and time, creating portraits and narrative scenes grounded in authenticity rather than mythology."
     ],
   },
 
   {
-    q: "How does painterly photography differ from AI-generated art or digital illustration?",
+    q: "How does Western fine art photography differ from traditional Western photography?",
     a: [
-      "Unlike AI or digital composites, painterly photography relies on real-world composition, lighting, and post-production rooted in traditional fine art techniques. Every image is carefully crafted—from concept and capture to editing and print. There’s no AI trickery, only genuine artistry and lived experience behind the lens.",
-      `For a behind-the-scenes look at Wayne’s process, see <a href="/Galleries/Painterly-Fine-Art-Photography">What Is Painterly Photography?</a>`
+      "Traditional Western photography often centers on iconic imagery, dramatic landscapes, or romanticized frontier myth. Western fine art photography moves beyond surface imagery.",
+      "Rather than reinforcing legend, this work examines the lived human experience of the West — quietly, deliberately, and with emotional restraint."
     ],
   },
 
   {
-    q: "What subjects are featured in the Painterly Fine Art Photography collection?",
+    q: "What subjects are explored in this Western fine art photography collection?",
     a: [
-      "The collection spans a range of Americana and story-driven themes, including:",
-      `<ul>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Historical reenactment portraits</a> (Civil War, WWII, Roaring 20s)</li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western cowboy and frontier art</a></li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">Painterly landscapes</a> from the American West, Mountain West, High Desert, and Great Plains</li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">Transportation and Americana</a> (trains, vintage cars, boats)</li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Miscellaneous">Miscellaneous and experimental works</a></li>
-      </ul>`,
-      "Each series invites viewers to step into another era and experience the story behind the image."
+      "This body of work centers on character-driven portraiture and narrative imagery from the American West, including:",
+      "<ul><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'>Western Cowboy Portraits in Color</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White'>Western Portraits in Black & White</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color'>Indigenous Portraits of the West</a></li></ul>",
+      "Each series presents individuals as people rather than archetypes, inviting viewers to encounter the stories written in posture, expression, and silence."
     ],
   },
 
   {
     q: "What are One-Image Movies™?",
     a: [
-      "A One-Image Movie™ is Wayne Heim’s signature artistic approach—a single photographic frame crafted with the emotional weight and narrative depth of an entire film. These aren’t static images; they’re cinematic moments suspended in time, inviting viewers to imagine what happened before… and what is about to happen next.",
-      "Through painterly lighting, expressive character cues, and intentional composition, each One-Image Movie™ becomes a complete visual narrative, blending fine art, storytelling, and historical atmosphere into one immersive frame.",
-      `You can see One-Image Movie™ examples throughout the site—especially in <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> and <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Portraits</a>.`
+      "A One-Image Movie™ is Wayne Heim’s term for a single photographic frame designed to carry the emotional weight of a larger cinematic narrative.",
+      "Each image functions like a still from an unseen film — rich with implication, atmosphere, and unresolved tension — allowing the viewer to complete the story through imagination."
     ],
   },
 
   {
-    q: "Are prints available, and what makes the Engrained Series special?",
+    q: "Why focus on people rather than landscapes?",
     a: [
-      "Yes — every painterly image is available as an archival fine art print on paper, metal, or as part of the signature <a href='/Other/K4-Select-Series/Engrained'>Engrained Series</a> on wood.",
-      "The Engrained Series uses a unique UV printing process, allowing the natural Baltic Birch grain to show through selected areas, creating museum-quality fine art wood prints that feel warm, tactile, and one-of-a-kind."
+      "The American West has been photographed endlessly as terrain. This work shifts focus to the people who inhabit it — those shaped by the land and shaped by history in return.",
+      "Landscape appears as emotional context rather than spectacle, supporting character and story rather than dominating them."
     ],
   },
 
   {
-    q: "What makes Wayne Heim’s painterly style unique?",
+    q: "How are Indigenous subjects approached in this work?",
     a: [
-      "Wayne is an award-winning fine art photographer and medical illustrator. His painterly approach combines traditional craftsmanship, historical research, and a narrative mindset shaped by illustration and cinema. The result is art that feels lived-in, timeless, and emotionally resonant—each image a story, not just a scene.",
-      "If you’re seeking <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits'>Western art</a>, <a href='/Galleries/Painterly-Fine-Art-Photography/Landscapes'>landscape fine art</a>, or <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History'>historical themed photography</a>, the painterly gallery is a curated journey through Americana and narrative fine art."
+      "The story of the American West cannot be told through a single perspective. Wayne Heim’s Indigenous portraits seek to honor Native presence as living, contemporary reality — not historical abstraction.",
+      "These images are created with intention and respect, shaped by collaboration and awareness rather than extraction."
     ],
   },
 
   {
-    q: "Where can I see painterly fine art prints on display?",
+    q: "Are Western fine art prints available for purchase?",
     a: [
-      "Wayne’s works are collected by private collectors, displayed in historic homes, libraries, museums, boutique hotels, and curated gallery exhibitions.",
-      "Many interior designers and hospitality spaces also integrate Wayne’s painterly work into themed environments."
+      "Yes. Western fine art photographs are available as archival fine art prints on paper, as well as select works in the Engrained Series — printed directly onto Baltic Birch.",
+      "In the Engrained Series, the natural wood grain becomes part of the image, adding material depth that complements the narrative weight of the work."
     ],
   },
 
   {
-    q: "Can I commission a custom painterly portrait or themed image?",
+    q: "How are these Western fine art photographs created?",
     a: [
-      "Yes! Wayne collaborates with collectors, families, historical groups, and organizations to create custom painterly portraits or narrative scenes.",
-      "If you have a story you want brought to life, <a href='/Contact'>contact Wayne here</a> to start the conversation."
+      "The visual language of this work is shaped by a painterly approach rooted in the Pictorialist tradition. Light is sculpted. Tone is controlled. Every decision serves story and emotional clarity.",
+      "To learn more about the craft and methodology behind the images, <a href='/Painterly-Western-Photography'>explore the painterly philosophy here</a>."
     ],
   },
 
   {
-    q: "Why choose painterly photography over mass-produced wall art?",
+    q: "Who collects Western fine art photography?",
     a: [
-      "Painterly fine art photography offers emotional depth, artistic intention, and a tangible sense of time. Each image is crafted from real photography—not AI, filters, or mass-production techniques—resulting in authentic, conversation-starting art.",
-      "A painterly piece by Wayne Heim is more than décor—it’s a story, a feeling, and an heirloom."
+      "This work resonates with collectors who value narrative depth over decoration — individuals drawn to images that reward long viewing and emotional engagement.",
+      "It appeals to those seeking Western art rooted in character, restraint, and authenticity rather than surface nostalgia."
     ],
   },
 
   {
-    q: "What are the best spaces to display painterly fine art photography?",
+    q: "Can Western fine art photography be commissioned?",
     a: [
-      "These works shine in homes, creative offices, libraries, heritage hotels, museums, rustic lodges, and anywhere that benefits from immersive, narrative art.",
-      "Collectors often feature painterly prints in living rooms, studies, reading spaces, and curated commercial interiors."
+      "Yes. Wayne Heim works selectively with collectors, institutions, and organizations on commissioned Western portraits and narrative scenes.",
+      "Each commission is approached with research, intention, and storytelling discipline. <a href='/Contact'>Contact Wayne here</a> to begin the conversation."
     ],
-  },
-
-  {
-    q: "What are 'Collector Notes' and how do I use them?",
-    a: [
-      `Collector Notes offer deeper insight into select images—revealing creative decisions, historical context, artistic influences, and narrative intention behind the work.`,
-      `To view a Collector Note, click the <strong>notepad</strong> icon in the image viewer (desktop: upper right; mobile: toolbar). You'll gain art-history inspired context and collector-oriented details that enhance appreciation of the piece.`,
-      `New Collector Notes are added regularly as more of the gallery is updated.`
-    ]
   },
 ];

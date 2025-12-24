@@ -1,52 +1,47 @@
 export const landingWestern = {
-  // Painterly Photography
-  title: "Painterly Fine Art Photography",
-  subtitle: "Step Inside the Story — Where Every Photograph Becomes a Window into Worlds Beyond the Lens",
+  // Western Fine Art Photography - SUBJECT FOCUS
+  title: "Western Fine Art Photography",
+  subtitle: "Story, Character, and the Human Experience of the American West",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
-  keywords: [
-    "Painterly Fine Art Photography",
-    "painterly photography",
-    "One-Image Movie",
-    "painterly storytelling",
-    "Wayne Heim photographer",
-    "Western cowboy portraits",
-    "historical reenactment photography",
-    "Facing History",
-    "fine art prints",
-    "painterly compositions"
-  ],
+keywords: [
+  "Western Fine Art Photography",
+  "Western fine art portraits",
+  "Western art photography",
+  "cowboy fine art photography",
+  "Western portrait photography",
+  "American West photography",
+  "narrative Western photography",
+  "cowboy portraits",
+  "Western character studies",
+  "frontier fine art",
+  "frontier portraits",
+  "One-Image Movie",
+  "Wayne Heim"
+],
 
   breadcrumb:
-    `<a href="/" title="Home" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wayne Heim</a> | Painterly Photography`,
+    `<a href="/" title="Home" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wayne Heim</a> | Western Fine Art Photography`,
 
+  // Tombstones - subject-focused, linking to cowboy galleries + Engrained
   tombstones: [
     {
-      title: "Painterly Landscape Photography",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes",
-      thumb:
-        "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/MdwvnZ7LTST6BHvQG527fBMhQ4pmKsgpxCjZ9DfKc/S/_WHZ7317-Edit-Edit-Edit-S.jpg",
+      title: "Western Portraits in Color",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+      thumb: "", // Dynamically populated at page level
     },
     {
-      title: "Facing History - Vintage Inspired",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
-      thumb:
-        "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8BbMZjs/1/NTmDm8wc225FN8hF3SMLqtnvRp6DwsSSc38VzTGTB/S/Western%20Cowboy%20Portrait%20Photography%20_DSF6899-Edit-Edit-Edit-S.jpg",
+      title: "Western Portraits in Black & White",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+      thumb: "", // Dynamically populated at page level
     },
     {
-      title: "Transportation Themed Photography",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Transportation",
-      thumb:
-        "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-sxshHx9/0/LsTjhhFr9MjQ9xgg8PBcMxPJRj4zvFFT5PNqJjL2J/S/_O1H0413-Edit-Edit-S.jpg",
+      title: "Indigenous Portraits of the West",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
+      thumb: "", // Dynamically populated at page level
     },
     {
-      title: "Miscellaneous Themed Photography",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous",
-      thumb:
-        "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/KbqZBRtD4L5mMZdK6BMNvdktVP8VzNNVwxVNSBN3m/S/_WHZ0315-Edit-2-Editf-S.jpg",
-    },
-    {
-      title: "Engrained Series",
+      title: "Fine Art on Wood",
       href: "/Other/K4-Select-Series/Engrained",
       thumb: "/images/tombstones/engrained-ts.jpg",
     },

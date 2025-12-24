@@ -26,24 +26,24 @@ import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
-// ✅ HUB-SCOPED DATA SOURCES (your duped folder)
+// ✅ HUB-SCOPED DATA SOURCES
 import { landingWestern }
-  from '@/data/Painterly-Western-Photography/landingstones.ts';
+  from '@/data/Western-Fine-Art-Photography/landingstones.ts';
 import { painterlyStory as westernStory }
-  from '@/data/Painterly-Western-Photography/story.ts';
+  from '@/data/Western-Fine-Art-Photography/story.ts';
 import { facingFAQ }
-  from '@/data/Painterly-Western-Photography/faq.ts';
+  from '@/data/Western-Fine-Art-Photography/faq.ts';
 
 import '@/styles/global.css';
 // If your hub page relied on this for header styling, keep it:
 import '@/styles/oneupheader.css';
 
 // ----------------------
-// PATHS (THIS IS THE FIX)
+// PATHS
 // ----------------------
 
-// ✅ The actual page URL (NOT in siteNav)
-const pagePath = "/Painterly-Western-Photography";
+// ✅ The actual page URL
+const pagePath = "/Western-Fine-Art-Photography";
 
 // ✅ A REAL siteNav node to power feathering + gallery pool + autolinking
 // (This is why Cowboy page works — we emulate that here)
@@ -107,15 +107,15 @@ const structuredData = getStructuredData({
     url: `https://k4studios.com${pagePath}`,
     keywords: landingWestern.keywords || [],
     copyrightNotice: "© Wayne Heim",
-    // Enhanced "about" topics specific to Painterly methodology
+    // Enhanced "about" topics specific to Western subject matter
     about: [
-      { "@type": "Thing", name: "Painterly Photography" },
-      { "@type": "Thing", name: "One-Image Movie" },
-      { "@type": "Thing", name: "Pictorialist Photography" },
-      { "@type": "Thing", name: "Fine Art Western Photography" },
-      { "@type": "Thing", name: "Narrative Photography" },
+      { "@type": "Thing", name: "Western Fine Art Photography" },
+      { "@type": "Thing", name: "Cowboy Portraiture" },
+      { "@type": "Thing", name: "American West" },
+      { "@type": "Thing", name: "Indigenous Portraits" },
+      { "@type": "Thing", name: "Historical Western Photography" },
     ],
-    genre: "Painterly Fine Art Photography",
+    genre: "Western Fine Art Photography",
   },
   images: featheredImages,
   defaults: {
@@ -133,7 +133,7 @@ const structuredData = getStructuredData({
 // ----------------------
 const breadcrumbData = getBreadcrumbList([
   { name: "Home", item: "https://k4studios.com/" },
-  { name: "Painterly Western Photography", item: `https://k4studios.com${pagePath}` },
+  { name: "Western Fine Art Photography", item: `https://k4studios.com${pagePath}` },
 ]);
 
 // ----------------------
@@ -157,7 +157,7 @@ const faqStructuredData = JSON.stringify({
 }, null, 2);
 
 // ----------------------
-// WEBPAGE SCHEMA (method/discipline authority - Painterly focus)
+// WEBPAGE SCHEMA (subject authority - Western focus)
 // ----------------------
 const webPageSchema = JSON.stringify({
   "@context": "https://schema.org",
@@ -174,12 +174,12 @@ const webPageSchema = JSON.stringify({
     url: "https://k4studios.com/"
   },
   about: [
-    { "@type": "Thing", name: "Painterly Photography" },
-    { "@type": "Thing", name: "Pictorialism" },
-    { "@type": "Thing", name: "One-Image Movie" },
+    { "@type": "Thing", name: "Western Fine Art Photography" },
+    { "@type": "Thing", name: "Cowboy Portraiture" },
+    { "@type": "Thing", name: "Indigenous Portraits" },
+    { "@type": "Thing", name: "American West" },
+    { "@type": "Thing", name: "Historical Western Photography" },
     { "@type": "Thing", name: "Narrative Photography" },
-    { "@type": "Thing", name: "Fine Art Western Photography" },
-    { "@type": "Thing", name: "Photographic Craft" },
   ],
   author: { "@id": "https://k4studios.com/#person" },
   creator: { "@id": "https://k4studios.com/#person" },
@@ -244,7 +244,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
 >
   <!-- FAQ Structured Data for rich snippets -->
   <script type="application/ld+json" set:html={faqStructuredData} slot="head"></script>
-  <!-- WebPage Schema for method/discipline authority -->
+  <!-- WebPage Schema (subject authority) -->
   <script type="application/ld+json" set:html={webPageSchema} slot="head"></script>
   
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
@@ -300,18 +300,16 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
                 </ul>
               )}
 
-              {/* Insert StorySlider where you want it */}
+              {/* Insert StorySlider (secondary variant - reduced visual weight) */}
               {index === 1 && (
-                <div class="story-slider-wrapper reveal-on-scroll mt-8">
-                  <div class="story-slider-skeleton relative bg-[#ebe5dc] rounded-lg shadow-md px-6 py-5 max-w-2xl mx-auto border-2 border-[#d8d0c4] mb-12 h-[280px] overflow-hidden">
-                    <div class="absolute top-2.5 left-2.5 w-3.5 h-3.5 border-l-2 border-t-2 border-[#c8bfb0]"></div>
-                    <div class="absolute bottom-2.5 right-2.5 w-3.5 h-3.5 border-r-2 border-b-2 border-[#c8bfb0]"></div>
-                    <p class="text-[11px] uppercase tracking-[0.12em] text-[#8c7d6b] mb-3">One-Image Movie™ Preview</p>
+                <div class="story-slider-wrapper reveal-on-scroll mt-6">
+                  <div class="story-slider-skeleton relative bg-[#f4f1ec] rounded-lg shadow-sm px-5 py-4 max-w-xl mx-auto border border-[#e0d9cf] mb-8 h-[240px] overflow-hidden opacity-90">
+                    <p class="text-[10px] uppercase tracking-[0.12em] text-[#a09080] mb-3">How Story Lives in These Images</p>
                     <div class="animate-pulse">
-                      <div class="h-5 bg-[#d8d0c4] rounded w-3/4 mb-3"></div>
-                      <div class="h-4 bg-[#d8d0c4] rounded w-full mb-2"></div>
-                      <div class="h-4 bg-[#d8d0c4] rounded w-5/6 mb-2"></div>
-                      <div class="h-4 bg-[#d8d0c4] rounded w-4/6"></div>
+                      <div class="h-4 bg-[#e0d9cf] rounded w-3/4 mb-3"></div>
+                      <div class="h-3.5 bg-[#e0d9cf] rounded w-full mb-2"></div>
+                      <div class="h-3.5 bg-[#e0d9cf] rounded w-5/6 mb-2"></div>
+                      <div class="h-3.5 bg-[#e0d9cf] rounded w-4/6"></div>
                     </div>
                   </div>
 
@@ -319,6 +317,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
                     client:only="react"
                     stories={cowboyColorData}
                     galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+                    variant="secondary"
                   />
                 </div>
               )}

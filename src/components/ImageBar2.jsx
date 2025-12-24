@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
 
-// Glob import: grabs all carousel slide data files from both Galleries and Other
+// Glob import: grabs all carousel slide data files from Galleries, Other, and top-level landing pages
 // rename to cap
 const allCarousels = import.meta.glob([
   "../data/Galleries/**/carousel.ts",
-  "../data/Other/**/carousel.ts"
+  "../data/Other/**/carousel.ts",
+  "../data/Painterly-Western-Photography/carousel.ts"
 ], { eager: true });
 
 export default function ImageBar2({ slides }) {
@@ -19,12 +20,15 @@ export default function ImageBar2({ slides }) {
     if (!slides || slides.length === 0) {
       const currentPath = window.location.pathname;
 
-      const matchKey = Object.keys(allCarousels).find((key) =>
-        key
+      const matchKey = Object.keys(allCarousels).find((key) => {
+        // Convert file path to URL path
+        const urlPath = key
           .replace("../data/Galleries", "/Galleries")
           .replace("../data/Other", "/Other")
-          .replace("/carousel.ts", "") === currentPath
-      );
+          .replace("../data/", "/")  // Handle top-level landing pages like Painterly-Western-Photography
+          .replace("/carousel.ts", "");
+        return urlPath === currentPath;
+      });
 
       if (matchKey) {
         const mod = allCarousels[matchKey];

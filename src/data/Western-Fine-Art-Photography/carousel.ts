@@ -1,4 +1,4 @@
-// --- Carousel: Images from Painterly Section Only ---
+// --- Carousel: Images from Western-Focused Galleries ---
 // Import all gallery .mjs files from the painterly section
 const allModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 
@@ -38,8 +38,19 @@ function toSlide(img, path, idx, loading = "lazy") {
   };
 }
 
-// Categorize modules by painterly section only
-const painterlyPools = [];
+// Helper: Check if a file path matches Western-focused galleries
+function isWesternGallery(filePath) {
+  // Cowboy portraits (all three galleries)
+  if (filePath.includes('/Western-Cowboy-Portraits/')) return true;
+  // Landscapes by Location - West
+  if (filePath.includes('/Landscapes/By-Location/West/')) return true;
+  // Landscapes by Subject - Mountains
+  if (filePath.includes('/Landscapes/By-Subject/Mountains/')) return true;
+  return false;
+}
+
+// Categorize modules by Western-focused galleries only
+const westernPools = [];
 for (const filePath in allModules) {
   const mod = allModules[filePath];
   const data = getGalleryData(mod);
@@ -47,9 +58,9 @@ for (const filePath in allModules) {
   // Filter out ghost and placeholder images
   const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
   if (visible.length === 0) continue;
-  // Include only painterly section
-  if (filePath.includes('/Painterly-Fine-Art-Photography/')) {
-    painterlyPools.push({ images: buildRankedPool(visible), path: filePathToHref(filePath) });
+  // Include only Western-focused galleries
+  if (isWesternGallery(filePath)) {
+    westernPools.push({ images: buildRankedPool(visible), path: filePathToHref(filePath) });
   }
 }
 
@@ -80,9 +91,9 @@ function pickRandomFromPools(pools, n) {
   return picks;
 }
 
-// Pick 8 images from painterly section
-const painterlyPicks = pickRandomFromPools(painterlyPools, 8);
-const slidesArr = painterlyPicks.map((pick, idx) => toSlide(pick.img, pick.path, idx));
+// Pick 8 images from Western-focused galleries
+const westernPicks = pickRandomFromPools(westernPools, 8);
+const slidesArr = westernPicks.map((pick, idx) => toSlide(pick.img, pick.path, idx));
 
 // Set loading: 'eager' for the first image, 'lazy' for the rest
 const slides = slidesArr.map((slide, idx) => ({
