@@ -33,7 +33,7 @@ function pickRandom(arr, n) {
 }
 
 // Select carousel slides from pools with variety
-// Strategy: 1 cowboy (hero) + 4 images from 4 different random pools
+// Strategy: 1 cowboy (hero) + 4 images from 4 different random pools + 1 cowboy (not adjacent)
 function selectSlides(pools, heroWebpSrcs) {
   const slides = [];
   const usedIds = new Set();
@@ -45,28 +45,33 @@ function selectSlides(pools, heroWebpSrcs) {
     if (stored) recentlyUsed = JSON.parse(stored);
   } catch (e) { /* ignore */ }
   
-  // 1. Pick hero from cowboy pool (always first)
-  if (pools.westernCowboy?.length > 0) {
-    // Prefer cowboys not recently used
-    const available = pools.westernCowboy.filter(img => !recentlyUsed.includes(img.id));
-    const cowboyPool = available.length > 0 ? available : pools.westernCowboy;
-    const cowboy = pickRandom(cowboyPool, 1)[0];
-    
-    // Use pre-optimized .webp if available
-    const heroSrc = heroWebpSrcs[cowboy.id] || cowboy.srcS || cowboy.src;
+  // Helper to pick from a pool
+  const pickFromPool = (pool) => {
+    if (!pool?.length) return null;
+    let available = pool.filter(img => !usedIds.has(img.id) && !recentlyUsed.includes(img.id));
+    if (available.length === 0) available = pool.filter(img => !usedIds.has(img.id));
+    if (available.length === 0) return null;
+    const pick = pickRandom(available, 1)[0];
+    usedIds.add(pick.id);
+    return pick;
+  };
+  
+  // 1. Pick FIRST cowboy (hero position)
+  const cowboy1 = pickFromPool(pools.westernCowboy);
+  if (cowboy1) {
+    const heroSrc = heroWebpSrcs[cowboy1.id] || cowboy1.srcS || cowboy1.src;
     slides.push({
-      ...cowboy,
+      ...cowboy1,
       src: heroSrc,
-      srcS: heroWebpSrcs[cowboy.id] || cowboy.srcS,
+      srcS: heroWebpSrcs[cowboy1.id] || cowboy1.srcS,
       fetchpriority: 'high',
       loading: undefined,
       className: 'k4-home-carousel-img k4-home-carousel-img--1 loaded'
     });
-    usedIds.add(cowboy.id);
   }
   
   // 2. Pick 4 random pools from the available categories (excluding westernCowboy)
-  const allPoolNames = [
+  const allPoolNames = shuffle([
     'painterlyLandscapes',
     'traditionalLandscapes', 
     'civilWar',
@@ -75,37 +80,37 @@ function selectSlides(pools, heroWebpSrcs) {
     'painterlyTransportation',
     'roaring20s',
     'traditionalOther'
-  ];
+  ]).slice(0, 4);
   
-  // Shuffle and pick first 4 pools
-  const selectedPoolNames = shuffle(allPoolNames).slice(0, 4);
-  
-  // 3. Pick 1 image from each of the 4 selected pools
-  for (const poolName of selectedPoolNames) {
-    const pool = pools[poolName];
-    if (!pool?.length) continue;
-    
-    // Prefer images not recently used
-    let available = pool.filter(img => !usedIds.has(img.id) && !recentlyUsed.includes(img.id));
-    if (available.length === 0) {
-      available = pool.filter(img => !usedIds.has(img.id));
+  // 3. Pick 1 image from each of the 4 selected pools, inserting cowboy2 at position 4
+  for (let i = 0; i < allPoolNames.length; i++) {
+    // Insert second cowboy at position 4 (index 3, after 3 other images)
+    if (slides.length === 3) {
+      const cowboy2 = pickFromPool(pools.westernCowboy);
+      if (cowboy2) {
+        slides.push({
+          ...cowboy2,
+          fetchpriority: undefined,
+          loading: 'lazy',
+          className: `k4-home-carousel-img k4-home-carousel-img--${slides.length + 1}`
+        });
+      }
     }
     
-    if (available.length > 0) {
-      const pick = pickRandom(available, 1)[0];
+    const pick = pickFromPool(pools[allPoolNames[i]]);
+    if (pick) {
       slides.push({
         ...pick,
         fetchpriority: undefined,
         loading: 'lazy',
         className: `k4-home-carousel-img k4-home-carousel-img--${slides.length + 1}`
       });
-      usedIds.add(pick.id);
     }
   }
   
   // Save used IDs to session storage for next page load variety
   try {
-    const newRecent = slides.map(s => s.id).slice(0, 10); // Keep last 10
+    const newRecent = slides.map(s => s.id).slice(0, 12);
     sessionStorage.setItem('carouselRecentIds', JSON.stringify(newRecent));
   } catch (e) { /* ignore */ }
   
