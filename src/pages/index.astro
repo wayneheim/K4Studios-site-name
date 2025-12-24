@@ -87,9 +87,10 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       </div>
     </div>
 
-    <div class="w-full max-w-[1200px] mt-8 mx-auto px-4" style="position:relative;">
-      {/* --- LCP Placeholder Overlay (z-10) --- */}
-      <picture>
+    {/* CLS-safe carousel frame - reserves exact height */}
+    <div class="carousel-frame">
+      {/* LCP Placeholder Overlay */}
+      <picture class="carousel-overlay">
         <source media="(max-width: 768px)" srcset="/images/mobile.webp">
         <img
           src="/images/desktop3.webp"
@@ -99,15 +100,12 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
           loading="eager"
           decoding="sync"
           id="lcp-placeholder-img"
-          style="image-rendering: pixelated;"
         />
       </picture>
 
-      {/* --- Carousel/Animated Hero (revealed after overlay fades ) --- */}
-      <div style="position:relative;z-index:1;">
-        <div class="carousel-fade">
-          <HomeCarousel client:only="react" />
-        </div>
+      {/* Carousel */}
+      <div class="carousel-fade">
+        <HomeCarousel client:only="react" />
       </div>
     </div>
 
@@ -204,7 +202,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
 
       // --- LCP Placeholder fade out logic and carousel trigger ---
       const isMobile = window.innerWidth <= 768;
-      const fadeDelay = isMobile ?  1400 : 1400; // Quicker on mobile
+      const fadeDelay = 2800; // Synced with carousel zoom
       setTimeout(() => {
         const lcp = document.getElementById("lcp-placeholder-img");
         if (lcp) {
@@ -226,34 +224,51 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
   </script>
 
 <style lang="css">
-.lcp-placeholder-img {
+/* CLS-safe carousel frame */
+.carousel-frame {
+  position: relative;
   width: 100%;
-  height: auto;
-  max-height: 420px;
-  object-fit: cover;
+  max-width: 1200px;
+  height: 390px;
+  margin: 2rem auto 0;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .carousel-frame {
+    height: 200px;
+    margin-top: 1rem;
+  }
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 10;
   pointer-events: none;
-  position: absolute;
-  top: 0; left: 0;
+}
+
+.lcp-placeholder-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   opacity: 1;
-  transition: opacity 0.7s;
+  transition: opacity 1.0s ease-out;
 }
-/* Uncomment to hide LCP overlay on desktop
-@media (min-width: 769px) {
-  .lcp-placeholder-img { display: none !important; }
-}
-*/
+
 .carousel-fade {
   opacity: 0;
-  transform: scale(0.65) translateY(0);
-  transition: opacity 1.5s ease-out, transform 1.5s cubic-bezier(.36,1,.72,1);
+  transform: scale(0.65);
+  transition: opacity 1.0s ease-out, transform 2.5s cubic-bezier(.36,1,.72,1);
   visibility: hidden;
 }
 .carousel-fade.is-visible {
   opacity: 1;
-  transform: scale(1) translateY(0);
+  transform: scale(1);
   visibility: visible;
-  transition-delay: 0.05s;
 }
 .sample-fade {
   opacity: 0;
