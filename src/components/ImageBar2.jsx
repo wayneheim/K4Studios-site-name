@@ -6,7 +6,8 @@ import "../styles/ImageBar2.css";
 const allCarousels = import.meta.glob([
   "../data/Galleries/**/carousel.ts",
   "../data/Other/**/carousel.ts",
-  "../data/Painterly-Western-Photography/carousel.ts"
+  "../data/Painterly-Western-Photography/carousel.ts",
+  "../data/Western-Fine-Art-Photography/carousel.ts"
 ], { eager: true });
 
 export default function ImageBar2({ slides }) {
