@@ -1,7 +1,7 @@
 ---
 import BaseLayout         from '../layouts/BaseLayout.astro';
 import LandingHeader      from '../components/Landing-HeaderHome.jsx';
-import ImageBar2          from '../components/ImageBar2Home.jsx';
+import HomeCarousel       from '../components/HomeCarousel.jsx';
 import TombstoneNav       from '../components/TombstoneNav.jsx';
 import LandingRightImages from '../components/LandingRightImages.jsx';
 import FAQAccordion       from '../components/FAQAccordion.jsx';
@@ -19,8 +19,6 @@ import { semantic as k4Semantic } from '../data/semantic/K4-Sem.ts';
 import { landingWestern }    from '../data/home/landingstones.ts';
 import { painterlyStory }    from '../data/home/story.ts';
 import { facingFAQ }         from '../data/home/faq.ts';
-
-import { slides as homeSlides } from '../data/home/carousel.ts';
 
 import '../styles/global.css';
 
@@ -108,7 +106,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       {/* --- Carousel/Animated Hero (revealed after overlay fades ) --- */}
       <div style="position:relative;z-index:1;">
         <div class="carousel-fade">
-          <ImageBar2 client:only="react" />
+          <HomeCarousel client:only="react" />
         </div>
       </div>
     </div>
