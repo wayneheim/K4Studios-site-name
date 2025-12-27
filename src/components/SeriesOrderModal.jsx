@@ -185,14 +185,14 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
   const [cardCopy, setCardCopy] = useState(null);
   const [infoCopy, setInfoCopy] = useState(null);
   const [seriesRegistry, setSeriesRegistry] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [dataLoaded, setDataLoaded] = useState(false); // Tracks if async data has been fetched
   const [activeInfo, setActiveInfo] = useState(null); // Which series info overlay is open
   const [engrainedLink, setEngrainedLink] = useState(null); // Cross-link to Engrained if exists
 
   // Fetch edition state and pricing when modal opens
   useEffect(() => {
     if (isOpen && image?.id) {
-      setLoading(true);
+      setDataLoaded(false); // Reset on new image/open
       setActiveInfo(null); // Reset info overlay when modal opens
       setEngrainedLink(null); // Reset Engrained link
       Promise.all([
@@ -208,15 +208,19 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
         setInfoCopy(config.infoCopy);
         setSeriesRegistry(registry);
         setEngrainedLink(engrained);
-        setLoading(false);
+        setDataLoaded(true);
       });
     }
   }, [isOpen, image?.id]);
 
   if (!isOpen || !image) return null;
 
-  const effectiveSeries = getEffectiveSeries(image, seriesRegistry);
-  const excludeSizes = getExcludeSizesFromRegistry(image?.id, seriesRegistry);
+  // Derived loading state: we're loading if modal is open but data hasn't been fetched yet
+  const loading = !dataLoaded;
+
+  // Wait for registry to load before computing series (prevents SSR mismatch showing only "sketch")
+  const effectiveSeries = seriesRegistry ? getEffectiveSeries(image, seriesRegistry) : [];
+  const excludeSizes = seriesRegistry ? getExcludeSizesFromRegistry(image?.id, seriesRegistry) : {};
 
   // Filter to only series we have definitions for, then sort by sortOrder
   const displaySeries = effectiveSeries
@@ -273,7 +277,11 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
 
             {/* Series Options */}
             <div className="space-y-2">
-              {displaySeries.length === 0 && (
+              {loading && (
+                <p className="text-gray-500 text-center py-4">Loading pricing options...</p>
+              )}
+
+              {!loading && displaySeries.length === 0 && (
                 <p className="text-gray-500 text-center">No series available for this image.</p>
               )}
 
