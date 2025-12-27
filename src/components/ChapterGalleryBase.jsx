@@ -964,6 +964,38 @@ export default function ChapterGalleryBase({
                           {/* Desktop Series Icons - stacked below collector notes button */}
                           {!isMobile && (() => {
                             const currentImage = galleryData[currentIndex];
+                            
+                            // For Engrained gallery: show only Engrained icon, clicking opens Engrained info modal
+                            if (isEngrainedSeries) {
+                              const hasNotes = currentImage?.notes?.trim();
+                              const topOffset = hasNotes ? '56px' : '8px';
+                              const engrainedDef = SERIES_DEFINITIONS.engrained;
+                              
+                              return (
+                                <div
+                                  className="desktop-only-element absolute right-3 flex flex-col gap-0.5 z-30"
+                                  style={{ transform: "translateX(50px)", top: topOffset }}
+                                >
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      logUIEvent("series_info", { page: window.location.pathname, series: "engrained" });
+                                      setShowPricingModal(true);
+                                    }}
+                                    title="Engrained Series Member — Click for details"
+                                    className="w-8 h-8 flex items-center justify-center text-lg transition-all cursor-pointer hover:scale-110"
+                                    style={{ color: "#b45309", opacity: 0.7 }}
+                                    onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+                                    onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
+                                  >
+                                    {engrainedDef?.icon || SERIES_ICONS.engrained}
+                                  </button>
+                                </div>
+                              );
+                            }
+                            
+                            // For normal galleries: show standard series icons
                             const effectiveSeries = getEffectiveSeries(currentImage, seriesRegistry);
                             const displaySeries = effectiveSeries
                               .filter(s => SERIES_DEFINITIONS[s] && s !== "engrained")
