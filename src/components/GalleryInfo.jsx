@@ -123,9 +123,10 @@ export default function GalleryInfo({
                 <span className="arrow-icon">▶</span> More
                 about this gallery
               </summary>
-              <p className="mt-2 text-base">
-                {entranceData.details}
-              </p>
+              <div 
+                className="mt-2 text-base"
+                dangerouslySetInnerHTML={{ __html: entranceData.details }}
+              />
             </details>
           )}
         </motion.div>

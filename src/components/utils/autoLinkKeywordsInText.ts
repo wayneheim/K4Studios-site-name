@@ -225,23 +225,42 @@ export function autoLinkKeywordsInText(
   if (isInsideAnchor(output, index)) continue;
 
     let href: string | undefined;
+    let fallbackImagePath: string | undefined;
 
     // a) overrides
     if (overrides[matchText] || overrides[lc]) {
       href = overrides[matchText] || overrides[lc];
     }
 
-    // b) semantic landing
+    // b) semantic landing — but if it points to the CURRENT page, use fallbackImagePath for image linking
     if (!href) {
       const res = getSectionForKW(lc, semantic);
       if (res && res.type === 'landing') {
-        href = res.section.path;
+        const targetPath = res.section.path;
+        // Normalize both paths for comparison (strip trailing slashes, lowercase)
+        const normTarget = targetPath.replace(/\/+$/, '').toLowerCase();
+        const normCurrent = sectionPath.replace(/\/+$/, '').toLowerCase();
+        
+        // If linking to same page, use fallbackImagePath if defined
+        if (normTarget === normCurrent) {
+          // Store the fallback path to use in step (c)
+          fallbackImagePath = res.section.fallbackImagePath;
+        } else {
+          href = targetPath;
+        }
       }
     }
 
-    // c) semantic image (multi-section)
+    // c) semantic image (multi-section) OR fallback from same-page landing
     if (!href) {
-      const imgSecs = getAllImageSectionsForKW(lc, semantic);
+      // First try: use fallbackImagePath if we're on the same page as a landing phrase
+      let imgSecs: string[] = [];
+      if (fallbackImagePath) {
+        imgSecs = [fallbackImagePath];
+      } else {
+        imgSecs = getAllImageSectionsForKW(lc, semantic);
+      }
+      
       if (imgSecs.length) {
         let poolEntries: { img: any; galleryKey: string }[] = [];
 
@@ -278,8 +297,6 @@ export function autoLinkKeywordsInText(
               .map(img => ({ img, galleryKey: img.galleries?.[0] || sec }))
           );
         });
-
-        // ...existing code...
 
         const filtered = poolEntries.filter(e => !exclude.has(e.img.id));
         if (filtered.length) poolEntries = filtered;

@@ -164,16 +164,51 @@ facingHistory: {
 },
 
 
+ westernHubLanding: {
+  path: "/Western-Fine-Art-Photography",
+  def: "The subject-focused hub for Western Fine Art Photography — exploring cowboys, Indigenous portraits, and the human experience of the American West.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "Western Fine Art Photography", rating: 5, use: true },
+  ],
+  imagePhrases: []
+},
+
+painterlyWesternHub: {
+  path: "/Painterly-Western-Photography",
+  def: "The craft-focused hub for Painterly Western Photography—discipline, light, and narrative philosophy behind the work.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "Painterly Western Photography", rating: 5, use: true },
+  ],
+  imagePhrases: []
+},
+
+westernBlackWhiteHub: {
+  path: "/Western-Black-and-White-Photography",
+  def: "Western fine art photography in black and white—emphasizing contrast, character, and the timeless human experience of the American West.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+  landingPhrases: [
+    { phrase: "Western Black and White Photography", rating: 5, use: true },
+    { phrase: "Black and White Western Photography", rating: 5, use: true },
+    { phrase: "Black and White Cowboy Photography", rating: 4, use: true },
+    { phrase: "Western Black and White Art", rating: 4, use: true },
+    { phrase: "Black and White Western Fine Art", rating: 4, use: true },
+    { phrase: "Monochrome Western Photography", rating: 4, use: true },
+  ],
+  imagePhrases: []
+},
+
  cowboy: {
   path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
   def: "Painterly Western portraits—dust, leather, and long light—balancing grit and myth.",
 
   landingPhrases: [
     // --- Primary (WritingBrain core; strongest SERP direction) ---
-    { phrase: "Painterly Western photography", rating: 5, use: true },
+    { phrase: "Painterly Western photography", rating: 3, use: true },  // demoted: hub owns exact phrase
     { phrase: "Western Cowboy Portraits", rating: 5, use: true },
     { phrase: "Western themed art", rating: 5, use: true },
-    { phrase: "Western fine art photography", rating: 5, use: true },
+    { phrase: "Western fine art photography", rating: 3, use: true },  // demoted: hub owns exact phrase
     { phrase: "painterly cowboy photography", rating: 5, use: true },
     { phrase: "wild west painterly photography", rating: 5, use: true },
     { phrase: "Explore Western Photography", rating: 5, use: true },

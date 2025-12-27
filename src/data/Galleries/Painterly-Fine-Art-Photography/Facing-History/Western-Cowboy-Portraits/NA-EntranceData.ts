@@ -37,7 +37,9 @@ export const entranceData = {
   details: `
     Every painterly Native American portrait is created with care, respect, and historical sensitivity—working collaboratively with reenactors and cultural interpreters who help ensure authenticity in attire, gesture, and setting. Wayne’s process merges fine art photography with painterly toning, classical composition, and narrative storytelling to create portraits that feel like living chapters from an unwritten history.<br><br>
 
-    These museum-quality fine art prints are available on archival paper, acrylic, metal, and Baltic Birch wood (Engrained Series). Each format enhances the texture, color, and character of the work—perfect for collectors, history enthusiasts, and anyone seeking meaningful Native American wall art rooted in story and authenticity.
+    These museum-quality fine art prints are available on archival paper, acrylic, metal, and Baltic Birch wood (Engrained Series). Each format enhances the texture, color, and character of the work—perfect for collectors, history enthusiasts, and anyone seeking meaningful Native American wall art rooted in story and authenticity.<br><br>
+
+    These works are part of Wayne Heim's broader exploration of <a href="/Western-Fine-Art-Photography" style="color:#85644b; text-decoration:underline; transition:color 0.2s;" onmouseover="this.style.color='#a74219'" onmouseout="this.style.color='#85644b'">Western Fine Art Photography</a>, focusing on character, story, and the human West.
   `,
 
   image: {

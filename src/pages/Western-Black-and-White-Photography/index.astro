@@ -9,13 +9,12 @@ import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import StorySlider        from '@/components/StorySlider.tsx';
 
-// Story slider can still point at a cowboy gallery (fine)
-import { galleryData as cowboyColorDataFull }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+// B/W Western gallery data only
 import { galleryData as cowboyBWData }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
-import { galleryData as cowboyNAData }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs';
+// Color data for tombstone fallbacks to sibling hubs
+import { galleryData as cowboyColorData }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
 import { storySliderImageIds } from '@/data/storySlider.ts';
 
 import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
@@ -28,14 +27,13 @@ import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
 // ✅ HUB-SCOPED DATA SOURCES
 import { landingWestern }
-  from '@/data/Western-Fine-Art-Photography/landingstones.ts';
-import { painterlyStory as westernStory }
-  from '@/data/Western-Fine-Art-Photography/story.ts';
-import { facingFAQ }
-  from '@/data/Western-Fine-Art-Photography/faq.ts';
+  from '@/data/Western-Black-and-White-Photography/landingstones.ts';
+import { bwWesternStory as westernStory }
+  from '@/data/Western-Black-and-White-Photography/story.ts';
+import { bwWesternFAQ as facingFAQ }
+  from '@/data/Western-Black-and-White-Photography/faq.ts';
 
 import '@/styles/global.css';
-// If your hub page relied on this for header styling, keep it:
 import '@/styles/oneupheader.css';
 
 // ----------------------
@@ -43,17 +41,16 @@ import '@/styles/oneupheader.css';
 // ----------------------
 
 // ✅ The actual page URL
-const pagePath = "/Western-Fine-Art-Photography";
+const pagePath = "/Western-Black-and-White-Photography";
 
-// ✅ A REAL siteNav node to power feathering + gallery pool + autolinking
-// (This is why Cowboy page works — we emulate that here)
+// ✅ B/W gallery path for image sourcing
 const imageSectionPath =
-  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White";
 
 // ----------------------
-// STORY SLIDER DATA
+// STORY SLIDER DATA (B/W images that match storySlider IDs)
 // ----------------------
-const cowboyColorData = cowboyColorDataFull
+const bwStoryData = cowboyBWData
   .filter((img: any) => storySliderImageIds.includes(img.id))
   .map((img: any) => ({ id: img.id, title: img.title, story: img.story }));
 
@@ -71,9 +68,8 @@ function findNavEntry(nav: any[], url: string): any | null {
   return null;
 }
 
-// Cowboy page uses children-only; keep same behavior for a clean pool.
-const landingNav = findNavEntry(siteNav as any, imageSectionPath);
-const galleryPaths: string[] = landingNav?.children?.map((c: any) => c.href) || [];
+// B/W gallery only
+const galleryPaths: string[] = [imageSectionPath];
 
 // Load galleryData for those galleryPaths
 const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true }) as any;
@@ -85,19 +81,19 @@ const galleryDatas = galleryPaths.map((path) => {
 // Feathering uses headingCount to decide how many it needs
 const headingCount = westernStory.filter((block: any, i: number) => i > 0 && block.subhead).length;
 
-// ✅ Feathered images: now strictly cowboy-universe, because imageSectionPath is cowboy node
+// ✅ Feathered images: B/W Western only
 const featheredImages = getFeatheredImages({
   sectionPath: imageSectionPath,
   headingCount: Math.max(headingCount, 9),
   galleryDatas,
   galleryPaths,
-  minRating: 3,      // Lower threshold to get more images
-  fallbackMin: 1     // Allow any rated image as fallback
+  minRating: 3,
+  fallbackMin: 1
 });
 const featheredImagesSidebar = featheredImages.slice(0, 6);
 
 // ----------------------
-// STRUCTURED DATA (URL MUST BE THE HUB PAGE)
+// STRUCTURED DATA
 // ----------------------
 const structuredData = getStructuredData({
   type: "gallery",
@@ -107,15 +103,14 @@ const structuredData = getStructuredData({
     url: `https://k4studios.com${pagePath}`,
     keywords: landingWestern.keywords || [],
     copyrightNotice: "© Wayne Heim",
-    // Enhanced "about" topics specific to Western subject matter
     about: [
-      { "@type": "Thing", name: "Western Fine Art Photography" },
+      { "@type": "Thing", name: "Western Black and White Photography" },
+      { "@type": "Thing", name: "Monochrome Photography" },
       { "@type": "Thing", name: "Cowboy Portraiture" },
       { "@type": "Thing", name: "American West" },
-      { "@type": "Thing", name: "Indigenous Portraits" },
-      { "@type": "Thing", name: "Historical Western Photography" },
+      { "@type": "Thing", name: "Fine Art Photography" },
     ],
-    genre: "Western Fine Art Photography",
+    genre: "Western Black and White Photography",
   },
   images: featheredImages,
   defaults: {
@@ -133,13 +128,12 @@ const structuredData = getStructuredData({
 // ----------------------
 const breadcrumbData = getBreadcrumbList([
   { name: "Home", item: "https://k4studios.com/" },
-  { name: "Western Fine Art Photography", item: `https://k4studios.com${pagePath}` },
+  { name: "Western Black and White Photography", item: `https://k4studios.com${pagePath}` },
 ]);
 
 // ----------------------
-// FAQ STRUCTURED DATA (for rich snippets)
+// FAQ STRUCTURED DATA
 // ----------------------
-// Helper to strip HTML tags for plain text answers
 const stripHtml = (text: string) => text.replace(/<[^>]*>/g, '').trim();
 
 const faqStructuredData = JSON.stringify({
@@ -157,7 +151,7 @@ const faqStructuredData = JSON.stringify({
 }, null, 2);
 
 // ----------------------
-// WEBPAGE SCHEMA (subject authority - Western focus)
+// WEBPAGE SCHEMA
 // ----------------------
 const webPageSchema = JSON.stringify({
   "@context": "https://schema.org",
@@ -174,11 +168,10 @@ const webPageSchema = JSON.stringify({
     url: "https://k4studios.com/"
   },
   about: [
-    { "@type": "Thing", name: "Western Fine Art Photography" },
+    { "@type": "Thing", name: "Western Black and White Photography" },
+    { "@type": "Thing", name: "Monochrome Fine Art" },
     { "@type": "Thing", name: "Cowboy Portraiture" },
-    { "@type": "Thing", name: "Indigenous Portraits" },
     { "@type": "Thing", name: "American West" },
-    { "@type": "Thing", name: "Historical Western Photography" },
     { "@type": "Thing", name: "Narrative Photography" },
   ],
   author: { "@id": "https://k4studios.com/#person" },
@@ -187,7 +180,7 @@ const webPageSchema = JSON.stringify({
   mainEntity: { "@id": `https://k4studios.com${pagePath}#imagegallery` },
 }, null, 2);
 
-// OG/Twitter image: first feathered image
+// OG/Twitter image
 function makeAbsoluteUrl(src?: string) {
   if (!src) return "";
   if (src.startsWith("http://") || src.startsWith("https://")) return src;
@@ -196,7 +189,6 @@ function makeAbsoluteUrl(src?: string) {
 const landingImg = featheredImages[0];
 const landingImgUrl = makeAbsoluteUrl(landingImg?.src);
 
-// ✅ Meta should be keyed to the HUB PAGE, not the cowboy gallery path
 const meta = getLandingMeta(pagePath, landingImgUrl);
 if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${pagePath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${pagePath}`;
@@ -204,11 +196,10 @@ if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${pagePath}`;
 // ----------------------
 // DYNAMIC TOMBSTONE THUMBNAILS
 // ----------------------
-// Helper: Get an array of valid thumbnail URLs from gallery data (first 10 images)
 function getTombstoneThumbs(galleryData: any[]): string[] {
   const validImages = galleryData
     .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost')
-    .slice(0, 10); // Pool of first 10 images
+    .slice(0, 10);
   return validImages
     .map((img: any) => img.srcS || img.srcM || img.src || '')
     .filter((src: string) => src !== '');
@@ -216,22 +207,20 @@ function getTombstoneThumbs(galleryData: any[]): string[] {
 
 // Map gallery hrefs to their data for dynamic thumb lookup
 const tombstoneGalleryMap: Record<string, any[]> = {
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color': cowboyColorDataFull,
   '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White': cowboyBWData,
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color': cowboyNAData,
+  '/Western-Fine-Art-Photography': cowboyColorData,  // Use color for Western hub thumb
+  '/Painterly-Western-Photography': cowboyColorData, // Use color for Painterly hub thumb
 };
 
 // Build tombstones with thumbs array for client-side random selection
 const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
-  // If thumb is already set (like Engrained), keep it as single item
   if (stone.thumb) return { ...stone, thumbs: [stone.thumb] };
-  // Otherwise, build thumbs array from gallery data
   const galleryData = tombstoneGalleryMap[stone.href];
   const thumbs = galleryData ? getTombstoneThumbs(galleryData) : [];
   return {
     ...stone,
-    thumb: thumbs[0] || '', // Fallback for SSR
-    thumbs, // Array for client-side random selection
+    thumb: thumbs[0] || '',
+    thumbs,
   };
 });
 ---
@@ -244,7 +233,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
 >
   <!-- FAQ Structured Data for rich snippets -->
   <script type="application/ld+json" set:html={faqStructuredData} slot="head"></script>
-  <!-- WebPage Schema (subject authority) -->
+  <!-- WebPage Schema -->
   <script type="application/ld+json" set:html={webPageSchema} slot="head"></script>
   
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
@@ -300,8 +289,8 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
                 </ul>
               )}
 
-              {/* Insert StorySlider (secondary variant - reduced visual weight) */}
-              {index === 1 && (
+              {/* Insert StorySlider after first story block */}
+              {index === 1 && bwStoryData.length > 0 && (
                 <div class="story-slider-wrapper reveal-on-scroll mt-6">
                   <div class="story-slider-skeleton relative bg-[#f4f1ec] rounded-lg shadow-sm px-5 py-4 max-w-xl mx-auto border border-[#e0d9cf] mb-8 h-[240px] overflow-hidden opacity-90">
                     <p class="text-[10px] uppercase tracking-[0.12em] text-[#a09080] mb-3">How Story Lives in These Images</p>
@@ -315,8 +304,8 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
 
                   <StorySlider
                     client:only="react"
-                    stories={cowboyColorData}
-                    galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+                    stories={bwStoryData}
+                    galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White"
                     variant="secondary"
                   />
                 </div>
