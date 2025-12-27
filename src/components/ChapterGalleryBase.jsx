@@ -495,6 +495,7 @@ export default function ChapterGalleryBase({
   const [showSeriesOrderModal, setShowSeriesOrderModal] = useState(false);
   const [showSeriesInfoPopup, setShowSeriesInfoPopup] = useState(false);
   const [seriesInfoScrollTo, setSeriesInfoScrollTo] = useState(null);
+  const [showEngrainedInfoPopup, setShowEngrainedInfoPopup] = useState(false);
 
   const prevIndex = useRef(currentIndex);
   const notesBtnRef = useRef(null);
@@ -981,7 +982,7 @@ export default function ChapterGalleryBase({
                                     onClick={(e) => {
                                       e.stopPropagation();
                                       logUIEvent("series_info", { page: window.location.pathname, series: "engrained" });
-                                      setShowPricingModal(true);
+                                      setShowEngrainedInfoPopup(true);
                                     }}
                                     title="Engrained Series Member — Click for details"
                                     className="w-8 h-8 flex items-center justify-center text-lg transition-all cursor-pointer hover:scale-110"
@@ -2017,6 +2018,48 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
         scrollToSeries={seriesInfoScrollTo}
         activeSeries={getEffectiveSeries(galleryData[currentIndex], seriesRegistry).filter(s => s !== "engrained")}
       />
+
+      {/* Engrained Info Popup (museum label style, same as circle-i info overlay) */}
+      <AnimatePresence>
+        {showEngrainedInfoPopup && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[10001] flex items-center justify-center p-4 bg-black bg-opacity-30"
+            onClick={() => setShowEngrainedInfoPopup(false)}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              className="bg-stone-50 border-2 rounded-lg shadow-xl p-5 max-w-sm"
+              style={{ borderColor: "#b45309", backgroundColor: "#fffbeb" }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <h4 className="flex items-center gap-2 font-semibold text-base mb-3" style={{ color: "#92400e" }}>
+                <span className="text-lg">{SERIES_DEFINITIONS.engrained?.icon || "◈"}</span>
+                Engrained Series
+              </h4>
+              <div className="text-sm text-stone-600 leading-relaxed whitespace-pre-line">
+                The Engrained Series represents Wayne Heim's most distinctive collector offering—painterly fine art and Western photography uniquely printed on Baltic birch wood using a signature UV layering process.
+
+Each piece transforms the natural grain of the wood into an integral part of the artwork, creating depth and warmth impossible to achieve on traditional media. The result is a one-of-a-kind presentation where every grain tells its own story alongside Wayne's vision.
+
+Limited to editions of 50 or fewer, Engrained pieces arrive ready to hang with a float mount presentation on 0.5" thick birch panels.
+              </div>
+              <div className="flex justify-end mt-4">
+                <button
+                  onClick={() => setShowEngrainedInfoPopup(false)}
+                  className="text-xs text-stone-600 border border-stone-400 px-3 py-1 rounded hover:bg-stone-200 hover:border-stone-500 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
