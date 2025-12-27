@@ -1,6 +1,7 @@
 // src/components/GalleryEditorPro.jsx
 import { useEffect, useMemo, useRef, useState } from "react";
 import PricingEditorModal from "./PricingEditorModal.jsx";
+import EngrainedStatusPanel from "./EngrainedStatusPanel.jsx";
 import { generateSmartMetadata } from "../utils/autoTextGenerator.mjs";
 
 /* ---------- config: add more roots here if needed ---------- */
@@ -191,70 +192,137 @@ function getEffectiveSeries(image) {
   return series;
 }
 
-/* ---------- Edition Counter (local-only updates + explicit save) ---------- */
-function EditionCounter({ seriesKey, limit, value, serverValue, disabled, onChange, onSave, hasPendingChange }) {
-  const [adjustMode, setAdjustMode] = useState(false);
-  const displayValue = value ?? 0; // 0 = none sold yet
+/* ---------- Per-Size Edition Tracker (P/S/I boxes for each size) ---------- */
+function PerSizeEditionTracker({ 
+  seriesKey,
+  sizes,
+  limit,
+  editionState,
+  pendingSold,
+  pendingPrinted,
+  disabled,
+  excludeSizes,
+  backupMade,
+  isRetired,
+  onSoldChange,
+  onPrintedChange,
+  onToggleSizeExclusion,
+}) {
+  // Get server values for each size
+  const soldBySize = editionState?.soldBySize || {};
+  const printedBySize = editionState?.printedBySize || {};
   
-  function increment() {
-    if (displayValue >= limit) return;
-    onChange(displayValue + 1);
-  }
+  // Calculate totals for "Next Print #" (only meaningful for limited series)
+  let totalPrinted = 0;
+  sizes.forEach(size => {
+    const p = pendingPrinted[size] !== undefined ? pendingPrinted[size] : (printedBySize[size] || 0);
+    totalPrinted += p;
+  });
+  const nextPrintNumber = totalPrinted + 1;
+  
+  const isLimited = limit !== null;
 
-  function handleAdjust(newVal) {
-    const clamped = Math.max(0, Math.min(limit, newVal));
-    onChange(clamped);
-  }
-  
   return (
-    <div className="flex items-center gap-1 text-sm">
-      {adjustMode ? (
-        <>
-          <input
-            type="number"
-            min="0"
-            max={limit}
-            value={displayValue}
-            onChange={(e) => handleAdjust(parseInt(e.target.value, 10) || 0)}
-            onBlur={() => setAdjustMode(false)}
-            onKeyDown={(e) => { if (e.key === "Enter" || e.key === "Escape") setAdjustMode(false); }}
-            disabled={disabled}
-            autoFocus
-            className="w-14 px-2 py-1 border-2 border-amber-400 rounded text-center text-sm bg-amber-50"
-          />
-        </>
-      ) : (
-        <>
-          <span className={`w-10 text-center font-medium ${hasPendingChange ? "text-amber-600" : ""}`}>
-            {displayValue}
-          </span>
-          <button
-            onClick={increment}
-            disabled={disabled || displayValue >= limit}
-            className="px-1.5 py-0.5 border rounded text-xs hover:bg-gray-100 disabled:opacity-40 disabled:cursor-not-allowed"
-            title="Increment (local only)"
-          >▲</button>
-        </>
+    <div className="mt-2 flex items-stretch gap-3">
+      {/* Summary box (only for limited series) */}
+      {isLimited && (
+        <div className="flex flex-col justify-center p-2 rounded-lg border-2 border-amber-300 bg-amber-50">
+          <div className="text-xs text-amber-700 font-medium text-center">{limit} In Series</div>
+          <div className="flex items-center justify-center gap-1 text-xs">
+            <span className="text-stone-600">Next Print #</span>
+            <span className="text-blue-600 font-bold">{nextPrintNumber}</span>
+          </div>
+        </div>
       )}
-      <span className="text-gray-500">of {limit} Sold</span>
-      {serverValue > 0 && <span className="text-xs text-red-600 ml-1">🔒</span>}
-      {!adjustMode && (
-        <button
-          onClick={() => setAdjustMode(true)}
-          disabled={disabled}
-          className="text-xs text-amber-600 hover:text-amber-800 ml-1"
-          title="Adjust sold count"
-        >✎</button>
-      )}
-      {/* Save button - only shows when there's a pending change */}
-      {hasPendingChange && (
-        <button
-          onClick={onSave}
-          disabled={disabled}
-          className="px-2 py-0.5 bg-green-600 text-white rounded text-xs hover:bg-green-700 disabled:opacity-40 ml-1"
-          title="Save edition count to server"
-        >💾</button>
-      )}
+      
+      {/* Per-size boxes */}
+      {sizes.map(size => {
+        const serverP = printedBySize[size] || 0;
+        const serverS = soldBySize[size] || 0;
+        const displayP = pendingPrinted[size] !== undefined ? pendingPrinted[size] : serverP;
+        const displayS = pendingSold[size] !== undefined ? pendingSold[size] : serverS;
+        const inventory = displayP - displayS;
+        const hasPendingP = pendingPrinted[size] !== undefined && pendingPrinted[size] !== serverP;
+        const hasPendingS = pendingSold[size] !== undefined && pendingSold[size] !== serverS;
+        
+        const isExcluded = (excludeSizes || []).includes(size);
+        const isAvailable = !isExcluded;
+        
+        return (
+          <div 
+            key={size} 
+            className={`flex flex-col items-center p-2 rounded-lg border-2 transition-all ${
+              isAvailable 
+                ? "border-green-400 bg-green-50" 
+                : "border-gray-300 bg-gray-100"
+            }`}
+          >
+            {/* Size toggle button - filled when available */}
+            <button
+              onClick={() => onToggleSizeExclusion(size)}
+              disabled={!backupMade || isRetired}
+              className={`px-3 py-1.5 rounded font-medium text-xs cursor-pointer transition-all ${isLimited ? "mb-2" : ""} ${
+                isAvailable
+                  ? "bg-green-500 text-white shadow-sm"
+                  : "bg-gray-200 text-gray-500"
+              } ${(!backupMade || isRetired) ? "opacity-60 cursor-not-allowed" : "hover:opacity-80"}`}
+              title={isAvailable ? `${size} is available — click to exclude` : `${size} is excluded — click to enable`}
+            >
+              {size}
+            </button>
+            
+            {/* P/S/I row (only for limited series) */}
+            {isLimited && (
+              <div className={`flex items-center gap-2 ${!isAvailable ? "opacity-40 pointer-events-none" : ""}`}>
+                {/* P (Printed) - Blue */}
+                <div className="flex flex-col items-center">
+                  <span className={`text-xs font-bold mb-0.5 ${isAvailable ? "text-blue-600" : "text-gray-400"}`}>P</span>
+                  <input
+                    type="number"
+                    min="0"
+                    value={displayP}
+                    onChange={(e) => onPrintedChange(size, parseInt(e.target.value, 10) || 0)}
+                    disabled={disabled || !isAvailable}
+                    className={`w-10 px-1 py-0.5 border rounded text-center text-xs ${
+                      !isAvailable ? "border-gray-300 bg-gray-200 text-gray-400" :
+                      hasPendingP ? "border-blue-500 bg-blue-100" : "border-blue-200 bg-blue-50"
+                    }`}
+                    title={`Printed count for ${size}`}
+                  />
+                </div>
+                {/* S (Sold) - Amber/Orange */}
+                <div className="flex flex-col items-center">
+                  <span className={`text-xs font-bold mb-0.5 ${isAvailable ? "text-amber-600" : "text-gray-400"}`}>S</span>
+                  <input
+                    type="number"
+                    min="0"
+                    value={displayS}
+                    onChange={(e) => onSoldChange(size, parseInt(e.target.value, 10) || 0)}
+                    disabled={disabled || !isAvailable}
+                    className={`w-10 px-1 py-0.5 border rounded text-center text-xs ${
+                      !isAvailable ? "border-gray-300 bg-gray-200 text-gray-400" :
+                      hasPendingS ? "border-amber-500 bg-amber-100" : "border-amber-200 bg-amber-50"
+                    }`}
+                    title={`Sold count for ${size}`}
+                  />
+                </div>
+                {/* I (Inventory) - Green/Red based on value */}
+                <div className="flex flex-col items-center">
+                  <span className={`text-xs font-bold mb-0.5 ${!isAvailable ? "text-gray-400" : inventory >= 0 ? "text-green-600" : "text-red-600"}`}>I</span>
+                  <span className={`w-10 px-1 py-0.5 border rounded text-center text-xs font-medium ${
+                    !isAvailable ? "border-gray-300 bg-gray-200 text-gray-400" :
+                    inventory > 0 ? "border-green-300 bg-green-100 text-green-700" :
+                    inventory < 0 ? "border-red-300 bg-red-100 text-red-700" :
+                    "border-gray-300 bg-gray-100 text-gray-500"
+                  }`}>
+                    {inventory}
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -262,7 +330,9 @@ function EditionCounter({ seriesKey, limit, value, serverValue, disabled, onChan
 /* ---------- Series & Status Panel ---------- */
 function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricing, galleryPath, onBeforeSave }) {
   const [editionStates, setEditionStates] = useState({});
-  const [pendingEditions, setPendingEditions] = useState({}); // Local pending changes
+  // Per-size pending changes: { "chronicle": { "16x20": 5 } }
+  const [pendingSoldBySize, setPendingSoldBySize] = useState({});
+  const [pendingPrintedBySize, setPendingPrintedBySize] = useState({});
   const [excludeSizes, setExcludeSizes] = useState({}); // Excluded sizes per series
   const [pendingExcludeSizes, setPendingExcludeSizes] = useState(false); // Track if size changes need saving
   const [pendingSeriesChange, setPendingSeriesChange] = useState(false); // Track if series changes need saving
@@ -280,20 +350,33 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
   useEffect(() => {
     if (!current?.id) return;
     fetchEditionState(current.id);
-    setPendingEditions({}); // Clear pending when switching images
+    setPendingSoldBySize({}); // Clear pending when switching images
+    setPendingPrintedBySize({}); // Clear pending printed when switching images
   }, [current?.id]);
 
+  // Fetch edition data from seriesRegistry (consolidated database)
   async function fetchEditionState(imageId) {
     try {
       // Add cache-buster to prevent stale data
       const cacheBuster = Date.now();
-      const res = await fetch(`/.netlify/functions/editionState?imageId=${imageId}&_t=${cacheBuster}`, {
+      const res = await fetch(`/.netlify/functions/seriesRegistry?imageId=${imageId}&_t=${cacheBuster}`, {
         cache: "no-store",
         headers: { "Cache-Control": "no-cache" }
       });
       if (res.ok) {
         const data = await res.json();
-        const states = data.states || {};
+        // Convert editionData from registry format to component format
+        // editionData: { chronicle: { soldBySize: {...}, printedBySize: {...} }, legend: {...} }
+        const editionData = data.series?.editionData || {};
+        const states = {};
+        for (const [tier, tierData] of Object.entries(editionData)) {
+          states[tier] = {
+            soldBySize: tierData.soldBySize || {},
+            printedBySize: tierData.printedBySize || {},
+            released: tierData.released || false,
+            firstReleaseDate: tierData.firstReleaseDate
+          };
+        }
         setEditionStates(states);
       }
     } catch (err) {
@@ -301,86 +384,20 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
     }
   }
 
-  // Update pending edition locally (no server call)
-  function updatePendingEdition(seriesKey, newCount) {
-    setPendingEditions(prev => ({ ...prev, [seriesKey]: newCount }));
+  // Update pending sold for a specific size
+  function updatePendingSold(seriesKey, size, newCount) {
+    setPendingSoldBySize(prev => ({
+      ...prev,
+      [seriesKey]: { ...(prev[seriesKey] || {}), [size]: newCount }
+    }));
   }
 
-  // Save a specific series edition to server
-  async function saveEdition(seriesKey) {
-    if (!current?.id) return;
-    const newCount = pendingEditions[seriesKey];
-    if (newCount === undefined) return;
-    
-    setLoading(true);
-    try {
-      // Ensure edition exists first
-      const existing = editionStates[seriesKey];
-      if (!existing) {
-        await fetch("/.netlify/functions/editionState", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            imageId: current.id,
-            series: seriesKey,
-            action: "create"
-          })
-        });
-      }
-      
-      const res = await fetch("/.netlify/functions/editionState", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          imageId: current.id,
-          series: seriesKey,
-          action: "setSold",
-          data: { sold: newCount }
-        })
-      });
-      if (res.ok) {
-        const result = await res.json();
-        // Update local state immediately with the confirmed value
-        if (result.state) {
-          setEditionStates(prev => ({
-            ...prev,
-            [seriesKey]: result.state
-          }));
-        }
-        // Clear this pending change
-        setPendingEditions(prev => {
-          const copy = { ...prev };
-          delete copy[seriesKey];
-          return copy;
-        });
-      }
-    } catch (err) {
-      console.error("[SeriesStatusPanel] Error saving edition:", err);
-    }
-    setLoading(false);
-  }
-
-  // Create/release a series edition
-  async function releaseSeries(seriesKey, limit) {
-    if (!current?.id) return;
-    setLoading(true);
-    try {
-      const res = await fetch("/.netlify/functions/editionState", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          imageId: current.id,
-          series: seriesKey,
-          action: "create"
-        })
-      });
-      if (res.ok) {
-        await fetchEditionState(current.id);
-      }
-    } catch (err) {
-      console.error("[SeriesStatusPanel] Error releasing series:", err);
-    }
-    setLoading(false);
+  // Update pending printed for a specific size
+  function updatePendingPrinted(seriesKey, size, newCount) {
+    setPendingPrintedBySize(prev => ({
+      ...prev,
+      [seriesKey]: { ...(prev[seriesKey] || {}), [size]: newCount }
+    }));
   }
 
   const effectiveSeries = getEffectiveSeries(current);
@@ -388,33 +405,37 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
   const isRetired = currentStatus === "retired";
   
   // Calculate lock info from server state
-  // Value represents number sold (not next edition)
+  // Series is locked if ANY sold OR printed > 0
   // Exclude engrained - it has its own system
   let totalActuallySold = 0;
-  let chronicleLegendSold = 0;
-  const limitedSeriesWithSales = [];
+  let totalActuallyPrinted = 0;
+  let chronicleLegendActivity = 0;
+  const limitedSeriesWithActivity = [];
   for (const [seriesKey, info] of Object.entries(editionStates)) {
     if (seriesKey === "engrained") continue; // Engrained managed separately
     const sold = info.sold || 0;
+    const printed = info.printed || 0;
     totalActuallySold += sold;
+    totalActuallyPrinted += printed;
     if (seriesKey === "chronicle" || seriesKey === "legend") {
-      if (sold > 0) {
-        chronicleLegendSold += sold;
-        limitedSeriesWithSales.push(seriesKey);
+      if (sold > 0 || printed > 0) {
+        chronicleLegendActivity += sold + printed;
+        limitedSeriesWithActivity.push(seriesKey);
       }
     }
   }
-  const isLocked = totalActuallySold > 0;
-  const hasLimitedSales = chronicleLegendSold > 0;
+  const isLocked = totalActuallySold > 0 || totalActuallyPrinted > 0;
+  const hasLimitedActivity = chronicleLegendActivity > 0;
   const canRemove = !isLocked && currentStatus !== "retired";
   const canRetire = !isRetired;
 
-  // Check if a specific series has sales (locked) - based on SERVER state
-  // Value represents number sold (not next edition)
-  // sold > 0 = at least 1 sold = locked
+  // Check if a specific series is locked (has sales OR prints) - based on SERVER state
+  // sold > 0 OR printed > 0 = locked (cannot deactivate)
   function isSeriesLocked(seriesKey) {
-    const soldCount = editionStates[seriesKey]?.sold || 0;
-    return soldCount > 0;
+    const state = editionStates[seriesKey];
+    const soldCount = state?.sold || 0;
+    const printedCount = state?.printed || 0;
+    return soldCount > 0 || printedCount > 0;
   }
 
   // Toggle series membership
@@ -432,11 +453,7 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
         newSeries = currentSeries.filter(s => s !== seriesKey);
       } else {
         newSeries = [...currentSeries, seriesKey];
-        // Auto-release edition state when adding a limited series
-        const def = SERIES_DEFINITIONS[seriesKey];
-        if (def?.limit && !editionStates[seriesKey]) {
-          releaseSeries(seriesKey, def.limit);
-        }
+        // Edition data is now stored in seriesRegistry and auto-created when P/S values are set
       }
       onUpdate("availableSeries", newSeries.length > 0 ? newSeries : undefined);
       setPendingSeriesChange(true);
@@ -468,7 +485,7 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
     setPendingExcludeSizes(true);
   }
 
-  // Save excludeSizes AND series selections to the series registry
+  // Save excludeSizes, series selections, AND P/S edition counts
   async function saveSeriesAndSizes() {
     if (!current?.id || !galleryPath) return;
     
@@ -477,11 +494,66 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
     
     setLoading(true);
     try {
-      // Build the tiers array from current series state
+      // IMPORTANT: Save P/S edition data FIRST, before the register call
+      // The register call writes to seriesRegistry.json which triggers HMR,
+      // killing this component instance. We must save P/S before that happens.
+      
+      // Collect pending P/S edition changes
+      const allChanges = [];
+      for (const [seriesKey, sizes] of Object.entries(pendingSoldBySize)) {
+        for (const [size, count] of Object.entries(sizes)) {
+          allChanges.push({ seriesKey, type: 'sold', size, count });
+        }
+      }
+      for (const [seriesKey, sizes] of Object.entries(pendingPrintedBySize)) {
+        for (const [size, count] of Object.entries(sizes)) {
+          allChanges.push({ seriesKey, type: 'printed', size, count });
+        }
+      }
+      
+      // Group changes by tier
+      const changesByTier = {};
+      for (const change of allChanges) {
+        if (!changesByTier[change.seriesKey]) {
+          changesByTier[change.seriesKey] = { soldBySize: {}, printedBySize: {} };
+        }
+        if (change.type === 'sold') {
+          changesByTier[change.seriesKey].soldBySize[change.size] = change.count;
+        } else {
+          changesByTier[change.seriesKey].printedBySize[change.size] = change.count;
+        }
+      }
+      
+      // Save each tier's P/S edition data FIRST
+      for (const [tier, data] of Object.entries(changesByTier)) {
+        const res = await fetch("/.netlify/functions/seriesRegistry", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action: "setEditionData",
+            imageId: current.id,
+            data: {
+              tier,
+              soldBySize: data.soldBySize,
+              printedBySize: data.printedBySize
+            }
+          })
+        });
+        
+        if (!res.ok) {
+          console.error("[SeriesStatusPanel] Failed to save edition data for tier:", tier);
+        }
+      }
+      
+      // Clear pending P/S changes immediately after saving them
+      setPendingSoldBySize({});
+      setPendingPrintedBySize({});
+      
+      // NOW register the series (saves tiers + excludeSizes)
+      // This write to seriesRegistry.json will trigger HMR, but P/S is already saved
       const baseTiers = (current.availableSeries || []).filter(t => ["foundation", "chronicle", "legend"].includes(t));
       const storedTiers = current.noSketch ? baseTiers : ["sketch", ...baseTiers];
       
-      // First, register the series (saves tiers + excludeSizes together)
       const regRes = await fetch("/.netlify/functions/seriesRegistry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -502,6 +574,10 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
         // Update the current image's _excludeSizes to match
         onUpdate("_excludeSizes", excludeSizes);
       }
+      
+      // Force refresh edition states from server to ensure UI is in sync
+      await fetchEditionState(current.id);
+      
     } catch (err) {
       console.error("[SeriesStatusPanel] Error saving series and sizes:", err);
     }
@@ -560,7 +636,7 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
         )}
         {isLocked && (
           <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded">
-            🔒 {totalActuallySold} sold — some options locked
+            🔒 P:{totalActuallyPrinted} S:{totalActuallySold} — some options locked
           </span>
         )}
         {isRetired && (
@@ -586,85 +662,69 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
             const locked = isSeriesLocked(key);
             const disabled = !backupMade || isRetired || (locked && isActive);
             const soldCount = editionStates[key]?.sold || 0;
+            const printedCount = editionStates[key]?.printed || 0;
             const hasLimit = def.limit !== null;
             const seriesSizes = SERIES_SIZES[key] || [];
-            const hasMultipleSizes = seriesSizes.length > 1;
             
             return (
-              <div key={key} className="flex flex-wrap items-center gap-2">
-                {/* Checkbox */}
-                <label
-                  className={`flex items-center gap-2 px-3 py-1.5 rounded border cursor-pointer transition-all min-w-[110px] ${
-                    isActive
-                      ? locked
-                        ? "bg-red-50 border-red-300 text-red-800"
-                        : "bg-green-50 border-green-300 text-green-800"
-                      : "bg-white border-gray-300 text-gray-600"
-                  } ${disabled ? "opacity-60 cursor-not-allowed" : "hover:border-amber-400"}`}
-                  title={locked ? `${soldCount} sold — cannot remove` : def.description}
-                >
-                  <input
-                    type="checkbox"
-                    checked={isActive}
-                    disabled={disabled}
-                    onChange={() => toggleSeries(key)}
-                    className="sr-only"
-                  />
-                  <span className="text-sm font-medium">{def.label}</span>
-                  {isActive && locked && <span className="text-xs">🔒</span>}
-                </label>
-
-                {/* Size Exclusion Checkboxes (inline when series is active and has multiple sizes) */}
-                {isActive && hasMultipleSizes && seriesSizes.map(size => {
-                  const isExcluded = (excludeSizes[key] || []).includes(size);
-                  const isAvailable = !isExcluded;
-                  return (
-                    <label
-                      key={size}
-                      className={`flex items-center gap-1.5 px-2 py-1 rounded border text-xs cursor-pointer transition-all ${
-                        isAvailable
-                          ? "bg-blue-50 border-blue-300 text-blue-800"
-                          : "bg-gray-100 border-gray-300 text-gray-500 line-through"
-                      } ${(!backupMade || isRetired) ? "opacity-60 cursor-not-allowed" : "hover:border-blue-400"}`}
-                      title={isAvailable ? `${size} is available for purchase` : `${size} is excluded from this image`}
-                    >
-                      <input
-                        type="checkbox"
-                        checked={isAvailable}
-                        disabled={!backupMade || isRetired}
-                        onChange={() => toggleSizeExclusion(key, size)}
-                        className="w-3 h-3"
-                      />
-                      {size}
-                    </label>
-                  );
-                })}
+              <div key={key} className="flex flex-col gap-1">
+                {/* Row 1: Series name only */}
+                <div className="flex flex-wrap items-center gap-2">
+                  {/* Checkbox */}
+                  <label
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded border cursor-pointer transition-all min-w-[110px] ${
+                      isActive
+                        ? locked
+                          ? "bg-red-50 border-red-300 text-red-800"
+                          : "bg-green-50 border-green-300 text-green-800"
+                        : "bg-white border-gray-300 text-gray-600"
+                    } ${disabled ? "opacity-60 cursor-not-allowed" : "hover:border-amber-400"}`}
+                    title={locked ? `P:${printedCount} S:${soldCount} — cannot remove` : def.description}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isActive}
+                      disabled={disabled}
+                      onChange={() => toggleSeries(key)}
+                      className="sr-only"
+                    />
+                    <span className="text-sm font-medium">{def.label}</span>
+                    {isActive && locked && <span className="text-xs">🔒</span>}
+                  </label>
+                </div>
                 
-                {/* Edition Counter (only for limited series when active) */}
-                {hasLimit && isActive && (
-                  <EditionCounter
+                {/* Row 2: Size boxes with P/S/I (for limited series) or just size checkboxes (for unlimited) */}
+                {isActive && seriesSizes.length > 0 && (
+                  <PerSizeEditionTracker
                     seriesKey={key}
+                    sizes={seriesSizes}
                     limit={def.limit}
-                    value={pendingEditions[key] !== undefined ? pendingEditions[key] : (soldCount ?? 0)}
-                    serverValue={soldCount ?? 0}
+                    editionState={editionStates[key]}
+                    pendingSold={pendingSoldBySize[key] || {}}
+                    pendingPrinted={pendingPrintedBySize[key] || {}}
                     disabled={!backupMade || isRetired || loading}
-                    onChange={(newVal) => updatePendingEdition(key, newVal)}
-                    onSave={() => saveEdition(key)}
-                    hasPendingChange={pendingEditions[key] !== undefined && pendingEditions[key] !== (soldCount ?? 0)}
+                    excludeSizes={excludeSizes[key] || []}
+                    backupMade={backupMade}
+                    isRetired={isRetired}
+                    onSoldChange={(size, val) => updatePendingSold(key, size, val)}
+                    onPrintedChange={(size, val) => updatePendingPrinted(key, size, val)}
+                    onToggleSizeExclusion={(size) => toggleSizeExclusion(key, size)}
                   />
                 )}
               </div>
             );
           })}
           
-          {/* Save button for series & sizes (shown when any series or size changes pending) */}
-          {(pendingSeriesChange || pendingExcludeSizes) && (
+          {/* Save button for all series data (shown when any changes pending) */}
+          {(pendingSeriesChange || pendingExcludeSizes ||
+            Object.keys(pendingSoldBySize).some(k => Object.keys(pendingSoldBySize[k] || {}).length > 0) ||
+            Object.keys(pendingPrintedBySize).some(k => Object.keys(pendingPrintedBySize[k] || {}).length > 0)) && (
             <button
               onClick={saveSeriesAndSizes}
               disabled={loading}
               className="self-start px-3 py-1.5 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
             >
-              {loading ? "..." : "💾 Save Series & Sizes"}
+              {loading ? "..." : "💾 Save Series Data"}
             </button>
           )}
         </div>
@@ -694,10 +754,10 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
         
         {!canRemove && currentStatus === "active" && (
           <p className="text-xs text-red-600 mt-1">
-            ⚠️ This image has sales and cannot be removed.
-            {hasLimitedSales && (
+            ⚠️ This image has prints/sales and cannot be removed.
+            {hasLimitedActivity && (
               <span className="block mt-0.5">
-                🔒 {limitedSeriesWithSales.join(", ")} has {chronicleLegendSold} sold — reset count to remove.
+                🔒 {limitedSeriesWithActivity.join(", ")} has P:{totalActuallyPrinted} S:{totalActuallySold} — reset counts to remove.
               </span>
             )}
           </p>
@@ -764,6 +824,16 @@ export default function GalleryEditorPro() {
       .map((path) => ({ path, label: prettyLabelFromPath(path) }));
   }, [modules]);
 
+  // Parse URL parameters for deep linking (e.g., ?file=/path/to/gallery.mjs&id=i-abc123)
+  const urlParams = useMemo(() => {
+    if (typeof window === "undefined") return { file: null, id: null };
+    const params = new URLSearchParams(window.location.search);
+    return {
+      file: params.get("file"),
+      id: params.get("id")
+    };
+  }, []);
+
   // Try to restore state from resume storage (survives HMR)
   const resumeState = useMemo(() => {
     if (typeof window === "undefined") return null;
@@ -773,6 +843,8 @@ export default function GalleryEditorPro() {
   const [selectedPath, setSelectedPath] = useState(() => {
     // Initialize with sessionStorage if available (client-side only)
     if (typeof window === "undefined") return "";
+    // URL param takes priority for deep linking
+    if (urlParams.file) return urlParams.file;
     return resumeState?.selectedPath || sessionStorage.getItem("lastDatasetPath") || "";
   });
   const [data, setData] = useState([]);
@@ -939,6 +1011,23 @@ export default function GalleryEditorPro() {
       setData(hydratedArr);
       setBackupData(allArr);
       
+      // Check if URL has an image ID to navigate to (deep linking from Inventory Tracker, etc.)
+      if (urlParams.id) {
+        const targetIdx = arr.findIndex(img => img.id === urlParams.id);
+        if (targetIdx >= 0) {
+          setIdx(targetIdx);
+          setFilter(""); // Clear filter to ensure image is visible
+          setDirty(false);
+          setLastAction(`Navigated to ${urlParams.id}`);
+          setShowRefreshGuard(false);
+          // Clear URL params after navigation so refresh doesn't re-trigger
+          if (typeof window !== "undefined") {
+            window.history.replaceState({}, "", window.location.pathname);
+          }
+          return; // Skip other restore logic
+        }
+      }
+      
       // Check if there's a jump-back position waiting (from bulk save)
       const jumpBackIdx = getJumpBackTo();
       
@@ -947,9 +1036,14 @@ export default function GalleryEditorPro() {
         setIdx(Math.min(jumpBackIdx, arr.length - 1));
         // DON'T clear immediately - wait 5 seconds for all HMRs to settle
         setTimeout(() => clearJumpBackTo(), 5000);
-        // Keep other state as-is (backupMade should still be true)
+        // Restore backupMade state from resume (it's reset on full remount)
+        if (resume) {
+          setBackupMade(resume.backupMade ?? false);
+          setRealBackupMade(resume.realBackupMade ?? false);
+          setTurboMode(resume.turboMode ?? false);
+        }
         setDirty(false);
-        setLastAction("Restored after bulk save");
+        setLastAction("Restored after save");
         setShowRefreshGuard(false);
       } else if (isResumingSamePath) {
         // Restore state from resume - don't reset everything
@@ -969,6 +1063,7 @@ export default function GalleryEditorPro() {
         }
       } else {
         // Fresh load - reset everything
+        console.log("[GEP] FRESH LOAD - setIdx(0), selectedPath:", selectedPath);
         setIdx(0);
         setFilter("");
         setBackupMade(false);
@@ -1016,9 +1111,9 @@ export default function GalleryEditorPro() {
   useEffect(() => {
     if (!filtered.length) return;
     const curId = filtered[idx]?.id;
-    if (!curId) { setIdx(0); return; }
+    if (!curId) { console.log("[GEP] setIdx(0) - no curId, idx was:", idx); setIdx(0); return; }
     const newPos = filtered.findIndex((d) => d.id === curId);
-    if (newPos === -1) setIdx(0);
+    if (newPos === -1) { console.log("[GEP] setIdx(0) - curId not found:", curId); setIdx(0); }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter]);
 
@@ -1049,7 +1144,29 @@ export default function GalleryEditorPro() {
   }
 
   function updateField(field, value) {
-    if (!backupMade || !current) return;
+    // Engrained-specific fields saved via separate API - allow updates without backup check
+    const engrainedFields = ["linkedImageId", "linkedGalleryPath", "inventory", "_linkBatch", "imageSize", "price", "editionSize"];
+    const isEngrainedField = engrainedFields.includes(field);
+    
+    if (!isEngrainedField && (!backupMade || !current)) return;
+    if (!current) return;
+    
+    // Handle batch link update from EngrainedStatusPanel
+    if (field === "_linkBatch" && typeof value === "object") {
+      setData((arr) => {
+        const i = arr.findIndex((d) => d.id === current.id);
+        if (i === -1) return arr;
+        const copy = [...arr];
+        copy[i] = { ...copy[i], ...value };
+        return copy;
+      });
+      setDirty(true);
+      if (current?.id) {
+        setDirtyImageIds(prev => new Set(prev).add(current.id));
+      }
+      return;
+    }
+    
     // Text content fields that indicate human authorship when edited
     const textContentFields = ["title", "alt", "description", "story", "collectorNotes", "notes", "keywords"];
     const isTextContent = textContentFields.includes(field);
@@ -2451,19 +2568,33 @@ ${collectorNotes}`;
                 <textarea value={current.collectorNotes ?? current.notes ?? ""} onChange={(e) => updateField("collectorNotes", e.target.value)} className="w-full h-28 border rounded-md px-2 py-1" />
               </div>
 
-              {/* Series & Status Panel */}
-              <SeriesStatusPanel
-                current={current}
-                backupMade={backupMade}
-                onUpdate={(field, value) => updateField(field, value)}
-                onSave={saveCurrentOnly}
-                onOpenPricing={() => setPricingModalOpen(true)}
-                galleryPath={selectedPath}
-                onBeforeSave={() => {
-                  setJumpBackTo(idx);
-                  writeResumeState({ selectedPath, idx, filter, backupMade, realBackupMade, turboMode });
-                }}
-              />
+              {/* Series & Status Panel - use EngrainedStatusPanel for Engrained database */}
+              {selectedPath.includes("Engrained-Series") ? (
+                <EngrainedStatusPanel
+                  current={current}
+                  backupMade={backupMade}
+                  onUpdate={(field, value) => updateField(field, value)}
+                  onSave={saveCurrentOnly}
+                  galleryPath={selectedPath}
+                  onBeforeSave={() => {
+                    setJumpBackTo(idx);
+                    writeResumeState({ selectedPath, idx, filter, backupMade, realBackupMade, turboMode });
+                  }}
+                />
+              ) : (
+                <SeriesStatusPanel
+                  current={current}
+                  backupMade={backupMade}
+                  onUpdate={(field, value) => updateField(field, value)}
+                  onSave={saveCurrentOnly}
+                  onOpenPricing={() => setPricingModalOpen(true)}
+                  galleryPath={selectedPath}
+                  onBeforeSave={() => {
+                    setJumpBackTo(idx);
+                    writeResumeState({ selectedPath, idx, filter, backupMade, realBackupMade, turboMode });
+                  }}
+                />
+              )}
             </div>
           </div>
         ) : (

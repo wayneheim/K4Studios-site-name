@@ -76,8 +76,19 @@ exports.handler = async (event) => {
       const imageId = event.queryStringParameters?.imageId;
       
       if (imageId) {
-        // Return the series ID for this image (if exists)
-        const seriesId = registry.images[imageId];
+        // Find the series ID for this image (composite key format: imageId:galleryPath)
+        let seriesId = registry.images[imageId]; // Try direct lookup first (legacy)
+        
+        // If not found, search for composite keys
+        if (!seriesId) {
+          for (const [key, sId] of Object.entries(registry.images)) {
+            if (key.startsWith(imageId + ":")) {
+              seriesId = sId;
+              break;
+            }
+          }
+        }
+        
         const seriesMeta = seriesId ? registry.series[seriesId] : null;
         return {
           statusCode: 200,
@@ -342,6 +353,98 @@ exports.handler = async (event) => {
               imageId,
               seriesId,
               excludeSizes
+            }),
+          };
+        }
+
+        case "setEditionData": {
+          // Set edition tracking data (soldBySize, printedBySize) for a series tier
+          // data: { tier: "chronicle", soldBySize: {...}, printedBySize: {...} }
+          if (!imageId) {
+            return { statusCode: 400, headers, body: JSON.stringify({ error: "Missing imageId" }) };
+          }
+          const { tier, soldBySize, printedBySize } = body.data || {};
+          if (!tier) {
+            return { statusCode: 400, headers, body: JSON.stringify({ error: "Missing tier in data" }) };
+          }
+          
+          // Find the series for this image
+          let seriesId = null;
+          for (const [key, sId] of Object.entries(registry.images)) {
+            if (key.startsWith(imageId + ":")) {
+              seriesId = sId;
+              break;
+            }
+          }
+          
+          if (!seriesId || !registry.series[seriesId]) {
+            return { statusCode: 404, headers, body: JSON.stringify({ error: "Series not found for this image" }) };
+          }
+          
+          const series = registry.series[seriesId];
+          
+          // Initialize editionData if not present
+          if (!series.editionData) {
+            series.editionData = {};
+          }
+          if (!series.editionData[tier]) {
+            series.editionData[tier] = {
+              soldBySize: {},
+              printedBySize: {},
+              released: true,
+              firstReleaseDate: new Date().toISOString()
+            };
+          }
+          
+          // Update the data
+          if (soldBySize !== undefined) {
+            series.editionData[tier].soldBySize = { ...series.editionData[tier].soldBySize, ...soldBySize };
+          }
+          if (printedBySize !== undefined) {
+            series.editionData[tier].printedBySize = { ...series.editionData[tier].printedBySize, ...printedBySize };
+          }
+          
+          await writeRegistry(registry);
+          
+          return {
+            statusCode: 200,
+            headers,
+            body: JSON.stringify({
+              message: "Edition data updated",
+              imageId,
+              seriesId,
+              tier,
+              editionData: series.editionData[tier]
+            }),
+          };
+        }
+
+        case "getEditionData": {
+          // Get edition data for a specific image
+          if (!imageId) {
+            return { statusCode: 400, headers, body: JSON.stringify({ error: "Missing imageId" }) };
+          }
+          
+          // Find the series for this image
+          let seriesId = null;
+          for (const [key, sId] of Object.entries(registry.images)) {
+            if (key.startsWith(imageId + ":")) {
+              seriesId = sId;
+              break;
+            }
+          }
+          
+          if (!seriesId || !registry.series[seriesId]) {
+            return { statusCode: 200, headers, body: JSON.stringify({ imageId, editionData: {} }) };
+          }
+          
+          return {
+            statusCode: 200,
+            headers,
+            body: JSON.stringify({
+              imageId,
+              seriesId,
+              editionData: registry.series[seriesId].editionData || {}
             }),
           };
         }

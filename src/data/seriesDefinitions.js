@@ -137,7 +137,7 @@ export async function fetchPricingConfig() {
 let registryCache = null;
 let registryLoadPromise = null;
 
-// Load series registry (cached)
+// Load series registry (cached - for initial page load, not for admin editing)
 export async function loadSeriesRegistry() {
   if (registryCache) return registryCache;
   if (registryLoadPromise) return registryLoadPromise;
@@ -158,6 +158,26 @@ export async function loadSeriesRegistry() {
   })();
   
   return registryLoadPromise;
+}
+
+// Load series registry FRESH from API (bypasses cache, for modals that need latest data)
+export async function loadSeriesRegistryFresh() {
+  try {
+    const cacheBuster = Date.now();
+    const res = await fetch(`/.netlify/functions/seriesRegistry?_t=${cacheBuster}`, { 
+      cache: "no-store" 
+    });
+    if (res.ok) {
+      const data = await res.json();
+      // Update the cache too
+      registryCache = data;
+      return data;
+    }
+  } catch (err) {
+    console.warn("[seriesDefinitions] Failed to load fresh series registry:", err.message);
+  }
+  // Fall back to cached version if fresh fetch fails
+  return registryCache || { images: {}, series: {} };
 }
 
 // Get series ID for an image from the registry

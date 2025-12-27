@@ -1905,22 +1905,46 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                     </p>
                   </div>
 
+                  {/* Contact Us to Order Button */}
                   <div className="text-center">
-                    <p className="text-sm text-gray-500 mb-3">
-                      <a
-                        href={`mailto:info@k4studios.com?subject=Purchase: ${galleryData[currentIndex]?.title || 'Engrained Series Image'}&body=Hello,%0A%0AI am interested in purchasing the following image:%0A%0ATitle: ${galleryData[currentIndex]?.title || 'N/A'}%0AImage ID: ${galleryData[currentIndex]?.id || 'N/A'}%0AImage URL: ${window.location.href}%0A%0APlease provide pricing and ordering information.%0A%0AThank you!`}
-                        className="text-blue-600 hover:text-blue-800 underline cursor-pointer"
-                        onClick={() => {
-                          logUIEvent("contact_order_click", {
-                            page: window.location.pathname,
-                            imageId: galleryData[currentIndex]?.id,
-                            imageTitle: galleryData[currentIndex]?.title
-                          });
-                        }}
-                      >
-                        Contact Us to Order
-                      </a>
-                    </p>
+                    {(() => {
+                      const currentItem = galleryData[currentIndex];
+                      const inv = currentItem?.inventory || {};
+                      const inStock = inv.inStock || Math.max(0, (inv.printed || 0) - (inv.sold || 0));
+                      const hasInventory = inStock > 0;
+                      
+                      return (
+                        <a
+                          href={`mailto:info@k4studios.com?subject=Order Inquiry: ${currentItem?.title || 'Engrained Series Image'} — Engrained Series&body=Hello,%0A%0AI am interested in ordering:%0A%0AImage: ${currentItem?.title || 'N/A'}%0AImage ID: ${currentItem?.id || 'N/A'}%0ASeries: Engrained (Baltic Birch Wood Print)%0A${currentItem?.imageSize ? `Size: ${currentItem.imageSize}` : ''}${currentItem?.imageSize && currentItem?.price ? ` (${currentItem.price})` : (currentItem?.price ? `Price: ${currentItem.price}` : '')}%0A%0APlease provide ordering information.%0A%0A---%0AYour Name:%0APreferred Contact (email or phone):%0A---%0A%0AThank you!`}
+                          className="inline-flex items-center justify-center gap-2 w-full max-w-xs px-4 py-2.5 text-white rounded text-sm transition-all font-medium"
+                          style={{
+                            background: "linear-gradient(to bottom, #92400e 0%, #78350f 100%)",
+                            boxShadow: "0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.15)",
+                            border: "1px solid #78350f",
+                            textShadow: "0 1px 1px rgba(0,0,0,0.3)",
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.background = "linear-gradient(to bottom, #78350f 0%, #451a03 100%)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.background = "linear-gradient(to bottom, #92400e 0%, #78350f 100%)";
+                          }}
+                          onClick={() => {
+                            logUIEvent("contact_order_click", {
+                              page: window.location.pathname,
+                              imageId: currentItem?.id,
+                              imageTitle: currentItem?.title,
+                              hasInventory: hasInventory
+                            });
+                          }}
+                        >
+                          <span>Contact Us to Order</span>
+                          {hasInventory && (
+                            <span className="text-xs text-green-200/90 font-normal italic">· Quick ship available</span>
+                          )}
+                        </a>
+                      );
+                    })()}
                   </div>
                 </div>
 

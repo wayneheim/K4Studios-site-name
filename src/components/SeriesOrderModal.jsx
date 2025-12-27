@@ -2,14 +2,28 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CircleX, Info } from "lucide-react";
-import { SERIES_DEFINITIONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig, loadSeriesRegistry, getExcludeSizesFromRegistry } from "../data/seriesDefinitions.js";
+import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig, loadSeriesRegistryFresh, getExcludeSizesFromRegistry } from "../data/seriesDefinitions.js";
 
 // Import config at build time as fallback (auto-synced, no manual copy needed)
 import pricingConfigFallback from "../data/pricingConfig.json";
 
+// Engrained info copy (not in pricingConfig since it has its own flow)
+const ENGRAINED_INFO = {
+  title: "Engrained Series",
+  body: `The Engrained Series represents Wayne Heim's most distinctive collector offering—painterly fine art and Western photography uniquely printed on Baltic birch wood using a signature UV layering process.
+
+Each piece transforms the natural grain of the wood into an integral part of the artwork, creating depth and warmth impossible to achieve on traditional media. The result is a one-of-a-kind presentation where every grain tells its own story alongside Wayne's vision.
+
+Limited to editions of 50 or fewer, Engrained pieces arrive ready to hang with a float mount presentation on 0.5" thick birch panels.`
+};
+
 // Info overlay component (museum label style) - fixed position to float above modal
 function SeriesInfoOverlay({ seriesKey, infoCopy, onClose }) {
-  const info = infoCopy?.[seriesKey] || pricingConfigFallback.infoCopy?.[seriesKey];
+  // Handle Engrained specially since it's not in pricingConfig
+  const isEngrained = seriesKey === "engrained";
+  const info = isEngrained ? ENGRAINED_INFO : (infoCopy?.[seriesKey] || pricingConfigFallback.infoCopy?.[seriesKey]);
+  const def = SERIES_DEFINITIONS[seriesKey];
+  
   if (!info) return null;
 
   return (
@@ -25,9 +39,13 @@ function SeriesInfoOverlay({ seriesKey, infoCopy, onClose }) {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 10 }}
         className="bg-stone-50 border-2 border-stone-400 rounded-lg shadow-xl p-5 max-w-sm"
+        style={isEngrained ? { borderColor: "#b45309", backgroundColor: "#fffbeb" } : {}}
         onClick={(e) => e.stopPropagation()}
       >
-        <h4 className="font-semibold text-red-800 text-base mb-3">{info.title}</h4>
+        <h4 className="flex items-center gap-2 font-semibold text-base mb-3" style={{ color: isEngrained ? "#92400e" : "#991b1b" }}>
+          {def?.icon && <span className="text-lg">{def.icon}</span>}
+          {info.title}
+        </h4>
         <div className="text-sm text-stone-600 leading-relaxed whitespace-pre-line">
           {info.body}
         </div>
@@ -44,16 +62,27 @@ function SeriesInfoOverlay({ seriesKey, infoCopy, onClose }) {
   );
 }
 
-// Fetch edition state for an image from the server
+// Fetch edition state for an image from seriesRegistry (consolidated database)
 async function fetchEditionState(imageId) {
   try {
     const cacheBuster = Date.now();
-    const res = await fetch(`/.netlify/functions/editionState?imageId=${imageId}&_t=${cacheBuster}`, {
+    const res = await fetch(`/.netlify/functions/seriesRegistry?imageId=${imageId}&_t=${cacheBuster}`, {
       cache: "no-store",
     });
     if (res.ok) {
       const data = await res.json();
-      return data.states || {};
+      // Convert editionData from registry format to component format
+      const editionData = data.series?.editionData || {};
+      const states = {};
+      for (const [tier, tierData] of Object.entries(editionData)) {
+        states[tier] = {
+          soldBySize: tierData.soldBySize || {},
+          printedBySize: tierData.printedBySize || {},
+          sold: Object.values(tierData.soldBySize || {}).reduce((a, b) => a + b, 0),
+          released: tierData.released || false
+        };
+      }
+      return states;
     }
   } catch (err) {
     console.error("[SeriesOrderModal] Error fetching edition state:", err);
@@ -92,6 +121,63 @@ function buildMailtoLink(image, seriesKey, seriesDef, editionNumber, selectedSiz
   return `mailto:info@k4studios.com?subject=${subject}&body=${encodeURIComponent(body)}`;
 }
 
+// Fetch Engrained data to check if current image has an Engrained counterpart
+async function fetchEngrainedCrosslink(imageId) {
+  try {
+    const res = await fetch(`/.netlify/functions/engrainedData?_t=${Date.now()}`, { cache: "no-store" });
+    if (res.ok) {
+      const data = await res.json();
+      // Find an Engrained item that links to this image
+      const linked = (data.items || []).find(
+        item => item.linkedImageId === imageId && item.visibility !== "ghost"
+      );
+      if (linked) {
+        const inv = linked.inventory || {};
+        const inStock = inv.inStock || Math.max(0, (inv.printed || 0) - (inv.sold || 0));
+        return {
+          engrainedId: linked.id,
+          title: linked.title,
+          url: `/Other/K4-Select-Series/Engrained/Engrained-Series/${linked.id}`,
+          price: linked.price,
+          imageSize: linked.imageSize,
+          inStock: inStock,
+          hasInventory: inStock > 0
+        };
+      }
+    }
+  } catch (err) {
+    console.error("[SeriesOrderModal] Error fetching Engrained crosslink:", err);
+  }
+  return null;
+}
+
+// Build mailto link for Engrained inquiry
+function buildEngrainedMailtoLink(image, engrainedLink) {
+  const subject = encodeURIComponent(`Order Inquiry: ${image.title || "Image"} — Engrained Series`);
+  
+  let body = `Hello,\n\nI am interested in ordering:\n\n`;
+  body += `Image: ${image.title || "N/A"}\n`;
+  body += `Image ID: ${image.id || "N/A"}\n`;
+  body += `Series: Engrained (Baltic Birch Wood Print)\n`;
+  
+  if (engrainedLink.imageSize) {
+    body += `Size: ${engrainedLink.imageSize}`;
+    if (engrainedLink.price) {
+      body += ` (${engrainedLink.price})`;
+    }
+    body += `\n`;
+  }
+  
+  body += `\nPlease provide ordering information.\n\n`;
+  body += `---\n`;
+  body += `Your Name:\n`;
+  body += `Preferred Contact (email or phone):\n`;
+  body += `---\n\n`;
+  body += `Thank you!`;
+  
+  return `mailto:info@k4studios.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+}
+
 export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent }) {
   const [editionStates, setEditionStates] = useState({});
   const [pricingData, setPricingData] = useState(null);
@@ -101,23 +187,27 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
   const [seriesRegistry, setSeriesRegistry] = useState(null);
   const [loading, setLoading] = useState(false);
   const [activeInfo, setActiveInfo] = useState(null); // Which series info overlay is open
+  const [engrainedLink, setEngrainedLink] = useState(null); // Cross-link to Engrained if exists
 
   // Fetch edition state and pricing when modal opens
   useEffect(() => {
     if (isOpen && image?.id) {
       setLoading(true);
       setActiveInfo(null); // Reset info overlay when modal opens
+      setEngrainedLink(null); // Reset Engrained link
       Promise.all([
         fetchEditionState(image.id),
         fetchPricingConfig(),
-        loadSeriesRegistry(),
-      ]).then(([states, config, registry]) => {
+        loadSeriesRegistryFresh(), // Use fresh fetch to get latest series data
+        fetchEngrainedCrosslink(image.id), // Check for Engrained crosslink
+      ]).then(([states, config, registry, engrained]) => {
         setEditionStates(states);
         setPricingData(config.pricing);
         setDescriptions(config.descriptions);
         setCardCopy(config.cardCopy);
         setInfoCopy(config.infoCopy);
         setSeriesRegistry(registry);
+        setEngrainedLink(engrained);
         setLoading(false);
       });
     }
@@ -289,7 +379,16 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
                     {def.fulfillment === "contact" && (
                       <div className="space-y-1.5">
                         {pricingList && pricingList.length > 0 ? (
-                          pricingList.map(({ size, price }) => (
+                          pricingList.map(({ size, price }) => {
+                            // Calculate inventory for this size
+                            const printedBySize = editionState?.printedBySize || {};
+                            const soldBySize = editionState?.soldBySize || {};
+                            const printed = printedBySize[size] || 0;
+                            const sold = soldBySize[size] || 0;
+                            const inventory = printed - sold;
+                            const hasInventory = inventory > 0;
+                            
+                            return (
                             <a
                               key={size}
                               href={buildMailtoLink(image, seriesKey, def, editionNumber, size, price)}
@@ -314,12 +413,16 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
                                   size: size,
                                   price: price,
                                   fulfillment: "contact",
+                                  hasInventory: hasInventory,
                                 });
                               }}
                             >
                               <span>{size}: ${price.toLocaleString()}</span>
+                              {hasInventory && (
+                                <span className="text-xs text-green-200/80 font-normal italic">· Quick ship available</span>
+                              )}
                             </a>
-                          ))
+                          );})
                         ) : (
                           <a
                             href={buildMailtoLink(image, seriesKey, def, editionNumber)}
@@ -354,6 +457,84 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
                 );
               })}
             </div>
+
+            {/* Engrained Series Cross-Link */}
+            {engrainedLink && (
+              <div className="mt-4 p-3 rounded-lg border-2 border-amber-400 bg-amber-50">
+                <div className="flex justify-between items-start mb-1">
+                  <div className="flex items-center gap-1.5">
+                    {/* Title + Info icon - opens museum-label overlay */}
+                    <button
+                      onClick={() => setActiveInfo("engrained")}
+                      className="group flex items-center gap-1.5 transition-colors"
+                      title="About the Engrained Series"
+                    >
+                      <span className="text-base" style={{ color: "#92400e" }}>◈</span>
+                      <span className="font-semibold text-amber-800 text-sm group-hover:text-amber-900">Also Available in Engrained Series</span>
+                      <Info className="w-3.5 h-3.5 text-amber-500 group-hover:text-amber-700" />
+                    </button>
+                  </div>
+                </div>
+                <p className="text-xs text-amber-700 mb-2 leading-relaxed">
+                  This image is also available as a stunning wood print on Baltic birch, featuring Wayne's signature UV layering process.
+                </p>
+                
+                {/* Show size and price if available */}
+                {(engrainedLink.imageSize || engrainedLink.price) && (
+                  <p className="text-sm text-amber-800 mb-3 font-medium">
+                    {engrainedLink.imageSize && <span>{engrainedLink.imageSize}</span>}
+                    {engrainedLink.imageSize && engrainedLink.price && <span> · </span>}
+                    {engrainedLink.price && <span>{engrainedLink.price}</span>}
+                  </p>
+                )}
+                
+                {/* Contact button - same style as Chronicle/Legend */}
+                <a
+                  href={buildEngrainedMailtoLink(image, engrainedLink)}
+                  className="inline-flex items-center justify-center gap-2 w-full text-center px-3 py-2 text-white rounded text-sm transition-all font-medium"
+                  style={{
+                    background: "linear-gradient(to bottom, #92400e 0%, #78350f 100%)",
+                    boxShadow: "0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.15)",
+                    border: "1px solid #78350f",
+                    textShadow: "0 1px 1px rgba(0,0,0,0.3)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "linear-gradient(to bottom, #78350f 0%, #451a03 100%)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "linear-gradient(to bottom, #92400e 0%, #78350f 100%)";
+                  }}
+                  onClick={() => {
+                    logUIEvent?.("engrained_crosslink_click", {
+                      page: window.location.pathname,
+                      imageId: image.id,
+                      engrainedId: engrainedLink.engrainedId,
+                      hasInventory: engrainedLink.hasInventory,
+                    });
+                  }}
+                >
+                  <span>Contact Us to Order</span>
+                  {engrainedLink.hasInventory && (
+                    <span className="text-xs text-green-200/90 font-normal italic">· Quick ship available</span>
+                  )}
+                </a>
+                
+                {/* View in Gallery link */}
+                <a
+                  href={engrainedLink.url}
+                  className="block mt-2 text-center text-xs text-amber-700 hover:text-amber-900 underline"
+                  onClick={() => {
+                    logUIEvent?.("engrained_view_gallery", {
+                      page: window.location.pathname,
+                      imageId: image.id,
+                      engrainedId: engrainedLink.engrainedId,
+                    });
+                  }}
+                >
+                  View in Engrained Gallery →
+                </a>
+              </div>
+            )}
 
             {/* Production Notes */}
             <div className="mt-4 pt-3 border-t border-gray-200">

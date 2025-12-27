@@ -1,0 +1,10 @@
+---
+// Admin page for tracking print inventory
+// Scans seriesRegistry for images with printed inventory (P - S > 0)
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import InventoryTrackerApp from "@/components/InventoryTrackerApp.jsx";
+---
+
+<BaseLayout title="Inventory Tracker">
+  <InventoryTrackerApp client:load />
+</BaseLayout>
