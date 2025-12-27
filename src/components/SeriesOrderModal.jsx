@@ -362,7 +362,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
                             e.currentTarget.style.background = "linear-gradient(to bottom, #f59e0b 0%, #d97706 100%)";
                           }}
                           onClick={() => {
-                            logUIEvent?.("series_order_click", {
+                            logUIEvent?.("order_submitted", {
                               page: window.location.pathname,
                               imageId: image.id,
                               series: seriesKey,
@@ -406,7 +406,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
                                 e.currentTarget.style.background = "linear-gradient(to bottom, #64748b 0%, #475469 100%)";
                               }}
                               onClick={() => {
-                                logUIEvent?.("series_order_click", {
+                                logUIEvent?.("order_submitted", {
                                   page: window.location.pathname,
                                   imageId: image.id,
                                   series: seriesKey,
@@ -440,7 +440,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
                               e.currentTarget.style.background = "linear-gradient(to bottom, #64748b 0%, #475469 100%)";
                             }}
                             onClick={() => {
-                              logUIEvent?.("series_order_click", {
+                              logUIEvent?.("order_submitted", {
                                 page: window.location.pathname,
                                 imageId: image.id,
                                 series: seriesKey,
@@ -505,11 +505,13 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
                     e.currentTarget.style.background = "linear-gradient(to bottom, #92400e 0%, #78350f 100%)";
                   }}
                   onClick={() => {
-                    logUIEvent?.("engrained_crosslink_click", {
+                    logUIEvent?.("order_submitted", {
                       page: window.location.pathname,
                       imageId: image.id,
+                      series: "engrained",
                       engrainedId: engrainedLink.engrainedId,
                       hasInventory: engrainedLink.hasInventory,
+                      fulfillment: "contact",
                     });
                   }}
                 >
@@ -524,9 +526,10 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
                   href={engrainedLink.url}
                   className="block mt-2 text-center text-xs text-amber-700 hover:text-amber-900 underline"
                   onClick={() => {
-                    logUIEvent?.("engrained_view_gallery", {
+                    logUIEvent?.("view_gallery", {
                       page: window.location.pathname,
                       imageId: image.id,
+                      series: "engrained",
                       engrainedId: engrainedLink.engrainedId,
                     });
                   }}

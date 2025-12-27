@@ -1225,9 +1225,10 @@ export default function ChapterGalleryBase({
                           onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
                           onClick={() => {
                             setShowPricingModal(true);
-                            logUIEvent("pricing_modal_open", {
+                            logUIEvent("order_clicked", {
                               page: window.location.pathname,
-                              imageId: galleryData[currentIndex]?.id
+                              imageId: galleryData[currentIndex]?.id,
+                              series: "engrained"
                             });
                           }}
                         >
@@ -1243,9 +1244,10 @@ export default function ChapterGalleryBase({
                           onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
                           onClick={() => {
                             setShowSeriesOrderModal(true);
-                            logUIEvent("series_order_modal_open", {
+                            logUIEvent("order_clicked", {
                               page: window.location.pathname,
-                              imageId: galleryData[currentIndex]?.id
+                              imageId: galleryData[currentIndex]?.id,
+                              series: "standard"
                             });
                           }}
                         >
@@ -1930,7 +1932,8 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                             e.currentTarget.style.background = "linear-gradient(to bottom, #92400e 0%, #78350f 100%)";
                           }}
                           onClick={() => {
-                            logUIEvent("contact_order_click", {
+                            logUIEvent("order_submitted", {
+                              series: "engrained",
                               page: window.location.pathname,
                               imageId: currentItem?.id,
                               imageTitle: currentItem?.title,

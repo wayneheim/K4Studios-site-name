@@ -34,11 +34,12 @@ export async function handler(event) {
   // Extract request context: UA, Referer, IP
   const ua = event.headers['user-agent'] || 'unknown';
   const referer = event.headers['referer'] || event.headers['referrer'] || 'none';
+  // Netlify's x-nf-client-connection-ip is most reliable, then x-forwarded-for
   const rawIp =
+    event.headers['x-nf-client-connection-ip'] ||
     event.headers['x-forwarded-for'] ||
     event.headers['client-ip'] ||
-    event.headers['x-nf-client-connection-ip'] ||
-    event.ip ||
+    event.requestContext?.identity?.sourceIp ||
     '';
   const ip = (rawIp || '')
     .toString()

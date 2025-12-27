@@ -3,7 +3,7 @@
     "version": "1.0",
     "description": "Edition state database - source of truth for edition counts and sales",
     "warning": "DO NOT manually edit sold counts. Use EditorPro or admin tools.",
-    "lastUpdated": "2025-12-23T01:41:56.213Z"
+    "lastUpdated": "2025-12-27T01:49:15.051Z"
   },
   "i-ncFcHDM:chronicle": {
     "imageId": "i-ncFcHDM",
@@ -11,7 +11,11 @@
     "editionLimit": 250,
     "sold": 0,
     "released": true,
-    "firstReleaseDate": "2025-12-16T23:07:04.797Z"
+    "firstReleaseDate": "2025-12-16T23:07:04.797Z",
+    "printedBySize": {
+      "16\" x 20\"": 0
+    },
+    "printed": 0
   },
   "i-ncFcHDM:legend": {
     "imageId": "i-ncFcHDM",

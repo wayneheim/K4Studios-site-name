@@ -146,9 +146,8 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/1/KxttDrjkvSkZd4x5VdfzRgHH8bX9FxNwBzzPwtnFL/S/_HF21354-1220-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/A",
+
     "keywords": [
-      "HF23312",
-      "1246",
       "rugged spirit",
       "western cowboy art",
       "cowboy art",
@@ -158,12 +157,14 @@ export const galleryData = [
       "western fine art",
       "western landscapes fine art"
     ],
+
     "story": "She knows. She’s known for some time. “Jim says I’m always right…” God, please — not this time. Shoulder to shoulder, breath to breath. However long, whatever the cost. He struggles — for air, for words to comfort, for a little more time beside her. “Don’t you worry, Milly… I think I got this thing on the ropes…” She’d give her own soul to make that be true. It was his dream to head West — the life they were meant to build together now reduced to a footnote in their journey. So many questions. So many tomorrows that may never come. But those aren’t for now.\n\nIn this moment — his touch, his warmth, his vow whispered in the dark — is all that matters. Till death do us part.",
     "notes": "“Till Death Do Us Part” distills one of the most intimate and human moments in the Western canon: the quiet intersection of love, mortality, and devotion on the frontier. Lantern light pools gently across the figures, sculpting the scene in warm, painterly tones that recall the emotional restraint of Wyeth and the narrative weight of classic American illustration.\n\nThe composition anchors the viewer in the closeness of the couple—their faces pressed together, hands intertwined—while the darkened edges of the frame suggest the encroaching uncertainty beyond their small circle of light. The textures of worn fabric, rough wood, and soft illumination create a tactile sense of place, grounding the scene in lived experience rather than myth. What elevates the work is its sincerity: a portrayal of frontier hardship not as spectacle, but as a shared human passage. It offers collectors a piece of Western storytelling that is both timeless and profoundly intimate.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 3,
+
     "themes": {
       "women-of-the-west": 0,
       "firelight-shadow": 1,
@@ -172,7 +173,9 @@ export const galleryData = [
       "love-goodbye": 0,
       "whispering-reflection": 0
     },
-},
+
+    contentSource: "human"
+  },
   {
     "id": "i-44jcjTQ",
     "title": "Over My Dead Body: Frontier Stand-off ",
