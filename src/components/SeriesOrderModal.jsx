@@ -122,28 +122,47 @@ function buildMailtoLink(image, seriesKey, seriesDef, editionNumber, selectedSiz
 }
 
 // Fetch Engrained data to check if current image has an Engrained counterpart
+// Uses static endpoint (works in production), falls back to Netlify function (for fresh data in dev)
 async function fetchEngrainedCrosslink(imageId) {
+  // Helper to parse response and find linked item
+  const findLinkedItem = (data) => {
+    const linked = (data.items || []).find(
+      item => item.linkedImageId === imageId && item.visibility !== "ghost"
+    );
+    if (linked) {
+      const inv = linked.inventory || {};
+      const inStock = inv.inStock || Math.max(0, (inv.printed || 0) - (inv.sold || 0));
+      return {
+        engrainedId: linked.id,
+        title: linked.title,
+        url: `/Other/K4-Select-Series/Engrained/Engrained-Series/${linked.id}`,
+        price: linked.price,
+        imageSize: linked.imageSize,
+        inStock: inStock,
+        hasInventory: inStock > 0
+      };
+    }
+    return null;
+  };
+
+  // Try static endpoint first (always works in production)
+  try {
+    const res = await fetch(`/data/engrainedData.json?_t=${Date.now()}`, { cache: "no-store" });
+    if (res.ok) {
+      const data = await res.json();
+      const result = findLinkedItem(data);
+      if (result) return result;
+    }
+  } catch (err) {
+    console.warn("[SeriesOrderModal] Static Engrained endpoint failed, trying function:", err.message);
+  }
+
+  // Fallback to Netlify function (for admin/dev with fresh writes)
   try {
     const res = await fetch(`/.netlify/functions/engrainedData?_t=${Date.now()}`, { cache: "no-store" });
     if (res.ok) {
       const data = await res.json();
-      // Find an Engrained item that links to this image
-      const linked = (data.items || []).find(
-        item => item.linkedImageId === imageId && item.visibility !== "ghost"
-      );
-      if (linked) {
-        const inv = linked.inventory || {};
-        const inStock = inv.inStock || Math.max(0, (inv.printed || 0) - (inv.sold || 0));
-        return {
-          engrainedId: linked.id,
-          title: linked.title,
-          url: `/Other/K4-Select-Series/Engrained/Engrained-Series/${linked.id}`,
-          price: linked.price,
-          imageSize: linked.imageSize,
-          inStock: inStock,
-          hasInventory: inStock > 0
-        };
-      }
+      return findLinkedItem(data);
     }
   } catch (err) {
     console.error("[SeriesOrderModal] Error fetching Engrained crosslink:", err);
