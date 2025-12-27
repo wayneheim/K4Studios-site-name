@@ -186,7 +186,7 @@ const galleryPaths = Object.keys(galleryDataMap);
                 <p class="text-sm text-gray-600 mb-2">{story.date}</p>
                 <p
                   class="mb-4"
-                  set:html={autoLinkKeywordsInText(story.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic)}
+                  set:html={autoLinkKeywordsInText(story.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)}
                 />
                 <a href={`/Other/Stories/${story.slug}`} class="underline text-blue-700">View Story →</a>
               </div>

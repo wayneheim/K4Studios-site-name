@@ -92,7 +92,7 @@ const featheredImages = allImages.filter(img => (img as any).visibility !== "gho
 const galleryPaths = Object.keys(galleryDataMap);
 
 // Helper function to reduce repetition
-const linkKeywords = (text: string) => autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic);
+const linkKeywords = (text: string) => autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname);
 
 const blogBreadcrumb = `Other › <a href='/Other/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › High Ground Justice`;
 ---

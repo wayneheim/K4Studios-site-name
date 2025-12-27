@@ -162,9 +162,12 @@ export function autoLinkKeywordsInText(
   featheredImages: { id: string }[],
   _galleryPaths: string[],
   semantic = defaultSemantic,
-  sectionPath = '/index'
+  pagePath: string  // REQUIRED - no default, must be passed explicitly
 ): string {
   if (!html) return html;
+  
+  // Normalize pagePath for comparison
+  const currentPath = (pagePath || '').replace(/\/+$/, '').toLowerCase();
 
   const exclude = new Set(featheredImages.map(i => i.id));
 
@@ -226,6 +229,7 @@ export function autoLinkKeywordsInText(
 
     let href: string | undefined;
     let fallbackImagePath: string | undefined;
+    let skipLinking = false;  // Flag for same-page with no fallback
 
     // a) overrides
     if (overrides[matchText] || overrides[lc]) {
@@ -237,19 +241,26 @@ export function autoLinkKeywordsInText(
       const res = getSectionForKW(lc, semantic);
       if (res && res.type === 'landing') {
         const targetPath = res.section.path;
-        // Normalize both paths for comparison (strip trailing slashes, lowercase)
+        // Normalize target path for comparison
         const normTarget = targetPath.replace(/\/+$/, '').toLowerCase();
-        const normCurrent = sectionPath.replace(/\/+$/, '').toLowerCase();
         
         // If linking to same page, use fallbackImagePath if defined
-        if (normTarget === normCurrent) {
-          // Store the fallback path to use in step (c)
-          fallbackImagePath = res.section.fallbackImagePath;
+        if (normTarget === currentPath) {
+          if (res.section.fallbackImagePath) {
+            // Store the fallback path to use in step (c)
+            fallbackImagePath = res.section.fallbackImagePath;
+          } else {
+            // No fallback defined - skip linking entirely (render plain text)
+            skipLinking = true;
+          }
         } else {
           href = targetPath;
         }
       }
     }
+
+    // If same-page with no fallback, skip this match entirely
+    if (skipLinking) continue;
 
     // c) semantic image (multi-section) OR fallback from same-page landing
     if (!href) {

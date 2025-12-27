@@ -158,26 +158,26 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
               {section.title && (
                 <h2
                   class="slide-in-left"
-                  set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic)}
+                  set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)}
                 />
               )}
               {section.subhead && (
                 <h3
                   class="slide-in-left"
-                  set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic)}
+                  set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)}
                 />
               )}
               {section.tagline && (
                 <h4
                   class="tagline reveal-on-scroll"
-                  set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic)}
+                  set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)}
                 />
               )}
               {section.paragraphs?.map((para, i) => (
                 <p
                   key={i}
                   class="reveal-on-scroll"
-                  set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)}
+                  set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)}
                 />
               ))}
               {section.list && section.list.length > 0 && (
@@ -186,7 +186,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
                     <li
                       key={j}
                       class="reveal-on-scroll"
-                      set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic)}
+                      set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)}
                     />
                   ))}
                 </ul>

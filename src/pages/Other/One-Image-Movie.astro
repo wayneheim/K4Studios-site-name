@@ -139,7 +139,7 @@ const combinedStructuredData = `[${structuredData}, ${breadcrumbData}]`;
             )}
             
             {section.paragraphs?.map((para) => (
-              <p style="line-height: 1.6; margin-bottom: 1rem; font-size: 1.01rem;" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic)} />
+              <p style="line-height: 1.6; margin-bottom: 1rem; font-size: 1.01rem;" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
             ))}
           </article>
         ))}
