@@ -5,7 +5,7 @@ export const painterlyStory = [
     title: "Western Fine Art Photography: Story, Character, and the Human West",
     paragraphs: [
       "Western fine art photography is not about nostalgia or spectacle. It is about people — the lives shaped by land, labor, weather, and time. The American West endures not as myth, but as lived experience.",
-      "Wayne Heim’s Western fine art photography moves beyond surface imagery to explore character, story, and presence. These are not staged icons or romantic caricatures. They are intimate portraits of individuals whose identities are inseparable from the places they inhabit."
+      "Wayne Heim's Western-themed fine art photography moves beyond surface imagery to explore character, story, and presence. These are not staged icons or romantic caricatures — they are cowboy culture rendered as fine art, intimate portraits of individuals whose identities are inseparable from the places they inhabit."
     ]
   },
 
@@ -23,7 +23,7 @@ export const painterlyStory = [
     subhead: "Story Lives Inside the Frame",
     paragraphs: [
       "Every image exists in the space between moments — after something has happened, but before its consequences are revealed. A hand lowers. A gaze holds. Dust settles without fully surrendering motion.",
-      "This suspended narrative forms the foundation of the One-Image Movie™. Each photograph operates as a single cinematic frame, carrying emotional weight without explanation. The image does not tell the story outright — it invites the viewer to complete it."
+      "This suspended narrative forms the foundation of the One-Image Movie™. Wild West–inspired narratives unfold within a single cinematic frame, carrying emotional weight without explanation. The image does not tell the story outright — it invites the viewer to complete it."
     ]
   },
 
@@ -58,7 +58,7 @@ export const painterlyStory = [
   {
     subhead: "For Collectors of Western Fine Art",
     paragraphs: [
-      "This body of work is created for collectors who value depth over decoration — those drawn to imagery that carries emotional gravity and narrative integrity.",
+      "This body of work is created for collectors who value depth over decoration — those drawn to Western style without decorative clichés, imagery that carries emotional gravity and narrative integrity.",
       "Each photograph is meant to live with you, not as an object to be glanced at once, but as a presence that continues to speak."
     ]
   },

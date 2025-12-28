@@ -199,6 +199,53 @@ westernBlackWhiteHub: {
   imagePhrases: []
 },
 
+// ============================================================================
+// GLOSSARY-ONLY ENTRIES (definition + hub links, no pages or auto-linking)
+// These terms are modifiers captured via glossary, NOT landing page targets.
+// ============================================================================
+
+glossaryCowboyArt: {
+  def: "Cowboy art encompasses visual representations of Western ranch life, frontier work, and the iconic cowboy figure. In fine art contexts, it moves beyond decor clichés to explore character, story, and the lived reality of the American West. See <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> | <a href='/Painterly-Western-Photography'>Painterly Western Photography</a>.",
+  landingPhrases: [
+    { phrase: "cowboy art", rating: 3, use: false },
+    { phrase: "cowboy wall art", rating: 3, use: false },
+  ],
+  imagePhrases: []
+},
+
+glossaryWesternStylePhotography: {
+  def: "Western style photography refers to imagery evoking the aesthetic of the American West—rustic, rugged, and frontier-inspired. Fine art Western photography distinguishes itself from decorative or mass-produced imagery by emphasizing narrative depth, authentic character, and photographic craft. Explore <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> | <a href='/Painterly-Western-Photography'>Painterly Western Photography</a>.",
+  landingPhrases: [
+    { phrase: "western style photography", rating: 3, use: false },
+  ],
+  imagePhrases: []
+},
+
+glossaryWesternThemedPhotography: {
+  def: "Western themed photography captures subjects, settings, and narratives inspired by the American frontier—cowboys, ranches, open landscapes, and frontier figures. Fine art Western photography transcends themed decoration by grounding imagery in real people, lived experience, and cinematic storytelling. See <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> | <a href='/Western-Black-and-White-Photography'>Western Black and White Photography</a>.",
+  landingPhrases: [
+    { phrase: "western themed photography", rating: 3, use: false },
+  ],
+  imagePhrases: []
+},
+
+glossaryWildWestPhotography: {
+  def: "Wild West photography evokes the untamed American frontier—outlaws, pioneers, and the mythology of westward expansion. Fine art Wild West imagery moves beyond nostalgic spectacle to explore character, moral complexity, and the human stories behind the legend. Explore <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> | <a href='/Painterly-Western-Photography'>Painterly Western Photography</a>.",
+  landingPhrases: [
+    { phrase: "wild west photography", rating: 3, use: false },
+    { phrase: "wild west art", rating: 3, use: false },
+  ],
+  imagePhrases: []
+},
+
+glossaryBlackWhiteWesternArt: {
+  def: "Black and white Western art strips the American frontier to its essential elements—contrast, character, and timeless form. Unlike decorative Western wall art, fine art monochrome Western photography emphasizes tonal craft, emotional weight, and narrative depth that transcends trend. See <a href='/Western-Black-and-White-Photography'>Western Black and White Photography</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
+  landingPhrases: [
+    { phrase: "black and white western art", rating: 3, use: false },
+  ],
+  imagePhrases: []
+},
+
  cowboy: {
   path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
   def: "Painterly Western portraits—dust, leather, and long light—balancing grit and myth.",

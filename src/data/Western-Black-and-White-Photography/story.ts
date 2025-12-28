@@ -4,7 +4,7 @@ export const bwWesternStory = [
   {
     title: "Western Black and White Photography: Contrast, Character, and the Timeless West",
     paragraphs: [
-      "Western black and white photography is a form of Western fine art photography that strips the American West to its essential elements — contrast, character, and story. Light against shadow, presence against absence, silence against narrative.",
+      "Black and white Western style photography strips the American West to its essential elements — contrast, character, and story. Light against shadow, presence against absence, silence against narrative.",
       "Wayne Heim's Western black and white photography moves beyond monochrome aesthetics to explore the deeper architecture of the frontier. These are images built on contrast — not just tonal, but moral, emotional, and narrative."
     ]
   },
@@ -14,7 +14,7 @@ export const bwWesternStory = [
     subhead: "Why Black and White?",
     paragraphs: [
       "Color documents. Black and white interprets. When color is removed, the eye is freed to see form, texture, and the interplay of light and shadow that defines character.",
-      "In Western photography, black and white carries additional weight — it evokes the era before Technicolor rewrote the frontier, connecting contemporary work to the visual language of early Western photography and cinema."
+      "This is Wild West imagery stripped to essentials — evoking the era before Technicolor rewrote the frontier, connecting contemporary work to the visual language of early Western photography and cinema."
     ]
   },
 
@@ -32,7 +32,7 @@ export const bwWesternStory = [
     subhead: "Character Revealed",
     paragraphs: [
       "Without the distraction of color, character emerges in finer detail. The texture of weathered skin, the set of a jaw, the weight carried in a gaze — these become the subject.",
-      "Black and white cowboy portraits in this collection present individuals, not icons. Their humanity is visible precisely because the image has been stripped to essentials."
+      "These are cowboy portraits beyond decor aesthetics — individuals, not icons. Their humanity is visible precisely because the image has been stripped to essentials."
     ]
   },
 
