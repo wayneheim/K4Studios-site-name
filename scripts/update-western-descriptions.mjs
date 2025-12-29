@@ -48,6 +48,9 @@ const IS_TRANSPORTATION = args.includes('--transportation');
 const IS_TRANSPORTATION_TRAINS = args.includes('--trains');
 const IS_TRANSPORTATION_TRAINS_BW = args.includes('--trains-bw');
 const IS_TRANSPORTATION_CARS = args.includes('--cars');
+// Miscellaneous sub-galleries
+const IS_MISC = args.includes('--misc');
+const IS_MISC_PORTRAITS = args.includes('--misc-portraits');
 const LIMIT_MATCH = args.find(a => a.startsWith('--limit='));
 const MAX_UPDATES = LIMIT_MATCH ? parseInt(LIMIT_MATCH.split('=')[1], 10) : Infinity;
 
@@ -56,7 +59,18 @@ let GALLERY_TYPE = 'Color';
 let GALLERY_SUBDIR = 'Western-Cowboy-Portraits';
 let GALLERY_BASE = 'Facing-History'; // default base path
 let GALLERY_FILENAME_OVERRIDE = null; // for non-standard filenames
-if (IS_TRANSPORTATION) {
+if (IS_MISC) {
+  GALLERY_BASE = 'Miscellaneous';
+  GALLERY_SUBDIR = ''; // files are directly in Miscellaneous folder
+  if (IS_MISC_PORTRAITS) {
+    GALLERY_TYPE = 'Miscellaneous Portraits';
+    GALLERY_FILENAME_OVERRIDE = 'Portraits.mjs';
+  } else {
+    // Default to Portraits
+    GALLERY_TYPE = 'Miscellaneous Portraits';
+    GALLERY_FILENAME_OVERRIDE = 'Portraits.mjs';
+  }
+} else if (IS_TRANSPORTATION) {
   GALLERY_BASE = 'Transportation';
   GALLERY_SUBDIR = ''; // files are directly in Transportation folder
   if (IS_TRANSPORTATION_CARS) {
@@ -573,6 +587,100 @@ const transportationStateHints = {
   invention: ['design', 'engineering', 'built', 'chrome', 'detail']
 };
 
+// ============================================
+// MISCELLANEOUS PORTRAITS CONSTANTS
+// ============================================
+
+// Miscellaneous Portraits style phrases - rotate (one per description)
+const MISC_PORTRAITS_STYLE_PHRASES = [
+  'western photography style',
+  'painterly fine art photography',
+  'thematic portrait photography',
+  'narrative fine art photography'
+];
+
+// "Story in one frame" phrases - use sparingly (~20% of images, never consecutive)
+const STORY_IN_ONE_FRAME_PHRASES = [
+  'treated as a story in one frame',
+  'composed as a story in one frame',
+  'a single story held within one frame'
+];
+
+// Miscellaneous Portraits subject hints - detect from src URL folder paths
+const MISC_PORTRAITS_SRC_HINTS = {
+  'wedding': 'a bride',
+  'deb-and-cody': 'a bride',
+  'models-in-may': 'a portrait subject',
+  'models': 'a portrait subject',
+  'kid-pics': 'a young subject',
+  'kids': 'a young subject',
+  'emma': 'a portrait subject',
+  'travis': 'a portrait subject',
+  'ivy': 'a portrait subject',
+  'x-mas': 'a family portrait',
+  'xmas': 'a family portrait',
+  'christmas': 'a family portrait',
+  'd-day': 'a WWII reenactor',
+  'conneaut': 'a WWII reenactor',
+  'hardwood': 'a senior portrait',
+  'senior': 'a senior portrait',
+  'prom': 'a prom portrait',
+  'old-bedford': 'a Western reenactor',
+  'reenact': 'a historical reenactor',
+  'enchanted': 'a portrait subject',
+  'sleeping': 'a sleeping figure'
+};
+
+// Miscellaneous Portraits keyword/alt hints - detect subject type
+// Note: "reenactors" is in almost all images as a generic keyword, so don't match it
+const MISC_PORTRAITS_KEYWORD_HINTS = {
+  'bride': 'a bride',
+  'groom': 'a groom',
+  'wedding': 'a wedding portrait',
+  'sleeping': 'a sleeping figure',
+  'enchanted': 'a dreaming figure',
+  'cowboy': 'a Western figure',
+  '1880': 'an 1880s-era figure',
+  '1890': 'an 1890s-era figure',
+  'wild west': 'a Wild West figure'
+};
+
+// Miscellaneous Portraits dominant states - rotate, no back-to-back repeats
+const MISC_PORTRAITS_DOMINANT_STATES = [
+  'vigilance',
+  'restraint',
+  'resolve',
+  'aftermath',
+  'reflection',
+  'authority',
+  'endurance',
+  'consequence'
+];
+
+// Miscellaneous Portraits emotional truths - grounded human reality
+const MISC_PORTRAITS_EMOTIONAL_TRUTHS = {
+  vigilance: 'awareness shaped those who carried weight quietly',
+  restraint: 'stillness held meaning beyond action',
+  resolve: 'purpose defined those who endured',
+  aftermath: 'what remained told the deeper story',
+  reflection: 'the quiet moment revealed the interior life',
+  authority: 'presence was earned through composure',
+  endurance: 'strength was measured in what was carried forward',
+  consequence: 'every choice left its mark'
+};
+
+// Miscellaneous Portraits state hints for keyword matching
+const miscPortraitsStateHints = {
+  vigilance: ['watch', 'gaze', 'look', 'eye', 'alert', 'aware'],
+  restraint: ['still', 'calm', 'quiet', 'subtle', 'reserved'],
+  resolve: ['strong', 'steady', 'determined', 'purpose', 'firm'],
+  aftermath: ['rest', 'pause', 'after', 'remain', 'left'],
+  reflection: ['think', 'quiet', 'interior', 'inward', 'contemplat'],
+  authority: ['command', 'presence', 'stance', 'pose', 'power'],
+  endurance: ['carry', 'bear', 'hold', 'weight', 'last'],
+  consequence: ['mark', 'cost', 'price', 'choice', 'result']
+};
+
 // Native American authority sentences - rotate through these
 const NA_AUTHORITY_SENTENCES = [
   "Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle.",
@@ -745,7 +853,25 @@ const BOILERPLATE_PATTERNS = [
   'steam clouds',
   'train engine',
   'yard worker',
-  'locomotive'
+  'locomotive',
+  // Miscellaneous Portraits boilerplate patterns
+  'immerse yourself in experimental fine art',
+  'experimental fine art with this stunning',
+  'capturing miscellaneous painterly photography',
+  'miscellaneous painterly photography',
+  'creative painterly art',
+  'a must-have for collectors of experimental',
+  'a testament to experimental fine art',
+  'comes alive in this piece',
+  'painterly photography portraits by wayne heim',
+  'experimental fine art by wayne heim',
+  '© wayne heim 2018',
+  '© wayne heim 2021',
+  'ideal for admirers of experimental',
+  'witness experimental fine art',
+  'experience experimental fine art',
+  'behold  a poster done in a photoshoot',
+  'fine art painterly portrait photography:'
 ];
 
 /**
@@ -1030,9 +1156,10 @@ function extractFromDescription(description) {
 
 /**
  * Extract subject - priority: alt > description fragment > keywords > fallback
- * For NA and CW galleries: skip description extraction (boilerplate contaminates) 
+ * For NA and CW galleries: skip description extraction (boilerplate contaminates)
+ * For Misc Portraits: also uses src URL paths to detect subject type
  */
-function extractSubject(title, alt, keywords, description) {
+function extractSubject(title, alt, keywords, description, src) {
   // For Landscape gallery, ALWAYS use geographic subjects (bypass alt text completely)
   // Alt text in landscape galleries is often misaligned or SEO-stuffed
   if (IS_LANDSCAPE) {
@@ -1136,6 +1263,55 @@ function extractSubject(title, alt, keywords, description) {
     return 'a vintage train'; // default for trains
   }
   
+  // For Miscellaneous Portraits gallery, extract subject from description → alt → src → keywords → fallback
+  if (IS_MISC) {
+    const srcLower = (src || '').toLowerCase();
+    const titleLower = (title || '').toLowerCase();
+    const altLower = (alt || '').toLowerCase();
+    const keywordsLower = (keywords || []).join(' ').toLowerCase();
+    const descLower = (description || '').toLowerCase();
+    
+    // 1. Priority: Check description for specific noun phrases first
+    if (descLower.includes('lady sleeping')) return 'a sleeping figure';
+    if (descLower.includes('sleeping')) return 'a sleeping figure';
+    if (descLower.includes('enchanted')) return 'a dreaming figure';
+    if (descLower.includes('1880') && descLower.includes('woman')) return 'an 1880s-era woman';
+    if (descLower.includes('cowboy')) return 'a Western figure';
+    if (descLower.includes('reenactor')) return 'a historical reenactor';
+    if (descLower.includes('western reenactor')) return 'a Western reenactor';
+    if (descLower.includes('old bedford')) return 'a Western reenactor';
+    
+    // 2. Check alt text (only if descriptive, not title echo)
+    const altRejects = ['fine art painterly portrait photography:', 'fine art', 'painterly', 'portrait photography'];
+    const isAltUseful = altLower.length > 15 && !altRejects.some(r => altLower.startsWith(r));
+    if (isAltUseful) {
+      // Try to extract noun from alt
+      if (altLower.includes('woman')) return 'a woman';
+      if (altLower.includes('man') && !altLower.includes('woman')) return 'a man';
+      if (altLower.includes('bride')) return 'a bride';
+      if (altLower.includes('girl')) return 'a young woman';
+      if (altLower.includes('boy')) return 'a young man';
+      if (altLower.includes('child')) return 'a child';
+    }
+    
+    // 3. Check src URL for folder hints (context clues)
+    for (const [hint, subject] of Object.entries(MISC_PORTRAITS_SRC_HINTS)) {
+      if (srcLower.includes(hint)) return subject;
+    }
+    
+    // 4. Check keywords for subject hints
+    for (const [hint, subject] of Object.entries(MISC_PORTRAITS_KEYWORD_HINTS)) {
+      if (keywordsLower.includes(hint)) return subject;
+    }
+    
+    // 5. Generic fallbacks - visually literal
+    if (keywordsLower.includes('woman') || keywordsLower.includes('young lady')) return 'a woman';
+    if (keywordsLower.includes('man')) return 'a man';
+    
+    // Final fallback - generic portrait subjects
+    return 'a solitary figure';
+  }
+  
   // 1. Try alt text first (primary) - pass title to detect echoes
   const altSubject = cleanAltText(alt, title);
   if (altSubject) return altSubject;
@@ -1228,16 +1404,16 @@ function extractSubject(title, alt, keywords, description) {
 }
 
 /**
- * Pick dominant state based on keywords and title
+ * Pick dominant state based on keywords, title, and image index for fallback rotation
  */
-function pickDominantState(image, usedStates) {
+function pickDominantState(image, usedStates, imageIndex = 0) {
   const blob = [
     image.title || '',
     ...(image.keywords || [])
   ].join(' ').toLowerCase();
 
   // Use era-specific states pool
-  const statesPool = IS_TRANSPORTATION ? TRANSPORTATION_DOMINANT_STATES : ((IS_LANDSCAPE || IS_LOCATION) ? LANDSCAPE_DOMINANT_STATES : (IS_R20S ? R20S_DOMINANT_STATES : (IS_WWII ? WWII_DOMINANT_STATES : (IS_CW ? CW_DOMINANT_STATES : DOMINANT_STATES))));
+  const statesPool = IS_MISC ? MISC_PORTRAITS_DOMINANT_STATES : (IS_TRANSPORTATION ? TRANSPORTATION_DOMINANT_STATES : ((IS_LANDSCAPE || IS_LOCATION) ? LANDSCAPE_DOMINANT_STATES : (IS_R20S ? R20S_DOMINANT_STATES : (IS_WWII ? WWII_DOMINANT_STATES : (IS_CW ? CW_DOMINANT_STATES : DOMINANT_STATES)))));
 
   // Landscape specific hints (also used for Location galleries)
   const landscapeStateHints = {
@@ -1301,13 +1477,20 @@ function pickDominantState(image, usedStates) {
     duty: ['oath', 'morning', 'work', 'trail', 'job', 'ritual']
   };
 
-  const hints = IS_TRANSPORTATION ? transportationStateHints : ((IS_LANDSCAPE || IS_LOCATION) ? landscapeStateHints : (IS_R20S ? r20sStateHints : (IS_WWII ? wwiiStateHints : (IS_CW ? cwStateHints : stateHints))));
+  const hints = IS_MISC ? miscPortraitsStateHints : (IS_TRANSPORTATION ? transportationStateHints : ((IS_LANDSCAPE || IS_LOCATION) ? landscapeStateHints : (IS_R20S ? r20sStateHints : (IS_WWII ? wwiiStateHints : (IS_CW ? cwStateHints : stateHints)))));
 
-  // Find best match
+  // Find best match from hints
   for (const [state, hintWords] of Object.entries(hints)) {
     if (statesPool.includes(state) && hintWords.some(hint => blob.includes(hint)) && !usedStates.has(state)) {
       return state;
     }
+  }
+
+  // Fallback: for Misc Portraits with sparse keywords, use index-based rotation
+  // This ensures even distribution across all 8 states with no back-to-back repeats
+  if (IS_MISC) {
+    const stateIndex = imageIndex % statesPool.length;
+    return statesPool[stateIndex];
   }
 
   // Fallback: pick unused state from appropriate pool
@@ -1330,7 +1513,7 @@ function pickDominantState(image, usedStates) {
  * For CW: uses Civil War-specific authority framing, no frontier/western language
  */
 function buildWesternDescription(image, dominantState, imageIndex, galleryPath) {
-  const subject = extractSubject(image.title, image.alt, image.keywords, image.description);
+  const subject = extractSubject(image.title, image.alt, image.keywords, image.description, image.src);
   
   // Landscape gallery - place, atmosphere, emotional geography framing
   if (IS_LANDSCAPE) {
@@ -1392,6 +1575,34 @@ function buildWesternDescription(image, dominantState, imageIndex, galleryPath) 
     }
     
     let description = `A painterly fine art photograph of ${subject}, defined by motion rather than nostalgia. Wayne Heim's ${authorityPhrase} explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. ${closingPhrase} ${collectionPhrase} © Wayne Heim`;
+    
+    return description
+      .replace(/[""]/g, '"')
+      .replace(/['']/g, "'")
+      .replace(/[—–]/g, '-');
+  }
+  
+  // Miscellaneous Portraits gallery - character-driven, story in one frame (sparingly)
+  if (IS_MISC) {
+    const emotionalTruth = MISC_PORTRAITS_EMOTIONAL_TRUTHS[dominantState] || MISC_PORTRAITS_EMOTIONAL_TRUTHS['restraint'];
+    const stylePhrase = MISC_PORTRAITS_STYLE_PHRASES[imageIndex % MISC_PORTRAITS_STYLE_PHRASES.length];
+    
+    // "Story in one frame" - use sparingly (~20% of images, never consecutive)
+    // Use on every 4th or 5th image (roughly 20-25%), offset to avoid pattern
+    const useStoryPhrase = (imageIndex % 5 === 2); // indices 2, 7, 12, 17, etc.
+    
+    let description = `A painterly fine art photograph of ${subject}, defined by ${dominantState} rather than spectacle. `;
+    
+    if (useStoryPhrase) {
+      const storyPhrase = STORY_IN_ONE_FRAME_PHRASES[imageIndex % STORY_IN_ONE_FRAME_PHRASES.length];
+      description += `Wayne Heim's ${stylePhrase} uses a disciplined approach to explore human presence and emotional reality, ${storyPhrase}. `;
+    } else {
+      description += `Wayne Heim's ${stylePhrase} uses a disciplined approach to explore human presence and emotional reality, where ${emotionalTruth}. `;
+    }
+    
+    description += "Light, posture, and restraint shape a narrative rooted in consequence and memory. ";
+    description += "Part of Wayne Heim's fine art portrait photography collection. ";
+    description += "© Wayne Heim";
     
     return description
       .replace(/[""]/g, '"')
@@ -1597,9 +1808,9 @@ async function processGallery() {
         continue;
       }
 
-      // Pick dominant state (avoid repeating last state)
+      // Pick dominant state (avoid repeating last state, use matchIndex for even rotation)
       const recentStates = new Set(lastState ? [lastState] : []);
-      const dominantState = pickDominantState(image, recentStates);
+      const dominantState = pickDominantState(image, recentStates, matchIndex);
       lastState = dominantState;
       stateSequence.push(dominantState);
 
@@ -1618,7 +1829,7 @@ async function processGallery() {
           title: image.title,
           alt: (image.alt || '').substring(0, 60) + '...',
           state: dominantState,
-          subject: extractSubject(image.title, image.alt, image.keywords, image.description),
+          subject: extractSubject(image.title, image.alt, image.keywords, image.description, image.src),
           before: oldDescription.substring(0, 80) + '...',
           after: newDescription.substring(0, 120) + '...'
         };
