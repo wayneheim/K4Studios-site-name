@@ -1,4 +1,5 @@
 // netlify/functions/importGalleryItems.js
+// Also supports GET requests for listing and reading gallery files
 const fs = require("fs/promises");
 const path = require("path");
 
@@ -12,6 +13,26 @@ function resolveDatasetAbsolute(datasetPath) {
   const ok = ALLOWED_ROOTS.some(root => rel.startsWith(toPosix(root) + "/"));
   if (!ok) throw new Error("Dataset must be under src/data/Galleries or src/pages/Other");
   return path.join(process.cwd(), rel);
+}
+
+// Recursively find all .mjs files in a directory
+async function findMjsFiles(dir, basePath = "", files = []) {
+  try {
+    const entries = await fs.readdir(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      const relativePath = basePath ? `${basePath}/${entry.name}` : entry.name;
+      if (entry.isDirectory()) {
+        await findMjsFiles(fullPath, relativePath, files);
+      } else if (entry.isFile() && entry.name.endsWith(".mjs")) {
+        files.push("/" + relativePath);
+      }
+    }
+  } catch (err) {
+    // Ignore directories that don't exist
+    if (err.code !== "ENOENT") console.warn("findMjsFiles error:", err.message);
+  }
+  return files;
 }
 
 /* helpers */
@@ -49,6 +70,8 @@ function normalizeItem(raw) {
   if (raw.contentSource != null) out.contentSource = raw.contentSource;
   // NOTE: availableSeries is NOT stored in .mjs files - it's stored only in seriesRegistry.json
   if (raw.noSketch === true) out.noSketch = true;
+  // Preserve first_seen date for Photo Shoots tracking
+  if (raw.first_seen != null) out.first_seen = raw.first_seen;
   return out;
 }
 
@@ -75,7 +98,88 @@ function extractArrayFromMjs(code) {
 }
 
 exports.handler = async (event) => {
-  if (event.httpMethod !== "POST") return { statusCode: 405, body: "Method Not Allowed" };
+  const headers = {
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+    "Cache-Control": "no-store"
+  };
+
+  // Handle CORS preflight
+  if (event.httpMethod === "OPTIONS") {
+    return { statusCode: 200, headers, body: "" };
+  }
+
+  // GET: List all gallery files or read a specific one
+  if (event.httpMethod === "GET") {
+    const action = event.queryStringParameters?.action;
+    const galleryPath = event.queryStringParameters?.path;
+
+    // List all gallery .mjs files
+    if (action === "list") {
+      try {
+        let allFiles = [];
+        for (const root of ALLOWED_ROOTS) {
+          const rootPath = path.join(process.cwd(), root);
+          const files = await findMjsFiles(rootPath, root);
+          allFiles.push(...files);
+        }
+        return {
+          statusCode: 200,
+          headers,
+          body: JSON.stringify({ files: allFiles.sort() })
+        };
+      } catch (err) {
+        return {
+          statusCode: 500,
+          headers,
+          body: JSON.stringify({ error: err.message })
+        };
+      }
+    }
+
+    // Read a specific gallery file
+    if (galleryPath) {
+      try {
+        const absPath = resolveDatasetAbsolute(galleryPath);
+        const code = await fs.readFile(absPath, "utf8");
+        const galleryData = extractArrayFromMjs(code);
+        if (!galleryData) {
+          return {
+            statusCode: 400,
+            headers,
+            body: JSON.stringify({ error: "Could not parse galleryData" })
+          };
+        }
+        return {
+          statusCode: 200,
+          headers,
+          body: JSON.stringify({ 
+            path: galleryPath, 
+            galleryData: galleryData.map(normalizeItem) 
+          })
+        };
+      } catch (err) {
+        return {
+          statusCode: err.code === "ENOENT" ? 404 : 500,
+          headers,
+          body: JSON.stringify({ error: err.message })
+        };
+      }
+    }
+
+    return {
+      statusCode: 400,
+      headers,
+      body: JSON.stringify({ error: "Missing action or path parameter" })
+    };
+  }
+
+  // POST: Import items between galleries
+  if (event.httpMethod !== "POST") {
+    return { statusCode: 405, headers, body: JSON.stringify({ error: "Method Not Allowed" }) };
+  }
 
   try {
     const { toDatasetPath, fromDatasetPath, selectedIds, selectedItems } = JSON.parse(event.body || "{}");

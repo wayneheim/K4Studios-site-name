@@ -1,0 +1,46 @@
+{
+  "quarter": "2025-Q4",
+  "status": "approved",
+  "created_at": "2025-12-29T03:14:44.279Z",
+  "updated_at": "2025-12-29T03:47:02.131Z",
+  "images": [
+    {
+      "image_id": "i-LCspRF4",
+      "source_gallery": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+      "title_snapshot": "Day in Review",
+      "thumbnail_url": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/MtnqV9z3WtkP9zbm3JWLK5k7btnk8NjtLCjks7GSv/S/_HF22770-953-954-S.jpg",
+      "download_url": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/MtnqV9z3WtkP9zbm3JWLK5k7btnk8NjtLCjks7GSv/M/_HF22770-953-954-M.jpg",
+      "submission_group": "A"
+    },
+    {
+      "image_id": "i-B7ZSdfs",
+      "source_gallery": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+      "title_snapshot": "Till Death Do Us Part",
+      "thumbnail_url": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/1/KxttDrjkvSkZd4x5VdfzRgHH8bX9FxNwBzzPwtnFL/S/_HF21354-1220-S.jpg",
+      "download_url": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/1/KxttDrjkvSkZd4x5VdfzRgHH8bX9FxNwBzzPwtnFL/M/_HF21354-1220-M.jpg",
+      "submission_group": "A"
+    },
+    {
+      "image_id": "i-RsLmsLZ",
+      "source_gallery": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+      "title_snapshot": "Cowboy Art In Fine Art",
+      "thumbnail_url": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/NCjh3gvZwb2GQkj99Xr3nqqJPNq2H8xvpQtQvPQ3t/S/_WHO0893-Edit-2-S.jpg",
+      "download_url": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/NCjh3gvZwb2GQkj99Xr3nqqJPNq2H8xvpQtQvPQ3t/M/_WHO0893-Edit-2-M.jpg",
+      "submission_group": "A"
+    },
+    {
+      "image_id": "i-ncFcHDM",
+      "source_gallery": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+      "title_snapshot": "Dust and Distance  A Cowboy's Goodbye",
+      "thumbnail_url": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KPZv9kkdJZF5rb7mPGF7jmLV222CRxSzpC8n2qXJq/S/cowboy%20photography%20painting_HF29245-250-S.jpg",
+      "download_url": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KPZv9kkdJZF5rb7mPGF7jmLV222CRxSzpC8n2qXJq/M/cowboy%20photography%20painting_HF29245-250-M.jpg",
+      "submission_group": "A"
+    }
+  ],
+  "approved_at": "2025-12-29T03:47:02.131Z",
+  "submissions": {
+    "A": {
+      "image_count": 4
+    }
+  }
+}

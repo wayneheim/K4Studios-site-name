@@ -1,0 +1,164 @@
+---
+/**
+ * Certificate of Authenticity Print Page
+ * Route: /admin/print/certificate/[certificateId]
+ * Certificate ID format: K4-{imageId}-{tier}-{size}-{editionNum}
+ */
+
+import registry from "../../../../data/seriesRegistry.json";
+
+const { certificateId } = Astro.params;
+
+// Parse: K4-{imageId}-{tier}-{size}-{editionNum}
+const parts = certificateId?.split('-') || [];
+const imageId = parts.length >= 2 ? `i-${parts[1]}` : null;
+const tier = parts[2] || 'chronicle';
+const size = parts[3] || '16x24';
+const editionNum = parseInt(parts[4] || '1', 10);
+
+// Find series data
+let imageTitle = "Untitled";
+if (imageId) {
+  for (const [key, sId] of Object.entries(registry.images || {})) {
+    if (key.startsWith(imageId + ":") && registry.series?.[sId]) {
+      imageTitle = registry.series[sId].title || "Untitled";
+      break;
+    }
+  }
+}
+
+const SERIES_INFO = {
+  foundation: { name: "Foundation Series", editionSize: null, medium: "Pigment Print on Paper" },
+  chronicle: { name: "Chronicle Series", editionSize: 250, medium: "Pigment Print on Paper" },
+  legend: { name: "Legend Series", editionSize: 12, medium: "Pigment Print on Paper" },
+  engrained: { name: "Engrained Series", editionSize: 50, medium: "UV Print on Wood" },
+};
+
+const seriesInfo = SERIES_INFO[tier] || SERIES_INFO.chronicle;
+const medium = seriesInfo.medium;
+const editionTotal = seriesInfo.editionSize;
+const editionNumFormatted = String(editionNum).padStart(editionTotal >= 100 ? 3 : 2, '0');
+const issueDate = new Date().toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
+const sizeFormatted = size.replace('x', '" × ') + '"';
+const yearMatch = imageTitle.match(/\b(19|20)\d{2}\b/);
+const yearCreated = yearMatch ? yearMatch[0] : new Date().getFullYear().toString();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Certificate of Authenticity - {imageTitle}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <style>
+    @page { size: letter; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 8.5in; min-height: 11in; background: white; }
+    body { font-family: "Cormorant Garamond", Georgia, serif; color: #2b2b2b; display: flex; justify-content: center; align-items: flex-start; padding: 20px 0; }
+    .certificate { width: 8.5in; min-height: 11in; padding: 0.5in 0.5in 0.5in 1.5in; text-align: center; background: white; display: flex; flex-direction: column; align-items: center; }
+    .header { flex-shrink: 0; width: 100%; display: flex; flex-direction: column; align-items: center; }
+    .logo { display: flex; justify-content: center; }
+    .logo img { width: 110px; height: auto; opacity: 0.6; }
+    h1 { font-size: 28px; font-weight: 400; letter-spacing: 0.25em; margin-top: 14px; color: #3a3632; }
+    .subtitle { font-size: 17px; font-style: italic; color: #6a6560; margin-top: 6px; }
+    .artist-name { font-size: 15px; color: #5a5550; margin-top: 4px; }
+    .certificate-title { font-family: "Pinyon Script", cursive; font-size: 62px; color: #3a3632; margin: 36px 0 20px; font-weight: 400; }
+    .divider { border: none; border-top: 1px solid #d5d0c8; margin: 10px auto; width: 75%; }
+    .content { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; }
+    .body-text { font-style: italic; margin: 14px auto; max-width: 6in; line-height: 1.5; font-size: 18px; color: #4a4540; text-align: center; }
+    .body-text strong { font-weight: 600; }
+    .details { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 40px; text-align: left; max-width: 6in; margin: 18px auto; font-size: 17px; padding: 14px 0; border-top: 1px solid #e5e0d8; border-bottom: 1px solid #e5e0d8; }
+    .field { display: flex; gap: 8px; }
+    .field.full-width { grid-column: 1 / -1; }
+    .label { font-weight: 600; color: #5a5550; min-width: 115px; }
+    .value { color: #2b2b2b; font-style: italic; }
+    .legal-text { font-style: italic; margin: 8px auto; max-width: 5.5in; line-height: 1.4; font-size: 17px; color: #6a6560; text-align: center; }
+    .signature-section { display: flex; justify-content: space-between; align-items: flex-end; width: 100%; max-width: 6in; margin: 20px auto 0; }
+    .signature-block { text-align: center; }
+    .signature-space { height: 45px; }
+    .signature-line { border-top: 1px solid #3a3632; width: 200px; padding-top: 8px; font-size: 15px; color: #3a3632; }
+    .issue-date { text-align: right; font-size: 17px; }
+    .issue-date .label { color: #6a6560; }
+    .issue-date .value { color: #2b2b2b; font-style: italic; }
+    .footer { flex-shrink: 0; display: flex; justify-content: space-between; width: 100%; max-width: 6in; font-size: 15px; color: #8a8580; font-style: italic; margin-top: auto; padding-top: 12px; }
+    .print-controls { position: fixed; top: 20px; right: 20px; display: flex; gap: 10px; z-index: 100; }
+    .print-btn, .close-btn { border: none; padding: 10px 20px; font-size: 13px; cursor: pointer; border-radius: 4px; font-family: system-ui, sans-serif; color: white; }
+    .print-btn { background: #4a4540; }
+    .print-btn:hover { background: #3a3530; }
+    .close-btn { background: #8a8580; }
+    .close-btn:hover { background: #6a6560; }
+    @media print {
+      html, body { background: white; width: 8.5in; height: 11in; overflow: hidden; padding: 0; }
+      body { display: block; }
+      .print-controls { display: none !important; }
+      .certificate { height: 11in; min-height: 11in; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-controls">
+    <button class="print-btn" onclick="window.print()">🖨️ Print</button>
+    <button class="close-btn" onclick="window.close()">✕ Close</button>
+  </div>
+
+  <section class="certificate">
+    <div class="header">
+      <div class="logo">
+        <img src="/images/K4Logo-web-circle.webp" alt="K4 Studios" />
+      </div>
+      <h1>K4 STUDIOS</h1>
+      <div class="subtitle">Painterly Fine Art Photography</div>
+      <div class="artist-name">Wayne Heim</div>
+      <h2 class="certificate-title">Certificate of Authenticity</h2>
+      <hr class="divider" />
+    </div>
+
+    <div class="content">
+      <p class="body-text">
+        This document certifies that the artwork described below is an original,
+        limited-edition print created by <strong>Wayne Heim</strong>
+        and issued by <strong>K4 Studios</strong>.
+      </p>
+
+      <div class="details">
+        <div class="field full-width"><span class="label">Title:</span><span class="value">{imageTitle}</span></div>
+        <div class="field"><span class="label">Year Created:</span><span class="value">{yearCreated}</span></div>
+        <div class="field"><span class="label">Medium:</span><span class="value">{medium}</span></div>
+        <div class="field"><span class="label">Print Size:</span><span class="value">{sizeFormatted}</span></div>
+        <div class="field"><span class="label">Series:</span><span class="value">{seriesInfo.name}</span></div>
+        <div class="field"><span class="label">Edition:</span><span class="value">{editionNumFormatted} of {editionTotal}</span></div>
+        <div class="field"><span class="label">Image ID:</span><span class="value">{imageId?.replace('i-', 'I-') || 'N/A'}</span></div>
+      </div>
+
+      <p class="legal-text">
+        This work is part of a strictly limited edition.
+        No additional prints will be produced beyond the stated edition size.
+      </p>
+      <p class="legal-text">
+        All copyrights remain the exclusive property of the artist.
+        This sale does not transfer reproduction or commercial rights.
+        The purchaser is granted display rights only.
+      </p>
+
+      <div class="signature-section">
+        <div class="signature-block">
+          <div class="signature-space"></div>
+          <div class="signature-line">Wayne Heim, Artist</div>
+        </div>
+        <div class="issue-date">
+          <span class="label">Issue Date:</span> <span class="value">{issueDate}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>Certificate ID: {certificateId}</div>
+      <div>k4studios.com</div>
+    </div>
+  </section>
+</body>
+</html>

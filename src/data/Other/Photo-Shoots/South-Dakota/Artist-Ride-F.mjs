@@ -7364,5 +7364,105 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RwCs5gt/0/NCGwV4XgHbwqq4nZMgkFfRS22TfW87ZJrL7H2wLN3/Ti/_HF25562-Edit-2-Ti.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RwCs5gt/0/NCGwV4XgHbwqq4nZMgkFfRS22TfW87ZJrL7H2wLN3/Ti/_HF25562-Edit-2-Ti.jpg",
     "srcOriginal": ""
+  },
+  {
+    "id": "i-z9Pfbc5",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the South Dakota collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/A",
+    "keywords": [
+      "WHO4863"
+    ],
+    "story": "New fine art photography by Wayne Heim – South Dakota. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "show",
+    "sortOrder": 288,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5kNs7chNbcPKNZ4Q4whJLQN6zSRmsLTCK3Psk5V9/XL/_WHO4863-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5kNs7chNbcPKNZ4Q4whJLQN6zSRmsLTCK3Psk5V9/XL/_WHO4863-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5bdcSpbP4s7Z8sVPXmjjtfwHvwvPr9KS4Xjsmbd8/L/_WHO4863-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/NGrnkJqPMJ6gbD22LqwXsqWTC5DsptdvqBwG2gwx3/M/_WHO4863-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/KjrhNKT4sZRJpdtCsCQxWLXgXXS4PHrtRtCSpRWtD/S/_WHO4863-Edit-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2025-12-29"
+  },
+  {
+    "id": "i-3Mj4gtS",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the South Dakota collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/A",
+    "keywords": [
+      "WHO4863"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's South Dakota collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "show",
+    "sortOrder": 289,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/KGnsZJz3bRfLNG8FSd6kHgbJLksJ6nSFPQWqjZWHT/XL/_HF25494-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/KGnsZJz3bRfLNG8FSd6kHgbJLksJ6nSFPQWqjZWHT/XL/_HF25494-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/LZqM2prQjg42ZjSn2XX8S3szvM2GcLLLZ35Tkv9kn/L/_HF25494-Edit-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/NKvngnKr6N3JXXL9NqnCCQBgWkKsHBjNxhC7kcXgd/M/_HF25494-Edit-Edit-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/MxxwXTHm3FK9r67FSBGLPrg9KfhNTXq64mGfMZQHp/S/_HF25494-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2025-12-29"
+  },
+  {
+    "id": "i-DdRt5X6",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from South Dakota. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/A",
+    "keywords": [
+      "WHO4863"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's South Dakota collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "show",
+    "sortOrder": 290,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/0/MBLJS6fm6nv5LF3Dv8bTrBjFzsKj3LQDFx9qZsKHZ/XL/_HF25494-Edit-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/0/MBLJS6fm6nv5LF3Dv8bTrBjFzsKj3LQDFx9qZsKHZ/XL/_HF25494-Edit-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/0/LD75L5pWkwnsxbhdpssDdCrjBhbTWFVGZz2JFqzhz/L/_HF25494-Edit-Edit-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/0/MxHSNTQLFn7FQWfSG28HwBP4K7R2SMznnktszBf5q/S/_HF25494-Edit-Edit-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2025-12-29"
+  },
+  {
+    "id": "i-hK3Ghg4",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the South Dakota collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hK3Ghg4/A",
+    "keywords": [
+      "WHO4863"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's South Dakota collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "show",
+    "sortOrder": 291,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hK3Ghg4/0/L6dvwDzbxS5ZsB3Q3hDKrnwjV4mwLvq7HvKn2SL2j/XL/_WHO6829-Edit-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hK3Ghg4/0/L6dvwDzbxS5ZsB3Q3hDKrnwjV4mwLvq7HvKn2SL2j/XL/_WHO6829-Edit-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hK3Ghg4/0/KWJwZk29pbNV5WVKvh56c3qpx6f4FGj8p9Kt6jV7j/L/_WHO6829-Edit-Edit-2-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hK3Ghg4/0/K6GSQTgjXfgjNDdwhQJGJfRQH2hMQwk7mKrNWJbT5/M/_WHO6829-Edit-Edit-2-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hK3Ghg4/0/LzLWP5F3dnWXJQ5k5gHMnDQQ9NxhdtvtXCJLm27wk/S/_WHO6829-Edit-Edit-2-Edit-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2025-12-29"
   }
 ];

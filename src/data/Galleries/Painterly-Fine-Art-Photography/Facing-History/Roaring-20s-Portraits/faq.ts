@@ -28,6 +28,14 @@ export const westernFAQ = [
     ],
   },
   {
+  q: "Why is the Roaring 20s included in the Facing History series?",
+  a: [
+    `The Roaring 20s represents a turning point in American history — a decade where culture, identity, and morality were openly contested.`,
+    `Within Wayne Heim’s <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> series, the Jazz Age sits alongside the Civil War and World War II as a moment that reshaped how Americans lived, resisted, and defined themselves.`,
+    `By telling these stories through painterly fine art photography, Wayne preserves not just how the era looked — but how it *felt*. Facing History isn’t about nostalgia; it’s about understanding the human cost and consequence of history through individual lives.`
+  ]
+},
+  {
     q: "How are these 1920s fine art portraits printed?",
     a: [
       `Each piece is available in multiple premium formats, including:`,

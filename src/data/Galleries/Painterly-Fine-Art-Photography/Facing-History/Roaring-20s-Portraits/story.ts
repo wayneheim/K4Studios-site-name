@@ -24,6 +24,15 @@ export const westernStory = [
     ]
   },
 
+  /* ───────────────────────────────────────────── 2B — HISTORICAL CONTEXT */
+  {
+    subhead: "Part of the Facing History Series",
+    paragraphs: [
+      `The Roaring 20s portraits belong to Wayne Heim’s broader <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a> body of work — an ongoing exploration of how individuals carry themselves inside moments that reshape culture, identity, and consequence.`,
+      `From Civil War resolve to Jazz Age rebellion and World War II sacrifice, Facing History treats each era not as isolated nostalgia, but as a living chapter in a larger human story. The Roaring 20s becomes a turning point — a moment where freedom, fear, and moral tension collide, leaving fingerprints still visible today.`
+    ]
+  },
+
   /* ───────────────────────────────────────────── 3 */
   {
     subhead: "The Real 20s: Portraits of Rebellion & Reckoning",
@@ -59,7 +68,7 @@ export const westernStory = [
     tagline: "Grit. Elegance. Consequence.",
     paragraphs: [
       `Printed as museum-quality fine art, each portrait invites you to step deeper into the decade's inner world — the shadowed corners, the whispered secrets, the humanity behind the spectacle.`,
-      `Whether you're drawn to rebellion, glamour, gatsby era excess, or the mythology of the Jazz Age, these works don't just show the past — they ask you to feel it.`
+      `Whether you're drawn to rebellion, glamour, Gatsby-era excess, or the deeper currents of American history, these works don’t just show the past — they ask you to feel it.`
     ]
   },
 
@@ -77,12 +86,12 @@ export const westernStory = [
 
   /* ───────────────────────────────────────────── 7 */
   {
-    subhead: "Own a Piece of the Roaring 20s",
+    subhead: "Own a Piece of History",
     tagline: "Bring Home a Story Only You Can Finish",
     paragraphs: [
       `Collectors and storytellers are drawn to these pieces because they carry more than historical detail — they carry emotional truth.`,
-      `Each limited-edition print is a One-Image Movie™ waiting for your interpretation. Through painterly composition and deliberate ambiguity, Wayne invites you into the frame: to wonder, to imagine, to finish the story only you can see.`,
-      `These portraits don’t just remember the 20s — they remember *you*.`
+      `Each limited-edition print is a One-Image Movie™ waiting for your interpretation. Through painterly composition and deliberate ambiguity, Wayne invites you into the frame: to wonder, to imagine, and to complete the story yourself.`,
+      `These portraits don’t simply remember the Roaring 20s — they ask what history leaves behind, and what it still asks of us.`
     ]
   }
 ];

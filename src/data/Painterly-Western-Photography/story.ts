@@ -4,7 +4,7 @@ export const painterlyStory = [
   {
     title: "Painterly Western Photography",
     paragraphs: [
-      "Painterly Western photography is not a style layered on top of an image — it is a way of seeing shaped long before the shutter is pressed. It begins with light, structure, and restraint, and ends with images that feel remembered rather than captured.",
+      "Painterly Western photography is a fine art approach — not a style layered on top of an image, but a way of seeing shaped long before the shutter is pressed. It begins with light, structure, and restraint, and ends with images that feel remembered rather than captured.",
       "Rooted in the Pictorialist tradition and refined through years of illustration and visual storytelling, Wayne Heim’s painterly Western work occupies the space between photography and fine art. These images are built, not processed — sculpted with light, atmosphere, and intention."
     ]
   },
@@ -22,7 +22,7 @@ export const painterlyStory = [
   {
     subhead: "Craft Before Effect",
     paragraphs: [
-      "Painterly photography is often misunderstood as texture, grain, or mood applied after the fact. In this work, painterly qualities emerge from structure — from how light defines form, how tone creates hierarchy, and how composition carries tension.",
+      "Painterly photography is often misunderstood as texture, grain, or mood applied after the fact. In this work, those qualities emerge from structure — from how light defines form, how tone creates hierarchy, and how composition carries tension.",
       "Nothing is incidental. Texture follows intent. Color is controlled. Shadow is used not to obscure, but to suggest. The result is Western imagery that feels integrated and purposeful, rather than filtered or decorative."
     ]
   },
@@ -50,7 +50,7 @@ export const painterlyStory = [
     subhead: "The Power of What Is Left Unsaid",
     paragraphs: [
       "Restraint is central to painterly work. The absence of explanation allows space for imagination. These images resist conclusion — they are thresholds rather than statements.",
-      "By withholding resolution, the photograph remains alive. The viewer returns to it, re-entering the story from a different place each time."
+      "For collectors drawn to narrative depth, this lack of resolution is not a flaw — it is the point. By withholding answers, the photograph remains alive, inviting return visits and personal interpretation."
     ]
   },
 

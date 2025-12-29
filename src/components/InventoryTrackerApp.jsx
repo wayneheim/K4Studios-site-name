@@ -31,10 +31,10 @@ function ContextMenu({ x, y, item, onClose, onEditInEditorPro, onPrintCertificat
       </button>
       <button
         onClick={() => { onPrintCertificate(item); onClose(); }}
-        className="w-full text-left px-4 py-2 hover:bg-stone-100 text-sm flex items-center gap-2 text-stone-400"
+        className="w-full text-left px-4 py-2 hover:bg-stone-100 text-sm flex items-center gap-2"
       >
         <span>📜</span>
-        <span>Print Certificate (coming soon)</span>
+        <span>Print Certificate</span>
       </button>
     </div>
   );
@@ -269,9 +269,18 @@ function InventoryTrackerApp() {
     window.open(`/admin/GalleryEditor?${params.toString()}`, "_blank");
   }
   
-  // Print certificate (placeholder)
+  // Print certificate - opens the COA print page
   function handlePrintCertificate(item) {
-    alert(`Print Certificate feature coming soon!\n\nImage: ${item.title}\nSeries: ${item.tier}\nSize: ${item.size}`);
+    // Build certificate ID: K4-{imageId}-{tier}-{size}-{editionNum}
+    // Size format: "16 x 20" -> "16x20"
+    const sizeSlug = (item.size || "16x20").replace(/["\s]/g, '').replace('×', 'x');
+    const imageIdShort = (item.imageId || '').replace('i-', '');
+    const editionNum = String(item.printed || 1).padStart(3, '0');
+    
+    const certificateId = `K4-${imageIdShort}-${item.tier}-${sizeSlug}-${editionNum}`;
+    
+    // Open in new window for printing
+    window.open(`/admin/print/certificate/${certificateId}`, '_blank', 'width=800,height=1000');
   }
   
   // Filter and sort inventory

@@ -1,81 +1,94 @@
 export const facingFAQ = [
-    //Painterly Fine Art Photography FAQ
- {
+
+  {
     q: "What is painterly fine art photography?",
     a: [
-      "Painterly fine art photography is a distinctive blend of photographic realism and artistic techniques drawn from the world of painting. Wayne Heim's work channels the tradition of the Pictorialist movement, using soft focus, dramatic lighting, and textured layers to create One-Image Movies™ — images that feel timeless, immersive, and evocative.",
-      `Curious how this differs from other styles? <a href="/Galleries/Painterly-Fine-Art-Photography">Read Wayne's full guide to painterly photography</a>.`
+      "Painterly fine art photography is a narrative-driven photographic style that emphasizes mood, atmosphere, texture, and emotional storytelling rather than literal documentation. Rooted in the historic Pictorialist movement, it blends photographic realism with compositional and tonal techniques traditionally associated with painting.",
+      "In Wayne Heim’s work, painterly photography becomes a <strong>One-Image Movie™</strong> — a single frame designed to feel cinematic, immersive, and timeless rather than merely descriptive.",
+      `For a deeper look at the philosophy and process behind this style, visit <a href="/Galleries/Painterly-Fine-Art-Photography">Wayne’s guide to painterly fine art photography</a>.`
     ],
   },
+
   {
     q: "How does painterly photography differ from AI-generated art or digital illustration?",
     a: [
-      "Unlike AI or digital composites, painterly photography relies on real-world composition, lighting, and post-production rooted in traditional fine art techniques. Every image is carefully crafted—from concept and capture to editing and print. There’s no AI trickery, only genuine artistry.",
-      `For a behind-the-scenes look at Wayne’s process, see <a href="/Galleries/Painterly-Fine-Art-Photography">What Is Painterly Photography?</a>`
+      "Painterly photography is built from real moments, real light, and real people. Every image begins in-camera and is shaped through intentional composition, lighting, and handcrafted post-production — not AI generation, prompts, or synthetic imagery.",
+      "Unlike digital illustration or AI art, painterly photography preserves photographic truth while applying fine art discipline, narrative intent, and cinematic restraint.",
+      `Learn more about Wayne’s hands-on process in <a href="/Galleries/Painterly-Fine-Art-Photography">What Is Painterly Photography?</a>`
     ],
   },
+
   {
     q: "What subjects are featured in the Painterly Fine Art Photography collection?",
     a: [
-      "The collection spans a range of Americana and storytelling themes, including:",
+      "Wayne’s painterly collection explores cinematic, historically inspired, and Americana-themed subjects, including:",
       `<ul>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Historical reenactment portraits</a> (Civil War, WWII, Roaring 20s)</li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western cowboy and frontier art</a></li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">Painterly landscapes</a> from the American West and beyond</li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">Transportation and Americana</a> (trains, vintage cars, boats)</li>
-        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Miscellaneous">Miscellaneous and experimental works</a></li>
+        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Historically themed reenactment photography</a> (Civil War, WWII, Roaring 20s)</li>
+        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western cowboy art and frontier portraiture</a></li>
+        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">Painterly landscape photography</a> from the American West and beyond</li>
+        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">Transportation and Americana themes</a> (steam trains, vintage cars, boats)</li>
+        <li><a href="/Galleries/Painterly-Fine-Art-Photography/Miscellaneous">Experimental and narrative-driven studies</a></li>
       </ul>`,
-      "Each series invites viewers to step inside the story and experience the narrative behind the image."
+      "Across every subject, the focus remains the same: atmosphere, story, and emotional resonance."
     ],
   },
+
   {
     q: "Are prints available, and what makes the Engrained Series special?",
     a: [
-      "Yes — every painterly image is available as an archival fine art print on paper, metal, or as part of the signature <a href='/Other/K4-Select-Series/Engrained'>Engrained Series</a> on wood.",
-      "The Engrained Series uses a unique UV printing process, allowing the natural Baltic Birch grain to show through selected areas, creating a tactile, one-of-a-kind piece ideal for collectors."
+      "Yes. Every painterly image is available as a museum-grade archival print, including paper, metal, and the signature <a href='/Other/K4-Select-Series/Engrained'>Engrained Series</a> printed on wood.",
+      "The Engrained Series features a proprietary multi-layer UV process printed directly onto Baltic Birch panels, allowing natural wood grain to interact with the image — creating tactile, dimensional fine art pieces prized by collectors."
     ],
   },
+
   {
-    q: "What makes Wayne Heim's painterly style unique?",
+    q: "What makes Wayne Heim’s painterly style unique?",
     a: [
-      "Wayne is an award-winning fine art photographer and medical illustrator. His painterly approach combines traditional craftsmanship, historical research, and modern photographic technique. The result is art that looks and feels timeless—each image is a One-Image Movie™, not just a scene.",
-      "If you're seeking <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits'>Western art</a>, <a href='/Galleries/Painterly-Fine-Art-Photography/Landscapes'>mountain landscapes</a>, or <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History'>historical reenactments</a>, Wayne's painterly gallery is a curated journey through Americana."
+      "Wayne Heim is an award-winning fine art photographer and medical illustrator. His painterly style is shaped by narrative thinking, historical research, and disciplined visual storytelling rather than surface aesthetics alone.",
+      "Each image is conceived as a <strong>One-Image Movie™</strong> — designed to suggest what happened before and what might happen next, giving the work psychological depth and cinematic weight.",
+      "Collectors drawn to <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits'>Western fine art</a>, <a href='/Galleries/Painterly-Fine-Art-Photography/Landscapes'>painterly landscapes</a>, or <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History'>historically themed photography</a> will find a cohesive narrative voice across the entire collection."
     ],
   },
+
   {
     q: "Where can I see painterly fine art prints on display?",
     a: [
-      "Wayne’s painterly works are collected by private collectors, displayed in historic homes, museums, libraries, boutique hotels, and select gallery exhibits.",
-      "Many clients also commission custom pieces for interior design projects, offices, and hospitality venues."
+      "Wayne’s painterly works are held in private collections and displayed in historic homes, libraries, museums, boutique hotels, and curated gallery exhibitions.",
+      "Select works are also commissioned for interior design projects, professional offices, and hospitality spaces seeking authentic, story-driven fine art."
     ],
   },
+
   {
     q: "Can I commission a custom painterly portrait or themed image?",
     a: [
-      "Yes! Wayne collaborates with collectors, families, historical societies, and organizations to create custom painterly portraits and narrative scenes.",
-      "Interested in a commission or themed shoot? <a href='/Contact'>Contact Wayne here</a> to start a conversation."
+      "Yes. Wayne works directly with collectors, families, historical societies, reenactors, and organizations to create custom painterly portraits and themed narrative imagery.",
+      `To discuss a commission or custom concept, <a href="/Contact">contact Wayne here</a> to start a conversation.`
     ],
   },
+
   {
-    q: "Why should I choose painterly photography over mass-produced wall art?",
+    q: "Why choose painterly photography over mass-produced wall art?",
     a: [
-      "Painterly fine art photography offers emotional depth, artistic intention, and a tactile sense of history. Each print is thoughtfully created—no AI, no generic stock, just one-of-a-kind visual storytelling.",
-      "In a world of mass production, a painterly piece by Wayne Heim is an investment in meaningful, conversation-starting art. Embrace the Past… Live the Story."
+      "Painterly fine art photography offers emotional depth, historical grounding, and intentional craftsmanship — not mass production or trend-driven décor.",
+      "Each piece is created with narrative purpose and printed to archival standards, making it an investment in meaningful, conversation-starting art rather than disposable decoration."
     ],
   },
+
   {
-    q: "What are the best spaces to display painterly fine art photography?",
+    q: "What spaces work best for painterly fine art photography?",
     a: [
-      "Painterly prints are ideal for homes, libraries, heritage hotels, museums, offices, and anywhere you want to inspire conversation or evoke a sense of history.",
-      "Collectors often showcase these works in living rooms, studies, creative workspaces, and even curated commercial installations."
+      "Painterly works are well suited for homes, studies, libraries, heritage hotels, museums, offices, and curated commercial environments.",
+      "Collectors often place these images in spaces where storytelling, reflection, and atmosphere matter — living rooms, creative studios, libraries, and executive offices."
     ],
   },
+
   {
-  q: "What are 'Collector Notes' and how do I find/use them?",
-  a: [
-    `Ever wanted to know the deeper story behind an image, or get the artist’s creative perspective? <strong>Collector Notes</strong> are exclusive insights on select images—offering background on artistic choices, historical details, and what makes each piece extraordinary.`,
-    `To read a Collector Note, just click the <strong>notepad</strong> icon at the upper right of an image (desktop), or tap the same icon in the toolbar below the image (mobile). You'll discover creative context, art history comparisons, and insider observations that help you see your print the way an art collector—or even the artist—does.`,
-    `Our collection of Collector Notes is always growing, so check back for new insights and stories as you explore the gallery!`
-  ]
-},
+    q: "What are Collector Notes, and how do I view them?",
+    a: [
+      "<strong>Collector Notes</strong> provide deeper insight into select images, including artistic decisions, historical context, and narrative intent.",
+      "To read a Collector Note, click the <strong>notepad icon</strong> on an image (upper-right on desktop or toolbar on mobile). These notes offer behind-the-scenes perspective and art-historical context to help collectors engage with the work on a deeper level.",
+      "New Collector Notes are added regularly as the collection grows."
+    ],
+  },
+
 ];

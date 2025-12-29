@@ -1,9 +1,8 @@
 export const facingFAQ = [
-  // Painterly Fine Art Photography FAQ
   {
     q: "What is painterly Western photography?",
     a: [
-      "Painterly Western photography is a fine art approach that blends photographic realism with the compositional discipline of painting and cinema. It emphasizes light, structure, tonal control, and atmosphere to create images that feel remembered rather than merely recorded.",
+      "Painterly Western photography is a fine art photographic style that blends realism with the compositional discipline of painting and cinema. It emphasizes light, structure, tonal control, and atmosphere to create images that feel remembered rather than merely recorded.",
       "Rather than relying on filters or surface effects, painterly Western photography is built through intentional capture, careful shaping of light, and narrative restraint — allowing story and emotion to emerge organically within the frame."
     ],
   },
@@ -11,7 +10,7 @@ export const facingFAQ = [
   {
     q: "How is painterly photography different from filtered or stylized photography?",
     a: [
-      "Painterly photography is often mistaken for a post-processing style, but the difference lies in intent and structure. In this work, painterly qualities originate at the moment of capture — in how light defines form, how tone establishes hierarchy, and how composition carries tension.",
+      "Painterly photography is often mistaken for a post-processing look, but the difference lies in intent and structure. In this work, painterly qualities originate at the moment of capture — in how light defines form, how tone establishes hierarchy, and how composition carries tension.",
       "Texture, grain, and atmosphere are integrated outcomes of these decisions, not effects layered on afterward."
     ],
   },
@@ -35,8 +34,8 @@ export const facingFAQ = [
   {
     q: "What subjects are explored in painterly Western photography?",
     a: [
-      "Painterly Western photography focuses on the American West as lived experience rather than myth. Subjects include cowboy portraits, frontier figures, and Western landscapes treated as emotional environments rather than backdrops.",
-      "The emphasis is placed on character, presence, and atmosphere — not archetype or spectacle."
+      "Painterly Western photography explores the American West as lived experience rather than myth. Subjects include cowboy portraits, frontier figures, and Western landscapes treated as emotional environments rather than backdrops.",
+      "Collectors searching for Western themed photography rooted in authenticity will find work shaped by character, presence, restraint, and atmosphere — not archetype or spectacle."
     ],
   },
 

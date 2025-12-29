@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PhotoShootScraper from "@/components/PhotoShootScraper.jsx";
+---
+
+<BaseLayout title="Photo Shoot Scraper">
+  <div class="pt-6">
+    <PhotoShootScraper client:load />
+  </div>
+</BaseLayout>

@@ -64,6 +64,8 @@ function normalizeItem(raw) {
   if (raw.contentSource != null) out.contentSource = raw.contentSource;
   // NOTE: availableSeries is NOT stored in .mjs files - it's stored only in seriesRegistry.json
   if (raw.noSketch === true) out.noSketch = true;
+  // Preserve first_seen date for Photo Shoots tracking
+  if (raw.first_seen != null) out.first_seen = raw.first_seen;
   return out;
 }
 

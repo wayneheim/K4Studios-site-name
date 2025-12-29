@@ -200,6 +200,61 @@ westernBlackWhiteHub: {
 },
 
 // ============================================================================
+// CONCEPTUAL AUTHORITY NODES
+// Style/themed terms tied to existing hubs—definitions for Glossary + Google.
+// NO new pages, NO image phrases. Semantic authority only.
+// ============================================================================
+
+westernThemedPhotography: {
+  path: "/Western-Fine-Art-Photography",
+  def: "Western themed photography refers to fine art imagery rooted in the lived culture, people, and landscapes of the American West—emphasizing narrative, authenticity, and human presence rather than decorative motifs or nostalgia.",
+  landingPhrases: [
+    { phrase: "western themed photography", rating: 9, use: true },
+    { phrase: "western themed art", rating: 8, use: true },
+    { phrase: "western themed wall art", rating: 7, use: true },
+    { phrase: "western themed fine art", rating: 7, use: true },
+    { phrase: "western themed prints", rating: 6, use: true },
+  ],
+},
+
+westernPhotographyStyle: {
+  path: "/Western-Fine-Art-Photography",
+  def: "Western photography style describes a visual approach that captures the character, spirit, and rugged beauty of the American West—distinguished by tonal depth, narrative intent, and authentic human subjects rather than staged or decorative scenes.",
+  landingPhrases: [
+    { phrase: "western photography style", rating: 9, use: true },
+    { phrase: "western style photography", rating: 9, use: true },
+    { phrase: "western style fine art", rating: 7, use: true },
+    { phrase: "western style art photography", rating: 7, use: true },
+    { phrase: "western style wall art", rating: 6, use: true },
+  ],
+},
+
+painterlyPhotographyStyle: {
+  path: "/Galleries/Painterly-Fine-Art-Photography",
+  def: "Painterly photography style is a fine art approach that merges photographic realism with the tonal richness, texture, and emotional depth of classical painting—crafted for collectors who value narrative and permanence over decoration.",
+  landingPhrases: [
+    { phrase: "painterly photography style", rating: 9, use: true },
+    { phrase: "painterly style photography", rating: 9, use: true },
+    { phrase: "painterly style fine art", rating: 7, use: true },
+    { phrase: "painterly style art", rating: 7, use: true },
+    { phrase: "painterly style prints", rating: 6, use: true },
+  ],
+},
+
+historicallyThemedPhotography: {
+  path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
+  def: "Historically themed photography captures eras, events, and figures from the past through a fine art lens—grounded in research, lived experience, and visual storytelling rather than costume spectacle or historical kitsch.",
+  landingPhrases: [
+    { phrase: "historically themed photography", rating: 9, use: true },
+    { phrase: "historically themed art", rating: 8, use: true },
+    { phrase: "historically themed fine art", rating: 7, use: true },
+    { phrase: "historically themed wall art", rating: 7, use: true },
+    { phrase: "historical themed photography", rating: 8, use: true },
+    { phrase: "history themed photography", rating: 7, use: true },
+  ],
+},
+
+// ============================================================================
 // GLOSSARY-ONLY ENTRIES (definition + hub links, no pages or auto-linking)
 // These terms are modifiers captured via glossary, NOT landing page targets.
 // ============================================================================

@@ -61,6 +61,8 @@ function normalizeItem(raw) {
   if (raw.visibility != null) out.visibility = raw.visibility;
   if (typeof raw.sortOrder === "number") out.sortOrder = raw.sortOrder;
   if (raw.themes && typeof raw.themes === "object") out.themes = raw.themes;
+  // Preserve first_seen date for Photo Shoots tracking
+  if (raw.first_seen != null) out.first_seen = raw.first_seen;
   return out;
 }
 

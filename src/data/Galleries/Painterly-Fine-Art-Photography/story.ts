@@ -1,145 +1,138 @@
 export const painterlyStory = [
 
-  // 1. INTRO & PHILOSOPHY
+  /* 1. INTRO & PHILOSOPHY */
   {
-    title: "Painterly Fine Art Photography: Where Storytelling Becomes Art",
+    title: "Painterly Fine Art Photography — Style, Theme, and Story",
     paragraphs: [
-      "Painterly photography isn’t a look — it’s a way of seeing. Born from the Pictorialist movement and sharpened by Wayne Heim’s illustrator’s eye, it becomes the meeting ground between imagination and truth. Light is sculpted. Atmosphere is shaped. Texture becomes the quiet language between viewer and subject.",
-      "These works unfold like chapters torn from memory: fog-draped battlefields, Western saloons humming with tension, lonely roads, open skies, and landscapes where time feels thick enough to touch. This is storytelling through light and shadow — fine art for those who are drawn to the mythic pulse of Americana, Western narrative photography, cowboy portraits, and images that whisper long after the eye moves on."
+      "Painterly fine art photography is a story-driven photographic style rooted in atmosphere, emotion, and narrative intent. Rather than documenting what happened, it explores what it felt like — using light, tone, and composition to face history through human experience.",
+      "Grounded in the Pictorialist movement and shaped by cinematic structure, this style lives between photography, illustration, and historically themed visual storytelling. It treats each image as a constructed moment — deliberate, weighted, and alive with implication.",
+      "Wayne Heim’s painterly photography spans Western frontier narratives, historically themed portraits, and atmospheric landscapes — unified by a commitment to story, authenticity, and emotional truth."
     ]
   },
 
-  // 1B. THE NARRATIVE ENGINE (WITH ONE-IMAGE MOVIE LOGIC)
+  /* 2. THE NARRATIVE ENGINE */
   {
-    subhead: "More Than a Look — A Story Living Inside Each Frame",
+    subhead: "More Than a Look — Painterly Photography as Narrative Style",
     paragraphs: [
-      "A painterly photograph lives in the thin breath between moments — the instant after something has happened, and the heartbeat before something else begins. These aren’t static scenes. They’re cinematic thresholds. A lifted hand. A shifting shadow. Dust hanging in stillness with intent. Each detail is a clue pointing toward an unseen narrative.",
-      "This is the foundation of the <strong>One-Image Movie™</strong>: Wayne's signature approach where a single frame carries the emotional weight and story arc of an entire film. Texture becomes atmosphere. Light becomes character. Composition becomes tension. The viewer doesn't simply look at the work — they step into it.",
-      "Painterly photography becomes a medium of cinematic quiet, mythmaking distilled into a single breath. These images are crafted for collectors who crave mood, mystery, and story woven deep into every print."
+      "Painterly photography is not an effect applied after capture. It begins before the shutter is pressed — in the way light is shaped, space is structured, and emotional hierarchy is established.",
+      "Each image is designed to function as a <strong>One-Image Movie™</strong>: a single frame carrying tension, implication, and consequence. A moment after something has happened. A breath before something must.",
+      "This narrative-first discipline defines Wayne Heim’s painterly style and separates it from trend-based or stylized photography."
     ]
   },
 
-  // *** INSERT YOUR STORY PREVIEW BLOCK HERE ***
-  // <StorySlider stories={...} galleryPath="/Galleries/..." />
-
-  // 2. WHY PAINTERLY PHOTOGRAPHY? WHAT MAKES IT UNIQUE?
+  /* 3. WHY PAINTERLY PHOTOGRAPHY */
   {
-    subhead: "Why Painterly Photography? What Makes It Unique?",
+    subhead: "Why Painterly Photography?",
     paragraphs: [
-      "Painterly fine art photography is designed not merely to be seen — but to be felt. Every decision in composition, contrast, color, and texture is deliberate, guiding the viewer deeper into the emotional core of the moment.",
-      "Wayne Heim’s painterly style merges historical authenticity with cinematic storytelling. With the discipline of a medical illustrator and the intuition of a narrative-driven fine art photographer, he transforms fleeting gestures and quiet glances into images with mythic gravity.",
-      "These are not filters, presets, or AI simulations. They are handcrafted, painstakingly built, and shaped by real light, real history, and real people. Each photograph is constructed to feel timeless — echoing the cinematic stillness that defines Wayne’s One-Image Movies™."
+      "Painterly photography exists for viewers who want more than surface beauty. Every compositional decision — contrast, texture, color, shadow — is made to guide the eye toward meaning.",
+      "Wayne Heim’s background as a medical illustrator brings anatomical awareness, structural discipline, and narrative clarity into every frame. The result is fine art photography that feels inhabited rather than staged.",
+      "These images are handcrafted, historically grounded, and shaped by real light, real people, and real environments."
     ]
   },
 
-  // 3. WESTERN & LANDSCAPE: THE SOUL OF AMERICANA
+  /* 4. WESTERN & LANDSCAPE */
   {
     subhead: "Western and Landscape Fine Art Photography",
     paragraphs: [
-      "From the grit and bone-deep resolve of the American West to the brooding calm of painterly landscapes, Wayne’s work honors the spirit of frontier life. These scenes carry the same narrative tension that powers his One-Image Movies™ — horizons and portraits alive with story.",
-      "Collectors seeking Western art prints, cowboy fine art, or atmospheric Americana wall art will find images shaped with cinematic depth, painterly texture, and authentic frontier soul."
+      "The American West is central to Wayne Heim’s painterly work — not as myth, but as lived history. Cowboys, settlers, Native American figures, and frontier landscapes are portrayed as participants in a larger human story.",
+      "Collectors searching for <strong>Western themed photography</strong> with a painterly style will find images shaped by restraint, authenticity, and narrative gravity."
     ],
     list: [
-      "Western Cowboy Portraits — Character-driven studies shaped by grit, solitude, and mythic frontier spirit.",
-      "Painterly Western Landscapes — Expansive, atmospheric terrain rendered with a dreamlike, timeless edge."
+      "Western Cowboy Portraits — Character-driven studies shaped by grit, silence, and consequence.",
+      "Painterly Western Landscapes — Atmospheric terrain rendered with cinematic structure and timeless tone."
     ]
   },
 
-  // 4. RUSTIC WALL ART & FINE ART CRAFTSMANSHIP
+  /* 5. RUSTIC WALL ART & CRAFT */
   {
     paragraphs: [
-      "This painterly gallery blends the soul of rustic Americana with museum-grade craft — ideal for collectors who want expressive storytelling, conversation-starting artwork, and archival prints built to outlive trends."
+      "Wayne’s painterly fine art photography blends the soul of rustic Americana with museum-grade craftsmanship — ideal for collectors seeking story-rich artwork that transcends décor and trend."
     ]
   },
 
-  // 5. FACING HISTORY: REENACTMENT, CHARACTER, AND STORY
+  /* 6. FACING HISTORY */
   {
-    subhead: "Facing History: Painterly Reenactment Photography",
+    subhead: "Facing History — Painterly, Historically Themed Photography",
     paragraphs: [
-      "History doesn’t fade — it lingers in fabric, in posture, in breath. It clings to the way a person inhabits their story. Wayne’s Facing History series blends painterly technique with reenactment portraiture to resurrect moments from the past with cinematic weight.",
-      "A Civil War soldier caught between duty and doubt. A WWII moment carved from sacrifice. A Roaring 20s silhouette slipping through shadow and cigarette smoke. Each portrait echoes the narrative structure of the One-Image Movie™ — emotion suspended inside painterly atmosphere.",
-      "Every image becomes a window into a lived moment — where historical truth meets visual poetry."
+      "Facing History is a guiding framework within Wayne Heim’s painterly photography — a commitment to telling historical stories through human presence rather than spectacle.",
+      "Civil War soldiers caught between duty and doubt. WWII figures shaped by sacrifice and brotherhood. Roaring 20s characters suspended between rebellion and survival. Each portrait confronts history through lived emotion.",
+      "These works are intentionally <strong>historically themed</strong>, designed to honor authenticity while leaving narrative space for the viewer."
     ],
     list: [
-      "Civil War — Duty, conflict, and humanity revealed through painterly shadow and narrative stillness.",
-      "World War II — Story-driven reenactment photography capturing tension, camaraderie, and sacrifice.",
-      "The Roaring 20s — Bootleggers, flappers, and jazz-age intrigue sculpted in cinematic light."
+      "Civil War — Conflict, resolve, and moral weight rendered in painterly shadow.",
+      "World War II — Brotherhood, fear, and quiet courage captured through cinematic stillness.",
+      "The Roaring 20s — Jazz Age glamour, rebellion, and consequence shaped by light and smoke."
     ]
   },
 
-  // 6. HISTORIC THEMES FOR COLLECTORS
+  /* 7. HISTORICAL THEMES FOR COLLECTORS */
   {
     paragraphs: [
-      "For collectors of Civil War art, WWII fine art prints, or vintage Americana, Wayne’s historically themed work offers something rare: images that feel both intimate and mythic. Many function as One-Image Movies™ — single frames designed to ignite imagination and reward long, reflective viewing."
+      "For collectors of historically themed art, Wayne’s Facing History work offers something rare: images that feel intimate, researched, and emotionally grounded rather than illustrative.",
+      "Many operate as One-Image Movies™ — single frames that ignite imagination and reward slow, reflective viewing."
     ]
   },
 
-  // 7. TRANSPORTATION, EXPERIMENTS & THE UNEXPECTED
+  /* 8. TRANSPORTATION & MISC */
   {
-    subhead: "Transportation and Miscellaneous Themes",
+    subhead: "Transportation and Other Narrative Themes",
     paragraphs: [
-      "Some images defy category. Wayne’s transportation and miscellaneous collections explore classic Americana — steam locomotives, vintage cars, boats, aircraft, and quiet, unexpected moments — all reshaped through painterly light and cinematic tension.",
-      "These works often slip into the One-Image Movie™ structure: motion implied, story mid-stride, atmosphere lingering long after the eye moves on."
+      "Some stories move. Steam locomotives, vintage automobiles, aircraft, and boats appear throughout Wayne’s painterly work — symbols of transition, ambition, and human ingenuity.",
+      "These images often slip naturally into the One-Image Movie™ structure — motion implied, story mid-stride."
     ],
     list: [
-      "Transportation — Steam engines, vintage autos, boats, and aircraft rendered in painterly cinematic tone.",
-      "Miscellaneous — Experiments, personal gems, and one-off narrative studies in Wayne’s painterly voice."
+      "Transportation — Steam engines, classic cars, boats, and aircraft rendered with painterly cinematic tone.",
+      "Miscellaneous — One-off narrative studies and experimental works."
     ]
   },
 
-  // 8. SHOWCASING VERSATILITY
+  /* 9. VERSATILITY */
   {
     paragraphs: [
-      "From the American West to Iceland’s volcanic coastlines and the quiet farmlands of Ohio, Wayne’s painterly fine art photography reveals the extraordinary hidden inside the ordinary. His narrative-first approach ensures even the simplest subjects feel cinematic, atmospheric, and alive with story."
+      "From the American West to European landscapes and quiet rural scenes, Wayne’s painterly style adapts without losing narrative cohesion. Even simple subjects are treated as story-bearing moments."
     ]
   },
 
-  // 9. THE ENGRAINED SERIES
+  /* 10. THE ENGRAINED SERIES */
   {
-    subhead: "The Engrained Series: Fine Art Printed on Wood Panels",
+    subhead: "The Engrained Series — Painterly Art Printed on Wood",
     paragraphs: [
-      "This limited-edition series prints painterly images directly onto half-inch Baltic Birch using a proprietary five-layer UV process — creating archival wood prints with dimensional depth and natural grain.",
-      "Many Engrained pieces operate like tactile One-Image Movies™ — the wood amplifying mood, weight, and cinematic stillness. These fine art wood prints merge craft, atmosphere, and authenticity into something unmistakably original."
+      "The Engrained Series prints select painterly images directly onto Baltic Birch using a proprietary five-layer UV process.",
+      "The natural grain moves through the image like memory — adding physical depth and quiet imperfection that reinforces historical and narrative weight."
     ]
   },
 
-  // 10. FOR COLLECTORS
+  /* 11. FOR COLLECTORS */
   {
     paragraphs: [
-      "Both the Engrained Series and the painterly fine art print collections are built for longevity — archival works crafted for collectors who value authenticity, craftsmanship, and narrative-rich fine art."
+      "Both the Engrained Series and archival print editions are crafted for longevity — built for collectors who value authenticity, craftsmanship, and story-driven fine art."
     ]
   },
 
-  // 11. WHY IT MATTERS
+  /* 12. WHY IT MATTERS */
   {
     subhead: "Why Painterly Photography Matters",
     paragraphs: [
-      "In an era of AI simulations and mass-produced décor, painterly photography stands defiantly apart. It carries emotional depth, historical grounding, and narrative intention that cannot be automated. Wayne’s images are shaped by hand, rooted in real light, real people, and real moments.",
-      "Whether it’s the resolve in a Civil War portrait, the silence inside a Western horizon, or the warmth of Baltic Birch beneath a weathered hand, these images endure because they invite connection. They whisper. They linger. They spark imagination — often through the quiet architecture of a One-Image Movie™."
+      "In an era of AI-generated imagery and mass-produced décor, painterly photography stands apart. It carries intent, discipline, and emotional consequence that cannot be automated.",
+      "These images endure because they slow us down — asking us to feel history rather than skim it."
     ]
   },
 
-  // 12. CONVERSATION-STARTING ART
+  /* 13. LEARN MORE */
   {
+    subhead: "Want to Go Deeper?",
     paragraphs: [
-      "This isn’t décor — it’s a dialogue. Painterly photography becomes a visual narrative crafted for collectors who want their walls to reflect curiosity, identity, and a love for cinematic, story-driven fine art."
+      "Wayne Heim’s writing explores the philosophy, process, and narrative craft behind painterly photography — including how historically themed images become cinematic One-Image Movies™."
     ]
   },
 
-  // 13. WANT TO KNOW MORE?
-  {
-    subhead: "Want to Know More?",
-    paragraphs: [
-      "Curious what separates painterly fine art photography from traditional photography or digital illustration? Wayne Heim’s blog explores the philosophy, process, and narrative craft behind his painterly approach — and how these handcrafted images become cinematic One-Image Movies™ that stay with you long after first viewing."
-    ]
-  },
-
-  // 14. FINAL INVITATION
+  /* 14. FINAL INVITATION */
   {
     subhead: "Embrace the Past — Live the Story",
     paragraphs: [
-      "Wayne Heim’s painterly fine art photography is more than visual — it’s visceral. From untamed Western horizons to the quiet gravity of bygone eras, every image invites you to slow down, lean in, and feel something real.",
-      "These are not just photographs — they are cinematic stories etched in light and memory, crafted to stir emotion, spark imagination, and bring the past vividly into the present."
+      "Wayne Heim’s painterly fine art photography invites you to step into history — not as an observer, but as a participant.",
+      "These are not just photographs. They are stories etched in light, shadow, and time."
     ]
   }
+
 ];

@@ -1,23 +1,23 @@
 export const facingFAQ = [
   /* 1 — Painterly vs Traditional */
   {
-    q: "What’s the difference between painterly and traditional fine art photography?",
+    q: "What’s the difference between painterly and traditional fine art photography styles?",
     a: [
-      "Painterly fine art photography draws inspiration from classical painting—soft edges, layered texture, atmospheric light, and intentional narrative shaping. Wayne Heim’s painterly images echo the Pictorialist tradition, where emotion, mood, and story take precedence over strict realism.",
-      "Traditional fine art photography embraces clarity, precision, and the natural character of a scene. Both styles share artistic intent, but painterly work transforms the moment into something more cinematic—closer to a One-Image Movie™—while traditional work captures the world as it is, with authenticity and detail."
+      "Painterly fine art photography is a photographic style inspired by classical painting—soft edges, layered texture, atmospheric light, and intentional narrative shaping. Wayne Heim’s painterly images echo the Pictorialist tradition, where emotion, mood, and story take precedence over strict realism.",
+      "Traditional fine art photography emphasizes clarity, precision, and the natural character of a scene. Both styles share artistic intent, but painterly work transforms the moment into something more cinematic—closer to a One-Image Movie™—while traditional work captures the world as it exists, with authenticity and detail."
     ],
   },
 
   /* 2 — What Wayne Photographs */
   {
-    q: "What kind of subjects does Wayne photograph?",
+    q: "What subjects and themes does Wayne Heim photograph?",
     a: [
-      "Wayne’s work falls into two interconnected bodies of art:",
+      "Wayne’s work spans multiple fine art photography styles and themed collections, unified by story and atmosphere:",
       `<ul>
-        <li><strong>Painterly Fine Art:</strong> Western cowboy portraits, Civil War and WWII reenactment photography, Roaring 20s portraits, Americana, and atmospheric landscapes shaped by narrative light and texture.</li>
-        <li><strong>Traditional Fine Art:</strong> Natural landscapes, wildlife, architecture, and candid portraits—crisp, real, and rooted in place.</li>
+        <li><strong>Painterly Fine Art Photography:</strong> Western themed photography, cowboy portraits, Civil War and WWII reenactment imagery, Roaring 20s portraits, Americana, and painterly landscapes shaped by narrative light and texture.</li>
+        <li><strong>Traditional Fine Art Photography:</strong> Natural landscapes, wildlife, architecture, and candid portraits—crisp, real, and grounded in place.</li>
       </ul>`,
-      "Regardless of the style, every image is crafted as a story: a moment rich enough to invite the viewer inside."
+      "Across every style and theme, each image is constructed as a story—designed to invite the viewer inside rather than simply decorate a wall."
     ],
   },
 
@@ -25,8 +25,8 @@ export const facingFAQ = [
   {
     q: "Are the images digitally illustrated or AI-generated?",
     a: [
-      "No. Every image begins as real photography—captured on location or in studio—and is shaped through Wayne’s hand-edited painterly process. There is no AI generation, no shortcutting, and no synthetic scenes.",
-      "Curious about painterly methods? Visit the <a href=\"/Galleries/Painterly-Fine-Art-Photography\">Painterly Fine Art Photography</a> section to learn more."
+      "No. Every image begins as real photography—captured on location or in studio—and is shaped through Wayne’s hands-on painterly process. There is no AI generation, no synthetic imagery, and no automated shortcuts.",
+      "To explore how photographic style and narrative are developed in this work, visit the <a href=\"/Galleries/Painterly-Fine-Art-Photography\">Painterly Fine Art Photography</a> collection."
     ],
   },
 
@@ -34,8 +34,8 @@ export const facingFAQ = [
   {
     q: "What is a One-Image Movie™?",
     a: [
-      "A One-Image Movie™ is Wayne Heim’s signature artistic form — a single photographic frame crafted with the narrative weight and cinematic depth of an entire film. Rather than showing a sequence of moments, the story is compressed into one decisive frame where character, tension, and atmosphere collide.",
-      "These images hint at the moment before and the moment after, inviting viewers to step into the frame and complete the story themselves. It’s photography elevated into narrative art—emotion, motion, and myth held inside one still."
+      "A One-Image Movie™ is Wayne Heim’s signature narrative photography style — a single photographic frame designed to carry the emotional weight and cinematic tension of an entire film.",
+      "Each image suggests both the moment before and the moment after, allowing the viewer to complete the story through imagination. It is storytelling through still imagery—motion, emotion, and meaning compressed into one frame."
     ],
   },
 
@@ -43,8 +43,8 @@ export const facingFAQ = [
   {
     q: "What makes the Engrained Series unique?",
     a: [
-      "The <a href=\"/Other/K4-Select-Series/Engrained\">Engrained Series</a> features painterly images printed directly onto Baltic Birch through a multi-layer UV process. Wayne controls how the white underlayer is applied so the wood grain intentionally shows through specific areas.",
-      "The result is a tactile, dimensional artwork where photography, craft, and natural material merge into a truly one-of-a-kind fine art wood print."
+      "The <a href=\"/Other/K4-Select-Series/Engrained\">Engrained Series</a> features select painterly and Western themed photographs printed directly onto Baltic Birch using a multi-layer UV process. Wayne controls the white underlayer so the wood grain shows through intentionally.",
+      "The result is a tactile, dimensional fine art object—where photography, material, and narrative craftsmanship merge into a singular presentation."
     ],
   },
 
@@ -52,35 +52,35 @@ export const facingFAQ = [
   {
     q: "Where can I buy prints?",
     a: [
-      "All images are available as fine art prints on paper, metal, or wood. You can <a href=\"/Other/Print-Options\">view print options here</a> or shop directly from any gallery or image page.",
-      "Wayne also offers collector editions, custom sizes, framing recommendations, and specialty Engrained wood pieces. For custom requests, <a href=\"/Contact\">reach out here</a>."
+      "All images are available as fine art prints on paper, metal, or wood. You can <a href=\"/Other/Print-Options\">view print options here</a> or purchase directly from any gallery or image page.",
+      "Collector editions, custom sizing, framing guidance, and Engrained wood prints are available. For tailored requests, <a href=\"/Contact\">contact Wayne here</a>."
     ],
   },
 
   /* 7 — Commissions */
   {
-    q: "Do you accept commissions or custom shoots?",
+    q: "Do you accept commissions or custom themed photography projects?",
     a: [
-      "Yes. Wayne collaborates with collectors, families, reenactment groups, interior designers, and creatives to craft custom portraits, themed series, or historical-inspired stories.",
-      "If you have a story you want brought to life, <a href=\"/Contact\">contact Wayne here</a> to begin a custom concept."
+      "Yes. Wayne works selectively with collectors, families, reenactment groups, designers, and organizations to create custom painterly or Western themed photography projects.",
+      "Each commission is approached as a narrative collaboration. If you have a story to bring to life, <a href=\"/Contact\">reach out here</a>."
     ],
   },
 
   /* 8 — Where the art fits */
   {
-    q: "What spaces are best for displaying Wayne’s art?",
+    q: "What spaces are best for displaying Wayne’s fine art photography?",
     a: [
-      "Wayne’s work lives beautifully in heritage homes, libraries, lodges, museums, and creative workspaces. Western fine art, Americana, and painterly landscapes also complement rustic interiors, modern homes, hospitality spaces, and themed environments.",
-      "Many collectors choose Wayne’s images as focal pieces—art that anchors a room with story, mood, and presence."
+      "Wayne’s work is collected for heritage homes, libraries, lodges, museums, and thoughtfully curated interiors. Western themed art and painterly photography also pair naturally with modern homes, hospitality spaces, and environments built around story and atmosphere.",
+      "These pieces are often chosen as focal works—art that anchors a room with presence, memory, and narrative weight."
     ],
   },
 
   /* 9 — Why Wayne */
   {
-    q: "Why choose Wayne Heim over mass-produced art?",
+    q: "Why choose Wayne Heim over mass-produced or decorative art?",
     a: [
-      "Every image is intentional—crafted, not manufactured. Wayne’s work is rooted in authenticity, historical reference, painterly technique, and narrative craftsmanship.",
-      "In a world of AI-generated shortcuts and generic prints, Wayne’s art stands apart: real, emotional, cinematic, and made with the care of an artist telling genuine human stories."
+      "Every image is intentionally crafted—never manufactured. Wayne’s work is grounded in real photography, painterly discipline, historical awareness, and narrative structure.",
+      "In a market saturated with AI-generated imagery and generic décor, this work stands apart: human, cinematic, emotionally grounded, and built to endure."
     ],
   }
 ];
