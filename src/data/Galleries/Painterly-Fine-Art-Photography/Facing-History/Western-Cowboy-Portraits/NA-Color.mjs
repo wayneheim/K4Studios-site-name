@@ -199,7 +199,7 @@ export const galleryData = [
   {
     "id": "i-QNdCxKN",
     "title": "Exploring Native American Photography",
-    "description": "Wayne Heim's Native American photography captures the spirit of Native American Portraits in this Native American heritage art image. Featuring painterly Native American images, Indigenous experience, and Native American photography, it's ideal for Native American Portraits enthusiasts. © Wayne Heim",
+    "description": "A painterly photograph honoring a Native American figure, defined by vigilance rather than spectacle. Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/1/MdcGHDPzMsxp5bGpXpWLKdfS2zt7Mn5Zc736MMQRG/XL/_HF27362-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/1/MdcGHDPzMsxp5bGpXpWLKdfS2zt7Mn5Zc736MMQRG/XL/_HF27362-Edit-XL.jpg",
@@ -380,7 +380,7 @@ export const galleryData = [
   {
     "id": "i-CD6rgtF",
     "title": "Native American Photography And Spirit Of The West",
-    "description": "Wayne Heim's Native American photography captures the spirit of spirit of the West in this Native American tradition image. Featuring Indigenous experience, Native American Portraits, and Native American photography, it's ideal for spirit of the West enthusiasts. © Wayne Heim",
+    "description": "A fine art photograph celebrating a Native American figure, defined by authority rather than spectacle. Wayne Heim's painterly photography style captures Native identity with the reverence of pictorialist tradition, honoring continuity over conquest. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where leadership was carried through presence and tradition. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/KmHXFd8MFFCLTpg7SH72LN3SwhQPWNkXvQsDGcdBN/XL/_HF25860-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/KmHXFd8MFFCLTpg7SH72LN3SwhQPWNkXvQsDGcdBN/XL/_HF25860-Edit-XL.jpg",
@@ -571,7 +571,7 @@ export const galleryData = [
   {
     "id": "i-vJSCrqC",
     "title": "Native American Photography - Native American Portraits",
-    "description": "Witness Native American photography in Wayne Heim's Native American Portraits. This image features Native American art prints with painterly Native American images and Native American heritage art, ideal for admirers of Native American photography. © Wayne Heim",
+    "description": "A painterly portrait of a Native American figure, defined by vigilance rather than spectacle. Wayne Heim's historically informed photography presents Native subjects as figures of dignity and endurance, not decoration. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/0/LXcgC4RNw9LLgGGWfvWV5hbsnwwqwDNRFS9782TGN/XL/_WHO0707-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/0/LXcgC4RNw9LLgGGWfvWV5hbsnwwqwDNRFS9782TGN/XL/_WHO0707-Edit-Edit-Edit-XL.jpg",
@@ -606,7 +606,7 @@ export const galleryData = [
   {
     "id": "i-WMs24Db",
     "title": "Exploring Western Landscapes Fine Art",
-    "description": "Experience western landscapes fine art through this evocative painterly cowboy portraits from Wayne Heim's portfolio. This piece highlights rustic charm with outlaw portraits, while conveying cowboy portraits, ideal for those who appreciate western landscapes fine art. Explore cowboy artwork in fine art. © Wayne Heim",
+    "description": "A painterly photograph honoring a Native American subject, defined by duty rather than spectacle. Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where responsibility to ancestors anchored the present. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "western landscapes fine art in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K9NHz9qg7FDtJjZghppvPx9gLcLV28DGk4FTnWwHw/XL/_HF27665-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K9NHz9qg7FDtJjZghppvPx9gLcLV28DGk4FTnWwHw/XL/_HF27665-Edit-XL.jpg",
@@ -643,7 +643,7 @@ export const galleryData = [
   {
     "id": "i-VVwZ7gM",
     "title": "Frontier Life Study",
-    "description": "Experience frontier life through this evocative wild west photography from Wayne Heim's portfolio. This piece highlights cowboy painting art with fine art Western photography, while conveying cowboy portraits, ideal for those who appreciate frontier life. Explore wild west photography in fine art. © Wayne Heim",
+    "description": "A fine art photograph celebrating a Native American subject, defined by vigilance rather than spectacle. Wayne Heim's painterly photography style captures Native identity with the reverence of pictorialist tradition, honoring continuity over conquest. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "frontier life in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
@@ -784,7 +784,7 @@ export const galleryData = [
   {
     "id": "i-Z7vtvZg",
     "title": "Western Landscapes Fine Art - Cowboy Art",
-    "description": "Experience western landscapes fine art through this evocative cowboy art from Wayne Heim's portfolio. This piece highlights cowboy portraits with fine art Western photography, while conveying rugged spirit, ideal for those who appreciate western landscapes fine art. Explore rustic charm in fine art. © Wayne Heim",
+    "description": "A painterly portrait of a Native American subject, defined by authority rather than spectacle. Wayne Heim's historically informed photography presents Native subjects as figures of dignity and endurance, not decoration. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where leadership was carried through presence and tradition. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "western landscapes fine art in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/MVPQV5ZhxNQmrT6KNTKqVXGq8vSrXL7fqCV2cJg7L/XL/_HF21068-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/MVPQV5ZhxNQmrT6KNTKqVXGq8vSrXL7fqCV2cJg7L/XL/_HF21068-Edit-XL.jpg",
@@ -851,7 +851,7 @@ export const galleryData = [
   {
     "id": "i-nZbDC9C",
     "title": "Painterly Native American Images And Native American Photography",
-    "description": "Uncover painterly Native American images through this Native American photography from Wayne Heim. Showcasing Indigenous experience, Native American Portraits, and Native American tradition, it's perfect for enthusiasts of painterly Native American images. © Wayne Heim",
+    "description": "A painterly photograph honoring a Native American figure, defined by vigilance rather than spectacle. Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/1/LPJkK7RgGkqVmSZpkCwLrf9zPS2QrpGZj9cjkCVrG/XL/_HF20466-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/1/LPJkK7RgGkqVmSZpkCwLrf9zPS2QrpGZj9cjkCVrG/XL/_HF20466-Edit-2-XL.jpg",
@@ -963,7 +963,7 @@ export const galleryData = [
   {
     "id": "i-h679dhn",
     "title": "The Essence Of Native American Heritage Art",
-    "description": "Experience Native American heritage art through this evocative Native American photography from Wayne Heim's portfolio. This piece highlights Indigenous experience with Native American art prints, while conveying Native American Portraits, ideal for those who appreciate Native American heritage art. © Wayne Heim",
+    "description": "A fine art photograph celebrating a Native American figure, defined by authority rather than spectacle. Wayne Heim's painterly photography style captures Native identity with the reverence of pictorialist tradition, honoring continuity over conquest. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where leadership was carried through presence and tradition. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/KVTLxxQwM7HdcwgDV8Kvv3xnn6QNzvfsCT3T5Spwq/XL/_WHO0338-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/KVTLxxQwM7HdcwgDV8Kvv3xnn6QNzvfsCT3T5Spwq/XL/_WHO0338-Edit-XL.jpg",
@@ -1235,7 +1235,7 @@ export const galleryData = [
   {
     "id": "i-hHVb4vC",
     "title": "Native American Tradition Study",
-    "description": "Witness Native American tradition in Wayne Heim's painterly Native American images. This image features Native American Portraits with Native American art prints and Indigenous experience, ideal for admirers of Native American tradition. © Wayne Heim",
+    "description": "A painterly portrait of a Native American figure, defined by vigilance rather than spectacle. Wayne Heim's historically informed photography presents Native subjects as figures of dignity and endurance, not decoration. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/2/KJNKKMVsd8t977NpwVvFggb7LHHjP8rTKmcjG2Kf2/XL/_WHO1224-901-902-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/2/KJNKKMVsd8t977NpwVvFggb7LHHjP8rTKmcjG2Kf2/XL/_WHO1224-901-902-XL.jpg",
@@ -1300,7 +1300,7 @@ export const galleryData = [
   {
     "id": "i-Z8pZLnt",
     "title": "Cowboy Native American Heritage Art",
-    "description": "Witness Native American Portraits in Wayne Heim's Native American heritage art. This image features Native American tradition with Indigenous experience and Native American art prints, ideal for admirers of Native American Portraits. © Wayne Heim",
+    "description": "A painterly photograph honoring a Native American figure, defined by authority rather than spectacle. Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where leadership was carried through presence and tradition. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/LccN5fvKmnCqhvtMxj4TsXKxHZNTbbWF4jJrQhwgk/XL/_WHO1255-896-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/LccN5fvKmnCqhvtMxj4TsXKxHZNTbbWF4jJrQhwgk/XL/_WHO1255-896-XL.jpg",
@@ -1336,7 +1336,7 @@ export const galleryData = [
   {
     "id": "i-9FCHdBp",
     "title": "Cowboy Artwork Study",
-    "description": "Wayne Heim's cowboy artwork captures the spirit of fine art Western photography in this painterly cowboy portraits image. Featuring wild west photography, frederic remington, and cowboy artwork, it's ideal for fine art Western photography enthusiasts. Discover cowboy artwork in photography. © Wayne Heim",
+    "description": "A fine art photograph celebrating a Native American subject, defined by duty rather than spectacle. Wayne Heim's painterly photography style captures Native identity with the reverence of pictorialist tradition, honoring continuity over conquest. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where responsibility to ancestors anchored the present. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fine art photography of cowboy artwork by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9FCHdBp/0/KK3x6sqdPxWSLfqQrGGdzKsRntf3Fj2M5xPRfMcNp/XL/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9FCHdBp/0/KK3x6sqdPxWSLfqQrGGdzKsRntf3Fj2M5xPRfMcNp/XL/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-XL.jpg",
@@ -1407,7 +1407,7 @@ export const galleryData = [
   {
     "id": "i-zZJbbHG",
     "title": "Painterly Native American Images And Native American Photography",
-    "description": "Experience painterly Native American images through this evocative Native American photography from Wayne Heim's portfolio. This piece highlights Native American tradition with Native American art prints, while conveying spirit of the West, ideal for those who appreciate painterly Native American images. © Wayne Heim",
+    "description": "A painterly portrait of a Native American figure, defined by vigilance rather than spectacle. Wayne Heim's historically informed photography presents Native subjects as figures of dignity and endurance, not decoration. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/LWZFKnGKskLR6gXgN5kHHt4JTKXp64BWghV3pHtdL/XL/_WHO0204-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/LWZFKnGKskLR6gXgN5kHHt4JTKXp64BWghV3pHtdL/XL/_WHO0204-Edit-XL.jpg",
@@ -1509,7 +1509,7 @@ export const galleryData = [
   {
     "id": "i-gQmqxZJ",
     "title": "Capturing Western Art",
-    "description": "Wayne Heim's western art captures the spirit of fine art Western photography in this frederic remington image. Featuring fine art Western photography, western cowboy art, and western art, it's ideal for fine art Western photography enthusiasts. Discover cowboy portraits in photography. © Wayne Heim",
+    "description": "A painterly photograph honoring a Native American subject, defined by authority rather than spectacle. Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where leadership was carried through presence and tradition. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "western art in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gQmqxZJ/0/MKmF5WncWz2JPX9QkHcmfnGdTp7sRcJ9rmxHG8rKT/XL/_WHO6048-923-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gQmqxZJ/0/MKmF5WncWz2JPX9QkHcmfnGdTp7sRcJ9rmxHG8rKT/XL/_WHO6048-923-XL.jpg",
@@ -1542,7 +1542,7 @@ export const galleryData = [
   {
     "id": "i-qFwnr64",
     "title": "Remembering the Past - Dreaming of the Future",
-    "description": "Wayne Heim's wild west photography captures the spirit of fine art Western photography in this frederic remington image. Featuring cowboy painting art, frederic remington, and wild west photography, it's ideal for fine art Western photography enthusiasts. Discover cowboy portraits in photography. © Wayne Heim",
+    "description": "A fine art photograph celebrating a Native American subject, defined by duty rather than spectacle. Wayne Heim's painterly photography style captures Native identity with the reverence of pictorialist tradition, honoring continuity over conquest. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where responsibility to ancestors anchored the present. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "wild west photography in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qFwnr64/0/NHRVCV3tTXPKBGZNJJ5N2qxNmzKwpJpkRZCd7x44Z/XL/_HF28699-Edit-Edit-4-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qFwnr64/0/NHRVCV3tTXPKBGZNJJ5N2qxNmzKwpJpkRZCd7x44Z/XL/_HF28699-Edit-Edit-4-XL.jpg",
@@ -1572,7 +1572,7 @@ export const galleryData = [
   {
     "id": "i-7zpT5Hs",
     "title": "Fine Art Wild West Photography",
-    "description": "Wayne Heim's wild west photography captures the spirit of cowboy art in this western fine art image. Featuring western cowboy art, cowboy artwork, and wild west photography, it's ideal for cowboy art enthusiasts. Discover fine art Western photography in photography. © Wayne Heim",
+    "description": "A painterly portrait of a Native American subject, defined by vigilance rather than spectacle. Wayne Heim's historically informed photography presents Native subjects as figures of dignity and endurance, not decoration. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Wayne Heim's wild west photography artwork",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7zpT5Hs/0/LpVQcfrJw2mW4fh8BfMjMRr59n2RMzt5DF47QGhqj/XL/_WHO6005-921-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7zpT5Hs/0/LpVQcfrJw2mW4fh8BfMjMRr59n2RMzt5DF47QGhqj/XL/_WHO6005-921-2-XL.jpg",
@@ -1711,7 +1711,7 @@ export const galleryData = [
   {
     "id": "i-Gk8bBLn",
     "title": "Native American Tradition - Native American Art Prints",
-    "description": "Wayne Heim's Native American tradition captures the spirit of Native American art prints in this Native American Portraits image. Featuring painterly Native American images, Indigenous experience, and Native American tradition, it's ideal for Native American art prints enthusiasts. © Wayne Heim",
+    "description": "A painterly photograph honoring a Native American figure, defined by authority rather than spectacle. Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where leadership was carried through presence and tradition. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Gk8bBLn/0/KdGP25pr56zsbpsqzJsGC5kxkN35k6BHS7p2spzNS/XL/_WHO6372-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Gk8bBLn/0/KdGP25pr56zsbpsqzJsGC5kxkN35k6BHS7p2spzNS/XL/_WHO6372-Edit-XL.jpg",
@@ -1788,7 +1788,7 @@ export const galleryData = [
   {
     "id": "i-FBQjX95",
     "title": "Outlaw Portraits Study",
-    "description": "Experience outlaw portraits through this evocative fine art Western photography from Wayne Heim's portfolio. This piece highlights western landscapes fine art with cowboy art, while conveying frontier life, ideal for those who appreciate outlaw portraits. Explore fine art Western photography in fine art. © Wayne Heim",
+    "description": "A fine art photograph celebrating a Native American subject, defined by vigilance rather than spectacle. Wayne Heim's painterly photography style captures Native identity with the reverence of pictorialist tradition, honoring continuity over conquest. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "outlaw portraits in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FBQjX95/1/MTZqWw5L2w4HqzGcpSgsFt2kVzQ87ZxVxbrm48hWc/XL/_WHO5832-920-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FBQjX95/1/MTZqWw5L2w4HqzGcpSgsFt2kVzQ87ZxVxbrm48hWc/XL/_WHO5832-920-2-XL.jpg",
@@ -1819,7 +1819,7 @@ export const galleryData = [
   {
     "id": "i-thpSjMG",
     "title": "Cowboy Painting Art And Western Cowboys",
-    "description": "Wayne Heim's cowboy painting art captures the spirit of Western cowboys in this western art image. Featuring cowboy portraits, western landscapes fine art, and cowboy painting art, it's ideal for Western cowboys enthusiasts. Discover outlaw portraits in photography. © Wayne Heim",
+    "description": "A painterly portrait of a Native American subject, defined by authority rather than spectacle. Wayne Heim's historically informed photography presents Native subjects as figures of dignity and endurance, not decoration. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where leadership was carried through presence and tradition. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fine art photography of cowboy painting art by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/0/LcDck6RhXRKm2MvPsw7tQhbHzcTKr2Tqw4nnPdpCj/XL/_HF29518-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/0/LcDck6RhXRKm2MvPsw7tQhbHzcTKr2Tqw4nnPdpCj/XL/_HF29518-Edit-XL.jpg",
@@ -1893,7 +1893,7 @@ export const galleryData = [
   {
     "id": "i-JbWnV3V",
     "title": "Native American Heritage Art - Indigenous Experience",
-    "description": "Experience Native American heritage art through this evocative Indigenous experience from Wayne Heim's portfolio. This piece highlights Native American photography with spirit of the West, while conveying Native American tradition, ideal for those who appreciate Native American heritage art. © Wayne Heim",
+    "description": "A painterly photograph honoring an Indigenous figure, defined by vigilance rather than spectacle. Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/K2M9dDMLGdbLRRHvzZqxj4rpFSrP2tjCLP937GzPW/XL/_WHO2117-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/K2M9dDMLGdbLRRHvzZqxj4rpFSrP2tjCLP937GzPW/XL/_WHO2117-Edit-XL.jpg",
@@ -1928,7 +1928,7 @@ export const galleryData = [
   {
     "id": "i-WXNSQzk",
     "title": "Fine Art Native American Art Prints",
-    "description": "Wayne Heim's Native American art prints captures the spirit of Native American Portraits in this Native American tradition image. Featuring spirit of the West, Indigenous experience, and Native American art prints, it's ideal for Native American Portraits enthusiasts. © Wayne Heim",
+    "description": "A fine art photograph celebrating a Native American figure, defined by authority rather than spectacle. Wayne Heim's painterly photography style captures Native identity with the reverence of pictorialist tradition, honoring continuity over conquest. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where leadership was carried through presence and tradition. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MWbpQRmQw7DXf6KMrVCnBhXNcv4b2gN6V5ws6TWQj/XL/_WHO0135-Edit-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MWbpQRmQw7DXf6KMrVCnBhXNcv4b2gN6V5ws6TWQj/XL/_WHO0135-Edit-3-XL.jpg",
@@ -1998,7 +1998,7 @@ export const galleryData = [
   {
     "id": "i-rR76nKr",
     "title": "Native American Tradition - Indigenous Experience",
-    "description": "Experience Native American tradition through this evocative Indigenous experience from Wayne Heim's portfolio. This piece highlights Native American photography with Native American Portraits, while conveying painterly Native American images, ideal for those who appreciate Native American tradition. © Wayne Heim",
+    "description": "A painterly portrait of an Indigenous figure, defined by vigilance rather than spectacle. Wayne Heim's historically informed photography presents Native subjects as figures of dignity and endurance, not decoration. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/1/LkgR77BRdwK9NfF4g3mWDL7JKRRzgHzhrcC4tXdvV/XL/_WHO1224-901-902-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/1/LkgR77BRdwK9NfF4g3mWDL7JKRRzgHzhrcC4tXdvV/XL/_WHO1224-901-902-XL.jpg",
@@ -2069,7 +2069,7 @@ export const galleryData = [
   {
     "id": "i-tfZTHXq",
     "title": "Native American Art Prints Portrait",
-    "description": "Wayne Heim presents Native American art prints in this Native American heritage art work. Embodying spirit of the West, Native American tradition, and Native American photography, it's recommended for lovers of Native American art prints. © Wayne Heim",
+    "description": "A painterly photograph honoring a Native American figure, defined by authority rather than spectacle. Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where leadership was carried through presence and tradition. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/2/NLgqVKtJv7xJvnGmcNPfrJD6GLLCZ4LQLRrzJvCTv/XL/_WHO1264-895-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/2/NLgqVKtJv7xJvnGmcNPfrJD6GLLCZ4LQLRrzJvCTv/XL/_WHO1264-895-XL.jpg",
@@ -2143,7 +2143,7 @@ export const galleryData = [
   {
     "id": "i-StJWnTh",
     "title": "Capturing Native American Art Prints",
-    "description": "Wayne Heim presents Native American art prints in this Native American tradition work. Embodying spirit of the West, Native American heritage art, and Native American Portraits, it's recommended for lovers of Native American art prints. © Wayne Heim",
+    "description": "A fine art photograph celebrating a Native American figure, defined by vigilance rather than spectacle. Wayne Heim's painterly photography style captures Native identity with the reverence of pictorialist tradition, honoring continuity over conquest. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/2/M9RQmdb6bMtSXHTmXXxfJ6Kpwcd9hQpD5BRNL6w5Z/XL/_HF24203-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/2/M9RQmdb6bMtSXHTmXXxfJ6Kpwcd9hQpD5BRNL6w5Z/XL/_HF24203-Edit-XL.jpg",
@@ -2179,7 +2179,7 @@ export const galleryData = [
   {
     "id": "i-7CjNq8p",
     "title": "Painterly Native American Images Portrait",
-    "description": "Wayne Heim's painterly Native American images captures the spirit of Native American tradition in this Native American heritage art image. Featuring Indigenous experience, Native American photography, and painterly Native American images, it's ideal for Native American tradition enthusiasts. © Wayne Heim",
+    "description": "A painterly portrait of a Native American figure, defined by authority rather than spectacle. Wayne Heim's historically informed photography presents Native subjects as figures of dignity and endurance, not decoration. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where leadership was carried through presence and tradition. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
@@ -2215,7 +2215,7 @@ export const galleryData = [
   {
     "id": "i-Jbxc4G6",
     "title": "Spirit Of The West In Fine Art",
-    "description": "Witness spirit of the West in Wayne Heim's Native American Portraits. This image features Indigenous experience with Native American tradition and Native American photography, ideal for admirers of spirit of the West. © Wayne Heim",
+    "description": "A painterly photograph honoring a Native American subject, defined by vigilance rather than spectacle. Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/0/LPRCpfjRSRXG4bxRszMpfrm7XnssVBBmmDShFRrtS/XL/_WHO5788-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/0/LPRCpfjRSRXG4bxRszMpfrm7XnssVBBmmDShFRrtS/XL/_WHO5788-Edit-XL.jpg",
@@ -2251,7 +2251,7 @@ export const galleryData = [
   {
     "id": "i-FTCst2K",
     "title": "Native American Tradition Portrait",
-    "description": "Wayne Heim's Native American tradition captures the spirit of Native American heritage art in this Native American photography image. Featuring Indigenous experience, painterly Native American images, and Native American tradition, it's ideal for Native American heritage art enthusiasts. © Wayne Heim",
+    "description": "A fine art photograph celebrating a Native American figure, defined by authority rather than spectacle. Wayne Heim's painterly photography style captures Native identity with the reverence of pictorialist tradition, honoring continuity over conquest. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where leadership was carried through presence and tradition. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/K8wPVfPrjCMmPBCnWCJGw7GzwKFTQwqcN75Jwbdcs/XL/_WHO2202-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/K8wPVfPrjCMmPBCnWCJGw7GzwKFTQwqcN75Jwbdcs/XL/_WHO2202-Edit-XL.jpg",
@@ -2286,7 +2286,7 @@ export const galleryData = [
   {
     "id": "i-6vszqTK",
     "title": "Frederic Remington Portrait",
-    "description": "Experience frederic remington through this evocative western cowboy art from Wayne Heim's portfolio. This piece highlights fine art Western photography with Western cowboys, while conveying cowboy portraits, ideal for those who appreciate frederic remington. Explore rustic charm in fine art. © Wayne Heim",
+    "description": "A painterly portrait of a Native American subject, defined by duty rather than spectacle. Wayne Heim's historically informed photography presents Native subjects as figures of dignity and endurance, not decoration. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where responsibility to ancestors anchored the present. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fine art photography of frederic remington by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6vszqTK/0/KWVrZ5Sf7wSpbMgk5SxxrH8CS2MP4kB9KGJ4mrd6N/XL/_WHO6355-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6vszqTK/0/KWVrZ5Sf7wSpbMgk5SxxrH8CS2MP4kB9KGJ4mrd6N/XL/_WHO6355-Edit-XL.jpg",
@@ -2318,7 +2318,7 @@ export const galleryData = [
   {
     "id": "i-q3f95K3",
     "title": "Cowboy Art Moment",
-    "description": "Wayne Heim's cowboy art captures the spirit of western fine art in this outlaw portraits image. Featuring western fine art, Western cowboys, and cowboy art, it's ideal for western fine art enthusiasts. Discover historic western prints in photography. © Wayne Heim",
+    "description": "A painterly photograph honoring a Native American subject, defined by hesitation rather than spectacle. Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where a moment of pause honored what came before. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "cowboy art in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-q3f95K3/1/NXnpdTwR53rB98VnnGFwSvFwnRLCxBRqnXMzfBBn9/XL/_WHO6048-922-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-q3f95K3/1/NXnpdTwR53rB98VnnGFwSvFwnRLCxBRqnXMzfBBn9/XL/_WHO6048-922-XL.jpg",
@@ -2386,7 +2386,7 @@ export const galleryData = [
   {
     "id": "i-xfVhZw7",
     "title": "Fine Art Rugged Spirit",
-    "description": "Experience rugged spirit through this evocative cowboy painting art from Wayne Heim's portfolio. This piece highlights historic western prints with outlaw portraits, while conveying historic western prints, ideal for those who appreciate rugged spirit. Explore cowboy painting art in fine art. © Wayne Heim",
+    "description": "A fine art photograph celebrating a Native American subject, defined by vigilance rather than spectacle. Wayne Heim's painterly photography style captures Native identity with the reverence of pictorialist tradition, honoring continuity over conquest. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "rugged spirit in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xfVhZw7/0/MWCJWz4c29WtJjZKQ5CXjt97RB245s3vN3q8vSr9z/XL/_WHO6048-923-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xfVhZw7/0/MWCJWz4c29WtJjZKQ5CXjt97RB245s3vN3q8vSr9z/XL/_WHO6048-923-2-XL.jpg",
@@ -2416,7 +2416,7 @@ export const galleryData = [
   {
     "id": "i-LwWLjbH",
     "title": "Capturing Powerful Works Of Art",
-    "description": "Experience powerful works of art through this evocative western canon from Wayne Heim's portfolio. This piece highlights cowboy portraits with cowboy artwork, while conveying Western cowboys, ideal for those who appreciate powerful works of art. Explore Western cowboys in fine art. © Wayne Heim",
+    "description": "A painterly portrait of a Native American subject, defined by duty rather than spectacle. Wayne Heim's historically informed photography presents Native subjects as figures of dignity and endurance, not decoration. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where responsibility to ancestors anchored the present. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "powerful works of art in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LwWLjbH/2/MfR4DH9JkVHvQm8kpFSR95chKN67qp54QhZdG4PPC/XL/_WHO6005-921-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LwWLjbH/2/MfR4DH9JkVHvQm8kpFSR95chKN67qp54QhZdG4PPC/XL/_WHO6005-921-XL.jpg",
@@ -2513,7 +2513,7 @@ export const galleryData = [
   {
     "id": "i-fCSxt3j",
     "title": "Western Cowboy Art In Fine Art",
-    "description": "Experience western cowboy art through this evocative cowboy painting art from Wayne Heim's portfolio. This piece highlights rugged spirit with painterly cowboy portraits, while conveying powerful works of art, ideal for those who appreciate western cowboy art. Explore Western cowboys in fine art. © Wayne Heim",
+    "description": "A painterly photograph honoring a Native American subject, defined by vigilance rather than spectacle. Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where awareness was woven into every gesture. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fine art photography of western cowboy art by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fCSxt3j/0/MjwhMShpnN37kn3V3GJJjLqtcMBpcLLfkNrPcLP4k/XL/_WHO2172-Edit-2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fCSxt3j/0/MjwhMShpnN37kn3V3GJJjLqtcMBpcLLfkNrPcLP4k/XL/_WHO2172-Edit-2-Edit-XL.jpg",
@@ -2550,7 +2550,7 @@ export const galleryData = [
   {
     "id": "i-bWw2GPZ",
     "title": "Fine Art Native American Portraits",
-    "description": "Experience Native American Portraits through this evocative Native American art prints from Wayne Heim's portfolio. This piece highlights painterly Native American images with Native American photography, while conveying spirit of the West, ideal for those who appreciate Native American Portraits. © Wayne Heim",
+    "description": "A fine art photograph celebrating a Native American figure, defined by authority rather than spectacle. Wayne Heim's painterly photography style captures Native identity with the reverence of pictorialist tradition, honoring continuity over conquest. Light, stillness, and restraint shape a narrative rooted in identity, memory, and continuity - where leadership was carried through presence and tradition. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bWw2GPZ/1/KRvFrN9Hf3tZLh2kGR7PxJbjfg3KR9mqskTkSngb9/XL/_WHO1469-889-890-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bWw2GPZ/1/KRvFrN9Hf3tZLh2kGR7PxJbjfg3KR9mqskTkSngb9/XL/_WHO1469-889-890-XL.jpg",

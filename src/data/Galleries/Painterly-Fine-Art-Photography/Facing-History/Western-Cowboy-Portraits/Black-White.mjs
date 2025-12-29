@@ -4312,7 +4312,7 @@ export const galleryData = [
   {
     "id": "i-zShFkKV",
     "title": "Western Cowboys In Fine Art",
-    "description": "Experience Western cowboys through this evocative cowboy painting art from Wayne Heim's portfolio. This piece highlights cowboy artwork with western fine art, while conveying wild west photography, ideal for those who appreciate Western cowboys. Explore Western cowboys in fine art. © Wayne Heim",
+    "description": "A monochrome Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "Fine art photography of Western cowboys by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-zShFkKV/0/Kr5GR5LjhQqqZxsG548r32FpJx5JJSC4ZcKh3Q8XC/L/_O2H0706-783-L.jpg",
     "srcXL": "",
@@ -4407,7 +4407,7 @@ export const galleryData = [
   {
     "id": "i-w3n5cvx",
     "title": "Fine Art Fine Art Western Photography",
-    "description": "Wayne Heim's fine art Western photography captures the spirit of frontier life in this cowboy artwork image. Featuring frederic remington, cowboy art, and fine art Western photography, it's ideal for frontier life enthusiasts. Discover painterly cowboy portraits in photography. © Wayne Heim",
+    "description": "A black and white Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "Fine art photography of fine art Western photography by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-w3n5cvx/0/LntgzGhFDs6Gq9HD9gtC8JQSqsw5QdWpRHRgP4Grr/L/_O2H3505-866-867-869-L.jpg",
     "srcXL": "",
@@ -8035,7 +8035,7 @@ export const galleryData = [
   {
     "id": "i-Q9hVLPk",
     "title": "Outlaw Portraits Study",
-    "description": "Experience outlaw portraits through this evocative powerful works of art from Wayne Heim's portfolio. This piece highlights western canon with rustic charm, while conveying western fine art, ideal for those who appreciate outlaw portraits. Explore cowboy painting art in fine art. © Wayne Heim",
+    "description": "A monochrome Western photograph of an outlaw, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "Fine art photography of outlaw portraits by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-Q9hVLPk/0/M8Rg9kqn9MtnjdC8rBBzrh78nQVLshcdQRd4CZjbt/L/_O2H0605-781-L.jpg",
     "srcXL": "",
@@ -8662,7 +8662,7 @@ export const galleryData = [
   {
     "id": "i-GtR9WBH",
     "title": "Capturing Fine Art Western Photography",
-    "description": "Experience fine art Western photography through this evocative powerful works of art from Wayne Heim's portfolio. This piece highlights western canon with fine art Western photography, while conveying fine art Western photography, ideal for those who appreciate fine art Western photography. Explore western art in fine art. © Wayne Heim",
+    "description": "A black and white Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "fine art Western photography in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GtR9WBH/0/KF8pTN5bZC86QMfCVXNHGG4LzPgnrnbrmDLKDq8D5/XL/_HF26699-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GtR9WBH/0/KF8pTN5bZC86QMfCVXNHGG4LzPgnrnbrmDLKDq8D5/XL/_HF26699-Edit-Edit-XL.jpg",
@@ -9198,7 +9198,7 @@ export const galleryData = [
   {
     "id": "i-6rCCMf9",
     "title": "Rustic Charm Moment",
-    "description": "Experience rustic charm through this evocative painterly cowboy portraits from Wayne Heim's portfolio. This piece highlights western cowboy art with outlaw portraits, while conveying cowboy artwork, ideal for those who appreciate rustic charm. Explore cowboy portraits in fine art. © Wayne Heim",
+    "description": "A monochrome Western photograph of a cowboy, defined by hesitation rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where a moment of pause could mean life or death. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "rustic charm in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-6rCCMf9/0/Mp9KgdrXQB7s6JLncNNSKSNpfxSCGqbSthZQds88T/L/_O2H0605-780-L.jpg",
     "srcXL": "",
@@ -9810,7 +9810,7 @@ export const galleryData = [
   {
     "id": "i-X8DBDJS",
     "title": "Western Fine Art Portrait",
-    "description": "Experience western fine art through this evocative western landscapes fine art from Wayne Heim's portfolio. This piece highlights painterly cowboy portraits with powerful works of art, while conveying Western cowboys, ideal for those who appreciate western fine art. Explore western canon in fine art. © Wayne Heim",
+    "description": "A black and white Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "western fine art in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-X8DBDJS/0/LLbJN4ww8dJknWNnXVFcKZtH5JTHCVTMpKDRDSZd3/L/_O2H0601-779-L.jpg",
     "srcXL": "",
@@ -9904,7 +9904,7 @@ export const galleryData = [
   {
     "id": "i-7Gh7Gq5",
     "title": "The Essence Of Painterly Cowboy Portraits",
-    "description": "Witness painterly cowboy portraits in Wayne Heim's rustic charm. This image features cowboy painting art with rugged spirit and frederic remington, ideal for admirers of painterly cowboy portraits. © Wayne Heim",
+    "description": "A monochrome Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Q9ddntR/2/NNg5LfbZcWx9RrCRGVF7tbG7WxdCSZhQxB7hx7f5f/XL/_WHO0739-Edit-Edit-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Q9ddntR/2/NNg5LfbZcWx9RrCRGVF7tbG7WxdCSZhQxB7hx7f5f/XL/_WHO0739-Edit-Edit-Edit-Edit-2-XL.jpg",
@@ -9938,7 +9938,7 @@ export const galleryData = [
   {
     "id": "i-6xL8p7Z",
     "title": "Cowboy Portraits Moment",
-    "description": "Wayne Heim's cowboy portraits captures the spirit of western cowboy art in this cowboy portraits image. Featuring frontier life, cowboy artwork, and cowboy portraits, it's ideal for western cowboy art enthusiasts. Discover powerful works of art in photography. © Wayne Heim",
+    "description": "A black and white Western photograph of a cowboy, defined by hesitation rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where a moment of pause could mean life or death. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "cowboy portraits in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6xL8p7Z/0/NJ8chVtrnxjrqvKH3Rf4wLsFLjVttCQk2fTT599J4/XL/_HF26688-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6xL8p7Z/0/NJ8chVtrnxjrqvKH3Rf4wLsFLjVttCQk2fTT599J4/XL/_HF26688-Edit-XL.jpg",
@@ -9978,7 +9978,7 @@ export const galleryData = [
   {
     "id": "i-sGtzTtH",
     "title": "Fine Art Cowboy Portraits",
-    "description": "Experience cowboy portraits through this evocative painterly cowboy portraits from Wayne Heim's portfolio. This piece highlights rustic charm with fine art Western photography, while conveying Western cowboys, ideal for those who appreciate cowboy portraits. Explore historic western prints in fine art. © Wayne Heim",
+    "description": "A monochrome Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, shadow, and restraint shape a narrative rooted in consequence and memory. Part of Wayne Heim's Western fine art photography collection. © Wayne Heim",
     "alt": "Fine art photography of cowboy portraits by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sGtzTtH/3/L2mkgPrCSkhX46gmCmcXCwQSdShCRbLPNzm5tkf43/XL/_O2H2257-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sGtzTtH/3/L2mkgPrCSkhX46gmCmcXCwQSdShCRbLPNzm5tkf43/XL/_O2H2257-Edit-XL.jpg",
@@ -10053,7 +10053,7 @@ export const galleryData = [
   {
     "id": "i-NMWM9tP",
     "title": "Exploring Painterly Cowboy Portraits",
-    "description": "Experience painterly cowboy portraits through this evocative fine art Western photography from Wayne Heim's portfolio. This piece highlights western art with cowboy portraits, while conveying cowboy art, ideal for those who appreciate painterly cowboy portraits. Explore powerful works of art in fine art. © Wayne Heim",
+    "description": "A black and white Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "painterly cowboy portraits in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NMWM9tP/1/KTSMD4rQDR4xJV8vNHDwgmLgjz5GWGwv85jRS588t/XL/_HF26959-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NMWM9tP/1/KTSMD4rQDR4xJV8vNHDwgmLgjz5GWGwv85jRS588t/XL/_HF26959-Edit-Edit-2-XL.jpg",
@@ -10090,7 +10090,7 @@ export const galleryData = [
   {
     "id": "i-BzhQxMz",
     "title": "Western Cowboys And Cowboy Portraits",
-    "description": "Experience Western cowboys through this evocative cowboy portraits from Wayne Heim's portfolio. This piece highlights western canon with western fine art, while conveying outlaw portraits, ideal for those who appreciate Western cowboys. Explore outlaw portraits in fine art. © Wayne Heim",
+    "description": "A monochrome Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "Western cowboys in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzhQxMz/0/LbnXc2dCPxrjJDjw6FPBCRBKXFXhBghG5PfD7jLzQ/XL/_WHO6157-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzhQxMz/0/LbnXc2dCPxrjJDjw6FPBCRBKXFXhBghG5PfD7jLzQ/XL/_WHO6157-Edit-XL.jpg",
@@ -10612,7 +10612,7 @@ export const galleryData = [
   {
     "id": "i-xZdZmQs",
     "title": "Fine Art Western Photography In Fine Art",
-    "description": "Experience fine art Western photography through this evocative wild west photography from Wayne Heim's portfolio. This piece highlights Western cowboys with rugged spirit, while conveying western fine art, ideal for those who appreciate fine art Western photography. Explore powerful works of art in fine art. © Wayne Heim",
+    "description": "A black and white Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "Wayne Heim's fine art Western photography artwork",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xZdZmQs/1/LcXh4W3XQr9NQGvhd2qtKLBKjmh7GTtjtgwv7dfXp/XL/_WHO0574-904-905-906-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xZdZmQs/1/LcXh4W3XQr9NQGvhd2qtKLBKjmh7GTtjtgwv7dfXp/XL/_WHO0574-904-905-906-XL.jpg",
@@ -10650,7 +10650,7 @@ export const galleryData = [
   {
     "id": "i-mqQxwNn",
     "title": "Fine Art Outlaw Portraits",
-    "description": "Wayne Heim's outlaw portraits captures the spirit of western cowboy art in this rustic charm image. Featuring western canon, cowboy art, and outlaw portraits, it's ideal for western cowboy art enthusiasts. Discover cowboy painting art in photography. © Wayne Heim",
+    "description": "A monochrome Western photograph of an outlaw, defined by authority rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "Wayne Heim's outlaw portraits artwork",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mqQxwNn/0/MrrVjQWKrqMDSMChLpzbB82H4M6DxgwghJwMntGhG/XL/_HF23312-1246-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mqQxwNn/0/MrrVjQWKrqMDSMChLpzbB82H4M6DxgwghJwMntGhG/XL/_HF23312-1246-XL.jpg",
@@ -10745,7 +10745,7 @@ export const galleryData = [
   {
     "id": "i-pmdsNRZ",
     "title": "Rustic Charm And Outlaw Portraits",
-    "description": "Experience rustic charm through this evocative outlaw portraits from Wayne Heim's portfolio. This piece highlights western landscapes fine art with rugged spirit, while conveying frederic remington, ideal for those who appreciate rustic charm. Explore frederic remington in fine art. © Wayne Heim",
+    "description": "A black and white Western photograph of an outlaw, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "rustic charm in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pmdsNRZ/0/KdkDFCNPjmq4T4PDxNF97w8bVxTgTkqZJMbNSSWFJ/XL/_HF29819-1268-1271-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pmdsNRZ/0/KdkDFCNPjmq4T4PDxNF97w8bVxTgTkqZJMbNSSWFJ/XL/_HF29819-1268-1271-XL.jpg",
@@ -10776,7 +10776,7 @@ export const galleryData = [
   {
     "id": "i-PvHHPSq",
     "title": "Cowboy Art And Fine Art Western Photography",
-    "description": "Wayne Heim's cowboy art captures the spirit of fine art Western photography in this cowboy art image. Featuring fine art Western photography, fine art Western photography, and cowboy art, it's ideal for fine art Western photography enthusiasts. Discover cowboy painting art in photography. © Wayne Heim",
+    "description": "A monochrome Western photograph of a cowboy, defined by authority rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "Fine art photography of cowboy art by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-PvHHPSq/0/NStBXRs8pQzCdtZKVBs3Z7FMjjcMdTr2kgRvNtXH7/XL/_HF29878-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-PvHHPSq/0/NStBXRs8pQzCdtZKVBs3Z7FMjjcMdTr2kgRvNtXH7/XL/_HF29878-Edit-XL.jpg",
@@ -10868,7 +10868,7 @@ export const galleryData = [
   {
     "id": "i-dFdV442",
     "title": "Painterly Cowboy Portraits In Fine Art",
-    "description": "Experience painterly cowboy portraits through this evocative painterly cowboy portraits from Wayne Heim's portfolio. This piece highlights cowboy portraits with powerful works of art, while conveying western cowboy art, ideal for those who appreciate painterly cowboy portraits. Explore rustic charm in fine art. © Wayne Heim",
+    "description": "A black and white Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "painterly cowboy portraits in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-dFdV442/1/L6QtKQLG5x3bt6mn84f8gMhTG6Dcq34JHjD8LRnXp/XL/_WHO1122-1216-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-dFdV442/1/L6QtKQLG5x3bt6mn84f8gMhTG6Dcq34JHjD8LRnXp/XL/_WHO1122-1216-XL.jpg",
@@ -10963,7 +10963,7 @@ export const galleryData = [
   {
     "id": "i-Pd3vWBk",
     "title": "Frederic Remington Portrait",
-    "description": "Experience frederic remington through this evocative frontier life from Wayne Heim's portfolio. This piece highlights powerful works of art with western landscapes fine art, while conveying outlaw portraits, ideal for those who appreciate frederic remington. Explore western art in fine art. © Wayne Heim",
+    "description": "A monochrome Western photograph of an outlaw, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "frederic remington in fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Pd3vWBk/0/LZ8BSzCGwjBsHX5cv3ph7gQLnb276hJTGBnJKFDvm/XL/_WHO1631-1200-1201-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Pd3vWBk/0/LZ8BSzCGwjBsHX5cv3ph7gQLnb276hJTGBnJKFDvm/XL/_WHO1631-1200-1201-XL.jpg",
@@ -10994,7 +10994,7 @@ export const galleryData = [
   {
     "id": "i-nnV6qtS",
     "title": "Fine Art Frederic Remington",
-    "description": "Experience frederic remington through this evocative frederic remington from Wayne Heim's portfolio. This piece highlights western art with frontier life, while conveying Western cowboys, ideal for those who appreciate frederic remington. Explore cowboy art in fine art. © Wayne Heim",
+    "description": "A black and white Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, shadow, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
     "alt": "Fine art photography of frederic remington by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nnV6qtS/0/NTGjd3SrNGD4SPBmZXNsHP7qDhVNZ74LrN4hX7ncR/XL/_HF21312-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nnV6qtS/0/NTGjd3SrNGD4SPBmZXNsHP7qDhVNZ74LrN4hX7ncR/XL/_HF21312-Edit-2-XL.jpg",

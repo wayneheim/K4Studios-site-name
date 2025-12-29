@@ -680,7 +680,7 @@ export const galleryData = [
   {
     "id": "i-jm2ddJx",
     "title": "Mr. & Mrs. Trouble",
-    "description": "© Wayne Heim",
+    "description": "A monochrome Roaring 20s photograph of a figure of the 1920s, defined by restraint rather than spectacle. Wayne Heim's Roaring 20s fine art photography explores a society in transition, focusing on individuals shaped by changing power, expectation, and consequence. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where control defined those who navigated shifting social ground. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-jm2ddJx/A",
     "keywords": [

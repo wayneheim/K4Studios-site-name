@@ -1334,7 +1334,7 @@ export const galleryData = [
   {
     "id": "i-csmfwWw",
     "title": "In the Kitchen   Black & White Photography by Wayne Heim",
-    "description": "Woman stands at kitchen window.   © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-csmfwWw/4/MpXRcNXpRsWKkdXn5VFtNNR6jLw9K6J6nFp9dtFhn/XL/_WEH5836-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/Rockford-WWII-Days-2013/i-csmfwWw/4/MpXRcNXpRsWKkdXn5VFtNNR6jLw9K6J6nFp9dtFhn/XL/_WEH5836-XL.jpg",

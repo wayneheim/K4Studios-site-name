@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-p8JdtJM",
     "title": "The Essence Of War Zone Photography",
-    "description": "Wayne Heim presents war zone photography in this wwii artistic documentary work. Embodying WWII battlefield, war zone photography, and WWII battlefield, it's recommended for lovers of war zone photography. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "First Man Landing  © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-p8JdtJM/A",
     "keywords": [
@@ -487,7 +487,7 @@ export const galleryData = [
   {
     "id": "i-qTKSmBD",
     "title": "War Zone Photography In Fine Art",
-    "description": "Experience war zone photography through this evocative WWII battlefield from Wayne Heim's portfolio. This piece highlights battlefield moments with WWII action art, while conveying wwii artistic documentary, ideal for those who appreciate war zone photography. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-qTKSmBD/A",
     "keywords": [
@@ -560,7 +560,7 @@ export const galleryData = [
   {
     "id": "i-rDdbFnP",
     "title": "WWII Action Art And WWII Battlefield",
-    "description": "Wayne Heim presents WWII action art in this WWII battlefield work. Embodying war zone photography, war zone photography, and battlefield moments, it's recommended for lovers of WWII action art. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-rDdbFnP/A",
     "keywords": [
@@ -703,7 +703,7 @@ export const galleryData = [
   {
     "id": "i-JtGX2Jj",
     "title": "War Zone Photography - Second World War",
-    "description": "Experience war zone photography through this evocative Second World War from Wayne Heim's portfolio. This piece highlights WWII action art with battlefield moments, while conveying war zone photography, ideal for those who appreciate war zone photography. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-JtGX2Jj/A",
     "keywords": [
@@ -738,7 +738,7 @@ export const galleryData = [
   {
     "id": "i-zhXRRQJ",
     "title": "Capturing Second World War",
-    "description": "Wayne Heim's Second World War captures the spirit of war zone photography in this war zone photography image. Featuring WWII action art, Second World War, and Second World War, it's ideal for war zone photography enthusiasts. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-zhXRRQJ/A",
     "keywords": [
@@ -774,7 +774,7 @@ export const galleryData = [
   {
     "id": "i-v6mfR3M",
     "title": "Wwii Artistic Documentary Portrait",
-    "description": "Wayne Heim presents wwii artistic documentary in this Second World War work. Embodying WWII battlefield, war zone photography, and WWII battlefield, it's recommended for lovers of wwii artistic documentary. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-v6mfR3M/A",
     "keywords": [
@@ -845,7 +845,7 @@ export const galleryData = [
   {
     "id": "i-VCqzrtn",
     "title": "War Zone Photography In Fine Art",
-    "description": "Wayne Heim's war zone photography captures the spirit of wwii artistic documentary in this wwii artistic documentary image. Featuring wwii artistic documentary, Second World War, and war zone photography, it's ideal for wwii artistic documentary enthusiasts. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-VCqzrtn/A",
     "keywords": [
@@ -916,7 +916,7 @@ export const galleryData = [
   {
     "id": "i-wQTdr8b",
     "title": "Exploring Wwii Artistic Documentary",
-    "description": "Experience wwii artistic documentary through this evocative WWII battlefield from Wayne Heim's portfolio. This piece highlights Second World War with WWII battlefield, while conveying WWII action art, ideal for those who appreciate wwii artistic documentary. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wQTdr8b/A",
     "keywords": [
@@ -1018,7 +1018,7 @@ export const galleryData = [
   {
     "id": "i-65CBsn3",
     "title": "Capturing War Zone Photography",
-    "description": "Wayne Heim's war zone photography captures the spirit of WWII battlefield in this Second World War image. Featuring WWII action art, war zone photography, and war zone photography, it's ideal for WWII battlefield enthusiasts. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-65CBsn3/A",
     "keywords": [
@@ -1053,7 +1053,7 @@ export const galleryData = [
   {
     "id": "i-krDJb3M",
     "title": "Second World War Study",
-    "description": "Wayne Heim presents Second World War in this WWII battlefield work. Embodying WWII battlefield, war zone photography, and WWII action art, it's recommended for lovers of Second World War. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-krDJb3M/A",
     "keywords": [
@@ -1467,7 +1467,7 @@ export const galleryData = [
   {
     "id": "i-3w8Kpzz",
     "title": "Battlefield Moments Moment",
-    "description": "Experience battlefield moments through this evocative WWII action art from Wayne Heim's portfolio. This piece highlights WWII battlefield with WWII action art, while conveying war zone photography, ideal for those who appreciate battlefield moments. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-3w8Kpzz/A",
     "keywords": [
@@ -1610,7 +1610,7 @@ export const galleryData = [
   {
     "id": "i-z7QmfM5",
     "title": "Capturing War Zone Photography",
-    "description": "Experience war zone photography through this evocative wwii artistic documentary from Wayne Heim's portfolio. This piece highlights Second World War with battlefield moments, while conveying WWII action art, ideal for those who appreciate war zone photography. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2019",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-z7QmfM5/A",
     "keywords": [
@@ -1737,7 +1737,7 @@ export const galleryData = [
   {
     "id": "i-K7WCpBX",
     "title": "Capturing WWII Battlefield",
-    "description": "Wayne Heim presents WWII battlefield in this battlefield moments work. Embodying battlefield moments, war zone photography, and wwii artistic documentary, it's recommended for lovers of WWII battlefield. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-K7WCpBX/A",
     "keywords": [
@@ -1846,7 +1846,7 @@ export const galleryData = [
   {
     "id": "i-q9gwvwQ",
     "title": "Battlefield Moments - Wwii Artistic Documentary",
-    "description": "Experience battlefield moments through this evocative wwii artistic documentary from Wayne Heim's portfolio. This piece highlights Second World War with battlefield moments, while conveying WWII battlefield, ideal for those who appreciate battlefield moments. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-q9gwvwQ/A",
     "keywords": [
@@ -1872,7 +1872,7 @@ export const galleryData = [
   {
     "id": "i-XpbzZrt",
     "title": "Capturing War Zone Photography",
-    "description": "Wayne Heim presents war zone photography in this Second World War work. Embodying war zone photography, WWII battlefield, and WWII battlefield, it's recommended for lovers of war zone photography. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XpbzZrt/A",
     "keywords": [
@@ -1898,7 +1898,7 @@ export const galleryData = [
   {
     "id": "i-LD3zdft",
     "title": "WWII Action Art Study",
-    "description": "Experience WWII action art through this evocative war zone photography from Wayne Heim's portfolio. This piece highlights battlefield moments with battlefield moments, while conveying battlefield moments, ideal for those who appreciate WWII action art. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-LD3zdft/A",
     "keywords": [
@@ -1925,7 +1925,7 @@ export const galleryData = [
   {
     "id": "i-TD5LPgq",
     "title": "Capturing WWII Battlefield",
-    "description": "Experience WWII battlefield through this evocative WWII action art from Wayne Heim's portfolio. This piece highlights WWII battlefield with Second World War, while conveying WWII battlefield, ideal for those who appreciate WWII battlefield. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-TD5LPgq/A",
     "keywords": [
@@ -2166,7 +2166,7 @@ export const galleryData = [
   {
     "id": "i-NBppNcg",
     "title": "Exploring Wwii Artistic Documentary",
-    "description": "Wayne Heim presents wwii artistic documentary in this WWII action art work. Embodying WWII battlefield, Second World War, and Second World War, it's recommended for lovers of wwii artistic documentary. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-NBppNcg/A",
     "keywords": [
@@ -2246,7 +2246,7 @@ export const galleryData = [
   {
     "id": "i-H5XJjj2",
     "title": "Battlefield Moments Moment",
-    "description": "Experience battlefield moments through this evocative battlefield moments from Wayne Heim's portfolio. This piece highlights war zone photography with war zone photography, while conveying WWII action art, ideal for those who appreciate battlefield moments. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-H5XJjj2/A",
     "keywords": [
@@ -2272,7 +2272,7 @@ export const galleryData = [
   {
     "id": "i-dkfbg4H",
     "title": "Wwii Artistic Documentary Portrait",
-    "description": "Experience wwii artistic documentary through this evocative war zone photography from Wayne Heim's portfolio. This piece highlights WWII action art with wwii artistic documentary, while conveying WWII battlefield, ideal for those who appreciate wwii artistic documentary. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-dkfbg4H/A",
     "keywords": [
@@ -2352,7 +2352,7 @@ export const galleryData = [
   {
     "id": "i-Gt24qgS",
     "title": "Wwii Artistic Documentary In Fine Art",
-    "description": "Wayne Heim's wwii artistic documentary captures the spirit of WWII action art in this WWII battlefield image. Featuring WWII battlefield, war zone photography, and wwii artistic documentary, it's ideal for WWII action art enthusiasts. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-Gt24qgS/A",
     "keywords": [
@@ -2406,7 +2406,7 @@ export const galleryData = [
   {
     "id": "i-TqwNVLm",
     "title": "War Zone Photography And Second World War",
-    "description": "Wayne Heim presents war zone photography in this Second World War work. Embodying WWII action art, wwii artistic documentary, and war zone photography, it's recommended for lovers of war zone photography. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-TqwNVLm/A",
     "keywords": [
@@ -2433,7 +2433,7 @@ export const galleryData = [
   {
     "id": "i-hSXXXmd",
     "title": "WWII Battlefield Portrait",
-    "description": "Wayne Heim's WWII battlefield captures the spirit of Second World War in this battlefield moments image. Featuring battlefield moments, battlefield moments, and WWII battlefield, it's ideal for Second World War enthusiasts. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-hSXXXmd/A",
     "keywords": [
@@ -2539,7 +2539,7 @@ export const galleryData = [
   {
     "id": "i-XkPp2M9",
     "title": "The Essence Of War Zone Photography",
-    "description": "Wayne Heim's war zone photography captures the spirit of WWII action art in this wwii artistic documentary image. Featuring war zone photography, war zone photography, and war zone photography, it's ideal for WWII action art enthusiasts. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-XkPp2M9/A",
     "keywords": [
@@ -2566,7 +2566,7 @@ export const galleryData = [
   {
     "id": "i-kFB5dxv",
     "title": "Wwii Artistic Documentary Portrait",
-    "description": "Experience wwii artistic documentary through this evocative WWII action art from Wayne Heim's portfolio. This piece highlights battlefield moments with WWII battlefield, while conveying war zone photography, ideal for those who appreciate wwii artistic documentary. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim '23",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-kFB5dxv/A",
     "keywords": [
@@ -2594,7 +2594,7 @@ export const galleryData = [
   {
     "id": "i-752SgTm",
     "title": "Second World War Portrait",
-    "description": "Experience Second World War through this evocative battlefield moments from Wayne Heim's portfolio. This piece highlights war zone photography with Second World War, while conveying wwii artistic documentary, ideal for those who appreciate Second World War. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-752SgTm/A",
     "keywords": [
@@ -2621,7 +2621,7 @@ export const galleryData = [
   {
     "id": "i-xwTrk8M",
     "title": "Wwii Artistic Documentary - WWII Action Art",
-    "description": "Wayne Heim's wwii artistic documentary captures the spirit of WWII action art in this WWII action art image. Featuring war zone photography, Second World War, and wwii artistic documentary, it's ideal for WWII action art enthusiasts. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by resolve rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where purpose held steady when the world did not. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-xwTrk8M/A",
     "keywords": [
@@ -2674,7 +2674,7 @@ export const galleryData = [
   {
     "id": "i-fTGjHKh",
     "title": "War Zone Photography And Second World War",
-    "description": "Experience war zone photography through this evocative Second World War from Wayne Heim's portfolio. This piece highlights Second World War with war zone photography, while conveying wwii artistic documentary, ideal for those who appreciate war zone photography. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-fTGjHKh/A",
     "keywords": [
@@ -2700,7 +2700,7 @@ export const galleryData = [
   {
     "id": "i-wWwVmQG",
     "title": "Capturing Second World War",
-    "description": "Wayne Heim's Second World War captures the spirit of battlefield moments in this WWII battlefield image. Featuring wwii artistic documentary, Second World War, and Second World War, it's ideal for battlefield moments enthusiasts. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-wWwVmQG/A",
     "keywords": [
@@ -2727,7 +2727,7 @@ export const galleryData = [
   {
     "id": "i-3t683PB",
     "title": "WWII Action Art Study",
-    "description": "Wayne Heim's WWII action art captures the spirit of Second World War in this WWII battlefield image. Featuring war zone photography, battlefield moments, and WWII action art, it's ideal for Second World War enthusiasts. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-3t683PB/A",
     "keywords": [
@@ -3034,7 +3034,7 @@ export const galleryData = [
   {
     "id": "i-8JM8jfL",
     "title": "Wwii Artistic Documentary - WWII Battlefield",
-    "description": "Wayne Heim's wwii artistic documentary captures the spirit of WWII battlefield in this Second World War image. Featuring WWII battlefield, WWII action art, and wwii artistic documentary, it's ideal for WWII battlefield enthusiasts. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-8JM8jfL/A",
     "keywords": [
@@ -3276,7 +3276,7 @@ export const galleryData = [
   {
     "id": "i-648v5jr",
     "title": "Battlefield Moments Portrait",
-    "description": "Wayne Heim presents battlefield moments in this WWII action art work. Embodying Second World War, war zone photography, and WWII battlefield, it's recommended for lovers of battlefield moments. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-648v5jr/A",
     "keywords": [
@@ -3379,7 +3379,7 @@ export const galleryData = [
   {
     "id": "i-tgmq9D9",
     "title": "Fine Art War Zone Photography",
-    "description": "Wayne Heim's war zone photography captures the spirit of WWII action art in this war zone photography image. Featuring wwii artistic documentary, WWII action art, and war zone photography, it's ideal for WWII action art enthusiasts. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-tgmq9D9/A",
     "keywords": [
@@ -3413,7 +3413,7 @@ export const galleryData = [
   {
     "id": "i-z3k6ZDH",
     "title": "War Zone Photography Moment",
-    "description": "Wayne Heim's war zone photography captures the spirit of WWII battlefield in this wwii artistic documentary image. Featuring WWII action art, wwii artistic documentary, and war zone photography, it's ideal for WWII battlefield enthusiasts. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/i-z3k6ZDH/A",
     "keywords": [

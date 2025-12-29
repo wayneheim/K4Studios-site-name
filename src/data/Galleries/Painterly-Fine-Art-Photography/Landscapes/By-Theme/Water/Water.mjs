@@ -1438,7 +1438,7 @@ export const galleryData = [
   {
     "id": "i-NkNwLM6",
     "title": "Hidden Falls",
-    "description": "Hidden waterfall in West Virginia.",
+    "description": "A painterly landscape photograph of a waterfall, shaped by permanence rather than spectacle. Wayne Heim's painterly landscape photography treats place as emotional geography, where light and terrain carry memory rather than spectacle. Light, tone, and composition shape a quiet narrative rooted in place and memory - where geology outlasts narrative, and the land remembers. Part of Wayne Heim's painterly landscape photography series. © Wayne Heim",
     "alt": "Old Mill in the Fall",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-NkNwLM6/A",
     "keywords": [
@@ -1790,7 +1790,7 @@ export const galleryData = [
   {
     "id": "i-5ZsWtSx",
     "title": "Down the hill.",
-    "description": "Waterfall in the woods.",
+    "description": "A painterly fine art landscape of a waterfall, shaped by stillness rather than spectacle. Approached with painterly restraint, Wayne Heim's landscapes prioritize mood, tone, and presence over literal representation. Light, tone, and composition shape a quiet narrative rooted in place and memory - where silence holds its own weight in open country. Part of Wayne Heim's painterly landscape photography series. © Wayne Heim",
     "alt": "50/50",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-5ZsWtSx/A",
     "keywords": [
@@ -1878,7 +1878,7 @@ export const galleryData = [
   {
     "id": "i-fGnNkBL",
     "title": "Vermont Waterfall",
-    "description": "Cascading waterfall in the green forest.",
+    "description": "A painterly landscape photograph of a waterfall, shaped by permanence rather than spectacle. Rather than documenting scenery, this work explores how place shapes perception, memory, and stillness. Light, tone, and composition shape a quiet narrative rooted in place and memory - where geology outlasts narrative, and the land remembers. Part of Wayne Heim's painterly landscape photography series. © Wayne Heim",
     "alt": "Down the hill.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-fGnNkBL/A",
     "keywords": [

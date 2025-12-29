@@ -28,6 +28,8 @@ const IS_CW = args.includes('--cw');
 const IS_WWII = args.includes('--wwii');
 const IS_R20S = args.includes('--r20s');
 const IS_LANDSCAPE = args.includes('--landscape');
+// Traditional (non-painterly) Fine Art Photography
+const IS_TRADITIONAL = args.includes('--traditional');
 // WWII sub-galleries
 const IS_WWII_PORTRAITS = args.includes('--portraits');
 const IS_WWII_MACHINES = args.includes('--machines');
@@ -43,11 +45,25 @@ const IS_LOCATION_MIDWEST = args.includes('--midwest');
 const IS_LOCATION_NORTHEAST = args.includes('--northeast');
 const IS_LOCATION_SOUTH = args.includes('--south');
 const IS_LOCATION_INTERNATIONAL = args.includes('--international');
+// International sub-galleries
+const IS_INTL_ICELAND = args.includes('--iceland');
+const IS_INTL_NEWFOUNDLAND = args.includes('--newfoundland');
+const IS_INTL_CANADA = args.includes('--canada');
+const IS_INTL_FAROE = args.includes('--faroe');
 // Transportation sub-galleries
 const IS_TRANSPORTATION = args.includes('--transportation');
 const IS_TRANSPORTATION_TRAINS = args.includes('--trains');
-const IS_TRANSPORTATION_TRAINS_BW = args.includes('--trains-bw');
 const IS_TRANSPORTATION_CARS = args.includes('--cars');
+const IS_TRANSPORTATION_BOATS = args.includes('--boats');
+const IS_TRANSPORTATION_PLANES = args.includes('--planes');
+const IS_TRANSPORTATION_MILITARY = args.includes('--military');
+// Traditional Portraits sub-galleries
+const IS_PORTRAITS = args.includes('--portraits');
+const IS_PORTRAITS_COLOR = args.includes('--portraits-color');
+const IS_PORTRAITS_BW = args.includes('--portraits-bw');
+const IS_PORTRAITS_REENACTORS = args.includes('--reenactors');
+// Architecture gallery
+const IS_ARCHITECTURE = args.includes('--architecture');
 // Miscellaneous sub-galleries
 const IS_MISC = args.includes('--misc');
 const IS_MISC_PORTRAITS = args.includes('--misc-portraits');
@@ -59,7 +75,12 @@ let GALLERY_TYPE = 'Color';
 let GALLERY_SUBDIR = 'Western-Cowboy-Portraits';
 let GALLERY_BASE = 'Facing-History'; // default base path
 let GALLERY_FILENAME_OVERRIDE = null; // for non-standard filenames
-if (IS_MISC) {
+if (IS_ARCHITECTURE) {
+  GALLERY_BASE = 'Architecture';
+  GALLERY_SUBDIR = ''; // files are directly in Architecture folder
+  GALLERY_TYPE = 'Architecture';
+  GALLERY_FILENAME_OVERRIDE = 'Gallery.mjs';
+} else if (IS_MISC) {
   GALLERY_BASE = 'Miscellaneous';
   GALLERY_SUBDIR = ''; // files are directly in Miscellaneous folder
   if (IS_MISC_PORTRAITS) {
@@ -76,24 +97,69 @@ if (IS_MISC) {
   if (IS_TRANSPORTATION_CARS) {
     GALLERY_TYPE = 'Transportation Cars';
     GALLERY_FILENAME_OVERRIDE = 'Cars.mjs';
-  } else if (IS_TRANSPORTATION_TRAINS_BW) {
+  } else if (IS_TRANSPORTATION_BOATS) {
+    GALLERY_TYPE = 'Transportation Boats';
+    GALLERY_FILENAME_OVERRIDE = 'Boats.mjs';
+  } else if (IS_TRANSPORTATION_PLANES) {
+    GALLERY_TYPE = 'Transportation Planes';
+    GALLERY_FILENAME_OVERRIDE = 'Planes.mjs';
+  } else if (IS_TRANSPORTATION_MILITARY) {
+    GALLERY_TYPE = 'Transportation Military';
+    GALLERY_FILENAME_OVERRIDE = 'Military.mjs';
+  } else if (IS_BW) {
+    // Trains B/W - Painterly uses Trains-Black-White.mjs
     GALLERY_TYPE = 'Transportation Trains B/W';
-    GALLERY_FILENAME_OVERRIDE = 'Trains-Black-White.mjs';
+    GALLERY_FILENAME_OVERRIDE = IS_TRADITIONAL ? 'Trains.mjs' : 'Trains-Black-White.mjs';
   } else {
-    // Default to Trains Color
-    GALLERY_TYPE = 'Transportation Trains Color';
-    GALLERY_FILENAME_OVERRIDE = 'Trains-Color.mjs';
+    // Trains Color - Painterly uses Trains-Color.mjs, Traditional uses Trains.mjs
+    GALLERY_TYPE = 'Transportation Trains';
+    GALLERY_FILENAME_OVERRIDE = IS_TRADITIONAL ? 'Trains.mjs' : 'Trains-Color.mjs';
+  }
+} else if (IS_PORTRAITS) {
+  GALLERY_BASE = 'Portraits';
+  GALLERY_SUBDIR = ''; // files are directly in Portraits folder
+  if (IS_PORTRAITS_BW) {
+    GALLERY_TYPE = 'Portraits Black-White';
+    GALLERY_FILENAME_OVERRIDE = 'Black-White.mjs';
+  } else if (IS_PORTRAITS_REENACTORS) {
+    GALLERY_TYPE = 'Portraits Reenactors';
+    GALLERY_FILENAME_OVERRIDE = 'Reenactors.mjs';
+  } else {
+    // Default to Color
+    GALLERY_TYPE = 'Portraits Color';
+    GALLERY_FILENAME_OVERRIDE = 'Color.mjs';
   }
 } else if (IS_LOCATION) {
   GALLERY_BASE = 'Landscapes/By-Location';
   let locationSub = 'West'; // default
+  let locationFilename = 'Gallery.mjs';
   if (IS_LOCATION_MIDWEST) locationSub = 'Midwest';
   else if (IS_LOCATION_NORTHEAST) locationSub = 'Northeast';
   else if (IS_LOCATION_SOUTH) locationSub = 'South';
-  else if (IS_LOCATION_INTERNATIONAL) locationSub = 'International';
-  GALLERY_TYPE = `Location ${locationSub}`;
+  else if (IS_LOCATION_INTERNATIONAL) {
+    locationSub = 'International';
+    // Handle individual international galleries
+    if (IS_INTL_ICELAND) {
+      locationFilename = 'Iceland.mjs';
+      GALLERY_TYPE = 'Location Iceland';
+    } else if (IS_INTL_NEWFOUNDLAND) {
+      locationFilename = 'Newfoundland.mjs';
+      GALLERY_TYPE = 'Location Newfoundland';
+    } else if (IS_INTL_CANADA) {
+      locationFilename = 'Canada-Western.mjs';
+      GALLERY_TYPE = 'Location Canada Western';
+    } else if (IS_INTL_FAROE) {
+      locationFilename = 'The-Faroe-Islands.mjs';
+      GALLERY_TYPE = 'Location Faroe Islands';
+    } else {
+      // Default - shouldn't happen, require sub-flag
+      console.error('ERROR: --international requires a sub-flag: --iceland, --newfoundland, --canada, or --faroe');
+      process.exit(1);
+    }
+  }
+  if (!GALLERY_TYPE) GALLERY_TYPE = `Location ${locationSub}`;
   GALLERY_SUBDIR = locationSub;
-  GALLERY_FILENAME_OVERRIDE = 'Gallery.mjs';
+  GALLERY_FILENAME_OVERRIDE = locationFilename;
 } else if (IS_LANDSCAPE) {
   GALLERY_BASE = 'Landscapes/By-Theme';
   let landscapeSub = 'Mountains'; // default
@@ -126,8 +192,12 @@ if (IS_MISC) {
   GALLERY_TYPE = 'Black-White';
 }
 
+// Add Traditional prefix to gallery type if applicable
+const GALLERY_STYLE = IS_TRADITIONAL ? 'Traditional' : 'Painterly';
+
 console.log(`\n=== Gallery Description Updater ===`);
 console.log(`Mode: ${DRY_RUN ? 'DRY RUN (no writes)' : 'LIVE'}`);
+console.log(`Style: ${GALLERY_STYLE}`);
 console.log(`Gallery: ${GALLERY_TYPE}`);
 console.log(`Limit: ${MAX_UPDATES === Infinity ? 'none' : MAX_UPDATES} images\n`);
 
@@ -142,7 +212,10 @@ if (GALLERY_FILENAME_OVERRIDE) {
 } else {
   GALLERY_FILENAME = 'Color.mjs';
 }
-const GALLERY_PATH = join(__dirname, `../src/data/Galleries/Painterly-Fine-Art-Photography/${GALLERY_BASE}/${GALLERY_SUBDIR}/`, GALLERY_FILENAME);
+
+// Choose base gallery folder based on --traditional flag
+const GALLERY_ROOT = IS_TRADITIONAL ? 'Fine-Art-Photography' : 'Painterly-Fine-Art-Photography';
+const GALLERY_PATH = join(__dirname, `../src/data/Galleries/${GALLERY_ROOT}/${GALLERY_BASE}/${GALLERY_SUBDIR}/`, GALLERY_FILENAME);
 const GALLERY_TMP_PATH = GALLERY_PATH + '.tmp';
 
 // B/W specific openers - rotate between these
@@ -311,18 +384,34 @@ const R20S_TITLE_HINTS = {
 // LANDSCAPE CONSTANTS
 // ============================================
 
-// Landscape openers - rotate between these
-const LANDSCAPE_OPENERS = [
+// Landscape openers - rotate between these (painterly vs traditional)
+const LANDSCAPE_OPENERS_PAINTERLY = [
   'A painterly landscape photograph of',
   'A painterly fine art landscape of'
 ];
 
-// Landscape authority sentences - rotate through these
-const LANDSCAPE_AUTHORITY_SENTENCES = [
+const LANDSCAPE_OPENERS_TRADITIONAL = [
+  'A fine art landscape photograph of',
+  'A fine art landscape of'
+];
+
+// Use appropriate openers based on --traditional flag
+const LANDSCAPE_OPENERS = IS_TRADITIONAL ? LANDSCAPE_OPENERS_TRADITIONAL : LANDSCAPE_OPENERS_PAINTERLY;
+
+// Landscape authority sentences - rotate through these (painterly vs traditional)
+const LANDSCAPE_AUTHORITY_SENTENCES_PAINTERLY = [
   "Wayne Heim's painterly landscape photography treats place as emotional geography, where light and terrain carry memory rather than spectacle.",
   "Approached with painterly restraint, Wayne Heim's landscapes prioritize mood, tone, and presence over literal representation.",
   "Rather than documenting scenery, this work explores how place shapes perception, memory, and stillness."
 ];
+
+const LANDSCAPE_AUTHORITY_SENTENCES_TRADITIONAL = [
+  "Wayne Heim's fine art landscape photography treats place as emotional geography, where light and terrain carry memory rather than spectacle.",
+  "Approached with restraint and precision, Wayne Heim's landscapes prioritize mood, tone, and presence over literal representation.",
+  "Rather than documenting scenery, this work explores how place shapes perception, memory, and stillness."
+];
+
+const LANDSCAPE_AUTHORITY_SENTENCES = IS_TRADITIONAL ? LANDSCAPE_AUTHORITY_SENTENCES_TRADITIONAL : LANDSCAPE_AUTHORITY_SENTENCES_PAINTERLY;
 
 // Landscape dominant states - specific to place/mood
 const LANDSCAPE_DOMINANT_STATES = [
@@ -492,12 +581,20 @@ const LOCATION_SUBJECT_HINTS = {
   }
 };
 
-// Location authority sentences - rotate through these
-const LOCATION_AUTHORITY_SENTENCES = [
+// Location authority sentences - rotate through these (painterly vs traditional)
+const LOCATION_AUTHORITY_SENTENCES_PAINTERLY = [
   "Wayne Heim's painterly landscape photography treats place as emotional geography - not destination, but atmosphere.",
   "Approached with painterly restraint, each frame captures the character of the land rather than its postcard appeal.",
   "Rather than documenting scenery, this work reveals the quiet presence that defines a region."
 ];
+
+const LOCATION_AUTHORITY_SENTENCES_TRADITIONAL = [
+  "Wayne Heim's fine art landscape photography treats place as emotional geography - not destination, but atmosphere.",
+  "Approached with restraint and precision, each frame captures the character of the land rather than its postcard appeal.",
+  "Rather than documenting scenery, this work reveals the quiet presence that defines a region."
+];
+
+const LOCATION_AUTHORITY_SENTENCES = IS_TRADITIONAL ? LOCATION_AUTHORITY_SENTENCES_TRADITIONAL : LOCATION_AUTHORITY_SENTENCES_PAINTERLY;
 
 // Location mood truths - place-specific rather than historical
 const LOCATION_MOOD_TRUTHS = {
@@ -523,10 +620,13 @@ const TRANSPORTATION_AUTHORITY_PHRASES = [
   'historic transportation photography'
 ];
 
-// Transportation secondary phrases - for trains vs cars
+// Transportation secondary phrases - for trains vs cars vs boats etc
 const TRANSPORTATION_SECONDARY_PHRASES = {
   trains: 'vintage train photography',
-  cars: 'vintage automobile photography'
+  cars: 'vintage automobile photography',
+  boats: 'maritime fine art photography',
+  planes: 'vintage aviation photography',
+  military: 'military vehicle photography'
 };
 
 // Transportation subject hints - machine-specific, not era names
@@ -560,7 +660,46 @@ const TRANSPORTATION_SUBJECT_HINTS = {
   'hood ornament': 'a hood ornament in detail',
   'chrome': 'chrome details of a vintage automobile',
   'dashboard': 'a vintage dashboard',
-  'steering wheel': 'a vintage steering wheel'
+  'steering wheel': 'a vintage steering wheel',
+  // Boat-specific
+  'boat': 'a fishing boat',
+  'ship': 'a vessel at sea',
+  'sailboat': 'a sailboat',
+  'fishing': 'a fishing boat',
+  'harbor': 'a harbor scene',
+  'port': 'a port scene',
+  'dock': 'boats at dock',
+  'marina': 'a marina scene',
+  'hull': 'a weathered hull',
+  'mast': 'a boat mast',
+  'sail': 'billowing sails',
+  'anchor': 'an anchor',
+  'lobster': 'a lobster boat',
+  'trawler': 'a trawler',
+  'schooner': 'a schooner',
+  'vessel': 'a vessel',
+  // Plane-specific
+  'airplane': 'a vintage airplane',
+  'aircraft': 'a vintage aircraft',
+  'biplane': 'a biplane',
+  'propeller': 'a propeller plane',
+  'cockpit': 'a vintage cockpit',
+  'wing': 'an aircraft wing',
+  'hangar': 'a hangar scene',
+  'runway': 'a runway scene',
+  'aviation': 'vintage aviation',
+  'pilot': 'a pilot portrait',
+  'bomber': 'a vintage bomber',
+  'fighter': 'a fighter plane',
+  // Military-specific
+  'tank': 'a military tank',
+  'jeep': 'a military jeep',
+  'cannon': 'artillery',
+  'artillery': 'artillery piece',
+  'halftrack': 'a halftrack vehicle',
+  'armored': 'an armored vehicle',
+  'troop': 'a troop transport',
+  'military vehicle': 'a military vehicle'
 };
 
 // Transportation dominant states - machine/motion focused
@@ -585,6 +724,80 @@ const transportationStateHints = {
   industry: ['work', 'coal', 'freight', 'cargo', 'industrial'],
   permanence: ['old', 'weathered', 'rust', 'patina', 'enduring', 'classic'],
   invention: ['design', 'engineering', 'built', 'chrome', 'detail']
+};
+
+// ============================================
+// ARCHITECTURE CONSTANTS
+// ============================================
+
+// Architecture authority phrases - rotate (max 1 per description)
+const ARCHITECTURE_AUTHORITY_PHRASES = [
+  'architectural fine art photography',
+  'fine art architecture photography',
+  'architectural photography'
+];
+
+// Architecture subject hints - structure-specific
+const ARCHITECTURE_SUBJECT_HINTS = {
+  // Building types
+  'barn': 'a weathered barn',
+  'church': 'a historic church',
+  'cathedral': 'a cathedral',
+  'bridge': 'a bridge',
+  'covered bridge': 'a covered bridge',
+  'mill': 'a historic mill',
+  'lighthouse': 'a lighthouse',
+  'farmhouse': 'a farmhouse',
+  'cabin': 'a rustic cabin',
+  'silo': 'a farm silo',
+  'windmill': 'a windmill',
+  'tower': 'a tower',
+  'steeple': 'a church steeple',
+  'schoolhouse': 'a schoolhouse',
+  'depot': 'a train depot',
+  'station': 'a station',
+  'storefront': 'a historic storefront',
+  'facade': 'an architectural facade',
+  'ruins': 'architectural ruins',
+  'foundation': 'a stone foundation',
+  // Architectural elements
+  'door': 'an architectural doorway',
+  'window': 'an architectural window',
+  'staircase': 'a staircase',
+  'column': 'architectural columns',
+  'arch': 'an architectural arch',
+  'roof': 'a roofline',
+  'brick': 'brick architecture',
+  'stone': 'stone architecture',
+  'wood': 'wooden architecture',
+  // Default
+  'building': 'a historic structure',
+  'structure': 'a historic structure',
+  'architecture': 'a historic structure'
+};
+
+// Architecture dominant states - structure/permanence focused
+const ARCHITECTURE_DOMINANT_STATES = [
+  'permanence',
+  'decay',
+  'shelter',
+  'abandonment',
+  'craftsmanship',
+  'stillness',
+  'endurance',
+  'weathering'
+];
+
+// Architecture state hints for keyword matching
+const architectureStateHints = {
+  permanence: ['standing', 'endure', 'lasting', 'solid', 'intact', 'preserved'],
+  decay: ['ruin', 'crumbling', 'falling', 'broken', 'collapsed', 'deteriorating'],
+  shelter: ['home', 'refuge', 'haven', 'dwelling', 'abode'],
+  abandonment: ['abandoned', 'empty', 'forgotten', 'deserted', 'vacant', 'left'],
+  craftsmanship: ['built', 'crafted', 'made', 'constructed', 'detail', 'work'],
+  stillness: ['quiet', 'silent', 'still', 'peaceful', 'calm'],
+  endurance: ['surviving', 'weathered', 'aged', 'time', 'years', 'old'],
+  weathering: ['worn', 'patina', 'faded', 'bleached', 'rusted', 'peeling']
 };
 
 // ============================================
@@ -875,12 +1088,65 @@ const BOILERPLATE_PATTERNS = [
 ];
 
 /**
- * Detect if a description contains boilerplate text
+ * Detect if a description is truly empty, placeholder, or generic boilerplate
+ * that needs replacement. Does NOT match well-written custom descriptions.
  */
 function isBoilerplate(description) {
-  if (!description) return false;
-  const lower = description.toLowerCase();
-  return BOILERPLATE_PATTERNS.some(pattern => lower.includes(pattern));
+  if (!description) return true; // Empty descriptions need updates
+  
+  const trimmed = description.trim();
+  const lower = trimmed.toLowerCase();
+  
+  // Very short descriptions are likely placeholders
+  if (trimmed.length < 50) return true;
+  
+  // Check for truly generic/placeholder boilerplate phrases
+  // These indicate auto-generated or placeholder text, not custom writing
+  const PLACEHOLDER_PATTERNS = [
+    'immerse yourself in',
+    'a must-have for collectors of',
+    'it\'s suited for admirers',
+    'it\'s perfect for enthusiasts',
+    'it\'s ideal for',
+    'it\'s recommended for lovers of',
+    'ideal for admirers of',
+    'perfect for enthusiasts of',
+    'a testament to',
+    'comes alive in this piece',
+    'this cowboy art artwork',
+    'with western cowboys elements',
+    'including frontier life themes',
+    'embrace the spirit of the old west',
+    'painterly wild west themed photography',
+    // Native American placeholders
+    'this native american artwork',
+    'immerse yourself in native',
+    'this stunning native',
+    // WWII placeholders
+    'witness moments of',
+    'uncover heroic',
+    'showcasing heroic',
+    // Roaring 20s placeholders
+    'roaring 20s enthusiasts',
+    // Landscape placeholders
+    'ideal for those who appreciate',
+    'this piece highlights',
+    'while conveying',
+    'experience mountain landscape photography through this evocative',
+    'experience sunset landscape photography through this evocative',
+    'experience water landscape photography through this evocative',
+    'the truth of a moment',
+    // Misc portrait placeholders
+    'immerse yourself in experimental fine art',
+    'experimental fine art with this stunning',
+    'capturing miscellaneous painterly photography',
+    'a must-have for collectors of experimental',
+    'witness experimental fine art',
+    'experience experimental fine art',
+    'behold  a poster done in a photoshoot',
+  ];
+  
+  return PLACEHOLDER_PATTERNS.some(pattern => lower.includes(pattern));
 }
 
 // Abstract terms to reject as subjects
@@ -1523,8 +1789,9 @@ function buildWesternDescription(image, dominantState, imageIndex, galleryPath) 
     
     let description = `${opener} ${subject}, shaped by ${dominantState} rather than spectacle. ${authoritySentence} Light, tone, and composition shape a quiet narrative rooted in place and memory - where ${moodTruth}.`;
     
-    // Add collection reference
-    description += " Part of Wayne Heim's painterly landscape photography series.";
+    // Add collection reference (use appropriate style)
+    const styleWord = IS_TRADITIONAL ? 'fine art' : 'painterly';
+    description += ` Part of Wayne Heim's ${styleWord} landscape photography series.`;
     description += " © Wayne Heim";
     
     return description
@@ -1575,6 +1842,40 @@ function buildWesternDescription(image, dominantState, imageIndex, galleryPath) 
     }
     
     let description = `A painterly fine art photograph of ${subject}, defined by motion rather than nostalgia. Wayne Heim's ${authorityPhrase} explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. ${closingPhrase} ${collectionPhrase} © Wayne Heim`;
+    
+    return description
+      .replace(/[""]/g, '"')
+      .replace(/['']/g, "'")
+      .replace(/[—–]/g, '-');
+  }
+  
+  // Architecture gallery - structures, permanence, craftsmanship framing
+  if (IS_ARCHITECTURE) {
+    const authorityPhrase = ARCHITECTURE_AUTHORITY_PHRASES[imageIndex % ARCHITECTURE_AUTHORITY_PHRASES.length];
+    
+    // Determine architecture state from keywords/title
+    let archState = dominantState;
+    const combinedText = `${image.title} ${image.alt} ${image.description || ''}`.toLowerCase();
+    for (const [state, keywords] of Object.entries(architectureStateHints)) {
+      if (keywords.some(kw => combinedText.includes(kw))) {
+        archState = state;
+        break;
+      }
+    }
+    
+    // Extract architecture-specific subject
+    let archSubject = 'a historic structure';
+    for (const [hint, subjectPhrase] of Object.entries(ARCHITECTURE_SUBJECT_HINTS)) {
+      if (combinedText.includes(hint)) {
+        archSubject = subjectPhrase;
+        break;
+      }
+    }
+    
+    const closingPhrase = "Light, texture, and composition shape a narrative rooted in craftsmanship and memory.";
+    const collectionPhrase = "Part of Wayne Heim's fine art architecture photography collection.";
+    
+    let description = `A fine art photograph of ${archSubject}, defined by ${archState} rather than spectacle. Wayne Heim's ${authorityPhrase} explores structures as witnesses to human labor and time, where wood, stone, and weathering carry consequence as much as shelter. ${closingPhrase} ${collectionPhrase} © Wayne Heim`;
     
     return description
       .replace(/[""]/g, '"')

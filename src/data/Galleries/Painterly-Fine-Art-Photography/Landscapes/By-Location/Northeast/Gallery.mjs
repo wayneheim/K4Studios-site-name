@@ -216,7 +216,7 @@ export const galleryData = [
   {
     "id": "i-NkNwLM6",
     "title": "Hidden Falls",
-    "description": "Hidden waterfall in West Virginia.",
+    "description": "A painterly landscape photograph of fall color in New England, shaped by stillness rather than spectacle. Wayne Heim's painterly landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-NkNwLM6/A",
     "keywords": [
@@ -369,7 +369,7 @@ export const galleryData = [
   {
     "id": "i-5ZsWtSx",
     "title": "Down the hill.",
-    "description": "Waterfall in the woods.",
+    "description": "A painterly fine art landscape of fall color in New England, shaped by solitude rather than spectacle. Approached with painterly restraint, each frame captures the character of the land rather than its postcard appeal. Light, tone, and composition shape a quiet narrative rooted in place and memory - where distance and silence are companions here. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
     "alt": "50/50",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-5ZsWtSx/A",
     "keywords": [
@@ -399,7 +399,7 @@ export const galleryData = [
   {
     "id": "i-fGnNkBL",
     "title": "Vermont Waterfall",
-    "description": "Cascading waterfall in the green forest.",
+    "description": "A painterly landscape photograph of fall color in New England, shaped by stillness rather than spectacle. Rather than documenting scenery, this work reveals the quiet presence that defines a region. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's New England landscape photography series. © Wayne Heim",
     "alt": "Down the hill.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fGnNkBL/A",
     "keywords": [

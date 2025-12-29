@@ -154,7 +154,7 @@ export const galleryData = [
   {
     "id": "i-WdNbPqX",
     "title": "Berea Bridge  1   Photography by Wayne Heim",
-    "description": "Many arches of the Berea Bridge. ©Wayne Heim",
+    "description": "A painterly landscape photograph of autumn in the heartland, shaped by stillness rather than spectacle. Wayne Heim's painterly landscape photography treats place as emotional geography - not destination, but atmosphere. Light, tone, and composition shape a quiet narrative rooted in place and memory - where the land holds its breath between seasons. Part of Wayne Heim's Midwestern landscape photography series. © Wayne Heim",
     "alt": "Dueling Falls    Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-WdNbPqX/A",
     "keywords": [

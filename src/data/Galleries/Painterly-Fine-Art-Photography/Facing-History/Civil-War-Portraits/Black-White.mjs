@@ -275,7 +275,7 @@ export const galleryData = [
   {
     "id": "i-5jfqH53",
     "title": "Fine Art Civil War Art",
-    "description": "Experience civil war art through this evocative legacy portraits for collectors from Wayne Heim's portfolio. This piece highlights civil war reenactment photography with civil war photography, while conveying civil war paintings, ideal for those who appreciate civil war art. © Wayne Heim",
+    "description": "A monochrome Civil War photograph of a Civil War soldier, defined by duty rather than spectacle. Wayne Heim's Civil War fine art photography uses a disciplined, historically grounded approach to explore the human cost of conflict beyond reenactment. Light, posture, and restraint shape a narrative rooted in duty, consequence, and memory - where obligation bound men to causes larger than themselves. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-5jfqH53/A",
     "keywords": [
@@ -881,7 +881,7 @@ export const galleryData = [
   {
     "id": "i-q5tM4bH",
     "title": "Capturing Civil War Art",
-    "description": "Experience civil war art through this evocative 19th-century photography from Wayne Heim's portfolio. This piece highlights legacy portraits for collectors with civil war art prints, while conveying Explore Civil War Photography, ideal for those who appreciate civil war art. © Wayne Heim",
+    "description": "A black and white Civil War photograph of a Civil War soldier, defined by exhaustion rather than spectacle. This image is part of Wayne Heim's Civil War fine art photography, focused on memory, consequence, and the lived experience of those shaped by war. Light, posture, and restraint shape a narrative rooted in duty, consequence, and memory - where the weight of conflict wore down body and spirit alike. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-q5tM4bH/A",
     "keywords": [
@@ -1077,7 +1077,7 @@ export const galleryData = [
   {
     "id": "i-JdswJLd",
     "title": "Civil War Art Prints And 19th-Century Photography",
-    "description": "Wayne Heim presents civil war art prints in this 19th-century photography work. Embodying civil war photography, legacy portraits for collectors, and civil war paintings, it's recommended for lovers of civil war art prints. © Wayne Heim",
+    "description": "A monochrome Civil War photograph of a Civil War soldier, defined by duty rather than spectacle. Wayne Heim approaches Civil War photography with restraint and historical awareness, emphasizing presence, duty, and the weight carried by individuals rather than pageantry. Light, posture, and restraint shape a narrative rooted in duty, consequence, and memory - where obligation bound men to causes larger than themselves. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-JdswJLd/A",
     "keywords": [
@@ -1117,7 +1117,7 @@ export const galleryData = [
   {
     "id": "i-N3945FQ",
     "title": "Civil War Soldier    Photography by Wayne Heim",
-    "description": "Portrait of Civil War soldier.  © Wayne Heim",
+    "description": "A black and white Civil War photograph of a Civil War soldier, defined by exhaustion rather than spectacle. Wayne Heim's Civil War fine art photography uses a disciplined, historically grounded approach to explore the human cost of conflict beyond reenactment. Light, posture, and restraint shape a narrative rooted in duty, consequence, and memory - where the weight of conflict wore down body and spirit alike. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White/i-N3945FQ/A",
     "keywords": [

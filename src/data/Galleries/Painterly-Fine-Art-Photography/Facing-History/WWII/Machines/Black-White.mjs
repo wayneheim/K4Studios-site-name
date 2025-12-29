@@ -305,7 +305,7 @@ export const galleryData = [
   {
     "id": "i-QpWNnWp",
     "title": "The Essence Of Wwii Tanks And Trucks",
-    "description": "Experience wwii tanks and trucks through this evocative wwii tanks and trucks from Wayne Heim's portfolio. This piece highlights mechanical war art with mechanical war art, while conveying battle-ready machines, ideal for those who appreciate wwii tanks and trucks. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a tank crewman, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-QpWNnWp/A",
     "keywords": [
@@ -356,7 +356,7 @@ export const galleryData = [
   {
     "id": "i-f8W25wQ",
     "title": "Exploring History'S Greatest Conflicts",
-    "description": "Wayne Heim presents history's greatest conflicts in this history's greatest conflicts work. Embodying military machinery prints, battle-ready machines, and battle-ready machines, it's recommended for lovers of history's greatest conflicts. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-f8W25wQ/A",
     "keywords": [
@@ -433,7 +433,7 @@ export const galleryData = [
   {
     "id": "i-597XdNX",
     "title": "History'S Greatest Conflicts And Military Machinery Prints",
-    "description": "Experience history's greatest conflicts through this evocative military machinery prints from Wayne Heim's portfolio. This piece highlights battle-ready machines with battle-ready machines, while conveying mechanical war art, ideal for those who appreciate history's greatest conflicts. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a fog of war - german forces, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Fog of War - German forces",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-597XdNX/A",
     "keywords": [
@@ -510,7 +510,7 @@ export const galleryData = [
   {
     "id": "i-vVTBSzp",
     "title": "Mechanical War Art Study",
-    "description": "Experience mechanical war art through this evocative wwii tanks and trucks from Wayne Heim's portfolio. This piece highlights wwii tanks and trucks with wwii tanks and trucks, while conveying military machinery prints, ideal for those who appreciate mechanical war art. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2016",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-vVTBSzp/A",
     "keywords": [
@@ -611,7 +611,7 @@ export const galleryData = [
   {
     "id": "i-4BfzV3h",
     "title": "Exploring Mechanical War Art",
-    "description": "Experience mechanical war art through this evocative battle-ready machines from Wayne Heim's portfolio. This piece highlights wwii tanks and trucks with battle-ready machines, while conveying wwii tanks and trucks, ideal for those who appreciate mechanical war art. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Ready for Battle  BlacK & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-4BfzV3h/A",
     "keywords": [
@@ -661,7 +661,7 @@ export const galleryData = [
   {
     "id": "i-7MTPDt4",
     "title": "Mechanical War Art Portrait",
-    "description": "Experience mechanical war art through this evocative military machinery prints from Wayne Heim's portfolio. This piece highlights wwii tanks and trucks with wwii tanks and trucks, while conveying wwii tanks and trucks, ideal for those who appreciate mechanical war art. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-7MTPDt4/A",
     "keywords": [
@@ -763,7 +763,7 @@ export const galleryData = [
   {
     "id": "i-kr2stsR",
     "title": "The Essence Of Battle-Ready Machines",
-    "description": "Wayne Heim presents battle-ready machines in this wwii tanks and trucks work. Embodying battle-ready machines, history's greatest conflicts, and mechanical war art, it's recommended for lovers of battle-ready machines. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-kr2stsR/A",
     "keywords": [
@@ -788,7 +788,7 @@ export const galleryData = [
   {
     "id": "i-qTPmXLJ",
     "title": "History'S Greatest Conflicts - Battle-Ready Machines",
-    "description": "Wayne Heim presents history's greatest conflicts in this battle-ready machines work. Embodying military machinery prints, history's greatest conflicts, and wwii tanks and trucks, it's recommended for lovers of history's greatest conflicts. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-qTPmXLJ/A",
     "keywords": [
@@ -813,7 +813,7 @@ export const galleryData = [
   {
     "id": "i-zN5fnqH",
     "title": "History'S Greatest Conflicts And Military Machinery Prints",
-    "description": "Wayne Heim presents history's greatest conflicts in this military machinery prints work. Embodying military machinery prints, military machinery prints, and mechanical war art, it's recommended for lovers of history's greatest conflicts. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim '21",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-zN5fnqH/A",
     "keywords": [
@@ -1015,7 +1015,7 @@ export const galleryData = [
   {
     "id": "i-h3gzd8X",
     "title": "Fine Art Military Machinery Prints",
-    "description": "Wayne Heim presents military machinery prints in this military machinery prints work. Embodying history's greatest conflicts, battle-ready machines, and history's greatest conflicts, it's recommended for lovers of military machinery prints. © Wayne Heim",
+    "description": "A black and white World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim 2021",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-h3gzd8X/A",
     "keywords": [
@@ -1223,7 +1223,7 @@ export const galleryData = [
   {
     "id": "i-9Cf3prX",
     "title": "Exploring History'S Greatest Conflicts",
-    "description": "Wayne Heim's history's greatest conflicts captures the spirit of military machinery prints in this wwii tanks and trucks image. Featuring history's greatest conflicts, mechanical war art, and history's greatest conflicts, it's ideal for military machinery prints enthusiasts. © Wayne Heim",
+    "description": "A monochrome World War II photograph of a WWII soldier, defined by resolve rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where purpose held steady when the world did not. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "© Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-9Cf3prX/A",
     "keywords": [
