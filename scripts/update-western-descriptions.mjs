@@ -25,13 +25,49 @@ const DRY_RUN = args.includes('--dry-run');
 const IS_BW = args.includes('--bw');
 const IS_NA = args.includes('--na');
 const IS_CW = args.includes('--cw');
+const IS_WWII = args.includes('--wwii');
+const IS_R20S = args.includes('--r20s');
+const IS_LANDSCAPE = args.includes('--landscape');
+// WWII sub-galleries
+const IS_WWII_PORTRAITS = args.includes('--portraits');
+const IS_WWII_MACHINES = args.includes('--machines');
+const IS_WWII_WAR = args.includes('--war');
+// Landscape theme sub-galleries
+const IS_LANDSCAPE_MOUNTAINS = args.includes('--mountains');
+const IS_LANDSCAPE_SUNSETS = args.includes('--sunsets');
+const IS_LANDSCAPE_WATER = args.includes('--water');
 const LIMIT_MATCH = args.find(a => a.startsWith('--limit='));
 const MAX_UPDATES = LIMIT_MATCH ? parseInt(LIMIT_MATCH.split('=')[1], 10) : Infinity;
 
 // Determine gallery type for display
 let GALLERY_TYPE = 'Color';
 let GALLERY_SUBDIR = 'Western-Cowboy-Portraits';
-if (IS_CW) {
+let GALLERY_BASE = 'Facing-History'; // default base path
+let GALLERY_FILENAME_OVERRIDE = null; // for non-standard filenames
+if (IS_LANDSCAPE) {
+  GALLERY_BASE = 'Landscapes/By-Theme';
+  let landscapeSub = 'Mountains'; // default
+  let landscapeFilename = 'Mountains.mjs';
+  if (IS_LANDSCAPE_SUNSETS) {
+    landscapeSub = 'Sunsets';
+    landscapeFilename = 'Sunsets.mjs';
+  } else if (IS_LANDSCAPE_WATER) {
+    landscapeSub = 'Water';
+    landscapeFilename = 'Water.mjs';
+  }
+  GALLERY_TYPE = `Landscape ${landscapeSub}`;
+  GALLERY_SUBDIR = landscapeSub;
+  GALLERY_FILENAME_OVERRIDE = landscapeFilename;
+} else if (IS_R20S) {
+  GALLERY_TYPE = IS_BW ? 'Roaring 20s Black-White' : 'Roaring 20s Color';
+  GALLERY_SUBDIR = 'Roaring-20s-Portraits';
+} else if (IS_WWII) {
+  let wwiiSub = 'Portraits'; // default
+  if (IS_WWII_MACHINES) wwiiSub = 'Machines';
+  else if (IS_WWII_WAR) wwiiSub = 'War';
+  GALLERY_TYPE = IS_BW ? `WWII ${wwiiSub} Black-White` : `WWII ${wwiiSub} Color`;
+  GALLERY_SUBDIR = `WWII/${wwiiSub}`;
+} else if (IS_CW) {
   GALLERY_TYPE = IS_BW ? 'Civil War Black-White' : 'Civil War Color';
   GALLERY_SUBDIR = 'Civil-War-Portraits';
 } else if (IS_NA) {
@@ -47,14 +83,16 @@ console.log(`Limit: ${MAX_UPDATES === Infinity ? 'none' : MAX_UPDATES} images\n`
 
 // Path to the gallery file based on flags
 let GALLERY_FILENAME;
-if (IS_NA) {
+if (GALLERY_FILENAME_OVERRIDE) {
+  GALLERY_FILENAME = GALLERY_FILENAME_OVERRIDE;
+} else if (IS_NA) {
   GALLERY_FILENAME = 'NA-Color.mjs';
 } else if (IS_BW) {
   GALLERY_FILENAME = 'Black-White.mjs';
 } else {
   GALLERY_FILENAME = 'Color.mjs';
 }
-const GALLERY_PATH = join(__dirname, `../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/${GALLERY_SUBDIR}/`, GALLERY_FILENAME);
+const GALLERY_PATH = join(__dirname, `../src/data/Galleries/Painterly-Fine-Art-Photography/${GALLERY_BASE}/${GALLERY_SUBDIR}/`, GALLERY_FILENAME);
 const GALLERY_TMP_PATH = GALLERY_PATH + '.tmp';
 
 // B/W specific openers - rotate between these
@@ -103,6 +141,208 @@ const CW_HISTORICAL_TRUTHS = {
   aftermath: 'what followed the battle defined those who survived',
   vigilance: 'awareness meant the difference between life and death',
   burden: 'the cost of war was carried long after the fighting ended'
+};
+
+// WWII B/W openers - rotate between these (same pattern as Western B/W)
+const WWII_BW_OPENERS = [
+  'A monochrome World War II photograph of',
+  'A black and white World War II photograph of'
+];
+
+// WWII authority sentences - rotate through these
+const WWII_AUTHORITY_SENTENCES = [
+  "Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle.",
+  "This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war.",
+  "Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics."
+];
+
+// WWII dominant states - specific to the era
+const WWII_DOMINANT_STATES = [
+  'duty',
+  'resolve',
+  'fatigue',
+  'vigilance',
+  'aftermath',
+  'uncertainty',
+  'quiet determination',
+  'endurance'
+];
+
+// WWII historical truths
+const WWII_HISTORICAL_TRUTHS = {
+  duty: 'service demanded everything and promised nothing',
+  resolve: 'purpose held steady when the world did not',
+  fatigue: 'exhaustion was constant, rest was rare',
+  vigilance: 'awareness meant survival in every theater',
+  aftermath: 'what followed the fighting defined those who returned',
+  uncertainty: 'the next moment was never guaranteed',
+  'quiet determination': 'endurance was silent, steady, and unbroken',
+  endurance: 'the weight of war was carried day after day'
+};
+
+// WWII subject hints from title
+const WWII_TITLE_HINTS = {
+  'infantry': 'a WWII infantryman',
+  'soldier': 'a WWII soldier',
+  'airman': 'a WWII airman',
+  'bomber': 'a bomber crewman',
+  'pilot': 'a WWII pilot',
+  'medic': 'a WWII medic',
+  'paratrooper': 'a paratrooper',
+  'nurse': 'a WWII nurse',
+  'marine': 'a WWII Marine',
+  'sailor': 'a WWII sailor',
+  'gunner': 'a WWII gunner',
+  'tank': 'a tank crewman',
+  'jeep': 'a WWII soldier',
+  'plane': 'a WWII aircraft',
+  'ship': 'a WWII vessel',
+  'truck': 'a military vehicle'
+};
+
+// Roaring 20s B/W openers - rotate between these
+const R20S_BW_OPENERS = [
+  'A monochrome Roaring 20s photograph of',
+  'A black and white Roaring 20s photograph of'
+];
+
+// Roaring 20s authority sentences - rotate through these
+const R20S_AUTHORITY_SENTENCES = [
+  "Wayne Heim's Roaring 20s fine art photography explores a society in transition, focusing on individuals shaped by changing power, expectation, and consequence.",
+  "Rather than romanticizing the era, Wayne Heim's Roaring 20s photography examines character, posture, and social tension beneath the surface of the period.",
+  "Approached with painterly restraint, this work treats the Roaring 20s as lived history - where identity was negotiated quietly, not performed."
+];
+
+// Roaring 20s dominant states - specific to the era
+const R20S_DOMINANT_STATES = [
+  'restraint',
+  'tension',
+  'anticipation',
+  'authority',
+  'ambition',
+  'uncertainty',
+  'composure',
+  'consequence'
+];
+
+// Roaring 20s historical truths
+const R20S_HISTORICAL_TRUTHS = {
+  restraint: 'control defined those who navigated shifting social ground',
+  tension: 'the space between old rules and new freedoms held its own weight',
+  anticipation: 'the future was uncertain but unavoidable',
+  authority: 'power was held by those who understood the changing landscape',
+  ambition: 'aspiration shaped identity in an era of reinvention',
+  uncertainty: 'the next decade would rewrite everything',
+  composure: 'stillness masked the currents running beneath the surface',
+  consequence: 'choices made in transition echoed forward'
+};
+
+// Roaring 20s subject hints from title
+const R20S_TITLE_HINTS = {
+  'bootlegger': 'a bootlegger',
+  'speakeasy': 'a speakeasy patron',
+  'flapper': 'a woman of the era',
+  'gangster': 'a gangster',
+  'agent': 'a federal agent',
+  'detective': 'a detective',
+  'officer': 'a police officer',
+  'club': 'a club owner',
+  'singer': 'a singer',
+  'dancer': 'a dancer',
+  'businessman': 'a businessman',
+  'politician': 'a politician',
+  'shoe shine': 'a shoe shine boy',
+  'newsboy': 'a newsboy',
+  'woman': 'a woman in period dress',
+  'man': 'a man of the era'
+};
+
+// ============================================
+// LANDSCAPE CONSTANTS
+// ============================================
+
+// Landscape openers - rotate between these
+const LANDSCAPE_OPENERS = [
+  'A painterly landscape photograph of',
+  'A painterly fine art landscape of'
+];
+
+// Landscape authority sentences - rotate through these
+const LANDSCAPE_AUTHORITY_SENTENCES = [
+  "Wayne Heim's painterly landscape photography treats place as emotional geography, where light and terrain carry memory rather than spectacle.",
+  "Approached with painterly restraint, Wayne Heim's landscapes prioritize mood, tone, and presence over literal representation.",
+  "Rather than documenting scenery, this work explores how place shapes perception, memory, and stillness."
+];
+
+// Landscape dominant states - specific to place/mood
+const LANDSCAPE_DOMINANT_STATES = [
+  'stillness',
+  'solitude',
+  'scale',
+  'atmosphere',
+  'quiet',
+  'tension',
+  'openness',
+  'isolation',
+  'permanence'
+];
+
+// Landscape mood truths (instead of historical truths)
+const LANDSCAPE_MOOD_TRUTHS = {
+  stillness: 'silence holds its own weight in open country',
+  solitude: 'distance defines the relationship between viewer and land',
+  scale: 'the human presence becomes secondary to terrain',
+  atmosphere: 'light and weather shape meaning more than landmark',
+  quiet: 'the absence of motion becomes its own subject',
+  tension: 'the edge between elements carries unspoken drama',
+  openness: 'space itself becomes the dominant visual force',
+  isolation: 'remoteness amplifies the emotional register of place',
+  permanence: 'geology outlasts narrative, and the land remembers'
+};
+
+// Landscape subject hints from keywords/alt - geographic nouns
+const LANDSCAPE_SUBJECT_HINTS = {
+  // Mountains
+  'mountain': 'a mountain landscape',
+  'peak': 'a mountain peak',
+  'ridge': 'a ridgeline',
+  'summit': 'a mountain summit',
+  'range': 'a mountain range',
+  'alpine': 'an alpine landscape',
+  'teton': 'the Teton range',
+  'rocky': 'a Rocky Mountain vista',
+  // Water
+  'waterfall': 'a waterfall',
+  'falls': 'a waterfall',
+  'river': 'a river cutting through terrain',
+  'stream': 'a mountain stream',
+  'lake': 'a lake at rest',
+  'ocean': 'an ocean shoreline',
+  'beach': 'a coastal landscape',
+  'glacier': 'a glacier',
+  'ice': 'an icy landscape',
+  // Sunsets/Sky
+  'sunset': 'a sunset over open land',
+  'sunrise': 'a sunrise landscape',
+  'storm': 'a storm breaking over terrain',
+  'cloud': 'clouds over open country',
+  'sky': 'an expansive sky',
+  // Desert/Plains
+  'desert': 'a desert landscape',
+  'canyon': 'a canyon',
+  'mesa': 'a mesa',
+  'plain': 'an open plain',
+  'prairie': 'a prairie landscape',
+  'valley': 'a valley floor',
+  // Iceland specific
+  'iceland': 'an Icelandic landscape',
+  'skogafoss': 'Skógafoss waterfall',
+  'gullfoss': 'Gullfoss waterfall',
+  'seljalandsfoss': 'Seljalandsfoss waterfall',
+  'kirkjufell': 'Kirkjufell mountain',
+  'vestrahorn': 'Vestrahorn mountain',
+  'basalt': 'basalt formations',
+  'lava': 'a lava field'
 };
 
 // Native American authority sentences - rotate through these
@@ -184,7 +424,50 @@ const BOILERPLATE_PATTERNS = [
   'historic reenactor prints',
   'uncover traditional reenactment',
   'civil war paintings from wayne',
-  'it\'s perfect for enthusiasts'
+  'it\'s perfect for enthusiasts',
+  // WWII boilerplate patterns
+  'wartime portraits',
+  'greatest generation photos',
+  'wwii photography',
+  'heroic portraits',
+  'moments of connection',
+  'ideal for admirers of',
+  'perfect for enthusiasts of',
+  'showcasing heroic',
+  'witness moments of',
+  'uncover heroic',
+  'immerse yourself in',
+  // Roaring 20s boilerplate patterns
+  'roaring 20s photography',
+  'roaring twenties portraits',
+  'roaring 20s art',
+  '1920s portraits',
+  'it\'s ideal for',
+  'it\'s recommended for lovers of',
+  'it\'s suited for admirers of',
+  'roaring 20s enthusiasts',
+  // Landscape boilerplate patterns
+  'mountain landscape photography',
+  'painterly mountain art',
+  'sunset landscape photography',
+  'painterly sunset scenes',
+  'waterfall landscape photography',
+  'painterly river scenes',
+  'ideal for those who appreciate',
+  'it\'s perfect for enthusiasts of',
+  'this piece highlights',
+  'while conveying',
+  'experience mountain landscape photography through this evocative',
+  'experience sunset landscape photography through this evocative',
+  'experience water landscape photography through this evocative',
+  'the truth of a moment',
+  // Direct landscape description starters
+  'painterly photograph of',
+  'painterly photography by wayne heim',
+  'painterly landscape mountain photography',
+  'fine art painterly mountain photography',
+  'painterly landscape photography of water',
+  'wayne\'s signture style of artful storytelling'
 ];
 
 /**
@@ -228,6 +511,53 @@ function isAbstractSubject(subject) {
  */
 function cleanAltText(alt, title = '') {
   if (!alt) return null;
+  
+  // Reject copyright notices and non-descriptive alt text
+  const altLower = alt.toLowerCase();
+  if (altLower.includes('© wayne heim') || 
+      altLower.includes('wayne heim') && altLower.includes('©') ||
+      altLower.includes('copyright') ||
+      altLower.match(/^©/) ||
+      altLower.includes('fine art image by') ||
+      altLower.includes('fine art photograph by') ||
+      altLower.includes('photographic artwork') ||
+      altLower.includes('new fine art photograph')) {
+    return null;
+  }
+  
+  // Reject WWII non-descriptive alt texts
+  if (IS_WWII) {
+    const wwiiRejects = [
+      'quality control', 'all smiles', 'mp', 'welcome', 
+      'k4 studios', 'gallery', 'placeholder'
+    ];
+    if (wwiiRejects.some(r => altLower.includes(r)) || altLower.length < 5) {
+      return null;
+    }
+  }
+  
+  // Reject Roaring 20s non-descriptive alt texts
+  if (IS_R20S) {
+    const r20sRejects = [
+      'typical saturday', 'phoning it in', 'old bedford village',
+      '1920\'s  at', 'just a typical', 'welcome', 'k4 studios', 'gallery'
+    ];
+    if (r20sRejects.some(r => altLower.includes(r)) || altLower.length < 5) {
+      return null;
+    }
+  }
+  
+  // Reject Landscape non-descriptive alt texts - these often contain SEO-stuffed previous titles
+  if (IS_LANDSCAPE) {
+    const landscapeRejects = [
+      'mountains photography:', 'painterly photography:', 'painterly mountain photography:',
+      'sunset photography:', 'water photography:', 'waterfall photography:',
+      'landscape photography:', 'fine art painterly'
+    ];
+    if (landscapeRejects.some(r => altLower.includes(r)) || altLower.length < 5) {
+      return null;
+    }
+  }
   
   // Remove common prefixes
   let cleaned = alt
@@ -425,6 +755,52 @@ function extractFromDescription(description) {
  * For NA and CW galleries: skip description extraction (boilerplate contaminates) 
  */
 function extractSubject(title, alt, keywords, description) {
+  // For Landscape gallery, ALWAYS use geographic subjects (bypass alt text completely)
+  // Alt text in landscape galleries is often misaligned or SEO-stuffed
+  if (IS_LANDSCAPE) {
+    const altLower = (alt || '').toLowerCase();
+    const keywordsLower = (keywords || []).join(' ').toLowerCase();
+    const searchBlob = altLower + ' ' + keywordsLower;
+    
+    // Prioritize current gallery theme's subjects first
+    // Same image may appear in multiple galleries - each gets appropriate treatment
+    if (IS_LANDSCAPE_SUNSETS) {
+      if (searchBlob.includes('sunset')) return 'a sunset over open land';
+      if (searchBlob.includes('sunrise')) return 'a sunrise landscape';
+      if (searchBlob.includes('storm')) return 'a storm breaking over terrain';
+      if (searchBlob.includes('cloud')) return 'clouds over open country';
+      if (searchBlob.includes('sky')) return 'an expansive sky';
+    }
+    if (IS_LANDSCAPE_WATER) {
+      if (searchBlob.includes('waterfall') || searchBlob.includes('falls')) return 'a waterfall';
+      if (searchBlob.includes('river')) return 'a river cutting through terrain';
+      if (searchBlob.includes('stream')) return 'a mountain stream';
+      if (searchBlob.includes('lake')) return 'a lake at rest';
+      if (searchBlob.includes('ocean')) return 'an ocean shoreline';
+      if (searchBlob.includes('glacier')) return 'a glacier';
+    }
+    if (IS_LANDSCAPE_MOUNTAINS) {
+      if (searchBlob.includes('teton')) return 'the Teton range';
+      if (searchBlob.includes('mountain')) return 'a mountain landscape';
+      if (searchBlob.includes('peak')) return 'a mountain peak';
+      if (searchBlob.includes('ridge')) return 'a ridgeline';
+      if (searchBlob.includes('alpine')) return 'an alpine landscape';
+    }
+    
+    // Then check all other landscape hints
+    for (const [hint, subject] of Object.entries(LANDSCAPE_SUBJECT_HINTS)) {
+      if (searchBlob.includes(hint)) return subject;
+    }
+    
+    // Theme-specific fallbacks
+    if (IS_LANDSCAPE_WATER) return 'a waterscape';
+    if (IS_LANDSCAPE_SUNSETS) return 'a sunset over open terrain';
+    if (IS_LANDSCAPE_MOUNTAINS) return 'a mountain landscape';
+    
+    // Generic landscape fallback
+    return 'an open landscape';
+  }
+  
   // 1. Try alt text first (primary) - pass title to detect echoes
   const altSubject = cleanAltText(alt, title);
   if (altSubject) return altSubject;
@@ -465,6 +841,45 @@ function extractSubject(title, alt, keywords, description) {
     return 'a Civil War soldier';
   }
   
+  // 2c. For WWII gallery, check title hints BEFORE description extraction
+  //     WWII descriptions contain boilerplate that contaminates subject extraction
+  if (IS_WWII) {
+    const titleLower = (title || '').toLowerCase();
+    // Check title hints
+    for (const [hint, subject] of Object.entries(WWII_TITLE_HINTS)) {
+      if (titleLower.includes(hint)) return subject;
+    }
+    // Additional WWII-specific checks
+    if (titleLower.includes('airman') || titleLower.includes('flyer')) return 'a WWII airman';
+    if (titleLower.includes('army') || titleLower.includes('soldier')) return 'a WWII soldier';
+    if (titleLower.includes('general') || titleLower.includes('officer')) return 'a WWII officer';
+    if (titleLower.includes('sergeant') || titleLower.includes('corporal')) return 'a WWII NCO';
+    if (titleLower.includes('medic') || titleLower.includes('doctor')) return 'a WWII medic';
+    if (titleLower.includes('connection') || titleLower.includes('moment')) return 'a WWII soldier';
+    if (titleLower.includes('portrait') || titleLower.includes('heroic')) return 'a WWII soldier';
+    // WWII-specific fallback
+    return 'a WWII soldier';
+  }
+  
+  // 2d. For Roaring 20s gallery, check title hints BEFORE description extraction
+  //     R20s descriptions contain boilerplate that contaminates subject extraction
+  if (IS_R20S) {
+    const titleLower = (title || '').toLowerCase();
+    const altLower = (alt || '').toLowerCase();
+    // Check alt text first for specific subjects
+    if (altLower.includes('shoe shine')) return 'a shoe shine boy';
+    if (altLower.includes('newsboy')) return 'a newsboy';
+    // Check title hints
+    for (const [hint, subject] of Object.entries(R20S_TITLE_HINTS)) {
+      if (titleLower.includes(hint)) return subject;
+    }
+    // Additional R20s-specific checks
+    if (titleLower.includes('phone') || titleLower.includes('call')) return 'a figure using a call box';
+    if (titleLower.includes('portrait')) return 'a figure of the 1920s';
+    // R20s-specific fallback
+    return 'a figure of the 1920s';
+  }
+  
   // 3. Try extracting from existing description (non-NA, non-CW)
   const descSubject = extractFromDescription(description);
   if (descSubject) return descSubject;
@@ -486,8 +901,45 @@ function pickDominantState(image, usedStates) {
     ...(image.keywords || [])
   ].join(' ').toLowerCase();
 
-  // Use Civil War states if in CW mode
-  const statesPool = IS_CW ? CW_DOMINANT_STATES : DOMINANT_STATES;
+  // Use era-specific states pool
+  const statesPool = IS_LANDSCAPE ? LANDSCAPE_DOMINANT_STATES : (IS_R20S ? R20S_DOMINANT_STATES : (IS_WWII ? WWII_DOMINANT_STATES : (IS_CW ? CW_DOMINANT_STATES : DOMINANT_STATES)));
+
+  // Landscape specific hints
+  const landscapeStateHints = {
+    stillness: ['still', 'calm', 'quiet', 'silent', 'peace'],
+    solitude: ['alone', 'lone', 'empty', 'remote', 'distant'],
+    scale: ['vast', 'massive', 'towering', 'endless', 'wide', 'grand'],
+    atmosphere: ['fog', 'mist', 'haze', 'cloud', 'weather', 'storm'],
+    quiet: ['quiet', 'soft', 'gentle', 'subtle', 'whisper'],
+    tension: ['edge', 'dramatic', 'break', 'contrast', 'clash'],
+    openness: ['open', 'wide', 'expansive', 'horizon', 'plain'],
+    isolation: ['isolated', 'remote', 'distant', 'far', 'wilderness'],
+    permanence: ['ancient', 'eternal', 'timeless', 'enduring', 'rock', 'stone']
+  };
+
+  // Roaring 20s specific hints
+  const r20sStateHints = {
+    restraint: ['quiet', 'still', 'composed', 'waiting', 'watch'],
+    tension: ['conflict', 'standoff', 'crime', 'police', 'danger'],
+    anticipation: ['waiting', 'ready', 'about to', 'preparing'],
+    authority: ['boss', 'owner', 'leader', 'command', 'power'],
+    ambition: ['rise', 'aspire', 'dream', 'fortune', 'success'],
+    uncertainty: ['uncertain', 'doubt', 'unknown', 'change'],
+    composure: ['calm', 'steady', 'poised', 'collected'],
+    consequence: ['aftermath', 'result', 'price', 'cost', 'end']
+  };
+
+  // WWII specific hints
+  const wwiiStateHints = {
+    duty: ['duty', 'service', 'orders', 'mission', 'task'],
+    resolve: ['forward', 'determined', 'steady', 'onward', 'march'],
+    fatigue: ['tired', 'weary', 'worn', 'rest', 'exhausted'],
+    vigilance: ['watch', 'guard', 'alert', 'sentry', 'patrol'],
+    aftermath: ['after', 'end', 'battle', 'field', 'return'],
+    uncertainty: ['uncertain', 'doubt', 'wait', 'pause', 'unknown'],
+    'quiet determination': ['quiet', 'steady', 'patient', 'waiting'],
+    endurance: ['endure', 'carry', 'persist', 'continue', 'through']
+  };
 
   // Civil War specific hints
   const cwStateHints = {
@@ -514,7 +966,7 @@ function pickDominantState(image, usedStates) {
     duty: ['oath', 'morning', 'work', 'trail', 'job', 'ritual']
   };
 
-  const hints = IS_CW ? cwStateHints : stateHints;
+  const hints = IS_LANDSCAPE ? landscapeStateHints : (IS_R20S ? r20sStateHints : (IS_WWII ? wwiiStateHints : (IS_CW ? cwStateHints : stateHints)));
 
   // Find best match
   for (const [state, hintWords] of Object.entries(hints)) {
@@ -545,6 +997,24 @@ function pickDominantState(image, usedStates) {
 function buildWesternDescription(image, dominantState, imageIndex, galleryPath) {
   const subject = extractSubject(image.title, image.alt, image.keywords, image.description);
   
+  // Landscape gallery - place, atmosphere, emotional geography framing
+  if (IS_LANDSCAPE) {
+    const moodTruth = LANDSCAPE_MOOD_TRUTHS[dominantState] || LANDSCAPE_MOOD_TRUTHS['stillness'];
+    const authoritySentence = LANDSCAPE_AUTHORITY_SENTENCES[imageIndex % LANDSCAPE_AUTHORITY_SENTENCES.length];
+    const opener = LANDSCAPE_OPENERS[imageIndex % LANDSCAPE_OPENERS.length];
+    
+    let description = `${opener} ${subject}, shaped by ${dominantState} rather than spectacle. ${authoritySentence} Light, tone, and composition shape a quiet narrative rooted in place and memory - where ${moodTruth}.`;
+    
+    // Add collection reference
+    description += " Part of Wayne Heim's painterly landscape photography series.";
+    description += " © Wayne Heim";
+    
+    return description
+      .replace(/[""]/g, '"')
+      .replace(/['']/g, "'")
+      .replace(/[—–]/g, '-');
+  }
+  
   // Civil War gallery - historical documentation framing
   if (IS_CW) {
     const historicalTruth = CW_HISTORICAL_TRUTHS[dominantState] || CW_HISTORICAL_TRUTHS['duty'];
@@ -558,6 +1028,54 @@ function buildWesternDescription(image, dominantState, imageIndex, galleryPath) 
     }
     
     let description = `${opener} ${subject}, defined by ${dominantState} rather than spectacle. ${authoritySentence} Light, posture, and restraint shape a narrative rooted in duty, consequence, and memory - where ${historicalTruth}.`;
+    
+    // Add collection reference
+    description += " Part of Wayne Heim's Facing History fine art photography series.";
+    description += " © Wayne Heim";
+    
+    return description
+      .replace(/[""]/g, '"')
+      .replace(/['']/g, "'")
+      .replace(/[—–]/g, '-');
+  }
+  
+  // Roaring 20s gallery - transition, tension, identity framing
+  if (IS_R20S) {
+    const historicalTruth = R20S_HISTORICAL_TRUTHS[dominantState] || R20S_HISTORICAL_TRUTHS['restraint'];
+    const authoritySentence = R20S_AUTHORITY_SENTENCES[imageIndex % R20S_AUTHORITY_SENTENCES.length];
+    
+    let opener;
+    if (IS_BW) {
+      opener = R20S_BW_OPENERS[imageIndex % R20S_BW_OPENERS.length];
+    } else {
+      opener = 'A painterly Roaring 20s photograph of';
+    }
+    
+    let description = `${opener} ${subject}, defined by ${dominantState} rather than spectacle. ${authoritySentence} Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where ${historicalTruth}.`;
+    
+    // Add collection reference
+    description += " Part of Wayne Heim's Facing History fine art photography series.";
+    description += " © Wayne Heim";
+    
+    return description
+      .replace(/[""]/g, '"')
+      .replace(/['']/g, "'")
+      .replace(/[—–]/g, '-');
+  }
+  
+  // WWII gallery - service, duty, sacrifice framing
+  if (IS_WWII) {
+    const historicalTruth = WWII_HISTORICAL_TRUTHS[dominantState] || WWII_HISTORICAL_TRUTHS['duty'];
+    const authoritySentence = WWII_AUTHORITY_SENTENCES[imageIndex % WWII_AUTHORITY_SENTENCES.length];
+    
+    let opener;
+    if (IS_BW) {
+      opener = WWII_BW_OPENERS[imageIndex % WWII_BW_OPENERS.length];
+    } else {
+      opener = 'A painterly World War II photograph of';
+    }
+    
+    let description = `${opener} ${subject}, defined by ${dominantState} rather than spectacle. ${authoritySentence} Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where ${historicalTruth}.`;
     
     // Add collection reference
     description += " Part of Wayne Heim's Facing History fine art photography series.";
