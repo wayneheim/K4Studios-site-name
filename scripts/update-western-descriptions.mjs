@@ -43,6 +43,11 @@ const IS_LOCATION_MIDWEST = args.includes('--midwest');
 const IS_LOCATION_NORTHEAST = args.includes('--northeast');
 const IS_LOCATION_SOUTH = args.includes('--south');
 const IS_LOCATION_INTERNATIONAL = args.includes('--international');
+// Transportation sub-galleries
+const IS_TRANSPORTATION = args.includes('--transportation');
+const IS_TRANSPORTATION_TRAINS = args.includes('--trains');
+const IS_TRANSPORTATION_TRAINS_BW = args.includes('--trains-bw');
+const IS_TRANSPORTATION_CARS = args.includes('--cars');
 const LIMIT_MATCH = args.find(a => a.startsWith('--limit='));
 const MAX_UPDATES = LIMIT_MATCH ? parseInt(LIMIT_MATCH.split('=')[1], 10) : Infinity;
 
@@ -51,7 +56,21 @@ let GALLERY_TYPE = 'Color';
 let GALLERY_SUBDIR = 'Western-Cowboy-Portraits';
 let GALLERY_BASE = 'Facing-History'; // default base path
 let GALLERY_FILENAME_OVERRIDE = null; // for non-standard filenames
-if (IS_LOCATION) {
+if (IS_TRANSPORTATION) {
+  GALLERY_BASE = 'Transportation';
+  GALLERY_SUBDIR = ''; // files are directly in Transportation folder
+  if (IS_TRANSPORTATION_CARS) {
+    GALLERY_TYPE = 'Transportation Cars';
+    GALLERY_FILENAME_OVERRIDE = 'Cars.mjs';
+  } else if (IS_TRANSPORTATION_TRAINS_BW) {
+    GALLERY_TYPE = 'Transportation Trains B/W';
+    GALLERY_FILENAME_OVERRIDE = 'Trains-Black-White.mjs';
+  } else {
+    // Default to Trains Color
+    GALLERY_TYPE = 'Transportation Trains Color';
+    GALLERY_FILENAME_OVERRIDE = 'Trains-Color.mjs';
+  }
+} else if (IS_LOCATION) {
   GALLERY_BASE = 'Landscapes/By-Location';
   let locationSub = 'West'; // default
   if (IS_LOCATION_MIDWEST) locationSub = 'Midwest';
@@ -479,6 +498,81 @@ const LOCATION_MOOD_TRUTHS = {
   permanence: 'the land outlasts every witness'
 };
 
+// ============================================
+// TRANSPORTATION CONSTANTS
+// ============================================
+
+// Transportation authority phrases - rotate (max 1 per description)
+const TRANSPORTATION_AUTHORITY_PHRASES = [
+  'vintage transportation photography',
+  'fine art transportation photography',
+  'historic transportation photography'
+];
+
+// Transportation secondary phrases - for trains vs cars
+const TRANSPORTATION_SECONDARY_PHRASES = {
+  trains: 'vintage train photography',
+  cars: 'vintage automobile photography'
+};
+
+// Transportation subject hints - machine-specific, not era names
+const TRANSPORTATION_SUBJECT_HINTS = {
+  // Train-specific
+  'locomotive': 'a steam locomotive',
+  'steam engine': 'a steam engine',
+  'caboose': 'a caboose at rest',
+  'rail car': 'a rail car',
+  'coach': 'a passenger coach',
+  'boxcar': 'a weathered boxcar',
+  'tender': 'a locomotive tender',
+  'depot': 'a train station',
+  'station': 'a railway station',
+  'tracks': 'railway tracks',
+  'coal': 'a coal car',
+  'freight': 'a freight car',
+  'passenger': 'a passenger car',
+  'engine': 'a train engine',
+  // Car-specific
+  'automobile': 'a vintage automobile',
+  'roadster': 'a classic roadster',
+  'coupe': 'a vintage coupe',
+  'sedan': 'a classic sedan',
+  'truck': 'a vintage truck',
+  'pickup': 'a vintage pickup',
+  'hotrod': 'a classic hotrod',
+  'route 66': 'a vintage automobile on Route 66',
+  'gas pump': 'vintage gas pumps',
+  'garage': 'a vintage garage scene',
+  'hood ornament': 'a hood ornament in detail',
+  'chrome': 'chrome details of a vintage automobile',
+  'dashboard': 'a vintage dashboard',
+  'steering wheel': 'a vintage steering wheel'
+};
+
+// Transportation dominant states - machine/motion focused
+const TRANSPORTATION_DOMINANT_STATES = [
+  'motion',
+  'transition',
+  'stillness',
+  'weight',
+  'distance',
+  'industry',
+  'permanence',
+  'invention'
+];
+
+// Transportation state hints for keyword matching
+const transportationStateHints = {
+  motion: ['moving', 'speed', 'rolling', 'steam', 'smoke', 'running'],
+  transition: ['change', 'era', 'time', 'progress', 'journey'],
+  stillness: ['still', 'rest', 'pause', 'wait', 'quiet', 'idle'],
+  weight: ['heavy', 'steel', 'iron', 'massive', 'solid', 'metal'],
+  distance: ['far', 'horizon', 'prairie', 'plains', 'tracks', 'road'],
+  industry: ['work', 'coal', 'freight', 'cargo', 'industrial'],
+  permanence: ['old', 'weathered', 'rust', 'patina', 'enduring', 'classic'],
+  invention: ['design', 'engineering', 'built', 'chrome', 'detail']
+};
+
 // Native American authority sentences - rotate through these
 const NA_AUTHORITY_SENTENCES = [
   "Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle.",
@@ -617,7 +711,41 @@ const BOILERPLATE_PATTERNS = [
   'blue ridge painterly landscapes',
   'southern landscape photography',
   'midwest landscape photography',
-  'new england landscape photography'
+  'new england landscape photography',
+  // Transportation gallery boilerplate patterns
+  'steam engine wall art for collectors',
+  'vintage train photography for man cave',
+  'steam engine art',
+  'steam engine photography',
+  'it\'s perfect for enthusiasts of',
+  'classic car photography',
+  'classic car art prints for enthusiasts',
+  'painterly classic car photos for auto lovers',
+  'route 66 art',
+  'timeless automotive prints',
+  'route 66 car photography prints',
+  'automotive art prints',
+  'a must-have for collectors of',
+  'it\'s ideal for classic car photography enthusiasts',
+  'perfect for art lovers seeking',
+  'color fine art painterly train photography',
+  'old train presented in muted colors',
+  'rendered in wayne\'s distinct painterly photography style',
+  // Additional train patterns - catch descriptive but non-template text
+  '© wayne heim',
+  'wayne heim',
+  'east broad top',
+  'stormy grey day',
+  'rhythmic chugging',
+  'bisect this image',
+  'dynamic story of movement',
+  'take on water',
+  'train worker',
+  'train yard',
+  'steam clouds',
+  'train engine',
+  'yard worker',
+  'locomotive'
 ];
 
 /**
@@ -982,6 +1110,32 @@ function extractSubject(title, alt, keywords, description) {
     return locationHints.fallback || 'the landscape';
   }
   
+  // For Transportation gallery, extract machine-specific subjects
+  if (IS_TRANSPORTATION) {
+    const titleLower = (title || '').toLowerCase();
+    const altLower = (alt || '').toLowerCase();
+    const keywordsLower = (keywords || []).join(' ').toLowerCase();
+    const descLower = (description || '').toLowerCase();
+    const searchBlob = titleLower + ' ' + altLower + ' ' + keywordsLower + ' ' + descLower;
+    
+    // Check transportation subject hints (machine-specific, not era names)
+    for (const [hint, subject] of Object.entries(TRANSPORTATION_SUBJECT_HINTS)) {
+      if (searchBlob.includes(hint)) return subject;
+    }
+    
+    // Check for train-specific keywords
+    if (searchBlob.includes('train')) return 'a vintage train';
+    if (searchBlob.includes('railroad') || searchBlob.includes('railway')) return 'a railway scene';
+    
+    // Check for car-specific keywords
+    if (searchBlob.includes('car') && !searchBlob.includes('rail car')) return 'a vintage automobile';
+    if (searchBlob.includes('auto')) return 'a vintage automobile';
+    
+    // Type-specific fallbacks
+    if (IS_TRANSPORTATION_CARS) return 'a vintage automobile';
+    return 'a vintage train'; // default for trains
+  }
+  
   // 1. Try alt text first (primary) - pass title to detect echoes
   const altSubject = cleanAltText(alt, title);
   if (altSubject) return altSubject;
@@ -1083,7 +1237,7 @@ function pickDominantState(image, usedStates) {
   ].join(' ').toLowerCase();
 
   // Use era-specific states pool
-  const statesPool = (IS_LANDSCAPE || IS_LOCATION) ? LANDSCAPE_DOMINANT_STATES : (IS_R20S ? R20S_DOMINANT_STATES : (IS_WWII ? WWII_DOMINANT_STATES : (IS_CW ? CW_DOMINANT_STATES : DOMINANT_STATES)));
+  const statesPool = IS_TRANSPORTATION ? TRANSPORTATION_DOMINANT_STATES : ((IS_LANDSCAPE || IS_LOCATION) ? LANDSCAPE_DOMINANT_STATES : (IS_R20S ? R20S_DOMINANT_STATES : (IS_WWII ? WWII_DOMINANT_STATES : (IS_CW ? CW_DOMINANT_STATES : DOMINANT_STATES))));
 
   // Landscape specific hints (also used for Location galleries)
   const landscapeStateHints = {
@@ -1147,7 +1301,7 @@ function pickDominantState(image, usedStates) {
     duty: ['oath', 'morning', 'work', 'trail', 'job', 'ritual']
   };
 
-  const hints = (IS_LANDSCAPE || IS_LOCATION) ? landscapeStateHints : (IS_R20S ? r20sStateHints : (IS_WWII ? wwiiStateHints : (IS_CW ? cwStateHints : stateHints)));
+  const hints = IS_TRANSPORTATION ? transportationStateHints : ((IS_LANDSCAPE || IS_LOCATION) ? landscapeStateHints : (IS_R20S ? r20sStateHints : (IS_WWII ? wwiiStateHints : (IS_CW ? cwStateHints : stateHints))));
 
   // Find best match
   for (const [state, hintWords] of Object.entries(hints)) {
@@ -1214,6 +1368,30 @@ function buildWesternDescription(image, dominantState, imageIndex, galleryPath) 
     
     description += ` Part of Wayne Heim's ${locationName} landscape photography series.`;
     description += " © Wayne Heim";
+    
+    return description
+      .replace(/[""]/g, '"')
+      .replace(/['']/g, "'")
+      .replace(/[—–]/g, '-');
+  }
+  
+  // Transportation gallery - machines as witnesses, motion over nostalgia
+  if (IS_TRANSPORTATION) {
+    const authorityPhrase = TRANSPORTATION_AUTHORITY_PHRASES[imageIndex % TRANSPORTATION_AUTHORITY_PHRASES.length];
+    
+    // Different closing based on trains vs cars
+    let closingPhrase;
+    let collectionPhrase;
+    if (IS_TRANSPORTATION_CARS) {
+      closingPhrase = "Tone and restraint shape a narrative grounded in invention and memory.";
+      collectionPhrase = "Part of Wayne Heim's fine art transportation photography collection.";
+    } else {
+      // Trains (Color or B/W)
+      closingPhrase = "Light and structure shape a narrative rooted in transition, industry, and memory.";
+      collectionPhrase = "Part of Wayne Heim's fine art transportation photography collection.";
+    }
+    
+    let description = `A painterly fine art photograph of ${subject}, defined by motion rather than nostalgia. Wayne Heim's ${authorityPhrase} explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. ${closingPhrase} ${collectionPhrase} © Wayne Heim`;
     
     return description
       .replace(/[""]/g, '"')
