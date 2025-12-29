@@ -1,5 +1,5 @@
 export const landingWestern = {
-  title: "Western Fine Art Photography — Painterly Cowboy Portraits & Living History",
+  title: "Western Fine Art Photography — Painterly Cowboy Portraits",
   subtitle: "Western Themed Photography • Story-Driven Cowboy Art by Wayne Heim",
 // Keywords used internally for structured data, semantic linking, and contextual SEO
   keywords: [
