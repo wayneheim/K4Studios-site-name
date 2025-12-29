@@ -36,6 +36,13 @@ const IS_WWII_WAR = args.includes('--war');
 const IS_LANDSCAPE_MOUNTAINS = args.includes('--mountains');
 const IS_LANDSCAPE_SUNSETS = args.includes('--sunsets');
 const IS_LANDSCAPE_WATER = args.includes('--water');
+// Landscape location sub-galleries
+const IS_LOCATION = args.includes('--location');
+const IS_LOCATION_WEST = args.includes('--west');
+const IS_LOCATION_MIDWEST = args.includes('--midwest');
+const IS_LOCATION_NORTHEAST = args.includes('--northeast');
+const IS_LOCATION_SOUTH = args.includes('--south');
+const IS_LOCATION_INTERNATIONAL = args.includes('--international');
 const LIMIT_MATCH = args.find(a => a.startsWith('--limit='));
 const MAX_UPDATES = LIMIT_MATCH ? parseInt(LIMIT_MATCH.split('=')[1], 10) : Infinity;
 
@@ -44,7 +51,17 @@ let GALLERY_TYPE = 'Color';
 let GALLERY_SUBDIR = 'Western-Cowboy-Portraits';
 let GALLERY_BASE = 'Facing-History'; // default base path
 let GALLERY_FILENAME_OVERRIDE = null; // for non-standard filenames
-if (IS_LANDSCAPE) {
+if (IS_LOCATION) {
+  GALLERY_BASE = 'Landscapes/By-Location';
+  let locationSub = 'West'; // default
+  if (IS_LOCATION_MIDWEST) locationSub = 'Midwest';
+  else if (IS_LOCATION_NORTHEAST) locationSub = 'Northeast';
+  else if (IS_LOCATION_SOUTH) locationSub = 'South';
+  else if (IS_LOCATION_INTERNATIONAL) locationSub = 'International';
+  GALLERY_TYPE = `Location ${locationSub}`;
+  GALLERY_SUBDIR = locationSub;
+  GALLERY_FILENAME_OVERRIDE = 'Gallery.mjs';
+} else if (IS_LANDSCAPE) {
   GALLERY_BASE = 'Landscapes/By-Theme';
   let landscapeSub = 'Mountains'; // default
   let landscapeFilename = 'Mountains.mjs';
@@ -345,6 +362,123 @@ const LANDSCAPE_SUBJECT_HINTS = {
   'lava': 'a lava field'
 };
 
+// Location-specific subject hints
+const LOCATION_SUBJECT_HINTS = {
+  // West - dramatic terrain, deserts, canyons, mountains
+  west: {
+    'teton': 'the Teton range',
+    'yellowstone': 'Yellowstone terrain',
+    'horseshoe': 'Horseshoe Bend',
+    'canyon': 'a desert canyon',
+    'mesa': 'a mesa rising from the desert',
+    'butte': 'a lone butte',
+    'desert': 'the desert Southwest',
+    'monument': 'Monument Valley',
+    'arches': 'desert arch formations',
+    'reservoir': 'a reservoir in open country',
+    'buffalo': 'the Wyoming wilderness',
+    'wyoming': 'the Wyoming landscape',
+    'arizona': 'the Arizona desert',
+    'utah': 'the Utah backcountry',
+    'colorado': 'the Colorado high country',
+    'nevada': 'the Nevada desert',
+    'new mexico': 'the New Mexico terrain',
+    fallback: 'the Western landscape'
+  },
+  // Midwest - forests, lakes, quiet paths, heartland terrain
+  midwest: {
+    'forest': 'a forest interior',
+    'path': 'a forest path',
+    'trail': 'a woodland trail',
+    'fall': 'autumn in the heartland',
+    'autumn': 'autumn color in the Midwest',
+    'lake': 'a Midwestern lake',
+    'ohio': 'the Ohio countryside',
+    'michigan': 'the Michigan landscape',
+    'indiana': 'the Indiana terrain',
+    'illinois': 'the Illinois countryside',
+    'wisconsin': 'the Wisconsin landscape',
+    'minnesota': 'the Minnesota north woods',
+    fallback: 'the Midwestern landscape'
+  },
+  // Northeast - New England, autumn, historic mills, coastal
+  northeast: {
+    'new england': 'the New England countryside',
+    'autumn': 'New England in autumn',
+    'fall': 'fall color in New England',
+    'mill': 'a historic mill',
+    'covered bridge': 'a covered bridge',
+    'vermont': 'the Vermont hills',
+    'maine': 'the Maine coast',
+    'new hampshire': 'the New Hampshire mountains',
+    'massachusetts': 'the Massachusetts countryside',
+    'connecticut': 'the Connecticut landscape',
+    'lighthouse': 'a New England lighthouse',
+    'coast': 'the Atlantic coast',
+    fallback: 'the New England landscape'
+  },
+  // South - Blue Ridge, Appalachian, pastoral, historic
+  south: {
+    'blue ridge': 'the Blue Ridge Mountains',
+    'appalachian': 'the Appalachian hills',
+    'smoky': 'the Smoky Mountains',
+    'virginia': 'the Virginia countryside',
+    'carolina': 'the Carolina hills',
+    'tennessee': 'the Tennessee landscape',
+    'georgia': 'the Georgia terrain',
+    'kentucky': 'the Kentucky hills',
+    'mill': 'a historic Southern mill',
+    'plantation': 'the Southern landscape',
+    fallback: 'the Southern landscape'
+  },
+  // International - Iceland, Faroe, European destinations
+  international: {
+    // Canada - check before Iceland since some images have both in alt text cascade
+    'canadian rockies': 'the Canadian Rockies',
+    'banff': 'Banff National Park',
+    'jasper': 'Jasper National Park',
+    'yoho': 'Yoho National Park',
+    'athabasca': 'Athabasca Falls',
+    'emerald lake': 'Emerald Lake',
+    'canada': 'the Canadian wilderness',
+    'newfoundland': 'the Newfoundland coast',
+    // Iceland
+    'iceland': 'the Icelandic landscape',
+    'faroe': 'the Faroe Islands',
+    'skogafoss': 'Skógafoss waterfall',
+    'gullfoss': 'Gullfoss waterfall',
+    'seljalandsfoss': 'Seljalandsfoss waterfall',
+    'godafoss': 'Goðafoss waterfall',
+    'kirkjufell': 'Kirkjufell mountain',
+    'vestrahorn': 'Vestrahorn mountain',
+    'basalt': 'Icelandic basalt formations',
+    'stuðlagil': 'Stuðlagil Canyon',
+    'hengifoss': 'Hengifoss waterfall',
+    'fishing village': 'a Nordic fishing village',
+    fallback: 'an international landscape'
+  }
+};
+
+// Location authority sentences - rotate through these
+const LOCATION_AUTHORITY_SENTENCES = [
+  "Wayne Heim's painterly landscape photography treats place as emotional geography - not destination, but atmosphere.",
+  "Approached with painterly restraint, each frame captures the character of the land rather than its postcard appeal.",
+  "Rather than documenting scenery, this work reveals the quiet presence that defines a region."
+];
+
+// Location mood truths - place-specific rather than historical
+const LOCATION_MOOD_TRUTHS = {
+  stillness: 'the land holds its breath between seasons',
+  solitude: 'distance and silence are companions here',
+  scale: 'the terrain dwarfs human measure',
+  atmosphere: 'light and weather conspire to define the moment',
+  quiet: 'presence matters more than action',
+  tension: 'the landscape holds competing forces in balance',
+  openness: 'the horizon extends beyond comfort',
+  isolation: 'remoteness is the point, not the problem',
+  permanence: 'the land outlasts every witness'
+};
+
 // Native American authority sentences - rotate through these
 const NA_AUTHORITY_SENTENCES = [
   "Wayne Heim's fine art photography approaches Native subjects with historical awareness and cultural respect, documenting presence rather than spectacle.",
@@ -467,7 +601,23 @@ const BOILERPLATE_PATTERNS = [
   'painterly landscape mountain photography',
   'fine art painterly mountain photography',
   'painterly landscape photography of water',
-  'wayne\'s signture style of artful storytelling'
+  'wayne\'s signture style of artful storytelling',
+  // Location gallery boilerplate patterns
+  'uncover feel every layer',
+  'showcasing ethereal landscapes',
+  'it\'s perfect for enthusiasts of',
+  'perfect for fans of',
+  'western landscape photography',
+  'international landscape photography',
+  'painterly european landscapes',
+  'international – across borders',
+  'fine art landscape photography of',
+  'order western prints of',
+  'painterly landscape photography',
+  'blue ridge painterly landscapes',
+  'southern landscape photography',
+  'midwest landscape photography',
+  'new england landscape photography'
 ];
 
 /**
@@ -801,6 +951,37 @@ function extractSubject(title, alt, keywords, description) {
     return 'an open landscape';
   }
   
+  // For Location gallery, use location-specific geographic subjects
+  if (IS_LOCATION) {
+    const titleLower = (title || '').toLowerCase();
+    const altLower = (alt || '').toLowerCase();
+    const keywordsLower = (keywords || []).join(' ').toLowerCase();
+    const descLower = (description || '').toLowerCase();
+    const searchBlob = titleLower + ' ' + altLower + ' ' + keywordsLower + ' ' + descLower;
+    
+    // Determine which location hints to use
+    let locationHints;
+    if (IS_LOCATION_WEST) locationHints = LOCATION_SUBJECT_HINTS.west;
+    else if (IS_LOCATION_MIDWEST) locationHints = LOCATION_SUBJECT_HINTS.midwest;
+    else if (IS_LOCATION_NORTHEAST) locationHints = LOCATION_SUBJECT_HINTS.northeast;
+    else if (IS_LOCATION_SOUTH) locationHints = LOCATION_SUBJECT_HINTS.south;
+    else if (IS_LOCATION_INTERNATIONAL) locationHints = LOCATION_SUBJECT_HINTS.international;
+    else locationHints = LOCATION_SUBJECT_HINTS.west; // default
+    
+    // Check location-specific hints first
+    for (const [hint, subject] of Object.entries(locationHints)) {
+      if (hint !== 'fallback' && searchBlob.includes(hint)) return subject;
+    }
+    
+    // Then check general landscape hints
+    for (const [hint, subject] of Object.entries(LANDSCAPE_SUBJECT_HINTS)) {
+      if (searchBlob.includes(hint)) return subject;
+    }
+    
+    // Location-specific fallback
+    return locationHints.fallback || 'the landscape';
+  }
+  
   // 1. Try alt text first (primary) - pass title to detect echoes
   const altSubject = cleanAltText(alt, title);
   if (altSubject) return altSubject;
@@ -902,9 +1083,9 @@ function pickDominantState(image, usedStates) {
   ].join(' ').toLowerCase();
 
   // Use era-specific states pool
-  const statesPool = IS_LANDSCAPE ? LANDSCAPE_DOMINANT_STATES : (IS_R20S ? R20S_DOMINANT_STATES : (IS_WWII ? WWII_DOMINANT_STATES : (IS_CW ? CW_DOMINANT_STATES : DOMINANT_STATES)));
+  const statesPool = (IS_LANDSCAPE || IS_LOCATION) ? LANDSCAPE_DOMINANT_STATES : (IS_R20S ? R20S_DOMINANT_STATES : (IS_WWII ? WWII_DOMINANT_STATES : (IS_CW ? CW_DOMINANT_STATES : DOMINANT_STATES)));
 
-  // Landscape specific hints
+  // Landscape specific hints (also used for Location galleries)
   const landscapeStateHints = {
     stillness: ['still', 'calm', 'quiet', 'silent', 'peace'],
     solitude: ['alone', 'lone', 'empty', 'remote', 'distant'],
@@ -966,7 +1147,7 @@ function pickDominantState(image, usedStates) {
     duty: ['oath', 'morning', 'work', 'trail', 'job', 'ritual']
   };
 
-  const hints = IS_LANDSCAPE ? landscapeStateHints : (IS_R20S ? r20sStateHints : (IS_WWII ? wwiiStateHints : (IS_CW ? cwStateHints : stateHints)));
+  const hints = (IS_LANDSCAPE || IS_LOCATION) ? landscapeStateHints : (IS_R20S ? r20sStateHints : (IS_WWII ? wwiiStateHints : (IS_CW ? cwStateHints : stateHints)));
 
   // Find best match
   for (const [state, hintWords] of Object.entries(hints)) {
@@ -1007,6 +1188,31 @@ function buildWesternDescription(image, dominantState, imageIndex, galleryPath) 
     
     // Add collection reference
     description += " Part of Wayne Heim's painterly landscape photography series.";
+    description += " © Wayne Heim";
+    
+    return description
+      .replace(/[""]/g, '"')
+      .replace(/['']/g, "'")
+      .replace(/[—–]/g, '-');
+  }
+  
+  // Location gallery - regional landscape, place-specific framing
+  if (IS_LOCATION) {
+    const moodTruth = LOCATION_MOOD_TRUTHS[dominantState] || LOCATION_MOOD_TRUTHS['stillness'];
+    const authoritySentence = LOCATION_AUTHORITY_SENTENCES[imageIndex % LOCATION_AUTHORITY_SENTENCES.length];
+    const opener = LANDSCAPE_OPENERS[imageIndex % LANDSCAPE_OPENERS.length]; // reuse landscape openers
+    
+    let description = `${opener} ${subject}, shaped by ${dominantState} rather than spectacle. ${authoritySentence} Light, tone, and composition shape a quiet narrative rooted in place and memory - where ${moodTruth}.`;
+    
+    // Add location-specific collection reference
+    let locationName = 'American';
+    if (IS_LOCATION_WEST) locationName = 'Western American';
+    else if (IS_LOCATION_MIDWEST) locationName = 'Midwestern';
+    else if (IS_LOCATION_NORTHEAST) locationName = 'New England';
+    else if (IS_LOCATION_SOUTH) locationName = 'Southern';
+    else if (IS_LOCATION_INTERNATIONAL) locationName = 'international';
+    
+    description += ` Part of Wayne Heim's ${locationName} landscape photography series.`;
     description += " © Wayne Heim";
     
     return description
