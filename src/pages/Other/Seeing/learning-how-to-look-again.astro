@@ -2,6 +2,7 @@
 import BaseLayout    from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
+import SeeingHero    from "@/components/SeeingHero.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 import { essays } from "@/data/Other/Seeing/story.ts";
@@ -78,23 +79,16 @@ const breadcrumb = `Other › <a href='/Other/Seeing' style='color: inherit; tex
       <LandingHeader client:load breadcrumb={breadcrumb} />
     </div>
 
-    <!-- Essay Header -->
-    <section class="section-heading-wrap">
-      <div class="section-heading" style="font-family: 'Glegoo', serif;">
-        <h1 class="page-title fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">
-          {title}
-        </h1>
-      </div>
-    </section>
-
-    <!-- Intro block -->
-    <section class="intro-text max-w-2xl mx-auto px-4 text-center mb-6">
-      {subtitle && (
-        <blockquote style="font-size: 1.75rem; font-style: italic; color: #3b342e; margin-bottom: 1rem; line-height: 1.4; border-left: none; padding: 0; font-weight: 500; letter-spacing: -0.01em;">
-          {subtitle}
-        </blockquote>
-      )}
-    </section>
+    <SeeingHero
+      essayNumber={2}
+      titleLines={[
+        "Why Familiarity Blinds Us —",
+        "What Attention Restores"
+      ]}
+      imageSrc="/images/keys/key-2.webp"
+      imageLink="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-hMXZ8Xh"
+      tightTracking={true}
+    />
 
     <!-- Essay Body -->
     <section class="story-layout" style="font-family: 'Glegoo', serif;">

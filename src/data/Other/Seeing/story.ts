@@ -13,15 +13,15 @@ export const seeingLanding = {
 export const essays = [
   {
     slug: "when-the-medium-stops-being-the-point",
-    title: "How We Decide What Counts as 'Serious' Art",
-    subtitle: "Most people believe they are responding to art itself. In reality, they are often responding to rules they absorbed long before they ever stood in front of a work.",
-    summary: "This essay explores how those rules shape what we take seriously — and what becomes possible once we set them aside.",
-    keyholeImageId: "i-ncFcHDM",
-    keyholePosition: "30% 20%", // offset crop to avoid centering face
+    title: "When the Medium Stops Being the Point",
+    subtitle: "How we decide what counts as 'serious' art",
     sections: [
       {
         paragraphs: [
-          `When people stand in front of a work of art, they rarely arrive empty-handed.`,
+          `Most people believe they are responding to art itself.`,
+          `In reality, they are often responding to rules they absorbed long before they ever stood in front of a work.`,
+          `This essay explores how those rules shape what we take seriously — and what becomes possible once we set them aside.`,
+          `When people stand in front of a work of art, they rarely arrive without assumptions.`,
           `They bring with them inherited expectations — about what art is supposed to look like, how it is supposed to behave, and which forms are allowed to carry emotional, psychological, or historical weight.`,
           `For centuries, painting carried institutional authority. It was slow, scarce, and reinforced by academies, churches, and museums. Photography, by contrast, entered culture as a tool — then a document — then a disruption. Even as it gained acceptance, the residue of that origin remained. The camera was still expected to record rather than interpret. To show rather than to construct. To witness rather than to speak.`,
           `That expectation quietly persists.`,
@@ -112,84 +112,71 @@ export const essays = [
   {
     slug: "learning-how-to-look-again",
     title: "Learning to Look (Again)",
-    subtitle: "Why familiarity blinds us — and what attention restores",
-    keyholeImageId: "i-kQfftQ2",
-    keyholePosition: "70% 40%",
+    subtitle: "Why Familiarity Blinds Us — and What Attention Restores",
     sections: [
       {
         paragraphs: [
+          `The more familiar something becomes, the less carefully we tend to look at it.`,
+          `This essay explores why recognition often replaces perception — and how attention restores depth, tension, and meaning when we slow down and look again.`,
           `The more fluent we become at recognizing something, the less carefully we tend to look at it.`,
           `This isn't a failure of intelligence.<br>It's a feature of perception.`,
           `Our visual system is designed to conserve energy. Once it believes it knows what something is, it stops examining it closely. Categories snap into place. Attention relaxes. The mind moves on.`,
-          `This efficiency keeps us oriented in the world.<br>In art, it often works against us.`
+          `This efficiency keeps us oriented in the world.<br>When viewing art, it often works against us.`
         ]
       },
       {
-        subhead: "Recognition is not seeing",
+        subhead: "Recognition Is Not Seeing",
         paragraphs: [
-          `Most people confuse recognition with perception.`,
-          `Recognition says:<br><em>I know what this is.</em>`,
-          `Seeing asks:<br><em>What is actually happening here?</em>`,
-          `The first ends the encounter.<br>The second begins it.`,
+          `When people stand in front of a work of art, recognition usually arrives first.`,
+          `I know what this is.<br>A portrait.<br>A landscape.<br>A photograph.`,
+          `Recognition feels like understanding because it brings relief. It offers familiarity. It allows us to move on.`,
+          `But recognition is not the same as seeing.`,
+          `Recognition ends the encounter.<br>Seeing begins it.`,
           `When recognition takes over too quickly, details flatten. Gesture becomes generic. Light becomes background. Composition becomes invisible. The work is no longer examined — it is processed.`,
-          `This is why familiarity so often masquerades as understanding.`
+          `This is why familiarity so often masquerades as comprehension.`
         ]
       },
       {
-        subhead: "Fluency creates blind spots",
+        subhead: "Fluency Creates Blind Spots",
         paragraphs: [
           `As viewers, we grow fluent in certain visual languages.`,
-          `We learn what portraits are supposed to look like.<br>What landscapes are supposed to look like.<br>What photographs are supposed to look like.<br>What paintings are supposed to look like.`,
-          `Fluency feels like mastery. But it carries a cost: it trains us to skip steps.`,
-          `We stop asking:`
-        ],
-        bullets: [
-          `Why is the light shaped this way?`,
-          `Why is the figure positioned here and not there?`,
-          `Why does the moment feel suspended rather than resolved?`,
-          `Why does this image linger instead of release?`
-        ],
-        paragraphsAfter: [
-          `These questions require attention — and attention requires effort.`,
-          `So we replace them with faster judgments:`,
-          `<em>I like this.</em>`,
-          `<em>I don't like this.</em>`,
-          `<em>I get it.</em>`,
-          `<em>I don't get it.</em>`,
-          `None of those are acts of looking.`
+          `We learn what portraits are supposed to look like.<br>What landscapes are supposed to look like.<br>What photographs are supposed to look like.<br>What paintings are supposed to do.`,
+          `Fluency feels like mastery.<br>But it carries a cost.`,
+          `It trains us to skip steps.`,
+          `Instead of asking:`,
+          `Why is the light shaped this way?<br>Why is the figure positioned here and not there?<br>Why does the moment feel suspended rather than resolved?<br>Why does this image linger instead of releasing?`,
+          `—we substitute faster judgments:`,
+          `I like this.<br>I don't like this.<br>I get it.<br>I don't get it.`,
+          `None of these are acts of looking.`,
+          `They are endpoints.`
         ]
       },
       {
-        subhead: "Why slowing down feels uncomfortable",
+        subhead: "Why Slowing Down Feels Uncomfortable",
         paragraphs: [
           `Careful looking often feels like uncertainty.`,
-          `When the usual shortcuts fail — when a work doesn't immediately declare what it is or how it should be read — the viewer is forced to remain present.`,
+          `When the usual shortcuts fail — when a work doesn't immediately declare what it is or how it should be read — the viewer is required to remain present.`,
           `That presence can feel unsettling.`,
           `Not because the work is unclear,<br>but because the viewer no longer has the safety net of fluency.`,
-          `This is the moment when many people say:<br>"I'm not sure what I'm supposed to be seeing."`,
-          `What they often mean is:<br>"I don't have a familiar framework to lean on."`
+          `This is often the moment when someone says:`,
+          `"I'm not sure what I'm supposed to be seeing."`,
+          `What they are often expressing is something quieter:`,
+          `"I don't have a familiar framework to lean on."`
         ]
       },
       {
-        subhead: "Attention is a skill, not a reflex",
+        subhead: "Attention Is a Skill, Not a Reflex",
         paragraphs: [
           `Looking well is not passive.`,
           `It is an active, learned skill — one that must be practiced, especially after fluency sets in.`,
-          `Attention asks us to:`
-        ],
-        bullets: [
-          `delay judgment`,
-          `resist naming too quickly`,
-          `tolerate uncertainty`,
-          `remain with the work longer than comfort demands`
-        ],
-        paragraphsAfter: [
+          `Attention asks us to:`,
+          `delay judgment<br>resist naming too quickly<br>tolerate uncertainty<br>remain with the work longer than comfort demands`,
           `This kind of looking does not reward speed.<br>It rewards patience.`,
           `And patience reveals structure.`
         ]
       },
       {
-        subhead: "What reappears when we look again",
+        subhead: "What Reappears When We Look Again",
         paragraphs: [
           `When recognition loosens its grip, different things come forward.`,
           `Light stops being illumination and becomes intention.<br>Gesture stops being pose and becomes psychology.<br>Space stops being backdrop and becomes tension.`,
@@ -199,7 +186,7 @@ export const essays = [
         ]
       },
       {
-        subhead: "Familiarity is not the enemy",
+        subhead: "Familiarity Is Not the Enemy",
         paragraphs: [
           `Fluency itself is not the problem.`,
           `The problem is mistaking fluency for completeness.`,
@@ -208,11 +195,11 @@ export const essays = [
         ]
       },
       {
-        subhead: "Closing thought",
+        subhead: "Closing Thought",
         paragraphs: [
           `Learning to look again is not about becoming less certain.`,
           `It is about becoming more precise.`,
-          `When attention replaces recognition, images recover their complexity — and we recover our role as active participants rather than passive consumers.`,
+          `When attention replaces recognition, images recover their complexity — and we recover our role as participants rather than consumers.`,
           `Seeing, then, is not a moment.`,
           `It is a practice.`
         ]
@@ -223,70 +210,80 @@ export const essays = [
     slug: "narrative-without-resolution",
     title: "Narrative Without Resolution",
     subtitle: "Why some images refuse to explain themselves — and why that matters",
-    keyholeImageId: "i-9wQL5tH",
-    keyholePosition: "60% 30%",
     sections: [
       {
         paragraphs: [
+          `Not every image is built to deliver answers.`,
+          `Some are designed to remain open — to pause rather than conclude, and to invite the viewer into the space where meaning has not yet settled.`,
+          `This essay explores why unresolved images endure — and how ambiguity becomes a form of participation rather than a failure of clarity.`,
           `Many images are built to resolve.`,
-          `They present a moment, explain its meaning, and move the viewer along. The story is contained. The conclusion is implied. The work does not linger because it does not ask to.`,
+          `They present a moment, clarify its meaning, and move the viewer along. The story is contained. The conclusion is implied. The exchange is efficient.`,
           `Other images resist that impulse.`,
-          `They pause instead of conclude. They suggest rather than explain. They leave something unresolved — not through omission, but through intent.`,
-          `This resistance is often mistaken for ambiguity as failure.<br>In reality, it is ambiguity as structure.`
+          `They pause instead of conclude.<br>They suggest rather than explain.<br>They leave something unresolved — not through omission, but through intent.`,
+          `This resistance is often misunderstood as ambiguity without purpose.`,
+          `In reality, it is ambiguity as structure.`
         ]
       },
       {
-        subhead: "The expectation of closure",
+        subhead: "The Expectation of Closure",
         paragraphs: [
-          `We are trained to expect clarity.`,
-          `In stories, we look for endings.<br>In images, we look for answers.`,
+          `When people look at images, they often bring the same expectations they bring to stories.`,
+          `We look for beginnings and endings.<br>For causes and outcomes.<br>For answers to settle the experience.`,
           `What happened?<br>Who is this?<br>Why this moment?`,
-          `When those answers are not immediately available, discomfort enters. The work feels incomplete. The viewer feels unmoored.`,
-          `But the unease is not a sign that the image is lacking.<br>It is a sign that the image is asking something different of us.`
+          `When those answers are not immediately available, discomfort enters. The work can feel incomplete. The viewer can feel unmoored.`,
+          `But this unease is not a sign that the image is lacking.`,
+          `It is a sign that the image is asking something different of us.`
         ]
       },
       {
-        subhead: "When explanation gives way to presence",
+        subhead: "When Explanation Gives Way to Presence",
         paragraphs: [
           `Resolution reassures.<br>Ambiguity invites.`,
-          `An image that explains itself fully keeps the viewer at a distance. The meaning is delivered. The exchange is complete.`,
+          `An image that explains itself fully allows the viewer to remain outside it. The meaning is delivered. The exchange concludes.`,
           `An image that resists resolution creates a different relationship.`,
-          `Instead of standing outside the work and decoding it, the viewer remains inside the moment — held in suspension. The image becomes a space rather than a statement.`,
-          `Not a problem to solve.<br>A condition to inhabit.`
+          `Instead of decoding the work from a distance, the viewer is held inside the moment — suspended rather than released. The image becomes a place rather than a statement.`,
+          `Not a problem to solve.<br>A condition to inhabit.`,
+          `This shift changes the role of the viewer from observer to participant.`
         ]
       },
       {
-        subhead: "Ambiguity is not absence",
+        subhead: "Ambiguity Is Not Absence",
         paragraphs: [
           `Unresolved images are often described as vague or unclear. This misunderstands what ambiguity is doing.`,
           `Ambiguity is not a lack of information.<br>It is the presence of multiple possibilities.`,
-          `The image is structured carefully — light, gesture, composition, tone — but it refuses to collapse those elements into a single, authoritative meaning.`,
-          `The result is not confusion.<br>It is openness.`
+          `The image is carefully structured — light, gesture, composition, tone — but it refuses to collapse those elements into a single, authoritative meaning.`,
+          `Nothing is missing.<br>Nothing is accidental.`,
+          `What is withheld is not information, but certainty.`,
+          `The result is not confusion.`,
+          `It is openness.`
         ]
       },
       {
-        subhead: "Why uncertainty feels personal",
+        subhead: "Why Uncertainty Feels Personal",
         paragraphs: [
-          `When an image does not tell us what to think, we are forced to supply something ourselves.`,
+          `When an image does not tell us what to think, we are required to bring something of ourselves to it.`,
           `Memory enters.<br>Experience enters.<br>Emotion enters.`,
           `The viewer's own history becomes part of the reading.`,
           `This is where participation begins — quietly and without instruction.`,
-          `Not everyone welcomes this moment.<br>Participation carries responsibility.`,
-          `To stay with an image without resolution is to accept that meaning may not arrive neatly — or at all — and that this does not diminish the experience.`
+          `Not everyone welcomes this moment.`,
+          `Participation carries responsibility. It asks the viewer to remain present without resolution, to tolerate not knowing, and to accept that meaning may not arrive neatly — or at all.`,
+          `That uncertainty does not diminish the experience.`,
+          `It deepens it.`
         ]
       },
       {
-        subhead: "The role of restraint",
+        subhead: "The Role of Restraint",
         paragraphs: [
           `Ambiguity does not come from excess.`,
           `It comes from restraint.`,
           `From what is withheld as much as what is shown.<br>From implication rather than declaration.<br>From leaving space where certainty might otherwise rush in.`,
-          `This restraint is deliberate. It slows the viewer down. It interrupts recognition. It prevents the mind from resolving the image too quickly and moving on.`,
+          `This restraint is deliberate.`,
+          `It slows the viewer down.<br>Interrupts recognition.<br>Prevents the mind from resolving the image too quickly and moving on.`,
           `In that pause, something else becomes possible.`
         ]
       },
       {
-        subhead: "Stories without endings",
+        subhead: "Stories Without Endings",
         paragraphs: [
           `Some of the most enduring images do not tell complete stories.`,
           `They offer fragments.<br>Moments suspended mid-thought.<br>Scenes that feel as though they began before us — and will continue after.`,
@@ -295,11 +292,11 @@ export const essays = [
         ]
       },
       {
-        subhead: "Closing thought",
+        subhead: "Closing Thought",
         paragraphs: [
           `Resolution closes a story.`,
           `Ambiguity keeps it alive.`,
-          `When an image refuses to explain itself, it does not abandon the viewer. It invites them to remain — to feel, to question, to bring their own life into the space the image creates.`,
+          `When an image refuses to explain itself, it does not abandon the viewer. It invites them to remain — to feel, to question, and to bring their own life into the space the image creates.`,
           `The story does not end on the wall.`,
           `It continues wherever the viewer carries it next.`
         ]
@@ -309,81 +306,88 @@ export const essays = [
   {
     slug: "the-difference-between-drama-and-tension",
     title: "The Difference Between Drama and Tension",
-    subtitle: "Why restraint endures where spectacle fades",
-    keyholeImageId: "i-rfFBRQM",
-    keyholePosition: "40% 25%",
+    subtitle: "Why some images announce themselves — and others stay with us",
     sections: [
       {
         paragraphs: [
+          `Some images demand attention immediately.`,
+          `Others earn it slowly — through restraint, implication, and what they choose not to show.`,
+          `This essay explores the difference between drama and tension, and why images built on quiet control often endure longer than those built on spectacle.`,
+          `When people talk about powerful images, they often mean dramatic ones.`,
+          `The moment is clear.<br>The action is visible.<br>The emotion is legible.`,
+          `We know where to look.<br>We know what matters.<br>We know how we are meant to feel.`,
           `Drama announces itself.`,
-          `It arrives loudly, signals its importance, and delivers its effect quickly. The moment is clear. The emotion is legible. The response is immediate.`,
-          `Tension works differently.`,
-          `It accumulates rather than declares. It withholds rather than explains. It relies on implication — and on the viewer's willingness to remain present.`,
-          `The two are often confused.<br>They are not the same.`
+          `Tension works differently.`
         ]
       },
       {
-        subhead: "What drama does well",
+        subhead: "What Drama Does Well",
         paragraphs: [
           `Drama is efficient.`,
-          `It tells us where to look.<br>It tells us what matters.<br>It tells us how to feel.`,
-          `High contrast, overt gesture, explicit action — these devices are not mistakes. They are tools. Used well, they produce impact. Used constantly, they exhaust it.`,
-          `Drama peaks quickly because it resolves quickly.`,
-          `Once the moment has been delivered, there is little left to discover.`
+          `It guides the eye quickly and delivers its effect with clarity. High contrast, overt gesture, explicit action — these are not mistakes. They are tools.`,
+          `Used intentionally, drama creates impact.<br>Used repeatedly, it exhausts it.`,
+          `Because drama resolves quickly, it peaks quickly. Once the moment has been delivered, there is little left to discover.`,
+          `The image has said what it came to say.`
         ]
       },
       {
-        subhead: "How tension behaves",
+        subhead: "How Tension Behaves",
         paragraphs: [
           `Tension does not announce itself.`,
-          `It is built through balance and restraint — through what is implied rather than shown. It depends on pacing, structure, and control.`,
+          `It accumulates rather than declares.<br>It withholds rather than explains.<br>It relies on implication — and on the viewer's willingness to remain present.`,
           `Tension keeps something just out of reach.`,
           `Not hidden.<br>Not obscured.<br>Simply unresolved.`,
           `The viewer senses that something is happening — or about to — without being told exactly what that is.`,
-          `This creates a different kind of engagement.`
+          `This uncertainty is not accidental.`,
+          `It is structural.`
         ]
       },
       {
-        subhead: "Restraint is not quietness",
+        subhead: "Restraint Is Not Quietness",
         paragraphs: [
           `Restraint is often mistaken for subtlety or softness.`,
           `In reality, restraint is a form of precision.`,
-          `It requires decisions about what not to include.<br>About when to stop.<br>About how much information is enough — and when more would weaken the structure.`,
-          `Restraint concentrates attention.<br>It gives weight to small gestures.<br>It allows silence to carry meaning.`
+          `It requires decisions about what not to include.<br>About when to stop.<br>About how much information is enough — and when more would weaken the image rather than strengthen it.`,
+          `Restraint concentrates attention.<br>It gives weight to small gestures.<br>It allows silence to carry meaning.`,
+          `Nothing is casual.<br>Nothing is left over.`
         ]
       },
       {
-        subhead: "Why spectacle fades",
+        subhead: "Why Spectacle Fades",
         paragraphs: [
           `Spectacle depends on escalation.`,
-          `Each moment must be louder, faster, or more explicit than the last. This produces diminishing returns. What once shocked becomes familiar. What once impressed becomes expected.`,
-          `Tension, by contrast, does not compete for attention.<br>It holds it.`,
-          `Because tension does not resolve itself immediately, it leaves something active in the viewer. The image continues to work after the initial encounter has passed.`
+          `Each moment must be louder, faster, or more explicit than the last. Over time, this produces diminishing returns. What once shocked becomes familiar. What once impressed becomes expected.`,
+          `Attention spikes — and then collapses.`,
+          `Tension behaves differently.`,
+          `Because it does not resolve itself immediately, it leaves something active in the viewer. The image continues to work after the initial encounter has passed.`,
+          `It does not compete for attention.`,
+          `It holds it.`
         ]
       },
       {
-        subhead: "The viewer's role in tension",
+        subhead: "The Viewer's Role in Tension",
         paragraphs: [
           `Drama positions the viewer as a recipient.`,
           `Tension positions the viewer as a participant.`,
           `Not through instruction, but through invitation.`,
           `When an image resists spectacle, the viewer must do a small amount of work — staying present, noticing relationships, sensing undercurrents.`,
           `This effort is rarely conscious.`,
-          `But it is felt.`
+          `But it is felt.`,
+          `The viewer is no longer consuming an image.<br>They are inhabiting it.`
         ]
       },
       {
-        subhead: "Control over excess",
+        subhead: "Control Over Excess",
         paragraphs: [
           `Tension is not created by adding more.`,
           `It is created by controlling less.`,
           `By distilling the scene to its essential elements.<br>By allowing space for anticipation.<br>By trusting that implication can carry more weight than declaration.`,
-          `This control is not passive.<br>It is deliberate.`,
-          `And it is difficult.`
+          `This control is not passive.`,
+          `It is deliberate.<br>And it is difficult.`
         ]
       },
       {
-        subhead: "Closing thought",
+        subhead: "Closing Thought",
         paragraphs: [
           `Drama delivers an experience.`,
           `Tension sustains one.`,
@@ -398,78 +402,76 @@ export const essays = [
     slug: "what-makes-an-image-last",
     title: "What Makes an Image Last",
     subtitle: "Memory, meaning, and the images we carry forward",
-    keyholeImageId: "i-dsqgfVj",
-    keyholePosition: "50% 35%",
     sections: [
       {
         paragraphs: [
           `Most images are encountered once.`,
-          `They register, deliver their effect, and are replaced by the next. Even powerful images often live only as impressions — strong in the moment, but fleeting over time.`,
+          `They register, deliver their effect, and are replaced by the next. Even powerful images often live only as impressions—strong in the moment, but light on endurance.`,
           `And then there are images that remain.`,
-          `They return uninvited.<br>They surface later, without effort.<br>They attach themselves to memory rather than attention.`,
+          `They return without invitation.<br>They surface later, unprompted.<br>They attach themselves to memory rather than attention.`,
           `The difference is rarely scale, subject, or technique.`,
           `It is structure.`
         ]
       },
       {
-        subhead: "Duration is not impact",
+        subhead: "Duration Is Not Impact",
         paragraphs: [
           `Impact is immediate.<br>Duration is cumulative.`,
-          `An image designed for instant recognition often exhausts itself quickly. Once the meaning has been delivered, there is nothing left to unfold.`,
-          `Lasting images behave differently.`,
+          `An image designed for instant recognition often exhausts itself quickly. Once its meaning has been delivered, there is little left to discover.`,
+          `Images that last behave differently.`,
           `They do not announce everything at once.<br>They do not resolve completely.<br>They do not close the loop.`,
-          `Instead, they leave something unfinished — not as a flaw, but as an opening.`
+          `Instead, they leave something unfinished—not as a flaw, but as an opening.`
         ]
       },
       {
-        subhead: "Why ambiguity endures",
+        subhead: "Why Ambiguity Endures",
         paragraphs: [
           `Ambiguity is often mistaken for vagueness.`,
-          `In enduring work, ambiguity serves a different function.`,
-          `It allows the image to accept new meanings over time.`,
-          `As the viewer changes, the image changes with them — not because the image is unstable, but because it was never locked to a single reading.`,
+          `In enduring work, it serves a different role.`,
+          `It allows the image to remain active over time.`,
+          `As the viewer changes, the image changes with them—not because the image is unstable, but because it was never locked to a single reading.`,
           `The work remains constant.<br>The viewer does not.`,
           `This is how images move from being seen to being carried.`
         ]
       },
       {
-        subhead: "Memory as collaboration",
+        subhead: "Memory as Collaboration",
         paragraphs: [
           `We do not remember images exactly as they were.`,
           `We remember how they intersected with our own experience.`,
           `A fragment of gesture.<br>A tone of light.<br>A moment of tension that felt unresolved.`,
-          `Over time, these elements braid themselves into personal memory. The image becomes part of the viewer's internal landscape — shaped by their history, emotions, and imagination.`,
+          `Over time, these fragments braid themselves into personal memory. The image becomes part of the viewer's internal landscape—shaped by their history, emotions, and imagination.`,
           `This is not interpretation imposed from the outside.`,
-          `It is participation that occurs naturally, without instruction.`
+          `It is participation that happens naturally, without instruction.`
         ]
       },
       {
-        subhead: "The quiet authority of restraint",
+        subhead: "The Quiet Authority of Restraint",
         paragraphs: [
           `Images that last rarely insist on their importance.`,
           `They trust their construction.`,
-          `Restraint allows space for memory to operate.<br>It prevents the work from exhausting itself.<br>It leaves room for return.`,
+          `Restraint leaves space for memory to operate.<br>It prevents the work from exhausting itself.<br>It leaves room for return.`,
           `The image does not demand repeated attention.<br>It earns it.`
         ]
       },
       {
-        subhead: "When medium falls away",
+        subhead: "When Medium Falls Away",
         paragraphs: [
           `By the time an image endures, its category no longer matters.`,
           `What remains is not how it was made, but what it continues to do.`,
           `Does it hold tension?<br>Does it sustain presence?<br>Does it resist closure?<br>Does it remain active in memory?`,
-          `When an image meets these conditions, it exits the conversation about format and enters the longer conversation about meaning.`
+          `When an image meets these conditions, it exits the conversation about format and enters a longer conversation about meaning.`
         ]
       },
       {
-        subhead: "Closing thought",
+        subhead: "Closing",
         paragraphs: [
           `Images that last do not explain themselves completely.`,
           `They stay with us because they leave space for us to stay with them.`,
           `Over time, they stop belonging solely to the moment they were made and begin belonging to the lives that encounter them.`,
           `That is not permanence.`,
           `It is continuity.`,
-          `And continuity is what allows an image to matter long after we've stopped looking at it.`
+          `And continuity is what allows an image to matter long after we've stopped looking.`
         ]
       }
     ]

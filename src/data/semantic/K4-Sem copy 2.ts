@@ -2,36 +2,6 @@
 
 // data/semantic/K4-Sem.ts
 
-export const phrases = [];
-export const landingPhrases = [];
-export const imagePhrases = [];
-
-export const semanticGroups = {
-  facingHistory: [],
-  cowboy: [],
-  civilwar: [],
-  wwii: [],
-  roaring20s: [],
-  landscapes: [],
-  engrained: [],
-  transportation: [],
-  portraits: [],
-  miscellaneous: [],
-};
-
-export const categoryMap = {
-  facingHistory: "Facing History",
-  cowboy: "Cowboy",
-  civilwar: "Civil War",
-  wwii: "WWII",
-  roaring20s: "Roaring 20s",
-  landscapes: "Landscapes",
-  engrained: "Engrained",
-  transportation: "Transportation",
-  portraits: "Portraits",
-  miscellaneous: "Miscellaneous",
-};
-
 export const semantic = {
   reenactorsTraditional: {
     path: "/Galleries/Fine-Art-Photography/Portraits/Reenactors",
