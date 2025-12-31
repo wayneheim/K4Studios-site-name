@@ -34,18 +34,30 @@ export async function handler(event) {
   // Extract request context: UA, Referer, IP
   const ua = event.headers['user-agent'] || 'unknown';
   const referer = event.headers['referer'] || event.headers['referrer'] || 'none';
-  // Netlify's x-nf-client-connection-ip is most reliable, then x-forwarded-for
+  
+  // DEBUG: Log all IP-related headers to diagnose the Amazon IP issue
+  console.log('=== IP DEBUG ===');
+  console.log('cf-connecting-ip:', event.headers['cf-connecting-ip']);
+  console.log('true-client-ip:', event.headers['true-client-ip']);
+  console.log('x-real-ip:', event.headers['x-real-ip']);
+  console.log('x-forwarded-for:', event.headers['x-forwarded-for']);
+  console.log('x-nf-client-connection-ip:', event.headers['x-nf-client-connection-ip']);
+  console.log('client-ip:', event.headers['client-ip']);
+  console.log('=== END DEBUG ===');
+  
+  // Cloudflare is in front, so cf-connecting-ip has the real client IP
+  // x-nf-client-connection-ip will show Cloudflare's edge server IP
   const rawIp =
+    event.headers['cf-connecting-ip'] ||
+    event.headers['true-client-ip'] ||
+    event.headers['x-real-ip'] ||
+    (event.headers['x-forwarded-for'] || '').split(',')[0]?.trim() ||
     event.headers['x-nf-client-connection-ip'] ||
-    event.headers['x-forwarded-for'] ||
     event.headers['client-ip'] ||
     event.requestContext?.identity?.sourceIp ||
     '';
-  const ip = (rawIp || '')
-    .toString()
-    .split(',')
-    .map((s) => s.trim())
-    .filter(Boolean)[0] || 'unknown';
+  const ip = rawIp || 'unknown';
+  console.log('Resolved IP:', ip);
 
   const eventTime = new Date(timestamp || Date.now()).toLocaleString('en-US', {
     timeZone: 'America/New_York',

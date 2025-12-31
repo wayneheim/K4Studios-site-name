@@ -41,17 +41,18 @@ export async function handler(event) {
   // Request context: UA, Referer, IP
   const ua = event.headers['user-agent'] || 'unknown';
   const referer = event.headers['referer'] || event.headers['referrer'] || 'none';
+  
+  // Cloudflare is in front, so cf-connecting-ip has the real client IP
+  // x-nf-client-connection-ip will show Cloudflare's edge server IP
   const rawIp =
-    event.headers['x-forwarded-for'] ||
-    event.headers['client-ip'] ||
+    event.headers['cf-connecting-ip'] ||
+    event.headers['true-client-ip'] ||
+    event.headers['x-real-ip'] ||
+    (event.headers['x-forwarded-for'] || '').split(',')[0]?.trim() ||
     event.headers['x-nf-client-connection-ip'] ||
-    event.ip ||
+    event.headers['client-ip'] ||
     '';
-  const ip = (rawIp || '')
-    .toString()
-    .split(',')
-    .map((s) => s.trim())
-    .filter(Boolean)[0] || 'unknown';
+  const ip = rawIp || 'unknown';
 
   // 📝 Google Sheets Logging - always log all likes for analytics
   try {
