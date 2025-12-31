@@ -13,40 +13,38 @@ export const seeingLanding = {
 export const essays = [
   {
     slug: "when-the-medium-stops-being-the-point",
-    title: "When the Medium Stops Being the Point",
-    subtitle: "How we decide what counts as 'serious' art",
+    title: "How We Decide What Counts as 'Serious' Art",
+    subtitle: "Most people believe they are responding to art itself. In reality, they are often responding to rules they absorbed long before they ever stood in front of a work.",
+    summary: "This essay explores how those rules shape what we take seriously — and what becomes possible once we set them aside.",
+    keyholeImageId: "i-ncFcHDM",
+    keyholePosition: "30% 20%", // offset crop to avoid centering face
     sections: [
       {
         paragraphs: [
-          `Most people believe they are responding to art itself.`,
-          `In reality, they are often responding to permission systems they were taught long before they ever stood in front of a piece.`,
-          `Painting, for centuries, carried institutional weight. Photography, by contrast, arrived as a tool — then a document — then a disruption. Even as photography entered museums, the residue of that origin remained. The camera was still expected to record rather than interpret. To show rather than to construct. To witness rather than to speak.`,
+          `When people stand in front of a work of art, they rarely arrive empty-handed.`,
+          `They bring with them inherited expectations — about what art is supposed to look like, how it is supposed to behave, and which forms are allowed to carry emotional, psychological, or historical weight.`,
+          `For centuries, painting carried institutional authority. It was slow, scarce, and reinforced by academies, churches, and museums. Photography, by contrast, entered culture as a tool — then a document — then a disruption. Even as it gained acceptance, the residue of that origin remained. The camera was still expected to record rather than interpret. To show rather than to construct. To witness rather than to speak.`,
           `That expectation quietly persists.`,
-          `When someone says, "I love this, but I don't know what to do with it," they are not expressing confusion about the work. They are expressing confusion about the rules.`,
-          `Rules about medium.<br>Rules about legitimacy.<br>Rules about what kinds of work are allowed to carry emotional, psychological, or historical weight.`,
-          `The problem is that these rules were never universal.<br>They were inherited.`
+          `So when someone says, "I love this, but I don't know what to do with it," they are rarely expressing confusion about the work itself. More often, they are signaling uncertainty about the rules surrounding it.`,
+          `Rules about medium.<br>Rules about legitimacy.<br>Rules about what kinds of work are permitted to carry meaning, gravity, or historical weight.`,
+          `The critical thing to recognize is this:`,
+          `Those rules were never universal.<br>They were inherited.`
         ]
       },
       {
-        subhead: "Medium is not meaning",
+        subhead: "Medium Is Not Meaning",
         paragraphs: [
           `Across art history, the works that endure are rarely the ones that obeyed category boundaries most cleanly.`,
-          `They are the works that:`
-        ],
-        bullets: [
-          `borrowed languages not yet sanctioned`,
-          `fused disciplines before institutions knew how to name them`,
-          `were judged first as "confusing," then later as "obvious"`
-        ],
-        paragraphsAfter: [
-          `When we evaluate a work primarily by how it was made, we skip the harder — and more honest — work of evaluating what it is doing.`,
+          `They are the works that borrowed visual languages before they were sanctioned.<br>That fused disciplines before institutions knew how to name them.<br>That were initially dismissed as confusing, then later understood as inevitable.`,
+          `When we evaluate a work primarily by how it was made, we bypass the more meaningful question of what it is doing.`,
           `Composition does not belong to painting.<br>Narrative does not belong to literature.<br>Psychological presence does not belong to cinema.`,
-          `These are visual and cognitive structures, not mediums.`,
-          `A work either sustains them — or it doesn't.`
+          `These are not properties of medium.`,
+          `They are perceptual and cognitive structures.`,
+          `A work either sustains them — or it does not.`
         ]
       },
       {
-        subhead: "Why some photographs feel different",
+        subhead: "Why Some Photographs Feel Different",
         paragraphs: [
           `There are photographs that function as records.<br>There are photographs that function as documents.<br>There are photographs that function as illustrations of a moment.`,
           `And then there are photographs that function as constructed experiences.`,
@@ -55,71 +53,58 @@ export const essays = [
           `Light is placed with intent.<br>Gesture is selected, not accidental.<br>Space is composed to carry tension rather than information.`,
           `The resulting image behaves less like evidence and more like a scene — a fragment of a larger, implied story.`,
           `This is often where discomfort enters.`,
-          `Not because the work is unclear —<br>but because the viewer has been trained to expect clarity from photographs and ambiguity from paintings.`,
-          `When those expectations invert, the viewer must either reject the work or renegotiate their framework.`
+          `Not because the work is unclear,<br>but because the viewer has been trained to expect clarity from photographs and ambiguity from paintings.`,
+          `When those expectations invert, the viewer is asked to renegotiate how they are looking.`
         ]
       },
       {
-        subhead: "The false comfort of categories",
+        subhead: "The False Comfort of Categories",
         paragraphs: [
-          `Categories feel safe because they outsource judgment.`,
-          `If something is "a painting," we know how to talk about it.<br>If something is "a photograph," we believe we do too.`,
-          `But hybrid work exposes a deeper truth:`,
-          `Many people were never taught how to look — only how to classify.`,
-          `Once classification fails, anxiety fills the gap.`,
-          `The impulse is to say:`,
-          `"This doesn't belong in a real gallery."`,
-          `"I wouldn't know how to hang this."`,
-          `"I like it, but I'm not sure it counts."`,
-          `These statements are not critiques of quality.<br>They are admissions of uncertainty about permission.`
+          `Categories are useful tools, but they are incomplete ones.`,
+          `They simplify conversation.<br>They accelerate recognition.<br>They offer familiar entry points.`,
+          `But they can also short-circuit perception.`,
+          `When classification becomes the primary mode of engagement, looking is replaced by sorting. Judgment is deferred to labels rather than earned through attention.`,
+          `Hybrid work exposes this limitation.`,
+          `It reveals a quieter truth: many people were never taught how to look — only how to identify.`,
+          `When identification fails, uncertainty appears. Not as rejection, but as hesitation.`,
+          `Statements like:`,
+          `"I wouldn't know how to hang this."<br>"I'm not sure where this belongs."<br>"I like it, but I don't know what it is."`,
+          `These are not judgments of quality.<br>They are signals that familiar frameworks are no longer sufficient.`
         ]
       },
       {
-        subhead: "Looking without the guardrails",
+        subhead: "Looking Without the Guardrails",
         paragraphs: [
-          `If we remove medium from the first line of questioning, a different evaluation emerges:`
-        ],
-        bullets: [
-          `Does the work establish a visual hierarchy?`,
-          `Does the light guide attention — or flatten it?`,
-          `Is the figure psychologically present, or merely depicted?`,
-          `Is the moment resolved, or does it resist closure?`,
-          `Does the image linger after it is no longer in front of us?`
-        ],
-        paragraphsAfter: [
-          `These are not photographic questions.<br>They are art questions.`,
+          `If medium is removed from the first line of questioning, a different evaluation emerges.`,
+          `Does the work establish a visual hierarchy?<br>Does the light guide attention — or diffuse it intentionally?<br>Is the figure psychologically present, or merely depicted?<br>Is the moment resolved, or does it resist closure?<br>Does the image linger after it is no longer in front of us?`,
+          `These are not photographic questions.`,
+          `They are art questions.`,
           `They apply equally to Rembrandt, Hopper, Wyeth, cinema, illustration — and yes, photography.`,
-          `When a work holds up under these questions, the medium becomes secondary.`,
-          `Not irrelevant —<br>but no longer decisive.`
+          `When a work holds up under these considerations, the medium recedes.`,
+          `Not because it is irrelevant —<br>but because it is no longer the point.`
         ]
       },
       {
-        subhead: "Permission is the quiet barrier",
+        subhead: "Permission Is the Quiet Barrier",
         paragraphs: [
-          `Very few people reject serious work because they dislike it.`,
-          `Most hesitate because they are unsure they are allowed to take it seriously.`,
-          `They worry about:`
-        ],
-        bullets: [
-          `how it will be perceived`,
-          `whether they can explain it`,
-          `whether their response is "correct"`
-        ],
-        paragraphsAfter: [
-          `The role of thoughtful criticism, notes, and contextual writing is not to tell people what to think.`,
-          `It is to say:`,
-          `<em>You are not wrong to feel this.<br>There is a language here.<br>You don't have to apologize for responding to it.</em>`,
-          `Once that permission is granted, the work no longer asks to be defended.`,
+          `Very few people turn away from serious work because they dislike it.`,
+          `More often, they hesitate because they are unsure they are allowed to take it seriously.`,
+          `They wonder whether their response is valid.<br>Whether they can explain it.<br>Whether they are "reading it correctly."`,
+          `The role of thoughtful criticism and contextual writing is not to tell people what to think.`,
+          `It is to create conditions of safety.`,
+          `To say:`,
+          `<em>You are not wrong to feel this.<br>There is a language here.<br>You do not need permission to engage with it.</em>`,
+          `Once that permission is granted, the work no longer needs to be defended.`,
           `It stands.`
         ]
       },
       {
-        subhead: "Closing thought",
+        subhead: "Closing Thought",
         paragraphs: [
           `Art does not advance when categories are protected.<br>It advances when they are outgrown.`,
-          `The most lasting work is rarely the work that fits neatly into existing frames —<br>but the work that quietly teaches us how inadequate those frames were to begin with.`,
+          `The most lasting work is rarely the work that fits neatly into existing frames,<br>but the work that quietly teaches us how inadequate those frames were to begin with.`,
           `Looking, then, becomes an act of courage.`,
-          `And once someone learns to look without fear, they rarely want to go back.`
+          `And once someone learns to look without fear, they rarely want to return to the old rules.`
         ]
       }
     ]
@@ -128,6 +113,8 @@ export const essays = [
     slug: "learning-how-to-look-again",
     title: "Learning to Look (Again)",
     subtitle: "Why familiarity blinds us — and what attention restores",
+    keyholeImageId: "i-kQfftQ2",
+    keyholePosition: "70% 40%",
     sections: [
       {
         paragraphs: [
@@ -236,6 +223,8 @@ export const essays = [
     slug: "narrative-without-resolution",
     title: "Narrative Without Resolution",
     subtitle: "Why some images refuse to explain themselves — and why that matters",
+    keyholeImageId: "i-9wQL5tH",
+    keyholePosition: "60% 30%",
     sections: [
       {
         paragraphs: [
@@ -321,6 +310,8 @@ export const essays = [
     slug: "the-difference-between-drama-and-tension",
     title: "The Difference Between Drama and Tension",
     subtitle: "Why restraint endures where spectacle fades",
+    keyholeImageId: "i-rfFBRQM",
+    keyholePosition: "40% 25%",
     sections: [
       {
         paragraphs: [
@@ -407,6 +398,8 @@ export const essays = [
     slug: "what-makes-an-image-last",
     title: "What Makes an Image Last",
     subtitle: "Memory, meaning, and the images we carry forward",
+    keyholeImageId: "i-dsqgfVj",
+    keyholePosition: "50% 35%",
     sections: [
       {
         paragraphs: [
