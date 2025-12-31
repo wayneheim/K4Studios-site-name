@@ -13,11 +13,11 @@ export const seeingLanding = {
 export const essays = [
   {
     slug: "when-the-medium-stops-being-the-point",
-    title: "How We Decide What Counts as 'Serious' Art",
+    title: "How we decide what counts as 'serious' art",
     subtitle: "Most people believe they are responding to art itself. In reality, they are often responding to rules they absorbed long before they ever stood in front of a work.",
     summary: "This essay explores how those rules shape what we take seriously — and what becomes possible once we set them aside.",
     keyholeImageId: "i-ncFcHDM",
-    keyholePosition: "30% 20%", // offset crop to avoid centering face
+    keyholePosition: "75% 60%", // shows striped vest, gloved hand, wagon wheel
     sections: [
       {
         paragraphs: [
