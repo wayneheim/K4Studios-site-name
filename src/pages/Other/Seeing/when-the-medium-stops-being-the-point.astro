@@ -1,0 +1,159 @@
+---
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import { essays } from "@/data/Other/Seeing/story.ts";
+import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import "@/styles/global.css";
+
+// Get this essay from the data
+const essay = essays.find(e => e.slug === "when-the-medium-stops-being-the-point");
+const currentIndex = essays.findIndex(e => e.slug === "when-the-medium-stops-being-the-point");
+const { title, subtitle, sections } = essay;
+
+const sectionPath = "/Other/Seeing/when-the-medium-stops-being-the-point";
+const canonicalUrl = `https://k4studios.com${sectionPath}`;
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: title,
+    description: subtitle || `A visual literacy essay: ${title}`,
+    url: canonicalUrl,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    articleSection: "Visual Literacy"
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const meta = {
+  ...getLandingMeta(sectionPath, ""),
+  ogUrl: canonicalUrl,
+  ogTitle: title,
+  ogDescription: subtitle || `A visual literacy essay: ${title}`,
+  ogType: "article",
+  twitterUrl: canonicalUrl,
+  twitterTitle: title,
+  twitterDescription: subtitle || `A visual literacy essay: ${title}`,
+  twitterCard: "summary"
+};
+
+// Preview images for footer
+function shuffleArray<T>(arr: T[]): T[] {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+const allGalleryImages = painterlyImages
+  .filter(img => img.visibility !== "ghost")
+  .map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" }));
+
+const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
+const previewPath = "/Galleries";
+
+const breadcrumb = `Other › <a href='/Other/Seeing' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Seeing</a> › ${title}`;
+---
+
+<BaseLayout
+  title={`${title} — Seeing | K4 Studios`}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={breadcrumb} />
+    </div>
+
+    <!-- Essay Header -->
+    <section class="section-heading-wrap">
+      <div class="section-heading" style="font-family: 'Glegoo', serif;">
+        <h1 class="page-title fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">
+          {title}
+        </h1>
+      </div>
+    </section>
+
+    <!-- Intro block -->
+    <section class="intro-text max-w-2xl mx-auto px-4 text-center mb-6">
+      {subtitle && (
+        <blockquote style="font-size: 1.75rem; font-style: italic; color: #3b342e; margin-bottom: 1rem; line-height: 1.4; border-left: none; padding: 0; font-weight: 500; letter-spacing: -0.01em;">
+          {subtitle}
+        </blockquote>
+      )}
+    </section>
+
+    <!-- Essay Body -->
+    <section class="story-layout" style="font-family: 'Glegoo', serif;">
+      <div class="text-column story-section" style="max-width: 760px; margin: 0 auto; padding: 0 1.5rem; line-height: 1.7;">
+        {sections.map((section) => (
+          <article class="story-block" style="margin-bottom: 2rem;">
+            {section.subhead && (
+              <h2 style="font-weight: 600; font-size: 1.5rem; margin-bottom: 0.75rem; margin-top: 2rem; color: #3b342e;">{section.subhead}</h2>
+            )}
+            
+            {section.paragraphs?.map((para) => (
+              <p style="line-height: 1.7; margin-bottom: 1.25rem; font-size: 1.05rem;" set:html={para} />
+            ))}
+
+            {section.bullets && (
+              <ul style="padding-left: 1.5rem; margin-bottom: 1.25rem;">
+                {section.bullets.map((bullet) => (
+                  <li style="margin-bottom: 0.5rem; font-size: 1.05rem; list-style-type: disc;">{bullet}</li>
+                ))}
+              </ul>
+            )}
+
+            {section.paragraphsAfter?.map((para) => (
+              <p style="line-height: 1.7; margin-bottom: 1.25rem; font-size: 1.05rem;" set:html={para} />
+            ))}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Essay Jump List -->
+    <nav style="text-align: center; padding: 3rem 1rem 2rem; font-family: 'Glegoo', serif;">
+      <div style="display: inline-flex; align-items: center; gap: 0.75rem; font-size: 2rem; font-weight: 700; letter-spacing: 0.05em;">
+        {essays.map((e, i) => (
+          <>
+            {i > 0 && <span style="color: #ccc;">|</span>}
+            {i === currentIndex ? (
+              <span style="color: #ccc;">{i + 1}</span>
+            ) : (
+              <a 
+                href={`/Other/Seeing/${e.slug}`} 
+                style="color: #888; text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='darkred'"
+                onmouseout="this.style.color='#888'"
+              >
+                {i + 1}
+              </a>
+            )}
+          </>
+        ))}
+      </div>
+    </nav>
+
+    <SiteFooter 
+      previewImages={[]}
+      previewPath={previewPath}
+      title={`${title} — Seeing`}
+      label=""
+      class="pt-8 pb-12" 
+    />
+  </main>
+</BaseLayout>

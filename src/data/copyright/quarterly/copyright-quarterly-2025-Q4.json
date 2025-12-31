@@ -1,8 +1,8 @@
 {
   "quarter": "2025-Q4",
-  "status": "approved",
+  "status": "submitted",
   "created_at": "2025-12-29T03:14:44.279Z",
-  "updated_at": "2025-12-29T03:47:02.131Z",
+  "updated_at": "2025-12-31T02:54:40.167Z",
   "images": [
     {
       "image_id": "i-LCspRF4",
@@ -35,12 +35,36 @@
       "thumbnail_url": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KPZv9kkdJZF5rb7mPGF7jmLV222CRxSzpC8n2qXJq/S/cowboy%20photography%20painting_HF29245-250-S.jpg",
       "download_url": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KPZv9kkdJZF5rb7mPGF7jmLV222CRxSzpC8n2qXJq/M/cowboy%20photography%20painting_HF29245-250-M.jpg",
       "submission_group": "A"
+    },
+    {
+      "image_id": "i-Sc9hZGs",
+      "source_gallery": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+      "title_snapshot": "Change of Plans",
+      "thumbnail_url": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Sc9hZGs/0/LXZCQkC2VD5wvVpJJ3gBDSLdsp23zv65q99FHvbVt/S/_HF27820-1265-S.jpg",
+      "download_url": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Sc9hZGs/0/LXZCQkC2VD5wvVpJJ3gBDSLdsp23zv65q99FHvbVt/M/_HF27820-1265-M.jpg"
+    },
+    {
+      "image_id": "i-4zxZQQ2",
+      "source_gallery": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+      "title_snapshot": "Heading Home",
+      "thumbnail_url": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/0/L56vzKLBpfmg6qTmDc23DDFpj2ShnmvQ4Q8cKZ2xR/S/_HF20974-Edit-Edit-S.jpg",
+      "download_url": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/0/L56vzKLBpfmg6qTmDc23DDFpj2ShnmvQ4Q8cKZ2xR/M/_HF20974-Edit-Edit-M.jpg"
+    },
+    {
+      "image_id": "i-r5Pb7zJ",
+      "source_gallery": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+      "title_snapshot": "Signs",
+      "thumbnail_url": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/0/MLWqJXTNgXXFr2xrLtv99fzJtBRDWb59rcStjcz9r/S/_HF21312-Edit-S.jpg",
+      "download_url": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/0/MLWqJXTNgXXFr2xrLtv99fzJtBRDWb59rcStjcz9r/M/_HF21312-Edit-M.jpg"
     }
   ],
   "approved_at": "2025-12-29T03:47:02.131Z",
   "submissions": {
     "A": {
-      "image_count": 4
+      "image_count": 4,
+      "registration_number": "1-15067592451",
+      "submitted_at": "2025-12-31T02:54:40.166Z"
     }
-  }
+  },
+  "submitted_at": "2025-12-31T02:54:40.166Z"
 }

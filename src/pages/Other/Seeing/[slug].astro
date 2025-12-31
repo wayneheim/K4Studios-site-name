@@ -1,0 +1,166 @@
+---
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import { essays } from "@/data/Other/Seeing/essays.mjs";
+import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import "@/styles/global.css";
+
+// ----------------------
+// Static Paths Generation
+// ----------------------
+export function getStaticPaths() {
+  return essays.map((essay) => ({
+    params: { slug: essay.slug },
+    props: { essay }
+  }));
+}
+
+// ----------------------
+// Page Props
+// ----------------------
+const { essay } = Astro.props;
+const { slug, title, subtitle, body } = essay;
+
+const sectionPath = `/Other/Seeing/${slug}`;
+const canonicalUrl = `https://k4studios.com${sectionPath}`;
+
+// ----------------------
+// Structured Data (Article/CreativeWork)
+// ----------------------
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: title,
+    description: subtitle || `A visual literacy essay: ${title}`,
+    url: canonicalUrl,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    articleSection: "Visual Literacy"
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+// ----------------------
+// Meta tags
+// ----------------------
+const meta = {
+  ...getLandingMeta(sectionPath, ""),
+  ogUrl: canonicalUrl,
+  ogTitle: title,
+  ogDescription: subtitle || `A visual literacy essay: ${title}`,
+  ogType: "article",
+  twitterUrl: canonicalUrl,
+  twitterTitle: title,
+  twitterDescription: subtitle || `A visual literacy essay: ${title}`,
+  twitterCard: "summary"
+};
+
+// ----------------------
+// Preview images for footer
+// ----------------------
+function shuffleArray<T>(arr: T[]): T[] {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+const allGalleryImages = painterlyImages
+  .filter(img => img.visibility !== "ghost")
+  .map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" }));
+
+const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
+const previewPath = "/Galleries";
+
+// Breadcrumb with link back to Seeing
+const breadcrumb = `Other › <a href='/Other/Seeing' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Seeing</a> › ${title}`;
+---
+
+<BaseLayout
+  title={`${title} — Seeing | K4 Studios`}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={breadcrumb} />
+    </div>
+
+    <!-- ===================== -->
+    <!-- Essay Header -->
+    <!-- ===================== -->
+    <section class="max-w-3xl mx-auto px-4 pt-12 pb-6 text-center">
+      <h1 class="text-4xl font-bold mb-4" style="font-family: 'Glegoo', serif;">
+        {title}
+      </h1>
+      {subtitle && (
+        <h2 class="text-xl text-gray-600" style="font-family: 'Glegoo', serif;">
+          {subtitle}
+        </h2>
+      )}
+    </section>
+
+    <!-- ===================== -->
+    <!-- Essay Body -->
+    <!-- ===================== -->
+    <article class="max-w-3xl mx-auto px-4 pb-16">
+      <div 
+        class="prose prose-lg prose-gray mx-auto"
+        style="font-family: 'Glegoo', serif; line-height: 1.8;"
+        set:html={body}
+      />
+    </article>
+
+    <SiteFooter 
+      previewImages={previewImages}
+      previewPath={previewPath}
+      title={`${title} — Seeing`}
+      label="Explore Galleries"
+      class="pt-8 pb-12" 
+    />
+  </main>
+</BaseLayout>
+
+<style>
+  .prose p {
+    margin-bottom: 1.5rem;
+  }
+  .prose h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .prose h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose blockquote {
+    border-left: 4px solid #e5e5e5;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #4a4a4a;
+  }
+  .prose a {
+    color: #8b0000;
+    text-decoration: underline;
+  }
+  .prose a:hover {
+    color: #5c0000;
+  }
+</style>

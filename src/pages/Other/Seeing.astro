@@ -1,0 +1,115 @@
+---
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import { seeingLanding, essays } from "@/data/Other/Seeing/story.ts";
+import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import "@/styles/global.css";
+
+// ----------------------
+// Dynamic Logic
+// ----------------------
+const sectionPath = "/Other/Seeing";
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "Seeing",
+    description: "A small collection of essays on visual literacy — how images carry meaning, why some endure, and how to look without relying on categories or labels.",
+    url: `https://k4studios.com${sectionPath}`,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    }
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const meta = getLandingMeta(sectionPath, "");
+if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+meta.ogTitle = "Seeing — Visual Literacy Essays";
+meta.ogDescription = "A small collection of essays on visual literacy — how images carry meaning, why some endure, and how to look without relying on categories or labels.";
+meta.twitterTitle = "Seeing — Visual Literacy Essays";
+meta.twitterDescription = "A small collection of essays on visual literacy — how images carry meaning, why some endure, and how to look without relying on categories or labels.";
+
+// Prepare gallery preview images
+function shuffleArray<T>(arr: T[]): T[] {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+const allGalleryImages = painterlyImages
+  .filter(img => img.visibility !== "ghost")
+  .map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" }));
+
+const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
+const previewPath = "/Galleries";
+---
+
+<BaseLayout
+  title="Seeing — Visual Literacy Essays | K4 Studios"
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb="Other › Seeing" />
+    </div>
+
+    <section class="section-heading-wrap">
+      <div class="section-heading" style="font-family: 'Glegoo', serif;">
+        <h1 class="page-title fade-in reveal-on-scroll" style="font-family: 'Glegoo', serif;">Seeing</h1>
+      </div>
+    </section>
+
+    <!-- Intro block -->
+    <section class="intro-text max-w-2xl mx-auto px-4 text-center mb-10">
+      <blockquote style="font-size: 1.75rem; font-style: italic; color: #3b342e; margin-bottom: 2rem; line-height: 1.4; border-left: none; padding: 0; font-weight: 500; letter-spacing: -0.01em;">
+        "The hardest part of looking at art is<br>setting aside what we think it is."
+      </blockquote>
+      <p class="text-lg leading-relaxed text-gray-700">
+        Here is a small collection of essays on visual literacy — how images carry meaning, why some endure, and how to look without relying on categories or labels.
+      </p>
+    </section>
+
+    <!-- Essay list -->
+    <section class="max-w-2xl mx-auto px-4 mb-16">
+      <ol class="space-y-4" style="list-style: none; padding-left: 0;">
+        {essays.map((essay, index) => (
+          <li style="display: flex; align-items: baseline; gap: 0.75rem;">
+            <span style="font-family: 'Glegoo', serif; color: #999; font-size: 1rem; min-width: 1.5rem;">{index + 1}.</span>
+            <a 
+              href={`/Other/Seeing/${essay.slug}`} 
+              class="text-lg hover:text-red-700 transition-colors"
+              style="font-family: 'Glegoo', serif; text-decoration: none; color: #2c2c2c;"
+              onmouseover="this.style.color='darkred'"
+              onmouseout="this.style.color='#2c2c2c'"
+            >
+              {essay.title}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <SiteFooter 
+      previewImages={[]}
+      previewPath={previewPath}
+      title="Seeing — Visual Literacy Essays"
+      label=""
+      class="pt-8 pb-12" 
+    />
+  </main>
+</BaseLayout>
