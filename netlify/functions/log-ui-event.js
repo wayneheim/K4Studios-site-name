@@ -2,6 +2,19 @@ import fetch from 'node-fetch';
 
 const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzyCEvOy7f4sfePpdnNjRLy3HosBoJEUcPcG0bQiFAx8AtvkKxO8_KUrY-3eNZF300/exec';
 
+// Simplify User-Agent to just the OS/device
+function simplifyUA(ua) {
+  if (!ua || ua === 'unknown') return 'unknown';
+  const lower = ua.toLowerCase();
+  if (lower.includes('iphone')) return 'iPhone';
+  if (lower.includes('ipad')) return 'iPad';
+  if (lower.includes('android')) return 'Android';
+  if (lower.includes('macintosh') || lower.includes('mac os')) return 'Mac';
+  if (lower.includes('windows')) return 'Windows';
+  if (lower.includes('linux')) return 'Linux';
+  return 'Other';
+}
+
 export async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return {
@@ -32,18 +45,9 @@ export async function handler(event) {
   }
 
   // Extract request context: UA, Referer, IP
-  const ua = event.headers['user-agent'] || 'unknown';
+  const rawUA = event.headers['user-agent'] || 'unknown';
+  const ua = simplifyUA(rawUA);
   const referer = event.headers['referer'] || event.headers['referrer'] || 'none';
-  
-  // DEBUG: Log all IP-related headers to diagnose the Amazon IP issue
-  console.log('=== IP DEBUG ===');
-  console.log('cf-connecting-ip:', event.headers['cf-connecting-ip']);
-  console.log('true-client-ip:', event.headers['true-client-ip']);
-  console.log('x-real-ip:', event.headers['x-real-ip']);
-  console.log('x-forwarded-for:', event.headers['x-forwarded-for']);
-  console.log('x-nf-client-connection-ip:', event.headers['x-nf-client-connection-ip']);
-  console.log('client-ip:', event.headers['client-ip']);
-  console.log('=== END DEBUG ===');
   
   // Cloudflare is in front, so cf-connecting-ip has the real client IP
   // x-nf-client-connection-ip will show Cloudflare's edge server IP
@@ -57,7 +61,6 @@ export async function handler(event) {
     event.requestContext?.identity?.sourceIp ||
     '';
   const ip = rawIp || 'unknown';
-  console.log('Resolved IP:', ip);
 
   const eventTime = new Date(timestamp || Date.now()).toLocaleString('en-US', {
     timeZone: 'America/New_York',

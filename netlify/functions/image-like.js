@@ -3,6 +3,19 @@ import fetch from 'node-fetch';
 
 const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzyCEvOy7f4sfePpdnNjRLy3HosBoJEUcPcG0bQiFAx8AtvkKxO8_KUrY-3eNZF300/exec';
 
+// Simplify User-Agent to just the OS/device
+function simplifyUA(ua) {
+  if (!ua || ua === 'unknown') return 'unknown';
+  const lower = ua.toLowerCase();
+  if (lower.includes('iphone')) return 'iPhone';
+  if (lower.includes('ipad')) return 'iPad';
+  if (lower.includes('android')) return 'Android';
+  if (lower.includes('macintosh') || lower.includes('mac os')) return 'Mac';
+  if (lower.includes('windows')) return 'Windows';
+  if (lower.includes('linux')) return 'Linux';
+  return 'Other';
+}
+
 export async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return {
@@ -39,7 +52,8 @@ export async function handler(event) {
   });
 
   // Request context: UA, Referer, IP
-  const ua = event.headers['user-agent'] || 'unknown';
+  const rawUA = event.headers['user-agent'] || 'unknown';
+  const ua = simplifyUA(rawUA);
   const referer = event.headers['referer'] || event.headers['referrer'] || 'none';
   
   // Cloudflare is in front, so cf-connecting-ip has the real client IP

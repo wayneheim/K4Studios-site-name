@@ -1,6 +1,24 @@
+// Helper to shorten page paths for cleaner analytics
+// "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-RsLmsLZ"
+// becomes "…/Western-Cowboy-Portraits/Color/i-RsLmsLZ"
+function shortenPagePath(path) {
+  if (!path) return path;
+  const parts = path.split('/').filter(Boolean);
+  // Keep last 3 segments (e.g., gallery/color/imageId or gallery/imageId)
+  if (parts.length > 3) {
+    return '…/' + parts.slice(-3).join('/');
+  }
+  return path;
+}
+
 // Helper to log UI events to Airtable
 // Uses sendBeacon for reliable exit/unload logging, falls back to fetch
 async function logUIEvent(eventType, details = {}, useBeacon = false) {
+  // Shorten page paths for cleaner analytics
+  if (details.page) {
+    details.page = shortenPagePath(details.page);
+  }
+  
   const payload = JSON.stringify({ eventType, details, timestamp: Date.now() });
   
   // Use sendBeacon for beforeunload/visibilitychange (guaranteed delivery)
