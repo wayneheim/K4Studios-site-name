@@ -178,6 +178,12 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
                   ))}
                 </ul>
               )}
+              {/* Seeing essays — editorial discovery link */}
+              {index === 0 && (
+                <p class="reveal-on-scroll text-sm text-[#666] mt-6 mb-4 italic">
+                  For those interested in how historical images can function as lived narratives rather than documents, the <a href="/Other/Seeing" class="text-[#8b0000] hover:underline">Seeing essays</a> explore these ideas in more depth.
+                </p>
+              )}
               {/* Insert StorySlider after section 0 (intro with One-Image Movies) */}
               {index === 0 && (
                 <div class="story-slider-wrapper reveal-on-scroll mt-8">

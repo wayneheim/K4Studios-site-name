@@ -169,6 +169,16 @@ if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
                   ))}
                 </ul>
               )}
+              {/* On Seeing — editorial discovery link */}
+              {index === 0 && (
+                <aside class="reveal-on-scroll mt-8 mb-6 p-5 bg-[#faf8f5] border-l-2 border-[#c8bfb0] rounded-r" style="max-width: 600px;">
+                  <h4 class="text-xs uppercase tracking-widest text-[#8c7d6b] mb-2">On Seeing</h4>
+                  <p class="text-sm text-[#4a4a4a] leading-relaxed mb-2">
+                    A short series of essays on visual literacy — how images carry meaning, why some endure, and how to look beyond medium and category.
+                  </p>
+                  <a href="/Other/Seeing" class="text-sm text-[#8b0000] hover:underline">Explore the Seeing essays →</a>
+                </aside>
+              )}
               {/* Insert StorySlider after section 1 (One-Image Movie intro) */}
               {index === 1 && (
                 <div class="story-slider-wrapper reveal-on-scroll mt-8">

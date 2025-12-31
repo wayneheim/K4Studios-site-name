@@ -105,8 +105,9 @@ const galleryPaths = Object.keys(galleryDataMap);
     <section class="intro-text max-w-2xl mx-auto px-4 text-center mb-10">
   <h2 class="text-4xl font-extrabold mb-2" style="font-family: 'Glegoo', serif;">Inside the Frame</h2>
   <h3 class="text-2xl font-semibold mb-8 text-gray-700" style="font-family: 'Glegoo', serif;">The K4 Studios Blog</h3>
-        <p class="text-lg leading-relaxed text-gray-700" set:html={autoLinkKeywordsInText('\"Inside the Frame\" is where I step out from behind the lens and share the stories that shape my work. Part interview, part reflection, these posts explore composition, symbolism, and the choices that transform my fine art photography into narrative-driven, storytelling.', galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} /></p>
-    </section>
+        <p class="text-lg leading-relaxed text-gray-700" set:html={autoLinkKeywordsInText('\"Inside the Frame\" is where I step out from behind the lens and share the stories that shape my work. Part interview, part reflection, these posts explore composition, symbolism, and the choices that transform my fine art photography into narrative-driven, storytelling.', galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} /></p>        <p class="text-sm text-gray-500 mt-4 italic">
+          <a href="/Other/Seeing" class="text-[#8b0000] hover:underline">Seeing</a> is a short essay series on visual literacy and interpretation.
+        </p>    </section>
 
     <section class="story-layout" style="font-family: 'Glegoo', serif;">
       <!-- MAIN CONTENT (left) -->
