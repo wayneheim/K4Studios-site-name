@@ -70,42 +70,30 @@ const breadcrumb = `Other › <a href='/Other/Seeing' style='color: inherit; tex
       <LandingHeader client:load breadcrumb={breadcrumb} />
     </div>
 
-    <!-- Hero Section: Title + Keyhole Image -->
-    <section class="max-w-3xl mx-auto px-4 pt-8 pb-4">
-      <div class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
-        <!-- Title Block -->
-        <div class="flex-1 text-center md:text-left">
-          <h1 style="font-family: 'Glegoo', serif; font-size: clamp(1.75rem, 4vw, 2.5rem); font-style: italic; font-weight: 400; color: #3b342e; line-height: 1.2; margin-bottom: 0.5rem;">
+    <!-- Hero Section with decorative lines -->
+    <section class="section-heading-wrap">
+      <div class="section-heading" style="font-family: 'Glegoo', serif;">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+          <!-- Title Block -->
+          <h1 style="font-family: 'Glegoo', serif; font-size: clamp(1.75rem, 4vw, 2.5rem); font-style: italic; font-weight: 400; color: #3b342e; line-height: 1.2; margin: 0;">
             {title}
           </h1>
+          
+          <!-- Keyhole Circle Image -->
+          {keyholeImageUrl && (
+            <a 
+              href={keyholeImageLink}
+              class="keyhole-circle shrink-0"
+              style="display: block; width: 120px; height: 120px; border-radius: 50%; overflow: hidden; flex-shrink: 0;"
+            >
+              <img 
+                src={keyholeImageUrl} 
+                alt=""
+                style={`width: 100%; height: 100%; object-fit: cover; object-position: ${keyholePosition || '50% 50%'};`}
+              />
+            </a>
+          )}
         </div>
-        
-        <!-- Keyhole Circle Image -->
-        {keyholeImageUrl && (
-          <a 
-            href={keyholeImageLink}
-            class="keyhole-circle shrink-0"
-            style={`
-              display: block;
-              width: 120px;
-              height: 120px;
-              border-radius: 50%;
-              overflow: hidden;
-              flex-shrink: 0;
-            `}
-          >
-            <img 
-              src={keyholeImageUrl} 
-              alt=""
-              style={`
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: ${keyholePosition || '50% 50%'};
-              `}
-            />
-          </a>
-        )}
       </div>
     </section>
 
