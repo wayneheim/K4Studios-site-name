@@ -365,7 +365,25 @@ async function main() {
 
   const browser = await puppeteer.connect({ browserURL: "http://localhost:9222" });
   const pages = await browser.pages();
-  const page = pages[pages.length - 1];
+  
+  // Find the SmugMug tab with a lightbox open (has /i-XXXXX in URL)
+  let page = pages[pages.length - 1]; // default to last
+  for (const p of pages) {
+    const url = p.url();
+    if (url.includes("smugmug.com") && url.match(/\/i-[a-zA-Z0-9]+/)) {
+      page = p;
+      console.log(`🎯 Found SmugMug lightbox tab: ${url.slice(0, 80)}...`);
+      break;
+    }
+  }
+  
+  // Log all tabs for debugging
+  console.log(`📑 Found ${pages.length} tabs:`);
+  for (let i = 0; i < pages.length; i++) {
+    const url = pages[i].url();
+    const marker = pages[i] === page ? " ← USING" : "";
+    console.log(`   [${i}] ${url.slice(0, 70)}${marker}`);
+  }
 
   let results: ImageRecord[] = [];
   const seenIds = new Set<string>();

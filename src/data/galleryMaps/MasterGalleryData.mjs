@@ -5496,7 +5496,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/0/Lb9rWP5XCKC6SN9rQCCsJQQXLPdkR4j4Sn6x6mT2V/L/_WHO6469-1177-1179-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/0/NjD8rsqXL22SGVphLZ8twfG6bkMmmBbhcBM5md5VL/XL/_WHO6469-1177-1179-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/0/MmJsXKmS69H44HrNSDdMQFhQrkNdhBD8hWnS5St8X/S/_WHO6469-1177-1179-S.jpg",
-      "rating": 5,
+      "rating": 3,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
       ]
@@ -6372,6 +6372,810 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wZ8Zn9p/0/KWGMVcwMzSpFvw6bStbvThF8H2pkSPJqvj9QJtgnS/XL/_HF26618-1000-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wZ8Zn9p/0/KWGMVcwMzSpFvw6bStbvThF8H2pkSPJqvj9QJtgnS/XL/_HF26618-1000-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wZ8Zn9p/0/KfdXzkkL4PkcwppjQbJtt9pVdTDmZSDpNWC6WgxVP/S/_HF26618-1000-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-GSQ3KDN",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/0/MLSrwNqsV7hvHzwmCmqqccN2bq7k3wz6RcLM5x2kv/S/_WHO3730-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/0/MwqmFfDGVgs2fMZxhJ9Sp6WLNkKGz9hG4BrcDHWS2/M/_WHO3730-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/0/KD4ptfjwJ4zR33tg9mxvt3rjMtZ6SS4trFGHFWM8d/L/_WHO3730-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/0/LNgzsQcCJDTvwf2dfwk8vtFv3HswtRdMS4qdN638R/XL/_WHO3730-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/0/MLSrwNqsV7hvHzwmCmqqccN2bq7k3wz6RcLM5x2kv/S/_WHO3730-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-Z7vtvZg",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/Lzwf9X9NZfwFWDCpcfpvSsGNkvPZwqbhcVvMrwb9h/S/_HF21068-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/KjxzSD8vqwNHv4kkg84fCC2D6Rm4WPQx9Z4TvnqZZ/L/_HF21068-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/MVPQV5ZhxNQmrT6KNTKqVXGq8vSrXL7fqCV2cJg7L/XL/_HF21068-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/MVPQV5ZhxNQmrT6KNTKqVXGq8vSrXL7fqCV2cJg7L/XL/_HF21068-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/Lzwf9X9NZfwFWDCpcfpvSsGNkvPZwqbhcVvMrwb9h/S/_HF21068-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-qVG6WT2",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qVG6WT2/0/KwcThBbdk5cz5qVCpzLZ4HzwC6B4TQ3wzr7f8j59s/S/_WHO7192-1173-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qVG6WT2/0/MzZ47L9ZT7ZTNkJwGwGM2tNdmcxkBTg3jL7KSf3vV/L/_WHO7192-1173-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qVG6WT2/0/MgJwHp9X6tFpF5FnrRWGZL7jLvB98nnPKtQr88CwW/XL/_WHO7192-1173-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qVG6WT2/0/MgJwHp9X6tFpF5FnrRWGZL7jLvB98nnPKtQr88CwW/XL/_WHO7192-1173-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qVG6WT2/0/KwcThBbdk5cz5qVCpzLZ4HzwC6B4TQ3wzr7f8j59s/S/_WHO7192-1173-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-GmTkrzR",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/LQpHzWCxJg5s9tqx5MQvrj2tP52b2PgtmmgHn5NBb/S/_HF22644-1174-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/KxsjJjZtBWrzQX8PJpSDx4kprM26zNWW4RSPHT76j/M/_HF22644-1174-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/NQ85d6v88NKF9tVwWBqnCsFzMkC4wVmT2tH6sR2xW/L/_HF22644-1174-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/LZL6hDbDDKM7kmMk4kwRtVLdTrsvxzG2rnZKLpmQ3/XL/_HF22644-1174-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/LQpHzWCxJg5s9tqx5MQvrj2tP52b2PgtmmgHn5NBb/S/_HF22644-1174-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-DqNGjc2",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DqNGjc2/0/MRBWjHMVVjhGqFMLppfShHP7839mT6SVgH3MgZjGG/S/_HF27076-1164-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DqNGjc2/0/MdTnGLMD22ZgWNwRq2knpCjR3hthSHbC2t96wz7FJ/M/_HF27076-1164-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DqNGjc2/0/MgchCNNTCVHvcTdgf5LRxdhGCmTR9sfFkvQmXJhcp/L/_HF27076-1164-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DqNGjc2/0/MFZ44Hqfxx4ShSdBXJWfrcWN6J6t4PfRrxkpFr5Rm/XL/_HF27076-1164-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DqNGjc2/0/MRBWjHMVVjhGqFMLppfShHP7839mT6SVgH3MgZjGG/S/_HF27076-1164-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-BzFqL6f",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/2/NJtCwzBGBmmQjG3h3D98pV4gdmf38kdHMSVQjT4Q8/S/_WHO2926-1147-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/2/K9t7LwgkKwvsZLsXB9LTfFZDfhQhvTxjXSr9ND4hF/L/_WHO2926-1147-2-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/2/K36kdtfJhQ6vP9zG6SmjdQVMsN4qKKgT3vhmcrF77/XL/_WHO2926-1147-2-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/2/K36kdtfJhQ6vP9zG6SmjdQVMsN4qKKgT3vhmcrF77/XL/_WHO2926-1147-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/2/NJtCwzBGBmmQjG3h3D98pV4gdmf38kdHMSVQjT4Q8/S/_WHO2926-1147-2-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-CgjNZB5",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CgjNZB5/2/MVZ59726h3b3frVM7ksm4pfprpG5GbGHN7B8pK6LV/S/_WHO0760-1136-1137-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CgjNZB5/2/M9SP2GFXtnf2PLmp9xS7KDspxhk2JzZqsDsHhzwwx/L/_WHO0760-1136-1137-2-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CgjNZB5/2/NWTzK8PsDb4ctfqhcxsGMMMmJL6qNBCX6xXJsnJDP/XL/_WHO0760-1136-1137-2-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CgjNZB5/2/NWTzK8PsDb4ctfqhcxsGMMMmJL6qNBCX6xXJsnJDP/XL/_WHO0760-1136-1137-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CgjNZB5/2/MVZ59726h3b3frVM7ksm4pfprpG5GbGHN7B8pK6LV/S/_WHO0760-1136-1137-2-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-NTfST2B",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NTfST2B/1/K8KFqhm3Wh6ZFCJBx3t6hcmWgp7F8kPtVMV8Nppd3/S/_WHO0008-1134-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NTfST2B/1/MbKGZbNbBdgzCcmbFtsTCQVsb5Tk7ppZXHbhrDXbT/XL/_WHO0008-1134-XL.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NTfST2B/1/MbKGZbNbBdgzCcmbFtsTCQVsb5Tk7ppZXHbhrDXbT/XL/_WHO0008-1134-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NTfST2B/1/MbKGZbNbBdgzCcmbFtsTCQVsb5Tk7ppZXHbhrDXbT/XL/_WHO0008-1134-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NTfST2B/1/K8KFqhm3Wh6ZFCJBx3t6hcmWgp7F8kPtVMV8Nppd3/S/_WHO0008-1134-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-WBDjhsD",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WBDjhsD/2/LjPmnhQPv6KD8LzwkhRZHznQmWbjXKqXcS2W5RBCT/S/_HF26679-1001-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WBDjhsD/2/LPLQgp8kG3zGBD7PK88KSfSHWgzG9nVc6mM9Qb8JF/M/_HF26679-1001-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WBDjhsD/2/LN4dKhSkKzZmfZ9VcPxQbF8FccQXZ4zZ8wW96bhCx/L/_HF26679-1001-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WBDjhsD/2/KMmHXvzXmRwKNDVT8Lr7Z2qK6X5VNMQKwHJdZ2DVB/XL/_HF26679-1001-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WBDjhsD/2/LjPmnhQPv6KD8LzwkhRZHznQmWbjXKqXcS2W5RBCT/S/_HF26679-1001-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-hXdn5Z8",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hXdn5Z8/0/KtcmLPJRKn3gXXRnsDCMnxrnZ7FgDHBsd94FFJmVk/S/_HF26628-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hXdn5Z8/0/LhbMWXwrwdGt8B3jv4NJMJRb7C4VnZjmJkJbpwhKD/L/_HF26628-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hXdn5Z8/0/NgftNtkg87nqVjNdcZKm44Z792DSv5cntzvbFLS4Z/XL/_HF26628-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hXdn5Z8/0/NgftNtkg87nqVjNdcZKm44Z792DSv5cntzvbFLS4Z/XL/_HF26628-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hXdn5Z8/0/KtcmLPJRKn3gXXRnsDCMnxrnZ7FgDHBsd94FFJmVk/S/_HF26628-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-KwjDZfx",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KwjDZfx/3/LbgLGbkKnN6jWL4dnQxsSmPcsF84QpW2BqfGPgJtP/S/_WHO8397-Edit-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KwjDZfx/3/LzKdNZPHsf6wk8jtnmZBTxgcprfQpksw4vxbLNz6g/M/_WHO8397-Edit-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KwjDZfx/3/MBffpv95vh7XNzGFQ2QZH3rG8mVLpSwbwqvKKgJHN/L/_WHO8397-Edit-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KwjDZfx/3/KJ5tVb7j2jZG4mNCRVsJKJDcwNkFGFVxTJTQ6DFZd/XL/_WHO8397-Edit-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KwjDZfx/3/LbgLGbkKnN6jWL4dnQxsSmPcsF84QpW2BqfGPgJtP/S/_WHO8397-Edit-2-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-JvkzcpM",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/M7CXWLxPZsT6SvzbZWJLDm2DMdJcBTnDxRP9JgwPn/S/_WHO8057-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/LgrJ76hMcX822GXRhsfnDr7DQktKS6dhvh2gVZkjT/M/_WHO8057-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/NGT4HLrg9mWfhNGMXz7465h9RLCxdthDbhfp4QSNC/L/_WHO8057-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/LBBwv4FnQk5wCDjzjwwfrwXDtg4LD3sSPnH8TJTnH/XL/_WHO8057-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/M7CXWLxPZsT6SvzbZWJLDm2DMdJcBTnDxRP9JgwPn/S/_WHO8057-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-7VSrLtw",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VSrLtw/0/KjGKsbPXNrwhRmLCXTML9WRVPpXNW2P2w9kSS5BCf/S/_HF28681-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VSrLtw/0/KTFxrLpnMjwMgFSKqzDM9sCjxv3r4dCwsFpnZZqj6/M/_HF28681-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VSrLtw/0/LJ6FfqsCmTcHrd8FLkVS9h53VDcGGRzsSxVvgk4gW/L/_HF28681-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VSrLtw/0/M4bJMDXmVmNHmQLk8QhhVcv79Fmh3FBFdmWL4QjfW/XL/_HF28681-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VSrLtw/0/KjGKsbPXNrwhRmLCXTML9WRVPpXNW2P2w9kSS5BCf/S/_HF28681-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-bzp2Pxw",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/KPPR8SLGGG7g6ZD2JtbHtZq5z7rXBKLHWnbDCKgT9/S/_WHO3980-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/Lm4pN873KfF8bgGNGb7DckBqdjmnTCD7xxbQMHJqH/L/_WHO3980-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/Kx334rMmVsQ5QJbrcsm3wCqHk72nrbCJGSL2gGmNw/XL/_WHO3980-Edit-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/Kx334rMmVsQ5QJbrcsm3wCqHk72nrbCJGSL2gGmNw/XL/_WHO3980-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/KPPR8SLGGG7g6ZD2JtbHtZq5z7rXBKLHWnbDCKgT9/S/_WHO3980-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-mfNsJNb",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mfNsJNb/1/NbjPpTqcRSfd78xrqkK3qMqkKDJ78K4HJqvkWn6pK/S/_WHO4884-Edit-Edit-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mfNsJNb/1/Mzd5FWxLM7t6mbTLDfLkrNpwgvnHfKpqZ47GZNNWv/M/_WHO4884-Edit-Edit-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mfNsJNb/1/L96f9CMkmzXPBZdzVG9zNwsBQ99gH6GV63NwbgtHS/L/_WHO4884-Edit-Edit-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mfNsJNb/1/Lc7f2t54vdGqjwmWm2ZsFx3mq88hXChpgvLMXtT8S/XL/_WHO4884-Edit-Edit-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mfNsJNb/1/NbjPpTqcRSfd78xrqkK3qMqkKDJ78K4HJqvkWn6pK/S/_WHO4884-Edit-Edit-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-JsN8MfX",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JsN8MfX/0/Kmr2DxMHJW6jpHrgTcJcwGKXLRNzXhrmGpLz7mMDj/S/_WHO8343-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JsN8MfX/0/NCdsTzck3S67WnBgjZ7xXVWNwz3gqsrvHgNFrKtgb/M/_WHO8343-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JsN8MfX/0/LWrB8Jqmb7D97BFHDm3qZTt3NvCpWfd7TQNbDPpg4/L/_WHO8343-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JsN8MfX/0/L3VC8SCdPsfrdwCr7jTdd3GfLxpfLcg7P3TWbhgQD/XL/_WHO8343-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JsN8MfX/0/Kmr2DxMHJW6jpHrgTcJcwGKXLRNzXhrmGpLz7mMDj/S/_WHO8343-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-7Gh7Gq5",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Gh7Gq5/2/NQqMD5qwcHZZ5rBZJVvwt7hKkmqJF3KpjqTtGFD7t/S/_WHO0355-Edit-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Gh7Gq5/2/LLs8NfNPp8jJkMpmGfkv3nT8RVjBhPzJbCzXXbkFc/M/_WHO0355-Edit-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Gh7Gq5/2/NFSx3G3SKNw8FgVm5J6kzsP9cFGj2xWK3MGD2hvvF/L/_WHO0355-Edit-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Gh7Gq5/2/LbDPSB77Hk3FpSDK3h9djWDzjfLcxwfDzHTgwLRJQ/XL/_WHO0355-Edit-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Gh7Gq5/2/NQqMD5qwcHZZ5rBZJVvwt7hKkmqJF3KpjqTtGFD7t/S/_WHO0355-Edit-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-z9Pfbc5",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/KjrhNKT4sZRJpdtCsCQxWLXgXXS4PHrtRtCSpRWtD/S/_WHO4863-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/NGrnkJqPMJ6gbD22LqwXsqWTC5DsptdvqBwG2gwx3/M/_WHO4863-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5bdcSpbP4s7Z8sVPXmjjtfwHvwvPr9KS4Xjsmbd8/L/_WHO4863-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5kNs7chNbcPKNZ4Q4whJLQN6zSRmsLTCK3Psk5V9/XL/_WHO4863-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/KjrhNKT4sZRJpdtCsCQxWLXgXXS4PHrtRtCSpRWtD/S/_WHO4863-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-3Mj4gtS",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/MxxwXTHm3FK9r67FSBGLPrg9KfhNTXq64mGfMZQHp/S/_HF25494-Edit-Edit-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/NKvngnKr6N3JXXL9NqnCCQBgWkKsHBjNxhC7kcXgd/M/_HF25494-Edit-Edit-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/LZqM2prQjg42ZjSn2XX8S3szvM2GcLLLZ35Tkv9kn/L/_HF25494-Edit-Edit-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/KGnsZJz3bRfLNG8FSd6kHgbJLksJ6nSFPQWqjZWHT/XL/_HF25494-Edit-Edit-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/MxxwXTHm3FK9r67FSBGLPrg9KfhNTXq64mGfMZQHp/S/_HF25494-Edit-Edit-2-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-DdRt5X6",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/0/MxHSNTQLFn7FQWfSG28HwBP4K7R2SMznnktszBf5q/S/_HF25494-Edit-Edit-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/0/LD75L5pWkwnsxbhdpssDdCrjBhbTWFVGZz2JFqzhz/L/_HF25494-Edit-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/0/MBLJS6fm6nv5LF3Dv8bTrBjFzsKj3LQDFx9qZsKHZ/XL/_HF25494-Edit-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/0/MxHSNTQLFn7FQWfSG28HwBP4K7R2SMznnktszBf5q/S/_HF25494-Edit-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-jGrpdg5",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jGrpdg5/0/Mb3rRjKjWMFFKs2v5d4MhGWw3SGFxDT2WcJ7C689b/S/_WHO5315-Edit-Edit-Edit-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jGrpdg5/0/MpvwGx3FCShfkQM2QwpXpd66H5RsXndRkcVMNwnjn/M/_WHO5315-Edit-Edit-Edit-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jGrpdg5/0/NPhBxKG8dwbM2hJM86QHnt6ZkHR6WQPBdgHczpgNR/L/_WHO5315-Edit-Edit-Edit-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jGrpdg5/0/KpX7LFSQFRrjkNpvkjcWh3XN2Ks7mjckKfSLCLq3Q/XL/_WHO5315-Edit-Edit-Edit-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jGrpdg5/0/Mb3rRjKjWMFFKs2v5d4MhGWw3SGFxDT2WcJ7C689b/S/_WHO5315-Edit-Edit-Edit-2-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-xW97k2g",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xW97k2g/0/KJ3f6mWSBjRrnzDKwSrJLcBtB5Ndd4JPrnwt9m6ts/S/_HF20510-Edit-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xW97k2g/0/KtwMFWrqKXb4xfNS75jhMM2MjsDLfK2BMfrnmVNC9/L/_HF20510-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xW97k2g/0/KqtqsvS4r4cvN99TTcLcdVDD4dRH5F4hgMkdLP7tC/XL/_HF20510-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xW97k2g/0/KJ3f6mWSBjRrnzDKwSrJLcBtB5Ndd4JPrnwt9m6ts/S/_HF20510-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-3nZvZTj",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3nZvZTj/0/MLxMnJzmXL2476tbz67WRH2HgFPf43rdkWMQnwKc3/S/_HF20492-Edit-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3nZvZTj/0/Kvv8WKvTpNNSH7q8cp4p43Qct8qVJzTwGVBNpcGDC/L/_HF20492-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3nZvZTj/0/LmrpQvj95bz4QsHbczcMcs4CpHkQvDRVzzmR8BBd6/XL/_HF20492-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3nZvZTj/0/MLxMnJzmXL2476tbz67WRH2HgFPf43rdkWMQnwKc3/S/_HF20492-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-j24GFVH",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/MfQn6wfQc29nN3QD9GpbMM7vZbHjdWn7M2Nd6HBcv/S/_HF26538-1249-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/MR7LZzCPxxpN5q9QRfKRGWgGCnrnktShjhfvpXvqs/L/_HF26538-1249-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/KjK3h3LXX8Pbr58fXG2g6KrWdWGsnTKLmwh4bfxJ8/XL/_HF26538-1249-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/KjK3h3LXX8Pbr58fXG2g6KrWdWGsnTKLmwh4bfxJ8/XL/_HF26538-1249-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/MfQn6wfQc29nN3QD9GpbMM7vZbHjdWn7M2Nd6HBcv/S/_HF26538-1249-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-VrRHHjr",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-VrRHHjr/1/NGHWsXmHKpWV4bWxVVFm5VnBD29L5qQVjsV2Lg4J5/S/_HF27537-1261-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-VrRHHjr/1/Kk9dnJZxj7D3ZDWhdHQr7bKszDJvHQ7WwtGzKMghr/M/_HF27537-1261-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-VrRHHjr/1/LCNPVHXcbjp6G6wkLwwCQz7xVm8R3kZg8k5MVj32s/L/_HF27537-1261-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-VrRHHjr/1/NTHPB7XwrskhWDR7dsnRQNtmLMdhX5zWs7FXmPXtp/XL/_HF27537-1261-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-VrRHHjr/1/NGHWsXmHKpWV4bWxVVFm5VnBD29L5qQVjsV2Lg4J5/S/_HF27537-1261-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-tLfLDqk",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tLfLDqk/2/KP3c927WHTTgmR7pZNj6p2FdJrbwQ7PJnff6XqhHH/S/_WHO0026-1260-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tLfLDqk/2/NjFHXjpZFgjPRFZxvTJxdF6sBF95tnknG38L4d5F2/L/_WHO0026-1260-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tLfLDqk/2/NC9VZqLt9xkHqFprnrVKNRCjJchbNRJtb338Jppqk/XL/_WHO0026-1260-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tLfLDqk/2/NC9VZqLt9xkHqFprnrVKNRCjJchbNRJtb338Jppqk/XL/_WHO0026-1260-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tLfLDqk/2/KP3c927WHTTgmR7pZNj6p2FdJrbwQ7PJnff6XqhHH/S/_WHO0026-1260-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-qvg23gW",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qvg23gW/0/NL9P7z5WHqPDDjP7B4cJvgxqJ8pWMmtntQ5Q4QJKh/S/_WHO0611-1259-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qvg23gW/0/McS4hRrff2vVz8rZVf6DFPQcsGjvSfNvcdRbhkKvZ/L/_WHO0611-1259-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qvg23gW/0/Kh3LHHxHhfVtFk74mww5HpkxM4FT3PMHFRKChqSHc/XL/_WHO0611-1259-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qvg23gW/0/Kh3LHHxHhfVtFk74mww5HpkxM4FT3PMHFRKChqSHc/XL/_WHO0611-1259-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qvg23gW/0/NL9P7z5WHqPDDjP7B4cJvgxqJ8pWMmtntQ5Q4QJKh/S/_WHO0611-1259-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-KKncPg5",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KKncPg5/1/LFkmRgTHPVGjMF2Bwk7kqDCbDHkJpftvFM64jf42j/S/_HF28953-1245-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KKncPg5/1/KwPJsgjNWBNSBz88JPx7nsKpCPgKvTFNn7d8c7fgb/M/_HF28953-1245-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KKncPg5/1/MBpW39528CtcSnCf5c5g86w4SHfCw82nPdH4gWWNZ/L/_HF28953-1245-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KKncPg5/1/MKzJX6XCJ83fpJtpWhR9xX3gVpDsHgrmNMdpdFxXw/XL/_HF28953-1245-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KKncPg5/1/LFkmRgTHPVGjMF2Bwk7kqDCbDHkJpftvFM64jf42j/S/_HF28953-1245-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-krwBhd8",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-krwBhd8/0/L8GtVq2wdQpn2BQ4P6p2n4kLkPBhtQMhQ4kLqp2Wv/S/_HF29447-1253-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-krwBhd8/0/MpPRsxSKFktcQC6MXMNj8fhhgbPGC8ZKfc7DGLhXf/L/_HF29447-1253-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-krwBhd8/0/M6nwFTqLFHTPR7X5nzFmxQjRTpFXx6GdbHBPWdMqS/XL/_HF29447-1253-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-krwBhd8/0/M6nwFTqLFHTPR7X5nzFmxQjRTpFXx6GdbHBPWdMqS/XL/_HF29447-1253-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-krwBhd8/0/L8GtVq2wdQpn2BQ4P6p2n4kLkPBhtQMhQ4kLqp2Wv/S/_HF29447-1253-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-N7Wb28h",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N7Wb28h/0/KXGrr6RdxfnWTvv64HKs7NrQKC9Mvncmsz2Bm2ZQh/S/_WHO0861-1243-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N7Wb28h/0/MJfGkjccqZzRFz47wh7sVf5zzHjvkPwwbP6Rfm3Rw/M/_WHO0861-1243-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N7Wb28h/0/LH3BPzPbqZpdjzXxqJsbmXWNxcQjScNTGpBjWsHCQ/L/_WHO0861-1243-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N7Wb28h/0/LKRF8LQSjDSfgctz7g9NTRqNCVWJnn9XNw69dLxCh/XL/_WHO0861-1243-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N7Wb28h/0/KXGrr6RdxfnWTvv64HKs7NrQKC9Mvncmsz2Bm2ZQh/S/_WHO0861-1243-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-w6bDSqM",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-w6bDSqM/0/K6jj5ZxWJJ5gg3TrfscDz3HMjzNM5Tg9Dx8r3Lh4k/S/_HF20212-1230-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-w6bDSqM/0/KSH49nCWHW6DZzCmSDCqbwwZ7LM7cjQmDFHs44HpP/L/_HF20212-1230-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-w6bDSqM/0/LR6V3GtsVZ5xTMnj5H4Wqr5k2mffFwSBc27LFMzcd/XL/_HF20212-1230-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-w6bDSqM/0/LR6V3GtsVZ5xTMnj5H4Wqr5k2mffFwSBc27LFMzcd/XL/_HF20212-1230-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-w6bDSqM/0/K6jj5ZxWJJ5gg3TrfscDz3HMjzNM5Tg9Dx8r3Lh4k/S/_HF20212-1230-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-jWBQ5p8",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/MpGjSsv4z62XrxBzxBbQ3885nZV4nPFFgqChRL6pC/S/_HF21832-1306-1308-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/LZz5WfXfjHj8XfqKpKWGF36RkBbZhcJtqRNkGcDzB/M/_HF21832-1306-1308-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/L45hxVHXGR5FFJ76XC5FwTKj4TRp9bchTkXj2vJGj/L/_HF21832-1306-1308-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/McmBwnB2gr8NxmnPGN5hJLzXw737jNNxSSgZVfRWH/XL/_HF21832-1306-1308-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/MpGjSsv4z62XrxBzxBbQ3885nZV4nPFFgqChRL6pC/S/_HF21832-1306-1308-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-KBXKqD5",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/0/MFhsZFv9KsNTSvmrqwtrSJnkB5gmd56bVRk8ftcR7/S/_WHO1637-1198-1199-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/0/MDVsgdjCktJvQWB8Z9d8qfCd3WjqkvqL8XJX3TxbN/M/_WHO1637-1198-1199-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/0/NFK6wNHZkz96gcf6pLhDxNFQ9MTtjbr9pVZPtK9LZ/L/_WHO1637-1198-1199-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/0/MHG9V8SFpvGhxPbrnXS4xGkPWJH7bfg3WQ3TBW7DD/XL/_WHO1637-1198-1199-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/0/MFhsZFv9KsNTSvmrqwtrSJnkB5gmd56bVRk8ftcR7/S/_WHO1637-1198-1199-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-3Wh6vt9",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-3Wh6vt9/0/Mr86vFKwB3Fr37csCzTf2xJSHpw2kfZkg5ZHQGsjZ/S/_HF24507-1331-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-3Wh6vt9/0/Ksjs6c6D6SnW6wHDLH4d2Tsj4jq4K7k9R9ptmTXMW/L/_HF24507-1331-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-3Wh6vt9/0/LPqP2nHr5RrjsRzfTVZ6R3t2qvRQH5BF5N9z3Dc2X/XL/_HF24507-1331-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-3Wh6vt9/0/Mr86vFKwB3Fr37csCzTf2xJSHpw2kfZkg5ZHQGsjZ/S/_HF24507-1331-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-m2dqhjT",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/0/L7GKk7FDBNJ3KNq8cnB5xmfwFFC527JhtBT2dcnkw/S/_HF25639-1356-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/0/KmRfZRM5btsBcSn5xZXFbZXfdmbXr6K8PBbtK69tZ/L/_HF25639-1356-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/0/MXdHKqV23WWCPN2sb3PVHnRGS3vXg9xHf4B8PGGb2/XL/_HF25639-1356-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/0/L7GKk7FDBNJ3KNq8cnB5xmfwFFC527JhtBT2dcnkw/S/_HF25639-1356-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-8X7hMPk",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8X7hMPk/0/McrM2Frz6CFjhkL2Cv6r2BMxch8pxfx5s7MNhpJ9J/S/_HF26027-1343-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8X7hMPk/0/KfzgscFBPtvq67D6Tg7THhWWkDvwNtHbqNhnxWZnz/L/_HF26027-1343-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8X7hMPk/0/LMD6DDHJjF2nPxCcpqKcKbGFFCC8jTv9Dd3PzVPsn/XL/_HF26027-1343-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8X7hMPk/0/McrM2Frz6CFjhkL2Cv6r2BMxch8pxfx5s7MNhpJ9J/S/_HF26027-1343-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-4JPrZVc",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-4JPrZVc/0/M84S7Hdk4vMpdsg3CXrkSc8pkvpdvw2qJv46TN9dm/S/_HF26027-1354-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-4JPrZVc/0/MLTK8sxMSWkPP9FfjXw6M28Mw5pGK39SkDmPn6wVD/L/_HF26027-1354-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-4JPrZVc/0/LB3MWpbvdmJCfbzJRhx65rt5t3KhmcWZV9hBpRgRt/XL/_HF26027-1354-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-4JPrZVc/0/M84S7Hdk4vMpdsg3CXrkSc8pkvpdvw2qJv46TN9dm/S/_HF26027-1354-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-LL2Gp5r",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/MvKQDc9hcjTQCjCxFX6XQDW73hNhX9PKDm2wJZRmP/S/_HF26159-1335-1336-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/NCjmmrnnvm3WKHxWJ44CtKQHDj8KJ4hcfkVRb97Dm/M/_HF26159-1335-1336-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/KzLKgnFXcksMSKDxL39WdCr4FdX82vrN7wfGZMnmT/L/_HF26159-1335-1336-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/MvKQDc9hcjTQCjCxFX6XQDW73hNhX9PKDm2wJZRmP/S/_HF26159-1335-1336-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-CZrXGr9",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CZrXGr9/0/LHGZC2KXFkCZZChZT4RKXSXp38rPFGKSDQ83KjhcT/S/_HF26552-1358-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CZrXGr9/0/MjpdxtSj9HftNNZdVQj9Vm4PpcPGqJwhHSZVJwTTx/M/_HF26552-1358-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CZrXGr9/0/LQprxzfZ7QmptrWJm9pdjrbLswz4CGt5ZxscS7v6Q/L/_HF26552-1358-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CZrXGr9/0/LSwgxBWB9SbK7k3Z3sBzJ22GNs5RJj5LN7Rdbm6ZV/XL/_HF26552-1358-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CZrXGr9/0/LHGZC2KXFkCZZChZT4RKXSXp38rPFGKSDQ83KjhcT/S/_HF26552-1358-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-6GcghXb",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6GcghXb/0/NVjhpptKK6vrV542wDsLRkhMZNmrDZRs9Mq5JwRcq/S/_HF26695-1357-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6GcghXb/0/K24JXvVcGCW653gdfJfmXZqRbSvmjRPwfTfCJ7BgZ/M/_HF26695-1357-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6GcghXb/0/LHGGq3qcpVdDBHFRSnknKwCGXJs6SGwm4Qz5KPVVm/L/_HF26695-1357-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6GcghXb/0/NLkxFC6bnWdbBMcNdphPtXTNTkhpLnr6Hf5LBt3Dv/XL/_HF26695-1357-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6GcghXb/0/NVjhpptKK6vrV542wDsLRkhMZNmrDZRs9Mq5JwRcq/S/_HF26695-1357-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-s3f9DST",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/Mw8XFW9BFpBGCFk64RhGg2JXMM38bBG4qnjq5W6Gk/S/_HF26697-Edit-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/L4thTD4b7Cxh3SvLXzBzmbfNssVMSQTrwgSPD7fB9/L/_HF26697-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/LC9sTmcsLPkf5jnr5Chj26Xg6FHdS7gPJ8FT7xMNg/XL/_HF26697-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/Mw8XFW9BFpBGCFk64RhGg2JXMM38bBG4qnjq5W6Gk/S/_HF26697-Edit-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-r9dGJJx",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-r9dGJJx/0/K9kw7FgkmLzbC9S7rNkSb8hnZ6DGH27PKHrGGz94p/S/_HF27360-1347-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-r9dGJJx/0/NQK4HHkZqb2ZrGWqhF5sjz7JM5Qxp8Tp9XfvmfDPp/L/_HF27360-1347-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-r9dGJJx/0/NMsn6CvMJsHG4jHRs56HgmTgvdS8HPPwtZfNxnh55/XL/_HF27360-1347-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-r9dGJJx/0/K9kw7FgkmLzbC9S7rNkSb8hnZ6DGH27PKHrGGz94p/S/_HF27360-1347-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-tXGTbNp",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/NKRcSHBkfDW6Wb6FXkfZcjZmdwjGS4HrPCxNTdngx/S/_HF29174-1322-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/MwNfPDKmxKzJmZbSGBkBTMf9KqnXZsZSLWK9bhkJq/L/_HF29174-1322-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/LGXDJz5KJRsNshDSPcDBzrVF9xv8phDZ4MQRnpb5C/XL/_HF29174-1322-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/NKRcSHBkfDW6Wb6FXkfZcjZmdwjGS4HrPCxNTdngx/S/_HF29174-1322-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-CNrD7G7",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/MH7Fr3DP9kQGbfBCFXs3zdM4DWFLTMXsGgsJ5tLBc/S/_HF29924-1328-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/MdtPLwHbNZGMZbMxRRf3FXz6NZ7hPLdGfbBmFFfx5/M/_HF29924-1328-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/K5Ng4mLXKkLgChvzML3rbHDkN4RNQ7zVsXMbLSWDH/L/_HF29924-1328-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/MKJz4Lt8vSv6fzJKzktrkpfWswZxVfbgCRbBFkPwN/XL/_HF29924-1328-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/MH7Fr3DP9kQGbfBCFXs3zdM4DWFLTMXsGgsJ5tLBc/S/_HF29924-1328-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-jZ8xKwR",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/KnRcLB3Br3TtRrw2SgjMZ7QMnvpHDjHmDvCkGKR3m/S/_HF24834-1360-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/K8qmzZTrnMtXFBGPm7Lzt8H4PcLB5hWcwPnkFSsPN/L/_HF24834-1360-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/Lp2FV7CjCRtTkz3Kkc6wXfs4QcpPHWCjxNS93nPp9/XL/_HF24834-1360-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/KnRcLB3Br3TtRrw2SgjMZ7QMnvpHDjHmDvCkGKR3m/S/_HF24834-1360-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-xZsZzd9",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/MsWK47wr9kSCMxdfKWK62v2Hbg3JQd8s278MfQDvh/S/_HF24895-1362-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/Kh8v9ZbH8rgCm3976q6c59dCB6pgqDP2mwbzX9xr9/L/_HF24895-1362-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/LSGVPK5vSXnMCjPj2RzTZWGpCw8hxt7qXPcXRstCM/XL/_HF24895-1362-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/MsWK47wr9kSCMxdfKWK62v2Hbg3JQd8s278MfQDvh/S/_HF24895-1362-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-2t65dGM",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KLcmXkLkB92ppbW9qsRg48TpsDzvg7bNZsLLdVm3P/S/_HF24922-1361-2-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/Nd2LCzrRLb92xcsQ2w5qn7vF8CTRS3HG3vnzXvjq2/L/_HF24922-1361-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KMncNd4V4G74SBSdgvmdkRNmVF3ZTKRfmDqWsQQdx/XL/_HF24922-1361-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KLcmXkLkB92ppbW9qsRg48TpsDzvg7bNZsLLdVm3P/S/_HF24922-1361-2-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-HfWwLLf",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/LFrGKWJTRT4FGHQTdSwthGJJ5nqxjNtkR6k9dDLx3/S/_HF24980-1363-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/L5MFVZmDGXc4JhtHDctqX4xwnCjCKgv38cb82hsnf/L/_HF24980-1363-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/Ld32Sg3H38QpCRnmn2MpDFNgrNWsxVP6B7nQVBSRL/XL/_HF24980-1363-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/LFrGKWJTRT4FGHQTdSwthGJJ5nqxjNtkR6k9dDLx3/S/_HF24980-1363-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-nqxJWx3",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MJzqBM2xQMWm8TKxN5m2dxBk7gbW5PmKH84NbJ63k/S/_HF25007-1364-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MGGKZjDXKHHQJX9KRSVxTWZSvf5kNKN2CXrKjp6wS/L/_HF25007-1364-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MN8zGZrWftGBvjnVgTkdXHxTLZpkScpCpWtFFJSfL/XL/_HF25007-1364-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MJzqBM2xQMWm8TKxN5m2dxBk7gbW5PmKH84NbJ63k/S/_HF25007-1364-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-67qk8zR",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/Mv9GncT43QPwNxDvdWnD7svcfnhRqTHv6893LjwV4/S/_HF25019-1365-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/NPWJ5CpNbWRBDJqSH6vhrvv39B5Z5GtWKVQ2gjFnB/L/_HF25019-1365-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/Ls9CHC5GfVKzqdq7XmW5tDwGMPVt5WKP6w3fjs7LL/XL/_HF25019-1365-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/Mv9GncT43QPwNxDvdWnD7svcfnhRqTHv6893LjwV4/S/_HF25019-1365-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-DWW5wHT",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/0/NftrcHZnfqtxF4jhVWD4C8ksVzHNfbCTZWrSSk77L/S/_HF25131-1366-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/0/LzNfWcBKP7h7nQJ3j3wLMJ8CxzcxrZNbtq8f2NPTr/L/_HF25131-1366-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/0/MDqX9sWGtHc3cbx9gSX82zH7KK7jDfjTjZzCRPXJW/XL/_HF25131-1366-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/0/NftrcHZnfqtxF4jhVWD4C8ksVzHNfbCTZWrSSk77L/S/_HF25131-1366-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-tg6PTwd",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NZJjWKmDDVjvRcZzNXrLwb8pSsSh66PpMG6dvXH8r/S/_HF25195-1367-1377-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NJVHGncW6PtG4zB8sPqB5NHK97nmX574zrNhndPMM/L/_HF25195-1367-1377-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/ML2RwQH7QG79Zpgb8RnGC3dLTb4wtc4CJphc3VnZM/XL/_HF25195-1367-1377-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NZJjWKmDDVjvRcZzNXrLwb8pSsSh66PpMG6dvXH8r/S/_HF25195-1367-1377-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-tpRCsS2",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/0/ML55fRfqMjXSs5nKnMXKWd3PBb6KC45j4Hx3k8wkX/S/_HF25195-1367-2-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/0/KQznShQdgFNcq7w9w2w5fZkWc9gwT3czdDppQhNsw/L/_HF25195-1367-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/0/KPkZ5L2drLpmcqcxk5WPkst7VCZ8M2ZXDkqMT4HBq/XL/_HF25195-1367-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/0/ML55fRfqMjXSs5nKnMXKWd3PBb6KC45j4Hx3k8wkX/S/_HF25195-1367-2-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-sH4qBFd",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/MtfsmCT8vtSFzT8Vd86Mw4HQVhCPssmGThqtThGdJ/S/_WHO1564-1384-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/NGNDJGV59H7NsZ56RtMr7mb5MMZKCf9cbg6k3D2xT/M/_WHO1564-1384-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/KFdLnhvTVgtQdnkW9XQXgmR6Qgk8CxMqk4LV4qZvv/L/_WHO1564-1384-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/NZv7pTWwLrPv2VXQxPpJJHtjGTpZ5x3Pd3F3jhPWF/XL/_WHO1564-1384-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/MtfsmCT8vtSFzT8Vd86Mw4HQVhCPssmGThqtThGdJ/S/_WHO1564-1384-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-xNB7ZSk",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/KDkxhFXGRwNbFf8vrTNh56C3h3F6f9QCgMVj5JgqX/S/_WHO1835-1385-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/MsTtBrz3RpQsbZDdFxVXdRT8tqkRR2hVR49Wp7BV7/M/_WHO1835-1385-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/MM2BWLmQDV3FPHsScpfmLNTbBCq7MpXjwFZNX6BCP/L/_WHO1835-1385-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/LwCxznbnQfzWsL5zzfLPDRvn74W2XfZDTNcTT4DsH/XL/_WHO1835-1385-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/KDkxhFXGRwNbFf8vrTNh56C3h3F6f9QCgMVj5JgqX/S/_WHO1835-1385-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-b2k3Wd5",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KXD3wRZXdVR8VJCzqXst7dsQd7DjsxgTWdrwCJDHw/S/_WHO2015-1386-1405-1406-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KG2cQTngRWSqN3MxJFT2nZ4rXhJk7MxmMp23dN3n3/M/_WHO2015-1386-1405-1406-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/Mp83LCtNNRSTbKqJHrBsTFBJQ7WKhRPDvgWqjnT3v/L/_WHO2015-1386-1405-1406-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KxrBB3SgkZBK7C8SgLP4NFmKFJrRBwZ9fvWvsmMb3/XL/_WHO2015-1386-1405-1406-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KXD3wRZXdVR8VJCzqXst7dsQd7DjsxgTWdrwCJDHw/S/_WHO2015-1386-1405-1406-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-8rcVT5Z",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/LZNwz7D5sB865NsvN5jB2Zt3hFJ6H4B3MsL3WhNbN/S/_WHO3344-1399-1400-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/Kv3MVHKXSgPZ6P8CdK2fCHxVcT5qnH4QVxgXKF8tL/M/_WHO3344-1399-1400-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/NPcX4fJf2KXncR3tB7G6KXS9tGpcg5LnH426T9JsJ/L/_WHO3344-1399-1400-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/MLNZKN4XgSwVFHXJJNXDjdjW69gCTQBtXzwtcfnPL/XL/_WHO3344-1399-1400-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/LZNwz7D5sB865NsvN5jB2Zt3hFJ6H4B3MsL3WhNbN/S/_WHO3344-1399-1400-2-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-Q5gq9MD",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/LH8qxzftPWWbmftWsV9FTgJJQLL6HC9zRzWnGT5hB/S/_HF28325-1370-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/K9Bdk9bSRtjhq2GJ3DP9LgGXZF4DXNGHwqv53Hffp/L/_HF28325-1370-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/NMcWVZdLMwZNhBGdgwtLw9gDkV5FdStSsCjKMwB2d/XL/_HF28325-1370-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/LH8qxzftPWWbmftWsV9FTgJJQLL6HC9zRzWnGT5hB/S/_HF28325-1370-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-kvNsMGB",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/Mph8jV6GPGzwfQd5NNBCDqfbKh9Dgx4crFd9Ck7P2/S/_HF28344-1369-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/LRvBj2Nk52RTXtGr6gJKrnRmgHmpfgS6FFcP8K9zK/M/_HF28344-1369-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/LFqSqdVFLHcbnvcJS9zhrcRGcjjcZKcKQGF6bLHdW/L/_HF28344-1369-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/KMf7xdrwzwBDrnFX62mzXkXZkVTcPfg2ksz3xtkRk/XL/_HF28344-1369-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/Mph8jV6GPGzwfQd5NNBCDqfbKh9Dgx4crFd9Ck7P2/S/_HF28344-1369-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-zsjbqS8",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/0/Lqrv76BGDmNZrs9Wg4wT3dSWdsMZtWz8mk7sHvWLD/S/_HF28357-1368-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/0/KWtc9rT9vhRMJvChkpb6ChXqTLhH6QfWVxDn2PkJC/L/_HF28357-1368-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/0/NBwdZ35qfvnJF9hkDQ9JDFWsRKJTDzc4HgpN8nqk7/XL/_HF28357-1368-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/0/Lqrv76BGDmNZrs9Wg4wT3dSWdsMZtWz8mk7sHvWLD/S/_HF28357-1368-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-N9XLKc8",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/LNQJhLvC9vhRNpvpf6kCnDN9vbLMJZ8v86TJrvzJM/S/_HF28395-1371-2-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/NDLw3PfztKLBMTjqrv5NKqv4s2vwB4f2ZtTDkMXQH/L/_HF28395-1371-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/L7fSJ6NB7mQZNWv3nSGZS9M98cNTJt4Zk5Gw9bgnR/XL/_HF28395-1371-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/LNQJhLvC9vhRNpvpf6kCnDN9vbLMJZ8v86TJrvzJM/S/_HF28395-1371-2-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-MZjsFRB",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/KFDZDQdxqCZGgZ639JLbsc6J52h9rR8MMZCLWx7t8/S/_HF28456-1373-2-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/MCp2f8CW52Vh6hmF4K3sVFtcZtW2CDzhWsPRbhJn2/L/_HF28456-1373-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/KX6tzvvKKMjrfVgPFdBpHRbC3ctLZjW6Hg4WV235d/XL/_HF28456-1373-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/KFDZDQdxqCZGgZ639JLbsc6J52h9rR8MMZCLWx7t8/S/_HF28456-1373-2-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-hcXLMwK",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/MHXfz67QbzS7B8FMLHQvxTBbmGBNpKtpxpgF6wSx7/S/_HF28482-1374-1375-1378-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/LPk9PbXrbpZHJc8LF4bMTmmJgdC6QXbrf9XVR764G/L/_HF28482-1374-1375-1378-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/M3Znccz9NqVRLbcVggWnBqFGPVGnr7TgLgBDtxckQ/XL/_HF28482-1374-1375-1378-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/MHXfz67QbzS7B8FMLHQvxTBbmGBNpKtpxpgF6wSx7/S/_HF28482-1374-1375-1378-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-LJk7wFZ",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/L7R6t52MQtv44X3xRNbVQXJB44nXrSPqbSNxZ7Zpc/S/_HF28510-1376-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/LkzQwfjh6jnW7D6tdMqHs4w5TvMbs7NgjWNqVWgLk/M/_HF28510-1376-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/KT7sR43nFPDB4QwkhFFgxJcbwSdTzdgHbB3WnmWQG/L/_HF28510-1376-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/Kvv5L9hgnbpcZvfFTBjJvs3mWwcKx3cscTdn2LMtG/XL/_HF28510-1376-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/L7R6t52MQtv44X3xRNbVQXJB44nXrSPqbSNxZ7Zpc/S/_HF28510-1376-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-z4M6gCv",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/MvhtHX4CtBCrq6RMPGzhvKHWVHPpgt8N9FLKbgQrL/S/_HF28750-1379-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/K3vRT5pLdrGRPSnCDRpnqvKhsg5rb2bvZ6rLPZ3Zm/M/_HF28750-1379-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/MTgnqggRfxpWvmPtBdjsVvrDvQPXgQFRC8rBbD6fL/L/_HF28750-1379-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/NBmwzCZs7fnCS2Bn6RKpp6c9ggqMjRjfKV3nT2hvk/XL/_HF28750-1379-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/MvhtHX4CtBCrq6RMPGzhvKHWVHPpgt8N9FLKbgQrL/S/_HF28750-1379-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-KK8RzH7",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/LT9BSwsVXFkZVfC3sR9wj8638HGNxkjvBjMzwtKGj/S/_HF29362-1380-S.jpg",
+      "srcM": "",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/K8GQsjJjrHTHz5dNhs3Zq9LdqDTTphpmgRNBFRhNN/L/_HF29362-1380-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/MwqP59VFgfBwPd6Sf9kJv7GdzhJCHT98ZWkLzxqVX/XL/_HF29362-1380-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/LT9BSwsVXFkZVfC3sR9wj8638HGNxkjvBjMzwtKGj/S/_HF29362-1380-S.jpg",
+      "rating": 0,
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-mMsSB6q",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/LTSrFWVrkjFDcLnfQwtLXVnJDpQK6XL2tbGp8RNpq/S/_HF29442-1257-1383-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L87WxGtCWVZCBGjkshZrMRmD7FSdfznkT3Kf96LFt/M/_HF29442-1257-1383-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L378w6nqgJ5sr7B9DGL96Z6wmmZbpFfgMk3MPbjnL/L/_HF29442-1257-1383-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L2bwffd7MnB46PvTqdd25pgsHHvKH3sVfbZ3LNm8H/XL/_HF29442-1257-1383-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/LTSrFWVrkjFDcLnfQwtLXVnJDpQK6XL2tbGp8RNpq/S/_HF29442-1257-1383-S.jpg",
       "rating": 0,
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -47054,7 +47858,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/0/Lb9rWP5XCKC6SN9rQCCsJQQXLPdkR4j4Sn6x6mT2V/L/_WHO6469-1177-1179-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/0/NjD8rsqXL22SGVphLZ8twfG6bkMmmBbhcBM5md5VL/XL/_WHO6469-1177-1179-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/0/MmJsXKmS69H44HrNSDdMQFhQrkNdhBD8hWnS5St8X/S/_WHO6469-1177-1179-S.jpg",
-    "rating": 5,
+    "rating": 3,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ]
@@ -47930,6 +48734,810 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wZ8Zn9p/0/KWGMVcwMzSpFvw6bStbvThF8H2pkSPJqvj9QJtgnS/XL/_HF26618-1000-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wZ8Zn9p/0/KWGMVcwMzSpFvw6bStbvThF8H2pkSPJqvj9QJtgnS/XL/_HF26618-1000-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wZ8Zn9p/0/KfdXzkkL4PkcwppjQbJtt9pVdTDmZSDpNWC6WgxVP/S/_HF26618-1000-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-GSQ3KDN",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/0/MLSrwNqsV7hvHzwmCmqqccN2bq7k3wz6RcLM5x2kv/S/_WHO3730-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/0/MwqmFfDGVgs2fMZxhJ9Sp6WLNkKGz9hG4BrcDHWS2/M/_WHO3730-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/0/KD4ptfjwJ4zR33tg9mxvt3rjMtZ6SS4trFGHFWM8d/L/_WHO3730-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/0/LNgzsQcCJDTvwf2dfwk8vtFv3HswtRdMS4qdN638R/XL/_WHO3730-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/0/MLSrwNqsV7hvHzwmCmqqccN2bq7k3wz6RcLM5x2kv/S/_WHO3730-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-Z7vtvZg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/Lzwf9X9NZfwFWDCpcfpvSsGNkvPZwqbhcVvMrwb9h/S/_HF21068-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/KjxzSD8vqwNHv4kkg84fCC2D6Rm4WPQx9Z4TvnqZZ/L/_HF21068-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/MVPQV5ZhxNQmrT6KNTKqVXGq8vSrXL7fqCV2cJg7L/XL/_HF21068-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/MVPQV5ZhxNQmrT6KNTKqVXGq8vSrXL7fqCV2cJg7L/XL/_HF21068-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/Lzwf9X9NZfwFWDCpcfpvSsGNkvPZwqbhcVvMrwb9h/S/_HF21068-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-qVG6WT2",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qVG6WT2/0/KwcThBbdk5cz5qVCpzLZ4HzwC6B4TQ3wzr7f8j59s/S/_WHO7192-1173-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qVG6WT2/0/MzZ47L9ZT7ZTNkJwGwGM2tNdmcxkBTg3jL7KSf3vV/L/_WHO7192-1173-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qVG6WT2/0/MgJwHp9X6tFpF5FnrRWGZL7jLvB98nnPKtQr88CwW/XL/_WHO7192-1173-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qVG6WT2/0/MgJwHp9X6tFpF5FnrRWGZL7jLvB98nnPKtQr88CwW/XL/_WHO7192-1173-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qVG6WT2/0/KwcThBbdk5cz5qVCpzLZ4HzwC6B4TQ3wzr7f8j59s/S/_WHO7192-1173-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-GmTkrzR",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/LQpHzWCxJg5s9tqx5MQvrj2tP52b2PgtmmgHn5NBb/S/_HF22644-1174-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/KxsjJjZtBWrzQX8PJpSDx4kprM26zNWW4RSPHT76j/M/_HF22644-1174-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/NQ85d6v88NKF9tVwWBqnCsFzMkC4wVmT2tH6sR2xW/L/_HF22644-1174-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/LZL6hDbDDKM7kmMk4kwRtVLdTrsvxzG2rnZKLpmQ3/XL/_HF22644-1174-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/LQpHzWCxJg5s9tqx5MQvrj2tP52b2PgtmmgHn5NBb/S/_HF22644-1174-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-DqNGjc2",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DqNGjc2/0/MRBWjHMVVjhGqFMLppfShHP7839mT6SVgH3MgZjGG/S/_HF27076-1164-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DqNGjc2/0/MdTnGLMD22ZgWNwRq2knpCjR3hthSHbC2t96wz7FJ/M/_HF27076-1164-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DqNGjc2/0/MgchCNNTCVHvcTdgf5LRxdhGCmTR9sfFkvQmXJhcp/L/_HF27076-1164-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DqNGjc2/0/MFZ44Hqfxx4ShSdBXJWfrcWN6J6t4PfRrxkpFr5Rm/XL/_HF27076-1164-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DqNGjc2/0/MRBWjHMVVjhGqFMLppfShHP7839mT6SVgH3MgZjGG/S/_HF27076-1164-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-BzFqL6f",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/2/NJtCwzBGBmmQjG3h3D98pV4gdmf38kdHMSVQjT4Q8/S/_WHO2926-1147-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/2/K9t7LwgkKwvsZLsXB9LTfFZDfhQhvTxjXSr9ND4hF/L/_WHO2926-1147-2-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/2/K36kdtfJhQ6vP9zG6SmjdQVMsN4qKKgT3vhmcrF77/XL/_WHO2926-1147-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/2/K36kdtfJhQ6vP9zG6SmjdQVMsN4qKKgT3vhmcrF77/XL/_WHO2926-1147-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/2/NJtCwzBGBmmQjG3h3D98pV4gdmf38kdHMSVQjT4Q8/S/_WHO2926-1147-2-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-CgjNZB5",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CgjNZB5/2/MVZ59726h3b3frVM7ksm4pfprpG5GbGHN7B8pK6LV/S/_WHO0760-1136-1137-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CgjNZB5/2/M9SP2GFXtnf2PLmp9xS7KDspxhk2JzZqsDsHhzwwx/L/_WHO0760-1136-1137-2-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CgjNZB5/2/NWTzK8PsDb4ctfqhcxsGMMMmJL6qNBCX6xXJsnJDP/XL/_WHO0760-1136-1137-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CgjNZB5/2/NWTzK8PsDb4ctfqhcxsGMMMmJL6qNBCX6xXJsnJDP/XL/_WHO0760-1136-1137-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CgjNZB5/2/MVZ59726h3b3frVM7ksm4pfprpG5GbGHN7B8pK6LV/S/_WHO0760-1136-1137-2-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-NTfST2B",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NTfST2B/1/K8KFqhm3Wh6ZFCJBx3t6hcmWgp7F8kPtVMV8Nppd3/S/_WHO0008-1134-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NTfST2B/1/MbKGZbNbBdgzCcmbFtsTCQVsb5Tk7ppZXHbhrDXbT/XL/_WHO0008-1134-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NTfST2B/1/MbKGZbNbBdgzCcmbFtsTCQVsb5Tk7ppZXHbhrDXbT/XL/_WHO0008-1134-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NTfST2B/1/MbKGZbNbBdgzCcmbFtsTCQVsb5Tk7ppZXHbhrDXbT/XL/_WHO0008-1134-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NTfST2B/1/K8KFqhm3Wh6ZFCJBx3t6hcmWgp7F8kPtVMV8Nppd3/S/_WHO0008-1134-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-WBDjhsD",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WBDjhsD/2/LjPmnhQPv6KD8LzwkhRZHznQmWbjXKqXcS2W5RBCT/S/_HF26679-1001-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WBDjhsD/2/LPLQgp8kG3zGBD7PK88KSfSHWgzG9nVc6mM9Qb8JF/M/_HF26679-1001-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WBDjhsD/2/LN4dKhSkKzZmfZ9VcPxQbF8FccQXZ4zZ8wW96bhCx/L/_HF26679-1001-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WBDjhsD/2/KMmHXvzXmRwKNDVT8Lr7Z2qK6X5VNMQKwHJdZ2DVB/XL/_HF26679-1001-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WBDjhsD/2/LjPmnhQPv6KD8LzwkhRZHznQmWbjXKqXcS2W5RBCT/S/_HF26679-1001-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-hXdn5Z8",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hXdn5Z8/0/KtcmLPJRKn3gXXRnsDCMnxrnZ7FgDHBsd94FFJmVk/S/_HF26628-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hXdn5Z8/0/LhbMWXwrwdGt8B3jv4NJMJRb7C4VnZjmJkJbpwhKD/L/_HF26628-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hXdn5Z8/0/NgftNtkg87nqVjNdcZKm44Z792DSv5cntzvbFLS4Z/XL/_HF26628-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hXdn5Z8/0/NgftNtkg87nqVjNdcZKm44Z792DSv5cntzvbFLS4Z/XL/_HF26628-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hXdn5Z8/0/KtcmLPJRKn3gXXRnsDCMnxrnZ7FgDHBsd94FFJmVk/S/_HF26628-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-KwjDZfx",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KwjDZfx/3/LbgLGbkKnN6jWL4dnQxsSmPcsF84QpW2BqfGPgJtP/S/_WHO8397-Edit-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KwjDZfx/3/LzKdNZPHsf6wk8jtnmZBTxgcprfQpksw4vxbLNz6g/M/_WHO8397-Edit-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KwjDZfx/3/MBffpv95vh7XNzGFQ2QZH3rG8mVLpSwbwqvKKgJHN/L/_WHO8397-Edit-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KwjDZfx/3/KJ5tVb7j2jZG4mNCRVsJKJDcwNkFGFVxTJTQ6DFZd/XL/_WHO8397-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KwjDZfx/3/LbgLGbkKnN6jWL4dnQxsSmPcsF84QpW2BqfGPgJtP/S/_WHO8397-Edit-2-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-JvkzcpM",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/M7CXWLxPZsT6SvzbZWJLDm2DMdJcBTnDxRP9JgwPn/S/_WHO8057-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/LgrJ76hMcX822GXRhsfnDr7DQktKS6dhvh2gVZkjT/M/_WHO8057-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/NGT4HLrg9mWfhNGMXz7465h9RLCxdthDbhfp4QSNC/L/_WHO8057-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/LBBwv4FnQk5wCDjzjwwfrwXDtg4LD3sSPnH8TJTnH/XL/_WHO8057-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/M7CXWLxPZsT6SvzbZWJLDm2DMdJcBTnDxRP9JgwPn/S/_WHO8057-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-7VSrLtw",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VSrLtw/0/KjGKsbPXNrwhRmLCXTML9WRVPpXNW2P2w9kSS5BCf/S/_HF28681-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VSrLtw/0/KTFxrLpnMjwMgFSKqzDM9sCjxv3r4dCwsFpnZZqj6/M/_HF28681-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VSrLtw/0/LJ6FfqsCmTcHrd8FLkVS9h53VDcGGRzsSxVvgk4gW/L/_HF28681-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VSrLtw/0/M4bJMDXmVmNHmQLk8QhhVcv79Fmh3FBFdmWL4QjfW/XL/_HF28681-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VSrLtw/0/KjGKsbPXNrwhRmLCXTML9WRVPpXNW2P2w9kSS5BCf/S/_HF28681-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-bzp2Pxw",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/KPPR8SLGGG7g6ZD2JtbHtZq5z7rXBKLHWnbDCKgT9/S/_WHO3980-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/Lm4pN873KfF8bgGNGb7DckBqdjmnTCD7xxbQMHJqH/L/_WHO3980-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/Kx334rMmVsQ5QJbrcsm3wCqHk72nrbCJGSL2gGmNw/XL/_WHO3980-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/Kx334rMmVsQ5QJbrcsm3wCqHk72nrbCJGSL2gGmNw/XL/_WHO3980-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/KPPR8SLGGG7g6ZD2JtbHtZq5z7rXBKLHWnbDCKgT9/S/_WHO3980-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-mfNsJNb",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mfNsJNb/1/NbjPpTqcRSfd78xrqkK3qMqkKDJ78K4HJqvkWn6pK/S/_WHO4884-Edit-Edit-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mfNsJNb/1/Mzd5FWxLM7t6mbTLDfLkrNpwgvnHfKpqZ47GZNNWv/M/_WHO4884-Edit-Edit-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mfNsJNb/1/L96f9CMkmzXPBZdzVG9zNwsBQ99gH6GV63NwbgtHS/L/_WHO4884-Edit-Edit-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mfNsJNb/1/Lc7f2t54vdGqjwmWm2ZsFx3mq88hXChpgvLMXtT8S/XL/_WHO4884-Edit-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mfNsJNb/1/NbjPpTqcRSfd78xrqkK3qMqkKDJ78K4HJqvkWn6pK/S/_WHO4884-Edit-Edit-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-JsN8MfX",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JsN8MfX/0/Kmr2DxMHJW6jpHrgTcJcwGKXLRNzXhrmGpLz7mMDj/S/_WHO8343-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JsN8MfX/0/NCdsTzck3S67WnBgjZ7xXVWNwz3gqsrvHgNFrKtgb/M/_WHO8343-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JsN8MfX/0/LWrB8Jqmb7D97BFHDm3qZTt3NvCpWfd7TQNbDPpg4/L/_WHO8343-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JsN8MfX/0/L3VC8SCdPsfrdwCr7jTdd3GfLxpfLcg7P3TWbhgQD/XL/_WHO8343-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JsN8MfX/0/Kmr2DxMHJW6jpHrgTcJcwGKXLRNzXhrmGpLz7mMDj/S/_WHO8343-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-7Gh7Gq5",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Gh7Gq5/2/NQqMD5qwcHZZ5rBZJVvwt7hKkmqJF3KpjqTtGFD7t/S/_WHO0355-Edit-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Gh7Gq5/2/LLs8NfNPp8jJkMpmGfkv3nT8RVjBhPzJbCzXXbkFc/M/_WHO0355-Edit-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Gh7Gq5/2/NFSx3G3SKNw8FgVm5J6kzsP9cFGj2xWK3MGD2hvvF/L/_WHO0355-Edit-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Gh7Gq5/2/LbDPSB77Hk3FpSDK3h9djWDzjfLcxwfDzHTgwLRJQ/XL/_WHO0355-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Gh7Gq5/2/NQqMD5qwcHZZ5rBZJVvwt7hKkmqJF3KpjqTtGFD7t/S/_WHO0355-Edit-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-z9Pfbc5",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/KjrhNKT4sZRJpdtCsCQxWLXgXXS4PHrtRtCSpRWtD/S/_WHO4863-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/NGrnkJqPMJ6gbD22LqwXsqWTC5DsptdvqBwG2gwx3/M/_WHO4863-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5bdcSpbP4s7Z8sVPXmjjtfwHvwvPr9KS4Xjsmbd8/L/_WHO4863-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5kNs7chNbcPKNZ4Q4whJLQN6zSRmsLTCK3Psk5V9/XL/_WHO4863-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/KjrhNKT4sZRJpdtCsCQxWLXgXXS4PHrtRtCSpRWtD/S/_WHO4863-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-3Mj4gtS",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/MxxwXTHm3FK9r67FSBGLPrg9KfhNTXq64mGfMZQHp/S/_HF25494-Edit-Edit-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/NKvngnKr6N3JXXL9NqnCCQBgWkKsHBjNxhC7kcXgd/M/_HF25494-Edit-Edit-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/LZqM2prQjg42ZjSn2XX8S3szvM2GcLLLZ35Tkv9kn/L/_HF25494-Edit-Edit-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/KGnsZJz3bRfLNG8FSd6kHgbJLksJ6nSFPQWqjZWHT/XL/_HF25494-Edit-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3Mj4gtS/0/MxxwXTHm3FK9r67FSBGLPrg9KfhNTXq64mGfMZQHp/S/_HF25494-Edit-Edit-2-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-DdRt5X6",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/0/MxHSNTQLFn7FQWfSG28HwBP4K7R2SMznnktszBf5q/S/_HF25494-Edit-Edit-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/0/LD75L5pWkwnsxbhdpssDdCrjBhbTWFVGZz2JFqzhz/L/_HF25494-Edit-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/0/MBLJS6fm6nv5LF3Dv8bTrBjFzsKj3LQDFx9qZsKHZ/XL/_HF25494-Edit-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DdRt5X6/0/MxHSNTQLFn7FQWfSG28HwBP4K7R2SMznnktszBf5q/S/_HF25494-Edit-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-jGrpdg5",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jGrpdg5/0/Mb3rRjKjWMFFKs2v5d4MhGWw3SGFxDT2WcJ7C689b/S/_WHO5315-Edit-Edit-Edit-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jGrpdg5/0/MpvwGx3FCShfkQM2QwpXpd66H5RsXndRkcVMNwnjn/M/_WHO5315-Edit-Edit-Edit-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jGrpdg5/0/NPhBxKG8dwbM2hJM86QHnt6ZkHR6WQPBdgHczpgNR/L/_WHO5315-Edit-Edit-Edit-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jGrpdg5/0/KpX7LFSQFRrjkNpvkjcWh3XN2Ks7mjckKfSLCLq3Q/XL/_WHO5315-Edit-Edit-Edit-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jGrpdg5/0/Mb3rRjKjWMFFKs2v5d4MhGWw3SGFxDT2WcJ7C689b/S/_WHO5315-Edit-Edit-Edit-2-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-xW97k2g",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xW97k2g/0/KJ3f6mWSBjRrnzDKwSrJLcBtB5Ndd4JPrnwt9m6ts/S/_HF20510-Edit-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xW97k2g/0/KtwMFWrqKXb4xfNS75jhMM2MjsDLfK2BMfrnmVNC9/L/_HF20510-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xW97k2g/0/KqtqsvS4r4cvN99TTcLcdVDD4dRH5F4hgMkdLP7tC/XL/_HF20510-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xW97k2g/0/KJ3f6mWSBjRrnzDKwSrJLcBtB5Ndd4JPrnwt9m6ts/S/_HF20510-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-3nZvZTj",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3nZvZTj/0/MLxMnJzmXL2476tbz67WRH2HgFPf43rdkWMQnwKc3/S/_HF20492-Edit-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3nZvZTj/0/Kvv8WKvTpNNSH7q8cp4p43Qct8qVJzTwGVBNpcGDC/L/_HF20492-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3nZvZTj/0/LmrpQvj95bz4QsHbczcMcs4CpHkQvDRVzzmR8BBd6/XL/_HF20492-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3nZvZTj/0/MLxMnJzmXL2476tbz67WRH2HgFPf43rdkWMQnwKc3/S/_HF20492-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-j24GFVH",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/MfQn6wfQc29nN3QD9GpbMM7vZbHjdWn7M2Nd6HBcv/S/_HF26538-1249-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/MR7LZzCPxxpN5q9QRfKRGWgGCnrnktShjhfvpXvqs/L/_HF26538-1249-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/KjK3h3LXX8Pbr58fXG2g6KrWdWGsnTKLmwh4bfxJ8/XL/_HF26538-1249-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/KjK3h3LXX8Pbr58fXG2g6KrWdWGsnTKLmwh4bfxJ8/XL/_HF26538-1249-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/MfQn6wfQc29nN3QD9GpbMM7vZbHjdWn7M2Nd6HBcv/S/_HF26538-1249-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-VrRHHjr",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-VrRHHjr/1/NGHWsXmHKpWV4bWxVVFm5VnBD29L5qQVjsV2Lg4J5/S/_HF27537-1261-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-VrRHHjr/1/Kk9dnJZxj7D3ZDWhdHQr7bKszDJvHQ7WwtGzKMghr/M/_HF27537-1261-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-VrRHHjr/1/LCNPVHXcbjp6G6wkLwwCQz7xVm8R3kZg8k5MVj32s/L/_HF27537-1261-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-VrRHHjr/1/NTHPB7XwrskhWDR7dsnRQNtmLMdhX5zWs7FXmPXtp/XL/_HF27537-1261-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-VrRHHjr/1/NGHWsXmHKpWV4bWxVVFm5VnBD29L5qQVjsV2Lg4J5/S/_HF27537-1261-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-tLfLDqk",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tLfLDqk/2/KP3c927WHTTgmR7pZNj6p2FdJrbwQ7PJnff6XqhHH/S/_WHO0026-1260-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tLfLDqk/2/NjFHXjpZFgjPRFZxvTJxdF6sBF95tnknG38L4d5F2/L/_WHO0026-1260-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tLfLDqk/2/NC9VZqLt9xkHqFprnrVKNRCjJchbNRJtb338Jppqk/XL/_WHO0026-1260-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tLfLDqk/2/NC9VZqLt9xkHqFprnrVKNRCjJchbNRJtb338Jppqk/XL/_WHO0026-1260-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tLfLDqk/2/KP3c927WHTTgmR7pZNj6p2FdJrbwQ7PJnff6XqhHH/S/_WHO0026-1260-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-qvg23gW",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qvg23gW/0/NL9P7z5WHqPDDjP7B4cJvgxqJ8pWMmtntQ5Q4QJKh/S/_WHO0611-1259-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qvg23gW/0/McS4hRrff2vVz8rZVf6DFPQcsGjvSfNvcdRbhkKvZ/L/_WHO0611-1259-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qvg23gW/0/Kh3LHHxHhfVtFk74mww5HpkxM4FT3PMHFRKChqSHc/XL/_WHO0611-1259-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qvg23gW/0/Kh3LHHxHhfVtFk74mww5HpkxM4FT3PMHFRKChqSHc/XL/_WHO0611-1259-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qvg23gW/0/NL9P7z5WHqPDDjP7B4cJvgxqJ8pWMmtntQ5Q4QJKh/S/_WHO0611-1259-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-KKncPg5",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KKncPg5/1/LFkmRgTHPVGjMF2Bwk7kqDCbDHkJpftvFM64jf42j/S/_HF28953-1245-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KKncPg5/1/KwPJsgjNWBNSBz88JPx7nsKpCPgKvTFNn7d8c7fgb/M/_HF28953-1245-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KKncPg5/1/MBpW39528CtcSnCf5c5g86w4SHfCw82nPdH4gWWNZ/L/_HF28953-1245-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KKncPg5/1/MKzJX6XCJ83fpJtpWhR9xX3gVpDsHgrmNMdpdFxXw/XL/_HF28953-1245-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KKncPg5/1/LFkmRgTHPVGjMF2Bwk7kqDCbDHkJpftvFM64jf42j/S/_HF28953-1245-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-krwBhd8",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-krwBhd8/0/L8GtVq2wdQpn2BQ4P6p2n4kLkPBhtQMhQ4kLqp2Wv/S/_HF29447-1253-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-krwBhd8/0/MpPRsxSKFktcQC6MXMNj8fhhgbPGC8ZKfc7DGLhXf/L/_HF29447-1253-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-krwBhd8/0/M6nwFTqLFHTPR7X5nzFmxQjRTpFXx6GdbHBPWdMqS/XL/_HF29447-1253-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-krwBhd8/0/M6nwFTqLFHTPR7X5nzFmxQjRTpFXx6GdbHBPWdMqS/XL/_HF29447-1253-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-krwBhd8/0/L8GtVq2wdQpn2BQ4P6p2n4kLkPBhtQMhQ4kLqp2Wv/S/_HF29447-1253-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-N7Wb28h",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N7Wb28h/0/KXGrr6RdxfnWTvv64HKs7NrQKC9Mvncmsz2Bm2ZQh/S/_WHO0861-1243-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N7Wb28h/0/MJfGkjccqZzRFz47wh7sVf5zzHjvkPwwbP6Rfm3Rw/M/_WHO0861-1243-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N7Wb28h/0/LH3BPzPbqZpdjzXxqJsbmXWNxcQjScNTGpBjWsHCQ/L/_WHO0861-1243-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N7Wb28h/0/LKRF8LQSjDSfgctz7g9NTRqNCVWJnn9XNw69dLxCh/XL/_WHO0861-1243-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N7Wb28h/0/KXGrr6RdxfnWTvv64HKs7NrQKC9Mvncmsz2Bm2ZQh/S/_WHO0861-1243-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-w6bDSqM",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-w6bDSqM/0/K6jj5ZxWJJ5gg3TrfscDz3HMjzNM5Tg9Dx8r3Lh4k/S/_HF20212-1230-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-w6bDSqM/0/KSH49nCWHW6DZzCmSDCqbwwZ7LM7cjQmDFHs44HpP/L/_HF20212-1230-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-w6bDSqM/0/LR6V3GtsVZ5xTMnj5H4Wqr5k2mffFwSBc27LFMzcd/XL/_HF20212-1230-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-w6bDSqM/0/LR6V3GtsVZ5xTMnj5H4Wqr5k2mffFwSBc27LFMzcd/XL/_HF20212-1230-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-w6bDSqM/0/K6jj5ZxWJJ5gg3TrfscDz3HMjzNM5Tg9Dx8r3Lh4k/S/_HF20212-1230-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-jWBQ5p8",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/MpGjSsv4z62XrxBzxBbQ3885nZV4nPFFgqChRL6pC/S/_HF21832-1306-1308-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/LZz5WfXfjHj8XfqKpKWGF36RkBbZhcJtqRNkGcDzB/M/_HF21832-1306-1308-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/L45hxVHXGR5FFJ76XC5FwTKj4TRp9bchTkXj2vJGj/L/_HF21832-1306-1308-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/McmBwnB2gr8NxmnPGN5hJLzXw737jNNxSSgZVfRWH/XL/_HF21832-1306-1308-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/MpGjSsv4z62XrxBzxBbQ3885nZV4nPFFgqChRL6pC/S/_HF21832-1306-1308-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-KBXKqD5",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/0/MFhsZFv9KsNTSvmrqwtrSJnkB5gmd56bVRk8ftcR7/S/_WHO1637-1198-1199-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/0/MDVsgdjCktJvQWB8Z9d8qfCd3WjqkvqL8XJX3TxbN/M/_WHO1637-1198-1199-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/0/NFK6wNHZkz96gcf6pLhDxNFQ9MTtjbr9pVZPtK9LZ/L/_WHO1637-1198-1199-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/0/MHG9V8SFpvGhxPbrnXS4xGkPWJH7bfg3WQ3TBW7DD/XL/_WHO1637-1198-1199-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/0/MFhsZFv9KsNTSvmrqwtrSJnkB5gmd56bVRk8ftcR7/S/_WHO1637-1198-1199-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-3Wh6vt9",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-3Wh6vt9/0/Mr86vFKwB3Fr37csCzTf2xJSHpw2kfZkg5ZHQGsjZ/S/_HF24507-1331-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-3Wh6vt9/0/Ksjs6c6D6SnW6wHDLH4d2Tsj4jq4K7k9R9ptmTXMW/L/_HF24507-1331-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-3Wh6vt9/0/LPqP2nHr5RrjsRzfTVZ6R3t2qvRQH5BF5N9z3Dc2X/XL/_HF24507-1331-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-3Wh6vt9/0/Mr86vFKwB3Fr37csCzTf2xJSHpw2kfZkg5ZHQGsjZ/S/_HF24507-1331-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-m2dqhjT",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/0/L7GKk7FDBNJ3KNq8cnB5xmfwFFC527JhtBT2dcnkw/S/_HF25639-1356-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/0/KmRfZRM5btsBcSn5xZXFbZXfdmbXr6K8PBbtK69tZ/L/_HF25639-1356-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/0/MXdHKqV23WWCPN2sb3PVHnRGS3vXg9xHf4B8PGGb2/XL/_HF25639-1356-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/0/L7GKk7FDBNJ3KNq8cnB5xmfwFFC527JhtBT2dcnkw/S/_HF25639-1356-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-8X7hMPk",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8X7hMPk/0/McrM2Frz6CFjhkL2Cv6r2BMxch8pxfx5s7MNhpJ9J/S/_HF26027-1343-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8X7hMPk/0/KfzgscFBPtvq67D6Tg7THhWWkDvwNtHbqNhnxWZnz/L/_HF26027-1343-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8X7hMPk/0/LMD6DDHJjF2nPxCcpqKcKbGFFCC8jTv9Dd3PzVPsn/XL/_HF26027-1343-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8X7hMPk/0/McrM2Frz6CFjhkL2Cv6r2BMxch8pxfx5s7MNhpJ9J/S/_HF26027-1343-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-4JPrZVc",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-4JPrZVc/0/M84S7Hdk4vMpdsg3CXrkSc8pkvpdvw2qJv46TN9dm/S/_HF26027-1354-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-4JPrZVc/0/MLTK8sxMSWkPP9FfjXw6M28Mw5pGK39SkDmPn6wVD/L/_HF26027-1354-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-4JPrZVc/0/LB3MWpbvdmJCfbzJRhx65rt5t3KhmcWZV9hBpRgRt/XL/_HF26027-1354-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-4JPrZVc/0/M84S7Hdk4vMpdsg3CXrkSc8pkvpdvw2qJv46TN9dm/S/_HF26027-1354-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-LL2Gp5r",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/MvKQDc9hcjTQCjCxFX6XQDW73hNhX9PKDm2wJZRmP/S/_HF26159-1335-1336-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/NCjmmrnnvm3WKHxWJ44CtKQHDj8KJ4hcfkVRb97Dm/M/_HF26159-1335-1336-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/KzLKgnFXcksMSKDxL39WdCr4FdX82vrN7wfGZMnmT/L/_HF26159-1335-1336-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/MvKQDc9hcjTQCjCxFX6XQDW73hNhX9PKDm2wJZRmP/S/_HF26159-1335-1336-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-CZrXGr9",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CZrXGr9/0/LHGZC2KXFkCZZChZT4RKXSXp38rPFGKSDQ83KjhcT/S/_HF26552-1358-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CZrXGr9/0/MjpdxtSj9HftNNZdVQj9Vm4PpcPGqJwhHSZVJwTTx/M/_HF26552-1358-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CZrXGr9/0/LQprxzfZ7QmptrWJm9pdjrbLswz4CGt5ZxscS7v6Q/L/_HF26552-1358-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CZrXGr9/0/LSwgxBWB9SbK7k3Z3sBzJ22GNs5RJj5LN7Rdbm6ZV/XL/_HF26552-1358-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CZrXGr9/0/LHGZC2KXFkCZZChZT4RKXSXp38rPFGKSDQ83KjhcT/S/_HF26552-1358-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-6GcghXb",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6GcghXb/0/NVjhpptKK6vrV542wDsLRkhMZNmrDZRs9Mq5JwRcq/S/_HF26695-1357-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6GcghXb/0/K24JXvVcGCW653gdfJfmXZqRbSvmjRPwfTfCJ7BgZ/M/_HF26695-1357-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6GcghXb/0/LHGGq3qcpVdDBHFRSnknKwCGXJs6SGwm4Qz5KPVVm/L/_HF26695-1357-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6GcghXb/0/NLkxFC6bnWdbBMcNdphPtXTNTkhpLnr6Hf5LBt3Dv/XL/_HF26695-1357-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6GcghXb/0/NVjhpptKK6vrV542wDsLRkhMZNmrDZRs9Mq5JwRcq/S/_HF26695-1357-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-s3f9DST",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/Mw8XFW9BFpBGCFk64RhGg2JXMM38bBG4qnjq5W6Gk/S/_HF26697-Edit-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/L4thTD4b7Cxh3SvLXzBzmbfNssVMSQTrwgSPD7fB9/L/_HF26697-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/LC9sTmcsLPkf5jnr5Chj26Xg6FHdS7gPJ8FT7xMNg/XL/_HF26697-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/Mw8XFW9BFpBGCFk64RhGg2JXMM38bBG4qnjq5W6Gk/S/_HF26697-Edit-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-r9dGJJx",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-r9dGJJx/0/K9kw7FgkmLzbC9S7rNkSb8hnZ6DGH27PKHrGGz94p/S/_HF27360-1347-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-r9dGJJx/0/NQK4HHkZqb2ZrGWqhF5sjz7JM5Qxp8Tp9XfvmfDPp/L/_HF27360-1347-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-r9dGJJx/0/NMsn6CvMJsHG4jHRs56HgmTgvdS8HPPwtZfNxnh55/XL/_HF27360-1347-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-r9dGJJx/0/K9kw7FgkmLzbC9S7rNkSb8hnZ6DGH27PKHrGGz94p/S/_HF27360-1347-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-tXGTbNp",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/NKRcSHBkfDW6Wb6FXkfZcjZmdwjGS4HrPCxNTdngx/S/_HF29174-1322-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/MwNfPDKmxKzJmZbSGBkBTMf9KqnXZsZSLWK9bhkJq/L/_HF29174-1322-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/LGXDJz5KJRsNshDSPcDBzrVF9xv8phDZ4MQRnpb5C/XL/_HF29174-1322-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/NKRcSHBkfDW6Wb6FXkfZcjZmdwjGS4HrPCxNTdngx/S/_HF29174-1322-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-CNrD7G7",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/MH7Fr3DP9kQGbfBCFXs3zdM4DWFLTMXsGgsJ5tLBc/S/_HF29924-1328-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/MdtPLwHbNZGMZbMxRRf3FXz6NZ7hPLdGfbBmFFfx5/M/_HF29924-1328-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/K5Ng4mLXKkLgChvzML3rbHDkN4RNQ7zVsXMbLSWDH/L/_HF29924-1328-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/MKJz4Lt8vSv6fzJKzktrkpfWswZxVfbgCRbBFkPwN/XL/_HF29924-1328-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/MH7Fr3DP9kQGbfBCFXs3zdM4DWFLTMXsGgsJ5tLBc/S/_HF29924-1328-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-jZ8xKwR",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/KnRcLB3Br3TtRrw2SgjMZ7QMnvpHDjHmDvCkGKR3m/S/_HF24834-1360-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/K8qmzZTrnMtXFBGPm7Lzt8H4PcLB5hWcwPnkFSsPN/L/_HF24834-1360-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/Lp2FV7CjCRtTkz3Kkc6wXfs4QcpPHWCjxNS93nPp9/XL/_HF24834-1360-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/KnRcLB3Br3TtRrw2SgjMZ7QMnvpHDjHmDvCkGKR3m/S/_HF24834-1360-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-xZsZzd9",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/MsWK47wr9kSCMxdfKWK62v2Hbg3JQd8s278MfQDvh/S/_HF24895-1362-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/Kh8v9ZbH8rgCm3976q6c59dCB6pgqDP2mwbzX9xr9/L/_HF24895-1362-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/LSGVPK5vSXnMCjPj2RzTZWGpCw8hxt7qXPcXRstCM/XL/_HF24895-1362-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/MsWK47wr9kSCMxdfKWK62v2Hbg3JQd8s278MfQDvh/S/_HF24895-1362-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-2t65dGM",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KLcmXkLkB92ppbW9qsRg48TpsDzvg7bNZsLLdVm3P/S/_HF24922-1361-2-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/Nd2LCzrRLb92xcsQ2w5qn7vF8CTRS3HG3vnzXvjq2/L/_HF24922-1361-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KMncNd4V4G74SBSdgvmdkRNmVF3ZTKRfmDqWsQQdx/XL/_HF24922-1361-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KLcmXkLkB92ppbW9qsRg48TpsDzvg7bNZsLLdVm3P/S/_HF24922-1361-2-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-HfWwLLf",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/LFrGKWJTRT4FGHQTdSwthGJJ5nqxjNtkR6k9dDLx3/S/_HF24980-1363-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/L5MFVZmDGXc4JhtHDctqX4xwnCjCKgv38cb82hsnf/L/_HF24980-1363-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/Ld32Sg3H38QpCRnmn2MpDFNgrNWsxVP6B7nQVBSRL/XL/_HF24980-1363-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/LFrGKWJTRT4FGHQTdSwthGJJ5nqxjNtkR6k9dDLx3/S/_HF24980-1363-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-nqxJWx3",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MJzqBM2xQMWm8TKxN5m2dxBk7gbW5PmKH84NbJ63k/S/_HF25007-1364-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MGGKZjDXKHHQJX9KRSVxTWZSvf5kNKN2CXrKjp6wS/L/_HF25007-1364-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MN8zGZrWftGBvjnVgTkdXHxTLZpkScpCpWtFFJSfL/XL/_HF25007-1364-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MJzqBM2xQMWm8TKxN5m2dxBk7gbW5PmKH84NbJ63k/S/_HF25007-1364-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-67qk8zR",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/Mv9GncT43QPwNxDvdWnD7svcfnhRqTHv6893LjwV4/S/_HF25019-1365-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/NPWJ5CpNbWRBDJqSH6vhrvv39B5Z5GtWKVQ2gjFnB/L/_HF25019-1365-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/Ls9CHC5GfVKzqdq7XmW5tDwGMPVt5WKP6w3fjs7LL/XL/_HF25019-1365-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/Mv9GncT43QPwNxDvdWnD7svcfnhRqTHv6893LjwV4/S/_HF25019-1365-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-DWW5wHT",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/0/NftrcHZnfqtxF4jhVWD4C8ksVzHNfbCTZWrSSk77L/S/_HF25131-1366-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/0/LzNfWcBKP7h7nQJ3j3wLMJ8CxzcxrZNbtq8f2NPTr/L/_HF25131-1366-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/0/MDqX9sWGtHc3cbx9gSX82zH7KK7jDfjTjZzCRPXJW/XL/_HF25131-1366-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/0/NftrcHZnfqtxF4jhVWD4C8ksVzHNfbCTZWrSSk77L/S/_HF25131-1366-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-tg6PTwd",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NZJjWKmDDVjvRcZzNXrLwb8pSsSh66PpMG6dvXH8r/S/_HF25195-1367-1377-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NJVHGncW6PtG4zB8sPqB5NHK97nmX574zrNhndPMM/L/_HF25195-1367-1377-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/ML2RwQH7QG79Zpgb8RnGC3dLTb4wtc4CJphc3VnZM/XL/_HF25195-1367-1377-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NZJjWKmDDVjvRcZzNXrLwb8pSsSh66PpMG6dvXH8r/S/_HF25195-1367-1377-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-tpRCsS2",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/0/ML55fRfqMjXSs5nKnMXKWd3PBb6KC45j4Hx3k8wkX/S/_HF25195-1367-2-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/0/KQznShQdgFNcq7w9w2w5fZkWc9gwT3czdDppQhNsw/L/_HF25195-1367-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/0/KPkZ5L2drLpmcqcxk5WPkst7VCZ8M2ZXDkqMT4HBq/XL/_HF25195-1367-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/0/ML55fRfqMjXSs5nKnMXKWd3PBb6KC45j4Hx3k8wkX/S/_HF25195-1367-2-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-sH4qBFd",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/MtfsmCT8vtSFzT8Vd86Mw4HQVhCPssmGThqtThGdJ/S/_WHO1564-1384-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/NGNDJGV59H7NsZ56RtMr7mb5MMZKCf9cbg6k3D2xT/M/_WHO1564-1384-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/KFdLnhvTVgtQdnkW9XQXgmR6Qgk8CxMqk4LV4qZvv/L/_WHO1564-1384-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/NZv7pTWwLrPv2VXQxPpJJHtjGTpZ5x3Pd3F3jhPWF/XL/_WHO1564-1384-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/MtfsmCT8vtSFzT8Vd86Mw4HQVhCPssmGThqtThGdJ/S/_WHO1564-1384-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-xNB7ZSk",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/KDkxhFXGRwNbFf8vrTNh56C3h3F6f9QCgMVj5JgqX/S/_WHO1835-1385-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/MsTtBrz3RpQsbZDdFxVXdRT8tqkRR2hVR49Wp7BV7/M/_WHO1835-1385-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/MM2BWLmQDV3FPHsScpfmLNTbBCq7MpXjwFZNX6BCP/L/_WHO1835-1385-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/LwCxznbnQfzWsL5zzfLPDRvn74W2XfZDTNcTT4DsH/XL/_WHO1835-1385-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/KDkxhFXGRwNbFf8vrTNh56C3h3F6f9QCgMVj5JgqX/S/_WHO1835-1385-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-b2k3Wd5",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KXD3wRZXdVR8VJCzqXst7dsQd7DjsxgTWdrwCJDHw/S/_WHO2015-1386-1405-1406-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KG2cQTngRWSqN3MxJFT2nZ4rXhJk7MxmMp23dN3n3/M/_WHO2015-1386-1405-1406-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/Mp83LCtNNRSTbKqJHrBsTFBJQ7WKhRPDvgWqjnT3v/L/_WHO2015-1386-1405-1406-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KxrBB3SgkZBK7C8SgLP4NFmKFJrRBwZ9fvWvsmMb3/XL/_WHO2015-1386-1405-1406-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KXD3wRZXdVR8VJCzqXst7dsQd7DjsxgTWdrwCJDHw/S/_WHO2015-1386-1405-1406-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-8rcVT5Z",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/LZNwz7D5sB865NsvN5jB2Zt3hFJ6H4B3MsL3WhNbN/S/_WHO3344-1399-1400-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/Kv3MVHKXSgPZ6P8CdK2fCHxVcT5qnH4QVxgXKF8tL/M/_WHO3344-1399-1400-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/NPcX4fJf2KXncR3tB7G6KXS9tGpcg5LnH426T9JsJ/L/_WHO3344-1399-1400-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/MLNZKN4XgSwVFHXJJNXDjdjW69gCTQBtXzwtcfnPL/XL/_WHO3344-1399-1400-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/LZNwz7D5sB865NsvN5jB2Zt3hFJ6H4B3MsL3WhNbN/S/_WHO3344-1399-1400-2-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-Q5gq9MD",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/LH8qxzftPWWbmftWsV9FTgJJQLL6HC9zRzWnGT5hB/S/_HF28325-1370-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/K9Bdk9bSRtjhq2GJ3DP9LgGXZF4DXNGHwqv53Hffp/L/_HF28325-1370-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/NMcWVZdLMwZNhBGdgwtLw9gDkV5FdStSsCjKMwB2d/XL/_HF28325-1370-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/LH8qxzftPWWbmftWsV9FTgJJQLL6HC9zRzWnGT5hB/S/_HF28325-1370-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-kvNsMGB",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/Mph8jV6GPGzwfQd5NNBCDqfbKh9Dgx4crFd9Ck7P2/S/_HF28344-1369-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/LRvBj2Nk52RTXtGr6gJKrnRmgHmpfgS6FFcP8K9zK/M/_HF28344-1369-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/LFqSqdVFLHcbnvcJS9zhrcRGcjjcZKcKQGF6bLHdW/L/_HF28344-1369-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/KMf7xdrwzwBDrnFX62mzXkXZkVTcPfg2ksz3xtkRk/XL/_HF28344-1369-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/Mph8jV6GPGzwfQd5NNBCDqfbKh9Dgx4crFd9Ck7P2/S/_HF28344-1369-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-zsjbqS8",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/0/Lqrv76BGDmNZrs9Wg4wT3dSWdsMZtWz8mk7sHvWLD/S/_HF28357-1368-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/0/KWtc9rT9vhRMJvChkpb6ChXqTLhH6QfWVxDn2PkJC/L/_HF28357-1368-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/0/NBwdZ35qfvnJF9hkDQ9JDFWsRKJTDzc4HgpN8nqk7/XL/_HF28357-1368-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/0/Lqrv76BGDmNZrs9Wg4wT3dSWdsMZtWz8mk7sHvWLD/S/_HF28357-1368-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-N9XLKc8",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/LNQJhLvC9vhRNpvpf6kCnDN9vbLMJZ8v86TJrvzJM/S/_HF28395-1371-2-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/NDLw3PfztKLBMTjqrv5NKqv4s2vwB4f2ZtTDkMXQH/L/_HF28395-1371-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/L7fSJ6NB7mQZNWv3nSGZS9M98cNTJt4Zk5Gw9bgnR/XL/_HF28395-1371-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/LNQJhLvC9vhRNpvpf6kCnDN9vbLMJZ8v86TJrvzJM/S/_HF28395-1371-2-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-MZjsFRB",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/KFDZDQdxqCZGgZ639JLbsc6J52h9rR8MMZCLWx7t8/S/_HF28456-1373-2-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/MCp2f8CW52Vh6hmF4K3sVFtcZtW2CDzhWsPRbhJn2/L/_HF28456-1373-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/KX6tzvvKKMjrfVgPFdBpHRbC3ctLZjW6Hg4WV235d/XL/_HF28456-1373-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/KFDZDQdxqCZGgZ639JLbsc6J52h9rR8MMZCLWx7t8/S/_HF28456-1373-2-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-hcXLMwK",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/MHXfz67QbzS7B8FMLHQvxTBbmGBNpKtpxpgF6wSx7/S/_HF28482-1374-1375-1378-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/LPk9PbXrbpZHJc8LF4bMTmmJgdC6QXbrf9XVR764G/L/_HF28482-1374-1375-1378-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/M3Znccz9NqVRLbcVggWnBqFGPVGnr7TgLgBDtxckQ/XL/_HF28482-1374-1375-1378-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/MHXfz67QbzS7B8FMLHQvxTBbmGBNpKtpxpgF6wSx7/S/_HF28482-1374-1375-1378-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-LJk7wFZ",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/L7R6t52MQtv44X3xRNbVQXJB44nXrSPqbSNxZ7Zpc/S/_HF28510-1376-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/LkzQwfjh6jnW7D6tdMqHs4w5TvMbs7NgjWNqVWgLk/M/_HF28510-1376-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/KT7sR43nFPDB4QwkhFFgxJcbwSdTzdgHbB3WnmWQG/L/_HF28510-1376-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/Kvv5L9hgnbpcZvfFTBjJvs3mWwcKx3cscTdn2LMtG/XL/_HF28510-1376-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/L7R6t52MQtv44X3xRNbVQXJB44nXrSPqbSNxZ7Zpc/S/_HF28510-1376-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-z4M6gCv",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/MvhtHX4CtBCrq6RMPGzhvKHWVHPpgt8N9FLKbgQrL/S/_HF28750-1379-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/K3vRT5pLdrGRPSnCDRpnqvKhsg5rb2bvZ6rLPZ3Zm/M/_HF28750-1379-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/MTgnqggRfxpWvmPtBdjsVvrDvQPXgQFRC8rBbD6fL/L/_HF28750-1379-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/NBmwzCZs7fnCS2Bn6RKpp6c9ggqMjRjfKV3nT2hvk/XL/_HF28750-1379-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/MvhtHX4CtBCrq6RMPGzhvKHWVHPpgt8N9FLKbgQrL/S/_HF28750-1379-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-KK8RzH7",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/LT9BSwsVXFkZVfC3sR9wj8638HGNxkjvBjMzwtKGj/S/_HF29362-1380-S.jpg",
+    "srcM": "",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/K8GQsjJjrHTHz5dNhs3Zq9LdqDTTphpmgRNBFRhNN/L/_HF29362-1380-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/MwqP59VFgfBwPd6Sf9kJv7GdzhJCHT98ZWkLzxqVX/XL/_HF29362-1380-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/LT9BSwsVXFkZVfC3sR9wj8638HGNxkjvBjMzwtKGj/S/_HF29362-1380-S.jpg",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-mMsSB6q",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/LTSrFWVrkjFDcLnfQwtLXVnJDpQK6XL2tbGp8RNpq/S/_HF29442-1257-1383-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L87WxGtCWVZCBGjkshZrMRmD7FSdfznkT3Kf96LFt/M/_HF29442-1257-1383-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L378w6nqgJ5sr7B9DGL96Z6wmmZbpFfgMk3MPbjnL/L/_HF29442-1257-1383-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L2bwffd7MnB46PvTqdd25pgsHHvKH3sVfbZ3LNm8H/XL/_HF29442-1257-1383-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/LTSrFWVrkjFDcLnfQwtLXVnJDpQK6XL2tbGp8RNpq/S/_HF29442-1257-1383-S.jpg",
     "rating": 0,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"

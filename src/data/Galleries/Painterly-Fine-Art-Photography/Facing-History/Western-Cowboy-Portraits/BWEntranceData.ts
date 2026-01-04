@@ -4,6 +4,10 @@ export const entranceData = {
 
   keywords: [
     "black and white cowboy photography",
+    "black and white cowboy art",
+    "black and white western wall art",
+    "black and white western art",
+    "black and white pictures of cowboys",
     "Western Cowboy Portraits",
     "monochrome Western fine art",
     "painterly cowboy photography",

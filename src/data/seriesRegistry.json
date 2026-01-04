@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2025-12-27T20:43:18.477Z",
+    "lastUpdated": "2026-01-04T03:20:27.107Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z"
   },
   "images": {
@@ -812,7 +812,7 @@
     "i-vc6XQPf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-JPAGRyw",
     "i-C5Zh8Ld:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-4Qf9zhQ",
     "i-tnWbQrT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-yN7FFaH",
-    "i-bJ9LJtg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-E4uehHh",
+    "i-bJ9LJtg:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-Z7cX9WZ",
     "i-pcP7hcf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-GqFhkBV",
     "i-KTGLfqc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-djTHK4L",
     "i-vcX6WLC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-qjvm6Vv",
@@ -21933,9 +21933,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Cowboy Artwork Moment",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cJLTQfD/0/NjD8rsqXL22SGVphLZ8twfG6bkMmmBbhcBM5md5VL/XL/_WHO6469-1177-1179-XL.jpg"
+        },
+        {
+          "imageId": "i-bJ9LJtg",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "Somewhere Else to Turn",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bJ9LJtg/0/MKrR7k46m9ghR8v5F2k7rhNzKPz5xpPRP6NTXLZQr/XL/_WHO6469-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-23T01:18:48.066Z",
       "editionData": {
@@ -21947,7 +21953,11 @@
           "released": true,
           "firstReleaseDate": "2025-12-20T07:05:25.486Z"
         }
-      }
+      },
+      "linkedAt": "2026-01-04T03:20:27.107Z",
+      "mergedFrom": [
+        "s-E4uehHh"
+      ]
     },
     "s-phXH7g9": {
       "primaryImageId": "i-3ZxxB7B",
@@ -22613,37 +22623,6 @@
         ]
       },
       "createdAt": "2025-12-23T01:23:37.799Z"
-    },
-    "s-E4uehHh": {
-      "primaryImageId": "i-bJ9LJtg",
-      "tiers": [
-        "sketch",
-        "foundation",
-        "chronicle"
-      ],
-      "title": "Somewhere Else to Turn",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bJ9LJtg/0/MKrR7k46m9ghR8v5F2k7rhNzKPz5xpPRP6NTXLZQr/XL/_WHO6469-XL.jpg",
-      "occurrences": [
-        {
-          "imageId": "i-bJ9LJtg",
-          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Somewhere Else to Turn",
-          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bJ9LJtg/0/MKrR7k46m9ghR8v5F2k7rhNzKPz5xpPRP6NTXLZQr/XL/_WHO6469-XL.jpg"
-        }
-      ],
-      "linkedCount": 1,
-      "excludeSizes": {},
-      "createdAt": "2025-12-23T01:23:49.073Z",
-      "editionData": {
-        "chronicle": {
-          "soldBySize": {},
-          "printedBySize": {},
-          "sold": 0,
-          "printed": 0,
-          "released": true,
-          "firstReleaseDate": "2025-12-20T07:08:46.858Z"
-        }
-      }
     },
     "s-GqFhkBV": {
       "primaryImageId": "i-pcP7hcf",

@@ -79,4 +79,12 @@ export const facingFAQ = [
       "Each commission follows the same Western fine art photography style — grounded in research, intention, and storytelling discipline. <a href='/Contact'>Contact Wayne here</a> to begin the conversation."
     ],
   },
+
+  {
+    q: "What is vintage Western photography?",
+    a: [
+      "Vintage Western photography refers to imagery that evokes historical Western eras through tone, restraint, and narrative structure — rather than literal age or archival origin.",
+      "Wayne Heim's painterly approach creates work that feels timeless without imitating antique processes. The 'vintage' quality emerges from craft and storytelling, not artificial aging or sepia filters."
+    ],
+  },
 ];

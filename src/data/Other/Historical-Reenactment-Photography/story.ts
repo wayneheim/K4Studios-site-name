@@ -2,9 +2,10 @@ export const facingHistoryStory = [
   // ───── 1: Tagline & Theme ─────
   {
     tagline: "Keeping History Alive — Through Lens & Legacy",
-    subhead: "Facing History Through Historically Themed Photography",
+    subhead: "Facing History Through Historical Reenactment Photography",
     paragraphs: [
-      "Facing History is Wayne Heim’s approach to historically themed photography — capturing reenactments not as spectacle, but as lived, human experience. These painterly and traditional images preserve history through character, atmosphere, and story rather than reenactment alone.",
+      "Historical reenactment photography is the art of documenting living history events — Civil War encampments, WWII beach landings, frontier cowboy gatherings — with the same narrative depth and visual discipline as traditional fine art.",
+      "Facing History is Wayne Heim's approach to reenactment photography: capturing these events not as spectacle or costume drama, but as lived, human experience. These painterly and traditional images preserve history through character, atmosphere, and story.",
       "From WWII tanks firing on the beaches of Conneaut, Ohio, to the camaraderie of Wild West encampments and the quiet resolve of Civil War soldiers, this work documents history as it is carried forward by the people who choose to live it."
     ]
   },

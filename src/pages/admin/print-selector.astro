@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PrintSelectionGrid from "@/components/PrintSelectionGrid.jsx";
+---
+
+<BaseLayout title="Print Selection Grid">
+  <div class="pt-6">
+    <PrintSelectionGrid client:load />
+  </div>
+</BaseLayout>

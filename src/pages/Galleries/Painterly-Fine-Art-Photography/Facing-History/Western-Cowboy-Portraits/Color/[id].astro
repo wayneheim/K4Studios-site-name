@@ -1,6 +1,5 @@
 ---
 
-import BaseLayout from '../../../../../../layouts/BaseLayout.astro';
 import GalleryShell from '../../../../../../components/GalleryShell-Cowboy-Color.astro';
 import { entranceData as ColorEntranceData } from "../../../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/ColorEntranceData.ts";
 import { galleryData } from '../../../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
@@ -48,12 +47,10 @@ const parentMeta = getLandingMeta(
 const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], parentMeta);
 ---
 
-<BaseLayout meta={meta}>
-  <GalleryShell 
-    breadcrumb={ColorEntranceData.breadcrumb} 
-    entranceData={ColorEntranceData}
-    initialImageId={id}
-    currentImageUrl={imgUrl}
-    title={meta.title}
-  />
-</BaseLayout>
+<GalleryShell 
+  breadcrumb={ColorEntranceData.breadcrumb} 
+  entranceData={ColorEntranceData}
+  initialImageId={id}
+  currentImageUrl={imgUrl}
+  title={meta.title}
+/>

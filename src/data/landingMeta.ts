@@ -481,6 +481,32 @@ export const landingMetaDB = {
     twitterImage: "/og/traditional.jpg",
   },
 
+  "/Western-Cowboy-Photography": {
+    ogTitle: "Western Cowboy Photography – Authentic Portraits by Wayne Heim",
+    ogDescription:
+      "Western cowboy photography and wild west cowboy portraits—authentic character studies from the American frontier, crafted with painterly depth and narrative restraint.",
+    ogImage: "/og/cowboy.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Western Cowboy Photography – Wayne Heim",
+    twitterDescription:
+      "Authentic cowboy portraits and wild west photography by Wayne Heim. Character-driven fine art from the American frontier.",
+    twitterImage: "/og/cowboy.jpg",
+  },
+
+  "/Western-Wall-Art": {
+    ogTitle: "Western Wall Art – Museum-Quality Fine Art for Collectors",
+    ogDescription:
+      "Museum-quality Western wall art by fine art photographer Wayne Heim. Original cowboy portraits, frontier landscapes, and narrative Western photography for serious collectors.",
+    ogImage: "/og/cowboy.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Western Wall Art – Wayne Heim Fine Art",
+    twitterDescription:
+      "Museum-quality Western wall art for collectors. Original fine art photography, not decorative prints.",
+    twitterImage: "/og/cowboy.jpg",
+  },
+
   "default": {
     ogTitle: "Wayne Heim Fine Art Photography",
     ogDescription:

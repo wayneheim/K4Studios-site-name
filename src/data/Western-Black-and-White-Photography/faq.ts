@@ -79,4 +79,21 @@ export const bwWesternFAQ = [
       "Each commission is approached with the same discipline and intention that defines the existing body of work. <a href='/Contact'>Contact Wayne here</a> to begin the conversation."
     ],
   },
+
+  {
+    q: "What is black and white cowboy art?",
+    a: [
+      "Black and white cowboy art refers to monochrome fine art photography or illustration depicting cowboys, ranch life, and the American frontier — stripped of color to emphasize form, contrast, and narrative tension.",
+      "Wayne Heim's black and white cowboy art translates the grit and character of the West into images that feel timeless, connecting to the visual language of early frontier photography and classic Western cinema.",
+      "Explore the <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White'>Black and White Cowboy Portraits gallery</a> to see this approach in practice."
+    ],
+  },
+
+  {
+    q: "Where can I find black and white Western wall art?",
+    a: [
+      "Black and white Western wall art is available throughout the <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White'>Black and White Cowboy Portraits</a> collection — each image available as archival fine art prints in multiple sizes.",
+      "For a tactile, rustic presentation, consider the <a href='/Other/K4-Select-Series/Engrained'>Engrained Series</a>, where select monochrome Western images are printed directly onto Baltic Birch wood."
+    ],
+  },
 ];

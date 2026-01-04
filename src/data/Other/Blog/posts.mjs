@@ -1,5 +1,12 @@
 export const posts = [
   {
+    slug: "hearing-the-art",
+    title: "Conversations With Quill: Hearing the Art",
+    date: "2026-01-04",
+    excerpt: "A conversation about how images paired with restrained text elicit an experience closer to listening to music — inviting viewers to participate, not just observe, and fill in the emotional gaps with their own experience.",
+    cover: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-B7ZSdfs/1/KxttDrjkvSkZd4x5VdfzRgHH8bX9FxNwBzzPwtnFL/S/_HF21354-1220-S.jpg"
+  },
+  {
   slug: "signs",
   title: "Inside the Frame: Signs",
   date: "2025-12-01",

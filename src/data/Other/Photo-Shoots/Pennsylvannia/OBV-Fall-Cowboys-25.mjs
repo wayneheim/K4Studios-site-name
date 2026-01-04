@@ -1761,5 +1761,903 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/MH7Fr3DP9kQGbfBCFXs3zdM4DWFLTMXsGgsJ5tLBc/S/_HF29924-1328-S.jpg",
     "srcOriginal": "",
     "first_seen": "2025-12-29"
+  },
+  {
+    "id": "i-sz7RwkR",
+    "title": "Untitled",
+    "description": "From the Wayne Heim Pennsylvannia series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-sz7RwkR",
+    "keywords": [
+      "pennsylvannia",
+      "fine art",
+      "photography",
+      "painterly photography"
+    ],
+    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 74,
+    "src": "",
+    "srcXL": "",
+    "srcL": "",
+    "srcM": "",
+    "srcS": "",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-xLcb2sZ",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the Pennsylvannia collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xLcb2sZ/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 75,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xLcb2sZ/0/LV4HbKHwDT2hvRXjmGqXzMnQdFcgKS66gcWFDWhcw/XL/_HF24609-1359-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xLcb2sZ/0/LV4HbKHwDT2hvRXjmGqXzMnQdFcgKS66gcWFDWhcw/XL/_HF24609-1359-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xLcb2sZ/0/NC2gMq7hkRGRmCjPtqjKsSPWFJ3cjdks7qvCTzZzj/L/_HF24609-1359-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xLcb2sZ/0/Lvq8BMhkFLZpFtw8WztPx5h4Hsf4HDpr47DDXdCxd/S/_HF24609-1359-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-jZ8xKwR",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the Pennsylvannia collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 76,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/Lp2FV7CjCRtTkz3Kkc6wXfs4QcpPHWCjxNS93nPp9/XL/_HF24834-1360-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/Lp2FV7CjCRtTkz3Kkc6wXfs4QcpPHWCjxNS93nPp9/XL/_HF24834-1360-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/K8qmzZTrnMtXFBGPm7Lzt8H4PcLB5hWcwPnkFSsPN/L/_HF24834-1360-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/KnRcLB3Br3TtRrw2SgjMZ7QMnvpHDjHmDvCkGKR3m/S/_HF24834-1360-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-xZsZzd9",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the Pennsylvannia collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New photo by Wayne Heim from the Pennsylvannia series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 77,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/LSGVPK5vSXnMCjPj2RzTZWGpCw8hxt7qXPcXRstCM/XL/_HF24895-1362-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/LSGVPK5vSXnMCjPj2RzTZWGpCw8hxt7qXPcXRstCM/XL/_HF24895-1362-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/Kh8v9ZbH8rgCm3976q6c59dCB6pgqDP2mwbzX9xr9/L/_HF24895-1362-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/MsWK47wr9kSCMxdfKWK62v2Hbg3JQd8s278MfQDvh/S/_HF24895-1362-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-rKDPWRZ",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the Pennsylvannia collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rKDPWRZ/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 78,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rKDPWRZ/0/KtwV5FrgJQCQDV2x6RF28GXhv872tvGZMpFWxxXsq/XL/_HF24922-1361-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rKDPWRZ/0/KtwV5FrgJQCQDV2x6RF28GXhv872tvGZMpFWxxXsq/XL/_HF24922-1361-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rKDPWRZ/0/M4qs5QNqtWjL65cm6Drd7CZQMfSBmBXQmZbFBwGt3/L/_HF24922-1361-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rKDPWRZ/0/M2JGVTwtMFrb8khs72Sk5psgZ98NHjS8tCrpkN96s/S/_HF24922-1361-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-2t65dGM",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from Pennsylvannia. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 79,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KMncNd4V4G74SBSdgvmdkRNmVF3ZTKRfmDqWsQQdx/XL/_HF24922-1361-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KMncNd4V4G74SBSdgvmdkRNmVF3ZTKRfmDqWsQQdx/XL/_HF24922-1361-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/Nd2LCzrRLb92xcsQ2w5qn7vF8CTRS3HG3vnzXvjq2/L/_HF24922-1361-2-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KLcmXkLkB92ppbW9qsRg48TpsDzvg7bNZsLLdVm3P/S/_HF24922-1361-2-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-HfWwLLf",
+    "title": "Untitled",
+    "description": "From the Wayne Heim Pennsylvannia series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 80,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/Ld32Sg3H38QpCRnmn2MpDFNgrNWsxVP6B7nQVBSRL/XL/_HF24980-1363-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/Ld32Sg3H38QpCRnmn2MpDFNgrNWsxVP6B7nQVBSRL/XL/_HF24980-1363-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/L5MFVZmDGXc4JhtHDctqX4xwnCjCKgv38cb82hsnf/L/_HF24980-1363-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/LFrGKWJTRT4FGHQTdSwthGJJ5nqxjNtkR6k9dDLx3/S/_HF24980-1363-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-Q3ZbWvV",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from Pennsylvannia. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q3ZbWvV/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 81,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q3ZbWvV/0/K3h8ZpfsqXVHcjdbCr5d7SGw7TRVZLzsK84VFj9qC/XL/_HF24980-1363-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q3ZbWvV/0/K3h8ZpfsqXVHcjdbCr5d7SGw7TRVZLzsK84VFj9qC/XL/_HF24980-1363-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q3ZbWvV/0/K43XfHTLRFkbHP9twkMV8LTN8xTVSZZ6dmWbsqdzn/L/_HF24980-1363-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q3ZbWvV/0/LQ3pnq7bjd85Nnd6bzrLhDdwWzr8pKjgP6j5q4D8p/S/_HF24980-1363-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-nqxJWx3",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from Pennsylvannia. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 82,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MN8zGZrWftGBvjnVgTkdXHxTLZpkScpCpWtFFJSfL/XL/_HF25007-1364-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MN8zGZrWftGBvjnVgTkdXHxTLZpkScpCpWtFFJSfL/XL/_HF25007-1364-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MGGKZjDXKHHQJX9KRSVxTWZSvf5kNKN2CXrKjp6wS/L/_HF25007-1364-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MJzqBM2xQMWm8TKxN5m2dxBk7gbW5PmKH84NbJ63k/S/_HF25007-1364-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-67qk8zR",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from Pennsylvannia. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New photo by Wayne Heim from the Pennsylvannia series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 83,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/Ls9CHC5GfVKzqdq7XmW5tDwGMPVt5WKP6w3fjs7LL/XL/_HF25019-1365-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/Ls9CHC5GfVKzqdq7XmW5tDwGMPVt5WKP6w3fjs7LL/XL/_HF25019-1365-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/NPWJ5CpNbWRBDJqSH6vhrvv39B5Z5GtWKVQ2gjFnB/L/_HF25019-1365-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/Mv9GncT43QPwNxDvdWnD7svcfnhRqTHv6893LjwV4/S/_HF25019-1365-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-DWW5wHT",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the Pennsylvannia collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New photo by Wayne Heim from the Pennsylvannia series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 84,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/0/MDqX9sWGtHc3cbx9gSX82zH7KK7jDfjTjZzCRPXJW/XL/_HF25131-1366-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/0/MDqX9sWGtHc3cbx9gSX82zH7KK7jDfjTjZzCRPXJW/XL/_HF25131-1366-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/0/LzNfWcBKP7h7nQJ3j3wLMJ8CxzcxrZNbtq8f2NPTr/L/_HF25131-1366-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-DWW5wHT/0/NftrcHZnfqtxF4jhVWD4C8ksVzHNfbCTZWrSSk77L/S/_HF25131-1366-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-2GsTkqf",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the Pennsylvannia collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2GsTkqf/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 85,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2GsTkqf/0/Mbjz3zqSKsLpMZSTpWX3TjhBWS2ZpJ8jbfFDZ8sQf/XL/_HF25195-1367-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2GsTkqf/0/Mbjz3zqSKsLpMZSTpWX3TjhBWS2ZpJ8jbfFDZ8sQf/XL/_HF25195-1367-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2GsTkqf/0/KVZfxDnPCtR3WHz85dKg5gKRRCqSfJ29vFTmnVrH6/L/_HF25195-1367-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2GsTkqf/0/LZfMDgnXkprcszdw6hr9VMLJPbrzzBxFZqQS7fvSH/S/_HF25195-1367-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-tg6PTwd",
+    "title": "Untitled",
+    "description": "From the Wayne Heim Pennsylvannia series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 86,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/ML2RwQH7QG79Zpgb8RnGC3dLTb4wtc4CJphc3VnZM/XL/_HF25195-1367-1377-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/ML2RwQH7QG79Zpgb8RnGC3dLTb4wtc4CJphc3VnZM/XL/_HF25195-1367-1377-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NJVHGncW6PtG4zB8sPqB5NHK97nmX574zrNhndPMM/L/_HF25195-1367-1377-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NZJjWKmDDVjvRcZzNXrLwb8pSsSh66PpMG6dvXH8r/S/_HF25195-1367-1377-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-tpRCsS2",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from Pennsylvannia. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 87,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/0/KPkZ5L2drLpmcqcxk5WPkst7VCZ8M2ZXDkqMT4HBq/XL/_HF25195-1367-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/0/KPkZ5L2drLpmcqcxk5WPkst7VCZ8M2ZXDkqMT4HBq/XL/_HF25195-1367-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/0/KQznShQdgFNcq7w9w2w5fZkWc9gwT3czdDppQhNsw/L/_HF25195-1367-2-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tpRCsS2/0/ML55fRfqMjXSs5nKnMXKWd3PBb6KC45j4Hx3k8wkX/S/_HF25195-1367-2-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-sH4qBFd",
+    "title": "Untitled",
+    "description": "Fine Art Photography by Wayne Heim from the Pennsylvannia collection. New Work! — More info coming soon.",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New photo by Wayne Heim from the Pennsylvannia series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 88,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/NZv7pTWwLrPv2VXQxPpJJHtjGTpZ5x3Pd3F3jhPWF/XL/_WHO1564-1384-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/NZv7pTWwLrPv2VXQxPpJJHtjGTpZ5x3Pd3F3jhPWF/XL/_WHO1564-1384-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/KFdLnhvTVgtQdnkW9XQXgmR6Qgk8CxMqk4LV4qZvv/L/_WHO1564-1384-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/NGNDJGV59H7NsZ56RtMr7mb5MMZKCf9cbg6k3D2xT/M/_WHO1564-1384-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/MtfsmCT8vtSFzT8Vd86Mw4HQVhCPssmGThqtThGdJ/S/_WHO1564-1384-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-xNB7ZSk",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the Pennsylvannia collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New photo by Wayne Heim from the Pennsylvannia series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 89,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/LwCxznbnQfzWsL5zzfLPDRvn74W2XfZDTNcTT4DsH/XL/_WHO1835-1385-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/LwCxznbnQfzWsL5zzfLPDRvn74W2XfZDTNcTT4DsH/XL/_WHO1835-1385-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/MM2BWLmQDV3FPHsScpfmLNTbBCq7MpXjwFZNX6BCP/L/_WHO1835-1385-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/MsTtBrz3RpQsbZDdFxVXdRT8tqkRR2hVR49Wp7BV7/M/_WHO1835-1385-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xNB7ZSk/0/KDkxhFXGRwNbFf8vrTNh56C3h3F6f9QCgMVj5JgqX/S/_WHO1835-1385-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-b2k3Wd5",
+    "title": "Untitled",
+    "description": "From the Wayne Heim Pennsylvannia series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 90,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KxrBB3SgkZBK7C8SgLP4NFmKFJrRBwZ9fvWvsmMb3/XL/_WHO2015-1386-1405-1406-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KxrBB3SgkZBK7C8SgLP4NFmKFJrRBwZ9fvWvsmMb3/XL/_WHO2015-1386-1405-1406-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/Mp83LCtNNRSTbKqJHrBsTFBJQ7WKhRPDvgWqjnT3v/L/_WHO2015-1386-1405-1406-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KG2cQTngRWSqN3MxJFT2nZ4rXhJk7MxmMp23dN3n3/M/_WHO2015-1386-1405-1406-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KXD3wRZXdVR8VJCzqXst7dsQd7DjsxgTWdrwCJDHw/S/_WHO2015-1386-1405-1406-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-Ld6kTtM",
+    "title": "Untitled",
+    "description": "From the Wayne Heim Pennsylvannia series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Ld6kTtM/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 91,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Ld6kTtM/0/LDxLm4VQ3Dvm8XqmZB6nZDBJbtdzmc3NKQv5CV3MN/XL/_WHO3344-1399-1400-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Ld6kTtM/0/LDxLm4VQ3Dvm8XqmZB6nZDBJbtdzmc3NKQv5CV3MN/XL/_WHO3344-1399-1400-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Ld6kTtM/0/M5kSVxSkvC53tMzCsG9wxrwW6KbgQB8nQBvtpJ6BZ/L/_WHO3344-1399-1400-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Ld6kTtM/0/LCx6Zz6FJmWHRDzq8p99Bp7GvtqZRpBN2RbCkdwkZ/M/_WHO3344-1399-1400-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Ld6kTtM/0/MLvm4tHvDwzZmqnkHsnzbF3ww52k66xXMBj5GmX4v/S/_WHO3344-1399-1400-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-8rcVT5Z",
+    "title": "Untitled",
+    "description": "From the Wayne Heim Pennsylvannia series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 92,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/MLNZKN4XgSwVFHXJJNXDjdjW69gCTQBtXzwtcfnPL/XL/_WHO3344-1399-1400-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/MLNZKN4XgSwVFHXJJNXDjdjW69gCTQBtXzwtcfnPL/XL/_WHO3344-1399-1400-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/NPcX4fJf2KXncR3tB7G6KXS9tGpcg5LnH426T9JsJ/L/_WHO3344-1399-1400-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/Kv3MVHKXSgPZ6P8CdK2fCHxVcT5qnH4QVxgXKF8tL/M/_WHO3344-1399-1400-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/LZNwz7D5sB865NsvN5jB2Zt3hFJ6H4B3MsL3WhNbN/S/_WHO3344-1399-1400-2-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-Q5gq9MD",
+    "title": "Order",
+    "description": "© Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "© Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 93,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/NMcWVZdLMwZNhBGdgwtLw9gDkV5FdStSsCjKMwB2d/XL/_HF28325-1370-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/NMcWVZdLMwZNhBGdgwtLw9gDkV5FdStSsCjKMwB2d/XL/_HF28325-1370-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/K9Bdk9bSRtjhq2GJ3DP9LgGXZF4DXNGHwqv53Hffp/L/_HF28325-1370-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/LH8qxzftPWWbmftWsV9FTgJJQLL6HC9zRzWnGT5hB/S/_HF28325-1370-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-jszV4FG",
+    "title": "Untitled",
+    "description": "From the Wayne Heim Pennsylvannia series. New image! More info coming soon.",
+    "alt": "Order",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jszV4FG/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New photo by Wayne Heim from the Pennsylvannia series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 94,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jszV4FG/0/LbcWq6G2ZXCncZdzJJPpLzkNN8tr54dvWsNLkcnJc/XL/_HF28328-1372-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jszV4FG/0/LbcWq6G2ZXCncZdzJJPpLzkNN8tr54dvWsNLkcnJc/XL/_HF28328-1372-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jszV4FG/0/MzqpWVvJRT5WXzJxfR4WShN8wHLtDkhxFHmG892FR/L/_HF28328-1372-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jszV4FG/0/MZ4z59V4WksDtwVrW8B27RrBx5PK42W5RJcb2Z3Ws/M/_HF28328-1372-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jszV4FG/0/MB74NVRF7VJFg69gRBFdgDvcwzmZBgZD6NdJD6zpb/S/_HF28328-1372-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-kvNsMGB",
+    "title": "Untitled",
+    "description": "From the Wayne Heim Pennsylvannia series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 95,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/KMf7xdrwzwBDrnFX62mzXkXZkVTcPfg2ksz3xtkRk/XL/_HF28344-1369-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/KMf7xdrwzwBDrnFX62mzXkXZkVTcPfg2ksz3xtkRk/XL/_HF28344-1369-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/LFqSqdVFLHcbnvcJS9zhrcRGcjjcZKcKQGF6bLHdW/L/_HF28344-1369-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/LRvBj2Nk52RTXtGr6gJKrnRmgHmpfgS6FFcP8K9zK/M/_HF28344-1369-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/Mph8jV6GPGzwfQd5NNBCDqfbKh9Dgx4crFd9Ck7P2/S/_HF28344-1369-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-zsjbqS8",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from Pennsylvannia. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 96,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/0/NBwdZ35qfvnJF9hkDQ9JDFWsRKJTDzc4HgpN8nqk7/XL/_HF28357-1368-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/0/NBwdZ35qfvnJF9hkDQ9JDFWsRKJTDzc4HgpN8nqk7/XL/_HF28357-1368-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/0/KWtc9rT9vhRMJvChkpb6ChXqTLhH6QfWVxDn2PkJC/L/_HF28357-1368-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zsjbqS8/0/Lqrv76BGDmNZrs9Wg4wT3dSWdsMZtWz8mk7sHvWLD/S/_HF28357-1368-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-7kjvcxD",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the Pennsylvannia collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-7kjvcxD/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 97,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-7kjvcxD/0/LNp7JL5qcFRwgHdPPJnnRM2M9Rgm2tcG4Cm6sbZbm/XL/_HF28395-1371-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-7kjvcxD/0/LNp7JL5qcFRwgHdPPJnnRM2M9Rgm2tcG4Cm6sbZbm/XL/_HF28395-1371-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-7kjvcxD/0/Mzf2NNnvDnTMdGZGH7BWKgrmSbxvDcf3F5GsZZRTh/L/_HF28395-1371-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-7kjvcxD/0/MMLFKnwL7k9k6H9DRhX4HTZrLqfCkr8sCZvwhxzBq/S/_HF28395-1371-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-N9XLKc8",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from Pennsylvannia. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 98,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/L7fSJ6NB7mQZNWv3nSGZS9M98cNTJt4Zk5Gw9bgnR/XL/_HF28395-1371-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/L7fSJ6NB7mQZNWv3nSGZS9M98cNTJt4Zk5Gw9bgnR/XL/_HF28395-1371-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/NDLw3PfztKLBMTjqrv5NKqv4s2vwB4f2ZtTDkMXQH/L/_HF28395-1371-2-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/LNQJhLvC9vhRNpvpf6kCnDN9vbLMJZ8v86TJrvzJM/S/_HF28395-1371-2-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-6CvnjQ5",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from Pennsylvannia. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6CvnjQ5/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 99,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6CvnjQ5/0/LTPdpBhr6KjX9P9GQBS2dDQsknmZgrKM2tCDGVs2q/XL/_HF28456-1373-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6CvnjQ5/0/LTPdpBhr6KjX9P9GQBS2dDQsknmZgrKM2tCDGVs2q/XL/_HF28456-1373-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6CvnjQ5/0/Mp45HdpFfdSZQ5Xd5w79JRbf4C2hp987SHFxbFz6M/L/_HF28456-1373-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6CvnjQ5/0/MJ29Lwvj3bbQWXxv659t2vj7T8fGfJXzf9h3D8T2c/S/_HF28456-1373-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-MZjsFRB",
+    "title": "Untitled",
+    "description": "From the Wayne Heim Pennsylvannia series. New image! More info coming soon.",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 100,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/KX6tzvvKKMjrfVgPFdBpHRbC3ctLZjW6Hg4WV235d/XL/_HF28456-1373-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/KX6tzvvKKMjrfVgPFdBpHRbC3ctLZjW6Hg4WV235d/XL/_HF28456-1373-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/MCp2f8CW52Vh6hmF4K3sVFtcZtW2CDzhWsPRbhJn2/L/_HF28456-1373-2-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/KFDZDQdxqCZGgZ639JLbsc6J52h9rR8MMZCLWx7t8/S/_HF28456-1373-2-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-NrDBPzM",
+    "title": "Untitled",
+    "description": "Upscaled with Gigapixel v8.4.4. 8193x10924 => 7875x10500 (0.961186x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NrDBPzM/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Upscaled with Gigapixel v8.4.4. 8193x10924 => 7875x10500 (0.961186x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 101,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NrDBPzM/0/LHSrKQTzWkPKgtDN5wwhZrDBSHCBdxVmtSCMSwmFK/XL/_HF28482-1374-1375-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NrDBPzM/0/LHSrKQTzWkPKgtDN5wwhZrDBSHCBdxVmtSCMSwmFK/XL/_HF28482-1374-1375-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NrDBPzM/0/K742J3WRwZ3tMgnjXXfp26d4HFJV9LKTW5HJpmSLV/L/_HF28482-1374-1375-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NrDBPzM/0/NPN7x4zvKtc6QtkcWCTQCMfqFQR5S8h67WF2dsSg4/S/_HF28482-1374-1375-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-hcXLMwK",
+    "title": "Untitled",
+    "description": "Upscaled with Gigapixel v8.4.4. 8193x10924 => 7875x10500 (0.961186x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 8193x10924 => 7875x10500 (0.961186x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/A",
+    "keywords": [
+      "HF28482",
+      "1374",
+      "1375",
+      "1378"
+    ],
+    "story": "Upscaled with Gigapixel v8.4.4. 8193x10924 => 7875x10500 (0.961186x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 102,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/M3Znccz9NqVRLbcVggWnBqFGPVGnr7TgLgBDtxckQ/XL/_HF28482-1374-1375-1378-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/M3Znccz9NqVRLbcVggWnBqFGPVGnr7TgLgBDtxckQ/XL/_HF28482-1374-1375-1378-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/LPk9PbXrbpZHJc8LF4bMTmmJgdC6QXbrf9XVR764G/L/_HF28482-1374-1375-1378-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/MHXfz67QbzS7B8FMLHQvxTBbmGBNpKtpxpgF6wSx7/S/_HF28482-1374-1375-1378-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-zG62Sgm",
+    "title": "Untitled",
+    "description": "Upscaled with Gigapixel v8.4.4. 8193x10924 => 7875x10500 (0.961186x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1",
+    "alt": "Upscaled with Gigapixel v8.4.4. 8193x10924 => 7875x10500 (0.961186x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zG62Sgm/A",
+    "keywords": [
+      "HF28482",
+      "1374",
+      "1375",
+      "1378"
+    ],
+    "story": "Upscaled with Gigapixel v8.4.4. 8193x10924 => 7875x10500 (0.961186x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 103,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zG62Sgm/0/KmbNPxQcfNFssXjhCk8XZKTmWf4N3KJktHXfGqbCC/XL/_HF28482-1374-1375-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zG62Sgm/0/KmbNPxQcfNFssXjhCk8XZKTmWf4N3KJktHXfGqbCC/XL/_HF28482-1374-1375-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zG62Sgm/0/Kjh7ThXnLKGjTKTwqLswX2wHH2tWMRsTMwp7SHW9W/L/_HF28482-1374-1375-2-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-zG62Sgm/0/KhjBJjnnZQQFpvDrcXxdg5frzQWSP37FJJCDVRGpw/S/_HF28482-1374-1375-2-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-LJk7wFZ",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from Pennsylvannia. Full description coming soon.",
+    "alt": "Upscaled with Gigapixel v8.4.4. 8193x10924 => 7875x10500 (0.961186x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/A",
+    "keywords": [
+      "HF28482",
+      "1374",
+      "1375",
+      "1378"
+    ],
+    "story": "New photo by Wayne Heim from the Pennsylvannia series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 104,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/Kvv5L9hgnbpcZvfFTBjJvs3mWwcKx3cscTdn2LMtG/XL/_HF28510-1376-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/Kvv5L9hgnbpcZvfFTBjJvs3mWwcKx3cscTdn2LMtG/XL/_HF28510-1376-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/KT7sR43nFPDB4QwkhFFgxJcbwSdTzdgHbB3WnmWQG/L/_HF28510-1376-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/LkzQwfjh6jnW7D6tdMqHs4w5TvMbs7NgjWNqVWgLk/M/_HF28510-1376-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/L7R6t52MQtv44X3xRNbVQXJB44nXrSPqbSNxZ7Zpc/S/_HF28510-1376-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-z4M6gCv",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the Pennsylvannia collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/A",
+    "keywords": [
+      "HF28482",
+      "1374",
+      "1375",
+      "1378"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 105,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/NBmwzCZs7fnCS2Bn6RKpp6c9ggqMjRjfKV3nT2hvk/XL/_HF28750-1379-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/NBmwzCZs7fnCS2Bn6RKpp6c9ggqMjRjfKV3nT2hvk/XL/_HF28750-1379-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/MTgnqggRfxpWvmPtBdjsVvrDvQPXgQFRC8rBbD6fL/L/_HF28750-1379-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/K3vRT5pLdrGRPSnCDRpnqvKhsg5rb2bvZ6rLPZ3Zm/M/_HF28750-1379-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/MvhtHX4CtBCrq6RMPGzhvKHWVHPpgt8N9FLKbgQrL/S/_HF28750-1379-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-KK8RzH7",
+    "title": "Untitled",
+    "description": "Wayne Heim photograph from the Pennsylvannia collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/A",
+    "keywords": [
+      "HF28482",
+      "1374",
+      "1375",
+      "1378"
+    ],
+    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 106,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/MwqP59VFgfBwPd6Sf9kJv7GdzhJCHT98ZWkLzxqVX/XL/_HF29362-1380-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/MwqP59VFgfBwPd6Sf9kJv7GdzhJCHT98ZWkLzxqVX/XL/_HF29362-1380-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/K8GQsjJjrHTHz5dNhs3Zq9LdqDTTphpmgRNBFRhNN/L/_HF29362-1380-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/LT9BSwsVXFkZVfC3sR9wj8638HGNxkjvBjMzwtKGj/S/_HF29362-1380-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
+  },
+  {
+    "id": "i-mMsSB6q",
+    "title": "Untitled",
+    "description": "Wayne Heim Photography: A selection from Pennsylvannia. Full description coming soon.",
+    "alt": "New fine art photograph © Wayne Heim",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/A",
+    "keywords": [
+      "HF28482",
+      "1374",
+      "1375",
+      "1378"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 107,
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L2bwffd7MnB46PvTqdd25pgsHHvKH3sVfbZ3LNm8H/XL/_HF29442-1257-1383-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L2bwffd7MnB46PvTqdd25pgsHHvKH3sVfbZ3LNm8H/XL/_HF29442-1257-1383-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L378w6nqgJ5sr7B9DGL96Z6wmmZbpFfgMk3MPbjnL/L/_HF29442-1257-1383-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L87WxGtCWVZCBGjkshZrMRmD7FSdfznkT3Kf96LFt/M/_HF29442-1257-1383-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/LTSrFWVrkjFDcLnfQwtLXVnJDpQK6XL2tbGp8RNpq/S/_HF29442-1257-1383-S.jpg",
+    "srcOriginal": "",
+    "first_seen": "2026-01-04"
   }
 ];

@@ -6,6 +6,8 @@ export const landingWestern = {
   keywords: [
     "painterly transportation photography",
     "vintage train photography",
+    "train photography",
+    "steam locomotive photography",
     "classic car fine art",
     "steam locomotive art",
     "automotive fine art prints",

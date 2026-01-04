@@ -744,7 +744,9 @@ export default function ChapterGalleryBase({
   
   useEffect(() => {
     let inactivityTimer;
+    let heartbeatInterval;
     const INACTIVITY_LIMIT = 5 * 60 * 1000; // 5 minutes
+    const HEARTBEAT_INTERVAL = 2 * 60 * 1000; // 2 minutes - periodic flush for Safari/mobile reliability
 
     // Regular flush (inactivity timeout) - uses normal fetch
     const logAndResetEvents = () => {
@@ -796,9 +798,20 @@ export default function ChapterGalleryBase({
       if (document.visibilityState === "hidden") logAndResetEventsBeacon();
     });
 
+    // Periodic heartbeat flush - catches Safari/iOS edge cases where visibilitychange
+    // or beforeunload may not fire reliably (e.g., force-quit, PWA, background tab kill)
+    heartbeatInterval = setInterval(() => {
+      const counts = eventCountsRef.current;
+      const hasAnyEvents = Object.values(counts).some(c => c > 0);
+      if (hasAnyEvents) {
+        logAndResetEvents();
+      }
+    }, HEARTBEAT_INTERVAL);
+
     resetTimer();
     return () => {
       clearTimeout(inactivityTimer);
+      clearInterval(heartbeatInterval);
       window.removeEventListener("click", activityHandler);
       window.removeEventListener("keydown", activityHandler);
       window.removeEventListener("beforeunload", logAndResetEventsBeacon);

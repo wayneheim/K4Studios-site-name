@@ -53,7 +53,7 @@ export const semantic = {
     // Long-tail / glossary only / supplemental
     { phrase: "fine art reenactor prints", rating: 3, use: true },
     { phrase: "reenactor photography", rating: 3, use: true },
-    { phrase: "reenactment photography", rating: 3, use: true },
+    { phrase: "reenactment photography", rating: 4, use: true },
     { phrase: "reenacting photos", rating: 3, use: true },
     { phrase: "living history reenactment photos", rating: 3, use: true }
   ],
@@ -191,10 +191,66 @@ westernBlackWhiteHub: {
   landingPhrases: [
     { phrase: "Western Black and White Photography", rating: 5, use: true },
     { phrase: "Black and White Western Photography", rating: 5, use: true },
-    { phrase: "Black and White Cowboy Photography", rating: 4, use: true },
+    { phrase: "Black and White Cowboy Photography", rating: 5, use: true },
+    { phrase: "black and white cowboy art", rating: 5, use: true },
+    { phrase: "black and white western wall art", rating: 4, use: true },
+    { phrase: "black and white western art", rating: 4, use: true },
     { phrase: "Western Black and White Art", rating: 4, use: true },
     { phrase: "Black and White Western Fine Art", rating: 4, use: true },
     { phrase: "Monochrome Western Photography", rating: 4, use: true },
+    { phrase: "black and white pictures of cowboys", rating: 3, use: true },
+  ],
+  imagePhrases: []
+},
+
+// ============================================================================
+// WESTERN WALL ART HUB
+// Commercial-intent semantic buffer — contains "wall art" terms without
+// contaminating galleries. Translates collector intent into fine art context.
+// ============================================================================
+
+westernWallArtHub: {
+  path: "/Western-Wall-Art",
+  def: "Museum-quality Western wall art for collectors of narrative fine art. Unlike decorative posters or mass-produced prints, fine art Western wall art emphasizes archival quality, narrative depth, and the craftsmanship of original photographic work.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "western wall art", rating: 3, use: true },
+    { phrase: "western wall decor", rating: 2, use: true },
+    { phrase: "western art for collectors", rating: 3, use: true },
+    { phrase: "museum quality western art", rating: 3, use: true },
+  ],
+  imagePhrases: []
+},
+
+westernCowboyHub: {
+  path: "/Western-Cowboy-Photography",
+  def: "Western cowboy photography captures the authentic people of the American frontier—cowboys, ranchers, and frontier figures—with an emphasis on character, grit, and narrative depth rather than nostalgic spectacle.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    // Primary targets — high intent, exact match phrases
+    { phrase: "Western Cowboy Photography", rating: 5, use: true },
+    { phrase: "Wild West Cowboy Photography", rating: 5, use: true },
+    { phrase: "cowboy photography", rating: 5, use: true },
+    { phrase: "cowboy photographer", rating: 5, use: true },
+    { phrase: "western photographer", rating: 5, use: true },
+    { phrase: "cowboy portrait photography", rating: 5, use: true },
+    // Secondary — broader western terms (shared authority with Western-Fine-Art hub)
+    { phrase: "western photography", rating: 4, use: true },
+    { phrase: "wild west photography", rating: 4, use: true },
+    { phrase: "authentic cowboy photography", rating: 4, use: true },
+    { phrase: "wild west photography portraits", rating: 4, use: true },
+    { phrase: "cowboy character portraits", rating: 4, use: true },
+    { phrase: "frontier cowboy photography", rating: 4, use: true },
+    { phrase: "cowboy fine art photography", rating: 4, use: true },
+    { phrase: "American West cowboy photography", rating: 4, use: true },
+    // Long-tail semantic enrichers
+    { phrase: "cowboy wall art photography", rating: 3, use: true },
+    { phrase: "western cowboy wall art", rating: 3, use: true },
+    { phrase: "cowboy photo art", rating: 3, use: true },
+    { phrase: "wild west cowboy art", rating: 3, use: true },
+    { phrase: "cowboy portraiture", rating: 3, use: true },
+    { phrase: "historic western photography", rating: 3, use: true },
+    { phrase: "frontier photography", rating: 3, use: true },
   ],
   imagePhrases: []
 },
@@ -263,7 +319,7 @@ glossaryCowboyArt: {
   def: "Cowboy art encompasses visual representations of Western ranch life, frontier work, and the iconic cowboy figure. In fine art contexts, it moves beyond decor clichés to explore character, story, and the lived reality of the American West. See <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> | <a href='/Painterly-Western-Photography'>Painterly Western Photography</a>.",
   landingPhrases: [
     { phrase: "cowboy art", rating: 3, use: false },
-    { phrase: "cowboy wall art", rating: 3, use: false },
+    { phrase: "cowboy wall art", rating: 3, use: true, link: "/Western-Wall-Art" },
   ],
   imagePhrases: []
 },
@@ -272,6 +328,15 @@ glossaryWesternStylePhotography: {
   def: "Western style photography refers to imagery evoking the aesthetic of the American West—rustic, rugged, and frontier-inspired. Fine art Western photography distinguishes itself from decorative or mass-produced imagery by emphasizing narrative depth, authentic character, and photographic craft. Explore <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> | <a href='/Painterly-Western-Photography'>Painterly Western Photography</a>.",
   landingPhrases: [
     { phrase: "western style photography", rating: 3, use: false },
+  ],
+  imagePhrases: []
+},
+
+glossaryVintageWesternPhotography: {
+  def: "Vintage Western photography refers to imagery that evokes historical Western eras through tone, restraint, and narrative structure—rather than literal age or archival origin. It captures the spirit of the frontier through deliberate craft, not nostalgic imitation. Explore <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> | <a href='/Western-Black-and-White-Photography'>Western Black and White Photography</a>.",
+  landingPhrases: [
+    { phrase: "vintage western photography", rating: 2, use: false },
+    { phrase: "vintage cowboy photography", rating: 1, use: false },
   ],
   imagePhrases: []
 },
@@ -481,6 +546,7 @@ portraitsTraditional: {
 
     // --- Secondary expansion (used when needed) ---
     { phrase: "Timeless Portraits", rating: 4, use: true },
+    { phrase: "fine art portrait photography", rating: 3, use: true },
 
     // --- Long-tail semantic support ---
     { phrase: "Portrait Gallery", rating: 3, use: true }
@@ -724,6 +790,8 @@ landscapeWestPainterly: {
     { phrase: "Painterly Western Landscapes", rating: 5, use: true },
     { phrase: "Mountain West", rating: 5, use: true },
     { phrase: "Mountain West landscapes", rating: 5, use: true },
+    { phrase: "western landscape photography", rating: 5, use: true },
+    { phrase: "western landscape art", rating: 3, use: true },
     { phrase: "mountain west fine art photography", rating: 4, use: true },
     { phrase: "painterly fine art landscape photography", rating: 4, use: true },
     { phrase: "painterly landscape photography", rating: 3, use: true },
@@ -731,7 +799,6 @@ landscapeWestPainterly: {
   ],
 
   imagePhrases: [
-    { phrase: "western landscape photography", rating: 5, use: true },
     { phrase: "ethereal landscapes", rating: 5, use: true },
     { phrase: "feel every layer of it", rating: 4, use: true }
   ]
@@ -805,7 +872,9 @@ waterPainterly: {
 
   landingPhrases: [
     { phrase: "Painterly Water Photography", rating: 5, use: true },
-    { phrase: "fine art waterfall prints", rating: 4, use: true }
+    { phrase: "waterfall photography", rating: 5, use: true },
+    { phrase: "fine art waterfall prints", rating: 4, use: true },
+    { phrase: "fine art waterfall photography", rating: 4, use: true }
   ],
 
   imagePhrases: [
@@ -1023,6 +1092,7 @@ waterTraditional: {
 
   landingPhrases: [
     { phrase: "Traditional Water Photography", rating: 5, use: true },
+    { phrase: "waterfall photography", rating: 5, use: true },
     { phrase: "Water & Waterfall Photography – Nature in Motion", rating: 5, use: true },
     { phrase: "classic water landscape prints", rating: 4, use: true }
   ],
@@ -1247,16 +1317,17 @@ railwayTraditional: {
   landingPhrases: [
     { phrase: "Railway Photography", rating: 5, use: true },
     { phrase: "Train Photography Collection", rating: 5, use: true },
+    { phrase: "train photography", rating: 5, use: true },
+    { phrase: "vintage train photography", rating: 5, use: true },
+    { phrase: "steam locomotive photography", rating: 4, use: true },
     { phrase: "Steam Engine Gallery", rating: 4, use: true },
     { phrase: "Locomotive Art Collection", rating: 4, use: true },
     { phrase: "Historic Trains", rating: 3, use: true }
   ],
   imagePhrases: [
-    { phrase: "train photography", rating: 5, use: true },
     { phrase: "steam engine photography", rating: 5, use: true },
     { phrase: "locomotive photography", rating: 4, use: true },
     { phrase: "railway photography", rating: 4, use: true },
-    { phrase: "vintage train photography", rating: 4, use: true },
     { phrase: "historic locomotive photography", rating: 3, use: true },
     { phrase: "steam train art", rating: 3, use: true },
     { phrase: "railway art prints", rating: 3, use: true },
@@ -1264,6 +1335,24 @@ railwayTraditional: {
     { phrase: "train photography prints", rating: 3, use: true },
     { phrase: "vintage railway wall art", rating: 3, use: true },
     { phrase: "timeless locomotive prints", rating: 3, use: true }
+  ]
+},
+
+railwayPainterly: {
+  path: "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color",
+  def: "Painterly train photography—steam locomotives and vintage railways rendered with atmosphere and narrative depth.",
+  landingPhrases: [
+    { phrase: "Painterly Train Photography", rating: 5, use: true },
+    { phrase: "vintage train photography", rating: 5, use: true },
+    { phrase: "train photography", rating: 5, use: true },
+    { phrase: "steam locomotive art", rating: 4, use: true },
+    { phrase: "fine art train photography", rating: 4, use: true }
+  ],
+  imagePhrases: [
+    { phrase: "painterly locomotive photography", rating: 4, use: true },
+    { phrase: "steam engine wall art", rating: 4, use: true },
+    { phrase: "vintage railroad photography", rating: 3, use: true },
+    { phrase: "atmospheric train photography", rating: 3, use: true }
   ]
 },
 

@@ -298,7 +298,9 @@ export const essays = [
           `Ambiguity keeps it alive.`,
           `When an image refuses to explain itself, it does not abandon the viewer. It invites them to remain — to feel, to question, and to bring their own life into the space the image creates.`,
           `The story does not end on the wall.`,
-          `It continues wherever the viewer carries it next.`
+          `It continues wherever the viewer carries it next.`,
+          `This participatory mode — where the viewer brings their own experience into the frame — does not always remain visual. Some works ask for a different kind of attention altogether.`,
+          `<a href="/Other/Blog/hearing-the-art" style="color: #8b0000; text-decoration: none;">→ Hearing the Art</a>`
         ]
       }
     ]
