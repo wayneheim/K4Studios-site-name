@@ -2,12 +2,12 @@ export const painterlyStory = [
   /* 1: Opening — The Stage, Not the Surface */
   {
  tagline: "Embrace the Past. Live the Story.",
-  subhead: "Fine Art for Those Who See Walls as a Stage",
+  subhead: "Fine Art Photography Where Every Frame Tells a Story",
   paragraphs: [
     "There are photographs—then there are the moments that refuse to sit still.",
 
     // ✅ NEW grounding sentence
-    "K4 Studios is the home of painterly fine art photography by Wayne Heim — Western themed, historically driven, and crafted for collectors who value story, atmosphere, and authenticity.",
+    "K4 Studios is the home of fine art photography by Wayne Heim — painterly and traditional styles, Western themed, historically driven, and crafted for collectors who value story, atmosphere, and authenticity.",
 
     "Every image here is a One-Image Movie™—a single, cinematic breath where time, myth, and memory hold still for just a moment. Painterly portraits. Western grit. Landscapes that breathe. Forgotten stories and icons of history and invention, rendered in light that feels carved from memory itself.",
     "This is fine art photography for collectors who want more than décor. Cowboys and outlaws. WWII heroes and Civil War soldiers. Mountains that hum old hymns. Steel and steam and leather and dust. Step inside the story—and claim your place in it."
@@ -68,6 +68,7 @@ export const painterlyStory = [
     ],
     list: [
       "Painterly Fine Art Photography — textures and tones shaped like brushstrokes born from light.",
+      "Traditional Fine Art Photography — classical composition, honest light, and enduring craft.",
       "Cinematic Storytelling — a single frame carrying the emotional weight of an unseen film.",
       "Historical & Western Authenticity — real dust, real people, real moments breathing through the work."
     ],
@@ -103,6 +104,7 @@ export const painterlyStory = [
     list: [
       "<a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> — Cowboy Portraits & Mythic Frontier Stories",
       "<a href='/Painterly-Western-Photography'>Painterly Western Photography</a> — Craft, Light & Narrative Discipline",
+      "<a href='/Galleries/Fine-Art-Photography'>Traditional Fine Art Photography</a> — Classical Landscapes, Portraits & Transportation",
       "Painterly Landscape Photography — Mountains, Waterfalls, Western Horizons",
       "Facing History — Civil War, WWII, Historical Reenactment Photography",
       "One-Image Movies™ — The signature K4 cinematic storytelling experience",
