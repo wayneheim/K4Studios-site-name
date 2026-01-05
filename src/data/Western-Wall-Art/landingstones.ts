@@ -34,7 +34,7 @@ export const landingWallArt = {
     {
       title: "Print Options",
       href: "/Other/Print-Options",
-      thumb: "/images/tombstones/print-options-ts.jpg",
+      thumb: "/images/tombstones/print-options-ts.webp",
     },
     {
       title: "Fine Art on Wood",

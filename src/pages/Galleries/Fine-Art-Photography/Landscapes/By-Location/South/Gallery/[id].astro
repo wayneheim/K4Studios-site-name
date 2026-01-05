@@ -19,7 +19,10 @@ export async function getStaticPaths() {
 
 const { id } = Astro.params;
 const imageData = galleryData.find(img => img.id === id);
-if (!imageData) throw new Error(`Image with id ${id} not found.`);
+// Gracefully handle missing images - redirect to gallery landing instead of 500
+if (!imageData) {
+  return Astro.redirect("/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery", 302);
+}
 
 
 // Ensure absolute URL (don’t prepend if already absolute)
