@@ -3,7 +3,7 @@ export const landingWestern = {
   title: "K4 Studios",
   subtitle:
     "Painterly and Fine Art Photography by Wayne Heim",
-  breadcrumb: "Every Image a Leaf in the Scrapbook of Time",
+  breadcrumb: "Embrace the Past. Live the Story",
 
   // Keywords for structured data and semantic SEO
   keywords: [
