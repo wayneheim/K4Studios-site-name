@@ -17,4 +17,9 @@
 ## */Portraits copy/*   /Portraits/:splat   301!
 # Legacy SmugMug path - redirect to archive on SmugMug
 */Photoshootsandevents/*   https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat   301!
-/data/system/*  403!
+/data/system/*  404!
+
+# Block SmugMug API endpoints - these should never be crawled
+/api/*  404!
+/api/v2/*  404!
+/api/v3/*  404!

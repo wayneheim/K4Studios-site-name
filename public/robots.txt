@@ -27,6 +27,17 @@ Disallow: /hack/feed.mg
 
 # --- Google services ---
 User-agent: Googlebot
+Disallow: /api/
+Disallow: /api/v2/
+Disallow: /api/v3/
+Disallow: /buy/
+Disallow: /cart/
+Disallow: /key/
+Disallow: /photo/
+Disallow: /services/
+Disallow: /_rpc/
+Disallow: /upload/
+Disallow: /video/
 Allow: /
 User-agent: Googlebot-Image
 Allow: /
@@ -43,10 +54,24 @@ Allow: /
 
 # --- Bing and DuckDuckGo ---
 User-agent: Bingbot
+Disallow: /api/
+Disallow: /api/v2/
+Disallow: /api/v3/
+Disallow: /buy/
+Disallow: /cart/
+Disallow: /key/
+Disallow: /photo/
+Disallow: /services/
+Disallow: /_rpc/
+Disallow: /upload/
+Disallow: /video/
 Allow: /
 User-agent: Bingbot-Image
 Allow: /
 User-agent: DuckDuckBot
+Disallow: /api/
+Disallow: /api/v2/
+Disallow: /api/v3/
 Allow: /
 
 # --- Applebot and related services ---
