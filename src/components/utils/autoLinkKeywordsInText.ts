@@ -241,20 +241,25 @@ export function autoLinkKeywordsInText(
       const res = getSectionForKW(lc, semantic);
       if (res && res.type === 'landing') {
         const targetPath = res.section.path;
-        // Normalize target path for comparison
-        const normTarget = targetPath.replace(/\/+$/, '').toLowerCase();
-        
-        // If linking to same page, use fallbackImagePath if defined
-        if (normTarget === currentPath) {
-          if (res.section.fallbackImagePath) {
-            // Store the fallback path to use in step (c)
-            fallbackImagePath = res.section.fallbackImagePath;
-          } else {
-            // No fallback defined - skip linking entirely (render plain text)
-            skipLinking = true;
-          }
+        // Skip if no path defined (glossary-only entries)
+        if (!targetPath) {
+          skipLinking = true;
         } else {
-          href = targetPath;
+          // Normalize target path for comparison
+          const normTarget = targetPath.replace(/\/+$/, '').toLowerCase();
+          
+          // If linking to same page, use fallbackImagePath if defined
+          if (normTarget === currentPath) {
+            if (res.section.fallbackImagePath) {
+              // Store the fallback path to use in step (c)
+              fallbackImagePath = res.section.fallbackImagePath;
+            } else {
+              // No fallback defined - skip linking entirely (render plain text)
+              skipLinking = true;
+            }
+          } else {
+            href = targetPath;
+          }
         }
       }
     }
@@ -340,7 +345,7 @@ export function autoLinkKeywordsInText(
       if (syn) {
         // try landing
         const res2 = getSectionForKW(syn, semantic);
-        if (res2 && res2.type === 'landing') {
+        if (res2 && res2.type === 'landing' && res2.section.path) {
           href = res2.section.path;
         }
 
