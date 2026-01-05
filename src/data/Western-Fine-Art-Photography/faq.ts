@@ -87,4 +87,14 @@ export const facingFAQ = [
       "Wayne Heim's painterly approach creates work that feels timeless without imitating antique processes. The 'vintage' quality emerges from craft and storytelling, not artificial aging or sepia filters."
     ],
   },
+
+  // --- PHASE 4: Authority/Education FAQ ---
+  {
+    q: "What is the history of Western photography?",
+    a: [
+      "Western photography emerged alongside westward expansion in the mid-1800s. Early practitioners like Timothy O'Sullivan documented frontier geology and settlement, while Edward S. Curtis created extensive portraits of Native American tribes — work that remains influential and contested.",
+      "Through the 20th century, photographers from Ansel Adams to documentary ranch photographers shaped how the West was seen. Contemporary Western fine art photography builds on this lineage while questioning its myths — focusing on character, lived experience, and narrative complexity rather than spectacle.",
+      "Wayne Heim's work belongs to this tradition: rooted in history, shaped by craft, and focused on the human presence that defines the American West."
+    ],
+  },
 ];

@@ -9,7 +9,7 @@ export const storySliderData = [
   {
     "id": "i-ncFcHDM",
     "title": "Dust and Distance — A Cowboy’s Goodbye",
-    "story": "As the lone coach disappeared down the lonely road, he stood silent—rooted by more than trail dust. Would their paths ever cross again?  As a man of few but deliberate words, had he said too little… too much? Should he have asked her not to go?\n\nThe questions would hang heavy on his heart — like the low-lying clouds blanketing the valley floor, choking out the day’s first light.\n\nBut the decision was made. And the road ahead—was now his alone to walk."
+    "story": "As the lone coach disappeared down the lonely road, he stood silent—rooted by more than trail dust. Would their paths ever cross again? As a man of few but deliberate words, had he said too little… too much? Should he have asked her not to go?\n\nThe questions would hang heavy on his heart — like the low-lying clouds blanketing the valley floor, choking out the day’s first light.\n\nBut the decision was made. And the road ahead—was now his alone to walk."
   },
   {
     "id": "i-B7ZSdfs",
@@ -84,7 +84,7 @@ export const storySliderData = [
   {
     "id": "i-3SxncXS",
     "title": "The Keeper of Old Winds",
-    "story": "He didn’t speak much, not because he lacked words, but because he carried too many. The land had carved its lessons deep into him—etched into the creases around his eyes, threaded through the long silver of his beard, whispered in every slow turn of his gaze.\n\nSome men grow older.  \nOthers become part of the horizon.\n\nHe was the latter."
+    "story": "He didn’t speak much, not because he lacked words, but because he carried too many. The land had carved its lessons deep into him—etched into the creases around his eyes, threaded through the long silver of his beard, whispered in every slow turn of his gaze.\n\nSome men grow older. \nOthers become part of the horizon.\n\nHe was the latter."
   },
   {
     "id": "i-HBRmWg4",

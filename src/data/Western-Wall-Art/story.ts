@@ -18,9 +18,9 @@ export const wallArtStory = [
   {
     subhead: "Archival Quality, Built to Last",
     paragraphs: [
-      "Every print is produced on archival materials — museum-grade papers, pigment inks rated for generations, and finishing options designed for serious collectors.",
+      "Every print is produced on archival materials — museum-grade papers, pigment inks rated for generations, and finishing options designed for lasting presence.",
       "Whether you choose a traditional framed print, a gallery-wrapped canvas, or one of Wayne's signature Baltic Birch wood presentations, each piece is crafted to museum standards.",
-      "These aren't impulse purchases. They're investments in work that will hold its value — aesthetically and materially — for decades.",
+      "This is work made to live with — to deepen over years, not fade into the background.",
     ],
   },
   {
@@ -31,10 +31,10 @@ export const wallArtStory = [
     ],
   },
   {
-    subhead: "For Collectors, Not Casual Browsers",
+    subhead: "For Those Who Look Closely",
     paragraphs: [
-      "If you're looking for something to match a color scheme or fill an empty wall, there are easier options. But if you're a collector who values original work with narrative substance and museum-quality craft — this is where you belong.",
-      "Browse the galleries below. When you find work that stays with you, explore print options and sizing. Each piece is printed on demand, signed, and shipped with collector-grade care.",
+      "This work isn't for everyone. It's for collectors who value original work with narrative substance — images that reward attention and resist easy summary.",
+      "Browse the galleries below. When something stays with you, explore print options and sizing.",
     ],
   },
 ];

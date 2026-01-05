@@ -66,6 +66,14 @@ export const facingFAQ = [
     a: [
       "Each piece is handcrafted, narrative-driven fine art — not stock imagery or algorithmic décor.",
       "In a landscape filled with mass-produced and AI-generated visuals, Wayne’s photography stands apart for its authenticity, emotional depth, and respect for history, craft, and story."
-    ],
-  }
+    ],  },
+
+  // --- PHASE 4: Authority/Education FAQ ---
+  {
+    q: "What is historical reenactment photography?",
+    a: [
+      "Historical reenactment photography documents living history events — Civil War encampments, WWII beach landings, frontier cowboy gatherings — with the same narrative depth and visual discipline as traditional fine art.",
+      "Unlike documentary photography, reenactment photography treats these events as opportunities for storytelling. The camera captures not just what happened, but how it felt — the weight of history carried forward by those who choose to live it.",
+      "Wayne Heim's Facing History series approaches reenactment as collaboration: working with living historians whose research and authenticity inform every image."
+    ],  }
 ];

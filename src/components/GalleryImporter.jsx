@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { generateSmartMetadata } from "../utils/autoTextGenerator.mjs";
 
 /* ===== helpers ===== */
 function pickImage(d = {}) {
@@ -32,6 +33,25 @@ function prettyFromPath(p) {
     .split("/")
     .map(s => s.replace(/-/g, " ").replace(/\b\w/g, m => m.toUpperCase()))
     .join(" / ");
+}
+
+/* Detect if an image has placeholder metadata that needs review */
+function needsMetadataReview(img) {
+  if (!img) return false;
+  const title = (img.title || "").trim();
+  const desc = (img.description || "").trim();
+  // Placeholder patterns
+  const placeholderTitles = ["Untitled", ""];
+  const placeholderDescPatterns = [
+    /coming soon/i,
+    /to be added/i,
+    /more info coming/i,
+    /full description coming/i,
+    /new image!/i,
+  ];
+  if (placeholderTitles.includes(title)) return true;
+  if (placeholderDescPatterns.some(p => p.test(desc))) return true;
+  return false;
 }
 
 /* Simple buttons like Orderer */
@@ -70,6 +90,12 @@ export default function GalleryImporter({ showTitle = true }) {
 
   /* selection */
   const [selected, setSelected] = useState(() => new Set());
+
+  /* metadata review modal state */
+  const [reviewQueue, setReviewQueue] = useState([]); // images needing review
+  const [reviewIndex, setReviewIndex] = useState(0);  // current position in queue
+  const [showReviewModal, setShowReviewModal] = useState(false);
+  const [pendingImport, setPendingImport] = useState([]); // images ready to import after review
 
   /* when options arrive, fill in defaults if missing */
   useEffect(() => {
@@ -180,11 +206,30 @@ export default function GalleryImporter({ showTitle = true }) {
       return;
     }
 
+    // Check for images that need metadata review (Untitled, placeholder text, etc.)
+    const flagged = toAppend.filter(needsMetadataReview);
+    if (flagged.length > 0) {
+      // Store pending import and show review modal
+      setPendingImport({ toAppend, dupCount });
+      setReviewQueue(flagged);
+      setReviewIndex(0);
+      setShowReviewModal(true);
+      return; // Don't proceed - modal will handle the rest
+    }
+
+    // No flagged items - proceed with import directly
+    await executeImport(toAppend, dupCount);
+  }
+
+  // Separated import execution so modal can call it after review
+  async function executeImport(toAppend, dupCount) {
     // Build final full array: keep ghosts + current visibles, then append new
     const ghosts   = destFull.filter(isGhost);
     const visibles = destFull.filter(isReal);
     const finalVis = visibles.concat(toAppend);
     const finalFull = ghosts.concat(finalVis);
+
+    const totalChosen = toAppend.length + dupCount;
 
     try {
       const res = await fetch("/.netlify/functions/updateGalleryOrder", {
@@ -199,11 +244,47 @@ export default function GalleryImporter({ showTitle = true }) {
 
       setDestFull(finalFull);
       setSelected(new Set());
-      alert(`${toAppend.length} of ${chosen.length} images imported — ${dupCount} already in this gallery.`);
+      setPendingImport(null);
+      setReviewQueue([]);
+      setShowReviewModal(false);
+      alert(`${toAppend.length} of ${totalChosen} images imported — ${dupCount} already in this gallery.`);
     } catch (err) {
       alert("Import failed.\n\n" + (err?.message || err));
     }
   }
+
+  // --- Review Modal Handlers ---
+  function handleAutoGenerateAll() {
+    if (!pendingImport) return;
+    const { toAppend, dupCount } = pendingImport;
+    
+    // Apply auto-generated metadata to all flagged items
+    const updated = toAppend.map(img => {
+      if (needsMetadataReview(img)) {
+        const generated = generateSmartMetadata(img, destPath);
+        return { ...img, ...generated };
+      }
+      return img;
+    });
+    
+    executeImport(updated, dupCount);
+  }
+
+  function handleSkipReview() {
+    if (!pendingImport) return;
+    // Import as-is without any changes
+    executeImport(pendingImport.toAppend, pendingImport.dupCount);
+  }
+
+  function handleCancelReview() {
+    setShowReviewModal(false);
+    setPendingImport(null);
+    setReviewQueue([]);
+    setReviewIndex(0);
+  }
+
+  // Current item being reviewed (for future per-item editing)
+  const currentReviewItem = reviewQueue[reviewIndex] || null;
 
   const total = filtered.length;
   const selectedCount = [...selected].length;
@@ -215,6 +296,59 @@ export default function GalleryImporter({ showTitle = true }) {
 
   return (
     <div className="p-6 max-w-7xl mx-auto text-sm">
+      {/* Metadata Review Modal */}
+      {showReviewModal && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-lg w-full p-6">
+            <h2 className="text-lg font-semibold mb-2 text-amber-700">
+              ⚠️ Metadata Review Required
+            </h2>
+            <p className="text-sm text-gray-600 mb-4">
+              <strong>{reviewQueue.length}</strong> image{reviewQueue.length !== 1 ? 's' : ''} ha{reviewQueue.length !== 1 ? 've' : 's'} placeholder metadata 
+              (e.g., "Untitled" titles or generic descriptions).
+            </p>
+            
+            {/* Show preview of flagged items */}
+            <div className="mb-4 max-h-40 overflow-y-auto border rounded p-2 bg-gray-50">
+              {reviewQueue.slice(0, 5).map((img, i) => (
+                <div key={img.id} className="flex items-center gap-2 py-1 text-xs">
+                  <span className="text-amber-600">⚡</span>
+                  <span className="font-mono text-gray-500 truncate" style={{maxWidth: 120}}>{img.id}</span>
+                  <span className="text-gray-400">—</span>
+                  <span className="truncate text-gray-700">{img.title || '(no title)'}</span>
+                </div>
+              ))}
+              {reviewQueue.length > 5 && (
+                <div className="text-xs text-gray-400 pt-1">
+                  ...and {reviewQueue.length - 5} more
+                </div>
+              )}
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <button
+                onClick={handleAutoGenerateAll}
+                className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 font-medium"
+              >
+                ✨ Auto-Generate Metadata for All
+              </button>
+              <button
+                onClick={handleSkipReview}
+                className="w-full px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200"
+              >
+                Skip — Import As-Is
+              </button>
+              <button
+                onClick={handleCancelReview}
+                className="w-full px-4 py-2 text-gray-500 hover:text-gray-700"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {showTitle && <h1 className="text-2xl font-semibold mb-3">Image-Gallery Importer</h1>}
 
       {/* selectors with clear labels */}

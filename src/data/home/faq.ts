@@ -80,7 +80,7 @@ export const facingFAQ = [
     q: "Why choose Wayne Heim over mass-produced or decorative art?",
     a: [
       "Every image is intentionally crafted—never manufactured. Wayne’s work is grounded in real photography, painterly discipline, historical awareness, and narrative structure.",
-      "In a market saturated with AI-generated imagery and generic décor, this work stands apart: human, cinematic, emotionally grounded, and built to endure."
+      "In a market saturated with AI-generated imagery and generic décor, this work stands apart: human, cinematic, emotionally grounded, and built to endure. <a href='/Western-Wall-Art'>Explore the collection</a>."
     ],
   }
 ];

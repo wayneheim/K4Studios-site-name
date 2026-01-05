@@ -4,13 +4,27 @@
  * Not a blog. Not dated. Not chronological.
  */
 
+export interface EssaySection {
+  subhead?: string;
+  paragraphs: string[];
+  bullets?: string[];
+  paragraphsAfter?: string[];
+}
+
+export interface Essay {
+  slug: string;
+  title: string;
+  subtitle: string;
+  sections: EssaySection[];
+}
+
 export const seeingLanding = {
   title: "Seeing",
   subtitle: "Visual Literacy Essays",
   intro: "A small collection of essays on visual literacy — how images carry meaning, why some endure, and how to look without relying on categories or labels."
 };
 
-export const essays = [
+export const essays: Essay[] = [
   {
     slug: "when-the-medium-stops-being-the-point",
     title: "When the Medium Stops Being the Point",

@@ -82,16 +82,22 @@ function buildDefaultFields(
   let fromUrlTitle = toTitleCase(
     urlLeaf.replace(/i-[A-Za-z0-9]+/, "").replace(/[-_]+/g, " ").trim()
   );
+  // If URL doesn't yield a usable title, clear it so we use variants
   if (!fromUrlTitle || fromUrlTitle === "A") {
-    fromUrlTitle = "Untitled";
+    fromUrlTitle = "";
   }
   const topic = humanizeSlug(gallerySlugFromCli || PRIMARY_SLUG || urlPath);
 
+  // SEO-friendly title variants for new images without explicit titles
   const titleVariants = [
-    `Untitled — ${topic}`,
+    `${topic} Portrait`,
     `${topic} Study`,
-    `Field Notes — ${topic}`,
-    `From The ${topic} Collection`,
+    `Western Portrait`,
+    `Frontier Study`,
+    `Cowboy Portrait`,
+    `Range Rider`,
+    `Trail Hand`,
+    `Western Figure`,
   ];
   const pickedTitle = fromUrlTitle || pick(titleVariants, id);
 
