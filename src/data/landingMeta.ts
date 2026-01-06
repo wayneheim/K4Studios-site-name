@@ -520,6 +520,32 @@ export const landingMetaDB = {
     twitterImage: "/og/cowboy.jpg",
   },
 
+  "/Western-Black-and-White-Photography": {
+    ogTitle: "Western Black and White Photography – Dramatic Cowboy Portraits",
+    ogDescription:
+      "Western black and white photography by Wayne Heim. Monochrome cowboy portraits and frontier imagery with timeless, dramatic depth. Museum-quality fine art prints.",
+    ogImage: "/og/cowboy.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Western Black and White Photography – Wayne Heim",
+    twitterDescription:
+      "Dramatic black and white Western photography. Cowboy portraits and frontier scenes in timeless monochrome by Wayne Heim.",
+    twitterImage: "/og/cowboy.jpg",
+  },
+
+  "/Painterly-Western-Photography": {
+    ogTitle: "Painterly Western Photography – The Craft Behind the Work",
+    ogDescription:
+      "Painterly Western photography by Wayne Heim. Explore the discipline, light, and narrative philosophy behind character-driven cowboy portraits and frontier fine art.",
+    ogImage: "/og/cowboy.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Painterly Western Photography – Wayne Heim",
+    twitterDescription:
+      "The craft behind painterly Western photography. Discipline, light, and narrative philosophy in cowboy fine art by Wayne Heim.",
+    twitterImage: "/og/cowboy.jpg",
+  },
+
   "default": {
     ogTitle: "Wayne Heim Fine Art Photography",
     ogDescription:
