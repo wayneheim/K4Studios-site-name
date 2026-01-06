@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
+import { buildContextualAlt, getPageContext } from "../utils/buildContextualAlt";
 
 // Glob import: grabs all carousel slide data files from Galleries, Other, and top-level landing pages
 // rename to cap
@@ -8,19 +9,32 @@ const allCarousels = import.meta.glob([
   "../data/Other/**/carousel.ts",
   "../data/Painterly-Western-Photography/carousel.ts",
   "../data/Western-Fine-Art-Photography/carousel.ts",
-  "../data/Western-Black-and-White-Photography/carousel.ts"
+  "../data/Western-Black-and-White-Photography/carousel.ts",
+  "../data/Western-Cowboy-Photography/carousel.ts",
+  "../data/Western-Wall-Art/carousel.ts"
 ], { eager: true });
 
-export default function ImageBar2({ slides }) {
+export default function ImageBar2({ slides, pageContext: propPageContext }) {
   const trackRef = useRef(null);
   const [finalSlides, setFinalSlides] = useState(slides ?? []);
   // Duplicate slides for infinite scroll effect - done in React state, not DOM manipulation
   const [duplicated, setDuplicated] = useState(false);
+  // Resolved page context (from prop or auto-detected from path)
+  const [resolvedContext, setResolvedContext] = useState(propPageContext);
 
   // First effect: match current path to a carousel file and load slides
   useEffect(() => {
+    const currentPath = window.location.pathname;
+    
+    // Auto-resolve page context if not passed as prop
+    if (!propPageContext) {
+      const autoContext = getPageContext(currentPath);
+      if (autoContext) {
+        setResolvedContext(autoContext);
+      }
+    }
+    
     if (!slides || slides.length === 0) {
-      const currentPath = window.location.pathname;
 
       const matchKey = Object.keys(allCarousels).find((key) => {
         // Convert file path to URL path
@@ -69,19 +83,26 @@ export default function ImageBar2({ slides }) {
       <meta itemProp="creator" content="K4 Studios" />
 
       <div className="carousel-track" ref={trackRef}>
-        {displaySlides.map((s, i) => (
-          <figure
-            className="carousel-slide"
-            key={`slide-${i}`}
-            itemScope
-            itemType="https://schema.org/ImageObject"
-          >
-            <a href={s.href} title={s.alt} aria-label={s.alt}>
-              <img src={s.src} alt={s.alt} loading="lazy" itemProp="contentUrl" />
-            </a>
-            <figcaption itemProp="description">{s.description}</figcaption>
-          </figure>
-        ))}
+        {displaySlides.map((s, i) => {
+          // Build contextual alt text with keyword rotation
+          // Use modulo of original slides length to ensure consistent rotation after duplication
+          const originalIndex = i % finalSlides.length;
+          const contextualAlt = buildContextualAlt(s.alt, resolvedContext, originalIndex);
+          
+          return (
+            <figure
+              className="carousel-slide"
+              key={`slide-${i}`}
+              itemScope
+              itemType="https://schema.org/ImageObject"
+            >
+              <a href={s.href} title={contextualAlt} aria-label={contextualAlt}>
+                <img src={s.src} alt={contextualAlt} loading="lazy" itemProp="contentUrl" />
+              </a>
+              <figcaption itemProp="description">{s.description}</figcaption>
+            </figure>
+          );
+        })}
       </div>
     </section>
   );

@@ -481,6 +481,19 @@ export const landingMetaDB = {
     twitterImage: "/og/traditional.jpg",
   },
 
+  "/Western-Fine-Art-Photography": {
+    ogTitle: "Western Fine Art Photography – Cowboy Portraits & Frontier Stories",
+    ogDescription:
+      "Western fine art photography by Wayne Heim. Character-driven cowboy portraits, Indigenous subjects, and narrative frontier imagery. Museum-quality fine art prints for collectors of the American West.",
+    ogImage: "/og/cowboy.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Western Fine Art Photography – Wayne Heim",
+    twitterDescription:
+      "Western fine art photography exploring cowboys, Indigenous portraits, and the human experience of the American West. Collector-quality prints by Wayne Heim.",
+    twitterImage: "/og/cowboy.jpg",
+  },
+
   "/Western-Cowboy-Photography": {
     ogTitle: "Western Cowboy Photography – Authentic Portraits by Wayne Heim",
     ogDescription:

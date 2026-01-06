@@ -1,14 +1,27 @@
 import { useState, useEffect } from 'react';
+import { buildContextualAlt, getPageContext } from '../utils/buildContextualAlt';
 
-export default function TombstoneNav({ items = [], title, subtitle }) {
+export default function TombstoneNav({ items = [], title, subtitle, pageContext: propPageContext }) {
   const gridClass = `tile-grid${items.length === 2 ? ' two-tiles' : ''}`;
 
   // Client-side random thumb selection from thumbs array
   const [selectedThumbs, setSelectedThumbs] = useState(() => 
     items.map(item => item.thumbs?.[0] || item.thumb || '')
   );
+  
+  // Resolved page context (from prop or auto-detected from path)
+  const [resolvedContext, setResolvedContext] = useState(propPageContext);
 
   useEffect(() => {
+    // Auto-resolve page context if not passed as prop
+    if (!propPageContext) {
+      const currentPath = window.location.pathname;
+      const autoContext = getPageContext(currentPath);
+      if (autoContext) {
+        setResolvedContext(autoContext);
+      }
+    }
+    
     // On mount, pick random thumbs from the thumbs array if available
     setSelectedThumbs(items.map(item => {
       if (item.thumbs && item.thumbs.length > 0) {
@@ -16,7 +29,7 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
       }
       return item.thumb || '';
     }));
-  }, [items]);
+  }, [items, propPageContext]);
 
   return (
     <section className="tombstone-nav">
@@ -26,29 +39,34 @@ export default function TombstoneNav({ items = [], title, subtitle }) {
       <div className="tombstone-divider" />
 
       <div className={gridClass}>
-        {items.map((item, index) => (
-          <a key={item.title} href={item.href} className="tile">
-            <div
-              className="tombstone-card tombstone-animate"
-              style={{ animationDelay: `${1.05 + index * 0.1}s` }}
-            >
-              <img
-                src={selectedThumbs[index]}
-                alt={item.title}
-                loading="lazy"
-                className="tombstone-img"
-              />
-            </div>
-            <p
-              className="tombstone-title fade-in-up pop-effect"
-              style={{
-                animationDelay: `${1.27 + index * 0.2}s, ${2.8 + index * 0.42}s`,
-              }}
-            >
-              {item.title}
-            </p>
-          </a>
-        ))}
+        {items.map((item, index) => {
+          // Build contextual alt text with keyword rotation
+          const contextualAlt = buildContextualAlt(item.title, resolvedContext, index);
+          
+          return (
+            <a key={item.title} href={item.href} className="tile" title={contextualAlt}>
+              <div
+                className="tombstone-card tombstone-animate"
+                style={{ animationDelay: `${1.05 + index * 0.1}s` }}
+              >
+                <img
+                  src={selectedThumbs[index]}
+                  alt={contextualAlt}
+                  loading="lazy"
+                  className="tombstone-img"
+                />
+              </div>
+              <p
+                className="tombstone-title fade-in-up pop-effect"
+                style={{
+                  animationDelay: `${1.27 + index * 0.2}s, ${2.8 + index * 0.42}s`,
+                }}
+              >
+                {item.title}
+              </p>
+            </a>
+          );
+        })}
       </div>
 
       <style jsx>{`

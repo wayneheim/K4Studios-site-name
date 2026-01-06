@@ -170,6 +170,16 @@ facingHistory: {
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "Western Fine Art Photography", rating: 5, use: true },
+    { phrase: "western photography", rating: 5, use: true },
+    { phrase: "western fine art", rating: 5, use: true },
+    { phrase: "western art photography", rating: 5, use: true },
+    { phrase: "American West photography", rating: 4, use: true },
+    { phrase: "fine art western", rating: 4, use: true },
+    { phrase: "western portrait photography", rating: 4, use: true },
+    { phrase: "western themed fine art", rating: 4, use: true },
+    { phrase: "frontier fine art photography", rating: 4, use: true },
+    { phrase: "western fine art prints", rating: 3, use: true },
+    { phrase: "western art prints", rating: 3, use: true },
   ],
   imagePhrases: []
 },
