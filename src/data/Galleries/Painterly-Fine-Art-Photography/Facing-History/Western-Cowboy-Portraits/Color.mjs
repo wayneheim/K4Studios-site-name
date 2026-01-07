@@ -703,7 +703,8 @@ export const galleryData = [
     "themes": {
       "cowboys-and-horses": 79,
       "dust-thunder": 3,
-      "the-chaise": 15
+      "the-chaise": 15,
+      "the-chase": 15
     }
   },
   {
@@ -735,7 +736,8 @@ export const galleryData = [
     "themes": {
       "cowboys-and-horses": 0,
       "dust-thunder": 2,
-      "the-chaise": 17
+      "the-chaise": 17,
+      "the-chase": 17
     }
   },
   {
@@ -1071,7 +1073,8 @@ export const galleryData = [
       "cowboys-with-horses": 2,
       "cowboys-and-horses": 3,
       "law-outlaws": 1,
-      "the-chaise": 20
+      "the-chaise": 20,
+      "the-chase": 20
     }
   },
   {
@@ -2366,7 +2369,8 @@ export const galleryData = [
       "dust-thunder": 7,
       "law-outlaws": 13,
       "sketches-of-legends": 14,
-      "the-chaise": 13
+      "the-chaise": 13,
+      "the-chase": 13
     }
   },
   {
@@ -2401,7 +2405,8 @@ export const galleryData = [
     "themes": {
       "cowboys-and-horses": 80,
       "dust-thunder": 11,
-      "the-chaise": 14
+      "the-chaise": 14,
+      "the-chase": 14
     }
   },
   {
@@ -3047,7 +3052,8 @@ export const galleryData = [
       "cowboys-with-horses": 14,
       "cowboys-and-horses": 18,
       "dust-thunder": 14,
-      "the-chaise": 0
+      "the-chaise": 0,
+      "the-chase": 0
     }
   },
   {
@@ -7388,7 +7394,8 @@ export const galleryData = [
       "cowboys-and-horses": 21,
       "dust-thunder": 23,
       "frontier-women": 35,
-      "the-chaise": 9
+      "the-chaise": 9,
+      "the-chase": 9
     },
     "contentSource": "human"
   },
@@ -7731,7 +7738,8 @@ export const galleryData = [
       "dust-thunder": 26,
       "frontier-women": 42,
       "law-outlaws": 51,
-      "the-chaise": 2
+      "the-chaise": 2,
+      "the-chase": 2
     }
   },
   {
@@ -15412,7 +15420,8 @@ export const galleryData = [
       "cowboys-and-horses": 35,
       "dust-thunder": 22,
       "law-outlaws": 76,
-      "the-chaise": 3
+      "the-chaise": 3,
+      "the-chase": 3
     }
   },
   {
@@ -15451,7 +15460,8 @@ export const galleryData = [
       "cowboys-and-horses": 36,
       "dust-thunder": 27,
       "law-outlaws": 75,
-      "the-chaise": 12
+      "the-chaise": 12,
+      "the-chase": 12
     }
   },
   {
@@ -16123,7 +16133,8 @@ export const galleryData = [
       "cowboys-and-horses": 43,
       "frontier-women": 80,
       "law-outlaws": 77,
-      "the-chaise": 6
+      "the-chaise": 6,
+      "the-chase": 6
     }
   },
   {
@@ -16163,7 +16174,8 @@ export const galleryData = [
       "dust-thunder": 25,
       "frontier-women": 81,
       "law-outlaws": 78,
-      "the-chaise": 7
+      "the-chaise": 7,
+      "the-chase": 7
     }
   },
   {
@@ -16200,7 +16212,8 @@ export const galleryData = [
       "cowboys-and-horses": 46,
       "dust-thunder": 30,
       "frontier-women": 89,
-      "the-chaise": 5
+      "the-chaise": 5,
+      "the-chase": 5
     }
   },
   {
@@ -16237,7 +16250,8 @@ export const galleryData = [
     "themes": {
       "cowboys-and-horses": 54,
       "frontier-women": 87,
-      "the-chaise": 1
+      "the-chaise": 1,
+      "the-chase": 1
     }
   },
   {
@@ -17036,7 +17050,8 @@ export const galleryData = [
       "cowboys-and-horses": 55,
       "dust-thunder": 29,
       "law-outlaws": 79,
-      "the-chaise": 10
+      "the-chaise": 10,
+      "the-chase": 10
     }
   },
   {
@@ -17241,7 +17256,8 @@ export const galleryData = [
     "themes": {
       "cowboys-and-horses": 61,
       "dust-thunder": 24,
-      "the-chaise": 8
+      "the-chaise": 8,
+      "the-chase": 8
     }
   },
   {
@@ -17754,7 +17770,8 @@ export const galleryData = [
     "sortOrder": 379,
     "themes": {
       "cowboys-and-horses": 68,
-      "the-chaise": 16
+      "the-chaise": 16,
+      "the-chase": 16
     }
   },
   {
@@ -20708,7 +20725,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 452,
     "themes": {
-      "the-chaise": 4
+      "the-chaise": 4,
+      "the-chase": 4
     }
   },
   {
@@ -20733,7 +20751,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 453,
     "themes": {
-      "the-chaise": 11
+      "the-chaise": 11,
+      "the-chase": 11
     }
   },
   {
@@ -20758,7 +20777,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 454,
     "themes": {
-      "the-chaise": 19
+      "the-chaise": 19,
+      "the-chase": 19
     }
   },
   {
@@ -21027,7 +21047,8 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 464,
     "themes": {
-      "the-chaise": 18
+      "the-chaise": 18,
+      "the-chase": 18
     },
     "first_seen": "2026-01-04"
   },

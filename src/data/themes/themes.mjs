@@ -157,14 +157,14 @@ export const themes = [
     "updatedAt": "2025-12-09T22:34:12.020Z"
   },
   {
-    "name": "The Chaise",
-    "slug": "the-chaise",
+    "name": "The Chase",
+    "slug": "the-chase",
     "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
     "description": "Bandits on the loose. Cowboys, horses and outlaws doing what they do best: living life on the edge.",
     "visible": true,
     "imageCount": 21,
     "firstImage": "i-v4vRSb8",
     "createdAt": "2026-01-07T20:59:52.590Z",
-    "updatedAt": "2026-01-07T21:50:37.736Z"
+    "updatedAt": "2026-01-07T23:40:20.413Z"
   }
 ];
