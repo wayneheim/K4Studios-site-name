@@ -1458,6 +1458,50 @@ export default function ThemeBuilder() {
                 : "—"}
             </div>
           </div>
+          
+          {/* Copy Theme Link - for sharing curated collections */}
+          {themeSlug && themeDatasetPath && (
+            <div className="p-3 bg-amber-50 border border-amber-200 rounded-md">
+              <div className="text-xs text-amber-700 mb-2 font-medium">
+                Share this collection:
+              </div>
+              <div className="flex gap-2 items-center">
+                <input
+                  type="text"
+                  readOnly
+                  value={(() => {
+                    // Build shareable URL: /Galleries/.../Color?theme=slug&view=grid
+                    const datasetPath = themeDatasetPath
+                      .replace(/^\//, '')
+                      .replace(/^src\/data\/Galleries\//, '/Galleries/')
+                      .replace(/\.mjs$/, '');
+                    return `${typeof window !== 'undefined' ? window.location.origin : 'https://k4studios.net'}${datasetPath}?theme=${themeSlug}&view=grid`;
+                  })()}
+                  className="flex-1 text-xs px-2 py-1 border rounded bg-white font-mono"
+                  onClick={(e) => e.target.select()}
+                />
+                <button
+                  onClick={() => {
+                    const datasetPath = themeDatasetPath
+                      .replace(/^\//, '')
+                      .replace(/^src\/data\/Galleries\//, '/Galleries/')
+                      .replace(/\.mjs$/, '');
+                    const shareUrl = `${window.location.origin}${datasetPath}?theme=${themeSlug}&view=grid`;
+                    navigator.clipboard.writeText(shareUrl).then(() => {
+                      note("Theme link copied!");
+                    }).catch(() => {
+                      // Fallback: select the input
+                      alert("Copy failed - please select and copy manually");
+                    });
+                  }}
+                  className="px-3 py-1 rounded-md border border-amber-300 bg-amber-100 hover:bg-amber-200 text-amber-800 text-sm font-medium whitespace-nowrap"
+                >
+                  📋 Copy Theme Link
+                </button>
+              </div>
+            </div>
+          )}
+          
           <div className="flex gap-2">
             <button
               onClick={() => setStep("selectTheme")}

@@ -149,16 +149,19 @@ const meta = {
 };
 
 /** ---------------------------------------------------------------
- * Detect if this is an image page
+ * Detect if this is an image page or shared theme link
  * --------------------------------------------------------------- */
 const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
 const isImagePage = lastSegment.startsWith("i-");
+// Check for ?view=grid (shared theme links should skip intro)
+const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
+const skipIntro = isImagePage || isDirectGridView;
 ---
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
     <!-- Header -->
-    {!isImagePage && (
+    {!skipIntro && (
       <div id="header-section" class="section-visible" style="z-index:10;position:relative;">
         <GalleryHeader client:load breadcrumb={breadcrumb} />
       </div>
@@ -167,7 +170,7 @@ const isImagePage = lastSegment.startsWith("i-");
     <div class="h-0 md:h-5"></div>
 
     <!-- Intro -->
-    {!isImagePage && (
+    {!skipIntro && (
       <div id="intro-section" class="section-visible" style="z-index:1;position:relative;">
         <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
         {usedEntranceData.subtitle && (
@@ -183,7 +186,7 @@ const isImagePage = lastSegment.startsWith("i-");
     )}
 
     <!-- Chapter Viewer -->
-    {isImagePage && (
+    {skipIntro && (
       <div id="chapter-section" class="section-visible" style="display:block;">
         <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
       </div>

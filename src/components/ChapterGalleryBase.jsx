@@ -375,9 +375,13 @@ export default function ChapterGalleryBase({
   }, [themeSlug]);
 
   // Strip theme param from URL immediately after processing (SEO: prevents duplicate content)
+  // BUT: preserve params if ?view=grid is present (shared theme links need to survive refresh)
   useEffect(() => {
     if (typeof window === "undefined" || !themeSlug) return;
     const url = new URL(window.location.href);
+    // If this is a shared theme link (?view=grid), keep the params for refresh support
+    if (url.searchParams.get("view") === "grid") return;
+    // Otherwise, strip theme param for SEO
     if (url.searchParams.has("theme")) {
       url.searchParams.delete("theme");
       window.history.replaceState({}, "", url.pathname + url.hash);
@@ -433,7 +437,17 @@ export default function ChapterGalleryBase({
     return null;
   }
 
-  const [hasEnteredChapters, setHasEnteredChapters] = useState(false);
+  // Auto-enter chapters if URL has image ID or ?view=grid (shared theme links)
+  const [hasEnteredChapters, setHasEnteredChapters] = useState(() => {
+    if (typeof window !== "undefined") {
+      // Enter immediately if viewing a specific image
+      if (/\/(i-[a-zA-Z0-9_-]+)/.test(window.location.pathname)) return true;
+      // Enter immediately if ?view=grid is present (shared theme link)
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("view") === "grid") return true;
+    }
+    return false;
+  });
   // SSR-safe initial index: match initialImageId or URL
   const initialIndex = (() => {
     if (!galleryData.length) return 0;
@@ -453,7 +467,16 @@ export default function ChapterGalleryBase({
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [isExpanded, setIsExpanded] = useState(false);
   const [showNotes, setShowNotes] = useState(false);
-  const [viewMode, setViewMode] = useState("flip");
+  // Support ?view=grid URL param to force grid view (for shared theme links)
+  const [viewMode, setViewMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const urlView = params.get("view");
+      // Only override to grid if explicitly requested via URL
+      return urlView === "grid" ? "grid" : "flip";
+    }
+    return "flip";
+  });
   const [isZoomed, setIsZoomed] = useState(false);
   const [showArrowHint, setShowArrowHint] = useState(false);
   const [matColor, setMatColor] = useState("white");
@@ -574,14 +597,35 @@ export default function ChapterGalleryBase({
     if (/\/(i-[a-zA-Z0-9_-]+)/.test(window.location.pathname)) setHasEnteredChapters(true);
   }, []);
 
-  // Push URL
+  // Auto-enter and hide intro for shared theme links (?view=grid)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("view") === "grid") {
+      // Force enter chapters and hide intro sections
+      setHasEnteredChapters(true);
+      const header = document.getElementById("header-section");
+      const intro = document.getElementById("intro-section");
+      const chapter = document.getElementById("chapter-section");
+      if (header) header.classList.add("section-hidden");
+      if (intro) intro.classList.add("section-hidden");
+      if (chapter) {
+        chapter.style.display = "block";
+        chapter.classList.remove("section-hidden");
+        chapter.classList.add("section-visible");
+      }
+    }
+  }, []);
+
+  // Push URL (but not when in grid view via URL param - shared theme links stay on grid)
   useEffect(() => {
     const imageId = galleryData[currentIndex]?.id;
     const alreadyOnImage = /\/i-[a-zA-Z0-9_-]+$/.test(window.location.pathname);
+    // Don't push URL when viewing grid via ?view=grid (shared theme links)
+    if (viewMode === "grid") return;
     if (!imageId || (!hasEnteredChapters && !alreadyOnImage) || !basePath) return;
     const newUrl = `${basePath}/${imageId}`;
     if (window.location.pathname !== newUrl) window.history.pushState(null, "", newUrl);
-  }, [currentIndex, hasEnteredChapters, basePath, galleryData]);
+  }, [currentIndex, hasEnteredChapters, basePath, galleryData, viewMode]);
 
   // ✅ Replaced old title updater with the hook
   const entry = galleryData[currentIndex];
@@ -1825,6 +1869,10 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                 }}
                 initialImageIndex={currentIndex}
                 style={{ display: viewMode === "grid" ? "block" : "none" }}
+                // Pass theme info for shared theme links (grid header)
+                themeName={activeTheme?.name || null}
+                themeDescription={activeTheme?.description || null}
+                themeImageCount={activeTheme ? galleryData.length : null}
               />
             )}
           </>

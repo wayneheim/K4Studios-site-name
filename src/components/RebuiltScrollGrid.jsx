@@ -32,6 +32,10 @@ export default function RebuiltScrollGrid({
   initialImageIndex = 0,
   galleryKey = "default",
   onClose,
+  // Optional theme props for shared theme links (grid landing view)
+  themeName = null,
+  themeDescription = null,
+  themeImageCount = null,
 }) {
   const [colCount, setColCount] = useState(getColCount());
   const [simIndex, setSimIndex] = useState(initialImageIndex);
@@ -158,6 +162,34 @@ export default function RebuiltScrollGrid({
 
   return (
     <section className="bg-white py-10 px-6">
+      {/* Theme Header - shown when viewing a shared theme collection */}
+      {themeName && (
+        <header 
+          className="text-center pb-6 mb-4 border-b border-gray-200"
+          style={{ fontFamily: "'Glegoo', serif" }}
+        >
+          <h1 
+            className="text-2xl md:text-3xl font-semibold"
+            style={{ color: "#5a4a3a" }}
+          >
+            {themeName}
+          </h1>
+          {themeDescription && (
+            <p 
+              className="mt-3 text-gray-600 max-w-2xl mx-auto text-sm md:text-base"
+              style={{ lineHeight: 1.6 }}
+            >
+              {themeDescription}
+            </p>
+          )}
+          {themeImageCount && (
+            <p className="mt-2 text-xs text-gray-400">
+              {themeImageCount} image{themeImageCount !== 1 ? 's' : ''} in this collection
+            </p>
+          )}
+        </header>
+      )}
+
       {/* Header with hover/focus effect */}
       <div
         className="chapter-title-block mb-[-3rem] relative flex items-center justify-center gap-4"

@@ -67,9 +67,8 @@ export default function ThemeBlock({ galleryKey }) {
     "numberOfItems": galleryThemes.length,
     "itemListElement": galleryThemes.map((t, index) => {
       const datasetPath = t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/\.mjs$/, '');
-      const themeUrl = t.firstImage 
-        ? `${datasetPath}/${t.firstImage}?theme=${t.slug}`
-        : `${datasetPath}?theme=${t.slug}`;
+      // Use grid view URL for theme links (shows collection overview)
+      const themeUrl = `${datasetPath}?theme=${t.slug}&view=grid`;
       return {
         "@type": "ListItem",
         "position": index + 1,
@@ -154,13 +153,10 @@ export default function ThemeBlock({ galleryKey }) {
           alignItems: "center",
         }}>
           {galleryThemes.map((t, index) => {
-            // Build the theme URL - navigate to the first themed image with theme filter
-            // Use the theme's dataset path to construct the correct gallery URL
-            // Use pre-stored firstImage from theme registry (no async loading needed)
+            // Build the theme URL - navigate to grid view with theme filter
+            // Shows collection overview with theme name, description, and all images
             const datasetPath = t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/\.mjs$/, '');
-            const themeUrl = t.firstImage 
-              ? `${datasetPath}/${t.firstImage}?theme=${t.slug}`
-              : `${datasetPath}?theme=${t.slug}`;
+            const themeUrl = `${datasetPath}?theme=${t.slug}&view=grid`;
             
             // Determine if this theme should be visually hidden (but still in DOM for SEO)
             const isHidden = !expanded && needsExpansion && index >= VISIBLE_COUNT;
