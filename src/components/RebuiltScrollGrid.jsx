@@ -190,7 +190,8 @@ export default function RebuiltScrollGrid({
         </header>
       )}
 
-      {/* Header with hover/focus effect */}
+      {/* Header with hover/focus effect - hide when viewing a theme collection */}
+      {!themeName && (
       <div
         className="chapter-title-block mb-[-3rem] relative flex items-center justify-center gap-4"
         // Remove top space on mobile (colCount===1); keep large offset for centered desktop presentation
@@ -260,6 +261,7 @@ export default function RebuiltScrollGrid({
         </h2>
         <div className="fade-line" style={{ marginBottom: "2.5rem" }} />
       </div>
+      )}
 
       {/* Show Previous Button */}
       {start > 0 && (

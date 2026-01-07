@@ -1888,8 +1888,8 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
         />
       )}
 
-  {/* Swipe hint + Guided Tour */}
-      <SwipeHint galleryKey={galleryKey || "k4-gallery"} />
+  {/* Swipe hint + Guided Tour - only show in flip mode, not grid */}
+      {viewMode === "flip" && <SwipeHint galleryKey={galleryKey || "k4-gallery"} />}
   <GalleryTour sectionKey={sectionKey} imageId={currentId} openNonce={tourOpenNonce} />
 
       {/* Pricing Modal for Engrained Series */}
