@@ -1473,8 +1473,6 @@ export default function ChapterGalleryBase({
                                 if (!tourOpen()) {
                                   setShowStoryShow(true);
                                   setEventCounts((counts) => ({ ...counts, slideshow: counts.slideshow + 1 }));
-                                  setEventCounts((counts) => ({ ...counts, share: counts.share + 1 }));
-                                  setEventCounts((counts) => ({ ...counts, exit: counts.exit + 1 }));
                                 }
                               }}
                               aria-label="Play K4 Slideshow"
@@ -1519,8 +1517,6 @@ export default function ChapterGalleryBase({
                               if (!tourOpen()) {
                                 setShowStoryShow(true);
                                 setEventCounts((counts) => ({ ...counts, slideshow: counts.slideshow + 1 }));
-                                setEventCounts((counts) => ({ ...counts, share: counts.share + 1 }));
-                                setEventCounts((counts) => ({ ...counts, exit: counts.exit + 1 }));
                               }
                             }}
                             aria-label="Play K4 Slideshow"

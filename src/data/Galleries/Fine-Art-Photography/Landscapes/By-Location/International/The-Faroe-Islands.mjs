@@ -44,8 +44,8 @@ export const galleryData = [
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-9nbhQs2/7/NRrCdLFfLGnw8XjnZMTGMXz8v4hP5LCJBjxNrJ7sb/XL/20180923_123031_tonemapped-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-9nbhQs2/7/Nc4NzHf7Lh5vJZNB5wwJpBmvGLpDpmjXSR3XThsNw/L/20180923_123031_tonemapped-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-9nbhQs2/7/Kbqb9bgsv5NMtTvGPnZHnq66BGjG56GvMrSwBckxt/M/20180923_123031_tonemapped-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-9nbhQs2/7/Kk8f84mgmmMKCzhDcfPdsKxHLbC85zpSBdZw35Jtk/S/20180923_123031_tonemapped-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-9nbhQs2/7/Nc4NzHf7Lh5vJZNB5wwJpBmvGLpDpmjXSR3XThsNw/L/20180923_123031_tonemapped-Edit-L.jpg",
+    "srcOriginal": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-9nbhQs2/7/Kk8f84mgmmMKCzhDcfPdsKxHLbC85zpSBdZw35Jtk/S/20180923_123031_tonemapped-Edit-S.jpg"
   },
   {
     "id": "i-8fp2dv2",
