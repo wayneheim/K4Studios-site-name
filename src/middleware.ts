@@ -121,14 +121,29 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   const contentType = response.headers.get("content-type") || "";
 
   if (contentType.includes("text/html")) {
-    const body = await response.text();
+    // ✅ Read body directly - we'll always return a new Response anyway
+    let body: string;
+    try {
+      body = await response.text();
+    } catch (e) {
+      // If stream is already locked/consumed, return as-is
+      console.warn(`⚠️ Could not read response body on ${context.url.pathname}:`, e);
+      return response;
+    }
+    
     // Skip cleaning for large responses to avoid memory issues in Cloudflare
-    if (body.length > 1000000) return response;
+    if (body.length > 1000000) {
+      return new Response(body, {
+        status: response.status,
+        headers: response.headers,
+      });
+    }
 
     const { cleaned, changed } = stripNestedTags(body);
 
     if (changed) console.log(`🧹 Cleaned HTML on ${context.url.pathname}`);
 
+    // ✅ Always return a new Response to avoid stream issues
     return new Response(cleaned, {
       status: response.status,
       headers: response.headers,

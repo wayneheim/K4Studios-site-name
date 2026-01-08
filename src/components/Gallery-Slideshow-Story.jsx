@@ -453,7 +453,7 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
               <div className="w-screen h-screen flex items-center justify-center relative gallery-slideshow px-4 md:px-0">
                 <motion.img
                   src={getBestImageSrc(current)}
-                  alt={current.title || ""}
+                  alt={current.alt || current.title || ""}
                   className={`object-contain ${isVertical ? "vertical" : ""}`}
                   style={imgStyle}
                   {...kenBurns}

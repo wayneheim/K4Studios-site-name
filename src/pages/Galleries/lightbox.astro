@@ -99,6 +99,15 @@ const canonicalUrl = `https://www.k4studios.com${baseUrl}`;
 const landingMeta = getLandingMeta(baseUrl);
 const landingDescription = entranceData?.description || landingMeta?.ogDescription || "";
 
+// ✅ Image count for SEO title/description
+const imageCount = galleryData.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
+
+// ✅ Build SEO-optimized title and description
+const seoTitle = `${galleryTitle} – Complete Gallery Index (${imageCount} Images) | Wayne Heim Fine Art`;
+const seoDescription = landingDescription 
+  ? `Browse all ${imageCount} fine art photographs in the ${galleryTitle} collection. ${landingDescription.slice(0, 120)}...`
+  : `Explore the complete ${galleryTitle} gallery featuring ${imageCount} painterly fine art photographs by Wayne Heim. Each image captures cinematic Western storytelling.`;
+
 // ✅ Cleaner
 const clean = (val = "") =>
   String(val)
@@ -108,7 +117,7 @@ const clean = (val = "") =>
     .trim();
 ---
 
-<BaseLayout title={galleryTitle} description={`Full SEO index of ${galleryTitle} from Wayne Heim's K4 Studios`}>
+<BaseLayout title={seoTitle} description={seoDescription}>
   <!-- 🚫 NO-MINIFY-START (preserve JSON-LD formatting) -->
   <script type="application/ld+json" is:inline>
   {JSON.stringify({

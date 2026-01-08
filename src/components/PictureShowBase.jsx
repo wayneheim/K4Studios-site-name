@@ -722,7 +722,7 @@ const isSpeechActive = () => {
                     >
                       <img
                         src={img.src}
-                        alt={img.title}
+                        alt={img.alt || img.title}
                         className="w-[110px] h-[110px] object-cover group-hover:opacity-90"
                       />
                     </a>
@@ -921,7 +921,7 @@ const isSpeechActive = () => {
                         {/* Base image (show only when not hovered) */}
                         <img
                           src={currentImage?.src}
-                          alt={currentImage?.title}
+                          alt={currentImage?.alt || currentImage?.title}
                           className="w-full h-full object-contain"
                           style={{ opacity: isCardHovered ? 0 : 1, transition: 'opacity 500ms ease-out' }}
                           draggable={false}
@@ -1028,7 +1028,7 @@ const isSpeechActive = () => {
                     <div className="relative" style={{ lineHeight: 0 }}>
                       <img
                         src={getBestImageSrc(currentImage)}
-                        alt={currentImage?.title}
+                        alt={currentImage?.alt || currentImage?.title}
                         className="rounded-lg shadow-md"
                         onContextMenu={(e) => e.preventDefault()}
                         style={{

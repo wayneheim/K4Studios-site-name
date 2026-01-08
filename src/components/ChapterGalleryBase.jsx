@@ -955,7 +955,7 @@ export default function ChapterGalleryBase({
                         >
                           <img
                             src={galleryData[currentIndex]?.src}
-                            alt={galleryData[currentIndex]?.title}
+                            alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
                             className="chapter-image-mobile rounded-lg block"
                             style={
                               (() => {
@@ -1920,7 +1920,7 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                   <div className="text-center">
                     <img
                       src={galleryData[currentIndex]?.src}
-                      alt={galleryData[currentIndex]?.title}
+                      alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
                       className="w-full max-w-48 mx-auto rounded-lg shadow-md"
                     />
                     <h3 className="text-lg font-semibold text-gray-800 mt-3">

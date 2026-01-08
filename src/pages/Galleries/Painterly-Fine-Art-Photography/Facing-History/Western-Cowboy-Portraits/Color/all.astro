@@ -1,0 +1,406 @@
+---
+/**
+ * /all - Complete Gallery Index Page
+ * 
+ * This is the authoritative image index for this gallery.
+ * Clean URL, distinct from the curated landing page.
+ * Optimized for crawlability and SEO authority.
+ */
+import GalleryLightbox from "@/components/GalleryLightbox.jsx";
+import Footer from "@/components/Footer.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+// ✅ Direct import - no query params needed
+import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/ColorEntranceData.ts";
+
+// ✅ Filter out ghosts
+const galleryData = rawGalleryData.filter((img: any) => 
+  img.visibility !== "ghost" && img.id !== "i-k4studios"
+);
+
+// ✅ Gallery metadata
+const galleryTitle = "Western Cowboy Portraits – Color";
+const gallerySubtitle = entranceData?.subtitle || "Painterly Fine Art Photography";
+const imageCount = galleryData.length;
+
+// ✅ Clean URL paths
+const basePath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
+const canonicalUrl = `https://www.k4studios.com${basePath}/all`;
+const parentUrl = `https://www.k4studios.com${basePath}`;
+
+// ✅ SEO-optimized title and description (factual, not poetic)
+const seoTitle = `${galleryTitle} – Complete Gallery Index (${imageCount} Images) | Wayne Heim Fine Art`;
+const seoDescription = `Complete index of ${imageCount} Western cowboy fine art photographs by Wayne Heim. Browse the full color gallery with titles, stories, and image details.`;
+
+// ✅ Reference-style intro (distinct from landing page narrative)
+const indexIntro = `This page presents the complete image index for the ${galleryTitle} gallery. All ${imageCount} images are displayed and link to individual image pages with full stories and metadata.`;
+
+// ✅ Text cleaner for JSON-LD
+const clean = (val = "") =>
+  String(val)
+    .replace(/[\u0000-\u001F]+/g, " ")
+    .replace(/"/g, '\\"')
+    .replace(/\r?\n|\r/g, " ")
+    .trim();
+
+// ✅ Truncate story text for cards (150 chars max per Quill)
+const truncateStory = (story: string, maxLen = 150) => {
+  if (!story) return "";
+  const cleaned = clean(story);
+  if (cleaned.length <= maxLen) return cleaned;
+  return cleaned.slice(0, maxLen).replace(/\s+\S*$/, "") + "…";
+};
+
+// ✅ Pre-build per-image JSON-LD to avoid streaming issues
+const imageJsonLdMap = new Map();
+galleryData.forEach((item: any) => {
+  const imageUrl = item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "";
+  const linkUrl = `${basePath}/${item.id}`;
+  const fullUrl = `https://www.k4studios.com${linkUrl}`;
+  const title = clean(item.title);
+  const altText = item.alt 
+    ? clean(item.alt)
+    : `Western cowboy fine art photograph: ${title} – Wayne Heim`;
+  
+  imageJsonLdMap.set(item.id, JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    name: title,
+    description: altText,
+    contentUrl: imageUrl,
+    url: fullUrl,
+    creditText: "© Wayne Heim – K4 Studios",
+    license: "https://www.k4studios.com/licensing",
+    creator: { "@type": "Person", name: "Wayne Heim" },
+    mainEntityOfPage: fullUrl
+  }));
+});
+
+// ✅ Pre-build JSON-LD to avoid streaming issues
+const structuredDataJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.k4studios.com/#website",
+      "name": "K4 Studios",
+      "url": "https://www.k4studios.com",
+      "publisher": { "@id": "https://www.k4studios.com/#organization" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.k4studios.com/#organization",
+      "name": "K4 Studios",
+      "url": "https://www.k4studios.com",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.k4studios.com/#logo",
+        "url": "https://www.k4studios.com/images/K4Logo-web-b.jpg",
+        "width": 512,
+        "height": 512
+      },
+      "founder": { "@id": "https://www.k4studios.com/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.k4studios.com/#person",
+      "name": "Wayne Heim",
+      "jobTitle": "Fine Art Photographer",
+      "url": "https://www.k4studios.com/"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": canonicalUrl,
+      "name": galleryTitle + " – Complete Index",
+      "url": canonicalUrl,
+      "description": seoDescription,
+      "isPartOf": { "@id": parentUrl },
+      "creator": { "@id": "https://www.k4studios.com/#person" },
+      "numberOfItems": imageCount
+    }
+  ]
+}, null, 2);
+---
+
+<BaseLayout title={seoTitle} description={seoDescription}>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={structuredDataJson} />
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={canonicalUrl} />
+  <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <main>
+    <div class="logo">
+      <a href="/" aria-label="Go to K4 Studios Homepage">
+        <img src="/images/K4Logo-web-b.jpg" alt="K4 Studios Logo" />
+      </a>
+    </div>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <ol class="breadcrumb-list">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/Galleries/Painterly-Fine-Art-Photography">
+            <span itemprop="name">Painterly Fine Art</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">
+            <span itemprop="name">Facing History</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">
+            <span itemprop="name">Western Cowboy Portraits</span>
+          </a>
+          <meta itemprop="position" content="3" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href={basePath}>
+            <span itemprop="name">Color</span>
+          </a>
+          <meta itemprop="position" content="4" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">Complete Index</span>
+          <meta itemprop="position" content="5" />
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Header with image count -->
+    <div class="header">
+      <h1>{galleryTitle} ({imageCount} Images)</h1>
+      {gallerySubtitle && <p class="subtitle">{gallerySubtitle}</p>}
+      <p>Mouse over image to see full preview. Click image to view page.</p>
+    </div>
+
+    <!-- Index Intro (factual, reference-style) -->
+    <section class="gallery-intro">
+      <p>{indexIntro}</p>
+    </section>
+
+    <!-- Image Grid -->
+    <div class="ssr-grid">
+      {galleryData.map((item: any, idx: number) => {
+        const imageUrl = item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "";
+        const linkUrl = `${basePath}/${item.id}`;
+        const title = clean(item.title);
+        
+        // ✅ Auto alt text: prioritize existing alt, then build from description/keywords
+        let altText: string;
+        if (item.alt) {
+          altText = clean(item.alt);
+        } else if (item.description) {
+          // Use first sentence of description (truncated)
+          const firstSentence = item.description.split(/[.!?]/)[0];
+          altText = clean(firstSentence.slice(0, 150));
+        } else if (item.keywords?.length > 0) {
+          // Build from keywords: "Western portrait: keyword1, keyword2, keyword3"
+          const topKeywords = item.keywords.slice(0, 4).join(", ");
+          altText = `Western fine art photograph: ${topKeywords}`;
+        } else {
+          altText = `Western cowboy fine art photograph: ${title} by Wayne Heim`;
+        }
+        
+        const storyExcerpt = truncateStory(item.story || "");
+
+        return (
+          <div class="ssr-card" id={item.id}>
+            <a href={linkUrl} class="ssr-card-link">
+              <img src={imageUrl} alt={altText} title={altText} loading="lazy" />
+              <div class="ssr-card-content">
+                <span class="card-number">#{idx + 1}</span>
+                <h3>{title}</h3>
+                {storyExcerpt && <p>{storyExcerpt}</p>}
+              </div>
+            </a>
+          </div>
+        );
+      })}
+    </div>
+
+    <GalleryLightbox client:only="react" datasetPath="Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" showHeader={false} />
+    <Footer />
+  </main>
+
+  <style>
+    body { background:#fff; color:#2a1f17; font-family:'Glegoo',serif; }
+    main { min-height:100vh; padding:24px; }
+
+    .logo { display:flex; justify-content:center; margin:32px 0 16px; }
+    .logo a:hover { transform:scale(1.05); }
+    .logo img { width:100px; height:100px; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,.2); }
+
+    .breadcrumb-nav { text-align:center; margin-bottom:8px; font-family:'Glegoo',serif; }
+    .breadcrumb-list {
+      display:inline-flex; flex-wrap:wrap; justify-content:center;
+      gap:6px; list-style:none; padding:0; margin:0;
+      font-size:0.9rem; color:#6a5747;
+    }
+    .breadcrumb-list a { color:#85644b; text-decoration:none; transition:color 0.2s ease; }
+    .breadcrumb-list a:hover { color:#5a3e2b; }
+    .breadcrumb-list li::after { content:"›"; margin:0 4px; color:#9b8b7f; }
+    .breadcrumb-list li:last-child::after { content:""; }
+
+    .header { text-align:center; background:#000; color:#fff; padding:16px; border-radius:8px; margin-bottom:24px; }
+    .header h1 { margin:0; font-size:1.5em; font-weight:700; }
+    .header .subtitle { margin:4px 0 0; font-size:1em; font-weight:400; font-style:italic; color:#ccc; }
+    .header p { margin:8px 0 0; font-size:0.9em; }
+
+    .gallery-intro { max-width:900px; margin:0 auto 24px; text-align:center; }
+    .gallery-intro p { font-size:1rem; line-height:1.6; color:#3a2d24; margin:0; }
+
+    .ssr-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+      gap:20px;
+      margin:30px auto;
+      max-width:1400px;
+      padding:0 40px;
+      align-items:stretch;
+    }
+
+    .ssr-card {
+      position:relative;
+      border:1px solid #ddd;
+      border-radius:8px;
+      background:#fff;
+      box-shadow:0 2px 5px rgba(0,0,0,.1);
+      overflow:hidden;
+      transition: box-shadow 0.5s ease-in-out, outline 0.3s ease-in-out, outline-offset 0.3s ease-in-out;
+      display:flex;
+      flex-direction:column;
+      outline: 3px solid transparent;
+      outline-offset: -3px;
+    }
+
+    .ssr-card.row-active {
+      box-shadow: 0 8px 20px rgba(0,0,0,.18);
+    }
+
+    .ssr-card.card-hovered {
+      outline-color: #c9a227;
+      box-shadow: 0 12px 28px rgba(0,0,0,.25);
+    }
+
+    .ssr-card-link {
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      text-decoration:none;
+      color:inherit;
+      cursor:pointer;
+    }
+
+    .ssr-card img {
+      width:100%;
+      max-height:144px;
+      object-fit:cover;
+      object-position:center top;
+      transition: max-height 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .ssr-card.row-active img {
+      max-height:280px;
+    }
+
+    .ssr-card-content {
+      padding:10px 12px;
+      max-height:80px;
+      overflow:hidden;
+      transition: max-height 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor:pointer;
+      user-select:none;
+    }
+
+    .ssr-card.row-active .ssr-card-content {
+      max-height:200px;
+    }
+
+    .card-number {
+      font-size:.75rem;
+      color:#888;
+      display:block;
+      margin-bottom:2px;
+    }
+
+    .ssr-card-content h3 { font-size:.95rem; font-weight:700; margin:0 0 5px; }
+    .ssr-card-content p { font-size:.85rem; line-height:1.2rem; margin:0; color:#5a4a3a; }
+  </style>
+
+  <script is:inline>
+    (function () {
+      const grid = document.querySelector('.ssr-grid');
+      if (!grid) return;
+
+      const cards = Array.from(grid.querySelectorAll('.ssr-card'));
+      if (!cards.length) return;
+
+      let activeRowTop = null;
+      let hoveredCard = null;
+      let collapseTimer = null;
+      const ROW_TOLERANCE = 12;
+
+      function getRowTopForCard(card) {
+        return card.getBoundingClientRect().top;
+      }
+
+      function getRowCardsForTop(rowTop) {
+        return cards.filter((c) => Math.abs(c.getBoundingClientRect().top - rowTop) <= ROW_TOLERANCE);
+      }
+
+      function clearActiveRow() {
+        cards.forEach((c) => {
+          c.classList.remove('row-active');
+          c.classList.remove('card-hovered');
+        });
+        activeRowTop = null;
+        hoveredCard = null;
+      }
+
+      function setHoveredCard(card) {
+        if (hoveredCard === card) return;
+        if (hoveredCard) hoveredCard.classList.remove('card-hovered');
+        hoveredCard = card;
+        if (card) card.classList.add('card-hovered');
+      }
+
+      function setActiveRowByCard(card) {
+        if (!card) return;
+        setHoveredCard(card);
+        const rowTop = getRowTopForCard(card);
+        if (activeRowTop !== null && Math.abs(activeRowTop - rowTop) <= ROW_TOLERANCE) return;
+        activeRowTop = rowTop;
+        cards.forEach((c) => c.classList.remove('row-active'));
+        getRowCardsForTop(rowTop).forEach((c) => c.classList.add('row-active'));
+      }
+
+      function findCardForY(clientY) {
+        for (const c of cards) {
+          const rect = c.getBoundingClientRect();
+          if (clientY >= rect.top - ROW_TOLERANCE && clientY <= rect.bottom + ROW_TOLERANCE) return c;
+        }
+        return null;
+      }
+
+      grid.addEventListener('mousemove', (e) => {
+        clearTimeout(collapseTimer);
+        let card = e.target.closest('.ssr-card') || findCardForY(e.clientY);
+        if (card) setActiveRowByCard(card);
+      });
+
+      grid.addEventListener('mouseenter', () => clearTimeout(collapseTimer));
+      grid.addEventListener('mouseleave', () => {
+        collapseTimer = setTimeout(clearActiveRow, 180);
+      });
+
+      window.addEventListener('resize', clearActiveRow);
+    })();
+  </script>
+</BaseLayout>

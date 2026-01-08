@@ -51,16 +51,32 @@ let shareImage = currentImageUrl || previewImages?.[0]?.src || undefined;
   )}
 
   <!-- ✅ View Complete Listing link BELOW grid but ABOVE share (not on Blog pages) -->
-  {showPreviewBar && !isBlog && (
-    <div class="mt-5 w-full flex justify-center">
-      <a
-        href={`/Galleries/lightbox?dataset=${previewPath}`}
-        class="inline-block text-[#85644b] underline hover:text-[#5a3e2b] transition text-[1rem]"
-      >
-        View Complete Gallery
-      </a>
-    </div>
-  )}
+  {showPreviewBar && !isBlog && (() => {
+    // POC: Use clean /all route for Cowboy galleries, lightbox for others
+    const allRouteGalleries: { [key: string]: string } = {
+      "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color": "Browse the complete Western Cowboy Photography index",
+      "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White": "Browse the complete Western Cowboy B&W Photography index",
+      "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color": "Browse the complete Native American Portraits index"
+    };
+    const useCleanRoute = Object.prototype.hasOwnProperty.call(allRouteGalleries, previewPath);
+    const indexHref = useCleanRoute 
+      ? `${previewPath}/all`
+      : `/Galleries/lightbox?dataset=${previewPath}`;
+    const anchorText = useCleanRoute
+      ? allRouteGalleries[previewPath]
+      : "View Complete Gallery";
+    
+    return (
+      <div class="mt-5 w-full flex justify-center">
+        <a
+          href={indexHref}
+          class="inline-block text-[#85644b] underline hover:text-[#5a3e2b] transition text-[1rem]"
+        >
+          {anchorText}
+        </a>
+      </div>
+    );
+  })()}
 
   <div class="mx-auto max-w-xl px-4 pt-8 pb-4 footer-fade" aria-label="Footer controls and info">
 
