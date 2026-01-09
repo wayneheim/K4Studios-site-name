@@ -4,8 +4,7 @@ export const engrainedStory = [
     title: "Engrained by Wayne Heim – Custom Wood Prints of Painterly Western Art, WWII & Historic Scenes",
     subhead: "Fine Art Printed on Nature’s Canvas – Unique, Handcrafted, and Unforgettable.",
     paragraphs: [
-      `Welcome to <strong>Engrained</strong>, a distinctive collection from K4 Studios that transforms painterly fine art photography into custom wood prints. Each piece is printed on hand-selected ½-inch Baltic Birch wood panels, where the natural grain becomes part of the composition. <strong>Wayne Heim’s work employs a custom 5-layer printing technique that fuses each image into the wood itself</strong>, creating a visual and tactile dialogue between image and material.`,
-    ]
+      `Welcome to <strong>Engrained</strong>, a distinctive collection from K4 Studios that transforms painterly fine art photography into custom wood prints. Each piece is printed on hand-selected ½-inch Baltic Birch wood panels, where the natural grain becomes part of the composition. <strong>Wayne Heim’s work employs a custom 5-layer printing technique that fuses each image into the wood itself</strong>, creating a visual and tactile dialogue between image and material.`,      `Many of Wayne's images function as <strong>One-Image Movies™</strong>—photographs that carry the emotional weight of a complete narrative arc. When printed on wood, these stories gain physical presence, inviting not just viewing but connection.`    ]
   },
 
   // ─────────────────────────────── 2

@@ -119,6 +119,16 @@ const structuredDataJson = JSON.stringify({
       "isPartOf": { "@id": parentUrl },
       "creator": { "@id": "https://www.k4studios.com/#person" },
       "numberOfItems": imageCount
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Painterly Fine Art", "item": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography" },
+        { "@type": "ListItem", "position": 2, "name": "Facing History", "item": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History" },
+        { "@type": "ListItem", "position": 3, "name": "Western Cowboy Portraits", "item": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" },
+        { "@type": "ListItem", "position": 4, "name": "NA Color", "item": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color" },
+        { "@type": "ListItem", "position": 5, "name": "Complete Index", "item": canonicalUrl }
+      ]
     }
   ]
 }, null, 2);

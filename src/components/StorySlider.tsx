@@ -1,5 +1,29 @@
 import { useState, useEffect, useRef } from 'react';
 
+// Helper to log UI events to Google Sheets via Netlify function
+function logUIEvent(eventType: string, details: Record<string, any> = {}) {
+  const payload = JSON.stringify({
+    eventType,
+    details: {
+      ...details,
+      source_page: typeof window !== 'undefined' ? window.location.pathname : ''
+    },
+    timestamp: Date.now()
+  });
+  
+  if (typeof navigator !== 'undefined' && navigator.sendBeacon) {
+    const blob = new Blob([payload], { type: 'application/json' });
+    navigator.sendBeacon('/.netlify/functions/log-ui-event', blob);
+  } else if (typeof fetch !== 'undefined') {
+    fetch('/.netlify/functions/log-ui-event', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: payload,
+      keepalive: true
+    }).catch(() => {});
+  }
+}
+
 interface StoryItem {
   id: string;
   title: string;
@@ -13,7 +37,12 @@ interface StorySliderProps {
 }
 
 export default function StorySlider({ stories, galleryPath, variant = 'primary' }: StorySliderProps) {
-  const [selected, setSelected] = useState<StoryItem[]>([]);
+  // Initialize with shuffled stories immediately to avoid flash of empty content
+  const [selected, setSelected] = useState<StoryItem[]>(() => {
+    if (stories.length === 0) return [];
+    const shuffled = [...stories].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 5);
+  });
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
@@ -21,14 +50,6 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
 
   // Secondary variant has reduced visual weight
   const isSecondary = variant === 'secondary';
-
-  useEffect(() => {
-    if (stories.length > 0) {
-      // Shuffle and pick 5 random stories
-      const shuffled = [...stories].sort(() => Math.random() - 0.5);
-      setSelected(shuffled.slice(0, 5));
-    }
-  }, [stories]);
 
   // Handle transition with fade - crossfade at 10%
   const goToSlide = (index: number) => {
@@ -147,6 +168,12 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
               href={`${galleryPath}/${selected[current].id}`}
               className="absolute inset-0 z-0"
               aria-label={`View ${selected[current].title}`}
+              onClick={() => logUIEvent('story_slider_click', {
+                action: 'view_story',
+                image_id: selected[current].id,
+                title: selected[current].title,
+                gallery: galleryPath
+              })}
             />
             <article key={selected[current].id} className={`relative z-10 pointer-events-none transition-opacity duration-400 ease-in-out ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
               <h4 
@@ -186,7 +213,15 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
           {selected.map((item, index) => (
             <button
               key={item.id}
-              onClick={() => goToSlide(index)}
+              onClick={() => {
+                goToSlide(index);
+                logUIEvent('story_slider_click', {
+                  action: 'navigate_dot',
+                  slide_index: index,
+                  title: item.title,
+                  gallery: galleryPath
+                });
+              }}
               className={`rounded-full transition-all ${isSecondary ? 'w-2.5 h-2.5' : 'w-3 h-3'} ${
                 index === current
                   ? isSecondary ? 'bg-[#a09080]' : 'bg-[#8a7a65]'

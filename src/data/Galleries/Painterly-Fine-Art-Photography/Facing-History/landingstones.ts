@@ -1,7 +1,7 @@
 export const landingWestern = {
   // Facing History
-  title: "Facing History — One-Image Movie™ Historical Portraits",
-  subtitle: "Step Inside the Story — Living History Fine Art & Pictorialist Reenactment Photography",
+  title: "Facing History — Historically Themed Fine Art Photography",
+  subtitle: "Story-Driven Portraits — Living History Fine Art & Pictorialist Reenactment Photography",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [

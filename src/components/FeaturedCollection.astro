@@ -1,0 +1,304 @@
+---
+/**
+ * FeaturedCollection.astro
+ * 
+ * Reusable "featured collection" callout widget with embedded structured data.
+ * Use this to highlight a specific collection (e.g., Western Cowboy Portraits)
+ * and give visitors a fast lane to that section.
+ * 
+ * Structured data uses CollectionPage schema for Google rich results.
+ */
+
+interface Props {
+  /** The featured image to display */
+  image: {
+    src: string;
+    srcS?: string;
+    srcM?: string;
+    alt: string;
+    id: string;
+    width?: number;
+    height?: number;
+  };
+  /** Collection title displayed prominently */
+  title: string;
+  /** Short description/subtitle */
+  subtitle?: string;
+  /** CTA button text */
+  ctaText?: string;
+  /** CTA link destination */
+  ctaLink: string;
+  /** Collection name for structured data */
+  collectionName: string;
+  /** Number of items in collection (for schema) */
+  itemCount?: number;
+  /** Optional: hide on mobile */
+  hideOnMobile?: boolean;
+}
+
+const {
+  image,
+  title,
+  subtitle = "Painterly Fine Art Photography",
+  ctaText = "Enter the Frontier",
+  ctaLink,
+  collectionName,
+  itemCount = 250,
+  hideOnMobile = false
+} = Astro.props;
+
+// Use smaller image size for widget
+const displaySrc = image.srcM || image.srcS || image.src;
+const fullUrl = `https://www.k4studios.com${ctaLink}`;
+const imageUrl = `https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image.id}`;
+
+// Build structured data for this featured collection
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": collectionName,
+  "description": subtitle,
+  "url": fullUrl,
+  "numberOfItems": itemCount,
+  "creator": {
+    "@type": "Person",
+    "name": "Wayne Heim",
+    "url": "https://www.k4studios.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "K4 Studios",
+    "url": "https://www.k4studios.com"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": image.src,
+    "name": title,
+    "description": image.alt,
+    "creditText": "© Wayne Heim – K4 Studios"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": collectionName,
+    "numberOfItems": itemCount,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": imageUrl,
+        "name": title,
+        "image": image.src
+      }
+    ]
+  }
+});
+---
+
+<aside 
+  class:list={["featured-collection-widget", { "hide-mobile": hideOnMobile }]}
+  aria-label={`Featured: ${collectionName}`}
+>
+  <!-- Embedded structured data -->
+  <script type="application/ld+json" set:html={structuredData} />
+  
+  <a href={ctaLink} class="fc-link" aria-label={`${ctaText} – ${collectionName}`}>
+    <div class="fc-mat">
+      <div class="fc-image-wrap">
+        <img 
+          src={displaySrc}
+          srcset={`${image.srcS || displaySrc} 400w, ${image.srcM || displaySrc} 600w, ${image.src} 1024w`}
+          sizes="(max-width: 768px) 100vw, 320px"
+          alt={image.alt}
+          width={image.width || 600}
+          height={image.height || 400}
+          class="fc-image"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+    
+    <div class="fc-content">
+      <h3 class="fc-title">{title}</h3>
+      {subtitle && <p class="fc-subtitle">{subtitle}</p>}
+      <span class="fc-cta" data-hover="Explore Collection →">{ctaText} →</span>
+    </div>
+  </a>
+</aside>
+
+<script define:vars={{ collectionName, ctaLink }}>
+  // Track clicks on the Featured Collection CTA
+  document.addEventListener('DOMContentLoaded', () => {
+    const widget = document.querySelector('.featured-collection-widget');
+    const link = widget?.querySelector('.fc-link');
+    
+    if (link) {
+      link.addEventListener('click', () => {
+        // GA4 tracking
+        if (typeof gtag === 'function') {
+          gtag('event', 'featured_collection_click', {
+            event_category: 'engagement',
+            event_label: collectionName,
+            destination_url: ctaLink
+          });
+        }
+        
+        // Custom logging to Google Sheets via Netlify function
+        const sourcePage = window.location.pathname;
+        const payload = JSON.stringify({
+          eventType: 'featured_collection_click',
+          details: {
+            collection: collectionName,
+            destination: ctaLink,
+            source_page: sourcePage
+          },
+          timestamp: Date.now()
+        });
+        
+        // Use sendBeacon for reliable delivery during navigation
+        if (navigator.sendBeacon) {
+          const blob = new Blob([payload], { type: 'application/json' });
+          navigator.sendBeacon('/.netlify/functions/log-ui-event', blob);
+        } else {
+          fetch('/.netlify/functions/log-ui-event', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: payload,
+            keepalive: true
+          }).catch(() => {});
+        }
+      });
+    }
+  });
+</script>
+
+<style>
+  .featured-collection-widget {
+    margin-bottom: 1.5rem;
+    font-family: 'Glegoo', serif;
+  }
+  
+  .hide-mobile {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .hide-mobile {
+      display: block;
+    }
+  }
+  
+  .fc-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: linear-gradient(135deg, #faf8f5 0%, #f5f0e8 100%);
+    border: 1px solid #e3d5c9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(139, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .fc-link:hover {
+    box-shadow: 0 4px 16px rgba(139, 0, 0, 0.15);
+    border-color: #8b0000;
+  }
+  
+  .fc-mat {
+    padding: 0.5rem;
+    background: linear-gradient(135deg, #f5f0e8 0%, #ebe4da 100%);
+  }
+  
+  .fc-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  
+  .fc-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 8s ease-out;
+    will-change: transform;
+  }
+  
+  .fc-link:hover .fc-image {
+    transition: transform 8s ease-out;
+    transform: scale(1.1) translate(-2%, 4%) rotate(-1.5deg);
+  }
+  
+  .fc-link:not(:hover) .fc-image {
+    transition: transform 16s ease-in;
+  }
+  
+  .fc-content {
+    padding: 0.875rem 1rem;
+    text-align: center;
+  }
+  
+  .fc-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin: 0 0 0.25rem 0;
+    line-height: 1.3;
+  }
+  
+  .fc-subtitle {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+  }
+  
+  .fc-cta {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(139, 0, 0, 0.45);
+    padding: 0.35rem 0.75rem;
+    border: 1px solid rgba(139, 0, 0, 0.35);
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .fc-cta::after {
+    content: attr(data-hover);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    white-space: nowrap;
+  }
+  
+  .fc-link:hover .fc-cta {
+    background: rgba(139, 0, 0, 0.6);
+    color: transparent;
+    transition: background 0.2s ease, color 0.6s ease;
+  }
+  
+  .fc-link:hover .fc-cta::after {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    color: white;
+  }
+  
+  /* Compact variant for sidebar placement */
+  @media (min-width: 768px) {
+    .fc-content {
+      padding: 0.75rem 0.875rem;
+    }
+    
+    .fc-title {
+      font-size: 0.95rem;
+    }
+  }
+</style>

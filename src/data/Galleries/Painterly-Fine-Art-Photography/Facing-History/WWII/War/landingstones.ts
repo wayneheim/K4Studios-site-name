@@ -1,5 +1,5 @@
 export const landingWestern = {
-  title: "The Art of War — One-Image Movie™ WWII Battle Photography",
+  title: "The Art of War — WWII Battle Photography in Painterly Fine Art",
   subtitle: "Step Inside the Story — Scenes From the Front in Painterly Fine Art",
 
   // Keywords for structured data and semantic SEO (not meta keywords)

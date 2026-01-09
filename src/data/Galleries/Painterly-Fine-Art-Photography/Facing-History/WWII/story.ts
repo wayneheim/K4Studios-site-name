@@ -7,7 +7,8 @@ export const westernStory = [
     tagline: "Award-Winning WWII Reenactment, Collector Prints, and Living History",
     paragraphs: [
       `Step into the WWII gallery at K4 Studios, where history is reimagined through Wayne Heim’s painterly fine art photography. Each image is more than a photograph—it’s a cinematic, collector-grade print, crafted in collaboration with the nation’s top WWII reenactors at the largest living history events in America.`,
-      `Wayne’s painterly technique transforms the chaos and courage of the 1940s into emotive art, bringing to life stories of heroism, invention, camaraderie, and sacrifice. Every detail—from the mud-splattered tanks to the furrowed brows of the soldiers—invites you to experience the world of the Greatest Generation up close.`
+      `Wayne's painterly technique transforms the chaos and courage of the 1940s into emotive art, bringing to life stories of heroism, invention, camaraderie, and sacrifice. Every detail—from the mud-splattered tanks to the furrowed brows of the soldiers—invites you to experience the world of the Greatest Generation up close.`,
+      `Each image here embodies the <strong>One-Image Movie™</strong> philosophy—a single frame weighted with unspoken narrative, where what happens next remains just out of reach. The tension holds. The story lingers.`
     ]
   },
 

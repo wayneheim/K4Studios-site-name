@@ -1,7 +1,7 @@
 export const landingWestern = {
-  title: "WWII — One-Image Movie™ Portraits of The Greatest Generation",
+  title: "WWII Fine Art Photography — Portraits of The Greatest Generation",
   subtitle: "Step Inside the Story — Sacrifice, Brotherhood & Wartime Resilience in Painterly Fine Art",
-  description: "One-Image Movie™ WWII photography honoring the Greatest Generation by Wayne Heim",
+  description: "WWII fine art photography honoring the Greatest Generation by Wayne Heim",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [

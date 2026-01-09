@@ -23,7 +23,7 @@ const colorImg = pickRandom(colorPool);
 const bwImg = pickRandom(bwPool);
 
 export const landingWestern = {
-  title: "WWII Portraits — One-Image Movie™ Faces of The Greatest Generation",
+  title: "WWII Portraits — Faces of The Greatest Generation",
   subtitle: "Step Inside the Story — Sacrifice & Brotherhood in Painterly Fine Art",
 
   // Keywords for structured data and semantic SEO (not meta keywords)

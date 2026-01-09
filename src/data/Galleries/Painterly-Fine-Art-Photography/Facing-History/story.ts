@@ -2,8 +2,8 @@ export const facingHistoryStory = [
 
   // 1: INTRO
   {
-    title: "Facing History: Story-Driven & Historically Themed Fine Art Photography",
-    subhead: "Embrace the Past — Live the Story.",
+    title: "Storied & Historically Themed Fine Art Photography",
+    subhead: "Facing History — Embrace the Past. Live the Story.",
     paragraphs: [
       "Some moments refuse to fade. They linger—half memory, half myth—etched into the quiet architecture of who we are. Wayne Heim’s Facing History collection explores historically themed fine art photography through character, atmosphere, and narrative intent rather than spectacle or reenactment alone.",
       "These works are not casual recreations or costume-driven portraits. They are story-built studies shaped with painterly craft, researched authenticity, and the disciplined eye of a medical illustrator turned cinematic storyteller.",

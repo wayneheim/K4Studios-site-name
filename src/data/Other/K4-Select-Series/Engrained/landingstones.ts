@@ -1,6 +1,6 @@
 export const landingWestern = {
   // Engrained Series
-  title: "The Engrained Series — One-Image Movie™ Fine Art Wood Prints",
+  title: "The Engrained Series — Fine Art Photography on Wood",
   subtitle: "Stories Etched in Wood — Painterly Photography on Baltic Birch Panels",
 
   // Keywords for structured data and semantic SEO (not meta keywords)

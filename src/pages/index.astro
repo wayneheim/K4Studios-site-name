@@ -4,6 +4,7 @@ import LandingHeader      from '../components/Landing-HeaderHome.jsx';
 import HomeCarousel       from '../components/HomeCarousel.jsx';
 import TombstoneNav       from '../components/TombstoneNav.jsx';
 import LandingRightImages from '../components/LandingRightImages.jsx';
+import FeaturedCollection from '../components/FeaturedCollection.astro';
 import FAQAccordion       from '../components/FAQAccordion.jsx';
 import SiteFooter         from '../components/Footer.astro';
 import MobileStoryImages  from '../components/MobileStoryImages.jsx';
@@ -29,6 +30,17 @@ const { featheredImages, galleryDatas, galleryPaths } = getSideImages({
   targetCount: headingCount
 });
 const featheredImagesSidebar = featheredImages.slice(0, 6);
+
+// Featured Collection image (i-7Mzzbvp - "Last Hand" - unmistakably Western)
+const featuredCollectionImage = {
+  id: "i-7Mzzbvp",
+  src: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/NGKPsMCt7qGfMDNnXCFxCrN2DdmcQNdKhddf3vZRs/XL/_WHO5378-Edit-2-Edit-Edit-XL.jpg",
+  srcM: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/NXf3gDHVtPdmpxV9SDC2JGhk4DqzkH59jRsDGBhbN/M/_WHO5378-Edit-2-Edit-Edit-M.jpg",
+  srcS: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/MsFBSd9mBpwWMFpnxfggfLrKfrZzNkSz2KtjWgM4G/S/_WHO5378-Edit-2-Edit-Edit-S.jpg",
+  alt: "Painterly Western image of three cowboys on horseback racing forward, guns drawn, in a cloud of dust on the open prairie.",
+  width: 600,
+  height: 400
+};
 
 // ----------------------
 // Structured Data
@@ -150,9 +162,22 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       </div>
 
       <div class="sidebar-column hidden md:block">
+        <!-- Featured Collection CTA -->
+        <div class="reveal-on-scroll" style="margin-top: 1.5rem; margin-bottom: 6rem;">
+          <FeaturedCollection
+            image={featuredCollectionImage}
+            title="Western Cowboy Collection"
+            subtitle="Painterly portraits of the American West"
+            ctaText="Enter the Frontier"
+            ctaLink="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits"
+            collectionName="Western Cowboy Portraits"
+            itemCount={250}
+          />
+        </div>
+        
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
-            heading="Collection Samples"
+            heading="Explore Other Themes"
             images={featheredImagesSidebar}
           />
         </div>
