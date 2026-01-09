@@ -38,7 +38,7 @@ export const landingWestern = {
     {
       title: "Western Cowboy Collection",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
-      thumb: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/MsFBSd9mBpwWMFpnxfggfLrKfrZzNkSz2KtjWgM4G/S/_WHO5378-Edit-2-Edit-Edit-S.jpg",
+      thumb: "/images/tombstones/Cowboy-j-ts.webp",
       mobileOnly: true,
     },
   ],
