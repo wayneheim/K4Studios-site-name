@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-01-08T01:36:06.910Z",
+    "lastUpdated": "2026-01-09T02:10:46.172Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z"
   },
   "images": {
@@ -958,7 +958,9 @@
     "i-Pqw7qmk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs": "s-H35Wk3t",
     "i-CJmshF2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs": "s-3QPb4gE",
     "i-KZzHbBS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs": "s-LbSKvhg",
-    "i-mLhqPHZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs": "s-yRR3kvJ"
+    "i-mLhqPHZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs": "s-yRR3kvJ",
+    "i-8Ddjt5W:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-KRqNvf9",
+    "i-LL2Gp5r:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-edXUqQH"
   },
   "series": {
     "s-BB65wHk": {
@@ -11382,7 +11384,7 @@
         {
           "imageId": "i-RsLmsLZ",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Cowboy Art In Fine Art",
+          "title": "Color of Conviction",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/KnvBmX4rj79BPNfL7Zw5SLJq34CMwKZntgL7fP6bp/XL/_WHO0893-Edit-2-XL.jpg"
         }
       ],
@@ -14664,7 +14666,7 @@
         {
           "imageId": "i-G7csptc",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Fine Art Western Photography In Fine Art",
+          "title": "Lifted",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G7csptc/1/Nb7htkPs3R6QKt3KVVLmnG7w5ttnP8v9PTDKwXxbd/XL/_HF26959-Edit-Edit-XL.jpg"
         }
       ],
@@ -25990,6 +25992,48 @@
         ]
       },
       "createdAt": "2025-12-27T20:18:41.645Z"
+    },
+    "s-KRqNvf9": {
+      "primaryImageId": "i-8Ddjt5W",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "Worth Every Mile",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KzZMBSfv7RGNTQC8GnZGcrRRC9pk6NGHFqZ4ZVw6r/XL/_HF22208-1050-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-8Ddjt5W",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "Worth Every Mile",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KzZMBSfv7RGNTQC8GnZGcrRRC9pk6NGHFqZ4ZVw6r/XL/_HF22208-1050-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-08T20:48:17.900Z"
+    },
+    "s-edXUqQH": {
+      "primaryImageId": "i-LL2Gp5r",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "\"Welcome Party\"",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-LL2Gp5r",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "\"Special Delivery\"",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-08T22:43:00.847Z"
     }
   }
 }

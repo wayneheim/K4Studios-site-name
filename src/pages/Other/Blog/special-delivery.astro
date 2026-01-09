@@ -1,0 +1,304 @@
+---
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import { getStructuredData, getBlogBreadcrumbList } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
+import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
+import {
+  galleryDataMap,
+  sectionGalleries,
+  allImages
+} from "@/data/galleryMaps/MasterGalleryData.ts";
+import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as civilWarColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs";
+import { galleryData as civilWarBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
+import { galleryData as roaring20sColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs";
+import { galleryData as roaring20sBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs";
+import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs";
+import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
+import "@/styles/global.css";
+
+const sectionPath = "/Other/Blog/special-delivery";
+const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg";
+
+const structuredData = getStructuredData({
+  type: "BlogPosting",
+  data: {
+    headline: "Inside the Frame – Special Delivery",
+    description: "A conversation with Quill about hubris, power, and the moment when certainty gives way — exploring Wayne Heim's painterly Western image 'Special Delivery.'",
+    url: `https://k4studios.com${sectionPath}`,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-01-08",
+    image: coverImage,
+    articleSection: "Western Fine Art Photography",
+    keywords: ["western fine art photography", "visual storytelling", "cowboy art", "Wayne Heim", "painterly photography", "fine art prints", "train imagery", "western mythology"],
+    wordCount: 1200
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const breadcrumbsJSON = getBlogBreadcrumbList({
+  title: "Inside the Frame – Special Delivery",
+  url: `https://k4studios.com${sectionPath}`
+});
+
+const meta = {
+  ...getLandingMeta(sectionPath, coverImage),
+  ogUrl: `https://k4studios.com${sectionPath}`,
+  ogTitle: "Inside the Frame – Special Delivery",
+  ogDescription: "A conversation about hubris, power, and the moment when certainty gives way — exploring Wayne Heim's painterly Western image 'Special Delivery.'",
+  ogImage: coverImage,
+  ogImageAlt: "Special Delivery cover — four figures gathered at midnight before a halted train",
+  ogType: "article",
+  twitterUrl: `https://k4studios.com${sectionPath}`,
+  twitterTitle: "Inside the Frame – Special Delivery",
+  twitterDescription: "A conversation about hubris, power, and the moment when certainty gives way — exploring Wayne Heim's painterly Western image 'Special Delivery.'",
+  twitterImage: coverImage,
+  twitterCard: "summary_large_image"
+};
+
+// Prepare gallery preview images
+function shuffleArray<T>(arr: T[]): T[] {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+const allGalleryImages = [
+  ...painterlyImages.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" })),
+  ...civilWarColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color" })),
+  ...civilWarBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White" })),
+  ...roaring20sColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color" })),
+  ...roaring20sBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White" })),
+  ...wwiiPortraitsColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color" })),
+  ...wwiiPortraitsBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White" }))
+].filter(img => img.visibility !== "ghost");
+
+const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
+const previewPath = "/Galleries";
+
+const galleryDatas = Object.values(galleryDataMap).flat();
+const featheredImages = allImages.filter(img => (img as any).visibility !== "ghost").slice(0, 12);
+const galleryPaths = Object.keys(galleryDataMap);
+
+const linkKeywords = (text: string) =>
+  autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname);
+
+const blogBreadcrumb = `Other › <a href='/Other/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Special Delivery`;
+---
+
+<BaseLayout
+  title="Inside the Frame – Special Delivery"
+  structuredDataJSON={structuredData}
+  breadcrumbsJSON={breadcrumbsJSON}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <!-- ===================== -->
+    <!-- Heading -->
+    <!-- ===================== -->
+    <section style="text-align:center; padding:3rem 0;">
+      <h1 style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">
+        Inside the Frame
+      </h1>
+      <h2 style="font-size:1.5rem; color:#4a4a4a;">
+        Ep: 9 – Special Delivery
+      </h2>
+    </section>
+
+    <!-- ===================== -->
+    <!-- Cover Image -->
+    <!-- ===================== -->
+    <section style="text-align:center; margin-bottom:2rem; padding: 0 1rem;">
+      <a 
+        href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-LL2Gp5r" 
+        style="display:inline-block;"
+        onmouseenter="this.querySelector('img').style.boxShadow='0 0 0 2px rgba(255,255,255,0.85), 0 4px 15px 4px rgba(134,134,134,0.85)';"
+        onmouseleave="this.querySelector('img').style.boxShadow='none';"
+      >
+        <img 
+          src={coverImage} 
+          alt="Four men—intent, resolve, fortune, and neglect—stand in painterly fog before a halted night train, illuminated by a blazing headlamp" 
+          style="max-width:640px; width:100%; height:auto; margin:0 auto; border-radius:8px; transition:box-shadow .3s;" 
+        />
+        <div style="font-size:0.95rem; color:#888; text-align:right; margin-top:0.25rem;">
+          Click for details
+        </div>
+      </a>
+    </section>
+
+    <!-- ===================== -->
+    <!-- Story Block -->
+    <!-- ===================== -->
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+
+        <!-- Summary/Setup Paragraph -->
+        <p set:html={linkKeywords(`<em>Some images announce conflict. Others wait quietly for the moment when certainty gives way.</em>`)} />
+
+        <p set:html={linkKeywords(`<em>In this episode of Inside the Frame, we unpack Special Delivery — an image that looks, at first glance, like authority in control. Four men. A halted train. No witnesses. No station. Just confidence, power, and purpose under cover of night.</em>`)} />
+
+        <p set:html={linkKeywords(`<em>But this story isn't about dominance. It's about hubris — and the moment it stops noticing the ground beneath it.</em>`)} />
+
+        <!-- Poem Block -->
+        <blockquote style="border-left: 3px solid #8b0000; padding-left: 1rem; margin: 2rem 0; font-style: italic; color: #4a4a4a;">
+          <p><strong>Special Delivery</strong></p>
+          <p>Intent, resolve, fortune, neglect.<br/>
+          They gather for a midnight reckoning.</p>
+          <p>Wings of hubris melted by the rail's bright light—<br/>
+          blinded by station and contempt of creed,<br/>
+          each begets the other.</p>
+          <p>From the shadows, change is coming,<br/>
+          the schedule paid in full.</p>
+          <p>Well-timed vengeance—<br/>
+          a moral bridge to span.</p>
+          <p>Lines will cross, and this all ends—<br/>
+          justice dealt by unseen hands.</p>
+        </blockquote>
+
+        <h3>💬 Conversation</h3>
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong><br/>
+          Wayne, at first glance this image reads like control — four figures, a stopped train, authority implied. But the poem immediately complicates that. Were you always interested in challenging that first impression?
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/>
+          Yes. Power almost always looks calm right before it's questioned. These men believe they're here to decide the outcome. That confidence — that assumption — is the real subject. The image had to feel composed, assured, almost routine… because that's when hubris is most dangerous.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong><br/>
+          You open by naming four forces — intent, resolve, fortune, neglect. They feel less like individuals and more like roles. Why frame them that way?
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/>
+          Because they're not meant to be fully known. They represent patterns that repeat themselves across history. When people gain enough power, they stop seeing themselves as participants and start seeing themselves as inevitabilities. These four aren't just men — they're the machinery behind decisions that affect everyone else.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong><br/>
+          The train light plays an unusual role here. It doesn't just illuminate — it dominates.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/>
+          That light became the turning point for me. It's progress, authority, validation — but it's also exposure. I kept thinking about Icarus, not in the moment of the fall, but just before it. When elevation feels permanent. The train becomes a second sun — and like any sun, it reveals as much as it blinds.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong><br/>
+          The title <em>Special Delivery</em> suggests something procedural — business as usual. But the image resists that reading.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/>
+          That's intentional. On the surface, this looks like logistics. Schedules. Authority conducting routine work. But what's being delivered isn't cargo — it's consequence. The title invites the viewer in with familiarity, then quietly undermines it.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong><br/>
+          The line "blinded by station and contempt of creed" carries real weight. There's a social critique embedded there.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/>
+          Because status is a powerful anesthetic. When people stand above others long enough, they stop seeing them at all. Creed, community, shared ground — it becomes irrelevant. That's how systems fail. Not through overt cruelty, but through neglect.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong><br/>
+          The poem turns when change arrives from the shadows. Suddenly, this isn't their story anymore.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/>
+          Exactly. Western history isn't just written by those in power — it's corrected by those they overlook. The land, the people, the quiet accumulation of resolve. The reckoning doesn't arrive loudly. It arrives overdue.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong><br/>
+          You end with "justice dealt by unseen hands." No hero. No spectacle.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/>
+          Because that's often how it really works. Justice doesn't always announce itself. Sometimes it's simply the moment when those who believed they controlled the outcome realize they no longer do.
+        `)} />
+
+        <!-- Quill's Perspective -->
+        <h3>🖋️ Quill's Perspective</h3>
+
+        <p set:html={linkKeywords(`
+          <em>Special Delivery</em> succeeds because it resists resolution.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          The image pauses at the altitude where arrogance still feels justified. The figures remain incomplete. The action stays off-frame. The train light — once a symbol of progress — becomes a warning.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          This is Western myth reframed as moral tension. Not a story about violence, but about inevitability.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          Where traditional Western imagery celebrates dominance, this work interrogates it. Where authority expects obedience, this image suggests consequence.
+        `)} />
+
+        <!-- Final Thought -->
+        <h3>🧭 Final Thought</h3>
+
+        <p set:html={linkKeywords(`
+          Sometimes the most dangerous moment isn't confrontation — it's certainty.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          Sometimes justice doesn't arrive with a sound — it waits until confidence blinds itself.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          And sometimes, what's delivered isn't mercy or ruin, but balance.
+        `)} />
+
+        <p>📌 Stay tuned for the next episode of <em>Inside the Frame</em> — coming soon.</p>
+
+        <!-- About the Artist -->
+        <h3>🖋️ About the Artist</h3>
+
+        <p set:html={linkKeywords(`
+          Wayne Heim is a fine art photographer and certified medical illustrator. His painterly storytelling explores Western mythology, historical reenactment, cinematic landscapes, and the quiet moments where power, consequence, and human choice intersect.
+        `)} />
+
+        <p>🔗 <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" class="text-[#8b0000] hover:underline">Explore the full Western Fine Art Photography collection</a> | <a href="/" class="text-[#8b0000] hover:underline">k4studios.com</a></p>
+
+      </article>
+    </section>
+
+    <SiteFooter 
+      previewImages={previewImages}
+      previewPath={previewPath}
+      title="Inside the Frame – Special Delivery"
+      label="Explore Galleries"
+      class="pt-8 pb-12" 
+    />
+  </main>
+</BaseLayout>

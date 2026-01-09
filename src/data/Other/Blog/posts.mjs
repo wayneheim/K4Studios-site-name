@@ -1,5 +1,12 @@
 export const posts = [
   {
+    slug: "special-delivery",
+    title: "Inside the Frame: Special Delivery",
+    date: "2026-01-08",
+    excerpt: "A conversation about hubris, power, and the moment when certainty gives way — exploring Wayne Heim's painterly Western image 'Special Delivery.'",
+    cover: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/MvKQDc9hcjTQCjCxFX6XQDW73hNhX9PKDm2wJZRmP/S/_HF26159-1335-1336-S.jpg"
+  },
+  {
     slug: "hearing-the-art",
     title: "Conversations With Quill: Hearing the Art",
     date: "2026-01-04",

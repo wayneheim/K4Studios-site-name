@@ -471,6 +471,44 @@ export const galleryData = [
     }
   },
   {
+    "id": "i-LL2Gp5r",
+    "title": "\"Special Delivery\"",
+    "description": "A cinematic Western fine art photograph: Four figures gather at midnight, blocking a train on open rails, shrouded in fog and seared by the engine’s bright headlight. Each man—intent, resolve, fortune, neglect—represents an archetype of power and flaw, their forms both present and fading, their purpose ambiguous. Inspired by the myth of Icarus, this image captures a moment of hubris and reckoning, where the mighty are blinded by their own elevation and the balance of fate is poised to shift. Wayne Heim’s painterly process fuses light, atmosphere, and narrative, inviting viewers to question who truly controls the outcome—and what price is paid when the untouchable stand too close to the sun.\n© Wayne Heim",
+    "alt": "Four men—intent, resolve, fortune, and neglect—stand in painterly fog before a halted night train, illuminated by a blazing headlamp; their faces obscured, each embodies power and flaw, as if a Western reckoning is about to unfold.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/KzLKgnFXcksMSKDxL39WdCr4FdX82vrN7wfGZMnmT/L/_HF26159-1335-1336-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/NCjmmrnnvm3WKHxWJ44CtKQHDj8KJ4hcfkVRb97Dm/M/_HF26159-1335-1336-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/MvKQDc9hcjTQCjCxFX6XQDW73hNhX9PKDm2wJZRmP/S/_HF26159-1335-1336-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/A",
+
+    "keywords": [
+      "western fine art photography",
+      "painterly western photography",
+      "western tension",
+      "frontier confrontation",
+      "fog and atmosphere",
+      "western narrative art",
+      "historic western imagery",
+      "american frontier scene",
+      "anticipation and conflict",
+      "wayne heim"
+    ],
+
+    "story": "Intent, resolve, fortune, neglect.\nThey gather for a midnight reckoning.\n\nWings of hubris melted by the rail’s bright light—\nblinded by station and contempt of creed,\neach begets the other.\n\nFrom the shadows, change is coming,\nthe schedule paid in full.\n\nWell-timed vengeance—\na moral bridge to span.\n\nLines will cross, and this all ends—\njustice dealt by unseen hands.",
+    "notes": "“Hubris” fuses Western legend and classical myth, turning a familiar train-standoff into an allegory of downfall and shifting power. The four archetypes—Intent, Resolve, Fortune, Neglect—move like living forces, their shapes dissolving in the glare of the rail’s “second sun.” Heim’s painterly control of light and texture frames the drama as both personal and universal: a story of ambition meeting its limit, and of unseen hands finally tipping the scales. The Icarus motif, rendered in locomotive light, elevates this beyond mere narrative photography—this is a meditation on power, consequence, and the moment the forgotten reclaim the story.\nMuseum-ready, this image will stand as a high point of narrative Western art and a conversation piece for any collection.",
+    "rating": 5,
+
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+
+    "visibility": "show",
+    "sortOrder": 11,
+    contentSource: "human"
+  },
+  {
     "id": "i-46kWCqc",
     "title": "No Looking Back",
     "description": "“No Looking Back” is a cinematic Western fine art photograph rendered in rich blues and painterly detail, capturing the solitary resolve of a cowboy riding away from his past. The moment, backlit and rain-streaked, evokes themes of letting go, grit, and Western mythology, all delivered with the technical finesse and narrative ambiguity that defines contemporary painterly photography. © Wayne Heim",
@@ -500,7 +538,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11,
+    "sortOrder": 12,
     "themes": {
       "cowboys-with-horses": 5,
       "cowboys-and-horses": 5,
@@ -562,7 +600,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12,
+    "sortOrder": 13,
     "themes": {
       "law-outlaws": 7,
       "whispering-reflection": 13
@@ -570,9 +608,9 @@ export const galleryData = [
   },
   {
     "id": "i-RsLmsLZ",
-    "title": "Cowboy Art In Fine Art",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
-    "alt": "Fine art photography of cowboy art by Wayne Heim",
+    "title": "Color of Conviction",
+    "description": "A painterly Western photograph capturing the stubborn patience of an old prospector, alone at the river’s bend. His world is shaped by ritual—each swirl of the pan tugging at memory, rumor, and the weight of his own conviction. This is not a scene of triumph, but of defiance and endurance: the kind of quiet, hard-won belief that defines the American frontier. Wayne Heim’s western fine art photography strips away spectacle in favor of truth—revealing that sometimes, the truest color is found not in gold, but in the resolve to keep searching.\n© Wayne Heim",
+    "alt": "Painterly Western fine art photograph of an elderly prospector panning for gold at a riverbank",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/KnvBmX4rj79BPNfL7Zw5SLJq34CMwKZntgL7fP6bp/XL/_WHO0893-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/KnvBmX4rj79BPNfL7Zw5SLJq34CMwKZntgL7fP6bp/XL/_WHO0893-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/MVNkFDbDmWwcr3t4dFp7KkCcqrQWW8tSPMLnJVzCS/L/_WHO0893-Edit-2-L.jpg",
@@ -581,20 +619,24 @@ export const galleryData = [
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/A",
     "keywords": [
-      "HF21312",
+      "western fine art photography",
+      "painterly western photography",
       "cowboy art",
-      "cowboy painting art",
-      "western landscapes fine art",
-      "historic western prints",
-      "Western cowboys",
-      "western canon"
+      "american frontier photography",
+      "historic western photography",
+      "western art canon",
+      "frontier life",
+      "gold prospector",
+      "old west character",
+      "narrative western photography",
+      "wayne heim"
     ],
-    "story": "Wayne Heim's exploration of historic western prints comes alive in this piece, showcasing Western cowboys and cowboy art. A testament to western canon in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+    "story": "The rush of wind, water, and discovery blankets another day as each swirl of the pan tugs at the roots of his resolve and conviction.\n\nLaugh at old Willie, will they? I’ll show them. These old bones don’t lie. This time’s different—they’ll see.\nIf not this bend, then maybe the one yonder by the tree, where it forks.\n\nHer voice echoes in these hills, same as the laughter at Mrs. Milly’s.\nCalling out: “Come and get me, old man—if you can!”\n\nI’m coming for you, Goldie. And when we finally meet, we’re gonna show them all the true \"color of conviction\".",
+    "notes": "This image stands in the tradition of Western art that values patience over action, memory over myth. The composition nods to the psychological weight of Wyeth and the understated grit of Remington, favoring solitude and inner struggle over dramatic conquest. The prospector’s journey is less about what the river yields than what time—and doubt—leave behind. “Color of Conviction” holds its place among the narrative-driven works that elevate the quiet moments of the West, inviting collectors to see not just a figure at work, but the history of hope and resilience that lingers in every shadow.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 14
   },
   {
     "id": "i-bq4FKvX",
@@ -625,7 +667,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14,
+    "sortOrder": 15,
     "themes": {
       "sketches-of-legends": 2,
       "whispering-reflection": 4
@@ -656,7 +698,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15,
+    "sortOrder": 16,
     "themes": {
       "cowboys-and-horses": 0,
       "dust-thunder": 2,
@@ -692,7 +734,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16,
+    "sortOrder": 17,
     "themes": {
       "women-of-the-west": 66,
       "cowboys-with-horses": 1,
@@ -723,12 +765,12 @@ export const galleryData = [
       "frontier companionship",
       "museum quality western decor"
     ],
-    "story": "They stood together at the edge of the fading storm, two men shaped by the land yet marked by different histories. No blood bound them, only miles—long miles—and the kind of trust that takes years of shared hardship to earn.\n\nThe younger man tilted his head, listening to something only he could hear in the wind. The older one waited, patient, knowing his partner’s instincts had saved them more than once.\n\nDifferent paths. \nSame horizon. \nA loyalty carved from earth, weather, and time.",
+    "story": "Sharp fall air hangs heavy like morning dew.\nChange is in the air—seasons and society, both forcing their own agenda upon this land.\n\nThey come by wagonload now, each one hoping for a new beginning—hunting for answers, a fresh start, or just a path forward.\n\nCarving, forging, reshaping this life with Eastern wealth and virtues, they claim what’s ours for theirs.\nYears, old friend, we shared this place as brothers—one mind - wrapped in different cloths.\n\nClouds of change gather, dappled and restless, over the valley floor.\nBoth season and change move at will, ushering a future that neither hope nor protest can hold back.\n",
     "notes": "This piece exemplifies Heim’s ability to portray interpersonal nuance within a painterly, historically grounded aesthetic. The triangular composition—horse, Indigenous scout, trapper—creates a stable visual structure that reinforces the sense of alliance. Textural layering and soft atmospheric light evoke the tonal sensitivity of classic Western illustrators while preserving the authenticity of lived experience. The work carries emotional and cultural resonance, making it a standout selection for collectors who appreciate Western art that honors story, lineage, and human connection.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 18
   },
   {
     "id": "i-NDnxRkx",
@@ -765,7 +807,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18,
+    "sortOrder": 19,
     "themes": {
       "women-of-the-west": 19,
       "cowboys-and-horses": 77,
@@ -804,7 +846,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19,
+    "sortOrder": 20,
     "themes": {
       "cowboys-and-horses": 79,
       "dust-thunder": 3,
@@ -841,7 +883,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20,
+    "sortOrder": 21,
     "themes": {
       "dust-thunder": 5
     }
@@ -876,7 +918,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21,
+    "sortOrder": 22,
     "themes": {
       "women-of-the-west": 6,
       "frontier-women": 7
@@ -923,7 +965,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 22,
+    "sortOrder": 23,
     "themes": {
       "aces-smoke-whiskey": 21,
       "dust-thunder": 6,
@@ -956,7 +998,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23,
+    "sortOrder": 24,
     "themes": {
       "women-of-the-west": 65,
       "firelight-shadow": 12,
@@ -1018,7 +1060,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 24,
+    "sortOrder": 25,
     "themes": {
       "law-outlaws": 10
     }
@@ -1056,7 +1098,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25,
+    "sortOrder": 26,
     "themes": {
       "women-of-the-west": 4,
       "frontier-women": 5,
@@ -1096,7 +1138,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26,
+    "sortOrder": 27,
     "themes": {
       "women-of-the-west": 3,
       "frontier-women": 4,
@@ -1134,7 +1176,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27,
+    "sortOrder": 28,
     "themes": {
       "firelight-shadow": 16,
       "hardship-sorrow": 8,
@@ -1169,7 +1211,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28,
+    "sortOrder": 29,
     "themes": {
       "women-of-the-west": 59,
       "firelight-shadow": 79,
@@ -1216,7 +1258,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29,
+    "sortOrder": 30,
     "themes": {
       "women-of-the-west": 57,
       "frontier-women": 105,
@@ -1260,7 +1302,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30,
+    "sortOrder": 31,
     "themes": {
       "women-of-the-west": 52,
       "frontier-women": 101,
@@ -1297,7 +1339,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31,
+    "sortOrder": 32,
     "themes": {
       "sketches-of-legends": 5,
       "whispering-reflection": 7
@@ -1332,7 +1374,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 32
+    "sortOrder": 33
   },
   {
     "id": "i-X4SH26N",
@@ -1362,7 +1404,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33,
+    "sortOrder": 34,
     "themes": {
       "women-of-the-west": 51,
       "cowboys-and-horses": 78,
@@ -1404,7 +1446,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34,
+    "sortOrder": 35,
     "themes": {
       "firelight-shadow": 3,
       "law-outlaws": 4,
@@ -1447,7 +1489,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 36
   },
   {
     "id": "i-NdQnj6P",
@@ -1477,7 +1519,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36,
+    "sortOrder": 37,
     "themes": {
       "firelight-shadow": 4,
       "whispering-reflection": 6
@@ -1511,7 +1553,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 37,
+    "sortOrder": 38,
     "themes": {
       "cowboys-with-horses": 4,
       "cowboys-and-horses": 4,
@@ -1548,7 +1590,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38,
+    "sortOrder": 39,
     "themes": {
       "cowboys-with-horses": 2,
       "cowboys-and-horses": 3,
@@ -1585,7 +1627,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39,
+    "sortOrder": 40,
     "themes": {
       "cowboys-with-horses": 3,
       "cowboys-and-horses": 2,
@@ -1619,7 +1661,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 40,
+    "sortOrder": 41,
     "themes": {
       "cowboys-with-horses": 6,
       "cowboys-and-horses": 7,
@@ -1653,7 +1695,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41,
+    "sortOrder": 42,
     "themes": {
       "law-outlaws": 9
     }
@@ -1685,7 +1727,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 42,
+    "sortOrder": 43,
     "themes": {
       "cowboys-with-horses": 8,
       "cowboys-and-horses": 10
@@ -1725,7 +1767,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 43,
+    "sortOrder": 44,
     "themes": {
       "cowboys-with-horses": 7,
       "cowboys-and-horses": 11
@@ -1762,7 +1804,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 44,
+    "sortOrder": 45,
     "themes": {
       "women-of-the-west": 1,
       "frontier-women": 2,
@@ -1801,7 +1843,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 45,
+    "sortOrder": 46,
     "themes": {
       "women-of-the-west": 55,
       "frontier-women": 104,
@@ -1844,7 +1886,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 46,
+    "sortOrder": 47,
     "themes": {
       "women-of-the-west": 40,
       "love-goodbye": 1,
@@ -1880,7 +1922,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 47,
+    "sortOrder": 48,
     "themes": {
       "firelight-shadow": 81,
       "law-outlaws": 86,
@@ -1942,7 +1984,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 48,
+    "sortOrder": 49,
     "themes": {
       "aces-smoke-whiskey": 4,
       "firelight-shadow": 18,
@@ -1978,7 +2020,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 49,
+    "sortOrder": 50,
     "themes": {
       "hardship-sorrow": 6,
       "sketches-of-legends": 17,
@@ -2024,7 +2066,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 50,
+    "sortOrder": 51,
     "themes": {
       "aces-smoke-whiskey": 11,
       "sketches-of-legends": 12
@@ -2060,7 +2102,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 51,
+    "sortOrder": 52,
     "themes": {
       "aces-smoke-whiskey": 44,
       "firelight-shadow": 83,
@@ -2095,7 +2137,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 52,
+    "sortOrder": 53,
     "themes": {
       "aces-smoke-whiskey": 43,
       "firelight-shadow": 78,
@@ -2136,7 +2178,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 53,
+    "sortOrder": 54,
     "themes": {
       "aces-smoke-whiskey": 12,
       "firelight-shadow": 11,
@@ -2171,7 +2213,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 54,
+    "sortOrder": 55,
     "themes": {
       "aces-smoke-whiskey": 22,
       "firelight-shadow": 9,
@@ -2206,7 +2248,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 55,
+    "sortOrder": 56,
     "themes": {
       "women-of-the-west": 5,
       "frontier-women": 19,
@@ -2253,7 +2295,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 57
   },
   {
     "id": "i-c3vWMgt",
@@ -2291,7 +2333,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 57,
+    "sortOrder": 58,
     "themes": {
       "dust-thunder": 1
     }
@@ -2323,7 +2365,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 58,
+    "sortOrder": 59,
     "themes": {
       "cowboys-and-horses": 6,
       "firelight-shadow": 10
@@ -2362,7 +2404,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 59,
+    "sortOrder": 60,
     "themes": {
       "cowboys-and-horses": 12
     }
@@ -2404,7 +2446,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 60,
+    "sortOrder": 61,
     "themes": {
       "cowboys-with-horses": 9,
       "cowboys-and-horses": 8,
@@ -2443,7 +2485,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 61,
+    "sortOrder": 62,
     "themes": {
       "cowboys-and-horses": 80,
       "dust-thunder": 11,
@@ -2483,7 +2525,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 62,
+    "sortOrder": 63,
     "themes": {
       "dust-thunder": 8,
       "law-outlaws": 15
@@ -2544,7 +2586,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 63,
+    "sortOrder": 64,
     "themes": {
       "sketches-of-legends": 18
     }
@@ -2579,7 +2621,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 64,
+    "sortOrder": 65,
     "themes": {
       "sketches-of-legends": 10,
       "whispering-reflection": 14
@@ -2613,7 +2655,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 65,
+    "sortOrder": 66,
     "themes": {
       "aces-smoke-whiskey": 25,
       "firelight-shadow": 15,
@@ -2646,7 +2688,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 66,
+    "sortOrder": 67,
     "themes": {
       "firelight-shadow": 19,
       "whispering-reflection": 23
@@ -2679,7 +2721,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 67,
+    "sortOrder": 68,
     "themes": {
       "sketches-of-legends": 9
     }
@@ -2720,7 +2762,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 68,
+    "sortOrder": 69,
     "themes": {
       "women-of-the-west": 9,
       "firelight-shadow": 14,
@@ -2785,7 +2827,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 69,
+    "sortOrder": 70,
     "themes": {
       "aces-smoke-whiskey": 18,
       "firelight-shadow": 24,
@@ -2849,7 +2891,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 70,
+    "sortOrder": 71,
     "themes": {
       "hardship-sorrow": 19,
       "law-outlaws": 44,
@@ -2911,7 +2953,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 71,
+    "sortOrder": 72,
     "themes": {
       "law-outlaws": 18,
       "sketches-of-legends": 15
@@ -2953,7 +2995,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 72,
+    "sortOrder": 73,
     "themes": {
       "dust-thunder": 15,
       "hardship-sorrow": 13,
@@ -2993,7 +3035,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 73,
+    "sortOrder": 74,
     "themes": {
       "firelight-shadow": 13,
       "law-outlaws": 16
@@ -3054,7 +3096,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 74,
+    "sortOrder": 75,
     "themes": {
       "aces-smoke-whiskey": 15,
       "firelight-shadow": 17,
@@ -3093,7 +3135,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 75,
+    "sortOrder": 76,
     "themes": {
       "frontier-women": 17,
       "hardship-sorrow": 1,
@@ -3136,7 +3178,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 76,
+    "sortOrder": 77,
     "themes": {
       "dust-thunder": 10
     }
@@ -3167,7 +3209,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 77,
+    "sortOrder": 78,
     "themes": {
       "cowboys-with-horses": 10,
       "cowboys-and-horses": 9,
@@ -3201,7 +3243,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 78,
+    "sortOrder": 79,
     "themes": {
       "women-of-the-west": 10,
       "frontier-women": 20,
@@ -3263,7 +3305,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 79,
+    "sortOrder": 80,
     "themes": {
       "women-of-the-west": 11,
       "firelight-shadow": 20,
@@ -3307,7 +3349,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 80,
+    "sortOrder": 81,
     "themes": {
       "aces-smoke-whiskey": 3,
       "firelight-shadow": 22
@@ -3343,7 +3385,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 81,
+    "sortOrder": 82,
     "themes": {
       "firelight-shadow": 67
     }
@@ -3381,7 +3423,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 82,
+    "sortOrder": 83,
     "themes": {
       "frontier-women": 21,
       "hardship-sorrow": 10,
@@ -3426,7 +3468,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 83,
+    "sortOrder": 84,
     "themes": {
       "law-outlaws": 19,
       "sketches-of-legends": 16
@@ -3470,7 +3512,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 84,
+    "sortOrder": 85,
     "themes": {
       "women-of-the-west": 39,
       "cowboys-with-horses": 14,
@@ -3535,7 +3577,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 85,
+    "sortOrder": 86,
     "themes": {
       "cowboys-with-horses": 15,
       "cowboys-and-horses": 17,
@@ -3578,7 +3620,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 86,
+    "sortOrder": 87,
     "themes": {
       "dust-thunder": 0,
       "hardship-sorrow": 12,
@@ -3611,7 +3653,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 87,
+    "sortOrder": 88,
     "themes": {
       "cowboys-and-horses": 13,
       "whispering-reflection": 22
@@ -3644,7 +3686,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 88,
+    "sortOrder": 89,
     "themes": {
       "cowboys-with-horses": 13,
       "cowboys-and-horses": 16
@@ -3705,7 +3747,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 89,
+    "sortOrder": 90,
     "themes": {
       "sketches-of-legends": 19
     }
@@ -3737,7 +3779,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 90,
+    "sortOrder": 91,
     "themes": {
       "frontier-women": 32,
       "love-goodbye": 22,
@@ -3772,7 +3814,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 91,
+    "sortOrder": 92,
     "themes": {
       "women-of-the-west": 12,
       "frontier-women": 3,
@@ -3840,7 +3882,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 92,
+    "sortOrder": 93,
     "themes": {
       "aces-smoke-whiskey": 17,
       "law-outlaws": 21,
@@ -3851,8 +3893,8 @@ export const galleryData = [
   {
     "id": "i-TLDkd5q",
     "title": "Loaded for Bear",
-    "description": "A painterly Western photograph of a cowboy alone in a rustic cabin, defined by vigilance rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. Part of Wayne Heim's Western fine art photography collection. © Wayne Heim",
-    "alt": "Cowboy alone in a rustic cabin, seated and loading a revolver by lamplight—preparing for trouble, tension in his posture, rifle propped beside him.",
+    "description": "A painterly Western photograph capturing a solitary cowboy inside a dimly lit frontier cabin, absorbed in the quiet ritual of loading his revolver. Rather than depicting action, the image lingers in the moment before consequence—where vigilance, memory, and restraint outweigh spectacle. Lamplight cuts across worn wood and weathered hands, revealing a man shaped as much by responsibility as by threat.\n\nWayne Heim’s Western fine art photography focuses on the psychological reality of the American frontier, where danger was anticipated long before it arrived. Through disciplined composition, controlled light, and narrative tension, this work reflects the cost of preparedness and the uneasy calm that precedes irrevocable choice.\n© Wayne Heim",
+    "alt": "Painterly Western fine art photograph of a cowboy seated in a rustic cabin, loading a revolver by lamplight, rifle resting nearby, conveying tension and anticipation before conflict.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TLDkd5q/1/LLCRs2kwvDfQ7Hs3CXGpZpqRmc36qwzmp5kh4DZSw/XL/cowboy%20artwork%20_O1H0067-Enhanced-NR-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TLDkd5q/1/LLCRs2kwvDfQ7Hs3CXGpZpqRmc36qwzmp5kh4DZSw/XL/cowboy%20artwork%20_O1H0067-Enhanced-NR-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TLDkd5q/1/LLCRs2kwvDfQ7Hs3CXGpZpqRmc36qwzmp5kh4DZSw/XL/cowboy%20artwork%20_O1H0067-Enhanced-NR-Edit-Edit-XL.jpg",
@@ -3896,14 +3938,14 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "I tell you Martha, you can't be too carful these days. If them boys come back around here again, I'm going to set things right once and for all. Cowboy sits in his cabin loading his guns for the battle about to start. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "A masterful psychological study in the tradition of Remington and Wyeth, this work subverts the archetype of the action hero by freezing the moment before the storm—capturing tension, solitude, and the ritual of preparation. \n\nNotice the controlled palette and directional light, which draw the viewer’s eye to the subject’s hands and face—conveying both resolve and doubt. The details (the blue ribbon, the worn boots, the rifle’s placement) offer narrative clues and invite close reading. \n\nUnlike typical “shoot-out” scenes, this image lingers in anticipation, elevating the act of arming oneself into a meditation on duty, vulnerability, and the cost of survival. For collectors, it’s a rare example of Western art that finds drama not in the gunfight, but in the silent moments that precede it.",
+    "story": "I tell you, Martha, you can’t be too careful these days.\nIf them boys come back around here again, I’m going to set things right once and for all.\n\nThey’re just lucky I wasn’t here.\nI will say this about them, my dear—\n\nif they do come back again,\ntheir luck and brains will both be in short supply.",
+    "notes": "This work is built on classical control. The use of Rembrandt-style lighting carves the figure from shadow, isolating form and intent while allowing darkness to carry as much narrative weight as illumination. Light becomes selective, purposeful—revealing what matters and withholding what does not.\n\nStrong diagonal lines move the eye through the composition, guiding attention from posture to hands, then toward the rifle and pistol—subtle signals of mounting tension rather than overt threat. The lowered vantage point elevates the figure into a quiet pillar within the frame, giving the moment gravity without spectacle.\n\nWhat distinguishes the piece within the Western canon is its refusal to dramatize action. Instead, it treats preparation as the subject, using light, structure, and restraint to turn a private moment into a study of resolve.",
     "rating": 5,
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 93,
+    "sortOrder": 94,
     "themes": {
       "firelight-shadow": 30,
       "law-outlaws": 35,
@@ -3937,7 +3979,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 94,
+    "sortOrder": 95,
     "themes": {
       "aces-smoke-whiskey": 0,
       "firelight-shadow": 23,
@@ -3973,7 +4015,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 95,
+    "sortOrder": 96,
     "themes": {
       "dust-thunder": 17,
       "firelight-shadow": 25
@@ -4006,7 +4048,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 96,
+    "sortOrder": 97,
     "themes": {
       "cowboys-with-horses": 11,
       "cowboys-and-horses": 14
@@ -4014,9 +4056,9 @@ export const galleryData = [
   },
   {
     "id": "i-G7csptc",
-    "title": "Fine Art Western Photography In Fine Art",
-    "description": "Explore fine art Western photography with Wayne Heim's western art. This western fine art piece conveys western landscapes fine art, Western cowboys, and fine art Western photography, perfect for fans of western art. © Wayne Heim",
-    "alt": "Photographic artwork © Wayne Heim",
+    "title": "Lifted",
+    "description": "A painterly Western photograph capturing a quiet moment of reflection in the American West. A woman on horseback pauses along a rising hillside, her face lifted into the morning light as land and sky converge around her. The composition draws the eye upward—from dust and earth toward something unresolved but hopeful.\n\nWayne Heim’s Western fine art photography often explores these in-between moments, where movement pauses and choice takes shape. This image reflects a personal reckoning rather than a destination, offering a restrained, contemplative view of the Western landscape as a place of inward resolve as much as outward journey.\n© Wayne Heim",
+    "alt": "Painterly Western fine art photograph of a frontier woman on horseback paused on a hillside, eyes lifted toward morning light in quiet reflection",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G7csptc/1/Nb7htkPs3R6QKt3KVVLmnG7w5ttnP8v9PTDKwXxbd/XL/_HF26959-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G7csptc/1/Nb7htkPs3R6QKt3KVVLmnG7w5ttnP8v9PTDKwXxbd/XL/_HF26959-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G7csptc/1/Nb7htkPs3R6QKt3KVVLmnG7w5ttnP8v9PTDKwXxbd/XL/_HF26959-Edit-Edit-XL.jpg",
@@ -4025,23 +4067,26 @@ export const galleryData = [
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G7csptc/A",
     "keywords": [
-      "WHO0135",
-      "fine art Western photography",
-      "western art",
-      "frederic remington",
-      "western landscapes fine art",
-      "Western cowboys",
-      "rustic charm",
-      "painterly cowboy portraits",
-      "western fine art",
-      "cowboy artwork"
+      "western fine art photography",
+      "painterly western photography",
+      "frontier woman",
+      "woman on horseback",
+      "western contemplation",
+      "quiet western narrative",
+      "american west landscape",
+      "western spiritual moment",
+      "western portrait art",
+      "western journey",
+      "narrative western photography",
+      "cowgirl",
+      "wayne heim"
     ],
-    "story": "Delving into rustic charm, this work by Wayne Heim highlights painterly cowboy portraits through western fine art and cowboy artwork. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
+    "story": "Eyes closed, face lifted into the morning light, she steadies her thoughts.\nGiving thanks… or asking permission. Maybe forgiveness. Maybe only the strength to go one more mile.\n\nThe land rises with her—the treeline, the sloping ridge, the pale sun—lifting her out of the dust and into something larger than herself. For a moment, the world narrows to breath and balance, to the quiet weight of choosing what comes next.\n\nAnd then there’s the horse. Looking straight through you. Witnessing. Almost as if it's saying: \"What are you waiting for? You can do this too.\"\n\nThere is enough chaos in the world.  Sometimes stillness is the prudent course of action—while we search for clarity in the quiet before moving on.",
+    "notes": "The composition is built on ascent. Diagonal lines in the slope and treeline guide the eye upward, reinforcing the figure’s lifted posture and the image’s spiritual gravity. Light is used symbolically rather than descriptively, softening form while separating the subject from the surrounding terrain.\n\nWhat distinguishes this work within the Western canon is its refusal to frame strength as action. Stillness becomes the point of tension, placing the figure in a moment of choice rather than conquest. The result is a Western image defined by internal elevation rather than external drama.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 97,
+    "sortOrder": 98,
     "themes": {
       "cowboys-and-horses": 22,
       "frontier-women": 8,
@@ -4079,7 +4124,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 98
+    "sortOrder": 99
   },
   {
     "id": "i-8BbMZjs",
@@ -4136,7 +4181,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 99,
+    "sortOrder": 100,
     "themes": {
       "sketches-of-legends": 28,
       "whispering-reflection": 35
@@ -4197,7 +4242,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 100,
+    "sortOrder": 101,
     "themes": {
       "aces-smoke-whiskey": 9,
       "law-outlaws": 27
@@ -4231,7 +4276,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 101,
+    "sortOrder": 102,
     "themes": {
       "sketches-of-legends": 30
     }
@@ -4264,7 +4309,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 102,
+    "sortOrder": 103,
     "themes": {
       "law-outlaws": 25,
       "sketches-of-legends": 22
@@ -4309,7 +4354,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 103,
+    "sortOrder": 104,
     "themes": {
       "women-of-the-west": 34,
       "frontier-women": 27,
@@ -4353,7 +4398,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 104,
+    "sortOrder": 105,
     "themes": {
       "frontier-women": 6,
       "sketches-of-legends": 27
@@ -4390,7 +4435,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 105,
+    "sortOrder": 106,
     "themes": {
       "frontier-women": 22,
       "hardship-sorrow": 14,
@@ -4453,7 +4498,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 106,
+    "sortOrder": 107,
     "themes": {
       "aces-smoke-whiskey": 19,
       "law-outlaws": 28
@@ -4495,7 +4540,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 107,
+    "sortOrder": 108,
     "themes": {
       "dust-thunder": 13
     }
@@ -4533,7 +4578,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 108,
+    "sortOrder": 109,
     "themes": {
       "frontier-women": 25
     }
@@ -4566,7 +4611,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 109,
+    "sortOrder": 110,
     "themes": {
       "sketches-of-legends": 24
     }
@@ -4602,7 +4647,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 110
+    "sortOrder": 111
   },
   {
     "id": "i-ML9dbMj",
@@ -4659,7 +4704,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 111,
+    "sortOrder": 112,
     "themes": {
       "sketches-of-legends": 25
     }
@@ -4719,7 +4764,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 112,
+    "sortOrder": 113,
     "themes": {
       "women-of-the-west": 36,
       "frontier-women": 18,
@@ -4754,7 +4799,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 113,
+    "sortOrder": 114,
     "themes": {
       "law-outlaws": 26
     }
@@ -4814,7 +4859,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 114,
+    "sortOrder": 115,
     "themes": {
       "aces-smoke-whiskey": 23,
       "law-outlaws": 30,
@@ -4878,7 +4923,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 115,
+    "sortOrder": 116,
     "themes": {
       "aces-smoke-whiskey": 24,
       "law-outlaws": 33,
@@ -4941,7 +4986,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 116,
+    "sortOrder": 117,
     "themes": {
       "law-outlaws": 29
     }
@@ -4973,7 +5018,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 117,
+    "sortOrder": 118,
     "themes": {
       "aces-smoke-whiskey": 13,
       "firelight-shadow": 26
@@ -5034,7 +5079,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 118,
+    "sortOrder": 119,
     "themes": {
       "firelight-shadow": 29,
       "law-outlaws": 34
@@ -5095,7 +5140,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 119,
+    "sortOrder": 120,
     "themes": {
       "dust-thunder": 18,
       "law-outlaws": 37
@@ -5156,7 +5201,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 120,
+    "sortOrder": 121,
     "themes": {
       "women-of-the-west": 33,
       "frontier-women": 29,
@@ -5204,7 +5249,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 121,
+    "sortOrder": 122,
     "themes": {
       "women-of-the-west": 31,
       "frontier-women": 28,
@@ -5268,7 +5313,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 122
+    "sortOrder": 123
   },
   {
     "id": "i-ZPmj5Wk",
@@ -5325,7 +5370,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 123,
+    "sortOrder": 124,
     "themes": {
       "women-of-the-west": 37,
       "frontier-women": 24
@@ -5370,7 +5415,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 124,
+    "sortOrder": 125,
     "themes": {
       "law-outlaws": 50,
       "sketches-of-legends": 56,
@@ -5405,7 +5450,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 125
+    "sortOrder": 126
   },
   {
     "id": "i-6GQxb97",
@@ -5462,7 +5507,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 126,
+    "sortOrder": 127,
     "themes": {
       "hardship-sorrow": 17
     }
@@ -5522,7 +5567,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 127,
+    "sortOrder": 128,
     "themes": {
       "frontier-women": 31,
       "love-goodbye": 21
@@ -5561,7 +5606,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 128,
+    "sortOrder": 129,
     "themes": {
       "aces-smoke-whiskey": 5,
       "firelight-shadow": 77
@@ -5597,7 +5642,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 129,
+    "sortOrder": 130,
     "themes": {
       "aces-smoke-whiskey": 1,
       "firelight-shadow": 27
@@ -5633,7 +5678,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 130,
+    "sortOrder": 131,
     "themes": {
       "aces-smoke-whiskey": 10,
       "firelight-shadow": 28
@@ -5669,7 +5714,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 131,
+    "sortOrder": 132,
     "themes": {
       "law-outlaws": 32,
       "sketches-of-legends": 32
@@ -5705,7 +5750,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 132,
+    "sortOrder": 133,
     "themes": {
       "cowboys-and-horses": 20
     }
@@ -5740,7 +5785,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 133,
+    "sortOrder": 134,
     "themes": {
       "whispering-reflection": 36
     }
@@ -5800,7 +5845,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 134
+    "sortOrder": 135
   },
   {
     "id": "i-8zFZ3jn",
@@ -5857,7 +5902,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 135,
+    "sortOrder": 136,
     "themes": {
       "aces-smoke-whiskey": 2,
       "sketches-of-legends": 39
@@ -5918,7 +5963,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 136,
+    "sortOrder": 137,
     "themes": {
       "aces-smoke-whiskey": 29,
       "law-outlaws": 41
@@ -5979,7 +6024,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 137,
+    "sortOrder": 138,
     "themes": {
       "frontier-women": 30,
       "love-goodbye": 18,
@@ -6042,7 +6087,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 138,
+    "sortOrder": 139,
     "themes": {
       "sketches-of-legends": 36
     }
@@ -6102,7 +6147,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 139,
+    "sortOrder": 140,
     "themes": {
       "law-outlaws": 36
     }
@@ -6162,7 +6207,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 140,
+    "sortOrder": 141,
     "themes": {
       "law-outlaws": 39
     }
@@ -6222,7 +6267,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 141,
+    "sortOrder": 142,
     "themes": {
       "women-of-the-west": 28,
       "frontier-women": 38
@@ -6283,7 +6328,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 142,
+    "sortOrder": 143,
     "themes": {
       "sketches-of-legends": 43
     }
@@ -6343,7 +6388,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 143,
+    "sortOrder": 144,
     "themes": {
       "women-of-the-west": 32,
       "frontier-women": 16
@@ -6404,7 +6449,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 144,
+    "sortOrder": 145,
     "themes": {
       "aces-smoke-whiskey": 6,
       "firelight-shadow": 31
@@ -6444,7 +6489,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 145,
+    "sortOrder": 146,
     "themes": {
       "firelight-shadow": 32,
       "hardship-sorrow": 18,
@@ -6484,7 +6529,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 146,
+    "sortOrder": 147,
     "themes": {
       "aces-smoke-whiskey": 27,
       "firelight-shadow": 33,
@@ -6546,7 +6591,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 147,
+    "sortOrder": 148,
     "themes": {
       "firelight-shadow": 34,
       "frontier-women": 15,
@@ -6580,7 +6625,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 148,
+    "sortOrder": 149,
     "themes": {
       "women-of-the-west": 7,
       "firelight-shadow": 7,
@@ -6642,7 +6687,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 149,
+    "sortOrder": 150,
     "themes": {
       "sketches-of-legends": 40
     }
@@ -6702,7 +6747,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 150,
+    "sortOrder": 151,
     "themes": {
       "aces-smoke-whiskey": 32
     }
@@ -6762,7 +6807,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 151,
+    "sortOrder": 152,
     "themes": {
       "law-outlaws": 38,
       "sketches-of-legends": 38,
@@ -6824,7 +6869,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 152,
+    "sortOrder": 153,
     "themes": {
       "law-outlaws": 45,
       "sketches-of-legends": 50
@@ -6885,7 +6930,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 153,
+    "sortOrder": 154,
     "themes": {
       "aces-smoke-whiskey": 31
     }
@@ -6945,7 +6990,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 154,
+    "sortOrder": 155,
     "themes": {
       "aces-smoke-whiskey": 28,
       "whispering-reflection": 44
@@ -7006,7 +7051,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 155,
+    "sortOrder": 156,
     "themes": {
       "sketches-of-legends": 42
     }
@@ -7066,7 +7111,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 156,
+    "sortOrder": 157,
     "themes": {
       "law-outlaws": 46,
       "sketches-of-legends": 51
@@ -7127,7 +7172,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 157,
+    "sortOrder": 158,
     "themes": {
       "law-outlaws": 47,
       "sketches-of-legends": 52
@@ -7166,7 +7211,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 158
+    "sortOrder": 159
   },
   {
     "id": "i-xXQ3gDM",
@@ -7223,7 +7268,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 159,
+    "sortOrder": 160,
     "themes": {
       "law-outlaws": 40,
       "sketches-of-legends": 41
@@ -7284,7 +7329,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 160,
+    "sortOrder": 161,
     "themes": {
       "sketches-of-legends": 45
     }
@@ -7352,7 +7397,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 161,
+    "sortOrder": 162,
     "themes": {
       "frontier-women": 33,
       "love-goodbye": 24
@@ -7413,7 +7458,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 162,
+    "sortOrder": 163,
     "themes": {
       "sketches-of-legends": 55
     }
@@ -7473,7 +7518,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 163,
+    "sortOrder": 164,
     "themes": {
       "frontier-women": 37,
       "sketches-of-legends": 47
@@ -7534,7 +7579,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 164,
+    "sortOrder": 165,
     "themes": {
       "women-of-the-west": 29,
       "frontier-women": 36,
@@ -7597,7 +7642,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 165,
+    "sortOrder": 166,
     "themes": {
       "law-outlaws": 48,
       "sketches-of-legends": 53,
@@ -7659,7 +7704,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 166,
+    "sortOrder": 167,
     "themes": {
       "sketches-of-legends": 54,
       "whispering-reflection": 48
@@ -7720,7 +7765,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 167
+    "sortOrder": 168
   },
   {
     "id": "i-cKFv3th",
@@ -7777,7 +7822,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 168,
+    "sortOrder": 169,
     "themes": {
       "women-of-the-west": 30,
       "firelight-shadow": 35,
@@ -7841,7 +7886,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 169,
+    "sortOrder": 170,
     "themes": {
       "firelight-shadow": 48
     }
@@ -7901,7 +7946,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 170,
+    "sortOrder": 171,
     "themes": {
       "firelight-shadow": 36
     }
@@ -7961,7 +8006,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 171,
+    "sortOrder": 172,
     "themes": {
       "aces-smoke-whiskey": 30,
       "firelight-shadow": 37,
@@ -8023,7 +8068,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 172,
+    "sortOrder": 173,
     "themes": {
       "aces-smoke-whiskey": 7,
       "firelight-shadow": 41
@@ -8084,7 +8129,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 173,
+    "sortOrder": 174,
     "themes": {
       "firelight-shadow": 38,
       "hardship-sorrow": 21,
@@ -8146,7 +8191,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 174,
+    "sortOrder": 175,
     "themes": {
       "women-of-the-west": 27,
       "firelight-shadow": 39,
@@ -8189,7 +8234,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 175,
+    "sortOrder": 176,
     "themes": {
       "firelight-shadow": 40,
       "law-outlaws": 52,
@@ -8251,7 +8296,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 176,
+    "sortOrder": 177,
     "themes": {
       "frontier-women": 41,
       "love-goodbye": 29
@@ -8312,7 +8357,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 177,
+    "sortOrder": 178,
     "themes": {
       "firelight-shadow": 45
     }
@@ -8351,7 +8396,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 178,
+    "sortOrder": 179,
     "themes": {
       "firelight-shadow": 47,
       "frontier-women": 49,
@@ -8414,7 +8459,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 179
+    "sortOrder": 180
   },
   {
     "id": "i-xr5chJG",
@@ -8444,7 +8489,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 180
+    "sortOrder": 181
   },
   {
     "id": "i-PPJ9GKf",
@@ -8474,7 +8519,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 181,
+    "sortOrder": 182,
     "themes": {
       "cowboys-and-horses": 21,
       "dust-thunder": 23,
@@ -8512,7 +8557,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 182,
+    "sortOrder": 183,
     "themes": {
       "cowboys-and-horses": 23,
       "dust-thunder": 26,
@@ -8557,7 +8602,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 183
+    "sortOrder": 184
   },
   {
     "id": "i-jLSNwCT",
@@ -8614,7 +8659,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 184,
+    "sortOrder": 185,
     "themes": {
       "frontier-women": 40,
       "love-goodbye": 28,
@@ -8676,7 +8721,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 185,
+    "sortOrder": 186,
     "themes": {
       "women-of-the-west": 38,
       "frontier-women": 23,
@@ -8740,7 +8785,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 186
+    "sortOrder": 187
   },
   {
     "id": "i-trM4FpR",
@@ -8797,7 +8842,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 187,
+    "sortOrder": 188,
     "themes": {
       "women-of-the-west": 26,
       "frontier-women": 45,
@@ -8859,7 +8904,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 188,
+    "sortOrder": 189,
     "themes": {
       "sketches-of-legends": 64,
       "whispering-reflection": 60
@@ -8920,7 +8965,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 189,
+    "sortOrder": 190,
     "themes": {
       "dust-thunder": 19,
       "law-outlaws": 53,
@@ -8982,7 +9027,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 190,
+    "sortOrder": 191,
     "themes": {
       "dust-thunder": 9,
       "law-outlaws": 55
@@ -9016,7 +9061,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 191,
+    "sortOrder": 192,
     "themes": {
       "dust-thunder": 16,
       "law-outlaws": 31
@@ -9057,7 +9102,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 192,
+    "sortOrder": 193,
     "themes": {
       "dust-thunder": 21,
       "law-outlaws": 54
@@ -9097,7 +9142,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 193,
+    "sortOrder": 194,
     "themes": {
       "cowboys-and-horses": 24
     }
@@ -9157,7 +9202,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 194
+    "sortOrder": 195
   },
   {
     "id": "i-XsdNV9s",
@@ -9187,7 +9232,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 195
+    "sortOrder": 196
   },
   {
     "id": "i-Cz82g6x",
@@ -9244,7 +9289,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 196
+    "sortOrder": 197
   },
   {
     "id": "i-QWT3QZ4",
@@ -9281,7 +9326,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 197,
+    "sortOrder": 198,
     "themes": {
       "law-outlaws": 57,
       "sketches-of-legends": 58
@@ -9342,7 +9387,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 198,
+    "sortOrder": 199,
     "themes": {
       "sketches-of-legends": 59
     }
@@ -9383,7 +9428,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 199,
+    "sortOrder": 200,
     "themes": {
       "law-outlaws": 58,
       "sketches-of-legends": 60
@@ -9444,7 +9489,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 200
+    "sortOrder": 201
   },
   {
     "id": "i-zW6Zb4W",
@@ -9501,7 +9546,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 201,
+    "sortOrder": 202,
     "themes": {
       "women-of-the-west": 24,
       "firelight-shadow": 46,
@@ -9563,7 +9608,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 202,
+    "sortOrder": 203,
     "themes": {
       "aces-smoke-whiskey": 34,
       "firelight-shadow": 43,
@@ -9626,7 +9671,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 203,
+    "sortOrder": 204,
     "themes": {
       "aces-smoke-whiskey": 33,
       "firelight-shadow": 42
@@ -9687,7 +9732,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 204,
+    "sortOrder": 205,
     "themes": {
       "law-outlaws": 68,
       "sketches-of-legends": 75
@@ -9748,7 +9793,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 205,
+    "sortOrder": 206,
     "themes": {
       "women-of-the-west": 25,
       "firelight-shadow": 44,
@@ -9813,7 +9858,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 206,
+    "sortOrder": 207,
     "themes": {
       "whispering-reflection": 57
     }
@@ -9873,7 +9918,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 207,
+    "sortOrder": 208,
     "themes": {
       "women-of-the-west": 22,
       "frontier-women": 52,
@@ -9936,7 +9981,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 208,
+    "sortOrder": 209,
     "themes": {
       "frontier-women": 62,
       "love-goodbye": 37
@@ -9997,7 +10042,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 209,
+    "sortOrder": 210,
     "themes": {
       "frontier-women": 48,
       "love-goodbye": 31
@@ -10038,7 +10083,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 210,
+    "sortOrder": 211,
     "themes": {
       "law-outlaws": 59,
       "sketches-of-legends": 63
@@ -10099,7 +10144,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 211,
+    "sortOrder": 212,
     "themes": {
       "women-of-the-west": 21,
       "frontier-women": 53,
@@ -10141,7 +10186,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 212,
+    "sortOrder": 213,
     "themes": {
       "aces-smoke-whiskey": 35,
       "sketches-of-legends": 62
@@ -10202,7 +10247,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 213
+    "sortOrder": 214
   },
   {
     "id": "i-GH7H4LC",
@@ -10259,7 +10304,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 214,
+    "sortOrder": 215,
     "themes": {
       "frontier-women": 51,
       "love-goodbye": 33
@@ -10300,7 +10345,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 215,
+    "sortOrder": 216,
     "themes": {
       "women-of-the-west": 23,
       "frontier-women": 50,
@@ -10342,7 +10387,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 216
+    "sortOrder": 217
   },
   {
     "id": "i-GBvFP8Q",
@@ -10380,7 +10425,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 217,
+    "sortOrder": 218,
     "themes": {
       "law-outlaws": 61,
       "sketches-of-legends": 67
@@ -10441,7 +10486,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 218,
+    "sortOrder": 219,
     "themes": {
       "law-outlaws": 60,
       "sketches-of-legends": 66
@@ -10502,7 +10547,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 219,
+    "sortOrder": 220,
     "themes": {
       "law-outlaws": 56
     }
@@ -10541,7 +10586,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 220
+    "sortOrder": 221
   },
   {
     "id": "i-d9znSwP",
@@ -10578,7 +10623,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 221,
+    "sortOrder": 222,
     "themes": {
       "sketches-of-legends": 68
     }
@@ -10638,7 +10683,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 222
+    "sortOrder": 223
   },
   {
     "id": "i-dnxxDXH",
@@ -10695,7 +10740,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 223,
+    "sortOrder": 224,
     "themes": {
       "sketches-of-legends": 69
     }
@@ -10755,7 +10800,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 224,
+    "sortOrder": 225,
     "themes": {
       "aces-smoke-whiskey": 36,
       "firelight-shadow": 49,
@@ -10817,7 +10862,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 225
+    "sortOrder": 226
   },
   {
     "id": "i-tWx3N8c",
@@ -10874,7 +10919,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 226,
+    "sortOrder": 227,
     "themes": {
       "law-outlaws": 62,
       "sketches-of-legends": 71
@@ -10935,7 +10980,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 227,
+    "sortOrder": 228,
     "themes": {
       "firelight-shadow": 50,
       "whispering-reflection": 67
@@ -10976,7 +11021,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 228,
+    "sortOrder": 229,
     "themes": {
       "frontier-women": 56,
       "whispering-reflection": 62
@@ -11037,7 +11082,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 229
+    "sortOrder": 230
   },
   {
     "id": "i-2Cj8j9W",
@@ -11094,7 +11139,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 230,
+    "sortOrder": 231,
     "themes": {
       "frontier-women": 54,
       "love-goodbye": 35
@@ -11155,7 +11200,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 231,
+    "sortOrder": 232,
     "themes": {
       "whispering-reflection": 65
     }
@@ -11195,7 +11240,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 232,
+    "sortOrder": 233,
     "themes": {
       "law-outlaws": 67,
       "whispering-reflection": 64
@@ -11256,7 +11301,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 233
+    "sortOrder": 234
   },
   {
     "id": "i-gs6X2P7",
@@ -11313,7 +11358,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 234,
+    "sortOrder": 235,
     "themes": {
       "law-outlaws": 63,
       "sketches-of-legends": 72
@@ -11374,7 +11419,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 235,
+    "sortOrder": 236,
     "themes": {
       "law-outlaws": 66,
       "sketches-of-legends": 73
@@ -11435,7 +11480,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 236,
+    "sortOrder": 237,
     "themes": {
       "law-outlaws": 65
     }
@@ -11495,7 +11540,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 237
+    "sortOrder": 238
   },
   {
     "id": "i-S2sZdJB",
@@ -11532,7 +11577,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 238,
+    "sortOrder": 239,
     "themes": {
       "law-outlaws": 64,
       "whispering-reflection": 63
@@ -11593,7 +11638,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 239,
+    "sortOrder": 240,
     "themes": {
       "frontier-women": 59
     }
@@ -11653,7 +11698,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 240,
+    "sortOrder": 241,
     "themes": {
       "sketches-of-legends": 87
     }
@@ -11713,7 +11758,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 241,
+    "sortOrder": 242,
     "themes": {
       "aces-smoke-whiskey": 8,
       "firelight-shadow": 56,
@@ -11775,7 +11820,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 242,
+    "sortOrder": 243,
     "themes": {
       "firelight-shadow": 51,
       "frontier-women": 55
@@ -11811,7 +11856,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 243,
+    "sortOrder": 244,
     "themes": {
       "aces-smoke-whiskey": 37,
       "firelight-shadow": 55,
@@ -11852,7 +11897,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 244,
+    "sortOrder": 245,
     "themes": {
       "women-of-the-west": 17,
       "firelight-shadow": 54,
@@ -11916,7 +11961,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 245,
+    "sortOrder": 246,
     "themes": {
       "firelight-shadow": 52
     }
@@ -11953,7 +11998,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 246,
+    "sortOrder": 247,
     "themes": {
       "cowboys-and-horses": 62,
       "firelight-shadow": 75
@@ -12014,7 +12059,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 247,
+    "sortOrder": 248,
     "themes": {
       "women-of-the-west": 16,
       "firelight-shadow": 62,
@@ -12058,7 +12103,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 248,
+    "sortOrder": 249,
     "themes": {
       "sketches-of-legends": 85
     }
@@ -12118,7 +12163,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 249
+    "sortOrder": 250
   },
   {
     "id": "i-s79JnZ2",
@@ -12175,7 +12220,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 250,
+    "sortOrder": 251,
     "themes": {
       "law-outlaws": 69,
       "whispering-reflection": 72
@@ -12216,7 +12261,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 251,
+    "sortOrder": 252,
     "themes": {
       "sketches-of-legends": 79
     }
@@ -12276,7 +12321,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 252,
+    "sortOrder": 253,
     "themes": {
       "sketches-of-legends": 80
     }
@@ -12321,7 +12366,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 253,
+    "sortOrder": 254,
     "themes": {
       "sketches-of-legends": 78
     }
@@ -12381,7 +12426,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 254,
+    "sortOrder": 255,
     "themes": {
       "frontier-women": 60,
       "sketches-of-legends": 76
@@ -12442,7 +12487,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 255,
+    "sortOrder": 256,
     "themes": {
       "frontier-women": 61,
       "sketches-of-legends": 77
@@ -12503,7 +12548,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 256,
+    "sortOrder": 257,
     "themes": {
       "women-of-the-west": 18,
       "frontier-women": 58,
@@ -12566,7 +12611,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 257,
+    "sortOrder": 258,
     "themes": {
       "sketches-of-legends": 84
     }
@@ -12601,7 +12646,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 258,
+    "sortOrder": 259,
     "themes": {
       "law-outlaws": 70
     }
@@ -12634,7 +12679,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 259
+    "sortOrder": 260
   },
   {
     "id": "i-76Fjxvs",
@@ -12691,7 +12736,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 260,
+    "sortOrder": 261,
     "themes": {
       "sketches-of-legends": 81
     }
@@ -12751,7 +12796,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 261,
+    "sortOrder": 262,
     "themes": {
       "sketches-of-legends": 83
     }
@@ -12791,7 +12836,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 262
+    "sortOrder": 263
   },
   {
     "id": "i-WSQrZ3M",
@@ -12848,7 +12893,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 263,
+    "sortOrder": 264,
     "themes": {
       "women-of-the-west": 20,
       "frontier-women": 57,
@@ -12891,7 +12936,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 264
+    "sortOrder": 265
   },
   {
     "id": "i-jmNjVwB",
@@ -12949,7 +12994,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 265
+    "sortOrder": 266
   },
   {
     "id": "i-48jGpLt",
@@ -12987,7 +13032,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 266
+    "sortOrder": 267
   },
   {
     "id": "i-RMTbDRs",
@@ -13044,7 +13089,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 267,
+    "sortOrder": 268,
     "themes": {
       "sketches-of-legends": 89
     }
@@ -13104,7 +13149,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 268
+    "sortOrder": 269
   },
   {
     "id": "i-5T9mQqT",
@@ -13134,7 +13179,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 269,
+    "sortOrder": 270,
     "themes": {
       "sketches-of-legends": 90,
       "whispering-reflection": 73
@@ -13195,7 +13240,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 270,
+    "sortOrder": 271,
     "themes": {
       "sketches-of-legends": 91
     }
@@ -13255,7 +13300,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 271,
+    "sortOrder": 272,
     "themes": {
       "law-outlaws": 71,
       "sketches-of-legends": 86
@@ -13316,7 +13361,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 272,
+    "sortOrder": 273,
     "themes": {
       "sketches-of-legends": 92
     }
@@ -13376,7 +13421,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 273,
+    "sortOrder": 274,
     "themes": {
       "firelight-shadow": 59,
       "frontier-women": 67
@@ -13437,7 +13482,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 274,
+    "sortOrder": 275,
     "themes": {
       "aces-smoke-whiskey": 14,
       "firelight-shadow": 58
@@ -13498,7 +13543,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 275,
+    "sortOrder": 276,
     "themes": {
       "aces-smoke-whiskey": 20,
       "firelight-shadow": 57,
@@ -13543,7 +13588,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 276,
+    "sortOrder": 277,
     "themes": {
       "firelight-shadow": 60,
       "love-goodbye": 41
@@ -13616,7 +13661,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 277,
+    "sortOrder": 278,
     "themes": {
       "frontier-women": 65
     }
@@ -13676,7 +13721,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 278,
+    "sortOrder": 279,
     "themes": {
       "firelight-shadow": 61,
       "frontier-women": 66,
@@ -13738,7 +13783,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 279,
+    "sortOrder": 280,
     "themes": {
       "sketches-of-legends": 88
     }
@@ -13779,7 +13824,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 280,
+    "sortOrder": 281,
     "themes": {
       "sketches-of-legends": 95
     }
@@ -13839,7 +13884,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 281,
+    "sortOrder": 282,
     "themes": {
       "aces-smoke-whiskey": 39,
       "law-outlaws": 74,
@@ -13876,7 +13921,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 282,
+    "sortOrder": 283,
     "themes": {
       "aces-smoke-whiskey": 40,
       "firelight-shadow": 66,
@@ -13940,7 +13985,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 283
+    "sortOrder": 284
   },
   {
     "id": "i-PxNFNhQ",
@@ -13971,7 +14016,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 284
+    "sortOrder": 285
   },
   {
     "id": "i-JWGwQ7k",
@@ -14008,7 +14053,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 285,
+    "sortOrder": 286,
     "themes": {
       "women-of-the-west": 15,
       "frontier-women": 69,
@@ -14044,7 +14089,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 286
+    "sortOrder": 287
   },
   {
     "id": "i-fcRrVV5",
@@ -14101,7 +14146,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 287
+    "sortOrder": 288
   },
   {
     "id": "i-NzMs3RH",
@@ -14130,7 +14175,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 288,
+    "sortOrder": 289,
     "themes": {
       "firelight-shadow": 69
     }
@@ -14165,7 +14210,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 289,
+    "sortOrder": 290,
     "themes": {
       "cowboys-and-horses": 31
     }
@@ -14198,7 +14243,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 290,
+    "sortOrder": 291,
     "themes": {
       "cowboys-and-horses": 27
     }
@@ -14230,7 +14275,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 291,
+    "sortOrder": 292,
     "themes": {
       "cowboys-and-horses": 28
     }
@@ -14269,7 +14314,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 292,
+    "sortOrder": 293,
     "themes": {
       "frontier-women": 70,
       "love-goodbye": 43
@@ -14330,7 +14375,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 293
+    "sortOrder": 294
   },
   {
     "id": "i-CFT7PJM",
@@ -14387,7 +14432,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 294,
+    "sortOrder": 295,
     "themes": {
       "frontier-women": 74,
       "sketches-of-legends": 105,
@@ -14449,7 +14494,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 295,
+    "sortOrder": 296,
     "themes": {
       "hardship-sorrow": 29,
       "sketches-of-legends": 102,
@@ -14511,7 +14556,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 296,
+    "sortOrder": 297,
     "themes": {
       "hardship-sorrow": 31,
       "sketches-of-legends": 103,
@@ -14573,7 +14618,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 297,
+    "sortOrder": 298,
     "themes": {
       "sketches-of-legends": 100,
       "whispering-reflection": 77
@@ -14634,7 +14679,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 298,
+    "sortOrder": 299,
     "themes": {
       "sketches-of-legends": 99,
       "whispering-reflection": 76
@@ -14668,7 +14713,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 299
+    "sortOrder": 300
   },
   {
     "id": "i-zqZBdJF",
@@ -14698,7 +14743,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 300
+    "sortOrder": 301
   },
   {
     "id": "i-XpH2QfG",
@@ -14756,7 +14801,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 301,
+    "sortOrder": 302,
     "themes": {
       "dust-thunder": 33
     }
@@ -14816,7 +14861,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 302,
+    "sortOrder": 303,
     "themes": {
       "dust-thunder": 32,
       "sketches-of-legends": 114
@@ -14851,7 +14896,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 303
+    "sortOrder": 304
   },
   {
     "id": "i-qDkTww8",
@@ -14881,7 +14926,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 304
+    "sortOrder": 305
   },
   {
     "id": "i-fJmGF7N",
@@ -14909,7 +14954,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 305,
+    "sortOrder": 306,
     "themes": {
       "hardship-sorrow": 35,
       "sketches-of-legends": 116,
@@ -14945,7 +14990,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 306,
+    "sortOrder": 307,
     "themes": {
       "cowboys-and-horses": 65
     }
@@ -14979,7 +15024,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 307,
+    "sortOrder": 308,
     "themes": {
       "cowboys-and-horses": 29
     }
@@ -15016,7 +15061,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 308,
+    "sortOrder": 309,
     "themes": {
       "frontier-women": 71
     }
@@ -15076,7 +15121,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 309,
+    "sortOrder": 310,
     "themes": {
       "frontier-women": 72,
       "sketches-of-legends": 96
@@ -15137,7 +15182,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 310,
+    "sortOrder": 311,
     "themes": {
       "frontier-women": 73
     }
@@ -15171,7 +15216,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 311
+    "sortOrder": 312
   },
   {
     "id": "i-V9Jx8D8",
@@ -15200,7 +15245,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 312
+    "sortOrder": 313
   },
   {
     "id": "i-drTwKMw",
@@ -15231,7 +15276,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 313
+    "sortOrder": 314
   },
   {
     "id": "i-QNLd2xZ",
@@ -15261,7 +15306,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 314,
+    "sortOrder": 315,
     "themes": {
       "cowboys-and-horses": 32
     }
@@ -15294,7 +15339,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 315,
+    "sortOrder": 316,
     "themes": {
       "cowboys-and-horses": 42
     }
@@ -15334,7 +15379,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 316,
+    "sortOrder": 317,
     "themes": {
       "aces-smoke-whiskey": 26,
       "firelight-shadow": 71
@@ -15395,12 +15440,74 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 317,
+    "sortOrder": 318,
     "themes": {
       "firelight-shadow": 64,
       "frontier-women": 76,
       "whispering-reflection": 82
     }
+  },
+  {
+    "id": "i-msZxHgR",
+    "title": "Cowboy Painting Art Moment",
+    "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "alt": "Wayne Heim's cowboy painting art artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/K3Zk76FpJm2CT5DCfQhKGrzjmssrs34cH5mw97pXQ/L/_HF27727-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/MT8hcLqV5v6mwvBFQbrJpvBvVhK2Mnn766QwWcLDv/S/_HF27727-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "cowboy painting art",
+      "fine art Western photography",
+      "wild west photography",
+      "powerful works of art",
+      "outlaw portraits",
+      "painterly cowboy portraits",
+      "cowboy art",
+      "frederic remington",
+      "rugged spirit"
+    ],
+    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing rugged spirit. A testament to fine art Western photography in fine art. © Wayne Heim",
+    "notes": "",
+    "rating": 3,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 319
+  },
+  {
+    "id": "i-z9Pfbc5",
+    "title": "Western Figure",
+    "description": "Wayne Heim photograph from the South Dakota collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5kNs7chNbcPKNZ4Q4whJLQN6zSRmsLTCK3Psk5V9/XL/_WHO4863-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5kNs7chNbcPKNZ4Q4whJLQN6zSRmsLTCK3Psk5V9/XL/_WHO4863-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5bdcSpbP4s7Z8sVPXmjjtfwHvwvPr9KS4Xjsmbd8/L/_WHO4863-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/NGrnkJqPMJ6gbD22LqwXsqWTC5DsptdvqBwG2gwx3/M/_WHO4863-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/KjrhNKT4sZRJpdtCsCQxWLXgXXS4PHrtRtCSpRWtD/S/_WHO4863-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/A",
+    "keywords": [
+      "WHO4863"
+    ],
+    "story": "New fine art photography by Wayne Heim – South Dakota. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
+    "visibility": "show",
+    "sortOrder": 320
   },
   {
     "id": "i-9LC3ZrM",
@@ -15438,37 +15545,13 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 318,
+    "sortOrder": 321,
     "themes": {
       "cowboys-and-horses": 30,
       "frontier-women": 77,
       "love-goodbye": 44,
       "whispering-reflection": 85
     }
-  },
-  {
-    "id": "i-z9Pfbc5",
-    "title": "Western Figure",
-    "description": "Wayne Heim photograph from the South Dakota collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5kNs7chNbcPKNZ4Q4whJLQN6zSRmsLTCK3Psk5V9/XL/_WHO4863-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5kNs7chNbcPKNZ4Q4whJLQN6zSRmsLTCK3Psk5V9/XL/_WHO4863-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5bdcSpbP4s7Z8sVPXmjjtfwHvwvPr9KS4Xjsmbd8/L/_WHO4863-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/NGrnkJqPMJ6gbD22LqwXsqWTC5DsptdvqBwG2gwx3/M/_WHO4863-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/KjrhNKT4sZRJpdtCsCQxWLXgXXS4PHrtRtCSpRWtD/S/_WHO4863-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/A",
-    "keywords": [
-      "WHO4863"
-    ],
-    "story": "New fine art photography by Wayne Heim – South Dakota. Check back soon for complete story on this image.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Other/Photo-Shoots/South-Dakota"
-    ],
-    "visibility": "show",
-    "sortOrder": 319
   },
   {
     "id": "i-m52CLPT",
@@ -15498,7 +15581,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 320,
+    "sortOrder": 322,
     "themes": {
       "cowboys-and-horses": 33
     }
@@ -15533,7 +15616,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 321,
+    "sortOrder": 323,
     "themes": {
       "cowboys-and-horses": 39
     }
@@ -15567,7 +15650,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 322,
+    "sortOrder": 324,
     "themes": {
       "cowboys-and-horses": 40
     }
@@ -15602,7 +15685,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 323,
+    "sortOrder": 325,
     "themes": {
       "cowboys-and-horses": 35,
       "dust-thunder": 22,
@@ -15642,7 +15725,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 324,
+    "sortOrder": 326,
     "themes": {
       "cowboys-and-horses": 36,
       "dust-thunder": 27,
@@ -15679,7 +15762,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 325,
+    "sortOrder": 327,
     "themes": {
       "cowboys-and-horses": 41,
       "firelight-shadow": 70,
@@ -15713,7 +15796,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 326,
+    "sortOrder": 328,
     "themes": {
       "sketches-of-legends": 113
     }
@@ -15748,45 +15831,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 327
-  },
-  {
-    "id": "i-msZxHgR",
-    "title": "Cowboy Painting Art Moment",
-    "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
-    "alt": "Wayne Heim's cowboy painting art artwork",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/K3Zk76FpJm2CT5DCfQhKGrzjmssrs34cH5mw97pXQ/L/_HF27727-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/0/MT8hcLqV5v6mwvBFQbrJpvBvVhK2Mnn766QwWcLDv/S/_HF27727-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-msZxHgR/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "cowboy painting art",
-      "fine art Western photography",
-      "wild west photography",
-      "powerful works of art",
-      "outlaw portraits",
-      "painterly cowboy portraits",
-      "cowboy art",
-      "frederic remington",
-      "rugged spirit"
-    ],
-    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing rugged spirit. A testament to fine art Western photography in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 3,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 328
+    "sortOrder": 329
   },
   {
     "id": "i-9Qt4nh7",
@@ -15815,7 +15860,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 329,
+    "sortOrder": 330,
     "themes": {
       "cowboys-and-horses": 38
     }
@@ -15840,7 +15885,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 330,
+    "sortOrder": 331,
     "themes": {
       "cowboys-and-horses": 37,
       "frontier-women": 88,
@@ -15875,7 +15920,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 331,
+    "sortOrder": 332,
     "themes": {
       "women-of-the-west": 42,
       "cowboys-and-horses": 53,
@@ -15913,7 +15958,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 332,
+    "sortOrder": 333,
     "themes": {
       "cowboys-and-horses": 50
     }
@@ -15953,7 +15998,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 333,
+    "sortOrder": 334,
     "themes": {
       "cowboys-and-horses": 48,
       "whispering-reflection": 91
@@ -15988,7 +16033,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 334,
+    "sortOrder": 335,
     "themes": {
       "cowboys-and-horses": 52
     }
@@ -16028,7 +16073,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 335,
+    "sortOrder": 336,
     "themes": {
       "cowboys-and-horses": 56
     }
@@ -16066,7 +16111,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 336,
+    "sortOrder": 337,
     "themes": {
       "cowboys-and-horses": 47
     }
@@ -16099,7 +16144,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 337,
+    "sortOrder": 338,
     "themes": {
       "frontier-women": 79,
       "hardship-sorrow": 34,
@@ -16135,7 +16180,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 338,
+    "sortOrder": 339,
     "themes": {
       "sketches-of-legends": 119
     }
@@ -16175,7 +16220,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 339
+    "sortOrder": 340
   },
   {
     "id": "i-KXLmcXW",
@@ -16206,7 +16251,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 340,
+    "sortOrder": 341,
     "themes": {
       "sketches-of-legends": 110
     }
@@ -16238,7 +16283,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 341,
+    "sortOrder": 342,
     "themes": {
       "sketches-of-legends": 112
     }
@@ -16279,7 +16324,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 342,
+    "sortOrder": 343,
     "themes": {
       "sketches-of-legends": 97
     }
@@ -16314,7 +16359,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 343,
+    "sortOrder": 344,
     "themes": {
       "cowboys-and-horses": 43,
       "frontier-women": 80,
@@ -16354,7 +16399,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 344,
+    "sortOrder": 345,
     "themes": {
       "cowboys-and-horses": 44,
       "dust-thunder": 25,
@@ -16392,7 +16437,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 345,
+    "sortOrder": 346,
     "themes": {
       "women-of-the-west": 46,
       "cowboys-and-horses": 46,
@@ -16432,7 +16477,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 346,
+    "sortOrder": 347,
     "themes": {
       "cowboys-and-horses": 54,
       "frontier-women": 87,
@@ -16475,7 +16520,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 347,
+    "sortOrder": 348,
     "themes": {
       "cowboys-and-horses": 61,
       "dust-thunder": 24,
@@ -16517,7 +16562,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 348,
+    "sortOrder": 349,
     "themes": {
       "cowboys-and-horses": 55,
       "dust-thunder": 29,
@@ -16555,7 +16600,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 349,
+    "sortOrder": 350,
     "themes": {
       "sketches-of-legends": 123
     }
@@ -16588,7 +16633,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 350
+    "sortOrder": 351
   },
   {
     "id": "i-JcHKH5f",
@@ -16620,7 +16665,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 351,
+    "sortOrder": 352,
     "themes": {
       "cowboys-and-horses": 58
     }
@@ -16653,7 +16698,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 352,
+    "sortOrder": 353,
     "themes": {
       "cowboys-and-horses": 57
     }
@@ -16686,7 +16731,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 353,
+    "sortOrder": 354,
     "themes": {
       "cowboys-and-horses": 59
     }
@@ -16720,7 +16765,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 354,
+    "sortOrder": 355,
     "themes": {
       "women-of-the-west": 44,
       "frontier-women": 85
@@ -16760,7 +16805,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 355,
+    "sortOrder": 356,
     "themes": {
       "women-of-the-west": 43,
       "frontier-women": 83,
@@ -16824,7 +16869,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 356,
+    "sortOrder": 357,
     "themes": {
       "sketches-of-legends": 118
     }
@@ -16865,7 +16910,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 357,
+    "sortOrder": 358,
     "themes": {
       "aces-smoke-whiskey": 41,
       "sketches-of-legends": 120
@@ -16926,7 +16971,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 358,
+    "sortOrder": 359,
     "themes": {
       "firelight-shadow": 72,
       "law-outlaws": 80,
@@ -16988,7 +17033,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 359,
+    "sortOrder": 360,
     "themes": {
       "law-outlaws": 81,
       "sketches-of-legends": 122
@@ -17030,7 +17075,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 360
+    "sortOrder": 361
   },
   {
     "id": "i-KgkW54w",
@@ -17068,7 +17113,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 361
+    "sortOrder": 362
   },
   {
     "id": "i-7DDFpHQ",
@@ -17106,7 +17151,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 362
+    "sortOrder": 363
   },
   {
     "id": "i-f9nZhvM",
@@ -17137,7 +17182,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 363
+    "sortOrder": 364
   },
   {
     "id": "i-cRmVc3S",
@@ -17165,7 +17210,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 364,
+    "sortOrder": 365,
     "themes": {
       "cowboys-and-horses": 60
     }
@@ -17205,7 +17250,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 365,
+    "sortOrder": 366,
     "themes": {
       "aces-smoke-whiskey": 42,
       "firelight-shadow": 73,
@@ -17241,7 +17286,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 366
+    "sortOrder": 367
   },
   {
     "id": "i-QHN52S6",
@@ -17279,7 +17324,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 367
+    "sortOrder": 368
   },
   {
     "id": "i-7dQdHmC",
@@ -17317,7 +17362,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 368,
+    "sortOrder": 369,
     "themes": {
       "sketches-of-legends": 125
     }
@@ -17350,7 +17395,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 369,
+    "sortOrder": 370,
     "themes": {
       "frontier-women": 92,
       "hardship-sorrow": 38,
@@ -17385,11 +17430,49 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 370,
+    "sortOrder": 371,
     "themes": {
       "hardship-sorrow": 39,
       "love-goodbye": 47,
       "whispering-reflection": 97
+    }
+  },
+  {
+    "id": "i-qqVG3fw",
+    "title": "Historic Western Prints Portrait",
+    "description": "A painterly Western photograph of an outlaw, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "alt": "historic western prints in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/LST8tcVN399qkpmMZXV8WV35BLJqfs4vKc2jM8KR6/XL/_HF29970-1283-1285-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/LST8tcVN399qkpmMZXV8WV35BLJqfs4vKc2jM8KR6/XL/_HF29970-1283-1285-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/LST8tcVN399qkpmMZXV8WV35BLJqfs4vKc2jM8KR6/XL/_HF29970-1283-1285-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/Lr78CdQNH54LmBDdJsWqJp2G6SMpp85dJJK47Ncqp/L/_HF29970-1283-1285-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/KcQpTt73kxFZpPzhhwKmCSJZMNVkRj7zF4FCr83QN/S/_HF29970-1283-1285-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/A",
+    "keywords": [
+      "HF23312",
+      "1246",
+      "historic western prints",
+      "fine art Western photography",
+      "rugged spirit",
+      "outlaw portraits",
+      "western canon",
+      "western fine art",
+      "frederic remington",
+      "western art"
+    ],
+    "story": "Delving into western fine art, this work by Wayne Heim highlights through western fine art and western art. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 372,
+    "themes": {
+      "women-of-the-west": 54,
+      "frontier-women": 103,
+      "hardship-sorrow": 43,
+      "love-goodbye": 52,
+      "whispering-reflection": 102
     }
   },
   {
@@ -17420,7 +17503,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 371,
+    "sortOrder": 373,
     "themes": {
       "sketches-of-legends": 127
     }
@@ -17452,7 +17535,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 372,
+    "sortOrder": 374,
     "themes": {
       "hardship-sorrow": 40,
       "love-goodbye": 48,
@@ -17487,80 +17570,10 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 373,
+    "sortOrder": 375,
     "themes": {
       "cowboys-and-horses": 81,
       "hardship-sorrow": 48
-    }
-  },
-  {
-    "id": "i-qCNGgfg",
-    "title": "Cowboy Art Portrait",
-    "description": "A painterly Western photograph of a cowboy, defined by authority rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
-    "alt": "Fine art photography of cowboy art by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/LSzxnBvbkCbC3rRcdmLPBvcTZWJTrLrvgq3DM8C8p/XL/_HF24853-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/LSzxnBvbkCbC3rRcdmLPBvcTZWJTrLrvgq3DM8C8p/XL/_HF24853-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/LSzxnBvbkCbC3rRcdmLPBvcTZWJTrLrvgq3DM8C8p/XL/_HF24853-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/LJ8GW9rtbfR5b2Rc2WF6RZLsTSM27XGhkrG4VcFzq/L/_HF24853-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/L3wRZfcm7Vch25GQb79Df9mGGQ3bBkB3XQ3htdvG7/S/_HF24853-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/A",
-    "keywords": [
-      "HF21312",
-      "cowboy art",
-      "cowboy portraits",
-      "outlaw portraits",
-      "western canon",
-      "rustic charm"
-    ],
-    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing western canon and cowboy portraits. A testament to rustic charm in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 3,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 374,
-    "themes": {
-      "sketches-of-legends": 137
-    }
-  },
-  {
-    "id": "i-9DLx78V",
-    "title": "Western Landscapes Fine Art Portrait",
-    "description": "Discover the western landscapes fine art in this powerful historic western prints by Wayne Heim. A compelling work that embodies historic western prints, historic western prints, and western art. Featuring fine art Western photography, perfect for art lovers seeking western landscapes fine art to enhance their collection. © Wayne Heim",
-    "alt": "western landscapes fine art in fine art photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/LJX9cJm2Q9P3BsqDqLzFT789F59zhmvdrpc6k7HzM/XL/_WHO5639-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/LJX9cJm2Q9P3BsqDqLzFT789F59zhmvdrpc6k7HzM/XL/_WHO5639-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/Mhv9LCW2M7ZFZbK54dqZvgRTLb2dKzcLBqdRM7pkR/L/_WHO5639-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/M3c3HMbFBnxmtvFHKMQZrfpkRQrXbdwFCTxBGWc7W/M/_WHO5639-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/KsHWF2QqDcB6dvq95zVp5ZKMNGB6FSdGtj7grFQ7k/S/_WHO5639-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "western landscapes fine art",
-      "historic western prints",
-      "western art",
-      "fine art Western photography",
-      "western fine art",
-      "cowboy portraits",
-      "western canon"
-    ],
-    "story": "Delving into western fine art, this work by Wayne Heim highlights cowboy portraits through western canon and western canon. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 3,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 375,
-    "themes": {
-      "women-of-the-west": 47,
-      "frontier-women": 94
     }
   },
   {
@@ -17602,41 +17615,33 @@ export const galleryData = [
     }
   },
   {
-    "id": "i-qqVG3fw",
-    "title": "Historic Western Prints Portrait",
-    "description": "A painterly Western photograph of an outlaw, defined by vigilance rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
-    "alt": "historic western prints in fine art photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/LST8tcVN399qkpmMZXV8WV35BLJqfs4vKc2jM8KR6/XL/_HF29970-1283-1285-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/LST8tcVN399qkpmMZXV8WV35BLJqfs4vKc2jM8KR6/XL/_HF29970-1283-1285-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/LST8tcVN399qkpmMZXV8WV35BLJqfs4vKc2jM8KR6/XL/_HF29970-1283-1285-2-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/Lr78CdQNH54LmBDdJsWqJp2G6SMpp85dJJK47Ncqp/L/_HF29970-1283-1285-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/0/KcQpTt73kxFZpPzhhwKmCSJZMNVkRj7zF4FCr83QN/S/_HF29970-1283-1285-2-S.jpg",
+    "id": "i-qCNGgfg",
+    "title": "Cowboy Art Portrait",
+    "description": "A painterly Western photograph of a cowboy, defined by authority rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where command was earned through presence and experience. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "alt": "Fine art photography of cowboy art by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/LSzxnBvbkCbC3rRcdmLPBvcTZWJTrLrvgq3DM8C8p/XL/_HF24853-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/LSzxnBvbkCbC3rRcdmLPBvcTZWJTrLrvgq3DM8C8p/XL/_HF24853-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/LSzxnBvbkCbC3rRcdmLPBvcTZWJTrLrvgq3DM8C8p/XL/_HF24853-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/LJ8GW9rtbfR5b2Rc2WF6RZLsTSM27XGhkrG4VcFzq/L/_HF24853-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/0/L3wRZfcm7Vch25GQb79Df9mGGQ3bBkB3XQ3htdvG7/S/_HF24853-Edit-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-qqVG3fw/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qCNGgfg/A",
     "keywords": [
-      "HF23312",
-      "1246",
-      "historic western prints",
-      "fine art Western photography",
-      "rugged spirit",
+      "HF21312",
+      "cowboy art",
+      "cowboy portraits",
       "outlaw portraits",
       "western canon",
-      "western fine art",
-      "frederic remington",
-      "western art"
+      "rustic charm"
     ],
-    "story": "Delving into western fine art, this work by Wayne Heim highlights through western fine art and western art. A powerful statement in photography. © Wayne Heim",
+    "story": "Wayne Heim's exploration of cowboy art comes alive in this piece, showcasing western canon and cowboy portraits. A testament to rustic charm in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 4,
+    "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 377,
     "themes": {
-      "women-of-the-west": 54,
-      "frontier-women": 103,
-      "hardship-sorrow": 43,
-      "love-goodbye": 52,
-      "whispering-reflection": 102
+      "sketches-of-legends": 137
     }
   },
   {
@@ -17901,28 +17906,42 @@ export const galleryData = [
     }
   },
   {
-    "id": "i-cmH2bkC",
-    "title": "Cowboy Portrait",
-    "description": "Western fine art photography by Wayne Heim. Part of the Artist Ride series. Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/Lh3522wZXDwrTCVVZzB2ZMSW3pK8zXcWsN6RsSp73/XL/_WHO8934-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/Lh3522wZXDwrTCVVZzB2ZMSW3pK8zXcWsN6RsSp73/XL/_WHO8934-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/MvvxCs7ScGcQG9X9qzB4LHXJkpPd9xHtCWxT4BBJX/L/_WHO8934-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/NdsHJvdtnXNQNRgpHwGSLVLqbr5SjXjkrQzFLZMPj/M/_WHO8934-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/M8z95fTT77XwzNGwdNDNkCs3rtpS7tjXQrBfmFPmc/S/_WHO8934-Edit-S.jpg",
+    "id": "i-zTPP4hr",
+    "title": "Western Landscapes Fine Art Portrait",
+    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "alt": "Wayne Heim's western landscapes fine art artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/LVc4KkSqkHDvQDZq5zkgCqxBspq7bqPrkLkSn8M9X/XL/_WHO4278-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/LVc4KkSqkHDvQDZq5zkgCqxBspq7bqPrkLkSn8M9X/XL/_WHO4278-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/LVc4KkSqkHDvQDZq5zkgCqxBspq7bqPrkLkSn8M9X/XL/_WHO4278-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/MRXD9SwvhN4CndD5xzSjCz92RCC7krSRxwrnf2kVV/L/_WHO4278-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/KMDhsF9Gs9DqJJvrzSXM8H6vp7T4xTWC8CXJSNw2N/S/_WHO4278-Edit-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/A",
     "keywords": [
-      "WHO4466"
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "western landscapes fine art",
+      "powerful works of art",
+      "Western cowboys",
+      "western canon",
+      "cowboy portraits",
+      "fine art Western photography",
+      "frederic remington"
     ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "story": "Wayne Heim's exploration of comes alive in this piece, showcasing western canon and powerful works of art. A testament to western landscapes fine art in fine art. © Wayne Heim",
     "notes": "",
-    "rating": 3,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 385,
     "themes": {
-      "cowboys-and-horses": 76
+      "cowboys-and-horses": 71
     }
   },
   {
@@ -17967,6 +17986,31 @@ export const galleryData = [
     }
   },
   {
+    "id": "i-cmH2bkC",
+    "title": "Cowboy Portrait",
+    "description": "Western fine art photography by Wayne Heim. Part of the Artist Ride series. Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/Lh3522wZXDwrTCVVZzB2ZMSW3pK8zXcWsN6RsSp73/XL/_WHO8934-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/Lh3522wZXDwrTCVVZzB2ZMSW3pK8zXcWsN6RsSp73/XL/_WHO8934-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/MvvxCs7ScGcQG9X9qzB4LHXJkpPd9xHtCWxT4BBJX/L/_WHO8934-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/NdsHJvdtnXNQNRgpHwGSLVLqbr5SjXjkrQzFLZMPj/M/_WHO8934-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/0/M8z95fTT77XwzNGwdNDNkCs3rtpS7tjXQrBfmFPmc/S/_WHO8934-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cmH2bkC/A",
+    "keywords": [
+      "WHO4466"
+    ],
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 3,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 387,
+    "themes": {
+      "cowboys-and-horses": 76
+    }
+  },
+  {
     "id": "i-sc9dBkm",
     "title": "Wild West Photography In Fine Art",
     "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western photography style uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
@@ -17999,48 +18043,9 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 387,
-    "themes": {
-      "cowboys-and-horses": 70
-    }
-  },
-  {
-    "id": "i-zTPP4hr",
-    "title": "Western Landscapes Fine Art Portrait",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
-    "alt": "Wayne Heim's western landscapes fine art artwork",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/LVc4KkSqkHDvQDZq5zkgCqxBspq7bqPrkLkSn8M9X/XL/_WHO4278-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/LVc4KkSqkHDvQDZq5zkgCqxBspq7bqPrkLkSn8M9X/XL/_WHO4278-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/LVc4KkSqkHDvQDZq5zkgCqxBspq7bqPrkLkSn8M9X/XL/_WHO4278-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/MRXD9SwvhN4CndD5xzSjCz92RCC7krSRxwrnf2kVV/L/_WHO4278-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/3/KMDhsF9Gs9DqJJvrzSXM8H6vp7T4xTWC8CXJSNw2N/S/_WHO4278-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zTPP4hr/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "western landscapes fine art",
-      "powerful works of art",
-      "Western cowboys",
-      "western canon",
-      "cowboy portraits",
-      "fine art Western photography",
-      "frederic remington"
-    ],
-    "story": "Wayne Heim's exploration of comes alive in this piece, showcasing western canon and powerful works of art. A testament to western landscapes fine art in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 4,
-    "galleries": [],
-    "visibility": "show",
     "sortOrder": 388,
     "themes": {
-      "cowboys-and-horses": 71
+      "cowboys-and-horses": 70
     }
   },
   {
@@ -18227,46 +18232,6 @@ export const galleryData = [
     }
   },
   {
-    "id": "i-Nm9DNhq",
-    "title": "Rustic Charm And Western Fine Art",
-    "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
-    "alt": "Wayne Heim's rustic charm artwork",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/K7L3qBKBvTHRwx3S5ZFv4xjBXq4hSMwHDfzBhnBcZ/XL/_WHO1041-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/K7L3qBKBvTHRwx3S5ZFv4xjBXq4hSMwHDfzBhnBcZ/XL/_WHO1041-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/K7L3qBKBvTHRwx3S5ZFv4xjBXq4hSMwHDfzBhnBcZ/XL/_WHO1041-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/LVHJCpJzTDpSN35tgsNSvz4HdncTXMLBSs6LMNNd3/L/_WHO1041-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/NCgbn57xLGjVskkdTjWxB7x34DzbMzjVp9NmzQGTB/S/_WHO1041-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/A",
-    "keywords": [
-      "HF21509",
-      "1225",
-      "rustic charm",
-      "western fine art",
-      "powerful works of art",
-      "fine art Western photography",
-      "cowboy portraits",
-      "western landscapes fine art",
-      "frontier life",
-      "western cowboy art",
-      "cowboy artwork",
-      "painterly cowboy portraits"
-    ],
-    "story": "Delving into frontier life, this work by Wayne Heim highlights western cowboy art through cowboy artwork and painterly cowboy portraits. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 4,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 393,
-    "themes": {
-      "women-of-the-west": 61,
-      "firelight-shadow": 84,
-      "frontier-women": 109,
-      "sketches-of-legends": 136,
-      "whispering-reflection": 108
-    }
-  },
-  {
     "id": "i-vcX6WLC",
     "title": "Getting the last word in a grudge held too long",
     "description": "A stoic portrait of a federal marshal rendered in painterly Western style. Wayne Heim’s fine art cowboy photography captures the silent strength and gravity of frontier lawmen. With warm textures and cinematic lighting, this image evokes classic Western themes of justice, resilience, and power held in quiet hands. Perfect for collectors of cowboy art, Western portrait photography, and historically inspired wall decor.",
@@ -18321,10 +18286,50 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 394,
+    "sortOrder": 393,
     "themes": {
       "law-outlaws": 42,
       "sketches-of-legends": 46
+    }
+  },
+  {
+    "id": "i-Nm9DNhq",
+    "title": "Rustic Charm And Western Fine Art",
+    "description": "A painterly Western photograph of a cowboy, defined by duty rather than spectacle. Wayne Heim's western themed photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "alt": "Wayne Heim's rustic charm artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/K7L3qBKBvTHRwx3S5ZFv4xjBXq4hSMwHDfzBhnBcZ/XL/_WHO1041-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/K7L3qBKBvTHRwx3S5ZFv4xjBXq4hSMwHDfzBhnBcZ/XL/_WHO1041-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/K7L3qBKBvTHRwx3S5ZFv4xjBXq4hSMwHDfzBhnBcZ/XL/_WHO1041-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/LVHJCpJzTDpSN35tgsNSvz4HdncTXMLBSs6LMNNd3/L/_WHO1041-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/1/NCgbn57xLGjVskkdTjWxB7x34DzbMzjVp9NmzQGTB/S/_WHO1041-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nm9DNhq/A",
+    "keywords": [
+      "HF21509",
+      "1225",
+      "rustic charm",
+      "western fine art",
+      "powerful works of art",
+      "fine art Western photography",
+      "cowboy portraits",
+      "western landscapes fine art",
+      "frontier life",
+      "western cowboy art",
+      "cowboy artwork",
+      "painterly cowboy portraits"
+    ],
+    "story": "Delving into frontier life, this work by Wayne Heim highlights western cowboy art through cowboy artwork and painterly cowboy portraits. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 394,
+    "themes": {
+      "women-of-the-west": 61,
+      "firelight-shadow": 84,
+      "frontier-women": 109,
+      "sketches-of-legends": 136,
+      "whispering-reflection": 108
     }
   },
   {
@@ -18366,6 +18371,46 @@ export const galleryData = [
     }
   },
   {
+    "id": "i-9DLx78V",
+    "title": "Western Landscapes Fine Art Portrait",
+    "description": "Discover the western landscapes fine art in this powerful historic western prints by Wayne Heim. A compelling work that embodies historic western prints, historic western prints, and western art. Featuring fine art Western photography, perfect for art lovers seeking western landscapes fine art to enhance their collection. © Wayne Heim",
+    "alt": "western landscapes fine art in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/LJX9cJm2Q9P3BsqDqLzFT789F59zhmvdrpc6k7HzM/XL/_WHO5639-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/LJX9cJm2Q9P3BsqDqLzFT789F59zhmvdrpc6k7HzM/XL/_WHO5639-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/Mhv9LCW2M7ZFZbK54dqZvgRTLb2dKzcLBqdRM7pkR/L/_WHO5639-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/M3c3HMbFBnxmtvFHKMQZrfpkRQrXbdwFCTxBGWc7W/M/_WHO5639-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/5/KsHWF2QqDcB6dvq95zVp5ZKMNGB6FSdGtj7grFQ7k/S/_WHO5639-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9DLx78V/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "western landscapes fine art",
+      "historic western prints",
+      "western art",
+      "fine art Western photography",
+      "western fine art",
+      "cowboy portraits",
+      "western canon"
+    ],
+    "story": "Delving into western fine art, this work by Wayne Heim highlights cowboy portraits through western canon and western canon. A powerful statement in photography. © Wayne Heim",
+    "notes": "",
+    "rating": 3,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 396,
+    "themes": {
+      "women-of-the-west": 47,
+      "frontier-women": 94
+    }
+  },
+  {
     "id": "i-pVMMLRp",
     "title": "Frontier Life Portrait",
     "description": "Discover the frontier life in this powerful western canon by Wayne Heim. A compelling work that embodies cowboy art, painterly cowboy portraits, and western landscapes fine art. Featuring historic western prints, perfect for art lovers seeking frontier life to enhance their collection. © Wayne Heim",
@@ -18394,7 +18439,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 396,
+    "sortOrder": 397,
     "themes": {
       "cowboys-and-horses": 82
     }
@@ -18426,7 +18471,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 397,
+    "sortOrder": 398,
     "themes": {
       "cowboys-and-horses": 83
     }
@@ -18451,7 +18496,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 398
+    "sortOrder": 399
   },
   {
     "id": "i-PqtMvHt",
@@ -18488,7 +18533,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 399,
+    "sortOrder": 400,
     "themes": {
       "cowboys-and-horses": 75
     }
@@ -18520,7 +18565,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 400,
+    "sortOrder": 401,
     "themes": {
       "cowboys-with-horses": 12,
       "cowboys-and-horses": 15
@@ -18555,7 +18600,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 401,
+    "sortOrder": 402,
     "themes": {
       "cowboys-and-horses": 63
     }
@@ -18595,7 +18640,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 402,
+    "sortOrder": 403,
     "themes": {
       "aces-smoke-whiskey": 38,
       "whispering-reflection": 75
@@ -18639,7 +18684,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 403,
+    "sortOrder": 404,
     "themes": {
       "women-of-the-west": 58,
       "frontier-women": 106,
@@ -18683,7 +18728,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 404,
+    "sortOrder": 405,
     "themes": {
       "women-of-the-west": 13,
       "firelight-shadow": 74,
@@ -18726,7 +18771,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 405,
+    "sortOrder": 406,
     "themes": {
       "hardship-sorrow": 37,
       "sketches-of-legends": 117
@@ -18787,7 +18832,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 406,
+    "sortOrder": 407,
     "themes": {
       "firelight-shadow": 63,
       "frontier-women": 75,
@@ -18823,7 +18868,7 @@ export const galleryData = [
     "rating": 2,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 407,
+    "sortOrder": 408,
     "themes": {
       "women-of-the-west": 60,
       "frontier-women": 108,
@@ -18857,7 +18902,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 408
+    "sortOrder": 409
   },
   {
     "id": "i-92mpb3g",
@@ -18895,7 +18940,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 409,
+    "sortOrder": 410,
     "themes": {
       "cowboys-and-horses": 26,
       "dust-thunder": 20,
@@ -18928,7 +18973,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 410,
+    "sortOrder": 411,
     "themes": {
       "cowboys-and-horses": 84,
       "frontier-women": 112
@@ -18954,7 +18999,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 411
+    "sortOrder": 412
   },
   {
     "id": "i-WBDjhsD",
@@ -18983,7 +19028,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 412,
+    "sortOrder": 413,
     "themes": {
       "the-chaise": 4,
       "the-chase": 4
@@ -19009,7 +19054,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 413,
+    "sortOrder": 414,
     "themes": {
       "the-chaise": 11,
       "the-chase": 11
@@ -19035,7 +19080,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 414,
+    "sortOrder": 415,
     "themes": {
       "frontier-women": 43
     }
@@ -19060,7 +19105,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 415
+    "sortOrder": 416
   },
   {
     "id": "i-WvWvS7x",
@@ -19091,7 +19136,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 416,
+    "sortOrder": 417,
     "themes": {
       "sketches-of-legends": 140
     }
@@ -19125,7 +19170,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 417,
+    "sortOrder": 418,
     "themes": {
       "women-of-the-west": 53,
       "frontier-women": 102,
@@ -19168,7 +19213,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 418,
+    "sortOrder": 419,
     "themes": {
       "sketches-of-legends": 129
     }
@@ -19207,7 +19252,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 419,
+    "sortOrder": 420,
     "themes": {
       "frontier-women": 90
     }
@@ -19246,7 +19291,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 420
+    "sortOrder": 421
   },
   {
     "id": "i-8pp9T7x",
@@ -19276,7 +19321,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 421,
+    "sortOrder": 422,
     "themes": {
       "sketches-of-legends": 109
     }
@@ -19308,7 +19353,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 422
+    "sortOrder": 423
   },
   {
     "id": "i-JsN8MfX",
@@ -19337,7 +19382,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 423
+    "sortOrder": 424
   },
   {
     "id": "i-7F5KJzC",
@@ -19375,7 +19420,7 @@ export const galleryData = [
     "rating": 2,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 424,
+    "sortOrder": 425,
     "themes": {
       "cowboys-and-horses": 74
     }
@@ -19400,7 +19445,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 425
+    "sortOrder": 426
   },
   {
     "id": "i-CgjNZB5",
@@ -19429,7 +19474,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 426
+    "sortOrder": 427
   },
   {
     "id": "i-kNXVsdd",
@@ -19462,7 +19507,7 @@ export const galleryData = [
     "rating": 2,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 427,
+    "sortOrder": 428,
     "themes": {
       "women-of-the-west": 63,
       "frontier-women": 111
@@ -19503,7 +19548,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 428,
+    "sortOrder": 429,
     "themes": {
       "firelight-shadow": 68
     }
@@ -19545,7 +19590,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 429,
+    "sortOrder": 430,
     "themes": {
       "women-of-the-west": 50,
       "frontier-women": 97,
@@ -19607,7 +19652,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 430,
+    "sortOrder": 431,
     "themes": {
       "sketches-of-legends": 108
     }
@@ -19646,77 +19691,7 @@ export const galleryData = [
     "rating": 2,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 431
-  },
-  {
-    "id": "i-vgZ8twt",
-    "title": "Exploring Western Cowboys",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/0/K3Zk76FpJm2CT5DCfQhKGrzjmssrs34cH5mw97pXQ/L/_HF27727-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/0/MT8hcLqV5v6mwvBFQbrJpvBvVhK2Mnn766QwWcLDv/S/_HF27727-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/A",
-    "keywords": [
-      "WHO4278",
-      "Western cowboys",
-      "western fine art",
-      "cowboy portraits",
-      "cowboy artwork",
-      "historic western prints",
-      "cowboy art",
-      "rustic charm",
-      "rugged spirit"
-    ],
-    "story": "This image embodies western fine art and cowboy art, captured by Wayne Heim in his signature style. It reflects rustic charm with a touch of rugged spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 3,
-    "galleries": [],
-    "visibility": "show",
     "sortOrder": 432
-  },
-  {
-    "id": "i-TNm6hQ3",
-    "title": "Outlaw Portraits And Cowboy Art",
-    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/0/M8KKMc22tLfCZzWZg2SqCMNHNgTDWwpTds244tmvJ/L/_O2H3085-861-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/0/M8KKMc22tLfCZzWZg2SqCMNHNgTDWwpTds244tmvJ/L/_O2H3085-861-L.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/0/M8KKMc22tLfCZzWZg2SqCMNHNgTDWwpTds244tmvJ/L/_O2H3085-861-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/0/LZTK4Hwr5V2kRNg7KfFJjvZMpTxbdk2R7hRSmmfLQ/M/_O2H3085-861-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/0/MmqXLMGSTjWf2sn8fs9SPWKWQSNSVscdV2gnQpMfH/S/_O2H3085-861-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/A",
-    "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "cowboy",
-      "outlaw portraits",
-      "cowboy art",
-      "frontier life",
-      "rustic charm",
-      "rugged spirit",
-      "western landscapes fine art",
-      "powerful works of art"
-    ],
-    "story": "This image embodies rugged spirit and rustic charm, captured by Wayne Heim in his signature style. It reflects western landscapes fine art with a touch of powerful works of art. © Wayne Heim",
-    "notes": "",
-    "rating": 2,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 433,
-    "themes": {
-      "women-of-the-west": 45,
-      "frontier-women": 86
-    }
   },
   {
     "id": "i-KwjDZfx",
@@ -19738,7 +19713,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 434,
+    "sortOrder": 433,
     "themes": {
       "the-chaise": 19,
       "the-chase": 19
@@ -19771,7 +19746,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 435
+    "sortOrder": 434
   },
   {
     "id": "i-7VSrLtw",
@@ -19800,7 +19775,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 436
+    "sortOrder": 435
   },
   {
     "id": "i-bzp2Pxw",
@@ -19829,7 +19804,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 437
+    "sortOrder": 436
   },
   {
     "id": "i-jGrpdg5",
@@ -19853,7 +19828,7 @@ export const galleryData = [
       "Other/Photo-Shoots/South-Dakota"
     ],
     "visibility": "show",
-    "sortOrder": 438,
+    "sortOrder": 437,
     "themes": {
       "the-chaise": 18,
       "the-chase": 18
@@ -19886,7 +19861,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 439
+    "sortOrder": 438
   },
   {
     "id": "i-3Mj4gtS",
@@ -19910,7 +19885,7 @@ export const galleryData = [
       "Other/Photo-Shoots/South-Dakota"
     ],
     "visibility": "show",
-    "sortOrder": 440
+    "sortOrder": 439
   },
   {
     "id": "i-xW97k2g",
@@ -19934,7 +19909,7 @@ export const galleryData = [
       "Other/Photo-Shoots/South-Dakota"
     ],
     "visibility": "show",
-    "sortOrder": 441
+    "sortOrder": 440
   },
   {
     "id": "i-3Wh6vt9",
@@ -19959,7 +19934,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 442
+    "sortOrder": 441
   },
   {
     "id": "i-KBXKqD5",
@@ -19982,53 +19957,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 443
-  },
-  {
-    "id": "i-j24GFVH",
-    "title": "Frontier Study",
-    "description": "Western fine art photography by Wayne Heim. Part of the Artist Ride series. � Wayne Heim",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/KjK3h3LXX8Pbr58fXG2g6KrWdWGsnTKLmwh4bfxJ8/XL/_HF26538-1249-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/KjK3h3LXX8Pbr58fXG2g6KrWdWGsnTKLmwh4bfxJ8/XL/_HF26538-1249-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/KjK3h3LXX8Pbr58fXG2g6KrWdWGsnTKLmwh4bfxJ8/XL/_HF26538-1249-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/MR7LZzCPxxpN5q9QRfKRGWgGCnrnktShjhfvpXvqs/L/_HF26538-1249-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/MfQn6wfQc29nN3QD9GpbMM7vZbHjdWn7M2Nd6HBcv/S/_HF26538-1249-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/A",
-    "keywords": [
-      "HF23312",
-      "1246"
-    ],
-    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 444
-  },
-  {
-    "id": "i-jWBQ5p8",
-    "title": "Range Rider",
-    "description": "Western fine art photography by Wayne Heim. Part of the Artist Ride series. � Wayne Heim",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/McmBwnB2gr8NxmnPGN5hJLzXw737jNNxSSgZVfRWH/XL/_HF21832-1306-1308-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/McmBwnB2gr8NxmnPGN5hJLzXw737jNNxSSgZVfRWH/XL/_HF21832-1306-1308-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/L45hxVHXGR5FFJ76XC5FwTKj4TRp9bchTkXj2vJGj/L/_HF21832-1306-1308-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/LZz5WfXfjHj8XfqKpKWGF36RkBbZhcJtqRNkGcDzB/M/_HF21832-1306-1308-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/MpGjSsv4z62XrxBzxBbQ3885nZV4nPFFgqChRL6pC/S/_HF21832-1306-1308-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/A",
-    "keywords": [
-      "HF21509",
-      "1225"
-    ],
-    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 445
+    "sortOrder": 442
   },
   {
     "id": "i-VrRHHjr",
@@ -20051,7 +19980,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 446
+    "sortOrder": 443
   },
   {
     "id": "i-KKncPg5",
@@ -20074,7 +20003,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 447
+    "sortOrder": 444
   },
   {
     "id": "i-tLfLDqk",
@@ -20097,7 +20026,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 448
+    "sortOrder": 445
   },
   {
     "id": "i-qvg23gW",
@@ -20120,7 +20049,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 449
+    "sortOrder": 446
   },
   {
     "id": "i-krwBhd8",
@@ -20143,7 +20072,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 450
+    "sortOrder": 447
   },
   {
     "id": "i-3nZvZTj",
@@ -20167,7 +20096,7 @@ export const galleryData = [
       "Other/Photo-Shoots/South-Dakota"
     ],
     "visibility": "show",
-    "sortOrder": 451
+    "sortOrder": 448
   },
   {
     "id": "i-N7Wb28h",
@@ -20190,7 +20119,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 452
+    "sortOrder": 449
   },
   {
     "id": "i-w6bDSqM",
@@ -20213,32 +20142,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 453
-  },
-  {
-    "id": "i-LL2Gp5r",
-    "title": "Trail Hand",
-    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/KzLKgnFXcksMSKDxL39WdCr4FdX82vrN7wfGZMnmT/L/_HF26159-1335-1336-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/NCjmmrnnvm3WKHxWJ44CtKQHDj8KJ4hcfkVRb97Dm/M/_HF26159-1335-1336-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/MvKQDc9hcjTQCjCxFX6XQDW73hNhX9PKDm2wJZRmP/S/_HF26159-1335-1336-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/A",
-    "keywords": [
-      "HF23312",
-      "1246"
-    ],
-    "story": "New photo by Wayne Heim from the Pennsylvannia series. Full image story to follow soon.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Other/Photo-Shoots/Pennsylvannia"
-    ],
-    "visibility": "show",
-    "sortOrder": 454
+    "sortOrder": 450
   },
   {
     "id": "i-r9dGJJx",
@@ -20263,7 +20167,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 455
+    "sortOrder": 451
   },
   {
     "id": "i-m2dqhjT",
@@ -20288,7 +20192,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 456
+    "sortOrder": 452
   },
   {
     "id": "i-8X7hMPk",
@@ -20313,7 +20217,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 457
+    "sortOrder": 453
   },
   {
     "id": "i-CZrXGr9",
@@ -20338,57 +20242,30 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 458
+    "sortOrder": 454
   },
   {
-    "id": "i-s3f9DST",
-    "title": "Horseman",
-    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/LC9sTmcsLPkf5jnr5Chj26Xg6FHdS7gPJ8FT7xMNg/XL/_HF26697-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/LC9sTmcsLPkf5jnr5Chj26Xg6FHdS7gPJ8FT7xMNg/XL/_HF26697-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/L4thTD4b7Cxh3SvLXzBzmbfNssVMSQTrwgSPD7fB9/L/_HF26697-Edit-L.jpg",
-    "srcM": "",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/Mw8XFW9BFpBGCFk64RhGg2JXMM38bBG4qnjq5W6Gk/S/_HF26697-Edit-S.jpg",
+    "id": "i-jWBQ5p8",
+    "title": "Range Rider",
+    "description": "Western fine art photography by Wayne Heim. Part of the Artist Ride series. � Wayne Heim",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/McmBwnB2gr8NxmnPGN5hJLzXw737jNNxSSgZVfRWH/XL/_HF21832-1306-1308-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/McmBwnB2gr8NxmnPGN5hJLzXw737jNNxSSgZVfRWH/XL/_HF21832-1306-1308-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/L45hxVHXGR5FFJ76XC5FwTKj4TRp9bchTkXj2vJGj/L/_HF21832-1306-1308-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/LZz5WfXfjHj8XfqKpKWGF36RkBbZhcJtqRNkGcDzB/M/_HF21832-1306-1308-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/MpGjSsv4z62XrxBzxBbQ3885nZV4nPFFgqChRL6pC/S/_HF21832-1306-1308-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/A",
     "keywords": [
-      "HF23312",
-      "1246"
+      "HF21509",
+      "1225"
     ],
-    "story": "New photo by Wayne Heim from the Pennsylvannia series. Full image story to follow soon.",
+    "story": "New fine art photography by Wayne Heim – A. Check back soon for complete story on this image.",
     "notes": "",
     "rating": 0,
-    "galleries": [
-      "Other/Photo-Shoots/Pennsylvannia"
-    ],
+    "galleries": [],
     "visibility": "show",
-    "sortOrder": 459
-  },
-  {
-    "id": "i-tXGTbNp",
-    "title": "Frontier Study",
-    "description": "Wayne Heim photograph from the Pennsylvannia collection. New image! Notes and full details to be added.",
-    "alt": "Photographic artwork © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/LGXDJz5KJRsNshDSPcDBzrVF9xv8phDZ4MQRnpb5C/XL/_HF29174-1322-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/LGXDJz5KJRsNshDSPcDBzrVF9xv8phDZ4MQRnpb5C/XL/_HF29174-1322-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/MwNfPDKmxKzJmZbSGBkBTMf9KqnXZsZSLWK9bhkJq/L/_HF29174-1322-L.jpg",
-    "srcM": "",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/NKRcSHBkfDW6Wb6FXkfZcjZmdwjGS4HrPCxNTdngx/S/_HF29174-1322-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/A",
-    "keywords": [
-      "HF23312",
-      "1246"
-    ],
-    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Other/Photo-Shoots/Pennsylvannia"
-    ],
-    "visibility": "show",
-    "sortOrder": 460
+    "sortOrder": 455
   },
   {
     "id": "i-CNrD7G7",
@@ -20413,57 +20290,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 461
-  },
-  {
-    "id": "i-jZ8xKwR",
-    "title": "Horseman",
-    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/Lp2FV7CjCRtTkz3Kkc6wXfs4QcpPHWCjxNS93nPp9/XL/_HF24834-1360-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/Lp2FV7CjCRtTkz3Kkc6wXfs4QcpPHWCjxNS93nPp9/XL/_HF24834-1360-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/K8qmzZTrnMtXFBGPm7Lzt8H4PcLB5hWcwPnkFSsPN/L/_HF24834-1360-L.jpg",
-    "srcM": "",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/KnRcLB3Br3TtRrw2SgjMZ7QMnvpHDjHmDvCkGKR3m/S/_HF24834-1360-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/A",
-    "keywords": [
-      "HF23312",
-      "1246"
-    ],
-    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Other/Photo-Shoots/Pennsylvannia"
-    ],
-    "visibility": "show",
-    "sortOrder": 462
-  },
-  {
-    "id": "i-HfWwLLf",
-    "title": "Trail Hand",
-    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/Ld32Sg3H38QpCRnmn2MpDFNgrNWsxVP6B7nQVBSRL/XL/_HF24980-1363-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/Ld32Sg3H38QpCRnmn2MpDFNgrNWsxVP6B7nQVBSRL/XL/_HF24980-1363-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/L5MFVZmDGXc4JhtHDctqX4xwnCjCKgv38cb82hsnf/L/_HF24980-1363-L.jpg",
-    "srcM": "",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/LFrGKWJTRT4FGHQTdSwthGJJ5nqxjNtkR6k9dDLx3/S/_HF24980-1363-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/A",
-    "keywords": [
-      "HF23312",
-      "1246"
-    ],
-    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Other/Photo-Shoots/Pennsylvannia"
-    ],
-    "visibility": "show",
-    "sortOrder": 463
+    "sortOrder": 456
   },
   {
     "id": "i-xZsZzd9",
@@ -20488,57 +20315,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 464
-  },
-  {
-    "id": "i-2t65dGM",
-    "title": "Western Figure",
-    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KMncNd4V4G74SBSdgvmdkRNmVF3ZTKRfmDqWsQQdx/XL/_HF24922-1361-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KMncNd4V4G74SBSdgvmdkRNmVF3ZTKRfmDqWsQQdx/XL/_HF24922-1361-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/Nd2LCzrRLb92xcsQ2w5qn7vF8CTRS3HG3vnzXvjq2/L/_HF24922-1361-2-L.jpg",
-    "srcM": "",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KLcmXkLkB92ppbW9qsRg48TpsDzvg7bNZsLLdVm3P/S/_HF24922-1361-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/A",
-    "keywords": [
-      "HF23312",
-      "1246"
-    ],
-    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Other/Photo-Shoots/Pennsylvannia"
-    ],
-    "visibility": "show",
-    "sortOrder": 465
-  },
-  {
-    "id": "i-nqxJWx3",
-    "title": "Working Cowboy",
-    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MN8zGZrWftGBvjnVgTkdXHxTLZpkScpCpWtFFJSfL/XL/_HF25007-1364-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MN8zGZrWftGBvjnVgTkdXHxTLZpkScpCpWtFFJSfL/XL/_HF25007-1364-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MGGKZjDXKHHQJX9KRSVxTWZSvf5kNKN2CXrKjp6wS/L/_HF25007-1364-L.jpg",
-    "srcM": "",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MJzqBM2xQMWm8TKxN5m2dxBk7gbW5PmKH84NbJ63k/S/_HF25007-1364-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/A",
-    "keywords": [
-      "HF23312",
-      "1246"
-    ],
-    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Other/Photo-Shoots/Pennsylvannia"
-    ],
-    "visibility": "show",
-    "sortOrder": 466
+    "sortOrder": 457
   },
   {
     "id": "i-67qk8zR",
@@ -20563,7 +20340,132 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 467
+    "sortOrder": 458
+  },
+  {
+    "id": "i-2t65dGM",
+    "title": "Western Figure",
+    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KMncNd4V4G74SBSdgvmdkRNmVF3ZTKRfmDqWsQQdx/XL/_HF24922-1361-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KMncNd4V4G74SBSdgvmdkRNmVF3ZTKRfmDqWsQQdx/XL/_HF24922-1361-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/Nd2LCzrRLb92xcsQ2w5qn7vF8CTRS3HG3vnzXvjq2/L/_HF24922-1361-2-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/0/KLcmXkLkB92ppbW9qsRg48TpsDzvg7bNZsLLdVm3P/S/_HF24922-1361-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2t65dGM/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 459
+  },
+  {
+    "id": "i-HfWwLLf",
+    "title": "Trail Hand",
+    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/Ld32Sg3H38QpCRnmn2MpDFNgrNWsxVP6B7nQVBSRL/XL/_HF24980-1363-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/Ld32Sg3H38QpCRnmn2MpDFNgrNWsxVP6B7nQVBSRL/XL/_HF24980-1363-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/L5MFVZmDGXc4JhtHDctqX4xwnCjCKgv38cb82hsnf/L/_HF24980-1363-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/LFrGKWJTRT4FGHQTdSwthGJJ5nqxjNtkR6k9dDLx3/S/_HF24980-1363-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 460
+  },
+  {
+    "id": "i-tg6PTwd",
+    "title": "Western Portrait",
+    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
+    "alt": "Wayne Heim – Fine Art Photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/ML2RwQH7QG79Zpgb8RnGC3dLTb4wtc4CJphc3VnZM/XL/_HF25195-1367-1377-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/ML2RwQH7QG79Zpgb8RnGC3dLTb4wtc4CJphc3VnZM/XL/_HF25195-1367-1377-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NJVHGncW6PtG4zB8sPqB5NHK97nmX574zrNhndPMM/L/_HF25195-1367-1377-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NZJjWKmDDVjvRcZzNXrLwb8pSsSh66PpMG6dvXH8r/S/_HF25195-1367-1377-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 461
+  },
+  {
+    "id": "i-nqxJWx3",
+    "title": "Working Cowboy",
+    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MN8zGZrWftGBvjnVgTkdXHxTLZpkScpCpWtFFJSfL/XL/_HF25007-1364-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MN8zGZrWftGBvjnVgTkdXHxTLZpkScpCpWtFFJSfL/XL/_HF25007-1364-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MGGKZjDXKHHQJX9KRSVxTWZSvf5kNKN2CXrKjp6wS/L/_HF25007-1364-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MJzqBM2xQMWm8TKxN5m2dxBk7gbW5PmKH84NbJ63k/S/_HF25007-1364-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 462
+  },
+  {
+    "id": "i-jZ8xKwR",
+    "title": "Horseman",
+    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/Lp2FV7CjCRtTkz3Kkc6wXfs4QcpPHWCjxNS93nPp9/XL/_HF24834-1360-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/Lp2FV7CjCRtTkz3Kkc6wXfs4QcpPHWCjxNS93nPp9/XL/_HF24834-1360-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/K8qmzZTrnMtXFBGPm7Lzt8H4PcLB5hWcwPnkFSsPN/L/_HF24834-1360-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/KnRcLB3Br3TtRrw2SgjMZ7QMnvpHDjHmDvCkGKR3m/S/_HF24834-1360-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 463
   },
   {
     "id": "i-BpW5dbj",
@@ -20599,32 +20501,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 468
-  },
-  {
-    "id": "i-tg6PTwd",
-    "title": "Western Portrait",
-    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/ML2RwQH7QG79Zpgb8RnGC3dLTb4wtc4CJphc3VnZM/XL/_HF25195-1367-1377-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/ML2RwQH7QG79Zpgb8RnGC3dLTb4wtc4CJphc3VnZM/XL/_HF25195-1367-1377-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NJVHGncW6PtG4zB8sPqB5NHK97nmX574zrNhndPMM/L/_HF25195-1367-1377-L.jpg",
-    "srcM": "",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NZJjWKmDDVjvRcZzNXrLwb8pSsSh66PpMG6dvXH8r/S/_HF25195-1367-1377-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/A",
-    "keywords": [
-      "HF23312",
-      "1246"
-    ],
-    "story": "New fine art photography by Wayne Heim – Pennsylvannia. Check back soon for complete story on this image.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Other/Photo-Shoots/Pennsylvannia"
-    ],
-    "visibility": "show",
-    "sortOrder": 469
+    "sortOrder": 464
   },
   {
     "id": "i-sH4qBFd",
@@ -20649,7 +20526,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 470
+    "sortOrder": 465
   },
   {
     "id": "i-xNB7ZSk",
@@ -20674,7 +20551,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 471
+    "sortOrder": 466
   },
   {
     "id": "i-b2k3Wd5",
@@ -20699,7 +20576,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 472
+    "sortOrder": 467
   },
   {
     "id": "i-8rcVT5Z",
@@ -20724,56 +20601,50 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 473
+    "sortOrder": 468
   },
   {
-    "id": "i-8Ddjt5W",
-    "title": "Cowboys Study",
-    "description": "Discover the cowboys in this powerful western fine art by Wayne Heim. A compelling work that embodies historic western prints, wild west photography, and western cowboy art. Featuring western landscapes fine art, perfect for art lovers seeking cowboys to enhance their collection. © Wayne Heim",
-    "alt": "cowboys in fine art photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KzZMBSfv7RGNTQC8GnZGcrRRC9pk6NGHFqZ4ZVw6r/XL/_HF22208-1050-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KzZMBSfv7RGNTQC8GnZGcrRRC9pk6NGHFqZ4ZVw6r/XL/_HF22208-1050-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KzZMBSfv7RGNTQC8GnZGcrRRC9pk6NGHFqZ4ZVw6r/XL/_HF22208-1050-2-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/MVNmX4VhWBrJb9Lv8FMmrZM8fRZQkRdb9Pr3TS2GW/L/_HF22208-1050-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KgLPbSF3kFgNcKJQM5vXcWD7WWCF93k79WgJ3dtjM/S/_HF22208-1050-2-S.jpg",
+    "id": "i-LJk7wFZ",
+    "title": "Western Figure",
+    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. © Wayne Heim",
+    "alt": "Western fine art photograph by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/Kvv5L9hgnbpcZvfFTBjJvs3mWwcKx3cscTdn2LMtG/XL/_HF28510-1376-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/Kvv5L9hgnbpcZvfFTBjJvs3mWwcKx3cscTdn2LMtG/XL/_HF28510-1376-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/KT7sR43nFPDB4QwkhFFgxJcbwSdTzdgHbB3WnmWQG/L/_HF28510-1376-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/LkzQwfjh6jnW7D6tdMqHs4w5TvMbs7NgjWNqVWgLk/M/_HF28510-1376-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/L7R6t52MQtv44X3xRNbVQXJB44nXrSPqbSNxZ7Zpc/S/_HF28510-1376-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/A",
-    "keywords": [
-      "WHO0426",
-      "1086",
-      "cowboys",
-      "western fine art",
-      "historic western prints",
-      "wild west photography",
-      "western cowboy art",
-      "western landscapes fine art",
-      "Baltic Birch",
-      "cowboy artwork"
-    ],
-    "story": "Delving into Baltic Birch, this work by Wayne Heim highlights historic western prints through western cowboy art and cowboy artwork. A powerful statement in photography.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 474
-  },
-  {
-    "id": "i-mMsSB6q",
-    "title": "Frontier Study",
-    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
-    "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L2bwffd7MnB46PvTqdd25pgsHHvKH3sVfbZ3LNm8H/XL/_HF29442-1257-1383-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L2bwffd7MnB46PvTqdd25pgsHHvKH3sVfbZ3LNm8H/XL/_HF29442-1257-1383-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L378w6nqgJ5sr7B9DGL96Z6wmmZbpFfgMk3MPbjnL/L/_HF29442-1257-1383-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L87WxGtCWVZCBGjkshZrMRmD7FSdfznkT3Kf96LFt/M/_HF29442-1257-1383-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/LTSrFWVrkjFDcLnfQwtLXVnJDpQK6XL2tbGp8RNpq/S/_HF29442-1257-1383-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/A",
     "keywords": [
       "HF28482",
       "1374",
       "1375",
       "1378"
+    ],
+    "story": "New photo by Wayne Heim from the Pennsylvannia series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 469
+  },
+  {
+    "id": "i-tXGTbNp",
+    "title": "Frontier Study",
+    "description": "Wayne Heim photograph from the Pennsylvannia collection. New image! Notes and full details to be added.",
+    "alt": "Photographic artwork © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/LGXDJz5KJRsNshDSPcDBzrVF9xv8phDZ4MQRnpb5C/XL/_HF29174-1322-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/LGXDJz5KJRsNshDSPcDBzrVF9xv8phDZ4MQRnpb5C/XL/_HF29174-1322-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/MwNfPDKmxKzJmZbSGBkBTMf9KqnXZsZSLWK9bhkJq/L/_HF29174-1322-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/NKRcSHBkfDW6Wb6FXkfZcjZmdwjGS4HrPCxNTdngx/S/_HF29174-1322-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/A",
+    "keywords": [
+      "HF23312",
+      "1246"
     ],
     "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
     "notes": "",
@@ -20782,7 +20653,40 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 475
+    "sortOrder": 470
+  },
+  {
+    "id": "i-8Ddjt5W",
+    "title": "Worth Every Mile",
+    "description": "A painterly Western photograph capturing a moment of reunion at the edge of a frontier homestead. A man returns, dust and distance still clinging to him, finding solace in the arms he traveled so far to reach. Rather than dramatizing romance, the image lingers in the weight of arrival—where hardship, devotion, and endurance converge in a single, quiet embrace.\n\nWayne Heim’s Western fine art photography approaches love in the American West as something earned rather than promised, shaped by separation, weather, and time. This piece reflects the emotional cost of frontier life, where affection was measured not by words, but by the miles endured to return home.\n© Wayne Heim",
+    "alt": "Painterly Western fine art photograph of a cowboy embracing a woman outside a frontier homestead, conveying reunion, love, and the cost of distance in the American West",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KzZMBSfv7RGNTQC8GnZGcrRRC9pk6NGHFqZ4ZVw6r/XL/_HF22208-1050-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KzZMBSfv7RGNTQC8GnZGcrRRC9pk6NGHFqZ4ZVw6r/XL/_HF22208-1050-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KzZMBSfv7RGNTQC8GnZGcrRRC9pk6NGHFqZ4ZVw6r/XL/_HF22208-1050-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/MVNmX4VhWBrJb9Lv8FMmrZM8fRZQkRdb9Pr3TS2GW/L/_HF22208-1050-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KgLPbSF3kFgNcKJQM5vXcWD7WWCF93k79WgJ3dtjM/S/_HF22208-1050-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/A",
+    "keywords": [
+      "western fine art photography",
+      "painterly western photography",
+      "western love story",
+      "frontier romance",
+      "cowboy reunion",
+      "american west romance",
+      "historic western photography",
+      "western couple",
+      "frontier homestead",
+      "western narrative art",
+      "love and endurance",
+      "wayne heim"
+    ],
+    "story": "Every mile—dirt, dusk, rain, and weather. Danger and duty, hardship and hope, all raging in epic battle against your love. \n\nLike a beacon, it guided me, shepherding me through the storm… bringing me back to your arms. The embrace—the kiss—worth every mile.\n",
+    "notes": "This composition is built around motion and return. The diagonal sweep of the figures creates a sense of momentum that resolves only in the embrace, reinforcing the narrative of distance overcome. Soft, directional light wraps the subjects, allowing fabric, posture, and proximity to carry the emotional weight without sentimentality.\n\nWhat sets this work apart within the Western canon is its treatment of intimacy as an outcome of endurance rather than idealism. Love is not staged—it is arrived at. The result is a rare Western image where romance feels earned, grounded in physical journey and emotional cost rather than nostalgia.",
+    "rating": 4,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 471
   },
   {
     "id": "i-zsjbqS8",
@@ -20807,7 +20711,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 476
+    "sortOrder": 472
   },
   {
     "id": "i-Q5gq9MD",
@@ -20832,7 +20736,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 477
+    "sortOrder": 473
   },
   {
     "id": "i-N9XLKc8",
@@ -20857,7 +20761,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 478
+    "sortOrder": 474
   },
   {
     "id": "i-kvNsMGB",
@@ -20882,7 +20786,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 479
+    "sortOrder": 475
   },
   {
     "id": "i-z4M6gCv",
@@ -20909,7 +20813,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 480
+    "sortOrder": 476
   },
   {
     "id": "i-GRPQRdL",
@@ -20946,7 +20850,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 481
+    "sortOrder": 477
   },
   {
     "id": "i-MZjsFRB",
@@ -20971,7 +20875,34 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 482
+    "sortOrder": 478
+  },
+  {
+    "id": "i-hcXLMwK",
+    "title": "Horseman",
+    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. © Wayne Heim",
+    "alt": "Western fine art photograph by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/M3Znccz9NqVRLbcVggWnBqFGPVGnr7TgLgBDtxckQ/XL/_HF28482-1374-1375-1378-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/M3Znccz9NqVRLbcVggWnBqFGPVGnr7TgLgBDtxckQ/XL/_HF28482-1374-1375-1378-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/LPk9PbXrbpZHJc8LF4bMTmmJgdC6QXbrf9XVR764G/L/_HF28482-1374-1375-1378-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/MHXfz67QbzS7B8FMLHQvxTBbmGBNpKtpxpgF6wSx7/S/_HF28482-1374-1375-1378-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/A",
+    "keywords": [
+      "HF28482",
+      "1374",
+      "1375",
+      "1378"
+    ],
+    "story": "",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 479
   },
   {
     "id": "i-HbGN76v",
@@ -21009,61 +20940,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 483
-  },
-  {
-    "id": "i-hcXLMwK",
-    "title": "Horseman",
-    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. © Wayne Heim",
-    "alt": "Western fine art photograph by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/M3Znccz9NqVRLbcVggWnBqFGPVGnr7TgLgBDtxckQ/XL/_HF28482-1374-1375-1378-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/M3Znccz9NqVRLbcVggWnBqFGPVGnr7TgLgBDtxckQ/XL/_HF28482-1374-1375-1378-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/LPk9PbXrbpZHJc8LF4bMTmmJgdC6QXbrf9XVR764G/L/_HF28482-1374-1375-1378-L.jpg",
-    "srcM": "",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/MHXfz67QbzS7B8FMLHQvxTBbmGBNpKtpxpgF6wSx7/S/_HF28482-1374-1375-1378-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/A",
-    "keywords": [
-      "HF28482",
-      "1374",
-      "1375",
-      "1378"
-    ],
-    "story": "",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Other/Photo-Shoots/Pennsylvannia"
-    ],
-    "visibility": "show",
-    "sortOrder": 484
-  },
-  {
-    "id": "i-LJk7wFZ",
-    "title": "Western Figure",
-    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. © Wayne Heim",
-    "alt": "Western fine art photograph by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/Kvv5L9hgnbpcZvfFTBjJvs3mWwcKx3cscTdn2LMtG/XL/_HF28510-1376-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/Kvv5L9hgnbpcZvfFTBjJvs3mWwcKx3cscTdn2LMtG/XL/_HF28510-1376-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/KT7sR43nFPDB4QwkhFFgxJcbwSdTzdgHbB3WnmWQG/L/_HF28510-1376-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/LkzQwfjh6jnW7D6tdMqHs4w5TvMbs7NgjWNqVWgLk/M/_HF28510-1376-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/L7R6t52MQtv44X3xRNbVQXJB44nXrSPqbSNxZ7Zpc/S/_HF28510-1376-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/A",
-    "keywords": [
-      "HF28482",
-      "1374",
-      "1375",
-      "1378"
-    ],
-    "story": "New photo by Wayne Heim from the Pennsylvannia series. Full image story to follow soon.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Other/Photo-Shoots/Pennsylvannia"
-    ],
-    "visibility": "show",
-    "sortOrder": 485
+    "sortOrder": 480
   },
   {
     "id": "i-DWW5wHT",
@@ -21088,7 +20965,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 486
+    "sortOrder": 481
   },
   {
     "id": "i-jqZzRpS",
@@ -21119,7 +20996,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 487
+    "sortOrder": 482
   },
   {
     "id": "i-43NQChd",
@@ -21158,7 +21035,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 488
+    "sortOrder": 483
   },
   {
     "id": "i-KK8RzH7",
@@ -21185,7 +21062,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 489
+    "sortOrder": 484
   },
   {
     "id": "i-cK7wRqP",
@@ -21223,7 +21100,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 490
+    "sortOrder": 485
   },
   {
     "id": "i-F7q2SDf",
@@ -21261,7 +21138,34 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 491
+    "sortOrder": 486
+  },
+  {
+    "id": "i-mMsSB6q",
+    "title": "Frontier Study",
+    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L2bwffd7MnB46PvTqdd25pgsHHvKH3sVfbZ3LNm8H/XL/_HF29442-1257-1383-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L2bwffd7MnB46PvTqdd25pgsHHvKH3sVfbZ3LNm8H/XL/_HF29442-1257-1383-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L378w6nqgJ5sr7B9DGL96Z6wmmZbpFfgMk3MPbjnL/L/_HF29442-1257-1383-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/L87WxGtCWVZCBGjkshZrMRmD7FSdfznkT3Kf96LFt/M/_HF29442-1257-1383-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/0/LTSrFWVrkjFDcLnfQwtLXVnJDpQK6XL2tbGp8RNpq/S/_HF29442-1257-1383-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mMsSB6q/A",
+    "keywords": [
+      "HF28482",
+      "1374",
+      "1375",
+      "1378"
+    ],
+    "story": "Enjoy a new image from Wayne Heim's Pennsylvannia collection. Full story on image to follow.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 487
   },
   {
     "id": "i-zswx22S",
@@ -21292,7 +21196,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 492
+    "sortOrder": 488
   },
   {
     "id": "i-BJckfhC",
@@ -21325,7 +21229,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 493
+    "sortOrder": 489
   },
   {
     "id": "i-459nCWS",
@@ -21356,7 +21260,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 494
+    "sortOrder": 490
   },
   {
     "id": "i-KJsmT8q",
@@ -21387,7 +21291,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 495
+    "sortOrder": 491
   },
   {
     "id": "i-Z6TkHwJ",
@@ -21418,7 +21322,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 496,
+    "sortOrder": 492,
     "themes": {
       "cowboys-and-horses": 49
     }
@@ -21478,71 +21382,9 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 497,
+    "sortOrder": 493,
     "themes": {
       "sketches-of-legends": 101
-    }
-  },
-  {
-    "id": "i-sLtTp4m",
-    "title": "Cowboy Art: How many Aces was that?",
-    "description": "A painterly Western photograph of a cowboy counting cards in the saloon, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. Part of Wayne Heim's Western fine art photography collection. © Wayne Heim",
-    "alt": "Cowboy Art: How many Aces was that?",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sLtTp4m/1/M93nSJ5gKcr7D9s2tWHZv6t72RR99NtN96C68GLMG/XL/cowboy%20art%20_HF29370-115-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sLtTp4m/1/M93nSJ5gKcr7D9s2tWHZv6t72RR99NtN96C68GLMG/XL/cowboy%20art%20_HF29370-115-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sLtTp4m/1/KZxkv86fKLFMXRkCR5NGGRsZ4q5RD2zkMnHRF4f9j/L/cowboy%20art%20_HF29370-115-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sLtTp4m/1/MChHWKgpc5M7B9NN6fqNgj8VK3Kh6TwKFbzfjD9rv/M/cowboy%20art%20_HF29370-115-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sLtTp4m/1/Lkn4nDXfCTC5cCm78gw4mNk6G5sSj5K5QCNXdpFpm/S/cowboy%20art%20_HF29370-115-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sLtTp4m/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of cowboy counting cards in the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 2,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "show",
-    "sortOrder": 498,
-    "themes": {
-      "hardship-sorrow": 30,
-      "sketches-of-legends": 104,
-      "whispering-reflection": 79
     }
   },
   {
@@ -21600,7 +21442,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 499,
+    "sortOrder": 494,
     "themes": {
       "women-of-the-west": 14,
       "firelight-shadow": 65,
@@ -21609,6 +21451,68 @@ export const galleryData = [
       "love-goodbye": 45,
       "sketches-of-legends": 107,
       "whispering-reflection": 84
+    }
+  },
+  {
+    "id": "i-sLtTp4m",
+    "title": "Cowboy Art: How many Aces was that?",
+    "description": "A painterly Western photograph of a cowboy counting cards in the saloon, defined by duty rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where obligation to others anchored a drifting world. Light, posture, and restraint shape a narrative rooted in consequence and memory. Part of Wayne Heim's Western fine art photography collection. © Wayne Heim",
+    "alt": "Cowboy Art: How many Aces was that?",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sLtTp4m/1/M93nSJ5gKcr7D9s2tWHZv6t72RR99NtN96C68GLMG/XL/cowboy%20art%20_HF29370-115-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sLtTp4m/1/M93nSJ5gKcr7D9s2tWHZv6t72RR99NtN96C68GLMG/XL/cowboy%20art%20_HF29370-115-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sLtTp4m/1/KZxkv86fKLFMXRkCR5NGGRsZ4q5RD2zkMnHRF4f9j/L/cowboy%20art%20_HF29370-115-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sLtTp4m/1/MChHWKgpc5M7B9NN6fqNgj8VK3Kh6TwKFbzfjD9rv/M/cowboy%20art%20_HF29370-115-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sLtTp4m/1/Lkn4nDXfCTC5cCm78gw4mNk6G5sSj5K5QCNXdpFpm/S/cowboy%20art%20_HF29370-115-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sLtTp4m/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of cowboy counting cards in the saloon. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 2,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "show",
+    "sortOrder": 495,
+    "themes": {
+      "hardship-sorrow": 30,
+      "sketches-of-legends": 104,
+      "whispering-reflection": 79
     }
   },
   {
@@ -21634,7 +21538,70 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 500
+    "sortOrder": 496
+  },
+  {
+    "id": "i-dXDLH7c",
+    "title": "Cowboy Art: See the Light",
+    "description": "Painterly Wild West themed photography of cowboy on train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "alt": "Cowboy Art: See the Light",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dXDLH7c/1/LnbRKJRZrnHTd5kLd8fWR7TNQQczKX92TMFqQ9hV5/XL/Old%20West%20Cowboy%20Portrait%20_HF28227-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dXDLH7c/1/LnbRKJRZrnHTd5kLd8fWR7TNQQczKX92TMFqQ9hV5/XL/Old%20West%20Cowboy%20Portrait%20_HF28227-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dXDLH7c/1/LnbRKJRZrnHTd5kLd8fWR7TNQQczKX92TMFqQ9hV5/XL/Old%20West%20Cowboy%20Portrait%20_HF28227-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dXDLH7c/1/MQB4WknzTXXSx4dqZCZh5D5zj4wdbF2xmphVKjnRt/L/Old%20West%20Cowboy%20Portrait%20_HF28227-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dXDLH7c/1/LLdg6jbd4vkZ7mDtT2wkBNfSqGH6LXFqBPM45Kjtg/S/Old%20West%20Cowboy%20Portrait%20_HF28227-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dXDLH7c/A",
+    "keywords": [
+      "Cowboy Art",
+      "Cowboy Artwork",
+      "Cowboy Photography",
+      "Cowboy Wall Art",
+      "Fine Art Cowboy Photography",
+      "Fine Art Painterly Photography",
+      "Historically Themed Photography",
+      "Man Cave Decor",
+      "Old West Cowboy Photography",
+      "Old Western Art",
+      "Painterly Cowboy Photography",
+      "Painterly Photography",
+      "Remington Prints",
+      "Vintage Themed Western Photography",
+      "Vintage Western Art",
+      "Vintage Western Photography",
+      "Western Art",
+      "Western Cowboy Art",
+      "Western Cowboy Artwork",
+      "Western Fine Art Photography",
+      "Western Fine Art",
+      "Western Painterly Photography",
+      "Western Photography Prints",
+      "Western Photos",
+      "Western Portraits",
+      "Western Prints",
+      "Western Themed Photography",
+      "Western Themed Portrait Photography",
+      "Western Wall Artwork",
+      "Wild West Cowboy Photography",
+      "Wild West Painterly Photography",
+      "Wild West Photography",
+      "Wild West Portrait Photography",
+      "Wild West Themed Photography"
+    ],
+    "story": "Painterly Wild West themed photography of cowboy on train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ],
+    "visibility": "",
+    "sortOrder": 497,
+    "themes": {
+      "firelight-shadow": 86,
+      "hardship-sorrow": 49,
+      "sketches-of-legends": 142,
+      "whispering-reflection": 112
+    }
   },
   {
     "id": "i-NTfST2B",
@@ -21663,7 +21630,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 501
+    "sortOrder": 498
   },
   {
     "id": "i-9g57QXd",
@@ -21699,7 +21666,7 @@ export const galleryData = [
     "rating": 2,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 502,
+    "sortOrder": 499,
     "themes": {
       "women-of-the-west": 49,
       "frontier-women": 96
@@ -21734,7 +21701,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 503,
+    "sortOrder": 500,
     "themes": {
       "women-of-the-west": 41,
       "frontier-women": 82,
@@ -21797,74 +21764,11 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 504,
+    "sortOrder": 501,
     "themes": {
       "women-of-the-west": 64,
       "frontier-women": 113,
       "sketches-of-legends": 139
-    }
-  },
-  {
-    "id": "i-dXDLH7c",
-    "title": "Cowboy Art: See the Light",
-    "description": "Painterly Wild West themed photography of cowboy on train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "alt": "Cowboy Art: See the Light",
-    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dXDLH7c/1/LnbRKJRZrnHTd5kLd8fWR7TNQQczKX92TMFqQ9hV5/XL/Old%20West%20Cowboy%20Portrait%20_HF28227-Edit-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dXDLH7c/1/LnbRKJRZrnHTd5kLd8fWR7TNQQczKX92TMFqQ9hV5/XL/Old%20West%20Cowboy%20Portrait%20_HF28227-Edit-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dXDLH7c/1/LnbRKJRZrnHTd5kLd8fWR7TNQQczKX92TMFqQ9hV5/XL/Old%20West%20Cowboy%20Portrait%20_HF28227-Edit-2-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dXDLH7c/1/MQB4WknzTXXSx4dqZCZh5D5zj4wdbF2xmphVKjnRt/L/Old%20West%20Cowboy%20Portrait%20_HF28227-Edit-2-L.jpg",
-    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dXDLH7c/1/LLdg6jbd4vkZ7mDtT2wkBNfSqGH6LXFqBPM45Kjtg/S/Old%20West%20Cowboy%20Portrait%20_HF28227-Edit-2-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dXDLH7c/A",
-    "keywords": [
-      "Cowboy Art",
-      "Cowboy Artwork",
-      "Cowboy Photography",
-      "Cowboy Wall Art",
-      "Fine Art Cowboy Photography",
-      "Fine Art Painterly Photography",
-      "Historically Themed Photography",
-      "Man Cave Decor",
-      "Old West Cowboy Photography",
-      "Old Western Art",
-      "Painterly Cowboy Photography",
-      "Painterly Photography",
-      "Remington Prints",
-      "Vintage Themed Western Photography",
-      "Vintage Western Art",
-      "Vintage Western Photography",
-      "Western Art",
-      "Western Cowboy Art",
-      "Western Cowboy Artwork",
-      "Western Fine Art Photography",
-      "Western Fine Art",
-      "Western Painterly Photography",
-      "Western Photography Prints",
-      "Western Photos",
-      "Western Portraits",
-      "Western Prints",
-      "Western Themed Photography",
-      "Western Themed Portrait Photography",
-      "Western Wall Artwork",
-      "Wild West Cowboy Photography",
-      "Wild West Painterly Photography",
-      "Wild West Photography",
-      "Wild West Portrait Photography",
-      "Wild West Themed Photography"
-    ],
-    "story": "Painterly Wild West themed photography of cowboy on train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ],
-    "visibility": "",
-    "sortOrder": 505,
-    "themes": {
-      "firelight-shadow": 86,
-      "hardship-sorrow": 49,
-      "sketches-of-legends": 142,
-      "whispering-reflection": 112
     }
   },
   {
@@ -21922,7 +21826,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 506,
+    "sortOrder": 502,
     "themes": {
       "sketches-of-legends": 138,
       "whispering-reflection": 110
@@ -21983,12 +21887,107 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "",
-    "sortOrder": 507,
+    "sortOrder": 503,
     "themes": {
       "aces-smoke-whiskey": 46,
       "firelight-shadow": 87,
       "whispering-reflection": 113
     }
+  },
+  {
+    "id": "i-s3f9DST",
+    "title": "Horseman",
+    "description": "Western fine art photography by Wayne Heim. Part of the Old Bedford Village series. Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/LC9sTmcsLPkf5jnr5Chj26Xg6FHdS7gPJ8FT7xMNg/XL/_HF26697-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/LC9sTmcsLPkf5jnr5Chj26Xg6FHdS7gPJ8FT7xMNg/XL/_HF26697-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/L4thTD4b7Cxh3SvLXzBzmbfNssVMSQTrwgSPD7fB9/L/_HF26697-Edit-L.jpg",
+    "srcM": "",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/Mw8XFW9BFpBGCFk64RhGg2JXMM38bBG4qnjq5W6Gk/S/_HF26697-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New photo by Wayne Heim from the Pennsylvannia series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/Pennsylvannia"
+    ],
+    "visibility": "show",
+    "sortOrder": 504
+  },
+  {
+    "id": "i-TNm6hQ3",
+    "title": "Outlaw Portraits And Cowboy Art",
+    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/0/M8KKMc22tLfCZzWZg2SqCMNHNgTDWwpTds244tmvJ/L/_O2H3085-861-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/0/M8KKMc22tLfCZzWZg2SqCMNHNgTDWwpTds244tmvJ/L/_O2H3085-861-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/0/M8KKMc22tLfCZzWZg2SqCMNHNgTDWwpTds244tmvJ/L/_O2H3085-861-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/0/LZTK4Hwr5V2kRNg7KfFJjvZMpTxbdk2R7hRSmmfLQ/M/_O2H3085-861-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/0/MmqXLMGSTjWf2sn8fs9SPWKWQSNSVscdV2gnQpMfH/S/_O2H3085-861-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/A",
+    "keywords": [
+      "a",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
+      "cowboy",
+      "outlaw portraits",
+      "cowboy art",
+      "frontier life",
+      "rustic charm",
+      "rugged spirit",
+      "western landscapes fine art",
+      "powerful works of art"
+    ],
+    "story": "This image embodies rugged spirit and rustic charm, captured by Wayne Heim in his signature style. It reflects western landscapes fine art with a touch of powerful works of art. © Wayne Heim",
+    "notes": "",
+    "rating": 2,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 505,
+    "themes": {
+      "women-of-the-west": 45,
+      "frontier-women": 86
+    }
+  },
+  {
+    "id": "i-vgZ8twt",
+    "title": "Exploring Western Cowboys",
+    "description": "A painterly Western photograph of a cowboy, defined by vigilance rather than spectacle. Wayne Heim's Western fine art photography uses a disciplined approach to explore the lived reality of the American frontier, where danger was anticipated long before it arrived. Light, posture, and restraint shape a narrative rooted in consequence and memory. © Wayne Heim",
+    "alt": "Fine art image by Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/0/Kjb7TZ4QCKBXhsCXkQp8LtjSRpTL5rjnqBBmRh7Bq/XL/_HF27727-Edit-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/0/K3Zk76FpJm2CT5DCfQhKGrzjmssrs34cH5mw97pXQ/L/_HF27727-Edit-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/0/MT8hcLqV5v6mwvBFQbrJpvBvVhK2Mnn766QwWcLDv/S/_HF27727-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vgZ8twt/A",
+    "keywords": [
+      "WHO4278",
+      "Western cowboys",
+      "western fine art",
+      "cowboy portraits",
+      "cowboy artwork",
+      "historic western prints",
+      "cowboy art",
+      "rustic charm",
+      "rugged spirit"
+    ],
+    "story": "This image embodies western fine art and cowboy art, captured by Wayne Heim in his signature style. It reflects rustic charm with a touch of rugged spirit. © Wayne Heim",
+    "notes": "",
+    "rating": 3,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 506
   },
   {
     "id": "i-mqDfN5z",
@@ -22017,7 +22016,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 508,
+    "sortOrder": 507,
     "themes": {
       "whispering-reflection": 114
     }
@@ -22043,7 +22042,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 509,
+    "sortOrder": 508,
     "themes": {
       "cowboys-and-horses": 25,
       "dust-thunder": 28,
@@ -22105,7 +22104,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 510,
+    "sortOrder": 509,
     "themes": {
       "sketches-of-legends": 141,
       "whispering-reflection": 111
@@ -22166,7 +22165,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 511,
+    "sortOrder": 510,
     "themes": {
       "firelight-shadow": 85,
       "law-outlaws": 88,
@@ -22208,7 +22207,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 512
+    "sortOrder": 511
   },
   {
     "id": "i-mBD4f67",
@@ -22265,7 +22264,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 513,
+    "sortOrder": 512,
     "themes": {
       "sketches-of-legends": 143
     }
@@ -22325,7 +22324,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 514,
+    "sortOrder": 513,
     "themes": {
       "sketches-of-legends": 145
     }
@@ -22360,7 +22359,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 515,
+    "sortOrder": 514,
     "themes": {
       "firelight-shadow": 2,
       "whispering-reflection": 3
@@ -22422,9 +22421,32 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 516,
+    "sortOrder": 515,
     "themes": {
       "love-goodbye": 58
     }
+  },
+  {
+    "id": "i-j24GFVH",
+    "title": "Frontier Study",
+    "description": "Western fine art photography by Wayne Heim. Part of the Artist Ride series. � Wayne Heim",
+    "alt": "New fine art photograph © Wayne Heim",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/KjK3h3LXX8Pbr58fXG2g6KrWdWGsnTKLmwh4bfxJ8/XL/_HF26538-1249-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/KjK3h3LXX8Pbr58fXG2g6KrWdWGsnTKLmwh4bfxJ8/XL/_HF26538-1249-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/KjK3h3LXX8Pbr58fXG2g6KrWdWGsnTKLmwh4bfxJ8/XL/_HF26538-1249-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/MR7LZzCPxxpN5q9QRfKRGWgGCnrnktShjhfvpXvqs/L/_HF26538-1249-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/2/MfQn6wfQc29nN3QD9GpbMM7vZbHjdWn7M2Nd6HBcv/S/_HF26538-1249-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-j24GFVH/A",
+    "keywords": [
+      "HF23312",
+      "1246"
+    ],
+    "story": "New photo by Wayne Heim from the A series. Full image story to follow soon.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "hidden",
+    "sortOrder": 516
   }
 ];

@@ -294,13 +294,27 @@ export const galleryData = [
 {
  "id": "i-Spk5gdH",
  "title": "Longing and Regret",
- "description": "Classic Western portrait of a cowboy in red, lost in thought, rendered in painterly tones on Baltic birch wood. The Engrained Series offers rustic fine art wall decor with authentic story and artisan technique.",
- "alt": "Cowboy in hat and red shirt gazing into distance – wood print, Engrained Series",
+ "description": "A painterly Western portrait capturing a moment of quiet reflection and unresolved thought. An elderly cowboy gazes into the distance, his expression shaped by memory, choice, and the passage of time. The restrained composition allows light, texture, and expression to carry the emotional weight without spectacle.\n\nWayne Heim’s Western fine art photography often focuses on these inward moments—where the American West becomes a psychological landscape as much as a physical one. This image reflects the enduring tension between what has been left behind and what still lies ahead, offering a contemplative study of longing, regret, and endurance.\n© Wayne Heim",
+ "alt": "Painterly Western fine art portrait of an elderly cowboy gazing into the distance, expressing reflection, longing, and quiet regret in the American West",
  "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/7/NKn3Jm2kBcH7FF4ghNDJ4WScpJ7mpN6fSKsmTxFNS/XL/Cowboy-One-Last-Look-ws-XL.jpg",
  "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/A",
- "keywords": ["cowboy", "longing", "western", "engrained wood print", "fine art"],
- "story": "He gazes into the distance, torn between what’s left behind and what lies ahead. The weight of choice settles as softly as sunset.",
- "notes": "",
+
+ "keywords": [
+  "western fine art photography",
+  "painterly western portrait",
+  "elderly cowboy portrait",
+  "western contemplation",
+  "longing and regret",
+  "american west portrait",
+  "western character study",
+  "narrative western photography",
+  "quiet western art",
+  "western canon portrait",
+  "wayne heim"
+ ],
+
+ "story": "He gazes into the distance, burdened by what she left behind—and what she carried away. As the light fades into night, the weight of old choices rises and surface.\n\nShe’s gone now. That much is certain. Stubborn zeal. Time misspent. The cruel clarity that only hindsight brings.\n\nWhat lies ahead asks for something he isn’t sure remains.\nPath and purpose blur in reflection, leaving those left behind the solemn task of wondering why.",
+ "notes": "This portrait relies on restraint rather than gesture. Soft, directional light models the face with subtlety, allowing texture and expression to emerge gradually rather than announce themselves. The tight framing removes narrative context, placing the entire emotional burden on gaze and stillness.\n\nWithin the Western canon, the work resists heroism in favor of introspection. Strength is suggested through endurance, not action—positioning the figure as someone shaped by consequence rather than conquest.",
  "rating": 5,
 
  "galleries": [
@@ -319,7 +333,9 @@ export const galleryData = [
   printed: 3,
   sold: 2,
   inStock: 1
- }
+ },
+
+ contentSource: "human"
 },
 {
  "id": "i-thTwwHZ",
