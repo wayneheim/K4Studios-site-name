@@ -12,9 +12,9 @@ export const storySliderData = [
     "story": "As the lone coach disappeared down the lonely road, he stood silent—rooted by more than trail dust. Would their paths ever cross again? As a man of few but deliberate words, had he said too little… too much? Should he have asked her not to go?\n\nThe questions would hang heavy on his heart — like the low-lying clouds blanketing the valley floor, choking out the day’s first light.\n\nBut the decision was made. And the road ahead—was now his alone to walk."
   },
   {
-    "id": "i-B7ZSdfs",
-    "title": "Till Death Do Us Part",
-    "story": "She knows. She’s known for some time. “Jim says I’m always right…” God, please — not this time. Shoulder to shoulder, breath to breath. However long, whatever the cost. He struggles — for air, for words to comfort, for a little more time beside her. “Don’t you worry, Milly… I think I got this thing on the ropes…” She’d give her own soul to make that be true. It was his dream to head West — the life they were meant to build together now reduced to a footnote in their journey. So many questions. So many tomorrows that may never come. But those aren’t for now.\n\nIn this moment — his touch, his warmth, his vow whispered in the dark — is all that matters. Till death do us part."
+    "id": "i-c5K798H",
+    "title": "Meant What I Said!",
+    "story": "What’d I say about you and your mouth? I told you—I meant what I said when I said it. Time for words and talking is over. Thinking now you might be better at bleeding than listening. Reckon we ought to find out?"
   },
   {
     "id": "i-44jcjTQ",
@@ -22,19 +22,19 @@ export const storySliderData = [
     "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming. \n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgement time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!"
   },
   {
-    "id": "i-4zxZQQ2",
-    "title": "Heading Home",
-    "story": "Sun splits the clouds as hoofbeats hush the grass, two shadows sliding side by side across the wide plain. His arm carves the horizon, confident, certain—yet her silence lingers, gaze tethered to a world behind the eyes. Guide or guest, captive or kin—only the wind knows for sure. Home drifts somewhere ahead, but between the riders rides every question left unasked, every story the land itself will not surrender."
+    "id": "i-B7ZSdfs",
+    "title": "Till Death Do Us Part",
+    "story": "She knows. She’s known for some time. “Jim says I’m always right…” God, please — not this time. Shoulder to shoulder, breath to breath. However long, whatever the cost. He struggles — for air, for words to comfort, for a little more time beside her. “Don’t you worry, Milly… I think I got this thing on the ropes…” She’d give her own soul to make that be true. It was his dream to head West — the life they were meant to build together now reduced to a footnote in their journey. So many questions. So many tomorrows that may never come. But those aren’t for now.\n\nIn this moment — his touch, his warmth, his vow whispered in the dark — is all that matters. Till death do us part."
   },
   {
-    "id": "i-r5Pb7zJ",
-    "title": "Signs",
-    "story": "Follow orders. Do your job. Always comin’ from those tellin’, not doin’. Hunting another man just cuz he followed more orders? That don’t sit easy on my shoulders. Six days out. Just like the rattlesnakes chasing mice— that’s gotta count for somethin’. Was fixin’ to turn back this morning— then, like a finger from God himself: commanding, revealing, testing my resolve. I could still turn back. Nobody would ever know. Except… I would. He would. Leaning in so both warmth and light can cleanse my soul — struggling to see, see what others missed, I finally see it. And with the clarity and weight of revelation, I know what I must do — follow the sign."
+    "id": "i-trZrk2w",
+    "title": "Night Raid",
+    "story": "Shadows slip across stone. Who will blink first—the men or the night? One ear to the dark, one eye on the sky. Quiet breath, steady hands—tonight, the West holds its secrets close."
   },
   {
-    "id": "i-Nn7scqm",
-    "title": "Do you HEAR me now?!",
-    "story": "She’s had enough of men with papers and empty promises, enough of being talked down to from horseback or the other side of a fence. The price of “progress” is written on her face as she makes her stand, voice ringing sharper than the shotgun she raises. One step closer and he’ll find out just how loud a woman can get when her land and family are on the line."
+    "id": "i-5rq7gcD",
+    "title": "Let No Man Put Asunder",
+    "story": "An ocean and a world away… we make this stand, reconciling the promises of a new life with the frontier realities that chase us. Sacrificed. Fought. Gave of body and blood for the soul of this country. It’s our flag now — our home — same as those born here. And it’s here we shall forge our life — and all that has been bound to us — whether by destiny or the divine… let no man put asunder."
   },
   {
     "id": "i-46kWCqc",
@@ -42,9 +42,39 @@ export const storySliderData = [
     "story": "The river is cold and wide, but he never checks the current behind him. One last sunrise, one last regret swallowed in the blue—this is the look of a man riding out with nothing left to lose and nothing left to prove."
   },
   {
+    "id": "i-r5Pb7zJ",
+    "title": "Signs",
+    "story": "Follow orders. Do your job. Always comin’ from those tellin’, not doin’. Hunting another man just cuz he followed more orders? That don’t sit easy on my shoulders. Six days out. Just like the rattlesnakes chasing mice— that’s gotta count for somethin’. Was fixin’ to turn back this morning— then, like a finger from God himself: commanding, revealing, testing my resolve. I could still turn back. Nobody would ever know. Except… I would. He would. Leaning in so both warmth and light can cleanse my soul — struggling to see, see what others missed, I finally see it. And with the clarity and weight of revelation, I know what I must do — follow the sign."
+  },
+  {
     "id": "i-7Mzzbvp",
     "title": "Last Hand",
     "story": "Dust spirals and hooves fly as the last hand is played out under a pale, unblinking sky. Three riders, every muscle and nerve taut with gamble and grit, thunder forward—there’s no room left for bluffing, no time to count the cost. In this wild rush, history is measured not by who wins, but by who dares to ride straight into the storm, knowing the deck was never meant to be fair."
+  },
+  {
+    "id": "i-4zxZQQ2",
+    "title": "Heading Home",
+    "story": "Sun splits the clouds as hoofbeats hush the grass, two shadows sliding side by side across the wide plain. His arm carves the horizon, confident, certain—yet her silence lingers, gaze tethered to a world behind the eyes. Guide or guest, captive or kin—only the wind knows for sure. Home drifts somewhere ahead, but between the riders rides every question left unasked, every story the land itself will not surrender."
+  },
+  {
+    "id": "i-Wx5scCf",
+    "title": "Shadows on the Ridge",
+    "story": "They moved like ghosts through the broken hills, each man reading the land in his own practiced way. A lifted hand, a shift of weight, a glance toward the treeline—signals shaped by hard miles and harder winters. \n\nFrom atop the sandstone ridge, the lookout caught the faintest motion in the distance, something just out of place. Below him, the others waited, breath slowed, senses sharpened. Whatever was coming, they’d face it together, the ridge at their back and the open world before them."
+  },
+  {
+    "id": "i-Nn7scqm",
+    "title": "Do you HEAR me now?!",
+    "story": "She’s had enough of men with papers and empty promises, enough of being talked down to from horseback or the other side of a fence. The price of “progress” is written on her face as she makes her stand, voice ringing sharper than the shotgun she raises. One step closer and he’ll find out just how loud a woman can get when her land and family are on the line."
+  },
+  {
+    "id": "i-cV5gwWZ",
+    "title": "Final Deposit",
+    "story": "Fate, destiny, or God’s will? Testing. Pushing. Driving a person to the edge of breaking. Everyone knew he was in trouble— but today? For God’s sake… the ground over him isn’t even cold. And yet here he comes, this soulless robber baron, all too eager to “do his job.” “Help the poor widow,” he says— ledger in hand, eyes on her grief as if sorrow were just another line item to collect.\n\nRight or wrong, we make our stand— not only for Henry… but for every one of us they’ve bled dry. One final act. One final message. One final deposit."
+  },
+  {
+    "id": "i-bfKMXS9",
+    "title": "Three Wise Men",
+    "story": "Just like we planned, boys.\nKeep it tight, aim for the meaty bits, and we’ll all be home in time for some of Martha’s pie.\n\nRemember now—why we’re here. This ain’t just about land or cattle. This is about drawing a line. A man’s gotta stand for somethin’. So breathe steady, don’t flinch—and let’s make this one count."
   },
   {
     "id": "i-rfFBRQM",
@@ -57,29 +87,9 @@ export const storySliderData = [
     "story": "One day, he said.\nEasy ride, he promised. Sun up, sun down, back before the lamp’s gone cold.\n\nBut her head finds his shoulder, and in the hush between words, she knows:\nIt’s never just a day, never just a ride.\n\nPlans are easy. Goodbyes—never are."
   },
   {
-    "id": "i-Wx5scCf",
-    "title": "Shadows on the Ridge",
-    "story": "They moved like ghosts through the broken hills, each man reading the land in his own practiced way. A lifted hand, a shift of weight, a glance toward the treeline—signals shaped by hard miles and harder winters. \n\nFrom atop the sandstone ridge, the lookout caught the faintest motion in the distance, something just out of place. Below him, the others waited, breath slowed, senses sharpened. Whatever was coming, they’d face it together, the ridge at their back and the open world before them."
-  },
-  {
-    "id": "i-cV5gwWZ",
-    "title": "Final Deposit",
-    "story": "Fate, destiny, or God’s will? Testing. Pushing. Driving a person to the edge of breaking. Everyone knew he was in trouble— but today? For God’s sake… the ground over him isn’t even cold. And yet here he comes, this soulless robber baron, all too eager to “do his job.” “Help the poor widow,” he says— ledger in hand, eyes on her grief as if sorrow were just another line item to collect.\n\nRight or wrong, we make our stand— not only for Henry… but for every one of us they’ve bled dry. One final act. One final message. One final deposit."
-  },
-  {
-    "id": "i-DczpNpH",
-    "title": "If You Want a Job Done Right…",
-    "story": "Let them talk. Let them doubt.\n\nSometimes you just have to take the shot yourself— because waiting for someone else means it never gets done. Besides, there’s nothing wrong with showing them how it’s done, one good aim at a time."
-  },
-  {
-    "id": "i-5TtHV8g",
-    "title": "Counting Cards",
-    "story": "Crap. Now what?! There’s gotta be a dozen of them now.\nThought they’d have given up hours ago. We didn’t even get anything.\n\nStupid idea. I told Jimmy that. Nobody robs a bakery—wrong kind of “dough,” I said.\nBut no, I’m the dumb one. And now we got to, count the shadows, holding our breath,\nand figuring up the odds on if we make it out alive."
-  },
-  {
-    "id": "i-bfKMXS9",
-    "title": "Three Wise Men",
-    "story": "Just like we planned, boys.\nKeep it tight, aim for the meaty bits, and we’ll all be home in time for some of Martha’s pie.\n\nRemember now—why we’re here. This ain’t just about land or cattle. This is about drawing a line. A man’s gotta stand for somethin’. So breathe steady, don’t flinch—and let’s make this one count."
+    "id": "i-HBRmWg4",
+    "title": "Cough and Covenant",
+    "story": "He lies on the floor, lungs burning — a cough like gravel, the taste of blood. The rough tenderness of survival, where hopes and promises are measured in sips, not sermons.\n\nFever is not the only thing that spreads. Silence weighs heavier than the acrid scent of smoke and despair. Conviction does not waver, nor does it question. As light halos his courage and conviction, the details of fate and finality lurk in the shadows and silence."
   },
   {
     "id": "i-3SxncXS",
@@ -87,34 +97,9 @@ export const storySliderData = [
     "story": "He didn’t speak much, not because he lacked words, but because he carried too many. The land had carved its lessons deep into him—etched into the creases around his eyes, threaded through the long silver of his beard, whispered in every slow turn of his gaze.\n\nSome men grow older. \nOthers become part of the horizon.\n\nHe was the latter."
   },
   {
-    "id": "i-HBRmWg4",
-    "title": "Cough and Covenant",
-    "story": "He lies on the floor, lungs burning — a cough like gravel, the taste of blood. The rough tenderness of survival, where hopes and promises are measured in sips, not sermons.\n\nFever is not the only thing that spreads. Silence weighs heavier than the acrid scent of smoke and despair. Conviction does not waver, nor does it question. As light halos his courage and conviction, the details of fate and finality lurk in the shadows and silence."
-  },
-  {
-    "id": "i-gxMVNh3",
-    "title": "Tumbleweed Whispers",
-    "story": "The wind danced through the porch boards, carrying secrets only children hear. She spun toward him, laughter bright as sunlit dust, bare feet tapping out a rhythm older than the prairie.\n\nFor a breath, for a heartbeat, for this one wild moment — the world was nothing but joy, and the tumbleweeds whispered them forward."
-  },
-  {
-    "id": "i-CD6rgtF",
-    "title": "High Ground Justice",
-    "story": "All lines lead to conflict. Trees stand watch from above, silent patrons to the stage below. Cliffs, angered and jagged — their edge… the box… the ring of reckoning.\n\nShadows press in, clouds gather on winds of judgment, textures pulling, tightening the grip. A bold, harsh narrator carves — its voice in shadow, speaking violence against the soft hush of summer grass.\n\nAll lines converge. Justice? Vengeance? Opportunity? Only the wind sings this song."
-  },
-  {
-    "id": "i-5rq7gcD",
-    "title": "Let No Man Put Asunder",
-    "story": "An ocean and a world away… we make this stand, reconciling the promises of a new life with the frontier realities that chase us. Sacrificed. Fought. Gave of body and blood for the soul of this country. It’s our flag now — our home — same as those born here. And it’s here we shall forge our life — and all that has been bound to us — whether by destiny or the divine… let no man put asunder."
-  },
-  {
-    "id": "i-MHGPvcs",
-    "title": "$3 for a whiskey?",
-    "story": "“$3 for a whiskey?” is a painterly Western portrait alive with color, shadow, and saloon intrigue. A grizzled cowboy lifts his glass, eyes cutting through the haze and bokeh as he ponders the price of pleasure on a long frontier night. A tribute to hard-won comforts and the choices they demand, captured with cinematic style and wry humor.\n© Wayne Heim"
-  },
-  {
-    "id": "i-6xn5rMd",
-    "title": "Carved in Stone",
-    "story": "Grizzled and chiseled, full of lines and cracks, he looks as if he was hewn from the rock itself—etched by years of sun, wind, and memory. He stands half in sunlight, half in legend, and in the hush before he speaks you sense he’s about to share the tale of his latest discovery, or maybe the sorrow of a love long lost. There’s a world written across that weathered face—waiting for anyone brave enough to ask."
+    "id": "i-5TtHV8g",
+    "title": "Counting Cards",
+    "story": "Crap. Now what?! There’s gotta be a dozen of them now.\nThought they’d have given up hours ago. We didn’t even get anything.\n\nStupid idea. I told Jimmy that. Nobody robs a bakery—wrong kind of “dough,” I said.\nBut no, I’m the dumb one. And now we got to, count the shadows, holding our breath,\nand figuring up the odds on if we make it out alive."
   },
   {
     "id": "i-fCG2nm8",
@@ -127,14 +112,29 @@ export const storySliderData = [
     "story": "Morning sun climbs, bathing every color in anticipation and purpose. Sweat beads, dust shimmers, saddle leather glows with stories untold. The clock strikes ten—she’s late. Nerves on edge, they hold their places. Distant rumbles echo—steel, hooves, danger on the ridge.\n“Steady, Billy. Stick to the plan.”\nToday, patience is the hardest virtue. Vengeance or fortune—both ride with the morning wind."
   },
   {
-    "id": "i-trZrk2w",
-    "title": "Night Raid",
-    "story": "Shadows slip across stone. Who will blink first—the men or the night? One ear to the dark, one eye on the sky. Quiet breath, steady hands—tonight, the West holds its secrets close."
+    "id": "i-DczpNpH",
+    "title": "If You Want a Job Done Right…",
+    "story": "Let them talk. Let them doubt.\n\nSometimes you just have to take the shot yourself— because waiting for someone else means it never gets done. Besides, there’s nothing wrong with showing them how it’s done, one good aim at a time."
+  },
+  {
+    "id": "i-gxMVNh3",
+    "title": "Tumbleweed Whispers",
+    "story": "The wind danced through the porch boards, carrying secrets only children hear. She spun toward him, laughter bright as sunlit dust, bare feet tapping out a rhythm older than the prairie.\n\nFor a breath, for a heartbeat, for this one wild moment — the world was nothing but joy, and the tumbleweeds whispered them forward."
   },
   {
     "id": "i-fM9qmKW",
     "title": "Just a Sip to Settle My Nerves",
     "story": "With the weight of the world resting clearly on his shoulders, Chávez pores himself one last drink for the day. Weight of what he's done or weight of what is to come - most likely a mixture of both."
+  },
+  {
+    "id": "i-MHGPvcs",
+    "title": "$3 for a whiskey?",
+    "story": "“$3 for a whiskey?” is a painterly Western portrait alive with color, shadow, and saloon intrigue. A grizzled cowboy lifts his glass, eyes cutting through the haze and bokeh as he ponders the price of pleasure on a long frontier night. A tribute to hard-won comforts and the choices they demand, captured with cinematic style and wry humor.\n© Wayne Heim"
+  },
+  {
+    "id": "i-CD6rgtF",
+    "title": "High Ground Justice",
+    "story": "All lines lead to conflict. Trees stand watch from above, silent patrons to the stage below. Cliffs, angered and jagged — their edge… the box… the ring of reckoning.\n\nShadows press in, clouds gather on winds of judgment, textures pulling, tightening the grip. A bold, harsh narrator carves — its voice in shadow, speaking violence against the soft hush of summer grass.\n\nAll lines converge. Justice? Vengeance? Opportunity? Only the wind sings this song."
   },
   {
     "id": "i-c3vWMgt",
@@ -152,9 +152,9 @@ export const storySliderData = [
     "story": "You dirty sons’a bitches—\nI’ll show you what a real man’s made of!\n\nYou may have got the jump on them…\nbut if I’m goin’ out today—\nI'm sending you to Hell with me!"
   },
   {
-    "id": "i-c5K798H",
-    "title": "Meant What I Said!",
-    "story": "What’d I say about you and your mouth? I told you—I meant what I said when I said it. Time for words and talking is over. Thinking now you might be better at bleeding than listening. Reckon we ought to find out?"
+    "id": "i-6xn5rMd",
+    "title": "Carved in Stone",
+    "story": "Grizzled and chiseled, full of lines and cracks, he looks as if he was hewn from the rock itself—etched by years of sun, wind, and memory. He stands half in sunlight, half in legend, and in the hush before he speaks you sense he’s about to share the tale of his latest discovery, or maybe the sorrow of a love long lost. There’s a world written across that weathered face—waiting for anyone brave enough to ask."
   },
   {
     "id": "i-VDLVwqr",

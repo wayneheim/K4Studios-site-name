@@ -112,22 +112,23 @@ const structuredDataJson = JSON.stringify({
     },
     {
       "@type": "CollectionPage",
-      "@id": canonicalUrl,
+      "@id": canonicalUrl + "#collectionpage",
       "name": galleryTitle + " – Complete Index",
       "url": canonicalUrl,
       "description": seoDescription,
-      "isPartOf": { "@id": parentUrl },
+      "isPartOf": { "@id": parentUrl + "#collection" },
       "creator": { "@id": "https://www.k4studios.com/#person" },
       "numberOfItems": imageCount
     },
     {
       "@type": "BreadcrumbList",
+      "@id": canonicalUrl + "#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Painterly Fine Art", "item": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography" },
-        { "@type": "ListItem", "position": 2, "name": "Facing History", "item": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History" },
-        { "@type": "ListItem", "position": 3, "name": "Western Cowboy Portraits", "item": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" },
-        { "@type": "ListItem", "position": 4, "name": "Color", "item": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" },
-        { "@type": "ListItem", "position": 5, "name": "Complete Index", "item": canonicalUrl }
+        { "@type": "ListItem", "position": 1, "item": { "@id": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography", "name": "Painterly Fine Art" } },
+        { "@type": "ListItem", "position": 2, "item": { "@id": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History", "name": "Facing History" } },
+        { "@type": "ListItem", "position": 3, "item": { "@id": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits", "name": "Western Cowboy Portraits" } },
+        { "@type": "ListItem", "position": 4, "item": { "@id": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color", "name": "Color" } },
+        { "@type": "ListItem", "position": 5, "item": { "@id": canonicalUrl, "name": "Complete Index" } }
       ]
     }
   ]
@@ -142,7 +143,7 @@ const structuredDataJson = JSON.stringify({
   <link rel="canonical" href={canonicalUrl} />
   <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet" />
 
-  <main>
+  <div class="gallery-index-wrapper">
     <div class="logo">
       <a href="/" aria-label="Go to K4 Studios Homepage">
         <img src="/images/K4Logo-web-b.jpg" alt="K4 Studios Logo" />
@@ -237,11 +238,11 @@ const structuredDataJson = JSON.stringify({
 
     <GalleryLightbox client:only="react" datasetPath="Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" showHeader={false} />
     <Footer />
-  </main>
+  </div>
 
   <style>
     body { background:#fff; color:#2a1f17; font-family:'Glegoo',serif; }
-    main { min-height:100vh; padding:24px; }
+    .gallery-index-wrapper { min-height:100vh; padding:24px; }
 
     .logo { display:flex; justify-content:center; margin:32px 0 16px; }
     .logo a:hover { transform:scale(1.05); }
