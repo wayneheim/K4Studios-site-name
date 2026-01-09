@@ -43,8 +43,44 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
           // Build contextual alt text with keyword rotation
           const contextualAlt = buildContextualAlt(item.title, resolvedContext, index);
           
+          // Track clicks for mobileOnly tiles (Featured Collection equivalent on mobile)
+          const handleClick = () => {
+            if (item.mobileOnly) {
+              // Log to Google Sheets via Netlify function
+              const sourcePage = window.location.pathname;
+              const payload = JSON.stringify({
+                eventType: 'tombstone_mobile_click',
+                details: {
+                  tile_title: item.title,
+                  destination: item.href,
+                  source_page: sourcePage
+                },
+                timestamp: Date.now()
+              });
+              
+              // Use sendBeacon for reliable delivery during navigation
+              if (navigator.sendBeacon) {
+                const blob = new Blob([payload], { type: 'application/json' });
+                navigator.sendBeacon('/.netlify/functions/log-ui-event', blob);
+              } else {
+                fetch('/.netlify/functions/log-ui-event', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: payload,
+                  keepalive: true
+                }).catch(() => {});
+              }
+            }
+          };
+          
           return (
-            <a key={item.title} href={item.href} className="tile" title={contextualAlt}>
+            <a 
+              key={item.title} 
+              href={item.href} 
+              className={`tile${item.mobileOnly ? ' mobile-only-tile' : ''}`}
+              title={contextualAlt}
+              onClick={handleClick}
+            >
               <div
                 className="tombstone-card tombstone-animate"
                 style={{ animationDelay: `${1.05 + index * 0.1}s` }}
@@ -222,6 +258,18 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
         @media (min-width: 768px) {
           .tile-grid {
             gap: 2rem;
+          }
+          
+          /* Hide mobile-only tiles on desktop */
+          .mobile-only-tile {
+            display: none;
+          }
+        }
+        
+        /* Show mobile-only tiles on mobile */
+        @media (max-width: 767px) {
+          .mobile-only-tile {
+            display: flex;
           }
         }
 
