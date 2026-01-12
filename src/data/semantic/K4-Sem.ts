@@ -145,6 +145,7 @@ facingHistory: {
     { phrase: "story-driven historical photography", rating: 5, use: true },
     { phrase: "moments from history", rating: 5, use: true },
     { phrase: "Step inside the story", rating: 5, use: true },
+    { phrase: "historic photography prints", rating: 5, use: true },
 
     // Secondary (WritingBrain fallback, painterly + historical tone)
     { phrase: "living history fine art", rating: 4, use: true },
@@ -154,6 +155,7 @@ facingHistory: {
     { phrase: "painterly compositions", rating: 4, use: true },
     { phrase: "painterly photographer", rating: 4, use: true },
     { phrase: "historical prints", rating: 4, use: true },
+    { phrase: "historic photography", rating: 4, use: true },
 
     // Long-tail / glossary only (semantic expansion)
     { phrase: "History in Fine Art", rating: 3, use: true },
@@ -224,10 +226,34 @@ westernWallArtHub: {
   def: "Museum-quality Western wall art for collectors of narrative fine art. Unlike decorative posters or mass-produced prints, fine art Western wall art emphasizes archival quality, narrative depth, and the craftsmanship of original photographic work.",
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
-    { phrase: "western wall art", rating: 3, use: true },
-    { phrase: "western wall decor", rating: 2, use: true },
-    { phrase: "western art for collectors", rating: 3, use: true },
-    { phrase: "museum quality western art", rating: 3, use: true },
+    // Primary commercial-intent phrases (rating 5)
+    { phrase: "western wall art", rating: 5, use: true },
+    { phrase: "wild west cowboy photography", rating: 5, use: true },
+    { phrase: "western fine art prints", rating: 5, use: true },
+    { phrase: "cowboy art", rating: 5, use: true },
+    // Strong commercial modifiers (rating 4)
+    { phrase: "vintage western wall art", rating: 4, use: true },
+    { phrase: "vintage cowboy art", rating: 4, use: true },
+    { phrase: "old west wall art", rating: 4, use: true },
+    { phrase: "old cowboy photography", rating: 4, use: true },
+    { phrase: "old cowboy art", rating: 4, use: true },
+    { phrase: "rustic western wall art", rating: 4, use: true },
+    { phrase: "cowboy artwork", rating: 4, use: true },
+    { phrase: "western prints", rating: 4, use: true },
+    { phrase: "cowboy pictures", rating: 4, use: true },
+    { phrase: "western photos", rating: 4, use: true },
+    { phrase: "cowboy photographs", rating: 4, use: true },
+    { phrase: "western home decor", rating: 4, use: true },
+    { phrase: "cowboy home decor", rating: 4, use: true },
+    { phrase: "western art for collectors", rating: 4, use: true },
+    { phrase: "museum quality western art", rating: 4, use: true },
+    // Supporting commercial phrases (rating 3)
+    { phrase: "western wall decor", rating: 3, use: true },
+    { phrase: "old western pictures", rating: 3, use: true },
+    { phrase: "old cowboy pictures", rating: 3, use: true },
+    { phrase: "rustic cowboy art", rating: 3, use: true },
+    { phrase: "wild west prints", rating: 3, use: true },
+    { phrase: "western interior design art", rating: 3, use: true },
   ],
   imagePhrases: []
 },
@@ -326,10 +352,11 @@ historicallyThemedPhotography: {
 // ============================================================================
 
 glossaryCowboyArt: {
-  def: "Cowboy art encompasses visual representations of Western ranch life, frontier work, and the iconic cowboy figure. In fine art contexts, it moves beyond decor clichés to explore character, story, and the lived reality of the American West. See <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> | <a href='/Painterly-Western-Photography'>Painterly Western Photography</a>.",
+  path: "/Western-Wall-Art",
+  def: "Cowboy art encompasses visual representations of Western ranch life, frontier work, and the iconic cowboy figure. In fine art contexts, it moves beyond decor clichés to explore character, story, and the lived reality of the American West. See <a href='/Western-Wall-Art'>Western Wall Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
   landingPhrases: [
-    { phrase: "cowboy art", rating: 3, use: false },
-    { phrase: "cowboy wall art", rating: 3, use: true, link: "/Western-Wall-Art" },
+    { phrase: "cowboy art", rating: 5, use: true, link: "/Western-Wall-Art" },
+    { phrase: "cowboy wall art", rating: 4, use: true, link: "/Western-Wall-Art" },
   ],
   imagePhrases: []
 },
@@ -343,10 +370,12 @@ glossaryWesternStylePhotography: {
 },
 
 glossaryVintageWesternPhotography: {
-  def: "Vintage Western photography refers to imagery that evokes historical Western eras through tone, restraint, and narrative structure—rather than literal age or archival origin. It captures the spirit of the frontier through deliberate craft, not nostalgic imitation. Explore <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> | <a href='/Western-Black-and-White-Photography'>Western Black and White Photography</a>.",
+  path: "/Western-Wall-Art",
+  def: "Vintage Western photography refers to imagery that evokes historical Western eras through tone, restraint, and narrative structure—rather than literal age or archival origin. It captures the spirit of the frontier through deliberate craft, not nostalgic imitation. Explore <a href='/Western-Wall-Art'>Western Wall Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
   landingPhrases: [
-    { phrase: "vintage western photography", rating: 2, use: false },
-    { phrase: "vintage cowboy photography", rating: 1, use: false },
+    { phrase: "vintage western photography", rating: 4, use: true, link: "/Western-Wall-Art" },
+    { phrase: "vintage cowboy photography", rating: 4, use: true, link: "/Western-Wall-Art" },
+    { phrase: "vintage western art", rating: 4, use: true, link: "/Western-Wall-Art" },
   ],
   imagePhrases: []
 },
@@ -360,10 +389,12 @@ glossaryWesternThemedPhotography: {
 },
 
 glossaryWildWestPhotography: {
-  def: "Wild West photography evokes the untamed American frontier—outlaws, pioneers, and the mythology of westward expansion. Fine art Wild West imagery moves beyond nostalgic spectacle to explore character, moral complexity, and the human stories behind the legend. Explore <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> | <a href='/Painterly-Western-Photography'>Painterly Western Photography</a>.",
+  path: "/Western-Wall-Art",
+  def: "Wild West photography evokes the untamed American frontier—outlaws, pioneers, and the mythology of westward expansion. Fine art Wild West imagery moves beyond nostalgic spectacle to explore character, moral complexity, and the human stories behind the legend. Explore <a href='/Western-Wall-Art'>Western Wall Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
   landingPhrases: [
-    { phrase: "wild west photography", rating: 3, use: false },
-    { phrase: "wild west art", rating: 3, use: false },
+    { phrase: "wild west photography", rating: 4, use: true, link: "/Western-Wall-Art" },
+    { phrase: "wild west art", rating: 4, use: true, link: "/Western-Wall-Art" },
+    { phrase: "old west photography", rating: 4, use: true, link: "/Western-Wall-Art" },
   ],
   imagePhrases: []
 },
@@ -1539,6 +1570,18 @@ universal: {
     "wild west photography": [
       "old west art", 
       "painterly cowboy portraits"
+    ],
+
+    "wild west cowboy photography prints": [
+      "wild west wall art",
+      "cowboy photography prints",
+      "western cowboy prints"
+    ],
+
+    "vintage western wall art": [
+      "vintage cowboy prints",
+      "old west wall decor",
+      "rustic western prints"
     ],
 
     "roaring 20s photography": [

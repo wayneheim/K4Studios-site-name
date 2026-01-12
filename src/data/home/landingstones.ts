@@ -40,6 +40,7 @@ export const landingWestern = {
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits",
       thumb: "/images/tombstones/Cowboy-j-ts.webp",
       mobileOnly: true,
+      trackingId: "Cowboy_Jump_Home",
     },
   ],
 };

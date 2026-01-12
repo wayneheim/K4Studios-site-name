@@ -34,6 +34,8 @@ interface Props {
   itemCount?: number;
   /** Optional: hide on mobile */
   hideOnMobile?: boolean;
+  /** Optional: custom tracking ID for analytics */
+  trackingId?: string;
 }
 
 const {
@@ -44,8 +46,12 @@ const {
   ctaLink,
   collectionName,
   itemCount = 250,
-  hideOnMobile = false
+  hideOnMobile = false,
+  trackingId
 } = Astro.props;
+
+// Use trackingId if provided, otherwise fall back to collectionName
+const analyticsLabel = trackingId || collectionName;
 
 // Use smaller image size for widget
 const displaySrc = image.srcM || image.srcS || image.src;
@@ -126,7 +132,7 @@ const structuredData = JSON.stringify({
   </a>
 </aside>
 
-<script define:vars={{ collectionName, ctaLink }}>
+<script define:vars={{ collectionName, ctaLink, analyticsLabel }}>
   // Track clicks on the Featured Collection CTA
   document.addEventListener('DOMContentLoaded', () => {
     const widget = document.querySelector('.featured-collection-widget');
@@ -136,7 +142,7 @@ const structuredData = JSON.stringify({
       link.addEventListener('click', () => {
         // GA4 tracking
         if (typeof gtag === 'function') {
-          gtag('event', 'featured_collection_click', {
+          gtag('event', analyticsLabel, {
             event_category: 'engagement',
             event_label: collectionName,
             destination_url: ctaLink
@@ -146,7 +152,7 @@ const structuredData = JSON.stringify({
         // Custom logging to Google Sheets via Netlify function
         const sourcePage = window.location.pathname;
         const payload = JSON.stringify({
-          eventType: 'featured_collection_click',
+          eventType: analyticsLabel,
           details: {
             collection: collectionName,
             destination: ctaLink,

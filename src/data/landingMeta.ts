@@ -508,15 +508,15 @@ export const landingMetaDB = {
   },
 
   "/Western-Wall-Art": {
-    ogTitle: "Western Wall Art – Museum-Quality Fine Art for Collectors",
+    ogTitle: "Western Wall Art – Wild West Cowboy Photography & Vintage Western Prints",
     ogDescription:
-      "Museum-quality Western wall art by fine art photographer Wayne Heim. Original cowboy portraits, frontier landscapes, and narrative Western photography for serious collectors.",
+      "Museum-quality Western wall art and wild west cowboy photography by Wayne Heim. Vintage western art, cowboy portraits, and frontier landscapes — cinematic, story-driven, and historically rooted.",
     ogImage: "/og/cowboy.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
-    twitterTitle: "Western Wall Art – Wayne Heim Fine Art",
+    twitterTitle: "Western Wall Art – Wild West Cowboy Photography",
     twitterDescription:
-      "Museum-quality Western wall art for collectors. Original fine art photography, not decorative prints.",
+      "Wild west cowboy photography and vintage western wall art for collectors. Original fine art by Wayne Heim.",
     twitterImage: "/og/cowboy.jpg",
   },
 

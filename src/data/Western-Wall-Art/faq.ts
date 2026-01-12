@@ -8,7 +8,16 @@ export const wallArtFAQ = [
     ],
   },
 
-  // 2. DIFFERENTIATION — Fine art vs décor
+  // 2. WILD WEST COWBOY PHOTOGRAPHY — Commercial intent definition
+  {
+    q: "What is wild west cowboy photography?",
+    a: [
+      "Wild west cowboy photography captures the spirit and mythology of the American frontier through authentic portraiture — real cowboys, ranchers, and frontier figures rendered with narrative depth rather than staged spectacle.",
+      "Wayne Heim's wild west cowboy photography is distinguished by its painterly approach: dramatic light, weathered textures, and character-driven compositions that reward close study. Each piece is created as collectible fine art, not decorative reproduction."
+    ],
+  },
+
+  // 3. DIFFERENTIATION — Fine art vs décor
   {
     q: "How is fine art Western photography different from decorative wall art?",
     a: [
@@ -50,6 +59,15 @@ export const wallArtFAQ = [
     a: [
       "Prints are available in a range of sizes, from intimate studies suitable for personal spaces to large-format pieces designed for prominent display.",
       "Because each image has its own ideal proportions, sizing recommendations are provided on individual gallery pages. Custom sizing is available for collectors with specific requirements."
+    ],
+  },
+
+  // 7. VINTAGE WESTERN WALL ART — Commercial intent
+  {
+    q: "Where can I buy vintage Western wall art?",
+    a: [
+      "Vintage Western wall art that captures authentic frontier character — rather than mass-produced nostalgia — is available directly from fine art photographers like Wayne Heim.",
+      "This collection features old west and vintage cowboy imagery created with archival materials and collector-grade finishing. Each piece ships directly from the artist, signed and ready to display. <a href='/Other/Print-Options'>View print options</a>."
     ],
   },
 ];

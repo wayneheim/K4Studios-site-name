@@ -6,8 +6,14 @@ export const landingWallArt = {
   // Keywords for structured data and semantic SEO
   keywords: [
     "Western Wall Art",
-    "western wall decor",
+    "wild west cowboy photography",
     "western fine art prints",
+    "vintage western wall art",
+    "vintage cowboy art",
+    "old west wall art",
+    "rustic western wall art",
+    "cowboy artwork",
+    "western prints",
     "cowboy wall art",
     "museum quality western art",
     "western art for collectors",

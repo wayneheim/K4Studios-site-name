@@ -48,10 +48,11 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
             if (item.mobileOnly) {
               // Log to Google Sheets via Netlify function
               const sourcePage = window.location.pathname;
+              const trackingLabel = item.trackingId || item.title;
               const payload = JSON.stringify({
-                eventType: 'cowboy_mobile_click',
+                eventType: trackingLabel,
                 details: {
-                  tile_title: item.title,
+                  collection: item.title,
                   destination: item.href,
                   source_page: sourcePage
                 },
