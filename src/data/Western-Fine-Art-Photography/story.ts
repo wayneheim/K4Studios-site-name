@@ -5,7 +5,7 @@ export const painterlyStory = [
     title: "Western Fine Art Photography: Story, Character, and the Human West",
     paragraphs: [
       "Western fine art photography is not about nostalgia or spectacle. It is about people — lives shaped by land, labor, weather, and time. The American West endures not as myth, but as lived experience.",
-      "<a href='/wayne-heim-western-fine-art-photography'>Wayne Heim's western fine art photography</a> moves beyond surface imagery to explore character, story, and presence. This is Western photography as a narrative style — not staged icons or romantic caricatures, but intimate portraits of individuals whose identities are inseparable from the places they inhabit."
+      "This body of work is authored by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim, whose western fine art photography</a> is surveyed separately. His approach moves beyond surface imagery to explore character, story, and presence — Western photography as a narrative style, not staged icons or romantic caricatures."
     ]
   },
 

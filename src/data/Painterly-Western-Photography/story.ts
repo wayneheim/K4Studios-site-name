@@ -5,7 +5,7 @@ export const painterlyStory = [
     title: "Painterly Western Photography",
     paragraphs: [
       "Painterly Western photography is a fine art approach — not a style layered on top of an image, but a way of seeing shaped long before the shutter is pressed. It begins with light, structure, and restraint, and ends with images that feel remembered rather than captured.",
-      "Rooted in the Pictorialist tradition and refined through years of illustration and visual storytelling, <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim's western fine art photography</a> occupies the space between photography and fine art. These images are built, not processed — sculpted with light, atmosphere, and intention."
+      "Rooted in the Pictorialist tradition and refined through years of illustration and visual storytelling, this work occupies the space between photography and fine art. These images are built, not processed — sculpted with light, atmosphere, and intention."
     ]
   },
 

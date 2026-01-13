@@ -3,7 +3,7 @@ export const painterlyStory = [
     title: "Fine Art Photographer & Visual Storyteller",
     subhead: "Painterly – Narrative – Historical – Western – Landscape – Legacy",
     paragraphs: [
-      "Wayne Heim is an award-winning fine art photographer known for painterly Western cowboy photography that explores frontier identity, memory, and narrative tension.",
+      "Wayne Heim is an award-winning fine art photographer known for painterly Western cowboy photography that explores frontier identity, memory, and narrative tension. A <a href='/wayne-heim-western-fine-art-photography'>representative survey of Wayne Heim's western fine art photography</a> is presented separately as a structured reference overview of his primary bodies of work.",
       "Welcome to K4 Studios. I'm Wayne Heim—an award-winning fine art photographer and nationally recognized medical illustrator whose work spans from the operating room to the open range. But titles don't matter if the work doesn't speak. And mine isn't here to impress. It's here to haunt.",
       "I don’t shoot moments. I shoot meaning. Not the kind found in perfect light or flawless exposure, but in the tension between clarity and ambiguity—between what happened, and what might’ve."
     ]

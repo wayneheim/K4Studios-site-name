@@ -69,105 +69,68 @@ const pageTitle = "Wayne Heim | Western Fine Art Photography";
 const pageDescription = "Wayne Heim is a contemporary western fine art photographer whose painterly photography explores the American West through narrative restraint and cinematic atmosphere. View curated works spanning black and white cowboy portraits, color western scenes, and Native American portraits.";
 const canonicalUrl = "https://www.k4studios.com/wayne-heim-western-fine-art-photography";
 
-// Build structured data
-const todayIso = new Date().toISOString().split("T")[0];
+/**
+ * Structured Data: Authority Hybrid Pattern
+ * 
+ * TWO separate JSON-LD blocks (NOT merged, NOT @graph):
+ * 1. Person — establishes Wayne Heim as canonical entity
+ * 2. CreativeWork — frames the surveyed body of work
+ * 
+ * ❌ NO ImageObject entries
+ * ❌ NO ItemList / Gallery / CollectionPage
+ * ❌ NO Product / Offer
+ * ❌ NO BreadcrumbList
+ * ❌ NO sameAs social links (avoids entity merging)
+ * 
+ * This is a catalog essay / reference surface, not a gallery.
+ */
 
-// Helper to build ImageObject entries
-function buildImageObject(img: any, basePath: string) {
-  return {
-    "@type": "ImageObject",
-    "@id": `https://www.k4studios.com${basePath}/${img.id}#image`,
-    "name": img.title,
-    "description": img.alt || img.title,
-    "contentUrl": img.srcXL || img.src,
-    "url": `https://www.k4studios.com${basePath}/${img.id}`,
-    "encodingFormat": "image/jpeg",
-    "creator": {
-      "@type": "Person",
-      "name": "Wayne Heim",
-      "url": "https://www.k4studios.com/wayne-heim-western-fine-art-photography"
-    },
-    "copyrightHolder": {
-      "@type": "Person",
-      "name": "Wayne Heim"
-    },
-    "copyrightNotice": "© Wayne Heim",
-    "creditText": "Wayne Heim",
-    "license": "https://www.k4studios.com/licensing",
-    "datePublished": todayIso
-  };
-}
-
-// Build all image objects for schema
-const allImageObjects = [
-  ...bwPortraits.map((img: any) => buildImageObject(img, "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White")),
-  ...cinematicSection.map((img: any) => buildImageObject(img, "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color")),
-  ...narrativeSection.map((img: any) => buildImageObject(img, "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color")),
-  ...characterSection.map((img: any) => buildImageObject(img, "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White")),
-  ...nativePortraits.map((img: any) => buildImageObject(img, "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"))
-];
-
-// Person + CollectionPage hybrid schema
-const structuredData = {
+const personSchema = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://www.k4studios.com/#wayneheim",
-      "name": "Wayne Heim",
-      "jobTitle": "Western Fine Art Photographer",
-      "description": "Wayne Heim is a contemporary western fine art photographer known for painterly photography that explores the American West through narrative, restraint, and atmosphere.",
-      "url": "https://www.k4studios.com/wayne-heim-western-fine-art-photography",
-      "image": "https://www.k4studios.com/images/wayne-heim-portrait.jpg",
-      "sameAs": [
-        "https://www.instagram.com/k4studios/",
-        "https://www.facebook.com/k4studiosphotography/",
-        "https://500px.com/wayneheim"
-      ],
-      "knowsAbout": [
-        "Western Fine Art Photography",
-        "Painterly Photography",
-        "Cowboy Photography",
-        "Black and White Western Photography",
-        "Contemporary Western Art"
-      ]
-    },
-    {
-      "@type": "CollectionPage",
-      "@id": canonicalUrl + "#collection",
-      "name": "Wayne Heim — Western Fine Art Photography",
-      "description": pageDescription,
-      "url": canonicalUrl,
-      "mainEntity": {
-        "@id": "https://www.k4studios.com/#wayneheim"
-      },
-      "creator": {
-        "@id": "https://www.k4studios.com/#wayneheim"
-      },
-      "hasPart": allImageObjects,
-      "genre": "Western Fine Art Photography",
-      "about": [
-        { "@type": "Thing", "name": "Western Fine Art Photography" },
-        { "@type": "Thing", "name": "Cowboy Photography" },
-        { "@type": "Thing", "name": "Painterly Photography" },
-        { "@type": "Thing", "name": "Black and White Western Photography" }
-      ],
-      "datePublished": todayIso,
-      "dateModified": todayIso,
-      "inLanguage": "en"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": canonicalUrl + "#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "item": { "@id": "https://www.k4studios.com/", "name": "Home" } },
-        { "@type": "ListItem", "position": 2, "item": { "@id": canonicalUrl, "name": "Wayne Heim — Western Fine Art Photography" } }
-      ]
-    }
-  ]
+  "@type": "Person",
+  "@id": "https://www.k4studios.com/#wayne-heim",
+  "name": "Wayne Heim",
+  "jobTitle": "Western Fine Art Photographer",
+  "description": "Wayne Heim is a contemporary western fine art photographer known for painterly, narrative-driven imagery rooted in pictorialist tradition.",
+  "knowsAbout": [
+    "Western Fine Art Photography",
+    "Cowboy Portraiture",
+    "Pictorialism",
+    "Narrative Photography",
+    "Historical Reenactment Photography"
+  ],
+  "url": "https://www.k4studios.com/wayne-heim-western-fine-art-photography",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.k4studios.com/wayne-heim-western-fine-art-photography"
+  }
 };
 
-const structuredDataJson = JSON.stringify(structuredData, null, 2);
+const creativeWorkSchema = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "@id": "https://www.k4studios.com/wayne-heim-western-fine-art-photography#work",
+  "name": "Western Fine Art Photography by Wayne Heim",
+  "creator": {
+    "@type": "Person",
+    "@id": "https://www.k4studios.com/#wayne-heim"
+  },
+  "about": [
+    "Western Fine Art Photography",
+    "Cowboy Portraiture",
+    "Narrative Western Imagery",
+    "Pictorialist Photography"
+  ],
+  "description": "A representative survey of Wayne Heim's western fine art photography, spanning black and white portraiture, cinematic color work, and narrative-driven scenes of the American West.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "K4 Studios",
+    "url": "https://www.k4studios.com"
+  }
+};
+
+const personSchemaJson = JSON.stringify(personSchema, null, 2);
+const creativeWorkSchemaJson = JSON.stringify(creativeWorkSchema, null, 2);
 
 // Meta for BaseLayout
 const meta = {
@@ -188,7 +151,10 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
 ---
 
 <BaseLayout title={pageTitle} meta={meta}>
-  <script type="application/ld+json" set:html={structuredDataJson} slot="head" />
+  <!-- Person Schema: Wayne Heim as canonical entity -->
+  <script type="application/ld+json" set:html={personSchemaJson} slot="head" />
+  <!-- CreativeWork Schema: Surveyed body of work -->
+  <script type="application/ld+json" set:html={creativeWorkSchemaJson} slot="head" />
   
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
@@ -202,26 +168,29 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
     <section class="section-heading-wrap">
       <div class="section-heading">
         <h1 class="page-title fade-in reveal-on-scroll">Wayne Heim</h1>
-        <h2 class="page-subtitle fade-in reveal-on-scroll">Western Fine Art Photographer</h2>
+        <h2 class="page-subtitle fade-in reveal-on-scroll">Western Fine Art Photography</h2>
       </div>
     </section>
 
-    <!-- Opening Essay / Classification Copy -->
+    <!-- Opening Essay / Reference Classification Copy -->
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
           <article class="story-block">
-            <p class="reveal-on-scroll">
-              Wayne Heim is a contemporary western fine art photographer whose work explores the American West through narrative, restraint, and atmosphere rather than spectacle. His photography draws from historical western imagery while re-interpreting it through a modern, painterly lens — balancing documentary authenticity with cinematic tension.
+            <p class="reveal-on-scroll survey-statement">
+              This page presents a representative survey of Wayne Heim's western fine art photography, spanning black and white portraiture, cinematic color work, character studies, and narrative-driven scenes of the American West.
+            </p>
+            <p class="reveal-on-scroll reference-statement">
+              This overview is intended as a reference survey of Heim's western fine art photography, offering a structured view of recurring themes, visual approaches, and narrative forms within his work.
             </p>
             <p class="reveal-on-scroll">
-              Across black and white cowboy portraits, color western landscapes, and narrative-driven scenes, Heim's work focuses on moments of quiet gravity: pauses between action, expressions held just long enough to suggest story without resolving it. Where other photographers of the West lean toward the epic or the nostalgic, Heim's images occupy a more intimate register — one that recalls the emotional weight of Wyeth's figure studies and the compositional discipline of Remington's best work.
+              Wayne Heim (b. Pennsylvania) is a contemporary western fine art photographer known for a painterly approach rooted in 19th-century pictorialism. His work addresses the American West as subject matter through restrained composition, directional light, and suspended narrative — favoring psychological tension over spectacle.
             </p>
             <p class="reveal-on-scroll">
-              His approach to western cowboy photography combines the technical precision of fine art printmaking with the visual vocabulary of 19th-century pictorialism. The result is a body of work that feels both historically grounded and unmistakably contemporary — images that reward extended viewing and resist easy categorization.
+              The body of work documented here reflects Heim's ongoing investigation of frontier themes: cowboy portraiture, working ranch culture, and Indigenous presence in the contemporary West. His images have been compared to the tonal studies of Andrew Wyeth and the compositional discipline of early western illustrators.
             </p>
             <p class="reveal-on-scroll">
-              As a contemporary western photographer, Heim has developed a signature painterly technique that bridges photography and illustration. His black and white western photography strips scenes to their emotional essentials, while his color work layers atmosphere and texture in ways that evoke the golden-hour palette of classic American landscape painting. Both approaches share a commitment to narrative restraint and compositional precision.
+              Heim's photographic output divides into several distinct bodies: monochromatic character portraits emphasizing form and texture; saturated color work informed by golden-hour landscape painting; and multi-figure narrative scenes that function as implied story fragments. Each category is represented in the selections below.
             </p>
           </article>
         </section>
@@ -231,14 +200,14 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
     <!-- Section 1: Black and White Western Cowboy Portraits -->
     <section class="image-section-wrap reveal-on-scroll">
       <h2 class="image-section-title">Black and White Western Cowboy Portraits</h2>
-      <p class="image-section-intro">Contemplative portraits rendered in Wayne Heim's signature painterly black and white style, focusing on character, expression, and the quiet moments that define frontier life.</p>
+      <p class="image-section-intro">A distinct body of black and white western cowboy portraits emphasizing tonal restraint and psychological stillness. These images draw from early western photographic traditions while applying contemporary fine art printing techniques. Selected works from this body are also presented in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White" class="editorial-link">Black and White Cowboy Portraits</a> gallery.</p>
       <div class="authority-image-grid">
         {bwPortraits.map((img: any) => (
           <figure class="authority-image-figure">
             <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/${img.id}`}>
               <img 
                 src={img.srcM || img.src} 
-                alt={`Black and white western cowboy portrait by Wayne Heim`}
+                alt={`${img.alt} — black and white western cowboy portrait by Wayne Heim`}
                 loading="lazy"
                 width="600"
                 height="400"
@@ -253,14 +222,14 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
     <!-- Section 2: Cinematic Color Western Photography -->
     <section class="image-section-wrap reveal-on-scroll">
       <h2 class="image-section-title">Cinematic Color Western Photography</h2>
-      <p class="image-section-intro">Dynamic western scenes captured in rich color, emphasizing light, motion, and the dramatic landscapes of the American frontier.</p>
+      <p class="image-section-intro">A distinct body of cinematic color western photography characterized by saturated palette and directional golden-hour light. These images reflect Heim's background in illustration, treating the American West as a stage for implied narrative. Selected works are also presented in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" class="editorial-link">Color Cowboy Portraits</a> gallery.</p>
       <div class="authority-image-grid">
         {cinematicSection.map((img: any) => (
           <figure class="authority-image-figure">
             <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${img.id}`}>
               <img 
                 src={img.srcM || img.src} 
-                alt={`Cinematic western fine art photography by Wayne Heim`}
+                alt={`${img.alt} — cinematic color western fine art photography by Wayne Heim`}
                 loading="lazy"
                 width="600"
                 height="400"
@@ -275,14 +244,14 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
     <!-- Section 3: Narrative Western Scenes -->
     <section class="image-section-wrap reveal-on-scroll">
       <h2 class="image-section-title">Narrative Western Scenes</h2>
-      <p class="image-section-intro">Story-driven moments that capture tension, interaction, and the unspoken bonds of frontier life — images where every gesture suggests a larger narrative.</p>
+      <p class="image-section-intro">A distinct body of narrative western scenes depicting implied action or suspended tension. Heim refers to these works as "One-Image Movies" — single frames designed to carry the weight of an unseen sequence. Additional narrative works appear in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" class="editorial-link">Western Cowboy Portraits</a> collection.</p>
       <div class="authority-image-grid">
         {narrativeSection.map((img: any) => (
           <figure class="authority-image-figure">
             <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${img.id}`}>
               <img 
                 src={img.srcM || img.src} 
-                alt={`Narrative western cowboy photography by Wayne Heim`}
+                alt={`${img.alt} — narrative western scene by Wayne Heim`}
                 loading="lazy"
                 width="600"
                 height="400"
@@ -297,14 +266,14 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
     <!-- Section 4: Western Character Studies -->
     <section class="image-section-wrap reveal-on-scroll">
       <h2 class="image-section-title">Western Character Studies</h2>
-      <p class="image-section-intro">Intimate portraits of working cowboys and frontier figures — seated, reflective, and rendered with the patience of classical portraiture.</p>
+      <p class="image-section-intro">A distinct body of western character studies featuring individual cowboys and ranch hands, often seated or in repose. These portraits prioritize facial structure, period costume, and environmental context over action. Related character work is also presented in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White" class="editorial-link">Black and White Portraits</a> gallery.</p>
       <div class="authority-image-grid">
         {characterSection.map((img: any) => (
           <figure class="authority-image-figure">
             <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/${img.id}`}>
               <img 
                 src={img.srcM || img.src} 
-                alt={`Western character study portrait by Wayne Heim`}
+                alt={`${img.alt} — western character study by Wayne Heim`}
                 loading="lazy"
                 width="600"
                 height="400"
@@ -319,14 +288,14 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
     <!-- Section 5: Native American Western Portraits -->
     <section class="image-section-wrap reveal-on-scroll">
       <h2 class="image-section-title">Native American Western Portraits</h2>
-      <p class="image-section-intro">Portraits honoring Native American subjects with historical awareness and cultural respect — documenting presence, tradition, and continuity.</p>
+      <p class="image-section-intro">A distinct body of Native American western portraits created in collaboration with Indigenous communities. This work addresses historical representation while documenting contemporary presence and cultural continuity. The full body of work is presented in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color" class="editorial-link">Native American Portraits</a> gallery.</p>
       <div class="authority-image-grid">
         {nativePortraits.map((img: any) => (
           <figure class="authority-image-figure">
             <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/${img.id}`}>
               <img 
                 src={img.srcM || img.src} 
-                alt={`Native American western portrait by Wayne Heim`}
+                alt={`${img.alt} — Native American western portrait by Wayne Heim`}
                 loading="lazy"
                 width="600"
                 height="400"
@@ -344,7 +313,7 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
         <section class="story-section authority-closing-section">
           <article class="story-block reveal-on-scroll">
             <p>
-              Wayne Heim's western fine art photography continues the visual tradition established by painters like Frederic Remington and Charles Russell, while bringing the immediacy and precision of contemporary photographic technique. His work has been collected by enthusiasts of Western Americana, historical portraiture, and painterly photography.
+              Heim's western photography is positioned within the broader tradition of American western art, following visual precedents established by Frederic Remington, Charles Russell, and later photographic interpreters of frontier subjects. His work is held in private collections focused on Western Americana and contemporary pictorialist photography.
             </p>
           </article>
         </section>
@@ -416,6 +385,16 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
       transform: translateY(0);
     }
 
+    /* Survey statement emphasis */
+    .survey-statement {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1a1a1a;
+      border-left: 3px solid #8c7d6b;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
     /* Image section styles */
     .image-section-wrap {
       max-width: 1100px;
@@ -442,6 +421,17 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
       font-family: 'Glegoo', serif;
     }
 
+    /* Editorial links - visually secondary, not navigational */
+    .editorial-link {
+      color: #6d5b4a;
+      text-decoration: none;
+      border-bottom: 1px solid #c8bfb0;
+      transition: border-color 0.2s ease;
+    }
+    .editorial-link:hover {
+      border-color: #6d5b4a;
+    }
+
     .authority-image-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -463,13 +453,12 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
     .authority-image-figure {
       margin: 0;
       background: #faf9f7;
-      border-radius: 4px;
+      border-radius: 12px;
       overflow: hidden;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: box-shadow 0.3s ease;
     }
 
     .authority-image-figure:hover {
-      transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
@@ -482,7 +471,15 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
       width: 100%;
       height: 220px;
       object-fit: cover;
+      object-position: center 20%;
       display: block;
+      transition: transform 7.5s ease-out;
+      will-change: transform;
+    }
+
+    .authority-image-figure:hover img {
+      transition: transform 8.15s ease-out;
+      transform: scale(1.1) translate(-4%, -4%) rotate(-1.5deg);
     }
 
     .authority-image-figure figcaption {
