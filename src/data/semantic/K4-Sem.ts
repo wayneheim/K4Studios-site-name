@@ -351,6 +351,17 @@ historicallyThemedPhotography: {
 // These terms are modifiers captured via glossary, NOT landing page targets.
 // ============================================================================
 
+glossaryPainterlyPhotography: {
+  path: "/Galleries/Painterly-Fine-Art-Photography",
+  def: "Painterly photography merges photographic realism with the tonal richness, texture, and emotional depth of classical painting. It's a fine art approach crafted for collectors who value narrative and permanence over decoration.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "painterly fine art photography", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography" },
+    { phrase: "painterly photography", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography" },
+  ],
+  imagePhrases: []
+},
+
 glossaryCowboyArt: {
   path: "/Western-Wall-Art",
   def: "Cowboy art encompasses visual representations of Western ranch life, frontier work, and the iconic cowboy figure. In fine art contexts, it moves beyond decor clichés to explore character, story, and the lived reality of the American West. See <a href='/Western-Wall-Art'>Western Wall Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
@@ -1403,6 +1414,7 @@ railwayPainterly: {
 painterly: {
   path: "/Galleries/Painterly-Fine-Art-Photography",
   def: "A signature blend of photographic realism and painterly depth.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
   landingPhrases: [
     { phrase: "Painterly Fine Art Photography", rating: 5, use: true },
     { phrase: "painterly photography", rating: 5, use: true },

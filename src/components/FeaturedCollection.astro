@@ -150,13 +150,16 @@ const structuredData = JSON.stringify({
         }
         
         // Custom logging to Google Sheets via Netlify function
-        const sourcePage = window.location.pathname;
+        const sourcePage = window.location.pathname + window.location.search;
+        // Get original referrer (Google, Bing, Facebook, etc.) - only available on first page load
+        const trafficSource = document.referrer || 'direct';
         const payload = JSON.stringify({
           eventType: analyticsLabel,
           details: {
             collection: collectionName,
             destination: ctaLink,
-            source_page: sourcePage
+            source_page: sourcePage,
+            traffic_source: trafficSource
           },
           timestamp: Date.now()
         });

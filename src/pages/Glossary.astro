@@ -461,8 +461,7 @@ const structuredData = getStructuredData({
                     {page.title}
                   </h3>
                   <div class="relative">
-                    <p class="text-sm text-gray-500 line-clamp-3 group-hover:hidden">
-                      {def}
+                    <p class="text-sm text-gray-500 line-clamp-3 group-hover:hidden" set:html={def}>
                     </p>
                     <div class="absolute inset-0 hidden group-hover:block">
                       <p class="text-sm text-gray-500 line-clamp-3">
