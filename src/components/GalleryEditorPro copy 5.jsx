@@ -2,7 +2,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import PricingEditorModal from "./PricingEditorModal.jsx";
 import EngrainedStatusPanel from "./EngrainedStatusPanel.jsx";
-import SectionKeywordSuggestions from "./SectionKeywordSuggestions.jsx";
 import { generateSmartMetadata } from "../utils/autoTextGenerator.mjs";
 
 /* ---------- config: add more roots here if needed ---------- */
@@ -2519,25 +2518,6 @@ ${collectorNotes}`;
                   onChange={(e) => updateField("keywords", e.target.value)}
                   className="w-full min-h-[88px] border rounded-md px-2 py-1 resize-y"
                 />
-                <SectionKeywordSuggestions
-                  galleryPath={selectedPath}
-                  currentKeywords={
-                    Array.isArray(current.tags)
-                      ? current.tags
-                      : Array.isArray(current.keywords)
-                      ? current.keywords
-                      : []
-                  }
-                  onAddKeyword={(phrase) => {
-                    const existing = Array.isArray(current.tags)
-                      ? current.tags
-                      : Array.isArray(current.keywords)
-                      ? current.keywords
-                      : [];
-                    const updated = [...existing, phrase];
-                    updateField("keywords", updated.join(", "));
-                  }}
-                />
               </div>
 
               <div>
@@ -2665,7 +2645,7 @@ ${collectorNotes}`;
                         <img 
                           src={imgUrl} 
                           alt="" 
-                          className="w-full max-h-[45vh] object-contain rounded-lg shadow-lg bg-black" 
+                          className="w-full max-h-[80vh] object-contain rounded-lg shadow-lg bg-black" 
                         />
                         <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/70 text-white">
                           {current.id}
@@ -2718,35 +2698,6 @@ ${collectorNotes}`;
                       Next ▶
                     </button>
                   </div>
-
-                  {/* K4-Sem Keyword Suggestions for Turbo Mode */}
-                  <SectionKeywordSuggestions
-                    galleryPath={selectedPath}
-                    darkMode={true}
-                    sectionOnly={true}
-                    currentKeywords={(() => {
-                      // Extract current keywords from turbo text
-                      const kwMatch = turboText.match(/<<KEYWORDS>>\s*([\s\S]*?)(?=<<|$)/);
-                      if (!kwMatch) return [];
-                      return kwMatch[1].split(",").map(s => s.trim()).filter(Boolean);
-                    })()}
-                    onAddKeyword={(phrase) => {
-                      // Add keyword to the <<KEYWORDS>> section in turbo text
-                      const kwMatch = turboText.match(/(<<KEYWORDS>>\s*)([\s\S]*?)((?=<<)|$)/);
-                      if (kwMatch) {
-                        const prefix = kwMatch[1];
-                        const existing = kwMatch[2].trim();
-                        const suffix = kwMatch[3] || "";
-                        const updated = existing ? `${existing}, ${phrase}` : phrase;
-                        const newText = turboText.replace(
-                          /(<<KEYWORDS>>\s*)[\s\S]*?((?=<<)|$)/,
-                          `${prefix}${updated}\n\n${suffix}`
-                        );
-                        setTurboText(newText);
-                        setTurboApplied(false);
-                      }
-                    }}
-                  />
                 </div>
 
                 {/* Right: Text block + actions */}

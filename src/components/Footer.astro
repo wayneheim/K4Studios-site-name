@@ -80,6 +80,23 @@ let shareImage = currentImageUrl || previewImages?.[0]?.src || undefined;
 
   <div class="mx-auto max-w-xl px-4 pt-8 pb-4 footer-fade" aria-label="Footer controls and info">
 
+    {/* Back to Gallery link for image pages (/i-xxxxx) */}
+    {isImagePage && (() => {
+      // Extract gallery path from current URL (remove /i-xxxxx segment)
+      const galleryPath = currentPath.replace(/\/i-[a-zA-Z0-9]+$/, '');
+      return (
+        <div class="text-center pb-4">
+          <a
+            href={galleryPath}
+            class="text-sm text-[#9a8a7a] hover:text-[#7b1e1e] transition-colors no-underline hover:underline"
+            style="font-family: 'Glegoo', serif; letter-spacing: 0.02em;"
+          >
+            ← Back to Gallery Home
+          </a>
+        </div>
+      );
+    })()}
+
     <!-- 🔗 Share Drawer (with fallback) -->
     <div class="pb-4">
         <ShareDrawer

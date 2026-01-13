@@ -129,7 +129,7 @@ export const storySliderData = [
   {
     "id": "i-MHGPvcs",
     "title": "$3 for a whiskey?",
-    "story": "“$3 for a whiskey?” is a painterly Western portrait alive with color, shadow, and saloon intrigue. A grizzled cowboy lifts his glass, eyes cutting through the haze and bokeh as he ponders the price of pleasure on a long frontier night. A tribute to hard-won comforts and the choices they demand, captured with cinematic style and wry humor.\n© Wayne Heim"
+    "story": "“I’m pretty sure you must be talking to someone else—\n’Cause I asked how much for the whiskey,\nnot the redhead at the end of the bar.\n\nI’ve seen a lot of bars in a lot of these cow towns,\nand I ain’t ever seen no three-dollar whiskey.\n\nSo I’m gonna ask you one more time—\nYou talkin’ to me?”"
   },
   {
     "id": "i-CD6rgtF",

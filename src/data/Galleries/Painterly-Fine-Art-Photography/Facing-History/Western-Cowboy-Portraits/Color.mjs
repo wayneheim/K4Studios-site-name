@@ -482,7 +482,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/MvKQDc9hcjTQCjCxFX6XQDW73hNhX9PKDm2wJZRmP/S/_HF26159-1335-1336-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/A",
-
     "keywords": [
       "western fine art photography",
       "painterly western photography",
@@ -495,18 +494,15 @@ export const galleryData = [
       "anticipation and conflict",
       "wayne heim"
     ],
-
     "story": "Intent, resolve, fortune, neglect.\nThey gather for a midnight reckoning.\n\nWings of hubris melted by the rail’s bright light—\nblinded by station and contempt of creed,\neach begets the other.\n\nFrom the shadows, change is coming,\nthe schedule paid in full.\n\nWell-timed vengeance—\na moral bridge to span.\n\nLines will cross, and this all ends—\njustice dealt by unseen hands.",
     "notes": "“Hubris” fuses Western legend and classical myth, turning a familiar train-standoff into an allegory of downfall and shifting power. The four archetypes—Intent, Resolve, Fortune, Neglect—move like living forces, their shapes dissolving in the glare of the rail’s “second sun.” Heim’s painterly control of light and texture frames the drama as both personal and universal: a story of ambition meeting its limit, and of unseen hands finally tipping the scales. The Icarus motif, rendered in locomotive light, elevates this beyond mere narrative photography—this is a meditation on power, consequence, and the moment the forgotten reclaim the story.\nMuseum-ready, this image will stand as a high point of narrative Western art and a conversation piece for any collection.",
     "rating": 5,
-
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
-
     "visibility": "show",
     "sortOrder": 11,
-    contentSource: "human"
+    "contentSource": "human"
   },
   {
     "id": "i-46kWCqc",
@@ -2157,7 +2153,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MHGPvcs/0/MB297TLr79fr2dq4GLNc87674Z4BtxqCvj8b6XpmJ/S/_HF21787-1304-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MHGPvcs/A",
-
     "keywords": [
       "western fine art photography",
       "cowboy portrait",
@@ -2173,22 +2168,19 @@ export const galleryData = [
       "Rembrandt lighting",
       "modern pictorialism"
     ],
-
     "story": "“I’m pretty sure you must be talking to someone else—\n’Cause I asked how much for the whiskey,\nnot the redhead at the end of the bar.\n\nI’ve seen a lot of bars in a lot of these cow towns,\nand I ain’t ever seen no three-dollar whiskey.\n\nSo I’m gonna ask you one more time—\nYou talkin’ to me?”",
     "notes": "Beneath the cinematic surface, this image draws inspiration from Rembrandt and Caravaggio’s chiaroscuro, harnessing spot-lit highlights and controlled shadows rarely achieved in live western reenactment photography. The in-camera glass reflection and bokeh lend painterly depth, while the subject’s pose—caught between skepticism and indulgence—embodies the daily negotiation of risk and reward on the frontier. Collectors consistently remark on its moody palette and the way the scene pulls you in; it’s a standout example of modern western pictorialism—classic in feeling, contemporary in craft, and highly sought after by curators and collectors of fine art western photography.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 54,
-
     "themes": {
       "aces-smoke-whiskey": 12,
       "firelight-shadow": 11,
       "law-outlaws": 12,
       "sketches-of-legends": 11
     },
-
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-7mFGRtw",
@@ -2425,7 +2417,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/0/LJj3WLWv23DSSK2RB8Wgj8cJh5wrGbbrfwx3vKMBS/S/_HF26558-983-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xqZwcZh/A",
-
     "keywords": [
       "western action photography",
       "cowboy art",
@@ -2441,14 +2432,12 @@ export const galleryData = [
       "story-rich",
       "wayne heim"
     ],
-
     "story": "Muscles tense—dust and vengeance burning like rattlesnakes and whiskey. Heart pounding, hooves digging, rider and mount move as one. Wasn’t supposed to be another one. There’s always another one, until there ain’t.\n\nThe horizon narrows as we chase a reckoning. How’s it always go South so fast around here?",
     "notes": "In “Righteous Pursuit,” the spirit of Remington’s action scenes fuses with the psychological intensity of Wyeth and Hopper. Heim’s approach doesn’t just mimic classic Western art—it reframes it, infusing each detail with narrative weight and ambiguity. The low, diagonal thrust of the composition pulls the eye into the chase, while the textured green atmosphere nods to pictorialism and hand-colored 19th-century prints.\n\nWhat sets this piece apart is its restraint: the cowboy’s face—resolute, neither villain nor hero—anchors the story in moral tension. The painterly treatment deepens the sense of memory and myth, making this work a centerpiece for any serious collection of fine art photography or Western Americana.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 61,
-
     "themes": {
       "cowboys-with-horses": 9,
       "cowboys-and-horses": 8,
@@ -2458,8 +2447,7 @@ export const galleryData = [
       "the-chaise": 13,
       "the-chase": 13
     },
-
-    contentSource: "human"
+    "contentSource": "human"
   },
   {
     "id": "i-4bn8bBz",
@@ -2473,7 +2461,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4bn8bBz/0/NcdsVb2VRj4mFKDCDHpm3dnfDwPGsD8Bd95hmDrzb/S/_HF21791-Edit-2-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4bn8bBz/A",
-
     "keywords": [
       "cowboy art",
       "western photography",
@@ -2489,22 +2476,19 @@ export const galleryData = [
       "vintage western photography",
       "wayne heim"
     ],
-
     "story": "It’s just you, the horse, and the rising sun. Dust curling off the grass, wind in your teeth, reins loose but heart steady. The day ahead isn’t promised—out here, every rider writes his own terms. Maybe the only certainty is the space between one hoofbeat and the next. That, and what you’re willing to leave behind.",
     "notes": "This piece stands at the crossroads of Remington’s mythic cowboys and the cinematic sweep of classic Western films. Heim’s painterly process infuses the image with warmth and movement—light streaking off the dust, the rider’s form both solitary and iconic. Each element, from the flowing coat to the tangle of rope, is rendered with the restraint and clarity of pictorialist tradition, inviting the viewer to inhabit the space between story and memory. This is Western art that honors both the legend and the living—crafted for those who know every ride is both a journey and a reckoning.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 62,
-
     "themes": {
       "cowboys-and-horses": 80,
       "dust-thunder": 11,
       "the-chaise": 14,
       "the-chase": 14
     },
-
-    contentSource: "ai"
+    "contentSource": "ai"
   },
   {
     "id": "i-QB4jLsH",
@@ -2556,7 +2540,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-rhvQkwh/4/KXCWB5r6T5WRbSz6dPmdHkZqFsjpbJ2VNF2Wj7MxV/S/cowboy%20art%20photo_HF20421-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-rhvQkwh/A",
-
     "keywords": [
       "cowboy art",
       "lasso",
@@ -2575,23 +2558,18 @@ export const galleryData = [
       "story-rich",
       "wayne heim"
     ],
-
     "story": "He came West with calloused hands and Eastern manners, trading ledgers for lariats, civility for soil. The land didn’t come easy — it never does. But he worked it honest, worked it hard, and made it give him something back.\n\nNow, with the morning light at his back and a target fixed just out of frame, he coils the rope with practiced calm. This isn’t the first time he’s had to settle things himself. Most days, the rope’s just a tool. But every man has his limit.",
     "notes": "This image sits at the intersection of Western iconography and emerging photographic art form. Where much of the genre leans on repetition—weathered faces, dramatic skies, and nostalgic tropes—Heim’s work aims higher. The composition feels deliberate, studied, and self-aware: less a document of a moment, more a meditation on resolve, balance, and the quiet strength behind the myth.\n\nRather than chase aesthetic mimicry or novelty for novelty’s sake, this piece advances the conversation. It draws from classical traditions—sepia tones, shallow depth, compositional symmetry—but uses those tools to present a new class of image: one that’s neither nostalgic pastiche nor commercial cliché. It’s visual authorship.\n\nIn a world saturated by AI imitations and shallow simulations of Western life, this stands apart. Not for what it shows, but for how it does so—with restraint, structure, and the weight of intent behind every shadow and frame.",
     "rating": 4,
-
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
-
     "visibility": "show",
     "sortOrder": 64,
-
     "themes": {
       "sketches-of-legends": 18
     },
-
-    contentSource: "human"
+    "contentSource": "human"
   },
   {
     "id": "i-6xn5rMd",
@@ -2850,7 +2828,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/K4drcrQ5dxZtzdvrTsjsJF3w5jT6hCDQ54sCnHNgZ/S/painterly%20cowboy%20photography%20_HF28526-301-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/A",
-
     "keywords": [
       "cowboy art",
       "hired gun",
@@ -2870,25 +2847,20 @@ export const galleryData = [
       "story-rich",
       "wayne heim"
     ],
-
     "story": "Security my ass. Call it what you will. We all know what we signed up for. God forgive us all. Grizzled Texas Ranger cowboy riding the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
     "notes": "",
     "rating": 5,
-
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
-
     "visibility": "show",
     "sortOrder": 71,
-
     "themes": {
       "hardship-sorrow": 19,
       "law-outlaws": 44,
       "sketches-of-legends": 49
     },
-
-    contentSource: "human"
+    "contentSource": "human"
   },
   {
     "id": "i-qVZ9m7j",
@@ -2902,7 +2874,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-qVZ9m7j/2/KfPJHw29rG5JpKTPmsstdMH7ZkxKVTNHjBNtkgDz6/S/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8540-Edit-2-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-qVZ9m7j/A",
-
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -2939,24 +2910,19 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-
     "story": "The faithful have fled, the church long silent—but he remains. No sermons now, just the steady sermon of steel and stare. Some say he used to preach, others say he just believed harder than most. \n\nEither way, he stands between what's sacred and what's coming. Lord help us all if that hammer gets cocked.",
     "notes": "This portrait achieves a powerful sense of symbolism through posture and framing. The vertical emphasis—his body rising like the steeple behind him—establishes a sacred geometry. The palette is restrained, giving weight to his black coat and hat, while the warm tones around him suggest age and dust. Painterly textures soften the scene just enough to keep it from feeling cinematic; instead, it reads like myth. This is not just a figure of the West, but a relic of it—part guardian, part ghost.",
     "rating": 4,
-
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
-
     "visibility": "show",
     "sortOrder": 72,
-
     "themes": {
       "law-outlaws": 18,
       "sketches-of-legends": 15
     },
-
-    contentSource: "human"
+    "contentSource": "human"
   },
   {
     "id": "i-KBNSftv",
@@ -3052,7 +3018,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-hMXZ8Xh/3/MbvzLqDrmq5mJC5L5MHQTpsT7Nqndhvn5sqDtQCpQ/S/cowboy%20saloon_HF26223-Enhanced-NR-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-hMXZ8Xh/A",
-
     "keywords": [
       "cowboy art",
       "western photography",
@@ -3071,18 +3036,14 @@ export const galleryData = [
       "story-rich",
       "wayne heim"
     ],
-
     "story": "Lord, I need a sign. Down to my last two dollars. Since you took Martha last spring, I’ve wandered this wilderness of whiskey, regret, and sorrow, seeing more ghosts than hope. Just one sign, Lord—tell me if that ticket’s worth the punch.",
     "notes": "The composition invites contemplation, using rich chiaroscuro and vertical framing to isolate the subject in a space that feels both timeless and cinematic. Note how the lamp’s glow doesn’t just light his face—it sanctifies it, evoking the quiet dignity of a Rembrandt portrait or a Norman Rockwell moment paused mid-thought. The textures of cracked paint and worn cloth echo the philosophies of pictorialism, where truth is filtered through feeling. This isn’t just Western photography—it’s visual literature, crafted to linger in the mind like a half-remembered prayer.",
     "rating": 5,
-
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
-
     "visibility": "show",
     "sortOrder": 75,
-
     "themes": {
       "aces-smoke-whiskey": 15,
       "firelight-shadow": 17,
@@ -3090,8 +3051,7 @@ export const galleryData = [
       "love-goodbye": 9,
       "whispering-reflection": 19
     },
-
-    contentSource: "human"
+    "contentSource": "human"
   },
   {
     "id": "i-8rsG6P9",
@@ -3752,7 +3712,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-jcLJT4J/0/M3sdPMBxrsqw5Gb8Rd7JQSGSpSL2SK4Cfhnm5PLFr/S/_HF23527-Edit-2-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-jcLJT4J/A",
-
     "keywords": [
       "western art",
       "fine art photography",
@@ -3768,22 +3727,19 @@ export const galleryData = [
       "contemplative",
       "wayne heim"
     ],
-
     "story": "Just when I thought these long nights and even longer days would never end, finally—over the hill—that unmistakable silhouette. No mistaking the set of those shoulders and that ugly hat. My man. Henry is home.\n\nBut—wait. A second, a third? Lord above, tell me it’s not all of them. He said this was his last “trip.” He promised he was done with them.\n\nWhen they said “for better or worse,” this was not exactly what I had in mind. Some days I wonder if that vow was ever meant for a woman like me.",
     "notes": "Echoing the quiet intensity found in the portraits of Wyeth and Eakins, this image balances classical composition with cinematic, lived-in realism. The interplay of light and texture is reminiscent of hand-tinted silver prints—each detail reinforcing the narrative weight. Heim’s painterly process fuses the documentary clarity of historical photography with the ambiguity and emotional gravity of Western mythos, positioning this piece as both artifact and invitation: a window into the silent endurance of frontier women, and a testament to narrative-rich fine art in the tradition of Rockwell, Remington, and beyond.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 91,
-
     "themes": {
       "frontier-women": 32,
       "love-goodbye": 22,
       "sketches-of-legends": 44,
       "whispering-reflection": 46
     },
-
-    contentSource: "human"
+    "contentSource": "human"
   },
   {
     "id": "i-7dCKHjg",
@@ -22446,5 +22402,96 @@ export const galleryData = [
     "galleries": [],
     "visibility": "hidden",
     "sortOrder": 516
+  },
+  {
+    "id": "i-fkMpXJf",
+    "title": "Capturing Wild West Photography",
+    "description": "Wayne Heim's wild west photography captures the spirit of narrative Western art in this frontier life image. Featuring historic western prints, western fine art, and wild west photography, it's ideal for narrative Western art enthusiasts. Discover western fine art in photography. © Wayne Heim",
+    "alt": "wild west photography in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fkMpXJf/0/NSHLwvKtFLmzgsgtkKZmnnxLbWKXhSR5BbZhBF3hh/XL/_WHO5477-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fkMpXJf/0/NSHLwvKtFLmzgsgtkKZmnnxLbWKXhSR5BbZhBF3hh/XL/_WHO5477-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fkMpXJf/0/LsSPGDrrGVdvsKSwVxCmF5Skb3CP6K28MGHCjkL72/L/_WHO5477-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fkMpXJf/0/Lf4tN98S6FVJLcqQXhztCGLRDrQv3WVkznP23ksBJ/M/_WHO5477-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fkMpXJf/0/LMZmpqKMVVKC9kRVM62KQg8v3LG7DWQcBb9Vp7zc9/S/_WHO5477-Edit-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fkMpXJf/A",
+    "keywords": [
+      "HF21312",
+      "wild west photography",
+      "narrative Western art",
+      "frontier life",
+      "historic western prints",
+      "western fine art",
+      "western cowboy art",
+      "rustic charm"
+    ],
+    "story": "Delving into western cowboy art, this work by Wayne Heim highlights frontier life through rustic charm and frontier life. A powerful statement in photography.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 517
+  },
+  {
+    "id": "i-bhH8xbr",
+    "title": "Cowboy Painting Art And Cowboy Artwork",
+    "description": "This cowboy painting art artwork by Wayne Heim showcases cowboy artwork in a Western cowboys style. Reflecting painterly cowboy portraits, cowboy painting art, and cowboy painting art, it's suited for admirers of cowboy artwork. With painterly Western photograph elements. © Wayne Heim",
+    "alt": "Wayne Heim's cowboy painting art artwork",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhH8xbr/0/NGhDLRdjphWBWbR8j9rR9NNPhm8NwSp2ZxMh9kKGB/XL/_HF22670-1175-1176-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhH8xbr/0/NGhDLRdjphWBWbR8j9rR9NNPhm8NwSp2ZxMh9kKGB/XL/_HF22670-1175-1176-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhH8xbr/0/NGhDLRdjphWBWbR8j9rR9NNPhm8NwSp2ZxMh9kKGB/XL/_HF22670-1175-1176-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhH8xbr/0/Mv2stc3ZVG86GXvQttLHfrLHsVJ5wzN4vsF4fPgHb/L/_HF22670-1175-1176-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhH8xbr/0/LzNh68kkV37DVKPpk9DrkGspNBzZVBsHTkVNGc7fs/S/_HF22670-1175-1176-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhH8xbr/A",
+    "keywords": [
+      "HF21312",
+      "cowboy painting art",
+      "cowboy artwork",
+      "Western cowboys",
+      "painterly cowboy portraits",
+      "painterly Western photograph",
+      "western cowboy art",
+      "cowboy art",
+      "western landscapes fine art"
+    ],
+    "story": "This image embodies western cowboy art and cowboy art, captured by Wayne Heim in his signature style. It reflects painterly Western photograph with a touch of western landscapes fine art.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 518
+  },
+  {
+    "id": "i-sxTV2KH",
+    "title": "The Essence Of Painterly Western Images",
+    "description": "Experience painterly Western images through this evocative cowboys from Wayne Heim's portfolio. This piece highlights cowboy art with rustic charm, while conveying outlaw portraits, ideal for those who appreciate painterly Western images. Explore western art in fine art. © Wayne Heim",
+    "alt": "painterly Western images in fine art photography",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sxTV2KH/1/NHrbKKPVsvRPKJs7dBfGTdc48PQGBWCNKR9kWjg92/XL/_HF22644-1174-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sxTV2KH/1/NHrbKKPVsvRPKJs7dBfGTdc48PQGBWCNKR9kWjg92/XL/_HF22644-1174-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sxTV2KH/1/K4nB2VKp5bsWkdC4s7ZZRMnPFmPHdPnLN7PzPM5x2/L/_HF22644-1174-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sxTV2KH/1/MTwWFdSvJm63psKhCk5r9ftng8679QVDRrnqTwmtg/M/_HF22644-1174-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sxTV2KH/1/KFL9K6KcP3ZG4LR6vbhNgp2tr2qqhmP49DwdCb4SS/S/_HF22644-1174-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sxTV2KH/A",
+    "keywords": [
+      "HF21312",
+      "painterly Western images",
+      "cowboys",
+      "cowboy art",
+      "rustic charm",
+      "outlaw portraits",
+      "western art",
+      "narrative Western art",
+      "Western cowboys",
+      "wild west photography",
+      "Baltic Birch"
+    ],
+    "story": "Wayne Heim's exploration of narrative Western art comes alive in this piece, showcasing Western cowboys and wild west photography. A testament to Baltic Birch in fine art.",
+    "notes": "",
+    "rating": 0,
+    "galleries": [],
+    "visibility": "show",
+    "sortOrder": 519
   }
 ];
