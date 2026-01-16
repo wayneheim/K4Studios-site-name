@@ -88,5 +88,12 @@ export const painterlyStory = [
       "Western fine art photography is not about recreating the past. It is about listening to it — allowing human truth to surface through character, presence, and restraint.",
       "Each image stands as a single frame from a larger, unfinished narrative — a One-Image Movie™ waiting for you to step inside."
     ]
+  },
+
+  // 11. BING REINFORCEMENT (topic confirmation)
+  {
+    paragraphs: [
+      "This collection represents western fine art photography focused on cowboy culture, frontier life, and narrative western portraiture. Each image is part of a broader body of western fine art photography exploring character, history, and story in the American West."
+    ]
   }
 ];

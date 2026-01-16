@@ -11,6 +11,7 @@ export const landingMetaDB = {
     twitterDescription:
       "Step inside the story: painterly western and historical fine art photography by Wayne Heim.",
     twitterImage: "/og/painterly.jpg",
+    keywords: "Wayne Heim, Western fine art photography, painterly photography, cowboy portraits, fine art prints, Western art, historical photography, K4 Studios",
   },
 
   "/Contact": {
@@ -89,6 +90,7 @@ export const landingMetaDB = {
     twitterDescription:
       "Fine art reenactment photography—Civil War, WWII, and frontier portraits by Wayne Heim.",
     twitterImage: "/og/historical-reenactment.jpg",
+    keywords: "historical reenactment photography, fine art reenactment photography, reenactor portraits, living history photography, Civil War reenactment, WWII reenactment, Wayne Heim",
   },
 
   "/Other/Series": {
@@ -156,6 +158,7 @@ export const landingMetaDB = {
     twitterDescription:
       "Painterly western and historical storytelling photography by Wayne Heim.",
     twitterImage: "/og/painterly.jpg",
+    keywords: "painterly fine art photography, painterly photography, painterly style photography, fine art photography, Western painterly photography, cinematic photography, Wayne Heim",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History": {
@@ -168,6 +171,7 @@ export const landingMetaDB = {
     twitterCard: "summary_large_image",
     twitterTitle:
       "Facing History – Historical Portraits by Wayne Heim",
+    keywords: "historical portraiture, historically themed photography, Facing History, Civil War photography, WWII photography, Western cowboy portraits, historical fine art, Wayne Heim",
     twitterDescription:
       "Painterly portraits from the American West, Civil War, WWII, and Jazz Age.",
     twitterImage: "/og/facing-history.jpg",
@@ -185,8 +189,7 @@ export const landingMetaDB = {
       "Civil War Portraits – Photography by Wayne Heim",
     twitterDescription:
       "Painterly Civil War portraits rendered with historical storytelling.",
-    twitterImage: "/og/civilwar.jpg",
-  },
+    twitterImage: "/og/civilwar.jpg",    keywords: "Civil War photography, Civil War portraits, Civil War fine art, historical Civil War photography, Civil War reenactment photography, Wayne Heim",  },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits": {
     ogTitle:
@@ -216,6 +219,7 @@ export const landingMetaDB = {
     twitterDescription:
       "Painterly western portraits and fine art storytelling by Wayne Heim.",
     twitterImage: "/images/default-og.jpg",
+    keywords: "Western cowboy portraits, cowboy photography, Western fine art photography, Old West photography, Native American portraits, frontier portraits, Wayne Heim",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII": {
@@ -231,6 +235,7 @@ export const landingMetaDB = {
     twitterDescription:
       "Painterly WWII portraits and historical storytelling by Wayne Heim.",
     twitterImage: "/og/wwii.jpg",
+    keywords: "WWII photography, World War 2 photography, Greatest Generation portraits, WWII fine art, WWII portraits, military photography, Wayne Heim",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War": {
@@ -289,6 +294,7 @@ export const landingMetaDB = {
     twitterDescription:
       "Painterly landscapes and fine art nature photography by Wayne Heim.",
     twitterImage: "/og/landscapes.jpg",
+    keywords: "painterly landscape photography, fine art landscapes, painterly mountain photography, Western landscape photography, nature fine art, landscape wall art, Wayne Heim",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location": {
@@ -437,6 +443,7 @@ export const landingMetaDB = {
     twitterDescription:
       "Painterly fine art photography of trains, cars, aircraft, and boats by Wayne Heim.",
     twitterImage: "/og/transportation.jpg",
+    keywords: "transportation photography, train photography, vintage car photography, warbird photography, fine art transportation, classic car art, Wayne Heim",
   },
 
   "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous": {
@@ -466,6 +473,7 @@ export const landingMetaDB = {
     twitterDescription:
       "Fine art photography printed on Baltic birch for rustic, museum-quality display.",
     twitterImage: "/og/engrained.jpg",
+    keywords: "wood prints, fine art wood prints, Baltic birch prints, Engrained series, rustic fine art, Western wood prints, Wayne Heim",
   },
 
   "/Galleries/Fine-Art-Photography": {
@@ -482,16 +490,17 @@ export const landingMetaDB = {
   },
 
   "/Western-Fine-Art-Photography": {
-    ogTitle: "Western Fine Art Photography – Cowboy Portraits & Frontier Stories",
+    ogTitle: "Western Fine Art Photography | Cowboy & Frontier Art Photography – Wayne Heim",
     ogDescription:
-      "Western fine art photography by Wayne Heim. Character-driven cowboy portraits, Indigenous subjects, and narrative frontier imagery. Museum-quality fine art prints for collectors of the American West.",
+      "Western fine art photography by Wayne Heim featuring cowboy portraits, frontier characters, and painterly western photography. This western fine art photography collection explores story, character, and the American West.",
     ogImage: "/og/cowboy.jpg",
     ogType: "website",
     twitterCard: "summary_large_image",
-    twitterTitle: "Western Fine Art Photography – Wayne Heim",
+    twitterTitle: "Western Fine Art Photography | Cowboy & Frontier Art – Wayne Heim",
     twitterDescription:
-      "Western fine art photography exploring cowboys, Indigenous portraits, and the human experience of the American West. Collector-quality prints by Wayne Heim.",
+      "Western fine art photography featuring cowboy portraits and frontier characters. Collector-quality western fine art photography by Wayne Heim.",
     twitterImage: "/og/cowboy.jpg",
+    keywords: "Western fine art photography, cowboy portraits, Western art photography, fine art cowboy photography, American West photography, Western portrait photography, indigenous portraits, frontier fine art, Wayne Heim",
   },
 
   "/Western-Cowboy-Photography": {
@@ -505,6 +514,7 @@ export const landingMetaDB = {
     twitterDescription:
       "Authentic cowboy portraits and wild west photography by Wayne Heim. Character-driven fine art from the American frontier.",
     twitterImage: "/og/cowboy.jpg",
+    keywords: "Western cowboy photography, cowboy portraits, wild west photography, cowboy portrait photography, Western cowboy portraits, fine art cowboy photography, authentic Western photography, Wayne Heim",
   },
 
   "/Western-Wall-Art": {
@@ -518,6 +528,7 @@ export const landingMetaDB = {
     twitterDescription:
       "Wild west cowboy photography and vintage western wall art for collectors. Original fine art by Wayne Heim.",
     twitterImage: "/og/cowboy.jpg",
+    keywords: "Western wall art, cowboy wall art, Western fine art prints, wild west cowboy photography, vintage Western art, Western home decor, cowboy art prints, Wayne Heim",
   },
 
   "/Western-Black-and-White-Photography": {
@@ -531,6 +542,7 @@ export const landingMetaDB = {
     twitterDescription:
       "Dramatic black and white Western photography. Cowboy portraits and frontier scenes in timeless monochrome by Wayne Heim.",
     twitterImage: "/og/cowboy.jpg",
+    keywords: "Western black and white photography, black and white cowboy photography, monochrome Western art, black and white cowboy portraits, dramatic Western photography, fine art black and white, Wayne Heim",
   },
 
   "/Painterly-Western-Photography": {
@@ -544,6 +556,7 @@ export const landingMetaDB = {
     twitterDescription:
       "The craft behind painterly Western photography. Discipline, light, and narrative philosophy in cowboy fine art by Wayne Heim.",
     twitterImage: "/og/cowboy.jpg",
+    keywords: "painterly Western photography, painterly fine art photography, Western fine art photography, cinematic Western photography, artistic cowboy photography, painterly cowboy portraits, Wayne Heim",
   },
 
   "default": {
@@ -616,5 +629,6 @@ export function getLandingMeta(path: string, imageOverride?: string) {
     twitterImage: imageOverride || baseMeta.twitterImage,
     twitterUrl: "",
     description: uniqueDesc,
+    keywords: baseMeta.keywords || "",
   };
 }

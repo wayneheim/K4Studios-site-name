@@ -1,7 +1,7 @@
 export const landingWestern = {
   // Western Fine Art Photography - SUBJECT FOCUS
   title: "Western Fine Art Photography",
-  subtitle: "Story, Character, and the Human Experience of the American West",
+  subtitle: "Cowboy & Frontier Art Photography by Wayne Heim",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
 keywords: [
