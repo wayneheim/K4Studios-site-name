@@ -40,8 +40,8 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
 
       <div className={gridClass}>
         {items.map((item, index) => {
-          // Build contextual alt text with keyword rotation
-          const contextualAlt = buildContextualAlt(item.title, resolvedContext, index);
+          // Build contextual alt text with Tier B (navigation) - functional alt only, no enrichment
+          const contextualAlt = buildContextualAlt(item.title, resolvedContext, { index, tier: 'B' });
           
           // Track clicks for mobileOnly tiles (Featured Collection equivalent on mobile)
           const handleClick = () => {

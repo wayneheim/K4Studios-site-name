@@ -84,10 +84,17 @@ export default function ImageBar2({ slides, pageContext: propPageContext }) {
 
       <div className="carousel-track" ref={trackRef}>
         {displaySlides.map((s, i) => {
-          // Build contextual alt text with keyword rotation
-          // Use modulo of original slides length to ensure consistent rotation after duplication
+          // Determine if this is a duplicated slide (for infinite scroll effect)
           const originalIndex = i % finalSlides.length;
-          const contextualAlt = buildContextualAlt(s.alt, resolvedContext, originalIndex);
+          const isDuplicate = duplicated && i >= finalSlides.length;
+          
+          // Build contextual alt text with Tier A (hero/carousel) and semantic sufficiency check
+          // Duplicated slides get empty alt + aria-hidden to reduce keyword density
+          const contextualAlt = buildContextualAlt(s.alt, resolvedContext, {
+            index: originalIndex,
+            tier: 'A',
+            isDecorativeDuplicate: isDuplicate
+          });
           
           return (
             <figure
@@ -95,8 +102,9 @@ export default function ImageBar2({ slides, pageContext: propPageContext }) {
               key={`slide-${i}`}
               itemScope
               itemType="https://schema.org/ImageObject"
+              {...(isDuplicate ? { 'aria-hidden': 'true' } : {})}
             >
-              <a href={s.href} title={contextualAlt} aria-label={contextualAlt}>
+              <a href={s.href} title={isDuplicate ? undefined : contextualAlt} aria-label={isDuplicate ? undefined : contextualAlt}>
                 <img src={s.src} alt={contextualAlt} loading="lazy" itemProp="contentUrl" />
               </a>
               <figcaption itemProp="description">{s.description}</figcaption>
