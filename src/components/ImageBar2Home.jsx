@@ -47,17 +47,20 @@ export default function ImageBar2Home() {
       <meta itemProp="name" content="Fine Art Gallery Carousel" />
       <meta itemProp="creator" content="K4 Studios" />
       <div className="carousel-track" ref={trackRef}>
-        {displaySlides.map((s, i) => (
+        {displaySlides.map((s, i) => {
+          const isDuplicate = duplicated && i >= homeSlides.length;
+          return (
           <figure
             className="carousel-slide"
             key={`slide-${i}`}
             itemScope
             itemType="https://schema.org/ImageObject"
+            aria-hidden={isDuplicate ? "true" : undefined}
           >
-            <a href={s.href} title={s.alt} aria-label={s.alt}>
+            <a href={s.href} title={isDuplicate ? undefined : s.alt} aria-label={isDuplicate ? undefined : s.alt} tabIndex={isDuplicate ? -1 : undefined}>
               <img
                 src={s.srcS || s.src || s.srcM || s.srcL}
-                alt={s.alt}
+                alt={isDuplicate ? "" : s.alt}
                 itemProp="contentUrl"
                 loading={s.loading}
                 fetchpriority={s.fetchpriority}
@@ -68,7 +71,8 @@ export default function ImageBar2Home() {
             </a>
             <figcaption itemProp="description">{s.description}</figcaption>
           </figure>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

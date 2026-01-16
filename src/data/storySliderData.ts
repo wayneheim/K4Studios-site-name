@@ -18,7 +18,7 @@ export const storySliderData = [
   },
   {
     "id": "i-44jcjTQ",
-    "title": "Over My Dead Body: Frontier Stand-off ",
+    "title": "Over My Dead Body: Frontier Stand-off",
     "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming. \n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgement time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!"
   },
   {
@@ -108,7 +108,7 @@ export const storySliderData = [
   },
   {
     "id": "i-n5BfXBm",
-    "title": "10 O’Clock Staging ",
+    "title": "10 O’Clock Staging",
     "story": "Morning sun climbs, bathing every color in anticipation and purpose. Sweat beads, dust shimmers, saddle leather glows with stories untold. The clock strikes ten—she’s late. Nerves on edge, they hold their places. Distant rumbles echo—steel, hooves, danger on the ridge.\n“Steady, Billy. Stick to the plan.”\nToday, patience is the hardest virtue. Vengeance or fortune—both ride with the morning wind."
   },
   {
