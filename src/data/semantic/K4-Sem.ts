@@ -291,6 +291,35 @@ westernCowboyHub: {
   imagePhrases: []
 },
 
+// ✅ COWBOY AUTHORITY HUB – "Cowboy" as PRIMARY subject entity
+cowboyFineArtHub: {
+  path: "/Cowboy-Fine-Art-Photography",
+  def: "Cowboy fine art photography is fine art photography that features cowboys as the primary subject—portraits of working cowboys, rodeo riders, ranchers, and frontier characters rendered with artistic depth and narrative intent.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    // Primary targets — "cowboy" as root entity
+    { phrase: "cowboy fine art photography", rating: 5, use: true },
+    { phrase: "cowboy photography", rating: 5, use: true },
+    { phrase: "black and white cowboy photography", rating: 5, use: true },
+    { phrase: "cowboy portraits", rating: 5, use: true },
+    { phrase: "cowboy fine art", rating: 5, use: true },
+    // Secondary — cowboy-centric variants
+    { phrase: "cowboy wall art", rating: 4, use: true },
+    { phrase: "cowboy art photography", rating: 4, use: true },
+    { phrase: "authentic cowboy photography", rating: 4, use: true },
+    { phrase: "cowboy portrait photography", rating: 4, use: true },
+    { phrase: "fine art cowboy prints", rating: 4, use: true },
+    { phrase: "cowboy photographer", rating: 4, use: true },
+    // Long-tail enrichers
+    { phrase: "black and white cowboy portraits", rating: 3, use: true },
+    { phrase: "cowboy character photography", rating: 3, use: true },
+    { phrase: "rodeo cowboy photography", rating: 3, use: true },
+    { phrase: "working cowboy photography", rating: 3, use: true },
+    { phrase: "cowboy photo art", rating: 3, use: true },
+  ],
+  imagePhrases: []
+},
+
 // ============================================================================
 // CONCEPTUAL AUTHORITY NODES
 // Style/themed terms tied to existing hubs—definitions for Glossary + Google.

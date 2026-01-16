@@ -545,6 +545,21 @@ export const landingMetaDB = {
     keywords: "Western black and white photography, black and white cowboy photography, monochrome Western art, black and white cowboy portraits, dramatic Western photography, fine art black and white, Wayne Heim",
   },
 
+  // ✅ COWBOY AUTHORITY HUB – "Cowboy" as PRIMARY subject entity
+  "/Cowboy-Fine-Art-Photography": {
+    ogTitle: "Cowboy Fine Art Photography | Black and White Cowboy Photography – Wayne Heim",
+    ogDescription:
+      "Cowboy fine art photography by Wayne Heim. This collection features cowboy photography and black and white cowboy photography—authentic portraits of working cowboys, rodeo riders, and frontier characters.",
+    ogImage: "/og/cowboy.jpg",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Cowboy Fine Art Photography | Black and White Cowboy Photography",
+    twitterDescription:
+      "Cowboy fine art photography and black and white cowboy photography. Authentic cowboy portraits by Wayne Heim.",
+    twitterImage: "/og/cowboy.jpg",
+    keywords: "cowboy fine art photography, cowboy photography, black and white cowboy photography, cowboy portraits, cowboy wall art, authentic cowboy photography, fine art cowboy prints, Wayne Heim",
+  },
+
   "/Painterly-Western-Photography": {
     ogTitle: "Painterly Western Photography – The Craft Behind the Work",
     ogDescription:

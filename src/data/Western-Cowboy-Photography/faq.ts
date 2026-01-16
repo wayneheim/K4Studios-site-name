@@ -59,7 +59,7 @@ export const cowboyFAQ = [
     q: "Who collects Western cowboy photography?",
     a: [
       "This work resonates with collectors who value authenticity over decoration — those drawn to cowboy art that carries emotional weight rather than nostalgic cliché.",
-      "It appeals to collectors seeking Western cowboy photography rooted in character, craft, and genuine human connection."
+      "It appeals to collectors seeking Western cowboy photography rooted in character, craft, and genuine human connection. Explore the <a href='/Cowboy-Fine-Art-Photography'>Cowboy Fine Art Photography</a> collection for focused cowboy portraits and black and white cowboy photography."
     ],
   },
 

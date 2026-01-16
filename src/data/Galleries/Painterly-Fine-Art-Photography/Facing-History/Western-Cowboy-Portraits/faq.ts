@@ -4,7 +4,7 @@ export const westernFAQ = [
     a: [
       `Wayne Heim’s work is often described as <strong>Western themed photography</strong>, but the theme is never superficial. Each image is built around historical context, human presence, and narrative tension — not costumes or clichés.`,
       `As both an <a href="https://heimmedicalart.com" target="_blank" rel="noopener">award-winning medical illustrator</a> and fine art photographer, Wayne brings anatomical precision, lighting control, and story-first composition to every portrait.`,
-      `Rather than capturing moments, this Western photography style constructs scenes that feel inhabited — shaped by research, lived-in expression, and painterly discipline.`
+      `Rather than capturing moments, this Western photography style constructs scenes that feel inhabited — shaped by research, lived-in expression, and painterly discipline. See the <a href="/Cowboy-Fine-Art-Photography">Cowboy Fine Art Photography</a> hub for a deeper look at cowboy portraits and black and white cowboy photography.`
     ],
   },
 
@@ -53,7 +53,7 @@ export const westernFAQ = [
     a: [
       `Yes. Wayne works intentionally in both formats.`,
       `Color portraits emphasize warmth, dust, light, and atmosphere — while <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White">black and white Western photography</a> strips the image down to structure, expression, and emotional weight.`,
-      `Both approaches are part of the same Western photography style and are used across cowboy and Native American portraits alike.`
+      `Both approaches are part of the same Western photography style and are used across cowboy and Native American portraits alike. The <a href="/Cowboy-Fine-Art-Photography">Cowboy Fine Art Photography</a> collection features both color and black and white cowboy photography.`
     ],
   },
 

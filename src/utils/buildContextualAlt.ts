@@ -222,6 +222,28 @@ export const hubPageContexts: Record<string, PageContext> = {
       'american west',
     ],
   },
+  // ✅ COWBOY AUTHORITY HUB – "Cowboy" as PRIMARY subject entity
+  '/Cowboy-Fine-Art-Photography': {
+    topic: 'Cowboy Fine Art Photography',
+    keywordPool: [
+      'cowboy fine art photography',
+      'cowboy photography',
+      'black and white cowboy photography',
+      'cowboy portrait photography',
+      'authentic cowboy photography',
+    ],
+    semanticSignals: [
+      'cowboy',
+      'ranch',
+      'rodeo',
+      'wrangler',
+      'horseman',
+      'vaquero',
+      'frontier',
+      'western',
+      'black and white',
+    ],
+  },
 };
 
 /**
