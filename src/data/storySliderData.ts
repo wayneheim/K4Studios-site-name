@@ -83,7 +83,7 @@ export const storySliderData = [
   },
   {
     "id": "i-5Md3dQ3",
-    "title": "\"It's just a one day ride to Spearfish. What could possibly go wrong?\"",
+    "title": "It's Just a One Day Ride to Spearfish. What Could Possibly Go Wrong?",
     "story": "One day, he said.\nEasy ride, he promised. Sun up, sun down, back before the lamp’s gone cold.\n\nBut her head finds his shoulder, and in the hush between words, she knows:\nIt’s never just a day, never just a ride.\n\nPlans are easy. Goodbyes—never are."
   },
   {

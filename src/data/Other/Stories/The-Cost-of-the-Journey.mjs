@@ -228,7 +228,7 @@ export const storyData = [
  },
  {
  "id": "i-5Md3dQ3",
- "title": "\"It's just a one day ride to Spearfish. What could possibly go wrong?\"",
+ "title": "It's Just a One Day Ride to Spearfish. What Could Possibly Go Wrong?",
  "description": "“It's just a one day ride to Spearfish. What could possibly go wrong?” is a painterly Western portrait capturing the quiet tension of departure. A man, ready to ride, reassures with a smile, while the woman at his side leans in, holding back all the fears she can’t voice. Sun-bleached color and soft texture turn this simple farewell into a layered story—about hope, worry, and all the risks hiding in a “just one day” promise. © Wayne Heim",
  "alt": "Painterly Western portrait of a man in frontier clothing with a woman leaning her head on his shoulder, both sharing a quiet, intimate moment before a journey.",
  "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-5Md3dQ3/0/KFVq3GDvvq3STkq4mbj4qSPnzt7jLMz8d5FHrtXLW/XL/_HF20165-1292-XL.jpg",

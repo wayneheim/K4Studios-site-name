@@ -108,11 +108,18 @@ const seoDescription = landingDescription
   ? `Browse all ${imageCount} fine art photographs in the ${galleryTitle} collection. ${landingDescription.slice(0, 120)}...`
   : `Explore the complete ${galleryTitle} gallery featuring ${imageCount} painterly fine art photographs by Wayne Heim. Each image captures cinematic Western storytelling.`;
 
-// ✅ Cleaner
-const clean = (val = "") =>
+// ✅ Text cleaner for JSON-LD (escapes quotes for JSON)
+const cleanForJson = (val = "") =>
   String(val)
     .replace(/[\u0000-\u001F]+/g, " ")
     .replace(/"/g, '\\"')
+    .replace(/\r?\n|\r/g, " ")
+    .trim();
+
+// ✅ Text cleaner for HTML display (preserves quotes)
+const cleanForDisplay = (val = "") =>
+  String(val)
+    .replace(/[\u0000-\u001F]+/g, " ")
     .replace(/\r?\n|\r/g, " ")
     .trim();
 ---
@@ -233,26 +240,30 @@ const clean = (val = "") =>
         const imageUrl = item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "";
         const linkUrl = `${baseUrl}/${item.id}`;
         const fullUrl = `https://www.k4studios.com${linkUrl}`;
-        const title = clean(item.title);
-        const description = clean(item.description || item.alt || item.title);
-        const story = clean(item.story || "");
+        // For HTML display (preserves quotes)
+        const titleDisplay = cleanForDisplay(item.title);
+        const descriptionDisplay = cleanForDisplay(item.description || item.alt || item.title);
+        const storyDisplay = cleanForDisplay(item.story || "");
+        // For JSON-LD (escapes quotes)
+        const titleJson = cleanForJson(item.title);
+        const descriptionJson = cleanForJson(item.description || item.alt || item.title);
 
         return (
           <div class="ssr-card" id={item.id}>
             <a href={linkUrl}>
-              <img src={imageUrl} alt={description} title={title} loading="lazy" />
+              <img src={imageUrl} alt={descriptionDisplay} title={titleDisplay} loading="lazy" />
             </a>
             <div class="ssr-card-content">
-              <h3>{title}</h3>
-              <p>{story}</p>
+              <h3>{titleDisplay}</h3>
+              <p>{storyDisplay}</p>
             </div>
 
             <script type="application/ld+json" is:inline>
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ImageObject",
-              name: title,
-              description,
+              name: titleJson,
+              description: descriptionJson,
               contentUrl: imageUrl,
               url: fullUrl,
               creditText: "© Wayne Heim – K4 Studios",
@@ -271,7 +282,7 @@ const clean = (val = "") =>
     {JSON.stringify({
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      name: clean(galleryName),
+      name: cleanForJson(galleryName),
       url: canonicalUrl,
       isPartOf: {
         "@type": "WebPage",

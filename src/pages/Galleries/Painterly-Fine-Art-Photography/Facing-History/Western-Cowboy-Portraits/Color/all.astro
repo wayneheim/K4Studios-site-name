@@ -36,18 +36,25 @@ const seoDescription = `Complete index of ${imageCount} Western cowboy fine art 
 // ✅ Reference-style intro (distinct from landing page narrative)
 const indexIntro = `This page presents the complete image index for the ${galleryTitle} gallery. All ${imageCount} images are displayed and link to individual image pages with full stories and metadata.`;
 
-// ✅ Text cleaner for JSON-LD
-const clean = (val = "") =>
+// ✅ Text cleaner for JSON-LD (escapes quotes for JSON)
+const cleanForJson = (val = "") =>
   String(val)
     .replace(/[\u0000-\u001F]+/g, " ")
     .replace(/"/g, '\\"')
     .replace(/\r?\n|\r/g, " ")
     .trim();
 
+// ✅ Text cleaner for HTML display (preserves quotes)
+const cleanForDisplay = (val = "") =>
+  String(val)
+    .replace(/[\u0000-\u001F]+/g, " ")
+    .replace(/\r?\n|\r/g, " ")
+    .trim();
+
 // ✅ Truncate story text for cards (150 chars max per Quill)
 const truncateStory = (story: string, maxLen = 150) => {
   if (!story) return "";
-  const cleaned = clean(story);
+  const cleaned = cleanForDisplay(story);
   if (cleaned.length <= maxLen) return cleaned;
   return cleaned.slice(0, maxLen).replace(/\s+\S*$/, "") + "…";
 };
@@ -58,9 +65,9 @@ galleryData.forEach((item: any) => {
   const imageUrl = item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "";
   const linkUrl = `${basePath}/${item.id}`;
   const fullUrl = `https://www.k4studios.com${linkUrl}`;
-  const title = clean(item.title);
+  const title = cleanForJson(item.title);
   const altText = item.alt 
-    ? clean(item.alt)
+    ? cleanForJson(item.alt)
     : `Western cowboy fine art photograph: ${title} – Wayne Heim`;
   
   imageJsonLdMap.set(item.id, JSON.stringify({
@@ -178,16 +185,16 @@ const structuredDataJson = JSON.stringify({
       {galleryData.map((item: any, idx: number) => {
         const imageUrl = item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "";
         const linkUrl = `${basePath}/${item.id}`;
-        const title = clean(item.title);
+        const title = cleanForDisplay(item.title);
         
         // ✅ Auto alt text: prioritize existing alt, then build from description/keywords
         let altText: string;
         if (item.alt) {
-          altText = clean(item.alt);
+          altText = cleanForDisplay(item.alt);
         } else if (item.description) {
           // Use first sentence of description (truncated)
           const firstSentence = item.description.split(/[.!?]/)[0];
-          altText = clean(firstSentence.slice(0, 150));
+          altText = cleanForDisplay(firstSentence.slice(0, 150));
         } else if (item.keywords?.length > 0) {
           // Build from keywords: "Western portrait: keyword1, keyword2, keyword3"
           const topKeywords = item.keywords.slice(0, 4).join(", ");
