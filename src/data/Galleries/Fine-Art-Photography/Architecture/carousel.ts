@@ -6,7 +6,12 @@ const modules = import.meta.glob(
 );
 
 let galleryData = [];
+// Pattern to detect backup/copy files (e.g., Color-copy1.mjs)
+const BACKUP_PATTERN = /[-_\s](copy|backup)(\d*|[-_\s].*)?\.mjs$/i;
+
 for (const filePath in modules) {
+  // Skip backup/copy files
+  if (BACKUP_PATTERN.test(filePath)) continue;
   const mod = modules[filePath];
   const data = mod.galleryData || (mod.default && mod.default.galleryData);
   if (Array.isArray(data)) {
