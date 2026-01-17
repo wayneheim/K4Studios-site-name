@@ -12,14 +12,31 @@
 const imageIdMap = require('./imageIdMap.json');
 
 exports.handler = async (event) => {
-  const requestedPath = event.queryStringParameters?.path || event.path || '';
+  // Get path from query string (passed by _redirects) or from event.path
+  const queryPath = event.queryStringParameters?.path || '';
+  const eventPath = event.path || '';
+  const requestedPath = queryPath || eventPath;
   
-  console.log(`[smart-404] Handling: ${requestedPath}`);
+  // Also get the image ID directly from query params if available
+  const queryId = event.queryStringParameters?.id || '';
   
-  // Extract image ID from path (e.g., /Galleries/.../Color/i-zswx22S)
-  const imageIdMatch = requestedPath.match(/\/(i-[a-zA-Z0-9]+)\/?$/);
+  console.log(`[smart-404] Event path: ${eventPath}`);
+  console.log(`[smart-404] Query path: ${queryPath}`);
+  console.log(`[smart-404] Query id: ${queryId}`);
+  console.log(`[smart-404] Using path: ${requestedPath}`);
   
-  if (!imageIdMatch) {
+  // Extract image ID from path or use query param
+  let imageId = queryId;
+  if (!imageId) {
+    const imageIdMatch = requestedPath.match(/\/(i-[a-zA-Z0-9]+)\/?$/);
+    imageId = imageIdMatch ? imageIdMatch[1] : '';
+  }
+  // Ensure imageId has the i- prefix
+  if (imageId && !imageId.startsWith('i-')) {
+    imageId = 'i-' + imageId;
+  }
+  
+  if (!imageId) {
     // Not an image page request - pass through to normal 404
     console.log(`[smart-404] No image ID found, passing to 404`);
     return {
@@ -28,7 +45,6 @@ exports.handler = async (event) => {
     };
   }
   
-  const imageId = imageIdMatch[1];
   console.log(`[smart-404] Looking up image ID: ${imageId}`);
   
   // Look up the image in our map

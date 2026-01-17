@@ -1,6 +1,7 @@
 # Smart 404 for image pages - only triggers on actual 404s
 # If image page doesn't exist, call smart-404 function to find/redirect
-/Galleries/*/i-:id  /.netlify/functions/smart-404?path=/Galleries/:splat/i-:id  404
+# Note: Netlify splat (*) captures everything, :id captures the image ID segment
+/Galleries/*/i-:id  /.netlify/functions/smart-404?path=/Galleries/:splat/i-:id&id=i-:id  404
 
 */Color-back2/Color%201src/*   /Color/:splat   301!
 /Color-back2/Color%20fixed/*   /Color/:splat   301!
