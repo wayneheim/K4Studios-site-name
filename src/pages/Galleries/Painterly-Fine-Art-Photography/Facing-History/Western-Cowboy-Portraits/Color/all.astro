@@ -6,7 +6,6 @@
  * Clean URL, distinct from the curated landing page.
  * Optimized for crawlability and SEO authority.
  */
-import GalleryLightbox from "@/components/GalleryLightbox.jsx";
 import Footer from "@/components/Footer.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
@@ -220,7 +219,6 @@ const structuredDataJson = JSON.stringify({
       })}
     </div>
 
-    <GalleryLightbox client:only="react" datasetPath="Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" showHeader={false} />
     <Footer />
   </div>
 
