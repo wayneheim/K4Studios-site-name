@@ -1,18 +1,22 @@
 /**
  * Build-time script to generate an image ID → gallery path map.
  * 
- * This is used by the smart-404 serverless function to redirect
- * broken image URLs to the correct gallery location.
+ * This is used by:
+ * 1. The 404.astro page (SSR) to redirect broken image URLs with proper 301
+ * 2. The smart-404 serverless function as a fallback
  * 
  * Usage: node scripts/generate-image-id-map.cjs
- * Output: netlify/functions/imageIdMap.json
+ * Output: 
+ *   - src/data/imageIdMap.json (for Astro SSR)
+ *   - netlify/functions/imageIdMap.json (for serverless function)
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const MASTER_DATA_PATH = path.join(__dirname, '../src/data/galleryMaps/MasterGalleryData.mjs');
-const OUTPUT_PATH = path.join(__dirname, '../netlify/functions/imageIdMap.json');
+const OUTPUT_PATH_FUNCTIONS = path.join(__dirname, '../netlify/functions/imageIdMap.json');
+const OUTPUT_PATH_SRC = path.join(__dirname, '../src/data/imageIdMap.json');
 
 async function generateImageIdMap() {
   console.log('📍 Generating image ID map for smart-404...');
@@ -44,16 +48,22 @@ async function generateImageIdMap() {
     }
   }
   
-  // Write the map
-  fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
-  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(imageIdMap, null, 0)); // Minified for size
+  // Write the map to both locations
+  const jsonContent = JSON.stringify(imageIdMap, null, 0); // Minified for size
   
-  const fileSizeKB = (fs.statSync(OUTPUT_PATH).size / 1024).toFixed(1);
+  fs.mkdirSync(path.dirname(OUTPUT_PATH_FUNCTIONS), { recursive: true });
+  fs.writeFileSync(OUTPUT_PATH_FUNCTIONS, jsonContent);
+  
+  fs.mkdirSync(path.dirname(OUTPUT_PATH_SRC), { recursive: true });
+  fs.writeFileSync(OUTPUT_PATH_SRC, jsonContent);
+  
+  const fileSizeKB = (fs.statSync(OUTPUT_PATH_SRC).size / 1024).toFixed(1);
   
   console.log(`✅ Generated imageIdMap.json:`);
   console.log(`   - ${imageCount} unique image IDs`);
   console.log(`   - ${duplicateCount} duplicates (using first occurrence)`);
   console.log(`   - File size: ${fileSizeKB} KB`);
+  console.log(`   - Written to: src/data/ and netlify/functions/`);
 }
 
 generateImageIdMap().catch(err => {

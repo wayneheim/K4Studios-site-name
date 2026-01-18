@@ -6,6 +6,30 @@ import "@/styles/global.css";
 
 import { semantic } from "@/data/semantic/K4-Sem.ts";
 import { siteNav } from "@/data/siteNav.ts";
+import imageIdMap from "@/data/imageIdMap.json";
+
+/* ---------- Smart 404: Check for moved images and redirect with proper 301 ---------- */
+const requestUrl = Astro.url.pathname;
+const imageIdMatch = requestUrl.match(/\/(i-[a-zA-Z0-9]+)\/?$/);
+
+if (imageIdMatch) {
+  const imageId = imageIdMatch[1];
+  const correctGalleryPath = imageIdMap[imageId];
+  
+  if (correctGalleryPath) {
+    // Image found in a different gallery - 301 redirect
+    const redirectUrl = `${correctGalleryPath}/${imageId}`;
+    console.log(`[smart-404] Redirecting ${imageId} to ${redirectUrl}`);
+    return Astro.redirect(redirectUrl, 301);
+  } else {
+    // Image not found anywhere - redirect to gallery landing page
+    const galleryLandingPath = requestUrl.replace(/\/i-[a-zA-Z0-9]+\/?$/, '');
+    if (galleryLandingPath && galleryLandingPath !== requestUrl) {
+      console.log(`[smart-404] Image ${imageId} not found, redirecting to gallery: ${galleryLandingPath}`);
+      return Astro.redirect(galleryLandingPath, 301);
+    }
+  }
+}
 
 /* ---------- helpers ---------- */
 function normalizeHref(href = "") {
@@ -151,6 +175,7 @@ const description =
 
   <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
+      // Fade-in animation
       const els = document.querySelectorAll(".fade-in");
       const observer = new IntersectionObserver(
         (entries) => {
