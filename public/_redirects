@@ -20,6 +20,7 @@
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII  /Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War  301
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII/Black-White  /Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White  301
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color  301
+/Galleries/Painterly-Fine-Art-Photography/Pictorialist  /Pictorialist-Photography  301
 
 ## */Portraits%20copy/*   /Portraits/:splat   301!
 ## */Portraits copy/*   /Portraits/:splat   301!
@@ -27,7 +28,31 @@
 */Photoshootsandevents/*   https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat   301!
 /data/system/*  404!
 
-# Block SmugMug API endpoints - these should never be crawled
+# Block source code paths from being crawled
+/src/*  404!
+
+# Legacy SmugMug frame/slideshow URLs
+/frame/*  /  301
+
+# Legacy Photography-Galleries path structure (old SmugMug)
+/Photography-Galleries/Traditional-Photos/Miscellaneous-Fine-Art-Photography/*  /Galleries/Fine-Art-Photography/Miscellaneous/Gallery  301
+/Photography-Galleries/*  /Galleries  301
+
+# Legacy Landscapes-Gallery path
+/Galleries/Landscapes-Gallery/*  /Galleries/Fine-Art-Photography/Landscapes  301
+
+# Lowercase galleries path (case mismatch)
+/galleries  /Galleries  301
+/galleries/*  /Galleries/:splat  301
+
+# Malformed URLs with leading quote (external bad links)
+/%22/Galleries/*  /Galleries/:splat  301
+/"/Galleries/*  /Galleries/:splat  301
+
+# Image ID at wrong path level (missing gallery path)
+/Galleries/i-:id  /.netlify/functions/smart-404?path=/Galleries/i-:id&id=i-:id  404
+
+# Block SmugMug API endpoints - these should never be crawled (case variations)
 /api/*  404!
-/api/v2/*  404!
-/api/v3/*  404!
+/Api/*  404!
+/API/*  404!

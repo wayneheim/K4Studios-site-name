@@ -8,8 +8,12 @@
 User-agent: *
 Disallow: /admin/
 Disallow: /api/
+Disallow: /Api/
+Disallow: /API/
 Disallow: /api/v2/
+Disallow: /api/V2/
 Disallow: /api/v3/
+Disallow: /api/V3/
 Disallow: /buy/
 Disallow: /cart/
 Disallow: /key/
@@ -21,6 +25,8 @@ Disallow: /services/
 Disallow: /_rpc/
 Disallow: /upload/
 Disallow: /video/
+Disallow: /src/
+Disallow: /frame/
 
 User-agent: *
 Disallow: /hack/feed.mg
@@ -28,8 +34,12 @@ Disallow: /hack/feed.mg
 # --- Google services ---
 User-agent: Googlebot
 Disallow: /api/
+Disallow: /Api/
+Disallow: /API/
 Disallow: /api/v2/
+Disallow: /api/V2/
 Disallow: /api/v3/
+Disallow: /api/V3/
 Disallow: /buy/
 Disallow: /cart/
 Disallow: /key/
@@ -38,6 +48,8 @@ Disallow: /services/
 Disallow: /_rpc/
 Disallow: /upload/
 Disallow: /video/
+Disallow: /src/
+Disallow: /frame/
 Allow: /
 User-agent: Googlebot-Image
 Allow: /

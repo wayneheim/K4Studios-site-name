@@ -9,10 +9,14 @@ import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import { getStructuredData } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
-// Bail out early for legacy SmugMug RSS URLs - return 410 Gone
+// Handle legacy SmugMug RSS URLs - show proper gone page
 const legacyParams = Astro.url.searchParams;
-if (legacyParams.get('format') === 'rss200' || legacyParams.get('Type') === 'gallery') {
-  return new Response('This legacy URL is no longer available.', { status: 410 });
+const isLegacyUrl = legacyParams.get('format') === 'rss200' || legacyParams.get('Type') === 'gallery';
+
+// Set 410 status for legacy URLs
+if (isLegacyUrl) {
+  Astro.response.status = 410;
+  Astro.response.statusText = 'Gone';
 }
 
 import { siteNav } from '@/data/siteNav.ts';
@@ -403,13 +407,34 @@ const structuredData = getStructuredData({
 ---
 
 <BaseLayout
-  title="K4 Studios – Story Glossary"
+  title={isLegacyUrl ? "Page No Longer Available – K4 Studios" : "K4 Studios – Story Glossary"}
   structuredDataJSON={structuredData}
   meta={meta}
 >
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" />
 
-
+  {isLegacyUrl ? (
+    <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden flex flex-col items-center justify-center px-4" style="font-family: 'Glegoo', serif;">
+      <div class="max-w-xl text-center py-20">
+        <h1 class="text-3xl font-semibold mb-4">This Page Has Moved</h1>
+        <p class="text-lg text-gray-600 mb-8">
+          The legacy gallery URL you followed is no longer available. Our site has been redesigned with an improved browsing experience.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/" class="px-6 py-3 bg-[#2c2c2c] text-white rounded hover:bg-[#444] transition">
+            Visit Home Page
+          </a>
+          <a href="/Galleries/Painterly-Fine-Art-Photography" class="px-6 py-3 border border-[#2c2c2c] text-[#2c2c2c] rounded hover:bg-gray-100 transition">
+            Browse Galleries
+          </a>
+        </div>
+        <p class="text-sm text-gray-500 mt-8">
+          Looking for something specific? Try our <a href="/Glossary" class="underline">Story Glossary</a> to explore by theme.
+        </p>
+      </div>
+      <SiteFooter class="pt-8 pb-12 w-full" />
+    </main>
+  ) : (
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={glossaryBreadcrumb} />
@@ -589,6 +614,7 @@ const structuredData = getStructuredData({
       <div class="inset-0 inset-x-0 inset-y-0 inset-1 inset-2 inset-3 inset-4 inset-5 inset-6 inset-7 inset-8 inset-9 inset-10 inset-11 inset-12 inset-14 inset-16 inset-20 inset-24 inset-28 inset-32 inset-36 inset-40 inset-44 inset-48 inset-52 inset-56 inset-60 inset-64 inset-72 inset-80 inset-96 inset-auto inset-1/2 inset-1/3 inset-2/3 inset-1/4 inset-2/4 inset-3/4 inset-full top-0 right-0 bottom-0 left-0 top-1 right-1 bottom-1 left-1 top-2 right-2 bottom-2 left-2 top-4 right-4 bottom-4 left-4 top-auto right-auto bottom-auto left-auto"></div>
     </div>
   </main>
+  )}
   <style>
     .story-section { font-family: 'Glegoo', serif; }
   </style>
