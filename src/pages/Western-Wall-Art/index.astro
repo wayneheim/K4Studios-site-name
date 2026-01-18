@@ -117,7 +117,7 @@ const faqStructuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": `https://k4studios.com${pagePath}#faq`,
-  mainEntity: wallArtFAQ.slice(0, 5).map((item: any) => ({
+  mainEntity: wallArtFAQ.slice(0, 10).map((item: any) => ({
     "@type": "Question",
     name: item.q,
     acceptedAnswer: {
@@ -133,8 +133,8 @@ const webPageSchema = JSON.stringify({
   "@type": "WebPage",
   "@id": `https://k4studios.com${pagePath}#webpage`,
   url: `https://k4studios.com${pagePath}`,
-  name: landingWallArt.title,
-  description: landingWallArt.subtitle,
+  name: "Western Wall Art",
+  description: "Western wall art by Wayne Heim featuring museum-quality cowboy fine art prints, vintage western photography, and collector editions.",
   inLanguage: "en",
   isPartOf: {
     "@type": "WebSite",
@@ -208,7 +208,7 @@ const tombstonesWithThumbs = landingWallArt.tombstones.map((stone: any) => {
 ---
 
 <BaseLayout
-  title={`${landingWallArt.title} – ${landingWallArt.subtitle}`}
+  title="Western Wall Art – Fine Art Prints by Wayne Heim"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}

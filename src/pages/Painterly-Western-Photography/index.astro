@@ -146,7 +146,7 @@ const faqStructuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": `https://k4studios.com${pagePath}#faq`,
-  mainEntity: facingFAQ.slice(0, 5).map((item: any) => ({
+  mainEntity: facingFAQ.slice(0, 10).map((item: any) => ({
     "@type": "Question",
     name: item.q,
     acceptedAnswer: {
@@ -164,8 +164,8 @@ const webPageSchema = JSON.stringify({
   "@type": "WebPage",
   "@id": `https://k4studios.com${pagePath}#webpage`,
   url: `https://k4studios.com${pagePath}`,
-  name: landingWestern.title,
-  description: landingWestern.subtitle,
+  name: "Painterly Western Photography",
+  description: "Painterly Western photography by Wayne Heim exploring the craft, discipline, and narrative philosophy behind character-driven cowboy portraits and fine art.",
   inLanguage: "en",
   isPartOf: {
     "@type": "WebSite",
@@ -174,11 +174,11 @@ const webPageSchema = JSON.stringify({
     url: "https://k4studios.com/"
   },
   about: [
+    { "@type": "Thing", name: "Painterly Western Photography" },
     { "@type": "Thing", name: "Painterly Photography" },
     { "@type": "Thing", name: "Pictorialism" },
     { "@type": "Thing", name: "One-Image Movie" },
     { "@type": "Thing", name: "Narrative Photography" },
-    { "@type": "Thing", name: "Fine Art Western Photography" },
     { "@type": "Thing", name: "Photographic Craft" },
   ],
   author: { "@id": "https://k4studios.com/#person" },
@@ -237,7 +237,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
 ---
 
 <BaseLayout
-  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
+  title="Painterly Western Photography – Wayne Heim"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}

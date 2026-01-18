@@ -9,10 +9,10 @@ import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import { getStructuredData } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
-// Bail out early for legacy SmugMug RSS URLs - redirect to clean Glossary
+// Bail out early for legacy SmugMug RSS URLs - return 410 Gone
 const legacyParams = Astro.url.searchParams;
 if (legacyParams.get('format') === 'rss200' || legacyParams.get('Type') === 'gallery') {
-  return Astro.redirect('/Glossary', 301);
+  return new Response('This legacy URL is no longer available.', { status: 410 });
 }
 
 import { siteNav } from '@/data/siteNav.ts';
@@ -386,7 +386,7 @@ const structuredData = getStructuredData({
   data: {
     title: "K4 Studios – Story Glossary",
     description: "Experience the site-wide storytelling glossary with definitions and examples.",
-    url: `https://k4studios.com${sectionPath}`, // leave as-is if you still want Painterly side images context
+    url: "https://www.k4studios.com/Glossary",
     keywords: [],
     copyrightNotice: "© Wayne Heim"
   },

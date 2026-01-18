@@ -146,7 +146,7 @@ const faqStructuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": `https://k4studios.com${pagePath}#faq`,
-  mainEntity: facingFAQ.slice(0, 5).map((item: any) => ({
+  mainEntity: facingFAQ.slice(0, 10).map((item: any) => ({
     "@type": "Question",
     name: item.q,
     acceptedAnswer: {
@@ -173,7 +173,12 @@ const webPageSchema = JSON.stringify({
     name: "K4 Studios",
     url: "https://k4studios.com/"
   },
-  about: "Western fine art photography, cowboy photography, frontier portraiture, American West photography",
+  about: [
+    { "@type": "Thing", name: "Western Fine Art Photography" },
+    { "@type": "Thing", name: "Cowboy Photography" },
+    { "@type": "Thing", name: "Frontier Portraiture" },
+    { "@type": "Thing", name: "American West Photography" }
+  ],
   author: { "@id": "https://k4studios.com/#person" },
   creator: { "@id": "https://k4studios.com/#person" },
   copyrightHolder: { "@id": "https://k4studios.com/#person" },
@@ -230,7 +235,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
 ---
 
 <BaseLayout
-  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
+  title="Western Fine Art Photography – Wayne Heim"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}

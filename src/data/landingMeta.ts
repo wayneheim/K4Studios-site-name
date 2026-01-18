@@ -493,84 +493,84 @@ export const landingMetaDB = {
     ogTitle: "Western Fine Art Photography | Cowboy & Frontier Art Photography – Wayne Heim",
     ogDescription:
       "Western fine art photography by Wayne Heim featuring cowboy portraits, frontier characters, and painterly western photography. This western fine art photography collection explores story, character, and the American West.",
-    ogImage: "/og/cowboy.jpg",
+    ogImage: "/images/cowboy.webp",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle: "Western Fine Art Photography | Cowboy & Frontier Art – Wayne Heim",
     twitterDescription:
       "Western fine art photography featuring cowboy portraits and frontier characters. Collector-quality western fine art photography by Wayne Heim.",
-    twitterImage: "/og/cowboy.jpg",
+    twitterImage: "/images/cowboy.webp",
     keywords: "Western fine art photography, cowboy portraits, Western art photography, fine art cowboy photography, American West photography, Western portrait photography, indigenous portraits, frontier fine art, Wayne Heim",
   },
 
   "/Western-Cowboy-Photography": {
-    ogTitle: "Western Cowboy Photography – Authentic Portraits by Wayne Heim",
+    ogTitle: "Western Cowboy Photography – Wayne Heim",
     ogDescription:
       "Western cowboy photography and wild west cowboy portraits—authentic character studies from the American frontier, crafted with painterly depth and narrative restraint.",
-    ogImage: "/og/cowboy.jpg",
+    ogImage: "/images/cowboy.webp",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle: "Western Cowboy Photography – Wayne Heim",
     twitterDescription:
       "Authentic cowboy portraits and wild west photography by Wayne Heim. Character-driven fine art from the American frontier.",
-    twitterImage: "/og/cowboy.jpg",
+    twitterImage: "/images/cowboy.webp",
     keywords: "Western cowboy photography, cowboy portraits, wild west photography, cowboy portrait photography, Western cowboy portraits, fine art cowboy photography, authentic Western photography, Wayne Heim",
   },
 
   "/Western-Wall-Art": {
-    ogTitle: "Western Wall Art – Wild West Cowboy Photography & Vintage Western Prints",
+    ogTitle: "Western Wall Art – Cowboy Fine Art Prints",
     ogDescription:
       "Museum-quality Western wall art and wild west cowboy photography by Wayne Heim. Vintage western art, cowboy portraits, and frontier landscapes — cinematic, story-driven, and historically rooted.",
-    ogImage: "/og/cowboy.jpg",
+    ogImage: "/images/cowboy.webp",
     ogType: "website",
     twitterCard: "summary_large_image",
-    twitterTitle: "Western Wall Art – Wild West Cowboy Photography",
+    twitterTitle: "Western Wall Art – Cowboy Fine Art Prints",
     twitterDescription:
       "Wild west cowboy photography and vintage western wall art for collectors. Original fine art by Wayne Heim.",
-    twitterImage: "/og/cowboy.jpg",
+    twitterImage: "/images/cowboy.webp",
     keywords: "Western wall art, cowboy wall art, Western fine art prints, wild west cowboy photography, vintage Western art, Western home decor, cowboy art prints, Wayne Heim",
   },
 
   "/Western-Black-and-White-Photography": {
-    ogTitle: "Western Black and White Photography – Dramatic Cowboy Portraits",
+    ogTitle: "Western Black & White Photography – Wayne Heim",
     ogDescription:
       "Western black and white photography by Wayne Heim. Monochrome cowboy portraits and frontier imagery with timeless, dramatic depth. Museum-quality fine art prints.",
-    ogImage: "/og/cowboy.jpg",
+    ogImage: "/images/cowboy.webp",
     ogType: "website",
     twitterCard: "summary_large_image",
-    twitterTitle: "Western Black and White Photography – Wayne Heim",
+    twitterTitle: "Western Black & White Photography – Wayne Heim",
     twitterDescription:
       "Dramatic black and white Western photography. Cowboy portraits and frontier scenes in timeless monochrome by Wayne Heim.",
-    twitterImage: "/og/cowboy.jpg",
+    twitterImage: "/images/cowboy.webp",
     keywords: "Western black and white photography, black and white cowboy photography, monochrome Western art, black and white cowboy portraits, dramatic Western photography, fine art black and white, Wayne Heim",
   },
 
   // ✅ COWBOY AUTHORITY HUB – "Cowboy" as PRIMARY subject entity
   "/Cowboy-Fine-Art-Photography": {
-    ogTitle: "Cowboy Fine Art Photography | Black and White Cowboy Photography – Wayne Heim",
+    ogTitle: "Cowboy Fine Art Photography – Wayne Heim",
     ogDescription:
       "Cowboy fine art photography by Wayne Heim. This collection features cowboy photography and black and white cowboy photography—authentic portraits of working cowboys, rodeo riders, and frontier characters.",
-    ogImage: "/og/cowboy.jpg",
+    ogImage: "/images/cowboy.webp",
     ogType: "website",
     twitterCard: "summary_large_image",
-    twitterTitle: "Cowboy Fine Art Photography | Black and White Cowboy Photography",
+    twitterTitle: "Cowboy Fine Art Photography – Wayne Heim",
     twitterDescription:
       "Cowboy fine art photography and black and white cowboy photography. Authentic cowboy portraits by Wayne Heim.",
-    twitterImage: "/og/cowboy.jpg",
+    twitterImage: "/images/cowboy.webp",
     keywords: "cowboy fine art photography, cowboy photography, black and white cowboy photography, cowboy portraits, cowboy wall art, authentic cowboy photography, fine art cowboy prints, Wayne Heim",
   },
 
   "/Painterly-Western-Photography": {
-    ogTitle: "Painterly Western Photography – The Craft Behind the Work",
+    ogTitle: "Painterly Western Photography – Wayne Heim",
     ogDescription:
       "Painterly Western photography by Wayne Heim. Explore the discipline, light, and narrative philosophy behind character-driven cowboy portraits and frontier fine art.",
-    ogImage: "/og/cowboy.jpg",
+    ogImage: "/images/cowboy.webp",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle: "Painterly Western Photography – Wayne Heim",
     twitterDescription:
       "The craft behind painterly Western photography. Discipline, light, and narrative philosophy in cowboy fine art by Wayne Heim.",
-    twitterImage: "/og/cowboy.jpg",
+    twitterImage: "/images/cowboy.webp",
     keywords: "painterly Western photography, painterly fine art photography, Western fine art photography, cinematic Western photography, artistic cowboy photography, painterly cowboy portraits, Wayne Heim",
   },
 

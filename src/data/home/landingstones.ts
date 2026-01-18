@@ -2,7 +2,7 @@ export const landingWestern = {
   // Home Page
   title: "K4 Studios",
   subtitle:
-    "Painterly and Fine Art Photography by Wayne Heim",
+    "Painterly & Fine Art Photography by Wayne Heim",
   breadcrumb: "Embrace the Past. Live the Story",
 
   // Keywords for structured data and semantic SEO

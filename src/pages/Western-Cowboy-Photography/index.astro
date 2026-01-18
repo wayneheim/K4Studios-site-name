@@ -142,7 +142,7 @@ const faqStructuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": `https://k4studios.com${pagePath}#faq`,
-  mainEntity: facingFAQ.slice(0, 5).map((item: any) => ({
+  mainEntity: facingFAQ.slice(0, 10).map((item: any) => ({
     "@type": "Question",
     name: item.q,
     acceptedAnswer: {
@@ -160,8 +160,8 @@ const webPageSchema = JSON.stringify({
   "@type": "WebPage",
   "@id": `https://k4studios.com${pagePath}#webpage`,
   url: `https://k4studios.com${pagePath}`,
-  name: landingWestern.title,
-  description: landingWestern.subtitle,
+  name: "Western Cowboy Photography",
+  description: "Western cowboy photography by Wayne Heim featuring authentic cowboy portraits, wild west characters, and frontier imagery.",
   inLanguage: "en",
   isPartOf: {
     "@type": "WebSite",
@@ -228,7 +228,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
 ---
 
 <BaseLayout
-  title={`${landingWestern.title} – ${landingWestern.subtitle}`}
+  title="Western Cowboy Photography – Wayne Heim"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}

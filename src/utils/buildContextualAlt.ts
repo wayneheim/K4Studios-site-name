@@ -8,14 +8,27 @@
  * already satisfy the hub's term intent. Prevents keyword over-concentration
  * on hub pages while preserving AI semantic grounding.
  * 
+ * BAD ALT DETECTION: Identifies and rewrites problematic alt text:
+ *   - Too short (< 15 chars)
+ *   - Generic placeholders ("Photo", "Image", "Untitled", etc.)
+ *   - Filename patterns ("IMG_1234", "DSC_0001", etc.)
+ *   - Empty or whitespace-only
+ * 
  * TIERS:
  *   - Tier A (hero/carousel): Concise base alt, no suffix if semantically sufficient
  *   - Tier B (navigation/tombstones): Functional alt only, never enriched
  *   - Tier C (samples/featured): Rich base alt, enriched only if insufficient
  * 
+ * ROLLBACK: To disable bad alt rewriting, set DISABLE_ALT_REWRITE = true below.
+ * 
  * Usage:
  *   const alt = buildContextualAlt(image.alt, pageContext, { index: 0, tier: 'A' });
+ *   // With fallback title for bad alt rewriting:
+ *   const alt = buildContextualAlt(image.alt, pageContext, { index: 0, tier: 'A', fallbackTitle: image.title });
  */
+
+// ⚠️ ROLLBACK SWITCH: Set to true to disable bad alt rewriting
+const DISABLE_ALT_REWRITE = false;
 
 export interface PageContext {
   /** The primary topic of the page (for fallback) */
@@ -35,6 +48,89 @@ export interface AltOptions {
   tier?: AltTier;
   /** If true, this is a duplicated decorative image (returns empty alt) */
   isDecorativeDuplicate?: boolean;
+  /** Fallback title to use if alt is bad (from img.title) */
+  fallbackTitle?: string;
+  /** Fallback description to use if alt and title are bad */
+  fallbackDescription?: string;
+}
+
+/**
+ * Patterns that indicate a bad/placeholder alt text
+ */
+const BAD_ALT_PATTERNS = [
+  /^image$/i,
+  /^photo$/i,
+  /^picture$/i,
+  /^untitled$/i,
+  /^no\s*title$/i,
+  /^img[_\-]?\d+/i,           // IMG_1234, img-001
+  /^dsc[_\-]?\d+/i,           // DSC_0001
+  /^_?[A-Z]{2,4}\d{4,}/i,     // _WHZ1234, ABC12345
+  /^\d+$/,                     // Just numbers
+  /^\.+$/,                     // Just dots
+  /^-+$/,                      // Just dashes
+  /^n\/?a$/i,                  // n/a, N/A
+  /^none$/i,
+  /^null$/i,
+  /^undefined$/i,
+  /^placeholder$/i,
+  /^test$/i,
+  /^sample$/i,
+  /^edit\s*me$/i,
+  /^add\s*alt$/i,
+  /^alt\s*text$/i,
+  /^description$/i,
+];
+
+/**
+ * Checks if alt text is "bad" and needs rewriting
+ */
+function isBadAlt(alt: string | undefined): boolean {
+  if (DISABLE_ALT_REWRITE) return false;
+  
+  if (!alt) return true;
+  
+  const trimmed = alt.trim();
+  
+  // Too short to be meaningful
+  if (trimmed.length < 15) return true;
+  
+  // Matches a known bad pattern
+  if (BAD_ALT_PATTERNS.some(pattern => pattern.test(trimmed))) return true;
+  
+  // All caps (likely a filename or code)
+  if (trimmed === trimmed.toUpperCase() && trimmed.length > 3 && /\d/.test(trimmed)) return true;
+  
+  return false;
+}
+
+/**
+ * Gets the best available alt text, rewriting bad alts from fallbacks
+ */
+function getBestAlt(
+  originalAlt: string | undefined,
+  fallbackTitle: string | undefined,
+  fallbackDescription: string | undefined
+): { alt: string; wasRewritten: boolean } {
+  // If original is good, use it
+  if (!isBadAlt(originalAlt)) {
+    return { alt: originalAlt!.trim(), wasRewritten: false };
+  }
+  
+  // Try fallback title
+  if (fallbackTitle && !isBadAlt(fallbackTitle)) {
+    return { alt: fallbackTitle.trim(), wasRewritten: true };
+  }
+  
+  // Try fallback description (first 150 chars if long)
+  if (fallbackDescription && !isBadAlt(fallbackDescription)) {
+    const desc = fallbackDescription.trim();
+    const truncated = desc.length > 150 ? desc.slice(0, 147) + '...' : desc;
+    return { alt: truncated, wasRewritten: true };
+  }
+  
+  // Ultimate fallback
+  return { alt: 'Fine art photograph', wasRewritten: true };
 }
 
 /**
@@ -53,11 +149,11 @@ function hasSemanticCoverage(alt: string, signals: string[]): boolean {
 }
 
 /**
- * Builds contextual alt text with semantic sufficiency checking.
+ * Builds contextual alt text with semantic sufficiency checking and bad alt rewriting.
  * 
  * @param originalAlt - The original alt text from the image database
  * @param pageContext - Page-level context with topic, keyword pool, and semantic signals
- * @param options - Alt tier, index for rotation, and decorative duplicate flag
+ * @param options - Alt tier, index for rotation, decorative duplicate flag, and fallbacks
  * @returns Contextual alt text (or empty string for decorative duplicates)
  * 
  * @example
@@ -69,6 +165,11 @@ function hasSemanticCoverage(alt: string, signals: string[]): boolean {
  * // Insufficient - adds suffix
  * buildContextualAlt("Man in red shirt and hat", westernContext, { tier: 'C', index: 0 })
  * // Returns: "Man in red shirt and hat — Western fine art photography."
+ * 
+ * @example
+ * // Bad alt rewritten from fallback
+ * buildContextualAlt("IMG_1234", westernContext, { tier: 'A', fallbackTitle: "Cowboy at Dawn" })
+ * // Returns: "Cowboy at Dawn" (or with suffix if insufficient)
  * 
  * @example
  * // Decorative duplicate - returns empty
@@ -85,17 +186,23 @@ export function buildContextualAlt(
     ? { index: options } 
     : options;
   
-  const { index = 0, tier = 'C', isDecorativeDuplicate = false } = opts;
+  const { 
+    index = 0, 
+    tier = 'C', 
+    isDecorativeDuplicate = false,
+    fallbackTitle,
+    fallbackDescription,
+  } = opts;
   
   // Decorative duplicates (e.g., infinite scroll copies) get empty alt
   if (isDecorativeDuplicate) {
     return '';
   }
   
-  // Fallback if no original alt
-  const alt = originalAlt?.trim() || 'Fine art photograph';
+  // Get the best available alt text (rewrites bad alts from fallbacks)
+  const { alt } = getBestAlt(originalAlt, fallbackTitle, fallbackDescription);
   
-  // If no page context, return original alt unchanged
+  // If no page context, return the (possibly rewritten) alt unchanged
   if (!pageContext || !pageContext.keywordPool?.length) {
     return alt;
   }
@@ -242,6 +349,28 @@ export const hubPageContexts: Record<string, PageContext> = {
       'frontier',
       'western',
       'black and white',
+    ],
+  },
+  // ✅ WAYNE HEIM AUTHORITY PAGE – Entity classifier with section-specific pools
+  '/wayne-heim-western-fine-art-photography': {
+    topic: 'Wayne Heim Western Fine Art Photography',
+    keywordPool: [
+      'Western fine art photography by Wayne Heim',
+      'Wayne Heim cowboy photography',
+      'Wayne Heim Western photography',
+      'fine art Western photography',
+      'painterly Western photography',
+    ],
+    semanticSignals: [
+      'wayne heim',
+      'western',
+      'cowboy',
+      'frontier',
+      'american west',
+      'native american',
+      'indigenous',
+      'painterly',
+      'fine art',
     ],
   },
 };

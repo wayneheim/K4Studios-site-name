@@ -90,10 +90,12 @@ export default function ImageBar2({ slides, pageContext: propPageContext }) {
           
           // Build contextual alt text with Tier A (hero/carousel) and semantic sufficiency check
           // Duplicated slides get empty alt + aria-hidden to reduce keyword density
+          // Pass description as fallback for bad alt detection/rewriting
           const contextualAlt = buildContextualAlt(s.alt, resolvedContext, {
             index: originalIndex,
             tier: 'A',
-            isDecorativeDuplicate: isDuplicate
+            isDecorativeDuplicate: isDuplicate,
+            fallbackDescription: s.description
           });
           
           return (

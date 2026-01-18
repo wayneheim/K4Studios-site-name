@@ -46569,6 +46569,19 @@ export const galleryDataMap   = {
       "galleries": [
         "Other/Archive"
       ]
+    },
+    {
+      "id": "i-3S3RMNW",
+      "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/K4bfbFqvHLVBtZ9DHk4gXhP7VJCKd7WwXhp2j7kfc/S/_O1H0177_tonemapped-596-S.jpg",
+      "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/LT4nJmc7SK6CLBPsDBffqccHHsbmFRS9qT3WsnR7k/M/_O1H0177_tonemapped-596-M.jpg",
+      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/MDrgvhdKFbH96QGvtfXkTB9kxkSpdmfhgJ6hDnJnP/L/_O1H0177_tonemapped-596-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3S3RMNW/0/NLFRjW6FX8f9sGDcH2gSHCCSBwvFn7hj5hrXjcmpg/XL/_O1H0177_tonemapped-XL.jpg",
+      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/K4bfbFqvHLVBtZ9DHk4gXhP7VJCKd7WwXhp2j7kfc/S/_O1H0177_tonemapped-596-S.jpg",
+      "rating": 0,
+      "visibility": "hidden",
+      "galleries": [
+        "Other/Archive"
+      ]
     }
   ]
 };
@@ -93211,6 +93224,19 @@ export const allImages        = [
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fszvgmq/3/MT6xBV59M4CCW9kmG9mck2sDR6MGxhMQX3jGQ7ppP/XL/P1010060-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fszvgmq/3/LWKWPFJR9pCGCHqk6TnFrznM9JWNpWPR3WF3wzhtw/S/P1010060-S.jpg",
     "rating": 4,
+    "visibility": "hidden",
+    "galleries": [
+      "Other/Archive"
+    ]
+  },
+  {
+    "id": "i-3S3RMNW",
+    "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/K4bfbFqvHLVBtZ9DHk4gXhP7VJCKd7WwXhp2j7kfc/S/_O1H0177_tonemapped-596-S.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/LT4nJmc7SK6CLBPsDBffqccHHsbmFRS9qT3WsnR7k/M/_O1H0177_tonemapped-596-M.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/MDrgvhdKFbH96QGvtfXkTB9kxkSpdmfhgJ6hDnJnP/L/_O1H0177_tonemapped-596-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3S3RMNW/0/NLFRjW6FX8f9sGDcH2gSHCCSBwvFn7hj5hrXjcmpg/XL/_O1H0177_tonemapped-XL.jpg",
+    "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/K4bfbFqvHLVBtZ9DHk4gXhP7VJCKd7WwXhp2j7kfc/S/_O1H0177_tonemapped-596-S.jpg",
+    "rating": 0,
     "visibility": "hidden",
     "galleries": [
       "Other/Archive"
