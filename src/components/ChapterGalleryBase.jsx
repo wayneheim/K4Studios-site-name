@@ -911,7 +911,7 @@ export default function ChapterGalleryBase({
 
   return (
     <div
-      className="min-h- bg-white text-black font-serif px-5 py-8 overflow-x-hidden"
+      className="min-h- bg-white text-black font-serif px-5 py-2 md:py-8 overflow-x-hidden"
       style={{ fontFamily: "Glegoo, serif", maxWidth: '100%', width: '100%', boxSizing: 'border-box' }}
       onMouseMove={() => setShowArrows(true)}
     >
@@ -935,6 +935,62 @@ export default function ChapterGalleryBase({
         ) : (
           <>
             {viewMode === "flip" && (
+              <>
+              {/* Mobile Top Toolbar - Outside the motion.div */}
+              {isMobile && (
+                <div
+                  className="relative flex items-center justify-between rounded-lg shadow-sm px-3 py-1.5 sm:hidden"
+                  style={{ 
+                    width: 'calc(100vw - 4rem)', 
+                    maxWidth: 'calc(100vw - 4rem)',
+                    backgroundColor: '#6b5e54',
+                    margin: '0 auto 0.35rem auto'
+                  }}
+                >
+                  {/* Left: Menu */}
+                  <button
+                    type="button"
+                    className="flex items-center justify-center w-7 h-7 text-gray-200 text-lg transition-colors duration-150 hover:text-white"
+                    aria-label="Show Menu"
+                    title="Show Menu"
+                    style={{ fontWeight: 400 }}
+                    onClick={(e) => { e.stopPropagation(); setShowMiniMenu(true); }}
+                    data-menu-btn-top
+                  >
+                    ☰
+                  </button>
+
+                  {/* Count - positioned at 25% (halfway between left edge and center) */}
+                  <div 
+                    className="absolute text-sm text-gray-300 font-medium whitespace-nowrap" 
+                    style={{ left: '25%', transform: 'translateX(-50%)', letterSpacing: "-0.05em", opacity: 0.5 }}
+                  >
+                    {`${currentIndex + 1}/${galleryData.length}`}
+                  </div>
+
+                  {/* Center: K4 Studios */}
+                  <a
+                    href="/"
+                    title="K4 Studios Home"
+                    className="text-base font-semibold no-underline hover:underline absolute left-1/2 -translate-x-1/2"
+                    style={{ color: '#ffffff', fontFamily: "'Glegoo', serif", letterSpacing: '0.1em', opacity: 0.5 }}
+                  >
+                    K4 Studios
+                  </a>
+
+                  {/* Right: Exit */}
+                  <button
+                    type="button"
+                    className="inline-flex items-center justify-center w-6 h-6 text-gray-300 hover:text-white transition-colors cursor-pointer"
+                    aria-label="Exit Chapter View"
+                    title="Exit Viewer"
+                    onClick={goExit}
+                    data-exit-btn-top
+                  >
+                    <CircleX className="w-5 h-5" />
+                  </button>
+                </div>
+              )}
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentIndex}
@@ -946,29 +1002,6 @@ export default function ChapterGalleryBase({
                   {...swipeHandlers}
                   data-image-id={currentId}
                 >
-                  {/* Mobile breadcrumb line */}
-                  {isMobile && (
-                    <div
-                      className="text-center text-2xl text-gray-400 tracking-wide mb-0 sm:hidden font-bold"
-                      style={{ fontFamily: "'Glegoo', serif", marginTop: "-2.0rem", opacity: ".6", lineHeight: "1" }}
-                    >
-                      ⸺{" "}
-                      <a
-                        href={(() => {
-                          const parts = window.location.pathname.split("/");
-                          const iIdx = parts.findIndex((p) => p.startsWith("i-"));
-                          return iIdx > 1
-                            ? parts.slice(0, iIdx - 1).join("/")
-                            : parts.slice(0, -1).join("/");
-                        })()}
-                        title="Explore Full Collection"
-                        className="text-[#85644b] no-underline hover:underline"
-                      >
-                        K4 Studios
-                      </a>{" "}
-                      ⸺
-                    </div>
-                  )}
 
                   {/* IMAGE + ARROWS COLUMN */}
                   <div
@@ -1186,29 +1219,31 @@ export default function ChapterGalleryBase({
                     </div>
 
                     {/* Unified Nav Row + Guide trigger */}
-                    <div className="flex items-center justify-center gap-2 mt-4 mb-1">
+                    <div className={`flex items-center justify-center gap-2 mb-1 ${isMobile ? 'mt-2' : 'mt-4'}`}>
                       {/* Toolbar */}
                       <div
                         className={
-                          `flex items-center gap-1 md:gap-6 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-1 py-1 select-none ` +
+                          `flex items-center gap-1 md:gap-6 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-3 py-1 select-none ` +
                           (isMobile ? ' w-full' : ' max-w-[1300px]')
                         }
-                        style={isMobile ? { width: 'calc(100vw - 2.5rem)', maxWidth: 'calc(100vw - 2.5rem)', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly' }}
+                        style={isMobile ? { width: 'calc(100vw - 4rem)', maxWidth: 'calc(100vw - 4rem)', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly' }}
                       >
-                        {/* Menu */}
-                      <button
-                        type="button"
-                        className={`flex items-center justify-center w-7 h-7 text-gray-500 text-lg transition-colors duration-150 hover:text-gray-700 ${isMobile ? '' : 'border border-gray-200 hover:bg-gray-100 bg-white rounded-full shadow-sm hover:border-red-200 hover:border-gray-300 focus:border-gray-300'}`}
-                        aria-label="Show Menu"
-                        title="Show Menu"
-                        style={{ fontWeight: 400 }}
-                        onClick={(e) => { e.stopPropagation(); setShowMiniMenu(true); }}
-                        data-menu-btn
-                      >
-                        ☰
-                      </button>
+                        {/* Menu - Desktop only */}
+                      {!isMobile && (
+                        <button
+                          type="button"
+                          className="flex items-center justify-center w-7 h-7 text-gray-500 text-lg transition-colors duration-150 hover:text-gray-700 border border-gray-200 hover:bg-gray-100 bg-white rounded-full shadow-sm hover:border-red-200 hover:border-gray-300 focus:border-gray-300"
+                          aria-label="Show Menu"
+                          title="Show Menu"
+                          style={{ fontWeight: 400 }}
+                          onClick={(e) => { e.stopPropagation(); setShowMiniMenu(true); }}
+                          data-menu-btn
+                        >
+                          ☰
+                        </button>
+                      )}
 
-                      {/* Notes (mobile) */}
+                      {/* Notes (mobile) - First item on mobile */}
                       {galleryData[currentIndex]?.notes && isMobile && (
                         <button
                           ref={notesBtnRef}
@@ -1240,10 +1275,12 @@ export default function ChapterGalleryBase({
                         </button>
                       )}
 
-                      {/* Gallery count */}
-                      <div className="text-sm text-gray-400 font-medium flex items-center whitespace-nowrap" style={{ letterSpacing: "-0.085em" }} data-count>
-                        {`${currentIndex + 1} – ${galleryData.length}`}
-                      </div>
+                      {/* Gallery count - Desktop only */}
+                      {!isMobile && (
+                        <div className="text-sm text-gray-400 font-medium flex items-center whitespace-nowrap" style={{ letterSpacing: "-0.085em" }} data-count>
+                          {`${currentIndex + 1} – ${galleryData.length}`}
+                        </div>
+                      )}
 
                       {/* THEME FILTER STAR (Click-To-Toggle, No Hover Popover) */}
                       {activeTheme && (
@@ -1306,19 +1343,7 @@ export default function ChapterGalleryBase({
                         </div>
                       )}
 
-                      {/* Grid icon (mobile) */}
-                      <button
-                        type="button"
-                        onClick={goGrid}
-                        aria-label="View Grid Mode"
-                        title="View Grid Mode"
-                        className="md:hidden flex items-center justify-center w-7 h-7 transition-colors"
-                        data-grid-btn
-                      >
-                        <Grid className="w-5 h-5" style={{ stroke: "#84766d" }} />
-                      </button>
-
-                      {/* Jump form */}
+                      {/* Jump form - Second on mobile */}
                       <form
                         onSubmit={(e) => {
                           e.preventDefault();
@@ -1330,7 +1355,7 @@ export default function ChapterGalleryBase({
                             setCurrentIndex(num - 1);
                           }
                         }}
-                        className="flex items-center gap-0 text-xs"
+                        className="flex items-center gap-1 text-xs"
                         style={{ minWidth: 50 }}
                         data-jump-form
                       >
@@ -1340,21 +1365,39 @@ export default function ChapterGalleryBase({
                           name="chapterNum"
                           min="1"
                           max={galleryData.length}
-                          placeholder="#"
-                          className="w-10 border border-gray-200 rounded px-1 py-1 text-center"
+                          placeholder={isMobile ? "Jump to #" : "#"}
+                          className="w-20 border border-gray-200 rounded px-1 py-1 text-center"
                           style={{ fontSize: "1.0em" }}
                         />
                         <button 
                           type="submit" 
-                          className="bg-gray-100 px-0.5 py-1 text-gray-400 border border-gray-300 rounded shadow hover:border-red-200 hover:text-gray-500 hover:bg-gray-100"
+                          className="bg-gray-100 px-1 py-1 text-gray-400 border border-gray-300 rounded shadow hover:border-red-200 hover:text-gray-500 hover:bg-gray-100 text-xs"
                           aria-label="Jump to image number"
-                          title="Jump to #"
+                          title="Jump to image"
                         >
-                          ➜
+                          {isMobile ? "Go" : "➜"}
                         </button>
                       </form>
 
-                      {/* Cart */}
+                      {/* Grid icon (mobile) - Third on mobile */}
+                      <button
+                        type="button"
+                        onClick={goGrid}
+                        aria-label="View Grid Mode"
+                        title="View Grid Mode"
+                        className="md:hidden flex items-center justify-center gap-1 transition-colors"
+                        data-grid-btn
+                      >
+                        <Grid className="w-5 h-5" style={{ stroke: "#84766d" }} />
+                        <span className="text-xs" style={{ color: "#84766d", opacity: 0.5 }}>All</span>
+                      </button>
+
+                      {/* ❤️ Like Button - Fourth on mobile */}
+                      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200" data-like-btn>
+                        <LikeButton imageId={galleryData[currentIndex]?.id} pageTitle={galleryData[currentIndex]?.title} />
+                      </div>
+
+                      {/* Cart - Fifth on mobile */}
                       {isEngrainedSeries ? (
                         <button
                           data-cart-btn
@@ -1395,36 +1438,20 @@ export default function ChapterGalleryBase({
                         </button>
                       )}
 
-                      {/* ❤️ Like Button */}
-                      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-gray-300 bg-white shadow hover:bg-gray-100 transition-colors hover:border-red-200" data-like-btn>
-                        <LikeButton imageId={galleryData[currentIndex]?.id} pageTitle={galleryData[currentIndex]?.title} />
-                      </div>
-
-                      {/* Mobile Guide "i" button: between Like and Exit */}
-                      {isMobile && (
+                      {/* Exit - Desktop only (mobile exit is in top bar) */}
+                      {!isMobile && (
                         <button
                           type="button"
-                          aria-label="Open Guide"
-                          title="View our brief guided walk-through of all the features of our gallery viewer."
-                          className="inline-flex items-center justify-center w-8 h-8 hover:opacity-80 transition-opacity"
-                          onClick={(e) => { e.stopPropagation(); logUIEvent("guide_open", { page: window.location.pathname, sectionKey }); setTourOpenNonce(n => n + 1); }}
+                          className="inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
+                          aria-label="Exit Chapter View"
+                          title="Exit Viewer"
+                          style={{ position: 'relative', zIndex: 20 }}
+                          onClick={goExit}
+                          data-exit-btn
                         >
-                          <Info className="w-7 h-7 text-gray-300" />
+                          <CircleX className="w-7 h-7" />
                         </button>
                       )}
-
-                      {/* Exit */}
-                      <button
-                        type="button"
-                        className="inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
-                        aria-label="Exit Chapter View"
-                        title="Exit Viewer"
-                        style={{ position: 'relative', zIndex: 20 }}
-                        onClick={goExit}
-                        data-exit-btn
-                      >
-                        <CircleX className="w-7 h-7" />
-                      </button>
                       </div>
                       {/* Desktop-only Guide button to the right of the toolbar */}
                       {!isMobile && (
@@ -1451,31 +1478,41 @@ export default function ChapterGalleryBase({
                       if (displaySeries.length === 0) return null;
                       
                       return (
-                        <div className="flex items-center justify-center gap-4 my-2 md:hidden">
-                          {displaySeries.map((seriesKey, index) => {
-                            const def = SERIES_DEFINITIONS[seriesKey];
-                            return (
-                              <div key={seriesKey} className="flex items-center">
-                                <button
-                                  type="button"
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    logUIEvent("series_info", { page: window.location.pathname, series: seriesKey });
-                                    setSeriesInfoScrollTo(seriesKey);
-                                    setShowSeriesInfoPopup(true);
-                                  }}
-                                  title={`${def.label} Series Member`}
-                                  className="text-lg p-1 transition-opacity"
-                                  style={{ color: "#3c83b3", opacity: 0.7 }}
-                                >
-                                  {def.icon || SERIES_ICONS[seriesKey]}
-                                </button>
-                                {index < displaySeries.length - 1 && (
-                                  <span className="text-gray-300 text-sm ml-4">|</span>
-                                )}
-                              </div>
-                            );
-                          })}
+                        <div className="flex items-center justify-center my-2 md:hidden">
+                          {/* Icons container with relative positioning for label */}
+                          <div className="relative flex items-center gap-4">
+                            {/* Series label - anchored to left of icons container */}
+                            <span 
+                              className="absolute text-xs font-medium whitespace-nowrap"
+                              style={{ right: '100%', marginRight: '8px', color: '#3c83b3', opacity: 0.5 }}
+                            >
+                              Series <span className="font-bold">:</span>
+                            </span>
+                            {displaySeries.map((seriesKey, index) => {
+                              const def = SERIES_DEFINITIONS[seriesKey];
+                              return (
+                                <div key={seriesKey} className="flex items-center">
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      logUIEvent("series_info", { page: window.location.pathname, series: seriesKey });
+                                      setSeriesInfoScrollTo(seriesKey);
+                                      setShowSeriesInfoPopup(true);
+                                    }}
+                                    title={`${def.label} Series Member`}
+                                    className="text-lg p-1 transition-opacity"
+                                    style={{ color: "#3c83b3", opacity: 0.7 }}
+                                  >
+                                    {def.icon || SERIES_ICONS[seriesKey]}
+                                  </button>
+                                  {index < displaySeries.length - 1 && (
+                                    <span className="text-gray-300 text-sm ml-4">|</span>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
                         </div>
                       );
                     })()}
@@ -1483,7 +1520,7 @@ export default function ChapterGalleryBase({
                     {!showStoryShow && (
                       isMobile ? (
                         // Mobile: arrows flanking slideshow button
-                        <div className="my-3 md:hidden flex items-center justify-center gap-3" data-image-id={currentId}>
+                        <div className="my-1 md:hidden flex items-center justify-center gap-3" data-image-id={currentId}>
                           <button
                             type="button"
                             onClick={goPrev}
@@ -1509,7 +1546,7 @@ export default function ChapterGalleryBase({
                               }}
                               aria-label="Play K4 Slideshow"
                               title="Play K4 Story Show"
-                              className="inline-flex items-center gap-2 rounded-full px-4 py-2 border shadow-sm"
+                              className="inline-flex items-center justify-center gap-1.5 rounded-md px-3 h-8 border shadow-sm"
                               style={{
                                 backgroundColor: "#f5f3eeff",
                                 borderColor: "#e3d5c9",
@@ -1518,10 +1555,10 @@ export default function ChapterGalleryBase({
                               }}
                               data-slideshow-btn
                             >
-                              <span className="inline-flex items-center justify-center w-4 h-4" style={{ color: "#7b1e1e" }}>
+                              <span className="inline-flex items-center justify-center w-3 h-3" style={{ color: "#7b1e1e" }}>
                                 ▶
                               </span>
-                              <span className="text-sm font-semibold">Play Show</span>
+                              <span className="text-xs font-semibold">Slideshow</span>
                             </button>
                             
                           </div>
@@ -1643,21 +1680,32 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                     </div>
 
                     {/* Title */}
-                    <h1
-                      className="text-center font-semibold mb-1 tracking-wide text-[#85644b]"
-                      style={{ fontSize: "1.55rem", opacity: 0.5, lineHeight: isMobile ? "1.0" : "1.35", fontFamily: "'Glegoo', serif" }}
-                    >
-                      Chapter {currentIndex + 1}:
-                      <>
-                        <br />
-                        <span className="chapter-title">{
-                          galleryData[currentIndex]?.meta?.ogTitle ||
-                          galleryData[currentIndex]?.title ||
-                          galleryData[currentIndex]?.alt ||
-                          titleBase
-                        }</span>
-                      </>
-                    </h1>
+                    {(() => {
+                      const chapterTitle = galleryData[currentIndex]?.meta?.ogTitle ||
+                        galleryData[currentIndex]?.title ||
+                        galleryData[currentIndex]?.alt ||
+                        titleBase;
+                      // Dynamic font size: shrink for long titles on mobile
+                      const titleLength = chapterTitle?.length || 0;
+                      const mobileTitleSize = titleLength > 40 ? '1.0rem' : titleLength > 30 ? '1.15rem' : '1.35rem';
+                      return (
+                        <h1
+                          className="text-center font-semibold mb-1 tracking-wide text-[#85644b]"
+                          style={{ fontSize: "1.55rem", opacity: 0.5, lineHeight: isMobile ? "1.0" : "1.35", fontFamily: "'Glegoo', serif" }}
+                        >
+                          Chapter {currentIndex + 1}:
+                          <>
+                            <br />
+                            <span 
+                              className="chapter-title"
+                              style={isMobile ? { fontSize: mobileTitleSize } : {}}
+                            >
+                              {chapterTitle}
+                            </span>
+                          </>
+                        </h1>
+                      );
+                    })()}
 
                     {/* Story */}
                     <p className="italic text-base mt-3 md:text-lg mb-4 leading-snug text-left">
@@ -1872,6 +1920,7 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                   </div>
                 </motion.div>
               </AnimatePresence>
+              </>
             )}
 
             {/* Mini Menu Drawer */}

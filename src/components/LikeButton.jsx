@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Heart } from "lucide-react";
+import { ThumbsUp } from "lucide-react";
 
 export default function LikeButton({ imageId, pageTitle }) {
   const [liked, setLiked] = useState(false);
@@ -93,9 +93,9 @@ export default function LikeButton({ imageId, pageTitle }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <Heart
-        size={22}
-        strokeWidth={2.2}
+      <ThumbsUp
+        size={20}
+        strokeWidth={2}
         color={liked ? "#dc2626" : hovered ? "#dc2626" : "#9ca3af"}
         fill={liked ? "#dc2626" : "none"}
         style={{
@@ -104,8 +104,8 @@ export default function LikeButton({ imageId, pageTitle }) {
         }}
         className={
           liked
-            ? "heart-liked"
-            : "heart-unliked"
+            ? "thumbs-liked"
+            : "thumbs-unliked"
         }
       />
       {/* Tooltip text on hover */}
