@@ -9,6 +9,12 @@ import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import { getStructuredData } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
+// Bail out early for legacy SmugMug RSS URLs - redirect to clean Glossary
+const legacyParams = Astro.url.searchParams;
+if (legacyParams.get('format') === 'rss200' || legacyParams.get('Type') === 'gallery') {
+  return Astro.redirect('/Glossary', 301);
+}
+
 import { siteNav } from '@/data/siteNav.ts';
 import { getSideImages } from '@/components/utils/getSideImages.ts';
 import { semantic } from '@/data/semantic/K4-Sem.ts';

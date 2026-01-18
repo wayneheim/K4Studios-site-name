@@ -79,7 +79,9 @@ const usedEntranceData = {
  * --------------------------------------------------------------- */
 const siteBase = import.meta.env.SITE || "https://www.k4studios.com";
 const pathOnly = Astro.url.pathname;
-const canonicalUrl = `${siteBase}${pathOnly.replace(/\/$/, "")}`;
+// Include theme param in canonical if present (themes are indexable)
+const themeParam = Astro.url.searchParams.get("theme");
+const canonicalUrl = `${siteBase}${pathOnly.replace(/\/$/, "")}${themeParam ? `?theme=${themeParam}` : ""}`;
 const galleryAbsUrl = `${siteBase}${previewPath}`;
 
 /** ---------------------------------------------------------------

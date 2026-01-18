@@ -31,6 +31,12 @@ to = "/sitemap.xml"
 status = 301
 force = true
 
+# Redirect bare lightbox page to Galleries landing
+[[redirects]]
+from = "/Galleries/lightbox"
+to = "/Galleries"
+status = 301
+force = true
 
 ##############################
 # ✅ Gallery Deep-Link Fixes
@@ -311,6 +317,21 @@ force = true
 #       to Painterly-Fine-Art-Photography, which broke Traditional routes.
 #       If specific legacy subpaths need mapping, add them explicitly below
 #       instead of a blanket catch-all.
+
+# --- Legacy SmugMug RSS feed format URLs ---
+[[redirects]]
+from = "/*"
+query = {format = "rss200"}
+to = "/"
+status = 410
+force = true
+
+[[redirects]]
+from = "/*"
+query = {Type = "gallery"}
+to = "/"
+status = 410
+force = true
 
 # --- Old numeric SmugMug gallery paths ---
 [[redirects]]

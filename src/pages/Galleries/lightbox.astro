@@ -10,7 +10,11 @@ const datasetParam = decodeURIComponent(params.get("dataset") ?? "");
 
 // ✅ Normalize and derive datasetPath for later use
 //   Example param: "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-const datasetPathRaw = datasetParam.replace(/^\/?src\/data\//, "").replace(/\.mjs$/i, "");
+//   Also handles: "/Galleries/..." (already clean path)
+const datasetPathRaw = datasetParam
+  .replace(/^\/?src\/data\//, "")  // Strip src/data/ prefix if present
+  .replace(/^\//, "")               // Strip leading slash
+  .replace(/\.mjs$/i, "");          // Strip .mjs extension
 
 // ✅ Dynamic import of the specific gallery dataset
 let galleryData = [];
