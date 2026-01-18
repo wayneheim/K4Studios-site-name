@@ -84,7 +84,7 @@ export const galleryData = [
  "title": "Hired Gun – Ranger on the Rails",
  "description": "Security my ass. Call it what you will. We all know what we signed up for. God forgive us all. Grizzled Texas Ranger cowboy riding the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
  "alt": "Texas Ranger cowboy on train, printed on Baltic birch wood – Engrained Series",
- "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/1/LcfcqQx3QHhqKPD7pFq3nBcLknQmBfxcjHMrNjr5H/XL/Cowboy-Hired-Gun-ws-XL.jpg",
+ "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/2/NJGkNn4VCmq9MR4qhphkJM6B5mJDFjVTcmMgGRBCt/XL/Cowboy-Hired-Gun-ws-XL.jpg",
  "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/A",
 
  "keywords": [
@@ -296,7 +296,7 @@ export const galleryData = [
  "title": "Longing and Regret",
  "description": "A painterly Western portrait capturing a moment of quiet reflection and unresolved thought. An elderly cowboy gazes into the distance, his expression shaped by memory, choice, and the passage of time. The restrained composition allows light, texture, and expression to carry the emotional weight without spectacle.\n\nWayne Heim’s Western fine art photography often focuses on these inward moments—where the American West becomes a psychological landscape as much as a physical one. This image reflects the enduring tension between what has been left behind and what still lies ahead, offering a contemplative study of longing, regret, and endurance.\n© Wayne Heim",
  "alt": "Painterly Western fine art portrait of an elderly cowboy gazing into the distance, expressing reflection, longing, and quiet regret in the American West",
- "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/7/NKn3Jm2kBcH7FF4ghNDJ4WScpJ7mpN6fSKsmTxFNS/XL/Cowboy-One-Last-Look-ws-XL.jpg",
+ "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/8/MmjhWHz9gsBVmXmJRjHjhdntvnrd3L7cfMHQVkgtT/XL/Cowboy-One-Last-Look-ws-XL.jpg",
  "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/A",
 
  "keywords": [
@@ -395,7 +395,7 @@ export const galleryData = [
  "title": "Up to No Good",
  "description": "Big Jim waits on the porch, the light soft and patience worn thin—ready for whatever the West throws his way. This Engrained Series print fuses humor, grit, and artistry, uniquely rendered on Baltic birch wood.",
  "alt": "Big Jim cowboy waiting on porch – Western wood print, Engrained Series",
- "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/2/LpJ8wLMzkcTbgxzmPRfWgwQ24tcpM4dRf8NSMZKcJ/XL/Cowboy-Up-to-No-Good-ws-XL.jpg",
+ "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/3/KV3BpbhWj7QtFnT5N9dn95VHRKsjFBnkGqDQBgRrR/XL/Cowboy-Up-to-No-Good-ws-XL.jpg",
  "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/A",
  "keywords": [
   "cowboy",

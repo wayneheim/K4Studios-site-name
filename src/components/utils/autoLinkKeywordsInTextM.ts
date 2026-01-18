@@ -85,10 +85,12 @@ export function autoLinkKeywordsInTextM(html, _sectionPath, featheredImages) {
   });
 
   for (const img of linkableImages) {
-    [img.title, img.alt, img.description, ...(img.keywords || [])]
+    // Note: Exclude img.description as it's typically too long and causes regex issues
+    [img.title, img.alt, ...(img.keywords || [])]
       .filter(Boolean)
       .forEach(str => {
-        if (typeof str === "string" && str.trim().split(/\s+/).length > 1) {
+        // Only include short phrases (max 100 chars) to avoid regex performance issues
+        if (typeof str === "string" && str.trim().length <= 100 && str.trim().split(/\s+/).length > 1) {
           validPhrases.add(str.trim().toLowerCase());
         }
       });

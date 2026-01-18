@@ -499,8 +499,8 @@ body.loading * {
 @media (max-width: 768px) {
   .chapter-image-mobile {
     max-height: none !important; /* disable restrictive crop on mobile */
-    width: 100% !important;
-    object-fit: contain !important;
+    width: auto !important;
+    max-width: 100% !important;
     border-radius: 12px;
   }
   /* Escaped tailwind-style class selector */
@@ -522,13 +522,12 @@ div.mini-drawer-nav div.mini-nav-item {
 /* Fix for mobile LANDSCAPE orientation (horizontal phone/tablet) */
 @media (orientation: landscape) and (max-width: 900px) and (pointer: coarse) {
   .chapter-image-mobile {
-    object-fit: contain !important;
     max-height: none !important;
     height: auto !important;
-    width: 50% !important;
+    width: auto !important;
+    max-width: 50% !important;
     display: block;
     margin: 0 auto;
-    background: #fff;
   }
   /* Remove aspect ratio constraint on parent div if needed: */
   .aspect-\[4\/5\] {

@@ -998,25 +998,25 @@ export default function ChapterGalleryBase({
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: direction > 0 ? -150 : 150 }}
                   transition={{ duration: 0.6, ease: [0.45, 0, 0.55, 1] }}
-                  className="grid md:grid-cols-2 gap-6 md:gap-12 items-center md:min-h-[75vh]"
+                  className="flex flex-col md:flex-row gap-6 md:gap-12 items-center md:items-start justify-center md:min-h-[75vh]"
                   {...swipeHandlers}
                   data-image-id={currentId}
                 >
 
                   {/* IMAGE + ARROWS COLUMN */}
                   <div
-                    className="flex flex-col items-center w-full relative chapter-image-container-mobile"
-                    style={{ marginTop: !isMobile ? '2rem' : 0, ...(isMobile ? { maxWidth: '100%', overflowX: 'hidden' } : {}) }}
+                    className="flex flex-col items-center relative chapter-image-container-mobile"
+                    style={{ marginTop: !isMobile ? '2rem' : 0, width: 'fit-content', ...(isMobile ? { maxWidth: '100%', overflowX: 'hidden', width: '100%' } : {}) }}
                   >
 
                     <div className="w-full relative flex items-center justify-center mb-0 chapter-image-container-mobile" style={isMobile ? { maxWidth: '100%', overflowX: 'hidden' } : {}}>
                       {/* Removed absolute-positioned mobile arrows; moved to row near slideshow */}
 
-                      <div className="relative w-full md:w-[575px] flex flex-row chapter-image-container-mobile" style={isMobile ? { maxWidth: '100%', overflowX: 'hidden' } : {}}> 
+                      <div className="relative flex flex-row justify-center chapter-image-container-mobile" style={isMobile ? { maxWidth: '100%', overflowX: 'hidden', width: '100%' } : { maxWidth: '575px', width: 'fit-content' }}> 
                         {/* Image container with absolutely positioned collector notes button outside/right of image edge */}
                         <div
                           className="relative flex justify-center items-center chapter-image-container-mobile"
-                          style={{ width: 'fit-content', maxWidth: '100%', margin: '0 auto', display: 'inline-block' }}
+                          style={{ width: 'fit-content', maxWidth: '100%', margin: '0 auto' }}
                         >
                           <img
                             src={galleryData[currentIndex]?.src}
@@ -1032,7 +1032,6 @@ export default function ChapterGalleryBase({
                                     maxWidth: "calc(100vw - 2.5rem)",
                                     width: "auto",
                                     height: "auto",
-                                    objectFit: "contain",
                                     maxHeight: "65vh",
                                     border: '1px solid rgba(120,120,120,0.30)',
                                     boxShadow: '0 1px 3px rgba(0,0,0,0.08)'
@@ -1043,9 +1042,7 @@ export default function ChapterGalleryBase({
                                   maxWidth: isLandscape ? "550px" : "100%",
                                   width: "auto",
                                   height: "auto",
-                                  objectFit: "contain",
                                   maxHeight: "70vh",
-                                  background: "#f7f7f7",
                                   transition: 'box-shadow .3s ease',
                                   border: '1px solid rgba(110,110,110,0.28)',
                                   boxShadow: '0 2px 5px rgba(0,0,0,0.10)'

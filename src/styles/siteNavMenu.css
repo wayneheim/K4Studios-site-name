@@ -518,10 +518,8 @@ border: none !important;
 
 @media (min-width: 800px) {
   .leaf-prefix {
-    opacity: 0;
-    font-size: 1rem;
-    line-height: 5px;
-    margin-left: -.7rem;}
+    display: none; /* Hide completely on desktop, not just opacity */
+  }
 }
 
 @media (min-width: 769px) {
