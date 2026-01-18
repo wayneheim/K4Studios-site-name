@@ -683,5 +683,13 @@ export const siteNav = [
     "code": "O",
     "type": "collection",
     "slug": "contact"
+  },
+{
+    "label": "Archive",
+    "href": "/Other/Archive",
+    "code": "ARCHIVE",
+    "type": "gallery-source",
+    "slug": "archive",
+    "hidden": true
   }
 ];

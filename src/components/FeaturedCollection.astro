@@ -140,6 +140,9 @@ const structuredData = JSON.stringify({
     
     if (link) {
       link.addEventListener('click', () => {
+        // Skip logging on localhost (admin/dev work)
+        if (window.location.hostname === 'localhost') return;
+        
         // GA4 tracking
         if (typeof gtag === 'function') {
           gtag('event', analyticsLabel, {

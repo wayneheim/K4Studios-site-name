@@ -14,6 +14,7 @@
     "gen:sitemap": "node scripts/generate-sitemap-data.mjs",
     "gen:sitemap:matches": "node scripts/generate-sitemap-matches.mjs",
     "gen:story-slider": "node scripts/generate-story-slider-data.cjs",
+    "populate-archive": "node scripts/populate-archive.cjs",
     "preview": "astro preview"
   },
   "repository": {
@@ -40,7 +41,6 @@
     "@tailwindcss/vite": "^4.1.11",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.6",
-    "airtable": "^0.12.2",
     "archiver": "^7.0.1",
     "astro": "^5.9.2",
     "aws-sdk": "^2.1692.0",

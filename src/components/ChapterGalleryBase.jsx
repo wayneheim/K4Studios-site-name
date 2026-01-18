@@ -11,34 +11,66 @@ function shortenPagePath(path) {
   return path;
 }
 
-// Helper to log UI events to Airtable
-// Uses sendBeacon for reliable exit/unload logging, falls back to fetch
+// === Batched UI Event Logging ===
+// Collects events and sends in batches to reduce function calls by ~90%
+// Flushes: every 30s, on page exit, or when batch reaches 20 events
+const eventBatch = [];
+let flushTimer = null;
+const FLUSH_INTERVAL = 30000; // 30 seconds
+const MAX_BATCH_SIZE = 20;
+
+function flushEventBatch(useBeacon = false) {
+  if (eventBatch.length === 0) return;
+  
+  const payload = JSON.stringify({ events: eventBatch.splice(0) }); // splice clears array
+  
+  if (useBeacon && navigator.sendBeacon) {
+    const blob = new Blob([payload], { type: "application/json" });
+    navigator.sendBeacon("/.netlify/functions/log-ui-event", blob);
+  } else {
+    fetch("/.netlify/functions/log-ui-event", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: payload,
+      keepalive: true,
+    }).catch(err => console.error("Batch flush failed:", err));
+  }
+}
+
+// Set up flush on page exit (runs once when module loads)
+if (typeof window !== "undefined") {
+  // Flush on tab close/navigate away
+  window.addEventListener("beforeunload", () => flushEventBatch(true));
+  // Flush when tab becomes hidden (mobile: switching apps)
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") flushEventBatch(true);
+  });
+}
+
+// Helper to log UI events (now batched)
 async function logUIEvent(eventType, details = {}, useBeacon = false) {
+  // Skip logging on localhost (admin/dev work)
+  if (typeof window !== "undefined" && window.location.hostname === "localhost") {
+    return;
+  }
+  
   // Shorten page paths for cleaner analytics
   if (details.page) {
     details.page = shortenPagePath(details.page);
   }
   
-  const payload = JSON.stringify({ eventType, details, timestamp: Date.now() });
+  // Add to batch
+  eventBatch.push({ eventType, details, timestamp: Date.now() });
   
-  // Use sendBeacon for beforeunload/visibilitychange (guaranteed delivery)
-  if (useBeacon && navigator.sendBeacon) {
-    const blob = new Blob([payload], { type: "application/json" });
-    navigator.sendBeacon("/.netlify/functions/log-ui-event", blob);
+  // Flush immediately if batch is full
+  if (eventBatch.length >= MAX_BATCH_SIZE) {
+    flushEventBatch(useBeacon);
     return;
   }
   
-  // Regular fetch for normal logging
-  try {
-    await fetch("/.netlify/functions/log-ui-event", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: payload,
-      keepalive: true, // helps with page navigation
-    });
-  } catch (err) {
-    console.error("UI event logging failed:", err);
-  }
+  // Reset/start flush timer
+  if (flushTimer) clearTimeout(flushTimer);
+  flushTimer = setTimeout(() => flushEventBatch(false), FLUSH_INTERVAL);
 }
 import { useState, useRef, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";

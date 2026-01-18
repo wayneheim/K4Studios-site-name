@@ -421,6 +421,52 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     return ghosts.concat(ordered);
   }
 
+  // Sync visibility changes with Archive gallery
+  // Hidden images get a copy in Archive (visibility: "show")
+  // Shown images get removed from Archive ONLY if they were archived from THIS gallery
+  async function syncArchive(fullArray, galleryPath) {
+    const hiddenImages = fullArray.filter(it => it.visibility === "hidden");
+    const shownImages = fullArray.filter(it => !it.visibility || it.visibility === "show");
+    
+    // Add hidden images to Archive
+    for (const img of hiddenImages) {
+      try {
+        await fetch("/.netlify/functions/updateArchive", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action: "add",
+            imageId: img.id,
+            imageData: img,
+            sourceGalleryPath: galleryPath
+          })
+        });
+        console.log(`[Archive] Added ${img.id} to Archive`);
+      } catch (err) {
+        console.warn(`[Archive] Failed to add ${img.id}:`, err.message);
+      }
+    }
+    
+    // Remove shown images from Archive ONLY if they came from THIS gallery
+    // This prevents wiping out images hidden from other galleries
+    for (const img of shownImages) {
+      try {
+        await fetch("/.netlify/functions/updateArchive", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action: "removeIfFrom",
+            imageId: img.id,
+            sourceGalleryPath: galleryPath  // Only remove if archivedFrom matches this gallery
+          })
+        });
+        // Don't log removals - most won't be in Archive anyway
+      } catch (err) {
+        // Silently ignore - image probably wasn't in Archive
+      }
+    }
+  }
+
   // Save to server (Netlify function) – send FULL ARRAY so visibility persists
   async function saveOrderHere() {
     if (!backupMade) { alert("Please create a backup first."); return; }
@@ -460,6 +506,11 @@ export default function GalleryOrderer({ datasetPath = "" }) {
         }),
       });
       if (!res.ok) throw new Error(await res.text());
+      
+      // Sync visibility changes with Archive gallery
+      // Hidden images get copied to Archive, shown images get removed
+      await syncArchive(fullArray, datasetPathClean);
+      
       note("Saved order/visibility in-place");
       setDirty(false);
       // Refresh page and restore unlocked state
@@ -474,11 +525,12 @@ export default function GalleryOrderer({ datasetPath = "" }) {
       note(`Downloaded → ${filename}`);
       setDirty(false);
     }
+  }
+
   useEffect(() => {
     // On mount, always restore unlocked state (no backup prompt, ordering enabled)
     setBackupMade(true);
   }, []);
-  }
 
   // Optional manual download
   function saveAsDownload() {

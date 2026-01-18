@@ -1863,6 +1863,37 @@ ${collectorNotes}`;
         }),
       });
       if (!res.ok) throw new Error(await res.text());
+      
+      // Sync with Archive: hidden → add to Archive, show → hide in Archive
+      try {
+        if (next === "hidden") {
+          // Add to Archive
+          await fetch("/.netlify/functions/updateArchive", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              action: "add",
+              imageId: current.id,
+              imageData: current,
+              sourceGalleryPath: selectedPath.replace(/^\//, "")
+            })
+          });
+        } else {
+          // Unhiding: hide in Archive
+          await fetch("/.netlify/functions/updateArchive", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              action: "removeIfFrom",
+              imageId: current.id,
+              sourceGalleryPath: selectedPath.replace(/^\//, "")
+            })
+          });
+        }
+      } catch (archiveErr) {
+        console.warn("[Archive sync]", archiveErr.message);
+      }
+      
       setLastAction(`Visibility → ${next || "show"} — ${new Date().toLocaleTimeString()}`);
     } catch (err) {
       alert("Visibility update failed.\n\n" + (err?.message || err));

@@ -6,6 +6,7 @@ const { siteNav } = require('../data/siteNav.js');
 
 // ---- CONFIG ----
 const ROOT_DIR        = path.resolve(__dirname, '../data/Galleries');
+const OTHER_DIR       = path.resolve(__dirname, '../data/Other');
 const OUTPUT_FILE_TS  = path.resolve(__dirname, '../data/galleryMaps/MasterGalleryData.mjs');
 const PER_GALLERY_LIMIT = 20;
 
@@ -50,16 +51,32 @@ async function build() {
       // Skip parent nodes
       continue;
     }
-    // Remove /Galleries/ from the start, then split and join with path.sep, then add .mjs
-    const rel = href.replace(/^\/Galleries\//, '');
-    const flatFile   = path.join(ROOT_DIR, ...rel.split('/')) + '.mjs';
-    const nestedFile = path.join(ROOT_DIR, ...rel.split('/'), rel.split('/').slice(-1)[0] + '.mjs');
-
+    
+    // Determine which root directory to use based on path
     let fileToUse = null;
-    if (fs.existsSync(flatFile)) {
-      fileToUse = flatFile;
-    } else if (fs.existsSync(nestedFile)) {
-      fileToUse = nestedFile;
+    
+    if (href.startsWith('/Galleries/')) {
+      // Standard Galleries path
+      const rel = href.replace(/^\/Galleries\//, '');
+      const flatFile   = path.join(ROOT_DIR, ...rel.split('/')) + '.mjs';
+      const nestedFile = path.join(ROOT_DIR, ...rel.split('/'), rel.split('/').slice(-1)[0] + '.mjs');
+      
+      if (fs.existsSync(flatFile)) {
+        fileToUse = flatFile;
+      } else if (fs.existsSync(nestedFile)) {
+        fileToUse = nestedFile;
+      }
+    } else if (href.startsWith('/Other/')) {
+      // Other path (includes Archive)
+      const rel = href.replace(/^\/Other\//, '');
+      const flatFile   = path.join(OTHER_DIR, ...rel.split('/')) + '.mjs';
+      const nestedFile = path.join(OTHER_DIR, ...rel.split('/'), rel.split('/').slice(-1)[0] + '.mjs');
+      
+      if (fs.existsSync(flatFile)) {
+        fileToUse = flatFile;
+      } else if (fs.existsSync(nestedFile)) {
+        fileToUse = nestedFile;
+      }
     }
 
     if (!fileToUse) {
@@ -105,6 +122,7 @@ function findNavNodeByHref(node, href) {
       srcXL:    img.srcXL || '',
       src:      img.srcS || img.srcM || img.srcL || img.srcXL || img.src || '',
       rating:   img.rating,
+      visibility: img.visibility || 'show', // Track visibility for smart-404 filtering
       galleries: [ href.replace(/^\//, '') ]
     }));
   }

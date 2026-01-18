@@ -15,6 +15,34 @@ function simplifyUA(ua) {
   return 'Other';
 }
 
+// Process a single event and return the formatted row data
+function formatEvent(evt, ua, ip, referer) {
+  const { eventType, details, timestamp } = evt;
+  
+  const eventTime = new Date(timestamp || Date.now()).toLocaleString('en-US', {
+    timeZone: 'America/New_York',
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true,
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric',
+  });
+
+  const detailsStr = typeof details === 'string' ? details : JSON.stringify(details || {}, null, 2);
+
+  return {
+    sheet: 'UIEvents',
+    timestamp: eventTime,
+    eventType: eventType || 'unknown',
+    details: detailsStr,
+    ip,
+    ua,
+    referer,
+  };
+}
+
 export async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return {
@@ -34,23 +62,10 @@ export async function handler(event) {
     };
   }
 
-  const { eventType, details, timestamp } = bodyData;
-
-  if (!eventType) {
-    console.error('Missing eventType');
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ error: 'Missing eventType' }),
-    };
-  }
-
   // Extract request context: UA, Referer, IP
   const rawUA = event.headers['user-agent'] || 'unknown';
   const ua = simplifyUA(rawUA);
   const referer = event.headers['referer'] || event.headers['referrer'] || 'none';
-  
-  // Cloudflare is in front, so cf-connecting-ip has the real client IP
-  // x-nf-client-connection-ip will show Cloudflare's edge server IP
   const rawIp =
     event.headers['cf-connecting-ip'] ||
     event.headers['true-client-ip'] ||
@@ -62,34 +77,26 @@ export async function handler(event) {
     '';
   const ip = rawIp || 'unknown';
 
-  const eventTime = new Date(timestamp || Date.now()).toLocaleString('en-US', {
-    timeZone: 'America/New_York',
-    hour: 'numeric',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true,
-    weekday: 'short',
-    month: 'short',
-    day: 'numeric',
-  });
-
-  // Ensure details is always a string
-  const detailsStr = typeof details === 'string' ? details : JSON.stringify(details || {}, null, 2);
+  // Handle both batched events (new) and single event (legacy/FeaturedCollection)
+  const events = bodyData.events || [bodyData];
+  
+  if (events.length === 0 || !events[0].eventType) {
+    console.error('No valid events found');
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: 'No valid events' }),
+    };
+  }
 
   try {
-    // Google Sheets Logging
+    // Send all events to Google Sheets (as batch for efficiency)
+    const rows = events.map(evt => formatEvent(evt, ua, ip, referer));
+    
+    // Google Sheets - send as batch
     const sheetRes = await fetch(GOOGLE_SHEET_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sheet: 'UIEvents',
-        timestamp: eventTime,
-        eventType,
-        details: detailsStr,
-        ip,
-        ua,
-        referer,
-      }),
+      body: JSON.stringify({ batch: rows }),
     });
 
     if (!sheetRes.ok) {
@@ -103,7 +110,7 @@ export async function handler(event) {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ success: true }),
+      body: JSON.stringify({ success: true, count: events.length }),
     };
   } catch (fetchError) {
     console.error('Network error:', fetchError);

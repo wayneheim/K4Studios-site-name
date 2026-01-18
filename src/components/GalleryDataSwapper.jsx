@@ -485,6 +485,23 @@ export default function GalleryDataSwapper({ datasetPath = "" }) {
     const ok = await saveUpdatedItemToServer(updated);
     if (ok) {
       setItems(arr => arr.map(it => it.id === id ? updated : it));
+
+      // Sync with Archive: hiding → add to Archive, showing → hide in Archive
+      try {
+        const action = wantHidden ? "add" : "removeIfFrom";
+        await fetch("/.netlify/functions/updateArchive", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action,
+            imageId: id,
+            imageData: updated,
+            sourceGalleryPath: selectedPath,
+          }),
+        });
+      } catch (err) {
+        console.error("Archive sync failed:", err);
+      }
     }
   }
 
