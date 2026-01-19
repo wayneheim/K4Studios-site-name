@@ -297,14 +297,29 @@ ul li::marker {
 
     @media (max-width: 768px) {
       .section-heading .page-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         line-height: 1.15;
+        color: #2c2c2c;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #e0d8d0;
       }
 
       .section-heading .page-subtitle {
-        font-size: 1rem;
-        line-height: 1.25;
-        letter-spacing: -0.04em;
+        font-size: 0.95rem;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+        color: #5a5a5a;
+        margin-bottom: 0.4rem;
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid #ebe5dc;
+      }
+      
+      /* Tagline links - third tier, most subtle */
+      .section-heading .page-subtitle + * .tagline,
+      .section-heading ~ * .page-tagline {
+        font-size: 0.85rem;
+        color: #888;
       }
 
       .section-heading-wrap {
@@ -324,13 +339,47 @@ ul li::marker {
         letter-spacing: -0.04em;
         font-size: 1.25rem !important;
         margin-top: -0.59rem;
-        margin-bottom: 1.2rem !important;
+        margin-bottom: 1rem !important;
         line-height: 1.1;
+        padding-bottom: 0.8rem;
+        text-align: center;
+      }
+      
+      .story-block h2::after {
+        content: '';
+        display: block;
+        width: 60%;
+        height: 1px;
+        background: #e0d8d0;
+        margin: 0.8rem auto 0;
       }
 
       .story-block h3 {
-        line-height: 1.15;
-        margin-top: -0.3rem;
+        line-height: 1.2;
+        margin-top: 0;
+        font-size: 1rem !important;
+        color: #5a5a5a;
+        padding-bottom: 0.6rem;
+        margin-bottom: 0.8rem;
+        text-align: center;
+      }
+      
+      .story-block h3::after {
+        content: '';
+        display: block;
+        width: 60%;
+        height: 1px;
+        background: #ebe5dc;
+        margin: 0.6rem auto 0;
+      }
+      
+      .story-block h4.tagline {
+        font-size: 0.85rem !important;
+        color: #888 !important;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-style: italic;
       }
 
       /* Mobile Themes Accordion */

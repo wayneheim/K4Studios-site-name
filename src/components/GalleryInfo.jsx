@@ -143,8 +143,8 @@ export default function GalleryInfo({
             ease: [0.33, 1, 0.68, 1],
           }}
         >
-          {/* Mobile: Image and ThemeBlock side by side */}
-          <div className="mobile-image-theme-row">
+          {/* Mobile: Image with accordion ThemeBlock below */}
+          <div className="mobile-image-section">
             {entranceData?.image && (
               <a
                 href={exploreHref}
@@ -172,9 +172,15 @@ export default function GalleryInfo({
                 </figure>
               </a>
             )}
-            <div className="theme-block-mobile">
-              <ThemeBlock galleryKey={trimmedBase} galleryData={galleryData} />
-            </div>
+            {/* Mobile: Accordion-style ThemeBlock */}
+            <details className="mobile-themes-accordion">
+              <summary>
+                <span className="accordion-arrow">▼</span> Featured Themes
+              </summary>
+              <div className="themes-content">
+                <ThemeBlock galleryKey={trimmedBase} galleryData={galleryData} />
+              </div>
+            </details>
           </div>
 
           {/* Desktop: Image first, then ThemeBlock below */}

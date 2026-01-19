@@ -3,12 +3,12 @@ export const westernStory = [
   /* 1: HERO — OWN THE PHRASE, DECLARE THE CATEGORY */
   {
     breadcrumb: "Western Cowboy Portraits",
-    title: "Painterly Western Cowboy Portraits — Fine Art Photography of the American West",
-    subhead: "Cinematic, story-driven cowboy photography shaped by light, history, and human truth.",
-    tagline: "Painterly Western Photography • Fine Art Cowboy Portraits • Historically Themed Art Prints",
+    title: "Painterly Western Cowboy Portraits",
+    subhead: "Cinematic photography shaped by light, our history, and human truth.",
+    tagline: "Fine art prints for collectors drawn to story over spectacle.",
     paragraphs: [
       `The American West is overflowing with legends — yet so few of the real stories survived. The quiet ones. The human ones. The moments too honest for Hollywood and too fragile for textbooks.`,
-      `Wayne Heim’s painterly Western fine art photography explores those spaces through a distinct <strong>Western photography style</strong> rooted in history, restraint, and narrative weight — imagery built to feel lived in rather than staged.`,
+      `Wayne Heim's painterly Western fine art photography explores those spaces through a distinct Western photography style rooted in history, restraint, and narrative weight — imagery built to feel lived in rather than staged.`,
       `This body of work is often described as <strong>Western themed photography</strong>, not because it illustrates myth, but because it studies the people shaped by place, consequence, and time.`,
       `These are not costume studies or nostalgic reenactments. They are character-driven cowboy portraits shaped by grit, resolve, longing, and the fragile hope people once carried into an unforgiving land.`,
       `Each image is constructed to hold tension — a moment suspended between what has just happened and what must happen next — inviting the viewer to step inside rather than observe from a distance.`,
@@ -81,7 +81,7 @@ export const westernStory = [
   /* 7: BRAND CONCEPT — LAST */
   {
     subhead: "Own a Chapter of the American West",
-    tagline: "Western Fine Art Photography for Collectors & Story Seekers",
+    tagline: "For collectors who want more than decoration.",
     paragraphs: [
       `Every image functions as a single frame from a larger, unseen story — a moment deliberately left unresolved.`,
       `This is what Wayne calls a One-Image Movie™: not an answer, but an invitation.`,

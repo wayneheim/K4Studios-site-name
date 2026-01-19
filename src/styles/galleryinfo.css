@@ -212,7 +212,7 @@ details[open] .arrow-icon {
 .desktop-sample-image {
   display: block;
 }
-.mobile-image-theme-row {
+.mobile-image-section {
   display: none;
 }
 
@@ -223,47 +223,66 @@ details[open] .arrow-icon {
   .desktop-sample-image {
     display: none !important;
   }
-  .mobile-image-theme-row {
-    display: flex !important;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 0.5rem;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0 1rem;
-    max-width: 100%;
+  .mobile-image-section {
+    display: block !important;
+    text-align: center;
   }
   .mobile-sample-image {
-    flex: 0 0 auto;
-    width: 190px;
+    display: inline-block;
   }
   .mobile-sample-image img {
-    width: 190px !important;
-    margin-left: 0 !important;
+    width: 200px !important;
+    margin: 0 auto !important;
   }
   .mobile-sample-image figcaption {
-    margin-left: 0 !important;
     text-align: center;
-    max-width: 190px;
+    max-width: 200px;
+    margin: 0.5rem auto 0;
   }
-  .theme-block-mobile {
-    flex: 0 0 auto;
+  
+  /* Mobile Themes Accordion */
+  .mobile-themes-accordion {
+    margin: 1rem auto 0;
+    max-width: 280px;
+    border: 1px solid #d8d0c8;
+    border-radius: 6px;
+    background: #f9f7f5;
+    font-family: 'Glegoo', serif;
+  }
+  .mobile-themes-accordion summary {
     display: flex;
-    align-items: flex-start;
-    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #928176;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    list-style: none;
   }
-  .theme-block-mobile .theme-block-wrapper {
+  .mobile-themes-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+  .mobile-themes-accordion .accordion-arrow {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+  }
+  .mobile-themes-accordion[open] .accordion-arrow {
+    transform: rotate(180deg);
+  }
+  .mobile-themes-accordion .themes-content {
+    padding: 0 0.75rem 0.75rem;
+  }
+  .mobile-themes-accordion .theme-block-wrapper {
     margin-top: 0 !important;
   }
-  .theme-block-mobile .theme-block-box {
-    width: auto !important;
-    max-width: 165px !important;
-    min-width: 145px;
-    height: 253px;
-    padding: 0.6rem 0.85rem !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
+  .mobile-themes-accordion .theme-block-box {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
   }
 }
