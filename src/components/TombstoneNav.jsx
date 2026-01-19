@@ -48,12 +48,12 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
             // Log to Google Sheets via Netlify function
             const sourcePage = window.location.pathname;
             // Create unique tracking label using item title
-            const sanitizedTitle = item.title.replace(/[^a-zA-Z0-9]/g, '_');
+            const sanitizedTitle = (item.title || 'Unknown').replace(/[^a-zA-Z0-9]/g, '_');
             const trackingLabel = item.trackingId || `Tombstone_${sanitizedTitle}`;
             const payload = JSON.stringify({
               eventType: trackingLabel,
               details: {
-                collection: item.title,
+                collection: item.title || 'Unknown',
                 destination: item.href,
                 source_page: sourcePage,
                 is_mobile_only: !!item.mobileOnly
