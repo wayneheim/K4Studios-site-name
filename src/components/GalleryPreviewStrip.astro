@@ -107,11 +107,13 @@ const middleIndex = Math.floor(visibleImages.length / 2);
 
 <style>
   .gallery-preview-strip {
-    margin-top: -0.5rem;
+    margin-top: 0.5rem;
     padding: 0.25rem 0;
     opacity: 0;
     animation: fadeStripIn 0.4s ease forwards;
     animation-delay: 850ms;
+    position: relative;
+    z-index: 1;
   }
 
   @keyframes fadeStripIn { to { opacity: 1; } }

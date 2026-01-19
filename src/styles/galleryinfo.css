@@ -107,6 +107,8 @@
           font-size: 1.75rem;
           font-weight: bold;
           margin-bottom: 0;
+          position: relative;
+          z-index: 1;
         }
   .landing-divider {
           width: 200px;
@@ -248,6 +250,9 @@ details[open] .arrow-icon {
     border-radius: 6px;
     background: #f9f7f5;
     font-family: 'Glegoo', serif;
+    position: relative;
+    z-index: 100;
+    overflow: visible;
   }
   .mobile-themes-accordion summary {
     display: flex;
@@ -275,6 +280,8 @@ details[open] .arrow-icon {
   }
   .mobile-themes-accordion .themes-content {
     padding: 0 0.75rem 0.75rem;
+    overflow: visible;
+    position: relative;
   }
   .mobile-themes-accordion .theme-block-wrapper {
     margin-top: 0 !important;

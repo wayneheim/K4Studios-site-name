@@ -105,7 +105,7 @@ export default function GalleryInfo({
     <>
       <section
         className="intro-wrapper"
-        style={{ zIndex: 0, position: "relative" }}
+        style={{ zIndex: 50, position: "relative" }}
       >
         <motion.div
           className="intro-text"
@@ -135,7 +135,7 @@ export default function GalleryInfo({
 
         <motion.div
           className="intro-image"
-          style={{ zIndex: 0, position: "relative" }}
+          style={{ zIndex: 50, position: "relative", overflow: "visible" }}
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{

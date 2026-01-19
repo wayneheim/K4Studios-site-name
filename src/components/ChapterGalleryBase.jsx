@@ -941,8 +941,8 @@ export default function ChapterGalleryBase({
                 <div
                   className="relative flex items-center justify-between rounded-xl shadow-sm px-3 py-1.5 sm:hidden"
                   style={{ 
-                    width: 'calc(100vw - 3.5rem)', 
-                    maxWidth: 'calc(100vw - 3.5rem)',
+                    width: 'calc(100vw - 2.5rem)', 
+                    maxWidth: 'calc(100vw - 2.5rem)',
                     backgroundColor: '#6b5e54',
                     margin: '0 auto 0.35rem auto'
                   }}
@@ -1223,7 +1223,7 @@ export default function ChapterGalleryBase({
                           `flex items-center gap-1 md:gap-6 mx-auto rounded-xl shadow-sm px-3 py-1 select-none ` +
                           (isMobile ? ' w-full' : ' bg-white max-w-[1300px]')
                         }
-                        style={isMobile ? { width: 'calc(100vw - 3.5rem)', maxWidth: 'calc(100vw - 3.5rem)', minWidth: 0, justifyContent: 'space-between', border: '1px solid rgba(107, 94, 84, 0.1)', backgroundColor: 'rgba(240, 238, 233, 0.85)' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly', border: '1px solid #e5e7eb' }}
+                        style={isMobile ? { width: 'calc(100vw - 2.5rem)', maxWidth: 'calc(100vw - 2.5rem)', minWidth: 0, justifyContent: 'space-between', border: '1px solid rgba(107, 94, 84, 0.1)', backgroundColor: 'rgba(240, 238, 233, 0.85)' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly', border: '1px solid #e5e7eb' }}
                       >
                         {/* Menu - Desktop only */}
                       {!isMobile && (
