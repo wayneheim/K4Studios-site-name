@@ -939,10 +939,10 @@ export default function ChapterGalleryBase({
               {/* Mobile Top Toolbar - Outside the motion.div */}
               {isMobile && (
                 <div
-                  className="relative flex items-center justify-between rounded-lg shadow-sm px-3 py-1.5 sm:hidden"
+                  className="relative flex items-center justify-between rounded-xl shadow-sm px-3 py-1.5 sm:hidden"
                   style={{ 
-                    width: 'calc(100vw - 4rem)', 
-                    maxWidth: 'calc(100vw - 4rem)',
+                    width: 'calc(100vw - 3.5rem)', 
+                    maxWidth: 'calc(100vw - 3.5rem)',
                     backgroundColor: '#6b5e54',
                     margin: '0 auto 0.35rem auto'
                   }}
@@ -1220,10 +1220,10 @@ export default function ChapterGalleryBase({
                       {/* Toolbar */}
                       <div
                         className={
-                          `flex items-center gap-1 md:gap-6 mx-auto border border-gray-200 bg-white rounded-full shadow-sm px-3 py-1 select-none ` +
-                          (isMobile ? ' w-full' : ' max-w-[1300px]')
+                          `flex items-center gap-1 md:gap-6 mx-auto rounded-xl shadow-sm px-3 py-1 select-none ` +
+                          (isMobile ? ' w-full' : ' bg-white max-w-[1300px]')
                         }
-                        style={isMobile ? { width: 'calc(100vw - 4rem)', maxWidth: 'calc(100vw - 4rem)', minWidth: 0, justifyContent: 'space-between' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly' }}
+                        style={isMobile ? { width: 'calc(100vw - 3.5rem)', maxWidth: 'calc(100vw - 3.5rem)', minWidth: 0, justifyContent: 'space-between', border: '1px solid rgba(107, 94, 84, 0.1)', backgroundColor: 'rgba(240, 238, 233, 0.85)' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly', border: '1px solid #e5e7eb' }}
                       >
                         {/* Menu - Desktop only */}
                       {!isMobile && (

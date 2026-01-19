@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { buildContextualAlt, getPageContext } from '../utils/buildContextualAlt';
-import { ok } from 'assert';
 
 export default function TombstoneNav({ items = [], title, subtitle, pageContext: propPageContext }) {
   const gridClass = `tile-grid${items.length === 2 ? ' two-tiles' : ''}`;
