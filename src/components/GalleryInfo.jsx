@@ -94,9 +94,11 @@ export default function GalleryInfo({
   const galleryData = loadGalleryDataFor(trimmedBase);
   const lowestSortImage = pickFirstRealImage(galleryData);
 
+  // Use entrance image ID if provided, otherwise fall back to first image
+  const targetImageId = entranceData?.image?.id || lowestSortImage?.id;
   const exploreHref =
-    lowestSortImage && lowestSortImage.id && trimmedBase
-      ? `${trimmedBase}/${lowestSortImage.id}`
+    targetImageId && trimmedBase
+      ? `${trimmedBase}/${targetImageId}`
       : "#";
 
   return (
@@ -141,17 +143,51 @@ export default function GalleryInfo({
             ease: [0.33, 1, 0.68, 1],
           }}
         >
-          {/* Theme Block - shows themes for this gallery */}
-          <ThemeBlock galleryKey={trimmedBase} galleryData={galleryData} />
+          {/* Mobile: Image and ThemeBlock side by side */}
+          <div className="mobile-image-theme-row">
+            {entranceData?.image && (
+              <a
+                href={exploreHref}
+                className="mobile-sample-image"
+                style={{
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  display: 'block',
+                  cursor: 'pointer'
+                }}
+                aria-label="Explore the gallery"
+              >
+                <figure>
+                  <img
+                    src={entranceData.image.src}
+                    alt={entranceData.image.alt || "Portrait preview"}
+                    style={{
+                      maxWidth: "100%",
+                      borderRadius: "9px",
+                      boxShadow: "0 8px 32px #0002",
+                      border: "2px solid #ddd",
+                    }}
+                  />
+                  <figcaption>{entranceData.image.caption}</figcaption>
+                </figure>
+              </a>
+            )}
+            <div className="theme-block-mobile">
+              <ThemeBlock galleryKey={trimmedBase} galleryData={galleryData} />
+            </div>
+          </div>
 
+          {/* Desktop: Image first, then ThemeBlock below */}
           {entranceData?.image && (
             <a
               href={exploreHref}
+              className="desktop-sample-image"
               style={{
                 textDecoration: 'none',
                 color: 'inherit',
                 display: 'block',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                marginBottom: '0.75rem'
               }}
               aria-label="Explore the gallery"
               onMouseEnter={() => {
@@ -170,6 +206,9 @@ export default function GalleryInfo({
               }}
             >
               <figure>
+                <figcaption style={{ marginBottom: '0.5rem' }}>
+                  {entranceData.image.caption}
+                </figcaption>
                 <img
                   src={entranceData.image.src}
                   alt={
@@ -189,12 +228,14 @@ export default function GalleryInfo({
                     e.target.style.boxShadow = '0 8px 32px #0002';
                   }}
                 />
-                <figcaption>
-                  {entranceData.image.caption}
-                </figcaption>
               </figure>
             </a>
           )}
+
+          {/* Desktop: ThemeBlock below image */}
+          <div className="theme-block-desktop">
+            <ThemeBlock galleryKey={trimmedBase} galleryData={galleryData} />
+          </div>
         </motion.div>
       </section>
 

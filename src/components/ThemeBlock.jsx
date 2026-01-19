@@ -96,22 +96,28 @@ export default function ThemeBlock({ galleryKey }) {
       >
       <style>{`
         .theme-block-wrapper {
-          margin-top: 0;
+          margin-top: 1.5rem;
           display: flex;
           justify-content: center;
         }
         .theme-block-box {
           width: 100%;
-          margin-left: 0;
+          max-width: 280px;
+          margin-left: auto;
+          margin-right: auto;
         }
         @media (min-width: 768px) {
           .theme-block-wrapper {
             margin-top: 0;
-            margin-left: 15px;
+            margin-left: 0;
+            display: flex;
+            justify-content: center;
           }
           .theme-block-box {
-            width: 210px;
-            margin-left: 0;
+            width: 200px;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
           }
         }
       `}</style>
