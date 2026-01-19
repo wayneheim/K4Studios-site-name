@@ -121,7 +121,7 @@ export default function GalleryLandingHeader({ breadcrumb }) {
           className="mobile-breadcrumb"
           style={{
             color: "#c2c2c2",
-            marginTop: "105px",
+            marginTop: "138px",
             fontWeight: 600,
             fontSize: ".85rem",
             display: "flex",

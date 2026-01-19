@@ -174,7 +174,7 @@ const skipIntro = isImagePage || isDirectGridView;
     <!-- Intro -->
     {!skipIntro && (
       <div id="intro-section" class="section-visible" style="z-index:1;position:relative;">
-        <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
+        <h1 class="gallery-landing-title" set:html={fixMojibake(usedEntranceData.title)} />
         {usedEntranceData.subtitle && (
           <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
         )}

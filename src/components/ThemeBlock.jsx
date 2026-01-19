@@ -128,7 +128,7 @@ export default function ThemeBlock({ galleryKey }) {
           fontFamily: "'Glegoo', serif",
         }}
       >
-        <div
+        <h3
           style={{
             fontSize: "0.75rem",
             letterSpacing: "0.1em",
@@ -139,10 +139,11 @@ export default function ThemeBlock({ galleryKey }) {
             color: "#928176",
             fontWeight: 600,
             fontFamily: "'Glegoo', serif",
+            margin: 0,
           }}
         >
-          Gallery Themes
-        </div>
+          Featured Themes
+        </h3>
 
         {/* --- THEME GRID --- */}
         {/* ALL themes are in DOM for SEO - hidden ones use CSS visibility */}
@@ -151,6 +152,7 @@ export default function ThemeBlock({ galleryKey }) {
           flexDirection: "column",
           gap: "0.35rem",
           alignItems: "center",
+          marginTop: "0.5rem",
         }}>
           {galleryThemes.map((t, index) => {
             // Build the theme URL - navigate to grid view with theme filter
@@ -167,6 +169,13 @@ export default function ThemeBlock({ galleryKey }) {
                 href={themeUrl}
                 onMouseEnter={() => setActive(t.slug)}
                 onMouseLeave={() => setActive(null)}
+                onClick={(e) => {
+                  // Mobile tap-to-toggle: first tap shows description, second tap navigates
+                  if ('ontouchstart' in window && active !== t.slug) {
+                    e.preventDefault();
+                    setActive(t.slug);
+                  }
+                }}
                 style={{
                   cursor: "pointer",
                   color: active === t.slug ? "#5a4c3d" : "#8a7563",
@@ -220,34 +229,58 @@ export default function ThemeBlock({ galleryKey }) {
         </div>
       </div>
 
-      {/* --- DESCRIPTION PANEL (overlay, positioned absolute) --- */}
-      {active && (
-        <div style={{
-          position: "absolute",
-          top: "100%",
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: 9999,
-          pointerEvents: "auto",
-          marginTop: "0.25rem",
-          padding: "0.5rem 0.75rem",
-          background: "#fff",
-          border: "1px solid #d8d0c8",
-          borderRadius: "6px",
-          fontSize: "0.8rem",
-          color: "#5a4c3d",
-          lineHeight: 1.5,
-          boxShadow: "0 4px 12px rgba(0,0,0,0.12)",
-          minWidth: "200px",
-          maxWidth: "280px",
-          textAlign: "center",
-          fontFamily: "'Glegoo', serif",
-        }}>
-          <strong style={{ color: "#7a6a5a" }}>{galleryThemes.find((t) => t.slug === active)?.name}</strong>
+      {/* --- DESCRIPTION PANELS - All in DOM for SEO, visibility toggles on hover --- */}
+      {galleryThemes.map((t) => (
+        <div 
+          key={`desc-${t.slug}`}
+          style={{
+            position: "absolute",
+            top: "100%",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 9999,
+            pointerEvents: active === t.slug ? "auto" : "none",
+            marginTop: "0.25rem",
+            padding: "0.5rem 0.75rem",
+            background: "#fff",
+            border: "1px solid #d8d0c8",
+            borderRadius: "6px",
+            fontSize: "0.8rem",
+            color: "#5a4c3d",
+            lineHeight: 1.5,
+            boxShadow: "0 4px 12px rgba(0,0,0,0.12)",
+            minWidth: "200px",
+            maxWidth: "280px",
+            textAlign: "center",
+            fontFamily: "'Glegoo', serif",
+            // Use visibility so content stays in DOM for crawlers
+            visibility: active === t.slug ? "visible" : "hidden",
+            opacity: active === t.slug ? 1 : 0,
+            transition: "opacity 0.15s, visibility 0.15s",
+          }}
+        >
+          <strong style={{ color: "#7a6a5a" }}>{t.name}</strong>
           <br />
-          {galleryThemes.find((t) => t.slug === active)?.description}
+          {t.description}
+          {/* Mobile prompt - tap again to navigate */}
+          <a
+            href={t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/\.mjs$/, '') + `?theme=${t.slug}&view=grid`}
+            className="theme-tap-prompt"
+            style={{
+              display: "block",
+              marginTop: "0.5rem",
+              paddingTop: "0.4rem",
+              borderTop: "1px solid #e8e0d8",
+              fontSize: "0.7rem",
+              color: "#6a8a6a",
+              fontStyle: "italic",
+              textDecoration: "none",
+            }}
+          >
+            Tap to view theme →
+          </a>
         </div>
-      )}
+      ))}
     </div>
     </>
   );

@@ -43,34 +43,33 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
           // Build contextual alt text with Tier B (navigation) - functional alt only, no enrichment
           const contextualAlt = buildContextualAlt(item.title, resolvedContext, { index, tier: 'B' });
           
-          // Track clicks for mobileOnly tiles (Featured Collection equivalent on mobile)
+          // Track ALL tombstone clicks for analytics
           const handleClick = () => {
-            if (item.mobileOnly) {
-              // Log to Google Sheets via Netlify function
-              const sourcePage = window.location.pathname;
-              const trackingLabel = item.trackingId || item.title;
-              const payload = JSON.stringify({
-                eventType: trackingLabel,
-                details: {
-                  collection: item.title,
-                  destination: item.href,
-                  source_page: sourcePage
-                },
-                timestamp: Date.now()
-              });
-              
-              // Use sendBeacon for reliable delivery during navigation
-              if (navigator.sendBeacon) {
-                const blob = new Blob([payload], { type: 'application/json' });
-                navigator.sendBeacon('/.netlify/functions/log-ui-event', blob);
-              } else {
-                fetch('/.netlify/functions/log-ui-event', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: payload,
-                  keepalive: true
-                }).catch(() => {});
-              }
+            // Log to Google Sheets via Netlify function
+            const sourcePage = window.location.pathname;
+            const trackingLabel = item.trackingId || 'Tombstone_Click';
+            const payload = JSON.stringify({
+              eventType: trackingLabel,
+              details: {
+                collection: item.title,
+                destination: item.href,
+                source_page: sourcePage,
+                is_mobile_only: !!item.mobileOnly
+              },
+              timestamp: Date.now()
+            });
+            
+            // Use sendBeacon for reliable delivery during navigation
+            if (navigator.sendBeacon) {
+              const blob = new Blob([payload], { type: 'application/json' });
+              navigator.sendBeacon('/.netlify/functions/log-ui-event', blob);
+            } else {
+              fetch('/.netlify/functions/log-ui-event', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: payload,
+                keepalive: true
+              }).catch(() => {});
             }
           };
           
@@ -111,7 +110,7 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
           .tombstone-nav {
             transform: scale(0.87);
             transform-origin: top center;
-            padding-top: 0.25rem;
+            padding: 0.5rem 1rem 1rem !important;
             margin-bottom: -4.5rem;
             margin-top: -5pt;
           }
