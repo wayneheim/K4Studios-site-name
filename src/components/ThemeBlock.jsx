@@ -14,7 +14,7 @@ export default function ThemeBlock({ galleryKey }) {
   const [expanded, setExpanded] = useState(false);
 
   // How many to show before "More..."
-  const VISIBLE_COUNT = 4;
+  const VISIBLE_COUNT = 6;
 
   // Filter themes that match this gallery's dataset path
   // galleryKey might be a URL path like "/Galleries/Painterly-.../Western-Cowboy-Portraits"
