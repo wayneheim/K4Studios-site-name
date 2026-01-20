@@ -6,16 +6,15 @@ export const landingCowboy = {
   // Keywords for structured data and semantic SEO
   keywords: [
     "cowboy fine art photography",
+    "western fine art photography",
     "cowboy photography",
     "black and white cowboy photography",
     "cowboy portraits",
-    "fine art cowboy photography",
-    "cowboy portrait photography",
-    "cowboy wall art",
+    "wild west cowboy photography",
     "cowboy art prints",
+    "cowboy wall art",
     "painterly cowboy photography",
-    "authentic cowboy photography",
-    "Wayne Heim"
+    "authentic cowboy photography"
   ],
 
   breadcrumb:

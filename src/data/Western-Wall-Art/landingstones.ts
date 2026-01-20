@@ -1,49 +1,48 @@
 export const landingWallArt = {
-  // Western Wall Art Hub - Collector intent, semantic buffer
+  // Western Wall Art — COLLECTOR & DISCOVERY HUB
   title: "Western Wall Art",
-  subtitle: "Museum-Quality Fine Art for Collectors",
+  subtitle: "Museum-Quality Western Fine Art Photography for Collectors",
 
-  // Keywords for structured data and semantic SEO
+  // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [
     "Western Wall Art",
-    "wild west cowboy photography",
-    "western fine art prints",
-    "vintage western wall art",
-    "vintage cowboy art",
-    "old west wall art",
-    "rustic western wall art",
-    "cowboy artwork",
-    "western prints",
+    "western fine art wall art",
+    "western fine art photography",
     "cowboy wall art",
-    "museum quality western art",
+    "western photography wall art",
     "western art for collectors",
-    "fine art western photography",
+    "museum quality western art",
     "narrative western art",
+    "cowboy fine art prints",
+    "western fine art prints",
+    "western portrait photography",
+    "American West wall art",
+    "One-Image Movie",
     "Wayne Heim"
   ],
 
   breadcrumb:
     `<a href="/" title="Home" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wayne Heim</a> | Western Wall Art`,
 
-  // Tombstones - linking to galleries and print options
+  // Tombstones — collector-oriented entry points
   tombstones: [
     {
       title: "Western Cowboy Portraits",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
-      thumb: "",
+      thumb: "", // Dynamically populated
     },
     {
       title: "Western Landscapes",
       href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West",
-      thumb: "",
+      thumb: "", // Dynamically populated
     },
     {
-      title: "Print Options",
+      title: "Print Options & Materials",
       href: "/Other/Print-Options",
       thumb: "/images/tombstones/print-options-ts.webp",
     },
     {
-      title: "Fine Art on Wood",
+      title: "Fine Art on Wood — Engrained Series",
       href: "/Other/K4-Select-Series/Engrained",
       thumb: "/images/tombstones/engrained-ts.jpg",
     },

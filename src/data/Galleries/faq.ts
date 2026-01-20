@@ -81,6 +81,15 @@ export const facingFAQ = [
       "Collectors often place these images in spaces where storytelling, reflection, and atmosphere matter — living rooms, creative studios, libraries, and executive offices."
     ],
   },
+  
+  {
+  q: "Are the historically themed images staged or reenactments?",
+  a: [
+    "The historically themed painterly images are created with living-history practitioners, historians, and subject experts who research period-accurate clothing, behavior, and material culture in depth.",
+    "These are not theatrical reenactments or costume scenes. Each image is authored as a fine art portrait or narrative moment — built through collaboration, historical study, and controlled photographic craft rather than performance or spectacle.",
+    "The goal is emotional and historical truth, not reenactment documentation."
+  ],
+},
 
   {
     q: "What are Collector Notes, and how do I view them?",

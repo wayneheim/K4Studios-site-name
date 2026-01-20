@@ -4,8 +4,8 @@ export const painterlyStory = [
   {
     title: "Western Fine Art Photography: Story, Character, and the Human West",
     paragraphs: [
-      "Western fine art photography is not about nostalgia or spectacle. It is about people — lives shaped by land, labor, weather, and time. The American West endures not as myth, but as lived experience.",
-      "This body of work is authored by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim, whose western fine art photography</a> is surveyed separately. His approach moves beyond surface imagery to explore character, story, and presence — Western photography as a narrative style, not staged icons or romantic caricatures."
+      "Western fine art photography is a narrative form of photographic art focused on the people, cultures, and lived realities of the American West. It is not spectacle or nostalgia, but a disciplined exploration of character, history, and presence.",
+      "This body of work is authored by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a>, whose western fine art photography is surveyed separately. His approach treats Western photography as fine art — grounded in real subjects, real places, and story shaped through restraint rather than performance."
     ]
   },
 
@@ -13,8 +13,8 @@ export const painterlyStory = [
   {
     subhead: "Character Over Archetype",
     paragraphs: [
-      "Cowboys, ranchers, and frontier figures appear here not as symbols, but as individuals. Their stories live in posture, expression, and stillness — in the quiet authority of a gaze or the history written into a pair of hands.",
-      "Rather than reinforcing Western myth, this work examines what lies beneath it. What emerges is a historically grounded Western narrative shaped by human truth — restrained, dignified, and lived rather than legendary."
+      "Cowboys, ranchers, and frontier figures appear here not as symbols, but as individuals. Their stories surface through posture, expression, and stillness — in the quiet authority of a gaze or the history written into a pair of hands.",
+      "Rather than reinforcing Western myth, this work examines the human reality beneath it. What emerges is Western fine art photography shaped by lived experience and historical understanding — dignified, restrained, and grounded."
     ]
   },
 
@@ -22,8 +22,8 @@ export const painterlyStory = [
   {
     subhead: "Story Lives Inside the Frame",
     paragraphs: [
-      "Every image exists in the space between moments — after something has happened, but before its consequences are revealed. A hand lowers. A gaze holds. Dust settles without fully surrendering motion.",
-      "This suspended narrative forms the foundation of the One-Image Movie™. Western-themed stories unfold within a single cinematic frame, carrying emotional weight without explanation. The image does not tell the story outright — it invites the viewer to complete it."
+      "Each image exists in the space between moments — after something has occurred, but before its consequences are resolved. A hand lowers. A gaze holds. Dust settles without fully surrendering motion.",
+      "This suspended narrative forms the foundation of the One-Image Movie™. Western fine art stories unfold within a single cinematic frame, carrying emotional weight without explanation. The image invites the viewer to complete what it begins."
     ]
   },
 
@@ -31,17 +31,17 @@ export const painterlyStory = [
   {
     subhead: "The West as Emotional Landscape",
     paragraphs: [
-      "In Western fine art photography, landscape is never merely background. It is an active presence — shaping character, reflecting internal states, and carrying memory.",
-      "Open sky becomes possibility. Weathered structures become time. Roads, fences, and horizons become markers of passage. The land does not simply surround the figures — it speaks through them."
+      "In Western fine art photography, landscape is never merely background. It functions as an active presence — shaping character, reflecting internal states, and carrying memory.",
+      "Sky, weather, structures, and distance operate as narrative elements. The land does not simply surround the subject — it informs the story being told."
     ]
   },
 
-  // 5. INDIGENOUS REPRESENTATION (AUTHORITY SIGNAL)
+  // 5. INDIGENOUS REPRESENTATION (CONTEXTUALIZED AUTHORITY)
   {
     subhead: "Indigenous Portraits of the American West",
     paragraphs: [
-      "The story of the American West cannot be told through a single perspective. Indigenous presence is foundational — not a historical footnote, but living continuity.",
-      "Wayne Heim’s Indigenous portrait photography is created through collaboration, research, and respect. These images stand alongside cowboy portraits as essential chapters in a fuller, more honest Western narrative — grounded in identity, resilience, and sovereignty."
+      "Western fine art photography cannot be honest without Indigenous presence. These portraits represent living continuity within the American West — not historical reference, but present identity.",
+      "Wayne Heim’s Indigenous portrait photography is created through collaboration, research, and respect. These works stand as essential chapters within the broader Western fine art narrative — grounded in sovereignty, resilience, and human truth."
     ]
   },
 
@@ -49,8 +49,8 @@ export const painterlyStory = [
   {
     subhead: "Images That Reward Long Viewing",
     paragraphs: [
-      "Western fine art photography resists simplification. It does not rush toward resolution. It invites stillness, attention, and return.",
-      "These photographs are designed to unfold slowly — revealing new meaning through time, memory, and personal interpretation."
+      "Western fine art photography resists simplification. It does not rush toward resolution or explanation.",
+      "These photographs are designed to unfold through time — rewarding attention, reflection, and personal interpretation."
     ]
   },
 
@@ -58,8 +58,8 @@ export const painterlyStory = [
   {
     subhead: "For Collectors of Western Fine Art",
     paragraphs: [
-      "This body of work is created for collectors who value depth over decoration — those drawn to Western style without decorative cliché, and to themed imagery that carries emotional gravity and narrative integrity.",
-      "Each photograph is meant to live with you — not as an object glanced at once, but as a presence that continues to speak."
+      "This work is created for collectors who value depth over decoration — those seeking Western fine art photography with narrative integrity rather than decorative theme.",
+      "Each photograph is intended to live with the viewer, revealing more through familiarity rather than immediate impact."
     ]
   },
 
@@ -67,8 +67,8 @@ export const painterlyStory = [
   {
     subhead: "A Painterly Approach to Western Photography",
     paragraphs: [
-      "The visual language of this work is shaped by a painterly style rooted in the Pictorialist tradition. Light is sculpted. Tone is controlled. Composition carries restraint and tension.",
-      "Every decision serves story. Curious how this painterly Western approach differs from conventional photography? <a href=\"/Painterly-Western-Photography\">Explore the discipline behind the work.</a>"
+      "The visual language of this work is informed by a painterly approach rooted in the Pictorialist tradition. Light is sculpted. Tone is controlled. Composition serves narrative restraint.",
+      "Every decision is made in service of story. To understand how this painterly Western approach differs from conventional photography, <a href=\"/Painterly-Western-Photography\">explore the discipline behind the work</a>."
     ]
   },
 
@@ -76,8 +76,8 @@ export const painterlyStory = [
   {
     subhead: "Why Western Fine Art Photography Matters",
     paragraphs: [
-      "In an era of instant imagery and mass-produced Western nostalgia, fine art photography grounded in patience, craft, and lived experience stands apart.",
-      "These images endure because they are built on real relationships, real places, and real people — and because they ask the viewer to engage rather than consume."
+      "In an era of rapid imagery and mass-produced Western themes, fine art photography shaped by patience, craft, and lived experience offers something different.",
+      "These images endure because they are built on real people, real environments, and intentional storytelling — and because they invite engagement rather than consumption."
     ]
   },
 
@@ -85,15 +85,15 @@ export const painterlyStory = [
   {
     subhead: "Step Inside the Story",
     paragraphs: [
-      "Western fine art photography is not about recreating the past. It is about listening to it — allowing human truth to surface through character, presence, and restraint.",
+      "Western fine art photography is not about recreating the past. It is about listening to it — allowing character, presence, and human truth to surface.",
       "Each image stands as a single frame from a larger, unfinished narrative — a One-Image Movie™ waiting for you to step inside."
     ]
   },
 
-  // 11. BING REINFORCEMENT (topic confirmation)
+  // 11. BING / GOOGLE REINFORCEMENT
   {
     paragraphs: [
-      "This collection represents western fine art photography focused on cowboy culture, frontier life, and narrative western portraiture. Each image is part of a broader body of western fine art photography exploring character, history, and story in the American West."
+      "This page presents western fine art photography focused on cowboy culture, Indigenous presence, frontier life, and narrative Western portraiture — a disciplined body of fine art photography exploring the American West through character and story."
     ]
   }
 ];

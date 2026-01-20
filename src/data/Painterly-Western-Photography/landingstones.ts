@@ -3,20 +3,16 @@ export const landingWestern = {
   title: "Painterly Western Photography",
   subtitle: "Craft, Light, and Narrative Discipline of the American West",
 
-  // Keywords for structured data and semantic SEO (not meta keywords)
+  // Keywords for structured data and semantic SEO
   keywords: [
-    "Painterly Western Photography",
     "painterly western photography",
+    "western fine art photography",
     "painterly western fine art",
     "cinematic western photography",
-    "western fine art photography",
-    "cowboy painterly photography",
     "western portrait photography",
     "narrative western photography",
     "pictorialist photography",
-    "Indigenous portrait photography",
-    "Native American portraits",
-    "Wayne Heim"
+    "indigenous portrait photography"
   ],
 
   breadcrumb:

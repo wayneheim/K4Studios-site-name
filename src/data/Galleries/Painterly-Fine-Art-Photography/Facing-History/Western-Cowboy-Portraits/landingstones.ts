@@ -1,19 +1,19 @@
 export const landingWestern = {
   title: "Western Fine Art Photography — Painterly Cowboy Portraits",
-  subtitle: "Western Themed Photography • Story-Driven Cowboy Art by Wayne Heim",
-// Keywords used internally for structured data, semantic linking, and contextual SEO
+  subtitle: "Story-Driven Western Themed Photography by Wayne Heim",
+
+  // Keywords used internally for structured data, semantic linking, and contextual SEO
   keywords: [
     "Western fine art photography",
     "Western themed photography",
     "Western photography style",
     "cowboy fine art photography",
-    "cowboy art prints",
     "painterly cowboy photography",
     "Western cowboy portraits",
-    "old west fine art prints",
-    "wild west photography",
     "black and white western art",
     "Native American fine art portraits",
+    "old west fine art prints",
+    "wild west photography",
     "frontier photography",
     "Americana photography",
     "cowboy wall art"
@@ -41,24 +41,24 @@ export const landingWestern = {
 
   tombstones: [
     {
-      title: 'Color Cowboy Art',
-      href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
-      thumb: '/images/tombstones/cowboy-c-ts.jpg',
+      title: "Painterly Cowboy Portraits — Color",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+      thumb: "/images/tombstones/cowboy-c-ts.jpg",
     },
     {
-      title: 'Black & White Cowboy',
-      href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
-      thumb: '/images/tombstones/cowboy-bw-ts.jpg',
+      title: "Black & White Western Cowboy Portraits",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+      thumb: "/images/tombstones/cowboy-bw-ts.jpg",
     },
     {
-      title: 'Native Americans',
-      href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
-      thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/0/Kt9jcckLMc7gPh89Mk53hJr4z8Cr6PCMgRgwwmPM5/S/_WHO1626-886-S.jpg',
+      title: "Native American Fine Art Portraits",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
+      thumb: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/0/Kt9jcckLMc7gPh89Mk53hJr4z8Cr6PCMgRgwwmPM5/S/_WHO1626-886-S.jpg",
     },
     {
-      title: 'Engrained Series',
-      href: '/Other/K4-Select-Series/Engrained',
-      thumb: '/images/tombstones/engrained-ts.jpg',
+      title: "The Engrained Series — Western Art on Wood",
+      href: "/Other/K4-Select-Series/Engrained",
+      thumb: "/images/tombstones/engrained-ts.jpg",
     },
   ]
 };

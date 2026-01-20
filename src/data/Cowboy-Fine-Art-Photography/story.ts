@@ -1,14 +1,11 @@
-// Cowboy Fine Art Photography — AUTHORITATIVE, DECLARATIVE TONE
-// Definition + authority hub (not narrative)
-
 export const cowboyStory = [
 
   // 1. OPENING — EXPLICIT DEFINITION + AUTHORSHIP
   {
     title: "Cowboy Fine Art Photography",
     paragraphs: [
-      "Cowboy fine art photography is a specialized form of portraiture focused on the working cowboy, frontier character, and the human presence of the American West. This body of cowboy photography presents both color and black and white cowboy portraits created as fine art rather than documentary, editorial, or commercial imagery.",
-      "The work presented here is created by Wayne Heim, an award-winning fine art photographer whose cowboy photography is collected for its narrative restraint, painterly technique, and character-driven approach. Each cowboy portrait is designed to reward long viewing and reveal deeper meaning over time."
+      "Cowboy fine art photography is a form of portraiture centered on the cowboy as subject — the working rancher, frontier figure, and human presence of the American West. This work presents both color and black and white cowboy portraits created as fine art rather than documentary, editorial, or commercial imagery.",
+      "The work presented here is created by Wayne Heim, a fine art photographer whose cowboy photography is collected for its narrative restraint, painterly technique, and character-driven approach. Each portrait is authored to reward sustained viewing and reveal meaning over time."
     ]
   },
 
@@ -16,8 +13,8 @@ export const cowboyStory = [
   {
     subhead: "What Defines Cowboy Fine Art Photography",
     paragraphs: [
-      "Cowboy fine art photography differs from commercial cowboy imagery in purpose, craft, and intent. Where stock or lifestyle photography captures surface appearance, fine art cowboy photography explores presence, character, and psychological weight.",
-      "Defining characteristics include controlled, painterly treatment of light and tone; narrative restraint that invites interpretation rather than explanation; focus on authentic subjects rather than models; and museum-quality standards of presentation and printmaking."
+      "Cowboy fine art photography is defined by intent rather than subject matter alone. Where surface imagery emphasizes costume or setting, fine art cowboy photography focuses on presence, character, and psychological weight.",
+      "Defining characteristics include controlled, painterly treatment of light and tone; narrative restraint that invites interpretation; authentic subjects grounded in lived or historically researched experience; and museum-quality standards of presentation and printmaking."
     ]
   },
 
@@ -25,8 +22,8 @@ export const cowboyStory = [
   {
     subhead: "Black and White Cowboy Photography",
     paragraphs: [
-      "Black and white cowboy photography reduces the image to its essential elements — light, shadow, form, and expression. By removing color, attention shifts toward character, emotion, and the internal tension carried by the subject.",
-      "Wayne Heim’s black and white cowboy photography draws from the visual lineage of classic Western portraiture while applying contemporary fine art technique. The result is monochrome cowboy imagery that feels timeless rather than dated. <a href='/Western-Black-and-White-Photography'>Explore the black and white Western collection</a>."
+      "Black and white cowboy photography reduces the image to essential elements — light, shadow, form, and expression. By removing color, attention shifts toward character, gesture, and internal tension carried by the subject.",
+      "These monochrome cowboy portraits draw from the visual lineage of classic Western photography while applying contemporary fine art technique, resulting in imagery that feels enduring rather than period-bound. <a href='/Western-Black-and-White-Photography'>Explore the black and white Western collection</a>."
     ]
   },
 
@@ -34,17 +31,17 @@ export const cowboyStory = [
   {
     subhead: "Painterly Cowboy Portraits",
     paragraphs: [
-      "The painterly approach to cowboy photography applies principles drawn from the Pictorialist tradition: sculpted light, restrained contrast, and deliberate composition. The photograph moves beyond capture toward portraiture shaped by intention.",
-      "This approach allows Wayne Heim’s cowboy portraits to transcend documentation and function as fine art objects with emotional depth and visual longevity. <a href='/Painterly-Western-Photography'>Learn more about the painterly Western approach</a>."
+      "The painterly approach to cowboy photography applies principles associated with the Pictorialist tradition: sculpted light, restrained contrast, and deliberate composition. The photograph moves beyond capture toward portraiture shaped by intention.",
+      "This approach allows cowboy portraits to function as fine art objects with emotional depth and visual longevity rather than descriptive records. <a href='/Painterly-Western-Photography'>Learn more about the painterly Western approach</a>."
     ]
   },
 
-  // 5. AUTHENTIC COWBOY SUBJECTS (HISTORIC CONTINUITY)
+  // 5. AUTHENTIC COWBOY SUBJECTS
   {
     subhead: "Authentic Cowboy Subjects",
     paragraphs: [
-      "The cowboys, ranchers, and frontier figures in this collection are real people photographed in real environments. Wayne Heim does not work with actors, staged scenarios, or theatrical reenactments, but through genuine interaction and careful observation.",
-      "While informed by the visual traditions of historic Western portraiture, this cowboy photography is not built on reenactment or nostalgia. The work reflects a continuity of character rather than a fixed era — drawing from the past while remaining grounded in lived, present-day experience."
+      "The subjects in this collection include both working cowboys of the modern West and living-history historians who have meticulously researched period-specific cowboy life, clothing, and material culture.",
+      "Rather than theatrical staging, the work is grounded in authenticity — whether contemporary or historical — through lived knowledge, historical accuracy, and respect for the culture being represented."
     ]
   },
 
@@ -52,7 +49,7 @@ export const cowboyStory = [
   {
     subhead: "Cowboy Fine Art Prints",
     paragraphs: [
-      "Wayne Heim creates cowboy fine art photography for long-term collection and display. Print options include archival fine art paper, face-mounted acrylic, and the Engrained Series — cowboy portraits printed directly onto Baltic Birch, where natural wood grain becomes part of the artwork.",
+      "Cowboy fine art photography is created for long-term collection and display. Print options include archival fine art paper, face-mounted acrylic, and the Engrained Series — portraits printed directly onto Baltic Birch, where natural wood grain becomes part of the artwork.",
       "Each cowboy fine art print is produced to museum-quality standards, signed by the artist, and built to endure. <a href='/Other/K4-Select-Series/Engrained'>Explore the Engrained wood print series</a>."
     ]
   },
@@ -61,15 +58,15 @@ export const cowboyStory = [
   {
     subhead: "For Collectors of Cowboy Art",
     paragraphs: [
-      "This body of work is created for collectors who value depth over decoration — those seeking cowboy art with emotional weight, narrative integrity, and lasting presence.",
-      "Wayne Heim’s cowboy fine art photography is not mass-produced Western décor. It is original artwork intended to command attention, reward contemplation, and grow in meaning over time."
+      "This body of work is created for collectors who value depth over decoration — those seeking cowboy art with narrative integrity, emotional weight, and lasting presence.",
+      "These cowboy portraits are not decorative Western imagery. They are authored works intended to command attention, reward contemplation, and grow in meaning over time."
     ]
   },
 
-  // 8. CLOSING REINFORCEMENT (SEARCH CONFIRMATION)
+  // 8. CLOSING REINFORCEMENT
   {
     paragraphs: [
-      "This collection represents cowboy fine art photography by Wayne Heim, focused on authentic character, frontier culture, and painterly Western portraiture. The work explores cowboy photography through black and white cowboy portraits, painterly cowboy imagery, and a human-centered interpretation of the American West."
+      "This collection represents cowboy fine art photography focused on authentic character, Western identity, and painterly portraiture. The work engages the visual language of the American West and Wild West not as nostalgia, but as a living continuum of human presence and story."
     ]
   }
 ];

@@ -1,22 +1,22 @@
 export const landingWestern = {
   // Western Cowboy Photography - Targeting "western cowboy photography" + "wild west cowboy photography"
   title: "Western Cowboy Photography",
-  subtitle: "Authentic Portraits from the American Frontier",
+  subtitle: "Character-Driven Portraits of the Historic American West",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [
     "Western Cowboy Photography",
     "Wild West Cowboy Photography",
+    "cowboy fine art photography",
     "cowboy photography",
     "cowboy portraits",
-    "cowboy fine art photography",
     "western cowboy art",
     "wild west photography",
-    "cowboy wall art",
-    "cowboy character portraits",
     "frontier cowboy photography",
+    "cowboy character portraits",
     "authentic cowboy photography",
     "cowboy portrait photography",
+    "cowboy wall art",
     "One-Image Movie",
     "Wayne Heim"
   ],

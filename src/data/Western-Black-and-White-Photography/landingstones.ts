@@ -3,23 +3,17 @@ export const landingWestern = {
   title: "Western Black and White Photography",
   subtitle: "Contrast, Character, and the Timeless West",
 
-  // Keywords for structured data and semantic SEO (not meta keywords)
+  // Keywords for structured data and semantic SEO
   keywords: [
-    "Western Black and White Photography",
-    "Black and White Western Photography",
-    "Black and White Cowboy Photography",
-    "black and white cowboy art",
-    "black and white western wall art",
-    "black and white western art",
-    "black and white pictures of cowboys",
-    "Western Black and White Art",
-    "Black and White Western Fine Art",
-    "monochrome Western photography",
+    "western black and white photography",
+    "black and white western photography",
+    "black and white cowboy photography",
+    "monochrome western photography",
+    "western fine art monochrome",
+    "black and white western fine art",
     "cowboy portraits black and white",
-    "Western fine art monochrome",
     "black and white frontier photography",
-    "One-Image Movie",
-    "Wayne Heim"
+    "black and white western wall art"
   ],
 
   breadcrumb:

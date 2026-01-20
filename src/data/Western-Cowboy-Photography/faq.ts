@@ -12,8 +12,8 @@ export const cowboyFAQ = [
   {
     q: "Is this the same as Wild West photography?",
     a: [
-      "While often grouped together, Wild West cowboy photography traditionally emphasizes mythology and romanticized spectacle, while Western cowboy photography focuses on historic identity, human truth, and the untold stories of the American frontier.",
-      "Wayne Heim's cowboy photography is grounded in character and narrative — not costumes or caricatures. The focus is on presence, restraint, and the human story behind the Western frame."
+      "While often grouped together, Wild West photography traditionally emphasizes mythology and romanticized spectacle, while Western cowboy photography focuses on historic identity, human truth, and lived or carefully researched frontier experience.",
+      "Wayne Heim’s work moves beyond caricature. Whether contemporary or historically informed, each subject is approached with restraint, respect, and narrative intention — grounded in authenticity rather than costume."
     ],
   },
 
@@ -22,7 +22,7 @@ export const cowboyFAQ = [
     q: "What makes cowboy portraits different from cowboy snapshots?",
     a: [
       "A cowboy portrait is a study of character — the way light falls across weathered features, the quiet authority of posture, the history written into hands and eyes.",
-      "Snapshots capture moments. Cowboy portraits reveal presence. Wayne Heim's approach treats each subject with the attention and craft typically reserved for painted portraiture."
+      "Snapshots capture moments. Cowboy portraits reveal presence. Wayne Heim’s approach treats each subject with the attention and craft traditionally reserved for painted portraiture."
     ],
   },
 
@@ -30,8 +30,8 @@ export const cowboyFAQ = [
   {
     q: "What are One-Image Movies™ in cowboy photography?",
     a: [
-      "A One-Image Movie™ is Wayne Heim's term for a single photographic frame designed to carry the emotional weight of a larger cinematic narrative.",
-      "In cowboy photography, this means each image functions like a still from an unseen Western film — rich with implication, atmosphere, and unresolved story."
+      "A One-Image Movie™ is Wayne Heim’s term for a single photographic frame designed to carry the emotional weight of a larger cinematic narrative.",
+      "In cowboy photography, each image functions like a still from an unseen Western film — rich with implication, atmosphere, and unresolved story."
     ],
   },
 
@@ -39,7 +39,7 @@ export const cowboyFAQ = [
   {
     q: "How is painterly technique used in cowboy photography?",
     a: [
-      "Wayne Heim's cowboy photography draws from the Pictorialist tradition. Light is sculpted. Tone is carefully controlled. Composition serves restraint rather than spectacle.",
+      "Wayne Heim’s cowboy photography draws from the Pictorialist tradition. Light is sculpted. Tone is carefully controlled. Composition serves restraint rather than spectacle.",
       "This painterly approach transforms cowboy portraits into fine art that transcends documentation. <a href='/Painterly-Western-Photography'>Learn more about painterly Western photography here</a>."
     ],
   },
@@ -50,7 +50,7 @@ export const cowboyFAQ = [
     a: [
       "This body of work centers on authentic Western character portraits, including:",
       "<ul><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'>Western Cowboy Portraits in Color</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White'>Cowboy Portraits in Black & White</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color'>Indigenous Portraits of the West</a></li></ul>",
-      "Each series presents cowboys and frontier figures as individuals first — shaped by land, labor, and lived experience."
+      "Subjects include working cowboys, ranchers, and historically informed frontier interpreters whose clothing, tools, and environments are grounded in documented Western history."
     ],
   },
 
@@ -59,7 +59,7 @@ export const cowboyFAQ = [
     q: "Who collects Western cowboy photography?",
     a: [
       "This work resonates with collectors who value authenticity over decoration — those drawn to cowboy art that carries emotional weight rather than nostalgic cliché.",
-      "It appeals to collectors seeking Western cowboy photography rooted in character, craft, and genuine human connection. Explore the <a href='/Cowboy-Fine-Art-Photography'>Cowboy Fine Art Photography</a> collection for focused cowboy portraits and black and white cowboy photography."
+      "It appeals to collectors seeking Western cowboy photography rooted in character, craft, and genuine human presence. Explore the <a href='/Cowboy-Fine-Art-Photography'>Cowboy Fine Art Photography</a> collection for focused cowboy portraits and black and white cowboy photography."
     ],
   },
 
@@ -74,10 +74,10 @@ export const cowboyFAQ = [
 
   // 9. COMMERCE — Authenticity / process
   {
-    q: "How is Wild West cowboy photography created authentically?",
+    q: "Are these real cowboys or historical reenactors?",
     a: [
-      "Authenticity in Wild West cowboy photography comes from real relationships with real people. Wayne Heim works with cowboys, ranchers, and frontier figures in settings that matter to them.",
-      "Nothing is staged for spectacle. The camera becomes a witness rather than a director, allowing character to emerge naturally."
+      "Both. Some subjects are working cowboys and ranchers, while others are living-history historians and historically informed interpreters who have meticulously researched period-specific cowboy life, clothing, and material culture.",
+      "What unites them is authenticity of knowledge, intent, and presence. Each subject is approached as a real individual rather than a costume or role."
     ],
   },
 

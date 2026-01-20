@@ -56,13 +56,14 @@ export const facingFAQ = [
     ],
   },
 
-  {
-    q: "How are these Western fine art photographs created?",
-    a: [
-      "The visual language of this work is shaped by a painterly photography style rooted in the Pictorialist tradition. Light is sculpted. Tone is controlled. Every decision serves story and emotional clarity.",
-      "To learn more about the painterly Western photography process, <a href='/Painterly-Western-Photography'>explore the philosophy behind the work here</a>."
-    ],
-  },
+ {
+  q: "How are these Western fine art photographs created?",
+  a: [
+    "The visual language of this work is shaped by a painterly photography discipline rooted in the Pictorialist tradition. Light is sculpted. Tone is controlled. Composition serves narrative restraint rather than spectacle.",
+    "Subjects include both contemporary Western individuals and historically grounded living-history participants — approached not as costumed performance, but as researched, accurate representations of frontier life shaped by lived knowledge and study.",
+    "To learn more about the painterly Western photography process, <a href='/Painterly-Western-Photography'>explore the philosophy behind the work here</a>."
+  ],
+},
 
   {
     q: "Who collects Western fine art photography?",

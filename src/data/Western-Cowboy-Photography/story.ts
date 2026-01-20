@@ -4,8 +4,8 @@ export const cowboyStory = [
   {
     title: "Western Cowboy Photography: Character, Grit, and the Authentic West",
     paragraphs: [
-      "Western cowboy photography exploring the people, traditions, and untold stories of the historic American West. Created by fine art photographer Wayne Heim, this work brings frontier identity to life through painterly, cinematic imagery — grounded in history rather than spectacle or nostalgia.",
-      "Wayne Heim is an award-winning fine art photographer whose Western cowboy photography is collected for its narrative restraint and painterly approach. His cowboy portraits move beyond the familiar imagery of Wild West cowboy photography to reveal character, presence, and depth. Every face carries a story. Every detail — dust, leather, light — earns its place in the frame."
+      "Western cowboy photography exploring the people, traditions, and untold stories of the historic American West. Created by fine art photographer Wayne Heim, this work brings frontier identity to life through painterly, cinematic imagery — grounded in historical truth rather than spectacle or nostalgia.",
+      "Wayne Heim is an award-winning fine art photographer whose Western cowboy photography is collected for its narrative restraint and painterly approach. His cowboy portraits move beyond familiar Wild West imagery to reveal character, presence, and depth. Every face carries a story. Every detail — dust, leather, light — earns its place in the frame."
     ]
   },
 
@@ -13,8 +13,8 @@ export const cowboyStory = [
   {
     subhead: "Wild West Cowboy Photography — Beyond the Myth",
     paragraphs: [
-      "The Wild West has been romanticized, dramatized, and reduced to cliché. Wild West cowboy photography at its best pushes past nostalgia to find the people behind the legend.",
-      "These are not costumes or caricatures. They are ranchers, riders, and frontier figures whose presence commands stillness. Cowboy photography becomes portraiture — honest, restrained, and built on lived experience rather than borrowed imagery."
+      "The Wild West has been romanticized, dramatized, and reduced to cliché. At its best, Wild West cowboy photography pushes past myth to uncover the people behind the legend.",
+      "These portraits are shaped by lived experience and rigorous historical understanding. Cowboy photography becomes portraiture — restrained, intentional, and rooted in knowledge rather than borrowed imagery."
     ]
   },
 
@@ -27,12 +27,12 @@ export const cowboyStory = [
     ]
   },
 
-  // 4. AUTHENTIC COWBOY PHOTOGRAPHY — REAL PEOPLE, REAL PLACES
+  // 4. AUTHENTIC COWBOY PHOTOGRAPHY — REAL PEOPLE, REAL KNOWLEDGE
   {
     subhead: "Authentic Cowboy Photography",
     paragraphs: [
-      "Authenticity in cowboy photography is not about recreating the past — it's about respecting the present. These images are made with real cowboys, ranchers, and frontier figures in settings that matter to them.",
-      "The result is Western cowboy photography rooted in genuine relationship and careful observation. Nothing is staged for effect. The camera becomes a witness rather than a director."
+      "Authenticity in cowboy photography is not about theatrical recreation — it is about respect for craft, history, and lived truth. These images are created with working cowboys, ranchers, and historically informed frontier figures whose understanding of the West runs deep.",
+      "The result is Western cowboy photography built on genuine relationship, careful observation, and historical integrity. Nothing is staged for effect. The camera becomes a witness rather than a director."
     ]
   },
 
@@ -41,7 +41,7 @@ export const cowboyStory = [
     subhead: "Cowboy Photography as Cinematic Storytelling",
     paragraphs: [
       "Each cowboy photograph exists as a One-Image Movie™ — a single frame designed to carry the emotional weight of a larger narrative. The dust hasn't fully settled. The gaze hasn't broken. The story is suspended in time.",
-      "This is Wild West photography that invites the viewer to step inside the frame — to complete what the image begins, and to return again as new meaning surfaces."
+      "This approach invites the viewer to step inside the frame — to complete what the image begins, and to return again as new meaning surfaces."
     ]
   },
 
@@ -50,7 +50,7 @@ export const cowboyStory = [
     subhead: "A Painterly Approach to Cowboy Portraiture",
     paragraphs: [
       "The visual language of this cowboy photography draws from the Pictorialist tradition — light is sculpted, tone is controlled, and composition serves narrative restraint.",
-      "This painterly Western approach transforms cowboy portraits into something closer to fine art than documentation. To explore the craft behind the images, <a href=\"/Painterly-Western-Photography\">learn more about painterly Western photography</a>."
+      "This painterly Western approach transforms cowboy portraits into fine art objects rather than documentation. To explore the discipline behind the images, <a href=\"/Painterly-Western-Photography\">learn more about painterly Western photography</a>."
     ]
   },
 
@@ -67,7 +67,7 @@ export const cowboyStory = [
   {
     subhead: "Cowboy Wall Art That Tells a Story",
     paragraphs: [
-      "Wild West cowboy photography becomes wall art when printed with care. Wayne Heim's cowboy fine art prints are available on archival paper as well as in the Engrained Series — printed directly onto Baltic Birch, where natural wood grain becomes part of the image.",
+      "Western cowboy photography becomes wall art when printed with care. Wayne Heim's cowboy fine art prints are available on archival paper as well as in the Engrained Series — printed directly onto Baltic Birch, where natural wood grain becomes part of the image.",
       "These are not mass-produced Western prints. Each is crafted to collector standards, built to endure, and designed to command presence in any space."
     ]
   },
@@ -76,7 +76,7 @@ export const cowboyStory = [
   {
     subhead: "Why Cowboy Photography Still Matters",
     paragraphs: [
-      "In an era of instant imagery and mass-produced Western nostalgia, authentic cowboy photography stands apart. It offers a slower, more considered encounter with the people who carry the Western tradition forward.",
+      "In an era of instant imagery and manufactured Western nostalgia, authentic cowboy photography stands apart. It offers a slower, more considered encounter with the people and traditions that shaped the West.",
       "This is cowboy photography that asks the viewer to engage rather than consume — to look longer, feel deeper, and discover the human story behind the Western frame."
     ]
   },
@@ -85,7 +85,7 @@ export const cowboyStory = [
   {
     subhead: "Step Inside the Story",
     paragraphs: [
-      "Western cowboy photography is not about recreating legend. It is about listening to the people who live it — allowing human truth to surface through character, presence, and restraint.",
+      "Western cowboy photography is not about reenacting legend. It is about listening — allowing human truth to surface through character, presence, and restraint.",
       "Each cowboy portrait stands as a single frame from a larger, unfinished narrative — a One-Image Movie™ waiting for you to step inside."
     ]
   }
