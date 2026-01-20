@@ -931,6 +931,7 @@ export default function ChapterGalleryBase({
             matColor={matColor}
             setMatColor={setMatColor}
             onClose={() => setIsZoomed(false)}
+            isEngrained={isEngrainedSeries}
           />
         ) : (
           <>

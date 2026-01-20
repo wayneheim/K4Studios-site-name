@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor }) {
+export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor, isEngrained = false }) {
   const [isMobile, setIsMobile] = useState(false);
   const [maxImageHeight, setMaxImageHeight] = useState(() =>
     Math.round(window.innerHeight * 0.8)
@@ -18,11 +18,14 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
   }, []);
 
   // Lock scroll + set default mat color (start with black look via 'white3')
+  // Skip mat color for Engrained series - they display with built-in wood border
   useEffect(() => {
-    setMatColor("white3");
+    if (!isEngrained) {
+      setMatColor("white3");
+    }
     document.body.classList.add("zoom-open");
     return () => document.body.classList.remove("zoom-open");
-  }, []);
+  }, [isEngrained]);
 
   if (!imageData) return null;
 
@@ -91,8 +94,17 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
     };
   }, [imageData, isMobile]);
 
-  // Frame styles
-  const frame = {
+  // Frame styles - Engrained series gets no matting but a float-mount drop shadow
+  const frame = isEngrained ? {
+    background: "transparent",
+    border: "none",
+    padding: 0,
+    // Float mount shadow - upper left light source, shadow cast to lower right
+    boxShadow: "12px 16px 32px rgba(0,0,0,0.4), 6px 8px 14px rgba(0,0,0,0.25)",
+    outline: "none",
+    display: "inline-block",
+    marginTop: 10,
+  } : {
     background:
       matColor === "white"
         ? "#ffffff"
@@ -148,7 +160,14 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
     marginTop: 10,
   };
 
-  const cutEdge = {
+  // Cut edge styles - Engrained series gets bevel edge effect (light top/left, darker bottom/right)
+  const cutEdge = isEngrained ? {
+    padding: 0,
+    background: "transparent",
+    // Bevel effect: light highlight on top/left, subtle shadow on bottom/right
+    boxShadow: "inset 2px 2px 0 rgba(255,255,255,0.35), inset -2px -2px 0 rgba(0,0,0,0.25)",
+    border: "none",
+  } : {
     padding: 6,
     background:
       matColor === "wood"
@@ -256,7 +275,13 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                   maxHeight: maxImageHeight + "px",
                   objectFit: "contain",
                   display: "block",
-                  border: "1px solid #bbb",
+                  // Engrained: bevel edge with light top/left, dark bottom/right
+                  // Regular: simple gray border
+                  border: isEngrained ? "none" : "1px solid #bbb",
+                  borderTop: isEngrained ? "3px solid rgba(220,200,180,0.75)" : undefined,
+                  borderLeft: isEngrained ? "3px solid rgba(220,200,180,0.75)" : undefined,
+                  borderBottom: isEngrained ? "3px solid rgba(140,120,100,0.6)" : undefined,
+                  borderRight: isEngrained ? "3px solid rgba(140,120,100,0.6)" : undefined,
                 }}
                 draggable={false}
                 onDragStart={(e) => e.preventDefault()}
@@ -281,6 +306,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                 }}
               />
             </div>
+            {!isEngrained && (
             <div
               style={{
                 marginTop: 8,
@@ -294,9 +320,10 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
             >
               © Wayne Heim
             </div>
+            )}
           </div>
 
-          {/* SWATCH ROW */}
+          {/* SWATCH ROW - For Engrained series, only show Exit button */}
           <div
             ref={bottomRef}
             style={{
@@ -318,84 +345,88 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                 justifyContent: "center",
               }}
             >
-              <button
-                title="Paper"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setMatColor("no-wood");
-                }}
-                style={{
-                  width: 20,
-                  height: 20,
-                  border: matColor === "no-wood" ? "2px solid #b91c1c" : "1px solid #777",
-                  borderRadius: 4,
-                  backgroundImage: "url('/images/materials/White-w.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  cursor: "pointer",
-                  boxShadow: matColor === "no-wood" ? "0 0 0 2px rgba(185,28,28,0.35)" : "none",
-                  position: "relative",
-                  overflow: "hidden",
-                }}
-              >
-                {/* Diagonal slash to indicate "no mat" vs white mat circle */}
-                <span
-                  aria-hidden="true"
-                  style={{
-                    position: "absolute",
-                    left: "50%",
-                    top: "50%",
-                    transform: "translate(-50%, -50%) rotate(-45deg)",
-                    width: 18,
-                    height: 1.5,
-                    background: matColor === "no-wood" ? "#b91c1c" : "#777",
-                    opacity: 0.8,
-                    pointerEvents: "none",
-                    borderRadius: 1,
-                  }}
-                />
-              </button>
-              <button
-                title="Wood print"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setMatColor("wood");
-                }}
-                style={{
-                  width: 20,
-                  height: 20,
-                  border: matColor === "wood" ? "2px solid #b91c1c" : "1px solid #777",
-                  borderRadius: 4,
-                  backgroundImage: "url('/images/materials/Maple-w.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  cursor: "pointer",
-                  boxShadow: matColor === "wood" ? "0 0 0 2px rgba(185,28,28,0.35)" : "none",
-                }}
-              />
-              {[
-                ["white", "#ffffff"],
-                ["white2", "#9e9d9d"],
-                ["white3", "#000000"],
-              ].map(([key, bg]) => (
-                <button
-                  key={key}
-                  title={`${key} mat`}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setMatColor(key);
-                  }}
-                  style={{
-                    width: 20,
-                    height: 20,
-                    border: matColor === key ? "2px solid #b91c1c" : "1px solid #777",
-                    borderRadius: "50%",
-                    background: bg,
-                    cursor: "pointer",
-                    boxShadow: matColor === key ? "0 0 0 2px rgba(185,28,28,0.35)" : "none",
-                  }}
-                />
-              ))}
+              {!isEngrained && (
+                <>
+                  <button
+                    title="Paper"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setMatColor("no-wood");
+                    }}
+                    style={{
+                      width: 20,
+                      height: 20,
+                      border: matColor === "no-wood" ? "2px solid #b91c1c" : "1px solid #777",
+                      borderRadius: 4,
+                      backgroundImage: "url('/images/materials/White-w.jpg')",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      cursor: "pointer",
+                      boxShadow: matColor === "no-wood" ? "0 0 0 2px rgba(185,28,28,0.35)" : "none",
+                      position: "relative",
+                      overflow: "hidden",
+                    }}
+                  >
+                    {/* Diagonal slash to indicate "no mat" vs white mat circle */}
+                    <span
+                      aria-hidden="true"
+                      style={{
+                        position: "absolute",
+                        left: "50%",
+                        top: "50%",
+                        transform: "translate(-50%, -50%) rotate(-45deg)",
+                        width: 18,
+                        height: 1.5,
+                        background: matColor === "no-wood" ? "#b91c1c" : "#777",
+                        opacity: 0.8,
+                        pointerEvents: "none",
+                        borderRadius: 1,
+                      }}
+                    />
+                  </button>
+                  <button
+                    title="Wood print"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setMatColor("wood");
+                    }}
+                    style={{
+                      width: 20,
+                      height: 20,
+                      border: matColor === "wood" ? "2px solid #b91c1c" : "1px solid #777",
+                      borderRadius: 4,
+                      backgroundImage: "url('/images/materials/Maple-w.jpg')",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      cursor: "pointer",
+                      boxShadow: matColor === "wood" ? "0 0 0 2px rgba(185,28,28,0.35)" : "none",
+                    }}
+                  />
+                  {[
+                    ["white", "#ffffff"],
+                    ["white2", "#9e9d9d"],
+                    ["white3", "#000000"],
+                  ].map(([key, bg]) => (
+                    <button
+                      key={key}
+                      title={`${key} mat`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setMatColor(key);
+                      }}
+                      style={{
+                        width: 20,
+                        height: 20,
+                        border: matColor === key ? "2px solid #b91c1c" : "1px solid #777",
+                        borderRadius: "50%",
+                        background: bg,
+                        cursor: "pointer",
+                        boxShadow: matColor === key ? "0 0 0 2px rgba(185,28,28,0.35)" : "none",
+                      }}
+                    />
+                  ))}
+                </>
+              )}
               <button
                 onClick={onClose}
                 onMouseEnter={(e) => {
@@ -411,23 +442,67 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
                 style={{
                   padding: "0.005rem .5rem",
                   border: "1px solid #ccc",
-                  marginTop: -2,
+                  marginTop: isEngrained ? 8 : -2,
                   borderRadius: 8,
                   fontFamily: "'Glegoo', serif",
                   background: "#f5f5f5",
                   fontSize: "0.8rem",
+                  color: isEngrained ? "#888" : "inherit",
                   cursor: "pointer",
                   transition:
                     "background .18s ease, border-color .18s ease, box-shadow .18s ease",
                 }}
               >
-                Exit
+                {isEngrained ? "Close" : "Exit"}
               </button>
             </div>
             <div style={{ flex: 1, height: 1, backgroundColor: "#ccc", opacity: 0.5 }} />
           </div>
 
-          {/* CONTEXT TEXT */}
+          {/* ENGRAINED FLOAT MOUNT INFO */}
+          {isEngrained && (
+            <div
+              style={{
+                marginTop: 20,
+                marginBottom: 15,
+                maxWidth: isMobile ? "88vw" : "52ch",
+                marginLeft: "auto",
+                marginRight: "auto",
+                textAlign: "center",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "0.8rem",
+                  letterSpacing: "0.05em",
+                  color: "#928176",
+                  fontWeight: 600,
+                  textTransform: "uppercase",
+                  marginBottom: 8,
+                  fontFamily: "'Glegoo', serif",
+                }}
+              >
+                Engrained Float Mount Display
+              </p>
+              <p
+                style={{
+                  fontSize: "0.85rem",
+                  color: "#555",
+                  opacity: 0.7,
+                  fontFamily: "'Glegoo', serif",
+                  lineHeight: 1.5,
+                  margin: 0,
+                }}
+              >
+                Each Engrained print arrives ready to hang with float mount hardware, 
+                allowing it to hover ¾″ off the wall for a striking dimensional effect. 
+                For a more classic presentation, a traditional frame may be added.
+              </p>
+            </div>
+          )}
+
+          {/* CONTEXT TEXT - Hidden for Engrained series */}
+          {!isEngrained && (
           <div style={{ minHeight: reservedHeight || undefined }}>
             <div
               style={{
@@ -480,7 +555,9 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
               {longestContext}
             </p>
           </div>
+          )}
 
+          {!isEngrained && (
           <div style={{ marginTop: 10, marginBottom: 15 }}>
             <a
               href="mailto:info@k4studios.com?subject=Custom%20Order%20Inquiry"
@@ -505,6 +582,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor 
               Contact Us
             </a>
           </div>
+          )}
         </div>
       </div>
     </div>
