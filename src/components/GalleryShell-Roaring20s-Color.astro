@@ -186,10 +186,13 @@ const skipIntro = isImagePage || isDirectGridView;
     </div>
   )}
 
-  {/* Image pages: semantic document structure - H1 rendered by React viewer */}
+  {/* Image pages: semantic document structure with SSR H1 */}
   {skipIntro && (
     <main>
       <article>
+        <header class="ssr-document-header">
+          <h1>Chapter {currentIndex + 1}: {fixMojibake(currentImage?.title || currentImage?.alt || usedEntranceData.title)}</h1>
+        </header>
         <div id="gallery-content" class="flex-grow relative overflow-hidden">
           <div id="chapter-section" class="section-visible" style="display:block;">
             <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />

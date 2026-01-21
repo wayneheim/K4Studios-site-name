@@ -1677,7 +1677,7 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                       </a>
                     </div>
 
-                    {/* Title */}
+                    {/* Title - rendered as H2 since SSR provides the H1 */}
                     {(() => {
                       const chapterTitle = galleryData[currentIndex]?.meta?.ogTitle ||
                         galleryData[currentIndex]?.title ||
@@ -1687,7 +1687,7 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                       const titleLength = chapterTitle?.length || 0;
                       const mobileTitleSize = titleLength > 40 ? '1.0rem' : titleLength > 30 ? '1.15rem' : '1.35rem';
                       return (
-                        <h1
+                        <h2
                           className="text-center font-semibold mb-1 tracking-wide text-[#85644b]"
                           style={{ fontSize: "1.55rem", opacity: 0.5, lineHeight: isMobile ? "1.0" : "1.35", fontFamily: "'Glegoo', serif" }}
                         >
@@ -1701,7 +1701,7 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                               {chapterTitle}
                             </span>
                           </>
-                        </h1>
+                        </h2>
                       );
                     })()}
 

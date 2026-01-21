@@ -1,10 +1,7 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
 import GalleryShell from '@/components/GalleryShell-Engrained-Series.astro';
-import { entranceData as BWEntranceData } from '@/data/Other/K4-Select-Series/Engrained/EngrainedSeriesEntranceData.ts';
+import { entranceData as BWEntranceData } from "@/data/Other/K4-Select-Series/Engrained/EngrainedSeriesEntranceData.ts";
 import { galleryData } from '@/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs';
-import { getImageMeta } from '@/components/utils/getImageMeta.ts';
-import { getLandingMeta } from '@/data/landingMeta.ts';
 
 export async function getStaticPaths() {
   return galleryData.map(img => ({
@@ -25,33 +22,10 @@ if (isBadId) {
     return Astro.redirect(cleanUrl, 302);
   }
 }
-
-// Ensure absolute URL (don’t prepend if already absolute)
-function makeAbsoluteUrl(src) {
-  if (!src) return "";
-  if (src.startsWith("http://") || src.startsWith("https://")) {
-    return src;
-  }
-  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
-}
-
-const imgUrl = makeAbsoluteUrl(imageData.src);
-
-// Get parent gallery meta, override with correct image URL
-const parentMeta = getLandingMeta(
-  "/Other/K4-Select-Series/Engrained/Engrained-Series",
-  imgUrl
-);
-
-const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], parentMeta);
 ---
 
-<BaseLayout meta={meta}>
-  <GalleryShell 
-    breadcrumb={BWEntranceData.breadcrumb} 
-    entranceData={BWEntranceData}
-    initialImageId={id}
-    currentImageUrl={imgUrl}
-    title={meta.title}
-  />
-</BaseLayout>
+<GalleryShell 
+  breadcrumb={BWEntranceData.breadcrumb} 
+  entranceData={BWEntranceData}
+  initialImageId={id}
+/>

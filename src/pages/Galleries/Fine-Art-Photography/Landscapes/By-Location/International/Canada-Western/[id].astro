@@ -1,12 +1,7 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import GalleryShell from "@/components/GalleryShell-Landscapes-Location-International-Canada-Western-Traditional.astro";
+import GalleryShell from '@/components/GalleryShell-Landscapes-Location-International-Canada-Western-Traditional.astro';
 import { entranceData as ColorEntranceData } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western-ColorEntranceData.ts";
-import { galleryData } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western.mjs";
-import { getImageMeta } from "@/components/utils/getImageMeta.ts";
-import { getLandingMeta } from "@/data/landingMeta.ts";
-
-
+import { galleryData } from '@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western.mjs';
 
 export async function getStaticPaths() {
   return galleryData.map(img => ({
@@ -16,64 +11,21 @@ export async function getStaticPaths() {
 
 const { id } = Astro.params;
 const imageData = galleryData.find(img => img.id === id);
-// Gracefully handle missing images - redirect to gallery landing instead of 500
-if (!imageData) {
-  return Astro.redirect("/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western", 302);
-}
 
-// Ensure absolute URL (don’t prepend if already absolute)
-function makeAbsoluteUrl(src: string) {
-  if (!src) return "";
-  if (src.startsWith("http://") || src.startsWith("https://")) {
-    return src;
+const isBadId = !imageData && (id && (id.startsWith('i-') || id === 'i'));
+if (isBadId) {
+  let cleanUrl = Astro.url.pathname.replace(/\/i[^/]*\/?$/, '');
+  cleanUrl = cleanUrl.replace(/\/+$/, '');
+  if (typeof window !== "undefined") {
+    window.location.replace(cleanUrl);
+  } else {
+    return Astro.redirect(cleanUrl, 302);
   }
-  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
-
-const imgUrl = makeAbsoluteUrl(imageData.src);
-
-// Get parent gallery meta, override with correct image URL
-const parentMeta = getLandingMeta(
-  "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
-  imgUrl
-);
-
-const canonicalUrl = `https://www.k4studios.com${Astro.url.pathname.replace(/\/$/, '')}`;
-const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], parentMeta, canonicalUrl);
-
-// JSON-LD specifically for Pinterest
-const pinterestJSONLD = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "ImageObject",
-  "url": imgUrl,
-  "contentUrl": imgUrl,
-  "representativeOfPage": true,
-  "creator": {
-    "@type": "Person",
-    "name": "Wayne Heim",
-    "url": "https://k4studios.com"
-  },
-  "creditText": "Wayne Heim",
-  "license": "https://k4studios.com/copyright"
-});
 ---
 
-<BaseLayout meta={meta}>
-  <head>
-    <!-- Force Pinterest to recognize this page instead of gallery root -->
-    <link rel="canonical" href={`https://k4studios.com${Astro.request.url}`} />
-
-    <!-- Old-school Pinterest tag -->
-    <link rel="image_src" href={imgUrl} />
-
-    <!-- Schema.org ImageObject for Pinterest Rich Pins -->
-    <script type="application/ld+json" is:inline set:html={pinterestJSONLD}></script>
-  </head>
-
-  <GalleryShell 
-    breadcrumb={ColorEntranceData.breadcrumb} 
-    entranceData={ColorEntranceData}
-    initialImageId={id}
-    currentImageUrl={imgUrl}
-  />
-</BaseLayout>
+<GalleryShell 
+  breadcrumb={ColorEntranceData.breadcrumb} 
+  entranceData={ColorEntranceData}
+  initialImageId={id}
+/>

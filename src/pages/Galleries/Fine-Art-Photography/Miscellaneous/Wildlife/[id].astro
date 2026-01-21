@@ -1,10 +1,8 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import GalleryShell from "@/components/GalleryShell-Misc-Wildlife-Traditional.astro";
+import GalleryShell from '@/components/GalleryShell-Misc-Wildlife-Traditional.astro';
 import { entranceData as ColorEntranceData } from "@/data/Galleries/Fine-Art-Photography/Miscellaneous/WildlifeEntranceData.ts";
-import { galleryData } from "@/data/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife.mjs";
-import { getImageMeta } from "@/components/utils/getImageMeta.ts";
-import { getLandingMeta } from "@/data/landingMeta.ts";
+import { galleryData } from '@/data/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife.mjs';
+
 export async function getStaticPaths() {
   return galleryData.map(img => ({
     params: { id: img.id },
@@ -13,39 +11,21 @@ export async function getStaticPaths() {
 
 const { id } = Astro.params;
 const imageData = galleryData.find(img => img.id === id);
-// Gracefully handle missing images - redirect to gallery landing instead of 500
-if (!imageData) {
-  return Astro.redirect("/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife", 302);
-}
 
-
-// Ensure absolute URL (don’t prepend if already absolute)
-function makeAbsoluteUrl(src) {
-  if (!src) return "";
-  if (src.startsWith("http://") || src.startsWith("https://")) {
-    return src;
+const isBadId = !imageData && (id && (id.startsWith('i-') || id === 'i'));
+if (isBadId) {
+  let cleanUrl = Astro.url.pathname.replace(/\/i[^/]*\/?$/, '');
+  cleanUrl = cleanUrl.replace(/\/+$/, '');
+  if (typeof window !== "undefined") {
+    window.location.replace(cleanUrl);
+  } else {
+    return Astro.redirect(cleanUrl, 302);
   }
-  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
-
-const imgUrl = makeAbsoluteUrl(imageData.src);
-
-// Get parent gallery meta, override with correct image URL
-const parentMeta = getLandingMeta(
-  "/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife",
-  imgUrl
-);
-
-const canonicalUrl = `https://www.k4studios.com${Astro.url.pathname.replace(/\/$/, '')}`;
-const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], parentMeta, canonicalUrl);
 ---
 
-<BaseLayout meta={meta}>
-  <GalleryShell 
-    breadcrumb={ColorEntranceData.breadcrumb} 
-    entranceData={ColorEntranceData}
-    initialImageId={id}
-    currentImageUrl={imgUrl}
-    title={meta.title}
-  />
-</BaseLayout>
+<GalleryShell 
+  breadcrumb={ColorEntranceData.breadcrumb} 
+  entranceData={ColorEntranceData}
+  initialImageId={id}
+/>
