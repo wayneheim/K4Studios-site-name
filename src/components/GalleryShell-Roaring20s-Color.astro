@@ -162,16 +162,15 @@ const skipIntro = isImagePage || isDirectGridView;
 ---
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
-  <div id="gallery-content" class="flex-grow relative overflow-hidden">
-    {!skipIntro && (
+  {/* Landing pages: no semantic wrappers needed (H1 in intro section) */}
+  {!skipIntro && (
+    <div id="gallery-content" class="flex-grow relative overflow-hidden">
       <div id="header-section" class="section-visible" style="z-index:10;position:relative;">
         <GalleryHeader client:load breadcrumb={breadcrumb} />
       </div>
-    )}
 
-    <div class="h-0 md:h-5"></div>
+      <div class="h-0 md:h-5"></div>
 
-    {!skipIntro && (
       <div id="intro-section" class="section-visible" style="z-index:1;position:relative;">
         <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
         {usedEntranceData.subtitle && (
@@ -184,14 +183,21 @@ const skipIntro = isImagePage || isDirectGridView;
           image: usedEntranceData.image
         }} />
       </div>
-    )}
+    </div>
+  )}
 
-    {skipIntro && (
-      <div id="chapter-section" class="section-visible" style="display:block;">
-        <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
-      </div>
-    )}
-  </div>
+  {/* Image pages: semantic document structure - H1 rendered by React viewer */}
+  {skipIntro && (
+    <main>
+      <article>
+        <div id="gallery-content" class="flex-grow relative overflow-hidden">
+          <div id="chapter-section" class="section-visible" style="display:block;">
+            <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+          </div>
+        </div>
+      </article>
+    </main>
+  )}
 
   <div class="h-12 md:h-20"></div>
 
@@ -209,6 +215,26 @@ const skipIntro = isImagePage || isDirectGridView;
   />
 
   <style>
+    /* SSR document header - same styling as ChapterGalleryBase title */
+    .ssr-document-header {
+      margin-top: 2rem;
+    }
+    .ssr-document-header h1 {
+      font-size: 1.55rem;
+      opacity: 0.5;
+      line-height: 1.35;
+      font-family: 'Glegoo', serif;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.025em;
+      color: #85644b;
+    }
+    /* Hide the React H2 title since SSR H1 is now the visible one */
+    .ssr-document-header + #gallery-content h2.text-center.font-semibold {
+      display: none;
+    }
+    
     @media (max-width: 767px) {
       #nav-toggle { display: none !important; }
       #intro-section { margin-top: 3.5rem !important; }

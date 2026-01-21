@@ -467,7 +467,7 @@ export const galleryData = [
       "soldiers",
       "k4 studios"
     ],
-    "story": "Thank You Kiss Photography by Wayne Heim — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Reenactments collection. period costume photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Thank You Kiss Photography by Wayne Heim — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -531,7 +531,7 @@ export const galleryData = [
       "soldiers",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"German Reenactors Photography by Wayne Heim\" with the restraint and intention of period costume photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Reenactments.",
+    "story": "Wayne Heim captures \"German Reenactors Photography by Wayne Heim\" with the restraint and intention of period costume photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -595,7 +595,7 @@ export const galleryData = [
       "soldiers",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"Salute 2 Photography by Wayne Heim\" with the restraint and intention of historical reenactment photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Reenactments.",
+    "story": "Wayne Heim captures \"Salute 2 Photography by Wayne Heim\" with the restraint and intention of historical reenactment photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -627,7 +627,7 @@ export const galleryData = [
       "soldiers",
       "k4 studios"
     ],
-    "story": "Attention Salute Photography by Wayne Heim. Wayne Heim's approach to historical reenactment photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Reenactments series.",
+    "story": "Attention Salute Photography by Wayne Heim. Wayne Heim's approach to historical reenactment photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1083,7 +1083,7 @@ export const galleryData = [
       "soldiers",
       "k4 studios"
     ],
-    "story": "\"Medic to Aid Photography by Wayne Heim\" — period costume photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Reenactments collection.",
+    "story": "\"Medic to Aid Photography by Wayne Heim\" — period costume photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1244,7 +1244,7 @@ export const galleryData = [
       "soldiers",
       "k4 studios"
     ],
-    "story": "Running Soldier Photography by Wayne Heim — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Reenactments collection. period costume photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Running Soldier Photography by Wayne Heim — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2195,7 +2195,7 @@ export const galleryData = [
       "reenactor photography",
       "reenactment portraits"
     ],
-    "story": "\"Tender Care Photography by Wayne Heim\" — historical reenactment photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Reenactments collection.",
+    "story": "\"Tender Care Photography by Wayne Heim\" — historical reenactment photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4720,7 +4720,7 @@ export const galleryData = [
       "period costume photography",
       "living history art"
     ],
-    "story": "Yes Sir Black & White Photography by Wayne Heim. Wayne Heim's approach to period costume photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Reenactments series.",
+    "story": "Yes Sir Black & White Photography by Wayne Heim. Wayne Heim's approach to period costume photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],

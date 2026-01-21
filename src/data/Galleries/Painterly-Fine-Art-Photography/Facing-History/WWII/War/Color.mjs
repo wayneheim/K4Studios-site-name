@@ -45,7 +45,7 @@ export const galleryData = [
       "battlefield moments",
       "Second World War"
     ],
-    "story": "In \"Ready to March - WWII Reenactment Photo,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Ready to March - WWII Reenactment Photo,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -105,7 +105,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "WWII Reenactment Photography: Smoke Signals by Wayne Heim — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "WWII Reenactment Photography: Smoke Signals by Wayne Heim — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -230,7 +230,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "\"Medic Rescue Mission - WWII Reenactment Photo\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Medic Rescue Mission - WWII Reenactment Photo\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -260,7 +260,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "In \"Into the Breach. WWII Reenactment,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Into the Breach. WWII Reenactment,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -290,7 +290,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "\"Medic Rescue Mission - WWII Reenactment Photo\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Medic Rescue Mission - WWII Reenactment Photo\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -320,7 +320,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "In \"Into the Breach. WWII Reenactment,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Into the Breach. WWII Reenactment,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -380,7 +380,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "\"Medic Rescue Mission - WWII Reenactment Photo\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Medic Rescue Mission - WWII Reenactment Photo\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -410,7 +410,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "In \"Beach Patrol,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Beach Patrol,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -470,7 +470,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"Portrait of Canadian Reenactor Photography by Wayne Heim\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Portrait of Canadian Reenactor Photography by Wayne Heim\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -500,7 +500,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Sneak attack.. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Sneak attack.. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -560,7 +560,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"Look Out Photography by Wayne Heim\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Look Out Photography by Wayne Heim\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -590,7 +590,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Momentary cover.. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Momentary cover.. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -620,7 +620,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Ballon Lost — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Ballon Lost — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -650,7 +650,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "\"Sending up protectin.\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Sending up protectin.\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -680,7 +680,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"What's our next move?\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"What's our next move?\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -770,7 +770,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Charging Soldier Photography by Wayne Heim — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Charging Soldier Photography by Wayne Heim — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -800,7 +800,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "In \"Have to make my move.,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Have to make my move.,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -830,7 +830,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"Covering fire.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Covering fire.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -860,7 +860,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"Return to sender.\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Return to sender.\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -890,7 +890,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Clean up. — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Clean up. — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -920,7 +920,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Hold your position.. Wayne Heim's approach to painterly photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Hold your position.. Wayne Heim's approach to painterly photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -950,7 +950,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"Moment to reflect.\" with the restraint and intention of K4 Studios fine art. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Moment to reflect.\" with the restraint and intention of K4 Studios fine art. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -980,7 +980,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "In \"Scramble for cover.,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Scramble for cover.,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1010,7 +1010,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "I see you.. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "I see you.. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1040,7 +1040,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "In \"Into the Breach. WWII Reenactment,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Into the Breach. WWII Reenactment,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1070,7 +1070,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"Resque mission\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Resque mission\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1100,7 +1100,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "\"Medical needed.\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Medical needed.\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1130,7 +1130,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"Too far gone.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Too far gone.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1160,7 +1160,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"Obstacles\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Obstacles\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1190,7 +1190,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"Returning covering fire.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Returning covering fire.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1220,7 +1220,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "\"Full charge.\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Full charge.\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1250,7 +1250,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Moment of lightness.. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Moment of lightness.. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1280,7 +1280,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "In \"Heroic effort.,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Heroic effort.,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1310,7 +1310,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "About to make his move.. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "About to make his move.. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1340,7 +1340,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Wayne Heim captures \"In my sights.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"In my sights.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1370,7 +1370,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "She'll shocked — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "She'll shocked — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1400,7 +1400,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "In \"Defensive action.,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Defensive action.,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1430,7 +1430,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "In \"Into the Breach. WWII Reenactment,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Into the Breach. WWII Reenactment,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1460,7 +1460,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "Run for Cover — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Run for Cover — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1495,7 +1495,7 @@ export const galleryData = [
       "battlefield moments",
       "war zone photography"
     ],
-    "story": "Wayne Heim captures \"Guys we got to do something.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Guys we got to do something.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1563,7 +1563,7 @@ export const galleryData = [
       "war zone photography",
       "WWII battlefield"
     ],
-    "story": "Wayne Heim captures \"Second World War In Fine Art\" with the restraint and intention of K4 Studios fine art. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Second World War In Fine Art\" with the restraint and intention of K4 Studios fine art. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1685,7 +1685,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Into the Breach. WWII Reenactment,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Into the Breach. WWII Reenactment,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1719,7 +1719,7 @@ export const galleryData = [
       "war zone photography",
       "Second World War"
     ],
-    "story": "\"Painterly Photography: Finding cover.\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Painterly Photography: Finding cover.\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1752,7 +1752,7 @@ export const galleryData = [
       "battlefield moments",
       "Second World War"
     ],
-    "story": "The Essence Of Wwii Battlefield. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "The Essence Of Wwii Battlefield. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1915,7 +1915,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Wayne Heim captures \"Things Are About To Get Messy.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Things Are About To Get Messy.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2037,7 +2037,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Wayne Heim captures \"Take her out.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Take her out.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2070,7 +2070,7 @@ export const galleryData = [
       "WWII battlefield",
       "Second World War"
     ],
-    "story": "Action Art Moment — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Action Art Moment — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2173,7 +2173,7 @@ export const galleryData = [
       "battlefield moments",
       "war zone photography"
     ],
-    "story": "Wayne Heim captures \"The Essence Of Wwii Battlefield\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"The Essence Of Wwii Battlefield\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2241,7 +2241,7 @@ export const galleryData = [
       "war zone photography",
       "battlefield moments"
     ],
-    "story": "\"Fine Art Wwii Action Art\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Fine Art Wwii Action Art\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2310,7 +2310,7 @@ export const galleryData = [
       "battlefield moments",
       "Second World War"
     ],
-    "story": "\"Artistic Documentary And War Zone Photography\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Artistic Documentary And War Zone Photography\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2344,7 +2344,7 @@ export const galleryData = [
       "Second World War",
       "WWII battlefield"
     ],
-    "story": "Exploring War Zone Photography. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Exploring War Zone Photography. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2577,7 +2577,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "battlefield moments"
     ],
-    "story": "Action Art Portrait. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Action Art Portrait. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2713,7 +2713,7 @@ export const galleryData = [
       "battlefield moments",
       "war zone photography"
     ],
-    "story": "Artistic Documentary Portrait — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Artistic Documentary Portrait — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2883,7 +2883,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "war zone photography"
     ],
-    "story": "Capturing Second World War — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Capturing Second World War — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2952,7 +2952,7 @@ export const galleryData = [
       "war zone photography",
       "WWII battlefield"
     ],
-    "story": "Artistic Documentary In Fine Art. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Artistic Documentary In Fine Art. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3053,7 +3053,7 @@ export const galleryData = [
       "battlefield moments",
       "wwii artistic documentary"
     ],
-    "story": "In \"Second World War And Second World War,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Second World War And Second World War,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3120,7 +3120,7 @@ export const galleryData = [
       "battlefield moments",
       "wwii artistic documentary"
     ],
-    "story": "\"Second World War - Second World War\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Second World War - Second World War\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3188,7 +3188,7 @@ export const galleryData = [
       "battlefield moments",
       "war zone photography"
     ],
-    "story": "Second World War - Wwii Battlefield. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Second World War - Wwii Battlefield. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3219,7 +3219,7 @@ export const galleryData = [
       "Second World War",
       "wwii artistic documentary"
     ],
-    "story": "Exploring Second World War. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Exploring Second World War. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3253,7 +3253,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "Second World War"
     ],
-    "story": "Exploring War Zone Photography. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Exploring War Zone Photography. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3491,7 +3491,7 @@ export const galleryData = [
       "battlefield moments",
       "WWII action art"
     ],
-    "story": "In \"Ready to March - WWII Reenactment Photo,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Ready to March - WWII Reenactment Photo,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3592,7 +3592,7 @@ export const galleryData = [
       "battlefield moments",
       "WWII action art"
     ],
-    "story": "Wayne Heim captures \"Battlefield Study\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Battlefield Study\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3762,7 +3762,7 @@ export const galleryData = [
       "battlefield moments",
       "wwii artistic documentary"
     ],
-    "story": "In \"War Zone Photography And Wwii Battlefield,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"War Zone Photography And Wwii Battlefield,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3831,7 +3831,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "WWII action art"
     ],
-    "story": "Exploring Battlefield Moments — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Exploring Battlefield Moments — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3864,7 +3864,7 @@ export const galleryData = [
       "WWII action art",
       "WWII battlefield"
     ],
-    "story": "Wayne Heim captures \"Artistic Documentary Moment\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "Wayne Heim captures \"Artistic Documentary Moment\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4031,7 +4031,7 @@ export const galleryData = [
       "Second World War",
       "war zone photography"
     ],
-    "story": "\"Capturing Wwii Battlefield\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Capturing Wwii Battlefield\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4101,7 +4101,7 @@ export const galleryData = [
       "war zone photography",
       "wwii artistic documentary"
     ],
-    "story": "\"Exploring Battlefield Moments\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Exploring Battlefield Moments\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4407,7 +4407,7 @@ export const galleryData = [
       "WWII action art",
       "battlefield moments"
     ],
-    "story": "In \"Wayne Heim – Fine Art Photography,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Wayne Heim – Fine Art Photography,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4441,7 +4441,7 @@ export const galleryData = [
       "war zone photography",
       "WWII action art"
     ],
-    "story": "Fine art image by Wayne Heim. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Fine art image by Wayne Heim. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4475,7 +4475,7 @@ export const galleryData = [
       "WWII action art",
       "WWII battlefield"
     ],
-    "story": "Photographic artwork. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Photographic artwork. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4704,7 +4704,7 @@ export const galleryData = [
       "WWII battlefield",
       "battlefield moments"
     ],
-    "story": "In \"The Essence Of War Zone Photography,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"The Essence Of War Zone Photography,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4759,7 +4759,7 @@ export const galleryData = [
       "war zone photography",
       "wwii artistic documentary"
     ],
-    "story": "Capturing Second World War — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Capturing Second World War — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4786,7 +4786,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "WWII battlefield"
     ],
-    "story": "Photographic artwork. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Photographic artwork. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4839,7 +4839,7 @@ export const galleryData = [
       "war zone photography",
       "battlefield moments"
     ],
-    "story": "Artistic Documentary - Wwii Action Art. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Artistic Documentary - Wwii Action Art. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4939,7 +4939,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "war zone photography"
     ],
-    "story": "Looking Through the Fog of War. Wayne Heim's approach to painterly photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color series.",
+    "story": "Looking Through the Fog of War. Wayne Heim's approach to painterly photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4966,7 +4966,7 @@ export const galleryData = [
       "Second World War",
       "war zone photography"
     ],
-    "story": "Action Art And Wwii Action Art — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Action Art And Wwii Action Art — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5126,7 +5126,7 @@ export const galleryData = [
       "battlefield moments",
       "wwii artistic documentary"
     ],
-    "story": "\"War Zone Photography Portrait\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"War Zone Photography Portrait\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5312,7 +5312,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "war zone photography"
     ],
-    "story": "Exploring Battlefield Moments — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Exploring Battlefield Moments — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5340,7 +5340,7 @@ export const galleryData = [
       "Second World War",
       "war zone photography"
     ],
-    "story": "In \"Action Art Moment,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Action Art Moment,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5582,7 +5582,7 @@ export const galleryData = [
       "Second World War",
       "war zone photography"
     ],
-    "story": "\"Battlefield Moments Moment\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color collection.",
+    "story": "\"Battlefield Moments Moment\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5609,7 +5609,7 @@ export const galleryData = [
       "WWII battlefield",
       "wwii artistic documentary"
     ],
-    "story": "In \"Second World War In Fine Art,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Second World War In Fine Art,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5661,7 +5661,7 @@ export const galleryData = [
       "war zone photography",
       "WWII action art"
     ],
-    "story": "In \"Battlefield Moments Study,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Battlefield Moments Study,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5767,7 +5767,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "WWII battlefield"
     ],
-    "story": "In \"Action Art Study,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Action Art Study,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5849,7 +5849,7 @@ export const galleryData = [
       "WWII battlefield",
       "battlefield moments"
     ],
-    "story": "In \"Second World War Moment,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Second World War Moment,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5903,7 +5903,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "WWII battlefield"
     ],
-    "story": "In \"Battlefield Moments Portrait,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Color.",
+    "story": "In \"Battlefield Moments Portrait,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],

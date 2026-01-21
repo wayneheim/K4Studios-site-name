@@ -37,7 +37,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "\"Quality Control Team\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Quality Control Team\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -66,7 +66,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -95,7 +95,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -124,7 +124,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -153,7 +153,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -182,7 +182,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -211,7 +211,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -240,7 +240,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -269,7 +269,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -298,7 +298,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -327,7 +327,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -356,7 +356,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -385,7 +385,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -443,7 +443,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -472,7 +472,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -501,7 +501,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -530,7 +530,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -559,7 +559,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -588,7 +588,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -617,7 +617,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -675,7 +675,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -704,7 +704,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -733,7 +733,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -762,7 +762,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -791,7 +791,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -820,7 +820,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -849,7 +849,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -878,7 +878,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -936,7 +936,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -965,7 +965,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -994,7 +994,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1023,7 +1023,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1052,7 +1052,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1081,7 +1081,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1110,7 +1110,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1139,7 +1139,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1168,7 +1168,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1197,7 +1197,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1226,7 +1226,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1255,7 +1255,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1284,7 +1284,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1313,7 +1313,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1342,7 +1342,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1371,7 +1371,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1400,7 +1400,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1423,7 +1423,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1446,7 +1446,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1469,7 +1469,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1492,7 +1492,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1515,7 +1515,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1538,7 +1538,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1561,7 +1561,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1584,7 +1584,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1607,7 +1607,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1630,7 +1630,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1653,7 +1653,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1676,7 +1676,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1699,7 +1699,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1722,7 +1722,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1745,7 +1745,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1768,7 +1768,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1791,7 +1791,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1814,7 +1814,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1837,7 +1837,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1860,7 +1860,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "\"Untitled\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Untitled\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1883,7 +1883,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "\"Untitled\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Untitled\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1906,7 +1906,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1952,7 +1952,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Here's one for the boys. — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Here's one for the boys. — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1975,7 +1975,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1998,7 +1998,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2021,7 +2021,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2044,7 +2044,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2067,7 +2067,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2090,7 +2090,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2113,7 +2113,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2136,7 +2136,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2159,7 +2159,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2182,7 +2182,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2205,7 +2205,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2228,7 +2228,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2251,7 +2251,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2274,7 +2274,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2320,7 +2320,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2343,7 +2343,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2366,7 +2366,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "\"Untitled\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Untitled\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2389,7 +2389,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "\"Untitled\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Untitled\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2412,7 +2412,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Moment To Reflect.. Wayne Heim's approach to painterly photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy series.",
+    "story": "Moment To Reflect.. Wayne Heim's approach to painterly photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2458,7 +2458,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2481,7 +2481,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2504,7 +2504,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2526,7 +2526,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2548,7 +2548,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2570,7 +2570,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2592,7 +2592,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2614,7 +2614,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2636,7 +2636,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2658,7 +2658,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2680,7 +2680,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2702,7 +2702,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2724,7 +2724,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2746,7 +2746,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2768,7 +2768,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2790,7 +2790,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2812,7 +2812,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2834,7 +2834,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2856,7 +2856,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2878,7 +2878,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2900,7 +2900,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2922,7 +2922,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2944,7 +2944,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2966,7 +2966,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3032,7 +3032,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Take her out.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Take her out.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3054,7 +3054,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3076,7 +3076,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3098,7 +3098,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3120,7 +3120,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3142,7 +3142,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3164,7 +3164,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Untitled\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3186,7 +3186,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3208,7 +3208,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3230,7 +3230,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3252,7 +3252,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3274,7 +3274,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3296,7 +3296,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3318,7 +3318,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3340,7 +3340,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "\"Untitled\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Untitled\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3362,7 +3362,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3384,7 +3384,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3406,7 +3406,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3428,7 +3428,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3450,7 +3450,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3472,7 +3472,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3494,7 +3494,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3516,7 +3516,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Fine Art Painterly Portrait Photography: — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Fine Art Painterly Portrait Photography: — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3538,7 +3538,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "In \"Cold Soldier Photography by Wayne Heim,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy.",
+    "story": "In \"Cold Soldier Photography by Wayne Heim,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3560,7 +3560,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3622,7 +3622,7 @@ export const galleryData = [
       "war news",
       "k4 studios"
     ],
-    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color copy collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Up Next — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],

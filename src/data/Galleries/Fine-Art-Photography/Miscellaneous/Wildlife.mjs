@@ -179,7 +179,7 @@ export const galleryData = [
       "fox",
       "kit"
     ],
-    "story": "Wayne Heim captures \"Big Boy\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Wildlife.",
+    "story": "Wayne Heim captures \"Big Boy\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -264,7 +264,7 @@ export const galleryData = [
       "fox",
       "kit"
     ],
-    "story": "\"Getting a Drink Photography by Wayne Heim\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Wildlife collection.",
+    "story": "\"Getting a Drink Photography by Wayne Heim\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],

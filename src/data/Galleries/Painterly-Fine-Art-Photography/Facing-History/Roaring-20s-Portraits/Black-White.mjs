@@ -75,7 +75,7 @@ export const galleryData = [
       "roaring 20s art",
       "roaring 20s photography"
     ],
-    "story": "Wayne Heim captures \"The Look\" with the restraint and intention of Art Deco era portraits. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Black White.",
+    "story": "Wayne Heim captures \"The Look\" with the restraint and intention of Art Deco era portraits. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -231,7 +231,7 @@ export const galleryData = [
       "roaring 20s art",
       "1920s portraits"
     ],
-    "story": "Wayne Heim captures \"Photographic artwork\" with the restraint and intention of Art Deco era portraits. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Black White.",
+    "story": "Wayne Heim captures \"Photographic artwork\" with the restraint and intention of Art Deco era portraits. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -413,7 +413,7 @@ export const galleryData = [
       "1920s portraits",
       "roaring 20s art"
     ],
-    "story": "1920's at Old Bedford Village. Wayne Heim's approach to 1920s portrait photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Black White series.",
+    "story": "1920's at Old Bedford Village. Wayne Heim's approach to 1920s portrait photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -479,7 +479,7 @@ export const galleryData = [
       "1920s portraits",
       "roaring twenties portraits"
     ],
-    "story": "Fine art image by Wayne Heim — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Black White collection. vintage 1920s photography meets painterly execution, creating an image that bridges documentation and fine art.",
+    "story": "Fine art image by Wayne Heim — part of Wayne Heim's",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -569,7 +569,7 @@ export const galleryData = [
       "roaring 20s photography",
       "roaring twenties portraits"
     ],
-    "story": "In \"1920's at Old Bedford Village,\" Wayne Heim renders Jazz Age portraiture with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Black White.",
+    "story": "In \"1920's at Old Bedford Village,\" Wayne Heim renders Jazz Age portraiture with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -664,7 +664,7 @@ export const galleryData = [
       "1920s portraits",
       "roaring 20s photography"
     ],
-    "story": "In \"1920's at Old Bedford Village,\" Wayne Heim renders Jazz Age portraiture with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Black White.",
+    "story": "In \"1920's at Old Bedford Village,\" Wayne Heim renders Jazz Age portraiture with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -693,7 +693,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "Wayne Heim captures \"New fine art photograph\" with the restraint and intention of Art Deco era portraits. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Black White.",
+    "story": "Wayne Heim captures \"New fine art photograph\" with the restraint and intention of Art Deco era portraits. Light is sculpted, composition serves story. From",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -726,7 +726,7 @@ export const galleryData = [
       "roaring twenties portraits",
       "roaring 20s art"
     ],
-    "story": "\"Mr. & Mrs. Trouble\" — Roaring Twenties portraits. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Black White collection.",
+    "story": "\"Mr. & Mrs. Trouble\" — Roaring Twenties portraits. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -791,7 +791,7 @@ export const galleryData = [
       "1920s portraits",
       "roaring twenties portraits"
     ],
-    "story": "\"Fine art image by Wayne Heim\" — Roaring Twenties portraits. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Black White collection.",
+    "story": "\"Fine art image by Wayne Heim\" — Roaring Twenties portraits. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
     "notes": "",
     "rating": 0,
     "galleries": [],
