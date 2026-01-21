@@ -722,7 +722,7 @@ export const galleryData = [
       "WWII action art",
       "battlefield moments"
     ],
-    "story": "This image embodies WWII action art and Second World War, captured by Wayne Heim in his signature style. It reflects battlefield moments with a touch of WWII action art. © Wayne Heim",
+    "story": "Wayne Heim captures \"War Zone Photography - Second World War\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -794,7 +794,7 @@ export const galleryData = [
       "war zone photography",
       "WWII action art"
     ],
-    "story": "This image embodies war zone photography and WWII battlefield, captured by Wayne Heim in his signature style. It reflects Second World War with a touch of WWII action art. © Wayne Heim",
+    "story": "Artistic Documentary Portrait — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1037,7 +1037,7 @@ export const galleryData = [
       "Second World War",
       "WWII action art"
     ],
-    "story": "This image embodies Second World War and Second World War, captured by Wayne Heim in his signature style. It reflects war zone photography with a touch of war zone photography. © Wayne Heim",
+    "story": "Capturing War Zone Photography. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1631,7 +1631,7 @@ export const galleryData = [
       "WWII action art",
       "WWII battlefield"
     ],
-    "story": "This image embodies wwii artistic documentary and WWII battlefield, captured by Wayne Heim in his signature style. It reflects battlefield moments with a touch of Second World War. © Wayne Heim",
+    "story": "Wayne Heim captures \"Capturing War Zone Photography\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1776,7 +1776,7 @@ export const galleryData = [
       "war zone photography",
       "Second World War"
     ],
-    "story": "This image embodies WWII action art and battlefield moments, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of war zone photography. © Wayne Heim",
+    "story": "Exploring Battlefield Moments. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1882,7 +1882,7 @@ export const galleryData = [
       "WWII battlefield",
       "battlefield moments"
     ],
-    "story": "This image embodies battlefield moments and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII battlefield with a touch of Second World War. © Wayne Heim",
+    "story": "\"Capturing War Zone Photography\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1909,7 +1909,7 @@ export const galleryData = [
       "Second World War",
       "WWII battlefield"
     ],
-    "story": "This image embodies Second World War and battlefield moments, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of WWII battlefield. © Wayne Heim",
+    "story": "\"Action Art Study\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1936,7 +1936,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "battlefield moments"
     ],
-    "story": "This image embodies wwii artistic documentary and Second World War, captured by Wayne Heim in his signature style. It reflects Second World War with a touch of battlefield moments. © Wayne Heim",
+    "story": "In \"Photographic artwork,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1989,7 +1989,7 @@ export const galleryData = [
       "Second World War",
       "WWII battlefield"
     ],
-    "story": "This image embodies Second World War and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of war zone photography. © Wayne Heim",
+    "story": "\"War Zone Photography - War Zone Photography\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2097,7 +2097,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "WWII action art"
     ],
-    "story": "This image embodies wwii artistic documentary and WWII battlefield, captured by Wayne Heim in his signature style. It reflects Second World War with a touch of WWII action art. © Wayne Heim",
+    "story": "Battlefield Moments And Wwii Battlefield. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2124,7 +2124,7 @@ export const galleryData = [
       "WWII action art",
       "WWII battlefield"
     ],
-    "story": "This image embodies wwii artistic documentary and WWII battlefield, captured by Wayne Heim in his signature style. It reflects war zone photography with a touch of WWII battlefield. © Wayne Heim",
+    "story": "Artistic Documentary - Second World War — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2177,7 +2177,7 @@ export const galleryData = [
       "Second World War",
       "war zone photography"
     ],
-    "story": "This image embodies wwii artistic documentary and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII battlefield with a touch of war zone photography. © Wayne Heim",
+    "story": "Exploring Wwii Artistic Documentary — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2203,7 +2203,7 @@ export const galleryData = [
       "Second World War",
       "WWII action art"
     ],
-    "story": "This image embodies Second World War and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII battlefield with a touch of WWII action art. © Wayne Heim",
+    "story": "In \"Artistic Documentary - Wwii Battlefield,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2284,7 +2284,7 @@ export const galleryData = [
       "Second World War",
       "battlefield moments"
     ],
-    "story": "This image embodies Second World War and battlefield moments, captured by Wayne Heim in his signature style. It reflects WWII battlefield with a touch of WWII action art. © Wayne Heim",
+    "story": "Wayne Heim captures \"Artistic Documentary Portrait\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2417,7 +2417,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "battlefield moments"
     ],
-    "story": "This image embodies Second World War and battlefield moments, captured by Wayne Heim in his signature style. It reflects wwii artistic documentary with a touch of war zone photography. © Wayne Heim",
+    "story": "\"Photographic artwork\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2578,7 +2578,7 @@ export const galleryData = [
       "war zone photography",
       "Second World War"
     ],
-    "story": "This image embodies WWII battlefield and Second World War, captured by Wayne Heim in his signature style. It reflects wwii artistic documentary with a touch of Second World War. © Wayne Heim",
+    "story": "Wayne Heim captures \"Artistic Documentary Portrait\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2605,7 +2605,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "WWII battlefield"
     ],
-    "story": "This image embodies war zone photography and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII battlefield with a touch of battlefield moments. © Wayne Heim",
+    "story": "In \"Second World War Portrait,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2818,7 +2818,7 @@ export const galleryData = [
       "WWII action art",
       "Second World War"
     ],
-    "story": "This image embodies battlefield moments and Second World War, captured by Wayne Heim in his signature style. It reflects wwii artistic documentary with a touch of Second World War. © Wayne Heim",
+    "story": "In \"Battlefield Moments - Wwii Artistic Documentary,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2844,7 +2844,7 @@ export const galleryData = [
       "Second World War",
       "battlefield moments"
     ],
-    "story": "This image embodies war zone photography and battlefield moments, captured by Wayne Heim in his signature style. It reflects battlefield moments with a touch of Second World War. © Wayne Heim",
+    "story": "\"Action Art Study\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2922,7 +2922,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "WWII action art"
     ],
-    "story": "This image embodies wwii artistic documentary and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of battlefield moments. © Wayne Heim",
+    "story": "Wayne Heim captures \"Battlefield Moments Portrait\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3018,7 +3018,7 @@ export const galleryData = [
       "war zone photography",
       "Second World War"
     ],
-    "story": "This image embodies battlefield moments and war zone photography, captured by Wayne Heim in his signature style. It reflects Second World War with a touch of battlefield moments. © Wayne Heim",
+    "story": "In \"Battlefield Moments - Wwii Battlefield,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3260,7 +3260,7 @@ export const galleryData = [
       "WWII battlefield",
       "Second World War"
     ],
-    "story": "This image embodies battlefield moments and WWII battlefield, captured by Wayne Heim in his signature style. It reflects WWII action art with a touch of Second World War. © Wayne Heim",
+    "story": "\"Woman Reenactor Photography by Wayne Heim\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3295,7 +3295,7 @@ export const galleryData = [
       "WWII battlefield",
       "wwii artistic documentary"
     ],
-    "story": "This image embodies WWII action art and war zone photography, captured by Wayne Heim in his signature style. It reflects wwii artistic documentary with a touch of battlefield moments. © Wayne Heim",
+    "story": "Battlefield Moments Portrait — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3536,7 +3536,7 @@ export const galleryData = [
       "battlefield moments",
       "war zone photography"
     ],
-    "story": "This image embodies wwii artistic documentary and battlefield moments, captured by Wayne Heim in his signature style. It reflects war zone photography with a touch of Second World War. © Wayne Heim",
+    "story": "In \"Action Art In Fine Art,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\War\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],

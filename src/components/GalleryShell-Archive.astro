@@ -147,8 +147,8 @@ const meta = {
   twitterImage: ogImage,
   twitterUrl: canonicalUrl,
   twitterImageAlt: ogAlt,
-  // IMPORTANT: No-index for archive pages - we don't want search engines indexing hidden content
-  robots: "noindex, nofollow",
+  // Allow indexing - archived images may still have SEO value from old links
+  robots: "index, follow",
 };
 
 /** ---------------------------------------------------------------
@@ -161,8 +161,6 @@ const skipIntro = isImagePage || isDirectGridView;
 ---
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
-  <!-- Add noindex meta tag for archive -->
-  <meta name="robots" content="noindex, nofollow" slot="head" />
   
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
     <!-- Header -->

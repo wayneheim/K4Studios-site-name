@@ -5,7 +5,7 @@ import {
   galleryDataMap,
   sectionGalleries,
   allImages
-} from '@data/galleryMaps/MasterGalleryData.ts';
+} from '@data/galleryMaps/MasterGalleryData.mjs';
 
 function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&");

@@ -13,6 +13,7 @@ export const landingCowboy = {
     "wild west cowboy photography",
     "cowboy art prints",
     "cowboy wall art",
+    "western fine art",
     "painterly cowboy photography",
     "authentic cowboy photography"
   ],

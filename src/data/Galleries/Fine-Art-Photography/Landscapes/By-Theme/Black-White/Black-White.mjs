@@ -74,7 +74,7 @@ export const galleryData = [
      "wayne heim",
      "winter scene"
    ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -173,7 +173,7 @@ export const galleryData = [
      "wayne heim",
      "winter scene"
    ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1361,7 +1361,7 @@ export const galleryData = [
      "wayne heim",
      "winter scene"
    ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1427,7 +1427,7 @@ export const galleryData = [
      "wayne heim",
      "winter scene"
    ],
-    "story": "Enjoy a new image from Wayne Heim's A collection. Full story on image to follow.",
+    "story": "Enjoy a new image from Wayne Heim's Landscape Photography collection. Full story on image to follow.",
     "notes": "",
     "rating": 0,
     "galleries": [],

@@ -238,7 +238,7 @@ export const galleryData = [
       "wwii tanks and trucks",
       "military machinery prints"
     ],
-    "story": "This image embodies wwii tanks and trucks and military machinery prints, captured by Wayne Heim in his signature style. It reflects mechanical war art with a touch of history's greatest conflicts. © Wayne Heim",
+    "story": "Wayne Heim captures \"History's Greatest Conflicts In Fine Art\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -314,7 +314,7 @@ export const galleryData = [
       "battle-ready machines",
       "history's greatest conflicts"
     ],
-    "story": "This image embodies history's greatest conflicts and wwii tanks and trucks, captured by Wayne Heim in his signature style. It reflects mechanical war art with a touch of history's greatest conflicts. © Wayne Heim",
+    "story": "In \"The Essence Of Wwii Tanks And Trucks,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -443,7 +443,7 @@ export const galleryData = [
       "mechanical war art",
       "wwii tanks and trucks"
     ],
-    "story": "This image embodies mechanical war art and military machinery prints, captured by Wayne Heim in his signature style. It reflects wwii tanks and trucks with a touch of wwii tanks and trucks. © Wayne Heim",
+    "story": "Wayne Heim captures \"Fog of War - German forces\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -494,7 +494,7 @@ export const galleryData = [
       "mechanical war art",
       "history's greatest conflicts"
     ],
-    "story": "This image embodies battle-ready machines and history's greatest conflicts, captured by Wayne Heim in his signature style. It reflects mechanical war art with a touch of battle-ready machines. © Wayne Heim",
+    "story": "Capturing Wwii Tanks And Trucks — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -619,7 +619,7 @@ export const galleryData = [
       "battle-ready machines",
       "wwii tanks and trucks"
     ],
-    "story": "This image embodies battle-ready machines and wwii tanks and trucks, captured by Wayne Heim in his signature style. It reflects mechanical war art with a touch of wwii tanks and trucks. © Wayne Heim",
+    "story": "Ready for Battle BlacK & White Photography by Wayne Heim — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -645,7 +645,7 @@ export const galleryData = [
       "mechanical war art",
       "military machinery prints"
     ],
-    "story": "This image embodies military machinery prints and mechanical war art, captured by Wayne Heim in his signature style. It reflects military machinery prints with a touch of military machinery prints. © Wayne Heim",
+    "story": "Tanks And Trucks In Fine Art — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -670,7 +670,7 @@ export const galleryData = [
       "wwii tanks and trucks",
       "battle-ready machines"
     ],
-    "story": "This image embodies wwii tanks and trucks and wwii tanks and trucks, captured by Wayne Heim in his signature style. It reflects wwii tanks and trucks with a touch of battle-ready machines. © Wayne Heim",
+    "story": "In \"Mechanical War Art Portrait,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -747,7 +747,7 @@ export const galleryData = [
       "history's greatest conflicts",
       "wwii tanks and trucks"
     ],
-    "story": "This image embodies battle-ready machines and battle-ready machines, captured by Wayne Heim in his signature style. It reflects battle-ready machines with a touch of history's greatest conflicts. © Wayne Heim",
+    "story": "Wayne Heim captures \"Capturing Battle-ready Machines\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -822,7 +822,7 @@ export const galleryData = [
       "mechanical war art",
       "battle-ready machines"
     ],
-    "story": "This image embodies mechanical war art and battle-ready machines, captured by Wayne Heim in his signature style. It reflects history's greatest conflicts with a touch of military machinery prints. © Wayne Heim",
+    "story": "\"History's Greatest Conflicts And Military Machinery Prints\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -846,7 +846,7 @@ export const galleryData = [
       "battle-ready machines",
       "military machinery prints"
     ],
-    "story": "This image embodies battle-ready machines and battle-ready machines, captured by Wayne Heim in his signature style. It reflects battle-ready machines with a touch of battle-ready machines. © Wayne Heim",
+    "story": "Wayne Heim captures \"Capturing Mechanical War Art\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -948,7 +948,7 @@ export const galleryData = [
       "wwii tanks and trucks",
       "military machinery prints"
     ],
-    "story": "This image embodies wwii tanks and trucks and military machinery prints, captured by Wayne Heim in his signature style. It reflects military machinery prints with a touch of military machinery prints. © Wayne Heim",
+    "story": "In \"History's Greatest Conflicts Portrait,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1156,7 +1156,7 @@ export const galleryData = [
       "battle-ready machines",
       "mechanical war art"
     ],
-    "story": "This image embodies wwii tanks and trucks and mechanical war art, captured by Wayne Heim in his signature style. It reflects wwii tanks and trucks with a touch of mechanical war art. © Wayne Heim",
+    "story": "Wayne Heim captures \"Capturing Military Machinery Prints\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1207,7 +1207,7 @@ export const galleryData = [
       "wwii tanks and trucks",
       "military machinery prints"
     ],
-    "story": "This image embodies wwii tanks and trucks and history's greatest conflicts, captured by Wayne Heim in his signature style. It reflects wwii tanks and trucks with a touch of mechanical war art. © Wayne Heim",
+    "story": "History's Greatest Conflicts Study. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1308,7 +1308,7 @@ export const galleryData = [
       "history's greatest conflicts",
       "wwii tanks and trucks"
     ],
-    "story": "This image embodies wwii tanks and trucks and wwii tanks and trucks, captured by Wayne Heim in his signature style. It reflects battle-ready machines with a touch of history's greatest conflicts. © Wayne Heim",
+    "story": "In \"Military Machinery Prints - Military Machinery Prints,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1333,7 +1333,7 @@ export const galleryData = [
       "mechanical war art",
       "battle-ready machines"
     ],
-    "story": "This image embodies history's greatest conflicts and mechanical war art, captured by Wayne Heim in his signature style. It reflects mechanical war art with a touch of wwii tanks and trucks. © Wayne Heim",
+    "story": "Wayne Heim captures \"Fine Art History's Greatest Conflicts\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Machines\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],

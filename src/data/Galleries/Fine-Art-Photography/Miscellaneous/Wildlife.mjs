@@ -179,7 +179,7 @@ export const galleryData = [
       "fox",
       "kit"
     ],
-    "story": "Big Boy _ Close up of a bull moose . ©Wayne Heim",
+    "story": "Wayne Heim captures \"Big Boy\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Wildlife.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -264,7 +264,7 @@ export const galleryData = [
       "fox",
       "kit"
     ],
-    "story": "Moose by pond getting a drink.  ©Wayne Heim",
+    "story": "\"Getting a Drink Photography by Wayne Heim\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Wildlife collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],

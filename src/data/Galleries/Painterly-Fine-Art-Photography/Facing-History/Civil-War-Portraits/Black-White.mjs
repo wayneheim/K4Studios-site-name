@@ -48,7 +48,7 @@ export const galleryData = [
       "historic reenactor prints",
       "legacy portraits for collectors"
     ],
-    "story": "This image embodies civil war art and civil war photography, captured by Wayne Heim in his signature style. It reflects historic reenactor prints with a touch of legacy portraits for collectors. © Wayne Heim",
+    "story": "In \"Painterly Civil War Portrait: End of the battle.,\" Wayne Heim renders painterly Civil War photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Civil War Portraits\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -259,7 +259,7 @@ export const galleryData = [
       "civil war art prints",
       "civil war reenactment photography"
     ],
-    "story": "This image embodies civil war art and legacy portraits for collectors, captured by Wayne Heim in his signature style. It reflects civil war art prints with a touch of civil war reenactment photography. © Wayne Heim",
+    "story": "Painterly Civil War Portrait: Thinking of Home.. Wayne Heim's approach to Civil War portrait photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Civil War Portraits\Black White series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -380,7 +380,7 @@ export const galleryData = [
       "civil war reenactment photography",
       "civil war art prints"
     ],
-    "story": "This image embodies civil war art and 19th-century photography, captured by Wayne Heim in his signature style. It reflects civil war reenactment photography with a touch of civil war art prints. © Wayne Heim",
+    "story": "\"Wayne Heim – Fine Art Photography\" — Civil War portrait photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Civil War Portraits\Black White collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -620,7 +620,7 @@ export const galleryData = [
       "civil war art prints",
       "civil war art"
     ],
-    "story": "This image embodies Explore Civil War Photography and legacy portraits for collectors, captured by Wayne Heim in his signature style. It reflects civil war art with a touch of civil war photography. © Wayne Heim",
+    "story": "Fine art image by Wayne Heim. Wayne Heim's approach to painterly Civil War photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Civil War Portraits\Black White series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -661,7 +661,7 @@ export const galleryData = [
       "traditional reenactment photography collection",
       "19th-century photography"
     ],
-    "story": "This image embodies civil war paintings and civil war art, captured by Wayne Heim in his signature style. It reflects traditional reenactment photography collection with a touch of 19th-century photography. © Wayne Heim",
+    "story": "Wayne Heim captures \"New fine art photograph\" with the restraint and intention of American Civil War portraits. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Civil War Portraits\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -741,7 +741,7 @@ export const galleryData = [
       "civil war reenactment photography",
       "historic reenactor prints"
     ],
-    "story": "This image embodies civil war reenactment photography and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects Explore Civil War Photography with a touch of traditional reenactment photography collection. © Wayne Heim",
+    "story": "\"New fine art photograph\" — American Civil War portraits. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Civil War Portraits\Black White collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -782,7 +782,7 @@ export const galleryData = [
       "legacy portraits for collectors",
       "historic reenactor prints"
     ],
-    "story": "This image embodies legacy portraits for collectors and historic reenactor prints, captured by Wayne Heim in his signature style. It reflects 19th-century photography with a touch of civil war art. © Wayne Heim",
+    "story": "In \"Fine art image by Wayne Heim,\" Wayne Heim renders Civil War portrait photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Civil War Portraits\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -905,7 +905,7 @@ export const galleryData = [
       "Explore Civil War Photography",
       "traditional reenactment photography collection"
     ],
-    "story": "This image embodies civil war art and Explore Civil War Photography, captured by Wayne Heim in his signature style. It reflects traditional reenactment photography collection with a touch of civil war photography. © Wayne Heim",
+    "story": "New fine art photograph. Wayne Heim's approach to American Civil War portraits transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Civil War Portraits\Black White series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -946,7 +946,7 @@ export const galleryData = [
       "civil war art prints",
       "civil war art"
     ],
-    "story": "This image embodies civil war paintings and civil war art prints, captured by Wayne Heim in his signature style. It reflects civil war art with a touch of Explore Civil War Photography. © Wayne Heim",
+    "story": "Wayne Heim – Fine Art Photography. Wayne Heim's approach to Civil War portrait photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Civil War Portraits\Black White series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1061,7 +1061,7 @@ export const galleryData = [
       "civil war paintings",
       "civil war art prints"
     ],
-    "story": "This image embodies civil war art and civil war paintings, captured by Wayne Heim in his signature style. It reflects traditional reenactment photography collection with a touch of civil war art prints. © Wayne Heim",
+    "story": "In \"Taking Aim Photography by Wayne Heim,\" Wayne Heim renders historical Civil War art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Civil War Portraits\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1101,7 +1101,7 @@ export const galleryData = [
       "civil war art",
       "traditional reenactment photography collection"
     ],
-    "story": "This image embodies legacy portraits for collectors and civil war art, captured by Wayne Heim in his signature style. It reflects traditional reenactment photography collection with a touch of civil war paintings. © Wayne Heim",
+    "story": "Wayne Heim – Fine Art Photography — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Civil War Portraits\Black White collection. Civil War portrait photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1135,7 +1135,7 @@ export const galleryData = [
       "confederate soldiers",
       "Confederate"
     ],
-    "story": "Portrait of Civil War soldier.  © Wayne Heim",
+    "story": "In \"Wayne Heim – Fine Art Photography,\" Wayne Heim renders Civil War portrait photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Civil War Portraits\Black White.",
     "notes": "",
     "rating": 0,
     "galleries": [],

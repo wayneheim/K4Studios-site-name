@@ -36,7 +36,7 @@ export const galleryData = [
       "roaring twenties portraits",
       "roaring 20s art"
     ],
-    "story": "This image embodies roaring 20s art and roaring 20s art, captured by Wayne Heim in his signature style. It reflects roaring twenties portraits with a touch of roaring 20s photography. © Wayne Heim",
+    "story": "In \"Shoe Shine Boy,\" Wayne Heim renders Jazz Age portraiture with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -223,7 +223,7 @@ export const galleryData = [
       "roaring 20s art",
       "roaring 20s photography"
     ],
-    "story": "This image embodies 1920s portraits and roaring twenties portraits, captured by Wayne Heim in his signature style. It reflects 1920s portraits with a touch of 1920s portraits. © Wayne Heim",
+    "story": "Fine art image by Wayne Heim — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Color collection. vintage 1920s photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -251,7 +251,7 @@ export const galleryData = [
       "roaring twenties portraits",
       "roaring 20s art"
     ],
-    "story": "This image embodies 1920s portraits and roaring 20s art, captured by Wayne Heim in his signature style. It reflects roaring 20s art with a touch of roaring 20s art. © Wayne Heim",
+    "story": "In \"Photographic artwork,\" Wayne Heim renders Jazz Age portraiture with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -462,7 +462,7 @@ export const galleryData = [
       "roaring 20s art",
       "1920s portraits"
     ],
-    "story": "This image embodies roaring 20s photography and roaring 20s art, captured by Wayne Heim in his signature style. It reflects 1920s portraits with a touch of roaring twenties portraits. © Wayne Heim",
+    "story": "Wayne Heim captures \"1920's at Old Bedford Village\" with the restraint and intention of Art Deco era portraits. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\Roaring 20s Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],

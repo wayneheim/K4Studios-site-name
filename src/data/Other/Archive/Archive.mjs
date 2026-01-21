@@ -788,5 +788,41 @@ export const galleryData = [
     "visibility": "hidden",
     "archivedFrom": "src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs",
     "sortOrder": 89
+  },
+  {
+    "id": "i-jWDDpC4",
+    "title": "Cotton Candy",
+    "description": "This painterly fine art western landscape photograph captures a fleeting moment of color above the open land near Jackson Hole, Wyoming. A solitary pink cloud drifts across a subdued sky, its softness contrasting with the grounded stillness of the western terrain below. The image is rendered with painterly restraint, emphasizing tone, atmosphere, and quiet balance rather than dramatic scale.\n\nRooted in western landscape photography, the composition treats color as a temporary condition — a brief interruption in an otherwise enduring place. The work invites slow viewing, where subtlety and transience replace spectacle. Part of Wayne Heim’s Western American landscape photography series. © Wayne Heim",
+    "alt": "Painterly western landscape photograph of a single pink cloud floating above open Wyoming terrain near Jackson Hole at dusk.",
+    "story": "It shouldn’t last — and that’s the point.\n\nA single cloud drifts where nothing else asks for attention, holding its color just long enough to be noticed. The land below stays quiet, uninterested in spectacle, letting the sky have its small moment.\n\nBy the time you think to name it, it’s already thinning.",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/KMjcCtzQ2KCCmPP8RhRxN3ms3dVnWLv2Vf2NBQ2w8/L/Painterly-Photography_WHZ9803-528-L.jpg",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/Knznj5WWx2KzD7gNdpJ2SdfwBWQwwPjdMcSw6CjNm/S/Painterly-Photography_WHZ9803-528-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/A",
+    "keywords": [
+      "mountain landscape photography",
+      "Painterly Mountain Photography",
+      "mountain landscapes fine art",
+      "painterly mountain art",
+      "painterly landscape photography",
+      "western landscape photography",
+      "western fine art photography",
+      "Wyoming landscape photography",
+      "Jackson Hole Wyoming landscape",
+      "painterly sunset photography",
+      "western wall art",
+      "western photography prints",
+      "Mountain West fine art photography",
+      "painterly western landscapes",
+      "western art"
+    ],
+    "notes": "This piece reflects a painterly western sensibility that allows restraint and humor to coexist. The cloud’s improbable color is not treated as spectacle, but as a passing condition — a momentary softness within a landscape defined by endurance.\n\nIts strength lies in contrast and timing, rewarding viewers who appreciate subtle interruption rather than grand statement. The image holds space quietly, revealing its character over time rather than all at once.",
+    "rating": 4,
+    "visibility": "hidden",
+    "archivedFrom": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+    "sortOrder": 1
   }
 ];

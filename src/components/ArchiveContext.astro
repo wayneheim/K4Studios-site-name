@@ -1,0 +1,70 @@
+---
+/**
+ * ArchiveContext.astro
+ * 
+ * Shared contextual link block for /all archive index pages.
+ * Provides a single, consistent return link to the parent narrative/category page.
+ * 
+ * USAGE:
+ * <ArchiveContext 
+ *   categoryUrl="/Western-Black-and-White-Photography" 
+ *   categoryName="Western Black & White Photography" 
+ * />
+ * 
+ * PLACEMENT: Below the black header block OR at the very bottom (before Footer)
+ * 
+ * SEO NOTES:
+ * - Keep /all pages indexable (no noindex)
+ * - Do NOT canonical to the category page
+ * - Use exact category name as anchor text
+ * - No additional schema needed - internal link is sufficient
+ */
+
+interface Props {
+  categoryUrl: string;
+  categoryName: string;
+}
+
+const { categoryUrl, categoryName } = Astro.props;
+---
+
+<div class="archive-context">
+  <p>
+    This page presents the complete image index for the 
+    <a href={categoryUrl}>{categoryName}</a> series.
+    For narrative context, historical intent, and artistic approach,
+    return to the main overview.
+  </p>
+</div>
+
+<style>
+  .archive-context {
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 16px 24px;
+    text-align: center;
+    font-family: 'Glegoo', serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4a3d33;
+    background: #f9f7f5;
+    border-radius: 6px;
+    border: 1px solid #e8e4e0;
+  }
+
+  .archive-context p {
+    margin: 0;
+  }
+
+  .archive-context a {
+    color: #85644b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .archive-context a:hover {
+    color: #5a3e2b;
+    text-decoration: underline;
+  }
+</style>

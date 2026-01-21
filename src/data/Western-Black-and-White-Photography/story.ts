@@ -72,12 +72,13 @@ export const bwWesternStory = [
     ]
   },
 
-  // 9. WHY IT MATTERS
+  // 9. THE ARCHIVE — PROOF OF WORK
   {
-    subhead: "Why Black and White Western Photography Matters",
+    subhead: "The Black and White Western Archive",
     paragraphs: [
-      "In an era defined by color saturation and instant imagery, black and white demands intention — from both artist and viewer.",
-      "These images endure because they are built on discipline rather than effect. They ask something in return: slow down, look closer, and see what remains when everything unnecessary has been removed."
+      "Together, these images form a cohesive body of work — not isolated studies, but chapters within a larger visual narrative of the American West.",
+      "For those who wish to move beyond theory and into the full scope of the work, the complete archive of black and white Western portraits can be explored here:",
+      `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all">View the complete Black & White Western Photography collection</a>.`
     ]
   },
 

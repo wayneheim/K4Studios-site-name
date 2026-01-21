@@ -17,7 +17,6 @@ Disallow: /api/V3/
 Disallow: /buy/
 Disallow: /cart/
 Disallow: /key/
-Disallow: /Other/Photo-Shoots/
 Disallow: /photo/
 Disallow: /Slideshows/
 Disallow: /S90d
@@ -27,6 +26,30 @@ Disallow: /upload/
 Disallow: /video/
 Disallow: /src/
 Disallow: /frame/
+Disallow: /keyword/
+Disallow: /*.mjs$
+Disallow: /*.ts$
+Disallow: /*.cjs$
+
+# Legacy SmugMug paths - content no longer exists on this site (returns 410 Gone)
+Disallow: /Other/Photo-Shoots/
+Disallow: /Other/Photo-Shoots-and-Themes/
+Disallow: /Photoshootsandevents/
+Disallow: /Photography-Galleries/
+Disallow: /Pictorialist-Photography/
+
+# Block query string variations (lightbox, dataset, SmugMug API params)
+# Note: ?theme= and ?theme=...&view=grid URLs ARE indexed (shareable theme links)
+Disallow: /Galleries/lightbox
+Disallow: /Galleries?
+Disallow: /Glossary?
+Disallow: /*?dataset=
+Disallow: /*?goTo=
+Disallow: /*?Type=gallery
+Disallow: /*?format=rss
+Disallow: /*?format=atom
+Disallow: /*&format=rss
+Disallow: /*&format=atom
 
 User-agent: *
 Disallow: /hack/feed.mg

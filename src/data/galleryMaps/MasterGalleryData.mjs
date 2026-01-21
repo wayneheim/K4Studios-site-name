@@ -22394,7 +22394,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MJ8XLBvHZz3d3kRjTQdGcX4ZTwqnWgWCTdGNtf22v/L/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/LdcpqTRvCSgXKnknXNt3hVZsnmWHzJr2ptqMkc7HB/XL/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MQxcB3VdbH7qp55cfVhM8HmBjwXpfcmqgr8Sm4HLz/S/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22407,7 +22407,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/KX6dsjTL3b7t5FLMZtQ43TMzm8BPSx2WcJvPMKXtG/L/Image%20s2-2b-490-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/KsKdh8bhDhDRWzr9GnnPfcs2NHPjrDrrrsgjjPSCr/XL/Image%20s2-2b-490-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/LzSsGbNZKrfW3hVgn9kmZQJBz2rPt2MFNdzQvL4kt/S/Image%20s2-2b-490-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22420,7 +22420,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/MM8t8mXBrXm3mzf9sZ4tKz5gRRsBHKNx8dBVGd58k/L/_O1H0149-Enhanced-NR-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/NBSqSwkR2rd6fjwcqNqVR8NfhSvhDC48VdhSmb5Zm/XL/_O1H0149-Enhanced-NR-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/Kv4DnghkvfsX48WSmLkBMNZZ23rNWQFDrFmJRQ374/S/_O1H0149-Enhanced-NR-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22433,7 +22433,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/MpB9GSz7hNtrB23zw4tdjBwqQddxcp5djs4sG43tv/XL/_DSF4943-605-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/MpB9GSz7hNtrB23zw4tdjBwqQddxcp5djs4sG43tv/XL/_DSF4943-605-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/KnZCdkhBS72MXHG2n8mRZM2Wbcpms2JBLX2qPTTmm/S/_DSF4943-605-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22446,7 +22446,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/LvwBRkVHpP8hx5c5ShmNF8ntJCwkCDFfh2WqWdZHn/L/P1030226-523-548-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/L5gmVhjrj8x2w4Q9KbxW3pbQqjTVVKnxgLSv6BSFX/XL/P1030226-523-548-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/LDwhq5CCJRHN3ZNCrsNBstS8Np44HjMpPNJkWzvjn/S/P1030226-523-548-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22459,7 +22459,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/Knznj5WWx2KzD7gNdpJ2SdfwBWQwwPjdMcSw6CjNm/S/Painterly-Photography_WHZ9803-528-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22472,7 +22472,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/L6bfDz8nRvShwSXnNZ9jmwb5XvG7LSz9LGh7rVkzh/L/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/LPzKXsBKb3T6DMznGxvxtFFrhJ6B5MZ5Fdg6dWBjw/XL/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/Lr2wsqWwzSzXnnc62cTK5MJ4MjxM9vv4CB2R9NJgx/S/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22485,7 +22485,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MKGhbKmb4hnD9tZQgSK9z85SxdM8GWSxkWtdvvJFJ/S/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22498,7 +22498,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/LTBx3fqNQ88WvvCGJKW7HMg7BFXrBHvBXBQ9cfDX6/XL/test%20nothing-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/LTBx3fqNQ88WvvCGJKW7HMg7BFXrBHvBXBQ9cfDX6/XL/test%20nothing-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/MD6jrKzFFZW6M3BXqGm63GZfPRDzLHQKdPBLrtQfT/S/test%20nothing-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22524,7 +22524,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/MNVwPz5PCMJGwXbrmCjkLMcL7WWBWzRTjMWjt3vGP/L/_O1H1144-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/KXGXHtMRNFxv2MtCVJX2zr67Bt4b3dvP5Vcwdqf4z/XL/_O1H1144-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/Nhd9jNqNH8QsSbzhsC5Dq836xH4zNGF6NFVJ6VBBD/S/_O1H1144-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22563,7 +22563,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/KHmXCvznLh4FXpGSvGKdF6qZzb6Fv6c62XxtBGSTt/S/_WHZ8138_tonemapped-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22589,7 +22589,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/KSDdqQzJMtpTwrnzNK7CrNggMwv4zqWhPk4nv7pjM/L/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/Lq8HfPD2W7zhkgtC47fvvkSCXhsDcXDmg6PMmHgP3/XL/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/NckVWW9g6zDGTrFPnwgDM7L2x2tgHV4QG8C75bN3K/S/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22602,7 +22602,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/KQpzXG5HKP47kCzhJPL97pd9RnppFDzBJPt97LsfB/L/_DSF3623-Edit-Edit-482-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/KfsFHxSbMVztjS8p9zLFWJXS6qZx6kzFxw2sDFKsF/XL/_DSF3623-Edit-Edit-482-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/LDMw9ZVtQBXz52MSdzwpgwhRBrRkSWCmmWmBfQSBZ/S/_DSF3623-Edit-Edit-482-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22615,7 +22615,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/Lg4PXLj8wMQJSHjF9fmGtPVwbSLstQKDSPMDfTVv2/L/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/NgP47cDzwghHKrW9LCBf4CFzKxSr3Hgc4WxSzbRtx/XL/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/LFMJXkVnr6kmKMGK9K79wxB74gnKM6xZtQQQ3KV2x/S/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22628,7 +22628,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/LH6SF4jM3XJ9GLk7BC7hnZpT2zwF9Zp42SxrsvptR/L/_O1H0365-589-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/K2jnQmGJjS7KSbZC2GHDzWRBdqddn5Dcn4QSj98VJ/XL/_O1H0365-589-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/NjT7cNd6zVQjjtLSPxTCD4tRV2CTq2w4rxgmr2fqx/S/_O1H0365-589-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22654,7 +22654,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/NdRNLTS5VfpsrBqsLz4PchNphRxk3zPqQj9RSgcsR/L/_O1H1179-Enhanced-NR-492-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/M8422CcmxP8WjDnsL45KFCwh4tv362S9gQWknthZh/XL/_O1H1179-Enhanced-NR-492-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/MNQmTw82GXdGPhwFF2thnd6NJKSbZs9BfmRQzG3pr/S/_O1H1179-Enhanced-NR-492-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22667,7 +22667,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/MNst75S2FxWFcZ9JDxS4bNzmQj3JMstwc2vSNDWmF/L/_DSF3718-491-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/KXzBm3nCn2wks2Lczn5fxZsSjKr9dSQxShHRGBwnr/XL/_DSF3718-491-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/LBtJj9GXgCb5Gvs3MjB9Jpn2b9RkQtqBs2jt98d7R/S/_DSF3718-491-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22706,7 +22706,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/MVBbDXdBpgNTm7qNwqNmbvHgnChKtzTnbB2w6F7D4/L/_DSF3862-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/NWghfDXxqjsk9cqx5MtnJvFhjvcPLLKbdJbjwF8pj/XL/_DSF3862-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/MkjwTGrhhGhHwWnSWfbV9jbMJhpXrqw8hw8rdsvKg/S/_DSF3862-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22719,7 +22719,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/KnFZGDzWnCmzJzD8WtNFtfkDrxNRZD4cj38kh4gQb/XL/_DSF3862-Enhanced-NR-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/KnFZGDzWnCmzJzD8WtNFtfkDrxNRZD4cj38kh4gQb/XL/_DSF3862-Enhanced-NR-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/MnqmcSPVhQpKRgKMTTZsWZQzs8StJvgNRjhH4ChQJ/S/_DSF3862-Enhanced-NR-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22745,7 +22745,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/KWjRRMTt9F9tV76CDGrdhwWVDzVkVCCZBfzJwtZbt/L/_O1H1307-Enhanced-NR-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/NhXMZPDFbHCW8QpkcCVXd2cmWndc3dZGS3GqKP8h4/XL/_O1H1307-Enhanced-NR-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/KJ5XtbpgkgNxBHgLLswZ2gh5BL9WZCJrJhhBQw6D5/S/_O1H1307-Enhanced-NR-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22758,7 +22758,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/KSknXLSNWqm5gGgfkdz3FMCz6RptgjMppp5t5czQv/L/_O1H0264-Edit-464-469-470-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/KWcjQZGxXQkhHC8HgtTgB424zfVrZZvCgPzppFcNC/XL/_O1H0264-Edit-464-469-470-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/L7BVksfMDmhQFHJk8XjWVCSFWKXdwvNtkpLdhpfqQ/S/_O1H0264-Edit-464-469-470-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22771,7 +22771,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/NgbF4GHmrtTxF9GFmzLVCFqBG38QfxdkWZ4R9bqDF/L/_DSF4073-Pano_tonemapped-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/M9PsKcrmMCVqHvrHbzg7cg5vtFGmw2ZnWQgRnPWGR/XL/_DSF4073-Pano_tonemapped-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/NBNPznT9mPgNzRb5c8KhSbz24HP4wT58QNzdr3zVr/S/_DSF4073-Pano_tonemapped-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22784,7 +22784,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/LpKBTsRRCssrTmZnZTfNzmhS3WfkW9WQJBzt4TW6P/XL/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/LpKBTsRRCssrTmZnZTfNzmhS3WfkW9WQJBzt4TW6P/XL/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/LNrvzKbK3C8XFTs7NxGM8ffwDNnpzBhrwxgFdq5p3/S/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22797,7 +22797,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/L2D4WvmcvqTNRSpJ5HWRHXf4s2LH9nfQwDZ3CZMSK/L/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/M44p8NZgWw4bTnTw9JsdKDC8qS5gjMXGXjzZMZv64/XL/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/NS362WM3LvR2RskhcrFBXCdRbMDqnkLmZbPHcNhrj/S/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22823,7 +22823,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/Ktmv332NKTBmWRx9kzZFGcw8jv4wC3QPFBF33X4Nj/L/_DSF4443-Pano-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/MnpNzB8wSVDzwjVbrvWTQFkVmgrbMMJh389Ls55jN/XL/_DSF4443-Pano-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/MdHbW8vrvksBrzSHL4KQLWwq25Rv8ggVXbSbc65Px/S/_DSF4443-Pano-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22836,7 +22836,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MxFDvJ4xdzrHrgFMS59C7FtWLFwXnJBrSKc2hK96z/S/_WHZ9589-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22875,7 +22875,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/MmwfQHwqF8pgxrGMg29C9M2nVHp3VQ2S8c8M5G29S/L/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/MH7f46DkSS7d7KwqD33hGCnBMHnRKqWCwSsqTZ7Lp/XL/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/KmwWcCmKvQJzzZSff96FvNGfK9NxF79CXGbvswHDJ/S/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22888,7 +22888,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/KMWfwthHFMkJnKnPLR9f5zZg6p2S84dmf3xCGVnPd/L/_O1H0202-597-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/LShznfPD2xMmsFSJ2vfXgW7Q382JCzWZmMz2rzrmL/XL/_O1H0202-597-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/LpsSr6FNFLcFGZJ8Lxx2qbj6jnbrTwwT6LN79dMpX/S/_O1H0202-597-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22914,7 +22914,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/MvrzWsjZvbXJj8BP7rcTvLN7PvChDBjKLdQh3GmcH/L/20230708_122828-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/KrxXKk2ZC7b5x2sprmMzWjcV6vc2xXscmzTfXmpKj/XL/20230708_122828-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/KS62V5j3jFMphjgXKwQTt2wWG594ZpbbCnCwd2WBm/S/20230708_122828-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22940,7 +22940,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/NdRT5ggCvtxJ7LHFqr45SP6k7HhQLpG2gDW5RFT74/L/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/MQT7z8Zrtt8wM5hHFkS9LjDzghxgk7hS5SLbj4TBW/XL/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/MvWv2jhXnSNNzptwp4bGMZDQgvh5Sh8d8CxWwFSJH/S/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22953,7 +22953,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/M8CcDbSTnDg8cZX8RtRB8PXkpTx76bBX56PZphJFb/XL/_DSF5012-591-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/M8CcDbSTnDg8cZX8RtRB8PXkpTx76bBX56PZphJFb/XL/_DSF5012-591-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/MKVkm2S45NvPHsp5Gw5h6KKDCxbGGWCQ2gn5L5Bpw/S/_DSF5012-591-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22979,7 +22979,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/MND6qn6NRGHwFCtzCfSS5z6RVWdPZrdC4f2JCh3GH/L/_O1H0460-Enhanced-NR_tonemapped-475-476-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/LSBBT7znW6NCqjWCz64mGfbW8gDhfqRdxnTD5bBbf/XL/_O1H0460-Enhanced-NR_tonemapped-475-476-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/MQqwbMQSjVF3xdbsnCMNkBVbX5K34XtPRck9trHf9/S/_O1H0460-Enhanced-NR_tonemapped-475-476-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -22992,7 +22992,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/KpGXNZPcNKqrSZgJTDJWpLRKPN548rZqmLzqNnvpW/L/Painterly-Photography_WHZ9456_tonemapped-Edit-535-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NJCCVZbqWkR5wB767xBpFSDQZHcFCNLqcgNQ24MZ7/S/Painterly-Photography_WHZ9456_tonemapped-Edit-535-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23005,7 +23005,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LFsc8PMMKNgVWqP7ZHVF8bgtK4Z8n7F3x8VLJdfM5/L/Painterly-Landscape-Photography_P1030226-523-548-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LR5FkRCZJnQWPWZMKRMDrwGHsg5vHZ6CF8pvHjHxH/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/KwzCvsGLdLT8fVn5RCg4XH76DvS84LvGgbSfMtLVB/S/Painterly-Landscape-Photography_P1030226-523-548-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23018,7 +23018,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MvKZc5BMBbMDSVVgCvdkx8nMJQqZXbTPSVLtZKrF4/L/Painterly-Photography_WHZ7484-541-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MsRHGm5GDkgqCRRGhX7jhMLpSdJLd7hP7CWLxkVBZ/XL/Painterly-Photography_WHZ7484-541-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/LWvTG8ZV6tnPgcFwrfLJszP99rZQHfFGGTTr3wqL9/S/Painterly-Photography_WHZ7484-541-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23031,7 +23031,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/LkHPkRPgWvL6D8wGwvQFTGPFdHW92rrnFv9hps3R9/L/_O1H0362-Edit-Edit-509-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/LCp58k4PpBdn3CL8JkFhtdHCW3dBVt4Gp8pMvhPnR/XL/_O1H0362-Edit-Edit-509-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/NJPhsVBJ97pRZXPsbtTHrK8KGVDGV3KkVDFKRKxCg/S/_O1H0362-Edit-Edit-509-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23044,7 +23044,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/M9MN3SGWGgx9DPf2C3sZVx5TmcGBMvrMSBxWQgVGP/L/_IMG5600-Enhanced-NR-611-612-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/LJ33bM7CrcM2vPNSqjk9PSdnkwRdq94ttPGGCmP24/XL/_IMG5600-Enhanced-NR-611-612-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/MbXJqV79WHHnNCrMqK9hC8zp72TLP5FmwpJFSsPZg/S/_IMG5600-Enhanced-NR-611-612-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23057,7 +23057,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/ND64Xvm3cMH8V5zV5h8JzphgZJKccjPbfRb9CPBmK/S/Painterly-Photography_WHZ7828-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23083,7 +23083,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/MRQjLWjWL22dhRt96z5r8f57qs4rSmxh9p4SF7Jm8/L/_O1H0075-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/MLVm4dPgvjmSrRWrsFpzRPjXtxpQNFzp8T4f5FkDK/XL/_O1H0075-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/McDjb7Tzz56mzJnqkDhRqRstThFNvZ7HtrFRtHkMX/S/_O1H0075-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23096,7 +23096,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/MPDznwknGHTN3K6g49F5qR2dgG379BHJjdgdsfCqQ/L/_DSF4056-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/KJQdR9TqK29WZcngZP8cf6qCbVwZf4kLL6swbvxdf/XL/_DSF4056-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/LHZcPG5MwD4PLSHBS9HTrjwCd6MPB2w7wVd6JZwRs/S/_DSF4056-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23109,7 +23109,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/MdmXDVQ63ZVb9mM9NpSmw82qzfvZzmSCGHXknKPp3/XL/_O1H1277-Pano-2-Edit-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/MdmXDVQ63ZVb9mM9NpSmw82qzfvZzmSCGHXknKPp3/XL/_O1H1277-Pano-2-Edit-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/LGKK4MFp229dgStHMRmhTPGKN4mvVk8kt3B6Fmdm4/S/_O1H1277-Pano-2-Edit-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23135,7 +23135,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/LbqkV5KTKV9wVdt3c6MXqxDR6bFQjTMDrbjZRm3mR/L/_ANA0948-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/NNvPtFCRLdgsKqXX8dmtvjcfVpRSf44wkqNsqfD84/XL/_ANA0948-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/LvxD8Gp8kXRPvg3g5cn3cVSzh8HZZj5rkHFDwpWJp/S/_ANA0948-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23148,7 +23148,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/Lcwkz5rhJKcNTbQ6CRPpgG9V7SB6N7fnLf8P2BFQj/L/_IGP4461-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/Lcwkz5rhJKcNTbQ6CRPpgG9V7SB6N7fnLf8P2BFQj/L/_IGP4461-Edit-L.jpg",
       "src": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/KnTJQbrt4PhNkhf6M7PQKT8C6MCwZHx5cKRTKMkQC/S/_IGP4461-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23161,7 +23161,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/KjpCdPJLv6cTPJvXnwSv39szxddRXSj4bp3FndKQv/L/_WHZ7172_tonemapped-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/LV9DnwrLCvWpCt9FSSrdP67FhrHv6ZBsf3m46L89v/XL/_WHZ7172_tonemapped-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/MP9tvvV7Jpt5xVJxfvwpCvq8WLxNFNsczf8bgK6HQ/S/_WHZ7172_tonemapped-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23174,7 +23174,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/Mn53szXkg4XQngFD8RgvdCchtBJFGqKT2n93cRrRT/L/_WHZ7671_tonemapped-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/L4rN8Xm7FsjMxFfKJkN7wb8gcKkcjkmkDshW6HpgN/XL/_WHZ7671_tonemapped-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/KjSG6nvJQdN2tqtFZF4s6t3bPM86nZKTnqCf8Bv8v/S/_WHZ7671_tonemapped-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -23189,7 +23189,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LFsc8PMMKNgVWqP7ZHVF8bgtK4Z8n7F3x8VLJdfM5/L/Painterly-Landscape-Photography_P1030226-523-548-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LR5FkRCZJnQWPWZMKRMDrwGHsg5vHZ6CF8pvHjHxH/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/KwzCvsGLdLT8fVn5RCg4XH76DvS84LvGgbSfMtLVB/S/Painterly-Landscape-Photography_P1030226-523-548-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -23202,7 +23202,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/Knznj5WWx2KzD7gNdpJ2SdfwBWQwwPjdMcSw6CjNm/S/Painterly-Photography_WHZ9803-528-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -23215,7 +23215,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/ND64Xvm3cMH8V5zV5h8JzphgZJKccjPbfRb9CPBmK/S/Painterly-Photography_WHZ7828-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -23228,7 +23228,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KNXNpTX43hzbFFXqM3FWgJ3ZB5HvzBf7HKbRCnXLL/L/Painterly-Landscape-Photography_WHZ9406-537-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/MP2962XZzVqXFkGSFDXrWCFd6wgkFnCJ6MGMNbKZk/S/Painterly-Landscape-Photography_WHZ9406-537-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -23241,7 +23241,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/KpGXNZPcNKqrSZgJTDJWpLRKPN548rZqmLzqNnvpW/L/Painterly-Photography_WHZ9456_tonemapped-Edit-535-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NJCCVZbqWkR5wB767xBpFSDQZHcFCNLqcgNQ24MZ7/S/Painterly-Photography_WHZ9456_tonemapped-Edit-535-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -23254,7 +23254,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MKGhbKmb4hnD9tZQgSK9z85SxdM8GWSxkWtdvvJFJ/S/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -23267,7 +23267,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/LnbP8DF48CRBxS5DKvqncmxw4XD9rMbnfTBwRmbXn/XL/Painterly-Photography_WHZ9589-2-533-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/LnbP8DF48CRBxS5DKvqncmxw4XD9rMbnfTBwRmbXn/XL/Painterly-Photography_WHZ9589-2-533-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/KRkc254spnTDtGSk6WH6MFqSwbXx7mMS5BR9cSbtg/S/Painterly-Photography_WHZ9589-2-533-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -23280,7 +23280,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/K4cWzwXw7TSx23FVdVrqkcqmMSKwQZ4w6VCszHH9R/L/Painterly-Photography_WHZ9816-Edit2-532-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/Lv3Gsf8NJMQbC24rL7XJrwgPjqvT6mJRSQMqczc54/XL/Painterly-Photography_WHZ9816-Edit2-532-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/MRvftmbqmmxqJvzG2js4HWWB8ffkgRgnQgXW3vNZQ/S/Painterly-Photography_WHZ9816-Edit2-532-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -23293,7 +23293,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/MpqrbVk95TZ45zjJdzLrGH4qdzbdr2rTXhf9kQsZs/L/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/M8jjDgWhGX9fH6T7X3xwhF4SX2fhh2QhBGzfZHN8r/XL/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/MNd7sw27nXnh243ZSFjWwnFBBWx2NwS9JxGrR8GKw/S/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -23306,7 +23306,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/LJs84NgcTRzxt8trw64pX7X4RrtTxnVWVsqcVMZvn/L/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/MQPTJL8tkdmDHt9j3m875GBxZS6w9hQdnb8PhkCGJ/XL/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/LRp3dLCPM2T7DRcwcBpmxZFRCkhNdqwdpQ75GRkfc/S/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -23319,7 +23319,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/NQRJwcW2NVH295Nt2SQTWRCr3jhdLcmjhVfvf6pSG/L/_O1H1114-Enhanced-NR-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KVLbT4rtk2mbRqvKLNPXrZwDsLMq3BcfKmcFQ7gXX/XL/_O1H1114-Enhanced-NR-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KKfJ2tFPGDFszLJrqFPCS8TpZjgzNStZfN2L6Whtq/S/_O1H1114-Enhanced-NR-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -23332,7 +23332,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MvKZc5BMBbMDSVVgCvdkx8nMJQqZXbTPSVLtZKrF4/L/Painterly-Photography_WHZ7484-541-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MsRHGm5GDkgqCRRGhX7jhMLpSdJLd7hP7CWLxkVBZ/XL/Painterly-Photography_WHZ7484-541-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/LWvTG8ZV6tnPgcFwrfLJszP99rZQHfFGGTTr3wqL9/S/Painterly-Photography_WHZ7484-541-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -23347,7 +23347,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/LLS8bJGNg4Jj4xmX3RwMLRjXHGcx2PMnwPnqmKvFn/XL/_DSF3048-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/LLS8bJGNg4Jj4xmX3RwMLRjXHGcx2PMnwPnqmKvFn/XL/_DSF3048-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/K7QGqcM3WdWFgPSTdKTqFw6JFFLqcM2KqrfpGGrxV/S/_DSF3048-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23360,7 +23360,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/LvdjZgCht62b9tBG48XRrnLT2n5PsHgzWGJVDDfMZ/L/_OLY0581-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/NVHZPbRrFwjXj95MMQmrZwHDZKqZsgVSgvmBgjkHt/XL/_OLY0581-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/KXCXc8Zt94FmRD3CffNChwJHf8C2QVjbL5b49nHsN/S/_OLY0581-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23373,7 +23373,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KNXNpTX43hzbFFXqM3FWgJ3ZB5HvzBf7HKbRCnXLL/L/Painterly-Landscape-Photography_WHZ9406-537-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/MP2962XZzVqXFkGSFDXrWCFd6wgkFnCJ6MGMNbKZk/S/Painterly-Landscape-Photography_WHZ9406-537-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23386,7 +23386,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/LvqbrZVdKSLF3NzGFfTcSPCGzsjtxGwMHdm8hVNp5/L/_PEN0005-Enhanced-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/NNmXnBH98RnzJvTTFzGT8ksfW5XgzwGkCbRjwMg4r/XL/_PEN0005-Enhanced-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/M6sPrqSCC42rVJ7HGRdDj8NNkjdhRFMdMz8gm4Jbp/S/_PEN0005-Enhanced-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23399,7 +23399,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6Trjng/0/NZSwQk9LHPr69WPXT7JgVD9dZ4FcvXLBh5FWZHkJJ/L/_O1H0436-Pano-Enhanced-NR-593-594-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6Trjng/0/MSLn333N4RbwgqLKmC3mj82WKx8NjKkhJsHbMxXPS/XL/_O1H0436-Pano-Enhanced-NR-593-594-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6Trjng/0/KGhcvX3QHFbGgBGm3DHrhXdHBMVx5wtQttBbQXpHh/S/_O1H0436-Pano-Enhanced-NR-593-594-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23412,7 +23412,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/K4HVrW2hZVbQH6r7ZhKVw93t5NKtgNRQLjkBM8shc/XL/_OL35270-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/K4HVrW2hZVbQH6r7ZhKVw93t5NKtgNRQLjkBM8shc/XL/_OL35270-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/M7hjHzGfswTh7KxZFLnRhRwRRjvpgpsLmhPzcX46z/S/_OL35270-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23425,7 +23425,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/KDgJs9WjqJgTCF8jQdZp6HXHwG3Jv9QwLxfCDrBFd/L/_DSF2963-Pano-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/KJ4Mq3b3t6tkJWSbDbvFjbfh7vZnGV7D8qvR7WzrV/XL/_DSF2963-Pano-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/MnhhW4NQgn8kdT693SZPzGpgzNzBB922jvDxdwnmX/S/_DSF2963-Pano-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23438,7 +23438,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/MFQHZJDBCLmFhkMkjrVZBPJ2KsW5HWK3tcZJNwx6L/XL/_DSF2987-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/MFQHZJDBCLmFhkMkjrVZBPJ2KsW5HWK3tcZJNwx6L/XL/_DSF2987-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/KQm3CjBrvd377WPSDnWCdpqtBqk9vZBP2S7MrzfzL/S/_DSF2987-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23451,7 +23451,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/Mgvrx9nh5kxGLD8h8fkbzXWkPVL9SXH5JsQtQfPzk/L/_ANA2501-Enhanced-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/NXxGndGQhNt5j4rv5rNDgSD2DJCxgtdfrPqJr8HqL/XL/_ANA2501-Enhanced-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/NJVkR69PMT2rH8m328RxTxzsDMtVgPHd3zXHBGvdW/S/_ANA2501-Enhanced-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23464,7 +23464,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/NDXHZB8vxpsJpHqgbng3tsZtg9gL5fPGsTXbk46qj/L/_ANA2548-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/Ktf4CTT4mLZH727Wp4Lp4HJg2jRZhXmpkVSGQm6DL/XL/_ANA2548-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/NHGCTMCW5J69DDMrcGL3jTZLPjjwJMfV6vhzJj6mk/S/_ANA2548-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23477,7 +23477,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/KpGXNZPcNKqrSZgJTDJWpLRKPN548rZqmLzqNnvpW/L/Painterly-Photography_WHZ9456_tonemapped-Edit-535-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NJCCVZbqWkR5wB767xBpFSDQZHcFCNLqcgNQ24MZ7/S/Painterly-Photography_WHZ9456_tonemapped-Edit-535-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23490,7 +23490,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MKGhbKmb4hnD9tZQgSK9z85SxdM8GWSxkWtdvvJFJ/S/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23503,7 +23503,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/LCnh4L4zVgCz7Xrjp2B3qxTbgfpmGKkBQQD8gbX89/XL/_WHZ6681-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/LCnh4L4zVgCz7Xrjp2B3qxTbgfpmGKkBQQD8gbX89/XL/_WHZ6681-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/L3xNFn48zGJNxkfRgJHqnBsvb2vpLQVgkkD5rxxDD/S/_WHZ6681-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23516,7 +23516,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/KHmXCvznLh4FXpGSvGKdF6qZzb6Fv6c62XxtBGSTt/S/_WHZ8138_tonemapped-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23529,7 +23529,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/Kw5hjrdsXzXPF4383ZrtnjSbKG2gvsFwn4DdZ6dkX/L/_DSF5884-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/MZQ7nTRzdZJGdXwFNH7K8XrPLBQFgtBwR3FPwHRp7/XL/_DSF5884-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/KS3d52bBWwLqdq9zFxKbfRxtcBzkxp32zVSV6GZJW/S/_DSF5884-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23542,7 +23542,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/NBJc5TDJ5VbDqDnQvms2ZNWtSGpS6xR5gC2gzDBC4/S/_WHZ6667_8_9-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23555,7 +23555,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/NGgH77Br8zdHBzpjshFkLq2zBGbRjFsC67b5k5jQs/S/_DSF5574_tonemapped-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23568,7 +23568,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/NhD3KHBzjBsCpkQXCzq9Ftj5NSxtfcGcMKnP6SRxZ/L/_DSF5606-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KTjv35PCrq8WQG6QTQGcbhq9F4twdtBsx8STTbZZH/XL/_DSF5606-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KQTGN9ct2H5KhRvWvfsnQndvWXzqgJwHpkd3p62mm/S/_DSF5606-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23581,7 +23581,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/photos/i-RjSqqDt/1/Ndkr7PtTPmTChjBm4k5h6HXSBKJp64CZWjmCVtH8F/L/i-RjSqqDt-L.jpg",
       "srcXL": "https://photos.smugmug.com/photos/i-RjSqqDt/1/LK6Pnfwc9jc3mtTgdptj8JhKQQdJdWB8x3Wc9HsvG/XL/i-RjSqqDt-XL.jpg",
       "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/Kd2jzH4thdMdQdDtQGcTXs6VqV5m2kcW3x7F7fmPw/S/i-RjSqqDt-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23594,7 +23594,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/photos/i-qM9zBVL/1/Lkr9v9NGptJgVgp99R6dJMHzBZSfzgdHcTGhNDC9v/L/i-qM9zBVL-L.jpg",
       "srcXL": "https://photos.smugmug.com/photos/i-qM9zBVL/1/NVQVZ8Wd7kbBzGbhbkXRbTWV9ScFgCVDZXpvD8rsF/XL/i-qM9zBVL-XL.jpg",
       "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/LFNn7JKMPj2NGWsqhL3sMP6pkkhhpFqPphPXPvtML/S/i-qM9zBVL-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23607,7 +23607,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/MCWwMt3sLLQD8cPh74jd8pT6bkzHJR2krD5QZQqT3/L/i-5ZsWtSx-L.jpg",
       "srcXL": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/LcnPJhm5CM9NFV2WP7GrBNdx7Q9G4XRNxmk5VtZ6c/XL/i-5ZsWtSx-XL.jpg",
       "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/K9sP3wQvRKVnj9PP325XDjMSS3vQFfSsc8DwPdFsN/S/i-5ZsWtSx-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23620,7 +23620,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg",
       "srcXL": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg",
       "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KjCM9D3pcjKCRTXzJqLdRMwZzXnfDdvPtz4D89Pwc/S/i-fGnNkBL-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23633,7 +23633,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/LW9zPmdqz2mk9FzDN4NmL7J3mbRQ29d6nxqF6CZbr/XL/i-qrS5Ggc-XL.jpg",
       "srcXL": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/LW9zPmdqz2mk9FzDN4NmL7J3mbRQ29d6nxqF6CZbr/XL/i-qrS5Ggc-XL.jpg",
       "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/L2Tt7vCgbSP7B3npd5ZZjWnSfLKrXsf4Nqv7htjvK/S/i-qrS5Ggc-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23646,7 +23646,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/photos/i-bqnctgw/1/NXG5vK5JP9WDtd8PPC2gTwsDpbMqknR6Fxs2BDnPz/L/i-bqnctgw-L.jpg",
       "srcXL": "https://photos.smugmug.com/photos/i-bqnctgw/1/NZVHZj59k8G38kQjzrJLpDm53KdDZ7495mrH2GpT2/XL/i-bqnctgw-XL.jpg",
       "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/NfrsRSGKk5Wsg2vVPFgJHSGmvhgF3vCHhCxjvdgmK/S/i-bqnctgw-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -23661,7 +23661,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LFsc8PMMKNgVWqP7ZHVF8bgtK4Z8n7F3x8VLJdfM5/L/Painterly-Landscape-Photography_P1030226-523-548-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LR5FkRCZJnQWPWZMKRMDrwGHsg5vHZ6CF8pvHjHxH/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/KwzCvsGLdLT8fVn5RCg4XH76DvS84LvGgbSfMtLVB/S/Painterly-Landscape-Photography_P1030226-523-548-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -23674,7 +23674,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/Knznj5WWx2KzD7gNdpJ2SdfwBWQwwPjdMcSw6CjNm/S/Painterly-Photography_WHZ9803-528-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -23687,7 +23687,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/ND64Xvm3cMH8V5zV5h8JzphgZJKccjPbfRb9CPBmK/S/Painterly-Photography_WHZ7828-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -23700,7 +23700,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KNXNpTX43hzbFFXqM3FWgJ3ZB5HvzBf7HKbRCnXLL/L/Painterly-Landscape-Photography_WHZ9406-537-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/MP2962XZzVqXFkGSFDXrWCFd6wgkFnCJ6MGMNbKZk/S/Painterly-Landscape-Photography_WHZ9406-537-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -23713,7 +23713,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/KpGXNZPcNKqrSZgJTDJWpLRKPN548rZqmLzqNnvpW/L/Painterly-Photography_WHZ9456_tonemapped-Edit-535-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NJCCVZbqWkR5wB767xBpFSDQZHcFCNLqcgNQ24MZ7/S/Painterly-Photography_WHZ9456_tonemapped-Edit-535-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -23726,7 +23726,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MKGhbKmb4hnD9tZQgSK9z85SxdM8GWSxkWtdvvJFJ/S/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -23739,7 +23739,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/LnbP8DF48CRBxS5DKvqncmxw4XD9rMbnfTBwRmbXn/XL/Painterly-Photography_WHZ9589-2-533-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/LnbP8DF48CRBxS5DKvqncmxw4XD9rMbnfTBwRmbXn/XL/Painterly-Photography_WHZ9589-2-533-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/KRkc254spnTDtGSk6WH6MFqSwbXx7mMS5BR9cSbtg/S/Painterly-Photography_WHZ9589-2-533-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -23752,7 +23752,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/K4cWzwXw7TSx23FVdVrqkcqmMSKwQZ4w6VCszHH9R/L/Painterly-Photography_WHZ9816-Edit2-532-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/Lv3Gsf8NJMQbC24rL7XJrwgPjqvT6mJRSQMqczc54/XL/Painterly-Photography_WHZ9816-Edit2-532-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/MRvftmbqmmxqJvzG2js4HWWB8ffkgRgnQgXW3vNZQ/S/Painterly-Photography_WHZ9816-Edit2-532-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -23765,7 +23765,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/MpqrbVk95TZ45zjJdzLrGH4qdzbdr2rTXhf9kQsZs/L/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/M8jjDgWhGX9fH6T7X3xwhF4SX2fhh2QhBGzfZHN8r/XL/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/MNd7sw27nXnh243ZSFjWwnFBBWx2NwS9JxGrR8GKw/S/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -23778,7 +23778,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/LJs84NgcTRzxt8trw64pX7X4RrtTxnVWVsqcVMZvn/L/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/MQPTJL8tkdmDHt9j3m875GBxZS6w9hQdnb8PhkCGJ/XL/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/LRp3dLCPM2T7DRcwcBpmxZFRCkhNdqwdpQ75GRkfc/S/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -23791,7 +23791,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/NQRJwcW2NVH295Nt2SQTWRCr3jhdLcmjhVfvf6pSG/L/_O1H1114-Enhanced-NR-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KVLbT4rtk2mbRqvKLNPXrZwDsLMq3BcfKmcFQ7gXX/XL/_O1H1114-Enhanced-NR-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KKfJ2tFPGDFszLJrqFPCS8TpZjgzNStZfN2L6Whtq/S/_O1H1114-Enhanced-NR-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -23804,7 +23804,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MvKZc5BMBbMDSVVgCvdkx8nMJQqZXbTPSVLtZKrF4/L/Painterly-Photography_WHZ7484-541-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MsRHGm5GDkgqCRRGhX7jhMLpSdJLd7hP7CWLxkVBZ/XL/Painterly-Photography_WHZ7484-541-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/LWvTG8ZV6tnPgcFwrfLJszP99rZQHfFGGTTr3wqL9/S/Painterly-Photography_WHZ7484-541-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -46582,6 +46582,19 @@ export const galleryDataMap   = {
       "galleries": [
         "Other/Archive"
       ]
+    },
+    {
+      "id": "i-jWDDpC4",
+      "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/Knznj5WWx2KzD7gNdpJ2SdfwBWQwwPjdMcSw6CjNm/S/Painterly-Photography_WHZ9803-528-S.jpg",
+      "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/KMjcCtzQ2KCCmPP8RhRxN3ms3dVnWLv2Vf2NBQ2w8/L/Painterly-Photography_WHZ9803-528-L.jpg",
+      "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
+      "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/Knznj5WWx2KzD7gNdpJ2SdfwBWQwwPjdMcSw6CjNm/S/Painterly-Photography_WHZ9803-528-S.jpg",
+      "rating": 4,
+      "visibility": "hidden",
+      "galleries": [
+        "Other/Archive"
+      ]
     }
   ]
 };
@@ -69121,7 +69134,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MJ8XLBvHZz3d3kRjTQdGcX4ZTwqnWgWCTdGNtf22v/L/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/LdcpqTRvCSgXKnknXNt3hVZsnmWHzJr2ptqMkc7HB/XL/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/MQxcB3VdbH7qp55cfVhM8HmBjwXpfcmqgr8Sm4HLz/S/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69134,7 +69147,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/KX6dsjTL3b7t5FLMZtQ43TMzm8BPSx2WcJvPMKXtG/L/Image%20s2-2b-490-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/KsKdh8bhDhDRWzr9GnnPfcs2NHPjrDrrrsgjjPSCr/XL/Image%20s2-2b-490-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/LzSsGbNZKrfW3hVgn9kmZQJBz2rPt2MFNdzQvL4kt/S/Image%20s2-2b-490-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69147,7 +69160,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/MM8t8mXBrXm3mzf9sZ4tKz5gRRsBHKNx8dBVGd58k/L/_O1H0149-Enhanced-NR-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/NBSqSwkR2rd6fjwcqNqVR8NfhSvhDC48VdhSmb5Zm/XL/_O1H0149-Enhanced-NR-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/Kv4DnghkvfsX48WSmLkBMNZZ23rNWQFDrFmJRQ374/S/_O1H0149-Enhanced-NR-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69160,7 +69173,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/MpB9GSz7hNtrB23zw4tdjBwqQddxcp5djs4sG43tv/XL/_DSF4943-605-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/MpB9GSz7hNtrB23zw4tdjBwqQddxcp5djs4sG43tv/XL/_DSF4943-605-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/KnZCdkhBS72MXHG2n8mRZM2Wbcpms2JBLX2qPTTmm/S/_DSF4943-605-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69173,7 +69186,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/LvwBRkVHpP8hx5c5ShmNF8ntJCwkCDFfh2WqWdZHn/L/P1030226-523-548-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/L5gmVhjrj8x2w4Q9KbxW3pbQqjTVVKnxgLSv6BSFX/XL/P1030226-523-548-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/LDwhq5CCJRHN3ZNCrsNBstS8Np44HjMpPNJkWzvjn/S/P1030226-523-548-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69186,7 +69199,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/Knznj5WWx2KzD7gNdpJ2SdfwBWQwwPjdMcSw6CjNm/S/Painterly-Photography_WHZ9803-528-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69199,7 +69212,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/L6bfDz8nRvShwSXnNZ9jmwb5XvG7LSz9LGh7rVkzh/L/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/LPzKXsBKb3T6DMznGxvxtFFrhJ6B5MZ5Fdg6dWBjw/XL/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/Lr2wsqWwzSzXnnc62cTK5MJ4MjxM9vv4CB2R9NJgx/S/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69212,7 +69225,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MKGhbKmb4hnD9tZQgSK9z85SxdM8GWSxkWtdvvJFJ/S/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69225,7 +69238,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/LTBx3fqNQ88WvvCGJKW7HMg7BFXrBHvBXBQ9cfDX6/XL/test%20nothing-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/LTBx3fqNQ88WvvCGJKW7HMg7BFXrBHvBXBQ9cfDX6/XL/test%20nothing-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/MD6jrKzFFZW6M3BXqGm63GZfPRDzLHQKdPBLrtQfT/S/test%20nothing-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69251,7 +69264,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/MNVwPz5PCMJGwXbrmCjkLMcL7WWBWzRTjMWjt3vGP/L/_O1H1144-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/KXGXHtMRNFxv2MtCVJX2zr67Bt4b3dvP5Vcwdqf4z/XL/_O1H1144-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/Nhd9jNqNH8QsSbzhsC5Dq836xH4zNGF6NFVJ6VBBD/S/_O1H1144-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69290,7 +69303,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/KHmXCvznLh4FXpGSvGKdF6qZzb6Fv6c62XxtBGSTt/S/_WHZ8138_tonemapped-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69316,7 +69329,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/KSDdqQzJMtpTwrnzNK7CrNggMwv4zqWhPk4nv7pjM/L/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/Lq8HfPD2W7zhkgtC47fvvkSCXhsDcXDmg6PMmHgP3/XL/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/NckVWW9g6zDGTrFPnwgDM7L2x2tgHV4QG8C75bN3K/S/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69329,7 +69342,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/KQpzXG5HKP47kCzhJPL97pd9RnppFDzBJPt97LsfB/L/_DSF3623-Edit-Edit-482-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/KfsFHxSbMVztjS8p9zLFWJXS6qZx6kzFxw2sDFKsF/XL/_DSF3623-Edit-Edit-482-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/LDMw9ZVtQBXz52MSdzwpgwhRBrRkSWCmmWmBfQSBZ/S/_DSF3623-Edit-Edit-482-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69342,7 +69355,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/Lg4PXLj8wMQJSHjF9fmGtPVwbSLstQKDSPMDfTVv2/L/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/NgP47cDzwghHKrW9LCBf4CFzKxSr3Hgc4WxSzbRtx/XL/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/LFMJXkVnr6kmKMGK9K79wxB74gnKM6xZtQQQ3KV2x/S/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69355,7 +69368,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/LH6SF4jM3XJ9GLk7BC7hnZpT2zwF9Zp42SxrsvptR/L/_O1H0365-589-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/K2jnQmGJjS7KSbZC2GHDzWRBdqddn5Dcn4QSj98VJ/XL/_O1H0365-589-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/NjT7cNd6zVQjjtLSPxTCD4tRV2CTq2w4rxgmr2fqx/S/_O1H0365-589-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69381,7 +69394,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/NdRNLTS5VfpsrBqsLz4PchNphRxk3zPqQj9RSgcsR/L/_O1H1179-Enhanced-NR-492-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/M8422CcmxP8WjDnsL45KFCwh4tv362S9gQWknthZh/XL/_O1H1179-Enhanced-NR-492-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/MNQmTw82GXdGPhwFF2thnd6NJKSbZs9BfmRQzG3pr/S/_O1H1179-Enhanced-NR-492-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69394,7 +69407,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/MNst75S2FxWFcZ9JDxS4bNzmQj3JMstwc2vSNDWmF/L/_DSF3718-491-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/KXzBm3nCn2wks2Lczn5fxZsSjKr9dSQxShHRGBwnr/XL/_DSF3718-491-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/LBtJj9GXgCb5Gvs3MjB9Jpn2b9RkQtqBs2jt98d7R/S/_DSF3718-491-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69433,7 +69446,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/MVBbDXdBpgNTm7qNwqNmbvHgnChKtzTnbB2w6F7D4/L/_DSF3862-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/NWghfDXxqjsk9cqx5MtnJvFhjvcPLLKbdJbjwF8pj/XL/_DSF3862-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/MkjwTGrhhGhHwWnSWfbV9jbMJhpXrqw8hw8rdsvKg/S/_DSF3862-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69446,7 +69459,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/KnFZGDzWnCmzJzD8WtNFtfkDrxNRZD4cj38kh4gQb/XL/_DSF3862-Enhanced-NR-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/KnFZGDzWnCmzJzD8WtNFtfkDrxNRZD4cj38kh4gQb/XL/_DSF3862-Enhanced-NR-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/MnqmcSPVhQpKRgKMTTZsWZQzs8StJvgNRjhH4ChQJ/S/_DSF3862-Enhanced-NR-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69472,7 +69485,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/KWjRRMTt9F9tV76CDGrdhwWVDzVkVCCZBfzJwtZbt/L/_O1H1307-Enhanced-NR-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/NhXMZPDFbHCW8QpkcCVXd2cmWndc3dZGS3GqKP8h4/XL/_O1H1307-Enhanced-NR-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/KJ5XtbpgkgNxBHgLLswZ2gh5BL9WZCJrJhhBQw6D5/S/_O1H1307-Enhanced-NR-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69485,7 +69498,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/KSknXLSNWqm5gGgfkdz3FMCz6RptgjMppp5t5czQv/L/_O1H0264-Edit-464-469-470-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/KWcjQZGxXQkhHC8HgtTgB424zfVrZZvCgPzppFcNC/XL/_O1H0264-Edit-464-469-470-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/L7BVksfMDmhQFHJk8XjWVCSFWKXdwvNtkpLdhpfqQ/S/_O1H0264-Edit-464-469-470-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69498,7 +69511,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/NgbF4GHmrtTxF9GFmzLVCFqBG38QfxdkWZ4R9bqDF/L/_DSF4073-Pano_tonemapped-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/M9PsKcrmMCVqHvrHbzg7cg5vtFGmw2ZnWQgRnPWGR/XL/_DSF4073-Pano_tonemapped-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/NBNPznT9mPgNzRb5c8KhSbz24HP4wT58QNzdr3zVr/S/_DSF4073-Pano_tonemapped-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69511,7 +69524,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/LpKBTsRRCssrTmZnZTfNzmhS3WfkW9WQJBzt4TW6P/XL/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/LpKBTsRRCssrTmZnZTfNzmhS3WfkW9WQJBzt4TW6P/XL/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/LNrvzKbK3C8XFTs7NxGM8ffwDNnpzBhrwxgFdq5p3/S/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69524,7 +69537,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/L2D4WvmcvqTNRSpJ5HWRHXf4s2LH9nfQwDZ3CZMSK/L/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/M44p8NZgWw4bTnTw9JsdKDC8qS5gjMXGXjzZMZv64/XL/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/NS362WM3LvR2RskhcrFBXCdRbMDqnkLmZbPHcNhrj/S/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69550,7 +69563,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/Ktmv332NKTBmWRx9kzZFGcw8jv4wC3QPFBF33X4Nj/L/_DSF4443-Pano-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/MnpNzB8wSVDzwjVbrvWTQFkVmgrbMMJh389Ls55jN/XL/_DSF4443-Pano-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/MdHbW8vrvksBrzSHL4KQLWwq25Rv8ggVXbSbc65Px/S/_DSF4443-Pano-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69563,7 +69576,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MxFDvJ4xdzrHrgFMS59C7FtWLFwXnJBrSKc2hK96z/S/_WHZ9589-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69602,7 +69615,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/MmwfQHwqF8pgxrGMg29C9M2nVHp3VQ2S8c8M5G29S/L/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/MH7f46DkSS7d7KwqD33hGCnBMHnRKqWCwSsqTZ7Lp/XL/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/KmwWcCmKvQJzzZSff96FvNGfK9NxF79CXGbvswHDJ/S/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69615,7 +69628,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/KMWfwthHFMkJnKnPLR9f5zZg6p2S84dmf3xCGVnPd/L/_O1H0202-597-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/LShznfPD2xMmsFSJ2vfXgW7Q382JCzWZmMz2rzrmL/XL/_O1H0202-597-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/LpsSr6FNFLcFGZJ8Lxx2qbj6jnbrTwwT6LN79dMpX/S/_O1H0202-597-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69641,7 +69654,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/MvrzWsjZvbXJj8BP7rcTvLN7PvChDBjKLdQh3GmcH/L/20230708_122828-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/KrxXKk2ZC7b5x2sprmMzWjcV6vc2xXscmzTfXmpKj/XL/20230708_122828-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/KS62V5j3jFMphjgXKwQTt2wWG594ZpbbCnCwd2WBm/S/20230708_122828-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69667,7 +69680,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/NdRT5ggCvtxJ7LHFqr45SP6k7HhQLpG2gDW5RFT74/L/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/MQT7z8Zrtt8wM5hHFkS9LjDzghxgk7hS5SLbj4TBW/XL/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/MvWv2jhXnSNNzptwp4bGMZDQgvh5Sh8d8CxWwFSJH/S/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69680,7 +69693,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/M8CcDbSTnDg8cZX8RtRB8PXkpTx76bBX56PZphJFb/XL/_DSF5012-591-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/M8CcDbSTnDg8cZX8RtRB8PXkpTx76bBX56PZphJFb/XL/_DSF5012-591-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/MKVkm2S45NvPHsp5Gw5h6KKDCxbGGWCQ2gn5L5Bpw/S/_DSF5012-591-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69706,7 +69719,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/MND6qn6NRGHwFCtzCfSS5z6RVWdPZrdC4f2JCh3GH/L/_O1H0460-Enhanced-NR_tonemapped-475-476-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/LSBBT7znW6NCqjWCz64mGfbW8gDhfqRdxnTD5bBbf/XL/_O1H0460-Enhanced-NR_tonemapped-475-476-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/MQqwbMQSjVF3xdbsnCMNkBVbX5K34XtPRck9trHf9/S/_O1H0460-Enhanced-NR_tonemapped-475-476-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69719,7 +69732,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/KpGXNZPcNKqrSZgJTDJWpLRKPN548rZqmLzqNnvpW/L/Painterly-Photography_WHZ9456_tonemapped-Edit-535-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NJCCVZbqWkR5wB767xBpFSDQZHcFCNLqcgNQ24MZ7/S/Painterly-Photography_WHZ9456_tonemapped-Edit-535-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69732,7 +69745,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LFsc8PMMKNgVWqP7ZHVF8bgtK4Z8n7F3x8VLJdfM5/L/Painterly-Landscape-Photography_P1030226-523-548-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LR5FkRCZJnQWPWZMKRMDrwGHsg5vHZ6CF8pvHjHxH/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/KwzCvsGLdLT8fVn5RCg4XH76DvS84LvGgbSfMtLVB/S/Painterly-Landscape-Photography_P1030226-523-548-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69745,7 +69758,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MvKZc5BMBbMDSVVgCvdkx8nMJQqZXbTPSVLtZKrF4/L/Painterly-Photography_WHZ7484-541-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MsRHGm5GDkgqCRRGhX7jhMLpSdJLd7hP7CWLxkVBZ/XL/Painterly-Photography_WHZ7484-541-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/LWvTG8ZV6tnPgcFwrfLJszP99rZQHfFGGTTr3wqL9/S/Painterly-Photography_WHZ7484-541-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69758,7 +69771,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/LkHPkRPgWvL6D8wGwvQFTGPFdHW92rrnFv9hps3R9/L/_O1H0362-Edit-Edit-509-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/LCp58k4PpBdn3CL8JkFhtdHCW3dBVt4Gp8pMvhPnR/XL/_O1H0362-Edit-Edit-509-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/NJPhsVBJ97pRZXPsbtTHrK8KGVDGV3KkVDFKRKxCg/S/_O1H0362-Edit-Edit-509-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69771,7 +69784,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/M9MN3SGWGgx9DPf2C3sZVx5TmcGBMvrMSBxWQgVGP/L/_IMG5600-Enhanced-NR-611-612-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/LJ33bM7CrcM2vPNSqjk9PSdnkwRdq94ttPGGCmP24/XL/_IMG5600-Enhanced-NR-611-612-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/MbXJqV79WHHnNCrMqK9hC8zp72TLP5FmwpJFSsPZg/S/_IMG5600-Enhanced-NR-611-612-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69784,7 +69797,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/ND64Xvm3cMH8V5zV5h8JzphgZJKccjPbfRb9CPBmK/S/Painterly-Photography_WHZ7828-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69810,7 +69823,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/MRQjLWjWL22dhRt96z5r8f57qs4rSmxh9p4SF7Jm8/L/_O1H0075-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/MLVm4dPgvjmSrRWrsFpzRPjXtxpQNFzp8T4f5FkDK/XL/_O1H0075-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/McDjb7Tzz56mzJnqkDhRqRstThFNvZ7HtrFRtHkMX/S/_O1H0075-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69823,7 +69836,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/MPDznwknGHTN3K6g49F5qR2dgG379BHJjdgdsfCqQ/L/_DSF4056-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/KJQdR9TqK29WZcngZP8cf6qCbVwZf4kLL6swbvxdf/XL/_DSF4056-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/LHZcPG5MwD4PLSHBS9HTrjwCd6MPB2w7wVd6JZwRs/S/_DSF4056-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69836,7 +69849,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/MdmXDVQ63ZVb9mM9NpSmw82qzfvZzmSCGHXknKPp3/XL/_O1H1277-Pano-2-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/MdmXDVQ63ZVb9mM9NpSmw82qzfvZzmSCGHXknKPp3/XL/_O1H1277-Pano-2-Edit-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/LGKK4MFp229dgStHMRmhTPGKN4mvVk8kt3B6Fmdm4/S/_O1H1277-Pano-2-Edit-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69862,7 +69875,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/LbqkV5KTKV9wVdt3c6MXqxDR6bFQjTMDrbjZRm3mR/L/_ANA0948-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/NNvPtFCRLdgsKqXX8dmtvjcfVpRSf44wkqNsqfD84/XL/_ANA0948-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/LvxD8Gp8kXRPvg3g5cn3cVSzh8HZZj5rkHFDwpWJp/S/_ANA0948-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69875,7 +69888,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/Lcwkz5rhJKcNTbQ6CRPpgG9V7SB6N7fnLf8P2BFQj/L/_IGP4461-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/Lcwkz5rhJKcNTbQ6CRPpgG9V7SB6N7fnLf8P2BFQj/L/_IGP4461-Edit-L.jpg",
     "src": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/KnTJQbrt4PhNkhf6M7PQKT8C6MCwZHx5cKRTKMkQC/S/_IGP4461-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69888,7 +69901,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/KjpCdPJLv6cTPJvXnwSv39szxddRXSj4bp3FndKQv/L/_WHZ7172_tonemapped-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/LV9DnwrLCvWpCt9FSSrdP67FhrHv6ZBsf3m46L89v/XL/_WHZ7172_tonemapped-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/MP9tvvV7Jpt5xVJxfvwpCvq8WLxNFNsczf8bgK6HQ/S/_WHZ7172_tonemapped-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69901,7 +69914,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/Mn53szXkg4XQngFD8RgvdCchtBJFGqKT2n93cRrRT/L/_WHZ7671_tonemapped-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/L4rN8Xm7FsjMxFfKJkN7wb8gcKkcjkmkDshW6HpgN/XL/_WHZ7671_tonemapped-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/KjSG6nvJQdN2tqtFZF4s6t3bPM86nZKTnqCf8Bv8v/S/_WHZ7671_tonemapped-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
@@ -69914,7 +69927,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LFsc8PMMKNgVWqP7ZHVF8bgtK4Z8n7F3x8VLJdfM5/L/Painterly-Landscape-Photography_P1030226-523-548-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LR5FkRCZJnQWPWZMKRMDrwGHsg5vHZ6CF8pvHjHxH/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/KwzCvsGLdLT8fVn5RCg4XH76DvS84LvGgbSfMtLVB/S/Painterly-Landscape-Photography_P1030226-523-548-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -69927,7 +69940,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/Knznj5WWx2KzD7gNdpJ2SdfwBWQwwPjdMcSw6CjNm/S/Painterly-Photography_WHZ9803-528-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -69940,7 +69953,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/ND64Xvm3cMH8V5zV5h8JzphgZJKccjPbfRb9CPBmK/S/Painterly-Photography_WHZ7828-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -69953,7 +69966,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KNXNpTX43hzbFFXqM3FWgJ3ZB5HvzBf7HKbRCnXLL/L/Painterly-Landscape-Photography_WHZ9406-537-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/MP2962XZzVqXFkGSFDXrWCFd6wgkFnCJ6MGMNbKZk/S/Painterly-Landscape-Photography_WHZ9406-537-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -69966,7 +69979,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/KpGXNZPcNKqrSZgJTDJWpLRKPN548rZqmLzqNnvpW/L/Painterly-Photography_WHZ9456_tonemapped-Edit-535-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NJCCVZbqWkR5wB767xBpFSDQZHcFCNLqcgNQ24MZ7/S/Painterly-Photography_WHZ9456_tonemapped-Edit-535-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -69979,7 +69992,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MKGhbKmb4hnD9tZQgSK9z85SxdM8GWSxkWtdvvJFJ/S/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -69992,7 +70005,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/LnbP8DF48CRBxS5DKvqncmxw4XD9rMbnfTBwRmbXn/XL/Painterly-Photography_WHZ9589-2-533-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/LnbP8DF48CRBxS5DKvqncmxw4XD9rMbnfTBwRmbXn/XL/Painterly-Photography_WHZ9589-2-533-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/KRkc254spnTDtGSk6WH6MFqSwbXx7mMS5BR9cSbtg/S/Painterly-Photography_WHZ9589-2-533-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -70005,7 +70018,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/K4cWzwXw7TSx23FVdVrqkcqmMSKwQZ4w6VCszHH9R/L/Painterly-Photography_WHZ9816-Edit2-532-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/Lv3Gsf8NJMQbC24rL7XJrwgPjqvT6mJRSQMqczc54/XL/Painterly-Photography_WHZ9816-Edit2-532-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/MRvftmbqmmxqJvzG2js4HWWB8ffkgRgnQgXW3vNZQ/S/Painterly-Photography_WHZ9816-Edit2-532-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -70018,7 +70031,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/MpqrbVk95TZ45zjJdzLrGH4qdzbdr2rTXhf9kQsZs/L/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/M8jjDgWhGX9fH6T7X3xwhF4SX2fhh2QhBGzfZHN8r/XL/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/MNd7sw27nXnh243ZSFjWwnFBBWx2NwS9JxGrR8GKw/S/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -70031,7 +70044,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/LJs84NgcTRzxt8trw64pX7X4RrtTxnVWVsqcVMZvn/L/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/MQPTJL8tkdmDHt9j3m875GBxZS6w9hQdnb8PhkCGJ/XL/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/LRp3dLCPM2T7DRcwcBpmxZFRCkhNdqwdpQ75GRkfc/S/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -70044,7 +70057,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/NQRJwcW2NVH295Nt2SQTWRCr3jhdLcmjhVfvf6pSG/L/_O1H1114-Enhanced-NR-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KVLbT4rtk2mbRqvKLNPXrZwDsLMq3BcfKmcFQ7gXX/XL/_O1H1114-Enhanced-NR-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KKfJ2tFPGDFszLJrqFPCS8TpZjgzNStZfN2L6Whtq/S/_O1H1114-Enhanced-NR-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -70057,7 +70070,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MvKZc5BMBbMDSVVgCvdkx8nMJQqZXbTPSVLtZKrF4/L/Painterly-Photography_WHZ7484-541-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MsRHGm5GDkgqCRRGhX7jhMLpSdJLd7hP7CWLxkVBZ/XL/Painterly-Photography_WHZ7484-541-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/LWvTG8ZV6tnPgcFwrfLJszP99rZQHfFGGTTr3wqL9/S/Painterly-Photography_WHZ7484-541-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains"
@@ -70070,7 +70083,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/LLS8bJGNg4Jj4xmX3RwMLRjXHGcx2PMnwPnqmKvFn/XL/_DSF3048-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/LLS8bJGNg4Jj4xmX3RwMLRjXHGcx2PMnwPnqmKvFn/XL/_DSF3048-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/K7QGqcM3WdWFgPSTdKTqFw6JFFLqcM2KqrfpGGrxV/S/_DSF3048-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70083,7 +70096,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/LvdjZgCht62b9tBG48XRrnLT2n5PsHgzWGJVDDfMZ/L/_OLY0581-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/NVHZPbRrFwjXj95MMQmrZwHDZKqZsgVSgvmBgjkHt/XL/_OLY0581-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/KXCXc8Zt94FmRD3CffNChwJHf8C2QVjbL5b49nHsN/S/_OLY0581-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70096,7 +70109,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KNXNpTX43hzbFFXqM3FWgJ3ZB5HvzBf7HKbRCnXLL/L/Painterly-Landscape-Photography_WHZ9406-537-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/MP2962XZzVqXFkGSFDXrWCFd6wgkFnCJ6MGMNbKZk/S/Painterly-Landscape-Photography_WHZ9406-537-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70109,7 +70122,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/LvqbrZVdKSLF3NzGFfTcSPCGzsjtxGwMHdm8hVNp5/L/_PEN0005-Enhanced-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/NNmXnBH98RnzJvTTFzGT8ksfW5XgzwGkCbRjwMg4r/XL/_PEN0005-Enhanced-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/M6sPrqSCC42rVJ7HGRdDj8NNkjdhRFMdMz8gm4Jbp/S/_PEN0005-Enhanced-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70122,7 +70135,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6Trjng/0/NZSwQk9LHPr69WPXT7JgVD9dZ4FcvXLBh5FWZHkJJ/L/_O1H0436-Pano-Enhanced-NR-593-594-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6Trjng/0/MSLn333N4RbwgqLKmC3mj82WKx8NjKkhJsHbMxXPS/XL/_O1H0436-Pano-Enhanced-NR-593-594-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6Trjng/0/KGhcvX3QHFbGgBGm3DHrhXdHBMVx5wtQttBbQXpHh/S/_O1H0436-Pano-Enhanced-NR-593-594-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70135,7 +70148,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/K4HVrW2hZVbQH6r7ZhKVw93t5NKtgNRQLjkBM8shc/XL/_OL35270-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/K4HVrW2hZVbQH6r7ZhKVw93t5NKtgNRQLjkBM8shc/XL/_OL35270-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/M7hjHzGfswTh7KxZFLnRhRwRRjvpgpsLmhPzcX46z/S/_OL35270-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70148,7 +70161,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/KDgJs9WjqJgTCF8jQdZp6HXHwG3Jv9QwLxfCDrBFd/L/_DSF2963-Pano-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/KJ4Mq3b3t6tkJWSbDbvFjbfh7vZnGV7D8qvR7WzrV/XL/_DSF2963-Pano-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/MnhhW4NQgn8kdT693SZPzGpgzNzBB922jvDxdwnmX/S/_DSF2963-Pano-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70161,7 +70174,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/MFQHZJDBCLmFhkMkjrVZBPJ2KsW5HWK3tcZJNwx6L/XL/_DSF2987-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/MFQHZJDBCLmFhkMkjrVZBPJ2KsW5HWK3tcZJNwx6L/XL/_DSF2987-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/KQm3CjBrvd377WPSDnWCdpqtBqk9vZBP2S7MrzfzL/S/_DSF2987-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70174,7 +70187,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/Mgvrx9nh5kxGLD8h8fkbzXWkPVL9SXH5JsQtQfPzk/L/_ANA2501-Enhanced-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/NXxGndGQhNt5j4rv5rNDgSD2DJCxgtdfrPqJr8HqL/XL/_ANA2501-Enhanced-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/NJVkR69PMT2rH8m328RxTxzsDMtVgPHd3zXHBGvdW/S/_ANA2501-Enhanced-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70187,7 +70200,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/NDXHZB8vxpsJpHqgbng3tsZtg9gL5fPGsTXbk46qj/L/_ANA2548-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/Ktf4CTT4mLZH727Wp4Lp4HJg2jRZhXmpkVSGQm6DL/XL/_ANA2548-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/NHGCTMCW5J69DDMrcGL3jTZLPjjwJMfV6vhzJj6mk/S/_ANA2548-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70200,7 +70213,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/KpGXNZPcNKqrSZgJTDJWpLRKPN548rZqmLzqNnvpW/L/Painterly-Photography_WHZ9456_tonemapped-Edit-535-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NJCCVZbqWkR5wB767xBpFSDQZHcFCNLqcgNQ24MZ7/S/Painterly-Photography_WHZ9456_tonemapped-Edit-535-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70213,7 +70226,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MKGhbKmb4hnD9tZQgSK9z85SxdM8GWSxkWtdvvJFJ/S/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70226,7 +70239,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/LCnh4L4zVgCz7Xrjp2B3qxTbgfpmGKkBQQD8gbX89/XL/_WHZ6681-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/LCnh4L4zVgCz7Xrjp2B3qxTbgfpmGKkBQQD8gbX89/XL/_WHZ6681-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/L3xNFn48zGJNxkfRgJHqnBsvb2vpLQVgkkD5rxxDD/S/_WHZ6681-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70239,7 +70252,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/KHmXCvznLh4FXpGSvGKdF6qZzb6Fv6c62XxtBGSTt/S/_WHZ8138_tonemapped-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70252,7 +70265,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/Kw5hjrdsXzXPF4383ZrtnjSbKG2gvsFwn4DdZ6dkX/L/_DSF5884-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/MZQ7nTRzdZJGdXwFNH7K8XrPLBQFgtBwR3FPwHRp7/XL/_DSF5884-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/KS3d52bBWwLqdq9zFxKbfRxtcBzkxp32zVSV6GZJW/S/_DSF5884-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70265,7 +70278,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/NBJc5TDJ5VbDqDnQvms2ZNWtSGpS6xR5gC2gzDBC4/S/_WHZ6667_8_9-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70278,7 +70291,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/NGgH77Br8zdHBzpjshFkLq2zBGbRjFsC67b5k5jQs/S/_DSF5574_tonemapped-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70291,7 +70304,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/NhD3KHBzjBsCpkQXCzq9Ftj5NSxtfcGcMKnP6SRxZ/L/_DSF5606-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KTjv35PCrq8WQG6QTQGcbhq9F4twdtBsx8STTbZZH/XL/_DSF5606-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KQTGN9ct2H5KhRvWvfsnQndvWXzqgJwHpkd3p62mm/S/_DSF5606-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70304,7 +70317,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/photos/i-RjSqqDt/1/Ndkr7PtTPmTChjBm4k5h6HXSBKJp64CZWjmCVtH8F/L/i-RjSqqDt-L.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-RjSqqDt/1/LK6Pnfwc9jc3mtTgdptj8JhKQQdJdWB8x3Wc9HsvG/XL/i-RjSqqDt-XL.jpg",
     "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/Kd2jzH4thdMdQdDtQGcTXs6VqV5m2kcW3x7F7fmPw/S/i-RjSqqDt-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70317,7 +70330,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/photos/i-qM9zBVL/1/Lkr9v9NGptJgVgp99R6dJMHzBZSfzgdHcTGhNDC9v/L/i-qM9zBVL-L.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-qM9zBVL/1/NVQVZ8Wd7kbBzGbhbkXRbTWV9ScFgCVDZXpvD8rsF/XL/i-qM9zBVL-XL.jpg",
     "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/LFNn7JKMPj2NGWsqhL3sMP6pkkhhpFqPphPXPvtML/S/i-qM9zBVL-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70330,7 +70343,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/MCWwMt3sLLQD8cPh74jd8pT6bkzHJR2krD5QZQqT3/L/i-5ZsWtSx-L.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/LcnPJhm5CM9NFV2WP7GrBNdx7Q9G4XRNxmk5VtZ6c/XL/i-5ZsWtSx-XL.jpg",
     "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/K9sP3wQvRKVnj9PP325XDjMSS3vQFfSsc8DwPdFsN/S/i-5ZsWtSx-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70343,7 +70356,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg",
     "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KjCM9D3pcjKCRTXzJqLdRMwZzXnfDdvPtz4D89Pwc/S/i-fGnNkBL-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70356,7 +70369,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/LW9zPmdqz2mk9FzDN4NmL7J3mbRQ29d6nxqF6CZbr/XL/i-qrS5Ggc-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/LW9zPmdqz2mk9FzDN4NmL7J3mbRQ29d6nxqF6CZbr/XL/i-qrS5Ggc-XL.jpg",
     "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/L2Tt7vCgbSP7B3npd5ZZjWnSfLKrXsf4Nqv7htjvK/S/i-qrS5Ggc-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70369,7 +70382,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/photos/i-bqnctgw/1/NXG5vK5JP9WDtd8PPC2gTwsDpbMqknR6Fxs2BDnPz/L/i-bqnctgw-L.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-bqnctgw/1/NZVHZj59k8G38kQjzrJLpDm53KdDZ7495mrH2GpT2/XL/i-bqnctgw-XL.jpg",
     "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/NfrsRSGKk5Wsg2vVPFgJHSGmvhgF3vCHhCxjvdgmK/S/i-bqnctgw-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water"
@@ -70382,7 +70395,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LFsc8PMMKNgVWqP7ZHVF8bgtK4Z8n7F3x8VLJdfM5/L/Painterly-Landscape-Photography_P1030226-523-548-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LR5FkRCZJnQWPWZMKRMDrwGHsg5vHZ6CF8pvHjHxH/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/KwzCvsGLdLT8fVn5RCg4XH76DvS84LvGgbSfMtLVB/S/Painterly-Landscape-Photography_P1030226-523-548-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -70395,7 +70408,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/Knznj5WWx2KzD7gNdpJ2SdfwBWQwwPjdMcSw6CjNm/S/Painterly-Photography_WHZ9803-528-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -70408,7 +70421,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/ND64Xvm3cMH8V5zV5h8JzphgZJKccjPbfRb9CPBmK/S/Painterly-Photography_WHZ7828-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -70421,7 +70434,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KNXNpTX43hzbFFXqM3FWgJ3ZB5HvzBf7HKbRCnXLL/L/Painterly-Landscape-Photography_WHZ9406-537-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/MP2962XZzVqXFkGSFDXrWCFd6wgkFnCJ6MGMNbKZk/S/Painterly-Landscape-Photography_WHZ9406-537-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -70434,7 +70447,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/KpGXNZPcNKqrSZgJTDJWpLRKPN548rZqmLzqNnvpW/L/Painterly-Photography_WHZ9456_tonemapped-Edit-535-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NJCCVZbqWkR5wB767xBpFSDQZHcFCNLqcgNQ24MZ7/S/Painterly-Photography_WHZ9456_tonemapped-Edit-535-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -70447,7 +70460,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MKGhbKmb4hnD9tZQgSK9z85SxdM8GWSxkWtdvvJFJ/S/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -70460,7 +70473,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/LnbP8DF48CRBxS5DKvqncmxw4XD9rMbnfTBwRmbXn/XL/Painterly-Photography_WHZ9589-2-533-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/LnbP8DF48CRBxS5DKvqncmxw4XD9rMbnfTBwRmbXn/XL/Painterly-Photography_WHZ9589-2-533-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/KRkc254spnTDtGSk6WH6MFqSwbXx7mMS5BR9cSbtg/S/Painterly-Photography_WHZ9589-2-533-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -70473,7 +70486,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/K4cWzwXw7TSx23FVdVrqkcqmMSKwQZ4w6VCszHH9R/L/Painterly-Photography_WHZ9816-Edit2-532-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/Lv3Gsf8NJMQbC24rL7XJrwgPjqvT6mJRSQMqczc54/XL/Painterly-Photography_WHZ9816-Edit2-532-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/MRvftmbqmmxqJvzG2js4HWWB8ffkgRgnQgXW3vNZQ/S/Painterly-Photography_WHZ9816-Edit2-532-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -70486,7 +70499,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/MpqrbVk95TZ45zjJdzLrGH4qdzbdr2rTXhf9kQsZs/L/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/M8jjDgWhGX9fH6T7X3xwhF4SX2fhh2QhBGzfZHN8r/XL/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/MNd7sw27nXnh243ZSFjWwnFBBWx2NwS9JxGrR8GKw/S/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -70499,7 +70512,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/LJs84NgcTRzxt8trw64pX7X4RrtTxnVWVsqcVMZvn/L/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/MQPTJL8tkdmDHt9j3m875GBxZS6w9hQdnb8PhkCGJ/XL/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/LRp3dLCPM2T7DRcwcBpmxZFRCkhNdqwdpQ75GRkfc/S/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -70512,7 +70525,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/NQRJwcW2NVH295Nt2SQTWRCr3jhdLcmjhVfvf6pSG/L/_O1H1114-Enhanced-NR-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KVLbT4rtk2mbRqvKLNPXrZwDsLMq3BcfKmcFQ7gXX/XL/_O1H1114-Enhanced-NR-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KKfJ2tFPGDFszLJrqFPCS8TpZjgzNStZfN2L6Whtq/S/_O1H1114-Enhanced-NR-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -70525,7 +70538,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MvKZc5BMBbMDSVVgCvdkx8nMJQqZXbTPSVLtZKrF4/L/Painterly-Photography_WHZ7484-541-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MsRHGm5GDkgqCRRGhX7jhMLpSdJLd7hP7CWLxkVBZ/XL/Painterly-Photography_WHZ7484-541-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/LWvTG8ZV6tnPgcFwrfLJszP99rZQHfFGGTTr3wqL9/S/Painterly-Photography_WHZ7484-541-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets"
@@ -93237,6 +93250,19 @@ export const allImages        = [
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3S3RMNW/0/NLFRjW6FX8f9sGDcH2gSHCCSBwvFn7hj5hrXjcmpg/XL/_O1H0177_tonemapped-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-Hk6CHqx/0/K4bfbFqvHLVBtZ9DHk4gXhP7VJCKd7WwXhp2j7kfc/S/_O1H0177_tonemapped-596-S.jpg",
     "rating": 0,
+    "visibility": "hidden",
+    "galleries": [
+      "Other/Archive"
+    ]
+  },
+  {
+    "id": "i-jWDDpC4",
+    "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/Knznj5WWx2KzD7gNdpJ2SdfwBWQwwPjdMcSw6CjNm/S/Painterly-Photography_WHZ9803-528-S.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/KMjcCtzQ2KCCmPP8RhRxN3ms3dVnWLv2Vf2NBQ2w8/L/Painterly-Photography_WHZ9803-528-L.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
+    "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/Knznj5WWx2KzD7gNdpJ2SdfwBWQwwPjdMcSw6CjNm/S/Painterly-Photography_WHZ9803-528-S.jpg",
+    "rating": 4,
     "visibility": "hidden",
     "galleries": [
       "Other/Archive"

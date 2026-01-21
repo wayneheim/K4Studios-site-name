@@ -42,7 +42,7 @@ export const galleryData = [
       "wwii photography",
       "greatest generation photos"
     ],
-    "story": "This image embodies moments of connection and moments of connection, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wwii photography. © Wayne Heim",
+    "story": "\"Quality Control Team\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -76,7 +76,7 @@ export const galleryData = [
       "moments of connection",
       "wwii photography"
     ],
-    "story": "This image embodies moments of connection and wartime portraits, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of wwii photography. © Wayne Heim",
+    "story": "In \"Quality Control Team,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -110,7 +110,7 @@ export const galleryData = [
       "heroic portraits",
       "wartime portraits"
     ],
-    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights greatest generation photos through heroic portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Wayne Heim captures \"Moments Of Connection - Greatest Generation Photos\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -143,7 +143,7 @@ export const galleryData = [
       "greatest generation photos",
       "heroic portraits"
     ],
-    "story": "Delving into moments of connection, this work by Wayne Heim highlights wartime portraits through heroic portraits and moments of connection. A powerful statement in photography. © Wayne Heim",
+    "story": "\"Wartime Portraits In Fine Art\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -176,7 +176,7 @@ export const galleryData = [
       "wartime portraits",
       "greatest generation photos"
     ],
-    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing moments of connection and moments of connection. A testament to greatest generation photos in fine art. © Wayne Heim",
+    "story": "Moments Of Connection In Fine Art. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -210,7 +210,7 @@ export const galleryData = [
       "heroic portraits",
       "wwii photography"
     ],
-    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights heroic portraits through wwii photography and moments of connection. A powerful statement in photography. © Wayne Heim",
+    "story": "In \"Greatest Generation Photos Study,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -242,7 +242,7 @@ export const galleryData = [
       "wartime portraits",
       "moments of connection"
     ],
-    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing moments of connection and moments of connection. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "\"Exploring Heroic Portraits\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -276,7 +276,7 @@ export const galleryData = [
       "wwii photography",
       "heroic portraits"
     ],
-    "story": "This image embodies moments of connection and greatest generation photos, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of heroic portraits. © Wayne Heim",
+    "story": "Greatest Generation Photos - Wartime Portraits. Wayne Heim's approach to painterly photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -310,7 +310,7 @@ export const galleryData = [
       "heroic portraits",
       "wwii photography"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing greatest generation photos and moments of connection. A testament to wwii photography in fine art. © Wayne Heim",
+    "story": "In \"Moments Of Connection Portrait,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -343,7 +343,7 @@ export const galleryData = [
       "wwii photography",
       "moments of connection"
     ],
-    "story": "Delving into wwii photography, this work by Wayne Heim highlights wwii photography through wartime portraits and heroic portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "\"Exploring Heroic Portraits\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -376,7 +376,7 @@ export const galleryData = [
       "greatest generation photos",
       "wartime portraits"
     ],
-    "story": "Delving into moments of connection, this work by Wayne Heim highlights wartime portraits through greatest generation photos and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "In \"Moments Of Connection Moment,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -409,7 +409,7 @@ export const galleryData = [
       "greatest generation photos",
       "moments of connection"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing moments of connection and greatest generation photos. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "In \"Heroic Portraits - Wartime Portraits,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -441,7 +441,7 @@ export const galleryData = [
       "greatest generation photos",
       "moments of connection"
     ],
-    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights moments of connection through greatest generation photos and moments of connection. A powerful statement in photography. © Wayne Heim",
+    "story": "Wayne Heim captures \"Exploring Wartime Portraits\" with the restraint and intention of K4 Studios fine art. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -503,7 +503,7 @@ export const galleryData = [
       "moments of connection",
       "heroic portraits"
     ],
-    "story": "This image embodies moments of connection and heroic portraits, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of heroic portraits. © Wayne Heim",
+    "story": "Wayne Heim captures \"Photography In Fine Art\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -532,7 +532,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "All Smiles. — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -565,7 +565,7 @@ export const galleryData = [
       "wartime portraits",
       "wwii photography"
     ],
-    "story": "This image embodies wartime portraits and wartime portraits, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of moments of connection. © Wayne Heim",
+    "story": "All smiles. — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -598,7 +598,7 @@ export const galleryData = [
       "greatest generation photos",
       "wartime portraits"
     ],
-    "story": "Delving into heroic portraits, this work by Wayne Heim highlights heroic portraits through wwii photography and wwii photography. A powerful statement in photography. © Wayne Heim",
+    "story": "In \"Heroic Portraits Portrait,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -627,7 +627,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "All Smiles. — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -660,7 +660,7 @@ export const galleryData = [
       "wwii photography",
       "heroic portraits"
     ],
-    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights wartime portraits through wartime portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "\"French Resistance Portrait\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -692,7 +692,7 @@ export const galleryData = [
       "moments of connection",
       "heroic portraits"
     ],
-    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "\"Wartime Portraits Moment\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -750,7 +750,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "© Wayne Heim '23",
+    "story": "All Smiles. — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -784,7 +784,7 @@ export const galleryData = [
       "greatest generation photos",
       "wartime portraits"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing heroic portraits and moments of connection. A testament to wartime portraits in fine art. © Wayne Heim",
+    "story": "Up Next — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -818,7 +818,7 @@ export const galleryData = [
       "greatest generation photos",
       "heroic portraits"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wartime portraits and wwii photography. A testament to heroic portraits in fine art. © Wayne Heim",
+    "story": "Photography - Wartime Portraits — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -851,7 +851,7 @@ export const galleryData = [
       "greatest generation photos",
       "heroic portraits"
     ],
-    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights heroic portraits through wwii photography and greatest generation photos. A powerful statement in photography. © Wayne Heim",
+    "story": "Wayne Heim captures \"Fine Art Wwii Photography\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -885,7 +885,7 @@ export const galleryData = [
       "moments of connection",
       "greatest generation photos"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wartime portraits and wartime portraits. A testament to wartime portraits in fine art. © Wayne Heim",
+    "story": "\"The Essence Of Wwii Photography\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -914,7 +914,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "© Wayne Heim",
+    "story": "In \"Red Cross Nurse,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -943,7 +943,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "© Wayne Heim",
+    "story": "In \"Red Cross Nurse,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -972,7 +972,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "© Wayne Heim",
+    "story": "In \"Red Cross Nurse,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1030,7 +1030,7 @@ export const galleryData = [
       "portrait",
       "cowboy"
     ],
-    "story": "© Wayne Heim",
+    "story": "In \"Red Cross Nurse,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1063,7 +1063,7 @@ export const galleryData = [
       "moments of connection",
       "wwii photography"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "Drink this down. — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1095,7 +1095,7 @@ export const galleryData = [
       "heroic portraits",
       "moments of connection"
     ],
-    "story": "This image embodies greatest generation photos and heroic portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of heroic portraits. © Wayne Heim",
+    "story": "Greatest Generation Photos Portrait — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1127,7 +1127,7 @@ export const galleryData = [
       "greatest generation photos",
       "heroic portraits"
     ],
-    "story": "This image embodies wwii photography and greatest generation photos, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of wwii photography. © Wayne Heim",
+    "story": "\"Photography Portrait\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1161,7 +1161,7 @@ export const galleryData = [
       "heroic portraits",
       "moments of connection"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing greatest generation photos and moments of connection. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "Wartime Portraits Study — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1194,7 +1194,7 @@ export const galleryData = [
       "moments of connection",
       "greatest generation photos"
     ],
-    "story": "Delving into heroic portraits, this work by Wayne Heim highlights wartime portraits through greatest generation photos and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "\"Fine Art Heroic Portraits\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1228,7 +1228,7 @@ export const galleryData = [
       "heroic portraits",
       "wwii photography"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wartime portraits and greatest generation photos. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "Greatest Generation Photos - Moments Of Connection — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1262,7 +1262,7 @@ export const galleryData = [
       "heroic portraits",
       "moments of connection"
     ],
-    "story": "This image embodies wartime portraits and moments of connection, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of greatest generation photos. © Wayne Heim",
+    "story": "Wayne Heim captures \"Photography Moment\" with the restraint and intention of K4 Studios fine art. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1295,7 +1295,7 @@ export const galleryData = [
       "greatest generation photos",
       "moments of connection"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing heroic portraits and moments of connection. A testament to greatest generation photos in fine art. © Wayne Heim",
+    "story": "Heroic Portraits And Wartime Portraits — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1328,7 +1328,7 @@ export const galleryData = [
       "moments of connection",
       "wartime portraits"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing wartime portraits and heroic portraits. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "In \"Capturing Greatest Generation Photos,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1361,7 +1361,7 @@ export const galleryData = [
       "moments of connection",
       "wwii photography"
     ],
-    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing greatest generation photos and moments of connection. A testament to wwii photography in fine art. © Wayne Heim",
+    "story": "Wartime Portraits Study — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1394,7 +1394,7 @@ export const galleryData = [
       "greatest generation photos",
       "heroic portraits"
     ],
-    "story": "Delving into wartime portraits, this work by Wayne Heim highlights greatest generation photos through heroic portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Moments Of Connection - Moments Of Connection. Wayne Heim's approach to painterly photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1426,7 +1426,7 @@ export const galleryData = [
       "moments of connection",
       "wartime portraits"
     ],
-    "story": "This image embodies wartime portraits and wartime portraits, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of moments of connection. © Wayne Heim",
+    "story": "Heroic Portraits - Moments Of Connection. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1459,7 +1459,7 @@ export const galleryData = [
       "greatest generation photos",
       "wartime portraits"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing moments of connection and wartime portraits. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "\"Photography Moment\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1491,7 +1491,7 @@ export const galleryData = [
       "greatest generation photos",
       "heroic portraits"
     ],
-    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to wartime portraits in fine art. © Wayne Heim",
+    "story": "\"The Essence Of Wartime Portraits\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1525,7 +1525,7 @@ export const galleryData = [
       "heroic portraits",
       "wartime portraits"
     ],
-    "story": "This image embodies greatest generation photos and heroic portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wartime portraits. © Wayne Heim",
+    "story": "In \"The Essence Of Moments Of Connection,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1559,7 +1559,7 @@ export const galleryData = [
       "heroic portraits",
       "greatest generation photos"
     ],
-    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing wartime portraits and wwii photography. A testament to greatest generation photos in fine art. © Wayne Heim",
+    "story": "Wayne Heim captures \"Photography And Wartime Portraits\" with the restraint and intention of K4 Studios fine art. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1586,7 +1586,7 @@ export const galleryData = [
       "greatest generation photos",
       "moments of connection"
     ],
-    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing moments of connection and moments of connection. A testament to heroic portraits in fine art. © Wayne Heim",
+    "story": "In \"Heroic Portraits Study,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1613,7 +1613,7 @@ export const galleryData = [
       "moments of connection",
       "wartime portraits"
     ],
-    "story": "This image embodies wartime portraits and heroic portraits, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of wwii photography. © Wayne Heim",
+    "story": "Photography And Wwii Photography — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1640,7 +1640,7 @@ export const galleryData = [
       "wartime portraits",
       "wwii photography"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing greatest generation photos and greatest generation photos. A testament to wwii photography in fine art. © Wayne Heim",
+    "story": "The Essence Of Greatest Generation Photos — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1668,7 +1668,7 @@ export const galleryData = [
       "heroic portraits",
       "greatest generation photos"
     ],
-    "story": "Delving into heroic portraits, this work by Wayne Heim highlights greatest generation photos through heroic portraits and heroic portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Wartime Portraits - Wwii Photography — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1694,7 +1694,7 @@ export const galleryData = [
       "moments of connection",
       "greatest generation photos"
     ],
-    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights greatest generation photos through greatest generation photos and greatest generation photos. A powerful statement in photography. © Wayne Heim",
+    "story": "Wartime Portraits And Moments Of Connection. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1720,7 +1720,7 @@ export const galleryData = [
       "greatest generation photos",
       "wwii photography"
     ],
-    "story": "This image embodies wwii photography and wwii photography, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of wartime portraits. © Wayne Heim",
+    "story": "Wayne Heim captures \"Wartime Portraits In Fine Art\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1747,7 +1747,7 @@ export const galleryData = [
       "greatest generation photos",
       "wwii photography"
     ],
-    "story": "This image embodies wwii photography and wwii photography, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of greatest generation photos. © Wayne Heim",
+    "story": "\"Wartime Portraits Moment\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1775,7 +1775,7 @@ export const galleryData = [
       "greatest generation photos",
       "wartime portraits"
     ],
-    "story": "This image embodies greatest generation photos and moments of connection, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of wartime portraits. © Wayne Heim",
+    "story": "Exploring Heroic Portraits — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1802,7 +1802,7 @@ export const galleryData = [
       "heroic portraits",
       "greatest generation photos"
     ],
-    "story": "Delving into heroic portraits, this work by Wayne Heim highlights heroic portraits through greatest generation photos and greatest generation photos. A powerful statement in photography. © Wayne Heim",
+    "story": "\"Exploring Moments Of Connection\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1830,7 +1830,7 @@ export const galleryData = [
       "greatest generation photos",
       "moments of connection"
     ],
-    "story": "This image embodies wwii photography and moments of connection, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of greatest generation photos. © Wayne Heim",
+    "story": "\"Photography Study\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1858,7 +1858,7 @@ export const galleryData = [
       "wwii photography",
       "greatest generation photos"
     ],
-    "story": "This image embodies moments of connection and wwii photography, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of greatest generation photos. © Wayne Heim",
+    "story": "Heroic Portraits - Heroic Portraits — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1885,7 +1885,7 @@ export const galleryData = [
       "greatest generation photos",
       "wwii photography"
     ],
-    "story": "Delving into wartime portraits, this work by Wayne Heim highlights wwii photography through heroic portraits and wwii photography. A powerful statement in photography. © Wayne Heim",
+    "story": "\"Wartime Portraits Moment\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1913,7 +1913,7 @@ export const galleryData = [
       "moments of connection",
       "heroic portraits"
     ],
-    "story": "This image embodies heroic portraits and moments of connection, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of wartime portraits. © Wayne Heim",
+    "story": "Wayne Heim captures \"Photography And Wartime Portraits\" with the restraint and intention of K4 Studios fine art. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1936,7 +1936,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "© Wayne Heim",
+    "story": "In \"Red Cross Nurse,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1963,7 +1963,7 @@ export const galleryData = [
       "heroic portraits",
       "moments of connection"
     ],
-    "story": "This image embodies heroic portraits and moments of connection, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of moments of connection. © Wayne Heim",
+    "story": "Company Portrait — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1991,7 +1991,7 @@ export const galleryData = [
       "wartime portraits",
       "moments of connection"
     ],
-    "story": "Delving into moments of connection, this work by Wayne Heim highlights moments of connection through wartime portraits and moments of connection. A powerful statement in photography. © Wayne Heim",
+    "story": "Heroic Portraits - Heroic Portraits. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2019,7 +2019,7 @@ export const galleryData = [
       "wwii photography",
       "moments of connection"
     ],
-    "story": "Delving into wwii photography, this work by Wayne Heim highlights moments of connection through heroic portraits and moments of connection. A powerful statement in photography. © Wayne Heim",
+    "story": "\"Exploring Heroic Portraits\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2046,7 +2046,7 @@ export const galleryData = [
       "wartime portraits",
       "wwii photography"
     ],
-    "story": "This image embodies wartime portraits and heroic portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of greatest generation photos. © Wayne Heim",
+    "story": "In \"Exploring Heroic Portraits,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2073,7 +2073,7 @@ export const galleryData = [
       "greatest generation photos",
       "wwii photography"
     ],
-    "story": "This image embodies greatest generation photos and wartime portraits, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of greatest generation photos. © Wayne Heim",
+    "story": "In \"Wartime Portraits Portrait,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2101,7 +2101,7 @@ export const galleryData = [
       "wwii photography",
       "greatest generation photos"
     ],
-    "story": "This image embodies wartime portraits and greatest generation photos, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wartime portraits. © Wayne Heim",
+    "story": "\"Heroic Portraits - Moments Of Connection\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2128,7 +2128,7 @@ export const galleryData = [
       "moments of connection",
       "greatest generation photos"
     ],
-    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights moments of connection through wwii photography and greatest generation photos. A powerful statement in photography. © Wayne Heim",
+    "story": "Fine Art Wwii Photography. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2156,7 +2156,7 @@ export const galleryData = [
       "wwii photography",
       "wartime portraits"
     ],
-    "story": "Delving into wwii photography, this work by Wayne Heim highlights wartime portraits through wartime portraits and heroic portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "\"Greatest Generation Photos And Heroic Portraits\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2202,7 +2202,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "USO crew takes jeep tour of camp. © Wayne Heim",
+    "story": "Here's one for the boys. — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2228,7 +2228,7 @@ export const galleryData = [
       "greatest generation photos",
       "wartime portraits"
     ],
-    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits and heroic portraits. A testament to heroic portraits in fine art. © Wayne Heim",
+    "story": "In \"Camp show tour.,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2255,7 +2255,7 @@ export const galleryData = [
       "wartime portraits",
       "moments of connection"
     ],
-    "story": "This image embodies greatest generation photos and moments of connection, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of greatest generation photos. © Wayne Heim",
+    "story": "Photography Study — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2282,7 +2282,7 @@ export const galleryData = [
       "heroic portraits",
       "moments of connection"
     ],
-    "story": "This image embodies moments of connection and heroic portraits, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of moments of connection. © Wayne Heim",
+    "story": "Photography Moment. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2310,7 +2310,7 @@ export const galleryData = [
       "greatest generation photos",
       "wartime portraits"
     ],
-    "story": "This image embodies moments of connection and moments of connection, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of wartime portraits. © Wayne Heim",
+    "story": "\"Capturing Wwii Photography\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2337,7 +2337,7 @@ export const galleryData = [
       "wartime portraits",
       "wwii photography"
     ],
-    "story": "This image embodies heroic portraits and heroic portraits, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of greatest generation photos. © Wayne Heim",
+    "story": "Heroic Portraits Study — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2364,7 +2364,7 @@ export const galleryData = [
       "wartime portraits",
       "greatest generation photos"
     ],
-    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing greatest generation photos and moments of connection. A testament to greatest generation photos in fine art. © Wayne Heim",
+    "story": "\"Exploring Moments Of Connection\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2390,7 +2390,7 @@ export const galleryData = [
       "wwii photography",
       "greatest generation photos"
     ],
-    "story": "Delving into wwii photography, this work by Wayne Heim highlights greatest generation photos through wwii photography and heroic portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Wayne Heim captures \"Exploring Heroic Portraits\" with the restraint and intention of K4 Studios fine art. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2418,7 +2418,7 @@ export const galleryData = [
       "heroic portraits",
       "wwii photography"
     ],
-    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights wartime portraits through greatest generation photos and heroic portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Fine Art Moments Of Connection. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2443,7 +2443,7 @@ export const galleryData = [
       "heroic portraits",
       "wartime portraits"
     ],
-    "story": "This image embodies wartime portraits and wartime portraits, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of heroic portraits. © Wayne Heim",
+    "story": "Exploring Heroic Portraits — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2471,7 +2471,7 @@ export const galleryData = [
       "heroic portraits",
       "wwii photography"
     ],
-    "story": "Delving into greatest generation photos, this work by Wayne Heim highlights wwii photography through moments of connection and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Fine Art Wartime Portraits. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2498,7 +2498,7 @@ export const galleryData = [
       "moments of connection",
       "greatest generation photos"
     ],
-    "story": "This image embodies greatest generation photos and moments of connection, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of wwii photography. © Wayne Heim",
+    "story": "The Essence Of Wwii Photography — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. K4 Studios fine art meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2525,7 +2525,7 @@ export const galleryData = [
       "wartime portraits",
       "heroic portraits"
     ],
-    "story": "Delving into wwii photography, this work by Wayne Heim highlights wartime portraits through heroic portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "In \"Exploring Wwii Photography,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2553,7 +2553,7 @@ export const galleryData = [
       "moments of connection",
       "heroic portraits"
     ],
-    "story": "Delving into moments of connection, this work by Wayne Heim highlights heroic portraits through heroic portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Exploring Wartime Portraits — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2576,7 +2576,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2622,7 +2622,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "© Wayne Heim 2019",
+    "story": "Wayne Heim captures \"Reenactment Photography: On The Move.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2649,7 +2649,7 @@ export const galleryData = [
       "greatest generation photos",
       "moments of connection"
     ],
-    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing wartime portraits and greatest generation photos. A testament to greatest generation photos in fine art. © Wayne Heim",
+    "story": "Resque mission — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2676,7 +2676,7 @@ export const galleryData = [
       "wwii photography",
       "wartime portraits"
     ],
-    "story": "This image embodies wartime portraits and moments of connection, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of heroic portraits. © Wayne Heim",
+    "story": "In \"Moments Of Connection And Heroic Portraits,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2704,7 +2704,7 @@ export const galleryData = [
       "heroic portraits",
       "greatest generation photos"
     ],
-    "story": "This image embodies wartime portraits and heroic portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of greatest generation photos. © Wayne Heim",
+    "story": "In \"Exploring Heroic Portraits,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2727,7 +2727,7 @@ export const galleryData = [
       "HF24647",
       "DDay 2024"
     ],
-    "story": "© Wayne Heim 2018 soldiers talk about life back home.",
+    "story": "Moment To Reflect.. Wayne Heim's approach to painterly photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2778,7 +2778,7 @@ export const galleryData = [
       "moments of connection",
       "wartime portraits"
     ],
-    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing wartime portraits and heroic portraits. A testament to heroic portraits in fine art. © Wayne Heim",
+    "story": "Wayne Heim captures \"Looking for Trouble\" with the restraint and intention of K4 Studios fine art. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2805,7 +2805,7 @@ export const galleryData = [
       "greatest generation photos",
       "moments of connection"
     ],
-    "story": "Delving into heroic portraits, this work by Wayne Heim highlights wartime portraits through wartime portraits and greatest generation photos. A powerful statement in photography. © Wayne Heim",
+    "story": "Heroic Portraits In Fine Art. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2832,7 +2832,7 @@ export const galleryData = [
       "wwii photography",
       "greatest generation photos"
     ],
-    "story": "This image embodies wwii photography and wwii photography, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of heroic portraits. © Wayne Heim",
+    "story": "Moments Of Connection - Moments Of Connection — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2858,7 +2858,7 @@ export const galleryData = [
       "greatest generation photos",
       "wartime portraits"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing heroic portraits and wartime portraits. A testament to wartime portraits in fine art. © Wayne Heim",
+    "story": "Capturing Wwii Photography. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2885,7 +2885,7 @@ export const galleryData = [
       "wartime portraits",
       "moments of connection"
     ],
-    "story": "Delving into moments of connection, this work by Wayne Heim highlights greatest generation photos through wwii photography and greatest generation photos. A powerful statement in photography. © Wayne Heim",
+    "story": "Wayne Heim captures \"Fine Art Greatest Generation Photos\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2912,7 +2912,7 @@ export const galleryData = [
       "wwii photography",
       "heroic portraits"
     ],
-    "story": "This image embodies wwii photography and greatest generation photos, captured by Wayne Heim in his signature style. It reflects wwii photography with a touch of heroic portraits. © Wayne Heim",
+    "story": "Greatest Generation Photos Moment. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2939,7 +2939,7 @@ export const galleryData = [
       "wartime portraits",
       "heroic portraits"
     ],
-    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing heroic portraits and wwii photography. A testament to greatest generation photos in fine art. © Wayne Heim",
+    "story": "Photography - Greatest Generation Photos. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2966,7 +2966,7 @@ export const galleryData = [
       "wartime portraits",
       "moments of connection"
     ],
-    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing wartime portraits and moments of connection. A testament to wartime portraits in fine art. © Wayne Heim",
+    "story": "In \"Fine Art Heroic Portraits,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2992,7 +2992,7 @@ export const galleryData = [
       "wartime portraits",
       "heroic portraits"
     ],
-    "story": "This image embodies heroic portraits and heroic portraits, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of moments of connection. © Wayne Heim",
+    "story": "Moments Of Connection Moment — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3018,7 +3018,7 @@ export const galleryData = [
       "wartime portraits",
       "moments of connection"
     ],
-    "story": "This image embodies wartime portraits and wartime portraits, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of wwii photography. © Wayne Heim",
+    "story": "Photography Moment — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3044,7 +3044,7 @@ export const galleryData = [
       "heroic portraits",
       "greatest generation photos"
     ],
-    "story": "Delving into moments of connection, this work by Wayne Heim highlights heroic portraits through wartime portraits and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "In \"Fine Art Moments Of Connection,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3070,7 +3070,7 @@ export const galleryData = [
       "wwii photography",
       "greatest generation photos"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing moments of connection and greatest generation photos. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "In \"Heroic Portraits - Wartime Portraits,\" Wayne Heim renders painterly photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3096,7 +3096,7 @@ export const galleryData = [
       "heroic portraits",
       "greatest generation photos"
     ],
-    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing greatest generation photos and wartime portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
+    "story": "Wayne Heim captures \"Wartime Portraits Moment\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3121,7 +3121,7 @@ export const galleryData = [
       "heroic portraits",
       "greatest generation photos"
     ],
-    "story": "This image embodies greatest generation photos and wartime portraits, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of heroic portraits. © Wayne Heim",
+    "story": "Wartime Portraits Study. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3147,7 +3147,7 @@ export const galleryData = [
       "greatest generation photos",
       "wwii photography"
     ],
-    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing wwii photography and wartime portraits. A testament to greatest generation photos in fine art. © Wayne Heim",
+    "story": "In \"Wartime Portraits Study,\" Wayne Heim renders fine art photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3173,7 +3173,7 @@ export const galleryData = [
       "heroic portraits",
       "greatest generation photos"
     ],
-    "story": "This image embodies greatest generation photos and greatest generation photos, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of wartime portraits. © Wayne Heim",
+    "story": "Wayne Heim captures \"Exploring Wartime Portraits\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3199,7 +3199,7 @@ export const galleryData = [
       "moments of connection",
       "wwii photography"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing greatest generation photos and moments of connection. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "Wartime Portraits Study — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3226,7 +3226,7 @@ export const galleryData = [
       "wwii photography",
       "wartime portraits"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing greatest generation photos and wwii photography. A testament to wartime portraits in fine art. © Wayne Heim",
+    "story": "\"Heroic Portraits Study\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3253,7 +3253,7 @@ export const galleryData = [
       "greatest generation photos",
       "moments of connection"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wwii photography and greatest generation photos. A testament to wartime portraits in fine art. © Wayne Heim",
+    "story": "Heroic Portraits Moment — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. painterly photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3279,7 +3279,7 @@ export const galleryData = [
       "moments of connection",
       "greatest generation photos"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing moments of connection and greatest generation photos. A testament to heroic portraits in fine art. © Wayne Heim",
+    "story": "Wartime Portraits Portrait. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3305,7 +3305,7 @@ export const galleryData = [
       "moments of connection",
       "wartime portraits"
     ],
-    "story": "This image embodies wartime portraits and wwii photography, captured by Wayne Heim in his signature style. It reflects wartime portraits with a touch of wartime portraits. © Wayne Heim",
+    "story": "In \"Greatest Generation Photos Moment,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3331,7 +3331,7 @@ export const galleryData = [
       "moments of connection",
       "wwii photography"
     ],
-    "story": "This image embodies wwii photography and greatest generation photos, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wartime portraits. © Wayne Heim",
+    "story": "The Essence Of Greatest Generation Photos. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3353,7 +3353,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim captures \"Things Are About To Get Messy.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3378,7 +3378,7 @@ export const galleryData = [
       "wartime portraits",
       "heroic portraits"
     ],
-    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing heroic portraits and wartime portraits. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "Wayne Heim captures \"Things are about to get messy.\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3444,7 +3444,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Final signal. © Wayne Heim 2021",
+    "story": "Wayne Heim captures \"Take her out.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3466,7 +3466,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "© Wayne Heim 2021",
+    "story": "Wayne Heim captures \"Things Are About To Get Messy.\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3493,7 +3493,7 @@ export const galleryData = [
       "moments of connection",
       "heroic portraits"
     ],
-    "story": "This image embodies wartime portraits and wartime portraits, captured by Wayne Heim in his signature style. It reflects moments of connection with a touch of heroic portraits. © Wayne Heim",
+    "story": "In \"Say Cheese,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3519,7 +3519,7 @@ export const galleryData = [
       "wartime portraits",
       "wwii photography"
     ],
-    "story": "Delving into wartime portraits, this work by Wayne Heim highlights heroic portraits through wwii photography and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Heroic Portraits Portrait. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3546,7 +3546,7 @@ export const galleryData = [
       "wwii photography",
       "heroic portraits"
     ],
-    "story": "This image embodies heroic portraits and moments of connection, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wartime portraits. © Wayne Heim",
+    "story": "Wayne Heim captures \"Greatest Generation Photos Study\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3572,7 +3572,7 @@ export const galleryData = [
       "wartime portraits",
       "heroic portraits"
     ],
-    "story": "Wayne Heim's exploration of wartime portraits comes alive in this piece, showcasing moments of connection and heroic portraits. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "Exploring Moments Of Connection — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3597,7 +3597,7 @@ export const galleryData = [
       "greatest generation photos",
       "wwii photography"
     ],
-    "story": "This image embodies wwii photography and wartime portraits, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wartime portraits. © Wayne Heim",
+    "story": "\"Wartime Portraits In Fine Art\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3624,7 +3624,7 @@ export const galleryData = [
       "greatest generation photos",
       "wwii photography"
     ],
-    "story": "Delving into heroic portraits, this work by Wayne Heim highlights wwii photography through moments of connection and wartime portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "Wayne Heim captures \"Moments Of Connection In Fine Art\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3649,7 +3649,7 @@ export const galleryData = [
       "greatest generation photos",
       "heroic portraits"
     ],
-    "story": "Delving into moments of connection, this work by Wayne Heim highlights greatest generation photos through moments of connection and heroic portraits. A powerful statement in photography. © Wayne Heim",
+    "story": "The Essence Of Moments Of Connection. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3675,7 +3675,7 @@ export const galleryData = [
       "moments of connection",
       "wartime portraits"
     ],
-    "story": "This image embodies greatest generation photos and greatest generation photos, captured by Wayne Heim in his signature style. It reflects greatest generation photos with a touch of wartime portraits. © Wayne Heim",
+    "story": "Greatest Generation Photos In Fine Art. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3701,7 +3701,7 @@ export const galleryData = [
       "wartime portraits",
       "moments of connection"
     ],
-    "story": "Wayne Heim's exploration of greatest generation photos comes alive in this piece, showcasing greatest generation photos and moments of connection. A testament to wwii photography in fine art. © Wayne Heim",
+    "story": "Photography Moment. Wayne Heim's approach to K4 Studios fine art transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3726,7 +3726,7 @@ export const galleryData = [
       "wwii photography",
       "moments of connection"
     ],
-    "story": "Wayne Heim's exploration of wwii photography comes alive in this piece, showcasing wwii photography and wwii photography. A testament to wwii photography in fine art. © Wayne Heim",
+    "story": "In \"Heroic Portraits And Wwii Photography,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3752,7 +3752,7 @@ export const galleryData = [
       "heroic portraits",
       "wartime portraits"
     ],
-    "story": "This image embodies heroic portraits and wartime portraits, captured by Wayne Heim in his signature style. It reflects heroic portraits with a touch of wartime portraits. © Wayne Heim",
+    "story": "Photography Study — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3779,7 +3779,7 @@ export const galleryData = [
       "wwii photography",
       "heroic portraits"
     ],
-    "story": "Wayne Heim's exploration of heroic portraits comes alive in this piece, showcasing moments of connection and heroic portraits. A testament to wwii photography in fine art. © Wayne Heim",
+    "story": "Greatest Generation Photos Portrait — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. fine art photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3804,7 +3804,7 @@ export const galleryData = [
       "heroic portraits",
       "greatest generation photos"
     ],
-    "story": "Delving into wwii photography, this work by Wayne Heim highlights heroic portraits through wwii photography and wwii photography. A powerful statement in photography. © Wayne Heim",
+    "story": "\"Photography Moment\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3826,7 +3826,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3848,7 +3848,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3870,7 +3870,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3892,7 +3892,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3914,7 +3914,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3936,7 +3936,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3958,7 +3958,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "© Wayne Heim 2018 Painterly photography portraits by Wayne Heim.",
+    "story": "\"Fine Art Painterly Portrait Photography:\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3980,7 +3980,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Young soldier stands in the cold.  © Wayne Heim",
+    "story": "Fine Art Painterly Portrait Photography: — part of Wayne Heim's C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color collection. Wayne Heim photography meets painterly execution, creating an image that bridges documentation and fine art.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4002,7 +4002,7 @@ export const galleryData = [
     "keywords": [
       "DDay Conneaut 2021"
     ],
-    "story": "Portrait of a soldier at FIG.  © Wayne Heim",
+    "story": "In \"Cold Soldier Photography by Wayne Heim,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4028,7 +4028,7 @@ export const galleryData = [
       "wartime portraits",
       "moments of connection"
     ],
-    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing wwii photography and moments of connection. A testament to wartime portraits in fine art. © Wayne Heim",
+    "story": "In \"Ready to March - WWII Reenactment Photo,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4093,7 +4093,7 @@ export const galleryData = [
       "wartime portraits",
       "heroic portraits"
     ],
-    "story": "Wayne Heim's exploration of moments of connection comes alive in this piece, showcasing moments of connection and heroic portraits. A testament to moments of connection in fine art. © Wayne Heim",
+    "story": "Wayne Heim captures \"WWII Reenactor Photography: War News. Photography by Wayne Heim\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Painterly Fine Art Photography\Facing History\WWII\Portraits\Color.",
     "notes": "",
     "rating": 0,
     "galleries": [],

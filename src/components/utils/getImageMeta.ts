@@ -1,7 +1,7 @@
 // Utility to generate meta tags for individual image pages
-// Usage: getImageMeta(imageId, galleryDatas, fallbackMeta)
+// Usage: getImageMeta(imageId, galleryDatas, fallbackMeta, canonicalUrl)
 
-export function getImageMeta(imageId, galleryDatas, fallbackMeta: any = {}) {
+export function getImageMeta(imageId, galleryDatas, fallbackMeta: any = {}, canonicalUrl?: string) {
   let imageData = null;
   let parentGalleryMeta = fallbackMeta;
 
@@ -46,6 +46,7 @@ export function getImageMeta(imageId, galleryDatas, fallbackMeta: any = {}) {
   return {
     ...imageData, // ✅ keep all fields (alt, notes, keywords, etc.)
     story: story || imageData.description || description, // ✅ guarantee story exists
+    canonicalUrl, // ✅ explicit canonical for this image page
     ogTitle: title,
     ogDescription: description, // ✅ story preferred for social/meta
     ogImage: imageUrl,

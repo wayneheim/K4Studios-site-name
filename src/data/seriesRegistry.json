@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-01-16T23:32:29.810Z",
+    "lastUpdated": "2026-01-21T16:10:00.632Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z"
   },
   "images": {
@@ -1076,7 +1076,188 @@
     "i-vhGcpWV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-KZdtBNG",
     "i-fkMpXJf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-Xze48XF",
     "i-bhH8xbr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-ThwdgGW",
-    "i-sxTV2KH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-kdyEwgt"
+    "i-sxTV2KH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-kdyEwgt",
+    "i-wqJHvpV:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-PLuzawv",
+    "i-mfMVdnH:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-C8mkHwX",
+    "i-2M68L7c:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-6rdqdPQ",
+    "i-8sW4rf4:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-aKJtC8r",
+    "i-7k6tvvL:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-aLTVTcd",
+    "i-7GCDqcW:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-CF4ZhMY",
+    "i-NH5PD4M:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-Szs8LTA",
+    "i-Rspf84k:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-eRQ9NXM",
+    "i-GGmGhkv:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-gm8Qy6g",
+    "i-fZ2J8wr:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-6mv3QmA",
+    "i-dXHvGd9:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-v9SaTuf",
+    "i-WVGNqs6:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-J6nXumD",
+    "i-smCDmvz:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-YUAn5AY",
+    "i-VPBt3XG:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-prMuwSB",
+    "i-xfBNqVW:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-zDHG8B9",
+    "i-gvz3xGb:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-CHr2ejE",
+    "i-WSVMnGx:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-2Ru9EaK",
+    "i-WKQS29t:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-VNemMqk",
+    "i-ScxVg7H:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs": "s-FeY7Dx2",
+    "i-GBTSWkW:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-Zy5yzVA",
+    "i-zXsjXwN:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-6RbbHsb",
+    "i-HP6hJm4:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-WCuvFbg",
+    "i-GmFFsFL:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-2A2uhsv",
+    "i-WdNbPqX:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-zA96QXQ",
+    "i-fccqTrW:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-qLQAkZ2",
+    "i-sm7MXM4:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-P9vrRMc",
+    "i-7LVp5bN:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-gv8g4Ex",
+    "i-mCJv3RM:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-MughhkJ",
+    "i-GV5XPtF:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-JpyC5vg",
+    "i-pd6dZCP:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-ugcFyBg",
+    "i-VHMgr5J:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-Ha2knRM",
+    "i-QsskjT5:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-23EAmph",
+    "i-f56454D:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-ECnPNge",
+    "i-KWjsH3B:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-6pNZFMh",
+    "i-DL6wMc7:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-fqnEJ5U",
+    "i-5wFxqjj:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-3P664PC",
+    "i-m3V6PZf:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-KtUb7pa",
+    "i-SCMFzP3:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-HAZCU9p",
+    "i-84Cqc8J:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-9cwRHsy",
+    "i-pg6hdsZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs": "s-gz6BHkT",
+    "i-fgkX7Jn:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-dJKf3uH",
+    "i-7LZhFkc:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-MRarx3b",
+    "i-mSp9WgK:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-fj7sjfj",
+    "i-p5ghtLz:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-9J479aR",
+    "i-FpmhtnM:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-2Uu7C7P",
+    "i-Jstk9Gx:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-vdgTNNj",
+    "i-NkNwLM6:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-kUvnnA5",
+    "i-nqpGhhX:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-uvPD9Rz",
+    "i-cKsdqTs:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-AzhxP9w",
+    "i-RjSqqDt:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-PTK5SWb",
+    "i-qM9zBVL:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-GKnt7JQ",
+    "i-5ZsWtSx:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-bTK9HXu",
+    "i-fGnNkBL:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-Pdy8kYv",
+    "i-qrS5Ggc:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-LpPqgWG",
+    "i-bqnctgw:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-xaHhFbY",
+    "i-XzhTJPf:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs": "s-rLm34TL",
+    "i-fgkX7Jn:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-dJKf3uH",
+    "i-7LZhFkc:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-MRarx3b",
+    "i-mSp9WgK:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-fj7sjfj",
+    "i-p5ghtLz:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-9J479aR",
+    "i-FpmhtnM:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-2Uu7C7P",
+    "i-Jstk9Gx:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-vdgTNNj",
+    "i-NkNwLM6:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-kUvnnA5",
+    "i-nqpGhhX:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-uvPD9Rz",
+    "i-cKsdqTs:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-AzhxP9w",
+    "i-RjSqqDt:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-PTK5SWb",
+    "i-qM9zBVL:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-GKnt7JQ",
+    "i-5ZsWtSx:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-bTK9HXu",
+    "i-fGnNkBL:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-Pdy8kYv",
+    "i-qrS5Ggc:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-LpPqgWG",
+    "i-bqnctgw:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-xaHhFbY",
+    "i-XzhTJPf:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs": "s-rLm34TL",
+    "i-G6gftd8:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-Fj3jE2L",
+    "i-5BJh8BQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-VjZLtRu",
+    "i-zwwCqFz:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-FM3zMjp",
+    "i-SNtZNVm:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-LAjHTnc",
+    "i-g7SCMTD:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-79gb3vy",
+    "i-jWDDpC4:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-apbxYqx",
+    "i-6PzCQW9:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-4V3rRRQ",
+    "i-N226DMX:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-R3Ks7aA",
+    "i-NHkKNbH:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-Ur2p9bK",
+    "i-Q2NXpjG:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-qy2Urqu",
+    "i-C2w6Kpb:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-4bnZfjX",
+    "i-Lk8jWT3:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-Kb5Dm6R",
+    "i-7hz5LWz:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-R9Znmyr",
+    "i-NHPCPhP:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-Fnagtru",
+    "i-WfrdxRR:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-KFc72Yq",
+    "i-HzFGjBR:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-3f6W5vE",
+    "i-7SvxcWm:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-qqvTS5r",
+    "i-9zwL895:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-m89Q97K",
+    "i-pSpnB4w:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-gDVuUmc",
+    "i-6VQKFs5:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-uL3qnSF",
+    "i-DxV8pJ9:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-Nje8czF",
+    "i-ZsFmtdj:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-MjsqR8D",
+    "i-52czKPJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-7K4TLeb",
+    "i-cqrzRwc:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-3FeH3k2",
+    "i-QHBqC4b:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-mVxSaJh",
+    "i-tZnxLz8:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-nvNSwRg",
+    "i-gdbdH5Z:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-smADkDc",
+    "i-LPkbrS9:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-F4kmKJL",
+    "i-B2Jj4gG:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-9Gw2vYR",
+    "i-hwnwhJT:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-eQrHCT8",
+    "i-GNWVmdp:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-ezmjVzL",
+    "i-H4dtMQ5:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-Fts8Yrr",
+    "i-qL6vZqs:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-3XqQA7M",
+    "i-xjQDB2L:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-KxPsL4E",
+    "i-9Zv7LRm:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-QJcBsL6",
+    "i-4NMzs5D:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-6G4HL24",
+    "i-Hk9TrCX:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-9V6Yw6Y",
+    "i-JqwF5sW:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-n4b6F6H",
+    "i-n5Kt6x3:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-YzHjUyP",
+    "i-shVs3RQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-CxFM6K4",
+    "i-MmtQ2p8:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-PPp6Z2p",
+    "i-fnq8Gdv:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-WBKLCWz",
+    "i-wmGnV8N:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-y68Bx9K",
+    "i-Xhgr9rF:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-W2Nm7p2",
+    "i-3bKfhW8:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-55Vbdyc",
+    "i-73H3wLV:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-vM74zkF",
+    "i-zk7zXP3:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-4WxJN8U",
+    "i-b2hZptn:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-CeJQfMg",
+    "i-HCm7ssN:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-TJKtmEa",
+    "i-QrnZzRW:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-JARcaRD",
+    "i-2hZwZ6C:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-LqHEFug",
+    "i-8JHmjF9:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-mhARdTq",
+    "i-ZDgVWFr:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-DE4BNZ5",
+    "i-xTQqpTT:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-HcEPqmt",
+    "i-fvR6xh7:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-UdXvF2W",
+    "i-b6dRFxv:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-YVjcZsX",
+    "i-KKkLwvR:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-dfbs9ch",
+    "i-n7ZKsw5:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-4HCsRZq",
+    "i-zncBGq4:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-XBwS8tw",
+    "i-3g75V8v:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-SwnVyGL",
+    "i-RBTGb7k:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-xeNYuVM",
+    "i-b2hZptn:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs": "s-CeJQfMg",
+    "i-jWDDpC4:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs": "s-apbxYqx",
+    "i-8JHmjF9:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs": "s-mhARdTq",
+    "i-WfrdxRR:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs": "s-KFc72Yq",
+    "i-zk7zXP3:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs": "s-4WxJN8U",
+    "i-N226DMX:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs": "s-R3Ks7aA",
+    "i-5DbNvHj:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs": "s-pVVue5M",
+    "i-ZDgVWFr:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs": "s-DE4BNZ5",
+    "i-fnq8Gdv:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs": "s-WBKLCWz",
+    "i-pB9zzmW:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs": "s-wUgHsaW",
+    "i-qL6vZqs:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs": "s-3XqQA7M",
+    "i-HCm7ssN:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs": "s-TJKtmEa",
+    "i-Pgks2np:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-sAF9Unq",
+    "i-sm7MXM4:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-P9vrRMc",
+    "i-WfrdxRR:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-KFc72Yq",
+    "i-QsskjT5:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-23EAmph",
+    "i-g6Trjng:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-Bh2SdKr",
+    "i-s4m4wp5:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-qes2Ldm",
+    "i-3tdkVSh:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-e4JM8vg",
+    "i-RRFGZvS:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-B3T8NRv",
+    "i-TgVv6SZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-CsemJ5a",
+    "i-JdTbNvz:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-yh5c4yf",
+    "i-zk7zXP3:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-4WxJN8U",
+    "i-N226DMX:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-R3Ks7aA",
+    "i-7LVp5bN:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-gv8g4Ex",
+    "i-NHPCPhP:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-Fnagtru",
+    "i-fgkX7Jn:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-dJKf3uH",
+    "i-mSp9WgK:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-fj7sjfj",
+    "i-NkNwLM6:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-kUvnnA5",
+    "i-nqpGhhX:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-uvPD9Rz",
+    "i-RjSqqDt:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-PTK5SWb",
+    "i-qM9zBVL:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-GKnt7JQ",
+    "i-5ZsWtSx:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-bTK9HXu",
+    "i-fGnNkBL:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-Pdy8kYv",
+    "i-qrS5Ggc:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-LpPqgWG",
+    "i-bqnctgw:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs": "s-xaHhFbY",
+    "i-b2hZptn:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-CeJQfMg",
+    "i-jWDDpC4:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-apbxYqx",
+    "i-8JHmjF9:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-mhARdTq",
+    "i-WfrdxRR:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-KFc72Yq",
+    "i-zk7zXP3:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-4WxJN8U",
+    "i-N226DMX:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-R3Ks7aA",
+    "i-5DbNvHj:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-pVVue5M",
+    "i-ZDgVWFr:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-DE4BNZ5",
+    "i-fnq8Gdv:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-WBKLCWz",
+    "i-pB9zzmW:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-wUgHsaW",
+    "i-qL6vZqs:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-3XqQA7M",
+    "i-HCm7ssN:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-TJKtmEa"
   },
   "series": {
     "s-BB65wHk": {
@@ -1411,9 +1592,15 @@
           "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
           "title": "Painterly Mountain Photography:  Between the Trees  Photography by Wayne Heim",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg"
+        },
+        {
+          "imageId": "i-9Zv7LRm",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Between the Trees",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-9Zv7LRm/3/MtWL98DrD97rBF7d2MgMNCVpg4SP4WmJXFxFHkZ6Z/XL/_WHZ9589-2-XL.jpg"
         }
       ],
-      "linkedCount": 2,
+      "linkedCount": 3,
       "createdAt": "2025-12-22T05:43:33.464Z",
       "editionData": {
         "chronicle": {
@@ -3792,9 +3979,15 @@
           "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
           "title": "Painterly Landscape Photo: Light through trees.",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/LgZt3XgvxQRRc3nSbw3L7zsC7XK4VVCRpGtdgW94T/XL/_ANA1097-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-VHMgr5J",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Held in the Trees",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Hocking-2021/i-VHMgr5J/3/LgZt3XgvxQRRc3nSbw3L7zsC7XK4VVCRpGtdgW94T/XL/_ANA1097-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T07:13:02.446Z",
       "editionData": {
         "chronicle": {
@@ -3967,9 +4160,15 @@
           "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
           "title": "Red barn and storm clouds.",
           "src": "https://photos.smugmug.com/photos/i-f56454D/2/NLrRHSwc6DCd2QGZ8N538dC6t72zr3HXKK8HhpMss/XL/i-f56454D-XL.jpg"
+        },
+        {
+          "imageId": "i-f56454D",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "When the Sky Comes Calling",
+          "src": "https://photos.smugmug.com/photos/i-f56454D/2/NLrRHSwc6DCd2QGZ8N538dC6t72zr3HXKK8HhpMss/XL/i-f56454D-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T07:13:02.447Z"
     },
     "s-AWz5X7A": {
@@ -28268,6 +28467,2673 @@
       "linkedCount": 1,
       "excludeSizes": {},
       "createdAt": "2026-01-16T23:32:29.810Z"
+    },
+    "s-PLuzawv": {
+      "primaryImageId": "i-wqJHvpV",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Across Quiet Ground",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-wqJHvpV/0/NFrszMXgvcvqvnN79ZjtLfNxmRDkjHK6VnkGJhhhm/XL/_WHZ1207-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-wqJHvpV",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Across Quiet Ground",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-wqJHvpV/0/NFrszMXgvcvqvnN79ZjtLfNxmRDkjHK6VnkGJhhhm/XL/_WHZ1207-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:15:26.183Z"
+    },
+    "s-C8mkHwX": {
+      "primaryImageId": "i-mfMVdnH",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Shape of Waiting Land",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/NFpdLdR7bV6qK99hkrHpBtM9Sh96g9J6pVbdbJ4sg/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-mfMVdnH",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "The Shape of Waiting Land",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/NFpdLdR7bV6qK99hkrHpBtM9Sh96g9J6pVbdbJ4sg/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:16:37.126Z"
+    },
+    "s-6rdqdPQ": {
+      "primaryImageId": "i-2M68L7c",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Cut by Water",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-2M68L7c/0/MFZBZhKv2t9cNpf7V9PsDrzRzXwwrRL5HhDvnFFC5/XL/_WHZ7972_tonemapped-Edit-531-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-2M68L7c",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Cut by Water",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-2M68L7c/0/MFZBZhKv2t9cNpf7V9PsDrzRzXwwrRL5HhDvnFFC5/XL/_WHZ7972_tonemapped-Edit-531-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:17:54.720Z"
+    },
+    "s-aKJtC8r": {
+      "primaryImageId": "i-8sW4rf4",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Lives Between Tides",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8sW4rf4/10/MVqXKN9xpHbxd7q7CVQ7ZZFJDrMZ4kSFqvtVNJ5b9/XL/_K1W3375-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-8sW4rf4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Lives Between Tides",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-8sW4rf4/10/MVqXKN9xpHbxd7q7CVQ7ZZFJDrMZ4kSFqvtVNJ5b9/XL/_K1W3375-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:18:56.922Z"
+    },
+    "s-aLTVTcd": {
+      "primaryImageId": "i-7k6tvvL",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "After the Crossing",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/LGvgj4hXLzvm6QbGtVVxTPVj9KKMN6D9N4RsgVRhC/XL/_WHZ2313-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-7k6tvvL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "After the Crossing",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-7k6tvvL/3/LGvgj4hXLzvm6QbGtVVxTPVj9KKMN6D9N4RsgVRhC/XL/_WHZ2313-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:20:06.123Z"
+    },
+    "s-CF4ZhMY": {
+      "primaryImageId": "i-7GCDqcW",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Inside the Blue Silence",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-7GCDqcW/7/LKrr2sKx3Cn5ZVhMSqLmz76pzVCt7834sPBvcNG5K/XL/_OL34625-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-7GCDqcW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Inside the Blue Silence",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-7GCDqcW/7/LKrr2sKx3Cn5ZVhMSqLmz76pzVCt7834sPBvcNG5K/XL/_OL34625-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:21:28.606Z"
+    },
+    "s-Szs8LTA": {
+      "primaryImageId": "i-NH5PD4M",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Stream to the Falls",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-NH5PD4M/6/Nf93HnP4BQqNj2cdG6GQwsxzND385nj3P38Jdxwks/XL/_DSF2369-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-NH5PD4M",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Stream to the Falls",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-NH5PD4M/6/Nf93HnP4BQqNj2cdG6GQwsxzND385nj3P38Jdxwks/XL/_DSF2369-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:24:05.240Z"
+    },
+    "s-eRQ9NXM": {
+      "primaryImageId": "i-Rspf84k",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Valley View",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-Rspf84k/0/NBf6LKScZHPzQSXjqKQsVNQXLmqXVfrv5Pw57dw9p/XL/_DSF2369_tonemapped-613-614-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Rspf84k",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Valley View",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/i-Rspf84k/0/NBf6LKScZHPzQSXjqKQsVNQXLmqXVfrv5Pw57dw9p/XL/_DSF2369_tonemapped-613-614-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:25:02.321Z"
+    },
+    "s-gm8Qy6g": {
+      "primaryImageId": "i-GGmGhkv",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Goðafoss – Iceland Waterfall Sunset",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/LSQFhkSSMq6V6gwMX4nTTRQNZMXx9SvGRpqfNWgR7/XL/_ANA2548-Enhanced-Edit-2-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-GGmGhkv",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Goðafoss – Iceland Waterfall Sunset",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-GGmGhkv/3/LSQFhkSSMq6V6gwMX4nTTRQNZMXx9SvGRpqfNWgR7/XL/_ANA2548-Enhanced-Edit-2-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:25:59.149Z"
+    },
+    "s-6mv3QmA": {
+      "primaryImageId": "i-fZ2J8wr",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Eerie Moon",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fZ2J8wr/4/NWhvsJFMBTDVw9rsdRz77M7ZRd5RcjXpGv2HqtGVj/XL/_WHZ2247-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-fZ2J8wr",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Eerie Moon",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Newfoundland/i-fZ2J8wr/4/NWhvsJFMBTDVw9rsdRz77M7ZRd5RcjXpGv2HqtGVj/XL/_WHZ2247-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:26:56.518Z"
+    },
+    "s-v9SaTuf": {
+      "primaryImageId": "i-dXHvGd9",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Cliffs into Open Water",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dXHvGd9/11/KMz2W2KhQmz3GfzjhMDcRLTT5SCmq9zr28MS9Hdw5/XL/_OLY8984-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-dXHvGd9",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Cliffs into Open Water",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-dXHvGd9/11/KMz2W2KhQmz3GfzjhMDcRLTT5SCmq9zr28MS9Hdw5/XL/_OLY8984-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:28:11.266Z"
+    },
+    "s-J6nXumD": {
+      "primaryImageId": "i-WVGNqs6",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Coastal Beacon",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WVGNqs6/7/LDzc5vFD8PBz6QDnPVMXgMNmQFm5XsFCSXGf2q6gg/XL/_WHZ9796_tonemapped-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-WVGNqs6",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Coastal Beacon",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-WVGNqs6/7/LDzc5vFD8PBz6QDnPVMXgMNmQFm5XsFCSXGf2q6gg/XL/_WHZ9796_tonemapped-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:31:28.322Z"
+    },
+    "s-YUAn5AY": {
+      "primaryImageId": "i-smCDmvz",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Standing on the Water’s Edge",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-smCDmvz/0/L6t8B9TGm7PzBLKC6tmptwStk4fSgjzHgd7dvqH8m/XL/_WHZ2734-Pano-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-smCDmvz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Standing on the Water’s Edge",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-smCDmvz/0/L6t8B9TGm7PzBLKC6tmptwStk4fSgjzHgd7dvqH8m/XL/_WHZ2734-Pano-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:32:39.216Z"
+    },
+    "s-prMuwSB": {
+      "primaryImageId": "i-VPBt3XG",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Snowbound Range",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VPBt3XG/4/K92mqfr6G3nrgpHfvVGNXfmJKKFqZRPvSd9wv9Tdh/XL/_WHZ3206-Pano-Edit-Edit-2-Edit-Exposure-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-VPBt3XG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Snowbound Range",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-VPBt3XG/4/K92mqfr6G3nrgpHfvVGNXfmJKKFqZRPvSd9wv9Tdh/XL/_WHZ3206-Pano-Edit-Edit-2-Edit-Exposure-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:34:55.963Z"
+    },
+    "s-zDHG8B9": {
+      "primaryImageId": "i-xfBNqVW",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Winter Light",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-xfBNqVW/0/Kd8rhsR6M3kK32ZMzrRsCfVWQVfBXXhxgwNCBqpjT/XL/_WHZ3234-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-xfBNqVW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Winter Light",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-xfBNqVW/0/Kd8rhsR6M3kK32ZMzrRsCfVWQVfBXXhxgwNCBqpjT/XL/_WHZ3234-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:37:00.369Z"
+    },
+    "s-CHr2ejE": {
+      "primaryImageId": "i-gvz3xGb",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "River Cut",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gvz3xGb/0/KfzbWp5T5xPvhZDWRHzSvxn6QrZ7FH97JHfD4MtJk/XL/_WHZ3666-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-gvz3xGb",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "River Cut",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-gvz3xGb/0/KfzbWp5T5xPvhZDWRHzSvxn6QrZ7FH97JHfD4MtJk/XL/_WHZ3666-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:38:26.374Z"
+    },
+    "s-2Ru9EaK": {
+      "primaryImageId": "i-WSVMnGx",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "At Rest",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WSVMnGx/0/KnfCvrQJvsSJzjDB7N6cdrBpXkXBqw349pmSMRBwg/XL/_WHZ4304-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-WSVMnGx",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "At Rest",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WSVMnGx/0/KnfCvrQJvsSJzjDB7N6cdrBpXkXBqw349pmSMRBwg/XL/_WHZ4304-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:44:02.653Z"
+    },
+    "s-VNemMqk": {
+      "primaryImageId": "i-WKQS29t",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Morning Shore",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WKQS29t/0/KvnPtvNPjZqnX2xqD2dPWLdsLL7KdnfnmFspmSc6M/XL/_WHZ4347-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-WKQS29t",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "Morning Shore",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WKQS29t/0/KvnPtvNPjZqnX2xqD2dPWLdsLL7KdnfnmFspmSc6M/XL/_WHZ4347-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:47:51.484Z"
+    },
+    "s-FeY7Dx2": {
+      "primaryImageId": "i-ScxVg7H",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Lake Listens",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/M83N7gCX9zkvR7JzcwdfDkCfhmmqQTQmtqDwSrR4R/XL/Emerald%20Lake%20Lodge%20-%20Wayne%20Heim-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-ScxVg7H",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs",
+          "title": "The Lake Listens",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-ScxVg7H/3/M83N7gCX9zkvR7JzcwdfDkCfhmmqQTQmtqDwSrR4R/XL/Emerald%20Lake%20Lodge%20-%20Wayne%20Heim-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:48:52.242Z"
+    },
+    "s-Zy5yzVA": {
+      "primaryImageId": "i-GBTSWkW",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Still Working",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/L2QH5jGbPsBBVsWRMwHhpKZgCM4HvsLLpLtgjsC32/XL/_HF20856-Pano-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-GBTSWkW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Still Working",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/L2QH5jGbPsBBVsWRMwHhpKZgCM4HvsLLpLtgjsC32/XL/_HF20856-Pano-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:51:07.141Z"
+    },
+    "s-6RbbHsb": {
+      "primaryImageId": "i-zXsjXwN",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Into the Green",
+      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/NdWHcvbsdLN2Z8mjqq4SJz8dQ7fjRSGbXRJ2b6WXr/XL/_igp2989-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-zXsjXwN",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Into the Green",
+          "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/NdWHcvbsdLN2Z8mjqq4SJz8dQ7fjRSGbXRJ2b6WXr/XL/_igp2989-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:52:51.142Z"
+    },
+    "s-WCuvFbg": {
+      "primaryImageId": "i-HP6hJm4",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Quiet Persistence",
+      "src": "https://photos.smugmug.com/photos/i-HP6hJm4/4/MgwSH4QV7FhZrDjnmMkzdTqd465wpZnVC3ksMnMJ2/XL/i-HP6hJm4-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-HP6hJm4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Quiet Persistence",
+          "src": "https://photos.smugmug.com/photos/i-HP6hJm4/4/MgwSH4QV7FhZrDjnmMkzdTqd465wpZnVC3ksMnMJ2/XL/i-HP6hJm4-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:54:27.395Z"
+    },
+    "s-2A2uhsv": {
+      "primaryImageId": "i-GmFFsFL",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Dueling Falls",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/LS7CMnktLVFvtxxCQXsR6krcCZkL5tPK6qS9D7ntt/XL/_IMG0137_tonemapped-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-GmFFsFL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Dueling Falls",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/LS7CMnktLVFvtxxCQXsR6krcCZkL5tPK6qS9D7ntt/XL/_IMG0137_tonemapped-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:55:31.466Z"
+    },
+    "s-zA96QXQ": {
+      "primaryImageId": "i-WdNbPqX",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Arches of Time",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/LCP6DnrZ5ZhdwVh6jxLT99zFhT37jtZgDZktwxPmF/XL/_IMG0156_tonemapped-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-WdNbPqX",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Arches of Time",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-WdNbPqX/5/LCP6DnrZ5ZhdwVh6jxLT99zFhT37jtZgDZktwxPmF/XL/_IMG0156_tonemapped-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:56:42.357Z"
+    },
+    "s-qLQAkZ2": {
+      "primaryImageId": "i-fccqTrW",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Built to Outlast",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fccqTrW/5/LXD7cNjGcVF3dkC7Z2FcDXsPwK8WGGnJGZSf3Brcm/XL/_IMG0159_tonemapped-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-fccqTrW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Built to Outlast",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-fccqTrW/5/LXD7cNjGcVF3dkC7Z2FcDXsPwK8WGGnJGZSf3Brcm/XL/_IMG0159_tonemapped-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T16:58:58.959Z"
+    },
+    "s-P9vrRMc": {
+      "primaryImageId": "i-sm7MXM4",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Breakwater",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/NVHZPbRrFwjXj95MMQmrZwHDZKqZsgVSgvmBgjkHt/XL/_OLY0581-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-sm7MXM4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Breakwater",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/NVHZPbRrFwjXj95MMQmrZwHDZKqZsgVSgvmBgjkHt/XL/_OLY0581-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-sm7MXM4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Held Against Motion",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-sm7MXM4/0/NVHZPbRrFwjXj95MMQmrZwHDZKqZsgVSgvmBgjkHt/XL/_OLY0581-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:00:12.936Z"
+    },
+    "s-gv8g4Ex": {
+      "primaryImageId": "i-7LVp5bN",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Old Mill",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/LCnh4L4zVgCz7Xrjp2B3qxTbgfpmGKkBQQD8gbX89/XL/_WHZ6681-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-7LVp5bN",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Old Mill",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/LCnh4L4zVgCz7Xrjp2B3qxTbgfpmGKkBQQD8gbX89/XL/_WHZ6681-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-7LVp5bN",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Built to Outlast the Day",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-7LVp5bN/0/LCnh4L4zVgCz7Xrjp2B3qxTbgfpmGKkBQQD8gbX89/XL/_WHZ6681-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:01:38.125Z"
+    },
+    "s-MughhkJ": {
+      "primaryImageId": "i-mCJv3RM",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Holding the Last Light",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/KMfzxLhwKQ3JtXGsJj8kd3KSFZTGcGvDSb4tX4Sx8/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-mCJv3RM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Holding the Last Light",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/KMfzxLhwKQ3JtXGsJj8kd3KSFZTGcGvDSb4tX4Sx8/XL/_WHZ7317-Edit-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:03:16.034Z"
+    },
+    "s-JpyC5vg": {
+      "primaryImageId": "i-GV5XPtF",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Weight of Water",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-GV5XPtF/2/Nh6bb5xkG9SkT8ZJqWTFpxdj8SGnscF9RZf5LZpDJ/XL/_WHZ7498-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-GV5XPtF",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "The Weight of Water",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Black-River-West-Falls/i-GV5XPtF/2/Nh6bb5xkG9SkT8ZJqWTFpxdj8SGnscF9RZf5LZpDJ/XL/_WHZ7498-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:05:53.703Z"
+    },
+    "s-ugcFyBg": {
+      "primaryImageId": "i-pd6dZCP",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Just Around the Bend",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-pd6dZCP/0/NT74JDsBtrmTg4npchTgFMwQGTWcXvwCTvkVCnBDX/XL/_ANA0731-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-pd6dZCP",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Just Around the Bend",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-pd6dZCP/0/NT74JDsBtrmTg4npchTgFMwQGTWcXvwCTvkVCnBDX/XL/_ANA0731-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:07:06.887Z"
+    },
+    "s-23EAmph": {
+      "primaryImageId": "i-QsskjT5",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Clouds Taking Possession",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/NNmXnBH98RnzJvTTFzGT8ksfW5XgzwGkCbRjwMg4r/XL/_PEN0005-Enhanced-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-QsskjT5",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Clouds Taking Possession",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/NNmXnBH98RnzJvTTFzGT8ksfW5XgzwGkCbRjwMg4r/XL/_PEN0005-Enhanced-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-QsskjT5",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Morning Holds Its Breath",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-QsskjT5/1/NNmXnBH98RnzJvTTFzGT8ksfW5XgzwGkCbRjwMg4r/XL/_PEN0005-Enhanced-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:10:28.216Z"
+    },
+    "s-6pNZFMh": {
+      "primaryImageId": "i-KWjsH3B",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Heaven’s Lights",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-KWjsH3B/1/MCd5HpSxVxGj7ZBfPCDspgdkLqXvbxHPLWPfRVPqL/XL/_O1H0465-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-KWjsH3B",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Heaven’s Lights",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-KWjsH3B/1/MCd5HpSxVxGj7ZBfPCDspgdkLqXvbxHPLWPfRVPqL/XL/_O1H0465-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:14:48.971Z"
+    },
+    "s-fqnEJ5U": {
+      "primaryImageId": "i-DL6wMc7",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Sky Pauses",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-DL6wMc7/1/KZ7w9PtcjZBBbtvwSSPbN8MNrPP7JFpQSBxPxSbsL/XL/_O1H0474-Edit-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-DL6wMc7",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "The Sky Pauses",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-DL6wMc7/1/KZ7w9PtcjZBBbtvwSSPbN8MNrPP7JFpQSBxPxSbsL/XL/_O1H0474-Edit-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:16:13.127Z"
+    },
+    "s-3P664PC": {
+      "primaryImageId": "i-5wFxqjj",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Break in the Storm",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-5wFxqjj/0/KZCGjg7WDDdtQjgP2wCCQ9Q6XQJWBKJ7ngTQvgpv7/XL/_O1H0478-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-5wFxqjj",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Break in the Storm",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-5wFxqjj/0/KZCGjg7WDDdtQjgP2wCCQ9Q6XQJWBKJ7ngTQvgpv7/XL/_O1H0478-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:17:03.322Z"
+    },
+    "s-KtUb7pa": {
+      "primaryImageId": "i-m3V6PZf",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Cold Front",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/LWKVCFb76BKkCzM3qgnvjHFXMVC4pTx8jhcJWpqjX/XL/_O1H0479-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-m3V6PZf",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Cold Front",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/LWKVCFb76BKkCzM3qgnvjHFXMVC4pTx8jhcJWpqjX/XL/_O1H0479-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:18:01.365Z"
+    },
+    "s-HAZCU9p": {
+      "primaryImageId": "i-SCMFzP3",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Plains Light",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/MgPmbwcSV5GHgBTczDDcsG2w5TTSrDvbKzRJXkT4g/XL/20230706_181805-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-SCMFzP3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Plains Light",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/MgPmbwcSV5GHgBTczDDcsG2w5TTSrDvbKzRJXkT4g/XL/20230706_181805-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:19:41.378Z"
+    },
+    "s-9cwRHsy": {
+      "primaryImageId": "i-84Cqc8J",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Cloudscape",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-84Cqc8J/0/MXHBnt5hsDkrh93vDFQCZFk5S75GVMcpLD43q5V5B/XL/20230706_183048-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-84Cqc8J",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Cloudscape",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-84Cqc8J/0/MXHBnt5hsDkrh93vDFQCZFk5S75GVMcpLD43q5V5B/XL/20230706_183048-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:20:47.899Z"
+    },
+    "s-gz6BHkT": {
+      "primaryImageId": "i-pg6hdsZ",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Soft Descent",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cedar-Cliff-Falls/i-pg6hdsZ/1/LHRpQSMtvXwFs7W3VrmXhzVHhqBrmnTGHKRgwnsbJ/XL/_O2H0020-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-pg6hdsZ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs",
+          "title": "Soft Descent",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cedar-Cliff-Falls/i-pg6hdsZ/1/LHRpQSMtvXwFs7W3VrmXhzVHhqBrmnTGHKRgwnsbJ/XL/_O2H0020-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:22:15.131Z"
+    },
+    "s-dJKf3uH": {
+      "primaryImageId": "i-fgkX7Jn",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Stream Remembers",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/MZQ7nTRzdZJGdXwFNH7K8XrPLBQFgtBwR3FPwHRp7/XL/_DSF5884-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-fgkX7Jn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "The Stream Remembers",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/MZQ7nTRzdZJGdXwFNH7K8XrPLBQFgtBwR3FPwHRp7/XL/_DSF5884-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-fgkX7Jn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "A Soft Passage",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/MZQ7nTRzdZJGdXwFNH7K8XrPLBQFgtBwR3FPwHRp7/XL/_DSF5884-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-fgkX7Jn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Green Silence",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-fgkX7Jn/0/MZQ7nTRzdZJGdXwFNH7K8XrPLBQFgtBwR3FPwHRp7/XL/_DSF5884-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:25:02.050Z"
+    },
+    "s-MRarx3b": {
+      "primaryImageId": "i-7LZhFkc",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "See Beauty In Simplicity - See Beauty In Simplicity",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/LDbzWpJGRCWm2hQzq67JT7JvLS55NgVkMCt6kHM6X/XL/_WHZ6646-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-7LZhFkc",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "See Beauty In Simplicity - See Beauty In Simplicity",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/LDbzWpJGRCWm2hQzq67JT7JvLS55NgVkMCt6kHM6X/XL/_WHZ6646-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-7LZhFkc",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "Built to Endure",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-7LZhFkc/0/LDbzWpJGRCWm2hQzq67JT7JvLS55NgVkMCt6kHM6X/XL/_WHZ6646-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:26:05.050Z"
+    },
+    "s-fj7sjfj": {
+      "primaryImageId": "i-mSp9WgK",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Autumn Holds Its Breath",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-mSp9WgK",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "Autumn Holds Its Breath",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-mSp9WgK",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "Autumn Keeps the Ledger",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-mSp9WgK",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Old Mill in the Fall",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:33:15.229Z"
+    },
+    "s-9J479aR": {
+      "primaryImageId": "i-p5ghtLz",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "A Path Less Traveled",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-p5ghtLz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "A Path Less Traveled",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-p5ghtLz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "The Way Through",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:35:14.800Z"
+    },
+    "s-2Uu7C7P": {
+      "primaryImageId": "i-FpmhtnM",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "A Narrow Permission",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/MQkzNxTp4kcGf4H2rbZTZZN9rWDcjJPS8vx73MZ3d/XL/_DSF5501_tonemapped-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-FpmhtnM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "A Narrow Permission",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/MQkzNxTp4kcGf4H2rbZTZZN9rWDcjJPS8vx73MZ3d/XL/_DSF5501_tonemapped-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-FpmhtnM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "Set Down Gently",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpmhtnM/0/MQkzNxTp4kcGf4H2rbZTZZN9rWDcjJPS8vx73MZ3d/XL/_DSF5501_tonemapped-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:41:27.066Z"
+    },
+    "s-vdgTNNj": {
+      "primaryImageId": "i-Jstk9Gx",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Held by Moss",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/KLGscG8J4bRv3FcsSxjStRmxDb7L7fqDxxvKZrcWJ/XL/_DSF5516_tonemapped-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Jstk9Gx",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "Held by Moss",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/KLGscG8J4bRv3FcsSxjStRmxDb7L7fqDxxvKZrcWJ/XL/_DSF5516_tonemapped-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-Jstk9Gx",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "A Line Made of Time",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/KLGscG8J4bRv3FcsSxjStRmxDb7L7fqDxxvKZrcWJ/XL/_DSF5516_tonemapped-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:45:30.594Z"
+    },
+    "s-kUvnnA5": {
+      "primaryImageId": "i-NkNwLM6",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Hidden Falls",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-NkNwLM6",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "Hidden Falls",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-NkNwLM6",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "Kept from the Path",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-NkNwLM6",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Hidden Falls",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:46:35.619Z"
+    },
+    "s-uvPD9Rz": {
+      "primaryImageId": "i-nqpGhhX",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Hidden by Design",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KTjv35PCrq8WQG6QTQGcbhq9F4twdtBsx8STTbZZH/XL/_DSF5606-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-nqpGhhX",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "Hidden by Design",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KTjv35PCrq8WQG6QTQGcbhq9F4twdtBsx8STTbZZH/XL/_DSF5606-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-nqpGhhX",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "Uninterrupted",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KTjv35PCrq8WQG6QTQGcbhq9F4twdtBsx8STTbZZH/XL/_DSF5606-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-nqpGhhX",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "The Truth of a Moment",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KTjv35PCrq8WQG6QTQGcbhq9F4twdtBsx8STTbZZH/XL/_DSF5606-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:48:50.010Z"
+    },
+    "s-AzhxP9w": {
+      "primaryImageId": "i-cKsdqTs",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Beauty in Simplicity",
+      "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/KSkDBtspBB4dxCJxzB8BFd4RhM6f5CSg3Whpp4WZm/XL/i-cKsdqTs-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-cKsdqTs",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "Beauty in Simplicity",
+          "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/KSkDBtspBB4dxCJxzB8BFd4RhM6f5CSg3Whpp4WZm/XL/i-cKsdqTs-XL.jpg"
+        },
+        {
+          "imageId": "i-cKsdqTs",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "What Stays Upright",
+          "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/KSkDBtspBB4dxCJxzB8BFd4RhM6f5CSg3Whpp4WZm/XL/i-cKsdqTs-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:49:58.384Z"
+    },
+    "s-PTK5SWb": {
+      "primaryImageId": "i-RjSqqDt",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Triangles",
+      "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/LK6Pnfwc9jc3mtTgdptj8JhKQQdJdWB8x3Wc9HsvG/XL/i-RjSqqDt-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-RjSqqDt",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "Triangles",
+          "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/LK6Pnfwc9jc3mtTgdptj8JhKQQdJdWB8x3Wc9HsvG/XL/i-RjSqqDt-XL.jpg"
+        },
+        {
+          "imageId": "i-RjSqqDt",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "Triangles",
+          "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/LK6Pnfwc9jc3mtTgdptj8JhKQQdJdWB8x3Wc9HsvG/XL/i-RjSqqDt-XL.jpg"
+        },
+        {
+          "imageId": "i-RjSqqDt",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Triangles",
+          "src": "https://photos.smugmug.com/photos/i-RjSqqDt/1/LK6Pnfwc9jc3mtTgdptj8JhKQQdJdWB8x3Wc9HsvG/XL/i-RjSqqDt-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:51:46.700Z"
+    },
+    "s-GKnt7JQ": {
+      "primaryImageId": "i-qM9zBVL",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Dividing Line",
+      "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/NVQVZ8Wd7kbBzGbhbkXRbTWV9ScFgCVDZXpvD8rsF/XL/i-qM9zBVL-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-qM9zBVL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "Dividing Line",
+          "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/NVQVZ8Wd7kbBzGbhbkXRbTWV9ScFgCVDZXpvD8rsF/XL/i-qM9zBVL-XL.jpg"
+        },
+        {
+          "imageId": "i-qM9zBVL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "Dividing Line",
+          "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/NVQVZ8Wd7kbBzGbhbkXRbTWV9ScFgCVDZXpvD8rsF/XL/i-qM9zBVL-XL.jpg"
+        },
+        {
+          "imageId": "i-qM9zBVL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Dividing Line",
+          "src": "https://photos.smugmug.com/photos/i-qM9zBVL/1/NVQVZ8Wd7kbBzGbhbkXRbTWV9ScFgCVDZXpvD8rsF/XL/i-qM9zBVL-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:53:29.029Z"
+    },
+    "s-bTK9HXu": {
+      "primaryImageId": "i-5ZsWtSx",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Down the Hill",
+      "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/LcnPJhm5CM9NFV2WP7GrBNdx7Q9G4XRNxmk5VtZ6c/XL/i-5ZsWtSx-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-5ZsWtSx",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "Down the Hill",
+          "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/LcnPJhm5CM9NFV2WP7GrBNdx7Q9G4XRNxmk5VtZ6c/XL/i-5ZsWtSx-XL.jpg"
+        },
+        {
+          "imageId": "i-5ZsWtSx",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "Down the Hill",
+          "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/LcnPJhm5CM9NFV2WP7GrBNdx7Q9G4XRNxmk5VtZ6c/XL/i-5ZsWtSx-XL.jpg"
+        },
+        {
+          "imageId": "i-5ZsWtSx",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Down the Hill",
+          "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/LcnPJhm5CM9NFV2WP7GrBNdx7Q9G4XRNxmk5VtZ6c/XL/i-5ZsWtSx-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:54:49.196Z"
+    },
+    "s-Pdy8kYv": {
+      "primaryImageId": "i-fGnNkBL",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Held by Gravity",
+      "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-fGnNkBL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "Held by Gravity",
+          "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg"
+        },
+        {
+          "imageId": "i-fGnNkBL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "Held by Gravity",
+          "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg"
+        },
+        {
+          "imageId": "i-fGnNkBL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Held by Gravity",
+          "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:56:29.589Z"
+    },
+    "s-LpPqgWG": {
+      "primaryImageId": "i-qrS5Ggc",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Colors of the Forest",
+      "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/LW9zPmdqz2mk9FzDN4NmL7J3mbRQ29d6nxqF6CZbr/XL/i-qrS5Ggc-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-qrS5Ggc",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "Colors of the Forest",
+          "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/LW9zPmdqz2mk9FzDN4NmL7J3mbRQ29d6nxqF6CZbr/XL/i-qrS5Ggc-XL.jpg"
+        },
+        {
+          "imageId": "i-qrS5Ggc",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "Colors of the Forest",
+          "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/LW9zPmdqz2mk9FzDN4NmL7J3mbRQ29d6nxqF6CZbr/XL/i-qrS5Ggc-XL.jpg"
+        },
+        {
+          "imageId": "i-qrS5Ggc",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Colors of the Forest",
+          "src": "https://photos.smugmug.com/photos/i-qrS5Ggc/1/LW9zPmdqz2mk9FzDN4NmL7J3mbRQ29d6nxqF6CZbr/XL/i-qrS5Ggc-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:57:40.638Z"
+    },
+    "s-xaHhFbY": {
+      "primaryImageId": "i-bqnctgw",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Final Plunge",
+      "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/NZVHZj59k8G38kQjzrJLpDm53KdDZ7495mrH2GpT2/XL/i-bqnctgw-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-bqnctgw",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "Final Plunge",
+          "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/NZVHZj59k8G38kQjzrJLpDm53KdDZ7495mrH2GpT2/XL/i-bqnctgw-XL.jpg"
+        },
+        {
+          "imageId": "i-bqnctgw",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "Final Plunge",
+          "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/NZVHZj59k8G38kQjzrJLpDm53KdDZ7495mrH2GpT2/XL/i-bqnctgw-XL.jpg"
+        },
+        {
+          "imageId": "i-bqnctgw",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Final Plunge",
+          "src": "https://photos.smugmug.com/photos/i-bqnctgw/1/NZVHZj59k8G38kQjzrJLpDm53KdDZ7495mrH2GpT2/XL/i-bqnctgw-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T17:59:02.460Z"
+    },
+    "s-rLm34TL": {
+      "primaryImageId": "i-XzhTJPf",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Weathered Home",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-XzhTJPf/0/MK6SMfTxCJ3W4JHR252S8xJfPZwXgRC4MnDLZJGkd/XL/_ANA0948-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-XzhTJPf",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+          "title": "Weathered Home",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-XzhTJPf/0/MK6SMfTxCJ3W4JHR252S8xJfPZwXgRC4MnDLZJGkd/XL/_ANA0948-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-XzhTJPf",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs",
+          "title": "Weathered Home",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/i-XzhTJPf/0/MK6SMfTxCJ3W4JHR252S8xJfPZwXgRC4MnDLZJGkd/XL/_ANA0948-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T18:01:10.938Z"
+    },
+    "s-Fj3jE2L": {
+      "primaryImageId": "i-G6gftd8",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Open Country",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/LdcpqTRvCSgXKnknXNt3hVZsnmWHzJr2ptqMkc7HB/XL/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-G6gftd8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Open Country",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-G6gftd8/1/LdcpqTRvCSgXKnknXNt3hVZsnmWHzJr2ptqMkc7HB/XL/Painterly%20Landscape%20Photo_DSF4089-Enhanced-NR-Edit-Edit-508-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T20:57:16.973Z"
+    },
+    "s-VjZLtRu": {
+      "primaryImageId": "i-5BJh8BQ",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Closed",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/KsKdh8bhDhDRWzr9GnnPfcs2NHPjrDrrrsgjjPSCr/XL/Image%20s2-2b-490-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-5BJh8BQ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Closed",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-5BJh8BQ/0/KsKdh8bhDhDRWzr9GnnPfcs2NHPjrDrrrsgjjPSCr/XL/Image%20s2-2b-490-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:00:01.158Z"
+    },
+    "s-FM3zMjp": {
+      "primaryImageId": "i-zwwCqFz",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Evening Without Witness",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/NBSqSwkR2rd6fjwcqNqVR8NfhSvhDC48VdhSmb5Zm/XL/_O1H0149-Enhanced-NR-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-zwwCqFz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Evening Without Witness",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-zwwCqFz/0/NBSqSwkR2rd6fjwcqNqVR8NfhSvhDC48VdhSmb5Zm/XL/_O1H0149-Enhanced-NR-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:01:03.405Z"
+    },
+    "s-LAjHTnc": {
+      "primaryImageId": "i-SNtZNVm",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Long Bend",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/MpB9GSz7hNtrB23zw4tdjBwqQddxcp5djs4sG43tv/XL/_DSF4943-605-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-SNtZNVm",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "The Long Bend",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-SNtZNVm/0/MpB9GSz7hNtrB23zw4tdjBwqQddxcp5djs4sG43tv/XL/_DSF4943-605-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:02:07.311Z"
+    },
+    "s-79gb3vy": {
+      "primaryImageId": "i-g7SCMTD",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Pause Inside the Weather",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/L5gmVhjrj8x2w4Q9KbxW3pbQqjTVVKnxgLSv6BSFX/XL/P1030226-523-548-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-g7SCMTD",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "The Pause Inside the Weather",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-g7SCMTD/0/L5gmVhjrj8x2w4Q9KbxW3pbQqjTVVKnxgLSv6BSFX/XL/P1030226-523-548-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:03:19.450Z"
+    },
+    "s-apbxYqx": {
+      "primaryImageId": "i-jWDDpC4",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Cotton Candy",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-jWDDpC4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Cotton Candy",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg"
+        },
+        {
+          "imageId": "i-jWDDpC4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+          "title": "Cotton Candy",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg"
+        },
+        {
+          "imageId": "i-jWDDpC4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs",
+          "title": "Cotton Candy",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-jWDDpC4/0/MDgMLzZPJR6STwvKgK52pGkz4G3WmNMML2TfXQhJ6/XL/Painterly-Photography_WHZ9803-528-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:04:07.046Z"
+    },
+    "s-4V3rRRQ": {
+      "primaryImageId": "i-6PzCQW9",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Still Waiting",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/LPzKXsBKb3T6DMznGxvxtFFrhJ6B5MZ5Fdg6dWBjw/XL/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-6PzCQW9",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Still Waiting",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6PzCQW9/1/LPzKXsBKb3T6DMznGxvxtFFrhJ6B5MZ5Fdg6dWBjw/XL/Painterly%20Landscape%20Photo_IMG6307_tonemapped-546-547-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:05:11.218Z"
+    },
+    "s-R3Ks7aA": {
+      "primaryImageId": "i-N226DMX",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "In the Weeds",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-N226DMX",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "In the Weeds",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg"
+        },
+        {
+          "imageId": "i-N226DMX",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+          "title": "In the Weeds",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg"
+        },
+        {
+          "imageId": "i-N226DMX",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "In the Weeds",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg"
+        },
+        {
+          "imageId": "i-N226DMX",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs",
+          "title": "In the Weeds",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-N226DMX/1/MmxvBdtWRFXXW4sSLR6zQsJZBrNTWtfcXDVdNg5td/XL/Painterly-Landscape-Photography_WHZ9476_tonemapped-Edit-534-XL.jpg"
+        }
+      ],
+      "linkedCount": 4,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:06:14.027Z"
+    },
+    "s-Ur2p9bK": {
+      "primaryImageId": "i-NHkKNbH",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "School’s Out",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/LTBx3fqNQ88WvvCGJKW7HMg7BFXrBHvBXBQ9cfDX6/XL/test%20nothing-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-NHkKNbH",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "School’s Out",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHkKNbH/0/LTBx3fqNQ88WvvCGJKW7HMg7BFXrBHvBXBQ9cfDX6/XL/test%20nothing-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:07:20.097Z"
+    },
+    "s-qy2Urqu": {
+      "primaryImageId": "i-Q2NXpjG",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "After the Storm",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG/1/NjWWqpSXfMPzRw47QgTBJXKhkc4wGThXGCvFw564z/XL/Painterly%20Landscape%20Photo_DSF4260-Pano-Edit-480-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Q2NXpjG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "After the Storm",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Q2NXpjG/1/NjWWqpSXfMPzRw47QgTBJXKhkc4wGThXGCvFw564z/XL/Painterly%20Landscape%20Photo_DSF4260-Pano-Edit-480-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:08:09.081Z"
+    },
+    "s-4bnZfjX": {
+      "primaryImageId": "i-C2w6Kpb",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Break Time",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/KXGXHtMRNFxv2MtCVJX2zr67Bt4b3dvP5Vcwdqf4z/XL/_O1H1144-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-C2w6Kpb",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Break Time",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-C2w6Kpb/0/KXGXHtMRNFxv2MtCVJX2zr67Bt4b3dvP5Vcwdqf4z/XL/_O1H1144-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:09:45.790Z"
+    },
+    "s-Kb5Dm6R": {
+      "primaryImageId": "i-Lk8jWT3",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "What the Valley Keeps",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Lk8jWT3/0/MknLhq99sjwGJ9VksvxfZth9mVR2Rfz32VVzv9knr/XL/_IMG6384-542-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Lk8jWT3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "What the Valley Keeps",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Lk8jWT3/0/MknLhq99sjwGJ9VksvxfZth9mVR2Rfz32VVzv9knr/XL/_IMG6384-542-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:11:40.225Z"
+    },
+    "s-R9Znmyr": {
+      "primaryImageId": "i-7hz5LWz",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Aspen Fall",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-7hz5LWz/4/LKh2b3bmttFK7C5P7HZcTQZNnQmRkDGB8BBh49VXL/XL/Painterly%20Landscape%20Photo_WHZ7378_tonemapped-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-7hz5LWz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Aspen Fall",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-7hz5LWz/4/LKh2b3bmttFK7C5P7HZcTQZNnQmRkDGB8BBh49VXL/XL/Painterly%20Landscape%20Photo_WHZ7378_tonemapped-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:12:25.429Z"
+    },
+    "s-Fnagtru": {
+      "primaryImageId": "i-NHPCPhP",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Carved Slowly",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-NHPCPhP",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Carved Slowly",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-NHPCPhP",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Carved Slowly",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-NHPCPhP/0/MGXxt2Rjz4STcGwKtC27pnpjWQKLDvbwNTK5kdtvx/XL/_WHZ8138_tonemapped-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:13:48.018Z"
+    },
+    "s-KFc72Yq": {
+      "primaryImageId": "i-WfrdxRR",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Teton Reflections",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-WfrdxRR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Teton Reflections",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg"
+        },
+        {
+          "imageId": "i-WfrdxRR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+          "title": "Teton Reflections",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg"
+        },
+        {
+          "imageId": "i-WfrdxRR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Teton Reflections",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg"
+        },
+        {
+          "imageId": "i-WfrdxRR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs",
+          "title": "Teton Reflections",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-WfrdxRR/2/KdJKdjCVvNqbhbpbPQb9KJVqLQzv8D4VwCXk2G4M2/XL/Painterly-Landscape-Photography_WHZ9406-537-XL.jpg"
+        }
+      ],
+      "linkedCount": 4,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:15:03.574Z"
+    },
+    "s-3f6W5vE": {
+      "primaryImageId": "i-HzFGjBR",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Standing West",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/Lq8HfPD2W7zhkgtC47fvvkSCXhsDcXDmg6PMmHgP3/XL/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-HzFGjBR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Standing West",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-HzFGjBR/2/Lq8HfPD2W7zhkgtC47fvvkSCXhsDcXDmg6PMmHgP3/XL/Painterly%20Landscape%20Photo_WHZ7902-Pano-sharpen-stabilize-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:16:14.744Z"
+    },
+    "s-qqvTS5r": {
+      "primaryImageId": "i-7SvxcWm",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Dividing the Plains",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/KfsFHxSbMVztjS8p9zLFWJXS6qZx6kzFxw2sDFKsF/XL/_DSF3623-Edit-Edit-482-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-7SvxcWm",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Dividing the Plains",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-7SvxcWm/0/KfsFHxSbMVztjS8p9zLFWJXS6qZx6kzFxw2sDFKsF/XL/_DSF3623-Edit-Edit-482-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:17:24.943Z"
+    },
+    "s-m89Q97K": {
+      "primaryImageId": "i-9zwL895",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Watering Hole",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/NgP47cDzwghHKrW9LCBf4CFzKxSr3Hgc4WxSzbRtx/XL/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-9zwL895",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Watering Hole",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-9zwL895/1/NgP47cDzwghHKrW9LCBf4CFzKxSr3Hgc4WxSzbRtx/XL/Painterly%20Landscape%20Photo_DSF3630-Enhanced-NR-Edit-484-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:18:14.473Z"
+    },
+    "s-gDVuUmc": {
+      "primaryImageId": "i-pSpnB4w",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Shape Time Makes",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/K2jnQmGJjS7KSbZC2GHDzWRBdqddn5Dcn4QSj98VJ/XL/_O1H0365-589-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-pSpnB4w",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "The Shape Time Makes",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-pSpnB4w/0/K2jnQmGJjS7KSbZC2GHDzWRBdqddn5Dcn4QSj98VJ/XL/_O1H0365-589-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:21:25.304Z"
+    },
+    "s-uL3qnSF": {
+      "primaryImageId": "i-6VQKFs5",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Moral High Ground",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6VQKFs5/0/LR6XQJR82NMCDwSXcMZBMwz8sKdsFCjcfGNg4KvrX/XL/_O1H1173-487-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-6VQKFs5",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Moral High Ground",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-6VQKFs5/0/LR6XQJR82NMCDwSXcMZBMwz8sKdsFCjcfGNg4KvrX/XL/_O1H1173-487-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:22:07.946Z"
+    },
+    "s-Nje8czF": {
+      "primaryImageId": "i-DxV8pJ9",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Path to Righteousness",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/M8422CcmxP8WjDnsL45KFCwh4tv362S9gQWknthZh/XL/_O1H1179-Enhanced-NR-492-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-DxV8pJ9",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Path to Righteousness",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-DxV8pJ9/0/M8422CcmxP8WjDnsL45KFCwh4tv362S9gQWknthZh/XL/_O1H1179-Enhanced-NR-492-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:22:54.469Z"
+    },
+    "s-MjsqR8D": {
+      "primaryImageId": "i-ZsFmtdj",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Home on the Range",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/KXzBm3nCn2wks2Lczn5fxZsSjKr9dSQxShHRGBwnr/XL/_DSF3718-491-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-ZsFmtdj",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Home on the Range",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-ZsFmtdj/0/KXzBm3nCn2wks2Lczn5fxZsSjKr9dSQxShHRGBwnr/XL/_DSF3718-491-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:24:18.844Z"
+    },
+    "s-7K4TLeb": {
+      "primaryImageId": "i-52czKPJ",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "River’s Bend",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-52czKPJ/3/Nb9mHHqtSLrStsdpFb7RbKDd5TJDt9wmWw6NvvC2p/XL/_WHZ9821-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-52czKPJ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "River’s Bend",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-52czKPJ/3/Nb9mHHqtSLrStsdpFb7RbKDd5TJDt9wmWw6NvvC2p/XL/_WHZ9821-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:25:16.038Z"
+    },
+    "s-3FeH3k2": {
+      "primaryImageId": "i-cqrzRwc",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Hay Fever",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cqrzRwc/0/LQLS8bNzZBQJ82P9cbG6V4SDG7RmBqBJFV7L8KVDm/XL/_DSF3862-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-cqrzRwc",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Hay Fever",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-cqrzRwc/0/LQLS8bNzZBQJ82P9cbG6V4SDG7RmBqBJFV7L8KVDm/XL/_DSF3862-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:25:56.423Z"
+    },
+    "s-mVxSaJh": {
+      "primaryImageId": "i-QHBqC4b",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Count the Fields",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/NWghfDXxqjsk9cqx5MtnJvFhjvcPLLKbdJbjwF8pj/XL/_DSF3862-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-QHBqC4b",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Count the Fields",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QHBqC4b/0/NWghfDXxqjsk9cqx5MtnJvFhjvcPLLKbdJbjwF8pj/XL/_DSF3862-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:27:07.395Z"
+    },
+    "s-nvNSwRg": {
+      "primaryImageId": "i-tZnxLz8",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Where the Work Rests",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/KnFZGDzWnCmzJzD8WtNFtfkDrxNRZD4cj38kh4gQb/XL/_DSF3862-Enhanced-NR-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-tZnxLz8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Where the Work Rests",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-tZnxLz8/0/KnFZGDzWnCmzJzD8WtNFtfkDrxNRZD4cj38kh4gQb/XL/_DSF3862-Enhanced-NR-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:28:44.624Z"
+    },
+    "s-smADkDc": {
+      "primaryImageId": "i-gdbdH5Z",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "What the Field Allows",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-gdbdH5Z/0/KFMQ6HwvFv7vqpbt2Z2p8fMZDXrQJcfTG83JfJGXq/XL/_DSF3862-Enhanced-NR-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-gdbdH5Z",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "What the Field Allows",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-gdbdH5Z/0/KFMQ6HwvFv7vqpbt2Z2p8fMZDXrQJcfTG83JfJGXq/XL/_DSF3862-Enhanced-NR-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:30:15.612Z"
+    },
+    "s-F4kmKJL": {
+      "primaryImageId": "i-LPkbrS9",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Long View Holds",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/NhXMZPDFbHCW8QpkcCVXd2cmWndc3dZGS3GqKP8h4/XL/_O1H1307-Enhanced-NR-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-LPkbrS9",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "The Long View Holds",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-LPkbrS9/0/NhXMZPDFbHCW8QpkcCVXd2cmWndc3dZGS3GqKP8h4/XL/_O1H1307-Enhanced-NR-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:31:14.897Z"
+    },
+    "s-9Gw2vYR": {
+      "primaryImageId": "i-B2Jj4gG",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Where the Sky Pauses",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/KWcjQZGxXQkhHC8HgtTgB424zfVrZZvCgPzppFcNC/XL/_O1H0264-Edit-464-469-470-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-B2Jj4gG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Where the Sky Pauses",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-B2Jj4gG/0/KWcjQZGxXQkhHC8HgtTgB424zfVrZZvCgPzppFcNC/XL/_O1H0264-Edit-464-469-470-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:32:17.802Z"
+    },
+    "s-eQrHCT8": {
+      "primaryImageId": "i-hwnwhJT",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Where Evening Settles",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/M9PsKcrmMCVqHvrHbzg7cg5vtFGmw2ZnWQgRnPWGR/XL/_DSF4073-Pano_tonemapped-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-hwnwhJT",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Where Evening Settles",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-hwnwhJT/0/M9PsKcrmMCVqHvrHbzg7cg5vtFGmw2ZnWQgRnPWGR/XL/_DSF4073-Pano_tonemapped-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:33:15.330Z"
+    },
+    "s-ezmjVzL": {
+      "primaryImageId": "i-GNWVmdp",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "After the Sky Ignites",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/LpKBTsRRCssrTmZnZTfNzmhS3WfkW9WQJBzt4TW6P/XL/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-GNWVmdp",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "After the Sky Ignites",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-GNWVmdp/1/LpKBTsRRCssrTmZnZTfNzmhS3WfkW9WQJBzt4TW6P/XL/Painterly%20Landscape%20PhotoO1WH0822-Enhanced-NR-Pano-Edit-3-Edit-516-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:34:19.374Z"
+    },
+    "s-Fts8Yrr": {
+      "primaryImageId": "i-H4dtMQ5",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Stillness at the Edge of Light",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/M44p8NZgWw4bTnTw9JsdKDC8qS5gjMXGXjzZMZv64/XL/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-H4dtMQ5",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Stillness at the Edge of Light",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-H4dtMQ5/1/M44p8NZgWw4bTnTw9JsdKDC8qS5gjMXGXjzZMZv64/XL/Painterly%20Landscape%20Photo_DSF4556-Pano-Edit-519-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:35:21.611Z"
+    },
+    "s-3XqQA7M": {
+      "primaryImageId": "i-qL6vZqs",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "When the Mountain Wakes",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KVLbT4rtk2mbRqvKLNPXrZwDsLMq3BcfKmcFQ7gXX/XL/_O1H1114-Enhanced-NR-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-qL6vZqs",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "When the Mountain Wakes",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KVLbT4rtk2mbRqvKLNPXrZwDsLMq3BcfKmcFQ7gXX/XL/_O1H1114-Enhanced-NR-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-qL6vZqs",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+          "title": "Before the Lake Wakes",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KVLbT4rtk2mbRqvKLNPXrZwDsLMq3BcfKmcFQ7gXX/XL/_O1H1114-Enhanced-NR-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-qL6vZqs",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs",
+          "title": "Before the Lake Wakes",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-qL6vZqs/0/KVLbT4rtk2mbRqvKLNPXrZwDsLMq3BcfKmcFQ7gXX/XL/_O1H1114-Enhanced-NR-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:36:20.768Z"
+    },
+    "s-KxPsL4E": {
+      "primaryImageId": "i-xjQDB2L",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Held in Clear Light",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/MnpNzB8wSVDzwjVbrvWTQFkVmgrbMMJh389Ls55jN/XL/_DSF4443-Pano-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-xjQDB2L",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Held in Clear Light",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xjQDB2L/0/MnpNzB8wSVDzwjVbrvWTQFkVmgrbMMJh389Ls55jN/XL/_DSF4443-Pano-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:37:23.346Z"
+    },
+    "s-6G4HL24": {
+      "primaryImageId": "i-4NMzs5D",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Mill Holds On",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4NMzs5D/1/LBzZgGKPSTsqqnvTL3FG5z7HmXS5NF2kdw7gGqBsQ/XL/Painterly%20Landscape%20Photo_DSF4918-Edit-460-461%20v2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-4NMzs5D",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "The Mill Holds On",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-4NMzs5D/1/LBzZgGKPSTsqqnvTL3FG5z7HmXS5NF2kdw7gGqBsQ/XL/Painterly%20Landscape%20Photo_DSF4918-Edit-460-461%20v2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:39:29.508Z"
+    },
+    "s-9V6Yw6Y": {
+      "primaryImageId": "i-Hk9TrCX",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "What the River Couldn’t Take",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Hk9TrCX/1/NT9g5CZPzMdGFj6h8sCKDMnNWMqnZSZCGfKDLbvS6/XL/Painterly%20Landscape%20Photo_DSF4918-Edit-456-458-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Hk9TrCX",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "What the River Couldn’t Take",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Hk9TrCX/1/NT9g5CZPzMdGFj6h8sCKDMnNWMqnZSZCGfKDLbvS6/XL/Painterly%20Landscape%20Photo_DSF4918-Edit-456-458-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:40:34.584Z"
+    },
+    "s-n4b6F6H": {
+      "primaryImageId": "i-JqwF5sW",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Mill, Still Kept",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/MH7f46DkSS7d7KwqD33hGCnBMHnRKqWCwSsqTZ7Lp/XL/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-JqwF5sW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "The Mill, Still Kept",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-JqwF5sW/1/MH7f46DkSS7d7KwqD33hGCnBMHnRKqWCwSsqTZ7Lp/XL/Painterly%20Landscape%20Photo_DSF4871-Pano-2_tonemapped5-454-455-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:41:34.440Z"
+    },
+    "s-YzHjUyP": {
+      "primaryImageId": "i-n5Kt6x3",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Clouds on the Horizon",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/LShznfPD2xMmsFSJ2vfXgW7Q382JCzWZmMz2rzrmL/XL/_O1H0202-597-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-n5Kt6x3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Clouds on the Horizon",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n5Kt6x3/2/LShznfPD2xMmsFSJ2vfXgW7Q382JCzWZmMz2rzrmL/XL/_O1H0202-597-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:42:28.270Z"
+    },
+    "s-CxFM6K4": {
+      "primaryImageId": "i-shVs3RQ",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Long Sky",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-shVs3RQ/2/NZGHTfNJjKb45hcsmhdPwRw27PhJgC24whKMdLNcx/XL/20230723_154844-604-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-shVs3RQ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "The Long Sky",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-shVs3RQ/2/NZGHTfNJjKb45hcsmhdPwRw27PhJgC24whKMdLNcx/XL/20230723_154844-604-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:44:01.001Z"
+    },
+    "s-PPp6Z2p": {
+      "primaryImageId": "i-MmtQ2p8",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Day Opens Up",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/KrxXKk2ZC7b5x2sprmMzWjcV6vc2xXscmzTfXmpKj/XL/20230708_122828-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-MmtQ2p8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "The Day Opens Up",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-MmtQ2p8/0/KrxXKk2ZC7b5x2sprmMzWjcV6vc2xXscmzTfXmpKj/XL/20230708_122828-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:45:00.737Z"
+    },
+    "s-WBKLCWz": {
+      "primaryImageId": "i-fnq8Gdv",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "An Honest Way Through",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/M8jjDgWhGX9fH6T7X3xwhF4SX2fhh2QhBGzfZHN8r/XL/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-fnq8Gdv",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "An Honest Way Through",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/M8jjDgWhGX9fH6T7X3xwhF4SX2fhh2QhBGzfZHN8r/XL/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-XL.jpg"
+        },
+        {
+          "imageId": "i-fnq8Gdv",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+          "title": "An Honest Way Through",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/M8jjDgWhGX9fH6T7X3xwhF4SX2fhh2QhBGzfZHN8r/XL/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-XL.jpg"
+        },
+        {
+          "imageId": "i-fnq8Gdv",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs",
+          "title": "An Honest Way Through",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-fnq8Gdv/0/M8jjDgWhGX9fH6T7X3xwhF4SX2fhh2QhBGzfZHN8r/XL/Painterly-Photography_WHZ7556-Pano-Edit-Edit-550-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:45:54.780Z"
+    },
+    "s-y68Bx9K": {
+      "primaryImageId": "i-wmGnV8N",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "North Range",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/MQT7z8Zrtt8wM5hHFkS9LjDzghxgk7hS5SLbj4TBW/XL/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-wmGnV8N",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "North Range",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-wmGnV8N/1/MQT7z8Zrtt8wM5hHFkS9LjDzghxgk7hS5SLbj4TBW/XL/Painterly%20Landscape%20Photo_DSF4177-Pano-Edit-479-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:47:46.899Z"
+    },
+    "s-W2Nm7p2": {
+      "primaryImageId": "i-Xhgr9rF",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Held by the Cut",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/M8CcDbSTnDg8cZX8RtRB8PXkpTx76bBX56PZphJFb/XL/_DSF5012-591-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Xhgr9rF",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Held by the Cut",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-Xhgr9rF/0/M8CcDbSTnDg8cZX8RtRB8PXkpTx76bBX56PZphJFb/XL/_DSF5012-591-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:48:43.392Z"
+    },
+    "s-55Vbdyc": {
+      "primaryImageId": "i-3bKfhW8",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Carved Wide",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-3bKfhW8/0/MWpZN6c7DxvhqZVwHnWCkKLfhmwNVMjQCGbg6rBGQ/XL/_O1H0436-Pano-Enhanced-NR-593-594-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-3bKfhW8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Carved Wide",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-3bKfhW8/0/MWpZN6c7DxvhqZVwHnWCkKLfhmwNVMjQCGbg6rBGQ/XL/_O1H0436-Pano-Enhanced-NR-593-594-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:49:40.350Z"
+    },
+    "s-vM74zkF": {
+      "primaryImageId": "i-73H3wLV",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Red Ground, Last Light",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/LSBBT7znW6NCqjWCz64mGfbW8gDhfqRdxnTD5bBbf/XL/_O1H0460-Enhanced-NR_tonemapped-475-476-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-73H3wLV",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Red Ground, Last Light",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/0/LSBBT7znW6NCqjWCz64mGfbW8gDhfqRdxnTD5bBbf/XL/_O1H0460-Enhanced-NR_tonemapped-475-476-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:51:07.510Z"
+    },
+    "s-4WxJN8U": {
+      "primaryImageId": "i-zk7zXP3",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Last Warmth in the Grass",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-zk7zXP3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "The Last Warmth in the Grass",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg"
+        },
+        {
+          "imageId": "i-zk7zXP3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+          "title": "The Last Warmth in the Grass",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg"
+        },
+        {
+          "imageId": "i-zk7zXP3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "The Last Warmth in the Grass",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg"
+        },
+        {
+          "imageId": "i-zk7zXP3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs",
+          "title": "The Last Warmth in the Grass",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NNC8cCXjBz8tQ44QDCjP6FFT3HmLnBkW7vnGgmXXG/XL/Painterly-Photography_WHZ9456_tonemapped-Edit-535-XL.jpg"
+        }
+      ],
+      "linkedCount": 4,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:52:16.948Z"
+    },
+    "s-CeJQfMg": {
+      "primaryImageId": "i-b2hZptn",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Held by the Weather",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LR5FkRCZJnQWPWZMKRMDrwGHsg5vHZ6CF8pvHjHxH/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-b2hZptn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Held by the Weather",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LR5FkRCZJnQWPWZMKRMDrwGHsg5vHZ6CF8pvHjHxH/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg"
+        },
+        {
+          "imageId": "i-b2hZptn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+          "title": "The Pause Inside the Weather",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LR5FkRCZJnQWPWZMKRMDrwGHsg5vHZ6CF8pvHjHxH/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg"
+        },
+        {
+          "imageId": "i-b2hZptn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs",
+          "title": "The Pause Inside the Weather",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-b2hZptn/1/LR5FkRCZJnQWPWZMKRMDrwGHsg5vHZ6CF8pvHjHxH/XL/Painterly-Landscape-Photography_P1030226-523-548-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:53:30.842Z"
+    },
+    "s-TJKtmEa": {
+      "primaryImageId": "i-HCm7ssN",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Weight of Stone",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MsRHGm5GDkgqCRRGhX7jhMLpSdJLd7hP7CWLxkVBZ/XL/Painterly-Photography_WHZ7484-541-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-HCm7ssN",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "The Weight of Stone",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MsRHGm5GDkgqCRRGhX7jhMLpSdJLd7hP7CWLxkVBZ/XL/Painterly-Photography_WHZ7484-541-XL.jpg"
+        },
+        {
+          "imageId": "i-HCm7ssN",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+          "title": "The Weight of Stone",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MsRHGm5GDkgqCRRGhX7jhMLpSdJLd7hP7CWLxkVBZ/XL/Painterly-Photography_WHZ7484-541-XL.jpg"
+        },
+        {
+          "imageId": "i-HCm7ssN",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs",
+          "title": "The Weight of Stone",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-HCm7ssN/0/MsRHGm5GDkgqCRRGhX7jhMLpSdJLd7hP7CWLxkVBZ/XL/Painterly-Photography_WHZ7484-541-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:54:56.173Z"
+    },
+    "s-JARcaRD": {
+      "primaryImageId": "i-QrnZzRW",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Lunch Time",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/LCp58k4PpBdn3CL8JkFhtdHCW3dBVt4Gp8pMvhPnR/XL/_O1H0362-Edit-Edit-509-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-QrnZzRW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Lunch Time",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-QrnZzRW/0/LCp58k4PpBdn3CL8JkFhtdHCW3dBVt4Gp8pMvhPnR/XL/_O1H0362-Edit-Edit-509-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:55:44.124Z"
+    },
+    "s-LqHEFug": {
+      "primaryImageId": "i-2hZwZ6C",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Shape of Endurance",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/LJ33bM7CrcM2vPNSqjk9PSdnkwRdq94ttPGGCmP24/XL/_IMG5600-Enhanced-NR-611-612-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-2hZwZ6C",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "The Shape of Endurance",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-2hZwZ6C/0/LJ33bM7CrcM2vPNSqjk9PSdnkwRdq94ttPGGCmP24/XL/_IMG5600-Enhanced-NR-611-612-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:57:39.712Z"
+    },
+    "s-mhARdTq": {
+      "primaryImageId": "i-8JHmjF9",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Older Than the Range",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-8JHmjF9",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Older Than the Range",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg"
+        },
+        {
+          "imageId": "i-8JHmjF9",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+          "title": "Older Than the Range",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg"
+        },
+        {
+          "imageId": "i-8JHmjF9",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs",
+          "title": "Older Than the Range",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-8JHmjF9/0/NRbRvvgkQsPfs6c2dHSHj3283dZ3k8K5bWPdQF2rx/XL/Painterly-Photography_WHZ7828-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:58:43.112Z"
+    },
+    "s-DE4BNZ5": {
+      "primaryImageId": "i-ZDgVWFr",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Breakfast",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/Lv3Gsf8NJMQbC24rL7XJrwgPjqvT6mJRSQMqczc54/XL/Painterly-Photography_WHZ9816-Edit2-532-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-ZDgVWFr",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Breakfast",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/Lv3Gsf8NJMQbC24rL7XJrwgPjqvT6mJRSQMqczc54/XL/Painterly-Photography_WHZ9816-Edit2-532-XL.jpg"
+        },
+        {
+          "imageId": "i-ZDgVWFr",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+          "title": "Breakfast",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/Lv3Gsf8NJMQbC24rL7XJrwgPjqvT6mJRSQMqczc54/XL/Painterly-Photography_WHZ9816-Edit2-532-XL.jpg"
+        },
+        {
+          "imageId": "i-ZDgVWFr",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs",
+          "title": "Breakfast",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-ZDgVWFr/0/Lv3Gsf8NJMQbC24rL7XJrwgPjqvT6mJRSQMqczc54/XL/Painterly-Photography_WHZ9816-Edit2-532-XL.jpg"
+        }
+      ],
+      "linkedCount": 3,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T21:59:25.609Z"
+    },
+    "s-HcEPqmt": {
+      "primaryImageId": "i-xTQqpTT",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "On the Road Again",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/MLVm4dPgvjmSrRWrsFpzRPjXtxpQNFzp8T4f5FkDK/XL/_O1H0075-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-xTQqpTT",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "On the Road Again",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-xTQqpTT/0/MLVm4dPgvjmSrRWrsFpzRPjXtxpQNFzp8T4f5FkDK/XL/_O1H0075-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T22:00:11.847Z"
+    },
+    "s-UdXvF2W": {
+      "primaryImageId": "i-fvR6xh7",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Lake Kept Quiet",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/KJQdR9TqK29WZcngZP8cf6qCbVwZf4kLL6swbvxdf/XL/_DSF4056-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-fvR6xh7",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "The Lake Kept Quiet",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-fvR6xh7/0/KJQdR9TqK29WZcngZP8cf6qCbVwZf4kLL6swbvxdf/XL/_DSF4056-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T22:01:24.296Z"
+    },
+    "s-YVjcZsX": {
+      "primaryImageId": "i-b6dRFxv",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Towering Green",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/MdmXDVQ63ZVb9mM9NpSmw82qzfvZzmSCGHXknKPp3/XL/_O1H1277-Pano-2-Edit-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-b6dRFxv",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Towering Green",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/0/MdmXDVQ63ZVb9mM9NpSmw82qzfvZzmSCGHXknKPp3/XL/_O1H1277-Pano-2-Edit-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T22:02:09.620Z"
+    },
+    "s-dfbs9ch": {
+      "primaryImageId": "i-KKkLwvR",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Left to the Weather",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-KKkLwvR/1/KMb7PQ3P3QDGZp3fj66CHZGDhjFDJrMBNrDLBmCXG/XL/_IMG6056-Enhanced-NR-609-610-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-KKkLwvR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Left to the Weather",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-KKkLwvR/1/KMb7PQ3P3QDGZp3fj66CHZGDhjFDJrMBNrDLBmCXG/XL/_IMG6056-Enhanced-NR-609-610-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T22:03:20.884Z"
+    },
+    "s-4HCsRZq": {
+      "primaryImageId": "i-n7ZKsw5",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Built for Time",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/NNvPtFCRLdgsKqXX8dmtvjcfVpRSf44wkqNsqfD84/XL/_ANA0948-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-n7ZKsw5",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Built for Time",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-n7ZKsw5/0/NNvPtFCRLdgsKqXX8dmtvjcfVpRSf44wkqNsqfD84/XL/_ANA0948-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T22:04:31.248Z"
+    },
+    "s-XBwS8tw": {
+      "primaryImageId": "i-zncBGq4",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "After We Left",
+      "src": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/Lcwkz5rhJKcNTbQ6CRPpgG9V7SB6N7fnLf8P2BFQj/L/_IGP4461-Edit-L.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-zncBGq4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "After We Left",
+          "src": "https://photos.smugmug.com/Pictorialist-Photography/Pictorialist-Photos/i-zncBGq4/11/Lcwkz5rhJKcNTbQ6CRPpgG9V7SB6N7fnLf8P2BFQj/L/_IGP4461-Edit-L.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T22:06:17.786Z"
+    },
+    "s-SwnVyGL": {
+      "primaryImageId": "i-3g75V8v",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Miles Before the Weather",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/LV9DnwrLCvWpCt9FSSrdP67FhrHv6ZBsf3m46L89v/XL/_WHZ7172_tonemapped-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-3g75V8v",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "Miles Before the Weather",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-3g75V8v/4/LV9DnwrLCvWpCt9FSSrdP67FhrHv6ZBsf3m46L89v/XL/_WHZ7172_tonemapped-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T22:12:12.950Z"
+    },
+    "s-xeNYuVM": {
+      "primaryImageId": "i-RBTGb7k",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "What the Sun Finds",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/L4rN8Xm7FsjMxFfKJkN7wb8gcKkcjkmkDshW6HpgN/XL/_WHZ7671_tonemapped-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-RBTGb7k",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
+          "title": "What the Sun Finds",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-RBTGb7k/4/L4rN8Xm7FsjMxFfKJkN7wb8gcKkcjkmkDshW6HpgN/XL/_WHZ7671_tonemapped-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-20T22:17:38.803Z"
+    },
+    "s-pVVue5M": {
+      "primaryImageId": "i-5DbNvHj",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Between the Trees",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/LnbP8DF48CRBxS5DKvqncmxw4XD9rMbnfTBwRmbXn/XL/Painterly-Photography_WHZ9589-2-533-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-5DbNvHj",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+          "title": "Between the Trees",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/LnbP8DF48CRBxS5DKvqncmxw4XD9rMbnfTBwRmbXn/XL/Painterly-Photography_WHZ9589-2-533-XL.jpg"
+        },
+        {
+          "imageId": "i-5DbNvHj",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs",
+          "title": "Between the Trees",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-5DbNvHj/0/LnbP8DF48CRBxS5DKvqncmxw4XD9rMbnfTBwRmbXn/XL/Painterly-Photography_WHZ9589-2-533-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "createdAt": "2026-01-21T15:17:43.236Z"
+    },
+    "s-wUgHsaW": {
+      "primaryImageId": "i-pB9zzmW",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Stillness at the Edge of Light",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/MQPTJL8tkdmDHt9j3m875GBxZS6w9hQdnb8PhkCGJ/XL/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-pB9zzmW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs",
+          "title": "Stillness at the Edge of Light",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/MQPTJL8tkdmDHt9j3m875GBxZS6w9hQdnb8PhkCGJ/XL/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-XL.jpg"
+        },
+        {
+          "imageId": "i-pB9zzmW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs",
+          "title": "Stillness at the Edge of Light",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-pB9zzmW/1/MQPTJL8tkdmDHt9j3m875GBxZS6w9hQdnb8PhkCGJ/XL/Painterly-Landscape-Photography_DSF4556-Pano-Edit-519-XL.jpg"
+        }
+      ],
+      "linkedCount": 2,
+      "excludeSizes": {},
+      "createdAt": "2026-01-21T15:20:57.170Z"
+    },
+    "s-sAF9Unq": {
+      "primaryImageId": "i-Pgks2np",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "No Argument With Gravity",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/LLS8bJGNg4Jj4xmX3RwMLRjXHGcx2PMnwPnqmKvFn/XL/_DSF3048-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Pgks2np",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "No Argument With Gravity",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/LLS8bJGNg4Jj4xmX3RwMLRjXHGcx2PMnwPnqmKvFn/XL/_DSF3048-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-21T15:25:06.191Z"
+    },
+    "s-Bh2SdKr": {
+      "primaryImageId": "i-g6Trjng",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Carved Wide",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6Trjng/0/MSLn333N4RbwgqLKmC3mj82WKx8NjKkhJsHbMxXPS/XL/_O1H0436-Pano-Enhanced-NR-593-594-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-g6Trjng",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Carved Wide",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/i-g6Trjng/0/MSLn333N4RbwgqLKmC3mj82WKx8NjKkhJsHbMxXPS/XL/_O1H0436-Pano-Enhanced-NR-593-594-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-21T15:32:11.195Z"
+    },
+    "s-qes2Ldm": {
+      "primaryImageId": "i-s4m4wp5",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Cut Through Basalt",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/K4HVrW2hZVbQH6r7ZhKVw93t5NKtgNRQLjkBM8shc/XL/_OL35270-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-s4m4wp5",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Cut Through Basalt",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-s4m4wp5/7/K4HVrW2hZVbQH6r7ZhKVw93t5NKtgNRQLjkBM8shc/XL/_OL35270-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-21T15:33:09.789Z"
+    },
+    "s-e4JM8vg": {
+      "primaryImageId": "i-3tdkVSh",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Long Drop",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/KJ4Mq3b3t6tkJWSbDbvFjbfh7vZnGV7D8qvR7WzrV/XL/_DSF2963-Pano-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-3tdkVSh",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "The Long Drop",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-3tdkVSh/7/KJ4Mq3b3t6tkJWSbDbvFjbfh7vZnGV7D8qvR7WzrV/XL/_DSF2963-Pano-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-21T15:34:12.395Z"
+    },
+    "s-B3T8NRv": {
+      "primaryImageId": "i-RRFGZvS",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "A Narrow Way",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/MFQHZJDBCLmFhkMkjrVZBPJ2KsW5HWK3tcZJNwx6L/XL/_DSF2987-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-RRFGZvS",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "A Narrow Way",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-RRFGZvS/7/MFQHZJDBCLmFhkMkjrVZBPJ2KsW5HWK3tcZJNwx6L/XL/_DSF2987-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-21T15:36:33.971Z"
+    },
+    "s-CsemJ5a": {
+      "primaryImageId": "i-TgVv6SZ",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Color Set in Stone",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/NXxGndGQhNt5j4rv5rNDgSD2DJCxgtdfrPqJr8HqL/XL/_ANA2501-Enhanced-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-TgVv6SZ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Color Set in Stone",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-TgVv6SZ/2/NXxGndGQhNt5j4rv5rNDgSD2DJCxgtdfrPqJr8HqL/XL/_ANA2501-Enhanced-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-21T15:37:32.302Z"
+    },
+    "s-yh5c4yf": {
+      "primaryImageId": "i-JdTbNvz",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Held at Dusk",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/Ktf4CTT4mLZH727Wp4Lp4HJg2jRZhXmpkVSGQm6DL/XL/_ANA2548-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-JdTbNvz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs",
+          "title": "Held at Dusk",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-JdTbNvz/7/Ktf4CTT4mLZH727Wp4Lp4HJg2jRZhXmpkVSGQm6DL/XL/_ANA2548-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-21T15:38:57.599Z"
     }
   }
 }

@@ -11,6 +11,12 @@
 
 const imageIdMap = require('./imageIdMap.json');
 
+// Build case-insensitive lookup map
+const imageIdMapLower = {};
+for (const [key, value] of Object.entries(imageIdMap)) {
+  imageIdMapLower[key.toLowerCase()] = { path: value, originalId: key };
+}
+
 exports.handler = async (event) => {
   // Get path from query string (passed by _redirects) or from event.path
   const queryPath = event.queryStringParameters?.path || '';
@@ -47,12 +53,14 @@ exports.handler = async (event) => {
   
   console.log(`[smart-404] Looking up image ID: ${imageId}`);
   
-  // Look up the image in our map
-  const correctGalleryPath = imageIdMap[imageId];
+  // Look up the image in our map (case-insensitive)
+  const lookup = imageIdMapLower[imageId.toLowerCase()];
+  const correctGalleryPath = lookup?.path;
+  const canonicalImageId = lookup?.originalId || imageId;
   
   if (correctGalleryPath) {
-    // Found the image in a different gallery - redirect there
-    const redirectUrl = `${correctGalleryPath}/${imageId}`;
+    // Found the image - redirect with canonical case
+    const redirectUrl = `${correctGalleryPath}/${canonicalImageId}`;
     console.log(`[smart-404] Found! Redirecting to: ${redirectUrl}`);
     
     return {

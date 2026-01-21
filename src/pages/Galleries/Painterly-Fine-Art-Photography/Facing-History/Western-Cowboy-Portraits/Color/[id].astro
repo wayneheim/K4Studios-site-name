@@ -44,7 +44,8 @@ const parentMeta = getLandingMeta(
   imgUrl
 );
 
-const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], parentMeta);
+const canonicalUrl = `https://www.k4studios.com${Astro.url.pathname.replace(/\/$/, '')}`;
+const meta = getImageMeta(id, [{ images: galleryData, meta: parentMeta }], parentMeta, canonicalUrl);
 ---
 
 <GalleryShell 

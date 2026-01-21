@@ -1,14 +1,57 @@
+# Block access to source files (should never be crawled)
+/src/*  404!
+
+# Block Glossary page with query strings (SmugMug API leakage)
+/Glossary?*  404!
+
+# Block lightbox URLs (internal UI state, not canonical)
+/Galleries/lightbox  404!
+/Galleries/lightbox?*  404!
+
+# Block keyword pages (not proper content pages)
+/keyword/*  404!
+
+# =============================================================================
+# LEGACY SMUGMUG PATHS - Return 410 GONE (content permanently removed from this site)
+# These URLs were indexed from old SmugMug site but content now lives on SmugMug only.
+# Returning 410 tells Google to remove them from index rather than treating as duplicates.
+# =============================================================================
+
+# Legacy Photo-Shoots paths (old SmugMug structure)
+/Other/Photo-Shoots-and-Themes/*/i-*  410!
+/Other/Photo-Shoots-and-Themes/*  410!
+/Other/Photo-Shoots/*/i-*  410!
+/Other/Photo-Shoots/*  410!
+
+# Legacy Photography-Galleries paths (old SmugMug structure)
+/Photography-Galleries/*/i-*  410!
+/Photography-Galleries/*  410!
+
+# Legacy Pictorialist paths
+/Pictorialist-Photography/*/i-*  410!
+/Pictorialist-Photography/*  410!
+
+# Legacy gallery paths that no longer exist (merged or removed)
+/Galleries/Fine-Art-Photography/Miscellaneous/Kids/*  410!
+/Galleries/Fine-Art-Photography/Miscellaneous/Kids  410!
+/Galleries/Traditional-Photos/*  410!
+
+# Legacy test/renamed gallery paths
+/Galleries/zPainterly-Western-Cowboy-Portraits/*  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/:splat  301
+
 # Smart 404 for image pages - only triggers on actual 404s
 # If image page doesn't exist, call smart-404 function to find/redirect
 # Note: Netlify splat (*) captures everything, :id captures the image ID segment
 /Galleries/*/i-:id  /.netlify/functions/smart-404?path=/Galleries/:splat/i-:id&id=i-:id  404
+
+# i-TTLmLd3 was removed from West Gallery - redirect to gallery landing page
+/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-TTLmLd3  /Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery  301
 
 */Color-back2/Color%201src/*   /Color/:splat   301!
 /Color-back2/Color%20fixed/*   /Color/:splat   301!
 /Color-back2/Color fixed/*   /Color/:splat   301!
 /Color-back2/*   /Color/:splat   301!
 /Other/Print-Options  /Other/Series  301
-/Other/Photo-Shoots-and-Themes  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301
 
 # Redirect gallery folders missing /Gallery suffix
 /Galleries/Fine-Art-Photography/Landscapes/By-Location/West  /Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery  301
@@ -20,26 +63,24 @@
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII  /Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War  301
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII/Black-White  /Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White  301
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color  301
-/Galleries/Painterly-Fine-Art-Photography/Pictorialist  /Pictorialist-Photography  301
 
-## */Portraits%20copy/*   /Portraits/:splat   301!
-## */Portraits copy/*   /Portraits/:splat   301!
-# Legacy SmugMug path - redirect to archive on SmugMug
-*/Photoshootsandevents/*   https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat   301!
+*/Photoshootsandevents/*   410!
 /data/system/*  404!
-
-# Block source code paths from being crawled
-/src/*  404!
 
 # Legacy SmugMug frame/slideshow URLs
 /frame/*  /  301
 
-# Legacy Photography-Galleries path structure (old SmugMug)
-/Photography-Galleries/Traditional-Photos/Miscellaneous-Fine-Art-Photography/*  /Galleries/Fine-Art-Photography/Miscellaneous/Gallery  301
-/Photography-Galleries/*  /Galleries  301
+# Malformed /Gallery/i-xxx paths (should be just /i-xxx) - route to smart-404
+/Galleries/*/Gallery/i-:id  /.netlify/functions/smart-404?path=/Galleries/:splat/Gallery/i-:id&id=i-:id  404
 
-# Legacy Landscapes-Gallery path
+# Legacy Landscapes-Gallery path with image IDs - route to smart-404
+/Galleries/Landscapes-Gallery/*/i-:id  /.netlify/functions/smart-404?path=/Galleries/Landscapes-Gallery/:splat/i-:id&id=i-:id  404
+
+# Legacy Landscapes-Gallery path (no image ID)
 /Galleries/Landscapes-Gallery/*  /Galleries/Fine-Art-Photography/Landscapes  301
+
+# Lowercase galleries path with image IDs - route to smart-404
+/galleries/*/i-:id  /.netlify/functions/smart-404?path=/galleries/:splat/i-:id&id=i-:id  404
 
 # Lowercase galleries path (case mismatch)
 /galleries  /Galleries  301

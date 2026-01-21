@@ -130,7 +130,7 @@ export const galleryData = [
       "animals",
       "portrait"
     ],
-    "story": "Sydney --rescue Greyhound poses. ©Wayne Heim",
+    "story": "In \"Greyhound Photography by Wayne Heim,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence. C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Pets.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -354,7 +354,7 @@ export const galleryData = [
       "animals",
       "portrait"
     ],
-    "story": "Twins  - a boy holds his two gerbils. ©Wayne Heim",
+    "story": "Twins -- Black & White Photography By Wayne Heim. Wayne Heim's approach to fine art photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the C:\Users\Wayne\Documents\GitHub\K4 Studios\src\data\Galleries\Fine Art Photography\Miscellaneous\Pets series.",
     "notes": "",
     "rating": 0,
     "galleries": [],
