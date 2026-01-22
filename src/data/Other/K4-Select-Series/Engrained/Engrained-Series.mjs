@@ -313,7 +313,7 @@ export const galleryData = [
   "wayne heim"
  ],
 
- "story": "He gazes into the distance, burdened by what she left behind—and what she carried away. As the light fades into night, the weight of old choices rises and surface.\n\nShe’s gone now. That much is certain. Stubborn zeal. Time misspent. The cruel clarity that only hindsight brings.\n\nWhat lies ahead asks for something he isn’t sure remains.\nPath and purpose blur in reflection, leaving those left behind the solemn task of wondering why.",
+ "story": "He gazes into the distance, burdened by what she left behind—and what she carried away. As the light fades into night, the weight of old choices rises to surface.\n\nShe’s gone now. That much is certain. Stubborn zeal. Time misspent. The cruel clarity that only hindsight brings.\n\nWhat lies ahead asks for something he isn’t sure remains.\nPath and purpose blur in reflection, leaving those left behind the solemn task of wondering why.",
  "notes": "This portrait relies on restraint rather than gesture. Soft, directional light models the face with subtlety, allowing texture and expression to emerge gradually rather than announce themselves. The tight framing removes narrative context, placing the entire emotional burden on gaze and stillness.\n\nWithin the Western canon, the work resists heroism in favor of introspection. Strength is suggested through endurance, not action—positioning the figure as someone shaped by consequence rather than conquest.",
  "rating": 5,
 
@@ -366,7 +366,7 @@ export const galleryData = [
   "western decor",
   "tense moment"
  ],
- "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming. \n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgement time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!",
+ "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming. \n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgment time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!",
  "notes": "The off-frame tension is pure storytelling—anchored by the rifle’s diagonal and resolved by the window frame’s vertical pull. The light carves across rough wool and weathered timber like a chiaroscuro etching, revealing the figure not as staged drama, but as lived consequence.\n\nThis is painterly photography with muscle: sculpted tonality, smart restraint, and tight composition that favors shape and story over spectacle. The bucket in the foreground subtly expands scale and texture while avoiding visual clutter. In a tradition that nods to Remington’s interiors and Wyeth’s emotional stillness, this image holds the moment between breath and action. A study in edge, mood, and memory—crafted, not captured.",
  "rating": 0,
 

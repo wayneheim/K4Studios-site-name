@@ -19,7 +19,7 @@ export const storySliderData = [
   {
     "id": "i-44jcjTQ",
     "title": "Over My Dead Body: Frontier Stand-off",
-    "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming. \n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgement time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!"
+    "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming. \n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgment time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!"
   },
   {
     "id": "i-B7ZSdfs",
@@ -89,7 +89,7 @@ export const storySliderData = [
   {
     "id": "i-HBRmWg4",
     "title": "Cough and Covenant",
-    "story": "He lies on the floor, lungs burning — a cough like gravel, the taste of blood. The rough tenderness of survival, where hopes and promises are measured in sips, not sermons.\n\nFever is not the only thing that spreads. Silence weighs heavier than the acrid scent of smoke and despair. Conviction does not waver, nor does it question. As light halos his courage and conviction, the details of fate and finality lurk in the shadows and silence."
+    "story": "He lies on the floor, lungs burning — a cough like gravel, the taste of blood. The rough tenderness of survival, where hopes and promises are measured in sips, not sermons.\n\nFever is not the only thing that spreads. Silence weighs heavier than the acrid scent of smoke and despair. Conviction does not waiver, nor does it question. As light halos his courage and conviction, the details of fate and finality lurk in the shadows and silence."
   },
   {
     "id": "i-3SxncXS",

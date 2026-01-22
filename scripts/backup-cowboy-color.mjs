@@ -131,7 +131,7 @@ The composition anchors the viewer in the closeness of the couple—their faces 
 Martha, forgive me. I’m about to do what needed doing. Those boys have it coming. 
 
 The old bones creak different when death’s on the wind.
-Sun’s almost up. Judgement time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.
+Sun’s almost up. Judgment time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.
 
 I don’t know where this takes me, but I know this: some of you are coming with me!`,
     notes: String.raw`The off-frame tension is pure storytelling—anchored by the rifle’s diagonal and resolved by the window frame’s vertical pull. The light carves across rough wool and weathered timber like a chiaroscuro etching, revealing the figure not as staged drama, but as lived consequence.

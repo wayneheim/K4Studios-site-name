@@ -25,8 +25,10 @@ export default function ImageDetailsWidget({
   galleryTitle,
   sisterLink,
   exitPath,
-  imageId // unique ID for this image, used for DOM node targeting
+  imageId, // unique ID for this image, used for DOM node targeting
+  useDetailsElement = false // Tier 1 SEO: use native <details> instead of CSS truncation
 }) {
+  // story = short visible text, description = full content for <details>
   if (!image?.description) return null;
 
   // Structured data scoped to this specific artwork
@@ -120,9 +122,9 @@ export default function ImageDetailsWidget({
             font-family: 'Glegoo', serif;
           }
           
-          /* Drawer peek - shows first ~3 lines, expandable */
+          /* Drawer peek - shows first ~5 lines, expandable */
           .widget-description {
-            max-height: 4.8em; /* ~3 lines */
+            max-height: 8em; /* ~5 lines */
             overflow: hidden;
             position: relative;
             transition: max-height 0.4s ease;
@@ -174,7 +176,7 @@ export default function ImageDetailsWidget({
             font-size: 0.875rem;
             font-style: italic;
             color: #6b6b6a;
-            max-height: 2.4em; /* ~2 lines peek */
+            max-height: 6.4em; /* ~4 lines peek */
             overflow: hidden;
             transition: max-height 0.4s ease;
             margin: 0;
@@ -264,6 +266,84 @@ export default function ImageDetailsWidget({
               font-size: 0.9rem;
             }
           }
+          
+          /* ===== TIER 1 MODE: Native <details> for SEO ===== */
+          /* Google treats <details> as Tier 1 indexable content */
+          /* Matches gallery landing page "More about this gallery" pattern */
+          
+          .widget-story {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0 0 0.75rem;
+            font-style: italic;
+            color: #5a5a5a;
+          }
+          
+          .widget-details-more {
+            margin: 0;
+          }
+          
+          .widget-details-more summary {
+            display: block;
+            list-style: none;
+            cursor: pointer;
+            font-size: 0.85rem;
+            color: #7a6a58;
+            font-family: 'Glegoo', serif;
+            transition: color 0.2s ease;
+            padding: 0.5rem 0;
+          }
+          
+          .widget-details-more summary::-webkit-details-marker {
+            display: none;
+          }
+          
+          .widget-details-more summary .arrow-icon {
+            display: inline-block;
+            font-size: 0.7em;
+            margin-right: 0.4em;
+            transition: transform 0.3s ease;
+          }
+          
+          .widget-details-more[open] summary .arrow-icon {
+            transform: rotate(180deg);
+          }
+          
+          .widget-details-more summary:hover {
+            color: #7b1e1e;
+          }
+          
+          .widget-details-more .details-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            padding-top: 0.5rem;
+            border-top: 1px dashed rgba(200, 190, 180, 0.4);
+          }
+          
+          .widget-details-more .details-content p {
+            margin: 0 0 1rem;
+          }
+          
+          .widget-notes-inside {
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+            border-top: 1px dashed rgba(200, 190, 180, 0.4);
+          }
+          
+          .widget-notes-inside .notes-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #928176;
+            margin: 0 0 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+          }
+          
+          .widget-notes-inside p:last-child {
+            font-style: italic;
+            color: #6b6b6a;
+            margin: 0;
+          }
         `}</style>
 
         {/* H1 - the page heading, visible and semantic */}
@@ -271,56 +351,96 @@ export default function ImageDetailsWidget({
           {image.title || image.alt}
         </h1>
 
-        {/* Description - first few lines visible, rest revealed on expand */}
-        <p 
-          className="widget-description" 
-          itemProp="description"
-        >
-          {image.description}
-        </p>
+        {/* === TIER 1 MODE: Native <details> for SEO === */}
+        {useDetailsElement ? (
+          <>
+            {/* Story - short visible text (like gallery landing) */}
+            {image.story && (
+              <p className="widget-story">
+                {image.story}
+              </p>
+            )}
 
-        {/* Collector notes if present - canonical DOM location */}
-        {/* This container can be "borrowed" by the Notes popup via DOM move */}
-        {image.notes && (
-          <div 
-            id={`canonical-notes-${imageId || 'default'}`}
-            className="widget-notes-container"
-            data-notes-canonical="true"
-          >
-            <p className="widget-notes" itemProp="about">
-              {image.notes}
+            {/* "More about this image" - matches gallery landing pattern */}
+            <details className="widget-details-more">
+              <summary>
+                <span className="arrow-icon">▼</span> More about this image
+              </summary>
+              <div className="details-content">
+                <p itemProp="description">
+                  {image.description}
+                </p>
+                {/* Collector notes inside details */}
+                {image.notes && (
+                  <div 
+                    id={`canonical-notes-${imageId || 'default'}`}
+                    className="widget-notes-inside"
+                    data-notes-canonical="true"
+                  >
+                    <p className="notes-label">Collector Notes:</p>
+                    <p itemProp="about">
+                      {image.notes}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </details>
+          </>
+        ) : (
+          <>
+            {/* === TIER 2 MODE: CSS truncation (legacy) === */}
+            {/* Description - first few lines visible, rest revealed on expand */}
+            <p 
+              className="widget-description" 
+              itemProp="description"
+            >
+              {image.description}
             </p>
-          </div>
-        )}
 
-        {/* Minimal expand trigger */}
-        <button 
-          type="button"
-          className="widget-expand-trigger"
-          onClick={(e) => {
-            e.currentTarget.closest('.image-details-widget').classList.toggle('expanded');
-          }}
-          aria-label="Show more details"
-        >
-          more
-        </button>
-
-        {/* Navigation - exit and related */}
-        {(exitPath || sisterLink) && (
-          <nav className="widget-nav">
-            {exitPath ? (
-              <a href={exitPath}>← Return to gallery</a>
-            ) : (
-              <span></span>
+            {/* Collector notes if present - canonical DOM location */}
+            {/* This container can be "borrowed" by the Notes popup via DOM move */}
+            {image.notes && (
+              <div 
+                id={`canonical-notes-${imageId || 'default'}`}
+                className="widget-notes-container"
+                data-notes-canonical="true"
+              >
+                <p className="widget-notes" itemProp="about">
+                  {image.notes}
+                </p>
+              </div>
             )}
-            {sisterLink && (
-              <a href={sisterLink}>Discover related →</a>
-            )}
-          </nav>
-        )}
 
-        {/* Bottom rule - visual anchor to page */}
-        <div className="widget-bottom-rule" aria-hidden="true" />
+            {/* Minimal expand trigger */}
+            <button 
+              type="button"
+              className="widget-expand-trigger"
+              onClick={(e) => {
+                e.currentTarget.closest('.image-details-widget').classList.toggle('expanded');
+              }}
+              aria-label="Show more details"
+            >
+              more
+            </button>
+
+            {/* Navigation - exit and related (legacy mode only) */}
+            {(exitPath || sisterLink) && (
+              <nav className="widget-nav">
+                {exitPath ? (
+                  <a href={exitPath}>← Return to gallery</a>
+                ) : (
+                  <span></span>
+                )}
+                {sisterLink && (
+                  <a href={sisterLink}>Discover related →</a>
+                )}
+              </nav>
+            )}
+
+            {/* Bottom rule - visual anchor to page */}
+            <div className="widget-bottom-rule" aria-hidden="true" />
+          </>
+        )}
 
         {/* Hidden semantic data for crawlers */}
         <meta itemProp="name" content={image.title || image.alt} />

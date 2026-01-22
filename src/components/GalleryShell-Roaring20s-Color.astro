@@ -209,8 +209,6 @@ if (!sisterLink && isImagePage) {
       </div>
     </div>
   )}
-
-  {/* H1 is now in ImageDetailsWidget - no duplicate needed here */}
   
   {/* Image pages: main content */}
   {skipIntro && (
@@ -246,23 +244,7 @@ if (!sisterLink && isImagePage) {
     </section>
   ) */}
 
-  {/* ========== NEW ImageDetailsWidget (testing) ========== */}
-  {skipIntro && currentImage && (
-    <ImageDetailsWidget 
-      client:load
-      image={{
-        title: fixMojibake(currentImage.title || currentImage.alt),
-        description: fixMojibake(currentImage.description),
-        notes: currentImage.notes ? fixMojibake(currentImage.notes) : null,
-        src: currentImage.src,
-        alt: currentImage.alt
-      }}
-      imageId={currentImage.id}
-      galleryTitle={fixMojibake(usedEntranceData.title)}
-      sisterLink={sisterLink}
-      exitPath={previewPath}
-    />
-  )}
+  {/* ImageDetailsWidget removed - "More about this image" now lives in ChapterGalleryBase */}
 
   <Footer
     previewImages={previewImages}
@@ -278,6 +260,25 @@ if (!sisterLink && isImagePage) {
   />
 
   <style>
+    /* SSR H1 for image pages - visible, styled to match the chapter title area */
+    .chapter-title-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      text-align: center;
+      color: #7b1e1e;
+      margin: 0.75rem auto 0.5rem;
+      padding: 0 1rem;
+      max-width: 600px;
+      line-height: 1.4;
+    }
+    @media (min-width: 768px) {
+      .chapter-title-h1 {
+        font-size: 1.25rem;
+        margin: 1rem auto 0.75rem;
+      }
+    }
+
     /* SSR SEO Description Section - compact, visible for full Google weight */
     .seo-image-details {
       display: flex;

@@ -228,7 +228,7 @@ export const storyData = [
  "western decor",
  "tense moment"
  ],
- "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming.\n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgement time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!",
+ "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming.\n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgment time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!",
  "notes": "The off-frame tension is pure storytelling—anchored by the rifle’s diagonal and resolved by the window frame’s vertical pull. The light carves across rough wool and weathered timber like a chiaroscuro etching, revealing the figure not as staged drama, but as lived consequence.\n\nThis is painterly photography with muscle: sculpted tonality, smart restraint, and tight composition that favors shape and story over spectacle. The bucket in the foreground subtly expands scale and texture while avoiding visual clutter. In a tradition that nods to Remington’s interiors and Wyeth’s emotional stillness, this image holds the moment between breath and action. A study in edge, mood, and memory—crafted, not captured.",
  "rating": 5,
  "galleries": [

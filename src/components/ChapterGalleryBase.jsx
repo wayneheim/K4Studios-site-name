@@ -1147,6 +1147,9 @@ export default function ChapterGalleryBase({
                               onClick={(e) => {
                                 e.stopPropagation();
                                 setShowNotes((p) => !p);
+                                // Close "More about this image" when opening notes
+                                const moreDetails = document.querySelector('.more-about-image');
+                                if (moreDetails) moreDetails.removeAttribute('open');
                                 setEventCounts((counts) => ({ ...counts, notes: (counts.notes || 0) + 1 }));
                                 sessionStorage.setItem("collectorHintShown", "1");
                                 setShowCollectorHint(false);
@@ -1253,7 +1256,7 @@ export default function ChapterGalleryBase({
                                 zIndex: 100000,
                                 top: '46px',
                                 right: '-390px',
-                                backgroundColor: '#cdd1c5ff',
+                                backgroundColor: '#f7f5f1',
                                 border: '1px solid rgba(151, 153, 156, 1)',
                                 minWidth: '260px',
                                 maxWidth: '90vw',
@@ -1262,12 +1265,6 @@ export default function ChapterGalleryBase({
                                 transition: 'opacity 0.2s ease'
                               }}
                             >
-                              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
-                                <strong style={{ color: '#fff', textShadow: '0 1px 2px #444', fontWeight: 'bold', marginRight: '0.75em', fontSize: '1em' }}>
-                                  Collector Notes:
-                                </strong>
-                                <span style={{ flex: 1, marginTop: '4px', height: '2px', marginLeft: '0.5em', borderRadius: '2px', background: 'linear-gradient(to right, #fff 65%, rgba(255,255,255,0))', filter: 'drop-shadow(0 1px 2px #444)' }} />
-                              </div>
                               {/* Container for borrowed notes content from widget */}
                               <div id="notes-popup-container" className="notes-popup-content" />
                             </div>
@@ -1311,6 +1308,9 @@ export default function ChapterGalleryBase({
                           onClick={(e) => {
                             e.stopPropagation();
                             setShowNotes((p) => !p);
+                            // Close "More about this image" when opening notes
+                            const moreDetails = document.querySelector('.more-about-image');
+                            if (moreDetails) moreDetails.removeAttribute('open');
                             sessionStorage.setItem("collectorHintShown", "1");
                             setShowCollectorHint(false);
                             logUIEvent("collector_notes_toggle", {
@@ -1649,8 +1649,8 @@ export default function ChapterGalleryBase({
                             }}
                             aria-label="Play K4 Slideshow"
                             title="Play K4 Story Show"
-                            className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
-                            style={{ letterSpacing: ".02em" }}
+                            className="group my-3 inline-flex items-center gap-2 rounded-full px-3 py-1 border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
+                            style={{ letterSpacing: ".02em", backgroundColor: 'rgba(240, 238, 233, 0.85)' }}
                             data-slideshow-btn
                           >
                             <span className="inline-flex items-center justify-center w-4 h-4 text-gray-400 group-hover:text-red-700 transition-colors">
@@ -1670,7 +1670,7 @@ export default function ChapterGalleryBase({
       <div
         className="w-full mx-auto mt-2 mb-[6px] border border-gray-300 rounded shadow p-4 text-sm text-gray-800 text-left"
         style={{ 
-          backgroundColor: "#cfd1c8ff", 
+          backgroundColor: "#f7f5f1", 
           border: "1px solid rgb(109, 111, 114)", 
           maxWidth: "98vw", 
           boxSizing: "border-box", 
@@ -1678,12 +1678,6 @@ export default function ChapterGalleryBase({
           display: showNotes ? 'block' : 'none'
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
-          <strong style={{ color: "#fff", textShadow: "0 1px 2px #444", fontWeight: "bold", marginRight: "0.75em", fontSize: "1em" }}>
-            Collector Notes:
-          </strong>
-          <span style={{ flex: 1, marginTop: "4px", height: "2px", marginLeft: "0.5em", borderRadius: "2px", background: "linear-gradient(to right, #fff 65%, rgba(255,255,255,0))", filter: "drop-shadow(0 1px 2px #444)" }} />
-        </div>
         {/* Container for borrowed notes content from widget */}
         <div id="notes-popup-container" className="notes-popup-content" />
         {/* Close button in lower right corner */}
@@ -1762,6 +1756,144 @@ export default function ChapterGalleryBase({
                     <p className="italic text-base mt-3 md:text-lg mb-4 leading-snug text-left">
                       {galleryData[currentIndex]?.story}
                     </p>
+
+                    {/* More about this image - Tier 1 SEO pattern */}
+                    {(galleryData[currentIndex]?.description || galleryData[currentIndex]?.notes) && (
+                      <>
+                      <style>{`
+                        .more-about-image summary::-webkit-details-marker { display: none; }
+                        .more-about-image .plus-minus-icon::before { content: '+'; font-size: 1.1rem; font-weight: bold; }
+                        .more-about-image[open] .plus-minus-icon::before { content: '−'; }
+                        /* Reset styles when notes are moved to popup */
+                        .notes-popup-content .notes-section {
+                          margin-top: 0 !important;
+                          padding-top: 0 !important;
+                          border-top: none !important;
+                        }
+                        /* More breathing room on mobile */
+                        @media (max-width: 767px) {
+                          .more-about-image {
+                            margin-top: 2.5rem !important;
+                          }
+                        }
+                      `}</style>
+                      <details className="more-about-image" style={{ margin: 0 }}>
+                        <summary style={{
+                          display: 'block',
+                          listStyle: 'none',
+                          cursor: 'pointer',
+                          fontSize: '0.85rem',
+                          color: '#7a6a58',
+                          fontFamily: "'Glegoo', serif",
+                          padding: '0.5rem 0',
+                          textAlign: 'center'
+                        }}>
+                          <span className="plus-minus-icon" style={{ 
+                            display: 'inline-block', 
+                            fontSize: '0.9em', 
+                            marginRight: '0.4em',
+                            fontWeight: 'bold'
+                          }}></span> More about this image
+                        </summary>
+                        <div className="details-content" style={{
+                          fontSize: '0.9rem',
+                          lineHeight: '1.7',
+                          paddingTop: '0.5rem',
+                          borderTop: '1px dashed rgba(200, 190, 180, 0.4)',
+                          textAlign: 'left'
+                        }}>
+                          {/* H1 for SEO - the image title */}
+                          <h1 style={{
+                            fontSize: '0.85rem',
+                            fontWeight: '500',
+                            letterSpacing: '0.04em',
+                            color: '#7a6a58',
+                            textAlign: 'left',
+                            margin: '0 0 0.75rem',
+                            fontFamily: "'Glegoo', serif"
+                          }} itemProp="name">
+                            {galleryData[currentIndex]?.title || galleryData[currentIndex]?.alt}
+                          </h1>
+                          {galleryData[currentIndex]?.description && (
+                            <p itemProp="description" style={{ margin: '0 0 1rem' }}>
+                              {galleryData[currentIndex].description}
+                            </p>
+                          )}
+                          {galleryData[currentIndex]?.notes && (
+                            <div 
+                              id={`canonical-notes-${galleryData[currentIndex]?.id || 'default'}`}
+                              className="notes-section"
+                              data-notes-canonical="true"
+                              style={{
+                                marginTop: '1rem',
+                                paddingTop: '0.75rem',
+                                borderTop: '1px dashed rgba(200, 190, 180, 0.4)'
+                              }}
+                            >
+                              <p className="notes-label" style={{
+                                fontSize: '0.85rem',
+                                fontWeight: '500',
+                                color: '#928176',
+                                margin: '0 0 0.5rem',
+                                letterSpacing: '0.04em'
+                              }}>Collector Notes:</p>
+                              <p itemProp="about" style={{
+                                fontStyle: 'italic',
+                                color: '#9a9a99',
+                                margin: 0,
+                                mixBlendMode: 'multiply'
+                              }}>
+                                {galleryData[currentIndex].notes}
+                              </p>
+                            </div>
+                          )}
+                          
+                          {/* Discover related - uses sitemapMatches for cross-gallery linking */}
+                          {(() => {
+                            const currentId = galleryData[currentIndex]?.id;
+                            if (!currentId) return null;
+                            
+                            // Find in sitemapMatches chain
+                            const match = sitemapMatches.find(m => m.a.includes(currentId));
+                            let relatedUrl = match?.b || null;
+                            
+                            // Fallback: link to Color <-> Black-White sister gallery
+                            if (!relatedUrl && basePath) {
+                              const fullPath = `${basePath}/${currentId}`;
+                              if (basePath.includes('/Color')) {
+                                relatedUrl = fullPath.replace('/Color', '/Black-White');
+                              } else if (basePath.includes('/Black-White')) {
+                                relatedUrl = fullPath.replace('/Black-White', '/Color');
+                              }
+                            }
+                            
+                            if (!relatedUrl) return null;
+                            
+                            // Convert full URL to path if needed
+                            const href = relatedUrl.startsWith('http') 
+                              ? new URL(relatedUrl).pathname 
+                              : relatedUrl;
+                            
+                            return (
+                              <a 
+                                href={href}
+                                style={{
+                                  display: 'block',
+                                  marginTop: '1rem',
+                                  fontSize: '0.75rem',
+                                  color: '#7b1e1e',
+                                  textDecoration: 'none',
+                                  textAlign: 'right'
+                                }}
+                              >
+                                Explore More Photos →
+                              </a>
+                            );
+                          })()}
+                        </div>
+                      </details>
+                      </>
+                    )}
 
                     {/* Bottom Separator */}
                     <div className="flex justify-center my-3">
