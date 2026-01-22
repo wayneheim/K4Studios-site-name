@@ -573,6 +573,73 @@ export default function ChapterGalleryBase({
   const prevIndex = useRef(currentIndex);
   const notesBtnRef = useRef(null);
 
+  // Effect to borrow notes content from widget to popup (one-way move)
+  // SEO only cares about initial SSR state - after that, DOM can change freely
+  useEffect(() => {
+    if (!showNotes) return;
+    
+    const imageId = galleryData[currentIndex]?.id;
+    const canonicalNotes = document.getElementById(`canonical-notes-${imageId}`);
+    const popupContainer = document.getElementById('notes-popup-container');
+    
+    if (canonicalNotes && popupContainer && !popupContainer.contains(canonicalNotes)) {
+      // Move notes content to popup (stays there permanently)
+      canonicalNotes.classList.add('notes-in-popup');
+      canonicalNotes.style.maxHeight = 'none';
+      popupContainer.appendChild(canonicalNotes);
+    }
+  }, [showNotes, currentIndex, galleryData]);
+
+  // Effect to update SSR widget content when navigating images
+  // Crawlers see initial SSR, humans see updated content
+  useEffect(() => {
+    const widget = document.querySelector('.image-details-widget');
+    if (!widget) return;
+    
+    const currentImage = galleryData[currentIndex];
+    if (!currentImage) return;
+    
+    // Update description
+    const descEl = widget.querySelector('.widget-description');
+    if (descEl) {
+      descEl.textContent = currentImage.description || '';
+    }
+    
+    // Update or create notes container
+    const notesContainer = widget.querySelector('.widget-notes-container');
+    const expandTrigger = widget.querySelector('.widget-expand-trigger');
+    
+    if (currentImage.notes) {
+      if (notesContainer) {
+        // Update existing notes
+        notesContainer.id = `canonical-notes-${currentImage.id || 'default'}`;
+        const notesP = notesContainer.querySelector('.widget-notes');
+        if (notesP) notesP.textContent = currentImage.notes;
+        notesContainer.style.display = '';
+      } else if (expandTrigger) {
+        // Create notes container if it doesn't exist
+        const newNotesContainer = document.createElement('div');
+        newNotesContainer.id = `canonical-notes-${currentImage.id || 'default'}`;
+        newNotesContainer.className = 'widget-notes-container';
+        newNotesContainer.setAttribute('data-notes-canonical', 'true');
+        newNotesContainer.innerHTML = `<p class="widget-notes" itemprop="about">${currentImage.notes}</p>`;
+        widget.insertBefore(newNotesContainer, expandTrigger);
+      }
+    } else if (notesContainer) {
+      // Hide notes if current image has none
+      notesContainer.style.display = 'none';
+    }
+    
+    // Update schema metadata
+    const metaName = widget.querySelector('meta[itemprop="name"]');
+    const linkImage = widget.querySelector('link[itemprop="image"]');
+    if (metaName) metaName.setAttribute('content', currentImage.title || currentImage.alt || '');
+    if (linkImage) linkImage.setAttribute('href', currentImage.src || '');
+    
+    // Collapse widget when changing images
+    widget.classList.remove('expanded');
+  }, [currentIndex, galleryData]);
+
   const tourOpen = () =>
     typeof document !== "undefined" &&
     document.documentElement.getAttribute("data-k4tour-open") === "1";
@@ -999,7 +1066,7 @@ export default function ChapterGalleryBase({
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: direction > 0 ? -150 : 150 }}
                   transition={{ duration: 0.6, ease: [0.45, 0, 0.55, 1] }}
-                  className="flex flex-col md:flex-row gap-6 md:gap-12 items-center md:items-start justify-center md:min-h-[75vh]"
+                  className="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center md:min-h-[75vh]"
                   {...swipeHandlers}
                   data-image-id={currentId}
                 >
@@ -1007,7 +1074,7 @@ export default function ChapterGalleryBase({
                   {/* IMAGE + ARROWS COLUMN */}
                   <div
                     className="flex flex-col items-center relative chapter-image-container-mobile"
-                    style={{ marginTop: !isMobile ? '2rem' : 0, width: 'fit-content', ...(isMobile ? { maxWidth: '100%', overflowX: 'hidden', width: '100%' } : {}) }}
+                    style={{ width: 'fit-content', ...(isMobile ? { maxWidth: '100%', overflowX: 'hidden', width: '100%' } : {}) }}
                   >
 
                     <div className="w-full relative flex items-center justify-center mb-0 chapter-image-container-mobile" style={isMobile ? { maxWidth: '100%', overflowX: 'hidden' } : {}}>
@@ -1177,26 +1244,22 @@ export default function ChapterGalleryBase({
                             );
                           })()}
                         </div>
-                        {/* Desktop Collector Notes panel absolutely positioned 20px down from top, right-aligned to image container */}
-                        {!isMobile && showNotes && galleryData[currentIndex]?.notes?.trim() && (
-                          <AnimatePresence>
-                            <motion.div
-                              key="collector-notes-desktop"
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              exit={{ opacity: 0 }}
-                              transition={{ duration: 0.20, ease: [0.33, 1, 0.68, 1] }}
+                        {/* Desktop Collector Notes panel - borrows content from widget */}
+                        {!isMobile && galleryData[currentIndex]?.notes?.trim() && (
+                            <div
                               className="desktop-only-element w-96 border border-gray-300 rounded shadow-2xl p-5 text-sm text-gray-800"
                               style={{
                                 position: 'absolute',
                                 zIndex: 100000,
                                 top: '46px',
                                 right: '-390px',
-                                willChange: 'opacity',
                                 backgroundColor: '#cdd1c5ff',
                                 border: '1px solid rgba(151, 153, 156, 1)',
                                 minWidth: '260px',
-                                maxWidth: '90vw'
+                                maxWidth: '90vw',
+                                display: showNotes ? 'block' : 'none',
+                                opacity: showNotes ? 1 : 0,
+                                transition: 'opacity 0.2s ease'
                               }}
                             >
                               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
@@ -1205,11 +1268,9 @@ export default function ChapterGalleryBase({
                                 </strong>
                                 <span style={{ flex: 1, marginTop: '4px', height: '2px', marginLeft: '0.5em', borderRadius: '2px', background: 'linear-gradient(to right, #fff 65%, rgba(255,255,255,0))', filter: 'drop-shadow(0 1px 2px #444)' }} />
                               </div>
-                              {galleryData[currentIndex].notes.split('\n\n').map((para, idx) => (
-                                <p key={idx} className="mb-3 last:mb-0">{para}</p>
-                              ))}
-                            </motion.div>
-                          </AnimatePresence>
+                              {/* Container for borrowed notes content from widget */}
+                              <div id="notes-popup-container" className="notes-popup-content" />
+                            </div>
                         )}
                       </div>
 
@@ -1604,18 +1665,18 @@ export default function ChapterGalleryBase({
                       )
                     )}
 
-                    {/* Collector Notes Panel (mobile) */}
+                    {/* Collector Notes Panel (mobile) - borrows content from widget */}
                     {galleryData[currentIndex]?.notes && isMobile && (
-  <AnimatePresence>
-    {showNotes && (
-      <motion.div
-        key="collector-notes-mobile"
-        initial={{ opacity: 0, y: -8 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -8 }}
-        transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
+      <div
         className="w-full mx-auto mt-2 mb-[6px] border border-gray-300 rounded shadow p-4 text-sm text-gray-800 text-left"
-        style={{ backgroundColor: "#cfd1c8ff", border: "1px solid rgb(109, 111, 114)", maxWidth: "98vw", boxSizing: "border-box", position: "relative" }}
+        style={{ 
+          backgroundColor: "#cfd1c8ff", 
+          border: "1px solid rgb(109, 111, 114)", 
+          maxWidth: "98vw", 
+          boxSizing: "border-box", 
+          position: "relative",
+          display: showNotes ? 'block' : 'none'
+        }}
       >
         <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
           <strong style={{ color: "#fff", textShadow: "0 1px 2px #444", fontWeight: "bold", marginRight: "0.75em", fontSize: "1em" }}>
@@ -1623,26 +1684,18 @@ export default function ChapterGalleryBase({
           </strong>
           <span style={{ flex: 1, marginTop: "4px", height: "2px", marginLeft: "0.5em", borderRadius: "2px", background: "linear-gradient(to right, #fff 65%, rgba(255,255,255,0))", filter: "drop-shadow(0 1px 2px #444)" }} />
         </div>
-        {galleryData[currentIndex].notes.split("\n\n").map((para, idx) => (
-          <p key={idx} className="mb-3 last:mb-0">{para}</p>
-        ))}
+        {/* Container for borrowed notes content from widget */}
+        <div id="notes-popup-container" className="notes-popup-content" />
         {/* Close button in lower right corner */}
         <button
           type="button"
           onClick={(e) => { e.stopPropagation(); setShowNotes(false); }}
           aria-label="Close Collector Notes"
-className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#b91c1c] text-[#b91c1c] shadow-lg"
-                            style={
-                              isMobile
-                                ? { cursor: "zoom-in", maxWidth: "100%", width: "auto", height: "auto", objectFit: "contain", maxHeight: "65vh", border: '1px solid rgba(120,120,120,0.30)', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }
-                                : { cursor: "zoom-in", maxWidth: "1290px", width: "auto", height: "auto", objectFit: "contain", maxHeight: "92vh", background: "#f7f7f7", transition: 'box-shadow .3s ease', border: '1px solid rgba(110,110,110,0.28)', boxShadow: '0 2px 5px rgba(0,0,0,0.10)' }
-                            }
+          className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center rounded-full border-2 border-[#b91c1c] text-[#b91c1c] shadow-lg"
         >
           <span className="text-1xl font-bold" style={{ color: "#b91c1c" }}>✕</span>
         </button>
-      </motion.div>
-    )}
-  </AnimatePresence>
+      </div>
 )}
                   </div>
 
@@ -1709,167 +1762,6 @@ className="absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center ro
                     <p className="italic text-base mt-3 md:text-lg mb-4 leading-snug text-left">
                       {galleryData[currentIndex]?.story}
                     </p>
-
-                    {/* More Info Toggle & Panel */}
-                    {(() => {
-                      const descPanelId = `desc-panel-${galleryData[currentIndex]?.id || currentIndex}`;
-                      return (
-                        <div
-                          className="text-sm text-gray-600 mb-6 text-center group"
-                          style={{ position: "relative" }}
-                        >
-                          <button
-                            type="button"
-                            onClick={(e) => { 
-                              e.stopPropagation(); 
-                              const newExpanded = !isExpanded;
-                              setIsExpanded(newExpanded);
-                              if (newExpanded) {
-                                logUIEvent("more_about_image_click", {
-                                  page: window.location.pathname,
-                                  imageId: galleryData[currentIndex]?.id,
-                                  sectionKey
-                                });
-                              }
-                            }}
-                            className="inline-flex items-center gap-1 no-underline hover:no-underline focus:no-underline"
-                            aria-expanded={isExpanded}
-                            aria-controls={descPanelId}
-                            aria-label="Toggle more information about this image"
-                            id={`desc-toggle-${galleryData[currentIndex]?.id || currentIndex}`}
-                            style={{ zIndex: showNotes ? 5 : 50, position: "relative" }}
-                          >
-                            <span className={`inline-block transform transition-transform duration-300 ${isExpanded ? "rotate-90" : ""}`}>
-                              ▼
-                            </span>
-                            More about this image
-                          </button>
-
-                          <AnimatePresence>
-                            {isExpanded && (isMobile ? (
-                              <motion.div
-                                key={`desc-${currentIndex}-mobile`}
-                                initial={{ opacity: 0, y: 12 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 12 }}
-                                transition={{ duration: 0.45, ease: [0.33, 1, 0.68, 1] }}
-                                className="relative mt-4 mx-auto w-11/12 max-w-lg px-4"
-                                style={{ background: "#f2f3f4", border: "1.5px solid #d1d5d9", borderRadius: 16, boxShadow: "0 8px 48px rgba(80,80,90,0.10)", padding: ".95rem 1.5rem", color: "#4a4a49", minHeight: "4rem", maxHeight: "290px", overflowY: "auto", width: "100%" }}
-                                id={descPanelId}
-                                role="region"
-                                aria-labelledby={`desc-toggle-${galleryData[currentIndex]?.id || currentIndex}`}
-                                aria-label="More information about this image"
-                              >
-                                <h2 className="text-lg font-semibold mb-2">More about this image</h2>
-                                <p className="pb-2">{galleryData[currentIndex]?.description} — {getClosingSentence(sectionKey, galleryData[currentIndex]?.id)}</p>
-                                {sisterMatch && (
-                                  <div className="pt-2 text-sm">
-                                    <a 
-                                      href={sisterMatch.b.replace('https://www.k4studios.com', typeof window !== 'undefined' ? window.location.origin : 'https://www.k4studios.com')} 
-                                      className="underline text-[#7b1e1e] hover:opacity-80"
-                                      onClick={() => logUIEvent("sister_link_click", {
-                                        page: window.location.pathname,
-                                        imageId: galleryData[currentIndex]?.id,
-                                        sectionKey,
-                                        destination: sisterMatch.b,
-                                        anchorText
-                                      })}
-                                    >
-                                      {anchorText}
-                                    </a>
-                                  </div>
-                                )}
-                              </motion.div>
-                            ) : (
-                              <motion.div
-                                key={`desc-${currentIndex}-desktop`}
-                                initial={{ opacity: 0, y: 12 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 12 }}
-                                transition={{ duration: 0.45, ease: [0.33, 1, 0.68, 1] }}
-                                className="absolute left-1/2 bottom-0 z-50"
-                                style={{ transform: "translateX(-50%) translateY(-8px)", marginLeft: "-275px", background: "#fff", border: "1.5px solid #d1d5d9", borderRadius: 16, boxShadow: "0 2px 12px rgba(80,80,90,0.10)", padding: ".95rem 1.5rem 3rem 1.5rem", color: "#4a4a49", minWidth: "340px", maxWidth: "75vw", minHeight: "4rem", maxHeight: "320px", overflowY: "auto" }}
-                                id={descPanelId}
-                                role="region"
-                                aria-labelledby={`desc-toggle-${galleryData[currentIndex]?.id || currentIndex}`}
-                                aria-label="More information about this image"
-                              >
-                                <button
-                                  type="button"
-                                  onClick={(e) => { e.stopPropagation(); setIsExpanded(false); }}
-                                  aria-label="Close More Info"
-                                  title="close"
-                                  className="absolute bottom-3 left-3 inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-300 rounded-full shadow-sm hover:bg-gray-700 hover:text-gray-200 hover:border-red-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-400 transition-colors cursor-pointer"
-                                  style={{ zIndex: 10001 }}
-                                >
-                                  <CircleX className="w-7 h-7" />
-                                </button>
-                                {/* Collector Notes button next to close button */}
-                                {galleryData[currentIndex]?.notes?.trim() && (
-                                  <button
-                                    type="button"
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      setShowNotes(true);
-                                      setIsExpanded(false);
-                                      setTimeout(() => notesBtnRef.current?.focus(), 0);
-                                      logUIEvent("collector_notes_toggle", {
-                                        page: window.location.pathname,
-                                        imageId: galleryData[currentIndex]?.id,
-                                        notesVisible: true
-                                      });
-                                    }}
-                                    aria-label="View Collector Notes"
-                                    title="Open Collector Notes"
-                                    className={`absolute bottom-3 left-14 inline-flex items-center justify-center w-8 h-8 border border-gray-300 bg-white text-gray-400 rounded-full shadow-sm hover:bg-gray-200 hover:text-gray-700 transition-colors cursor-pointer ${showCollectorHint ? 'collector-hint-ring' : ''}`}
-                                    style={{ zIndex: 10001 }}
-                                  >
-                                    <span className="relative inline-flex items-center justify-center w-5 h-5">
-                                      <span className="absolute left-3 top-0 text-[10px] text-red-600 font-semibold">*</span>
-                                      <Notebook 
-                                        className="w-5 h-5 stroke-[1.75] cursor-pointer" 
-                                        style={{ color: '#9bb69eff' }}
-                                        onMouseEnter={(e) => {
-                                          const tooltip = e.currentTarget.parentElement.querySelector('.tooltip');
-                                          if (tooltip) tooltip.style.opacity = '1';
-                                        }}
-                                        onMouseLeave={(e) => {
-                                          const tooltip = e.currentTarget.parentElement.querySelector('.tooltip');
-                                          if (tooltip) tooltip.style.opacity = '0';
-                                        }}
-                                      />
-                                      {/* Hover tooltip: only shows when hovering the notebook icon */}
-                                      <span className="tooltip absolute left-full ml-2 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
-                                        View extra insight about this image
-                                      </span>
-                                    </span>
-                                  </button>
-                                )}
-                                <h2 className="text-lg font-semibold mb-2">More about this image</h2>
-                                <p className="pb-2">{galleryData[currentIndex]?.description} — {getClosingSentence(sectionKey, galleryData[currentIndex]?.id)}</p>
-                                {sisterMatch && (
-                                  <div className="pt-2 text-sm">
-                                    <a 
-                                      href={sisterMatch.b.replace('https://www.k4studios.com', typeof window !== 'undefined' ? window.location.origin : 'https://www.k4studios.com')} 
-                                      className="underline text-[#7b1e1e] hover:opacity-80"
-                                      onClick={() => logUIEvent("sister_link_click", {
-                                        page: window.location.pathname,
-                                        imageId: galleryData[currentIndex]?.id,
-                                        sectionKey,
-                                        destination: sisterMatch.b,
-                                        anchorText
-                                      })}
-                                    >
-                                      {anchorText}
-                                    </a>
-                                  </div>
-                                )}
-                              </motion.div>
-                            ))}
-                          </AnimatePresence>
-                        </div>
-                      );
-                    })()}
 
                     {/* Bottom Separator */}
                     <div className="flex justify-center my-3">

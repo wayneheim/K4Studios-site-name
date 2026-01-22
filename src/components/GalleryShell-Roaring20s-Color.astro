@@ -4,10 +4,12 @@ import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
 import GalleryInfo from "@/components/GalleryInfo.jsx";
 import ChapterViewer from "@/components/Chapter-Roaring20sColor.jsx";
 import Footer from "@/components/Footer.astro";
+import ImageDetailsWidget from "@/components/ImageDetailsWidget.jsx";
 
 import { galleryData as allImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs";
 import { landingWestern as landing20s } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/landingstones.ts";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { sitemapMatches } from "@/data/sitemapMatches.ts";
 
 /** ----------------------------------------------------------------
  * Robust mojibake cleaner
@@ -46,6 +48,7 @@ const currentImage = isGhost
   : allImages.find((img) => img.id === initialImageId && img.visibility !== "ghost");
 
 const previewImages = allImages.filter((img) => img.visibility !== "ghost").slice(0, 8);
+const visibleImages = allImages.filter((img) => img.visibility !== "ghost");
 const previewPath =
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color";
 
@@ -57,6 +60,8 @@ const singlePreviewImage =
 const currentIndex = allImages.findIndex(
   (img) => img.id === initialImageId && img.visibility !== "ghost"
 );
+// Get the display index (excluding ghost images) for chapter numbering
+const displayIndex = visibleImages.findIndex((img) => img.id === initialImageId);
 const forcedImage = currentIndex >= 0 ? allImages[currentIndex] : singlePreviewImage;
 const selectedImage = currentImage || forcedImage;
 
@@ -159,6 +164,22 @@ const isImagePage = lastSegment.startsWith("i-");
 // Check for ?view=grid (shared theme links should skip intro)
 const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
 const skipIntro = isImagePage || isDirectGridView;
+
+/** ---------------------------------------------------------------
+ * Sister/Related Images Link for SEO internal linking
+ * --------------------------------------------------------------- */
+const currentImageId = currentImage?.id || initialImageId;
+let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || null;
+
+// Fallback: link to sister gallery (Color <-> Black-White)
+if (!sisterLink && isImagePage) {
+  const currentPath = Astro.url.pathname.replace(/\/$/, '');
+  if (currentPath.includes('/Color/')) {
+    sisterLink = currentPath.replace('/Color/', '/Black-White/');
+  } else if (currentPath.includes('/Black-White/')) {
+    sisterLink = currentPath.replace('/Black-White/', '/Color/');
+  }
+}
 ---
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
@@ -186,13 +207,15 @@ const skipIntro = isImagePage || isDirectGridView;
     </div>
   )}
 
-  {/* Image pages: semantic document structure with SSR H1 */}
+  {/* SEO-only H1 - visually hidden but in DOM for crawlers */}
+  {skipIntro && (
+    <h1 class="sr-only-seo" aria-hidden="false">Chapter {displayIndex + 1}: {fixMojibake(currentImage?.title || currentImage?.alt || usedEntranceData.title)}</h1>
+  )}
+  
+  {/* Image pages: main content */}
   {skipIntro && (
     <main>
       <article>
-        <header class="ssr-document-header">
-          <h1>Chapter {currentIndex + 1}: {fixMojibake(currentImage?.title || currentImage?.alt || usedEntranceData.title)}</h1>
-        </header>
         <div id="gallery-content" class="flex-grow relative overflow-hidden">
           <div id="chapter-section" class="section-visible" style="display:block;">
             <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
@@ -203,6 +226,43 @@ const skipIntro = isImagePage || isDirectGridView;
   )}
 
   <div class="h-12 md:h-20"></div>
+
+  {/* ========== OLD SSR SEO Section (commented out for comparison) ========== */}
+  {/* skipIntro && currentImage?.description && (
+    <section class="seo-image-details" aria-label="About this image">
+      <a href={previewPath} class="back-to-gallery-link" title="Back to Gallery Home">
+        <span class="link-arrow">←</span>
+        <span class="link-text">Exit</span>
+      </a>
+      <div class="seo-image-details-inner">
+        <h2>About This Image</h2>
+        <p>{fixMojibake(currentImage.description)}</p>
+      </div>
+      {sisterLink ? (
+        <a href={sisterLink} class="related-images-link">Discover<br/>related<br/>images</a>
+      ) : (
+        <div class="related-images-placeholder"></div>
+      )}
+    </section>
+  ) */}
+
+  {/* ========== NEW ImageDetailsWidget (testing) ========== */}
+  {skipIntro && currentImage && (
+    <ImageDetailsWidget 
+      client:load
+      image={{
+        title: fixMojibake(currentImage.title || currentImage.alt),
+        description: fixMojibake(currentImage.description),
+        notes: currentImage.notes ? fixMojibake(currentImage.notes) : null,
+        src: currentImage.src,
+        alt: currentImage.alt
+      }}
+      imageId={currentImage.id}
+      galleryTitle={fixMojibake(usedEntranceData.title)}
+      sisterLink={sisterLink}
+      exitPath={previewPath}
+    />
+  )}
 
   <Footer
     previewImages={previewImages}
@@ -218,24 +278,108 @@ const skipIntro = isImagePage || isDirectGridView;
   />
 
   <style>
-    /* SSR document header - same styling as ChapterGalleryBase title */
-    .ssr-document-header {
-      margin-top: 2rem;
+    /* SSR SEO Description Section - compact, visible for full Google weight */
+    .seo-image-details {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      padding: 0.75rem 1rem;
+      background: #f9f8f6;
+      border: 1px solid #e5e2dd;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: #777;
+      box-sizing: border-box;
     }
-    .ssr-document-header h1 {
-      font-size: 1.55rem;
-      opacity: 0.5;
-      line-height: 1.35;
-      font-family: 'Glegoo', serif;
+    .seo-image-details-inner {
+      flex: 1;
       text-align: center;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-      letter-spacing: 0.025em;
-      color: #85644b;
+      line-height: 1.5;
     }
-    /* Hide the React H2 title since SSR H1 is now the visible one */
-    .ssr-document-header + #gallery-content h2.text-center.font-semibold {
-      display: none;
+    .seo-image-details h2 {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #999;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .seo-image-details p {
+      margin: 0;
+    }
+    .back-to-gallery-link {
+      flex-shrink: 0;
+      color: #7b1e1e;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border: 1px solid #7b1e1e;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+    .back-to-gallery-link .link-arrow {
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .back-to-gallery-link .link-text {
+      font-size: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .back-to-gallery-link:hover {
+      background: #7b1e1e;
+      color: white;
+    }
+    .related-images-link {
+      flex-shrink: 0;
+      font-size: 0.5rem;
+      line-height: 1.2;
+      text-align: center;
+      color: #7b1e1e;
+      text-decoration: none;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #7b1e1e;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+    .related-images-link:hover {
+      background: #7b1e1e;
+      color: white;
+    }
+    .related-images-placeholder {
+      width: 3rem;
+      height: 3rem;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .seo-image-details {
+        margin: 0 1rem 1.5rem;
+      }
+    }
+
+    /* SEO-only H1 - hidden visually but present for crawlers */
+    .sr-only-seo {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      clip-path: inset(50%) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
     }
     
     @media (max-width: 767px) {

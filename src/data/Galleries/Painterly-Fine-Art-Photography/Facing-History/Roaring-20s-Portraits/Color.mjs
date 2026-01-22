@@ -37,7 +37,7 @@ export const galleryData = [
       "roaring 20s art"
     ],
     "story": "In \"Shoe Shine Boy,\" Wayne Heim renders Jazz Age portraiture with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
-    "notes": "",
+    "notes": "In “Lenore,” Wayne Heim leans into the solemn gravitas of Western mythmaking, evoking the brooding emotional charge found in late-period Remington and the interior quiet of Wyeth’s narrative studies. The composition is deliberately weighted to the lower frame, grounding the viewer in the tension between stillness and impending action. Light becomes a character of its own—scorching, sanctifying, revealing—casting the figure in a painterly glow that recalls the textured surfaces of 19th-century American illustration.\n\nThe holstered revolver, partially veiled in smoke, functions as both symbol and sentence: an artifact of fate rather than bravado. What elevates the piece is the psychological depth—this is not the romanticized gunslinger of classic tropes but a man bound to an unseen vow, shaped by loss, and summoned once more by forces beyond mercy. The image holds a cinematic, sculptural presence that positions it squarely within the evolving Western fine art canon, offering collectors a work that is both timeless and unmistakably contemporary in voice.",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
