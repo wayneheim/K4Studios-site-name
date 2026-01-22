@@ -1777,7 +1777,19 @@ export default function ChapterGalleryBase({
                           }
                         }
                       `}</style>
-                      <details className="more-about-image" style={{ margin: 0 }}>
+                      <details 
+                        className="more-about-image" 
+                        style={{ margin: 0 }}
+                        onToggle={(e) => {
+                          if (e.target.open) {
+                            logUIEvent("more_about_image_click", {
+                              page: window.location.pathname,
+                              imageId: galleryData[currentIndex]?.id,
+                              title: galleryData[currentIndex]?.title || galleryData[currentIndex]?.alt
+                            });
+                          }
+                        }}
+                      >
                         <summary style={{
                           display: 'block',
                           listStyle: 'none',

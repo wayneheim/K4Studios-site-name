@@ -206,25 +206,7 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
 
   <div class="h-12 md:h-20"></div>
 
-  {/* H1 is now in ImageDetailsWidget - no duplicate needed here */}
-
-  {/* ImageDetailsWidget - SSR SEO content with H1 */}
-  {skipIntro && currentImage && (
-    <ImageDetailsWidget 
-      client:load
-      image={{
-        title: fixMojibake(currentImage.title || currentImage.alt),
-        description: fixMojibake(currentImage.description),
-        notes: currentImage.notes ? fixMojibake(currentImage.notes) : null,
-        src: currentImage.src,
-        alt: currentImage.alt
-      }}
-      imageId={currentImage.id}
-      galleryTitle={fixMojibake(usedEntranceData.title)}
-      sisterLink={sisterLink}
-      exitPath={previewPath}
-    />
-  )}
+  {/* ImageDetailsWidget removed - "More about this image" now in ChapterGalleryBase */}
 
   <Footer
     previewImages={previewImages}
