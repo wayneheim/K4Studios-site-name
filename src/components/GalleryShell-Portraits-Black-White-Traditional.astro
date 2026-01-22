@@ -4,10 +4,12 @@ import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
 import GalleryInfo from "@/components/GalleryInfo.jsx";
 import ChapterViewer from "@/components/Chapter-Portraits-Black-White-Traditional.jsx";
 import Footer from "@/components/Footer.astro";
+import ImageDetailsWidget from "@/components/ImageDetailsWidget.jsx";
 
 import { galleryData as allImages } from "@/data/Galleries/Fine-Art-Photography/Portraits/Black-White.mjs";
 import { landingWestern as landingPortraits } from "@/data/Galleries/Fine-Art-Photography/Portraits/landingstones.ts";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { sitemapMatches } from "@/data/sitemapMatches.ts";
 
 /* ================================================================
    Fix common UTF-8→Latin-1 mojibake
@@ -153,6 +155,12 @@ const isImagePage = lastSegment.startsWith("i-");
 // Check for ?view=grid (shared theme links should skip intro)
 const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
 const skipIntro = isImagePage || isDirectGridView;
+
+/** ---------------------------------------------------------------
+ * Sister/Related Images Link for SEO internal linking
+ * --------------------------------------------------------------- */
+const currentImageId = currentImage?.id || initialImageId;
+let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || null;
 ---
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>

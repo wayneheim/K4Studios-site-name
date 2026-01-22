@@ -4,6 +4,7 @@ import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
 import GalleryInfo from "@/components/GalleryInfo.jsx";
 import ChapterViewer from "@/components/Chapter-Landscapes-Location-West-Traditional.jsx";
 import Footer from "@/components/Footer.astro";
+import ImageDetailsWidget from "@/components/ImageDetailsWidget.jsx";
 
 import { galleryData as allImages } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs";
 import { landingWestern } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/landingstones.ts";
@@ -125,6 +126,9 @@ const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntr
 
 const meta = {
   description: pageDescription,
+  keywords: currentImage?.keywords 
+    ? (Array.isArray(currentImage.keywords) ? currentImage.keywords.join(', ') : currentImage.keywords)
+    : undefined,
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogImage: ogImage,
@@ -144,6 +148,12 @@ const isImagePage = lastSegment.startsWith("i-");
 // Check for ?view=grid (shared theme links should skip intro)
 const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
 const skipIntro = isImagePage || isDirectGridView;
+
+/** ---------------------------------------------------------------
+ * Sister/Related Images Link for SEO internal linking
+ * --------------------------------------------------------------- */
+const currentImageId = currentImage?.id || initialImageId;
+let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || null;
 ---
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>

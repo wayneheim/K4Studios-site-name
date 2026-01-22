@@ -4,10 +4,12 @@ import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
 import GalleryInfo from "@/components/GalleryInfo.jsx";
 import ChapterViewer from "@/components/Chapter-Transportation-Trains-Traditional.jsx";
 import Footer from "@/components/Footer.astro";
+import ImageDetailsWidget from "@/components/ImageDetailsWidget.jsx";
 
 import { galleryData as allImages } from "@/data/Galleries/Fine-Art-Photography/Transportation/Trains.mjs";
 import { landingWestern } from "@/data/Galleries/Fine-Art-Photography/Transportation/landingstones.ts";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { sitemapMatches } from "@/data/sitemapMatches.ts";
 
 // Robust mojibake cleaner
 function fixMojibake(str = "") {

@@ -4,10 +4,12 @@ import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
 import GalleryInfo from "@/components/GalleryInfo.jsx";
 import ChapterViewer from "@/components/Chapter-CivilWarBW.jsx";
 import Footer from "@/components/Footer.astro";
+import ImageDetailsWidget from "@/components/ImageDetailsWidget.jsx";
 
 import { galleryData as allImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
 import { landingWestern as landingCivilWar } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/landingstones.ts";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { sitemapMatches } from "@/data/sitemapMatches.ts";
 
 /** ----------------------------------------------------------------
  * Robust mojibake cleaner
@@ -135,6 +137,9 @@ const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntr
 
 const meta = {
   description: pageDescription,
+  keywords: currentImage?.keywords 
+    ? (Array.isArray(currentImage.keywords) ? currentImage.keywords.join(', ') : currentImage.keywords)
+    : undefined,
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogImage: ogImage,
@@ -156,6 +161,12 @@ const isImagePage = lastSegment.startsWith("i-");
 // Check for ?view=grid (shared theme links should skip intro)
 const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
 const skipIntro = isImagePage || isDirectGridView;
+
+/** ---------------------------------------------------------------
+ * Sister/Related Images Link for SEO internal linking
+ * --------------------------------------------------------------- */
+const currentImageId = currentImage?.id || initialImageId;
+let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || null;
 ---
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
@@ -194,6 +205,26 @@ const skipIntro = isImagePage || isDirectGridView;
   </div>
 
   <div class="h-12 md:h-20"></div>
+
+  {/* H1 is now in ImageDetailsWidget - no duplicate needed here */}
+
+  {/* ImageDetailsWidget - SSR SEO content with H1 */}
+  {skipIntro && currentImage && (
+    <ImageDetailsWidget 
+      client:load
+      image={{
+        title: fixMojibake(currentImage.title || currentImage.alt),
+        description: fixMojibake(currentImage.description),
+        notes: currentImage.notes ? fixMojibake(currentImage.notes) : null,
+        src: currentImage.src,
+        alt: currentImage.alt
+      }}
+      imageId={currentImage.id}
+      galleryTitle={fixMojibake(usedEntranceData.title)}
+      sisterLink={sisterLink}
+      exitPath={previewPath}
+    />
+  )}
 
   <Footer
     previewImages={previewImages}

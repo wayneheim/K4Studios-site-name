@@ -64,7 +64,7 @@ export const storySliderData = [
   {
     "id": "i-Nn7scqm",
     "title": "Do you HEAR me now?!",
-    "story": "She’s had enough of men with papers and empty promises, enough of being talked down to from horseback or the other side of a fence. The price of “progress” is written on her face as she makes her stand, voice ringing sharper than the shotgun she raises. One step closer and he’ll find out just how loud a woman can get when her land and family are on the line."
+    "story": "She’s had enough of men with papers and empty promises, enough of being talked down to from horseback or the other side of a fence. The price of “progress” is written on her face as she makes her stand, voice ringing sharper than the stick she raises. One step closer and he’ll find out just how loud a woman can get when her land and family are on the line."
   },
   {
     "id": "i-cV5gwWZ",

@@ -1245,8 +1245,8 @@ export const galleryData = [
   {
     "id": "i-Nn7scqm",
     "title": "Do you HEAR me now?!",
-    "description": "“Do you HEAR me now?!” is a painterly Western scene capturing a fierce frontier standoff. A woman, framed by weathered fence rails and autumn fields, confronts the railroad man trying to buy her land for pennies, her raised shotgun and squared shoulders turning negotiation into defiance. Classic tones and cinematic composition amplify the clash between ambition and belonging—a vivid moment of resistance and grit on the American frontier. © Wayne Heim",
-    "alt": "Painterly Western image of a woman holding a shotgun across a fence, facing a man in a suit while another man stands nearby, set on a rural homestead.",
+    "description": "“Do you HEAR me now?!” is a painterly Western scene capturing a fierce frontier standoff. A woman, framed by weathered fence rails and autumn fields, confronts the railroad man trying to buy her land for pennies, her raised stick and squared shoulders turning negotiation into defiance. Classic tones and cinematic composition amplify the clash between ambition and belonging—a vivid moment of resistance and grit on the American frontier. © Wayne Heim",
+    "alt": "Painterly Western image of a woman holding a stick across a fence, facing a man in a suit while another man stands nearby, set on a rural homestead.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/0/MzHkg4NLj6bnhzTxsVMgJgP2VX8ZhDvsgSX3RWLtK/XL/_HF20588-1294-1295-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/0/MzHkg4NLj6bnhzTxsVMgJgP2VX8ZhDvsgSX3RWLtK/XL/_HF20588-1294-1295-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/0/K5RMKsdmMjqmMBKssWxx7rJj2fkr5r5LrxVHR6BND/L/_HF20588-1294-1295-L.jpg",
@@ -1280,7 +1280,7 @@ export const galleryData = [
       "Americana photography",
       "frontier photography"
     ],
-    "story": "She’s had enough of men with papers and empty promises, enough of being talked down to from horseback or the other side of a fence. The price of “progress” is written on her face as she makes her stand, voice ringing sharper than the shotgun she raises. One step closer and he’ll find out just how loud a woman can get when her land and family are on the line.",
+    "story": "She’s had enough of men with papers and empty promises, enough of being talked down to from horseback or the other side of a fence. The price of “progress” is written on her face as she makes her stand, voice ringing sharper than the stick she raises. One step closer and he’ll find out just how loud a woman can get when her land and family are on the line.",
     "notes": "Negotiation turns to showdown in this charged moment where a woman draws the line against railroad “progress,” her body language a blend of fury and resolve as she defends her family’s claim; every detail—from the pointed gun to the wary posture of the men—speaks to the untold stories of ordinary people forced to become extraordinary when their way of life is threatened by ambition and greed.",
     "rating": 4,
     "galleries": [],
@@ -1582,7 +1582,7 @@ export const galleryData = [
       "collectible western print",
       "museum quality western art"
     ],
-    "story": "He lies on the floor, lungs burning — a cough like gravel, the taste of blood. The rough tenderness of survival, where hopes and promises are measured in sips, not sermons.\n\nFever is not the only thing that spreads. Silence weighs heavier than the acrid scent of smoke and despair. Conviction does not waver, nor does it question. As light halos his courage and conviction, the details of fate and finality lurk in the shadows and silence.",
+    "story": "He lies on the floor, lungs burning — a cough like gravel, the taste of blood. The rough tenderness of survival, where hopes and promises are measured in sips, not sermons.\n\nFever is not the only thing that spreads. Silence weighs heavier than the acrid scent of smoke and despair. Conviction does not waiver, nor does it question. As light halos his courage and conviction, the details of fate and finality lurk in the shadows and silence.",
     "notes": "“Cough and Covenant” balances light and darkness in both composition and meaning. The upward gesture, the pooled warmth of lamplight, and the near-caravaggisti rendering evoke a lineage of sacred tenderness—yet something darker stirs in the shadows. For the discerning viewer, the image rewards slow study: subtle cues of mortality, unspoken oaths, and the cost of loyalty rendered in blistered skin and painterly grit.\n\nThis piece stands at the intersection of Remington’s rugged masculinity and Wyeth’s emotional restraint, fusing narrative photography with classical tension. The central beam of light becomes almost ecclesiastic, not just illuminating the subject, but beatifying him—before the viewer realizes what may truly be unfolding. In that realization, the “covenant” becomes more than a gesture. It becomes a sacrifice.",
     "rating": 4,
     "galleries": [],
