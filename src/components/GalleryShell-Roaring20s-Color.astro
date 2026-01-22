@@ -207,10 +207,7 @@ if (!sisterLink && isImagePage) {
     </div>
   )}
 
-  {/* SEO-only H1 - visually hidden but in DOM for crawlers */}
-  {skipIntro && (
-    <h1 class="sr-only-seo" aria-hidden="false">Chapter {displayIndex + 1}: {fixMojibake(currentImage?.title || currentImage?.alt || usedEntranceData.title)}</h1>
-  )}
+  {/* H1 is now in ImageDetailsWidget - no duplicate needed here */}
   
   {/* Image pages: main content */}
   {skipIntro && (
@@ -368,20 +365,6 @@ if (!sisterLink && isImagePage) {
       }
     }
 
-    /* SEO-only H1 - hidden visually but present for crawlers */
-    .sr-only-seo {
-      position: absolute !important;
-      width: 1px !important;
-      height: 1px !important;
-      padding: 0 !important;
-      margin: -1px !important;
-      overflow: hidden !important;
-      clip: rect(0, 0, 0, 0) !important;
-      clip-path: inset(50%) !important;
-      white-space: nowrap !important;
-      border: 0 !important;
-    }
-    
     @media (max-width: 767px) {
       #nav-toggle { display: none !important; }
       #intro-section { margin-top: 3.5rem !important; }

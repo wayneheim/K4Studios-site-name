@@ -109,6 +109,17 @@ export default function ImageDetailsWidget({
             }
           }
           
+          /* H1 - minimal museum caption, fully visible to crawlers */
+          .widget-h1 {
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            color: #b6afa6;
+            text-align: center;
+            margin: 0 0 0.75rem;
+            font-family: 'Glegoo', serif;
+          }
+          
           /* Drawer peek - shows first ~3 lines, expandable */
           .widget-description {
             max-height: 4.8em; /* ~3 lines */
@@ -254,6 +265,11 @@ export default function ImageDetailsWidget({
             }
           }
         `}</style>
+
+        {/* H1 - the page heading, visible and semantic */}
+        <h1 className="widget-h1" itemProp="name">
+          {image.title || image.alt}
+        </h1>
 
         {/* Description - first few lines visible, rest revealed on expand */}
         <p 
