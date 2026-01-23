@@ -72,7 +72,7 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 512
+    "sortOrder": 511
   },
   {
     "id": "i-cHBczG6",
@@ -269,7 +269,7 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 508
+    "sortOrder": 507
   },
   {
     "id": "i-wdF6Hw3",
@@ -316,7 +316,7 @@ export const galleryData = [
     "rating": 5,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 509
+    "sortOrder": 508
   },
   {
     "id": "i-6pCLC4L",
@@ -366,7 +366,7 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 510
+    "sortOrder": 509
   },
   {
     "id": "i-mqDfN5z",
@@ -415,7 +415,7 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 511
+    "sortOrder": 510
   },
   {
     "id": "i-wZ8Zn9p",
@@ -464,7 +464,7 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 505
+    "sortOrder": 504
   },
   {
     "id": "i-r9xCmwz",
@@ -514,7 +514,7 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 513
+    "sortOrder": 512
   },
   {
     "id": "i-mBD4f67",
@@ -564,7 +564,7 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 514
+    "sortOrder": 513
   },
   {
     "id": "i-hXdn5Z8",
@@ -599,7 +599,7 @@ export const galleryData = [
     "rating": 0,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 515
+    "sortOrder": 514
   },
   {
     "id": "i-fkMpXJf",
@@ -629,7 +629,7 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 516
+    "sortOrder": 515
   },
   {
     "id": "i-TNm6hQ3",
@@ -680,7 +680,7 @@ export const galleryData = [
     "rating": 3,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 517
+    "sortOrder": 516
   },
   {
     "id": "i-9g57QXd",
@@ -727,7 +727,7 @@ export const galleryData = [
     "rating": 2,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 518
+    "sortOrder": 517
   },
   {
     "id": "i-NTfST2B",
@@ -758,7 +758,7 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 519
+    "sortOrder": 518
   },
   {
     "id": "i-6GcghXb",
@@ -804,7 +804,7 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 520
+    "sortOrder": 519
   },
   {
     "id": "i-f8VznFc",
@@ -849,7 +849,7 @@ export const galleryData = [
     "rating": 3,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 521
+    "sortOrder": 520
   },
   {
     "id": "i-Z6TkHwJ",
@@ -891,7 +891,7 @@ export const galleryData = [
     "rating": 3,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 522
+    "sortOrder": 521
   },
   {
     "id": "i-mMsSB6q",
@@ -932,7 +932,7 @@ export const galleryData = [
     "rating": 0,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 523
+    "sortOrder": 522
   },
   {
     "id": "i-zsjbqS8",
@@ -969,7 +969,7 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 524
+    "sortOrder": 523
   },
   {
     "id": "i-HfWwLLf",
@@ -1000,14 +1000,14 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 525
+    "sortOrder": 524
   },
   {
     "id": "i-VVwZ7gM",
-    "title": "Showing the Way",
-    "description": "A cinematic, painterly Western fine art photograph depicting a quiet exchange between two figures on the frontier, framed by horse, sky, and open land. This image explores shared knowledge, lived experience, and the passing of understanding without spectacle or dramatization. Light, posture, and restraint shape a narrative rooted in Native American presence, Western history, and the unspoken transfer of wisdom that defines the American frontier. Part of the Facing History fine art photography series. © Wayne Heim",
-    "alt": "Two men on horseback paused in conversation on a Western landscape, one gesturing toward the horizon, painterly Western fine art photography",
-    "story": "He gestures without urgency.\nNot instruction—invitation.\n\nThe land already knows the answer.\nIt always has.\nThe question is whether you’re ready to listen.\n\nNothing is forced.\nWhat matters will reveal itself once the talking stops.",
+    "title": "Brothers of the Open Country",
+    "description": "A powerful painterly Western portrait depicting the quiet unity between two frontier companions—one Indigenous, one a seasoned trapper—standing beside a saddled horse under dramatic skies. Rich textures and warm, cinematic tones bring emotional depth to the scene, capturing a bond forged through shared experience on the open range. Wayne Heim’s fine art technique blends illustration-inspired detail with photographic authenticity, offering a narrative-rich tableau ideal for collectors of Western fine art, historical narratives, and evocative Americana.",
+    "alt": "Indigenous scout and frontier trapper standing together with a horse, painterly Western portrait.",
+    "story": "Sharp fall air hangs heavy like morning dew.\nChange is in the air—seasons and society, both forcing their own agenda upon this land.\n\nThey come by wagonload now, each one hoping for a new beginning—hunting for answers, a fresh start, or just a path forward.\n\nCarving, forging, reshaping this life with Eastern wealth and virtues, they claim what’s ours for theirs.\nYears, old friend, we shared this place as brothers—one mind - wrapped in different cloths.\n\nClouds of change gather, dappled and restless, over the valley floor.\nBoth season and change move at will, ushering a future that neither hope nor protest can hold back.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MCjVLLscvMzW9txvBcpWQPBbzgNPwjQwS4sWtqqvG/L/_HF29136-Edit-Edit-3-2-L.jpg",
@@ -1016,24 +1016,37 @@ export const galleryData = [
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/A",
     "keywords": [
-      "fine art photography",
-      "western art",
-      "western photography",
-      "native american portrait",
-      "native american photography",
-      "spirit of the west",
-      "painterly western photography",
+      "western fine art photography",
+      "indigenous scout portrait",
+      "frontier trapper portrait",
+      "cross cultural western story",
+      "painterly western art",
+      "americana fine art",
       "historical western imagery",
-      "frontier life",
-      "western fine art prints",
-      "native american heritage art",
-      "indigenous experience"
+      "frontier companionship",
+      "museum quality western decor",
+      "cowboy portraits",
+      "narrative Western art",
+      "cowboy artwork",
+      "cowboy art",
+      "fine art Western photography",
+      "painterly Western photograph",
+      "Western Cowboy Portraits",
+      "western cowboy art",
+      "painterly Western images",
+      "wild west painterly photography",
+      "western painterly photography",
+      "cowboy portrait",
+      "cowboy painting art",
+      "fine art cowboy photography",
+      "historic western prints",
+      "painterly technique"
     ],
-    "notes": "This piece is built on restraint rather than spectacle, allowing gesture and spatial relationship to carry the narrative weight. The composition recalls the quiet authority found in late-period Remington and the psychological stillness seen in Wyeth’s frontier figures—where meaning exists between actions rather than within them. The painterly handling softens the edges of time, positioning the work as a meditation on guidance, respect, and shared ground. It invites collectors to linger, not on what is being said, but on what is being understood.",
+    "notes": "This piece exemplifies Heim’s ability to portray interpersonal nuance within a painterly, historically grounded aesthetic. The triangular composition—horse, Indigenous scout, trapper—creates a stable visual structure that reinforces the sense of alliance. Textural layering and soft atmospheric light evoke the tonal sensitivity of classic Western illustrators while preserving the authenticity of lived experience. The work carries emotional and cultural resonance, making it a standout selection for collectors who appreciate Western art that honors story, lineage, and human connection.",
     "rating": 5,
     "visibility": "show",
-    "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
-    "sortOrder": 87
+    "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "sortOrder": 525
   },
   {
     "id": "i-bnJtpBX",
@@ -1104,7 +1117,7 @@ export const galleryData = [
     "rating": 4,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 506
+    "sortOrder": 505
   },
   {
     "id": "i-ZDGhLps",
@@ -1139,6 +1152,6 @@ export const galleryData = [
     "rating": 2,
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    "sortOrder": 507
+    "sortOrder": 506
   }
 ];

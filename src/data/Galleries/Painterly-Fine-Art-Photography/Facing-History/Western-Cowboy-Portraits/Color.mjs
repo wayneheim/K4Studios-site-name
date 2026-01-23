@@ -1046,17 +1046,17 @@ export const galleryData = [
     }
   },
   {
-    "id": "i-VVwZ7gM",
+    "id": "i-89qzJ6S",
     "title": "Brothers of the Open Country",
     "description": "A powerful painterly Western portrait depicting the quiet unity between two frontier companions—one Indigenous, one a seasoned trapper—standing beside a saddled horse under dramatic skies. Rich textures and warm, cinematic tones bring emotional depth to the scene, capturing a bond forged through shared experience on the open range. Wayne Heim’s fine art technique blends illustration-inspired detail with photographic authenticity, offering a narrative-rich tableau ideal for collectors of Western fine art, historical narratives, and evocative Americana.",
     "alt": "Indigenous scout and frontier trapper standing together with a horse, painterly Western portrait.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MCjVLLscvMzW9txvBcpWQPBbzgNPwjQwS4sWtqqvG/L/_HF29136-Edit-Edit-3-2-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/McVdwkfTLNQJN9FDbBKT3HtzzCrwt2qkjkdgPLBtS/M/_HF29136-Edit-Edit-3-2-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/KFC7vkSrbSkrPPGFpZSVfcqfV48gC7WztZpHz8Rg2/L/_HF29136-Edit-2-Edit-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/K47vmSfgp78JKdqTBvZHR5XSk44bJ8Vz8PsF7722h/M/_HF29136-Edit-2-Edit-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/MQLzDBQccQDFrb7kBSR9Wm8cCgC8NkG76c43VX2Xx/S/_HF29136-Edit-2-Edit-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/A",
     "keywords": [
       "western fine art photography",
       "indigenous scout portrait",
@@ -1086,8 +1086,10 @@ export const galleryData = [
     ],
     "story": "Sharp fall air hangs heavy like morning dew.\nChange is in the air—seasons and society, both forcing their own agenda upon this land.\n\nThey come by wagonload now, each one hoping for a new beginning—hunting for answers, a fresh start, or just a path forward.\n\nCarving, forging, reshaping this life with Eastern wealth and virtues, they claim what’s ours for theirs.\nYears, old friend, we shared this place as brothers—one mind - wrapped in different cloths.\n\nClouds of change gather, dappled and restless, over the valley floor.\nBoth season and change move at will, ushering a future that neither hope nor protest can hold back.",
     "notes": "This piece exemplifies Heim’s ability to portray interpersonal nuance within a painterly, historically grounded aesthetic. The triangular composition—horse, Indigenous scout, trapper—creates a stable visual structure that reinforces the sense of alliance. Textural layering and soft atmospheric light evoke the tonal sensitivity of classic Western illustrators while preserving the authenticity of lived experience. The work carries emotional and cultural resonance, making it a standout selection for collectors who appreciate Western art that honors story, lineage, and human connection.",
-    "rating": 5,
-    "galleries": [],
+    "rating": 0,
+    "galleries": [
+      "Other/Photo-Shoots/South-Dakota"
+    ],
     "visibility": "show",
     "sortOrder": 18
   },
@@ -1193,9 +1195,9 @@ export const galleryData = [
   },
   {
     "id": "i-Wx5scCf",
-    "title": "Shadows on the Ridge",
-    "description": "A cinematic, painterly Western scene portraying three frontier scouts navigating rugged terrain with vigilance and purpose. One man stands high on a sandstone outcrop scanning the horizon while the others move cautiously below, creating a layered composition rich with tension and storytelling. Wayne Heim’s textured, illustration-inspired style amplifies the drama of the golden hillside, capturing the raw grit and tactical awareness of life on the frontier. Ideal for collectors seeking Western fine art, historical reenactment imagery, and narrative-driven Americana wall decor. © Wayne Heim.",
-    "alt": "Three frontier scouts moving through rugged hillside terrain, one standing lookout on a rock, painterly Western scene.",
+    "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
+    "description": "Justified — or Damned unfolds within a landscape that feels alive with judgment. Nature itself becomes both witness and warden — stone, wind, and sage closing in like consequence. Wayne Heim’s painterly fine-art photography transforms a tense Western encounter into a study of inevitability: men caught not in victory or defeat, but in the moral narrowing of fate. Light and shadow weave like scripture across the canyon walls, evoking the gravitas of Rembrandt and the isolation of Wyeth. Each gesture, each breath, feels like confession before the land. © Wayne Heim",
+    "alt": "Painterly fine-art photograph of three men caught in a standoff among rocky hills and sagebrush — a cinematic Western tableau exploring fate, consequence, and moral ambiguity in Wayne Heim’s Justified — or Damned.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LDq7zSzrMs3gDgSF2BwqVPsjDLcFWkDxFj3mBWBpD/XL/_HF25859-1151-1156-1159-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LDq7zSzrMs3gDgSF2BwqVPsjDLcFWkDxFj3mBWBpD/XL/_HF25859-1151-1156-1159-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/MDz6TdBHqrwW9Bp824nRZ35Zt5krRM9W2VsrWNHB3/L/_HF25859-1151-1156-1159-L.jpg",
@@ -1203,44 +1205,43 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LkH4jxcHjsmTVJD9xkXmZVXcmZttrXnKLnZpHtCDn/S/_HF25859-1151-1156-1159-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/A",
+
     "keywords": [
       "western fine art photography",
-      "frontier scouts",
-      "western ambush scene",
-      "rugged hillside western image",
-      "historical reenactment art",
-      "painterly western tableau",
-      "frontier vigilance",
-      "americana fine art",
-      "tactical western moment",
-      "museum quality western decor",
-      "cowboy art",
-      "cowboy artwork",
-      "fine art Western photography",
-      "painterly Western photograph",
-      "Western Cowboy Portraits",
-      "Western themed art",
-      "western cowboy art",
+      "painterly western storytelling",
+      "three-way standoff",
+      "frontier consequence",
+      "cinematic cowboy art",
+      "moral ambiguity",
+      "American frontier",
+      "narrative western art",
+      "painterly cowboy photography",
+      "wild west photography",
+      "pictorialist tradition",
+      "western themed art",
+      "dramatic western tableau",
+      "Wayne Heim",
+      "classic western scene",
       "painterly Western images",
-      "Explore Western Photography",
-      "cowboy portraits",
-      "western fine art",
-      "painterly technique",
-      "western painterly photography",
-      "western cowboy wall art for collectors",
-      "cowboy artwork prints",
-      "fine art cowboy photography",
-      "cowboy portrait"
+      "painterly Western photograph",
+      "fine art Western photography",
+      "cowboy artwork",
+      "cowboy portraits"
     ],
-    "story": "They moved like ghosts through the broken hills, each man reading the land in his own practiced way. A lifted hand, a shift of weight, a glance toward the treeline—signals shaped by hard miles and harder winters. \n\nFrom atop the sandstone ridge, the lookout caught the faintest motion in the distance, something just out of place. Below him, the others waited, breath slowed, senses sharpened. Whatever was coming, they’d face it together, the ridge at their back and the open world before them.",
-    "notes": "Heim composes this piece with a strong diagonal flow, guiding the viewer’s eye from the lookout figure down through the mid-slope scout and finally toward the motion of the man descending the ridge. The layered geography and controlled palette recall the narrative staging of classic Western illustrators while embracing the atmospheric depth of pictorialist photography. This image stands out not only for its dramatic storytelling but for its structural precision—each figure contributing to a unified tension that rewards close, repeated viewing. A powerful addition for collectors of historically grounded Western art.",
+
+    "story": "Among the stone and sage...\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history.",
+    "notes": "Justified — or Damned is less about combat than the terrain that traps it.\nEvery slope and stone tightens the noose — nature funneling men toward consequence. Heim’s painterly textures reveal not violence, but reckoning; the moment when instinct gives way to confession. The composition’s compression — earth pressing inward — mirrors moral pressure. It recalls the tonal weight of Goya’s fatal encounters and the compositional storytelling of Remington’s late works, but reframed through Heim’s contemporary lens: where light exposes not heroism, but humanity. It’s a scene of entrapment, not conquest — the West as moral crucible, where even the righteous erode beneath the wind.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 21,
+
     "themes": {
       "dust-thunder": 5
-    }
+    },
+
+    autoGenerated: false,
+    autoTitle: false
   },
   {
     "id": "i-Nn7scqm",
@@ -2946,9 +2947,9 @@ export const galleryData = [
   },
   {
     "id": "i-CD6rgtF",
-    "title": "High Ground Justice",
-    "description": "Fine art Western photograph by Wayne Heim, capturing a cinematic three-way standoff in a painterly, high-drama landscape. Shot in the wild terrain of the American West, this image blends traditional Western themes with layered storytelling—evoking tension, narrative ambiguity, and classic film composition. A masterful example of painterly cowboy photography, where every character placement holds meaning and every frame invites a story.\n\nKeywords: Western fine art, cowboy art, painterly photography, standoff scene, cinematic cowboy wall art, fine art western photography, narrative photography, Old West photo, historical storytelling image.",
-    "alt": "Three men locked in a cinematic standoff across a rugged Western hillside—one crouching behind rocks, one aiming from higher ground, and a third approaching from the left.",
+    "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
+    "description": "Justified — or Damned unfolds within a landscape that feels alive with judgment. Nature itself becomes both witness and warden — stone, wind, and sage closing in like consequence. Wayne Heim’s painterly fine-art photography transforms a tense Western encounter into a study of inevitability: men caught not in victory or defeat, but in the moral narrowing of fate. Light and shadow weave like scripture across the canyon walls, evoking the gravitas of Rembrandt and the isolation of Wyeth. Each gesture, each breath, feels like confession before the land. © Wayne Heim",
+    "alt": "Painterly fine-art photograph of three men caught in a standoff among rocky hills and sagebrush — a cinematic Western tableau exploring fate, consequence, and moral ambiguity in Wayne Heim’s Justified — or Damned.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/LChZ9N6GQp8SqQjsjq8FvFrWcXFJhdFkSRFGZwwXH/XL/_WHO3211-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/LChZ9N6GQp8SqQjsjq8FvFrWcXFJhdFkSRFGZwwXH/XL/_WHO3211-Edit-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/MghZ7PrSDzVhns2qKkVR2xtddsw3NCB3mxScsgwp2/L/_WHO3211-Edit-Edit-Edit-L.jpg",
@@ -2956,30 +2957,38 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/NHkb48JKZjk6XmxRWhqxvrNgtrM8Kr9ww7vkXHHvh/S/_WHO3211-Edit-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/A",
+
     "keywords": [
       "western fine art photography",
-      "cowboy art",
+      "painterly western storytelling",
+      "three-way standoff",
+      "frontier consequence",
+      "cinematic cowboy art",
+      "moral ambiguity",
+      "American frontier",
+      "narrative western art",
       "painterly cowboy photography",
-      "painterly Western images",
-      "narrative Western art",
-      "rugged spirit",
-      "the American West",
-      "western cowboy art",
-      "Western Cowboy Portraits",
       "wild west photography",
-      "wild west painterly photography",
-      "frontier life",
-      "historical reenactment photography",
-      "conflict storytelling art",
-      "frontier photography",
-      "Pictorialist tradition"
+      "pictorialist tradition",
+      "western themed art",
+      "dramatic western tableau",
+      "Wayne Heim",
+      "classic western scene",
+      "painterly Western images",
+      "painterly Western photograph",
+      "fine art Western photography",
+      "cowboy artwork",
+      "cowboy portraits"
     ],
-    "story": "All lines lead to conflict. Trees stand watch from above, silent patrons to the stage below. Cliffs, angered and jagged — their edge… the box… the ring of reckoning.\n\nShadows press in, clouds gather on winds of judgment, textures pulling, tightening the grip. A bold, harsh narrator carves — its voice in shadow, speaking violence against the soft hush of summer grass.\n\nAll lines converge. Justice? Vengeance? Opportunity? Only the wind sings this song.",
-    "notes": "High Ground Justice, a masterclass in compositional tension. The image pulses with cinematic energy—each natural element choreographed to guide the eye and elevate the confrontation at its heart.\n\nThe scene is architected through visual geometry: the angled cliff echoing the attacker’s posture, the dark tree boxing him in, a triangular shadow driving us toward the man climbing the ridge. Every line of the land participates in the judgment. Trees observe. Shadows accuse. Grass betrays. And the cliff itself demands consequence. This is not just a conflict of men—but of place, memory, and fate.\n\nAbove, the trees stand like silent jurors. There's a mythic weight here—part Remington, part Greek tragedy. We’re left not with clarity, but questions: justice, revenge, or seized opportunity? This isn’t just a captured moment—it’s a constructed parable.",
+
+    "story": "Among the stone and sage...\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history.",
+    "notes": "Justified — or Damned is less about combat than the terrain that traps it.\nEvery slope and stone tightens the noose — nature funneling men toward consequence. Heim’s painterly textures reveal not violence, but reckoning; the moment when instinct gives way to confession. The composition’s compression — earth pressing inward — mirrors moral pressure. It recalls the tonal weight of Goya’s fatal encounters and the compositional storytelling of Remington’s late works, but reframed through Heim’s contemporary lens: where light exposes not heroism, but humanity. It’s a scene of entrapment, not conquest — the West as moral crucible, where even the righteous erode beneath the wind.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 57,
+    autoGenerated: false,
+    autoTitle: false
   },
   {
     "id": "i-c3vWMgt",
@@ -3912,6 +3921,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gL3Nnth/0/Ksc7CtQwsSbDnp953nZPL8zHMzHbcJxngmnxR3PHk/S/_HF25859-1151-1156-1159-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gL3Nnth/A",
+
     "keywords": [
       "western fine art photography",
       "painterly western storytelling",
@@ -3934,15 +3944,20 @@ export const galleryData = [
       "cowboy artwork",
       "cowboy portraits"
     ],
+
     "story": "Among the stone and sage...\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history.",
     "notes": "Justified — or Damned is less about combat than the terrain that traps it.\nEvery slope and stone tightens the noose — nature funneling men toward consequence. Heim’s painterly textures reveal not violence, but reckoning; the moment when instinct gives way to confession. The composition’s compression — earth pressing inward — mirrors moral pressure. It recalls the tonal weight of Goya’s fatal encounters and the compositional storytelling of Remington’s late works, but reframed through Heim’s contemporary lens: where light exposes not heroism, but humanity. It’s a scene of entrapment, not conquest — the West as moral crucible, where even the righteous erode beneath the wind.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 77,
+
     "themes": {
       "dust-thunder": 10
-    }
+    },
+
+    autoGenerated: false,
+    autoTitle: false
   },
   {
     "id": "i-2D49wp7",
@@ -21634,41 +21649,6 @@ export const galleryData = [
     "sortOrder": 484
   },
   {
-    "id": "i-89qzJ6S",
-    "title": "Western Art Portrait",
-    "description": "Experience western art through this evocative rustic charm from Wayne Heim's portfolio. This piece highlights frontier life with narrative Western art, while conveying cowboy art, ideal for those who appreciate western art. Explore narrative Western art in fine art. © Wayne Heim",
-    "alt": "Wayne Heim's western art artwork",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/KFC7vkSrbSkrPPGFpZSVfcqfV48gC7WztZpHz8Rg2/L/_HF29136-Edit-2-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/K47vmSfgp78JKdqTBvZHR5XSk44bJ8Vz8PsF7722h/M/_HF29136-Edit-2-Edit-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/MQLzDBQccQDFrb7kBSR9Wm8cCgC8NkG76c43VX2Xx/S/_HF29136-Edit-2-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/A",
-    "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
-      "painterly photography",
-      "western art",
-      "rustic charm",
-      "frontier life",
-      "narrative Western art",
-      "cowboy art",
-      "Western cowboys",
-      "American frontier portraits"
-    ],
-    "story": "This image embodies rustic charm and frontier life, captured by Wayne Heim in his signature style. It reflects Western cowboys with a touch of American frontier portraits.",
-    "notes": "",
-    "rating": 0,
-    "galleries": [
-      "Other/Photo-Shoots/South-Dakota"
-    ],
-    "visibility": "show",
-    "sortOrder": 485
-  },
-  {
     "id": "i-xgqQnWv",
     "title": "Western Portrait",
     "description": "Upscaled with Gigapixel v8.4.4. 2618x3491 => 9000x12001 (3.43774x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.94, creativity: 0 (Realistic), selectedFaces: 1",
@@ -21694,7 +21674,7 @@ export const galleryData = [
       "Other/Photo-Shoots/South-Dakota"
     ],
     "visibility": "show",
-    "sortOrder": 486
+    "sortOrder": 485
   },
   {
     "id": "i-Fjhdhf2",
@@ -21730,7 +21710,7 @@ export const galleryData = [
       "Other/Photo-Shoots/South-Dakota"
     ],
     "visibility": "show",
-    "sortOrder": 487
+    "sortOrder": 486
   },
   {
     "id": "i-MFksKj9",
@@ -21767,7 +21747,7 @@ export const galleryData = [
       "Other/Photo-Shoots/South-Dakota"
     ],
     "visibility": "show",
-    "sortOrder": 488
+    "sortOrder": 487
   },
   {
     "id": "i-psMRwPB",
@@ -21804,7 +21784,7 @@ export const galleryData = [
       "Other/Photo-Shoots/South-Dakota"
     ],
     "visibility": "show",
-    "sortOrder": 489
+    "sortOrder": 488
   },
   {
     "id": "i-xZsZzd9",
@@ -21838,7 +21818,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 490
+    "sortOrder": 489
   },
   {
     "id": "i-r9dGJJx",
@@ -21875,7 +21855,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "show",
-    "sortOrder": 491
+    "sortOrder": 490
   },
   {
     "id": "i-3Mj4gtS",
@@ -21919,7 +21899,7 @@ export const galleryData = [
       "Other/Photo-Shoots/South-Dakota"
     ],
     "visibility": "show",
-    "sortOrder": 492
+    "sortOrder": 491
   },
   {
     "id": "i-N7Wb28h",
@@ -21951,7 +21931,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 493
+    "sortOrder": 492
   },
   {
     "id": "i-jGrpdg5",
@@ -21996,7 +21976,7 @@ export const galleryData = [
       "Other/Photo-Shoots/South-Dakota"
     ],
     "visibility": "show",
-    "sortOrder": 494,
+    "sortOrder": 493,
     "themes": {
       "the-chaise": 18,
       "the-chase": 18
@@ -22043,7 +22023,7 @@ export const galleryData = [
     "rating": 2,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 495,
+    "sortOrder": 494,
     "themes": {
       "women-of-the-west": 63,
       "frontier-women": 111
@@ -22088,7 +22068,7 @@ export const galleryData = [
     "rating": 2,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 496,
+    "sortOrder": 495,
     "themes": {
       "cowboys-and-horses": 74
     }
@@ -22126,7 +22106,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 497,
+    "sortOrder": 496,
     "themes": {
       "firelight-shadow": 63,
       "frontier-women": 75,
@@ -22164,7 +22144,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 498,
+    "sortOrder": 497,
     "themes": {
       "hardship-sorrow": 37,
       "sketches-of-legends": 117
@@ -22201,7 +22181,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 499,
+    "sortOrder": 498,
     "themes": {
       "women-of-the-west": 47,
       "frontier-women": 94
@@ -22237,7 +22217,7 @@ export const galleryData = [
     "rating": 2,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 500,
+    "sortOrder": 499,
     "themes": {
       "women-of-the-west": 60,
       "frontier-women": 108,
@@ -22288,7 +22268,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 501,
+    "sortOrder": 500,
     "themes": {
       "hardship-sorrow": 39,
       "love-goodbye": 47,
@@ -22325,7 +22305,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 502,
+    "sortOrder": 501,
     "themes": {
       "sketches-of-legends": 110
     }
@@ -22370,7 +22350,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 503,
+    "sortOrder": 502,
     "themes": {
       "cowboys-and-horses": 36,
       "dust-thunder": 27,
@@ -22421,7 +22401,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "show",
-    "sortOrder": 504,
+    "sortOrder": 503,
     "themes": {
       "firelight-shadow": 64,
       "frontier-women": 76,
@@ -22475,7 +22455,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 505,
+    "sortOrder": 504,
     "themes": {
       "cowboys-and-horses": 25,
       "dust-thunder": 28,
@@ -22516,7 +22496,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 506
+    "sortOrder": 505
   },
   {
     "id": "i-ZDGhLps",
@@ -22553,7 +22533,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 507,
+    "sortOrder": 506,
     "themes": {
       "dust-thunder": 32,
       "sketches-of-legends": 114
@@ -22609,7 +22589,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 508,
+    "sortOrder": 507,
     "themes": {
       "love-goodbye": 58
     }
@@ -22659,7 +22639,7 @@ export const galleryData = [
     "rating": 5,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 509,
+    "sortOrder": 508,
     "themes": {
       "firelight-shadow": 2,
       "whispering-reflection": 3
@@ -22715,7 +22695,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 510,
+    "sortOrder": 509,
     "themes": {
       "sketches-of-legends": 145
     }
@@ -22767,7 +22747,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 511,
+    "sortOrder": 510,
     "themes": {
       "whispering-reflection": 114
     }
@@ -22822,7 +22802,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 512,
+    "sortOrder": 511,
     "themes": {
       "firelight-shadow": 85,
       "law-outlaws": 88,
@@ -22877,7 +22857,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 513
+    "sortOrder": 512
   },
   {
     "id": "i-mBD4f67",
@@ -22929,7 +22909,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 514,
+    "sortOrder": 513,
     "themes": {
       "sketches-of-legends": 143
     }
@@ -22967,7 +22947,7 @@ export const galleryData = [
     "rating": 0,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 515,
+    "sortOrder": 514,
     "themes": {
       "the-chaise": 11,
       "the-chase": 11
@@ -23001,7 +22981,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 516
+    "sortOrder": 515
   },
   {
     "id": "i-TNm6hQ3",
@@ -23052,7 +23032,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 517,
+    "sortOrder": 516,
     "themes": {
       "women-of-the-west": 45,
       "frontier-women": 86
@@ -23103,7 +23083,7 @@ export const galleryData = [
     "rating": 2,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 518,
+    "sortOrder": 517,
     "themes": {
       "women-of-the-west": 49,
       "frontier-women": 96
@@ -23138,7 +23118,7 @@ export const galleryData = [
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 519
+    "sortOrder": 518
   },
   {
     "id": "i-6GcghXb",
@@ -23186,7 +23166,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "hidden",
-    "sortOrder": 520
+    "sortOrder": 519
   },
   {
     "id": "i-f8VznFc",
@@ -23233,7 +23213,7 @@ export const galleryData = [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
     "visibility": "hidden",
-    "sortOrder": 521,
+    "sortOrder": 520,
     "themes": {
       "sketches-of-legends": 101
     }
@@ -23278,7 +23258,7 @@ export const galleryData = [
     "rating": 3,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 522,
+    "sortOrder": 521,
     "themes": {
       "cowboys-and-horses": 49
     }
@@ -23324,7 +23304,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "hidden",
-    "sortOrder": 523
+    "sortOrder": 522
   },
   {
     "id": "i-zsjbqS8",
@@ -23363,7 +23343,7 @@ export const galleryData = [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
     "visibility": "hidden",
-    "sortOrder": 524
+    "sortOrder": 523
   },
   {
     "id": "i-HfWwLLf",
@@ -23395,6 +23375,52 @@ export const galleryData = [
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+    "visibility": "hidden",
+    "sortOrder": 524
+  },
+  {
+    "id": "i-VVwZ7gM",
+    "title": "Brothers of the Open Country",
+    "description": "A powerful painterly Western portrait depicting the quiet unity between two frontier companions—one Indigenous, one a seasoned trapper—standing beside a saddled horse under dramatic skies. Rich textures and warm, cinematic tones bring emotional depth to the scene, capturing a bond forged through shared experience on the open range. Wayne Heim’s fine art technique blends illustration-inspired detail with photographic authenticity, offering a narrative-rich tableau ideal for collectors of Western fine art, historical narratives, and evocative Americana.",
+    "alt": "Indigenous scout and frontier trapper standing together with a horse, painterly Western portrait.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MCjVLLscvMzW9txvBcpWQPBbzgNPwjQwS4sWtqqvG/L/_HF29136-Edit-Edit-3-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/McVdwkfTLNQJN9FDbBKT3HtzzCrwt2qkjkdgPLBtS/M/_HF29136-Edit-Edit-3-2-M.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/A",
+    "keywords": [
+      "western fine art photography",
+      "indigenous scout portrait",
+      "frontier trapper portrait",
+      "cross cultural western story",
+      "painterly western art",
+      "americana fine art",
+      "historical western imagery",
+      "frontier companionship",
+      "museum quality western decor",
+      "cowboy portraits",
+      "narrative Western art",
+      "cowboy artwork",
+      "cowboy art",
+      "fine art Western photography",
+      "painterly Western photograph",
+      "Western Cowboy Portraits",
+      "western cowboy art",
+      "painterly Western images",
+      "wild west painterly photography",
+      "western painterly photography",
+      "cowboy portrait",
+      "cowboy painting art",
+      "fine art cowboy photography",
+      "historic western prints",
+      "painterly technique"
+    ],
+    "story": "Sharp fall air hangs heavy like morning dew.\nChange is in the air—seasons and society, both forcing their own agenda upon this land.\n\nThey come by wagonload now, each one hoping for a new beginning—hunting for answers, a fresh start, or just a path forward.\n\nCarving, forging, reshaping this life with Eastern wealth and virtues, they claim what’s ours for theirs.\nYears, old friend, we shared this place as brothers—one mind - wrapped in different cloths.\n\nClouds of change gather, dappled and restless, over the valley floor.\nBoth season and change move at will, ushering a future that neither hope nor protest can hold back.",
+    "notes": "This piece exemplifies Heim’s ability to portray interpersonal nuance within a painterly, historically grounded aesthetic. The triangular composition—horse, Indigenous scout, trapper—creates a stable visual structure that reinforces the sense of alliance. Textural layering and soft atmospheric light evoke the tonal sensitivity of classic Western illustrators while preserving the authenticity of lived experience. The work carries emotional and cultural resonance, making it a standout selection for collectors who appreciate Western art that honors story, lineage, and human connection.",
+    "rating": 5,
+    "galleries": [],
     "visibility": "hidden",
     "sortOrder": 525
   }

@@ -3,7 +3,7 @@
     "version": "1.0",
     "description": "Edition state database - source of truth for edition counts and sales",
     "warning": "DO NOT manually edit sold counts. Use EditorPro or admin tools.",
-    "lastUpdated": "2026-01-23T03:02:54.933Z"
+    "lastUpdated": "2026-01-23T18:57:24.420Z"
   },
   "i-ncFcHDM:chronicle": {
     "imageId": "i-ncFcHDM",
@@ -4701,5 +4701,225 @@
     "printedBySize": {},
     "released": true,
     "firstReleaseDate": "2026-01-23T03:02:54.897Z"
+  },
+  "i-jL4Gk5N:engrained": {
+    "imageId": "i-jL4Gk5N",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:05:09.227Z"
+  },
+  "i-swWgKsW:engrained": {
+    "imageId": "i-swWgKsW",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:11:14.794Z"
+  },
+  "i-5VmRqpZ:engrained": {
+    "imageId": "i-5VmRqpZ",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:14:13.274Z"
+  },
+  "i-hCk9fs9:engrained": {
+    "imageId": "i-hCk9fs9",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:15:36.730Z"
+  },
+  "i-4pQCmVZ:engrained": {
+    "imageId": "i-4pQCmVZ",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:16:59.077Z"
+  },
+  "i-vhmHCCM:engrained": {
+    "imageId": "i-vhmHCCM",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:18:06.330Z"
+  },
+  "i-bVSh9xt:engrained": {
+    "imageId": "i-bVSh9xt",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:25:13.811Z"
+  },
+  "i-rxQn29x:engrained": {
+    "imageId": "i-rxQn29x",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:29:45.753Z"
+  },
+  "i-svbQj25:engrained": {
+    "imageId": "i-svbQj25",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:34:52.940Z"
+  },
+  "i-zdvVgqx:engrained": {
+    "imageId": "i-zdvVgqx",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:40:14.466Z"
+  },
+  "i-wV53528:engrained": {
+    "imageId": "i-wV53528",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:41:07.818Z"
+  },
+  "i-B8sDF3M:engrained": {
+    "imageId": "i-B8sDF3M",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:41:56.503Z"
+  },
+  "i-LdQzCRt:engrained": {
+    "imageId": "i-LdQzCRt",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:42:32.376Z"
+  },
+  "i-8pfC4qn:engrained": {
+    "imageId": "i-8pfC4qn",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:43:13.257Z"
+  },
+  "i-PnGsDQp:engrained": {
+    "imageId": "i-PnGsDQp",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:45:30.243Z"
+  },
+  "i-G8gfsL5:engrained": {
+    "imageId": "i-G8gfsL5",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:46:11.062Z"
+  },
+  "i-J6Gdmr4:engrained": {
+    "imageId": "i-J6Gdmr4",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:46:56.998Z"
+  },
+  "i-x6rrj3V:engrained": {
+    "imageId": "i-x6rrj3V",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:47:34.083Z"
+  },
+  "i-Lk9XZKB:engrained": {
+    "imageId": "i-Lk9XZKB",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:50:15.771Z"
+  },
+  "i-gFTwXkq:engrained": {
+    "imageId": "i-gFTwXkq",
+    "series": "engrained",
+    "editionLimit": 50,
+    "sold": 0,
+    "printed": 1,
+    "soldBySize": {},
+    "printedBySize": {},
+    "released": true,
+    "firstReleaseDate": "2026-01-23T18:57:24.212Z"
   }
 }

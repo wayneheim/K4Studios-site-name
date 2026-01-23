@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-01-23T03:03:16.673Z",
+    "lastUpdated": "2026-01-23T18:57:35.782Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z"
   },
   "images": {
@@ -1262,7 +1262,26 @@
     "i-5VmRqpZ:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-nSmBeUX",
     "i-BmwzGg4:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-ruJpmEt",
     "i-gM5crmq:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-HYvWJfN",
-    "i-nmDtVXP:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-DeCPSHg"
+    "i-nmDtVXP:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-DeCPSHg",
+    "i-jL4Gk5N:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-8VsgCUL",
+    "i-swWgKsW:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-Ebr2mdA",
+    "i-hCk9fs9:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-TPNwC4P",
+    "i-4pQCmVZ:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-hwZYmXS",
+    "i-vhmHCCM:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-4zdhEd8",
+    "i-bVSh9xt:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-CLkNrfu",
+    "i-rxQn29x:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-HpmNTgg",
+    "i-svbQj25:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-zdBsNmb",
+    "i-zdvVgqx:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-PPATUN7",
+    "i-gFTwXkq:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-xr4aTUM",
+    "i-wV53528:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-hQ7xvZA",
+    "i-B8sDF3M:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-WG8Cq3g",
+    "i-LdQzCRt:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-5u3Nh69",
+    "i-8pfC4qn:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-8jPuuC6",
+    "i-PnGsDQp:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-UXjFth7",
+    "i-G8gfsL5:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-abWUgjU",
+    "i-J6Gdmr4:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-LgrXJc3",
+    "i-x6rrj3V:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-sMhWbkg",
+    "i-Lk9XZKB:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-GECpCLa"
   },
   "series": {
     "s-BB65wHk": {
@@ -31189,8 +31208,8 @@
         {
           "imageId": "i-4QZ7HPR",
           "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
-          "title": "Photography Printed On Wood In Fine Art",
-          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/McfHBwQXhtv2bP3SsZ4rRdckwtgKkHk74hGrd6ZkB/L/Cough%20and%20Covenant%2016%20x%2020%20copy-L.jpg"
+          "title": "Cough and Covenant",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/L97B7ZZxksrLW5z8NDSJDx2RTbZdfcBbfNCT8NZVX/XL/Cough%20and%20Covenant%2016%20x%2020%20copy-XL.jpg"
         }
       ],
       "linkedCount": 1,
@@ -31208,8 +31227,8 @@
         {
           "imageId": "i-5VmRqpZ",
           "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
-          "title": "Photo Printed On Wood Panel Study",
-          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/LJxzpQvJGxNSVrQ7mwrz63GtFmRpbXZfs48pVHqrG/L/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-L.jpg"
+          "title": "Capturing Baltic Birch Wall Art",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/KGL3sL8qcVKdp7Vq8nz4N92mK9PccZCj4m7jSmQ6Q/XL/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-XL.jpg"
         }
       ],
       "linkedCount": 1,
@@ -31227,7 +31246,7 @@
         {
           "imageId": "i-BmwzGg4",
           "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
-          "title": "Fine Art Photo Printed On Wood Panel",
+          "title": "Brothers of the Open Country",
           "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-BmwzGg4/0/M96z5tk7w2Hp2fC6RwrZZTGtT4sgMWmmH3qbJx5mq/XL/Brothers%20of%20the%20Open%20Country%2034%20x%2020%20copy-XL.jpg"
         }
       ],
@@ -31265,12 +31284,372 @@
         {
           "imageId": "i-nmDtVXP",
           "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
-          "title": "The Essence Of Wood-Mounted Art",
+          "title": "This Is the Hand — I Can Feel It",
           "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/KwNcm2hP5xh7pBSXbLqqXFrjtv2GvhBkb9JzJjdDd/XL/This%20is%20the%20Hand%2018%20x%2024-XL.jpg"
         }
       ],
       "linkedCount": 1,
       "createdAt": "2026-01-23T03:03:16.673Z"
+    },
+    "s-8VsgCUL": {
+      "primaryImageId": "i-jL4Gk5N",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Color of Conviction",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-jL4Gk5N/0/MtG8SF86dHpCjxtLhD8Rz6JDNkQHWRPD68HkctJd9/XL/Color%20of%20Conviction%2016%20x%2024%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-jL4Gk5N",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Color of Conviction",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-jL4Gk5N/0/MtG8SF86dHpCjxtLhD8Rz6JDNkQHWRPD68HkctJd9/XL/Color%20of%20Conviction%2016%20x%2024%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:05:27.213Z"
+    },
+    "s-Ebr2mdA": {
+      "primaryImageId": "i-swWgKsW",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Day in Review",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-swWgKsW/0/KwrmbngJ6qKKmG9B2VST5XV6gGrFGrGLcf5K7txd9/XL/Day%20In%20Review%2018%20x%2030%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-swWgKsW",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Day in Review",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-swWgKsW/0/KwrmbngJ6qKKmG9B2VST5XV6gGrFGrGLcf5K7txd9/XL/Day%20In%20Review%2018%20x%2030%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:11:17.735Z"
+    },
+    "s-TPNwC4P": {
+      "primaryImageId": "i-hCk9fs9",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "End of His Rope",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hCk9fs9/0/MpRVxTC6Cbc6w9mXfm6VmhPgLTrV7pr7T7rhKcqbj/XL/End%20of%20His%20Rope%2016%20x%2024%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-hCk9fs9",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "End of His Rope",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hCk9fs9/0/MpRVxTC6Cbc6w9mXfm6VmhPgLTrV7pr7T7rhKcqbj/XL/End%20of%20His%20Rope%2016%20x%2024%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:15:52.125Z"
+    },
+    "s-hwZYmXS": {
+      "primaryImageId": "i-4pQCmVZ",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "For Better or Worse",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4pQCmVZ/0/MPKPRJGkVjCJNL8Gg88jDM5GGPmjN47zDxxj8r4Z2/XL/For%20Better%20or%20For%20Worse%2016%20x%2024%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-4pQCmVZ",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "For Better or Worse",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4pQCmVZ/0/MPKPRJGkVjCJNL8Gg88jDM5GGPmjN47zDxxj8r4Z2/XL/For%20Better%20or%20For%20Worse%2016%20x%2024%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:17:08.191Z"
+    },
+    "s-4zdhEd8": {
+      "primaryImageId": "i-vhmHCCM",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Jane",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-vhmHCCM/0/M6r6tkggWScthhbqChbpvwTqQNxBhCvbFjsP9brt4/XL/Jane%2024%20x%2036%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-vhmHCCM",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Jane",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-vhmHCCM/0/M6r6tkggWScthhbqChbpvwTqQNxBhCvbFjsP9brt4/XL/Jane%2024%20x%2036%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:18:10.607Z"
+    },
+    "s-CLkNrfu": {
+      "primaryImageId": "i-bVSh9xt",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-bVSh9xt/0/L7hpJ3KDL5TQ3S44XDkZVKdN4HTsk6Z94sSWgVSTL/XL/Justified%20or%20Damned%2036%20x%2026%20c2%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-bVSh9xt",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-bVSh9xt/0/L7hpJ3KDL5TQ3S44XDkZVKdN4HTsk6Z94sSWgVSTL/XL/Justified%20or%20Damned%2036%20x%2026%20c2%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:25:17.997Z"
+    },
+    "s-HpmNTgg": {
+      "primaryImageId": "i-rxQn29x",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Last Hand",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-rxQn29x/0/LLpP9qSxK6BhKrTTsbWcw5LRC46grLJwnm8vgLGHJ/XL/Last%20Hand%2042%20x%2030%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-rxQn29x",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Last Hand",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-rxQn29x/0/LLpP9qSxK6BhKrTTsbWcw5LRC46grLJwnm8vgLGHJ/XL/Last%20Hand%2042%20x%2030%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:29:50.202Z"
+    },
+    "s-zdBsNmb": {
+      "primaryImageId": "i-svbQj25",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Lifted",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-svbQj25/0/NBzdqPRZ8K5zNbb92f8B4cH9cTt7JXSHkVTL4Dq4s/XL/Lifted%2016%20x%2036%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-svbQj25",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Lifted",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-svbQj25/0/NBzdqPRZ8K5zNbb92f8B4cH9cTt7JXSHkVTL4Dq4s/XL/Lifted%2016%20x%2036%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:34:56.108Z"
+    },
+    "s-PPATUN7": {
+      "primaryImageId": "i-zdvVgqx",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Lord Help Us All",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-zdvVgqx/0/M4gGrdRkBhNhbvw2FPpQ6Hb4ZbMQ3snZ5VnCbnS72/XL/Lord%20Help%20Us%20All%2016%20x%2036%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-zdvVgqx",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Lord Help Us All",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-zdvVgqx/0/M4gGrdRkBhNhbvw2FPpQ6Hb4ZbMQ3snZ5VnCbnS72/XL/Lord%20Help%20Us%20All%2016%20x%2036%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:40:17.947Z"
+    },
+    "s-xr4aTUM": {
+      "primaryImageId": "i-gFTwXkq",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Baltic Birch Wall Art And Photography Printed On Wood",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/0/MMGs3tBxK5Bmf4r2bML7StkqHk9Dq5nQQR9L8Jctf/XL/Loaded%20for%20Bear%2016%20x%2020%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-gFTwXkq",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Loaded for Bear",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/0/MMGs3tBxK5Bmf4r2bML7StkqHk9Dq5nQQR9L8Jctf/XL/Loaded%20for%20Bear%2016%20x%2020%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "createdAt": "2026-01-23T18:40:24.411Z"
+    },
+    "s-hQ7xvZA": {
+      "primaryImageId": "i-wV53528",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Show me a sign.",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wV53528/0/L43jkVzd83dRBjfKhhZVr8Ps82MxkbFVjqzKxHkC4/XL/Lord%20Send%20Me%20a%20Sign%2016%20x%2020%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-wV53528",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Show me a sign.",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wV53528/0/L43jkVzd83dRBjfKhhZVr8Ps82MxkbFVjqzKxHkC4/XL/Lord%20Send%20Me%20a%20Sign%2016%20x%2020%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:41:18.225Z"
+    },
+    "s-WG8Cq3g": {
+      "primaryImageId": "i-B8sDF3M",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Meant What I Said!",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-B8sDF3M/0/KfsXQnSkdThMQxVtQC4zzFWRxD8DRGz3GRNPfSP5m/XL/Meant%20What%20I%20Said%2030%20x%2050%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-B8sDF3M",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Meant What I Said!",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-B8sDF3M/0/KfsXQnSkdThMQxVtQC4zzFWRxD8DRGz3GRNPfSP5m/XL/Meant%20What%20I%20Said%2030%20x%2050%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:41:59.902Z"
+    },
+    "s-5u3Nh69": {
+      "primaryImageId": "i-LdQzCRt",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Night Raid",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-LdQzCRt/0/KWjFf3czXHD7TVHxQGwpHvFtB3x2w8vS2D4SMCZHX/XL/Night%20Raid%2030%20x%2022%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-LdQzCRt",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Night Raid",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-LdQzCRt/0/KWjFf3czXHD7TVHxQGwpHvFtB3x2w8vS2D4SMCZHX/XL/Night%20Raid%2030%20x%2022%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:42:39.782Z"
+    },
+    "s-8jPuuC6": {
+      "primaryImageId": "i-8pfC4qn",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "One Way Out",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8pfC4qn/0/Mf77hsNvZhWP94Rpf5x4jDmVKQPD7SKX3XDpctqwB/XL/One%20Way%20Out%2036%20x%2026%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-8pfC4qn",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "One Way Out",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8pfC4qn/0/Mf77hsNvZhWP94Rpf5x4jDmVKQPD7SKX3XDpctqwB/XL/One%20Way%20Out%2036%20x%2026%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:43:20.461Z"
+    },
+    "s-UXjFth7": {
+      "primaryImageId": "i-PnGsDQp",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Till Death Do Us Part",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PnGsDQp/0/LkJhM74SGrQZdvMdLGwMXcbS38vGPsbccj6H2DWmD/XL/Till%20Death%20Do%20Us%20Part%2018%20x%2030-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-PnGsDQp",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Till Death Do Us Part",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PnGsDQp/0/LkJhM74SGrQZdvMdLGwMXcbS38vGPsbccj6H2DWmD/XL/Till%20Death%20Do%20Us%20Part%2018%20x%2030-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:45:34.190Z"
+    },
+    "s-abWUgjU": {
+      "primaryImageId": "i-G8gfsL5",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Untimely Parting",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-G8gfsL5/0/Ng7DQh5tSD3jvrcTkPR6McjKvbXwcZHrLZ5f27pWJ/XL/Untimely%20Parting%2016%20x%2020-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-G8gfsL5",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Untimely Parting",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-G8gfsL5/0/Ng7DQh5tSD3jvrcTkPR6McjKvbXwcZHrLZ5f27pWJ/XL/Untimely%20Parting%2016%20x%2020-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:46:24.026Z"
+    },
+    "s-LgrXJc3": {
+      "primaryImageId": "i-J6Gdmr4",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "\"Special Delivery\"",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/KfRRCJRpH6tz8ztTMbp8d2hsckqBNnNqdj926NsgJ/XL/Welcome%20Party%2030%20x%2020-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-J6Gdmr4",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "\"Special Delivery\"",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/KfRRCJRpH6tz8ztTMbp8d2hsckqBNnNqdj926NsgJ/XL/Welcome%20Party%2030%20x%2020-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:47:05.944Z"
+    },
+    "s-sMhWbkg": {
+      "primaryImageId": "i-x6rrj3V",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "This Is Where I Stand",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-x6rrj3V/0/MBQ9hdCn55qZPPHLQV7Fkpn74wKH5794vjT2PgLjn/XL/Where%20I%20Stand%2018%20x%2024-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-x6rrj3V",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "This Is Where I Stand",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-x6rrj3V/0/MBQ9hdCn55qZPPHLQV7Fkpn74wKH5794vjT2PgLjn/XL/Where%20I%20Stand%2018%20x%2024-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:47:50.535Z"
+    },
+    "s-GECpCLa": {
+      "primaryImageId": "i-Lk9XZKB",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Worth Every Mile",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB/0/MHPqRDqXckm64s6dtbz8j56FTXZjJrf246tntQgxM/XL/Worth%20Every%20Mile%2016%20x%2024-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Lk9XZKB",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Worth Every Mile",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB/0/MHPqRDqXckm64s6dtbz8j56FTXZjJrf246tntQgxM/XL/Worth%20Every%20Mile%2016%20x%2024-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T18:50:18.787Z"
     }
   }
 }
