@@ -1,3 +1,6 @@
+# Redirect /Other to Glossary (no landing page exists)
+/Other  /Glossary  301
+
 # Block access to source files (should never be crawled)
 /src/*  404!
 
