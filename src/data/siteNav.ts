@@ -395,6 +395,7 @@ export const siteNav = [
           },
 {
             "label": "By Theme",
+            "href": "/Galleries/Fine-Art-Photography/Landscapes/By-Theme",
             "children": [
 {
                 "label": "Mountains",
