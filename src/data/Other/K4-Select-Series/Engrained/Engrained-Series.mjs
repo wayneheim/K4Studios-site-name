@@ -148,11 +148,12 @@ export const galleryData = [
   },
   {
     "id": "i-Shpfdbm",
-    "title": "Dust and Distance — A Cowboy’s Goodbye",
+    "title": "One Last Look",
     "description": "A striking Western portrait capturing the quiet weight of goodbye. This painterly fine art image features a bearded cowboy in a red shirt and wide-brimmed hat, standing alone after a parting moment. Wayne Heim’s signature technique blends textured layers, subdued color tones, and evocative storytelling to reflect the emotional solitude of the American frontier. Ideal for collectors seeking Western wall art that feels cinematic, honest, and rooted in timeless grit. © Wayne Heim",
     "alt": "Cowboy watching stagecoach leave – painterly fine art wood print, Engrained Series",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/LMBSDtzhV4Z9Phctd8qgSHzdDKNmng4X4VKdDLSjw/XL/Cowboy-Long-Goodbye-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/A",
+
     "keywords": [
       "western fine art photography",
       "color western portrait",
@@ -170,19 +171,23 @@ export const galleryData = [
       "character study",
       "warm palette"
     ],
+
     "story": "As the lone coach disappeared down the lonely road, he stood silent—rooted by more than trail dust. Would their paths ever cross again? As a man of few but deliberate words, had he said too little… too much? Should he have asked her not to go?\n\nThe questions would hang heavy on his heart — like the low-lying clouds blanketing the valley floor, choking out the day’s first light.\n\nBut the decision was made. And the road ahead—was now his alone to walk.",
     "notes": "Wayne Heim’s work resists easy categorization. It fuses the emotional gravity of illustration with the immediacy of photography, crafting visual narratives that feel at once timeless and intimate. In this piece, a quiet departure becomes a moment of reckoning—his subject frozen not by indecision, but by the weight of what’s already been decided. The cloud-laden valley mirrors the silence between them; the light, muted and hesitant, becomes part of the emotional architecture.\n\nThere are echoes of the Pictorialist tradition—softened edges, diffused light, and a painter’s grasp of structure—but Heim’s images never lean on nostalgia. Instead, they distill a mood: one that feels cinematic, interior, and poised between myth and memory.\n\nThis isn’t painterly surface for painterly’s sake. Where others mimic, Heim defines. His subjects aren’t costumes posed in front of a lens, but characters suspended in time—carrying the emotional freight of history, love, loss, and consequence.\n\nIn a genre often diluted by trope and imitation, this image refuses cliché. It’s not about the goodbye—it’s about everything left unsaid after.",
     "rating": 5,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/K4-Select-Series/Engrained/Engrained-Series"
     ],
+
     "visibility": "show",
     "sortOrder": 3,
     "editionSize": 50,
     "imageSize": "24\" × 36\"",
     "price": "$3000",
     "linkedImageId": "i-ncFcHDM",
-    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    contentSource: "human"
   },
   {
     "id": "i-mrHbrNb",
@@ -819,11 +824,12 @@ export const galleryData = [
   },
   {
     "id": "i-ZWDpsxz",
-    "title": "Farewell! – Western Departure",
-    "description": "Painterly Wild West themed photography of a lady waving goodbye from the train. Embrace the spirit of the Old West with Wayne Heim’s captivating cowboy art and western photographs. Each piece of his fine art photography, infused with a unique painterly photography style, captures the raw emotion and timeless beauty of the frontier. Bring the essence of the Wild West into your space with stunning western art that immortalizes the cowboy spirit. © Wayne Heim",
+    "title": "Wave Goodbye",
+    "description": "A painterly Western fine art photograph capturing a quiet farewell on the American frontier. Rendered with a soft, pictorialist approach, the image emphasizes restraint, atmosphere, and emotional stillness over spectacle. Light, posture, and negative space work together to suggest departure, memory, and the human cost of movement across the West. This cinematic Western photograph reflects the tradition of narrative-driven frontier imagery while remaining firmly contemporary in its execution. © Wayne Heim",
     "alt": "Lady waving goodbye from train – painterly wood print, Engrained Series",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/K3QvRVJkgM28sjdKQBvNjvdLGN4NbNs5mzQPTzkXS/XL/Settler-Wave-Goodbye-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/A",
+
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -858,21 +864,31 @@ export const galleryData = [
       "Wild West Painterly Photography",
       "Wild West Photography",
       "Wild West Portrait Photography",
-      "Wild West Themed Photography"
+      "Wild West Themed Photography",
+      "painterly Western photograph",
+      "fine art Western photography",
+      "cowboy portraits",
+      "American frontier portraits",
+      "frontier photography",
+      "fine art prints on wood"
     ],
-    "story": "Her hand lifts in one final wave—the promise of return caught between smoke and memory.",
-    "notes": "",
+
+    "story": "The train is already breathing—steam lifting, iron shifting its weight.\nShe doesn’t rush the moment.\nThere’s still time left in the space between motion and departure.\n\nHer hand stays raised longer than it needs to.\nNot waving so much as holding the feeling in place,\nas if letting go too early might make the leaving real.\n\nThe sound will come.\nThe distance will follow.\nFor now, she stands exactly where memory decides to stay.",
+    "notes": "This image leans into the pictorialist tradition, favoring atmosphere and emotional suggestion over literal description. The softened edges, controlled contrast, and disciplined use of negative space place the work in quiet conversation with early narrative photography and illustrators who understood restraint as a storytelling tool.\n\nRather than dramatizing the departure, the composition allows the farewell to unfold internally. The raised hand becomes a compositional anchor—small, human, and deliberate—holding tension against the implied motion of the train. The result is a Western image less concerned with destination than with consequence, inviting the viewer to complete the story long after the moment has passed.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/K4-Select-Series/Engrained/Engrained-Series"
     ],
+
     "visibility": "show",
     "sortOrder": 20,
     "editionSize": 50,
     "imageSize": "20\" × 24\"",
     "price": "$1500",
     "linkedImageId": "i-w3JBvXs",
-    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    contentSource: "human"
   },
   {
     "id": "i-HZVV8J2",
@@ -1538,9 +1554,9 @@ export const galleryData = [
   },
   {
     "id": "i-gM5crmq",
-    "title": "Fine Art Wood-Mounted Art",
-    "description": "Immerse yourself in wood-mounted art with this stunning baltic birch wall art by Wayne Heim. Capturing photo printed on wood panel, photography printed on wood, and printed on birch, it's a must-have for collectors of wood-mounted art. Including photo printed on wood panel themes. © Wayne Heim",
-    "alt": "Wayne Heim's wood-mounted art artwork",
+    "title": `Pinkerton's Grasp`,
+    "description": `“Pinkerton’s Grasp” depicts a desperate frontier struggle in painterly, cinematic tones. A lawman’s authority falters in the grip of consequence—badges and weapons no longer shields, but reminders of lines crossed and debts come due. The composition crackles with physical tension and moral ambiguity, leaving the viewer to wonder who, if anyone, truly holds the high ground. A striking choice for collectors who appreciate dramatic Western fine art and the deeper stories behind the Old West’s rough justice. © Wayne Heim`,
+    "alt": `Painterly Western scene of a violent struggle between three men on a porch—one man choking another while a third looks on, gun in hand, amid a tense confrontation.`,
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/0/NZwmqW58gZ59TXm3z56W4PKLX5mkjvM2Xfcv9Nhgd/XL/Pinkertons%20Grasp%2016%20x%2020-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/0/NZwmqW58gZ59TXm3z56W4PKLX5mkjvM2Xfcv9Nhgd/XL/Pinkertons%20Grasp%2016%20x%2020-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/0/MHgwWDSd9zR2hvZkXLvKXCwmRHNQsTCP8gcVKzSx3/L/Pinkertons%20Grasp%2016%20x%2020-L.jpg",
@@ -1548,28 +1564,68 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/0/NVs95TTZdGwKkJ2F5nXWGvftvf8D6BcZcVXwZTg3P/S/Pinkertons%20Grasp%2016%20x%2020-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/A",
+
     "keywords": [
-      "Civil",
-      "War",
-      "Heros",
-      "ride",
-      "wood-mounted art",
-      "baltic birch wall art",
-      "photo printed on wood panel",
-      "photography printed on wood",
-      "printed on birch",
-      "wood panel art",
-      "historically inspired photo on wood"
+      "western fine art",
+      "painterly photography",
+      "narrative western art",
+      "lawman confrontation artwork",
+      "Pinkerton detective story",
+      "Old West justice scene",
+      "violent frontier image",
+      "cinematic western struggle",
+      "moral ambiguity art",
+      "collectible western print",
+      "museum quality western art",
+      "cowboy artwork",
+      "fine art Western photography",
+      "painterly Western photograph",
+      "Western Cowboy Portraits",
+      "wild west photography",
+      "Western cowboys",
+      "cowboy portraits",
+      "Explore Western Photography",
+      "painterly Western images",
+      "painterly cowboy photography",
+      "Western themed art",
+      "wild west painterly photography",
+      "painterly technique",
+      "outlaw portraits",
+      "cowboy painting art",
+      "cowboy portrait",
+      "fine art cowboy photography",
+      "historic western prints",
+      "cowboy fine art prints",
+      "cowboy art",
+      "western art for rustic interiors",
+      "vintage western photography",
+      "photography western",
+      "painterly cowboy portraits",
+      "western inspired photography"
     ],
-    "story": "Wayne Heim's exploration of wood panel art comes alive in this piece, showcasing photo printed on wood panel and printed on birch. A testament to historically inspired photo on wood in fine art.",
-    "notes": "",
-    "rating": 0,
+
+    "story": `Even moral rot must collect its dues. Hubris… power… unchecked orders— and now, at last, he’s gone too far. A badge… a weapon… the tools that once shielded his conscience
+now betray him. One misstep, one reach too far, and the choke of consequence finds them all. A desperate struggle— a reckoning in motion— one final grasp at life’s blind justice.`,
+
+    "notes": `“Pinkerton’s Grasp” is a study in the thin lines between order and chaos, justice and vengeance on the Western frontier. The chokehold at the center of the frame is both literal and symbolic—a reckoning played out in muscle, grit, and the artifacts of law gone rotten.
+
+Subdued color and sharp texture emphasize the scene’s raw intensity, while the posture of each figure reveals shifting power: one overreaches, one resists, and one stands poised on the edge, weapon drawn but judgment withheld. The ambiguity of who is right, who is wrong, and what justice means is left unresolved—echoing the lawless realities of Western myth.
+
+For collectors, this work offers more than action: it’s a portrait of consequence, rendered with painterly gravitas and narrative bite.`,
+
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
+
     "visibility": "show",
     "sortOrder": 40,
-    "first_seen": "2026-01-22"
+    "first_seen": "2026-01-22",
+    editionSize: 50,
+    linkedImageId: "i-kQfftQ2",
+    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    contentSource: `human`
   },
   {
     "id": "i-nmDtVXP",
@@ -1583,6 +1639,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/MXTZXQ5kN5k2F9gS6PHm24nppLM7XRcWS2D5MwFD5/S/This%20is%20the%20Hand%2018%20x%2024-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/A",
+
     "keywords": [
       "Civil",
       "War",
@@ -1595,15 +1652,19 @@ export const galleryData = [
       "photography printed on wood",
       "printed on birch"
     ],
+
     "story": "Wayne Heim's exploration of printed on birch comes alive in this piece, showcasing photo printed on wood panel and photography printed on wood. A testament to museum quality historical prints in fine art.",
     "notes": "",
     "rating": 0,
+
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
+
     "visibility": "show",
     "sortOrder": 41,
-    "first_seen": "2026-01-22"
+    "first_seen": "2026-01-22",
+    editionSize: 50
   },
   {
     "id": "i-PnGsDQp",

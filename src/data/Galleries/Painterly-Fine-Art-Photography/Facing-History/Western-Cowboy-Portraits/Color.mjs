@@ -24,7 +24,7 @@ export const galleryData = [
   },
   {
     "id": "i-ncFcHDM",
-    "title": "Dust and Distance — A Cowboy’s Goodbye",
+    "title": "One Last Look",
     "description": "A striking Western portrait capturing the quiet weight of goodbye. This painterly fine art image features a bearded cowboy in a red shirt and wide-brimmed hat, standing alone after a parting moment. Wayne Heim’s signature technique blends textured layers, subdued color tones, and evocative storytelling to reflect the emotional solitude of the American frontier. Ideal for collectors seeking Western wall art that feels cinematic, honest, and rooted in timeless grit. © Wayne Heim",
     "alt": "Western cowboy standing alone in painterly morning light, red shirt and hat, reflecting after a parting moment.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KNVfXXkzZWQPzsknRPt6jKWTWbr7q9gSJHFHLd8kr/XL/cowboy%20photography%20painting_HF29245-250-XL.jpg",
@@ -8441,7 +8441,7 @@ export const galleryData = [
   },
   {
     "id": "i-w3JBvXs",
-    "title": "Holding the Goodbye",
+    "title": "Wave Goodbye",
     "description": "A painterly Western fine art photograph capturing a quiet farewell on the American frontier. Rendered with a soft, pictorialist approach, the image emphasizes restraint, atmosphere, and emotional stillness over spectacle. Light, posture, and negative space work together to suggest departure, memory, and the human cost of movement across the West. This cinematic Western photograph reflects the tradition of narrative-driven frontier imagery while remaining firmly contemporary in its execution. © Wayne Heim",
     "alt": "Painterly Western photograph of a woman holding a farewell gesture from a train platform, capturing a quiet moment of departure on the American frontier. © Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/MtDGwXMWf2nWqwWKdqVQV8LcRhrJS5K6M7nMTxS8z/XL/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-XL.jpg",

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-01-22T21:56:14.214Z",
+    "lastUpdated": "2026-01-23T03:03:16.673Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z"
   },
   "images": {
@@ -1260,7 +1260,9 @@
     "i-wX39m6G:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-k6Jzg7R",
     "i-4QZ7HPR:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-EA6SrCU",
     "i-5VmRqpZ:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-nSmBeUX",
-    "i-BmwzGg4:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-ruJpmEt"
+    "i-BmwzGg4:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-ruJpmEt",
+    "i-gM5crmq:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-HYvWJfN",
+    "i-nmDtVXP:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-DeCPSHg"
   },
   "series": {
     "s-BB65wHk": {
@@ -25529,7 +25531,7 @@
         {
           "imageId": "i-Shpfdbm",
           "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
-          "title": "Dust and Distance — A Cowboy’s Goodbye",
+          "title": "One Last Look",
           "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/LMBSDtzhV4Z9Phctd8qgSHzdDKNmng4X4VKdDLSjw/XL/Cowboy-Long-Goodbye-ws-XL.jpg"
         }
       ],
@@ -25848,7 +25850,7 @@
         {
           "imageId": "i-ZWDpsxz",
           "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
-          "title": "Farewell! – Western Departure",
+          "title": "Wave Goodbye",
           "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/K3QvRVJkgM28sjdKQBvNjvdLGN4NbNs5mzQPTzkXS/XL/Settler-Wave-Goodbye-ws-XL.jpg"
         }
       ],
@@ -31232,6 +31234,43 @@
       "linkedCount": 1,
       "excludeSizes": {},
       "createdAt": "2026-01-22T21:03:57.661Z"
+    },
+    "s-HYvWJfN": {
+      "primaryImageId": "i-gM5crmq",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Pinkerton's Grasp",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/0/NZwmqW58gZ59TXm3z56W4PKLX5mkjvM2Xfcv9Nhgd/XL/Pinkertons%20Grasp%2016%20x%2020-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-gM5crmq",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Pinkerton's Grasp",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/0/NZwmqW58gZ59TXm3z56W4PKLX5mkjvM2Xfcv9Nhgd/XL/Pinkertons%20Grasp%2016%20x%2020-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-23T03:02:44.774Z"
+    },
+    "s-DeCPSHg": {
+      "primaryImageId": "i-nmDtVXP",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Essence Of Wood-Mounted Art",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/KwNcm2hP5xh7pBSXbLqqXFrjtv2GvhBkb9JzJjdDd/XL/This%20is%20the%20Hand%2018%20x%2024-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-nmDtVXP",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "The Essence Of Wood-Mounted Art",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/KwNcm2hP5xh7pBSXbLqqXFrjtv2GvhBkb9JzJjdDd/XL/This%20is%20the%20Hand%2018%20x%2024-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "createdAt": "2026-01-23T03:03:16.673Z"
     }
   }
 }
