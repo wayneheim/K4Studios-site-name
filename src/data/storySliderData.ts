@@ -8,7 +8,7 @@
 export const storySliderData = [
   {
     "id": "i-ncFcHDM",
-    "title": "Dust and Distance — A Cowboy’s Goodbye",
+    "title": "One Last Look",
     "story": "As the lone coach disappeared down the lonely road, he stood silent—rooted by more than trail dust. Would their paths ever cross again? As a man of few but deliberate words, had he said too little… too much? Should he have asked her not to go?\n\nThe questions would hang heavy on his heart — like the low-lying clouds blanketing the valley floor, choking out the day’s first light.\n\nBut the decision was made. And the road ahead—was now his alone to walk."
   },
   {
@@ -107,14 +107,14 @@ export const storySliderData = [
     "story": "Sun on the brim, years at their backs, they file the world down to what a man can carry.\nCall it a brain trust built from blisters, long roads, and lessons learned the hard way.\n\nNo one’s in a hurry.\nThey’ve said more with a nod than most folks do in a sermon.\nBoots planted, backs straight, and eyes that don’t miss much—\nThis ain’t just a coffee break. It’s council."
   },
   {
-    "id": "i-n5BfXBm",
-    "title": "10 O’Clock Staging",
-    "story": "Morning sun climbs, bathing every color in anticipation and purpose. Sweat beads, dust shimmers, saddle leather glows with stories untold. The clock strikes ten—she’s late. Nerves on edge, they hold their places. Distant rumbles echo—steel, hooves, danger on the ridge.\n“Steady, Billy. Stick to the plan.”\nToday, patience is the hardest virtue. Vengeance or fortune—both ride with the morning wind."
-  },
-  {
     "id": "i-DczpNpH",
     "title": "If You Want a Job Done Right…",
     "story": "Let them talk. Let them doubt.\n\nSometimes you just have to take the shot yourself— because waiting for someone else means it never gets done. Besides, there’s nothing wrong with showing them how it’s done, one good aim at a time."
+  },
+  {
+    "id": "i-n5BfXBm",
+    "title": "10 O’Clock Staging",
+    "story": "Morning sun climbs, bathing every color in anticipation and purpose. Sweat beads, dust shimmers, saddle leather glows with stories untold. The clock strikes ten—she’s late. Nerves on edge, they hold their places. Distant rumbles echo—steel, hooves, danger on the ridge.\n“Steady, Billy. Stick to the plan.”\nToday, patience is the hardest virtue. Vengeance or fortune—both ride with the morning wind."
   },
   {
     "id": "i-gxMVNh3",
