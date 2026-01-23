@@ -15,7 +15,7 @@ export const painterlyStory = [
       "My work lives between mediums—too painterly for traditional photographers, too photographic for purists. And I’m fine with that. I’m not here to chase perfection or fidelity. I’m here to tell stories. Some of those stories live in the blur, in the breath between frames, in the imperfections that make a memory feel real.",
       "This is the legacy of pictorialism—not surface effects, but mood, structure, and emotional residue. I sculpt my images the way an illustrator builds form: layer by layer, in search of narrative gravity.",
       "Where others mimic painterly style, I define it through restraint. Through what’s left unsaid.",
-      "I explore this further in <a href='/Other/Blog/hearing-the-art'>Hearing the Art</a> — a conversation about how image and story together elicit an experience closer to listening to music than to viewing traditional photography."
+      "I explore this further in <a href='/Blog/hearing-the-art'>Hearing the Art</a> — a conversation about how image and story together elicit an experience closer to listening to music than to viewing traditional photography."
     ]
   },
 

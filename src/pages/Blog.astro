@@ -25,12 +25,12 @@ import "@/styles/global.css";
 // ----------------------
 // Dynamic Logic
 // ----------------------
-const sectionPath = "/Other/Blog";
+const sectionPath = "/Blog";
 
 const structuredData = getStructuredData({
-  type: "BlogPosting",
+  type: "Blog",
   data: {
-    headline: "Inside the Frame",
+    name: "Inside the Frame",
     description: "Conversations with Quill about layered storytelling, composition, and painterly photography.",
     url: `https://k4studios.com${sectionPath}`,
     copyrightNotice: "© Wayne Heim",
@@ -38,7 +38,14 @@ const structuredData = getStructuredData({
       "@type": "Person",
       name: "Wayne Heim"
     },
-    image: posts.map(p => p.cover)
+    blogPost: posts.map(p => ({
+      "@type": "BlogPosting",
+      headline: p.title,
+      datePublished: p.date,
+      description: p.excerpt,
+      image: p.cover,
+      url: `https://k4studios.com/Blog/${p.slug}`
+    }))
   },
   defaults: {
     copyrightNotice: "© Wayne Heim",
@@ -89,7 +96,7 @@ const galleryPaths = Object.keys(galleryDataMap);
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
-      <LandingHeader client:load breadcrumb="Other › Blog" />
+      <LandingHeader client:load breadcrumb="<a href='/Other' style='color: inherit; text-decoration: none;'>Other</a> › Blog" />
     </div>
 
     <section class="section-heading-wrap">
@@ -115,7 +122,7 @@ const galleryPaths = Object.keys(galleryDataMap);
         {posts.map(post => (
           <article class="story-block mb-10">
             <div class="flex flex-col md:flex-row md:items-start gap-4">
-              <a href={`/Other/Blog/${post.slug}`} aria-label={post.title} class="flex-shrink-0">
+              <a href={`/Blog/${post.slug}`} aria-label={post.title} class="flex-shrink-0">
                 <img
                   src={post.cover}
                   alt={post.title}
@@ -126,11 +133,11 @@ const galleryPaths = Object.keys(galleryDataMap);
               </a>
               <div class="flex-1 min-w-0">
                 <h2 class="text-xl font-bold mb-2">
-                  <a href={`/Other/Blog/${post.slug}`}>{post.title}</a>
+                  <a href={`/Blog/${post.slug}`}>{post.title}</a>
                 </h2>
                 <p class="text-sm text-gray-600 mb-2">{post.date}</p>
                 <p class="mb-4" set:html={autoLinkKeywordsInText(post.excerpt, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
-                <a href={`/Other/Blog/${post.slug}`} class="underline text-blue-700">Read more →</a>
+                <a href={`/Blog/${post.slug}`} class="underline text-blue-700">Read more →</a>
               </div>
             </div>
           </article>
@@ -144,7 +151,7 @@ const galleryPaths = Object.keys(galleryDataMap);
           <ul class="space-y-2">
             {posts.map(post => (
               <li>
-                <a href={`/Other/Blog/${post.slug}`} class="block hover:text-red-600">
+                <a href={`/Blog/${post.slug}`} class="block hover:text-red-600">
                   {post.title}
                 </a>
                 <span class="block text-xs text-gray-500">{post.date}</span>

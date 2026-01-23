@@ -637,7 +637,7 @@ export const siteNav = [
     },
       {
         "label": "Blog",
-        "href": "/Other/Blog/",
+        "href": "/Blog/",
         "code": "O-S5",
         "slug": "blog",
         "type": "section"

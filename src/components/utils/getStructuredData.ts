@@ -378,7 +378,7 @@ export function getBlogBreadcrumbList(
   opts?: { blogName?: string; blogPath?: string; homeName?: string }
 ): string {
   const blogName = opts?.blogName ?? "Inside the Frame";
-  const blogPath = opts?.blogPath ?? "/Other/Blog";
+  const blogPath = opts?.blogPath ?? "/Blog";
   const homeName = opts?.homeName ?? "Home";
   const origin = new URL(data.url).origin;
   const items = [

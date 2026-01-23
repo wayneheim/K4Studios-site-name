@@ -1,6 +1,10 @@
 # Redirect /Other to Glossary (no landing page exists)
 /Other  /Glossary  301
 
+# Blog moved from /Other/Blog to /Blog (SEO improvement)
+/Other/Blog  /Blog  301
+/Other/Blog/*  /Blog/:splat  301
+
 # Block access to source files (should never be crawled)
 /src/*  404!
 

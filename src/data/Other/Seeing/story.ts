@@ -314,7 +314,7 @@ export const essays: Essay[] = [
           `The story does not end on the wall.`,
           `It continues wherever the viewer carries it next.`,
           `This participatory mode — where the viewer brings their own experience into the frame — does not always remain visual. Some works ask for a different kind of attention altogether.`,
-          `<a href="/Other/Blog/hearing-the-art" style="color: #8b0000; text-decoration: none;">→ Hearing the Art</a>`
+          `<a href="/Blog/hearing-the-art" style="color: #8b0000; text-decoration: none;">→ Hearing the Art</a>`
         ]
       }
     ]

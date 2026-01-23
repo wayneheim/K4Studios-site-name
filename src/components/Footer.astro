@@ -8,7 +8,7 @@ const { previewImages = [], previewPath = "", title = "", currentImageUrl, label
 
 // Get actual runtime URL
 const currentPath = Astro.url.pathname;
-const isBlog = currentPath.startsWith('/Other/Blog');
+const isBlog = currentPath.startsWith('/Blog');
 
 // Check if we're on a deep image page like /i-xxxxx
 const isImagePage = /\/i-[a-zA-Z0-9]+$/.test(currentPath);

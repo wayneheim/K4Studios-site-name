@@ -180,15 +180,11 @@ force = true
 
 [[redirects]]
 from = "/blog-thoughts-and-ideas*"
-to = "/Other/Blog"
+to = "/Blog"
 status = 301
 force = true
 
-[[redirects]]
-from = "/Blog"
-to = "/Other/Blog"
-status = 301
-force = true
+# Removed: /Blog to /Other/Blog redirect (Blog now lives at /Blog)
 
 [[redirects]]
 from = "/black-and-white-western-photos*"
