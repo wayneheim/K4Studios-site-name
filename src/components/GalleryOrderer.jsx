@@ -421,49 +421,29 @@ export default function GalleryOrderer({ datasetPath = "" }) {
     return ghosts.concat(ordered);
   }
 
-  // Sync visibility changes with Archive gallery
+  // Sync visibility changes with Archive gallery - ATOMIC operation
   // Hidden images get a copy in Archive (visibility: "show")
-  // Shown images get removed from Archive ONLY if they were archived from THIS gallery
+  // Shown images get hidden in Archive ONLY if they were archived from THIS gallery
+  // Single API call + single file write to prevent HMR from killing us mid-operation
   async function syncArchive(fullArray, galleryPath) {
     const hiddenImages = fullArray.filter(it => it.visibility === "hidden");
-    const shownImages = fullArray.filter(it => !it.visibility || it.visibility === "show");
     
-    // Add hidden images to Archive
-    for (const img of hiddenImages) {
-      try {
-        await fetch("/.netlify/functions/updateArchive", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            action: "add",
-            imageId: img.id,
-            imageData: img,
-            sourceGalleryPath: galleryPath
-          })
-        });
-        console.log(`[Archive] Added ${img.id} to Archive`);
-      } catch (err) {
-        console.warn(`[Archive] Failed to add ${img.id}:`, err.message);
-      }
-    }
-    
-    // Remove shown images from Archive ONLY if they came from THIS gallery
-    // This prevents wiping out images hidden from other galleries
-    for (const img of shownImages) {
-      try {
-        await fetch("/.netlify/functions/updateArchive", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            action: "removeIfFrom",
-            imageId: img.id,
-            sourceGalleryPath: galleryPath  // Only remove if archivedFrom matches this gallery
-          })
-        });
-        // Don't log removals - most won't be in Archive anyway
-      } catch (err) {
-        // Silently ignore - image probably wasn't in Archive
-      }
+    try {
+      console.log(`[Archive] syncFromGallery: ${galleryPath}, ${hiddenImages.length} hidden images`);
+      const res = await fetch("/.netlify/functions/updateArchive", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "syncFromGallery",
+          imageId: "sync", // Required by validation
+          sourceGalleryPath: galleryPath,
+          hiddenImages: hiddenImages
+        })
+      });
+      const result = await res.json();
+      console.log(`[Archive] Sync complete: hid=${result.hiddenCount}, added=${result.addedCount}, updated=${result.updatedCount}`);
+    } catch (err) {
+      console.warn(`[Archive] Failed to sync:`, err.message);
     }
   }
 
@@ -509,14 +489,13 @@ export default function GalleryOrderer({ datasetPath = "" }) {
       
       // Sync visibility changes with Archive gallery
       // Hidden images get copied to Archive, shown images get removed
+      note("Syncing with Archive...");
       await syncArchive(fullArray, datasetPathClean);
       
       note("Saved order/visibility in-place");
       setDirty(false);
-      // Refresh page and restore unlocked state
-      setTimeout(() => {
-        window.location.reload();
-      }, 500);
+      // Refresh page AFTER syncArchive completes (not before!)
+      window.location.reload();
     } catch (err) {
       alert("Server save failed. Falling back to download.\n\n" + err.message);
       const filename = datasetPathClean.split("/").pop() || "gallery.mjs";

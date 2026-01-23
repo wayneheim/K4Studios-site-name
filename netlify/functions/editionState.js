@@ -37,9 +37,13 @@ function resolveCanonicalId(imageId, registry) {
 
 async function readEditionState() {
   try {
+    console.log("[editionState] Reading from:", EDITION_STATE_PATH);
     const data = await fs.readFile(EDITION_STATE_PATH, "utf8");
-    return JSON.parse(data);
+    const parsed = JSON.parse(data);
+    console.log("[editionState] Found keys:", Object.keys(parsed).slice(0, 20));
+    return parsed;
   } catch (err) {
+    console.error("[editionState] Read error:", err);
     if (err.code === "ENOENT") {
       return { _meta: { version: "1.0", lastUpdated: null } };
     }
@@ -63,6 +67,9 @@ exports.handler = async (event) => {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
+    "Cache-Control": "no-cache, no-store, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
   };
 
   if (event.httpMethod === "OPTIONS") {
@@ -101,15 +108,19 @@ exports.handler = async (event) => {
       if (imageId) {
         // Resolve to canonical series ID if linked
         const canonicalId = resolveCanonicalId(imageId, registry);
+        console.log("[editionState GET] imageId:", imageId, "canonicalId:", canonicalId);
+        console.log("[editionState GET] All keys in state:", Object.keys(state).filter(k => !k.startsWith('_')).slice(0, 30));
         
         // Return all series states for this image (using canonical ID)
         const imageStates = {};
         for (const [key, value] of Object.entries(state)) {
           if (key.startsWith(`${canonicalId}:`)) {
+            console.log("[editionState GET] Found matching key:", key);
             const series = key.split(":")[1];
             imageStates[series] = value;
           }
         }
+        console.log("[editionState GET] Returning states:", Object.keys(imageStates));
         return {
           statusCode: 200,
           headers,

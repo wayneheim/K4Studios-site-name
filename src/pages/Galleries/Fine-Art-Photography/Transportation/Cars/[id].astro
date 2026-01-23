@@ -1,19 +1,26 @@
 ---
+export const prerender = false;
+
 import GalleryShell from '@/components/GalleryShell-Transportation-Cars-Traditional.astro';
 import { entranceData as ColorEntranceData } from "@/data/Galleries/Fine-Art-Photography/Transportation/Cars-ColorEntranceData.ts";
 import { galleryData } from '@/data/Galleries/Fine-Art-Photography/Transportation/Cars.mjs';
 
-export async function getStaticPaths() {
-  return galleryData.map(img => ({
-    params: { id: img.id },
-  }));
-}
+import imageIdMap from '@/data/imageIdMap.json';
 
 const { id } = Astro.params;
 const imageData = galleryData.find(img => img.id === id);
 
-const isBadId = !imageData && (id && (id.startsWith('i-') || id === 'i'));
+// Check if image is missing OR hidden (archived images stay in gallery with visibility: "hidden")
+const isHidden = imageData?.visibility === 'hidden' || imageData?.visibility === 'hide';
+const isBadId = (!imageData || isHidden) && (id && (id.startsWith('i-') || id === 'i'));
 if (isBadId) {
+  // Smart 404: Check if image exists in another gallery (e.g., Archive)
+  const correctGalleryPath = (imageIdMap as Record<string, string>)[id];
+  if (correctGalleryPath) {
+    // Image found elsewhere - 301 redirect to preserve SEO
+    return Astro.redirect(`${correctGalleryPath}/${id}`, 301);
+  }
+  // Not found anywhere - fall back to gallery landing page
   let cleanUrl = Astro.url.pathname.replace(/\/i[^/]*\/?$/, '');
   cleanUrl = cleanUrl.replace(/\/+$/, '');
   if (typeof window !== "undefined") {

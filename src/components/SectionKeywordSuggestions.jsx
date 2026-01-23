@@ -7,12 +7,15 @@ import { semantic as k4Semantic } from "../data/semantic/K4-Sem.ts";
  * Convert gallery file path to comparable semantic path
  * e.g., "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
  *    -> "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+ * Also handles: "src/data/Galleries/..." (without leading slash)
  */
 function galleryPathToSemanticPath(galleryPath) {
   if (!galleryPath) return "";
   let p = galleryPath.replace(/\\/g, "/");
-  // Strip /src/data prefix
-  p = p.replace(/^\/src\/data/, "");
+  // Strip /src/data or src/data prefix (with or without leading slash)
+  p = p.replace(/^\/?src\/data/, "");
+  // Ensure leading slash for matching
+  if (!p.startsWith("/")) p = "/" + p;
   // Strip .mjs extension
   p = p.replace(/\.mjs$/i, "");
   return p;
@@ -117,6 +120,7 @@ function normalizeKeyword(kw) {
  */
 export default function SectionKeywordSuggestions({
   galleryPath,
+  linkedGalleryPath = null, // Optional: linked master image's gallery path for theme-based suggestions
   currentKeywords = [],
   onAddKeyword,
   minRating = 3,
@@ -129,6 +133,12 @@ export default function SectionKeywordSuggestions({
     [galleryPath]
   );
 
+  // Find matching K4-Sem sections for linked gallery (if provided)
+  const linkedMatchingSections = useMemo(
+    () => linkedGalleryPath ? findMatchingSections(linkedGalleryPath) : [],
+    [linkedGalleryPath]
+  );
+
   // If sectionOnly, limit to just the most specific section
   const matchingSections = useMemo(
     () => sectionOnly && allMatchingSections.length > 0 
@@ -137,11 +147,27 @@ export default function SectionKeywordSuggestions({
     [allMatchingSections, sectionOnly]
   );
 
-  // Extract all available phrases
+  // Extract all available phrases from main gallery
   const availablePhrases = useMemo(
     () => extractPhrasesFromSections(matchingSections, minRating),
     [matchingSections, minRating]
   );
+
+  // Extract phrases from linked gallery (marked with "Linked Theme" section)
+  const linkedPhrases = useMemo(() => {
+    if (linkedMatchingSections.length === 0) return [];
+    // Get most specific section from linked gallery
+    const linkedSection = linkedMatchingSections[0];
+    if (!linkedSection) return [];
+    
+    // Extract phrases and mark them as from "Linked Theme"
+    const phrases = extractPhrasesFromSections([linkedSection], minRating);
+    return phrases.map(p => ({
+      ...p,
+      fromSection: "Linked Theme",
+      originalSection: p.fromSection,
+    }));
+  }, [linkedMatchingSections, minRating]);
 
   // Normalize current keywords for comparison
   const appliedKeywordsSet = useMemo(() => {
@@ -152,8 +178,8 @@ export default function SectionKeywordSuggestions({
     return set;
   }, [currentKeywords]);
 
-  // If no sections match, show nothing
-  if (matchingSections.length === 0 || availablePhrases.length === 0) {
+  // If no sections match and no linked phrases, show nothing
+  if ((matchingSections.length === 0 || availablePhrases.length === 0) && linkedPhrases.length === 0) {
     return null;
   }
 
@@ -168,16 +194,48 @@ export default function SectionKeywordSuggestions({
     }
   };
 
-  // Group phrases by section for visual organization
+  // Group phrases by section for visual organization (include linked phrases)
+  // Order: specific sections first, then Linked Theme, then universal
   const phrasesBySection = useMemo(() => {
     const groups = new Map();
+    const universalPhrases = []; // Hold universal phrases to add last
+    
+    // Add main gallery phrases (except universal - save for last)
     for (const p of availablePhrases) {
       const section = p.fromSection;
-      if (!groups.has(section)) groups.set(section, []);
-      groups.get(section).push(p);
+      if (section === "universal") {
+        universalPhrases.push(p);
+      } else {
+        if (!groups.has(section)) groups.set(section, []);
+        groups.get(section).push(p);
+      }
     }
+    
+    // Add linked theme phrases (if any) - filter out duplicates already in other sections
+    if (linkedPhrases.length > 0) {
+      const existingPhrases = new Set();
+      for (const phrases of groups.values()) {
+        for (const p of phrases) {
+          existingPhrases.add(normalizeKeyword(p.phrase));
+        }
+      }
+      
+      const uniqueLinkedPhrases = linkedPhrases.filter(
+        p => !existingPhrases.has(normalizeKeyword(p.phrase))
+      );
+      
+      if (uniqueLinkedPhrases.length > 0) {
+        groups.set("Linked Theme", uniqueLinkedPhrases);
+      }
+    }
+    
+    // Add universal phrases last
+    if (universalPhrases.length > 0) {
+      groups.set("universal", universalPhrases);
+    }
+    
     return groups;
-  }, [availablePhrases]);
+  }, [availablePhrases, linkedPhrases]);
 
   // Color scheme by rating (when not applied) - with dark mode variants
   const getRatingStyle = (rating) => {

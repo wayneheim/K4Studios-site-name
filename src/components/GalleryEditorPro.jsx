@@ -2552,6 +2552,7 @@ ${collectorNotes}`;
                 />
                 <SectionKeywordSuggestions
                   galleryPath={selectedPath}
+                  linkedGalleryPath={current?.linkedGalleryPath || null}
                   currentKeywords={
                     Array.isArray(current.tags)
                       ? current.tags
@@ -2753,6 +2754,7 @@ ${collectorNotes}`;
                   {/* K4-Sem Keyword Suggestions for Turbo Mode */}
                   <SectionKeywordSuggestions
                     galleryPath={selectedPath}
+                    linkedGalleryPath={current?.linkedGalleryPath || null}
                     darkMode={true}
                     sectionOnly={true}
                     currentKeywords={(() => {

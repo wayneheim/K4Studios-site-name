@@ -1,6 +1,8 @@
 export const entranceData = {
   title: "Archive – Hidden Works by Wayne Heim",
   subtitle: "Images temporarily removed from public galleries",
+  
+  galleryPath: "/Other/Archive",
 
   keywords: [
     "archive",
@@ -16,7 +18,8 @@ export const entranceData = {
     `Images in this archive were removed from their original gallery locations but remain available here. If you arrived via a saved link or bookmark, the image you're looking for should still be accessible. These works may return to their original galleries at any time.`,
   
   image: {
-    src: "/images/archive-placeholder.jpg",
+    id: "i-bnJtpBX",
+    src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-bnJtpBX/2/KbpcQ73QS26QqqFxv2DGz8fDZpmNnvHpHJ87LNb7n/XL/_WHZ5748-Edit_pp-Edit-2-XL.jpg",
     alt: "Archive – Hidden Works",
     caption: "Archive Gallery",
   },

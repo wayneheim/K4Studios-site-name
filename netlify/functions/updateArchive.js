@@ -213,6 +213,151 @@ exports.handler = async (event) => {
         console.log(`[updateArchive] ${imageId} not found in archive, nothing to hide`);
       }
       
+    } else if (action === "batchHideIfFrom") {
+      // Batch operation: hide all images in Archive that came from a specific gallery
+      // This is much more efficient than calling removeIfFrom 500+ times
+      if (!sourceGalleryPath) {
+        return { statusCode: 400, body: "Missing sourceGalleryPath for batchHideIfFrom action" };
+      }
+      
+      console.log(`[updateArchive] batchHideIfFrom called with sourceGalleryPath: "${sourceGalleryPath}"`);
+      console.log(`[updateArchive] Archive has ${archiveData.length} entries`);
+      
+      // Debug: show what archivedFrom values exist
+      const showingEntries = archiveData.filter(e => e.visibility === "show");
+      console.log(`[updateArchive] ${showingEntries.length} entries with visibility="show"`);
+      showingEntries.slice(0, 3).forEach(e => {
+        console.log(`[updateArchive]   - ${e.id} archivedFrom: "${e.archivedFrom}"`);
+      });
+      
+      const idMap = await readImageIdMap();
+      let hiddenCount = 0;
+      
+      // Convert sourceGalleryPath to URL format for imageIdMap
+      let galleryUrl = sourceGalleryPath
+        .replace(/^src\/data\//, '/')
+        .replace(/^src\/pages\//, '/')
+        .replace(/\.mjs$/, '');
+      if (!galleryUrl.startsWith('/')) galleryUrl = '/' + galleryUrl;
+      
+      for (let i = 0; i < archiveData.length; i++) {
+        const entry = archiveData[i];
+        // Skip ghost entry and already hidden entries
+        if (entry.visibility === "ghost" || entry.visibility === "hidden") continue;
+        
+        // Check if this image was archived from the specified gallery
+        if (entry.archivedFrom === sourceGalleryPath) {
+          archiveData[i] = { ...entry, visibility: "hidden" };
+          idMap[entry.id] = galleryUrl;
+          hiddenCount++;
+          console.log(`[updateArchive] Batch-hid ${entry.id} (from ${sourceGalleryPath})`);
+        }
+      }
+      
+      if (hiddenCount > 0) {
+        await writeImageIdMap(idMap);
+        console.log(`[updateArchive] Batch hidden ${hiddenCount} images from ${sourceGalleryPath}`);
+      } else {
+        console.log(`[updateArchive] No images to hide from ${sourceGalleryPath}`);
+      }
+      
+      // Return early with batch result
+      const newContent = buildMjsContent(archiveData);
+      await fs.writeFile(ARCHIVE_PATH, newContent, "utf8");
+      
+      return {
+        statusCode: 200,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 
+          ok: true, 
+          action,
+          hiddenCount,
+          sourceGalleryPath,
+          archiveSize: archiveData.length 
+        }),
+      };
+      
+    } else if (action === "syncFromGallery") {
+      // ATOMIC operation: sync all visibility changes for a gallery in ONE file write
+      // 1. Hide all existing archive entries from this gallery
+      // 2. Add/update entries for images that are currently hidden
+      // This prevents HMR from killing us mid-operation
+      
+      const { hiddenImages } = body;
+      if (!sourceGalleryPath) {
+        return { statusCode: 400, body: "Missing sourceGalleryPath for syncFromGallery" };
+      }
+      if (!Array.isArray(hiddenImages)) {
+        return { statusCode: 400, body: "Missing hiddenImages array for syncFromGallery" };
+      }
+      
+      console.log(`[updateArchive] syncFromGallery: ${sourceGalleryPath}, ${hiddenImages.length} hidden images`);
+      
+      const idMap = await readImageIdMap();
+      let hiddenCount = 0;
+      let addedCount = 0;
+      let updatedCount = 0;
+      
+      // Convert sourceGalleryPath to URL format for imageIdMap
+      let galleryUrl = sourceGalleryPath
+        .replace(/^src\/data\//, '/')
+        .replace(/^src\/pages\//, '/')
+        .replace(/\.mjs$/, '');
+      if (!galleryUrl.startsWith('/')) galleryUrl = '/' + galleryUrl;
+      
+      // Step 1: Hide all existing entries from this gallery
+      for (let i = 0; i < archiveData.length; i++) {
+        const entry = archiveData[i];
+        if (entry.visibility === "ghost") continue;
+        
+        if (entry.archivedFrom === sourceGalleryPath && entry.visibility !== "hidden") {
+          archiveData[i] = { ...entry, visibility: "hidden" };
+          idMap[entry.id] = galleryUrl; // Point back to parent gallery
+          hiddenCount++;
+          console.log(`[updateArchive] Sync-hid ${entry.id}`);
+        }
+      }
+      
+      // Step 2: Add/update entries for currently hidden images (set visibility: "show")
+      for (const img of hiddenImages) {
+        const normalized = normalizeImage(img, sourceGalleryPath);
+        const existingIndex = archiveData.findIndex(e => e.id === img.id);
+        
+        if (existingIndex >= 0) {
+          archiveData[existingIndex] = normalized;
+          updatedCount++;
+          console.log(`[updateArchive] Sync-updated ${img.id}`);
+        } else {
+          archiveData.push(normalized);
+          addedCount++;
+          console.log(`[updateArchive] Sync-added ${img.id}`);
+        }
+        
+        // Point to Archive
+        idMap[img.id] = "/Other/Archive";
+      }
+      
+      // Single file write at the end
+      await writeImageIdMap(idMap);
+      const newContent = buildMjsContent(archiveData);
+      await fs.writeFile(ARCHIVE_PATH, newContent, "utf8");
+      
+      console.log(`[updateArchive] syncFromGallery complete: hid=${hiddenCount}, added=${addedCount}, updated=${updatedCount}`);
+      
+      return {
+        statusCode: 200,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 
+          ok: true, 
+          action,
+          hiddenCount,
+          addedCount,
+          updatedCount,
+          sourceGalleryPath,
+          archiveSize: archiveData.length 
+        }),
+      };
+      
     } else {
       return { statusCode: 400, body: `Unknown action: ${action}` };
     }

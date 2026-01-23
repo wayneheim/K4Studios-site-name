@@ -184,7 +184,13 @@ async function captureAllPreloadLinks(page: puppeteer.Page): Promise<number> {
       let size = "";
       
       // Determine size from URL
-      if (href.includes('/XL/') || href.includes('-XL.jpg')) size = "srcXL";
+      // SmugMug uses various size patterns: X5, X4, X3, X2, XL for extra-large sizes
+      // Store each as its own key so we can pick best available for src
+      if (href.includes('/X5/') || href.includes('-X5.jpg')) size = "srcX5";
+      else if (href.includes('/X4/') || href.includes('-X4.jpg')) size = "srcX4";
+      else if (href.includes('/X3/') || href.includes('-X3.jpg')) size = "srcX3";
+      else if (href.includes('/X2/') || href.includes('-X2.jpg')) size = "srcX2";
+      else if (href.includes('/XL/') || href.includes('-XL.jpg')) size = "srcXL";
       else if (href.includes('/L/') || href.includes('-L.jpg')) size = "srcL";
       else if (href.includes('/M/') || href.includes('-M.jpg')) size = "srcM";
       else if (href.includes('/S/') || href.includes('-S.jpg')) size = "srcS";
@@ -286,6 +292,10 @@ async function scrapeDetails(
   };
   
   const sizeUrls = {
+    srcX5: validateUrl(finalUrls.srcX5 || ""),
+    srcX4: validateUrl(finalUrls.srcX4 || ""),
+    srcX3: validateUrl(finalUrls.srcX3 || ""),
+    srcX2: validateUrl(finalUrls.srcX2 || ""),
     srcXL: validateUrl(finalUrls.srcXL || ""),
     srcL: validateUrl(finalUrls.srcL || ""),
     srcM: validateUrl(finalUrls.srcM || ""),
@@ -350,9 +360,15 @@ async function scrapeDetails(
     smartSplitFn
   );
 
+  // src = best available (X5 > X4 > X3 > X2 > XL > L > M > S > Original)
+  // srcXL = specifically XL only (not X2/X3/X4/X5)
+  const bestAvailable = sizeUrls.srcX5 || sizeUrls.srcX4 || sizeUrls.srcX3 || sizeUrls.srcX2 || 
+                        sizeUrls.srcXL || sizeUrls.srcL || sizeUrls.srcM || sizeUrls.srcS || 
+                        sizeUrls.srcOriginal || "";
+
   return {
     ...data,
-    src: sizeUrls.srcXL || sizeUrls.srcL || sizeUrls.srcM || sizeUrls.srcS || sizeUrls.srcOriginal || "",
+    src: bestAvailable,
     srcXL: sizeUrls.srcXL || "",
     srcL: sizeUrls.srcL || "",
     srcM: sizeUrls.srcM || "",

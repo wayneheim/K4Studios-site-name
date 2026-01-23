@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-01-21T16:10:00.632Z",
+    "lastUpdated": "2026-01-22T21:56:14.214Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z"
   },
   "images": {
@@ -414,7 +414,6 @@
     "i-G7vCDcw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-EKRqwUb",
     "i-Pd3vWBk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-mSCPLeH",
     "i-nnV6qtS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-FzWZYVn",
-    "i-phBP9Mt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-DpXSDwp",
     "i-5xcvjQJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-jURZSKS",
     "i-ncFcHDM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-RrUq6DC",
     "i-RsLmsLZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-QXraKPW",
@@ -834,7 +833,6 @@
     "i-Z6TkHwJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-J3RnZKs",
     "i-PqtMvHt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-JqpNz65",
     "i-8pp9T7x:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-6h5aSMV",
-    "i-RRw2Tfr:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-yp33F2D",
     "i-f8VznFc:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-6LrTQEu",
     "i-tKZ2wgt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-vM5a2TC",
     "i-sLtTp4m:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-SATEphC",
@@ -1257,7 +1255,12 @@
     "i-fnq8Gdv:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-WBKLCWz",
     "i-pB9zzmW:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-wUgHsaW",
     "i-qL6vZqs:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-3XqQA7M",
-    "i-HCm7ssN:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-TJKtmEa"
+    "i-HCm7ssN:/src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs": "s-TJKtmEa",
+    "i-HZVV8J2:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-9uBwpvT",
+    "i-wX39m6G:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-k6Jzg7R",
+    "i-4QZ7HPR:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-EA6SrCU",
+    "i-5VmRqpZ:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-nSmBeUX",
+    "i-BmwzGg4:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-ruJpmEt"
   },
   "series": {
     "s-BB65wHk": {
@@ -25471,7 +25474,7 @@
         {
           "imageId": "i-xqbdC8P",
           "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
-          "title": "Traditional Reenactment Photography Collection",
+          "title": "Hero’s Ride – Civil War on Birch Pannels",
           "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/MGSqVLk33VwBcNtRgpQGJ5q3QWGSDMsqzwkrPw5h4/XL/Civil-War-Heros-ride-ws-XL.jpg"
         }
       ],
@@ -31134,6 +31137,101 @@
       "linkedCount": 1,
       "excludeSizes": {},
       "createdAt": "2026-01-21T15:38:57.599Z"
+    },
+    "s-9uBwpvT": {
+      "primaryImageId": "i-HZVV8J2",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Under Pressure",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/LGGzgS3tNjSXfDnvXpMCJjpP9zH2SzRC6gcv7rBdq/L/WWII-Under-Pressure-ws-L.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-HZVV8J2",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Under Pressure",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/2/LGGzgS3tNjSXfDnvXpMCJjpP9zH2SzRC6gcv7rBdq/L/WWII-Under-Pressure-ws-L.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-22T19:22:11.618Z"
+    },
+    "s-k6Jzg7R": {
+      "primaryImageId": "i-wX39m6G",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "$3 for a whiskey?",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wX39m6G/0/M2MJ8JJWzh4fVPWMxMBM4Dpb6mMjSdjTf43Rgt8rh/L/3%20dollars%20for%20a%20whiskey%2016%20x%2024%20copy-L.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-wX39m6G",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "$3 for a whiskey?",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wX39m6G/0/M2MJ8JJWzh4fVPWMxMBM4Dpb6mMjSdjTf43Rgt8rh/L/3%20dollars%20for%20a%20whiskey%2016%20x%2024%20copy-L.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-22T19:27:48.359Z"
+    },
+    "s-EA6SrCU": {
+      "primaryImageId": "i-4QZ7HPR",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Photography Printed On Wood In Fine Art",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/McfHBwQXhtv2bP3SsZ4rRdckwtgKkHk74hGrd6ZkB/L/Cough%20and%20Covenant%2016%20x%2020%20copy-L.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-4QZ7HPR",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Photography Printed On Wood In Fine Art",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/McfHBwQXhtv2bP3SsZ4rRdckwtgKkHk74hGrd6ZkB/L/Cough%20and%20Covenant%2016%20x%2020%20copy-L.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-22T19:33:55.160Z"
+    },
+    "s-nSmBeUX": {
+      "primaryImageId": "i-5VmRqpZ",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Photo Printed On Wood Panel Study",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/LJxzpQvJGxNSVrQ7mwrz63GtFmRpbXZfs48pVHqrG/L/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-L.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-5VmRqpZ",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Photo Printed On Wood Panel Study",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/LJxzpQvJGxNSVrQ7mwrz63GtFmRpbXZfs48pVHqrG/L/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-L.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-22T19:50:55.533Z"
+    },
+    "s-ruJpmEt": {
+      "primaryImageId": "i-BmwzGg4",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Fine Art Photo Printed On Wood Panel",
+      "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-BmwzGg4/0/M96z5tk7w2Hp2fC6RwrZZTGtT4sgMWmmH3qbJx5mq/XL/Brothers%20of%20the%20Open%20Country%2034%20x%2020%20copy-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-BmwzGg4",
+          "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+          "title": "Fine Art Photo Printed On Wood Panel",
+          "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-BmwzGg4/0/M96z5tk7w2Hp2fC6RwrZZTGtT4sgMWmmH3qbJx5mq/XL/Brothers%20of%20the%20Open%20Country%2034%20x%2020%20copy-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-22T21:03:57.661Z"
     }
   }
 }

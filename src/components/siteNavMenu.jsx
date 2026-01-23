@@ -203,17 +203,19 @@ export default function SiteNavMenu({ forceMobile = false }) {
               </div>
 
               <div className="drawer-body">
-                {siteNav.map((root, i) => (
-                  <MenuBranch
-                    key={root.label}
-                    node={root}
-                    delay={i * 0.1}
-                    reset={resetSignal}
-                    forceMobile={forceMobile}
-                    mounted={mounted}
-                    isMobileViewport={isMobileViewport}
-                  />
-                ))}
+                {siteNav
+                  .filter((n) => !n.hidden)
+                  .map((root, i) => (
+                    <MenuBranch
+                      key={root.label}
+                      node={root}
+                      delay={i * 0.1}
+                      reset={resetSignal}
+                      forceMobile={forceMobile}
+                      mounted={mounted}
+                      isMobileViewport={isMobileViewport}
+                    />
+                  ))}
               </div>
 
   <a href="/" aria-label="K4 Studios Home" className="k4-logo-hover">
@@ -261,17 +263,19 @@ export default function SiteNavMenu({ forceMobile = false }) {
 
             </div>
           ) : (
-            siteNav.map((root, i) => (
-              <MenuBranch
-                key={root.label}
-                node={root}
-                delay={i * 0.1}
-                reset={resetSignal}
-                forceMobile={forceMobile}
-                mounted={mounted}
-                isMobileViewport={isMobileViewport}
-              />
-            ))
+            siteNav
+              .filter((n) => !n.hidden)
+              .map((root, i) => (
+                <MenuBranch
+                  key={root.label}
+                  node={root}
+                  delay={i * 0.1}
+                  reset={resetSignal}
+                  forceMobile={forceMobile}
+                  mounted={mounted}
+                  isMobileViewport={isMobileViewport}
+                />
+              ))
           )}
         </nav>
       </div>
