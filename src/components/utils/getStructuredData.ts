@@ -290,7 +290,7 @@ export function getStructuredData({
       "@type": "Article",
       "@id": `${data.url}#article`,
       headline: data.headline || data.title,
-      name: data.title,
+      name: data.title || data.headline,
       description: data.description,
       url: data.url,
       mainEntityOfPage: { "@type": "WebPage", "@id": data.url },

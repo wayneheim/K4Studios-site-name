@@ -88,13 +88,59 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
     }
   );
 
-  // ✅ Strip incomplete ImageObject structured data (SmugMug) - keep only our complete data with @id
+  // ✅ Strip incomplete ImageObject structured data (SmugMug) - preserve Article and other valid schema
   html = html.replace(
     /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
     (match, content) => {
       try {
         const json = JSON.parse(content.trim());
         const items = Array.isArray(json) ? json : [json];
+        
+        // Explicitly allowed schema types - NEVER remove these
+        const allowedTypes = [
+          "Article",
+          "BlogPosting", 
+          "FAQPage",
+          "BreadcrumbList",
+          "CollectionPage",
+          "AboutPage",
+          "Organization",
+          "Person",
+          "WebPage",
+          "WebSite",
+        ];
+        
+        const hasAllowedType = items.some((item) => {
+          const type = item["@type"];
+          if (Array.isArray(type)) {
+            return type.some((t) => allowedTypes.includes(t));
+          }
+          return allowedTypes.includes(type);
+        });
+        
+        if (hasAllowedType) {
+          return match; // NEVER touch allowed schema types
+        }
+        
+        // Check if this is an ImageObject (SmugMug injects these)
+        const isImageObject = items.some((item) => {
+          const type = item["@type"];
+          return type === "ImageObject" || 
+            (Array.isArray(type) && type.includes("ImageObject"));
+        });
+        
+        // Only filter ImageObject blocks from SmugMug
+        if (!isImageObject) {
+          return match; // Keep unknown schema types (safe default)
+        }
+        
+        // Check if it's from SmugMug (they inject incomplete ImageObject)
+        const isSmugMug = content.includes("photos.smugmug.com");
+        if (!isSmugMug) {
+          return match; // Keep non-SmugMug ImageObject
+        }
+        
+        // For SmugMug ImageObject, require @id to be valid
         const hasValidImageObject = items.some(
           (item) => item["@type"] === "ImageObject" && item["@id"]
         );
