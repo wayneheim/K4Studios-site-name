@@ -60,6 +60,11 @@ export const posts = [
     title: "Inside the Frame: High Ground Justice",
     date: "2025-09-30",
     excerpt: "A conversation with Quill about layered storytelling and composition in one of Wayne Heim’s most cinematic Western images.",
-    cover: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/Lk98prkSh8vttR2WDnVHTh53VfjdRzCCGsLMNk9JK/S/_HF25860-Edit-S.jpg"
-  }
+    cover: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/Lk98prkSh8vttR2WDnVHTh53VfjdRzCCGsLMNk9JK/S/_HF25860-Edit-S.jpg"  },
+  {
+    slug: "what-is-painterly-photography",
+    title: "What Is Painterly Photography?",
+    date: "2025-09-01",
+    excerpt: "Painterly photography is a term used in many ways — from editing presets to fine art practice. This article distinguishes surface effects from the discipline of painterly fine art photography.",
+    cover: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KNVfXXkzZWQPzsknRPt6jKWTWbr7q9gSJHFHLd8kr/S/cowboy%20photography%20painting_HF29245-250-S.jpg"  }
 ];
