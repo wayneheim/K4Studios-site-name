@@ -15,7 +15,8 @@ export const painterlyStory = [
     subhead: "What Painterly Photography Is — and Is Not",
     paragraphs: [
       "Painterly photography is not a filter, preset, or surface treatment applied after the fact. It begins before the shutter is pressed — in how light is shaped, space is organized, and narrative hierarchy is established within the frame.",
-      "Every painterly image is built, not embellished. Texture, atmosphere, and tonal depth emerge from structure and intent rather than effect. The goal is not realism for its own sake, but resonance — images that feel remembered rather than recorded."
+      "Every painterly image is built, not embellished. Texture, atmosphere, and tonal depth emerge from structure and intent rather than effect. The goal is not realism for its own sake, but resonance — images that feel remembered rather than recorded.",
+      `For a deeper discussion of how the term "painterly photography" is used — and often misused — see <a href="/Blog/what-is-painterly-photography" style="color:#1a5f7a; text-decoration:underline;">What Is Painterly Photography</a>.`
     ]
   },
 

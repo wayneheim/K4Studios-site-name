@@ -11,7 +11,7 @@ export const facingFAQ = [
     q: "How is painterly photography different from filtered or stylized photography?",
     a: [
       "The distinction lies in structure and intent. In painterly photography, visual qualities originate at the moment of capture — in how light defines form, how tone establishes hierarchy, and how composition carries tension.",
-      "Texture, grain, and atmosphere are integrated outcomes of these decisions, not effects applied afterward."
+      "Texture, grain, and atmosphere are integrated outcomes of these decisions, not effects applied afterward. For <a href='/Blog/what-is-painterly-photography' style='color:#1a5f7a; text-decoration:underline;'>a deeper explanation of painterly photography</a>, see the accompanying essay."
     ],
   },
 

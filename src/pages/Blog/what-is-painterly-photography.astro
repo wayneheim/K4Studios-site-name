@@ -1,0 +1,315 @@
+---
+/**
+ * What Is Painterly Photography? — Blog Article
+ * 
+ * Purpose: Intercept "painterly photography" queries from collectors, curators, galleries.
+ * This is an editorial credibility page, NOT a hub or definition page.
+ * Funnels authority to existing Painterly Fine Art Photography pages.
+ */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/what-is-painterly-photography";
+const canonicalUrl = "https://www.k4studios.com/Blog/what-is-painterly-photography";
+
+// Representative images (static, no shuffle - curated selection)
+// Header image - "Do you HEAR me now?!" - cropped horizontal banner
+const headerImage = {
+  src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/0/MzHkg4NLj6bnhzTxsVMgJgP2VX8ZhDvsgSX3RWLtK/XL/_HF20588-1294-1295-XL.jpg",
+  id: "i-Nn7scqm",
+  alt: "Painterly Western scene of a frontier standoff — a woman confronts a railroad man across a weathered fence"
+};
+
+const image1 = {
+  src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KNVfXXkzZWQPzsknRPt6jKWTWbr7q9gSJHFHLd8kr/XL/cowboy%20photography%20painting_HF29245-250-XL.jpg",
+  id: "i-ncFcHDM",
+  alt: "Painterly fine art photograph of a cowboy in warm directional light"
+};
+const image2 = {
+  src: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/NdFPjwxFk9TVWwmmBc3Z5tcGjkws6fspS9RFBcTjr/XL/_HF22770-953-954-XL.jpg",
+  id: "i-LCspRF4",
+  alt: "Western narrative scene with atmospheric composition"
+};
+const image3 = {
+  src: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-46kWCqc/0/NVSzN3dbJWtxBKHT2GV28s73WCx5MjTj7NpW5KJxw/XL/_HF20949-Edit-Edit-2-XL.jpg",
+  id: "i-46kWCqc",
+  alt: "Cowboy portrait with painterly tonal control"
+};
+
+const pageTitle = "What Is Painterly Photography? Meaning, Misuse, and Fine Art Distinction";
+const pageDescription = "Painterly photography is a term used in many ways — from editing presets to fine art practice. This article distinguishes surface effects from the discipline of painterly fine art photography.";
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "What Is Painterly Photography?",
+    description: pageDescription,
+    url: canonicalUrl,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-01-24",
+    articleSection: "Photography",
+    keywords: [
+      "painterly photography",
+      "painterly fine art photography",
+      "fine art photography",
+      "pictorialism",
+      "Western photography"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const meta = {
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: image1.src,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: image1.src,
+  twitterCard: "summary_large_image"
+};
+
+
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › What Is Painterly Photography?`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <!-- Header Image Banner -->
+    <section style="width:100%; overflow:hidden; margin-bottom:0;">
+      <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${headerImage.id}`}>
+        <div style="width:100%; height:280px; overflow:hidden; position:relative;">
+          <img 
+            src={headerImage.src} 
+            alt={headerImage.alt}
+            style="width:100%; height:100%; object-fit:cover; object-position:center 35%;"
+          />
+        </div>
+      </a>
+    </section>
+
+    <!-- Article Header -->
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        What Is Painterly Photography?
+      </h1>
+      <p style="font-size:1.25rem; color:#666; font-style:italic;">
+        Meaning, misuse, and the fine art distinction
+      </p>
+    </section>
+
+    <!-- Article Content -->
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+
+        <!-- SECTION 1: Acknowledge Common Usage -->
+        <p>Painterly photography is a term used in many ways. A search for it will surface tutorials, presets, software filters, and editing guides — each offering to transform ordinary photographs into images that resemble paintings.</p>
+
+        <p>This is not surprising. The word <em>painterly</em> evokes texture, warmth, and a sense of the handmade. It suggests images that move beyond description and toward expression. In contemporary usage, however, the term has often become shorthand for a particular visual treatment — soft edges, visible texture, or stylized color applied during post-processing.</p>
+
+        <p>That usage is widespread and legitimate. But it is not the only meaning of the term.</p>
+
+        <!-- SECTION 2: The Problem With the Term -->
+        <div class="section-heading-with-line">
+          <h2>The Dilution of "Painterly"</h2>
+        </div>
+
+        <p>Over the past decade, painterly has become increasingly associated with surface treatments. Presets promise painterly tones. Tutorials teach painterly edits. Software markets painterly effects. As a result, painterly photography is often understood as something applied after capture, rather than something embedded in the work from the beginning.</p>
+
+        <p>This shift is understandable. These tools are accessible, popular, and genuinely useful within their context. Yet their dominance has obscured an older and more demanding interpretation of the term — one rooted not in effect, but in authorship.</p>
+
+        <p>For collectors, curators, and viewers seeking original fine art photography, this creates confusion. When painterly qualities can be added with a slider, it becomes difficult to distinguish images where those qualities arise from vision, structure, and intent rather than from technique alone.</p>
+
+        <!-- SECTION 3: The Distinction (THE PIVOT) -->
+        <div class="section-heading-with-line">
+          <h2>When Painterly Photography Becomes Fine Art</h2>
+        </div>
+
+        <p>When painterly photography is practiced as fine art, the emphasis changes. Painterly qualities are not effects; they are foundational. They emerge through decisions made long before the shutter is released and are carried through every stage of the process — subject, light, composition, timing, printing, and presentation.</p>
+
+        <p>This approach follows a broader historical pattern shared across art forms. Meaningful artistic movements have repeatedly emerged when practitioners pushed a medium beyond its original technical purpose — extending it past what it was designed to do and into what it was capable of expressing. Painting, music, literature, and film all evolved through such expansions.</p>
+
+        <p>Photography is no exception. The Pictorialist movement of the late nineteenth and early twentieth centuries marked one of these moments. Pictorialist photographers sought atmosphere, tonal control, and narrative presence, treating the photograph as a finished art object rather than a neutral record. Their work represented a shift from documentation toward authorship.</p>
+
+        <p><a href="/Galleries/Painterly-Fine-Art-Photography" style="color:#1a5f7a; text-decoration:underline;">Painterly fine art photography</a> continues this trajectory. It is narrative-driven, print-first, and craft-intensive. Painterly qualities are not added after the fact; they are embedded in the image from conception through final print.</p>
+
+        <p>This distinction matters. A preset can make a photograph resemble a painting. A fine art practice creates photographs that function as art objects — images with presence, intention, and endurance.</p>
+
+        <!-- SECTION 4: Your Position (AUTHORITY, NOT EGO) -->
+        <div class="section-heading-with-line">
+          <h2>A Practitioner's Perspective</h2>
+        </div>
+
+        <p>My work is grounded in this tradition. As a fine art photographer and former medical illustrator, I approach photography as a constructed visual language rather than a passive recording process. The discipline I once applied to anatomical rendering — clarity of structure, restraint in execution, and commitment to the finished object — now guides my photographic practice.</p>
+
+        <p>The painterly quality in my images does not come from filters. It emerges from directional light, atmospheric conditions, compositional control, and tonal intention carried through to print. Every image is conceived as a story rather than a moment — a single frame drawn from a larger, unseen narrative.</p>
+
+        <p>My primary subject matter is the American West: cowboy portraiture, frontier narrative, and Western landscapes. I also work with historically themed subjects — Civil War, World War II, and the Roaring Twenties — always with the same aim: to create photographs that function as fine art objects, not as documentation or stylistic effects.</p>
+
+        <!-- SECTION 5: Visual Proof -->
+        <div class="section-heading-with-line">
+          <h2>What This Looks Like in Practice</h2>
+        </div>
+
+        <div class="example-images">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+              <img 
+                src={image1.src} 
+                alt={image1.alt}
+                loading="lazy"
+              />
+            </a>
+          </figure>
+          
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image2.id}`}>
+              <img 
+                src={image2.src} 
+                alt={image2.alt}
+                loading="lazy"
+              />
+            </a>
+          </figure>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image3.id}`}>
+              <img 
+                src={image3.src} 
+                alt={image3.alt}
+                loading="lazy"
+              />
+            </a>
+          </figure>
+        </div>
+
+        <!-- SECTION 6: Where to Go Next (FUNNEL) -->
+        <div class="section-heading-with-line">
+          <h2>Explore the Work</h2>
+        </div>
+
+        <p>This page addresses painterly photography as a fine art discipline rather than a post-processing style or tutorial approach. The following pages present the work itself:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography" style="color:#1a5f7a; text-decoration:underline;">Painterly Fine Art Photography</a> — 
+            <span style="color:#666;">Full gallery across all subjects</span>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Painterly-Western-Photography" style="color:#1a5f7a; text-decoration:underline;">Painterly Western Photography</a> — 
+            <span style="color:#666;">Cowboy portraiture and frontier narrative</span>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Western-Fine-Art-Photography" style="color:#1a5f7a; text-decoration:underline;">Western Fine Art Photography</a> — 
+            <span style="color:#666;">Broader Western fine art context</span>
+          </li>
+          <li>
+            <a href="/Other/Seeing" style="color:#1a5f7a; text-decoration:underline;">Seeing Essays</a> — 
+            <span style="color:#666;">Reflections on visual intention and craft</span>
+          </li>
+        </ul>
+
+        <p>At its best, painterly photography allows the viewer to move beyond the mechanics of a picture and into the experience of a story. When technique recedes, attention shifts — from how an image was made to what it suggests and leaves unresolved. In a crowded visual world, presence is not about volume. It is about clarity.</p>
+
+      </article>
+    </section>
+
+    <SiteFooter />
+  </main>
+
+  <style>
+    .story-section { line-height: 1.7; }
+    .story-block p { margin-bottom: 1rem; font-size: 1.125rem; }
+    .story-block h2 { 
+      margin-top: 2.5rem; 
+      margin-bottom: 1rem; 
+      font-weight: 600; 
+      font-size: 1.5rem;
+      color: #1a1a1a;
+    }
+    .story-block ul { font-size: 1.125rem; }
+    
+    /* Section heading with extending line */
+    .section-heading-with-line {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0;
+    }
+    .section-heading-with-line::after {
+      content: '';
+      flex: 1;
+      height: 3px;
+      background: #d0d0d0;
+    }
+    .section-heading-with-line h2 {
+      margin: 0;
+      white-space: nowrap;
+    }
+    @media (max-width: 768px) {
+      .section-heading-with-line::after {
+        display: none;
+      }
+    }
+    
+    /* 3-across image row */
+    .example-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: #f9f9f9;
+      border-radius: 12px;
+      align-items: start;
+    }
+    .example-images figure {
+      margin: 0;
+    }
+    .example-images img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    /* Responsive: stack on mobile */
+    @media (max-width: 768px) {
+      .example-images {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .example-images {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</BaseLayout>

@@ -58,8 +58,8 @@ export const storySliderData = [
   },
   {
     "id": "i-Wx5scCf",
-    "title": "Shadows on the Ridge",
-    "story": "They moved like ghosts through the broken hills, each man reading the land in his own practiced way. A lifted hand, a shift of weight, a glance toward the treeline—signals shaped by hard miles and harder winters. \n\nFrom atop the sandstone ridge, the lookout caught the faintest motion in the distance, something just out of place. Below him, the others waited, breath slowed, senses sharpened. Whatever was coming, they’d face it together, the ridge at their back and the open world before them."
+    "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
+    "story": "Among the stone and sage...\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history."
   },
   {
     "id": "i-Nn7scqm",
@@ -133,8 +133,8 @@ export const storySliderData = [
   },
   {
     "id": "i-CD6rgtF",
-    "title": "High Ground Justice",
-    "story": "All lines lead to conflict. Trees stand watch from above, silent patrons to the stage below. Cliffs, angered and jagged — their edge… the box… the ring of reckoning.\n\nShadows press in, clouds gather on winds of judgment, textures pulling, tightening the grip. A bold, harsh narrator carves — its voice in shadow, speaking violence against the soft hush of summer grass.\n\nAll lines converge. Justice? Vengeance? Opportunity? Only the wind sings this song."
+    "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
+    "story": "Among the stone and sage...\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history."
   },
   {
     "id": "i-c3vWMgt",

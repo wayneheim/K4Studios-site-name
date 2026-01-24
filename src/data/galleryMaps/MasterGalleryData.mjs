@@ -1371,13 +1371,13 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-VVwZ7gM",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/McVdwkfTLNQJN9FDbBKT3HtzzCrwt2qkjkdgPLBtS/M/_HF29136-Edit-Edit-3-2-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MCjVLLscvMzW9txvBcpWQPBbzgNPwjQwS4sWtqqvG/L/_HF29136-Edit-Edit-3-2-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
-      "rating": 5,
+      "id": "i-89qzJ6S",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/MQLzDBQccQDFrb7kBSR9Wm8cCgC8NkG76c43VX2Xx/S/_HF29136-Edit-2-Edit-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/K47vmSfgp78JKdqTBvZHR5XSk44bJ8Vz8PsF7722h/M/_HF29136-Edit-2-Edit-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/KFC7vkSrbSkrPPGFpZSVfcqfV48gC7WztZpHz8Rg2/L/_HF29136-Edit-2-Edit-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/MQLzDBQccQDFrb7kBSR9Wm8cCgC8NkG76c43VX2Xx/S/_HF29136-Edit-2-Edit-S.jpg",
+      "rating": 0,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -7442,19 +7442,6 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-89qzJ6S",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/MQLzDBQccQDFrb7kBSR9Wm8cCgC8NkG76c43VX2Xx/S/_HF29136-Edit-2-Edit-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/K47vmSfgp78JKdqTBvZHR5XSk44bJ8Vz8PsF7722h/M/_HF29136-Edit-2-Edit-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/KFC7vkSrbSkrPPGFpZSVfcqfV48gC7WztZpHz8Rg2/L/_HF29136-Edit-2-Edit-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/MQLzDBQccQDFrb7kBSR9Wm8cCgC8NkG76c43VX2Xx/S/_HF29136-Edit-2-Edit-S.jpg",
-      "rating": 0,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-      ]
-    },
-    {
       "id": "i-xgqQnWv",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xgqQnWv/1/K2dJbWBDQhShLmhdfNn4Whm4F4tmfvk4XWbXdv4QV/S/_WHO4255-Edit-Edit-S.jpg",
       "srcM": "",
@@ -7969,6 +7956,19 @@ export const galleryDataMap   = {
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/Ld32Sg3H38QpCRnmn2MpDFNgrNWsxVP6B7nQVBSRL/XL/_HF24980-1363-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/LFrGKWJTRT4FGHQTdSwthGJJ5nqxjNtkR6k9dDLx3/S/_HF24980-1363-S.jpg",
       "rating": 4,
+      "visibility": "hidden",
+      "galleries": [
+        "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+      ]
+    },
+    {
+      "id": "i-VVwZ7gM",
+      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/McVdwkfTLNQJN9FDbBKT3HtzzCrwt2qkjkdgPLBtS/M/_HF29136-Edit-Edit-3-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MCjVLLscvMzW9txvBcpWQPBbzgNPwjQwS4sWtqqvG/L/_HF29136-Edit-Edit-3-2-L.jpg",
+      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
+      "rating": 5,
       "visibility": "hidden",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -46627,7 +46627,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-jL4Gk5N/0/KPfVtkJPHP369bHC6KHjvmGqkMjNnSgrsQPsjw8F7/L/Color%20of%20Conviction%2016%20x%2024%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-jL4Gk5N/0/MtG8SF86dHpCjxtLhD8Rz6JDNkQHWRPD68HkctJd9/XL/Color%20of%20Conviction%2016%20x%2024%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-jL4Gk5N/0/MHxgjDZpgmzXdN6V3jpcbbSVgfHCRgDxGRf6MJN5D/S/Color%20of%20Conviction%2016%20x%2024%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46640,7 +46640,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/McfHBwQXhtv2bP3SsZ4rRdckwtgKkHk74hGrd6ZkB/L/Cough%20and%20Covenant%2016%20x%2020%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/L97B7ZZxksrLW5z8NDSJDx2RTbZdfcBbfNCT8NZVX/XL/Cough%20and%20Covenant%2016%20x%2020%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/LKppLkW56HTHP9dvkRNGc6GZb6Jvsjkntzr2HtH33/S/Cough%20and%20Covenant%2016%20x%2020%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46653,7 +46653,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-swWgKsW/0/M49QgLj58ZMTJFpZqdfg6tRtXZxcBjDgsN3r57mpb/L/Day%20In%20Review%2018%20x%2030%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-swWgKsW/0/KwrmbngJ6qKKmG9B2VST5XV6gGrFGrGLcf5K7txd9/XL/Day%20In%20Review%2018%20x%2030%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-swWgKsW/0/L82QL8LpkMdbXgRZ57SSKjDCKVhBRpRrwQZnrffBd/S/Day%20In%20Review%2018%20x%2030%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46666,7 +46666,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/LJxzpQvJGxNSVrQ7mwrz63GtFmRpbXZfs48pVHqrG/L/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/KGL3sL8qcVKdp7Vq8nz4N92mK9PccZCj4m7jSmQ6Q/XL/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/MBvDhNX2pqkZBvpncszF7N6mNML8fX4B3HfNg66B2/S/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46679,7 +46679,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hCk9fs9/0/NCGdPfpPZdq2ZpJ8w3qV8hdFvH9bSstNpSnfbxcL6/L/End%20of%20His%20Rope%2016%20x%2024%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hCk9fs9/0/MpRVxTC6Cbc6w9mXfm6VmhPgLTrV7pr7T7rhKcqbj/XL/End%20of%20His%20Rope%2016%20x%2024%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hCk9fs9/0/L8LsnQKmMhB2PD8c9Zknq8dNsCDhN5BJwTqKgMbLR/S/End%20of%20His%20Rope%2016%20x%2024%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46692,7 +46692,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4pQCmVZ/0/NNKz7vcSGNBj7m2fLKp8L7StsmV34Nb9ZNVQ4J8JC/L/For%20Better%20or%20For%20Worse%2016%20x%2024%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4pQCmVZ/0/MPKPRJGkVjCJNL8Gg88jDM5GGPmjN47zDxxj8r4Z2/XL/For%20Better%20or%20For%20Worse%2016%20x%2024%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4pQCmVZ/0/Nb8t94Wwk9gvhvSffw3G9bFJS2rrmPvsM396SPzBQ/S/For%20Better%20or%20For%20Worse%2016%20x%2024%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46705,7 +46705,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-vhmHCCM/0/NfjQbVnJHsKGzpmdx4R86mzmvHZZ38H9Bh8RdqkHT/L/Jane%2024%20x%2036%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-vhmHCCM/0/M6r6tkggWScthhbqChbpvwTqQNxBhCvbFjsP9brt4/XL/Jane%2024%20x%2036%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-vhmHCCM/0/LnPcv8dh8rHPJbSNPbhFFfXzG4rzjvHncmPmXZ94h/S/Jane%2024%20x%2036%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46718,7 +46718,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-bVSh9xt/0/NFLQSGkwbRH4wx9FShd3j85MTMcHHQ5Rf7VpSVpnW/L/Justified%20or%20Damned%2036%20x%2026%20c2%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-bVSh9xt/0/L7hpJ3KDL5TQ3S44XDkZVKdN4HTsk6Z94sSWgVSTL/XL/Justified%20or%20Damned%2036%20x%2026%20c2%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-bVSh9xt/0/K9CxsLDFFrzwJJHc6qsRkVBMTb7crJnPFc6nLWBDZ/S/Justified%20or%20Damned%2036%20x%2026%20c2%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46731,7 +46731,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-rxQn29x/0/MgK8t9ptqPfBWJC6msTss2dNrqsqNXB35Dhh3Bk8S/L/Last%20Hand%2042%20x%2030%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-rxQn29x/0/LLpP9qSxK6BhKrTTsbWcw5LRC46grLJwnm8vgLGHJ/XL/Last%20Hand%2042%20x%2030%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-rxQn29x/0/L33SsTbLxRkgCFk8cHcN6TM8xgHqP8sK3wM6D3x37/S/Last%20Hand%2042%20x%2030%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46744,7 +46744,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-svbQj25/0/M647TdMkQMQCjwLQnK2NrWWzrVDCsbMQrCM8SqW84/L/Lifted%2016%20x%2036%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-svbQj25/0/NBzdqPRZ8K5zNbb92f8B4cH9cTt7JXSHkVTL4Dq4s/XL/Lifted%2016%20x%2036%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-svbQj25/0/KcLqjr3b2KBWCp63m47HBHRzcKm8ccZSGr4SR4j53/M/Lifted%2016%20x%2036%20copy-M.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46757,7 +46757,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/0/LQ3fP7jpspf9Qdn94VW6kSX8dWNm5Wd7Xk5p8jH8q/L/Loaded%20for%20Bear%2016%20x%2020%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/0/MMGs3tBxK5Bmf4r2bML7StkqHk9Dq5nQQR9L8Jctf/XL/Loaded%20for%20Bear%2016%20x%2020%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/0/MmW8HsH7sG53dTQRBdMvRk6V22zFLnXmjFzwtbLnq/S/Loaded%20for%20Bear%2016%20x%2020%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46770,7 +46770,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-zdvVgqx/0/NRF3zxxWNRt7W546CZ4wF667BtFbgMNkg2rdpcVXm/L/Lord%20Help%20Us%20All%2016%20x%2036%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-zdvVgqx/0/M4gGrdRkBhNhbvw2FPpQ6Hb4ZbMQ3snZ5VnCbnS72/XL/Lord%20Help%20Us%20All%2016%20x%2036%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-zdvVgqx/0/NG6ggjwc3jR9DWv9qNzRLrMQbmJmbbk6CH6ZZs5DK/M/Lord%20Help%20Us%20All%2016%20x%2036%20copy-M.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46783,7 +46783,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wV53528/0/LjZqfv7VS2LpPrt69pgFs7Wd2p3GCpq6CpTfJ2dd9/L/Lord%20Send%20Me%20a%20Sign%2016%20x%2020%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wV53528/0/L43jkVzd83dRBjfKhhZVr8Ps82MxkbFVjqzKxHkC4/XL/Lord%20Send%20Me%20a%20Sign%2016%20x%2020%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wV53528/0/NbnqDKhRnBsQ3RWLn8sX5KqCG7Bn5fkFbMHKKR6wr/S/Lord%20Send%20Me%20a%20Sign%2016%20x%2020%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46809,7 +46809,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-LdQzCRt/0/Nch9WHBC6Tjcs2pB5DsLzbW9SwKPRnCxdTV4xHjdM/L/Night%20Raid%2030%20x%2022%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-LdQzCRt/0/KWjFf3czXHD7TVHxQGwpHvFtB3x2w8vS2D4SMCZHX/XL/Night%20Raid%2030%20x%2022%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-LdQzCRt/0/M6NVpxWcB32rtBD4rp34b8KmR4VmCmGDqwTX7TX4f/S/Night%20Raid%2030%20x%2022%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46822,7 +46822,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8pfC4qn/0/MfRWr59Zh64gJBtHbZtCt8pTq3gp77mWZvwQTfsJt/L/One%20Way%20Out%2036%20x%2026%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8pfC4qn/0/Mf77hsNvZhWP94Rpf5x4jDmVKQPD7SKX3XDpctqwB/XL/One%20Way%20Out%2036%20x%2026%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8pfC4qn/0/NKZHT6RpqgJtC9z3Fd8MSLWhGMQc4dXxnntqjP2kw/S/One%20Way%20Out%2036%20x%2026%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46848,7 +46848,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/LjtbX6frJB4ZN8rGZbqMX8NpMvSwvgFfHkzL4Cs3n/L/This%20is%20the%20Hand%2018%20x%2024-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/KwNcm2hP5xh7pBSXbLqqXFrjtv2GvhBkb9JzJjdDd/XL/This%20is%20the%20Hand%2018%20x%2024-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/MXTZXQ5kN5k2F9gS6PHm24nppLM7XRcWS2D5MwFD5/S/This%20is%20the%20Hand%2018%20x%2024-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46861,7 +46861,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PnGsDQp/0/Lk5vZ2KFVMNjP7ThnXfzCw5zK5NfwvP3bdP8HdMmb/L/Till%20Death%20Do%20Us%20Part%2018%20x%2030-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PnGsDQp/0/LkJhM74SGrQZdvMdLGwMXcbS38vGPsbccj6H2DWmD/XL/Till%20Death%20Do%20Us%20Part%2018%20x%2030-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PnGsDQp/0/Kst6XP6vgtfT5FdBv23ZhzhZRq2GSP3VrMhwfFBP2/S/Till%20Death%20Do%20Us%20Part%2018%20x%2030-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46874,7 +46874,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-G8gfsL5/0/Kgfzb3qpcTbzWRSpfKwjLxW73sbtx49nTb4vSgdsw/L/Untimely%20Parting%2016%20x%2020-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-G8gfsL5/0/Ng7DQh5tSD3jvrcTkPR6McjKvbXwcZHrLZ5f27pWJ/XL/Untimely%20Parting%2016%20x%2020-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-G8gfsL5/0/LTJM96KmtcZrWDN9rXQRCDvSZRtNLDvdxLs4PPMLH/S/Untimely%20Parting%2016%20x%2020-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46887,7 +46887,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/LsV7BmBdHghk3FJ5nBKnQBXDWqxNFxh6qj4BqkjSL/L/Welcome%20Party%2030%20x%2020-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/KfRRCJRpH6tz8ztTMbp8d2hsckqBNnNqdj926NsgJ/XL/Welcome%20Party%2030%20x%2020-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/MxCgpQxwFgDvDvKjxX3hBrTLC9nGVBwNngTgzzcCn/S/Welcome%20Party%2030%20x%2020-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46900,7 +46900,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-x6rrj3V/0/MNNsZh5MDVWNHS8Qg82LhbbBG9mZBvhPB6PnSSZZt/L/Where%20I%20Stand%2018%20x%2024-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-x6rrj3V/0/MBQ9hdCn55qZPPHLQV7Fkpn74wKH5794vjT2PgLjn/XL/Where%20I%20Stand%2018%20x%2024-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-x6rrj3V/0/NTvvhFHqZft7bmztJ7dJkSFf6xhXHKdSJNk5CzxsF/S/Where%20I%20Stand%2018%20x%2024-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -46913,7 +46913,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB/0/MvTfp4w2k4VxZb8QPzcWc6hD45Bdcp95b6GS5js2G/L/Worth%20Every%20Mile%2016%20x%2024-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB/0/MHPqRDqXckm64s6dtbz8j56FTXZjJrf246tntQgxM/XL/Worth%20Every%20Mile%2016%20x%2024-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB/0/LhtJfCBNC7ZBxq4BXpskqjzfwPcPrzMpv8N2hrjLC/S/Worth%20Every%20Mile%2016%20x%2024-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -48809,13 +48809,13 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-VVwZ7gM",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/McVdwkfTLNQJN9FDbBKT3HtzzCrwt2qkjkdgPLBtS/M/_HF29136-Edit-Edit-3-2-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MCjVLLscvMzW9txvBcpWQPBbzgNPwjQwS4sWtqqvG/L/_HF29136-Edit-Edit-3-2-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
-    "rating": 5,
+    "id": "i-89qzJ6S",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/MQLzDBQccQDFrb7kBSR9Wm8cCgC8NkG76c43VX2Xx/S/_HF29136-Edit-2-Edit-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/K47vmSfgp78JKdqTBvZHR5XSk44bJ8Vz8PsF7722h/M/_HF29136-Edit-2-Edit-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/KFC7vkSrbSkrPPGFpZSVfcqfV48gC7WztZpHz8Rg2/L/_HF29136-Edit-2-Edit-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/MQLzDBQccQDFrb7kBSR9Wm8cCgC8NkG76c43VX2Xx/S/_HF29136-Edit-2-Edit-S.jpg",
+    "rating": 0,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -54880,19 +54880,6 @@ export const allImages        = [
     ]
   },
   {
-    "id": "i-89qzJ6S",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/MQLzDBQccQDFrb7kBSR9Wm8cCgC8NkG76c43VX2Xx/S/_HF29136-Edit-2-Edit-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/K47vmSfgp78JKdqTBvZHR5XSk44bJ8Vz8PsF7722h/M/_HF29136-Edit-2-Edit-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/KFC7vkSrbSkrPPGFpZSVfcqfV48gC7WztZpHz8Rg2/L/_HF29136-Edit-2-Edit-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/MQLzDBQccQDFrb7kBSR9Wm8cCgC8NkG76c43VX2Xx/S/_HF29136-Edit-2-Edit-S.jpg",
-    "rating": 0,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-    ]
-  },
-  {
     "id": "i-xgqQnWv",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xgqQnWv/1/K2dJbWBDQhShLmhdfNn4Whm4F4tmfvk4XWbXdv4QV/S/_WHO4255-Edit-Edit-S.jpg",
     "srcM": "",
@@ -55407,6 +55394,19 @@ export const allImages        = [
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/Ld32Sg3H38QpCRnmn2MpDFNgrNWsxVP6B7nQVBSRL/XL/_HF24980-1363-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-HfWwLLf/0/LFrGKWJTRT4FGHQTdSwthGJJ5nqxjNtkR6k9dDLx3/S/_HF24980-1363-S.jpg",
     "rating": 4,
+    "visibility": "hidden",
+    "galleries": [
+      "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+    ]
+  },
+  {
+    "id": "i-VVwZ7gM",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/McVdwkfTLNQJN9FDbBKT3HtzzCrwt2qkjkdgPLBtS/M/_HF29136-Edit-Edit-3-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MCjVLLscvMzW9txvBcpWQPBbzgNPwjQwS4sWtqqvG/L/_HF29136-Edit-Edit-3-2-L.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/M8LH59P79dxSmXzDRxxB8GbHCKdwkKVqdjVx4KWwV/S/_HF29136-Edit-Edit-3-2-S.jpg",
+    "rating": 5,
     "visibility": "hidden",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
@@ -93977,7 +93977,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-jL4Gk5N/0/KPfVtkJPHP369bHC6KHjvmGqkMjNnSgrsQPsjw8F7/L/Color%20of%20Conviction%2016%20x%2024%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-jL4Gk5N/0/MtG8SF86dHpCjxtLhD8Rz6JDNkQHWRPD68HkctJd9/XL/Color%20of%20Conviction%2016%20x%2024%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-jL4Gk5N/0/MHxgjDZpgmzXdN6V3jpcbbSVgfHCRgDxGRf6MJN5D/S/Color%20of%20Conviction%2016%20x%2024%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -93990,7 +93990,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/McfHBwQXhtv2bP3SsZ4rRdckwtgKkHk74hGrd6ZkB/L/Cough%20and%20Covenant%2016%20x%2020%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/L97B7ZZxksrLW5z8NDSJDx2RTbZdfcBbfNCT8NZVX/XL/Cough%20and%20Covenant%2016%20x%2020%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/LKppLkW56HTHP9dvkRNGc6GZb6Jvsjkntzr2HtH33/S/Cough%20and%20Covenant%2016%20x%2020%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94003,7 +94003,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-swWgKsW/0/M49QgLj58ZMTJFpZqdfg6tRtXZxcBjDgsN3r57mpb/L/Day%20In%20Review%2018%20x%2030%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-swWgKsW/0/KwrmbngJ6qKKmG9B2VST5XV6gGrFGrGLcf5K7txd9/XL/Day%20In%20Review%2018%20x%2030%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-swWgKsW/0/L82QL8LpkMdbXgRZ57SSKjDCKVhBRpRrwQZnrffBd/S/Day%20In%20Review%2018%20x%2030%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94016,7 +94016,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/LJxzpQvJGxNSVrQ7mwrz63GtFmRpbXZfs48pVHqrG/L/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/KGL3sL8qcVKdp7Vq8nz4N92mK9PccZCj4m7jSmQ6Q/XL/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/MBvDhNX2pqkZBvpncszF7N6mNML8fX4B3HfNg66B2/S/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94029,7 +94029,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hCk9fs9/0/NCGdPfpPZdq2ZpJ8w3qV8hdFvH9bSstNpSnfbxcL6/L/End%20of%20His%20Rope%2016%20x%2024%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hCk9fs9/0/MpRVxTC6Cbc6w9mXfm6VmhPgLTrV7pr7T7rhKcqbj/XL/End%20of%20His%20Rope%2016%20x%2024%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hCk9fs9/0/L8LsnQKmMhB2PD8c9Zknq8dNsCDhN5BJwTqKgMbLR/S/End%20of%20His%20Rope%2016%20x%2024%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94042,7 +94042,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4pQCmVZ/0/NNKz7vcSGNBj7m2fLKp8L7StsmV34Nb9ZNVQ4J8JC/L/For%20Better%20or%20For%20Worse%2016%20x%2024%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4pQCmVZ/0/MPKPRJGkVjCJNL8Gg88jDM5GGPmjN47zDxxj8r4Z2/XL/For%20Better%20or%20For%20Worse%2016%20x%2024%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4pQCmVZ/0/Nb8t94Wwk9gvhvSffw3G9bFJS2rrmPvsM396SPzBQ/S/For%20Better%20or%20For%20Worse%2016%20x%2024%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94055,7 +94055,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-vhmHCCM/0/NfjQbVnJHsKGzpmdx4R86mzmvHZZ38H9Bh8RdqkHT/L/Jane%2024%20x%2036%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-vhmHCCM/0/M6r6tkggWScthhbqChbpvwTqQNxBhCvbFjsP9brt4/XL/Jane%2024%20x%2036%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-vhmHCCM/0/LnPcv8dh8rHPJbSNPbhFFfXzG4rzjvHncmPmXZ94h/S/Jane%2024%20x%2036%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94068,7 +94068,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-bVSh9xt/0/NFLQSGkwbRH4wx9FShd3j85MTMcHHQ5Rf7VpSVpnW/L/Justified%20or%20Damned%2036%20x%2026%20c2%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-bVSh9xt/0/L7hpJ3KDL5TQ3S44XDkZVKdN4HTsk6Z94sSWgVSTL/XL/Justified%20or%20Damned%2036%20x%2026%20c2%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-bVSh9xt/0/K9CxsLDFFrzwJJHc6qsRkVBMTb7crJnPFc6nLWBDZ/S/Justified%20or%20Damned%2036%20x%2026%20c2%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94081,7 +94081,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-rxQn29x/0/MgK8t9ptqPfBWJC6msTss2dNrqsqNXB35Dhh3Bk8S/L/Last%20Hand%2042%20x%2030%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-rxQn29x/0/LLpP9qSxK6BhKrTTsbWcw5LRC46grLJwnm8vgLGHJ/XL/Last%20Hand%2042%20x%2030%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-rxQn29x/0/L33SsTbLxRkgCFk8cHcN6TM8xgHqP8sK3wM6D3x37/S/Last%20Hand%2042%20x%2030%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94094,7 +94094,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-svbQj25/0/M647TdMkQMQCjwLQnK2NrWWzrVDCsbMQrCM8SqW84/L/Lifted%2016%20x%2036%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-svbQj25/0/NBzdqPRZ8K5zNbb92f8B4cH9cTt7JXSHkVTL4Dq4s/XL/Lifted%2016%20x%2036%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-svbQj25/0/KcLqjr3b2KBWCp63m47HBHRzcKm8ccZSGr4SR4j53/M/Lifted%2016%20x%2036%20copy-M.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94107,7 +94107,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/0/LQ3fP7jpspf9Qdn94VW6kSX8dWNm5Wd7Xk5p8jH8q/L/Loaded%20for%20Bear%2016%20x%2020%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/0/MMGs3tBxK5Bmf4r2bML7StkqHk9Dq5nQQR9L8Jctf/XL/Loaded%20for%20Bear%2016%20x%2020%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/0/MmW8HsH7sG53dTQRBdMvRk6V22zFLnXmjFzwtbLnq/S/Loaded%20for%20Bear%2016%20x%2020%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94120,7 +94120,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-zdvVgqx/0/NRF3zxxWNRt7W546CZ4wF667BtFbgMNkg2rdpcVXm/L/Lord%20Help%20Us%20All%2016%20x%2036%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-zdvVgqx/0/M4gGrdRkBhNhbvw2FPpQ6Hb4ZbMQ3snZ5VnCbnS72/XL/Lord%20Help%20Us%20All%2016%20x%2036%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-zdvVgqx/0/NG6ggjwc3jR9DWv9qNzRLrMQbmJmbbk6CH6ZZs5DK/M/Lord%20Help%20Us%20All%2016%20x%2036%20copy-M.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94133,7 +94133,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wV53528/0/LjZqfv7VS2LpPrt69pgFs7Wd2p3GCpq6CpTfJ2dd9/L/Lord%20Send%20Me%20a%20Sign%2016%20x%2020%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wV53528/0/L43jkVzd83dRBjfKhhZVr8Ps82MxkbFVjqzKxHkC4/XL/Lord%20Send%20Me%20a%20Sign%2016%20x%2020%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wV53528/0/NbnqDKhRnBsQ3RWLn8sX5KqCG7Bn5fkFbMHKKR6wr/S/Lord%20Send%20Me%20a%20Sign%2016%20x%2020%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94159,7 +94159,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-LdQzCRt/0/Nch9WHBC6Tjcs2pB5DsLzbW9SwKPRnCxdTV4xHjdM/L/Night%20Raid%2030%20x%2022%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-LdQzCRt/0/KWjFf3czXHD7TVHxQGwpHvFtB3x2w8vS2D4SMCZHX/XL/Night%20Raid%2030%20x%2022%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-LdQzCRt/0/M6NVpxWcB32rtBD4rp34b8KmR4VmCmGDqwTX7TX4f/S/Night%20Raid%2030%20x%2022%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94172,7 +94172,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8pfC4qn/0/MfRWr59Zh64gJBtHbZtCt8pTq3gp77mWZvwQTfsJt/L/One%20Way%20Out%2036%20x%2026%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8pfC4qn/0/Mf77hsNvZhWP94Rpf5x4jDmVKQPD7SKX3XDpctqwB/XL/One%20Way%20Out%2036%20x%2026%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8pfC4qn/0/NKZHT6RpqgJtC9z3Fd8MSLWhGMQc4dXxnntqjP2kw/S/One%20Way%20Out%2036%20x%2026%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94198,7 +94198,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/LjtbX6frJB4ZN8rGZbqMX8NpMvSwvgFfHkzL4Cs3n/L/This%20is%20the%20Hand%2018%20x%2024-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/KwNcm2hP5xh7pBSXbLqqXFrjtv2GvhBkb9JzJjdDd/XL/This%20is%20the%20Hand%2018%20x%2024-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/MXTZXQ5kN5k2F9gS6PHm24nppLM7XRcWS2D5MwFD5/S/This%20is%20the%20Hand%2018%20x%2024-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94211,7 +94211,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PnGsDQp/0/Lk5vZ2KFVMNjP7ThnXfzCw5zK5NfwvP3bdP8HdMmb/L/Till%20Death%20Do%20Us%20Part%2018%20x%2030-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PnGsDQp/0/LkJhM74SGrQZdvMdLGwMXcbS38vGPsbccj6H2DWmD/XL/Till%20Death%20Do%20Us%20Part%2018%20x%2030-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PnGsDQp/0/Kst6XP6vgtfT5FdBv23ZhzhZRq2GSP3VrMhwfFBP2/S/Till%20Death%20Do%20Us%20Part%2018%20x%2030-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94224,7 +94224,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-G8gfsL5/0/Kgfzb3qpcTbzWRSpfKwjLxW73sbtx49nTb4vSgdsw/L/Untimely%20Parting%2016%20x%2020-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-G8gfsL5/0/Ng7DQh5tSD3jvrcTkPR6McjKvbXwcZHrLZ5f27pWJ/XL/Untimely%20Parting%2016%20x%2020-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-G8gfsL5/0/LTJM96KmtcZrWDN9rXQRCDvSZRtNLDvdxLs4PPMLH/S/Untimely%20Parting%2016%20x%2020-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94237,7 +94237,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/LsV7BmBdHghk3FJ5nBKnQBXDWqxNFxh6qj4BqkjSL/L/Welcome%20Party%2030%20x%2020-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/KfRRCJRpH6tz8ztTMbp8d2hsckqBNnNqdj926NsgJ/XL/Welcome%20Party%2030%20x%2020-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/MxCgpQxwFgDvDvKjxX3hBrTLC9nGVBwNngTgzzcCn/S/Welcome%20Party%2030%20x%2020-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94250,7 +94250,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-x6rrj3V/0/MNNsZh5MDVWNHS8Qg82LhbbBG9mZBvhPB6PnSSZZt/L/Where%20I%20Stand%2018%20x%2024-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-x6rrj3V/0/MBQ9hdCn55qZPPHLQV7Fkpn74wKH5794vjT2PgLjn/XL/Where%20I%20Stand%2018%20x%2024-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-x6rrj3V/0/NTvvhFHqZft7bmztJ7dJkSFf6xhXHKdSJNk5CzxsF/S/Where%20I%20Stand%2018%20x%2024-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -94263,7 +94263,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB/0/MvTfp4w2k4VxZb8QPzcWc6hD45Bdcp95b6GS5js2G/L/Worth%20Every%20Mile%2016%20x%2024-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB/0/MHPqRDqXckm64s6dtbz8j56FTXZjJrf246tntQgxM/XL/Worth%20Every%20Mile%2016%20x%2024-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB/0/LhtJfCBNC7ZBxq4BXpskqjzfwPcPrzMpv8N2hrjLC/S/Worth%20Every%20Mile%2016%20x%2024-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
