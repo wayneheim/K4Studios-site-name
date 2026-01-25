@@ -188,7 +188,7 @@ export const galleryData = [
   {
     "id": "i-mTV4SXC",
     "title": "Stairs to the Lighthouse  Photography by Wayne Heim",
-    "description": "Fine art landscape photography of Newfoundland, Canada - the shores of North America.",
+    "description": "Fine art landscape photography of Newfoundland, Canada — rugged coastal cliffs, weathered lighthouses, and the shores of North America's easternmost province. Wayne Heim captures the raw beauty of this Atlantic landscape.",
     "alt": "Way to the Lighthouse   Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/i-mTV4SXC/A",
     "keywords": [

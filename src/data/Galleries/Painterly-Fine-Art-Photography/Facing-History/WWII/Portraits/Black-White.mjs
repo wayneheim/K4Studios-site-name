@@ -254,8 +254,8 @@ export const galleryData = [
   {
     "id": "i-KHwLvpT",
     "title": "Yes Sir     Black & White Photography by Wayne Heim",
-    "description": "Soldier salutes at D Day reenactment in Conneaut, Ohio.  © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "description": "A WWII soldier's salute captured in black and white at the D-Day Conneaut reenactment. Part of Wayne Heim's Facing History series honoring the Greatest Generation through painterly fine art photography.",
+    "alt": "WWII soldier saluting at D-Day Conneaut reenactment",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KHwLvpT/4/LrHQCFqwHPmj9w54H7RnRd7SKRncpcRKd8jj38tfc/XL/_OLY1285-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KHwLvpT/4/LrHQCFqwHPmj9w54H7RnRd7SKRncpcRKd8jj38tfc/XL/_OLY1285-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-KHwLvpT/4/LrHQCFqwHPmj9w54H7RnRd7SKRncpcRKd8jj38tfc/XL/_OLY1285-Edit-XL.jpg",

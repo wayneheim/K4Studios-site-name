@@ -289,7 +289,7 @@ export const galleryData = [
   {
     "id": "i-BQzssgZ",
     "title": "A Flattened Mountain Peak in the Canadian Rockies",
-    "description": "The essence of the Canadian Rockies in fine art: Banff, Jasper, and Emerald Lake.",
+    "description": "Fine art landscape photography of the Canadian Rockies — Banff, Jasper, and the surrounding peaks. Wayne Heim captures the sculptural drama of weathered mountain summits and alpine light.",
     "alt": "Black & White Photo of a Weathered Mountain Peak",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/i-BQzssgZ/A",
     "keywords": [
