@@ -1,0 +1,303 @@
+---
+/**
+ * WWII Photography Archive - Corpus Hub Page
+ * 
+ * Purpose: Semantic authority declaration for Google's classification system
+ * 767 images across 6 galleries (Portraits/Machines/War × Color/B&W)
+ */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Footer from "@/components/Footer.astro";
+
+// Gallery data imports for accurate counts
+import { galleryData as portraitsColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs";
+import { galleryData as portraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
+import { galleryData as machinesColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color.mjs";
+import { galleryData as machinesBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs";
+import { galleryData as warColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color.mjs";
+import { galleryData as warBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs";
+
+// Filter out ghosts
+const filterGhosts = (data: any[]) => data.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
+
+const portraitsColorCount = filterGhosts(portraitsColor);
+const portraitsBWCount = filterGhosts(portraitsBW);
+const machinesColorCount = filterGhosts(machinesColor);
+const machinesBWCount = filterGhosts(machinesBW);
+const warColorCount = filterGhosts(warColor);
+const warBWCount = filterGhosts(warBW);
+
+const totalCount = portraitsColorCount + portraitsBWCount + machinesColorCount + machinesBWCount + warColorCount + warBWCount;
+
+// Page metadata
+const pageTitle = `WWII Photography Archive – ${totalCount} Painterly Fine Art Images | Wayne Heim`;
+const pageDescription = `Complete archive of ${totalCount} WWII fine art photographs by Wayne Heim. Portraits of soldiers and nurses, wartime machines, and battle reenactments in painterly color and black & white.`;
+const canonicalUrl = "https://www.k4studios.com/WWII-Photography-Archive";
+
+// Sub-collection definitions organized by category
+const subCollections = [
+  {
+    category: "Portraits",
+    galleries: [
+      {
+        name: "WWII Portraits – Color",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/all",
+        count: portraitsColorCount,
+        description: "Color portraits of soldiers, nurses, and wartime characters."
+      },
+      {
+        name: "WWII Portraits – Black & White",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/all",
+        count: portraitsBWCount,
+        description: "Timeless monochrome studies of the Greatest Generation."
+      }
+    ]
+  },
+  {
+    category: "Machines",
+    galleries: [
+      {
+        name: "WWII Machines – Color",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/all",
+        count: machinesColorCount,
+        description: "Aircraft, tanks, and military vehicles in vivid period detail."
+      },
+      {
+        name: "WWII Machines – Black & White",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/all",
+        count: machinesBWCount,
+        description: "The machinery of war rendered in classic monochrome."
+      }
+    ]
+  },
+  {
+    category: "War Scenes",
+    galleries: [
+      {
+        name: "WWII War – Color",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/all",
+        count: warColorCount,
+        description: "Battle reenactments and wartime narratives in full color."
+      },
+      {
+        name: "WWII War – Black & White",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/all",
+        count: warBWCount,
+        description: "Combat scenes with the gravitas of historical record."
+      }
+    ]
+  }
+];
+
+// Flatten for schema
+const allGalleries = subCollections.flatMap(cat => cat.galleries);
+
+// CollectionPage + ItemList structured data
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": canonicalUrl,
+      "name": "WWII Photography Archive",
+      "description": pageDescription,
+      "url": canonicalUrl,
+      "numberOfItems": totalCount,
+      "creator": {
+        "@type": "Person",
+        "name": "Wayne Heim",
+        "url": "https://www.k4studios.com/Other/Bio"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "K4 Studios",
+        "url": "https://www.k4studios.com"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": allGalleries.length,
+        "itemListElement": allGalleries.map((gal, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": gal.name,
+          "url": `https://www.k4studios.com${gal.url}`,
+          "description": gal.description,
+          "item": {
+            "@type": "ImageGallery",
+            "name": gal.name,
+            "url": `https://www.k4studios.com${gal.url}`,
+            "numberOfItems": gal.count
+          }
+        }))
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.k4studios.com" },
+        { "@type": "ListItem", "position": 2, "name": "Galleries", "item": "https://www.k4studios.com/Galleries" },
+        { "@type": "ListItem", "position": 3, "name": "WWII", "item": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII" },
+        { "@type": "ListItem", "position": 4, "name": "Archive", "item": canonicalUrl }
+      ]
+    }
+  ]
+});
+
+// Meta object for BaseLayout
+const meta = {
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: canonicalUrl,
+  ogType: "website",
+  ogImage: "/og/wwii-archive.jpg",
+  twitterCard: "summary_large_image",
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: "/og/wwii-archive.jpg",
+  keywords: "WWII photography, World War 2 art, military portraits, wartime photography, Wayne Heim, painterly photography, soldier portraits, WWII reenactment, fine art military photography"
+};
+---
+
+<script type="application/ld+json" is:inline set:html={structuredData}></script>
+
+<BaseLayout title={pageTitle} meta={meta}>
+  <main class="bg-[#faf8f5] text-[#2c2c2c] font-serif min-h-screen">
+    
+    <!-- Breadcrumb -->
+    <nav class="max-w-4xl mx-auto px-4 py-4 text-sm text-[#666]" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap gap-1">
+        <li><a href="/" class="hover:text-[#8b0000]">Home</a></li>
+        <li class="before:content-['›'] before:mx-2"><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII" class="hover:text-[#8b0000]">WWII</a></li>
+        <li class="before:content-['›'] before:mx-2 text-[#8b0000]" aria-current="page">Archive</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <header class="max-w-4xl mx-auto px-4 py-8 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-[#2c2c2c] mb-4">
+        WWII Photography Archive
+      </h1>
+      <p class="text-lg md:text-xl text-[#555] max-w-2xl mx-auto">
+        A curated collection of <strong>{totalCount}</strong> painterly fine art photographs honoring the Greatest Generation.
+      </p>
+    </header>
+
+    <!-- Collection Stats Bar -->
+    <section class="max-w-4xl mx-auto px-4 py-6">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 bg-white rounded-lg shadow-sm p-6 border border-[#e8e4de]">
+        <div class="text-center">
+          <div class="text-2xl font-bold text-[#8b0000]">{portraitsColorCount + portraitsBWCount}</div>
+          <div class="text-sm text-[#666]">Portraits</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-[#8b0000]">{machinesColorCount + machinesBWCount}</div>
+          <div class="text-sm text-[#666]">Machines</div>
+        </div>
+        <div class="text-center col-span-2 md:col-span-1">
+          <div class="text-2xl font-bold text-[#8b0000]">{warColorCount + warBWCount}</div>
+          <div class="text-sm text-[#666]">War Scenes</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Content -->
+    <article class="max-w-3xl mx-auto px-4 py-8 prose prose-lg">
+      <h2 class="text-2xl font-semibold text-[#2c2c2c] mb-4">About This Collection</h2>
+      
+      <p>
+        This archive documents World War II through <strong>painterly fine art photography</strong>—a 
+        visual approach that treats historical reenactment as living memory rather than costume performance. 
+        The {totalCount} images here were created at WWII commemorative events across the United States, 
+        working with reenactors, historians, and veterans' families who keep the era's stories alive.
+      </p>
+
+      <p>
+        The subjects wear authentic uniforms, operate restored equipment, and embody the postures and 
+        expressions of a generation defined by sacrifice. But these are not documentary photographs. 
+        They are constructed portraits—images designed to carry the emotional weight of history into a 
+        medium that can hang on a wall and endure.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">The Painterly Approach</h3>
+      
+      <p>
+        Wayne Heim's WWII work applies the same technique used in his Western portraiture: directional 
+        light, atmospheric control, tonal restraint, and narrative suggestion. The goal is not period 
+        accuracy alone—it's presence. Each image is composed to function as a one-image movie: a single 
+        frame that implies a story before and after.
+      </p>
+
+      <p>
+        Black and white renditions evoke the newsreels and Life magazine spreads of the era. Color 
+        versions bring unexpected intimacy—reminding viewers that the 1940s were not lived in sepia, 
+        but in the full spectrum of human experience.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Collection Structure</h3>
+      
+      <p>
+        The archive is organized into three categories, each available in color and black & white:
+      </p>
+
+      {subCollections.map((cat) => (
+        <div class="mb-6">
+          <h4 class="text-lg font-semibold text-[#555] mb-3">{cat.category}</h4>
+          <ul class="list-none p-0 space-y-3">
+            {cat.galleries.map((gal) => (
+              <li class="bg-white border border-[#e8e4de] rounded-lg p-4 hover:shadow-md transition-shadow">
+                <a href={gal.url} class="block">
+                  <strong class="text-[#8b0000]">{gal.name}</strong>
+                  <span class="text-sm text-[#888] ml-2">({gal.count} images)</span>
+                  <p class="text-[#555] mt-1 mb-0 text-sm">{gal.description}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">For Collectors</h3>
+
+      <p>
+        Every image is available as a museum-quality fine art print. Popular choices for WWII collectors 
+        include archival giclée on cotton rag paper and Baltic birch wood mounts—formats that honor the 
+        gravitas of the subject matter.
+      </p>
+
+      <p>
+        For memorial installations, corporate collections, or museum exhibitions, 
+        <a href="/Contact" class="text-[#8b0000] hover:underline">contact the studio</a> for licensing 
+        and custom sizing.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Complete Image Index</h3>
+
+      <ul class="list-disc pl-6">
+        {allGalleries.map((gal) => (
+          <li>
+            <a href={gal.allUrl} class="text-[#8b0000] hover:underline">{gal.name} – Full Index</a>
+            <span class="text-[#888]"> ({gal.count} images)</span>
+          </li>
+        ))}
+      </ul>
+    </article>
+
+    <Footer class="mt-12" />
+  </main>
+</BaseLayout>
+
+<style>
+  .prose p {
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    color: #444;
+  }
+  .prose h2, .prose h3, .prose h4 {
+    font-family: inherit;
+  }
+</style>

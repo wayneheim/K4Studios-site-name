@@ -1,0 +1,258 @@
+---
+/**
+ * Western Cowboy Photography Archive - Corpus Hub Page
+ * 
+ * Purpose: Semantic authority declaration for Google's classification system
+ * This page tells Google: "This is a curated collection, not a generic archive"
+ * 
+ * Key elements:
+ * - CollectionPage schema with numberOfItems
+ * - ItemList linking to sub-galleries
+ * - Editorial content (400-600 words)
+ * - Clear scope declaration
+ */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Footer from "@/components/Footer.astro";
+
+// Gallery data imports for accurate counts
+import { galleryData as colorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as bwData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs";
+import { galleryData as naColorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs";
+
+// Filter out ghosts
+const colorCount = colorData.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
+const bwCount = bwData.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
+const naColorCount = naColorData.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
+const totalCount = colorCount + bwCount + naColorCount;
+
+// Page metadata
+const pageTitle = `Western Cowboy Photography Archive – ${totalCount} Painterly Portraits | Wayne Heim`;
+const pageDescription = `Complete archive of ${totalCount} Western cowboy portraits by fine art photographer Wayne Heim. Browse color, black & white, and Native American collections. Museum-quality painterly photography.`;
+const canonicalUrl = "https://www.k4studios.com/Western-Cowboy-Photography-Archive";
+
+// Sub-collection definitions
+const subCollections = [
+  {
+    name: "Color Western Portraits",
+    url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+    allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all",
+    count: colorCount,
+    description: "Vibrant painterly portraits of cowboys, outlaws, and frontier characters in full color."
+  },
+  {
+    name: "Black & White Western Portraits",
+    url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+    allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all",
+    count: bwCount,
+    description: "Timeless monochrome studies evoking the gravitas and grit of the Old West."
+  },
+  {
+    name: "Native American Portraits",
+    url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
+    allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/all",
+    count: naColorCount,
+    description: "Respectful portrayals honoring Native American heritage and living tradition."
+  }
+];
+
+// CollectionPage + ItemList structured data
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": canonicalUrl,
+      "name": `Western Cowboy Photography Archive`,
+      "description": pageDescription,
+      "url": canonicalUrl,
+      "numberOfItems": totalCount,
+      "creator": {
+        "@type": "Person",
+        "name": "Wayne Heim",
+        "url": "https://www.k4studios.com/Other/Bio"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "K4 Studios",
+        "url": "https://www.k4studios.com"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": 3,
+        "itemListElement": subCollections.map((col, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": col.name,
+          "url": `https://www.k4studios.com${col.url}`,
+          "description": col.description,
+          "item": {
+            "@type": "ImageGallery",
+            "name": col.name,
+            "url": `https://www.k4studios.com${col.url}`,
+            "numberOfItems": col.count
+          }
+        }))
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.k4studios.com" },
+        { "@type": "ListItem", "position": 2, "name": "Galleries", "item": "https://www.k4studios.com/Galleries" },
+        { "@type": "ListItem", "position": 3, "name": "Western Cowboy Portraits", "item": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" },
+        { "@type": "ListItem", "position": 4, "name": "Archive", "item": canonicalUrl }
+      ]
+    }
+  ]
+});
+
+// Meta object for BaseLayout
+const meta = {
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: canonicalUrl,
+  ogType: "website",
+  ogImage: "/og/cowboy-archive.jpg",
+  twitterCard: "summary_large_image",
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: "/og/cowboy-archive.jpg",
+  keywords: "western cowboy photography, cowboy portraits, western fine art, Wayne Heim, painterly photography, cowboy art collection, western wall art, Old West photography"
+};
+---
+
+<script type="application/ld+json" is:inline set:html={structuredData}></script>
+
+<BaseLayout title={pageTitle} meta={meta}>
+  <main class="bg-[#faf8f5] text-[#2c2c2c] font-serif min-h-screen">
+    
+    <!-- Breadcrumb -->
+    <nav class="max-w-4xl mx-auto px-4 py-4 text-sm text-[#666]" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap gap-1">
+        <li><a href="/" class="hover:text-[#8b0000]">Home</a></li>
+        <li class="before:content-['›'] before:mx-2"><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" class="hover:text-[#8b0000]">Western Portraits</a></li>
+        <li class="before:content-['›'] before:mx-2 text-[#8b0000]" aria-current="page">Archive</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <header class="max-w-4xl mx-auto px-4 py-8 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-[#2c2c2c] mb-4">
+        Western Cowboy Photography Archive
+      </h1>
+      <p class="text-lg md:text-xl text-[#555] max-w-2xl mx-auto">
+        A curated collection of <strong>{totalCount}</strong> painterly fine art portraits capturing the spirit of the American West.
+      </p>
+    </header>
+
+    <!-- Collection Stats Bar -->
+    <section class="max-w-4xl mx-auto px-4 py-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-white rounded-lg shadow-sm p-6 border border-[#e8e4de]">
+        {subCollections.map((col) => (
+          <a href={col.url} class="text-center group hover:bg-[#faf8f5] rounded-lg p-4 transition-colors">
+            <div class="text-3xl font-bold text-[#8b0000] group-hover:text-[#a00]">{col.count}</div>
+            <div class="text-sm text-[#666] group-hover:text-[#444]">{col.name}</div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Editorial Content (400-600 words for semantic authority) -->
+    <article class="max-w-3xl mx-auto px-4 py-8 prose prose-lg">
+      <h2 class="text-2xl font-semibold text-[#2c2c2c] mb-4">About This Collection</h2>
+      
+      <p>
+        This archive represents over a decade of work documenting the American West through 
+        <strong>painterly fine art photography</strong>—a technique that merges the emotional depth of painting 
+        with the immediacy of the photographic moment. Each of the {totalCount} portraits in this collection 
+        captures not just a face or a scene, but a fragment of frontier narrative.
+      </p>
+
+      <p>
+        The subjects are real. Working cowboys, competitive ropers, heritage preservationists, 
+        and Native American tradition-bearers who carry the spirit of the West into the present day. 
+        These are not actors in costume, but people whose lives intersect with a history that remains 
+        vital and evolving.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">The Painterly Approach</h3>
+      
+      <p>
+        Painterly photography draws from 19th-century pictorialism—the movement that treated photographs 
+        as art objects rather than literal records. Wayne Heim's technique applies this philosophy to Western 
+        subject matter: controlled tonal palettes, directional light that sculpts rather than documents, 
+        and compositional restraint that leaves room for story.
+      </p>
+
+      <p>
+        The result is photography that functions cinematically. Each image suggests a before and after, 
+        a narrative arc compressed into a single frame. Collectors and curators describe them as 
+        "One-Image Movies"—works that reward slow looking and return more with each viewing.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Collection Structure</h3>
+      
+      <p>
+        The archive is organized into three distinct galleries, each representing a different 
+        approach to Western portraiture:
+      </p>
+
+      <ul class="list-none p-0 space-y-4">
+        {subCollections.map((col) => (
+          <li class="bg-white border border-[#e8e4de] rounded-lg p-4 hover:shadow-md transition-shadow">
+            <a href={col.url} class="block">
+              <strong class="text-[#8b0000] text-lg">{col.name}</strong>
+              <span class="text-sm text-[#888] ml-2">({col.count} images)</span>
+              <p class="text-[#555] mt-2 mb-0">{col.description}</p>
+              <span class="text-sm text-[#8b0000] hover:underline mt-2 inline-block">
+                View Gallery →
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">For Collectors</h3>
+
+      <p>
+        Every portrait in this collection is available as a museum-quality fine art print. 
+        Options include archival giclée on cotton rag, Baltic birch wood mounts, and limited-edition 
+        collector prints with certificates of authenticity. Each purchase includes the image's 
+        full narrative—the story behind the moment captured.
+      </p>
+
+      <p>
+        For corporate collections, editorial licensing, or exhibition inquiries, 
+        <a href="/Contact" class="text-[#8b0000] hover:underline">contact the studio directly</a>.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Complete Image Index</h3>
+
+      <p>
+        For a full browsable grid of every image in each sub-collection, visit the dedicated index pages:
+      </p>
+
+      <ul class="list-disc pl-6">
+        {subCollections.map((col) => (
+          <li>
+            <a href={col.allUrl} class="text-[#8b0000] hover:underline">{col.name} – Full Index</a>
+            <span class="text-[#888]"> ({col.count} images)</span>
+          </li>
+        ))}
+      </ul>
+    </article>
+
+    <Footer class="mt-12" />
+  </main>
+</BaseLayout>
+
+<style>
+  .prose p {
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    color: #444;
+  }
+  .prose h2, .prose h3 {
+    font-family: inherit;
+  }
+</style>

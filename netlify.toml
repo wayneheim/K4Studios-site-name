@@ -6,6 +6,26 @@
 # ======================================================
 
 ##############################
+# ✅ URL Case Normalization (prevents duplicate content)
+# Redirect lowercase /galleries/ to proper-case /Galleries/
+# These are free CDN-level redirects, not function invocations
+##############################
+
+# WWII Portraits Color (all 20 indexed lowercase variants)
+[[redirects]]
+from = "/galleries/painterly-fine-art-photography/facing-history/wwii/portraits/color/:id"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/:id"
+status = 301
+force = true
+
+# Catch-all for any other lowercase /galleries/ paths
+[[redirects]]
+from = "/galleries/*"
+to = "/Galleries/:splat"
+status = 301
+force = true
+
+##############################
 # ✅ Core Files
 ##############################
 [[redirects]]

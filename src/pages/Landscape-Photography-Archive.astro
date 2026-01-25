@@ -1,0 +1,337 @@
+---
+/**
+ * Landscape Photography Archive - Corpus Hub Page
+ * 
+ * Purpose: Semantic authority declaration for Google's classification system
+ * 703 images across 9+ galleries (By Location + By Theme)
+ */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Footer from "@/components/Footer.astro";
+
+// Gallery data imports - By Location International
+import { galleryData as iceland } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland.mjs";
+import { galleryData as faroeIslands } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands.mjs";
+import { galleryData as canadaWestern } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western.mjs";
+import { galleryData as newfoundland } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland.mjs";
+
+// Gallery data imports - By Location US
+import { galleryData as midwest } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs";
+import { galleryData as northeast } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs";
+import { galleryData as south } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs";
+import { galleryData as west } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs";
+
+// Gallery data imports - By Theme
+import { galleryData as water } from "@/data/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs";
+
+// Filter out ghosts
+const filterGhosts = (data: any[]) => data.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
+
+const icelandCount = filterGhosts(iceland);
+const faroeCount = filterGhosts(faroeIslands);
+const canadaCount = filterGhosts(canadaWestern);
+const newfoundlandCount = filterGhosts(newfoundland);
+const midwestCount = filterGhosts(midwest);
+const northeastCount = filterGhosts(northeast);
+const southCount = filterGhosts(south);
+const westCount = filterGhosts(west);
+const waterCount = filterGhosts(water);
+
+const totalCount = icelandCount + faroeCount + canadaCount + newfoundlandCount + midwestCount + northeastCount + southCount + westCount + waterCount;
+
+// Page metadata
+const pageTitle = `Landscape Photography Archive – ${totalCount} Fine Art Images | Wayne Heim`;
+const pageDescription = `Complete archive of ${totalCount} landscape fine art photographs by Wayne Heim. Iceland, Faroe Islands, Canadian Rockies, and American landscapes in museum-quality prints.`;
+const canonicalUrl = "https://www.k4studios.com/Landscape-Photography-Archive";
+
+// Sub-collection definitions
+const subCollections = [
+  {
+    category: "International",
+    galleries: [
+      {
+        name: "Iceland",
+        url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
+        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/all",
+        count: icelandCount,
+        description: "Volcanic landscapes, glacial lagoons, and Nordic light."
+      },
+      {
+        name: "The Faroe Islands",
+        url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
+        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/all",
+        count: faroeCount,
+        description: "Dramatic sea cliffs, grass-roofed villages, and Atlantic storms."
+      },
+      {
+        name: "Canada – Western",
+        url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
+        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/all",
+        count: canadaCount,
+        description: "The Canadian Rockies, Banff, and British Columbia wilderness."
+      },
+      {
+        name: "Newfoundland",
+        url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland",
+        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/all",
+        count: newfoundlandCount,
+        description: "Rugged Atlantic coastlines and Viking heritage sites."
+      }
+    ]
+  },
+  {
+    category: "United States",
+    galleries: [
+      {
+        name: "West",
+        url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
+        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all",
+        count: westCount,
+        description: "The American West—deserts, canyons, and mountain ranges."
+      },
+      {
+        name: "Midwest",
+        url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
+        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/all",
+        count: midwestCount,
+        description: "Prairie horizons, farmland, and heartland vistas."
+      },
+      {
+        name: "Northeast",
+        url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
+        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/all",
+        count: northeastCount,
+        description: "New England forests, coastal Maine, and autumn foliage."
+      },
+      {
+        name: "South",
+        url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
+        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/all",
+        count: southCount,
+        description: "Southern landscapes and Gulf Coast scenes."
+      }
+    ]
+  },
+  {
+    category: "By Theme",
+    galleries: [
+      {
+        name: "Water",
+        url: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water",
+        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/all",
+        count: waterCount,
+        description: "Oceans, rivers, waterfalls, and reflections."
+      }
+    ]
+  }
+];
+
+// Flatten for schema
+const allGalleries = subCollections.flatMap(cat => cat.galleries);
+
+// CollectionPage + ItemList structured data
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": canonicalUrl,
+      "name": "Landscape Photography Archive",
+      "description": pageDescription,
+      "url": canonicalUrl,
+      "numberOfItems": totalCount,
+      "creator": {
+        "@type": "Person",
+        "name": "Wayne Heim",
+        "url": "https://www.k4studios.com/Other/Bio"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "K4 Studios",
+        "url": "https://www.k4studios.com"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": allGalleries.length,
+        "itemListElement": allGalleries.map((gal, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": gal.name,
+          "url": `https://www.k4studios.com${gal.url}`,
+          "description": gal.description,
+          "item": {
+            "@type": "ImageGallery",
+            "name": gal.name,
+            "url": `https://www.k4studios.com${gal.url}`,
+            "numberOfItems": gal.count
+          }
+        }))
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.k4studios.com" },
+        { "@type": "ListItem", "position": 2, "name": "Galleries", "item": "https://www.k4studios.com/Galleries" },
+        { "@type": "ListItem", "position": 3, "name": "Landscapes", "item": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes" },
+        { "@type": "ListItem", "position": 4, "name": "Archive", "item": canonicalUrl }
+      ]
+    }
+  ]
+});
+
+// Meta object for BaseLayout
+const meta = {
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: canonicalUrl,
+  ogType: "website",
+  ogImage: "/og/landscape-archive.jpg",
+  twitterCard: "summary_large_image",
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: "/og/landscape-archive.jpg",
+  keywords: "landscape photography, fine art landscapes, Iceland photography, Faroe Islands, nature photography, Wayne Heim, landscape prints, mountain photography, seascape photography"
+};
+---
+
+<script type="application/ld+json" is:inline set:html={structuredData}></script>
+
+<BaseLayout title={pageTitle} meta={meta}>
+  <main class="bg-[#faf8f5] text-[#2c2c2c] font-serif min-h-screen">
+    
+    <!-- Breadcrumb -->
+    <nav class="max-w-4xl mx-auto px-4 py-4 text-sm text-[#666]" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap gap-1">
+        <li><a href="/" class="hover:text-[#8b0000]">Home</a></li>
+        <li class="before:content-['›'] before:mx-2"><a href="/Galleries/Fine-Art-Photography/Landscapes" class="hover:text-[#8b0000]">Landscapes</a></li>
+        <li class="before:content-['›'] before:mx-2 text-[#8b0000]" aria-current="page">Archive</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <header class="max-w-4xl mx-auto px-4 py-8 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-[#2c2c2c] mb-4">
+        Landscape Photography Archive
+      </h1>
+      <p class="text-lg md:text-xl text-[#555] max-w-2xl mx-auto">
+        A curated collection of <strong>{totalCount}</strong> fine art landscape photographs from around the world.
+      </p>
+    </header>
+
+    <!-- Collection Stats Bar -->
+    <section class="max-w-4xl mx-auto px-4 py-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white rounded-lg shadow-sm p-6 border border-[#e8e4de]">
+        <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location/International" class="text-center group hover:bg-[#faf8f5] rounded-lg p-2 transition-colors">
+          <div class="text-2xl font-bold text-[#8b0000] group-hover:text-[#a00]">{icelandCount + faroeCount + canadaCount + newfoundlandCount}</div>
+          <div class="text-sm text-[#666]">International</div>
+        </a>
+        <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery" class="text-center group hover:bg-[#faf8f5] rounded-lg p-2 transition-colors">
+          <div class="text-2xl font-bold text-[#8b0000] group-hover:text-[#a00]">{westCount}</div>
+          <div class="text-sm text-[#666]">American West</div>
+        </a>
+        <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Location" class="text-center group hover:bg-[#faf8f5] rounded-lg p-2 transition-colors">
+          <div class="text-2xl font-bold text-[#8b0000] group-hover:text-[#a00]">{midwestCount + northeastCount + southCount}</div>
+          <div class="text-sm text-[#666]">Other US</div>
+        </a>
+        <a href="/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water" class="text-center group hover:bg-[#faf8f5] rounded-lg p-2 transition-colors">
+          <div class="text-2xl font-bold text-[#8b0000] group-hover:text-[#a00]">{waterCount}</div>
+          <div class="text-sm text-[#666]">Water</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Editorial Content -->
+    <article class="max-w-3xl mx-auto px-4 py-8 prose prose-lg">
+      <h2 class="text-2xl font-semibold text-[#2c2c2c] mb-4">About This Collection</h2>
+      
+      <p>
+        This archive represents years of travel and intention—{totalCount} landscape photographs 
+        created across four continents, each composed as a fine art object rather than a travel record. 
+        From the volcanic terrain of Iceland to the prairie horizons of the American Midwest, 
+        these images share a common approach: patience, presence, and print-first thinking.
+      </p>
+
+      <p>
+        Landscape photography is often about being in the right place at the right time. But the 
+        images in this collection are also about what happens after arrival—the compositional 
+        choices, the waiting for light, and the willingness to return to a location until 
+        conditions align with intention.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">International Destinations</h3>
+      
+      <p>
+        The Nordic destinations—<strong>Iceland</strong> and <strong>the Faroe Islands</strong>—offer 
+        landscapes unlike anywhere else on Earth. Volcanic geology, oceanic weather systems, and 
+        endless summer twilight create conditions that reward photographers who embrace uncertainty. 
+        <strong>Canada's western mountains</strong> and <strong>Newfoundland's Atlantic coast</strong> 
+        complete the international selection.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">American Landscapes</h3>
+
+      <p>
+        The American sections span from New England's autumn forests to the desert Southwest. 
+        Each region offers distinct light, terrain, and mood. The <strong>Water</strong> theme 
+        collection crosses all locations—oceans, rivers, waterfalls, and the stillness of 
+        reflected light.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Collection Structure</h3>
+
+      {subCollections.map((cat) => (
+        <div class="mb-6">
+          <h4 class="text-lg font-semibold text-[#555] mb-3">{cat.category}</h4>
+          <ul class="list-none p-0 space-y-3">
+            {cat.galleries.map((gal) => (
+              <li class="bg-white border border-[#e8e4de] rounded-lg p-4 hover:shadow-md transition-shadow">
+                <a href={gal.url} class="block">
+                  <strong class="text-[#8b0000]">{gal.name}</strong>
+                  <span class="text-sm text-[#888] ml-2">({gal.count} images)</span>
+                  <p class="text-[#555] mt-1 mb-0 text-sm">{gal.description}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">For Collectors</h3>
+
+      <p>
+        Landscape prints are available in sizes from desktop to wall-scale, with options including 
+        archival giclée, metallic paper, and acrylic face-mount. Large-format landscapes benefit 
+        from the acrylic treatment—depth and luminosity that transforms a wall.
+      </p>
+
+      <p>
+        For corporate art programs, hospitality installations, or private collections, 
+        <a href="/Contact" class="text-[#8b0000] hover:underline">contact the studio</a>.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Complete Image Index</h3>
+
+      <ul class="list-disc pl-6">
+        {allGalleries.map((gal) => (
+          <li>
+            <a href={gal.allUrl} class="text-[#8b0000] hover:underline">{gal.name} – Full Index</a>
+            <span class="text-[#888]"> ({gal.count} images)</span>
+          </li>
+        ))}
+      </ul>
+    </article>
+
+    <Footer class="mt-12" />
+  </main>
+</BaseLayout>
+
+<style>
+  .prose p {
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    color: #444;
+  }
+  .prose h2, .prose h3, .prose h4 {
+    font-family: inherit;
+  }
+</style>

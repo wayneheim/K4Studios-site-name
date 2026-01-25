@@ -202,5 +202,6 @@ Allow: /
 # --- Optional emerging directive (non-standard) ---
 # Content-signal: search=yes, ai-train=no
 
-# --- Sitemap ---
+# --- Sitemaps ---
 Sitemap: https://www.k4studios.com/sitemap.xml
+Sitemap: https://www.k4studios.com/image-sitemap-index.xml

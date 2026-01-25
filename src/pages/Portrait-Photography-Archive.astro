@@ -1,0 +1,248 @@
+---
+/**
+ * Portrait Photography Archive - Corpus Hub Page
+ * 
+ * Purpose: Semantic authority declaration for Google's classification system
+ * 281 images across 3 galleries (Color, B&W, Reenactors)
+ */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Footer from "@/components/Footer.astro";
+
+// Gallery data imports
+import { galleryData as colorData } from "@/data/Galleries/Fine-Art-Photography/Portraits/Color.mjs";
+import { galleryData as bwData } from "@/data/Galleries/Fine-Art-Photography/Portraits/Black-White.mjs";
+import { galleryData as reenactorsData } from "@/data/Galleries/Fine-Art-Photography/Portraits/Reenactors.mjs";
+
+// Filter out ghosts
+const filterGhosts = (data: any[]) => data.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
+
+const colorCount = filterGhosts(colorData);
+const bwCount = filterGhosts(bwData);
+const reenactorsCount = filterGhosts(reenactorsData);
+
+const totalCount = colorCount + bwCount + reenactorsCount;
+
+// Page metadata
+const pageTitle = `Portrait Photography Archive – ${totalCount} Fine Art Images | Wayne Heim`;
+const pageDescription = `Complete archive of ${totalCount} fine art portrait photographs by Wayne Heim. Color and black & white portraits plus historical reenactor character studies.`;
+const canonicalUrl = "https://www.k4studios.com/Portrait-Photography-Archive";
+
+// Sub-collection definitions
+const subCollections = [
+  {
+    name: "Color Portraits",
+    url: "/Galleries/Fine-Art-Photography/Portraits/Color",
+    allUrl: "/Galleries/Fine-Art-Photography/Portraits/Color/all",
+    count: colorCount,
+    description: "Contemporary and character portraits in full color."
+  },
+  {
+    name: "Black & White Portraits",
+    url: "/Galleries/Fine-Art-Photography/Portraits/Black-White",
+    allUrl: "/Galleries/Fine-Art-Photography/Portraits/Black-White/all",
+    count: bwCount,
+    description: "Classic monochrome studies emphasizing form and character."
+  },
+  {
+    name: "Reenactor Portraits",
+    url: "/Galleries/Fine-Art-Photography/Portraits/Reenactors",
+    allUrl: "/Galleries/Fine-Art-Photography/Portraits/Reenactors/all",
+    count: reenactorsCount,
+    description: "Historical reenactors in period costume and character."
+  }
+];
+
+// CollectionPage + ItemList structured data
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": canonicalUrl,
+      "name": "Portrait Photography Archive",
+      "description": pageDescription,
+      "url": canonicalUrl,
+      "numberOfItems": totalCount,
+      "creator": {
+        "@type": "Person",
+        "name": "Wayne Heim",
+        "url": "https://www.k4studios.com/Other/Bio"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "K4 Studios",
+        "url": "https://www.k4studios.com"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": subCollections.length,
+        "itemListElement": subCollections.map((col, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": col.name,
+          "url": `https://www.k4studios.com${col.url}`,
+          "description": col.description,
+          "item": {
+            "@type": "ImageGallery",
+            "name": col.name,
+            "url": `https://www.k4studios.com${col.url}`,
+            "numberOfItems": col.count
+          }
+        }))
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.k4studios.com" },
+        { "@type": "ListItem", "position": 2, "name": "Galleries", "item": "https://www.k4studios.com/Galleries" },
+        { "@type": "ListItem", "position": 3, "name": "Portraits", "item": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Portraits" },
+        { "@type": "ListItem", "position": 4, "name": "Archive", "item": canonicalUrl }
+      ]
+    }
+  ]
+});
+
+// Meta object for BaseLayout
+const meta = {
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: canonicalUrl,
+  ogType: "website",
+  ogImage: "/og/portrait-archive.jpg",
+  twitterCard: "summary_large_image",
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: "/og/portrait-archive.jpg",
+  keywords: "portrait photography, fine art portraits, black and white portraits, reenactor portraits, Wayne Heim, character photography, portrait prints, studio portraits"
+};
+---
+
+<script type="application/ld+json" is:inline set:html={structuredData}></script>
+
+<BaseLayout title={pageTitle} meta={meta}>
+  <main class="bg-[#faf8f5] text-[#2c2c2c] font-serif min-h-screen">
+    
+    <!-- Breadcrumb -->
+    <nav class="max-w-4xl mx-auto px-4 py-4 text-sm text-[#666]" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap gap-1">
+        <li><a href="/" class="hover:text-[#8b0000]">Home</a></li>
+        <li class="before:content-['›'] before:mx-2"><a href="/Galleries/Fine-Art-Photography/Portraits" class="hover:text-[#8b0000]">Portraits</a></li>
+        <li class="before:content-['›'] before:mx-2 text-[#8b0000]" aria-current="page">Archive</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <header class="max-w-4xl mx-auto px-4 py-8 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-[#2c2c2c] mb-4">
+        Portrait Photography Archive
+      </h1>
+      <p class="text-lg md:text-xl text-[#555] max-w-2xl mx-auto">
+        A curated collection of <strong>{totalCount}</strong> fine art portrait photographs.
+      </p>
+    </header>
+
+    <!-- Collection Stats Bar -->
+    <section class="max-w-4xl mx-auto px-4 py-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-white rounded-lg shadow-sm p-6 border border-[#e8e4de]">
+        {subCollections.map((col) => (
+          <a href={col.url} class="text-center group hover:bg-[#faf8f5] rounded-lg p-4 transition-colors">
+            <div class="text-3xl font-bold text-[#8b0000] group-hover:text-[#a00]">{col.count}</div>
+            <div class="text-sm text-[#666] group-hover:text-[#444]">{col.name}</div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Editorial Content -->
+    <article class="max-w-3xl mx-auto px-4 py-8 prose prose-lg">
+      <h2 class="text-2xl font-semibold text-[#2c2c2c] mb-4">About This Collection</h2>
+      
+      <p>
+        Portrait photography, at its best, reveals character rather than merely recording appearance. 
+        This archive of {totalCount} images spans contemporary subjects, timeless black and white 
+        studies, and historical reenactors whose costumes become extensions of story.
+      </p>
+
+      <p>
+        Each portrait in this collection was created with intention—directional light, considered 
+        background, and the patience to wait for the moment when a subject's guard drops and 
+        something authentic emerges. These are not snapshots. They are constructed images 
+        designed to function as art objects.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">The Portraiture Approach</h3>
+      
+      <p>
+        Wayne Heim's portraiture draws from his background as a medical illustrator—a discipline 
+        that demands precision, structure, and the ability to render human anatomy with both 
+        accuracy and feeling. That training carries into photographic work: an understanding of 
+        how light sculpts form, how posture communicates mood, and how the simplest compositions 
+        often carry the most weight.
+      </p>
+
+      <p>
+        <strong>Color portraits</strong> capture personality and presence in full spectrum. 
+        <strong>Black and white portraits</strong> strip away distraction, emphasizing form, 
+        texture, and the timeless quality of monochrome. <strong>Reenactor portraits</strong> 
+        bring historical characters to life—Civil War soldiers, WWII nurses, frontier settlers—
+        rendered with the same attention to craft as any contemporary subject.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Collection Structure</h3>
+      
+      <ul class="list-none p-0 space-y-4">
+        {subCollections.map((col) => (
+          <li class="bg-white border border-[#e8e4de] rounded-lg p-4 hover:shadow-md transition-shadow">
+            <a href={col.url} class="block">
+              <strong class="text-[#8b0000] text-lg">{col.name}</strong>
+              <span class="text-sm text-[#888] ml-2">({col.count} images)</span>
+              <p class="text-[#555] mt-2 mb-0">{col.description}</p>
+              <span class="text-sm text-[#8b0000] hover:underline mt-2 inline-block">
+                View Gallery →
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">For Collectors</h3>
+
+      <p>
+        Portrait prints are available in sizes appropriate for home and office display, with 
+        options including archival cotton rag, metallic paper, and canvas. Black and white 
+        portraits often benefit from the warmth of fine art cotton paper; color work shines 
+        on metallic surfaces.
+      </p>
+
+      <p>
+        For commissioned portraits, corporate collections, or exhibition prints, 
+        <a href="/Contact" class="text-[#8b0000] hover:underline">contact the studio</a>.
+      </p>
+
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Complete Image Index</h3>
+
+      <ul class="list-disc pl-6">
+        {subCollections.map((col) => (
+          <li>
+            <a href={col.allUrl} class="text-[#8b0000] hover:underline">{col.name} – Full Index</a>
+            <span class="text-[#888]"> ({col.count} images)</span>
+          </li>
+        ))}
+      </ul>
+    </article>
+
+    <Footer class="mt-12" />
+  </main>
+</BaseLayout>
+
+<style>
+  .prose p {
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    color: #444;
+  }
+  .prose h2, .prose h3 {
+    font-family: inherit;
+  }
+</style>
