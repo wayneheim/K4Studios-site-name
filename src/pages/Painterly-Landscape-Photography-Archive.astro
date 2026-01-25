@@ -177,7 +177,7 @@ const meta = {
     <!-- Header -->
     <header class="bg-gradient-to-b from-[#1a3a4a] to-[#2d5a6a] text-white py-16 px-4">
       <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Painterly Landscape Photography Archive</h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4" style="font-family: 'Glegoo', serif;">Painterly Landscape Photography Archive</h1>
         <p class="text-xl text-white/90 mb-6">
           {totalCount} Fine Art Landscape Images by Wayne Heim
         </p>
@@ -305,3 +305,18 @@ const meta = {
     <Footer />
   </main>
 </BaseLayout>
+
+<style>
+  .prose {
+    font-family: 'Glegoo', serif;
+  }
+  .prose p {
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    color: #444;
+    font-family: 'Glegoo', serif;
+  }
+  .prose h2, .prose h3, .prose h4 {
+    font-family: 'Glegoo', serif;
+  }
+</style>

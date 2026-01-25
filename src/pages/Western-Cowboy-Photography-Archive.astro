@@ -124,7 +124,7 @@ const meta = {
 <script type="application/ld+json" is:inline set:html={structuredData}></script>
 
 <BaseLayout title={pageTitle} meta={meta}>
-  <main class="bg-[#faf8f5] text-[#2c2c2c] font-serif min-h-screen">
+  <main class="bg-[#faf8f5] text-[#2c2c2c] min-h-screen" style="font-family: 'Glegoo', serif;">
     
     <!-- Breadcrumb -->
     <nav class="max-w-4xl mx-auto px-4 py-4 text-sm text-[#666]" aria-label="Breadcrumb">
@@ -137,7 +137,7 @@ const meta = {
 
     <!-- Header -->
     <header class="max-w-4xl mx-auto px-4 py-8 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-[#2c2c2c] mb-4">
+      <h1 class="text-3xl md:text-4xl font-bold text-[#2c2c2c] mb-4" style="font-family: 'Glegoo', serif;">
         Western Cowboy Photography Archive
       </h1>
       <p class="text-lg md:text-xl text-[#555] max-w-2xl mx-auto">
@@ -247,12 +247,16 @@ const meta = {
 </BaseLayout>
 
 <style>
+  .prose {
+    font-family: 'Glegoo', serif;
+  }
   .prose p {
     line-height: 1.75;
     margin-bottom: 1.25rem;
     color: #444;
+    font-family: 'Glegoo', serif;
   }
-  .prose h2, .prose h3 {
-    font-family: inherit;
+  .prose h2, .prose h3, .prose h4 {
+    font-family: 'Glegoo', serif;
   }
 </style>
