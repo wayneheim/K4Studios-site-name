@@ -1734,16 +1734,16 @@ export default function ChapterGalleryBase({
                       const titleLength = chapterTitle?.length || 0;
                       const mobileTitleSize = titleLength > 40 ? '1.0rem' : titleLength > 30 ? '1.15rem' : '1.35rem';
                       return (
-                        <div className="text-center" style={{ fontFamily: "'Glegoo', serif" }}>
+                        <div className="text-center" style={{ fontFamily: "'Glegoo', serif", marginBottom: isMobile ? "1.5rem" : "0.5rem" }}>
                           <h3
                             className="font-semibold tracking-wide text-[#85644b]"
-                            style={{ fontSize: "1.55rem", opacity: 0.5, lineHeight: "1.35", marginBottom: 0 }}
+                            style={{ fontSize: "1.55rem", opacity: 0.5, lineHeight: "1.35", marginBottom: isMobile ? "0.75rem" : "0.25rem" }}
                           >
                             Chapter {currentIndex + 1}:
                           </h3>
                           <h2
                             className="font-semibold tracking-wide text-[#85644b] chapter-title"
-                            style={{ fontSize: isMobile ? mobileTitleSize : "1.55rem", opacity: 0.5, lineHeight: isMobile ? "1.0" : "1.35", marginTop: 0, marginBottom: "0.25rem" }}
+                            style={{ fontSize: isMobile ? mobileTitleSize : "1.55rem", opacity: 0.5, lineHeight: isMobile ? "1.15" : "1.35", marginTop: 0, marginBottom: 0 }}
                           >
                             {chapterTitle}
                           </h2>
