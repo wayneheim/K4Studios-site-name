@@ -363,10 +363,33 @@ function generateUrlEntry(image, urlBase) {
   const pageUrl = `${SITE_URL}${urlBase}/${image.id}`;
   const imageUrl = image.srcXL || image.srcL || image.src;
   
-  // Build caption from description, truncate if too long
-  let caption = image.description || image.title;
-  if (caption && caption.length > 1000) {
-    caption = caption.substring(0, 997) + '...';
+  // Build rich caption from description + story + notes
+  // Combine all available text fields for maximum semantic value
+  const captionParts = [];
+  
+  // Primary: description
+  if (image.description && image.description.trim()) {
+    captionParts.push(image.description.trim());
+  }
+  
+  // Secondary: story (if different from description)
+  if (image.story && image.story.trim()) {
+    const storyTrimmed = image.story.trim();
+    // Only add if meaningfully different from description
+    if (!image.description || !image.description.includes(storyTrimmed.substring(0, 50))) {
+      captionParts.push(storyTrimmed);
+    }
+  }
+  
+  // Tertiary: notes (collector context, historical references, art criticism)
+  if (image.notes && image.notes.trim()) {
+    captionParts.push(image.notes.trim());
+  }
+  
+  // Join with paragraph separator, truncate if too long
+  let caption = captionParts.join(' ') || image.title || 'Fine Art Photograph by Wayne Heim';
+  if (caption.length > 2000) {
+    caption = caption.substring(0, 1997) + '...';
   }
 
   // Use title as image title
