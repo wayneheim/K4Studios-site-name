@@ -1,0 +1,307 @@
+---
+/**
+ * Painterly Landscape Photography Archive - Corpus Hub Page
+ * 
+ * Purpose: Semantic authority declaration for Google's classification system
+ * ~114 images across painterly landscape galleries (By Location + By Theme)
+ * 
+ * NOTE: Image counts are computed dynamically at build time from gallery data.
+ * No manual updates needed when images are added.
+ */
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Footer from "@/components/Footer.astro";
+
+// Gallery data imports - By Location (consolidated Gallery.mjs files)
+import { galleryData as international } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery.mjs";
+import { galleryData as midwest } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery.mjs";
+import { galleryData as northeast } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs";
+import { galleryData as south } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery.mjs";
+import { galleryData as west } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs";
+
+// Gallery data imports - By Theme
+import { galleryData as mountains } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs";
+import { galleryData as sunsets } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets.mjs";
+import { galleryData as water } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water.mjs";
+
+// Filter out ghosts
+const filterGhosts = (data: any[]) => data.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
+
+const internationalCount = filterGhosts(international);
+const midwestCount = filterGhosts(midwest);
+const northeastCount = filterGhosts(northeast);
+const southCount = filterGhosts(south);
+const westCount = filterGhosts(west);
+const mountainsCount = filterGhosts(mountains);
+const sunsetsCount = filterGhosts(sunsets);
+const waterCount = filterGhosts(water);
+
+const totalCount = internationalCount + midwestCount + northeastCount + southCount + westCount +
+                   mountainsCount + sunsetsCount + waterCount;
+
+// Page metadata
+const pageTitle = `Painterly Landscape Photography Archive – ${totalCount} Fine Art Images | Wayne Heim`;
+const pageDescription = `Complete archive of ${totalCount} painterly landscape photographs by Wayne Heim. Iceland, Faroe Islands, Canadian Rockies, and American landscapes rendered in Wayne's signature painterly fine art style.`;
+const canonicalUrl = "https://www.k4studios.com/Painterly-Landscape-Photography-Archive";
+
+// Sub-collection definitions
+const subCollections = [
+  {
+    category: "By Location",
+    galleries: [
+      {
+        name: "International",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/all",
+        count: internationalCount,
+        description: "Iceland, Faroe Islands, Canadian Rockies, and Newfoundland in painterly fine art style."
+      },
+      {
+        name: "West",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all",
+        count: westCount,
+        description: "The American West—deserts, canyons, and ranges in painterly light."
+      },
+      {
+        name: "Midwest",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/all",
+        count: midwestCount,
+        description: "Prairie horizons and heartland vistas."
+      },
+      {
+        name: "Northeast",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/all",
+        count: northeastCount,
+        description: "New England forests and autumn foliage."
+      },
+      {
+        name: "South",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery/all",
+        count: southCount,
+        description: "Southern landscapes and coastal scenes."
+      }
+    ]
+  },
+  {
+    category: "By Theme",
+    galleries: [
+      {
+        name: "Mountains",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains/all",
+        count: mountainsCount,
+        description: "Peaks, ridges, and alpine light."
+      },
+      {
+        name: "Sunsets",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets/Sunsets/all",
+        count: sunsetsCount,
+        description: "Golden hour and twilight compositions."
+      },
+      {
+        name: "Water",
+        url: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water",
+        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water/Water/all",
+        count: waterCount,
+        description: "Oceans, rivers, waterfalls, and reflections."
+      }
+    ]
+  }
+];
+
+// Flatten for schema
+const allGalleries = subCollections.flatMap(cat => cat.galleries);
+
+// CollectionPage + ItemList structured data
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": canonicalUrl,
+      "name": "Painterly Landscape Photography Archive",
+      "description": pageDescription,
+      "url": canonicalUrl,
+      "numberOfItems": totalCount,
+      "creator": {
+        "@type": "Person",
+        "name": "Wayne Heim",
+        "url": "https://www.k4studios.com/Other/Bio"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "K4 Studios",
+        "url": "https://www.k4studios.com"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Painterly Landscape Photography Sub-Collections",
+      "numberOfItems": allGalleries.length,
+      "itemListElement": allGalleries.map((g, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": g.name,
+        "url": `https://www.k4studios.com${g.url}`,
+        "description": g.description
+      }))
+    }
+  ]
+});
+
+const meta = {
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "website",
+  ogUrl: canonicalUrl,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterCard: "summary_large_image"
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen" style="font-family: 'Glegoo', serif;">
+    
+    <!-- Header -->
+    <header class="bg-gradient-to-b from-[#1a3a4a] to-[#2d5a6a] text-white py-16 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Painterly Landscape Photography Archive</h1>
+        <p class="text-xl text-white/90 mb-6">
+          {totalCount} Fine Art Landscape Images by Wayne Heim
+        </p>
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-white/80">
+          <span>📍 {subCollections[0].galleries.length} Locations</span>
+          <span>🏔️ {subCollections[1].galleries.length} Themes</span>
+          <span>🖼️ Museum-Quality Prints</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="bg-[#f5f5f0] py-6 border-b border-[#ddd]">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div>
+            <div class="text-3xl font-bold text-[#2d5a6a]">{totalCount}</div>
+            <div class="text-sm text-gray-600">Total Images</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-[#2d5a6a]">{allGalleries.length}</div>
+            <div class="text-sm text-gray-600">Sub-Collections</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-[#2d5a6a]">4</div>
+            <div class="text-sm text-gray-600">Countries</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-[#2d5a6a]">∞</div>
+            <div class="text-sm text-gray-600">Archival Life</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Introduction -->
+    <section class="max-w-3xl mx-auto px-4 py-12">
+      <article class="prose prose-lg">
+        <p>
+          This archive presents Wayne Heim's complete collection of painterly landscape photography—images that 
+          treat natural scenes not as documentary records but as constructed visual experiences. Each photograph 
+          emerges from deliberate choices: timing, atmospheric conditions, tonal control, and compositional 
+          restraint that transforms geography into fine art.
+        </p>
+        <p>
+          The painterly approach distinguishes these landscapes from conventional nature photography. Where 
+          traditional landscape work often emphasizes clarity and saturation, painterly treatment prioritizes 
+          atmosphere, texture, and emotional resonance. The result is wall art that functions as fine art 
+          objects—images with presence and durability that reward sustained attention.
+        </p>
+        <p>
+          From the volcanic terrain of Iceland to the sea cliffs of the Faroe Islands, from the Canadian 
+          Rockies to the American West, these landscapes share a common visual language: controlled light, 
+          muted palettes when appropriate, and a commitment to the finished print as the ultimate expression 
+          of the work.
+        </p>
+      </article>
+    </section>
+
+    <!-- Sub-Collections Grid -->
+    {subCollections.map(category => (
+      <section class="max-w-5xl mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold text-[#2d5a6a] mb-6 border-b-2 border-[#2d5a6a] pb-2">
+          {category.category}
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          {category.galleries.filter(g => g.count > 0).map(gallery => (
+            <div class="bg-[#f9f9f6] rounded-lg p-6 border border-[#e5e5e0] hover:shadow-md transition-shadow">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-semibold text-[#333]">
+                  <a href={gallery.url} class="hover:text-[#2d5a6a] transition-colors">
+                    {gallery.name}
+                  </a>
+                </h3>
+                <span class="bg-[#2d5a6a] text-white text-sm px-3 py-1 rounded-full">
+                  {gallery.count} images
+                </span>
+              </div>
+              <p class="text-gray-600 mb-4">{gallery.description}</p>
+              <div class="flex gap-3">
+                <a 
+                  href={gallery.url} 
+                  class="text-[#2d5a6a] hover:underline text-sm font-medium"
+                >
+                  View Gallery →
+                </a>
+                <a 
+                  href={gallery.allUrl} 
+                  class="text-gray-500 hover:text-[#2d5a6a] text-sm"
+                >
+                  See All
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <!-- CTA Section -->
+    <section class="bg-[#2d5a6a] text-white py-12 mt-12">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold mb-4">Explore the Complete Painterly Collection</h2>
+        <p class="text-white/80 mb-6">
+          Painterly landscapes are part of Wayne Heim's broader Painterly Fine Art Photography collection, 
+          which also includes Western portraits, historical subjects, and narrative scenes.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a 
+            href="/Galleries/Painterly-Fine-Art-Photography" 
+            class="bg-white text-[#2d5a6a] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Painterly Fine Art Photography
+          </a>
+          <a 
+            href="/Landscape-Photography-Archive" 
+            class="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+          >
+            Traditional Landscape Archive
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </main>
+</BaseLayout>
