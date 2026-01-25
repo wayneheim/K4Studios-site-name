@@ -4,7 +4,9 @@
  * This serverless function handles 404s for image pages (/Galleries/.../i-xxxxx).
  * It looks up the image ID in a pre-built map and either:
  * 1. Redirects to the correct gallery if the image moved (301)
- * 2. Redirects to the gallery landing page if not found (301)
+ * 2. For NOT FOUND images:
+ *    - Bots get 410 Gone (removes ghost URLs from index)
+ *    - Humans get 302 redirect to gallery landing (good UX)
  * 
  * This function ONLY runs on actual 404s, not on every page load.
  */
@@ -17,7 +19,18 @@ for (const [key, value] of Object.entries(imageIdMap)) {
   imageIdMapLower[key.toLowerCase()] = { path: value, originalId: key };
 }
 
+// Detect search engine bots by User-Agent
+function isBot(userAgent) {
+  if (!userAgent) return false;
+  const botPattern = /googlebot|bingbot|yandex|baiduspider|duckduckbot|slurp|msnbot|ahrefsbot|semrushbot|petalbot/i;
+  return botPattern.test(userAgent);
+}
+
 exports.handler = async (event) => {
+  // Get User-Agent for bot detection
+  const userAgent = event.headers['user-agent'] || event.headers['User-Agent'] || '';
+  const isBotRequest = isBot(userAgent);
+  
   // Get path from query string (passed by _redirects) or from event.path
   const queryPath = event.queryStringParameters?.path || '';
   const eventPath = event.path || '';
@@ -74,19 +87,34 @@ exports.handler = async (event) => {
     };
   }
   
-  // Image not found anywhere - redirect to gallery landing page
-  // Strip the /i-xxxxx part from the URL
+  // Image not found anywhere
+  // Bots get 410 Gone (kills ghost URLs), humans get redirect to gallery
   const galleryLandingPath = requestedPath.replace(/\/i-[a-zA-Z0-9]+\/?$/, '');
   
+  if (isBotRequest) {
+    // Bot: Return 410 Gone to remove ghost URL from index
+    console.log(`[smart-404] Bot detected, returning 410 Gone for: ${imageId}`);
+    return {
+      statusCode: 410,
+      headers: {
+        'Content-Type': 'text/html',
+        'Cache-Control': 'public, max-age=31536000', // Cache for 1 year
+        'X-Smart-404': 'gone-bot'
+      },
+      body: '<!DOCTYPE html><html><head><title>Gone</title></head><body><h1>410 Gone</h1><p>This image has been permanently removed.</p></body></html>'
+    };
+  }
+  
+  // Human: Redirect to gallery landing page for good UX
   if (galleryLandingPath && galleryLandingPath !== requestedPath) {
-    console.log(`[smart-404] Image not found, redirecting to gallery: ${galleryLandingPath}`);
+    console.log(`[smart-404] Human visitor, redirecting to gallery: ${galleryLandingPath}`);
     
     return {
-      statusCode: 301,
+      statusCode: 302,
       headers: {
         'Location': galleryLandingPath,
-        'Cache-Control': 'public, max-age=86400', // Cache for 1 day (image might be added later)
-        'X-Smart-404': 'gallery-fallback'
+        'Cache-Control': 'no-cache', // Don't cache redirects for humans
+        'X-Smart-404': 'gallery-fallback-human'
       },
       body: ''
     };
@@ -95,10 +123,10 @@ exports.handler = async (event) => {
   // Fallback to homepage if we can't determine a gallery
   console.log(`[smart-404] No gallery path, redirecting to homepage`);
   return {
-    statusCode: 301,
+    statusCode: 302,
     headers: {
       'Location': '/',
-      'Cache-Control': 'public, max-age=3600',
+      'Cache-Control': 'no-cache',
       'X-Smart-404': 'homepage-fallback'
     },
     body: ''

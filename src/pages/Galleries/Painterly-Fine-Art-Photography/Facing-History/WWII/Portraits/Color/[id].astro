@@ -6,12 +6,14 @@ import { entranceData as ColorEntranceData } from "@/data/Galleries/Painterly-Fi
 import { galleryData } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs';
 
 import imageIdMap from '@/data/imageIdMap.json';
+import { isBot } from '@/utils/isBot';
 
 const { id } = Astro.params;
 const imageData = galleryData.find(img => img.id === id);
 
 // Check if image is missing OR hidden (archived images stay in gallery with visibility: "hidden")
 const isHidden = imageData?.visibility === 'hidden' || imageData?.visibility === 'hide';
+const userAgent = Astro.request.headers.get('user-agent');
 const isBadId = (!imageData || isHidden) && (id && (id.startsWith('i-') || id === 'i'));
 if (isBadId) {
   // Smart 404: Check if image exists in another gallery (e.g., Archive)
@@ -20,14 +22,15 @@ if (isBadId) {
     // Image found elsewhere - 301 redirect to preserve SEO
     return Astro.redirect(`${correctGalleryPath}/${id}`, 301);
   }
-  // Not found anywhere - fall back to gallery landing page
-  let cleanUrl = Astro.url.pathname.replace(/\/i[^/]*\/?$/, '');
-  cleanUrl = cleanUrl.replace(/\/+$/, '');
-  if (typeof window !== "undefined") {
-    window.location.replace(cleanUrl);
-  } else {
+  // Not found anywhere - return proper status
+    if (isBot(userAgent)) {
+      // Bots get 410 Gone so they can de-index the URL
+      return new Response('Gone', { status: 410, headers: { 'X-Robots-Tag': 'noindex' } });
+    }
+    // Humans get redirected to gallery landing for better UX
+    let cleanUrl = Astro.url.pathname.replace(/\/i[^/]*\/?$/, '');
+    cleanUrl = cleanUrl.replace(/\/+$/, '');
     return Astro.redirect(cleanUrl, 302);
-  }
 }
 ---
 

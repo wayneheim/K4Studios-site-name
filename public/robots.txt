@@ -27,6 +27,7 @@ Disallow: /video/
 Disallow: /src/
 Disallow: /frame/
 Disallow: /keyword/
+Disallow: /images/
 Disallow: /*.mjs$
 Disallow: /*.ts$
 Disallow: /*.cjs$
