@@ -334,6 +334,27 @@ force = true
 #       If specific legacy subpaths need mapping, add them explicitly below
 #       instead of a blanket catch-all.
 
+# Pictorialist legacy path → new standalone page
+[[redirects]]
+from = "/Galleries/Painterly-Fine-Art-Photography/Pictorialist"
+to = "/Pictorialist-Photography"
+status = 301
+force = true
+
+# Old Landscapes-Gallery structure → redirect to Painterly landscapes (then SSR handles 410 if image missing)
+[[redirects]]
+from = "/Galleries/Landscapes-Gallery/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery/:splat"
+status = 301
+force = true
+
+# K4 Select Series → SmugMug
+[[redirects]]
+from = "/Galleries/K4-Select-Series/*"
+to = "https://wayne-heim.smugmug.com/Other/K4-Select-Series/:splat"
+status = 301
+force = true
+
 # --- Legacy SmugMug RSS feed format URLs ---
 [[redirects]]
 from = "/*"
@@ -345,6 +366,22 @@ force = true
 [[redirects]]
 from = "/*"
 query = {Type = "gallery"}
+to = "/"
+status = 410
+force = true
+
+# Legacy SmugMug query params - goTo API spam
+[[redirects]]
+from = "/*"
+query = {goTo = ":goTo"}
+to = "/"
+status = 410
+force = true
+
+# Legacy SmugMug query params - theme/view
+[[redirects]]
+from = "/*"
+query = {theme = ":theme"}
 to = "/"
 status = 410
 force = true
@@ -441,6 +478,23 @@ force = true
 
 [[redirects]]
 from = "/*?{currency,price}=*"
+to = "/"
+status = 410
+force = true
+
+##############################
+# ✅ 410 Gone: Non-existent /all pages
+# These URLs were incorrectly linked and never existed
+##############################
+[[redirects]]
+from = "/Galleries/*/all"
+to = "/"
+status = 410
+force = true
+
+# Image IDs at wrong level (should be inside a gallery, not /Galleries/i-xxx)
+[[redirects]]
+from = "/Galleries/i-*"
 to = "/"
 status = 410
 force = true
