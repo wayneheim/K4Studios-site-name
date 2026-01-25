@@ -51,11 +51,11 @@ to = "/sitemap.xml"
 status = 301
 force = true
 
-# Redirect bare lightbox page to Galleries landing
+# Redirect bare lightbox page to 410 Gone (legacy SmugMug endpoint)
 [[redirects]]
 from = "/Galleries/lightbox"
-to = "/Galleries"
-status = 301
+to = "/"
+status = 410
 force = true
 
 ##############################
@@ -367,6 +367,23 @@ force = true
 ##############################
 # ✅ Crawl-Debt Cleanup
 ##############################
+
+# Legacy SmugMug keyword URLs (e.g., /keyword/cowboy, /keyword/xyz)
+[[redirects]]
+from = "/keyword/*"
+to = "/"
+status = 410
+force = true
+
+# Legacy SmugMug lightbox with query strings
+[[redirects]]
+from = "/Galleries/lightbox"
+to = "/"
+status = 410
+force = true
+query = "*"
+
+# Legacy API, buy, cart, etc.
 [[redirects]]
 from = "/{api,api/v1,api/v2,api/v3,key,photo,buy,cart,upload,video}/*"
 to = "/"
