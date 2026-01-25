@@ -1724,7 +1724,7 @@ export default function ChapterGalleryBase({
                       </a>
                     </div>
 
-                    {/* Title - rendered as H2 since SSR provides the H1 */}
+                    {/* Title - H3 for chapter label (lower SEO weight), H2 for actual title */}
                     {(() => {
                       const chapterTitle = galleryData[currentIndex]?.meta?.ogTitle ||
                         galleryData[currentIndex]?.title ||
@@ -1734,21 +1734,20 @@ export default function ChapterGalleryBase({
                       const titleLength = chapterTitle?.length || 0;
                       const mobileTitleSize = titleLength > 40 ? '1.0rem' : titleLength > 30 ? '1.15rem' : '1.35rem';
                       return (
-                        <h2
-                          className="text-center font-semibold mb-1 tracking-wide text-[#85644b]"
-                          style={{ fontSize: "1.55rem", opacity: 0.5, lineHeight: isMobile ? "1.0" : "1.35", fontFamily: "'Glegoo', serif" }}
-                        >
-                          Chapter {currentIndex + 1}:
-                          <>
-                            <br />
-                            <span 
-                              className="chapter-title"
-                              style={isMobile ? { fontSize: mobileTitleSize } : {}}
-                            >
-                              {chapterTitle}
-                            </span>
-                          </>
-                        </h2>
+                        <div className="text-center" style={{ fontFamily: "'Glegoo', serif" }}>
+                          <h3
+                            className="font-semibold tracking-wide text-[#85644b]"
+                            style={{ fontSize: "1.55rem", opacity: 0.5, lineHeight: "1.35", marginBottom: 0 }}
+                          >
+                            Chapter {currentIndex + 1}:
+                          </h3>
+                          <h2
+                            className="font-semibold tracking-wide text-[#85644b] chapter-title"
+                            style={{ fontSize: isMobile ? mobileTitleSize : "1.55rem", opacity: 0.5, lineHeight: isMobile ? "1.0" : "1.35", marginTop: 0, marginBottom: "0.25rem" }}
+                          >
+                            {chapterTitle}
+                          </h2>
+                        </div>
                       );
                     })()}
 
