@@ -32,21 +32,18 @@ const subCollections = [
   {
     name: "Color Portraits",
     url: "/Galleries/Fine-Art-Photography/Portraits/Color",
-    allUrl: "/Galleries/Fine-Art-Photography/Portraits/Color/all",
     count: colorCount,
     description: "Contemporary and character portraits in full color."
   },
   {
     name: "Black & White Portraits",
     url: "/Galleries/Fine-Art-Photography/Portraits/Black-White",
-    allUrl: "/Galleries/Fine-Art-Photography/Portraits/Black-White/all",
     count: bwCount,
     description: "Classic monochrome studies emphasizing form and character."
   },
   {
     name: "Reenactor Portraits",
     url: "/Galleries/Fine-Art-Photography/Portraits/Reenactors",
-    allUrl: "/Galleries/Fine-Art-Photography/Portraits/Reenactors/all",
     count: reenactorsCount,
     description: "Historical reenactors in period costume and character."
   }
@@ -220,12 +217,12 @@ const meta = {
         <a href="/Contact" class="text-[#8b0000] hover:underline">contact the studio</a>.
       </p>
 
-      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Complete Image Index</h3>
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Browse Collections</h3>
 
       <ul class="list-disc pl-6">
         {subCollections.map((col) => (
           <li>
-            <a href={col.allUrl} class="text-[#8b0000] hover:underline">{col.name} – Full Index</a>
+            <a href={col.url} class="text-[#8b0000] hover:underline">{col.name}</a>
             <span class="text-[#888]"> ({col.count} images)</span>
           </li>
         ))}

@@ -51,28 +51,24 @@ const subCollections = [
       {
         name: "Iceland",
         url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
-        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland/all",
         count: icelandCount,
         description: "Volcanic landscapes, glacial lagoons, and Nordic light."
       },
       {
         name: "The Faroe Islands",
         url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
-        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands/all",
         count: faroeCount,
         description: "Dramatic sea cliffs, grass-roofed villages, and Atlantic storms."
       },
       {
         name: "Canada – Western",
         url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
-        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western/all",
         count: canadaCount,
         description: "The Canadian Rockies, Banff, and British Columbia wilderness."
       },
       {
         name: "Newfoundland",
         url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland",
-        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland/all",
         count: newfoundlandCount,
         description: "Rugged Atlantic coastlines and Viking heritage sites."
       }
@@ -84,28 +80,24 @@ const subCollections = [
       {
         name: "West",
         url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
-        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/all",
         count: westCount,
         description: "The American West—deserts, canyons, and mountain ranges."
       },
       {
         name: "Midwest",
         url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
-        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/all",
         count: midwestCount,
         description: "Prairie horizons, farmland, and heartland vistas."
       },
       {
         name: "Northeast",
         url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
-        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery/all",
         count: northeastCount,
         description: "New England forests, coastal Maine, and autumn foliage."
       },
       {
         name: "South",
         url: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
-        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery/all",
         count: southCount,
         description: "Southern landscapes and Gulf Coast scenes."
       }
@@ -117,7 +109,6 @@ const subCollections = [
       {
         name: "Water",
         url: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water",
-        allUrl: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water/all",
         count: waterCount,
         description: "Oceans, rivers, waterfalls, and reflections."
       }
@@ -309,12 +300,12 @@ const meta = {
         <a href="/Contact" class="text-[#8b0000] hover:underline">contact the studio</a>.
       </p>
 
-      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Complete Image Index</h3>
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Browse Collections</h3>
 
       <ul class="list-disc pl-6">
         {allGalleries.map((gal) => (
           <li>
-            <a href={gal.allUrl} class="text-[#8b0000] hover:underline">{gal.name} – Full Index</a>
+            <a href={gal.url} class="text-[#8b0000] hover:underline">{gal.name}</a>
             <span class="text-[#888]"> ({gal.count} images)</span>
           </li>
         ))}

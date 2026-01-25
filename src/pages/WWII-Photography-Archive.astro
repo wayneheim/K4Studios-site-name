@@ -41,14 +41,12 @@ const subCollections = [
       {
         name: "WWII Portraits – Color",
         url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color",
-        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/all",
         count: portraitsColorCount,
         description: "Color portraits of soldiers, nurses, and wartime characters."
       },
       {
         name: "WWII Portraits – Black & White",
         url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White",
-        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/all",
         count: portraitsBWCount,
         description: "Timeless monochrome studies of the Greatest Generation."
       }
@@ -60,14 +58,12 @@ const subCollections = [
       {
         name: "WWII Machines – Color",
         url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color",
-        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/all",
         count: machinesColorCount,
         description: "Aircraft, tanks, and military vehicles in vivid period detail."
       },
       {
         name: "WWII Machines – Black & White",
         url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White",
-        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/all",
         count: machinesBWCount,
         description: "The machinery of war rendered in classic monochrome."
       }
@@ -79,14 +75,12 @@ const subCollections = [
       {
         name: "WWII War – Color",
         url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color",
-        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/all",
         count: warColorCount,
         description: "Battle reenactments and wartime narratives in full color."
       },
       {
         name: "WWII War – Black & White",
         url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White",
-        allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White/all",
         count: warBWCount,
         description: "Combat scenes with the gravitas of historical record."
       }
@@ -275,12 +269,12 @@ const meta = {
         and custom sizing.
       </p>
 
-      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Complete Image Index</h3>
+      <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Browse Collections</h3>
 
       <ul class="list-disc pl-6">
         {allGalleries.map((gal) => (
           <li>
-            <a href={gal.allUrl} class="text-[#8b0000] hover:underline">{gal.name} – Full Index</a>
+            <a href={gal.url} class="text-[#8b0000] hover:underline">{gal.name}</a>
             <span class="text-[#888]"> ({gal.count} images)</span>
           </li>
         ))}
