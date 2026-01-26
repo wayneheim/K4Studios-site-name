@@ -17,6 +17,9 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
 
+// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
+const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
+
 // Fisher-Yates shuffle
 function shuffle(arr) {
   const a = [...arr];
@@ -59,11 +62,11 @@ function selectSlides(pools, heroWebpSrcs) {
   // 1. Pick FIRST cowboy (hero position)
   const cowboy1 = pickFromPool(pools.westernCowboy);
   if (cowboy1) {
-    const heroSrc = heroWebpSrcs[cowboy1.id] || cowboy1.srcS || cowboy1.src;
+    const heroSrc = getProxySrc(cowboy1.id, 's');
     slides.push({
       ...cowboy1,
       src: heroSrc,
-      srcS: heroWebpSrcs[cowboy1.id] || cowboy1.srcS,
+      srcS: heroSrc,
       fetchpriority: 'high',
       loading: undefined,
       className: 'k4-home-carousel-img k4-home-carousel-img--1 loaded'
@@ -197,7 +200,7 @@ export default function HomeCarousel() {
           >
             <a href={s.href} title={isDuplicate ? undefined : s.alt} aria-label={isDuplicate ? undefined : s.alt} tabIndex={isDuplicate ? -1 : undefined}>
               <img
-                src={s.srcS || s.src || s.srcM || s.srcL}
+                src={s.id ? getProxySrc(s.id, 's') : (s.srcS || s.src)}
                 alt={isDuplicate ? "" : s.alt}
                 itemProp="contentUrl"
                 loading={s.loading}

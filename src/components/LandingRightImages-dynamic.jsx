@@ -1,5 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 
+// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
+const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
+
+// Extract image ID from href like "/Galleries/.../i-abc123"
+const extractIdFromHref = (href) => {
+  const match = href?.match(/\/(i-[a-zA-Z0-9]+)$/);
+  return match ? match[1] : null;
+};
+
 /**
  * LandingRightImages-dynamic.jsx
  * 
@@ -100,27 +109,32 @@ export default function LandingRightImagesDynamic({
         <h3 className="thumb-heading">{heading}</h3>
       </div>
 
-      {images.map(({ href, src, srcS, srcM, srcL, alt, title }, index) => (
-        <div 
-          key={href} 
-          className="thumb-spacer"
-          style={{ 
-            // First image: use default margin. Others: use calculated gap
-            marginTop: index === 0 ? '2.25rem' : `${dynamicGap}px` 
-          }}
-        >
-          <a href={href}>
-            <img
-              src={srcS || srcM || srcL || src}
-              alt={alt}
-              title={title}
-              className="thumb-img"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-        </div>
-      ))}
+      {images.map(({ href, id, alt, title }, index) => {
+        const imageId = id || extractIdFromHref(href);
+        const imageSrc = imageId ? getProxySrc(imageId, 's') : '';
+        
+        return (
+          <div 
+            key={href} 
+            className="thumb-spacer"
+            style={{ 
+              // First image: use default margin. Others: use calculated gap
+              marginTop: index === 0 ? '2.25rem' : `${dynamicGap}px` 
+            }}
+          >
+            <a href={href}>
+              <img
+                src={imageSrc}
+                alt={alt}
+                title={title}
+                className="thumb-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </div>
+        );
+      })}
 
       <style jsx>{`
         .sidebar-thumbnails-dynamic {

@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 
+// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
+const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
+
 export default function MobileStoryImages({ images = [] }) {
   useEffect(() => {
     if (window.innerWidth > 768) {
@@ -34,7 +37,7 @@ export default function MobileStoryImages({ images = [] }) {
         link.style.display = "block";
 
         const img = document.createElement("img");
-        img.src = match.srcS || match.srcM || match.srcL || match.src;
+        img.src = match.id ? getProxySrc(match.id, 's') : (match.srcS || match.srcM || match.srcL || match.src);
         img.alt = match.alt || "";
         img.className = "mobile-inline-img";
         img.width = 280;  // Explicit dimensions to prevent CLS

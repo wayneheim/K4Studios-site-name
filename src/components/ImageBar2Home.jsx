@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
 import { slides as homeSlides } from "../data/home/carousel.ts";
 
+// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
+const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
+
 export default function ImageBar2Home() {
   const trackRef = useRef(null);
   const [show, setShow] = useState(false);
@@ -59,7 +62,7 @@ export default function ImageBar2Home() {
           >
             <a href={s.href} title={isDuplicate ? undefined : s.alt} aria-label={isDuplicate ? undefined : s.alt} tabIndex={isDuplicate ? -1 : undefined}>
               <img
-                src={s.srcS || s.src || s.srcM || s.srcL}
+                src={s.id ? getProxySrc(s.id, 's') : (s.srcS || s.src)}
                 alt={isDuplicate ? "" : s.alt}
                 itemProp="contentUrl"
                 loading={s.loading}

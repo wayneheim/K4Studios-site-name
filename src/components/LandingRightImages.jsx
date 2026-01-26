@@ -1,3 +1,12 @@
+// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
+const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
+
+// Extract image ID from href like "/Galleries/.../i-abc123"
+const extractIdFromHref = (href) => {
+  const match = href?.match(/\/(i-[a-zA-Z0-9]+)$/);
+  return match ? match[1] : null;
+};
+
 export default function LandingRightImages({ heading = "", images = [] }) {
   return (
     <aside className="sidebar-thumbnails" data-dynamic-sidebar>
@@ -5,18 +14,24 @@ export default function LandingRightImages({ heading = "", images = [] }) {
         <h3 className="thumb-heading">{heading}</h3>
       </div>
 
-      {images.map(({ href, src, srcS, srcM, srcL, alt, title }, index) => (
-        <a href={href} key={href} data-sidebar-index={index} style={index > 0 ? { visibility: 'hidden' } : {}}>
-          <img
-            src={srcS || srcM || srcL || src}
-            alt={alt}
-            title={title}
-            className="thumb-img"
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      ))}
+      {images.map(({ href, id, alt, title }, index) => {
+        // Get ID from prop or extract from href
+        const imageId = id || extractIdFromHref(href);
+        const imageSrc = imageId ? getProxySrc(imageId, 's') : '';
+        
+        return (
+          <a href={href} key={href} data-sidebar-index={index} style={index > 0 ? { visibility: 'hidden' } : {}}>
+            <img
+              src={imageSrc}
+              alt={alt}
+              title={title}
+              className="thumb-img"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        );
+      })}
 
       <style jsx>{`
         .sidebar-thumbnails {

@@ -7,10 +7,15 @@ import ShareDrawer from "./ShareDrawer.jsx";
 import SimpleStoryShow from "./Gallery-Slideshow.jsx";
 import StoryShowWithAudio from "./Gallery-Slideshow-Story.jsx";
 
+// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
+const getProxySrc = (id, size = "xl") => `/img/${id}/${size}`;
+
 // Helper function to select the best image source for slideshow display
 const getBestImageSrc = (image) => {
   if (!image) return "";
-  // For slideshow: prefer srcXL (extra large), then srcL (large), then srcM (medium), then src (original)
+  // Use proxy if we have an ID
+  if (image.id) return getProxySrc(image.id, 'xl');
+  // Fallback for legacy data without ID
   return image.srcXL || image.srcL || image.srcM || image.src || "";
 };
 
