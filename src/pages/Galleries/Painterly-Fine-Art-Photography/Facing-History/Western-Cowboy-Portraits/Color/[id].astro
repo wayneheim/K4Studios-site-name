@@ -8,6 +8,7 @@ import { getImageMeta } from '../../../../../../components/utils/getImageMeta.ts
 import { getLandingMeta } from '../../../../../../data/landingMeta.ts';
 import imageIdMap from '@/data/imageIdMap.json';
 import { isBot } from '@/utils/isBot';
+import { cleanRedirect } from '@/utils/cleanRedirect';
 
 
 const { id } = Astro.params;
@@ -22,7 +23,7 @@ if (isBadId) {
   const correctGalleryPath = (imageIdMap as Record<string, string>)[id];
   if (correctGalleryPath) {
     // Image found elsewhere - 301 redirect to preserve SEO
-    return Astro.redirect(`${correctGalleryPath}/${id}`, 301);
+    return cleanRedirect(`${correctGalleryPath}/${id}`, 301);
   }
   // Not found anywhere - return proper status
     if (isBot(userAgent)) {
@@ -32,7 +33,7 @@ if (isBadId) {
     // Humans get redirected to gallery landing for better UX
     let cleanUrl = Astro.url.pathname.replace(/\/i[^/]*\/?$/, '');
     cleanUrl = cleanUrl.replace(/\/+$/, '');
-    return Astro.redirect(cleanUrl, 302);
+    return cleanRedirect(cleanUrl, 302);
 }
 
 // Ensure absolute URL (don’t prepend if already absolute)

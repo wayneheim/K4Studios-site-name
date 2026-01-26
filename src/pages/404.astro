@@ -5,6 +5,7 @@ import SiteFooter from "@/components/Footer.astro";
 import "@/styles/global.css";
 
 import { semantic } from "@/data/semantic/K4-Sem.ts";
+import { cleanRedirect } from "@/utils/cleanRedirect";
 import { siteNav } from "@/data/siteNav.ts";
 import imageIdMap from "@/data/imageIdMap.json";
 
@@ -20,13 +21,13 @@ if (imageIdMatch) {
     // Image found in a different gallery - 301 redirect
     const redirectUrl = `${correctGalleryPath}/${imageId}`;
     console.log(`[smart-404] Redirecting ${imageId} to ${redirectUrl}`);
-    return Astro.redirect(redirectUrl, 301);
+    return cleanRedirect(redirectUrl, 301);
   } else {
     // Image not found anywhere - redirect to gallery landing page
     const galleryLandingPath = requestUrl.replace(/\/i-[a-zA-Z0-9]+\/?$/, '');
     if (galleryLandingPath && galleryLandingPath !== requestUrl) {
       console.log(`[smart-404] Image ${imageId} not found, redirecting to gallery: ${galleryLandingPath}`);
-      return Astro.redirect(galleryLandingPath, 301);
+      return cleanRedirect(galleryLandingPath, 301);
     }
   }
 }

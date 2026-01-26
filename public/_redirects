@@ -19,15 +19,13 @@
 /keyword/*  404!
 
 # =============================================================================
-# LEGACY SMUGMUG PATHS - Return 410 GONE (content permanently removed from this site)
-# These URLs were indexed from old SmugMug site but content now lives on SmugMug only.
-# Returning 410 tells Google to remove them from index rather than treating as duplicates.
+# LEGACY SMUGMUG PATHS - Return 410 GONE (content not part of k4studios.com)
+# These are internal photo shoot archives that live on SmugMug. Not canon work.
+# 410 tells search engines to de-index and stop crawling.
 # =============================================================================
 
-# Legacy Photo-Shoots paths (old SmugMug structure)
-/Other/Photo-Shoots-and-Themes/*/i-*  410!
+# Legacy Photo-Shoots paths (archive content, not advertised)
 /Other/Photo-Shoots-and-Themes/*  410!
-/Other/Photo-Shoots/*/i-*  410!
 /Other/Photo-Shoots/*  410!
 
 # Legacy Photography-Galleries paths (old SmugMug structure)

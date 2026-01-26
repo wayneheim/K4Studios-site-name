@@ -7,6 +7,7 @@ import { galleryData } from '@/data/Other/K4-Select-Series/Engrained/Engrained-S
 
 import imageIdMap from '@/data/imageIdMap.json';
 import { isBot } from '@/utils/isBot';
+import { cleanRedirect } from '@/utils/cleanRedirect';
 
 const { id } = Astro.params;
 const imageData = galleryData.find(img => img.id === id);
@@ -20,7 +21,7 @@ if (isBadId) {
   const correctGalleryPath = (imageIdMap as Record<string, string>)[id];
   if (correctGalleryPath) {
     // Image found elsewhere - 301 redirect to preserve SEO
-    return Astro.redirect(`${correctGalleryPath}/${id}`, 301);
+    return cleanRedirect(`${correctGalleryPath}/${id}`, 301);
   }
   // Not found anywhere - return proper status
     if (isBot(userAgent)) {
@@ -30,7 +31,7 @@ if (isBadId) {
     // Humans get redirected to gallery landing for better UX
     let cleanUrl = Astro.url.pathname.replace(/\/i[^/]*\/?$/, '');
     cleanUrl = cleanUrl.replace(/\/+$/, '');
-    return Astro.redirect(cleanUrl, 302);
+    return cleanRedirect(cleanUrl, 302);
 }
 ---
 

@@ -1,20 +1,9 @@
 // src/components/FAQAccordion.jsx
 import React from "react";
 
+// NOTE: FAQPage structured data is injected at the page level, not here.
+// This component only renders the FAQ UI accordion.
 export default function FAQAccordion({ items }) {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": items.map((item) => ({
-      "@type": "Question",
-      "name": item.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": Array.isArray(item.a) ? item.a.join(' ') : item.a,
-      },
-    })),
-  };
-
   return (
     <>
     <section className="faq">
@@ -28,11 +17,6 @@ export default function FAQAccordion({ items }) {
           />
         </details>
       ))}
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
     </section>
 
       <style jsx>{`

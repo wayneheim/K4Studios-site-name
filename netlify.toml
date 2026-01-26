@@ -321,11 +321,11 @@ to = "/Galleries/:splat"
 status = 301
 force = true
 
-# --- Photoshoots and Events (no dash / lowercase legacy path) ---
+# --- Photoshoots and Events (legacy SmugMug archives, not canon) ---
 [[redirects]]
 from = "/Photoshootsandevents/*"
-to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat"
-status = 301
+to = "/"
+status = 410
 force = true
 
 # --- Legacy Fine-Art-Photography duplicates ---
@@ -434,22 +434,23 @@ status = 410
 force = true
 query = "*"
 
+# Legacy Photo-Shoots paths (archive content on SmugMug, not advertised here)
 [[redirects]]
 from = "/Other/Photo-Shoots"
-to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots"
-status = 301
+to = "/"
+status = 410
 force = true
 
 [[redirects]]
 from = "/Other/Photo-Shoots-and-Themes/*"
-to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat"
-status = 301
+to = "/"
+status = 410
 force = true
 
 [[redirects]]
 from = "/Other/Photo-Shoots/*"
-to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat"
-status = 301
+to = "/"
+status = 410
 force = true
 
 [[redirects]]
