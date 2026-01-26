@@ -19,27 +19,31 @@ import "@/styles/global.css";
 const sectionPath = "/Blog/what-is-painterly-photography";
 const canonicalUrl = "https://www.k4studios.com/Blog/what-is-painterly-photography";
 
+// Proxy URL helper
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
 // Representative images (static, no shuffle - curated selection)
 // Header image - "Do you HEAR me now?!" - cropped horizontal banner
 const headerImage = {
-  src: "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/0/MzHkg4NLj6bnhzTxsVMgJgP2VX8ZhDvsgSX3RWLtK/XL/_HF20588-1294-1295-XL.jpg",
   id: "i-Nn7scqm",
+  src: getProxySrc("i-Nn7scqm", "xl"),
   alt: "Painterly Western scene of a frontier standoff — a woman confronts a railroad man across a weathered fence"
 };
 
 const image1 = {
-  src: "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KNVfXXkzZWQPzsknRPt6jKWTWbr7q9gSJHFHLd8kr/XL/cowboy%20photography%20painting_HF29245-250-XL.jpg",
   id: "i-ncFcHDM",
+  src: getProxySrc("i-ncFcHDM", "xl"),
   alt: "Painterly fine art photograph of a cowboy in warm directional light"
 };
 const image2 = {
-  src: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LCspRF4/0/NdFPjwxFk9TVWwmmBc3Z5tcGjkws6fspS9RFBcTjr/XL/_HF22770-953-954-XL.jpg",
   id: "i-LCspRF4",
+  src: getProxySrc("i-LCspRF4", "xl"),
   alt: "Western narrative scene with atmospheric composition"
 };
 const image3 = {
-  src: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-46kWCqc/0/NVSzN3dbJWtxBKHT2GV28s73WCx5MjTj7NpW5KJxw/XL/_HF20949-Edit-Edit-2-XL.jpg",
   id: "i-46kWCqc",
+  src: getProxySrc("i-46kWCqc", "xl"),
   alt: "Cowboy portrait with painterly tonal control"
 };
 
@@ -82,11 +86,11 @@ const meta = {
   ogDescription: pageDescription,
   ogType: "article",
   ogUrl: canonicalUrl,
-  ogImage: image1.src,
+  ogImage: getAbsoluteProxySrc(image1.id, "xl"),
   twitterTitle: pageTitle,
   twitterDescription: pageDescription,
   twitterUrl: canonicalUrl,
-  twitterImage: image1.src,
+  twitterImage: getAbsoluteProxySrc(image1.id, "xl"),
   twitterCard: "summary_large_image"
 };
 

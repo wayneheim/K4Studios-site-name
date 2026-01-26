@@ -21,7 +21,14 @@ import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-
 import "@/styles/global.css";
 
 const sectionPath = "/Blog/special-delivery";
-const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg";
+
+// Proxy URL helpers
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
+const coverImageId = "i-LL2Gp5r";
+const coverImage = getProxySrc(coverImageId, "xl");
+const coverImageAbsolute = getAbsoluteProxySrc(coverImageId, "xl");
 
 const structuredData = getStructuredData({
   type: "BlogPosting",
@@ -35,7 +42,7 @@ const structuredData = getStructuredData({
       name: "Wayne Heim"
     },
     datePublished: "2026-01-08",
-    image: coverImage,
+    image: coverImageAbsolute,
     articleSection: "Western Fine Art Photography",
     keywords: ["western fine art photography", "visual storytelling", "cowboy art", "Wayne Heim", "painterly photography", "fine art prints", "train imagery", "western mythology"],
     wordCount: 1200
@@ -55,17 +62,17 @@ const breadcrumbsJSON = getBlogBreadcrumbList({
 });
 
 const meta = {
-  ...getLandingMeta(sectionPath, coverImage),
+  ...getLandingMeta(sectionPath, coverImageAbsolute),
   ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Inside the Frame – Special Delivery",
   ogDescription: "A conversation about hubris, power, and the moment when certainty gives way — exploring Wayne Heim's painterly Western image 'Special Delivery.'",
-  ogImage: coverImage,
+  ogImage: coverImageAbsolute,
   ogImageAlt: "Special Delivery cover — four figures gathered at midnight before a halted train",
   ogType: "article",
   twitterUrl: `https://k4studios.com${sectionPath}`,
   twitterTitle: "Inside the Frame – Special Delivery",
   twitterDescription: "A conversation about hubris, power, and the moment when certainty gives way — exploring Wayne Heim's painterly Western image 'Special Delivery.'",
-  twitterImage: coverImage,
+  twitterImage: coverImageAbsolute,
   twitterCard: "summary_large_image"
 };
 

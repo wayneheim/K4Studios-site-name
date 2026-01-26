@@ -1,5 +1,8 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
+// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
+const getProxySrc = (id, size = "xl") => `/img/${id}/${size}`;
+
 export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor, isEngrained = false }) {
   const [isMobile, setIsMobile] = useState(false);
   const [maxImageHeight, setMaxImageHeight] = useState(() =>
@@ -268,7 +271,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor,
           >
             <div style={cutEdge}>
               <img
-                src={imageData.src}
+                src={imageData.id ? getProxySrc(imageData.id, 'xl') : imageData.src}
                 alt={imageData.title}
                 style={{
                   maxWidth: "100%",
@@ -298,7 +301,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor,
                   borderRadius: "50%",
                   width: "180px",
                   height: "180px",
-                  background: `url(${imageData.src}) no-repeat`,
+                  background: `url(${imageData.id ? getProxySrc(imageData.id, 'xl') : imageData.src}) no-repeat`,
                   pointerEvents: "none",
                   boxShadow: "0 2px 6px rgba(0,0,0,0.6)",
                   zIndex: 10,

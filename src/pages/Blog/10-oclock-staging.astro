@@ -20,8 +20,14 @@ import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fi
 import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
 import "@/styles/global.css";
 
+// Proxy URL helpers
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
 const sectionPath = "/Blog/10-oclock-staging";
-const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kxnK2MM/1/MGfmgbprT5vtsRh9C6vWBxpHNkGX5w2Gdx3JkVN3g/L/_WHO0807-1138-1139-L.jpg"; // Update this URL to your actual cover image
+const coverImageId = "i-kxnK2MM";
+const coverImage = getProxySrc(coverImageId, "xl");
+const coverImageAbsolute = getAbsoluteProxySrc(coverImageId, "xl");
 
 const structuredData = getStructuredData({
   type: "BlogPosting",
@@ -35,7 +41,7 @@ const structuredData = getStructuredData({
       name: "Wayne Heim"
     },
     datePublished: "2025-10-23",
-    image: coverImage,
+    image: coverImageAbsolute,
     articleSection: "Western Fine Art Photography",
     keywords: ["western fine art photography", "black and white photography", "cowboy art", "Wayne Heim", "visual storytelling", "one-image movie", "fine art prints"],
     wordCount: 1100
@@ -55,16 +61,16 @@ const breadcrumbsJSON = getBlogBreadcrumbList({
 });
 
 const meta = {
-  ...getLandingMeta(sectionPath, coverImage),  description: "Explore the storytelling behind '10 O'Clock Staging' — a black-and-white Western photograph by Wayne Heim. A creative conversation about suspense, ambiguity, and visual narrative.",  ogUrl: `https://k4studios.com${sectionPath}`,
-  ogTitle: "Inside the Frame: 10 O’Clock Staging",
-  ogDescription: "A conversation with Quill about suspense, ambiguity, and the storytelling power of black and white in Wayne Heim’s Western image '10 O’Clock Staging.'",
-  ogImage: coverImage,
-  ogImageAlt: "10 O’Clock Staging cover",
+  ...getLandingMeta(sectionPath, coverImageAbsolute),  description: "Explore the storytelling behind '10 O'Clock Staging' — a black-and-white Western photograph by Wayne Heim. A creative conversation about suspense, ambiguity, and visual narrative.",  ogUrl: `https://k4studios.com${sectionPath}`,
+  ogTitle: "Inside the Frame: 10 O'Clock Staging",
+  ogDescription: "A conversation with Quill about suspense, ambiguity, and the storytelling power of black and white in Wayne Heim's Western image '10 O'Clock Staging.'",
+  ogImage: coverImageAbsolute,
+  ogImageAlt: "10 O'Clock Staging cover",
   ogType: "article",
   twitterUrl: `https://k4studios.com${sectionPath}`,
-  twitterTitle: "Inside the Frame: 10 O’Clock Staging",
-  twitterDescription: "A conversation with Quill about suspense, ambiguity, and the storytelling power of black and white in Wayne Heim’s Western image '10 O’Clock Staging.'",
-  twitterImage: coverImage,
+  twitterTitle: "Inside the Frame: 10 O'Clock Staging",
+  twitterDescription: "A conversation with Quill about suspense, ambiguity, and the storytelling power of black and white in Wayne Heim's Western image '10 O'Clock Staging.'",
+  twitterImage: coverImageAbsolute,
   twitterCard: "summary_large_image"
 };
 

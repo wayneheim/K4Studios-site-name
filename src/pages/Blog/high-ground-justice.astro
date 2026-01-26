@@ -20,8 +20,14 @@ import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fi
 import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
 import "@/styles/global.css";
 
+// Proxy URL helpers
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
 const sectionPath = "/Blog/high-ground-justice";
-const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/Mtkpn885kn28pxNJXbRwR9ZQtQqs8GVwNpV6DmJ53/L/_HF25860-Edit-L.jpg";
+const coverImageId = "i-CD6rgtF";
+const coverImage = getProxySrc(coverImageId, "xl");
+const coverImageAbsolute = getAbsoluteProxySrc(coverImageId, "xl");
 
 const structuredData = getStructuredData({
   type: "BlogPosting",
@@ -35,7 +41,7 @@ const structuredData = getStructuredData({
       name: "Wayne Heim"
     },
     datePublished: "2025-09-30",
-    image: coverImage,
+    image: coverImageAbsolute,
     articleSection: "Western Fine Art Photography",
     keywords: ["western fine art photography", "painterly photography", "cowboy art", "Wayne Heim", "visual storytelling", "one-image movie", "fine art prints"],
     wordCount: 1300
@@ -50,17 +56,17 @@ const structuredData = getStructuredData({
 });
 
 const meta = {
-  ...getLandingMeta(sectionPath, coverImage),
+  ...getLandingMeta(sectionPath, coverImageAbsolute),
   ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Inside the Frame: High Ground Justice",
-  ogDescription: "A conversation with Quill about layered storytelling, composition, and painterly meaning behind Wayne Heim’s Western image 'High Ground Justice.'",
-  ogImage: coverImage,
+  ogDescription: "A conversation with Quill about layered storytelling, composition, and painterly meaning behind Wayne Heim's Western image 'High Ground Justice.'",
+  ogImage: coverImageAbsolute,
   ogImageAlt: "High Ground Justice cover",
   ogType: "article",
   twitterUrl: `https://k4studios.com${sectionPath}`,
   twitterTitle: "Inside the Frame: High Ground Justice",
-  twitterDescription: "A conversation with Quill about layered storytelling, composition, and painterly meaning behind Wayne Heim’s Western image 'High Ground Justice.'",
-  twitterImage: coverImage,
+  twitterDescription: "A conversation with Quill about layered storytelling, composition, and painterly meaning behind Wayne Heim's Western image 'High Ground Justice.'",
+  twitterImage: coverImageAbsolute,
   twitterCard: "summary_large_image"
 };
 
@@ -130,7 +136,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     onmouseleave="this.querySelector('img').style.boxShadow='none';"
   >
     <img 
-      src="https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/KmHXFd8MFFCLTpg7SH72LN3SwhQPWNkXvQsDGcdBN/XL/_HF25860-Edit-XL.jpg" 
+      src={coverImage} 
       alt="High Ground Justice cover" 
       style="max-width:640px; width:100%; height:auto; margin:0 auto; border-radius:8px; transition:box-shadow .3s;" 
     />

@@ -20,8 +20,14 @@ import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fi
 import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
 import "@/styles/global.css";
 
+// Proxy URL helpers
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
 const sectionPath = "/Blog/one-way-out";
-const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VWX9vk/3/MwtPFtqVfNsTTCgDZJVmSdP9Wxm9Hh3knwbW8qsWX/L/_WHO6282-918-L.jpg"; // <-- replace with actual
+const coverImageId = "i-7VWX9vk";
+const coverImage = getProxySrc(coverImageId, "xl");
+const coverImageAbsolute = getAbsoluteProxySrc(coverImageId, "xl");
 
 const structuredData = getStructuredData({
   type: "BlogPosting",
@@ -35,7 +41,7 @@ const structuredData = getStructuredData({
       name: "Wayne Heim"
     },
     datePublished: "2025-10-01",
-    image: coverImage,
+    image: coverImageAbsolute,
     articleSection: "Western Fine Art Photography",
     keywords: ["western fine art photography", "painterly photography", "cowboy art", "Wayne Heim", "visual storytelling", "one-image movie", "fine art prints"],
     wordCount: 950
@@ -50,17 +56,17 @@ const structuredData = getStructuredData({
 });
 
 const meta = {
-  ...getLandingMeta(sectionPath, coverImage),
+  ...getLandingMeta(sectionPath, coverImageAbsolute),
   ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Conversations With Quill: One Way Out",
-  ogDescription: "A conversation with Quill about fire as truth, metaphor, and rebirth in Wayne Heim’s Western image 'One Way Out.'",
-  ogImage: coverImage,
+  ogDescription: "A conversation with Quill about fire as truth, metaphor, and rebirth in Wayne Heim's Western image 'One Way Out.'",
+  ogImage: coverImageAbsolute,
   ogImageAlt: "One Way Out cover",
   ogType: "article",
   twitterUrl: `https://k4studios.com${sectionPath}`,
   twitterTitle: "Conversations With Quill: One Way Out",
-  twitterDescription: "A conversation with Quill about fire as truth, metaphor, and rebirth in Wayne Heim’s Western image 'One Way Out.'",
-  twitterImage: coverImage,
+  twitterDescription: "A conversation with Quill about fire as truth, metaphor, and rebirth in Wayne Heim's Western image 'One Way Out.'",
+  twitterImage: coverImageAbsolute,
   twitterCard: "summary_large_image"
 };
 
@@ -127,7 +133,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         onmouseleave="this.querySelector('img').style.boxShadow='none';"
       >
         <img 
-          src="https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VWX9vk/3/MwtPFtqVfNsTTCgDZJVmSdP9Wxm9Hh3knwbW8qsWX/L/_WHO6282-918-L.jpg" 
+          src={coverImage} 
           alt="One Way Out cover" 
           style="max-width:640px; width:100%; height:auto; margin:0 auto; border-radius:8px; transition:box-shadow .3s;" 
         />

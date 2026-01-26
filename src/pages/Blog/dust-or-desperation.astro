@@ -20,8 +20,14 @@ import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fi
 import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
 import "@/styles/global.css";
 
+// Proxy URL helpers
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
 const sectionPath = "/Blog/dust-or-desperation";
-const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-cFhZXJc/3/L4B7gvnDz2pp98f9KPJNWggkrmWpMKNsGkfZF25FS/XL/_HF21624-1005-1006-XL.jpg";
+const coverImageId = "i-cFhZXJc";
+const coverImage = getProxySrc(coverImageId, "xl");
+const coverImageAbsolute = getAbsoluteProxySrc(coverImageId, "xl");
 
 const structuredData = getStructuredData({
   type: "BlogPosting",
@@ -35,7 +41,7 @@ const structuredData = getStructuredData({
       name: "Wayne Heim"
     },
     datePublished: "2025-10-05",
-    image: coverImage,
+    image: coverImageAbsolute,
     articleSection: "Western Fine Art Photography",
     keywords: ["western fine art photography", "painterly photography", "cowboy art", "Wayne Heim", "visual storytelling", "one-image movie", "fine art prints"],
     wordCount: 1000
@@ -50,17 +56,17 @@ const structuredData = getStructuredData({
 });
 
 const meta = {
-  ...getLandingMeta(sectionPath, coverImage),
+  ...getLandingMeta(sectionPath, coverImageAbsolute),
   ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Inside the Frame: Dust or Desperation",
-  ogDescription: "A conversation with Quill about allegory, hidden moments, and the superhuman endurance of women in Wayne Heim’s Western image 'Dust or Desperation.'",
-  ogImage: coverImage,
+  ogDescription: "A conversation with Quill about allegory, hidden moments, and the superhuman endurance of women in Wayne Heim's Western image 'Dust or Desperation.'",
+  ogImage: coverImageAbsolute,
   ogImageAlt: "Dust or Desperation cover",
   ogType: "article",
   twitterUrl: `https://k4studios.com${sectionPath}`,
   twitterTitle: "Inside the Frame: Dust or Desperation",
-  twitterDescription: "A conversation with Quill about allegory, hidden moments, and the superhuman endurance of women in Wayne Heim’s Western image 'Dust or Desperation.'",
-  twitterImage: coverImage,
+  twitterDescription: "A conversation with Quill about allegory, hidden moments, and the superhuman endurance of women in Wayne Heim's Western image 'Dust or Desperation.'",
+  twitterImage: coverImageAbsolute,
   twitterCard: "summary_large_image"
 };
 

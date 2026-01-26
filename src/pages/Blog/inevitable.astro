@@ -20,8 +20,14 @@ import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fi
 import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
 import "@/styles/global.css";
 
+// Proxy URL helpers
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
 const sectionPath = "/Blog/Inevitable";
-const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wfqSGcV/0/LxCr22CNRg8STzRKxjswPQx83k2TSvNbQZ2HKVpgC/L/_HF26225-1143-2-L.jpg"; // replace with real URL
+const coverImageId = "i-wfqSGcV";
+const coverImage = getProxySrc(coverImageId, "xl");
+const coverImageAbsolute = getAbsoluteProxySrc(coverImageId, "xl");
 
 const structuredData = getStructuredData({
   type: "BlogPosting",
@@ -32,7 +38,7 @@ const structuredData = getStructuredData({
     copyrightNotice: "© Wayne Heim",
     author: { "@type": "Person", name: "Wayne Heim" },
     datePublished: "2025-10-24",
-    image: coverImage,
+    image: coverImageAbsolute,
     articleSection: "Western Fine Art Photography",
     keywords: ["western fine art photography", "painterly photography", "cowboy art", "Wayne Heim", "visual storytelling", "one-image movie", "fine art prints"],
     wordCount: 1150
@@ -47,17 +53,17 @@ const structuredData = getStructuredData({
 });
 
 const meta = {
-  ...getLandingMeta(sectionPath, coverImage),
+  ...getLandingMeta(sectionPath, coverImageAbsolute),
   ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Inside the Frame: Inevitable",
-  ogDescription: "A conversation with Quill about light, judgment, and inevitability in Wayne Heim’s Western fine art photograph 'Inevitable.'",
-  ogImage: coverImage,
+  ogDescription: "A conversation with Quill about light, judgment, and inevitability in Wayne Heim's Western fine art photograph 'Inevitable.'",
+  ogImage: coverImageAbsolute,
   ogImageAlt: "Inevitable cover image",
   ogType: "article",
   twitterUrl: `https://k4studios.com${sectionPath}`,
   twitterTitle: "Inside the Frame: Inevitable",
-  twitterDescription: "A conversation with Quill about light, judgment, and inevitability in Wayne Heim’s Western fine art photograph 'Inevitable.'",
-  twitterImage: coverImage,
+  twitterDescription: "A conversation with Quill about light, judgment, and inevitability in Wayne Heim's Western fine art photograph 'Inevitable.'",
+  twitterImage: coverImageAbsolute,
   twitterCard: "summary_large_image"
 };
 

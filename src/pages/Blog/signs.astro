@@ -21,7 +21,14 @@ import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-
 import "@/styles/global.css";
 
 const sectionPath = "/Blog/signs";
-const coverImage  = "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/0/LcjHZqBHhs8xHHzNHjfFrCRhBQfqzc87N62sbPdVp/M/_HF21312-Edit-M.jpg"; // <-- UPDATE with your actual image URL
+
+// Proxy URL helpers
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
+const coverImageId = "i-r5Pb7zJ";
+const coverImage = getProxySrc(coverImageId, "xl");
+const coverImageAbsolute = getAbsoluteProxySrc(coverImageId, "xl");
 
 const structuredData = getStructuredData({
   type: "BlogPosting",
@@ -55,16 +62,18 @@ const breadcrumbsJSON = getBlogBreadcrumbList({
 });
 
 const meta = {
-  ...getLandingMeta(sectionPath, coverImage),  description: "Explore the visual storytelling behind 'Signs' — a painterly Western photograph by Wayne Heim. A creative conversation about choices, revelation, and frontier narrative.",  ogUrl: `https://k4studios.com${sectionPath}`,
+  ...getLandingMeta(sectionPath, coverImageAbsolute),
+  description: "Explore the visual storytelling behind 'Signs' — a painterly Western photograph by Wayne Heim. A creative conversation about choices, revelation, and frontier narrative.",
+  ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Inside the Frame: Signs",
-  ogDescription: "A creative conversation with Quill about choices, revelation, and the deeper soul of Western storytelling in Wayne Heim’s painterly image 'Signs.'",
-  ogImage: coverImage,
+  ogDescription: "A creative conversation with Quill about choices, revelation, and the deeper soul of Western storytelling in Wayne Heim's painterly image 'Signs.'",
+  ogImage: coverImageAbsolute,
   ogImageAlt: "Signs cover",
   ogType: "article",
   twitterUrl: `https://k4studios.com${sectionPath}`,
   twitterTitle: "Inside the Frame: Signs",
-  twitterDescription: "A creative conversation with Quill about choices, revelation, and the deeper soul of Western storytelling in Wayne Heim’s painterly image 'Signs.'",
-  twitterImage: coverImage,
+  twitterDescription: "A creative conversation with Quill about choices, revelation, and the deeper soul of Western storytelling in Wayne Heim's painterly image 'Signs.'",
+  twitterImage: coverImageAbsolute,
   twitterCard: "summary_large_image"
 };
 
