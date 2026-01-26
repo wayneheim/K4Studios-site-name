@@ -17,6 +17,16 @@ export const storySliderData = [
     "story": "What’d I say about you and your mouth? I told you—I meant what I said when I said it. Time for words and talking is over. Thinking now you might be better at bleeding than listening. Reckon we ought to find out?"
   },
   {
+    "id": "i-7Mzzbvp",
+    "title": "Last Hand",
+    "story": "Dust spirals and hooves fly as the last hand is played out under a pale, unblinking sky. Three riders, every muscle and nerve taut with gamble and grit, thunder forward—there’s no room left for bluffing, no time to count the cost. In this wild rush, history is measured not by who wins, but by who dares to ride straight into the storm, knowing the deck was never meant to be fair."
+  },
+  {
+    "id": "i-4zxZQQ2",
+    "title": "Heading Home",
+    "story": "Sun splits the clouds as hoofbeats hush the grass, two shadows sliding side by side across the wide plain. His arm carves the horizon, confident, certain—yet her silence lingers, gaze tethered to a world behind the eyes. Guide or guest, captive or kin—only the wind knows for sure. Home drifts somewhere ahead, but between the riders rides every question left unasked, every story the land itself will not surrender."
+  },
+  {
     "id": "i-44jcjTQ",
     "title": "Over My Dead Body: Frontier Stand-off",
     "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming. \n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgment time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!"
@@ -27,34 +37,19 @@ export const storySliderData = [
     "story": "She knows. She’s known for some time. “Jim says I’m always right…” God, please — not this time. Shoulder to shoulder, breath to breath. However long, whatever the cost. He struggles — for air, for words to comfort, for a little more time beside her. “Don’t you worry, Milly… I think I got this thing on the ropes…” She’d give her own soul to make that be true. It was his dream to head West — the life they were meant to build together now reduced to a footnote in their journey. So many questions. So many tomorrows that may never come. But those aren’t for now.\n\nIn this moment — his touch, his warmth, his vow whispered in the dark — is all that matters. Till death do us part."
   },
   {
-    "id": "i-trZrk2w",
-    "title": "Night Raid",
-    "story": "Shadows slip across stone. Who will blink first—the men or the night? One ear to the dark, one eye on the sky. Quiet breath, steady hands—tonight, the West holds its secrets close."
-  },
-  {
-    "id": "i-5rq7gcD",
-    "title": "Let No Man Put Asunder",
-    "story": "An ocean and a world away… we make this stand, reconciling the promises of a new life with the frontier realities that chase us. Sacrificed. Fought. Gave of body and blood for the soul of this country. It’s our flag now — our home — same as those born here. And it’s here we shall forge our life — and all that has been bound to us — whether by destiny or the divine… let no man put asunder."
-  },
-  {
-    "id": "i-46kWCqc",
-    "title": "No Looking Back",
-    "story": "The river is cold and wide, but he never checks the current behind him. One last sunrise, one last regret swallowed in the blue—this is the look of a man riding out with nothing left to lose and nothing left to prove."
-  },
-  {
     "id": "i-r5Pb7zJ",
     "title": "Signs",
     "story": "Follow orders. Do your job. Always comin’ from those tellin’, not doin’. Hunting another man just cuz he followed more orders? That don’t sit easy on my shoulders. Six days out. Just like the rattlesnakes chasing mice— that’s gotta count for somethin’. Was fixin’ to turn back this morning— then, like a finger from God himself: commanding, revealing, testing my resolve. I could still turn back. Nobody would ever know. Except… I would. He would. Leaning in so both warmth and light can cleanse my soul — struggling to see, see what others missed, I finally see it. And with the clarity and weight of revelation, I know what I must do — follow the sign."
   },
   {
-    "id": "i-7Mzzbvp",
-    "title": "Last Hand",
-    "story": "Dust spirals and hooves fly as the last hand is played out under a pale, unblinking sky. Three riders, every muscle and nerve taut with gamble and grit, thunder forward—there’s no room left for bluffing, no time to count the cost. In this wild rush, history is measured not by who wins, but by who dares to ride straight into the storm, knowing the deck was never meant to be fair."
+    "id": "i-trZrk2w",
+    "title": "Night Raid",
+    "story": "Shadows slip across stone. Who will blink first—the men or the night? One ear to the dark, one eye on the sky. Quiet breath, steady hands—tonight, the West holds its secrets close."
   },
   {
-    "id": "i-4zxZQQ2",
-    "title": "Heading Home",
-    "story": "Sun splits the clouds as hoofbeats hush the grass, two shadows sliding side by side across the wide plain. His arm carves the horizon, confident, certain—yet her silence lingers, gaze tethered to a world behind the eyes. Guide or guest, captive or kin—only the wind knows for sure. Home drifts somewhere ahead, but between the riders rides every question left unasked, every story the land itself will not surrender."
+    "id": "i-46kWCqc",
+    "title": "No Looking Back",
+    "story": "The river is cold and wide, but he never checks the current behind him. One last sunrise, one last regret swallowed in the blue—this is the look of a man riding out with nothing left to lose and nothing left to prove."
   },
   {
     "id": "i-Wx5scCf",
@@ -92,14 +87,14 @@ export const storySliderData = [
     "story": "He lies on the floor, lungs burning — a cough like gravel, the taste of blood. The rough tenderness of survival, where hopes and promises are measured in sips, not sermons.\n\nFever is not the only thing that spreads. Silence weighs heavier than the acrid scent of smoke and despair. Conviction does not waiver, nor does it question. As light halos his courage and conviction, the details of fate and finality lurk in the shadows and silence."
   },
   {
-    "id": "i-3SxncXS",
-    "title": "The Keeper of Old Winds",
-    "story": "He didn’t speak much, not because he lacked words, but because he carried too many. The land had carved its lessons deep into him—etched into the creases around his eyes, threaded through the long silver of his beard, whispered in every slow turn of his gaze.\n\nSome men grow older. \nOthers become part of the horizon.\n\nHe was the latter."
-  },
-  {
     "id": "i-5TtHV8g",
     "title": "Counting Cards",
     "story": "Crap. Now what?! There’s gotta be a dozen of them now.\nThought they’d have given up hours ago. We didn’t even get anything.\n\nStupid idea. I told Jimmy that. Nobody robs a bakery—wrong kind of “dough,” I said.\nBut no, I’m the dumb one. And now we got to, count the shadows, holding our breath,\nand figuring up the odds on if we make it out alive."
+  },
+  {
+    "id": "i-5rq7gcD",
+    "title": "Let No Man Put Asunder",
+    "story": "An ocean and a world away… we make this stand, reconciling the promises of a new life with the frontier realities that chase us. Sacrificed. Fought. Gave of body and blood for the soul of this country. It’s our flag now — our home — same as those born here. And it’s here we shall forge our life — and all that has been bound to us — whether by destiny or the divine… let no man put asunder."
   },
   {
     "id": "i-fCG2nm8",
@@ -117,14 +112,14 @@ export const storySliderData = [
     "story": "Morning sun climbs, bathing every color in anticipation and purpose. Sweat beads, dust shimmers, saddle leather glows with stories untold. The clock strikes ten—she’s late. Nerves on edge, they hold their places. Distant rumbles echo—steel, hooves, danger on the ridge.\n“Steady, Billy. Stick to the plan.”\nToday, patience is the hardest virtue. Vengeance or fortune—both ride with the morning wind."
   },
   {
+    "id": "i-3SxncXS",
+    "title": "The Keeper of Old Winds",
+    "story": "He didn’t speak much, not because he lacked words, but because he carried too many. The land had carved its lessons deep into him—etched into the creases around his eyes, threaded through the long silver of his beard, whispered in every slow turn of his gaze.\n\nSome men grow older. \nOthers become part of the horizon.\n\nHe was the latter."
+  },
+  {
     "id": "i-gxMVNh3",
     "title": "Tumbleweed Whispers",
     "story": "The wind danced through the porch boards, carrying secrets only children hear. She spun toward him, laughter bright as sunlit dust, bare feet tapping out a rhythm older than the prairie.\n\nFor a breath, for a heartbeat, for this one wild moment — the world was nothing but joy, and the tumbleweeds whispered them forward."
-  },
-  {
-    "id": "i-fM9qmKW",
-    "title": "Just a Sip to Settle My Nerves",
-    "story": "With the weight of the world resting clearly on his shoulders, Chávez pores himself one last drink for the day. Weight of what he's done or weight of what is to come - most likely a mixture of both."
   },
   {
     "id": "i-MHGPvcs",
@@ -132,14 +127,19 @@ export const storySliderData = [
     "story": "“I’m pretty sure you must be talking to someone else—\n’Cause I asked how much for the whiskey,\nnot the redhead at the end of the bar.\n\nI’ve seen a lot of bars in a lot of these cow towns,\nand I ain’t ever seen no three-dollar whiskey.\n\nSo I’m gonna ask you one more time—\nYou talkin’ to me?”"
   },
   {
-    "id": "i-CD6rgtF",
-    "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
-    "story": "Among the stone and sage...\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history."
+    "id": "i-fM9qmKW",
+    "title": "Just a Sip to Settle My Nerves",
+    "story": "With the weight of the world resting clearly on his shoulders, Chávez pores himself one last drink for the day. Weight of what he's done or weight of what is to come - most likely a mixture of both."
   },
   {
     "id": "i-c3vWMgt",
     "title": "Able Reckoning — The Instant of Consequence",
     "story": "Brambles and cliff, stone and precipice —\nthe land closes in, demanding answers.\nChests heave like the ridge itself,\neach breath cradled before the mark of a brother’s hand.\nNo victor, no villain — only those able to face what’s come to pass.\nIn this instant of consequence, even the righteous bend."
+  },
+  {
+    "id": "i-CD6rgtF",
+    "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
+    "story": "Among the stone and sage...\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history."
   },
   {
     "id": "i-xqZwcZh",

@@ -562,6 +562,7 @@ export default function ChapterGalleryBase({
   const anchorText = anchorTexts[anchorIndex];
   const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
   const [showStoryShow, setShowStoryShow] = useState(false);
   const [showCollectorHint, setShowCollectorHint] = useState(false);
   const [showPricingModal, setShowPricingModal] = useState(false);
@@ -814,7 +815,8 @@ export default function ChapterGalleryBase({
     const mqCoarse = window.matchMedia ? window.matchMedia("(pointer: coarse)") : null;
     const checkMobile = () => {
       const coarse = mqCoarse ? mqCoarse.matches : false;
-      setIsMobile(coarse || window.innerWidth <= 1024);
+      setIsMobile(coarse || window.innerWidth < 768);
+      setWindowWidth(window.innerWidth);
     };
     checkMobile();
     window.addEventListener("resize", checkMobile);
@@ -1033,7 +1035,7 @@ export default function ChapterGalleryBase({
                     className="absolute text-sm text-gray-300 font-medium whitespace-nowrap" 
                     style={{ left: '25%', transform: 'translateX(-50%)', letterSpacing: "-0.05em", opacity: 0.5 }}
                   >
-                    {`${currentIndex + 1}/${galleryData.length}`}
+                    {`${currentIndex + 1} / ${galleryData.length}`}
                   </div>
 
                   {/* Center: K4 Studios */}
@@ -1066,7 +1068,7 @@ export default function ChapterGalleryBase({
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: direction > 0 ? -150 : 150 }}
                   transition={{ duration: 0.6, ease: [0.45, 0, 0.55, 1] }}
-                  className="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center md:min-h-[75vh]"
+                  className="flex flex-col md:flex-row gap-6 md:gap-6 items-center justify-center md:min-h-[75vh]"
                   {...swipeHandlers}
                   data-image-id={currentId}
                 >
@@ -1094,7 +1096,9 @@ export default function ChapterGalleryBase({
                               (() => {
                                 const img = galleryData[currentIndex];
                                 const isLandscape = img && img.width > img.height;
-                                if (isMobile) {
+                                
+                                // Mobile (< 768px)
+                                if (windowWidth < 768) {
                                   return {
                                     cursor: "zoom-in",
                                     maxWidth: "calc(100vw - 2.5rem)",
@@ -1105,6 +1109,8 @@ export default function ChapterGalleryBase({
                                     boxShadow: '0 1px 3px rgba(0,0,0,0.08)'
                                   };
                                 }
+                                
+                                // Desktop (>= 768px)
                                 return {
                                   cursor: "zoom-in",
                                   maxWidth: isLandscape ? "550px" : "100%",
@@ -1282,7 +1288,10 @@ export default function ChapterGalleryBase({
                           `flex items-center gap-1 md:gap-6 mx-auto rounded-xl shadow-sm px-3 py-1 select-none ` +
                           (isMobile ? ' w-full' : ' bg-white max-w-[1300px]')
                         }
-                        style={isMobile ? { width: 'calc(100vw - 2.5rem)', maxWidth: 'calc(100vw - 2.5rem)', minWidth: 0, justifyContent: 'space-between', border: '1px solid rgba(107, 94, 84, 0.1)', backgroundColor: 'rgba(240, 238, 233, 0.85)' } : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly', border: '1px solid #e5e7eb' }}
+                        style={isMobile
+                          ? { width: 'calc(100vw - 2.5rem)', maxWidth: 'calc(100vw - 2.5rem)', minWidth: 0, justifyContent: 'space-between', border: '1px solid rgba(107, 94, 84, 0.1)', backgroundColor: 'rgba(240, 238, 233, 0.85)' }
+                          : { maxWidth: '1300px', minWidth: 0, justifyContent: 'space-evenly', border: '1px solid #e5e7eb' }
+                        }
                       >
                         {/* Menu - Desktop only */}
                       {!isMobile && (
@@ -1448,7 +1457,7 @@ export default function ChapterGalleryBase({
                         data-grid-btn
                       >
                         <Grid className="w-5 h-5" style={{ stroke: "#84766d" }} />
-                        <span className="text-xs" style={{ color: "#84766d", opacity: 0.5 }}>All</span>
+                        <span className="text-xs" style={{ color: "#84766d", opacity: 0.5 }}>- All</span>
                       </button>
 
                       {/* ❤️ Like Button - Fourth on mobile */}
@@ -1512,8 +1521,8 @@ export default function ChapterGalleryBase({
                         </button>
                       )}
                       </div>
-                      {/* Desktop-only Guide button to the right of the toolbar */}
-                      {!isMobile && (
+                      {/* Desktop-only Guide button to the right of the toolbar - hidden below 825px */}
+                      {!isMobile && windowWidth >= 825 && (
                         <button
                           type="button"
                           onClick={() => { logUIEvent("guide_open", { page: window.location.pathname, sectionKey }); setTourOpenNonce(n => n + 1); }}
@@ -1694,7 +1703,17 @@ export default function ChapterGalleryBase({
                   </div>
 
                   {/* DESCRIPTION + DESKTOP NAV COLUMN */}
-                  <div className="w-full md:pl-8">
+                  <div 
+                    className="w-full md:pl-8"
+                    style={(() => {
+                      // Tight zone (768-825px) - scale text down slightly
+                      if (windowWidth >= 768 && windowWidth < 825) {
+                        const scaleValue = 0.85 + ((windowWidth - 768) / (825 - 768)) * 0.15;
+                        return { transform: `scale(${scaleValue})`, transformOrigin: 'top center' };
+                      }
+                      return {};
+                    })()}
+                  >
                     {/* Separator */}
                     <div className="hidden md:flex justify-center my-2">
                       <div className="flex items-center justify-center gap-3 my-4 text-[#7a6a58]">
