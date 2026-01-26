@@ -32,7 +32,7 @@ export const landingWestern = {
       title: "Facing History — Painterly, Historically Themed Work",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
       thumb:
-        "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8BbMZjs/1/NTmDm8wc225FN8hF3SMLqtnvRp6DwsSSc38VzTGTB/S/Western%20Cowboy%20Portrait%20Photography%20_DSF6899-Edit-Edit-Edit-S.jpg",
+        "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/0/L5qrBf63BWGVH9XgwCL86R6HLbF3dKVxrGqPW2F3h/S/Heros%20ride-S.jpg",
     },
     {
       title: "Transportation & Americana",

@@ -1470,10 +1470,11 @@ export default function ThemeBuilder() {
                   type="text"
                   readOnly
                   value={(() => {
-                    // Build shareable URL: /Galleries/.../Color?theme=slug&view=grid
+                    // Build shareable URL: /Galleries/.../Color?theme=slug&view=grid or /Other/.../
                     const datasetPath = themeDatasetPath
                       .replace(/^\//, '')
                       .replace(/^src\/data\/Galleries\//, '/Galleries/')
+                      .replace(/^src\/data\/Other\//, '/Other/')
                       .replace(/\.mjs$/, '');
                     return `${typeof window !== 'undefined' ? window.location.origin : 'https://k4studios.net'}${datasetPath}?theme=${themeSlug}&view=grid`;
                   })()}
@@ -1485,6 +1486,7 @@ export default function ThemeBuilder() {
                     const datasetPath = themeDatasetPath
                       .replace(/^\//, '')
                       .replace(/^src\/data\/Galleries\//, '/Galleries/')
+                      .replace(/^src\/data\/Other\//, '/Other/')
                       .replace(/\.mjs$/, '');
                     const shareUrl = `${window.location.origin}${datasetPath}?theme=${themeSlug}&view=grid`;
                     navigator.clipboard.writeText(shareUrl).then(() => {

@@ -166,5 +166,16 @@ export const themes = [
     "firstImage": "i-v4vRSb8",
     "createdAt": "2026-01-07T20:59:52.590Z",
     "updatedAt": "2026-01-07T23:40:20.413Z"
+  },
+  {
+    "name": "Lore and Legacy",
+    "slug": "lore-and-legacy",
+    "dataset": "src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+    "description": "This collection gathers works that weave together the myth and reality of the American West—where every image is a living story, and every print a piece of lasting legacy. Encounter the arc of hope, struggle, and quiet revelation that shaped both the frontier and those who crossed it.",
+    "visible": true,
+    "imageCount": 32,
+    "firstImage": "i-rxQn29x",
+    "createdAt": "2026-01-26T01:47:00.341Z",
+    "updatedAt": "2026-01-26T01:51:58.675Z"
   }
 ];

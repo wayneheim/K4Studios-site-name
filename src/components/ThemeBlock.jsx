@@ -66,7 +66,7 @@ export default function ThemeBlock({ galleryKey }) {
     "description": `Curated visual themes available in this One-Image Movie™ gallery`,
     "numberOfItems": galleryThemes.length,
     "itemListElement": galleryThemes.map((t, index) => {
-      const datasetPath = t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/\.mjs$/, '');
+      const datasetPath = t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/^src\/data\/Other\//, '/Other/').replace(/\.mjs$/, '');
       // Use grid view URL for theme links (shows collection overview)
       const themeUrl = `${datasetPath}?theme=${t.slug}&view=grid`;
       return {
@@ -163,7 +163,7 @@ export default function ThemeBlock({ galleryKey }) {
           {galleryThemes.map((t, index) => {
             // Build the theme URL - navigate to grid view with theme filter
             // Shows collection overview with theme name, description, and all images
-            const datasetPath = t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/\.mjs$/, '');
+            const datasetPath = t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/^src\/data\/Other\//, '/Other/').replace(/\.mjs$/, '');
             const themeUrl = `${datasetPath}?theme=${t.slug}&view=grid`;
             
             // Determine if this theme should be visually hidden (but still in DOM for SEO)
@@ -271,7 +271,7 @@ export default function ThemeBlock({ galleryKey }) {
           {t.description}
           {/* Mobile prompt - tap again to navigate */}
           <a
-            href={t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/\.mjs$/, '') + `?theme=${t.slug}&view=grid`}
+            href={t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/^src\/data\/Other\//, '/Other/').replace(/\\.mjs$/, '') + `?theme=${t.slug}&view=grid`}
             className="theme-tap-prompt"
             style={{
               display: "block",

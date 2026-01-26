@@ -153,7 +153,6 @@ export const galleryData = [
     "alt": "Cowboy watching stagecoach leave – painterly fine art wood print, Engrained Series",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/LMBSDtzhV4Z9Phctd8qgSHzdDKNmng4X4VKdDLSjw/XL/Cowboy-Long-Goodbye-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/A",
-
     "keywords": [
       "western fine art photography",
       "color western portrait",
@@ -171,23 +170,23 @@ export const galleryData = [
       "character study",
       "warm palette"
     ],
-
     "story": "As the lone coach disappeared down the lonely road, he stood silent—rooted by more than trail dust. Would their paths ever cross again? As a man of few but deliberate words, had he said too little… too much? Should he have asked her not to go?\n\nThe questions would hang heavy on his heart — like the low-lying clouds blanketing the valley floor, choking out the day’s first light.\n\nBut the decision was made. And the road ahead—was now his alone to walk.",
     "notes": "Wayne Heim’s work resists easy categorization. It fuses the emotional gravity of illustration with the immediacy of photography, crafting visual narratives that feel at once timeless and intimate. In this piece, a quiet departure becomes a moment of reckoning—his subject frozen not by indecision, but by the weight of what’s already been decided. The cloud-laden valley mirrors the silence between them; the light, muted and hesitant, becomes part of the emotional architecture.\n\nThere are echoes of the Pictorialist tradition—softened edges, diffused light, and a painter’s grasp of structure—but Heim’s images never lean on nostalgia. Instead, they distill a mood: one that feels cinematic, interior, and poised between myth and memory.\n\nThis isn’t painterly surface for painterly’s sake. Where others mimic, Heim defines. His subjects aren’t costumes posed in front of a lens, but characters suspended in time—carrying the emotional freight of history, love, loss, and consequence.\n\nIn a genre often diluted by trope and imitation, this image refuses cliché. It’s not about the goodbye—it’s about everything left unsaid after.",
     "rating": 5,
-
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/K4-Select-Series/Engrained/Engrained-Series"
     ],
-
     "visibility": "show",
     "sortOrder": 3,
+    "themes": {
+      "lore-and-legacy": 26
+    },
+    "contentSource": "human",
     "editionSize": 50,
     "imageSize": "24\" × 36\"",
     "price": "$3000",
     "linkedImageId": "i-ncFcHDM",
-    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    contentSource: "human"
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-mrHbrNb",
@@ -240,6 +239,9 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 4,
+    "themes": {
+      "lore-and-legacy": 24
+    },
     "editionSize": 50,
     "imageSize": "12\" × 24\"",
     "price": "$900",
@@ -274,6 +276,9 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 5,
+    "themes": {
+      "lore-and-legacy": 30
+    },
     "contentSource": "human",
     "editionSize": 50,
     "imageSize": "16\" × 36\"",
@@ -316,6 +321,9 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 6,
+    "themes": {
+      "lore-and-legacy": 22
+    },
     "editionSize": 50,
     "imageSize": "24\" × 36\"",
     "price": "$3000",
@@ -345,6 +353,9 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 7,
+    "themes": {
+      "lore-and-legacy": 16
+    },
     "editionSize": 50,
     "imageSize": "16\" × 36\"",
     "price": "$1850",
@@ -384,6 +395,9 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 8,
+    "themes": {
+      "lore-and-legacy": 20
+    },
     "editionSize": 50,
     "imageSize": "24\" × 36\"",
     "price": "$3000",
@@ -422,6 +436,9 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 9,
+    "themes": {
+      "lore-and-legacy": 6
+    },
     "editionSize": 50,
     "imageSize": "40\" × 30\"",
     "price": "$4200",
@@ -829,7 +846,6 @@ export const galleryData = [
     "alt": "Lady waving goodbye from train – painterly wood print, Engrained Series",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/K3QvRVJkgM28sjdKQBvNjvdLGN4NbNs5mzQPTzkXS/XL/Settler-Wave-Goodbye-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/A",
-
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -872,23 +888,23 @@ export const galleryData = [
       "frontier photography",
       "fine art prints on wood"
     ],
-
     "story": "The train is already breathing—steam lifting, iron shifting its weight.\nShe doesn’t rush the moment.\nThere’s still time left in the space between motion and departure.\n\nHer hand stays raised longer than it needs to.\nNot waving so much as holding the feeling in place,\nas if letting go too early might make the leaving real.\n\nThe sound will come.\nThe distance will follow.\nFor now, she stands exactly where memory decides to stay.",
     "notes": "This image leans into the pictorialist tradition, favoring atmosphere and emotional suggestion over literal description. The softened edges, controlled contrast, and disciplined use of negative space place the work in quiet conversation with early narrative photography and illustrators who understood restraint as a storytelling tool.\n\nRather than dramatizing the departure, the composition allows the farewell to unfold internally. The raised hand becomes a compositional anchor—small, human, and deliberate—holding tension against the implied motion of the train. The result is a Western image less concerned with destination than with consequence, inviting the viewer to complete the story long after the moment has passed.",
     "rating": 4,
-
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/K4-Select-Series/Engrained/Engrained-Series"
     ],
-
     "visibility": "show",
     "sortOrder": 20,
+    "themes": {
+      "lore-and-legacy": 31
+    },
+    "contentSource": "human",
     "editionSize": 50,
     "imageSize": "20\" × 24\"",
     "price": "$1500",
     "linkedImageId": "i-w3JBvXs",
-    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    contentSource: "human"
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-HZVV8J2",
@@ -968,6 +984,9 @@ export const galleryData = [
     ],
     "visibility": "show",
     "sortOrder": 22,
+    "themes": {
+      "lore-and-legacy": 29
+    },
     "contentSource": "human",
     "first_seen": "2026-01-22",
     "editionSize": 50,
@@ -988,7 +1007,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-BmwzGg4/0/MmN7x6DjwTVwbF46tjXCMQ45JQ3hJcNHk7vK8PkkQ/S/Brothers%20of%20the%20Open%20Country%2034%20x%2020%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-BmwzGg4/A",
-
     "keywords": [
       "western fine art photography",
       "indigenous scout portrait",
@@ -1016,24 +1034,24 @@ export const galleryData = [
       "historic western prints",
       "painterly technique"
     ],
-
     "story": "Sharp fall air hangs heavy like morning dew.\nChange is in the air—seasons and society, both forcing their own agenda upon this land.\n\nThey come by wagonload now, each one hoping for a new beginning—hunting for answers, a fresh start, or just a path forward.\n\nCarving, forging, reshaping this life with Eastern wealth and virtues, they claim what’s ours for theirs.\nYears, old friend, we shared this place as brothers—one mind - wrapped in different cloths.\n\nClouds of change gather, dappled and restless, over the valley floor.\nBoth season and change move at will, ushering a future that neither hope nor protest can hold back.",
     "notes": "This piece exemplifies Heim’s ability to portray interpersonal nuance within a painterly, historically grounded aesthetic. The triangular composition—horse, Indigenous scout, trapper—creates a stable visual structure that reinforces the sense of alliance. Textural layering and soft atmospheric light evoke the tonal sensitivity of classic Western illustrators while preserving the authenticity of lived experience. The work carries emotional and cultural resonance, making it a standout selection for collectors who appreciate Western art that honors story, lineage, and human connection.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 23,
+    "themes": {
+      "lore-and-legacy": 15
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-89qzJ6S",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    contentSource: "human",
-    imageSize: `30" X 22"`,
-    price: "$2400",
-    editionSize: 50
+    "editionSize": 50,
+    "imageSize": "30\" X 22\"",
+    "price": "$2400",
+    "linkedImageId": "i-89qzJ6S",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-jL4Gk5N",
@@ -1047,7 +1065,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-jL4Gk5N/0/MHxgjDZpgmzXdN6V3jpcbbSVgfHCRgDxGRf6MJN5D/S/Color%20of%20Conviction%2016%20x%2024%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-jL4Gk5N/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1059,24 +1076,24 @@ export const galleryData = [
       "wood-mounted art",
       "photo printed on wood panel"
     ],
-
     "story": "The rush of wind, water, and discovery blankets another day as each swirl of the pan tugs at the roots of his resolve and conviction.\n\nLaugh at old Willie, will they? I’ll show them. These old bones don’t lie. This time’s different—they’ll see.\nIf not this bend, then maybe the one yonder by the tree, where it forks.\n\nHer voice echoes in these hills, same as the laughter at Mrs. Milly’s.\nCalling out: “Come and get me, old man—if you can!”\n\nI’m coming for you, Goldie. And when we finally meet, we’re gonna show them all the true \"color of conviction\".",
     "notes": "This image stands in the tradition of Western art that values patience over action, memory over myth. The composition nods to the psychological weight of Wyeth and the understated grit of Remington, favoring solitude and inner struggle over dramatic conquest. The prospector’s journey is less about what the river yields than what time—and doubt—leave behind. “Color of Conviction” holds its place among the narrative-driven works that elevate the quiet moments of the West, inviting collectors to see not just a figure at work, but the history of hope and resilience that lingers in every shadow.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 24,
+    "themes": {
+      "lore-and-legacy": 19
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-RsLmsLZ",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `16" X 36"`,
-    price: "$1400",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "16\" X 36\"",
+    "price": "$1400",
+    "linkedImageId": "i-RsLmsLZ",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-4QZ7HPR",
@@ -1090,7 +1107,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/LKppLkW56HTHP9dvkRNGc6GZb6Jvsjkntzr2HtH33/S/Cough%20and%20Covenant%2016%20x%2020%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1102,24 +1118,24 @@ export const galleryData = [
       "printed on birch",
       "baltic birch wall art"
     ],
-
     "story": "He lies on the floor, lungs burning — a cough like gravel, the taste of blood. The rough tenderness of survival, where hopes and promises are measured in sips, not sermons.\n\nFever is not the only thing that spreads. Silence weighs heavier than the acrid scent of smoke and despair. Conviction does not waiver, nor does it question. As light halos his courage and conviction, the details of fate and finality lurk in the shadows and silence.",
     "notes": "“Cough and Covenant” balances light and darkness in both composition and meaning. The upward gesture, the pooled warmth of lamplight, and the near-caravaggisti rendering evoke a lineage of sacred tenderness—yet something darker stirs in the shadows. For the discerning viewer, the image rewards slow study: subtle cues of mortality, unspoken oaths, and the cost of loyalty rendered in blistered skin and painterly grit.\n\nThis piece stands at the intersection of Remington’s rugged masculinity and Wyeth’s emotional restraint, fusing narrative photography with classical tension. The central beam of light becomes almost ecclesiastic, not just illuminating the subject, but beatifying him—before the viewer realizes what may truly be unfolding. In that realization, the “covenant” becomes more than a gesture. It becomes a sacrifice.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 25,
+    "themes": {
+      "lore-and-legacy": 11
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-HBRmWg4",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `16" X 20"`,
-    price: "$1000",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "16\" X 20\"",
+    "price": "$1000",
+    "linkedImageId": "i-HBRmWg4",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-swWgKsW",
@@ -1133,7 +1149,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-swWgKsW/0/L82QL8LpkMdbXgRZ57SSKjDCKVhBRpRrwQZnrffBd/S/Day%20In%20Review%2018%20x%2030%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-swWgKsW/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1147,24 +1162,24 @@ export const galleryData = [
       "baltic birch wall art",
       "photo printed on wood panel"
     ],
-
     "story": "What breaks first: the trail, the day, or a man’s resolve? Funny, how the hardest part of any journey isn’t what’s ahead—it’s what you carry with you and what you left behind. Fact is, the real trouble’s between my ears, decisions that can’t be unmade. At this point, only thing certain is the ache in my bones and the twelve cans of beans I got to get us to Laramie before the snow flies.",
     "notes": "“Day in Review” uses dramatic light and shadow to capture the quiet moments that define Western life. The stance, the worn gear, and the lone wagon speak to a day’s labor and a night’s reflection—classic themes in both historic and contemporary Western art. This image echoes the golden-hour mood beloved by painters like Remington and Russell, offering collectors a scene rich with atmosphere and timeless character.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 26,
+    "themes": {
+      "lore-and-legacy": 1
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-LCspRF4",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `18" X 30"`,
-    price: "$1700",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "18\" X 30\"",
+    "price": "$1700",
+    "linkedImageId": "i-LCspRF4",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-5VmRqpZ",
@@ -1178,7 +1193,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/MBvDhNX2pqkZBvpncszF7N6mNML8fX4B3HfNg66B2/S/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1192,24 +1206,24 @@ export const galleryData = [
       "wood panel art",
       "wood-mounted art"
     ],
-
     "story": "She’s had enough of men with papers and empty promises, enough of being talked down to from horseback or the other side of a fence. The price of “progress” is written on her face as she makes her stand, voice ringing sharper than the stick she raises. One step closer and he’ll find out just how loud a woman can get when her land and family are on the line.",
     "notes": "",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 27,
+    "themes": {
+      "lore-and-legacy": 18
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-Nn7scqm",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `42" X 20"`,
-    price: "$3100",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "42\" X 20\"",
+    "price": "$3100",
+    "linkedImageId": "i-Nn7scqm",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-hCk9fs9",
@@ -1223,7 +1237,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hCk9fs9/0/L8LsnQKmMhB2PD8c9Zknq8dNsCDhN5BJwTqKgMbLR/S/End%20of%20His%20Rope%2016%20x%2024%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hCk9fs9/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1236,24 +1249,24 @@ export const galleryData = [
       "wood-mounted art",
       "photography printed on wood"
     ],
-
     "story": "Dirt-muted colors permeate the morning rodeo—light, dust, and destiny circling the haze for position.\nRopes and reins—duty and emotion—each arguing for control before the moment decides for them.\n\nHands clench path and purpose. One works to rein in, the other struggles with letting go.\n\nYet in that cloud of chaos that screens true vision and shapes untold, the matter and the irrelevant become sifted, silenced—yielding a focus honed.\nIt’s from that mask, that filter of conscience, that clarity can thrive.\n\nClarity of purpose, of path, and of what must wait— \nat the end of the rope.",
     "notes": "Heim’s mastery is quiet—his painterly light softens the boundaries between work and reflection, capturing the West at its most ambiguous. The subdued palette and blurred edges recall the contemplative mood of Wyeth and Russell, yet the moment belongs fully to the present. Hands and rope become metaphors for both resolve and uncertainty; every detail",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 28,
+    "themes": {
+      "lore-and-legacy": 25
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-bq4FKvX",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `16" X 24"`,
-    price: "$1400",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "16\" X 24\"",
+    "price": "$1400",
+    "linkedImageId": "i-bq4FKvX",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-4pQCmVZ",
@@ -1267,7 +1280,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4pQCmVZ/0/Nb8t94Wwk9gvhvSffw3G9bFJS2rrmPvsM396SPzBQ/S/For%20Better%20or%20For%20Worse%2016%20x%2024%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4pQCmVZ/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1279,24 +1291,24 @@ export const galleryData = [
       "photography printed on wood",
       "wood-mounted art"
     ],
-
     "story": "Just when I thought these long nights and even longer days would never end, finally—over the hill—that unmistakable silhouette. No mistaking the set of those shoulders and that ugly hat. My man. Henry is home.\n\nBut—wait. A second, a third? Lord above, tell me it’s not all of them. He said this was his last “trip.” He promised he was done with them.\n\nWhen they said “for better or worse,” this was not exactly what I had in mind. Some days I wonder if that vow was ever meant for a woman like me.",
     "notes": "Echoing the quiet intensity found in the portraits of Wyeth and Eakins, this image balances classical composition with cinematic, lived-in realism. The interplay of light and texture is reminiscent of hand-tinted silver prints—each detail reinforcing the narrative weight. Heim’s painterly process fuses the documentary clarity of historical photography with the ambiguity and emotional gravity of Western mythos, positioning this piece as both artifact and invitation: a window into the silent endurance of frontier women, and a testament to narrative-rich fine art in the tradition of Rockwell, Remington, and beyond.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 29,
+    "themes": {
+      "lore-and-legacy": 28
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-jcLJT4J",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `16" X 24"`,
-    price: "$1400",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "16\" X 24\"",
+    "price": "$1400",
+    "linkedImageId": "i-jcLJT4J",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-vhmHCCM",
@@ -1310,7 +1322,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-vhmHCCM/0/LnPcv8dh8rHPJbSNPbhFFfXzG4rzjvHncmPmXZ94h/S/Jane%2024%20x%2036%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-vhmHCCM/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1323,24 +1334,24 @@ export const galleryData = [
       "museum quality historical prints",
       "printed on birch"
     ],
-
     "story": "This wink’s for you, young fella.\nYou think the West is all dust and danger? Maybe it is. But out here, you make your own luck and you earn every smile.\nI’ve outridden storms, outshot trouble, and outlasted most who ever called me “darlin’.”\nAin’t no shame in grinning through it. Now—are you just passing through, or do you plan to make your own story?",
     "notes": "This portrait channels the legendary “Calamity Jane” spirit—self-assured, charismatic, and unafraid. Wayne Heim uses painterly textures and natural light to give Jane’s pose its iconic, sun-burnished glow. For collectors, this piece stands as a celebration of strong women in Western art, blending fine art portraiture with storytelling tradition.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 30,
+    "themes": {
+      "lore-and-legacy": 27
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-6Ffpw9t",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `24" X 36"`,
-    price: "$3000",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "24\" X 36\"",
+    "price": "$3000",
+    "linkedImageId": "i-6Ffpw9t",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-bVSh9xt",
@@ -1354,7 +1365,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-bVSh9xt/0/K9CxsLDFFrzwJJHc6qsRkVBMTb7crJnPFc6nLWBDZ/S/Justified%20or%20Damned%2036%20x%2026%20c2%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-bVSh9xt/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1368,24 +1378,24 @@ export const galleryData = [
       "museum quality historical prints",
       "historically inspired photo on wood"
     ],
-
     "story": "Among the stone and sage...\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history.",
     "notes": "Heim composes this piece with a strong diagonal flow, guiding the viewer’s eye from the lookout figure down through the mid-slope scout and finally toward the motion of the man descending the ridge. The layered geography and controlled palette recall the narrative staging of classic Western illustrators while embracing the atmospheric depth of pictorialist photography. This image stands out not only for its dramatic storytelling but for its structural precision—each figure contributing to a unified tension that rewards close, repeated viewing. A powerful addition for collectors of historically grounded Western art.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 31,
+    "themes": {
+      "lore-and-legacy": 9
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-Wx5scCf",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `30" X 50"`,
-    price: "$3400",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "30\" X 50\"",
+    "price": "$3400",
+    "linkedImageId": "i-Wx5scCf",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-rxQn29x",
@@ -1399,7 +1409,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-rxQn29x/0/L33SsTbLxRkgCFk8cHcN6TM8xgHqP8sK3wM6D3x37/S/Last%20Hand%2042%20x%2030%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-rxQn29x/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1410,24 +1419,24 @@ export const galleryData = [
       "wood panel art",
       "baltic birch wall art"
     ],
-
     "story": "Dust spirals and hooves fly as the last hand is played out under a pale, unblinking sky. Three riders, every muscle and nerve taut with gamble and grit, thunder forward—there’s no room left for bluffing, no time to count the cost. In this wild rush, history is measured not by who wins, but by who dares to ride straight into the storm, knowing the deck was never meant to be fair.",
     "notes": "This piece captures what many Western painters strive for but rarely achieve—a perfect marriage of in-camera action, painterly light, and narrative ambiguity, all created in a single unbroken take with live riders and authentic period gear. The composition channels the dynamism of Remington and the raw storytelling of Charlie Russell, while the sun-bleached palette and kinetic framing place it squarely in the lineage of American pictorialism. Gallery owners love works like this for their visceral impact; collectors appreciate the technical challenge (try freezing three galloping horses, tack flying, dust in the air, and everyone hitting their mark) and the way the image lets you feel both the danger and thrill of a frontier “last hand.” It’s the kind of photograph that doesn’t just tell a story—it dares you to ride along.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 32,
+    "themes": {
+      "lore-and-legacy": 0
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-7Mzzbvp",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `34" X 20"`,
-    price: "$4800",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "34\" X 20\"",
+    "price": "$4800",
+    "linkedImageId": "i-7Mzzbvp",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-svbQj25",
@@ -1441,7 +1450,6 @@ export const galleryData = [
     "srcS": "",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-svbQj25/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1454,24 +1462,24 @@ export const galleryData = [
       "museum quality historical prints",
       "wood panel art"
     ],
-
     "story": "Eyes closed, face lifted into the morning light, she steadies her thoughts.\nGiving thanks… or asking permission. Maybe forgiveness. Maybe only the strength to go one more mile.\n\nThe land rises with her—the treeline, the sloping ridge, the pale sun—lifting her out of the dust and into something larger than herself. For a moment, the world narrows to breath and balance, to the quiet weight of choosing what comes next.\n\nAnd then there’s the horse. Looking straight through you. Witnessing. Almost as if it's saying: \"What are you waiting for? You can do this too.\"\n\nThere is enough chaos in the world.  Sometimes stillness is the prudent course of action—while we search for clarity in the quiet before moving on.",
     "notes": "The composition is built on ascent. Diagonal lines in the slope and treeline guide the eye upward, reinforcing the figure’s lifted posture and the image’s spiritual gravity. Light is used symbolically rather than descriptively, softening form while separating the subject from the surrounding terrain.\n\nWhat distinguishes this work within the Western canon is its refusal to frame strength as action. Stillness becomes the point of tension, placing the figure in a moment of choice rather than conquest. The result is a Western image defined by internal elevation rather than external drama.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 33,
+    "themes": {
+      "lore-and-legacy": 5
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-G7csptc",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `18" X 24"`,
-    price: "$1850",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "18\" X 24\"",
+    "price": "$1850",
+    "linkedImageId": "i-G7csptc",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-gFTwXkq",
@@ -1485,7 +1493,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/0/MmW8HsH7sG53dTQRBdMvRk6V22zFLnXmjFzwtbLnq/S/Loaded%20for%20Bear%2016%20x%2020%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1497,24 +1504,24 @@ export const galleryData = [
       "wood panel art",
       "historically inspired photo on wood"
     ],
-
     "story": "I tell you, Martha, you can’t be too careful these days.\nIf them boys come back around here again, I’m going to set things right once and for all.\n\nThey’re just lucky I wasn’t here.\nI will say this about them, my dear—\n\nif they do come back again,\ntheir luck and brains will both be in short supply.",
     "notes": "This work is built on classical control. The use of Rembrandt-style lighting carves the figure from shadow, isolating form and intent while allowing darkness to carry as much narrative weight as illumination. Light becomes selective, purposeful—revealing what matters and withholding what does not.\n\nStrong diagonal lines move the eye through the composition, guiding attention from posture to hands, then toward the rifle and pistol—subtle signals of mounting tension rather than overt threat. The lowered vantage point elevates the figure into a quiet pillar within the frame, giving the moment gravity without spectacle.\n\nWhat distinguishes the piece within the Western canon is its refusal to dramatize action. Instead, it treats preparation as the subject, using light, structure, and restraint to turn a private moment into a study of resolve.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 34,
+    "themes": {
+      "lore-and-legacy": 13
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-TLDkd5q",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `16" X 24"`,
-    price: "$1000",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "16\" X 24\"",
+    "price": "$1000",
+    "linkedImageId": "i-TLDkd5q",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-zdvVgqx",
@@ -1528,7 +1535,6 @@ export const galleryData = [
     "srcS": "",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-zdvVgqx/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1541,24 +1547,24 @@ export const galleryData = [
       "wood-mounted art",
       "wood panel art"
     ],
-
     "story": "The faithful have fled, the church long silent—but he remains. No sermons now, just the steady sermon of steel and stare. Some say he used to preach, others say he just believed harder than most. \n\nEither way, he stands between what's sacred and what's coming. Lord help us all if that hammer gets cocked.",
     "notes": "This portrait achieves a powerful sense of symbolism through posture and framing. The vertical emphasis—his body rising like the steeple behind him—establishes a sacred geometry. The palette is restrained, giving weight to his black coat and hat, while the warm tones around him suggest age and dust. Painterly textures soften the scene just enough to keep it from feeling cinematic; instead, it reads like myth. This is not just a figure of the West, but a relic of it—part guardian, part ghost.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 35,
+    "themes": {
+      "lore-and-legacy": 23
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-qVZ9m7j",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `16" X 36"`,
-    price: "$1850",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "16\" X 36\"",
+    "price": "$1850",
+    "linkedImageId": "i-qVZ9m7j",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-wV53528",
@@ -1572,7 +1578,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wV53528/0/NbnqDKhRnBsQ3RWLn8sX5KqCG7Bn5fkFbMHKKR6wr/S/Lord%20Send%20Me%20a%20Sign%2016%20x%2020%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wV53528/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1584,24 +1589,24 @@ export const galleryData = [
       "historically inspired photo on wood",
       "museum quality historical prints"
     ],
-
     "story": "Lord, I need a sign. Down to my last two dollars. Since you took Martha last spring, I’ve wandered this wilderness of whiskey, regret, and sorrow, seeing more ghosts than hope. Just one sign, Lord—tell me if that ticket’s worth the punch.",
     "notes": "The composition invites contemplation, using rich chiaroscuro and vertical framing to isolate the subject in a space that feels both timeless and cinematic. Note how the lamp’s glow doesn’t just light his face—it sanctifies it, evoking the quiet dignity of a Rembrandt portrait or a Norman Rockwell moment paused mid-thought. The textures of cracked paint and worn cloth echo the philosophies of pictorialism, where truth is filtered through feeling. This isn’t just Western photography—it’s visual literature, crafted to linger in the mind like a half-remembered prayer.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 36,
+    "themes": {
+      "lore-and-legacy": 21
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-hMXZ8Xh",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `16" X 20"`,
-    price: "$1000",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "16\" X 20\"",
+    "price": "$1000",
+    "linkedImageId": "i-hMXZ8Xh",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-B8sDF3M",
@@ -1615,7 +1620,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-B8sDF3M/0/NB8VwgHLNWGWT2RMcGGDVDmxKJQ5mzwFcmpsJnNdr/S/Meant%20What%20I%20Said%2030%20x%2050%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-B8sDF3M/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1627,24 +1631,24 @@ export const galleryData = [
       "wood-mounted art",
       "photo printed on wood panel"
     ],
-
     "story": "What’d I say about you and your mouth? I told you—I meant what I said when I said it. Time for words and talking is over. Thinking now you might be better at bleeding than listening. Reckon we ought to find out?",
     "notes": "“Meant What I Said!” is all about Western attitude—coiled tension, sunlit drama, and the weight of a promise made face-to-face. The painterly detail and dynamic composition recall classic film and iconic Western paintings, making this piece a standout for collectors who appreciate stories told without a word.",
     "rating": 0,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 37,
+    "themes": {
+      "lore-and-legacy": 8
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-c5K798H",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `30" X 50"`,
-    price: "$5500",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "30\" X 50\"",
+    "price": "$5500",
+    "linkedImageId": "i-c5K798H",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-LdQzCRt",
@@ -1658,7 +1662,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-LdQzCRt/0/M6NVpxWcB32rtBD4rp34b8KmR4VmCmGDqwTX7TX4f/S/Night%20Raid%2030%20x%2022%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-LdQzCRt/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1671,24 +1674,24 @@ export const galleryData = [
       "baltic birch wall art",
       "photo printed on wood panel"
     ],
-
     "story": "Shadows slip across stone. Who will blink first—the men or the night? One ear to the dark, one eye on the sky. Quiet breath, steady hands—tonight, the West holds its secrets close.",
     "notes": "This piece captures not just the figures, but the tension between anticipation and action—the upward glance, the grip on leather and rifle, the silent agreement between men on the edge of danger. It’s a scene that would be at home in the pages of a Howard novel or on the walls of a serious Western art collection. The painterly finish and sculpted light echo traditions, yet there’s a cinematic weight here—a sense that something is about to happen just outside the frame. The details—the dust, the weathered gear, the lookouts’ wary posture—invite collectors to tell their own story, making this piece more than just wall art; it’s a living slice of the American West.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 38,
+    "themes": {
+      "lore-and-legacy": 4
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-trZrk2w",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `30" X 22"`,
-    price: "$2000",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "30\" X 22\"",
+    "price": "$2000",
+    "linkedImageId": "i-trZrk2w",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-8pfC4qn",
@@ -1702,7 +1705,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8pfC4qn/0/NKZHT6RpqgJtC9z3Fd8MSLWhGMQc4dXxnntqjP2kw/S/One%20Way%20Out%2036%20x%2026%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8pfC4qn/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1713,30 +1715,30 @@ export const galleryData = [
       "historically inspired photo on wood",
       "wood panel art"
     ],
-
     "story": "The land burns behind him.\n\nNot as spectacle. \nAs memory.\n\nFire stains the sky and climbs the stone, pressing close enough to be felt, far enough to be understood. The trail ahead narrows. The ground offers no detour.\n\nMan and horse move with purpose—not in panic, not in flight. This isn’t the first fire. It won’t be the last.\n\nSome places only open after they burn. \nSome paths only appear once there’s nothing left to return to.\n\nThere’s no turning back from this kind of heat.\n\nThere’s only one way out.",
     "notes": "This work reframes fire as a defining force rather than a destructive event. Heim positions flame as both scar and catalyst—echoing the natural cycles of the Western landscape, where renewal follows burn. The rider’s calm posture rejects spectacle in favor of understanding, aligning the image with a deeper Western truth: survival is not conquest, but endurance. For collectors drawn to mythic landscapes and human resilience, *One Way Out* stands as a meditation on the necessity of moving forward through what burns.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 39,
+    "themes": {
+      "lore-and-legacy": 10
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-7VWX9vk",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `36" X 26"`,
-    price: "$3400",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "36\" X 26\"",
+    "price": "$3400",
+    "linkedImageId": "i-7VWX9vk",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-gM5crmq",
-    "title": `Pinkerton's Grasp`,
-    "description": `“Pinkerton’s Grasp” depicts a desperate frontier struggle in painterly, cinematic tones. A lawman’s authority falters in the grip of consequence—badges and weapons no longer shields, but reminders of lines crossed and debts come due. The composition crackles with physical tension and moral ambiguity, leaving the viewer to wonder who, if anyone, truly holds the high ground. A striking choice for collectors who appreciate dramatic Western fine art and the deeper stories behind the Old West’s rough justice. © Wayne Heim`,
-    "alt": `Painterly Western scene of a violent struggle between three men on a porch—one man choking another while a third looks on, gun in hand, amid a tense confrontation.`,
+    "title": "Pinkerton's Grasp",
+    "description": "“Pinkerton’s Grasp” depicts a desperate frontier struggle in painterly, cinematic tones. A lawman’s authority falters in the grip of consequence—badges and weapons no longer shields, but reminders of lines crossed and debts come due. The composition crackles with physical tension and moral ambiguity, leaving the viewer to wonder who, if anyone, truly holds the high ground. A striking choice for collectors who appreciate dramatic Western fine art and the deeper stories behind the Old West’s rough justice. © Wayne Heim",
+    "alt": "Painterly Western scene of a violent struggle between three men on a porch—one man choking another while a third looks on, gun in hand, amid a tense confrontation.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/0/NZwmqW58gZ59TXm3z56W4PKLX5mkjvM2Xfcv9Nhgd/XL/Pinkertons%20Grasp%2016%20x%2020-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/0/NZwmqW58gZ59TXm3z56W4PKLX5mkjvM2Xfcv9Nhgd/XL/Pinkertons%20Grasp%2016%20x%2020-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/0/MHgwWDSd9zR2hvZkXLvKXCwmRHNQsTCP8gcVKzSx3/L/Pinkertons%20Grasp%2016%20x%2020-L.jpg",
@@ -1744,7 +1746,6 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/0/NVs95TTZdGwKkJ2F5nXWGvftvf8D6BcZcVXwZTg3P/S/Pinkertons%20Grasp%2016%20x%2020-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gM5crmq/A",
-
     "keywords": [
       "western fine art",
       "painterly photography",
@@ -1783,31 +1784,24 @@ export const galleryData = [
       "painterly cowboy portraits",
       "western inspired photography"
     ],
-
-    "story": `Even moral rot must collect its dues. Hubris… power… unchecked orders— and now, at last, he’s gone too far. A badge… a weapon… the tools that once shielded his conscience
-now betray him. One misstep, one reach too far, and the choke of consequence finds them all. A desperate struggle— a reckoning in motion— one final grasp at life’s blind justice.`,
-
-    "notes": `“Pinkerton’s Grasp” is a study in the thin lines between order and chaos, justice and vengeance on the Western frontier. The chokehold at the center of the frame is both literal and symbolic—a reckoning played out in muscle, grit, and the artifacts of law gone rotten.
-
-Subdued color and sharp texture emphasize the scene’s raw intensity, while the posture of each figure reveals shifting power: one overreaches, one resists, and one stands poised on the edge, weapon drawn but judgment withheld. The ambiguity of who is right, who is wrong, and what justice means is left unresolved—echoing the lawless realities of Western myth.
-
-For collectors, this work offers more than action: it’s a portrait of consequence, rendered with painterly gravitas and narrative bite.`,
-
+    "story": "Even moral rot must collect its dues. Hubris… power… unchecked orders— and now, at last, he’s gone too far. A badge… a weapon… the tools that once shielded his conscience\nnow betray him. One misstep, one reach too far, and the choke of consequence finds them all. A desperate struggle— a reckoning in motion— one final grasp at life’s blind justice.",
+    "notes": "“Pinkerton’s Grasp” is a study in the thin lines between order and chaos, justice and vengeance on the Western frontier. The chokehold at the center of the frame is both literal and symbolic—a reckoning played out in muscle, grit, and the artifacts of law gone rotten.\n\nSubdued color and sharp texture emphasize the scene’s raw intensity, while the posture of each figure reveals shifting power: one overreaches, one resists, and one stands poised on the edge, weapon drawn but judgment withheld. The ambiguity of who is right, who is wrong, and what justice means is left unresolved—echoing the lawless realities of Western myth.\n\nFor collectors, this work offers more than action: it’s a portrait of consequence, rendered with painterly gravitas and narrative bite.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 40,
+    "themes": {
+      "lore-and-legacy": 14
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    editionSize: 50,
-    linkedImageId: "i-kQfftQ2",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    contentSource: `human`,
-    imageSize: `16" X 20"`,
-    price: "$1000"
+    "editionSize": 50,
+    "imageSize": "16\" X 20\"",
+    "price": "$1000",
+    "linkedImageId": "i-kQfftQ2",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-nmDtVXP",
@@ -1821,7 +1815,6 @@ For collectors, this work offers more than action: it’s a portrait of conseque
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/MXTZXQ5kN5k2F9gS6PHm24nppLM7XRcWS2D5MwFD5/S/This%20is%20the%20Hand%2018%20x%2024-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1834,24 +1827,24 @@ For collectors, this work offers more than action: it’s a portrait of conseque
       "photography printed on wood",
       "printed on birch"
     ],
-
     "story": "It’s not over. Can’t be! Not yet.\n\nI do this and I’m back. Back in her good graces. She’ll have to.\n\nPeople forgive quick when a debt’s repaid. Even faster when there’s something else to show for it.\n\nThat business with the horse — a mistake. Nothing that can’t be smoothed over by Lady Luck.\n\nFunny how quick water can move by — once it’s got somewhere else to turn.",
     "notes": "This work explores the dangerous optimism that precedes reckoning—the belief that one decisive moment can erase accumulated debt, regret, or loss. Heim’s restrained composition and low, intimate lighting emphasize internal negotiation rather than outward drama, inviting viewers to confront the stories people tell themselves when escape still feels possible. A compelling piece for collectors drawn to psychological tension and myth-laden Western storytelling.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 41,
+    "themes": {
+      "lore-and-legacy": 2
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    editionSize: 50,
-    linkedImageId: "i-T7TFJX2",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `18" X 30"`,
-    price: "$1400",
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "18\" X 30\"",
+    "price": "$1400",
+    "linkedImageId": "i-T7TFJX2",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-PnGsDQp",
@@ -1865,7 +1858,6 @@ For collectors, this work offers more than action: it’s a portrait of conseque
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PnGsDQp/0/Kst6XP6vgtfT5FdBv23ZhzhZRq2GSP3VrMhwfFBP2/S/Till%20Death%20Do%20Us%20Part%2018%20x%2030-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PnGsDQp/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1878,24 +1870,24 @@ For collectors, this work offers more than action: it’s a portrait of conseque
       "photography printed on wood",
       "printed on birch"
     ],
-
     "story": "She knows. She’s known for some time. “Jim says I’m always right…” God, please — not this time. Shoulder to shoulder, breath to breath. However long, whatever the cost. He struggles — for air, for words to comfort, for a little more time beside her. “Don’t you worry, Milly… I think I got this thing on the ropes…” She’d give her own soul to make that be true. It was his dream to head West — the life they were meant to build together now reduced to a footnote in their journey. So many questions. So many tomorrows that may never come. But those aren’t for now.\n\nIn this moment — his touch, his warmth, his vow whispered in the dark — is all that matters. Till death do us part.",
     "notes": "“Till Death Do Us Part” distills one of the most intimate and human moments in the Western canon: the quiet intersection of love, mortality, and devotion on the frontier. Lantern light pools gently across the figures, sculpting the scene in warm, painterly tones that recall the emotional restraint of Wyeth and the narrative weight of classic American illustration.\n\nThe composition anchors the viewer in the closeness of the couple—their faces pressed together, hands intertwined—while the darkened edges of the frame suggest the encroaching uncertainty beyond their small circle of light. The textures of worn fabric, rough wood, and soft illumination create a tactile sense of place, grounding the scene in lived experience rather than myth. What elevates the work is its sincerity: a portrayal of frontier hardship not as spectacle, but as a shared human passage. It offers collectors a piece of Western storytelling that is both timeless and profoundly intimate.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 42,
+    "themes": {
+      "lore-and-legacy": 6
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-B7ZSdfs",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `24" X 36"`,
-    price: "$1700",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "24\" X 36\"",
+    "price": "$1700",
+    "linkedImageId": "i-B7ZSdfs",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-G8gfsL5",
@@ -1909,7 +1901,6 @@ For collectors, this work offers more than action: it’s a portrait of conseque
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-G8gfsL5/0/LTJM96KmtcZrWDN9rXQRCDvSZRtNLDvdxLs4PPMLH/S/Untimely%20Parting%2016%20x%2020-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-G8gfsL5/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1923,30 +1914,30 @@ For collectors, this work offers more than action: it’s a portrait of conseque
       "historically inspired photo on wood",
       "baltic birch wall art"
     ],
-
     "story": "Struggling for words… or even the air to breathe. Knees buckle beneath the crushing weight of reality, grief, and unanswered questions. In this moment, strength escapes — sorrow spilling from every pore. A widow, a daughter, a sister, a brother… souls and purpose suddenly shattered. The reality of a final goodbye consumes the senses. One fragile moment belonging only to them— a last farewell to the life and dreams they planned together. Here now, before God and those who watch and wonder. Just one moment — because mercy, time, and the journey forward wait for none. Somehow… some way… tomorrow we find the strength to press on. The first of many unforeseen tolls now paid in full — and the long road West can finally begin.",
     "notes": "“Untimely Parting” stands as a testament to the realities beneath Western myth—the grief and interruption that shadowed even the boldest journeys. The composition is spare, placing all focus on gesture: hands raised to faces, heads bent, one figure looking skyward as if pleading for answers. The muted palette and soft edges amplify the weight of silence, while the church in the background anchors the moment in ritual and community. There’s a stillness here, reminiscent of 19th-century narrative painting, where emotion radiates from posture and negative space. What sets this piece apart is its willingness to pause at the threshold of loss—not to offer resolution, but to witness, and to honor the unseen stories that shaped the West. For collectors, it’s an image of empathy and quiet bravery, rendered with painterly grace and emotional fidelity.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 43,
+    "themes": {
+      "lore-and-legacy": 12
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-rfFBRQM",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `16" X 20"`,
-    price: "$1000",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "16\" X 20\"",
+    "price": "$1000",
+    "linkedImageId": "i-rfFBRQM",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-J6Gdmr4",
-    "title": `"Special Delivery"`,
-    "description": `Immerse yourself in wood-mounted art with this stunning museum quality historical prints by Wayne Heim. Capturing historically inspired photo on wood, printed on birch, and museum quality historical prints, it's a must-have for collectors of wood-mounted art. Including baltic birch wall art themes. © Wayne Heim`,
-    "alt": `Fine art photography of wood-mounted art by Wayne Heim`,
+    "title": "\"Special Delivery\"",
+    "description": "Immerse yourself in wood-mounted art with this stunning museum quality historical prints by Wayne Heim. Capturing historically inspired photo on wood, printed on birch, and museum quality historical prints, it's a must-have for collectors of wood-mounted art. Including baltic birch wall art themes. © Wayne Heim",
+    "alt": "Fine art photography of wood-mounted art by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/KfRRCJRpH6tz8ztTMbp8d2hsckqBNnNqdj926NsgJ/XL/Welcome%20Party%2030%20x%2020-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/KfRRCJRpH6tz8ztTMbp8d2hsckqBNnNqdj926NsgJ/XL/Welcome%20Party%2030%20x%2020-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/LsV7BmBdHghk3FJ5nBKnQBXDWqxNFxh6qj4BqkjSL/L/Welcome%20Party%2030%20x%2020-L.jpg",
@@ -1954,7 +1945,6 @@ For collectors, this work offers more than action: it’s a portrait of conseque
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/MxCgpQxwFgDvDvKjxX3hBrTLC9nGVBwNngTgzzcCn/S/Welcome%20Party%2030%20x%2020-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -1967,41 +1957,24 @@ For collectors, this work offers more than action: it’s a portrait of conseque
       "baltic birch wall art",
       "photography printed on wood"
     ],
-
-    "story": `Intent, resolve, fortune, neglect.
-They gather for a midnight reckoning.
-
-Wings of hubris melted by the rail’s bright light—
-blinded by station and contempt of creed,
-each begets the other.
-
-From the shadows, change is coming,
-the schedule paid in full.
-
-Well-timed vengeance—
-a moral bridge to span.
-
-Lines will cross, and this all ends—
-justice dealt by unseen hands.`,
-
-    "notes": `“Hubris” fuses Western legend and classical myth, turning a familiar train-standoff into an allegory of downfall and shifting power. The four archetypes—Intent, Resolve, Fortune, Neglect—move like living forces, their shapes dissolving in the glare of the rail’s “second sun.” Heim’s painterly control of light and texture frames the drama as both personal and universal: a story of ambition meeting its limit, and of unseen hands finally tipping the scales. The Icarus motif, rendered in locomotive light, elevates this beyond mere narrative photography—this is a meditation on power, consequence, and the moment the forgotten reclaim the story.
-Museum-ready, this image will stand as a high point of narrative Western art and a conversation piece for any collection.`,
-
+    "story": "Intent, resolve, fortune, neglect.\nThey gather for a midnight reckoning.\n\nWings of hubris melted by the rail’s bright light—\nblinded by station and contempt of creed,\neach begets the other.\n\nFrom the shadows, change is coming,\nthe schedule paid in full.\n\nWell-timed vengeance—\na moral bridge to span.\n\nLines will cross, and this all ends—\njustice dealt by unseen hands.",
+    "notes": "“Hubris” fuses Western legend and classical myth, turning a familiar train-standoff into an allegory of downfall and shifting power. The four archetypes—Intent, Resolve, Fortune, Neglect—move like living forces, their shapes dissolving in the glare of the rail’s “second sun.” Heim’s painterly control of light and texture frames the drama as both personal and universal: a story of ambition meeting its limit, and of unseen hands finally tipping the scales. The Icarus motif, rendered in locomotive light, elevates this beyond mere narrative photography—this is a meditation on power, consequence, and the moment the forgotten reclaim the story.\nMuseum-ready, this image will stand as a high point of narrative Western art and a conversation piece for any collection.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 44,
+    "themes": {
+      "lore-and-legacy": 3
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-LL2Gp5r",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `30" X 20"`,
-    price: "$2000",
-    editionSize: 50,
-    contentSource: `human`
+    "editionSize": 50,
+    "imageSize": "30\" X 20\"",
+    "price": "$2000",
+    "linkedImageId": "i-LL2Gp5r",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-x6rrj3V",
@@ -2015,7 +1988,6 @@ Museum-ready, this image will stand as a high point of narrative Western art and
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-x6rrj3V/0/NTvvhFHqZft7bmztJ7dJkSFf6xhXHKdSJNk5CzxsF/S/Where%20I%20Stand%2018%20x%2024-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-x6rrj3V/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -2029,24 +2001,24 @@ Museum-ready, this image will stand as a high point of narrative Western art and
       "historically inspired photo on wood",
       "photo printed on wood panel"
     ],
-
     "story": "Enough waiting.\n\nThe light will come when it’s ready. So will whoever thinks they’ve earned their way through that window. No more rehearsing the reasons. No more bargaining with what’s already decided. The ground beneath these boards has heard it all before.\n\nWool pulled tight. Shadow close. Steady breath. If you’ve come for me, then come knowing this — there are places you don’t pass through.\n\nThis is one of them.",
     "notes": "This work centers on resolve rather than reaction. Heim presents a figure who no longer negotiates her place in the story—she occupies it. The use of shadow, wool, and controlled light reinforces a quiet authority, positioning the rifle not as aggression but as boundary. For collectors drawn to Western narratives of self-determination, endurance, and moral clarity, *This Is Where I Stand* offers a powerful study in final resolve.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 45,
+    "themes": {
+      "lore-and-legacy": 7
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-Vr8vzjt",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `18" X 24"`,
-    price: "$1400",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "18\" X 24\"",
+    "price": "$1400",
+    "linkedImageId": "i-Vr8vzjt",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
   {
     "id": "i-Lk9XZKB",
@@ -2060,7 +2032,6 @@ Museum-ready, this image will stand as a high point of narrative Western art and
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB/0/LhtJfCBNC7ZBxq4BXpskqjzfwPcPrzMpv8N2hrjLC/S/Worth%20Every%20Mile%2016%20x%2024-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Lk9XZKB/A",
-
     "keywords": [
       "Civil",
       "War",
@@ -2072,23 +2043,23 @@ Museum-ready, this image will stand as a high point of narrative Western art and
       "photo printed on wood panel",
       "photography printed on wood"
     ],
-
     "story": "Every mile—dirt, dusk, rain, and weather. Danger and duty, hardship and hope, all raging in epic battle against your love. \n\nLike a beacon, it guided me, shepherding me through the storm… bringing me back to your arms. The embrace—the kiss—worth every mile.",
     "notes": "This composition is built around motion and return. The diagonal sweep of the figures creates a sense of momentum that resolves only in the embrace, reinforcing the narrative of distance overcome. Soft, directional light wraps the subjects, allowing fabric, posture, and proximity to carry the emotional weight without sentimentality.\n\nWhat sets this work apart within the Western canon is its treatment of intimacy as an outcome of endurance rather than idealism. Love is not staged—it is arrived at. The result is a rare Western image where romance feels earned, grounded in physical journey and emotional cost rather than nostalgia.",
     "rating": 4,
-
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
-
     "visibility": "show",
     "sortOrder": 46,
+    "themes": {
+      "lore-and-legacy": 17
+    },
+    "contentSource": "human",
     "first_seen": "2026-01-22",
-    linkedImageId: "i-8Ddjt5W",
-    linkedGalleryPath: "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-    imageSize: `16" X 24"`,
-    price: "$1400",
-    editionSize: 50,
-    contentSource: "human"
+    "editionSize": 50,
+    "imageSize": "16\" X 24\"",
+    "price": "$1400",
+    "linkedImageId": "i-8Ddjt5W",
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   }
 ];

@@ -693,7 +693,7 @@ export const galleryData = [
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WKQS29t/0/KvnPtvNPjZqnX2xqD2dPWLdsLL7KdnfnmFspmSc6M/XL/_WHZ4347-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WKQS29t/0/KvnPtvNPjZqnX2xqD2dPWLdsLL7KdnfnmFspmSc6M/XL/_WHZ4347-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WKQS29t/0/LdrX8fw9cFbWQTbfb2tw2vwx8cC6n6v7PXMtNw449/L/_WHZ4347-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WKQS29t/0/L332rk4gJWmHsCwXHJhP2c4LKxqnjdvcSvx8RtRx3/M/_WHZ4347-Edit-M.jp",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WKQS29t/0/L332rk4gJWmHsCwXHJhP2c4LKxqnjdvcSvx8RtRx3/M/_WHZ4347-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Canada/Banff-Jasper/i-WKQS29t/0/MLFHKJX6GjVWc7cXsnpbnTfjB2HT6S8xdwjjJwHV4/S/_WHZ4347-Edit-S.jpg",
     "srcOriginal": "",
     contentSource: "ai"
