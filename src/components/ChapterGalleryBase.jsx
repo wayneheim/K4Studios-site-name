@@ -817,9 +817,14 @@ export default function ChapterGalleryBase({
   // Size mapping: l = viewer, m = preview strip, xl = slideshow only
   // ═══════════════════════════════════════════════════════════════════════════
 
-  // Phase 1: Viewer navigation warm - warm prev/next when currentIndex changes
+  // Phase 1: Viewer navigation warm - warm current + prev/next when currentIndex changes
   useEffect(() => {
     if (!galleryData?.length || viewMode !== "flip") return;
+    
+    // Warm current image at 'l' size (in case deep-linked or cache expired)
+    if (galleryData[currentIndex]?.id) {
+      warmImage(galleryData[currentIndex].id, 'l');
+    }
     
     // Warm previous image at 'l' size
     if (currentIndex > 0) {
@@ -832,16 +837,19 @@ export default function ChapterGalleryBase({
     }
   }, [currentIndex, galleryData, viewMode]);
 
-  // Phase 2: Gallery landing warm - warm first image + preview strip on mount
+  // Phase 2: Gallery landing warm - warm initial image + preview strip
+  // Uses galleryData.length as dep so it runs once data is actually loaded
   useEffect(() => {
     if (!galleryData?.length) return;
     
-    // Warm first image immediately at 'l' size
-    warmImage(galleryData[0].id, 'l');
+    // Warm initial current image at 'l' size
+    if (galleryData[currentIndex]?.id) {
+      warmImage(galleryData[currentIndex].id, 'l');
+    }
     
     // Warm preview strip (first 6) at 'm' size
     galleryData.slice(0, 6).forEach(img => warmImage(img.id, 'm'));
-  }, []); // Mount only - galleryData is stable after initial load
+  }, [galleryData.length]); // Run once when data loads
 
   // ═══════════════════════════════════════════════════════════════════════════
 
@@ -1143,7 +1151,7 @@ export default function ChapterGalleryBase({
                           style={{ width: 'fit-content', maxWidth: '100%', margin: '0 auto' }}
                         >
                           <img
-                            src={getProxySrc(galleryData[currentIndex]?.id, 'xl')}
+                            src={getProxySrc(galleryData[currentIndex]?.id, 'l')}
                             alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
                             className="chapter-image-mobile rounded-lg block"
                             style={
