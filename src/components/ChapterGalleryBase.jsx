@@ -797,11 +797,14 @@ export default function ChapterGalleryBase({
   }, [viewMode, isZoomed]);
 
   // Orientation + mobile detection
+  // NOTE: For 2-in-1 laptops with touch screens, we need to check BOTH pointer type AND screen size.
+  // A touch-capable device with a large screen (e.g., 1920x1200) should NOT be treated as mobile.
   useEffect(() => {
     const updateOrientation = () => {
       const w = window.innerWidth, h = window.innerHeight;
       const isCoarse = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
-      setIsLandscapeMobile(w > h && (isCoarse || w <= 1024));
+      // Only treat as landscape mobile if BOTH touch device AND narrow screen (<=1024)
+      setIsLandscapeMobile(w > h && isCoarse && w <= 1024);
     };
     updateOrientation();
     window.addEventListener("resize", updateOrientation);
@@ -815,7 +818,9 @@ export default function ChapterGalleryBase({
     const mqCoarse = window.matchMedia ? window.matchMedia("(pointer: coarse)") : null;
     const checkMobile = () => {
       const coarse = mqCoarse ? mqCoarse.matches : false;
-      setIsMobile(coarse || window.innerWidth < 768);
+      // Only treat as mobile if screen is actually narrow (<768px)
+      // Touch capability alone (coarse pointer) should NOT trigger mobile mode on large screens
+      setIsMobile(window.innerWidth < 768);
       setWindowWidth(window.innerWidth);
     };
     checkMobile();
