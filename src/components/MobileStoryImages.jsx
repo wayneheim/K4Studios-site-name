@@ -34,7 +34,7 @@ export default function MobileStoryImages({ images = [] }) {
         link.style.display = "block";
 
         const img = document.createElement("img");
-        img.src = match.src;
+        img.src = match.srcS || match.srcM || match.srcL || match.src;
         img.alt = match.alt || "";
         img.className = "mobile-inline-img";
         img.width = 280;  // Explicit dimensions to prevent CLS

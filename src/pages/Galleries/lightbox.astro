@@ -241,7 +241,15 @@ const cleanForDisplay = (val = "") =>
     <!-- ✅ Grid + per-image schema -->
     <div class="ssr-grid">
       {galleryData.map((item) => {
-        const imageUrl = item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "";
+        // Use smallest sufficient size for grid cards (srcS ~400px, srcM ~600px)
+        const imageUrl = item.srcS || item.srcM || item.srcL || item.src || "";
+        // Use best quality for JSON-LD schema (SEO)
+        const schemaImageUrl = item.srcXL || item.srcL || item.srcM || item.src || "";
+        const srcsetParts = [
+          item.srcS && `${item.srcS} 400w`,
+          item.srcM && `${item.srcM} 600w`,
+          item.srcL && `${item.srcL} 1024w`
+        ].filter(Boolean).join(", ");
         const linkUrl = `${baseUrl}/${item.id}`;
         const fullUrl = `https://www.k4studios.com${linkUrl}`;
         // For HTML display (preserves quotes)
@@ -255,7 +263,14 @@ const cleanForDisplay = (val = "") =>
         return (
           <div class="ssr-card" id={item.id}>
             <a href={linkUrl}>
-              <img src={imageUrl} alt={descriptionDisplay} title={titleDisplay} loading="lazy" />
+              <img 
+                src={imageUrl} 
+                srcset={srcsetParts || undefined}
+                sizes="(max-width: 640px) 100vw, 250px"
+                alt={descriptionDisplay} 
+                title={titleDisplay} 
+                loading="lazy" 
+              />
             </a>
             <div class="ssr-card-content">
               <h3>{titleDisplay}</h3>
@@ -268,7 +283,7 @@ const cleanForDisplay = (val = "") =>
               "@type": "ImageObject",
               name: titleJson,
               description: descriptionJson,
-              contentUrl: imageUrl,
+              contentUrl: schemaImageUrl,
               url: fullUrl,
               creditText: "© Wayne Heim – K4 Studios",
               license: "https://www.k4studios.com/licensing",

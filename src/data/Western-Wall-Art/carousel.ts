@@ -28,13 +28,13 @@ function buildRankedPool(images: any[]) {
 
 // Helper: Convert image to slide object
 function toSlide(img: any, path: string, idx: number, loading = "lazy") {
-  let src = img.srcM || img.srcS || img.srcL || img.src || '';
-  if (img.srcS && img.srcS.endsWith('-L.jpg')) {
-    src = img.srcS;
-  }
   return {
     href: `${path}/${img.id}`,
-    src,
+    src: img.src || '',
+    srcS: img.srcS || '',
+    srcM: img.srcM || '',
+    srcL: img.srcL || '',
+    srcXL: img.srcXL || img.src || '',
     alt: img.alt || img.title || '',
     description: img.description || '',
     width: img.width || undefined,

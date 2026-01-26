@@ -31,6 +31,10 @@ function toSlide(img: any, path: string, idx: number, loading = "lazy") {
   return {
     href: `${path}/${img.id}`,
     src,
+    srcS: img.srcS || '',
+    srcM: img.srcM || '',
+    srcL: img.srcL || '',
+    srcXL: img.srcXL || img.src || '',
     alt: img.alt || img.title || '',
     description: img.description || '',
     width: img.width || undefined,

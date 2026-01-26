@@ -51,21 +51,23 @@ export default function RebuiltScrollGrid({
   }, []);
 
   // Prefer a smaller image in the grid for speed; fall back to larger if needed.
+  // srcS ~400px, srcM ~600px (actual L), srcL/srcXL ~1600px
   const getPreferredSrc = (entry, cols) => {
+    const s = entry?.srcS;
     const m = entry?.srcM;
     const l = entry?.srcL;
     const xl = entry?.srcXL;
     const original = entry?.src;
     if (cols <= 1) {
-      // 1-col (mobile/full width): prefer larger
-      return xl || l || m || original || null;
+      // 1-col (mobile/full width): M is sufficient (~600px for full-width mobile)
+      return m || l || xl || s || original || null;
     }
     if (cols === 2) {
-      // 2-col: medium/large
-      return l || xl || m || original || null;
+      // 2-col (tablet): M is sufficient (~600px for half-width)
+      return m || l || s || xl || original || null;
     }
-    // 3-col: medium best for thumbnails
-    return m || l || xl || original || null;
+    // 3-col (desktop): S or M for small thumbnails
+    return s || m || l || xl || original || null;
   };
 
   // Simple close handler: reload the page to exit grid mode

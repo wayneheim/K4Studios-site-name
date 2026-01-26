@@ -200,7 +200,13 @@ const structuredDataJson = JSON.stringify({
     <!-- Image Grid -->
     <div class="ssr-grid">
       {galleryData.map((item: any, idx: number) => {
-        const imageUrl = item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "";
+        // Use smallest sufficient size for 250px grid cards (srcS ~400px, srcM ~600px)
+        const imageUrl = item.srcS || item.srcM || item.srcL || item.src || "";
+        const srcsetParts = [
+          item.srcS && `${item.srcS} 400w`,
+          item.srcM && `${item.srcM} 600w`,
+          item.srcL && `${item.srcL} 1024w`
+        ].filter(Boolean).join(", ");
         const linkUrl = `${basePath}/${item.id}`;
         const title = cleanForDisplay(item.title);
         
@@ -225,7 +231,14 @@ const structuredDataJson = JSON.stringify({
         return (
           <div class="ssr-card" id={item.id}>
             <a href={linkUrl} class="ssr-card-link">
-              <img src={imageUrl} alt={altText} title={altText} loading="lazy" />
+              <img 
+                src={imageUrl} 
+                srcset={srcsetParts || undefined}
+                sizes="(max-width: 640px) 100vw, 250px"
+                alt={altText} 
+                title={altText} 
+                loading="lazy" 
+              />
               <div class="ssr-card-content">
                 <span class="card-number">#{idx + 1}</span>
                 <h3>{title}</h3>

@@ -2,6 +2,34 @@ import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
 import { buildContextualAlt, getPageContext } from "../utils/buildContextualAlt";
 
+/**
+ * Carousel image sizing:
+ * - Desktop (390px height): Use L (1024px)
+ * - Mobile (200px height): Use M (600px)
+ * 
+ * We use srcset + sizes so browser picks the right one automatically.
+ */
+function getCarouselSrc(s) {
+  // Default src for browsers without srcset support
+  return s.srcL || s.srcM || s.srcXL || s.src || '';
+}
+
+function getCarouselSrcset(s) {
+  const sources = [];
+  if (s.srcM) sources.push(`${s.srcM} 600w`);
+  if (s.srcL) sources.push(`${s.srcL} 1024w`);
+  if (s.srcXL) sources.push(`${s.srcXL} 1600w`);
+  // Only add src if we don't have srcXL (avoid duplicates)
+  if (!s.srcXL && s.src && s.src !== s.srcL && s.src !== s.srcM) {
+    sources.push(`${s.src} 1600w`);
+  }
+  return sources.length > 0 ? sources.join(', ') : undefined;
+}
+
+// Carousel sizes: mobile gets M, desktop gets L
+// 768px breakpoint matches our CSS media query
+const CAROUSEL_SIZES = "(max-width: 768px) 600px, 1024px";
+
 // Glob import: grabs all carousel slide data files from Galleries, Other, and top-level landing pages
 // rename to cap
 const allCarousels = import.meta.glob([
@@ -107,7 +135,14 @@ export default function ImageBar2({ slides, pageContext: propPageContext }) {
               {...(isDuplicate ? { 'aria-hidden': 'true' } : {})}
             >
               <a href={s.href} title={isDuplicate ? undefined : contextualAlt} aria-label={isDuplicate ? undefined : contextualAlt}>
-                <img src={s.src} alt={contextualAlt} loading="lazy" itemProp="contentUrl" />
+                <img 
+                  src={getCarouselSrc(s)} 
+                  srcSet={getCarouselSrcset(s)}
+                  sizes={CAROUSEL_SIZES}
+                  alt={contextualAlt} 
+                  loading="lazy" 
+                  itemProp="contentUrl"
+                />
               </a>
               <figcaption itemProp="description">{s.description}</figcaption>
             </figure>

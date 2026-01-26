@@ -2053,7 +2053,7 @@ export default function ChapterGalleryBase({
                 <div className="space-y-4">
                   <div className="text-center">
                     <img
-                      src={galleryData[currentIndex]?.src}
+                      src={galleryData[currentIndex]?.srcS || galleryData[currentIndex]?.srcM || galleryData[currentIndex]?.src}
                       alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
                       className="w-full max-w-48 mx-auto rounded-lg shadow-md"
                     />
