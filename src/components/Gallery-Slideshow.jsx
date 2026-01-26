@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
 import PunchInIntro from "./PunchInIntro.jsx";
+import { warmImage } from "../utils/warmImage";
 
 export default function StoryShow({ images, startImageId, onExit }) {
   const [index, setIndex] = useState(0);
@@ -97,6 +98,28 @@ export default function StoryShow({ images, startImageId, onExit }) {
   // Determine if audio is present for current image or show
   const hasAudio = Boolean(current?.audioSrc);
   const isVertical = current?.aspectRatio && current.aspectRatio < 1;
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PHASE 4: Slideshow XL warming
+  // During intro: warm first 2 images at xl
+  // Rolling: warm N+1 and N+2 as slideshow advances
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  // Warm first 2 images during intro overlay (free warm time)
+  useEffect(() => {
+    if (!isIntro || !orderedImages?.length) return;
+    orderedImages.slice(0, 2).forEach(img => warmImage(img.id, 'xl'));
+  }, [isIntro, orderedImages]);
+
+  // Rolling warm: as index advances, warm next 2 images at xl
+  useEffect(() => {
+    if (!orderedImages?.length) return;
+    orderedImages.slice(index + 1, index + 3).forEach(img => {
+      if (img?.id) warmImage(img.id, 'xl');
+    });
+  }, [index, orderedImages]);
+
+  // ═══════════════════════════════════════════════════════════════════════════
 
   // Compute image max sizes to avoid cropping and use more space for portrait
   const imgStyle = useMemo(() => {

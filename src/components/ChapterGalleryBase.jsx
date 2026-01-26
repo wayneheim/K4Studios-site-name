@@ -1,3 +1,5 @@
+import { warmImage } from "../utils/warmImage";
+
 // Helper to shorten page paths for cleaner analytics
 // "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-RsLmsLZ"
 // becomes "…/Western-Cowboy-Portraits/Color/i-RsLmsLZ"
@@ -808,6 +810,40 @@ export default function ChapterGalleryBase({
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [viewMode, isZoomed]);
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // IMAGE WARMING: Pre-fetch adjacent images to reduce cold-cache delays
+  // Only warm in flip/viewer mode (not grid) - grid = scanning, flip = commitment
+  // Size mapping: l = viewer, m = preview strip, xl = slideshow only
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  // Phase 1: Viewer navigation warm - warm prev/next when currentIndex changes
+  useEffect(() => {
+    if (!galleryData?.length || viewMode !== "flip") return;
+    
+    // Warm previous image at 'l' size
+    if (currentIndex > 0) {
+      warmImage(galleryData[currentIndex - 1].id, 'l');
+    }
+    
+    // Warm next image at 'l' size
+    if (currentIndex < galleryData.length - 1) {
+      warmImage(galleryData[currentIndex + 1].id, 'l');
+    }
+  }, [currentIndex, galleryData, viewMode]);
+
+  // Phase 2: Gallery landing warm - warm first image + preview strip on mount
+  useEffect(() => {
+    if (!galleryData?.length) return;
+    
+    // Warm first image immediately at 'l' size
+    warmImage(galleryData[0].id, 'l');
+    
+    // Warm preview strip (first 6) at 'm' size
+    galleryData.slice(0, 6).forEach(img => warmImage(img.id, 'm'));
+  }, []); // Mount only - galleryData is stable after initial load
+
+  // ═══════════════════════════════════════════════════════════════════════════
 
   // Orientation + mobile detection
   // NOTE: For 2-in-1 laptops with touch screens, we need to check BOTH pointer type AND screen size.

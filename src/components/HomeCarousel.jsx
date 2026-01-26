@@ -16,6 +16,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
+import { warmImage } from "../utils/warmImage";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
@@ -155,6 +156,26 @@ export default function HomeCarousel() {
       clearTimeout(scaleTimer);
     };
   }, []);
+
+  // Phase 3: Warm carousel images during idle time (l size for carousel)
+  useEffect(() => {
+    if (!slides.length) return;
+    
+    const warmCarousel = () => {
+      // Only warm the original slides (not duplicates), at 'l' size
+      slides.forEach(slide => {
+        if (slide.id) warmImage(slide.id, 'l');
+      });
+    };
+    
+    if ('requestIdleCallback' in window) {
+      const id = requestIdleCallback(warmCarousel);
+      return () => cancelIdleCallback(id);
+    } else {
+      const timer = setTimeout(warmCarousel, 200);
+      return () => clearTimeout(timer);
+    }
+  }, [slides]);
 
   if (!slides.length) {
     // Return a placeholder with same dimensions to prevent CLS

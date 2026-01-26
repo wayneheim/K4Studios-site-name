@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
 import { buildContextualAlt, getPageContext } from "../utils/buildContextualAlt";
 import { getProxySrc, getCarouselProxySrcset } from "@/utils/imageProxy.js";
+import { warmImage } from "../utils/warmImage";
 
 /**
  * Carousel image sizing:
@@ -105,6 +106,26 @@ export default function ImageBar2({ slides, pageContext: propPageContext }) {
   useEffect(() => {
     if (finalSlides.length > 0) {
       setDuplicated(true);
+    }
+  }, [finalSlides]);
+
+  // Phase 3: Warm sideboard images during idle time (m size for sideboard)
+  useEffect(() => {
+    if (!finalSlides.length) return;
+    
+    const warmSideboard = () => {
+      // Warm visible slides at 'm' size (sideboard uses smaller images)
+      finalSlides.forEach(slide => {
+        if (slide.id) warmImage(slide.id, 'm');
+      });
+    };
+    
+    if ('requestIdleCallback' in window) {
+      const id = requestIdleCallback(warmSideboard);
+      return () => cancelIdleCallback(id);
+    } else {
+      const timer = setTimeout(warmSideboard, 200);
+      return () => clearTimeout(timer);
     }
   }, [finalSlides]);
 
