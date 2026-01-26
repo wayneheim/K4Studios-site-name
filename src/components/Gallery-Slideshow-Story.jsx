@@ -3,12 +3,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
 import { ShoppingCart, VolumeX, Volume2 } from "lucide-react";
 import PunchInIntro from "./PunchInIntro.jsx";
+import { getProxySrc } from "@/utils/imageProxy.js";
 
 // Helper function to select the best image source for slideshow display
+// Uses proxy URL to avoid exposing SmugMug URLs in rendered HTML
 const getBestImageSrc = (image) => {
-  if (!image) return "";
-  // For slideshow: prefer srcXL (extra large), then srcL (large), then srcM (medium), then src (original)
-  return image.srcXL || image.srcL || image.srcM || image.src || "";
+  if (!image || !image.id) return "";
+  // Request XL for slideshow (Worker handles fallback if XL unavailable)
+  return getProxySrc(image.id, 'xl');
 };
 
 export default function StoryShow({ images, startImageId, onExit, isMuted = false, setIsMuted, volume = 0.7, setVolume, audioRef, ambientAudioRef, setIsSpeaking, isSpeaking, globalAudioSrc, globalAudioMode }) {

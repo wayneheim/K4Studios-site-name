@@ -53,12 +53,23 @@ const {
 // Use trackingId if provided, otherwise fall back to collectionName
 const analyticsLabel = trackingId || collectionName;
 
-// Use smaller image size for widget
-const displaySrc = image.srcM || image.srcS || image.src;
+// Helper to generate proxy URL - ensures SmugMug URLs never appear in rendered HTML
+const getProxySrc = (imageId: string, size: string = 'm') => {
+  if (!imageId) return '';
+  const validSizes = ['s', 'm', 'l', 'xl', 'src'];
+  const safeSize = validSizes.includes(size) ? size : 'm';
+  return `/img/${imageId}/${safeSize}`;
+};
+
+// Use proxy URLs for all image sources
+const displaySrc = getProxySrc(image.id, 'm');
+const srcsetValue = `${getProxySrc(image.id, 's')} 400w, ${getProxySrc(image.id, 'm')} 600w, ${getProxySrc(image.id, 'l')} 1024w`;
 const fullUrl = `https://www.k4studios.com${ctaLink}`;
 const imageUrl = `https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image.id}`;
+const proxyImageUrl = `https://www.k4studios.com${getProxySrc(image.id, 'xl')}`;
 
 // Build structured data for this featured collection
+// Uses proxy URL for image to avoid exposing SmugMug URLs
 const structuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "CollectionPage",
@@ -78,7 +89,7 @@ const structuredData = JSON.stringify({
   },
   "image": {
     "@type": "ImageObject",
-    "url": image.src,
+    "url": proxyImageUrl,
     "name": title,
     "description": image.alt,
     "creditText": "© Wayne Heim – K4 Studios"
@@ -93,7 +104,7 @@ const structuredData = JSON.stringify({
         "position": 1,
         "url": imageUrl,
         "name": title,
-        "image": image.src
+        "image": proxyImageUrl
       }
     ]
   }
@@ -112,7 +123,7 @@ const structuredData = JSON.stringify({
       <div class="fc-image-wrap">
         <img 
           src={displaySrc}
-          srcset={`${image.srcS || displaySrc} 400w, ${image.srcM || displaySrc} 600w, ${image.src} 1024w`}
+          srcset={srcsetValue}
           sizes="(max-width: 768px) 100vw, 320px"
           alt={image.alt}
           width={image.width || 600}

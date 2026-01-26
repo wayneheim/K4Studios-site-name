@@ -5,8 +5,15 @@ import PictureShowBase from "@/components/PictureShowBase.jsx";
 import { storyMeta, storyData } from "@/data/Other/Stories/Sagebrush-Grit-and-Grace.mjs";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 
+// Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
+function getProxySrc(imageId: string, size: string = 'm'): string {
+  if (!imageId) return '';
+  return `/img/${imageId}/${size}`;
+}
+
 const sectionPath = "/Other/Stories/Sagebrush-Grit-and-Grace";
-const coverImage = storyData.find(s => s.visibility !== "ghost")?.srcM || storyData[0]?.src || "/images/K4-Stories logo1b.webp";
+const coverImg = storyData.find(s => s.visibility !== "ghost") || storyData[0];
+const coverImage = coverImg?.id ? `https://www.k4studios.com${getProxySrc(coverImg.id, 'xl')}` : "/images/K4-Stories logo1b.webp";
 
 const meta = {
   description: storyMeta.description,

@@ -7,21 +7,13 @@ const DATA_ROOTS = [
   "/src/data/Other",
 ];
 
-// ✅ Strict manual fallback chain (no browser choice)
+// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
+const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
+
+// ✅ Use proxy URLs for grid thumbnails
 function pickImage(item) {
-  if (!item) return "";
-  return (
-    item.srcS ||
-    item.srcM ||
-    item.srcL ||
-    item.srcXL ||
-    item.src ||
-    item.thumb ||
-    item.preview ||
-    item.image ||
-    item.url ||
-    ""
-  );
+  if (!item || !item.id) return "";
+  return getProxySrc(item.id, "s");
 }
 
 export default function GalleryLightbox({ datasetPath = "", showHeader = true }) {

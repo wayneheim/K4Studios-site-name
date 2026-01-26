@@ -1,0 +1,24 @@
+name = "k4-image-proxy"
+main = "img-proxy.js"
+compatibility_date = "2024-01-01"
+
+# Route configuration
+# Deploy to: k4studios.com/img/*
+# 
+# In Cloudflare Dashboard:
+# 1. Workers & Pages → k4-image-proxy → Settings → Triggers
+# 2. Add Route: k4studios.com/img/*
+# 3. Zone: k4studios.com
+
+[vars]
+# Environment variables (if needed)
+# MANIFEST_CACHE_TTL = "3600"
+
+# Development settings
+[dev]
+port = 8787
+
+# Production settings
+[env.production]
+# Routes are configured in Cloudflare Dashboard, not here
+# This prevents accidental route changes during deploys

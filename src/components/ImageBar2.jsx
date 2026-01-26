@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
 import { buildContextualAlt, getPageContext } from "../utils/buildContextualAlt";
+import { getProxySrc, getCarouselProxySrcset } from "@/utils/imageProxy.js";
 
 /**
  * Carousel image sizing:
@@ -8,24 +9,31 @@ import { buildContextualAlt, getPageContext } from "../utils/buildContextualAlt"
  * - Mobile (200px height): Use M (600px)
  * 
  * We use srcset + sizes so browser picks the right one automatically.
- * Falls back to s.src for carousel files that haven't been updated to pass srcL/srcM/srcS.
+ * All URLs go through /img/{id}/{size} proxy to hide SmugMug URLs.
  */
 function getCarouselSrc(s) {
-  // Default src for browsers without srcset support
-  // Try sized sources first, fall back to plain src
+  // Use proxy URL - request L size for desktop, Worker handles fallback
+  if (s.id) {
+    return getProxySrc(s.id, 'l');
+  }
+  // Fallback for old carousel data without id (shouldn't happen)
   return s.srcL || s.srcM || s.srcXL || s.src || '';
 }
 
 function getCarouselSrcset(s) {
-  // If no sized sources exist, don't generate srcset (use src as-is)
+  // Use proxy srcset if we have an image ID
+  if (s.id) {
+    return getCarouselProxySrcset(s.id);
+  }
+  // Fallback for old carousel data without sized sources
   if (!s.srcM && !s.srcL && !s.srcXL) {
     return undefined;
   }
+  // Legacy fallback (should be removed once all carousels have IDs)
   const sources = [];
   if (s.srcM) sources.push(`${s.srcM} 600w`);
   if (s.srcL) sources.push(`${s.srcL} 1024w`);
   if (s.srcXL) sources.push(`${s.srcXL} 1600w`);
-  // Only add src if we don't have srcXL (avoid duplicates)
   if (!s.srcXL && s.src && s.src !== s.srcL && s.src !== s.srcM) {
     sources.push(`${s.src} 1600w`);
   }

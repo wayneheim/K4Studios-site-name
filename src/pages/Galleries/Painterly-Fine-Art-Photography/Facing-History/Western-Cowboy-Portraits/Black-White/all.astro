@@ -64,10 +64,13 @@ const truncateStory = (story: string, maxLen = 150) => {
   return cleaned.slice(0, maxLen).replace(/\s+\S*$/, "") + "…";
 };
 
+// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+
 // ✅ Pre-build per-image JSON-LD to avoid streaming issues
 const imageJsonLdMap = new Map();
 galleryData.forEach((item: any) => {
-  const imageUrl = item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "";
+  const imageUrl = getProxySrc(item.id, 'xl');
   const linkUrl = `${basePath}/${item.id}`;
   const fullUrl = `https://www.k4studios.com${linkUrl}`;
   const title = cleanForJson(item.title);
@@ -200,13 +203,13 @@ const structuredDataJson = JSON.stringify({
     <!-- Image Grid -->
     <div class="ssr-grid">
       {galleryData.map((item: any, idx: number) => {
-        // Use smallest sufficient size for 250px grid cards (srcS ~400px, srcM ~600px)
-        const imageUrl = item.srcS || item.srcM || item.srcL || item.src || "";
+        // Use smallest sufficient size for 250px grid cards via proxy
+        const imageUrl = getProxySrc(item.id, 's');
         const srcsetParts = [
-          item.srcS && `${item.srcS} 400w`,
-          item.srcM && `${item.srcM} 600w`,
-          item.srcL && `${item.srcL} 1024w`
-        ].filter(Boolean).join(", ");
+          `${getProxySrc(item.id, 's')} 400w`,
+          `${getProxySrc(item.id, 'm')} 600w`,
+          `${getProxySrc(item.id, 'l')} 1024w`
+        ].join(", ");
         const linkUrl = `${basePath}/${item.id}`;
         const title = cleanForDisplay(item.title);
         

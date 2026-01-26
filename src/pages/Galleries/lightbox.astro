@@ -4,6 +4,23 @@ import Footer from "../../components/Footer.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 
+// Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
+function getProxySrc(imageId: string, size: string = 'm'): string {
+  if (!imageId) return '';
+  const validSizes = ['s', 'm', 'l', 'xl', 'src'];
+  const safeSize = validSizes.includes(size) ? size : 'm';
+  return `/img/${imageId}/${safeSize}`;
+}
+
+function getProxySrcset(imageId: string): string {
+  if (!imageId) return '';
+  return [
+    `${getProxySrc(imageId, 's')} 400w`,
+    `${getProxySrc(imageId, 'm')} 600w`,
+    `${getProxySrc(imageId, 'l')} 1024w`
+  ].join(', ');
+}
+
 // ✅ Read query params
 const params = new URLSearchParams(Astro.url.search);
 const datasetParam = decodeURIComponent(params.get("dataset") ?? "");
@@ -241,15 +258,11 @@ const cleanForDisplay = (val = "") =>
     <!-- ✅ Grid + per-image schema -->
     <div class="ssr-grid">
       {galleryData.map((item) => {
-        // Use smallest sufficient size for grid cards (srcS ~400px, srcM ~600px)
-        const imageUrl = item.srcS || item.srcM || item.srcL || item.src || "";
-        // Use best quality for JSON-LD schema (SEO)
-        const schemaImageUrl = item.srcXL || item.srcL || item.srcM || item.src || "";
-        const srcsetParts = [
-          item.srcS && `${item.srcS} 400w`,
-          item.srcM && `${item.srcM} 600w`,
-          item.srcL && `${item.srcL} 1024w`
-        ].filter(Boolean).join(", ");
+        // Use proxy URLs - ensures SmugMug URLs never appear in SSR HTML
+        const imageUrl = getProxySrc(item.id, 'm');
+        // Use proxy URL for JSON-LD schema too
+        const schemaImageUrl = `https://www.k4studios.com${getProxySrc(item.id, 'xl')}`;
+        const srcsetParts = getProxySrcset(item.id);
         const linkUrl = `${baseUrl}/${item.id}`;
         const fullUrl = `https://www.k4studios.com${linkUrl}`;
         // For HTML display (preserves quotes)
@@ -314,7 +327,7 @@ const cleanForDisplay = (val = "") =>
         "@type": "ImageObject",
         name: clean(item.title),
         description: clean(item.description || item.alt || item.title),
-        contentUrl: item.srcXL || item.srcL || item.srcM || item.srcS || item.src || "",
+        contentUrl: `https://www.k4studios.com${getProxySrc(item.id, 'xl')}`,
         url: `https://www.k4studios.com${baseUrl}/${item.id}`
       }))
     }, null, 2)}

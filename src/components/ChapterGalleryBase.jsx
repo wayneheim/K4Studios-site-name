@@ -96,6 +96,19 @@ import { useImageFallbackRedirect } from "./utils/useImageFallbackRedirect.js";
 import { themes } from "../data/themes/themes.mjs";
 
 /* =========================================================
+   Image Proxy URL Generator
+   Converts image ID + size to /img/{id}/{size} proxy URL
+   This ensures SmugMug URLs never appear in rendered HTML
+   ========================================================= */
+function getProxySrc(imageId, size = 'm') {
+  if (!imageId) return '';
+  // Validate size
+  const validSizes = ['s', 'm', 'l', 'xl', 'src'];
+  const safeSize = validSizes.includes(size) ? size : 'm';
+  return `/img/${imageId}/${safeSize}`;
+}
+
+/* =========================================================
    Helper function to find section landing page from siteNav
    ========================================================= */
 function findSectionUrl(basePath) {
@@ -635,7 +648,7 @@ export default function ChapterGalleryBase({
     const metaName = widget.querySelector('meta[itemprop="name"]');
     const linkImage = widget.querySelector('link[itemprop="image"]');
     if (metaName) metaName.setAttribute('content', currentImage.title || currentImage.alt || '');
-    if (linkImage) linkImage.setAttribute('href', currentImage.src || '');
+    if (linkImage) linkImage.setAttribute('href', getProxySrc(currentImage.id, 'xl'));
     
     // Collapse widget when changing images
     widget.classList.remove('expanded');
@@ -1094,7 +1107,7 @@ export default function ChapterGalleryBase({
                           style={{ width: 'fit-content', maxWidth: '100%', margin: '0 auto' }}
                         >
                           <img
-                            src={galleryData[currentIndex]?.src}
+                            src={getProxySrc(galleryData[currentIndex]?.id, 'xl')}
                             alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
                             className="chapter-image-mobile rounded-lg block"
                             style={
@@ -2016,7 +2029,7 @@ export default function ChapterGalleryBase({
       {/* Slideshow */}
       {showStoryShow && (
         <StoryShow
-          images={galleryData.map((img) => ({ ...img, url: img.url || img.src }))}
+          images={galleryData.map((img) => ({ ...img, url: getProxySrc(img.id, 'xl') }))}
           startImageId={galleryData[currentIndex]?.id}
           onExit={() => setShowStoryShow(false)}
         />
@@ -2053,7 +2066,7 @@ export default function ChapterGalleryBase({
                 <div className="space-y-4">
                   <div className="text-center">
                     <img
-                      src={galleryData[currentIndex]?.srcS || galleryData[currentIndex]?.srcM || galleryData[currentIndex]?.src}
+                      src={getProxySrc(galleryData[currentIndex]?.id, 's')}
                       alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
                       className="w-full max-w-48 mx-auto rounded-lg shadow-md"
                     />

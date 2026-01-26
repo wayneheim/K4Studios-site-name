@@ -65,8 +65,14 @@ function makeAbsoluteUrl(src?: string) {
   return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
 
+// Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
+function getProxySrc(imageId: string, size: string = 'm'): string {
+  if (!imageId) return '';
+  return `/img/${imageId}/${size}`;
+}
+
 const landingImg    = featheredImages[0];
-const landingImgUrl = makeAbsoluteUrl(landingImg?.src);
+const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'xl')) : '';
 
 const landingMeta = getLandingMeta(sectionPath, landingImgUrl);
 if (!landingMeta.ogUrl)      landingMeta.ogUrl      = `https://k4studios.com${sectionPath}`;
