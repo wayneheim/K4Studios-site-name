@@ -66,8 +66,8 @@ export default function RebuiltScrollGrid({
       // 2-col (tablet): M is sufficient (~600px for half-width)
       return m || l || s || xl || original || null;
     }
-    // 3-col (desktop): S or M for small thumbnails
-    return s || m || l || xl || original || null;
+    // 3-col (desktop): M preferred for ~400px cards (sharper than S)
+    return m || l || s || xl || original || null;
   };
 
   // Simple close handler: reload the page to exit grid mode

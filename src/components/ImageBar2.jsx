@@ -8,13 +8,19 @@ import { buildContextualAlt, getPageContext } from "../utils/buildContextualAlt"
  * - Mobile (200px height): Use M (600px)
  * 
  * We use srcset + sizes so browser picks the right one automatically.
+ * Falls back to s.src for carousel files that haven't been updated to pass srcL/srcM/srcS.
  */
 function getCarouselSrc(s) {
   // Default src for browsers without srcset support
+  // Try sized sources first, fall back to plain src
   return s.srcL || s.srcM || s.srcXL || s.src || '';
 }
 
 function getCarouselSrcset(s) {
+  // If no sized sources exist, don't generate srcset (use src as-is)
+  if (!s.srcM && !s.srcL && !s.srcXL) {
+    return undefined;
+  }
   const sources = [];
   if (s.srcM) sources.push(`${s.srcM} 600w`);
   if (s.srcL) sources.push(`${s.srcL} 1024w`);
