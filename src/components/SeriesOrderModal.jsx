@@ -374,7 +374,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
                         <a
                           href={image.buyLink || "#"}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel="noopener noreferrer nofollow"
                           className="inline-block w-full text-center px-3 py-1.5 text-white rounded text-sm transition-all font-medium"
                           style={{
                             background: "linear-gradient(to bottom, #f59e0b 0%, #d97706 100%)",

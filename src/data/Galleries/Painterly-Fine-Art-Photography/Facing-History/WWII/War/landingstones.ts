@@ -24,12 +24,12 @@ export const landingWestern = {
     {
       title: 'Color Art of War Photos',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color',
-      thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2019/i-dMQWS6q/3/Kg372cjJQWFhMsgRgTD9K6j22kJ3HhrscsPG8G6cm/S/_OLY7916-Edit-S.jpg',
+      thumb: 'https://k4-image-proxy.wayneheim.workers.dev/img/i-dMQWS6q/s',
     },
     {
       title: 'Black & White Art of War Photos',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White',
-      thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-2010/i-p8JdtJM/5/NgGsLDRCxJh7pWkr4BXHrctpQ7h8B8BrxhT4ndbjt/S/_IGP6535-Edit-S.jpg',
+      thumb: 'https://k4-image-proxy.wayneheim.workers.dev/img/i-p8JdtJM/s',
     },
 
   ]

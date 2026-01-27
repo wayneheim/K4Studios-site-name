@@ -26,25 +26,25 @@ export const landingWestern = {
       title: "Painterly Landscape Photography",
       href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes",
       thumb:
-        "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-mCJv3RM/0/MdwvnZ7LTST6BHvQG527fBMhQ4pmKsgpxCjZ9DfKc/S/_WHZ7317-Edit-Edit-Edit-S.jpg",
+        "https://k4-image-proxy.wayneheim.workers.dev/img/i-mCJv3RM/s",
     },
     {
       title: "Facing History — Painterly, Historically Themed Work",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
       thumb:
-        "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/0/L5qrBf63BWGVH9XgwCL86R6HLbF3dKVxrGqPW2F3h/S/Heros%20ride-S.jpg",
+        "https://k4-image-proxy.wayneheim.workers.dev/img/i-xhX479V/s",
     },
     {
       title: "Transportation & Americana",
       href: "/Galleries/Painterly-Fine-Art-Photography/Transportation",
       thumb:
-        "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-sxshHx9/0/LsTjhhFr9MjQ9xgg8PBcMxPJRj4zvFFT5PNqJjL2J/S/_O1H0413-Edit-Edit-S.jpg",
+        "https://k4-image-proxy.wayneheim.workers.dev/img/i-sxshHx9/s",
     },
     {
       title: "Narrative & Experimental Studies",
       href: "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous",
       thumb:
-        "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-M2fMMNQ/2/KbqZBRtD4L5mMZdK6BMNvdktVP8VzNNVwxVNSBN3m/S/_WHZ0315-Edit-2-Editf-S.jpg",
+        "https://k4-image-proxy.wayneheim.workers.dev/img/i-M2fMMNQ/s",
     },
     {
       title: "The Engrained Series — Fine Art on Wood",

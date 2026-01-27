@@ -18,17 +18,17 @@ export const landingWestern = {
     {
       title: 'Mountain Themed Landscapes',
       href: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains',
-      thumb: 'https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/i-zk7zXP3/0/NJCCVZbqWkR5wB767xBpFSDQZHcFCNLqcgNQ24MZ7/S/Painterly-Photography_WHZ9456_tonemapped-Edit-535-S.jpg',
+      thumb: 'https://k4-image-proxy.wayneheim.workers.dev/img/i-zk7zXP3/s',
     },
     {
       title: 'Sunset Themed Landscapes',
       href: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets',
-      thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/Vermont/Vermont-Select/i-ZNSFtRg/1/LVZbm8KJcfxnVF2hMc4RfMr3BNbfHS8PV376nQ7Tr/S/_O1H1357-Edit-S.jpg',
+      thumb: 'https://k4-image-proxy.wayneheim.workers.dev/img/i-ZNSFtRg/s',
     },
     {
       title: 'Water & Waterfall Landscapes',
       href: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water',
-      thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/Iceland/Summer-2021/i-Pgks2np/3/K7QGqcM3WdWFgPSTdKTqFw6JFFLqcM2KqrfpGGrxV/S/_DSF3048-Edit-Edit-S.jpg',
+      thumb: 'https://k4-image-proxy.wayneheim.workers.dev/img/i-Pgks2np/s',
     },
     
   ]

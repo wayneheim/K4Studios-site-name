@@ -22,7 +22,7 @@ export const galleryData = [
     "title": "Progress, Interrupted",
     "description": "Progress, Interrupted\" by Wayne Heim captures a dramatic low-angle black and white portrait of a vintage diesel locomotive at a historic train station. Part of Heim’s Transportation – Trains collection, this fine art photograph blends historical storytelling with bold composition, evoking themes of American progress, memory, and abandonment. This piece is part of Heim’s painterly fine art photography series, known for its emotional weight, archival depth, and cinematic framing.",
     "alt": "Black and white fine art photo of a vintage diesel train engine taken from a low angle, framed between two historic train stations under a clear sky.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-tqSQMQK/0/KFMKkWm3PXSkxZtMnLvgtCBQr4SbZm86kST5dzf3n/XL/_DSF5219-Edit-Edit-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-tqSQMQK/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-tqSQMQK/A",
     "keywords": [
       "train art",
@@ -53,7 +53,7 @@ export const galleryData = [
     "title": "Iron Will",
     "description": "\"Iron Will\" is a black and white fine art photograph by Wayne Heim, capturing the gritty front of a vintage diesel train with powerful distortion and towering perspective. Part of Heim’s Transportation – Trains collection, this image fuses historical industrial strength with emotive storytelling. With its painterly, pictorialist influences and bold visual geometry, this piece evokes nostalgia for America's railroad legacy while elevating the subject to sculptural art.",
     "alt": "Dramatic black and white photo of a weathered vintage train engine taken from a low, tilted angle with exaggerated perspective and strong shadows.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-FpB8ZsN/0/MGsTXn7gJ8FbxzPxCfd8bnZVdCzHS4qtpxBK6dGRm/XL/_DSF5222-Edit-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-FpB8ZsN/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-GGK9QtB/A",
     "keywords": [
       "vintage train photography",
@@ -82,7 +82,7 @@ export const galleryData = [
     "title": "Beneath the Giant",
     "description": "Captured with raw intimacy, Beneath the Giant by Wayne Heim is a black and white fine art photograph revealing the underbelly of a historic locomotive. Shot from an extreme low angle, the image exposes the industrial textures, steel tension, and grit of America’s railroading past. This piece, from Heim’s Transportation – Trains series, balances documentary realism with the aesthetic nuance of painterly photography — a study in form, texture, and legacy.",
     "alt": "Close-up black and white photograph of a train engine’s mechanical undercarriage, viewed from a low angle with gritty detail and dramatic lighting.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-GGK9QtB/0/LpW4V9HdfbfFknNXgw9PgwzDxcR8sn8fCLjtmX2sT/XL/_DSF5230-Edit-2-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-GGK9QtB/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-ghKSGpj/A",
     "keywords": [
       "black and white train photo",
@@ -111,7 +111,7 @@ export const galleryData = [
     "title": "Creature of the Darkness",
     "description": "Creature of the Darkness is a haunting black and white photograph by Wayne Heim, capturing a Western Maryland diesel engine emerging from forest shadows with cinematic tension. Part of Heim’s Trains – Transportation series, the image channels the ghostly presence of abandoned rail lines and forgotten power. Shot in a painterly style with rich contrast and intentional darkness, this fine art print blends storytelling with photographic mood — evoking nostalgia, mystery, and the mythos of America’s rail era.",
     "alt": "Black and white photo of a Western Maryland diesel locomotive emerging from dark forest shadows onto railroad tracks.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-ghKSGpj/0/NM9d2ks3kNstptQsDm5GHbKnZNMhHrQVmgbqTQ4hg/XL/_ANA7248-Edit-Enhanced-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-ghKSGpj/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-SfsCh3W/A",
     "keywords": [
       "Western Maryland train photo",
@@ -139,7 +139,7 @@ export const galleryData = [
     "title": "Line of Work",
     "description": "Shot from ground level, Line of Work places the viewer in the middle of an active junction as a steam locomotive emerges through smoke and light. This black and white fine art photograph captures the weight, grit, and atmosphere of historical rail labor. Using painterly contrast and cinematic composition, it honors the working heritage of American transportation. From Wayne Heim’s Trains series.",
     "alt": "Black and white photo taken from train track level showing a steam engine approaching through smoke, with a figure standing near the junction.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-SfsCh3W/0/KGcvPp5pGVW88VnZJP6CZVJStN7Xwd6MDBxjgJNkW/XL/_DSF0462-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-SfsCh3W/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-t2FVBZ3/A",
     "keywords": [
       "railroad worker photography",
@@ -165,7 +165,7 @@ export const galleryData = [
     "title": "Through the Draw",
     "description": "A painterly fine art photograph of steam engine #16 rolling through a tree-lined draw, captured in rich color and full plume. The image combines historical storytelling with cinematic clarity, evoking the rhythm of early train travel through rural America. Part of Wayne Heim’s Transportation – Trains series, this piece balances documentary detail with poetic atmosphere.",
     "alt": "Color photograph of steam engine #16 passing through a wooded draw with heavy smoke trailing and soft morning light.  🔑 Keywords steam engine fine art, train through the draw, painterly rail photography, American railroad heritage, steam locomotive #16, rural train photo, Wayne Heim transportation, historical train image, colorful steam engine photo, poetic train landscape   Let me know if you want a companion to this one in black and white or want to spin off a sub-series like \"Rural Rhythms\" or \"Everyday Rails.\" You’ve got a mood here that feels like it could live beside a Civil War march or a Dust Bowl memory.  Ready when you are for the next.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-t2FVBZ3/0/LpCSp3LgSnrqg9HfKJzzBhCtVNhZpNfzbgFLQcBWW/XL/_O1H0422-2-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-t2FVBZ3/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-C6DBCqz/A",
     "keywords": [
       "steam engine fine art",
@@ -191,7 +191,7 @@ export const galleryData = [
     "title": "Curve Ahead",
     "description": "A painterly fine art photograph capturing a steam locomotive mid-curve, its plume billowing high against a hillside of spring trees. Shot with dramatic timing and tonal clarity, this image evokes the speed, tension, and rhythm of early American railroading. Part of Wayne Heim’s Trains – Transportation series, it blends historical documentation with cinematic storytelling.",
     "alt": "Steam locomotive rounding a curve through a wooded draw, trailing thick smoke under a gray sky.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-C6DBCqz/0/Kmsg2wzxbXzWKpbwknkmh4TZrS3h2DRFxss2d9c7x/XL/_DSF0650-Enhanced-NR-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-C6DBCqz/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-h6rHCkZ/A",
     "keywords": [
       "steam train on curve",
@@ -217,7 +217,7 @@ export const galleryData = [
     "title": "Bridge Run",
     "description": "A fine art photograph capturing a steam engine crossing an elevated bridge over a darkened river, framed by thick trees and sky-splitting smoke. Shot with painterly tones and vertical drama, the image balances industrial weight with atmospheric silence. Part of Wayne Heim’s Transportation – Trains series, this piece evokes the enduring rhythm of America’s working rail lines.",
     "alt": "Steam locomotive crossing a tall bridge over a river, trailing dark smoke into a cloudy sky, surrounded by green trees.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-h6rHCkZ/0/KS7XmSKcCTSDdMF3KFHXBPLdcp7NV4Lpkgm5D3SFq/XL/_DSF0841-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-h6rHCkZ/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-3k97mkw/A",
     "keywords": [
       "steam engine bridge photo",
@@ -243,7 +243,7 @@ export const galleryData = [
     "title": "Right on Time",
     "description": "Captured in painterly color, this fine art photograph shows a steam locomotive emerging between red-painted buildings in a small town, trailing dense black smoke and commanding presence. The scene balances structure and motion — a nod to the golden age of American rail travel. Part of Wayne Heim’s Transportation – Trains series, this image brings legacy and nostalgia into conversation with architectural rhythm.",
     "alt": "Steam locomotive passing between red wooden buildings in a small town, trailing black smoke under overcast skies.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-3k97mkw/0/MQgQbhMrgbhbWkMxZ4VHgwxfs2kpc4XjgbBH6FXqk/XL/_O1H1322-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-3k97mkw/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-BHcNR9T/A",
     "keywords": [
       "steam engine in small town",
@@ -269,7 +269,7 @@ export const galleryData = [
     "title": "Right on Time",
     "description": "A vintage steam train approaches two people waiting by the tracks in this painterly fine art railroad photograph by Wayne Heim. Captured in full color with rich detail and dramatic smoke, this image evokes nostalgia, family, and the timeless tradition of meeting arriving trains. Perfect for collectors of historical train photography, emotional transportation art, or Americana storytelling. Part of the Transportation – Trains series by fine art photographer Wayne Heim.",
     "alt": "Steam locomotive passing by two people in vintage clothing standing beside the track, with black smoke rising behind the train.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-BHcNR9T/0/MxDbrDC73D87mQgNGZBsmVDr5R3QgPfxCJvktv2jK/XL/_DSF1803-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-BHcNR9T/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-4NQdjBP/A",
     "keywords": [
       "train homecoming photo",
@@ -295,7 +295,7 @@ export const galleryData = [
     "title": "Hitching a Ride",
     "description": "Flagging down the steam engine train by couple by side of the road. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/East-Broad-Top-RR-Rockhill-PA/i-4NQdjBP/0/NZw5P5BBVfkxWpSqH5zjVVwSSjMQQQ9kmjH5wFLtt/XL/_DSF1881-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-4NQdjBP/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-hFfHm2C/A",
     "keywords": [
       "a",
@@ -319,7 +319,7 @@ export const galleryData = [
     "title": "The Essence Of Steam Engine Wall Art For Collectors",
     "description": "A painterly fine art photograph of a steam engine, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Hitching a Ride",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-hFfHm2C/0/KQXKpQKRWdjrb5xJM7XH7MWHS9TMrsXpWGTMjVS52/XL/_ANA1507-Enhanced-NR-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-hFfHm2C/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-fj25sw3/A",
     "keywords": [
       "a",
@@ -346,7 +346,7 @@ export const galleryData = [
     "title": "The Essence Of Steam Engine Photography",
     "description": "A painterly fine art photograph of a steam engine, defined by motion rather than nostalgia. Wayne Heim's fine art transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-fj25sw3/0/LGF7wvwGCchstNDJZjwzBPwwW97gwhdTPwCP8NBrN/XL/_ANA1965-Enhanced-NR-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-fj25sw3/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-3GkJNWF/A",
     "keywords": [
       "a",
@@ -375,7 +375,7 @@ export const galleryData = [
     "title": "Vintage Train Photography For Man Cave In Fine Art",
     "description": "A painterly fine art photograph of a steam engine, defined by motion rather than nostalgia. Wayne Heim's historic transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "New fine art photograph © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-3GkJNWF/0/LrwjJrN753QMjhZ66kwhT6QZdMqksX62kMF58HdvN/XL/_ANA1970-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-3GkJNWF/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-BMTswCg/A",
     "keywords": [
       "a",
@@ -403,7 +403,7 @@ export const galleryData = [
     "title": "Crossing the yard.",
     "description": "Out of the mist comes the EBT steam engine as it crosses the train yard. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-BMTswCg/0/KZjg7RdbzxC62QL5nCfWwhsqhz83JnwZH8KBqsbvn/XL/_HF25090-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-BMTswCg/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-RLv36z5/A",
     "keywords": [
       "a",
@@ -427,7 +427,7 @@ export const galleryData = [
     "title": "Night Moves",
     "description": "Vintage car out for a night stroll heads down the road as the vintage #16 steam engine passes behind on the elevated tracks on it's way to the next station. © Wayne Heim",
     "alt": "Crossing the yard.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-RLv36z5/0/Mpsr4Z6wGNXL5xHTPwz5qbJx7ptgPH9d4PQbq5KPP/XL/_HF25307-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-RLv36z5/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-W27q59Q/A",
     "keywords": [
       "a",
@@ -451,7 +451,7 @@ export const galleryData = [
     "title": "Steam Engine Art Moment",
     "description": "Delve into steam engine art via this steam engine art by Wayne Heim. Highlighting steam engine photography through vintage train photography for man cave and steam engine photography, it's great for collectors interested in steam engine art. © Wayne Heim",
     "alt": "Night Moves",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-W27q59Q/0/KxXVvBgMWq82fGmxbQhjNpDPGSwcCtHQZxqFwstQf/XL/_HF25580-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-W27q59Q/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-r9rZPqx/A",
     "keywords": [
       "a",
@@ -480,7 +480,7 @@ export const galleryData = [
     "title": "50/50",
     "description": "Iconic steam engine horizontally dividing the fall scene in halve. Top showcasing the blue sky and wispy clouds vs the bottom of the scene features colors and textures of the surrounding foliage and grasses. © Wayne Heim",
     "alt": "Fine art image by Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-r9rZPqx/0/Kwb6q4NVcVsdJPBTLbqnPPBNbg6ZFPG5WpMbkJDXL/XL/_HF25692-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-r9rZPqx/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-ZcRmL6x/A",
     "keywords": [
       "a",
@@ -504,7 +504,7 @@ export const galleryData = [
     "title": "The Essence Of Steam Engine Photography",
     "description": "A painterly fine art photograph of a steam engine, defined by motion rather than nostalgia. Wayne Heim's vintage transportation photography explores machines as witnesses to human ambition, where steel, steam, and distance carried consequence as much as cargo. Light and structure shape a narrative rooted in transition, industry, and memory. Part of Wayne Heim's fine art transportation photography collection. © Wayne Heim",
     "alt": "50/50",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-ZcRmL6x/0/LD8ShXQhvPKHwnVkNjCZg33zfNzcV3kvHSVLbzQSG/XL/_HF26257-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-ZcRmL6x/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-NXqvv7J/A",
     "keywords": [
       "a",
@@ -533,7 +533,7 @@ export const galleryData = [
     "title": "This too Shall Pass",
     "description": "Color fine art painterly train photography showing classic black steam engine crossing stone overpass silhouetted by blue sky. © Wayne Heim",
     "alt": "B/W Painterly Train Photography © Wayne Heim",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Easst-Broad-Top-Railroad-Fall-23/i-NXqvv7J/0/M7DtBFtHpRwjGvkKrWmcSDfsgLq9VmWFbnHZWxQZZ/XL/_HF26382-XL.jpg",
+    "src": "https://k4-image-proxy.wayneheim.workers.dev/img/i-NXqvv7J/l",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Trains/i-VzhZFL7/A",
     "keywords": [
       "a",
