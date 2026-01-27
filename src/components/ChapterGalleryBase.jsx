@@ -1099,25 +1099,25 @@ export default function ChapterGalleryBase({
                     {`${currentIndex + 1} / ${galleryData.length}`}
                   </div>
 
-                  {/* Center: K4 Studios + Theme View indicator */}
-                  <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
-                    <a
-                      href="/"
-                      title="K4 Studios Home"
-                      className="text-base font-semibold no-underline hover:underline"
-                      style={{ color: '#ffffff', fontFamily: "'Glegoo', serif", letterSpacing: '0.1em', opacity: 0.5 }}
+                  {/* Center: K4 Studios (dead center) */}
+                  <a
+                    href="/"
+                    title="K4 Studios Home"
+                    className="text-base font-semibold no-underline hover:underline absolute left-1/2 -translate-x-1/2"
+                    style={{ color: '#ffffff', fontFamily: "'Glegoo', serif", letterSpacing: '0.1em', opacity: 0.5 }}
+                  >
+                    K4 Studios
+                  </a>
+
+                  {/* Theme View indicator - positioned at 75% (mirrored from count) */}
+                  {activeTheme && (
+                    <div 
+                      className="absolute text-sm text-gray-300 font-medium whitespace-nowrap"
+                      style={{ left: '75%', transform: 'translateX(-50%)', letterSpacing: "-0.05em", opacity: 0.5 }}
                     >
-                      K4 Studios
-                    </a>
-                    {activeTheme && (
-                      <span 
-                        className="text-sm text-gray-300 font-medium whitespace-nowrap"
-                        style={{ letterSpacing: "-0.05em", opacity: 0.5 }}
-                      >
-                        Theme View
-                      </span>
-                    )}
-                  </div>
+                      Theme View
+                    </div>
+                  )}
 
                   {/* Right: Exit */}
                   <button
