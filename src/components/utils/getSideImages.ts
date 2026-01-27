@@ -36,7 +36,8 @@ function getAllGallerySources(sectionPath: string): { label: string, href: strin
   }
   const node = findNode(siteNav);
   if (!node) return [];
-  return findGallerySourcesRecursive(node);
+  // Filter out Archive galleries - they should only appear in Archive section
+  return findGallerySourcesRecursive(node).filter(g => !g.href.startsWith('/Other/Archive'));
 }
 
 // Fisher-Yates shuffle

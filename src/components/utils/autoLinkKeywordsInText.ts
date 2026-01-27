@@ -11,6 +11,11 @@ function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&");
 }
 
+// Helper: check if image is from Archive (should not be used for auto-linking)
+function isArchiveImage(img: { galleries?: string[] }): boolean {
+  return (img.galleries || []).some(g => g.startsWith('Other/Archive') || g.startsWith('/Other/Archive'));
+}
+
 // Normalize only dash variants to a single en-dash character without touching spaces/case
 function normalizeDashesOnly(str: string): string {
   return str.replace(/[\u2013\u2014\u2012\u2011\u2010\-]/g, '–');
@@ -300,7 +305,11 @@ export function autoLinkKeywordsInText(
           }
 
           // Fallback: scan allImages by gallery membership first, then by src path include
-          const byGallery = allImages.filter(img => (img.galleries || []).some(g => g === sec || g === alt1));
+          // Exclude Archive images - they should only appear in Archive gallery
+          const byGallery = allImages.filter(img => 
+            !isArchiveImage(img) && 
+            (img.galleries || []).some(g => g === sec || g === alt1)
+          );
           if (byGallery.length) {
             poolEntries.push(...byGallery.map(img => ({ img, galleryKey: sec })));
             return;
@@ -309,7 +318,7 @@ export function autoLinkKeywordsInText(
           const matchPath = sec + '/';
           poolEntries.push(
             ...allImages
-              .filter(img => img.src.includes(matchPath))
+              .filter(img => !isArchiveImage(img) && img.src.includes(matchPath))
               .map(img => ({ img, galleryKey: img.galleries?.[0] || sec }))
           );
         });
@@ -331,8 +340,9 @@ export function autoLinkKeywordsInText(
     if (!href) {
       const res = getSectionForKW(lc, semantic);
       if (res && res.type === 'universal') {
-        let pool = allImages.filter(img => !exclude.has(img.id));
-        if (!pool.length) pool = allImages;
+        // Exclude Archive images from universal pool
+        let pool = allImages.filter(img => !exclude.has(img.id) && !isArchiveImage(img));
+        if (!pool.length) pool = allImages.filter(img => !isArchiveImage(img));
         const pick = pool[Math.floor(Math.random() * pool.length)];
         const secRaw = pick.galleries?.[0] || sectionPath.replace(/^\//, '');
         href = `/${secRaw}/${pick.id}`;
@@ -372,7 +382,10 @@ export function autoLinkKeywordsInText(
                 return;
               }
 
-              const byGallery = allImages.filter(img => (img.galleries || []).some(g => g === sec || g === alt1));
+              const byGallery = allImages.filter(img => 
+                !isArchiveImage(img) && 
+                (img.galleries || []).some(g => g === sec || g === alt1)
+              );
               if (byGallery.length) {
                 poolEntries2.push(...byGallery.map(img => ({ img, galleryKey: sec })));
                 return;
@@ -381,7 +394,7 @@ export function autoLinkKeywordsInText(
               const matchPath = sec + '/';
               poolEntries2.push(
                 ...allImages
-                  .filter(img => img.src.includes(matchPath))
+                  .filter(img => !isArchiveImage(img) && img.src.includes(matchPath))
                   .map(img => ({ img, galleryKey: img.galleries?.[0] || sec }))
               );
             });

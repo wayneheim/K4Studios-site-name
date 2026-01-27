@@ -52,10 +52,12 @@ function getAllGallerySources(sectionPath: string): { label: string; href: strin
   }
 
   // De-dupe by href to avoid duplicate sources if both nodes contain the same child path
+  // Also filter out Archive galleries - they should only appear in Archive section
   const seen = new Set<string>();
   const unique = flattened.filter((s: any) => {
     const key = s?.href || `${s?.label}`;
     if (seen.has(key)) return false;
+    if (s?.href?.startsWith('/Other/Archive')) return false; // Exclude Archive
     seen.add(key);
     return true;
   });

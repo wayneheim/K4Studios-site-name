@@ -160,8 +160,11 @@ function normalizeImage(img, galleryHref) {
 function buildPoolRoundRobin(sources, maxImages, excludeIds = new Set()) {
   const pool = [];
   
+  // Filter out Archive galleries - they shouldn't appear in carousels
+  const filteredSources = sources.filter(source => !source.href.startsWith('/Other/Archive'));
+  
   // Load all galleries
-  const galleries = sources.map(source => {
+  const galleries = filteredSources.map(source => {
     const filePath = hrefToFilePath(source.href);
     const images = readGalleryMjs(filePath)
       .filter(img => 
