@@ -21,8 +21,10 @@ const VALID_SIZES = ['s', 'm', 'l', 'xl', 'src'];
  */
 export function getProxySrc(imageId, size = 'm') {
   if (!imageId) return '';
+  // Normalize ID to lowercase for consistent Worker lookups
+  const normalizedId = imageId.toLowerCase();
   const safeSize = VALID_SIZES.includes(size) ? size : 'm';
-  return `/img/${imageId}/${safeSize}`;
+  return `/img/${normalizedId}/${safeSize}`;
 }
 
 /**

@@ -23,12 +23,14 @@ export function warmImage(
   if (!imageId || !size) return;
   if (typeof window === 'undefined') return;
 
-  const key = `${imageId}:${size}`;
+  // Normalize ID to lowercase for consistent Worker lookups
+  const normalizedId = imageId.toLowerCase();
+  const key = `${normalizedId}:${size}`;
   if (warmed.has(key)) return;
   warmed.add(key);
 
   const img = new Image();
   img.decoding = 'async';
   img.loading = 'eager';
-  img.src = `/img/${imageId}/${size}`;
+  img.src = `/img/${normalizedId}/${size}`;
 }
