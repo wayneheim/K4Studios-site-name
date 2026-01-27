@@ -11,8 +11,9 @@
  * What it warms:
  * - Homepage carousel images (first 10)
  * - Section tombstone images
- * - Gallery preview strip (first 6) for Painterly galleries
- * - Hero images for landing pages
+ * - Gallery preview pool (12 images per gallery, seeded shuffle)
+ *   - All 12 at 's' size (client picks 6 for variety)
+ *   - Hero (first in pool) also at 'l' for click-through
  */
 
 import fs from 'fs';
@@ -112,53 +113,40 @@ async function loadCarouselPools() {
 }
 
 async function loadLandingStones() {
-  // Import the landing tombstone data
+  // Scan ALL landingstones.ts files in the data directory
   const stones = [];
+  const dataDir = path.join(__dirname, '..', 'src', 'data');
   
-  try {
-    // Home landing
-    const homePath = path.join(__dirname, '..', 'src', 'data', 'home', 'landingstones.ts');
-    if (fs.existsSync(homePath)) {
-      const content = fs.readFileSync(homePath, 'utf8');
-      const thumbMatches = [...content.matchAll(/thumb:\s*['"`]([^'"`]+)['"`]/g)];
-      for (const m of thumbMatches) {
-        const id = extractImageId(m[1]);
-        if (id) stones.push({ id, source: 'home' });
+  function scanDir(dir) {
+    try {
+      const entries = fs.readdirSync(dir, { withFileTypes: true });
+      for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+          scanDir(fullPath);
+        } else if (entry.name === 'landingstones.ts') {
+          try {
+            const content = fs.readFileSync(fullPath, 'utf8');
+            const thumbMatches = [...content.matchAll(/thumb:\s*['"`]([^'"`]+)['"`]/g)];
+            const relPath = path.relative(dataDir, fullPath);
+            for (const m of thumbMatches) {
+              const id = extractImageId(m[1]);
+              if (id) stones.push({ id, source: relPath });
+            }
+          } catch {}
+        }
       }
-    }
-  } catch {}
+    } catch {}
+  }
   
-  try {
-    // Galleries landing
-    const galPath = path.join(__dirname, '..', 'src', 'data', 'Galleries', 'landingstones.ts');
-    if (fs.existsSync(galPath)) {
-      const content = fs.readFileSync(galPath, 'utf8');
-      const thumbMatches = [...content.matchAll(/thumb:\s*['"`]([^'"`]+)['"`]/g)];
-      for (const m of thumbMatches) {
-        const id = extractImageId(m[1]);
-        if (id) stones.push({ id, source: 'galleries' });
-      }
-    }
-  } catch {}
-  
-  try {
-    // Painterly landing
-    const paintPath = path.join(__dirname, '..', 'src', 'data', 'Galleries', 'Painterly-Fine-Art-Photography', 'landingstones.ts');
-    if (fs.existsSync(paintPath)) {
-      const content = fs.readFileSync(paintPath, 'utf8');
-      const thumbMatches = [...content.matchAll(/thumb:\s*['"`]([^'"`]+)['"`]/g)];
-      for (const m of thumbMatches) {
-        const id = extractImageId(m[1]);
-        if (id) stones.push({ id, source: 'painterly' });
-      }
-    }
-  } catch {}
-  
+  scanDir(dataDir);
   return stones;
 }
 
 async function loadGalleryPreviewImages() {
-  // Load first 6 images from each major Painterly gallery for preview strip warming
+  // Load the 12 images that form each gallery's preview pool
+  // Uses seeded shuffle matching GalleryPreviewStrip.astro
+  // First image in each pool = hero, warmed at 'l'
   const images = [];
   
   const galleryPaths = [
@@ -173,20 +161,55 @@ async function loadGalleryPreviewImages() {
     'Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs',
   ];
   
+  const POOL_SIZE = 12; // Match GalleryPreviewStrip.astro
+  
+  // Seeded shuffle matching GalleryPreviewStrip.astro
+  function seededShuffle(arr, seed) {
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+      hash = ((hash << 5) - hash) + seed.charCodeAt(i);
+      hash = hash & hash;
+    }
+    
+    const seededRandom = () => {
+      let t = hash += 0x6D2B79F5;
+      t = Math.imul(t ^ t >>> 15, t | 1);
+      t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+    
+    return arr
+      .map(value => ({ value, sort: seededRandom() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value);
+  }
+  
   for (const relPath of galleryPaths) {
     const fullPath = path.join(__dirname, '..', 'src', 'data', relPath);
     if (!fs.existsSync(fullPath)) continue;
     
+    // Convert mjs path to URL path for seed (matching GalleryPreviewStrip logic)
+    const urlPath = '/' + relPath.replace('.mjs', '').replace(/\\/g, '/');
+    
     try {
       const content = fs.readFileSync(fullPath, 'utf8');
-      // Extract image IDs - find first 6 real images (skip i-k4studios placeholder)
+      // Extract all image IDs (skip i-k4studios placeholder and ghost images)
       const idMatches = [...content.matchAll(/"id"\s*:\s*"(i-[a-zA-Z0-9-]+)"/g)];
-      let count = 0;
-      for (const m of idMatches) {
-        if (m[1] === 'i-k4studios') continue;
-        if (count >= 6) break;
-        images.push({ id: m[1], source: relPath, position: count });
-        count++;
+      const allIds = idMatches
+        .map(m => m[1])
+        .filter(id => id !== 'i-k4studios');
+      
+      // Apply same seeded shuffle as GalleryPreviewStrip, take pool of 12
+      const shuffled = seededShuffle(allIds, urlPath);
+      const poolIds = shuffled.slice(0, POOL_SIZE);
+      
+      for (let i = 0; i < poolIds.length; i++) {
+        images.push({ 
+          id: poolIds[i], 
+          source: relPath, 
+          position: i,
+          isHero: i === 0 // First in pool is the hero image
+        });
       }
     } catch {}
   }
@@ -226,7 +249,7 @@ async function main() {
   const forceRun = process.argv.includes('--force');
   
   if (!shouldRun(forceRun)) {
-    return;
+    process.exit(0);
   }
   
   console.log('🔥 Starting image cache warm...\n');
@@ -258,16 +281,17 @@ async function main() {
   }
   console.log(`   Added ${stones.length} tombstone images`);
   
-  // 3. Gallery preview strips (first 6 at 's' for display, 'l' for click-through)
+  // 3. Gallery preview pools (12 candidates at 's', hero at 'l')
+  // Client picks 6 from the warm pool for variety
   console.log('🖼️  Loading gallery preview images...');
   const previewImages = await loadGalleryPreviewImages();
   for (const img of previewImages) {
-    urlsToWarm.add(buildWarmUrl(img.id, 's'));  // Preview strip display
-    if (img.position === 0) {
-      urlsToWarm.add(buildWarmUrl(img.id, 'l'));  // First image also at 'l' for viewer
+    urlsToWarm.add(buildWarmUrl(img.id, 's'));  // All 12 in pool at thumbnail size
+    if (img.isHero) {
+      urlsToWarm.add(buildWarmUrl(img.id, 'l'));  // Hero image also at viewer size
     }
   }
-  console.log(`   Added ${previewImages.length} preview strip images`);
+  console.log(`   Added ${previewImages.length} preview pool images (${previewImages.filter(i => i.isHero).length} heroes at 'l')`);
   
   // Convert to array and warm in batches
   const allUrls = [...urlsToWarm];
@@ -308,6 +332,8 @@ async function main() {
   console.log(`\n✅ Cache warm complete!`);
   console.log(`   Success: ${successCount} | Failed: ${failCount}`);
   console.log(`   Next warm allowed in ${WARM_INTERVAL_HOURS} hours (or use --force)`);
+  
+  process.exit(0);
 }
 
 main().catch(err => {

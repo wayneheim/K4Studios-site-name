@@ -813,27 +813,22 @@ export default function ChapterGalleryBase({
 
   // ═══════════════════════════════════════════════════════════════════════════
   // IMAGE WARMING: Pre-fetch adjacent images to reduce cold-cache delays
-  // Only warm in flip/viewer mode (not grid) - grid = scanning, flip = commitment
-  // Size mapping: l = viewer, m = preview strip, xl = slideshow only
+  // Size mapping: s = grid thumbs, m = grid cards, l = viewer, xl = slideshow
   // ═══════════════════════════════════════════════════════════════════════════
 
-  // Phase 1: Viewer navigation warm - warm current + prev/next when currentIndex changes
+  // Phase 1: Viewer navigation warm - warm current ±3 to cover flip nav AND grid paint area
   useEffect(() => {
     if (!galleryData?.length || viewMode !== "flip") return;
     
-    // Warm current image at 'l' size (in case deep-linked or cache expired)
-    if (galleryData[currentIndex]?.id) {
-      warmImage(galleryData[currentIndex].id, 'l');
-    }
-    
-    // Warm previous image at 'l' size
-    if (currentIndex > 0) {
-      warmImage(galleryData[currentIndex - 1].id, 'l');
-    }
-    
-    // Warm next image at 'l' size
-    if (currentIndex < galleryData.length - 1) {
-      warmImage(galleryData[currentIndex + 1].id, 'l');
+    // Warm current + 3 before + 3 after at 'l' (viewer) AND 'm' (grid)
+    // This covers both flip navigation and the visible grid area when switching
+    const warmRange = 3;
+    for (let offset = -warmRange; offset <= warmRange; offset++) {
+      const idx = currentIndex + offset;
+      if (idx >= 0 && idx < galleryData.length && galleryData[idx]?.id) {
+        warmImage(galleryData[idx].id, 'l'); // For viewer display
+        warmImage(galleryData[idx].id, 'm'); // For grid display
+      }
     }
   }, [currentIndex, galleryData, viewMode]);
 
