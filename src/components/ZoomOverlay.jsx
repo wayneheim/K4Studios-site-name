@@ -63,12 +63,15 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor,
   useEffect(() => {
     if (isMobile) return; // disable loupe on mobile
 
-    const img = frameRef.current?.querySelector("img");
+    // Target the XL image (second img), not the L placeholder
+    const imgs = frameRef.current?.querySelectorAll("img");
+    const img = imgs && imgs.length > 1 ? imgs[1] : imgs?.[0];
     const lens = lensRef.current;
     if (!img || !lens) return;
 
     const zoom = 1.75;
     const lensSize = 180;
+    const offset = isEngrained ? 0 : 6; // XL image offset from cutEdge padding
 
     const move = (e) => {
       const rect = img.getBoundingClientRect();
@@ -86,8 +89,8 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor,
       let lensY = y - lensSize / 2;
       lensX = Math.max(0, Math.min(lensX, rect.width - lensSize));
       lensY = Math.max(0, Math.min(lensY, rect.height - lensSize));
-      lens.style.left = lensX + "px";
-      lens.style.top = lensY + "px";
+      lens.style.left = (lensX + offset) + "px";
+      lens.style.top = (lensY + offset) + "px";
 
       const bgW = rect.width * zoom;
       const bgH = rect.height * zoom;
@@ -105,7 +108,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor,
       img.removeEventListener("mousemove", move);
       img.removeEventListener("mouseenter", move);
     };
-  }, [imageData, isMobile]);
+  }, [imageData, isMobile, xlLoaded, isEngrained]);
 
   // Frame styles - Engrained series gets no matting but a float-mount drop shadow
   const frame = isEngrained ? {
