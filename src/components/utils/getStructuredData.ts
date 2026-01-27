@@ -19,6 +19,16 @@ function getProxyUrl(img: any, size: string = 'l'): string {
   return '';
 }
 
+// Helper to generate licensing inquiry URL (never expose SmugMug buyLinks)
+function getLicenseUrl(img: any): string {
+  const id = img.id || img.src?.match(/\/(i-[a-zA-Z0-9]+)\//)?.[1] || '';
+  const title = encodeURIComponent(img.title || 'Untitled');
+  if (id) {
+    return `https://k4studios.com/Contact?license=${id}&title=${title}`;
+  }
+  return 'https://k4studios.com/Contact';
+}
+
 export function getStructuredData({
   type,
   data,
@@ -69,7 +79,7 @@ export function getStructuredData({
         license: img.license || license,
         creditText: img.creditText || creditText,
         copyrightNotice: img.copyrightNotice || copyrightNotice,
-        acquireLicensePage: img.buyLink || img.acquireLicensePage || acquireLicensePage,
+        acquireLicensePage: getLicenseUrl(img),
         creator: {
           "@type": "Person",
           name: creatorName,
@@ -148,7 +158,7 @@ export function getStructuredData({
       license: data.license || license,
       creditText: data.creditText || creditText,
       copyrightNotice: data.copyrightNotice || copyrightNotice,
-      acquireLicensePage: data.buyLink || data.acquireLicensePage || acquireLicensePage,
+      acquireLicensePage: getLicenseUrl(data),
       creator: {
         "@type": "Person",
         name: creatorName,
@@ -173,7 +183,7 @@ export function getStructuredData({
       mainEntityOfPage: { "@type": "WebPage", "@id": data.pageUrl || data.url },
       potentialAction: {
         "@type": "TradeAction",
-        target: data.buyLink || "https://www.k4studios.com/licensing",
+        target: getLicenseUrl(data),
         result: {
           "@type": "VisualArtwork",
           name: data.title,
@@ -191,7 +201,7 @@ export function getStructuredData({
             url: creatorUrl
           },
           license: data.license || license,
-          acquireLicensePage: data.buyLink || acquireLicensePage
+          acquireLicensePage: getLicenseUrl(data)
         }
       }
     };

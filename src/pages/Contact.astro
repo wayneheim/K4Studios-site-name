@@ -1,8 +1,36 @@
 ---
 import Layout from '../layouts/BaseLayout.astro'; // Adjust if needed
+
+// Check for licensing inquiry params
+const url = Astro.url;
+const licenseId = url.searchParams.get('license');
+const imageTitle = url.searchParams.get('title') || 'Untitled';
+const isLicenseInquiry = !!licenseId;
+
+// Build mailto with pre-filled content for licensing inquiries
+const baseEmail = 'wayneheim@aol.com';
+let mailtoLink = `mailto:${baseEmail}`;
+
+if (isLicenseInquiry) {
+  const subject = encodeURIComponent(`Licensing Inquiry: "${decodeURIComponent(imageTitle)}"`);
+  const body = encodeURIComponent(
+`Hello Wayne,
+
+I'm interested in licensing the following image from K4 Studios:
+
+Title: ${decodeURIComponent(imageTitle)}
+Image ID: ${licenseId}
+View at: https://k4studios.com/img/${licenseId}/l
+
+Please let me know about licensing options and pricing.
+
+Thank you!`
+  );
+  mailtoLink = `mailto:${baseEmail}?subject=${subject}&body=${body}`;
+}
 ---
 
-<Layout title="Contact Wayne Heim – K4 Studios">
+<Layout title={isLicenseInquiry ? `License "${decodeURIComponent(imageTitle)}" – K4 Studios` : "Contact Wayne Heim – K4 Studios"}>
   <main class="contact-page">
     <div class="content">
       <div class="logo-wrapper">
@@ -11,14 +39,32 @@ import Layout from '../layouts/BaseLayout.astro'; // Adjust if needed
         </a>
       </div>
 
-      <h1>Contact Wayne Heim</h1>
-      <p>
-        I love hearing from collectors, curators, historians, and fellow artists. Whether you're interested in a print,
-        have a question about my process, or just want to say hello — drop me a line.
-      </p>
+      {isLicenseInquiry ? (
+        <>
+          <h1>License This Image</h1>
+          <div class="license-preview">
+            <img src={`/img/${licenseId}/m`} alt={decodeURIComponent(imageTitle)} class="license-image" />
+            <p class="license-title">{decodeURIComponent(imageTitle)}</p>
+          </div>
+          <p>
+            Interested in licensing this image for print, commercial use, or personal collection? 
+            Click below to send a pre-filled inquiry email.
+          </p>
+        </>
+      ) : (
+        <>
+          <h1>Contact Wayne Heim</h1>
+          <p>
+            I love hearing from collectors, curators, historians, and fellow artists. Whether you're interested in a print,
+            have a question about my process, or just want to say hello — drop me a line.
+          </p>
+        </>
+      )}
 
       <div class="email-block">
-        <a href="mailto:wayneheim@aol.com" class="email-link">wayneheim@aol.com</a>
+        <a href={mailtoLink} class="email-link">
+          {isLicenseInquiry ? '📧 Send Licensing Inquiry' : 'wayneheim@aol.com'}
+        </a>
       </div>
 
       <p class="note">I usually respond within 1–2 business days.</p>
@@ -95,6 +141,30 @@ import Layout from '../layouts/BaseLayout.astro'; // Adjust if needed
     .email-link:hover {
       color: darkred;
       border-bottom: 2px solid darkred;
+    }
+
+    /* Licensing inquiry styles */
+    .license-preview {
+      margin: 1.5rem 0 2rem;
+      padding: 1rem;
+      background: #f9f7f5;
+      border-radius: 12px;
+      border: 1px solid #e8e4df;
+    }
+
+    .license-image {
+      max-width: 100%;
+      max-height: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .license-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #3e2c1c;
+      margin-top: 1rem;
+      margin-bottom: 0;
     }
 
     .note {
