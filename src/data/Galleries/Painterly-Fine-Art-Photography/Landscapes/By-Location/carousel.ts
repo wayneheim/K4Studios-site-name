@@ -47,6 +47,7 @@ function toSlide(img, path) {
   }
   return {
     href: `${path}/Gallery/${img.id}`,
+    id: img.id,
     src,
     alt: img.alt || img.title || '',
     description: img.description || ''

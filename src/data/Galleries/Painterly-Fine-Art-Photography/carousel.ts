@@ -28,6 +28,7 @@ function toSlide(img, path, idx, loading = "lazy") {
   }
   return {
     href: `${path}/${img.id}`,
+    id: img.id,
     src,
     srcS: img.srcS || '',
     srcM: img.srcM || '',

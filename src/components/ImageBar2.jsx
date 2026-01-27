@@ -27,17 +27,13 @@ function getCarouselSrcset(s) {
     return getCarouselProxySrcset(s.id);
   }
   // Fallback for old carousel data without sized sources
-  if (!s.srcM && !s.srcL && !s.srcXL) {
+  if (!s.srcM && !s.srcL) {
     return undefined;
   }
-  // Legacy fallback (should be removed once all carousels have IDs)
+  // Legacy fallback - M and L only (no XL needed for carousel)
   const sources = [];
   if (s.srcM) sources.push(`${s.srcM} 600w`);
   if (s.srcL) sources.push(`${s.srcL} 1024w`);
-  if (s.srcXL) sources.push(`${s.srcXL} 1600w`);
-  if (!s.srcXL && s.src && s.src !== s.srcL && s.src !== s.srcM) {
-    sources.push(`${s.src} 1600w`);
-  }
   return sources.length > 0 ? sources.join(', ') : undefined;
 }
 

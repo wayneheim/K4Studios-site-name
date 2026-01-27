@@ -64,13 +64,13 @@ export function getBestProxySrc(imageId, preferredSize = 'xl') {
 
 /**
  * Carousel-specific proxy srcset (M for mobile, L for desktop)
+ * No XL needed - carousel max height is 390px desktop, 200px mobile
  */
 export function getCarouselProxySrcset(imageId) {
   if (!imageId) return undefined;
   return [
     `${getProxySrc(imageId, 'm')} 600w`,
     `${getProxySrc(imageId, 'l')} 1024w`,
-    `${getProxySrc(imageId, 'xl')} 1600w`,
   ].join(', ');
 }
 

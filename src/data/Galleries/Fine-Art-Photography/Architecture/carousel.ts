@@ -41,6 +41,7 @@ function toSlide(img) {
   }
   return {
     href: `/Galleries/Fine-Art-Photography/Architecture/Gallery/${img.id}`,
+    id: img.id,
     src,
     alt: img.alt || img.title || '',
     description: img.description || ''

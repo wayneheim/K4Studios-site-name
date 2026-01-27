@@ -64,6 +64,7 @@ function toSlide(img) {
   }
   return {
     href: `/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/${cleanPath}/${cleanId}`,
+    id: img.id,
     src,
     alt: img.alt || img.title || '',
     description: img.description || '',
