@@ -139,7 +139,7 @@ const middleIndex = Math.floor(visibleImages.length / 2);
           style={`animation-delay: ${delay}ms`}
         >
           <img
-            src={img.src}
+            src={`/img/${img.id}/s`}
             alt={img.alt ?? img.title ?? "Gallery image"}
             loading="lazy"
           />

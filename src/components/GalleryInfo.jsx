@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../styles/galleryinfo.css";
 import ThemeBlock from "./ThemeBlock.jsx";
+import { warmImage } from "../utils/warmImage";
 
 /* ---------------------------------------------------------
    Glob all gallery data files
@@ -100,6 +101,29 @@ export default function GalleryInfo({
     targetImageId && trimmedBase
       ? `${trimmedBase}/${targetImageId}`
       : "#";
+
+  // Warm clickable images on landing page at 'l' size
+  // - Sample/hero image (entranceData.image)
+  // - First image (for "Explore the Gallery" click)
+  // - Preview strip images (first 6)
+  useEffect(() => {
+    // Warm the sample/hero image if it has an ID
+    if (entranceData?.image?.id) {
+      warmImage(entranceData.image.id, 'l');
+    }
+    
+    // Warm first image for "Explore the Gallery"
+    if (lowestSortImage?.id) {
+      warmImage(lowestSortImage.id, 'l');
+    }
+    
+    // Warm preview strip (first 6) at 'l' for direct clicks
+    if (galleryData?.length) {
+      galleryData.slice(0, 6).forEach(img => {
+        if (img?.id) warmImage(img.id, 'l');
+      });
+    }
+  }, [entranceData?.image?.id, lowestSortImage?.id, galleryData?.length]);
 
   return (
     <>

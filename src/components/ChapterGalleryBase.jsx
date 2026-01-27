@@ -837,18 +837,17 @@ export default function ChapterGalleryBase({
     }
   }, [currentIndex, galleryData, viewMode]);
 
-  // Phase 2: Gallery landing warm - warm initial image + preview strip
+  // Phase 2: Gallery landing warm - warm images that are clickable on landing page
   // Uses galleryData.length as dep so it runs once data is actually loaded
   useEffect(() => {
     if (!galleryData?.length) return;
     
-    // Warm initial current image at 'l' size
-    if (galleryData[currentIndex]?.id) {
-      warmImage(galleryData[currentIndex].id, 'l');
-    }
+    // Warm first image at 'l' for "Explore the Gallery" click
+    warmImage(galleryData[0].id, 'l');
     
-    // Warm preview strip (first 6) at 'm' size
-    galleryData.slice(0, 6).forEach(img => warmImage(img.id, 'm'));
+    // Warm preview strip images at 'l' (not 'm')
+    // These thumbnails display at 's' but clicking them enters viewer at 'l'
+    galleryData.slice(0, 6).forEach(img => warmImage(img.id, 'l'));
   }, [galleryData.length]); // Run once when data loads
 
   // ═══════════════════════════════════════════════════════════════════════════
