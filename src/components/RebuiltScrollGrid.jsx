@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, loadSeriesRegistry } from "../data/seriesDefinitions.js";
 import { getProxySrc } from "@/utils/imageProxy.js";
+import { warmImage } from "../utils/warmImage";
 
 const BATCH_SIZES = { 1: 25, 2: 24, 3: 30 };
 
@@ -124,6 +125,14 @@ export default function RebuiltScrollGrid({
         img.decoding = "async";
         img.loading = "eager";
         img.src = url;
+      }
+    });
+    
+    // Pre-warm next 9 images in Cloudflare proxy cache (above the fold for next batch)
+    // This ensures CF cache is hot before user clicks "Show More"
+    galleryData.slice(preloadStart, Math.min(preloadStart + 9, galleryData.length)).forEach((entry) => {
+      if (entry?.id) {
+        warmImage(entry.id, 'm'); // Grid cards use M size
       }
     });
   }, [end, colCount, galleryData]);

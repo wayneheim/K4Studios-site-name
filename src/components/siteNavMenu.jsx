@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { siteNav } from "../data/siteNav.ts";
+import { handleGalleryNavClick } from "../utils/prefetchGallery.ts";
 import "../styles/siteNavMenu.css";
 
 export default function SiteNavMenu({ forceMobile = false }) {
@@ -144,6 +145,10 @@ export default function SiteNavMenu({ forceMobile = false }) {
           className={depth ? "menu-link has-expand" : "nav-link has-expand"}
           title={!hasKids ? getLeafLabel() : node.label}
           aria-label={!hasKids ? getLeafLabel() : node.label}
+          onClick={node.type === 'gallery-source' ? (e) => {
+            e.preventDefault();
+            handleGalleryNavClick(node.href);
+          } : undefined}
         >
           {!hasKids ? getLeafLabel() : node.label}
         </a>
