@@ -95,12 +95,17 @@ export default function GalleryInfo({
   const galleryData = loadGalleryDataFor(trimmedBase);
   const lowestSortImage = pickFirstRealImage(galleryData);
 
-  // Use entrance image ID if provided, otherwise fall back to first image
-  const targetImageId = entranceData?.image?.id || lowestSortImage?.id;
+  // "Explore the Gallery" always goes to first image in gallery
   const exploreHref =
-    targetImageId && trimmedBase
-      ? `${trimmedBase}/${targetImageId}`
+    lowestSortImage?.id && trimmedBase
+      ? `${trimmedBase}/${lowestSortImage.id}`
       : "#";
+  
+  // Preview/sample image click goes to that specific image
+  const previewImageHref =
+    entranceData?.image?.id && trimmedBase
+      ? `${trimmedBase}/${entranceData.image.id}`
+      : exploreHref; // Fall back to first image if no preview ID
 
   // Warm clickable images on landing page at 'l' size
   // - Sample/hero image (entranceData.image)
@@ -171,7 +176,7 @@ export default function GalleryInfo({
           <div className="mobile-image-section">
             {entranceData?.image && (
               <a
-                href={exploreHref}
+                href={previewImageHref}
                 className="mobile-sample-image"
                 style={{
                   textDecoration: 'none',
@@ -210,7 +215,7 @@ export default function GalleryInfo({
           {/* Desktop: Image first, then ThemeBlock below */}
           {entranceData?.image && (
             <a
-              href={exploreHref}
+              href={previewImageHref}
               className="desktop-sample-image"
               style={{
                 textDecoration: 'none',
@@ -219,7 +224,7 @@ export default function GalleryInfo({
                 cursor: 'pointer',
                 marginBottom: '0.75rem'
               }}
-              aria-label="Explore the gallery"
+              aria-label="View this image"
               onMouseEnter={() => {
                 // Trigger glow effect on explore button
                 const exploreButton = document.querySelector('.explore-section');
