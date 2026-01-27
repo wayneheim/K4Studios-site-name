@@ -8,9 +8,19 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor,
   const [maxImageHeight, setMaxImageHeight] = useState(() =>
     Math.round(window.innerHeight * 0.8)
   );
+  const [xlLoaded, setXlLoaded] = useState(false);
   const frameRef = useRef(null);
   const bottomRef = useRef(null);
   const lensRef = useRef(null);
+
+  // Preload XL image and track when ready for crossfade
+  useEffect(() => {
+    if (!imageData?.id) return;
+    setXlLoaded(false);
+    const xlImg = new Image();
+    xlImg.onload = () => setXlLoaded(true);
+    xlImg.src = getProxySrc(imageData.id, 'xl');
+  }, [imageData?.id]);
 
   // Detect mobile
   useEffect(() => {
@@ -269,22 +279,47 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor,
               position: "relative", // needed for lens positioning
             }}
           >
-            <div style={cutEdge}>
+            <div style={{ ...cutEdge, position: 'relative' }}>
+              {/* L image - shows immediately from cache, fades out when XL ready */}
               <img
-                src={imageData.id ? getProxySrc(imageData.id, 'xl') : imageData.src}
+                src={imageData.id ? getProxySrc(imageData.id, 'l') : imageData.src}
                 alt={imageData.title}
                 style={{
                   maxWidth: "100%",
                   maxHeight: maxImageHeight + "px",
                   objectFit: "contain",
                   display: "block",
-                  // Engrained: bevel edge with light top/left, dark bottom/right
-                  // Regular: simple gray border
                   border: isEngrained ? "none" : "1px solid #bbb",
                   borderTop: isEngrained ? "3px solid rgba(220,200,180,0.75)" : undefined,
                   borderLeft: isEngrained ? "3px solid rgba(220,200,180,0.75)" : undefined,
                   borderBottom: isEngrained ? "3px solid rgba(140,120,100,0.6)" : undefined,
                   borderRight: isEngrained ? "3px solid rgba(140,120,100,0.6)" : undefined,
+                  opacity: xlLoaded ? 0 : 1,
+                  transition: 'opacity 0.3s ease-out',
+                }}
+                draggable={false}
+                onDragStart={(e) => e.preventDefault()}
+                onContextMenu={(e) => e.preventDefault()}
+              />
+              {/* XL image - fades in when loaded */}
+              <img
+                src={imageData.id ? getProxySrc(imageData.id, 'xl') : imageData.src}
+                alt={imageData.title}
+                style={{
+                  position: 'absolute',
+                  top: isEngrained ? 0 : 6, // match cutEdge padding
+                  left: isEngrained ? 0 : 6,
+                  maxWidth: "100%",
+                  maxHeight: maxImageHeight + "px",
+                  objectFit: "contain",
+                  display: "block",
+                  border: isEngrained ? "none" : "1px solid #bbb",
+                  borderTop: isEngrained ? "3px solid rgba(220,200,180,0.75)" : undefined,
+                  borderLeft: isEngrained ? "3px solid rgba(220,200,180,0.75)" : undefined,
+                  borderBottom: isEngrained ? "3px solid rgba(140,120,100,0.6)" : undefined,
+                  borderRight: isEngrained ? "3px solid rgba(140,120,100,0.6)" : undefined,
+                  opacity: xlLoaded ? 1 : 0,
+                  transition: 'opacity 0.3s ease-in',
                 }}
                 draggable={false}
                 onDragStart={(e) => e.preventDefault()}
