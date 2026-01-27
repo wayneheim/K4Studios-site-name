@@ -145,6 +145,7 @@ export default function SiteNavMenu({ forceMobile = false }) {
           className={depth ? "menu-link has-expand" : "nav-link has-expand"}
           title={!hasKids ? getLeafLabel() : node.label}
           aria-label={!hasKids ? getLeafLabel() : node.label}
+          {...(node.external ? { target: "_blank", rel: "nofollow noopener noreferrer" } : {})}
           onClick={node.type === 'gallery-source' ? (e) => {
             e.preventDefault();
             handleGalleryNavClick(node.href);

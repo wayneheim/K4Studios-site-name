@@ -28,6 +28,7 @@ function MenuBranch({ node, depth = 0, delay = 0, reset }) {
         <a
           href={node.href || "#"}
           className={depth ? "menu-link has-expand" : "nav-link has-expand"}
+          {...(node.external ? { target: "_blank", rel: "nofollow noopener noreferrer" } : {})}
           onClick={handleClick}
         >
           {hasKids && (

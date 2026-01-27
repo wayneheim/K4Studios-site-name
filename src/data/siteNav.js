@@ -633,7 +633,8 @@ export const siteNav = [
       "href": "https://wayne-heim.smugmug.com/Other/Photo-Shoots",
       "code": "O-S4",
       "slug": "photo-shoots",
-      "type": "collection"
+      "type": "collection",
+      "external": true
     },
       {
         "label": "Blog",

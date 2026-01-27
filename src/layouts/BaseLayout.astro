@@ -1,5 +1,6 @@
 ---
 import GalleryTourSkipClearer from "../components/GalleryTourSkipClearer.jsx";
+import { normalizeImageSrc, extractImageId } from "@/utils/imageProxy.js";
 
 export const prerender = true;
 
@@ -109,13 +110,31 @@ if (isImagePage && preloadImage?.src) {
 const canonicalUrl = ensureAbsoluteUrl(meta.canonicalUrl || Astro.url?.pathname || '/');
 const ogUrl = canonicalUrl;
 
-const ogImage = ensureAbsoluteUrl(rawOgImage).replace(/^http:/, 'https:');
-const ogImageSecureUrl = ensureAbsoluteUrl(meta.ogImageSecureUrl || rawOgImage)?.replace(/^http:/, 'https:');
+// Convert any SmugMug URLs to proxy format for OG images
+const toAbsoluteProxyUrl = (src: string, size = 'xl') => {
+  if (!src) return '';
+  // If it's already a local/static image, just make it absolute
+  if (src.startsWith('/images/')) return ensureAbsoluteUrl(src);
+  // Extract image ID and convert to absolute proxy URL
+  const imageId = extractImageId(src) || (src.startsWith('i-') ? src : null);
+  if (imageId) {
+    return `https://k4studios.com/img/${imageId}/${size}`;
+  }
+  // Already a proxy URL? Make it absolute
+  if (src.startsWith('/img/')) {
+    return `https://k4studios.com${src}`;
+  }
+  // Fallback - try to use as-is (shouldn't happen)
+  return ensureAbsoluteUrl(src);
+};
+
+const ogImage = toAbsoluteProxyUrl(rawOgImage, 'xl');
+const ogImageSecureUrl = ogImage;
 
 const ogType = isImagePage ? "article" : (meta.ogType || "website");
 
 const twitterTitle = meta.twitterTitle || cleanTitle;
-const twitterImage = ensureAbsoluteUrl(meta.twitterImage || rawOgImage).replace(/^http:/, 'https:');
+const twitterImage = toAbsoluteProxyUrl(meta.twitterImage || rawOgImage, 'xl');
 const twitterUrl = ogUrl;
 
 const inferMimeType = (url) => {

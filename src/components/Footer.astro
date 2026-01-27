@@ -3,6 +3,7 @@ const currentYear = new Date().getFullYear();
 import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 import BlogGalleryPreviewStrip from './BlogGalleryPreviewStrip.astro';
 import ShareDrawer from '@/components/ShareDrawer.jsx';
+import { extractImageId } from '@/utils/imageProxy.js';
 
 const { previewImages = [], previewPath = "", title = "", currentImageUrl, label } = Astro.props;
 
@@ -19,8 +20,25 @@ const showPreviewBar =
   previewPath &&
   !isImagePage;
 
+// Convert any SmugMug URL to absolute proxy URL for sharing
+const toShareUrl = (src: string | undefined) => {
+  if (!src) return undefined;
+  // Already a proxy URL - make absolute
+  if (src.startsWith('/img/')) return `https://k4studios.com${src}`;
+  // Static image - make absolute  
+  if (src.startsWith('/images/')) return `https://k4studios.com${src}`;
+  // Extract ID from SmugMug URL and convert to proxy
+  const imageId = extractImageId(src);
+  if (imageId) return `https://k4studios.com/img/${imageId}/xl`;
+  // Already absolute proxy URL
+  if (src.includes('k4studios.com/img/')) return src;
+  // Unknown - return undefined to avoid leaking
+  return undefined;
+};
+
 // fallback share image if previewImages[0] is undefined
-let shareImage = currentImageUrl || previewImages?.[0]?.src || undefined;
+const rawShareImage = currentImageUrl || previewImages?.[0]?.src || previewImages?.[0]?.id;
+const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `https://k4studios.com/img/${previewImages[0].id}/xl` : undefined);
 ---
 
 <footer
