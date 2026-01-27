@@ -585,10 +585,10 @@ const structuredData = getStructuredData({
                       return (
                         <li class="rounded-2xl border border-gray-200 p-5 shadow-sm hover:shadow transition-shadow">
                           <div class="flex items-start gap-4">
-                            {t.origin === "image" && t.example && t.example.src && (
+                            {t.origin === "image" && t.example && t.example.id && (
                               <a href={t.example.href} class="shrink-0 rounded-xl overflow-hidden border border-gray-200">
                                 <img
-                                  src={t.example.src}
+                                  src={`/img/${t.example.id}/s`}
                                   alt={t.example.alt || t.example.title || t.label}
                                   loading="lazy"
                                   class="block h-20 w-28 object-cover"

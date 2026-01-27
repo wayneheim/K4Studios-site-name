@@ -1,4 +1,24 @@
 // src/components/utils/getStructuredData.ts
+
+// Helper to convert image to proxy URL (never expose SmugMug URLs in structured data)
+function getProxyUrl(img: any, size: string = 'l'): string {
+  // If we have an id, use the proxy
+  if (img.id && img.id.startsWith('i-')) {
+    return `https://k4studios.com/img/${img.id}/${size}`;
+  }
+  // Try to extract id from src URL
+  const idMatch = img.src?.match(/\/(i-[a-zA-Z0-9]+)\//);
+  if (idMatch) {
+    return `https://k4studios.com/img/${idMatch[1]}/${size}`;
+  }
+  // Fallback: if it's already a k4studios URL, use it
+  if (img.src?.includes('k4studios.com')) {
+    return img.src;
+  }
+  // Last resort: return empty (shouldn't happen with proper data)
+  return '';
+}
+
 export function getStructuredData({
   type,
   data,
@@ -36,38 +56,41 @@ export function getStructuredData({
      TYPE: GALLERY / COLLECTION PAGE
   ============================================================ */
   if (type === "gallery") {
-    const featuredImages = images.slice(0, 8).map((img) => ({
-      "@type": "ImageObject",
-      "@id": `${img.src}#image`,
-      url: img.src,
-      name: img.title,
-      caption: img.description || img.alt || img.title,
-      inLanguage: "en",
-      encodingFormat: img.mimeType || "image/jpeg",
-      license: img.license || license,
-      creditText: img.creditText || creditText,
-      copyrightNotice: img.copyrightNotice || copyrightNotice,
-      acquireLicensePage: img.buyLink || img.acquireLicensePage || acquireLicensePage,
-      creator: {
-        "@type": "Person",
-        name: creatorName,
-        url: creatorUrl,
-        ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
-      },
-      copyrightHolder: {
-        "@type": "Person",
-        name: creatorName,
-        url: creatorUrl,
-      },
-      datePublished: img.datePublished || img.dateCreated || todayIso,
-      dateModified: img.dateModified || img.datePublished || todayIso,
-      ...(img.keywords?.length
-        ? { keywords: Array.isArray(img.keywords) ? img.keywords.join(", ") : img.keywords }
-        : {}),
-      ...(img.thumbnailUrl ? { thumbnailUrl: img.thumbnailUrl } : {}),
-      ...(img.width ? { width: img.width } : {}),
-      ...(img.height ? { height: img.height } : {}),
-    }));
+    const featuredImages = images.slice(0, 8).map((img) => {
+      const proxyUrl = getProxyUrl(img, 'l');
+      return {
+        "@type": "ImageObject",
+        "@id": proxyUrl ? `${proxyUrl}#image` : undefined,
+        url: proxyUrl || undefined,
+        name: img.title,
+        caption: img.description || img.alt || img.title,
+        inLanguage: "en",
+        encodingFormat: img.mimeType || "image/jpeg",
+        license: img.license || license,
+        creditText: img.creditText || creditText,
+        copyrightNotice: img.copyrightNotice || copyrightNotice,
+        acquireLicensePage: img.buyLink || img.acquireLicensePage || acquireLicensePage,
+        creator: {
+          "@type": "Person",
+          name: creatorName,
+          url: creatorUrl,
+          ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
+        },
+        copyrightHolder: {
+          "@type": "Person",
+          name: creatorName,
+          url: creatorUrl,
+        },
+        datePublished: img.datePublished || img.dateCreated || todayIso,
+        dateModified: img.dateModified || img.datePublished || todayIso,
+        ...(img.keywords?.length
+          ? { keywords: Array.isArray(img.keywords) ? img.keywords.join(", ") : img.keywords }
+          : {}),
+        ...(img.thumbnailUrl ? { thumbnailUrl: getProxyUrl(img, 's') } : {}),
+        ...(img.width ? { width: img.width } : {}),
+        ...(img.height ? { height: img.height } : {}),
+      };
+    });
 
     const collectionObj: any = {
       "@context": "https://schema.org",
@@ -110,15 +133,16 @@ export function getStructuredData({
      TYPE: IMAGE / ARTWORK PAGE
   ============================================================ */
   if (type === "image") {
+    const proxyUrl = getProxyUrl(data, 'l');
     const obj: any = {
       "@context": "https://schema.org",
       "@type": "ImageObject",
-      "@id": `${data.src}#image`,
+      "@id": proxyUrl ? `${proxyUrl}#image` : `${data.url}#image`,
       name: data.title,
       description: data.description,
       caption: data.alt || data.title,
-      contentUrl: data.src,
-      url: data.src,
+      contentUrl: proxyUrl || undefined,
+      url: proxyUrl || undefined,
       encodingFormat: data.mimeType || "image/jpeg",
       identifier: data.id || data.smugId || data.src?.split("/").pop() || "",
       license: data.license || license,
@@ -234,7 +258,7 @@ export function getStructuredData({
       image:
         data.image ||
         (images.length
-          ? images.map((img) => img.src)
+          ? images.map((img) => getProxyUrl(img, 'l')).filter(Boolean)
           : "https://www.k4studios.com/images/K4Logo-web-c.webp"),
       datePublished: ensureIsoWithTimezone(data.datePublished),
       dateModified: ensureIsoWithTimezone(data.dateModified || data.datePublished),
