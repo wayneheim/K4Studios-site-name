@@ -7,10 +7,10 @@ export const landingWestern = {
   tombstones: [
    // {
    //   title: 'Painterly Landscape Photography',
-  //    href: '/Galleries/Painterly-Fine-Art-Photography/Landscapes',
- //     imageId: "i-mCJv3RM",
-      thumb: "/img/i-mCJv3RM/s",
-//    },
+   //   href: '/Galleries/Painterly-Fine-Art-Photography/Landscapes',
+   //   imageId: "i-mCJv3RM",
+   //   thumb: "/img/i-mCJv3RM/s",
+   // },
    
   ]
 };

@@ -9,8 +9,8 @@ export const landingWestern = {
   //  {
   //    title: 'Featured Gallery: The Engrained Series',
   //    href: '',
-//      imageId: "i-NR6g97d",
-      thumb: "/img/i-NR6g97d/s",
+  //    imageId: "i-NR6g97d",
+  //    thumb: "/img/i-NR6g97d/s",
   //  },
   ]
 };
