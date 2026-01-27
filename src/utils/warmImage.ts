@@ -15,7 +15,12 @@
 
 const warmed = new Set<string>();
 
-export function warmImage(imageId: string, size: 's' | 'm' | 'l' | 'xl') {
+export function warmImage(
+  imageId: string,
+  size: 's' | 'm' | 'l' | 'xl' = 'l'
+) {
+  // Guard against malformed calls that could poison browser cache
+  if (!imageId || !size) return;
   if (typeof window === 'undefined') return;
 
   const key = `${imageId}:${size}`;
