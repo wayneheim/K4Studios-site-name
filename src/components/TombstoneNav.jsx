@@ -1,12 +1,45 @@
 import { useState, useEffect } from 'react';
 import { buildContextualAlt, getPageContext } from '../utils/buildContextualAlt';
 
+/**
+ * Normalize any thumb URL to a proper proxy URL
+ * Handles:
+ * - SmugMug URLs: extracts ID → /img/{id}/m
+ * - Absolute proxy URLs: converts to relative /img/{id}/m  
+ * - Already relative /img/... URLs: returns as-is
+ * - Local static images (/images/...): returns as-is
+ */
+function normalizeThumbUrl(url) {
+  if (!url) return '';
+  
+  // Already a relative proxy URL - good
+  if (url.startsWith('/img/')) return url;
+  
+  // Local static image - keep as-is
+  if (url.startsWith('/images/')) return url;
+  
+  // Extract image ID from SmugMug URL pattern: /i-XXXXXX/
+  const smugMugMatch = url.match(/\/(i-[a-zA-Z0-9]+)\//);
+  if (smugMugMatch) {
+    return `/img/${smugMugMatch[1]}/m`;
+  }
+  
+  // Absolute proxy URL - convert to relative
+  const proxyMatch = url.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)/);
+  if (proxyMatch) {
+    return `/img/${proxyMatch[1]}/${proxyMatch[2]}`;
+  }
+  
+  // Unknown format - return as-is (might be external or placeholder)
+  return url;
+}
+
 export default function TombstoneNav({ items = [], title, subtitle, pageContext: propPageContext }) {
   const gridClass = `tile-grid${items.length === 2 ? ' two-tiles' : ''}`;
 
   // Client-side random thumb selection from thumbs array
   const [selectedThumbs, setSelectedThumbs] = useState(() => 
-    items.map(item => item.thumbs?.[0] || item.thumb || '')
+    items.map(item => normalizeThumbUrl(item.thumbs?.[0] || item.thumb || ''))
   );
   
   // Resolved page context (from prop or auto-detected from path)
@@ -24,10 +57,13 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
     
     // On mount, pick random thumbs from the thumbs array if available
     setSelectedThumbs(items.map(item => {
+      let thumb;
       if (item.thumbs && item.thumbs.length > 0) {
-        return item.thumbs[Math.floor(Math.random() * item.thumbs.length)];
+        thumb = item.thumbs[Math.floor(Math.random() * item.thumbs.length)];
+      } else {
+        thumb = item.thumb || '';
       }
-      return item.thumb || '';
+      return normalizeThumbUrl(thumb);
     }));
   }, [items, propPageContext]);
 

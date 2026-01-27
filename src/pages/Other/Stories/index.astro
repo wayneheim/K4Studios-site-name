@@ -4,6 +4,7 @@ import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
+import { normalizeImageSrc } from "@/utils/imageProxy.js";
 
 import { stories } from "@/data/Other/Stories/stories.mjs";
 import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
@@ -35,7 +36,7 @@ const structuredData = getStructuredData({
     url: `https://k4studios.com${sectionPath}`,
     copyrightNotice: "© Wayne Heim",
     author: { "@type": "Person", name: "Wayne Heim" },
-    image: stories.map(story => story.cover),
+    image: stories.map(story => `https://k4studios.com${normalizeImageSrc(story.cover, 'l')}`),
     articleSection: "Visual Storytelling",
     keywords: ["picture shows", "visual stories", "cinematic narratives", "western fine art", "Wayne Heim", "immersive photography", "themed exhibitions"],
     wordCount: 900
@@ -67,7 +68,7 @@ const itemListStructuredData = {
     headline: story.title,
     url: `https://k4studios.com/Other/Stories/${story.slug}`,
     datePublished: story.date,
-    image: story.cover,
+    image: `https://k4studios.com${normalizeImageSrc(story.cover, 'l')}`,
     description: story.excerpt,
     author: { "@type": "Person", name: "Wayne Heim" }
   }))
@@ -172,7 +173,7 @@ const galleryPaths = Object.keys(galleryDataMap);
             <div class="flex flex-col md:flex-row md:items-start gap-4">
               <a href={`/Other/Stories/${story.slug}`} aria-label={story.title} class="flex-shrink-0">
                 <img
-                  src={story.cover}
+                  src={normalizeImageSrc(story.cover, 's')}
                   alt={story.alt || story.title}
                   class="rounded-2xl shadow max-w-[120px] h-[120px] object-cover"
                   style="aspect-ratio: 1/1;"

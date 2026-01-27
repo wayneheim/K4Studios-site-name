@@ -4,6 +4,7 @@ import { createPortal } from "react-dom";
 import { ShoppingCart, VolumeX, Volume2 } from "lucide-react";
 import PunchInIntro from "./PunchInIntro.jsx";
 import { getProxySrc } from "@/utils/imageProxy.js";
+import { warmImage } from "../utils/warmImage";
 
 // Helper function to select the best image source for slideshow display
 // Uses proxy URL to avoid exposing SmugMug URLs in rendered HTML
@@ -140,6 +141,30 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
   );
   const current = orderedImages[index];
   const isVertical = current?.aspectRatio && current.aspectRatio < 1;
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Slideshow XL warming (matches Gallery-Slideshow.jsx)
+  // During intro: warm first 2 images at xl
+  // Rolling: warm N+1 and N+2 as slideshow advances
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  // Warm first 2 images during intro overlay (free warm time)
+  useEffect(() => {
+    if (!isIntro || !orderedImages?.length) return;
+    orderedImages.slice(0, 2).forEach(img => {
+      if (img?.id) warmImage(img.id, 'xl');
+    });
+  }, [isIntro, orderedImages]);
+
+  // Rolling warm: as index advances, warm next 2 images at xl
+  useEffect(() => {
+    if (!orderedImages?.length) return;
+    orderedImages.slice(index + 1, index + 3).forEach(img => {
+      if (img?.id) warmImage(img.id, 'xl');
+    });
+  }, [index, orderedImages]);
+
+  // ═══════════════════════════════════════════════════════════════════════════
 
   // Compute image max sizes to avoid cropping and use more space for portrait
   const imgStyle = useMemo(() => {

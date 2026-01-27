@@ -4,6 +4,7 @@ import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
+import { normalizeImageSrc } from "@/utils/imageProxy.js";
 
 import { posts } from "@/data/Other/Blog/posts.mjs"; // new dataset
 import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
@@ -43,7 +44,7 @@ const structuredData = getStructuredData({
       headline: p.title,
       datePublished: p.date,
       description: p.excerpt,
-      image: p.cover,
+      image: `https://k4studios.com${normalizeImageSrc(p.cover, 'l')}`,
       url: `https://k4studios.com/Blog/${p.slug}`
     }))
   },
@@ -124,7 +125,7 @@ const galleryPaths = Object.keys(galleryDataMap);
             <div class="flex flex-col md:flex-row md:items-start gap-4">
               <a href={`/Blog/${post.slug}`} aria-label={post.title} class="flex-shrink-0">
                 <img
-                  src={post.cover}
+                  src={normalizeImageSrc(post.cover, 'm')}
                   alt={post.title}
                   class="rounded-2xl shadow max-w-[200px] h-[200px] object-cover"
                   style="aspect-ratio: 1/1;"

@@ -5,13 +5,72 @@
  * This ensures SmugMug URLs never appear in rendered HTML.
  * 
  * Usage:
- *   import { getProxySrc, getProxySrcset } from '@/utils/imageProxy.js';
+ *   import { getProxySrc, getProxySrcset, normalizeImageSrc } from '@/utils/imageProxy.js';
  *   
  *   <img src={getProxySrc(image.id, 'm')} />
  *   <img src={getProxySrc(image.id, 'xl')} srcset={getProxySrcset(image.id)} />
+ *   <img src={normalizeImageSrc(anyUrl)} /> // Handles SmugMug URLs, IDs, or local paths
  */
 
 const VALID_SIZES = ['s', 'm', 'l', 'xl', 'src'];
+
+/**
+ * Extract image ID from various URL formats
+ * @param {string} url - SmugMug URL, proxy URL, or image ID
+ * @returns {string|null} Image ID like "i-abc123" or null
+ */
+export function extractImageId(url) {
+  if (!url || typeof url !== 'string') return null;
+  
+  // Already just an ID
+  if (/^i-[a-zA-Z0-9]+$/.test(url)) return url;
+  
+  // SmugMug URL pattern: /i-XXXXXX/
+  const smugMugMatch = url.match(/\/(i-[a-zA-Z0-9]+)\//);
+  if (smugMugMatch) return smugMugMatch[1];
+  
+  // Proxy URL pattern: /img/i-XXXXXX/size
+  const proxyMatch = url.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)/);
+  if (proxyMatch) return proxyMatch[1];
+  
+  return null;
+}
+
+/**
+ * Normalize any image source to proper format
+ * - SmugMug URLs → proxy URLs (/img/{id}/{size})
+ * - Absolute proxy URLs → relative proxy URLs
+ * - Local paths (/images/...) → unchanged
+ * - Image IDs → proxy URLs
+ * 
+ * @param {string} src - Any image source
+ * @param {string} size - Size for proxy URLs (default: 'm')
+ * @returns {string} Normalized URL
+ */
+export function normalizeImageSrc(src, size = 'm') {
+  if (!src || typeof src !== 'string') return '';
+  
+  // Already a relative proxy URL - extract ID and rebuild with requested size
+  if (src.startsWith('/img/')) {
+    const proxyMatch = src.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)/);
+    if (proxyMatch) {
+      return getProxySrc(proxyMatch[1], size);
+    }
+    return src;
+  }
+  
+  // Local static image - keep as-is
+  if (src.startsWith('/images/')) return src;
+  
+  // Try to extract an image ID
+  const imageId = extractImageId(src);
+  if (imageId) {
+    return getProxySrc(imageId, size);
+  }
+  
+  // Unknown format - return as-is (might be external or placeholder)
+  return src;
+}
 
 /**
  * Generate a proxy URL for an image

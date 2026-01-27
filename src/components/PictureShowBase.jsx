@@ -6,17 +6,16 @@ import "../styles/global.css";
 import ShareDrawer from "./ShareDrawer.jsx";
 import SimpleStoryShow from "./Gallery-Slideshow.jsx";
 import StoryShowWithAudio from "./Gallery-Slideshow-Story.jsx";
-
-// ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id, size = "xl") => `/img/${id}/${size}`;
+import { getProxySrc, normalizeImageSrc } from "../utils/imageProxy.js";
+import { warmImage } from "../utils/warmImage";
 
 // Helper function to select the best image source for slideshow display
 const getBestImageSrc = (image) => {
   if (!image) return "";
   // Use proxy if we have an ID
   if (image.id) return getProxySrc(image.id, 'xl');
-  // Fallback for legacy data without ID
-  return image.srcXL || image.srcL || image.srcM || image.src || "";
+  // Normalize any URL to proxy format
+  return normalizeImageSrc(image.srcXL || image.srcL || image.srcM || image.src || "", 'xl');
 };
 
 export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score", introMeta = {}, outroMeta = {} }) {
@@ -486,6 +485,50 @@ useEffect(() => {
     return () => clearTimeout(t);
   }, [currentIndex]);
 
+  // Preload Chapter Index thumbnails when user reaches second-to-last slide
+  useEffect(() => {
+    const isSecondToLast = currentIndex === filteredData.length - 1;
+    if (!isSecondToLast) return;
+    
+    // Get the list of images for the Chapter Index (exclude system images)
+    const chapterImages = filteredData.filter(img => 
+      img.id !== "i-k4studios" &&
+      img.id !== "i-k4video-intro" &&
+      img.id !== "i-k4video-outro" &&
+      !img._isIntro &&
+      !img._isOutro
+    );
+    
+    // Preload each thumbnail using small size
+    chapterImages.forEach(img => {
+      const proxyUrl = normalizeImageSrc(img.src, 's');
+      if (proxyUrl && proxyUrl.startsWith('/img/')) {
+        const preloadImg = new Image();
+        preloadImg.src = proxyUrl;
+      }
+    });
+  }, [currentIndex, filteredData]);
+
+  // Preload next/prev images when navigating through the story
+  useEffect(() => {
+    if (!filteredData?.length || currentIndex === 0) return;
+    
+    // Warm current image at 'xl' size
+    if (filteredData[currentIndex]?.id) {
+      warmImage(filteredData[currentIndex].id, 'xl');
+    }
+    
+    // Warm previous image at 'xl' size
+    if (currentIndex > 1 && filteredData[currentIndex - 1]?.id) {
+      warmImage(filteredData[currentIndex - 1].id, 'xl');
+    }
+    
+    // Warm next image at 'xl' size
+    if (currentIndex < filteredData.length - 1 && filteredData[currentIndex + 1]?.id) {
+      warmImage(filteredData[currentIndex + 1].id, 'xl');
+    }
+  }, [currentIndex, filteredData]);
+
 // ✅ Simple speech status check (MP3 only, no TTS)
 const isSpeechActive = () => {
   return isSpeaking;
@@ -722,11 +765,9 @@ const isSpeechActive = () => {
                       key={idx}
                       href={img.galleries && img.galleries.length > 0 ? `/Galleries/${img.galleries[0].replace('Galleries/', '').replace('.mjs', '')}/${img.id}` : "#"}
                       className="group block rounded-md overflow-hidden border border-gray-300 hover:shadow-md transition-all"
-                      target="_blank"
-                      rel="noopener noreferrer"
                     >
                       <img
-                        src={img.src}
+                        src={normalizeImageSrc(img.src, 's')}
                         alt={img.alt || img.title}
                         className="w-[110px] h-[110px] object-cover group-hover:opacity-90"
                       />
@@ -925,7 +966,7 @@ const isSpeechActive = () => {
                       >
                         {/* Base image (show only when not hovered) */}
                         <img
-                          src={currentImage?.src}
+                          src={normalizeImageSrc(currentImage?.src, 'xl')}
                           alt={currentImage?.alt || currentImage?.title}
                           className="w-full h-full object-contain"
                           style={{ opacity: isCardHovered ? 0 : 1, transition: 'opacity 500ms ease-out' }}
@@ -934,7 +975,7 @@ const isSpeechActive = () => {
                         {/* Hover phase 1 */}
                         {currentImage?.src2 && (
                           <img
-                            src={currentImage.src2}
+                            src={normalizeImageSrc(currentImage.src2, 'xl')}
                             alt=""
                             className="absolute inset-0 w-full h-full object-contain"
                             style={{ opacity: isCardHovered ? 1 : 0, transition: 'opacity 500ms ease-out', pointerEvents: 'none' }}
@@ -944,12 +985,13 @@ const isSpeechActive = () => {
                         {/* Hover phase 2 (animated gif) */}
                         {currentImage?.src3 && (
                           <img
-                            src={currentImage.src3}
+                            src={normalizeImageSrc(currentImage.src3, 'xl')}
                             alt=""
                             className="absolute inset-0 w-full h-full object-contain"
                             style={{ opacity: hoverPhase === 2 ? 1 : 0, transition: 'opacity 500ms ease-out', pointerEvents: 'none' }}
                             draggable={false}
                           />
+                        )}
                         )}
                         {showWatermark(currentImage) && (
                           <WatermarkOverlay text={currentImage?.watermarkText || 'Wayne Heim'} />
@@ -1060,7 +1102,7 @@ const isSpeechActive = () => {
                     <a
                       href={currentImage?.buyLink}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener noreferrer nofollow"
                       className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-100 flex items-center gap-2"
                       aria-label="Order"
                     >
