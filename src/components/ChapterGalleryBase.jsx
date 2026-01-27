@@ -1099,15 +1099,25 @@ export default function ChapterGalleryBase({
                     {`${currentIndex + 1} / ${galleryData.length}`}
                   </div>
 
-                  {/* Center: K4 Studios */}
-                  <a
-                    href="/"
-                    title="K4 Studios Home"
-                    className="text-base font-semibold no-underline hover:underline absolute left-1/2 -translate-x-1/2"
-                    style={{ color: '#ffffff', fontFamily: "'Glegoo', serif", letterSpacing: '0.1em', opacity: 0.5 }}
-                  >
-                    K4 Studios
-                  </a>
+                  {/* Center: K4 Studios + Theme View indicator */}
+                  <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
+                    <a
+                      href="/"
+                      title="K4 Studios Home"
+                      className="text-base font-semibold no-underline hover:underline"
+                      style={{ color: '#ffffff', fontFamily: "'Glegoo', serif", letterSpacing: '0.1em', opacity: 0.5 }}
+                    >
+                      K4 Studios
+                    </a>
+                    {activeTheme && (
+                      <span 
+                        className="text-sm text-gray-300 font-medium whitespace-nowrap"
+                        style={{ letterSpacing: "-0.05em", opacity: 0.5 }}
+                      >
+                        Theme View
+                      </span>
+                    )}
+                  </div>
 
                   {/* Right: Exit */}
                   <button
@@ -1784,23 +1794,23 @@ export default function ChapterGalleryBase({
                       </div>
                     </div>
 
-                    {/* Logo Watermark */}
+                    {/* Logo Watermark - shows theme icon when in theme mode, K4 logo otherwise */}
                     <div className="mb-4 flex justify-center relative z-0 hidden md:flex">
                       <a
                         href={sectionUrl}
-                        title={titleText}
+                        title={activeTheme ? `Theme: ${activeTheme.name} in "${sectionDisplayTitle}"` : titleText}
                         className="relative block group"
                       >
                         <img
-                          src="/images/K4Logo-web-b.jpg"
-                          alt={altText}
+                          src={activeTheme ? "/images/theme%20icon.webp" : "/images/K4Logo-web-b.jpg"}
+                          alt={activeTheme ? `Theme: ${activeTheme.name}` : altText}
                           className="h-16.5 mb-5 transition-opacity duration-300 group-hover:opacity-0 group-hover:pointer-events-none"
-                          style={{ borderRadius: "50px", maxWidth: "160px", opacity: ".20" }}
+                          style={{ borderRadius: activeTheme ? "8px" : "50px", maxWidth: "160px", opacity: activeTheme ? ".65" : ".20" }}
                         />
-                        <span className="absolute inset-0 flex items-center justify-center text-center text-[#7a6a58] font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-white rounded-full">
+                        <span className="absolute inset-0 flex items-center justify-center text-center text-[#7a6a58] font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none bg-white rounded-full" style={{ borderRadius: activeTheme ? "8px" : "50px" }}>
                           {sectionDisplayTitle}
                         </span>
-                        <span className="sr-only">{sectionDisplayTitle}</span>
+                        <span className="sr-only">{activeTheme ? `Theme: ${activeTheme.name} in ${sectionDisplayTitle}` : sectionDisplayTitle}</span>
                       </a>
                     </div>
 

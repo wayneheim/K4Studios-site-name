@@ -198,6 +198,7 @@ export default function RebuiltScrollGrid({
         style={{ paddingTop: colCount === 1 ? "0px" : "150px" }}
       >
         {/* Desktop-only circular logo absolutely centered above heading (no structural changes) */}
+        {/* Shows theme icon when viewing a theme, K4 logo otherwise */}
         <div
           className="hidden md:flex flex-col items-center justify-center"
           style={{
@@ -218,8 +219,8 @@ export default function RebuiltScrollGrid({
                 handleClose();
               }
             }}
-            aria-label="Exit Chapter Index"
-            title="Exit Index View"
+            aria-label={themeName ? `Exit ${themeName} Theme Index` : "Exit Chapter Index"}
+            title={themeName ? `Theme: ${themeName}` : "Exit Index View"}
             style={{
               background: "none",
               border: "none",
@@ -229,14 +230,14 @@ export default function RebuiltScrollGrid({
             }}
           >
             <img
-              src="/images/K4Logo-web.webp"
-              alt="K4 Studios"
+              src={themeName ? "/images/theme%20icon.webp" : "/images/K4Logo-web.webp"}
+              alt={themeName ? `Theme: ${themeName}` : "K4 Studios"}
               style={{
                 width: 110,
                 height: 110,
-                borderRadius: "50%",
+                borderRadius: themeName ? "12px" : "50%",
                 objectFit: "cover",
-                opacity: 0.17,
+                opacity: themeName ? 0.55 : 0.17,
                 filter: "grayscale(10%)",
                 userSelect: "none",
               }}
