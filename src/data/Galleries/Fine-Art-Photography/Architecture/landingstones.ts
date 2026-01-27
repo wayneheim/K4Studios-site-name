@@ -9,7 +9,7 @@ export const landingWestern = {
     {
       title: 'Architecture Gallery',
       href: '/Galleries/Fine-Art-Photography/Architecture/Gallery',
-      thumb: 'https://k4-image-proxy.wayneheim.workers.dev/img/i-fszvgmq/s',
+      thumb: 'https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fszvgmq/3/KFjDWKGkN6wpRfk8SQ4d3HLskC9CFxZKBgc4RQpVm/M/P1010060-M.jpg',
     },
 
     

@@ -7,6 +7,8 @@ const { siteNav } = require('../data/siteNav.js');
 // ---- CONFIG ----
 const ROOT_DIR        = path.resolve(__dirname, '../data/Galleries');
 const OTHER_DIR       = path.resolve(__dirname, '../data/Other');
+// NOTE: /Other/Photo-Shoots/ contains raw scraped data - never index it!
+const EXCLUDED_PREFIXES = ['/Other/Photo-Shoots/'];
 const OUTPUT_FILE_TS  = path.resolve(__dirname, '../data/galleryMaps/MasterGalleryData.mjs');
 const PER_GALLERY_LIMIT = 20;
 
@@ -45,6 +47,11 @@ async function build() {
   const galleryDataMap = {};
 
   for (const href of galleryHrefs) {
+    // Skip excluded paths (e.g., /Other/Photo-Shoots/ contains raw scraped data)
+    if (EXCLUDED_PREFIXES.some(prefix => href.startsWith(prefix))) {
+      continue;
+    }
+    
     // Only process leaf galleries (no children in siteNav)
     const navNode = findNavNodeByHref(siteNav, href);
     if (navNode && navNode.children && navNode.children.length > 0) {

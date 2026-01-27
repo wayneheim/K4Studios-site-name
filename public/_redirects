@@ -11,9 +11,9 @@
 # Block Glossary page with query strings (SmugMug API leakage)
 /Glossary?*  404!
 
-# Block lightbox URLs (internal UI state, not canonical)
+# Block bare lightbox URL (legacy SmugMug endpoint, not canonical)
+# NOTE: /Galleries/lightbox?dataset=... is allowed for internal "View Complete Gallery" use
 /Galleries/lightbox  404!
-/Galleries/lightbox?*  404!
 
 # Block keyword pages (not proper content pages)
 /keyword/*  404!

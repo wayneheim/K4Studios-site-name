@@ -26,6 +26,16 @@ status = 301
 force = true
 
 ##############################
+# ✅ Image Proxy - Route /img/* to Cloudflare Worker
+# This hides SmugMug URLs from crawlers
+##############################
+[[redirects]]
+from = "/img/*"
+to = "https://k4-image-proxy.wayneheim.workers.dev/img/:splat"
+status = 200
+force = true
+
+##############################
 # ✅ Core Files
 ##############################
 [[redirects]]
@@ -52,11 +62,13 @@ status = 301
 force = true
 
 # Redirect bare lightbox page to 410 Gone (legacy SmugMug endpoint)
+# NOTE: /Galleries/lightbox?dataset=... is allowed for internal "View Complete Gallery" use
+# Only the bare URL without query params is blocked
 [[redirects]]
 from = "/Galleries/lightbox"
 to = "/"
 status = 410
-force = true
+force = false
 
 ##############################
 # ✅ Gallery Deep-Link Fixes
@@ -412,13 +424,14 @@ to = "/"
 status = 410
 force = true
 
-# Legacy SmugMug lightbox with query strings
+# Legacy SmugMug lightbox params (k= is SmugMug's image key param)
+# NOTE: Our internal ?dataset= is allowed for "View Complete Gallery"
 [[redirects]]
 from = "/Galleries/lightbox"
 to = "/"
 status = 410
 force = true
-query = "*"
+query = {k = ":key"}
 
 # Legacy API, buy, cart, etc.
 [[redirects]]

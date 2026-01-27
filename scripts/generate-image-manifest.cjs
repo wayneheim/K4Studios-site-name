@@ -29,6 +29,9 @@ const OUTPUT_FILE = path.join(__dirname, '..', 'public', 'image-manifest.json');
 // Pattern to detect backup/copy files (e.g., Color-copy.mjs, file-bak.mjs, file copy.mjs)
 const BACKUP_PATTERN = /[-_\s](copy|bak|backup|old)(\d*|[-_\s].*)?\.mjs$/i;
 
+// Files to exclude from manifest generation (stale/duplicate data)
+const EXCLUDED_FILES = ['MasterGalleryData.mjs'];
+
 // Recursively find all .mjs files (excluding backups)
 function findMjsFiles(dir, files = []) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });

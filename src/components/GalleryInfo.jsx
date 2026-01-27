@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import "../styles/galleryinfo.css";
 import ThemeBlock from "./ThemeBlock.jsx";
 import { warmImage } from "../utils/warmImage";
+import { getProxySrc } from "../utils/imageProxy";
 
 /* ---------------------------------------------------------
    Glob all gallery data files
@@ -95,26 +96,36 @@ export default function GalleryInfo({
   const galleryData = loadGalleryDataFor(trimmedBase);
   const lowestSortImage = pickFirstRealImage(galleryData);
 
+  // Pick a random hero image from the gallery pool (excluding ghosts)
+  // This rotates on each page load, like the preview strip
+  const heroImage = useMemo(() => {
+    const pool = (galleryData || []).filter(
+      img => img?.id && img.id !== "i-k4studios" && img.visibility !== "ghost"
+    );
+    if (!pool.length) return null;
+    return pool[Math.floor(Math.random() * pool.length)];
+  }, [galleryData]);
+
   // "Explore the Gallery" always goes to first image in gallery
   const exploreHref =
     lowestSortImage?.id && trimmedBase
       ? `${trimmedBase}/${lowestSortImage.id}`
       : "#";
   
-  // Preview/sample image click goes to that specific image
-  const previewImageHref =
-    entranceData?.image?.id && trimmedBase
-      ? `${trimmedBase}/${entranceData.image.id}`
-      : exploreHref; // Fall back to first image if no preview ID
+  // Hero image click goes to that specific image
+  const heroImageHref =
+    heroImage?.id && trimmedBase
+      ? `${trimmedBase}/${heroImage.id}`
+      : exploreHref;
 
   // Warm clickable images on landing page at 'l' size
-  // - Sample/hero image (entranceData.image)
+  // - Hero image (random from pool)
   // - First image (for "Explore the Gallery" click)
   // - Preview strip images (first 6)
   useEffect(() => {
-    // Warm the sample/hero image if it has an ID
-    if (entranceData?.image?.id) {
-      warmImage(entranceData.image.id, 'l');
+    // Warm the hero image
+    if (heroImage?.id) {
+      warmImage(heroImage.id, 'l');
     }
     
     // Warm first image for "Explore the Gallery"
@@ -128,7 +139,7 @@ export default function GalleryInfo({
         if (img?.id) warmImage(img.id, 'l');
       });
     }
-  }, [entranceData?.image?.id, lowestSortImage?.id, galleryData?.length]);
+  }, [heroImage?.id, lowestSortImage?.id, galleryData?.length]);
 
   return (
     <>
@@ -174,9 +185,9 @@ export default function GalleryInfo({
         >
           {/* Mobile: Image with accordion ThemeBlock below */}
           <div className="mobile-image-section">
-            {entranceData?.image && (
+            {heroImage && (
               <a
-                href={previewImageHref}
+                href={heroImageHref}
                 className="mobile-sample-image"
                 style={{
                   textDecoration: 'none',
@@ -188,8 +199,8 @@ export default function GalleryInfo({
               >
                 <figure>
                   <img
-                    src={entranceData.image.src}
-                    alt={entranceData.image.alt || "Portrait preview"}
+                    src={getProxySrc(heroImage.id, 'l')}
+                    alt={heroImage.alt || heroImage.title || "Gallery preview"}
                     style={{
                       maxWidth: "100%",
                       borderRadius: "9px",
@@ -197,7 +208,7 @@ export default function GalleryInfo({
                       border: "2px solid #ddd",
                     }}
                   />
-                  <figcaption>{entranceData.image.caption}</figcaption>
+                  <figcaption>{heroImage.title || ""}</figcaption>
                 </figure>
               </a>
             )}
@@ -213,9 +224,9 @@ export default function GalleryInfo({
           </div>
 
           {/* Desktop: Image first, then ThemeBlock below */}
-          {entranceData?.image && (
+          {heroImage && (
             <a
-              href={previewImageHref}
+              href={heroImageHref}
               className="desktop-sample-image"
               style={{
                 textDecoration: 'none',
@@ -242,13 +253,11 @@ export default function GalleryInfo({
             >
               <figure>
                 <figcaption style={{ marginBottom: '0.5rem' }}>
-                  {entranceData.image.caption}
+                  {heroImage.title || ""}
                 </figcaption>
                 <img
-                  src={entranceData.image.src}
-                  alt={
-                    entranceData.image.alt || "Portrait preview"
-                  }
+                  src={getProxySrc(heroImage.id, 'l')}
+                  alt={heroImage.alt || heroImage.title || "Gallery preview"}
                   style={{
                     maxWidth: "100%",
                     borderRadius: "9px",
