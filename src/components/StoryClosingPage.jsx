@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { normalizeImageSrc } from "../utils/imageProxy.js";
 
 export default function StoryClosingPage({ galleryImages = [], onBackToStart }) {
   return (
@@ -48,7 +49,7 @@ export default function StoryClosingPage({ galleryImages = [], onBackToStart }) 
             className="group block rounded-md overflow-hidden border border-gray-300 hover:shadow-md transition-all"
           >
             <img
-              src={img.src}
+              src={normalizeImageSrc(img.src, 'm')}
               alt={img.title}
               className="w-[110px] h-[110px] object-cover group-hover:opacity-90"
             />

@@ -105,22 +105,28 @@ export default function ImageBar2({ slides, pageContext: propPageContext }) {
     }
   }, [finalSlides]);
 
-  // Phase 3: Warm sideboard images during idle time (m size for sideboard)
+  // Warm first 4 carousel images immediately (3 visible + 1 buffer)
+  // Rest warm during idle time
   useEffect(() => {
     if (!finalSlides.length) return;
     
-    const warmSideboard = () => {
-      // Warm visible slides at 'm' size (sideboard uses smaller images)
-      finalSlides.forEach(slide => {
+    // Immediately warm first 4 (visible on load)
+    finalSlides.slice(0, 4).forEach(slide => {
+      if (slide.id) warmImage(slide.id, 'm');
+    });
+    
+    // Warm remainder during idle time
+    const warmRest = () => {
+      finalSlides.slice(4).forEach(slide => {
         if (slide.id) warmImage(slide.id, 'm');
       });
     };
     
     if ('requestIdleCallback' in window) {
-      const id = requestIdleCallback(warmSideboard);
+      const id = requestIdleCallback(warmRest);
       return () => cancelIdleCallback(id);
     } else {
-      const timer = setTimeout(warmSideboard, 200);
+      const timer = setTimeout(warmRest, 200);
       return () => clearTimeout(timer);
     }
   }, [finalSlides]);

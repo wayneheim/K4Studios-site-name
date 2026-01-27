@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { warmImage } from "../utils/warmImage";
+
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
 
@@ -8,6 +11,15 @@ const extractIdFromHref = (href) => {
 };
 
 export default function LandingRightImages({ heading = "", images = [] }) {
+  // Warm first 3 sidebar images on mount (above fold)
+  // Rest are below fold and load naturally
+  useEffect(() => {
+    images.slice(0, 3).forEach(img => {
+      const imageId = img.id || extractIdFromHref(img.href);
+      if (imageId) warmImage(imageId, 's');
+    });
+  }, [images]);
+
   return (
     <aside className="sidebar-thumbnails" data-dynamic-sidebar>
       <div className="thumb-heading-wrapper">

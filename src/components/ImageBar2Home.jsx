@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/ImageBar2.css";
 import { slides as homeSlides } from "../data/home/carousel.ts";
+import { warmImage } from "../utils/warmImage";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
@@ -13,6 +14,12 @@ export default function ImageBar2Home() {
   const [duplicated, setDuplicated] = useState(false);
 
   useEffect(() => {
+    // Warm first 4 carousel images (3 visible on load + 1 buffer)
+    // Rest load naturally as page hydrates
+    homeSlides.slice(0, 4).forEach(slide => {
+      if (slide.id) warmImage(slide.id, 's');
+    });
+
     // Mark as duplicated on client (this triggers re-render with doubled slides)
     if (homeSlides.length > 0) {
       setDuplicated(true);

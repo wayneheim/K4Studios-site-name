@@ -992,7 +992,6 @@ const isSpeechActive = () => {
                             draggable={false}
                           />
                         )}
-                        )}
                         {showWatermark(currentImage) && (
                           <WatermarkOverlay text={currentImage?.watermarkText || 'Wayne Heim'} />
                         )}

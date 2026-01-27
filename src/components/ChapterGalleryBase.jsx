@@ -845,9 +845,12 @@ export default function ChapterGalleryBase({
     // Warm first image at 'l' for "Explore the Gallery" click
     warmImage(galleryData[0].id, 'l');
     
-    // Warm preview strip images at 'l' (not 'm')
-    // These thumbnails display at 's' but clicking them enters viewer at 'l'
-    galleryData.slice(0, 6).forEach(img => warmImage(img.id, 'l'));
+    // Warm preview strip images at 's' for display AND 'l' for click-through
+    // 's' = what the thumbnails actually render, 'l' = what viewer loads
+    galleryData.slice(0, 6).forEach(img => {
+      warmImage(img.id, 's'); // for display
+      warmImage(img.id, 'l'); // for click-through
+    });
   }, [galleryData.length]); // Run once when data loads
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -1876,6 +1879,33 @@ export default function ChapterGalleryBase({
                               imageId: galleryData[currentIndex]?.id,
                               title: galleryData[currentIndex]?.title || galleryData[currentIndex]?.alt
                             });
+                            
+                            // Warm sister link image immediately on panel open
+                            // User reading time (5-10s) provides the warm window naturally
+                            const currentId = galleryData[currentIndex]?.id;
+                            if (currentId) {
+                              // Find sister match for this image
+                              const match = sitemapMatches.find(m => m.a.includes(currentId));
+                              let sisterUrl = match?.b || null;
+                              
+                              // Fallback: Color <-> Black-White sister gallery (same image ID)
+                              if (!sisterUrl && basePath) {
+                                const fullPath = `${basePath}/${currentId}`;
+                                if (basePath.includes('/Color')) {
+                                  sisterUrl = fullPath.replace('/Color', '/Black-White');
+                                } else if (basePath.includes('/Black-White')) {
+                                  sisterUrl = fullPath.replace('/Black-White', '/Color');
+                                }
+                              }
+                              
+                              if (sisterUrl) {
+                                // Extract image ID from URL path (last segment like i-XXXXX)
+                                const sisterIdMatch = sisterUrl.match(/\/(i-[a-zA-Z0-9]+)\/?$/);
+                                if (sisterIdMatch) {
+                                  warmImage(sisterIdMatch[1], 'l'); // Warm for viewer display
+                                }
+                              }
+                            }
                           }
                         }}
                       >

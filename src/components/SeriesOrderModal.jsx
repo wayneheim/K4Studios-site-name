@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CircleX, Info } from "lucide-react";
 import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig, loadSeriesRegistry, getExcludeSizesFromRegistry } from "../data/seriesDefinitions.js";
+import { normalizeImageSrc } from "../utils/imageProxy.js";
 
 // Import config at build time as fallback (auto-synced, no manual copy needed)
 import pricingConfigFallback from "../data/pricingConfig.json";
@@ -284,7 +285,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, logUIEvent })
             {/* Image Preview */}
             <div className="text-center mb-3">
               <img
-                src={image.src}
+                src={normalizeImageSrc(image.src, 'm')}
                 alt={image.title}
                 className="w-full max-w-32 mx-auto rounded-lg shadow-md"
               />

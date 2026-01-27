@@ -4,16 +4,20 @@ import { buildContextualAlt, getPageContext } from '../utils/buildContextualAlt'
 /**
  * Normalize any thumb URL to a proper proxy URL
  * Handles:
- * - SmugMug URLs: extracts ID → /img/{id}/m
- * - Absolute proxy URLs: converts to relative /img/{id}/m  
- * - Already relative /img/... URLs: returns as-is
+ * - SmugMug URLs: extracts ID → /img/{id}/s
+ * - Absolute proxy URLs: converts to relative /img/{id}/s  
+ * - Already relative /img/... URLs: forces to 's' size
  * - Local static images (/images/...): returns as-is
  */
 function normalizeThumbUrl(url) {
   if (!url) return '';
   
-  // Already a relative proxy URL - good
-  if (url.startsWith('/img/')) return url;
+  // Already a relative proxy URL - force to 's' size for thumbnails
+  if (url.startsWith('/img/')) {
+    const proxyMatch = url.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)/);
+    if (proxyMatch) return `/img/${proxyMatch[1]}/s`;
+    return url;
+  }
   
   // Local static image - keep as-is
   if (url.startsWith('/images/')) return url;
@@ -21,13 +25,13 @@ function normalizeThumbUrl(url) {
   // Extract image ID from SmugMug URL pattern: /i-XXXXXX/
   const smugMugMatch = url.match(/\/(i-[a-zA-Z0-9]+)\//);
   if (smugMugMatch) {
-    return `/img/${smugMugMatch[1]}/m`;
+    return `/img/${smugMugMatch[1]}/s`;
   }
   
-  // Absolute proxy URL - convert to relative
+  // Absolute proxy URL - convert to relative with 's' size
   const proxyMatch = url.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)/);
   if (proxyMatch) {
-    return `/img/${proxyMatch[1]}/${proxyMatch[2]}`;
+    return `/img/${proxyMatch[1]}/s`;
   }
   
   // Unknown format - return as-is (might be external or placeholder)
