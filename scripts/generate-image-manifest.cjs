@@ -32,17 +32,14 @@ const BACKUP_PATTERN = /[-_\s](copy|bak|backup|old)(\d*|[-_\s].*)?\.mjs$/i;
 // Files to exclude from manifest generation (stale/duplicate data)
 const EXCLUDED_FILES = ['MasterGalleryData.mjs'];
 
-// Directories to exclude (contain raw scraped data with wrong URLs)
-const EXCLUDED_DIRS = ['Photo-Shoots'];
-
 // Recursively find all .mjs files (excluding backups)
 function findMjsFiles(dir, files = []) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      // Skip node_modules, backups, Photo-Shoots (raw scraped data), etc.
-      if (!['node_modules', 'backups', '.git', ...EXCLUDED_DIRS].includes(entry.name)) {
+      // Skip node_modules, backups, etc.
+      if (!['node_modules', 'backups', '.git'].includes(entry.name)) {
         findMjsFiles(fullPath, files);
       }
     } else if (entry.name.endsWith('.mjs')) {
@@ -70,11 +67,8 @@ function extractImagesFromContent(content) {
   const idMatches = [...content.matchAll(/"id"\s*:\s*"(i-[^"]+)"/g)];
   
   for (const idMatch of idMatches) {
-    const rawId = idMatch[1];
-    if (rawId === 'i-k4studios') continue;
-    
-    // Normalize ID to lowercase for consistent lookups
-    const id = rawId.toLowerCase();
+    const id = idMatch[1];
+    if (id === 'i-k4studios') continue;
     
     // Find the context around this ID (the object it belongs to)
     const idPos = idMatch.index;

@@ -104,12 +104,10 @@ import { themes } from "../data/themes/themes.mjs";
    ========================================================= */
 function getProxySrc(imageId, size = 'm') {
   if (!imageId) return '';
-  // Normalize ID to lowercase for consistent lookups
-  const normalizedId = imageId.toLowerCase();
-  // Validate size - must be explicit, never empty
+  // Validate size
   const validSizes = ['s', 'm', 'l', 'xl', 'src'];
   const safeSize = validSizes.includes(size) ? size : 'm';
-  return `/img/${normalizedId}/${safeSize}`;
+  return `/img/${imageId}/${safeSize}`;
 }
 
 /* =========================================================
