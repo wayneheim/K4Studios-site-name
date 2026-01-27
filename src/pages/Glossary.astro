@@ -21,6 +21,7 @@ if (isLegacyUrl) {
 
 import { siteNav } from '@/data/siteNav.ts';
 import { getSideImages } from '@/components/utils/getSideImages.ts';
+import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 import { semantic } from '@/data/semantic/K4-Sem.ts';
 import { galleryDataMap } from '@/data/galleryMaps/MasterGalleryData.mjs'; // ← fallback DB
 import { facingFAQ } from '@/data/Galleries/Painterly-Fine-Art-Photography/faq.ts';
@@ -628,7 +629,7 @@ const structuredData = getStructuredData({
             })}
           </div>
         </section>
-        <MobileStoryImages client:only="react" images={featheredImages} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} />
       </div>
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll">

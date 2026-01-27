@@ -212,7 +212,7 @@ if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${pagePath}`;
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={featheredImages} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} />
       </div>
 
       <div class="sidebar-column hidden md:block">

@@ -12,6 +12,7 @@ import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
 import { getSideImages } from '@/components/utils/getSideImages.ts';
+import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as defaultSemantic } from '@/data/semantic/K4-Sem.ts';
 
@@ -200,7 +201,7 @@ const structuredData = getStructuredData({
 
   <MobileStoryImages
     client:load
-    images={featheredImages}
+    images={sanitizeForClient(featheredImages)}
   />
 
   <SiteFooter />

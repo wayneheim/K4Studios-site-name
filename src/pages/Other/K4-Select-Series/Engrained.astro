@@ -10,6 +10,7 @@ import MobileStoryImages  from '../../../components/MobileStoryImages.jsx';
 
 import { siteNav } from '../../../data/siteNav.ts';
 import { getSideImagesOther } from '../../../components/utils/getSideImagesOther.ts';
+import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 
 // 🟢 IMPORT THE NEW AUTO-LINKER!
 import { autoLinkKeywordsInTextM } from '../../../components/utils/autoLinkKeywordsInTextM.ts';
@@ -94,7 +95,7 @@ const featheredImagesSidebar = featheredImages.slice(0, 6);
             ))}
           </section>
 
-          <MobileStoryImages client:only="react" images={featheredImages} />
+          <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} />
         </div>
 
 <div class="sidebar-column hidden md:block">

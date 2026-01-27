@@ -182,7 +182,7 @@ console.log("🗂️ Gallery paths:", galleryPaths);
             </article>
           ))}
         </section>
-        <MobileStoryImages client:only="react" images={featheredImages} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} />
       </div>
 
       <div class="sidebar-column hidden md:block">

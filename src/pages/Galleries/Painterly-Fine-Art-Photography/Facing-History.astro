@@ -14,6 +14,7 @@ import { getStructuredData } from '@/components/utils/getStructuredData.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
 import { getSideImages } from '@/components/utils/getSideImages.ts';
+import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
@@ -212,7 +213,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={featheredImages} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} />
       </div>
 
       <div class="sidebar-column hidden md:block">

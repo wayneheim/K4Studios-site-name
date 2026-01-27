@@ -39,3 +39,21 @@ export function normalizeImage<T extends ImageVariants>(img: T): T {
 export function normalizeImages<T extends ImageVariants>(arr: T[] = []): T[] {
   return arr.map(normalizeImage);
 }
+
+/**
+ * Sanitizes images for client-side hydration props - strips SmugMug URLs
+ * to prevent them from appearing in serialized HTML.
+ * Only keeps fields needed for rendering: id, title, alt, href, galleryPath, description, keywords
+ */
+export function sanitizeForClient<T extends ImageVariants>(images: T[]): Partial<T>[] {
+  return images.map(img => ({
+    id: img.id,
+    title: img.title,
+    alt: img.alt,
+    href: img.href,
+    galleryPath: img.galleryPath,
+    description: img.description,
+    keywords: img.keywords,
+    // Explicitly exclude: src, srcS, srcM, srcL, srcXL, srcOriginal, buyLink
+  } as Partial<T>));
+}

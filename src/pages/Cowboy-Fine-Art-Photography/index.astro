@@ -326,7 +326,7 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={featheredImages} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} />
       </div>
 
       <div class="sidebar-column hidden md:block">
