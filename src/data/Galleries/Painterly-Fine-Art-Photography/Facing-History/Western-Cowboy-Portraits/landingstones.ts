@@ -53,7 +53,8 @@ export const landingWestern = {
     {
       title: "Native American Fine Art Portraits",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
-      thumb: "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/0/Kt9jcckLMc7gPh89Mk53hJr4z8Cr6PCMgRgwwmPM5/S/_WHO1626-886-S.jpg",
+      imageId: "i-7hD9CCh",
+      thumb: "/img/i-7hD9CCh/s",
     },
     {
       title: "The Engrained Series — Western Art on Wood",

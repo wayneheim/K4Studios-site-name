@@ -114,7 +114,9 @@ async function loadCarouselPools() {
 
 async function loadLandingStones() {
   // Scan ALL landingstones.ts files in the data directory
+  // PRIORITY: Use explicit imageId field first, fallback to regex extraction
   const stones = [];
+  const failures = [];
   const dataDir = path.join(__dirname, '..', 'src', 'data');
   
   function scanDir(dir) {
@@ -127,20 +129,61 @@ async function loadLandingStones() {
         } else if (entry.name === 'landingstones.ts') {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            const thumbMatches = [...content.matchAll(/thumb:\s*['"`]([^'"`]+)['"`]/g)];
             const relPath = path.relative(dataDir, fullPath);
-            for (const m of thumbMatches) {
-              const id = extractImageId(m[1]);
-              if (id) stones.push({ id, source: relPath });
+            
+            // PRIMARY: Extract explicit imageId fields (canonical source of truth)
+            const imageIdMatches = [...content.matchAll(/imageId:\s*['"`](i-[a-zA-Z0-9-]+)['"`]/g)];
+            for (const m of imageIdMatches) {
+              stones.push({ id: m[1], source: relPath, method: 'imageId' });
             }
-          } catch {}
+            
+            // FALLBACK: Extract from thumb URLs (for entries not yet normalized)
+            const thumbMatches = [...content.matchAll(/thumb:\s*['"`]([^'"`]+)['"`]/g)];
+            for (const m of thumbMatches) {
+              const thumbUrl = m[1];
+              // Skip if this is a local static image
+              if (thumbUrl.startsWith('/images/')) continue;
+              
+              const id = extractImageId(thumbUrl);
+              if (id) {
+                // Check if we already have this ID from imageId field
+                if (!stones.some(s => s.id === id && s.source === relPath)) {
+                  stones.push({ id, source: relPath, method: 'thumb-regex' });
+                }
+              } else if (!thumbUrl.startsWith('/images/')) {
+                // HARD FAIL: thumb URL exists but ID cannot be extracted
+                failures.push({ file: relPath, url: thumbUrl });
+              }
+            }
+            
+            // Also check thumbs arrays
+            const thumbsArrayMatches = [...content.matchAll(/["'`](\/img\/i-[a-zA-Z0-9-]+\/s)["'`]/g)];
+            for (const m of thumbsArrayMatches) {
+              const id = extractImageId(m[1]);
+              if (id && !stones.some(s => s.id === id && s.source === relPath)) {
+                stones.push({ id, source: relPath, method: 'thumbs-array' });
+              }
+            }
+          } catch (err) {
+            console.warn(`⚠️ Error reading ${fullPath}: ${err.message}`);
+          }
         }
       }
     } catch {}
   }
   
   scanDir(dataDir);
-  return stones;
+  
+  // Report failures - these are silent bugs that must be fixed
+  if (failures.length > 0) {
+    console.error('\n❌ CRITICAL: Failed to extract image IDs from these entries:');
+    for (const f of failures) {
+      console.error(`   ${f.file}: ${f.url.substring(0, 60)}...`);
+    }
+    console.error('\n   Run: node scripts/normalize-landingstones.cjs to fix\n');
+  }
+  
+  return { stones, failures };
 }
 
 async function loadGalleryPreviewImages() {
@@ -149,17 +192,33 @@ async function loadGalleryPreviewImages() {
   // First image in each pool = hero, warmed at 'l'
   const images = [];
   
-  const galleryPaths = [
-    'Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs',
-    'Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs',
-    'Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs',
-    'Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs',
-    'Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs',
-    'Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs',
-    'Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs',
-    'Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs',
-    'Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs',
-  ];
+  // AUTO-DISCOVER all gallery .mjs files instead of hardcoding
+  const galleriesDir = path.join(__dirname, '..', 'src', 'data', 'Galleries');
+  const galleryPaths = [];
+  
+  function scanForGalleries(dir, relativePath = '') {
+    try {
+      const entries = fs.readdirSync(dir, { withFileTypes: true });
+      for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        const relPath = relativePath ? `${relativePath}/${entry.name}` : entry.name;
+        
+        if (entry.isDirectory()) {
+          scanForGalleries(fullPath, relPath);
+        } else if (entry.name.endsWith('.mjs') && !entry.name.startsWith('_')) {
+          // Skip non-gallery files like index.mjs, utils.mjs etc
+          const content = fs.readFileSync(fullPath, 'utf8');
+          // Only include if it exports galleryData with image objects
+          if (content.includes('export const galleryData') && content.includes('"id"')) {
+            galleryPaths.push(`Galleries/${relPath}`);
+          }
+        }
+      }
+    } catch {}
+  }
+  
+  scanForGalleries(galleriesDir);
+  console.log(`   Found ${galleryPaths.length} gallery data files`);
   
   const POOL_SIZE = 12; // Match GalleryPreviewStrip.astro
   
@@ -275,11 +334,21 @@ async function main() {
   
   // 2. Tombstone thumbnails (at 's' size)
   console.log('🪦 Loading tombstone thumbnails...');
-  const stones = await loadLandingStones();
+  const { stones, failures } = await loadLandingStones();
+  
+  // Count by extraction method for visibility
+  const byImageId = stones.filter(s => s.method === 'imageId').length;
+  const byRegex = stones.filter(s => s.method === 'thumb-regex').length;
+  const byArray = stones.filter(s => s.method === 'thumbs-array').length;
+  
   for (const stone of stones) {
     urlsToWarm.add(buildWarmUrl(stone.id, 's'));
   }
-  console.log(`   Added ${stones.length} tombstone images`);
+  console.log(`   Added ${stones.length} tombstone images (${byImageId} via imageId, ${byRegex} via regex, ${byArray} via array)`);
+  
+  if (failures.length > 0) {
+    console.log(`   ⚠️  ${failures.length} entries could not be parsed - run normalize-landingstones.cjs`);
+  }
   
   // 3. Gallery preview pools (12 candidates at 's', hero at 'l')
   // Client picks 6 from the warm pool for variety

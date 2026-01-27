@@ -10,31 +10,32 @@ export const landingWestern = {
     {
       title: "Traditional Landscape Photography",
       href: "/Galleries/Fine-Art-Photography/Landscapes",
-      thumb:
-        "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Jackson-Hole-Wyoming/i-WgGWH9C/4/KsH4sPWt75bwm5b99Q9fKZDWnQQTWxSdJ4MLfjDNK/S/P1030226-S.jpg",
+      imageId: "i-WgGWH9C",
+      thumb: "/img/i-WgGWH9C/s",
     },
     {
       title: "Portrait Fine Art Photography",
       href: "/Galleries/Fine-Art-Photography/Portraits",
-      thumb:
-        "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-nxz6Zxg/1/MhtB5dfkPTWHQ3CqVtchnnBNDfHWm55P5XRp6D8w6/S/_WHZ5996_tonemapped-S.jpg",
+      imageId: "i-nxz6Zxg",
+      thumb: "/img/i-nxz6Zxg/s",
     },
     {
       title: "Transportation Themed Photography",
       href: "/Galleries/Fine-Art-Photography/Transportation",
-      thumb:
-        "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH/4/KZ3QFBDtNbF6xLkfcvNKPWCsSTJh3kbb9K7K2v3PK/S/_IMG9668-Edit%203-Edit-S.jpg",
+      imageId: "i-c8SFXzH",
+      thumb: "/img/i-c8SFXzH/s",
     },
     {
       title: "Architecture Themed Photography",
       href: "/Galleries/Fine-Art-Photography/Architecture",
-      thumb:
-        "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C/5/LMfd4hKLM8FchM8pbdHwfRmRCFb84H3GjzWnwnLhk/S/_IMG2241-S.jpg",
+      imageId: "i-3R8rc7C",
+      thumb: "/img/i-3R8rc7C/s",
     },
     {
       title: "Miscellaneous Themes",
       href: "/Galleries/Fine-Art-Photography/Miscellaneous",
-      thumb: "https://photos.smugmug.com/Other/Photo-Shoots/Wyoming/Wyoming-2017/i-fHxpx2c/4/Mmvb64XnpKPjfK2X8bspxmSXBtrxCHVmDpknnqQKN/S/_OLY1337-S.jpg",
+      imageId: "i-fHxpx2c",
+      thumb: "/img/i-fHxpx2c/s",
     },
   ],
 };
