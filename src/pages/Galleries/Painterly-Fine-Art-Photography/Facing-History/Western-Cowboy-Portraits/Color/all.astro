@@ -14,9 +14,11 @@ import ArchiveContext from "@/components/ArchiveContext.astro";
 import { galleryData as rawGalleryData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
 import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/ColorEntranceData.ts";
 
-// ✅ Filter out ghosts
+// ✅ Filter out ghosts and hidden (archived) images
 const galleryData = rawGalleryData.filter((img: any) => 
-  img.visibility !== "ghost" && img.id !== "i-k4studios"
+  img.visibility !== "ghost" && 
+  img.visibility !== "hidden" && 
+  img.id !== "i-k4studios"
 );
 
 // ✅ Gallery metadata
@@ -291,6 +293,14 @@ const structuredDataJson = JSON.stringify({
     .genre-definition p { font-size:1rem; line-height:1.8; color:#4a3d32; margin:0 0 16px; }
     .genre-definition p:last-child { margin-bottom:0; }
     .genre-definition p:last-child { margin-bottom:0; }
+
+    /* Mobile: stack image above text */
+    @media (max-width: 768px) {
+      .genre-definition { flex-direction:column; align-items:center; padding:16px; gap:16px; }
+      .genre-definition .iconic-anchor { width:100%; text-align:center; }
+      .genre-definition .iconic-anchor img { width:min(280px, 80%); max-width:100%; }
+      .genre-definition .definition-text { text-align:center; }
+    }
 
     .gallery-intro { max-width:900px; margin:0 auto 24px; text-align:center; }
     .gallery-intro p { font-size:1rem; line-height:1.6; color:#3a2d24; margin:0 0 8px; }
