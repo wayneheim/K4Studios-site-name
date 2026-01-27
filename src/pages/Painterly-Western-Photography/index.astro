@@ -8,6 +8,7 @@ import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import StorySlider        from '@/components/StorySlider.tsx';
+import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 
 // Story slider can still point at a cowboy gallery (fine)
 import { galleryData as cowboyColorDataFull }

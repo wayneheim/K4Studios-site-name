@@ -9,6 +9,7 @@ import SiteFooter         from '../../../../components/Footer.astro';
 import MobileStoryImages  from '../../../../components/MobileStoryImages-size.jsx';
 import ThemeBlock         from '../../../../components/ThemeBlock.jsx';
 import StorySlider        from '../../../../components/StorySlider.tsx';
+import { sanitizeForClient } from '../../../../components/utils/normalizeImage.ts';
 import { galleryData as cowboyColorDataFull } from '../../../../data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
 import { storySliderImageIds } from '../../../../data/storySlider.ts';
 import { getStructuredData } from '../../../../components/utils/getStructuredData.ts';
