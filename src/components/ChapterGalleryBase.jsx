@@ -1201,7 +1201,8 @@ export default function ChapterGalleryBase({
                             onDragStart={(e) => e.preventDefault()}
                             onContextMenu={(e) => e.preventDefault()}
                             onClick={() => {
-                              if (!isLandscapeMobile) {
+                              // Disable zoom on mobile - users don't know to click, and matt preview makes images too small
+                              if (!isMobile && !isLandscapeMobile) {
                                 setIsZoomed(true);
                                 setEventCounts((counts) => ({ ...counts, zoom: counts.zoom + 1 }));
                               }
