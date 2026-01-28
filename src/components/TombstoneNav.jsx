@@ -131,6 +131,8 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
                   src={selectedThumbs[index]}
                   alt={contextualAlt}
                   loading="lazy"
+                  width="140"
+                  height="160"
                   className="tombstone-img"
                 />
               </div>
@@ -231,6 +233,7 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
           gap: 1.25rem;
           max-width: 900px;
           margin: 0 auto;
+          min-height: 180px; /* Reserve height to prevent CLS */
         }
 
         .tile-grid.two-tiles {
@@ -246,6 +249,7 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
           max-width: 150px;
           margin: 0 auto;
           transition: transform 0.3s ease;
+          min-height: 160px; /* Reserve height for tile + title */
         }
 
         .tile:hover .tombstone-card {
@@ -287,6 +291,7 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
           height: 100%;
           object-fit: cover;
           object-position: center 15%;
+          aspect-ratio: 3.5 / 4;
         }
 
         .tile p {
@@ -298,8 +303,14 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
         }
 
         @media (min-width: 768px) {
+          /* Reserve space for tombstone grid to prevent CLS */
           .tile-grid {
             gap: 2rem;
+            min-height: 200px; /* Reserve minimum height for tiles on desktop */
+          }
+
+          .tile {
+            min-height: 180px; /* Reserve height for tile + title on desktop */
           }
           
           /* Hide mobile-only tiles on desktop */

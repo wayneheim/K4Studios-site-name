@@ -1,0 +1,464 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
+import GalleryInfo from "@/components/GalleryInfo.jsx";
+import ChapterViewer from "@/components/Chapter-Roaring20sColor.jsx";
+import Footer from "@/components/Footer.astro";
+import ImageDetailsWidget from "@/components/ImageDetailsWidget.jsx";
+
+import { galleryData as allImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs";
+import { landingWestern as landing20s } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/landingstones.ts";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { sitemapMatches } from "@/data/sitemapMatches.ts";
+
+/** ----------------------------------------------------------------
+ * Robust mojibake cleaner
+ * ---------------------------------------------------------------- */
+function fixMojibake(str = "") {
+  return String(str)
+    .replace(/â€™/g, "’")
+    .replace(/â€œ/g, "“")
+    .replace(/â€�/g, "”")
+    .replace(/â€“/g, "–")
+    .replace(/â€”/g, "—")
+    .replace(/â€¦/g, "…")
+    .replace(/Ã©/g, "é")
+    .replace(/Ã¨/g, "è")
+    .replace(/Ãª/g, "ê")
+    .replace(/Ã´/g, "ô")
+    .replace(/Ã¶/g, "ö")
+    .replace(/Ã¼/g, "ü")
+    .replace(/ÃŸ/g, "ß")
+    .replace(/Ã /g, "à")
+    .replace(/Â©/g, "©")
+    .replace(/â„¢/g, "™")
+    .replace(/â€˜/g, "‘")
+    .replace(/â€¢/g, "•")
+    .replace(/Â/g, "");
+}
+
+const { breadcrumb, entranceData = {}, initialImageId } = Astro.props;
+
+/** ---------------------------------------------------------------
+ * Image context
+ * --------------------------------------------------------------- */
+const isGhost = !initialImageId || initialImageId === "i-k4studios";
+const currentImage = isGhost
+  ? null
+  : allImages.find((img) => img.id === initialImageId && img.visibility !== "ghost");
+
+const previewImages = allImages.filter((img) => img.visibility !== "ghost").slice(0, 8);
+const visibleImages = allImages.filter((img) => img.visibility !== "ghost");
+const previewPath =
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color";
+
+const singlePreviewImage =
+  previewImages.length > 0
+    ? previewImages[Math.floor(Math.random() * previewImages.length)]
+    : null;
+
+const currentIndex = allImages.findIndex(
+  (img) => img.id === initialImageId && img.visibility !== "ghost"
+);
+// Get the display index (excluding ghost images) for chapter numbering
+const displayIndex = visibleImages.findIndex((img) => img.id === initialImageId);
+const forcedImage = currentIndex >= 0 ? allImages[currentIndex] : singlePreviewImage;
+const selectedImage = currentImage || forcedImage;
+
+const usedEntranceData = {
+  ...entranceData,
+  image: selectedImage
+    ? {
+        src: selectedImage.src,
+        alt: selectedImage.alt || selectedImage.title || entranceData?.image?.alt,
+        caption: selectedImage.title || entranceData?.image?.caption,
+      }
+    : entranceData?.image,
+  breadcrumb: entranceData?.breadcrumb || breadcrumb,
+  title: entranceData?.title || landing20s?.title || "Gallery",
+  subtitle: entranceData?.subtitle || landing20s?.subtitle || "",
+  description: entranceData?.description || landing20s?.description || "",
+};
+
+/** ---------------------------------------------------------------
+ * SITE / URL helpers
+ * --------------------------------------------------------------- */
+const siteBase = import.meta.env.SITE || "https://www.k4studios.com";
+const pathOnly = Astro.url.pathname;
+// Include theme param in canonical if present (themes are indexable)
+const themeParam = Astro.url.searchParams.get("theme");
+const canonicalUrl = `${siteBase}${pathOnly.replace(/\/$/, "")}${themeParam ? `?theme=${themeParam}` : ""}`;
+const galleryAbsUrl = `${siteBase}${previewPath}`;
+
+/** ---------------------------------------------------------------
+ * Structured data
+ * --------------------------------------------------------------- */
+const imageStructuredData = currentImage
+  ? getStructuredData({ type: "image", data: currentImage })
+  : getStructuredData({
+      type: "gallery",
+      data: {
+        title: fixMojibake(usedEntranceData.title),
+        description:
+          fixMojibake(usedEntranceData.description) ||
+          fixMojibake(usedEntranceData.subtitle),
+        url: galleryAbsUrl,
+      },
+      images: previewImages,
+    });
+
+/** ---------------------------------------------------------------
+ * Page Title & Descriptions
+ * --------------------------------------------------------------- */
+const siteName = "Wayne Heim";
+const siteSuffix = "Fine Art Photography";
+const fallbackTitle = "Gallery | Wayne Heim Fine Art Photography";
+
+function appendSiteTitle(title) {
+  if (!title) return fallbackTitle;
+  const lower = title.toLowerCase();
+  if (lower.includes(siteName.toLowerCase())) return title;
+  if (lower.includes(siteSuffix.toLowerCase())) return title;
+  return `${title} | ${siteName} ${siteSuffix}`;
+}
+
+const pageTitle = currentImage
+  ? appendSiteTitle(fixMojibake(currentImage.title))
+  : appendSiteTitle(fixMojibake(usedEntranceData.title));
+
+const baseFallbackDescription =
+  "Step into the Roaring 20s with painterly fine art color portraits by Wayne Heim.";
+
+const pageDescription =
+  (currentImage?.description && fixMojibake(currentImage.description)) ||
+  (usedEntranceData?.description && fixMojibake(usedEntranceData.description)) ||
+  (usedEntranceData?.subtitle && fixMojibake(usedEntranceData.subtitle)) ||
+  baseFallbackDescription;
+
+/** ---------------------------------------------------------------
+ * OG / Twitter
+ * --------------------------------------------------------------- */
+const ogImage = selectedImage?.src;
+const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntranceData.title);
+
+const meta = {
+  description: pageDescription,
+  keywords: currentImage?.keywords 
+    ? (Array.isArray(currentImage.keywords) ? currentImage.keywords.join(', ') : currentImage.keywords)
+    : undefined,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogImage: ogImage,
+  ogType: currentImage ? "article" : "website",
+  ogUrl: canonicalUrl,
+  ogImageAlt: ogAlt,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: ogImage,
+  twitterUrl: canonicalUrl,
+  twitterImageAlt: ogAlt,
+};
+
+/** ---------------------------------------------------------------
+ * Detect if this is an image page or shared theme link
+ * --------------------------------------------------------------- */
+const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
+const isImagePage = lastSegment.startsWith("i-");
+// Check for ?view=grid (shared theme links should skip intro)
+const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
+const skipIntro = isImagePage || isDirectGridView;
+
+/** ---------------------------------------------------------------
+ * Sister/Related Images Link for SEO internal linking
+ * --------------------------------------------------------------- */
+const currentImageId = currentImage?.id || initialImageId;
+let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || null;
+
+// Fallback: link to sister gallery (Color <-> Black-White)
+if (!sisterLink && isImagePage) {
+  const currentPath = Astro.url.pathname.replace(/\/$/, '');
+  if (currentPath.includes('/Color/')) {
+    sisterLink = currentPath.replace('/Color/', '/Black-White/');
+  } else if (currentPath.includes('/Black-White/')) {
+    sisterLink = currentPath.replace('/Black-White/', '/Color/');
+  }
+}
+---
+
+<BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
+  {/* Landing pages: no semantic wrappers needed (H1 in intro section) */}
+  {!skipIntro && (
+    <div id="gallery-content" class="flex-grow relative overflow-hidden">
+      <div id="header-section" class="section-visible" style="z-index:10;position:relative;">
+        <GalleryHeader client:load breadcrumb={breadcrumb} />
+      </div>
+
+      <div class="h-0 md:h-5"></div>
+
+      <div id="intro-section" class="section-visible" style="z-index:1;position:relative;">
+        <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
+        {usedEntranceData.subtitle && (
+          <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
+        )}
+        <GalleryInfo client:load entranceData={{
+          ...usedEntranceData,
+          title: fixMojibake(usedEntranceData.title),
+          subtitle: fixMojibake(usedEntranceData.subtitle),
+          image: usedEntranceData.image
+        }} />
+      </div>
+    </div>
+  )}
+  
+  {/* Image pages: main content */}
+  {skipIntro && (
+    <main>
+      <article>
+        <div id="gallery-content" class="flex-grow relative overflow-hidden">
+          <div id="chapter-section" class="section-visible" style="display:block;">
+            <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+          </div>
+        </div>
+      </article>
+    </main>
+  )}
+
+  <div class="h-12 md:h-20"></div>
+
+  {/* ========== OLD SSR SEO Section (commented out for comparison) ========== */}
+  {/* skipIntro && currentImage?.description && (
+    <section class="seo-image-details" aria-label="About this image">
+      <a href={previewPath} class="back-to-gallery-link" title="Back to Gallery Home">
+        <span class="link-arrow">←</span>
+        <span class="link-text">Exit</span>
+      </a>
+      <div class="seo-image-details-inner">
+        <h2>About This Image</h2>
+        <p>{fixMojibake(currentImage.description)}</p>
+      </div>
+      {sisterLink ? (
+        <a href={sisterLink} class="related-images-link">Discover<br/>related<br/>images</a>
+      ) : (
+        <div class="related-images-placeholder"></div>
+      )}
+    </section>
+  ) */}
+
+  {/* ImageDetailsWidget removed - "More about this image" now lives in ChapterGalleryBase */}
+
+  <Footer
+    previewImages={previewImages}
+    previewPath={previewPath}
+    currentImageUrl={
+      selectedImage
+        ? (selectedImage.src.startsWith('http')
+            ? selectedImage.src
+            : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`)
+        : undefined
+    }
+    title={pageTitle}
+  />
+
+  <style>
+    /* SSR H1 for image pages - visible, styled to match the chapter title area */
+    .chapter-title-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      text-align: center;
+      color: #7b1e1e;
+      margin: 0.75rem auto 0.5rem;
+      padding: 0 1rem;
+      max-width: 600px;
+      line-height: 1.4;
+    }
+    @media (min-width: 768px) {
+      .chapter-title-h1 {
+        font-size: 1.25rem;
+        margin: 1rem auto 0.75rem;
+      }
+    }
+
+    /* SSR SEO Description Section - compact, visible for full Google weight */
+    .seo-image-details {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      padding: 0.75rem 1rem;
+      background: #f9f8f6;
+      border: 1px solid #e5e2dd;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: #777;
+      box-sizing: border-box;
+    }
+    .seo-image-details-inner {
+      flex: 1;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .seo-image-details h2 {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #999;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .seo-image-details p {
+      margin: 0;
+    }
+    .back-to-gallery-link {
+      flex-shrink: 0;
+      color: #7b1e1e;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border: 1px solid #7b1e1e;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+    .back-to-gallery-link .link-arrow {
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .back-to-gallery-link .link-text {
+      font-size: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .back-to-gallery-link:hover {
+      background: #7b1e1e;
+      color: white;
+    }
+    .related-images-link {
+      flex-shrink: 0;
+      font-size: 0.5rem;
+      line-height: 1.2;
+      text-align: center;
+      color: #7b1e1e;
+      text-decoration: none;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #7b1e1e;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+    .related-images-link:hover {
+      background: #7b1e1e;
+      color: white;
+    }
+    .related-images-placeholder {
+      width: 3rem;
+      height: 3rem;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .seo-image-details {
+        margin: 0 1rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #nav-toggle { display: none !important; }
+      #intro-section { margin-top: 3.5rem !important; }
+      .gallery-landing-title,
+      .gallery-landing-subtitle { margin-left: 2.1rem !important; margin-right: 2.1rem !important; }
+      .gallery-landing-subtitle { text-align: center; }
+    }
+    .hamburger-circle { display: none !important; }
+    .section-hidden {
+      display:none!important;
+      opacity:0;
+      transform:translateX(100%);
+      transition:opacity 2s ease, transform 1.2s ease;
+      pointer-events:none;
+      position:absolute;
+      top:0; left:0; width:100%; height:0; z-index:0;
+    }
+    .section-visible {
+      opacity:1;
+      transform:translateX(0);
+      transition:opacity 1s ease, transform 1.2s ease;
+      pointer-events:auto;
+      position:relative;
+      width:100%; z-index:2;
+    }
+    #gallery-content *,
+    .gallery-landing-title,
+    .gallery-landing-subtitle,
+    #gallery-content h3,
+    #gallery-content p,
+    #gallery-content a {
+      font-family:'Glegoo', serif !important;
+      color:#2c2c2c !important;
+      line-height:1.5 !important;
+    }
+    .gallery-landing-title {
+      font-size:1.1rem !important;
+      font-weight:700 !important;
+      margin-top:2em !important;
+      margin-left:5.5em;
+      margin-bottom:0.3em !important;
+      letter-spacing:0.01em;
+      line-height:1.12;
+    }
+    .gallery-landing-subtitle {
+      font-size:0.95rem !important;
+      font-weight:500 !important;
+      margin-left:6.5em;
+      margin-bottom:0.5em;
+      letter-spacing:0.01em;
+      line-height:1.15;
+    }
+    #gallery-content p { font-size:1rem !important; margin-bottom:1em !important; }
+    #gallery-content a { text-decoration:underline !important; color:#85644b !important; }
+  </style>
+
+  {!isImagePage && (
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const exploreButton = document.querySelector('.explore-button');
+        const header = document.getElementById('header-section');
+        const intro = document.getElementById('intro-section');
+        const chapter = document.getElementById('chapter-section');
+        const navToggle = document.getElementById('nav-toggle');
+        let isMenuOpen = false;
+
+        exploreButton?.addEventListener('click', () => {
+          header.classList.add('section-hidden');
+          intro.classList.add('section-hidden');
+          chapter.style.display = 'block';
+          setTimeout(() => {
+            chapter.classList.remove('section-hidden');
+            chapter.classList.add('section-visible');
+          }, 50);
+          if (window.innerWidth >= 768) {
+            document.getElementById('nav-toggle')?.classList.remove('hidden');
+          }
+        });
+
+        navToggle?.addEventListener('click', () => {
+          isMenuOpen = !isMenuOpen;
+          const label = document.getElementById('menu-label');
+          if (label) label.textContent = isMenuOpen ? "M−" : "M+";
+          document.getElementById('floating-header')?.classList.toggle('show');
+        });
+      });
+
+      document.addEventListener('contextmenu', e => {
+        if (e.target.tagName === 'IMG') e.preventDefault();
+      });
+    </script>
+  )}
+</BaseLayout>

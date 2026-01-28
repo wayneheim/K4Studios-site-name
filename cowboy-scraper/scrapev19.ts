@@ -477,6 +477,12 @@ async function main() {
       // Pass existingIds so we can skip resizing for images already in the file
       const data = await scrapeDetails(page, sortOrder, currentId, existingIds);
 
+      // VALIDATION: Ensure scraped ID matches the URL we're on
+      if (data.id && currentId && data.id !== currentId) {
+        console.log(`⚠️ ID mismatch! URL: ${currentId}, scraped: ${data.id} - using URL ID`);
+        data.id = currentId;
+      }
+
       if (!data.id) {
         console.log(`🛑 Missing ID — stopping.`);
         break;
@@ -541,8 +547,29 @@ async function main() {
       }
 
       // Click next to load the new image
+      const beforeId = currentId;
       await nextBtn.click();
-      await wait(80); // Brief wait for URL to update
+      
+      // CRITICAL: Wait for URL to change to a DIFFERENT image ID before continuing
+      // This ensures the DOM metadata has updated for the new image
+      let urlChanged = false;
+      for (let attempt = 0; attempt < 30; attempt++) {
+        await wait(50);
+        const newId = await page.evaluate(() => {
+          const matchId = window.location.pathname.match(/\/i-([a-zA-Z0-9]+)/);
+          return matchId ? `i-${matchId[1]}` : "";
+        });
+        if (newId && newId !== beforeId) {
+          urlChanged = true;
+          break;
+        }
+      }
+      if (!urlChanged) {
+        console.log(`⚠️ URL didn't change after click - may have reached end`);
+      }
+      
+      // Extra wait for DOM metadata (title, alt, caption) to update
+      await wait(100);
 
       // Close info panel if it's open
       const infoBtn = await page.$('[data-testid="lightbox_details_button"]');

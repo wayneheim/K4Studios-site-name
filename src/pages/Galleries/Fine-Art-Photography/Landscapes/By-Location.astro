@@ -44,7 +44,10 @@ function findNavEntry(nav, url) {
 function recursivelyGatherAllGalleryHrefs(node) {
   let result = [];
   if (!node) return result;
-  if (node.href && node.href.startsWith('/Galleries/')) result.push(node.href);
+  // Only include gallery-source types (not collections/landing pages)
+  if (node.href && node.href.startsWith('/Galleries/') && node.type === 'gallery-source') {
+    result.push(node.href);
+  }
   if (node.children) node.children.forEach(child => result = result.concat(recursivelyGatherAllGalleryHrefs(child)));
   return result;
 }
@@ -53,10 +56,19 @@ const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav
   ? recursivelyGatherAllGalleryHrefs(landingNav)
   : [];
-const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
+
+// Glob all gallery data files
+const rawGalleryData = import.meta.glob('/src/data/Galleries/**/*.mjs', { eager: true });
+const allGalleryData = Object.fromEntries(
+  Object.entries(rawGalleryData).map(([key, value]) => [
+    key.replace('/src/data/Galleries/', ''),
+    value
+  ])
+);
+
 const galleryDatas = galleryPaths.map(path => {
-  const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
-  return allGalleryData[filePath]?.galleryData || [];
+  const lookupKey = `${path.replace(/^\/Galleries\//, "")}.mjs`;
+  return allGalleryData[lookupKey]?.galleryData || [];
 });
 
 const featheredImages = getSideImages({
@@ -132,8 +144,11 @@ const structuredData = getStructuredData({
     </div>
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
-      <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
+      <div class="carousel-container">
+        <div class="carousel-placeholder" aria-hidden="true"></div>
+        <div class="carousel-fade reveal-on-scroll">
+          <ImageBar2 client:load />
+        </div>
       </div>
     </div>
 
@@ -357,14 +372,37 @@ const structuredData = getStructuredData({
       visibility: visible;
       transition-delay: 1s;
     }
+/* Carousel placeholder to prevent CLS */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      height: 410px;
+      overflow: visible;
+    }
+    .carousel-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: transparent;
+    }
     .carousel-fade {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
       opacity: 0;
       transform: translateY(0px);
       transition:
         opacity 1.5s ease-out,
         transform 1.5s ease-out;
       transition-delay: 0.0s;
-      visibility: hidden;
+    }
+    @media (max-width: 768px) {
+      .carousel-container {
+        height: 200px;
+      }
     }
     .sample-fade {
       opacity: 0;
@@ -384,7 +422,6 @@ const structuredData = getStructuredData({
     .carousel-fade.is-visible {
       opacity: 1;
       transform: translateY(0);
-      visibility: visible;
     }
   </style>
 </BaseLayout>

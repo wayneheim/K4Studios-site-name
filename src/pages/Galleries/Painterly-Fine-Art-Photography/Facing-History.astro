@@ -141,8 +141,11 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     </div>
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
-      <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
+      <div class="carousel-container">
+        <div class="carousel-placeholder" aria-hidden="true"></div>
+        <div class="carousel-fade reveal-on-scroll">
+          <ImageBar2 client:load />
+        </div>
       </div>
     </div>
 
@@ -398,14 +401,41 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     visibility: visible;
     transition-delay: 1s;
   }
+  /* Carousel placeholder to prevent CLS */
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 390px; /* Fixed height to reserve space */
+    overflow: hidden;
+  }
+  .carousel-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+  }
   .carousel-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     opacity: 0;
     transform: translateY(0px);
     transition:
       opacity 1.5s ease-out,
       transform 1.5s ease-out;
     transition-delay: 0.0s;
-    visibility: hidden;
+  }
+  .carousel-fade.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (max-width: 768px) {
+    .carousel-container {
+      height: 200px;
+    }
   }
   .sample-fade {
     opacity: 0;

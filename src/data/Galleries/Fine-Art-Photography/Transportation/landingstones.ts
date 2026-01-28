@@ -24,17 +24,17 @@ for (const [path, mod] of Object.entries(galleryModules)) {
 }
 
 // ───── Utility to Pull a Random Image from a Gallery ─────
-function getRandomImage(slug: string): string {
+function getRandomImage(slug: string): { src: string; id: string } {
   const key = slug.toLowerCase();
   const images = galleryMap[key];
 
   if (!images?.length) {
     console.warn(`🚫 No match for slug: ${key}`);
-    return "/images/fallback.jpg";
+    return { src: "/images/fallback.jpg", id: "" };
   }
 
   const pick = images[Math.floor(Math.random() * images.length)];
-  return pick?.src || "/images/fallback.jpg";
+  return { src: pick?.src || "/images/fallback.jpg", id: pick?.id || "" };
 }
 
 // ───── Config: What to Show vs. Where to Look ─────
@@ -65,11 +65,13 @@ export const landingWestern = {
 
 tombstones: regions.map(({ title, slug }) => {
   const href = `${baseHref}/${slug}`;           // actual link
+  const img = getRandomImage(slug);             // get both src and id
 
   return {
     title,
     href,
-    thumb: getRandomImage(slug),                // use slug for galleryMap lookup
+    thumb: img.id ? `/img/${img.id}/s` : img.src,  // use proxy URL if we have id
+    imageId: img.id,
   };
 }),
 };

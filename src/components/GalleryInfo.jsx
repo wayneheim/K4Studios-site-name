@@ -2,8 +2,31 @@ import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import "../styles/galleryinfo.css";
 import ThemeBlock from "./ThemeBlock.jsx";
+import { themes } from "@/data/themes/themes.mjs";
 import { warmImage } from "../utils/warmImage";
 import { getProxySrc } from "../utils/imageProxy";
+
+/* ---------------------------------------------------------
+   Check if gallery has matching themes
+--------------------------------------------------------- */
+function hasThemesForGallery(galleryKey) {
+  if (!galleryKey) return false;
+  return themes.some((t) => {
+    if (t.visible === false) return false;
+    if (!t.dataset) return false;
+    const normalizedDataset = t.dataset
+      .toLowerCase()
+      .replace(/\\/g, "/")
+      .replace(/^src\/data\/galleries\//i, "")
+      .replace(/\.mjs$/i, "");
+    const normalizedKey = galleryKey
+      .toLowerCase()
+      .replace(/\\/g, "/")
+      .replace(/^\/galleries\//i, "")
+      .replace(/\/$/, "");
+    return normalizedDataset.includes(normalizedKey) || normalizedKey.includes(normalizedDataset);
+  });
+}
 
 /* ---------------------------------------------------------
    Glob all gallery data files
@@ -40,6 +63,8 @@ function loadGalleryDataFor(baseHref) {
     possibleKeys.push(`/src/data${normalized}.mjs`);
     // Then try nested file (…/Black-White/Black-White.mjs, …/Mountains/Mountains.mjs, etc.)
     possibleKeys.push(`/src/data${normalized}/${last}.mjs`);
+    // Also try By-Location pattern: …/West → …/West/Gallery.mjs
+    possibleKeys.push(`/src/data${normalized}/Gallery.mjs`);
   }
 
   for (const key of possibleKeys) {
@@ -78,6 +103,7 @@ function pickFirstRealImage(arr) {
 --------------------------------------------------------- */
 export default function GalleryInfo({
   entranceData,
+  galleryKey = "",
   path = "",
   isLandingPage = false,
 }) {
@@ -85,14 +111,18 @@ export default function GalleryInfo({
   const [clientPath, setClientPath] = useState("");
   
   useEffect(() => {
-    if (!path && !entranceData?.galleryPath) {
+    if (!path && !entranceData?.galleryPath && !galleryKey) {
       setClientPath(window.location.pathname);
     }
-  }, [path, entranceData?.galleryPath]);
+  }, [path, entranceData?.galleryPath, galleryKey]);
   
-  const baseHref = path || entranceData?.galleryPath || clientPath;
+  // galleryKey takes precedence (new architecture - passed as serializable string)
+  // Then explicit path, then entranceData.galleryPath, then URL fallback (legacy)
+  const baseHref = galleryKey || path || entranceData?.galleryPath || clientPath;
   const trimmedBase = baseHref.replace(/\/$/, "");
 
+  // Resolve gallery data from the key using allModules (client-safe)
+  // galleryKey is a string that survives Astro→React serialization
   const galleryData = loadGalleryDataFor(trimmedBase);
   const lowestSortImage = pickFirstRealImage(galleryData);
 
@@ -212,15 +242,17 @@ export default function GalleryInfo({
                 </figure>
               </a>
             )}
-            {/* Mobile: Accordion-style ThemeBlock */}
-            <details className="mobile-themes-accordion">
-              <summary>
-                <span className="accordion-arrow">▼</span> Featured Themes
-              </summary>
-              <div className="themes-content">
-                <ThemeBlock galleryKey={trimmedBase} galleryData={galleryData} />
-              </div>
-            </details>
+            {/* Mobile: Accordion-style ThemeBlock - only show if themes exist */}
+            {hasThemesForGallery(trimmedBase) && (
+              <details className="mobile-themes-accordion">
+                <summary>
+                  <span className="accordion-arrow">▼</span> Featured Themes
+                </summary>
+                <div className="themes-content">
+                  <ThemeBlock galleryKey={trimmedBase} galleryData={galleryData} />
+                </div>
+              </details>
+            )}
           </div>
 
           {/* Desktop: Image first, then ThemeBlock below */}

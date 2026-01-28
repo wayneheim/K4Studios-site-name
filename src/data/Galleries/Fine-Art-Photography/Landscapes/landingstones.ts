@@ -9,8 +9,8 @@ export const landingWestern = {
     {
       title: 'Landscapes by Location',
       href: '/Galleries/Fine-Art-Photography/Landscapes/By-Location',
-      imageId: "i-L6bJWvr",
-      thumb: "/img/i-L6bJWvr/s",
+      imageId: "i-P2MJv28",
+      thumb: "/img/i-P2MJv28/s",
     },
     {
       title: 'Landscapes by Theme',

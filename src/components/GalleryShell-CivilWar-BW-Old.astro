@@ -2,15 +2,17 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import GalleryHeader from "@/components/Gallery-LandingHeader.jsx";
 import GalleryInfo from "@/components/GalleryInfo.jsx";
-import ChapterViewer from "@/components/Chapter-Architecture-Traditional.jsx";
+import ChapterViewer from "@/components/Chapter-CivilWarBW.jsx";
 import Footer from "@/components/Footer.astro";
+import ImageDetailsWidget from "@/components/ImageDetailsWidget.jsx";
 
-import { galleryData as allImages } from "@/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs";
-import { landingWestern as landingArchitecture } from "@/data/Galleries/Fine-Art-Photography/Architecture/landingstones.ts";
+import { galleryData as allImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
+import { landingWestern as landingCivilWar } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/landingstones.ts";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { sitemapMatches } from "@/data/sitemapMatches.ts";
 
 /** ----------------------------------------------------------------
- * Robust mojibake cleaner: safe default + common CP1252/UTF8 swaps
+ * Robust mojibake cleaner
  * ---------------------------------------------------------------- */
 function fixMojibake(str = "") {
   return String(str)
@@ -45,48 +47,47 @@ const currentImage = isGhost
   ? null
   : allImages.find((img) => img.id === initialImageId && img.visibility !== "ghost");
 
-// Non-ghost preview images (up to 8)
 const previewImages = allImages.filter((img) => img.visibility !== "ghost").slice(0, 8);
-const previewPath = "/Galleries/Fine-Art-Photography/Architecture/Gallery";
+const previewPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White";
 
-// Random preview for intro image (stable enough for landing)
 const singlePreviewImage =
-  previewImages.length
+  previewImages.length > 0
     ? previewImages[Math.floor(Math.random() * previewImages.length)]
     : null;
 
-/** ---------------------------------------------------------------
- * Entry content with fallbacks
- * --------------------------------------------------------------- */
+const currentIndex = allImages.findIndex(
+  (img) => img.id === initialImageId && img.visibility !== "ghost"
+);
+const forcedImage = currentIndex >= 0 ? allImages[currentIndex] : singlePreviewImage;
+const selectedImage = currentImage || forcedImage;
+
 const usedEntranceData = {
   ...entranceData,
-  image: singlePreviewImage
+  image: selectedImage
     ? {
-        src: singlePreviewImage.src,
-        alt:
-          singlePreviewImage.alt ||
-          singlePreviewImage.title ||
-          entranceData?.image?.alt,
-        caption: singlePreviewImage.title || entranceData?.image?.caption,
+        src: selectedImage.src,
+        alt: selectedImage.alt || selectedImage.title || entranceData?.image?.alt,
+        caption: selectedImage.title || entranceData?.image?.caption,
       }
     : entranceData?.image,
   breadcrumb: entranceData?.breadcrumb || breadcrumb,
-  title: entranceData?.title || landingArchitecture?.title || "Gallery",
-  subtitle: entranceData?.subtitle || landingArchitecture?.subtitle || "",
-  description: entranceData?.description || landingArchitecture?.description || "",
+  title: entranceData?.title || landingCivilWar?.title || "Gallery",
+  subtitle: entranceData?.subtitle || landingCivilWar?.subtitle || "",
+  description: entranceData?.description || landingCivilWar?.description || "",
 };
 
 /** ---------------------------------------------------------------
  * SITE / URL helpers
  * --------------------------------------------------------------- */
 const siteBase = import.meta.env.SITE || "https://www.k4studios.com";
-const pathOnly = Astro.url.pathname; // no search/hash
-const canonicalUrl = `${siteBase}${pathOnly.replace(/\/$/, "")}`;
+const pathOnly = Astro.url.pathname;
+// Include theme param in canonical if present (themes are indexable)
+const themeParam = Astro.url.searchParams.get("theme");
+const canonicalUrl = `${siteBase}${pathOnly.replace(/\/$/, "")}${themeParam ? `?theme=${themeParam}` : ""}`;
 const galleryAbsUrl = `${siteBase}${previewPath}`;
 
 /** ---------------------------------------------------------------
- * Structured data (image open => image; otherwise => gallery)
- * Ensure absolute URL is used for the gallery item
+ * Structured data
  * --------------------------------------------------------------- */
 const imageStructuredData = currentImage
   ? getStructuredData({ type: "image", data: currentImage })
@@ -101,9 +102,8 @@ const imageStructuredData = currentImage
     });
 
 /** ---------------------------------------------------------------
- * Page Title & Descriptions (dynamic, non-duplicative)
+ * Page Title & Descriptions
  * --------------------------------------------------------------- */
-// Title: Use image title if on image page, else use entranceData.title. Only append site/artist if not present.
 const siteName = "Wayne Heim";
 const siteSuffix = "Fine Art Photography";
 const fallbackTitle = "Gallery | Wayne Heim Fine Art Photography";
@@ -120,9 +120,8 @@ const pageTitle = currentImage
   ? appendSiteTitle(fixMojibake(currentImage.title))
   : appendSiteTitle(fixMojibake(usedEntranceData.title));
 
-// Description: prefer image description, else entranceData.description, else subtitle, else fallback
 const baseFallbackDescription =
-  "Explore fine art photography of classic buildings, landmarks, and architecture by Wayne Heim.";
+  "Step into history with striking black and white Civil War portraits by Wayne Heim.";
 
 const pageDescription =
   (currentImage?.description && fixMojibake(currentImage.description)) ||
@@ -131,15 +130,16 @@ const pageDescription =
   baseFallbackDescription;
 
 /** ---------------------------------------------------------------
- * OG / Twitter (always point to canonical; image changes if on image)
+ * OG / Twitter
  * --------------------------------------------------------------- */
-const ogImage = currentImage ? currentImage.src : usedEntranceData.image?.src;
-const ogAlt =
-  (currentImage && (currentImage.alt || currentImage.title)) ||
-  (usedEntranceData.image?.alt || cleanGalleryTitle);
+const ogImage = selectedImage?.src;
+const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntranceData.title);
 
 const meta = {
   description: pageDescription,
+  keywords: currentImage?.keywords 
+    ? (Array.isArray(currentImage.keywords) ? currentImage.keywords.join(', ') : currentImage.keywords)
+    : undefined,
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogImage: ogImage,
@@ -152,46 +152,67 @@ const meta = {
   twitterUrl: canonicalUrl,
   twitterImageAlt: ogAlt,
 };
+
+/** ---------------------------------------------------------------
+ * Detect if this is an image page or shared theme link
+ * --------------------------------------------------------------- */
+const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
+const isImagePage = lastSegment.startsWith("i-");
+// Check for ?view=grid (shared theme links should skip intro)
+const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
+const skipIntro = isImagePage || isDirectGridView;
+
+/** ---------------------------------------------------------------
+ * Sister/Related Images Link for SEO internal linking
+ * --------------------------------------------------------------- */
+const currentImageId = currentImage?.id || initialImageId;
+let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || null;
 ---
 
 <BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
   <div id="gallery-content" class="flex-grow relative overflow-hidden">
-    <!-- Header stays fixed above intro -->
-    <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
-      <GalleryHeader client:load breadcrumb={breadcrumb} />
-    </div>
+    {/* Header */}
+    {!skipIntro && (
+      <div id="header-section" class="section-visible" style="z-index: 10; position: relative;">
+        <GalleryHeader client:load breadcrumb={breadcrumb} />
+      </div>
+    )}
 
     <div class="h-0 md:h-5"></div>
 
-    <!-- Intro: only one h1 per page -->
-    <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
-      <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
-      {usedEntranceData.subtitle && (
-        <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
-      )}
-      <GalleryInfo client:load entranceData={{
-        ...usedEntranceData,
-        title: fixMojibake(usedEntranceData.title),
-        subtitle: fixMojibake(usedEntranceData.subtitle),
-        image: usedEntranceData.image
-      }} />
-    </div>
+    {/* Intro */}
+    {!skipIntro && (
+      <div id="intro-section" class="section-visible" style="z-index: 1; position: relative;">
+        <h1 class="gallery-landing-title">{fixMojibake(usedEntranceData.title)}</h1>
+        {usedEntranceData.subtitle && (
+          <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
+        )}
+        <GalleryInfo client:load entranceData={{
+          ...usedEntranceData,
+          title: fixMojibake(usedEntranceData.title),
+          subtitle: fixMojibake(usedEntranceData.subtitle),
+          image: usedEntranceData.image
+        }} />
+      </div>
+    )}
 
-    <!-- Chapter Viewer: Hidden initially -->
-    <div id="chapter-section" class="section-hidden" style="display: none;">
-      {/*
-        If ChapterViewer renders <h1>, we’ll still keep a single page <h1> above.
-        (Best practice is to change ChapterViewer to use <h2>, but leaving here as-is to avoid a component edit.)
-      */}
-      <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
-    </div>
+    {/* Chapter Viewer */}
+    {skipIntro && (
+      <div id="chapter-section" class="section-visible" style="display: block;">
+        <ChapterViewer client:load initialImageId={initialImageId || "i-k4studios"} />
+      </div>
+    )}
   </div>
 
   <div class="h-12 md:h-20"></div>
 
+  {/* ImageDetailsWidget removed - "More about this image" now in ChapterGalleryBase */}
+
   <Footer
     previewImages={previewImages}
     previewPath={previewPath}
+    currentImageUrl={selectedImage ? (selectedImage.src.startsWith('http') ? selectedImage.src : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`) : undefined}
+    title={pageTitle}
   />
 
   <style>
@@ -256,45 +277,40 @@ const meta = {
     #gallery-content a { text-decoration: underline !important; color: #85644b !important; }
   </style>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const exploreButton = document.querySelector('.explore-button');
-      const header = document.getElementById('header-section');
-      const intro = document.getElementById('intro-section');
-      const chapter = document.getElementById('chapter-section');
-      const navToggle = document.getElementById('nav-toggle');
-      let isMenuOpen = false;
+  {!isImagePage && (
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const exploreButton = document.querySelector('.explore-button');
+        const header = document.getElementById('header-section');
+        const intro = document.getElementById('intro-section');
+        const chapter = document.getElementById('chapter-section');
+        const navToggle = document.getElementById('nav-toggle');
+        let isMenuOpen = false;
 
-      // Deep-link image logic (open viewer if URL ends with /i-xxxxx)
-      const deepLinkMatch = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
-      if (deepLinkMatch && deepLinkMatch[1] !== "i-k4studios") {
-        setTimeout(() => exploreButton?.click(), 50);
-      }
+        exploreButton?.addEventListener('click', () => {
+          header.classList.add('section-hidden');
+          intro.classList.add('section-hidden');
+          chapter.style.display = 'block';
+          setTimeout(() => {
+            chapter.classList.remove('section-hidden');
+            chapter.classList.add('section-visible');
+          }, 50);
+          if (window.innerWidth >= 768) {
+            document.getElementById('nav-toggle')?.classList.remove('hidden');
+          }
+        });
 
-      exploreButton?.addEventListener('click', () => {
-        header.classList.add('section-hidden');
-        intro.classList.add('section-hidden');
-        chapter.style.display = 'block';
-        setTimeout(() => {
-          chapter.classList.remove('section-hidden');
-          chapter.classList.add('section-visible');
-        }, 50);
-        if (window.innerWidth >= 768) {
-          document.getElementById('nav-toggle')?.classList.remove('hidden');
-        }
+        navToggle?.addEventListener('click', () => {
+          isMenuOpen = !isMenuOpen;
+          const label = document.getElementById('menu-label');
+          if (label) label.textContent = isMenuOpen ? "M−" : "M+";
+          document.getElementById('floating-header')?.classList.toggle('show');
+        });
       });
 
-      navToggle?.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
-        const label = document.getElementById('menu-label');
-        if (label) label.textContent = isMenuOpen ? "M−" : "M+";
-        document.getElementById('floating-header')?.classList.toggle('show');
+      document.addEventListener('contextmenu', e => {
+        if (e.target.tagName === 'IMG') e.preventDefault();
       });
-    });
-
-    // Disable right-click on images
-    document.addEventListener('contextmenu', e => {
-      if (e.target.tagName === 'IMG') e.preventDefault();
-    });
-  </script>
+    </script>
+  )}
 </BaseLayout>

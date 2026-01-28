@@ -1,5 +1,5 @@
 export const entranceData = {
-  title: "Painterly Cowboy Fine Art Photography – Western Prints <span style=\"white-space:nowrap\">by Wayne Heim</span>",
+  title: "Painterly Cowboy Fine Art Photography – Western Prints by Wayne Heim",
   subtitle: "Cowboy Portraits, Western Fine Art & Story-Driven Frontier Imagery",
 
   keywords: [

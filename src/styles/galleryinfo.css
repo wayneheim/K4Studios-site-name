@@ -82,6 +82,7 @@
           width: 220px;
           margin-top: -2rem;
           text-align: center;
+          position: relative;
         }
         .intro-image img {
           display: block;
@@ -210,6 +211,12 @@ details[open] .arrow-icon {
 /* Mobile/Desktop toggle for ThemeBlock and image layout */
 .theme-block-desktop {
   display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 0.5rem;
+  z-index: 100;
 }
 .desktop-sample-image {
   display: block;

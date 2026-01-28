@@ -14,7 +14,7 @@ export default function ThemeBlock({ galleryKey }) {
   const [expanded, setExpanded] = useState(false);
 
   // How many to show before "More..."
-  const VISIBLE_COUNT = 6;
+  const VISIBLE_COUNT = 5;
 
   // Filter themes that match this gallery's dataset path
   // galleryKey might be a URL path like "/Galleries/Painterly-.../Western-Cowboy-Portraits"
@@ -106,6 +106,16 @@ export default function ThemeBlock({ galleryKey }) {
           margin-left: auto;
           margin-right: auto;
         }
+        .theme-list-container::-webkit-scrollbar {
+          width: 5px;
+        }
+        .theme-list-container::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .theme-list-container::-webkit-scrollbar-thumb {
+          background-color: #c4b8a8;
+          border-radius: 3px;
+        }
         @media (min-width: 768px) {
           .theme-block-wrapper {
             margin-top: 0;
@@ -153,13 +163,23 @@ export default function ThemeBlock({ galleryKey }) {
 
         {/* --- THEME GRID --- */}
         {/* ALL themes are in DOM for SEO - hidden ones use CSS visibility */}
-        <div style={{ 
-          display: "flex", 
-          flexDirection: "column",
-          gap: "0.35rem",
-          alignItems: "center",
-          marginTop: "0.5rem",
-        }}>
+        <div 
+          className="theme-list-container"
+          style={{ 
+            display: "flex", 
+            flexDirection: "column",
+            gap: "0.35rem",
+            alignItems: "center",
+            marginTop: "0.5rem",
+            // When expanded, enable scrolling with max-height
+            ...(expanded ? {
+              maxHeight: "140px",
+              overflowY: "auto",
+              scrollbarWidth: "thin",
+              scrollbarColor: "#c4b8a8 transparent",
+              paddingRight: "4px",
+            } : {}),
+          }}>
           {galleryThemes.map((t, index) => {
             // Build the theme URL - navigate to grid view with theme filter
             // Shows collection overview with theme name, description, and all images
@@ -167,6 +187,7 @@ export default function ThemeBlock({ galleryKey }) {
             const themeUrl = `${datasetPath}?theme=${t.slug}&view=grid`;
             
             // Determine if this theme should be visually hidden (but still in DOM for SEO)
+            // When expanded, show all; when collapsed, hide after VISIBLE_COUNT
             const isHidden = !expanded && needsExpansion && index >= VISIBLE_COUNT;
             
             return (
