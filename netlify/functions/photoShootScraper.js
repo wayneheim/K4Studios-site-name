@@ -14,6 +14,7 @@
 const fs = require("fs");
 const path = require("path");
 
+const SCRAPER_VERSION = "scrapev22.ts";
 const PHOTO_SHOOTS_ROOT = "src/data/Other/Photo-Shoots";
 const TEMP_SCRAPE_FILE = "cowboy-scraper/data/_temp_scrape.mjs";
 const toPosix = (p = "") => String(p).replace(/\\/g, "/");
@@ -140,7 +141,8 @@ exports.handler = async (event) => {
         headers,
         body: JSON.stringify({
           root: PHOTO_SHOOTS_ROOT,
-          tree
+          tree,
+          scraperVersion: SCRAPER_VERSION
         })
       };
     }
@@ -380,7 +382,7 @@ exports.handler = async (event) => {
       // Spawn the scraper as a child process using tsx
       const { spawn } = require("child_process");
       const scraperDir = path.join(process.cwd(), "cowboy-scraper");
-      const scraperFile = "scrapev19.ts"; // relative to scraperDir
+      const scraperFile = SCRAPER_VERSION; // relative to scraperDir
       
       // Convert to forward slashes for cross-platform compatibility
       const outPathForArg = absOutputPath.replace(/\\/g, "/");

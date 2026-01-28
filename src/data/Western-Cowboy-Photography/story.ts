@@ -1,11 +1,11 @@
 export const cowboyStory = [
 
-  // 1. OPENING — DEFINE WESTERN COWBOY PHOTOGRAPHY (CATEGORY OWNERSHIP)
+  // 1. OPENING — DEFINITION ANCHOR (Google needs this first)
   {
     title: "Western Cowboy Photography: Character, Grit, and the Authentic West",
     paragraphs: [
-      "Western cowboy photography exploring the people, traditions, and untold stories of the historic American West. Created by fine art photographer Wayne Heim, this work brings frontier identity to life through painterly, cinematic imagery — grounded in historical truth rather than spectacle or nostalgia.",
-      "Wayne Heim is an award-winning fine art photographer whose Western cowboy photography is collected for its narrative restraint and painterly approach. His cowboy portraits move beyond familiar Wild West imagery to reveal character, presence, and depth. Every face carries a story. Every detail — dust, leather, light — earns its place in the frame."
+      "Western cowboy photography is photography focused on cowboys, ranchers, and frontier figures of the American West, created as fine art rather than stock imagery or commercial illustration. It is distinguished by its emphasis on character, authenticity, and narrative presence over romanticized or theatrical depiction.",
+      "This page presents western cowboy photography by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a>, whose painterly approach and historical grounding produce cowboy portraits that reward long viewing — images shaped by restraint, lived experience, and deep respect for the people and traditions of the West."
     ]
   },
 

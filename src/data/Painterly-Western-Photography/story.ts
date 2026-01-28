@@ -1,11 +1,11 @@
 export const painterlyStory = [
 
-  // 1. OPENING — DEFINE THE DISCIPLINE
+  // 1. OPENING — DEFINITION ANCHOR (Google needs this first)
   {
     title: "Painterly Western Photography",
     paragraphs: [
-      "Painterly Western photography is a fine art discipline — not a surface style applied after the fact, but a way of seeing shaped long before the shutter is pressed. It begins with light, structure, and restraint, and results in images that feel remembered rather than captured.",
-      "Rooted in the Pictorialist tradition and refined through years of illustration and visual storytelling, this work occupies the space between photography and fine art. The images are built rather than processed — shaped through light, atmosphere, and intention."
+      "Painterly Western photography is a fine art discipline that applies painterly principles — controlled light, tonal restraint, and compositional structure — to photography of the American West. It is distinguished from conventional Western photography by its emphasis on atmosphere and narrative rather than documentation or spectacle.",
+      "Rooted in the Pictorialist tradition and refined through years of illustration and visual storytelling, this work occupies the space between photography and painting. The images are built rather than processed — shaped through light, atmosphere, and intention."
     ]
   },
 

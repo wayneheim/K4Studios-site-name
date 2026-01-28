@@ -81,6 +81,7 @@ export default function PhotoShootScraper() {
 
   // Folder tree
   const [tree, setTree] = useState(null);
+  const [scraperVersion, setScraperVersion] = useState("");
 
   // For NEW mode
   const [selectedFolder, setSelectedFolder] = useState("src/data/Other/Photo-Shoots");
@@ -106,6 +107,7 @@ export default function PhotoShootScraper() {
         path: data.root,
         children: data.tree
       });
+      if (data.scraperVersion) setScraperVersion(data.scraperVersion);
     } catch (e) {
       setError(e.message);
     }
@@ -252,6 +254,7 @@ export default function PhotoShootScraper() {
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-amber-500 mb-2">📸 Photo Shoot Scraper</h1>
           <p className="text-stone-400">SmugMug → <code className="text-amber-400">/Other/Photo-Shoots</code></p>
+          {scraperVersion && <p className="text-xs text-green-400 mt-1">🔧 Engine: <code className="bg-green-900/50 px-1 rounded">{scraperVersion}</code></p>}
         </div>
 
         {/* Error/Status */}

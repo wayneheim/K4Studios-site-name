@@ -40838,7 +40838,7 @@ export const galleryDataMap   = {
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KWtf4kdn9TtnkBmPBv25FxLVDzF5VdRdD7fC2RXc3/XL/P1000873-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KDLZHH3dKDzJpRjLpnW3drTLg4C7Zpp2VHpNgkXjd/S/P1000873-S.jpg",
       "rating": 0,
-      "visibility": "show",
+      "visibility": "normal",
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -40846,25 +40846,12 @@ export const galleryDataMap   = {
     {
       "id": "i-vbVkS8z",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/Nd5s4hWSQJPfDhz9DQg6BGTrFHVh9gSkTNTMzH6S2/S/_IMG0301-S.jpg",
-      "srcM": "",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/M7J7TMtxPSgr3HtQv6Bn8vwLwv2XBDDwHZGMS5ZVm/L/_IMG0301-L.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/K6SccwmgrPfmncwHsbTKTcJChzRZVk4TwfftfxjNW/M/_IMG0301-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/MSKsk4w7kp7jDsBZTbRkf3CsKxqMn9Gn7N2sRCKT6/XL/_IMG0301-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/MSKsk4w7kp7jDsBZTbRkf3CsKxqMn9Gn7N2sRCKT6/XL/_IMG0301-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/Nd5s4hWSQJPfDhz9DQg6BGTrFHVh9gSkTNTMzH6S2/S/_IMG0301-S.jpg",
       "rating": 0,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Transportation/Boats"
-      ]
-    },
-    {
-      "id": "i-f8wGTZj",
-      "srcS": "https://photos.smugmug.com/photos/i-f8wGTZj/4/LVFcCB4jTNdN4K2fhbwdTLS5Hq6H7CLMTVpFDxKWz/S/i-f8wGTZj-S.jpg",
-      "srcM": "https://photos.smugmug.com/photos/i-f8wGTZj/4/MZZHrLGqHstdfb89SW9k5ZhbdR9dDTnnJqDP7hpXp/M/i-f8wGTZj-M.jpg",
-      "srcL": "https://photos.smugmug.com/photos/i-f8wGTZj/4/KZx82K52xSwthBz34Nsq73brgmX8GQ4fW8KqnHJbX/L/i-f8wGTZj-L.jpg",
-      "srcXL": "https://photos.smugmug.com/photos/i-f8wGTZj/4/NWqWZpZ6FR6NZ8HWVwtBPKL6HvJ5LrrZ5JCbdLXMQ/XL/i-f8wGTZj-XL.jpg",
-      "src": "https://photos.smugmug.com/photos/i-f8wGTZj/4/LVFcCB4jTNdN4K2fhbwdTLS5Hq6H7CLMTVpFDxKWz/S/i-f8wGTZj-S.jpg",
-      "rating": 0,
-      "visibility": "show",
+      "visibility": "normal",
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -40873,11 +40860,11 @@ export const galleryDataMap   = {
       "id": "i-qXc8XpL",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/L9Tz6WMxp3k4s2wg2hS6N7F58whgrS7j8rT7Fdznr/S/WAYNE_HEIM_810-Edit-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NF6CmfvmJfrRPvvJLHgM4NgWdcCNJ2pH4WXx4vmcN/M/WAYNE_HEIM_810-Edit-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NcPkgcJX5WrSv4bbcDLxMnMvJTFdKZCJXQC44C6br/L/WAYNE_HEIM_810-Edit-L.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NZH422kZLssXfwKzRdH7zKSHWh7jx2FpphNMzWvQw/XL/WAYNE_HEIM_810-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NZH422kZLssXfwKzRdH7zKSHWh7jx2FpphNMzWvQw/XL/WAYNE_HEIM_810-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/L9Tz6WMxp3k4s2wg2hS6N7F58whgrS7j8rT7Fdznr/S/WAYNE_HEIM_810-Edit-S.jpg",
       "rating": 0,
-      "visibility": "show",
+      "visibility": "normal",
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -40885,12 +40872,12 @@ export const galleryDataMap   = {
     {
       "id": "i-hQ6LXhh",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/KxNp8VxKVdc26QL54pDhpr5vpbWRdSHRhq9BCgfdj/S/WAYNE_HEIM_822-S.jpg",
-      "srcM": "",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/KX4BtzNSvrSLC5Vhq3T8fv2JdBSF2PdCjMzMMQhHh/L/WAYNE_HEIM_822-L.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/K62BJXLp6dvvsxLDccxnhDHBLj72RFrvb8PXjnSBf/M/WAYNE_HEIM_822-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/Lr9cq5FFnSzTrvFSDfMMjXw3NLPZc9HS3SKmFBmhx/XL/WAYNE_HEIM_822-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/Lr9cq5FFnSzTrvFSDfMMjXw3NLPZc9HS3SKmFBmhx/XL/WAYNE_HEIM_822-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/KxNp8VxKVdc26QL54pDhpr5vpbWRdSHRhq9BCgfdj/S/WAYNE_HEIM_822-S.jpg",
       "rating": 0,
-      "visibility": "show",
+      "visibility": "normal",
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -40898,12 +40885,12 @@ export const galleryDataMap   = {
     {
       "id": "i-TkMGVM8",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/MKh9xjqMJ536pf2fwMpzwpD5GmQcjwXRd6RSJ9qzb/S/_WEH7035-S.jpg",
-      "srcM": "",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/K2Z8XL4nCJrP9TPK5Xzhr3kmzqDRPRqJLtSWWQG2n/L/_WEH7035-L.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/MwxBRhHLBzj33zpJkMZ2g94dVJxrNxPLxgMqXvfbN/M/_WEH7035-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/LCznqLpKQQ29MKFvPZtngqQZcgWv9jwXWXvkTVmHs/XL/_WEH7035-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/LCznqLpKQQ29MKFvPZtngqQZcgWv9jwXWXvkTVmHs/XL/_WEH7035-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/MKh9xjqMJ536pf2fwMpzwpD5GmQcjwXRd6RSJ9qzb/S/_WEH7035-S.jpg",
       "rating": 0,
-      "visibility": "show",
+      "visibility": "normal",
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -40911,12 +40898,12 @@ export const galleryDataMap   = {
     {
       "id": "i-DJqFfsq",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/KNMvshGrgPqQG7mk6XHHzCmndDjWgmfMggSxtZXKK/S/WAYNE_HEIM_827-S.jpg",
-      "srcM": "",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/MpHCJhGtTKPBNmvfgmn8VZBCRtDrQXpGGhbMdzzBd/L/WAYNE_HEIM_827-L.jpg",
+      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/MRwWThnmW3L9BxmFSS4k5MHsmWw8zZnkx44ZL98XT/M/WAYNE_HEIM_827-M.jpg",
+      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/LF7NM7ppSC89VCP43sCDqWr9cjJGJxsmcZzT2NvNP/XL/WAYNE_HEIM_827-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/LF7NM7ppSC89VCP43sCDqWr9cjJGJxsmcZzT2NvNP/XL/WAYNE_HEIM_827-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/KNMvshGrgPqQG7mk6XHHzCmndDjWgmfMggSxtZXKK/S/WAYNE_HEIM_827-S.jpg",
       "rating": 0,
-      "visibility": "show",
+      "visibility": "normal",
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -40924,12 +40911,12 @@ export const galleryDataMap   = {
     {
       "id": "i-VGdpvbh",
       "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/KK2xJcJbfcV5WRkS665crFzrBxmBpf2FTfKQkqVT2/S/_WHZ9797_tonemapped-Edit-2-S.jpg",
-      "srcM": "",
-      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/LvCkG7J6XTq2WRzthshJ3JGGBrQm5Vj5SrSKW7nPP/L/_WHZ9797_tonemapped-Edit-2-L.jpg",
+      "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/KrBPGvsndcB5VTztv7tdxJdjxQkMjpjjBtRSGKhq3/M/_WHZ9797_tonemapped-Edit-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/M66J3GXWw54Q67jXZQBsq5cp8tbmp4VgnDzZWfcxV/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/M66J3GXWw54Q67jXZQBsq5cp8tbmp4VgnDzZWfcxV/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/KK2xJcJbfcV5WRkS665crFzrBxmBpf2FTfKQkqVT2/S/_WHZ9797_tonemapped-Edit-2-S.jpg",
       "rating": 0,
-      "visibility": "show",
+      "visibility": "normal",
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -40937,12 +40924,12 @@ export const galleryDataMap   = {
     {
       "id": "i-G9v9NvL",
       "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/NZM8CnW2qc5z9kKvt7fzbwRqh2NRsFMbNkVgTHbxV/S/_WHZ9798_tonemapped-Edit-2-S.jpg",
-      "srcM": "",
-      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/L8xrmtxXN7kdqFLfqXGMKnjPp3Q5CFgKXHZWLmxks/L/_WHZ9798_tonemapped-Edit-2-L.jpg",
+      "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/Kt88m3ZLQbSTWMMndpjwpsJ3cxgBZXJD3hztPgCX5/M/_WHZ9798_tonemapped-Edit-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/MmXZ3HmgCPqxgqSm8wX2MmSmrdHR3zMvnQXkfBpQT/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/MmXZ3HmgCPqxgqSm8wX2MmSmrdHR3zMvnQXkfBpQT/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/NZM8CnW2qc5z9kKvt7fzbwRqh2NRsFMbNkVgTHbxV/S/_WHZ9798_tonemapped-Edit-2-S.jpg",
       "rating": 0,
-      "visibility": "show",
+      "visibility": "normal",
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -40955,7 +40942,7 @@ export const galleryDataMap   = {
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/M95j8jPX82bFpb3jXpPSr57wQs2ZDVFL2vvL2vTVn/XL/_ANA3176-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/KS77cjmnPPrsvjdJSWmshFKTb3TsVvF2HQDZPrj7p/S/_ANA3176-Edit-S.jpg",
       "rating": 0,
-      "visibility": "show",
+      "visibility": "normal",
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -40968,7 +40955,7 @@ export const galleryDataMap   = {
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/MnFhHXGCf53hLFXxX4Mhwsjhx74VcdFhBqwcBnXZ3/XL/_ANA3291-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/NSZzs2px7nw9XpNDj5SQbZgB6RrDb8bhxSpxPLwmg/S/_ANA3291-Edit-Edit-S.jpg",
       "rating": 0,
-      "visibility": "show",
+      "visibility": "normal",
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -40976,12 +40963,12 @@ export const galleryDataMap   = {
     {
       "id": "i-X88ZNb4",
       "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/M28b2Wxs2N8RCbSjJgdJ4z2TCLrxsjjxbzwgNsqHF/S/_ANA3303-Edit-2-2-S.jpg",
-      "srcM": "",
-      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/M4LFq4BG4Jv3VtQmNnSBc9qLWrxWFtpV3smH6JJcM/L/_ANA3303-Edit-2-2-L.jpg",
+      "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MC4hktjFBRwG9rDSQG3NrSCB8NgcVNtwR4Wpn6CZW/M/_ANA3303-Edit-2-2-M.jpg",
+      "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MGWTc2XH3Ztrh3stZnJf8mmnpBb3s484cmLPkzzBz/XL/_ANA3303-Edit-2-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MGWTc2XH3Ztrh3stZnJf8mmnpBb3s484cmLPkzzBz/XL/_ANA3303-Edit-2-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/M28b2Wxs2N8RCbSjJgdJ4z2TCLrxsjjxbzwgNsqHF/S/_ANA3303-Edit-2-2-S.jpg",
       "rating": 0,
-      "visibility": "show",
+      "visibility": "normal",
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -40994,7 +40981,7 @@ export const galleryDataMap   = {
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/KMDXkjwc9j8JtzwDFFBN5tgXrw7xDpBjkSXjkxv5D/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/NVjhLB896WZ9x5Rkcr3kWFS9GTqrZSLcJMq3vcTR5/S/_ANA3350-Enhanced-Edit-Edit-2-S.jpg",
       "rating": 0,
-      "visibility": "show",
+      "visibility": "normal",
       "galleries": [
         "Galleries/Fine-Art-Photography/Transportation/Boats"
       ]
@@ -88362,7 +88349,7 @@ export const allImages        = [
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KWtf4kdn9TtnkBmPBv25FxLVDzF5VdRdD7fC2RXc3/XL/P1000873-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-7VD9zVJ/3/KDLZHH3dKDzJpRjLpnW3drTLg4C7Zpp2VHpNgkXjd/S/P1000873-S.jpg",
     "rating": 0,
-    "visibility": "show",
+    "visibility": "normal",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -88370,25 +88357,12 @@ export const allImages        = [
   {
     "id": "i-vbVkS8z",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/Nd5s4hWSQJPfDhz9DQg6BGTrFHVh9gSkTNTMzH6S2/S/_IMG0301-S.jpg",
-    "srcM": "",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/M7J7TMtxPSgr3HtQv6Bn8vwLwv2XBDDwHZGMS5ZVm/L/_IMG0301-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/K6SccwmgrPfmncwHsbTKTcJChzRZVk4TwfftfxjNW/M/_IMG0301-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/MSKsk4w7kp7jDsBZTbRkf3CsKxqMn9Gn7N2sRCKT6/XL/_IMG0301-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/MSKsk4w7kp7jDsBZTbRkf3CsKxqMn9Gn7N2sRCKT6/XL/_IMG0301-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/William-G-Mather-Ship/i-vbVkS8z/5/Nd5s4hWSQJPfDhz9DQg6BGTrFHVh9gSkTNTMzH6S2/S/_IMG0301-S.jpg",
     "rating": 0,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Transportation/Boats"
-    ]
-  },
-  {
-    "id": "i-f8wGTZj",
-    "srcS": "https://photos.smugmug.com/photos/i-f8wGTZj/4/LVFcCB4jTNdN4K2fhbwdTLS5Hq6H7CLMTVpFDxKWz/S/i-f8wGTZj-S.jpg",
-    "srcM": "https://photos.smugmug.com/photos/i-f8wGTZj/4/MZZHrLGqHstdfb89SW9k5ZhbdR9dDTnnJqDP7hpXp/M/i-f8wGTZj-M.jpg",
-    "srcL": "https://photos.smugmug.com/photos/i-f8wGTZj/4/KZx82K52xSwthBz34Nsq73brgmX8GQ4fW8KqnHJbX/L/i-f8wGTZj-L.jpg",
-    "srcXL": "https://photos.smugmug.com/photos/i-f8wGTZj/4/NWqWZpZ6FR6NZ8HWVwtBPKL6HvJ5LrrZ5JCbdLXMQ/XL/i-f8wGTZj-XL.jpg",
-    "src": "https://photos.smugmug.com/photos/i-f8wGTZj/4/LVFcCB4jTNdN4K2fhbwdTLS5Hq6H7CLMTVpFDxKWz/S/i-f8wGTZj-S.jpg",
-    "rating": 0,
-    "visibility": "show",
+    "visibility": "normal",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -88397,11 +88371,11 @@ export const allImages        = [
     "id": "i-qXc8XpL",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/L9Tz6WMxp3k4s2wg2hS6N7F58whgrS7j8rT7Fdznr/S/WAYNE_HEIM_810-Edit-S.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NF6CmfvmJfrRPvvJLHgM4NgWdcCNJ2pH4WXx4vmcN/M/WAYNE_HEIM_810-Edit-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NcPkgcJX5WrSv4bbcDLxMnMvJTFdKZCJXQC44C6br/L/WAYNE_HEIM_810-Edit-L.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NZH422kZLssXfwKzRdH7zKSHWh7jx2FpphNMzWvQw/XL/WAYNE_HEIM_810-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/NZH422kZLssXfwKzRdH7zKSHWh7jx2FpphNMzWvQw/XL/WAYNE_HEIM_810-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-qXc8XpL/6/L9Tz6WMxp3k4s2wg2hS6N7F58whgrS7j8rT7Fdznr/S/WAYNE_HEIM_810-Edit-S.jpg",
     "rating": 0,
-    "visibility": "show",
+    "visibility": "normal",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -88409,12 +88383,12 @@ export const allImages        = [
   {
     "id": "i-hQ6LXhh",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/KxNp8VxKVdc26QL54pDhpr5vpbWRdSHRhq9BCgfdj/S/WAYNE_HEIM_822-S.jpg",
-    "srcM": "",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/KX4BtzNSvrSLC5Vhq3T8fv2JdBSF2PdCjMzMMQhHh/L/WAYNE_HEIM_822-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/K62BJXLp6dvvsxLDccxnhDHBLj72RFrvb8PXjnSBf/M/WAYNE_HEIM_822-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/Lr9cq5FFnSzTrvFSDfMMjXw3NLPZc9HS3SKmFBmhx/XL/WAYNE_HEIM_822-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/Lr9cq5FFnSzTrvFSDfMMjXw3NLPZc9HS3SKmFBmhx/XL/WAYNE_HEIM_822-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-hQ6LXhh/4/KxNp8VxKVdc26QL54pDhpr5vpbWRdSHRhq9BCgfdj/S/WAYNE_HEIM_822-S.jpg",
     "rating": 0,
-    "visibility": "show",
+    "visibility": "normal",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -88422,12 +88396,12 @@ export const allImages        = [
   {
     "id": "i-TkMGVM8",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/MKh9xjqMJ536pf2fwMpzwpD5GmQcjwXRd6RSJ9qzb/S/_WEH7035-S.jpg",
-    "srcM": "",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/K2Z8XL4nCJrP9TPK5Xzhr3kmzqDRPRqJLtSWWQG2n/L/_WEH7035-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/MwxBRhHLBzj33zpJkMZ2g94dVJxrNxPLxgMqXvfbN/M/_WEH7035-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/LCznqLpKQQ29MKFvPZtngqQZcgWv9jwXWXvkTVmHs/XL/_WEH7035-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/LCznqLpKQQ29MKFvPZtngqQZcgWv9jwXWXvkTVmHs/XL/_WEH7035-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-TkMGVM8/4/MKh9xjqMJ536pf2fwMpzwpD5GmQcjwXRd6RSJ9qzb/S/_WEH7035-S.jpg",
     "rating": 0,
-    "visibility": "show",
+    "visibility": "normal",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -88435,12 +88409,12 @@ export const allImages        = [
   {
     "id": "i-DJqFfsq",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/KNMvshGrgPqQG7mk6XHHzCmndDjWgmfMggSxtZXKK/S/WAYNE_HEIM_827-S.jpg",
-    "srcM": "",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/MpHCJhGtTKPBNmvfgmn8VZBCRtDrQXpGGhbMdzzBd/L/WAYNE_HEIM_827-L.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/MRwWThnmW3L9BxmFSS4k5MHsmWw8zZnkx44ZL98XT/M/WAYNE_HEIM_827-M.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/LF7NM7ppSC89VCP43sCDqWr9cjJGJxsmcZzT2NvNP/XL/WAYNE_HEIM_827-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/LF7NM7ppSC89VCP43sCDqWr9cjJGJxsmcZzT2NvNP/XL/WAYNE_HEIM_827-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Cleveland-Tall-Ships-2013/i-DJqFfsq/5/KNMvshGrgPqQG7mk6XHHzCmndDjWgmfMggSxtZXKK/S/WAYNE_HEIM_827-S.jpg",
     "rating": 0,
-    "visibility": "show",
+    "visibility": "normal",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -88448,12 +88422,12 @@ export const allImages        = [
   {
     "id": "i-VGdpvbh",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/KK2xJcJbfcV5WRkS665crFzrBxmBpf2FTfKQkqVT2/S/_WHZ9797_tonemapped-Edit-2-S.jpg",
-    "srcM": "",
-    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/LvCkG7J6XTq2WRzthshJ3JGGBrQm5Vj5SrSKW7nPP/L/_WHZ9797_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/KrBPGvsndcB5VTztv7tdxJdjxQkMjpjjBtRSGKhq3/M/_WHZ9797_tonemapped-Edit-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/M66J3GXWw54Q67jXZQBsq5cp8tbmp4VgnDzZWfcxV/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/M66J3GXWw54Q67jXZQBsq5cp8tbmp4VgnDzZWfcxV/XL/_WHZ9797_tonemapped-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-VGdpvbh/1/KK2xJcJbfcV5WRkS665crFzrBxmBpf2FTfKQkqVT2/S/_WHZ9797_tonemapped-Edit-2-S.jpg",
     "rating": 0,
-    "visibility": "show",
+    "visibility": "normal",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -88461,12 +88435,12 @@ export const allImages        = [
   {
     "id": "i-G9v9NvL",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/NZM8CnW2qc5z9kKvt7fzbwRqh2NRsFMbNkVgTHbxV/S/_WHZ9798_tonemapped-Edit-2-S.jpg",
-    "srcM": "",
-    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/L8xrmtxXN7kdqFLfqXGMKnjPp3Q5CFgKXHZWLmxks/L/_WHZ9798_tonemapped-Edit-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/Kt88m3ZLQbSTWMMndpjwpsJ3cxgBZXJD3hztPgCX5/M/_WHZ9798_tonemapped-Edit-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/MmXZ3HmgCPqxgqSm8wX2MmSmrdHR3zMvnQXkfBpQT/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/MmXZ3HmgCPqxgqSm8wX2MmSmrdHR3zMvnQXkfBpQT/XL/_WHZ9798_tonemapped-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-G9v9NvL/1/NZM8CnW2qc5z9kKvt7fzbwRqh2NRsFMbNkVgTHbxV/S/_WHZ9798_tonemapped-Edit-2-S.jpg",
     "rating": 0,
-    "visibility": "show",
+    "visibility": "normal",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -88479,7 +88453,7 @@ export const allImages        = [
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/M95j8jPX82bFpb3jXpPSr57wQs2ZDVFL2vvL2vTVn/XL/_ANA3176-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-X3Cn7X9/0/KS77cjmnPPrsvjdJSWmshFKTb3TsVvF2HQDZPrj7p/S/_ANA3176-Edit-S.jpg",
     "rating": 0,
-    "visibility": "show",
+    "visibility": "normal",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -88492,7 +88466,7 @@ export const allImages        = [
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/MnFhHXGCf53hLFXxX4Mhwsjhx74VcdFhBqwcBnXZ3/XL/_ANA3291-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-DS9wCpW/1/NSZzs2px7nw9XpNDj5SQbZgB6RrDb8bhxSpxPLwmg/S/_ANA3291-Edit-Edit-S.jpg",
     "rating": 0,
-    "visibility": "show",
+    "visibility": "normal",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -88500,12 +88474,12 @@ export const allImages        = [
   {
     "id": "i-X88ZNb4",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/M28b2Wxs2N8RCbSjJgdJ4z2TCLrxsjjxbzwgNsqHF/S/_ANA3303-Edit-2-2-S.jpg",
-    "srcM": "",
-    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/M4LFq4BG4Jv3VtQmNnSBc9qLWrxWFtpV3smH6JJcM/L/_ANA3303-Edit-2-2-L.jpg",
+    "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MC4hktjFBRwG9rDSQG3NrSCB8NgcVNtwR4Wpn6CZW/M/_ANA3303-Edit-2-2-M.jpg",
+    "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MGWTc2XH3Ztrh3stZnJf8mmnpBb3s484cmLPkzzBz/XL/_ANA3303-Edit-2-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/MGWTc2XH3Ztrh3stZnJf8mmnpBb3s484cmLPkzzBz/XL/_ANA3303-Edit-2-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-X88ZNb4/1/M28b2Wxs2N8RCbSjJgdJ4z2TCLrxsjjxbzwgNsqHF/S/_ANA3303-Edit-2-2-S.jpg",
     "rating": 0,
-    "visibility": "show",
+    "visibility": "normal",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
@@ -88518,7 +88492,7 @@ export const allImages        = [
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/KMDXkjwc9j8JtzwDFFBN5tgXrw7xDpBjkSXjkxv5D/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Transportation/Military/i-wTvbzbV/1/NVjhLB896WZ9x5Rkcr3kWFS9GTqrZSLcJMq3vcTR5/S/_ANA3350-Enhanced-Edit-Edit-2-S.jpg",
     "rating": 0,
-    "visibility": "show",
+    "visibility": "normal",
     "galleries": [
       "Galleries/Fine-Art-Photography/Transportation/Boats"
     ]
