@@ -57,8 +57,12 @@ const structuredData = getStructuredData({
   }
 });
 
-const landingImgUrl = posts[0]?.cover || "";
-const meta = getLandingMeta(sectionPath, landingImgUrl);
+// OG/Twitter image - use absolute proxy URL capped at L size
+const ogImageUrl = "https://www.k4studios.com/img/i-LCspRF4/l";
+
+const meta = getLandingMeta(sectionPath);
+meta.ogImage = ogImageUrl;
+meta.twitterImage = ogImageUrl;
 if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
 
