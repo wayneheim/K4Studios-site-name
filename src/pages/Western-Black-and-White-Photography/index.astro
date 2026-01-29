@@ -195,7 +195,7 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
 }
 
 const landingImg = featheredImages[0];
-const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'xl')) : '';
+const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
 
 const meta = getLandingMeta(pagePath, landingImgUrl);
 if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${pagePath}`;

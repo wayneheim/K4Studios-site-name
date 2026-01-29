@@ -81,7 +81,7 @@ const structuredData = getStructuredData({
 
 // Use first painterly image as OG image
 const landingImg = painterlyImages.find(img => img.visibility !== "ghost");
-const landingImgUrl = landingImg?.id ? `https://www.k4studios.com${getProxySrc(landingImg.id, 'xl')}` : '';
+const landingImgUrl = landingImg?.id ? `https://www.k4studios.com${getProxySrc(landingImg.id, 'l')}` : '';
 const meta = getLandingMeta(sectionPath, landingImgUrl);
 if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;

@@ -28,8 +28,10 @@ const SIZE_FALLBACK = {
   src:['src', 's', 'm', 'l', 'xl']
 };
 
-const BING_BOT_PATTERN = /bingbot|msnbot|bingpreview/i;
-const BING_MAX_SIZE = 'm';
+// REMOVED: Bing size capping - causes "cloaking" detection
+// Bing expects same URL = same bytes. UA-based size changes break trust.
+// const BING_BOT_PATTERN = /bingbot|msnbot|bingpreview/i;
+// const BING_MAX_SIZE = 'm';
 
 // ============================================================================
 // MANIFEST CACHE
@@ -79,19 +81,21 @@ async function getManifest(ctx) {
 }
 
 // ============================================================================
-// BOT DETECTION
+// BOT DETECTION — DISABLED
 // ============================================================================
+// Removed: UA-based size capping caused Bing to distrust image URLs.
+// Same URL must always return same bytes.
 
-function isBingBot(request) {
-  const ua = request.headers.get('User-Agent') || '';
-  return BING_BOT_PATTERN.test(ua);
-}
+// function isBingBot(request) {
+//   const ua = request.headers.get('User-Agent') || '';
+//   return BING_BOT_PATTERN.test(ua);
+// }
 
-function capSizeForBot(requestedSize, isBing) {
-  if (!isBing) return requestedSize;
-  if (['s', 'm', 'src'].includes(requestedSize)) return requestedSize;
-  return BING_MAX_SIZE;
-}
+// function capSizeForBot(requestedSize, isBing) {
+//   if (!isBing) return requestedSize;
+//   if (['s', 'm', 'src'].includes(requestedSize)) return requestedSize;
+//   return BING_MAX_SIZE;
+// }
 
 // ============================================================================
 // URL RESOLUTION
@@ -136,7 +140,8 @@ async function proxyImage(smugMugUrl, request) {
     status: 200,
     headers: {
       'Content-Type': imageResponse.headers.get('Content-Type') || 'image/jpeg',
-      'Content-Length': imageResponse.headers.get('Content-Length'),
+      // REMOVED: Content-Length forwarding - can cause mismatch with chunked transfers
+      // Let Cloudflare handle Content-Length automatically
       'Cache-Control': 'public, max-age=31536000, immutable',
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
@@ -196,13 +201,11 @@ async function handleRequest(request, ctx) {
   try {
     const manifest = await getManifest(ctx);
 
-    const isBing = isBingBot(request);
-    const effectiveSize = capSizeForBot(route.size, isBing);
-
+    // Serve exactly what was requested - no UA-based modification
     const smugMugUrl = resolveImageUrl(
       manifest,
       route.imageId,
-      effectiveSize
+      route.size
     );
 
     if (!smugMugUrl) {

@@ -6,7 +6,9 @@ import { storyData, storyMeta } from "@/data/Other/Stories/Builder-Test-v3.mjs";
 
 const pageTitle = storyMeta.showTitle || "Untitled Picture Show";
 const pageDescription = storyMeta.description || "This is the meta description";
-const ogImage = Array.isArray(storyData) && storyData.length > 0 ? storyData[0].src : "/og/painterly.jpg";
+const ogImage = Array.isArray(storyData) && storyData.length > 0 && storyData[0].id
+  ? `https://www.k4studios.com/img/${storyData[0].id}/l`
+  : "/og/painterly.jpg";
 
 const meta = {
   description: pageDescription,

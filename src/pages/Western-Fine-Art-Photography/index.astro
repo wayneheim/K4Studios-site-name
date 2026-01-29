@@ -200,7 +200,7 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
 }
 
 const landingImg = featheredImages[0];
-const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'xl')) : '';
+const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
 
 // ✅ Meta should be keyed to the HUB PAGE, not the cowboy gallery path
 const meta = getLandingMeta(pagePath, landingImgUrl);

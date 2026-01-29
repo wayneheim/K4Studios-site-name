@@ -66,7 +66,8 @@ const displaySrc = getProxySrc(image.id, 'm');
 const srcsetValue = `${getProxySrc(image.id, 's')} 400w, ${getProxySrc(image.id, 'm')} 600w, ${getProxySrc(image.id, 'l')} 1024w`;
 const fullUrl = `https://www.k4studios.com${ctaLink}`;
 const imageUrl = `https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image.id}`;
-const proxyImageUrl = `https://www.k4studios.com${getProxySrc(image.id, 'xl')}`;
+// Capped at 'l' to protect XL from bot discovery via structured data
+const proxyImageUrl = `https://www.k4studios.com${getProxySrc(image.id, 'l')}`;
 
 // Build structured data for this featured collection
 // Uses proxy URL for image to avoid exposing SmugMug URLs

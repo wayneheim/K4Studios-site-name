@@ -14,8 +14,8 @@ const pageDescription =
   "A cinematic fine art story told through painterly photography by Wayne Heim.";
 
 const ogImage =
-  Array.isArray(storyData) && storyData.length > 0
-    ? storyData[0].src
+  Array.isArray(storyData) && storyData.length > 0 && storyData[0].id
+    ? `https://www.k4studios.com/img/${storyData[0].id}/l`
     : "/og/painterly.jpg";
 
 // ===== SEO + Social Metadata =====

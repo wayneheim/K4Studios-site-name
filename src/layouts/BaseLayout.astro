@@ -111,7 +111,8 @@ const canonicalUrl = ensureAbsoluteUrl(meta.canonicalUrl || Astro.url?.pathname 
 const ogUrl = canonicalUrl;
 
 // Convert any SmugMug URLs to proxy format for OG images
-const toAbsoluteProxyUrl = (src: string, size = 'xl') => {
+// Default to 'l' to protect XL from bot discovery
+const toAbsoluteProxyUrl = (src: string, size = 'l') => {
   if (!src) return '';
   // If it's already a local/static image, just make it absolute
   if (src.startsWith('/images/')) return ensureAbsoluteUrl(src);
@@ -128,13 +129,14 @@ const toAbsoluteProxyUrl = (src: string, size = 'xl') => {
   return ensureAbsoluteUrl(src);
 };
 
-const ogImage = toAbsoluteProxyUrl(rawOgImage, 'xl');
+// Cap OG/Twitter images at L to keep XL out of bot-discoverable surfaces
+const ogImage = toAbsoluteProxyUrl(rawOgImage, 'l');
 const ogImageSecureUrl = ogImage;
 
 const ogType = isImagePage ? "article" : (meta.ogType || "website");
 
 const twitterTitle = meta.twitterTitle || cleanTitle;
-const twitterImage = toAbsoluteProxyUrl(meta.twitterImage || rawOgImage, 'xl');
+const twitterImage = toAbsoluteProxyUrl(meta.twitterImage || rawOgImage, 'l');
 const twitterUrl = ogUrl;
 
 const inferMimeType = (url) => {

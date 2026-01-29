@@ -355,13 +355,14 @@ function generateUrlEntry(image, urlBase) {
     return null;
   }
 
-  // Skip images without a valid SmugMug src
-  if (!image.src || !image.src.includes('smugmug.com')) {
+  // Skip images without a valid ID
+  if (!image.id || !image.id.startsWith('i-')) {
     return null;
   }
 
   const pageUrl = `${SITE_URL}${urlBase}/${image.id}`;
-  const imageUrl = image.srcXL || image.srcL || image.src;
+  // Use proxy URLs capped at L - never expose XL or raw SmugMug URLs to bots
+  const imageUrl = `${SITE_URL}/img/${image.id}/l`;
   
   // Build rich caption from description + story + notes
   // Combine all available text fields for maximum semantic value

@@ -260,8 +260,8 @@ const cleanForDisplay = (val = "") =>
       {galleryData.map((item) => {
         // Use proxy URLs - ensures SmugMug URLs never appear in SSR HTML
         const imageUrl = getProxySrc(item.id, 'm');
-        // Use proxy URL for JSON-LD schema too
-        const schemaImageUrl = `https://www.k4studios.com${getProxySrc(item.id, 'xl')}`;
+        // Use proxy URL for JSON-LD schema too - capped at 'l' to protect XL from bots
+        const schemaImageUrl = `https://www.k4studios.com${getProxySrc(item.id, 'l')}`;
         const srcsetParts = getProxySrcset(item.id);
         const linkUrl = `${baseUrl}/${item.id}`;
         const fullUrl = `https://www.k4studios.com${linkUrl}`;
@@ -327,7 +327,8 @@ const cleanForDisplay = (val = "") =>
         "@type": "ImageObject",
         name: clean(item.title),
         description: clean(item.description || item.alt || item.title),
-        contentUrl: `https://www.k4studios.com${getProxySrc(item.id, 'xl')}`,
+        // Cap at L to keep XL out of bot-discoverable structured data
+        contentUrl: `https://www.k4studios.com${getProxySrc(item.id, 'l')}`,
         url: `https://www.k4studios.com${baseUrl}/${item.id}`
       }))
     }, null, 2)}

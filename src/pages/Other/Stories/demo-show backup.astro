@@ -6,7 +6,9 @@ import { storyData } from "@/data/Other/Stories/DemoShow.mjs";
 
 const pageTitle = "The Wayward Trail | Picture Show | Wayne Heim Fine Art Photography";
 const pageDescription = "A cinematic mini-story told through five painterly photographs by Wayne Heim.";
-const ogImage = Array.isArray(storyData) && storyData.length > 0 ? storyData[0].src : "/og/painterly.jpg";
+const ogImage = Array.isArray(storyData) && storyData.length > 0 && storyData[0].id
+  ? `https://www.k4studios.com/img/${storyData[0].id}/l`
+  : "/og/painterly.jpg";
 
 const meta = {
   description: pageDescription,

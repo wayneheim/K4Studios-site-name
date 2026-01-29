@@ -72,7 +72,8 @@ const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
 // ✅ Pre-build per-image JSON-LD to avoid streaming issues
 const imageJsonLdMap = new Map();
 galleryData.forEach((item: any) => {
-  const imageUrl = getProxySrc(item.id, 'xl');
+  // Capped at 'l' to protect XL from bot discovery
+  const imageUrl = getProxySrc(item.id, 'l');
   const linkUrl = `${basePath}/${item.id}`;
   const fullUrl = `https://www.k4studios.com${linkUrl}`;
   const title = cleanForJson(item.title);

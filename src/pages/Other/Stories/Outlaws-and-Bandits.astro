@@ -13,7 +13,7 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
 
 const sectionPath = "/Other/Stories/Outlaws-and-Bandits";
 const coverImg = storyData.find(s => s.visibility !== "ghost") || storyData[0];
-const coverImage = coverImg?.id ? `https://www.k4studios.com${getProxySrc(coverImg.id, 'xl')}` : "/images/K4-Stories logo1b.webp";
+const coverImage = coverImg?.id ? `https://www.k4studios.com${getProxySrc(coverImg.id, 'l')}` : "/images/K4-Stories logo1b.webp";
 
 const meta = {
   description: storyMeta.description,

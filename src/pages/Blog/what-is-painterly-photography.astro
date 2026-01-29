@@ -80,17 +80,18 @@ const structuredData = getStructuredData({
   }
 });
 
+// Cap OG/Twitter images at L to keep XL out of bot-discoverable surfaces
 const meta = {
   description: pageDescription,
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogType: "article",
   ogUrl: canonicalUrl,
-  ogImage: getAbsoluteProxySrc(image1.id, "xl"),
+  ogImage: getAbsoluteProxySrc(image1.id, "l"),
   twitterTitle: pageTitle,
   twitterDescription: pageDescription,
   twitterUrl: canonicalUrl,
-  twitterImage: getAbsoluteProxySrc(image1.id, "xl"),
+  twitterImage: getAbsoluteProxySrc(image1.id, "l"),
   twitterCard: "summary_large_image"
 };
 

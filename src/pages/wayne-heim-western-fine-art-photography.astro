@@ -209,16 +209,17 @@ const personSchemaJson = JSON.stringify(personSchema, null, 2);
 const creativeWorkSchemaJson = JSON.stringify(creativeWorkSchema, null, 2);
 
 // Meta for BaseLayout
+// Cap OG/Twitter images at L to keep XL out of bot-discoverable surfaces
 const meta = {
   description: pageDescription,
   ogTitle: pageTitle,
   ogDescription: pageDescription,
-  ogImage: bwPortraits[0]?.id ? `https://www.k4studios.com${getProxySrc(bwPortraits[0].id, 'xl')}` : '',
+  ogImage: bwPortraits[0]?.id ? `https://www.k4studios.com${getProxySrc(bwPortraits[0].id, 'l')}` : '',
   ogType: "profile",
   ogUrl: canonicalUrl,
   twitterTitle: pageTitle,
   twitterDescription: pageDescription,
-  twitterImage: bwPortraits[0]?.id ? `https://www.k4studios.com${getProxySrc(bwPortraits[0].id, 'xl')}` : '',
+  twitterImage: bwPortraits[0]?.id ? `https://www.k4studios.com${getProxySrc(bwPortraits[0].id, 'l')}` : '',
   twitterUrl: canonicalUrl
 };
 
