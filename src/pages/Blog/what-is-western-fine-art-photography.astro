@@ -1,0 +1,480 @@
+---
+/**
+ * What Is Western Fine Art Photography? — Definition Article
+ * 
+ * Purpose: Own the definition layer for "Western Fine Art Photography"
+ * This is a vestibule, not a destination — orient, elevate, invite forward.
+ * 
+ * Architecture:
+ * - Prose-first, uninterrupted
+ * - Article schema (not gallery)
+ * - Early funnel to hub (after opening)
+ * - Late funnel after differentiation
+ * - Confident, corrective tone — not tutorial
+ */
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/what-is-western-fine-art-photography";
+const canonicalUrl = "https://www.k4studios.com/Blog/what-is-western-fine-art-photography";
+
+// Proxy URL helper
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
+// Representative images - curated selection demonstrating range:
+// Header bar: 5 unique images fading from edges to center (none reused in demo section)
+const headerImages = [
+  { id: "i-6Ffpw9t", alt: "Western scene fading into the edge" },                       // far left
+  { id: "i-89qzJ6S", alt: "Western character in painterly light" },                     // left
+  { id: "i-c5K798H", alt: "Cowboy with revolver drawn — defiant Western moment" },      // CENTER
+  { id: "i-LCspRF4", alt: "Cowboy at dusk reviewing the day" },                         // right
+  { id: "i-4Hz6D7k", alt: "Western frontier scene" },                                   // far right
+];
+
+// Demo section images (3) - different from header
+const image1 = {
+  id: "i-ncFcHDM",
+  src: getProxySrc("i-ncFcHDM", "l"),
+  alt: "Cowboy portrait in painterly light — a man, not a silhouette"
+};
+const image2 = {
+  id: "i-Txh4c8k",
+  src: getProxySrc("i-Txh4c8k", "l"),
+  alt: "Cowboy practicing rope work in black and white — craft honed when no one is watching"
+};
+const image3 = {
+  id: "i-7hD9CCh",
+  src: getProxySrc("i-7hD9CCh", "l"),
+  alt: "Native American woman at the water's edge — presence, tradition, and quiet attention"
+};
+
+const pageTitle = "What Is Western Fine Art Photography? Definition, Distinction, and What It Is Not";
+const pageDescription = "Western fine art photography is not décor, not stock imagery, not rodeo documentation. This article defines the discipline and distinguishes it from commercial Western imagery.";
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "What Is Western Fine Art Photography?",
+    description: pageDescription,
+    url: canonicalUrl,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-01-29",
+    articleSection: "Photography",
+    keywords: [
+      "western fine art photography",
+      "western photography",
+      "cowboy photography",
+      "fine art western",
+      "western wall art",
+      "cowboy portraiture"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+// OG/Twitter capped at L
+const meta = {
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(image1.id, "l"),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(image1.id, "l"),
+  twitterCard: "summary_large_image"
+};
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › What Is Western Fine Art Photography?`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <!-- Header Image Bar - 5 images fading from edges to center -->
+    <section class="header-image-bar">
+      <a href="/Western-Fine-Art-Photography" class="header-bar-link">
+        <div class="header-bar-container">
+          {headerImages.map((img, index) => (
+            <div class={`header-bar-image pos-${index}`}>
+              <img 
+                src={getProxySrc(img.id, "l")} 
+                alt={img.alt}
+                loading="eager"
+              />
+            </div>
+          ))}
+        </div>
+      </a>
+    </section>
+
+    <!-- Article Header -->
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        What Is Western Fine Art Photography?
+      </h1>
+      <p style="font-size:1.25rem; color:#666; font-style:italic;">
+        Definition, distinction, and what it is not
+      </p>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        A working definition for collectors, curators, and serious viewers
+      </p>
+    </section>
+
+    <!-- Article Content -->
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+
+        <!-- SECTION 1: Definition (THE ANCHOR) -->
+        <p><strong>Western fine art photography</strong> is photography of the American West created as fine art — authored photography — not as documentation, not as décor, and not as commercial stock imagery. It is defined by authorship: intentional composition, narrative depth, and emotional resonance that cannot be replicated by pointing a camera at a beautiful subject.</p>
+
+        <p>The distinction is not subtle. A photograph of a cowboy is not automatically Western fine art. A landscape of Monument Valley is not fine art simply because it is beautiful.</p>
+
+        <p>Fine art requires the photographer to make decisions — about light, about structure, about what the image will mean — that elevate the work beyond record-keeping. The subject does not confer the status. The authorship does.</p>
+
+        <p>This article defines what Western fine art photography is, what it is not, and why the distinction matters for collectors, curators, and anyone seeking work that endures on a wall rather than in a folder.</p>
+
+        <!-- EARLY FUNNEL (Quill's recommendation) -->
+        <div class="early-funnel" style="background:#f8f6f3; border-left:4px solid #8b5a2b; padding:1.25rem 1.5rem; margin:2rem 0; border-radius:0 8px 8px 0;">
+          <p style="margin:0; font-size:1.05rem;">
+            This is not theoretical. The work itself is demonstrated throughout the 
+            <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Western Fine Art Photography collection</a>.
+          </p>
+        </div>
+
+        <!-- SECTION 2: What It Is Not (THE CORRECTIVE) -->
+        <div class="section-heading-with-line">
+          <h2>What Western Fine Art Photography Is Not</h2>
+        </div>
+
+        <p>The term "Western photography" has been stretched until it means almost nothing. Search for it and you will find stock silhouettes, mass-produced sunset prints, and decorative pieces designed to match leather furniture. These serve legitimate purposes — but they are not fine art, and conflating them obscures what fine art actually requires.</p>
+
+        <p><strong>Western décor photography</strong> is designed for visual appeal without narrative weight. It prioritizes color coordination and recognizable motifs — a horse against a sunset, a barn in golden light — over meaning. There is nothing wrong with décor, but calling it fine art misrepresents both categories. Décor fills a space. Fine art occupies attention.</p>
+
+        <p><strong>Stock Western imagery</strong> treats the West as a backdrop — interchangeable, licensable, and stripped of specificity. The cowboy becomes a silhouette. The landscape becomes wallpaper. The image exists to be placed, not encountered.</p>
+
+        <p><strong>Event and rodeo photography</strong> documents action. It captures moments of athletic performance or cultural gathering. This is valuable journalism and preservation work, but it is not authored in the way fine art requires. The photographer responds to what happens; the fine art photographer constructs what the image will mean.</p>
+
+        <p>Western fine art photography operates differently. It is not reactive. It is built — light by light, frame by frame, decision by decision.</p>
+
+        <!-- SECTION 3: What Defines It (THE DISTINCTION) -->
+        <div class="section-heading-with-line">
+          <h2>What Defines Western Fine Art Photography</h2>
+        </div>
+
+        <p>Fine art photography — Western or otherwise — is characterized by authorship. The photographer makes decisions that shape how the image functions, what it communicates, and how it rewards attention over time. The photograph is not found. It is made.</p>
+
+        <p>In Western fine art photography, this authorship typically involves:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.75rem;"><strong>Character over archetype.</strong> Cowboys, ranchers, and frontier figures appear as individuals rather than symbols. Their humanity is visible — in posture, expression, history written into hands and faces.</li>
+          <li style="margin-bottom:0.75rem;"><strong>Narrative structure.</strong> Each image implies a story rather than freezing a moment. Something has happened. Something is about to. The viewer completes what the image begins.</li>
+          <li style="margin-bottom:0.75rem;"><strong>Emotional landscape.</strong> The land is not background. It shapes character, reflects internal states, and carries memory. Sky, weather, and distance function as narrative elements.</li>
+          <li style="margin-bottom:0.75rem;"><strong>Craft and restraint.</strong> Light is controlled. Composition is deliberate. The image is built for the print, not the screen.</li>
+        </ul>
+
+        <p>This is the difference between taking a picture and making one.</p>
+
+        <!-- SECTION 4: A Practitioner's Perspective (AUTHORITY) -->
+        <div class="section-heading-with-line">
+          <h2>A Practitioner's Perspective</h2>
+        </div>
+
+        <p>My work is rooted in this discipline. As a fine art photographer and former medical illustrator, I approach Western subjects with the same structural intention I once applied to anatomical rendering — clarity, restraint, and commitment to the finished object. A print must reward attention for years, not just survive the scroll.</p>
+
+        <p>The painterly quality in my Western photographs is not a filter. It emerges from directional light, atmospheric conditions, and compositional control carried through to the final print. Every image is conceived as a story rather than a moment — a single cinematic frame drawn from a larger narrative the viewer must complete.</p>
+
+        <p>My subjects include cowboy portraiture, frontier character studies, Indigenous representation created through collaboration and respect, and Western landscapes treated as emotional environments rather than scenic views. The West I photograph is not a postcard. It is specific, layered, and inhabited.</p>
+
+        <p>This work continues a tradition extending from the Pictorialist movement of the early twentieth century through contemporary fine art practice — photography that functions as authored art rather than captured record. I did not invent this lineage. I continue it.</p>
+
+        <!-- SECTION 5: Visual Demonstration -->
+        <div class="section-heading-with-line">
+          <h2>What This Looks Like</h2>
+        </div>
+
+        <div class="example-images">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+              <img 
+                src={image1.src} 
+                alt={image1.alt}
+                loading="lazy"
+              />
+            </a>
+          </figure>
+          
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/${image2.id}`}>
+              <img 
+                src={image2.src} 
+                alt={image2.alt}
+                loading="lazy"
+              />
+            </a>
+          </figure>
+
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/${image3.id}`}>
+              <img 
+                src={image3.src} 
+                alt={image3.alt}
+                loading="lazy"
+              />
+            </a>
+          </figure>
+        </div>
+
+        <!-- SECTION 6: Late Funnel (WHERE TO GO) -->
+        <div class="section-heading-with-line">
+          <h2>Explore the Work</h2>
+        </div>
+
+        <p>This article defines Western fine art photography as a discipline. The following pages present the work itself:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; text-decoration:underline; font-weight:600;">Western Fine Art Photography</a> — 
+            <span style="color:#666;">The full collection</span>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" style="color:#8b5a2b; text-decoration:underline;">Western Cowboy Portraits</a> — 
+            <span style="color:#666;">Character studies in color and black & white</span>
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Painterly-Western-Photography" style="color:#8b5a2b; text-decoration:underline;">Painterly Western Photography</a> — 
+            <span style="color:#666;">The craft behind the work</span>
+          </li>
+          <li>
+            <a href="/wayne-heim-western-fine-art-photography" style="color:#8b5a2b; text-decoration:underline;">About the Artist</a> — 
+            <span style="color:#666;">Background and approach</span>
+          </li>
+        </ul>
+
+        <p>Western fine art photography, at its best, invites the viewer past the familiar and into something specific — a person, a story, a moment that belongs to no one else. The work does not explain itself. It asks to be entered.</p>
+
+      </article>
+    </section>
+
+    <SiteFooter />
+  </main>
+
+  <style>
+    .story-section { line-height: 1.7; }
+    .story-block p { margin-bottom: 1rem; font-size: 1.125rem; }
+    .story-block h2 { 
+      margin-top: 2.5rem; 
+      margin-bottom: 1rem; 
+      font-weight: 600; 
+      font-size: 1.5rem;
+      color: #1a1a1a;
+    }
+    .story-block ul { font-size: 1.125rem; }
+    
+    /* Header Image Bar - 5 images with fade effect */
+    .header-image-bar {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 0;
+      background: linear-gradient(to right, #fff, #f5f3f0 10%, #f5f3f0 90%, #fff);
+    }
+    .header-bar-link {
+      display: block;
+      text-decoration: none;
+    }
+    .header-bar-container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      height: 220px;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 4px;
+    }
+    .header-bar-image {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+    .header-bar-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      transition: transform 0.3s ease;
+    }
+    .header-bar-link:hover .header-bar-image img {
+      transform: scale(1.02);
+    }
+    
+    /* Fade effect: edges fade in color (grayscale) and opacity */
+    .header-bar-image.pos-0 img {
+      filter: grayscale(100%);
+      opacity: 0.3;
+    }
+    .header-bar-image.pos-1 img {
+      filter: grayscale(50%);
+      opacity: 0.7;
+    }
+    .header-bar-image.pos-2 img {
+      /* Center image - full color, full opacity */
+      filter: none;
+      opacity: 1;
+    }
+    .header-bar-image.pos-3 img {
+      filter: grayscale(50%);
+      opacity: 0.7;
+    }
+    .header-bar-image.pos-4 img {
+      filter: grayscale(100%);
+      opacity: 0.3;
+      object-position: center 30%;
+      transform: scale(1.2);
+    }
+    
+    /* Edge fade overlay - 100% fade to white at edges */
+    .header-bar-image.pos-0::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 80%;
+      background: linear-gradient(to right, rgba(255,255,255,1), transparent);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .header-bar-image.pos-4::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 80%;
+      background: linear-gradient(to left, rgba(255,255,255,1), transparent);
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    @media (max-width: 768px) {
+      .header-bar-container {
+        height: 160px;
+      }
+      /* Show only center 3 on mobile */
+      .header-bar-image.pos-0,
+      .header-bar-image.pos-4 {
+        display: none;
+      }
+      .header-bar-image.pos-1 img {
+        filter: grayscale(60%);
+        opacity: 0.6;
+      }
+      .header-bar-image.pos-3 img {
+        filter: grayscale(60%);
+        opacity: 0.6;
+      }
+      .header-bar-image.pos-1::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        background: linear-gradient(to right, rgba(255,255,255,0.8), transparent);
+        z-index: 1;
+        pointer-events: none;
+      }
+      .header-bar-image.pos-3::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        background: linear-gradient(to left, rgba(255,255,255,0.8), transparent);
+        z-index: 1;
+        pointer-events: none;
+      }
+    }
+    
+    /* Section heading with extending line */
+    .section-heading-with-line {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0;
+    }
+    .section-heading-with-line::after {
+      content: '';
+      flex: 1;
+      height: 3px;
+      background: #d0d0d0;
+    }
+    .section-heading-with-line h2 {
+      margin: 0;
+      white-space: nowrap;
+    }
+    @media (max-width: 768px) {
+      .section-heading-with-line::after {
+        display: none;
+      }
+    }
+    
+    /* 3-across image row */
+    .example-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: #f9f9f9;
+      border-radius: 12px;
+      align-items: start;
+    }
+    .example-images figure {
+      margin: 0;
+    }
+    .example-images img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    @media (max-width: 768px) {
+      .example-images {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .example-images {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</BaseLayout>
