@@ -8007,7 +8007,7 @@ export const galleryData = [
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FpH3LXf/0/MLpMJpJHpsdHwpC3JFMK54NnkGZSvjJNZkhvjcGrV/M/_HF25860-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FpH3LXf/0/Lk98prkSh8vttR2WDnVHTh53VfjdRzCCGsLMNk9JK/S/_HF25860-Edit-S.jpg",
     "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-CD6rgtF/A",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FpH3LXf/A",
     "keywords": [
       "western art",
       "fine art Western photography",
