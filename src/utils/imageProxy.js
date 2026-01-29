@@ -102,8 +102,10 @@ export function getProxySrcset(imageId, options = {}) {
     `${getProxySrc(imageId, 'l')} 1024w`,
   ];
   
+  // XL removed from srcset - only accessible via explicit JS interaction (zoom/slideshow)
+  // This ensures browsers never auto-request XL, keeping it firmly in "intentional" land
   if (includeXL) {
-    sources.push(`${getProxySrc(imageId, 'xl')} 1600w`);
+    sources.push(`${getProxySrc(imageId, 'l')} 1600w`);
   }
   
   return sources.join(', ');
