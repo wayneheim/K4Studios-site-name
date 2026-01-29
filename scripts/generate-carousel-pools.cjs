@@ -133,18 +133,26 @@ function hrefToFilePath(href) {
 }
 
 /**
+ * Generate proxy URL for an image
+ * Uses /img/{id}/{size} pattern to hide SmugMug origin
+ */
+function getProxyUrl(imageId, size) {
+  return `/img/${imageId}/${size}`;
+}
+
+/**
  * Normalize an image for carousel use
+ * IMPORTANT: Uses proxy URLs, never raw SmugMug URLs
  */
 function normalizeImage(img, galleryHref) {
-  const src = img.srcS || img.srcM || img.srcL || img.src || '';
-  
   // Keep the full gallery path including database name (Color, Black-White, etc.)
   return {
     id: img.id,
-    src: src,
-    srcS: img.srcS || '',
-    srcM: img.srcM || '',
-    srcL: img.srcL || '',
+    // All src fields now use proxy URLs
+    src: getProxyUrl(img.id, 's'),
+    srcS: getProxyUrl(img.id, 's'),
+    srcM: getProxyUrl(img.id, 'm'),
+    srcL: getProxyUrl(img.id, 'l'),
     alt: img.alt || img.title || '',
     description: img.description || '',
     width: img.width || 0,
