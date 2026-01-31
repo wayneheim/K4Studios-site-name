@@ -64,7 +64,7 @@ export default function ImageBar2({ slides, pageContext: propPageContext }) {
 
   // First effect: match current path to a carousel file and load slides
   useEffect(() => {
-    const currentPath = window.location.pathname;
+    const currentPath = window.location.pathname.replace(/\/$/, '').toLowerCase(); // normalize: no trailing slash, lowercase
     
     // Auto-resolve page context if not passed as prop
     if (!propPageContext) {
@@ -82,7 +82,8 @@ export default function ImageBar2({ slides, pageContext: propPageContext }) {
           .replace("../data/Galleries", "/Galleries")
           .replace("../data/Other", "/Other")
           .replace("../data/", "/")  // Handle top-level landing pages like Painterly-Western-Photography
-          .replace("/carousel.ts", "");
+          .replace("/carousel.ts", "")
+          .toLowerCase(); // normalize to lowercase for comparison
         return urlPath === currentPath;
       });
 
