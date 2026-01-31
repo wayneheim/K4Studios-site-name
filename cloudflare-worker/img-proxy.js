@@ -20,6 +20,7 @@
 // ============================================================================
 
 const MANIFEST_URL = 'https://k4studios.com/image-manifest.json';
+const IMAGE_ID_MAP_URL = 'https://k4studios.com/imageIdMap.json';
 const MANIFEST_CACHE_TTL = 3600; // 1 hour in seconds
 
 // Size fallback chains
@@ -46,6 +47,8 @@ const BING_MAX_SIZE = 'm';
 
 let manifestCache = null;
 let manifestCacheTime = 0;
+let imageIdMapCache = null;
+let imageIdMapCacheTime = 0;
 
 /**
  * Fetch and cache the image manifest
@@ -95,6 +98,55 @@ async function getManifest(ctx) {
   manifestCacheTime = now;
   
   return manifestCache;
+}
+
+/**
+ * Fetch and cache the imageIdMap (maps image IDs to canonical gallery paths)
+ */
+async function getImageIdMap(ctx) {
+  const now = Date.now();
+  
+  // Check in-memory cache first
+  if (imageIdMapCache && (now - imageIdMapCacheTime) < (MANIFEST_CACHE_TTL * 1000)) {
+    return imageIdMapCache;
+  }
+  
+  // Try edge cache
+  const cache = caches.default;
+  const cacheKey = new Request(IMAGE_ID_MAP_URL);
+  
+  let response = await cache.match(cacheKey);
+  
+  if (!response) {
+    // Fetch from origin
+    response = await fetch(IMAGE_ID_MAP_URL, {
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'K4-Image-Proxy-Worker/1.0'
+      }
+    });
+    
+    if (!response.ok) {
+      throw new Error(`Failed to fetch imageIdMap: ${response.status}`);
+    }
+    
+    // Clone for caching
+    const responseToCache = new Response(response.clone().body, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': `public, max-age=${MANIFEST_CACHE_TTL}`
+      }
+    });
+    
+    // Store in edge cache
+    ctx.waitUntil(cache.put(cacheKey, responseToCache));
+  }
+  
+  // Parse and store in memory cache
+  imageIdMapCache = await response.json();
+  imageIdMapCacheTime = now;
+  
+  return imageIdMapCache;
 }
 
 // ============================================================================
@@ -233,7 +285,8 @@ function getParentGallery(pathname) {
 
 /**
  * Handle image page policy
- * - If image exists in manifest → pass through to origin (static page)
+ * - If image exists AND path is correct → pass through to origin (static page)
+ * - If image exists BUT path is wrong → 301 redirect to canonical URL (smart 404)
  * - If image doesn't exist + bot → 410 Gone
  * - If image doesn't exist + human → 302 redirect to parent gallery
  */
@@ -246,15 +299,29 @@ async function handleImagePagePolicy(request, pathname, ctx) {
   }
   
   try {
-    const manifest = await getManifest(ctx);
+    // Fetch both manifest and imageIdMap
+    const [manifest, imageIdMap] = await Promise.all([
+      getManifest(ctx),
+      getImageIdMap(ctx)
+    ]);
     
     // Check if image exists in manifest
     if (manifest[imageId]) {
-      // Image exists → let it pass through to static page
+      // Image exists - check if the path is correct
+      const canonicalGalleryPath = imageIdMap[imageId];
+      const requestedGalleryPath = getParentGallery(pathname);
+      
+      if (canonicalGalleryPath && canonicalGalleryPath !== requestedGalleryPath) {
+        // Wrong path - redirect to canonical URL (smart 404)
+        const canonicalUrl = `https://www.k4studios.com${canonicalGalleryPath}/${imageId}`;
+        return Response.redirect(canonicalUrl, 301);
+      }
+      
+      // Correct path → let it pass through to static page
       return null;
     }
     
-    // Image doesn't exist → apply policy
+    // Image doesn't exist in manifest → apply policy
     const parentGallery = getParentGallery(pathname);
     
     if (isSearchBot(request)) {
