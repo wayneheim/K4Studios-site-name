@@ -58,26 +58,48 @@ function findMjsFiles(dir, files = []) {
 function extractImagesFromContent(content) {
   const images = [];
   
-  // Match individual image objects with their id and src fields
-  // Pattern: find each object block that has an "id" field
-  const objectPattern = /\{\s*"id"\s*:\s*"([^"]+)"[^}]*?"src"\s*:\s*"([^"]*)"[^}]*?(?:"srcXL"\s*:\s*"([^"]*)")?[^}]*?(?:"srcL"\s*:\s*"([^"]*)")?[^}]*?(?:"srcM"\s*:\s*"([^"]*)")?[^}]*?(?:"srcS"\s*:\s*"([^"]*)")?/g;
-  
-  // Simpler approach: extract each field individually per image block
-  // Split by image ID pattern
+  // Find all image IDs and their positions
   const idMatches = [...content.matchAll(/"id"\s*:\s*"(i-[^"]+)"/g)];
   
-  for (const idMatch of idMatches) {
+  for (let i = 0; i < idMatches.length; i++) {
+    const idMatch = idMatches[i];
     const id = idMatch[1];
     if (id === 'i-k4studios') continue;
     
-    // Find the context around this ID (the object it belongs to)
     const idPos = idMatch.index;
-    // Look for the enclosing object - find previous { and next }
-    const searchStart = Math.max(0, idPos - 100);
-    const searchEnd = Math.min(content.length, idPos + 5000);
-    const context = content.substring(searchStart, searchEnd);
     
-    // Extract src URLs from context
+    // Find the OPENING brace before this id
+    let braceCount = 0;
+    let objStart = idPos;
+    for (let j = idPos; j >= 0; j--) {
+      if (content[j] === '}') braceCount++;
+      if (content[j] === '{') {
+        if (braceCount === 0) {
+          objStart = j;
+          break;
+        }
+        braceCount--;
+      }
+    }
+    
+    // Find the CLOSING brace after this id (matching the opening)
+    braceCount = 1;
+    let objEnd = content.length;
+    for (let j = objStart + 1; j < content.length; j++) {
+      if (content[j] === '{') braceCount++;
+      if (content[j] === '}') {
+        braceCount--;
+        if (braceCount === 0) {
+          objEnd = j + 1;
+          break;
+        }
+      }
+    }
+    
+    // Extract ONLY this object's content - no bleeding into other entries!
+    const context = content.substring(objStart, objEnd);
+    
+    // Extract src URLs from this object only
     const srcMatch = context.match(/"src"\s*:\s*"(https:\/\/photos\.smugmug\.com[^"]*)"/);
     const srcSMatch = context.match(/"srcS"\s*:\s*"(https:\/\/photos\.smugmug\.com[^"]*)"/);
     const srcMMatch = context.match(/"srcM"\s*:\s*"(https:\/\/photos\.smugmug\.com[^"]*)"/);

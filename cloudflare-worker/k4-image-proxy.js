@@ -23,7 +23,7 @@ const MANIFEST_CACHE_TTL = 3600; // 1 hour
 const SIZE_FALLBACK = {
   xl: ['xl', 'l', 'm', 's', 'src'],
   l:  ['l', 'm', 's', 'xl', 'src'],
-  m:  ['m', 's', 'l', 'src'],
+  m:  ['m', 'l', 's'],  // Never fall back to XL for grid thumbnails
   s:  ['s', 'm', 'src'],
   src:['src', 's', 'm', 'l', 'xl']
 };
