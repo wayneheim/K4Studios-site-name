@@ -382,51 +382,52 @@ async function handleRequest(request, ctx) {
     return fetch(request);
   }
   
-  // Only handle /img/* routes for image proxying
-  if (!url.pathname.startsWith('/img/')) {
-    return new Response('Not Found', { status: 404 });
-  }
-  
-  // Parse route
-  const route = parseImageRoute(url.pathname);
-  
-  if (!route) {
-    return new Response('Invalid image route. Use /img/{id}/{size}', { 
-      status: 400,
-      headers: { 'Cache-Control': 'no-store' }
-    });
-  }
-  
-  try {
-    // Get manifest
-    const manifest = await getManifest(ctx);
+  // For /img/* routes, handle image proxying
+  if (url.pathname.startsWith('/img/')) {
+    // Parse route
+    const route = parseImageRoute(url.pathname);
     
-    // Check if Bing bot and cap size if needed
-    const isBing = isBingBot(request);
-    const effectiveSize = capSizeForBot(route.size, isBing);
-    
-    // Resolve to SmugMug URL
-    const smugMugUrl = resolveImageUrl(manifest, route.imageId, effectiveSize);
-    
-    if (!smugMugUrl) {
-      return new Response('Image not found', { 
-        status: 404,
-        headers: { 'Cache-Control': 'max-age=60' } // Short cache for 404s
+    if (!route) {
+      return new Response('Invalid image route. Use /img/{id}/{size}', { 
+        status: 400,
+        headers: { 'Cache-Control': 'no-store' }
       });
     }
     
-    // Fetch and return image
-    return await proxyImage(smugMugUrl, request);
-    
-  } catch (error) {
-    console.error('Image proxy error:', error);
-    
-    // Fail closed - never redirect to SmugMug
-    return new Response('Internal error', { 
-      status: 500,
-      headers: { 'Cache-Control': 'no-store' }
-    });
+    try {
+      // Get manifest
+      const manifest = await getManifest(ctx);
+      
+      // Check if Bing bot and cap size if needed
+      const isBing = isBingBot(request);
+      const effectiveSize = capSizeForBot(route.size, isBing);
+      
+      // Resolve to SmugMug URL
+      const smugMugUrl = resolveImageUrl(manifest, route.imageId, effectiveSize);
+      
+      if (!smugMugUrl) {
+        return new Response('Image not found', { 
+          status: 404,
+          headers: { 'Cache-Control': 'max-age=60' } // Short cache for 404s
+        });
+      }
+      
+      // Fetch and return image
+      return await proxyImage(smugMugUrl, request);
+      
+    } catch (error) {
+      console.error('Image proxy error:', error);
+      
+      // Fail closed - never redirect to SmugMug
+      return new Response('Internal error', { 
+        status: 500,
+        headers: { 'Cache-Control': 'no-store' }
+      });
+    }
   }
+  
+  // Not an image page or /img/* route - pass through to origin
+  return fetch(request);
 }
 
 // ============================================================================
