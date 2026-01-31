@@ -530,6 +530,25 @@ export default function ChapterGalleryBase({
   const [showMiniMenu, setShowMiniMenu] = useState(false);
   const [showArrows, setShowArrows] = useState(true);
 
+  // 🔧 HYDRATION FIX: Enter chapters/grid mode on initial load if theme or view param is present
+  // This runs after hydration to ensure URL params are respected on static pages
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const hasTheme = params.has("theme");
+    const hasViewGrid = params.get("view") === "grid";
+    const hasImageId = /\/(i-[a-zA-Z0-9_-]+)/.test(window.location.pathname);
+    
+    // Enter chapters mode if any of these conditions are met
+    if ((hasTheme || hasViewGrid || hasImageId) && !hasEnteredChapters) {
+      setHasEnteredChapters(true);
+    }
+    // Force grid view if theme or view=grid is present
+    if ((hasTheme || hasViewGrid) && viewMode !== "grid") {
+      setViewMode("grid");
+    }
+  }, []); // Run once after hydration
+
     // Event counters for batching UI actions
     const [eventCounts, setEventCounts] = useState({
       next: 0,
