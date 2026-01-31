@@ -254,15 +254,21 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
   <style>
     .story-section { line-height: 1.7; }
-    .story-block p { margin-bottom: 1rem; font-size: 1.125rem; }
+    .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
     .story-block h2 { 
       margin-top: 2.5rem; 
       margin-bottom: 1rem; 
       font-weight: 600; 
-      font-size: 1.5rem;
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
       color: #1a1a1a;
     }
-    .story-block ul { font-size: 1.125rem; }
+    .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    
+    /* Mobile-friendly adjustments */
+    @media (max-width: 640px) {
+      .story-section { padding-left: 1rem; padding-right: 1rem; }
+      .story-block p, .story-block ul { line-height: 1.6; }
+    }
     
     /* Section heading with extending line */
     .section-heading-with-line {

@@ -1,14 +1,18 @@
 /**
  * K4 Studios Image Proxy Worker
  * 
- * Routes: /img/{id}/{size}
+ * Routes: 
+ *   /img/{id}/{size} - Proxy images from SmugMug
+ *   /Galleries/.../i-* - Image page policy (bot detection, redirects)
+ *   /Other/.../i-* - Image page policy (bot detection, redirects)
  * 
  * Responsibilities:
  * - Fetch + cache image-manifest.json from origin
- * - Resolve image ID → SmugMug URL with size fallback
+ * - Resolve image ID to SmugMug URL with size fallback
  * - Apply bot logic (Bing capped at srcM)
  * - Fetch from SmugMug and return bytes
- * - Never redirect, never leak origin
+ * - Handle 404 policy for image pages (410 for bots, redirect for humans)
+ * - Never redirect to SmugMug, never leak origin
  */
 
 // ============================================================================
@@ -29,6 +33,9 @@ const SIZE_FALLBACK = {
 
 // Bot detection patterns - only Bing gets special treatment
 const BING_BOT_PATTERN = /bingbot|msnbot|bingpreview/i;
+
+// General bot pattern for image page policy
+const BOT_UA_PATTERN = /googlebot|bingbot|yandex|baiduspider|duckduckbot|slurp|msnbot|facebookexternalhit|twitterbot|linkedinbot|applebot/i;
 
 // Maximum size Bing is allowed to receive
 const BING_MAX_SIZE = 'm';
@@ -190,6 +197,88 @@ async function proxyImage(smugMugUrl, request) {
 }
 
 // ============================================================================
+// IMAGE PAGE POLICY (for static image detail pages)
+// ============================================================================
+
+/**
+ * Check if this is a search engine bot
+ */
+function isSearchBot(request) {
+  const ua = request.headers.get('User-Agent') || '';
+  return BOT_UA_PATTERN.test(ua);
+}
+
+/**
+ * Check if URL is an image detail page
+ * Matches: /Galleries/.../i-XXXXX or /Other/.../i-XXXXX
+ */
+function isImagePageRoute(pathname) {
+  return /\/(Galleries|Other)\/.*\/i-[a-zA-Z0-9]+\/?$/.test(pathname);
+}
+
+/**
+ * Extract image ID from page URL
+ */
+function extractImageId(pathname) {
+  const match = pathname.match(/(i-[a-zA-Z0-9]+)\/?$/);
+  return match ? match[1] : null;
+}
+
+/**
+ * Get parent gallery path (strip the /i-XXXXX from end)
+ */
+function getParentGallery(pathname) {
+  return pathname.replace(/\/i-[a-zA-Z0-9]+\/?$/, '');
+}
+
+/**
+ * Handle image page policy
+ * - If image exists in manifest → pass through to origin (static page)
+ * - If image doesn't exist + bot → 410 Gone
+ * - If image doesn't exist + human → 302 redirect to parent gallery
+ */
+async function handleImagePagePolicy(request, pathname, ctx) {
+  const imageId = extractImageId(pathname);
+  
+  if (!imageId) {
+    // Not a valid image page URL, pass through
+    return null;
+  }
+  
+  try {
+    const manifest = await getManifest(ctx);
+    
+    // Check if image exists in manifest
+    if (manifest[imageId]) {
+      // Image exists → let it pass through to static page
+      return null;
+    }
+    
+    // Image doesn't exist → apply policy
+    const parentGallery = getParentGallery(pathname);
+    
+    if (isSearchBot(request)) {
+      // Bots get 410 Gone so they de-index the URL
+      return new Response('Gone', {
+        status: 410,
+        headers: {
+          'X-Robots-Tag': 'noindex',
+          'Cache-Control': 'public, max-age=86400' // Cache 410 for 1 day
+        }
+      });
+    } else {
+      // Humans get redirected to parent gallery
+      return Response.redirect(`https://www.k4studios.com${parentGallery}`, 302);
+    }
+    
+  } catch (error) {
+    console.error('Image page policy error:', error);
+    // On error, pass through to origin
+    return null;
+  }
+}
+
+// ============================================================================
 // REQUEST HANDLER
 // ============================================================================
 
@@ -215,7 +304,18 @@ function parseImageRoute(pathname) {
 async function handleRequest(request, ctx) {
   const url = new URL(request.url);
   
-  // Only handle /img/* routes
+  // Check for image page routes first (Galleries/Other with /i-XXXXX)
+  if (isImagePageRoute(url.pathname)) {
+    const policyResponse = await handleImagePagePolicy(request, url.pathname, ctx);
+    if (policyResponse) {
+      // Policy returned a response (410 or redirect)
+      return policyResponse;
+    }
+    // Policy returned null → pass through to origin for static page
+    return fetch(request);
+  }
+  
+  // Only handle /img/* routes for image proxying
   if (!url.pathname.startsWith('/img/')) {
     return new Response('Not Found', { status: 404 });
   }

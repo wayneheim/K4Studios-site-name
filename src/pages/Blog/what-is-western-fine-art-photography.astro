@@ -160,10 +160,10 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>This article defines what Western fine art photography is, what it is not, and why the distinction matters for collectors, curators, and anyone seeking work that endures on a wall rather than in a folder.</p>
 
-        <!-- EARLY FUNNEL (Quill's recommendation) -->
+        <!-- EARLY FUNNEL -->
         <div class="early-funnel" style="background:#f8f6f3; border-left:4px solid #8b5a2b; padding:1.25rem 1.5rem; margin:2rem 0; border-radius:0 8px 8px 0;">
           <p style="margin:0; font-size:1.05rem;">
-            This is not theoretical. The work itself is demonstrated throughout the 
+            To see these ideas in practice, explore the 
             <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Western Fine Art Photography collection</a>.
           </p>
         </div>
@@ -287,15 +287,21 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
   <style>
     .story-section { line-height: 1.7; }
-    .story-block p { margin-bottom: 1rem; font-size: 1.125rem; }
+    .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
     .story-block h2 { 
       margin-top: 2.5rem; 
       margin-bottom: 1rem; 
       font-weight: 600; 
-      font-size: 1.5rem;
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
       color: #1a1a1a;
     }
-    .story-block ul { font-size: 1.125rem; }
+    .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    
+    /* Mobile-friendly adjustments */
+    @media (max-width: 640px) {
+      .story-section { padding-left: 1rem; padding-right: 1rem; }
+      .story-block p, .story-block ul { line-height: 1.6; }
+    }
     
     /* Header Image Bar - 5 images with fade effect */
     .header-image-bar {

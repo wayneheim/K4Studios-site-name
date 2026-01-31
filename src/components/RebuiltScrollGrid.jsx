@@ -355,7 +355,7 @@ export default function RebuiltScrollGrid({
                     src={gridSrc}
                     alt={entry.alt || entry.title}
                     className="w-full h-full object-cover rounded-sm border-2 border-gray-400"
-                    style={{ minHeight: 120 }}
+                    style={{ minHeight: 120, objectPosition: "center 15%" }}
                     loading="lazy"
                     decoding="async"
                     draggable={false}

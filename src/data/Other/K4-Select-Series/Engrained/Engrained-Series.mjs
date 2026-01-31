@@ -1460,7 +1460,7 @@ export const galleryData = [
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/KfZQJgLfWZGBqr722Sx5w8kQNDZxtf84KPc8wkSVB/XL/Cowboy-Wounded-ws-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/NdP6cThHzQ5dVs6WRpQ82q8QBf5gt6QcZrTQRmQS3/L/Cowboy-Wounded-ws-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/Nf4x2SSj6p4JpWSFX7LLNzbnc7qWnrQnbTM2VtJKV/M/Cowboy-Wounded-ws-M.jp",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/Nf4x2SSj6p4JpWSFX7LLNzbnc7qWnrQnbTM2VtJKV/M/Cowboy-Wounded-ws-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/LTwkXZMdTGk3r4bvhNjtnjMFx8P4kXjPHGB2DrBJ5/S/Cowboy-Wounded-ws-S.jpg",
   },
   {
