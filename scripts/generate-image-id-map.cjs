@@ -39,10 +39,11 @@ async function generateImageIdMap() {
   const masterData = await import('file://' + MASTER_DATA_PATH);
   const galleryDataMap = masterData.galleryDataMap;
   
-  // Build id → first VISIBLE gallery path map
+  // Build id → array of ALL VISIBLE gallery paths
+  // An image can legitimately exist in multiple galleries (e.g., Fine-Art and Painterly versions)
   const imageIdMap = {};
   let imageCount = 0;
-  let duplicateCount = 0;
+  let additionalPaths = 0;
   let hiddenCount = 0;
   
   for (const [galleryPath, images] of Object.entries(galleryDataMap)) {
@@ -59,12 +60,15 @@ async function generateImageIdMap() {
       const urlPath = galleryPath.startsWith('/') ? galleryPath : '/' + galleryPath;
       
       if (!imageIdMap[img.id]) {
-        // First visible occurrence - store the gallery path
-        imageIdMap[img.id] = urlPath;
+        // First visible occurrence - store as array
+        imageIdMap[img.id] = [urlPath];
         imageCount++;
       } else {
-        // Duplicate - already have this ID mapped to a visible location
-        duplicateCount++;
+        // Additional gallery - add to array if not already present
+        if (!imageIdMap[img.id].includes(urlPath)) {
+          imageIdMap[img.id].push(urlPath);
+          additionalPaths++;
+        }
       }
     }
   }
@@ -83,7 +87,7 @@ async function generateImageIdMap() {
   console.log(`✅ Generated imageIdMap.json:`);
   console.log(`   - ${imageCount} unique VISIBLE image IDs`);
   console.log(`   - ${hiddenCount} hidden images skipped`);
-  console.log(`   - ${duplicateCount} duplicates (using first visible occurrence)`);
+  console.log(`   - ${additionalPaths} additional gallery paths (images in multiple galleries)`);
   console.log(`   - File size: ${fileSizeKB} KB`);
   console.log(`   - Written to: src/data/ and netlify/functions/`);
 }

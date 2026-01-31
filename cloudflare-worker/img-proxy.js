@@ -308,16 +308,21 @@ async function handleImagePagePolicy(request, pathname, ctx) {
     // Check if image exists in manifest
     if (manifest[imageId]) {
       // Image exists - check if the path is correct
-      const canonicalGalleryPath = imageIdMap[imageId];
+      const validPaths = imageIdMap[imageId];
       const requestedGalleryPath = getParentGallery(pathname);
       
-      if (canonicalGalleryPath && canonicalGalleryPath !== requestedGalleryPath) {
-        // Wrong path - redirect to canonical URL (smart 404)
-        const canonicalUrl = `https://www.k4studios.com${canonicalGalleryPath}/${imageId}`;
-        return Response.redirect(canonicalUrl, 301);
+      // validPaths is now an array of all valid gallery paths for this image
+      if (validPaths) {
+        const pathsArray = Array.isArray(validPaths) ? validPaths : [validPaths];
+        
+        if (!pathsArray.includes(requestedGalleryPath)) {
+          // Wrong path - redirect to first valid canonical URL (smart 404)
+          const canonicalUrl = `https://www.k4studios.com${pathsArray[0]}/${imageId}`;
+          return Response.redirect(canonicalUrl, 301);
+        }
       }
       
-      // Correct path → let it pass through to static page
+      // Valid path → let it pass through to static page
       return null;
     }
     
