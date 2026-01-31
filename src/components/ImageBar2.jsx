@@ -46,6 +46,7 @@ const CAROUSEL_SIZES = "(max-width: 768px) 600px, 1024px";
 const allCarousels = import.meta.glob([
   "../data/Galleries/**/carousel.ts",
   "../data/Other/**/carousel.ts",
+  "../data/Cowboy-Fine-Art-Photography/carousel.ts",
   "../data/Painterly-Western-Photography/carousel.ts",
   "../data/Western-Fine-Art-Photography/carousel.ts",
   "../data/Western-Black-and-White-Photography/carousel.ts",
