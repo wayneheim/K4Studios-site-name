@@ -173,9 +173,9 @@ export const galleryData = [
   },
   {
     "id": "i-89qzJ6S",
-    "title": "Exploring Cowboy Painting Art",
-    "description": "This cowboy painting art artwork by Wayne Heim showcases narrative Western art in a Western cowboys style. Reflecting cowboy artwork, wild west photography, and cowboy painting art, it's suited for admirers of narrative Western art. With western canon elements. © Wayne Heim",
-    "alt": "cowboy painting art in fine art photography",
+    "title": "Brothers of the Open Country",
+    "description": "A powerful painterly Western portrait depicting the quiet unity between two frontier companions—one Indigenous, one a seasoned trapper—standing beside a saddled horse under dramatic skies. Rich textures and warm, cinematic tones bring emotional depth to the scene, capturing a bond forged through shared experience on the open range. Wayne Heim’s fine art technique blends illustration-inspired detail with photographic authenticity, offering a narrative-rich tableau ideal for collectors of Western fine art, historical narratives, and evocative Americana.",
+    "alt": "Indigenous scout and frontier trapper standing together with a horse, painterly Western portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/KFC7vkSrbSkrPPGFpZSVfcqfV48gC7WztZpHz8Rg2/L/_HF29136-Edit-2-Edit-L.jpg",
@@ -183,29 +183,46 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/MQLzDBQccQDFrb7kBSR9Wm8cCgC8NkG76c43VX2Xx/S/_HF29136-Edit-2-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/A",
+
     "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
-      "painterly photography",
-      "cowboy painting art",
+      "western fine art photography",
+      "indigenous scout portrait",
+      "frontier trapper portrait",
+      "cross cultural western story",
+      "painterly western art",
+      "americana fine art",
+      "historical western imagery",
+      "frontier companionship",
+      "museum quality western decor",
+      "cowboy portraits",
       "narrative Western art",
-      "Western cowboys",
       "cowboy artwork",
-      "wild west photography",
-      "western canon",
+      "cowboy art",
+      "fine art Western photography",
       "painterly Western photograph",
-      "frontier life"
+      "Western Cowboy Portraits",
+      "western cowboy art",
+      "painterly Western images",
+      "wild west painterly photography",
+      "western painterly photography",
+      "cowboy portrait",
+      "cowboy painting art",
+      "fine art cowboy photography",
+      "historic western prints",
+      "painterly technique"
     ],
-    "story": "Delving into painterly Western photograph, this work by Wayne Heim highlights western canon through frontier life and narrative Western art. A powerful statement in photography.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "Sharp fall air hangs heavy like morning dew.\nChange is in the air—seasons and society, both forcing their own agenda upon this land.\n\nThey come by wagonload now, each one hoping for a new beginning—hunting for answers, a fresh start, or just a path forward.\n\nCarving, forging, reshaping this life with Eastern wealth and virtues, they claim what’s ours for theirs.\nYears, old friend, we shared this place as brothers—one mind - wrapped in different cloths.\n\nClouds of change gather, dappled and restless, over the valley floor.\nBoth season and change move at will, ushering a future that neither hope nor protest can hold back.",
+    "notes": "This piece exemplifies Heim’s ability to portray interpersonal nuance within a painterly, historically grounded aesthetic. The triangular composition—horse, Indigenous scout, trapper—creates a stable visual structure that reinforces the sense of alliance. Textural layering and soft atmospheric light evoke the tonal sensitivity of classic Western illustrators while preserving the authenticity of lived experience. The work carries emotional and cultural resonance, making it a standout selection for collectors who appreciate Western art that honors story, lineage, and human connection.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    contentSource: "ai"
   },
   {
     "id": "i-wWNfZsT",

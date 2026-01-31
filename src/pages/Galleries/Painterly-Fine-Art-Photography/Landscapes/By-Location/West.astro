@@ -1,25 +1,5 @@
-
+﻿---
+export const prerender = true;
+// Redirect to the Gallery page
+return Astro.redirect("/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery");
 ---
-export async function get({ redirect }) {
-  return redirect("/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery");
-}
-
-// The original page content is commented out below for future reference.
-/*
-...existing code...
-*/
-
----
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>West Landscapes Gallery</title>
-	</head>
-	<body>
-		<h1>West Landscapes</h1>
-		<p>This page should redirect to the Gallery.</p>
-	</body>
-</html>

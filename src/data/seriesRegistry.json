@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-01-23T18:57:35.782Z",
+    "lastUpdated": "2026-01-30T16:27:56.194Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z"
   },
   "images": {
@@ -1281,7 +1281,20 @@
     "i-G8gfsL5:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-abWUgjU",
     "i-J6Gdmr4:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-LgrXJc3",
     "i-x6rrj3V:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-sMhWbkg",
-    "i-Lk9XZKB:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-GECpCLa"
+    "i-Lk9XZKB:/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs": "s-GECpCLa",
+    "i-vPsFX8r:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-SfrYdR7",
+    "i-cxmJsHf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-9SKjNJ9",
+    "i-crv6h7r:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-TdA6BqY",
+    "i-fhnpqP8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-atdxtJh",
+    "i-stm5tCK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-nehswnp",
+    "i-KPgFcrw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs": "s-P4phpaA",
+    "i-wHspqpJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-nHCdUjy",
+    "i-6XC3VfC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-fJjqUSW",
+    "i-Fjhdhf2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-usuqqpZ",
+    "i-MFksKj9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-NgMnvUc",
+    "i-psMRwPB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-W6RxH4a",
+    "i-xgqQnWv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-W2pTeGQ",
+    "i-89qzJ6S:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs": "s-rVHQ54A"
   },
   "series": {
     "s-BB65wHk": {
@@ -28256,7 +28269,7 @@
         {
           "imageId": "i-c4xWGxj",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Cowboy Art: Options",
+          "title": "Options",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-c4xWGxj/3/M9tRqL39b2jpGrNddtH625cg9cHCJkZmSwRFrtNzt/XL/_HF26270-Edit-Edit-2-2-XL.jpg"
         }
       ],
@@ -31650,6 +31663,253 @@
       "linkedCount": 1,
       "excludeSizes": {},
       "createdAt": "2026-01-23T18:50:18.787Z"
+    },
+    "s-SfrYdR7": {
+      "primaryImageId": "i-vPsFX8r",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Signal at First Light",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vPsFX8r/0/NRJmsBGMr7kfrX2R572fpf665pVBpr49K6BZMbjkS/XL/_HF27565-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-vPsFX8r",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
+          "title": "Signal at First Light",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vPsFX8r/0/NRJmsBGMr7kfrX2R572fpf665pVBpr49K6BZMbjkS/XL/_HF27565-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T15:30:17.386Z"
+    },
+    "s-9SKjNJ9": {
+      "primaryImageId": "i-cxmJsHf",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Signal at First Light",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/2/NG4LS8JRqtjF7kQxs8CQkTP6zgkdBWbx5FCKz7KQj/XL/_HF27565-Edit-2-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-cxmJsHf",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
+          "title": "Held Note",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/2/NG4LS8JRqtjF7kQxs8CQkTP6zgkdBWbx5FCKz7KQj/XL/_HF27565-Edit-2-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T15:30:40.786Z"
+    },
+    "s-TdA6BqY": {
+      "primaryImageId": "i-crv6h7r",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Held Close",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-crv6h7r/0/K8HGjFCn63Jc2fsXVGFK5bG9d4cP6nxphs579J9RG/XL/_WHO6737-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-crv6h7r",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
+          "title": "Held Close",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-crv6h7r/0/K8HGjFCn63Jc2fsXVGFK5bG9d4cP6nxphs579J9RG/XL/_WHO6737-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T15:33:26.269Z"
+    },
+    "s-atdxtJh": {
+      "primaryImageId": "i-fhnpqP8",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Weight of Years",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fhnpqP8/0/KFNFDWZJJPRKg3WCNK5WQLrgFcmGBBvNwjb228Rs5/XL/_HF29303-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-fhnpqP8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
+          "title": "The Weight of Years",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fhnpqP8/0/KFNFDWZJJPRKg3WCNK5WQLrgFcmGBBvNwjb228Rs5/XL/_HF29303-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T15:35:24.549Z"
+    },
+    "s-nehswnp": {
+      "primaryImageId": "i-stm5tCK",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Way Forward",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-stm5tCK/0/LNQZf8wNJgLJphcSb4RKWpdnzTFqpsGKRQt84BGQK/XL/_HF20974-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-stm5tCK",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
+          "title": "The Way Forward",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-stm5tCK/0/LNQZf8wNJgLJphcSb4RKWpdnzTFqpsGKRQt84BGQK/XL/_HF20974-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T15:36:33.144Z"
+    },
+    "s-P4phpaA": {
+      "primaryImageId": "i-KPgFcrw",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Turn",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KPgFcrw/1/NhBpLbSG5xnnRmwNWvhx86b4MWp8w8Hskx9mZC3DK/XL/_WHO4255-Edit-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-KPgFcrw",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
+          "title": "The Turn",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KPgFcrw/1/NhBpLbSG5xnnRmwNWvhx86b4MWp8w8Hskx9mZC3DK/XL/_WHO4255-Edit-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T15:39:07.006Z"
+    },
+    "s-nHCdUjy": {
+      "primaryImageId": "i-wHspqpJ",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Where She Leans",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wHspqpJ/0/NcbFbBhPNzfmNSRhjtX8pWmcgt6LW4pdXPhMHx3KG/XL/_WHO6737-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-wHspqpJ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "Where She Leans",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wHspqpJ/0/NcbFbBhPNzfmNSRhjtX8pWmcgt6LW4pdXPhMHx3KG/XL/_WHO6737-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T16:00:01.666Z"
+    },
+    "s-fJjqUSW": {
+      "primaryImageId": "i-6XC3VfC",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Reading the Land",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6XC3VfC/0/LJC7WqW2FF8p7vZGBSvfdHKcC3r522Rfcp46gvTH6/XL/_WHO6052-915-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-6XC3VfC",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "Reading the Land",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6XC3VfC/0/LJC7WqW2FF8p7vZGBSvfdHKcC3r522Rfcp46gvTH6/XL/_WHO6052-915-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T16:01:18.514Z"
+    },
+    "s-usuqqpZ": {
+      "primaryImageId": "i-Fjhdhf2",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Weight of the Flag",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Fjhdhf2/0/KTVVdvgskQvpftf5PgP23FK2z6qXmcJMxGL7gcWjM/XL/_HF27627-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Fjhdhf2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "The Weight of the Flag",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Fjhdhf2/0/KTVVdvgskQvpftf5PgP23FK2z6qXmcJMxGL7gcWjM/XL/_HF27627-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T16:03:07.061Z"
+    },
+    "s-NgMnvUc": {
+      "primaryImageId": "i-MFksKj9",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Brass and Breath",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MFksKj9/1/Lt8RZLZ6zHLzBNCXTs7kBXsZhJt7X4cv4kt58KdBG/XL/_HF27565-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-MFksKj9",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "Brass and Breath",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MFksKj9/1/Lt8RZLZ6zHLzBNCXTs7kBXsZhJt7X4cv4kt58KdBG/XL/_HF27565-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T16:04:26.990Z"
+    },
+    "s-W6RxH4a": {
+      "primaryImageId": "i-psMRwPB",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Signal Holds",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-psMRwPB/3/KpBHgTbH3kbz4n7DKWHQV9w523nmjJtRRCjbNfL6x/XL/_HF27565-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-psMRwPB",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "The Signal Holds",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-psMRwPB/3/KpBHgTbH3kbz4n7DKWHQV9w523nmjJtRRCjbNfL6x/XL/_HF27565-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T16:05:57.235Z"
+    },
+    "s-W2pTeGQ": {
+      "primaryImageId": "i-xgqQnWv",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Dust and Resolve",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xgqQnWv/1/NK5hRs26z63JhQqX45c23jvsWQvNVdFVBth2rvwhB/XL/_WHO4255-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-xgqQnWv",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "Dust and Resolve",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xgqQnWv/1/NK5hRs26z63JhQqX45c23jvsWQvNVdFVBth2rvwhB/XL/_WHO4255-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T16:09:38.251Z"
+    },
+    "s-rVHQ54A": {
+      "primaryImageId": "i-89qzJ6S",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Brothers of the Open Country",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-89qzJ6S",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
+          "title": "Brothers of the Open Country",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-01-30T16:25:33.179Z"
     }
   }
 }

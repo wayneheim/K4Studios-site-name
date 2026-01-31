@@ -9069,9 +9069,9 @@ export const galleryData = [
   },
   {
     "id": "i-vPsFX8r",
-    "title": "Western Landscapes Fine Art Portrait",
-    "description": "Wayne Heim's western landscapes fine art captures the spirit of outlaw portraits in this fine art Western photography image. Featuring American frontier portraits, western canon, and western landscapes fine art, it's ideal for outlaw portraits enthusiasts. Discover painterly Western images in photography. © Wayne Heim",
-    "alt": "Fine art photography of western landscapes fine art by Wayne Heim",
+    "title": "Signal at First Light",
+    "description": "Signal at First Light is a painterly Western fine art portrait rooted in American frontier history and narrative restraint. Rendered in black and white, the image emphasizes psychological presence over action, allowing silence, posture, and timing to define the scene. Drawing from the Western canon and frontier portrait traditions, this fine art Western photography work reflects how decisions once traveled across open ground—carried by sound, consequence, and human resolve. Created for collectors who value narrative depth and enduring imagery, this piece rewards long viewing and quiet attention. © Wayne Heim",
+    "alt": "Painterly black and white fine art Western portrait of a frontier bugler sounding a morning signal, evoking American frontier history, restraint, and narrative tension in Western fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vPsFX8r/0/NRJmsBGMr7kfrX2R572fpf665pVBpr49K6BZMbjkS/XL/_HF27565-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vPsFX8r/0/NRJmsBGMr7kfrX2R572fpf665pVBpr49K6BZMbjkS/XL/_HF27565-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vPsFX8r/0/KMSKnLqHFR99PM2M3mqg2jqds5KFrTKsgcdZsbDWn/L/_HF27565-Edit-L.jpg",
@@ -9079,34 +9079,47 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vPsFX8r/0/MXBWXBXzPc7hFndzjG4ZsvMgMJcv9CMSnvM4bhjq5/S/_HF27565-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vPsFX8r/A",
+
     "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
-      "painterly photography",
-      "western landscapes fine art",
-      "outlaw portraits",
-      "fine art Western photography",
-      "American frontier portraits",
+      "american frontier",
+      "frontier portraits",
       "western canon",
-      "painterly Western images",
-      "Baltic Birch"
+      "fine art Western photography",
+      "painterly photography",
+      "painterly Western photography",
+      "Western fine art",
+      "Western art",
+      "cowboy art",
+      "cowboy artwork",
+      "cowboy portraits",
+      "cowboys",
+      "frontier history",
+      "historical Western portrait",
+      "narrative Western art",
+      "cinematic Western image",
+      "black and white Western photography",
+      "Western wall art",
+      "Western fine art prints",
+      "Western photography image"
     ],
-    "story": "Wayne Heim's exploration of Baltic Birch comes alive in this piece, showcasing Baltic Birch and Baltic Birch. A testament to American frontier portraits in fine art.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The note rises before the day fully arrives. Breath, metal, and intention meet in a moment that cannot be retrieved once released. He does not look to confirm who hears it—he knows they will. This image holds the pause between darkness and motion, where history does not announce itself loudly, but arrives all the same.",
+    "notes": "This image aligns with a tradition of Western narrative art where implication carries more weight than depiction. The restrained gesture and disciplined tonal control recall the compositional intelligence of artists such as Frederic Remington and N.C. Wyeth—not through imitation, but through shared understanding that anticipation often holds greater power than resolution. The photograph’s painterly handling softens transitions without sacrificing structure, placing it within a pictorialist-informed approach while remaining grounded in photographic authorship. As a single-frame narrative, Signal at First Light functions as a cinematic still—an image that invites the viewer to inhabit the moment just before history begins to move.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 200
+    "sortOrder": 200,
+    contentSource: "ai"
   },
   {
     "id": "i-cxmJsHf",
-    "title": "Western Fine Art - Western Art",
-    "description": "Discover the western fine art in this powerful western art by Wayne Heim. A compelling work that embodies outlaw portraits, historic western prints, and historic western prints. Featuring cowboy painting art, perfect for art lovers seeking western fine art to enhance their collection. © Wayne Heim",
-    "alt": "Wayne Heim's western fine art artwork",
+    "title": "Held Note",
+    "description": "Held Note is a painterly Western fine art portrait rooted in American frontier history and narrative restraint. Rendered in black and white, the image favors intimacy over scale, focusing on the psychological weight carried by the figure rather than the distance the signal will travel. Drawing from the Western canon and frontier portrait traditions, this fine art Western photography work reflects how authority once resided not in spectacle, but in presence. Created for collectors who value subtlety, narrative tension, and enduring imagery, this piece rewards close and sustained viewing. © Wayne Heim",
+    "alt": "Painterly black and white fine art Western portrait of a frontier bugler holding a signal call, emphasizing American frontier history, restraint, and quiet narrative tension in Western fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/2/NG4LS8JRqtjF7kQxs8CQkTP6zgkdBWbx5FCKz7KQj/XL/_HF27565-Edit-2-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/2/NG4LS8JRqtjF7kQxs8CQkTP6zgkdBWbx5FCKz7KQj/XL/_HF27565-Edit-2-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/2/L9gWqS2tktTmQ2n27kvGtFNBft9T9FscQjN45rCnC/L/_HF27565-Edit-2-2-L.jpg",
@@ -9114,28 +9127,46 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/2/MzSKZj2kdkvpFHhSkN9bt6HDj8sqtp3Wf5nZxR2Z2/S/_HF27565-Edit-2-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/A",
+
     "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
+      "american frontier",
+      "frontier portraits",
+      "western canon",
+      "fine art Western photography",
       "painterly photography",
-      "western fine art",
-      "western art",
-      "outlaw portraits",
-      "historic western prints",
-      "cowboy painting art",
+      "painterly Western photography",
+      "Western fine art",
+      "Western art",
+      "cowboy art",
+      "cowboy artwork",
       "cowboy portraits",
-      "frontier life"
+      "cowboys",
+      "frontier history",
+      "historical Western portrait",
+      "narrative Western art",
+      "cinematic Western image",
+      "black and white Western photography",
+      "Western wall art",
+      "Western fine art prints",
+      "Western photography image",
+      "frontier life",
+      "painterly Western images",
+      "pictorialist tradition",
+      "rugged spirit",
+      "the American West"
     ],
-    "story": "This image embodies cowboy painting art and cowboy portraits, captured by Wayne Heim in his signature style. It reflects frontier life with a touch of western art.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The sound has not left him yet. Breath is drawn, metal is raised, and everything that follows is suspended in a single instant. This image lives in that narrow space where intention outweighs action—where the decision is complete, even if the world has not responded.",
+    "notes": "This work operates within a tradition of Western narrative art that privileges restraint over declaration. The compressed framing and disciplined tonal range recall pictorialist principles, where mood and psychological presence guide interpretation more than explicit action. The image aligns with the narrative intelligence found in artists such as Frederic Remington and N.C. Wyeth—not through imitation, but through shared understanding that authority can reside in stillness. As a single-frame narrative, Held Note functions as a cinematic still—an image that invites the viewer to linger in the moment before history commits itself.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 201
+    "sortOrder": 201,
+    contentSource: "ai"
   },
   {
     "id": "i-rKDPWRZ",
@@ -9507,9 +9538,9 @@ export const galleryData = [
   },
   {
     "id": "i-crv6h7r",
-    "title": "Rustic Charm Study",
-    "description": "Discover the rustic charm in this powerful western fine art by Wayne Heim. A compelling work that embodies Pictorialist tradition, powerful works of art, and painterly cowboy portraits. Featuring narrative Western art, perfect for art lovers seeking rustic charm to enhance their collection. © Wayne Heim",
-    "alt": "Wayne Heim's rustic charm artwork",
+    "title": "Held Close",
+    "description": "Held Close is a painterly Western fine art portrait centered on intimacy rather than frontier spectacle. Rendered in black and white, the image emphasizes softness, proximity, and emotional restraint, allowing the bond between subject and animal to carry the narrative. Rooted in the pictorialist tradition and narrative Western art, this fine art Western photography work reflects a quieter side of the American West—one defined not by endurance alone, but by gentleness and refuge. Created for collectors who value subtle emotion and images that reward stillness, this piece invites prolonged, contemplative viewing. © Wayne Heim",
+    "alt": "Painterly black and white fine art Western portrait of a young girl resting against a horse, expressing trust, tenderness, and quiet emotional connection in Western fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-crv6h7r/0/K8HGjFCn63Jc2fsXVGFK5bG9d4cP6nxphs579J9RG/XL/_WHO6737-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-crv6h7r/0/K8HGjFCn63Jc2fsXVGFK5bG9d4cP6nxphs579J9RG/XL/_WHO6737-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-crv6h7r/0/L9JvhMHzKTP6wn7TpwnCx8nrWVwVkvJWfqjGBwDd3/L/_WHO6737-Edit-2-L.jpg",
@@ -9517,35 +9548,51 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-crv6h7r/0/NTZ6bcmKm43mBGPHpzxTSbfvrk9whgV7NkrnpQ6CQ/S/_WHO6737-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-crv6h7r/A",
+
     "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
+      "american frontier",
+      "frontier portraits",
+      "western canon",
+      "fine art Western photography",
       "painterly photography",
-      "rustic charm",
-      "western fine art",
-      "Pictorialist tradition",
-      "powerful works of art",
-      "painterly cowboy portraits",
-      "narrative Western art",
+      "painterly Western photography",
+      "Western fine art",
+      "Western art",
+      "cowboy art",
       "cowboy artwork",
-      "wild west photography"
+      "cowboy portraits",
+      "cowboys",
+      "frontier life",
+      "narrative Western art",
+      "pictorialist tradition",
+      "painterly Western images",
+      "rugged spirit",
+      "the American West",
+      "western themed art",
+      "wild west photography",
+      "Americana photography",
+      "authentic frontier art prints",
+      "cinematic stills",
+      "painterly technique"
     ],
-    "story": "Wayne Heim's exploration of narrative Western art comes alive in this piece, showcasing cowboy artwork and narrative Western art. A testament to wild west photography in fine art.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "She does not cling. She rests. The weight of her head settles where it has learned the world will not intrude. There is no signal, no motion demanded—only the quiet agreement between two living things that this moment can remain unguarded. Whatever waits beyond the frame is held back by trust.",
+    "notes": "This work reflects a lineage of Western art that values emotional truth over dramatization. The close framing and softened tonal transitions draw from pictorialist principles, where atmosphere and feeling guide interpretation more than overt action. The image resonates with traditions found in both Western painting and early photographic portraiture, where human presence is defined by trust, proximity, and restraint. By allowing the subject to exist without performance or tension, Held Close becomes a quiet counterpoint within the Western canon—an image that speaks to protection, companionship, and the moments history does not record, yet life depends on.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 211
+    "sortOrder": 211,
+    contentSource: "ai"
   },
   {
     "id": "i-fhnpqP8",
-    "title": "Capturing Western Art",
-    "description": "Wayne Heim's western art captures the spirit of rugged spirit in this rustic charm image. Featuring fine art Western photography, powerful works of art, and western art, it's ideal for rugged spirit enthusiasts. Discover cowboy artwork in photography. © Wayne Heim",
-    "alt": "Fine art photography of western art by Wayne Heim",
+    "title": "The Weight of Years",
+    "description": "The Weight of Years is a painterly Western fine art portrait shaped by time, restraint, and lived authority. Rendered in black and white, the image emphasizes texture, weathered presence, and psychological depth over narrative action. Drawing from the Western canon and frontier portrait traditions, this fine art Western photography work reflects a West defined not by myth, but by longevity—where character is earned slowly and carried quietly. Created for collectors who value authenticity and images that deepen with time, this piece rewards sustained viewing and reflection. © Wayne Heim",
+    "alt": "Painterly black and white fine art Western portrait of an elderly cowboy with a weathered beard and hat, expressing endurance, time, and lived authority in Western fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fhnpqP8/0/KFNFDWZJJPRKg3WCNK5WQLrgFcmGBBvNwjb228Rs5/XL/_HF29303-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fhnpqP8/0/KFNFDWZJJPRKg3WCNK5WQLrgFcmGBBvNwjb228Rs5/XL/_HF29303-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fhnpqP8/0/NFtmtLVHTCRmWCPz6s6dTVRnMr426ns54RsqGWCR2/L/_HF29303-Edit-L.jpg",
@@ -9553,36 +9600,52 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fhnpqP8/0/LbQSqzqvCGBW7NLh8JG2qD5j6KmwD2mNkLMP67WW3/S/_HF29303-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fhnpqP8/A",
+
     "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
-      "painterly photography",
-      "western art",
-      "rugged spirit",
-      "rustic charm",
-      "fine art Western photography",
-      "powerful works of art",
-      "cowboy artwork",
+      "american frontier",
+      "frontier portraits",
       "western canon",
-      "narrative Western art",
-      "historic western prints"
+      "fine art Western photography",
+      "painterly photography",
+      "painterly Western photography",
+      "Western fine art",
+      "Western art",
+      "cowboy art",
+      "cowboy artwork",
+      "cowboy portraits",
+      "cowboys",
+      "frontier life",
+      "rugged spirit",
+      "the American West",
+      "western themed art",
+      "wild west photography",
+      "Americana photography",
+      "authentic frontier art prints",
+      "cinematic stills",
+      "frontier photography",
+      "grit & glory of the west",
+      "outlaw portraits",
+      "painterly technique",
+      "western cowboy wall art for collectors"
     ],
-    "story": "Wayne Heim's exploration of western canon comes alive in this piece, showcasing western canon and narrative Western art. A testament to historic western prints in fine art.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "Nothing in him is rushed anymore. The years have already done their work—settling into his posture, his gaze, the way he carries silence without explanation. He is not waiting for what comes next. He has learned that endurance does not announce itself. It simply remains.",
+    "notes": "This image belongs to a lineage of Western portraiture that values consequence over narrative flourish. The emphasis on texture, age, and tonal restraint recalls the compositional intelligence found in artists such as Frederic Remington and Andrew Wyeth, where time itself becomes a defining subject. The painterly handling softens transitions while preserving structural honesty, allowing the figure to feel both monumental and human. Rather than illustrating myth, The Weight of Years presents endurance as lived experience—an image that gains authority not through action, but through the accumulation of time.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 212
+    "sortOrder": 212,
+    contentSource: "ai"
   },
   {
     "id": "i-stm5tCK",
-    "title": "Baltic Birch - Fine Art Western Photography",
-    "description": "Immerse yourself in Baltic Birch with this stunning fine art Western photography by Wayne Heim. Capturing western cowboy art, cowboy portraits, and rugged spirit, it's a must-have for collectors of Baltic Birch. Including powerful works of art themes. © Wayne Heim",
-    "alt": "Baltic Birch in fine art photography",
+    "title": "The Way Forward",
+    "description": "The Way Forward is a painterly Western fine art photograph rooted in American frontier life and narrative Western art. Rendered in black and white, the image captures a shared moment of decision, where movement is implied but not yet taken. Drawing from the Western canon and pictorialist tradition, this fine art Western photography work emphasizes gesture, distance, and consequence over action. Designed for collectors who value cinematic storytelling and enduring imagery, the piece rewards sustained viewing and reflection. © Wayne Heim",
+    "alt": "Painterly black and white fine art Western photograph of two riders on horseback as one points toward the horizon, conveying direction, partnership, and frontier decision in Western fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-stm5tCK/0/LNQZf8wNJgLJphcSb4RKWpdnzTFqpsGKRQt84BGQK/XL/_HF20974-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-stm5tCK/0/LNQZf8wNJgLJphcSb4RKWpdnzTFqpsGKRQt84BGQK/XL/_HF20974-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-stm5tCK/0/K4kWmC5kW5z7Bt9HXSHLSqpFnQRf5fR4bKgrn3Rq6/L/_HF20974-Edit-Edit-L.jpg",
@@ -9590,35 +9653,52 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-stm5tCK/0/LbPLsBNwXvCsPPK9qm5FDD2d9chrTFTQJhz6LHFVV/S/_HF20974-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-stm5tCK/A",
+
     "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
-      "painterly photography",
-      "Baltic Birch",
+      "american frontier",
+      "frontier life",
+      "frontier portraits",
+      "western canon",
       "fine art Western photography",
-      "western cowboy art",
+      "painterly photography",
+      "painterly Western photography",
+      "Western fine art",
+      "Western art",
+      "cowboy art",
+      "cowboy artwork",
       "cowboy portraits",
+      "cowboys",
+      "narrative Western art",
+      "cinematic stills",
+      "pictorialist tradition",
       "rugged spirit",
-      "powerful works of art",
-      "American frontier portraits",
-      "painterly Western images"
+      "the American West",
+      "western themed art",
+      "wild west photography",
+      "Americana photography",
+      "authentic frontier art prints",
+      "frontier photography",
+      "painterly Western images",
+      "western cowboy wall art for collectors"
     ],
-    "story": "Delving into American frontier portraits, this work by Wayne Heim highlights painterly Western images through painterly Western images and cowboy portraits. A powerful statement in photography.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He raises his hand not to command, but to commit. The land does not argue. The direction is chosen, and in that choice the future narrows into a single line. She watches, understanding that once the path is named, there is no clean way to unname it.",
+    "notes": "This work aligns with a tradition of Western narrative imagery that treats decision as the true dramatic center. The raised gesture functions as a compositional anchor, guiding the eye while implying consequence beyond the frame. Influenced by the narrative restraint seen in artists such as Frederic Remington and N.C. Wyeth, the image avoids spectacle in favor of implication. The painterly handling softens transitions while preserving structure, allowing land, figure, and gesture to share equal weight. The Way Forward operates as a single cinematic frame—an image defined not by movement itself, but by the moment movement becomes inevitable.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 213
+    "sortOrder": 213,
+    contentSource: "ai"
   },
   {
     "id": "i-KPgFcrw",
-    "title": "South Dakota Portrait",
-    "description": "Upscaled with Gigapixel v8.4.4. 2618x3491 => 9000x12001 (3.43774x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.94, creativity: 0 (Realistic), selectedFaces: 1",
-    "alt": "Upscaled with Gigapixel v8.4.4. 2618x3491 => 9000x12001 (3.43774x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.94, creativity: 0 (Realistic), selectedFaces: 1",
+    "title": "The Turn",
+    "description": "The Turn is a painterly Western fine art photograph capturing control, skill, and physical authority in motion. Rendered in black and white, the image emphasizes balance and precision over chaos, revealing the quiet intelligence behind speed. Rooted in frontier life and the Western canon, this fine art Western photography work reflects the lived reality of working cowboys, where movement is deliberate and mistakes carry consequence. Created for collectors who value authenticity, grit, and images that convey earned mastery, this piece rewards close, sustained viewing. © Wayne Heim",
+    "alt": "Painterly black and white fine art Western photograph of a cowboy guiding a horse through a sharp turn in dust, expressing control, skill, and working frontier life in Western fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KPgFcrw/1/NhBpLbSG5xnnRmwNWvhx86b4MWp8w8Hskx9mZC3DK/XL/_WHO4255-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KPgFcrw/1/NhBpLbSG5xnnRmwNWvhx86b4MWp8w8Hskx9mZC3DK/XL/_WHO4255-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KPgFcrw/1/K9dbdgW3RXjrcKqLJnrMMf8NhQzwV4BX7fN6ZN8d8/L/_WHO4255-Edit-Edit-2-L.jpg",
@@ -9626,21 +9706,45 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KPgFcrw/1/MGVvR24S9x7jGTwbp5bTCtdxst9R4tWn8Z2ZFGWRG/S/_WHO4255-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KPgFcrw/A",
+
     "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
-      "painterly photography"
+      "american frontier",
+      "frontier life",
+      "western canon",
+      "fine art Western photography",
+      "painterly photography",
+      "painterly Western photography",
+      "Western fine art",
+      "Western art",
+      "cowboy art",
+      "cowboy artwork",
+      "cowboy portraits",
+      "cowboys",
+      "frontier photography",
+      "rugged spirit",
+      "the American West",
+      "western themed art",
+      "wild west photography",
+      "Americana photography",
+      "authentic frontier art prints",
+      "cinematic stills",
+      "western grit",
+      "working cowboy",
+      "stock horse",
+      "western cowboy wall art for collectors"
     ],
-    "story": "Upscaled with Gigapixel v8.4.4. 2618x3491 => 9000x12001 (3.43774x) @ 300 ppi Model: RecoveryXL, denoise: 1, decompression: 0, sharpen: , sharpen: 0, sharpen: 1 Face recovery version: 2, strength: 0.94, creativity: 0 (Realistic), selectedFaces: 1",
-    "notes": "",
-    "rating": 0,
+
+    "story": "There is no hesitation here—only timing. Horse and rider commit together, weight and rein answering in the same breath. Dust lifts, muscle tightens, and the ground gives just enough to let the decision hold. This is not spectacle. It is work, practiced until instinct replaces thought.",
+    "notes": "This image reflects a tradition of Western imagery that prioritizes function over display. The composition centers on the exchange between horse and rider, where control is expressed through restraint rather than force. The painterly handling softens dust and motion without sacrificing structural clarity, aligning the photograph with pictorialist-informed approaches while remaining grounded in documentary truth. Like the strongest works in the Western canon, The Turn finds its power not in speed itself, but in mastery—an image shaped by repetition, trust, and the quiet authority of work done well.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 214
+    "sortOrder": 214,
+    contentSource: "ai"
   },
   {
     "id": "i-BLhK5vz",
@@ -9882,6 +9986,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-p6nks3C/0/LTcVXCJ4rMtxhLDKw8bWx97kdx9DLbWrRqXb85HqB/S/_WHO0135-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-p6nks3C/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -9895,11 +10000,13 @@ export const galleryData = [
       "narrative Western art",
       "authentic frontier art prints"
     ],
+
     "story": "She stands on the edge of camp, small hand curled in anticipation, watching the world beyond the canvas wall.\n\nThe grown-ups talk low, their shapes broken by afternoon light and tall grass. Whatever is coming next, she’s learned the first lesson of the trail: wait, watch, and listen before you step.\n\nEvery journey starts with a pause, and her story is just beginning.",
     "notes": "This portrait is a study in beginnings—of the courage and curiosity required to claim a place in the story of the West. The soft, tonal palette and careful framing echo the traditions of early pictorialist photographers, channeling a sense of possibility and gentle anticipation.\n\nRather than leaning on overt drama, the image finds its power in restraint and atmosphere. It invites viewers to recognize both the innocence and determination that define a new generation of pioneers, offering a quiet, resonant addition to any collection of Western or Americana fine art.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 221
+    "sortOrder": 221,
+    contentSource: "ai"
   }
 ];

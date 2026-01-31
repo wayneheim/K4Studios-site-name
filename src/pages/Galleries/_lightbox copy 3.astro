@@ -1,4 +1,5 @@
 ---
+export const prerender = true;
 import GalleryLightbox from "../../components/GalleryLightbox.jsx";
 import Footer from "../../components/Footer.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
@@ -43,7 +44,7 @@ const canonicalUrl = `https://www.k4studios.com${baseUrl}`;
       url: "https://www.k4studios.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.k4studios.com/assets/k4-circle-logo.png",
+        url: "/images/K4Logo-web-b.jpg
       },
     },
     author: {
@@ -67,7 +68,7 @@ const canonicalUrl = `https://www.k4studios.com${baseUrl}`;
     <!-- ✅ Logo -->
     <div class="logo">
       <a href="/" aria-label="Go to K4 Studios Homepage">
-        <img src="/assets/k4-circle-logo.png" alt="K4 Studios Logo" />
+        <img src="/images/K4Logo-web-b.jpg" alt="K4 Studios Logo" />
       </a>
     </div>
 

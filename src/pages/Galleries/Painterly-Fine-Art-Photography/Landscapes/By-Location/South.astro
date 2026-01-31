@@ -1,10 +1,5 @@
-
+﻿---
+export const prerender = true;
+// Redirect to the Gallery page
+return Astro.redirect("/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery");
 ---
-export async function get({ redirect }) {
-  return redirect("/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery");
-}
-
-// The original page content is commented out below for future reference.
-/*
-...existing code...
-*/
