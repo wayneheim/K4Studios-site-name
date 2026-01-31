@@ -41,6 +41,23 @@ const dataModulesOther = import.meta.glob(
 );
 const allModules = { ...dataModules, ...dataModulesOther };
 
+// Build a lowercase→original key map for case-insensitive lookup
+const moduleKeyMap = {};
+Object.keys(allModules).forEach(key => {
+  moduleKeyMap[key.toLowerCase()] = key;
+});
+
+/* ---------------------------------------------------------
+   Case-insensitive module lookup helper
+--------------------------------------------------------- */
+function findModuleKey(possibleKey) {
+  // Try exact match first
+  if (allModules[possibleKey]) return possibleKey;
+  // Try case-insensitive match
+  const lowerKey = possibleKey.toLowerCase();
+  return moduleKeyMap[lowerKey] || null;
+}
+
 /* ---------------------------------------------------------
    Loader with fallback (flat + nested)
 --------------------------------------------------------- */
@@ -52,10 +69,10 @@ function loadGalleryDataFor(baseHref) {
 
   let possibleKeys = [];
 
-  if (normalized.includes("/Engrained/")) {
+  if (normalized.toLowerCase().includes("/engrained/")) {
     // Engrained → direct file
     possibleKeys.push(`/src/data${normalized}.mjs`);
-  } else if (last === "Gallery") {
+  } else if (last.toLowerCase() === "gallery") {
     // By-Location → /Gallery.mjs
     possibleKeys.push(`/src/data${normalized}.mjs`);
   } else {
@@ -68,9 +85,10 @@ function loadGalleryDataFor(baseHref) {
   }
 
   for (const key of possibleKeys) {
-    if (allModules[key]) {
-      console.log("✅ GalleryInfo loaded:", key);
-      const mod = allModules[key];
+    const actualKey = findModuleKey(key);
+    if (actualKey) {
+      console.log("✅ GalleryInfo loaded:", actualKey);
+      const mod = allModules[actualKey];
       return mod.galleryData || mod.default || [];
     }
   }

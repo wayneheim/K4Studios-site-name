@@ -17,13 +17,17 @@ export default function ImageBar2({ slides }) {
   useEffect(() => {
     if (!slides || slides.length === 0) {
       const currentPath = window.location.pathname;
+      // Case-insensitive match to handle Linux (case-sensitive) vs Windows (case-insensitive)
+      const currentPathLower = currentPath.toLowerCase().replace(/\/$/, "");
 
-      const matchKey = Object.keys(allCarousels).find((key) =>
-        key
+      const matchKey = Object.keys(allCarousels).find((key) => {
+        const keyPath = key
           .replace("../data/Galleries", "/Galleries")
           .replace("../data/Other", "/Other")
-          .replace("/carousel.ts", "") === currentPath
-      );
+          .replace("/carousel.ts", "")
+          .toLowerCase();
+        return keyPath === currentPathLower;
+      });
 
       if (matchKey) {
         const mod = allCarousels[matchKey];
