@@ -179,28 +179,28 @@ export const siteNav = [
   "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
   "code": "P-S2-Ss1-Sss1",
   "slug": "international",
-  "type": "collection"
+  "type": "gallery-source"
 },
 {
   "label": "Midwest",
   "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
   "code": "P-S2-Ss1-Sss2",
   "slug": "midwest",
-  "type": "collection"
+  "type": "gallery-source"
 },
 {
   "label": "Northeast",
   "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
   "code": "P-S2-Ss1-Sss3",
   "slug": "northeast",
-  "type": "collection"
+  "type": "gallery-source"
 },
 {
   "label": "South",
   "href": "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
   "code": "P-S2-Ss1-Sss4",
   "slug": "south",
-  "type": "collection"
+  "type": "gallery-source"
 },
 {
   "label": "West",
