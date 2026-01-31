@@ -217,12 +217,14 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
       </div>
     )}
 
-    {/* Chapter Viewer - provided via slot from wrapper */}
-    {skipIntro && (
-      <div id="chapter-section" class="section-visible" style="display: block;">
-        <slot name="chapter-viewer" />
-      </div>
-    )}
+    {/* Chapter Viewer - ALWAYS rendered (may be hidden) so client-side theme logic can show it */}
+    <div 
+      id="chapter-section" 
+      class={skipIntro ? "section-visible" : "section-hidden"} 
+      style={skipIntro ? "display: block;" : "display: none;"}
+    >
+      <slot name="chapter-viewer" />
+    </div>
   </div>
 
   <div class="h-12 md:h-20"></div>
@@ -308,14 +310,37 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
         const navToggle = document.getElementById('nav-toggle');
         let isMenuOpen = false;
 
-        exploreButton?.addEventListener('click', () => {
-          header.classList.add('section-hidden');
-          intro.classList.add('section-hidden');
-          chapter.style.display = 'block';
-          setTimeout(() => {
+        // 🔧 HYDRATION FIX: Auto-enter grid view if theme or view=grid param is in URL
+        const params = new URLSearchParams(window.location.search);
+        const hasTheme = params.has('theme');
+        const hasViewGrid = params.get('view') === 'grid';
+        
+        if (hasTheme || hasViewGrid) {
+          // Hide landing sections, show chapter section immediately
+          header?.classList.add('section-hidden');
+          header && (header.style.display = 'none');
+          intro?.classList.add('section-hidden');
+          intro && (intro.style.display = 'none');
+          if (chapter) {
+            chapter.style.display = 'block';
             chapter.classList.remove('section-hidden');
             chapter.classList.add('section-visible');
-          }, 50);
+          }
+          if (window.innerWidth >= 768) {
+            document.getElementById('nav-toggle')?.classList.remove('hidden');
+          }
+        }
+
+        exploreButton?.addEventListener('click', () => {
+          header?.classList.add('section-hidden');
+          intro?.classList.add('section-hidden');
+          if (chapter) {
+            chapter.style.display = 'block';
+            setTimeout(() => {
+              chapter.classList.remove('section-hidden');
+              chapter.classList.add('section-visible');
+            }, 50);
+          }
           if (window.innerWidth >= 768) {
             document.getElementById('nav-toggle')?.classList.remove('hidden');
           }
