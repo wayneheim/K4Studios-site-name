@@ -68,7 +68,9 @@ exports.handler = async (event) => {
   
   // Look up the image in our map (case-insensitive)
   const lookup = imageIdMapLower[imageId.toLowerCase()];
-  const correctGalleryPath = lookup?.path;
+  // path is an array of gallery paths - use the first one as canonical
+  const pathArray = lookup?.path;
+  const correctGalleryPath = Array.isArray(pathArray) ? pathArray[0] : pathArray;
   const canonicalImageId = lookup?.originalId || imageId;
   
   if (correctGalleryPath) {

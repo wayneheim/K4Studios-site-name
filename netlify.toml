@@ -175,13 +175,13 @@ status = 200
 # ✅ SEO Redirects & Mapping
 ##############################
 [[redirects]]
-from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/{West,International,Northeast,South}"
+from = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/{West,International,Northeast,South,Midwest}"
 to = "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/:splat/Gallery"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Galleries/Fine-Art-Photography/Landscapes/By-Location/{West,International,Northeast,South}"
+from = "/Galleries/Fine-Art-Photography/Landscapes/By-Location/{West,International,Northeast,South,Midwest}"
 to = "/Galleries/Fine-Art-Photography/Landscapes/By-Location/:splat/Gallery"
 status = 301
 force = true
