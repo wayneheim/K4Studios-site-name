@@ -60,9 +60,24 @@ export default function RebuiltScrollGrid({
     return getProxySrc(entry.id, 'm');
   };
 
-  // Simple close handler: reload the page to exit grid mode
+  // Close handler: go back if there's history (came from image), otherwise go to gallery landing
   const handleClose = () => {
-    window.location.reload();
+    // Check if we have navigation history (user came from viewing an image)
+    // history.length > 1 means there's something to go back to
+    // But history.length isn't reliable - it includes entries from other sites
+    // Instead, check if we entered via theme/view param (no previous image context)
+    const params = new URLSearchParams(window.location.search);
+    const isThemeEntry = params.has('theme') || params.has('view');
+    
+    if (isThemeEntry) {
+      // Entered via shared link - go to gallery landing page
+      const path = window.location.pathname;
+      const basePath = path.replace(/\/i-[a-zA-Z0-9_-]+\/?$/, '');
+      window.location.href = basePath || '/';
+    } else {
+      // Normal grid access - go back to previous image
+      window.history.back();
+    }
   };
 
   // ESC key triggers close
