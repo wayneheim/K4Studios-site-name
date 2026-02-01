@@ -163,6 +163,20 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
 // The React hydration fix for Error #418 was NOT caused by this middleware - 
 // it was caused by components using window.innerWidth during render instead of in useEffect
 export const onRequest: MiddlewareHandler = async (context, next) => {
+  const { pathname } = context.url;
+
+  // ✅ EARLY EXIT: Redirect /img/* to Cloudflare Worker
+  // This handles ALL image requests (including hardcoded paths in data files)
+  // Uses 302 redirect so browser fetches from worker directly - no Netlify proxy needed
+  // Works identically in dev and prod - no switches, no toggles
+  if (pathname.startsWith("/img/")) {
+    const workerUrl = `https://k4-image-proxy.wayneheim.workers.dev${pathname}`;
+    return new Response(null, {
+      status: 302,
+      headers: { Location: workerUrl },
+    });
+  }
+
   const response = await next();
   const contentType = response.headers.get("content-type") || "";
 

@@ -83,9 +83,9 @@ export default function MobileMiniDrawer({ onClose }) {
             className="mini-close-btn"
             onClick={onClose}
             style={{
-              fontSize: "0.85rem",
-              padding: "0.35rem 0.75rem",
-              background: "#444",
+              fontSize: "0.75rem",
+              padding: "0.25rem 0.6rem",
+              background: "#888",
               color: "#fff",
               border: "none",
               borderRadius: "4px",

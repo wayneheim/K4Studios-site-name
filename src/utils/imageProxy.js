@@ -4,6 +4,9 @@
  * Converts image IDs to /img/{id}/{size} proxy URLs.
  * This ensures SmugMug URLs never appear in rendered HTML.
  * 
+ * In development, uses full Cloudflare worker URL directly.
+ * In production, uses relative /img/ paths (proxied by Netlify).
+ * 
  * Usage:
  *   import { getProxySrc, getProxySrcset, normalizeImageSrc } from '@/utils/imageProxy.js';
  *   
@@ -13,6 +16,12 @@
  */
 
 const VALID_SIZES = ['s', 'm', 'l', 'xl', 'src'];
+
+// Use full worker URL in dev (Netlify CLI can't proxy reliably), relative paths in prod
+const isDev = import.meta.env?.DEV ?? (typeof process !== 'undefined' && process.env?.NODE_ENV === 'development');
+const IMAGE_BASE = isDev 
+  ? 'https://k4-image-proxy.wayneheim.workers.dev' 
+  : '';
 
 /**
  * Extract image ID from various URL formats
@@ -76,12 +85,12 @@ export function normalizeImageSrc(src, size = 'm') {
  * Generate a proxy URL for an image
  * @param {string} imageId - The image ID (e.g., "i-abc123")
  * @param {string} size - Size: 's', 'm', 'l', 'xl', or 'src'
- * @returns {string} Proxy URL like "/img/i-abc123/m"
+ * @returns {string} Proxy URL like "/img/i-abc123/m" (or full worker URL in dev)
  */
 export function getProxySrc(imageId, size = 'm') {
   if (!imageId) return '';
   const safeSize = VALID_SIZES.includes(size) ? size : 'm';
-  return `/img/${imageId}/${safeSize}`;
+  return `${IMAGE_BASE}/img/${imageId}/${safeSize}`;
 }
 
 /**

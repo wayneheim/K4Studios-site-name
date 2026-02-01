@@ -6,6 +6,14 @@
 # ======================================================
 
 ##############################
+# ✅ Local Development Settings
+##############################
+[dev]
+  command = "npm run dev"
+  targetPort = 4321
+  autoLaunch = false
+
+##############################
 # ✅ URL Case Normalization (prevents duplicate content)
 # Redirect lowercase /galleries/ to proper-case /Galleries/
 # These are free CDN-level redirects, not function invocations
@@ -28,6 +36,8 @@ force = true
 ##############################
 # ✅ Image Proxy - Route /img/* to Cloudflare Worker
 # This hides SmugMug URLs from crawlers
+# In dev: Astro middleware handles this (302 redirect to worker)
+# In prod: Netlify edge redirect handles this (200 proxy)
 ##############################
 [[redirects]]
 from = "/img/*"

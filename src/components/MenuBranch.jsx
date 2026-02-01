@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { ChevronRight } from "lucide-react";
 
 export default function MenuBranch({
   node,
@@ -15,8 +16,16 @@ export default function MenuBranch({
   }, [reset]);
 
   const toggle = (e) => {
-    e.preventDefault(); // only affects the hammy, not the link
+    e.preventDefault();
     if (hasKids) setExpanded((prev) => !prev);
+  };
+
+  // Handle name click - expands if has children, otherwise navigates
+  const handleNameClick = (e) => {
+    if (hasKids) {
+      e.preventDefault();
+      setExpanded((prev) => !prev);
+    }
   };
 
   return (
@@ -36,19 +45,44 @@ export default function MenuBranch({
             <span className="bar bot" />
           </button>
         ) : (
-          <a
-            href={node.href || "#"}
+          <span
             className="mini-placeholder-dot"
-            aria-label={`Visit ${node.label}`}
+            aria-hidden="true"
           />
         )}
 
+        {/* Name - clicking expands if has children */}
         <a
           href={node.href || "#"}
           className={`mini-menu-link${hasKids ? " has-children" : ""}`}
+          onClick={handleNameClick}
+          style={{ flex: 1 }}
         >
           &nbsp;{node.label}
         </a>
+
+        {/* Navigation arrow - always visible */}
+        {node.href && (
+          <a
+            href={node.href}
+            className="mini-nav-arrow"
+            aria-label={`Go to ${node.label}`}
+            style={{
+              marginLeft: "auto",
+              padding: "0.25rem 0.5rem",
+              display: "flex",
+              alignItems: "center",
+              color: "#8b7355",
+              opacity: 0.6,
+              transition: "opacity 0.2s ease",
+              textDecoration: "none"
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.opacity = 1}
+            onMouseLeave={(e) => e.currentTarget.style.opacity = 0.6}
+          >
+            <ChevronRight size={18} />
+          </a>
+        )}
       </div>
 
       {hasKids && expanded && (
