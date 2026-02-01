@@ -784,11 +784,26 @@ export default function ChapterGalleryBase({
   // Back/forward support
   useEffect(() => {
     const handlePopState = () => {
-      const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)/);
+      const pathname = window.location.pathname;
+      const match = pathname.match(/\/(i-[a-zA-Z0-9_-]+)/);
       const id = match ? match[1] : null;
       const header = document.getElementById("header-section");
       const intro = document.getElementById("intro-section");
       const chapter = document.getElementById("chapter-section");
+
+      // PATCH: Detect broken lowercase URL redirect artifacts
+      // If we land on an image URL where the path (minus ID) is all lowercase,
+      // it's likely the broken intermediate redirect state - skip it
+      if (id && basePath) {
+        const pathWithoutId = pathname.replace(/\/i-[a-zA-Z0-9_-]+$/, '');
+        const isLowercasePath = pathWithoutId === pathWithoutId.toLowerCase() && 
+                                pathWithoutId !== basePath;
+        if (isLowercasePath) {
+          // This is the broken redirect artifact - go back one more
+          window.history.go(-1);
+          return;
+        }
+      }
 
       if (id) {
         const idx = galleryData.findIndex((e) => e.id === id);
@@ -817,7 +832,7 @@ export default function ChapterGalleryBase({
 
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
-  }, [galleryData]);
+  }, [galleryData, basePath]);
 
   // Mount class
   useEffect(() => { document.body.classList.add("react-mounted"); }, []);

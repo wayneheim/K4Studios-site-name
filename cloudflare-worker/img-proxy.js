@@ -315,9 +315,19 @@ async function handleImagePagePolicy(request, pathname, ctx) {
       if (validPaths) {
         const pathsArray = Array.isArray(validPaths) ? validPaths : [validPaths];
         
-        if (!pathsArray.includes(requestedGalleryPath)) {
+        // Case-insensitive path comparison (Netlify/Linux is case-sensitive, but URLs may arrive lowercase)
+        const requestedLower = requestedGalleryPath.toLowerCase();
+        const matchedPath = pathsArray.find(p => p.toLowerCase() === requestedLower);
+        
+        if (!matchedPath) {
           // Wrong path - redirect to first valid canonical URL (smart 404)
           const canonicalUrl = `https://www.k4studios.com${pathsArray[0]}/${imageId}`;
+          return Response.redirect(canonicalUrl, 301);
+        }
+        
+        // If case doesn't match exactly, redirect to correct casing
+        if (matchedPath !== requestedGalleryPath) {
+          const canonicalUrl = `https://www.k4studios.com${matchedPath}/${imageId}`;
           return Response.redirect(canonicalUrl, 301);
         }
       }

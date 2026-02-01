@@ -80,7 +80,8 @@ exports.handler = async (event) => {
     const requestedPathLower = requestedPath.toLowerCase();
     
     // Try to find a path that matches the current gallery context
-    const matchingPath = pathArray.find(p => {
+    // Priority 1: Match by gallery type in URL
+    let matchingPath = pathArray.find(p => {
       const pLower = p.toLowerCase();
       // Check if both are in the same top-level gallery
       if (requestedPathLower.includes('/painterly-fine-art-photography/') && 
@@ -95,6 +96,11 @@ exports.handler = async (event) => {
       }
       return false;
     });
+    
+    // Priority 2: If no match by gallery type, prefer Painterly galleries (higher priority)
+    if (!matchingPath) {
+      matchingPath = pathArray.find(p => p.toLowerCase().includes('/painterly-fine-art-photography/'));
+    }
     
     correctGalleryPath = matchingPath || pathArray[0];
     console.log(`[smart-404] Multiple paths available: ${JSON.stringify(pathArray)}, selected: ${correctGalleryPath}`);

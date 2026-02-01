@@ -22,6 +22,7 @@ const path = require('path');
 const MASTER_DATA_PATH = path.join(__dirname, '../src/data/galleryMaps/MasterGalleryData.mjs');
 const OUTPUT_PATH_FUNCTIONS = path.join(__dirname, '../netlify/functions/imageIdMap.json');
 const OUTPUT_PATH_SRC = path.join(__dirname, '../src/data/imageIdMap.json');
+const OUTPUT_PATH_PUBLIC = path.join(__dirname, '../public/imageIdMap.json');
 
 // Values that mean "hidden" (not including "ghost" which is different)
 const HIDDEN_VISIBILITY = ['hidden', 'non', 'none', ''];
@@ -73,7 +74,7 @@ async function generateImageIdMap() {
     }
   }
   
-  // Write the map to both locations
+  // Write the map to all locations
   const jsonContent = JSON.stringify(imageIdMap, null, 0); // Minified for size
   
   fs.mkdirSync(path.dirname(OUTPUT_PATH_FUNCTIONS), { recursive: true });
@@ -82,6 +83,9 @@ async function generateImageIdMap() {
   fs.mkdirSync(path.dirname(OUTPUT_PATH_SRC), { recursive: true });
   fs.writeFileSync(OUTPUT_PATH_SRC, jsonContent);
   
+  fs.mkdirSync(path.dirname(OUTPUT_PATH_PUBLIC), { recursive: true });
+  fs.writeFileSync(OUTPUT_PATH_PUBLIC, jsonContent);
+  
   const fileSizeKB = (fs.statSync(OUTPUT_PATH_SRC).size / 1024).toFixed(1);
   
   console.log(`✅ Generated imageIdMap.json:`);
@@ -89,7 +93,7 @@ async function generateImageIdMap() {
   console.log(`   - ${hiddenCount} hidden images skipped`);
   console.log(`   - ${additionalPaths} additional gallery paths (images in multiple galleries)`);
   console.log(`   - File size: ${fileSizeKB} KB`);
-  console.log(`   - Written to: src/data/ and netlify/functions/`);
+  console.log(`   - Written to: src/data/, netlify/functions/, and public/`);
 }
 
 generateImageIdMap().catch(err => {
