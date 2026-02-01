@@ -56,8 +56,16 @@ const galleryPaths = landingNav
   : [];
 const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
-  const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
-  return allGalleryData[filePath]?.galleryData || [];
+  // Try standard path first (e.g., /path/Gallery.mjs)
+  const standardPath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
+  if (allGalleryData[standardPath]?.galleryData) {
+    return allGalleryData[standardPath].galleryData;
+  }
+  // Try nested folder structure (e.g., /path/Gallery/Gallery.mjs)
+  const parts = path.split('/');
+  const lastSegment = parts[parts.length - 1];
+  const nestedPath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}/${lastSegment}.mjs`;
+  return allGalleryData[nestedPath]?.galleryData || [];
 });
 
 const featheredImages = getSideImages({

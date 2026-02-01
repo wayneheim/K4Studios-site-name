@@ -1,7 +1,8 @@
-// carousel.ts for Fine Art Landscapes → By-Theme
+// carousel.ts for Fine Art Landscapes → International
 
-// Import all gallery mjs modules for By-Theme from data directory
-const modules = import.meta.glob('@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/*/*.mjs', { eager: true });
+// Import all gallery mjs modules for International from data directory
+// Files are directly in International folder (Canada-Western.mjs, Iceland.mjs, etc.)
+const modules = import.meta.glob('@/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/*.mjs', { eager: true });
 
 // Collect gallery datasets and URL paths
 const galleryDatas = [];
@@ -19,11 +20,11 @@ for (const filePath in modules) {
   // Filter out ghost and placeholder images
   const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
   if (visible.length === 0) continue;
-  // Extract theme folder name from file path
-  const match = filePath.match(/By-Theme\/([^/]+)\//);
-  const theme = match ? match[1] : '';
+  // Extract location name from file path (e.g., "Iceland" from "/International/Iceland.mjs")
+  const match = filePath.match(/International\/([^/]+)\.mjs$/);
+  const location = match ? match[1] : '';
   galleryDatas.push(visible);
-  galleryPaths.push(`/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/${theme}`);
+  galleryPaths.push(`/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/${location}`);
 }
 
 // Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating

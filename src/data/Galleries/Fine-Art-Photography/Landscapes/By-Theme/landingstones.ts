@@ -35,8 +35,8 @@ export const landingWestern = {
     {
       title: 'Black & White Landscapes',
       href: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White',
-      imageId: "i-49c4Qk6",
-      thumb: "/img/i-49c4Qk6/s",
+      imageId: "i-ZgXTnCV",
+      thumb: "/img/i-ZgXTnCV/s",
     },
     
   ]

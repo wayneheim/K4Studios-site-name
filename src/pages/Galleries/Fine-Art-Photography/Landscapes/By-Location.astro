@@ -58,18 +58,10 @@ const galleryPaths = landingNav
   ? recursivelyGatherAllGalleryHrefs(landingNav)
   : [];
 
-// Glob all gallery data files
-const rawGalleryData = import.meta.glob('/src/data/Galleries/**/*.mjs', { eager: true });
-const allGalleryData = Object.fromEntries(
-  Object.entries(rawGalleryData).map(([key, value]) => [
-    key.replace('/src/data/Galleries/', ''),
-    value
-  ])
-);
-
+const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
-  const lookupKey = `${path.replace(/^\/Galleries\//, "")}.mjs`;
-  return allGalleryData[lookupKey]?.galleryData || [];
+  const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
+  return allGalleryData[filePath]?.galleryData || [];
 });
 
 const featheredImages = getSideImages({
