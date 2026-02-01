@@ -2,7 +2,6 @@
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
-import ImageBar2          from '@/components/ImageBar2.jsx';
 import LandingRightImages from '@/components/LandingRightImages.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
@@ -129,12 +128,6 @@ const structuredData = getStructuredData({
       <div class="mobile-breadcrumb" set:html={landingSeries.breadcrumb} />
     </div>
 
-    <div class="w-full max-w-[1200px] mx-auto px-4">
-      <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
-      </div>
-    </div>
-
     <section class="section-heading-wrap">
       <div class="section-heading">
         <h1 class="page-title fade-in reveal-on-scroll">
@@ -174,7 +167,7 @@ const structuredData = getStructuredData({
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
-            heading="Collection Samples"
+            heading="Sample Collections"
             images={featheredImagesSidebar}
           />
         </div>
