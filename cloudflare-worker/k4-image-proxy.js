@@ -118,7 +118,7 @@ function resolveImageUrl(manifest, imageId, requestedSize) {
 // IMAGE PROXY
 // ============================================================================
 
-async function proxyImage(smugMugUrl, request) {
+async function proxyImage(smugMugUrl, request, size) {
   const imageResponse = await fetch(smugMugUrl, {
     headers: {
       'Accept': request.headers.get('Accept') || 'image/*',
@@ -136,17 +136,23 @@ async function proxyImage(smugMugUrl, request) {
     });
   }
 
+  // Build response headers
+  const headers = {
+    'Content-Type': imageResponse.headers.get('Content-Type') || 'image/jpeg',
+    'Cache-Control': 'public, max-age=31536000, immutable',
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-Proxy-Origin': 'k4studios'
+  };
+
+  // XL images: tell bots not to index (belt-and-suspenders protection)
+  if (size === 'xl') {
+    headers['X-Robots-Tag'] = 'noindex, noimageindex';
+  }
+
   return new Response(imageResponse.body, {
     status: 200,
-    headers: {
-      'Content-Type': imageResponse.headers.get('Content-Type') || 'image/jpeg',
-      // REMOVED: Content-Length forwarding - can cause mismatch with chunked transfers
-      // Let Cloudflare handle Content-Length automatically
-      'Cache-Control': 'public, max-age=31536000, immutable',
-      'X-Content-Type-Options': 'nosniff',
-      'X-Frame-Options': 'DENY',
-      'X-Proxy-Origin': 'k4studios'
-    }
+    headers
   });
 }
 
@@ -215,7 +221,7 @@ async function handleRequest(request, ctx) {
       });
     }
 
-    return await proxyImage(smugMugUrl, request);
+    return await proxyImage(smugMugUrl, request, route.size);
 
   } catch (error) {
     console.error('Image proxy error:', error);
