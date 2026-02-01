@@ -25,25 +25,26 @@ const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios
 
 // Representative images (static, no shuffle - curated selection)
 // Header image - "Do you HEAR me now?!" - cropped horizontal banner
+// Capped at L to keep XL out of bot-discoverable <img> tags
 const headerImage = {
   id: "i-Nn7scqm",
-  src: getProxySrc("i-Nn7scqm", "xl"),
+  src: getProxySrc("i-Nn7scqm", "l"),
   alt: "Painterly Western scene of a frontier standoff — a woman confronts a railroad man across a weathered fence"
 };
 
 const image1 = {
   id: "i-ncFcHDM",
-  src: getProxySrc("i-ncFcHDM", "xl"),
+  src: getProxySrc("i-ncFcHDM", "l"),
   alt: "Painterly fine art photograph of a cowboy in warm directional light"
 };
 const image2 = {
   id: "i-LCspRF4",
-  src: getProxySrc("i-LCspRF4", "xl"),
+  src: getProxySrc("i-LCspRF4", "l"),
   alt: "Western narrative scene with atmospheric composition"
 };
 const image3 = {
   id: "i-46kWCqc",
-  src: getProxySrc("i-46kWCqc", "xl"),
+  src: getProxySrc("i-46kWCqc", "l"),
   alt: "Cowboy portrait with painterly tonal control"
 };
 
