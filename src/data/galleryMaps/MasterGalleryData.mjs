@@ -28329,19 +28329,6 @@ export const galleryDataMap   = {
       ]
     },
     {
-      "id": "i-mfMVdnH",
-      "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/K7BNrgzpr7gKkCjwnDtQ7V5W3NMggVJ3zrgdQN33S/S/_WHZ9362-Pano_tonemapped-Edit-4-S.jpg",
-      "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/Kzh6wBGrMbnmz95SCJfGV9297zQngKRMtb2LSf7Rm/M/_WHZ9362-Pano_tonemapped-Edit-4-M.jpg",
-      "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/NRFhV2X7JH4WKtxMLh62rW9CJgx4965VK5p6rb3jr/L/_WHZ9362-Pano_tonemapped-Edit-4-L.jpg",
-      "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/NFpdLdR7bV6qK99hkrHpBtM9Sh96g9J6pVbdbJ4sg/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
-      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/K7BNrgzpr7gKkCjwnDtQ7V5W3NMggVJ3zrgdQN33S/S/_WHZ9362-Pano_tonemapped-Edit-4-S.jpg",
-      "rating": 0,
-      "visibility": "show",
-      "galleries": [
-        "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands"
-      ]
-    },
-    {
       "id": "i-smLKRJH",
       "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-smLKRJH/7/KNCqPwFsx2Wcrz52G7GcPX2C55PtfRsDzFxW2WGdZ/S/_WHZ9380-Pano_tonemapped-Edit-S.jpg",
       "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-smLKRJH/7/LjDgrZd2TfQKr7GtX6gNv5DJM2X3LjMPSrFmdPztS/M/_WHZ9380-Pano_tonemapped-Edit-M.jpg",
@@ -76785,19 +76772,6 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cbzQ7mj/1/NHsKjkc7XmLwJ478NQxWNGf3TVf7PLBg9DXKM7Bdn/L/_WHZ9362-Pano_tonemapped-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cbzQ7mj/1/M4ZTHPxHjpPNXmxZFxGbZXKDQtxGcKRhpJ4ZcCpnd/XL/_WHZ9362-Pano_tonemapped-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cbzQ7mj/1/MgpPTP2STC7TF4nsGSsDskzq7CRnZp7WhMgbGZdnk/S/_WHZ9362-Pano_tonemapped-Edit-S.jpg",
-    "rating": 0,
-    "visibility": "show",
-    "galleries": [
-      "Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands"
-    ]
-  },
-  {
-    "id": "i-mfMVdnH",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/K7BNrgzpr7gKkCjwnDtQ7V5W3NMggVJ3zrgdQN33S/S/_WHZ9362-Pano_tonemapped-Edit-4-S.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/Kzh6wBGrMbnmz95SCJfGV9297zQngKRMtb2LSf7Rm/M/_WHZ9362-Pano_tonemapped-Edit-4-M.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/NRFhV2X7JH4WKtxMLh62rW9CJgx4965VK5p6rb3jr/L/_WHZ9362-Pano_tonemapped-Edit-4-L.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/NFpdLdR7bV6qK99hkrHpBtM9Sh96g9J6pVbdbJ4sg/XL/_WHZ9362-Pano_tonemapped-Edit-4-XL.jpg",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/K7BNrgzpr7gKkCjwnDtQ7V5W3NMggVJ3zrgdQN33S/S/_WHZ9362-Pano_tonemapped-Edit-4-S.jpg",
     "rating": 0,
     "visibility": "show",
     "galleries": [

@@ -68,10 +68,39 @@ exports.handler = async (event) => {
   
   // Look up the image in our map (case-insensitive)
   const lookup = imageIdMapLower[imageId.toLowerCase()];
-  // path is an array of gallery paths - use the first one as canonical
+  // path is an array of gallery paths - prefer one that matches current gallery context
   const pathArray = lookup?.path;
-  const correctGalleryPath = Array.isArray(pathArray) ? pathArray[0] : pathArray;
   const canonicalImageId = lookup?.originalId || imageId;
+  
+  // Determine the best gallery path based on context
+  let correctGalleryPath = null;
+  if (Array.isArray(pathArray) && pathArray.length > 0) {
+    // Extract gallery context from the requested URL
+    // e.g., "/Galleries/Painterly-Fine-Art-Photography/..." or "/Galleries/Fine-Art-Photography/..."
+    const requestedPathLower = requestedPath.toLowerCase();
+    
+    // Try to find a path that matches the current gallery context
+    const matchingPath = pathArray.find(p => {
+      const pLower = p.toLowerCase();
+      // Check if both are in the same top-level gallery
+      if (requestedPathLower.includes('/painterly-fine-art-photography/') && 
+          pLower.includes('/painterly-fine-art-photography/')) {
+        return true;
+      }
+      if (requestedPathLower.includes('/fine-art-photography/') && 
+          !requestedPathLower.includes('/painterly-fine-art-photography/') &&
+          pLower.includes('/fine-art-photography/') &&
+          !pLower.includes('/painterly-fine-art-photography/')) {
+        return true;
+      }
+      return false;
+    });
+    
+    correctGalleryPath = matchingPath || pathArray[0];
+    console.log(`[smart-404] Multiple paths available: ${JSON.stringify(pathArray)}, selected: ${correctGalleryPath}`);
+  } else {
+    correctGalleryPath = pathArray;
+  }
   
   if (correctGalleryPath) {
     // Found the image - redirect with canonical case

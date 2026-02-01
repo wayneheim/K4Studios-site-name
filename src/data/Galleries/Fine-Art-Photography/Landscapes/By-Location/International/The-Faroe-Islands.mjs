@@ -2816,6 +2816,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Black-White/i-cbzQ7mj/1/MgpPTP2STC7TF4nsGSsDskzq7CRnZp7WhMgbGZdnk/S/_WHZ9362-Pano_tonemapped-Edit-S.jpg",
     "srcOriginal": ""
   },
+  /* TEMPORARILY COMMENTED OUT FOR TESTING - i-mfMVdnH
   {
     "id": "i-mfMVdnH",
     "title": "Landscape of Faroe 12 Photography by Wayne Heim",
@@ -2855,6 +2856,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Faroe-Islands/Color/i-mfMVdnH/7/K7BNrgzpr7gKkCjwnDtQ7V5W3NMggVJ3zrgdQN33S/S/_WHZ9362-Pano_tonemapped-Edit-4-S.jpg",
     "srcOriginal": ""
   },
+  */
   {
     "id": "i-smLKRJH",
     "title": "Landscape of Faroe 13  Photography by Wayne Heim",
