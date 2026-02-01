@@ -521,9 +521,10 @@ force = true
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-[[edge_functions]]
-function = "block-countries"
-path = "/*"
+# TEMPORARILY DISABLED - testing SSR breakage
+# [[edge_functions]]
+# function = "block-countries"
+# path = "/*"
 
 [build]
   command = "npm run build && node scripts/purge-cloudflare.js"

@@ -2,8 +2,8 @@
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
-import ImageBar2          from '@/components/ImageBar2.jsx';
-import TombstoneNav       from '@/components/TombstoneNav.jsx';
+// TombstoneNav not used on News page
+// import TombstoneNav       from '@/components/TombstoneNav.jsx';
 import LandingRightImages from '@/components/LandingRightImages.jsx';
 // import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
@@ -27,8 +27,11 @@ import '@/styles/global.css';
 // DYNAMIC LOGIC SECTION
 // ----------------------
 
-const sectionPath = "/Galleries/Painterly-Fine-Art-Photography";
-const meta = getLandingMeta(sectionPath);
+const sectionPath = "/News-Awards";
+const pagePath = "/News-Awards";
+// Use painterly galleries for sidebar images
+const gallerySectionPath = "/Galleries/Painterly-Fine-Art-Photography";
+const meta = getLandingMeta(gallerySectionPath);
 
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 
@@ -49,7 +52,7 @@ function recursivelyGatherAllGalleryHrefs(node) {
   if (node.children) node.children.forEach(child => result = result.concat(recursivelyGatherAllGalleryHrefs(child)));
   return result;
 }
-const landingNav = findNavEntry(siteNav, sectionPath);
+const landingNav = findNavEntry(siteNav, gallerySectionPath);
 const galleryPaths = landingNav
   ? recursivelyGatherAllGalleryHrefs(landingNav)
   : [];
@@ -60,18 +63,18 @@ const galleryDatas = galleryPaths.map(path => {
 });
 
 const featheredImages = getSideImages({
-  sectionPath,
+  sectionPath: gallerySectionPath,
   headingCount,
   galleryDatas,
 });
 const featheredImagesSidebar = featheredImages.slice(0, 6);
 
 const structuredData = getStructuredData({
-  type: "gallery",
+  type: "Article",
   data: {
-    title: landingWestern.title,
-    description: landingWestern.subtitle || landingWestern.description,
-    url: `https://k4studios.com${sectionPath}`,
+    headline: `${landingWestern.title} – ${landingWestern.subtitle}`,
+    description: "Awards, juried exhibitions, and professional recognition for K4 Studios fine art photography by Wayne Heim.",
+    url: `https://k4studios.com${pagePath}`,
     keywords: landingWestern.keywords || [],
     copyrightNotice: "© Wayne Heim"
   },
@@ -102,14 +105,9 @@ const structuredData = getStructuredData({
   <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
 </div>
 
+    <!-- No carousel for News & Awards page -->
 
-    <div class="w-full max-w-[1200px] mx-auto px-4">
-      <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
-      </div>
-    </div>
-
-    <section class="section-heading-wrap">
+    <section class="section-heading-wrap pt-2 sm:pt-4">
       <div class="section-heading">
         <h1 class="page-title fade-in reveal-on-scroll">
           {landingWestern.title}
@@ -120,9 +118,7 @@ const structuredData = getStructuredData({
       </div>
     </section>
 
-    <div class="py-5">
-      <TombstoneNav items={landingWestern.tombstones} />
-    </div>
+    <!-- No tombstone navigation on News page -->
 
     <section class="story-layout">
       <div class="text-column">
@@ -293,6 +289,7 @@ ul li::marker {
 
     .section-heading .page-title {
       font-size: 2rem;
+       margin-top: -3rem;
       margin-bottom: .4rem;
     }
 
@@ -300,6 +297,7 @@ ul li::marker {
       font-size: 1rem;
       font-weight: 500;
       color: #6d5b4a;
+      margin-bottom: 1.4rem;
       opacity: .9;
     }
 
