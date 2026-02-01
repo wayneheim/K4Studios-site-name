@@ -478,7 +478,9 @@ export default function ChapterGalleryBase({
     imageIdFromUrl = match ? match[1] : null;
   }
   const isImageDetail = !!imageIdFromUrl;
-  const foundImage = !isImageDetail || galleryData.some(e => e && e.id === imageIdFromUrl);
+  // Case-insensitive comparison to handle URL case variations
+  const imageIdFromUrlLower = imageIdFromUrl?.toLowerCase();
+  const foundImage = !isImageDetail || galleryData.some(e => e && e.id && e.id.toLowerCase() === imageIdFromUrlLower);
   if (isImageDetail && !foundImage) {
     // Don't render image-dependent UI, let the hook redirect
     return null;
@@ -506,7 +508,9 @@ export default function ChapterGalleryBase({
     }
     const idToFind = idFromURL || initialImageId;
     if (idToFind) {
-      const idx = galleryData.findIndex((e) => e.id === idToFind);
+      // Case-insensitive comparison to handle URL case variations
+      const idToFindLower = idToFind.toLowerCase();
+      const idx = galleryData.findIndex((e) => e.id && e.id.toLowerCase() === idToFindLower);
       if (idx !== -1) return idx;
     }
     return 0;
@@ -721,7 +725,9 @@ export default function ChapterGalleryBase({
     const match = window.location.pathname.match(/\/(i-[a-zA-Z0-9_-]+)$/);
     const idFromURL = match ? match[1] : initialImageId;
     if (idFromURL) {
-      const idx = galleryData.findIndex((e) => e.id === idFromURL);
+      // Case-insensitive comparison to handle URL case variations
+      const idFromURLLower = idFromURL.toLowerCase();
+      const idx = galleryData.findIndex((e) => e.id && e.id.toLowerCase() === idFromURLLower);
       if (idx !== -1) setCurrentIndex(idx);
     }
   }, [initialImageId, galleryData.length]);

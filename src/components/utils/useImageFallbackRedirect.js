@@ -9,7 +9,9 @@ export function useImageFallbackRedirect(galleryData) {
     if (!match) return; // Not an image detail page, do nothing
 
     const imageId = match[1];
-    const found = galleryData.some((e) => e && e.id === imageId);
+    // Case-insensitive comparison to handle URL case variations
+    const imageIdLower = imageId.toLowerCase();
+    const found = galleryData.some((e) => e && e.id && e.id.toLowerCase() === imageIdLower);
     if (!found) {
       // Not found: fallback to parent gallery
       const parentUrl = path.replace(/\/i-[^/]+$/, '');
