@@ -5342,7 +5342,7 @@ export const galleryData = [
   },
   {
     "id": "i-b3vCXwR",
-    "title": "Cowboy Art: Waiting for Action",
+    "title": "Waiting for Action",
     "description": "A painterly Western portrait of a seasoned sheriff waiting for the inevitable. With his hand near his belt and his eyes fixed on something just out of frame, this fine art photograph captures a moment thick with silence, tension, and resolve. Wayne Heim’s signature painterly photography style evokes the grit and gravity of the Old West—where justice was often personal, and patience was a weapon.\n\nRendered with warm tones, historic textures, and a classical portrait stance, this image bridges fine art and frontier realism. Ideal for collectors of Western wall art, cowboy photography, and timeless American character studies.",
     "alt": "Western fine art portrait of a stoic cowboy sheriff standing at a wooden railing, hand near his belt, wearing a black coat and wide-brimmed hat, in painterly Old West style.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-b3vCXwR/3/K5F7gsKhfGvHsMRGpNLRrJ5NLx34PGSFR42n5tcFD/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_DSF7013-Edit--XL.jpg",
@@ -5352,6 +5352,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-b3vCXwR/3/NBphpBBfTx647fJ3pckwtBK8FGC7JtTxjvx529bCd/S/Western%20Cowboy%20Portrait%20Photography%20Edit%20_DSF7013-Edit--S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-b3vCXwR/A",
+
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -5388,20 +5389,26 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
+
     "story": "Some men chase trouble.\nOthers wait for it—quietly, like a storm builds behind the hills.\n\nHe’s not nervous. Just still.\nThe kind of still that only comes after years of making hard decisions, and living with most of ’em.\n\nGun stays holstered—for now.\nBut his eyes already know how this ends.",
     "notes": "This portrait exemplifies stillness as storytelling. The sheriff’s posture—upright, balanced, hands braced with quiet certainty—conveys authority without motion. It’s a study in compositional restraint: the clean vertical lines of the railing, wall boards, and the brim of his hat create a visual geometry that feels composed yet natural.\n\nThe lighting is painterly, not theatrical—highlighting texture, not dramatics. Like a moment plucked from a lost daguerreotype and rendered with the tonal mastery of Remington or Wyeth, it respects both history and high art. Wayne Heim’s fusion of fine art photography and Western narrative gives this piece its gravity: a man waiting for trouble, or perhaps trying to hold it at bay. Either way, it endures.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 105,
+
     "themes": {
       "aces-smoke-whiskey": 24,
       "law-outlaws": 33,
       "sketches-of-legends": 33,
       "whispering-reflection": 37
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-P8B2zJj",
@@ -6210,7 +6217,7 @@ export const galleryData = [
   },
   {
     "id": "i-btSc5RS",
-    "title": "Capturing Powerful Works Of Art",
+    "title": "Grave Light",
     "description": "Painterly fine art photography by Wayne Heim. A woman mourns at a Civil War grave, blending Western history and personal loss in a cinematic, story-driven portrait. Rich color and shadow invite viewers into a private moment, bridging past and present. Discover more Western art, Civil War stories, and limited-edition prints at K4 Studios. © Wayne Heim",
     "alt": "A woman in 19th-century mourning dress collapses over a Civil War grave marked “CSA,” framed by a blurred “UNKNOWN” tombstone in the foreground. Warm, vibrant color fills the background, contrasting with deep vignette shadows that create the sense of witnessing a private moment of grief—inviting the viewer into the scene as both observer and participant.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-btSc5RS/2/NGR7XdC8j6VsLBxkTwCN8cJfgczJMsVVwmNTCDtgs/XL/_HF21359-1065-XL.jpg",
@@ -6220,6 +6227,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-btSc5RS/2/LLKfPgv7sQdBMVMfVVndwfV5QWLGRt5RWZR74tvw2/S/_HF21359-1065-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-btSc5RS/A",
+
     "keywords": [
       "painterly Western photography",
       "painterly Western images",
@@ -6247,19 +6255,23 @@ export const galleryData = [
       "painterly technique",
       "museum-quality photography"
     ],
+
     "story": "As if an angel of mercy, light bathes the widow in the warmth and loving grace of a heavenly glow. Goodbye, hello, old friend—or perhaps just a moment of reflection.\n\nThis is a pause stolen from time, a moment taken for her alone—to recall, to remember, to reflect on all that was had and all that was lost, before she dusts herself off and returns to the present job of living.\n\nHere, the world holds its breath; memory and sorrow intertwine in the hush of morning, until grief yields, quietly, to the weight and warmth of the living.",
     "notes": "More than a portrait of mourning, this image invites the viewer to inhabit a private, sacred moment of loss. The dark vignette draws you in as if glimpsing grief through a keyhole—intimate, cinematic, and timeless. The warm, living landscape behind her contrasts the hush of sorrow, echoing the duality between life moving forward and the burden of memory.\n\nThis is Western fine art photography at its most human: painterly, narrative, and rooted in the tradition of artists like Lange and Wyeth, yet wholly original in voice. For collectors, it’s not only a Post Civil War story—it’s a meditation on how loss shapes us all, across generations.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 121,
+
     "themes": {
       "women-of-the-west": 31,
       "frontier-women": 28,
       "hardship-sorrow": 16,
       "love-goodbye": 20,
       "whispering-reflection": 42
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-ZPmj5Wk",
@@ -6688,7 +6700,7 @@ export const galleryData = [
   },
   {
     "id": "i-GG7mgqM",
-    "title": "Cowboy Art: Campfire Counsel",
+    "title": "Campfire Counsel",
     "description": "Painterly fine art Western photograph by Wayne Heim. Cowboys gather around the campfire, exchanging stories, advice, and plenty of opinions—each one sharpened by dusk, whiskey, and friendship. A classic image of Western camaraderie and frontier wisdom, captured in moody, golden light. For collectors of narrative cowboy photography, Americana, and painterly fine art. © Wayne Heim",
     "alt": "Cowboys around a campfire, sharing stories and cooking under canvas—fine art photograph by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-GG7mgqM/2/M8CSkp5hjn8hDddp8ZHpDMRtncwHfcCv6jzpR5vJh/XL/cowboy%20wild%20west%20_DSF8917-Edit-2-Edit-Edit-XL.jpg",
@@ -6698,6 +6710,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-GG7mgqM/2/KgLKsmvqtXdk5Z3wsBH6QqLFQ5QD8tGHNTDwwXBvZ/S/cowboy%20wild%20west%20_DSF8917-Edit-2-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-GG7mgqM/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -6725,18 +6738,24 @@ export const galleryData = [
       "frontier social life",
       "campfire storytelling"
     ],
+
     "story": "Flames flicker, faces glow— \nwhere every stick tossed on the fire brings out another expert. \nHere, under a canvas sky, the world’s problems are solved one tall tale at a time. \nNobody remembers who started the story, only how it ends— \nwith laughter, a warning, or just a little more smoke.",
     "notes": "Unlike the heroic single-rider and lone-gun images that define much of Western art, this scene places collective ritual at its heart. The layered composition—figures gathered in candid debate rather than static pose—invites comparison to the narrative complexity of Rockwell, yet is rare within the cowboy canon.\n\nPainterly light and natural gesture distinguish this piece from more sentimental or action-driven works, emphasizing psychological interplay over spectacle. The firelight acts as both stage and equalizer, inviting the viewer into a shared tradition: where stories, alliances, and the West’s social order were negotiated nightly.\n\nThis is Western art that honors myth while breaking from it—favoring community, negotiation, and realism over isolation or legend. Collectors value such pieces for their narrative depth, compositional sophistication, and their challenge to the conventions of cowboy storytelling.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 130,
+
     "themes": {
       "aces-smoke-whiskey": 10,
       "firelight-shadow": 28
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-pXs6Fhx",
@@ -7921,7 +7940,7 @@ export const galleryData = [
   },
   {
     "id": "i-sBDTm7k",
-    "title": "Cowboy Art: Yes, I Am the Sheriff",
+    "title": "Yes, I Am the Sheriff",
     "description": "A painterly Western photograph of a frontier sheriff posed in the doorway of a weathered jail, rendered with a restrained realism that honors the legacy of Western fine art. Wayne Heim’s disciplined approach channels the pictorialist tradition, balancing light, structure, and psychological tension to evoke the real human gravity behind the badge. This fine art cowboy portrait—steeped in American frontier history—embodies the quiet power and moral ambiguity that define the Western canon. Part of Wayne Heim’s painterly Western photography collection. © Wayne Heim",
     "alt": "Painterly Western sheriff portrait, standing in a weathered jail doorway, hand on holster, cowboy hat, sheriff badge, fine art Western photography",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sBDTm7k/2/MNHGMpr7G4Qj2nBv79SKRSG5C3hSR8QVKPh5VQ4d4/XL/Western%20Cowboy%20Portrait%20Photography%20_ANA8392-Edit-Edit-XL.jpg",
@@ -7931,6 +7950,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sBDTm7k/2/NMgrqBf36zj7KFmCx865V9xPzW3C87cSfhHhh4Xqc/S/Western%20Cowboy%20Portrait%20Photography%20_ANA8392-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sBDTm7k/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -7952,18 +7972,24 @@ export const galleryData = [
       "American frontier",
       "Americana photography"
     ],
+
     "story": "He stood in the doorway, hat tipped just so, the five-pointed star gleaming in the last slant of sun. Some men wore their authority with bravado—he wore it with the memory of every law he’d kept, every promise he’d had to break. “Yes, I am the sheriff,” he said, but his eyes finished the sentence: for now.\n\nDust clung to his boots, gun resting heavy at his hip. Not all justice is decided in the daylight. The badge weighed more at dusk, and he carried it like a question no jury would ever answer.\n\nSome days the hardest part was stepping outside. Today, he simply watched the street—measuring the distance between peace and trouble, and finding himself standing in the middle.",
     "notes": "Rendered in a pictorialist tradition reminiscent of classic portraiture, this sheriff portrait stands as both character study and historical document. Heim’s fusion of restrained painterly technique and authentic Western mood sets it apart from decorative nostalgia—evoking the legacy of Remington and Wyeth in the careful composition, textural realism, and unspoken tension. The doorway becomes a stage, the badge a question—offering collectors a museum-quality anchor for any Americana or Western-themed collection.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 155,
+
     "themes": {
       "aces-smoke-whiskey": 28,
       "whispering-reflection": 44
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-dwk4K8v",
@@ -9116,7 +9142,7 @@ export const galleryData = [
   },
   {
     "id": "i-8VPQmkW",
-    "title": "Anticipation - Frontier Woman in Window",
+    "title": "Anticipation",
     "description": "A painterly fine art portrait of a frontier woman caught in a moment of stillness and quiet emotion, rendered in soft textures and golden morning light. Wayne Heim’s painterly Western photography fuses classical portraiture with cinematic mood, capturing the character and resilience of the American frontier. This timeless image tells a quiet story of longing, memory, and hope—ideal for collectors of cowboy wall art, frontier realism, or historical fine art photography. Perfect for those drawn to vintage-inspired Western imagery that evokes deep emotional atmosphere and pictorial depth.",
     "alt": "Frontier woman in bonnet gazing out window at children playing, bathed in soft morning light — painterly Western fine art portrait by Wayne Heim.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/MgrpKLNCNcfZQTz2V2hwhQVPvZvgwJG6JBWgQ7bVX/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-XL.jpg",
@@ -9126,6 +9152,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/KvWjzmxx6g7dkNbzNR46xRkVMNL5hz6WdHpTwnNKq/S/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8VPQmkW/A",
+
     "keywords": [
       "Cowboy Art",
       "Cowboy Artwork",
@@ -9162,21 +9189,27 @@ export const galleryData = [
       "Wild West Portrait Photography",
       "Wild West Themed Photography"
     ],
-    "story": "Another day in an endless string of days, each one folding into the next like worn linens—quiet, steady, solitary. She moves through her morning ritual with the practiced grace of someone who’s learned to carry silence like a second skin.\n\nThen, a sound breaks through. Laughter. Children outside—giggling, hollering, chasing each other in the dust as if sorrow and worry were stories for another time. She pauses at the window, hand resting lightly on the glass, eyes searching the light. A flicker of memory tugs at her chest.\n\nAll giggles and dust, chasing each other like sorrow and worry ain’t even real. “Oh, to be young and free again. God keep them, and guard that innocence a while longer.”\n",
+
+    "story": "Another day in an endless string of days, each one folding into the next like worn linens—quiet, steady, solitary. She moves through her morning ritual with the practiced grace of someone who’s learned to carry silence like a second skin.\n\nThen, a sound breaks through. Laughter. Children outside—giggling, hollering, chasing each other in the dust as if sorrow and worry were stories for another time. She pauses at the window, hand resting lightly on the glass, eyes searching the light. A flicker of memory tugs at her chest.\n\nAll giggles and dust, chasing each other like sorrow and worry ain’t even real. “Oh, to be young and free again. God keep them, and guard that innocence a while longer.”",
     "notes": "This portrait carries the quiet gravity of waiting — not with idle patience, but with purpose. Her stance, framed by the soft glow of the frontier morning, is firm yet elegant. She is not simply looking out — she is holding the line.\n\nThe crisp pleats of her blouse echo the window frame’s sharp geometry, each fold a reminder of structure, order, and the burdens of those who stayed behind. Light brushes her profile with restraint, illuminating not just her features, but the tension between vulnerability and strength. Pride. Duty. A trace of worry she won’t speak aloud.\n\nIn Wayne Heim’s painterly tradition, this image recalls Victorian portraiture — yet it’s wholly Western in spirit. A tribute not to those who rode out, but to those who kept the fire lit, wrote the letters, and bore the silence. The weight of the waiting belongs to them.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 181,
+
     "themes": {
       "women-of-the-west": 38,
       "frontier-women": 23,
       "love-goodbye": 13,
       "sketches-of-legends": 26,
       "whispering-reflection": 32
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-qXd5779",

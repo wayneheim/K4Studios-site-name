@@ -110,12 +110,12 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     </div>
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
-      <div class="carousel-fade reveal-on-scroll">
+      <div class="carousel-fade reveal-on-scroll" style="min-height: auto !important; margin-bottom: 10px !important;">
         <ImageBar2 client:load slides={featheredImages} />
       </div>
     </div>
 
-    <section class="section-heading-wrap">
+    <section class="section-heading-wrap" style="margin-top: 10px;">
       <div class="section-heading">
         <h1 class="page-title fade-in reveal-on-scroll">
           {landingWestern.title}
@@ -285,6 +285,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     font-weight: 500;
     color: #6d5b4a;
     opacity: .9;
+    margin-bottom: -0.5rem;
   }
   .story-section {
     line-height: 1.3;

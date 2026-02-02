@@ -20,6 +20,7 @@ import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 import { landingWestern } from '@/data/Reenactments/landingstones.ts';
 import { painterlyStory as westernStory } from '@/data/Reenactments/story.ts';
 import { facingFAQ } from '@/data/Reenactments/faq.ts';
+import { slides as facingHistorySlides } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/carousel.ts';
 
 import '@/styles/global.css';
 
@@ -103,9 +104,9 @@ const structuredData = getStructuredData({
 </div>
 
 
-    <div class="w-full max-w-[1200px] mx-auto px-4">
+    <div class="w-full max-w-[1200px] mx-auto px-4 mb-0">
       <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
+        <ImageBar2 client:load slides={facingHistorySlides} />
       </div>
     </div>
 
@@ -240,7 +241,7 @@ ul li::marker {
       }
 
       .section-heading-wrap {
-        margin-top: 1rem;
+        margin-top: -1rem;
         margin-bottom: 1rem;
       }
 
@@ -278,7 +279,7 @@ ul li::marker {
     }
 
     .section-heading-wrap {
-      margin: 1.5rem 0;
+      margin: -0.5rem 0 1.5rem 0;
       text-align: center;
     }
 
@@ -394,6 +395,20 @@ ul li::marker {
   visibility: visible;
 }
 
+/* Page-specific carousel spacing overrides */
 
+  </style>
+
+  <style is:global>
+    .carousel-fade {
+      min-height: 410px !important;
+      margin-bottom: -20px !important;
+    }
+    @media (max-width: 768px) {
+      .carousel-fade {
+        min-height: 220px !important;
+        margin-bottom: -25px !important;
+      }
+    }
   </style>
 </BaseLayout>

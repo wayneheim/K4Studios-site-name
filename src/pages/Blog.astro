@@ -168,21 +168,21 @@ const galleryPaths = Object.keys(galleryDataMap);
       </div>
     </section>
 
-    <!-- Full-width divider before Foundations -->
-    <div class="foundations-divider"></div>
+    <!-- Full-width divider before Cornerstones -->
+    <div class="cornerstones-divider"></div>
 
-    <!-- Foundations Section -->
-    <section class="foundations-section max-w-4xl mx-auto px-4 mt-8 mb-12">
-      <h2 class="foundations-heading">Foundations</h2>
-      <p class="foundations-intro">
+    <!-- Cornerstones Section -->
+    <section class="cornerstones-section max-w-4xl mx-auto px-4 mt-2 md:mt-4 mb-12">
+      <h2 class="cornerstones-heading">Cornerstones</h2>
+      <p class="cornerstones-intro">
         Reference articles defining the disciplines behind the work.
       </p>
-      <div class="foundations-grid">
-        <a href="/Blog/what-is-painterly-photography" class="foundation-card">
+      <div class="cornerstones-grid">
+        <a href="/Blog/what-is-painterly-photography" class="cornerstone-card">
           <h3>What Is Painterly Photography?</h3>
           <p>Meaning, misuse, and the fine art distinction</p>
         </a>
-        <a href="/Blog/what-is-western-fine-art-photography" class="foundation-card">
+        <a href="/Blog/what-is-western-fine-art-photography" class="cornerstone-card">
           <h3>What Is Western Fine Art Photography?</h3>
           <p>Definition, distinction, and what it is not</p>
         </a>
@@ -199,15 +199,15 @@ const galleryPaths = Object.keys(galleryDataMap);
   </main>
 
   <style>
-    /* Foundations Section */
-    .foundations-divider {
+    /* Cornerstones Section */
+    .cornerstones-divider {
       width: 100%;
       max-width: 900px;
       height: 1px;
       background: linear-gradient(to right, transparent, #d0d0d0 8%, #d0d0d0 92%, transparent);
-      margin: 3rem auto 0;
+      margin: 1rem auto 0;
     }
-    .foundations-heading {
+    .cornerstones-heading {
       font-family: 'Glegoo', serif;
       font-size: 1.5rem;
       font-weight: 600;
@@ -215,18 +215,18 @@ const galleryPaths = Object.keys(galleryDataMap);
       margin-bottom: 0.5rem;
       text-align: center;
     }
-    .foundations-intro {
+    .cornerstones-intro {
       text-align: center;
       color: #666;
       font-size: 0.95rem;
       margin-bottom: 1.5rem;
     }
-    .foundations-grid {
+    .cornerstones-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.25rem;
     }
-    .foundation-card {
+    .cornerstone-card {
       display: block;
       padding: 1.25rem 1.5rem;
       background: #faf9f7;
@@ -235,22 +235,44 @@ const galleryPaths = Object.keys(galleryDataMap);
       text-decoration: none;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .foundation-card:hover {
+    .cornerstone-card:hover {
       border-color: #8b5a2b;
       box-shadow: 0 2px 8px rgba(139, 90, 43, 0.1);
     }
-    .foundation-card h3 {
+    .cornerstone-card h3 {
       font-family: 'Glegoo', serif;
       font-size: 1.1rem;
       font-weight: 600;
       color: #2c2c2c;
       margin: 0 0 0.35rem 0;
     }
-    .foundation-card p {
+    .cornerstone-card p {
       font-size: 0.9rem;
       color: #666;
       margin: 0;
       font-style: italic;
+    }
+    
+    @media (max-width: 768px) {
+      .cornerstones-divider {
+        margin-top: 0.5rem !important;
+      }
+      .cornerstones-section {
+        margin-top: 0.5rem !important;
+      }
+      .sidebar-column {
+        display: none !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .story-layout {
+        display: block !important;
+      }
+      .story-block h2 {
+        text-align: center !important;
+      }
     }
   </style>
 </BaseLayout>

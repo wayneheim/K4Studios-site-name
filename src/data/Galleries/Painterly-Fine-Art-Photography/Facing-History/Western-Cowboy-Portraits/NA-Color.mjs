@@ -226,9 +226,9 @@ export const galleryData = [
   },
   {
     "id": "i-wWNfZsT",
-    "title": "Western Canon Moment",
-    "description": "This western canon artwork by Wayne Heim showcases powerful works of art in a cowboys style. Reflecting painterly Western photograph, cowboys, and western canon, it's suited for admirers of powerful works of art. With painterly Western photograph elements. © Wayne Heim",
-    "alt": "western canon in fine art photography",
+    "title": "The Higher Silence",
+    "description": "The Higher Silence is a painterly Western fine art photograph that reflects Indigenous presence through restraint rather than spectacle. Composed with deliberate vertical separation, the image emphasizes watchfulness, lineage, and quiet authority. Light, posture, and spatial hierarchy guide the viewer toward relationship rather than action, placing the work within a narrative Western tradition that values endurance, continuity, and lived experience. This piece rewards slow looking and invites reflection on inheritance, guardianship, and the unspoken knowledge carried across time. © Wayne Heim",
+    "alt": "Painterly Western fine art photograph depicting two Indigenous figures positioned in quiet watchfulness, one standing above and one seated below, emphasizing lineage, guardianship, and silence in the American West.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wWNfZsT/1/KXfGf8ckrkX3mRXR999RFqFqqXXpMfkTqdLfVrB5F/XL/_HF28699-Edit-1487-1494-1496-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wWNfZsT/1/KXfGf8ckrkX3mRXR999RFqFqqXXpMfkTqdLfVrB5F/XL/_HF28699-Edit-1487-1494-1496-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wWNfZsT/1/Kzw2gCnxLBZfTxqkdmGMgNWv3x6KKDMRWfhRG4bQG/L/_HF28699-Edit-1487-1494-1496-L.jpg",
@@ -236,28 +236,34 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wWNfZsT/1/NgpvfSzBC4VxMWcJxkpL8Bv9L92fNfVh2tpx5gN4G/S/_HF28699-Edit-1487-1494-1496-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wWNfZsT/A",
+
     "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
-      "painterly photography",
-      "western canon",
-      "powerful works of art",
-      "cowboys",
-      "painterly Western photograph",
-      "painterly cowboy portraits",
-      "Baltic Birch",
-      "outlaw portraits"
+      "painterly Western photography",
+      "Native American fine art photography",
+      "Indigenous portrait art",
+      "narrative Western art",
+      "painterly Western images",
+      "American West fine art",
+      "Native American portraits",
+      "Western fine art photography",
+      "heritage and tradition in art",
+      "Indigenous experience",
+      "museum-quality Western photography",
+      "Native American photography",
+      "painterly Native American portraits"
     ],
-    "story": "This image embodies painterly cowboy portraits and Baltic Birch, captured by Wayne Heim in his signature style. It reflects painterly cowboy portraits with a touch of outlaw portraits.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "They do not speak because nothing here requires explanation. One watches from above, steady and alert. The other listens from below, learning the shape of the world through stillness. This is how knowledge passes—not by instruction, but by proximity. Between them lives a silence earned over generations, a quiet that holds memory, responsibility, and the weight of what must be protected before it can be named.",
+    "notes": "This work draws its strength from compositional restraint and relational space. By separating figures vertically, the image establishes a visual language of guardianship and inheritance without relying on symbolism or overt narrative cues. The silence is intentional—allowing posture, distance, and gaze to carry meaning. Rooted in painterly photographic tradition, The Higher Silence stands as a meditation on continuity and responsibility, offering collectors a piece that deepens with time rather than declares itself at first glance.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    contentSource: "ai"
   },
   {
     "id": "i-2s2LtQp",
@@ -2036,9 +2042,9 @@ export const galleryData = [
   },
   {
     "id": "i-8NsWqJQ",
-    "title": "Painterly Western Images - Powerful Works Of Art",
-    "description": "Immerse yourself in painterly Western images with this stunning powerful works of art by Wayne Heim. Capturing cowboy painting art, painterly cowboy portraits, and powerful works of art, it's a must-have for collectors of painterly Western images. Including Western cowboys themes. © Wayne Heim",
-    "alt": "Wayne Heim's painterly Western images artwork",
+    "title": "Before the Strike Is Named",
+    "description": "Before the Strike Is Named is a painterly Western fine art photograph rooted in restraint, presence, and embodied resolve. The image captures a Native American warrior figure poised in stillness, emphasizing intention over action and psychological weight over spectacle. Through disciplined composition, controlled contrast, and a pictorialist-informed approach, the work reflects a moment where force exists without release.\n\nThis fine art Western photography piece draws from the Western canon while resisting mythic exaggeration, presenting lived readiness rather than dramatized violence. Created for collectors who value narrative depth, cultural gravity, and timeless visual authority. © Wayne Heim",
+    "alt": "Painterly Western fine art photograph of a Native American warrior holding a spear in stillness, conveying restraint, readiness, and narrative tension",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/K7XTDHVRfmJ6r9fQptQSLP6tnmjD5ms88Wv6nKzrF/XL/_HF27362-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/K7XTDHVRfmJ6r9fQptQSLP6tnmjD5ms88Wv6nKzrF/XL/_HF27362-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/MrM9fVNbDDvqVgtw3J9JVV4DMTNxwC7W3v967DxJ4/L/_HF27362-Edit-L.jpg",
@@ -2046,29 +2052,43 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/M4GzLswrsPjXmSmBZhfrtSMdpXdDwZm9jcLp66fgd/S/_HF27362-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/A",
+
     "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
-      "painterly photography",
+      "painterly Western photography",
       "painterly Western images",
-      "powerful works of art",
-      "cowboy painting art",
-      "painterly cowboy portraits",
-      "Western cowboys",
-      "western landscapes fine art",
-      "painterly Western photograph",
-      "Pictorialist tradition"
+      "fine art Western photography",
+      "narrative Western art",
+      "pictorialist tradition",
+      "Native American fine art photography",
+      "Native American portraits",
+      "Indigenous experience",
+      "Native American heritage art",
+      "spirit of the American West",
+      "American frontier",
+      "frontier life",
+      "Americana photography",
+      "historically themed photography",
+      "cinematic stills",
+      "story-driven photography",
+      "western fine art",
+      "western themed art",
+      "western wall art",
+      "western grit",
+      "painterly technique",
+      "museum-quality photography"
     ],
-    "story": "This image embodies western landscapes fine art and painterly Western photograph, captured by Wayne Heim in his signature style. It reflects cowboy painting art with a touch of Pictorialist tradition.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He does not advance. He does not retreat.  \nThe weapon is already steady in his hands, held not for display, but for necessity.\n\nThis is the moment before motion becomes consequence—when intent has settled into the body and nothing more needs to be decided. The air is quiet enough to hear breath, muscle, memory. Whatever comes next will not be sudden. It will be exact.",
+    "notes": "This image belongs to a lineage of Western narrative art where implication carries more weight than action. The power of the work lies in what is withheld—the strike unnamed, the outcome unresolved.\n\nBy holding the figure in suspension, the composition places the viewer inside the moment of choice rather than its aftermath. The painterly handling softens the edges without diminishing authority, aligning the piece with pictorialist tradition while remaining grounded in photographic authorship.\n\nBefore the Strike Is Named functions as a single-frame psychological study—cinematic, restrained, and deeply human—inviting long viewing and quiet contemplation rather than immediate interpretation.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 56
+    "sortOrder": 56,
+    contentSource: "ai"
   },
   {
     "id": "i-6vszqTK",
@@ -2343,9 +2363,9 @@ export const galleryData = [
   },
   {
     "id": "i-qnRRJK2",
-    "title": "Western Fine Art Study",
-    "description": "Immerse yourself in western fine art with this stunning painterly Western photograph by Wayne Heim. Capturing cowboy painting art, western fine art, and narrative Western art, it's a must-have for collectors of western fine art. Including Baltic Birch themes. © Wayne Heim",
-    "alt": "Fine art photography of western fine art by Wayne Heim",
+    "title": "Carried by the Cry",
+    "description": "Carried by the Cry is a painterly Western fine art photograph that captures motion, force, and embodied expression within Native American narrative tradition. The image depicts a moment of full release—where movement, sound, and intention converge—rendered through a painterly photographic approach that emphasizes texture, energy, and emotional truth over spectacle.\n\nRooted in the Western canon while resisting romantic abstraction, this work presents power as lived experience rather than myth. Designed for collectors drawn to story-driven Western fine art photography, Indigenous presence, and images that carry weight through action rather than symbolism. © Wayne Heim",
+    "alt": "Painterly Western fine art photograph of a Native American warrior in motion, gripping a spear and releasing a cry, conveying force, voice, and embodied strength",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qnRRJK2/0/Lx8kQh5JP68gTzbJkt5NkVJfxpDgXjS83TBkg4wfm/XL/_WHO1224-901-902-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qnRRJK2/0/Lx8kQh5JP68gTzbJkt5NkVJfxpDgXjS83TBkg4wfm/XL/_WHO1224-901-902-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qnRRJK2/0/MZPVbT7r5RLRTsfSHGKdCd45FSpWPF39gD7QSHMPM/L/_WHO1224-901-902-L.jpg",
@@ -2353,28 +2373,43 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qnRRJK2/0/KNv8C84MHhMQHskgmSbGzLBL8gcKWLtKtGmDVQZFJ/S/_WHO1224-901-902-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qnRRJK2/A",
+
     "keywords": [
-      "south",
-      "dakota",
-      "fine art",
-      "photography",
-      "painterly photography",
-      "western fine art",
-      "painterly Western photograph",
-      "cowboy painting art",
+      "painterly Western photography",
+      "painterly Western images",
+      "fine art Western photography",
       "narrative Western art",
-      "Baltic Birch",
-      "western art",
-      "western canon"
+      "Native American fine art photography",
+      "Native American portraits",
+      "Indigenous experience",
+      "Native American heritage art",
+      "Native American tradition",
+      "spirit of the American West",
+      "American frontier",
+      "frontier life",
+      "Americana photography",
+      "historically themed photography",
+      "cinematic stills",
+      "story-driven photography",
+      "western fine art",
+      "western themed art",
+      "western wall art",
+      "western grit",
+      "painterly technique",
+      "museum-quality photography"
     ],
-    "story": "This image embodies western art and western art, captured by Wayne Heim in his signature style. It reflects painterly Western photograph with a touch of western canon.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The sound does not rise from anger.  \nIt rises from the body remembering what it was made to do.\n\nMuscle, breath, and motion collapse into a single release—no hesitation, no performance. The cry is not aimed outward. It moves through him, carried by the ground beneath his feet and the history beneath his skin.\n\nThis is not violence. It is voice made physical.",
+    "notes": "This image occupies the opposite end of the narrative spectrum from restraint. Where stillness holds power in suspension, motion releases it.\n\nThe figure is not depicted as symbol or archetype, but as presence—caught mid-action, mid-voice, mid-truth. Painterly motion blur and textural depth reinforce the sense that the moment cannot be contained, only witnessed.\n\nCarried by the Cry stands as a statement of embodied history and agency, inviting viewers to confront power not as spectacle, but as something earned, lived, and voiced through the body itself.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 65
+    "sortOrder": 65,
+    contentSource: "ai"
   },
   {
     "id": "i-fCSxt3j",

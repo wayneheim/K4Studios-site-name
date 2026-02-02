@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-01-30T16:27:56.194Z",
+    "lastUpdated": "2026-02-02T19:14:12.341Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z"
   },
   "images": {
@@ -1294,7 +1294,21 @@
     "i-MFksKj9:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-NgMnvUc",
     "i-psMRwPB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-W6RxH4a",
     "i-xgqQnWv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-W2pTeGQ",
-    "i-89qzJ6S:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs": "s-rVHQ54A"
+    "i-89qzJ6S:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs": "s-rVHQ54A",
+    "i-wWNfZsT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs": "s-YnPWGJL",
+    "i-8NsWqJQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs": "s-RMEnTjv",
+    "i-qnRRJK2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs": "s-FaDZues",
+    "i-fszvgmq:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-gxV6bcb",
+    "i-fsmXzLW:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-K4b9e6m",
+    "i-pDP765B:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-3Zns4b7",
+    "i-kdkL5WG:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-2ArVj33",
+    "i-d9wMKtJ:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-nrefgtz",
+    "i-QkG3vmv:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-mcg5LUU",
+    "i-thtMmjm:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-PAQkc5X",
+    "i-XV5CXk6:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-JM4jJ2G",
+    "i-VX7fW9d:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-42JWw6J",
+    "i-DRBBHkV:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-LykgkDa",
+    "i-VbsJ838:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-GHDs6em"
   },
   "series": {
     "s-BB65wHk": {
@@ -8420,7 +8434,7 @@
         {
           "imageId": "i-BBZjZD6",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
-          "title": "Western Cowboy Photography: Saddling Up on the Ranch",
+          "title": "Saddling Up on the Ranch",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/3/LsjFpp8jmd6m5mgkJf8vgvxX7c257Shd9L3nzrLpG/XL/_ANA0584-Edit-Edit-3-XL.jpg"
         }
       ],
@@ -10197,7 +10211,7 @@
         {
           "imageId": "i-bhb655B",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
-          "title": "Cowboy Art: No Hard Feelings",
+          "title": "No Hard Feelings",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bhb655B/1/NFscFMczHvWPX788x2DWbd3Zqs7sd4mKR3gjWkGPR/XL/_O2H2141-Edit-XL.jpg"
         }
       ],
@@ -15563,7 +15577,7 @@
         {
           "imageId": "i-b3vCXwR",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Cowboy Art: Waiting for Action",
+          "title": "Waiting for Action",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-b3vCXwR/3/K5F7gsKhfGvHsMRGpNLRrJ5NLx34PGSFR42n5tcFD/XL/Western%20Cowboy%20Portrait%20Photography%20Edit%20_DSF7013-Edit--XL.jpg"
         }
       ],
@@ -15819,7 +15833,7 @@
         {
           "imageId": "i-GG7mgqM",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Cowboy Art: Campfire Counsel",
+          "title": "Campfire Counsel",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-GG7mgqM/2/M8CSkp5hjn8hDddp8ZHpDMRtncwHfcCv6jzpR5vJh/XL/cowboy%20wild%20west%20_DSF8917-Edit-2-Edit-Edit-XL.jpg"
         }
       ],
@@ -15953,7 +15967,7 @@
         {
           "imageId": "i-btSc5RS",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Capturing Powerful Works Of Art",
+          "title": "Grave Light",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-btSc5RS/2/NGR7XdC8j6VsLBxkTwCN8cJfgczJMsVVwmNTCDtgs/XL/_HF21359-1065-XL.jpg"
         }
       ],
@@ -16488,7 +16502,7 @@
         {
           "imageId": "i-sBDTm7k",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Cowboy Art: Yes, I Am the Sheriff",
+          "title": "Yes, I Am the Sheriff",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-sBDTm7k/2/MNHGMpr7G4Qj2nBv79SKRSG5C3hSR8QVKPh5VQ4d4/XL/Western%20Cowboy%20Portrait%20Photography%20_ANA8392-Edit-Edit-XL.jpg"
         }
       ],
@@ -17354,7 +17368,7 @@
         {
           "imageId": "i-8VPQmkW",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Anticipation - Frontier Woman in Window",
+          "title": "Anticipation",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-8VPQmkW/4/MgrpKLNCNcfZQTz2V2hwhQVPvZvgwJG6JBWgQ7bVX/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29529-Edit-2-XL.jpg"
         }
       ],
@@ -31910,6 +31924,288 @@
       "linkedCount": 1,
       "excludeSizes": {},
       "createdAt": "2026-01-30T16:25:33.179Z"
+    },
+    "s-YnPWGJL": {
+      "primaryImageId": "i-wWNfZsT",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Higher Silence",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wWNfZsT/1/KXfGf8ckrkX3mRXR999RFqFqqXXpMfkTqdLfVrB5F/XL/_HF28699-Edit-1487-1494-1496-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-wWNfZsT",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
+          "title": "The Higher Silence",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wWNfZsT/1/KXfGf8ckrkX3mRXR999RFqFqqXXpMfkTqdLfVrB5F/XL/_HF28699-Edit-1487-1494-1496-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-02-02T17:20:51.103Z"
+    },
+    "s-RMEnTjv": {
+      "primaryImageId": "i-8NsWqJQ",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Before the Strike Is Named",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/K7XTDHVRfmJ6r9fQptQSLP6tnmjD5ms88Wv6nKzrF/XL/_HF27362-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-8NsWqJQ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
+          "title": "Before the Strike Is Named",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/K7XTDHVRfmJ6r9fQptQSLP6tnmjD5ms88Wv6nKzrF/XL/_HF27362-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-02-02T17:23:52.302Z"
+    },
+    "s-FaDZues": {
+      "primaryImageId": "i-qnRRJK2",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Carried by the Cry",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qnRRJK2/0/Lx8kQh5JP68gTzbJkt5NkVJfxpDgXjS83TBkg4wfm/XL/_WHO1224-901-902-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-qnRRJK2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
+          "title": "Carried by the Cry",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qnRRJK2/0/Lx8kQh5JP68gTzbJkt5NkVJfxpDgXjS83TBkg4wfm/XL/_WHO1224-901-902-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-02-02T17:26:41.070Z"
+    },
+    "s-gxV6bcb": {
+      "primaryImageId": "i-fszvgmq",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Front Door - Take a Seat",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fszvgmq/3/MT6xBV59M4CCW9kmG9mck2sDR6MGxhMQX3jGQ7ppP/XL/P1010060-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-fszvgmq",
+          "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs",
+          "title": "Front Door - Take a Seat",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fszvgmq/3/MT6xBV59M4CCW9kmG9mck2sDR6MGxhMQX3jGQ7ppP/XL/P1010060-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-02-02T19:11:54.277Z"
+    },
+    "s-K4b9e6m": {
+      "primaryImageId": "i-fsmXzLW",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Quiet Between the Boats",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fsmXzLW/3/NMKw2LqhC7SGBFFSmJdJXs53gfnCczXGgGcj8P3dr/XL/P1000824-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-fsmXzLW",
+          "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs",
+          "title": "Quiet Between the Boats",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fsmXzLW/3/NMKw2LqhC7SGBFFSmJdJXs53gfnCczXGgGcj8P3dr/XL/P1000824-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-02-02T19:12:21.566Z"
+    },
+    "s-3Zns4b7": {
+      "primaryImageId": "i-pDP765B",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Bed Time",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Still-Lifes/i-pDP765B/4/LdwV5fH969Tc6XjgQQnzQmnZ9FsF5zkpp7k3H8rHS/XL/_IGP1778-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-pDP765B",
+          "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs",
+          "title": "Bed Time",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Other-Stuff/n-HwTHD/Still-Lifes/i-pDP765B/4/LdwV5fH969Tc6XjgQQnzQmnZ9FsF5zkpp7k3H8rHS/XL/_IGP1778-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-02-02T19:13:09.214Z"
+    },
+    "s-2ArVj33": {
+      "primaryImageId": "i-kdkL5WG",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Out to Dry",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-kdkL5WG/3/LPX7sxmfhz6dJQDQqL5NshLqqPg4d3kKVJQkPG6MV/XL/P1010018%20%281%29-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-kdkL5WG",
+          "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs",
+          "title": "Out to Dry",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-kdkL5WG/3/LPX7sxmfhz6dJQDQqL5NshLqqPg4d3kKVJQkPG6MV/XL/P1010018%20%281%29-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "createdAt": "2026-02-02T19:13:11.507Z"
+    },
+    "s-nrefgtz": {
+      "primaryImageId": "i-d9wMKtJ",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Rundown",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-d9wMKtJ/3/NKZQ6RhTCD4BTMKxDqrXw97qqjBfLQkpn4GT7N8KR/XL/P1010038-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-d9wMKtJ",
+          "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs",
+          "title": "Rundown",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-d9wMKtJ/3/NKZQ6RhTCD4BTMKxDqrXw97qqjBfLQkpn4GT7N8KR/XL/P1010038-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "createdAt": "2026-02-02T19:13:11.508Z"
+    },
+    "s-mcg5LUU": {
+      "primaryImageId": "i-QkG3vmv",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Dome and Windows ",
+      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-QkG3vmv/4/Kj4mjtBf3tDZZwprL2rZcqMVXn6kkWLQT5sr3XSzP/XL/_IMG3022-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-QkG3vmv",
+          "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs",
+          "title": "Dome and Windows ",
+          "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-QkG3vmv/4/Kj4mjtBf3tDZZwprL2rZcqMVXn6kkWLQT5sr3XSzP/XL/_IMG3022-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "createdAt": "2026-02-02T19:13:11.508Z"
+    },
+    "s-PAQkc5X": {
+      "primaryImageId": "i-thtMmjm",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Hotel de Ville",
+      "src": "https://photos.smugmug.com/photos/i-thtMmjm/4/L2gc8zQWh8f39rVvWH2g5zV5XXGcndBbxWqp77QJZ/XL/i-thtMmjm-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-thtMmjm",
+          "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs",
+          "title": "Hotel de Ville",
+          "src": "https://photos.smugmug.com/photos/i-thtMmjm/4/L2gc8zQWh8f39rVvWH2g5zV5XXGcndBbxWqp77QJZ/XL/i-thtMmjm-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "createdAt": "2026-02-02T19:13:11.508Z"
+    },
+    "s-JM4jJ2G": {
+      "primaryImageId": "i-XV5CXk6",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Lone Boat, Burano",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-XV5CXk6/3/NMk5pPrgtjDB84Tsz2rsGWtGhPKtcpCkmdMxzFzw5/XL/P1010052-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-XV5CXk6",
+          "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs",
+          "title": "Lone Boat, Burano",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-XV5CXk6/3/NMk5pPrgtjDB84Tsz2rsGWtGhPKtcpCkmdMxzFzw5/XL/P1010052-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "createdAt": "2026-02-02T19:13:11.508Z"
+    },
+    "s-42JWw6J": {
+      "primaryImageId": "i-VX7fW9d",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "Eiffel Tower in Sepia",
+      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VX7fW9d/3/L364qQ7RKxtVtpSpwXXF5wdkxRHz2rkBRNgRX9Txq/XL/_IMG2276-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-VX7fW9d",
+          "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs",
+          "title": "Eiffel Tower in Sepia",
+          "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VX7fW9d/3/L364qQ7RKxtVtpSpwXXF5wdkxRHz2rkBRNgRX9Txq/XL/_IMG2276-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-02-02T19:13:43.585Z"
+    },
+    "s-LykgkDa": {
+      "primaryImageId": "i-DRBBHkV",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "Support",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-DRBBHkV/3/Lmpw38rLvXht5v7kRSMqT45grtx8McnngH9mCgqMF/XL/_IMG2283-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-DRBBHkV",
+          "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs",
+          "title": "Support",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/France/France-Highlights/i-DRBBHkV/3/Lmpw38rLvXht5v7kRSMqT45grtx8McnngH9mCgqMF/XL/_IMG2283-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
+      "createdAt": "2026-02-02T19:13:57.571Z"
+    },
+    "s-GHDs6em": {
+      "primaryImageId": "i-VbsJ838",
+      "tiers": [
+        "sketch",
+        "foundation",
+        "chronicle"
+      ],
+      "title": "Bored - Notre Dame Gargoyle",
+      "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VbsJ838/4/NTvMZNv86vcdSRBVwTMH6Sx8FxQx9hMFB5qzvk5wP/XL/_IMG2540-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-VbsJ838",
+          "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs",
+          "title": "Bored - Notre Dame Gargoyle",
+          "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-VbsJ838/4/NTvMZNv86vcdSRBVwTMH6Sx8FxQx9hMFB5qzvk5wP/XL/_IMG2540-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
+      "createdAt": "2026-02-02T19:14:10.878Z"
     }
   }
 }

@@ -3922,7 +3922,7 @@ export const galleryData = [
   },
   {
     "id": "i-BBZjZD6",
-    "title": "Western Cowboy Photography: Saddling Up on the Ranch",
+    "title": "Saddling Up on the Ranch",
     "description": "Capture the essence of ranch life with this striking black and white Western cowboy photograph, featuring a cowboy saddling up at the ranch fence. Wayne Heim’s fine art photography blends the raw energy of the frontier with the timeless appeal of vintage black and white imagery. High ISO techniques add a classic film-like grain, enhancing the authenticity and tactile quality of the scene. Perfect for collectors of Western cowboy photography, ranch wall art, or black and white fine art prints, this image embodies the enduring traditions of the American West while offering a versatile and compelling focal point for any space.",
     "alt": "Black and white Western cowboy photography showing a cowboy saddling up on the ranch fence, fine art photograph by Wayne Heim.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/3/LsjFpp8jmd6m5mgkJf8vgvxX7c257Shd9L3nzrLpG/XL/_ANA0584-Edit-Edit-3-XL.jpg",
@@ -3932,6 +3932,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/3/LzXqdbXkntFDvHgzfW7dFhTsZjXv9HqM9vJcVZchB/S/_ANA0584-Edit-Edit-3-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/A",
+
     "keywords": [
       "Black And White Cowboy Art",
       "Black And White Cowboy Photography",
@@ -3976,14 +3977,18 @@ export const galleryData = [
       "Wild West Themed Photography",
       "Black and White Western Photos"
     ],
+
     "story": "He stands by, saddle ready, eyes scanning the horizon. Years of routine make the moment feel effortless, yet the readiness in his stance tells another story—this is work built on instinct and repetition.",
     "notes": "This composition captures the poised anticipation of a working cowboy in a rare moment before action. The framing emphasizes the sturdy rail as both a physical anchor and a visual lead-in to the subject, while the slight forward lean suggests readiness. Textural detail in the weathered wood contrasts with the smoother tonal gradations of the cowboy’s attire, underscoring the interplay between environment and subject. High ISO rendering adds a film-like grain that enhances authenticity without overwhelming the finer details.",
     "rating": 5,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 70
+    "sortOrder": 70,
+    contentSource: "ai"
   },
   {
     "id": "i-KWLFPL9",
@@ -6967,7 +6972,7 @@ export const galleryData = [
   },
   {
     "id": "i-bhb655B",
-    "title": "Cowboy Art: No Hard Feelings",
+    "title": "No Hard Feelings",
     "description": "A painterly black and white Western photograph of a cowboy relaxing at the card table, captured in the cinematic style of vintage outlaw portraits. Wayne Heim’s signature approach brings out the rough-hewn textures, quiet humor, and weathered dignity that define fine art Western photography. Perfect for collectors of cowboy art, Americana photography, and those drawn to the narrative grit and authenticity of the American frontier. (© Wayne Heim.)",
     "alt": "Cowboy sitting at a table with playing cards and bottle, black and white Western fine art photograph by Wayne Heim.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bhb655B/1/NFscFMczHvWPX788x2DWbd3Zqs7sd4mKR3gjWkGPR/XL/_O2H2141-Edit-XL.jpg",
@@ -6977,6 +6982,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bhb655B/1/MXgL3gNZ3QnvRPjGTfJ2NS48CtLCX8q79QMZ45Ztr/S/_O2H2141-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-bhb655B/A",
+
     "keywords": [
       "cowboy art",
       "cowboy portraits",
@@ -6989,14 +6995,18 @@ export const galleryData = [
       "cowboy artwork",
       "the American West"
     ],
+
     "story": "He leans back, bottle in hand, cards scattered on the table—tonight, luck’s not his, but it’s not getting to him. Laughter from the next table, a lamp throwing slow shadows across his face, the quiet resolve of someone who’s been here before. Outside, the wind rattles against the boards; in here, it’s all part of the game.\n\nA knowing half-smile lingers—one hand ready for the next deal, the other content to let the night drift on, easy as old boots. Out West, a bad hand’s just a story in the making.",
     "notes": "Channeling the tradition of Remington’s barroom narratives and the moody tension of early pictorialist photographers, this piece finds its weight in atmosphere and story. Notice the composition—the play of lamp-light, the subtle framing by scattered cards, the casual yet practiced hand on the bottle.\n\nWayne Heim’s painterly process adds a timeless, tactile quality, evoking both the romance and risk of the old saloon. For the collector, this is Western art with true narrative gravitas: a moment where luck, resilience, and humor come together—inviting the viewer to imagine what comes after the last card falls.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 143
+    "sortOrder": 143,
+    contentSource: "ai"
   },
   {
     "id": "i-6Mqqssm",

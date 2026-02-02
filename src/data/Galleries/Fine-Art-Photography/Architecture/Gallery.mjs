@@ -34,6 +34,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fszvgmq/3/LWKWPFJR9pCGCHqk6TnFrznM9JWNpWPR3WF3wzhtw/S/P1010060-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-fszvgmq/A",
+
     "keywords": [
       "Italy",
       "Venice",
@@ -60,14 +61,17 @@ export const galleryData = [
       "bridges",
       "islands",
       "snow",
-      "peaks"
+      "peaks",
+      "beauty of architecture"
     ],
+
     "story": "Nobody’s out. Just the wind shifting the curtain and the echo of dishes from somewhere inside. Three chairs, two still upright. One tilted like it knows stories. There’s something good growing in that windowsill. You don’t need to go in. You’ve already arrived.",
     "notes": "The asymmetry is what draws you in — three chairs of different design, all held in visual rhythm by the window above. Heim uses negative space like a painter: wall texture becomes its own language, layered with stucco tones and aged pigment. The contrast between plant life and cracked surfaces speaks to cycles of life and decay in vernacular architecture. Echoes of Italian neorealist film and early color photography give this piece both specificity and timelessness. A quiet masterclass in storytelling through setting.",
     "rating": 4,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 0
+    "sortOrder": 0,
+    contentSource: "human"
   },
   {
     "id": "i-fsmXzLW",
@@ -81,6 +85,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Italy/Venice/i-fsmXzLW/3/LqvCdXCvBXcgmbQDGRzbr96qpBGsGvdD8fCNcvPXb/S/P1000824-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-fsmXzLW/A",
+
     "keywords": [
       "Venice fine art photograph",
       "Italian canal photo",
@@ -91,14 +96,17 @@ export const galleryData = [
       "historic building photo",
       "Venice travel print",
       "canal scene artwork",
-      "classical Italian photography"
+      "classical Italian photography",
+      "classic architecture"
     ],
+
     "story": "It smelled like warm stone and slow water. Not the kind that rushes — the kind that waits. A laundry line sagged just enough to brush a shutter. Pigeons somewhere overhead. You could hear voices on the other side of the canal, but not what they were saying. Didn’t need to. The flowers were enough.",
     "notes": "The composition leverages vertical layering — windows, balconies, boats, bricks — to pull the viewer through time as much as space. The weathered textures and hand-built irregularities invite slow reading. Color is softly vibrant: oranges, rusts, and jade tones balanced against a flat Venetian sky. The controlled saturation and use of subtle reflections recall the quiet elegance of 19th-century oil studies. This is travel photography made timeless — more remembered than recorded.",
     "rating": 5,
     "galleries": [],
     "visibility": "",
-    "sortOrder": 1
+    "sortOrder": 1,
+    contentSource: "human"
   },
   {
     "id": "i-kdkL5WG",

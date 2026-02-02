@@ -249,6 +249,22 @@ meta.twitterCard = "summary_large_image";
           max-width: 100% !important;
           height: auto !important;
         }
+        
+        /* Center images and ensure consistent sizing on mobile */
+        .show-block .flex {
+          flex-direction: column !important;
+          align-items: center !important;
+        }
+        .show-block img {
+          max-width: 200px !important;
+          width: 200px !important;
+          height: 200px !important;
+          object-fit: cover !important;
+        }
+        .show-block h2 {
+          text-align: center !important;
+          margin-bottom: 1rem !important;
+        }
       }
     </style>
   </main>
