@@ -47,7 +47,8 @@
 # Smart 404 for image pages - only triggers on actual 404s
 # If image page doesn't exist, call smart-404 function to find/redirect
 # Note: Netlify splat (*) captures everything, :id captures the image ID segment
-/Galleries/*/i-:id  /.netlify/functions/smart-404?path=/Galleries/:splat/i-:id&id=i-:id  404
+# The ! force flag ensures this runs even with framework 404 handling
+/Galleries/*/i-:id  /.netlify/functions/smart-404?id=:id&path=/Galleries/:splat/i-:id  404!
 
 # i-TTLmLd3 was removed from West Gallery - redirect to gallery landing page
 /Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-TTLmLd3  /Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery  301
@@ -76,16 +77,16 @@
 /frame/*  /  301
 
 # Malformed /Gallery/i-xxx paths (should be just /i-xxx) - route to smart-404
-/Galleries/*/Gallery/i-:id  /.netlify/functions/smart-404?path=/Galleries/:splat/Gallery/i-:id&id=i-:id  404
+/Galleries/*/Gallery/i-:id  /.netlify/functions/smart-404?id=:id&path=/Galleries/:splat/Gallery/i-:id  404!
 
 # Legacy Landscapes-Gallery path with image IDs - route to smart-404
-/Galleries/Landscapes-Gallery/*/i-:id  /.netlify/functions/smart-404?path=/Galleries/Landscapes-Gallery/:splat/i-:id&id=i-:id  404
+/Galleries/Landscapes-Gallery/*/i-:id  /.netlify/functions/smart-404?id=:id&path=/Galleries/Landscapes-Gallery/:splat/i-:id  404!
 
 # Legacy Landscapes-Gallery path (no image ID)
 /Galleries/Landscapes-Gallery/*  /Galleries/Fine-Art-Photography/Landscapes  301
 
 # Lowercase galleries path with image IDs - route to smart-404
-/galleries/*/i-:id  /.netlify/functions/smart-404?path=/galleries/:splat/i-:id&id=i-:id  404
+/galleries/*/i-:id  /.netlify/functions/smart-404?id=:id&path=/galleries/:splat/i-:id  404!
 
 # Lowercase galleries path (case mismatch)
 /galleries  /Galleries  301
@@ -96,7 +97,7 @@
 /"/Galleries/*  /Galleries/:splat  301
 
 # Image ID at wrong path level (missing gallery path)
-/Galleries/i-:id  /.netlify/functions/smart-404?path=/Galleries/i-:id&id=i-:id  404
+/Galleries/i-:id  /.netlify/functions/smart-404?id=:id&path=/Galleries/i-:id  404!
 
 # Block SmugMug API endpoints - these should never be crawled (case variations)
 /api/*  /404  404!

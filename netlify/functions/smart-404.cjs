@@ -47,7 +47,8 @@ exports.handler = async (event) => {
   // Extract image ID from path or use query param
   let imageId = queryId;
   if (!imageId) {
-    const imageIdMatch = requestedPath.match(/\/(i-[a-zA-Z0-9]+)\/?$/);
+    // Looser regex - finds i-xxxxx even if URL isn't perfectly end-anchored
+    const imageIdMatch = requestedPath.match(/\/(i-[a-zA-Z0-9]+)(?:\/|$)/);
     imageId = imageIdMatch ? imageIdMatch[1] : '';
   }
   // Ensure imageId has the i- prefix
@@ -135,7 +136,7 @@ exports.handler = async (event) => {
       statusCode: 410,
       headers: {
         'Content-Type': 'text/html',
-        'Cache-Control': 'public, max-age=31536000', // Cache for 1 year
+        'Cache-Control': 'public, max-age=86400', // Cache for 1 day (safer than 1 year)
         'X-Smart-404': 'gone-bot'
       },
       body: '<!DOCTYPE html><html><head><title>Gone</title></head><body><h1>410 Gone</h1><p>This image has been permanently removed.</p></body></html>'
