@@ -10,9 +10,14 @@
 const fs = require('fs');
 const path = require('path');
 
-// Import source data
+// Import source data (ESM/CJS interop works for .mjs)
 const { galleryData } = require('../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs');
-const { storySliderImageIds } = require('../src/data/storySlider.ts');
+
+// Read storySlider.ts as text and extract image IDs (can't require .ts directly)
+const storySliderTsPath = path.join(__dirname, '../src/data/storySlider.ts');
+const storySliderContent = fs.readFileSync(storySliderTsPath, 'utf-8');
+const idMatches = storySliderContent.match(/"i-[a-zA-Z0-9]+"/g) || [];
+const storySliderImageIds = idMatches.map(id => id.replace(/"/g, ''));
 
 // Filter to only the images we need, with minimal fields
 const storySliderData = galleryData
