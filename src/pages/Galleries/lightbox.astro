@@ -34,16 +34,19 @@ const datasetPathRaw = datasetParam
   .replace(/^\//, "")               // Strip leading slash
   .replace(/\.mjs$/i, "");          // Strip .mjs extension
 
-// ✅ Dynamic import of the specific gallery dataset
-let galleryData = [];
+// ✅ Preload ALL gallery datasets at build time (prerender-safe)
+const galleryModules = import.meta.glob('../../data/**/*.mjs', { eager: true });
+
+// ✅ Select the matching dataset at runtime (no dynamic import needed)
+let galleryData: any[] = [];
 let entranceData = null;
-try {
-  // Must include .mjs in the static portion for Vite
-  const mod = await import(`../../data/${datasetPathRaw}.mjs`);
+
+const moduleKey = `../../data/${datasetPathRaw}.mjs`;
+const mod = galleryModules[moduleKey] as any;
+if (mod) {
   galleryData = mod?.galleryData || mod?.default || (Array.isArray(mod) ? mod : []);
-} catch (err) {
-  console.warn("⚠️ Could not load dataset SSR:", err);
-  galleryData = [];
+} else {
+  console.warn("⚠️ Could not find dataset:", moduleKey);
 }
 
 // ✅ Load all EntranceData files using Vite glob import

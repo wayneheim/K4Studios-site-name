@@ -384,6 +384,13 @@ const structuredDataJson = JSON.stringify({
 
     .ssr-card-content h3 { font-size:.95rem; font-weight:700; margin:0 0 5px; }
     .ssr-card-content p { font-size:.85rem; line-height:1.2rem; margin:0; color:#5a4a3a; }
+
+    /* Mobile: show full image height since no hover available */
+    @media (max-width: 768px) {
+      .ssr-grid { padding:0 16px; gap:16px; }
+      .ssr-card img { max-height:none; height:auto; }
+      .ssr-card-content { max-height:none; }
+    }
   </style>
 
   <script is:inline>

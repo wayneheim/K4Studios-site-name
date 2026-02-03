@@ -60,7 +60,7 @@ export default function useHorizontalSwipeNav({ onPrev, onNext, threshold = 40, 
     onTouchStart: handleTouchStart,
     onTouchMove: handleTouchMove,
     onTouchEnd: handleTouchEnd,
-    style: { touchAction: 'pan-y' },
+    style: { touchAction: 'pan-y pinch-zoom' }, // Allow vertical scroll + pinch zoom, block horizontal pan for swipe nav
   };
 
   return { handleTouchStart, handleTouchMove, handleTouchEnd, containerProps };
