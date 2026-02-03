@@ -236,6 +236,8 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
     previewPath={previewPath}
     currentImageUrl={selectedImage ? (selectedImage.src.startsWith('http') ? selectedImage.src : `${siteBase}${selectedImage.src.startsWith('/') ? selectedImage.src : '/' + selectedImage.src}`) : undefined}
     title={pageTitle}
+    allImages={allImages}
+    galleryTitle={fixMojibake(usedEntranceData.title)}
   />
 
   <style>

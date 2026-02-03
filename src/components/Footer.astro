@@ -3,9 +3,19 @@ const currentYear = new Date().getFullYear();
 import GalleryPreviewStrip from './GalleryPreviewStrip.astro';
 import BlogGalleryPreviewStrip from './BlogGalleryPreviewStrip.astro';
 import ShareDrawer from '@/components/ShareDrawer.jsx';
+import BrowseAllGrid from '@/components/BrowseAllGrid.jsx';
 import { extractImageId } from '@/utils/imageProxy.js';
 
-const { previewImages = [], previewPath = "", title = "", currentImageUrl, label } = Astro.props;
+const { 
+  previewImages = [], 
+  previewPath = "", 
+  title = "", 
+  currentImageUrl, 
+  label,
+  // ✅ New props for browse-all UI
+  allImages = [],
+  galleryTitle = ""
+} = Astro.props;
 
 // Get actual runtime URL
 const currentPath = Astro.url.pathname;
@@ -38,6 +48,16 @@ const toShareUrl = (src: string | undefined) => {
 
 // fallback share image if previewImages[0] is undefined
 const rawShareImage = currentImageUrl || previewImages?.[0]?.src || previewImages?.[0]?.id;
+
+// ✅ Galleries with authored /all pages (canonical, intentional)
+const galleriesWithAllPages: Record<string, string> = {
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color": "Browse complete Western Cowboy Color index",
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White": "Browse complete Western Cowboy B&W index",
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color": "Browse complete Native American Portraits index",
+};
+const hasAuthoredAllPage = Object.prototype.hasOwnProperty.call(galleriesWithAllPages, previewPath);
+const allPageHref = hasAuthoredAllPage ? `${previewPath}/all` : null;
+const allPageLinkText = hasAuthoredAllPage ? galleriesWithAllPages[previewPath] : null;
 const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `https://k4studios.com/img/${previewImages[0].id}/xl` : undefined);
 ---
 
@@ -68,22 +88,27 @@ const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `https
     </div>
   )}
 
-  <!-- ✅ View Complete Listing link BELOW grid but ABOVE share (not on Blog pages) -->
-  {showPreviewBar && !isBlog && (() => {
-    // ✅ Use lightbox with dataset query param (now prerender-safe via import.meta.glob)
-    const indexHref = `/Galleries/lightbox?dataset=${previewPath}`;
-    
-    return (
-      <div class="mt-5 w-full flex justify-center">
-        <a
-          href={indexHref}
-          class="inline-block text-[#85644b] underline hover:text-[#5a3e2b] transition text-[1rem]"
-        >
-          View Complete Gallery
-        </a>
-      </div>
-    );
-  })()}
+  <!-- ✅ View Complete Listing: authored /all pages get links, others get BrowseAllGrid -->
+  {showPreviewBar && !isBlog && hasAuthoredAllPage && (
+    <div class="mt-5 w-full flex justify-center">
+      <a
+        href={allPageHref}
+        class="inline-block text-[#85644b] underline hover:text-[#5a3e2b] transition text-[1rem]"
+      >
+        {allPageLinkText}
+      </a>
+    </div>
+  )}
+
+  {showPreviewBar && !isBlog && !hasAuthoredAllPage && allImages && allImages.length > 0 && (
+    <BrowseAllGrid
+      client:only="react"
+      allImages={allImages}
+      basePath={previewPath}
+      galleryTitle={galleryTitle || title || "Gallery"}
+      buttonText="View All Images"
+    />
+  )}
 
   <div class="mx-auto max-w-xl px-4 pt-2 pb-4 footer-fade" aria-label="Footer controls and info">
 
