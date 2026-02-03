@@ -1,5 +1,7 @@
 ---
-export const prerender = true;
+// ⚠️ MUST be SSR — static 404s can't inspect request paths
+// Smart-404 logic needs Astro.url.pathname to be the *actual* broken URL
+export const prerender = false;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
