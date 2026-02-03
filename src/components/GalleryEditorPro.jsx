@@ -1009,6 +1009,9 @@ export default function GalleryEditorPro() {
         console.warn("[EditorPro] Failed to hydrate series from registry:", err);
       }
 
+      // Sort by sortOrder to match website display order
+      hydratedArr = hydratedArr.sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+
       setData(hydratedArr);
       setBackupData(allArr);
       

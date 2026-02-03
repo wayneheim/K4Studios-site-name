@@ -1230,7 +1230,7 @@ export const galleryData = [
     "themes": {
       "lore-and-legacy": 18
     },
-    "contentSource": "ai",
+    "contentSource": "human",
     "first_seen": "2026-01-22",
     "editionSize": 50,
     "imageSize": "42\" X 20\"",
@@ -2666,18 +2666,12 @@ export const galleryData = [
   },
   {
     "id": "i-xqbdC8P",
-    "title": "Traditional Reenactment Photography Collection",
+    "title": "Hero’s Ride – Civil War Soldier In Battle",
     "description": "Uncover traditional reenactment photography collection through this civil war paintings from Wayne Heim. Showcasing historic reenactor prints, 19th-century photography, and legacy portraits for collectors, it's perfect for enthusiasts of traditional reenactment photography collection. © Wayne Heim",
     "alt": "Cowboy Portrait - Fine art on Baltic birch by Wayne Heim",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/MGSqVLk33VwBcNtRgpQGJ5q3QWGSDMsqzwkrPw5h4/XL/Civil-War-Heros-ride-ws-XL.jpg",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/A",
-    "keywords": [
-      "cowboy",
-      "Engrained",
-      "baltic birch",
-      "wood print",
-      "fine art"
-    ],
+    "keywords": ["cowboy", "Engrained", "baltic birch", "wood print", "fine art"],
     "story": "Hooves thunder beneath me as smoke and banners fade into gray. I ride forward, heart pounding—a hero’s journey carved into history and birch alike.",
     "notes": "",
     "rating": 4,

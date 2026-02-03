@@ -14,5 +14,14 @@
       "@data/*": ["src/data/*"],
       "@styles/*": ["src/styles/*"]
     }
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".astro",
+    "_archive",
+    "Public - Copy",
+    "**/*.zip",
+    "**/*.html"
+  ]
 }

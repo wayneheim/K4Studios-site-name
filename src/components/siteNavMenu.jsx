@@ -234,15 +234,15 @@ export default function SiteNavMenu({ forceMobile = false }) {
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
-                  marginTop: "1.5rem",
-                  marginBottom: "1.25rem",
+                  marginTop: "0.75rem",
+                  marginBottom: "0.75rem",
                   padding: "0 0.5rem"
                 }}
               >
                 <h2
                   style={{
                     fontFamily: "Glegoo, serif",
-                    fontSize: "1.4rem",
+                    fontSize: "1.1rem",
                     margin: 0,
                     fontWeight: 600,
                     color: "#222",
@@ -266,12 +266,12 @@ export default function SiteNavMenu({ forceMobile = false }) {
                 <button
                   onClick={closeMobileMenu}
                   style={{
-                    fontSize: "0.75rem",
-                    padding: "0.25rem 0.6rem",
+                    fontSize: "0.65rem",
+                    padding: "0.15rem 0.45rem",
                     background: "#888",
                     color: "#fff",
                     border: "none",
-                    borderRadius: "4px",
+                    borderRadius: "3px",
                     cursor: "pointer",
                     fontFamily: "Glegoo, serif",
                   }}

@@ -146,11 +146,56 @@ export default function GalleryNavMenuMini({ hideDefaultHamburger = false }) {
         <nav className={`nav-bar ${mobileOpen ? "open" : ""}`}>
           {mobileOpen && (
             <div className="drawer-container">
-              <div className="drawer-header">
-                <button className="hamburger-close" onClick={closeMobileMenu}>
-                  <span className="line line-1"></span>
-                  <span className="line line-2"></span>
-                  <span className="line line-3"></span>
+              {/* Compact header matching siteNavMenu style */}
+              <div 
+                className="drawer-header"
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  marginTop: "0.75rem",
+                  marginBottom: "0.75rem",
+                  padding: "0 0.5rem"
+                }}
+              >
+                <h2
+                  style={{
+                    fontFamily: "Glegoo, serif",
+                    fontSize: "1.1rem",
+                    margin: 0,
+                    fontWeight: 600,
+                    color: "#222",
+                  }}
+                >
+                  <a
+                    href="/"
+                    aria-label="K4 Studios homepage"
+                    title="Home"
+                    style={{
+                      color: "inherit",
+                      textDecoration: "none",
+                      display: "inline-block",
+                    }}
+                    onClick={closeMobileMenu}
+                  >
+                    K4 Studios
+                  </a>
+                </h2>
+
+                <button
+                  onClick={closeMobileMenu}
+                  style={{
+                    fontSize: "0.65rem",
+                    padding: "0.15rem 0.45rem",
+                    background: "#888",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "3px",
+                    cursor: "pointer",
+                    fontFamily: "Glegoo, serif",
+                  }}
+                >
+                  Close
                 </button>
               </div>
 

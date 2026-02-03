@@ -1,0 +1,15 @@
+{
+  "files.watcherExclude": {
+    "**/_archive/**": true,
+    "**/*.zip": true,
+    "**/Public - Copy/**": true,
+    "**/dist/**": true,
+    "**/.astro/**": true,
+    "**/node_modules/**": true
+  },
+  "search.exclude": {
+    "**/_archive/**": true,
+    "**/*.zip": true,
+    "**/Public - Copy/**": true
+  }
+}

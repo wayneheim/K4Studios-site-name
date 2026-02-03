@@ -1930,7 +1930,7 @@ export const galleryData = [
   },
   {
     "id": "i-8JHmjF9",
-    "title": "Older Than the Range",
+    "title": "Mountains Photography: Painterly Photography: - Grand Buffalo - The Grand Tetons and Bison.",
     "description": "A painterly fine art photograph set in the Mountain West, where a lone bison moves through the foreground beneath the Grand Tetons. Rather than emphasizing spectacle, this image is shaped by weight, scale, and restraint. The relationship between animal and landscape becomes a measure of endurance — an ethereal western landscape where the mountains feel temporary and the subject feels permanent. Light, tone, and composition are controlled to slow the viewer, allowing the image to be felt layer by layer rather than consumed at a glance. © Wayne Heim",
     "alt": "Painterly western fine art photograph of a bison in the Mountain West with the Grand Tetons rising behind under dramatic sky.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-8JHmjF9/A",
