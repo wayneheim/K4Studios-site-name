@@ -95,11 +95,11 @@ export default function GalleryLandingHeader({ breadcrumb }) {
         {pathname && <GalleryToggleButton currentPath={pathname} />}
       </div>
 
-      <a href="/" className="logo-slot">
+      <a href="/" className="k4-header-logo">
         <img
           src="/images/K4Logo-web.webp"
           alt="K4 Studios Logo"
-          className="logo-img"
+          className="k4-logo-img"
         />
       </a>
 
@@ -221,7 +221,7 @@ export default function GalleryLandingHeader({ breadcrumb }) {
           white-space: nowrap;
           z-index: 300;
         }
-        .logo-slot {
+        .k4-header-logo {
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
@@ -236,18 +236,19 @@ export default function GalleryLandingHeader({ breadcrumb }) {
           justify-content: center;
           z-index: 1;
         }
-        .logo-img {
+        .k4-logo-img {
           height: 100%;
           object-fit: contain;
           filter: grayscale(100%);
           opacity: 0.9;
           transition: filter 0.3s, opacity 0.3s;
+          visibility: visible !important;
         }
-        .logo-slot:hover {
+        .k4-header-logo:hover {
           box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4),
             0 0 12px rgba(160, 82, 45, 0.6);
         }
-        .logo-slot:hover .logo-img {
+        .k4-header-logo:hover .k4-logo-img {
           filter: grayscale(20%);
           opacity: 1;
         }
