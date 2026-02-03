@@ -109,6 +109,7 @@ function ImageCard({ item, index, basePath }) {
           src={imgSrc}
           alt={altText}
           loading="lazy"
+          className="browse-all-thumb"
           style={{
             width: '100%',
             height: '180px',
@@ -288,11 +289,19 @@ export default function BrowseAllGrid({
         </div>
       )}
 
-      {/* ✅ Fade-in animation */}
+      {/* ✅ Animations + responsive styles */}
       <style>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Mobile: show full image (no cropping since no hover available) */
+        @media (max-width: 768px) {
+          .browse-all-thumb {
+            height: auto !important;
+            max-height: none !important;
+          }
         }
       `}</style>
     </div>
