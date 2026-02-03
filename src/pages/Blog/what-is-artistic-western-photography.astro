@@ -1,0 +1,377 @@
+---
+/**
+ * What Is Artistic Western Photography? — Cornerstone Definition Article
+ * 
+ * Purpose: Own the definition layer for "Artistic Western Photography"
+ * Positions K4 as authority on the intersection of craft and Western subject matter.
+ * 
+ * Architecture:
+ * - Prose-first, definitional
+ * - Article schema (not gallery)
+ * - Image block after key section (SERP visibility)
+ * - Internal hub that feeds galleries
+ */
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/what-is-artistic-western-photography";
+const canonicalUrl = "https://www.k4studios.com/Blog/what-is-artistic-western-photography";
+
+// Proxy URL helper
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
+// Header image banner
+const headerImage = {
+  id: "i-6PzCQW9",
+  src: getProxySrc("i-6PzCQW9", "l"),
+  alt: "Mormon Row barn beneath dramatic Western sky — iconic landscape transformed through artistic photography"
+};
+
+// Demo section images (4) - diverse subjects unified by artistic approach
+const image1 = {
+  id: "i-jWDDpC4",
+  src: getProxySrc("i-jWDDpC4", "l"),
+  alt: "Western landscape photographed with painterly atmospheric control, demonstrating artistic Western photography's emphasis on light and mood"
+};
+const image2 = {
+  id: "i-trZrk2w",
+  src: getProxySrc("i-trZrk2w", "l"),
+  alt: "Officer and scout on night watch protecting settlers, illustrating artistic Western photography's fusion of historical narrative and compositional intent"
+};
+const image3 = {
+  id: "i-6z4gpF7",
+  src: getProxySrc("i-6z4gpF7", "l"),
+  alt: "Black and white cowboy portrait demonstrating artistic Western photography's tonal mastery and form-first approach"
+};
+const image4 = {
+  id: "i-4Hz6D7k",
+  src: getProxySrc("i-4Hz6D7k", "l"),
+  alt: "Native American subject photographed with reverence and compositional care, showing artistic Western photography's cultural range"
+};
+
+const pageTitle = "What Is Artistic Western Photography? | K4 Studios";
+const pageDescription = "Artistic Western photography transforms the American West into fine art through composition, light, and vision—blending documentary roots with painterly intent.";
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "What Is Artistic Western Photography?",
+    description: pageDescription,
+    url: canonicalUrl,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-02-02",
+    articleSection: "Fine Art Photography",
+    keywords: [
+      "artistic western photography",
+      "western fine art photography",
+      "fine art western photographs",
+      "western photography prints",
+      "artistic cowboy photography"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+// OG/Twitter capped at L
+const meta = {
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterCard: "summary_large_image"
+};
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Artistic Western Photography`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <!-- Header Image Banner -->
+    <section style="width:100%; overflow:hidden; margin-bottom:0;">
+      <a href="/Western-Fine-Art-Photography">
+        <div style="width:100%; height:340px; overflow:hidden; position:relative;">
+          <img 
+            src={headerImage.src} 
+            alt={headerImage.alt}
+            style="width:100%; height:100%; object-fit:cover; object-position:center 56%;"
+          />
+        </div>
+      </a>
+    </section>
+
+    <!-- Article Header -->
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.25rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        What Is Artistic Western Photography?
+      </h1>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        Where craft, composition, and vision transform the West into fine art
+      </p>
+    </section>
+
+    <!-- Article Content -->
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+
+        <!-- SECTION 1: Introduction & Definition -->
+        <p>If you've ever searched for photographs of the American West and found yourself torn between documentary realism and gallery-worthy fine art, you're not alone. The term <strong>artistic Western photography</strong> describes an approach where craft, composition, and authorial vision matter as much as subject matter—separating art from mere depiction. This is not landscape photography with a filter. It is a discipline rooted in intention.</p>
+
+        <!-- DEFINITION BOX -->
+        <div class="early-funnel" style="background:#f8f6f3; border-left:4px solid #8b5a2b; padding:1.25rem 1.5rem; margin:2rem 0; border-radius:0 8px 8px 0;">
+          <p style="margin:0; font-size:1.05rem; font-style:italic;">
+            <strong>Artistic Western photography</strong> is the practice of capturing the American West—its landscapes, wildlife, and working culture—through a deliberately expressive lens, where the photographer's compositional choices, tonal control, and interpretive vision elevate each image from document to fine-art statement.
+          </p>
+        </div>
+
+        <p>Artistic Western photography honors the real West while transforming it into something meant to be lived with, not merely observed. It finds tension, ambiguity, and quietness in a genre historically dominated by spectacle.</p>
+
+        <!-- SECTION 2: Historical Roots -->
+        <div class="section-heading-with-line">
+          <h2>Where the Genre Comes From</h2>
+        </div>
+
+        <p>The roots reach back to 19th-century survey photographers like Timothy O'Sullivan and William Henry Jackson, whose large-format images of canyons and geysers served science yet achieved accidental grandeur. In the 20th century, Ansel Adams proved that technical mastery and artistic intent could coexist—his <em>Moonrise, Hernandez, New Mexico</em> remains a touchstone for anyone who aims to make the West feel both real and transcendent.</p>
+
+        <p>Today's artistic Western photographers inherit that lineage while pushing it forward. We shoot digital alongside film. We embrace color as readily as black and white. And we apply <a href="/Blog/what-is-painterly-photography" style="color:#8b5a2b; text-decoration:underline;">painterly techniques</a>—selective focus, atmospheric light, tonal sculpting—to subjects as varied as open range and rodeo arenas.</p>
+
+        <p>This approach echoes early <a href="/Blog/pictorialism-and-photography-as-art" style="color:#8b5a2b; text-decoration:underline;">pictorialist photography</a>, which treated the camera not as a recording device, but as a medium capable of authorship, interpretation, and emotional control. Artistic Western photography inherits that philosophy while applying it to subject matter historically treated as documentary—reclaiming the West as a space for authored interpretation rather than mere record.</p>
+
+        <!-- SECTION 3: Artistic vs Documentary -->
+        <div class="section-heading-with-line">
+          <h2>What Separates Artistic From Documentary</h2>
+        </div>
+
+        <p>A documentary photograph records what happened. An artistic photograph interprets what it means. The distinction is not about manipulation—it is about authorship.</p>
+
+        <p>When a camera is pointed at the world, the scene in front of the lens already suggests a story. Light falls a certain way. A subject occupies a moment in time. The camera's role is to describe that moment as faithfully as possible. Left alone, it will do exactly that.</p>
+
+        <p>Artistic photography begins where that description ends.</p>
+
+        <p>The raw image is not a finished statement—it is a collection of visual information. Color, light, texture, and form exist as facts, not meaning. Artistic authorship lies in deciding what those facts become.</p>
+
+        <p>In artistic Western photography, the photographer does not accept the camera's version of reality as authoritative. Color may be reshaped to alter emotional temperature. Light and shadow may be rebalanced to redirect attention, suppress distraction, or introduce atmosphere that never existed literally as seen. A scene captured in daylight may be transformed into night; warmth may be introduced where coolness prevailed; clarity reduced where ambiguity serves the story better than accuracy.</p>
+
+        <p>These decisions are not rewards for patience, luck, or equipment. They are deliberate interpretive acts—no different in principle from a painter choosing a limited palette, exaggerating contrast, or altering texture to serve narrative intent rather than replicate appearances.</p>
+
+        <p>When an artistic Western photographer photographs a cowboy at dawn, the work is not in owning a capable camera or being present at the right moment. The work is in deciding what that moment means—what is emphasized, what is suppressed, and how the final image guides the viewer toward emotional truth rather than literal description.</p>
+
+        <p>The camera supplies information. The artist constructs meaning.</p>
+
+        <p>In this way, artistic Western photography does not merely rely on chance, timing, or technical fidelity to tell its stories. The medium becomes a set of tools—canvas, pigment, brush—used to shape an image that reflects the artist's vision, not the camera's default account of reality.</p>
+
+        <p>That interpretive construction is what earns the word artistic. And it is what makes these images collectible—each one carries the photographer's signature as clearly and intentionally as a brushstroke carries a painter's.</p>
+
+        <!-- IMAGE BLOCK (SERP visibility) -->
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Examples of Artistic Western Photography</h3>
+        <div class="example-images">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/${image1.id}`}>
+              <img 
+                src={image1.src} 
+                alt={image1.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Atmospheric landscape—light as subject
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image2.id}`}>
+              <img 
+                src={image2.src} 
+                alt={image2.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Night watch—historical narrative
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-and-White/${image3.id}`}>
+              <img 
+                src={image3.src} 
+                alt={image3.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Black-and-white—form distilled
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Art-Prints/${image4.id}`}>
+              <img 
+                src={image4.src} 
+                alt={image4.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Cultural reverence—pattern and dignity
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- SECTION 4: Why Collectors Value It -->
+        <div class="section-heading-with-line">
+          <h2>Why Collectors Value the Artistic Approach</h2>
+        </div>
+
+        <p>Collectors respond to artistic Western photography because it offers interpretation rather than record—vision rather than inventory. The medium delivers that vision through gallery-grade printing, archival materials, and the assurance that every image represents considered judgment, not a lucky snapshot or automated aesthetic.</p>
+
+        <p>At K4 Studios, each print is produced on museum-quality substrates with pigment inks rated for generations of lightfastness. The artistic intent that shaped the capture carries through to the final presentation—because craft doesn't stop at the shutter.</p>
+
+        <!-- SECTION 5: What It Is Not -->
+        <div class="section-heading-with-line">
+          <h2>What Artistic Western Photography Is Not</h2>
+        </div>
+
+        <p>To understand what qualifies, it helps to clarify what does not:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.75rem;"><strong>Tourist snapshots.</strong> Imagery optimized for mass appeal, nostalgia, or souvenir value—overly saturated sunsets, clichéd cowboy poses, generic landscapes sold in gift shops.</li>
+          <li style="margin-bottom:0.75rem;"><strong>Documentary-only work.</strong> While documentary photography can be artistically significant, its primary function is record. Artistic photography prioritizes vision and interpretation.</li>
+          <li style="margin-bottom:0.75rem;"><strong>Filter-first editing.</strong> Reliance on presets or HDR excess without compositional purpose. Artistic work shapes the image intentionally—from capture through final construction.</li>
+          <li style="margin-bottom:0.75rem;"><strong>Genre clichés.</strong> Wagon wheels, weathered fences, boots and spurs used as shorthand rather than compositional elements with narrative intent.</li>
+        </ul>
+
+        <p>The line is intent. If the work exists primarily to sell quickly, appeal broadly, or reinforce expectation, it is not artistic Western photography. Artistic work exists to be considered over time—returning meaning rather than immediate gratification.</p>
+
+        <!-- SECTION 6: Explore CTAs -->
+        <div class="section-heading-with-line">
+          <h2>Explore Artistic Western Photography at K4 Studios</h2>
+        </div>
+
+        <p>Whether you're drawn to the cinematic sweep of <a href="/Landscapes" style="color:#8b5a2b; text-decoration:underline;">Western landscapes</a>, the grit and grace of <a href="/Cowboys" style="color:#8b5a2b; text-decoration:underline;">cowboy culture</a>, or the quiet dignity of <a href="/NativeAmerican" style="color:#8b5a2b; text-decoration:underline;">Native American imagery</a>, you'll find a collection shaped by artistic intent at every level.</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Western Fine Art Photography</a> — The primary collection hub
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Painterly Fine Art Photography</a> — Where photography and painting converge
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Blog/what-is-western-fine-art" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">What Is Western Fine Art?</a> — The broader category this work belongs to
+          </li>
+        </ul>
+
+        <p>For inquiries about prints, commissions, or sizing, <a href="/Contact" style="color:#8b5a2b; text-decoration:underline;">contact K4 Studios</a>.</p>
+
+      </article>
+    </section>
+
+    <SiteFooter />
+  </main>
+</BaseLayout>
+
+<style>
+  /* Section headings with line */
+  .section-heading-with-line {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+  }
+  .section-heading-with-line::after {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background: #d0d0d0;
+  }
+  .section-heading-with-line h2 {
+    margin: 0;
+    white-space: nowrap;
+  }
+  @media (max-width: 768px) {
+    .section-heading-with-line::after {
+      display: none;
+    }
+  }
+
+  /* Story block typography - match other cornerstone pages */
+  .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
+  .story-block h2 { 
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+  }
+  .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+  @media (max-width: 640px) {
+    .story-block p, .story-block ul { line-height: 1.6; }
+  }
+  
+  /* 4-across image row */
+  .example-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+    align-items: start;
+  }
+  .example-images figure {
+    margin: 0;
+  }
+  .example-images figure a {
+    display: block;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .example-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  @media (max-width: 900px) {
+    .example-images {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 500px) {
+    .example-images {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      padding: 0.75rem;
+    }
+  }
+</style>
