@@ -747,14 +747,9 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/MBvDhNX2pqkZBvpncszF7N6mNML8fX4B3HfNg66B2/S/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/A",
-    "keywords": [
-      "Engrained",
-      "baltic birch",
-      "wood print",
-      "fine art"
-    ],
+    "keywords": ["Engrained", "baltic birch", "wood print", "fine art"],
     "story": "She’s had enough of men with papers and empty promises, enough of being talked down to from horseback or the other side of a fence. The price of “progress” is written on her face as she makes her stand, voice ringing sharper than the stick she raises. One step closer and he’ll find out just how loud a woman can get when her land and family are on the line.",
-    "notes": "",
+    "notes": "Negotiation turns to showdown in this charged moment where a woman draws the line against railroad “progress,” her body language a blend of fury and resolve as she defends her family’s claim; every detail—from the pointed gun to the wary posture of the men—speaks to the untold stories of ordinary people forced to become extraordinary when their way of life is threatened by ambition and greed.",
     "rating": 4,
     "galleries": [
       "Other/Photo-Shoots/Engrained"

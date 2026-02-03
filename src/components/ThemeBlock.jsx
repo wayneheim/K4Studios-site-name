@@ -292,7 +292,7 @@ export default function ThemeBlock({ galleryKey }) {
           {t.description}
           {/* Mobile prompt - tap again to navigate */}
           <a
-            href={t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/^src\/data\/Other\//, '/Other/').replace(/\\.mjs$/, '') + `?theme=${t.slug}&view=grid`}
+            href={t.dataset.replace(/^src\/data\/Galleries\//, '/Galleries/').replace(/^src\/data\/Other\//, '/Other/').replace(/\.mjs$/, '') + `?theme=${t.slug}&view=grid`}
             className="theme-tap-prompt"
             style={{
               display: "block",

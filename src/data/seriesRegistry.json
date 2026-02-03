@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-02-02T19:14:12.341Z",
+    "lastUpdated": "2026-02-03T14:40:39.401Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z"
   },
   "images": {
@@ -1308,7 +1308,10 @@
     "i-XV5CXk6:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-JM4jJ2G",
     "i-VX7fW9d:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-42JWw6J",
     "i-DRBBHkV:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-LykgkDa",
-    "i-VbsJ838:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-GHDs6em"
+    "i-VbsJ838:/src/data/Galleries/Fine-Art-Photography/Architecture/Gallery.mjs": "s-GHDs6em",
+    "i-FJWqP6b:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs": "s-5vSWSJv",
+    "i-BJWt4zd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs": "s-HkHTfcr",
+    "i-RnKtV3Z:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs": "s-3UxyJPX"
   },
   "series": {
     "s-BB65wHk": {
@@ -12727,7 +12730,7 @@
         {
           "imageId": "i-VVwZ7gM",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
-          "title": "Showing the Way",
+          "title": "Brothers of the Open Country",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg"
         }
       ],
@@ -24018,7 +24021,7 @@
         {
           "imageId": "i-Jbxc4G6",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
-          "title": "Spirit Of The West In Fine Art",
+          "title": "Still Enough to Aim",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/0/LPRCpfjRSRXG4bxRszMpfrm7XnssVBBmmDShFRrtS/XL/_WHO5788-Edit-XL.jpg"
         }
       ],
@@ -25172,7 +25175,7 @@
         {
           "imageId": "i-qFwnr64",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
-          "title": "Held Between Generations",
+          "title": "The Higher Silence",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qFwnr64/0/NHRVCV3tTXPKBGZNJJ5N2qxNmzKwpJpkRZCd7x44Z/XL/_HF28699-Edit-Edit-4-XL.jpg"
         }
       ],
@@ -32206,6 +32209,63 @@
         ]
       },
       "createdAt": "2026-02-02T19:14:10.878Z"
+    },
+    "s-5vSWSJv": {
+      "primaryImageId": "i-FJWqP6b",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Weight of the Draw",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/3/L5wNj6tj8STXBMMDKQG2XCq9sxtCgJv33Mf2SfRQZ/XL/_WHO5832-920-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-FJWqP6b",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
+          "title": "The Weight of the Draw",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/3/L5wNj6tj8STXBMMDKQG2XCq9sxtCgJv33Mf2SfRQZ/XL/_WHO5832-920-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-02-03T14:19:58.300Z"
+    },
+    "s-HkHTfcr": {
+      "primaryImageId": "i-BJWt4zd",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Still Enough to Hear It",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/NJSmXVrmJtPJqH3xdwzJjCb6TJJ6h23nGVfV7PC9F/XL/_WHO0996-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-BJWt4zd",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
+          "title": "Still Enough to Hear It",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/NJSmXVrmJtPJqH3xdwzJjCb6TJJ6h23nGVfV7PC9F/XL/_WHO0996-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-02-03T14:22:21.912Z"
+    },
+    "s-3UxyJPX": {
+      "primaryImageId": "i-RnKtV3Z",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Higher Silence",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RnKtV3Z/1/L74G3WLtCTG8wtjWz42CqTM8LqSJPPrxfXXSRLwrc/XL/_HF28699-Edit-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-RnKtV3Z",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
+          "title": "The Higher Silence",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RnKtV3Z/1/L74G3WLtCTG8wtjWz42CqTM8LqSJPPrxfXXSRLwrc/XL/_HF28699-Edit-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "createdAt": "2026-02-03T14:24:44.200Z"
     }
   }
 }

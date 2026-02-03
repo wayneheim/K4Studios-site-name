@@ -37,7 +37,7 @@ export const galleryData = [
 
     "story": "It doesn’t rush anymore.\n\nThe water keeps its pace, the structure keeps its stance, and time does what it has always done here — move forward without asking permission. What was once labor is now memory, but the work never really stopped. It just changed hands.\n\nNothing in this place performs. It simply continues.",
     "notes": "This piece draws its strength from structural calm and temporal weight rather than visual drama. The composition favors grounded horizontals and measured flow, allowing the architecture and water to share equal presence. Its painterly restraint and emphasis on continuity place it within a lineage of American regional landscape work that values endurance, labor, and quiet permanence over romanticized nostalgia.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 0,
@@ -72,7 +72,7 @@ export const galleryData = [
 
     "story": "The light doesn’t announce itself. It slips in quietly, threading its way through the trees, finding the path only after everything else has already gone still.\n\nThis is not a destination so much as a passage — a moment when the woods briefly allow you to pass through, if you’re willing to slow down enough to notice.\n\nNothing here asks for urgency. The path exists whether you walk it or not.",
     "notes": "This work emphasizes controlled restraint — a narrowing composition that draws the viewer forward without spectacle. The vertical structure of the trees acts as a natural cadence, while the light functions as a guide rather than a subject. Its strength lies in invitation rather than declaration, making it well suited for contemplative spaces where the image is meant to be lived with, not merely observed.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 1,
@@ -105,7 +105,7 @@ export const galleryData = [
 
     "story": "The water does not hurry. It does not argue with the fallen branches or the weight of stone. It simply continues—finding its way through what time has already rearranged.\n\nNothing here announces itself. The sound is low, the movement patient. This is how landscapes endure—not by force, but by staying.",
     "notes": "This work is defined by restraint. The composition resists drama in favor of endurance—allowing texture, repetition, and subtle movement to carry the image. The stream becomes a metaphor for continuity, guiding the eye through layered greens and muted browns with a measured, almost meditative rhythm. A quiet piece designed to reward prolonged viewing rather than immediate impact.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 2,
@@ -138,7 +138,7 @@ export const galleryData = [
 
     "story": "They share the same stone, the same drop, the same destination—yet never move quite the same way. One presses forward. The other hesitates, reshaping itself mid-fall.\n\nWhat looks like symmetry at first glance reveals a quiet argument on closer inspection. The water keeps choosing, again and again, how to descend.",
     "notes": "This piece explores balance through difference. Though the falls share a single source, their contrasting movements create a subtle visual dialogue—one that draws the eye back and forth across the frame. The restrained palette and deliberate composition invite extended viewing, rewarding attention with small variations in texture, flow, and light that reveal themselves over time.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 3,
@@ -615,7 +615,7 @@ export const galleryData = [
 
     "story": "The air changes before the rain arrives.\n\nLight thins. The horizon hardens. What was summer only moments ago pulls away without announcement, replaced by weight, pressure, and the promise of something colder moving in.\n\nNothing resists it.\nThe land simply waits.",
     "notes": "This piece is defined by compression — of sky, light, and expectation. The horizon serves as a psychological boundary, holding the moment just before change fully arrives.\n\nCollectors drawn to atmospheric tension and restrained composition will recognize the strength of this work in its refusal to resolve. It is not about the storm, but about the shift — the instant when the landscape knows what is coming and accepts it.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 17,
@@ -649,7 +649,7 @@ export const galleryData = [
 
     "story": "The land is quiet, but the sky is still speaking.\n\nClouds drift without urgency, layered and measured, as light moves slowly across the open plains. Nothing announces itself. Nothing needs to. This is weather without drama — the kind that settles into memory because it asks you to stay a little longer.\n\nOut here, the sky does most of the talking, and the land listens.",
     "notes": "Plains Light exemplifies a restrained, painterly approach to landscape — where composition and atmosphere take precedence over momentary drama. The horizontal balance between land and sky echoes classical landscape traditions, while the softened tonal transitions recall pictorialist influence.\n\nThis image rewards distance and scale. Its strength lies in patience — a work designed to slow a room, offering calm rather than command. Ideal for collectors drawn to subtlety, space, and landscapes that hold meaning through quiet presence rather than narrative closure.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 18,

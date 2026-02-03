@@ -107,7 +107,7 @@ export const galleryData = [
 
     "story": "The water slows here, not because it must — but because the season asks it to. Leaves hesitate in their fall. The mill waits, listening, as if the work once done might resume at any moment. Nothing moves quickly. Nothing needs to.\n\nThis is the pause between labor and rest — when autumn hasn’t yet decided what it will take with it.",
     "notes": "This image belongs to a lineage of landscape work that values pause over drama and endurance over display. The mill is not presented as a relic, but as a presence — integrated into the land rather than set apart from it.\n\nCollectors drawn to this piece often respond to its quiet authority: the way structure, water, and season coexist without urgency. It is a work that rewards long viewing, revealing its strength through restraint and its narrative through what is left unsaid.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 2,
@@ -140,7 +140,7 @@ export const galleryData = [
 
     "story": "The forest doesn’t announce this place. It reveals it slowly.\n\nLight slips between trunks, catching stone and water only where it’s allowed. The stream doesn’t hurry. It bends, tests the ground, then moves on — leaving the sense that discovery here belongs only to those willing to slow down enough to notice it.\n\nThis is not a destination. It’s an invitation.",
     "notes": "This piece is defined by its sense of permission — the feeling that the viewer has stepped slightly off the obvious route. The stream functions as both subject and guide, drawing the eye forward without urgency.\n\nCollectors often respond to the image’s quiet confidence: its refusal to dramatize, and its trust that subtlety will hold attention. It is a work that unfolds over time, rewarding repeat viewing and personal interpretation.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 3,
@@ -208,7 +208,7 @@ export const galleryData = [
 
     "story": "The forest does not rush here.\n\nRoots spill across stone, water slips through shadow, and the light arrives only when invited. Nothing announces itself. The path is not marked — only suggested — and the ground seems to remember every footstep that chose patience over speed.\n\nThis is not a place you pass through. It is a place that holds you, quietly, until you move on.",
     "notes": "This image relies on restraint rather than drama. The composition leads with texture and grounding — roots, stone, and moss anchoring the frame while light is allowed to arrive gently, without dominance.\n\nCollectors drawn to this work often respond to its sense of permission: nothing demands attention, yet everything is considered. The photograph rewards proximity and time, revealing layered detail and quiet movement that deepen with familiarity, making it well suited for contemplative spaces and long-term viewing.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 5,
@@ -241,7 +241,7 @@ export const galleryData = [
 
     "story": "You don’t arrive here by accident.\n\nThe forest closes in, the sound changes, and suddenly the water is there — not announced, not framed, simply continuing what it has always done. Light filters through leaves as if it found the place by chance, lingering just long enough to reveal it.\n\nSome places are not meant to be seen quickly. They reveal themselves only when you slow down enough to notice.",
     "notes": "This image relies on suggestion rather than declaration. The waterfall is partially concealed, allowing the surrounding forest, stone, and light to share equal importance in the composition.\n\nCollectors drawn to this work often respond to its sense of quiet permission — the feeling that the scene was not staged or revealed, but discovered. Its layered textures and softened movement create a contemplative presence that deepens with repeated viewing, making it well suited for spaces that invite calm, reflection, and visual rest.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 6,
@@ -275,7 +275,7 @@ export const galleryData = [
 
     "story": "It isn’t concealed by accident.\n\nThe forest arranges itself—stone, moss, water, shadow—so the eye must slow before it can see. Nothing announces this place. You arrive only after the noise falls away, after intention replaces momentum.\n\nSome landscapes reveal themselves. Others require permission.",
     "notes": "This image is built on restraint and intention. The composition relies on layered depth and controlled tonal transitions rather than dramatic contrast, allowing the eye to move slowly through the frame.\n\nThe waterfall functions not as spectacle but as structure—anchoring the scene while moss, rock, and filtered light establish a sense of time and permanence. The result is a work that rewards prolonged viewing, revealing subtle relationships between form, texture, and atmosphere.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 7,
@@ -308,7 +308,7 @@ export const galleryData = [
 
     "story": "Nothing competes for attention here.\n\nA single stand of trees, open ground, a sky allowed to breathe. The scene offers no demand—only an invitation to slow down and notice what remains when excess is stripped away.\n\nWhat endures is balance, light, and the quiet confidence of place.",
     "notes": "This piece is built on reduction. By limiting visual elements, the composition allows proportion, spacing, and light to carry the emotional weight.\n\nThe vertical structure of the trees contrasts with the openness of the land and sky, creating a quiet tension that rewards long viewing. The work reflects a painterly approach rooted in balance and intention—designed to calm a space rather than command it.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 8,
@@ -410,7 +410,7 @@ export const galleryData = [
 
     "story": "It doesn’t rush.\nIt commits.\n\nOnce it starts down the hill, there’s no argument left—only gravity and time working out their agreement.",
     "notes": "This piece is driven by direction and inevitability. The descending flow guides the eye naturally through the frame, using gravity as a compositional force rather than a dramatic device. Subtle tonal transitions and controlled exposure give the image a sense of quiet momentum, rewarding prolonged viewing and emphasizing structure over scene.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 11,
@@ -443,7 +443,7 @@ export const galleryData = [
 
     "story": "Nothing here resists its own direction.  \nWater moves because it must, stone yields because it has learned to.  \nThe fall is not dramatic — only inevitable.",
     "notes": "This work draws its strength from inevitability rather than drama. The composition relies on diagonal tension and layered descent, allowing gravity to become the central narrative force. Painterly softness in the water contrasts with the weight and permanence of the stone, creating a visual dialogue between motion and endurance. The image rewards slow viewing, revealing its structure gradually — a quiet study in acceptance, direction, and natural order.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 12,
