@@ -13,20 +13,19 @@ function useIsMobile() {
 }
 
 function LogoSlot({ isMobile, triggerStripe }) {
-  const [logoIn, setLogoIn] = useState(isMobile);
+  // ✅ Logo visible by default - JS only controls animation, not visibility
+  const [logoIn, setLogoIn] = useState(true);
   useEffect(() => {
     if (!isMobile) {
+      // Still trigger stripe animation after delay
       const timer = setTimeout(() => {
-        setLogoIn(true);
         triggerStripe();
       }, 500); // ⏱️ Synced to breadcrumb fade-in
       return () => clearTimeout(timer);
-    } else {
-      setLogoIn(true);
     }
   }, [isMobile, triggerStripe]);
   return (
-    <a href="/" className={`logo-slot${logoIn ? " logo-in" : ""}`}>
+    <a href="/" className="logo-slot logo-in">
   <img src="/images/K4Logo-web.webp" alt="K4 Studios Home" className="logo-img" />
     </a>
   );

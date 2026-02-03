@@ -730,7 +730,7 @@ export const galleryData = [
       "iconic western imagery"
     ],
 
-    "story": "The building stands apart, not because it is large, but because it has chosen the hill.\n\nFence posts lean. Grass grows without asking permission. The path up is indirect, worn smooth by feet that came and went without ceremony.\n\nWhatever certainty once lived here has softened with weather. What remains is quieter — a place where judgment gives way to distance, and distance becomes perspective.",
+    "story": "On the hill, faith stands alone—a beacon for wanderers and dreamers alike.",
     "notes": "This work relies on isolation and elevation rather than scale to create meaning. The church is positioned as a quiet symbol — not of doctrine, but of distance — allowing the surrounding land to do the emotional work. Subtle foreground tension and restrained color echo painterly traditions where suggestion carries more weight than declaration. Designed for collectors drawn to psychological landscapes that reveal themselves slowly, through proximity and time.",
     "rating": 0,
     "galleries": [],
@@ -1701,7 +1701,7 @@ export const galleryData = [
   },
   {
     "id": "i-73H3wLV",
-    "title": "Red Ground, Last Light",
+    "title": "Arizona Sunset at the Bend",
     "description": "A painterly fine art landscape photograph of red rock desert terrain at sunset, where warm stone and sparse grasses anchor the frame beneath a softening sky. Light, color, and composition emphasize stillness over spectacle, allowing the scene to breathe as day gives way to evening. This work reflects a quiet, contemplative approach to Western landscape photography — shaped by restraint, atmosphere, and place rather than destination. © Wayne Heim",
     "alt": "Painterly desert landscape photograph of red rock terrain at sunset, with warm evening light fading across stone and sky.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-73H3wLV/A",
@@ -2085,7 +2085,7 @@ export const galleryData = [
   },
   {
     "id": "i-b6dRFxv",
-    "title": "Towering Green",
+    "title": "Aspens",
     "description": "A painterly fine art landscape photograph of a towering aspen grove in the Mountain West, where vertical lines, soft bark tones, and drifting light create a sense of scale without weight. Rather than spectacle, the image relies on elevation — drawing the eye upward through layered greens and pale trunks toward open sky.\n\nThis Western painterly landscape emphasizes stillness and structure. Painterly texture softens detail while preserving rhythm, allowing the aspens to feel both monumental and intimate. The result is an ethereal landscape shaped by quiet growth, patience, and the slow authority of place. Part of a Mountain West landscapes series exploring how forests speak without movement. © Wayne Heim",
     "alt": "Painterly fine art landscape photography of tall green aspen trees viewed from below, emphasizing vertical trunks, soft light, and ethereal Mountain West atmosphere.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-b6dRFxv/A",
@@ -2107,7 +2107,7 @@ export const galleryData = [
       "painterly Mountain West photography"
     ],
 
-    "story": "You don’t walk through aspens —  \nyou look up and forget where you are.\n\nTrunks rise like quiet pillars,  \neach one holding light instead of shadow.\n\nThe sky slips between them,  \nborrowed, then given back.",
+    "story": "The sky feels closer when you stand among aspens—each trunk a column in nature’s cathedral.",
     "notes": "This piece is about vertical presence — how upward movement can quiet a space rather than energize it. Ideal for collectors drawn to calm strength, natural architecture, and works that expand a room without demanding attention.",
     "rating": 4,
     "galleries": [],

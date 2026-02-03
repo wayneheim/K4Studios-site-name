@@ -3,7 +3,7 @@
     "version": "1.0",
     "description": "Edition state database - source of truth for edition counts and sales",
     "warning": "DO NOT manually edit sold counts. Use EditorPro or admin tools.",
-    "lastUpdated": "2026-01-23T18:57:24.420Z"
+    "lastUpdated": "2026-02-03T15:28:38.060Z"
   },
   "i-ncFcHDM:chronicle": {
     "imageId": "i-ncFcHDM",
@@ -147,7 +147,7 @@
     "series": "engrained",
     "editionLimit": 50,
     "printed": 3,
-    "sold": 1,
+    "sold": 2,
     "released": true,
     "firstReleaseDate": "2026-01-22T00:00:00.000Z"
   },

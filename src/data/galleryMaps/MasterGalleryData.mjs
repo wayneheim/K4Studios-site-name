@@ -11755,7 +11755,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/3/L5wNj6tj8STXBMMDKQG2XCq9sxtCgJv33Mf2SfRQZ/XL/_WHO5832-920-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/3/L5wNj6tj8STXBMMDKQG2XCq9sxtCgJv33Mf2SfRQZ/XL/_WHO5832-920-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/3/MRjDBDRmHQckg87DJbp9ChzkRR7B6RfzJSZ8qsn6S/S/_WHO5832-920-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
@@ -11768,7 +11768,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/MZV99wzJ2qPrxfVrqpGMwg28k5NFHthcXwkd6FzHh/L/_WHO0996-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/NJSmXVrmJtPJqH3xdwzJjCb6TJJ6h23nGVfV7PC9F/XL/_WHO0996-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/LzS5M7pr8rd8PMSpmhGhm8wMbGzZMQ2g7N8phMJtT/S/_WHO0996-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
@@ -11937,7 +11937,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RnKtV3Z/1/L74G3WLtCTG8wtjWz42CqTM8LqSJPPrxfXXSRLwrc/XL/_HF28699-Edit-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RnKtV3Z/1/L74G3WLtCTG8wtjWz42CqTM8LqSJPPrxfXXSRLwrc/XL/_HF28699-Edit-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RnKtV3Z/1/L7mFVJcvBhmSGGJzMRtxnFbfhV3gmzsFjSDNsfQk9/S/_HF28699-Edit-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "hidden",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
@@ -22851,7 +22851,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/NXZjkBB68gWGKFzrGggw8wNb77HBnTpq65X3L8Z65/L/_HF20856-Pano-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/L2QH5jGbPsBBVsWRMwHhpKZgCM4HvsLLpLtgjsC32/XL/_HF20856-Pano-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/MpvzL7VZ4vbwkQXVB3TCSwTZKCXkD2pZCbjQZqPhJ/S/_HF20856-Pano-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
@@ -22864,7 +22864,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/KNxgJzGnLZxvQMfGCZL9kBZh6ZsXwqmRScbJVQSd8/L/_igp2989-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/NdWHcvbsdLN2Z8mjqq4SJz8dQ7fjRSGbXRJ2b6WXr/XL/_igp2989-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/MQ9ZL826h9qxqdsHh5KHpXw9MZTkJwmc8N5pcNcZv/S/_igp2989-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
@@ -22877,7 +22877,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/photos/i-HP6hJm4/4/NRWjg2Tc3M6HWwr8K7mxpNDWZP9JbMBCCqLCCLtnf/L/i-HP6hJm4-L.jpg",
       "srcXL": "https://photos.smugmug.com/photos/i-HP6hJm4/4/MgwSH4QV7FhZrDjnmMkzdTqd465wpZnVC3ksMnMJ2/XL/i-HP6hJm4-XL.jpg",
       "src": "https://photos.smugmug.com/photos/i-HP6hJm4/4/LtRWbwt7jM4G6dnHDq5xQ2QdVCdZhRCMFtwsvj3Jb/S/i-HP6hJm4-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
@@ -22890,7 +22890,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/LS7CMnktLVFvtxxCQXsR6krcCZkL5tPK6qS9D7ntt/XL/_IMG0137_tonemapped-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/LS7CMnktLVFvtxxCQXsR6krcCZkL5tPK6qS9D7ntt/XL/_IMG0137_tonemapped-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/NBRWLq8McGBNq4bMp8MRF7hcsCkcL37rZ5PKCnWpv/S/_IMG0137_tonemapped-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
@@ -23072,7 +23072,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/KvS3X4xN7xh3ndCpRQqvTzzW9Pm8ShzgmsZ3SR8gs/L/_O1H0479-Edit-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/LWKVCFb76BKkCzM3qgnvjHFXMVC4pTx8jhcJWpqjX/XL/_O1H0479-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/Kp4qJtfdHhRCB83SD6z84wSXqMfS75kXhFGjR5VvD/S/_O1H0479-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
@@ -23085,7 +23085,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/KzFxDZ4nT6fTMHLCxxG2Nv2WFQbBndnXnZwZ6PkXp/L/20230706_181805-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/MgPmbwcSV5GHgBTczDDcsG2w5TTSrDvbKzRJXkT4g/XL/20230706_181805-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/MV2SFXfjVRkCkh5NLvFvRkK8fC2F9kgkcTSvcQXZp/S/20230706_181805-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
@@ -23152,7 +23152,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/NBJc5TDJ5VbDqDnQvms2ZNWtSGpS6xR5gC2gzDBC4/S/_WHZ6667_8_9-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -23165,7 +23165,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/K3Zkq4TQBbj3DCMh7JDhVPXT8zkXCSn5nVkZRpJHp/S/Shadow%20trees_DSF5489-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -23191,7 +23191,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/KLGscG8J4bRv3FcsSxjStRmxDb7L7fqDxxvKZrcWJ/XL/_DSF5516_tonemapped-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/KLGscG8J4bRv3FcsSxjStRmxDb7L7fqDxxvKZrcWJ/XL/_DSF5516_tonemapped-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/Lp2gGRNDwN473kVXBB8g7P26fBjF9xvTmRGFwnV9R/S/_DSF5516_tonemapped-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -23204,7 +23204,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/NGgH77Br8zdHBzpjshFkLq2zBGbRjFsC67b5k5jQs/S/_DSF5574_tonemapped-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -23217,7 +23217,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/NhD3KHBzjBsCpkQXCzq9Ftj5NSxtfcGcMKnP6SRxZ/L/_DSF5606-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KTjv35PCrq8WQG6QTQGcbhq9F4twdtBsx8STTbZZH/XL/_DSF5606-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KQTGN9ct2H5KhRvWvfsnQndvWXzqgJwHpkd3p62mm/S/_DSF5606-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -23230,7 +23230,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/photos/i-cKsdqTs/0/KSkDBtspBB4dxCJxzB8BFd4RhM6f5CSg3Whpp4WZm/XL/i-cKsdqTs-XL.jpg",
       "srcXL": "https://photos.smugmug.com/photos/i-cKsdqTs/0/KSkDBtspBB4dxCJxzB8BFd4RhM6f5CSg3Whpp4WZm/XL/i-cKsdqTs-XL.jpg",
       "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/MbRWMK5s2GxJhhP2P9ZXK6WP7JJX3j4fNztMpTRK7/S/i-cKsdqTs-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -23269,7 +23269,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/MCWwMt3sLLQD8cPh74jd8pT6bkzHJR2krD5QZQqT3/L/i-5ZsWtSx-L.jpg",
       "srcXL": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/LcnPJhm5CM9NFV2WP7GrBNdx7Q9G4XRNxmk5VtZ6c/XL/i-5ZsWtSx-XL.jpg",
       "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/K9sP3wQvRKVnj9PP325XDjMSS3vQFfSsc8DwPdFsN/S/i-5ZsWtSx-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -23282,7 +23282,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg",
       "srcXL": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg",
       "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KjCM9D3pcjKCRTXzJqLdRMwZzXnfDdvPtz4D89Pwc/S/i-fGnNkBL-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -47337,7 +47337,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-B8sDF3M/0/KFt9TW3DZdQS6ffVt93q8wC6RKWs8jFcpCCbmDd3w/L/Meant%20What%20I%20Said%2030%20x%2050%20copy-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-B8sDF3M/0/KfsXQnSkdThMQxVtQC4zzFWRxD8DRGz3GRNPfSP5m/XL/Meant%20What%20I%20Said%2030%20x%2050%20copy-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-B8sDF3M/0/NB8VwgHLNWGWT2RMcGGDVDmxKJQ5mzwFcmpsJnNdr/S/Meant%20What%20I%20Said%2030%20x%2050%20copy-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -47610,7 +47610,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LqGQH9ZW8H672v43DzH9GhSrZt5R4gQBDhWLx33Cb/L/Landscape-In-the-weeds-ws-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/Lw4zKjL7VWVxx6xcZFmmwchS4w4jZFhSwHM2BTgWX/XL/Landscape-In-the-weeds-ws-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LVC6Jx8WTnGXfJWDRjcqrszBdK3qZDczzzsJc5CxN/S/Landscape-In-the-weeds-ws-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -47623,7 +47623,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/NQ2pxQqWPqNSLn9LvCtFF2Kj9CrBLDvDnWzf4rrft/L/Landscape-Crystal-mill-ws-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/MfcfTVmXqF9PM7Z6CXrMJN2WrHdJJfScs6kj3WDDF/XL/Landscape-Crystal-mill-ws-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/LvJmPW4v9LjZ9Rbf7cqkHncS4LHRWTjXDQ3JCbnWh/S/Landscape-Crystal-mill-ws-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -47636,7 +47636,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/NVMQVQ2ftVtj2WH9X3ftZ8RPv4gJgGJB6ndxpRW9X/L/Landscape-Cotton-Canday-ws-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/KSqk6crxLFp7zdjRfBmZz7xHq9zNLTg2VPRqKhPfQ/XL/Landscape-Cotton-Canday-ws-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/Kn93nzk472f47vfHv9DwtFXHWjt5ZXDnNXrVJGc5N/S/Landscape-Cotton-Canday-ws-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -47662,7 +47662,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/M65B6GCckbxSBZdHN2PCdS2cwn5jsmbt7X6qC486g/L/Landscape-Aspens-ws-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/K73LQTzDJ32RCDTgDrmcZxg27g3H6m4HcG57qSq7K/XL/Landscape-Aspens-ws-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/Kt2xxw8WPgJQfMQcMbPw9Q7ZPQrrLQBPfx7xvKXk3/S/Landscape-Aspens-ws-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -47701,7 +47701,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LjvFwbXnQRwbctDDs3dJFqfzbBDtd2GdT9tXXLSBZ/L/Cowboys-3-Wise-Men-ws-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LjvFwbXnQRwbctDDs3dJFqfzbBDtd2GdT9tXXLSBZ/L/Cowboys-3-Wise-Men-ws-L.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/MhgpWxFtjDqGvRSc88XMhxTc9zHsg3RbfV4X2B28j/S/Cowboys-3-Wise-Men-ws-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -47714,7 +47714,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/NdP6cThHzQ5dVs6WRpQ82q8QBf5gt6QcZrTQRmQS3/L/Cowboy-Wounded-ws-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/KfZQJgLfWZGBqr722Sx5w8kQNDZxtf84KPc8wkSVB/XL/Cowboy-Wounded-ws-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/LTwkXZMdTGk3r4bvhNjtnjMFx8P4kXjPHGB2DrBJ5/S/Cowboy-Wounded-ws-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -47740,7 +47740,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NJTK9NLVkFmC363QpsBwRZHhN5jX6sp4GQXVfkNT4/L/Cowboy-Over-My-Dead-Body-ws-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/KPwwNzqMrZKHKJx9Rdbkpqtms4vk9h47HNpXDLZbM/XL/Cowboy-Over-My-Dead-Body-ws-XL.jpg",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/MnNQgpzTDL28tcKCKDkFhjJgCcb5sHzxV8hTdtwhM/S/Cowboy-Over-My-Dead-Body-ws-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -60249,7 +60249,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/3/L5wNj6tj8STXBMMDKQG2XCq9sxtCgJv33Mf2SfRQZ/XL/_WHO5832-920-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/3/L5wNj6tj8STXBMMDKQG2XCq9sxtCgJv33Mf2SfRQZ/XL/_WHO5832-920-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/3/MRjDBDRmHQckg87DJbp9ChzkRR7B6RfzJSZ8qsn6S/S/_WHO5832-920-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
@@ -60262,7 +60262,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/MZV99wzJ2qPrxfVrqpGMwg28k5NFHthcXwkd6FzHh/L/_WHO0996-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/NJSmXVrmJtPJqH3xdwzJjCb6TJJ6h23nGVfV7PC9F/XL/_WHO0996-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/LzS5M7pr8rd8PMSpmhGhm8wMbGzZMQ2g7N8phMJtT/S/_WHO0996-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
@@ -60431,7 +60431,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RnKtV3Z/1/L74G3WLtCTG8wtjWz42CqTM8LqSJPPrxfXXSRLwrc/XL/_HF28699-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RnKtV3Z/1/L74G3WLtCTG8wtjWz42CqTM8LqSJPPrxfXXSRLwrc/XL/_HF28699-Edit-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RnKtV3Z/1/L7mFVJcvBhmSGGJzMRtxnFbfhV3gmzsFjSDNsfQk9/S/_HF28699-Edit-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "hidden",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color"
@@ -71325,7 +71325,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/NXZjkBB68gWGKFzrGggw8wNb77HBnTpq65X3L8Z65/L/_HF20856-Pano-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/L2QH5jGbPsBBVsWRMwHhpKZgCM4HvsLLpLtgjsC32/XL/_HF20856-Pano-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Clifton-Mill/i-GBTSWkW/0/MpvzL7VZ4vbwkQXVB3TCSwTZKCXkD2pZCbjQZqPhJ/S/_HF20856-Pano-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
@@ -71338,7 +71338,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/KNxgJzGnLZxvQMfGCZL9kBZh6ZsXwqmRScbJVQSd8/L/_igp2989-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/NdWHcvbsdLN2Z8mjqq4SJz8dQ7fjRSGbXRJ2b6WXr/XL/_igp2989-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Miscellaneous/Lights/i-zXsjXwN/3/MQ9ZL826h9qxqdsHh5KHpXw9MZTkJwmc8N5pcNcZv/S/_igp2989-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
@@ -71351,7 +71351,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/photos/i-HP6hJm4/4/NRWjg2Tc3M6HWwr8K7mxpNDWZP9JbMBCCqLCCLtnf/L/i-HP6hJm4-L.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-HP6hJm4/4/MgwSH4QV7FhZrDjnmMkzdTqd465wpZnVC3ksMnMJ2/XL/i-HP6hJm4-XL.jpg",
     "src": "https://photos.smugmug.com/photos/i-HP6hJm4/4/LtRWbwt7jM4G6dnHDq5xQ2QdVCdZhRCMFtwsvj3Jb/S/i-HP6hJm4-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
@@ -71364,7 +71364,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/LS7CMnktLVFvtxxCQXsR6krcCZkL5tPK6qS9D7ntt/XL/_IMG0137_tonemapped-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/LS7CMnktLVFvtxxCQXsR6krcCZkL5tPK6qS9D7ntt/XL/_IMG0137_tonemapped-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Spring-2015/i-GmFFsFL/5/NBRWLq8McGBNq4bMp8MRF7hcsCkcL37rZ5PKCnWpv/S/_IMG0137_tonemapped-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
@@ -71546,7 +71546,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/KvS3X4xN7xh3ndCpRQqvTzzW9Pm8ShzgmsZ3SR8gs/L/_O1H0479-Edit-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/LWKVCFb76BKkCzM3qgnvjHFXMVC4pTx8jhcJWpqjX/XL/_O1H0479-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Ohio/Sky/i-m3V6PZf/1/Kp4qJtfdHhRCB83SD6z84wSXqMfS75kXhFGjR5VvD/S/_O1H0479-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
@@ -71559,7 +71559,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/KzFxDZ4nT6fTMHLCxxG2Nv2WFQbBndnXnZwZ6PkXp/L/20230706_181805-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/MgPmbwcSV5GHgBTczDDcsG2w5TTSrDvbKzRJXkT4g/XL/20230706_181805-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery/i-SCMFzP3/0/MV2SFXfjVRkCkh5NLvFvRkK8fC2F9kgkcTSvcQXZp/S/20230706_181805-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery"
@@ -71624,7 +71624,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/LB4Psd9qB7B5Q7rJv4j3m4QtsV3tnjK4mGwTBsDXZ/XL/_WHZ6667_8_9-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Grist-Mill/i-mSp9WgK/1/NBJc5TDJ5VbDqDnQvms2ZNWtSGpS6xR5gC2gzDBC4/S/_WHZ6667_8_9-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -71637,7 +71637,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/M7CMChqLgVfzvSdjF2z9n3pTv2F4rkBzM4c5tVq5R/XL/Shadow%20trees_DSF5489-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-p5ghtLz/0/K3Zkq4TQBbj3DCMh7JDhVPXT8zkXCSn5nVkZRpJHp/S/Shadow%20trees_DSF5489-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -71663,7 +71663,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/KLGscG8J4bRv3FcsSxjStRmxDb7L7fqDxxvKZrcWJ/XL/_DSF5516_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/KLGscG8J4bRv3FcsSxjStRmxDb7L7fqDxxvKZrcWJ/XL/_DSF5516_tonemapped-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-Jstk9Gx/0/Lp2gGRNDwN473kVXBB8g7P26fBjF9xvTmRGFwnV9R/S/_DSF5516_tonemapped-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -71676,7 +71676,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/MWTcDjQ6WVnwcgF87MhN2vBtZ4jWLCsmKGt77N6QL/XL/_DSF5574_tonemapped-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-NkNwLM6/1/NGgH77Br8zdHBzpjshFkLq2zBGbRjFsC67b5k5jQs/S/_DSF5574_tonemapped-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -71689,7 +71689,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/NhD3KHBzjBsCpkQXCzq9Ftj5NSxtfcGcMKnP6SRxZ/L/_DSF5606-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KTjv35PCrq8WQG6QTQGcbhq9F4twdtBsx8STTbZZH/XL/_DSF5606-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Davis-West-Virginia-and-Black-Water-Falls-State-Park/i-nqpGhhX/1/KQTGN9ct2H5KhRvWvfsnQndvWXzqgJwHpkd3p62mm/S/_DSF5606-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -71702,7 +71702,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/photos/i-cKsdqTs/0/KSkDBtspBB4dxCJxzB8BFd4RhM6f5CSg3Whpp4WZm/XL/i-cKsdqTs-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-cKsdqTs/0/KSkDBtspBB4dxCJxzB8BFd4RhM6f5CSg3Whpp4WZm/XL/i-cKsdqTs-XL.jpg",
     "src": "https://photos.smugmug.com/photos/i-cKsdqTs/0/MbRWMK5s2GxJhhP2P9ZXK6WP7JJX3j4fNztMpTRK7/S/i-cKsdqTs-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -71741,7 +71741,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/MCWwMt3sLLQD8cPh74jd8pT6bkzHJR2krD5QZQqT3/L/i-5ZsWtSx-L.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/LcnPJhm5CM9NFV2WP7GrBNdx7Q9G4XRNxmk5VtZ6c/XL/i-5ZsWtSx-XL.jpg",
     "src": "https://photos.smugmug.com/photos/i-5ZsWtSx/1/K9sP3wQvRKVnj9PP325XDjMSS3vQFfSsc8DwPdFsN/S/i-5ZsWtSx-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -71754,7 +71754,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg",
     "srcXL": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KxFfhLcN37dFmRBKSrVKdMtkB8JXmDN9NL65sNJZZ/XL/i-fGnNkBL-XL.jpg",
     "src": "https://photos.smugmug.com/photos/i-fGnNkBL/1/KjCM9D3pcjKCRTXzJqLdRMwZzXnfDdvPtz4D89Pwc/S/i-fGnNkBL-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery"
@@ -95739,7 +95739,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-B8sDF3M/0/KFt9TW3DZdQS6ffVt93q8wC6RKWs8jFcpCCbmDd3w/L/Meant%20What%20I%20Said%2030%20x%2050%20copy-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-B8sDF3M/0/KfsXQnSkdThMQxVtQC4zzFWRxD8DRGz3GRNPfSP5m/XL/Meant%20What%20I%20Said%2030%20x%2050%20copy-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-B8sDF3M/0/NB8VwgHLNWGWT2RMcGGDVDmxKJQ5mzwFcmpsJnNdr/S/Meant%20What%20I%20Said%2030%20x%2050%20copy-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -96012,7 +96012,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LqGQH9ZW8H672v43DzH9GhSrZt5R4gQBDhWLx33Cb/L/Landscape-In-the-weeds-ws-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/Lw4zKjL7VWVxx6xcZFmmwchS4w4jZFhSwHM2BTgWX/XL/Landscape-In-the-weeds-ws-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LVC6Jx8WTnGXfJWDRjcqrszBdK3qZDczzzsJc5CxN/S/Landscape-In-the-weeds-ws-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -96025,7 +96025,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/NQ2pxQqWPqNSLn9LvCtFF2Kj9CrBLDvDnWzf4rrft/L/Landscape-Crystal-mill-ws-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/MfcfTVmXqF9PM7Z6CXrMJN2WrHdJJfScs6kj3WDDF/XL/Landscape-Crystal-mill-ws-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/LvJmPW4v9LjZ9Rbf7cqkHncS4LHRWTjXDQ3JCbnWh/S/Landscape-Crystal-mill-ws-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -96038,7 +96038,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/NVMQVQ2ftVtj2WH9X3ftZ8RPv4gJgGJB6ndxpRW9X/L/Landscape-Cotton-Canday-ws-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/KSqk6crxLFp7zdjRfBmZz7xHq9zNLTg2VPRqKhPfQ/XL/Landscape-Cotton-Canday-ws-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/Kn93nzk472f47vfHv9DwtFXHWjt5ZXDnNXrVJGc5N/S/Landscape-Cotton-Canday-ws-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -96064,7 +96064,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/M65B6GCckbxSBZdHN2PCdS2cwn5jsmbt7X6qC486g/L/Landscape-Aspens-ws-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/K73LQTzDJ32RCDTgDrmcZxg27g3H6m4HcG57qSq7K/XL/Landscape-Aspens-ws-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/Kt2xxw8WPgJQfMQcMbPw9Q7ZPQrrLQBPfx7xvKXk3/S/Landscape-Aspens-ws-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -96103,7 +96103,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LjvFwbXnQRwbctDDs3dJFqfzbBDtd2GdT9tXXLSBZ/L/Cowboys-3-Wise-Men-ws-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/LjvFwbXnQRwbctDDs3dJFqfzbBDtd2GdT9tXXLSBZ/L/Cowboys-3-Wise-Men-ws-L.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/1/MhgpWxFtjDqGvRSc88XMhxTc9zHsg3RbfV4X2B28j/S/Cowboys-3-Wise-Men-ws-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -96116,7 +96116,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/NdP6cThHzQ5dVs6WRpQ82q8QBf5gt6QcZrTQRmQS3/L/Cowboy-Wounded-ws-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/KfZQJgLfWZGBqr722Sx5w8kQNDZxtf84KPc8wkSVB/XL/Cowboy-Wounded-ws-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/0/LTwkXZMdTGk3r4bvhNjtnjMFx8P4kXjPHGB2DrBJ5/S/Cowboy-Wounded-ws-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"
@@ -96142,7 +96142,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NJTK9NLVkFmC363QpsBwRZHhN5jX6sp4GQXVfkNT4/L/Cowboy-Over-My-Dead-Body-ws-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/KPwwNzqMrZKHKJx9Rdbkpqtms4vk9h47HNpXDLZbM/XL/Cowboy-Over-My-Dead-Body-ws-XL.jpg",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/MnNQgpzTDL28tcKCKDkFhjJgCcb5sHzxV8hTdtwhM/S/Cowboy-Over-My-Dead-Body-ws-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Other/K4-Select-Series/Engrained/Engrained-Series"

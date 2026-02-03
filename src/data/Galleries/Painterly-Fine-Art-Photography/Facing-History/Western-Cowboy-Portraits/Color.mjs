@@ -155,7 +155,6 @@ export const galleryData = [
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/A",
     "keywords": [
-      "HF29136",
       "cowboy artwork",
       "powerful works of art",
       "historic western prints",
@@ -606,7 +605,6 @@ export const galleryData = [
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-trZrk2w/A",
     "keywords": [
-      "HF26271",
       "fine art Western photography",
       "historic western prints",
       "cowboy artwork",
@@ -1267,7 +1265,7 @@ export const galleryData = [
     "id": "i-bfKMXS9",
     "title": "Three Wise Men",
     "description": "Three cowboys stand ready on the porch of a weathered frontier cabin, rifles in hand, eyes sharp for what’s coming. In Wayne Heim’s captivating western photography, each piece blends painterly texture with the grit of the Old West, preserving both the timeless beauty and the raw tension of cowboy life. This striking composition draws the viewer into a moment balanced between calm and conflict, making it a powerful addition to any western fine art collection.",
-    "alt": "Cowboy Art: Three cowboys with rifles stand on a wooden porch, posed in a triangular formation, in a painterly western fine art photograph titled “Three Wise Men” by Wayne Heim.",
+    "alt": "Three cowboys with rifles stand on a wooden porch, posed in a triangular formation, in a painterly western fine art photograph titled “Three Wise Men” by Wayne Heim.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bfKMXS9/1/LGHTQ2nfb4GLwcpQbgc4VRS6mGfTM3Sgdtg4Gk5zc/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8834-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bfKMXS9/1/LGHTQ2nfb4GLwcpQbgc4VRS6mGfTM3Sgdtg4Gk5zc/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8834-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bfKMXS9/1/NLBTRPkzrTSHCb7X3h2N6qfbZPz82pHpGF9zHZ8Bs/L/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8834-Edit-2-L.jpg",
