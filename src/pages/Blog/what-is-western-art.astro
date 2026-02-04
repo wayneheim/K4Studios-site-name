@@ -51,9 +51,9 @@ const image2 = {
   alt: "Landscape rendered as emotional environment rather than documentation"
 };
 const image3 = {
-  id: "i-vJSCrqC",
-  src: getProxySrc("i-vJSCrqC", "l"),
-  alt: "Native American portrait conveying dignity and cultural continuity"
+  id: "i-hMXZ8Xh",
+  src: getProxySrc("i-hMXZ8Xh", "l"),
+  alt: "Haggard Cowboy seeking some divine intervention"
 };
 
 const pageTitle = "What Is Western Art? History, Meaning, and the Evolution of the American West in Art";
@@ -410,6 +410,10 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     object-fit: cover;
     object-position: center 25%;
     transition: transform 0.3s ease;
+  }
+  /* Shift last image crop to the left */
+  .header-bar-image.pos-6 img {
+    object-position: 70% 45%;
   }
   .header-bar-link:hover .header-bar-image img {
     transform: scale(1.02);
