@@ -1,0 +1,314 @@
+---
+/**
+ * WesternDefinitions.astro
+ * 
+ * Reusable component for Western Art definition navigation.
+ * Renders different layouts based on page type.
+ * 
+ * Variants:
+ * - "index"      → Full cornerstone card grid (Blog index page)
+ * - "definition" → Numbered series nav (Definition pages 1-6)
+ * - "post"       → Simple text link list (Regular blog posts)
+ */
+
+interface Props {
+  variant?: "index" | "definition" | "post";
+  currentPage?: number; // 1-6, used to highlight current page in definition variant
+}
+
+const { variant = "post", currentPage } = Astro.props;
+---
+
+{variant === "index" && (
+  <section class="cornerstones">
+    <h2>Cornerstones</h2>
+    <p class="subhead">Reference articles defining the disciplines behind the work.</p>
+
+    <div class="cornerstone-grid">
+      <a href="/Blog/what-is-western-art" class="card">
+        <span class="num">1</span>
+        <h3>What Is Western Art?</h3>
+        <p>History, meaning, and evolution of the American West in art</p>
+      </a>
+
+      <a href="/Blog/what-is-western-fine-art" class="card">
+        <span class="num">2</span>
+        <h3>What Is Western Fine Art?</h3>
+        <p>Definition, distinction, and why the term matters</p>
+      </a>
+
+      <a href="/Blog/what-is-western-fine-art-photography" class="card">
+        <span class="num">3</span>
+        <h3>What Is Western Fine Art Photography?</h3>
+        <p>Definition, distinction, and what it is not</p>
+      </a>
+
+      <a href="/Blog/what-is-artistic-western-photography" class="card">
+        <span class="num">4</span>
+        <h3>What Is Artistic Western Photography?</h3>
+        <p>Craft, composition, and the expressive lens</p>
+      </a>
+
+      <a href="/Blog/what-is-painterly-photography" class="card">
+        <span class="num">5</span>
+        <h3>What Is Painterly Photography?</h3>
+        <p>Meaning, misuse, and the fine art distinction</p>
+      </a>
+
+      <a href="/Blog/what-is-western-cowboy-art" class="card">
+        <span class="num">6</span>
+        <h3>What Is Western Cowboy Art?</h3>
+        <p>History, myth, and the enduring figure of the American cowboy</p>
+      </a>
+    </div>
+  </section>
+)}
+
+{variant === "definition" && (
+  <section class="western-series">
+    <p class="series-label">Western Art Series</p>
+    <nav class="series-nav">
+      {currentPage === 1 ? (
+        <span class="current">1</span>
+      ) : (
+        <a href="/Blog/what-is-western-art" title="What Is Western Art?">1</a>
+      )}
+      <span class="sep">|</span>
+      {currentPage === 2 ? (
+        <span class="current">2</span>
+      ) : (
+        <a href="/Blog/what-is-western-fine-art" title="What Is Western Fine Art?">2</a>
+      )}
+      <span class="sep">|</span>
+      {currentPage === 3 ? (
+        <span class="current">3</span>
+      ) : (
+        <a href="/Blog/what-is-western-fine-art-photography" title="What Is Western Fine Art Photography?">3</a>
+      )}
+      <span class="sep">|</span>
+      {currentPage === 4 ? (
+        <span class="current">4</span>
+      ) : (
+        <a href="/Blog/what-is-artistic-western-photography" title="What Is Artistic Western Photography?">4</a>
+      )}
+      <span class="sep">|</span>
+      {currentPage === 5 ? (
+        <span class="current">5</span>
+      ) : (
+        <a href="/Blog/what-is-painterly-photography" title="What Is Painterly Photography?">5</a>
+      )}
+      <span class="sep">|</span>
+      {currentPage === 6 ? (
+        <span class="current">6</span>
+      ) : (
+        <a href="/Blog/what-is-western-cowboy-art" title="What Is Western Cowboy Art?">6</a>
+      )}
+    </nav>
+  </section>
+)}
+
+{variant === "post" && (
+  <section class="definition-links">
+    <h3>Western Art Definitions</h3>
+    <div class="definition-row">
+      <a href="/Blog/what-is-western-art">What Is Western Art?</a>
+      <span class="sep">|</span>
+      <a href="/Blog/what-is-western-fine-art">What Is Western Fine Art?</a>
+      <span class="sep">|</span>
+      <a href="/Blog/what-is-western-fine-art-photography">What Is Western Fine Art Photography?</a>
+      <span class="sep">|</span>
+      <a href="/Blog/what-is-artistic-western-photography">What Is Artistic Western Photography?</a>
+      <span class="sep">|</span>
+      <a href="/Blog/what-is-painterly-photography">What Is Painterly Photography?</a>
+      <span class="sep">|</span>
+      <a href="/Blog/what-is-western-cowboy-art">What Is Western Cowboy Art?</a>
+    </div>
+  </section>
+)}
+
+<style>
+  /* ========================================
+     INDEX VARIANT — Cornerstone Card Grid
+     ======================================== */
+  .cornerstones {
+    max-width: 900px;
+    margin: 3rem auto 2rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .cornerstones h2 {
+    font-family: 'Glegoo', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+  }
+
+  .cornerstones .subhead {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cornerstone-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 640px) {
+    .cornerstone-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .cornerstones .card {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem 0.75rem 1rem;
+    background: #faf9f7;
+    border: 1px solid #e8e6e3;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: left;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .cornerstones .card:hover {
+    border-color: #8b5a2b;
+    box-shadow: 0 2px 8px rgba(139, 90, 43, 0.1);
+  }
+
+  .cornerstones .card h3 {
+    font-family: 'Glegoo', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0 0 0.2rem 0;
+    padding-right: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .cornerstones .num {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5em;
+    height: 1.5em;
+    background: rgba(139, 90, 43, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .cornerstones .card p {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
+    font-style: italic;
+    letter-spacing: -0.01em;
+  }
+
+  /* ========================================
+     DEFINITION VARIANT — Series Navigation
+     ======================================== */
+  .western-series {
+    max-width: 860px;
+    margin: 3rem auto 2rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .series-label {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+
+  .series-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .series-nav a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .series-nav a:hover {
+    color: #8b5a2b;
+  }
+
+  .series-nav .current {
+    font-weight: 700;
+    color: #8b5a2b;
+  }
+
+  .series-nav .sep {
+    color: #ccc;
+  }
+
+  /* ========================================
+     POST VARIANT — Simple Text Links
+     ======================================== */
+  .definition-links {
+    max-width: 860px;
+    margin: 3rem auto 2rem;
+    padding: 1.5rem 1rem 0;
+    border-top: 1px solid #e8e6e3;
+    text-align: center;
+  }
+
+  .definition-links h3 {
+    font-family: 'Glegoo', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+    margin: 0 0 1rem 0;
+  }
+
+  .definition-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .definition-links a {
+    color: #8b5a2b;
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .definition-links a:hover {
+    text-decoration: underline;
+  }
+
+  .definition-links .sep {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  @media (max-width: 640px) {
+    .definition-row {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .definition-links .sep {
+      display: none;
+    }
+  }
+</style>

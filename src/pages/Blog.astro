@@ -3,6 +3,7 @@ export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 import { normalizeImageSrc } from "@/utils/imageProxy.js";
@@ -172,34 +173,7 @@ const galleryPaths = Object.keys(galleryDataMap);
     <div class="cornerstones-divider"></div>
 
     <!-- Cornerstones Section -->
-    <section class="cornerstones-section max-w-4xl mx-auto px-4 mt-2 md:mt-4 mb-12">
-      <h2 class="cornerstones-heading">Cornerstones</h2>
-      <p class="cornerstones-intro">
-        Reference articles defining the disciplines behind the work.
-      </p>
-      <div class="cornerstones-grid">
-        <a href="/Blog/what-is-western-art" class="cornerstone-card">
-          <h3>What Is Western Art?</h3>
-          <p>History, meaning, and evolution of the American West in art</p>
-        </a>
-        <a href="/Blog/what-is-western-fine-art" class="cornerstone-card">
-          <h3>What Is Western Fine Art?</h3>
-          <p>Definition, distinction, and why the term matters</p>
-        </a>
-        <a href="/Blog/what-is-western-fine-art-photography" class="cornerstone-card">
-          <h3>What Is Western Fine Art Photography?</h3>
-          <p>Definition, distinction, and what it is not</p>
-        </a>
-        <a href="/Blog/what-is-artistic-western-photography" class="cornerstone-card">
-          <h3>What Is Artistic Western Photography?</h3>
-          <p>Craft, composition, and the expressive lens</p>
-        </a>
-        <a href="/Blog/what-is-painterly-photography" class="cornerstone-card">
-          <h3>What Is Painterly Photography?</h3>
-          <p>Meaning, misuse, and the fine art distinction</p>
-        </a>
-      </div>
-    </section>
+    <WesternDefinitions variant="index" />
 
     <SiteFooter 
       previewImages={previewImages}
@@ -211,7 +185,7 @@ const galleryPaths = Object.keys(galleryDataMap);
   </main>
 
   <style>
-    /* Cornerstones Section */
+    /* Cornerstones divider */
     .cornerstones-divider {
       width: 100%;
       max-width: 900px;
@@ -219,57 +193,9 @@ const galleryPaths = Object.keys(galleryDataMap);
       background: linear-gradient(to right, transparent, #d0d0d0 8%, #d0d0d0 92%, transparent);
       margin: 1rem auto 0;
     }
-    .cornerstones-heading {
-      font-family: 'Glegoo', serif;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-    .cornerstones-intro {
-      text-align: center;
-      color: #666;
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-    }
-    .cornerstones-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
-    .cornerstone-card {
-      display: block;
-      padding: 1.25rem 1.5rem;
-      background: #faf9f7;
-      border: 1px solid #e8e6e3;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .cornerstone-card:hover {
-      border-color: #8b5a2b;
-      box-shadow: 0 2px 8px rgba(139, 90, 43, 0.1);
-    }
-    .cornerstone-card h3 {
-      font-family: 'Glegoo', serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #2c2c2c;
-      margin: 0 0 0.35rem 0;
-    }
-    .cornerstone-card p {
-      font-size: 0.9rem;
-      color: #666;
-      margin: 0;
-      font-style: italic;
-    }
     
     @media (max-width: 768px) {
       .cornerstones-divider {
-        margin-top: 0.5rem !important;
-      }
-      .cornerstones-section {
         margin-top: 0.5rem !important;
       }
       .sidebar-column {

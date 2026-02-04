@@ -3,6 +3,7 @@ export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
 import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
@@ -234,6 +235,9 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
       </article>
     </section>
+
+    <!-- Western Art Definitions -->
+    <WesternDefinitions variant="post" />
 
     <SiteFooter 
       previewImages={previewImages}
