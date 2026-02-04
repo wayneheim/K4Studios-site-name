@@ -52,6 +52,23 @@ const image3 = {
   alt: "Western cowboy art — quiet determination and psychological depth beyond the heroic silhouette"
 };
 
+// Darker aftermath images for "Where Cowboy Art Goes From Here"
+const darkImage1 = {
+  id: "i-B7ZSdfs",
+  src: getProxySrc("i-B7ZSdfs", "l"),
+  alt: "Western cowboy art — the weight of consequence after action"
+};
+const darkImage2 = {
+  id: "i-rfFBRQM",
+  src: getProxySrc("i-rfFBRQM", "l"),
+  alt: "Western cowboy art — loss and quiet aftermath beyond the myth"
+};
+const darkImage3 = {
+  id: "i-HBRmWg4",
+  src: getProxySrc("i-HBRmWg4", "l"),
+  alt: "Western cowboy art — psychological weight and what remains when the dust settles"
+};
+
 const pageTitle = "What Is Western Cowboy Art? | K4 Studios";
 const pageDescription = "Western cowboy art centers on one of the most recognizable figures in American visual culture—exploring the history, myth, and enduring symbolism of the American cowboy.";
 
@@ -224,6 +241,47 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>These qualities remain culturally powerful, which is why cowboy imagery continues to resonate long after the frontier itself disappeared.</p>
 
+        <!-- IMAGE BLOCK: Iconic Cowboy Art Examples -->
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Examples of Western Cowboy Art</h3>
+        <div class="example-images">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+              <img 
+                src={image1.src} 
+                alt={image1.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Frontier narrative — history and story intertwined
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-and-White/${image2.id}`}>
+              <img 
+                src={image2.src} 
+                alt={image2.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Black-and-white portrait — character over spectacle
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image3.id}`}>
+              <img 
+                src={image3.src} 
+                alt={image3.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Quiet determination — beyond the heroic pose
+            </figcaption>
+          </figure>
+        </div>
+
         <!-- SECTION 6: The Story Behind the Story -->
         <div class="section-heading-with-line">
           <h2>The Story Behind the Story</h2>
@@ -280,7 +338,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>The work being made now looks for:</p>
         <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
-          <li style="margin-bottom:0.5rem;">Fatigue as much as resolve</li>
+          <li style="margin-bottom:0.5rem;">Consequence as much as resolve</li>
           <li style="margin-bottom:0.5rem;">Doubt alongside certainty</li>
           <li style="margin-bottom:0.5rem;">The pause before action</li>
           <li style="margin-bottom:0.5rem;">Loss that shaped what came next</li>
@@ -289,43 +347,43 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>This is not a rejection of the myth. It is an extension of it—into territory the earlier painters could not reach. The icon endures because artists keep finding new dimensions inside it.</p>
 
-        <!-- IMAGE BLOCK -->
-        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Examples of Western Cowboy Art</h3>
+        <!-- IMAGE BLOCK: Darker/Aftermath Images -->
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Beyond the Heroic Frame</h3>
         <div class="example-images">
           <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${darkImage1.id}`}>
               <img 
-                src={image1.src} 
-                alt={image1.alt}
+                src={darkImage1.src} 
+                alt={darkImage1.alt}
                 loading="lazy"
               />
             </a>
             <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Frontier narrative — history and story intertwined
+              Till Death Do Us Part
             </figcaption>
           </figure>
           <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-and-White/${image2.id}`}>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${darkImage2.id}`}>
               <img 
-                src={image2.src} 
-                alt={image2.alt}
+                src={darkImage2.src} 
+                alt={darkImage2.alt}
                 loading="lazy"
               />
             </a>
             <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Black-and-white portrait — character over spectacle
+              Untimely Parting
             </figcaption>
           </figure>
           <figure>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image3.id}`}>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${darkImage3.id}`}>
               <img 
-                src={image3.src} 
-                alt={image3.alt}
+                src={darkImage3.src} 
+                alt={darkImage3.alt}
                 loading="lazy"
               />
             </a>
             <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Quiet determination — beyond the heroic pose
+              Cough and Covenant
             </figcaption>
           </figure>
         </div>
