@@ -4,7 +4,7 @@ export const cowboyStory = [
   {
     title: "Western Cowboy Photography: Character, Grit, and the Authentic West",
     paragraphs: [
-      "Western cowboy photography is photography focused on cowboys, ranchers, and frontier figures of the American West, created as fine art rather than stock imagery or commercial illustration. It is distinguished by its emphasis on character, authenticity, and narrative presence over romanticized or theatrical depiction.",
+      "Western cowboy photography is photography focused on cowboys, ranchers, and frontier figures of the American West, created as <a href='/Blog/what-is-western-fine-art-photography' style='color:#8b5a2b; text-decoration:underline;'>fine art</a> rather than stock imagery or commercial illustration. It is distinguished by its emphasis on character, authenticity, and narrative presence over romanticized or theatrical depiction.",
       "This page presents western cowboy photography by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a>, whose painterly approach and historical grounding produce cowboy portraits that reward long viewing — images shaped by restraint, lived experience, and deep respect for the people and traditions of the West."
     ]
   },

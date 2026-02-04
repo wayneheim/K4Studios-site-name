@@ -4,7 +4,7 @@ export const painterlyStory = [
   {
     title: "Western Fine Art Photography: Story, Character, and the Human West",
     paragraphs: [
-      "Western fine art photography is photography of the American West created as fine art rather than documentation or commercial imagery. It is distinguished by its emphasis on composition, narrative depth, and emotional resonance over literal documentation. The genre encompasses cowboy portraiture, frontier character studies, Indigenous representation, and Western landscapes treated as emotional environments rather than scenic backdrops.",
+      "<a href='/Blog/what-is-western-fine-art-photography' style='color:#8b5a2b; text-decoration:underline;'>Western fine art photography</a> is photography of the American West created as fine art rather than documentation or commercial imagery. It is distinguished by its emphasis on composition, narrative depth, and emotional resonance over literal documentation. The genre encompasses cowboy portraiture, frontier character studies, Indigenous representation, and Western landscapes treated as emotional environments rather than scenic backdrops.",
       "This page presents a curated body of western fine art photography by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a>, whose work applies painterly craft and cinematic restraint to explore character, history, and the human presence within the American West."
     ]
   },

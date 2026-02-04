@@ -165,6 +165,22 @@ facingHistory: {
   ],
 },
 
+// ============================================================================
+// DEFINITION ARTICLE: WESTERN FINE ART PHOTOGRAPHY
+// Cornerstone definition page — requires high internal link authority.
+// ============================================================================
+
+westernFineArtPhotographyDefinition: {
+  path: "/Blog/what-is-western-fine-art-photography",
+  def: "Western fine art photography is photography of the American West created as fine art through authorship, intent, and compositional control—not documentation, décor, or stock imagery.",
+  landingPhrases: [
+    { phrase: "what is western fine art photography", rating: 5, use: true },
+    { phrase: "western fine art photography definition", rating: 5, use: true },
+    { phrase: "define western fine art photography", rating: 4, use: true },
+    { phrase: "western fine art photography meaning", rating: 4, use: true },
+  ],
+  imagePhrases: []
+},
 
  westernHubLanding: {
   path: "/Western-Fine-Art-Photography",

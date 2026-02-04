@@ -4,7 +4,7 @@ export const bwWesternStory = [
   {
     title: "Western Black and White Photography: Contrast, Character, and the Timeless West",
     paragraphs: [
-      "Western black and white photography reduces the American West to its essential elements — contrast, character, and story. Light against shadow. Presence against absence. Silence carrying narrative weight.",
+      "Western black and white photography reduces the American West to its essential elements — contrast, character, and story. Light against shadow. Presence against absence. Silence carrying narrative weight. This monochrome approach represents one facet of <a href='/Blog/what-is-western-fine-art-photography' style='color:#8b5a2b; text-decoration:underline;'>Western fine art photography</a>.",
       "This body of work moves beyond monochrome aesthetics to examine the deeper architecture of the frontier. These images are built on contrast — not only tonal, but moral, emotional, and narrative."
     ]
   },
