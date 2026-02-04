@@ -143,10 +143,12 @@ export default function BrowseAllGrid({
   const [isExpanded, setIsExpanded] = useState(false);
   const gridRef = useRef(null);
   
-  // ✅ Filter out ghosts and hidden images
-  const visibleImages = allImages.filter(
-    (img) => img.visibility !== 'ghost' && img.visibility !== 'hidden' && img.id !== 'i-k4studios'
-  );
+  // ✅ Filter out ghosts and hidden images, then sort by sortOrder
+  const visibleImages = allImages
+    .filter(
+      (img) => img.visibility !== 'ghost' && img.visibility !== 'hidden' && img.id !== 'i-k4studios'
+    )
+    .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
   
   const imageCount = visibleImages.length;
 

@@ -1872,7 +1872,7 @@ export default function ChapterGalleryBase({
                           </h3>
                           <h2
                             className="font-semibold tracking-wide text-[#85644b] chapter-title"
-                            style={{ fontSize: isMobile ? mobileTitleSize : "1.55rem", opacity: 0.5, lineHeight: isMobile ? "1.15" : "1.35", marginTop: 0, marginBottom: 0 }}
+                            style={{ fontSize: isMobile ? mobileTitleSize : "1.55rem", opacity: 0.5, lineHeight: "1.35", marginTop: 0, marginBottom: 0 }}
                           >
                             {chapterTitle}
                           </h2>

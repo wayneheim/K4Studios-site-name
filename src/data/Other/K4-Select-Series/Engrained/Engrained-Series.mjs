@@ -1918,7 +1918,7 @@ export const galleryData = [
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/KSqk6crxLFp7zdjRfBmZz7xHq9zNLTg2VPRqKhPfQ/XL/Landscape-Cotton-Canday-ws-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/NVMQVQ2ftVtj2WH9X3ftZ8RPv4gJgGJB6ndxpRW9X/L/Landscape-Cotton-Canday-ws-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/MM9fjDBRt87TtVGLZ57Zqd6wdqJCrS6MrVDVMFVGp/M/Landscape-Cotton-Canday-ws-M.jp",
+    "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/MM9fjDBRt87TtVGLZ57Zqd6wdqJCrS6MrVDVMFVGp/M/Landscape-Cotton-Canday-ws-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/Kn93nzk472f47vfHv9DwtFXHWjt5ZXDnNXrVJGc5N/S/Landscape-Cotton-Canday-ws-S.jpg",
     contentSource: "ai"
   },

@@ -389,7 +389,7 @@ body.zoom-open {
   }
   .chapter-title{
     font-size: 1.25rem; /* Adjust to taste */
-    line-height: .12!important; /* Keep tight for mobile */
+    line-height: 1.35; /* Proper spacing for multi-line titles */
   }
 }
 

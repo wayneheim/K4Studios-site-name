@@ -312,7 +312,7 @@ export default function RebuiltScrollGrid({
 
           return gridSrc && entry?.title ? (
             <motion.div
-              key={globalIndex}
+              key={entry.id || globalIndex}
               ref={(el) => rowAnchor && (rowRefs.current[`row-${rowIndex}`] = el)}
               variants={cardVariants}
               initial="hidden"
