@@ -1,0 +1,515 @@
+---
+/**
+ * What Is Western Art? — Root Definition Article
+ * 
+ * Purpose: Own the definition layer for "Western Art" (broadest umbrella term)
+ * This is the semantic root that feeds authority to all Western-related pages.
+ * 
+ * Architecture:
+ * - Historical context + contemporary relevance
+ * - Article schema (not gallery)
+ * - Feeds authority to: Western Fine Art, Western Fine Art Photography, Artistic Western Photography
+ * - Positions K4 as definitional authority, not just vendor
+ */
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/what-is-western-art";
+const canonicalUrl = "https://www.k4studios.com/Blog/what-is-western-art";
+
+// Proxy URL helper
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
+// Header image bar - 7 images fading from edges to center (5:7 portrait crop)
+const headerImages = [
+  { id: "i-jWDDpC4", alt: "Atmospheric landscape of the American West" },
+  { id: "i-LCspRF4", alt: "Cowboy at dusk reviewing the day" },
+  { id: "i-B7ZSdfs", alt: "Character portrait from the frontier tradition" },
+  { id: "i-k4b6c5b", alt: "Iconic moment in the visual language of the West" },
+  { id: "i-T7TFJX2", alt: "Frontier portraiture with narrative presence" },
+  { id: "i-8VPQmkW", alt: "Ranch hand study in natural light" },
+  { id: "i-vJSCrqC", alt: "Native American portrait honoring tradition" },
+];
+
+// Demo section images
+const image1 = {
+  id: "i-trZrk2w",
+  src: getProxySrc("i-trZrk2w", "l"),
+  alt: "Night watch scene blending history and imagination in the tradition of Western art"
+};
+const image2 = {
+  id: "i-Q2NXpjG",
+  src: getProxySrc("i-Q2NXpjG", "l"),
+  alt: "Landscape rendered as emotional environment rather than documentation"
+};
+const image3 = {
+  id: "i-vJSCrqC",
+  src: getProxySrc("i-vJSCrqC", "l"),
+  alt: "Native American portrait conveying dignity and cultural continuity"
+};
+
+const pageTitle = "What Is Western Art? History, Meaning, and the Evolution of the American West in Art";
+const pageDescription = "Western art is more than cowboys and sunsets. Explore the history, meaning, and evolution of Western art from frontier paintings to contemporary photography.";
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "What Is Western Art? History, Meaning, and the Evolution of the American West in Art",
+    description: pageDescription,
+    url: canonicalUrl,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-02-04",
+    articleSection: "Art History",
+    keywords: [
+      "western art",
+      "what is western art",
+      "western art definition",
+      "western art history",
+      "american western art",
+      "cowboy art",
+      "western fine art"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+// OG/Twitter capped at L
+const meta = {
+  description: pageDescription,
+  keywords: "western art, what is western art, western art definition, western art history, american western art, cowboy art, western fine art",
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImages[2].id, "l"),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImages[2].id, "l"),
+  twitterCard: "summary_large_image"
+};
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › What Is Western Art?`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <!-- Header Image Bar - 7 images fading from edges to center (5:7 portrait crop) -->
+    <section class="header-image-bar">
+      <a href="/Western-Fine-Art-Photography" class="header-bar-link">
+        <div class="header-bar-container">
+          {headerImages.map((img, index) => (
+            <div class={`header-bar-image pos-${index}`}>
+              <img 
+                src={getProxySrc(img.id, "l")} 
+                alt={img.alt}
+                loading="eager"
+              />
+            </div>
+          ))}
+        </div>
+      </a>
+    </section>
+
+    <!-- Article Header -->
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.25rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        What Is Western Art?
+      </h1>
+      <p style="font-size:1.15rem; color:#666; font-style:italic; margin-top:0.5rem;">
+        History, Meaning, and the Evolution of the American West in Art
+      </p>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        From frontier paintings to contemporary photography
+      </p>
+    </section>
+
+    <!-- Article Content -->
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+
+        <!-- SECTION 1: Definition (THE ANCHOR) -->
+        <p><strong>Western art</strong> is more than a style or a collection of familiar subjects. It is a visual language built around the landscapes, people, conflicts, and ideals of the American West. From early frontier paintings to contemporary photography, Western art reflects how each generation understands the land, the myth, and the reality behind it.</p>
+
+        <p>At its core, Western art is not defined by medium. It is defined by authorship—by the artist's intent, composition, and vision applied to the subject of the West.</p>
+
+        <!-- SECTION 2: Historical Roots -->
+        <div class="section-heading-with-line">
+          <h2>The Historical Roots of Western Art</h2>
+        </div>
+
+        <p>Western art grew out of a nation in motion.</p>
+
+        <p>In the decades following the Civil War, the United States turned its attention westward. The Homestead Act of 1862 opened vast tracts of land to settlers, triggering one of the largest internal migrations in American history. Historians estimate that roughly 250,000 to 500,000 people traveled west by wagon between 1841 and 1869, moving along routes like the Oregon, California, and Santa Fe Trails.</p>
+
+        <p>In the mid-1860s alone, tens of thousands made the journey each year. That movement slowed dramatically after the completion of the Transcontinental Railroad in 1869, which transformed the journey from a months-long gamble into a matter of days.</p>
+
+        <p>But the migration was never just about land. It was about survival, reinvention, and identity.</p>
+
+        <p>Out of that environment, the figure of the cowboy emerged—not as a romantic hero at first, but as a working laborer shaped by the needs of the frontier. The cowboy was born of cattle drives, open range economics, harsh weather, and long distances. He was not a symbol yet. He was a necessity.</p>
+
+        <!-- SECTION 3: Rise of the Myth -->
+        <div class="section-heading-with-line">
+          <h2>The Rise of the Western Myth</h2>
+        </div>
+
+        <p>The transformation from laborer to legend came later.</p>
+
+        <p>In the late 19th century, dime-store novels began to spin stories of heroic gunfighters, noble outlaws, and fearless riders. These stories blurred fact and fiction, creating a mythic West that was larger, cleaner, and more dramatic than reality.</p>
+
+        <p>By the early 20th century, silent films and later Hollywood Westerns amplified those myths. Cowboys became icons. Frontier towns became stages. Conflicts became morality plays.</p>
+
+        <p>Western art followed a similar trajectory. Painters like Frederic Remington and Charles M. Russell captured dramatic scenes of riders, battles, and frontier life. Their work helped define the visual language of the American West, and for decades, this heroic imagery dominated the Western art canon.</p>
+
+        <p>The West became not just a place—but a symbol. It stood for:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">Freedom</li>
+          <li style="margin-bottom:0.5rem;">Individualism</li>
+          <li style="margin-bottom:0.5rem;">Hardship</li>
+          <li style="margin-bottom:0.5rem;">Reinvention</li>
+          <li style="margin-bottom:0.5rem;">The tension between wilderness and civilization</li>
+        </ul>
+
+        <p>These ideas still resonate today because they are not just historical—they are psychological. The West represents the possibility of starting over, of carving a life from uncertainty, of facing danger with resolve. That mythology remains deeply embedded in American identity.</p>
+
+        <!-- SECTION 4: The Cowboy as Icon -->
+        <div class="section-heading-with-line">
+          <h2>The Cowboy as Cultural Icon</h2>
+        </div>
+
+        <p>The cowboy did not ride into the West as a legend. He became one.</p>
+
+        <p>Born from cattle work, trail drives, and open-range economics, the cowboy was shaped by grit, necessity, and endurance. But as the frontier closed and the realities of ranch life faded from daily experience, the cowboy's image grew larger in the cultural imagination.</p>
+
+        <p>Dime novels made him heroic. Early Western films made him iconic. Postwar cinema made him mythic.</p>
+
+        <p>Over time, the cowboy came to represent more than a job. He became a symbol of:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">Self-reliance</li>
+          <li style="margin-bottom:0.5rem;">Moral code</li>
+          <li style="margin-bottom:0.5rem;">Quiet resilience</li>
+          <li style="margin-bottom:0.5rem;">The lone figure against a vast landscape</li>
+        </ul>
+
+        <p>Western art absorbed and reinforced this transformation. Paintings, sculptures, films, and later photographs repeated these archetypes until they became the public face of the American West.</p>
+
+        <!-- Demo Image -->
+        <div class="example-image" style="margin:2rem 0;">
+          <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color">
+            <img 
+              src={image1.src} 
+              alt={image1.alt}
+              loading="lazy"
+              style="width:100%; max-width:600px; margin:0 auto; display:block; border-radius:8px;"
+            />
+          </a>
+          <p style="text-align:center; font-size:0.9rem; color:#666; margin-top:0.75rem; font-style:italic;">The cowboy as character, not cliché — Western art that looks beyond the myth</p>
+        </div>
+
+        <!-- SECTION 5: What Defines Western Art -->
+        <div class="section-heading-with-line">
+          <h2>What Defines Western Art</h2>
+        </div>
+
+        <p>Despite the myths, Western art is not defined by subject matter alone.</p>
+
+        <p>A wagon, a horse, or a desert landscape does not automatically qualify as Western art. What matters is authorship—the artist's intent, composition, and emotional or narrative engagement with the subject.</p>
+
+        <p>Across mediums, Western art is unified by three core elements:</p>
+
+        <ul style="list-style:none; padding-left:0; margin:1.5rem 0;">
+          <li style="margin-bottom:1rem;"><strong>1. Authorship</strong> — The work reflects the artist's voice, not just the subject.</li>
+          <li style="margin-bottom:1rem;"><strong>2. Intent</strong> — The image exists to communicate meaning, not just appearance.</li>
+          <li style="margin-bottom:1rem;"><strong>3. Compositional Restraint</strong> — The artist chooses what to show, what to hide, and what to emphasize.</li>
+        </ul>
+
+        <p>Western art may include cowboys, landscapes, Native American life, frontier architecture, railroads, small towns, and modern ranch culture. But subject alone does not define it. Execution does. Vision does. Intent does.</p>
+
+        <!-- SECTION 6: Evolution of the Canon -->
+        <div class="section-heading-with-line">
+          <h2>The Evolution of the Western Canon</h2>
+        </div>
+
+        <p>For much of its history, Western art was dominated by painting. Museums, collectors, and institutions treated oil painting and sculpture as the primary mediums of serious Western expression.</p>
+
+        <p>Photography, even when technically brilliant, was often treated as documentary rather than fine art. The camera was seen as a recording device, not an authorial tool.</p>
+
+        <p>That distinction has largely dissolved.</p>
+
+        <p>Throughout the 20th and 21st centuries, institutions such as MoMA, the Getty, and the Smithsonian elevated photography to equal footing with painting. As a result, the definition of <a href="/Blog/what-is-western-fine-art" style="color:#8b5a2b; text-decoration:underline;">Western fine art</a> shifted from medium-based to authorship-based.</p>
+
+        <p>Today, Western art includes painting, sculpture, photography, mixed media, and contemporary installations. What matters is not how the work was made, but whether it carries artistic intent, narrative depth, and compositional rigor.</p>
+
+        <!-- SECTION 7: Beyond the Myth -->
+        <div class="section-heading-with-line">
+          <h2>Beyond the Myth: The Quiet Stories</h2>
+        </div>
+
+        <p>The Western canon is still dominated by myth—the heroic cowboy, the dramatic charge, the romantic sunset. These icons remain the public face of the genre.</p>
+
+        <p>Yet beneath that mythology lies a deeper, quieter reality: the ordinary lives that held the frontier together. A growing number of contemporary Western artists are beginning to explore these overlooked narratives, shifting focus from legend to lived experience.</p>
+
+        <p>Their work asks not only what the West looked like, but what it <em>felt</em> like to live there.</p>
+
+        <p>This evolution does not erase the myth. It adds to it—expanding the Western tradition beyond spectacle and into reflection, ambiguity, and human experience.</p>
+
+        <!-- Demo Images Grid -->
+        <div class="example-images" style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:2rem 0;">
+          <figure style="margin:0; aspect-ratio:3/4; overflow:hidden; border-radius:8px;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/Painterly" style="display:block; width:100%; height:100%;">
+              <img 
+                src={image2.src} 
+                alt={image2.alt}
+                loading="lazy"
+                style="width:100%; height:100%; object-fit:cover; border-radius:8px;"
+              />
+            </a>
+          </figure>
+          <figure style="margin:0; aspect-ratio:3/4; overflow:hidden; border-radius:8px;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color" style="display:block; width:100%; height:100%;">
+              <img 
+                src={image3.src} 
+                alt={image3.alt}
+                loading="lazy"
+                style="width:100%; height:100%; object-fit:cover; border-radius:8px;"
+              />
+            </a>
+          </figure>
+        </div>
+
+        <!-- SECTION 8: Western Art Today -->
+        <div class="section-heading-with-line">
+          <h2>Western Art Today</h2>
+        </div>
+
+        <p>Contemporary Western art continues to evolve.</p>
+
+        <p>Some artists still work within the heroic tradition, painting riders against sunsets or dramatic frontier scenes. Others explore modern ranch life, environmental tension, cultural identity, or the psychological weight of Western spaces.</p>
+
+        <p>The subject has expanded, but the core themes remain:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">Isolation and community</li>
+          <li style="margin-bottom:0.5rem;">Hardship and endurance</li>
+          <li style="margin-bottom:0.5rem;">Freedom and consequence</li>
+          <li style="margin-bottom:0.5rem;">Land as both refuge and challenge</li>
+        </ul>
+
+        <p>Western art is no longer just about history. It is about the ongoing meaning of the West.</p>
+
+        <!-- SECTION 9: Explore Western Themes in Practice -->
+        <div class="section-heading-with-line">
+          <h2>Explore Western Themes in Practice</h2>
+        </div>
+
+        <p>These thematic collections draw from the full body of Western work — each revealing a different facet of frontier life, mythology, and emotional truth.</p>
+
+        <div class="theme-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:0.75rem 1.5rem; margin:1.5rem 0 2.5rem;">
+          <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color?theme=cowboys-and-horses&view=grid" style="color:#8b5a2b; text-decoration:underline;">Cowboys and Horses</a>
+          <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color?theme=hardship-sorrow&view=grid" style="color:#8b5a2b; text-decoration:underline;">Hardship & Sorrow</a>
+          <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color?theme=frontier-women&view=grid" style="color:#8b5a2b; text-decoration:underline;">Frontier Women</a>
+          <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color?theme=law-outlaws&view=grid" style="color:#8b5a2b; text-decoration:underline;">Law & Outlaws</a>
+          <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color?theme=dust-thunder&view=grid" style="color:#8b5a2b; text-decoration:underline;">Dust & Thunder</a>
+          <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color?theme=firelight-shadow&view=grid" style="color:#8b5a2b; text-decoration:underline;">Firelight & Shadow</a>
+          <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color?theme=love-goodbye&view=grid" style="color:#8b5a2b; text-decoration:underline;">Love & Goodbye</a>
+          <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color?theme=the-chase&view=grid" style="color:#8b5a2b; text-decoration:underline;">The Chase</a>
+          <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color?theme=sketches-of-legends&view=grid" style="color:#8b5a2b; text-decoration:underline;">Sketches of Legends</a>
+          <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color?theme=whispering-reflection&view=grid" style="color:#8b5a2b; text-decoration:underline;">Whispering & Reflection</a>
+          <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color?theme=aces-smoke-whiskey&view=grid" style="color:#8b5a2b; text-decoration:underline;">Aces, Smoke & Whiskey</a>
+        </div>
+
+        <!-- SECTION 10: Explore at K4 Studios -->
+        <div class="section-heading-with-line">
+          <h2>Explore Western Fine Art at K4 Studios</h2>
+        </div>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Western Fine Art Photography</a> — The primary collection
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Cowboy & Western Life</a> — Character portraits and frontier scenes
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/Painterly" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Western Landscapes</a> — The land as emotional environment
+          </li>
+        </ul>
+
+      </article>
+    </section>
+
+    <!-- Western Art Series Navigation -->
+    <section class="series-nav" style="max-width:860px; margin:3rem auto 2rem; padding:0 1rem;">
+      <div style="text-align:center;">
+        <p style="font-size:0.95rem; color:#666; margin-bottom:0.75rem; font-weight:500;">Western Art Series</p>
+        <nav style="display:flex; justify-content:center; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+          <span style="font-weight:700; color:#8b5a2b;">1</span>
+          <span style="color:#ccc;">|</span>
+          <a href="/Blog/what-is-western-fine-art" style="color:#555; text-decoration:none; font-weight:500;" title="What Is Western Fine Art?">2</a>
+          <span style="color:#ccc;">|</span>
+          <a href="/Blog/what-is-western-fine-art-photography" style="color:#555; text-decoration:none; font-weight:500;" title="What Is Western Fine Art Photography?">3</a>
+          <span style="color:#ccc;">|</span>
+          <a href="/Blog/what-is-artistic-western-photography" style="color:#555; text-decoration:none; font-weight:500;" title="What Is Artistic Western Photography?">4</a>
+          <span style="color:#ccc;">|</span>
+          <a href="/Blog/what-is-painterly-photography" style="color:#555; text-decoration:none; font-weight:500;" title="What Is Painterly Photography?">5</a>
+          <span style="color:#ccc;">|</span>
+          <a href="/Blog/what-is-western-cowboy-art" style="color:#555; text-decoration:none; font-weight:500;" title="What Is Western Cowboy Art?">6</a>
+        </nav>
+      </div>
+    </section>
+
+    <SiteFooter />
+  </main>
+</BaseLayout>
+
+<style>
+  /* Header Image Bar - 7 images with 5:7 portrait crop and fade effect */
+  .header-image-bar {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0;
+    background: linear-gradient(to right, #fff, #f5f3f0 10%, #f5f3f0 90%, #fff);
+  }
+  .header-bar-link {
+    display: block;
+    text-decoration: none;
+  }
+  .header-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 280px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 3px;
+  }
+  .header-bar-image {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 5/7;
+  }
+  /* Center image (pos-3) is wider */
+  .header-bar-image.pos-3 {
+    flex: 1.5;
+  }
+  .header-bar-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    transition: transform 0.3s ease;
+  }
+  .header-bar-link:hover .header-bar-image img {
+    transform: scale(1.02);
+  }
+  
+  @media (max-width: 768px) {
+    .header-bar-container {
+      height: 180px;
+    }
+    /* Show only center 3 on mobile */
+    .header-bar-image.pos-0,
+    .header-bar-image.pos-1,
+    .header-bar-image.pos-5,
+    .header-bar-image.pos-6 {
+      display: none;
+    }
+  }
+
+  /* Section headings with line */
+  .section-heading-with-line {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+  }
+  .section-heading-with-line::after {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background: #d0d0d0;
+  }
+  .section-heading-with-line h2 {
+    margin: 0;
+    white-space: nowrap;
+  }
+  @media (max-width: 768px) {
+    .section-heading-with-line::after {
+      display: none;
+    }
+  }
+
+  /* Story block typography */
+  .story-section { line-height: 1.7; }
+  .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
+  .story-block h2 { 
+    margin-top: 0;
+    margin-bottom: 1rem; 
+    font-weight: 600; 
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    color: #1a1a1a;
+  }
+  .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+
+  /* Mobile adjustments */
+  @media (max-width: 640px) {
+    .story-section { padding-left: 1rem; padding-right: 1rem; }
+    .story-block p, .story-block ul { line-height: 1.6; }
+    .example-images { grid-template-columns: 1fr !important; }
+  }
+
+  /* Mobile overflow protection */
+  @media (max-width: 768px) {
+    main {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+    }
+    .story-section {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+    .section-heading-with-line h2 {
+      white-space: normal !important;
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+    }
+  }
+
+  /* Series nav responsive */
+  @media (max-width: 640px) {
+    .series-nav nav {
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+    }
+  }
+</style>

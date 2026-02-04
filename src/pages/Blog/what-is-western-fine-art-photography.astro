@@ -31,28 +31,28 @@ const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios
 // Representative images - curated selection demonstrating range:
 // Header bar: 5 unique images fading from edges to center (none reused in demo section)
 const headerImages = [
-  { id: "i-6Ffpw9t", alt: "Western scene fading into the edge" },                       // far left
-  { id: "i-89qzJ6S", alt: "Western character in painterly light" },                     // left
-  { id: "i-c5K798H", alt: "Cowboy with revolver drawn — defiant Western moment" },      // CENTER
-  { id: "i-LCspRF4", alt: "Cowboy at dusk reviewing the day" },                         // right
-  { id: "i-4Hz6D7k", alt: "Western frontier scene" },                                   // far right
+  { id: "i-6Ffpw9t", alt: "Frontier scene with atmospheric depth" },
+  { id: "i-89qzJ6S", alt: "Character study in warm directional light" },
+  { id: "i-c5K798H", alt: "Defiant moment — tension composed rather than captured" },
+  { id: "i-LCspRF4", alt: "Cowboy at dusk in quiet reflection" },
+  { id: "i-4Hz6D7k", alt: "Native American subject with compositional dignity" },
 ];
 
 // Demo section images (3) - different from header
 const image1 = {
   id: "i-ncFcHDM",
   src: getProxySrc("i-ncFcHDM", "l"),
-  alt: "Cowboy portrait in painterly light — a man, not a silhouette"
+  alt: "Cowboy rendered as a man rather than a silhouette — character over cliché"
 };
 const image2 = {
   id: "i-Txh4c8k",
   src: getProxySrc("i-Txh4c8k", "l"),
-  alt: "Cowboy practicing rope work in black and white — craft honed when no one is watching"
+  alt: "Rope work in black and white — craft practiced when no one is watching"
 };
 const image3 = {
   id: "i-7hD9CCh",
   src: getProxySrc("i-7hD9CCh", "l"),
-  alt: "Native American woman at the water's edge — presence, tradition, and quiet attention"
+  alt: "Quiet attention at the water's edge — presence over performance"
 };
 
 const pageTitle = "What Is Western Fine Art Photography? Definition, Distinction, and What It Is Not";
@@ -92,6 +92,7 @@ const structuredData = getStructuredData({
 // OG/Twitter capped at L
 const meta = {
   description: pageDescription,
+  keywords: "western fine art photography, western photography, cowboy photography, fine art western, western wall art, cowboy portraiture",
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogType: "article",
@@ -152,11 +153,15 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
       <article class="story-block space-y-4">
 
         <!-- SECTION 1: Definition (THE ANCHOR) -->
-        <p><strong>Western fine art photography</strong> is photography of the American West created as fine art — authored photography — not as documentation, not as décor, and not as commercial stock imagery. It is defined by authorship: intentional composition, narrative depth, and emotional resonance that cannot be replicated by pointing a camera at a beautiful subject.</p>
+        <p><strong>Western fine art photography</strong> is the photographic expression of <a href="/Blog/what-is-western-fine-art" style="color:#8b5a2b; text-decoration:underline;">Western fine art</a>—authored work engaging the American West with intentional composition, narrative depth, and artistic restraint.</p>
 
-        <p>The distinction is not subtle. A photograph of a cowboy is not automatically Western fine art. A landscape of Monument Valley is not fine art simply because it is beautiful.</p>
+        <p>It is photography created as fine art, not as documentation, décor, or commercial stock imagery. It is defined by authorship: decisions about structure, light, atmosphere, and emotional meaning that elevate the work beyond record-keeping.</p>
 
-        <p>Fine art requires the photographer to make decisions — about light, about structure, about what the image will mean — that elevate the work beyond record-keeping. The subject does not confer the status. The authorship does.</p>
+        <p>The distinction is not subtle.<br>
+        A photograph of a cowboy is not automatically Western fine art.<br>
+        A landscape of Monument Valley is not fine art simply because it is beautiful.</p>
+
+        <p>Fine art requires the photographer to make decisions about what the image will mean. The subject does not confer status. The authorship does.</p>
 
         <p>This article defines what Western fine art photography is, what it is not, and why the distinction matters for collectors, curators, and anyone seeking work that endures on a wall rather than in a folder.</p>
 
@@ -168,51 +173,76 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
           </p>
         </div>
 
-        <!-- SECTION 2: What It Is Not (THE CORRECTIVE) -->
+        <!-- SECTION 2: Where It Fits -->
+        <div class="section-heading-with-line">
+          <h2>Where Western Fine Art Photography Fits</h2>
+        </div>
+
+        <p>Western fine art photography is not a separate category from <a href="/Blog/what-is-western-fine-art" style="color:#8b5a2b; text-decoration:underline;">Western fine art</a>. It is one of its mediums.</p>
+
+        <p><a href="/Blog/what-is-western-art" style="color:#8b5a2b; text-decoration:underline;">Western art</a> as a whole includes illustration, film, décor imagery, and commercial photography. Western fine art represents the authored core of that tradition—work created with lasting artistic intent.</p>
+
+        <p>Western fine art photography sits inside that core.<br>
+        It applies the same authorship standards historically associated with painting to the photographic medium.</p>
+
+        <p>The criteria are the same:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">Intentional composition</li>
+          <li style="margin-bottom:0.5rem;">Narrative structure</li>
+          <li style="margin-bottom:0.5rem;">Emotional depth</li>
+          <li style="margin-bottom:0.5rem;">Technical restraint</li>
+          <li style="margin-bottom:0.5rem;">Long-term artistic ambition</li>
+        </ul>
+
+        <p>If the work meets those standards, it belongs in the Western fine art conversation—regardless of whether it was painted or photographed.</p>
+
+        <!-- SECTION 3: What It Is Not -->
         <div class="section-heading-with-line">
           <h2>What Western Fine Art Photography Is Not</h2>
         </div>
 
-        <p>The term "Western photography" has been stretched until it means almost nothing. Search for it and you will find stock silhouettes, mass-produced sunset prints, and decorative pieces designed to match leather furniture. These serve legitimate purposes — but they are not fine art, and conflating them obscures what fine art actually requires.</p>
+        <p>The term "Western photography" has been stretched until it means almost nothing. Search for it and you will find stock silhouettes, mass-produced sunset prints, and decorative pieces designed to match leather furniture.</p>
 
-        <p><strong>Western décor photography</strong> is designed for visual appeal without narrative weight. It prioritizes color coordination and recognizable motifs — a horse against a sunset, a barn in golden light — over meaning. There is nothing wrong with décor, but calling it fine art misrepresents both categories. Décor fills a space. Fine art occupies attention.</p>
+        <p>These serve legitimate purposes—but they are not fine art.</p>
 
-        <p><strong>Stock Western imagery</strong> treats the West as a backdrop — interchangeable, licensable, and stripped of specificity. The cowboy becomes a silhouette. The landscape becomes wallpaper. The image exists to be placed, not encountered.</p>
+        <p><strong>Western décor photography</strong><br>
+        Designed for visual appeal without narrative weight. It prioritizes color coordination and familiar motifs over meaning.</p>
 
-        <p><strong>Event and rodeo photography</strong> documents action. It captures moments of athletic performance or cultural gathering. This is valuable journalism and preservation work, but it is not authored in the way fine art requires. The photographer responds to what happens; the fine art photographer constructs what the image will mean.</p>
+        <p><strong>Stock Western imagery</strong><br>
+        Treats the West as interchangeable backdrop. The cowboy becomes a silhouette. The landscape becomes wallpaper.</p>
 
-        <p>Western fine art photography operates differently. It is not reactive. It is built — light by light, frame by frame, decision by decision.</p>
+        <p><strong>Event and rodeo photography</strong><br>
+        Documents action and performance. Valuable as journalism or record, but reactive rather than authored.</p>
 
-        <!-- SECTION 3: What Defines It (THE DISTINCTION) -->
+        <p>Western fine art photography operates differently.<br>
+        It is not reactive. It is built—light by light, frame by frame, decision by decision.</p>
+
+        <!-- SECTION 4: What Defines It -->
         <div class="section-heading-with-line">
           <h2>What Defines Western Fine Art Photography</h2>
         </div>
 
-        <p>Fine art photography — Western or otherwise — is characterized by authorship. The photographer makes decisions that shape how the image functions, what it communicates, and how it rewards attention over time. The photograph is not found. It is made.</p>
+        <p>Fine art photography—Western or otherwise—is defined by authorship. The photographer shapes how the image functions, what it communicates, and how it rewards attention over time.</p>
 
-        <p>In Western fine art photography, this authorship typically involves:</p>
+        <p>The photograph is not found.<br>
+        It is made.</p>
 
-        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
-          <li style="margin-bottom:0.75rem;"><strong>Character over archetype.</strong> Cowboys, ranchers, and frontier figures appear as individuals rather than symbols. Their humanity is visible — in posture, expression, history written into hands and faces.</li>
-          <li style="margin-bottom:0.75rem;"><strong>Narrative structure.</strong> Each image implies a story rather than freezing a moment. Something has happened. Something is about to. The viewer completes what the image begins.</li>
-          <li style="margin-bottom:0.75rem;"><strong>Emotional landscape.</strong> The land is not background. It shapes character, reflects internal states, and carries memory. Sky, weather, and distance function as narrative elements.</li>
-          <li style="margin-bottom:0.75rem;"><strong>Craft and restraint.</strong> Light is controlled. Composition is deliberate. The image is built for the print, not the screen.</li>
-        </ul>
+        <p>In Western fine art photography, this authorship often appears as:</p>
+
+        <p><strong>Character over archetype</strong><br>
+        Cowboys, ranchers, and frontier figures appear as individuals rather than symbols.</p>
+
+        <p><strong>Narrative structure</strong><br>
+        Each image implies a story. Something has happened. Something is about to.</p>
+
+        <p><strong>Emotional landscape</strong><br>
+        The land shapes the human experience. Weather, sky, and distance function as narrative elements.</p>
+
+        <p><strong>Craft and restraint</strong><br>
+        Light is controlled. Composition is deliberate. The image is built for the print, not the screen.</p>
 
         <p>This is the difference between taking a picture and making one.</p>
-
-        <!-- SECTION 4: A Practitioner's Perspective (AUTHORITY) -->
-        <div class="section-heading-with-line">
-          <h2>A Practitioner's Perspective</h2>
-        </div>
-
-        <p>My work is rooted in this discipline. As a fine art photographer and former medical illustrator, I approach Western subjects with the same structural intention I once applied to anatomical rendering — clarity, restraint, and commitment to the finished object. A print must reward attention for years, not just survive the scroll.</p>
-
-        <p>The painterly quality in my Western photographs is not a filter. It emerges from directional light, atmospheric conditions, and compositional control carried through to the final print. Every image is conceived as a story rather than a moment — a single cinematic frame drawn from a larger narrative the viewer must complete.</p>
-
-        <p>My subjects include cowboy portraiture, frontier character studies, Indigenous representation created through collaboration and respect, and Western landscapes treated as emotional environments rather than scenic views. The West I photograph is not a postcard. It is specific, layered, and inhabited.</p>
-
-        <p>This work continues a tradition extending from the Pictorialist movement of the early twentieth century through contemporary fine art practice — photography that functions as authored art rather than captured record. I did not invent this lineage. I continue it.</p>
 
         <!-- SECTION 5: Visual Demonstration -->
         <div class="section-heading-with-line">
@@ -228,6 +258,9 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
                 loading="lazy"
               />
             </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Cowboy portrait in painterly light — a man, not a silhouette
+            </figcaption>
           </figure>
           
           <figure>
@@ -238,6 +271,9 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
                 loading="lazy"
               />
             </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Rope work in black and white — craft practiced when no one is watching
+            </figcaption>
           </figure>
 
           <figure>
@@ -248,15 +284,31 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
                 loading="lazy"
               />
             </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Native American woman at the water's edge — presence, memory, and quiet attention
+            </figcaption>
           </figure>
         </div>
 
-        <!-- SECTION 6: Late Funnel (WHERE TO GO) -->
+        <!-- SECTION 6: Why the Distinction Matters -->
+        <div class="section-heading-with-line">
+          <h2>Why the Distinction Matters</h2>
+        </div>
+
+        <p>For collectors, the distinction determines long-term value. Fine art is collected, written about, exhibited, and preserved. Commercial imagery is replaceable.</p>
+
+        <p>For curators, it allows Western photography to be discussed alongside painting and sculpture, rather than confined to documentary or decorative categories.</p>
+
+        <p>For artists, the distinction is structural. It determines whether the work participates in a fine art tradition or remains outside it.</p>
+
+        <p>Western fine art photography exists to be considered over time—not simply viewed once and replaced.</p>
+
+        <!-- SECTION 7: Explore -->
         <div class="section-heading-with-line">
           <h2>Explore the Work</h2>
         </div>
 
-        <p>This article defines Western fine art photography as a discipline. The following pages present the work itself:</p>
+        <p>This article defines Western fine art photography as a discipline. The following collections present the work itself:</p>
 
         <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
           <li style="margin-bottom:0.75rem;">
@@ -264,32 +316,38 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
             <span style="color:#666;">The full collection</span>
           </li>
           <li style="margin-bottom:0.75rem;">
-            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" style="color:#8b5a2b; text-decoration:underline;">Western Cowboy Portraits</a> — 
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" style="color:#8b5a2b; text-decoration:underline;">Western Cowboy Portraits</a> — 
             <span style="color:#666;">Character studies in color and black & white</span>
           </li>
           <li style="margin-bottom:0.75rem;">
             <a href="/Painterly-Western-Photography" style="color:#8b5a2b; text-decoration:underline;">Painterly Western Photography</a> — 
-            <span style="color:#666;">The craft behind the work</span>
-          </li>
-          <li>
-            <a href="/wayne-heim-western-fine-art-photography" style="color:#8b5a2b; text-decoration:underline;">About the Artist</a> — 
-            <span style="color:#666;">Background and approach</span>
+            <span style="color:#666;">The visual language behind the work</span>
           </li>
         </ul>
 
-        <p>Western fine art photography, at its best, invites the viewer past the familiar and into something specific — a person, a story, a moment that belongs to no one else. The work does not explain itself. It asks to be entered.</p>
-
-        <!-- Related Definitions Block -->
-        <div class="related-definitions" style="background:#f8f6f3; border-left:4px solid #8b5a2b; padding:1.25rem 1.5rem; margin:2rem 0; border-radius:0 8px 8px 0;">
-          <p style="margin:0 0 0.75rem 0; font-weight:600; color:#1a1a1a;">Related Definitions</p>
-          <ul style="list-style:disc; padding-left:1.25rem; margin:0;">
-            <li style="margin-bottom:0.5rem;"><a href="/Blog/what-is-western-fine-art" style="color:#8b5a2b; text-decoration:underline;">What Is Western Fine Art?</a></li>
-            <li style="margin-bottom:0.5rem;"><a href="/Blog/what-is-painterly-photography" style="color:#8b5a2b; text-decoration:underline;">What Is Painterly Photography?</a></li>
-            <li><a href="/Blog/what-is-artistic-western-photography" style="color:#8b5a2b; text-decoration:underline;">What Is Artistic Western Photography?</a></li>
-          </ul>
-        </div>
+        <p>Western fine art photography, at its best, invites the viewer past the familiar and into something specific—a person, a story, a moment that belongs to no one else.</p>
 
       </article>
+    </section>
+
+    <!-- Western Art Series Navigation -->
+    <section class="series-nav" style="max-width:860px; margin:3rem auto 2rem; padding:0 1rem;">
+      <div style="text-align:center;">
+        <p style="font-size:0.95rem; color:#666; margin-bottom:0.75rem; font-weight:500;">Western Art Series</p>
+        <nav style="display:flex; justify-content:center; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+          <a href="/Blog/what-is-western-art" style="color:#555; text-decoration:none; font-weight:500;" title="What Is Western Art?">1</a>
+          <span style="color:#ccc;">|</span>
+          <a href="/Blog/what-is-western-fine-art" style="color:#555; text-decoration:none; font-weight:500;" title="What Is Western Fine Art?">2</a>
+          <span style="color:#ccc;">|</span>
+          <span style="font-weight:700; color:#8b5a2b;">3</span>
+          <span style="color:#ccc;">|</span>
+          <a href="/Blog/what-is-artistic-western-photography" style="color:#555; text-decoration:none; font-weight:500;" title="What Is Artistic Western Photography?">4</a>
+          <span style="color:#ccc;">|</span>
+          <a href="/Blog/what-is-painterly-photography" style="color:#555; text-decoration:none; font-weight:500;" title="What Is Painterly Photography?">5</a>
+          <span style="color:#ccc;">|</span>
+          <a href="/Blog/what-is-western-cowboy-art" style="color:#555; text-decoration:none; font-weight:500;" title="What Is Western Cowboy Art?">6</a>
+        </nav>
+      </div>
     </section>
 
     <SiteFooter />

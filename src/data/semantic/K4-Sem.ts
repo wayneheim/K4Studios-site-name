@@ -166,6 +166,25 @@ facingHistory: {
 },
 
 // ============================================================================
+// DEFINITION ARTICLE: WESTERN ART (ROOT DEFINITION)
+// The semantic root that feeds authority to all Western-related definition pages.
+// ============================================================================
+
+westernArtDefinition: {
+  path: "/Blog/what-is-western-art",
+  def: "Western art is a visual language built around the landscapes, people, conflicts, and ideals of the American West—defined not by medium but by authorship, intent, and vision.",
+  landingPhrases: [
+    { phrase: "what is western art", rating: 5, use: true },
+    { phrase: "western art", rating: 5, use: true },
+    { phrase: "western art definition", rating: 5, use: true },
+    { phrase: "western art history", rating: 4, use: true },
+    { phrase: "american western art", rating: 4, use: true },
+    { phrase: "define western art", rating: 4, use: true },
+  ],
+  imagePhrases: []
+},
+
+// ============================================================================
 // DEFINITION ARTICLE: WESTERN FINE ART PHOTOGRAPHY
 // Cornerstone definition page — requires high internal link authority.
 // ============================================================================
