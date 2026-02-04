@@ -46,6 +46,15 @@ export default function RebuiltScrollGrid({
   const [headingHover, setHeadingHover] = useState(false);
   const [seriesRegistry, setSeriesRegistry] = useState(null);
   const rowRefs = useRef({});
+  // Track which image IDs have already been animated (don't re-animate on range expansion)
+  const animatedIds = useRef(new Set());
+  
+  // Track the range of images that have been loaded (expands as user navigates)
+  const paddingTop = colCount * 5;
+  const paddingBottom = colCount * 8;
+  const initialStart = Math.max(0, initialImageIndex - paddingTop);
+  const initialEnd = Math.min(galleryData.length, initialImageIndex + paddingBottom);
+  const [loadedRange, setLoadedRange] = useState({ start: initialStart, end: initialEnd });
 
   // Load series registry on mount
   useEffect(() => {
@@ -95,11 +104,19 @@ export default function RebuiltScrollGrid({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const paddingTop = colCount * 5;
-  const paddingBottom = colCount * 8;
   const start = Math.max(0, simIndex - paddingTop);
   const end = Math.min(galleryData.length, simIndex + paddingBottom);
-  const visibleData = galleryData.slice(start, end);
+  
+  // Expand loaded range when user navigates (but never shrink it)
+  useEffect(() => {
+    setLoadedRange(prev => ({
+      start: Math.min(prev.start, start),
+      end: Math.max(prev.end, end)
+    }));
+  }, [start, end]);
+  
+  // Use the expanded range - keeps all previously loaded images in DOM
+  const visibleData = galleryData.slice(loadedRange.start, loadedRange.end);
 
   useEffect(() => {
     if (!pendingPrepend) return;
@@ -279,14 +296,14 @@ export default function RebuiltScrollGrid({
       </div>
       )}
 
-      {/* Show Previous Button */}
-      {start > 0 && (
+      {/* Show Previous Button - loads earlier images and keeps them */}
+      {loadedRange.start > 0 && (
         <div className="flex justify-center mb-8 z-10">
           <button
             className="block px-6 py-2 bg-[#f9f6f2] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition z-10"
             style={{ border: "2px solid #d1d5db", position: "relative" }}
             onClick={() => {
-              setSimIndex(start);
+              setSimIndex(loadedRange.start);
               setAnchorOnNextUpdate(false);
               setPendingPrepend(true);
             }}
@@ -304,24 +321,42 @@ export default function RebuiltScrollGrid({
           gap: "2rem",
         }}
       >
-        {visibleData.map((entry, i) => {
-          const globalIndex = start + i;
-          const rowIndex = Math.floor(globalIndex / colCount);
-          const rowAnchor = globalIndex % colCount === 0;
-          const gridSrc = getPreferredSrc(entry, colCount);
+        {(() => {
+          // Calculate which cards are new BEFORE rendering (so we get accurate stagger index)
+          const newCardIndices = [];
+          visibleData.forEach((entry, i) => {
+            if (entry?.id && !animatedIds.current.has(entry.id)) {
+              newCardIndices.push(i);
+            }
+          });
+          
+          return visibleData.map((entry, i) => {
+            const globalIndex = loadedRange.start + i;
+            const rowIndex = Math.floor(globalIndex / colCount);
+            const rowAnchor = globalIndex % colCount === 0;
+            const gridSrc = getPreferredSrc(entry, colCount);
+            
+            // Check if this is a new card that needs animation
+            const isNewCard = entry?.id && !animatedIds.current.has(entry.id);
+            const staggerIndex = isNewCard ? newCardIndices.indexOf(i) : 0;
+            
+            // Mark as animated after first render
+            if (isNewCard) {
+              animatedIds.current.add(entry.id);
+            }
 
-          return gridSrc && entry?.title ? (
-            <motion.div
-              key={entry.id || globalIndex}
-              ref={(el) => rowAnchor && (rowRefs.current[`row-${rowIndex}`] = el)}
-              variants={cardVariants}
-              initial="hidden"
-              animate="visible"
-              custom={i}
-              onClick={() => onCardClick?.(globalIndex)}
-              className="rounded-xl border border-gray-300 p-4 hover:shadow-md cursor-pointer flex flex-col will-change-transform"
-              style={{ backgroundColor: "#f7f3eb" }}
-            >
+            return gridSrc && entry?.title ? (
+              <motion.div
+                key={entry.id || globalIndex}
+                ref={(el) => rowAnchor && (rowRefs.current[`row-${rowIndex}`] = el)}
+                variants={cardVariants}
+                initial={isNewCard ? "hidden" : "visible"}
+                animate="visible"
+                custom={staggerIndex}
+                onClick={() => onCardClick?.(globalIndex)}
+                className="rounded-xl border border-gray-300 p-4 hover:shadow-md cursor-pointer flex flex-col will-change-transform"
+                style={{ backgroundColor: "#f7f3eb" }}
+              >
               <div className="aspect-[4/5] bg-[#eae6df] rounded-sm overflow-hidden relative">
                 <div
                   className="absolute inset-0 rounded-sm pointer-events-none"
@@ -431,7 +466,8 @@ export default function RebuiltScrollGrid({
               MISSING DATA AT INDEX {globalIndex}
             </div>
           );
-        })}
+        });
+        })()}
       </div>
 
       <div className="flex justify-center mt-8 gap-4">

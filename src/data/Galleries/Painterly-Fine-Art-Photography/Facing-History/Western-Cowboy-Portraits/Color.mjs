@@ -1018,8 +1018,8 @@ export const galleryData = [
   {
     "id": "i-NDnxRkx",
     "title": "Outlaw Watch",
-    "description": "A painterly Western photograph portraying a lone cowboy on horseback, defined by vigilance rather than spectacle. This image reflects the disciplined restraint of fine art Western photography, where posture, distance, and atmosphere shape the narrative of the American frontier. Light and compositional balance evoke consequence, patience, and the quiet tension that lives between moments in the Old West. © Wayne Heim",
-    "alt": "painterly Western cowboy portrait on horseback watching the American frontier",
+    "description": "A painterly Western photograph portraying a lone cowgirl on horseback, defined by vigilance rather than spectacle. This image reflects the disciplined restraint of fine art Western photography, where posture, distance, and atmosphere shape the narrative of the American frontier. Light and compositional balance evoke consequence, patience, and the quiet tension that lives between moments in the Old West. © Wayne Heim",
+    "alt": "painterly Western cowgirl portrait on horseback watching the American frontier",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/1/LRnzXB6F46R24jsXfgtrB54wqkxFVXpXH99wpQqw6/XL/_HF26194-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/1/LRnzXB6F46R24jsXfgtrB54wqkxFVXpXH99wpQqw6/XL/_HF26194-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/1/LRnzXB6F46R24jsXfgtrB54wqkxFVXpXH99wpQqw6/XL/_HF26194-Edit-XL.jpg",
@@ -1027,6 +1027,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/1/NjmxHS23sqxBKZCGs3MzvspXNnW9XjXC57NwV56nk/S/_HF26194-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -1052,19 +1053,23 @@ export const galleryData = [
       "wild west photography",
       "Explore Western Photography"
     ],
-    "story": "He doesn’t scan the horizon out of habit.\nHe scans it because that’s where things change without warning.\n\nThe horse settles beneath him, breathing slow, weight shared.\nNothing moves, but that doesn’t mean nothing’s coming.\nOut here, stillness is just another form of noise.\n\nHe waits—not for trouble, but for confirmation.\nSome moments announce themselves.\nOthers require a man willing to look long enough.",
+
+    "story": "She doesn’t scan the horizon out of habit.\nShe scans it because that’s where things change without warning.\n\nThe horse settles beneath her, breathing slow, weight shared.\nNothing moves, but that doesn’t mean nothing’s coming.\nOut here, stillness is just another form of noise.\n\nShe waits—not for trouble, but for confirmation.\nSome moments announce themselves.\nOthers require a woman willing to look long enough.",
     "notes": "This work draws from the tradition of narrative restraint seen in Western illustrators and painters such as Remington and Wyeth, where tension is built through posture and silence rather than action. The composition emphasizes vertical authority and distance, allowing the horse and rider to function as a single, grounded presence against the landscape.\n\nThe painterly treatment softens literal detail in favor of mood and implication, aligning the image more closely with pictorialist sensibilities than documentary realism. The result is a Western portrait that rewards prolonged viewing, inviting the collector to inhabit the moment rather than resolve it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 18,
+
     "themes": {
       "women-of-the-west": 19,
       "cowboys-and-horses": 77,
       "frontier-women": 99,
       "love-goodbye": 51,
       "sketches-of-legends": 132
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-4XLSsnC",
