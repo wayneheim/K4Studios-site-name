@@ -26,8 +26,8 @@ export const landingWestern = {
     {
       title: 'Trains & Locomotives: B/W Photos',
       href: '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White',
-      imageId: "i-NXqvv7J",
-      thumb: "/img/i-NXqvv7J/s",
+      imageId: "i-FrDFN7V",
+      thumb: "/img/i-FrDFN7V/s",
     },
      {
       title: 'Classic Car Photos',

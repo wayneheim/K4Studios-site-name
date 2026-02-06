@@ -77,8 +77,12 @@ function getSmartFeatheredImages({
   // Load images pools
   const galleriesWithImages = groupArrs.map(group =>
     group.map(child => {
+      // Try standard path first, then nested folder structure
       const filePath = '../../data' + child.href + '.mjs';
-      const mod: any = allGalleryData[filePath];
+      const parts = child.href.split('/');
+      const lastSegment = parts[parts.length - 1];
+      const nestedPath = '../../data' + child.href + '/' + lastSegment + '.mjs';
+      const mod: any = allGalleryData[filePath] || allGalleryData[nestedPath];
       const allImages: Image[] = (mod?.galleryData || mod?.default || [])
         .filter((img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id))
         .map((img: Image) => ({ ...img, __galleryHref: child.href }));
@@ -128,8 +132,12 @@ function getClassicFeatheredImages({
 }): Image[] {
   const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
   const galleriesWithImages = shuffle(galleryChildren).map(child => {
+    // Try standard path first, then nested folder structure
     const filePath = '../../data' + child.href + '.mjs';
-    const mod: any = allGalleryData[filePath];
+    const parts = child.href.split('/');
+    const lastSegment = parts[parts.length - 1];
+    const nestedPath = '../../data' + child.href + '/' + lastSegment + '.mjs';
+    const mod: any = allGalleryData[filePath] || allGalleryData[nestedPath];
     const allImages: Image[] = (mod?.galleryData || mod?.default || [])
       .filter((img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id))
       .map((img: Image) => ({ ...img, __galleryHref: child.href }));
@@ -163,16 +171,19 @@ export function getSideImages({
   sectionPath,
   headingCount,
   excludeIds = new Set<string>(),
+  poolMultiplier = 1,
 }: {
   sectionPath: string;
   headingCount: number;
   excludeIds?: Set<string>;
+  poolMultiplier?: number;
 }): Image[] {
+  const poolSize = headingCount * poolMultiplier;
   const galleryChildren = getAllGallerySources(sectionPath);
   if (!galleryChildren.length) return [];
 
   let featheredImages: Image[] = [];
-  let slotsLeft = headingCount;
+  let slotsLeft = poolSize;
 
   // --- WCP OVERRIDE LOGIC ---
   const isPainterlyOrFacing =
@@ -184,8 +195,12 @@ export function getSideImages({
   if (isPainterlyOrFacing && wcpGalleries.length) {
     const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true });
     const wcpImages = wcpGalleries.flatMap(child => {
+      // Try standard path first, then nested folder structure
       const filePath = '../../data' + child.href + '.mjs';
-      const mod: any = allGalleryData[filePath];
+      const parts = child.href.split('/');
+      const lastSegment = parts[parts.length - 1];
+      const nestedPath = '../../data' + child.href + '/' + lastSegment + '.mjs';
+      const mod: any = allGalleryData[filePath] || allGalleryData[nestedPath];
       return (mod?.galleryData || mod?.default || [])
         .filter((img: Image) => img.id && img.id !== 'i-k4studios' && !excludeIds.has(img.id))
         .map((img: Image) => ({ ...img, __galleryHref: child.href }));

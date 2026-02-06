@@ -62,9 +62,8 @@ const galleryDatas = galleryPaths.map(path => {
 const featheredImages = getSideImages({
   sectionPath,
   headingCount: mobileCount,
-  galleryDatas,
+  poolMultiplier: 3
 });
-const featheredImagesSidebar = featheredImages.slice(0, 6);
 
 // 🟩 STRUCTURED DATA for this landing (uses all feathered images)
 const structuredData = getStructuredData({
@@ -110,7 +109,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
     </div>
 
-    <div class="w-full max-w-[1200px] mx-auto px-4">
+    <div class="w-full max-w-[1200px] mx-auto px-4 pb-0">
       <div class="carousel-fade reveal-on-scroll">
         <ImageBar2 client:load />
       </div>
@@ -159,7 +158,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={mobileCount} />
       </div>
 
       <div class="sidebar-column hidden md:block">
@@ -167,7 +166,8 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
           <LandingRightImages
             client:load
             heading="Collection Samples"
-            images={featheredImagesSidebar}
+            images={featheredImages}
+            displayCount={6}
           />
         </div>
       </div>
@@ -244,7 +244,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       letter-spacing: -0.04em;
     }
     .section-heading-wrap {
-      margin-top: 1rem;
+      margin-top: -2.5rem;
       margin-bottom: 1rem;
     }
     .sidebar-column {
@@ -275,7 +275,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     transition-delay: .2s;
   }
   .section-heading-wrap {
-    margin: 1.5rem 0;
+    margin: -1.5rem 0 1.5rem 0;
     text-align: center;
   }
   .section-heading .page-title {

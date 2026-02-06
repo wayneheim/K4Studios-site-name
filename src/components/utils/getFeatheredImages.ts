@@ -14,6 +14,7 @@ interface FeatherOptions {
   galleryPaths?: string[]; // parallel array of gallery hrefs (children of section)
   minRating?: number;
   fallbackMin?: number;
+  poolMultiplier?: number; // Return poolMultiplier × headingCount for client-side rotation (default: 1)
 }
 
 export function getFeatheredImages({
@@ -24,7 +25,11 @@ export function getFeatheredImages({
   galleryPaths = [],
   minRating = 4,
   fallbackMin = 3,
+  poolMultiplier = 1,
 }: FeatherOptions): Image[] {
+  // Calculate total pool size for client-side rotation
+  const poolSize = headingCount * poolMultiplier;
+  
   function filterAndSort(data: Image[], count: number): Image[] {
     const strong = data.filter((img) => !excludeIds.has(img.id) && (img.rating ?? 0) >= minRating);
     const fallback = data.filter((img) => !excludeIds.has(img.id) && (img.rating ?? 0) >= fallbackMin);
@@ -52,25 +57,27 @@ export function getFeatheredImages({
     return p && p.startsWith('/') ? p : `${sectionPath}`;
   };
 
-  // Distribute images evenly from all three galleries
-  const colorImages = filterAndSort(colorGallery, Math.ceil(headingCount / 3));
+  // Distribute images evenly from all galleries (using poolSize for client rotation)
+  const perGallery = Math.ceil(poolSize / 3);
+  
+  const colorImages = filterAndSort(colorGallery, perGallery);
   colorImages.forEach(img => excludeIds.add(img.id));
 
-  const bwImages = filterAndSort(bwGallery, Math.ceil(headingCount / 3));
+  const bwImages = filterAndSort(bwGallery, perGallery);
   bwImages.forEach(img => excludeIds.add(img.id));
 
-  const naColorImages = filterAndSort(naColorGallery, headingCount - colorImages.length - bwImages.length);
+  const naColorImages = filterAndSort(naColorGallery, perGallery);
   naColorImages.forEach(img => excludeIds.add(img.id));
 
   const output: (Image & { __galleryIndex?: number })[] = [];
   // Interleave images from all three galleries
-  while (output.length < headingCount && (colorImages.length || bwImages.length || naColorImages.length)) {
+  while (output.length < poolSize && (colorImages.length || bwImages.length || naColorImages.length)) {
     if (colorImages.length) output.push({ ...(colorImages.shift()!), __galleryIndex: 0 });
-    if (bwImages.length && output.length < headingCount) output.push({ ...(bwImages.shift()!), __galleryIndex: 1 });
-    if (naColorImages.length && output.length < headingCount) output.push({ ...(naColorImages.shift()!), __galleryIndex: 2 });
+    if (bwImages.length && output.length < poolSize) output.push({ ...(bwImages.shift()!), __galleryIndex: 1 });
+    if (naColorImages.length && output.length < poolSize) output.push({ ...(naColorImages.shift()!), __galleryIndex: 2 });
   }
 
-  return output.slice(0, headingCount).map((img) => {
+  return output.slice(0, poolSize).map((img) => {
     const idx = img.__galleryIndex ?? 0;
     const base = galleryPathForIndex(idx);
     const cleanId = img.id.startsWith('i-') ? img.id : `i-${img.id}`;

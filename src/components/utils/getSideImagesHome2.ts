@@ -137,14 +137,20 @@ function pullImagesFromGalleries(
 export function getSideImagesHome2({
   targetCount = 100, // Changed default to 100 as requested
   excludeIds = new Set<string>(),
+  poolMultiplier = 1, // Return poolMultiplier × targetCount for client-side rotation
 }: {
   targetCount?: number;
   excludeIds?: Set<string>;
+  poolMultiplier?: number;
 }): {
   featheredImages: Image[],
   galleryDatas: Image[][],
   galleryPaths: string[]
 } {
+  // Calculate pool size for client-side rotation
+  const poolSize = targetCount * poolMultiplier;
+  const perCategory = Math.max(1, Math.ceil(poolSize / 6)); // 6 categories
+  
   // Define gallery categories
   const westernCowboyPaths = [
     "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits"
@@ -168,60 +174,45 @@ export function getSideImagesHome2({
   // Get all traditional (fine art) galleries
   const allTraditionalSources = getAllGallerySources("/Galleries/Fine-Art-Photography");
 
-  // 1. Select western cowboy image (must be first)
+  // 1. Select western cowboy images (first category)
   const westernCowboyGalleries = getGalleriesByPaths(westernCowboyPaths);
-  const westernCowboyImages = pullImagesFromGalleries(westernCowboyGalleries, 1, excludeIds, true);
+  const westernCowboyImages = pullImagesFromGalleries(westernCowboyGalleries, perCategory, excludeIds, true);
 
-  // 2. Select painterly landscape image
+  // 2. Select painterly landscape images
   const painterlyLandscapeGalleries = getGalleriesByPaths(painterlyLandscapePaths);
-  const painterlyLandscapeImages = pullImagesFromGalleries(painterlyLandscapeGalleries, 1, excludeIds, true);
+  const painterlyLandscapeImages = pullImagesFromGalleries(painterlyLandscapeGalleries, perCategory, excludeIds, true);
 
-  // 3. Select painterly other image (excluding western and landscape)
+  // 3. Select painterly other images (excluding western and landscape)
   const excludePainterlyPaths = westernCowboyPaths.concat(painterlyLandscapePaths);
   const painterlyOtherGalleries = getGalleriesExcludingPaths(excludePainterlyPaths)
     .filter(g => g.href.startsWith('/Galleries/Painterly-Fine-Art-Photography'));
-  const painterlyOtherImages = pullImagesFromGalleries(painterlyOtherGalleries, 1, excludeIds, true);
+  const painterlyOtherImages = pullImagesFromGalleries(painterlyOtherGalleries, perCategory, excludeIds, true);
 
-  // 4. Select traditional landscape image
+  // 4. Select traditional landscape images
   const traditionalLandscapeGalleries = getGalleriesByPaths(traditionalLandscapePaths);
-  const traditionalLandscapeImages = pullImagesFromGalleries(traditionalLandscapeGalleries, 1, excludeIds, true);
+  const traditionalLandscapeImages = pullImagesFromGalleries(traditionalLandscapeGalleries, perCategory, excludeIds, true);
 
-  // 5. Select transportation image
+  // 5. Select transportation images
   const transportationGalleries = getGalleriesByPaths(transportationPaths);
-  const transportationImages = pullImagesFromGalleries(transportationGalleries, 1, excludeIds, true);
+  const transportationImages = pullImagesFromGalleries(transportationGalleries, perCategory, excludeIds, true);
 
-  // 6. Select traditional other image (excluding landscape and transportation)
+  // 6. Select traditional other images (excluding landscape and transportation)
   const excludeTraditionalPaths = traditionalLandscapePaths.concat(transportationPaths);
   const traditionalOtherGalleries = getGalleriesExcludingPaths(excludeTraditionalPaths)
     .filter(g => g.href.startsWith('/Galleries/Fine-Art-Photography'));
-  const traditionalOtherImages = pullImagesFromGalleries(traditionalOtherGalleries, 1, excludeIds, true);
+  const traditionalOtherImages = pullImagesFromGalleries(traditionalOtherGalleries, perCategory, excludeIds, true);
 
   // Combine all selected images in alternating pattern: painterly/traditional/painterly/traditional...
   const featheredImages: Image[] = [];
 
-  // First image is always the western cowboy (painterly)
-  if (westernCowboyImages.length > 0) {
-    featheredImages.push(westernCowboyImages[0]);
-  }
-
-  // Create the alternating pattern with the remaining images
-  const painterlyImages = [painterlyLandscapeImages[0], painterlyOtherImages[0]].filter(Boolean);
-  const traditionalImages = [traditionalLandscapeImages[0], transportationImages[0], traditionalOtherImages[0]].filter(Boolean);
-
+  // Interleave all images from each category
+  const painterlyAll = [...westernCowboyImages, ...painterlyLandscapeImages, ...painterlyOtherImages];
+  const traditionalAll = [...traditionalLandscapeImages, ...transportationImages, ...traditionalOtherImages];
+  
   let p = 0, t = 0;
-  const maxImages = Math.min(targetCount - 1, painterlyImages.length + traditionalImages.length);
-
-  for (let i = 0; i < maxImages; i++) {
-    if (i % 2 === 0 && p < painterlyImages.length) {
-      // Even index: painterly
-      featheredImages.push(painterlyImages[p++]);
-    } else if (t < traditionalImages.length) {
-      // Odd index: traditional
-      featheredImages.push(traditionalImages[t++]);
-    } else if (p < painterlyImages.length) {
-      // Fallback to painterly if no more traditional
-      featheredImages.push(painterlyImages[p++]);
-    }
+  while (featheredImages.length < poolSize && (p < painterlyAll.length || t < traditionalAll.length)) {
+    if (p < painterlyAll.length) featheredImages.push(painterlyAll[p++]);
+    if (t < traditionalAll.length && featheredImages.length < poolSize) featheredImages.push(traditionalAll[t++]);
   }
 
   // Collect all gallery data for the linker

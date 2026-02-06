@@ -48474,11 +48474,28 @@ export const sectionGalleries = {
     "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color",
     "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White"
   ],
+  "/Galleries/Fine-Art-Photography/Landscapes/By-Location": [
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery"
+  ],
   "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International": [
     "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
     "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
     "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
     "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland"
+  ],
+  "/Galleries/Fine-Art-Photography/Landscapes/By-Theme": [
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color",
+    "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White"
   ],
   "/Galleries/Fine-Art-Photography/Portraits": [
     "/Galleries/Fine-Art-Photography/Portraits/Color",

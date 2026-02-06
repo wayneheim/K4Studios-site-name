@@ -51,7 +51,8 @@ const allCarousels = import.meta.glob([
   "../data/Western-Fine-Art-Photography/carousel.ts",
   "../data/Western-Black-and-White-Photography/carousel.ts",
   "../data/Western-Cowboy-Photography/carousel.ts",
-  "../data/Western-Wall-Art/carousel.ts"
+  "../data/Western-Wall-Art/carousel.ts",
+  "../data/Pictorialist-Photography/carousel.ts"
 ], { eager: true });
 
 export default function ImageBar2({ slides, pageContext: propPageContext }) {

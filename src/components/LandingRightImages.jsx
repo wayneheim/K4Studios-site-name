@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { warmImage } from "../utils/warmImage";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
@@ -10,15 +10,43 @@ const extractIdFromHref = (href) => {
   return match ? match[1] : null;
 };
 
-export default function LandingRightImages({ heading = "", images = [] }) {
-  // Warm first 3 sidebar images on mount (above fold)
-  // Rest are below fold and load naturally
+// Fisher-Yates shuffle
+const shuffleArray = (arr) => {
+  const shuffled = [...arr];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
+/**
+ * LandingRightImages - Sidebar image thumbnails with client-side rotation
+ * 
+ * Props:
+ * - images: Full pool of available images (pass more than needed for variety)
+ * - displayCount: Number of images to actually show (default: images.length)
+ * - heading: Section heading text
+ * 
+ * On each page load, picks a random subset from the pool for display.
+ */
+export default function LandingRightImages({ heading = "", images = [], displayCount }) {
+  // Client-side: pick random subset from pool on mount
+  const [displayImages, setDisplayImages] = useState([]);
+  
   useEffect(() => {
-    images.slice(0, 3).forEach(img => {
+    const count = displayCount || images.length;
+    const shuffled = shuffleArray(images);
+    setDisplayImages(shuffled.slice(0, count));
+  }, [images, displayCount]);
+  
+  // Warm first 3 displayed images on mount (above fold)
+  useEffect(() => {
+    displayImages.slice(0, 3).forEach(img => {
       const imageId = img.id || extractIdFromHref(img.href);
       if (imageId) warmImage(imageId, 's');
     });
-  }, [images]);
+  }, [displayImages]);
 
   return (
     <aside className="sidebar-thumbnails" data-dynamic-sidebar>
@@ -26,13 +54,13 @@ export default function LandingRightImages({ heading = "", images = [] }) {
         <h3 className="thumb-heading">{heading}</h3>
       </div>
 
-      {images.map(({ href, id, alt, title }, index) => {
+      {displayImages.map(({ href, id, alt, title }, index) => {
         // Get ID from prop or extract from href
         const imageId = id || extractIdFromHref(href);
         const imageSrc = imageId ? getProxySrc(imageId, 's') : '';
         
         return (
-          <a href={href} key={href} data-sidebar-index={index} style={index > 0 ? { visibility: 'hidden' } : {}}>
+          <a href={href} key={href || id} data-sidebar-index={index} style={index > 0 ? { visibility: 'hidden' } : {}}>
             <img
               src={imageSrc}
               alt={alt}

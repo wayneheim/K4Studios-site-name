@@ -28,10 +28,12 @@ import '../styles/global.css';
 const sectionPath = "/index"; // treat homepage as special section
 
 const headingCount = painterlyStory.filter((block, i) => i > 0 && block.subhead).length;
+// Pool 3x more images for client-side rotation variety
 const { featheredImages, galleryDatas, galleryPaths } = getSideImages({
-  targetCount: headingCount
+  targetCount: headingCount,
+  poolMultiplier: 3
 });
-const featheredImagesSidebar = featheredImages.slice(0, 6);
+// Pass full pool to component, let it pick displayCount randomly on client
 
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
 function getProxySrc(imageId: string, size: string = 'm'): string {
@@ -166,7 +168,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
       </div>
 
       <div class="sidebar-column hidden md:block">
@@ -186,8 +188,10 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
         
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
+            client:load
             heading="Explore Other Themes"
-            images={featheredImagesSidebar}
+            images={featheredImages}
+            displayCount={6}
           />
         </div>
       </div>

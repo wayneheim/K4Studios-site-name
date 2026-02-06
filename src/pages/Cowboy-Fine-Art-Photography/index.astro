@@ -92,9 +92,10 @@ const featheredImages = getFeatheredImages({
   galleryDatas,
   galleryPaths,
   minRating: 3,
-  fallbackMin: 1
+  fallbackMin: 1,
+  poolMultiplier: 3
 });
-const featheredImagesSidebar = featheredImages.slice(0, 6);
+// Pass full pool to component for client-side rotation
 
 // ----------------------
 // STRUCTURED DATA (URL MUST BE THE HUB PAGE)
@@ -328,7 +329,7 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
       </div>
 
       <div class="sidebar-column hidden md:block">
@@ -336,7 +337,8 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
           <LandingRightImages
             client:load
             heading="Cowboy Collection Samples"
-            images={featheredImagesSidebar}
+            images={featheredImages}
+            displayCount={6}
           />
         </div>
       </div>

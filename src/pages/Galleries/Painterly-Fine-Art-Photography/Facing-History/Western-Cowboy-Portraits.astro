@@ -72,7 +72,8 @@ const galleryDatas = galleryPaths.map(path => {
 });
 
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
-const featheredImages = getFeatheredImages({ sectionPath, headingCount, galleryDatas, galleryPaths });
+// Pool 3x more images for client-side rotation variety
+const featheredImages = getFeatheredImages({ sectionPath, headingCount, galleryDatas, galleryPaths, poolMultiplier: 3 });
 
 // Structured data for gallery landing
 const structuredData = getStructuredData({
@@ -225,7 +226,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
       </div>
 
       <div class="sidebar-column hidden md:block">
@@ -236,7 +237,8 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
           <LandingRightImages
             client:load
             heading="Featured Portraits"
-            images={featheredImages.slice(0, 5)}
+            images={featheredImages}
+            displayCount={5}
           />
         </div>
       </div>

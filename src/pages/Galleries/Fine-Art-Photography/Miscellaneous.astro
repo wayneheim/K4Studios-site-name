@@ -63,7 +63,7 @@ const galleryDatas = galleryPaths.map(path => {
 const featheredImages = getSideImages({
   sectionPath,
   headingCount,
-  galleryDatas,
+  poolMultiplier: 3
 });
 const featheredImagesSidebar = featheredImages.slice(0, 6);
 
@@ -180,6 +180,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
+            client:load
             heading="Collection Samples"
             images={featheredImagesSidebar}
           />

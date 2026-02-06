@@ -1,9 +1,29 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
 
-export default function MobileStoryImages({ images = [] }) {
+// Fisher-Yates shuffle
+const shuffleArray = (arr) => {
+  const shuffled = [...arr];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
+/**
+ * MobileStoryImages - Inline images for mobile with client-side rotation
+ * 
+ * Props:
+ * - images: Full pool of available images (pass more than needed for variety)
+ * - displayCount: Number of images to insert (default: based on story blocks)
+ */
+export default function MobileStoryImages({ images = [], displayCount }) {
+  // Shuffle pool once on mount for this page load
+  const shuffledImages = useMemo(() => shuffleArray(images), [images]);
+  
   useEffect(() => {
     if (window.innerWidth > 768) {
       console.log("MobileStoryImages: skipping on desktop");
@@ -13,20 +33,21 @@ export default function MobileStoryImages({ images = [] }) {
     const tryInsertImages = () => {
       const storyBlocks = document.querySelectorAll(".story-block");
       console.log("MobileStoryImages: Found story blocks →", storyBlocks.length);
-      console.log("MobileStoryImages: Images passed in →", images.length);
+      console.log("MobileStoryImages: Shuffled images available →", shuffledImages.length);
 
-      if (!storyBlocks.length || !images.length) {
+      if (!storyBlocks.length || !shuffledImages.length) {
         console.log("MobileStoryImages: Retrying in 300ms...");
         return setTimeout(tryInsertImages, 300);
       }
 
       let insertedCount = 0;
+      const maxToInsert = displayCount || shuffledImages.length;
 
       storyBlocks.forEach((block, index) => {
         const h3 = block.querySelector("h3");
-        if (!h3 || index === 0 || !images[insertedCount]) return;
+        if (!h3 || index === 0 || insertedCount >= maxToInsert || !shuffledImages[insertedCount]) return;
 
-        const match = images[insertedCount];
+        const match = shuffledImages[insertedCount];
         insertedCount++;
 
         const container = document.createElement("div");
@@ -53,13 +74,13 @@ export default function MobileStoryImages({ images = [] }) {
         container.appendChild(link);
         container.appendChild(caption);
 
-        console.log(`Inserting linked mobile image before <h3> in block[${index}]:`, match.src);
+        console.log(`Inserting linked mobile image before <h3> in block[${index}]:`, match.id);
         h3.parentNode?.insertBefore(container, h3);
       });
     };
 
     tryInsertImages();
-  }, [images]);
+  }, [shuffledImages, displayCount]);
 
   return (
     <>
