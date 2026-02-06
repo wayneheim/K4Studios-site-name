@@ -32,14 +32,13 @@ const SIZE_FALLBACK = {
   src: ['src', 's', 'm', 'l', 'xl']
 };
 
-// Bot detection patterns - only Bing gets special treatment
-const BING_BOT_PATTERN = /bingbot|msnbot|bingpreview/i;
+// REMOVED: Bing size capping - causes "cloaking" detection
+// Bing expects same URL = same bytes. UA-based size changes break trust.
+// const BING_BOT_PATTERN = /bingbot|msnbot|bingpreview/i;
+// const BING_MAX_SIZE = 'm';
 
 // General bot pattern for image page policy
 const BOT_UA_PATTERN = /googlebot|bingbot|yandex|baiduspider|duckduckbot|slurp|msnbot|facebookexternalhit|twitterbot|linkedinbot|applebot/i;
-
-// Maximum size Bing is allowed to receive
-const BING_MAX_SIZE = 'm';
 
 // ============================================================================
 // MANIFEST CACHE
@@ -150,32 +149,22 @@ async function getImageIdMap(ctx) {
 }
 
 // ============================================================================
-// BOT DETECTION
+// BOT DETECTION — SIZE CAPPING DISABLED
 // ============================================================================
+// Removed: UA-based size capping caused Bing to distrust image URLs.
+// Same URL must always return same bytes.
 
-/**
- * Check if request is from Bing bot
- */
-function isBingBot(request) {
-  const ua = request.headers.get('User-Agent') || '';
-  return BING_BOT_PATTERN.test(ua);
-}
+// function isBingBot(request) {
+//   const ua = request.headers.get('User-Agent') || '';
+//   return BING_BOT_PATTERN.test(ua);
+// }
 
-/**
- * Cap size for Bing bots
- */
-function capSizeForBot(requestedSize, isBing) {
-  if (!isBing) return requestedSize;
-  
-  // Bing only gets m or smaller
-  const allowedSizes = ['s', 'm', 'src'];
-  if (allowedSizes.includes(requestedSize)) {
-    return requestedSize;
-  }
-  
-  // Downgrade xl/l to m
-  return BING_MAX_SIZE;
-}
+// function capSizeForBot(requestedSize, isBing) {
+//   if (!isBing) return requestedSize;
+//   const allowedSizes = ['s', 'm', 'src'];
+//   if (allowedSizes.includes(requestedSize)) return requestedSize;
+//   return BING_MAX_SIZE;
+// }
 
 // ============================================================================
 // URL RESOLUTION
@@ -413,12 +402,11 @@ async function handleRequest(request, ctx) {
       // Get manifest
       const manifest = await getManifest(ctx);
       
-      // Check if Bing bot and cap size if needed
-      const isBing = isBingBot(request);
-      const effectiveSize = capSizeForBot(route.size, isBing);
+      // Serve exactly what was requested - no UA-based modification
+      // (Bot size capping removed - causes cloaking detection)
       
       // Resolve to SmugMug URL
-      const smugMugUrl = resolveImageUrl(manifest, route.imageId, effectiveSize);
+      const smugMugUrl = resolveImageUrl(manifest, route.imageId, route.size);
       
       if (!smugMugUrl) {
         return new Response('Image not found', { 
