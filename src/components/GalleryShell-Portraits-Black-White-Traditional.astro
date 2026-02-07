@@ -8,6 +8,8 @@ const GALLERY_PATH = "/Galleries/Fine-Art-Photography/Portraits/Black-White";
 const FALLBACK_DESCRIPTION = "Explore traditional black and white fine art portrait photography by Wayne Heim. Timeless character studies with dramatic lighting.";
 
 const { breadcrumb, entranceData, initialImageId } = Astro.props;
+// Use first real image (index 1) as fallback - index 0 is the ghost image
+const safeInitialImageId = initialImageId || allImages[1]?.id || "i-k4studios";
 ---
 
 <GalleryShellCore
@@ -17,7 +19,7 @@ const { breadcrumb, entranceData, initialImageId } = Astro.props;
   baseFallbackDescription={FALLBACK_DESCRIPTION}
   breadcrumb={breadcrumb}
   entranceData={entranceData}
-  initialImageId={initialImageId}
+  initialImageId={safeInitialImageId}
 >
-  <ChapterViewer slot="chapter-viewer" client:load initialImageId={initialImageId || "i-k4studios"} />
+  <ChapterViewer slot="chapter-viewer" client:load initialImageId={safeInitialImageId} />
 </GalleryShellCore>

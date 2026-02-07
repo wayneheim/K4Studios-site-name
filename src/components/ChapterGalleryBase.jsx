@@ -591,7 +591,6 @@ export default function ChapterGalleryBase({
     }
     
     setSisterMatch(match || null);
-    console.log('Sister link debug:', { currentImageId, sisterMatch: !!match });
   }, [currentImageId]);
 
   const anchorTexts = ["See more painterly photography", "Explore traditional fine art photography", "Discover related images", "View similar artwork", "Browse additional pieces", "Check out more fine art", "Find related photography", "Explore more images", "Enjoy more of Wayne's work", "Discover more art", "Explore Wayne Heim's portfolio", "Discover more artistic pieces", "View additional fine art", "Browse related works", "See more from this series"];

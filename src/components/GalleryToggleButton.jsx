@@ -44,9 +44,6 @@ export default function GalleryToggleButton({ currentPath }) {
     siblings = [];
   }
 
-  // Debug output
-  console.log("TOGGLE SIBLINGS DEBUG:", siblings, currentPath);
-
   // If only one or zero siblings, show nothing (no pills, but header stays)
   if (!Array.isArray(siblings) || siblings.length < 2) return null;
 
