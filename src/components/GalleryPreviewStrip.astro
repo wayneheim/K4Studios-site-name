@@ -123,10 +123,11 @@ const heroImageId = candidatePool[0]?.id || null;
       const direction = offset === 0 ? "center" : offset < 0 ? "left" : "right";
       return (
         <a
-          href={joinPath(resolvedBaseUrl, img.id)}  // dynamic gallery base + image id
+          href={joinPath(resolvedBaseUrl, img.id)}
           class={`gallery-thumb anim-${direction}`}
           title={img.title ?? img.alt ?? "Gallery image"}
           style={`animation-delay: ${delay}ms`}
+          data-preview-click
         >
           <img
             src={`/img/${img.id}/s`}
@@ -138,6 +139,20 @@ const heroImageId = candidatePool[0]?.id || null;
     })}
   </div>
 </section>
+
+<script>
+  // Track preview strip clicks
+  document.querySelectorAll('[data-preview-click]').forEach(link => {
+    link.addEventListener('click', () => {
+      const sessionId = sessionStorage.getItem('k4_session_id') || crypto.randomUUID();
+      sessionStorage.setItem('k4_session_id', sessionId);
+      navigator.sendBeacon('/track', JSON.stringify({
+        session_id: sessionId,
+        event: 'gallery_preview_click'
+      }));
+    });
+  });
+</script>
 
 <style>
   .gallery-preview-strip {

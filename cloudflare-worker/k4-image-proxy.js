@@ -518,6 +518,7 @@ async function handleAdminAnalytics(request, env) {
 
   const url = new URL(request.url);
   const days = parseInt(url.searchParams.get("days") || "1", 10);
+  const yesterday = url.searchParams.get("yesterday") === "1";
   const galleryFilter = url.searchParams.get("gallery") || null;
   const excludeIp = url.searchParams.get("excludeIp") || null;
 
@@ -528,7 +529,13 @@ async function handleAdminAnalytics(request, env) {
 
   try {
     // Build date filter
-    const dateFilter = `datetime('now', '-${days} days')`;
+    // For "yesterday", we want only that day; otherwise, last N days from now
+    let dateClause;
+    if (yesterday) {
+      dateClause = `created_at >= datetime('now', '-1 day', 'start of day') AND created_at < datetime('now', 'start of day')`;
+    } else {
+      dateClause = `created_at > datetime('now', '-${days} days')`;
+    }
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
     const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
 
@@ -542,7 +549,7 @@ async function handleAdminAnalytics(request, env) {
         ROUND(100.0 * COUNT(DISTINCT CASE WHEN event = 'zoom_open' THEN session_id END) / 
           NULLIF(COUNT(DISTINCT session_id), 0), 1) as pct_zoomed
       FROM events 
-      WHERE created_at > ${dateFilter} ${galleryClause} ${ipClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause}
     `;
     const summary = await env.DB.prepare(summaryQuery).first();
 
@@ -550,7 +557,7 @@ async function handleAdminAnalytics(request, env) {
     const eventsQuery = `
       SELECT event, COUNT(*) as count 
       FROM events 
-      WHERE created_at > ${dateFilter} ${galleryClause} ${ipClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause}
       GROUP BY event 
       ORDER BY count DESC
       LIMIT 20
@@ -563,7 +570,7 @@ async function handleAdminAnalytics(request, env) {
         event as entry_source,
         COUNT(DISTINCT session_id) as sessions
       FROM events 
-      WHERE created_at > ${dateFilter} ${ipClause}
+      WHERE ${dateClause} ${ipClause}
         AND event IN ('cowboy_jump', 'gallery_hero_click', 'gallery_explore_click', 'gallery_preview_click')
       GROUP BY event 
       ORDER BY sessions DESC
@@ -579,7 +586,7 @@ async function handleAdminAnalytics(request, env) {
           NULLIF(COUNT(DISTINCT session_id), 0), 1) as zoom_pct,
         ROUND(1.0 * COUNT(*) / NULLIF(COUNT(DISTINCT session_id), 0), 1) as avg_events
       FROM events 
-      WHERE created_at > ${dateFilter} AND gallery_id IS NOT NULL ${ipClause}
+      WHERE ${dateClause} AND gallery_id IS NOT NULL ${ipClause}
       GROUP BY gallery_id 
       ORDER BY sessions DESC
       LIMIT 15
@@ -590,7 +597,7 @@ async function handleAdminAnalytics(request, env) {
     const referrerQuery = `
       SELECT referrer, COUNT(DISTINCT session_id) as sessions
       FROM events 
-      WHERE created_at > ${dateFilter} ${galleryClause} ${ipClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause}
       GROUP BY referrer 
       ORDER BY sessions DESC
     `;
@@ -600,16 +607,30 @@ async function handleAdminAnalytics(request, env) {
     const geoQuery = `
       SELECT country, region, city, COUNT(DISTINCT session_id) as sessions
       FROM events 
-      WHERE created_at > ${dateFilter} ${galleryClause} ${ipClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause}
       GROUP BY country, region, city 
       ORDER BY sessions DESC
       LIMIT 25
     `;
     const geo = await env.DB.prepare(geoQuery).all();
 
+    // Query 7: Daily trend (for chart)
+    const trendQuery = `
+      SELECT 
+        DATE(created_at) as day,
+        COUNT(DISTINCT session_id) as sessions,
+        COUNT(*) as events
+      FROM events 
+      WHERE ${dateClause} ${galleryClause} ${ipClause}
+      GROUP BY DATE(created_at)
+      ORDER BY day ASC
+    `;
+    const trend = await env.DB.prepare(trendQuery).all();
+
     // Render HTML
     const html = renderDashboard({
       days,
+      yesterday,
       galleryFilter,
       excludeIp,
       viewerIp,
@@ -618,7 +639,8 @@ async function handleAdminAnalytics(request, env) {
       entries: entries.results || [],
       galleries: galleries.results || [],
       referrers: referrers.results || [],
-      geo: geo.results || []
+      geo: geo.results || [],
+      trend: trend.results || []
     });
 
     return new Response(html, {
@@ -632,7 +654,7 @@ async function handleAdminAnalytics(request, env) {
   }
 }
 
-function renderDashboard({ days, galleryFilter, excludeIp, viewerIp, summary, events, entries, galleries, referrers, geo }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, events, entries, galleries, referrers, geo, trend }) {
   const s = summary || {};
   
   // Calculate max for bar chart scaling
@@ -642,7 +664,11 @@ function renderDashboard({ days, galleryFilter, excludeIp, viewerIp, summary, ev
   
   // Build base URL for filter links
   const baseParams = new URLSearchParams();
-  baseParams.set("days", days.toString());
+  if (yesterday) {
+    baseParams.set("yesterday", "1");
+  } else {
+    baseParams.set("days", days.toString());
+  }
   if (galleryFilter) baseParams.set("gallery", galleryFilter);
   
   // URL with IP exclusion
@@ -657,6 +683,9 @@ function renderDashboard({ days, galleryFilter, excludeIp, viewerIp, summary, ev
     const p = new URLSearchParams(baseParams);
     return "?" + p.toString();
   })();
+  
+  // Label for the footer
+  const periodLabel = yesterday ? "Yesterday" : `Last ${days} day(s)`;
   
   return `<!DOCTYPE html>
 <html lang="en">
@@ -692,6 +721,15 @@ function renderDashboard({ days, galleryFilter, excludeIp, viewerIp, summary, ev
     .bar-value { min-width: 50px; text-align: right; font-size: 13px; color: #888; }
     .bar-orange .bar { background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%); }
     .bar-green .bar { background: linear-gradient(90deg, #10b981 0%, #059669 100%); }
+    /* Trend chart styles */
+    .trend-chart { background: #252525; border-radius: 8px; padding: 20px; margin-bottom: 30px; }
+    .trend-chart h3 { color: #fff; font-size: 14px; margin-bottom: 15px; }
+    .trend-bars { display: flex; align-items: flex-end; gap: 4px; height: 100px; padding-bottom: 25px; position: relative; }
+    .trend-bar { flex: 1; min-width: 20px; max-width: 60px; background: linear-gradient(180deg, #4a9eff 0%, #2d7dd2 100%); border-radius: 4px 4px 0 0; position: relative; cursor: pointer; transition: opacity 0.2s; }
+    .trend-bar:hover { opacity: 0.8; }
+    .trend-bar-label { position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%); font-size: 10px; color: #666; white-space: nowrap; }
+    .trend-bar-value { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); font-size: 11px; color: #888; }
+    .no-chart { color: #666; font-size: 13px; }
     .ip-filter { margin-left: auto; display: flex; gap: 10px; align-items: center; }
     .ip-filter a { font-size: 12px; }
     .ip-filter .exclude-active { background: #7c3aed; color: #fff; }
@@ -702,11 +740,11 @@ function renderDashboard({ days, galleryFilter, excludeIp, viewerIp, summary, ev
   <h1>K4 Analytics</h1>
   
   <div class="controls">
-    <a href="?days=1${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 1 ? 'active' : ''}">Today</a>
-    <a href="?days=2${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 2 ? 'active' : ''}">Yesterday</a>
-    <a href="?days=7${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 7 ? 'active' : ''}">7 Days</a>
-    <a href="?days=30${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 30 ? 'active' : ''}">30 Days</a>
-    <a href="?days=90${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 90 ? 'active' : ''}">3 Months</a>
+    <a href="?days=1${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 1 && !yesterday ? 'active' : ''}">Today</a>
+    <a href="?yesterday=1${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${yesterday ? 'active' : ''}">Yesterday</a>
+    <a href="?days=7${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 7 && !yesterday ? 'active' : ''}">7 Days</a>
+    <a href="?days=30${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 30 && !yesterday ? 'active' : ''}">30 Days</a>
+    <a href="?days=90${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 90 && !yesterday ? 'active' : ''}">3 Months</a>
     <div class="ip-filter">
       ${excludeIp 
         ? `<span class="ip-badge">Excluding: ${excludeIp}</span><a href="${showAllUrl}">Show All</a>`
@@ -714,6 +752,32 @@ function renderDashboard({ days, galleryFilter, excludeIp, viewerIp, summary, ev
       }
     </div>
   </div>
+
+  ${trend.length > 1 ? `
+  <div class="trend-chart">
+    <h3>Sessions per Day</h3>
+    <div class="trend-bars">
+      ${(() => {
+        const maxSessions = Math.max(...trend.map(t => t.sessions), 1);
+        return trend.map(t => {
+          const height = Math.max((t.sessions / maxSessions * 100), 2);
+          const dateLabel = t.day.slice(5); // MM-DD format
+          return `
+            <div class="trend-bar" style="height: ${height}%" title="${t.day}: ${t.sessions} sessions, ${t.events} events">
+              <span class="trend-bar-value">${t.sessions}</span>
+              <span class="trend-bar-label">${dateLabel}</span>
+            </div>
+          `;
+        }).join('');
+      })()}
+    </div>
+  </div>
+  ` : trend.length === 1 ? `
+  <div class="trend-chart">
+    <h3>Sessions per Day</h3>
+    <p class="no-chart">Only 1 day of data. Chart will appear with more days.</p>
+  </div>
+  ` : ''}
 
   <h2>Pulse</h2>
   <div class="pulse">
@@ -801,7 +865,7 @@ function renderDashboard({ days, galleryFilter, excludeIp, viewerIp, summary, ev
   </div>
 
   <p style="margin-top: 30px; color: #666; font-size: 12px;">
-    Generated ${new Date().toISOString()} • Last ${days} day(s)
+    Generated ${new Date().toISOString()} • ${periodLabel}
   </p>
 </body>
 </html>`;

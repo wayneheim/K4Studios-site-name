@@ -167,7 +167,7 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
       style={{ position: "fixed", inset: 0, zIndex: 999999, pointerEvents: "auto", fontFamily: "'Glegoo', serif" }}
       onClick={() => {
         // Close tour when clicking anywhere outside the tip box
-  trackEvent("guide_click_outside");
+        trackEvent("guide_click_outside");
         setIsOpen(false);
         onClose && onClose();
       }}
@@ -269,6 +269,11 @@ export default function ChapterGalleryBase({
   initialImageId
 }) {
   const sectionUrl = findSectionUrl(basePath);
+
+  // Helper to track events with gallery context
+  const track = (event, extraContext = {}) => {
+    track(event, { galleryId: galleryKey, ...extraContext });
+  };
 
   // Load series registry on mount (for Chronicle/Legend data)
   const [seriesRegistry, setSeriesRegistry] = useState(null);
@@ -603,7 +608,7 @@ export default function ChapterGalleryBase({
     setIsExpanded(false);
     setCurrentIndex((i) => {
       const newIndex = Math.max(i - 1, 0);
-      trackEvent("nav_prev");
+      track("nav_prev");
       return newIndex;
     });
   };
@@ -613,7 +618,7 @@ export default function ChapterGalleryBase({
     setIsExpanded(false);
     setCurrentIndex((i) => {
       const newIndex = Math.min(i + 1, galleryData.length - 1);
-      trackEvent("nav_next");
+      track("nav_next");
       return newIndex;
     });
   };
@@ -621,7 +626,7 @@ export default function ChapterGalleryBase({
     e?.stopPropagation();
     if (tourOpen()) return;
     setViewMode("grid");
-    trackEvent("grid_open");
+    track("grid_open");
   };
   const goExit = (e) => { e?.stopPropagation(); if (tourOpen()) return; if (basePath) window.location.href = basePath; };
 
@@ -1071,7 +1076,7 @@ export default function ChapterGalleryBase({
                               // Disable zoom on mobile - users don't know to click, and matt preview makes images too small
                               if (!isMobile && !isLandscapeMobile) {
                                 setIsZoomed(true);
-                                trackEvent("zoom_open");
+                                track("zoom_open");
                               }
                             }}
                             data-zoom-btn
@@ -1098,7 +1103,7 @@ export default function ChapterGalleryBase({
                                 // Close "More about this image" when opening notes
                                 const moreDetails = document.querySelector('.more-about-image');
                                 if (moreDetails) moreDetails.removeAttribute('open');
-                                trackEvent("collector_notes_open");
+                                track("collector_notes_open");
                                 sessionStorage.setItem("collectorHintShown", "1");
                                 setShowCollectorHint(false);
                               }}
@@ -1137,7 +1142,7 @@ export default function ChapterGalleryBase({
                                     type="button"
                                     onClick={(e) => {
                                       e.stopPropagation();
-                                      trackEvent("series_info");
+                                      track("series_info");
                                       setShowEngrainedInfoPopup(true);
                                     }}
                                     title="Engrained Series Member — Click for details"
@@ -1177,7 +1182,7 @@ export default function ChapterGalleryBase({
                                       type="button"
                                       onClick={(e) => {
                                         e.stopPropagation();
-                                        trackEvent("series_info");
+                                        track("series_info");
                                         setSeriesInfoScrollTo(seriesKey);
                                         setShowSeriesInfoPopup(true);
                                       }}
@@ -1264,7 +1269,7 @@ export default function ChapterGalleryBase({
                             if (moreDetails) moreDetails.removeAttribute('open');
                             sessionStorage.setItem("collectorHintShown", "1");
                             setShowCollectorHint(false);
-                            trackEvent("collector_notes_toggle");
+                            track("collector_notes_toggle");
                           }}
                           aria-label="View Collector Notes"
                           title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
@@ -1414,7 +1419,7 @@ export default function ChapterGalleryBase({
                           onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
                           onClick={() => {
                             setShowPricingModal(true);
-                            trackEvent("order_clicked");
+                            track("order_clicked");
                           }}
                         >
                           <ShoppingCart className="w-4 h-4" />
@@ -1429,7 +1434,7 @@ export default function ChapterGalleryBase({
                           onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
                           onClick={() => {
                             setShowSeriesOrderModal(true);
-                            trackEvent("order_clicked");
+                            track("order_clicked");
                           }}
                         >
                           <ShoppingCart className="w-4 h-4" />
@@ -1455,7 +1460,7 @@ export default function ChapterGalleryBase({
                       {!isMobile && windowWidth >= 825 && (
                         <button
                           type="button"
-                          onClick={() => { trackEvent("guide_open"); setTourOpenNonce(n => n + 1); }}
+                          onClick={() => { track("guide_open"); setTourOpenNonce(n => n + 1); }}
                           className="hidden md:inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
                           title="View our brief guided walk-through of all the features of our gallery viewer."
                           aria-label="Open Guide"
@@ -1494,7 +1499,7 @@ export default function ChapterGalleryBase({
                                     type="button"
                                     onClick={(e) => {
                                       e.stopPropagation();
-                                      trackEvent("series_info");
+                                      track("series_info");
                                       setSeriesInfoScrollTo(seriesKey);
                                       setShowSeriesInfoPopup(true);
                                     }}
@@ -1536,7 +1541,7 @@ export default function ChapterGalleryBase({
                             <button
                               type="button"
                               onClick={() => {
-                                trackEvent("slideshow_start");
+                                track("slideshow_start");
                                 if (!tourOpen()) {
                                   setShowStoryShow(true);
                                 }
@@ -1579,7 +1584,7 @@ export default function ChapterGalleryBase({
                           <button
                             type="button"
                             onClick={() => {
-                              trackEvent("slideshow_start");
+                              track("slideshow_start");
                               if (!tourOpen()) {
                                 setShowStoryShow(true);
                               }
@@ -1728,7 +1733,7 @@ export default function ChapterGalleryBase({
                         style={{ margin: 0 }}
                         onToggle={(e) => {
                           if (e.target.open) {
-                            trackEvent("more_info_open");
+                            track("more_info_open");
                             
                             // Warm sister link image immediately on panel open
                             // User reading time (5-10s) provides the warm window naturally
@@ -1858,6 +1863,7 @@ export default function ChapterGalleryBase({
                             return (
                               <a 
                                 href={href}
+                                onClick={() => track("sister_image_click")}
                                 style={{
                                   display: 'block',
                                   marginTop: '1rem',
@@ -2122,7 +2128,7 @@ export default function ChapterGalleryBase({
                             e.currentTarget.style.background = "linear-gradient(to bottom, #92400e 0%, #78350f 100%)";
                           }}
                           onClick={() => {
-                            trackEvent("order_submitted");
+                            track("order_submitted");
                           }}
                         >
                           <span>Contact Us to Order</span>
@@ -2156,7 +2162,7 @@ export default function ChapterGalleryBase({
         isOpen={showSeriesOrderModal}
         onClose={() => setShowSeriesOrderModal(false)}
         image={galleryData[currentIndex]}
-        trackEvent={trackEvent}
+        trackEvent={track}
       />
 
       {/* Series Info Popup (all series descriptions) */}
@@ -2214,3 +2220,4 @@ Limited to editions of 50 or fewer, Engrained pieces arrive ready to hang with a
     </div>
   );
 }
+
