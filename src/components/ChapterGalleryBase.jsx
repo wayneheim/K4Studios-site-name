@@ -1042,6 +1042,11 @@ export default function ChapterGalleryBase({
       if (document.visibilityState === "hidden") logAndResetEventsBeacon();
     });
 
+    // ✅ FIX: Astro SPA navigation - flush before component unmounts
+    // This fires BEFORE navigation, while eventCountsRef is still valid
+    const astroBeforeSwap = () => logAndResetEventsBeacon();
+    document.addEventListener("astro:before-swap", astroBeforeSwap);
+
     // Periodic heartbeat flush - catches Safari/iOS edge cases where visibilitychange
     // or beforeunload may not fire reliably (e.g., force-quit, PWA, background tab kill)
     heartbeatInterval = setInterval(() => {
@@ -1059,6 +1064,7 @@ export default function ChapterGalleryBase({
       window.removeEventListener("click", activityHandler);
       window.removeEventListener("keydown", activityHandler);
       window.removeEventListener("beforeunload", logAndResetEventsBeacon);
+      document.removeEventListener("astro:before-swap", astroBeforeSwap); // Clean up
       // Note: anonymous visibilitychange handler can't be removed, but it's harmless
     };
   }, []); // Empty deps - use ref to access current counts
