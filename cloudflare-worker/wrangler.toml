@@ -14,6 +14,12 @@ compatibility_date = "2024-01-01"
 # Environment variables (if needed)
 # MANIFEST_CACHE_TTL = "3600"
 
+# D1 Database for analytics
+[[d1_databases]]
+binding = "DB"
+database_name = "k4-analytics"
+database_id = "f2c159b0-b0f1-4056-934c-90e9b8a92e14"
+
 # Development settings
 [dev]
 port = 8787

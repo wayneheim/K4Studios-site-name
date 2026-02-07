@@ -1,79 +1,5 @@
 import { warmImage } from "../utils/warmImage";
-
-// Helper to shorten page paths for cleaner analytics
-// "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-RsLmsLZ"
-// becomes "…/Western-Cowboy-Portraits/Color/i-RsLmsLZ"
-function shortenPagePath(path) {
-  if (!path) return path;
-  const parts = path.split('/').filter(Boolean);
-  // Keep last 3 segments (e.g., gallery/color/imageId or gallery/imageId)
-  if (parts.length > 3) {
-    return '…/' + parts.slice(-3).join('/');
-  }
-  return path;
-}
-
-// === Batched UI Event Logging ===
-// Collects events and sends in batches to reduce function calls by ~90%
-// Flushes: every 30s, on page exit, or when batch reaches 20 events
-const eventBatch = [];
-let flushTimer = null;
-const FLUSH_INTERVAL = 30000; // 30 seconds
-const MAX_BATCH_SIZE = 20;
-
-function flushEventBatch(useBeacon = false) {
-  if (eventBatch.length === 0) return;
-  
-  const payload = JSON.stringify({ events: eventBatch.splice(0) }); // splice clears array
-  
-  if (useBeacon && navigator.sendBeacon) {
-    const blob = new Blob([payload], { type: "application/json" });
-    navigator.sendBeacon("/.netlify/functions/log-ui-event", blob);
-  } else {
-    fetch("/.netlify/functions/log-ui-event", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: payload,
-      keepalive: true,
-    }).catch(err => console.error("Batch flush failed:", err));
-  }
-}
-
-// Set up flush on page exit (runs once when module loads)
-if (typeof window !== "undefined") {
-  // Flush on tab close/navigate away
-  window.addEventListener("beforeunload", () => flushEventBatch(true));
-  // Flush when tab becomes hidden (mobile: switching apps)
-  document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "hidden") flushEventBatch(true);
-  });
-}
-
-// Helper to log UI events (now batched)
-async function logUIEvent(eventType, details = {}, useBeacon = false) {
-  // Skip logging on localhost (admin/dev work)
-  if (typeof window !== "undefined" && window.location.hostname === "localhost") {
-    return;
-  }
-  
-  // Shorten page paths for cleaner analytics
-  if (details.page) {
-    details.page = shortenPagePath(details.page);
-  }
-  
-  // Add to batch
-  eventBatch.push({ eventType, details, timestamp: Date.now() });
-  
-  // Flush immediately if batch is full
-  if (eventBatch.length >= MAX_BATCH_SIZE) {
-    flushEventBatch(useBeacon);
-    return;
-  }
-  
-  // Reset/start flush timer
-  if (flushTimer) clearTimeout(flushTimer);
-  flushTimer = setTimeout(() => flushEventBatch(false), FLUSH_INTERVAL);
-}
+import { trackEvent } from "../utils/analytics";
 import { useState, useRef, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight, Info } from "lucide-react";
@@ -241,7 +167,7 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
       style={{ position: "fixed", inset: 0, zIndex: 999999, pointerEvents: "auto", fontFamily: "'Glegoo', serif" }}
       onClick={() => {
         // Close tour when clicking anywhere outside the tip box
-  logUIEvent("guide_click_outside", { page: window.location.pathname, sectionKey });
+  trackEvent("guide_click_outside");
         setIsOpen(false);
         onClose && onClose();
       }}
@@ -290,7 +216,7 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
               <button
                 type="button"
                 onClick={() => {
-                  logUIEvent("guide_done", { page: window.location.pathname, sectionKey });
+                  trackEvent("guide_done");
                   closeTour();
                 }}
                 style={{ pointerEvents: "auto", background: "#7b1e1e", color: "#fff", border: "1px solid #6b1a1a", borderRadius: 8, padding: "6px 12px", fontSize: 13, cursor: "pointer" }}
@@ -302,7 +228,7 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
               type="button"
               title="Close guide"
               onClick={() => {
-                logUIEvent("guide_close", { page: window.location.pathname, sectionKey });
+                trackEvent("guide_close");
                 setIsOpen(false); onClose && onClose();
               }}
               style={{ pointerEvents: "auto", background: "#fff", color: "#444", border: "1px solid #c0c0c0", borderRadius: 88, padding: "5px 8px", fontSize: 12, cursor: "pointer" }}
@@ -553,18 +479,6 @@ export default function ChapterGalleryBase({
     }
   }, []); // Run once after hydration
 
-    // Event counters for batching UI actions
-    const [eventCounts, setEventCounts] = useState({
-      next: 0,
-      grid: 0,
-      zoom: 0,
-      like: 0,
-      slideshow: 0,
-      share: 0,
-      prev: 0,
-      exit: 0
-    });
-
   // Sister link logic - use state to avoid SSR/client mismatch
   const currentImageId = galleryData[currentIndex]?.id;
   const [sisterMatch, setSisterMatch] = useState(() => {
@@ -689,7 +603,7 @@ export default function ChapterGalleryBase({
     setIsExpanded(false);
     setCurrentIndex((i) => {
       const newIndex = Math.max(i - 1, 0);
-      setEventCounts((counts) => ({ ...counts, prev: counts.prev + 1 }));
+      trackEvent("nav_prev");
       return newIndex;
     });
   };
@@ -699,7 +613,7 @@ export default function ChapterGalleryBase({
     setIsExpanded(false);
     setCurrentIndex((i) => {
       const newIndex = Math.min(i + 1, galleryData.length - 1);
-      setEventCounts((counts) => ({ ...counts, next: counts.next + 1 }));
+      trackEvent("nav_next");
       return newIndex;
     });
   };
@@ -707,7 +621,7 @@ export default function ChapterGalleryBase({
     e?.stopPropagation();
     if (tourOpen()) return;
     setViewMode("grid");
-    setEventCounts((counts) => ({ ...counts, grid: counts.grid + 1 }));
+    trackEvent("grid_open");
   };
   const goExit = (e) => { e?.stopPropagation(); if (tourOpen()) return; if (basePath) window.location.href = basePath; };
 
@@ -981,93 +895,6 @@ export default function ChapterGalleryBase({
     onNext: () => { if (!tourOpen()) goNext(); }
   });
 
-  // Inactivity/session-end logging
-  const eventCountsRef = useRef(eventCounts);
-  eventCountsRef.current = eventCounts;
-  
-  useEffect(() => {
-    let inactivityTimer;
-    let heartbeatInterval;
-    const INACTIVITY_LIMIT = 5 * 60 * 1000; // 5 minutes
-    const HEARTBEAT_INTERVAL = 2 * 60 * 1000; // 2 minutes - periodic flush for Safari/mobile reliability
-
-    // Regular flush (inactivity timeout) - uses normal fetch
-    const logAndResetEvents = () => {
-      const counts = eventCountsRef.current;
-      const hasAnyEvents = Object.values(counts).some(c => c > 0);
-      if (!hasAnyEvents) return;
-      
-      Object.entries(counts).forEach(([eventType, count]) => {
-        if (count > 0) {
-          logUIEvent(eventType, {
-            page: window.location.pathname,
-            count
-          }, false); // use fetch
-        }
-      });
-      setEventCounts({ next: 0, grid: 0, zoom: 0, like: 0, slideshow: 0, share: 0, prev: 0, exit: 0 });
-    };
-
-    // Exit flush (beforeunload/visibilitychange) - uses sendBeacon for reliable delivery
-    const logAndResetEventsBeacon = () => {
-      const counts = eventCountsRef.current;
-      const hasAnyEvents = Object.values(counts).some(c => c > 0);
-      if (!hasAnyEvents) return;
-      
-      Object.entries(counts).forEach(([eventType, count]) => {
-        if (count > 0) {
-          logUIEvent(eventType, {
-            page: window.location.pathname,
-            count
-          }, true); // use sendBeacon
-        }
-      });
-      setEventCounts({ next: 0, grid: 0, zoom: 0, like: 0, slideshow: 0, share: 0, prev: 0, exit: 0 });
-    };
-
-    const resetTimer = () => {
-      clearTimeout(inactivityTimer);
-      inactivityTimer = setTimeout(logAndResetEvents, INACTIVITY_LIMIT);
-    };
-
-    // Reset timer on any click or keydown
-    const activityHandler = () => resetTimer();
-    window.addEventListener("click", activityHandler);
-    window.addEventListener("keydown", activityHandler);
-
-    // Log on tab close or hide - use beacon for guaranteed delivery
-    window.addEventListener("beforeunload", logAndResetEventsBeacon);
-    document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "hidden") logAndResetEventsBeacon();
-    });
-
-    // ✅ FIX: Astro SPA navigation - flush before component unmounts
-    // This fires BEFORE navigation, while eventCountsRef is still valid
-    const astroBeforeSwap = () => logAndResetEventsBeacon();
-    document.addEventListener("astro:before-swap", astroBeforeSwap);
-
-    // Periodic heartbeat flush - catches Safari/iOS edge cases where visibilitychange
-    // or beforeunload may not fire reliably (e.g., force-quit, PWA, background tab kill)
-    heartbeatInterval = setInterval(() => {
-      const counts = eventCountsRef.current;
-      const hasAnyEvents = Object.values(counts).some(c => c > 0);
-      if (hasAnyEvents) {
-        logAndResetEvents();
-      }
-    }, HEARTBEAT_INTERVAL);
-
-    resetTimer();
-    return () => {
-      clearTimeout(inactivityTimer);
-      clearInterval(heartbeatInterval);
-      window.removeEventListener("click", activityHandler);
-      window.removeEventListener("keydown", activityHandler);
-      window.removeEventListener("beforeunload", logAndResetEventsBeacon);
-      document.removeEventListener("astro:before-swap", astroBeforeSwap); // Clean up
-      // Note: anonymous visibilitychange handler can't be removed, but it's harmless
-    };
-  }, []); // Empty deps - use ref to access current counts
-
   const direction = currentIndex > prevIndex.current ? 1 : -1;
   prevIndex.current = currentIndex;
 
@@ -1244,7 +1071,7 @@ export default function ChapterGalleryBase({
                               // Disable zoom on mobile - users don't know to click, and matt preview makes images too small
                               if (!isMobile && !isLandscapeMobile) {
                                 setIsZoomed(true);
-                                setEventCounts((counts) => ({ ...counts, zoom: counts.zoom + 1 }));
+                                trackEvent("zoom_open");
                               }
                             }}
                             data-zoom-btn
@@ -1271,7 +1098,7 @@ export default function ChapterGalleryBase({
                                 // Close "More about this image" when opening notes
                                 const moreDetails = document.querySelector('.more-about-image');
                                 if (moreDetails) moreDetails.removeAttribute('open');
-                                setEventCounts((counts) => ({ ...counts, notes: (counts.notes || 0) + 1 }));
+                                trackEvent("collector_notes_open");
                                 sessionStorage.setItem("collectorHintShown", "1");
                                 setShowCollectorHint(false);
                               }}
@@ -1310,7 +1137,7 @@ export default function ChapterGalleryBase({
                                     type="button"
                                     onClick={(e) => {
                                       e.stopPropagation();
-                                      logUIEvent("series_info", { page: window.location.pathname, series: "engrained" });
+                                      trackEvent("series_info");
                                       setShowEngrainedInfoPopup(true);
                                     }}
                                     title="Engrained Series Member — Click for details"
@@ -1350,7 +1177,7 @@ export default function ChapterGalleryBase({
                                       type="button"
                                       onClick={(e) => {
                                         e.stopPropagation();
-                                        logUIEvent("series_info", { page: window.location.pathname, series: seriesKey });
+                                        trackEvent("series_info");
                                         setSeriesInfoScrollTo(seriesKey);
                                         setShowSeriesInfoPopup(true);
                                       }}
@@ -1437,11 +1264,7 @@ export default function ChapterGalleryBase({
                             if (moreDetails) moreDetails.removeAttribute('open');
                             sessionStorage.setItem("collectorHintShown", "1");
                             setShowCollectorHint(false);
-                            logUIEvent("collector_notes_toggle", {
-                              page: window.location.pathname,
-                              imageId: galleryData[currentIndex]?.id,
-                              notesVisible: !showNotes
-                            });
+                            trackEvent("collector_notes_toggle");
                           }}
                           aria-label="View Collector Notes"
                           title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
@@ -1591,11 +1414,7 @@ export default function ChapterGalleryBase({
                           onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
                           onClick={() => {
                             setShowPricingModal(true);
-                            logUIEvent("order_clicked", {
-                              page: window.location.pathname,
-                              imageId: galleryData[currentIndex]?.id,
-                              series: "engrained"
-                            });
+                            trackEvent("order_clicked");
                           }}
                         >
                           <ShoppingCart className="w-4 h-4" />
@@ -1610,11 +1429,7 @@ export default function ChapterGalleryBase({
                           onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
                           onClick={() => {
                             setShowSeriesOrderModal(true);
-                            logUIEvent("order_clicked", {
-                              page: window.location.pathname,
-                              imageId: galleryData[currentIndex]?.id,
-                              series: "standard"
-                            });
+                            trackEvent("order_clicked");
                           }}
                         >
                           <ShoppingCart className="w-4 h-4" />
@@ -1640,7 +1455,7 @@ export default function ChapterGalleryBase({
                       {!isMobile && windowWidth >= 825 && (
                         <button
                           type="button"
-                          onClick={() => { logUIEvent("guide_open", { page: window.location.pathname, sectionKey }); setTourOpenNonce(n => n + 1); }}
+                          onClick={() => { trackEvent("guide_open"); setTourOpenNonce(n => n + 1); }}
                           className="hidden md:inline-flex items-center gap-2 rounded-full px-3 py-1 bg-white border border-gray-200 hover:border-red-300 shadow-sm transition-colors"
                           title="View our brief guided walk-through of all the features of our gallery viewer."
                           aria-label="Open Guide"
@@ -1679,7 +1494,7 @@ export default function ChapterGalleryBase({
                                     type="button"
                                     onClick={(e) => {
                                       e.stopPropagation();
-                                      logUIEvent("series_info", { page: window.location.pathname, series: seriesKey });
+                                      trackEvent("series_info");
                                       setSeriesInfoScrollTo(seriesKey);
                                       setShowSeriesInfoPopup(true);
                                     }}
@@ -1721,10 +1536,9 @@ export default function ChapterGalleryBase({
                             <button
                               type="button"
                               onClick={() => {
-                                logUIEvent("slideshow_start", { page: window.location.pathname });
+                                trackEvent("slideshow_start");
                                 if (!tourOpen()) {
                                   setShowStoryShow(true);
-                                  setEventCounts((counts) => ({ ...counts, slideshow: counts.slideshow + 1 }));
                                 }
                               }}
                               aria-label="Play K4 Slideshow"
@@ -1765,10 +1579,9 @@ export default function ChapterGalleryBase({
                           <button
                             type="button"
                             onClick={() => {
-                              logUIEvent("slideshow_start", { page: window.location.pathname });
+                              trackEvent("slideshow_start");
                               if (!tourOpen()) {
                                 setShowStoryShow(true);
-                                setEventCounts((counts) => ({ ...counts, slideshow: counts.slideshow + 1 }));
                               }
                             }}
                             aria-label="Play K4 Slideshow"
@@ -1915,11 +1728,7 @@ export default function ChapterGalleryBase({
                         style={{ margin: 0 }}
                         onToggle={(e) => {
                           if (e.target.open) {
-                            logUIEvent("more_about_image_click", {
-                              page: window.location.pathname,
-                              imageId: galleryData[currentIndex]?.id,
-                              title: galleryData[currentIndex]?.title || galleryData[currentIndex]?.alt
-                            });
+                            trackEvent("more_info_open");
                             
                             // Warm sister link image immediately on panel open
                             // User reading time (5-10s) provides the warm window naturally
@@ -2313,13 +2122,7 @@ export default function ChapterGalleryBase({
                             e.currentTarget.style.background = "linear-gradient(to bottom, #92400e 0%, #78350f 100%)";
                           }}
                           onClick={() => {
-                            logUIEvent("order_submitted", {
-                              series: "engrained",
-                              page: window.location.pathname,
-                              imageId: currentItem?.id,
-                              imageTitle: currentItem?.title,
-                              hasInventory: hasInventory
-                            });
+                            trackEvent("order_submitted");
                           }}
                         >
                           <span>Contact Us to Order</span>
@@ -2353,7 +2156,7 @@ export default function ChapterGalleryBase({
         isOpen={showSeriesOrderModal}
         onClose={() => setShowSeriesOrderModal(false)}
         image={galleryData[currentIndex]}
-        logUIEvent={logUIEvent}
+        trackEvent={trackEvent}
       />
 
       {/* Series Info Popup (all series descriptions) */}
