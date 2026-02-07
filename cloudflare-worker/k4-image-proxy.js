@@ -431,14 +431,19 @@ async function handleTrackRequest(request, env) {
     const region = request.cf?.region || null;
     const city = request.cf?.city || null;
 
+    // Get client IP
+    const ip = request.headers.get("CF-Connecting-IP") || 
+               request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() || 
+               null;
+
     // Normalize referrer
     const referer = request.headers.get("Referer") || null;
     const referrer = normalizeReferrer(referer);
 
     // Insert into D1
     await env.DB.prepare(`
-      INSERT INTO events (session_id, event, gallery_id, image_id, page_type, referrer, country, region, city)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO events (session_id, event, gallery_id, image_id, page_type, referrer, country, region, city, ip)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `).bind(
       session_id,
       event,
@@ -448,7 +453,8 @@ async function handleTrackRequest(request, env) {
       referrer,
       country,
       region,
-      city
+      city,
+      ip
     ).run();
 
     return new Response(null, { 
@@ -513,11 +519,18 @@ async function handleAdminAnalytics(request, env) {
   const url = new URL(request.url);
   const days = parseInt(url.searchParams.get("days") || "1", 10);
   const galleryFilter = url.searchParams.get("gallery") || null;
+  const excludeIp = url.searchParams.get("excludeIp") || null;
+
+  // Get viewer's current IP for the "exclude me" button
+  const viewerIp = request.headers.get("CF-Connecting-IP") || 
+                   request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() || 
+                   null;
 
   try {
     // Build date filter
     const dateFilter = `datetime('now', '-${days} days')`;
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
+    const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
 
     // Query 1: Summary stats
     const summaryQuery = `
@@ -529,7 +542,7 @@ async function handleAdminAnalytics(request, env) {
         ROUND(100.0 * COUNT(DISTINCT CASE WHEN event = 'zoom_open' THEN session_id END) / 
           NULLIF(COUNT(DISTINCT session_id), 0), 1) as pct_zoomed
       FROM events 
-      WHERE created_at > ${dateFilter} ${galleryClause}
+      WHERE created_at > ${dateFilter} ${galleryClause} ${ipClause}
     `;
     const summary = await env.DB.prepare(summaryQuery).first();
 
@@ -537,7 +550,7 @@ async function handleAdminAnalytics(request, env) {
     const eventsQuery = `
       SELECT event, COUNT(*) as count 
       FROM events 
-      WHERE created_at > ${dateFilter} ${galleryClause}
+      WHERE created_at > ${dateFilter} ${galleryClause} ${ipClause}
       GROUP BY event 
       ORDER BY count DESC
       LIMIT 20
@@ -550,7 +563,7 @@ async function handleAdminAnalytics(request, env) {
         event as entry_source,
         COUNT(DISTINCT session_id) as sessions
       FROM events 
-      WHERE created_at > ${dateFilter} 
+      WHERE created_at > ${dateFilter} ${ipClause}
         AND event IN ('cowboy_jump', 'gallery_hero_click', 'gallery_explore_click', 'gallery_preview_click')
       GROUP BY event 
       ORDER BY sessions DESC
@@ -566,7 +579,7 @@ async function handleAdminAnalytics(request, env) {
           NULLIF(COUNT(DISTINCT session_id), 0), 1) as zoom_pct,
         ROUND(1.0 * COUNT(*) / NULLIF(COUNT(DISTINCT session_id), 0), 1) as avg_events
       FROM events 
-      WHERE created_at > ${dateFilter} AND gallery_id IS NOT NULL
+      WHERE created_at > ${dateFilter} AND gallery_id IS NOT NULL ${ipClause}
       GROUP BY gallery_id 
       ORDER BY sessions DESC
       LIMIT 15
@@ -577,7 +590,7 @@ async function handleAdminAnalytics(request, env) {
     const referrerQuery = `
       SELECT referrer, COUNT(DISTINCT session_id) as sessions
       FROM events 
-      WHERE created_at > ${dateFilter} ${galleryClause}
+      WHERE created_at > ${dateFilter} ${galleryClause} ${ipClause}
       GROUP BY referrer 
       ORDER BY sessions DESC
     `;
@@ -587,7 +600,7 @@ async function handleAdminAnalytics(request, env) {
     const geoQuery = `
       SELECT country, region, city, COUNT(DISTINCT session_id) as sessions
       FROM events 
-      WHERE created_at > ${dateFilter} ${galleryClause}
+      WHERE created_at > ${dateFilter} ${galleryClause} ${ipClause}
       GROUP BY country, region, city 
       ORDER BY sessions DESC
       LIMIT 25
@@ -598,6 +611,8 @@ async function handleAdminAnalytics(request, env) {
     const html = renderDashboard({
       days,
       galleryFilter,
+      excludeIp,
+      viewerIp,
       summary,
       events: events.results || [],
       entries: entries.results || [],
@@ -617,13 +632,31 @@ async function handleAdminAnalytics(request, env) {
   }
 }
 
-function renderDashboard({ days, galleryFilter, summary, events, entries, galleries, referrers, geo }) {
+function renderDashboard({ days, galleryFilter, excludeIp, viewerIp, summary, events, entries, galleries, referrers, geo }) {
   const s = summary || {};
   
   // Calculate max for bar chart scaling
   const maxEventCount = Math.max(...events.map(e => e.count), 1);
   const maxRefSessions = Math.max(...referrers.map(r => r.sessions), 1);
   const maxGeoSessions = Math.max(...geo.map(g => g.sessions), 1);
+  
+  // Build base URL for filter links
+  const baseParams = new URLSearchParams();
+  baseParams.set("days", days.toString());
+  if (galleryFilter) baseParams.set("gallery", galleryFilter);
+  
+  // URL with IP exclusion
+  const excludeMeUrl = (() => {
+    const p = new URLSearchParams(baseParams);
+    if (viewerIp) p.set("excludeIp", viewerIp);
+    return "?" + p.toString();
+  })();
+  
+  // URL without IP exclusion
+  const showAllUrl = (() => {
+    const p = new URLSearchParams(baseParams);
+    return "?" + p.toString();
+  })();
   
   return `<!DOCTYPE html>
 <html lang="en">
@@ -659,17 +692,27 @@ function renderDashboard({ days, galleryFilter, summary, events, entries, galler
     .bar-value { min-width: 50px; text-align: right; font-size: 13px; color: #888; }
     .bar-orange .bar { background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%); }
     .bar-green .bar { background: linear-gradient(90deg, #10b981 0%, #059669 100%); }
+    .ip-filter { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+    .ip-filter a { font-size: 12px; }
+    .ip-filter .exclude-active { background: #7c3aed; color: #fff; }
+    .ip-badge { font-size: 11px; color: #888; background: #333; padding: 3px 8px; border-radius: 4px; }
   </style>
 </head>
 <body>
   <h1>K4 Analytics</h1>
   
   <div class="controls">
-    <a href="?days=1" class="${days === 1 ? 'active' : ''}">Today</a>
-    <a href="?days=2" class="${days === 2 ? 'active' : ''}">Yesterday</a>
-    <a href="?days=7" class="${days === 7 ? 'active' : ''}">7 Days</a>
-    <a href="?days=30" class="${days === 30 ? 'active' : ''}">30 Days</a>
-    <a href="?days=90" class="${days === 90 ? 'active' : ''}">3 Months</a>
+    <a href="?days=1${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 1 ? 'active' : ''}">Today</a>
+    <a href="?days=2${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 2 ? 'active' : ''}">Yesterday</a>
+    <a href="?days=7${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 7 ? 'active' : ''}">7 Days</a>
+    <a href="?days=30${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 30 ? 'active' : ''}">30 Days</a>
+    <a href="?days=90${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 90 ? 'active' : ''}">3 Months</a>
+    <div class="ip-filter">
+      ${excludeIp 
+        ? `<span class="ip-badge">Excluding: ${excludeIp}</span><a href="${showAllUrl}">Show All</a>`
+        : `<a href="${excludeMeUrl}" class="exclude-active">Exclude My IP</a>`
+      }
+    </div>
   </div>
 
   <h2>Pulse</h2>

@@ -38,9 +38,6 @@ interface TrackContext {
 export function trackEvent(event: string, context: TrackContext = {}): void {
   // Skip if SSR
   if (typeof window === 'undefined') return;
-  
-  // Skip if user has Do Not Track enabled (respect privacy)
-  if (navigator.doNotTrack === '1') return;
 
   const payload = JSON.stringify({
     session_id: getSessionId(),
