@@ -85,28 +85,24 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
           
           // Track ALL tombstone clicks for analytics
           const handleClick = () => {
-            // Log to Google Sheets via Netlify function
-            const sourcePage = window.location.pathname;
-            // Create unique tracking label using item title
+            // Track via Cloudflare D1
+            const sessionId = sessionStorage.getItem('k4_session') || 
+              (sessionStorage.setItem('k4_session', crypto.randomUUID()), sessionStorage.getItem('k4_session'));
+            
             const sanitizedTitle = (item.title || 'Unknown').replace(/[^a-zA-Z0-9]/g, '_');
-            const trackingLabel = item.trackingId || `Tombstone_${sanitizedTitle}`;
             const payload = JSON.stringify({
-              eventType: trackingLabel,
-              details: {
-                collection: item.title || 'Unknown',
-                destination: item.href,
-                source_page: sourcePage,
-                is_mobile_only: !!item.mobileOnly
-              },
-              timestamp: Date.now()
+              session_id: sessionId,
+              event: 'gallery_explore_click',
+              gallery_id: item.trackingId || sanitizedTitle,
+              page_type: 'landing'
             });
             
             // Use sendBeacon for reliable delivery during navigation
             if (navigator.sendBeacon) {
               const blob = new Blob([payload], { type: 'application/json' });
-              navigator.sendBeacon('/.netlify/functions/log-ui-event', blob);
+              navigator.sendBeacon('/track', blob);
             } else {
-              fetch('/.netlify/functions/log-ui-event', {
+              fetch('/track', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: payload,

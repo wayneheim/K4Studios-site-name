@@ -158,7 +158,7 @@ const structuredData = JSON.stringify({
 </aside>
 
 <script define:vars={{ collectionName, ctaLink, analyticsLabel }}>
-  // Track clicks on the Featured Collection CTA
+  // Track clicks on the Featured Collection CTA (cowboy jump widget)
   document.addEventListener('DOMContentLoaded', () => {
     const widget = document.querySelector('.featured-collection-widget');
     const link = widget?.querySelector('.fc-link');
@@ -168,36 +168,23 @@ const structuredData = JSON.stringify({
         // Skip logging on localhost (admin/dev work)
         if (window.location.hostname === 'localhost') return;
         
-        // GA4 tracking
-        if (typeof gtag === 'function') {
-          gtag('event', analyticsLabel, {
-            event_category: 'engagement',
-            event_label: collectionName,
-            destination_url: ctaLink
-          });
-        }
+        // Track via Cloudflare D1 analytics
+        const sessionId = sessionStorage.getItem('k4_session') || 
+          (sessionStorage.setItem('k4_session', crypto.randomUUID()), sessionStorage.getItem('k4_session'));
         
-        // Custom logging to Google Sheets via Netlify function
-        const sourcePage = window.location.pathname + window.location.search;
-        // Get original referrer (Google, Bing, Facebook, etc.) - only available on first page load
-        const trafficSource = document.referrer || 'direct';
         const payload = JSON.stringify({
-          eventType: analyticsLabel,
-          details: {
-            collection: collectionName,
-            destination: ctaLink,
-            source_page: sourcePage,
-            traffic_source: trafficSource
-          },
-          timestamp: Date.now()
+          session_id: sessionId,
+          event: 'cowboy_jump',
+          gallery_id: analyticsLabel,
+          page_type: 'landing'
         });
         
         // Use sendBeacon for reliable delivery during navigation
         if (navigator.sendBeacon) {
           const blob = new Blob([payload], { type: 'application/json' });
-          navigator.sendBeacon('/.netlify/functions/log-ui-event', blob);
+          navigator.sendBeacon('/track', blob);
         } else {
-          fetch('/.netlify/functions/log-ui-event', {
+          fetch('/track', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: payload,

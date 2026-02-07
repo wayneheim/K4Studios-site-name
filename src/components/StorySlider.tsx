@@ -1,28 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-
-// Helper to log UI events to Google Sheets via Netlify function
-function logUIEvent(eventType: string, details: Record<string, any> = {}) {
-  const payload = JSON.stringify({
-    eventType,
-    details: {
-      ...details,
-      source_page: typeof window !== 'undefined' ? window.location.pathname : ''
-    },
-    timestamp: Date.now()
-  });
-  
-  if (typeof navigator !== 'undefined' && navigator.sendBeacon) {
-    const blob = new Blob([payload], { type: 'application/json' });
-    navigator.sendBeacon('/.netlify/functions/log-ui-event', blob);
-  } else if (typeof fetch !== 'undefined') {
-    fetch('/.netlify/functions/log-ui-event', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: payload,
-      keepalive: true
-    }).catch(() => {});
-  }
-}
+import { trackEvent } from '../utils/analytics';
 
 interface StoryItem {
   id: string;

@@ -5,6 +5,7 @@ import ThemeBlock from "./ThemeBlock.jsx";
 import { themes } from "@/data/themes/themes.mjs";
 import { warmImage } from "../utils/warmImage";
 import { getProxySrc } from "../utils/imageProxy";
+import { trackEvent } from "../utils/analytics";
 
 /* ---------------------------------------------------------
    Check if gallery has matching themes
@@ -244,6 +245,7 @@ export default function GalleryInfo({
                   cursor: 'pointer'
                 }}
                 aria-label="Explore the gallery"
+                onClick={() => trackEvent("gallery_hero_click")}
               >
                 <figure>
                   <img
@@ -286,6 +288,7 @@ export default function GalleryInfo({
                 marginBottom: '0.75rem'
               }}
               aria-label="View this image"
+              onClick={() => trackEvent("gallery_hero_click")}
               onMouseEnter={() => {
                 // Trigger glow effect on explore button
                 const exploreButton = document.querySelector('.explore-section');
@@ -349,6 +352,7 @@ export default function GalleryInfo({
             textDecoration: "none",
             color: "inherit",
           }}
+          onClick={() => trackEvent("gallery_explore_click")}
         >
           Explore the Gallery
           <span

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { themes } from "@/data/themes/themes.mjs";
+import { trackEvent } from "../utils/analytics";
 
 /**
  * ThemeBlock - displays themes available for a gallery
@@ -201,6 +202,9 @@ export default function ThemeBlock({ galleryKey }) {
                   if ('ontouchstart' in window && active !== t.slug) {
                     e.preventDefault();
                     setActive(t.slug);
+                  } else {
+                    // Track theme click when actually navigating
+                    trackEvent("theme_click", { theme: t.slug });
                   }
                 }}
                 style={{
