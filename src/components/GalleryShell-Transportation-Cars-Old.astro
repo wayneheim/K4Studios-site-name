@@ -170,7 +170,7 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
         {usedEntranceData.subtitle && (
           <h2 class="gallery-landing-subtitle">{fixMojibake(usedEntranceData.subtitle)}</h2>
         )}
-        <GalleryInfo client:load entranceData={{
+        <GalleryInfo client:only="react" entranceData={{
           ...usedEntranceData,
           title: fixMojibake(usedEntranceData.title),
           subtitle: fixMojibake(usedEntranceData.subtitle),

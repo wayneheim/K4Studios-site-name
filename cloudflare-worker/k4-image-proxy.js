@@ -173,6 +173,25 @@ async function proxyImage(smugMugUrl, request) {
   return new Response(imageResponse.body, { status: 200, headers });
 }
 
+// --------------------
+// GHOST IMAGE FALLBACK
+// --------------------
+// i-k4studios is a placeholder/ghost image in every gallery database.
+// It's used for state management but should never display.
+// Return a 1x1 transparent pixel instead of 404.
+const GHOST_IMAGE_ID = "i-k4studios";
+const TRANSPARENT_PIXEL_GIF = new Uint8Array([
+  0x47, 0x49, 0x46, 0x38, 0x39, 0x61, // GIF89a
+  0x01, 0x00, 0x01, 0x00, // 1x1
+  0x80, 0x00, 0x00, // Global color table flag
+  0xff, 0xff, 0xff, // White
+  0x00, 0x00, 0x00, // Black (transparent)
+  0x21, 0xf9, 0x04, 0x01, 0x00, 0x00, 0x00, 0x00, // Graphic control extension (transparency)
+  0x2c, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0x00, // Image descriptor
+  0x02, 0x02, 0x44, 0x01, 0x00, // Image data
+  0x3b // GIF trailer
+]);
+
 async function handleImageRequest(request, ctx) {
   const url = new URL(request.url);
   const route = parseImageRoute(url.pathname);
@@ -181,6 +200,18 @@ async function handleImageRequest(request, ctx) {
     return new Response("Invalid image route", {
       status: 400,
       headers: { "Cache-Control": "no-store" }
+    });
+  }
+
+  // Ghost image fallback - return transparent pixel instead of 404
+  if (route.imageId === GHOST_IMAGE_ID) {
+    return new Response(TRANSPARENT_PIXEL_GIF, {
+      status: 200,
+      headers: {
+        "Content-Type": "image/gif",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "X-Ghost-Image": "true"
+      }
     });
   }
 
