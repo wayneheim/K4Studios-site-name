@@ -275,10 +275,8 @@ export default function ChapterGalleryBase({
     trackEvent(event, { galleryId: galleryKey, ...extraContext });
   };
 
-  // Track page view on mount
-  useEffect(() => {
-    trackEvent('page_view', { galleryId: galleryKey });
-  }, [galleryKey]);
+  // Note: page_view is now tracked globally in BaseLayout.astro
+  // Gallery-specific events (nav, zoom, etc.) still use track() with galleryId
 
   // Load series registry on mount (for Chronicle/Legend data)
   const [seriesRegistry, setSeriesRegistry] = useState(null);

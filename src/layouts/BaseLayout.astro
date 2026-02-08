@@ -241,6 +241,12 @@ const keywords =
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "tuibatmru4");
     </script>
+
+    <!-- K4 Custom Analytics - track all page views -->
+    <script>
+      import { trackPageView } from '../utils/analytics';
+      trackPageView();
+    </script>
     
     <!-- Allow pages to inject custom head content -->
     <slot name="head" />

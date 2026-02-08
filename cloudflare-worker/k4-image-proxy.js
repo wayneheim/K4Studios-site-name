@@ -387,10 +387,18 @@ async function handleGatewayRequest(request, env) {
     const cookies = request.headers.get("cookie") || "";
     const hasEntryRefCookie = cookies.includes("k4_entry_ref=");
     
-    if (!hasEntryRefCookie) {
+    // Only set cookie on true top-level navigation (not SPA transitions or iframes)
+    const isTopLevelNav = 
+      request.headers.get("Sec-Fetch-Dest") === "document" &&
+      request.headers.get("Sec-Fetch-Mode") === "navigate";
+    
+    if (!hasEntryRefCookie && isTopLevelNav) {
       // Capture the referrer from the edge (most reliable source)
       const edgeReferer = request.headers.get("referer") || "";
       const normalizedRef = normalizeReferrer(edgeReferer);
+      
+      // Log for debugging (remove after confirming)
+      console.log("Edge referrer capture:", { raw: edgeReferer, normalized: normalizedRef });
       
       // Fetch the origin response
       const originResponse = await fetch(request);
@@ -412,9 +420,19 @@ async function handleGatewayRequest(request, env) {
 // ANALYTICS: /track ENDPOINT
 // --------------------
 function normalizeReferrer(referer) {
-  if (!referer) return "direct";
+  if (!referer) return "unknown";
   const lower = referer.toLowerCase();
-  if (lower.includes("google.")) return "google";
+  
+  // Handle already-normalized values (from cookie)
+  if (lower === "google" || lower === "bing" || lower === "facebook" || 
+      lower === "instagram" || lower === "twitter" || lower === "pinterest" || 
+      lower === "linkedin" || lower === "internal" || lower === "direct" || 
+      lower === "unknown" || lower === "other") {
+    return lower;
+  }
+  
+  // Normalize full URLs
+  if (lower.includes("google.") || lower.includes("google/")) return "google";
   if (lower.includes("bing.")) return "bing";
   if (lower.includes("facebook.") || lower.includes("fb.")) return "facebook";
   if (lower.includes("instagram.")) return "instagram";
@@ -461,8 +479,14 @@ async function handleTrackRequest(request, env) {
                request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() || 
                null;
 
-    // Normalize referrer - prefer client-sent referrer (document.referrer)
-    const referrer = normalizeReferrer(clientReferrer);
+    // Read edge-captured referrer from cookie (most reliable)
+    // Fall back to client-sent referrer, then treat as unknown
+    const cookieHeader = request.headers.get("cookie") || "";
+    const cookieMatch = cookieHeader.match(/k4_entry_ref=([^;]+)/);
+    const edgeReferrer = cookieMatch ? cookieMatch[1] : null;
+    
+    // Prefer edge-captured referrer, then client, then unknown
+    const referrer = normalizeReferrer(edgeReferrer || clientReferrer);
 
     // Detect device/platform from User-Agent
     const ua = (request.headers.get("User-Agent") || "").toLowerCase();
@@ -481,8 +505,8 @@ async function handleTrackRequest(request, env) {
 
     // Insert into D1
     await env.DB.prepare(`
-      INSERT INTO events (session_id, event, gallery_id, image_id, page_type, referrer, country, region, city, ip, device, page_path, theme)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO events (session_id, event, gallery_id, image_id, page_type, referrer, country, region, city, ip, device, page_path, theme, raw_referrer)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `).bind(
       session_id,
       event,
@@ -496,7 +520,8 @@ async function handleTrackRequest(request, env) {
       ip,
       device,
       page_path,
-      theme
+      theme,
+      clientReferrer  // Store raw referrer for debugging
     ).run();
 
     return new Response(null, { 
@@ -571,13 +596,16 @@ async function handleAdminAnalytics(request, env) {
 
   try {
     // Build date filter (adjusted for Eastern Time, UTC-5)
-    // We offset 'now' by +5 hours so that Eastern midnight aligns correctly
+    // Use date() comparison for calendar day matching in Eastern time
     let dateClause;
     if (yesterday) {
-      // Yesterday in Eastern time
-      dateClause = `created_at >= datetime('now', '-5 hours', '-1 day', 'start of day') AND created_at < datetime('now', '-5 hours', 'start of day')`;
+      // Yesterday = Eastern calendar day before today
+      dateClause = `date(created_at, '-5 hours') = date('now', '-5 hours', '-1 day')`;
+    } else if (days === 1) {
+      // Today = current Eastern calendar day
+      dateClause = `date(created_at, '-5 hours') = date('now', '-5 hours')`;
     } else {
-      // Last N days from Eastern "now"
+      // Last N days (rolling window from now)
       dateClause = `created_at > datetime('now', '-5 hours', '-${days} days')`;
     }
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
@@ -638,8 +666,7 @@ async function handleAdminAnalytics(request, env) {
     `;
     const entries = await env.DB.prepare(entryQuery).all();
 
-    // Query 4: Gallery performance
-    // Query 4: Gallery performance (exclude cowboy_jump_home which isn't a real gallery)
+    // Query 4: Gallery performance (exclude Cowboy_Jump_Home which isn't a real gallery)
     const galleryQuery = `
       SELECT 
         gallery_id,
@@ -648,7 +675,7 @@ async function handleAdminAnalytics(request, env) {
           NULLIF(COUNT(DISTINCT session_id), 0), 1) as zoom_pct,
         ROUND(1.0 * COUNT(*) / NULLIF(COUNT(DISTINCT session_id), 0), 1) as avg_events
       FROM events 
-      WHERE ${dateClause} AND gallery_id IS NOT NULL AND gallery_id != 'cowboy_jump_home' ${ipClause}
+      WHERE ${dateClause} AND gallery_id IS NOT NULL AND gallery_id != 'Cowboy_Jump_Home' ${ipClause}
       GROUP BY gallery_id 
       ORDER BY sessions DESC
       LIMIT 15
@@ -789,6 +816,71 @@ async function handleAdminAnalytics(request, env) {
   }
 }
 
+// CSV Export handler
+async function handleExportCSV(request, env) {
+  // Check auth
+  const authHeader = request.headers.get("Authorization");
+  const expected = "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
+  if (authHeader !== expected) {
+    return new Response("Unauthorized", {
+      status: 401,
+      headers: { "WWW-Authenticate": 'Basic realm="K4 Analytics Export"' }
+    });
+  }
+
+  const url = new URL(request.url);
+  const days = parseInt(url.searchParams.get("days") || "30", 10);
+  const yesterday = url.searchParams.get("yesterday") === "1";
+
+  try {
+    // Build date filter
+    let dateClause;
+    if (yesterday) {
+      dateClause = `created_at >= datetime('now', '-5 hours', '-1 day', 'start of day') AND created_at < datetime('now', '-5 hours', 'start of day')`;
+    } else {
+      dateClause = `created_at > datetime('now', '-5 hours', '-${days} days')`;
+    }
+
+    const query = `
+      SELECT 
+        created_at, session_id, event, gallery_id, image_id, 
+        page_path, referrer, device, country, region, city, theme
+      FROM events 
+      WHERE ${dateClause}
+      ORDER BY created_at DESC
+    `;
+    const results = await env.DB.prepare(query).all();
+    const rows = results.results || [];
+
+    // Build CSV
+    const headers = ['created_at', 'session_id', 'event', 'gallery_id', 'image_id', 'page_path', 'referrer', 'device', 'country', 'region', 'city', 'theme'];
+    const csvRows = [headers.join(',')];
+    
+    for (const row of rows) {
+      const values = headers.map(h => {
+        const val = row[h] || '';
+        // Escape quotes and wrap in quotes if contains comma
+        const escaped = String(val).replace(/"/g, '""');
+        return escaped.includes(',') || escaped.includes('"') ? `"${escaped}"` : escaped;
+      });
+      csvRows.push(values.join(','));
+    }
+
+    const csv = csvRows.join('\\n');
+    const filename = `k4-analytics-${yesterday ? 'yesterday' : days + 'days'}-${new Date().toISOString().slice(0,10)}.csv`;
+
+    return new Response(csv, {
+      headers: {
+        'Content-Type': 'text/csv',
+        'Content-Disposition': `attachment; filename="${filename}"`
+      }
+    });
+  } catch (err) {
+    console.error("Export error:", err);
+    return new Response(`Export error: ${err.message}`, { status: 500 });
+  }
+}
+
 function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked }) {
   const s = summary || {};
   
@@ -900,6 +992,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
         : `<a href="${excludeMeUrl}" class="exclude-active">Exclude My IP</a>`
       }
     </div>
+    <a href="/__k4stats/export?days=${days}${yesterday ? '&yesterday=1' : ''}" class="export-btn" style="margin-left: auto; background: #2d4a2d; padding: 5px 12px; border-radius: 4px; color: #4ade80;">📥 Export CSV</a>
   </div>
 
   ${trend.length > 1 ? `
@@ -1043,6 +1136,31 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
 
     <div class="section">
+      <h3>🔥 Top 10 Images</h3>
+      ${images.length === 0 ? '<p style="color:#666">No data yet</p>' : 
+        images.map(i => {
+          // Extract image ID from path (e.g., /Galleries/.../i-xxxxxx)
+          const imageIdMatch = i.page_path.match(/(i-[a-zA-Z0-9-]+)\/?$/);
+          const imageId = imageIdMatch ? imageIdMatch[1] : null;
+          // Get last 3 path segments for display
+          const pathParts = i.page_path.split('/').filter(Boolean);
+          const shortPath = pathParts.slice(-3).join('/');
+          return `
+          <div style="display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #333; gap: 12px;">
+            ${imageId ? `<a href="https://www.k4studios.com${i.page_path}" target="_blank"><img src="https://k4studios.com/img/${imageId}/s" alt="" style="width: 56px; height: 56px; object-fit: cover; border-radius: 4px; background: #333; flex-shrink: 0;"></a>` : ''}
+            <div style="flex: 1; min-width: 0;">
+              <a href="https://www.k4studios.com${i.page_path}" target="_blank" style="color: #4a9eff; text-decoration: none; font-size: 12px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${i.page_path}">${shortPath}</a>
+            </div>
+            <div style="display: flex; gap: 8px; flex-shrink: 0;">
+              ${i.zooms > 0 ? `<div style="background: #1a3a2a; padding: 6px 10px; border-radius: 6px; text-align: center;"><div style="font-size: 16px; font-weight: bold; color: #10b981;">🔍 ${i.zooms}</div></div>` : ''}
+              <div style="background: #1a2a3a; padding: 6px 12px; border-radius: 6px; text-align: center; min-width: 50px;"><div style="font-size: 18px; font-weight: bold; color: #4a9eff;">${i.sessions}</div><div style="font-size: 9px; color: #888; margin-top: 2px;">views</div></div>
+            </div>
+          </div>
+        `}).join('')
+      }
+    </div>
+
+    <div class="section">
       <h3>Top 10 Pages</h3>
       ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
         pages.map(p => `
@@ -1054,23 +1172,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
             <span class="bar-value">${p.sessions}</span>
           </div>
         `).join('')
-      }
-    </div>
-
-    <div class="section">
-      <h3>🔥 Top 10 Images</h3>
-      ${images.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        images.map(i => {
-          const displayPath = i.page_path.length > 50 ? '...' + i.page_path.slice(-47) : i.page_path;
-          return `
-          <div class="bar-row">
-            <a class="bar-label" href="https://www.k4studios.com${i.page_path}" target="_blank" title="${i.page_path}" style="color: #4a9eff; text-decoration: none;">${displayPath}</a>
-            <div class="bar-container">
-              <div class="bar" style="width: ${(i.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
-            </div>
-            <span class="bar-value">${i.sessions}${i.zooms > 0 ? ` <span style="color:#10b981" title="Zooms">🔍${i.zooms}</span>` : ''}</span>
-          </div>
-        `}).join('')
       }
     </div>
 
@@ -1143,6 +1244,11 @@ export default {
     // 0b) Analytics dashboard
     if (url.pathname === "/__k4stats") {
       return handleAdminAnalytics(request, env);
+    }
+
+    // 0c) Analytics CSV export
+    if (url.pathname === "/__k4stats/export") {
+      return handleExportCSV(request, env);
     }
 
     // 1) Image detail pages: apply policy first
