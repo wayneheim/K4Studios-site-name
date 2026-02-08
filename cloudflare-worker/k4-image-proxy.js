@@ -260,6 +260,25 @@ function isSearchBot(request) {
 }
 
 /**
+ * Log edge event directly to D1 (fire and forget via waitUntil)
+ * This is the correct place to log 301/410/302 events - at the edge.
+ */
+async function logEdgeEvent(env, eventType, path, imageId, isBot, request) {
+  try {
+    const referrer = request.headers.get("Referer") || null;
+    const country = request.cf?.country || null;
+    
+    await env.DB.prepare(`
+      INSERT INTO edge_events (event_type, path, image_id, is_bot, referrer, country)
+      VALUES (?, ?, ?, ?, ?, ?)
+    `).bind(eventType, path, imageId, isBot ? 1 : 0, referrer, country).run();
+  } catch (e) {
+    // Never let logging break the response
+    console.error('Edge event logging error:', e);
+  }
+}
+
+/**
  * Policy:
  * - If image exists:
  *   - If wrong gallery path -> 301 to canonical (from imageIdMap)
@@ -269,7 +288,7 @@ function isSearchBot(request) {
  *   - bot -> 410 Gone (cacheable)
  *   - human -> 302 to parent gallery
  */
-async function handleImagePagePolicy(request, pathname, ctx) {
+async function handleImagePagePolicy(request, pathname, ctx, env) {
   const imageId = extractImageId(pathname);
   if (!imageId) return null;
 
@@ -293,12 +312,16 @@ async function handleImagePagePolicy(request, pathname, ctx) {
         // Wrong path entirely -> canonicalize to first known valid path
         if (!matchedPath) {
           const canonicalUrl = `https://www.k4studios.com${validPaths[0]}/${imageId}`;
+          // Log edge event (fire and forget via waitUntil)
+          ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearchBot(request), request));
           return Response.redirect(canonicalUrl, 301);
         }
 
         // Case mismatch -> redirect to canonical casing
         if (matchedPath !== requestedGalleryPath) {
           const canonicalUrl = `https://www.k4studios.com${matchedPath}/${imageId}`;
+          // Log edge event (fire and forget via waitUntil)
+          ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearchBot(request), request));
           return Response.redirect(canonicalUrl, 301);
         }
       }
@@ -311,6 +334,8 @@ async function handleImagePagePolicy(request, pathname, ctx) {
     const parentGallery = getParentGallery(pathname);
 
     if (isSearchBot(request)) {
+      // Log 410 for bot (fire and forget)
+      ctx.waitUntil(logEdgeEvent(env, '410', pathname, imageId, true, request));
       return new Response("Gone", {
         status: 410,
         headers: {
@@ -320,6 +345,8 @@ async function handleImagePagePolicy(request, pathname, ctx) {
       });
     }
 
+    // Log 302 fallback for human (fire and forget)
+    ctx.waitUntil(logEdgeEvent(env, '302', pathname, imageId, false, request));
     return Response.redirect(`https://www.k4studios.com${parentGallery}`, 302);
 
   } catch (err) {
@@ -1812,7 +1839,7 @@ export default {
 
     // 1) Image detail pages: apply policy first
     if (isImagePageRoute(url.pathname)) {
-      const policyResponse = await handleImagePagePolicy(request, url.pathname, ctx);
+      const policyResponse = await handleImagePagePolicy(request, url.pathname, ctx, env);
       if (policyResponse) return policyResponse;
       return fetch(request);
     }

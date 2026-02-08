@@ -26,30 +26,13 @@ function isBot(userAgent) {
   return botPattern.test(userAgent);
 }
 
-// Fire analytics event to track 404/410/301 responses
-async function trackSmartEvent(event, eventType, requestedPath, imageId, isBotRequest) {
-  const payload = {
-    event_type: eventType,
-    path: requestedPath,
-    image_id: imageId || null,
-    is_bot: isBotRequest ? 1 : 0,
-    referrer: event.headers['referer'] || event.headers['Referer'] || null
-  };
-  
-  console.log('[smart-404] Sending edge event:', JSON.stringify(payload));
-  
-  try {
-    const response = await fetch('https://k4-image-proxy.wayneheim.workers.dev/edge-event', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    console.log('[smart-404] Edge event response:', response.status, response.statusText);
-  } catch (e) {
-    // Never let analytics break the function
-    console.log('[smart-404] Analytics error:', e.message, e.stack);
-  }
-}
+// NOTE: Edge event logging (301/410/404) is now handled directly in the 
+// Cloudflare Worker via logEdgeEvent(). Netlify functions cannot reliably
+// track edge events because:
+// 1. Many requests never reach Netlify (Worker responds first)
+// 2. Redirects/410s terminate before tracking can complete
+// 3. Bots, prefetches, HEAD requests get missed
+// See: Quill's architectural guidance from 2026-02-08
 
 exports.handler = async (event) => {
   // Get User-Agent for bot detection
@@ -139,9 +122,6 @@ exports.handler = async (event) => {
     const redirectUrl = `${correctGalleryPath}/${canonicalImageId}`;
     console.log(`[smart-404] Found! Redirecting to: ${redirectUrl}`);
     
-    // Track the redirect
-    await trackSmartEvent(event, 'smart404_redirect', requestedPath, imageId, isBotRequest);
-    
     return {
       statusCode: 301,
       headers: {
@@ -161,9 +141,6 @@ exports.handler = async (event) => {
     // Bot: Return 410 Gone to remove ghost URL from index
     console.log(`[smart-404] Bot detected, returning 410 Gone for: ${imageId}`);
     
-    // Track the 410
-    await trackSmartEvent(event, 'smart404_gone', requestedPath, imageId, isBotRequest);
-    
     return {
       statusCode: 410,
       headers: {
@@ -179,9 +156,6 @@ exports.handler = async (event) => {
   if (galleryLandingPath && galleryLandingPath !== requestedPath) {
     console.log(`[smart-404] Human visitor, redirecting to gallery: ${galleryLandingPath}`);
     
-    // Track the fallback
-    await trackSmartEvent(event, 'smart404_fallback', requestedPath, imageId, isBotRequest);
-    
     return {
       statusCode: 302,
       headers: {
@@ -195,9 +169,6 @@ exports.handler = async (event) => {
   
   // Fallback to homepage if we can't determine a gallery
   console.log(`[smart-404] No gallery path, redirecting to homepage`);
-  
-  // Track homepage fallback
-  await trackSmartEvent(event, 'smart404_homepage', requestedPath, imageId, isBotRequest);
   
   return {
     statusCode: 302,
