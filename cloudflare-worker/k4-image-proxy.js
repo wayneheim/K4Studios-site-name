@@ -997,15 +997,21 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     .controls a { color: #4a9eff; text-decoration: none; padding: 5px 10px; border-radius: 4px; }
     .controls a:hover, .controls a.active { background: #333; }
     .pulse { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; align-items: center; }
-    .pulse-stat { background: #252525; padding: 8px 16px; border-radius: 6px; display: flex; align-items: center; gap: 8px; }
+    .pulse-stat { background: #252525; padding: 8px 16px; border-radius: 6px; display: flex; align-items: center; gap: 8px; position: relative; cursor: help; }
     .pulse-stat .value { font-size: 18px; font-weight: bold; color: #4a9eff; }
-    .pulse-stat .label { font-size: 11px; color: #888; }
+    .pulse-stat .label { font-size: 11px; color: #888; display: flex; align-items: center; gap: 4px; }
+    .pulse-stat .info-icon { width: 12px; height: 12px; border-radius: 50%; background: #444; color: #888; font-size: 9px; display: inline-flex; align-items: center; justify-content: center; font-style: italic; }
+    .pulse-stat .tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; white-space: nowrap; z-index: 100; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); max-width: 280px; white-space: normal; line-height: 1.4; }
+    .pulse-stat .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #333; }
+    .pulse-stat:hover .tooltip { display: block; }
     .pulse-stat.highlight { background: linear-gradient(135deg, #d97706 0%, #b45309 100%); }
     .pulse-stat.highlight .value { color: #fff; }
     .pulse-stat.highlight .label { color: #fde68a; }
+    .pulse-stat.highlight .info-icon { background: rgba(255,255,255,0.2); color: #fde68a; }
     .pulse-stat.collector { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); }
     .pulse-stat.collector .value { color: #fff; }
     .pulse-stat.collector .label { color: #c4b5fd; }
+    .pulse-stat.collector .info-icon { background: rgba(255,255,255,0.2); color: #c4b5fd; }
     table { width: 100%; border-collapse: collapse; background: #252525; border-radius: 8px; overflow: hidden; margin-bottom: 20px; }
     th, td { padding: 10px 15px; text-align: left; border-bottom: 1px solid #333; }
     th { background: #1a1a1a; color: #888; font-size: 12px; text-transform: uppercase; }
@@ -1135,15 +1141,51 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
 
   <h2>Pulse</h2>
   <div class="pulse">
-    <div class="pulse-stat"><span class="value">${s.unique_visitors || 0}</span><span class="label">Visitors</span></div>
-    <div class="pulse-stat"><span class="value"><span style="color:#10b981">${newVisitors}</span>/<span style="color:#f59e0b">${returningVisitors}</span></span><span class="label">New/Ret</span></div>
-    <div class="pulse-stat"><span class="value">${s.sessions || 0}</span><span class="label">Sessions</span></div>
-    <div class="pulse-stat"><span class="value">${s.avg_events_per_session || 0}</span><span class="label">Avg/Sess</span></div>
-    <div class="pulse-stat"><span class="value" style="color:#10b981">${s.pct_navigated || 0}%</span><span class="label">Nav</span></div>
-    <div class="pulse-stat"><span class="value" style="color:#f59e0b">${s.pct_zoomed || 0}%</span><span class="label">Zoom</span></div>
-    ${cowboyJumps > 0 ? `<div class="pulse-stat highlight"><span class="value">🤠 ${cowboyJumps}</span><span class="label">Cowboy Jump</span></div>` : ''}
-    ${(s.collector_notes_opens || 0) > 0 ? `<div class="pulse-stat collector"><span class="value">${s.collector_notes_opens}</span><span class="label">Collector Notes</span></div>` : ''}
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);"><span class="value" style="color: #fff;">${avgDepthScore}</span><span class="label" style="color: #a5f3fc;">Avg Depth</span></div>
+    <div class="pulse-stat">
+      <span class="value">${s.unique_visitors || 0}</span>
+      <span class="label">Visitors <span class="info-icon">i</span></span>
+      <div class="tooltip">Unique IP addresses. Note: Mobile carriers rotate IPs, so this undercounts repeat mobile visitors.</div>
+    </div>
+    <div class="pulse-stat">
+      <span class="value"><span style="color:#10b981">${newVisitors}</span>/<span style="color:#f59e0b">${returningVisitors}</span></span>
+      <span class="label">New/Ret <span class="info-icon">i</span></span>
+      <div class="tooltip">New: IPs never seen before this period. Returning: IPs that visited previously. Green = new, Orange = returning.</div>
+    </div>
+    <div class="pulse-stat">
+      <span class="value">${s.sessions || 0}</span>
+      <span class="label">Sessions <span class="info-icon">i</span></span>
+      <div class="tooltip">Browser sessions (new tab/window). One visitor can have multiple sessions if they return later.</div>
+    </div>
+    <div class="pulse-stat">
+      <span class="value">${s.avg_events_per_session || 0}</span>
+      <span class="label">Avg/Sess <span class="info-icon">i</span></span>
+      <div class="tooltip">Average events per session. Higher = more engaged visitors exploring galleries and images.</div>
+    </div>
+    <div class="pulse-stat">
+      <span class="value" style="color:#10b981">${s.pct_navigated || 0}%</span>
+      <span class="label">Nav <span class="info-icon">i</span></span>
+      <div class="tooltip">% of sessions that used navigation (next/prev arrows). Shows gallery exploration intent.</div>
+    </div>
+    <div class="pulse-stat">
+      <span class="value" style="color:#f59e0b">${s.pct_zoomed || 0}%</span>
+      <span class="label">Zoom <span class="info-icon">i</span></span>
+      <div class="tooltip">% of sessions that opened full-resolution zoom. Strong engagement signal — they wanted to see detail.</div>
+    </div>
+    ${cowboyJumps > 0 ? `<div class="pulse-stat highlight">
+      <span class="value">🤠 ${cowboyJumps}</span>
+      <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
+      <div class="tooltip">Sessions that used the cowboy easter egg navigation. Fun engagement metric!</div>
+    </div>` : ''}
+    ${(s.collector_notes_opens || 0) > 0 ? `<div class="pulse-stat collector">
+      <span class="value">${s.collector_notes_opens}</span>
+      <span class="label">Collector Notes <span class="info-icon">i</span></span>
+      <div class="tooltip">Times someone opened collector notes. High-intent signal — they want the story behind the image.</div>
+    </div>` : ''}
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);">
+      <span class="value" style="color: #fff;">${avgDepthScore}</span>
+      <span class="label" style="color: #a5f3fc;">Avg Depth <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a5f3fc;">i</span></span>
+      <div class="tooltip">Weighted engagement score per session. Zoom=4pts, Collector Notes=5pts, Theme Click=3pts, Nav=2pts, Other=1pt. Higher = deeper engagement.</div>
+    </div>
   </div>
 
   <div class="grid">

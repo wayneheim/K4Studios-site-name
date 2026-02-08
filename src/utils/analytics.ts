@@ -125,9 +125,147 @@ if (typeof window !== 'undefined') {
 
 /**
  * Track a page view - call this on page load to record all page visits
+ * Also initializes scroll depth tracking and updates page context for session exit
  */
 export function trackPageView(): void {
   trackEvent('page_view');
+  
+  // Update page context for session exit tracking
+  updatePageContext();
+  
+  // Initialize scroll depth tracking (only activates on image pages)
+  initScrollDepthTracking();
+}
+
+// ==========================================
+// SESSION EXIT TRACKING
+// ==========================================
+// Track where users leave the site (which page ends their session)
+
+// Store current page context for session exit
+let currentPageContext: {
+  pageType: 'image' | 'gallery' | 'landing' | 'other';
+  galleryId: string | null;
+  imageId: string | null;
+  pagePath: string;
+} | null = null;
+
+let sessionExitFired = false;
+
+/**
+ * Update the current page context - call this on navigation
+ */
+export function updatePageContext(): void {
+  if (typeof window === 'undefined') return;
+  
+  const path = window.location.pathname;
+  const imageId = getImageIdFromPath(path);
+  const galleryId = getGalleryIdFromPath(path);
+  
+  let pageType: 'image' | 'gallery' | 'landing' | 'other' = 'other';
+  if (imageId) {
+    pageType = 'image';
+  } else if (path.includes('/Galleries/') || path.includes('/Other/')) {
+    pageType = 'gallery';
+  } else if (path === '/' || path === '') {
+    pageType = 'landing';
+  }
+  
+  currentPageContext = {
+    pageType,
+    galleryId,
+    imageId,
+    pagePath: path
+  };
+}
+
+/**
+ * Fire session exit event - called on page unload
+ */
+function fireSessionExit(): void {
+  if (sessionExitFired || !currentPageContext) return;
+  sessionExitFired = true;
+  
+  const payload = JSON.stringify({
+    session_id: getSessionId(),
+    event: 'session_exit',
+    gallery_id: currentPageContext.galleryId,
+    image_id: currentPageContext.imageId,
+    page_type: currentPageContext.pageType,
+    page_path: currentPageContext.pagePath,
+    event_ts_ms: Date.now(),
+    event_order: getNextEventOrder()
+  });
+  
+  // Use sendBeacon for reliable delivery on page unload
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon('/track', payload);
+  }
+}
+
+// Set up session exit listeners
+if (typeof window !== 'undefined') {
+  // Update context on initial load
+  updatePageContext();
+  
+  // Fire on visibility change (tab close, navigate away)
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+      fireSessionExit();
+    }
+  });
+  
+  // Fallback for older browsers
+  window.addEventListener('pagehide', fireSessionExit);
+}
+
+// ==========================================
+// SCROLL DEPTH TRACKING (IMAGE PAGES ONLY)
+// ==========================================
+
+const scrollThresholdsFired = new Set<number>();
+
+/**
+ * Initialize scroll depth tracking for image pages
+ */
+export function initScrollDepthTracking(): void {
+  if (typeof window === 'undefined') return;
+  
+  // Only track on image pages
+  const imageId = getImageIdFromPath();
+  if (!imageId) return;
+  
+  const galleryId = getGalleryIdFromPath();
+  const thresholds = [25, 50, 75, 100];
+  
+  // Reset for new page
+  scrollThresholdsFired.clear();
+  
+  const checkScroll = () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    
+    if (docHeight <= 0) return;
+    
+    const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+    
+    for (const threshold of thresholds) {
+      if (scrollPercent >= threshold && !scrollThresholdsFired.has(threshold)) {
+        scrollThresholdsFired.add(threshold);
+        trackEvent(`scroll_${threshold}`, {
+          pageType: 'image',
+          imageId,
+          galleryId
+        });
+      }
+    }
+  };
+  
+  // Use passive listener for performance
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  
+  // Check initial scroll position
+  checkScroll();
 }
 
 /**
