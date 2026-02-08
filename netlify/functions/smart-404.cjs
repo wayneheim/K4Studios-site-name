@@ -37,8 +37,8 @@ async function trackSmartEvent(event, eventType, requestedPath, imageId, isBotRe
       page_type: isBotRequest ? 'bot' : 'human',
       referrer: event.headers['referer'] || event.headers['Referer'] || null
     };
-    // Fire and forget - don't await, don't block response
-    fetch('https://www.k4studios.com/track', {
+    // Use direct worker URL to ensure it reaches the analytics endpoint
+    fetch('https://k4-image-proxy.wayneheim.workers.dev/track', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
