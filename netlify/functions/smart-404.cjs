@@ -26,6 +26,28 @@ function isBot(userAgent) {
   return botPattern.test(userAgent);
 }
 
+// Fire analytics event to track 404/410/301 responses (fire and forget)
+async function trackSmartEvent(event, eventType, requestedPath, imageId, isBotRequest) {
+  try {
+    const payload = {
+      session_id: `smart404-${Date.now()}`,
+      event: eventType,
+      page_path: requestedPath,
+      image_id: imageId || null,
+      page_type: isBotRequest ? 'bot' : 'human',
+      referrer: event.headers['referer'] || event.headers['Referer'] || null
+    };
+    // Fire and forget - don't await, don't block response
+    fetch('https://www.k4studios.com/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(() => {}); // Silently ignore errors
+  } catch (e) {
+    // Never let analytics break the function
+  }
+}
+
 exports.handler = async (event) => {
   // Get User-Agent for bot detection
   const userAgent = event.headers['user-agent'] || event.headers['User-Agent'] || '';
@@ -114,6 +136,9 @@ exports.handler = async (event) => {
     const redirectUrl = `${correctGalleryPath}/${canonicalImageId}`;
     console.log(`[smart-404] Found! Redirecting to: ${redirectUrl}`);
     
+    // Track the redirect (fire and forget)
+    trackSmartEvent(event, 'smart404_redirect', requestedPath, imageId, isBotRequest);
+    
     return {
       statusCode: 301,
       headers: {
@@ -132,6 +157,10 @@ exports.handler = async (event) => {
   if (isBotRequest) {
     // Bot: Return 410 Gone to remove ghost URL from index
     console.log(`[smart-404] Bot detected, returning 410 Gone for: ${imageId}`);
+    
+    // Track the 410 (fire and forget)
+    trackSmartEvent(event, 'smart404_gone', requestedPath, imageId, isBotRequest);
+    
     return {
       statusCode: 410,
       headers: {
@@ -147,6 +176,9 @@ exports.handler = async (event) => {
   if (galleryLandingPath && galleryLandingPath !== requestedPath) {
     console.log(`[smart-404] Human visitor, redirecting to gallery: ${galleryLandingPath}`);
     
+    // Track the fallback (fire and forget)
+    trackSmartEvent(event, 'smart404_fallback', requestedPath, imageId, isBotRequest);
+    
     return {
       statusCode: 302,
       headers: {
@@ -160,6 +192,10 @@ exports.handler = async (event) => {
   
   // Fallback to homepage if we can't determine a gallery
   console.log(`[smart-404] No gallery path, redirecting to homepage`);
+  
+  // Track homepage fallback (fire and forget)
+  trackSmartEvent(event, 'smart404_homepage', requestedPath, imageId, isBotRequest);
+  
   return {
     statusCode: 302,
     headers: {

@@ -1535,7 +1535,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       </div>
       ` : ''}
       ${exitPages.length === 0 ? '<p style="color:#666">No exit data yet</p>' : `
-      <div style="max-height: 200px; overflow-y: auto;">
+      <div style="max-height: 280px; overflow-y: auto;">
         ${exitPages.map(p => {
           const shortPath = p.page_path.length > 35 ? '...' + p.page_path.slice(-32) : p.page_path;
           const typeColors = { image: '#4a9eff', gallery: '#10b981', theme: '#f59e0b', landing: '#a855f7' };

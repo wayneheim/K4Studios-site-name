@@ -270,19 +270,36 @@ export function initScrollDepthTracking(): void {
 
 /**
  * Helper to extract gallery ID from URL path
- * e.g., /Galleries/Painterly-Fine-Art-Photography/Facing-History -> Facing-History
+ * Returns parent/child format for disambiguation (e.g., "Western-Cowboy-Portraits/Color")
+ * Only returns value for actual gallery/image paths under /Galleries/ or /Other/
  */
 export function getGalleryIdFromPath(path?: string): string | null {
   const p = path || (typeof window !== 'undefined' ? window.location.pathname : '');
+  
+  // Only track galleries under /Galleries/ or /Other/ (but not /Other/Print-Options etc)
+  const isGalleryPath = p.includes('/Galleries/') || 
+    (p.includes('/Other/') && (p.includes('/Engrained') || p.includes('/Archive')));
+  
+  if (!isGalleryPath) return null;
+  
   const parts = p.split('/').filter(Boolean);
   
-  // If ends with image ID (i-xxx), gallery is second to last
+  // If ends with image ID (i-xxx), use 2 segments before the image
   const lastPart = parts[parts.length - 1];
   if (lastPart?.startsWith('i-')) {
+    // e.g., /Galleries/.../Western-Cowboy-Portraits/Color/i-xxx -> Western-Cowboy-Portraits/Color
+    if (parts.length >= 3) {
+      return `${parts[parts.length - 3]}/${parts[parts.length - 2]}`;
+    }
     return parts[parts.length - 2] || null;
   }
   
-  // Otherwise, last part is gallery
+  // For gallery pages, return last 2 segments for context
+  // e.g., /Galleries/.../Western-Cowboy-Portraits/Color -> Western-Cowboy-Portraits/Color
+  if (parts.length >= 2) {
+    return `${parts[parts.length - 2]}/${parts[parts.length - 1]}`;
+  }
+  
   return parts[parts.length - 1] || null;
 }
 
