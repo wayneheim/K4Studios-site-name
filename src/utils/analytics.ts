@@ -17,18 +17,36 @@ function getSessionId(): string {
   return sessionId;
 }
 
-// Capture the ORIGINAL entry referrer once per session
-// This ensures we remember where the user came from (e.g., Google)
-// even after they navigate around the site
+// Read the entry referrer from the edge-set cookie (k4_entry_ref)
+// The Cloudflare Worker sets this cookie on the first HTML request
+// using the true Referer header before SPA navigation can lose it
+function getCookie(name: string): string | null {
+  if (typeof document === 'undefined') return null;
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return match ? match[2] : null;
+}
+
+// Get the entry referrer - prefer the edge-captured cookie, fallback to sessionStorage
 function getEntryReferrer(): string | null {
   if (typeof window === 'undefined') return null;
   
+  // Check sessionStorage first (already cached this session)
   let entryReferrer = sessionStorage.getItem('k4_entry_referrer');
-  if (entryReferrer === null) {
-    // First event of the session - capture document.referrer now
-    entryReferrer = document.referrer || '';
-    sessionStorage.setItem('k4_entry_referrer', entryReferrer);
+  if (entryReferrer !== null) {
+    return entryReferrer || null;
   }
+  
+  // Read from edge-set cookie (most reliable source)
+  const cookieRef = getCookie('k4_entry_ref');
+  if (cookieRef) {
+    // Already normalized by the worker (e.g., "google", "direct", "bing")
+    sessionStorage.setItem('k4_entry_referrer', cookieRef);
+    return cookieRef;
+  }
+  
+  // Fallback: use document.referrer (less reliable but better than nothing)
+  entryReferrer = document.referrer || '';
+  sessionStorage.setItem('k4_entry_referrer', entryReferrer);
   return entryReferrer || null;
 }
 

@@ -381,6 +381,28 @@ async function handleGatewayRequest(request, env) {
         }
       });
     }
+
+    // EDGE REFERRER CAPTURE: Set k4_entry_ref cookie on first HTML request
+    // This captures the true referrer before SPA navigation loses it
+    const cookies = request.headers.get("cookie") || "";
+    const hasEntryRefCookie = cookies.includes("k4_entry_ref=");
+    
+    if (!hasEntryRefCookie) {
+      // Capture the referrer from the edge (most reliable source)
+      const edgeReferer = request.headers.get("referer") || "";
+      const normalizedRef = normalizeReferrer(edgeReferer);
+      
+      // Fetch the origin response
+      const originResponse = await fetch(request);
+      
+      // Clone response and add the cookie
+      const newResponse = new Response(originResponse.body, originResponse);
+      newResponse.headers.append(
+        "Set-Cookie",
+        `k4_entry_ref=${normalizedRef}; Max-Age=3600; Path=/; Secure; SameSite=Lax`
+      );
+      return newResponse;
+    }
   }
 
   return fetch(request);
@@ -655,15 +677,16 @@ async function handleAdminAnalytics(request, env) {
     const geo = await env.DB.prepare(geoQuery).all();
 
     // Query 7: Daily trend (for chart) - includes both visitors and sessions
+    // Use Eastern time offset for date grouping to match the filter
     const trendQuery = `
       SELECT 
-        DATE(created_at) as day,
+        DATE(created_at, '-5 hours') as day,
         COUNT(DISTINCT ip) as visitors,
         COUNT(DISTINCT session_id) as sessions,
         COUNT(*) as events
       FROM events 
       WHERE ${dateClause} ${galleryClause} ${ipClause}
-      GROUP BY DATE(created_at)
+      GROUP BY DATE(created_at, '-5 hours')
       ORDER BY day ASC
     `;
     const trend = await env.DB.prepare(trendQuery).all();
@@ -948,7 +971,12 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   ` : trend.length === 1 ? `
   <div class="trend-chart">
     <h3>Visitors per Day</h3>
-    <p class="no-chart">Only 1 day of data. Chart will appear with more days.</p>
+    <div class="trend-bars" style="justify-content: center;">
+      <div class="trend-bar" style="height: 100%; width: 80px;" title="${trend[0].day}: ${trend[0].visitors} visitors, ${trend[0].sessions} sessions">
+        <span class="trend-bar-value">${trend[0].visitors}</span>
+        <span class="trend-bar-label">${trend[0].day.slice(5)}</span>
+      </div>
+    </div>
   </div>
   ` : ''}
 
