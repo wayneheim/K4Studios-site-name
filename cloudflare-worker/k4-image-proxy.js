@@ -557,6 +557,51 @@ function handleTrackOptions() {
 }
 
 // --------------------
+// EDGE EVENTS: /edge-event (for 301/410/404 logging from Netlify functions)
+// --------------------
+async function handleEdgeEvent(request, env) {
+  try {
+    const data = await request.json();
+    
+    // Required fields
+    const eventType = data.event_type || data.eventType || '404';
+    const path = data.path || data.page_path || null;
+    const imageId = data.image_id || data.imageId || null;
+    const isBot = data.is_bot || data.isBot ? 1 : 0;
+    const referrer = data.referrer || null;
+    const country = data.country || request.cf?.country || null;
+    
+    await env.DB.prepare(`
+      INSERT INTO edge_events (event_type, path, image_id, is_bot, referrer, country)
+      VALUES (?, ?, ?, ?, ?, ?)
+    `).bind(eventType, path, imageId, isBot, referrer, country).run();
+    
+    return new Response('OK', { 
+      status: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST"
+      }
+    });
+  } catch (err) {
+    console.error("Edge event error:", err);
+    return new Response("Error", { status: 500 });
+  }
+}
+
+function handleEdgeEventOptions() {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Max-Age": "86400"
+    }
+  });
+}
+
+// --------------------
 // ANALYTICS: /admin/analytics DASHBOARD
 // --------------------
 function checkBasicAuth(request, env) {
@@ -679,21 +724,58 @@ async function handleAdminAnalytics(request, env) {
     `;
     const entries = await env.DB.prepare(entryQuery).all();
 
-    // Query 4: Gallery performance (exclude Cowboy_Jump_Home which isn't a real gallery)
+    // Query 4: Gallery performance - derive gallery from page_path for image pages
+    // For /Galleries/.../Western-Cowboy-Portraits/Color/i-xxxxx → group by gallery folder
     const galleryQuery = `
+      WITH gallery_paths AS (
+        SELECT 
+          session_id,
+          event,
+          CASE 
+            WHEN page_path LIKE '%/i-%' THEN
+              SUBSTR(page_path, 1, INSTR(page_path, '/i-') - 1)
+            WHEN page_path LIKE '%/Gallery' THEN
+              SUBSTR(page_path, 1, LENGTH(page_path) - 8)
+            ELSE NULL
+          END as base_path
+        FROM events
+        WHERE ${dateClause} ${ipClause} ${botClause}
+          AND (page_path LIKE '/Galleries/%/i-%' OR page_path LIKE '/Other/%/i-%' OR page_path LIKE '%/Gallery')
+      )
       SELECT 
-        gallery_id,
+        base_path as gallery_id,
         COUNT(DISTINCT session_id) as sessions,
         ROUND(100.0 * COUNT(DISTINCT CASE WHEN event = 'zoom_open' THEN session_id END) / 
           NULLIF(COUNT(DISTINCT session_id), 0), 1) as zoom_pct,
         ROUND(1.0 * COUNT(*) / NULLIF(COUNT(DISTINCT session_id), 0), 1) as avg_events
-      FROM events 
-      WHERE ${dateClause} AND gallery_id IS NOT NULL AND gallery_id != 'Cowboy_Jump_Home' ${ipClause} ${botClause}
-      GROUP BY gallery_id 
+      FROM gallery_paths
+      WHERE base_path IS NOT NULL
+      GROUP BY base_path
       ORDER BY sessions DESC
       LIMIT 15
     `;
-    const galleries = await env.DB.prepare(galleryQuery).all();
+    const galleriesRaw = await env.DB.prepare(galleryQuery).all();
+    
+    // Post-process: extract last 2 path segments for display + determine type
+    const galleries = {
+      results: (galleriesRaw.results || []).map(g => {
+        const fullPath = g.gallery_id;
+        const parts = fullPath.split('/').filter(Boolean);
+        const displayName = parts.slice(-2).join(' › ').replace(/-/g, ' ');
+        
+        // Determine gallery type from path
+        let gallery_type = 'other';
+        if (fullPath.includes('/Painterly-Fine-Art-Photography/')) {
+          gallery_type = 'painterly';
+        } else if (fullPath.includes('/Fine-Art-Photography/')) {
+          gallery_type = 'traditional';
+        } else if (fullPath.includes('/Engrained/') || fullPath.includes('/Archive/')) {
+          gallery_type = 'select';
+        }
+        
+        return { ...g, gallery_id: displayName, gallery_type };
+      })
+    };
 
     // Query 5: Referrers
     const referrerQuery = `
@@ -938,22 +1020,54 @@ async function handleAdminAnalytics(request, env) {
     const exitSummaryResult = await env.DB.prepare(exitSummaryQuery).all();
     const exitSummary = exitSummaryResult.results || [];
 
-    // Query 16: Smart-404 Activity (redirects, 410s, fallbacks)
-    const smart404Query = `
+    // Query 16: Edge Events (301/410/404 from edge_events table)
+    const edgeDateClause = yesterday 
+      ? `date(created_at, '-5 hours') = date('now', '-5 hours', '-1 day')`
+      : days === 1 
+        ? `date(created_at, '-5 hours') = date('now', '-5 hours')`
+        : `created_at > datetime('now', '-5 hours', '-${days} days')`;
+    
+    const edgeEventsQuery = `
       SELECT 
-        event,
-        page_path,
-        gallery_id,
+        event_type,
+        path,
+        image_id,
+        is_bot,
         COUNT(*) as hits
-      FROM events
-      WHERE ${dateClause} ${ipClause}
-        AND event LIKE 'smart404_%'
-      GROUP BY event, page_path
-      ORDER BY hits DESC, event
+      FROM edge_events
+      WHERE ${edgeDateClause}
+      GROUP BY event_type, path
+      ORDER BY hits DESC, event_type
       LIMIT 20
     `;
-    const smart404Result = await env.DB.prepare(smart404Query).all();
-    const smart404Events = smart404Result.results || [];
+    let edgeEvents = [];
+    try {
+      const edgeEventsResult = await env.DB.prepare(edgeEventsQuery).all();
+      edgeEvents = edgeEventsResult.results || [];
+    } catch (e) {
+      // Table might not exist yet
+      console.log('edge_events query failed:', e.message);
+    }
+
+    // Query 16b: Edge events summary by type
+    const edgeSummaryQuery = `
+      SELECT 
+        event_type,
+        SUM(CASE WHEN is_bot = 1 THEN 1 ELSE 0 END) as bot_hits,
+        SUM(CASE WHEN is_bot = 0 THEN 1 ELSE 0 END) as human_hits,
+        COUNT(*) as total
+      FROM edge_events
+      WHERE ${edgeDateClause}
+      GROUP BY event_type
+      ORDER BY total DESC
+    `;
+    let edgeSummary = [];
+    try {
+      const edgeSummaryResult = await env.DB.prepare(edgeSummaryQuery).all();
+      edgeSummary = edgeSummaryResult.results || [];
+    } catch (e) {
+      console.log('edge_events summary failed:', e.message);
+    }
 
     // Render HTML
     const html = renderDashboard({
@@ -986,7 +1100,8 @@ async function handleAdminAnalytics(request, env) {
       botPct,
       botSessions,
       hideBots,
-      smart404Events
+      edgeEvents,
+      edgeSummary
     });
 
     return new Response(html, {
@@ -1065,7 +1180,7 @@ async function handleExportCSV(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots, smart404Events }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots, edgeEvents, edgeSummary }) {
   const s = summary || {};
   
   // Helper to format event names nicely
@@ -1474,10 +1589,25 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
 
     <div class="section">
-      <h3>Gallery Performance</h3>
+      <div class="section-header">
+        <h3>Gallery Performance</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Image views grouped by gallery. Colors: 🟣 Painterly, 🔵 Traditional, 🟠 K4 Select</div></span>
+      </div>
       <table>
         <tr><th>Gallery</th><th>Sessions</th><th>Zoom %</th><th>Avg Events</th></tr>
-        ${galleries.map(g => `<tr><td>${formatEventName(g.gallery_id || 'Unknown')}</td><td>${g.sessions}</td><td>${g.zoom_pct || 0}%</td><td>${g.avg_events || 0}</td></tr>`).join('')}
+        ${galleries.map(g => {
+          const typeColors = { painterly: '#a855f7', traditional: '#4a9eff', select: '#f59e0b' };
+          const color = typeColors[g.gallery_type] || '#888';
+          return `<tr>
+            <td style="display: flex; align-items: center; gap: 8px;">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: ${color}; flex-shrink: 0;"></span>
+              ${formatEventName(g.gallery_id || 'Unknown')}
+            </td>
+            <td>${g.sessions}</td>
+            <td>${g.zoom_pct || 0}%</td>
+            <td>${g.avg_events || 0}</td>
+          </tr>`;
+        }).join('')}
         ${galleries.length === 0 ? '<tr><td colspan="4">No data yet</td></tr>' : ''}
       </table>
     </div>
@@ -1570,37 +1700,73 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
 
     <div class="section">
-      <div class="section-header">
-        <h3>⚠️ 404/Redirect Activity</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Smart-404 events: tracks legacy SmugMug paths hitting your site. Redirect = sent to SmugMug, Gone = 410 returned, Fallback = couldn't match.</div></span>
+      <div class="section-header" style="margin-bottom: ${edgeEvents.length === 0 && edgeSummary.length === 0 ? '0' : '12px'};">
+        <h3 style="display: inline;">🧭 Index Health</h3>
+        ${edgeEvents.length === 0 && edgeSummary.length === 0 ? '<span style="color:#666; margin-left: 12px;">No edge events yet</span>' : ''}
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Edge events: 301 redirects (canonical fixes), 410 Gone (removed content), 404 fallbacks. Healthy sites show these tapering over time.</div></span>
       </div>
-      ${smart404Events.length === 0 ? '<p style="color:#666">No 404 activity yet</p>' : `
+      ${edgeSummary.length > 0 ? `
+      <div style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+        ${edgeSummary.map(s => {
+          const typeColors = { 
+            smart404_redirect: '#10b981', 
+            smart404_gone: '#f59e0b', 
+            smart404_fallback: '#ef4444',
+            smart404_homepage: '#a855f7',
+            '301': '#10b981',
+            '410': '#f59e0b',
+            '404': '#ef4444'
+          };
+          const typeLabels = {
+            smart404_redirect: '301',
+            smart404_gone: '410',
+            smart404_fallback: '404',
+            smart404_homepage: 'Home',
+            '301': '301',
+            '410': '410',
+            '404': '404'
+          };
+          const color = typeColors[s.event_type] || '#888';
+          const label = typeLabels[s.event_type] || s.event_type;
+          return `<span style="background: ${color}22; color: ${color}; padding: 4px 10px; border-radius: 12px; font-size: 11px;">${label}: ${s.total} <span style="opacity:0.7">(🤖${s.bot_hits} 👤${s.human_hits})</span></span>`;
+        }).join('')}
+      </div>
+      ` : ''}
+      ${edgeEvents.length > 0 ? `
       <div style="max-height: 280px; overflow-y: auto;">
-        ${smart404Events.map(e => {
+        ${edgeEvents.map(e => {
           const eventColors = { 
-            smart404_redirect: '#10b981',   // green - success
-            smart404_gone: '#f59e0b',       // amber - intentional 410
-            smart404_fallback: '#ef4444',   // red - unmatched
-            smart404_homepage: '#a855f7'    // purple - homepage redirect
+            smart404_redirect: '#10b981',
+            smart404_gone: '#f59e0b',
+            smart404_fallback: '#ef4444',
+            smart404_homepage: '#a855f7',
+            '301': '#10b981',
+            '410': '#f59e0b',
+            '404': '#ef4444'
           };
           const eventLabels = {
-            smart404_redirect: '301 → SmugMug',
-            smart404_gone: '410 Gone',
-            smart404_fallback: 'Fallback',
-            smart404_homepage: '→ Homepage'
+            smart404_redirect: '301',
+            smart404_gone: '410',
+            smart404_fallback: '404',
+            smart404_homepage: 'Home',
+            '301': '301',
+            '410': '410',
+            '404': '404'
           };
-          const color = eventColors[e.event] || '#888';
-          const label = eventLabels[e.event] || e.event;
-          const shortPath = e.page_path && e.page_path.length > 40 ? '...' + e.page_path.slice(-37) : (e.page_path || 'unknown');
+          const color = eventColors[e.event_type] || '#888';
+          const label = eventLabels[e.event_type] || e.event_type;
+          const shortPath = e.path && e.path.length > 40 ? '...' + e.path.slice(-37) : (e.path || 'unknown');
+          const botIcon = e.is_bot ? '🤖' : '👤';
           return `
           <div style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
             <span style="background: ${color}22; color: ${color}; padding: 2px 8px; border-radius: 8px; font-size: 10px; flex-shrink: 0;">${label}</span>
-            <span style="flex: 1; color: #ccc; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${e.page_path || ''}">${shortPath}</span>
+            <span style="flex: 1; color: #ccc; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${e.path || ''}">${shortPath}</span>
+            <span style="font-size: 11px;">${botIcon}</span>
             <span style="color: #888; font-size: 12px; font-weight: bold;">${e.hits}</span>
           </div>
         `}).join('')}
       </div>
-      `}
+      ` : ''}
     </div>
   </div>
 
@@ -1624,6 +1790,14 @@ export default {
         return handleTrackOptions();
       }
       return handleTrackRequest(request, env);
+    }
+
+    // 0a) Edge event tracking (301/410/404 from Netlify functions)
+    if (url.pathname === "/edge-event") {
+      if (request.method === "OPTIONS") {
+        return handleEdgeEventOptions();
+      }
+      return handleEdgeEvent(request, env);
     }
 
     // 0b) Analytics dashboard

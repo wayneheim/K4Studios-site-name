@@ -30,15 +30,14 @@ function isBot(userAgent) {
 async function trackSmartEvent(event, eventType, requestedPath, imageId, isBotRequest) {
   try {
     const payload = {
-      session_id: `smart404-${Date.now()}`,
-      event: eventType,
-      page_path: requestedPath,
+      event_type: eventType,
+      path: requestedPath,
       image_id: imageId || null,
-      page_type: isBotRequest ? 'bot' : 'human',
+      is_bot: isBotRequest ? 1 : 0,
       referrer: event.headers['referer'] || event.headers['Referer'] || null
     };
-    // Must await in serverless - unawaited promises get killed when function exits
-    await fetch('https://k4-image-proxy.wayneheim.workers.dev/track', {
+    // Use dedicated edge-event endpoint for reliability
+    await fetch('https://k4-image-proxy.wayneheim.workers.dev/edge-event', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
