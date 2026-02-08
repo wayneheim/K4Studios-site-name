@@ -28,23 +28,26 @@ function isBot(userAgent) {
 
 // Fire analytics event to track 404/410/301 responses
 async function trackSmartEvent(event, eventType, requestedPath, imageId, isBotRequest) {
+  const payload = {
+    event_type: eventType,
+    path: requestedPath,
+    image_id: imageId || null,
+    is_bot: isBotRequest ? 1 : 0,
+    referrer: event.headers['referer'] || event.headers['Referer'] || null
+  };
+  
+  console.log('[smart-404] Sending edge event:', JSON.stringify(payload));
+  
   try {
-    const payload = {
-      event_type: eventType,
-      path: requestedPath,
-      image_id: imageId || null,
-      is_bot: isBotRequest ? 1 : 0,
-      referrer: event.headers['referer'] || event.headers['Referer'] || null
-    };
-    // Use dedicated edge-event endpoint for reliability
-    await fetch('https://k4-image-proxy.wayneheim.workers.dev/edge-event', {
+    const response = await fetch('https://k4-image-proxy.wayneheim.workers.dev/edge-event', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
+    console.log('[smart-404] Edge event response:', response.status, response.statusText);
   } catch (e) {
     // Never let analytics break the function
-    console.log('[smart-404] Analytics error:', e.message);
+    console.log('[smart-404] Analytics error:', e.message, e.stack);
   }
 }
 
