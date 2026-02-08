@@ -59,8 +59,7 @@ export const painterlyStory = [
   // ──────────────────────────────────────── 5: Press & Resources
   {
     subhead: "Press & Related Resources",
-    paragraphs: [
-      `<a href="https://www.atthefront.com/" target="_blank" rel="noopener">At The Front</a>: Supplier of historically accurate WWII reenacting equipment used by historical communities featured in Wayne Heim’s Facing History series.`
+    paragraphs: [      `<a href="https://aotw.com/2026/02/painterly-photography/" target="_blank" rel="noopener">Art of the West</a> recently featured Wayne Heim's painterly Western photography, exploring his "one-image movie" approach to storytelling and fine art photography (February 2026).`,      `<a href="https://www.atthefront.com/" target="_blank" rel="noopener">At The Front</a>: Supplier of historically accurate WWII reenacting equipment used by historical communities featured in Wayne Heim’s Facing History series.`
     ]
   },
 
