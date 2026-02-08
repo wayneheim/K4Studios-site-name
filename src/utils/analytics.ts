@@ -17,6 +17,21 @@ function getSessionId(): string {
   return sessionId;
 }
 
+// Capture the ORIGINAL entry referrer once per session
+// This ensures we remember where the user came from (e.g., Google)
+// even after they navigate around the site
+function getEntryReferrer(): string | null {
+  if (typeof window === 'undefined') return null;
+  
+  let entryReferrer = sessionStorage.getItem('k4_entry_referrer');
+  if (entryReferrer === null) {
+    // First event of the session - capture document.referrer now
+    entryReferrer = document.referrer || '';
+    sessionStorage.setItem('k4_entry_referrer', entryReferrer);
+  }
+  return entryReferrer || null;
+}
+
 interface TrackContext {
   galleryId?: string | null;
   imageId?: string | null;
@@ -40,8 +55,8 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
   // Skip if SSR
   if (typeof window === 'undefined') return;
 
-  // Capture original referrer (only meaningful on first page load)
-  const originalReferrer = document.referrer || null;
+  // Use the ORIGINAL entry referrer for the session (not current document.referrer)
+  const entryReferrer = getEntryReferrer();
 
   // Capture current page path
   const pagePath = window.location.pathname;
@@ -53,7 +68,7 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
     image_id: context.imageId || null,
     page_type: context.pageType || null,
     theme: context.theme || null,
-    referrer: originalReferrer,
+    referrer: entryReferrer,
     page_path: pagePath
   });
 

@@ -821,10 +821,16 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     .controls { margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 5px; }
     .controls a { color: #4a9eff; text-decoration: none; padding: 5px 10px; border-radius: 4px; }
     .controls a:hover, .controls a.active { background: #333; }
-    .pulse { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 30px; }
-    .pulse-card { background: #252525; padding: 20px; border-radius: 8px; text-align: center; }
-    .pulse-card .value { font-size: 32px; font-weight: bold; color: #4a9eff; }
-    .pulse-card .label { font-size: 12px; color: #888; margin-top: 5px; }
+    .pulse { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; align-items: center; }
+    .pulse-stat { background: #252525; padding: 8px 16px; border-radius: 6px; display: flex; align-items: center; gap: 8px; }
+    .pulse-stat .value { font-size: 18px; font-weight: bold; color: #4a9eff; }
+    .pulse-stat .label { font-size: 11px; color: #888; }
+    .pulse-stat.highlight { background: linear-gradient(135deg, #d97706 0%, #b45309 100%); }
+    .pulse-stat.highlight .value { color: #fff; }
+    .pulse-stat.highlight .label { color: #fde68a; }
+    .pulse-stat.collector { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); }
+    .pulse-stat.collector .value { color: #fff; }
+    .pulse-stat.collector .label { color: #c4b5fd; }
     table { width: 100%; border-collapse: collapse; background: #252525; border-radius: 8px; overflow: hidden; margin-bottom: 20px; }
     th, td { padding: 10px 15px; text-align: left; border-bottom: 1px solid #333; }
     th { background: #1a1a1a; color: #888; font-size: 12px; text-transform: uppercase; }
@@ -948,50 +954,15 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
 
   <h2>Pulse</h2>
   <div class="pulse">
-    <div class="pulse-card">
-      <div class="value">${s.unique_visitors || 0}</div>
-      <div class="label">Visitors (Unique IPs)</div>
-    </div>
-    <div class="pulse-card">
-      <div class="value"><span style="color:#10b981">${newVisitors}</span> / <span style="color:#f59e0b">${returningVisitors}</span></div>
-      <div class="label"><span style="color:#10b981">New</span> / <span style="color:#f59e0b">Returning</span></div>
-    </div>
-    <div class="pulse-card">
-      <div class="value">${s.sessions || 0}</div>
-      <div class="label">Sessions</div>
-    </div>
-    <div class="pulse-card">
-      <div class="value">${s.avg_events_per_session || 0}</div>
-      <div class="label">Avg Events / Session</div>
-    </div>
+    <div class="pulse-stat"><span class="value">${s.unique_visitors || 0}</span><span class="label">Visitors</span></div>
+    <div class="pulse-stat"><span class="value"><span style="color:#10b981">${newVisitors}</span>/<span style="color:#f59e0b">${returningVisitors}</span></span><span class="label">New/Ret</span></div>
+    <div class="pulse-stat"><span class="value">${s.sessions || 0}</span><span class="label">Sessions</span></div>
+    <div class="pulse-stat"><span class="value">${s.avg_events_per_session || 0}</span><span class="label">Avg/Sess</span></div>
+    <div class="pulse-stat"><span class="value" style="color:#10b981">${s.pct_navigated || 0}%</span><span class="label">Nav</span></div>
+    <div class="pulse-stat"><span class="value" style="color:#f59e0b">${s.pct_zoomed || 0}%</span><span class="label">Zoom</span></div>
+    ${cowboyJumps > 0 ? `<div class="pulse-stat highlight"><span class="value">🤠 ${cowboyJumps}</span><span class="label">Cowboy Jump</span></div>` : ''}
+    ${(s.collector_notes_opens || 0) > 0 ? `<div class="pulse-stat collector"><span class="value">${s.collector_notes_opens}</span><span class="label">Collector Notes</span></div>` : ''}
   </div>
-  <div class="pulse">
-    <div class="pulse-card">
-      <div class="value">${s.pct_navigated || 0}%</div>
-      <div class="label">Navigated</div>
-    </div>
-    <div class="pulse-card">
-      <div class="value">${s.pct_zoomed || 0}%</div>
-      <div class="label">Zoomed</div>
-    </div>
-  </div>
-
-  ${(s.collector_notes_opens || 0) > 0 || cowboyJumps > 0 ? `
-  <div class="pulse" style="margin-top: -15px;">
-    ${cowboyJumps > 0 ? `
-    <div class="pulse-card" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%);">
-      <div class="value" style="color: #fff;">🤠 ${cowboyJumps}</div>
-      <div class="label" style="color: #fde68a;">Cowboy Jump Widget Clicks</div>
-    </div>
-    ` : ''}
-    ${(s.collector_notes_opens || 0) > 0 ? `
-    <div class="pulse-card" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);">
-      <div class="value" style="color: #fff;">${s.collector_notes_opens}</div>
-      <div class="label" style="color: #c4b5fd;">Collector Notes Opened</div>
-    </div>
-    ` : ''}
-  </div>
-  ` : ''}
 
   <div class="grid">
     <div class="section">
