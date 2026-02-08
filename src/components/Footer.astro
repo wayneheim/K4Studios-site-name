@@ -94,6 +94,7 @@ const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `https
       <a
         href={allPageHref}
         class="inline-block text-[#85644b] underline hover:text-[#5a3e2b] transition text-[1rem]"
+        onclick="if(window.k4track) window.k4track('all_list_click')"
       >
         {allPageLinkText}
       </a>

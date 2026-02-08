@@ -275,6 +275,11 @@ export default function ChapterGalleryBase({
     trackEvent(event, { galleryId: galleryKey, ...extraContext });
   };
 
+  // Track page view on mount
+  useEffect(() => {
+    trackEvent('page_view', { galleryId: galleryKey });
+  }, [galleryKey]);
+
   // Load series registry on mount (for Chronicle/Legend data)
   const [seriesRegistry, setSeriesRegistry] = useState(null);
   useEffect(() => {

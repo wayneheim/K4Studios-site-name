@@ -617,6 +617,7 @@ async function handleAdminAnalytics(request, env) {
     const entries = await env.DB.prepare(entryQuery).all();
 
     // Query 4: Gallery performance
+    // Query 4: Gallery performance (exclude cowboy_jump_home which isn't a real gallery)
     const galleryQuery = `
       SELECT 
         gallery_id,
@@ -625,7 +626,7 @@ async function handleAdminAnalytics(request, env) {
           NULLIF(COUNT(DISTINCT session_id), 0), 1) as zoom_pct,
         ROUND(1.0 * COUNT(*) / NULLIF(COUNT(DISTINCT session_id), 0), 1) as avg_events
       FROM events 
-      WHERE ${dateClause} AND gallery_id IS NOT NULL ${ipClause}
+      WHERE ${dateClause} AND gallery_id IS NOT NULL AND gallery_id != 'cowboy_jump_home' ${ipClause}
       GROUP BY gallery_id 
       ORDER BY sessions DESC
       LIMIT 15
@@ -653,10 +654,11 @@ async function handleAdminAnalytics(request, env) {
     `;
     const geo = await env.DB.prepare(geoQuery).all();
 
-    // Query 7: Daily trend (for chart)
+    // Query 7: Daily trend (for chart) - includes both visitors and sessions
     const trendQuery = `
       SELECT 
         DATE(created_at) as day,
+        COUNT(DISTINCT ip) as visitors,
         COUNT(DISTINCT session_id) as sessions,
         COUNT(*) as events
       FROM events 
@@ -677,27 +679,31 @@ async function handleAdminAnalytics(request, env) {
     const devices = await env.DB.prepare(deviceQuery).all();
 
     // Query 9: Top pages
+    // Query 9: Top pages (exclude image pages which have /i- pattern)
     const pagesQuery = `
       SELECT page_path, COUNT(DISTINCT session_id) as sessions, COUNT(*) as events
       FROM events 
-      WHERE ${dateClause} ${ipClause} AND page_path IS NOT NULL
+      WHERE ${dateClause} ${ipClause} 
+        AND page_path IS NOT NULL
+        AND page_path NOT LIKE '%/i-%'
       GROUP BY page_path 
       ORDER BY sessions DESC
       LIMIT 10
     `;
     const pages = await env.DB.prepare(pagesQuery).all();
 
-    // Query 10: Most popular images
+    // Query 10: Most popular images (use page_path with /i- pattern for actual page visits)
     const imagesQuery = `
       SELECT 
-        image_id,
-        gallery_id,
+        page_path,
         COUNT(DISTINCT session_id) as sessions,
-        COUNT(*) as interactions,
+        COUNT(*) as events,
         COUNT(CASE WHEN event = 'zoom_open' THEN 1 END) as zooms
       FROM events 
-      WHERE ${dateClause} ${ipClause} AND image_id IS NOT NULL
-      GROUP BY image_id 
+      WHERE ${dateClause} ${ipClause} 
+        AND page_path IS NOT NULL
+        AND page_path LIKE '%/i-%'
+      GROUP BY page_path 
       ORDER BY sessions DESC
       LIMIT 10
     `;
@@ -869,16 +875,22 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
 
   ${trend.length > 1 ? `
   <div class="trend-chart">
-    <h3>Sessions per Day</h3>
-    <div class="trend-bars">
+    <h3>
+      <span id="chart-title">Visitors per Day</span>
+      <span style="float: right; font-size: 12px; font-weight: normal;">
+        <a href="#" id="toggle-visitors" style="color: #10b981; text-decoration: underline;">Visitors</a> |
+        <a href="#" id="toggle-sessions" style="color: #888; text-decoration: none;">Sessions</a>
+      </span>
+    </h3>
+    <div class="trend-bars" id="trend-chart-bars">
       ${(() => {
-        const maxSessions = Math.max(...trend.map(t => t.sessions), 1);
+        const maxVisitors = Math.max(...trend.map(t => t.visitors), 1);
         return trend.map(t => {
-          const height = Math.max((t.sessions / maxSessions * 100), 2);
+          const height = Math.max((t.visitors / maxVisitors * 100), 2);
           const dateLabel = t.day.slice(5); // MM-DD format
           return `
-            <div class="trend-bar" style="height: ${height}%" title="${t.day}: ${t.sessions} sessions, ${t.events} events">
-              <span class="trend-bar-value">${t.sessions}</span>
+            <div class="trend-bar" data-visitors="${t.visitors}" data-sessions="${t.sessions}" data-day="${t.day}" style="height: ${height}%" title="${t.day}: ${t.visitors} visitors, ${t.sessions} sessions">
+              <span class="trend-bar-value">${t.visitors}</span>
               <span class="trend-bar-label">${dateLabel}</span>
             </div>
           `;
@@ -886,9 +898,50 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       })()}
     </div>
   </div>
+  <script>
+    (function() {
+      const visitorsLink = document.getElementById('toggle-visitors');
+      const sessionsLink = document.getElementById('toggle-sessions');
+      const chartTitle = document.getElementById('chart-title');
+      const bars = document.querySelectorAll('.trend-bar');
+      
+      function showVisitors() {
+        const maxVal = Math.max(...Array.from(bars).map(b => parseInt(b.dataset.visitors)), 1);
+        bars.forEach(bar => {
+          const val = parseInt(bar.dataset.visitors);
+          bar.style.height = Math.max((val / maxVal * 100), 2) + '%';
+          bar.querySelector('.trend-bar-value').textContent = val;
+          bar.title = bar.dataset.day + ': ' + val + ' visitors';
+        });
+        chartTitle.textContent = 'Visitors per Day';
+        visitorsLink.style.color = '#10b981';
+        visitorsLink.style.textDecoration = 'underline';
+        sessionsLink.style.color = '#888';
+        sessionsLink.style.textDecoration = 'none';
+      }
+      
+      function showSessions() {
+        const maxVal = Math.max(...Array.from(bars).map(b => parseInt(b.dataset.sessions)), 1);
+        bars.forEach(bar => {
+          const val = parseInt(bar.dataset.sessions);
+          bar.style.height = Math.max((val / maxVal * 100), 2) + '%';
+          bar.querySelector('.trend-bar-value').textContent = val;
+          bar.title = bar.dataset.day + ': ' + val + ' sessions';
+        });
+        chartTitle.textContent = 'Sessions per Day';
+        sessionsLink.style.color = '#4a9eff';
+        sessionsLink.style.textDecoration = 'underline';
+        visitorsLink.style.color = '#888';
+        visitorsLink.style.textDecoration = 'none';
+      }
+      
+      visitorsLink.addEventListener('click', function(e) { e.preventDefault(); showVisitors(); });
+      sessionsLink.addEventListener('click', function(e) { e.preventDefault(); showSessions(); });
+    })();
+  </script>
   ` : trend.length === 1 ? `
   <div class="trend-chart">
-    <h3>Sessions per Day</h3>
+    <h3>Visitors per Day</h3>
     <p class="no-chart">Only 1 day of data. Chart will appear with more days.</p>
   </div>
   ` : ''}
@@ -995,7 +1048,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
         pages.map(p => `
           <div class="bar-row">
-            <span class="bar-label" title="${p.page_path}">${p.page_path.length > 40 ? '...' + p.page_path.slice(-37) : p.page_path}</span>
+            <a class="bar-label" href="https://www.k4studios.com${p.page_path}" target="_blank" title="${p.page_path}" style="color: #4a9eff; text-decoration: none;">${p.page_path.length > 40 ? '...' + p.page_path.slice(-37) : p.page_path}</a>
             <div class="bar-container">
               <div class="bar" style="width: ${(p.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
             </div>
@@ -1007,19 +1060,19 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
 
     <div class="section">
       <h3>🔥 Top 10 Images</h3>
-      ${images.length === 0 ? '<p style="color:#666">No data yet</p>' : `
-      <table>
-        <tr><th>Image</th><th>Gallery</th><th>Sessions</th><th>Zooms</th></tr>
-        ${images.map(i => `
-          <tr>
-            <td title="${i.image_id}">${i.image_id?.length > 25 ? i.image_id.slice(0, 22) + '...' : i.image_id}</td>
-            <td>${i.gallery_id || '-'}</td>
-            <td>${i.sessions}</td>
-            <td>${i.zooms}</td>
-          </tr>
-        `).join('')}
-      </table>
-      `}
+      ${images.length === 0 ? '<p style="color:#666">No data yet</p>' : 
+        images.map(i => {
+          const displayPath = i.page_path.length > 50 ? '...' + i.page_path.slice(-47) : i.page_path;
+          return `
+          <div class="bar-row">
+            <a class="bar-label" href="https://www.k4studios.com${i.page_path}" target="_blank" title="${i.page_path}" style="color: #4a9eff; text-decoration: none;">${displayPath}</a>
+            <div class="bar-container">
+              <div class="bar" style="width: ${(i.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
+            </div>
+            <span class="bar-value">${i.sessions}${i.zooms > 0 ? ` <span style="color:#10b981" title="Zooms">🔍${i.zooms}</span>` : ''}</span>
+          </div>
+        `}).join('')
+      }
     </div>
 
     <div class="section bar-orange">

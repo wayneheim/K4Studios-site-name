@@ -73,6 +73,18 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
   }
 }
 
+// Expose trackEvent globally for use in Astro components via onclick
+if (typeof window !== 'undefined') {
+  (window as any).k4track = trackEvent;
+}
+
+/**
+ * Track a page view - call this on page load to record all page visits
+ */
+export function trackPageView(): void {
+  trackEvent('page_view');
+}
+
 /**
  * Helper to extract gallery ID from URL path
  * e.g., /Galleries/Painterly-Fine-Art-Photography/Facing-History -> Facing-History

@@ -11,6 +11,7 @@
  * - Triggered from footer, expands in-place
  */
 import { useState, useEffect, useRef } from 'react';
+import { trackEvent } from '../utils/analytics';
 
 // ✅ Grid styling matches /all.astro
 const gridStyles = {
@@ -154,6 +155,7 @@ export default function BrowseAllGrid({
 
   // ✅ Handle expand with optional history state
   const handleExpand = () => {
+    trackEvent('browse_all_click');
     setIsExpanded(true);
     // Shallow history state for back-button sanity (no URL change)
     if (typeof window !== 'undefined') {
