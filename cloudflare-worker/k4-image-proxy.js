@@ -418,7 +418,9 @@ async function handleTrackRequest(request, env) {
       event = null,
       gallery_id = null,
       image_id = null,
-      page_type = null
+      page_type = null,
+      referrer: clientReferrer = null,
+      page_path = null
     } = body;
 
     // Event is required
@@ -436,14 +438,28 @@ async function handleTrackRequest(request, env) {
                request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() || 
                null;
 
-    // Normalize referrer
-    const referer = request.headers.get("Referer") || null;
-    const referrer = normalizeReferrer(referer);
+    // Normalize referrer - prefer client-sent referrer (document.referrer)
+    const referrer = normalizeReferrer(clientReferrer);
+
+    // Detect device/platform from User-Agent
+    const ua = (request.headers.get("User-Agent") || "").toLowerCase();
+    let device = "unknown";
+    if (ua.includes("iphone") || ua.includes("ipad")) {
+      device = "ios";
+    } else if (ua.includes("android")) {
+      device = "android";
+    } else if (ua.includes("macintosh") || ua.includes("mac os")) {
+      device = "mac";
+    } else if (ua.includes("windows")) {
+      device = "windows";
+    } else if (ua.includes("linux")) {
+      device = "linux";
+    }
 
     // Insert into D1
     await env.DB.prepare(`
-      INSERT INTO events (session_id, event, gallery_id, image_id, page_type, referrer, country, region, city, ip)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO events (session_id, event, gallery_id, image_id, page_type, referrer, country, region, city, ip, device, page_path)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `).bind(
       session_id,
       event,
@@ -454,7 +470,9 @@ async function handleTrackRequest(request, env) {
       country,
       region,
       city,
-      ip
+      ip,
+      device,
+      page_path
     ).run();
 
     return new Response(null, { 
@@ -528,13 +546,15 @@ async function handleAdminAnalytics(request, env) {
                    null;
 
   try {
-    // Build date filter
-    // For "yesterday", we want only that day; otherwise, last N days from now
+    // Build date filter (adjusted for Eastern Time, UTC-5)
+    // We offset 'now' by +5 hours so that Eastern midnight aligns correctly
     let dateClause;
     if (yesterday) {
-      dateClause = `created_at >= datetime('now', '-1 day', 'start of day') AND created_at < datetime('now', 'start of day')`;
+      // Yesterday in Eastern time
+      dateClause = `created_at >= datetime('now', '-5 hours', '-1 day', 'start of day') AND created_at < datetime('now', '-5 hours', 'start of day')`;
     } else {
-      dateClause = `created_at > datetime('now', '-${days} days')`;
+      // Last N days from Eastern "now"
+      dateClause = `created_at > datetime('now', '-5 hours', '-${days} days')`;
     }
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
     const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
@@ -543,15 +563,32 @@ async function handleAdminAnalytics(request, env) {
     const summaryQuery = `
       SELECT 
         COUNT(DISTINCT session_id) as sessions,
+        COUNT(DISTINCT ip) as unique_visitors,
         COUNT(*) as total_events,
+        ROUND(1.0 * COUNT(*) / NULLIF(COUNT(DISTINCT session_id), 0), 1) as avg_events_per_session,
         ROUND(100.0 * COUNT(DISTINCT CASE WHEN event IN ('nav_next', 'nav_prev') THEN session_id END) / 
           NULLIF(COUNT(DISTINCT session_id), 0), 1) as pct_navigated,
         ROUND(100.0 * COUNT(DISTINCT CASE WHEN event = 'zoom_open' THEN session_id END) / 
-          NULLIF(COUNT(DISTINCT session_id), 0), 1) as pct_zoomed
+          NULLIF(COUNT(DISTINCT session_id), 0), 1) as pct_zoomed,
+        COUNT(CASE WHEN event = 'collector_notes_open' THEN 1 END) as collector_notes_opens
       FROM events 
       WHERE ${dateClause} ${galleryClause} ${ipClause}
     `;
     const summary = await env.DB.prepare(summaryQuery).first();
+
+    // Query 1b: New vs returning visitors (IPs seen before this period)
+    const returningQuery = `
+      SELECT COUNT(DISTINCT e.ip) as returning_visitors
+      FROM events e
+      WHERE ${dateClause.replace(/created_at/g, 'e.created_at')} ${ipClause.replace(/ip/g, 'e.ip')}
+        AND e.ip IN (
+          SELECT DISTINCT ip FROM events 
+          WHERE created_at < datetime('now', '-5 hours', '-${days} days')
+        )
+    `;
+    const returningResult = await env.DB.prepare(returningQuery).first();
+    const returningVisitors = returningResult?.returning_visitors || 0;
+    const newVisitors = (summary?.unique_visitors || 0) - returningVisitors;
 
     // Query 2: Event breakdown
     const eventsQuery = `
@@ -603,13 +640,13 @@ async function handleAdminAnalytics(request, env) {
     `;
     const referrers = await env.DB.prepare(referrerQuery).all();
 
-    // Query 6: Geography
+    // Query 6: Geography (unique visitors by location)
     const geoQuery = `
-      SELECT country, region, city, COUNT(DISTINCT session_id) as sessions
+      SELECT country, region, city, COUNT(DISTINCT ip) as visitors
       FROM events 
       WHERE ${dateClause} ${galleryClause} ${ipClause}
       GROUP BY country, region, city 
-      ORDER BY sessions DESC
+      ORDER BY visitors DESC
       LIMIT 25
     `;
     const geo = await env.DB.prepare(geoQuery).all();
@@ -627,6 +664,43 @@ async function handleAdminAnalytics(request, env) {
     `;
     const trend = await env.DB.prepare(trendQuery).all();
 
+    // Query 8: Device/Platform breakdown
+    const deviceQuery = `
+      SELECT device, COUNT(DISTINCT session_id) as sessions
+      FROM events 
+      WHERE ${dateClause} ${galleryClause} ${ipClause}
+      GROUP BY device 
+      ORDER BY sessions DESC
+    `;
+    const devices = await env.DB.prepare(deviceQuery).all();
+
+    // Query 9: Top pages
+    const pagesQuery = `
+      SELECT page_path, COUNT(DISTINCT session_id) as sessions, COUNT(*) as events
+      FROM events 
+      WHERE ${dateClause} ${ipClause} AND page_path IS NOT NULL
+      GROUP BY page_path 
+      ORDER BY sessions DESC
+      LIMIT 10
+    `;
+    const pages = await env.DB.prepare(pagesQuery).all();
+
+    // Query 10: Most popular images
+    const imagesQuery = `
+      SELECT 
+        image_id,
+        gallery_id,
+        COUNT(DISTINCT session_id) as sessions,
+        COUNT(*) as interactions,
+        COUNT(CASE WHEN event = 'zoom_open' THEN 1 END) as zooms
+      FROM events 
+      WHERE ${dateClause} ${ipClause} AND image_id IS NOT NULL
+      GROUP BY image_id 
+      ORDER BY sessions DESC
+      LIMIT 10
+    `;
+    const images = await env.DB.prepare(imagesQuery).all();
+
     // Render HTML
     const html = renderDashboard({
       days,
@@ -635,12 +709,17 @@ async function handleAdminAnalytics(request, env) {
       excludeIp,
       viewerIp,
       summary,
+      newVisitors,
+      returningVisitors,
       events: events.results || [],
       entries: entries.results || [],
       galleries: galleries.results || [],
       referrers: referrers.results || [],
       geo: geo.results || [],
-      trend: trend.results || []
+      trend: trend.results || [],
+      devices: devices.results || [],
+      pages: pages.results || [],
+      images: images.results || []
     });
 
     return new Response(html, {
@@ -654,13 +733,21 @@ async function handleAdminAnalytics(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, events, entries, galleries, referrers, geo, trend }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, events, entries, galleries, referrers, geo, trend, devices, pages, images }) {
   const s = summary || {};
+  
+  // Helper to format event names nicely
+  const formatEventName = (name) => {
+    return name
+      .replace(/_/g, ' ')
+      .replace(/\b\w/g, c => c.toUpperCase());
+  };
   
   // Calculate max for bar chart scaling
   const maxEventCount = Math.max(...events.map(e => e.count), 1);
   const maxRefSessions = Math.max(...referrers.map(r => r.sessions), 1);
-  const maxGeoSessions = Math.max(...geo.map(g => g.sessions), 1);
+  const maxGeoVisitors = Math.max(...geo.map(g => g.visitors), 1);
+  const maxPageSessions = Math.max(...pages.map(p => p.sessions), 1);
   
   // Build base URL for filter links
   const baseParams = new URLSearchParams();
@@ -782,16 +869,26 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   <h2>Pulse</h2>
   <div class="pulse">
     <div class="pulse-card">
+      <div class="value">${s.unique_visitors || 0}</div>
+      <div class="label">Visitors (Unique IPs)</div>
+    </div>
+    <div class="pulse-card">
+      <div class="value"><span style="color:#10b981">${newVisitors}</span> / <span style="color:#f59e0b">${returningVisitors}</span></div>
+      <div class="label"><span style="color:#10b981">New</span> / <span style="color:#f59e0b">Returning</span></div>
+    </div>
+    <div class="pulse-card">
       <div class="value">${s.sessions || 0}</div>
       <div class="label">Sessions</div>
     </div>
     <div class="pulse-card">
-      <div class="value">${s.total_events || 0}</div>
-      <div class="label">Total Events</div>
+      <div class="value">${s.avg_events_per_session || 0}</div>
+      <div class="label">Avg Events / Session</div>
     </div>
+  </div>
+  <div class="pulse">
     <div class="pulse-card">
       <div class="value">${s.pct_navigated || 0}%</div>
-      <div class="label">Navigated (next/prev)</div>
+      <div class="label">Navigated</div>
     </div>
     <div class="pulse-card">
       <div class="value">${s.pct_zoomed || 0}%</div>
@@ -799,13 +896,22 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
   </div>
 
+  ${(s.collector_notes_opens || 0) > 0 ? `
+  <div class="pulse" style="margin-top: -15px;">
+    <div class="pulse-card" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); grid-column: span 2;">
+      <div class="value" style="color: #fff;">${s.collector_notes_opens}</div>
+      <div class="label" style="color: #c4b5fd;">Collector Notes Opened — Pure Intent Signal</div>
+    </div>
+  </div>
+  ` : ''}
+
   <div class="grid">
     <div class="section">
       <h3>Event Breakdown</h3>
       ${events.length === 0 ? '<p style="color:#666">No events yet</p>' : 
         events.map(e => `
           <div class="bar-row">
-            <span class="bar-label">${e.event}</span>
+            <span class="bar-label">${formatEventName(e.event)}</span>
             <div class="bar-container">
               <div class="bar" style="width: ${(e.count / maxEventCount * 100).toFixed(1)}%"></div>
             </div>
@@ -819,7 +925,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <h3>Entry Points</h3>
       <table>
         <tr><th>Source</th><th>Sessions</th></tr>
-        ${entries.map(e => `<tr><td>${e.entry_source}</td><td>${e.sessions}</td></tr>`).join('')}
+        ${entries.map(e => `<tr><td>${formatEventName(e.entry_source)}</td><td>${e.sessions}</td></tr>`).join('')}
         ${entries.length === 0 ? '<tr><td colspan="2">No data yet</td></tr>' : ''}
       </table>
     </div>
@@ -831,6 +937,38 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
         ${galleries.map(g => `<tr><td>${g.gallery_id}</td><td>${g.sessions}</td><td>${g.zoom_pct || 0}%</td><td>${g.avg_events || 0}</td></tr>`).join('')}
         ${galleries.length === 0 ? '<tr><td colspan="4">No data yet</td></tr>' : ''}
       </table>
+    </div>
+
+    <div class="section">
+      <h3>Top 10 Pages</h3>
+      ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
+        pages.map(p => `
+          <div class="bar-row">
+            <span class="bar-label" title="${p.page_path}">${p.page_path.length > 40 ? '...' + p.page_path.slice(-37) : p.page_path}</span>
+            <div class="bar-container">
+              <div class="bar" style="width: ${(p.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
+            </div>
+            <span class="bar-value">${p.sessions}</span>
+          </div>
+        `).join('')
+      }
+    </div>
+
+    <div class="section">
+      <h3>🔥 Top 10 Images</h3>
+      ${images.length === 0 ? '<p style="color:#666">No data yet</p>' : `
+      <table>
+        <tr><th>Image</th><th>Gallery</th><th>Sessions</th><th>Zooms</th></tr>
+        ${images.map(i => `
+          <tr>
+            <td title="${i.image_id}">${i.image_id?.length > 25 ? i.image_id.slice(0, 22) + '...' : i.image_id}</td>
+            <td>${i.gallery_id || '-'}</td>
+            <td>${i.sessions}</td>
+            <td>${i.zooms}</td>
+          </tr>
+        `).join('')}
+      </table>
+      `}
     </div>
 
     <div class="section bar-orange">
@@ -848,16 +986,29 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       }
     </div>
 
+    <div class="section">
+      <h3>Devices</h3>
+      <table>
+        <tr><th>Platform</th><th>Sessions</th></tr>
+        ${devices.map(d => {
+          const icons = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', unknown: '❓' };
+          const labels = { ios: 'iOS (iPhone/iPad)', android: 'Android', mac: 'Mac', windows: 'Windows PC', linux: 'Linux', unknown: 'Unknown' };
+          return `<tr><td>${icons[d.device] || '❓'} ${labels[d.device] || d.device}</td><td>${d.sessions}</td></tr>`;
+        }).join('')}
+        ${devices.length === 0 ? '<tr><td colspan="2">No data yet</td></tr>' : ''}
+      </table>
+    </div>
+
     <div class="section bar-green">
-      <h3>Geography</h3>
+      <h3>Geography (Unique Visitors)</h3>
       ${geo.length === 0 ? '<p style="color:#666">No data yet</p>' : 
         geo.map(g => `
           <div class="bar-row">
             <span class="bar-label">${[g.city, g.region, g.country].filter(Boolean).join(', ')}</span>
             <div class="bar-container">
-              <div class="bar" style="width: ${(g.sessions / maxGeoSessions * 100).toFixed(1)}%"></div>
+              <div class="bar" style="width: ${(g.visitors / maxGeoVisitors * 100).toFixed(1)}%"></div>
             </div>
-            <span class="bar-value">${g.sessions}</span>
+            <span class="bar-value">${g.visitors}</span>
           </div>
         `).join('')
       }

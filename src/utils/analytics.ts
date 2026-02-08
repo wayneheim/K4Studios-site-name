@@ -39,12 +39,20 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
   // Skip if SSR
   if (typeof window === 'undefined') return;
 
+  // Capture original referrer (only meaningful on first page load)
+  const originalReferrer = document.referrer || null;
+
+  // Capture current page path
+  const pagePath = window.location.pathname;
+
   const payload = JSON.stringify({
     session_id: getSessionId(),
     event,
     gallery_id: context.galleryId || null,
     image_id: context.imageId || null,
-    page_type: context.pageType || null
+    page_type: context.pageType || null,
+    referrer: originalReferrer,
+    page_path: pagePath
   });
 
   // Use sendBeacon for reliable delivery

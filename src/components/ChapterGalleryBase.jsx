@@ -272,7 +272,7 @@ export default function ChapterGalleryBase({
 
   // Helper to track events with gallery context
   const track = (event, extraContext = {}) => {
-    track(event, { galleryId: galleryKey, ...extraContext });
+    trackEvent(event, { galleryId: galleryKey, ...extraContext });
   };
 
   // Load series registry on mount (for Chronicle/Legend data)
