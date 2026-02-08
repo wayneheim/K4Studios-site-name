@@ -794,11 +794,12 @@ async function handleAdminAnalytics(request, env) {
 
     // Query 13: Session Depth Score (engagement quality metric)
     // Weighted scoring: zoom=4, collector_notes=5, theme_click=3, nav=2, other=1
+    // Also grab location from the first event of each session
     const depthQuery = `
       SELECT 
-        session_id,
+        e.session_id,
         SUM(
-          CASE event
+          CASE e.event
             WHEN 'zoom_open' THEN 4
             WHEN 'collector_notes_open' THEN 5
             WHEN 'theme_click' THEN 3
@@ -807,10 +808,14 @@ async function handleAdminAnalytics(request, env) {
             ELSE 1
           END
         ) as depth_score,
-        COUNT(*) as event_count
-      FROM events
-      WHERE ${dateClause} ${ipClause}
-      GROUP BY session_id
+        COUNT(*) as event_count,
+        MAX(e.city) as city,
+        MAX(e.region) as region,
+        MAX(e.country) as country,
+        MAX(e.device) as device
+      FROM events e
+      WHERE ${dateClause.replace(/created_at/g, 'e.created_at')} ${ipClause.replace(/ip/g, 'e.ip')}
+      GROUP BY e.session_id
       ORDER BY depth_score DESC
       LIMIT 10
     `;
@@ -840,6 +845,62 @@ async function handleAdminAnalytics(request, env) {
     const avgDepthResult = await env.DB.prepare(avgDepthQuery).first();
     const avgDepthScore = avgDepthResult?.avg_depth || 0;
 
+    // Query 14: Deep Session % (north-star metric)
+    // Deep = zoom_open OR event_count >= 10 OR scroll_75/scroll_100
+    const deepSessionQuery = `
+      SELECT 
+        COUNT(*) as total_sessions,
+        SUM(CASE WHEN is_deep = 1 THEN 1 ELSE 0 END) as deep_sessions
+      FROM (
+        SELECT 
+          session_id,
+          CASE WHEN 
+            MAX(CASE WHEN event = 'zoom_open' THEN 1 ELSE 0 END) = 1
+            OR COUNT(*) >= 10
+            OR MAX(CASE WHEN event IN ('scroll_75', 'scroll_100') THEN 1 ELSE 0 END) = 1
+          THEN 1 ELSE 0 END as is_deep
+        FROM events
+        WHERE ${dateClause} ${ipClause}
+        GROUP BY session_id
+      )
+    `;
+    const deepResult = await env.DB.prepare(deepSessionQuery).first();
+    const totalSessions = deepResult?.total_sessions || 0;
+    const deepSessions = deepResult?.deep_sessions || 0;
+    const deepSessionPct = totalSessions > 0 ? Math.round(100 * deepSessions / totalSessions) : 0;
+
+    // Query 15: Exit Pages (where do people leave?)
+    const exitPagesQuery = `
+      SELECT 
+        page_path,
+        page_type,
+        COUNT(*) as exits
+      FROM events
+      WHERE ${dateClause} ${ipClause}
+        AND event = 'session_exit'
+        AND page_path IS NOT NULL
+      GROUP BY page_path
+      ORDER BY exits DESC
+      LIMIT 10
+    `;
+    const exitPagesResult = await env.DB.prepare(exitPagesQuery).all();
+    const exitPages = exitPagesResult.results || [];
+
+    // Query 15b: Exit summary by page type
+    const exitSummaryQuery = `
+      SELECT 
+        page_type,
+        COUNT(*) as exits
+      FROM events
+      WHERE ${dateClause} ${ipClause}
+        AND event = 'session_exit'
+        AND page_type IS NOT NULL
+      GROUP BY page_type
+      ORDER BY exits DESC
+    `;
+    const exitSummaryResult = await env.DB.prepare(exitSummaryQuery).all();
+    const exitSummary = exitSummaryResult.results || [];
+
     // Render HTML
     const html = renderDashboard({
       days,
@@ -862,7 +923,12 @@ async function handleAdminAnalytics(request, env) {
       images: images.results || [],
       themesClicked: themesClicked.results || [],
       topDepthSessions,
-      avgDepthScore
+      avgDepthScore,
+      deepSessionPct,
+      deepSessions,
+      totalSessions,
+      exitPages,
+      exitSummary
     });
 
     return new Response(html, {
@@ -941,7 +1007,7 @@ async function handleExportCSV(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked, topDepthSessions, avgDepthScore }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary }) {
   const s = summary || {};
   
   // Helper to format event names nicely
@@ -1022,12 +1088,24 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     /* Bar chart styles */
     .bar-row { display: flex; align-items: center; padding: 8px 0; border-bottom: 1px solid #333; }
     .bar-row:last-child { border-bottom: none; }
-    .bar-label { min-width: 120px; font-size: 13px; color: #ccc; }
+    .bar-label { width: 140px; flex-shrink: 0; font-size: 12px; color: #ccc; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .bar-container { flex: 1; background: #1a1a1a; border-radius: 4px; height: 20px; margin: 0 10px; overflow: hidden; }
     .bar { height: 100%; background: linear-gradient(90deg, #4a9eff 0%, #2d7dd2 100%); border-radius: 4px; transition: width 0.3s ease; }
-    .bar-value { min-width: 50px; text-align: right; font-size: 13px; color: #888; }
+    .bar-value { width: 40px; flex-shrink: 0; text-align: right; font-size: 13px; color: #888; }
     .bar-orange .bar { background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%); }
     .bar-green .bar { background: linear-gradient(90deg, #10b981 0%, #059669 100%); }
+    /* Section tooltips */
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .section-header h3 { margin: 0; }
+    .section-tip { position: relative; cursor: help; }
+    .section-tip .info-icon { width: 14px; height: 14px; border-radius: 50%; background: #444; color: #888; font-size: 10px; display: inline-flex; align-items: center; justify-content: center; font-style: italic; }
+    .section-tip .tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; z-index: 100; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); width: 220px; line-height: 1.4; }
+    .section-tip .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #333; }
+    .section-tip:hover .tooltip { display: block; }
+    /* Tall sections get full width on larger screens */
+    .section.tall { grid-column: span 1; }
+    @media (min-width: 900px) { .grid-tall { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 20px; } }
+    @media (min-width: 1400px) { .grid-tall { grid-template-columns: repeat(3, 1fr); } }
     /* Trend chart styles */
     .trend-chart { background: #252525; border-radius: 8px; padding: 20px; margin-bottom: 30px; }
     .trend-chart h3 { color: #fff; font-size: 14px; margin-bottom: 15px; }
@@ -1183,18 +1261,24 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>` : ''}
     <div class="pulse-stat" style="background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);">
       <span class="value" style="color: #fff;">${avgDepthScore}</span>
-      <span class="label" style="color: #a5f3fc;">Avg Depth <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a5f3fc;">i</span></span>
-      <div class="tooltip">Weighted engagement score per session. Zoom=4pts, Collector Notes=5pts, Theme Click=3pts, Nav=2pts, Other=1pt. Higher = deeper engagement.</div>
+      <span class="label" style="color: #a5f3fc;">Engage Lvl <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a5f3fc;">i</span></span>
+      <div class="tooltip">Average engagement level per session for this period. Each action earns points: Collector Notes=5, Zoom=4, Theme Click=3, Nav=2, Other=1. Higher = more engaged visitors.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
+      <span class="value" style="color: #fff;">${deepSessionPct}%</span>
+      <span class="label" style="color: #a7f3d0;">Deep <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
+      <div class="tooltip">% of sessions that are "deep" (${deepSessions}/${totalSessions}). Deep = zoomed OR 10+ events OR scrolled 75%+. This is your north-star: readers vs skimmers.</div>
     </div>
   </div>
 
-  <div class="grid">
-    <div class="section">
+  <!-- Tall sections row -->
+  <div class="grid-tall">
+    <div class="section tall">
       <h3>Event Breakdown</h3>
       ${events.length === 0 ? '<p style="color:#666">No events yet</p>' : 
         events.map(e => `
           <div class="bar-row">
-            <span class="bar-label">${formatEventName(e.event)}</span>
+            <span class="bar-label" title="${formatEventName(e.event)}">${formatEventName(e.event)}</span>
             <div class="bar-container">
               <div class="bar" style="width: ${(e.count / maxEventCount * 100).toFixed(1)}%"></div>
             </div>
@@ -1204,6 +1288,52 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       }
     </div>
 
+    <div class="section tall">
+      <h3>🔥 Top 10 Images</h3>
+      ${images.length === 0 ? '<p style="color:#666">No data yet</p>' : 
+        images.map(i => {
+          const imageIdMatch = i.page_path.match(/(i-[a-zA-Z0-9-]+)\/?$/);
+          const imageId = imageIdMatch ? imageIdMatch[1] : null;
+          const pathParts = i.page_path.split('/').filter(Boolean);
+          const shortPath = pathParts.slice(-3).join('/');
+          return `
+          <div style="display: flex; align-items: center; padding: 8px 0; border-bottom: 1px solid #333; gap: 10px;">
+            ${imageId ? `<a href="https://www.k4studios.com${i.page_path}" target="_blank"><img src="https://k4studios.com/img/${imageId}/s" alt="" style="width: 48px; height: 48px; object-fit: cover; border-radius: 4px; background: #333; flex-shrink: 0;"></a>` : ''}
+            <div style="flex: 1; min-width: 0;">
+              <a href="https://www.k4studios.com${i.page_path}" target="_blank" style="color: #4a9eff; text-decoration: none; font-size: 11px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${i.page_path}">${shortPath}</a>
+            </div>
+            <div style="display: flex; gap: 6px; flex-shrink: 0;">
+              ${i.zooms > 0 ? `<div style="background: #1a3a2a; padding: 4px 8px; border-radius: 4px; text-align: center;"><span style="font-size: 14px; font-weight: bold; color: #10b981;">🔍${i.zooms}</span></div>` : ''}
+              <div style="background: #1a2a3a; padding: 4px 10px; border-radius: 4px; text-align: center;"><span style="font-size: 16px; font-weight: bold; color: #4a9eff;">${i.sessions}</span></div>
+            </div>
+          </div>
+        `}).join('')
+      }
+    </div>
+
+    <div class="section tall bar-green">
+      <div class="section-header">
+        <h3>Geography</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Unique visitors by location. Uses IP geolocation from Cloudflare. City-level accuracy varies by region.</div></span>
+      </div>
+      ${geo.length === 0 ? '<p style="color:#666">No data yet</p>' : 
+        geo.map(g => {
+          const label = [g.city, g.region, g.country].filter(Boolean).join(', ');
+          return `
+          <div class="bar-row">
+            <span class="bar-label" title="${label}">${label}</span>
+            <div class="bar-container">
+              <div class="bar" style="width: ${(g.visitors / maxGeoVisitors * 100).toFixed(1)}%"></div>
+            </div>
+            <span class="bar-value">${g.visitors}</span>
+          </div>
+        `}).join('')
+      }
+    </div>
+  </div>
+
+  <!-- Regular grid -->
+  <div class="grid">
     <div class="section">
       <h3>Entry Points</h3>
       <table>
@@ -1239,47 +1369,27 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
 
     <div class="section">
-      <h3>🔥 Top 10 Images</h3>
-      ${images.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        images.map(i => {
-          // Extract image ID from path (e.g., /Galleries/.../i-xxxxxx)
-          const imageIdMatch = i.page_path.match(/(i-[a-zA-Z0-9-]+)\/?$/);
-          const imageId = imageIdMatch ? imageIdMatch[1] : null;
-          // Get last 3 path segments for display
-          const pathParts = i.page_path.split('/').filter(Boolean);
-          const shortPath = pathParts.slice(-3).join('/');
-          return `
-          <div style="display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #333; gap: 12px;">
-            ${imageId ? `<a href="https://www.k4studios.com${i.page_path}" target="_blank"><img src="https://k4studios.com/img/${imageId}/s" alt="" style="width: 56px; height: 56px; object-fit: cover; border-radius: 4px; background: #333; flex-shrink: 0;"></a>` : ''}
-            <div style="flex: 1; min-width: 0;">
-              <a href="https://www.k4studios.com${i.page_path}" target="_blank" style="color: #4a9eff; text-decoration: none; font-size: 12px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${i.page_path}">${shortPath}</a>
-            </div>
-            <div style="display: flex; gap: 8px; flex-shrink: 0;">
-              ${i.zooms > 0 ? `<div style="background: #1a3a2a; padding: 6px 10px; border-radius: 6px; text-align: center;"><div style="font-size: 16px; font-weight: bold; color: #10b981;">🔍 ${i.zooms}</div></div>` : ''}
-              <div style="background: #1a2a3a; padding: 6px 12px; border-radius: 6px; text-align: center; min-width: 50px;"><div style="font-size: 18px; font-weight: bold; color: #4a9eff;">${i.sessions}</div><div style="font-size: 9px; color: #888; margin-top: 2px;">views</div></div>
-            </div>
-          </div>
-        `}).join('')
-      }
-    </div>
-
-    <div class="section">
       <h3>Top 10 Pages</h3>
       ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        pages.map(p => `
+        pages.map(p => {
+          const shortPath = p.page_path.length > 28 ? '...' + p.page_path.slice(-25) : p.page_path;
+          return `
           <div class="bar-row">
-            <a class="bar-label" href="https://www.k4studios.com${p.page_path}" target="_blank" title="${p.page_path}" style="color: #4a9eff; text-decoration: none;">${p.page_path.length > 40 ? '...' + p.page_path.slice(-37) : p.page_path}</a>
+            <a class="bar-label" href="https://www.k4studios.com${p.page_path}" target="_blank" title="${p.page_path}" style="color: #4a9eff; text-decoration: none;">${shortPath}</a>
             <div class="bar-container">
               <div class="bar" style="width: ${(p.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
             </div>
             <span class="bar-value">${p.sessions}</span>
           </div>
-        `).join('')
+        `}).join('')
       }
     </div>
 
     <div class="section bar-orange">
-      <h3>Referrers</h3>
+      <div class="section-header">
+        <h3>Referrers</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Traffic sources normalized from HTTP referer. "direct" = typed URL or bookmark. "internal" = navigation within site. "google/bing" = search engines.</div></span>
+      </div>
       ${referrers.length === 0 ? '<p style="color:#666">No data yet</p>' : 
         referrers.map(r => `
           <div class="bar-row">
@@ -1307,35 +1417,58 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
 
     <div class="section">
-      <h3>🎯 Top Sessions by Depth</h3>
-      <p style="color: #888; font-size: 11px; margin-bottom: 10px;">Engagement score: zoom=4, collector notes=5, theme=3, nav=2, other=1</p>
+      <div class="section-header">
+        <h3>🎯 Top Sessions by Engagement</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Most engaged sessions by weighted score. Hover session ID to see location. Higher score = more meaningful interactions.</div></span>
+      </div>
+      <p style="color: #666; font-size: 10px; margin-bottom: 8px;">zoom=4, notes=5, theme=3, nav=2</p>
       ${topDepthSessions.length === 0 ? '<p style="color:#666">No sessions yet</p>' : `
       <table>
-        <tr><th>Session</th><th>Events</th><th>Depth Score</th></tr>
-        ${topDepthSessions.map((s, i) => `
-          <tr>
-            <td style="font-family: monospace; font-size: 11px;">#${i + 1} ${s.session_id ? s.session_id.slice(0, 8) + '...' : 'unknown'}</td>
+        <tr><th>Session</th><th>Events</th><th>Score</th></tr>
+        ${topDepthSessions.map((s, i) => {
+          const location = [s.city, s.region, s.country].filter(Boolean).join(', ') || 'Unknown';
+          const deviceIcons = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧' };
+          const deviceIcon = deviceIcons[s.device] || '';
+          return `
+          <tr title="📍 ${location} ${deviceIcon}">
+            <td style="font-family: monospace; font-size: 11px; cursor: help;">#${i + 1} ${s.session_id ? s.session_id.slice(0, 8) + '...' : 'unknown'}</td>
             <td>${s.event_count}</td>
             <td style="font-weight: bold; color: #0891b2;">${s.depth_score}</td>
           </tr>
-        `).join('')}
+        `}).join('')}
       </table>
       `}
     </div>
 
-    <div class="section bar-green">
-      <h3>Geography (Unique Visitors)</h3>
-      ${geo.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        geo.map(g => `
-          <div class="bar-row">
-            <span class="bar-label">${[g.city, g.region, g.country].filter(Boolean).join(', ')}</span>
-            <div class="bar-container">
-              <div class="bar" style="width: ${(g.visitors / maxGeoVisitors * 100).toFixed(1)}%"></div>
-            </div>
-            <span class="bar-value">${g.visitors}</span>
+    <div class="section">
+      <div class="section-header">
+        <h3>🚪 Where People Leave</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Exit pages: where sessions ended. Helps identify which pages hold attention vs which quietly end the journey.</div></span>
+      </div>
+      ${exitSummary.length > 0 ? `
+      <div style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+        ${exitSummary.map(e => {
+          const typeColors = { image: '#4a9eff', gallery: '#10b981', theme: '#f59e0b', landing: '#a855f7' };
+          const color = typeColors[e.page_type] || '#888';
+          return `<span style="background: ${color}22; color: ${color}; padding: 4px 10px; border-radius: 12px; font-size: 11px;">${e.page_type || 'other'}: ${e.exits}</span>`;
+        }).join('')}
+      </div>
+      ` : ''}
+      ${exitPages.length === 0 ? '<p style="color:#666">No exit data yet</p>' : `
+      <div style="max-height: 200px; overflow-y: auto;">
+        ${exitPages.map(p => {
+          const shortPath = p.page_path.length > 35 ? '...' + p.page_path.slice(-32) : p.page_path;
+          const typeColors = { image: '#4a9eff', gallery: '#10b981', theme: '#f59e0b', landing: '#a855f7' };
+          const dotColor = typeColors[p.page_type] || '#888';
+          return `
+          <div style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: ${dotColor}; flex-shrink: 0;"></span>
+            <a href="https://www.k4studios.com${p.page_path}" target="_blank" style="flex: 1; color: #ccc; text-decoration: none; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${p.page_path}">${shortPath}</a>
+            <span style="color: #888; font-size: 12px; font-weight: bold;">${p.exits}</span>
           </div>
-        `).join('')
-      }
+        `}).join('')}
+      </div>
+      `}
     </div>
   </div>
 
