@@ -419,6 +419,7 @@ async function handleTrackRequest(request, env) {
       gallery_id = null,
       image_id = null,
       page_type = null,
+      theme = null,
       referrer: clientReferrer = null,
       page_path = null
     } = body;
@@ -458,8 +459,8 @@ async function handleTrackRequest(request, env) {
 
     // Insert into D1
     await env.DB.prepare(`
-      INSERT INTO events (session_id, event, gallery_id, image_id, page_type, referrer, country, region, city, ip, device, page_path)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO events (session_id, event, gallery_id, image_id, page_type, referrer, country, region, city, ip, device, page_path, theme)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `).bind(
       session_id,
       event,
@@ -472,7 +473,8 @@ async function handleTrackRequest(request, env) {
       city,
       ip,
       device,
-      page_path
+      page_path,
+      theme
     ).run();
 
     return new Response(null, { 
@@ -601,14 +603,14 @@ async function handleAdminAnalytics(request, env) {
     `;
     const events = await env.DB.prepare(eventsQuery).all();
 
-    // Query 3: Entry effectiveness
+    // Query 3: Entry effectiveness (cowboy_jump has its own callout)
     const entryQuery = `
       SELECT 
         event as entry_source,
         COUNT(DISTINCT session_id) as sessions
       FROM events 
       WHERE ${dateClause} ${ipClause}
-        AND event IN ('cowboy_jump', 'gallery_hero_click', 'gallery_explore_click', 'gallery_preview_click')
+        AND event IN ('gallery_hero_click', 'gallery_explore_click', 'gallery_preview_click', 'theme_click')
       GROUP BY event 
       ORDER BY sessions DESC
     `;
@@ -701,6 +703,29 @@ async function handleAdminAnalytics(request, env) {
     `;
     const images = await env.DB.prepare(imagesQuery).all();
 
+    // Query 11: Top themes clicked
+    const themesQuery = `
+      SELECT 
+        theme,
+        COUNT(DISTINCT session_id) as sessions,
+        COUNT(*) as clicks
+      FROM events 
+      WHERE ${dateClause} ${ipClause} AND theme IS NOT NULL
+      GROUP BY theme 
+      ORDER BY sessions DESC
+      LIMIT 10
+    `;
+    const themesClicked = await env.DB.prepare(themesQuery).all();
+
+    // Query 12: Cowboy Jump count (separate from galleries)
+    const cowboyQuery = `
+      SELECT COUNT(DISTINCT session_id) as jumps
+      FROM events 
+      WHERE ${dateClause} ${ipClause} AND event = 'cowboy_jump'
+    `;
+    const cowboyResult = await env.DB.prepare(cowboyQuery).first();
+    const cowboyJumps = cowboyResult?.jumps || 0;
+
     // Render HTML
     const html = renderDashboard({
       days,
@@ -711,6 +736,7 @@ async function handleAdminAnalytics(request, env) {
       summary,
       newVisitors,
       returningVisitors,
+      cowboyJumps,
       events: events.results || [],
       entries: entries.results || [],
       galleries: galleries.results || [],
@@ -719,7 +745,8 @@ async function handleAdminAnalytics(request, env) {
       trend: trend.results || [],
       devices: devices.results || [],
       pages: pages.results || [],
-      images: images.results || []
+      images: images.results || [],
+      themesClicked: themesClicked.results || []
     });
 
     return new Response(html, {
@@ -733,7 +760,7 @@ async function handleAdminAnalytics(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, events, entries, galleries, referrers, geo, trend, devices, pages, images }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked }) {
   const s = summary || {};
   
   // Helper to format event names nicely
@@ -896,12 +923,20 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
   </div>
 
-  ${(s.collector_notes_opens || 0) > 0 ? `
+  ${(s.collector_notes_opens || 0) > 0 || cowboyJumps > 0 ? `
   <div class="pulse" style="margin-top: -15px;">
-    <div class="pulse-card" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); grid-column: span 2;">
-      <div class="value" style="color: #fff;">${s.collector_notes_opens}</div>
-      <div class="label" style="color: #c4b5fd;">Collector Notes Opened — Pure Intent Signal</div>
+    ${cowboyJumps > 0 ? `
+    <div class="pulse-card" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%);">
+      <div class="value" style="color: #fff;">🤠 ${cowboyJumps}</div>
+      <div class="label" style="color: #fde68a;">Cowboy Jump Widget Clicks</div>
     </div>
+    ` : ''}
+    ${(s.collector_notes_opens || 0) > 0 ? `
+    <div class="pulse-card" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);">
+      <div class="value" style="color: #fff;">${s.collector_notes_opens}</div>
+      <div class="label" style="color: #c4b5fd;">Collector Notes Opened</div>
+    </div>
+    ` : ''}
   </div>
   ` : ''}
 
@@ -934,9 +969,25 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <h3>Gallery Performance</h3>
       <table>
         <tr><th>Gallery</th><th>Sessions</th><th>Zoom %</th><th>Avg Events</th></tr>
-        ${galleries.map(g => `<tr><td>${g.gallery_id}</td><td>${g.sessions}</td><td>${g.zoom_pct || 0}%</td><td>${g.avg_events || 0}</td></tr>`).join('')}
+        ${galleries.map(g => `<tr><td>${formatEventName(g.gallery_id || 'Unknown')}</td><td>${g.sessions}</td><td>${g.zoom_pct || 0}%</td><td>${g.avg_events || 0}</td></tr>`).join('')}
         ${galleries.length === 0 ? '<tr><td colspan="4">No data yet</td></tr>' : ''}
       </table>
+    </div>
+
+    <div class="section">
+      <h3>🎨 Top 10 Themes Clicked</h3>
+      ${themesClicked.length === 0 ? '<p style="color:#666">No theme clicks yet</p>' : `
+      <table>
+        <tr><th>Theme</th><th>Sessions</th><th>Clicks</th></tr>
+        ${themesClicked.map(t => `
+          <tr>
+            <td>${formatEventName(t.theme || 'Unknown')}</td>
+            <td>${t.sessions}</td>
+            <td>${t.clicks}</td>
+          </tr>
+        `).join('')}
+      </table>
+      `}
     </div>
 
     <div class="section">

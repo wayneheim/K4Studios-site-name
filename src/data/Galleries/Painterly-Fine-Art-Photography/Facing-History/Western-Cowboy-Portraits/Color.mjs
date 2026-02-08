@@ -308,7 +308,7 @@ export const galleryData = [
   },
   {
     "id": "i-89qzJ6S",
-    "title": "Brothers of the Open Country",
+    "title": "Open Country Brothers",
     "description": "A powerful painterly Western portrait depicting the quiet unity between two frontier companions—one Indigenous, one a seasoned trapper—standing beside a saddled horse under dramatic skies. Rich textures and warm, cinematic tones bring emotional depth to the scene, capturing a bond forged through shared experience on the open range. Wayne Heim’s fine art technique blends illustration-inspired detail with photographic authenticity, offering a narrative-rich tableau ideal for collectors of Western fine art, historical narratives, and evocative Americana.",
     "alt": "Indigenous scout and frontier trapper standing together with a horse, painterly Western portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",

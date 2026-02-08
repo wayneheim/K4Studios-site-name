@@ -21,6 +21,7 @@ interface TrackContext {
   galleryId?: string | null;
   imageId?: string | null;
   pageType?: 'landing' | 'gallery' | 'image' | 'other';
+  theme?: string | null;
 }
 
 /**
@@ -51,6 +52,7 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
     gallery_id: context.galleryId || null,
     image_id: context.imageId || null,
     page_type: context.pageType || null,
+    theme: context.theme || null,
     referrer: originalReferrer,
     page_path: pagePath
   });
