@@ -461,7 +461,9 @@ async function handleTrackRequest(request, env) {
       page_type = null,
       theme = null,
       referrer: clientReferrer = null,
-      page_path = null
+      page_path = null,
+      event_ts_ms = null,  // Client timestamp for timing analysis
+      event_order = null   // Event sequence within session
     } = body;
 
     // Event is required
@@ -505,8 +507,8 @@ async function handleTrackRequest(request, env) {
 
     // Insert into D1
     await env.DB.prepare(`
-      INSERT INTO events (session_id, event, gallery_id, image_id, page_type, referrer, country, region, city, ip, device, page_path, theme, raw_referrer)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO events (session_id, event, gallery_id, image_id, page_type, referrer, country, region, city, ip, device, page_path, theme, raw_referrer, event_ts_ms, event_order)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `).bind(
       session_id,
       event,
@@ -521,7 +523,9 @@ async function handleTrackRequest(request, env) {
       device,
       page_path,
       theme,
-      clientReferrer  // Store raw referrer for debugging
+      clientReferrer,  // Store raw referrer for debugging
+      event_ts_ms,     // Client timestamp (ms since epoch)
+      event_order      // Event sequence within session
     ).run();
 
     return new Response(null, { 
@@ -629,13 +633,19 @@ async function handleAdminAnalytics(request, env) {
     const summary = await env.DB.prepare(summaryQuery).first();
 
     // Query 1b: New vs returning visitors (IPs seen before this period)
+    // For yesterday mode, use start-of-yesterday as the boundary
+    // For rolling windows, use the days offset
+    const priorPeriodClause = yesterday 
+      ? `created_at < datetime('now', '-5 hours', '-1 day', 'start of day')`
+      : `created_at < datetime('now', '-5 hours', '-${days} days')`;
+    
     const returningQuery = `
       SELECT COUNT(DISTINCT e.ip) as returning_visitors
       FROM events e
       WHERE ${dateClause.replace(/created_at/g, 'e.created_at')} ${ipClause.replace(/ip/g, 'e.ip')}
         AND e.ip IN (
           SELECT DISTINCT ip FROM events 
-          WHERE created_at < datetime('now', '-5 hours', '-${days} days')
+          WHERE ${priorPeriodClause}
         )
     `;
     const returningResult = await env.DB.prepare(returningQuery).first();
@@ -782,6 +792,54 @@ async function handleAdminAnalytics(request, env) {
     const cowboyResult = await env.DB.prepare(cowboyQuery).first();
     const cowboyJumps = cowboyResult?.jumps || 0;
 
+    // Query 13: Session Depth Score (engagement quality metric)
+    // Weighted scoring: zoom=4, collector_notes=5, theme_click=3, nav=2, other=1
+    const depthQuery = `
+      SELECT 
+        session_id,
+        SUM(
+          CASE event
+            WHEN 'zoom_open' THEN 4
+            WHEN 'collector_notes_open' THEN 5
+            WHEN 'theme_click' THEN 3
+            WHEN 'nav_next' THEN 2
+            WHEN 'nav_prev' THEN 2
+            ELSE 1
+          END
+        ) as depth_score,
+        COUNT(*) as event_count
+      FROM events
+      WHERE ${dateClause} ${ipClause}
+      GROUP BY session_id
+      ORDER BY depth_score DESC
+      LIMIT 10
+    `;
+    const depthResults = await env.DB.prepare(depthQuery).all();
+    const topDepthSessions = depthResults.results || [];
+
+    // Query 13b: Average depth score across all sessions
+    const avgDepthQuery = `
+      SELECT ROUND(AVG(depth_score), 1) as avg_depth FROM (
+        SELECT 
+          session_id,
+          SUM(
+            CASE event
+              WHEN 'zoom_open' THEN 4
+              WHEN 'collector_notes_open' THEN 5
+              WHEN 'theme_click' THEN 3
+              WHEN 'nav_next' THEN 2
+              WHEN 'nav_prev' THEN 2
+              ELSE 1
+            END
+          ) as depth_score
+        FROM events
+        WHERE ${dateClause} ${ipClause}
+        GROUP BY session_id
+      )
+    `;
+    const avgDepthResult = await env.DB.prepare(avgDepthQuery).first();
+    const avgDepthScore = avgDepthResult?.avg_depth || 0;
+
     // Render HTML
     const html = renderDashboard({
       days,
@@ -802,7 +860,9 @@ async function handleAdminAnalytics(request, env) {
       devices: devices.results || [],
       pages: pages.results || [],
       images: images.results || [],
-      themesClicked: themesClicked.results || []
+      themesClicked: themesClicked.results || [],
+      topDepthSessions,
+      avgDepthScore
     });
 
     return new Response(html, {
@@ -881,7 +941,7 @@ async function handleExportCSV(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked, topDepthSessions, avgDepthScore }) {
   const s = summary || {};
   
   // Helper to format event names nicely
@@ -1083,6 +1143,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     <div class="pulse-stat"><span class="value" style="color:#f59e0b">${s.pct_zoomed || 0}%</span><span class="label">Zoom</span></div>
     ${cowboyJumps > 0 ? `<div class="pulse-stat highlight"><span class="value">🤠 ${cowboyJumps}</span><span class="label">Cowboy Jump</span></div>` : ''}
     ${(s.collector_notes_opens || 0) > 0 ? `<div class="pulse-stat collector"><span class="value">${s.collector_notes_opens}</span><span class="label">Collector Notes</span></div>` : ''}
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);"><span class="value" style="color: #fff;">${avgDepthScore}</span><span class="label" style="color: #a5f3fc;">Avg Depth</span></div>
   </div>
 
   <div class="grid">
@@ -1201,6 +1262,23 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
         }).join('')}
         ${devices.length === 0 ? '<tr><td colspan="2">No data yet</td></tr>' : ''}
       </table>
+    </div>
+
+    <div class="section">
+      <h3>🎯 Top Sessions by Depth</h3>
+      <p style="color: #888; font-size: 11px; margin-bottom: 10px;">Engagement score: zoom=4, collector notes=5, theme=3, nav=2, other=1</p>
+      ${topDepthSessions.length === 0 ? '<p style="color:#666">No sessions yet</p>' : `
+      <table>
+        <tr><th>Session</th><th>Events</th><th>Depth Score</th></tr>
+        ${topDepthSessions.map((s, i) => `
+          <tr>
+            <td style="font-family: monospace; font-size: 11px;">#${i + 1} ${s.session_id ? s.session_id.slice(0, 8) + '...' : 'unknown'}</td>
+            <td>${s.event_count}</td>
+            <td style="font-weight: bold; color: #0891b2;">${s.depth_score}</td>
+          </tr>
+        `).join('')}
+      </table>
+      `}
     </div>
 
     <div class="section bar-green">

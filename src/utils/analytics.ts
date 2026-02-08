@@ -17,6 +17,16 @@ function getSessionId(): string {
   return sessionId;
 }
 
+// Event order counter - increments per session to track event sequence
+function getNextEventOrder(): number {
+  if (typeof window === 'undefined') return 0;
+  
+  const current = parseInt(sessionStorage.getItem('k4_event_order') || '0', 10);
+  const next = current + 1;
+  sessionStorage.setItem('k4_event_order', next.toString());
+  return next;
+}
+
 // Read the entry referrer from the edge-set cookie (k4_entry_ref)
 // The Cloudflare Worker sets this cookie on the first HTML request
 // using the true Referer header before SPA navigation can lose it
@@ -87,7 +97,9 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
     page_type: context.pageType || null,
     theme: context.theme || null,
     referrer: entryReferrer,
-    page_path: pagePath
+    page_path: pagePath,
+    event_ts_ms: Date.now(),        // Client timestamp for timing analysis
+    event_order: getNextEventOrder() // Event sequence within session
   });
 
   // Use sendBeacon for reliable delivery
