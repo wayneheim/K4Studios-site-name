@@ -68,7 +68,8 @@ export const painterlyStory = [
     subhead: "For Collectors of Narrative Western Art",
     paragraphs: [
       "This work is created for collectors who value depth over decoration. Painterly Western photography rewards long viewing, quiet reflection, and personal engagement.",
-      "Each image is designed to live with you — not as a statement to be consumed once, but as a story that continues to unfold."
+      "Each image is designed to live with you — not as a statement to be consumed once, but as a story that continues to unfold.",
+      "This gallery explores <a href='/Blog/what-is-artistic-western-photography' style='color:#8b5a2b; text-decoration:underline;'>artistic Western photography</a>, a fine art approach that emphasizes composition, narrative, and expressive intent over documentation."
     ]
   },
 

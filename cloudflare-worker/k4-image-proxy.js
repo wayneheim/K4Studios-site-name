@@ -592,6 +592,7 @@ async function handleAdminAnalytics(request, env) {
   const yesterday = url.searchParams.get("yesterday") === "1";
   const galleryFilter = url.searchParams.get("gallery") || null;
   const excludeIp = url.searchParams.get("excludeIp") || null;
+  const hideBots = url.searchParams.get("hideBots") === "1";
 
   // Get viewer's current IP for the "exclude me" button
   const viewerIp = request.headers.get("CF-Connecting-IP") || 
@@ -614,6 +615,8 @@ async function handleAdminAnalytics(request, env) {
     }
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
     const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
+    // Bot filter: exclude AWS/datacenter IPs and Ashburn
+    const botClause = hideBots ? `AND NOT (ip LIKE '3.%' OR ip LIKE '18.%' OR ip LIKE '52.%' OR ip LIKE '54.%' OR ip LIKE '65.55.%' OR city = 'Ashburn' OR device = 'unknown')` : "";
 
     // Query 1: Summary stats
     const summaryQuery = `
@@ -628,7 +631,7 @@ async function handleAdminAnalytics(request, env) {
           NULLIF(COUNT(DISTINCT session_id), 0), 1) as pct_zoomed,
         COUNT(CASE WHEN event = 'collector_notes_open' THEN 1 END) as collector_notes_opens
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause}
     `;
     const summary = await env.DB.prepare(summaryQuery).first();
 
@@ -656,7 +659,7 @@ async function handleAdminAnalytics(request, env) {
     const eventsQuery = `
       SELECT event, COUNT(*) as count 
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause}
       GROUP BY event 
       ORDER BY count DESC
       LIMIT 20
@@ -669,7 +672,7 @@ async function handleAdminAnalytics(request, env) {
         event as entry_source,
         COUNT(DISTINCT session_id) as sessions
       FROM events 
-      WHERE ${dateClause} ${ipClause}
+      WHERE ${dateClause} ${ipClause} ${botClause}
         AND event IN ('gallery_hero_click', 'gallery_explore_click', 'gallery_preview_click', 'theme_click')
       GROUP BY event 
       ORDER BY sessions DESC
@@ -685,7 +688,7 @@ async function handleAdminAnalytics(request, env) {
           NULLIF(COUNT(DISTINCT session_id), 0), 1) as zoom_pct,
         ROUND(1.0 * COUNT(*) / NULLIF(COUNT(DISTINCT session_id), 0), 1) as avg_events
       FROM events 
-      WHERE ${dateClause} AND gallery_id IS NOT NULL AND gallery_id != 'Cowboy_Jump_Home' ${ipClause}
+      WHERE ${dateClause} AND gallery_id IS NOT NULL AND gallery_id != 'Cowboy_Jump_Home' ${ipClause} ${botClause}
       GROUP BY gallery_id 
       ORDER BY sessions DESC
       LIMIT 15
@@ -696,7 +699,7 @@ async function handleAdminAnalytics(request, env) {
     const referrerQuery = `
       SELECT referrer, COUNT(DISTINCT session_id) as sessions
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause}
       GROUP BY referrer 
       ORDER BY sessions DESC
     `;
@@ -706,7 +709,7 @@ async function handleAdminAnalytics(request, env) {
     const geoQuery = `
       SELECT country, region, city, COUNT(DISTINCT ip) as visitors
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause}
       GROUP BY country, region, city 
       ORDER BY visitors DESC
       LIMIT 25
@@ -722,7 +725,7 @@ async function handleAdminAnalytics(request, env) {
         COUNT(DISTINCT session_id) as sessions,
         COUNT(*) as events
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause}
       GROUP BY DATE(created_at, '-5 hours')
       ORDER BY day ASC
     `;
@@ -732,7 +735,7 @@ async function handleAdminAnalytics(request, env) {
     const deviceQuery = `
       SELECT device, COUNT(DISTINCT session_id) as sessions
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause}
       GROUP BY device 
       ORDER BY sessions DESC
     `;
@@ -743,7 +746,7 @@ async function handleAdminAnalytics(request, env) {
     const pagesQuery = `
       SELECT page_path, COUNT(DISTINCT session_id) as sessions, COUNT(*) as events
       FROM events 
-      WHERE ${dateClause} ${ipClause} 
+      WHERE ${dateClause} ${ipClause} ${botClause} 
         AND page_path IS NOT NULL
         AND page_path NOT LIKE '%/i-%'
       GROUP BY page_path 
@@ -760,7 +763,7 @@ async function handleAdminAnalytics(request, env) {
         COUNT(*) as events,
         COUNT(CASE WHEN event = 'zoom_open' THEN 1 END) as zooms
       FROM events 
-      WHERE ${dateClause} ${ipClause} 
+      WHERE ${dateClause} ${ipClause} ${botClause} 
         AND page_path IS NOT NULL
         AND page_path LIKE '%/i-%'
       GROUP BY page_path 
@@ -776,7 +779,7 @@ async function handleAdminAnalytics(request, env) {
         COUNT(DISTINCT session_id) as sessions,
         COUNT(*) as clicks
       FROM events 
-      WHERE ${dateClause} ${ipClause} AND theme IS NOT NULL
+      WHERE ${dateClause} ${ipClause} ${botClause} AND theme IS NOT NULL
       GROUP BY theme 
       ORDER BY sessions DESC
       LIMIT 10
@@ -787,14 +790,14 @@ async function handleAdminAnalytics(request, env) {
     const cowboyQuery = `
       SELECT COUNT(DISTINCT session_id) as jumps
       FROM events 
-      WHERE ${dateClause} ${ipClause} AND event = 'cowboy_jump'
+      WHERE ${dateClause} ${ipClause} ${botClause} AND event = 'cowboy_jump'
     `;
     const cowboyResult = await env.DB.prepare(cowboyQuery).first();
     const cowboyJumps = cowboyResult?.jumps || 0;
 
     // Query 13: Session Depth Score (engagement quality metric)
     // Weighted scoring: zoom=4, collector_notes=5, theme_click=3, nav=2, other=1
-    // Also grab location from the first event of each session
+    // Also grab location from the first event of each session + bot detection
     const depthQuery = `
       SELECT 
         e.session_id,
@@ -812,12 +815,18 @@ async function handleAdminAnalytics(request, env) {
         MAX(e.city) as city,
         MAX(e.region) as region,
         MAX(e.country) as country,
-        MAX(e.device) as device
+        MAX(e.device) as device,
+        MAX(e.ip) as ip,
+        CASE WHEN 
+          MAX(e.ip) LIKE '3.%' OR MAX(e.ip) LIKE '18.%' OR MAX(e.ip) LIKE '52.%' OR MAX(e.ip) LIKE '54.%' OR MAX(e.ip) LIKE '65.55.%'
+          OR MAX(e.city) = 'Ashburn'
+          OR MAX(e.device) = 'unknown'
+        THEN 1 ELSE 0 END as is_bot
       FROM events e
       WHERE ${dateClause.replace(/created_at/g, 'e.created_at')} ${ipClause.replace(/ip/g, 'e.ip')}
       GROUP BY e.session_id
       ORDER BY depth_score DESC
-      LIMIT 10
+      LIMIT 15
     `;
     const depthResults = await env.DB.prepare(depthQuery).all();
     const topDepthSessions = depthResults.results || [];
@@ -838,7 +847,7 @@ async function handleAdminAnalytics(request, env) {
             END
           ) as depth_score
         FROM events
-        WHERE ${dateClause} ${ipClause}
+        WHERE ${dateClause} ${ipClause} ${botClause}
         GROUP BY session_id
       )
     `;
@@ -860,7 +869,7 @@ async function handleAdminAnalytics(request, env) {
             OR MAX(CASE WHEN event IN ('scroll_75', 'scroll_100') THEN 1 ELSE 0 END) = 1
           THEN 1 ELSE 0 END as is_deep
         FROM events
-        WHERE ${dateClause} ${ipClause}
+        WHERE ${dateClause} ${ipClause} ${botClause}
         GROUP BY session_id
       )
     `;
@@ -869,6 +878,34 @@ async function handleAdminAnalytics(request, env) {
     const deepSessions = deepResult?.deep_sessions || 0;
     const deepSessionPct = totalSessions > 0 ? Math.round(100 * deepSessions / totalSessions) : 0;
 
+    // Query 14b: Bot traffic estimate
+    // Heuristics: datacenter IPs (AWS 3.x, 18.x, 52.x, 54.x), Ashburn city, linux+single-event, unknown device
+    const botQuery = `
+      SELECT 
+        COUNT(DISTINCT session_id) as total_sessions,
+        COUNT(DISTINCT CASE WHEN is_bot = 1 THEN session_id END) as bot_sessions
+      FROM (
+        SELECT 
+          session_id,
+          ip,
+          city,
+          device,
+          COUNT(*) as event_count,
+          CASE WHEN 
+            ip LIKE '3.%' OR ip LIKE '18.%' OR ip LIKE '52.%' OR ip LIKE '54.%' OR ip LIKE '65.55.%'
+            OR city = 'Ashburn'
+            OR device = 'unknown'
+            OR (device = 'linux' AND COUNT(*) = 1)
+          THEN 1 ELSE 0 END as is_bot
+        FROM events
+        WHERE ${dateClause} ${ipClause} ${botClause}
+        GROUP BY session_id
+      )
+    `;
+    const botResult = await env.DB.prepare(botQuery).first();
+    const botSessions = botResult?.bot_sessions || 0;
+    const botPct = totalSessions > 0 ? Math.round(100 * botSessions / totalSessions) : 0;
+
     // Query 15: Exit Pages (where do people leave?)
     const exitPagesQuery = `
       SELECT 
@@ -876,7 +913,7 @@ async function handleAdminAnalytics(request, env) {
         page_type,
         COUNT(*) as exits
       FROM events
-      WHERE ${dateClause} ${ipClause}
+      WHERE ${dateClause} ${ipClause} ${botClause}
         AND event = 'session_exit'
         AND page_path IS NOT NULL
       GROUP BY page_path
@@ -892,7 +929,7 @@ async function handleAdminAnalytics(request, env) {
         page_type,
         COUNT(*) as exits
       FROM events
-      WHERE ${dateClause} ${ipClause}
+      WHERE ${dateClause} ${ipClause} ${botClause}
         AND event = 'session_exit'
         AND page_type IS NOT NULL
       GROUP BY page_type
@@ -928,7 +965,10 @@ async function handleAdminAnalytics(request, env) {
       deepSessions,
       totalSessions,
       exitPages,
-      exitSummary
+      exitSummary,
+      botPct,
+      botSessions,
+      hideBots
     });
 
     return new Response(html, {
@@ -1007,7 +1047,7 @@ async function handleExportCSV(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots }) {
   const s = summary || {};
   
   // Helper to format event names nicely
@@ -1023,7 +1063,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   const maxGeoVisitors = Math.max(...geo.map(g => g.visitors), 1);
   const maxPageSessions = Math.max(...pages.map(p => p.sessions), 1);
   
-  // Build base URL for filter links
+  // Build base URL for filter links (preserves current filters)
   const baseParams = new URLSearchParams();
   if (yesterday) {
     baseParams.set("yesterday", "1");
@@ -1031,6 +1071,8 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     baseParams.set("days", days.toString());
   }
   if (galleryFilter) baseParams.set("gallery", galleryFilter);
+  if (excludeIp) baseParams.set("excludeIp", excludeIp);
+  if (hideBots) baseParams.set("hideBots", "1");
   
   // URL with IP exclusion
   const excludeMeUrl = (() => {
@@ -1042,6 +1084,21 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   // URL without IP exclusion
   const showAllUrl = (() => {
     const p = new URLSearchParams(baseParams);
+    p.delete("excludeIp");
+    return "?" + p.toString();
+  })();
+
+  // URL with bots hidden
+  const hideBotsUrl = (() => {
+    const p = new URLSearchParams(baseParams);
+    p.set("hideBots", "1");
+    return "?" + p.toString();
+  })();
+
+  // URL with bots shown
+  const showBotsUrl = (() => {
+    const p = new URLSearchParams(baseParams);
+    p.delete("hideBots");
     return "?" + p.toString();
   })();
   
@@ -1118,6 +1175,8 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     .ip-filter { margin-left: auto; display: flex; gap: 10px; align-items: center; }
     .ip-filter a { font-size: 12px; }
     .ip-filter .exclude-active { background: #7c3aed; color: #fff; }
+    .ip-filter .bot-filter { background: #4b5563; color: #fff; }
+    .ip-filter .bot-filter.active { background: #059669; }
     .ip-badge { font-size: 11px; color: #888; background: #333; padding: 3px 8px; border-radius: 4px; }
   </style>
 </head>
@@ -1125,18 +1184,22 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   <h1>K4 Analytics</h1>
   
   <div class="controls">
-    <a href="?days=1${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 1 && !yesterday ? 'active' : ''}">Today</a>
-    <a href="?yesterday=1${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${yesterday ? 'active' : ''}">Yesterday</a>
-    <a href="?days=7${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 7 && !yesterday ? 'active' : ''}">7 Days</a>
-    <a href="?days=30${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 30 && !yesterday ? 'active' : ''}">30 Days</a>
-    <a href="?days=90${excludeIp ? '&excludeIp=' + excludeIp : ''}" class="${days === 90 && !yesterday ? 'active' : ''}">3 Months</a>
+    <a href="?days=1${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}" class="${days === 1 && !yesterday ? 'active' : ''}">Today</a>
+    <a href="?yesterday=1${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}" class="${yesterday ? 'active' : ''}">Yesterday</a>
+    <a href="?days=7${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}" class="${days === 7 && !yesterday ? 'active' : ''}">7 Days</a>
+    <a href="?days=30${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}" class="${days === 30 && !yesterday ? 'active' : ''}">30 Days</a>
+    <a href="?days=90${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}" class="${days === 90 && !yesterday ? 'active' : ''}">3 Months</a>
     <div class="ip-filter">
       ${excludeIp 
-        ? `<span class="ip-badge">Excluding: ${excludeIp}</span><a href="${showAllUrl}">Show All</a>`
+        ? `<span class="ip-badge">Excluding: ${excludeIp}</span><a href="${showAllUrl}">Show All IPs</a>`
         : `<a href="${excludeMeUrl}" class="exclude-active">Exclude My IP</a>`
       }
+      ${hideBots
+        ? `<a href="${showBotsUrl}" class="bot-filter active">🤖 Bots Hidden</a>`
+        : `<a href="${hideBotsUrl}" class="bot-filter">🤖 Hide Bots</a>`
+      }
     </div>
-    <a href="/__k4stats/export?days=${days}${yesterday ? '&yesterday=1' : ''}" class="export-btn" style="margin-left: auto; background: #2d4a2d; padding: 5px 12px; border-radius: 4px; color: #4ade80;">📥 Export CSV</a>
+    <a href="/__k4stats/export?days=${days}${yesterday ? '&yesterday=1' : ''}${hideBots ? '&hideBots=1' : ''}" class="export-btn" style="margin-left: auto; background: #2d4a2d; padding: 5px 12px; border-radius: 4px; color: #4ade80;">📥 Export CSV</a>
   </div>
 
   ${trend.length > 1 ? `
@@ -1269,6 +1332,11 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <span class="label" style="color: #a7f3d0;">Deep <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
       <div class="tooltip">% of sessions that are "deep" (${deepSessions}/${totalSessions}). Deep = zoomed OR 10+ events OR scrolled 75%+. This is your north-star: readers vs skimmers.</div>
     </div>
+    ${botPct > 0 ? `<div class="pulse-stat" style="background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);">
+      <span class="value" style="color: #fff;">🤖 ${botPct}%</span>
+      <span class="label" style="color: #d1d5db;">Bots <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #d1d5db;">i</span></span>
+      <div class="tooltip">Estimated bot traffic (${botSessions}/${totalSessions} sessions). Detected by: AWS/datacenter IPs, Ashburn city, unknown device. Not filtered from other stats.</div>
+    </div>` : ''}
   </div>
 
   <!-- Tall sections row -->
@@ -1416,27 +1484,39 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       </table>
     </div>
 
-    <div class="section">
+    <div class="section" id="engagement-section">
       <div class="section-header">
         <h3>🎯 Top Sessions by Engagement</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Most engaged sessions by weighted score. Hover session ID to see location. Higher score = more meaningful interactions.</div></span>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Most engaged sessions by weighted score. 🤖 = suspected bot. Hover row for location.</div></span>
+        <label style="margin-left: auto; font-size: 11px; color: #888; display: flex; align-items: center; gap: 4px; cursor: pointer;">
+          <input type="checkbox" id="hide-bots-toggle" style="cursor: pointer;"> Hide bots
+        </label>
       </div>
       <p style="color: #666; font-size: 10px; margin-bottom: 8px;">zoom=4, notes=5, theme=3, nav=2</p>
       ${topDepthSessions.length === 0 ? '<p style="color:#666">No sessions yet</p>' : `
-      <table>
+      <table id="engagement-table">
         <tr><th>Session</th><th>Events</th><th>Score</th></tr>
         ${topDepthSessions.map((s, i) => {
           const location = [s.city, s.region, s.country].filter(Boolean).join(', ') || 'Unknown';
           const deviceIcons = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧' };
           const deviceIcon = deviceIcons[s.device] || '';
+          const isBot = s.is_bot === 1;
+          const botIcon = isBot ? '🤖 ' : '';
+          const botClass = isBot ? 'bot-row' : '';
           return `
-          <tr title="📍 ${location} ${deviceIcon}">
-            <td style="font-family: monospace; font-size: 11px; cursor: help;">#${i + 1} ${s.session_id ? s.session_id.slice(0, 8) + '...' : 'unknown'}</td>
+          <tr class="${botClass}" title="📍 ${location} ${deviceIcon}${isBot ? ' (suspected bot)' : ''}" data-is-bot="${isBot ? '1' : '0'}">
+            <td style="font-family: monospace; font-size: 11px; cursor: help;">${botIcon}#${i + 1} ${s.session_id ? s.session_id.slice(0, 8) + '...' : 'unknown'}</td>
             <td>${s.event_count}</td>
-            <td style="font-weight: bold; color: #0891b2;">${s.depth_score}</td>
+            <td style="font-weight: bold; color: ${isBot ? '#6b7280' : '#0891b2'};">${s.depth_score}</td>
           </tr>
         `}).join('')}
       </table>
+      <script>
+        document.getElementById('hide-bots-toggle').addEventListener('change', function() {
+          const rows = document.querySelectorAll('#engagement-table tr[data-is-bot="1"]');
+          rows.forEach(row => row.style.display = this.checked ? 'none' : '');
+        });
+      </script>
       `}
     </div>
 

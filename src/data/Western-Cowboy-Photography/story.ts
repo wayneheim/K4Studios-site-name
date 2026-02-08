@@ -59,7 +59,8 @@ export const cowboyStory = [
     subhead: "For Collectors of Cowboy Art",
     paragraphs: [
       "This body of Western cowboy photography is created for collectors who value depth over decoration — those drawn to cowboy art that carries emotional weight and narrative integrity.",
-      "Each cowboy portrait is meant to live with you — not as an object glanced at once, but as a presence that continues to reveal itself over time."
+      "Each cowboy portrait is meant to live with you — not as an object glanced at once, but as a presence that continues to reveal itself over time.",
+      "This gallery explores <a href='/Blog/what-is-artistic-western-photography' style='color:#8b5a2b; text-decoration:underline;'>artistic Western photography</a>, a fine art approach that emphasizes composition, narrative, and expressive intent over documentation."
     ]
   },
 
