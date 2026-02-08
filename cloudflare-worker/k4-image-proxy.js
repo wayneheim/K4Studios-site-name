@@ -938,6 +938,23 @@ async function handleAdminAnalytics(request, env) {
     const exitSummaryResult = await env.DB.prepare(exitSummaryQuery).all();
     const exitSummary = exitSummaryResult.results || [];
 
+    // Query 16: Smart-404 Activity (redirects, 410s, fallbacks)
+    const smart404Query = `
+      SELECT 
+        event,
+        page_path,
+        gallery_id,
+        COUNT(*) as hits
+      FROM events
+      WHERE ${dateClause} ${ipClause}
+        AND event LIKE 'smart404_%'
+      GROUP BY event, page_path
+      ORDER BY hits DESC, event
+      LIMIT 20
+    `;
+    const smart404Result = await env.DB.prepare(smart404Query).all();
+    const smart404Events = smart404Result.results || [];
+
     // Render HTML
     const html = renderDashboard({
       days,
@@ -968,7 +985,8 @@ async function handleAdminAnalytics(request, env) {
       exitSummary,
       botPct,
       botSessions,
-      hideBots
+      hideBots,
+      smart404Events
     });
 
     return new Response(html, {
@@ -1047,7 +1065,7 @@ async function handleExportCSV(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots, smart404Events }) {
   const s = summary || {};
   
   // Helper to format event names nicely
@@ -1402,88 +1420,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
 
   <!-- Regular grid -->
   <div class="grid">
-    <div class="section">
-      <h3>Entry Points</h3>
-      <table>
-        <tr><th>Source</th><th>Sessions</th></tr>
-        ${entries.map(e => `<tr><td>${formatEventName(e.entry_source)}</td><td>${e.sessions}</td></tr>`).join('')}
-        ${entries.length === 0 ? '<tr><td colspan="2">No data yet</td></tr>' : ''}
-      </table>
-    </div>
-
-    <div class="section">
-      <h3>Gallery Performance</h3>
-      <table>
-        <tr><th>Gallery</th><th>Sessions</th><th>Zoom %</th><th>Avg Events</th></tr>
-        ${galleries.map(g => `<tr><td>${formatEventName(g.gallery_id || 'Unknown')}</td><td>${g.sessions}</td><td>${g.zoom_pct || 0}%</td><td>${g.avg_events || 0}</td></tr>`).join('')}
-        ${galleries.length === 0 ? '<tr><td colspan="4">No data yet</td></tr>' : ''}
-      </table>
-    </div>
-
-    <div class="section">
-      <h3>🎨 Top 10 Themes Clicked</h3>
-      ${themesClicked.length === 0 ? '<p style="color:#666">No theme clicks yet</p>' : `
-      <table>
-        <tr><th>Theme</th><th>Sessions</th><th>Clicks</th></tr>
-        ${themesClicked.map(t => `
-          <tr>
-            <td>${formatEventName(t.theme || 'Unknown')}</td>
-            <td>${t.sessions}</td>
-            <td>${t.clicks}</td>
-          </tr>
-        `).join('')}
-      </table>
-      `}
-    </div>
-
-    <div class="section">
-      <h3>Top 10 Pages</h3>
-      ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        pages.map(p => {
-          const shortPath = p.page_path.length > 28 ? '...' + p.page_path.slice(-25) : p.page_path;
-          return `
-          <div class="bar-row">
-            <a class="bar-label" href="https://www.k4studios.com${p.page_path}" target="_blank" title="${p.page_path}" style="color: #4a9eff; text-decoration: none;">${shortPath}</a>
-            <div class="bar-container">
-              <div class="bar" style="width: ${(p.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
-            </div>
-            <span class="bar-value">${p.sessions}</span>
-          </div>
-        `}).join('')
-      }
-    </div>
-
-    <div class="section bar-orange">
-      <div class="section-header">
-        <h3>Referrers</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Traffic sources normalized from HTTP referer. "direct" = typed URL or bookmark. "internal" = navigation within site. "google/bing" = search engines.</div></span>
-      </div>
-      ${referrers.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        referrers.map(r => `
-          <div class="bar-row">
-            <span class="bar-label">${r.referrer}</span>
-            <div class="bar-container">
-              <div class="bar" style="width: ${(r.sessions / maxRefSessions * 100).toFixed(1)}%"></div>
-            </div>
-            <span class="bar-value">${r.sessions}</span>
-          </div>
-        `).join('')
-      }
-    </div>
-
-    <div class="section">
-      <h3>Devices</h3>
-      <table>
-        <tr><th>Platform</th><th>Sessions</th></tr>
-        ${devices.map(d => {
-          const icons = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', unknown: '❓' };
-          const labels = { ios: 'iOS (iPhone/iPad)', android: 'Android', mac: 'Mac', windows: 'Windows PC', linux: 'Linux', unknown: 'Unknown' };
-          return `<tr><td>${icons[d.device] || '❓'} ${labels[d.device] || d.device}</td><td>${d.sessions}</td></tr>`;
-        }).join('')}
-        ${devices.length === 0 ? '<tr><td colspan="2">No data yet</td></tr>' : ''}
-      </table>
-    </div>
-
     <div class="section" id="engagement-section">
       <div class="section-header">
         <h3>🎯 Top Sessions by Engagement</h3>
@@ -1521,6 +1457,88 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
 
     <div class="section">
+      <h3>Top 10 Pages</h3>
+      ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
+        pages.map(p => {
+          const shortPath = p.page_path.length > 28 ? '...' + p.page_path.slice(-25) : p.page_path;
+          return `
+          <div class="bar-row">
+            <a class="bar-label" href="https://www.k4studios.com${p.page_path}" target="_blank" title="${p.page_path}" style="color: #4a9eff; text-decoration: none;">${shortPath}</a>
+            <div class="bar-container">
+              <div class="bar" style="width: ${(p.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
+            </div>
+            <span class="bar-value">${p.sessions}</span>
+          </div>
+        `}).join('')
+      }
+    </div>
+
+    <div class="section">
+      <h3>Gallery Performance</h3>
+      <table>
+        <tr><th>Gallery</th><th>Sessions</th><th>Zoom %</th><th>Avg Events</th></tr>
+        ${galleries.map(g => `<tr><td>${formatEventName(g.gallery_id || 'Unknown')}</td><td>${g.sessions}</td><td>${g.zoom_pct || 0}%</td><td>${g.avg_events || 0}</td></tr>`).join('')}
+        ${galleries.length === 0 ? '<tr><td colspan="4">No data yet</td></tr>' : ''}
+      </table>
+    </div>
+
+    <div class="section bar-orange">
+      <div class="section-header">
+        <h3>Referrers</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Traffic sources normalized from HTTP referer. "direct" = typed URL or bookmark. "internal" = navigation within site. "google/bing" = search engines.</div></span>
+      </div>
+      ${referrers.length === 0 ? '<p style="color:#666">No data yet</p>' : 
+        referrers.map(r => `
+          <div class="bar-row">
+            <span class="bar-label">${r.referrer}</span>
+            <div class="bar-container">
+              <div class="bar" style="width: ${(r.sessions / maxRefSessions * 100).toFixed(1)}%"></div>
+            </div>
+            <span class="bar-value">${r.sessions}</span>
+          </div>
+        `).join('')
+      }
+    </div>
+
+    <div class="section">
+      <h3>Entry Points</h3>
+      <table>
+        <tr><th>Source</th><th>Sessions</th></tr>
+        ${entries.map(e => `<tr><td>${formatEventName(e.entry_source)}</td><td>${e.sessions}</td></tr>`).join('')}
+        ${entries.length === 0 ? '<tr><td colspan="2">No data yet</td></tr>' : ''}
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>Devices</h3>
+      <table>
+        <tr><th>Platform</th><th>Sessions</th></tr>
+        ${devices.map(d => {
+          const icons = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', unknown: '❓' };
+          const labels = { ios: 'iOS (iPhone/iPad)', android: 'Android', mac: 'Mac', windows: 'Windows PC', linux: 'Linux', unknown: 'Unknown' };
+          return `<tr><td>${icons[d.device] || '❓'} ${labels[d.device] || d.device}</td><td>${d.sessions}</td></tr>`;
+        }).join('')}
+        ${devices.length === 0 ? '<tr><td colspan="2">No data yet</td></tr>' : ''}
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>🎨 Top 10 Themes Clicked</h3>
+      ${themesClicked.length === 0 ? '<p style="color:#666">No theme clicks yet</p>' : `
+      <table>
+        <tr><th>Theme</th><th>Sessions</th><th>Clicks</th></tr>
+        ${themesClicked.map(t => `
+          <tr>
+            <td>${formatEventName(t.theme || 'Unknown')}</td>
+            <td>${t.sessions}</td>
+            <td>${t.clicks}</td>
+          </tr>
+        `).join('')}
+      </table>
+      `}
+    </div>
+
+    <div class="section">
       <div class="section-header">
         <h3>🚪 Where People Leave</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Exit pages: where sessions ended. Helps identify which pages hold attention vs which quietly end the journey.</div></span>
@@ -1545,6 +1563,40 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
             <span style="width: 8px; height: 8px; border-radius: 50%; background: ${dotColor}; flex-shrink: 0;"></span>
             <a href="https://www.k4studios.com${p.page_path}" target="_blank" style="flex: 1; color: #ccc; text-decoration: none; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${p.page_path}">${shortPath}</a>
             <span style="color: #888; font-size: 12px; font-weight: bold;">${p.exits}</span>
+          </div>
+        `}).join('')}
+      </div>
+      `}
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h3>⚠️ 404/Redirect Activity</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Smart-404 events: tracks legacy SmugMug paths hitting your site. Redirect = sent to SmugMug, Gone = 410 returned, Fallback = couldn't match.</div></span>
+      </div>
+      ${smart404Events.length === 0 ? '<p style="color:#666">No 404 activity yet</p>' : `
+      <div style="max-height: 280px; overflow-y: auto;">
+        ${smart404Events.map(e => {
+          const eventColors = { 
+            smart404_redirect: '#10b981',   // green - success
+            smart404_gone: '#f59e0b',       // amber - intentional 410
+            smart404_fallback: '#ef4444',   // red - unmatched
+            smart404_homepage: '#a855f7'    // purple - homepage redirect
+          };
+          const eventLabels = {
+            smart404_redirect: '301 → SmugMug',
+            smart404_gone: '410 Gone',
+            smart404_fallback: 'Fallback',
+            smart404_homepage: '→ Homepage'
+          };
+          const color = eventColors[e.event] || '#888';
+          const label = eventLabels[e.event] || e.event;
+          const shortPath = e.page_path && e.page_path.length > 40 ? '...' + e.page_path.slice(-37) : (e.page_path || 'unknown');
+          return `
+          <div style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
+            <span style="background: ${color}22; color: ${color}; padding: 2px 8px; border-radius: 8px; font-size: 10px; flex-shrink: 0;">${label}</span>
+            <span style="flex: 1; color: #ccc; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${e.page_path || ''}">${shortPath}</span>
+            <span style="color: #888; font-size: 12px; font-weight: bold;">${e.hits}</span>
           </div>
         `}).join('')}
       </div>
