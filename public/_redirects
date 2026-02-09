@@ -35,9 +35,9 @@
 /Photography-Galleries/*/i-*  /410  410!
 /Photography-Galleries/*  /410  410!
 
-# Legacy Pictorialist paths
-/Pictorialist-Photography/*/i-*  /410  410!
-/Pictorialist-Photography/*  /410  410!
+# Legacy Pictorialist paths → redirect to current page
+/Pictorialist-Photography/*/i-*  /Pictorialist-Photography  301!
+/Pictorialist-Photography/*  /Pictorialist-Photography  301!
 
 # Legacy gallery paths that no longer exist (merged or removed)
 /Galleries/Fine-Art-Photography/Miscellaneous/Kids/*  /410  410!

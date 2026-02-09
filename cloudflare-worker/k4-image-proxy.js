@@ -694,8 +694,8 @@ async function handleAdminAnalytics(request, env) {
     }
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
     const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
-    // Bot filter: exclude AWS/datacenter IPs and Ashburn
-    const botClause = hideBots ? `AND NOT (ip LIKE '3.%' OR ip LIKE '18.%' OR ip LIKE '52.%' OR ip LIKE '54.%' OR ip LIKE '65.55.%' OR city = 'Ashburn' OR device = 'unknown')` : "";
+    // Bot filter: exclude AWS, Apple crawler (17.x), Microsoft/Bing (40.77.x, 65.55.x), Ashburn datacenter
+    const botClause = hideBots ? `AND NOT (ip LIKE '3.%' OR ip LIKE '17.%' OR ip LIKE '18.%' OR ip LIKE '40.77.%' OR ip LIKE '52.%' OR ip LIKE '54.%' OR ip LIKE '65.55.%' OR city = 'Ashburn' OR device = 'unknown')` : "";
     // Chardon filter: exclude team member location
     const chardonClause = hideChardon ? `AND city != 'Chardon'` : "";
 
@@ -726,7 +726,7 @@ async function handleAdminAnalytics(request, env) {
     const returningQuery = `
       SELECT COUNT(DISTINCT e.ip) as returning_visitors
       FROM events e
-      WHERE ${dateClause.replace(/created_at/g, 'e.created_at')} ${ipClause.replace(/ip/g, 'e.ip')}
+      WHERE ${dateClause.replace(/created_at/g, 'e.created_at')} ${ipClause.replace(/ip/g, 'e.ip')} ${botClause.replace(/ip/g, 'e.ip').replace(/city/g, 'e.city').replace(/device/g, 'e.device')} ${chardonClause.replace(/city/g, 'e.city')}
         AND e.ip IN (
           SELECT DISTINCT ip FROM events 
           WHERE ${priorPeriodClause}
@@ -952,12 +952,12 @@ async function handleAdminAnalytics(request, env) {
         MAX(e.device) as device,
         MAX(e.ip) as ip,
         CASE WHEN 
-          MAX(e.ip) LIKE '3.%' OR MAX(e.ip) LIKE '18.%' OR MAX(e.ip) LIKE '52.%' OR MAX(e.ip) LIKE '54.%' OR MAX(e.ip) LIKE '65.55.%'
+          MAX(e.ip) LIKE '3.%' OR MAX(e.ip) LIKE '17.%' OR MAX(e.ip) LIKE '18.%' OR MAX(e.ip) LIKE '40.77.%' OR MAX(e.ip) LIKE '52.%' OR MAX(e.ip) LIKE '54.%' OR MAX(e.ip) LIKE '65.55.%'
           OR MAX(e.city) = 'Ashburn'
           OR MAX(e.device) = 'unknown'
         THEN 1 ELSE 0 END as is_bot
       FROM events e
-      WHERE ${dateClause.replace(/created_at/g, 'e.created_at')} ${ipClause.replace(/ip/g, 'e.ip')}
+      WHERE ${dateClause.replace(/created_at/g, 'e.created_at')} ${ipClause.replace(/ip/g, 'e.ip')} ${botClause.replace(/ip/g, 'e.ip').replace(/city/g, 'e.city').replace(/device/g, 'e.device')} ${chardonClause.replace(/city/g, 'e.city')}
       GROUP BY e.session_id
       ORDER BY depth_score DESC
       LIMIT 15

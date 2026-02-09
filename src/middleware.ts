@@ -177,6 +177,33 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     });
   }
 
+  // ✅ EARLY EXIT: Return 410 Gone for legacy SmugMug photo shoots
+  // These paths bypass Netlify's _redirects in SSR mode, so we must kill them here
+  // Returns 410 before Astro tries to render → no JS fires → no analytics logged
+  const legacyGonePaths = [
+    "/Photoshootsandevents/",
+    "/Scheduled-Shoots/",
+    "/Other/Photo-Shoots/",
+    "/Other/Photo-Shoots-and-Themes/",
+    "/Is-Winter/",
+    "/Photography-Galleries/",
+  ];
+  
+  if (legacyGonePaths.some(prefix => pathname.startsWith(prefix))) {
+    return new Response("410 Gone - This content has been permanently removed.", {
+      status: 410,
+      headers: { "Content-Type": "text/plain" },
+    });
+  }
+
+  // ✅ REDIRECT: Legacy Pictorialist paths → current Pictorialist page
+  if (pathname.startsWith("/Pictorialist-Photography/")) {
+    return new Response(null, {
+      status: 301,
+      headers: { Location: "/Pictorialist-Photography" },
+    });
+  }
+
   const response = await next();
   const contentType = response.headers.get("content-type") || "";
 
