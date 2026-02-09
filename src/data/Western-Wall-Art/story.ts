@@ -1,12 +1,13 @@
 export const wallArtStory = [
 
-  // 1. OPENING — DEFINITION ANCHOR (Google needs this first)
+  // 1. OPENING - GALLERY/COLLECTION INTENT (commercial, not definitional)
   {
     title: "Western Wall Art for Collectors",
     subhead: "Museum-Quality Fine Art, Not Décor",
     paragraphs: [
-      "Western wall art is artwork depicting the American West, created to be displayed as finished pieces within a home or gallery setting. It ranges from mass-produced decorative prints to original fine art created for collectors. This page presents the latter — museum-quality fine art prints rather than decorative imagery.",
-      "Each piece in this collection is an original photographic work by fine art photographer <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a>. These are authored images — intentional, restrained, and crafted with the same discipline as traditional fine art."
+      "This collection presents Western wall art by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a> - original fine art photographs created for collectors rather than decoration. Each piece is authored with narrative intent, painterly restraint, and archival craft, designed to command presence and reward long-term viewing.",
+      "These works move beyond mass-produced Western imagery. They are created as finished art objects - built to live on the wall, deepen with familiarity, and hold meaning over time.",
+      "For those seeking context on how Western fine art differs from decorative imagery, explore <a href='/Blog/what-is-western-fine-art-photography' style='color:#8b5a2b; text-decoration:underline;'>What Is Western Fine Art Photography</a>."
     ],
   },
 

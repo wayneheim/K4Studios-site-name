@@ -1,20 +1,21 @@
-export const painterlyStory = [
+﻿export const painterlyStory = [
 
-  // 1. OPENING — COLLECTION/BROWSE INTENT (experiential, not definitional)
+  // 1. OPENING - GALLERY/COLLECTION INTENT (Quill-approved)
   {
     title: "Painterly Western Photography",
     paragraphs: [
-      "These images occupy the space between photography and painting. Light is sculpted, tone is controlled, and every composition serves story. The American West appears here not as spectacle, but as atmosphere, character, and consequence.",
-      "Understand the tradition: <a href='/Blog/what-is-painterly-photography' style='color:#8b5a2b; text-decoration:underline;'>What Is Painterly Photography</a>."
+      "This gallery presents painterly Western photography by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a> - narrative-driven images shaped by controlled light, tonal restraint, and compositional discipline. Cowboys, frontier figures, and Western landscapes appear here not as spectacle, but as atmosphere, character, and lived experience.",
+      "These works are built to reward sustained viewing. Story is carried through posture, light, and stillness rather than explanation, allowing meaning to emerge gradually over time.",
+      "For a deeper exploration of the tradition and discipline behind this approach, see <a href='/Blog/what-is-painterly-photography' style='color:#8b5a2b; text-decoration:underline;'>What Is Painterly Photography</a>."
     ]
   },
 
-  // 2. STORY AS STRUCTURE
+  // 2. STORY IN THE FRAME
   {
-    subhead: "Where Story Lives Inside the Frame",
+    subhead: "Story Lives Inside the Frame",
     paragraphs: [
-      "A painterly Western photograph exists in the space between moments — after something has occurred, but before its consequence is revealed. A hand lowers. A gaze holds. Dust settles without fully giving up its motion.",
-      "This suspended narrative is the foundation of the One-Image Movie™. Each photograph functions as a single cinematic frame, carrying the emotional weight of an unseen story. The image does not explain itself. It invites the viewer to complete it."
+      "These photographs exist in the space between moments - after something has occurred, but before its consequence is revealed. A hand lowers. A gaze holds. Dust settles without fully giving up its motion.",
+      "This suspended narrative is the foundation of the One-Image Movie. Each photograph functions as a single cinematic frame, inviting the viewer to complete what it begins."
     ]
   },
 
@@ -22,73 +23,53 @@ export const painterlyStory = [
   {
     subhead: "Craft Before Effect",
     paragraphs: [
-      "Painterly photography is often misunderstood as texture, grain, or mood added in post-processing. In this work, those qualities emerge from structure — from how light defines form, how tone establishes hierarchy, and how composition carries tension.",
-      "Nothing is incidental. Texture follows intent. Color is controlled. Shadow is used not to obscure, but to suggest. The result is Western imagery that feels integrated and purposeful rather than filtered or decorative."
+      "Painterly photography is often misunderstood as texture or mood added in post-processing. In this work, those qualities emerge from structure - from how light defines form, how tone establishes hierarchy, and how composition carries tension.",
+      "Nothing is incidental. Texture follows intent. Color is controlled. Shadow is used not to obscure, but to suggest."
     ]
   },
 
-  // 4. THE WEST AS SUBJECT
-  {
-    subhead: "The American West, Reconsidered",
-    paragraphs: [
-      "The American West has been photographed endlessly, yet rarely examined. Painterly Western photography turns away from spectacle and toward character — not the West as icon, but as lived and remembered experience.",
-      "Cowboys are not archetypes here. They are individuals shaped by place, weather, labor, and choice. Landscapes are not backdrops, but emotional environments that carry memory, silence, and consequence."
-    ]
-  },
-
-  // 5. LIGHT, TONE, AND ATMOSPHERE
+  // 4. LIGHT AS LANGUAGE
   {
     subhead: "Light as Narrative Language",
     paragraphs: [
-      "Light does more than illuminate — it carries meaning. Directional light reveals motive. Soft light suggests memory. Hard contrast introduces moral tension. In painterly Western photography, light becomes an active narrative force.",
+      "Light does more than illuminate - it carries meaning. Directional light reveals motive. Soft light suggests memory. Hard contrast introduces moral tension.",
       "Color is used sparingly and deliberately, while black and white reduces the image to its essential structure. Each decision is made in service of mood, meaning, and narrative weight."
     ]
   },
 
-  // 6. THE ROLE OF RESTRAINT
+  // 5. THE POWER OF RESTRAINT
   {
-    subhead: "The Power of What Is Left Unsaid",
+    subhead: "The Power of Restraint",
     paragraphs: [
-      "Restraint is central to painterly work. The absence of explanation creates space for imagination. These images resist conclusion — they function as thresholds rather than statements.",
-      "For collectors drawn to narrative depth, this lack of resolution is not a limitation — it is the point. By withholding answers, the photograph remains alive, inviting return visits and personal interpretation."
+      "Restraint is central to this work. The absence of explanation creates space for imagination. These images resist conclusion - they function as thresholds rather than statements.",
+      "By withholding answers, the photograph remains alive, inviting return visits and personal interpretation."
     ]
   },
 
-  // 7. FROM IMAGE TO OBJECT
+  // 6. FROM IMAGE TO OBJECT
   {
     subhead: "From Photograph to Artifact",
     paragraphs: [
-      "Some painterly Western images demand a physical presence that echoes their subject. Select works are translated into tactile objects through the Engrained Series — printed directly onto Baltic Birch so the natural grain becomes part of the image.",
-      "In these pieces, material and image work together. The photograph does not sit on the surface — it inhabits it."
+      "Select works are translated into tactile objects through the Engrained Series - printed directly onto Baltic Birch so the natural grain becomes part of the image.",
+      "In these pieces, material and image work together. The photograph does not sit on the surface - it inhabits it. <a href='/Other/K4-Select-Series/Engrained'>Explore the Engrained series</a>."
     ]
   },
 
-  // 8. FOR COLLECTORS
+  // 7. FOR COLLECTORS
   {
-    subhead: "For Collectors of Narrative Western Art",
+    subhead: "For Collectors",
     paragraphs: [
-      "This work is created for collectors who value depth over decoration. Painterly Western photography rewards long viewing, quiet reflection, and personal engagement.",
-      "Each image is designed to live with you — not as a statement to be consumed once, but as a story that continues to unfold.",
-      "This gallery explores <a href='/Blog/what-is-artistic-western-photography' style='color:#8b5a2b; text-decoration:underline;'>artistic Western photography</a>, a fine art approach that emphasizes composition, narrative, and expressive intent over documentation."
+      "This collection is created for collectors who value depth over decoration. These works reward long viewing, quiet reflection, and personal engagement.",
+      "Each image is designed to live with you - not as a statement to be consumed once, but as a story that continues to unfold."
     ]
   },
 
-  // 9. WHY IT MATTERS
+  // 8. CLOSING
   {
-    subhead: "Why Painterly Western Photography Matters",
+    subhead: "Step Inside the Story",
     paragraphs: [
-      "In an era of instant imagery and automated aesthetics, painterly Western photography remains resolutely human. It is shaped by patience, judgment, and lived experience.",
-      "These images endure because they are grounded in real light, real places, and real people — and because they ask something of the viewer in return."
-    ]
-  },
-
-  // 10. CLOSING
-  {
-    subhead: "Embrace the Past — Live the Story",
-    paragraphs: [
-      "Painterly Western photography is not about recreating the past. It is about listening to it — allowing its quieter truths to surface through light, form, and story.",
-      "Each image stands as a single frame from a larger, unfinished narrative — a One-Image Movie™ waiting for the viewer to step inside.",
-      "Ready to explore the subjects themselves? <a href='/Western-Fine-Art-Photography'>Discover the Western Fine Art Photography collection</a> — cowboys, frontier figures, and the human landscape of the American West."
+      "Each photograph stands as a single frame from a larger, unfinished narrative - a One-Image Movie waiting for you to step inside.",
+      "Ready to explore the subjects themselves? <a href='/Western-Fine-Art-Photography'>Discover the Western Fine Art Photography collection</a>."
     ]
   }
 ];
