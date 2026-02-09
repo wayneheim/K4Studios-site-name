@@ -1,5 +1,9 @@
 // src/middleware.ts
 import type { MiddlewareHandler } from "astro";
+import imageIdMap from "@/data/imageIdMap.json";
+
+// Type assertion for the imageIdMap
+const imageMap = imageIdMap as Record<string, string[]>;
 
 function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
   let changed = false;
@@ -180,7 +184,12 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   // ✅ EARLY EXIT: Return 410 Gone for legacy SmugMug photo shoots
   // These paths bypass Netlify's _redirects in SSR mode, so we must kill them here
   // Returns 410 before Astro tries to render → no JS fires → no analytics logged
-  const legacyGonePaths = [
+  // 
+  // SMART MATCHING: If path ends with i-xxxxx, check if image exists in curated galleries
+  // - If found → 301 redirect to correct location (preserve link authority)
+  // - If NOT found → 410 Gone (truly removed content)
+  // - If NO image ID → 410 Gone (just a gallery listing, not matchable)
+  const legacyGonePrefixes = [
     "/Photoshootsandevents/",
     "/Scheduled-Shoots/",
     "/Other/Photo-Shoots/",
@@ -189,7 +198,27 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     "/Photography-Galleries/",
   ];
   
-  if (legacyGonePaths.some(prefix => pathname.startsWith(prefix))) {
+  if (legacyGonePrefixes.some(prefix => pathname.startsWith(prefix))) {
+    // Check if this is an image page (ends with i-xxxxx)
+    const imageIdMatch = pathname.match(/\/(i-[a-zA-Z0-9]+)\/?$/);
+    
+    if (imageIdMatch) {
+      const imageId = imageIdMatch[1];
+      const correctGalleryPaths = imageMap[imageId];
+      
+      if (correctGalleryPaths && correctGalleryPaths.length > 0) {
+        // Image found in curated gallery - 301 redirect to preserve authority
+        const redirectUrl = `${correctGalleryPaths[0]}/${imageId}`;
+        console.log(`[smart-410] Legacy path ${pathname} → 301 to ${redirectUrl}`);
+        return new Response(null, {
+          status: 301,
+          headers: { Location: redirectUrl },
+        });
+      }
+      // Image ID provided but not found anywhere → 410
+      console.log(`[smart-410] Legacy image ${imageId} not found in any gallery → 410`);
+    }
+    // No image ID or image not found → 410
     return new Response("410 Gone - This content has been permanently removed.", {
       status: 410,
       headers: { "Content-Type": "text/plain" },
