@@ -332,10 +332,16 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
 
     // Image missing
     const parentGallery = getParentGallery(pathname);
+    
+    // Check if parent gallery is a known valid gallery path
+    const isKnownGallery = imageIdMap && Object.values(imageIdMap).some(paths => {
+      const pathArray = Array.isArray(paths) ? paths : [paths];
+      return pathArray.some(p => p && p.toLowerCase() === parentGallery.toLowerCase());
+    });
 
-    if (isSearchBot(request)) {
-      // Log 410 for bot (fire and forget)
-      ctx.waitUntil(logEdgeEvent(env, '410', pathname, imageId, true, request));
+    // Bot OR unknown gallery -> 410 Gone
+    if (isSearchBot(request) || !isKnownGallery) {
+      ctx.waitUntil(logEdgeEvent(env, '410', pathname, imageId, isSearchBot(request), request));
       return new Response("Gone", {
         status: 410,
         headers: {
@@ -345,7 +351,7 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
       });
     }
 
-    // Log 302 fallback for human (fire and forget)
+    // Human with known gallery -> 302 fallback to parent gallery
     ctx.waitUntil(logEdgeEvent(env, '302', pathname, imageId, false, request));
     return Response.redirect(`https://www.k4studios.com${parentGallery}`, 302);
 
@@ -665,6 +671,7 @@ async function handleAdminAnalytics(request, env) {
   const galleryFilter = url.searchParams.get("gallery") || null;
   const excludeIp = url.searchParams.get("excludeIp") || null;
   const hideBots = url.searchParams.get("hideBots") === "1";
+  const hideChardon = url.searchParams.get("hideChardon") === "1";
 
   // Get viewer's current IP for the "exclude me" button
   const viewerIp = request.headers.get("CF-Connecting-IP") || 
@@ -689,6 +696,8 @@ async function handleAdminAnalytics(request, env) {
     const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
     // Bot filter: exclude AWS/datacenter IPs and Ashburn
     const botClause = hideBots ? `AND NOT (ip LIKE '3.%' OR ip LIKE '18.%' OR ip LIKE '52.%' OR ip LIKE '54.%' OR ip LIKE '65.55.%' OR city = 'Ashburn' OR device = 'unknown')` : "";
+    // Chardon filter: exclude team member location
+    const chardonClause = hideChardon ? `AND city != 'Chardon'` : "";
 
     // Query 1: Summary stats
     const summaryQuery = `
@@ -703,7 +712,7 @@ async function handleAdminAnalytics(request, env) {
           NULLIF(COUNT(DISTINCT session_id), 0), 1) as pct_zoomed,
         COUNT(CASE WHEN event = 'collector_notes_open' THEN 1 END) as collector_notes_opens
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
     `;
     const summary = await env.DB.prepare(summaryQuery).first();
 
@@ -731,7 +740,7 @@ async function handleAdminAnalytics(request, env) {
     const eventsQuery = `
       SELECT event, COUNT(*) as count 
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
       GROUP BY event 
       ORDER BY count DESC
       LIMIT 20
@@ -744,7 +753,7 @@ async function handleAdminAnalytics(request, env) {
         event as entry_source,
         COUNT(DISTINCT session_id) as sessions
       FROM events 
-      WHERE ${dateClause} ${ipClause} ${botClause}
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
         AND event IN ('gallery_hero_click', 'gallery_explore_click', 'gallery_preview_click', 'theme_click')
       GROUP BY event 
       ORDER BY sessions DESC
@@ -766,7 +775,7 @@ async function handleAdminAnalytics(request, env) {
             ELSE NULL
           END as base_path
         FROM events
-        WHERE ${dateClause} ${ipClause} ${botClause}
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
           AND (page_path LIKE '/Galleries/%/i-%' OR page_path LIKE '/Other/%/i-%' OR page_path LIKE '%/Gallery')
       )
       SELECT 
@@ -808,7 +817,7 @@ async function handleAdminAnalytics(request, env) {
     const referrerQuery = `
       SELECT referrer, COUNT(DISTINCT session_id) as sessions
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
       GROUP BY referrer 
       ORDER BY sessions DESC
     `;
@@ -818,7 +827,7 @@ async function handleAdminAnalytics(request, env) {
     const geoQuery = `
       SELECT country, region, city, COUNT(DISTINCT ip) as visitors
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
       GROUP BY country, region, city 
       ORDER BY visitors DESC
       LIMIT 25
@@ -834,7 +843,7 @@ async function handleAdminAnalytics(request, env) {
         COUNT(DISTINCT session_id) as sessions,
         COUNT(*) as events
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
       GROUP BY DATE(created_at, '-5 hours')
       ORDER BY day ASC
     `;
@@ -844,7 +853,7 @@ async function handleAdminAnalytics(request, env) {
     const deviceQuery = `
       SELECT device, COUNT(DISTINCT session_id) as sessions
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause}
+      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
       GROUP BY device 
       ORDER BY sessions DESC
     `;
@@ -855,7 +864,7 @@ async function handleAdminAnalytics(request, env) {
     const pagesQuery = `
       SELECT page_path, COUNT(DISTINCT session_id) as sessions, COUNT(*) as events
       FROM events 
-      WHERE ${dateClause} ${ipClause} ${botClause} 
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause} 
         AND page_path IS NOT NULL
         AND page_path NOT LIKE '%/i-%'
       GROUP BY page_path 
@@ -872,7 +881,7 @@ async function handleAdminAnalytics(request, env) {
         COUNT(*) as events,
         COUNT(CASE WHEN event = 'zoom_open' THEN 1 END) as zooms
       FROM events 
-      WHERE ${dateClause} ${ipClause} ${botClause} 
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause} 
         AND page_path IS NOT NULL
         AND page_path LIKE '%/i-%'
       GROUP BY page_path 
@@ -881,6 +890,22 @@ async function handleAdminAnalytics(request, env) {
     `;
     const images = await env.DB.prepare(imagesQuery).all();
 
+    // Query 10b: Total image page stats (unique images viewed + total views)
+    const imageStatsQuery = `
+      SELECT 
+        COUNT(DISTINCT page_path) as unique_images,
+        COUNT(DISTINCT session_id) as total_sessions,
+        COUNT(CASE WHEN event = 'page_view' THEN 1 END) as total_views
+      FROM events 
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause} 
+        AND page_path IS NOT NULL
+        AND page_path LIKE '%/i-%'
+    `;
+    const imageStatsResult = await env.DB.prepare(imageStatsQuery).first();
+    const uniqueImagesViewed = imageStatsResult?.unique_images || 0;
+    const totalImageSessions = imageStatsResult?.total_sessions || 0;
+    const totalImageViews = imageStatsResult?.total_views || 0;
+
     // Query 11: Top themes clicked
     const themesQuery = `
       SELECT 
@@ -888,7 +913,7 @@ async function handleAdminAnalytics(request, env) {
         COUNT(DISTINCT session_id) as sessions,
         COUNT(*) as clicks
       FROM events 
-      WHERE ${dateClause} ${ipClause} ${botClause} AND theme IS NOT NULL
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause} AND theme IS NOT NULL
       GROUP BY theme 
       ORDER BY sessions DESC
       LIMIT 10
@@ -899,7 +924,7 @@ async function handleAdminAnalytics(request, env) {
     const cowboyQuery = `
       SELECT COUNT(DISTINCT session_id) as jumps
       FROM events 
-      WHERE ${dateClause} ${ipClause} ${botClause} AND event = 'cowboy_jump'
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause} AND event = 'cowboy_jump'
     `;
     const cowboyResult = await env.DB.prepare(cowboyQuery).first();
     const cowboyJumps = cowboyResult?.jumps || 0;
@@ -956,7 +981,7 @@ async function handleAdminAnalytics(request, env) {
             END
           ) as depth_score
         FROM events
-        WHERE ${dateClause} ${ipClause} ${botClause}
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
         GROUP BY session_id
       )
     `;
@@ -978,7 +1003,7 @@ async function handleAdminAnalytics(request, env) {
             OR MAX(CASE WHEN event IN ('scroll_75', 'scroll_100') THEN 1 ELSE 0 END) = 1
           THEN 1 ELSE 0 END as is_deep
         FROM events
-        WHERE ${dateClause} ${ipClause} ${botClause}
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
         GROUP BY session_id
       )
     `;
@@ -1007,7 +1032,7 @@ async function handleAdminAnalytics(request, env) {
             OR (device = 'linux' AND COUNT(*) = 1)
           THEN 1 ELSE 0 END as is_bot
         FROM events
-        WHERE ${dateClause} ${ipClause} ${botClause}
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
         GROUP BY session_id
       )
     `;
@@ -1022,7 +1047,7 @@ async function handleAdminAnalytics(request, env) {
         page_type,
         COUNT(*) as exits
       FROM events
-      WHERE ${dateClause} ${ipClause} ${botClause}
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
         AND event = 'session_exit'
         AND page_path IS NOT NULL
       GROUP BY page_path
@@ -1038,7 +1063,7 @@ async function handleAdminAnalytics(request, env) {
         page_type,
         COUNT(*) as exits
       FROM events
-      WHERE ${dateClause} ${ipClause} ${botClause}
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
         AND event = 'session_exit'
         AND page_type IS NOT NULL
       GROUP BY page_type
@@ -1116,6 +1141,9 @@ async function handleAdminAnalytics(request, env) {
       devices: devices.results || [],
       pages: pages.results || [],
       images: images.results || [],
+      uniqueImagesViewed,
+      totalImageSessions,
+      totalImageViews,
       themesClicked: themesClicked.results || [],
       topDepthSessions,
       avgDepthScore,
@@ -1127,6 +1155,7 @@ async function handleAdminAnalytics(request, env) {
       botPct,
       botSessions,
       hideBots,
+      hideChardon,
       edgeEvents,
       edgeSummary
     });
@@ -1207,7 +1236,7 @@ async function handleExportCSV(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots, edgeEvents, edgeSummary }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary }) {
   const s = summary || {};
   
   // Helper to format event names nicely
@@ -1233,6 +1262,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   if (galleryFilter) baseParams.set("gallery", galleryFilter);
   if (excludeIp) baseParams.set("excludeIp", excludeIp);
   if (hideBots) baseParams.set("hideBots", "1");
+  if (hideChardon) baseParams.set("hideChardon", "1");
   
   // URL with IP exclusion
   const excludeMeUrl = (() => {
@@ -1259,6 +1289,20 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   const showBotsUrl = (() => {
     const p = new URLSearchParams(baseParams);
     p.delete("hideBots");
+    return "?" + p.toString();
+  })();
+
+  // URL with Chardon hidden
+  const hideChardonUrl = (() => {
+    const p = new URLSearchParams(baseParams);
+    p.set("hideChardon", "1");
+    return "?" + p.toString();
+  })();
+
+  // URL with Chardon shown
+  const showChardonUrl = (() => {
+    const p = new URLSearchParams(baseParams);
+    p.delete("hideChardon");
     return "?" + p.toString();
   })();
   
@@ -1344,11 +1388,11 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   <h1>K4 Analytics</h1>
   
   <div class="controls">
-    <a href="?days=1${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}" class="${days === 1 && !yesterday ? 'active' : ''}">Today</a>
-    <a href="?yesterday=1${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}" class="${yesterday ? 'active' : ''}">Yesterday</a>
-    <a href="?days=7${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}" class="${days === 7 && !yesterday ? 'active' : ''}">7 Days</a>
-    <a href="?days=30${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}" class="${days === 30 && !yesterday ? 'active' : ''}">30 Days</a>
-    <a href="?days=90${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}" class="${days === 90 && !yesterday ? 'active' : ''}">3 Months</a>
+    <a href="?days=1${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 1 && !yesterday ? 'active' : ''}">Today</a>
+    <a href="?yesterday=1${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${yesterday ? 'active' : ''}">Yesterday</a>
+    <a href="?days=7${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 7 && !yesterday ? 'active' : ''}">7 Days</a>
+    <a href="?days=30${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 30 && !yesterday ? 'active' : ''}">30 Days</a>
+    <a href="?days=90${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 90 && !yesterday ? 'active' : ''}">3 Months</a>
     <div class="ip-filter">
       ${excludeIp 
         ? `<span class="ip-badge">Excluding: ${excludeIp}</span><a href="${showAllUrl}">Show All IPs</a>`
@@ -1357,6 +1401,10 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       ${hideBots
         ? `<a href="${showBotsUrl}" class="bot-filter active">🤖 Bots Hidden</a>`
         : `<a href="${hideBotsUrl}" class="bot-filter">🤖 Hide Bots</a>`
+      }
+      ${hideChardon
+        ? `<a href="${showChardonUrl}" class="bot-filter active">📍 Chardon Hidden</a>`
+        : `<a href="${hideChardonUrl}" class="bot-filter">📍 Hide Chardon</a>`
       }
     </div>
     <a href="/__k4stats/export?days=${days}${yesterday ? '&yesterday=1' : ''}${hideBots ? '&hideBots=1' : ''}" class="export-btn" style="margin-left: auto; background: #2d4a2d; padding: 5px 12px; border-radius: 4px; color: #4ade80;">📥 Export CSV</a>
@@ -1517,7 +1565,16 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
 
     <div class="section tall">
-      <h3>🔥 Top 10 Images</h3>
+      <div class="section-header" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        <h3 style="margin: 0;">🔥 Top 10 Images</h3>
+        <div style="display: flex; gap: 12px; font-size: 11px; margin-left: auto;">
+          <span style="color: #4a9eff;"><strong>${uniqueImagesViewed}</strong> unique</span>
+          <span style="color: #888;">•</span>
+          <span style="color: #10b981;"><strong>${totalImageSessions}</strong> sessions</span>
+          <span style="color: #888;">•</span>
+          <span style="color: #f59e0b;"><strong>${totalImageViews}</strong> views</span>
+        </div>
+      </div>
       ${images.length === 0 ? '<p style="color:#666">No data yet</p>' : 
         images.map(i => {
           const imageIdMatch = i.page_path.match(/(i-[a-zA-Z0-9-]+)\/?$/);
@@ -1539,7 +1596,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       }
     </div>
 
-    <div class="section tall bar-green">
+    <div class="section tall">
       <div class="section-header">
         <h3>Geography</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Unique visitors by location. Uses IP geolocation from Cloudflare. City-level accuracy varies by region.</div></span>
@@ -1547,11 +1604,59 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       ${geo.length === 0 ? '<p style="color:#666">No data yet</p>' : 
         geo.map(g => {
           const label = [g.city, g.region, g.country].filter(Boolean).join(', ');
+          // Country color mapping - each country gets a distinct color
+          const countryColors = {
+            'US': '#3b82f6', // blue
+            'FR': '#ef4444', // red
+            'DE': '#f97316', // orange
+            'BR': '#22c55e', // green
+            'GB': '#6366f1', // indigo
+            'CA': '#ec4899', // pink
+            'AU': '#eab308', // yellow
+            'MX': '#14b8a6', // teal
+            'IN': '#f59e0b', // amber
+            'JP': '#e11d48', // rose
+            'IT': '#84cc16', // lime
+            'ES': '#a855f7', // purple
+            'NL': '#fb923c', // orange-400
+            'AT': '#dc2626', // red-600
+            'HU': '#c026d3', // fuchsia-600
+            'SG': '#0ea5e9', // sky
+            'HK': '#d946ef', // fuchsia
+            'CN': '#b91c1c', // red-700
+            'KR': '#2563eb', // blue-600
+            'CO': '#fbbf24', // amber-400
+            'PL': '#f43f5e', // rose-500
+            'SE': '#06b6d4', // cyan
+            'NO': '#0284c7', // sky-600
+            'FI': '#0369a1', // sky-700
+            'BE': '#facc15', // yellow-400
+            'CH': '#dc2626', // red
+            'PT': '#059669', // emerald-600
+            'CZ': '#7c3aed', // violet-600
+            'RO': '#4f46e5', // indigo-600
+            'GR': '#0891b2', // cyan-600
+            'IE': '#16a34a', // green-600
+            'RU': '#1d4ed8', // blue-700
+            'UA': '#fcd34d', // amber-300
+            'AR': '#60a5fa', // blue-400
+            'CL': '#f472b6', // pink-400
+            'PE': '#fb7185', // rose-400
+            'VE': '#fde047', // yellow-300
+            'PH': '#34d399', // emerald-400
+            'TH': '#c084fc', // purple-400
+            'VN': '#f87171', // red-400
+            'ID': '#a3e635', // lime-400
+            'MY': '#38bdf8', // sky-400
+            'NZ': '#2dd4bf', // teal-400
+            'ZA': '#a78bfa', // violet-400
+          };
+          const barColor = countryColors[g.country] || '#9ca3af'; // default gray for unknown
           return `
           <div class="bar-row">
             <span class="bar-label" title="${label}">${label}</span>
             <div class="bar-container">
-              <div class="bar" style="width: ${(g.visitors / maxGeoVisitors * 100).toFixed(1)}%"></div>
+              <div class="bar" style="width: ${(g.visitors / maxGeoVisitors * 100).toFixed(1)}%; background: ${barColor};"></div>
             </div>
             <span class="bar-value">${g.visitors}</span>
           </div>

@@ -37,6 +37,16 @@ const EXCLUDE_PATTERNS = [
 // Priority rules based on path depth and type
 function getPriority(urlPath) {
   if (urlPath === '/') return 1.0;
+  
+  // ✅ HIGH PRIORITY: Definition articles (authority/topical pages)
+  if (urlPath.startsWith('/Blog/what-is-')) return 0.9;
+  
+  // ✅ HIGH PRIORITY: Subject hub pages
+  if (urlPath === '/Western-Fine-Art-Photography') return 0.9;
+  if (urlPath === '/Cowboy-Fine-Art-Photography') return 0.9;
+  if (urlPath === '/Painterly-Western-Photography') return 0.9;
+  if (urlPath === '/wayne-heim-western-fine-art-photography') return 0.9;
+  
   if (urlPath === '/Other/One-Image-Movie') return 0.9;
   if (urlPath === '/Other/Stories') return 0.9;
   if (urlPath.startsWith('/Galleries/Painterly-Fine-Art-Photography')) return 0.8;

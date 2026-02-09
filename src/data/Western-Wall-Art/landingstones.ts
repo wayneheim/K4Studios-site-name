@@ -1,14 +1,14 @@
 export const landingWallArt = {
   // Western Wall Art — COLLECTOR & DISCOVERY HUB
   title: "Western Wall Art",
-  subtitle: "Museum-Quality Western Fine Art Photography for Collectors",
+  subtitle: "Museum-Quality Cowboy & Western Fine Art Prints for Collectors",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [
     "Western Wall Art",
-    "western fine art wall art",
-    "western fine art photography",
+    "western wall art prints",
     "cowboy wall art",
+    "western fine art prints",
     "western photography wall art",
     "western art for collectors",
     "museum quality western art",
