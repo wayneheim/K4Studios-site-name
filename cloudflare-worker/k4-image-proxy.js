@@ -859,14 +859,19 @@ async function handleAdminAnalytics(request, env) {
     `;
     const devices = await env.DB.prepare(deviceQuery).all();
 
-    // Query 9: Top pages
-    // Query 9: Top pages (exclude image pages which have /i- pattern)
+    // Query 9: Top pages (exclude image pages and legacy SmugMug paths)
     const pagesQuery = `
       SELECT page_path, COUNT(DISTINCT session_id) as sessions, COUNT(*) as events
       FROM events 
       WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause} 
         AND page_path IS NOT NULL
         AND page_path NOT LIKE '%/i-%'
+        AND page_path NOT LIKE '/Photoshootsandevents/%'
+        AND page_path NOT LIKE '/Scheduled-Shoots/%'
+        AND page_path NOT LIKE '/Other/Photo-Shoots/%'
+        AND page_path NOT LIKE '/Other/Photo-Shoots-and-Themes/%'
+        AND page_path NOT LIKE '/Is-Winter/%'
+        AND page_path NOT LIKE '/Photography-Galleries/%'
       GROUP BY page_path 
       ORDER BY sessions DESC
       LIMIT 10
@@ -1041,6 +1046,7 @@ async function handleAdminAnalytics(request, env) {
     const botPct = totalSessions > 0 ? Math.round(100 * botSessions / totalSessions) : 0;
 
     // Query 15: Exit Pages (where do people leave?)
+    // Exclude legacy SmugMug paths that return 410
     const exitPagesQuery = `
       SELECT 
         page_path,
@@ -1050,6 +1056,13 @@ async function handleAdminAnalytics(request, env) {
       WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
         AND event = 'session_exit'
         AND page_path IS NOT NULL
+        AND page_path NOT LIKE '/Photoshootsandevents/%'
+        AND page_path NOT LIKE '/Scheduled-Shoots/%'
+        AND page_path NOT LIKE '/Other/Photo-Shoots/%'
+        AND page_path NOT LIKE '/Other/Photo-Shoots-and-Themes/%'
+        AND page_path NOT LIKE '/Is-Winter/%'
+        AND page_path NOT LIKE '/Photography-Galleries/%'
+        AND page_path NOT LIKE '/keyword/%'
       GROUP BY page_path
       ORDER BY exits DESC
       LIMIT 10

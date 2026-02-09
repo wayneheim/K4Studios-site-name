@@ -1,11 +1,11 @@
 export const cowboyStory = [
 
-  // 1. OPENING — EXPLICIT DEFINITION + AUTHORSHIP
+  // 1. OPENING — COLLECTION/BROWSE INTENT (experiential, not definitional)
   {
     title: "Cowboy Fine Art Photography",
     paragraphs: [
-      "Cowboy fine art photography is a form of portraiture centered on the cowboy as subject — the working rancher, frontier figure, and human presence of the American West. This work presents both color and black and white cowboy portraits created as fine art rather than documentary, editorial, or commercial imagery.",
-      "The work presented here is created by Wayne Heim, a fine art photographer whose cowboy photography is collected for its narrative restraint, painterly technique, and character-driven approach. Each portrait is authored to reward sustained viewing and reveal meaning over time."
+      "Cowboys appear here not as archetypes, but as individuals. These portraits reveal presence, character, and the quiet authority of lived experience — fine art photography built to command attention and grow in meaning over time.",
+      "Explore the discipline behind this work: <a href='/Blog/what-is-cowboy-fine-art-photography' style='color:#8b5a2b; text-decoration:underline;'>What Is Cowboy Fine Art Photography</a>."
     ]
   },
 

@@ -1,11 +1,11 @@
 export const painterlyStory = [
 
-  // 1. OPENING — DEFINITION ANCHOR (Google needs this first)
+  // 1. OPENING — COLLECTION/BROWSE INTENT (experiential, not definitional)
   {
     title: "Painterly Western Photography",
     paragraphs: [
-      "Painterly Western photography is a fine art discipline that applies painterly principles — controlled light, tonal restraint, and compositional structure — to photography of the American West. It is distinguished from conventional Western photography by its emphasis on atmosphere and narrative rather than documentation or spectacle.",
-      "Rooted in the Pictorialist tradition and refined through years of illustration and visual storytelling, this work occupies the space between photography and painting. The images are built rather than processed — shaped through light, atmosphere, and intention."
+      "These images occupy the space between photography and painting. Light is sculpted, tone is controlled, and every composition serves story. The American West appears here not as spectacle, but as atmosphere, character, and consequence.",
+      "Understand the tradition: <a href='/Blog/what-is-painterly-photography' style='color:#8b5a2b; text-decoration:underline;'>What Is Painterly Photography</a>."
     ]
   },
 
