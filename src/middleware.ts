@@ -196,6 +196,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     "/Other/Photo-Shoots-and-Themes/",
     "/Is-Winter/",
     "/Photography-Galleries/",
+    "/keyword/",  // SmugMug search/tag paths
   ];
   
   if (legacyGonePrefixes.some(prefix => pathname.startsWith(prefix))) {
