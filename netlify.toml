@@ -226,6 +226,13 @@ to = "/Blog"
 status = 301
 force = true
 
+# Case normalization: /blog/* → /Blog/*
+[[redirects]]
+from = "/blog/*"
+to = "/Blog/:splat"
+status = 301
+force = true
+
 # Removed: /Blog to /Other/Blog redirect (Blog now lives at /Blog)
 
 [[redirects]]
