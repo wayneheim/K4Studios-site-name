@@ -55,11 +55,7 @@ export const galleryData = [
     "description": "1920's style police call box being used by a townsperson to call in a crime.",
     "alt": "Shoe Shine Boy",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv/A",
-    "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's"
-    ],
+    "keywords": ["shoe shine", "1920s Bedford Village", "roaring 20's"],
     "story": "1920's style police call box being used by a townsperson to call in a crime.",
     "notes": "",
     "rating": 0,
@@ -353,11 +349,7 @@ export const galleryData = [
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "Wayne Heim – Fine Art Photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-mMXRvh4/A",
-    "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's"
-    ],
+    "keywords": ["shoe shine", "1920s Bedford Village", "roaring 20's"],
     "story": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "notes": "",
     "rating": 0,
@@ -481,11 +473,7 @@ export const galleryData = [
     "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "alt": "Photographic artwork © Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-pqpdH2v/A",
-    "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's"
-    ],
+    "keywords": ["shoe shine", "1920s Bedford Village", "roaring 20's"],
     "story": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
     "notes": "",
     "rating": 0,

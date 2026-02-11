@@ -614,11 +614,7 @@ export const galleryData = [
     "description": "A monochrome World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
     "alt": "Ready for Battle  BlacK & White Photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-4BfzV3h/A",
-    "keywords": [
-      "mechanical war art",
-      "battle-ready machines",
-      "wwii tanks and trucks"
-    ],
+    "keywords": ["mechanical war art", "battle-ready machines", "wwii tanks and trucks"],
     "story": "Ready for Battle BlacK & White Photography by Wayne Heim — part of Wayne Heim's",
     "notes": "",
     "rating": 0,

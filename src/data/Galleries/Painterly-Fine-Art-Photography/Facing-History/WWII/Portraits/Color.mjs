@@ -2746,10 +2746,7 @@ export const galleryData = [
     "description": "Painterly photo of WWII soldier under fire looking through his field glasses for a path through the carnage.",
     "alt": "Moment to reflect.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-7wSnzbn/A",
-    "keywords": [
-      "HF24647",
-      "DDay 2024"
-    ],
+    "keywords": ["HF24647", "DDay 2024"],
     "story": "Painterly photo of WWII soldier under fire looking through his field glasses for a path through the carnage.",
     "notes": "",
     "rating": 0,

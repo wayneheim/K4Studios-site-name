@@ -5856,10 +5856,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-pQ7JG3f/2/KRWNR8GJQ7hCF43RPPbVjRDCwVdzxNRBN5GqNvCmG/S/_OWH0012-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-pQ7JG3f/A",
-    "keywords": [
-      "HF23686",
-      "DDay 2024"
-    ],
+    "keywords": ["HF23686", "DDay 2024"],
     "story": "Reenactor washes his dishes after a meal at D Day Conneaut.   © Wayne Heim 2016",
     "notes": "",
     "rating": 0,
@@ -5902,10 +5899,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-wgF5ZwK/2/MtS5czMCpCxwhQX3jCwcLwDSvgpcJWX88Mp7zXnPJ/S/_WHK1395-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White/i-wgF5ZwK/A",
-    "keywords": [
-      "HF23686",
-      "DDay 2024"
-    ],
+    "keywords": ["HF23686", "DDay 2024"],
     "story": "Portrait of a tank crew at D Day Conneaut.\n© Wayne Heim 2016",
     "notes": "",
     "rating": 0,
