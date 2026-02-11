@@ -5,6 +5,7 @@
     title: "Western Cowboy Photography",
     paragraphs: [
       "This gallery presents Western cowboy photography by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a> - restrained, narrative-driven cowboy portraits shaped by lived experience, historical grounding, and painterly craft. These works move beyond spectacle to focus on character, presence, and the quiet authority of the individuals who define the American West.",
+      "Wayne Heim creates historically themed Western fine art photography, using narrative, painterly composition to explore the psychological lives of the American frontier. The work is rooted in the 19th-century frontier rather than contemporary Western ranch life.",
       "Built to reward long viewing, these images invite interpretation rather than explanation. Meaning unfolds gradually through posture, light, and stillness - moments held between action and aftermath.",
       "For a deeper exploration of the genre and its traditions, see <a href='/Blog/what-is-western-fine-art-photography' style='color:#8b5a2b; text-decoration:underline;'>What Is Western Fine Art Photography</a>."
     ]

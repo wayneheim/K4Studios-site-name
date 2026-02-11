@@ -5,8 +5,10 @@ export const facingHistoryStory = [
     title: "Storied & Historically Themed Fine Art Photography",
     subhead: "Facing History — Embrace the Past. Live the Story.",
     paragraphs: [
-      "Some moments refuse to fade. They linger—half memory, half myth—etched into the quiet architecture of who we are. Wayne Heim’s Facing History collection explores historically themed fine art photography through character, atmosphere, and narrative intent rather than spectacle or reenactment alone.",
+      "Facing History is Wayne Heim's exploration of historically themed fine art photography — engaging the American frontier and pivotal moments in history as lived experience through narrative, painterly composition, and psychological depth.",
+      "Some moments refuse to fade. They linger—half memory, half myth—etched into the quiet architecture of who we are. Wayne Heim's Facing History collection explores historically themed fine art photography through character, atmosphere, and narrative intent rather than spectacle or reenactment alone.",
       "These works are not casual recreations or costume-driven portraits. They are story-built studies shaped with painterly craft, researched authenticity, and the disciplined eye of a medical illustrator turned cinematic storyteller.",
+      "Rather than documenting modern lifestyle or period spectacle, the work treats history as lived psychology — moments shaped by choice, consequence, and human presence.",
       "Many portraits function as <strong>One-Image Movies™</strong>—single frames constructed with the emotional gravity of a complete story arc. A breath before a decision. A pause weighted with consequence. These are moments still in motion, inviting the viewer to step inside the narrative.",
       "For collectors of painterly fine art, Western cowboy art, historically themed portraiture, and story-rich reenactment photography, Facing History offers a curated journey into worlds that feel both familiar and newly alive."
     ]

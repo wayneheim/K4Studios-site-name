@@ -9,6 +9,9 @@ export const painterlyStory = [
     // ✅ NEW grounding sentence
     "K4 Studios is the home of fine art photography by Wayne Heim — painterly and traditional styles, Western themed, historically driven, and crafted for collectors who value story, atmosphere, and authenticity.",
 
+    // ✅ Reclassification framing sentence
+    "Wayne Heim creates historically themed Western fine art photography, using narrative, painterly composition to explore the psychological lives of the American frontier.",
+
     "Every image here is a One-Image Movie™—a single, cinematic breath where time, myth, and memory hold still for just a moment. Painterly portraits. Western grit. Landscapes that breathe. Forgotten stories and icons of history and invention, rendered in light that feels carved from memory itself.",
     "This is fine art photography for collectors who want more than décor. Cowboys and outlaws. WWII heroes and Civil War soldiers. Mountains that hum old hymns. Steel and steam and leather and dust. Step inside the story—and claim your place in it."
   ]
