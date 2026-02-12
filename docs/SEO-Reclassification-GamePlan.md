@@ -92,12 +92,15 @@ If any change conflicts with this framing, **STOP and ask**.
 5. FAQ schema with at least one negation question
 
 ### Checklist:
-- [ ] `/Historical-Western-Art/index.astro` created
-- [ ] H1 claims category
-- [ ] Anti-modern differentiation explicit
-- [ ] Links to 3+ existing sections
-- [ ] FAQ schema included
-- [ ] Added to sitemap.ts
+- [x] `/Historical-Western-Art/index.astro` created
+- [x] H1 claims category
+- [x] Anti-modern differentiation explicit
+- [x] Links to 3+ existing sections
+- [x] FAQ schema included
+- [x] Added to sitemap.ts (auto-generated on build)
+- [x] Added to landingMeta.ts
+
+**✅ Day 2 Complete (February 12, 2026)**
 
 **Do NOT create Cinematic, Narrative, or Frontier pages yet.**
 
@@ -226,4 +229,4 @@ src/data/sitemap.ts
 
 ---
 
-*Last updated: February 11, 2026*
+*Last updated: February 12, 2026*

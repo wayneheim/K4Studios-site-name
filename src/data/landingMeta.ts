@@ -489,6 +489,20 @@ export const landingMetaDB = {
     twitterImage: "/og/traditional.jpg",
   },
 
+  "/Historical-Western-Art": {
+    ogTitle: "Historical Western Art – Wayne Heim",
+    ogDescription:
+      "Historically themed Western fine art photography by Wayne Heim — not modern ranch imagery — using narrative, painterly composition to explore the psychological lives of the American frontier.",
+    ogImage: "/images/cowboy.webp",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Historical Western Art – Wayne Heim",
+    twitterDescription:
+      "Historical Western art and frontier portraiture by Wayne Heim. Narrative, painterly photography rooted in the 19th-century West — not contemporary ranch documentation.",
+    twitterImage: "/images/cowboy.webp",
+    keywords: "historical western art, historical western photography, frontier art photography, 19th century western art, narrative western photography, painterly western art, psychological western portraiture, Wayne Heim",
+  },
+
   "/Western-Fine-Art-Photography": {
     ogTitle: "Western Fine Art Photography | Cowboy & Frontier Art Photography – Wayne Heim",
     ogDescription:

@@ -825,14 +825,28 @@ export default function GalleryEditorPro() {
       .map((path) => ({ path, label: prettyLabelFromPath(path) }));
   }, [modules]);
 
-  // Parse URL parameters for deep linking (e.g., ?file=/path/to/gallery.mjs&id=i-abc123)
-  const urlParams = useMemo(() => {
+  // Read URL params imperatively (no memo, no SSR assumptions) - Quill pattern
+  function getDeepLinkParams() {
     if (typeof window === "undefined") return { file: null, id: null };
     const params = new URLSearchParams(window.location.search);
     return {
       file: params.get("file"),
       id: params.get("id")
     };
+  }
+
+  // Deep-link ref - stores the ID to navigate to, cleared after use
+  // This is read BEFORE fresh load logic to bypass reset
+  const deepLinkRef = useRef(null);
+  
+  // Read URL params on mount into ref (client-side only, one-shot)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const id = new URLSearchParams(window.location.search).get("id");
+    if (id) {
+      console.log("[DeepLink] Captured ID on mount:", id);
+      deepLinkRef.current = id;
+    }
   }, []);
 
   // Try to restore state from resume storage (survives HMR)
@@ -844,8 +858,9 @@ export default function GalleryEditorPro() {
   const [selectedPath, setSelectedPath] = useState(() => {
     // Initialize with sessionStorage if available (client-side only)
     if (typeof window === "undefined") return "";
-    // URL param takes priority for deep linking
-    if (urlParams.file) return urlParams.file;
+    // URL param takes priority for deep linking - read imperatively
+    const urlFile = getDeepLinkParams().file;
+    if (urlFile) return urlFile;
     return resumeState?.selectedPath || sessionStorage.getItem("lastDatasetPath") || "";
   });
   const [data, setData] = useState([]);
@@ -1015,23 +1030,6 @@ export default function GalleryEditorPro() {
       setData(hydratedArr);
       setBackupData(allArr);
       
-      // Check if URL has an image ID to navigate to (deep linking from Inventory Tracker, etc.)
-      if (urlParams.id) {
-        const targetIdx = arr.findIndex(img => img.id === urlParams.id);
-        if (targetIdx >= 0) {
-          setIdx(targetIdx);
-          setFilter(""); // Clear filter to ensure image is visible
-          setDirty(false);
-          setLastAction(`Navigated to ${urlParams.id}`);
-          setShowRefreshGuard(false);
-          // Clear URL params after navigation so refresh doesn't re-trigger
-          if (typeof window !== "undefined") {
-            window.history.replaceState({}, "", window.location.pathname);
-          }
-          return; // Skip other restore logic
-        }
-      }
-      
       // Check if there's a jump-back position waiting (from bulk save)
       const jumpBackIdx = getJumpBackTo();
       
@@ -1067,9 +1065,12 @@ export default function GalleryEditorPro() {
         }
       } else {
         // Fresh load - reset everything
-        console.log("[GEP] FRESH LOAD - setIdx(0), selectedPath:", selectedPath);
-        setIdx(0);
-        setFilter("");
+        console.log("[GEP] FRESH LOAD - deepLinkRef:", deepLinkRef.current, "selectedPath:", selectedPath);
+        // BYPASS reset if deep link is present - this is the critical guard
+        if (!deepLinkRef.current) {
+          setIdx(0);
+          setFilter("");
+        }
         setBackupMade(false);
         setRealBackupMade(false);
         setDirty(false);
@@ -1086,6 +1087,25 @@ export default function GalleryEditorPro() {
     return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedPath]);
+
+  // Deep-link override - apply after data is loaded (Quill pattern)
+  useEffect(() => {
+    if (!data.length) return;
+    if (!deepLinkRef.current) return;
+    
+    console.log("[DeepLink] Applying filter for:", deepLinkRef.current);
+    setFilter(deepLinkRef.current);
+    setIdx(0);
+    setLastAction(`Deep-linked to ${deepLinkRef.current}`);
+    
+    // Clear URL params so refresh doesn't re-trigger
+    if (typeof window !== "undefined") {
+      window.history.replaceState({}, "", window.location.pathname);
+    }
+    
+    // One-shot - clear ref so it doesn't re-apply
+    deepLinkRef.current = null;
+  }, [data]);
 
   // Autosave draft
   useEffect(() => {

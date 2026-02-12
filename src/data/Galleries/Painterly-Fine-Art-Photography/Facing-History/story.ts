@@ -36,7 +36,7 @@ export const facingHistoryStory = [
     subhead: "Civil War Portraits — Valor, Resolve & the Weight of a Nation",
     paragraphs: [
       "Wayne’s Civil War portraits focus on the human cost of conflict rather than battlefield spectacle. Smoke, stillness, and expression replace action, creating painterly Civil War photography rooted in character and consequence.",
-      "Each portrait is shaped as a <strong>One-Image Movie™</strong>—the emotional hinge between what has been endured and what must follow. Posture becomes narrative. Shadow becomes memory.",
+      "Each portrait captures a single frame from an unwritten epic—the emotional hinge between what has been endured and what must follow. Posture becomes narrative. Shadow becomes memory.",
       "Collectors of Civil War themed fine art photography will find works that honor courage, doubt, and sacrifice with restraint and psychological depth rather than reenactment excess."
     ],
     list: [
@@ -49,7 +49,7 @@ export const facingHistoryStory = [
     subhead: "WWII Portraits — Sacrifice, Brotherhood & the Human Heart in Wartime",
     paragraphs: [
       "The WWII series moves beyond documentation into story-driven wartime portraiture. Mud, machinery, fatigue, and quiet exchanges form the emotional language of these painterly WWII photographs.",
-      "Each image carries the <strong>One-Image Movie™</strong> structure—intentional light, deliberate stillness, and gestures that speak louder than action. These portraits meditate on courage, fear, camaraderie, and survival.",
+      "Each image holds the weight of an unseen film—intentional light, deliberate stillness, and gestures that speak louder than action. These portraits meditate on courage, fear, camaraderie, and survival.",
       "Ideal for collectors of WWII fine art photography, military history art, and historically themed imagery grounded in authenticity rather than spectacle."
     ],
     list: [
@@ -63,7 +63,7 @@ export const facingHistoryStory = [
     paragraphs: [
       "The Roaring 20s was defined by contradiction—elegance and danger, glamour and grit. Wayne’s painterly Jazz-Age portraits explore that tension through light, wardrobe, posture, and mood.",
       "Bootleggers slipping through smoke, flappers defying convention, and figures caught between excess and consequence form cinematic character studies rather than period tableaux.",
-      "Many images operate as <strong>One-Image Movies™</strong>, implying full narratives just beyond the frame—light becomes intrigue, shadow becomes plotline.",
+      "Many images feel like stills from a noir yet to be filmed, implying full narratives just beyond the frame—light becomes intrigue, shadow becomes plotline.",
       "Perfect for collectors drawn to Jazz-Age aesthetics, Gatsby-era mood, and historically themed fine art photography with psychological depth."
     ],
     list: [

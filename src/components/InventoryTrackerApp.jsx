@@ -104,6 +104,10 @@ function InventoryCard({ item, onContextMenu }) {
     engrained: "bg-amber-200 border-amber-600 text-amber-900",
   };
   
+  // For released view, show "Released" badge instead of inventory count
+  const showInventoryBadge = item.inventory > 0;
+  const isReleasedView = item.released && item.inventory === 0;
+  
   return (
     <div
       className="rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow border-2"
@@ -121,10 +125,16 @@ function InventoryCard({ item, onContextMenu }) {
           className="w-full h-full object-cover"
           loading="lazy"
         />
-        {/* Inventory badge */}
-        <div className="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">
-          {item.inventory} in stock
-        </div>
+        {/* Status badge */}
+        {showInventoryBadge ? (
+          <div className="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">
+            {item.inventory} in stock
+          </div>
+        ) : isReleasedView ? (
+          <div className="absolute top-2 right-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">
+            ✓ Released
+          </div>
+        ) : null}
       </div>
       
       {/* Info */}
@@ -154,11 +164,13 @@ function InventoryCard({ item, onContextMenu }) {
 // Main app component
 function InventoryTrackerApp() {
   const [inventory, setInventory] = useState([]);
+  const [releasedImages, setReleasedImages] = useState([]); // All released images per tier
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [contextMenu, setContextMenu] = useState(null);
   const [filterTier, setFilterTier] = useState("all");
   const [sortBy, setSortBy] = useState("title"); // title, inventory, tier
+  const [viewMode, setViewMode] = useState("released"); // "released" = all released images, "inStock" = only P-S>0
   
   // Fetch inventory data
   useEffect(() => {
@@ -166,21 +178,74 @@ function InventoryTrackerApp() {
       try {
         const cacheBuster = Date.now();
         
-        // Fetch both series registry and Engrained data in parallel
-        const [registryRes, engrainedRes] = await Promise.all([
+        // Fetch series registry, Engrained data, and edition state in parallel
+        const [registryRes, engrainedRes, editionStateRes] = await Promise.all([
           fetch(`/.netlify/functions/seriesRegistry?_t=${cacheBuster}`, { cache: "no-store" }),
-          fetch(`/.netlify/functions/engrainedData?_t=${cacheBuster}`, { cache: "no-store" })
+          fetch(`/.netlify/functions/engrainedData?_t=${cacheBuster}`, { cache: "no-store" }),
+          fetch(`/.netlify/functions/editionState?_t=${cacheBuster}`, { cache: "no-store" })
         ]);
         
         if (!registryRes.ok) throw new Error("Failed to fetch registry");
         
         const registry = await registryRes.json();
         const engrainedData = engrainedRes.ok ? await engrainedRes.json() : { items: [] };
+        const editionState = editionStateRes.ok ? await editionStateRes.json() : { state: {} };
         
-        // Parse registry to find items with inventory (P - S > 0)
-        const items = [];
+        // Build a map of engrained state by imageId
+        // Keys are like "i-xxx:engrained" -> { printed: X, sold: Y }
+        const engrainedStateMap = {};
+        for (const [key, value] of Object.entries(editionState.state || {})) {
+          if (key.endsWith(":engrained")) {
+            const imageId = key.replace(":engrained", "");
+            engrainedStateMap[imageId] = value;
+          }
+        }
+        console.log("[InventoryTracker] Engrained state map:", engrainedStateMap);
+        
+        // Parse registry - track both in-stock items AND released images
+        const inStockItems = [];
+        const released = []; // All images released in chronicle/legend, regardless of prints
+        const seenReleased = new Set(); // Prevent duplicates (seriesId:tier)
         
         for (const [seriesId, series] of Object.entries(registry.series || {})) {
+          // Check tiers array for released images (image is "issued" to a tier if tier is in tiers array)
+          const tiers = series.tiers || [];
+          for (const tier of tiers) {
+            if (!["chronicle", "legend"].includes(tier)) continue;
+            
+            const key = `${seriesId}:${tier}`;
+            if (!seenReleased.has(key)) {
+              seenReleased.add(key);
+              
+              // Get edition data for this tier if available
+              const tierData = series.editionData?.[tier] || {};
+              const printedBySize = tierData.printedBySize || {};
+              const soldBySize = tierData.soldBySize || {};
+              
+              // Sum up printed/sold across all sizes
+              let totalPrinted = 0, totalSold = 0;
+              for (const [size, p] of Object.entries(printedBySize)) {
+                totalPrinted += p || 0;
+                totalSold += soldBySize[size] || 0;
+              }
+              
+              released.push({
+                seriesId,
+                imageId: series.primaryImageId,
+                title: series.title || series.primaryImageId,
+                src: series.src,
+                tier,
+                size: Object.keys(printedBySize).join(", ") || "All sizes",
+                printed: totalPrinted,
+                sold: totalSold,
+                inventory: Math.max(0, totalPrinted - totalSold),
+                galleryPath: series.occurrences?.[0]?.galleryPath || "",
+                released: true
+              });
+            }
+          }
+          
+          // Also check editionData for items with actual prints
           if (!series.editionData) continue;
           
           for (const [tier, tierData] of Object.entries(series.editionData)) {
@@ -192,10 +257,10 @@ function InventoryTrackerApp() {
             
             for (const [size, printed] of Object.entries(printedBySize)) {
               const sold = soldBySize[size] || 0;
-              const inventory = printed - sold;
+              const inv = printed - sold;
               
-              if (inventory > 0) {
-                items.push({
+              if (inv > 0) {
+                inStockItems.push({
                   seriesId,
                   imageId: series.primaryImageId,
                   title: series.title || series.primaryImageId,
@@ -204,7 +269,7 @@ function InventoryTrackerApp() {
                   size,
                   printed,
                   sold,
-                  inventory,
+                  inventory: inv,
                   galleryPath: series.occurrences?.[0]?.galleryPath || ""
                 });
               }
@@ -212,31 +277,50 @@ function InventoryTrackerApp() {
           }
         }
         
-        // Add Engrained items that have inventory
+        // Add Engrained items - both to released list and in-stock (if applicable)
         for (const item of (engrainedData.items || [])) {
-          if (!item.inventory) continue;
+          // Get inventory from editionState (stored in editionState.json, not in the mjs file)
+          const stateData = engrainedStateMap[item.id] || {};
+          const printed = stateData.printed || 0;
+          const sold = stateData.sold || 0;
+          const inStock = Math.max(0, printed - sold);
           
-          const inv = item.inventory;
-          const inStock = inv.inStock || Math.max(0, (inv.printed || 0) - (inv.sold || 0));
+          // Add to released list (all Engrained items are considered released)
+          released.push({
+            seriesId: `engrained:${item.id}`,
+            imageId: item.id,
+            title: item.title || item.id,
+            src: item.src,
+            tier: "engrained",
+            size: item.imageSize || "20\" × 24\"",
+            printed: printed,
+            sold: sold,
+            inventory: inStock,
+            galleryPath: "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+            price: item.price,
+            released: true
+          });
           
+          // Also add to in-stock if there's inventory
           if (inStock > 0) {
-            items.push({
+            inStockItems.push({
               seriesId: `engrained:${item.id}`,
               imageId: item.id,
               title: item.title || item.id,
               src: item.src,
               tier: "engrained",
-              size: item.imageSize || "Wood Panel",
-              printed: inv.printed || 0,
-              sold: inv.sold || 0,
+              size: item.imageSize || "20\" × 24\"",
+              printed: printed,
+              sold: sold,
               inventory: inStock,
-              galleryPath: "src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+              galleryPath: "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
               price: item.price
             });
           }
         }
         
-        setInventory(items);
+        setInventory(inStockItems);
+        setReleasedImages(released);
         setLoading(false);
       } catch (err) {
         console.error("Error fetching inventory:", err);
@@ -259,6 +343,8 @@ function InventoryTrackerApp() {
     // The galleryPath helps locate the image
     const galleryPath = item.galleryPath || "";
     const imageId = item.imageId;
+    
+    console.log("[InventoryTracker] Edit clicked for:", item.title, "imageId:", imageId, "galleryPath:", galleryPath);
     
     // Open Editor Pro in new tab - it will need to navigate to this image
     // Format: /admin/GalleryEditor?file=<galleryPath>&id=<imageId>
@@ -284,7 +370,10 @@ function InventoryTrackerApp() {
   }
   
   // Filter and sort inventory
-  const filteredInventory = inventory
+  // Choose which data to display based on view mode
+  const displayData = viewMode === "released" ? releasedImages : inventory;
+  
+  const filteredInventory = displayData
     .filter(item => filterTier === "all" || item.tier === filterTier)
     .sort((a, b) => {
       switch (sortBy) {
@@ -320,7 +409,13 @@ function InventoryTrackerApp() {
     // Example: /src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs
     // Extract the meaningful parts after "Galleries/"
     const match = path.match(/\/Galleries\/(.+)\.mjs$/);
-    if (!match) return { segments: [path], url: "/" };
+    if (!match) {
+      // Handle Engrained path
+      if (path.includes("Engrained")) {
+        return { segments: ["Engrained Series"], url: "/Galleries/Other/K4-Select-Series/Engrained" };
+      }
+      return { segments: [path], url: "/" };
+    }
     
     const parts = match[1].split("/").map(part => 
       part.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())
@@ -333,10 +428,17 @@ function InventoryTrackerApp() {
     return { segments: parts, url: `/Galleries/${urlPath}` };
   }
   
-  // Calculate totals
-  const totalItems = filteredInventory.reduce((sum, item) => sum + item.inventory, 0);
-  const chronicleCount = inventory.filter(i => i.tier === "chronicle").reduce((sum, i) => sum + i.inventory, 0);
-  const legendCount = inventory.filter(i => i.tier === "legend").reduce((sum, i) => sum + i.inventory, 0);
+  // Calculate totals - Released images count (unique images per tier)
+  const chronicleReleasedCount = releasedImages.filter(i => i.tier === "chronicle").length;
+  const legendReleasedCount = releasedImages.filter(i => i.tier === "legend").length;
+  const engrainedReleasedCount = releasedImages.filter(i => i.tier === "engrained").length;
+  const totalReleasedCount = chronicleReleasedCount + legendReleasedCount + engrainedReleasedCount;
+  
+  // In-stock print counts
+  const chronicleInStock = inventory.filter(i => i.tier === "chronicle").reduce((sum, i) => sum + i.inventory, 0);
+  const legendInStock = inventory.filter(i => i.tier === "legend").reduce((sum, i) => sum + i.inventory, 0);
+  const engrainedInStock = inventory.filter(i => i.tier === "engrained").reduce((sum, i) => sum + i.inventory, 0);
+  const totalInStock = chronicleInStock + legendInStock + engrainedInStock;
   
   if (loading) {
     return (
@@ -368,28 +470,62 @@ function InventoryTrackerApp() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold text-stone-800">📦 Inventory Tracker</h1>
-              <p className="text-sm text-stone-500 mt-1">Prints ready to ship</p>
+              <p className="text-sm text-stone-500 mt-1">
+                {viewMode === "released" ? "Images issued to limited series" : "Prints ready to ship"}
+              </p>
             </div>
             
-            {/* Summary stats */}
+            {/* Summary stats - show released counts */}
             <div className="flex items-center gap-6">
               <div className="text-center">
-                <div className="text-2xl font-bold text-green-600">{totalItems}</div>
-                <div className="text-xs text-stone-500">Total in Stock</div>
+                <div className="text-2xl font-bold text-green-600">{totalReleasedCount}</div>
+                <div className="text-xs text-stone-500">Total Released</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-amber-600">{chronicleCount}</div>
+                <div className="text-2xl font-bold text-sky-600">{chronicleReleasedCount}</div>
                 <div className="text-xs text-stone-500">Chronicle</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-purple-600">{legendCount}</div>
+                <div className="text-2xl font-bold text-emerald-600">{legendReleasedCount}</div>
                 <div className="text-xs text-stone-500">Legend</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-amber-700">{engrainedReleasedCount}</div>
+                <div className="text-xs text-stone-500">Engrained</div>
+              </div>
+              <div className="border-l border-stone-300 pl-6 text-center">
+                <div className="text-2xl font-bold text-amber-600">{totalInStock}</div>
+                <div className="text-xs text-stone-500">In Stock</div>
               </div>
             </div>
           </div>
           
           {/* Filters */}
           <div className="flex items-center gap-4 mt-4">
+            {/* View mode toggle */}
+            <div className="flex items-center gap-1 bg-stone-100 rounded-lg p-1">
+              <button
+                onClick={() => setViewMode("released")}
+                className={`px-3 py-1 text-sm rounded-md transition-colors ${
+                  viewMode === "released" 
+                    ? "bg-white shadow text-stone-800 font-medium" 
+                    : "text-stone-600 hover:text-stone-800"
+                }`}
+              >
+                📋 Released
+              </button>
+              <button
+                onClick={() => setViewMode("inStock")}
+                className={`px-3 py-1 text-sm rounded-md transition-colors ${
+                  viewMode === "inStock" 
+                    ? "bg-white shadow text-stone-800 font-medium" 
+                    : "text-stone-600 hover:text-stone-800"
+                }`}
+              >
+                📦 In Stock
+              </button>
+            </div>
+            
             <div className="flex items-center gap-2">
               <label className="text-sm text-stone-600">Filter:</label>
               <select
@@ -435,11 +571,18 @@ function InventoryTrackerApp() {
         {filteredInventory.length === 0 ? (
           <div className="text-center py-12">
             <div className="text-6xl mb-4">📭</div>
-            <h2 className="text-xl font-semibold text-stone-700 mb-2">No Inventory</h2>
+            <h2 className="text-xl font-semibold text-stone-700 mb-2">
+              {viewMode === "released" ? "No Released Images" : "No Inventory"}
+            </h2>
             <p className="text-stone-500">
-              {filterTier === "all" 
-                ? "No prints are currently in stock. Add P (printed) values in Editor Pro."
-                : `No ${filterTier} prints in stock.`}
+              {viewMode === "released"
+                ? (filterTier === "all" 
+                    ? "No images have been released to Chronicle or Legend series yet."
+                    : `No images released to ${filterTier} series.`)
+                : (filterTier === "all" 
+                    ? "No prints are currently in stock. Add P (printed) values in Editor Pro."
+                    : `No ${filterTier} prints in stock.`)
+              }
             </p>
           </div>
         ) : (
