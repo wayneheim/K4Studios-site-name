@@ -32,17 +32,17 @@ export const landingHistorical = {
     {
       title: "Painterly Western Photography",
       href: "/Painterly-Western-Photography",
-      thumb: "/images/tombstones/painterly-ts.jpg",
+      thumb: "/img/i-Lk8jWT3/s", // Western landscape
     },
     {
       title: "Facing History Series",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History",
-      thumb: "/images/tombstones/facing-history-ts.jpg",
+      thumb: "", // Dynamically populated
     },
     {
       title: "Western Fine Art Photography",
       href: "/Western-Fine-Art-Photography",
-      thumb: "/images/tombstones/western-ts.jpg",
+      thumb: "/images/tombstones/cowboy-bw-ts.jpg",
     },
   ],
 };
