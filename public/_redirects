@@ -6,17 +6,17 @@
 /Other/Blog/*  /Blog/:splat  301
 
 # Block access to source files (should never be crawled)
-/src/*  /404  404!
+/src/*  /410  410!
 
 # Block Glossary page with query strings (SmugMug API leakage)
-/Glossary?*  /404  404!
+/Glossary?*  /410  410!
 
 # Block bare lightbox URL (legacy SmugMug endpoint, not canonical)
 # NOTE: /Galleries/lightbox?dataset=... is allowed for internal "View Complete Gallery" use
-/Galleries/lightbox  /404  404!
+/Galleries/lightbox  /410  410!
 
 # Block keyword pages (not proper content pages)
-/keyword/*  /404  404!
+/keyword/*  /410  410!
 
 # =============================================================================
 # LEGACY SMUGMUG PATHS - Return 410 GONE (content not part of k4studios.com)
@@ -74,7 +74,7 @@
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color  301
 
 */Photoshootsandevents/*  /410  410!
-/data/system/*  /404  404!
+/data/system/*  /410  410!
 
 # Legacy SmugMug frame/slideshow URLs
 /frame/*  /  301
@@ -103,6 +103,10 @@
 /Galleries/i-:id  /.netlify/functions/smart-404?id=:id&path=/Galleries/i-:id  404!
 
 # Block SmugMug API endpoints - these should never be crawled (case variations)
-/api/*  /404  404!
-/Api/*  /404  404!
-/API/*  /404  404!
+# Use 410 Gone to tell Google to de-index and stop crawling
+/api/*  /410  410!
+/Api/*  /410  410!
+/API/*  /410  410!
+
+# Legacy SmugMug /track endpoint - permanently gone
+/track  /410  410!
