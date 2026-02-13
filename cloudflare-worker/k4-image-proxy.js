@@ -1588,6 +1588,9 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     .controls a:hover, .controls a.active { background: #333; }
     .pulse { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; align-items: center; }
     .pulse-stat { background: #252525; padding: 8px 16px; border-radius: 6px; display: flex; align-items: center; gap: 8px; position: relative; cursor: help; }
+    .pulse-stat.clickable { cursor: pointer; transition: opacity 0.2s, transform 0.1s; }
+    .pulse-stat.clickable:hover { transform: scale(1.02); }
+    .pulse-stat.clickable.off { opacity: 0.4; }
     .pulse-stat .value { font-size: 18px; font-weight: bold; color: #4a9eff; }
     .pulse-stat .label { font-size: 11px; color: #888; display: flex; align-items: center; gap: 4px; }
     .pulse-stat .info-icon { width: 12px; height: 12px; border-radius: 50%; background: #444; color: #888; font-size: 9px; display: inline-flex; align-items: center; justify-content: center; font-style: italic; }
@@ -1602,6 +1605,11 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     .pulse-stat.collector .value { color: #fff; }
     .pulse-stat.collector .label { color: #c4b5fd; }
     .pulse-stat.collector .info-icon { background: rgba(255,255,255,0.2); color: #c4b5fd; }
+    /* Custom scrollbar for art lists */
+    #art-images-list::-webkit-scrollbar, #art-galleries-list::-webkit-scrollbar { width: 6px; }
+    #art-images-list::-webkit-scrollbar-track, #art-galleries-list::-webkit-scrollbar-track { background: #1a1a1a; border-radius: 3px; }
+    #art-images-list::-webkit-scrollbar-thumb, #art-galleries-list::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
+    #art-images-list::-webkit-scrollbar-thumb:hover, #art-galleries-list::-webkit-scrollbar-thumb:hover { background: #555; }
     table { width: 100%; border-collapse: collapse; background: #252525; border-radius: 8px; overflow: hidden; margin-bottom: 20px; }
     th, td { padding: 10px 15px; text-align: left; border-bottom: 1px solid #333; }
     th { background: #1a1a1a; color: #888; font-size: 12px; text-transform: uppercase; }
@@ -1827,29 +1835,29 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
 
   <!-- Art Views Section (Layer B - Server-Side Attention Tracking) -->
   <h2 style="margin-top: 30px;">🎨 Art Views <span style="font-size: 12px; color: #888; font-weight: normal;">(Server-Side)</span></h2>
-  <p style="color: #888; margin: -10px 0 15px 0; font-size: 12px;">People who actually looked at your art. No JS required — tracked at the server level.</p>
+  <p style="color: #888; margin: -10px 0 15px 0; font-size: 12px;">People who actually looked at your art. No JS required — tracked at the server level. <strong>Click filters to show/hide types below.</strong></p>
   <div class="pulse">
     <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
       <span class="value" style="color: #fff;">${artViewsSummary?.total || 0}</span>
       <span class="label" style="color: #ddd6fe;">Total Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
       <div class="tooltip">Total art views (on-site + external). Chapter Views + XL Zooms + Galleries + External.</div>
     </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);">
+    <div class="pulse-stat clickable" data-filter="image_page" onclick="toggleArtFilter('image_page')" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);">
       <span class="value" style="color: #fff;">📖 ${artViewsSummary?.image_pages || 0}</span>
       <span class="label" style="color: #ede9fe;">Chapter Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ede9fe;">i</span></span>
       <div class="tooltip">On-site image detail page loads (/Galleries/*/i-*). Someone on YOUR site viewing an image chapter. This is the real "looked at art" metric.</div>
     </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+    <div class="pulse-stat clickable" data-filter="xl_zoom" onclick="toggleArtFilter('xl_zoom')" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
       <span class="value" style="color: #fff;">🔍 ${artViewsSummary?.xl_zooms || 0}</span>
       <span class="label" style="color: #ddd6fe;">XL Zooms <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
       <div class="tooltip">XL images served (/img/*/xl). On-site zoom lightbox or slideshow views. High-intent engagement.</div>
     </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%);">
+    <div class="pulse-stat clickable" data-filter="gallery" onclick="toggleArtFilter('gallery')" style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%);">
       <span class="value" style="color: #1f2937;">📁 ${artViewsSummary?.galleries || 0}</span>
       <span class="label" style="color: #374151;">Galleries <span class="info-icon" style="background: rgba(0,0,0,0.1); color: #374151;">i</span></span>
       <div class="tooltip">Gallery page loads. Someone browsing a collection on your site.</div>
     </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
+    <div class="pulse-stat clickable" data-filter="external_image" onclick="toggleArtFilter('external_image')" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
       <span class="value" style="color: #fff;">🌐 ${artViewsSummary?.external_images || 0}</span>
       <span class="label" style="color: #fed7aa;">External <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fed7aa;">i</span></span>
       <div class="tooltip">L-size images served to external platforms (Google Images, Bing, Pinterest, Facebook, etc.). Off-site discovery where your art is seen but not on k4studios.com.</div>
@@ -1858,29 +1866,54 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   ${topArtViews && topArtViews.length > 0 ? `
   <div class="section" style="margin-top: 15px;">
     <h3>Top Viewed Art <span style="font-size: 11px; color: #888; font-weight: normal;">(server-side)</span></h3>
-    ${topArtViews.map(a => {
-      const isImage = a.type === 'xl_zoom' || a.type === 'external_image' || a.type === 'image' || a.type === 'image_page';
-      const imageId = isImage && a.target_id.startsWith('i-') ? a.target_id : null;
-      const icon = a.type === 'xl_zoom' ? '🔍' : a.type === 'external_image' ? '🌐' : a.type === 'image' ? '🔍' : a.type === 'image_page' ? '📖' : '📁';
-      const typeLabel = a.type === 'xl_zoom' ? 'XL Zoom' : a.type === 'external_image' ? 'External' : a.type === 'image_page' ? 'Chapter View' : a.type === 'image' ? 'XL Zoom' : 'Gallery';
-      const label = a.target_id.length > 35 ? '...' + a.target_id.slice(-35) : a.target_id;
-      return `
-      <div style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
-        ${imageId ? `<img src="https://k4studios.com/img/${imageId}/s" alt="" style="width: 40px; height: 40px; object-fit: cover; border-radius: 4px; background: #333; flex-shrink: 0;">` : `<span style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 18px;">${icon}</span>`}
-        <div style="flex: 1; min-width: 0;">
-          <span style="color: #a78bfa; font-size: 11px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${a.target_id}">${label}</span>
-          <span style="color: ${a.type === 'external_image' ? '#f97316' : '#666'}; font-size: 10px;">${typeLabel}</span>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      <!-- Images Column -->
+      <div>
+        <h4 style="margin: 0 0 8px 0; font-size: 12px; color: #a78bfa;">🖼️ Images</h4>
+        <div id="art-images-list" style="max-height: 300px; overflow-y: auto; padding-right: 4px;">
+          ${topArtViews.filter(a => a.type !== 'gallery').map(a => {
+            const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
+            const icon = a.type === 'xl_zoom' ? '🔍' : a.type === 'external_image' ? '🌐' : a.type === 'image' ? '🔍' : '📖';
+            const typeLabel = a.type === 'xl_zoom' ? 'XL Zoom' : a.type === 'external_image' ? 'External' : a.type === 'image_page' ? 'Chapter' : 'XL Zoom';
+            const filterType = a.type === 'image' ? 'xl_zoom' : a.type;
+            const label = a.target_id.length > 25 ? '...' + a.target_id.slice(-25) : a.target_id;
+            return `
+            <div class="art-item" data-type="${filterType}" style="display: flex; align-items: center; padding: 5px 0; border-bottom: 1px solid #333; gap: 6px;">
+              ${imageId ? `<img src="https://k4studios.com/img/${imageId}/s" alt="" style="width: 32px; height: 32px; object-fit: cover; border-radius: 3px; background: #333; flex-shrink: 0;">` : `<span style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 3px; font-size: 14px;">${icon}</span>`}
+              <div style="flex: 1; min-width: 0;">
+                <span style="color: #a78bfa; font-size: 10px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${a.target_id}">${label}</span>
+                <span style="color: ${a.type === 'external_image' ? '#f97316' : '#666'}; font-size: 9px;">${typeLabel}</span>
+              </div>
+              <div style="display: flex; gap: 3px; flex-shrink: 0;">
+                <span style="background: #2d2250; padding: 2px 5px; border-radius: 3px; font-size: 11px; font-weight: bold; color: #a78bfa;">${a.views}</span>
+                <span style="background: #1f2937; padding: 2px 4px; border-radius: 3px; font-size: 9px; color: #888;">${a.unique_viewers}👤</span>
+              </div>
+            </div>`;
+          }).join('')}
         </div>
-        <div style="display: flex; gap: 4px; flex-shrink: 0;">
-          <div style="background: #2d2250; padding: 3px 8px; border-radius: 4px; text-align: center;">
-            <span style="font-size: 14px; font-weight: bold; color: #a78bfa;">${a.views}</span>
-          </div>
-          <div style="background: #1f2937; padding: 3px 6px; border-radius: 4px; text-align: center;">
-            <span style="font-size: 11px; color: #888;">${a.unique_viewers}👤</span>
-          </div>
+      </div>
+      <!-- Galleries Column -->
+      <div>
+        <h4 style="margin: 0 0 8px 0; font-size: 12px; color: #c4b5fd;">📁 Galleries</h4>
+        <div id="art-galleries-list" style="max-height: 300px; overflow-y: auto; padding-right: 4px;">
+          ${topArtViews.filter(a => a.type === 'gallery').map(a => {
+            const label = a.target_id.length > 30 ? '...' + a.target_id.slice(-30) : a.target_id;
+            return `
+            <div class="art-item" data-type="gallery" style="display: flex; align-items: center; padding: 5px 0; border-bottom: 1px solid #333; gap: 6px;">
+              <span style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 3px; font-size: 14px;">📁</span>
+              <div style="flex: 1; min-width: 0;">
+                <span style="color: #c4b5fd; font-size: 10px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${a.target_id}">${label}</span>
+                <span style="color: #666; font-size: 9px;">Gallery</span>
+              </div>
+              <div style="display: flex; gap: 3px; flex-shrink: 0;">
+                <span style="background: #2d2250; padding: 2px 5px; border-radius: 3px; font-size: 11px; font-weight: bold; color: #c4b5fd;">${a.views}</span>
+                <span style="background: #1f2937; padding: 2px 4px; border-radius: 3px; font-size: 9px; color: #888;">${a.unique_viewers}👤</span>
+              </div>
+            </div>`;
+          }).join('') || '<p style="color: #555; font-size: 11px;">No gallery views yet</p>'}
         </div>
-      </div>`;
-    }).join('')}
+      </div>
+    </div>
     <p style="font-size: 10px; color: #555; margin-top: 8px;">Views | Unique viewers. Server-side tracking, no JS required.</p>
   </div>
   ` : ''}
@@ -2265,6 +2298,33 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   <p style="margin-top: 30px; color: #666; font-size: 12px;">
     Generated ${new Date().toISOString()} • ${periodLabel}
   </p>
+
+  <script>
+    // Art Views filter state - all on by default
+    const artFilters = { image_page: true, xl_zoom: true, gallery: true, external_image: true };
+    
+    function toggleArtFilter(type) {
+      artFilters[type] = !artFilters[type];
+      
+      // Update button appearance
+      const btn = document.querySelector('.pulse-stat[data-filter="' + type + '"]');
+      if (btn) {
+        btn.classList.toggle('off', !artFilters[type]);
+      }
+      
+      // Filter the art items
+      document.querySelectorAll('.art-item').forEach(item => {
+        const itemType = item.dataset.type;
+        // For legacy 'image' type, map to xl_zoom
+        const filterKey = itemType === 'image' ? 'xl_zoom' : itemType;
+        if (artFilters[filterKey] === false) {
+          item.style.display = 'none';
+        } else {
+          item.style.display = 'flex';
+        }
+      });
+    }
+  </script>
 </body>
 </html>`;
 }
