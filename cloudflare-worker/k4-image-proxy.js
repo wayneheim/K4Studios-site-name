@@ -44,6 +44,38 @@ const ALLOWED_BOTS =
 const BLOCKED_BOTS =
   /(python|curl|scrapy|spider(?!.*google)|httpclient|axios|wget|postman|libwww-perl|powershell|java\/|node-fetch|okhttp)/i;
 
+// --------------------
+// BLOCKED IP RANGES (scrapers, AI harvesters)
+// --------------------
+// Format: [start, end] as numeric IPs or CIDR prefix
+const BLOCKED_IP_PREFIXES = [
+  '45.148.10.',   // NL scraper - systematic image harvester (identified 2026-02-13)
+  '146.59.19.',   // PL datacenter - no referrer bot pattern
+  '135.181.213.', // FI datacenter - no referrer bot pattern
+  '51.81.32.',    // US datacenter - no referrer bot pattern
+  '51.81.210.',   // US datacenter - no referrer bot pattern
+  '51.38.125.',   // DE datacenter - no referrer bot pattern
+  '51.68.143.',   // PL datacenter - no referrer bot pattern
+  '57.129.15.',   // DE datacenter - no referrer bot pattern
+  '57.128.197.',  // PL datacenter - no referrer bot pattern
+];
+
+function isBlockedIP(ip) {
+  if (!ip) return false;
+  return BLOCKED_IP_PREFIXES.some(prefix => ip.startsWith(prefix));
+}
+
+// Datacenter IP ranges that suggest bot behavior when combined with no referrer
+const DATACENTER_PREFIXES = [
+  '45.', '46.', '51.', '57.', '135.', '146.', '149.',
+  '2001:', '2604:', // IPv6 datacenter ranges
+];
+
+function isDatacenterIP(ip) {
+  if (!ip) return false;
+  return DATACENTER_PREFIXES.some(prefix => ip.startsWith(prefix));
+}
+
 const ALWAYS_ALLOWED = [
   "/sitemap.xml",
   "/robots.txt",
@@ -327,6 +359,10 @@ async function logArtView(env, type, targetId, request) {
     const ip = request.headers.get("CF-Connecting-IP") || 
                request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() || 
                'unknown';
+    
+    // Hard block known scrapers - don't even log them
+    if (isBlockedIP(ip)) return;
+    
     const ua = request.headers.get("User-Agent") || '';
     const uaClass = classifyUA(ua);
     
@@ -337,15 +373,22 @@ async function logArtView(env, type, targetId, request) {
     const country = request.cf?.country || null;
     const referrer = request.headers.get("Referer") || null;
     
+    // Bot detection heuristics for "human" UA spoofing scrapers
+    // 1. Datacenter IP + no referrer = likely bot
+    // 2. Netherlands/Finland/Poland datacenters with no referrer = high confidence bot
+    const suspiciousCountries = ['NL', 'FI', 'PL'];
+    const isBot = (isDatacenterIP(ip) && !referrer) || 
+                  (suspiciousCountries.includes(country) && !referrer && isDatacenterIP(ip)) ? 1 : 0;
+    
     // Insert with dedup key (IP hash + target + hour)
     // The UNIQUE constraint on dedup_key handles collisions gracefully
     const hour = new Date().toISOString().slice(0, 13); // YYYY-MM-DDTHH
     const dedupKey = `${ipHash}:${targetId}:${hour}`;
     
     await env.DB.prepare(`
-      INSERT OR IGNORE INTO art_views (type, target_id, ip_hash, ua_class, country, referrer, dedup_key)
-      VALUES (?, ?, ?, ?, ?, ?, ?)
-    `).bind(type, targetId, ipHash, uaClass, country, referrer, dedupKey).run();
+      INSERT OR IGNORE INTO art_views (type, target_id, ip_hash, ua_class, country, referrer, dedup_key, is_bot)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `).bind(type, targetId, ipHash, uaClass, country, referrer, dedupKey, isBot).run();
   } catch (e) {
     // Never let logging break the response
     console.error('Art view logging error:', e);
@@ -1333,7 +1376,10 @@ async function handleAdminAnalytics(request, env) {
     let artViewsByType = [];
     let topArtViews = [];
     try {
-      // Summary by type
+      // Bot filter clause - exclude is_bot = 1
+      const botFilterClause = 'AND (is_bot = 0 OR is_bot IS NULL)';
+      
+      // Summary by type (humans only)
       const artViewsSummaryQuery = `
         SELECT 
           type,
@@ -1341,7 +1387,7 @@ async function handleAdminAnalytics(request, env) {
           COUNT(DISTINCT target_id) as unique_targets,
           COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
-        WHERE ${edgeDateClause}
+        WHERE ${edgeDateClause} ${botFilterClause}
         GROUP BY type
       `;
       const artViewsSummaryResult = await env.DB.prepare(artViewsSummaryQuery).all();
@@ -1357,21 +1403,39 @@ async function handleAdminAnalytics(request, env) {
         if (row.type === 'gallery') artViewsSummary.galleries = row.views;
       }
       
-      // Top viewed art (images and galleries combined)
-      const topArtQuery = `
+      // Top viewed art - separate queries for images and galleries (humans only)
+      const topImagesQuery = `
         SELECT 
           type,
           target_id,
           COUNT(*) as views,
           COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
-        WHERE ${edgeDateClause}
+        WHERE ${edgeDateClause} AND type != 'gallery' ${botFilterClause}
         GROUP BY type, target_id
         ORDER BY views DESC
-        LIMIT 15
+        LIMIT 25
       `;
-      const topArtResult = await env.DB.prepare(topArtQuery).all();
-      topArtViews = topArtResult.results || [];
+      const topGalleriesQuery = `
+        SELECT 
+          type,
+          target_id,
+          COUNT(*) as views,
+          COUNT(DISTINCT ip_hash) as unique_viewers
+        FROM art_views
+        WHERE ${edgeDateClause} AND type = 'gallery' ${botFilterClause}
+        GROUP BY target_id
+        ORDER BY views DESC
+        LIMIT 25
+      `;
+      const [topImagesResult, topGalleriesResult] = await Promise.all([
+        env.DB.prepare(topImagesQuery).all(),
+        env.DB.prepare(topGalleriesQuery).all()
+      ]);
+      topArtViews = {
+        images: topImagesResult.results || [],
+        galleries: topGalleriesResult.results || []
+      };
     } catch (e) {
       console.log('art_views query failed (table may not exist):', e.message);
     }
@@ -1863,40 +1927,42 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <div class="tooltip">L-size images served to external platforms (Google Images, Bing, Pinterest, Facebook, etc.). Off-site discovery where your art is seen but not on k4studios.com.</div>
     </div>
   </div>
-  ${topArtViews && topArtViews.length > 0 ? `
+  ${(topArtViews?.images?.length > 0 || topArtViews?.galleries?.length > 0) ? `
   <div class="section" style="margin-top: 15px;">
     <h3>Top Viewed Art <span style="font-size: 11px; color: #888; font-weight: normal;">(server-side)</span></h3>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
       <!-- Images Column -->
       <div>
-        <h4 style="margin: 0 0 8px 0; font-size: 12px; color: #a78bfa;">🖼️ Images</h4>
+        <h4 style="margin: 0 0 8px 0; font-size: 12px; color: #a78bfa;">🖼️ Top Images <span style="color: #666; font-weight: normal;">(showing ${topArtViews.images?.length || 0})</span></h4>
         <div id="art-images-list" style="max-height: 300px; overflow-y: auto; padding-right: 4px;">
-          ${topArtViews.filter(a => a.type !== 'gallery').map(a => {
+          ${(topArtViews.images || []).map(a => {
             const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
             const icon = a.type === 'xl_zoom' ? '🔍' : a.type === 'external_image' ? '🌐' : a.type === 'image' ? '🔍' : '📖';
             const typeLabel = a.type === 'xl_zoom' ? 'XL Zoom' : a.type === 'external_image' ? 'External' : a.type === 'image_page' ? 'Chapter' : 'XL Zoom';
             const filterType = a.type === 'image' ? 'xl_zoom' : a.type;
             const label = a.target_id.length > 25 ? '...' + a.target_id.slice(-25) : a.target_id;
+            const rowBg = a.type === 'external_image' ? 'rgba(249, 115, 22, 0.25)' : a.type === 'xl_zoom' || a.type === 'image' ? 'rgba(139, 92, 246, 0.2)' : 'rgba(167, 139, 250, 0.12)';
+            const borderColor = a.type === 'external_image' ? '#f97316' : a.type === 'xl_zoom' || a.type === 'image' ? '#8b5cf6' : '#a78bfa';
             return `
-            <div class="art-item" data-type="${filterType}" style="display: flex; align-items: center; padding: 5px 0; border-bottom: 1px solid #333; gap: 6px;">
+            <div class="art-item" data-type="${filterType}" style="display: flex; align-items: center; padding: 5px 6px; border-left: 3px solid ${borderColor}; gap: 6px; background: ${rowBg}; border-radius: 0 4px 4px 0; margin-bottom: 3px;">
               ${imageId ? `<img src="https://k4studios.com/img/${imageId}/s" alt="" style="width: 32px; height: 32px; object-fit: cover; border-radius: 3px; background: #333; flex-shrink: 0;">` : `<span style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 3px; font-size: 14px;">${icon}</span>`}
               <div style="flex: 1; min-width: 0;">
                 <span style="color: #a78bfa; font-size: 10px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${a.target_id}">${label}</span>
-                <span style="color: ${a.type === 'external_image' ? '#f97316' : '#666'}; font-size: 9px;">${typeLabel}</span>
+                <span style="color: ${a.type === 'external_image' ? '#fb923c' : '#888'}; font-size: 9px;">${typeLabel}</span>
               </div>
               <div style="display: flex; gap: 3px; flex-shrink: 0;">
                 <span style="background: #2d2250; padding: 2px 5px; border-radius: 3px; font-size: 11px; font-weight: bold; color: #a78bfa;">${a.views}</span>
                 <span style="background: #1f2937; padding: 2px 4px; border-radius: 3px; font-size: 9px; color: #888;">${a.unique_viewers}👤</span>
               </div>
             </div>`;
-          }).join('')}
+          }).join('') || '<p style="color: #555; font-size: 11px;">No image views yet</p>'}
         </div>
       </div>
       <!-- Galleries Column -->
       <div>
-        <h4 style="margin: 0 0 8px 0; font-size: 12px; color: #c4b5fd;">📁 Galleries</h4>
+        <h4 style="margin: 0 0 8px 0; font-size: 12px; color: #c4b5fd;">📁 Top Galleries <span style="color: #666; font-weight: normal;">(showing ${topArtViews.galleries?.length || 0})</span></h4>
         <div id="art-galleries-list" style="max-height: 300px; overflow-y: auto; padding-right: 4px;">
-          ${topArtViews.filter(a => a.type === 'gallery').map(a => {
+          ${(topArtViews.galleries || []).map(a => {
             const label = a.target_id.length > 30 ? '...' + a.target_id.slice(-30) : a.target_id;
             return `
             <div class="art-item" data-type="gallery" style="display: flex; align-items: center; padding: 5px 0; border-bottom: 1px solid #333; gap: 6px;">
@@ -1935,35 +2001,21 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       }
     </div>
 
-    <div class="section tall">
-      <div class="section-header" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-        <h3 style="margin: 0;">🔥 Top 10 Images</h3>
-        <div style="display: flex; gap: 12px; font-size: 11px; margin-left: auto;">
-          <span style="color: #4a9eff;"><strong>${uniqueImagesViewed}</strong> unique</span>
-          <span style="color: #888;">•</span>
-          <span style="color: #10b981;"><strong>${totalImageSessions}</strong> sessions</span>
-          <span style="color: #888;">•</span>
-          <span style="color: #f59e0b;"><strong>${totalImageViews}</strong> views</span>
-        </div>
+    <div class="section tall bar-orange">
+      <div class="section-header">
+        <h3>Referrers</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Traffic sources normalized from HTTP referer. "direct" = typed URL or bookmark. "internal" = navigation within site. "google/bing" = search engines.</div></span>
       </div>
-      ${images.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        images.map(i => {
-          const imageIdMatch = i.page_path.match(/(i-[a-zA-Z0-9-]+)\/?$/);
-          const imageId = imageIdMatch ? imageIdMatch[1] : null;
-          const pathParts = i.page_path.split('/').filter(Boolean);
-          const shortPath = pathParts.slice(-3).join('/');
-          return `
-          <div style="display: flex; align-items: center; padding: 8px 0; border-bottom: 1px solid #333; gap: 10px;">
-            ${imageId ? `<a href="https://www.k4studios.com${i.page_path}" target="_blank"><img src="https://k4studios.com/img/${imageId}/s" alt="" style="width: 48px; height: 48px; object-fit: cover; border-radius: 4px; background: #333; flex-shrink: 0;"></a>` : ''}
-            <div style="flex: 1; min-width: 0;">
-              <a href="https://www.k4studios.com${i.page_path}" target="_blank" style="color: #4a9eff; text-decoration: none; font-size: 11px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${i.page_path}">${shortPath}</a>
+      ${referrers.length === 0 ? '<p style="color:#666">No data yet</p>' : 
+        referrers.map(r => `
+          <div class="bar-row">
+            <span class="bar-label">${r.referrer}</span>
+            <div class="bar-container">
+              <div class="bar" style="width: ${(r.sessions / maxRefSessions * 100).toFixed(1)}%"></div>
             </div>
-            <div style="display: flex; gap: 6px; flex-shrink: 0;">
-              ${i.zooms > 0 ? `<div style="background: #1a3a2a; padding: 4px 8px; border-radius: 4px; text-align: center;"><span style="font-size: 14px; font-weight: bold; color: #10b981;">🔍${i.zooms}</span></div>` : ''}
-              <div style="background: #1a2a3a; padding: 4px 10px; border-radius: 4px; text-align: center;"><span style="font-size: 16px; font-weight: bold; color: #4a9eff;">${i.sessions}</span></div>
-            </div>
+            <span class="bar-value">${r.sessions}</span>
           </div>
-        `}).join('')
+        `).join('')
       }
     </div>
 
@@ -2113,24 +2165,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
         }).join('')}
         ${galleries.length === 0 ? '<tr><td colspan="4">No data yet</td></tr>' : ''}
       </table>
-    </div>
-
-    <div class="section bar-orange">
-      <div class="section-header">
-        <h3>Referrers</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Traffic sources normalized from HTTP referer. "direct" = typed URL or bookmark. "internal" = navigation within site. "google/bing" = search engines.</div></span>
-      </div>
-      ${referrers.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        referrers.map(r => `
-          <div class="bar-row">
-            <span class="bar-label">${r.referrer}</span>
-            <div class="bar-container">
-              <div class="bar" style="width: ${(r.sessions / maxRefSessions * 100).toFixed(1)}%"></div>
-            </div>
-            <span class="bar-value">${r.sessions}</span>
-          </div>
-        `).join('')
-      }
     </div>
 
     <div class="section">
