@@ -1,4 +1,4 @@
-/**
+﻿/**
  * K4 Studios Image Proxy + Gateway + Image Page Policy Worker
  *
  * NOTE:
@@ -194,7 +194,7 @@ const TRANSPARENT_PIXEL_GIF = new Uint8Array([
   0x3b // GIF trailer
 ]);
 
-async function handleImageRequest(request, ctx) {
+async function handleImageRequest(request, ctx, env) {
   const url = new URL(request.url);
   const route = parseImageRoute(url.pathname);
 
@@ -226,6 +226,17 @@ async function handleImageRequest(request, ctx) {
         status: 404,
         headers: { "Cache-Control": "no-store" }
       });
+    }
+
+    // Log art views by size:
+    // XL = on-site zoom/slideshow (internal)
+    // L = external embeds (Google Images, Bing, Pinterest, FB, etc.)
+    if (env?.DB) {
+      if (route.size === 'xl') {
+        ctx.waitUntil(logArtView(env, 'xl_zoom', route.imageId, request));
+      } else if (route.size === 'l') {
+        ctx.waitUntil(logArtView(env, 'external_image', route.imageId, request));
+      }
     }
 
     return proxyImage(smugMugUrl, request);
@@ -276,6 +287,79 @@ async function logEdgeEvent(env, eventType, path, imageId, isBot, request) {
     // Never let logging break the response
     console.error('Edge event logging error:', e);
   }
+}
+
+// --------------------
+// ART VIEWS TRACKING (Layer B)
+// --------------------
+// Tracks actual art being viewed - server-side, no JS required
+// Types: 'image' (proxy), 'image_page' (/Galleries/*/i-*), 'gallery' (/Galleries/*)
+
+/**
+ * Hash IP for privacy - simple but effective
+ */
+function hashIP(ip) {
+  if (!ip) return 'unknown';
+  // Simple hash: take first 3 octets + day for daily uniqueness
+  const parts = ip.split('.');
+  if (parts.length < 3) return ip.slice(0, 8);
+  return `${parts[0]}.${parts[1]}.${parts[2]}.x`;
+}
+
+/**
+ * Classify UA as human or unknown (not trying to detect all bots here)
+ */
+function classifyUA(ua) {
+  if (!ua) return 'unknown';
+  const lower = ua.toLowerCase();
+  // Only mark as 'bot' if obviously a bot
+  if (BLOCKED_BOTS.test(lower)) return 'bot';
+  if (ALLOWED_BOTS.test(lower)) return 'bot';
+  return 'human';
+}
+
+/**
+ * Log an art view - fires async, never blocks response
+ * Deduplication: one view per IP per target per hour
+ */
+async function logArtView(env, type, targetId, request) {
+  try {
+    const ip = request.headers.get("CF-Connecting-IP") || 
+               request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() || 
+               'unknown';
+    const ua = request.headers.get("User-Agent") || '';
+    const uaClass = classifyUA(ua);
+    
+    // Skip obvious bots for this layer - they're counted in Cloudflare
+    if (uaClass === 'bot') return;
+    
+    const ipHash = hashIP(ip);
+    const country = request.cf?.country || null;
+    const referrer = request.headers.get("Referer") || null;
+    
+    // Insert with dedup key (IP hash + target + hour)
+    // The UNIQUE constraint on dedup_key handles collisions gracefully
+    const hour = new Date().toISOString().slice(0, 13); // YYYY-MM-DDTHH
+    const dedupKey = `${ipHash}:${targetId}:${hour}`;
+    
+    await env.DB.prepare(`
+      INSERT OR IGNORE INTO art_views (type, target_id, ip_hash, ua_class, country, referrer, dedup_key)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+    `).bind(type, targetId, ipHash, uaClass, country, referrer, dedupKey).run();
+  } catch (e) {
+    // Never let logging break the response
+    console.error('Art view logging error:', e);
+  }
+}
+
+/**
+ * Extract gallery path from a URL path
+ * e.g., /Galleries/Painterly/Western/Color -> Painterly/Western/Color
+ */
+function extractGallerySlug(pathname) {
+  const match = pathname.match(/^\/(Galleries|Other)\/(.+?)\/?$/);
+  if (!match) return pathname;
+  return match[2];
 }
 
 /**
@@ -1244,6 +1328,54 @@ async function handleAdminAnalytics(request, env) {
       console.log('edge_events summary failed:', e.message);
     }
 
+    // Query 17: Art Views (Layer B - server-side art attention tracking)
+    let artViewsSummary = { xl_zooms: 0, external_images: 0, image_pages: 0, galleries: 0, total: 0 };
+    let artViewsByType = [];
+    let topArtViews = [];
+    try {
+      // Summary by type
+      const artViewsSummaryQuery = `
+        SELECT 
+          type,
+          COUNT(*) as views,
+          COUNT(DISTINCT target_id) as unique_targets,
+          COUNT(DISTINCT ip_hash) as unique_viewers
+        FROM art_views
+        WHERE ${edgeDateClause}
+        GROUP BY type
+      `;
+      const artViewsSummaryResult = await env.DB.prepare(artViewsSummaryQuery).all();
+      artViewsByType = artViewsSummaryResult.results || [];
+      
+      // Calculate totals
+      for (const row of artViewsByType) {
+        artViewsSummary.total += row.views;
+        if (row.type === 'xl_zoom') artViewsSummary.xl_zooms = row.views;
+        if (row.type === 'external_image') artViewsSummary.external_images = row.views;
+        if (row.type === 'image') artViewsSummary.xl_zooms += row.views; // Legacy 'image' type → treat as xl_zoom
+        if (row.type === 'image_page') artViewsSummary.image_pages = row.views;
+        if (row.type === 'gallery') artViewsSummary.galleries = row.views;
+      }
+      
+      // Top viewed art (images and galleries combined)
+      const topArtQuery = `
+        SELECT 
+          type,
+          target_id,
+          COUNT(*) as views,
+          COUNT(DISTINCT ip_hash) as unique_viewers
+        FROM art_views
+        WHERE ${edgeDateClause}
+        GROUP BY type, target_id
+        ORDER BY views DESC
+        LIMIT 15
+      `;
+      const topArtResult = await env.DB.prepare(topArtQuery).all();
+      topArtViews = topArtResult.results || [];
+    } catch (e) {
+      console.log('art_views query failed (table may not exist):', e.message);
+    }
+
     // Render HTML
     const html = renderDashboard({
       days,
@@ -1285,7 +1417,10 @@ async function handleAdminAnalytics(request, env) {
       bounceRate,
       avgDurationFormatted,
       peakHours,
-      deviceEngagement
+      deviceEngagement,
+      artViewsSummary,
+      artViewsByType,
+      topArtViews
     });
 
     return new Response(html, {
@@ -1364,7 +1499,7 @@ async function handleExportCSV(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, bounceRate, avgDurationFormatted, peakHours, deviceEngagement }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews }) {
   const s = summary || {};
   
   // Helper to format event names nicely
@@ -1541,10 +1676,10 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   ${trend.length > 1 ? `
   <div class="trend-chart">
     <h3>
-      <span id="chart-title">Visitors per Day</span>
+      <span id="chart-title">Engaged Sessions per Day</span>
       <span style="float: right; font-size: 12px; font-weight: normal;">
-        <a href="#" id="toggle-visitors" style="color: #10b981; text-decoration: underline;">Visitors</a> |
-        <a href="#" id="toggle-sessions" style="color: #888; text-decoration: none;">Sessions</a>
+        <a href="#" id="toggle-sessions" style="color: #4a9eff; text-decoration: underline;">Sessions</a> |
+        <a href="#" id="toggle-visitors" style="color: #888; text-decoration: none;">Unique IPs</a>
       </span>
     </h3>
     <div class="trend-bars" id="trend-chart-bars">
@@ -1576,9 +1711,9 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
           const val = parseInt(bar.dataset.visitors);
           bar.style.height = Math.max((val / maxVal * 100), 2) + '%';
           bar.querySelector('.trend-bar-value').textContent = val;
-          bar.title = bar.dataset.day + ': ' + val + ' visitors';
+          bar.title = bar.dataset.day + ': ' + val + ' unique IPs';
         });
-        chartTitle.textContent = 'Visitors per Day';
+        chartTitle.textContent = 'Unique IPs per Day';
         visitorsLink.style.color = '#10b981';
         visitorsLink.style.textDecoration = 'underline';
         sessionsLink.style.color = '#888';
@@ -1591,9 +1726,9 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
           const val = parseInt(bar.dataset.sessions);
           bar.style.height = Math.max((val / maxVal * 100), 2) + '%';
           bar.querySelector('.trend-bar-value').textContent = val;
-          bar.title = bar.dataset.day + ': ' + val + ' sessions';
+          bar.title = bar.dataset.day + ': ' + val + ' engaged sessions';
         });
-        chartTitle.textContent = 'Sessions per Day';
+        chartTitle.textContent = 'Engaged Sessions per Day';
         sessionsLink.style.color = '#4a9eff';
         sessionsLink.style.textDecoration = 'underline';
         visitorsLink.style.color = '#888';
@@ -1606,7 +1741,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   </script>
   ` : trend.length === 1 ? `
   <div class="trend-chart">
-    <h3>Visitors per Day</h3>
+    <h3>Engaged Sessions</h3>
     <div class="trend-bars" style="justify-content: center;">
       <div class="trend-bar" style="height: 100%; width: 80px;" title="${trend[0].day}: ${trend[0].visitors} visitors, ${trend[0].sessions} sessions">
         <span class="trend-bar-value">${trend[0].visitors}</span>
@@ -1620,8 +1755,8 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   <div class="pulse">
     <div class="pulse-stat">
       <span class="value">${s.unique_visitors || 0}</span>
-      <span class="label">Visitors <span class="info-icon">i</span></span>
-      <div class="tooltip">Unique IP addresses. Note: Mobile carriers rotate IPs, so this undercounts repeat mobile visitors.</div>
+      <span class="label">Unique IPs <span class="info-icon">i</span></span>
+      <div class="tooltip">Unique IP addresses that engaged with JS. Note: Mobile carriers rotate IPs. This is NOT total visitors — see Art Views for attention metrics.</div>
     </div>
     <div class="pulse-stat">
       <span class="value"><span style="color:#10b981">${newVisitors}</span>/<span style="color:#f59e0b">${returningVisitors}</span></span>
@@ -1630,8 +1765,8 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
     <div class="pulse-stat">
       <span class="value">${s.sessions || 0}</span>
-      <span class="label">Sessions <span class="info-icon">i</span></span>
-      <div class="tooltip">Browser sessions (new tab/window). One visitor can have multiple sessions if they return later.</div>
+      <span class="label">Engaged <span class="info-icon">i</span></span>
+      <div class="tooltip">Engaged sessions: browser sessions where JS loaded and events fired. This is Layer C (intent) — the innermost funnel.</div>
     </div>
     <div class="pulse-stat">
       <span class="value">${s.avg_events_per_session || 0}</span>
@@ -1689,6 +1824,66 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <div class="tooltip">Estimated bot traffic (${botSessions}/${totalSessions} sessions). Detected by: AWS/datacenter IPs, Ashburn city, unknown device. Not filtered from other stats.</div>
     </div>` : ''}
   </div>
+
+  <!-- Art Views Section (Layer B - Server-Side Attention Tracking) -->
+  <h2 style="margin-top: 30px;">🎨 Art Views <span style="font-size: 12px; color: #888; font-weight: normal;">(Server-Side)</span></h2>
+  <p style="color: #888; margin: -10px 0 15px 0; font-size: 12px;">People who actually looked at your art. No JS required — tracked at the server level.</p>
+  <div class="pulse">
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
+      <span class="value" style="color: #fff;">${artViewsSummary?.total || 0}</span>
+      <span class="label" style="color: #ddd6fe;">Total Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
+      <div class="tooltip">Total art views (on-site + external). Chapter Views + XL Zooms + Galleries + External.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);">
+      <span class="value" style="color: #fff;">📖 ${artViewsSummary?.image_pages || 0}</span>
+      <span class="label" style="color: #ede9fe;">Chapter Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ede9fe;">i</span></span>
+      <div class="tooltip">On-site image detail page loads (/Galleries/*/i-*). Someone on YOUR site viewing an image chapter. This is the real "looked at art" metric.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+      <span class="value" style="color: #fff;">🔍 ${artViewsSummary?.xl_zooms || 0}</span>
+      <span class="label" style="color: #ddd6fe;">XL Zooms <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
+      <div class="tooltip">XL images served (/img/*/xl). On-site zoom lightbox or slideshow views. High-intent engagement.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%);">
+      <span class="value" style="color: #1f2937;">📁 ${artViewsSummary?.galleries || 0}</span>
+      <span class="label" style="color: #374151;">Galleries <span class="info-icon" style="background: rgba(0,0,0,0.1); color: #374151;">i</span></span>
+      <div class="tooltip">Gallery page loads. Someone browsing a collection on your site.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
+      <span class="value" style="color: #fff;">🌐 ${artViewsSummary?.external_images || 0}</span>
+      <span class="label" style="color: #fed7aa;">External <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fed7aa;">i</span></span>
+      <div class="tooltip">L-size images served to external platforms (Google Images, Bing, Pinterest, Facebook, etc.). Off-site discovery where your art is seen but not on k4studios.com.</div>
+    </div>
+  </div>
+  ${topArtViews && topArtViews.length > 0 ? `
+  <div class="section" style="margin-top: 15px;">
+    <h3>Top Viewed Art <span style="font-size: 11px; color: #888; font-weight: normal;">(server-side)</span></h3>
+    ${topArtViews.map(a => {
+      const isImage = a.type === 'xl_zoom' || a.type === 'external_image' || a.type === 'image' || a.type === 'image_page';
+      const imageId = isImage && a.target_id.startsWith('i-') ? a.target_id : null;
+      const icon = a.type === 'xl_zoom' ? '🔍' : a.type === 'external_image' ? '🌐' : a.type === 'image' ? '🔍' : a.type === 'image_page' ? '📖' : '📁';
+      const typeLabel = a.type === 'xl_zoom' ? 'XL Zoom' : a.type === 'external_image' ? 'External' : a.type === 'image_page' ? 'Chapter View' : a.type === 'image' ? 'XL Zoom' : 'Gallery';
+      const label = a.target_id.length > 35 ? '...' + a.target_id.slice(-35) : a.target_id;
+      return `
+      <div style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
+        ${imageId ? `<img src="https://k4studios.com/img/${imageId}/s" alt="" style="width: 40px; height: 40px; object-fit: cover; border-radius: 4px; background: #333; flex-shrink: 0;">` : `<span style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 18px;">${icon}</span>`}
+        <div style="flex: 1; min-width: 0;">
+          <span style="color: #a78bfa; font-size: 11px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${a.target_id}">${label}</span>
+          <span style="color: ${a.type === 'external_image' ? '#f97316' : '#666'}; font-size: 10px;">${typeLabel}</span>
+        </div>
+        <div style="display: flex; gap: 4px; flex-shrink: 0;">
+          <div style="background: #2d2250; padding: 3px 8px; border-radius: 4px; text-align: center;">
+            <span style="font-size: 14px; font-weight: bold; color: #a78bfa;">${a.views}</span>
+          </div>
+          <div style="background: #1f2937; padding: 3px 6px; border-radius: 4px; text-align: center;">
+            <span style="font-size: 11px; color: #888;">${a.unique_viewers}👤</span>
+          </div>
+        </div>
+      </div>`;
+    }).join('')}
+    <p style="font-size: 10px; color: #555; margin-top: 8px;">Views | Unique viewers. Server-side tracking, no JS required.</p>
+  </div>
+  ` : ''}
 
   <!-- Tall sections row -->
   <div class="grid-tall">
@@ -2117,19 +2312,38 @@ export default {
       return handleExportCSV(request, env);
     }
 
-    // 1) Image detail pages: apply policy first
+    // 1) Image detail pages: apply policy first, then log art view
     if (isImagePageRoute(url.pathname)) {
       const policyResponse = await handleImagePagePolicy(request, url.pathname, ctx, env);
       if (policyResponse) return policyResponse;
+      
+      // Log image page view (someone viewing an image detail page)
+      const imageId = extractImageId(url.pathname);
+      if (imageId && env?.DB) {
+        ctx.waitUntil(logArtView(env, 'image_page', imageId, request));
+      }
+      
       return fetch(request);
     }
 
-    // 2) /img proxy routes
-    if (url.pathname.startsWith("/img/")) {
-      return handleImageRequest(request, ctx);
+    // 2) Gallery pages (not image pages): log gallery view
+    if ((url.pathname.startsWith("/Galleries/") || url.pathname.startsWith("/Other/")) && 
+        !url.pathname.includes("/i-") &&
+        !url.pathname.endsWith(".json") &&
+        !url.pathname.endsWith(".xml")) {
+      // Log gallery page view
+      const gallerySlug = extractGallerySlug(url.pathname);
+      if (gallerySlug && env?.DB) {
+        ctx.waitUntil(logArtView(env, 'gallery', gallerySlug, request));
+      }
     }
 
-    // 3) Everything else: gateway firewall
+    // 3) /img proxy routes
+    if (url.pathname.startsWith("/img/")) {
+      return handleImageRequest(request, ctx, env);
+    }
+
+    // 4) Everything else: gateway firewall
     try {
       return await handleGatewayRequest(request, env);
     } catch (err) {
