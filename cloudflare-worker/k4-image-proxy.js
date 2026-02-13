@@ -2081,7 +2081,17 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    // 0) Analytics tracking endpoint
+    // 0) Bot short-circuit for /track — prevent Netlify function burn
+    // Verified bots (Googlebot, Applebot, Bingbot, etc.) get 204 No Content
+    // Humans still hit the function. Bots never do.
+    if (
+      url.pathname.startsWith('/track') &&
+      request.cf?.botManagement?.verifiedBot
+    ) {
+      return new Response(null, { status: 204 });
+    }
+
+    // 0a) Analytics tracking endpoint (humans only reach here)
     if (url.pathname === "/track") {
       if (request.method === "OPTIONS") {
         return handleTrackOptions();
