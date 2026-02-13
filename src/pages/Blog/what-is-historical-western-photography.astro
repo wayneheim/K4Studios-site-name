@@ -1,0 +1,412 @@
+---
+/**
+ * What Is Historical Western Photography? — Day 3 SEO Reclassification
+ * 
+ * Purpose: DEFINE the term "historical western photography" to resolve ambiguity.
+ * This is not about ranking a blog post — it's about teaching Google the proper
+ * interpretation of the term so the flagship hub (/Historical-Western-Art) inherits clarity.
+ * 
+ * Key clarifications:
+ * - "Historical" refers to subject/theme, NOT when the work was created
+ * - Contemporary fine art depicting historical Western life
+ * - Contrast against modern ranch photography
+ * - Contrast against documentary Western work
+ * - Links prominently to /Historical-Western-Art
+ */
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/what-is-historical-western-photography";
+const canonicalUrl = "https://www.k4studios.com/Blog/what-is-historical-western-photography";
+
+// Proxy URL helper
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
+// Header image - cowboy that represents historical narrative
+const headerImage = {
+  id: "i-7GcQw6R",
+  src: getProxySrc("i-7GcQw6R", "l"),
+  alt: "Historical Western photography: contemporary fine art depicting frontier psychology"
+};
+
+// Demo images showing range of historical Western work
+const image1 = {
+  id: "i-5fm7Hhr",
+  src: getProxySrc("i-5fm7Hhr", "l"),
+  alt: "Cowboy portrait exploring the psychological tension of frontier life"
+};
+const image2 = {
+  id: "i-66qXms3",
+  src: getProxySrc("i-66qXms3", "l"),
+  alt: "Historical Western photography using painterly composition and period authenticity"
+};
+const image3 = {
+  id: "i-c5K798H",
+  src: getProxySrc("i-c5K798H", "l"),
+  alt: "Narrative Western art depicting the lived experience of the American frontier"
+};
+const image4 = {
+  id: "i-KVxkXrV",
+  src: getProxySrc("i-KVxkXrV", "l"),
+  alt: "Contemporary fine art photography with historical Western themes"
+};
+
+const pageTitle = "What Is Historical Western Photography? Definition and Distinction";
+const pageDescription = "Historical Western photography does not mean antique photographs. It refers to contemporary fine art depicting historical Western life through narrative construction and painterly composition.";
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "What Is Historical Western Photography? Definition and Distinction",
+    description: pageDescription,
+    url: canonicalUrl,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-02-13",
+    articleSection: "Fine Art",
+    keywords: [
+      "historical western photography",
+      "historical western art",
+      "western fine art photography",
+      "frontier photography",
+      "narrative western photography",
+      "historically themed western art"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+// OG/Twitter meta
+const meta = {
+  description: pageDescription,
+  keywords: "historical western photography, historical western art, western fine art photography, frontier photography, narrative western photography",
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterCard: "summary_large_image"
+};
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Historical Western Photography`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <!-- Header Image Banner -->
+    <section style="width:100%; overflow:hidden; margin-bottom:0;">
+      <a href="/Historical-Western-Art">
+        <div style="width:100%; height:340px; overflow:hidden; position:relative;">
+          <img 
+            src={headerImage.src} 
+            alt={headerImage.alt}
+            style="width:100%; height:100%; object-fit:cover; object-position:center 40%;"
+          />
+        </div>
+      </a>
+    </section>
+
+    <!-- Article Header -->
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.25rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        What Is Historical Western Photography?
+      </h1>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        Definition, distinction, and why the term matters
+      </p>
+    </section>
+
+    <!-- Article Content -->
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+
+        <!-- SECTION 1: THE DEFINITION (Critical clarification) -->
+        <p><strong>Historical Western photography does not mean antique photographs or period artwork created in the 19th century.</strong></p>
+
+        <p>It refers to <strong>contemporary fine art that depicts historical Western life</strong> through narrative construction, researched authenticity, and painterly visual language.</p>
+
+        <p>This distinction matters. The word <em>historical</em> describes the subject and theme — not when the work was made.</p>
+
+        <p>In the same way that "mythological art" does not mean ancient artifacts, and "biblical art" does not mean medieval originals, <a href="/Historical-Western-Art" style="color:#8b5a2b; text-decoration:underline;">historical Western art</a> refers to work that <em>engages</em> historical subject matter — regardless of when it was created.</p>
+
+        <p>Wayne Heim creates historically themed Western fine art photography — not modern ranch imagery — using narrative, painterly composition to explore the psychological lives of the American frontier.</p>
+
+        <p><em>This work is not contemporary ranch or modern Western lifestyle photography.</em></p>
+
+        <!-- SECTION 2: What Historical Western Photography Is -->
+        <div class="section-heading-with-line">
+          <h2>What Historical Western Photography Is</h2>
+        </div>
+
+        <p>Historical Western photography depicts the American frontier as it was lived — not as it exists today.</p>
+
+        <p>The subjects are cowboys, frontier figures, Native Americans, and the landscapes they inhabited. But unlike documentary work or modern ranch photography, the intent is not to capture contemporary life. The intent is to reconstruct and interpret a historical world through the lens of fine art.</p>
+
+        <p>This involves:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;"><strong>Researched authenticity</strong> — period-accurate clothing, equipment, and settings</li>
+          <li style="margin-bottom:0.5rem;"><strong>Narrative construction</strong> — scenes built to tell stories, not document events</li>
+          <li style="margin-bottom:0.5rem;"><strong>Psychological depth</strong> — exploring the inner lives of frontier figures</li>
+          <li style="margin-bottom:0.5rem;"><strong>Painterly composition</strong> — visual language drawn from fine art traditions</li>
+        </ul>
+
+        <p>The result is contemporary artwork that transports viewers to another era — not through nostalgia or reenactment spectacle, but through authored artistic vision.</p>
+
+        <!-- SECTION 3: What It Is NOT -->
+        <div class="section-heading-with-line">
+          <h2>What Historical Western Photography Is Not</h2>
+        </div>
+
+        <p>Clarity requires contrast. Historical Western photography is defined as much by what it excludes as what it includes.</p>
+
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:1.5rem; margin-bottom:0.5rem;">It is not modern ranch photography</h3>
+
+        <p>Modern ranch photography documents contemporary cowboy life — working cattle operations, rodeos, and present-day Western lifestyle. This work has its own value, but it depicts the West as it exists now, not the West as it was.</p>
+
+        <p>Historical Western photography looks backward. It reconstructs the 19th-century frontier through deliberate artistic construction.</p>
+
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:1.5rem; margin-bottom:0.5rem;">It is not documentary Western work</h3>
+
+        <p>Documentary photography captures real moments without intervention. The photographer observes and records.</p>
+
+        <p>Historical Western photography is the opposite: constructed, directed, and authored. Every element — light, posture, expression, environment — is shaped to serve the narrative.</p>
+
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:1.5rem; margin-bottom:0.5rem;">It is not antique photography</h3>
+
+        <p>Historical Western photography is not old. It is contemporary fine art made today, using modern techniques and archival printing standards.</p>
+
+        <p>The "historical" refers to what is depicted — not when it was created.</p>
+
+        <!-- IMAGE BLOCK -->
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Examples of Historical Western Photography</h3>
+        <div class="example-images">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+              <img 
+                src={image1.src} 
+                alt={image1.alt}
+                loading="lazy"
+              />
+            </a>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image2.id}`}>
+              <img 
+                src={image2.src} 
+                alt={image2.alt}
+                loading="lazy"
+              />
+            </a>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image3.id}`}>
+              <img 
+                src={image3.src} 
+                alt={image3.alt}
+                loading="lazy"
+              />
+            </a>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image4.id}`}>
+              <img 
+                src={image4.src} 
+                alt={image4.alt}
+                loading="lazy"
+              />
+            </a>
+          </figure>
+        </div>
+        <p style="font-size:0.9rem; color:#666; text-align:center; margin-top:-0.5rem;">
+          Contemporary fine art photography depicting historical Western life
+        </p>
+
+        <!-- SECTION 4: Facing History -->
+        <div class="section-heading-with-line">
+          <h2>Facing History: Historical Western Art in Practice</h2>
+        </div>
+
+        <p>Collections like <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Gallery" style="color:#8b5a2b; text-decoration:underline;">Facing History</a> explore historical Western art through lived psychology rather than reenactment or spectacle.</p>
+
+        <p>These are not costumes photographed. They are character studies — visual essays on the interior lives of frontier figures.</p>
+
+        <p>The cowboy in these images is not performing for the camera. He is existing within a narrative world constructed by the artist. The viewer is invited not to observe a scene, but to enter a psychological space.</p>
+
+        <p>This is what separates historical Western photography from both modern ranch documentation and nostalgic reenactment imagery. The goal is not accuracy alone, but <em>presence</em> — the feeling of encountering someone who lived in that era, rendered through contemporary fine art craft.</p>
+
+        <!-- SECTION 5: Why the Distinction Matters -->
+        <div class="section-heading-with-line">
+          <h2>Why the Distinction Matters</h2>
+        </div>
+
+        <p>The Western photography genre is broad. It includes landscape tourism, rodeo documentation, ranch lifestyle content, and commercial cowboy imagery.</p>
+
+        <p>Historical Western photography occupies a specific position within this landscape: <strong>fine art that uses the camera to explore the American frontier as a historical and psychological subject</strong>.</p>
+
+        <p>This is not a hierarchy claim. Modern ranch photography serves different purposes and audiences. Documentary work has its own integrity.</p>
+
+        <p>But collectors, curators, and viewers seeking art that engages the historical West — not the contemporary West — need language to find it.</p>
+
+        <p><a href="/Historical-Western-Art" style="color:#8b5a2b; text-decoration:underline; font-weight:600;">Historical Western Art</a> is that category.</p>
+
+        <p>And historical Western photography is its photographic expression.</p>
+
+        <!-- CTA Section -->
+        <div style="background:#f9f7f4; padding:2rem; border-radius:12px; margin-top:2.5rem; text-align:center;">
+          <h3 style="font-size:1.25rem; font-weight:700; margin-bottom:0.75rem;">Explore Historical Western Art</h3>
+          <p style="margin-bottom:1.25rem; color:#555;">
+            Discover photography that transports viewers to the American frontier through narrative construction and painterly composition.
+          </p>
+          <a 
+            href="/Historical-Western-Art" 
+            style="display:inline-block; background:#8b5a2b; color:#fff; padding:0.75rem 2rem; border-radius:8px; text-decoration:none; font-weight:600;"
+          >
+            View the Collection
+          </a>
+        </div>
+
+      </article>
+    </section>
+
+    <!-- Western Art Series Navigation -->
+    <WesternDefinitions variant="definition" currentPage={7} />
+
+    <!-- Footer -->
+    <SiteFooter />
+  </main>
+</BaseLayout>
+
+<style>
+  /* Section heading with line */
+  .section-heading-with-line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .section-heading-with-line h2 {
+    margin: 0;
+    padding-right: 1rem;
+    white-space: nowrap;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #2c2c2c;
+  }
+  .section-heading-with-line::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+  }
+  @media (max-width: 640px) {
+    .section-heading-with-line h2 {
+      font-size: 1.15rem;
+    }
+    .section-heading-with-line::after {
+      display: none;
+    }
+  }
+
+  /* Story block typography */
+  .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
+  .story-block h2 { 
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+  }
+  .story-block h3 {
+    color: #444;
+  }
+  .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+  @media (max-width: 640px) {
+    .story-block p, .story-block ul { line-height: 1.6; }
+  }
+  
+  /* 4-across image row */
+  .example-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+    align-items: start;
+  }
+  .example-images figure {
+    margin: 0;
+  }
+  .example-images figure a {
+    display: block;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .example-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  @media (max-width: 900px) {
+    .example-images {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 500px) {
+    .example-images {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      padding: 0.75rem;
+    }
+  }
+
+  /* Mobile overflow protection */
+  @media (max-width: 768px) {
+    main {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+    }
+    .story-section {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+    .section-heading-with-line h2 {
+      white-space: normal !important;
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+    }
+  }
+</style>

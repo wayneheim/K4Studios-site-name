@@ -859,6 +859,91 @@ async function handleAdminAnalytics(request, env) {
     `;
     const devices = await env.DB.prepare(deviceQuery).all();
 
+    // Query 8b: Bounce Rate (sessions with only 1 event)
+    const bounceQuery = `
+      SELECT 
+        COUNT(*) as total_sessions,
+        SUM(CASE WHEN event_count = 1 THEN 1 ELSE 0 END) as bounce_sessions
+      FROM (
+        SELECT session_id, COUNT(*) as event_count
+        FROM events
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+        GROUP BY session_id
+      )
+    `;
+    const bounceResult = await env.DB.prepare(bounceQuery).first();
+    const bounceRate = bounceResult?.total_sessions > 0 
+      ? Math.round(100 * bounceResult.bounce_sessions / bounceResult.total_sessions) 
+      : 0;
+
+    // Query 8c: Session Duration (avg time between first and last event)
+    const durationQuery = `
+      SELECT ROUND(AVG(duration_seconds), 0) as avg_duration
+      FROM (
+        SELECT 
+          session_id,
+          (JULIANDAY(MAX(created_at)) - JULIANDAY(MIN(created_at))) * 86400 as duration_seconds
+        FROM events
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+        GROUP BY session_id
+        HAVING COUNT(*) > 1
+      )
+    `;
+    const durationResult = await env.DB.prepare(durationQuery).first();
+    const avgDurationSecs = durationResult?.avg_duration || 0;
+    const avgDurationFormatted = avgDurationSecs >= 60 
+      ? `${Math.floor(avgDurationSecs / 60)}m ${Math.round(avgDurationSecs % 60)}s`
+      : `${Math.round(avgDurationSecs)}s`;
+
+    // Query 8d: Peak Hours (busiest 2 hours of day, adjusted for EST)
+    const peakHoursQuery = `
+      SELECT 
+        CAST(strftime('%H', created_at, '-5 hours') AS INTEGER) as hour,
+        COUNT(DISTINCT session_id) as sessions
+      FROM events
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+      GROUP BY hour
+      ORDER BY sessions DESC
+      LIMIT 2
+    `;
+    const peakHoursResult = await env.DB.prepare(peakHoursQuery).all();
+    const peakHours = (peakHoursResult.results || []).map(h => {
+      const hour24 = h.hour;
+      const hour12 = hour24 === 0 ? 12 : (hour24 > 12 ? hour24 - 12 : hour24);
+      const ampm = hour24 >= 12 ? 'pm' : 'am';
+      return { hour: `${hour12}${ampm}`, sessions: h.sessions };
+    });
+
+    // Query 8e: Device Engagement (avg depth score by device type)
+    const deviceEngagementQuery = `
+      SELECT 
+        device,
+        COUNT(DISTINCT session_id) as sessions,
+        ROUND(AVG(depth_score), 1) as avg_depth
+      FROM (
+        SELECT 
+          session_id,
+          MAX(device) as device,
+          SUM(
+            CASE event
+              WHEN 'zoom_open' THEN 4
+              WHEN 'collector_notes_open' THEN 5
+              WHEN 'theme_click' THEN 3
+              WHEN 'nav_next' THEN 2
+              WHEN 'nav_prev' THEN 2
+              ELSE 1
+            END
+          ) as depth_score
+        FROM events
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+        GROUP BY session_id
+      )
+      GROUP BY device
+      ORDER BY sessions DESC
+    `;
+    const deviceEngagementResult = await env.DB.prepare(deviceEngagementQuery).all();
+    const deviceEngagement = deviceEngagementResult.results || [];
+
     // Query 9: Top pages (exclude image pages and legacy SmugMug paths)
     const pagesQuery = `
       SELECT page_path, COUNT(DISTINCT session_id) as sessions, COUNT(*) as events
@@ -933,6 +1018,31 @@ async function handleAdminAnalytics(request, env) {
     `;
     const cowboyResult = await env.DB.prepare(cowboyQuery).first();
     const cowboyJumps = cowboyResult?.jumps || 0;
+
+    // Query 12b: Top Entry Pages (first page of each session)
+    // This shows WHERE people actually land on the site
+    const entryPagesQuery = `
+      WITH first_pages AS (
+        SELECT 
+          session_id,
+          page_path,
+          ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY created_at ASC) as rn
+        FROM events
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+          AND page_path IS NOT NULL
+          AND event = 'page_view'
+      )
+      SELECT 
+        page_path,
+        COUNT(*) as sessions
+      FROM first_pages
+      WHERE rn = 1
+      GROUP BY page_path
+      ORDER BY sessions DESC
+      LIMIT 10
+    `;
+    const entryPagesResult = await env.DB.prepare(entryPagesQuery).all();
+    const entryPages = entryPagesResult.results || [];
 
     // Query 13: Session Depth Score (engagement quality metric)
     // Weighted scoring: zoom=4, collector_notes=5, theme_click=3, nav=2, other=1
@@ -1170,7 +1280,12 @@ async function handleAdminAnalytics(request, env) {
       hideBots,
       hideChardon,
       edgeEvents,
-      edgeSummary
+      edgeSummary,
+      entryPages,
+      bounceRate,
+      avgDurationFormatted,
+      peakHours,
+      deviceEngagement
     });
 
     return new Response(html, {
@@ -1249,7 +1364,7 @@ async function handleExportCSV(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, bounceRate, avgDurationFormatted, peakHours, deviceEngagement }) {
   const s = summary || {};
   
   // Helper to format event names nicely
@@ -1523,6 +1638,21 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <span class="label">Avg/Sess <span class="info-icon">i</span></span>
       <div class="tooltip">Average events per session. Higher = more engaged visitors exploring galleries and images.</div>
     </div>
+    <div class="pulse-stat" style="background: ${bounceRate > 60 ? 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)' : bounceRate > 40 ? 'linear-gradient(135deg, #d97706 0%, #b45309 100%)' : '#252525'};">
+      <span class="value" style="color: ${bounceRate > 40 ? '#fff' : '#ef4444'};">${bounceRate}%</span>
+      <span class="label" style="color: ${bounceRate > 40 ? '#fecaca' : '#888'};">Bounce <span class="info-icon" style="${bounceRate > 40 ? 'background: rgba(255,255,255,0.2); color: #fecaca;' : ''}">i</span></span>
+      <div class="tooltip">Sessions with only 1 event (came and left immediately). Lower is better. Above 60% = concern, below 40% = great.</div>
+    </div>
+    <div class="pulse-stat">
+      <span class="value" style="color:#22d3ee;">⏱️ ${avgDurationFormatted}</span>
+      <span class="label">Avg Time <span class="info-icon">i</span></span>
+      <div class="tooltip">Average session duration (first to last event). Only counts sessions with 2+ events. For art browsing, 2+ min is good engagement.</div>
+    </div>
+    ${peakHours.length > 0 ? `<div class="pulse-stat">
+      <span class="value" style="color:#f472b6;">🕐 ${peakHours.map(h => h.hour).join(', ')}</span>
+      <span class="label">Peak <span class="info-icon">i</span></span>
+      <div class="tooltip">Busiest hours (EST): ${peakHours.map(h => `${h.hour} (${h.sessions} sessions)`).join(', ')}. Useful for social media posting timing.</div>
+    </div>` : ''}
     <div class="pulse-stat">
       <span class="value" style="color:#10b981">${s.pct_navigated || 0}%</span>
       <span class="label">Nav <span class="info-icon">i</span></span>
@@ -1776,6 +1906,24 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
 
     <div class="section">
+      <div class="section-header">
+        <h3>🚀 Top Entry Pages</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page visited in each session. Shows WHERE people actually land on the site (including direct links to images).</div></span>
+      </div>
+      ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
+      <table>
+        <tr><th>Landing Page</th><th>Sessions</th></tr>
+        ${entryPages.map(p => {
+          const isImage = p.page_path.includes('/i-');
+          const shortPath = p.page_path.length > 35 ? '...' + p.page_path.slice(-32) : p.page_path;
+          const icon = isImage ? '🖼️' : '📄';
+          return `<tr><td title="${p.page_path}">${icon} ${shortPath}</td><td>${p.sessions}</td></tr>`;
+        }).join('')}
+      </table>
+      `}
+    </div>
+
+    <div class="section">
       <h3>Entry Points</h3>
       <table>
         <tr><th>Source</th><th>Sessions</th></tr>
@@ -1785,15 +1933,19 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
 
     <div class="section">
-      <h3>Devices</h3>
+      <div class="section-header">
+        <h3>Devices</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Sessions and engagement by device. Engage Lvl shows how deeply each platform's users interact.</div></span>
+      </div>
       <table>
-        <tr><th>Platform</th><th>Sessions</th></tr>
-        ${devices.map(d => {
+        <tr><th>Platform</th><th>Sessions</th><th>Engage Lvl</th></tr>
+        ${deviceEngagement.map(d => {
           const icons = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', unknown: '❓' };
-          const labels = { ios: 'iOS (iPhone/iPad)', android: 'Android', mac: 'Mac', windows: 'Windows PC', linux: 'Linux', unknown: 'Unknown' };
-          return `<tr><td>${icons[d.device] || '❓'} ${labels[d.device] || d.device}</td><td>${d.sessions}</td></tr>`;
+          const labels = { ios: 'iOS', android: 'Android', mac: 'Mac', windows: 'Windows', linux: 'Linux', unknown: 'Unknown' };
+          const engageColor = d.avg_depth >= 15 ? '#10b981' : d.avg_depth >= 8 ? '#f59e0b' : '#888';
+          return `<tr><td>${icons[d.device] || '❓'} ${labels[d.device] || d.device}</td><td>${d.sessions}</td><td style="color:${engageColor};font-weight:bold;">${d.avg_depth}</td></tr>`;
         }).join('')}
-        ${devices.length === 0 ? '<tr><td colspan="2">No data yet</td></tr>' : ''}
+        ${deviceEngagement.length === 0 ? '<tr><td colspan="3">No data yet</td></tr>' : ''}
       </table>
     </div>
 

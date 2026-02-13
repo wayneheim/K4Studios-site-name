@@ -118,11 +118,14 @@ If any change conflicts with this framing, **STOP and ask**.
 4. Link prominently to `/Historical-Western-Art`
 
 ### Checklist:
-- [ ] Blog post created
-- [ ] Definition clear and decisive
-- [ ] Contrast explicit
-- [ ] Links to flagship hub
-- [ ] Added to sitemap.ts
+- [x] Blog post created
+- [x] Definition clear and decisive (opens with explicit clarification)
+- [x] Contrast explicit (ranch photography, documentary work, antique photography)
+- [x] Links to flagship hub (multiple prominent links)
+- [x] References Facing History collection
+- [x] Added to sitemap.ts (auto-generated on build)
+
+**✅ Day 3 Complete (February 13, 2026)**
 
 **Do NOT create additional blog posts.**
 
@@ -229,4 +232,4 @@ src/data/sitemap.ts
 
 ---
 
-*Last updated: February 12, 2026*
+*Last updated: February 13, 2026*

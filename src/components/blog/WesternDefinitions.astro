@@ -7,13 +7,13 @@
  * 
  * Variants:
  * - "index"      → Full cornerstone card grid (Blog index page)
- * - "definition" → Numbered series nav (Definition pages 1-6)
+ * - "definition" → Numbered series nav (Definition pages 1-7)
  * - "post"       → Simple text link list (Regular blog posts)
  */
 
 interface Props {
   variant?: "index" | "definition" | "post";
-  currentPage?: number; // 1-6, used to highlight current page in definition variant
+  currentPage?: number; // 1-7, used to highlight current page in definition variant
 }
 
 const { variant = "post", currentPage } = Astro.props;
@@ -60,6 +60,12 @@ const { variant = "post", currentPage } = Astro.props;
         <h3>What Is Western Cowboy Art?</h3>
         <p>History, myth, and the enduring figure of the American cowboy</p>
       </a>
+
+      <a href="/Blog/what-is-historical-western-photography" class="card">
+        <span class="num">7</span>
+        <h3>What Is Historical Western Photography?</h3>
+        <p>Definition, distinction, and why the term matters</p>
+      </a>
     </div>
   </section>
 )}
@@ -103,6 +109,12 @@ const { variant = "post", currentPage } = Astro.props;
       ) : (
         <a href="/Blog/what-is-western-cowboy-art" title="What Is Western Cowboy Art?">6</a>
       )}
+      <span class="sep">|</span>
+      {currentPage === 7 ? (
+        <span class="current">7</span>
+      ) : (
+        <a href="/Blog/what-is-historical-western-photography" title="What Is Historical Western Photography?">7</a>
+      )}
     </nav>
   </section>
 )}
@@ -122,6 +134,8 @@ const { variant = "post", currentPage } = Astro.props;
       <a href="/Blog/what-is-painterly-photography">What Is Painterly Photography?</a>
       <span class="sep">|</span>
       <a href="/Blog/what-is-western-cowboy-art">What Is Western Cowboy Art?</a>
+      <span class="sep">|</span>
+      <a href="/Blog/what-is-historical-western-photography">What Is Historical Western Photography?</a>
     </div>
   </section>
 )}
