@@ -1,74 +1,74 @@
 {
   "version": "1.0",
   "images": {
-    "i-2pwdXXJ": {
-      "imageId": "i-2pwdXXJ",
-      "galleryPath": "src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands.mjs",
-      "dhash": "0111000111010010111000100100100001101000000000000000000000000000",
-      "width": 566,
+    "i-mgSFMf3": {
+      "imageId": "i-mgSFMf3",
+      "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+      "dhash": "0110110111010111110110010110010101010101110100110000000000000000",
+      "width": 646,
       "height": 768,
       "dominantColors": [
         "#505050",
-        "#705050",
-        "#707050",
-        "#303030",
-        "#707070"
+        "#505030",
+        "#707070",
+        "#505070",
+        "#707050"
       ],
-      "warmCoolRatio": 0.72,
+      "warmCoolRatio": 0.7,
       "saturationAvg": 0.16,
-      "brightnessAvg": 0.44,
-      "greenCoverage": 0.03,
-      "blueCoverage": 0.27,
-      "orangeCoverage": 0.4,
-      "redCoverage": 0.05,
-      "yellowCoverage": 0.04,
-      "purpleCoverage": 0.01,
-      "contrastScore": 0.38,
-      "toneDistribution": {
-        "shadows": 0.16,
-        "midtones": 0.79,
-        "highlights": 0.05
-      },
-      "analysisVersion": 7,
-      "indexedAt": "2026-02-13T18:26:12.421Z"
-    },
-    "i-7bDfPwf": {
-      "imageId": "i-7bDfPwf",
-      "galleryPath": "src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands.mjs",
-      "dhash": "1101111110111001100011100111001100010110000000000000000000000000",
-      "width": 567,
-      "height": 768,
-      "dominantColors": [
-        "#303030",
-        "#505050",
-        "#507090",
-        "#305050",
-        "#103030"
-      ],
-      "warmCoolRatio": 0.28,
-      "saturationAvg": 0.2,
       "brightnessAvg": 0.42,
-      "greenCoverage": 0.08,
-      "blueCoverage": 0.53,
-      "orangeCoverage": 0.16,
-      "redCoverage": 0.02,
-      "yellowCoverage": 0.03,
+      "greenCoverage": 0.19,
+      "blueCoverage": 0.35,
+      "orangeCoverage": 0.15,
+      "redCoverage": 0.01,
+      "yellowCoverage": 0.13,
       "purpleCoverage": 0,
-      "contrastScore": 0.41,
+      "contrastScore": 0.35,
       "toneDistribution": {
-        "shadows": 0.24,
-        "midtones": 0.7,
+        "shadows": 0.12,
+        "midtones": 0.82,
         "highlights": 0.06
       },
       "analysisVersion": 7,
-      "indexedAt": "2026-02-13T18:26:12.597Z"
+      "indexedAt": "2026-02-13T20:58:57.868Z"
     },
-    "i-23tZWBK": {
-      "imageId": "i-23tZWBK",
-      "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands.mjs",
-      "dhash": "1101011110111101101110111011000100100111000000000000000000000000",
-      "width": 576,
-      "height": 768,
+    "i-D7VJ3Nh": {
+      "imageId": "i-D7VJ3Nh",
+      "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+      "dhash": "0111100101111111010111110111011101100110001111010000000000000000",
+      "width": 1024,
+      "height": 719,
+      "dominantColors": [
+        "#505030",
+        "#505050",
+        "#707050",
+        "#303030",
+        "#f0f0f0"
+      ],
+      "warmCoolRatio": 0.62,
+      "saturationAvg": 0.17,
+      "brightnessAvg": 0.46,
+      "greenCoverage": 0.2,
+      "blueCoverage": 0.28,
+      "orangeCoverage": 0.21,
+      "redCoverage": 0.01,
+      "yellowCoverage": 0.16,
+      "purpleCoverage": 0,
+      "contrastScore": 0.41,
+      "toneDistribution": {
+        "shadows": 0.13,
+        "midtones": 0.77,
+        "highlights": 0.1
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-02-13T20:58:58.011Z"
+    },
+    "i-6gXJFDR": {
+      "imageId": "i-6gXJFDR",
+      "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+      "dhash": "0110010101110101011111110101111101111110011111000110100000000000",
+      "width": 1023,
+      "height": 762,
       "dominantColors": [],
       "warmCoolRatio": 0.5,
       "saturationAvg": 0,
@@ -81,74 +81,186 @@
       "purpleCoverage": 0,
       "contrastScore": 0.45,
       "toneDistribution": {
-        "shadows": 0.17,
-        "midtones": 0.69,
+        "shadows": 0.2,
+        "midtones": 0.7,
+        "highlights": 0.1
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-02-13T20:58:58.284Z"
+    },
+    "i-GjpFSmz": {
+      "imageId": "i-GjpFSmz",
+      "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+      "dhash": "0001011101000100110011110111110111010101010100010000000000000000",
+      "width": 714,
+      "height": 768,
+      "dominantColors": [],
+      "warmCoolRatio": 0.5,
+      "saturationAvg": 0,
+      "brightnessAvg": 0.5,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0,
+      "redCoverage": 0,
+      "yellowCoverage": 0,
+      "purpleCoverage": 0,
+      "contrastScore": 0.47,
+      "toneDistribution": {
+        "shadows": 0.16,
+        "midtones": 0.7,
         "highlights": 0.14
       },
       "analysisVersion": 7,
-      "indexedAt": "2026-02-13T18:26:12.763Z"
+      "indexedAt": "2026-02-13T20:58:58.738Z"
     },
-    "i-tfFVDTm": {
-      "imageId": "i-tfFVDTm",
-      "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands.mjs",
-      "dhash": "0100100111001010110101101011110011101001000000000000000000000000",
-      "width": 576,
+    "i-bQHXTGL": {
+      "imageId": "i-bQHXTGL",
+      "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+      "dhash": "0000001101111100011110010110000100100001001100010111100100000000",
+      "width": 1024,
+      "height": 759,
+      "dominantColors": [
+        "#303030",
+        "#1050b0",
+        "#105090",
+        "#505050",
+        "#303050"
+      ],
+      "warmCoolRatio": 0.15,
+      "saturationAvg": 0.3,
+      "brightnessAvg": 0.34,
+      "greenCoverage": 0.08,
+      "blueCoverage": 0.39,
+      "orangeCoverage": 0.07,
+      "redCoverage": 0.04,
+      "yellowCoverage": 0.09,
+      "purpleCoverage": 0.18,
+      "contrastScore": 0.33,
+      "toneDistribution": {
+        "shadows": 0.41,
+        "midtones": 0.56,
+        "highlights": 0.03
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-02-13T20:58:58.883Z"
+    },
+    "i-6GZxKjN": {
+      "imageId": "i-6GZxKjN",
+      "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+      "dhash": "1100101101011010110101101011010111101001000000000000000000000000",
+      "width": 584,
       "height": 768,
+      "dominantColors": [
+        "#101010",
+        "#90b0d0",
+        "#7090b0",
+        "#303030",
+        "#5090b0"
+      ],
+      "warmCoolRatio": 0.18,
+      "saturationAvg": 0.27,
+      "brightnessAvg": 0.26,
+      "greenCoverage": 0.07,
+      "blueCoverage": 0.58,
+      "orangeCoverage": 0.07,
+      "redCoverage": 0.01,
+      "yellowCoverage": 0.08,
+      "purpleCoverage": 0.09,
+      "contrastScore": 0.49,
+      "toneDistribution": {
+        "shadows": 0.62,
+        "midtones": 0.35,
+        "highlights": 0.03
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-02-13T20:58:59.041Z"
+    },
+    "i-vnRK6nq": {
+      "imageId": "i-vnRK6nq",
+      "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+      "dhash": "1100000101100001011100000111110101111101011100010000000000000000",
+      "width": 1024,
+      "height": 691,
       "dominantColors": [
         "#303030",
         "#101010",
-        "#505030",
-        "#505050",
-        "#303010"
+        "#b0d0f0",
+        "#7090b0",
+        "#507090"
       ],
-      "warmCoolRatio": 0.93,
-      "saturationAvg": 0.2,
-      "brightnessAvg": 0.29,
-      "greenCoverage": 0.12,
-      "blueCoverage": 0.3,
-      "orangeCoverage": 0.17,
+      "warmCoolRatio": 0.02,
+      "saturationAvg": 0.26,
+      "brightnessAvg": 0.4,
+      "greenCoverage": 0.04,
+      "blueCoverage": 0.76,
+      "orangeCoverage": 0.01,
       "redCoverage": 0,
-      "yellowCoverage": 0.35,
-      "purpleCoverage": 0,
-      "contrastScore": 0.31,
+      "yellowCoverage": 0.01,
+      "purpleCoverage": 0.01,
+      "contrastScore": 0.49,
       "toneDistribution": {
-        "shadows": 0.4,
-        "midtones": 0.59,
-        "highlights": 0.01
+        "shadows": 0.37,
+        "midtones": 0.53,
+        "highlights": 0.1
       },
       "analysisVersion": 7,
-      "indexedAt": "2026-02-13T18:26:12.905Z"
+      "indexedAt": "2026-02-13T20:58:59.200Z"
     },
-    "i-xrzfVbW": {
-      "imageId": "i-xrzfVbW",
-      "galleryPath": "src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands.mjs",
-      "dhash": "0111110000111001011011010110100001111001010011110000000000000000",
-      "width": 1023,
-      "height": 731,
+    "i-qpPKnkk": {
+      "imageId": "i-qpPKnkk",
+      "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+      "dhash": "1111100001100001100011111100000011101000000000000000000000000000",
+      "width": 1024,
+      "height": 617,
       "dominantColors": [
-        "#505030",
-        "#303010",
-        "#303030",
-        "#707030",
-        "#707050"
+        "#305070",
+        "#101010",
+        "#5070b0",
+        "#101030",
+        "#103050"
       ],
-      "warmCoolRatio": 1,
-      "saturationAvg": 0.25,
-      "brightnessAvg": 0.25,
-      "greenCoverage": 0.16,
-      "blueCoverage": 0,
-      "orangeCoverage": 0.22,
-      "redCoverage": 0,
-      "yellowCoverage": 0.7,
-      "purpleCoverage": 0,
-      "contrastScore": 0.22,
+      "warmCoolRatio": 0.02,
+      "saturationAvg": 0.29,
+      "brightnessAvg": 0.27,
+      "greenCoverage": 0.02,
+      "blueCoverage": 0.79,
+      "orangeCoverage": 0.02,
+      "redCoverage": 0.02,
+      "yellowCoverage": 0.01,
+      "purpleCoverage": 0.03,
+      "contrastScore": 0.27,
       "toneDistribution": {
-        "shadows": 0.39,
-        "midtones": 0.6,
+        "shadows": 0.49,
+        "midtones": 0.51,
         "highlights": 0
       },
       "analysisVersion": 7,
-      "indexedAt": "2026-02-13T18:26:13.079Z"
+      "indexedAt": "2026-02-13T20:58:59.337Z"
+    },
+    "i-vXBVBKJ": {
+      "imageId": "i-vXBVBKJ",
+      "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery.mjs",
+      "dhash": "0111100101110001110111111100101101110001000000000000000000000000",
+      "width": 1024,
+      "height": 588,
+      "dominantColors": [],
+      "warmCoolRatio": 0.5,
+      "saturationAvg": 0,
+      "brightnessAvg": 0.5,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0,
+      "redCoverage": 0,
+      "yellowCoverage": 0,
+      "purpleCoverage": 0,
+      "contrastScore": 0.46,
+      "toneDistribution": {
+        "shadows": 0.22,
+        "midtones": 0.68,
+        "highlights": 0.1
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-02-13T20:58:59.483Z"
     }
   }
-}}
+}

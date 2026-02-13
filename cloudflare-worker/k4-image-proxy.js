@@ -76,6 +76,243 @@ function isDatacenterIP(ip) {
   return DATACENTER_PREFIXES.some(prefix => ip.startsWith(prefix));
 }
 
+// Verified search bots (never block, never throttle)
+const VERIFIED_BOTS = [
+  { name: 'Googlebot', pattern: /googlebot|google-inspectiontool|googleother|apis-google/i },
+  { name: 'Bingbot', pattern: /bingbot|bingpreview|msnbot/i },
+  { name: 'Applebot', pattern: /applebot/i },
+  { name: 'DuckDuckBot', pattern: /duckduckbot/i },
+  { name: 'Yandex', pattern: /yandex/i },
+  { name: 'Baidu', pattern: /baiduspider/i },
+  { name: 'Facebook', pattern: /facebookexternalhit|facebot/i },
+  { name: 'Twitter', pattern: /twitterbot/i },
+  { name: 'Pinterest', pattern: /pinterestbot/i },
+  { name: 'LinkedIn', pattern: /linkedinbot/i },
+];
+
+function getVerifiedBotName(ua) {
+  if (!ua) return null;
+  for (const bot of VERIFIED_BOTS) {
+    if (bot.pattern.test(ua)) return bot.name;
+  }
+  return null;
+}
+
+// --------------------
+// BOT INTELLIGENCE SYSTEM
+// --------------------
+// Risk levels:
+// 1 = Verified/Safe (search bots)
+// 2 = Suspicious but non-aggressive (watching)
+// 3 = High-confidence scraper (auto-throttle)
+// 4 = Malicious/Abusive (manual block candidate)
+
+/**
+ * Calculate risk score for an IP based on behavior patterns
+ * Returns: { score: number, rules: string[], riskLevel: 1|2|3|4 }
+ */
+function calculateRiskScore(stats) {
+  let score = 0;
+  const rules = [];
+  
+  // Verified bot = Risk 1, always safe
+  if (stats.is_verified_bot) {
+    return { score: 0, rules: ['verified_bot'], riskLevel: 1 };
+  }
+  
+  // Velocity: >3 requests/second sustained
+  if (stats.max_velocity > 3) {
+    score += 3;
+    rules.push('high_velocity');
+  }
+  
+  // Volume: >50 requests/hour
+  if (stats.requests_per_hour > 50) {
+    score += 2;
+    rules.push('high_volume');
+  }
+  
+  // No branching: 100% image_page, 0% gallery
+  if (stats.image_page_pct > 95 && stats.gallery_pct < 1) {
+    score += 3;
+    rules.push('no_branching');
+  }
+  
+  // No referrer + high volume
+  if (!stats.has_referrer && stats.total_requests > 20) {
+    score += 2;
+    rules.push('no_referrer_high_volume');
+  }
+  
+  // Datacenter IP
+  if (stats.is_datacenter) {
+    score += 1;
+    rules.push('datacenter_ip');
+  }
+  
+  // Multi-day presence (persistent scraper)
+  if (stats.days_seen > 2) {
+    score += Math.min(stats.days_seen - 1, 3);
+    rules.push('multi_day');
+  }
+  
+  // Suspicious country patterns (known bot havens + no referrer)
+  if (['NL', 'FI', 'PL', 'RU', 'CN'].includes(stats.country) && !stats.has_referrer) {
+    score += 1;
+    rules.push('suspicious_origin');
+  }
+  
+  // Determine risk level
+  let riskLevel;
+  if (score >= 8) {
+    riskLevel = 4; // Malicious
+  } else if (score >= 5) {
+    riskLevel = 3; // High-confidence scraper
+  } else if (score >= 2) {
+    riskLevel = 2; // Suspicious
+  } else {
+    riskLevel = 1; // Safe (low activity human)
+  }
+  
+  return { score, rules, riskLevel };
+}
+
+/**
+ * Check if IP should be throttled (Risk 3+)
+ * Returns delay in ms to add, or 0 if no throttle
+ */
+async function getThrottleDelay(env, ipHash) {
+  if (!env?.DB) return 0;
+  
+  try {
+    // Check suspected_bots table for this IP
+    const result = await env.DB.prepare(`
+      SELECT risk_level, status FROM suspected_bots WHERE ip_hash = ?
+    `).bind(ipHash).first();
+    
+    if (!result) return 0;
+    
+    // Risk 3+ gets throttled (unless blocked - handled separately)
+    if (result.risk_level >= 3 && result.status === 'throttled') {
+      // Progressive delay: Risk 3 = 500ms, Risk 4 = 1000ms
+      return result.risk_level === 4 ? 1000 : 500;
+    }
+    
+    return 0;
+  } catch (e) {
+    console.error('Throttle check error:', e);
+    return 0;
+  }
+}
+
+/**
+ * Check if IP is in the blocked_ips table
+ */
+async function isIPBlocked(env, ipHash) {
+  if (!env?.DB) return false;
+  
+  try {
+    const result = await env.DB.prepare(`
+      SELECT 1 FROM blocked_ips WHERE ip_hash = ? AND is_active = 1
+    `).bind(ipHash).first();
+    
+    return !!result;
+  } catch (e) {
+    console.error('Block check error:', e);
+    return false;
+  }
+}
+
+/**
+ * Update suspected_bots table with aggregated stats from art_views
+ * Called periodically or on dashboard load
+ */
+async function updateBotIntelligence(env) {
+  if (!env?.DB) return;
+  
+  try {
+    // Aggregate suspicious activity from art_views (last 7 days)
+    const aggregateQuery = `
+      WITH ip_stats AS (
+        SELECT 
+          ip_hash,
+          COUNT(*) as total_requests,
+          COUNT(DISTINCT date(created_at)) as days_seen,
+          MIN(created_at) as first_seen,
+          MAX(created_at) as last_seen,
+          MAX(country) as country,
+          SUM(CASE WHEN referrer IS NOT NULL AND referrer != '' THEN 1 ELSE 0 END) > 0 as has_referrer,
+          ROUND(100.0 * SUM(CASE WHEN type = 'image_page' THEN 1 ELSE 0 END) / COUNT(*), 1) as image_page_pct,
+          ROUND(100.0 * SUM(CASE WHEN type = 'gallery' THEN 1 ELSE 0 END) / COUNT(*), 1) as gallery_pct,
+          ROUND(COUNT(*) * 1.0 / (JULIANDAY(MAX(created_at)) - JULIANDAY(MIN(created_at)) + 0.001) / 24, 1) as requests_per_hour
+        FROM art_views
+        WHERE created_at > datetime('now', '-7 days')
+        GROUP BY ip_hash
+        HAVING COUNT(*) >= 10
+      )
+      SELECT * FROM ip_stats
+      ORDER BY total_requests DESC
+      LIMIT 100
+    `;
+    
+    const statsResult = await env.DB.prepare(aggregateQuery).all();
+    const ipStats = statsResult.results || [];
+    
+    for (const stats of ipStats) {
+      // Check if datacenter IP
+      const isDatacenter = DATACENTER_PREFIXES.some(p => stats.ip_hash.startsWith(p.replace('.x', '.')));
+      
+      // Calculate risk
+      const { score, rules, riskLevel } = calculateRiskScore({
+        ...stats,
+        is_datacenter: isDatacenter,
+        is_verified_bot: false, // Can't verify from hash alone
+      });
+      
+      // Determine status based on risk level
+      let status = 'watching';
+      if (riskLevel >= 3) {
+        status = 'throttled';
+      }
+      
+      // Upsert into suspected_bots
+      await env.DB.prepare(`
+        INSERT INTO suspected_bots (ip_hash, risk_level, risk_score, rules_triggered, first_seen, last_seen, days_seen, total_requests, image_page_pct, has_referrer, is_datacenter, country, status, updated_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+        ON CONFLICT(ip_hash) DO UPDATE SET
+          risk_level = excluded.risk_level,
+          risk_score = excluded.risk_score,
+          rules_triggered = excluded.rules_triggered,
+          last_seen = excluded.last_seen,
+          days_seen = excluded.days_seen,
+          total_requests = excluded.total_requests,
+          image_page_pct = excluded.image_page_pct,
+          has_referrer = excluded.has_referrer,
+          updated_at = datetime('now')
+      `).bind(
+        stats.ip_hash,
+        riskLevel,
+        score,
+        JSON.stringify(rules),
+        stats.first_seen,
+        stats.last_seen,
+        stats.days_seen,
+        stats.total_requests,
+        stats.image_page_pct,
+        stats.has_referrer ? 1 : 0,
+        isDatacenter ? 1 : 0,
+        stats.country,
+        status
+      ).run();
+    }
+    
+    return ipStats.length;
+  } catch (e) {
+    console.error('Bot intelligence update error:', e);
+    return 0;
+  }
+}
+
 const ALWAYS_ALLOWED = [
   "/sitemap.xml",
   "/robots.txt",
@@ -247,6 +484,34 @@ async function handleImageRequest(request, ctx, env) {
         "X-Ghost-Image": "true"
       }
     });
+  }
+
+  // Check for dynamically blocked IPs (from blocked_ips table)
+  const ip = request.headers.get("CF-Connecting-IP") || 
+             request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim();
+  const ipHash = hashIP(ip);
+  
+  if (env?.DB && ipHash) {
+    try {
+      const isBlocked = await isIPBlocked(env, ipHash);
+      if (isBlocked) {
+        // Return 403 for blocked IPs - they get nothing
+        return new Response("Blocked", {
+          status: 403,
+          headers: { "Cache-Control": "no-store" }
+        });
+      }
+      
+      // Check for throttling (Risk 3+)
+      const delay = await getThrottleDelay(env, ipHash);
+      if (delay > 0) {
+        // Add artificial delay for scrapers
+        await new Promise(resolve => setTimeout(resolve, delay));
+      }
+    } catch (e) {
+      // Fail open - don't break images on DB errors
+      console.error('Bot check error:', e);
+    }
   }
 
   try {
@@ -759,6 +1024,129 @@ function handleEdgeEventOptions() {
       "Access-Control-Max-Age": "86400"
     }
   });
+}
+
+// --------------------
+// BOT MANAGEMENT API
+// --------------------
+
+/**
+ * Block an IP (add to blocked_ips, takes effect immediately)
+ * POST /__k4stats/block { ip_hash, reason? }
+ */
+async function handleBlockIP(request, env) {
+  try {
+    const { ip_hash, reason } = await request.json();
+    
+    if (!ip_hash) {
+      return new Response(JSON.stringify({ error: 'ip_hash required' }), { 
+        status: 400, 
+        headers: { 'Content-Type': 'application/json' } 
+      });
+    }
+    
+    // Get current risk info from suspected_bots
+    const suspectInfo = await env.DB.prepare(`
+      SELECT risk_level, risk_score, rules_triggered, total_requests 
+      FROM suspected_bots WHERE ip_hash = ?
+    `).bind(ip_hash).first();
+    
+    // Insert into blocked_ips
+    await env.DB.prepare(`
+      INSERT INTO blocked_ips (ip_hash, risk_level, risk_score, rules_triggered, total_requests, reason, blocked_by)
+      VALUES (?, ?, ?, ?, ?, ?, 'manual')
+      ON CONFLICT(ip_hash) DO UPDATE SET
+        is_active = 1,
+        blocked_at = datetime('now'),
+        reason = excluded.reason,
+        unblocked_at = NULL
+    `).bind(
+      ip_hash,
+      suspectInfo?.risk_level || 4,
+      suspectInfo?.risk_score || 0,
+      suspectInfo?.rules_triggered || '[]',
+      suspectInfo?.total_requests || 0,
+      reason || 'Manual block from dashboard'
+    ).run();
+    
+    // Update suspected_bots status
+    await env.DB.prepare(`
+      UPDATE suspected_bots SET status = 'blocked', updated_at = datetime('now')
+      WHERE ip_hash = ?
+    `).bind(ip_hash).run();
+    
+    return new Response(JSON.stringify({ success: true, ip_hash }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  } catch (e) {
+    console.error('Block IP error:', e);
+    return new Response(JSON.stringify({ error: e.message }), { 
+      status: 500, 
+      headers: { 'Content-Type': 'application/json' } 
+    });
+  }
+}
+
+/**
+ * Unblock an IP (keeps record, sets is_active = 0)
+ * POST /__k4stats/unblock { ip_hash }
+ */
+async function handleUnblockIP(request, env) {
+  try {
+    const { ip_hash } = await request.json();
+    
+    if (!ip_hash) {
+      return new Response(JSON.stringify({ error: 'ip_hash required' }), { 
+        status: 400, 
+        headers: { 'Content-Type': 'application/json' } 
+      });
+    }
+    
+    // Soft-delete: set is_active = 0, record unblocked_at
+    await env.DB.prepare(`
+      UPDATE blocked_ips 
+      SET is_active = 0, unblocked_at = datetime('now')
+      WHERE ip_hash = ?
+    `).bind(ip_hash).run();
+    
+    // Downgrade suspected_bots status to throttled
+    await env.DB.prepare(`
+      UPDATE suspected_bots SET status = 'throttled', updated_at = datetime('now')
+      WHERE ip_hash = ?
+    `).bind(ip_hash).run();
+    
+    return new Response(JSON.stringify({ success: true, ip_hash }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  } catch (e) {
+    console.error('Unblock IP error:', e);
+    return new Response(JSON.stringify({ error: e.message }), { 
+      status: 500, 
+      headers: { 'Content-Type': 'application/json' } 
+    });
+  }
+}
+
+/**
+ * Refresh bot intelligence (recalculate risk scores)
+ * POST /__k4stats/refresh-bots
+ */
+async function handleRefreshBots(request, env) {
+  try {
+    const count = await updateBotIntelligence(env);
+    return new Response(JSON.stringify({ success: true, updated: count }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  } catch (e) {
+    console.error('Refresh bots error:', e);
+    return new Response(JSON.stringify({ error: e.message }), { 
+      status: 500, 
+      headers: { 'Content-Type': 'application/json' } 
+    });
+  }
 }
 
 // --------------------
@@ -1440,6 +1828,69 @@ async function handleAdminAnalytics(request, env) {
       console.log('art_views query failed (table may not exist):', e.message);
     }
 
+    // Query 18: Bot Intelligence (suspected_bots + blocked_ips)
+    let botIntelligence = { suspects: [], blocked: [], stats: { total: 0, risk3: 0, risk4: 0, blocked: 0 } };
+    try {
+      // Update bot intelligence (refresh risk scores)
+      await updateBotIntelligence(env);
+      
+      // Get suspected bots (Risk 2+)
+      const suspectsQuery = `
+        SELECT 
+          ip_hash,
+          risk_level,
+          risk_score,
+          rules_triggered,
+          first_seen,
+          last_seen,
+          days_seen,
+          total_requests,
+          image_page_pct,
+          has_referrer,
+          is_datacenter,
+          is_verified_bot,
+          bot_name,
+          country,
+          status
+        FROM suspected_bots
+        WHERE risk_level >= 2
+        ORDER BY risk_level DESC, risk_score DESC, total_requests DESC
+        LIMIT 50
+      `;
+      const suspectsResult = await env.DB.prepare(suspectsQuery).all();
+      botIntelligence.suspects = suspectsResult.results || [];
+      
+      // Get blocked IPs (including inactive for archive)
+      const blockedQuery = `
+        SELECT 
+          ip_hash,
+          risk_level,
+          risk_score,
+          rules_triggered,
+          total_requests,
+          blocked_at,
+          blocked_by,
+          reason,
+          unblocked_at,
+          is_active
+        FROM blocked_ips
+        ORDER BY is_active DESC, blocked_at DESC
+        LIMIT 50
+      `;
+      const blockedResult = await env.DB.prepare(blockedQuery).all();
+      botIntelligence.blocked = blockedResult.results || [];
+      
+      // Calculate stats
+      for (const s of botIntelligence.suspects) {
+        botIntelligence.stats.total++;
+        if (s.risk_level === 3) botIntelligence.stats.risk3++;
+        if (s.risk_level >= 4) botIntelligence.stats.risk4++;
+        if (s.status === 'blocked') botIntelligence.stats.blocked++;
+      }
+    } catch (e) {
+      console.log('bot_intelligence query failed:', e.message);
+    }
+
     // Render HTML
     const html = renderDashboard({
       days,
@@ -1484,7 +1935,8 @@ async function handleAdminAnalytics(request, env) {
       deviceEngagement,
       artViewsSummary,
       artViewsByType,
-      topArtViews
+      topArtViews,
+      botIntelligence
     });
 
     return new Response(html, {
@@ -1563,7 +2015,7 @@ async function handleExportCSV(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, botIntelligence }) {
   const s = summary || {};
   
   // Helper to format event names nicely
@@ -2329,6 +2781,117 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
   </div>
 
+  <!-- Bot Intelligence Section -->
+  <h2 style="margin-top: 30px;">🛡️ Bot Intelligence <span style="font-size: 12px; color: #888; font-weight: normal;">(Threat Classification)</span></h2>
+  <p style="color: #888; margin: -10px 0 15px 0; font-size: 12px;">
+    Risk accumulates over time. Level 3+ auto-throttled. Level 4 = manual block candidate.
+    <button onclick="refreshBotIntelligence()" style="margin-left: 10px; background: #333; color: #888; border: 1px solid #555; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 11px;">🔄 Refresh</button>
+  </p>
+  
+  <!-- Risk Summary Pills -->
+  <div class="pulse" style="margin-bottom: 15px;">
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+      <span class="value" style="color: #fff;">🟢 Verified</span>
+      <span class="label" style="color: #a7f3d0;">Search Bots</span>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);">
+      <span class="value" style="color: #1f2937;">🟡 ${botIntelligence?.stats?.total - botIntelligence?.stats?.risk3 - botIntelligence?.stats?.risk4 || 0}</span>
+      <span class="label" style="color: #422006;">Watching</span>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
+      <span class="value" style="color: #fff;">🟠 ${botIntelligence?.stats?.risk3 || 0}</span>
+      <span class="label" style="color: #fed7aa;">Throttled</span>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
+      <span class="value" style="color: #fff;">🔴 ${botIntelligence?.stats?.risk4 || 0}</span>
+      <span class="label" style="color: #fecaca;">Block Candidates</span>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #1f2937 0%, #111827 100%); border: 1px solid #374151;">
+      <span class="value" style="color: #9ca3af;">⛔ ${botIntelligence?.blocked?.filter(b => b.is_active)?.length || 0}</span>
+      <span class="label" style="color: #6b7280;">Blocked</span>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+    <!-- Suspected Bots (Risk 2+) -->
+    <div class="section">
+      <h3>🎯 High-Risk Watchlist</h3>
+      ${(botIntelligence?.suspects || []).length === 0 ? '<p style="color:#666">No suspicious IPs detected yet</p>' : `
+      <div style="max-height: 400px; overflow-y: auto;">
+        <table style="width: 100%; font-size: 11px;">
+          <tr style="position: sticky; top: 0; background: #252525;">
+            <th style="text-align: left; padding: 4px;">Risk</th>
+            <th style="text-align: left; padding: 4px;">IP Hash</th>
+            <th style="text-align: right; padding: 4px;">Reqs</th>
+            <th style="text-align: left; padding: 4px;">Rules</th>
+            <th style="text-align: center; padding: 4px;">Days</th>
+            <th style="text-align: center; padding: 4px;">Action</th>
+          </tr>
+          ${(botIntelligence?.suspects || []).filter(s => s.risk_level >= 3).map(s => {
+            const riskColors = { 1: '#10b981', 2: '#fbbf24', 3: '#f97316', 4: '#ef4444' };
+            const riskIcons = { 1: '🟢', 2: '🟡', 3: '🟠', 4: '🔴' };
+            const rules = JSON.parse(s.rules_triggered || '[]');
+            const rulesShort = rules.slice(0, 2).map(r => r.replace(/_/g, ' ').slice(0, 12)).join(', ');
+            const isBlocked = s.status === 'blocked';
+            const riskColor = riskColors[s.risk_level];
+            const riskIcon = riskIcons[s.risk_level];
+            const rowStyle = isBlocked ? 'opacity: 0.5;' : '';
+            const reqColor = s.total_requests > 100 ? '#ef4444' : '#888';
+            const daysColor = s.days_seen > 2 ? '#f97316' : '#888';
+            const actionHtml = isBlocked 
+              ? '<span style="color: #666;">Blocked</span>'
+              : "<button onclick=\"blockIP('" + s.ip_hash + "')\" style=\"background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;\">Block</button>";
+            return '<tr style="border-bottom: 1px solid #333; '+rowStyle+'">' +
+              '<td style="padding: 6px 4px;"><span style="background: '+riskColor+'22; color: '+riskColor+'; padding: 2px 6px; border-radius: 8px; font-weight: bold;">'+riskIcon+' '+s.risk_level+'</span></td>' +
+              '<td style="padding: 6px 4px; font-family: monospace; font-size: 10px;">'+s.ip_hash+'<span style="color: #666; margin-left: 4px;">'+(s.country || '')+'</span></td>' +
+              '<td style="padding: 6px 4px; text-align: right; font-weight: bold; color: '+reqColor+';">'+s.total_requests+'</td>' +
+              '<td style="padding: 6px 4px; color: #888; font-size: 10px;" title="'+rules.join(', ')+'">'+rulesShort+(rules.length > 2 ? '...' : '')+'</td>' +
+              '<td style="padding: 6px 4px; text-align: center;"><span style="color: '+daysColor+';">'+s.days_seen+'</span></td>' +
+              '<td style="padding: 6px 4px; text-align: center;">'+actionHtml+'</td>' +
+            '</tr>';
+          }).join('')}
+        </table>
+      </div>
+      `}
+    </div>
+
+    <!-- Blocked IPs Archive -->
+    <div class="section">
+      <h3>⛔ Blocked IPs <span style="font-size: 11px; color: #666; font-weight: normal;">(Archive)</span></h3>
+      ${(botIntelligence?.blocked || []).length === 0 ? '<p style="color:#666">No blocked IPs yet</p>' : `
+      <div style="max-height: 400px; overflow-y: auto;">
+        <table style="width: 100%; font-size: 11px;">
+          <tr style="position: sticky; top: 0; background: #252525;">
+            <th style="text-align: left; padding: 4px;">Status</th>
+            <th style="text-align: left; padding: 4px;">IP Hash</th>
+            <th style="text-align: right; padding: 4px;">Reqs</th>
+            <th style="text-align: left; padding: 4px;">Blocked</th>
+            <th style="text-align: center; padding: 4px;">Action</th>
+          </tr>
+          ${(botIntelligence?.blocked || []).map(b => {
+            const isActive = b.is_active === 1;
+            const blockedDate = b.blocked_at ? new Date(b.blocked_at).toLocaleDateString() : '-';
+            const rowStyle = !isActive ? 'opacity: 0.4;' : '';
+            const statusBg = isActive ? '#dc262622' : '#37415122';
+            const statusColor = isActive ? '#ef4444' : '#6b7280';
+            const statusText = isActive ? '⛔ Active' : '✓ Unblocked';
+            const actionHtml = isActive 
+              ? "<button onclick=\"unblockIP('" + b.ip_hash + "')\" style=\"background: #374151; color: #9ca3af; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;\">Unblock</button>"
+              : '<span style="color: #666;">—</span>';
+            return '<tr style="border-bottom: 1px solid #333; '+rowStyle+'">' +
+              '<td style="padding: 6px 4px;"><span style="background: '+statusBg+'; color: '+statusColor+'; padding: 2px 6px; border-radius: 8px; font-size: 10px;">'+statusText+'</span></td>' +
+              '<td style="padding: 6px 4px; font-family: monospace; font-size: 10px;">'+b.ip_hash+'</td>' +
+              '<td style="padding: 6px 4px; text-align: right; color: #888;">'+(b.total_requests || '-')+'</td>' +
+              '<td style="padding: 6px 4px; color: #666; font-size: 10px;">'+blockedDate+'</td>' +
+              '<td style="padding: 6px 4px; text-align: center;">'+actionHtml+'</td>' +
+            '</tr>';
+          }).join('')}
+        </table>
+      </div>
+      `}
+    </div>
+  </div>
+
   <p style="margin-top: 30px; color: #666; font-size: 12px;">
     Generated ${new Date().toISOString()} • ${periodLabel}
   </p>
@@ -2357,6 +2920,71 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
           item.style.display = 'flex';
         }
       });
+    }
+
+    // Bot Intelligence functions
+    async function blockIP(ipHash) {
+      if (!confirm('Block IP: ' + ipHash + '?\\n\\nThis will take effect immediately.')) return;
+      
+      try {
+        const res = await fetch('/__k4stats/block', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ip_hash: ipHash, reason: 'Manual block from dashboard' })
+        });
+        
+        if (res.ok) {
+          alert('IP blocked successfully');
+          location.reload();
+        } else {
+          const data = await res.json();
+          alert('Error: ' + (data.error || 'Unknown error'));
+        }
+      } catch (e) {
+        alert('Error: ' + e.message);
+      }
+    }
+
+    async function unblockIP(ipHash) {
+      if (!confirm('Unblock IP: ' + ipHash + '?')) return;
+      
+      try {
+        const res = await fetch('/__k4stats/unblock', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ip_hash: ipHash })
+        });
+        
+        if (res.ok) {
+          alert('IP unblocked successfully');
+          location.reload();
+        } else {
+          const data = await res.json();
+          alert('Error: ' + (data.error || 'Unknown error'));
+        }
+      } catch (e) {
+        alert('Error: ' + e.message);
+      }
+    }
+
+    async function refreshBotIntelligence() {
+      try {
+        const res = await fetch('/__k4stats/refresh-bots', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' }
+        });
+        
+        if (res.ok) {
+          const data = await res.json();
+          alert('Bot intelligence refreshed. Updated ' + (data.updated || 0) + ' IPs.');
+          location.reload();
+        } else {
+          const data = await res.json();
+          alert('Error: ' + (data.error || 'Unknown error'));
+        }
+      } catch (e) {
+        alert('Error: ' + e.message);
+      }
     }
   </script>
 </body>
@@ -2404,6 +3032,37 @@ export default {
     // 0c) Analytics CSV export
     if (url.pathname === "/__k4stats/export") {
       return handleExportCSV(request, env);
+    }
+
+    // 0d) Bot management API - Block IP
+    if (url.pathname === "/__k4stats/block" && request.method === "POST") {
+      // Verify auth (reuse same auth as dashboard)
+      const authHeader = request.headers.get("Authorization");
+      const expected = "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
+      if (authHeader !== expected) {
+        return new Response("Unauthorized", { status: 401 });
+      }
+      return handleBlockIP(request, env);
+    }
+
+    // 0e) Bot management API - Unblock IP
+    if (url.pathname === "/__k4stats/unblock" && request.method === "POST") {
+      const authHeader = request.headers.get("Authorization");
+      const expected = "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
+      if (authHeader !== expected) {
+        return new Response("Unauthorized", { status: 401 });
+      }
+      return handleUnblockIP(request, env);
+    }
+
+    // 0f) Bot management API - Refresh bot intelligence
+    if (url.pathname === "/__k4stats/refresh-bots" && request.method === "POST") {
+      const authHeader = request.headers.get("Authorization");
+      const expected = "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
+      if (authHeader !== expected) {
+        return new Response("Unauthorized", { status: 401 });
+      }
+      return handleRefreshBots(request, env);
     }
 
     // 1) Image detail pages: apply policy first, then log art view
