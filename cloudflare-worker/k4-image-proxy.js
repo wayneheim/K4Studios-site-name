@@ -2573,11 +2573,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <span class="label" style="color: #a7f3d0;">Unique Viewers <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
       <div class="tooltip"><strong>On-Site:</strong> ${artViewsSummary?.onsite_viewers || 0} unique people on k4studios.com.<br><strong>External-Only:</strong> ${(artViewsSummary?.unique_viewers || 0) - (artViewsSummary?.onsite_viewers || 0)} people who only saw images off-site.<br><em>People can view multiple chapters.</em></div>
     </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
-      <span class="value" style="color: #fff;">${artViewsSummary?.total || 0}</span>
-      <span class="label" style="color: #ddd6fe;">Total Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
-      <div class="tooltip">Total art views (on-site + external). Chapter Views + XL Zooms + Galleries + External.</div>
-    </div>
     <div class="pulse-stat clickable" data-filter="image_page" onclick="toggleArtFilter('image_page')" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);">
       <span class="value" style="color: #fff;">📖 ${artViewsSummary?.image_pages || 0}</span>
       <span class="label" style="color: #ede9fe;">Chapter Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ede9fe;">i</span></span>
@@ -2597,6 +2592,11 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <span class="value" style="color: #fff;">🌐 ${artViewsSummary?.external_images || 0}</span>
       <span class="label" style="color: #fed7aa;">External <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fed7aa;">i</span></span>
       <div class="tooltip">L-size images served to external platforms (Google Images, Bing, Pinterest). Off-site discovery.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
+      <span class="value" style="color: #fff;">${artViewsSummary?.total || 0}</span>
+      <span class="label" style="color: #ddd6fe;">Total Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
+      <div class="tooltip">Total art views (on-site + external). Chapter Views + XL Zooms + Galleries + External.</div>
     </div>
   </div>
   ${(topArtViews?.chapters?.length > 0 || topArtViews?.xlZooms?.length > 0 || topArtViews?.external?.length > 0 || topArtViews?.galleries?.length > 0) ? `
