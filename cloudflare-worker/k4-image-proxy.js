@@ -2568,15 +2568,15 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     <span style="margin-left: 8px;"><strong>Click filters to show/hide types below.</strong></span>
   </p>
   <div class="pulse">
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+      <span class="value" style="color: #fff;">👤 <span style="font-weight: bold;">${artViewsSummary?.onsite_viewers || 0}</span><span style="opacity: 0.7; font-size: 0.8em;"> / ${(artViewsSummary?.unique_viewers || 0) - (artViewsSummary?.onsite_viewers || 0)}</span></span>
+      <span class="label" style="color: #a7f3d0;">Unique Viewers <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
+      <div class="tooltip"><strong>On-Site:</strong> ${artViewsSummary?.onsite_viewers || 0} unique people on k4studios.com.<br><strong>External-Only:</strong> ${(artViewsSummary?.unique_viewers || 0) - (artViewsSummary?.onsite_viewers || 0)} people who only saw images off-site.<br><em>People can view multiple chapters.</em></div>
+    </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
       <span class="value" style="color: #fff;">${artViewsSummary?.total || 0}</span>
       <span class="label" style="color: #ddd6fe;">Total Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
       <div class="tooltip">Total art views (on-site + external). Chapter Views + XL Zooms + Galleries + External.</div>
-    </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-      <span class="value" style="color: #fff;">👤 <span style="font-weight: bold;">${artViewsSummary?.onsite_viewers || 0}</span><span style="opacity: 0.7; font-size: 0.8em;"> / ${artViewsSummary?.unique_viewers || 0}</span></span>
-      <span class="label" style="color: #a7f3d0;">Unique Viewers <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
-      <div class="tooltip"><strong>On-Site:</strong> ${artViewsSummary?.onsite_viewers || 0} unique people on k4studios.com.<br><strong>Total:</strong> ${artViewsSummary?.unique_viewers || 0} unique people (incl. external).<br><em>People can view multiple chapters.</em></div>
     </div>
     <div class="pulse-stat clickable" data-filter="image_page" onclick="toggleArtFilter('image_page')" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);">
       <span class="value" style="color: #fff;">📖 ${artViewsSummary?.image_pages || 0}</span>
