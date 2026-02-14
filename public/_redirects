@@ -111,5 +111,5 @@
 /Api/*  /410  410!
 /API/*  /410  410!
 
-# Legacy SmugMug /track endpoint - permanently gone
-/track  /410  410!
+# Analytics tracking - proxy to Cloudflare Worker
+/track  https://k4-image-proxy.wayneheim.workers.dev/track  200!

@@ -555,12 +555,17 @@ async function handleImageRequest(request, ctx, env) {
 
     // Log art views by size:
     // XL = on-site zoom/slideshow (internal)
-    // L = external embeds (Google Images, Bing, Pinterest, FB, etc.)
+    // L = external embeds ONLY (Google Images, Bing, Pinterest, FB, etc.)
+    //     Skip L tracking for on-site traffic (k4studios referrer) to avoid inflated counts
     if (env?.DB) {
       if (route.size === 'xl') {
         ctx.waitUntil(logArtView(env, 'xl_zoom', route.imageId, request));
       } else if (route.size === 'l') {
-        ctx.waitUntil(logArtView(env, 'external_image', route.imageId, request));
+        const referer = request.headers.get('Referer') || '';
+        // Only log L-size as external_image if NOT from k4studios (true external embed)
+        if (!referer.includes('k4studios.com')) {
+          ctx.waitUntil(logArtView(env, 'external_image', route.imageId, request));
+        }
       }
       
       // Track verified search bots by User-Agent (free plan doesn't have botManagement)
@@ -1299,8 +1304,6 @@ async function handleAdminAnalytics(request, env) {
         ROUND(1.0 * COUNT(*) / NULLIF(COUNT(DISTINCT session_id), 0), 1) as avg_events_per_session,
         ROUND(100.0 * COUNT(DISTINCT CASE WHEN event IN ('nav_next', 'nav_prev') THEN session_id END) / 
           NULLIF(COUNT(DISTINCT session_id), 0), 1) as pct_navigated,
-        ROUND(100.0 * COUNT(DISTINCT CASE WHEN event = 'zoom_open' THEN session_id END) / 
-          NULLIF(COUNT(DISTINCT session_id), 0), 1) as pct_zoomed,
         COUNT(CASE WHEN event = 'collector_notes_open' THEN 1 END) as collector_notes_opens
       FROM events 
       WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
@@ -1885,18 +1888,6 @@ async function handleAdminAnalytics(request, env) {
       const onsiteViewersResult = await env.DB.prepare(onsiteViewersQuery).first();
       artViewsSummary.onsite_viewers = onsiteViewersResult?.onsite_viewers || 0;
       
-      // Split external_image into on-site L (from k4studios pages) vs true external
-      const externalSplitQuery = `
-        SELECT 
-          SUM(CASE WHEN referrer LIKE '%k4studios.com%' THEN 1 ELSE 0 END) as onsite_l,
-          SUM(CASE WHEN referrer IS NULL OR referrer = '' OR referrer NOT LIKE '%k4studios.com%' THEN 1 ELSE 0 END) as true_external
-        FROM art_views
-        WHERE ${edgeDateClause} AND type = 'external_image' ${botFilterClause}
-      `;
-      const externalSplitResult = await env.DB.prepare(externalSplitQuery).first();
-      artViewsSummary.onsite_l = externalSplitResult?.onsite_l || 0;
-      artViewsSummary.true_external = externalSplitResult?.true_external || 0;
-      
       // Top viewed art - separate queries for each type (humans only)
       const topChaptersQuery = `
         SELECT 
@@ -1922,20 +1913,7 @@ async function handleAdminAnalytics(request, env) {
         ORDER BY views DESC
         LIMIT 15
       `;
-      // On-site L images (loaded from k4studios pages)
-      const topOnsiteLQuery = `
-        SELECT 
-          type,
-          target_id,
-          COUNT(*) as views,
-          COUNT(DISTINCT ip_hash) as unique_viewers
-        FROM art_views
-        WHERE ${edgeDateClause} AND type = 'external_image' AND referrer LIKE '%k4studios.com%' ${botFilterClause}
-        GROUP BY target_id
-        ORDER BY views DESC
-        LIMIT 15
-      `;
-      // True external (Google Images, Bing, Pinterest, etc - NOT from k4studios)
+      // External images (Google Images, Bing, Pinterest, etc - NOT from k4studios)
       const topExternalQuery = `
         SELECT 
           type,
@@ -1949,11 +1927,10 @@ async function handleAdminAnalytics(request, env) {
             WHEN SUM(CASE WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 1 ELSE 0 END) > 0 THEN 'facebook'
             WHEN SUM(CASE WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' THEN 1 ELSE 0 END) > 0 THEN 'twitter'
             WHEN SUM(CASE WHEN referrer LIKE '%duckduckgo.%' THEN 1 ELSE 0 END) > 0 THEN 'duckduckgo'
-            WHEN SUM(CASE WHEN referrer IS NOT NULL AND referrer != '' AND referrer NOT LIKE '%k4studios.com%' THEN 1 ELSE 0 END) > 0 THEN 'other'
             ELSE 'direct'
           END as top_source
         FROM art_views
-        WHERE ${edgeDateClause} AND type = 'external_image' AND (referrer IS NULL OR referrer = '' OR referrer NOT LIKE '%k4studios.com%') ${botFilterClause}
+        WHERE ${edgeDateClause} AND type = 'external_image' ${botFilterClause}
         GROUP BY target_id
         ORDER BY views DESC
         LIMIT 15
@@ -1970,17 +1947,15 @@ async function handleAdminAnalytics(request, env) {
         ORDER BY views DESC
         LIMIT 15
       `;
-      const [topChaptersResult, topXLZoomsResult, topOnsiteLResult, topExternalResult, topGalleriesResult] = await Promise.all([
+      const [topChaptersResult, topXLZoomsResult, topExternalResult, topGalleriesResult] = await Promise.all([
         env.DB.prepare(topChaptersQuery).all(),
         env.DB.prepare(topXLZoomsQuery).all(),
-        env.DB.prepare(topOnsiteLQuery).all(),
         env.DB.prepare(topExternalQuery).all(),
         env.DB.prepare(topGalleriesQuery).all()
       ]);
       topArtViews = {
         chapters: topChaptersResult.results || [],
         xlZooms: topXLZoomsResult.results || [],
-        onsiteL: topOnsiteLResult.results || [],
         external: topExternalResult.results || [],
         galleries: topGalleriesResult.results || []
       };
@@ -2553,11 +2528,11 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <span class="label">Nav <span class="info-icon">i</span></span>
       <div class="tooltip">% of sessions that used navigation (next/prev arrows). Shows gallery exploration intent.</div>
     </div>
-    <div class="pulse-stat">
-      <span class="value" style="color:#f59e0b">${s.pct_zoomed || 0}%</span>
-      <span class="label">Zoom <span class="info-icon">i</span></span>
-      <div class="tooltip">% of sessions that opened full-resolution zoom. Strong engagement signal — they wanted to see detail.</div>
-    </div>
+    ${artViewsSummary.xl_zooms > 0 ? `<div class="pulse-stat">
+      <span class="value" style="color:#f59e0b">${artViewsSummary.xl_zooms}</span>
+      <span class="label">XL Zoom/S-Show <span class="info-icon">i</span></span>
+      <div class="tooltip">XL image loads (zoom modal or slideshow). Server-side tracked — same as ART bar.</div>
+    </div>` : ''}}
     ${cowboyJumps > 0 ? `<div class="pulse-stat highlight">
       <span class="value">🤠 ${cowboyJumps}</span>
       <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
@@ -2600,17 +2575,17 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
       <span class="value" style="color: #fff;">👤 <span style="font-weight: bold;">${artViewsSummary?.onsite_viewers || 0}</span><span style="opacity: 0.7; font-size: 0.8em;"> / ${artViewsSummary?.unique_viewers || 0}</span></span>
-      <span class="label" style="color: #a7f3d0;">On-Site / Total <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
-      <div class="tooltip"><strong>On-Site:</strong> ${artViewsSummary?.onsite_viewers || 0} unique viewers on k4studios.com (chapters, galleries, zooms).<br><strong>Total:</strong> ${artViewsSummary?.unique_viewers || 0} including external platforms (Google Images, Pinterest, etc).</div>
+      <span class="label" style="color: #a7f3d0;">Unique Viewers <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
+      <div class="tooltip"><strong>On-Site:</strong> ${artViewsSummary?.onsite_viewers || 0} unique people on k4studios.com.<br><strong>Total:</strong> ${artViewsSummary?.unique_viewers || 0} unique people (incl. external).<br><em>People can view multiple chapters.</em></div>
     </div>
     <div class="pulse-stat clickable" data-filter="image_page" onclick="toggleArtFilter('image_page')" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);">
       <span class="value" style="color: #fff;">📖 ${artViewsSummary?.image_pages || 0}</span>
       <span class="label" style="color: #ede9fe;">Chapter Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ede9fe;">i</span></span>
-      <div class="tooltip">On-site image detail page loads (/Galleries/*/i-*). Someone on YOUR site viewing an image chapter. This is the real "looked at art" metric.</div>
+      <div class="tooltip">Total chapter page loads. One person viewing 3 chapters = 3 views.</div>
     </div>
     <div class="pulse-stat clickable" data-filter="xl_zoom" onclick="toggleArtFilter('xl_zoom')" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
       <span class="value" style="color: #fff;">🔍 ${artViewsSummary?.xl_zooms || 0}</span>
-      <span class="label" style="color: #ddd6fe;">XL Zooms <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
+      <span class="label" style="color: #ddd6fe;">XL Zoom/S-Show <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
       <div class="tooltip">XL images served (/img/*/xl). On-site zoom lightbox or slideshow views. High-intent engagement.</div>
     </div>
     <div class="pulse-stat clickable" data-filter="gallery" onclick="toggleArtFilter('gallery')" style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%);">
@@ -2618,21 +2593,16 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <span class="label" style="color: #374151;">Galleries <span class="info-icon" style="background: rgba(0,0,0,0.1); color: #374151;">i</span></span>
       <div class="tooltip">Gallery page loads. Someone browsing a collection on your site.</div>
     </div>
-    <div class="pulse-stat clickable" data-filter="onsite_l" onclick="toggleArtFilter('onsite_l')" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-      <span class="value" style="color: #fff;">🏠 ${artViewsSummary?.onsite_l || 0}</span>
-      <span class="label" style="color: #a7f3d0;">On-Site L <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
-      <div class="tooltip">L-size images loaded from k4studios.com pages (lazy loading, slideshows, prefetch). On-site activity.</div>
-    </div>
     <div class="pulse-stat clickable" data-filter="external_image" onclick="toggleArtFilter('external_image')" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
-      <span class="value" style="color: #fff;">🌐 ${artViewsSummary?.true_external || 0}</span>
+      <span class="value" style="color: #fff;">🌐 ${artViewsSummary?.external_images || 0}</span>
       <span class="label" style="color: #fed7aa;">External <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fed7aa;">i</span></span>
-      <div class="tooltip">L-size images served to external platforms (Google Images, Bing, Pinterest). Off-site discovery. Many show as "direct" because Google strips referrer.</div>
+      <div class="tooltip">L-size images served to external platforms (Google Images, Bing, Pinterest). Off-site discovery.</div>
     </div>
   </div>
-  ${(topArtViews?.chapters?.length > 0 || topArtViews?.xlZooms?.length > 0 || topArtViews?.onsiteL?.length > 0 || topArtViews?.external?.length > 0 || topArtViews?.galleries?.length > 0) ? `
+  ${(topArtViews?.chapters?.length > 0 || topArtViews?.xlZooms?.length > 0 || topArtViews?.external?.length > 0 || topArtViews?.galleries?.length > 0) ? `
   <div class="section" style="margin-top: 15px;">
     <h3>Top Viewed Art <span style="font-size: 11px; color: #888; font-weight: normal;">(server-side, top 15 each)</span></h3>
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 10px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px;">
       <!-- Chapters Column -->
       <div>
         <h4 style="margin: 0 0 8px 0; font-size: 11px; color: #a78bfa;">📖 Chapters <span style="color: #666; font-weight: normal;">(${topArtViews.chapters?.length || 0})</span></h4>
@@ -2671,25 +2641,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
               '</div>' +
             '</div>';
           }).join('') || '<p style="color: #555; font-size: 10px;">No XL zooms yet</p>'}
-        </div>
-      </div>
-      <!-- On-Site L Column -->
-      <div>
-        <h4 style="margin: 0 0 8px 0; font-size: 11px; color: #10b981;">🏠 On-Site L <span style="color: #666; font-weight: normal;">(${topArtViews.onsiteL?.length || 0})</span></h4>
-        <div style="max-height: 300px; overflow-y: auto; padding-right: 4px;">
-          ${(topArtViews.onsiteL || []).map(a => {
-            const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
-            const label = a.target_id.length > 14 ? '...' + a.target_id.slice(-14) : a.target_id;
-            return '<div style="display: flex; align-items: center; padding: 4px; border-left: 3px solid #10b981; gap: 4px; background: rgba(16, 185, 129, 0.12); border-radius: 0 4px 4px 0; margin-bottom: 3px;">' +
-              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" style="width: 24px; height: 24px; object-fit: cover; border-radius: 3px; background: #333; flex-shrink: 0;">' : '<span style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 3px; font-size: 10px;">🏠</span>') +
-              '<div style="flex: 1; min-width: 0;">' +
-                '<span style="color: #10b981; font-size: 8px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + label + '</span>' +
-              '</div>' +
-              '<div style="display: flex; gap: 2px; flex-shrink: 0;">' +
-                '<span style="background: #064e3b; padding: 2px 3px; border-radius: 3px; font-size: 9px; font-weight: bold; color: #10b981;">' + a.views + '</span>' +
-              '</div>' +
-            '</div>';
-          }).join('') || '<p style="color: #555; font-size: 10px;">No on-site L yet</p>'}
         </div>
       </div>
       <!-- External Column -->
@@ -3964,8 +3915,6 @@ async function handleSerpLaunch(request, env) {
   <script>
     function openGoogle(q) {
       window.open('https://www.google.com/search?q=' + q, '_blank');
-      // Google AI (Gemini) - searches with AI mode, slight delay to avoid popup blocker
-      setTimeout(() => window.open('https://www.google.com/search?q=' + q + '&udm=50', '_blank'), 100);
     }
     
     function openBing(q) {
