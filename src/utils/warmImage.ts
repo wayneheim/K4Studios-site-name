@@ -44,5 +44,6 @@ export function warmImage(
   const img = new Image();
   img.decoding = 'async';
   img.loading = 'eager';
-  img.src = `/img/${trimmedId}/${size}`;
+  // Add ?warm=1 so the worker knows this is a preload, not an explicit zoom
+  img.src = `/img/${trimmedId}/${size}?warm=1`;
 }

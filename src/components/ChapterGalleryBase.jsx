@@ -1,5 +1,6 @@
 import { warmImage } from "../utils/warmImage";
 import { trackEvent } from "../utils/analytics";
+import { trackEvent as trackArtView } from "../utils/trackEvent";
 import { useState, useRef, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight, Info } from "lucide-react";
@@ -1545,6 +1546,7 @@ export default function ChapterGalleryBase({
                               type="button"
                               onClick={() => {
                                 track("slideshow_start");
+                                trackArtView('slideshow_start', selectedImage?.id || viewingImage?.id);
                                 if (!tourOpen()) {
                                   setShowStoryShow(true);
                                 }
@@ -1588,6 +1590,7 @@ export default function ChapterGalleryBase({
                             type="button"
                             onClick={() => {
                               track("slideshow_start");
+                              trackArtView('slideshow_start', selectedImage?.id || viewingImage?.id);
                               if (!tourOpen()) {
                                 setShowStoryShow(true);
                               }

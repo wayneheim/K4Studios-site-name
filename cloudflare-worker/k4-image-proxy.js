@@ -554,11 +554,12 @@ async function handleImageRequest(request, ctx, env) {
     }
 
     // Log art views by size:
-    // XL = on-site zoom/slideshow (internal)
+    // XL = tracked via /__k4track/event beacon (user clicks), not image loads
     // L = external embeds ONLY (Google Images, Bing, Pinterest, FB, etc.)
     //     Skip L tracking for on-site traffic (k4studios referrer) to avoid inflated counts
     if (env?.DB) {
-      if (route.size === 'xl') {
+      // XL logging removed - now tracked via event beacon on zoom/slideshow click
+      if (false) { // xl_zoom disabled - keeping code for reference
         ctx.waitUntil(logArtView(env, 'xl_zoom', route.imageId, request));
       } else if (route.size === 'l') {
         const referer = request.headers.get('Referer') || '';
@@ -686,10 +687,11 @@ async function logArtView(env, type, targetId, request) {
     const isBot = (isDatacenterIP(ip) && !referrer) || 
                   (isOnsiteType && !referrer) ? 1 : 0;
     
-    // Insert with dedup key (IP hash + target + hour)
+    // Insert with dedup key (IP hash + target + type + hour)
     // The UNIQUE constraint on dedup_key handles collisions gracefully
+    // Type is included so chapter view + zoom = 2 separate valid entries
     const hour = new Date().toISOString().slice(0, 13); // YYYY-MM-DDTHH
-    const dedupKey = `${ipHash}:${targetId}:${hour}`;
+    const dedupKey = `${ipHash}:${targetId}:${type}:${hour}`;
     
     await env.DB.prepare(`
       INSERT OR IGNORE INTO art_views (type, target_id, ip_hash, ua_class, country, referrer, dedup_key, is_bot)
@@ -1613,13 +1615,14 @@ async function handleAdminAnalytics(request, env) {
     const cowboyResult = await env.DB.prepare(cowboyQuery).first();
     const cowboyJumps = cowboyResult?.jumps || 0;
 
-    // Query 12b: Top Entry Pages (first page of each session)
-    // This shows WHERE people actually land on the site
+    // Query 12b: Top Entry Pages (first page of each session) with referrer
+    // This shows WHERE people actually land on the site and WHERE they came from
     const entryPagesQuery = `
       WITH first_pages AS (
         SELECT 
           session_id,
           page_path,
+          referrer,
           ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY created_at ASC) as rn
         FROM events
         WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
@@ -1628,15 +1631,71 @@ async function handleAdminAnalytics(request, env) {
       )
       SELECT 
         page_path,
+        CASE 
+          WHEN referrer IS NULL OR referrer = '' THEN 'direct'
+          WHEN referrer LIKE '%images.google.%' OR referrer LIKE '%google.%/imgres%' THEN 'google_images'
+          WHEN referrer LIKE '%google.%' THEN 'google_search'
+          WHEN referrer LIKE '%bing.%/images%' THEN 'bing_images'
+          WHEN referrer LIKE '%bing.%' THEN 'bing_search'
+          WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
+          WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
+          WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'twitter'
+          WHEN referrer LIKE '%instagram.%' THEN 'instagram'
+          WHEN referrer LIKE '%linkedin.%' THEN 'linkedin'
+          WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
+          WHEN referrer LIKE '%k4studios.com%' THEN 'internal'
+          ELSE 'unattributed'
+        END as ref_source,
         COUNT(*) as sessions
       FROM first_pages
       WHERE rn = 1
-      GROUP BY page_path
+      GROUP BY page_path, ref_source
       ORDER BY sessions DESC
-      LIMIT 10
+      LIMIT 15
     `;
     const entryPagesResult = await env.DB.prepare(entryPagesQuery).all();
     const entryPages = entryPagesResult.results || [];
+    
+    // Entry referrer summary - where did site visitors come from?
+    // More specific patterns to distinguish search vs images
+    const entryRefSummaryQuery = `
+      WITH first_pages AS (
+        SELECT 
+          session_id,
+          referrer,
+          ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY created_at ASC) as rn
+        FROM events
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+          AND page_path IS NOT NULL
+          AND event = 'page_view'
+      )
+      SELECT 
+        CASE 
+          WHEN referrer IS NULL OR referrer = '' THEN 'direct'
+          WHEN referrer LIKE '%images.google.%' OR referrer LIKE '%google.%/imgres%' THEN 'google_images'
+          WHEN referrer LIKE '%google.%' THEN 'google_search'
+          WHEN referrer LIKE '%bing.%/images%' THEN 'bing_images'
+          WHEN referrer LIKE '%bing.%' THEN 'bing_search'
+          WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
+          WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
+          WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'twitter'
+          WHEN referrer LIKE '%instagram.%' THEN 'instagram'
+          WHEN referrer LIKE '%linkedin.%' THEN 'linkedin'
+          WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
+          WHEN referrer LIKE '%k4studios.com%' THEN 'internal'
+          ELSE 'unattributed'
+        END as ref_source,
+        COUNT(*) as sessions
+      FROM first_pages
+      WHERE rn = 1
+      GROUP BY ref_source
+      ORDER BY sessions DESC
+    `;
+    const entryRefSummaryResult = await env.DB.prepare(entryRefSummaryQuery).all();
+    const entryRefSummary = entryRefSummaryResult.results || [];
+    // Convert to lookup
+    const entryRefCounts = {};
+    entryRefSummary.forEach(r => { entryRefCounts[r.ref_source] = r.sessions; });
 
     // Query 13: Session Depth Score (engagement quality metric)
     // Weighted scoring: zoom=4, collector_notes=5, theme_click=3, nav=2, other=1
@@ -1673,6 +1732,11 @@ async function handleAdminAnalytics(request, env) {
     `;
     const depthResults = await env.DB.prepare(depthQuery).all();
     const topDepthSessions = depthResults.results || [];
+    
+    // Calculate min/max engagement scores from topDepthSessions
+    const engagementScores = topDepthSessions.map(s => s.depth_score).filter(s => s > 0);
+    const minEngagement = engagementScores.length > 0 ? Math.min(...engagementScores) : 0;
+    const maxEngagement = engagementScores.length > 0 ? Math.max(...engagementScores) : 0;
 
     // Query 13b: Average depth score across all sessions
     const avgDepthQuery = `
@@ -1774,20 +1838,31 @@ async function handleAdminAnalytics(request, env) {
     const exitPagesResult = await env.DB.prepare(exitPagesQuery).all();
     const exitPages = exitPagesResult.results || [];
 
-    // Query 15b: Exit summary by page type
+    // Query 15b: Exit summary by page category (Home/Gallery/Images/Landing/Blog/Other)
     const exitSummaryQuery = `
       SELECT 
-        page_type,
+        CASE
+          WHEN page_path = '/' THEN 'home'
+          WHEN page_path LIKE '%/i-%' THEN 'images'
+          WHEN page_path LIKE '/Blog%' OR page_path LIKE '/blog%' THEN 'blog'
+          WHEN page_path = '/Other/K4-Select-Series/Engrained' THEN 'gallery'
+          WHEN page_path LIKE '/%' AND page_path NOT LIKE '/%/%' AND page_path != '/' THEN 'gallery'
+          WHEN page_path IN ('/About', '/Contact', '/FAQ', '/Privacy', '/Terms', '/What-Is-Western-Art', '/What-Is-Western-Fine-Art-Photography', '/What-Is-Painterly-Photography', '/What-Is-Cowboy-Fine-Art-Photography', '/Other/K4-Select-Series') THEN 'landing'
+          ELSE 'other'
+        END as exit_category,
         COUNT(*) as exits
       FROM events
       WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
         AND event = 'session_exit'
-        AND page_type IS NOT NULL
-      GROUP BY page_type
+        AND page_path IS NOT NULL
+      GROUP BY exit_category
       ORDER BY exits DESC
     `;
     const exitSummaryResult = await env.DB.prepare(exitSummaryQuery).all();
     const exitSummary = exitSummaryResult.results || [];
+    // Convert to lookup object
+    const exitByCategory = {};
+    exitSummary.forEach(e => { exitByCategory[e.exit_category] = e.exits; });
 
     // Query 16: Edge Events (301/410/404 from edge_events table)
     const edgeDateClause = yesterday 
@@ -1839,7 +1914,7 @@ async function handleAdminAnalytics(request, env) {
     }
 
     // Query 17: Art Views (Layer B - server-side art attention tracking)
-    let artViewsSummary = { xl_zooms: 0, external_images: 0, image_pages: 0, galleries: 0, total: 0, unique_viewers: 0, onsite_viewers: 0 };
+    let artViewsSummary = { xl_zooms: 0, slideshow_starts: 0, external_images: 0, image_pages: 0, galleries: 0, total: 0, unique_viewers: 0, onsite_viewers: 0 };
     let artViewsByType = [];
     let topArtViews = [];
     try {
@@ -1861,20 +1936,35 @@ async function handleAdminAnalytics(request, env) {
       artViewsByType = artViewsSummaryResult.results || [];
       
       // Calculate totals
+      let pollutedExternalCount = 0;
       for (const row of artViewsByType) {
-        artViewsSummary.total += row.views;
         if (row.type === 'xl_zoom') artViewsSummary.xl_zooms = row.views;
-        if (row.type === 'external_image') artViewsSummary.external_images = row.views;
+        if (row.type === 'slideshow_start') artViewsSummary.slideshow_starts = row.views;
         if (row.type === 'image') artViewsSummary.xl_zooms += row.views; // Legacy 'image' type → treat as xl_zoom
         if (row.type === 'image_page') artViewsSummary.image_pages = row.views;
         if (row.type === 'gallery') artViewsSummary.galleries = row.views;
+        if (row.type === 'external_image') pollutedExternalCount = row.views; // Track polluted count to subtract
       }
       
-      // Get unique viewers across all types (deduplicated)
+      // Get CLEAN external image count (excluding k4studios referrers - old polluted data)
+      const cleanExternalQuery = `
+        SELECT COUNT(*) as views
+        FROM art_views
+        WHERE ${edgeDateClause} ${botFilterClause} AND type = 'external_image'
+          AND (referrer IS NULL OR referrer NOT LIKE '%k4studios%')
+      `;
+      const cleanExternalResult = await env.DB.prepare(cleanExternalQuery).first();
+      artViewsSummary.external_images = cleanExternalResult?.views || 0;
+      
+      // Total ART views = Chapters + XL Zooms + Slideshow + External (NOT galleries - those are collection pages, not art)
+      artViewsSummary.total = (artViewsSummary.image_pages || 0) + (artViewsSummary.xl_zooms || 0) + (artViewsSummary.slideshow_starts || 0) + artViewsSummary.external_images;
+      
+      // Get unique viewers across all types (deduplicated, excluding polluted external traffic)
       const uniqueViewersQuery = `
         SELECT COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
         WHERE ${edgeDateClause} AND (is_bot = 0 OR is_bot IS NULL)
+          AND (type != 'external_image' OR (referrer IS NULL OR referrer NOT LIKE '%k4studios%'))
       `;
       const uniqueViewersResult = await env.DB.prepare(uniqueViewersQuery).first();
       artViewsSummary.unique_viewers = uniqueViewersResult?.unique_viewers || 0;
@@ -1914,24 +2004,27 @@ async function handleAdminAnalytics(request, env) {
         LIMIT 15
       `;
       // External images (Google Images, Bing, Pinterest, etc - NOT from k4studios)
+      // Exclude k4studios referrers (internal traffic logged before filter was added)
+      // Show top images by total views, with dominant source indicator
       const topExternalQuery = `
         SELECT 
-          type,
+          'external_image' as type,
           target_id,
-          COUNT(*) as views,
-          COUNT(DISTINCT ip_hash) as unique_viewers,
           CASE 
-            WHEN SUM(CASE WHEN referrer LIKE '%google.%' THEN 1 ELSE 0 END) > 0 THEN 'google'
-            WHEN SUM(CASE WHEN referrer LIKE '%bing.%' THEN 1 ELSE 0 END) > 0 THEN 'bing'
-            WHEN SUM(CASE WHEN referrer LIKE '%pinterest.%' THEN 1 ELSE 0 END) > 0 THEN 'pinterest'
-            WHEN SUM(CASE WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 1 ELSE 0 END) > 0 THEN 'facebook'
-            WHEN SUM(CASE WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' THEN 1 ELSE 0 END) > 0 THEN 'twitter'
-            WHEN SUM(CASE WHEN referrer LIKE '%duckduckgo.%' THEN 1 ELSE 0 END) > 0 THEN 'duckduckgo'
-            ELSE 'direct'
-          END as top_source
+            WHEN referrer LIKE '%google.%' THEN 'google'
+            WHEN referrer LIKE '%bing.%' THEN 'bing'
+            WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
+            WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
+            WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'twitter'
+            WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
+            ELSE 'unattributed'
+          END as top_source,
+          COUNT(*) as views,
+          COUNT(*) as unique_viewers
         FROM art_views
         WHERE ${edgeDateClause} AND type = 'external_image' ${botFilterClause}
-        GROUP BY target_id
+          AND (referrer IS NULL OR referrer NOT LIKE '%k4studios%')
+        GROUP BY target_id, top_source
         ORDER BY views DESC
         LIMIT 15
       `;
@@ -1960,33 +2053,34 @@ async function handleAdminAnalytics(request, env) {
         galleries: topGalleriesResult.results || []
       };
       
-      // Art View Traffic Sources - where are the external image views coming from?
-      const artReferrerQuery = `
+      // Art View External Displays - where are our images being shown externally?
+      // ONLY external_image types - images being served to other platforms (not clicks to site)
+      // Exclude k4studios referrers (internal traffic that was logged before filter was added)
+      const artExternalDisplayQuery = `
         SELECT 
           CASE 
-            WHEN referrer IS NULL OR referrer = '' THEN 'direct/unknown'
             WHEN referrer LIKE '%google.%' THEN 'Google Images'
             WHEN referrer LIKE '%bing.%' THEN 'Bing Images'
             WHEN referrer LIKE '%pinterest.%' THEN 'Pinterest'
             WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'Facebook'
-            WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' THEN 'Twitter/X'
+            WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'Twitter/X'
             WHEN referrer LIKE '%instagram.%' THEN 'Instagram'
             WHEN referrer LIKE '%linkedin.%' THEN 'LinkedIn'
-            WHEN referrer LIKE '%k4studios.com%' THEN 'On-Site'
             WHEN referrer LIKE '%duckduckgo.%' THEN 'DuckDuckGo'
             WHEN referrer LIKE '%yandex.%' THEN 'Yandex'
             WHEN referrer LIKE '%baidu.%' THEN 'Baidu'
-            ELSE 'Other'
+            ELSE 'Unattributed'
           END as source,
           COUNT(*) as views,
           COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
-        WHERE ${edgeDateClause} ${botFilterClause}
+        WHERE ${edgeDateClause} ${botFilterClause} AND type = 'external_image'
+          AND (referrer IS NULL OR referrer NOT LIKE '%k4studios%')
         GROUP BY source
         ORDER BY views DESC
       `;
-      const artReferrerResult = await env.DB.prepare(artReferrerQuery).all();
-      artViewsSummary.referrers = artReferrerResult.results || [];
+      const artExternalDisplayResult = await env.DB.prepare(artExternalDisplayQuery).all();
+      artViewsSummary.externalDisplays = artExternalDisplayResult.results || [];
       
       // Art Views Geography - where are art viewers located?
       const artGeoQuery = `
@@ -2126,12 +2220,15 @@ async function handleAdminAnalytics(request, env) {
       totalImageViews,
       themesClicked: themesClicked.results || [],
       topDepthSessions,
+      minEngagement,
+      maxEngagement,
       avgDepthScore,
       deepSessionPct,
       deepSessions,
       totalSessions,
       exitPages,
       exitSummary,
+      exitByCategory,
       botPct,
       botSessions,
       hideBots,
@@ -2139,6 +2236,7 @@ async function handleAdminAnalytics(request, env) {
       edgeEvents,
       edgeSummary,
       entryPages,
+      entryRefCounts,
       bounceRate,
       avgDurationFormatted,
       peakHours,
@@ -2225,18 +2323,60 @@ async function handleExportCSV(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, botIntelligence }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, botIntelligence }) {
   const s = summary || {};
   
-  // Helper to format event names nicely
+  // Canonical list of all trackable events with display labels
+  const eventLabels = {
+    'page_view': 'Page View',
+    'session_exit': 'Session Exit',
+    'nav_next': 'Nav - Next',
+    'nav_prev': 'Nav - Prev',
+    'grid_open': 'Grid - Open',
+    'zoom_open': 'Zoom - Open',
+    'slideshow_open': 'Slideshow - Open',
+    'slideshow_start': 'Slideshow Start',
+    'collector_notes_open': 'Collector Notes',
+    'guide_open': 'Guide - Open',
+    'sister_link_click': 'Sister Link Click',
+    'more_about_click': 'More About Image',
+    'exit_to_gallery': 'Exit to Gallery',
+    'theme_click': 'Theme Click',
+    'gallery_hero_click': 'Hero Image Click',
+    'gallery_explore_click': 'Gallery Explore Click',
+    'gallery_preview_click': 'Gallery Preview Click',
+    'cowboy_jump': 'Cowboy Jump',
+    'scroll_25': 'Grid - 25% Scroll',
+    'scroll_50': 'Grid - 50% Scroll',
+    'scroll_75': 'Grid - 75% Scroll',
+    'scroll_100': 'Grid - 100% Scroll'
+  };
+  
+  // Merge DB results with canonical list - always show all events
+  const eventCounts = {};
+  events.forEach(e => { eventCounts[e.event] = e.count; });
+  
+  // Inject slideshow_start from art_views (Layer B) into event counts
+  if (artViewsSummary?.slideshow_starts) {
+    eventCounts['slideshow_start'] = (eventCounts['slideshow_start'] || 0) + artViewsSummary.slideshow_starts;
+  }
+  
+  const allEvents = Object.keys(eventLabels).map(key => ({
+    event: key,
+    label: eventLabels[key],
+    count: eventCounts[key] || 0
+  })).sort((a, b) => b.count - a.count);
+  
+  // Helper to format event names (fallback for unlisted events)
   const formatEventName = (name) => {
+    if (eventLabels[name]) return eventLabels[name];
     return name
       .replace(/_/g, ' ')
       .replace(/\b\w/g, c => c.toUpperCase());
   };
   
   // Calculate max for bar chart scaling
-  const maxEventCount = Math.max(...events.map(e => e.count), 1);
+  const maxEventCount = Math.max(...allEvents.map(e => e.count), 1);
   const maxRefSessions = Math.max(...referrers.map(r => r.sessions), 1);
   const maxGeoVisitors = Math.max(...geo.map(g => g.visitors), 1);
   const maxPageSessions = Math.max(...pages.map(p => p.sessions), 1);
@@ -2499,9 +2639,9 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <div class="tooltip">New: IPs never seen before this period. Returning: IPs that visited previously. Green = new, Orange = returning.</div>
     </div>
     <div class="pulse-stat">
-      <span class="value">${s.sessions || 0}</span>
+      <span class="value">${s.sessions || 0}${minEngagement > 0 ? `<span style="opacity: 0.6; font-size: 0.7em;"> (${minEngagement}-${maxEngagement})</span>` : ''}</span>
       <span class="label">Engaged <span class="info-icon">i</span></span>
-      <div class="tooltip">Engaged sessions: browser sessions where JS loaded and events fired. This is Layer C (intent) — the innermost funnel.</div>
+      <div class="tooltip">Engaged sessions: browser sessions where JS loaded and events fired. Range shows min-max engagement scores (zoom=4, notes=5, theme=3, nav=2).</div>
     </div>
     <div class="pulse-stat">
       <span class="value">${s.avg_events_per_session || 0}</span>
@@ -2528,11 +2668,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <span class="label">Nav <span class="info-icon">i</span></span>
       <div class="tooltip">% of sessions that used navigation (next/prev arrows). Shows gallery exploration intent.</div>
     </div>
-    ${artViewsSummary.xl_zooms > 0 ? `<div class="pulse-stat">
-      <span class="value" style="color:#f59e0b">${artViewsSummary.xl_zooms}</span>
-      <span class="label">XL Zoom/S-Show <span class="info-icon">i</span></span>
-      <div class="tooltip">XL image loads (zoom modal or slideshow). Server-side tracked — same as ART bar.</div>
-    </div>` : ''}}
     ${cowboyJumps > 0 ? `<div class="pulse-stat highlight">
       <span class="value">🤠 ${cowboyJumps}</span>
       <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
@@ -2558,6 +2693,16 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <span class="label" style="color: #d1d5db;">Bots <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #d1d5db;">i</span></span>
       <div class="tooltip">Estimated bot traffic (${botSessions}/${totalSessions} sessions). Detected by: AWS/datacenter IPs, Ashburn city, unknown device. Not filtered from other stats.</div>
     </div>` : ''}
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+      <span class="value" style="color: #fff;">👤 ${artViewsSummary?.unique_viewers || 0}</span>
+      <span class="label" style="color: #a7f3d0;">Art Viewers <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
+      <div class="tooltip">Unique people who viewed your art (server-side tracked). On-site: ${artViewsSummary?.onsite_viewers || 0}, External-only: ${(artViewsSummary?.unique_viewers || 0) - (artViewsSummary?.onsite_viewers || 0)}. More reliable than JS sessions.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
+      <span class="value" style="color: #fff;">🖼️ ${artViewsSummary?.total || 0}</span>
+      <span class="label" style="color: #ddd6fe;">Image Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
+      <div class="tooltip">Total image file views (server-side). Chapters + XL Zooms + External embeds. Does not include gallery page views.</div>
+    </div>
   </div>
 
   <!-- Art Views Section (Layer B - Server-Side Attention Tracking) -->
@@ -2565,125 +2710,98 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   <p style="color: #888; margin: -10px 0 15px 0; font-size: 12px;">
     <strong style="color: #10b981;">Human art viewers (cleaned)</strong> — bots, scrapers, and datacenter traffic excluded. 
     <span class="section-tip" style="display: inline;"><span class="info-icon">i</span><div class="tooltip">Excludes: datacenter IPs without referrer, known scraper patterns, bot user agents. What remains are real humans viewing your art on k4studios.com or via external embeds (Google Images, Pinterest, etc.).</div></span>
-    <span style="margin-left: 8px;"><strong>Click filters to show/hide types below.</strong></span>
   </p>
-  <div class="pulse">
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-      <span class="value" style="color: #fff;">👤 <span style="font-weight: bold;">${artViewsSummary?.onsite_viewers || 0}</span><span style="opacity: 0.7; font-size: 0.8em;"> / ${(artViewsSummary?.unique_viewers || 0) - (artViewsSummary?.onsite_viewers || 0)}</span></span>
-      <span class="label" style="color: #a7f3d0;">Unique Viewers <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
-      <div class="tooltip"><strong>On-Site:</strong> ${artViewsSummary?.onsite_viewers || 0} unique people on k4studios.com.<br><strong>External-Only:</strong> ${(artViewsSummary?.unique_viewers || 0) - (artViewsSummary?.onsite_viewers || 0)} people who only saw images off-site.<br><em>People can view multiple chapters.</em></div>
-    </div>
-    <div class="pulse-stat clickable" data-filter="image_page" onclick="toggleArtFilter('image_page')" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);">
-      <span class="value" style="color: #fff;">📖 ${artViewsSummary?.image_pages || 0}</span>
-      <span class="label" style="color: #ede9fe;">Chapter Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ede9fe;">i</span></span>
-      <div class="tooltip">Total chapter page loads. One person viewing 3 chapters = 3 views.</div>
-    </div>
-    <div class="pulse-stat clickable" data-filter="xl_zoom" onclick="toggleArtFilter('xl_zoom')" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
-      <span class="value" style="color: #fff;">🔍 ${artViewsSummary?.xl_zooms || 0}</span>
-      <span class="label" style="color: #ddd6fe;">XL Zoom/S-Show <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
-      <div class="tooltip">XL images served (/img/*/xl). On-site zoom lightbox or slideshow views. High-intent engagement.</div>
-    </div>
-    <div class="pulse-stat clickable" data-filter="gallery" onclick="toggleArtFilter('gallery')" style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%);">
-      <span class="value" style="color: #1f2937;">📁 ${artViewsSummary?.galleries || 0}</span>
-      <span class="label" style="color: #374151;">Galleries <span class="info-icon" style="background: rgba(0,0,0,0.1); color: #374151;">i</span></span>
-      <div class="tooltip">Gallery page loads. Someone browsing a collection on your site.</div>
-    </div>
-    <div class="pulse-stat clickable" data-filter="external_image" onclick="toggleArtFilter('external_image')" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
-      <span class="value" style="color: #fff;">🌐 ${artViewsSummary?.external_images || 0}</span>
-      <span class="label" style="color: #fed7aa;">External <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fed7aa;">i</span></span>
-      <div class="tooltip">L-size images served to external platforms (Google Images, Bing, Pinterest). Off-site discovery.</div>
-    </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
-      <span class="value" style="color: #fff;">${artViewsSummary?.total || 0}</span>
-      <span class="label" style="color: #ddd6fe;">Total Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
-      <div class="tooltip">Total art views (on-site + external). Chapter Views + XL Zooms + Galleries + External.</div>
-    </div>
-  </div>
   ${(topArtViews?.chapters?.length > 0 || topArtViews?.xlZooms?.length > 0 || topArtViews?.external?.length > 0 || topArtViews?.galleries?.length > 0) ? `
-  <div class="section" style="margin-top: 15px;">
-    <h3>Top Viewed Art <span style="font-size: 11px; color: #888; font-weight: normal;">(server-side, top 15 each)</span></h3>
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px;">
       <!-- Chapters Column -->
       <div>
-        <h4 style="margin: 0 0 8px 0; font-size: 11px; color: #a78bfa;">📖 Chapters <span style="color: #666; font-weight: normal;">(${topArtViews.chapters?.length || 0})</span></h4>
-        <div style="max-height: 300px; overflow-y: auto; padding-right: 4px;">
-          ${(topArtViews.chapters || []).map(a => {
+        <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #a78bfa; display: flex; align-items: center; justify-content: space-between;">
+          <span>📖 Chapters</span>
+          <span style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Total chapter page views">${artViewsSummary?.image_pages || 0}</span>
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto; padding-right: 4px;">
+          ${(topArtViews.chapters || []).map((a, i) => {
             const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
-            const label = a.target_id.length > 18 ? '...' + a.target_id.slice(-18) : a.target_id;
-            return '<div style="display: flex; align-items: center; padding: 4px; border-left: 3px solid #a78bfa; gap: 5px; background: rgba(167, 139, 250, 0.12); border-radius: 0 4px 4px 0; margin-bottom: 3px;">' +
-              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" style="width: 28px; height: 28px; object-fit: cover; border-radius: 3px; background: #333; flex-shrink: 0;">' : '<span style="width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 3px; font-size: 12px;">📖</span>') +
+            return '<a href="https://k4studios.com/art/' + a.target_id + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(167, 139, 250, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #a78bfa; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(167,139,250,0.25)\'" onmouseout="this.style.background=\'rgba(167,139,250,0.1)\'">' +
+              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 4 ? 'eager' : 'lazy') + '" style="width: 52px; height: 52px; object-fit: cover; border-radius: 4px; flex-shrink: 0;">' : '<span style="width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">📖</span>') +
               '<div style="flex: 1; min-width: 0;">' +
-                '<span style="color: #a78bfa; font-size: 9px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + label + '</span>' +
+                '<div style="color: #a78bfa; font-size: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + a.target_id + '</div>' +
+                '<div style="display: flex; gap: 8px; margin-top: 2px;">' +
+                  '<span style="font-size: 12px; font-weight: bold; color: #a78bfa;">' + a.views + ' views</span>' +
+                  '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
+                '</div>' +
               '</div>' +
-              '<div style="display: flex; gap: 2px; flex-shrink: 0;">' +
-                '<span style="background: #2d2250; padding: 2px 4px; border-radius: 3px; font-size: 10px; font-weight: bold; color: #a78bfa;">' + a.views + '</span>' +
-                '<span style="background: #1f2937; padding: 2px 3px; border-radius: 3px; font-size: 8px; color: #888;">' + a.unique_viewers + '👤</span>' +
-              '</div>' +
-            '</div>';
+            '</a>';
           }).join('') || '<p style="color: #555; font-size: 10px;">No chapters yet</p>'}
         </div>
       </div>
       <!-- XL Zooms Column -->
       <div>
-        <h4 style="margin: 0 0 8px 0; font-size: 11px; color: #8b5cf6;">🔍 XL Zooms <span style="color: #666; font-weight: normal;">(${topArtViews.xlZooms?.length || 0})</span></h4>
-        <div style="max-height: 300px; overflow-y: auto; padding-right: 4px;">
-          ${(topArtViews.xlZooms || []).map(a => {
+        <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #06b6d4; display: flex; align-items: center; justify-content: space-between;">
+          <span>🔍 XL Zooms</span>
+          <span style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Zoom button clicks">${artViewsSummary?.xl_zooms || 0}</span>
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto; padding-right: 4px;">
+          ${(topArtViews.xlZooms || []).map((a, i) => {
             const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
-            const label = a.target_id.length > 18 ? '...' + a.target_id.slice(-18) : a.target_id;
-            return '<div style="display: flex; align-items: center; padding: 4px; border-left: 3px solid #8b5cf6; gap: 5px; background: rgba(139, 92, 246, 0.15); border-radius: 0 4px 4px 0; margin-bottom: 3px;">' +
-              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" style="width: 28px; height: 28px; object-fit: cover; border-radius: 3px; background: #333; flex-shrink: 0;">' : '<span style="width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 3px; font-size: 12px;">🔍</span>') +
+            return '<a href="https://k4studios.com/art/' + a.target_id + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(6, 182, 212, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #06b6d4; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(6,182,212,0.25)\'" onmouseout="this.style.background=\'rgba(6,182,212,0.1)\'">' +
+              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 4 ? 'eager' : 'lazy') + '" style="width: 52px; height: 52px; object-fit: cover; border-radius: 4px; flex-shrink: 0;">' : '<span style="width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">🔍</span>') +
               '<div style="flex: 1; min-width: 0;">' +
-                '<span style="color: #8b5cf6; font-size: 9px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + label + '</span>' +
+                '<div style="color: #06b6d4; font-size: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + a.target_id + '</div>' +
+                '<div style="display: flex; gap: 8px; margin-top: 2px;">' +
+                  '<span style="font-size: 12px; font-weight: bold; color: #06b6d4;">' + a.views + ' views</span>' +
+                  '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
+                '</div>' +
               '</div>' +
-              '<div style="display: flex; gap: 2px; flex-shrink: 0;">' +
-                '<span style="background: #2d2250; padding: 2px 4px; border-radius: 3px; font-size: 10px; font-weight: bold; color: #8b5cf6;">' + a.views + '</span>' +
-                '<span style="background: #1f2937; padding: 2px 3px; border-radius: 3px; font-size: 8px; color: #888;">' + a.unique_viewers + '👤</span>' +
-              '</div>' +
-            '</div>';
+            '</a>';
           }).join('') || '<p style="color: #555; font-size: 10px;">No XL zooms yet</p>'}
         </div>
       </div>
       <!-- External Column -->
       <div>
-        <h4 style="margin: 0 0 8px 0; font-size: 11px; color: #f97316;">🌐 External <span style="color: #666; font-weight: normal;">(${topArtViews.external?.length || 0})</span></h4>
-        <div style="max-height: 300px; overflow-y: auto; padding-right: 4px;">
-          ${(topArtViews.external || []).map(a => {
+        <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #f97316; display: flex; align-items: center; justify-content: space-between;">
+          <span>🌐 External</span>
+          <span style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Total external image embeds">${artViewsSummary?.external_images || 0}</span>
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto; padding-right: 4px;">
+          ${(topArtViews.external || []).map((a, i) => {
             const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
-            const label = a.target_id.length > 18 ? '...' + a.target_id.slice(-18) : a.target_id;
-            const sourceIcons = { onsite: '🏠', google: '🔍', bing: '🅱️', pinterest: '📌', facebook: '📘', twitter: '🐦', duckduckgo: '🦆', other: '🌐', direct: '❓' };
-            const sourceColors = { onsite: '#10b981', google: '#4285f4', bing: '#00809d', pinterest: '#e60023', facebook: '#1877f2', twitter: '#1da1f2', duckduckgo: '#de5833', other: '#f97316', direct: '#6b7280' };
+            const sourceIcons = { onsite: '🏠', google: '🔍', bing: '🅱️', pinterest: '📌', facebook: '📘', twitter: '🐦', duckduckgo: '🦆', unattributed: '🌐', other: '🌐', direct: '❓' };
+            const sourceColors = { onsite: '#10b981', google: '#4285f4', bing: '#00809d', pinterest: '#e60023', facebook: '#1877f2', twitter: '#1da1f2', duckduckgo: '#de5833', unattributed: '#f97316', other: '#f97316', direct: '#6b7280' };
             const srcIcon = sourceIcons[a.top_source] || '🌐';
             const srcColor = sourceColors[a.top_source] || '#f97316';
-            return '<div style="display: flex; align-items: center; padding: 4px; border-left: 3px solid ' + srcColor + '; gap: 5px; background: ' + srcColor + '22; border-radius: 0 4px 4px 0; margin-bottom: 3px;">' +
-              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" style="width: 28px; height: 28px; object-fit: cover; border-radius: 3px; background: #333; flex-shrink: 0;">' : '<span style="width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 3px; font-size: 12px;">' + srcIcon + '</span>') +
+            return '<a href="https://k4studios.com/art/' + a.target_id + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: ' + srcColor + '18; border-radius: 6px; padding: 4px; border-left: 3px solid ' + srcColor + '; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'' + srcColor + '35\'" onmouseout="this.style.background=\'' + srcColor + '18\'">' +
+              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 4 ? 'eager' : 'lazy') + '" style="width: 52px; height: 52px; object-fit: cover; border-radius: 4px; flex-shrink: 0;">' : '<span style="width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">' + srcIcon + '</span>') +
               '<div style="flex: 1; min-width: 0;">' +
-                '<span style="color: #fb923c; font-size: 9px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + label + '</span>' +
+                '<div style="color: ' + srcColor + '; font-size: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + a.target_id + '</div>' +
+                '<div style="display: flex; gap: 8px; margin-top: 2px; align-items: center;">' +
+                  '<span style="font-size: 14px;">' + srcIcon + '</span>' +
+                  '<span style="font-size: 12px; font-weight: bold; color: ' + srcColor + ';">' + a.views + ' views</span>' +
+                  '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
+                '</div>' +
               '</div>' +
-              '<span style="font-size: 12px;" title="' + (a.top_source || 'unknown') + '">' + srcIcon + '</span>' +
-              '<div style="display: flex; gap: 2px; flex-shrink: 0;">' +
-                '<span style="background: #431407; padding: 2px 4px; border-radius: 3px; font-size: 10px; font-weight: bold; color: #fb923c;">' + a.views + '</span>' +
-                '<span style="background: #1f2937; padding: 2px 3px; border-radius: 3px; font-size: 8px; color: #888;">' + a.unique_viewers + '👤</span>' +
-              '</div>' +
-            '</div>';
+            '</a>';
           }).join('') || '<p style="color: #555; font-size: 10px;">No external yet</p>'}
         </div>
       </div>
       <!-- Galleries Column -->
       <div>
-        <h4 style="margin: 0 0 8px 0; font-size: 11px; color: #c4b5fd;">📁 Galleries <span style="color: #666; font-weight: normal;">(${topArtViews.galleries?.length || 0})</span></h4>
-        <div style="max-height: 300px; overflow-y: auto; padding-right: 4px;">
-          ${(topArtViews.galleries || []).map(a => {
-            const label = a.target_id.length > 18 ? '...' + a.target_id.slice(-18) : a.target_id;
-            return '<div style="display: flex; align-items: center; padding: 4px; border-left: 3px solid #c4b5fd; gap: 5px; background: rgba(196, 181, 253, 0.1); border-radius: 0 4px 4px 0; margin-bottom: 3px;">' +
-              '<span style="width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 3px; font-size: 12px;">📁</span>' +
+        <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #c4b5fd; display: flex; align-items: center; justify-content: space-between;">
+          <span>📁 Galleries</span>
+          <span style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%); color: #1f2937; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Total gallery page views">${artViewsSummary?.galleries || 0}</span>
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto; padding-right: 4px;">
+          ${(topArtViews.galleries || []).map((a, i) => {
+            return '<a href="https://k4studios.com/gallery/' + a.target_id + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(196, 181, 253, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #c4b5fd; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(196,181,253,0.25)\'" onmouseout="this.style.background=\'rgba(196,181,253,0.1)\'">' +
+              '<span style="width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 24px;">📁</span>' +
               '<div style="flex: 1; min-width: 0;">' +
-                '<span style="color: #c4b5fd; font-size: 9px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + label + '</span>' +
+                '<div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500;" title="' + a.target_id + '">' + a.target_id + '</div>' +
+                '<div style="display: flex; gap: 8px; margin-top: 2px;">' +
+                  '<span style="font-size: 12px; font-weight: bold; color: #c4b5fd;">' + a.views + ' views</span>' +
+                  '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
+                '</div>' +
               '</div>' +
-              '<div style="display: flex; gap: 2px; flex-shrink: 0;">' +
-                '<span style="background: #2d2250; padding: 2px 4px; border-radius: 3px; font-size: 10px; font-weight: bold; color: #c4b5fd;">' + a.views + '</span>' +
-                '<span style="background: #1f2937; padding: 2px 3px; border-radius: 3px; font-size: 8px; color: #888;">' + a.unique_viewers + '👤</span>' +
-              '</div>' +
-            '</div>';
+            '</a>';
           }).join('') || '<p style="color: #555; font-size: 10px;">No galleries yet</p>'}
         </div>
       </div>
@@ -2692,46 +2810,66 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   </div>
   ` : ''}
   
-  <!-- Art View Traffic Sources -->
-  ${(artViewsSummary?.referrers?.length > 0) ? `
+  <!-- External Traffic - Split View: Displays (left) | Clicks (right) -->
+  ${(artViewsSummary?.externalDisplays?.length > 0 || Object.keys(entryRefCounts).length > 0) ? `
   <div class="section" style="margin-top: 15px;">
-    <h3>🌐 Art Traffic Sources <span style="font-size: 11px; color: #888; font-weight: normal;">(where viewers come from)</span></h3>
-    <p style="font-size: 10px; color: #666; margin: -5px 0 12px 0;">Google Images, Bing, Pinterest visitors vs on-site browsing</p>
-    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-      ${artViewsSummary.referrers.map(r => {
-        const icons = {
-          'Google Images': '🔍',
-          'Bing Images': '🅱️',
-          'Pinterest': '📌',
-          'Facebook': '📘',
-          'Twitter/X': '🐦',
-          'Instagram': '📷',
-          'LinkedIn': '💼',
-          'On-Site': '🏠',
-          'DuckDuckGo': '🦆',
-          'Yandex': '🇷🇺',
-          'Baidu': '🇨🇳',
-          'direct/unknown': '❓',
-          'Other': '🌐'
-        };
-        const icon = icons[r.source] || '🌐';
-        const bgColor = r.source === 'Google Images' ? '#4285f4' : 
-                        r.source === 'Bing Images' ? '#00809d' :
-                        r.source === 'Pinterest' ? '#e60023' :
-                        r.source === 'Facebook' ? '#1877f2' :
-                        r.source === 'Twitter/X' ? '#1da1f2' :
-                        r.source === 'Instagram' ? '#e1306c' :
-                        r.source === 'On-Site' ? '#10b981' :
-                        r.source === 'direct/unknown' ? '#6b7280' :
-                        '#374151';
-        return '<div style="background: ' + bgColor + '22; border: 1px solid ' + bgColor + '55; padding: 8px 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px;">' +
-          '<span style="font-size: 16px;">' + icon + '</span>' +
-          '<div>' +
-            '<div style="color: #fff; font-weight: bold; font-size: 12px;">' + r.source + '</div>' +
-            '<div style="color: #888; font-size: 10px;">' + r.views + ' views, ' + r.unique_viewers + ' unique</div>' +
-          '</div>' +
-        '</div>';
-      }).join('')}
+    <h3>🌐 External Traffic <span style="font-size: 11px; color: #888; font-weight: normal;">(off-site engagement)</span></h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+      <!-- Left: Image Displays -->
+      <div>
+        <div style="font-size: 11px; color: #f97316; font-weight: bold; margin-bottom: 8px; border-bottom: 1px solid #333; padding-bottom: 4px;">📤 Images Displayed Off-Site</div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          ${(artViewsSummary.externalDisplays || []).map(r => {
+            const icons = { 'Google Images': '🔍', 'Bing Images': '🅱️', 'Pinterest': '📌', 'Facebook': '📘', 'Twitter/X': '🐦', 'Instagram': '📷', 'LinkedIn': '💼', 'DuckDuckGo': '🦆', 'Unknown': '❓', 'Other': '🌐' };
+            const icon = icons[r.source] || '🌐';
+            return '<div style="display: flex; align-items: center; gap: 6px; padding: 4px 6px; background: #1a1a1a; border-radius: 4px;">' +
+              '<span style="font-size: 14px;">' + icon + '</span>' +
+              '<span style="color: #ccc; font-size: 11px; flex: 1;">' + r.source + '</span>' +
+              '<span style="color: #f97316; font-size: 11px; font-weight: bold;">' + r.views.toLocaleString() + '</span>' +
+            '</div>';
+          }).join('') || '<p style="color:#666; font-size: 10px;">No external displays</p>'}
+        </div>
+      </div>
+      <!-- Right: Visitors to Site (from events table - JS tracking) -->
+      <div>
+        <div style="font-size: 11px; color: #22c55e; font-weight: bold; margin-bottom: 8px; border-bottom: 1px solid #333; padding-bottom: 4px;">📥 Visitors to Site</div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          ${(() => {
+            // Confirmed sources (clean referrer match)
+            const confirmed = [
+              { key: 'google_search', label: 'Google Search', icon: '🔍' },
+              { key: 'google_images', label: 'Google Images', icon: '🖼️' },
+              { key: 'bing_search', label: 'Bing Search', icon: '🅱️' },
+              { key: 'bing_images', label: 'Bing Images', icon: '🖼️' },
+              { key: 'pinterest', label: 'Pinterest', icon: '📌' },
+              { key: 'facebook', label: 'Facebook', icon: '📘' },
+              { key: 'twitter', label: 'Twitter/X', icon: '🐦' },
+              { key: 'instagram', label: 'Instagram', icon: '📷' },
+              { key: 'linkedin', label: 'LinkedIn', icon: '💼' },
+              { key: 'duckduckgo', label: 'DuckDuckGo', icon: '🦆' }
+            ];
+            const confirmedItems = confirmed
+              .filter(s => entryRefCounts[s.key])
+              .sort((a, b) => (entryRefCounts[b.key] || 0) - (entryRefCounts[a.key] || 0))
+              .map(s => '<div style="display: flex; align-items: center; gap: 6px; padding: 4px 6px; background: #1a1a1a; border-radius: 4px;">' +
+                '<span style="font-size: 14px;">' + s.icon + '</span>' +
+                '<span style="color: #ccc; font-size: 11px; flex: 1;">' + s.label + '</span>' +
+                '<span style="color: #22c55e; font-size: 11px; font-weight: bold;">' + entryRefCounts[s.key] + '</span>' +
+              '</div>');
+            // Unattributed (privacy-suppressed referrers - this is normal!)
+            const unattributed = entryRefCounts['unattributed'] || 0;
+            const unattributedItem = unattributed ? 
+              '<div style="display: flex; align-items: center; gap: 6px; padding: 4px 6px; background: #1a1a1a; border-radius: 4px; border-left: 2px solid #6b7280;" title="Privacy-suppressed referrers (mobile, in-app browsers, HTTPS). This is normal modern web behavior.">' +
+                '<span style="font-size: 14px;">🔒</span>' +
+                '<span style="color: #888; font-size: 11px; flex: 1;">Unattributed</span>' +
+                '<span style="color: #6b7280; font-size: 11px; font-weight: bold;">' + unattributed + '</span>' +
+              '</div>' : '';
+            const all = confirmedItems.join('') + unattributedItem;
+            return all || '<p style="color:#666; font-size: 10px;">No external visitors yet</p>';
+          })()}
+        </div>
+        <p style="font-size: 9px; color: #555; margin-top: 6px;">🔒 = privacy-suppressed (mobile, in-app, HTTPS)</p>
+      </div>
     </div>
   </div>
   ` : ''}
@@ -2740,10 +2878,10 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   <div class="grid-tall">
     <div class="section tall">
       <h3>Event Breakdown</h3>
-      ${events.length === 0 ? '<p style="color:#666">No events yet</p>' : 
-        events.map(e => `
+      <div style="max-height: 280px; overflow-y: auto; padding-right: 10px;">
+      ${allEvents.map(e => `
           <div class="bar-row">
-            <span class="bar-label" title="${formatEventName(e.event)}">${formatEventName(e.event)}</span>
+            <span class="bar-label" title="${e.label}">${e.label}</span>
             <div class="bar-container">
               <div class="bar" style="width: ${(e.count / maxEventCount * 100).toFixed(1)}%"></div>
             </div>
@@ -2751,33 +2889,17 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
           </div>
         `).join('')
       }
-    </div>
-
-    <div class="section tall bar-orange">
-      <div class="section-header">
-        <h3>Referrers</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Traffic sources normalized from HTTP referer. "direct" = typed URL or bookmark. "internal" = navigation within site. "google/bing" = search engines.</div></span>
       </div>
-      ${referrers.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        referrers.map(r => `
-          <div class="bar-row">
-            <span class="bar-label">${r.referrer}</span>
-            <div class="bar-container">
-              <div class="bar" style="width: ${(r.sessions / maxRefSessions * 100).toFixed(1)}%"></div>
-            </div>
-            <span class="bar-value">${r.sessions}</span>
-          </div>
-        `).join('')
-      }
     </div>
 
     <div class="section tall">
       <div class="section-header">
-        <h3>Geography <span style="font-size: 10px; color: #666; font-weight: normal;">(Engaged Sessions)</span></h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">JS-tracked engaged sessions by location. Only counts visitors who loaded JavaScript (Layer C). For all art viewers see "Art Viewer Geography" above.</div></span>
+        <h3>📍 Visitor Geography</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Where your on-site visitors come from (city, state, country). These are people actually browsing k4studios.com, not external image views.</div></span>
       </div>
-      ${geo.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        geo.map(g => {
+      ${geo.length === 0 ? '<p style="color:#666">No data yet</p>' : `
+      <div style="max-height: 280px; overflow-y: auto; padding-right: 10px;">
+      ${geo.map(g => {
           const label = [g.city, g.region, g.country].filter(Boolean).join(', ');
           // Country color mapping - each country gets a distinct color
           const countryColors = {
@@ -2834,55 +2956,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
               <div class="bar" style="width: ${(g.visitors / maxGeoVisitors * 100).toFixed(1)}%; background: ${barColor};"></div>
             </div>
             <span class="bar-value">${g.visitors}</span>
-          </div>
-        `}).join('')
-      }
-    </div>
-
-    <!-- Art Viewer Geography (Layer B - Server-Side) -->
-    <div class="section tall">
-      <div class="section-header">
-        <h3>🎨 Art Geo <span style="font-size: 10px; color: #10b981; font-weight: normal;">(${artViewsSummary?.geography?.reduce((sum, g) => sum + g.unique_viewers, 0) || 0})</span></h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Art viewers by country (Layer B server-side). Captures all humans who viewed art, not just JS-tracked sessions.</div></span>
-      </div>
-      ${(artViewsSummary?.geography || []).length === 0 ? '<p style="color:#666">No data yet</p>' : `
-      <div style="max-height: 280px; overflow-y: auto; padding-right: 8px;">
-        ${(artViewsSummary?.geography || []).map((g, idx) => {
-          const countryFlags = {
-            'US': '🇺🇸', 'FR': '🇫🇷', 'DE': '🇩🇪', 'GB': '🇬🇧', 'CA': '🇨🇦', 'AU': '🇦🇺', 
-            'BR': '🇧🇷', 'MX': '🇲🇽', 'IN': '🇮🇳', 'JP': '🇯🇵', 'IT': '🇮🇹', 'ES': '🇪🇸',
-            'NL': '🇳🇱', 'AT': '🇦🇹', 'HU': '🇭🇺', 'SG': '🇸🇬', 'HK': '🇭🇰', 'CN': '🇨🇳',
-            'KR': '🇰🇷', 'CO': '🇨🇴', 'PL': '🇵🇱', 'BE': '🇧🇪', 'CH': '🇨🇭', 'SE': '🇸🇪'
-          };
-          const geoColors = ['#10b981', '#3b82f6', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#84cc16'];
-          const flag = countryFlags[g.country] || '🌐';
-          const barColor = geoColors[idx % geoColors.length];
-          const maxArtGeo = (artViewsSummary?.geography || [])[0]?.unique_viewers || 1;
-          const countryNames = {
-            'US': 'United States', 'FR': 'France', 'DE': 'Germany', 'GB': 'United Kingdom', 'CA': 'Canada', 'AU': 'Australia',
-            'BR': 'Brazil', 'MX': 'Mexico', 'IN': 'India', 'JP': 'Japan', 'IT': 'Italy', 'ES': 'Spain',
-            'NL': 'Netherlands', 'AT': 'Austria', 'HU': 'Hungary', 'SG': 'Singapore', 'HK': 'Hong Kong', 'CN': 'China',
-            'KR': 'South Korea', 'CO': 'Colombia', 'PL': 'Poland', 'BE': 'Belgium', 'CH': 'Switzerland', 'SE': 'Sweden',
-            'RU': 'Russia', 'UA': 'Ukraine', 'TR': 'Turkey', 'AR': 'Argentina', 'CL': 'Chile', 'PE': 'Peru',
-            'ZA': 'South Africa', 'NZ': 'New Zealand', 'IE': 'Ireland', 'NO': 'Norway', 'DK': 'Denmark', 'FI': 'Finland'
-          };
-          const shortNames = {
-            'US': 'USA', 'FR': 'France', 'DE': 'Germany', 'GB': 'UK', 'CA': 'Canada', 'AU': 'Australia',
-            'BR': 'Brazil', 'MX': 'Mexico', 'IN': 'India', 'JP': 'Japan', 'IT': 'Italy', 'ES': 'Spain',
-            'NL': 'Netherland', 'AT': 'Austria', 'HU': 'Hungary', 'SG': 'Singapore', 'HK': 'Hong Kong', 'CN': 'China',
-            'KR': 'S. Korea', 'CO': 'Colombia', 'PL': 'Poland', 'BE': 'Belgium', 'CH': 'Switzerlan', 'SE': 'Sweden',
-            'RU': 'Russia', 'UA': 'Ukraine', 'TR': 'Turkey', 'AR': 'Argentina', 'CL': 'Chile', 'PE': 'Peru',
-            'ZA': 'S. Africa', 'NZ': 'NewZealand', 'IE': 'Ireland', 'NO': 'Norway', 'DK': 'Denmark', 'FI': 'Finland'
-          };
-          const tooltipText = countryNames[g.country] || g.country || 'Unknown';
-          const displayName = shortNames[g.country] || (g.country || '??').substring(0, 10);
-          return `
-          <div class="bar-row" title="${tooltipText}" style="cursor: pointer;">
-            <span class="bar-label">${flag} ${displayName}</span>
-            <div class="bar-container">
-              <div class="bar" style="width: ${(g.unique_viewers / maxArtGeo * 100).toFixed(1)}%; background: ${barColor};"></div>
-            </div>
-            <span class="bar-value">${g.unique_viewers}</span>
           </div>
         `}).join('')}
       </div>`
@@ -2979,42 +3052,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
 
   <!-- Regular grid -->
   <div class="grid">
-    <div class="section" id="engagement-section">
-      <div class="section-header">
-        <h3>🎯 Top Sessions by Engagement</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Most engaged sessions by weighted score. 🤖 = suspected bot. Hover row for location.</div></span>
-        <label style="margin-left: auto; font-size: 11px; color: #888; display: flex; align-items: center; gap: 4px; cursor: pointer;">
-          <input type="checkbox" id="hide-bots-toggle" style="cursor: pointer;"> Hide bots
-        </label>
-      </div>
-      <p style="color: #666; font-size: 10px; margin-bottom: 8px;">zoom=4, notes=5, theme=3, nav=2</p>
-      ${topDepthSessions.length === 0 ? '<p style="color:#666">No sessions yet</p>' : `
-      <table id="engagement-table">
-        <tr><th>Session</th><th>Events</th><th>Score</th></tr>
-        ${topDepthSessions.map((s, i) => {
-          const location = [s.city, s.region, s.country].filter(Boolean).join(', ') || 'Unknown';
-          const deviceIcons = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧' };
-          const deviceIcon = deviceIcons[s.device] || '';
-          const isBot = s.is_bot === 1;
-          const botIcon = isBot ? '🤖 ' : '';
-          const botClass = isBot ? 'bot-row' : '';
-          return `
-          <tr class="${botClass}" title="📍 ${location} ${deviceIcon}${isBot ? ' (suspected bot)' : ''}" data-is-bot="${isBot ? '1' : '0'}">
-            <td style="font-family: monospace; font-size: 11px; cursor: help;">${botIcon}#${i + 1} ${s.session_id ? s.session_id.slice(0, 8) + '...' : 'unknown'}</td>
-            <td>${s.event_count}</td>
-            <td style="font-weight: bold; color: ${isBot ? '#6b7280' : '#0891b2'};">${s.depth_score}</td>
-          </tr>
-        `}).join('')}
-      </table>
-      <script>
-        document.getElementById('hide-bots-toggle').addEventListener('change', function() {
-          const rows = document.querySelectorAll('#engagement-table tr[data-is-bot="1"]');
-          rows.forEach(row => row.style.display = this.checked ? 'none' : '');
-        });
-      </script>
-      `}
-    </div>
-
     <div class="section">
       <h3>Top 10 Pages</h3>
       ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
@@ -3032,11 +3069,12 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       }
     </div>
 
-    <div class="section">
-      <div class="section-header">
+    <div class="section" style="max-height: 400px; overflow-y: auto; padding-right: 20px;">
+      <div class="section-header" style="position: sticky; top: 0; background: #1a1a1a; margin: -15px -15px 10px -15px; padding: 15px; z-index: 1;">
         <h3>Gallery Performance</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Image views grouped by gallery. Colors: 🟣 Painterly, 🔵 Traditional, 🟠 K4 Select</div></span>
       </div>
+      <div style="padding-right: 10px;">
       <table>
         <tr><th>Gallery</th><th>Sessions</th><th>Zoom %</th><th>Avg Events</th></tr>
         ${galleries.map(g => {
@@ -3054,23 +3092,34 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
         }).join('')}
         ${galleries.length === 0 ? '<tr><td colspan="4">No data yet</td></tr>' : ''}
       </table>
+      </div>
     </div>
 
     <div class="section">
       <div class="section-header">
         <h3>🚀 Top Entry Pages</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page visited in each session. Shows WHERE people actually land on the site (including direct links to images).</div></span>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page visited in each session. 🔍=Google Search, 🖼️=Images, 🅱️=Bing, 📌=Pinterest, 🐦=Twitter, 📘=Facebook, 🔗=Direct, 🔄=Internal</div></span>
       </div>
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
+      <div style="max-height: 240px; overflow-y: auto; padding-right: 8px;">
       <table>
-        <tr><th>Landing Page</th><th>Sessions</th></tr>
-        ${entryPages.map(p => {
+        <tr><th>Landing Page</th><th>From</th><th>Sessions</th></tr>
+        ${entryPages.slice(0, 15).map(p => {
           const isImage = p.page_path.includes('/i-');
-          const shortPath = p.page_path.length > 35 ? '...' + p.page_path.slice(-32) : p.page_path;
-          const icon = isImage ? '🖼️' : '📄';
-          return `<tr><td title="${p.page_path}">${icon} ${shortPath}</td><td>${p.sessions}</td></tr>`;
+          const shortPath = p.page_path.length > 30 ? '...' + p.page_path.slice(-27) : p.page_path;
+          const pageIcon = isImage ? '🖼️' : '📄';
+          const refIcons = { 
+            google_search: '🔍', google_images: '🖼️', 
+            bing_search: '🅱️', bing_images: '🖼️', 
+            pinterest: '📌', twitter: '🐦', facebook: '📘', instagram: '📷', 
+            linkedin: '💼', duckduckgo: '🦆',
+            direct: '🔗', internal: '🔄', unattributed: '🔒' 
+          };
+          const refIcon = refIcons[p.ref_source] || '🔒';
+          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
         }).join('')}
       </table>
+      </div>
       `}
     </div>
 
@@ -3102,32 +3151,38 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     <div class="section">
       <div class="section-header">
         <h3>🚪 Where People Leave</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Exit pages: where sessions ended. Helps identify which pages hold attention vs which quietly end the journey.</div></span>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Exit pages: where sessions ended. Shows which page types are natural endpoints vs potential problems.</div></span>
       </div>
-      ${exitSummary.length > 0 ? `
-      <div style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
-        ${exitSummary.map(e => {
-          const typeColors = { image: '#4a9eff', gallery: '#10b981', theme: '#f59e0b', landing: '#a855f7' };
-          const color = typeColors[e.page_type] || '#888';
-          return `<span style="background: ${color}22; color: ${color}; padding: 4px 10px; border-radius: 12px; font-size: 11px;">${e.page_type || 'other'}: ${e.exits}</span>`;
-        }).join('')}
+      <div class="pulse" style="margin-top: 10px;">
+        <div class="pulse-stat" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);">
+          <span class="value" style="color: #fff;">🏠 ${exitByCategory.home || 0}</span>
+          <span class="label" style="color: #c7d2fe;">Home</span>
+        </div>
+        <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+          <span class="value" style="color: #fff;">📁 ${exitByCategory.gallery || 0}</span>
+          <span class="label" style="color: #a7f3d0;">Gallery</span>
+        </div>
+        <div class="pulse-stat" style="background: linear-gradient(135deg, #4a9eff 0%, #2563eb 100%);">
+          <span class="value" style="color: #fff;">📖 ${exitByCategory.images || 0}</span>
+          <span class="label" style="color: #bfdbfe;">Images</span>
+        </div>
+        <div class="pulse-stat" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);">
+          <span class="value" style="color: #fff;">📄 ${exitByCategory.landing || 0}</span>
+          <span class="label" style="color: #ddd6fe;">Landing</span>
+        </div>
+        <div class="pulse-stat" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+          <span class="value" style="color: #fff;">✍️ ${exitByCategory.blog || 0}</span>
+          <span class="label" style="color: #fef3c7;">Blog</span>
+        </div>
+        <div class="pulse-stat" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);">
+          <span class="value" style="color: #fff;">📸 ${exitByCategory.photoshoots || 0}</span>
+          <span class="label" style="color: #fbcfe8;">Photoshoots</span>
+        </div>
+        <div class="pulse-stat" style="background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);">
+          <span class="value" style="color: #fff;">📦 ${exitByCategory.other || 0}</span>
+          <span class="label" style="color: #d1d5db;">Other</span>
+        </div>
       </div>
-      ` : ''}
-      ${exitPages.length === 0 ? '<p style="color:#666">No exit data yet</p>' : `
-      <div style="max-height: 280px; overflow-y: auto;">
-        ${exitPages.map(p => {
-          const shortPath = p.page_path.length > 35 ? '...' + p.page_path.slice(-32) : p.page_path;
-          const typeColors = { image: '#4a9eff', gallery: '#10b981', theme: '#f59e0b', landing: '#a855f7' };
-          const dotColor = typeColors[p.page_type] || '#888';
-          return `
-          <div style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
-            <span style="width: 8px; height: 8px; border-radius: 50%; background: ${dotColor}; flex-shrink: 0;"></span>
-            <a href="https://www.k4studios.com${p.page_path}" target="_blank" style="flex: 1; color: #ccc; text-decoration: none; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${p.page_path}">${shortPath}</a>
-            <span style="color: #888; font-size: 12px; font-weight: bold;">${p.exits}</span>
-          </div>
-        `}).join('')}
-      </div>
-      `}
     </div>
   </div>
 
@@ -3142,23 +3197,28 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   <div class="pulse" style="margin-bottom: 15px;">
     <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
       <span class="value" style="color: #fff;">🟢 ${botIntelligence?.verified?.length || 0}</span>
-      <span class="label" style="color: #a7f3d0;">Verified Bots</span>
+      <span class="label" style="color: #a7f3d0;">Verified Bots <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
+      <div class="tooltip">Confirmed search engine bots (Googlebot, Bingbot, etc). Good traffic - they index your art for image search!</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);">
       <span class="value" style="color: #1f2937;">🟡 ${Math.max(0, (botIntelligence?.stats?.total ?? 0) - (botIntelligence?.stats?.risk3 ?? 0) - (botIntelligence?.stats?.risk4 ?? 0))}</span>
-      <span class="label" style="color: #422006;">Watching</span>
+      <span class="label" style="color: #422006;">Watching <span class="info-icon" style="background: rgba(0,0,0,0.15); color: #422006;">i</span></span>
+      <div class="tooltip"><strong>Risk score 2-4.</strong> Slightly suspicious behavior but not aggressive. Could be a curious human or a polite bot. Monitoring only.</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
       <span class="value" style="color: #fff;">🟠 ${botIntelligence?.stats?.risk3 || 0}</span>
-      <span class="label" style="color: #fed7aa;">Throttled</span>
+      <span class="label" style="color: #fed7aa;">Throttled <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fed7aa;">i</span></span>
+      <div class="tooltip"><strong>Risk score 5-7.</strong> High-confidence scraper. Auto-slowed (500ms delay). Triggers: no referrer + high volume, no branching, datacenter IP, multi-day presence.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);">
+      <span class="value" style="color: #fff;">🟣 ${botIntelligence?.stats?.risk4 || 0}</span>
+      <span class="label" style="color: #f5d0fe;">Block Candidates <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #f5d0fe;">i</span></span>
+      <div class="tooltip"><strong>Risk score 8+.</strong> Malicious/abusive behavior. Heavily throttled (1000ms). Review in High Risk Watchlist and consider blocking. Escalates from Throttled when: persistent multi-day scraping, extreme velocity, or multiple red flags combine.</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
-      <span class="value" style="color: #fff;">🔴 ${botIntelligence?.stats?.risk4 || 0}</span>
-      <span class="label" style="color: #fecaca;">Block Candidates</span>
-    </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #1f2937 0%, #111827 100%); border: 1px solid #374151;">
-      <span class="value" style="color: #9ca3af;">⛔ ${botIntelligence?.blocked?.filter(b => b.is_active)?.length || 0}</span>
-      <span class="label" style="color: #6b7280;">Blocked</span>
+      <span class="value" style="color: #fff;"><span style="text-shadow: 0 0 2px #000, 0 0 4px #000;">⛔</span> ${botIntelligence?.blocked?.filter(b => b.is_active)?.length || 0}</span>
+      <span class="label" style="color: #fecaca;">Blocked <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fecaca;">i</span></span>
+      <div class="tooltip">Manually blocked IPs. Returns 403 Forbidden. Can unblock from Blocked IPs section below.</div>
     </div>
   </div>
 
@@ -3689,6 +3749,46 @@ async function handleSerpKeyword(request, env) {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });
+  }
+}
+
+/**
+ * Handle event tracking - zoom clicks, slideshow starts
+ * Tracks user intent (button clicks) not image loads
+ */
+async function handleTrackEvent(request, env) {
+  if (!env?.DB) {
+    return new Response('ok', { status: 200 }); // Fail silently
+  }
+  
+  try {
+    const body = await request.json();
+    const { type, imageId } = body;
+    
+    // Validate event type
+    const validTypes = ['xl_zoom', 'slideshow_start'];
+    if (!type || !validTypes.includes(type)) {
+      return new Response('ok', { status: 200 }); // Fail silently
+    }
+    
+    // Validate image ID
+    if (!imageId || !/^i-[a-zA-Z0-9]+$/.test(imageId)) {
+      return new Response('ok', { status: 200 }); // Fail silently
+    }
+    
+    // Log the event using existing logArtView
+    await logArtView(env, type, imageId, request);
+    
+    return new Response('ok', { 
+      status: 200,
+      headers: { 
+        'Content-Type': 'text/plain',
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
+  } catch (e) {
+    console.error('Track event error:', e);
+    return new Response('ok', { status: 200 }); // Fail silently
   }
 }
 
@@ -4348,6 +4448,11 @@ export default {
     // 0i) SERP Tracker - Keyword management
     if (url.pathname === "/__k4serp/keyword" && request.method === "POST") {
       return handleSerpKeyword(request, env);
+    }
+
+    // 0j) Event tracking - zoom clicks, slideshow starts (user intent, not image loads)
+    if (url.pathname === "/__k4track/event" && request.method === "POST") {
+      return handleTrackEvent(request, env);
     }
 
     // 1) Image detail pages: apply policy first, then log art view

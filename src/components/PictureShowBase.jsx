@@ -8,6 +8,7 @@ import SimpleStoryShow from "./Gallery-Slideshow.jsx";
 import StoryShowWithAudio from "./Gallery-Slideshow-Story.jsx";
 import { getProxySrc, normalizeImageSrc } from "../utils/imageProxy.js";
 import { warmImage } from "../utils/warmImage";
+import { trackEvent } from "../utils/trackEvent";
 
 // Helper function to select the best image source for slideshow display
 const getBestImageSrc = (image) => {
@@ -1135,6 +1136,7 @@ const isSpeechActive = () => {
                     <button
                       type="button"
                       onClick={() => {
+                        trackEvent('slideshow_start', currentImage?.id);
                         startSlideshow({ advanceFromIntro: false, immediate: true });
                       }}
                       className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-900 flex items-center gap-2"
