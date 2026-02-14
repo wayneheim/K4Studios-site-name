@@ -85,7 +85,17 @@ const structuredData = getStructuredData({
     description: landingWestern.subtitle || landingWestern.description,
     url: `https://k4studios.com${sectionPath}`,
     keywords: landingWestern.keywords || [],
-    copyrightNotice: "© Wayne Heim"
+    copyrightNotice: "© Wayne Heim",
+    about: [
+      { "@type": "Thing", name: "Historical Fine Art Photography" },
+      { "@type": "Thing", name: "American West Art" },
+      { "@type": "Thing", name: "American Frontier" },
+      { "@type": "Thing", name: "Western Cowboy Portraits" },
+      { "@type": "Thing", name: "Civil War Photography" },
+      { "@type": "Thing", name: "WWII Photography" },
+      { "@type": "Thing", name: "Old West" },
+    ],
+    genre: "Historical Fine Art Photography",
   },
   images: featheredImages,
   defaults: {

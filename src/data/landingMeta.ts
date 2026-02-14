@@ -311,7 +311,7 @@ export const landingMetaDB = {
     twitterImage: "/og/landscapes-location.jpg",
   },
 
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International": {
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery": {
     ogTitle: "International Painterly Landscapes – Wayne Heim",
     ogDescription:
       "Painterly fine art landscapes from around the world—mountains, coasts, and dramatic vistas rendered with cinematic atmosphere.",
@@ -324,7 +324,7 @@ export const landingMetaDB = {
     twitterImage: "/og/landscapes-intl.jpg",
   },
 
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West": {
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery": {
     ogTitle: "Western Landscapes – Photography by Wayne Heim",
     ogDescription:
       "Painterly landscapes of the American West—mountains, plains, deserts, and dramatic skies captured in fine art style.",
@@ -337,7 +337,7 @@ export const landingMetaDB = {
     twitterImage: "/og/landscapes-west.jpg",
   },
 
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest": {
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery": {
     ogTitle: "Midwest Landscapes – Photography by Wayne Heim",
     ogDescription:
       "Painterly Midwest landscapes—rolling fields, forests, farmlands, and heartland vistas rendered in fine art style.",
@@ -350,7 +350,7 @@ export const landingMetaDB = {
     twitterImage: "/og/landscapes-midwest.jpg",
   },
 
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast": {
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery": {
     ogTitle: "Northeast Landscapes – Wayne Heim",
     ogDescription:
       "Painterly Northeast landscapes—mountains, rivers, forests, and dramatic seasonal color captured in fine art style.",
@@ -363,7 +363,7 @@ export const landingMetaDB = {
     twitterImage: "/og/landscapes-northeast.jpg",
   },
 
-  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South": {
+  "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery": {
     ogTitle: "Southern Landscapes – Photography by Wayne Heim",
     ogDescription:
       "Painterly landscapes of the American South—wetlands, forests, rivers, and coastal scenes rendered in fine art style.",

@@ -21,6 +21,15 @@ export const historicalFAQ = [
     ],
   },
 
+  // 3. BING DISAMBIGUATION (CRITICAL - Prevents Western Civilization misclassification)
+  {
+    q: "Does 'Western art' here refer to European or Western Civilization art?",
+    a: [
+      "No. 'Western art' on this site refers specifically to American West art — work rooted in the 19th-century American frontier, cowboys, frontier life, and Old West history.",
+      "It has no connection to European art history, classical Western civilization, or Renaissance traditions. This is frontier art photography celebrating the mythology and history of the American West."
+    ],
+  },
+
   // 3. DEFINITION — "historical western art"
   {
     q: "What is historical Western art?",

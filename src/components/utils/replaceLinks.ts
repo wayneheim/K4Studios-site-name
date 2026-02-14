@@ -17,8 +17,8 @@ export function replaceLinks(str: string): string {
     .replace(/\[transportation\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Transportation">`)
     .replace(/\[engrained\]/g, `<a href="/Other/K4-Select-Series/Engrained">`)
     .replace(/\[landscapes\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">`)
-    .replace(/\[landscapes-west\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West">`)
-    .replace(/\[landscapes-intl\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International">`)
+    .replace(/\[landscapes-west\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery">`)
+    .replace(/\[landscapes-intl\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery">`)
     .replace(/\[landscapes-mountains\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains">`)
     .replace(/\[landscapes-water\]/g, `<a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water">`)
     .replace(/\[\/\]/g, `</a>`);

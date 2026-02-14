@@ -1,0 +1,515 @@
+---
+/**
+ * What Is Cowboy Fine Art Photography? — Cornerstone Definition Article
+ * 
+ * Purpose: Own the definition layer for "Cowboy Fine Art Photography"
+ * Positions K4 as authority on cowboy photography as fine art discipline.
+ * 
+ * Architecture:
+ * - Prose-first, definitional
+ * - Article schema (not gallery)
+ * - Image block after key section (SERP visibility)
+ * - Internal hub that feeds galleries
+ */
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/what-is-cowboy-fine-art-photography";
+const canonicalUrl = "https://www.k4studios.com/Blog/what-is-cowboy-fine-art-photography";
+
+// Proxy URL helper
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
+// Header image banner
+const headerImage = {
+  id: "i-H8VZWJM",
+  src: getProxySrc("i-H8VZWJM", "l"),
+  alt: "Cowboy fine art photography — black and white portrait capturing character, presence, and psychological depth"
+};
+
+// Example images - cowboy fine art focused
+const image1 = {
+  id: "i-mqDfN5z",
+  src: getProxySrc("i-mqDfN5z", "l"),
+  alt: "Cowboy fine art photography — painterly light and narrative restraint"
+};
+const image2 = {
+  id: "i-fJ9WQSS",
+  src: getProxySrc("i-fJ9WQSS", "l"),
+  alt: "Cowboy fine art photography — character study with atmospheric depth"
+};
+const image3 = {
+  id: "i-r5Pb7zJ",
+  src: getProxySrc("i-r5Pb7zJ", "l"),
+  alt: "Cowboy fine art photography — moment suspended in narrative tension"
+};
+
+// Process-focused images
+const processImage1 = {
+  id: "i-KVxkXrV",
+  src: getProxySrc("i-KVxkXrV", "l"),
+  alt: "Cowboy fine art photography — controlled light and compositional intention"
+};
+const processImage2 = {
+  id: "i-Dw6Z8ff",
+  src: getProxySrc("i-Dw6Z8ff", "l"),
+  alt: "Cowboy fine art photography — tonal restraint and emotional weight"
+};
+const processImage3 = {
+  id: "i-8BbMZjs",
+  src: getProxySrc("i-8BbMZjs", "l"),
+  alt: "Cowboy fine art photography — presence over pose"
+};
+
+const pageTitle = "What Is Cowboy Fine Art Photography? | K4 Studios";
+const pageDescription = "Cowboy fine art photography treats the cowboy as a subject for authored portraiture—built with narrative intent, painterly craft, and psychological depth rather than documentation or nostalgia.";
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "What Is Cowboy Fine Art Photography?",
+    description: pageDescription,
+    url: canonicalUrl,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-02-14",
+    articleSection: "Fine Art Photography",
+    keywords: [
+      "cowboy fine art photography",
+      "cowboy photography",
+      "cowboy portraits",
+      "western fine art photography",
+      "cowboy art",
+      "American West photography"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+// OG/Twitter capped at L
+const meta = {
+  description: pageDescription,
+  keywords: "cowboy fine art photography, cowboy photography, cowboy portraits, western fine art photography, cowboy art, American West photography",
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterCard: "summary_large_image"
+};
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Cowboy Fine Art Photography`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  structuredDataJSON={structuredData}
+  meta={meta}
+>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <!-- Header Image Banner -->
+    <section style="width:100%; overflow:hidden; margin-bottom:0;">
+      <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">
+        <div style="width:100%; height:400px; overflow:hidden; position:relative;">
+          <img 
+            src={headerImage.src} 
+            alt={headerImage.alt}
+            style="width:100%; height:100%; object-fit:cover; object-position:center 30%;"
+          />
+        </div>
+      </a>
+    </section>
+
+    <!-- Article Header -->
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.25rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        What Is Cowboy Fine Art Photography?
+      </h1>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        Authored portraiture of the American cowboy — craft, narrative, and psychological depth
+      </p>
+    </section>
+
+    <!-- Article Content -->
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+
+        <!-- SECTION 1: Introduction -->
+        <p><strong>Cowboy fine art photography</strong> treats the cowboy not as a nostalgic symbol or documentary subject, but as a figure worthy of authored portraiture—created with intentional composition, controlled light, and narrative depth.</p>
+
+        <p>In this context, Western art refers to the American West—frontier life, cowboys, and 19th-century Western history—forming a distinct artistic tradition within American fine art.</p>
+
+        <p>This is not snapshot photography of rodeos, ranch work, or lifestyle content. It is fine art: images built to reward sustained viewing, invite interpretation, and reveal meaning over time.</p>
+
+        <p>This page defines what cowboy fine art photography is, how it differs from other cowboy imagery, and why the distinction matters.</p>
+
+        <!-- SECTION 2: What Makes It Fine Art -->
+        <div class="section-heading-with-line">
+          <h2>What Makes It Fine Art?</h2>
+        </div>
+
+        <p>The term "fine art" carries specific expectations that separate it from decorative imagery, commercial photography, or documentation.</p>
+
+        <p>Cowboy fine art photography shares the same principles as any serious artistic discipline:</p>
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;"><strong>Authorial intent</strong> — The image is constructed, not captured by accident</li>
+          <li style="margin-bottom:0.5rem;"><strong>Compositional discipline</strong> — Every element serves the whole</li>
+          <li style="margin-bottom:0.5rem;"><strong>Narrative presence</strong> — The image carries story, not just likeness</li>
+          <li style="margin-bottom:0.5rem;"><strong>Technical mastery</strong> — Light, tone, and craft are controlled with intention</li>
+          <li><strong>Emotional resonance</strong> — The work invites return viewing and interpretation</li>
+        </ul>
+
+        <p>A photograph of a cowboy becomes fine art when the artist's vision shapes every decision—from the fall of light to the moment of capture to the final presentation.</p>
+
+        <!-- SECTION 3: How It Differs -->
+        <div class="section-heading-with-line">
+          <h2>How It Differs From Other Cowboy Imagery</h2>
+        </div>
+
+        <p>Not all cowboy photography is fine art. Understanding the difference is essential.</p>
+
+        <p><strong>Documentary photography</strong> records cowboy life as it exists—ranch work, rodeos, daily labor. The goal is preservation and witness, not interpretation.</p>
+
+        <p><strong>Lifestyle photography</strong> sells an aesthetic—Western décor, fashion, or aspirational imagery. The cowboy becomes a prop for commercial messaging.</p>
+
+        <p><strong>Portrait photography</strong> captures likeness for personal or commercial purposes. The subject is the priority; artistic vision is secondary.</p>
+
+        <p><strong>Cowboy fine art photography</strong> does something different. It uses the cowboy as a vehicle for authored artistic expression. The subject matters, but the artist's interpretation matters more.</p>
+
+        <p>In fine art photography:</p>
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">The image is not just a record—it's a statement</li>
+          <li style="margin-bottom:0.5rem;">Character replaces costume</li>
+          <li style="margin-bottom:0.5rem;">Atmosphere replaces action</li>
+          <li>Psychological presence replaces heroic pose</li>
+        </ul>
+
+        <!-- IMAGE BLOCK: Examples -->
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">Examples of Cowboy Fine Art Photography</h3>
+        <div class="example-images">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+              <img 
+                src={image1.src} 
+                alt={image1.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Painterly light — atmosphere over spectacle
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image2.id}`}>
+              <img 
+                src={image2.src} 
+                alt={image2.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Character study — presence over pose
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image3.id}`}>
+              <img 
+                src={image3.src} 
+                alt={image3.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Narrative tension — the moment before
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- SECTION 4: The Painterly Approach -->
+        <div class="section-heading-with-line">
+          <h2>The Painterly Approach</h2>
+        </div>
+
+        <p>Much of the strongest cowboy fine art photography draws from the <a href="/Blog/what-is-painterly-photography" style="color:#8b5a2b; text-decoration:underline;">painterly tradition</a>—applying principles from painting to photographic work.</p>
+
+        <p>This means:</p>
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;"><strong>Sculpted light</strong> — Directional, intentional, often reminiscent of Dutch masters or American regionalists</li>
+          <li style="margin-bottom:0.5rem;"><strong>Tonal restraint</strong> — A controlled palette that serves mood rather than documentation</li>
+          <li style="margin-bottom:0.5rem;"><strong>Atmospheric depth</strong> — Softness, texture, and visual weight that photography alone does not provide</li>
+          <li><strong>Compositional hierarchy</strong> — Leading the eye through the frame with purpose</li>
+        </ul>
+
+        <p>The painterly approach transforms photography from capture to construction. The image is not found—it is made.</p>
+
+        <!-- SECTION 5: Character Over Archetype -->
+        <div class="section-heading-with-line">
+          <h2>Character Over Archetype</h2>
+        </div>
+
+        <p>One of the key distinctions of cowboy fine art photography is its treatment of the subject.</p>
+
+        <p>Traditional <a href="/Blog/what-is-western-cowboy-art" style="color:#8b5a2b; text-decoration:underline;">Western cowboy art</a> often presents the cowboy as an archetype—the lone rider, the gunfighter, the heroic silhouette. These images have power, but they trade individual humanity for symbolic weight.</p>
+
+        <p>Cowboy fine art photography moves in the opposite direction. It looks for:</p>
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">The lines in a face that tell their own story</li>
+          <li style="margin-bottom:0.5rem;">The stillness that holds more than action</li>
+          <li style="margin-bottom:0.5rem;">The hands that have worked, not posed</li>
+          <li>The gaze that carries history without explanation</li>
+        </ul>
+
+        <p>The goal is not to strip the myth from the cowboy, but to find the person beneath it.</p>
+
+        <!-- SECTION 6: Narrative Photography -->
+        <div class="section-heading-with-line">
+          <h2>Narrative Photography and the One-Image Movie</h2>
+        </div>
+
+        <p>The finest cowboy fine art photography functions as narrative—each image a complete story, not a fragment.</p>
+
+        <p>This approach, sometimes called the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie</a>, treats the photograph as a single frame from an unseen film. The dust hasn't fully settled. The decision hasn't been made. The consequence hasn't arrived.</p>
+
+        <p>The viewer enters the frame at a moment of suspended tension. They are invited to complete the story—to imagine what came before and what follows after.</p>
+
+        <p>This narrative architecture requires:</p>
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">Psychological presence in the subject</li>
+          <li style="margin-bottom:0.5rem;">Environmental storytelling in the setting</li>
+          <li style="margin-bottom:0.5rem;">Light that carries mood, not just illumination</li>
+          <li>Composition that guides the eye through the story</li>
+        </ul>
+
+        <!-- IMAGE BLOCK: Process -->
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.5rem; margin-bottom:0.5rem; color:#555;">The Fine Art Process</h3>
+        <div class="example-images">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${processImage1.id}`}>
+              <img 
+                src={processImage1.src} 
+                alt={processImage1.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Controlled light — every shadow earns its place
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/${processImage2.id}`}>
+              <img 
+                src={processImage2.src} 
+                alt={processImage2.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Tonal restraint — emotion through control
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${processImage3.id}`}>
+              <img 
+                src={processImage3.src} 
+                alt={processImage3.alt}
+                loading="lazy"
+              />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Presence over pose — humanity beneath the hat
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- SECTION 7: Historical vs Contemporary -->
+        <div class="section-heading-with-line">
+          <h2>Historical vs Contemporary Subjects</h2>
+        </div>
+
+        <p>Cowboy fine art photography can work with both historical and contemporary subjects.</p>
+
+        <p><a href="/Blog/what-is-historical-western-photography" style="color:#8b5a2b; text-decoration:underline;">Historical Western photography</a> draws from the 19th-century frontier—working with living-history interpreters, period-accurate costume, and settings that evoke the open-range era.</p>
+
+        <p>Contemporary cowboy photography engages with the modern West—working ranchers, rodeo athletes, and the people who still live the life the myth was built on.</p>
+
+        <p>Both approaches can produce fine art. The difference lies in intent, execution, and the depth of vision brought to the subject.</p>
+
+        <!-- SECTION 8: Color and Black & White -->
+        <div class="section-heading-with-line">
+          <h2>Color and Black & White</h2>
+        </div>
+
+        <p>Cowboy fine art photography works powerfully in both color and black & white.</p>
+
+        <p><strong>Color</strong> brings warmth, atmosphere, and historical accuracy. It anchors the image in a specific time and light.</p>
+
+        <p><strong>Black & white</strong> strips away the documentary and leaves essential form—light, shadow, expression, and structure. It emphasizes timelessness over moment.</p>
+
+        <p>Neither is inherently superior. The choice serves the image and its intent.</p>
+
+        <!-- SECTION 9: For Collectors -->
+        <div class="section-heading-with-line">
+          <h2>For Collectors</h2>
+        </div>
+
+        <p>Cowboy fine art photography is created for collectors who value depth over decoration—those seeking work that commands attention, rewards contemplation, and grows in meaning over time.</p>
+
+        <p>These are not images to fill wall space. They are authored works built to live with the viewer.</p>
+
+        <p>K4 Studios offers cowboy fine art photography on archival fine art paper, face-mounted acrylic, and in the <a href="/Other/K4-Select-Series/Engrained" style="color:#8b5a2b; text-decoration:underline;">Engrained Series</a>—printed directly onto Baltic Birch where natural wood grain becomes part of the artwork.</p>
+
+        <!-- SECTION 10: Explore CTAs -->
+        <div class="section-heading-with-line">
+          <h2>Explore Cowboy Fine Art Photography at K4 Studios</h2>
+        </div>
+
+        <p>At K4 Studios, cowboy fine art photography is approached as authored portraiture—each image constructed with narrative intent, compositional restraint, and psychological presence.</p>
+
+        <p>Explore the collections:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Cowboy-Fine-Art-Photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Cowboy Fine Art Photography</a> — The complete cowboy collection
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Western Cowboy Portraits</a> — Character-driven studies in color and black & white
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Western-Fine-Art-Photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Western Fine Art Photography</a> — The broader Western collection
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Painterly-Western-Photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Painterly Western Photography</a> — Where photographic craft meets painterly tradition
+          </li>
+        </ul>
+
+        <p>The cowboy is not merely a subject. In the hands of an artist, he becomes a story.</p>
+
+      </article>
+    </section>
+
+    <!-- Western Art Series Navigation -->
+    <WesternDefinitions variant="definition" currentPage={8} />
+
+    <SiteFooter />
+  </main>
+</BaseLayout>
+
+<style>
+  /* Section headings with line */
+  .section-heading-with-line {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+  }
+  .section-heading-with-line::after {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background: #d0d0d0;
+  }
+  .section-heading-with-line h2 {
+    margin: 0;
+    white-space: nowrap;
+  }
+  @media (max-width: 768px) {
+    .section-heading-with-line::after {
+      display: none;
+    }
+  }
+
+  /* Story block typography */
+  .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
+  .story-block h2 { 
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+  }
+  .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+  @media (max-width: 640px) {
+    .story-block p, .story-block ul { line-height: 1.6; }
+  }
+  
+  /* 3-across image row */
+  .example-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+    align-items: start;
+  }
+  .example-images figure {
+    margin: 0;
+  }
+  .example-images figure a {
+    display: block;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .example-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  @media (max-width: 900px) {
+    .example-images {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 500px) {
+    .example-images {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      padding: 0.75rem;
+    }
+  }
+
+  /* Mobile overflow protection */
+  @media (max-width: 768px) {
+    main {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+    }
+    .story-section {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+    .section-heading-with-line h2 {
+      white-space: normal !important;
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+    }
+  }
+</style>

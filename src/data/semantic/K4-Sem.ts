@@ -878,7 +878,7 @@ engrained: {
 // --- PAINTERLY: LANDSCAPES BY LOCATION ---
 
 landscapeIntPainterly: {
-  path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International",
+  path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
   def: "Abroad—where light behaves differently enough to make you look twice.",
 
   landingPhrases: [
@@ -898,7 +898,7 @@ landscapeIntPainterly: {
 },
 
 landscapeWestPainterly: {
-  path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West",
+  path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
   def: "Big sky and long light—landscapes that breathe at horizon scale.",
 
   landingPhrases: [
@@ -921,7 +921,7 @@ landscapeWestPainterly: {
 },
 
 landscapeMidwestPainterly: {
-  path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest",
+  path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
   def: "Quiet fields, big weather, and patient color.",
 
   landingPhrases: [
@@ -935,7 +935,7 @@ landscapeMidwestPainterly: {
 },
 
 landscapeNortheastPainterly: {
-  path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast",
+  path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
   def: "Stone walls, tide, and autumn—rendered with soft detail.",
 
   landingPhrases: [
@@ -951,7 +951,7 @@ landscapeNortheastPainterly: {
 },
 
 landscapeSouthPainterly: {
-  path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South",
+  path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
   def: "Humidity, Spanish moss, and late-day glow.",
 
   landingPhrases: [

@@ -33,7 +33,7 @@ export const landingWallArt = {
     },
     {
       title: "Western Landscapes",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
       thumb: "", // Dynamically populated
     },
     {

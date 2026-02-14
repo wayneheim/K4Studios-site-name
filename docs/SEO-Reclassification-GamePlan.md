@@ -135,12 +135,20 @@ If any change conflicts with this framing, **STOP and ask**.
 **Goal:** Accelerate Google learning using structured contrast signals.
 
 ### Add FAQ Schema to:
-- [ ] `/Historical-Western-Art` (required)
+- [x] `/Historical-Western-Art` (required)
 - [ ] One major existing hub page (optional)
 
 ### Required Questions:
 1. "Is this modern Western photography?" → **No. This work explores the historical and psychological West, not contemporary ranch life.**
 2. "What makes this different from ranch photography?" → **These are narrative portraits inspired by the 19th century frontier, not contemporary cowboy lifestyle documentation.**
+
+### Checklist:
+- [x] FAQ data file created (`src/data/Historical-Western-Art/faq.ts`)
+- [x] Both required negation questions included
+- [x] FAQPage schema generated in page head
+- [x] FAQAccordion component renders questions on page
+
+**✅ Day 4 Complete (February 14, 2026)**
 
 ---
 

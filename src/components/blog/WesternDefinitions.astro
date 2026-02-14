@@ -66,6 +66,12 @@ const { variant = "post", currentPage } = Astro.props;
         <h3>What Is Historical Western Photography?</h3>
         <p>Definition, distinction, and why the term matters</p>
       </a>
+
+      <a href="/Blog/what-is-cowboy-fine-art-photography" class="card">
+        <span class="num">8</span>
+        <h3>What Is Cowboy Fine Art Photography?</h3>
+        <p>Authored portraiture — craft, narrative, and psychological depth</p>
+      </a>
     </div>
   </section>
 )}
@@ -115,6 +121,12 @@ const { variant = "post", currentPage } = Astro.props;
       ) : (
         <a href="/Blog/what-is-historical-western-photography" title="What Is Historical Western Photography?">7</a>
       )}
+      <span class="sep">|</span>
+      {currentPage === 8 ? (
+        <span class="current">8</span>
+      ) : (
+        <a href="/Blog/what-is-cowboy-fine-art-photography" title="What Is Cowboy Fine Art Photography?">8</a>
+      )}
     </nav>
   </section>
 )}
@@ -136,6 +148,8 @@ const { variant = "post", currentPage } = Astro.props;
       <a href="/Blog/what-is-western-cowboy-art">What Is Western Cowboy Art?</a>
       <span class="sep">|</span>
       <a href="/Blog/what-is-historical-western-photography">What Is Historical Western Photography?</a>
+      <span class="sep">|</span>
+      <a href="/Blog/what-is-cowboy-fine-art-photography">What Is Cowboy Fine Art Photography?</a>
     </div>
   </section>
 )}

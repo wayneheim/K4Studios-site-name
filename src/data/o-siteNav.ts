@@ -73,7 +73,7 @@ children: [
     children: [
       {
         label: "International",
-        href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International",
+        href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
         children: [
           {
             label: "Gallery",
@@ -83,7 +83,7 @@ children: [
       },
       {
         label: "Midwest",
-        href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest",
+        href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
         children: [
           {
             label: "Gallery",
@@ -93,7 +93,7 @@ children: [
       },
       {
         label: "Northeast",
-        href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast",
+        href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
         children: [
           {
             label: "Gallery",
@@ -103,7 +103,7 @@ children: [
       },
       {
         label: "South",
-        href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South",
+        href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
         children: [
           {
             label: "Gallery",
@@ -113,7 +113,7 @@ children: [
       },
       {
         label: "West",
-        href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West",
+        href: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
         children: [
           {
             label: "Gallery",

@@ -5,6 +5,7 @@ export const historicalStory = [
     title: "Historical Western Art",
     paragraphs: [
       "Wayne Heim creates historically themed Western fine art photography — not modern ranch imagery — using narrative, painterly composition to explore the psychological lives of the American frontier.",
+      "Here, 'Western art' refers to the American West — frontier life, cowboys, and 19th-century Western history — not European or Western civilization art traditions.",
       "This work is not contemporary ranch or modern Western lifestyle photography. It is rooted in the 19th-century frontier, drawing from the visual language of classic Western painting, early photography, and cinematic portraiture to create images that feel timeless rather than topical.",
       "Each portrait presents a character study of the American West — not as it exists today, but as it endures in memory, myth, and historical imagination. These are narrative works built for sustained viewing, designed to reveal emotional depth over time."
     ]

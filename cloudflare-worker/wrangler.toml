@@ -24,6 +24,11 @@ database_id = "f2c159b0-b0f1-4056-934c-90e9b8a92e14"
 [dev]
 port = 8787
 
+# Scheduled triggers for SERP tracking - DISABLED (using GSC API instead)
+# Uncomment to re-enable DataForSEO daily checks
+# [triggers]
+# crons = ["0 6 * * *"]
+
 # Production settings
 [env.production]
 # Routes are configured in Cloudflare Dashboard, not here

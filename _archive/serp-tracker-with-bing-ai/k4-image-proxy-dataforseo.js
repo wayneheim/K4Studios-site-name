@@ -2408,7 +2408,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   </style>
 </head>
 <body>
-  <h1>K4 Analytics <a href="/__k4serp" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none;margin-left:20px">📊 SERP</a> <a href="/__k4serp/launch" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none">🚀 Launch Pad</a></h1>
+  <h1>K4 Analytics</h1>
   
   <div class="controls">
     <a href="?days=1${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 1 && !yesterday ? 'active' : ''}">Today</a>
@@ -2939,23 +2939,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
 
     <div class="section tall">
-      <div class="section-header">
-        <h3>Devices</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Sessions and engagement by device. Engage Lvl shows how deeply each platform's users interact.</div></span>
-      </div>
-      <table>
-        <tr><th>Platform</th><th>Sessions</th><th>Engage Lvl</th></tr>
-        ${deviceEngagement.map(d => {
-          const icons = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', unknown: '❓' };
-          const labels = { ios: 'iOS', android: 'Android', mac: 'Mac', windows: 'Windows', linux: 'Linux', unknown: 'Unknown' };
-          const engageColor = d.avg_depth >= 15 ? '#10b981' : d.avg_depth >= 8 ? '#f59e0b' : '#888';
-          return `<tr><td>${icons[d.device] || '❓'} ${labels[d.device] || d.device}</td><td>${d.sessions}</td><td style="color:${engageColor};font-weight:bold;">${d.avg_depth}</td></tr>`;
-        }).join('')}
-        ${deviceEngagement.length === 0 ? '<tr><td colspan="3">No data yet</td></tr>' : ''}
-      </table>
-    </div>
-
-    <div class="section tall">
       <div class="section-header" style="margin-bottom: ${edgeEvents.length === 0 && edgeSummary.length === 0 ? '0' : '12px'};">
         <h3 style="display: inline;">🧭 Index Health</h3>
         ${edgeEvents.length === 0 && edgeSummary.length === 0 ? '<span style="color:#666; margin-left: 12px;">No edge events yet</span>' : ''}
@@ -3129,6 +3112,23 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
         <tr><th>Source</th><th>Sessions</th></tr>
         ${entries.map(e => `<tr><td>${formatEventName(e.entry_source)}</td><td>${e.sessions}</td></tr>`).join('')}
         ${entries.length === 0 ? '<tr><td colspan="2">No data yet</td></tr>' : ''}
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h3>Devices</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Sessions and engagement by device. Engage Lvl shows how deeply each platform's users interact.</div></span>
+      </div>
+      <table>
+        <tr><th>Platform</th><th>Sessions</th><th>Engage Lvl</th></tr>
+        ${deviceEngagement.map(d => {
+          const icons = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', unknown: '❓' };
+          const labels = { ios: 'iOS', android: 'Android', mac: 'Mac', windows: 'Windows', linux: 'Linux', unknown: 'Unknown' };
+          const engageColor = d.avg_depth >= 15 ? '#10b981' : d.avg_depth >= 8 ? '#f59e0b' : '#888';
+          return `<tr><td>${icons[d.device] || '❓'} ${labels[d.device] || d.device}</td><td>${d.sessions}</td><td style="color:${engageColor};font-weight:bold;">${d.avg_depth}</td></tr>`;
+        }).join('')}
+        ${deviceEngagement.length === 0 ? '<tr><td colspan="3">No data yet</td></tr>' : ''}
       </table>
     </div>
 
@@ -3437,9 +3437,8 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
 // ====================
 // SERP TRACKER SYSTEM
 // ====================
-// Track Google rankings via DataForSEO API
-// Manual trigger only - no cron, no Bing, no AI Overview
-// Cost: ~$0.12/day (15 keywords × $0.008)
+// Track Google & Bing rankings with AI Overview detection
+// Uses DataForSEO API (~$0.003/search)
 
 const OUR_DOMAINS = ['k4studios.com', 'www.k4studios.com'];
 const MAX_RANK = 50; // Search depth for sparkline scaling
@@ -3461,9 +3460,9 @@ function safeJson(s, fallback=[]) {
 }
 
 /**
- * Fetch SERP results from DataForSEO (Google only)
+ * Fetch SERP results from DataForSEO
  */
-async function fetchSerpFromDataForSEO(keyword, env) {
+async function fetchSerpFromDataForSEO(keyword, engine, env) {
   const login = env.DATAFORSEO_LOGIN;
   const password = env.DATAFORSEO_PASSWORD;
   
@@ -3473,14 +3472,24 @@ async function fetchSerpFromDataForSEO(keyword, env) {
   
   const auth = btoa(`${login}:${password}`);
   
+  // DataForSEO endpoint differs by engine
+  const endpoint = engine === 'bing' 
+    ? 'https://api.dataforseo.com/v3/serp/bing/organic/live/regular'
+    : 'https://api.dataforseo.com/v3/serp/google/organic/live/regular';
+  
   const payload = [{
     keyword: keyword,
     location_name: "United States",
     language_name: "English",
-    depth: 50
+    depth: 50, // Check top 50 results (same price tier as 40)
+    // For Google, load AI overview async for better detection
+    ...(engine === 'google' && { 
+      calculate_rectangles: false,
+      load_async_ai_overview: true
+    })
   }];
   
-  const response = await fetch('https://api.dataforseo.com/v3/serp/google/organic/live/regular', {
+  const response = await fetch(endpoint, {
     method: 'POST',
     headers: {
       'Authorization': `Basic ${auth}`,
@@ -3497,13 +3506,17 @@ async function fetchSerpFromDataForSEO(keyword, env) {
 }
 
 /**
- * Parse DataForSEO response and extract our rank
+ * Parse DataForSEO response and extract our rank + AI overview data
  */
-function parseSerpResponse(data) {
+function parseSerpResponse(data, engine) {
   const result = {
     ourRank: null,
     ourUrl: null,
-    allRankings: [],
+    allRankings: [], // All K4 pages that rank (not just first)
+    aiOverviewPresent: false,
+    aiOverviewCitesUs: false,
+    aiOverviewCitationPosition: null,
+    aiOverviewText: null,
     top3Urls: [],
     organicResults: []
   };
@@ -3517,6 +3530,7 @@ function parseSerpResponse(data) {
     
     const items = task.result?.[0]?.items || [];
     
+    // Process organic results
     let rank = 0;
     for (const item of items) {
       if (item.type === 'organic') {
@@ -3524,17 +3538,44 @@ function parseSerpResponse(data) {
         const url = item.url || '';
         const domain = item.domain || '';
         
-        result.organicResults.push({ rank, url, domain, title: item.title || '' });
+        result.organicResults.push({
+          rank,
+          url,
+          domain,
+          title: item.title || ''
+        });
         
+        // Top 3 for competitor tracking
         if (rank <= 3) {
           result.top3Urls.push({ rank, url, domain });
         }
         
+        // Check if this is us - collect ALL rankings
         if (OUR_DOMAINS.some(d => domain.includes(d))) {
           result.allRankings.push({ rank, url, title: item.title || '' });
+          // Keep first as primary for backwards compatibility
           if (!result.ourRank) {
             result.ourRank = rank;
             result.ourUrl = url;
+          }
+        }
+      }
+      
+      // Check for AI Overview (Google only)
+      if (engine === 'google' && (item.type === 'ai_overview' || item.type === 'featured_snippet')) {
+        result.aiOverviewPresent = true;
+        result.aiOverviewText = item.description || item.text || '';
+        
+        // Check citations
+        const citations = item.items || item.links || [];
+        let citationPos = 0;
+        for (const cite of citations) {
+          citationPos++;
+          const citeDomain = cite.domain || cite.url || '';
+          if (OUR_DOMAINS.some(d => citeDomain.includes(d))) {
+            result.aiOverviewCitesUs = true;
+            result.aiOverviewCitationPosition = citationPos;
+            break;
           }
         }
       }
@@ -3547,58 +3588,76 @@ function parseSerpResponse(data) {
 }
 
 /**
- * Run SERP check for all enabled keywords (Google only)
+ * Run SERP check for all enabled keywords
  */
 async function runSerpCheck(env) {
   if (!env.DB) {
     throw new Error('Database not configured');
   }
   
+  // Get enabled keywords
   const keywords = await env.DB.prepare(
-    'SELECT keyword FROM serp_keywords WHERE enabled = 1 ORDER BY keyword ASC'
+    'SELECT keyword, track_google, track_bing FROM serp_keywords WHERE enabled = 1 ORDER BY priority DESC'
   ).all();
   
   if (!keywords.results?.length) {
     return { checked: 0, message: 'No keywords to check' };
   }
   
-  const checkedAt = new Date().toISOString().slice(0, 10);
+  const checkedAt = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
   let checked = 0;
   const errors = [];
   
   for (const kw of keywords.results) {
-    try {
-      // Check if already fetched today
-      const existing = await env.DB.prepare(
-        'SELECT id FROM serp_results WHERE keyword = ? AND engine = ? AND checked_at = ?'
-      ).bind(kw.keyword, 'google', checkedAt).first();
-      
-      if (existing) continue;
-      
-      const response = await fetchSerpFromDataForSEO(kw.keyword, env);
-      const parsed = parseSerpResponse(response);
-      
-      await env.DB.prepare(`
-        INSERT INTO serp_results 
-        (keyword, engine, checked_at, our_rank, our_url, all_rankings, top_3_urls, full_serp_json)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-      `).bind(
-        kw.keyword,
-        'google',
-        checkedAt,
-        parsed.ourRank,
-        parsed.ourUrl,
-        JSON.stringify(parsed.allRankings),
-        JSON.stringify(parsed.top3Urls),
-        JSON.stringify(parsed.organicResults.slice(0, 10))
-      ).run();
-      
-      checked++;
-      await new Promise(r => setTimeout(r, 200));
-      
-    } catch (err) {
-      errors.push(`${kw.keyword}: ${err.message}`);
-      console.error(`SERP check failed for ${kw.keyword}:`, err);
+    const engines = [];
+    if (kw.track_google) engines.push('google');
+    if (kw.track_bing) engines.push('bing');
+    
+    for (const engine of engines) {
+      try {
+        // Check if already fetched today
+        const existing = await env.DB.prepare(
+          'SELECT id FROM serp_results WHERE keyword = ? AND engine = ? AND checked_at = ?'
+        ).bind(kw.keyword, engine, checkedAt).first();
+        
+        if (existing) {
+          continue; // Already checked today
+        }
+        
+        // Fetch from DataForSEO
+        const response = await fetchSerpFromDataForSEO(kw.keyword, engine, env);
+        const parsed = parseSerpResponse(response, engine);
+        
+        // Store result
+        await env.DB.prepare(`
+          INSERT INTO serp_results 
+          (keyword, engine, checked_at, our_rank, our_url, all_rankings, ai_overview_present, ai_overview_cites_us, 
+           ai_overview_citation_position, ai_overview_text, top_3_urls, full_serp_json)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `).bind(
+          kw.keyword,
+          engine,
+          checkedAt,
+          parsed.ourRank,
+          parsed.ourUrl,
+          JSON.stringify(parsed.allRankings), // All K4 pages that rank
+          parsed.aiOverviewPresent ? 1 : 0,
+          parsed.aiOverviewCitesUs ? 1 : 0,
+          parsed.aiOverviewCitationPosition,
+          parsed.aiOverviewText,
+          JSON.stringify(parsed.top3Urls),
+          JSON.stringify(parsed.organicResults.slice(0, 10)) // Store top 10 for reference
+        ).run();
+        
+        checked++;
+        
+        // Small delay to avoid rate limiting
+        await new Promise(r => setTimeout(r, 200));
+        
+      } catch (err) {
+        errors.push(`${kw.keyword}/${engine}: ${err.message}`);
+        console.error(`SERP check failed for ${kw.keyword}/${engine}:`, err);
+      }
     }
   }
   
@@ -3609,6 +3668,7 @@ async function runSerpCheck(env) {
  * Handle SERP dashboard request
  */
 async function handleSerpDashboard(request, env) {
+  // Auth check
   const authResponse = checkSerpAuth(request, env);
   if (authResponse) return authResponse;
   
@@ -3624,10 +3684,12 @@ async function handleSerpDashboard(request, env) {
     cutoff.setDate(cutoff.getDate() - days);
     const cutoffStr = cutoff.toISOString().slice(0, 10);
     
+    // Get keywords
     const keywords = await env.DB.prepare(
-      'SELECT * FROM serp_keywords WHERE enabled = 1 ORDER BY keyword ASC'
+      'SELECT * FROM serp_keywords WHERE enabled = 1 ORDER BY priority DESC'
     ).all();
     
+    // Get latest results per keyword/engine
     const latestResults = await env.DB.prepare(`
       SELECT sr1.* FROM serp_results sr1
       INNER JOIN (
@@ -3635,44 +3697,62 @@ async function handleSerpDashboard(request, env) {
         FROM serp_results
         GROUP BY keyword, engine
       ) sr2 ON sr1.keyword = sr2.keyword AND sr1.engine = sr2.engine AND sr1.checked_at = sr2.max_date
-      ORDER BY sr1.keyword
+      ORDER BY sr1.keyword, sr1.engine
     `).all();
     
+    // Get previous day results for change calculation
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
     const yesterdayStr = yesterday.toISOString().slice(0, 10);
     
-    const previousResults = await env.DB.prepare(
-      'SELECT keyword, our_rank FROM serp_results WHERE engine = ? AND checked_at = ?'
-    ).bind('google', yesterdayStr).all();
+    const previousResults = await env.DB.prepare(`
+      SELECT keyword, engine, our_rank FROM serp_results 
+      WHERE checked_at = ?
+    `).bind(yesterdayStr).all();
     
     const prevMap = new Map();
     for (const r of (previousResults.results || [])) {
-      prevMap.set(r.keyword, r.our_rank);
+      prevMap.set(`${r.keyword}|${r.engine}`, r.our_rank);
     }
     
+    // Get trend data for charts
     const trendData = await env.DB.prepare(`
-      SELECT keyword, checked_at, our_rank 
+      SELECT keyword, engine, checked_at, our_rank 
       FROM serp_results 
-      WHERE engine = 'google' AND checked_at >= ?
-      ORDER BY keyword, checked_at
+      WHERE checked_at >= ?
+      ORDER BY keyword, engine, checked_at
     `).bind(cutoffStr).all();
     
+    // Group trend by keyword
     const trendByKeyword = {};
     for (const r of (trendData.results || [])) {
-      if (!trendByKeyword[r.keyword]) trendByKeyword[r.keyword] = [];
-      trendByKeyword[r.keyword].push({ date: r.checked_at, rank: r.our_rank });
+      const key = `${r.keyword}|${r.engine}`;
+      if (!trendByKeyword[key]) trendByKeyword[key] = [];
+      trendByKeyword[key].push({ date: r.checked_at, rank: r.our_rank });
     }
+    
+    // AI Overview stats
+    const aiStats = await env.DB.prepare(`
+      SELECT 
+        COUNT(*) as total_checks,
+        SUM(ai_overview_present) as ai_present,
+        SUM(ai_overview_cites_us) as ai_cites_us
+      FROM serp_results
+      WHERE engine = 'google' AND checked_at >= ?
+    `).bind(cutoffStr).first();
     
     const html = renderSerpDashboard({
       days,
       keywords: keywords.results || [],
       latestResults: latestResults.results || [],
       previousMap: prevMap,
-      trendByKeyword
+      trendByKeyword,
+      aiStats: aiStats || {}
     });
     
-    return new Response(html, { headers: { 'Content-Type': 'text/html' } });
+    return new Response(html, {
+      headers: { 'Content-Type': 'text/html' }
+    });
     
   } catch (err) {
     console.error('SERP dashboard error:', err);
@@ -3701,7 +3781,7 @@ async function handleSerpFetch(request, env) {
 }
 
 /**
- * Handle keyword management
+ * Handle adding/updating keywords
  */
 async function handleSerpKeyword(request, env) {
   const authResponse = checkSerpAuth(request, env);
@@ -3709,12 +3789,12 @@ async function handleSerpKeyword(request, env) {
   
   try {
     const body = await request.json();
-    const { action, keyword, priority } = body;
+    const { action, keyword, priority, enabled } = body;
     
     if (action === 'add' && keyword) {
       await env.DB.prepare(
-        'INSERT OR REPLACE INTO serp_keywords (keyword, priority, enabled, track_google, track_bing) VALUES (?, ?, 1, 1, 0)'
-      ).bind(keyword.toLowerCase().trim(), priority || 5).run();
+        'INSERT OR REPLACE INTO serp_keywords (keyword, priority, enabled) VALUES (?, ?, ?)'
+      ).bind(keyword.toLowerCase().trim(), priority || 5, enabled !== false ? 1 : 0).run();
       return new Response(JSON.stringify({ success: true }), {
         headers: { 'Content-Type': 'application/json' }
       });
@@ -3728,387 +3808,21 @@ async function handleSerpKeyword(request, env) {
       });
     }
     
+    if (action === 'toggle' && keyword) {
+      await env.DB.prepare(
+        'UPDATE serp_keywords SET enabled = NOT enabled WHERE keyword = ?'
+      ).bind(keyword).run();
+      return new Response(JSON.stringify({ success: true }), {
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+    
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' }
     });
     
   } catch (err) {
-    return new Response(JSON.stringify({ error: err.message }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' }
-    });
-  }
-}
-
-/**
- * Handle SERP launch page - quick links to search each keyword
- */
-async function handleSerpLaunch(request, env) {
-  const authResponse = checkSerpAuth(request, env);
-  if (authResponse) return authResponse;
-  
-  if (!env.DB) {
-    return new Response('Database not configured', { status: 500 });
-  }
-  
-  try {
-    const keywords = await env.DB.prepare(
-      'SELECT keyword FROM serp_keywords WHERE enabled = 1 ORDER BY keyword ASC'
-    ).all();
-    
-    const kwList = keywords.results || [];
-    
-    // Fetch today's logged ranks
-    const today = new Date().toISOString().slice(0, 10);
-    const todayRanks = await env.DB.prepare(`
-      SELECT keyword, engine, our_rank FROM serp_results 
-      WHERE checked_at = ?
-    `).bind(today).all();
-    
-    // Build a map of today's ranks by keyword and engine
-    const todayMap = {};
-    for (const r of (todayRanks.results || [])) {
-      if (!todayMap[r.keyword]) todayMap[r.keyword] = {};
-      todayMap[r.keyword][r.engine] = r.our_rank;
-    }
-    
-    const keywordCards = kwList.map((kw, idx) => {
-      const encoded = encodeURIComponent(kw.keyword);
-      const safeKw = escapeHtml(kw.keyword);
-      const todayData = todayMap[kw.keyword] || {};
-      const gVal = todayData.google || '';
-      const gaiVal = todayData.google_ai || '';
-      const bVal = todayData.bing || '';
-      const hasLogged = gVal || gaiVal || bVal;
-      return `
-        <div class="kw-card" data-keyword="${safeKw}">
-          <div class="kw-header">
-            <div class="kw-name">${safeKw}</div>
-            <div class="kw-buttons">
-              <button onclick="openGoogle('${encoded}')" class="btn google">Google</button>
-              <button onclick="openBing('${encoded}')" class="btn bing">Bing</button>
-            </div>
-          </div>
-          <div class="kw-inputs">
-            <div class="input-group">
-              <label>Google</label>
-              <input type="number" id="g-${idx}" placeholder="#" min="1" max="100" value="${gVal}">
-            </div>
-            <div class="input-group">
-              <label>G-AI</label>
-              <input type="number" id="gai-${idx}" placeholder="#" min="1" max="100" value="${gaiVal}">
-            </div>
-            <div class="input-group">
-              <label>Bing</label>
-              <input type="number" id="b-${idx}" placeholder="#" min="1" max="100" value="${bVal}">
-            </div>
-            <div class="save-group">
-              <button onclick="logRank(${idx}, '${safeKw}')" class="btn-log${hasLogged ? ' logged' : ''}">💾 Save</button>
-              ${hasLogged ? '<span class="saved-date">Saved today</span>' : ''}
-            </div>
-          </div>
-        </div>
-      `;
-    }).join('');
-
-    const html = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K4 SERP Launch Pad</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { 
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
-      background: #1a1a1a; 
-      color: #e0e0e0; 
-      padding: 30px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    h1 { color: #fff; margin-bottom: 10px; display: flex; align-items: center; gap: 15px; }
-    h1 a { font-size: 14px; color: #4a9eff; text-decoration: none; }
-    .subtitle { color: #888; margin-bottom: 30px; font-size: 14px; }
-    .kw-card {
-      background: #252525;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 15px;
-    }
-    .kw-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-bottom: 15px;
-    }
-    .kw-name {
-      font-size: 18px;
-      font-weight: 500;
-      color: #fff;
-      text-transform: capitalize;
-    }
-    .kw-buttons {
-      display: flex;
-      gap: 10px;
-    }
-    .kw-inputs {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      flex-wrap: wrap;
-      padding-top: 15px;
-      border-top: 1px solid #333;
-    }
-    .input-group {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .input-group label {
-      font-size: 11px;
-      color: #888;
-      text-transform: uppercase;
-    }
-    .input-group input {
-      width: 60px;
-      padding: 8px 10px;
-      border-radius: 6px;
-      border: 1px solid #444;
-      background: #1a1a1a;
-      color: #fff;
-      font-size: 14px;
-      text-align: center;
-      -moz-appearance: textfield;
-    }
-    .input-group input::-webkit-outer-spin-button,
-    .input-group input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-    .input-group input:focus {
-      outline: none;
-      border-color: #4a9eff;
-    }
-    .btn {
-      padding: 10px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 14px;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.1s, box-shadow 0.1s;
-    }
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    .btn.google {
-      background: linear-gradient(135deg, #4285f4 0%, #34a853 50%, #fbbc05 75%, #ea4335 100%);
-      background-size: 300% 300%;
-      color: #fff;
-    }
-    .btn.bing {
-      background: linear-gradient(135deg, #00809d 0%, #0078d4 100%);
-      color: #fff;
-    }
-    .btn-log {
-      padding: 8px 16px;
-      border-radius: 6px;
-      border: none;
-      background: #10b981;
-      color: #fff;
-      font-weight: 500;
-      font-size: 14px;
-      cursor: pointer;
-      margin-left: auto;
-    }
-    .btn-log:hover { background: #059669; }
-    .btn-log:disabled { background: #666; cursor: not-allowed; }
-    .btn-log.saved { background: #fbbf24; color: #000; }
-    .btn-log.logged { background: #6366f1; border: 1px solid #818cf8; }
-    .btn-log.logged:hover { background: #4f46e5; }
-    .save-group { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-left: auto; }
-    .saved-date { font-size: 10px; color: #10b981; }
-    .tip {
-      background: #252525;
-      border-left: 4px solid #fbbf24;
-      padding: 15px 20px;
-      border-radius: 0 8px 8px 0;
-      margin-top: 30px;
-      font-size: 13px;
-      color: #888;
-    }
-    .tip strong { color: #fbbf24; }
-    .empty { text-align: center; color: #666; padding: 40px; }
-  </style>
-</head>
-<body>
-  <h1>
-    🚀 SERP Launch Pad
-    <a href="/__k4serp" target="_blank">📊 Dashboard</a>
-  </h1>
-  <p class="subtitle">Search each keyword, then log your rank (saves to dashboard)</p>
-  
-  ${keywordCards || '<div class="empty">No keywords configured. Add some in the dashboard.</div>'}
-  
-  <div class="tip">
-    <strong>💡 Tip:</strong> Open this page in incognito first (Ctrl+Shift+N in Chrome, Ctrl+Shift+P in Edge/Firefox), 
-    then click the search buttons - tabs will inherit incognito mode. Enter your rank (or leave blank if not found).
-  </div>
-  
-  <script>
-    function openGoogle(q) {
-      window.open('https://www.google.com/search?q=' + q, '_blank');
-      // Google AI (Gemini) - searches with AI mode, slight delay to avoid popup blocker
-      setTimeout(() => window.open('https://www.google.com/search?q=' + q + '&udm=50', '_blank'), 100);
-    }
-    
-    function openBing(q) {
-      window.open('https://www.bing.com/search?q=' + q, '_blank');
-    }
-    
-    async function logRank(idx, keyword) {
-      const gRank = document.getElementById('g-' + idx).value || null;
-      const gaiRank = document.getElementById('gai-' + idx).value || null;
-      const bRank = document.getElementById('b-' + idx).value || null;
-      
-      if (!gRank && !gaiRank && !bRank) {
-        alert('Enter at least one rank');
-        return;
-      }
-      
-      const btn = event.target;
-      btn.disabled = true;
-      btn.textContent = '...';
-      
-      try {
-        const res = await fetch('/__k4serp/log', {
-          method: 'POST',
-          credentials: 'include',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 
-            keyword, 
-            google: gRank ? parseInt(gRank) : null,
-            google_ai: gaiRank ? parseInt(gaiRank) : null,
-            bing: bRank ? parseInt(bRank) : null
-          })
-        });
-        
-        if (res.ok) {
-          btn.textContent = '✓ Saved!';
-          btn.classList.add('saved');
-          btn.classList.add('logged');
-          // Update the saved date text
-          const saveGroup = btn.parentElement;
-          let dateSpan = saveGroup.querySelector('.saved-date');
-          if (!dateSpan) {
-            dateSpan = document.createElement('span');
-            dateSpan.className = 'saved-date';
-            saveGroup.appendChild(dateSpan);
-          }
-          dateSpan.textContent = 'Saved today';
-          setTimeout(() => {
-            btn.textContent = '💾 Save';
-            btn.classList.remove('saved');
-            btn.disabled = false;
-          }, 1500);
-        } else {
-          throw new Error('Failed to save');
-        }
-      } catch (e) {
-        btn.textContent = '✕ Error';
-        setTimeout(() => {
-          btn.textContent = '💾 Save';
-          btn.disabled = false;
-        }, 2000);
-      }
-    }
-  </script>
-</body>
-</html>`;
-
-    return new Response(html, { headers: { 'Content-Type': 'text/html' } });
-    
-  } catch (err) {
-    console.error('SERP launch error:', err);
-    return new Response(`Error: ${err.message}`, { status: 500 });
-  }
-}
-
-/**
- * Handle manual rank logging from launch pad
- */
-async function handleSerpLog(request, env) {
-  const authResponse = checkSerpAuth(request, env);
-  if (authResponse) return authResponse;
-  
-  if (!env.DB) {
-    return new Response(JSON.stringify({ error: 'Database not configured' }), { 
-      status: 500, 
-      headers: { 'Content-Type': 'application/json' } 
-    });
-  }
-  
-  try {
-    const body = await request.json();
-    const { keyword, google, google_ai, bing, bing_ai } = body;
-    
-    if (!keyword) {
-      return new Response(JSON.stringify({ error: 'Keyword required' }), { 
-        status: 400, 
-        headers: { 'Content-Type': 'application/json' } 
-      });
-    }
-    
-    const checkedAt = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
-    
-    // Log Google rank if provided
-    if (google !== null) {
-      await env.DB.prepare(`
-        INSERT OR REPLACE INTO serp_results 
-        (keyword, engine, checked_at, our_rank, our_url, all_rankings, top_3_urls, full_serp_json)
-        VALUES (?, 'google', ?, ?, '', '[]', '[]', '{}')
-      `).bind(keyword, checkedAt, google).run();
-    }
-    
-    // Log Google AI rank if provided (store as google_ai engine)
-    if (google_ai !== null) {
-      await env.DB.prepare(`
-        INSERT OR REPLACE INTO serp_results 
-        (keyword, engine, checked_at, our_rank, our_url, all_rankings, top_3_urls, full_serp_json)
-        VALUES (?, 'google_ai', ?, ?, '', '[]', '[]', '{}')
-      `).bind(keyword, checkedAt, google_ai).run();
-    }
-    
-    // Log Bing rank if provided
-    if (bing !== null) {
-      await env.DB.prepare(`
-        INSERT OR REPLACE INTO serp_results 
-        (keyword, engine, checked_at, our_rank, our_url, all_rankings, top_3_urls, full_serp_json)
-        VALUES (?, 'bing', ?, ?, '', '[]', '[]', '{}')
-      `).bind(keyword, checkedAt, bing).run();
-    }
-    
-    // Log Bing AI rank if provided
-    if (bing_ai !== null) {
-      await env.DB.prepare(`
-        INSERT OR REPLACE INTO serp_results 
-        (keyword, engine, checked_at, our_rank, our_url, all_rankings, top_3_urls, full_serp_json)
-        VALUES (?, 'bing_ai', ?, ?, '', '[]', '[]', '{}')
-      `).bind(keyword, checkedAt, bing_ai).run();
-    }
-    
-    return new Response(JSON.stringify({ success: true }), {
-      headers: { 'Content-Type': 'application/json' }
-    });
-    
-  } catch (err) {
-    console.error('SERP log error:', err);
     return new Response(JSON.stringify({ error: err.message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
@@ -4129,65 +3843,101 @@ function checkSerpAuth(request, env) {
   return null;
 }
 
-function renderSerpDashboard({ days, keywords, latestResults, previousMap, trendByKeyword }) {
-  // Group results by keyword, then by engine
-  const byKeywordEngine = {};
+function renderSerpDashboard({ days, keywords, latestResults, previousMap, trendByKeyword, aiStats }) {
+  // Group latest results by keyword
+  const byKeyword = {};
   for (const r of latestResults) {
-    if (!byKeywordEngine[r.keyword]) byKeywordEngine[r.keyword] = {};
-    byKeywordEngine[r.keyword][r.engine] = r;
+    if (!byKeyword[r.keyword]) byKeyword[r.keyword] = {};
+    byKeyword[r.keyword][r.engine] = r;
   }
   
+  // Calculate stats (fixed average calculation)
   const googleRanks = latestResults.filter(r => r.engine === 'google' && r.our_rank).map(r => r.our_rank);
-  const avgRank = googleRanks.length ? (googleRanks.reduce((a, b) => a + b, 0) / googleRanks.length) : null;
-  const lastCheck = latestResults.reduce((max, r) => !max || r.checked_at > max ? r.checked_at : max, null);
-  const rankedCount = googleRanks.length;
+  const avgRankGoogle = googleRanks.length ? (googleRanks.reduce((a, b) => a + b, 0) / googleRanks.length) : null;
   
+  const bingRanks = latestResults.filter(r => r.engine === 'bing' && r.our_rank).map(r => r.our_rank);
+  const avgRankBing = bingRanks.length ? (bingRanks.reduce((a, b) => a + b, 0) / bingRanks.length) : null;
+  
+  // Get actual last check date (not just first result)
+  const lastCheck = latestResults.reduce((max, r) => !max || r.checked_at > max ? r.checked_at : max, null);
+  
+  const rankedKeywords = latestResults.filter(r => r.our_rank).length;
+  const totalChecks = latestResults.length;
+  
+  // Build keyword rows
   const keywordRows = keywords.map(kw => {
-    const engines = byKeywordEngine[kw.keyword] || {};
-    const googleResult = engines.google;
-    const googleAiResult = engines.google_ai;
-    const bingResult = engines.bing;
+    const google = byKeyword[kw.keyword]?.google;
+    const bing = byKeyword[kw.keyword]?.bing;
     
-    const gRank = googleResult?.our_rank;
-    const gaiRank = googleAiResult?.our_rank;
-    const bRank = bingResult?.our_rank;
+    // Parse all rankings if present (with safe JSON parsing)
+    const googleAllRankings = safeJson(google?.all_rankings, []);
+    const bingAllRankings = safeJson(bing?.all_rankings, []);
     
-    const prevRank = previousMap.get(kw.keyword);
-    const change = gRank && prevRank ? prevRank - gRank : null;
-    
-    const changeIcon = change === null ? '' 
-      : change > 0 ? `<span style="color:#10b981">▲${change}</span>`
-      : change < 0 ? `<span style="color:#ef4444">▼${Math.abs(change)}</span>`
-      : '<span style="color:#888">—</span>';
-    
-    const trend = trendByKeyword[kw.keyword] || [];
-    const sparkline = trend.slice(-14).map(t => Math.min(MAX_RANK, Math.max(1, t.rank ?? MAX_RANK)));
-    
-    const rankCell = (rank) => {
-      if (!rank) return '<td class="rank-cell">-</td>';
-      const cls = rank <= 3 ? 'rank-top3' : rank <= 10 ? 'rank-top10' : '';
-      return `<td class="rank-cell ${cls}">${rank}</td>`;
+    // Format rank display - show all if multiple
+    const formatRanks = (primary, allRankings) => {
+      if (!primary) return '-';
+      if (allRankings.length <= 1) return primary.toString();
+      return allRankings.map(r => r.rank).join(', ');
     };
+    
+    const googleRank = formatRanks(google?.our_rank, googleAllRankings);
+    const bingRank = formatRanks(bing?.our_rank, bingAllRankings);
+    
+    const prevGoogle = previousMap.get(`${kw.keyword}|google`);
+    const prevBing = previousMap.get(`${kw.keyword}|bing`);
+    
+    const googleChange = google?.our_rank && prevGoogle 
+      ? prevGoogle - google.our_rank 
+      : null;
+    const bingChange = bing?.our_rank && prevBing 
+      ? prevBing - bing.our_rank 
+      : null;
+    
+    const changeIcon = (change) => {
+      if (change === null) return '';
+      if (change > 0) return `<span style="color:#10b981">▲${change}</span>`;
+      if (change < 0) return `<span style="color:#ef4444">▼${Math.abs(change)}</span>`;
+      return '<span style="color:#888">—</span>';
+    };
+    
+    const aiIcon = google?.ai_overview_present 
+      ? (google?.ai_overview_cites_us 
+          ? '<span title="AI Overview cites K4!" style="color:#fbbf24">🤖✓</span>'
+          : '<span title="AI Overview present (not citing us)" style="color:#888">🤖</span>')
+      : '';
+    
+    const top3 = safeJson(google?.top_3_urls, []);
+    const competitors = top3
+      .filter(c => c.domain && !OUR_DOMAINS.some(o => c.domain.includes(o)))
+      .slice(0, 3)
+      .map(c => `${c.rank}: ${escapeHtml(c.domain)}`)
+      .join(' | ');
+    
+    // Mini sparkline data - scale to actual search depth
+    const trend = trendByKeyword[`${kw.keyword}|google`] || [];
+    const sparkline = trend.slice(-14).map(t => {
+      const v = t.rank ?? MAX_RANK;
+      return Math.min(MAX_RANK, Math.max(1, v));
+    });
     
     return `
       <tr>
         <td style="font-weight:500">${escapeHtml(kw.keyword)}</td>
-        <td class="rank-cell ${gRank && gRank <= 3 ? 'rank-top3' : gRank && gRank <= 10 ? 'rank-top10' : ''}">
-          ${gRank || '-'} ${changeIcon}
+        <td class="rank-cell ${google?.our_rank <= 3 ? 'rank-top3' : google?.our_rank <= 10 ? 'rank-top10' : ''}" 
+            title="${escapeHtml(googleAllRankings.map(r => `#${r.rank}: ${r.url}`).join('\n') || 'No ranking')}">
+          ${googleRank} ${changeIcon(googleChange)}
+          ${googleAllRankings.length > 1 ? '<span style="color:#10b981;font-size:10px"> (' + googleAllRankings.length + ' pages)</span>' : ''}
         </td>
-        ${rankCell(gaiRank)}
-        ${rankCell(bRank)}
+        <td style="font-size:13px;color:#ccc">${competitors || '-'}</td>
         <td>
-          ${sparkline.length > 1 ? `
-            <svg class="sparkline" viewBox="0 0 70 20" preserveAspectRatio="none">
-              <polyline fill="none" stroke="#4a9eff" stroke-width="1.5" points="${
-                sparkline.map((v, i) => `${i * (70 / Math.max(sparkline.length - 1, 1))},${((v - 1) / (MAX_RANK - 1)) * 20}`).join(' ')
-              }"/>
-            </svg>
-          ` : '-'}
+          <svg class="sparkline" viewBox="0 0 70 20" preserveAspectRatio="none">
+            <polyline fill="none" stroke="#4a9eff" stroke-width="1.5" points="${
+              sparkline.map((v, i) => `${i * (70 / Math.max(sparkline.length - 1, 1))},${((v - 1) / (MAX_RANK - 1)) * 20}`).join(' ')
+            }"/>
+          </svg>
         </td>
         <td style="text-align:center">
-          <button onclick="deleteKeyword('${escapeHtml(kw.keyword)}')" style="background:none;border:none;color:#ef4444;cursor:pointer">✕</button>
+          <button data-keyword="${escapeHtml(kw.keyword)}" onclick="deleteKeyword(this.dataset.keyword)" style="background:none;border:none;color:#ef4444;cursor:pointer">✕</button>
         </td>
       </tr>
     `;
@@ -4209,6 +3959,7 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     .stat { background: #252525; padding: 12px 20px; border-radius: 8px; }
     .stat .value { font-size: 24px; font-weight: bold; color: #4a9eff; }
     .stat .label { font-size: 11px; color: #888; margin-top: 2px; }
+    .stat.highlight .value { color: #fbbf24; }
     .stat.good .value { color: #10b981; }
     table { width: 100%; border-collapse: collapse; background: #252525; border-radius: 8px; overflow: hidden; margin-bottom: 20px; }
     th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #333; }
@@ -4219,10 +3970,11 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     .rank-top3 { color: #10b981; }
     .rank-top10 { color: #fbbf24; }
     .sparkline { width: 70px; height: 20px; }
-    .controls { display: flex; gap: 10px; margin-bottom: 20px; align-items: center; flex-wrap: wrap; }
+    .controls { display: flex; gap: 10px; margin-bottom: 20px; align-items: center; }
     .controls a, .controls button { 
       color: #4a9eff; text-decoration: none; padding: 8px 16px; 
-      border-radius: 6px; background: #333; border: none; cursor: pointer; font-size: 13px;
+      border-radius: 6px; background: #333; border: none; cursor: pointer;
+      font-size: 13px;
     }
     .controls a:hover, .controls button:hover { background: #444; }
     .controls button.primary { background: #2563eb; color: #fff; }
@@ -4230,86 +3982,188 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     .add-form { background: #252525; padding: 15px; border-radius: 8px; margin-bottom: 20px; display: flex; gap: 10px; align-items: center; }
     .add-form input { padding: 8px 12px; border-radius: 6px; border: 1px solid #444; background: #1a1a1a; color: #e0e0e0; }
     .add-form input[type="text"] { flex: 1; min-width: 200px; }
+    .add-form input[type="number"] { width: 60px; }
+    .ai-summary { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; }
+    .ai-summary h3 { color: #fff; font-size: 14px; margin-bottom: 8px; }
+    .ai-summary .stats-row { display: flex; gap: 20px; }
+    .ai-summary .stat { background: rgba(255,255,255,0.1); }
+    .ai-summary .stat .value { color: #fff; }
+    .ai-summary .stat .label { color: #c4b5fd; }
     .last-check { color: #666; font-size: 12px; margin-left: auto; }
   </style>
 </head>
 <body>
   <h1>
     🔍 K4 SERP Tracker 
-    <a href="/__k4serp/launch">🚀 Launch Pad</a>
     <a href="/__k4stats">← Analytics</a>
   </h1>
   
   <div class="controls">
-    <a href="?days=7">7 Days</a>
-    <a href="?days=30">30 Days</a>
-    <a href="?days=90">90 Days</a>
-    <span class="last-check">Last: ${lastCheck || 'Never'}</span>
+    <a href="?days=7" class="${days === 7 ? 'active' : ''}">7 Days</a>
+    <a href="?days=30" class="${days === 30 ? 'active' : ''}">30 Days</a>
+    <a href="?days=90" class="${days === 90 ? 'active' : ''}">90 Days</a>
+    <button class="primary" id="fetchBtn" onclick="fetchNow()">🔄 Fetch Now</button>
+    <span id="fetchTimer" style="color:#fbbf24;font-weight:500;min-width:80px;display:inline-block"></span>
+    <span class="last-check">Last check: ${lastCheck || 'Never'}</span>
   </div>
 
   <div class="stats">
     <div class="stat">
       <div class="value">${keywords.length}</div>
-      <div class="label">Keywords</div>
+      <div class="label">Keywords Tracked</div>
     </div>
-    <div class="stat ${avgRank && avgRank <= 10 ? 'good' : ''}">
-      <div class="value">${avgRank ? avgRank.toFixed(1) : '-'}</div>
+    <div class="stat ${avgRankGoogle <= 10 ? 'good' : ''}">
+      <div class="value">${avgRankGoogle ? avgRankGoogle.toFixed(1) : '-'}</div>
       <div class="label">Avg Google Rank</div>
     </div>
     <div class="stat">
-      <div class="value">${rankedCount}/${keywords.length}</div>
+      <div class="value">${rankedKeywords}/${totalChecks}</div>
       <div class="label">Ranking</div>
     </div>
   </div>
 
-  <h2>Keyword Rankings (Google)</h2>
+  <!-- AI Overview tracking disabled - DataForSEO not returning AI data yet
+  ${aiStats.total_checks ? `
+  <div class="ai-summary">
+    <h3>🤖 AI Overview Tracking (Google)</h3>
+    <div class="stats-row">
+      <div class="stat">
+        <div class="value">${Math.round((aiStats.ai_present / aiStats.total_checks) * 100)}%</div>
+        <div class="label">Queries with AI Overview</div>
+      </div>
+      <div class="stat">
+        <div class="value">${aiStats.ai_cites_us || 0}</div>
+        <div class="label">Times K4 Cited</div>
+      </div>
+      <div class="stat">
+        <div class="value">${aiStats.ai_present ? Math.round((aiStats.ai_cites_us / aiStats.ai_present) * 100) : 0}%</div>
+        <div class="label">Citation Rate</div>
+      </div>
+    </div>
+  </div>
+  ` : ''}
+  -->
+
+  <h2>Keyword Rankings</h2>
   
   <table>
     <thead>
       <tr>
         <th>Keyword</th>
         <th>Google</th>
-        <th>G-AI</th>
-        <th>Bing</th>
+        <th>Top Competitors</th>
         <th>14-Day Trend</th>
         <th></th>
       </tr>
     </thead>
     <tbody>
-      ${keywordRows || '<tr><td colspan="6" style="text-align:center;color:#888">No keywords. Add some below!</td></tr>'}
+      ${keywordRows || '<tr><td colspan="5" style="text-align:center;color:#888">No keywords configured. Add some below!</td></tr>'}
     </tbody>
   </table>
 
   <h2>Add Keyword</h2>
   <div class="add-form">
-    <input type="text" id="newKeyword" placeholder="Enter keyword...">
-    <button onclick="addKeyword()">+ Add</button>
+    <input type="text" id="newKeyword" placeholder="Enter keyword to track...">
+    <input type="number" id="newPriority" value="5" min="1" max="10" title="Priority (1-10)">
+    <button onclick="addKeyword()">+ Add Keyword</button>
   </div>
 
   <script>
+    let fetchTimerInterval = null;
+    
+    async function fetchNow() {
+      const btn = document.getElementById('fetchBtn');
+      const timerEl = document.getElementById('fetchTimer');
+      btn.disabled = true;
+      btn.textContent = '⏳ Fetching...';
+      
+      // Start timer
+      const startTime = Date.now();
+      timerEl.textContent = '0:00';
+      fetchTimerInterval = setInterval(() => {
+        const elapsed = Math.floor((Date.now() - startTime) / 1000);
+        const mins = Math.floor(elapsed / 60);
+        const secs = elapsed % 60;
+        timerEl.textContent = mins + ':' + secs.toString().padStart(2, '0');
+      }, 1000);
+      
+      try {
+        const res = await fetch('/__k4serp/fetch', { method: 'POST', credentials: 'include' });
+        const data = await res.json();
+        
+        // Stop timer and show final time
+        clearInterval(fetchTimerInterval);
+        const totalTime = Math.floor((Date.now() - startTime) / 1000);
+        const mins = Math.floor(totalTime / 60);
+        const secs = totalTime % 60;
+        
+        if (data.error) {
+          timerEl.textContent = '❌ ' + mins + ':' + secs.toString().padStart(2, '0');
+          alert('Error: ' + data.error);
+        } else {
+          timerEl.style.color = '#10b981';
+          timerEl.textContent = '✓ ' + mins + ':' + secs.toString().padStart(2, '0');
+          alert('Checked ' + data.checked + ' keyword/engine combinations in ' + mins + 'm ' + secs + 's');
+          location.reload();
+        }
+      } catch (e) {
+        clearInterval(fetchTimerInterval);
+        timerEl.textContent = '❌ Error';
+        alert('Error: ' + e.message);
+      }
+      
+      btn.disabled = false;
+      btn.textContent = '🔄 Fetch Now';
+    }
+    
     async function addKeyword() {
       const keyword = document.getElementById('newKeyword').value.trim();
-      if (!keyword) return alert('Enter a keyword');
+      const priority = parseInt(document.getElementById('newPriority').value) || 5;
       
-      const res = await fetch('/__k4serp/keyword', {
-        method: 'POST', credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'add', keyword })
-      });
-      if (res.ok) location.reload();
-      else alert('Error adding keyword');
+      if (!keyword) {
+        alert('Enter a keyword');
+        return;
+      }
+      
+      try {
+        const res = await fetch('/__k4serp/keyword', {
+          method: 'POST',
+          credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'add', keyword, priority })
+        });
+        
+        if (res.ok) {
+          location.reload();
+        } else {
+          const data = await res.json();
+          alert('Error: ' + data.error);
+        }
+      } catch (e) {
+        alert('Error: ' + e.message);
+      }
     }
     
     async function deleteKeyword(keyword) {
-      if (!confirm('Delete "' + keyword + '"?')) return;
+      if (!confirm('Delete "' + keyword + '" and all its history?')) return;
       
-      const res = await fetch('/__k4serp/keyword', {
-        method: 'POST', credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'delete', keyword })
-      });
-      if (res.ok) location.reload();
-      else alert('Error deleting keyword');
+      try {
+        const res = await fetch('/__k4serp/keyword', {
+          method: 'POST',
+          credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'delete', keyword })
+        });
+        
+        if (res.ok) {
+          location.reload();
+        } else {
+          const data = await res.json();
+          alert('Error: ' + data.error);
+        }
+      } catch (e) {
+        alert('Error: ' + e.message);
+      }
     }
   </script>
 </body>
@@ -4381,19 +4235,29 @@ export default {
       return handleSerpDashboard(request, env);
     }
 
-    // 0g-launch) SERP Launch Pad - quick search links
-    if (url.pathname === "/__k4serp/launch") {
-      return handleSerpLaunch(request, env);
-    }
-
-    // 0g-log) SERP Log - save manual rank entry
-    if (url.pathname === "/__k4serp/log" && request.method === "POST") {
-      return handleSerpLog(request, env);
-    }
-
-    // 0h) SERP Tracker - Manual fetch trigger
+    // 0h) SERP Tracker - Fetch now
     if (url.pathname === "/__k4serp/fetch" && request.method === "POST") {
       return handleSerpFetch(request, env);
+    }
+
+    // 0h-test) SERP Tracker - Test single keyword (returns raw API response)
+    if (url.pathname === "/__k4serp/test" && request.method === "POST") {
+      const authResponse = checkSerpAuth(request, env);
+      if (authResponse) return authResponse;
+      
+      try {
+        const body = await request.json();
+        const keyword = body.keyword || "western painterly photography";
+        const rawResponse = await fetchSerpFromDataForSEO(keyword, 'google', env);
+        return new Response(JSON.stringify(rawResponse, null, 2), {
+          headers: { 'Content-Type': 'application/json' }
+        });
+      } catch (err) {
+        return new Response(JSON.stringify({ error: err.message }), {
+          status: 500,
+          headers: { 'Content-Type': 'application/json' }
+        });
+      }
     }
 
     // 0i) SERP Tracker - Keyword management
@@ -4439,6 +4303,17 @@ export default {
     } catch (err) {
       console.error("Gateway error (failing open):", err);
       return fetch(request);
+    }
+  },
+  
+  // Scheduled handler for daily SERP checks
+  async scheduled(event, env, ctx) {
+    console.log('Running scheduled SERP check...');
+    try {
+      const result = await runSerpCheck(env);
+      console.log(`SERP check complete: ${result.checked} checks, ${result.errors?.length || 0} errors`);
+    } catch (err) {
+      console.error('Scheduled SERP check failed:', err);
     }
   }
 };
