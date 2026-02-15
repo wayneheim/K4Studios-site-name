@@ -632,7 +632,7 @@ export default function ChapterGalleryBase({
     setViewMode("grid");
     track("grid_open");
   };
-  const goExit = (e) => { e?.stopPropagation(); if (tourOpen()) return; if (basePath) window.location.href = basePath; };
+  const goExit = (e) => { e?.stopPropagation(); if (tourOpen()) return; track("exit_to_gallery"); if (basePath) window.location.href = basePath; };
 
   // Enter chapters
   useEffect(() => {
@@ -688,6 +688,15 @@ export default function ChapterGalleryBase({
     const newUrl = `${basePath}/${imageId}`;
     if (window.location.pathname !== newUrl) window.history.pushState(null, "", newUrl);
   }, [currentIndex, hasEnteredChapters, basePath, galleryData, viewMode]);
+
+  // Track chapter views (Layer B - proves human via JS, not inflatable by bots)
+  useEffect(() => {
+    if (!hasEnteredChapters) return;
+    if (viewMode === "grid") return;
+    const imageId = galleryData[currentIndex]?.id;
+    if (!imageId) return;
+    trackArtView('chapter_view', imageId);
+  }, [currentIndex, hasEnteredChapters, viewMode, galleryData]);
 
   // ✅ Replaced old title updater with the hook
   const entry = galleryData[currentIndex];
@@ -1273,7 +1282,7 @@ export default function ChapterGalleryBase({
                             if (moreDetails) moreDetails.removeAttribute('open');
                             sessionStorage.setItem("collectorHintShown", "1");
                             setShowCollectorHint(false);
-                            track("collector_notes_toggle");
+                            track("collector_notes_open");
                           }}
                           aria-label="View Collector Notes"
                           title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
@@ -1545,7 +1554,6 @@ export default function ChapterGalleryBase({
                             <button
                               type="button"
                               onClick={() => {
-                                track("slideshow_start");
                                 trackArtView('slideshow_start', galleryData[currentIndex]?.id);
                                 if (!tourOpen()) {
                                   setShowStoryShow(true);
@@ -1589,7 +1597,6 @@ export default function ChapterGalleryBase({
                           <button
                             type="button"
                             onClick={() => {
-                              track("slideshow_start");
                               trackArtView('slideshow_start', galleryData[currentIndex]?.id);
                               if (!tourOpen()) {
                                 setShowStoryShow(true);

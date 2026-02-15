@@ -7,9 +7,10 @@
  * Events:
  *   xl_zoom        - User clicked zoom button to see full-size image
  *   slideshow_start - User clicked slideshow button to start auto-play
+ *   chapter_view   - User navigated to a chapter image (proves human via JS)
  */
 
-type EventType = 'xl_zoom' | 'slideshow_start';
+type EventType = 'xl_zoom' | 'slideshow_start' | 'chapter_view';
 
 // Dedup within session to prevent double-fires
 const fired = new Set<string>();
@@ -27,18 +28,19 @@ export function trackEvent(type: EventType, imageId: string | undefined | null) 
   if (fired.has(key)) return;
   fired.add(key);
   
-  // Fire and forget - use sendBeacon for reliability
+  // Fire and forget - send directly to CF worker for accurate geo data
+  // (Netlify proxy strips CF geo headers, so we bypass it)
+  const TRACK_URL = 'https://k4-image-proxy.wayneheim.workers.dev/__k4track/event';
   const payload = JSON.stringify({ type, imageId });
   
   if (navigator.sendBeacon) {
-    navigator.sendBeacon('/__k4track/event', payload);
+    navigator.sendBeacon(TRACK_URL, payload);
   } else {
     // Fallback for older browsers
-    fetch('/__k4track/event', {
+    fetch(TRACK_URL, {
       method: 'POST',
       body: payload,
       keepalive: true,
-      headers: { 'Content-Type': 'application/json' }
     }).catch(() => {}); // Ignore errors
   }
 }

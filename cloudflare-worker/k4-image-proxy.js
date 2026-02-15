@@ -676,6 +676,8 @@ async function logArtView(env, type, targetId, request) {
     
     const ipHash = hashIP(ip);
     const country = request.cf?.country || null;
+    const region = request.cf?.region || null;
+    const city = request.cf?.city || null;
     const referrer = request.headers.get("Referer") || null;
     
     // Stricter bot detection for on-site views:
@@ -694,9 +696,9 @@ async function logArtView(env, type, targetId, request) {
     const dedupKey = `${ipHash}:${targetId}:${type}:${hour}`;
     
     await env.DB.prepare(`
-      INSERT OR IGNORE INTO art_views (type, target_id, ip_hash, ua_class, country, referrer, dedup_key, is_bot)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    `).bind(type, targetId, ipHash, uaClass, country, referrer, dedupKey, isBot).run();
+      INSERT OR IGNORE INTO art_views (type, target_id, ip_hash, ua_class, country, region, city, referrer, dedup_key, is_bot)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `).bind(type, targetId, ipHash, uaClass, country, region, city, referrer, dedupKey, isBot).run();
   } catch (e) {
     // Never let logging break the response
     console.error('Art view logging error:', e);
@@ -1299,6 +1301,16 @@ async function handleAdminAnalytics(request, env) {
     }
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
     const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
+    // Art views use ip_hash (first 3 octets + .x) instead of raw IP
+    const excludeIpHash = excludeIp ? excludeIp.split('.').slice(0, 3).join('.') + '.x' : null;
+    const viewerIpHash = viewerIp ? viewerIp.split('.').slice(0, 3).join('.') + '.x' : null;
+    // Combined art_views filter: IP exclusion + datacenter bot IPs + Chardon/localhost (via ip_hash + referrer)
+    const artIpParts = [];
+    if (excludeIpHash) artIpParts.push(`ip_hash != '${excludeIpHash}'`);
+    if (hideBots) artIpParts.push(`NOT (ip_hash LIKE '3.%' OR ip_hash LIKE '17.%' OR ip_hash LIKE '18.%' OR ip_hash LIKE '40.77.%' OR ip_hash LIKE '52.%' OR ip_hash LIKE '54.%' OR ip_hash LIKE '65.55.%')`);
+    if (hideChardon && viewerIpHash && !excludeIpHash) artIpParts.push(`ip_hash != '${viewerIpHash}'`);
+    if (hideChardon) artIpParts.push(`(referrer IS NULL OR referrer NOT LIKE '%localhost%')`);
+    const artIpClause = artIpParts.length > 0 ? 'AND ' + artIpParts.join(' AND ') : '';
     // Bot filter: exclude AWS, Apple crawler (17.x), Microsoft/Bing (40.77.x, 65.55.x), Ashburn datacenter
     const botClause = hideBots ? `AND NOT (ip LIKE '3.%' OR ip LIKE '17.%' OR ip LIKE '18.%' OR ip LIKE '40.77.%' OR ip LIKE '52.%' OR ip LIKE '54.%' OR ip LIKE '65.55.%' OR city = 'Ashburn' OR device = 'unknown')` : "";
     // Chardon filter: exclude team member location
@@ -1928,11 +1940,11 @@ async function handleAdminAnalytics(request, env) {
     }
 
     // Query 17: Art Views (Layer B - server-side art attention tracking)
-    let artViewsSummary = { xl_zooms: 0, slideshow_starts: 0, external_images: 0, image_pages: 0, galleries: 0, total: 0, unique_viewers: 0, onsite_viewers: 0 };
+    let artViewsSummary = { xl_zooms: 0, slideshow_starts: 0, external_images: 0, image_pages: 0, chapter_views: 0, galleries: 0, total: 0, unique_viewers: 0, onsite_viewers: 0 };
     let artViewsByType = [];
     let topArtViews = [];
     try {
-      // Bot filter clause - exclude is_bot = 1
+      // Bot filter clause - always exclude is_bot = 1
       const botFilterClause = 'AND (is_bot = 0 OR is_bot IS NULL)';
       
       // Summary by type (humans only)
@@ -1943,7 +1955,7 @@ async function handleAdminAnalytics(request, env) {
           COUNT(DISTINCT target_id) as unique_targets,
           COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
-        WHERE ${edgeDateClause} ${botFilterClause}
+        WHERE ${edgeDateClause} ${botFilterClause} ${artIpClause}
         GROUP BY type
       `;
       const artViewsSummaryResult = await env.DB.prepare(artViewsSummaryQuery).all();
@@ -1956,6 +1968,7 @@ async function handleAdminAnalytics(request, env) {
         if (row.type === 'slideshow_start') artViewsSummary.slideshow_starts = row.views;
         if (row.type === 'image') artViewsSummary.xl_zooms += row.views; // Legacy 'image' type → treat as xl_zoom
         if (row.type === 'image_page') artViewsSummary.image_pages = row.views;
+        if (row.type === 'chapter_view') artViewsSummary.chapter_views = row.views;
         if (row.type === 'gallery') artViewsSummary.galleries = row.views;
         if (row.type === 'external_image') pollutedExternalCount = row.views; // Track polluted count to subtract
       }
@@ -1964,23 +1977,25 @@ async function handleAdminAnalytics(request, env) {
       const cleanExternalQuery = `
         SELECT COUNT(*) as views
         FROM art_views
-        WHERE ${edgeDateClause} ${botFilterClause} AND type = 'external_image'
+        WHERE ${edgeDateClause} ${botFilterClause} ${artIpClause} AND type = 'external_image'
           AND referrer IS NOT NULL AND referrer != ''
           AND referrer NOT LIKE '%k4studios%' AND referrer NOT LIKE '%localhost%'
       `;
       const cleanExternalResult = await env.DB.prepare(cleanExternalQuery).first();
       artViewsSummary.external_images = cleanExternalResult?.views || 0;
       
-      // Total Image Views = Chapters + External (actual views, not engagement clicks)
+      // Total Image Views = Chapter Views (JS-verified) + External (actual views, not engagement clicks)
       // XL zooms and slideshow starts are engagement actions, not separate views
-      artViewsSummary.total = (artViewsSummary.image_pages || 0) + artViewsSummary.external_images;
+      // chapter_view = human-verified (JS beacon), image_page = server-side (includes bots)
+      artViewsSummary.total = (artViewsSummary.chapter_views || 0) + artViewsSummary.external_images;
       
       // Get unique ART viewers (chapters + clean external only, not gallery browsers or zoom clickers)
+      // chapter_view = JS-verified human, external_image = server-side external embed
       const uniqueViewersQuery = `
         SELECT COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
-        WHERE ${edgeDateClause} AND (is_bot = 0 OR is_bot IS NULL)
-          AND type IN ('image_page', 'external_image')
+        WHERE ${edgeDateClause} AND (is_bot = 0 OR is_bot IS NULL) ${artIpClause}
+          AND type IN ('chapter_view', 'external_image')
           AND (type != 'external_image' OR (referrer IS NULL OR referrer NOT LIKE '%k4studios%'))
       `;
       const uniqueViewersResult = await env.DB.prepare(uniqueViewersQuery).first();
@@ -1990,7 +2005,7 @@ async function handleAdminAnalytics(request, env) {
       const onsiteViewersQuery = `
         SELECT COUNT(DISTINCT ip_hash) as onsite_viewers
         FROM art_views
-        WHERE ${edgeDateClause} AND (is_bot = 0 OR is_bot IS NULL) AND type != 'external_image'
+        WHERE ${edgeDateClause} AND (is_bot = 0 OR is_bot IS NULL) ${artIpClause} AND type != 'external_image'
       `;
       const onsiteViewersResult = await env.DB.prepare(onsiteViewersQuery).first();
       artViewsSummary.onsite_viewers = onsiteViewersResult?.onsite_viewers || 0;
@@ -2003,7 +2018,7 @@ async function handleAdminAnalytics(request, env) {
           COUNT(*) as views,
           COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
-        WHERE ${edgeDateClause} AND type = 'image_page' ${botFilterClause}
+        WHERE ${edgeDateClause} AND type = 'chapter_view' ${botFilterClause} ${artIpClause}
         GROUP BY target_id
         ORDER BY views DESC
         LIMIT 15
@@ -2015,7 +2030,7 @@ async function handleAdminAnalytics(request, env) {
           COUNT(*) as views,
           COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
-        WHERE ${edgeDateClause} AND (type = 'xl_zoom' OR type = 'image') ${botFilterClause}
+        WHERE ${edgeDateClause} AND (type = 'xl_zoom' OR type = 'image') ${botFilterClause} ${artIpClause}
         GROUP BY target_id
         ORDER BY views DESC
         LIMIT 15
@@ -2039,7 +2054,7 @@ async function handleAdminAnalytics(request, env) {
           COUNT(*) as views,
           COUNT(*) as unique_viewers
         FROM art_views
-        WHERE ${edgeDateClause} AND type = 'external_image' ${botFilterClause}
+        WHERE ${edgeDateClause} AND type = 'external_image' ${botFilterClause} ${artIpClause}
           AND referrer IS NOT NULL AND referrer != ''
           AND referrer NOT LIKE '%k4studios%' AND referrer NOT LIKE '%localhost%'
         GROUP BY target_id, top_source
@@ -2053,7 +2068,7 @@ async function handleAdminAnalytics(request, env) {
           COUNT(*) as views,
           COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
-        WHERE ${edgeDateClause} AND type = 'gallery' ${botFilterClause}
+        WHERE ${edgeDateClause} AND type = 'gallery' ${botFilterClause} ${artIpClause}
         GROUP BY target_id
         ORDER BY views DESC
         LIMIT 15
@@ -2094,7 +2109,7 @@ async function handleAdminAnalytics(request, env) {
           COUNT(*) as views,
           COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
-        WHERE ${edgeDateClause} ${botFilterClause} AND type = 'external_image'
+        WHERE ${edgeDateClause} ${botFilterClause} ${artIpClause} AND type = 'external_image'
           AND referrer IS NOT NULL AND referrer != ''
           AND referrer NOT LIKE '%k4studios%' AND referrer NOT LIKE '%localhost%'
         GROUP BY source
@@ -2107,24 +2122,25 @@ async function handleAdminAnalytics(request, env) {
       const noRefExternalQuery = `
         SELECT COUNT(*) as views, COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
-        WHERE ${edgeDateClause} ${botFilterClause} AND type = 'external_image'
+        WHERE ${edgeDateClause} ${botFilterClause} ${artIpClause} AND type = 'external_image'
           AND (referrer IS NULL OR referrer = '')
       `;
       const noRefResult = await env.DB.prepare(noRefExternalQuery).first();
       artViewsSummary.noRefExternalViews = noRefResult?.views || 0;
       artViewsSummary.noRefExternalViewers = noRefResult?.unique_viewers || 0;
       
-      // Art Views Geography - where are art viewers located?
+      // Art Views Geography - where are art viewers located? (city-level)
       const artGeoQuery = `
         SELECT 
-          country,
+          country, region, city,
           COUNT(*) as views,
           COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
-        WHERE ${edgeDateClause} ${botFilterClause}
-        GROUP BY country
-        ORDER BY unique_viewers DESC
-        LIMIT 20
+        WHERE ${edgeDateClause} ${botFilterClause} ${artIpClause}
+          AND type IN ('chapter_view', 'xl_zoom', 'slideshow_start', 'external_image')
+        GROUP BY country, region, city
+        ORDER BY unique_viewers DESC, views DESC
+        LIMIT 25
       `;
       const artGeoResult = await env.DB.prepare(artGeoQuery).all();
       artViewsSummary.geography = artGeoResult.results || [];
@@ -2359,32 +2375,38 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   const s = summary || {};
   
   // Canonical list of all trackable events with display labels
+  // Alphabetized: high-value events first, then passive/scroll events
   const eventLabels = {
-    'page_view': 'Page View',
-    'session_exit': 'Session Exit',
-    'nav_next': 'Nav - Next',
-    'nav_prev': 'Nav - Prev',
-    'grid_open': 'Grid - Open',
-    'zoom_open': 'Zoom - Open',
-    'slideshow_start': 'Slideshow Start',
-    'collector_notes_open': 'Collector Notes',
-    'collector_notes_toggle': 'Notes Toggle',
-    'guide_open': 'Guide - Open',
-    'sister_image_click': 'Sister Image Click',
-    'more_info_open': 'More About Image',
-    'series_info': 'Series Info',
+    // ── High-value user interactions ──
+    'browse_all_click': 'Browse All Click',
     'order_clicked': 'Buy Button Click',
-    'order_submitted': 'Order Submitted',
-    'story_slider_click': 'Story Slider Click',
-    'theme_click': 'Theme Click',
-    'gallery_hero_click': 'Hero Image Click',
+    'collector_notes_open': 'Collector Notes',
+    'cowboy_jump': 'Cowboy Jump',
+    'exit_to_gallery': 'Exit to Gallery',
     'gallery_explore_click': 'Gallery Explore Click',
     'gallery_preview_click': 'Gallery Preview Click',
-    'cowboy_jump': 'Cowboy Jump',
+    'guide_open': 'Guide',
+    'gallery_hero_click': 'Hero Image Click',
+    'more_info_open': 'More About Image',
+    'nav_next': 'Nav - Next',
+    'nav_prev': 'Nav - Prev',
+    'order_submitted': 'Order Inquiry Sent',
+    'series_info': 'Series Info',
+    'sister_image_click': 'Sister Image Click',
+    'slideshow_start': 'Slideshow Start',
+    'story_slider_click': 'Story Slider Click',
+    'theme_click': 'Theme Click',
+    'zoom_open': 'Zoom - Open',
+
+    // ── Passive / system events ──
+    'all_list_click': 'All Galleries Click',
+    'grid_open': 'Grid - Open',
     'scroll_25': 'Grid - 25% Scroll',
     'scroll_50': 'Grid - 50% Scroll',
     'scroll_75': 'Grid - 75% Scroll',
-    'scroll_100': 'Grid - 100% Scroll'
+    'scroll_100': 'Grid - 100% Scroll',
+    'page_view': 'Page View',
+    'session_exit': 'Session Exit'
   };
   
   // Merge DB results with canonical list - always show all events
@@ -2614,8 +2636,8 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
         : `<a href="${hideBotsUrl}" class="bot-filter">🤖 Hide Bots</a>`
       }
       ${hideChardon
-        ? `<a href="${showChardonUrl}" class="bot-filter active">📍 Chardon Hidden</a>`
-        : `<a href="${hideChardonUrl}" class="bot-filter">📍 Hide Chardon</a>`
+        ? `<a href="${showChardonUrl}" class="bot-filter active">🏠 Team Hidden</a>`
+        : `<a href="${hideChardonUrl}" class="bot-filter">🏠 Hide Team</a>`
       }
     </div>
     <a href="/__k4stats/export?days=${days}${yesterday ? '&yesterday=1' : ''}${hideBots ? '&hideBots=1' : ''}" class="export-btn" style="margin-left: auto; background: #2d4a2d; padding: 5px 12px; border-radius: 4px; color: #4ade80;">📥 Export CSV</a>
@@ -2722,11 +2744,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <span class="label">Avg/Sess <span class="info-icon">i</span></span>
       <div class="tooltip">Average events per session. Higher = more engaged visitors exploring galleries and images.</div>
     </div>
-    <div class="pulse-stat" style="background: ${bounceRate > 60 ? 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)' : bounceRate > 40 ? 'linear-gradient(135deg, #d97706 0%, #b45309 100%)' : '#252525'};">
-      <span class="value" style="color: ${bounceRate > 40 ? '#fff' : '#ef4444'};">${bounceRate}%</span>
-      <span class="label" style="color: ${bounceRate > 40 ? '#fecaca' : '#888'};">Bounce <span class="info-icon" style="${bounceRate > 40 ? 'background: rgba(255,255,255,0.2); color: #fecaca;' : ''}">i</span></span>
-      <div class="tooltip">Sessions with only 1 event (came and left immediately). Lower is better. Above 60% = concern, below 40% = great.</div>
-    </div>
     <div class="pulse-stat">
       <span class="value" style="color:#22d3ee;">⏱️ ${avgDurationFormatted}</span>
       <span class="label">Avg Time <span class="info-icon">i</span></span>
@@ -2750,11 +2767,11 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
       <div class="tooltip">Sessions that used the cowboy easter egg navigation. Fun engagement metric!</div>
     </div>` : ''}
-    ${(s.collector_notes_opens || 0) > 0 ? `<div class="pulse-stat collector">
-      <span class="value">${s.collector_notes_opens}</span>
-      <span class="label">Collector Notes <span class="info-icon">i</span></span>
-      <div class="tooltip">Times someone opened collector notes. High-intent signal — they want the story behind the image.</div>
-    </div>` : ''}
+    <div class="pulse-stat" style="background: ${bounceRate > 60 ? 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)' : bounceRate > 40 ? 'linear-gradient(135deg, #c2410c 0%, #9a3412 100%)' : '#252525'};">
+      <span class="value" style="color: ${bounceRate > 40 ? '#fff' : '#ef4444'};">${bounceRate}%</span>
+      <span class="label" style="color: ${bounceRate > 40 ? '#fed7aa' : '#888'};">Bounce <span class="info-icon" style="${bounceRate > 40 ? 'background: rgba(255,255,255,0.2); color: #fed7aa;' : ''}">i</span></span>
+      <div class="tooltip">Sessions with only 1 event (came and left immediately). Lower is better. Above 60% = concern, below 40% = great.</div>
+    </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);">
       <span class="value" style="color: #fff;">${avgDepthScore}</span>
       <span class="label" style="color: #a5f3fc;">Engage Lvl <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a5f3fc;">i</span></span>
@@ -2778,7 +2795,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
       <span class="value" style="color: #fff;">🖼️ ${artViewsSummary?.total || 0}</span>
       <span class="label" style="color: #ddd6fe;">Image Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
-      <div class="tooltip">Total image file views (server-side). Chapters + XL Zooms + External embeds. Does not include gallery page views.</div>
+      <div class="tooltip">JS-verified image views (human only). Chapter browsing (${artViewsSummary?.chapter_views || 0}) + External embeds (${artViewsSummary?.external_images || 0}). Server-side page loads: ${artViewsSummary?.image_pages || 0}.</div>
     </div>
   </div>
 
@@ -2794,7 +2811,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <div>
         <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #a78bfa; display: flex; align-items: center; justify-content: space-between;">
           <span>📖 Chapters</span>
-          <span style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Total chapter page views">${artViewsSummary?.image_pages || 0}</span>
+          <span style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="JS-verified chapter views (human only)">${artViewsSummary?.chapter_views || 0}</span>
         </h4>
         <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto; padding-right: 4px;">
           ${(topArtViews.chapters || []).map((a, i) => {
@@ -2886,6 +2903,41 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     <p style="font-size: 10px; color: #555; margin-top: 8px;">Views | Unique viewers. Server-side tracking, no JS required.</p>
   </div>
   ` : ''}
+
+  <!-- Art Viewer Geography -->
+  ${(artViewsSummary?.geography?.length > 0) ? `
+  <div class="section" style="margin-top: 10px; margin-bottom: 10px; overflow: visible; max-height: none; max-width: 500px;">
+    <div class="section-header" style="position: relative; z-index: 10;">
+      <h3>\ud83d\uddfa\ufe0f Art Viewer Geography</h3>
+      <span class="section-tip"><span class="info-icon">i</span><div class="tooltip" style="white-space: normal; width: 260px;">Where people are viewing your art from. Based on chapter views, zooms, slideshows, and external embeds. City-level geo from Cloudflare. Useful for spotting regional interest after shows or events.</div></span>
+    </div>
+    <div style="padding-right: 6px;">
+    ${(() => {
+      const maxArtGeoViewers = Math.max(...artViewsSummary.geography.map(g => g.unique_viewers), 1);
+      const countryColors = {
+        'US': '#10b981', 'FR': '#ef4444', 'DE': '#f97316', 'BR': '#22c55e', 'GB': '#6366f1',
+        'CA': '#ec4899', 'AU': '#eab308', 'MX': '#14b8a6', 'IN': '#f59e0b', 'JP': '#e11d48',
+        'IT': '#84cc16', 'ES': '#a855f7', 'NL': '#fb923c', 'AT': '#dc2626', 'HU': '#c026d3',
+        'SG': '#0ea5e9', 'HK': '#d946ef', 'CN': '#b91c1c', 'KR': '#2563eb', 'CO': '#fbbf24',
+        'PL': '#f43f5e', 'SE': '#06b6d4', 'NO': '#0284c7', 'FI': '#0369a1', 'CH': '#dc2626',
+        'RU': '#1d4ed8', 'UA': '#fcd34d', 'AR': '#60a5fa', 'ZA': '#a78bfa', 'NZ': '#2dd4bf',
+      };
+      return artViewsSummary.geography.map(g => {
+        const label = [g.city, g.region, g.country].filter(Boolean).join(', ');
+        const barColor = countryColors[g.country] || '#9ca3af';
+        return `
+        <div class="bar-row">
+          <span class="bar-label" style="width: 180px;" title="${label}">${label}</span>
+          <div class="bar-container">
+            <div class="bar" style="width: ${(g.unique_viewers / maxArtGeoViewers * 100).toFixed(1)}%; background: ${barColor};"></div>
+          </div>
+          <span class="bar-value" title="${g.views} total views">${g.unique_viewers} \ud83d\udc64</span>
+        </div>`;
+      }).join('');
+    })()}
+    </div>
+  </div>
+  ` : ''}
   
   <!-- External Traffic - Split View: Displays (left) | Clicks (right) -->
   ${(artViewsSummary?.externalDisplays?.length > 0 || Object.keys(entryRefCounts).length > 0) ? `
@@ -2965,10 +3017,16 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
 
   <!-- All sections grid -->\n  <div class="grid">
     <div class="section">
-      <h3>Event Breakdown</h3>
-      <div style="padding-right: 6px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2px;">
+        <h3 style="margin:0;">Event Breakdown</h3>
+        <button id="eventSortToggle" onclick="toggleEventSort()" title="Toggle sort: Alphabetical / By Count" style="
+          font-size:10px; padding:2px 8px; border:1px solid #ccc; border-radius:4px;
+          background:#f5f0eb; color:#666; cursor:pointer; font-family:monospace; letter-spacing:0.5px;
+        ">A→Z</button>
+      </div>
+      <div id="eventList" style="padding-right: 6px;">
       ${allEvents.map(e => `
-          <div class="bar-row">
+          <div class="bar-row" data-label="${e.label}" data-count="${e.count}">
             <span class="bar-label" title="${e.label}">${e.label}</span>
             <div class="bar-container">
               <div class="bar" style="width: ${(e.count / maxEventCount * 100).toFixed(1)}%"></div>
@@ -2978,6 +3036,26 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
         `).join('')
       }
       </div>
+      <script>
+        var eventSortMode = 'count';
+        function toggleEventSort() {
+          var btn = document.getElementById('eventSortToggle');
+          var list = document.getElementById('eventList');
+          var rows = Array.from(list.querySelectorAll('.bar-row'));
+          if (eventSortMode === 'count') {
+            rows.sort(function(a, b) { return a.dataset.label.localeCompare(b.dataset.label); });
+            eventSortMode = 'alpha';
+            btn.textContent = '#';
+            btn.title = 'Sort by count';
+          } else {
+            rows.sort(function(a, b) { return parseInt(b.dataset.count) - parseInt(a.dataset.count); });
+            eventSortMode = 'count';
+            btn.textContent = 'A→Z';
+            btn.title = 'Sort alphabetically';
+          }
+          rows.forEach(function(r) { list.appendChild(r); });
+        }
+      </script>
     </div>
 
     <div class="section">
@@ -3850,7 +3928,7 @@ async function handleTrackEvent(request, env) {
     const { type, imageId } = body;
     
     // Validate event type
-    const validTypes = ['xl_zoom', 'slideshow_start'];
+    const validTypes = ['xl_zoom', 'slideshow_start', 'chapter_view'];
     if (!type || !validTypes.includes(type)) {
       return new Response('ok', { status: 200 }); // Fail silently
     }
@@ -4535,8 +4613,22 @@ export default {
     }
 
     // 0j) Event tracking - zoom clicks, slideshow starts (user intent, not image loads)
-    if (url.pathname === "/__k4track/event" && request.method === "POST") {
-      return handleTrackEvent(request, env);
+    if (url.pathname === "/__k4track/event") {
+      if (request.method === "OPTIONS") {
+        return new Response(null, {
+          status: 204,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Max-Age": "86400"
+          }
+        });
+      }
+      if (request.method === "POST") {
+        return handleTrackEvent(request, env);
+      }
+      return new Response('Method not allowed', { status: 405 });
     }
 
     // 1) Image detail pages: apply policy first, then log art view
