@@ -169,8 +169,8 @@ const structuredData = JSON.stringify({
         if (window.location.hostname === 'localhost') return;
         
         // Track via Cloudflare D1 analytics
-        const sessionId = sessionStorage.getItem('k4_session') || 
-          (sessionStorage.setItem('k4_session', crypto.randomUUID()), sessionStorage.getItem('k4_session'));
+        const sessionId = sessionStorage.getItem('k4_session_id') || 
+          (sessionStorage.setItem('k4_session_id', crypto.randomUUID()), sessionStorage.getItem('k4_session_id'));
         
         const payload = JSON.stringify({
           session_id: sessionId,

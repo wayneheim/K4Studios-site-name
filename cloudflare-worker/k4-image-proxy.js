@@ -901,12 +901,15 @@ async function handleGatewayRequest(request, env) {
       request.headers.get("Sec-Fetch-Mode") === "navigate";
     
     if (!hasEntryRefCookie && isTopLevelNav) {
-      // Capture the referrer from the edge (most reliable source)
+      // Capture the raw referrer from the edge (most reliable source)
+      // Store the full URL so the SQL CASE can distinguish google_images vs google_search etc.
       const edgeReferer = request.headers.get("referer") || "";
-      const normalizedRef = normalizeReferrer(edgeReferer);
+      const cookieValue = edgeReferer 
+        ? encodeURIComponent(edgeReferer) 
+        : "direct";
       
-      // Log for debugging (remove after confirming)
-      console.log("Edge referrer capture:", { raw: edgeReferer, normalized: normalizedRef });
+      // Log for debugging
+      console.log("Edge referrer capture:", { raw: edgeReferer, cookieValue });
       
       // Fetch the origin response
       const originResponse = await fetch(request);
@@ -915,7 +918,7 @@ async function handleGatewayRequest(request, env) {
       const newResponse = new Response(originResponse.body, originResponse);
       newResponse.headers.append(
         "Set-Cookie",
-        `k4_entry_ref=${normalizedRef}; Max-Age=3600; Path=/; Secure; SameSite=Lax`
+        `k4_entry_ref=${cookieValue}; Max-Age=3600; Path=/; Secure; SameSite=Lax`
       );
       return newResponse;
     }
@@ -990,13 +993,17 @@ async function handleTrackRequest(request, env) {
                null;
 
     // Read edge-captured referrer from cookie (most reliable)
-    // Fall back to client-sent referrer, then treat as unknown
+    // Cookie now stores raw URL (URL-encoded) for granular classification
     const cookieHeader = request.headers.get("cookie") || "";
     const cookieMatch = cookieHeader.match(/k4_entry_ref=([^;]+)/);
-    const edgeReferrer = cookieMatch ? cookieMatch[1] : null;
+    const edgeReferrer = cookieMatch 
+      ? decodeURIComponent(cookieMatch[1]) 
+      : null;
     
-    // Prefer edge-captured referrer, then client, then unknown
-    const referrer = normalizeReferrer(edgeReferrer || clientReferrer);
+    // Store the raw edge referrer URL directly (for SQL LIKE matching)
+    // normalizeReferrer is kept as fallback for old normalized cookie values
+    const bestReferrer = edgeReferrer || clientReferrer;
+    const referrer = bestReferrer || "unknown";
 
     // Detect device/platform from User-Agent
     const ua = (request.headers.get("User-Agent") || "").toLowerCase();
@@ -1621,8 +1628,10 @@ async function handleAdminAnalytics(request, env) {
       WITH first_pages AS (
         SELECT 
           session_id,
+          ip,
           page_path,
           referrer,
+          raw_referrer,
           ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY created_at ASC) as rn
         FROM events
         WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
@@ -1632,25 +1641,25 @@ async function handleAdminAnalytics(request, env) {
       SELECT 
         page_path,
         CASE 
-          WHEN referrer IS NULL OR referrer = '' THEN 'direct'
-          WHEN referrer LIKE '%images.google.%' OR referrer LIKE '%google.%/imgres%' THEN 'google_images'
-          WHEN referrer LIKE '%google.%' THEN 'google_search'
-          WHEN referrer LIKE '%bing.%/images%' THEN 'bing_images'
-          WHEN referrer LIKE '%bing.%' THEN 'bing_search'
-          WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
-          WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
-          WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'twitter'
-          WHEN referrer LIKE '%instagram.%' THEN 'instagram'
-          WHEN referrer LIKE '%linkedin.%' THEN 'linkedin'
+          WHEN referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' THEN 'direct'
+          WHEN COALESCE(raw_referrer, referrer) LIKE '%images.google.%' OR COALESCE(raw_referrer, referrer) LIKE '%google.%/imgres%' THEN 'google_images'
+          WHEN referrer = 'google' OR referrer LIKE '%google.%' THEN 'google_search'
+          WHEN COALESCE(raw_referrer, referrer) LIKE '%bing.%/images%' THEN 'bing_images'
+          WHEN referrer = 'bing' OR referrer LIKE '%bing.%' THEN 'bing_search'
+          WHEN referrer = 'pinterest' OR referrer LIKE '%pinterest.%' THEN 'pinterest'
+          WHEN referrer = 'facebook' OR referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
+          WHEN referrer = 'twitter' OR referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'twitter'
+          WHEN referrer = 'instagram' OR referrer LIKE '%instagram.%' THEN 'instagram'
+          WHEN referrer = 'linkedin' OR referrer LIKE '%linkedin.%' THEN 'linkedin'
           WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
-          WHEN referrer LIKE '%k4studios.com%' THEN 'internal'
+          WHEN referrer = 'internal' OR referrer LIKE '%k4studios.com%' THEN 'internal'
           ELSE 'unattributed'
         END as ref_source,
-        COUNT(*) as sessions
+        COUNT(DISTINCT ip) as visitors
       FROM first_pages
       WHERE rn = 1
       GROUP BY page_path, ref_source
-      ORDER BY sessions DESC
+      ORDER BY visitors DESC
       LIMIT 15
     `;
     const entryPagesResult = await env.DB.prepare(entryPagesQuery).all();
@@ -1662,7 +1671,9 @@ async function handleAdminAnalytics(request, env) {
       WITH first_pages AS (
         SELECT 
           session_id,
+          ip,
           referrer,
+          raw_referrer,
           ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY created_at ASC) as rn
         FROM events
         WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
@@ -1671,31 +1682,34 @@ async function handleAdminAnalytics(request, env) {
       )
       SELECT 
         CASE 
-          WHEN referrer IS NULL OR referrer = '' THEN 'direct'
-          WHEN referrer LIKE '%images.google.%' OR referrer LIKE '%google.%/imgres%' THEN 'google_images'
-          WHEN referrer LIKE '%google.%' THEN 'google_search'
-          WHEN referrer LIKE '%bing.%/images%' THEN 'bing_images'
-          WHEN referrer LIKE '%bing.%' THEN 'bing_search'
-          WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
-          WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
-          WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'twitter'
-          WHEN referrer LIKE '%instagram.%' THEN 'instagram'
-          WHEN referrer LIKE '%linkedin.%' THEN 'linkedin'
+          WHEN referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' THEN 'direct'
+          -- Match raw URLs (future data with raw referrer in cookie)
+          WHEN COALESCE(raw_referrer, referrer) LIKE '%images.google.%' OR COALESCE(raw_referrer, referrer) LIKE '%google.%/imgres%' THEN 'google_images'
+          -- Match normalized labels (existing data) AND raw URLs
+          WHEN referrer = 'google' OR referrer LIKE '%google.%' THEN 'google_search'
+          WHEN COALESCE(raw_referrer, referrer) LIKE '%bing.%/images%' THEN 'bing_images'
+          WHEN referrer = 'bing' OR referrer LIKE '%bing.%' THEN 'bing_search'
+          WHEN referrer = 'pinterest' OR referrer LIKE '%pinterest.%' THEN 'pinterest'
+          WHEN referrer = 'facebook' OR referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
+          WHEN referrer = 'twitter' OR referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'twitter'
+          WHEN referrer = 'instagram' OR referrer LIKE '%instagram.%' THEN 'instagram'
+          WHEN referrer = 'linkedin' OR referrer LIKE '%linkedin.%' THEN 'linkedin'
           WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
-          WHEN referrer LIKE '%k4studios.com%' THEN 'internal'
+          WHEN referrer = 'internal' OR referrer LIKE '%k4studios.com%' THEN 'internal'
           ELSE 'unattributed'
         END as ref_source,
-        COUNT(*) as sessions
+        COUNT(DISTINCT ip) as visitors
       FROM first_pages
       WHERE rn = 1
       GROUP BY ref_source
-      ORDER BY sessions DESC
+      HAVING ref_source != 'internal'
+      ORDER BY visitors DESC
     `;
     const entryRefSummaryResult = await env.DB.prepare(entryRefSummaryQuery).all();
     const entryRefSummary = entryRefSummaryResult.results || [];
     // Convert to lookup
     const entryRefCounts = {};
-    entryRefSummary.forEach(r => { entryRefCounts[r.ref_source] = r.sessions; });
+    entryRefSummary.forEach(r => { entryRefCounts[r.ref_source] = r.visitors; });
 
     // Query 13: Session Depth Score (engagement quality metric)
     // Weighted scoring: zoom=4, collector_notes=5, theme_click=3, nav=2, other=1
@@ -1951,19 +1965,22 @@ async function handleAdminAnalytics(request, env) {
         SELECT COUNT(*) as views
         FROM art_views
         WHERE ${edgeDateClause} ${botFilterClause} AND type = 'external_image'
-          AND (referrer IS NULL OR referrer NOT LIKE '%k4studios%')
+          AND referrer IS NOT NULL AND referrer != ''
+          AND referrer NOT LIKE '%k4studios%' AND referrer NOT LIKE '%localhost%'
       `;
       const cleanExternalResult = await env.DB.prepare(cleanExternalQuery).first();
       artViewsSummary.external_images = cleanExternalResult?.views || 0;
       
-      // Total ART views = Chapters + XL Zooms + Slideshow + External (NOT galleries - those are collection pages, not art)
-      artViewsSummary.total = (artViewsSummary.image_pages || 0) + (artViewsSummary.xl_zooms || 0) + (artViewsSummary.slideshow_starts || 0) + artViewsSummary.external_images;
+      // Total Image Views = Chapters + External (actual views, not engagement clicks)
+      // XL zooms and slideshow starts are engagement actions, not separate views
+      artViewsSummary.total = (artViewsSummary.image_pages || 0) + artViewsSummary.external_images;
       
-      // Get unique viewers across all types (deduplicated, excluding polluted external traffic)
+      // Get unique ART viewers (chapters + clean external only, not gallery browsers or zoom clickers)
       const uniqueViewersQuery = `
         SELECT COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
         WHERE ${edgeDateClause} AND (is_bot = 0 OR is_bot IS NULL)
+          AND type IN ('image_page', 'external_image')
           AND (type != 'external_image' OR (referrer IS NULL OR referrer NOT LIKE '%k4studios%'))
       `;
       const uniqueViewersResult = await env.DB.prepare(uniqueViewersQuery).first();
@@ -2023,7 +2040,8 @@ async function handleAdminAnalytics(request, env) {
           COUNT(*) as unique_viewers
         FROM art_views
         WHERE ${edgeDateClause} AND type = 'external_image' ${botFilterClause}
-          AND (referrer IS NULL OR referrer NOT LIKE '%k4studios%')
+          AND referrer IS NOT NULL AND referrer != ''
+          AND referrer NOT LIKE '%k4studios%' AND referrer NOT LIKE '%localhost%'
         GROUP BY target_id, top_source
         ORDER BY views DESC
         LIMIT 15
@@ -2059,8 +2077,10 @@ async function handleAdminAnalytics(request, env) {
       const artExternalDisplayQuery = `
         SELECT 
           CASE 
-            WHEN referrer LIKE '%google.%' THEN 'Google Images'
-            WHEN referrer LIKE '%bing.%' THEN 'Bing Images'
+            WHEN referrer LIKE '%images.google.%' OR referrer LIKE '%google.%/imgres%' THEN 'Google Images'
+            WHEN referrer LIKE '%google.%' THEN 'Google Search'
+            WHEN referrer LIKE '%bing.%/images%' THEN 'Bing Images'
+            WHEN referrer LIKE '%bing.%' THEN 'Bing Search'
             WHEN referrer LIKE '%pinterest.%' THEN 'Pinterest'
             WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'Facebook'
             WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'Twitter/X'
@@ -2069,18 +2089,30 @@ async function handleAdminAnalytics(request, env) {
             WHEN referrer LIKE '%duckduckgo.%' THEN 'DuckDuckGo'
             WHEN referrer LIKE '%yandex.%' THEN 'Yandex'
             WHEN referrer LIKE '%baidu.%' THEN 'Baidu'
-            ELSE 'Unattributed'
+            ELSE referrer
           END as source,
           COUNT(*) as views,
           COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
         WHERE ${edgeDateClause} ${botFilterClause} AND type = 'external_image'
-          AND (referrer IS NULL OR referrer NOT LIKE '%k4studios%')
+          AND referrer IS NOT NULL AND referrer != ''
+          AND referrer NOT LIKE '%k4studios%' AND referrer NOT LIKE '%localhost%'
         GROUP BY source
         ORDER BY views DESC
       `;
       const artExternalDisplayResult = await env.DB.prepare(artExternalDisplayQuery).all();
       artViewsSummary.externalDisplays = artExternalDisplayResult.results || [];
+      
+      // Count external image views with no referrer (potential unauthorized embedding)
+      const noRefExternalQuery = `
+        SELECT COUNT(*) as views, COUNT(DISTINCT ip_hash) as unique_viewers
+        FROM art_views
+        WHERE ${edgeDateClause} ${botFilterClause} AND type = 'external_image'
+          AND (referrer IS NULL OR referrer = '')
+      `;
+      const noRefResult = await env.DB.prepare(noRefExternalQuery).first();
+      artViewsSummary.noRefExternalViews = noRefResult?.views || 0;
+      artViewsSummary.noRefExternalViewers = noRefResult?.unique_viewers || 0;
       
       // Art Views Geography - where are art viewers located?
       const artGeoQuery = `
@@ -2334,13 +2366,16 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     'nav_prev': 'Nav - Prev',
     'grid_open': 'Grid - Open',
     'zoom_open': 'Zoom - Open',
-    'slideshow_open': 'Slideshow - Open',
     'slideshow_start': 'Slideshow Start',
     'collector_notes_open': 'Collector Notes',
+    'collector_notes_toggle': 'Notes Toggle',
     'guide_open': 'Guide - Open',
-    'sister_link_click': 'Sister Link Click',
-    'more_about_click': 'More About Image',
-    'exit_to_gallery': 'Exit to Gallery',
+    'sister_image_click': 'Sister Image Click',
+    'more_info_open': 'More About Image',
+    'series_info': 'Series Info',
+    'order_clicked': 'Buy Button Click',
+    'order_submitted': 'Order Submitted',
+    'story_slider_click': 'Story Slider Click',
     'theme_click': 'Theme Click',
     'gallery_hero_click': 'Hero Image Click',
     'gallery_explore_click': 'Gallery Explore Click',
@@ -2447,13 +2482,17 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1a1a1a; color: #e0e0e0; padding: 20px; }
+    .container { max-width: 1800px; margin: 0 auto; }
     h1 { color: #fff; margin-bottom: 20px; }
-    h2 { color: #888; font-size: 14px; text-transform: uppercase; margin: 30px 0 10px; }
-    .controls { margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 5px; }
+    h2 { color: #888; font-size: 14px; text-transform: uppercase; margin: 20px 0 10px; }
+    .controls { margin-bottom: 15px; display: flex; flex-wrap: wrap; gap: 5px; }
     .controls a { color: #4a9eff; text-decoration: none; padding: 5px 10px; border-radius: 4px; }
     .controls a:hover, .controls a.active { background: #333; }
-    .pulse { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; align-items: center; }
-    .pulse-stat { background: #252525; padding: 8px 16px; border-radius: 6px; display: flex; align-items: center; gap: 8px; position: relative; cursor: help; }
+    .pulse { display: flex; gap: 8px; margin-bottom: 8px; align-items: center; }
+    .pulse .pulse-stat { flex: 1; justify-content: center; }
+    .pulse-row { display: flex; gap: 8px; margin-bottom: 10px; align-items: center; }
+    .pulse-row .pulse-stat { flex: 1; justify-content: center; }
+    .pulse-stat { background: #252525; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 6px; position: relative; cursor: help; }
     .pulse-stat.clickable { cursor: pointer; transition: opacity 0.2s, transform 0.1s; }
     .pulse-stat.clickable:hover { transform: scale(1.02); }
     .pulse-stat.clickable.off { opacity: 0.4; }
@@ -2476,35 +2515,67 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     #art-images-list::-webkit-scrollbar-track, #art-galleries-list::-webkit-scrollbar-track { background: #1a1a1a; border-radius: 3px; }
     #art-images-list::-webkit-scrollbar-thumb, #art-galleries-list::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
     #art-images-list::-webkit-scrollbar-thumb:hover, #art-galleries-list::-webkit-scrollbar-thumb:hover { background: #555; }
-    table { width: 100%; border-collapse: collapse; background: #252525; border-radius: 8px; overflow: hidden; margin-bottom: 20px; }
-    th, td { padding: 10px 15px; text-align: left; border-bottom: 1px solid #333; }
+    table { width: 100%; border-collapse: collapse; background: #252525; border-radius: 8px; overflow: hidden; margin-bottom: 15px; }
+    th, td { padding: 5px 8px; text-align: left; border-bottom: 1px solid #333; font-size: 12px; }
     th { background: #1a1a1a; color: #888; font-size: 12px; text-transform: uppercase; }
     tr:last-child td { border-bottom: none; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
-    .section { background: #252525; border-radius: 8px; padding: 15px; }
-    .section h3 { color: #fff; font-size: 14px; margin-bottom: 10px; }
+    /* Main grid - fixed 5-column layout, centered */
+    .grid, .grid-tall { display: grid; grid-template-columns: repeat(5, 348px); gap: 10px; margin: 0 auto 10px auto; width: fit-content; }
+    .section { background: #252525; border-radius: 8px; padding: 10px; overflow-y: auto; max-height: 380px; }
+    .section h3 { color: #fff; font-size: 13px; margin-bottom: 6px; }
     /* Bar chart styles */
-    .bar-row { display: flex; align-items: center; padding: 8px 0; border-bottom: 1px solid #333; }
+    .bar-row { display: flex; align-items: center; padding: 4px 0; border-bottom: 1px solid #333; }
     .bar-row:last-child { border-bottom: none; }
-    .bar-label { width: 140px; flex-shrink: 0; font-size: 12px; color: #ccc; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .bar-container { flex: 1; background: #1a1a1a; border-radius: 4px; height: 20px; margin: 0 10px; overflow: hidden; }
+    .bar-label { width: 110px; flex-shrink: 0; font-size: 11px; color: #ccc; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .bar-container { flex: 1; background: #1a1a1a; border-radius: 4px; height: 16px; margin: 0 6px; overflow: hidden; }
     .bar { height: 100%; background: linear-gradient(90deg, #4a9eff 0%, #2d7dd2 100%); border-radius: 4px; transition: width 0.3s ease; }
-    .bar-value { width: 40px; flex-shrink: 0; text-align: right; font-size: 13px; color: #888; }
+    .bar-value { width: 35px; flex-shrink: 0; text-align: right; font-size: 12px; color: #888; }
     .bar-orange .bar { background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%); }
     .bar-green .bar { background: linear-gradient(90deg, #10b981 0%, #059669 100%); }
     /* Section tooltips */
-    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
     .section-header h3 { margin: 0; }
     .section-tip { position: relative; cursor: help; }
     .section-tip .info-icon { width: 14px; height: 14px; border-radius: 50%; background: #444; color: #888; font-size: 10px; display: inline-flex; align-items: center; justify-content: center; font-style: italic; }
     .section-tip .tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; z-index: 100; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); width: 220px; line-height: 1.4; }
     .section-tip .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #333; }
     .section-tip:hover .tooltip { display: block; }
-    /* Tall sections get full width on larger screens */
-    .section.tall { grid-column: span 1; }
-    @media (min-width: 900px) { .grid-tall { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 20px; } }
-    @media (min-width: 1400px) { .grid-tall { grid-template-columns: repeat(3, 1fr); } }
-    @media (min-width: 1800px) { .grid-tall { grid-template-columns: repeat(5, 1fr); } }
+    /* Wide sections span 2 columns */
+    .section.wide { grid-column: span 2; }
+    /* Exit blocks - uniform width stacking */
+    .exit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 8px; }
+    .exit-block { border-radius: 6px; padding: 6px 10px; display: flex; align-items: center; gap: 6px; }
+    .exit-block .value { font-size: 14px; font-weight: bold; color: #fff; }
+    .exit-block .label { font-size: 10px; }
+    /* Art Views 4-column grid - responsive */
+    .art-views-grid { display: grid; grid-template-columns: repeat(4, 435px); gap: 10px; margin: 0 auto; width: fit-content; }
+    @media (max-width: 1000px) { .art-views-grid { grid-template-columns: repeat(2, 1fr); width: 100%; } }
+    @media (max-width: 600px) { .art-views-grid { grid-template-columns: 1fr; width: 100%; } }
+    /* External traffic 2-column - fixed, centered */
+    .external-grid { display: grid; grid-template-columns: 870px 870px; gap: 12px; margin: 0 auto; width: fit-content; }
+    @media (max-width: 768px) { .external-grid { grid-template-columns: 1fr; width: 100%; } }
+    /* Mobile-friendly */
+    @media (max-width: 768px) {
+      body { padding: 10px; }
+      .container { max-width: 100%; }
+      .grid, .grid-tall { grid-template-columns: 1fr; }
+      .section.wide { grid-column: span 1; }
+      .pulse-row { flex-wrap: wrap; }
+      .pulse-row .pulse-stat { flex: none; }
+      .pulse { flex-wrap: wrap; gap: 5px; }
+      .pulse .pulse-stat { flex: none; }
+      .pulse-stat { padding: 4px 8px; }
+      .pulse-stat .value { font-size: 14px; }
+      .pulse-stat .label { font-size: 9px; }
+      h1 { font-size: 18px; }
+      h2 { font-size: 13px; margin: 15px 0 8px; }
+      .section { padding: 10px; max-height: none; }
+      .bar-label { width: 80px; font-size: 10px; }
+      .controls { gap: 3px; }
+      .controls a { font-size: 10px; padding: 4px 6px; }
+      .exit-grid { grid-template-columns: 1fr; }
+      .bot-intel-grid { grid-template-columns: 1fr !important; }
+    }
     /* Trend chart styles */
     .trend-chart { background: #252525; border-radius: 8px; padding: 20px; margin-bottom: 30px; }
     .trend-chart h3 { color: #fff; font-size: 14px; margin-bottom: 15px; }
@@ -2512,6 +2583,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     .trend-bar { flex: 1; min-width: 20px; max-width: 60px; background: linear-gradient(180deg, #4a9eff 0%, #2d7dd2 100%); border-radius: 4px 4px 0 0; position: relative; cursor: pointer; transition: opacity 0.2s; }
     .trend-bar:hover { opacity: 0.8; }
     .trend-bar-label { position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%); font-size: 10px; color: #666; white-space: nowrap; }
+    .data-change-marker { color: #f59e0b; font-size: 14px; font-weight: bold; cursor: help; position: relative; top: -1px; margin-left: 1px; }
     .trend-bar-value { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); font-size: 11px; color: #888; }
     .no-chart { color: #666; font-size: 13px; }
     .ip-filter { margin-left: auto; display: flex; gap: 10px; align-items: center; }
@@ -2523,6 +2595,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   </style>
 </head>
 <body>
+<div class="container">
   <h1>K4 Analytics <a href="/__k4serp" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none;margin-left:20px">📊 SERP</a> <a href="/__k4serp/launch" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none">🚀 Launch Pad</a></h1>
   
   <div class="controls">
@@ -2563,10 +2636,11 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
         return trend.map(t => {
           const height = Math.max((t.visitors / maxVisitors * 100), 2);
           const dateLabel = t.day.slice(5); // MM-DD format
+          const isDataChangeDate = t.day === '2026-02-14';
           return `
             <div class="trend-bar" data-visitors="${t.visitors}" data-sessions="${t.sessions}" data-day="${t.day}" style="height: ${height}%" title="${t.day}: ${t.visitors} visitors, ${t.sessions} sessions">
               <span class="trend-bar-value">${t.visitors}</span>
-              <span class="trend-bar-label">${dateLabel}</span>
+              <span class="trend-bar-label">${dateLabel}${isDataChangeDate ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ''}</span>
             </div>
           `;
         }).join('');
@@ -2620,7 +2694,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     <div class="trend-bars" style="justify-content: center;">
       <div class="trend-bar" style="height: 100%; width: 80px;" title="${trend[0].day}: ${trend[0].visitors} visitors, ${trend[0].sessions} sessions">
         <span class="trend-bar-value">${trend[0].visitors}</span>
-        <span class="trend-bar-label">${trend[0].day.slice(5)}</span>
+        <span class="trend-bar-label">${trend[0].day.slice(5)}${trend[0].day === '2026-02-14' ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ''}</span>
       </div>
     </div>
   </div>
@@ -2668,6 +2742,9 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <span class="label">Nav <span class="info-icon">i</span></span>
       <div class="tooltip">% of sessions that used navigation (next/prev arrows). Shows gallery exploration intent.</div>
     </div>
+  </div>
+
+  <div class="pulse-row">
     ${cowboyJumps > 0 ? `<div class="pulse-stat highlight">
       <span class="value">🤠 ${cowboyJumps}</span>
       <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
@@ -2706,13 +2783,13 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   </div>
 
   <!-- Art Views Section (Layer B - Server-Side Attention Tracking) -->
-  <h2 style="margin-top: 30px;">🎨 Art Views <span style="font-size: 12px; color: #888; font-weight: normal;">(Server-Side)</span></h2>
-  <p style="color: #888; margin: -10px 0 15px 0; font-size: 12px;">
+  <h2 style="margin-top: 20px; margin-bottom: 8px;">🎨 Art Views <span style="font-size: 12px; color: #888; font-weight: normal;">(Server-Side)</span></h2>
+  <p style="color: #888; margin: 0 0 10px 0; font-size: 12px;">
     <strong style="color: #10b981;">Human art viewers (cleaned)</strong> — bots, scrapers, and datacenter traffic excluded. 
     <span class="section-tip" style="display: inline;"><span class="info-icon">i</span><div class="tooltip">Excludes: datacenter IPs without referrer, known scraper patterns, bot user agents. What remains are real humans viewing your art on k4studios.com or via external embeds (Google Images, Pinterest, etc.).</div></span>
   </p>
   ${(topArtViews?.chapters?.length > 0 || topArtViews?.xlZooms?.length > 0 || topArtViews?.external?.length > 0 || topArtViews?.galleries?.length > 0) ? `
-  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px;">
+  <div class="art-views-grid">
       <!-- Chapters Column -->
       <div>
         <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #a78bfa; display: flex; align-items: center; justify-content: space-between;">
@@ -2812,22 +2889,33 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   
   <!-- External Traffic - Split View: Displays (left) | Clicks (right) -->
   ${(artViewsSummary?.externalDisplays?.length > 0 || Object.keys(entryRefCounts).length > 0) ? `
-  <div class="section" style="margin-top: 15px;">
+  <div class="section" style="margin-top: 10px; max-width: 1780px; margin-left: auto; margin-right: auto; max-height: none;">
     <h3>🌐 External Traffic <span style="font-size: 11px; color: #888; font-weight: normal;">(off-site engagement)</span></h3>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+    <div class="external-grid">
       <!-- Left: Image Displays -->
       <div>
         <div style="font-size: 11px; color: #f97316; font-weight: bold; margin-bottom: 8px; border-bottom: 1px solid #333; padding-bottom: 4px;">📤 Images Displayed Off-Site</div>
         <div style="display: flex; flex-direction: column; gap: 4px;">
           ${(artViewsSummary.externalDisplays || []).map(r => {
-            const icons = { 'Google Images': '🔍', 'Bing Images': '🅱️', 'Pinterest': '📌', 'Facebook': '📘', 'Twitter/X': '🐦', 'Instagram': '📷', 'LinkedIn': '💼', 'DuckDuckGo': '🦆', 'Unknown': '❓', 'Other': '🌐' };
+            const icons = { 'Google Images': '🔍', 'Google Search': '🔍', 'Bing Images': '🅱️', 'Bing Search': '🅱️', 'Pinterest': '📌', 'Facebook': '📘', 'Twitter/X': '🐦', 'Instagram': '📷', 'LinkedIn': '💼', 'DuckDuckGo': '🦆', 'Direct / No Referrer': '🔗', 'Yandex': '🇷🇺', 'Baidu': '🇨🇳' };
             const icon = icons[r.source] || '🌐';
+            // For unknown referrers (raw URLs that didn't match any pattern), shorten the display
+            let displayName = r.source;
+            if (!icons[r.source] && r.source.startsWith('http')) {
+              try { displayName = new URL(r.source).hostname; } catch(e) {}
+            }
             return '<div style="display: flex; align-items: center; gap: 6px; padding: 4px 6px; background: #1a1a1a; border-radius: 4px;">' +
               '<span style="font-size: 14px;">' + icon + '</span>' +
-              '<span style="color: #ccc; font-size: 11px; flex: 1;">' + r.source + '</span>' +
+              '<span style="color: #ccc; font-size: 11px; flex: 1;" title="' + r.source + '">' + displayName + '</span>' +
               '<span style="color: #f97316; font-size: 11px; font-weight: bold;">' + r.views.toLocaleString() + '</span>' +
             '</div>';
           }).join('') || '<p style="color:#666; font-size: 10px;">No external displays</p>'}
+          ${artViewsSummary.noRefExternalViews > 0 ? 
+            '<div style="display: flex; align-items: center; gap: 6px; padding: 4px 6px; background: #1a1a1a; border-radius: 4px; border-left: 2px solid #ef4444; margin-top: 4px;" title="Image requests with no referrer header. Could be email clients, privacy browsers, or someone embedding your images with referrer stripped.">' +
+              '<span style="font-size: 14px;">⚠️</span>' +
+              '<span style="color: #ef4444; font-size: 11px; flex: 1;">Unknown Source</span>' +
+              '<span style="color: #ef4444; font-size: 11px; font-weight: bold;">' + artViewsSummary.noRefExternalViews.toLocaleString() + '</span>' +
+            '</div>' : ''}
         </div>
       </div>
       <!-- Right: Visitors to Site (from events table - JS tracking) -->
@@ -2837,6 +2925,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
           ${(() => {
             // Confirmed sources (clean referrer match)
             const confirmed = [
+              { key: 'direct', label: 'Direct / Typed URL', icon: '🔗' },
               { key: 'google_search', label: 'Google Search', icon: '🔍' },
               { key: 'google_images', label: 'Google Images', icon: '🖼️' },
               { key: 'bing_search', label: 'Bing Search', icon: '🅱️' },
@@ -2874,11 +2963,10 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   </div>
   ` : ''}
 
-  <!-- Tall sections row -->
-  <div class="grid-tall">
-    <div class="section tall">
+  <!-- All sections grid -->\n  <div class="grid">
+    <div class="section">
       <h3>Event Breakdown</h3>
-      <div style="max-height: 280px; overflow-y: auto; padding-right: 10px;">
+      <div style="padding-right: 6px;">
       ${allEvents.map(e => `
           <div class="bar-row">
             <span class="bar-label" title="${e.label}">${e.label}</span>
@@ -2892,13 +2980,13 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       </div>
     </div>
 
-    <div class="section tall">
+    <div class="section">
       <div class="section-header">
         <h3>📍 Visitor Geography</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Where your on-site visitors come from (city, state, country). These are people actually browsing k4studios.com, not external image views.</div></span>
       </div>
       ${geo.length === 0 ? '<p style="color:#666">No data yet</p>' : `
-      <div style="max-height: 280px; overflow-y: auto; padding-right: 10px;">
+      <div style="padding-right: 6px;">
       ${geo.map(g => {
           const label = [g.city, g.region, g.country].filter(Boolean).join(', ');
           // Country color mapping - each country gets a distinct color
@@ -2962,7 +3050,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       }
     </div>
 
-    <div class="section tall">
+    <div class="section">
       <div class="section-header">
         <h3>Devices</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Sessions and engagement by device. Engage Lvl shows how deeply each platform's users interact.</div></span>
@@ -2979,7 +3067,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       </table>
     </div>
 
-    <div class="section tall">
+    <div class="section">
       <div class="section-header" style="margin-bottom: ${edgeEvents.length === 0 && edgeSummary.length === 0 ? '0' : '12px'};">
         <h3 style="display: inline;">🧭 Index Health</h3>
         ${edgeEvents.length === 0 && edgeSummary.length === 0 ? '<span style="color:#666; margin-left: 12px;">No edge events yet</span>' : ''}
@@ -3013,7 +3101,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       </div>
       ` : ''}
       ${edgeEvents.length > 0 ? `
-      <div style="max-height: 280px; overflow-y: auto;">
+      <div>
         ${edgeEvents.map(e => {
           const eventColors = { 
             smart404_redirect: '#10b981',
@@ -3048,80 +3136,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       </div>
       ` : ''}
     </div>
-  </div>
-
-  <!-- Regular grid -->
-  <div class="grid">
-    <div class="section">
-      <h3>Top 10 Pages</h3>
-      ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        pages.map(p => {
-          const shortPath = p.page_path.length > 28 ? '...' + p.page_path.slice(-25) : p.page_path;
-          return `
-          <div class="bar-row">
-            <a class="bar-label" href="https://www.k4studios.com${p.page_path}" target="_blank" title="${p.page_path}" style="color: #4a9eff; text-decoration: none;">${shortPath}</a>
-            <div class="bar-container">
-              <div class="bar" style="width: ${(p.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
-            </div>
-            <span class="bar-value">${p.sessions}</span>
-          </div>
-        `}).join('')
-      }
-    </div>
-
-    <div class="section" style="max-height: 400px; overflow-y: auto; padding-right: 20px;">
-      <div class="section-header" style="position: sticky; top: 0; background: #1a1a1a; margin: -15px -15px 10px -15px; padding: 15px; z-index: 1;">
-        <h3>Gallery Performance</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Image views grouped by gallery. Colors: 🟣 Painterly, 🔵 Traditional, 🟠 K4 Select</div></span>
-      </div>
-      <div style="padding-right: 10px;">
-      <table>
-        <tr><th>Gallery</th><th>Sessions</th><th>Zoom %</th><th>Avg Events</th></tr>
-        ${galleries.map(g => {
-          const typeColors = { painterly: '#a855f7', traditional: '#4a9eff', select: '#f59e0b' };
-          const color = typeColors[g.gallery_type] || '#888';
-          return `<tr>
-            <td style="display: flex; align-items: center; gap: 8px;">
-              <span style="width: 8px; height: 8px; border-radius: 50%; background: ${color}; flex-shrink: 0;"></span>
-              ${formatEventName(g.gallery_id || 'Unknown')}
-            </td>
-            <td>${g.sessions}</td>
-            <td>${g.zoom_pct || 0}%</td>
-            <td>${g.avg_events || 0}</td>
-          </tr>`;
-        }).join('')}
-        ${galleries.length === 0 ? '<tr><td colspan="4">No data yet</td></tr>' : ''}
-      </table>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header">
-        <h3>🚀 Top Entry Pages</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page visited in each session. 🔍=Google Search, 🖼️=Images, 🅱️=Bing, 📌=Pinterest, 🐦=Twitter, 📘=Facebook, 🔗=Direct, 🔄=Internal</div></span>
-      </div>
-      ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
-      <div style="max-height: 240px; overflow-y: auto; padding-right: 8px;">
-      <table>
-        <tr><th>Landing Page</th><th>From</th><th>Sessions</th></tr>
-        ${entryPages.slice(0, 15).map(p => {
-          const isImage = p.page_path.includes('/i-');
-          const shortPath = p.page_path.length > 30 ? '...' + p.page_path.slice(-27) : p.page_path;
-          const pageIcon = isImage ? '🖼️' : '📄';
-          const refIcons = { 
-            google_search: '🔍', google_images: '🖼️', 
-            bing_search: '🅱️', bing_images: '🖼️', 
-            pinterest: '📌', twitter: '🐦', facebook: '📘', instagram: '📷', 
-            linkedin: '💼', duckduckgo: '🦆',
-            direct: '🔗', internal: '🔄', unattributed: '🔒' 
-          };
-          const refIcon = refIcons[p.ref_source] || '🔒';
-          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
-        }).join('')}
-      </table>
-      </div>
-      `}
-    </div>
 
     <div class="section">
       <h3>Entry Points</h3>
@@ -3153,40 +3167,108 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
         <h3>🚪 Where People Leave</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Exit pages: where sessions ended. Shows which page types are natural endpoints vs potential problems.</div></span>
       </div>
-      <div class="pulse" style="margin-top: 10px;">
-        <div class="pulse-stat" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);">
-          <span class="value" style="color: #fff;">🏠 ${exitByCategory.home || 0}</span>
+      <div class="exit-grid">
+        <div class="exit-block" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);">
+          <span class="value">🏠 ${exitByCategory.home || 0}</span>
           <span class="label" style="color: #c7d2fe;">Home</span>
         </div>
-        <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-          <span class="value" style="color: #fff;">📁 ${exitByCategory.gallery || 0}</span>
+        <div class="exit-block" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+          <span class="value">📁 ${exitByCategory.gallery || 0}</span>
           <span class="label" style="color: #a7f3d0;">Gallery</span>
         </div>
-        <div class="pulse-stat" style="background: linear-gradient(135deg, #4a9eff 0%, #2563eb 100%);">
-          <span class="value" style="color: #fff;">📖 ${exitByCategory.images || 0}</span>
+        <div class="exit-block" style="background: linear-gradient(135deg, #4a9eff 0%, #2563eb 100%);">
+          <span class="value">📖 ${exitByCategory.images || 0}</span>
           <span class="label" style="color: #bfdbfe;">Images</span>
         </div>
-        <div class="pulse-stat" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);">
-          <span class="value" style="color: #fff;">📄 ${exitByCategory.landing || 0}</span>
+        <div class="exit-block" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);">
+          <span class="value">📄 ${exitByCategory.landing || 0}</span>
           <span class="label" style="color: #ddd6fe;">Landing</span>
         </div>
-        <div class="pulse-stat" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
-          <span class="value" style="color: #fff;">✍️ ${exitByCategory.blog || 0}</span>
+        <div class="exit-block" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+          <span class="value">✍️ ${exitByCategory.blog || 0}</span>
           <span class="label" style="color: #fef3c7;">Blog</span>
         </div>
-        <div class="pulse-stat" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);">
-          <span class="value" style="color: #fff;">📸 ${exitByCategory.photoshoots || 0}</span>
-          <span class="label" style="color: #fbcfe8;">Photoshoots</span>
+        <div class="exit-block" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);">
+          <span class="value">📸 ${exitByCategory.photoshoots || 0}</span>
+          <span class="label" style="color: #fbcfe8;">Shoots</span>
         </div>
-        <div class="pulse-stat" style="background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);">
-          <span class="value" style="color: #fff;">📦 ${exitByCategory.other || 0}</span>
+        <div class="exit-block" style="background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%); grid-column: span 2;">
+          <span class="value">📦 ${exitByCategory.other || 0}</span>
           <span class="label" style="color: #d1d5db;">Other</span>
         </div>
       </div>
     </div>
+
+    <div class="section">
+      <h3>Top 10 Pages</h3>
+      ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
+        pages.map(p => {
+          const shortPath = p.page_path.length > 28 ? '...' + p.page_path.slice(-25) : p.page_path;
+          return `
+          <div class="bar-row">
+            <a class="bar-label" href="https://www.k4studios.com${p.page_path}" target="_blank" title="${p.page_path}" style="color: #4a9eff; text-decoration: none;">${shortPath}</a>
+            <div class="bar-container">
+              <div class="bar" style="width: ${(p.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
+            </div>
+            <span class="bar-value">${p.sessions}</span>
+          </div>
+        `}).join('')
+      }
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h3>Gallery Performance</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Image views grouped by gallery. Colors: 🟣 Painterly, 🔵 Traditional, 🟠 K4 Select</div></span>
+      </div>
+      <table>
+        <tr><th>Gallery</th><th>Sess</th><th>Zoom%</th><th>Avg</th></tr>
+        ${galleries.map(g => {
+          const typeColors = { painterly: '#a855f7', traditional: '#4a9eff', select: '#f59e0b' };
+          const color = typeColors[g.gallery_type] || '#888';
+          return `<tr>
+            <td style="display: flex; align-items: center; gap: 8px;">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: ${color}; flex-shrink: 0;"></span>
+              ${formatEventName(g.gallery_id || 'Unknown')}
+            </td>
+            <td>${g.sessions}</td>
+            <td>${g.zoom_pct || 0}%</td>
+            <td>${g.avg_events || 0}</td>
+          </tr>`;
+        }).join('')}
+        ${galleries.length === 0 ? '<tr><td colspan="4">No data yet</td></tr>' : ''}
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h3>🚀 Top Entry Pages</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page visited in each session. 🔍=Google Search, 🖼️=Images, 🅱️=Bing, 📌=Pinterest, 🐦=Twitter, 📘=Facebook, 🔗=Direct, 🔄=Internal</div></span>
+      </div>
+      ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
+      <table>
+        <tr><th>Page</th><th>From</th><th>Sess</th></tr>
+        ${entryPages.slice(0, 15).map(p => {
+          const isImage = p.page_path.includes('/i-');
+          const shortPath = p.page_path.length > 30 ? '...' + p.page_path.slice(-27) : p.page_path;
+          const pageIcon = isImage ? '🖼️' : '📄';
+          const refIcons = { 
+            google_search: '🔍', google_images: '🖼️', 
+            bing_search: '🅱️', bing_images: '🖼️', 
+            pinterest: '📌', twitter: '🐦', facebook: '📘', instagram: '📷', 
+            linkedin: '💼', duckduckgo: '🦆',
+            direct: '🔗', internal: '🔄', unattributed: '🔒' 
+          };
+          const refIcon = refIcons[p.ref_source] || '🔒';
+          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.visitors}</td></tr>`;
+        }).join('')}
+      </table>
+      `}
+    </div>
   </div>
 
   <!-- Bot Intelligence Section -->
+  <div style="max-width: 1780px; margin: 0 auto;">
   <h2 style="margin-top: 30px;">🛡️ Bot Intelligence <span style="font-size: 12px; color: #888; font-weight: normal;">(Threat Classification)</span></h2>
   <p style="color: #888; margin: -10px 0 15px 0; font-size: 12px;">
     Risk accumulates over time. Level 3+ auto-throttled. Level 4 = manual block candidate.
@@ -3222,7 +3304,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
   </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+  <div class="bot-intel-grid" style="display: grid; grid-template-columns: 580px 580px 580px; gap: 16px; width: fit-content; margin: 0 auto;">
     <!-- Verified Search Bots (Good!) -->
     <div class="section" style="border: 1px solid #10b98133;">
       <h3 style="color: #10b981;">🟢 Verified Search Bots</h3>
@@ -3342,8 +3424,9 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       `}
     </div>
   </div>
+  </div>
 
-  <p style="margin-top: 30px; color: #666; font-size: 12px;">
+  <p style="margin-top: 30px; color: #666; font-size: 12px; max-width: 1780px; margin-left: auto; margin-right: auto;">
     Generated ${new Date().toISOString()} • ${periodLabel}
   </p>
 
@@ -3441,6 +3524,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       }
     }
   </script>
+</div>
 </body>
 </html>`;
 }

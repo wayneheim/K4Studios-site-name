@@ -145,11 +145,9 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
               href={`${galleryPath}/${selected[current].id}`}
               className="absolute inset-0 z-0"
               aria-label={`View ${selected[current].title}`}
-              onClick={() => logUIEvent('story_slider_click', {
-                action: 'view_story',
-                image_id: selected[current].id,
-                title: selected[current].title,
-                gallery: galleryPath
+              onClick={() => trackEvent('story_slider_click', {
+                imageId: selected[current].id,
+                galleryId: galleryPath
               })}
             />
             <article key={selected[current].id} className={`relative z-10 pointer-events-none transition-opacity duration-400 ease-in-out ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
@@ -192,11 +190,9 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
               key={item.id}
               onClick={() => {
                 goToSlide(index);
-                logUIEvent('story_slider_click', {
-                  action: 'navigate_dot',
-                  slide_index: index,
-                  title: item.title,
-                  gallery: galleryPath
+                trackEvent('story_slider_click', {
+                  imageId: item.id,
+                  galleryId: galleryPath
                 });
               }}
               className={`rounded-full transition-all ${isSecondary ? 'w-2.5 h-2.5' : 'w-3 h-3'} ${

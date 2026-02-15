@@ -86,8 +86,8 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
           // Track ALL tombstone clicks for analytics
           const handleClick = () => {
             // Track via Cloudflare D1
-            const sessionId = sessionStorage.getItem('k4_session') || 
-              (sessionStorage.setItem('k4_session', crypto.randomUUID()), sessionStorage.getItem('k4_session'));
+            const sessionId = sessionStorage.getItem('k4_session_id') || 
+              (sessionStorage.setItem('k4_session_id', crypto.randomUUID()), sessionStorage.getItem('k4_session_id'));
             
             const sanitizedTitle = (item.title || 'Unknown').replace(/[^a-zA-Z0-9]/g, '_');
             const payload = JSON.stringify({

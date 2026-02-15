@@ -1546,7 +1546,7 @@ export default function ChapterGalleryBase({
                               type="button"
                               onClick={() => {
                                 track("slideshow_start");
-                                trackArtView('slideshow_start', selectedImage?.id || viewingImage?.id);
+                                trackArtView('slideshow_start', galleryData[currentIndex]?.id);
                                 if (!tourOpen()) {
                                   setShowStoryShow(true);
                                 }
@@ -1590,7 +1590,7 @@ export default function ChapterGalleryBase({
                             type="button"
                             onClick={() => {
                               track("slideshow_start");
-                              trackArtView('slideshow_start', selectedImage?.id || viewingImage?.id);
+                              trackArtView('slideshow_start', galleryData[currentIndex]?.id);
                               if (!tourOpen()) {
                                 setShowStoryShow(true);
                               }
