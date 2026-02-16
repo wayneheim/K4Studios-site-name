@@ -691,11 +691,12 @@ export default function ChapterGalleryBase({
 
   // Track chapter views (Layer B - proves human via JS, not inflatable by bots)
   useEffect(() => {
-    if (!hasEnteredChapters) return;
+    const alreadyOnImage = /\/i-[a-zA-Z0-9_-]+$/.test(window.location.pathname);
+    if (!hasEnteredChapters && !alreadyOnImage) return;
     if (viewMode === "grid") return;
     const imageId = galleryData[currentIndex]?.id;
     if (!imageId) return;
-    trackArtView('chapter_view', imageId);
+    track('chapter_view', { pageType: 'image', imageId });
   }, [currentIndex, hasEnteredChapters, viewMode, galleryData]);
 
   // ✅ Replaced old title updater with the hook
@@ -1554,7 +1555,7 @@ export default function ChapterGalleryBase({
                             <button
                               type="button"
                               onClick={() => {
-                                trackArtView('slideshow_start', galleryData[currentIndex]?.id);
+                                track('slideshow_start', { pageType: 'image', imageId: galleryData[currentIndex]?.id });
                                 if (!tourOpen()) {
                                   setShowStoryShow(true);
                                 }
@@ -1597,7 +1598,7 @@ export default function ChapterGalleryBase({
                           <button
                             type="button"
                             onClick={() => {
-                              trackArtView('slideshow_start', galleryData[currentIndex]?.id);
+                              track('slideshow_start', { pageType: 'image', imageId: galleryData[currentIndex]?.id });
                               if (!tourOpen()) {
                                 setShowStoryShow(true);
                               }

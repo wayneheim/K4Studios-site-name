@@ -12,8 +12,12 @@
 
 type EventType = 'xl_zoom' | 'slideshow_start' | 'chapter_view';
 
-// Dedup within session to prevent double-fires
-const fired = new Set<string>();
+function getGlobalFiredMap(): Record<string, 1> {
+  if (typeof window === 'undefined') return {};
+  const w = window as any;
+  if (!w.__k4_artview_fired) w.__k4_artview_fired = {};
+  return w.__k4_artview_fired as Record<string, 1>;
+}
 
 export function trackEvent(type: EventType, imageId: string | undefined | null) {
   // SSR guard
@@ -21,12 +25,13 @@ export function trackEvent(type: EventType, imageId: string | undefined | null) 
   
   // Validate
   if (!type || !imageId) return;
-  if (!/^i-[a-zA-Z0-9]+$/.test(imageId)) return;
+  if (!/^i-[a-zA-Z0-9_-]+$/.test(imageId)) return;
   
   // Dedup within session (same event + image = fire once)
   const key = `${type}:${imageId}`;
-  if (fired.has(key)) return;
-  fired.add(key);
+  const fired = getGlobalFiredMap();
+  if (fired[key]) return;
+  fired[key] = 1;
   
   // Fire and forget - send directly to CF worker for accurate geo data
   // (Netlify proxy strips CF geo headers, so we bypass it)

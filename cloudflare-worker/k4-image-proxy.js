@@ -1045,6 +1045,17 @@ async function handleTrackRequest(request, env) {
       event_order      // Event sequence within session
     ).run();
 
+    // Mirror key JS-verified intents into art_views (keeps dashboard consistent)
+    // We do this here (same-origin /track) because cross-origin beacons are more likely to be blocked.
+    if (event === 'chapter_view') {
+      const targetId = image_id || (typeof page_path === 'string'
+        ? (page_path.match(/\/(i-[a-zA-Z0-9_-]+)\/?$/)?.[1] || null)
+        : null);
+      if (targetId) {
+        await logArtView(env, 'chapter_view', targetId, request);
+      }
+    }
+
     return new Response(null, { 
       status: 204,
       headers: {
@@ -1351,14 +1362,13 @@ async function handleAdminAnalytics(request, env) {
     const returningVisitors = returningResult?.returning_visitors || 0;
     const newVisitors = (summary?.unique_visitors || 0) - returningVisitors;
 
-    // Query 2: Event breakdown
+    // Query 2: Event breakdown (no LIMIT so granular counts always reconcile)
     const eventsQuery = `
       SELECT event, COUNT(*) as count 
       FROM events 
       WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
       GROUP BY event 
       ORDER BY count DESC
-      LIMIT 20
     `;
     const events = await env.DB.prepare(eventsQuery).all();
 
@@ -1667,15 +1677,53 @@ async function handleAdminAnalytics(request, env) {
           WHEN referrer = 'internal' OR referrer LIKE '%k4studios.com%' THEN 'internal'
           ELSE 'unattributed'
         END as ref_source,
-        COUNT(DISTINCT ip) as visitors
+        COUNT(DISTINCT session_id) as sessions
       FROM first_pages
       WHERE rn = 1
       GROUP BY page_path, ref_source
-      ORDER BY visitors DESC
+      ORDER BY sessions DESC
       LIMIT 15
     `;
     const entryPagesResult = await env.DB.prepare(entryPagesQuery).all();
     const entryPages = entryPagesResult.results || [];
+
+    // Diagnostic: first-party chapter/image page activity (from events)
+    // Helps explain cases where Top Entry Pages show /i-... but Layer-B chapter_view is 0
+    // (common cause: cross-site beacon to workers.dev blocked by privacy tools / CSP).
+    let imagePageViewsFromEvents = 0;
+    let imageEntrySessionsFromEvents = 0;
+    try {
+      const imagePageViewsQuery = `
+        SELECT COUNT(*) as views
+        FROM events
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+          AND event = 'page_view'
+          AND page_path IS NOT NULL
+          AND page_path LIKE '%/i-%'
+      `;
+      const imagePageViewsResult = await env.DB.prepare(imagePageViewsQuery).first();
+      imagePageViewsFromEvents = imagePageViewsResult?.views || 0;
+
+      const imageEntrySessionsQuery = `
+        WITH first_pages AS (
+          SELECT
+            session_id,
+            ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY created_at ASC) as rn,
+            page_path
+          FROM events
+          WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+            AND page_path IS NOT NULL
+            AND event = 'page_view'
+        )
+        SELECT COUNT(DISTINCT session_id) as sessions
+        FROM first_pages
+        WHERE rn = 1 AND page_path LIKE '%/i-%'
+      `;
+      const imageEntrySessionsResult = await env.DB.prepare(imageEntrySessionsQuery).first();
+      imageEntrySessionsFromEvents = imageEntrySessionsResult?.sessions || 0;
+    } catch (e) {
+      console.log('image page diagnostics query failed:', e.message);
+    }
     
     // Entry referrer summary - where did site visitors come from?
     // More specific patterns to distinguish search vs images
@@ -2148,6 +2196,93 @@ async function handleAdminAnalytics(request, env) {
       console.log('art_views query failed (table may not exist):', e.message);
     }
 
+    // Reliable on-site counts: use explicit same-origin events (not /i- URL proxies)
+    // - chapter_view is fired by the chapter interface itself
+    // - zoom_open is the click that opens the XL zoom overlay
+    try {
+      const beaconChapterViews = artViewsSummary?.chapter_views || 0;
+      const beaconXLZooms = artViewsSummary?.xl_zooms || 0;
+
+      const chapterViewsEventsQuery = `
+        SELECT COUNT(*) as views
+        FROM events
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+          AND event = 'chapter_view'
+      `;
+      const chapterViewsEventsResult = await env.DB.prepare(chapterViewsEventsQuery).first();
+      const chapterViewsEvents = chapterViewsEventsResult?.views || 0;
+
+      const topChaptersEventsQuery = `
+        SELECT 
+          image_id,
+          COUNT(*) as views,
+          COUNT(DISTINCT ip) as unique_viewers
+        FROM events
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+          AND event = 'chapter_view'
+          AND image_id IS NOT NULL
+        GROUP BY image_id
+        ORDER BY views DESC
+        LIMIT 15
+      `;
+      const topChaptersEventsResult = await env.DB.prepare(topChaptersEventsQuery).all();
+      const topChaptersEvents = (topChaptersEventsResult.results || []).map((r) => ({
+        type: 'chapter_view',
+        target_id: r.image_id,
+        views: r.views || 0,
+        unique_viewers: r.unique_viewers || 0
+      }));
+
+      const xlZoomsEventsQuery = `
+        SELECT COUNT(*) as views
+        FROM events
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+          AND event = 'zoom_open'
+      `;
+      const xlZoomsEventsResult = await env.DB.prepare(xlZoomsEventsQuery).first();
+      const xlZoomsEvents = xlZoomsEventsResult?.views || 0;
+
+      const topXLZoomsEventsQuery = `
+        SELECT 
+          image_id,
+          COUNT(*) as views,
+          COUNT(DISTINCT ip) as unique_viewers
+        FROM events
+        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+          AND event = 'zoom_open'
+          AND image_id IS NOT NULL
+        GROUP BY image_id
+        ORDER BY views DESC
+        LIMIT 15
+      `;
+      const topXLZoomsEventsResult = await env.DB.prepare(topXLZoomsEventsQuery).all();
+      const topXLZoomsEvents = (topXLZoomsEventsResult.results || []).map((r) => ({
+        type: 'xl_zoom',
+        target_id: r.image_id,
+        views: r.views || 0,
+        unique_viewers: r.unique_viewers || 0
+      }));
+
+      // Normalize shape (topArtViews is sometimes initialized as an array)
+      if (!topArtViews || Array.isArray(topArtViews)) {
+        topArtViews = { chapters: [], xlZooms: [], external: [], galleries: [] };
+      }
+
+      // Store beacon values for debugging, but use same-origin events for on-site numbers.
+      artViewsSummary.chapter_views_beacon = beaconChapterViews;
+      artViewsSummary.xl_zooms_beacon = beaconXLZooms;
+      artViewsSummary.chapter_views = chapterViewsEvents;
+      artViewsSummary.xl_zooms = xlZoomsEvents;
+
+      if (topChaptersEvents.length > 0) topArtViews.chapters = topChaptersEvents;
+      if (topXLZoomsEvents.length > 0) topArtViews.xlZooms = topXLZoomsEvents;
+
+      // Recompute total (chapter views + clean external embeds)
+      artViewsSummary.total = (artViewsSummary.chapter_views || 0) + (artViewsSummary.external_images || 0);
+    } catch (e) {
+      console.log('on-site art view events query failed:', e.message);
+    }
+
     // Query 18: Bot Intelligence (suspected_bots + blocked_ips)
     let botIntelligence = { suspects: [], blocked: [], verified: [], stats: { total: 0, risk3: 0, risk4: 0, blocked: 0, verified: 0 } };
     try {
@@ -2285,6 +2420,8 @@ async function handleAdminAnalytics(request, env) {
       edgeSummary,
       entryPages,
       entryRefCounts,
+      imagePageViewsFromEvents,
+      imageEntrySessionsFromEvents,
       bounceRate,
       avgDurationFormatted,
       peakHours,
@@ -2371,7 +2508,7 @@ async function handleExportCSV(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, botIntelligence }) {
+function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, botIntelligence }) {
   const s = summary || {};
   
   // Canonical list of all trackable events with display labels
@@ -2386,6 +2523,9 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     'gallery_explore_click': 'Gallery Explore Click',
     'gallery_preview_click': 'Gallery Preview Click',
     'guide_open': 'Guide',
+    'guide_close': 'Guide - Close',
+    'guide_done': 'Guide - Done',
+    'guide_click_outside': 'Guide - Click Outside',
     'gallery_hero_click': 'Hero Image Click',
     'more_info_open': 'More About Image',
     'nav_next': 'Nav - Next',
@@ -2396,15 +2536,18 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     'slideshow_start': 'Slideshow Start',
     'story_slider_click': 'Story Slider Click',
     'theme_click': 'Theme Click',
-    'zoom_open': 'Zoom - Open',
+    // zoom_open is intentionally omitted: redundant with the XL Zooms metric above
 
     // ── Passive / system events ──
     'all_list_click': 'All Galleries Click',
     'grid_open': 'Grid - Open',
-    'scroll_25': 'Grid - 25% Scroll',
-    'scroll_50': 'Grid - 50% Scroll',
-    'scroll_75': 'Grid - 75% Scroll',
-    'scroll_100': 'Grid - 100% Scroll',
+    'grid_image_click': 'Grid - Image Click',
+    'grid_show_more': 'Grid - Show More',
+    'grid_show_previous': 'Grid - Show Previous',
+    'scroll_25': 'Page - 25% Scroll',
+    'scroll_50': 'Page - 50% Scroll',
+    'scroll_75': 'Page - 75% Scroll',
+    'scroll_100': 'Page - 100% Scroll',
     'page_view': 'Page View',
     'session_exit': 'Session Exit'
   };
@@ -2521,7 +2664,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     .pulse-stat .value { font-size: 18px; font-weight: bold; color: #4a9eff; }
     .pulse-stat .label { font-size: 11px; color: #888; display: flex; align-items: center; gap: 4px; }
     .pulse-stat .info-icon { width: 12px; height: 12px; border-radius: 50%; background: #444; color: #888; font-size: 9px; display: inline-flex; align-items: center; justify-content: center; font-style: italic; }
-    .pulse-stat .tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; white-space: nowrap; z-index: 100; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); max-width: 280px; white-space: normal; line-height: 1.4; }
+    .pulse-stat .tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; white-space: nowrap; z-index: 1000; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); max-width: 280px; white-space: normal; line-height: 1.4; }
     .pulse-stat .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #333; }
     .pulse-stat:hover .tooltip { display: block; }
     .pulse-stat.highlight { background: linear-gradient(135deg, #d97706 0%, #b45309 100%); }
@@ -2543,7 +2686,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     tr:last-child td { border-bottom: none; }
     /* Main grid - fixed 5-column layout, centered */
     .grid, .grid-tall { display: grid; grid-template-columns: repeat(5, 348px); gap: 10px; margin: 0 auto 10px auto; width: fit-content; }
-    .section { background: #252525; border-radius: 8px; padding: 10px; overflow-y: auto; max-height: 380px; }
+    .section { background: #252525; border-radius: 8px; padding: 10px; overflow: visible; }
     .section h3 { color: #fff; font-size: 13px; margin-bottom: 6px; }
     /* Bar chart styles */
     .bar-row { display: flex; align-items: center; padding: 4px 0; border-bottom: 1px solid #333; }
@@ -2559,7 +2702,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     .section-header h3 { margin: 0; }
     .section-tip { position: relative; cursor: help; }
     .section-tip .info-icon { width: 14px; height: 14px; border-radius: 50%; background: #444; color: #888; font-size: 10px; display: inline-flex; align-items: center; justify-content: center; font-style: italic; }
-    .section-tip .tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; z-index: 100; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); width: 220px; line-height: 1.4; }
+    .section-tip .tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; z-index: 1000; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); width: 220px; line-height: 1.4; }
     .section-tip .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #333; }
     .section-tip:hover .tooltip { display: block; }
     /* Wide sections span 2 columns */
@@ -2569,12 +2712,12 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     .exit-block { border-radius: 6px; padding: 6px 10px; display: flex; align-items: center; gap: 6px; }
     .exit-block .value { font-size: 14px; font-weight: bold; color: #fff; }
     .exit-block .label { font-size: 10px; }
-    /* Art Views 4-column grid - responsive */
-    .art-views-grid { display: grid; grid-template-columns: repeat(4, 435px); gap: 10px; margin: 0 auto; width: fit-content; }
+    /* Art Views 3-column grid - responsive */
+    .art-views-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: 1780px; margin: 0 auto; }
     @media (max-width: 1000px) { .art-views-grid { grid-template-columns: repeat(2, 1fr); width: 100%; } }
     @media (max-width: 600px) { .art-views-grid { grid-template-columns: 1fr; width: 100%; } }
-    /* External traffic 2-column - fixed, centered */
-    .external-grid { display: grid; grid-template-columns: 870px 870px; gap: 12px; margin: 0 auto; width: fit-content; }
+    /* External traffic 3-column - equal width, fills container */
+    .external-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
     @media (max-width: 768px) { .external-grid { grid-template-columns: 1fr; width: 100%; } }
     /* Mobile-friendly */
     @media (max-width: 768px) {
@@ -2767,9 +2910,9 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
       <div class="tooltip">Sessions that used the cowboy easter egg navigation. Fun engagement metric!</div>
     </div>` : ''}
-    <div class="pulse-stat" style="background: ${bounceRate > 60 ? 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)' : bounceRate > 40 ? 'linear-gradient(135deg, #c2410c 0%, #9a3412 100%)' : '#252525'};">
-      <span class="value" style="color: ${bounceRate > 40 ? '#fff' : '#ef4444'};">${bounceRate}%</span>
-      <span class="label" style="color: ${bounceRate > 40 ? '#fed7aa' : '#888'};">Bounce <span class="info-icon" style="${bounceRate > 40 ? 'background: rgba(255,255,255,0.2); color: #fed7aa;' : ''}">i</span></span>
+    <div class="pulse-stat" style="background: ${bounceRate > 60 ? 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)' : bounceRate > 40 ? 'linear-gradient(135deg, #c2410c 0%, #9a3412 100%)' : 'linear-gradient(135deg, #10b981 0%, #059669 100%)'};">
+      <span class="value" style="color: #fff;">${bounceRate}%</span>
+      <span class="label" style="color: ${bounceRate > 40 ? '#fed7aa' : '#a7f3d0'};">Bounce <span class="info-icon" style="background: rgba(255,255,255,0.2); color: ${bounceRate > 40 ? '#fed7aa' : '#a7f3d0'};">i</span></span>
       <div class="tooltip">Sessions with only 1 event (came and left immediately). Lower is better. Above 60% = concern, below 40% = great.</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);">
@@ -2805,13 +2948,13 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     <strong style="color: #10b981;">Human art viewers (cleaned)</strong> — bots, scrapers, and datacenter traffic excluded. 
     <span class="section-tip" style="display: inline;"><span class="info-icon">i</span><div class="tooltip">Excludes: datacenter IPs without referrer, known scraper patterns, bot user agents. What remains are real humans viewing your art on k4studios.com or via external embeds (Google Images, Pinterest, etc.).</div></span>
   </p>
-  ${(topArtViews?.chapters?.length > 0 || topArtViews?.xlZooms?.length > 0 || topArtViews?.external?.length > 0 || topArtViews?.galleries?.length > 0) ? `
+  ${(topArtViews?.chapters?.length > 0 || topArtViews?.xlZooms?.length > 0 || topArtViews?.galleries?.length > 0) ? `
   <div class="art-views-grid">
       <!-- Chapters Column -->
       <div>
         <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #a78bfa; display: flex; align-items: center; justify-content: space-between;">
           <span>📖 Chapters</span>
-          <span style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="JS-verified chapter views (human only)">${artViewsSummary?.chapter_views || 0}</span>
+          <span style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Chapters = explicit chapter interface views (events.event='chapter_view', same-origin /track). Beacon (workers.dev) is shown for debugging only: ${artViewsSummary?.chapter_views_beacon || 0}. First-party sanity: image page views=${imagePageViewsFromEvents}, image entry sessions=${imageEntrySessionsFromEvents}.">${artViewsSummary?.chapter_views || 0}</span>
         </h4>
         <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto; padding-right: 4px;">
           ${(topArtViews.chapters || []).map((a, i) => {
@@ -2851,33 +2994,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
           }).join('') || '<p style="color: #555; font-size: 10px;">No XL zooms yet</p>'}
         </div>
       </div>
-      <!-- External Column -->
-      <div>
-        <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #f97316; display: flex; align-items: center; justify-content: space-between;">
-          <span>🌐 External</span>
-          <span style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Total external image embeds">${artViewsSummary?.external_images || 0}</span>
-        </h4>
-        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto; padding-right: 4px;">
-          ${(topArtViews.external || []).map((a, i) => {
-            const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
-            const sourceIcons = { onsite: '🏠', google: '🔍', bing: '🅱️', pinterest: '📌', facebook: '📘', twitter: '🐦', duckduckgo: '🦆', unattributed: '🌐', other: '🌐', direct: '❓' };
-            const sourceColors = { onsite: '#10b981', google: '#4285f4', bing: '#00809d', pinterest: '#e60023', facebook: '#1877f2', twitter: '#1da1f2', duckduckgo: '#de5833', unattributed: '#f97316', other: '#f97316', direct: '#6b7280' };
-            const srcIcon = sourceIcons[a.top_source] || '🌐';
-            const srcColor = sourceColors[a.top_source] || '#f97316';
-            return '<a href="https://k4studios.com/art/' + a.target_id + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: ' + srcColor + '18; border-radius: 6px; padding: 4px; border-left: 3px solid ' + srcColor + '; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'' + srcColor + '35\'" onmouseout="this.style.background=\'' + srcColor + '18\'">' +
-              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 4 ? 'eager' : 'lazy') + '" style="width: 52px; height: 52px; object-fit: cover; border-radius: 4px; flex-shrink: 0;">' : '<span style="width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">' + srcIcon + '</span>') +
-              '<div style="flex: 1; min-width: 0;">' +
-                '<div style="color: ' + srcColor + '; font-size: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + a.target_id + '</div>' +
-                '<div style="display: flex; gap: 8px; margin-top: 2px; align-items: center;">' +
-                  '<span style="font-size: 14px;">' + srcIcon + '</span>' +
-                  '<span style="font-size: 12px; font-weight: bold; color: ' + srcColor + ';">' + a.views + ' views</span>' +
-                  '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
-                '</div>' +
-              '</div>' +
-            '</a>';
-          }).join('') || '<p style="color: #555; font-size: 10px;">No external yet</p>'}
-        </div>
-      </div>
       <!-- Galleries Column -->
       <div>
         <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #c4b5fd; display: flex; align-items: center; justify-content: space-between;">
@@ -2903,50 +3019,39 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     <p style="font-size: 10px; color: #555; margin-top: 8px;">Views | Unique viewers. Server-side tracking, no JS required.</p>
   </div>
   ` : ''}
-
-  <!-- Art Viewer Geography -->
-  ${(artViewsSummary?.geography?.length > 0) ? `
-  <div class="section" style="margin-top: 10px; margin-bottom: 10px; overflow: visible; max-height: none; max-width: 500px;">
-    <div class="section-header" style="position: relative; z-index: 10;">
-      <h3>\ud83d\uddfa\ufe0f Art Viewer Geography</h3>
-      <span class="section-tip"><span class="info-icon">i</span><div class="tooltip" style="white-space: normal; width: 260px;">Where people are viewing your art from. Based on chapter views, zooms, slideshows, and external embeds. City-level geo from Cloudflare. Useful for spotting regional interest after shows or events.</div></span>
-    </div>
-    <div style="padding-right: 6px;">
-    ${(() => {
-      const maxArtGeoViewers = Math.max(...artViewsSummary.geography.map(g => g.unique_viewers), 1);
-      const countryColors = {
-        'US': '#10b981', 'FR': '#ef4444', 'DE': '#f97316', 'BR': '#22c55e', 'GB': '#6366f1',
-        'CA': '#ec4899', 'AU': '#eab308', 'MX': '#14b8a6', 'IN': '#f59e0b', 'JP': '#e11d48',
-        'IT': '#84cc16', 'ES': '#a855f7', 'NL': '#fb923c', 'AT': '#dc2626', 'HU': '#c026d3',
-        'SG': '#0ea5e9', 'HK': '#d946ef', 'CN': '#b91c1c', 'KR': '#2563eb', 'CO': '#fbbf24',
-        'PL': '#f43f5e', 'SE': '#06b6d4', 'NO': '#0284c7', 'FI': '#0369a1', 'CH': '#dc2626',
-        'RU': '#1d4ed8', 'UA': '#fcd34d', 'AR': '#60a5fa', 'ZA': '#a78bfa', 'NZ': '#2dd4bf',
-      };
-      return artViewsSummary.geography.map(g => {
-        const label = [g.city, g.region, g.country].filter(Boolean).join(', ');
-        const barColor = countryColors[g.country] || '#9ca3af';
-        return `
-        <div class="bar-row">
-          <span class="bar-label" style="width: 180px;" title="${label}">${label}</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${(g.unique_viewers / maxArtGeoViewers * 100).toFixed(1)}%; background: ${barColor};"></div>
-          </div>
-          <span class="bar-value" title="${g.views} total views">${g.unique_viewers} \ud83d\udc64</span>
-        </div>`;
-      }).join('');
-    })()}
-    </div>
-  </div>
-  ` : ''}
   
-  <!-- External Traffic - Split View: Displays (left) | Clicks (right) -->
-  ${(artViewsSummary?.externalDisplays?.length > 0 || Object.keys(entryRefCounts).length > 0) ? `
+  <!-- External Traffic - 3-Column: Top Images | Displays | Visitors -->
+  ${(artViewsSummary?.externalDisplays?.length > 0 || topArtViews?.external?.length > 0 || Object.keys(entryRefCounts).length > 0) ? `
   <div class="section" style="margin-top: 10px; max-width: 1780px; margin-left: auto; margin-right: auto; max-height: none;">
-    <h3>🌐 External Traffic <span style="font-size: 11px; color: #888; font-weight: normal;">(off-site engagement)</span></h3>
+    <h3>🌐 External Traffic <span style="font-size: 11px; color: #888; font-weight: normal;">(off-site engagement)</span> <span style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; margin-left: 8px;">${artViewsSummary?.external_images || 0} embeds</span></h3>
     <div class="external-grid">
-      <!-- Left: Image Displays -->
+      <!-- Left: Top External Images -->
       <div>
-        <div style="font-size: 11px; color: #f97316; font-weight: bold; margin-bottom: 8px; border-bottom: 1px solid #333; padding-bottom: 4px;">📤 Images Displayed Off-Site</div>
+        <div style="font-size: 11px; color: #f97316; font-weight: bold; margin-bottom: 8px; border-bottom: 1px solid #333; padding-bottom: 4px;">🏆 Top Images</div>
+        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto; padding-right: 4px;">
+          ${(topArtViews?.external || []).map((a, i) => {
+            const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
+            const sourceIcons = { onsite: '🏠', google: '🔍', bing: '🅱️', pinterest: '📌', facebook: '📘', twitter: '🐦', duckduckgo: '🦆', unattributed: '🌐', other: '🌐', direct: '❓' };
+            const sourceColors = { onsite: '#10b981', google: '#4285f4', bing: '#00809d', pinterest: '#e60023', facebook: '#1877f2', twitter: '#1da1f2', duckduckgo: '#de5833', unattributed: '#f97316', other: '#f97316', direct: '#6b7280' };
+            const srcIcon = sourceIcons[a.top_source] || '🌐';
+            const srcColor = sourceColors[a.top_source] || '#f97316';
+            return '<a href="https://k4studios.com/art/' + a.target_id + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: ' + srcColor + '18; border-radius: 6px; padding: 4px; border-left: 3px solid ' + srcColor + '; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'' + srcColor + '35\'" onmouseout="this.style.background=\'' + srcColor + '18\'">' +
+              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 4 ? 'eager' : 'lazy') + '" style="width: 52px; height: 52px; object-fit: cover; border-radius: 4px; flex-shrink: 0;">' : '<span style="width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">' + srcIcon + '</span>') +
+              '<div style="flex: 1; min-width: 0;">' +
+                '<div style="color: ' + srcColor + '; font-size: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + a.target_id + '</div>' +
+                '<div style="display: flex; gap: 8px; margin-top: 2px; align-items: center;">' +
+                  '<span style="font-size: 14px;">' + srcIcon + '</span>' +
+                  '<span style="font-size: 12px; font-weight: bold; color: ' + srcColor + ';">' + a.views + ' views</span>' +
+                  '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
+                '</div>' +
+              '</div>' +
+            '</a>';
+          }).join('') || '<p style="color: #555; font-size: 10px;">No external embeds yet</p>'}
+        </div>
+      </div>
+      <!-- Center: Image Displays -->
+      <div>
+        <div style="font-size: 11px; color: #f97316; font-weight: bold; margin-bottom: 8px; border-bottom: 1px solid #333; padding-bottom: 4px;">📤 By Source</div>
         <div style="display: flex; flex-direction: column; gap: 4px;">
           ${(artViewsSummary.externalDisplays || []).map(r => {
             const icons = { 'Google Images': '🔍', 'Google Search': '🔍', 'Bing Images': '🅱️', 'Bing Search': '🅱️', 'Pinterest': '📌', 'Facebook': '📘', 'Twitter/X': '🐦', 'Instagram': '📷', 'LinkedIn': '💼', 'DuckDuckGo': '🦆', 'Direct / No Referrer': '🔗', 'Yandex': '🇷🇺', 'Baidu': '🇨🇳' };
@@ -3015,7 +3120,7 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   </div>
   ` : ''}
 
-  <!-- All sections grid -->\n  <div class="grid">
+  <!-- All sections grid -->\n  <div class="grid" style="margin-top: 20px;">
     <div class="section">
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2px;">
         <h3 style="margin:0;">Event Breakdown</h3>
@@ -3058,74 +3163,42 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
       </script>
     </div>
 
+    <!-- Viewer Geography -->
     <div class="section">
       <div class="section-header">
-        <h3>📍 Visitor Geography</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Where your on-site visitors come from (city, state, country). These are people actually browsing k4studios.com, not external image views.</div></span>
+        <h3>🗺️ Viewer Geography</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Combined geography. 🎨 Art Viewers = chapter views, zooms, slideshows (Cloudflare geo). 🌐 Site Visitors = JS-tracked page browsing.</div></span>
       </div>
-      ${geo.length === 0 ? '<p style="color:#666">No data yet</p>' : `
-      <div style="padding-right: 6px;">
-      ${geo.map(g => {
-          const label = [g.city, g.region, g.country].filter(Boolean).join(', ');
-          // Country color mapping - each country gets a distinct color
-          const countryColors = {
-            'US': '#3b82f6', // blue
-            'FR': '#ef4444', // red
-            'DE': '#f97316', // orange
-            'BR': '#22c55e', // green
-            'GB': '#6366f1', // indigo
-            'CA': '#ec4899', // pink
-            'AU': '#eab308', // yellow
-            'MX': '#14b8a6', // teal
-            'IN': '#f59e0b', // amber
-            'JP': '#e11d48', // rose
-            'IT': '#84cc16', // lime
-            'ES': '#a855f7', // purple
-            'NL': '#fb923c', // orange-400
-            'AT': '#dc2626', // red-600
-            'HU': '#c026d3', // fuchsia-600
-            'SG': '#0ea5e9', // sky
-            'HK': '#d946ef', // fuchsia
-            'CN': '#b91c1c', // red-700
-            'KR': '#2563eb', // blue-600
-            'CO': '#fbbf24', // amber-400
-            'PL': '#f43f5e', // rose-500
-            'SE': '#06b6d4', // cyan
-            'NO': '#0284c7', // sky-600
-            'FI': '#0369a1', // sky-700
-            'BE': '#facc15', // yellow-400
-            'CH': '#dc2626', // red
-            'PT': '#059669', // emerald-600
-            'CZ': '#7c3aed', // violet-600
-            'RO': '#4f46e5', // indigo-600
-            'GR': '#0891b2', // cyan-600
-            'IE': '#16a34a', // green-600
-            'RU': '#1d4ed8', // blue-700
-            'UA': '#fcd34d', // amber-300
-            'AR': '#60a5fa', // blue-400
-            'CL': '#f472b6', // pink-400
-            'PE': '#fb7185', // rose-400
-            'VE': '#fde047', // yellow-300
-            'PH': '#34d399', // emerald-400
-            'TH': '#c084fc', // purple-400
-            'VN': '#f87171', // red-400
-            'ID': '#a3e635', // lime-400
-            'MY': '#38bdf8', // sky-400
-            'NZ': '#2dd4bf', // teal-400
-            'ZA': '#a78bfa', // violet-400
-          };
-          const barColor = countryColors[g.country] || '#9ca3af'; // default gray for unknown
-          return `
-          <div class="bar-row">
-            <span class="bar-label" title="${label}">${label}</span>
-            <div class="bar-container">
-              <div class="bar" style="width: ${(g.visitors / maxGeoVisitors * 100).toFixed(1)}%; background: ${barColor};"></div>
-            </div>
-            <span class="bar-value">${g.visitors}</span>
-          </div>
-        `}).join('')}
-      </div>`
-      }
+      <div style="display: flex; gap: 8px; margin-bottom: 6px; font-size: 10px;">
+        <span style="color: #10b981;">🎨 Art</span>
+        <span style="color: #6b7280;">🌐 Site</span>
+      </div>
+      ${(artViewsSummary?.geography?.length > 0 || geo.length > 0) ? (() => {
+        const countryColors = {
+          'US': '#10b981', 'FR': '#ef4444', 'DE': '#f97316', 'BR': '#22c55e', 'GB': '#6366f1',
+          'CA': '#ec4899', 'AU': '#eab308', 'MX': '#14b8a6', 'IN': '#f59e0b', 'JP': '#e11d48',
+          'IT': '#84cc16', 'ES': '#a855f7', 'NL': '#fb923c', 'AT': '#dc2626', 'HU': '#c026d3',
+          'SG': '#0ea5e9', 'HK': '#d946ef', 'CN': '#b91c1c', 'KR': '#2563eb', 'CO': '#fbbf24',
+          'PL': '#f43f5e', 'SE': '#06b6d4', 'NO': '#0284c7', 'FI': '#0369a1', 'CH': '#dc2626',
+          'RU': '#1d4ed8', 'UA': '#fcd34d', 'AR': '#60a5fa', 'ZA': '#a78bfa', 'NZ': '#2dd4bf',
+        };
+        const artGeo = (artViewsSummary.geography || []).map(g => ({
+          label: [g.city, g.region, g.country].filter(Boolean).join(', '),
+          country: g.country, count: g.unique_viewers, views: g.views, source: 'art'
+        }));
+        const siteGeo = (geo || []).map(g => ({
+          label: [g.city, g.region, g.country].filter(Boolean).join(', '),
+          country: g.country, count: g.visitors, source: 'site'
+        }));
+        const combined = [...artGeo, ...siteGeo].sort((a, b) => b.count - a.count).slice(0, 15);
+        const maxCount = Math.max(...combined.map(g => g.count), 1);
+        return '<div style="padding-right: 6px;">' + combined.map(g => {
+          const isArt = g.source === 'art';
+          const barColor = isArt ? (countryColors[g.country] || '#9ca3af') : '#4b5563';
+          const icon = isArt ? '🎨' : '🌐';
+          return `<div class="bar-row"><span style="width: 16px; text-align: center; flex-shrink: 0; font-size: 10px;">${icon}</span><span class="bar-label" title="${g.label}">${g.label}</span><div class="bar-container"><div class="bar" style="width: ${(g.count / maxCount * 100).toFixed(1)}%; background: ${barColor};"></div></div><span class="bar-value">${g.count}</span></div>`;
+        }).join('') + '</div>';
+      })() : '<p style="color:#666">No data yet</p>'}
     </div>
 
     <div class="section">
@@ -3216,11 +3289,78 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
     </div>
 
     <div class="section">
-      <h3>Entry Points</h3>
+      <h3>Top 10 Pages</h3>
+      ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
+        pages.map(p => {
+          const shortPath = p.page_path.length > 28 ? '...' + p.page_path.slice(-25) : p.page_path;
+          return `
+          <div class="bar-row">
+            <a class="bar-label" href="https://www.k4studios.com${p.page_path}" target="_blank" title="${p.page_path}" style="color: #4a9eff; text-decoration: none;">${shortPath}</a>
+            <div class="bar-container">
+              <div class="bar" style="width: ${(p.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
+            </div>
+            <span class="bar-value">${p.sessions}</span>
+          </div>
+        `}).join('')
+      }
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h3>� Top Entry Pages</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page visited in each session. 🔍=Google Search, 🖼️=Images, 🅱️=Bing, 📌=Pinterest, 🐦=Twitter, 📘=Facebook, 🔗=Direct, 🔄=Internal</div></span>
+      </div>
+      ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
+      <table>
+        <tr><th>Page</th><th>From</th><th>Sess</th></tr>
+        ${entryPages.slice(0, 15).map(p => {
+          const isImage = p.page_path.includes('/i-');
+          const shortPath = p.page_path.length > 30 ? '...' + p.page_path.slice(-27) : p.page_path;
+          const pageIcon = isImage ? '🖼️' : '📄';
+          const refIcons = { 
+            google_search: '🔍', google_images: '🖼️', 
+            bing_search: '🅱️', bing_images: '🖼️', 
+            pinterest: '📌', twitter: '🐦', facebook: '📘', instagram: '📷', 
+            linkedin: '💼', duckduckgo: '🦆',
+            direct: '🔗', internal: '🔄', unattributed: '🔒' 
+          };
+          const refIcon = refIcons[p.ref_source] || '🔒';
+          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
+        }).join('')}
+      </table>
+      `}
+    </div>
+
+    <div class="section">
+      <h3>Gallery-Chapter Entry Points</h3>
       <table>
         <tr><th>Source</th><th>Sessions</th></tr>
         ${entries.map(e => `<tr><td>${formatEventName(e.entry_source)}</td><td>${e.sessions}</td></tr>`).join('')}
         ${entries.length === 0 ? '<tr><td colspan="2">No data yet</td></tr>' : ''}
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h3>Gallery Performance</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Image views grouped by gallery. Colors: 🟣 Painterly, 🔵 Traditional, 🟠 K4 Select</div></span>
+      </div>
+      <table>
+        <tr><th>Gallery</th><th>Sess</th><th>Zoom%</th><th>Avg</th></tr>
+        ${galleries.map(g => {
+          const typeColors = { painterly: '#a855f7', traditional: '#4a9eff', select: '#f59e0b' };
+          const color = typeColors[g.gallery_type] || '#888';
+          return `<tr>
+            <td style="display: flex; align-items: center; gap: 8px;">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: ${color}; flex-shrink: 0;"></span>
+              ${formatEventName(g.gallery_id || 'Unknown')}
+            </td>
+            <td>${g.sessions}</td>
+            <td>${g.zoom_pct || 0}%</td>
+            <td>${g.avg_events || 0}</td>
+          </tr>`;
+        }).join('')}
+        ${galleries.length === 0 ? '<tr><td colspan="4">No data yet</td></tr>' : ''}
       </table>
     </div>
 
@@ -3275,73 +3415,6 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
           <span class="label" style="color: #d1d5db;">Other</span>
         </div>
       </div>
-    </div>
-
-    <div class="section">
-      <h3>Top 10 Pages</h3>
-      ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        pages.map(p => {
-          const shortPath = p.page_path.length > 28 ? '...' + p.page_path.slice(-25) : p.page_path;
-          return `
-          <div class="bar-row">
-            <a class="bar-label" href="https://www.k4studios.com${p.page_path}" target="_blank" title="${p.page_path}" style="color: #4a9eff; text-decoration: none;">${shortPath}</a>
-            <div class="bar-container">
-              <div class="bar" style="width: ${(p.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
-            </div>
-            <span class="bar-value">${p.sessions}</span>
-          </div>
-        `}).join('')
-      }
-    </div>
-
-    <div class="section">
-      <div class="section-header">
-        <h3>Gallery Performance</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Image views grouped by gallery. Colors: 🟣 Painterly, 🔵 Traditional, 🟠 K4 Select</div></span>
-      </div>
-      <table>
-        <tr><th>Gallery</th><th>Sess</th><th>Zoom%</th><th>Avg</th></tr>
-        ${galleries.map(g => {
-          const typeColors = { painterly: '#a855f7', traditional: '#4a9eff', select: '#f59e0b' };
-          const color = typeColors[g.gallery_type] || '#888';
-          return `<tr>
-            <td style="display: flex; align-items: center; gap: 8px;">
-              <span style="width: 8px; height: 8px; border-radius: 50%; background: ${color}; flex-shrink: 0;"></span>
-              ${formatEventName(g.gallery_id || 'Unknown')}
-            </td>
-            <td>${g.sessions}</td>
-            <td>${g.zoom_pct || 0}%</td>
-            <td>${g.avg_events || 0}</td>
-          </tr>`;
-        }).join('')}
-        ${galleries.length === 0 ? '<tr><td colspan="4">No data yet</td></tr>' : ''}
-      </table>
-    </div>
-
-    <div class="section">
-      <div class="section-header">
-        <h3>🚀 Top Entry Pages</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page visited in each session. 🔍=Google Search, 🖼️=Images, 🅱️=Bing, 📌=Pinterest, 🐦=Twitter, 📘=Facebook, 🔗=Direct, 🔄=Internal</div></span>
-      </div>
-      ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
-      <table>
-        <tr><th>Page</th><th>From</th><th>Sess</th></tr>
-        ${entryPages.slice(0, 15).map(p => {
-          const isImage = p.page_path.includes('/i-');
-          const shortPath = p.page_path.length > 30 ? '...' + p.page_path.slice(-27) : p.page_path;
-          const pageIcon = isImage ? '🖼️' : '📄';
-          const refIcons = { 
-            google_search: '🔍', google_images: '🖼️', 
-            bing_search: '🅱️', bing_images: '🖼️', 
-            pinterest: '📌', twitter: '🐦', facebook: '📘', instagram: '📷', 
-            linkedin: '💼', duckduckgo: '🦆',
-            direct: '🔗', internal: '🔄', unattributed: '🔒' 
-          };
-          const refIcon = refIcons[p.ref_source] || '🔒';
-          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.visitors}</td></tr>`;
-        }).join('')}
-      </table>
-      `}
     </div>
   </div>
 

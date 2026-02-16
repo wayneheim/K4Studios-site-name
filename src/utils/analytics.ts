@@ -129,11 +129,11 @@ if (typeof window !== 'undefined') {
  */
 export function trackPageView(): void {
   trackEvent('page_view');
-  
+
   // Update page context for session exit tracking
   updatePageContext();
   
-  // Initialize scroll depth tracking (only activates on image pages)
+  // Initialize scroll depth tracking (main site pages only; excludes galleries/images)
   initScrollDepthTracking();
 }
 
@@ -220,22 +220,36 @@ if (typeof window !== 'undefined') {
 }
 
 // ==========================================
-// SCROLL DEPTH TRACKING (IMAGE PAGES ONLY)
+// SCROLL DEPTH TRACKING (MAIN PAGES ONLY)
 // ==========================================
 
 const scrollThresholdsFired = new Set<number>();
+let activeScrollListener: (() => void) | null = null;
 
 /**
- * Initialize scroll depth tracking for image pages
+ * Initialize scroll depth tracking for main site pages.
+ * Excludes gallery pages and image pages (the art viewer has its own interaction signals).
  */
 export function initScrollDepthTracking(): void {
   if (typeof window === 'undefined') return;
-  
-  // Only track on image pages
-  const imageId = getImageIdFromPath();
-  if (!imageId) return;
-  
-  const galleryId = getGalleryIdFromPath();
+
+  // Remove any prior listener (SPA navigation can call this multiple times)
+  if (activeScrollListener) {
+    window.removeEventListener('scroll', activeScrollListener);
+    activeScrollListener = null;
+  }
+
+  const path = window.location.pathname;
+
+  // Exclude art viewer pages
+  const imageId = getImageIdFromPath(path);
+  if (imageId) return;
+
+  // Exclude chapter/gallery pages
+  const galleryId = getGalleryIdFromPath(path);
+  if (galleryId) return;
+
+  const pageType: TrackContext['pageType'] = (path === '/' || path === '') ? 'landing' : 'other';
   const thresholds = [25, 50, 75, 100];
   
   // Reset for new page
@@ -253,16 +267,17 @@ export function initScrollDepthTracking(): void {
       if (scrollPercent >= threshold && !scrollThresholdsFired.has(threshold)) {
         scrollThresholdsFired.add(threshold);
         trackEvent(`scroll_${threshold}`, {
-          pageType: 'image',
-          imageId,
-          galleryId
+          pageType,
+          imageId: null,
+          galleryId: null
         });
       }
     }
   };
   
   // Use passive listener for performance
-  window.addEventListener('scroll', checkScroll, { passive: true });
+  activeScrollListener = checkScroll;
+  window.addEventListener('scroll', activeScrollListener, { passive: true });
   
   // Check initial scroll position
   checkScroll();

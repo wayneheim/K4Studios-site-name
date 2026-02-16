@@ -259,8 +259,17 @@ const keywords =
 
     <!-- K4 Custom Analytics - track all page views -->
     <script>
-      import { trackPageView } from '../utils/analytics';
+      import { trackPageView, getImageIdFromPath, trackEvent as track } from '../utils/analytics';
+
       trackPageView();
+
+      // If this is a true image page (URL ends with /i-xxxx), log a first-party chapter_view.
+      // This does NOT run on the homepage/carousels because it keys off window.location.pathname,
+      // not <img> requests.
+      const imageId = getImageIdFromPath();
+      if (imageId) {
+        track('chapter_view', { pageType: 'image', imageId });
+      }
     </script>
     
     <!-- Allow pages to inject custom head content -->

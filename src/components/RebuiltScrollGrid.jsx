@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, loadSeriesRegistry } from "../data/seriesDefinitions.js";
 import { getProxySrc } from "@/utils/imageProxy.js";
 import { warmImage } from "../utils/warmImage";
+import { trackEvent } from "../utils/analytics";
 
 const BATCH_SIZES = { 1: 25, 2: 24, 3: 30 };
 
@@ -303,6 +304,7 @@ export default function RebuiltScrollGrid({
             className="block px-6 py-2 bg-[#f9f6f2] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition z-10"
             style={{ border: "2px solid #d1d5db", position: "relative" }}
             onClick={() => {
+              trackEvent('grid_show_previous', { galleryId: galleryKey, pageType: 'image' });
               setSimIndex(loadedRange.start);
               setAnchorOnNextUpdate(false);
               setPendingPrepend(true);
@@ -353,7 +355,16 @@ export default function RebuiltScrollGrid({
                 initial={isNewCard ? "hidden" : "visible"}
                 animate="visible"
                 custom={staggerIndex}
-                onClick={() => onCardClick?.(globalIndex)}
+                onClick={() => {
+                  if (entry?.id) {
+                    trackEvent('grid_image_click', {
+                      galleryId: galleryKey,
+                      imageId: entry.id,
+                      pageType: 'image'
+                    });
+                  }
+                  onCardClick?.(globalIndex);
+                }}
                 className="rounded-xl border border-gray-300 p-4 hover:shadow-md cursor-pointer flex flex-col will-change-transform"
                 style={{ backgroundColor: "#f7f3eb" }}
               >
@@ -501,6 +512,7 @@ export default function RebuiltScrollGrid({
           <button
             className="px-6 py-2 bg-[#f9f6f2] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition"
             onClick={() => {
+              trackEvent('grid_show_more', { galleryId: galleryKey, pageType: 'image' });
               setSimIndex(end - 1);
               setAnchorOnNextUpdate(true);
             }}
