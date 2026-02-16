@@ -67,6 +67,27 @@ interface TrackContext {
   theme?: string | null;
 }
 
+function shouldSkipDuplicateEvent(event: string, context: TrackContext, pagePath: string): boolean {
+  // Only dedupe events where accidental double-firing is common.
+  // Example: `chapter_view` can be emitted both globally (BaseLayout) and
+  // inside the chapter UI during the same navigation.
+  if (event !== 'chapter_view' && event !== 'zoom_open') return false;
+
+  const imageId = context.imageId || getImageIdFromPath(pagePath);
+  if (!imageId) return false;
+
+  const key = `k4_dedupe_${event}_${imageId}`;
+  const now = Date.now();
+  const last = parseInt(sessionStorage.getItem(key) || '0', 10);
+
+  // Ignore repeats within a short window (same image, same session)
+  const DEDUPE_WINDOW_MS = event === 'zoom_open' ? 1500 : 3000;
+  if (last && now - last < DEDUPE_WINDOW_MS) return true;
+
+  sessionStorage.setItem(key, String(now));
+  return false;
+}
+
 /**
  * Track a user interaction event
  * 
@@ -89,12 +110,25 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
   // Capture current page path
   const pagePath = window.location.pathname;
 
+  // Robust defaults: infer context from URL if caller didn't pass it.
+  const inferredImageId = context.imageId ?? getImageIdFromPath(pagePath);
+  const inferredGalleryId = context.galleryId ?? getGalleryIdFromPath(pagePath);
+  const inferredPageType: TrackContext['pageType'] = context.pageType ?? (
+    inferredImageId ? 'image'
+      : inferredGalleryId ? 'gallery'
+        : (pagePath === '/' || pagePath === '') ? 'landing'
+          : 'other'
+  );
+
+  // Prevent accidental double-counting
+  if (shouldSkipDuplicateEvent(event, context, pagePath)) return;
+
   const payload = JSON.stringify({
     session_id: getSessionId(),
     event,
-    gallery_id: context.galleryId || null,
-    image_id: context.imageId || null,
-    page_type: context.pageType || null,
+    gallery_id: inferredGalleryId || null,
+    image_id: inferredImageId || null,
+    page_type: inferredPageType || null,
     theme: context.theme || null,
     referrer: entryReferrer,
     page_path: pagePath,

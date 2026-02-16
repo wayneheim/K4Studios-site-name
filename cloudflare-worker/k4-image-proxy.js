@@ -1286,6 +1286,8 @@ async function handleAdminAnalytics(request, env) {
   const url = new URL(request.url);
   const days = parseInt(url.searchParams.get("days") || "1", 10);
   const yesterday = url.searchParams.get("yesterday") === "1";
+  const selectedDateRaw = url.searchParams.get("date");
+  const selectedDate = /^\d{4}-\d{2}-\d{2}$/.test(selectedDateRaw || "") ? selectedDateRaw : null;
   const galleryFilter = url.searchParams.get("gallery") || null;
   const excludeIp = url.searchParams.get("excludeIp") || null;
   const hideBots = url.searchParams.get("hideBots") === "1";
@@ -1299,17 +1301,23 @@ async function handleAdminAnalytics(request, env) {
   try {
     // Build date filter (adjusted for Eastern Time, UTC-5)
     // Use date() comparison for calendar day matching in Eastern time
-    let dateClause;
+    let rangeDateClause;
     if (yesterday) {
       // Yesterday = Eastern calendar day before today
-      dateClause = `date(created_at, '-5 hours') = date('now', '-5 hours', '-1 day')`;
+      rangeDateClause = `date(created_at, '-5 hours') = date('now', '-5 hours', '-1 day')`;
     } else if (days === 1) {
       // Today = current Eastern calendar day
-      dateClause = `date(created_at, '-5 hours') = date('now', '-5 hours')`;
+      rangeDateClause = `date(created_at, '-5 hours') = date('now', '-5 hours')`;
     } else {
       // Last N days (rolling window from now)
-      dateClause = `created_at > datetime('now', '-5 hours', '-${days} days')`;
+      rangeDateClause = `created_at > datetime('now', '-5 hours', '-${days} days')`;
     }
+
+    // If a specific Eastern calendar day is selected, render stats for that day
+    // (but keep the trend chart using the current range).
+    const dateClause = selectedDate
+      ? `date(created_at, '-5 hours') = '${selectedDate}'`
+      : rangeDateClause;
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
     const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
     // Art views use ip_hash (first 3 octets + .x) instead of raw IP
@@ -1345,9 +1353,12 @@ async function handleAdminAnalytics(request, env) {
     // Query 1b: New vs returning visitors (IPs seen before this period)
     // For yesterday mode, use start-of-yesterday as the boundary
     // For rolling windows, use the days offset
-    const priorPeriodClause = yesterday 
-      ? `created_at < datetime('now', '-5 hours', '-1 day', 'start of day')`
-      : `created_at < datetime('now', '-5 hours', '-${days} days')`;
+    const priorPeriodClause = selectedDate
+      ? `date(created_at, '-5 hours') < '${selectedDate}'`
+      : (yesterday 
+        ? `created_at < datetime('now', '-5 hours', '-1 day', 'start of day')`
+        : `created_at < datetime('now', '-5 hours', '-${days} days')`
+      );
     
     const returningQuery = `
       SELECT COUNT(DISTINCT e.ip) as returning_visitors
@@ -1468,7 +1479,7 @@ async function handleAdminAnalytics(request, env) {
         COUNT(DISTINCT session_id) as sessions,
         COUNT(*) as events
       FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
+      WHERE ${rangeDateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
       GROUP BY DATE(created_at, '-5 hours')
       ORDER BY day ASC
     `;
@@ -2382,6 +2393,7 @@ async function handleAdminAnalytics(request, env) {
     const html = renderDashboard({
       days,
       yesterday,
+      selectedDate,
       galleryFilter,
       excludeIp,
       viewerIp,
@@ -2508,7 +2520,7 @@ async function handleExportCSV(request, env) {
   }
 }
 
-function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, botIntelligence }) {
+function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, botIntelligence }) {
   const s = summary || {};
   
   // Canonical list of all trackable events with display labels
@@ -2764,8 +2776,8 @@ function renderDashboard({ days, yesterday, galleryFilter, excludeIp, viewerIp, 
   <h1>K4 Analytics <a href="/__k4serp" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none;margin-left:20px">📊 SERP</a> <a href="/__k4serp/launch" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none">🚀 Launch Pad</a></h1>
   
   <div class="controls">
-    <a href="?days=1${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 1 && !yesterday ? 'active' : ''}">Today</a>
-    <a href="?yesterday=1${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${yesterday ? 'active' : ''}">Yesterday</a>
+    <a href="?days=1${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 1 && !yesterday ? 'active' : ''}">Today*</a>
+    <a href="?yesterday=1${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${yesterday ? 'active' : ''}">Yesterday*</a>
     <a href="?days=7${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 7 && !yesterday ? 'active' : ''}">7 Days</a>
     <a href="?days=30${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 30 && !yesterday ? 'active' : ''}">30 Days</a>
     <a href="?days=90${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 90 && !yesterday ? 'active' : ''}">3 Months</a>
