@@ -568,8 +568,8 @@ async function handleImageRequest(request, ctx, env) {
         ctx.waitUntil(logArtView(env, 'xl_zoom', route.imageId, request));
       } else if (route.size === 'l') {
         const referer = request.headers.get('Referer') || '';
-        // Only log L-size as external_image if NOT from k4studios (true external embed)
-        if (!referer.includes('k4studios.com')) {
+        // Only log L-size as external_image if NOT from k4studios or localhost (true external embed)
+        if (!referer.includes('k4studios.com') && !referer.includes('localhost')) {
           ctx.waitUntil(logArtView(env, 'external_image', route.imageId, request));
         }
       }
@@ -658,6 +658,29 @@ function classifyUA(ua) {
   if (BLOCKED_BOTS.test(lower)) return 'bot';
   if (ALLOWED_BOTS.test(lower)) return 'bot';
   return 'human';
+}
+
+/**
+ * Prefer an IPv4 address when both IPv4+IPv6 may be present.
+ * This helps the admin dashboard's "Exclude My IP" match the majority of
+ * events/art_views rows when a client is dual-stack.
+ */
+function getBestClientIP(request) {
+  const cfIp = request.headers.get("CF-Connecting-IP") || null;
+  const xff = request.headers.get("X-Forwarded-For") || null;
+
+  const isIPv4 = (ip) => typeof ip === 'string' && ip.includes('.') && !ip.includes(':');
+
+  if (isIPv4(cfIp)) return cfIp;
+
+  if (xff) {
+    const parts = xff.split(',').map(s => s.trim()).filter(Boolean);
+    const firstIPv4 = parts.find(isIPv4);
+    if (firstIPv4) return firstIPv4;
+    if (parts.length > 0) return parts[0];
+  }
+
+  return cfIp;
 }
 
 /**
@@ -945,7 +968,7 @@ function normalizeReferrer(referer) {
   if (lower === "google" || lower === "bing" || lower === "facebook" || 
       lower === "instagram" || lower === "twitter" || lower === "pinterest" || 
       lower === "linkedin" || lower === "internal" || lower === "direct" || 
-      lower === "unknown" || lower === "other") {
+      lower === "unknown" || lower === "other" || lower === "chatgpt") {
     return lower;
   }
   
@@ -954,7 +977,8 @@ function normalizeReferrer(referer) {
   if (lower.includes("bing.")) return "bing";
   if (lower.includes("facebook.") || lower.includes("fb.")) return "facebook";
   if (lower.includes("instagram.")) return "instagram";
-  if (lower.includes("twitter.") || lower.includes("x.com")) return "twitter";
+  if (lower.includes("twitter.") || lower.includes("x.com") || lower.includes("t.co/")) return "twitter";
+  if (lower.includes("chatgpt.com") || lower.includes("chat.openai.com")) return "chatgpt";
   if (lower.includes("pinterest.")) return "pinterest";
   if (lower.includes("linkedin.")) return "linkedin";
   if (lower.includes("k4studios.com")) return "internal";
@@ -1260,6 +1284,16 @@ async function handleRefreshBots(request, env) {
 // --------------------
 // ANALYTICS: /admin/analytics DASHBOARD
 // --------------------
+function withAdminNoCacheHeaders(baseHeaders = {}) {
+  const headers = new Headers(baseHeaders);
+  headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
+  headers.set("Pragma", "no-cache");
+  headers.set("Expires", "0");
+  // Ensure any intermediary cache varies by credentials.
+  headers.set("Vary", "Authorization");
+  return headers;
+}
+
 function checkBasicAuth(request, env) {
   const auth = request.headers.get("Authorization");
   if (!auth || !auth.startsWith("Basic ")) return false;
@@ -1275,10 +1309,10 @@ function checkBasicAuth(request, env) {
 function requireAuth() {
   return new Response("Unauthorized", {
     status: 401,
-    headers: {
+    headers: withAdminNoCacheHeaders({
       "WWW-Authenticate": 'Basic realm="K4 Analytics"',
       "Content-Type": "text/plain"
-    }
+    })
   });
 }
 
@@ -1299,9 +1333,7 @@ async function handleAdminAnalytics(request, env) {
   const hideChardon = url.searchParams.get("hideChardon") === "1";
 
   // Get viewer's current IP for the "exclude me" button
-  const viewerIp = request.headers.get("CF-Connecting-IP") || 
-                   request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() || 
-                   null;
+  const viewerIp = getBestClientIP(request);
 
   try {
     // Build date filter (adjusted for Eastern Time, UTC-5)
@@ -1325,12 +1357,12 @@ async function handleAdminAnalytics(request, env) {
       : rangeDateClause;
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
     const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
-    // Art views use ip_hash (first 3 octets + .x) instead of raw IP
-    const excludeIpHash = excludeIp ? excludeIp.split('.').slice(0, 3).join('.') + '.x' : null;
-    const viewerIpHash = viewerIp ? viewerIp.split('.').slice(0, 3).join('.') + '.x' : null;
+    // Art views use ip_hash instead of raw IP (see hashIP())
+    const excludeIpHash = (excludeIp && excludeIp !== 'unknown') ? hashIP(excludeIp) : null;
+    const viewerIpHash = (viewerIp && viewerIp !== 'unknown') ? hashIP(viewerIp) : null;
     // Combined art_views filter: IP exclusion + datacenter bot IPs + Chardon/localhost (via ip_hash + referrer)
     const artIpParts = [];
-    if (excludeIpHash) artIpParts.push(`ip_hash != '${excludeIpHash}'`);
+    if (excludeIpHash && excludeIpHash !== 'unknown') artIpParts.push(`ip_hash != '${excludeIpHash}'`);
     if (hideBots) artIpParts.push(`NOT (ip_hash LIKE '3.%' OR ip_hash LIKE '17.%' OR ip_hash LIKE '18.%' OR ip_hash LIKE '40.77.%' OR ip_hash LIKE '52.%' OR ip_hash LIKE '54.%' OR ip_hash LIKE '65.55.%')`);
     if (hideChardon && viewerIpHash && !excludeIpHash) artIpParts.push(`ip_hash != '${viewerIpHash}'`);
     if (hideChardon) artIpParts.push(`(referrer IS NULL OR referrer NOT LIKE '%localhost%')`);
@@ -1686,7 +1718,8 @@ async function handleAdminAnalytics(request, env) {
           WHEN referrer = 'bing' OR referrer LIKE '%bing.%' THEN 'bing_search'
           WHEN referrer = 'pinterest' OR referrer LIKE '%pinterest.%' THEN 'pinterest'
           WHEN referrer = 'facebook' OR referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
-          WHEN referrer = 'twitter' OR referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'twitter'
+          WHEN referrer = 'twitter' OR referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'twitter'
+          WHEN referrer = 'chatgpt' OR referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'chatgpt'
           WHEN referrer = 'instagram' OR referrer LIKE '%instagram.%' THEN 'instagram'
           WHEN referrer = 'linkedin' OR referrer LIKE '%linkedin.%' THEN 'linkedin'
           WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
@@ -1767,7 +1800,8 @@ async function handleAdminAnalytics(request, env) {
           WHEN referrer = 'bing' OR referrer LIKE '%bing.%' THEN 'bing_search'
           WHEN referrer = 'pinterest' OR referrer LIKE '%pinterest.%' THEN 'pinterest'
           WHEN referrer = 'facebook' OR referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
-          WHEN referrer = 'twitter' OR referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'twitter'
+          WHEN referrer = 'twitter' OR referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'twitter'
+          WHEN referrer = 'chatgpt' OR referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'chatgpt'
           WHEN referrer = 'instagram' OR referrer LIKE '%instagram.%' THEN 'instagram'
           WHEN referrer = 'linkedin' OR referrer LIKE '%linkedin.%' THEN 'linkedin'
           WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
@@ -2111,7 +2145,8 @@ async function handleAdminAnalytics(request, env) {
             WHEN referrer LIKE '%bing.%' THEN 'bing'
             WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
             WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
-            WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'twitter'
+            WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'twitter'
+            WHEN referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'chatgpt'
             WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
             ELSE 'unattributed'
           END as top_source,
@@ -2162,7 +2197,8 @@ async function handleAdminAnalytics(request, env) {
             WHEN referrer LIKE '%bing.%' THEN 'Bing Search'
             WHEN referrer LIKE '%pinterest.%' THEN 'Pinterest'
             WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'Facebook'
-            WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co%' OR referrer LIKE '%x.com%' THEN 'Twitter/X'
+            WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'Twitter/X'
+            WHEN referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'ChatGPT'
             WHEN referrer LIKE '%instagram.%' THEN 'Instagram'
             WHEN referrer LIKE '%linkedin.%' THEN 'LinkedIn'
             WHEN referrer LIKE '%duckduckgo.%' THEN 'DuckDuckGo'
@@ -2451,12 +2487,19 @@ async function handleAdminAnalytics(request, env) {
 
     return new Response(html, {
       status: 200,
-      headers: { "Content-Type": "text/html; charset=utf-8" }
+      headers: withAdminNoCacheHeaders({
+        "Content-Type": "text/html; charset=utf-8"
+      })
     });
 
   } catch (err) {
     console.error("Admin analytics error:", err);
-    return new Response(`Error: ${err.message}`, { status: 500 });
+    return new Response(`Error: ${err.message}`,
+      {
+        status: 500,
+        headers: withAdminNoCacheHeaders({ "Content-Type": "text/plain; charset=utf-8" })
+      }
+    );
   }
 }
 
@@ -2468,7 +2511,10 @@ async function handleExportCSV(request, env) {
   if (authHeader !== expected) {
     return new Response("Unauthorized", {
       status: 401,
-      headers: { "WWW-Authenticate": 'Basic realm="K4 Analytics Export"' }
+      headers: withAdminNoCacheHeaders({
+        "WWW-Authenticate": 'Basic realm="K4 Analytics Export"',
+        "Content-Type": "text/plain"
+      })
     });
   }
 
@@ -2514,14 +2560,19 @@ async function handleExportCSV(request, env) {
     const filename = `k4-analytics-${yesterday ? 'yesterday' : days + 'days'}-${new Date().toISOString().slice(0,10)}.csv`;
 
     return new Response(csv, {
-      headers: {
+      headers: withAdminNoCacheHeaders({
         'Content-Type': 'text/csv',
-        'Content-Disposition': `attachment; filename="${filename}"`
-      }
+        'Content-Disposition': `attachment; filename="${filename}"`,
+      })
     });
   } catch (err) {
     console.error("Export error:", err);
-    return new Response(`Export error: ${err.message}`, { status: 500 });
+    return new Response(`Export error: ${err.message}`,
+      {
+        status: 500,
+        headers: withAdminNoCacheHeaders({ "Content-Type": "text/plain; charset=utf-8" })
+      }
+    );
   }
 }
 
@@ -2874,8 +2925,8 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
   <div class="trend-chart">
     <h3>Engaged Sessions</h3>
     <div class="trend-bars" style="justify-content: center;">
-      <div class="trend-bar" style="height: 100%; width: 80px;" title="${trend[0].day}: ${trend[0].visitors} visitors, ${trend[0].sessions} sessions">
-        <span class="trend-bar-value">${trend[0].visitors}</span>
+      <div class="trend-bar" style="height: 100%; width: 80px;" title="${trend[0].day}: ${trend[0].sessions} sessions, ${trend[0].visitors} unique IPs">
+        <span class="trend-bar-value">${trend[0].sessions}</span>
         <span class="trend-bar-label">${trend[0].day.slice(5)}${trend[0].day === '2026-02-14' ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ''}</span>
       </div>
     </div>
@@ -2886,7 +2937,7 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
   <div class="pulse">
     <div class="pulse-stat">
       <span class="value">${s.unique_visitors || 0}</span>
-      <span class="label">JS Sessions <span class="info-icon">i</span></span>
+      <span class="label">JS Visitors <span class="info-icon">i</span></span>
       <div class="tooltip">Unique IPs with JS events (Layer C). Only counts visitors whose browser loaded JavaScript and triggered events. Does NOT include image-only viewers — see Art Views below for complete picture.</div>
     </div>
     <div class="pulse-stat">
@@ -3107,6 +3158,7 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
               { key: 'pinterest', label: 'Pinterest', icon: '📌' },
               { key: 'facebook', label: 'Facebook', icon: '📘' },
               { key: 'twitter', label: 'Twitter/X', icon: '🐦' },
+              { key: 'chatgpt', label: 'ChatGPT', icon: '🤖' },
               { key: 'instagram', label: 'Instagram', icon: '📷' },
               { key: 'linkedin', label: 'LinkedIn', icon: '💼' },
               { key: 'duckduckgo', label: 'DuckDuckGo', icon: '🦆' }
@@ -3192,13 +3244,24 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
       </div>
       ${(artViewsSummary?.geography?.length > 0 || geo.length > 0) ? (() => {
         const countryColors = {
-          'US': '#10b981', 'FR': '#ef4444', 'DE': '#f97316', 'BR': '#22c55e', 'GB': '#6366f1',
+          'US': '#3b82f6', 'FR': '#ef4444', 'DE': '#f97316', 'BR': '#22c55e', 'GB': '#6366f1',
           'CA': '#ec4899', 'AU': '#eab308', 'MX': '#14b8a6', 'IN': '#f59e0b', 'JP': '#e11d48',
           'IT': '#84cc16', 'ES': '#a855f7', 'NL': '#fb923c', 'AT': '#dc2626', 'HU': '#c026d3',
           'SG': '#0ea5e9', 'HK': '#d946ef', 'CN': '#b91c1c', 'KR': '#2563eb', 'CO': '#fbbf24',
           'PL': '#f43f5e', 'SE': '#06b6d4', 'NO': '#0284c7', 'FI': '#0369a1', 'CH': '#dc2626',
           'RU': '#1d4ed8', 'UA': '#fcd34d', 'AR': '#60a5fa', 'ZA': '#a78bfa', 'NZ': '#2dd4bf',
+          'PT': '#e879f9', 'CG': '#f472b6', 'CL': '#38bdf8', 'PE': '#fbbf24', 'IE': '#4ade80',
+          'BE': '#facc15', 'CZ': '#7dd3fc', 'DK': '#ef4444', 'GR': '#0ea5e9', 'IL': '#6366f1',
+          'TW': '#d946ef', 'TH': '#f97316', 'PH': '#8b5cf6', 'TR': '#dc2626', 'RO': '#fde047',
         };
+        // Generate a stable color for any unmapped country so Art bars never fall back to gray
+        function countryColor(code) {
+          if (countryColors[code]) return countryColors[code];
+          if (!code) return '#9ca3af';
+          let h = 0; for (let i = 0; i < code.length; i++) h = code.charCodeAt(i) * 31 + h;
+          const hue = Math.abs(h) % 360;
+          return 'hsl(' + hue + ', 70%, 55%)';
+        }
         const artGeo = (artViewsSummary.geography || []).map(g => ({
           label: [g.city, g.region, g.country].filter(Boolean).join(', '),
           country: g.country, count: g.unique_viewers, views: g.views, source: 'art'
@@ -3211,7 +3274,7 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
         const maxCount = Math.max(...combined.map(g => g.count), 1);
         return '<div style="padding-right: 6px;">' + combined.map(g => {
           const isArt = g.source === 'art';
-          const barColor = isArt ? (countryColors[g.country] || '#9ca3af') : '#4b5563';
+          const barColor = isArt ? countryColor(g.country) : '#4b5563';
           const icon = isArt ? '🎨' : '🌐';
           return `<div class="bar-row"><span style="width: 16px; text-align: center; flex-shrink: 0; font-size: 10px;">${icon}</span><span class="bar-label" title="${g.label}">${g.label}</span><div class="bar-container"><div class="bar" style="width: ${(g.count / maxCount * 100).toFixed(1)}%; background: ${barColor};"></div></div><span class="bar-value">${g.count}</span></div>`;
         }).join('') + '</div>';

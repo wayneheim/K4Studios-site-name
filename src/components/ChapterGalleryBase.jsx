@@ -1160,13 +1160,17 @@ export default function ChapterGalleryBase({
                               data-notes-btn
                               onClick={(e) => {
                                 e.stopPropagation();
-                                setShowNotes((p) => !p);
+                                setShowNotes((p) => {
+                                  if (!p) {
+                                    track("collector_notes_open");
+                                    sessionStorage.setItem("collectorHintShown", "1");
+                                    setShowCollectorHint(false);
+                                  }
+                                  return !p;
+                                });
                                 // Close "More about this image" when opening notes
                                 const moreDetails = document.querySelector('.more-about-image');
                                 if (moreDetails) moreDetails.removeAttribute('open');
-                                track("collector_notes_open");
-                                sessionStorage.setItem("collectorHintShown", "1");
-                                setShowCollectorHint(false);
                               }}
                               aria-label="View Collector Notes"
                               title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
@@ -1324,13 +1328,17 @@ export default function ChapterGalleryBase({
                           data-notes-btn
                           onClick={(e) => {
                             e.stopPropagation();
-                            setShowNotes((p) => !p);
+                            setShowNotes((p) => {
+                              if (!p) {
+                                track("collector_notes_open");
+                                sessionStorage.setItem("collectorHintShown", "1");
+                                setShowCollectorHint(false);
+                              }
+                              return !p;
+                            });
                             // Close "More about this image" when opening notes
                             const moreDetails = document.querySelector('.more-about-image');
                             if (moreDetails) moreDetails.removeAttribute('open');
-                            sessionStorage.setItem("collectorHintShown", "1");
-                            setShowCollectorHint(false);
-                            track("collector_notes_open");
                           }}
                           aria-label="View Collector Notes"
                           title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
