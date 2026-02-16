@@ -18,8 +18,12 @@
 
 const warmed = new Set<string>();
 
-// Valid image ID pattern: i- followed by alphanumeric chars
-const VALID_ID_PATTERN = /^i-[a-zA-Z0-9]+$/;
+// Keep strong references to in-flight preloads so the browser doesn't
+// garbage-collect the Image() and cancel the request before it completes.
+const inFlight = new Map<string, HTMLImageElement>();
+
+// Valid image ID pattern: must match worker's /img route
+const VALID_ID_PATTERN = /^i-[a-zA-Z0-9-]+$/;
 const VALID_SIZES = ['s', 'm', 'l', 'xl'];
 
 export function warmImage(
@@ -44,6 +48,16 @@ export function warmImage(
   const img = new Image();
   img.decoding = 'async';
   img.loading = 'eager';
-  // Add ?warm=1 so the worker knows this is a preload, not an explicit zoom
-  img.src = `/img/${trimmedId}/${size}?warm=1`;
+  inFlight.set(key, img);
+
+  const cleanup = () => {
+    // Keep it around briefly after load/error to reduce thrash.
+    setTimeout(() => inFlight.delete(key), 1000);
+  };
+  img.onload = cleanup;
+  img.onerror = cleanup;
+
+  // IMPORTANT: Warm the canonical URL so it hits the same Cloudflare cache key
+  // the real <img> requests will use.
+  img.src = `/img/${trimmedId}/${size}`;
 }
