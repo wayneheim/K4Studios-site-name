@@ -300,3 +300,16 @@ details[open] .arrow-icon {
     padding: 0 !important;
   }
 }
+
+/* Hero image loading shimmer animation */
+@keyframes heroShimmer {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}

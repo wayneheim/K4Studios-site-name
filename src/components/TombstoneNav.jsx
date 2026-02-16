@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { buildContextualAlt, getPageContext } from '../utils/buildContextualAlt';
+import { warmImage } from '../utils/warmImage';
 
 /**
  * Normalize any thumb URL to a proper proxy URL
@@ -70,6 +71,20 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
       return normalizeThumbUrl(thumb);
     }));
   }, [items, propPageContext]);
+
+  // Warm tombstone thumbs immediately after selection
+  useEffect(() => {
+    if (!selectedThumbs.length) return;
+    
+    selectedThumbs.forEach(thumbUrl => {
+      // Extract ID from /img/{id}/s URL
+      const match = thumbUrl.match(/\/img\/(i-[^/]+)/);
+      if (match) {
+        warmImage(match[1], 's'); // Display size
+        warmImage(match[1], 'l'); // Click-through hero
+      }
+    });
+  }, [selectedThumbs]);
 
   return (
     <section className="tombstone-nav">

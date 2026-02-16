@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import "../styles/ImageBar2.css";
 import { buildContextualAlt, getPageContext } from "../utils/buildContextualAlt";
 import { getProxySrc, getCarouselProxySrcset } from "@/utils/imageProxy.js";
@@ -6,19 +6,19 @@ import { warmImage } from "../utils/warmImage";
 
 /**
  * Carousel image sizing:
- * - Desktop (390px height): Use L (1024px)
+ * - Desktop (390px height): Use M (600px) - faster loading
  * - Mobile (200px height): Use M (600px)
  * 
  * We use srcset + sizes so browser picks the right one automatically.
  * All URLs go through /img/{id}/{size} proxy to hide SmugMug URLs.
  */
 function getCarouselSrc(s) {
-  // Use proxy URL - request L size for desktop, Worker handles fallback
+  // Use proxy URL - request M size for faster loading
   if (s.id) {
-    return getProxySrc(s.id, 'l');
+    return getProxySrc(s.id, 'm');
   }
   // Fallback for old carousel data without id (shouldn't happen)
-  return s.srcL || s.srcM || s.srcXL || s.src || '';
+  return s.srcM || s.srcL || s.srcXL || s.src || '';
 }
 
 function getCarouselSrcset(s) {
@@ -63,6 +63,34 @@ export default function ImageBar2({ slides, pageContext: propPageContext }) {
   const [duplicated, setDuplicated] = useState(false);
   // Resolved page context (from prop or auto-detected from path)
   const [resolvedContext, setResolvedContext] = useState(propPageContext);
+  // Track which images have loaded (by index)
+  const [loadedImages, setLoadedImages] = useState({});
+  // Carousel ready to reveal (enough images loaded)
+  const [carouselReady, setCarouselReady] = useState(false);
+
+  const handleImageLoad = useCallback((index) => {
+    setLoadedImages(prev => ({ ...prev, [index]: true }));
+  }, []);
+
+  // Count how many of the first set (non-duplicate) images are loaded
+  const loadedCount = Object.keys(loadedImages).filter(k => parseInt(k) < finalSlides.length).length;
+  
+  // Wait for first 5 images (visible viewport) to load before wipe reveal
+  useEffect(() => {
+    const threshold = Math.min(5, finalSlides.length);
+    if (loadedCount >= threshold && !carouselReady) {
+      setCarouselReady(true);
+    }
+  }, [loadedCount, finalSlides.length, carouselReady]);
+
+  // Failsafe: reveal carousel after 4 seconds even if images slow
+  useEffect(() => {
+    if (carouselReady || !finalSlides.length) return;
+    const timer = setTimeout(() => {
+      if (!carouselReady) setCarouselReady(true);
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, [finalSlides.length, carouselReady]);
 
   // First effect: match current path to a carousel file and load slides
   useEffect(() => {
@@ -103,51 +131,39 @@ export default function ImageBar2({ slides, pageContext: propPageContext }) {
   }, [slides]);
 
   // Second effect: mark slides as duplicated for infinite scroll effect
+  // Also only reveal once duplicated to avoid track width shift
   useEffect(() => {
-    if (finalSlides.length > 0) {
+    if (finalSlides.length > 0 && !duplicated) {
       setDuplicated(true);
     }
-  }, [finalSlides]);
+  }, [finalSlides, duplicated]);
 
-  // Warm first 4 carousel images immediately (3 visible + 1 buffer)
-  // Rest warm during idle time
+  // Warm all carousel images immediately for faster loading
   useEffect(() => {
     if (!finalSlides.length) return;
     
-    // Immediately warm first 4 (visible on load)
-    finalSlides.slice(0, 4).forEach(slide => {
+    // Warm all images at once - curtain wipe buys time
+    finalSlides.forEach(slide => {
       if (slide.id) warmImage(slide.id, 'm');
     });
-    
-    // Warm remainder during idle time
-    const warmRest = () => {
-      finalSlides.slice(4).forEach(slide => {
-        if (slide.id) warmImage(slide.id, 'm');
-      });
-    };
-    
-    if ('requestIdleCallback' in window) {
-      const id = requestIdleCallback(warmRest);
-      return () => cancelIdleCallback(id);
-    } else {
-      const timer = setTimeout(warmRest, 200);
-      return () => clearTimeout(timer);
-    }
   }, [finalSlides]);
 
-  if (!finalSlides.length) return null;
+  if (!finalSlides.length || !duplicated) return null;
 
-  // Double the slides for infinite scroll effect (only after hydration)
-  const displaySlides = duplicated ? [...finalSlides, ...finalSlides] : finalSlides;
+  // Double the slides for infinite scroll effect
+  const displaySlides = [...finalSlides, ...finalSlides];
 
   return (
     <section
-      className="carousel"
+      className={`carousel ${carouselReady ? 'carousel-ready' : ''}`}
       aria-label="Fine-Art Photography Carousel"
       role="region"
       itemScope
       itemType="https://schema.org/ImageGallery"
     >
+      {/* Wipe curtain - slides right to reveal carousel */}
+      <div className="carousel-curtain" aria-hidden="true" />
+      
       <meta itemProp="name" content="Fine Art Gallery Carousel" />
       <meta itemProp="creator" content="K4 Studios" />
 
@@ -181,8 +197,9 @@ export default function ImageBar2({ slides, pageContext: propPageContext }) {
                   srcSet={getCarouselSrcset(s)}
                   sizes={CAROUSEL_SIZES}
                   alt={contextualAlt} 
-                  loading="lazy" 
+                  loading={!isDuplicate ? "eager" : "lazy"}
                   itemProp="contentUrl"
+                  onLoad={() => handleImageLoad(i)}
                 />
               </a>
               <figcaption itemProp="description">{s.description}</figcaption>

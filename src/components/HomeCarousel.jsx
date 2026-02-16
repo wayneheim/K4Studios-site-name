@@ -157,22 +157,27 @@ export default function HomeCarousel() {
     };
   }, []);
 
-  // Phase 3: Warm carousel images during idle time (l size for carousel)
+  // Phase 3: Warm carousel images immediately (s size to match display)
   useEffect(() => {
     if (!slides.length) return;
     
-    const warmCarousel = () => {
-      // Only warm the original slides (not duplicates), at 'l' size
+    // Warm immediately - carousel images are user-facing
+    slides.forEach(slide => {
+      if (slide.id) warmImage(slide.id, 's');
+    });
+    
+    // Also warm 'm' size in idle for responsive scaling
+    const warmMedium = () => {
       slides.forEach(slide => {
-        if (slide.id) warmImage(slide.id, 'l');
+        if (slide.id) warmImage(slide.id, 'm');
       });
     };
     
     if ('requestIdleCallback' in window) {
-      const id = requestIdleCallback(warmCarousel);
+      const id = requestIdleCallback(warmMedium, { timeout: 1500 });
       return () => cancelIdleCallback(id);
     } else {
-      const timer = setTimeout(warmCarousel, 200);
+      const timer = setTimeout(warmMedium, 300);
       return () => clearTimeout(timer);
     }
   }, [slides]);

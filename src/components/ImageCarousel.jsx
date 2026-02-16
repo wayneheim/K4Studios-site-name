@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import '../styles/ImageCarousel.css';
 
 const slides = [
@@ -43,6 +43,12 @@ export default function ImageCarousel() {
   const trackRef = useRef(null);
   // Duplicate slides for infinite scroll effect - done in React state, not DOM manipulation
   const [duplicated, setDuplicated] = useState(false);
+  // Track loaded images for fade-in effect
+  const [loadedImages, setLoadedImages] = useState({});
+
+  const handleImageLoad = useCallback((index) => {
+    setLoadedImages(prev => ({ ...prev, [index]: true }));
+  }, []);
 
   useEffect(() => {
     // Mark as duplicated on client (this triggers re-render with doubled slides)
@@ -80,6 +86,8 @@ export default function ImageCarousel() {
                 alt={slide.alt}
                 loading="lazy"
                 itemProp="contentUrl"
+                className={loadedImages[i] ? 'loaded' : ''}
+                onLoad={() => handleImageLoad(i)}
               />
             </a>
             <figcaption itemProp="description">{slide.description}</figcaption>

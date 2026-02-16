@@ -10,7 +10,47 @@
   min-height:390px; /* Reserve space to prevent CLS */
 }
 
-/* fade edges */
+/* ————— Wipe curtain effect ————— */
+.carousel-curtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f8f8f8;
+  background-image: linear-gradient(90deg, 
+    rgba(248,248,248,1) 0%, 
+    rgba(255,255,255,1) 20%, 
+    rgba(245,245,245,1) 40%, 
+    rgba(255,255,255,1) 60%, 
+    rgba(248,248,248,1) 80%, 
+    rgba(255,255,255,1) 100%
+  );
+  background-size: 200% 100%;
+  z-index: 10;
+  transform: translateX(0);
+  transition: transform 1.6s cubic-bezier(0.25, 1, 0.5, 1);
+  animation: curtainShimmer 2s ease-in-out infinite;
+}
+
+@keyframes curtainShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.carousel.carousel-ready .carousel-curtain {
+  transform: translateX(100%);
+  animation: none;
+}
+
+/* Make parent wrapper transparent - ImageBar2 curtain handles reveal */
+.carousel-fade:has(.carousel) {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+/* fade edges - hidden until curtain reveals */
 .carousel::before,
 .carousel::after{
   content:"";
@@ -18,8 +58,14 @@
   top:0;
   width:30px;
   height:100%;
-  z-index:2;
+  z-index:15;
   pointer-events:none;
+  opacity: 0;
+  transition: opacity 0.3s ease-out 1.6s; /* delay until curtain clears */
+}
+.carousel.carousel-ready::before,
+.carousel.carousel-ready::after {
+  opacity: 1;
 }
 .carousel::before{ left:0;  background:linear-gradient(to right, #ffffff 0%, #ffffff00 100%);}
 .carousel::after { right:0; background:linear-gradient(to left , #ffffff 0%, #ffffff00 100%);}
@@ -29,10 +75,13 @@
   display:flex;
   gap:5px;                 /* use gap instead of per-slide margin ⇒ no extra gap at seam */
   width:max-content;
-  animation:scroll 60s linear infinite;
-  animation-delay: 2.5s; /* Sync with carousel zoom reveal */
   will-change: transform;
   backface-visibility: hidden;
+}
+/* Only start scrolling after curtain wipe completes (1.6s + 0.5s pause) */
+.carousel.carousel-ready .carousel-track {
+  animation: scroll 60s linear infinite;
+  animation-delay: 2.1s;
 }
 .carousel:hover .carousel-track{ animation-play-state:paused; }
 .carousel-track::-webkit-scrollbar{display:none;}
@@ -44,6 +93,7 @@
 .carousel-slide img {
   height: 390px;
   width: auto;
+  min-width: 260px; /* Reserve space while loading */
   display: block;
   object-fit: contain;
   border-right: 14px solid white;
@@ -57,7 +107,6 @@
 .carousel-slide:hover img {
   transform: scale(1.1);
   z-index: 10;
- 
 }
 /* hide captions but keep for SEO */
 .carousel-slide figcaption{
@@ -67,7 +116,7 @@
 
 /* smaller on mobile */
 @media(max-width:768px){
-  .carousel-slide img{ height:200px; }
+  .carousel-slide img{ height:200px; min-width:100px; }
   .carousel {
       margin-bottom: -25px!important;
       margin-top: 20px!important;

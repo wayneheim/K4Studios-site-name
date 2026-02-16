@@ -40,9 +40,9 @@ export default function LandingRightImages({ heading = "", images = [], displayC
     setDisplayImages(shuffled.slice(0, count));
   }, [images, displayCount]);
   
-  // Warm first 3 displayed images on mount (above fold)
+  // Warm all displayed images on mount (sidebar only shows ~5)
   useEffect(() => {
-    displayImages.slice(0, 3).forEach(img => {
+    displayImages.forEach(img => {
       const imageId = img.id || extractIdFromHref(img.href);
       if (imageId) warmImage(imageId, 's');
     });
@@ -66,8 +66,9 @@ export default function LandingRightImages({ heading = "", images = [], displayC
               alt={alt}
               title={title}
               className="thumb-img"
-              loading="lazy"
+              loading="eager"
               decoding="async"
+              onLoad={(e) => e.target.classList.add('loaded')}
             />
           </a>
         );
@@ -100,16 +101,35 @@ export default function LandingRightImages({ heading = "", images = [], displayC
           display: inline-block;
           width: 100%;
           max-width: 260px;
+          min-height: 180px;
           margin: 2.25rem auto;
           border-radius: 8px;
           box-shadow: 0 7px 16px rgba(0, 0, 0, 0.18);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          will-change: transform, box-shadow;
+          transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, opacity 0.5s ease-out;
+          will-change: transform, box-shadow, opacity;
           backface-visibility: hidden;
+          opacity: 0;
+          transform: translateY(20px);
+          background: linear-gradient(90deg, #e8e4df 25%, #f5f2ed 50%, #e8e4df 75%);
+          background-size: 200% 100%;
+          animation: sidebarShimmer 1.5s ease-in-out infinite;
+        }
+
+        .thumb-img.loaded {
+          opacity: 1;
+          transform: translateY(0);
+          background: none;
+          animation: none;
+          min-height: auto;
+        }
+
+        @keyframes sidebarShimmer {
+          0% { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
         }
 
         .thumb-img:hover {
-          transform: scale(1.025);
+          transform: translateY(0) scale(1.025);
           box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
         }
 
@@ -137,6 +157,9 @@ export default function LandingRightImages({ heading = "", images = [], displayC
       {/* Vanilla JS for dynamic spacing - runs without React hydration */}
       <script dangerouslySetInnerHTML={{ __html: `
         (function() {
+          var attempts = 0;
+          var maxAttempts = 30; // 3 seconds max wait
+          
           function calcSidebarSpacing() {
             var textCol = document.querySelector('.text-column');
             var sidebar = document.querySelector('[data-dynamic-sidebar]');
@@ -147,7 +170,10 @@ export default function LandingRightImages({ heading = "", images = [], displayC
             
             var imgs = sidebar.querySelectorAll('.thumb-img');
             var allLoaded = Array.from(imgs).every(function(img) { return img.complete; });
-            if (!allLoaded) {
+            
+            // Failsafe: reveal after max attempts even if not all loaded
+            if (!allLoaded && attempts < maxAttempts) {
+              attempts++;
               setTimeout(calcSidebarSpacing, 100);
               return;
             }
@@ -170,7 +196,9 @@ export default function LandingRightImages({ heading = "", images = [], displayC
                 }
               });
             } else {
-              links.forEach(function(link) { link.style.visibility = 'visible'; });
+              links.forEach(function(link) { 
+                link.style.visibility = 'visible';
+              });
             }
           }
           

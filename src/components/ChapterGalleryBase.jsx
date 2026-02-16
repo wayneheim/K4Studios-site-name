@@ -820,6 +820,53 @@ export default function ChapterGalleryBase({
     });
   }, [galleryData.length]); // Run once when data loads
 
+  // Phase 3: Sister gallery warm - background warm Color ↔ Black-White sibling
+  // Uses requestIdleCallback to avoid impacting current gallery load
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    const currentPath = window.location.pathname.replace(/\/$/, '');
+    let sisterPath = null;
+    
+    if (currentPath.includes('/Color')) {
+      sisterPath = currentPath.replace('/Color', '/Black-White');
+    } else if (currentPath.includes('/Black-White')) {
+      sisterPath = currentPath.replace('/Black-White', '/Color');
+    }
+    
+    if (!sisterPath) return;
+    
+    // Strip the image ID to get gallery base path
+    const sisterGalleryPath = sisterPath.replace(/\/i-[^/]+$/, '');
+    
+    const warmSisterGallery = async () => {
+      try {
+        const res = await fetch('/galleryPrefetchMap.json');
+        if (!res.ok) return;
+        const prefetchMap = await res.json();
+        const sisterImages = prefetchMap[sisterGalleryPath];
+        
+        if (sisterImages?.length) {
+          // Warm first 6 images at 'l' size for viewer click-through
+          sisterImages.slice(0, 6).forEach(imgId => {
+            warmImage(imgId, 'l');
+          });
+        }
+      } catch {
+        // Silent fail - this is just an optimization
+      }
+    };
+    
+    // Use idle callback for non-blocking background warm
+    if ('requestIdleCallback' in window) {
+      const id = requestIdleCallback(warmSisterGallery, { timeout: 3000 });
+      return () => cancelIdleCallback(id);
+    } else {
+      const timer = setTimeout(warmSisterGallery, 500);
+      return () => clearTimeout(timer);
+    }
+  }, []); // Run once on mount
+
   // ═══════════════════════════════════════════════════════════════════════════
 
   // Orientation + mobile detection

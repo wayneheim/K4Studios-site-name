@@ -167,6 +167,14 @@ export default function GalleryInfo({
       ? `${trimmedBase}/${heroImage.id}`
       : exploreHref;
 
+  // Track hero image loaded state for graceful fade-in
+  const [heroLoaded, setHeroLoaded] = useState(false);
+
+  // Reset loaded state when hero image changes
+  useEffect(() => {
+    setHeroLoaded(false);
+  }, [heroImage?.id]);
+
   // Warm clickable images on landing page at 'l' size
   // - Hero image (random from pool)
   // - First image (for "Explore the Gallery" click)
@@ -189,6 +197,46 @@ export default function GalleryInfo({
       });
     }
   }, [heroImage?.id, lowestSortImage?.id, galleryData?.length]);
+
+  // Background warm sister gallery (Color ↔ Black-White)
+  useEffect(() => {
+    if (typeof window === 'undefined' || !trimmedBase) return;
+    
+    let sisterPath = null;
+    if (trimmedBase.includes('/Color')) {
+      sisterPath = trimmedBase.replace('/Color', '/Black-White');
+    } else if (trimmedBase.includes('/Black-White')) {
+      sisterPath = trimmedBase.replace('/Black-White', '/Color');
+    }
+    
+    if (!sisterPath) return;
+    
+    const warmSisterGallery = async () => {
+      try {
+        const res = await fetch('/galleryPrefetchMap.json');
+        if (!res.ok) return;
+        const prefetchMap = await res.json();
+        const sisterImages = prefetchMap[sisterPath];
+        
+        if (sisterImages?.length) {
+          // Warm first 6 images at 'l' for seamless gallery switch
+          sisterImages.slice(0, 6).forEach(imgId => {
+            warmImage(imgId, 'l');
+          });
+        }
+      } catch {
+        // Silent fail - optimization only
+      }
+    };
+    
+    if ('requestIdleCallback' in window) {
+      const id = requestIdleCallback(warmSisterGallery, { timeout: 3000 });
+      return () => cancelIdleCallback(id);
+    } else {
+      const timer = setTimeout(warmSisterGallery, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [trimmedBase]);
 
   return (
     <>
@@ -247,15 +295,30 @@ export default function GalleryInfo({
                 aria-label="Explore the gallery"
                 onClick={() => trackEvent("gallery_hero_click")}
               >
-                <figure>
+                <figure style={{ position: 'relative', minHeight: '200px' }}>
+                  {/* Placeholder skeleton while loading */}
+                  {!heroLoaded && (
+                    <div
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        background: 'linear-gradient(135deg, #f5f0e8 0%, #e8e0d5 100%)',
+                        borderRadius: '9px',
+                        animation: 'heroShimmer 1.5s ease-in-out infinite',
+                      }}
+                    />
+                  )}
                   <img
                     src={getProxySrc(heroImage.id, 'l')}
                     alt={heroImage.alt || heroImage.title || "Gallery preview"}
+                    onLoad={() => setHeroLoaded(true)}
                     style={{
                       maxWidth: "100%",
                       borderRadius: "9px",
                       boxShadow: "0 8px 32px #0002",
                       border: "2px solid #ddd",
+                      opacity: heroLoaded ? 1 : 0,
+                      transition: 'opacity 0.5s ease-in-out',
                     }}
                   />
                   <figcaption>{heroImage.title || ""}</figcaption>
@@ -304,25 +367,46 @@ export default function GalleryInfo({
                 }
               }}
             >
-              <figure>
+              <figure style={{ position: 'relative', minHeight: '280px' }}>
                 <figcaption style={{ marginBottom: '0.5rem' }}>
                   {heroImage.title || ""}
                 </figcaption>
+                {/* Placeholder skeleton while loading */}
+                {!heroLoaded && (
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '2rem',
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      background: 'linear-gradient(135deg, #f5f0e8 0%, #e8e0d5 100%)',
+                      borderRadius: '9px',
+                      animation: 'heroShimmer 1.5s ease-in-out infinite',
+                    }}
+                  />
+                )}
                 <img
                   src={getProxySrc(heroImage.id, 'l')}
                   alt={heroImage.alt || heroImage.title || "Gallery preview"}
+                  onLoad={() => setHeroLoaded(true)}
                   style={{
                     maxWidth: "100%",
                     borderRadius: "9px",
-                    boxShadow: "0 8px 32px #0002",
+                    boxShadow: heroLoaded ? "0 8px 32px #0002" : "none",
                     border: "2px solid #ddd",
-                    transition: "box-shadow 0.3s ease",
+                    opacity: heroLoaded ? 1 : 0,
+                    transition: "opacity 0.5s ease-in-out, box-shadow 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.boxShadow = '0 0 0 2px rgba(255, 255, 255, 0.85), 0 4px 15px 4px rgba(134, 134, 134, 0.85)';
+                    if (heroLoaded) {
+                      e.target.style.boxShadow = '0 0 0 2px rgba(255, 255, 255, 0.85), 0 4px 15px 4px rgba(134, 134, 134, 0.85)';
+                    }
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.boxShadow = '0 8px 32px #0002';
+                    if (heroLoaded) {
+                      e.target.style.boxShadow = '0 8px 32px #0002';
+                    }
                   }}
                 />
               </figure>

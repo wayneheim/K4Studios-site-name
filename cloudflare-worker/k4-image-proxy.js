@@ -446,6 +446,11 @@ async function proxyImage(smugMugUrl, request) {
       Accept: request.headers.get("Accept") || "image/*",
       "User-Agent": "K4-Image-Proxy-Worker/1.0",
       ...(request.headers.get("Referer") && { Referer: request.headers.get("Referer") })
+    },
+    // Cache at CF edge for 1 year regardless of SmugMug's cache headers
+    cf: {
+      cacheTtl: 31536000,       // 1 year in seconds (matches browser Cache-Control)
+      cacheEverything: true     // Cache even with SmugMug's private/no-cache headers
     }
   });
 

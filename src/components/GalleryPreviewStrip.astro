@@ -152,6 +152,27 @@ const heroImageId = candidatePool[0]?.id || null;
       }));
     });
   });
+
+  // Warm preview strip images (s for display, l for click-through)
+  (() => {
+    const stripImgs = document.querySelectorAll('.gallery-strip img');
+    if (!stripImgs.length) return;
+    
+    // Fire-and-forget warming via Image() preload
+    const warmImage = (id, size) => {
+      const img = new Image();
+      img.src = `/img/${id}/${size}`;
+    };
+    
+    stripImgs.forEach(img => {
+      const src = img.getAttribute('src');
+      const match = src?.match(/\/img\/(i-[^/]+)/);
+      if (match) {
+        warmImage(match[1], 's'); // Display size
+        warmImage(match[1], 'l'); // Click-through size
+      }
+    });
+  })();
 </script>
 
 <style>

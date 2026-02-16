@@ -63,10 +63,26 @@
 .carousel-slide img {
   height: 390px;
   width: auto;
+  min-width: 200px; /* Placeholder width while loading */
   object-fit: contain;
   display: block;
-  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, opacity 0.6s ease-out;
   border: none;
+  opacity: 0;
+  background: linear-gradient(90deg, #e8e4df 25%, #f5f2ed 50%, #e8e4df 75%);
+  background-size: 200% 100%;
+  animation: carouselShimmer 1.5s ease-in-out infinite;
+}
+
+.carousel-slide img.loaded {
+  opacity: 1;
+  background: none;
+  animation: none;
+}
+
+@keyframes carouselShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 .carousel-slide:hover img {

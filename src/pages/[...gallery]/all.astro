@@ -390,6 +390,32 @@ const heroImage = galleryData[0];
     }
   </style>
 
+  <!-- Warm first visible images -->
+  <script is:inline>
+    (function() {
+      const cards = document.querySelectorAll('.ssr-card');
+      if (!cards.length) return;
+      
+      // Warm first 12-16 images (first 2-3 rows typically visible)
+      const WARM_COUNT = Math.min(16, cards.length);
+      
+      for (let i = 0; i < WARM_COUNT; i++) {
+        const imgEl = cards[i].querySelector('img');
+        if (!imgEl) continue;
+        const src = imgEl.getAttribute('src');
+        const match = src?.match(/\/img\/(i-[^/]+)/);
+        if (match) {
+          // Fire-and-forget warming
+          const img = new Image();
+          img.src = `/img/${match[1]}/s`;
+          // Also warm 'm' for responsive srcset
+          const imgM = new Image();
+          imgM.src = `/img/${match[1]}/m`;
+        }
+      }
+    })();
+  </script>
+
   <script is:inline>
     (function () {
       const grid = document.querySelector('.ssr-grid');

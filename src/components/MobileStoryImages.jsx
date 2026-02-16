@@ -1,4 +1,5 @@
 import { useEffect, useMemo } from "react";
+import { warmImage } from "../utils/warmImage";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
@@ -23,6 +24,19 @@ const shuffleArray = (arr) => {
 export default function MobileStoryImages({ images = [], displayCount }) {
   // Shuffle pool once on mount for this page load
   const shuffledImages = useMemo(() => shuffleArray(images), [images]);
+  
+  // Warm first few mobile images immediately on mobile
+  useEffect(() => {
+    if (window.innerWidth > 768) return;
+    
+    // Warm first 3 images that will be inserted
+    const maxToWarm = Math.min(3, displayCount || shuffledImages.length);
+    shuffledImages.slice(0, maxToWarm).forEach(img => {
+      if (img?.id) {
+        warmImage(img.id, 's');
+      }
+    });
+  }, [shuffledImages, displayCount]);
   
   useEffect(() => {
     if (window.innerWidth > 768) {

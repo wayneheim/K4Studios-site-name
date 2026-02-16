@@ -901,6 +901,9 @@ export default function GalleryEditorPro() {
   const [syncMasterId, setSyncMasterId] = useState(null); // The imageId:galleryPath key chosen as master
   const [syncLoading, setSyncLoading] = useState(false);
 
+  // Cache Purge state
+  const [cachePurgeLoading, setCachePurgeLoading] = useState(false);
+
   useEffect(() => {
     if (!lastAction) return;
     const t = setTimeout(() => setLastAction(null), 6000);
@@ -2270,6 +2273,42 @@ ${collectorNotes}`;
     window.location.reload();
   }
 
+  // ---- Purge CF cache for current gallery ----
+  async function purgeGalleryCache() {
+    if (!selectedPath) return;
+    
+    // Convert selectedPath (e.g., /src/data/Galleries/.../Color.mjs) to gallery URL path
+    // /src/data/Galleries/Painterly.../Color.mjs → /Galleries/Painterly.../Color
+    const galleryPath = selectedPath
+      .replace(/^\/src\/data/, '')
+      .replace(/\.mjs$/, '');
+    
+    if (!confirm(`Purge and refresh image cache for:\n${galleryPath}\n\nThis will clear cached images from Cloudflare and fetch fresh versions from SmugMug.`)) {
+      return;
+    }
+    
+    setCachePurgeLoading(true);
+    try {
+      const res = await fetch('/.netlify/functions/purgeGalleryCache', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ galleryPath })
+      });
+      
+      const data = await res.json();
+      
+      if (res.ok && data.success) {
+        setLastAction(`✅ Purged ${data.purged} URLs, re-warmed ${data.warmed} images — ${new Date().toLocaleTimeString()}`);
+      } else {
+        alert(`Cache purge failed: ${data.error || 'Unknown error'}`);
+      }
+    } catch (err) {
+      alert(`Cache purge error: ${err.message}`);
+    } finally {
+      setCachePurgeLoading(false);
+    }
+  }
+
   const datasetParam = encodeURIComponent(selectedPath || "");
   const total = filtered.length;
   const pos = total ? idx + 1 : 0;
@@ -2380,6 +2419,18 @@ ${collectorNotes}`;
             title={realBackupMade ? "Enter Turbo Mode for fast AI-assisted data entry" : "Click to create backup and enter Turbo Mode"}
           >
             ⚡ Turbo Mode
+          </button>
+
+          <button
+            onClick={purgeGalleryCache}
+            disabled={cachePurgeLoading || !selectedPath}
+            className={`${btnBase} ${btnHover} ${cachePurgeLoading ? "opacity-50 cursor-not-allowed" : ""}`}
+            style={{ background: '#dbeafe', borderColor: '#3b82f6', color: '#1e40af' }}
+            onMouseEnter={(e) => !cachePurgeLoading && (e.currentTarget.style.background = '#bfdbfe')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#dbeafe')}
+            title="Purge Cloudflare cache for this gallery's images and re-fetch from SmugMug"
+          >
+            {cachePurgeLoading ? '⏳ Purging...' : '🔄 Refresh Image Cache'}
           </button>
         </div>
 
