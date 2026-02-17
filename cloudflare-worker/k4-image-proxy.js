@@ -132,8 +132,8 @@ function isVerifiedSearchBot(ua) {
 // Risk levels:
 // 1 = Verified/Safe (search bots)
 // 2 = Suspicious but non-aggressive (watching)
-// 3 = High-confidence scraper (auto-throttle)
-// 4 = Malicious/Abusive (manual block candidate)
+// 3 = High-confidence scraper (review recommended)
+// 4 = Malicious/Abusive (block candidate)
 
 /**
  * Calculate risk score for an IP based on behavior patterns
@@ -205,33 +205,9 @@ function calculateRiskScore(stats) {
   return { score, rules, riskLevel };
 }
 
-/**
- * Check if IP should be throttled (Risk 3+)
- * Returns delay in ms to add, or 0 if no throttle
- */
-async function getThrottleDelay(env, ipHash) {
-  if (!env?.DB) return 0;
-  
-  try {
-    // Check suspected_bots table for this IP
-    const result = await env.DB.prepare(`
-      SELECT risk_level, status FROM suspected_bots WHERE ip_hash = ?
-    `).bind(ipHash).first();
-    
-    if (!result) return 0;
-    
-    // Risk 3+ gets throttled (unless blocked - handled separately)
-    if (result.risk_level >= 3 && result.status === 'throttled') {
-      // Progressive delay: Risk 3 = 500ms, Risk 4 = 1000ms
-      return result.risk_level === 4 ? 1000 : 500;
-    }
-    
-    return 0;
-  } catch (e) {
-    console.error('Throttle check error:', e);
-    return 0;
-  }
-}
+// getThrottleDelay REMOVED — risk scoring is label-only, never changes request behavior.
+// Throttling/blocking is manual-only via dashboard. See Hank's directive:
+// "Risk score should NEVER change request behavior automatically. It should only label."
 
 /**
  * In-memory cache for blocked IPs.
@@ -349,7 +325,7 @@ async function updateBotIntelligence(env) {
           image_page_pct = excluded.image_page_pct,
           has_referrer = excluded.has_referrer,
           updated_at = datetime('now'),
-          status = CASE WHEN suspected_bots.status IN ('blocked', 'verified', 'throttled') THEN suspected_bots.status ELSE excluded.status END
+          status = CASE WHEN suspected_bots.status IN ('blocked', 'verified') THEN suspected_bots.status ELSE excluded.status END
       `).bind(
         stats.ip_hash,
         riskLevel,
@@ -1277,7 +1253,7 @@ async function handleUnblockIP(request, env) {
       WHERE ip_hash = ?
     `).bind(ip_hash).run();
     
-    // Downgrade suspected_bots status to watching (not throttled — auto-throttle is disabled)
+    // Downgrade suspected_bots status to watching (risk scoring is label-only, no enforcement)
     await env.DB.prepare(`
       UPDATE suspected_bots SET status = 'watching', updated_at = datetime('now')
       WHERE ip_hash = ?
@@ -2461,7 +2437,7 @@ async function handleAdminAnalytics(request, env) {
       const blockedResult = await env.DB.prepare(blockedQuery).all();
       botIntelligence.blocked = blockedResult.results || [];
       
-      // Calculate stats (exclude blocked from watching/throttled/candidates counts)
+      // Calculate stats (exclude blocked from watching/high-risk/candidates counts)
       for (const s of botIntelligence.suspects) {
         if (s.status !== 'blocked') {
           botIntelligence.stats.total++;
@@ -3545,7 +3521,7 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
   <div style="max-width: 1780px; margin: 0 auto;">
   <h2 style="margin-top: 30px;">🛡️ Bot Intelligence <span style="font-size: 12px; color: #888; font-weight: normal;">(Threat Classification)</span></h2>
   <p style="color: #888; margin: -10px 0 15px 0; font-size: 12px;">
-    Risk accumulates over time. Level 3+ auto-throttled. Level 4 = manual block candidate.
+    Risk accumulates over time. Level 3 = high risk (review recommended). Level 4 = block candidate.
     <button onclick="refreshBotIntelligence()" style="margin-left: 10px; background: #333; color: #888; border: 1px solid #555; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 11px;">🔄 Refresh</button>
   </p>
   
@@ -3563,13 +3539,13 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
       <span class="value" style="color: #fff;">🟠 ${botIntelligence?.stats?.risk3 || 0}</span>
-      <span class="label" style="color: #fed7aa;">Throttled <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fed7aa;">i</span></span>
-      <div class="tooltip"><strong>Risk score 5-7.</strong> High-confidence scraper. Auto-slowed (500ms delay). Triggers: no referrer + high volume, no branching, datacenter IP, multi-day presence.</div>
+      <span class="label" style="color: #fed7aa;">High Risk <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fed7aa;">i</span></span>
+      <div class="tooltip"><strong>Risk score 5-7.</strong> High-confidence scraper. Monitoring only — no automatic enforcement. Review and manually block if needed. Triggers: no referrer + high volume, no branching, datacenter IP, multi-day presence.</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);">
       <span class="value" style="color: #fff;">🟣 ${botIntelligence?.stats?.risk4 || 0}</span>
       <span class="label" style="color: #f5d0fe;">Block Candidates <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #f5d0fe;">i</span></span>
-      <div class="tooltip"><strong>Risk score 8+.</strong> Malicious/abusive behavior. Heavily throttled (1000ms). Review in High Risk Watchlist and consider blocking. Escalates from Throttled when: persistent multi-day scraping, extreme velocity, or multiple red flags combine.</div>
+      <div class="tooltip"><strong>Risk score 8+.</strong> Likely malicious/abusive behavior. Review in High Risk Watchlist and consider blocking. Escalates from High Risk when: persistent multi-day scraping, extreme velocity, or multiple red flags combine.</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
       <span class="value" style="color: #fff;"><span style="text-shadow: 0 0 2px #000, 0 0 4px #000;">?</span> ${botIntelligence?.blocked?.filter(b => b.is_active)?.length || 0}</span>
