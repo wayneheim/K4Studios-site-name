@@ -8,7 +8,7 @@
  *
  * Canonical invariants:
  * 1) /img/{id}/{size} MUST be deterministic: same URL = same bytes (no UA-based sizing).
- * 2) Bots may influence indexing ONLY via status codes on IMAGE PAGES (~301/410), never image bytes.
+ * 2) Bots may influence indexing ONLY via status codes on IMAGE PAGES (301/410), never image bytes.
  * 3) Never redirect to SmugMug. Never leak origin URLs.
  *
  * Responsibilities:
@@ -67,7 +67,7 @@ function isBlockedIP(ip) {
 }
 
 // Datacenter IP ranges that suggest bot behavior when combined with no referrer
-// IMPORTANT: Use specific /16 or /24 prefixes only — never /8 blocks like '3.'
+// IMPORTANT: Use specific /16 or /24 prefixes only � never /8 blocks like '3.'
 // Broad prefixes were catching residential ISP users from MX, SG, EU etc.
 const DATACENTER_PREFIXES = [
   // OVH hosting (specific ranges, not broad /8)
@@ -236,7 +236,7 @@ async function getThrottleDelay(env, ipHash) {
 /**
  * In-memory cache for blocked IPs.
  * Loaded once from D1, refreshed every 60s or on block/unblock.
- * Avoids 1 D1 query per /img/ request (—30 images/page = massive savings).
+ * Avoids 1 D1 query per /img/ request (�30 images/page = massive savings).
  */
 let blockedIpCache = new Set();
 let blockedIpCacheTime = 0;
@@ -263,7 +263,7 @@ function invalidateBlockedIpCache() {
 }
 
 /**
- * Check if IP is blocked — uses in-memory Set (loaded from D1 every 60s).
+ * Check if IP is blocked � uses in-memory Set (loaded from D1 every 60s).
  * Zero D1 cost for the vast majority of /img/ requests.
  */
 async function isIPBlocked(env, ipHash) {
@@ -321,7 +321,7 @@ async function updateBotIntelligence(env) {
       });
       
       // If auto-flagged as bot (datacenter + no referrer), add a modest boost
-      // NOT auto-elevated to risk 3 anymore — the +30 score was nuclear
+      // NOT auto-elevated to risk 3 anymore � the +30 score was nuclear
       // (malicious threshold is 8) and caused mass false-positive throttling.
       // Now just a +2 signal that combines with other rules normally.
       if (stats.is_flagged_bot) {
@@ -553,8 +553,8 @@ async function handleImageRequest(request, ctx, env) {
   }
 
   // Check for dynamically blocked IPs (from blocked_ips table)
-  // NOTE: Throttle delay removed — it was adding 500ms+ to every image and
-  // the 2 D1 queries per /img request (—30 images/page = 60 queries) was
+  // NOTE: Throttle delay removed � it was adding 500ms+ to every image and
+  // the 2 D1 queries per /img request (�30 images/page = 60 queries) was
   // adding latency for ALL visitors including search engine crawlers.
   // Blocking is hardcoded in BLOCKED_IP_PREFIXES for confirmed bad actors.
   // The blocked_ips table check is kept for manual emergency blocks only.
@@ -740,7 +740,7 @@ async function logArtView(env, type, targetId, request) {
     const referrer = request.headers.get("Referer") || null;
     
     // Bot detection: only flag if datacenter IP + no referrer
-    // REMOVED: (isOnsiteType && !referrer) — was flagging 69-81% of real
+    // REMOVED: (isOnsiteType && !referrer) � was flagging 69-81% of real
     // gallery/image_page views as bots. Many legitimate users visit without
     // Referer headers: direct links, emails, bookmarks, privacy browsers.
     // This false positive was cascading into auto_flagged_bot ? throttling.
@@ -1277,7 +1277,7 @@ async function handleUnblockIP(request, env) {
       WHERE ip_hash = ?
     `).bind(ip_hash).run();
     
-    // Downgrade suspected_bots status to watching (not throttled — auto-throttle is disabled)
+    // Downgrade suspected_bots status to watching (not throttled � auto-throttle is disabled)
     await env.DB.prepare(`
       UPDATE suspected_bots SET status = 'watching', updated_at = datetime('now')
       WHERE ip_hash = ?
@@ -1505,7 +1505,7 @@ async function handleAdminAnalytics(request, env) {
       results: (galleriesRaw.results || []).map(g => {
         const fullPath = g.gallery_id;
         const parts = fullPath.split('/').filter(Boolean);
-        const displayName = parts.slice(-2).join(' › ').replace(/-/g, ' ');
+        const displayName = parts.slice(-2).join(' � ').replace(/-/g, ' ');
         
         // Determine gallery type from path
         let gallery_type = 'other';
@@ -2023,10 +2023,10 @@ async function handleAdminAnalytics(request, env) {
     const exitByCategory = {};
     exitSummary.forEach(e => { exitByCategory[e.exit_category] = e.exits; });
 
-    // Query 16: Edge Events (~301/410/404 from edge_events table)
+    // Query 16: Edge Events (301/410/404 from edge_events table)
     // IMPORTANT: Use dateClause (which respects selectedDate) for art_views queries.
     // edgeDateClause is only used for edge_events (which don't support selectedDate browsing).
-    // Before this fix, art_views used edgeDateClause — which ignored selectedDate,
+    // Before this fix, art_views used edgeDateClause � which ignored selectedDate,
     // causing Pulse (events) and Art Viewers (art_views) to show different date windows.
     const edgeDateClause = yesterday 
       ? `date(created_at, '-5 hours') = date('now', '-5 hours', '-1 day')`
@@ -2981,7 +2981,7 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
     <div class="pulse-stat">
       <span class="value">${s.unique_visitors || 0}</span>
       <span class="label">JS Visitors <span class="info-icon">i</span></span>
-      <div class="tooltip">Unique IPs with JS events (Layer C). Only counts visitors whose browser loaded JavaScript and triggered events. Does NOT include image-only viewers — see Art Views below for complete picture.</div>
+      <div class="tooltip">Unique IPs with JS events (Layer C). Only counts visitors whose browser loaded JavaScript and triggered events. Does NOT include image-only viewers � see Art Views below for complete picture.</div>
     </div>
     <div class="pulse-stat">
       <span class="value"><span style="color:#10b981">${newVisitors}</span>/<span style="color:#f59e0b">${returningVisitors}</span></span>
@@ -3681,10 +3681,10 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
             const rowStyle = !isActive ? 'opacity: 0.4;' : '';
             const statusBg = isActive ? '#dc262622' : '#37415122';
             const statusColor = isActive ? '#ef4444' : '#6b7280';
-            const statusText = isActive ? '⛔ Active' : '✓ Unblocked';
+            const statusText = isActive ? '? Active' : '? Unblocked';
             const actionHtml = isActive 
               ? "<button onclick=\"unblockIP('" + b.ip_hash + "')\" style=\"background: #374151; color: #9ca3af; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;\">Unblock</button>"
-              : '<span style="color: #666;">—</span>';
+              : '<span style="color: #666;">�</span>';
             return '<tr style="border-bottom: 1px solid #333; '+rowStyle+'">' +
               '<td style="padding: 6px 4px;"><span style="background: '+statusBg+'; color: '+statusColor+'; padding: 2px 6px; border-radius: 8px; font-size: 10px;">'+statusText+'</span></td>' +
               '<td style="padding: 6px 4px; font-family: monospace; font-size: 10px;">'+b.ip_hash+'</td>' +
@@ -3701,7 +3701,7 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
   </div>
 
   <p style="margin-top: 30px; color: #666; font-size: 12px; max-width: 1780px; margin-left: auto; margin-right: auto;">
-    Generated ${new Date().toISOString()} — ${periodLabel}
+    Generated ${new Date().toISOString()} � ${periodLabel}
   </p>
 
   <script>
@@ -3808,7 +3808,7 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
 // ====================
 // Track Google rankings via DataForSEO API
 // Manual trigger only - no cron, no Bing, no AI Overview
-// Cost: ~$0.12/day (15 keywords — x $0.008.008)
+// Cost: ~$0.12/day (15 keywords � $0.008)
 
 const OUR_DOMAINS = ['k4studios.com', 'www.k4studios.com'];
 const MAX_RANK = 50; // Search depth for sparkline scaling
@@ -4563,9 +4563,9 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     const change = gRank && prevRank ? prevRank - gRank : null;
     
     const changeIcon = change === null ? '' 
-      : change > 0 ? `<span style="color:#10b981">▲${change}</span>`
-      : change < 0 ? `<span style="color:#ef4444">▼${Math.abs(change)}</span>`
-      : '<span style="color:#888">—</span>';
+      : change > 0 ? `<span style="color:#10b981">?${change}</span>`
+      : change < 0 ? `<span style="color:#ef4444">?${Math.abs(change)}</span>`
+      : '<span style="color:#888">�</span>';
     
     const trend = trendByKeyword[kw.keyword] || [];
     const sparkline = trend.slice(-14).map(t => Math.min(MAX_RANK, Math.max(1, t.rank ?? MAX_RANK)));
@@ -4730,7 +4730,7 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    // 0) Bot short-circuit for /track — prevent Netlify function burn
+    // 0) Bot short-circuit for /track � prevent Netlify function burn
     // Verified bots (Googlebot, Applebot, Bingbot, etc.) get 204 No Content
     // Humans still hit the function. Bots never do.
     if (
@@ -4748,7 +4748,7 @@ export default {
       return handleTrackRequest(request, env);
     }
 
-    // 0a) Edge event tracking (~301/410/404 from Netlify functions)
+    // 0a) Edge event tracking (301/410/404 from Netlify functions)
     if (url.pathname === "/edge-event") {
       if (request.method === "OPTIONS") {
         return handleEdgeEventOptions();
