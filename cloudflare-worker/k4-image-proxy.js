@@ -694,7 +694,7 @@ function getBestClientIP(request) {
  * Log an art view - fires async, never blocks response
  * Deduplication: one view per IP per target per hour
  */
-async function logArtView(env, type, targetId, request) {
+async function logArtView(env, type, targetId, request, sessionId = null) {
   try {
     const ip = request.headers.get("CF-Connecting-IP") || 
                request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() || 
@@ -722,11 +722,13 @@ async function logArtView(env, type, targetId, request) {
     // This false positive was cascading into auto_flagged_bot ? throttling.
     const isBot = (isDatacenterIP(ip) && !referrer) ? 1 : 0;
     
-    // Insert with dedup key (IP hash + target + type + hour)
-    // The UNIQUE constraint on dedup_key handles collisions gracefully
-    // Type is included so chapter view + zoom = 2 separate valid entries
-    const hour = new Date().toISOString().slice(0, 13); // YYYY-MM-DDTHH
-    const dedupKey = `${ipHash}:${targetId}:${type}:${hour}`;
+    // Dedup strategy:
+    // - JS-verified calls pass session_id → dedup per session (same image in same session = 1 view)
+    // - Server-side calls (no session_id) → dedup per hour (fallback for non-JS safety net)
+    // Session-scoped dedup fixes the "phone swipe" problem: revisiting an image after
+    // grid browsing within the same clock hour was silently dropped by hourly dedup.
+    const dedupScope = sessionId ? `sid-${sessionId}` : new Date().toISOString().slice(0, 13);
+    const dedupKey = `${ipHash}:${targetId}:${type}:${dedupScope}`;
     
     await env.DB.prepare(`
       INSERT OR IGNORE INTO art_views (type, target_id, ip_hash, ua_class, country, region, city, referrer, dedup_key, is_bot)
@@ -1086,7 +1088,7 @@ async function handleTrackRequest(request, env) {
         ? (page_path.match(/\/(i-[a-zA-Z0-9_-]+)\/?$/)?.[1] || null)
         : null);
       if (targetId) {
-        await logArtView(env, 'chapter_view', targetId, request);
+        await logArtView(env, 'chapter_view', targetId, request, session_id);
       }
     }
 
