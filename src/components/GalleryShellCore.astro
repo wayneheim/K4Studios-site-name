@@ -213,15 +213,6 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
             subtitle: fixMojibake(usedEntranceData.subtitle),
             image: usedEntranceData.image
           }} 
-        /
-          client:only="react" 
-          galleryKey={galleryPath}
-          entranceData={{
-            ...usedEntranceData,
-            title: fixMojibake(usedEntranceData.title),
-            subtitle: fixMojibake(usedEntranceData.subtitle),
-            image: usedEntranceData.image
-          }} 
         />
       </div>
     )}

@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { motion } from "framer-motion";
 import "../styles/galleryinfo.css";
 import ThemeBlock from "./ThemeBlock.jsx";
@@ -175,6 +175,21 @@ export default function GalleryInfo({
     setHeroLoaded(false);
   }, [heroImage?.id]);
 
+  // Ref callback: catches images that load from cache before onLoad attaches
+  const heroImgRef = useCallback((node) => {
+    if (node && node.complete && node.naturalWidth > 0) {
+      setHeroLoaded(true);
+    }
+  }, []);
+
+  // JS-verified gallery view: fires once per gallery per session
+  // This is the ONLY gallery tracking signal — bots never reach here
+  useEffect(() => {
+    if (!trimmedBase) return;
+    const gallerySlug = trimmedBase.replace(/^\/Galleries\//, '').replace(/^\/Other\//, '');
+    trackEvent('gallery_view', { galleryId: gallerySlug, pageType: 'gallery' });
+  }, [trimmedBase]);
+
   // Warm clickable images on landing page at 'l' size
   // - Hero image (random from pool)
   // - First image (for "Explore the Gallery" click)
@@ -309,6 +324,7 @@ export default function GalleryInfo({
                     />
                   )}
                   <img
+                    ref={heroImgRef}
                     src={getProxySrc(heroImage.id, 'l')}
                     alt={heroImage.alt || heroImage.title || "Gallery preview"}
                     onLoad={() => setHeroLoaded(true)}
@@ -387,6 +403,7 @@ export default function GalleryInfo({
                   />
                 )}
                 <img
+                  ref={heroImgRef}
                   src={getProxySrc(heroImage.id, 'l')}
                   alt={heroImage.alt || heroImage.title || "Gallery preview"}
                   onLoad={() => setHeroLoaded(true)}

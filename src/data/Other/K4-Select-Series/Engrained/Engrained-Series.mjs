@@ -880,7 +880,7 @@ export const galleryData = [
     "contentSource": "ai",
     "first_seen": "2026-01-22",
     "editionSize": 50,
-    "imageSize": "18\" X 24\"",
+    "imageSize": `16" X 36"`,
     "price": "$1850",
     "linkedImageId": "i-G7csptc",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
@@ -937,8 +937,8 @@ export const galleryData = [
     "contentSource": "ai",
     "first_seen": "2026-01-22",
     "editionSize": 50,
-    "imageSize": "34\" X 20\"",
-    "price": "$4800",
+    "imageSize": `42" X 30"`,
+    "price": "$5400",
     "linkedImageId": "i-7Mzzbvp",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
@@ -994,7 +994,7 @@ export const galleryData = [
     "contentSource": "ai",
     "first_seen": "2026-01-22",
     "editionSize": 50,
-    "imageSize": "30\" X 50\"",
+    "imageSize": `36" X 26"`,
     "price": "$3400",
     "linkedImageId": "i-Wx5scCf",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
@@ -1427,8 +1427,8 @@ export const galleryData = [
     "contentSource": "ai",
     "first_seen": "2026-01-22",
     "editionSize": 50,
-    "imageSize": "16\" X 36\"",
-    "price": "$1400",
+    "imageSize": `16" X 24"`,
+    "price": "$1500",
     "linkedImageId": "i-RsLmsLZ",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
   },
@@ -1489,7 +1489,7 @@ export const galleryData = [
     "contentSource": "human",
     "first_seen": "2026-01-22",
     "editionSize": 50,
-    "imageSize": "30\" X 22\"",
+    "imageSize": `34" X 20"`,
     "price": "$2400",
     "linkedImageId": "i-89qzJ6S",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"

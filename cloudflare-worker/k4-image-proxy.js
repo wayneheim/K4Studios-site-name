@@ -269,7 +269,7 @@ async function updateBotIntelligence(env) {
           MAX(country) as country,
           SUM(CASE WHEN referrer IS NOT NULL AND referrer != '' THEN 1 ELSE 0 END) > 0 as has_referrer,
           ROUND(100.0 * SUM(CASE WHEN type = 'image_page' THEN 1 ELSE 0 END) / COUNT(*), 1) as image_page_pct,
-          ROUND(100.0 * SUM(CASE WHEN type = 'gallery' THEN 1 ELSE 0 END) / COUNT(*), 1) as gallery_pct,
+          ROUND(100.0 * SUM(CASE WHEN type IN ('gallery', 'gallery_view') THEN 1 ELSE 0 END) / COUNT(*), 1) as gallery_pct,
           ROUND(COUNT(*) * 1.0 / (JULIANDAY(MAX(created_at)) - JULIANDAY(MIN(created_at)) + 0.001) / 24, 1) as requests_per_hour,
           MAX(is_bot) as is_flagged_bot
         FROM art_views
@@ -642,7 +642,7 @@ async function logEdgeEvent(env, eventType, path, imageId, isBot, request) {
 // ART VIEWS TRACKING (Layer B)
 // --------------------
 // Tracks actual art being viewed - server-side, no JS required
-// Types: 'image' (proxy), 'image_page' (/Galleries/*/i-*), 'gallery' (/Galleries/*)
+// Types: 'image' (proxy), 'image_page' (/Galleries/*/i-*), 'gallery_view' (JS-verified gallery landing)
 
 /**
  * Hash IP for privacy - simple but effective
@@ -1089,6 +1089,16 @@ async function handleTrackRequest(request, env) {
         : null);
       if (targetId) {
         await logArtView(env, 'chapter_view', targetId, request, session_id);
+      }
+    }
+
+    // Mirror JS-verified gallery views into art_views
+    if (event === 'gallery_view') {
+      const targetId = gallery_id || (typeof page_path === 'string'
+        ? page_path.replace(/^\/Galleries\//, '').replace(/^\/Other\//, '').replace(/\/$/, '')
+        : null);
+      if (targetId) {
+        await logArtView(env, 'gallery_view', targetId, request, session_id);
       }
     }
 
@@ -2086,7 +2096,7 @@ async function handleAdminAnalytics(request, env) {
         if (row.type === 'image') artViewsSummary.xl_zooms += row.views; // Legacy 'image' type ? treat as xl_zoom
         if (row.type === 'image_page') artViewsSummary.image_pages = row.views;
         if (row.type === 'chapter_view') artViewsSummary.chapter_views = row.views;
-        if (row.type === 'gallery') artViewsSummary.galleries = row.views;
+        if (row.type === 'gallery_view') artViewsSummary.galleries = row.views;
         if (row.type === 'external_image') pollutedExternalCount = row.views; // Track polluted count to subtract
       }
       
@@ -2140,7 +2150,6 @@ async function handleAdminAnalytics(request, env) {
         WHERE ${artDateClause} AND type = 'chapter_view' ${botFilterClause} ${artIpClause}
         GROUP BY target_id
         ORDER BY views DESC
-        LIMIT 15
       `;
       const topXLZoomsQuery = `
         SELECT 
@@ -2152,7 +2161,6 @@ async function handleAdminAnalytics(request, env) {
         WHERE ${artDateClause} AND (type = 'xl_zoom' OR type = 'image') ${botFilterClause} ${artIpClause}
         GROUP BY target_id
         ORDER BY views DESC
-        LIMIT 15
       `;
       // External images (Google Images, Bing, Pinterest, etc - NOT from k4studios)
       // Exclude k4studios referrers (internal traffic logged before filter was added)
@@ -2188,7 +2196,7 @@ async function handleAdminAnalytics(request, env) {
           COUNT(*) as views,
           COUNT(DISTINCT ip_hash) as unique_viewers
         FROM art_views
-        WHERE ${artDateClause} AND type = 'gallery' ${botFilterClause} ${artIpClause}
+        WHERE ${artDateClause} AND type = 'gallery_view' ${botFilterClause} ${artIpClause}
         GROUP BY target_id
         ORDER BY views DESC
         LIMIT 15
@@ -2296,7 +2304,6 @@ async function handleAdminAnalytics(request, env) {
           AND image_id IS NOT NULL
         GROUP BY image_id
         ORDER BY views DESC
-        LIMIT 15
       `;
       const topChaptersEventsResult = await env.DB.prepare(topChaptersEventsQuery).all();
       const topChaptersEvents = (topChaptersEventsResult.results || []).map((r) => ({
@@ -2326,7 +2333,6 @@ async function handleAdminAnalytics(request, env) {
           AND image_id IS NOT NULL
         GROUP BY image_id
         ORDER BY views DESC
-        LIMIT 15
       `;
       const topXLZoomsEventsResult = await env.DB.prepare(topXLZoomsEventsQuery).all();
       const topXLZoomsEvents = (topXLZoomsEventsResult.results || []).map((r) => ({
@@ -2408,7 +2414,7 @@ async function handleAdminAnalytics(request, env) {
         LEFT JOIN (
           SELECT ip_hash, COUNT(*) as page_count 
           FROM art_views 
-          WHERE type IN ('image_page', 'gallery') 
+          WHERE type IN ('image_page', 'gallery_view') 
           GROUP BY ip_hash
         ) pg ON sb.ip_hash = pg.ip_hash
         WHERE sb.is_verified_bot = 1 AND sb.status = 'verified'
@@ -3045,7 +3051,7 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
           <span>📖 Chapters</span>
           <span style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Chapters = explicit chapter interface views (events.event='chapter_view', same-origin /track). Beacon (workers.dev) is shown for debugging only: ${artViewsSummary?.chapter_views_beacon || 0}. First-party sanity: image page views=${imagePageViewsFromEvents}, image entry sessions=${imageEntrySessionsFromEvents}.">${artViewsSummary?.chapter_views || 0}</span>
         </h4>
-        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto; padding-right: 4px;">
+        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 600px; overflow-y: auto; padding-right: 4px;">
           ${(topArtViews.chapters || []).map((a, i) => {
             const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
             return '<a href="https://k4studios.com/art/' + a.target_id + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(167, 139, 250, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #a78bfa; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(167,139,250,0.25)\'" onmouseout="this.style.background=\'rgba(167,139,250,0.1)\'">' +
@@ -3067,7 +3073,7 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
           <span>🔍 XL Zooms</span>
           <span style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Zoom button clicks">${artViewsSummary?.xl_zooms || 0}</span>
         </h4>
-        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto; padding-right: 4px;">
+        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 600px; overflow-y: auto; padding-right: 4px;">
           ${(topArtViews.xlZooms || []).map((a, i) => {
             const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
             return '<a href="https://k4studios.com/art/' + a.target_id + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(6, 182, 212, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #06b6d4; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(6,182,212,0.25)\'" onmouseout="this.style.background=\'rgba(6,182,212,0.1)\'">' +
@@ -3089,7 +3095,7 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
           <span>📁 Galleries</span>
           <span style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%); color: #1f2937; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Total gallery page views">${artViewsSummary?.galleries || 0}</span>
         </h4>
-        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto; padding-right: 4px;">
+        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 600px; overflow-y: auto; padding-right: 4px;">
           ${(topArtViews.galleries || []).map((a, i) => {
             return '<a href="https://k4studios.com/gallery/' + a.target_id + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(196, 181, 253, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #c4b5fd; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(196,181,253,0.25)\'" onmouseout="this.style.background=\'rgba(196,181,253,0.1)\'">' +
               '<span style="width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 24px;">📁</span>' +
@@ -3117,7 +3123,7 @@ function renderDashboard({ days, yesterday, selectedDate, galleryFilter, exclude
       <!-- Left: Top External Images -->
       <div>
         <div style="font-size: 11px; color: #f97316; font-weight: bold; margin-bottom: 8px; border-bottom: 1px solid #333; padding-bottom: 4px;">🏆 Top Images</div>
-        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 280px; overflow-y: auto; padding-right: 4px;">
+        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 600px; overflow-y: auto; padding-right: 4px;">
           ${(topArtViews?.external || []).map((a, i) => {
             const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
             const sourceIcons = { onsite: '🏠', google: '🔍', bing: '🅱️', pinterest: '📌', facebook: '📘', twitter: '🐦', duckduckgo: '🦆', unattributed: '🌐', other: '🌐', direct: '❓' };
@@ -4819,17 +4825,10 @@ export default {
       return fetch(request);
     }
 
-    // 2) Gallery pages (not image pages): log gallery view
+    // 2) Gallery pages: pass through (gallery tracking is now JS-verified via GalleryInfo.jsx → /track → gallery_view)
     if ((url.pathname.startsWith("/Galleries/") || url.pathname.startsWith("/Other/")) && 
-        !url.pathname.includes("/i-") &&
-        !url.pathname.endsWith(".json") &&
-        !url.pathname.endsWith(".xml")) {
-      // Log gallery page view
-      const gallerySlug = extractGallerySlug(url.pathname);
-      if (gallerySlug && env?.DB) {
-        ctx.waitUntil(logArtView(env, 'gallery', gallerySlug, request));
-      }
-      return fetch(request); // Pass through after logging
+        !url.pathname.includes("/i-")) {
+      return fetch(request);
     }
 
     // 3) /img proxy routes

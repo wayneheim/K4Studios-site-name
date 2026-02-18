@@ -5,21 +5,23 @@
 /Other/Blog  /Blog  301
 /Other/Blog/*  /Blog/:splat  301
 
-# Block access to source files (should never be crawled)
-/src/*  /410  410!
+# Block access to source files in production (should never be crawled)
+# In dev: These files exist so redirect won't trigger
+# In prod: Returns 410 Gone with redirect to home
+/src/*  /  410
 
 # Block Cloudflare internal paths (email protection, etc.)
-/cdn-cgi/*  /410  410!
+/cdn-cgi/*  /  410
 
 # Block Glossary page with query strings (SmugMug API leakage)
-/Glossary?*  /410  410!
+/Glossary?*  /  410
 
 # Block bare lightbox URL (legacy SmugMug endpoint, not canonical)
 # NOTE: /Galleries/lightbox?dataset=... is allowed for internal "View Complete Gallery" use
-/Galleries/lightbox  /410  410!
+/Galleries/lightbox  /  410
 
 # Block keyword pages (not proper content pages)
-/keyword/*  /410  410!
+/keyword/*  /  410
 
 # =============================================================================
 # LEGACY SMUGMUG PATHS - Return 410 GONE (content not part of k4studios.com)
@@ -28,24 +30,24 @@
 # =============================================================================
 
 # Legacy Photo-Shoots paths (archive content, not advertised)
-/Other/Photo-Shoots-and-Themes/*  /410  410!
-/Other/Photo-Shoots/*  /410  410!
-/Is-Winter/*  /410  410!
-/Photoshootsandevents/*  /410  410!
-/Scheduled-Shoots/*  /410  410!
+/Other/Photo-Shoots-and-Themes/*  /  410
+/Other/Photo-Shoots/*  /  410
+/Is-Winter/*  /  410
+/Photoshootsandevents/*  /  410
+/Scheduled-Shoots/*  /  410
 
 # Legacy Photography-Galleries paths (old SmugMug structure)
-/Photography-Galleries/*/i-*  /410  410!
-/Photography-Galleries/*  /410  410!
+/Photography-Galleries/*/i-*  /  410
+/Photography-Galleries/*  /  410
 
 # Legacy Pictorialist paths → redirect to current page
 /Pictorialist-Photography/*/i-*  /Pictorialist-Photography  301!
 /Pictorialist-Photography/*  /Pictorialist-Photography  301!
 
 # Legacy gallery paths that no longer exist (merged or removed)
-/Galleries/Fine-Art-Photography/Miscellaneous/Kids/*  /410  410!
-/Galleries/Fine-Art-Photography/Miscellaneous/Kids  /410  410!
-/Galleries/Traditional-Photos/*  /410  410!
+/Galleries/Fine-Art-Photography/Miscellaneous/Kids/*  /  410
+/Galleries/Fine-Art-Photography/Miscellaneous/Kids  /  410
+/Galleries/Traditional-Photos/*  /  410
 
 # Legacy test/renamed gallery paths
 /Galleries/zPainterly-Western-Cowboy-Portraits/*  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/:splat  301
@@ -76,8 +78,8 @@
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII/Black-White  /Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White  301
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color  301
 
-*/Photoshootsandevents/*  /410  410!
-/data/system/*  /410  410!
+*/Photoshootsandevents/*  /  410
+/data/system/*  /  410
 
 # Legacy SmugMug frame/slideshow URLs
 /frame/*  /  301
@@ -107,9 +109,9 @@
 
 # Block SmugMug API endpoints - these should never be crawled (case variations)
 # Use 410 Gone to tell Google to de-index and stop crawling
-/api/*  /410  410!
-/Api/*  /410  410!
-/API/*  /410  410!
+/api/*  /  410
+/Api/*  /  410
+/API/*  /  410
 
 # Analytics tracking - proxy to Cloudflare Worker
 /track  https://k4-image-proxy.wayneheim.workers.dev/track  200!

@@ -69,19 +69,30 @@ interface TrackContext {
 
 function shouldSkipDuplicateEvent(event: string, context: TrackContext, pagePath: string): boolean {
   // Only dedupe events where accidental double-firing is common.
-  // Example: `chapter_view` can be emitted both globally (BaseLayout) and
-  // inside the chapter UI during the same navigation.
-  if (event !== 'chapter_view' && event !== 'zoom_open') return false;
+  // chapter_view: dedupe for the ENTIRE session (same image = 1 view per session)
+  // gallery_view: dedupe for the ENTIRE session (same gallery = 1 view per session)
+  // zoom_open: short window to catch rapid double-clicks
+  if (event !== 'chapter_view' && event !== 'gallery_view' && event !== 'zoom_open') return false;
 
-  const imageId = context.imageId || getImageIdFromPath(pagePath);
-  if (!imageId) return false;
+  // gallery_view dedupes on galleryId; chapter_view/zoom_open dedupe on imageId
+  const dedupId = event === 'gallery_view'
+    ? (context.galleryId || getGalleryIdFromPath(pagePath))
+    : (context.imageId || getImageIdFromPath(pagePath));
+  if (!dedupId) return false;
 
-  const key = `k4_dedupe_${event}_${imageId}`;
+  const key = `k4_dedupe_${event}_${dedupId}`;
   const now = Date.now();
   const last = parseInt(sessionStorage.getItem(key) || '0', 10);
 
-  // Ignore repeats within a short window (same image, same session)
-  const DEDUPE_WINDOW_MS = event === 'zoom_open' ? 1500 : 3000;
+  if (event === 'chapter_view' || event === 'gallery_view') {
+    // Session-scoped: once viewed, don't log it again this session
+    if (last) return true;
+    sessionStorage.setItem(key, String(now));
+    return false;
+  }
+
+  // zoom_open: short window dedup only (1.5s)
+  const DEDUPE_WINDOW_MS = 1500;
   if (last && now - last < DEDUPE_WINDOW_MS) return true;
 
   sessionStorage.setItem(key, String(now));
