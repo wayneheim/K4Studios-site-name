@@ -1,0 +1,217 @@
+6>  <picture class="carousel-overlay" data-astro-cid-j7pv25f6> <source media="(max-width: 768px)" srcset="/images/mobile.webp" data-astro-cid-j7pv25f6> <img src="/images/desktop3.webp" alt="Featured Artwork" class="lcp-placeholder-img" fetchpriority="high" loading="eager" decoding="sync" id="lcp-placeholder-img" data-astro-cid-j7pv25f6> </picture>  <div class="carousel-fade" data-astro-cid-j7pv25f6> <astro-island uid="1lC7ge" component-url="/_astro/HomeCarousel.jGXzg-_H.js" component-export="default" renderer-url="/_astro/client.DSwYEoqT.js" props="{&quot;data-astro-cid-j7pv25f6&quot;:[0,true]}" ssr client="only" opts="{&quot;name&quot;:&quot;HomeCarousel&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island> </div> </div> <section class="section-heading-anim-wrap" data-astro-cid-j7pv25f6> <div class="section-heading-anim" data-astro-cid-j7pv25f6> <h1 class="hero-subtitle-anim" id="hero-subtitle" data-astro-cid-j7pv25f6> Painterly &amp; Fine Art Photography by Wayne Heim </h1> <p class="hero-title-anim" id="hero-title" data-astro-cid-j7pv25f6> K4 Studios </p> </div> </section> <div class="py-5" data-astro-cid-j7pv25f6> <astro-island uid="2u5grM" prefix="r5" component-url="/_astro/TombstoneNav.bCZv5fA2.js" component-export="default" renderer-url="/_astro/client.DSwYEoqT.js" props="{&quot;items&quot;:[1,[[0,{&quot;title&quot;:[0,&quot;Painterly Style Photography&quot;],&quot;href&quot;:[0,&quot;/Galleries/Painterly-Fine-Art-Photography&quot;],&quot;thumb&quot;:[0,&quot;/images/tombstones/Painterly-ts.webp&quot;]}],[0,{&quot;title&quot;:[0,&quot;Traditional Style Photography&quot;],&quot;href&quot;:[0,&quot;/Galleries/Fine-Art-Photography&quot;],&quot;thumb&quot;:[0,&quot;/images/tombstones/traditional-ts.webp&quot;]}],[0,{&quot;title&quot;:[0,&quot;Engrained Series&quot;],&quot;href&quot;:[0,&quot;/Other/K4-Select-Series/Engrained&quot;],&quot;thumb&quot;:[0,&quot;/images/tombstones/engrained-ts.webp&quot;]}],[0,{&quot;title&quot;:[0,&quot;Western Cowboy Collection&quot;],&quot;href&quot;:[0,&quot;/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits&quot;],&quot;thumb&quot;:[0,&quot;/images/tombstones/Cowboy-j-ts.webp&quot;],&quot;mobileOnly&quot;:[0,true],&quot;trackingId&quot;:[0,&quot;Cowboy_Jump_Home&quot;]}]]],&quot;data-astro-cid-j7pv25f6&quot;:[0,true]}" ssr client="load" opts="{&quot;name&quot;:&quot;TombstoneNav&quot;,&quot;value&quot;:true}" await-children><section class="tombstone-nav"><div class="tombstone-divider"></div><div class="tile-grid"><a href="/Galleries/Painterly-Fine-Art-Photography" class="tile" title="Painterly Style Photography"><div class="tombstone-card tombstone-animate" style="animation-delay:1.05s"><img src="/images/tombstones/Painterly-ts.webp" alt="Painterly Style Photography" loading="lazy" width="140" height="160" class="tombstone-img"/></div><p class="tombstone-title fade-in-up pop-effect" style="animation-delay:1.27s, 2.8s">Painterly Style Photography</p></a><a href="/Galleries/Fine-Art-Photography" class="tile" title="Traditional Style Photography"><div class="tombstone-card tombstone-animate" style="animation-delay:1.1500000000000001s"><img src="/images/tombstones/traditional-ts.webp" alt="Traditional Style Photography" loading="lazy" width="140" height="160" class="tombstone-img"/></div><p class="tombstone-title fade-in-up pop-effect" style="animation-delay:1.47s, 3.2199999999999998s">Traditional Style Photography</p></a><a href="/Other/K4-Select-Series/Engrained" class="tile" title="Engrained Series"><div class="tombstone-card tombstone-animate" style="animation-delay:1.25s"><img src="/images/tombstones/engrained-ts.webp" alt="Engrained Series" loading="lazy" width="140" height="160" class="tombstone-img"/></div><p class="tombstone-title fade-in-up pop-effect" style="animation-delay:1.67s, 3.6399999999999997s">Engrained Series</p></a><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" class="tile mobile-only-tile" title="Western Cowboy Collection"><div class="tombstone-card tombstone-animate" style="animation-delay:1.35s"><img src="/images/tombstones/Cowboy-j-ts.webp" alt="Western Cowboy Collection" loading="lazy" width="140" height="160" class="tombstone-img"/></div><p class="tombstone-title fade-in-up pop-effect" style="animation-delay:1.87s, 4.06s">Western Cowboy Collection</p></a></div><style>
+        @media (max-width: 640px) {
+          .tombstone-nav {
+            transform: scale(0.87);
+            transform-origin: top center;
+            padding: 0.5rem 1rem 1rem !important;
+            margin-bottom: -4.5rem;
+            margin-top: -5pt;
+          }
+        }
+
+        .tombstone-title {
+          font-family: 'Glegoo', serif;
+          font-size: 0.85rem;
+          font-weight: 800;
+          color: #3e2c1c;
+          text-align: center;
+          margin-top: 0.5rem;
+        }
+
+        .fade-in-up {
+          opacity: 0;
+          transform: translateY(-20px);
+          animation-name: fadeSlideUp;
+          animation-duration: 0.9s;
+          animation-timing-function: ease;
+          animation-fill-mode: forwards;
+          animation-delay: 0.6s;
+        }
+
+        .fade-in-up.pop-effect {
+          animation-name: fadeSlideUp, pop-highlight;
+          animation-duration: 0.9s, 0.7s;
+          animation-timing-function: ease, ease;
+          animation-fill-mode: forwards, forwards;
+          animation-delay: 0.6s, 1.8s;
+        }
+
+        @keyframes fadeSlideUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes pop-highlight {
+          0% {
+            transform: scale(1);
+          }
+          30% {
+            transform: scale(1.15);
+          }
+          60% {
+            transform: scale(0.95);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+
+        .tombstone-nav {
+          text-align: center;
+          padding: 2rem 1rem;
+          font-family: 'Glegoo', serif;
+        }
+
+        .tombstone-nav h2 {
+          font-size: 1.8rem;
+          color: #3e2c1c;
+          margin-bottom: 0.3rem;
+        }
+
+        .tombstone-nav .subhead {
+          font-size: 1rem;
+          color: #555;
+          margin-bottom: 2rem;
+        }
+
+        .tile-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+          gap: 1.25rem;
+          max-width: 900px;
+          margin: 0 auto;
+          min-height: 180px; /* Reserve height to prevent CLS */
+        }
+
+        .tile-grid.two-tiles {
+          max-width: 450px;
+        }
+
+        .tile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-decoration: none;
+          width: 100%;
+          max-width: 150px;
+          margin: 0 auto;
+          transition: transform 0.3s ease;
+          min-height: 160px; /* Reserve height for tile + title */
+        }
+
+        .tile:hover .tombstone-card {
+          box-shadow:
+            0 6px 16px rgba(0, 0, 0, 0.2),
+            0 0 0 2px rgba(189, 162, 124, 0.3);
+          transform: scale(1.01);
+        }
+
+        .tombstone-card {
+          aspect-ratio: 3.5 / 4;
+          border-radius: 0% 0% 25% 25% / 0% 0% 20% 20%;
+          overflow: hidden;
+          background: #ffffff;
+          border: 1px solid #bda27c;
+          box-shadow:
+            inset 0 -1px 1px rgba(255, 255, 255, 0.6),
+            inset 0 1px 2px rgba(0, 0, 0, 0.08),
+            0 8px 20px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          max-width: 250px;
+        }
+
+        .tombstone-divider {
+          width: 100%;
+          max-width: 780px;
+          height: 3px;
+          background-color: rgb(167, 154, 142);
+          margin: 0.25rem auto 1.5rem;
+          opacity: 0.85;
+        }
+
+        .tombstone-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 15%;
+          aspect-ratio: 3.5 / 4;
+        }
+
+        .tile p {
+          margin-top: 0.5rem;
+          font-size: 0.85rem;
+          font-weight: 800;
+          color: #3e2c1c;
+          text-align: center;
+        }
+
+        @media (min-width: 768px) {
+          /* Reserve space for tombstone grid to prevent CLS */
+          .tile-grid {
+            gap: 2rem;
+            min-height: 200px; /* Reserve minimum height for tiles on desktop */
+          }
+
+          .tile {
+            min-height: 180px; /* Reserve height for tile + title on desktop */
+          }
+          
+          /* Hide mobile-only tiles on desktop */
+          .mobile-only-tile {
+            display: none;
+          }
+        }
+        
+        /* Show mobile-only tiles on mobile */
+        @media (max-width: 767px) {
+          .mobile-only-tile {
+            display: flex;
+          }
+        }
+
+        .tombstone-animate {
+          opacity: 0;
+          animation-name: dropIn;
+          animation-duration: 0.8s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-out;
+        }
+
+        @keyframes dropIn {
+          0% {
+            opacity: 0;
+            transform: translateY(-40px) scale(0.95);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+
+        .tile-grid .tile {
+          transition: transform 0.4s ease-out, filter 0.4s ease-out;
+        }
+
+        
+   @media (hover: hover) and (pointer: fine) {
+    .tile-grid:hover .tile {
+      transform: scale(0.9);
+      filter: grayscale(100%) brightness(0.68);
+    }
+
+    .tile-grid:hover .tile:hover {
+      transform: scale(1.05);
+      filter: none;
+      z-index: 1;
+    }
+  }
+
+
+        
+      </style></section><!--astro:end--></astro-island> </div> <section class="story-layout" data-astro-cid-j7pv25f6> <div class="text-column" data-astro-cid-j7pv25f6> <section class="story-section" data-astro-cid-j7pv25f6> <article class="story-block" key="0" data-astro-cid-j7pv25f6>  <h3 class="slide-in-left" data-astro-cid-j7pv25f6><a href="/Galleries/Fine-Art-Photography" class="kw-link">Fine Art Photography</a> Where Every Frame Tells a Story</h3> <h4 class="tagline reveal-on-scroll" data-astro-cid-j7pv25f6>Embrace the Past. Live the Story.</h4> <p key="0" class="reveal-on-scroll" data-astro-cid-j7pv25f6>There are photographs—then there are the moments that refuse to sit still.</p><p key="1" class="reveal-on-scroll" data-astro-cid-j7pv25f6>K4 Studios is the home of <a href="/Galleries/Fine-Art-Photography" class="kw-link">fine art photography</a> by Wayne Heim — painterly and traditional styles, Western themed, historically driven, and crafted for collectors who value story, atmosphere, and authenticity.</p><p key="2" class="reveal-on-scroll" data-astro-cid-j7pv25f6>Wayne Heim creates historically themed <a href="/Wester

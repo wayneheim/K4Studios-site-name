@@ -1,0 +1,68 @@
+e2c1c;
+          text-align: center;
+        }
+
+        @media (min-width: 768px) {
+          /* Reserve space for tombstone grid to prevent CLS */
+          .tile-grid {
+            gap: 2rem;
+            min-height: 200px; /* Reserve minimum height for tiles on desktop */
+          }
+
+          .tile {
+            min-height: 180px; /* Reserve height for tile + title on desktop */
+          }
+          
+          /* Hide mobile-only tiles on desktop */
+          .mobile-only-tile {
+            display: none;
+          }
+        }
+        
+        /* Show mobile-only tiles on mobile */
+        @media (max-width: 767px) {
+          .mobile-only-tile {
+            display: flex;
+          }
+        }
+
+        .tombstone-animate {
+          opacity: 0;
+          animation-name: dropIn;
+          animation-duration: 0.8s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-out;
+        }
+
+        @keyframes dropIn {
+          0% {
+            opacity: 0;
+            transform: translateY(-40px) scale(0.95);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+
+        .tile-grid .tile {
+          transition: transform 0.4s ease-out, filter 0.4s ease-out;
+        }
+
+        
+   @media (hover: hover) and (pointer: fine) {
+    .tile-grid:hover .tile {
+      transform: scale(0.9);
+      filter: grayscale(100%) brightness(0.68);
+    }
+
+    .tile-grid:hover .tile:hover {
+      transform: scale(1.05);
+      filter: none;
+      z-index: 1;
+    }
+  }
+
+
+        
+      </style></section><!--astro:end--></astro-island> </div> <section class="story-layout" data-astro-cid-j7pv25f6> <div class="text-column" data-astro-cid-j7pv25f6> <section class="story-section" data-astro-cid-j7pv25f6> <article class="story-block" key="0" data-astro-cid-j7pv25f6>  <h3 class="slide-in-left" data-astro-cid-j7pv25f6><a href="/Galleries/Fine-Art-Photography" class="kw-link">Fine Art Photography</a> Where Every Frame Tells a Story</h3> <h4 class="tagline reveal-on-scroll" data-astro-cid-j7pv25f6>Embrace the Past. Live the Story.</h4> <p key="0" class="reveal-on-scroll" data-astro-cid-j7pv25f6>There are photographs—then there are the moments that refuse to sit still.</p><p key="1" class="reveal-on-scroll" data-astro-cid-j7pv25f6>K4 Studios is the home of <a href="/Galleries/Fine-Art-Photography" class="kw-link">fine art photography</a> by Wayne Heim — painterly and traditional styles, Western themed, historically driven, and crafted for collectors who value story, atmosphere, and authenticity.</p><p key="2" class="reveal-on-scroll" data-astro-cid-j7pv25f6>Wayne Heim creates historically themed <a href="/Western-Fine-Art-Photography" class="kw-link">Western fine art photography</a>, using narrative, painterly composition to explore the psychological lives of the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" class="kw-link">American frontier</a>.</p><p key="3" class="reveal-on-scroll" data-astro-cid-j7pv25f6>Every image here is a <a href="/Other/One-Image-Movie" class="kw-link">One-Image Movie</a>™—a single, cinematic breath where time, myth, and memory hold still for just a moment. Painterly portraits. <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" class="kw-link">Western grit</a>. Landscapes that breathe. Forgotten stories and icons of history and invention, rendered in light that feels carved from memory itself.</p><p key="4" class="reveal-on-scroll" data-astro-cid-j7pv25f6>This is <a href="/Galleries/Fine-Art-Photography" class="kw-link">fine art photography</a> for collectors who want more than décor. <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-mbND55n" class="kw-link">Cowboys</a> and outlaws. WWII heroes and <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits" class="kw-link">Civil War</a> soldiers. Mountains that hum old hymns. Steel and steam and leather and dust. <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" class="kw-link">Step inside the story</a>—and claim your place in it.</p>  </article><article class="story-block" key="1" data-astro-cid-j7pv25f6>  <h3 class="slide-in-left" data-astro-cid-j7pv25f6>The Western Frontier — Cinematic. Painterly. Alive.</h3>  <p key="0" class="reveal-on-scroll" data-astro-cid-j7pv25f6><a href="/Western-Wall-Art" class="kw-link">Cowboy art</a>. <a href="/Western-Fine-Art-Photography" class="kw-link">Western fine art photography</a>. Old-world grit with a mythic pulse.</p><p key="1" class="reveal-on-scroll" data-astro-cid-j7pv25f6>In the West, nothing is ever just a portrait. A hat thrown low, a hand at rest, a shadow grazing dust—these become the architecture of character. The icons of a people built on stubborn hope.</p><p key="2" class="reveal-on-scroll" data-astro-cid-j7pv25f6>This is <a href="/Western-Fine-A

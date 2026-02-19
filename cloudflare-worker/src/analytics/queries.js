@@ -344,24 +344,46 @@ export async function getSessionMetrics(env, filters) {
     ? `${Math.floor(avgDurationSecs / 60)}m ${Math.round(avgDurationSecs % 60)}s`
     : `${Math.round(avgDurationSecs)}s`;
 
-  // Query 8d: Peak Hours (busiest 2 hours of day, adjusted for EST)
+  // Query 8d: Peak Hours (highest AM hour + highest PM hour, EST-adjusted)
   const peakHoursQuery = `
-    SELECT 
-      CAST(strftime('%H', created_at, '-5 hours') AS INTEGER) as hour,
-      COUNT(DISTINCT session_id) as sessions
-    FROM events
-    WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
-    GROUP BY hour
-    ORDER BY sessions DESC
-    LIMIT 2
+    WITH hourly AS (
+      SELECT
+        CAST(strftime('%H', created_at, '-5 hours') AS INTEGER) AS hour,
+        COUNT(DISTINCT session_id) AS sessions
+      FROM events
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+      GROUP BY hour
+    ),
+    am_peak AS (
+      SELECT hour, sessions FROM hourly WHERE hour < 12 ORDER BY sessions DESC LIMIT 1
+    ),
+    pm_peak AS (
+      SELECT hour, sessions FROM hourly WHERE hour >= 12 ORDER BY sessions DESC LIMIT 1
+    )
+    SELECT
+      (SELECT hour FROM am_peak) AS am_hour,
+      (SELECT sessions FROM am_peak) AS am_sessions,
+      (SELECT hour FROM pm_peak) AS pm_hour,
+      (SELECT sessions FROM pm_peak) AS pm_sessions
   `;
-  const peakHoursResult = await env.DB.prepare(peakHoursQuery).all();
-  const peakHours = (peakHoursResult.results || []).map(h => {
-    const hour24 = h.hour;
-    const hour12 = hour24 === 0 ? 12 : (hour24 > 12 ? hour24 - 12 : hour24);
-    const ampm = hour24 >= 12 ? 'pm' : 'am';
-    return { hour: `${hour12}${ampm}`, sessions: h.sessions };
-  });
+  const peakHoursResult = await env.DB.prepare(peakHoursQuery).first();
+  
+  // Format hour to 12h with a/p suffix
+  function formatHour(h) {
+    if (h === null || h === undefined) return null;
+    const hour = Number(h);
+    const suffix = hour >= 12 ? 'p' : 'a';
+    const display = hour % 12 === 0 ? 12 : hour % 12;
+    return `${display}${suffix}`;
+  }
+  
+  const peakHours = [];
+  if (peakHoursResult?.am_hour !== null && peakHoursResult?.am_hour !== undefined) {
+    peakHours.push({ hour: formatHour(peakHoursResult.am_hour), sessions: peakHoursResult.am_sessions || 0, period: 'AM' });
+  }
+  if (peakHoursResult?.pm_hour !== null && peakHoursResult?.pm_hour !== undefined) {
+    peakHours.push({ hour: formatHour(peakHoursResult.pm_hour), sessions: peakHoursResult.pm_sessions || 0, period: 'PM' });
+  }
 
   // Query 8e: Device Engagement (avg depth score by device type)
   const deviceEngagementQuery = `

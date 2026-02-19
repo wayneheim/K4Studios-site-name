@@ -1,0 +1,44 @@
+[0 @ 16858] script>       window.dataLayer = window.dataLayer || [];       function gtag(){dataLayer.push(argume
+[1 @ 16859] cript>       window.dataLayer = window.dataLayer || [];       function gtag(){dataLayer.push(argumen
+[2 @ 17412]  (function(c,l,a,r,i,t,y){               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+[3 @ 17413] (function(c,l,a,r,i,t,y){               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; 
+[4 @ 17439]               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};               t=l.createEl
+[5 @ 17440]              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};               t=l.createEle
+[6 @ 18063] ;const e=JSON.parse(t);(e["@type"]==="ImageObject"||e.type==="ImageObject")&&(!e["@id"]||!t.includes
+[7 @ 18064] const e=JSON.parse(t);(e["@type"]==="ImageObject"||e.type==="ImageObject")&&(!e["@id"]||!t.includes(
+[8 @ 18100] "ImageObject"||e.type==="ImageObject")&&(!e["@id"]||!t.includes('"creditText"'))&&(console.log("🧹 R
+[9 @ 18101] ImageObject"||e.type==="ImageObject")&&(!e["@id"]||!t.includes('"creditText"'))&&(console.log("🧹 Re
+[10 @ 24115] =>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new
+[11 @ 24116] >{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new 
+[12 @ 24681] ](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).
+[13 @ 24682] (e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).m
+[14 @ 24906] d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentEle
+[15 @ 24907] (this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElem
+[16 @ 25297] de(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of 
+[17 @ 25298] e(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c
+[18 @ 25434] ull&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttr
+[19 @ 25435] ll&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttri
+[20 @ 25593] }catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-expor
+[21 @ 25594] catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export
+[22 @ 25985] ydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmoun
+[23 @ 25986] drate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount
+[24 @ 26255] Callback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.re
+[25 @ 26256] allback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.rea
+[26 @ 26292] it-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenCo
+[27 @ 26293] t-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenCon
+[28 @ 27235] =>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u
+[29 @ 27236] >()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u]
+[30 @ 27624] tes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</s
+[31 @ 27625] es",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</sc
+[32 @ 28289] =>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new
+[33 @ 28290] >{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new 
+[34 @ 84572] ssionId = sessionStorage.getItem('k4_session_id') ||            (sessionStorage.setItem('k4_session_
+[35 @ 84573] sionId = sessionStorage.getItem('k4_session_id') ||            (sessionStorage.setItem('k4_session_i
+[36 @ 162422] data-dynamic-sidebar]');             if (!textCol || !sidebar) return;                          var 
+[37 @ 162423] ata-dynamic-sidebar]');             if (!textCol || !sidebar) return;                          var l
+[38 @ 178330] astro-cid-sz7xmlte>&copy; 2026</time>  Wayne Heim |  <a href="/Glossary" class="underline hover:no-u
+[39 @ 178457] sary" data-astro-cid-sz7xmlte>Story Glossary</a>  | All rights reserved. </div> <div class="mt-5 fle
+[40 @ 181214] t>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createEle
+[41 @ 181215] >(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElem
+[42 @ 181951] tLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=functio
+[43 @ 181952] Loaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function

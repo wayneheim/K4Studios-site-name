@@ -169,9 +169,9 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     .controls { margin-bottom: 15px; display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
     .controls a { color: #4a9eff; text-decoration: none; padding: 5px 10px; border-radius: 4px; }
     .controls a:hover, .controls a.active { background: #333; }
-    .pulse { display: flex; gap: 8px; margin-bottom: 8px; align-items: center; }
-    .pulse .pulse-stat { flex: 1; justify-content: center; }
-    .pulse-row { display: flex; gap: 8px; margin-bottom: 10px; align-items: center; }
+    .pulse { display: flex; gap: 8px; margin-bottom: 8px; align-items: stretch; }
+    .pulse .pulse-stat { flex: 1 1 0; min-width: 0; justify-content: center; }
+    .pulse-row { display: flex; gap: 8px; margin-bottom: 10px; align-items: stretch; }
     .pulse-row .pulse-stat { flex: 1; justify-content: center; }
     .pulse-stat { background: #252525; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 6px; position: relative; cursor: help; }
     .pulse-stat.clickable { cursor: pointer; transition: opacity 0.2s, transform 0.1s; }
@@ -429,28 +429,28 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <div class="tooltip">Average number of tracked engagement events per session.</div>
     </div>
     <div class="pulse-stat">
-      <span class="value" style="color:#22d3ee;">⏱️ ${avgDurationFormatted}</span>
+      <span class="value" style="color:#22d3ee;">${avgDurationFormatted}</span>
       <span class="label">Avg Time <span class="info-icon">i</span></span>
       <div class="tooltip">Average session duration (first to last event). Only counts sessions with 2+ events. For art browsing, 2+ min is good engagement.</div>
     </div>
     ${peakHours.length > 0 ? `<div class="pulse-stat">
-      <span class="value" style="color:#f472b6;">🕐 ${peakHours.map(h => h.hour).join(', ')}</span>
-      <span class="label">Peak Activity (AM / PM) <span class="info-icon">i</span></span>
-      <div class="tooltip">Busiest hours (EST): ${peakHours.map(h => `${h.hour} (${h.sessions} sessions)`).join(', ')}. First = AM peak, second = PM peak. Useful for social media posting timing.</div>
+      <span class="value" style="color:#f472b6;">${peakHours.map(h => h.hour).join(', ')}</span>
+      <span class="label">Peak <span class="info-icon">i</span></span>
+      <div class="tooltip">Highest traffic hour in morning (AM) and evening (PM) periods. ${peakHours.map(h => `${h.period}: ${h.hour} (${h.sessions} sessions)`).join(', ')}. Great for social posting timing.</div>
     </div>` : ''}
     <div class="pulse-stat" style="background: ${bounceRate > 60 ? 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)' : bounceRate > 40 ? 'linear-gradient(135deg, #c2410c 0%, #9a3412 100%)' : 'linear-gradient(135deg, #10b981 0%, #059669 100%)'};">
       <span class="value" style="color: #fff;">${bounceRate}%</span>
       <span class="label" style="color: ${bounceRate > 40 ? '#fed7aa' : '#a7f3d0'};">Bounce <span class="info-icon" style="background: rgba(255,255,255,0.2); color: ${bounceRate > 40 ? '#fed7aa' : '#a7f3d0'};">i</span></span>
       <div class="tooltip">Sessions with only 1 event (came and left immediately). Lower is better. Above 60% = concern, below 40% = great.</div>
     </div>
+  </div>
+
+  <div class="pulse-row">
     ${cowboyJumps > 0 ? `<div class="pulse-stat highlight">
       <span class="value">🤠 ${cowboyJumps}</span>
       <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
       <div class="tooltip">Total cowboy jump clicks. Every click counts!</div>
     </div>` : ''}
-  </div>
-
-  <div class="pulse-row">
     <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
       <span class="value" style="color: #fff;">👤 ${artViewsSummary?.unique_viewers || 0}</span>
       <span class="label" style="color: #a7f3d0;">Art Viewers <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
