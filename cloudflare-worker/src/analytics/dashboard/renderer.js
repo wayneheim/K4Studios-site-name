@@ -410,8 +410,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   <div class="pulse">
     <div class="pulse-stat">
       <span class="value">${s.unique_visitors || 0}</span>
-      <span class="label">JS Visitors <span class="info-icon">i</span></span>
-      <div class="tooltip">Unique IPs with JS events (Layer C). Only counts visitors whose browser loaded JavaScript and triggered events. Does NOT include image-only viewers — see Art Views below for complete picture.</div>
+      <span class="label">Human Visitors <span class="info-icon">i</span></span>
+      <div class="tooltip">Unique human IPs with JS events (Layer C). Bot-filtered. Only counts visitors whose browser loaded JavaScript and triggered events. Does NOT include image-only viewers — see Art Views below for complete picture.</div>
     </div>
     <div class="pulse-stat">
       <span class="value"><span style="color:#10b981">${newVisitors}</span>/<span style="color:#f59e0b">${returningVisitors}</span></span>
@@ -425,8 +425,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     </div>
     <div class="pulse-stat">
       <span class="value">${s.avg_events_per_session || 0}</span>
-      <span class="label">Avg/Sess <span class="info-icon">i</span></span>
-      <div class="tooltip">Average events per session. Higher = more engaged visitors exploring galleries and images.</div>
+      <span class="label">Average Engagement <span class="info-icon">i</span></span>
+      <div class="tooltip">Average number of tracked engagement events per session.</div>
     </div>
     <div class="pulse-stat">
       <span class="value" style="color:#22d3ee;">⏱️ ${avgDurationFormatted}</span>
@@ -435,42 +435,22 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     </div>
     ${peakHours.length > 0 ? `<div class="pulse-stat">
       <span class="value" style="color:#f472b6;">🕐 ${peakHours.map(h => h.hour).join(', ')}</span>
-      <span class="label">Peak <span class="info-icon">i</span></span>
-      <div class="tooltip">Busiest hours (EST): ${peakHours.map(h => `${h.hour} (${h.sessions} sessions)`).join(', ')}. Useful for social media posting timing.</div>
+      <span class="label">Peak Activity (AM / PM) <span class="info-icon">i</span></span>
+      <div class="tooltip">Busiest hours (EST): ${peakHours.map(h => `${h.hour} (${h.sessions} sessions)`).join(', ')}. First = AM peak, second = PM peak. Useful for social media posting timing.</div>
     </div>` : ''}
-    <div class="pulse-stat">
-      <span class="value" style="color:#10b981">${s.pct_navigated || 0}%</span>
-      <span class="label">Nav <span class="info-icon">i</span></span>
-      <div class="tooltip">% of sessions that used navigation (next/prev arrows). Shows gallery exploration intent.</div>
-    </div>
-  </div>
-
-  <div class="pulse-row">
     <div class="pulse-stat" style="background: ${bounceRate > 60 ? 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)' : bounceRate > 40 ? 'linear-gradient(135deg, #c2410c 0%, #9a3412 100%)' : 'linear-gradient(135deg, #10b981 0%, #059669 100%)'};">
       <span class="value" style="color: #fff;">${bounceRate}%</span>
       <span class="label" style="color: ${bounceRate > 40 ? '#fed7aa' : '#a7f3d0'};">Bounce <span class="info-icon" style="background: rgba(255,255,255,0.2); color: ${bounceRate > 40 ? '#fed7aa' : '#a7f3d0'};">i</span></span>
       <div class="tooltip">Sessions with only 1 event (came and left immediately). Lower is better. Above 60% = concern, below 40% = great.</div>
     </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);">
-      <span class="value" style="color: #fff;">${avgDepthScore}</span>
-      <span class="label" style="color: #a5f3fc;">Engage Lvl <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a5f3fc;">i</span></span>
-      <div class="tooltip">Average engagement level per session for this period. Each action earns points: Collector Notes=5, Zoom=4, Theme Click=3, Nav=2, Other=1. Higher = more engaged visitors.</div>
-    </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
-      <span class="value" style="color: #fff;">${deepSessionPct}%</span>
-      <span class="label" style="color: #a7f3d0;">Deep <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
-      <div class="tooltip">% of sessions that are "deep" (${deepSessions}/${totalSessions}). Deep = zoomed OR 10+ events OR scrolled 75%+. This is your north-star: readers vs skimmers.</div>
-    </div>
-    ${botPct > 0 ? `<div class="pulse-stat" style="background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);">
-      <span class="value" style="color: #fff;">🤖 ${botPct}%</span>
-      <span class="label" style="color: #d1d5db;">Bots <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #d1d5db;">i</span></span>
-      <div class="tooltip">Estimated bot traffic (${botSessions}/${totalSessions} sessions). Detected by: AWS/datacenter IPs, Ashburn city, unknown device. Not filtered from other stats.</div>
-    </div>` : ''}
     ${cowboyJumps > 0 ? `<div class="pulse-stat highlight">
       <span class="value">🤠 ${cowboyJumps}</span>
       <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
       <div class="tooltip">Total cowboy jump clicks. Every click counts!</div>
     </div>` : ''}
+  </div>
+
+  <div class="pulse-row">
     <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
       <span class="value" style="color: #fff;">👤 ${artViewsSummary?.unique_viewers || 0}</span>
       <span class="label" style="color: #a7f3d0;">Art Viewers <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
