@@ -320,18 +320,20 @@ async function handleImageRequest(request, ctx, env) {
     }
 
     // Log art views by size:
-    // XL = tracked via /__k4track/event beacon (user clicks), not image loads
-    // L = external embeds ONLY (Google Images, Bing, Pinterest, FB, etc.)
-    //     Skip L tracking for on-site traffic (k4studios referrer) to avoid inflated counts
+    // XL = proxy-verified zoom/slideshow (server-side, not spoofable)
+    // L = chapter views (on-site) OR external embeds (off-site)
     if (env?.DB) {
-      // XL logging removed - now tracked via event beacon on zoom/slideshow click
-      if (false) { // xl_zoom disabled - keeping code for reference
-        ctx.waitUntil(logArtView(env, 'xl_zoom', route.imageId, request));
+      // XL = proxy-verified zoom intent (Phase: Art View Hardening)
+      if (route.size === 'xl') {
+        ctx.waitUntil(logArtView(env, 'xl_zoom', route.imageId, request, null, 'proxy'));
       } else if (route.size === 'l') {
         const referer = request.headers.get('Referer') || '';
-        // Only log L-size as external_image if NOT from k4studios or localhost (true external embed)
-        if (!referer.includes('k4studios.com') && !referer.includes('localhost')) {
-          ctx.waitUntil(logArtView(env, 'external_image', route.imageId, request));
+        // On-site L-size = chapter view (proxy-verified)
+        // Off-site L-size = external embed (Google Images, etc.)
+        if (referer.includes('k4studios.com') || referer.includes('localhost')) {
+          ctx.waitUntil(logArtView(env, 'chapter_view', route.imageId, request, null, 'proxy'));
+        } else {
+          ctx.waitUntil(logArtView(env, 'external_image', route.imageId, request, null, 'proxy'));
         }
       }
       

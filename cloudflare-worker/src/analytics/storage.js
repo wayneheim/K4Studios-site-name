@@ -146,8 +146,9 @@ async function logEdgeEvent(env, eventType, path, imageId, isBot, request) {
 /**
  * Log an art view - fires async, never blocks response
  * Deduplication: one view per IP per target per hour
+ * @param source - 'proxy' (server-verified) or 'js' (client beacon)
  */
-async function logArtView(env, type, targetId, request, sessionId = null) {
+async function logArtView(env, type, targetId, request, sessionId = null, source = 'js') {
   try {
     // Use shared ingestion gate - one function, all paths
     if (isSyntheticTraffic(request)) return;
@@ -187,9 +188,9 @@ async function logArtView(env, type, targetId, request, sessionId = null) {
     const dedupKey = `${ipHash}:${targetId}:${type}:${dedupScope}`;
     
     await env.DB.prepare(`
-      INSERT OR IGNORE INTO art_views (type, target_id, ip_hash, ua_class, country, region, city, referrer, dedup_key, is_bot)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    `).bind(type, targetId, ipHash, uaClass, country, region, city, referrer, dedupKey, isBot).run();
+      INSERT OR IGNORE INTO art_views (type, target_id, ip_hash, ua_class, country, region, city, referrer, dedup_key, is_bot, source)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `).bind(type, targetId, ipHash, uaClass, country, region, city, referrer, dedupKey, isBot, source).run();
   } catch (e) {
     // Never let logging break the response
     console.error('Art view logging error:', e);

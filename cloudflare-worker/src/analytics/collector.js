@@ -211,7 +211,7 @@ export async function handleTrackRequest(request, env, ctx) {
         ? (page_path.match(/\/(i-[a-zA-Z0-9_-]+)\/?$/)?.[1] || null)
         : null);
       if (targetId) {
-        ctx.waitUntil(logArtView(env, 'chapter_view', targetId, request, session_id));
+        ctx.waitUntil(logArtView(env, 'chapter_view', targetId, request, session_id, 'js'));
       }
     }
 
@@ -221,7 +221,7 @@ export async function handleTrackRequest(request, env, ctx) {
         ? page_path.replace(/^\/Galleries\//, '').replace(/^\/Other\//, '').replace(/\/$/, '')
         : null);
       if (targetId) {
-        ctx.waitUntil(logArtView(env, 'gallery_view', targetId, request, session_id));
+        ctx.waitUntil(logArtView(env, 'gallery_view', targetId, request, session_id, 'js'));
       }
     }
 
@@ -330,7 +330,7 @@ export async function handleTrackEvent(request, env, ctx) {
       return new Response('ok', { status: 200 });
     }
 
-    ctx.waitUntil(logArtView(env, type, imageId, request));
+    ctx.waitUntil(logArtView(env, type, imageId, request, null, 'js'));
 
     return new Response('ok', {
       status: 200,
