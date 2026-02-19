@@ -259,7 +259,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     }
     /* Trend chart styles */
     .trend-chart { background: #252525; border-radius: 8px; padding: 20px; margin-top: 10px; margin-bottom: 30px; }
-    .trend-chart h3 { color: #fff; font-size: 14px; margin-bottom: 15px; }
+    .trend-chart h3 { color: #fff; font-size: 14px; }
     .trend-bars { display: flex; align-items: flex-end; gap: 4px; height: 100px; padding-bottom: 25px; position: relative; }
     .trend-bar { flex: 1; min-width: 25px; max-width: 70px; background: linear-gradient(180deg, #4a9eff 0%, #2d7dd2 100%); border-radius: 4px 4px 0 0; position: relative; cursor: pointer; transition: all 0.2s; }
     .trend-bar:hover { opacity: 0.8; }
@@ -309,14 +309,14 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   </div>
 
   ${trend.length > 1 ? `
+  <h3 style="color:#fff;font-size:14px;margin-bottom:6px;">
+    <span id="chart-title">Engaged Sessions per Day</span>
+    <span style="float: right; font-size: 12px; font-weight: normal;">
+      <a href="#" id="toggle-sessions" style="color: #4a9eff; text-decoration: underline;">Sessions</a> |
+      <a href="#" id="toggle-visitors" style="color: #888; text-decoration: none;">Unique IPs</a>
+    </span>
+  </h3>
   <div class="trend-chart">
-    <h3>
-      <span id="chart-title">Engaged Sessions per Day</span>
-      <span style="float: right; font-size: 12px; font-weight: normal;">
-        <a href="#" id="toggle-sessions" style="color: #4a9eff; text-decoration: underline;">Sessions</a> |
-        <a href="#" id="toggle-visitors" style="color: #888; text-decoration: none;">Unique IPs</a>
-      </span>
-    </h3>
     <div class="trend-bars" id="trend-chart-bars">
       ${(() => {
         const maxSessions = Math.max(...trend.map(t => t.sessions), 1);
