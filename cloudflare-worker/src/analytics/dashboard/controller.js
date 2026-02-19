@@ -21,6 +21,7 @@ import {
   getBotIntelligence
 } from '../queries.js';
 
+import { buildDashboardData } from './schema.js';
 import { renderDashboard } from './renderer.js';
 
 /**
@@ -100,60 +101,31 @@ export async function handleDashboardRequest(env, filters) {
 
   const botIntelligence = await getBotIntelligence(env);
 
-  // Assemble the exact data shape renderDashboard() expects
-  const dashboardData = {
-    days,
-    yesterday,
-    selectedDate,
-    galleryFilter,
-    excludeIp,
-    viewerIp,
-    summary,
-    newVisitors,
-    returningVisitors,
-    cowboyJumps,
-    events: events.results || [],
-    entries: entries.results || [],
-    galleries: galleries.results || [],
-    referrers: referrers.results || [],
-    geo: geo.results || [],
-    trend: trend.results || [],
-    devices: devices.results || [],
-    pages: pages.results || [],
-    images: images.results || [],
-    uniqueImagesViewed,
-    totalImageSessions,
-    totalImageViews,
-    themesClicked: themesClicked.results || [],
-    topDepthSessions,
-    minEngagement,
-    maxEngagement,
-    avgDepthScore,
-    deepSessionPct,
-    deepSessions,
-    totalSessions,
-    exitPages,
-    exitSummary,
-    exitByCategory,
-    botPct,
-    botSessions,
-    hideBots,
-    hideChardon,
-    edgeEvents,
-    edgeSummary,
-    entryPages,
-    entryRefCounts,
-    imagePageViewsFromEvents,
-    imageEntrySessionsFromEvents,
-    bounceRate,
-    avgDurationFormatted,
-    peakHours,
-    deviceEngagement,
-    artViewsSummary,
-    artViewsByType,
-    topArtViews,
+  // Collect raw query results for schema assembly
+  const queryResults = {
+    summary, returningVisitors, newVisitors,
+    events, entries,
+    galleries,
+    referrers,
+    geo,
+    trend,
+    devices, bounceRate, avgDurationFormatted, peakHours, deviceEngagement,
+    pages,
+    images, uniqueImagesViewed, totalImageSessions, totalImageViews,
+    themesClicked, cowboyJumps, topDepthSessions, minEngagement, maxEngagement,
+    avgDepthScore, deepSessionPct, deepSessions, totalSessions, botSessions, botPct,
+    entryPages, imagePageViewsFromEvents, imageEntrySessionsFromEvents, entryRefCounts,
+    exitPages, exitSummary, exitByCategory,
+    edgeEvents, edgeSummary,
+    artViewsSummary, artViewsByType, topArtViews,
     botIntelligence
   };
+
+  // Assemble data shape then render
+  const dashboardData = buildDashboardData(queryResults, {
+    days, yesterday, selectedDate, galleryFilter,
+    excludeIp, viewerIp, hideBots, hideChardon
+  });
 
   // Render and return HTML string
   return renderDashboard(dashboardData);
