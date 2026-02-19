@@ -7,7 +7,7 @@
 // Dashboard route — full request lifecycle
 export { handleDashboardRequest } from './dashboard/route.js';
 
-// Collector — classifiers + guarded storage writers
+// Collector — classifiers + guarded storage writers + track handler
 export {
   isSearchBot,
   calculateRiskScore,
@@ -16,5 +16,7 @@ export {
   logEdgeEvent,
   logArtView,
   logVerifiedBot,
-  updateBotIntelligence
+  updateBotIntelligence,
+  handleTrackRequest,
+  handleTrackOptions
 } from './collector.js';
