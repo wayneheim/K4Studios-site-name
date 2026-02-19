@@ -1,0 +1,25 @@
+name = "k4-analytics"
+main = "src/analytics/worker.js"
+compatibility_date = "2024-01-01"
+
+# Route configuration
+# Deploy to: k4studios.com/__k4stats, k4studios.com/track
+#
+# In Cloudflare Dashboard:
+# 1. Workers & Pages → k4-analytics → Settings → Triggers
+# 2. Add Route: k4studios.com/__k4stats
+# 3. Add Route: k4studios.com/track
+# 4. Zone: k4studios.com
+
+[vars]
+# Environment variables (if needed)
+
+# D1 Database for analytics
+[[d1_databases]]
+binding = "DB"
+database_name = "k4-analytics"
+database_id = "f2c159b0-b0f1-4056-934c-90e9b8a92e14"
+
+# Development settings
+[dev]
+port = 8788
