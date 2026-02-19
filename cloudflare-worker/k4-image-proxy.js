@@ -42,21 +42,17 @@ import {
 } from './src/shared/index.js';
 
 // ═══════════════════════════════════════════════════════════════════════════
-// ANALYTICS COLLECTOR (Phase 1 Step 5 — single orchestration boundary)
-// Worker never imports from classifier.js or storage.js directly.
+// ANALYTICS (Phase 4 — single namespace entry point)
+// Worker imports only from analytics barrel. No deep imports allowed.
 // ═══════════════════════════════════════════════════════════════════════════
 import {
+  handleDashboardRequest,
   isSearchBot,
   logEdgeEvent,
   logArtView,
   logVerifiedBot,
   updateBotIntelligence
-} from './src/analytics/collector.js';
-
-// ═══════════════════════════════════════════════════════════════════════════
-// DASHBOARD ROUTE (Phase 4 — full request lifecycle for /__k4stats)
-// ═══════════════════════════════════════════════════════════════════════════
-import { handleDashboardRequest } from './src/analytics/dashboard/route.js';
+} from './src/analytics/index.js';
 
 const MANIFEST_URL = "https://k4studios.com/image-manifest.json";
 const IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";

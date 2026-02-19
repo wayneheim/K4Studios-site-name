@@ -1,14 +1,20 @@
-// Analytics module barrel export
+// ═══════════════════════════════════════════════════════════════════════════
+// ANALYTICS NAMESPACE BARREL (Phase 4 — single public entry point)
+// All analytics imports from the worker go through this file.
+// Internal structure (queries, schema, renderer, controller) stays hidden.
+// ═══════════════════════════════════════════════════════════════════════════
+
+// Dashboard route — full request lifecycle
+export { handleDashboardRequest } from './dashboard/route.js';
+
+// Collector — classifiers + guarded storage writers
 export {
-  SEARCH_BOT_PATTERN,
+  isSearchBot,
   calculateRiskScore,
   normalizeReferrer,
-  isSearchBot,
-} from './classifier.js';
-
-export {
-  updateBotIntelligence,
+  SEARCH_BOT_PATTERN,
   logEdgeEvent,
   logArtView,
   logVerifiedBot,
-} from './storage.js';
+  updateBotIntelligence
+} from './collector.js';
