@@ -18,14 +18,8 @@ function withAdminNoCacheHeaders(baseHeaders = {}) {
 
 function checkBasicAuth(request, env) {
   const auth = request.headers.get("Authorization");
-  if (!auth || !auth.startsWith("Basic ")) return false;
-
-  const encoded = auth.slice(6);
-  const decoded = atob(encoded);
-  const [user, pass] = decoded.split(":");
-
-  // Compare against secrets (set via wrangler secret put)
-  return user === (env.ADMIN_USER || "admin") && pass === env.ADMIN_PASS;
+  const expected = "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
+  return auth === expected;
 }
 
 function requireAuth() {
