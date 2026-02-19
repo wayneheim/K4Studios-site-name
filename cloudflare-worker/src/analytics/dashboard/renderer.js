@@ -409,9 +409,9 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   <h2>Pulse</h2>
   <div class="pulse">
     <div class="pulse-stat">
-      <span class="value">${s.unique_visitors || 0}</span>
-      <span class="label">Human Visitors <span class="info-icon">i</span></span>
-      <div class="tooltip">Unique human IPs with JS events (Layer C). Bot-filtered. Only counts visitors whose browser loaded JavaScript and triggered events. Does NOT include image-only viewers — see Art Views below for complete picture.</div>
+      <span class="value">${s.unique_visitors > 0 ? (s.sessions / s.unique_visitors).toFixed(1) : '0'}</span>
+      <span class="label">Sessions/Visitor <span class="info-icon">i</span></span>
+      <div class="tooltip">Average number of sessions per human visitor. Higher = more return visits or deeper browsing patterns. ${s.sessions || 0} sessions from ${s.unique_visitors || 0} unique visitors.</div>
     </div>
     <div class="pulse-stat">
       <span class="value"><span style="color:#10b981">${newVisitors}</span>/<span style="color:#f59e0b">${returningVisitors}</span></span>
