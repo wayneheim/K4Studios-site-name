@@ -56,7 +56,7 @@ import {
 // ═══════════════════════════════════════════════════════════════════════════
 // ANALYTICS READ LAYER (Phase 3 — dashboard queries)
 // ═══════════════════════════════════════════════════════════════════════════
-import { getDashboardStats, getEventBreakdown, getGalleryPerformance, getReferrers, getGeography, getDailyTrend, getSessionMetrics, getTopPages, getTopImages, getEntryAnalysis, getEngagementDepth, getExitAnalysis } from './src/analytics/queries.js';
+import { getDashboardStats, getEventBreakdown, getGalleryPerformance, getReferrers, getGeography, getDailyTrend, getSessionMetrics, getTopPages, getTopImages, getEntryAnalysis, getEngagementDepth, getExitAnalysis, getEdgeEvents } from './src/analytics/queries.js';
 
 const MANIFEST_URL = "https://k4studios.com/image-manifest.json";
 const IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";
@@ -1086,60 +1086,10 @@ async function handleAdminAnalytics(request, env) {
       dateClause, ipClause, botClause, chardonClause
     });
 
-    // Query 16: Edge Events (~301/410/404 from edge_events table)
-    // IMPORTANT: Use dateClause (which respects selectedDate) for art_views queries.
-    // edgeDateClause is only used for edge_events (which don't support selectedDate browsing).
-    // Before this fix, art_views used edgeDateClause — which ignored selectedDate,
-    // causing Pulse (events) and Art Viewers (art_views) to show different date windows.
-    const edgeDateClause = yesterday 
-      ? `date(created_at, '-5 hours') = date('now', '-5 hours', '-1 day')`
-      : days === 1 
-        ? `date(created_at, '-5 hours') = date('now', '-5 hours')`
-        : `created_at > datetime('now', '-5 hours', '-${days} days')`;
+    const { edgeEvents, edgeSummary } = await getEdgeEvents(env, { yesterday, days });
+
     // artDateClause: identical to dateClause but keeps the name for clarity in art_views queries
     const artDateClause = dateClause;
-    
-    const edgeEventsQuery = `
-      SELECT 
-        event_type,
-        path,
-        image_id,
-        is_bot,
-        COUNT(*) as hits
-      FROM edge_events
-      WHERE ${edgeDateClause}
-      GROUP BY event_type, path
-      ORDER BY hits DESC, event_type
-      LIMIT 20
-    `;
-    let edgeEvents = [];
-    try {
-      const edgeEventsResult = await env.DB.prepare(edgeEventsQuery).all();
-      edgeEvents = edgeEventsResult.results || [];
-    } catch (e) {
-      // Table might not exist yet
-      console.log('edge_events query failed:', e.message);
-    }
-
-    // Query 16b: Edge events summary by type
-    const edgeSummaryQuery = `
-      SELECT 
-        event_type,
-        SUM(CASE WHEN is_bot = 1 THEN 1 ELSE 0 END) as bot_hits,
-        SUM(CASE WHEN is_bot = 0 THEN 1 ELSE 0 END) as human_hits,
-        COUNT(*) as total
-      FROM edge_events
-      WHERE ${edgeDateClause}
-      GROUP BY event_type
-      ORDER BY total DESC
-    `;
-    let edgeSummary = [];
-    try {
-      const edgeSummaryResult = await env.DB.prepare(edgeSummaryQuery).all();
-      edgeSummary = edgeSummaryResult.results || [];
-    } catch (e) {
-      console.log('edge_events summary failed:', e.message);
-    }
 
     // Query 17: Art Views (Layer B - server-side art attention tracking)
     let artViewsSummary = { xl_zooms: 0, slideshow_starts: 0, external_images: 0, image_pages: 0, chapter_views: 0, galleries: 0, total: 0, unique_viewers: 0, onsite_viewers: 0 };

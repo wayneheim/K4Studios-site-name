@@ -845,3 +845,62 @@ export async function getExitAnalysis(env, filters) {
 
   return { exitPages, exitSummary, exitByCategory };
 }
+
+/**
+ * Group D: Edge Events
+ * Q16: Edge events (301/410/404 from edge_events table)
+ * Q16b: Edge events summary by type
+ */
+export async function getEdgeEvents(env, filters) {
+  const { yesterday, days } = filters;
+
+  const edgeDateClause = yesterday 
+    ? `date(created_at, '-5 hours') = date('now', '-5 hours', '-1 day')`
+    : days === 1 
+      ? `date(created_at, '-5 hours') = date('now', '-5 hours')`
+      : `created_at > datetime('now', '-5 hours', '-${days} days')`;
+
+  const edgeEventsQuery = `
+    SELECT 
+      event_type,
+      path,
+      image_id,
+      is_bot,
+      COUNT(*) as hits
+    FROM edge_events
+    WHERE ${edgeDateClause}
+    GROUP BY event_type, path
+    ORDER BY hits DESC, event_type
+    LIMIT 20
+  `;
+  let edgeEvents = [];
+  try {
+    const edgeEventsResult = await env.DB.prepare(edgeEventsQuery).all();
+    edgeEvents = edgeEventsResult.results || [];
+  } catch (e) {
+    // Table might not exist yet
+    console.log('edge_events query failed:', e.message);
+  }
+
+  // Query 16b: Edge events summary by type
+  const edgeSummaryQuery = `
+    SELECT 
+      event_type,
+      SUM(CASE WHEN is_bot = 1 THEN 1 ELSE 0 END) as bot_hits,
+      SUM(CASE WHEN is_bot = 0 THEN 1 ELSE 0 END) as human_hits,
+      COUNT(*) as total
+    FROM edge_events
+    WHERE ${edgeDateClause}
+    GROUP BY event_type
+    ORDER BY total DESC
+  `;
+  let edgeSummary = [];
+  try {
+    const edgeSummaryResult = await env.DB.prepare(edgeSummaryQuery).all();
+    edgeSummary = edgeSummaryResult.results || [];
+  } catch (e) {
+    console.log('edge_events summary failed:', e.message);
+  }
+
+  return { edgeEvents, edgeSummary };
+}
