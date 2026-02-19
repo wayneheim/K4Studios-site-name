@@ -134,6 +134,26 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   // Label for the footer
   const periodLabel = yesterday ? "Yesterday" : `Last ${days} day(s)`;
   
+  // Green badge label — always shows context for current view mode
+  const greenBadgeLabel = (() => {
+    const today = new Date();
+    const fmt = d => d.toISOString().slice(0, 10); // YYYY-MM-DD
+    if (selectedDate) {
+      // Clicked a specific bar — show mode prefix + date
+      const prefix = yesterday ? 'Yesterday' : days === 1 ? 'Today' : days === 7 ? '7D' : days === 30 ? '30D' : '3M';
+      return `${prefix} — ${selectedDate}`;
+    }
+    if (days === 1 && !yesterday) return fmt(today);
+    if (yesterday) {
+      const yd = new Date(today); yd.setDate(yd.getDate() - 1);
+      return fmt(yd);
+    }
+    if (days === 7) return '7 Day Tally';
+    if (days === 30) return '30 Day Tally';
+    if (days === 90) return '3 Month Tally';
+    return `${days}D Tally`;
+  })();
+  
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -268,7 +288,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <a href="?days=7${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 7 && !yesterday ? 'active' : ''}">7 Days</a>
     <a href="?days=30${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 30 && !yesterday ? 'active' : ''}">30 Days</a>
     <a href="?days=90${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 90 && !yesterday ? 'active' : ''}">3 Months</a>
-    ${selectedDate ? `<span style="background:#059669;padding:4px 10px;border-radius:4px;color:#fff;font-size:13px;">📅 ${selectedDate}</span>` : ''}
+    <span style="background:#059669;padding:4px 10px;border-radius:4px;color:#fff;font-size:13px;">📅 ${greenBadgeLabel}</span>
     <div class="ip-filter">
       ${excludeIp 
         ? `<span class="ip-badge">Excluding: ${excludeIp}</span><a href="${showAllUrl}">Show All IPs</a>`
