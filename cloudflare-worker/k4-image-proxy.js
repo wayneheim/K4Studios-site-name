@@ -53,6 +53,11 @@ import {
   updateBotIntelligence
 } from './src/analytics/collector.js';
 
+// ═══════════════════════════════════════════════════════════════════════════
+// ANALYTICS READ LAYER (Phase 3 — dashboard queries)
+// ═══════════════════════════════════════════════════════════════════════════
+import { getDashboardStats, getEventBreakdown, getGalleryPerformance, getReferrers, getGeography, getDailyTrend, getSessionMetrics, getTopPages, getTopImages, getEntryAnalysis } from './src/analytics/queries.js';
+
 const MANIFEST_URL = "https://k4studios.com/image-manifest.json";
 const IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";
 const MANIFEST_CACHE_TTL = 3600; // seconds
@@ -1026,304 +1031,48 @@ async function handleAdminAnalytics(request, env) {
     // Chardon filter: exclude team member location
     const chardonClause = hideChardon ? `AND city != 'Chardon'` : "";
 
-    // Query 1: Summary stats
-    const summaryQuery = `
-      SELECT 
-        COUNT(DISTINCT session_id) as sessions,
-        COUNT(DISTINCT ip) as unique_visitors,
-        COUNT(*) as total_events,
-        ROUND(1.0 * COUNT(*) / NULLIF(COUNT(DISTINCT session_id), 0), 1) as avg_events_per_session,
-        ROUND(100.0 * COUNT(DISTINCT CASE WHEN event IN ('nav_next', 'nav_prev') THEN session_id END) / 
-          NULLIF(COUNT(DISTINCT session_id), 0), 1) as pct_navigated,
-        COUNT(CASE WHEN event = 'collector_notes_open' THEN 1 END) as collector_notes_opens
-      FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
-    `;
-    const summary = await env.DB.prepare(summaryQuery).first();
-
-    // Query 1b: New vs returning visitors (IPs seen before this period)
-    // For yesterday mode, use start-of-yesterday as the boundary
-    // For rolling windows, use the days offset
+    // Query 1 + 1b: Summary stats + new vs returning (extracted to queries.js)
     const priorPeriodClause = selectedDate
       ? `date(created_at, '-5 hours') < '${selectedDate}'`
       : (yesterday 
         ? `created_at < datetime('now', '-5 hours', '-1 day', 'start of day')`
         : `created_at < datetime('now', '-5 hours', '-${days} days')`
       );
-    
-    const returningQuery = `
-      SELECT COUNT(DISTINCT e.ip) as returning_visitors
-      FROM events e
-      WHERE ${dateClause.replace(/created_at/g, 'e.created_at')} ${ipClause.replace(/ip/g, 'e.ip')} ${botClause.replace(/ip/g, 'e.ip').replace(/city/g, 'e.city').replace(/device/g, 'e.device')} ${chardonClause.replace(/city/g, 'e.city')}
-        AND e.ip IN (
-          SELECT DISTINCT ip FROM events 
-          WHERE ${priorPeriodClause}
-        )
-    `;
-    const returningResult = await env.DB.prepare(returningQuery).first();
-    const returningVisitors = returningResult?.returning_visitors || 0;
-    const newVisitors = (summary?.unique_visitors || 0) - returningVisitors;
-
-    // Query 2: Event breakdown (no LIMIT so granular counts always reconcile)
-    const eventsQuery = `
-      SELECT event, COUNT(*) as count 
-      FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
-      GROUP BY event 
-      ORDER BY count DESC
-    `;
-    const events = await env.DB.prepare(eventsQuery).all();
-
-    // Query 3: Entry effectiveness (cowboy_jump has its own callout)
-    const entryQuery = `
-      SELECT 
-        event as entry_source,
-        COUNT(DISTINCT session_id) as sessions
-      FROM events 
-      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
-        AND event IN ('gallery_hero_click', 'gallery_explore_click', 'gallery_preview_click', 'theme_click')
-      GROUP BY event 
-      ORDER BY sessions DESC
-    `;
-    const entries = await env.DB.prepare(entryQuery).all();
-
-    // Query 4: Gallery performance - derive gallery from page_path for image pages
-    // For /Galleries/.../Western-Cowboy-Portraits/Color/i-xxxxx ? group by gallery folder
-    const galleryQuery = `
-      WITH gallery_paths AS (
-        SELECT 
-          session_id,
-          event,
-          CASE 
-            WHEN page_path LIKE '%/i-%' THEN
-              SUBSTR(page_path, 1, INSTR(page_path, '/i-') - 1)
-            WHEN page_path LIKE '%/Gallery' THEN
-              SUBSTR(page_path, 1, LENGTH(page_path) - 8)
-            ELSE NULL
-          END as base_path
-        FROM events
-        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
-          AND (page_path LIKE '/Galleries/%/i-%' OR page_path LIKE '/Other/%/i-%' OR page_path LIKE '%/Gallery')
-      )
-      SELECT 
-        base_path as gallery_id,
-        COUNT(DISTINCT session_id) as sessions,
-        ROUND(100.0 * COUNT(DISTINCT CASE WHEN event = 'zoom_open' THEN session_id END) / 
-          NULLIF(COUNT(DISTINCT session_id), 0), 1) as zoom_pct,
-        ROUND(1.0 * COUNT(*) / NULLIF(COUNT(DISTINCT session_id), 0), 1) as avg_events
-      FROM gallery_paths
-      WHERE base_path IS NOT NULL
-      GROUP BY base_path
-      ORDER BY sessions DESC
-      LIMIT 15
-    `;
-    const galleriesRaw = await env.DB.prepare(galleryQuery).all();
-    
-    // Post-process: extract last 2 path segments for display + determine type
-    const galleries = {
-      results: (galleriesRaw.results || []).map(g => {
-        const fullPath = g.gallery_id;
-        const parts = fullPath.split('/').filter(Boolean);
-        const displayName = parts.slice(-2).join(' › ').replace(/-/g, ' ');
-        
-        // Determine gallery type from path
-        let gallery_type = 'other';
-        if (fullPath.includes('/Painterly-Fine-Art-Photography/')) {
-          gallery_type = 'painterly';
-        } else if (fullPath.includes('/Fine-Art-Photography/')) {
-          gallery_type = 'traditional';
-        } else if (fullPath.includes('/Engrained/') || fullPath.includes('/Archive/')) {
-          gallery_type = 'select';
-        }
-        
-        return { ...g, gallery_id: displayName, gallery_type };
-      })
-    };
-
-    // Query 5: Referrers
-    const referrerQuery = `
-      SELECT referrer, COUNT(DISTINCT session_id) as sessions
-      FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
-      GROUP BY referrer 
-      ORDER BY sessions DESC
-    `;
-    const referrers = await env.DB.prepare(referrerQuery).all();
-
-    // Query 6: Geography (unique visitors by location)  
-    // ALWAYS exclude datacenter cities regardless of hideBots toggle - geo data is meaningless if polluted
-    const datacenterCityFilter = `AND city NOT IN ('Ashburn', 'Moses Lake', 'Leesburg', 'Dublin', 'Prineville', 'Forest City', 'Clonee', 'Council Bluffs', 'The Dalles', 'Boardman')`;
-    const geoQuery = `
-      SELECT country, region, city, COUNT(DISTINCT ip) as visitors
-      FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause} ${datacenterCityFilter}
-      GROUP BY country, region, city 
-      ORDER BY visitors DESC
-      LIMIT 25
-    `;
-    const geo = await env.DB.prepare(geoQuery).all();
-
-    // Query 7: Daily trend (for chart) - includes both visitors and sessions
-    // Use Eastern time offset for date grouping to match the filter
-    const trendQuery = `
-      SELECT 
-        DATE(created_at, '-5 hours') as day,
-        COUNT(DISTINCT ip) as visitors,
-        COUNT(DISTINCT session_id) as sessions,
-        COUNT(*) as events
-      FROM events 
-      WHERE ${rangeDateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
-      GROUP BY DATE(created_at, '-5 hours')
-      ORDER BY day ASC
-    `;
-    const trend = await env.DB.prepare(trendQuery).all();
-
-    // Query 8: Device/Platform breakdown
-    const deviceQuery = `
-      SELECT device, COUNT(DISTINCT session_id) as sessions
-      FROM events 
-      WHERE ${dateClause} ${galleryClause} ${ipClause} ${botClause} ${chardonClause}
-      GROUP BY device 
-      ORDER BY sessions DESC
-    `;
-    const devices = await env.DB.prepare(deviceQuery).all();
-
-    // Query 8b: Bounce Rate (sessions with only 1 event)
-    const bounceQuery = `
-      SELECT 
-        COUNT(*) as total_sessions,
-        SUM(CASE WHEN event_count = 1 THEN 1 ELSE 0 END) as bounce_sessions
-      FROM (
-        SELECT session_id, COUNT(*) as event_count
-        FROM events
-        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
-        GROUP BY session_id
-      )
-    `;
-    const bounceResult = await env.DB.prepare(bounceQuery).first();
-    const bounceRate = bounceResult?.total_sessions > 0 
-      ? Math.round(100 * bounceResult.bounce_sessions / bounceResult.total_sessions) 
-      : 0;
-
-    // Query 8c: Session Duration (avg time between first and last event)
-    const durationQuery = `
-      SELECT ROUND(AVG(duration_seconds), 0) as avg_duration
-      FROM (
-        SELECT 
-          session_id,
-          (JULIANDAY(MAX(created_at)) - JULIANDAY(MIN(created_at))) * 86400 as duration_seconds
-        FROM events
-        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
-        GROUP BY session_id
-        HAVING COUNT(*) > 1
-      )
-    `;
-    const durationResult = await env.DB.prepare(durationQuery).first();
-    const avgDurationSecs = durationResult?.avg_duration || 0;
-    const avgDurationFormatted = avgDurationSecs >= 60 
-      ? `${Math.floor(avgDurationSecs / 60)}m ${Math.round(avgDurationSecs % 60)}s`
-      : `${Math.round(avgDurationSecs)}s`;
-
-    // Query 8d: Peak Hours (busiest 2 hours of day, adjusted for EST)
-    const peakHoursQuery = `
-      SELECT 
-        CAST(strftime('%H', created_at, '-5 hours') AS INTEGER) as hour,
-        COUNT(DISTINCT session_id) as sessions
-      FROM events
-      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
-      GROUP BY hour
-      ORDER BY sessions DESC
-      LIMIT 2
-    `;
-    const peakHoursResult = await env.DB.prepare(peakHoursQuery).all();
-    const peakHours = (peakHoursResult.results || []).map(h => {
-      const hour24 = h.hour;
-      const hour12 = hour24 === 0 ? 12 : (hour24 > 12 ? hour24 - 12 : hour24);
-      const ampm = hour24 >= 12 ? 'pm' : 'am';
-      return { hour: `${hour12}${ampm}`, sessions: h.sessions };
+    const { summary, returningVisitors, newVisitors } = await getDashboardStats(env, {
+      dateClause, galleryClause, ipClause, botClause, chardonClause, priorPeriodClause
     });
 
-    // Query 8e: Device Engagement (avg depth score by device type)
-    const deviceEngagementQuery = `
-      SELECT 
-        device,
-        COUNT(DISTINCT session_id) as sessions,
-        ROUND(AVG(depth_score), 1) as avg_depth
-      FROM (
-        SELECT 
-          session_id,
-          MAX(device) as device,
-          SUM(
-            CASE event
-              WHEN 'zoom_open' THEN 4
-              WHEN 'collector_notes_open' THEN 5
-              WHEN 'theme_click' THEN 3
-              WHEN 'nav_next' THEN 2
-              WHEN 'nav_prev' THEN 2
-              ELSE 1
-            END
-          ) as depth_score
-        FROM events
-        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
-        GROUP BY session_id
-      )
-      GROUP BY device
-      ORDER BY sessions DESC
-    `;
-    const deviceEngagementResult = await env.DB.prepare(deviceEngagementQuery).all();
-    const deviceEngagement = deviceEngagementResult.results || [];
+    const { events, entries } = await getEventBreakdown(env, {
+      dateClause, galleryClause, ipClause, botClause, chardonClause
+    });
 
-    // Query 9: Top pages (exclude image pages and legacy SmugMug paths)
-    const pagesQuery = `
-      SELECT page_path, COUNT(DISTINCT session_id) as sessions, COUNT(*) as events
-      FROM events 
-      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause} 
-        AND page_path IS NOT NULL
-        AND page_path NOT LIKE '%/i-%'
-        AND page_path NOT LIKE '/Photoshootsandevents/%'
-        AND page_path NOT LIKE '/Scheduled-Shoots/%'
-        AND page_path NOT LIKE '/Other/Photo-Shoots/%'
-        AND page_path NOT LIKE '/Other/Photo-Shoots-and-Themes/%'
-        AND page_path NOT LIKE '/Is-Winter/%'
-        AND page_path NOT LIKE '/Photography-Galleries/%'
-      GROUP BY page_path 
-      ORDER BY sessions DESC
-      LIMIT 10
-    `;
-    const pages = await env.DB.prepare(pagesQuery).all();
+    const galleries = await getGalleryPerformance(env, {
+      dateClause, ipClause, botClause, chardonClause
+    });
 
-    // Query 10: Most popular images (use page_path with /i- pattern for actual page visits)
-    const imagesQuery = `
-      SELECT 
-        page_path,
-        COUNT(DISTINCT session_id) as sessions,
-        COUNT(*) as events,
-        COUNT(CASE WHEN event = 'zoom_open' THEN 1 END) as zooms
-      FROM events 
-      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause} 
-        AND page_path IS NOT NULL
-        AND page_path LIKE '%/i-%'
-      GROUP BY page_path 
-      ORDER BY sessions DESC
-      LIMIT 10
-    `;
-    const images = await env.DB.prepare(imagesQuery).all();
+    const referrers = await getReferrers(env, {
+      dateClause, galleryClause, ipClause, botClause, chardonClause
+    });
 
-    // Query 10b: Total image page stats (unique images viewed + total views)
-    const imageStatsQuery = `
-      SELECT 
-        COUNT(DISTINCT page_path) as unique_images,
-        COUNT(DISTINCT session_id) as total_sessions,
-        COUNT(CASE WHEN event = 'page_view' THEN 1 END) as total_views
-      FROM events 
-      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause} 
-        AND page_path IS NOT NULL
-        AND page_path LIKE '%/i-%'
-    `;
-    const imageStatsResult = await env.DB.prepare(imageStatsQuery).first();
-    const uniqueImagesViewed = imageStatsResult?.unique_images || 0;
-    const totalImageSessions = imageStatsResult?.total_sessions || 0;
-    const totalImageViews = imageStatsResult?.total_views || 0;
+    const geo = await getGeography(env, {
+      dateClause, galleryClause, ipClause, botClause, chardonClause
+    });
+
+    const trend = await getDailyTrend(env, {
+      rangeDateClause, galleryClause, ipClause, botClause, chardonClause
+    });
+
+    const { devices, bounceRate, avgDurationSecs, avgDurationFormatted, peakHours, deviceEngagement } = await getSessionMetrics(env, {
+      dateClause, galleryClause, ipClause, botClause, chardonClause
+    });
+
+    const pages = await getTopPages(env, {
+      dateClause, ipClause, botClause, chardonClause
+    });
+
+    const { images, uniqueImagesViewed, totalImageSessions, totalImageViews } = await getTopImages(env, {
+      dateClause, ipClause, botClause, chardonClause
+    });
 
     // Query 11: Top themes clicked
     const themesQuery = `
@@ -1348,134 +1097,9 @@ async function handleAdminAnalytics(request, env) {
     const cowboyResult = await env.DB.prepare(cowboyQuery).first();
     const cowboyJumps = cowboyResult?.jumps || 0;
 
-    // Query 12b: Top Entry Pages (first page of each session) with referrer
-    // This shows WHERE people actually land on the site and WHERE they came from
-    const entryPagesQuery = `
-      WITH first_pages AS (
-        SELECT 
-          session_id,
-          ip,
-          page_path,
-          referrer,
-          raw_referrer,
-          ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY created_at ASC) as rn
-        FROM events
-        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
-          AND page_path IS NOT NULL
-          AND event = 'page_view'
-      )
-      SELECT 
-        page_path,
-        CASE 
-          WHEN referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' THEN 'direct'
-          WHEN COALESCE(raw_referrer, referrer) LIKE '%images.google.%' OR COALESCE(raw_referrer, referrer) LIKE '%google.%/imgres%' THEN 'google_images'
-          WHEN referrer = 'google' OR referrer LIKE '%google.%' THEN 'google_search'
-          WHEN COALESCE(raw_referrer, referrer) LIKE '%bing.%/images%' THEN 'bing_images'
-          WHEN referrer = 'bing' OR referrer LIKE '%bing.%' THEN 'bing_search'
-          WHEN referrer = 'pinterest' OR referrer LIKE '%pinterest.%' THEN 'pinterest'
-          WHEN referrer = 'facebook' OR referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
-          WHEN referrer = 'twitter' OR referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'twitter'
-          WHEN referrer = 'chatgpt' OR referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'chatgpt'
-          WHEN referrer = 'instagram' OR referrer LIKE '%instagram.%' THEN 'instagram'
-          WHEN referrer = 'linkedin' OR referrer LIKE '%linkedin.%' THEN 'linkedin'
-          WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
-          WHEN referrer = 'internal' OR referrer LIKE '%k4studios.com%' THEN 'internal'
-          ELSE 'unattributed'
-        END as ref_source,
-        COUNT(DISTINCT session_id) as sessions
-      FROM first_pages
-      WHERE rn = 1
-      GROUP BY page_path, ref_source
-      ORDER BY sessions DESC
-      LIMIT 15
-    `;
-    const entryPagesResult = await env.DB.prepare(entryPagesQuery).all();
-    const entryPages = entryPagesResult.results || [];
-
-    // Diagnostic: first-party chapter/image page activity (from events)
-    // Helps explain cases where Top Entry Pages show /i-... but Layer-B chapter_view is 0
-    // (common cause: cross-site beacon to workers.dev blocked by privacy tools / CSP).
-    let imagePageViewsFromEvents = 0;
-    let imageEntrySessionsFromEvents = 0;
-    try {
-      const imagePageViewsQuery = `
-        SELECT COUNT(*) as views
-        FROM events
-        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
-          AND event = 'page_view'
-          AND page_path IS NOT NULL
-          AND page_path LIKE '%/i-%'
-      `;
-      const imagePageViewsResult = await env.DB.prepare(imagePageViewsQuery).first();
-      imagePageViewsFromEvents = imagePageViewsResult?.views || 0;
-
-      const imageEntrySessionsQuery = `
-        WITH first_pages AS (
-          SELECT
-            session_id,
-            ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY created_at ASC) as rn,
-            page_path
-          FROM events
-          WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
-            AND page_path IS NOT NULL
-            AND event = 'page_view'
-        )
-        SELECT COUNT(DISTINCT session_id) as sessions
-        FROM first_pages
-        WHERE rn = 1 AND page_path LIKE '%/i-%'
-      `;
-      const imageEntrySessionsResult = await env.DB.prepare(imageEntrySessionsQuery).first();
-      imageEntrySessionsFromEvents = imageEntrySessionsResult?.sessions || 0;
-    } catch (e) {
-      console.log('image page diagnostics query failed:', e.message);
-    }
-    
-    // Entry referrer summary - where did site visitors come from?
-    // More specific patterns to distinguish search vs images
-    const entryRefSummaryQuery = `
-      WITH first_pages AS (
-        SELECT 
-          session_id,
-          ip,
-          referrer,
-          raw_referrer,
-          ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY created_at ASC) as rn
-        FROM events
-        WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
-          AND page_path IS NOT NULL
-          AND event = 'page_view'
-      )
-      SELECT 
-        CASE 
-          WHEN referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' THEN 'direct'
-          -- Match raw URLs (future data with raw referrer in cookie)
-          WHEN COALESCE(raw_referrer, referrer) LIKE '%images.google.%' OR COALESCE(raw_referrer, referrer) LIKE '%google.%/imgres%' THEN 'google_images'
-          -- Match normalized labels (existing data) AND raw URLs
-          WHEN referrer = 'google' OR referrer LIKE '%google.%' THEN 'google_search'
-          WHEN COALESCE(raw_referrer, referrer) LIKE '%bing.%/images%' THEN 'bing_images'
-          WHEN referrer = 'bing' OR referrer LIKE '%bing.%' THEN 'bing_search'
-          WHEN referrer = 'pinterest' OR referrer LIKE '%pinterest.%' THEN 'pinterest'
-          WHEN referrer = 'facebook' OR referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
-          WHEN referrer = 'twitter' OR referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'twitter'
-          WHEN referrer = 'chatgpt' OR referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'chatgpt'
-          WHEN referrer = 'instagram' OR referrer LIKE '%instagram.%' THEN 'instagram'
-          WHEN referrer = 'linkedin' OR referrer LIKE '%linkedin.%' THEN 'linkedin'
-          WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
-          WHEN referrer = 'internal' OR referrer LIKE '%k4studios.com%' THEN 'internal'
-          ELSE 'unattributed'
-        END as ref_source,
-        COUNT(DISTINCT ip) as visitors
-      FROM first_pages
-      WHERE rn = 1
-      GROUP BY ref_source
-      HAVING ref_source != 'internal'
-      ORDER BY visitors DESC
-    `;
-    const entryRefSummaryResult = await env.DB.prepare(entryRefSummaryQuery).all();
-    const entryRefSummary = entryRefSummaryResult.results || [];
-    // Convert to lookup
-    const entryRefCounts = {};
-    entryRefSummary.forEach(r => { entryRefCounts[r.ref_source] = r.visitors; });
+    const { entryPages, imagePageViewsFromEvents, imageEntrySessionsFromEvents, entryRefCounts } = await getEntryAnalysis(env, {
+      dateClause, ipClause, botClause, chardonClause
+    });
 
     // Query 13: Session Depth Score (engagement quality metric)
     // Weighted scoring: zoom=4, collector_notes=5, theme_click=3, nav=2, other=1
