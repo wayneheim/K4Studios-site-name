@@ -310,24 +310,24 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
 
   ${trend.length > 1 ? `
   <h3 style="color:#fff;font-size:14px;margin-bottom:6px;">
-    <span id="chart-title">Engaged Sessions per Day</span>
+    <span id="chart-title">Human Visitors per Day</span>
     <span style="float: right; font-size: 12px; font-weight: normal;">
-      <a href="#" id="toggle-sessions" style="color: #4a9eff; text-decoration: underline;">Sessions</a> |
-      <a href="#" id="toggle-visitors" style="color: #888; text-decoration: none;">Unique IPs</a>
+      <a href="#" id="toggle-visitors" style="color: #10b981; text-decoration: underline;">Visitors</a> |
+      <a href="#" id="toggle-sessions" style="color: #888; text-decoration: none;">Sessions</a>
     </span>
   </h3>
   <div class="trend-chart">
     <div class="trend-bars" id="trend-chart-bars">
       ${(() => {
-        const maxSessions = Math.max(...trend.map(t => t.sessions), 1);
+        const maxVisitors = Math.max(...trend.map(t => t.visitors), 1);
         return trend.map(t => {
-          const height = Math.max((t.sessions / maxSessions * 100), 2);
+          const height = Math.max((t.visitors / maxVisitors * 100), 2);
           const dateLabel = t.day.slice(5); // MM-DD format
           const isDataChangeDate = t.day === '2026-02-14';
           const isSelected = selectedDate === t.day;
           return `
-            <div class="trend-bar${isSelected ? ' selected' : ''}" data-visitors="${t.visitors}" data-sessions="${t.sessions}" data-day="${t.day}" style="height: ${height}%" title="${t.day}: ${t.sessions} sessions, ${t.visitors} unique IPs">
-              <span class="trend-bar-value">${t.sessions}</span>
+            <div class="trend-bar${isSelected ? ' selected' : ''}" data-visitors="${t.visitors}" data-sessions="${t.sessions}" data-day="${t.day}" style="height: ${height}%" title="${t.day}: ${t.visitors} visitors, ${t.sessions} sessions">
+              <span class="trend-bar-value">${t.visitors}</span>
               <span class="trend-bar-label">${dateLabel}${isDataChangeDate ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ''}</span>
             </div>
           `;
@@ -366,9 +366,9 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           const val = parseInt(bar.dataset.visitors);
           bar.style.height = Math.max((val / maxVal * 100), 2) + '%';
           bar.querySelector('.trend-bar-value').textContent = val;
-          bar.title = bar.dataset.day + ': ' + val + ' unique IPs';
+          bar.title = bar.dataset.day + ': ' + val + ' visitors';
         });
-        chartTitle.textContent = 'Unique IPs per Day';
+        chartTitle.textContent = 'Human Visitors per Day';
         visitorsLink.style.color = '#10b981';
         visitorsLink.style.textDecoration = 'underline';
         sessionsLink.style.color = '#888';
@@ -381,7 +381,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           const val = parseInt(bar.dataset.sessions);
           bar.style.height = Math.max((val / maxVal * 100), 2) + '%';
           bar.querySelector('.trend-bar-value').textContent = val;
-          bar.title = bar.dataset.day + ': ' + val + ' engaged sessions';
+          bar.title = bar.dataset.day + ': ' + val + ' sessions';
         });
         chartTitle.textContent = 'Engaged Sessions per Day';
         sessionsLink.style.color = '#4a9eff';
@@ -396,10 +396,10 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   </script>
   ` : trend.length === 1 ? `
   <div class="trend-chart">
-    <h3>Engaged Sessions</h3>
+    <h3>Human Visitors</h3>
     <div class="trend-bars" style="justify-content: center;">
-      <div class="trend-bar" style="height: 100%; width: 80px;" title="${trend[0].day}: ${trend[0].sessions} sessions, ${trend[0].visitors} unique IPs">
-        <span class="trend-bar-value">${trend[0].sessions}</span>
+      <div class="trend-bar" style="height: 100%; width: 80px;" title="${trend[0].day}: ${trend[0].visitors} visitors, ${trend[0].sessions} sessions">
+        <span class="trend-bar-value">${trend[0].visitors}</span>
         <span class="trend-bar-label">${trend[0].day.slice(5)}${trend[0].day === '2026-02-14' ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ''}</span>
       </div>
     </div>
