@@ -629,3 +629,157 @@ export async function getEntryAnalysis(env, filters) {
 
   return { entryPages, imagePageViewsFromEvents, imageEntrySessionsFromEvents, entryRefCounts };
 }
+
+/**
+ * Group B: Engagement Depth
+ * Q11: Top themes clicked
+ * Q12: Cowboy jump count
+ * Q13: Session depth scores (weighted, with bot detection)
+ * Q13b: Average depth score
+ * Q14: Deep session %
+ * Q14b: Bot traffic estimate
+ */
+export async function getEngagementDepth(env, filters) {
+  const { dateClause, ipClause, botClause, chardonClause } = filters;
+
+  // Query 11: Top themes clicked
+  const themesQuery = `
+    SELECT 
+      theme,
+      COUNT(DISTINCT session_id) as sessions,
+      COUNT(*) as clicks
+    FROM events 
+    WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause} AND theme IS NOT NULL
+    GROUP BY theme 
+    ORDER BY sessions DESC
+    LIMIT 10
+  `;
+  const themesClicked = await env.DB.prepare(themesQuery).all();
+
+  // Query 12: Cowboy Jump count (separate from galleries)
+  const cowboyQuery = `
+    SELECT COUNT(DISTINCT session_id) as jumps
+    FROM events 
+    WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause} AND event = 'cowboy_jump'
+  `;
+  const cowboyResult = await env.DB.prepare(cowboyQuery).first();
+  const cowboyJumps = cowboyResult?.jumps || 0;
+
+  // Query 13: Session Depth Score (engagement quality metric)
+  // Weighted scoring: zoom=4, collector_notes=5, theme_click=3, nav=2, other=1
+  // Also grab location from the first event of each session + bot detection
+  const depthQuery = `
+    SELECT 
+      e.session_id,
+      SUM(
+        CASE e.event
+          WHEN 'zoom_open' THEN 4
+          WHEN 'collector_notes_open' THEN 5
+          WHEN 'theme_click' THEN 3
+          WHEN 'nav_next' THEN 2
+          WHEN 'nav_prev' THEN 2
+          ELSE 1
+        END
+      ) as depth_score,
+      COUNT(*) as event_count,
+      MAX(e.city) as city,
+      MAX(e.region) as region,
+      MAX(e.country) as country,
+      MAX(e.device) as device,
+      MAX(e.ip) as ip,
+      CASE WHEN 
+        MAX(e.ip) LIKE '3.%' OR MAX(e.ip) LIKE '17.%' OR MAX(e.ip) LIKE '18.%' OR MAX(e.ip) LIKE '40.77.%' OR MAX(e.ip) LIKE '52.%' OR MAX(e.ip) LIKE '54.%' OR MAX(e.ip) LIKE '65.55.%'
+        OR MAX(e.city) = 'Ashburn'
+        OR MAX(e.device) = 'unknown'
+      THEN 1 ELSE 0 END as is_bot
+    FROM events e
+    WHERE ${dateClause.replace(/created_at/g, 'e.created_at')} ${ipClause.replace(/ip/g, 'e.ip')} ${botClause.replace(/ip/g, 'e.ip').replace(/city/g, 'e.city').replace(/device/g, 'e.device')} ${chardonClause.replace(/city/g, 'e.city')}
+    GROUP BY e.session_id
+    ORDER BY depth_score DESC
+    LIMIT 15
+  `;
+  const depthResults = await env.DB.prepare(depthQuery).all();
+  const topDepthSessions = depthResults.results || [];
+  
+  // Calculate min/max engagement scores from topDepthSessions
+  const engagementScores = topDepthSessions.map(s => s.depth_score).filter(s => s > 0);
+  const minEngagement = engagementScores.length > 0 ? Math.min(...engagementScores) : 0;
+  const maxEngagement = engagementScores.length > 0 ? Math.max(...engagementScores) : 0;
+
+  // Query 13b: Average depth score across all sessions
+  const avgDepthQuery = `
+    SELECT ROUND(AVG(depth_score), 1) as avg_depth FROM (
+      SELECT 
+        session_id,
+        SUM(
+          CASE event
+            WHEN 'zoom_open' THEN 4
+            WHEN 'collector_notes_open' THEN 5
+            WHEN 'theme_click' THEN 3
+            WHEN 'nav_next' THEN 2
+            WHEN 'nav_prev' THEN 2
+            ELSE 1
+          END
+        ) as depth_score
+      FROM events
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+      GROUP BY session_id
+    )
+  `;
+  const avgDepthResult = await env.DB.prepare(avgDepthQuery).first();
+  const avgDepthScore = avgDepthResult?.avg_depth || 0;
+
+  // Query 14: Deep Session % (north-star metric)
+  // Deep = zoom_open OR event_count >= 10 OR scroll_75/scroll_100
+  const deepSessionQuery = `
+    SELECT 
+      COUNT(*) as total_sessions,
+      SUM(CASE WHEN is_deep = 1 THEN 1 ELSE 0 END) as deep_sessions
+    FROM (
+      SELECT 
+        session_id,
+        CASE WHEN 
+          MAX(CASE WHEN event = 'zoom_open' THEN 1 ELSE 0 END) = 1
+          OR COUNT(*) >= 10
+          OR MAX(CASE WHEN event IN ('scroll_75', 'scroll_100') THEN 1 ELSE 0 END) = 1
+        THEN 1 ELSE 0 END as is_deep
+      FROM events
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+      GROUP BY session_id
+    )
+  `;
+  const deepResult = await env.DB.prepare(deepSessionQuery).first();
+  const totalSessions = deepResult?.total_sessions || 0;
+  const deepSessions = deepResult?.deep_sessions || 0;
+  const deepSessionPct = totalSessions > 0 ? Math.round(100 * deepSessions / totalSessions) : 0;
+
+  // Query 14b: Bot traffic estimate
+  // Heuristics: datacenter IPs (AWS 3.x, 18.x, 52.x, 54.x), Ashburn city, linux+single-event, unknown device
+  const botQuery = `
+    SELECT 
+      COUNT(DISTINCT session_id) as total_sessions,
+      COUNT(DISTINCT CASE WHEN is_bot = 1 THEN session_id END) as bot_sessions
+    FROM (
+      SELECT 
+        session_id,
+        ip,
+        city,
+        device,
+        COUNT(*) as event_count,
+        CASE WHEN 
+          ip LIKE '3.%' OR ip LIKE '18.%' OR ip LIKE '52.%' OR ip LIKE '54.%' OR ip LIKE '65.55.%'
+          OR city = 'Ashburn'
+          OR device = 'unknown'
+          OR (device = 'linux' AND COUNT(*) = 1)
+        THEN 1 ELSE 0 END as is_bot
+      FROM events
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+      GROUP BY session_id
+    )
+  `;
+  const botResult = await env.DB.prepare(botQuery).first();
+  const botSessions = botResult?.bot_sessions || 0;
+  const botPct = totalSessions > 0 ? Math.round(100 * botSessions / totalSessions) : 0;
+
+  return { themesClicked, cowboyJumps, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, botSessions, botPct };
+}
