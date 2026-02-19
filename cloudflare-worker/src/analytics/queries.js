@@ -904,3 +904,382 @@ export async function getEdgeEvents(env, filters) {
 
   return { edgeEvents, edgeSummary };
 }
+
+/**
+ * Group E: Art Views (Layer B + Events overrides)
+ * 18 queries across art_views + events tables
+ * Q17.1–Q17.12: art_views table queries (summary, clean external, unique viewers, top art, external displays, geo)
+ * Q17b.1–Q17b.6: events table overrides (chapter views, xl zooms, galleries from same-origin events)
+ */
+export async function getArtViews(env, filters) {
+  const { dateClause, ipClause, botClause, chardonClause, artIpClause } = filters;
+  // artDateClause: identical to dateClause but keeps the name for clarity in art_views queries
+  const artDateClause = dateClause;
+
+  let artViewsSummary = { xl_zooms: 0, slideshow_starts: 0, external_images: 0, image_pages: 0, chapter_views: 0, galleries: 0, total: 0, unique_viewers: 0, onsite_viewers: 0 };
+  let artViewsByType = [];
+  let topArtViews = [];
+  try {
+    // Bot filter clause - always exclude is_bot = 1
+    const botFilterClause = 'AND (is_bot = 0 OR is_bot IS NULL)';
+    
+    // Summary by type (humans only)
+    const artViewsSummaryQuery = `
+      SELECT 
+        type,
+        COUNT(*) as views,
+        COUNT(DISTINCT target_id) as unique_targets,
+        COUNT(DISTINCT ip_hash) as unique_viewers
+      FROM art_views
+      WHERE ${artDateClause} ${botFilterClause} ${artIpClause}
+      GROUP BY type
+    `;
+    const artViewsSummaryResult = await env.DB.prepare(artViewsSummaryQuery).all();
+    artViewsByType = artViewsSummaryResult.results || [];
+    
+    // Calculate totals
+    let pollutedExternalCount = 0;
+    for (const row of artViewsByType) {
+      if (row.type === 'xl_zoom') artViewsSummary.xl_zooms = row.views;
+      if (row.type === 'slideshow_start') artViewsSummary.slideshow_starts = row.views;
+      if (row.type === 'image') artViewsSummary.xl_zooms += row.views; // Legacy 'image' type ? treat as xl_zoom
+      if (row.type === 'image_page') artViewsSummary.image_pages = row.views;
+      if (row.type === 'chapter_view') artViewsSummary.chapter_views = row.views;
+      if (row.type === 'gallery_view') artViewsSummary.galleries = row.views;
+      if (row.type === 'external_image') pollutedExternalCount = row.views; // Track polluted count to subtract
+    }
+    
+    // Get CLEAN external image count (excluding k4studios referrers - old polluted data)
+    const cleanExternalQuery = `
+      SELECT COUNT(*) as views
+      FROM art_views
+      WHERE ${artDateClause} ${botFilterClause} ${artIpClause} AND type = 'external_image'
+        AND referrer IS NOT NULL AND referrer != ''
+        AND referrer NOT LIKE '%k4studios%' AND referrer NOT LIKE '%localhost%'
+    `;
+    const cleanExternalResult = await env.DB.prepare(cleanExternalQuery).first();
+    artViewsSummary.external_images = cleanExternalResult?.views || 0;
+    
+    // Total Image Views = Chapter Views (JS-verified) + External (actual views, not engagement clicks)
+    // XL zooms and slideshow starts are engagement actions, not separate views
+    // chapter_view = human-verified (JS beacon), image_page = server-side (includes bots)
+    artViewsSummary.total = (artViewsSummary.chapter_views || 0) + artViewsSummary.external_images;
+    
+    // Get unique ART viewers (chapters + clean external only, not gallery browsers or zoom clickers)
+    // chapter_view = JS-verified human, external_image = server-side external embed
+    // Include null-referrer externals (legitimate viewers without Referer header)
+    const uniqueViewersQuery = `
+      SELECT COUNT(DISTINCT ip_hash) as unique_viewers
+      FROM art_views
+      WHERE ${artDateClause} AND (is_bot = 0 OR is_bot IS NULL) ${artIpClause}
+        AND type IN ('chapter_view', 'external_image')
+        AND (type != 'external_image' OR referrer IS NULL OR (referrer NOT LIKE '%k4studios%' AND referrer NOT LIKE '%localhost%'))
+    `;
+    const uniqueViewersResult = await env.DB.prepare(uniqueViewersQuery).first();
+    artViewsSummary.unique_viewers = uniqueViewersResult?.unique_viewers || 0;
+    
+    // Get on-site unique viewers (JS-verified chapter viewers only)
+    // Must match the population in unique_viewers so External-only = unique - onsite >= 0
+    const onsiteViewersQuery = `
+      SELECT COUNT(DISTINCT ip_hash) as onsite_viewers
+      FROM art_views
+      WHERE ${artDateClause} AND (is_bot = 0 OR is_bot IS NULL) ${artIpClause} AND type = 'chapter_view'
+    `;
+    const onsiteViewersResult = await env.DB.prepare(onsiteViewersQuery).first();
+    artViewsSummary.onsite_viewers = onsiteViewersResult?.onsite_viewers || 0;
+    
+    // Top viewed art - separate queries for each type (humans only)
+    const topChaptersQuery = `
+      SELECT 
+        type,
+        target_id,
+        COUNT(*) as views,
+        COUNT(DISTINCT ip_hash) as unique_viewers
+      FROM art_views
+      WHERE ${artDateClause} AND type = 'chapter_view' ${botFilterClause} ${artIpClause}
+      GROUP BY target_id
+      ORDER BY views DESC
+    `;
+    const topXLZoomsQuery = `
+      SELECT 
+        type,
+        target_id,
+        COUNT(*) as views,
+        COUNT(DISTINCT ip_hash) as unique_viewers
+      FROM art_views
+      WHERE ${artDateClause} AND (type = 'xl_zoom' OR type = 'image') ${botFilterClause} ${artIpClause}
+      GROUP BY target_id
+      ORDER BY views DESC
+    `;
+    // External images (Google Images, Bing, Pinterest, etc - NOT from k4studios)
+    // Exclude k4studios referrers (internal traffic logged before filter was added)
+    // Show top images by total views, with dominant source indicator
+    const topExternalQuery = `
+      SELECT 
+        'external_image' as type,
+        target_id,
+        CASE 
+          WHEN referrer LIKE '%google.%' THEN 'google'
+          WHEN referrer LIKE '%bing.%' THEN 'bing'
+          WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
+          WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
+          WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'twitter'
+          WHEN referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'chatgpt'
+          WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
+          ELSE 'unattributed'
+        END as top_source,
+        COUNT(*) as views,
+        COUNT(*) as unique_viewers
+      FROM art_views
+      WHERE ${artDateClause} AND type = 'external_image' ${botFilterClause} ${artIpClause}
+        AND referrer IS NOT NULL AND referrer != ''
+        AND referrer NOT LIKE '%k4studios%' AND referrer NOT LIKE '%localhost%'
+      GROUP BY target_id, top_source
+      ORDER BY views DESC
+      LIMIT 15
+    `;
+    const topGalleriesQuery = `
+      SELECT 
+        type,
+        target_id,
+        COUNT(*) as views,
+        COUNT(DISTINCT ip_hash) as unique_viewers
+      FROM art_views
+      WHERE ${artDateClause} AND type = 'gallery_view' ${botFilterClause} ${artIpClause}
+      GROUP BY target_id
+      ORDER BY views DESC
+      LIMIT 15
+    `;
+    const [topChaptersResult, topXLZoomsResult, topExternalResult, topGalleriesResult] = await Promise.all([
+      env.DB.prepare(topChaptersQuery).all(),
+      env.DB.prepare(topXLZoomsQuery).all(),
+      env.DB.prepare(topExternalQuery).all(),
+      env.DB.prepare(topGalleriesQuery).all()
+    ]);
+    topArtViews = {
+      chapters: topChaptersResult.results || [],
+      xlZooms: topXLZoomsResult.results || [],
+      external: topExternalResult.results || [],
+      galleries: topGalleriesResult.results || []
+    };
+    
+    // Art View External Displays - where are our images being shown externally?
+    // ONLY external_image types - images being served to other platforms (not clicks to site)
+    // Exclude k4studios referrers (internal traffic that was logged before filter was added)
+    const artExternalDisplayQuery = `
+      SELECT 
+        CASE 
+          WHEN referrer LIKE '%images.google.%' OR referrer LIKE '%google.%/imgres%' THEN 'Google Images'
+          WHEN referrer LIKE '%google.%' THEN 'Google Search'
+          WHEN referrer LIKE '%bing.%/images%' THEN 'Bing Images'
+          WHEN referrer LIKE '%bing.%' THEN 'Bing Search'
+          WHEN referrer LIKE '%pinterest.%' THEN 'Pinterest'
+          WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'Facebook'
+          WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'Twitter/X'
+          WHEN referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'ChatGPT'
+          WHEN referrer LIKE '%instagram.%' THEN 'Instagram'
+          WHEN referrer LIKE '%linkedin.%' THEN 'LinkedIn'
+          WHEN referrer LIKE '%duckduckgo.%' THEN 'DuckDuckGo'
+          WHEN referrer LIKE '%yandex.%' THEN 'Yandex'
+          WHEN referrer LIKE '%baidu.%' THEN 'Baidu'
+          ELSE referrer
+        END as source,
+        COUNT(*) as views,
+        COUNT(DISTINCT ip_hash) as unique_viewers
+      FROM art_views
+      WHERE ${artDateClause} ${botFilterClause} ${artIpClause} AND type = 'external_image'
+        AND referrer IS NOT NULL AND referrer != ''
+        AND referrer NOT LIKE '%k4studios%' AND referrer NOT LIKE '%localhost%'
+      GROUP BY source
+      ORDER BY views DESC
+    `;
+    const artExternalDisplayResult = await env.DB.prepare(artExternalDisplayQuery).all();
+    artViewsSummary.externalDisplays = artExternalDisplayResult.results || [];
+    
+    // Count external image views with no referrer (potential unauthorized embedding)
+    const noRefExternalQuery = `
+      SELECT COUNT(*) as views, COUNT(DISTINCT ip_hash) as unique_viewers
+      FROM art_views
+      WHERE ${artDateClause} ${botFilterClause} ${artIpClause} AND type = 'external_image'
+        AND (referrer IS NULL OR referrer = '')
+    `;
+    const noRefResult = await env.DB.prepare(noRefExternalQuery).first();
+    artViewsSummary.noRefExternalViews = noRefResult?.views || 0;
+    artViewsSummary.noRefExternalViewers = noRefResult?.unique_viewers || 0;
+    
+    // Datacenter cities to always exclude from geography
+    const artDcCityFilter = `AND city NOT IN ('Ashburn', 'Moses Lake', 'Leesburg', 'Dublin', 'Prineville', 'Forest City', 'Clonee', 'Council Bluffs', 'The Dalles', 'Boardman')`;
+    
+    // On-site Art Viewer Geography - JS-verified chapter_view + gallery_view only
+    const onsiteGeoQuery = `
+      SELECT 
+        country, region, city,
+        COUNT(*) as views,
+        COUNT(DISTINCT ip_hash) as unique_viewers
+      FROM art_views
+      WHERE ${artDateClause} ${botFilterClause} ${artIpClause} ${artDcCityFilter}
+        AND type IN ('chapter_view', 'gallery_view')
+      GROUP BY country, region, city
+      ORDER BY unique_viewers DESC, views DESC
+      LIMIT 20
+    `;
+    const onsiteGeoResult = await env.DB.prepare(onsiteGeoQuery).all();
+    artViewsSummary.geography = onsiteGeoResult.results || [];
+
+    // External Reach Geography - where are hotlinked images being served?
+    // Note: geo reflects the requesting IP (often CDN edge, not always end user)
+    const externalGeoQuery = `
+      SELECT 
+        country, region, city,
+        COUNT(*) as views,
+        COUNT(DISTINCT ip_hash) as unique_viewers
+      FROM art_views
+      WHERE ${artDateClause} ${botFilterClause} ${artIpClause}
+        AND type = 'external_image'
+        AND referrer NOT LIKE '%k4studios%' AND referrer NOT LIKE '%localhost%'
+      GROUP BY country, region, city
+      ORDER BY unique_viewers DESC, views DESC
+      LIMIT 15
+    `;
+    const externalGeoResult = await env.DB.prepare(externalGeoQuery).all();
+    artViewsSummary.externalGeography = externalGeoResult.results || [];
+  } catch (e) {
+    console.log('art_views query failed (table may not exist):', e.message);
+  }
+
+  // Reliable on-site counts: use explicit same-origin events (not /i- URL proxies)
+  // - chapter_view is fired by the chapter interface itself
+  // - zoom_open is the click that opens the XL zoom overlay
+  try {
+    const beaconChapterViews = artViewsSummary?.chapter_views || 0;
+    const beaconXLZooms = artViewsSummary?.xl_zooms || 0;
+
+    const chapterViewsEventsQuery = `
+      SELECT COUNT(*) as views
+      FROM events
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+        AND event = 'chapter_view'
+        AND (page_path LIKE '/Galleries/%' OR page_path LIKE '/Other/%')
+    `;
+    const chapterViewsEventsResult = await env.DB.prepare(chapterViewsEventsQuery).first();
+    const chapterViewsEvents = chapterViewsEventsResult?.views || 0;
+
+    const topChaptersEventsQuery = `
+      SELECT 
+        image_id,
+        MIN(page_path) as page_url,
+        COUNT(*) as views,
+        COUNT(DISTINCT ip) as unique_viewers
+      FROM events
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+        AND event = 'chapter_view'
+        AND image_id IS NOT NULL
+        AND (page_path LIKE '/Galleries/%' OR page_path LIKE '/Other/%')
+      GROUP BY image_id
+      ORDER BY views DESC
+    `;
+    const topChaptersEventsResult = await env.DB.prepare(topChaptersEventsQuery).all();
+    const topChaptersEvents = (topChaptersEventsResult.results || []).map((r) => ({
+      type: 'chapter_view',
+      target_id: r.image_id,
+      page_url: r.page_url || null,
+      views: r.views || 0,
+      unique_viewers: r.unique_viewers || 0
+    }));
+
+    const xlZoomsEventsQuery = `
+      SELECT COUNT(*) as views
+      FROM events
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+        AND event = 'zoom_open'
+        AND (page_path LIKE '/Galleries/%' OR page_path LIKE '/Other/%')
+    `;
+    const xlZoomsEventsResult = await env.DB.prepare(xlZoomsEventsQuery).first();
+    const xlZoomsEvents = xlZoomsEventsResult?.views || 0;
+
+    const topXLZoomsEventsQuery = `
+      SELECT 
+        image_id,
+        MIN(page_path) as page_url,
+        COUNT(*) as views,
+        COUNT(DISTINCT ip) as unique_viewers
+      FROM events
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+        AND event = 'zoom_open'
+        AND image_id IS NOT NULL
+        AND (page_path LIKE '/Galleries/%' OR page_path LIKE '/Other/%')
+      GROUP BY image_id
+      Order BY views DESC
+    `;
+    const topXLZoomsEventsResult = await env.DB.prepare(topXLZoomsEventsQuery).all();
+    const topXLZoomsEvents = (topXLZoomsEventsResult.results || []).map((r) => ({
+      type: 'xl_zoom',
+      target_id: r.image_id,
+      page_url: r.page_url || null,
+      views: r.views || 0,
+      unique_viewers: r.unique_viewers || 0
+    }));
+
+    // Normalize shape (topArtViews is sometimes initialized as an array)
+    if (!topArtViews || Array.isArray(topArtViews)) {
+      topArtViews = { chapters: [], xlZooms: [], external: [], galleries: [] };
+    }
+
+    // Store beacon values for debugging, but use same-origin events for on-site numbers.
+    artViewsSummary.chapter_views_beacon = beaconChapterViews;
+    artViewsSummary.xl_zooms_beacon = beaconXLZooms;
+    artViewsSummary.chapter_views = chapterViewsEvents;
+    artViewsSummary.xl_zooms = xlZoomsEvents;
+
+    if (topChaptersEvents.length > 0) topArtViews.chapters = topChaptersEvents;
+    if (topXLZoomsEvents.length > 0) topArtViews.xlZooms = topXLZoomsEvents;
+
+    // Gallery counts: derive from chapter_view gallery_id (JS-verified)
+    // Every chapter view has a gallery_id — if someone viewed images, they visited the gallery
+    const galleryCountQuery = `
+      SELECT COUNT(DISTINCT gallery_id) as gallery_count
+      FROM events
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+        AND event = 'chapter_view'
+        AND gallery_id IS NOT NULL
+    `;
+    const galleryCountResult = await env.DB.prepare(galleryCountQuery).first();
+    artViewsSummary.galleries = galleryCountResult?.gallery_count || 0;
+
+    const topGalleriesEventsQuery = `
+      SELECT 
+        gallery_id,
+        MIN(page_path) as sample_path,
+        COUNT(DISTINCT image_id) as images_viewed,
+        COUNT(*) as views,
+        COUNT(DISTINCT ip) as unique_viewers
+      FROM events
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+        AND event = 'chapter_view'
+        AND gallery_id IS NOT NULL
+      GROUP BY gallery_id
+      ORDER BY views DESC
+    `;
+    const topGalleriesEventsResult = await env.DB.prepare(topGalleriesEventsQuery).all();
+    const topGalleriesEvents = (topGalleriesEventsResult.results || []).map((r) => {
+      // Derive gallery URL from sample page_path by stripping the image ID
+      const galleryUrl = r.sample_path ? r.sample_path.replace(/\/i-[a-zA-Z0-9_-]+\/?$/, '') : null;
+      return {
+        type: 'gallery_view',
+        target_id: r.gallery_id,
+        gallery_url: galleryUrl,
+        views: r.views || 0,
+        unique_viewers: r.unique_viewers || 0,
+        images_viewed: r.images_viewed || 0
+      };
+    });
+    if (topGalleriesEvents.length > 0) topArtViews.galleries = topGalleriesEvents;
+
+    // Recompute total (chapter views + clean external embeds)
+    artViewsSummary.total = (artViewsSummary.chapter_views || 0) + (artViewsSummary.external_images || 0);
+  } catch (e) {
+    console.log('on-site art view events query failed:', e.message);
+  }
+
+  return { artViewsSummary, artViewsByType, topArtViews };
+}
