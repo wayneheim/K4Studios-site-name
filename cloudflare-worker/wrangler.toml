@@ -1,5 +1,5 @@
 name = "k4-image-proxy"
-main = "src/analytics/worker.js"
+main = "k4-image-proxy.js"
 compatibility_date = "2024-01-01"
 
 # Route configuration
@@ -10,8 +10,13 @@ compatibility_date = "2024-01-01"
 # 2. Add Route: k4studios.com/img/*
 # 3. Zone: k4studios.com
 
+# Service binding — analytics worker delegation (Phase 5)
+[[services]]
+binding = "ANALYTICS"
+service = "k4-analytics"
+
 [vars]
-# Environment variables (if needed)
+ANALYTICS_ENABLED = "false"
 # MANIFEST_CACHE_TTL = "3600"
 
 # D1 Database for analytics

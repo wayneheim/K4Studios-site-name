@@ -1959,6 +1959,10 @@ export default {
 
     // 0b) Analytics dashboard
     if (url.pathname === "/__k4stats") {
+      // Phase 5: optional delegation to standalone analytics worker
+      if (env.ANALYTICS_ENABLED === "true" && env.ANALYTICS) {
+        return env.ANALYTICS.fetch(request);
+      }
       return handleDashboardRequest(request, env, ctx);
     }
 
