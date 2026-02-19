@@ -658,9 +658,9 @@ export async function getEngagementDepth(env, filters) {
   `;
   const themesClicked = await env.DB.prepare(themesQuery).all();
 
-  // Query 12: Cowboy Jump count (separate from galleries)
+  // Query 12: Cowboy Jump count (raw clicks, not distinct sessions)
   const cowboyQuery = `
-    SELECT COUNT(DISTINCT session_id) as jumps
+    SELECT COUNT(*) as jumps
     FROM events 
     WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause} AND event = 'cowboy_jump'
   `;
