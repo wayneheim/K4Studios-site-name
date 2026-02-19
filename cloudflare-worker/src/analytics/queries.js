@@ -725,10 +725,33 @@ export async function getEngagementDepth(env, filters) {
   const depthResults = await env.DB.prepare(depthQuery).all();
   const topDepthSessions = depthResults.results || [];
   
-  // Calculate min/max engagement scores from topDepthSessions
-  const engagementScores = topDepthSessions.map(s => s.depth_score).filter(s => s > 0);
-  const minEngagement = engagementScores.length > 0 ? Math.min(...engagementScores) : 0;
-  const maxEngagement = engagementScores.length > 0 ? Math.max(...engagementScores) : 0;
+  // Query 13a: True min/max engagement across ALL sessions (not sampled)
+  const engagementRangeQuery = `
+    WITH session_depth AS (
+      SELECT
+        session_id,
+        SUM(
+          CASE event
+            WHEN 'zoom_open' THEN 4
+            WHEN 'collector_notes_open' THEN 5
+            WHEN 'theme_click' THEN 3
+            WHEN 'nav_next' THEN 2
+            WHEN 'nav_prev' THEN 2
+            ELSE 1
+          END
+        ) AS depth_score
+      FROM events
+      WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+      GROUP BY session_id
+    )
+    SELECT
+      MIN(depth_score) AS min_depth,
+      MAX(depth_score) AS max_depth
+    FROM session_depth
+  `;
+  const engagementRange = await env.DB.prepare(engagementRangeQuery).first();
+  const minEngagement = engagementRange?.min_depth ?? 0;
+  const maxEngagement = engagementRange?.max_depth ?? 0;
 
   // Query 13b: Average depth score across all sessions
   const avgDepthQuery = `
