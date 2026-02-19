@@ -783,3 +783,65 @@ export async function getEngagementDepth(env, filters) {
 
   return { themesClicked, cowboyJumps, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, botSessions, botPct };
 }
+
+/**
+ * Group C: Exit Analysis
+ * Q15: Exit pages (where do people leave?)
+ * Q15b: Exit summary by page category
+ */
+export async function getExitAnalysis(env, filters) {
+  const { dateClause, ipClause, botClause, chardonClause } = filters;
+
+  // Query 15: Exit Pages (where do people leave?)
+  // Exclude legacy SmugMug paths that return 410
+  const exitPagesQuery = `
+    SELECT 
+      page_path,
+      page_type,
+      COUNT(*) as exits
+    FROM events
+    WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+      AND event = 'session_exit'
+      AND page_path IS NOT NULL
+      AND page_path NOT LIKE '/Photoshootsandevents/%'
+      AND page_path NOT LIKE '/Scheduled-Shoots/%'
+      AND page_path NOT LIKE '/Other/Photo-Shoots/%'
+      AND page_path NOT LIKE '/Other/Photo-Shoots-and-Themes/%'
+      AND page_path NOT LIKE '/Is-Winter/%'
+      AND page_path NOT LIKE '/Photography-Galleries/%'
+      AND page_path NOT LIKE '/keyword/%'
+    GROUP BY page_path
+    ORDER BY exits DESC
+    LIMIT 10
+  `;
+  const exitPagesResult = await env.DB.prepare(exitPagesQuery).all();
+  const exitPages = exitPagesResult.results || [];
+
+  // Query 15b: Exit summary by page category (Home/Gallery/Images/Landing/Blog/Other)
+  const exitSummaryQuery = `
+    SELECT 
+      CASE
+        WHEN page_path = '/' THEN 'home'
+        WHEN page_path LIKE '%/i-%' THEN 'images'
+        WHEN page_path LIKE '/Blog%' OR page_path LIKE '/blog%' THEN 'blog'
+        WHEN page_path = '/Other/K4-Select-Series/Engrained' THEN 'gallery'
+        WHEN page_path LIKE '/%' AND page_path NOT LIKE '/%/%' AND page_path != '/' THEN 'gallery'
+        WHEN page_path IN ('/About', '/Contact', '/FAQ', '/Privacy', '/Terms', '/What-Is-Western-Art', '/What-Is-Western-Fine-Art-Photography', '/What-Is-Painterly-Photography', '/What-Is-Cowboy-Fine-Art-Photography', '/Other/K4-Select-Series') THEN 'landing'
+        ELSE 'other'
+      END as exit_category,
+      COUNT(*) as exits
+    FROM events
+    WHERE ${dateClause} ${ipClause} ${botClause} ${chardonClause}
+      AND event = 'session_exit'
+      AND page_path IS NOT NULL
+    GROUP BY exit_category
+    ORDER BY exits DESC
+  `;
+  const exitSummaryResult = await env.DB.prepare(exitSummaryQuery).all();
+  const exitSummary = exitSummaryResult.results || [];
+  // Convert to lookup object
+  const exitByCategory = {};
+  exitSummary.forEach(e => { exitByCategory[e.exit_category] = e.exits; });
+
+  return { exitPages, exitSummary, exitByCategory };
+}
