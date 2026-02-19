@@ -446,11 +446,6 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   </div>
 
   <div class="pulse-row">
-    ${cowboyJumps > 0 ? `<div class="pulse-stat highlight">
-      <span class="value">🤠 ${cowboyJumps}</span>
-      <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
-      <div class="tooltip">Sessions that used the cowboy easter egg navigation. Fun engagement metric!</div>
-    </div>` : ''}
     <div class="pulse-stat" style="background: ${bounceRate > 60 ? 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)' : bounceRate > 40 ? 'linear-gradient(135deg, #c2410c 0%, #9a3412 100%)' : 'linear-gradient(135deg, #10b981 0%, #059669 100%)'};">
       <span class="value" style="color: #fff;">${bounceRate}%</span>
       <span class="label" style="color: ${bounceRate > 40 ? '#fed7aa' : '#a7f3d0'};">Bounce <span class="info-icon" style="background: rgba(255,255,255,0.2); color: ${bounceRate > 40 ? '#fed7aa' : '#a7f3d0'};">i</span></span>
@@ -470,6 +465,11 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <span class="value" style="color: #fff;">🤖 ${botPct}%</span>
       <span class="label" style="color: #d1d5db;">Bots <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #d1d5db;">i</span></span>
       <div class="tooltip">Estimated bot traffic (${botSessions}/${totalSessions} sessions). Detected by: AWS/datacenter IPs, Ashburn city, unknown device. Not filtered from other stats.</div>
+    </div>` : ''}
+    ${cowboyJumps > 0 ? `<div class="pulse-stat highlight">
+      <span class="value">🤠 ${cowboyJumps}</span>
+      <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
+      <div class="tooltip">Total cowboy jump clicks. Every click counts!</div>
     </div>` : ''}
     <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
       <span class="value" style="color: #fff;">👤 ${artViewsSummary?.unique_viewers || 0}</span>
