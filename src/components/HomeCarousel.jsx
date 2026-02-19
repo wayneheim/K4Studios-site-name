@@ -204,7 +204,7 @@ export default function HomeCarousel() {
       className={
         "carousel carousel-fade" +
         (show ? " carousel-fadein" : "") +
-        (fullSize ? " carousel-fullsize" : "")
+        (fullSize ? " carousel-fullsize carousel-ready" : "")
       }
       aria-label="Fine-Art Photography Carousel"
       role="region"
