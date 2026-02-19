@@ -24,21 +24,26 @@ export const galleryData = [
   },
   {
     "id": "i-8zkKqtg",
-    "title": "Roaring 20s Photography",
-    "description": "A painterly Roaring 20s photograph of a shoe shine boy, defined by restraint rather than spectacle. Wayne Heim's Roaring 20s fine art photography explores a society in transition, focusing on individuals shaped by changing power, expectation, and consequence. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where control defined those who navigated shifting social ground. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Shoe Shine Boy",
+    "title": "Earned in Small Change",
+    "description": "A painterly Roaring 20s fine art photograph of a well-dressed gentleman receiving a shoe shine from a young boy outside a rustic building. Controlled light and muted color emphasize posture, labor, and quiet social contrast. Part of a narrative-driven approach to 1920s fine art photography, this image explores hierarchy, industry, and dignity without spectacle. © Wayne Heim",
+    "alt": "Painterly Roaring 20s fine art photograph of a 1920s gentleman having his shoes shined by a young boy outside a wooden building",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
       "roaring 20s photography",
+      "1920s portraits",
       "roaring twenties portraits",
-      "roaring 20s art"
+      "roaring 20s art",
+      "shoe shine",
+      "1920s Bedford Village"
     ],
-    "story": "In \"Shoe Shine Boy,\" Wayne Heim renders Jazz Age portraiture with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
-    "notes": "In “Lenore,” Wayne Heim leans into the solemn gravitas of Western mythmaking, evoking the brooding emotional charge found in late-period Remington and the interior quiet of Wyeth’s narrative studies. The composition is deliberately weighted to the lower frame, grounding the viewer in the tension between stillness and impending action. Light becomes a character of its own—scorching, sanctifying, revealing—casting the figure in a painterly glow that recalls the textured surfaces of 19th-century American illustration.\n\nThe holstered revolver, partially veiled in smoke, functions as both symbol and sentence: an artifact of fate rather than bravado. What elevates the piece is the psychological depth—this is not the romanticized gunslinger of classic tropes but a man bound to an unseen vow, shaped by loss, and summoned once more by forces beyond mercy. The image holds a cinematic, sculptural presence that positions it squarely within the evolving Western fine art canon, offering collectors a work that is both timeless and unmistakably contemporary in voice.",
-    "rating": 0,
+
+    "story": "He holds still while the boy works.\n\nOne foot rests on the box, the other planted in confidence. The cloth moves in small circles, steady, practiced, almost invisible unless you’re looking for it.\n\nNot all fortunes arrive in stacks. Some are counted one coin at a time.",
+    "notes": "“Earned in Small Change” centers on labor rendered with restraint. The composition creates a vertical relationship between standing figure and kneeling boy, reinforcing both hierarchy and interdependence within a single frame. The gentleman’s stillness contrasts with the subtle motion of the cloth, drawing attention to work performed quietly and repetitively.\n\nRather than dramatizing disparity, the image favors observational tension. Texture in fabric, wood grain, and worn surfaces grounds the scene in lived experience. The viewer is left to consider whether the moment reflects opportunity, necessity, or a system both participants understand without naming.",
+    "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 0,
@@ -47,18 +52,31 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/0/MNPXPHV4kMQwDJpRmK59tsRKt2k9LRZ9wnMjkTsQw/XL/12x18_O1H0006-Edit-2-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/0/LvKdNSzC46cXdHqLnzwn5gGmR3FXMJdhnWRQrNBTV/L/12x18_O1H0006-Edit-2-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/0/LrsP2CGWPpdRwGbGNVSGcHp5ZCCK9LFPzBrVpVfcX/S/12x18_O1H0006-Edit-2-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-WSh3Nqv",
     "title": "Phoning It In",
-    "description": "1920's style police call box being used by a townsperson to call in a crime.",
-    "alt": "Shoe Shine Boy",
+    "description": "A painterly Roaring 20s fine art photograph of a bearded gentleman using a vintage police call box, defined by restraint rather than spectacle. Soft atmospheric edges and controlled light draw focus to gesture, expression, and proximity to the device. Part of a narrative-driven approach to 1920s fine art photography, this image explores communication, consequence, and the tension between secrecy and action. © Wayne Heim",
+    "alt": "Painterly Roaring 20s fine art photograph of a 1920s man speaking into a vintage police call box outdoors",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv/A",
-    "keywords": ["shoe shine", "1920s Bedford Village", "roaring 20's"],
-    "story": "1920's style police call box being used by a townsperson to call in a crime.",
-    "notes": "",
-    "rating": 0,
+
+    "keywords": [
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
+      "roaring 20s photography",
+      "1920s portraits",
+      "roaring twenties portraits",
+      "roaring 20s art",
+      "1920s Bedford Village",
+      "vintage police call box"
+    ],
+
+    "story": "He leans close to the box, one hand cupped around the mouthpiece, voice lowered as if the air itself might carry it too far.\n\nThere’s no drama in his posture—only urgency kept in check. The message is brief. The pause afterward is not.\n\nSome calls are made because they must be. Others because someone finally decided to speak.",
+    "notes": "“Phoning It In” centers on communication under pressure. The vertical mass of the call box contrasts with the organic curve of the subject’s posture, creating compositional tension between structure and human vulnerability. The soft vignette and muted palette isolate the figure, reinforcing intimacy within what could otherwise be a public act.\n\nRather than dramatizing the moment, the image relies on proximity and gesture to suggest consequence. The viewer is left to consider whether the call is confession, warning, or something that will shift events beyond the frame.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 1,
@@ -67,25 +85,30 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv/0/NWmKKjj4gs8KXGxNtZrjJzT9FrVfQrzPcFSW4gtGt/XL/_DSF3071-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv/0/KsQL3xf7PnbhnvJFTQ8wZVGbpV354hCpBprTkZ6XP/L/_DSF3071-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv/0/MHs2sGLV76Db4TRMFngqtzQBzFjzrVbj4dSkM4zcS/S/_DSF3071-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-KMhKvRb",
-    "title": "1920s Portraits - Roaring 20s Photography",
-    "description": "A painterly Roaring 20s photograph of a figure of the 1920s, defined by tension rather than spectacle. Rather than romanticizing the era, Wayne Heim's Roaring 20s photography examines character, posture, and social tension beneath the surface of the period. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where the space between old rules and new freedoms held its own weight. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Phoning It In",
+    "title": "Signal Received",
+    "description": "A painterly Roaring 20s fine art photograph capturing a uniformed town officer at a wall-mounted call box, defined by restraint rather than spectacle. Light and shadow shape a narrative of tension and consequence, where posture, gesture, and stillness carry more weight than action. This 1920s portrait reflects the psychological depth and cinematic control characteristic of Wayne Heim’s Roaring 20s photography and jazz age portraits — emphasizing character over costume and atmosphere over drama. Part of Wayne Heim’s Facing History fine art photography collection. © Wayne Heim",
+    "alt": "Painterly Roaring 20s fine art photograph of a uniformed officer using a wall-mounted police call box, defined by quiet tension and restraint.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-KMhKvRb/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
-      "1920s portraits",
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
       "roaring 20s photography",
-      "roaring 20s art"
+      "Roaring 20s portraits",
+      "1920s portraits",
+      "deco era fine art",
+      "roaring twenties portraits"
     ],
-    "story": "Delving into roaring 20s photography, this work by Wayne Heim highlights 1920s portraits through 1920s portraits and roaring 20s art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He doesn’t raise his voice. He doesn’t need to. The message has already crossed the wire, and whatever was said now rests behind his eyes.\n\nOne hand steadies the receiver, the other lingers at his coat as if bracing against something unseen. Smoke curls. The air feels heavier than it did a moment ago.\n\nSome calls are routine. Others divide a day in two.",
+    "notes": "This work leans into compositional restraint — a vertical study in authority and interruption. The figure is anchored to the call box, creating a structural dialogue between man and machine, between human reaction and mechanical transmission.\n\nThe painterly tonality softens the scene just enough to keep it from slipping into reenactment. Instead, it reads as authored portraiture — disciplined, cinematic, and psychologically loaded. The tension lives not in what we see, but in what has just been heard.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 2,
@@ -94,26 +117,30 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-KMhKvRb/0/LvC8pt8rggTnpmdKx3hKBcz5bLWWJBdcnkvH7ChTw/XL/_DSF2686-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-KMhKvRb/0/Kg4nZqSFsvsjC3sNtCWJzndvXV72wDjVbwxkT7F7F/L/_DSF2686-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-KMhKvRb/0/NhS5XW6jGjtF86ZsDHSKp62j7z7pNrMQJwbCFbvzj/S/_DSF2686-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-k9qB2jV",
-    "title": "Roaring Twenties Portraits And 1920s Portraits",
-    "description": "A painterly Roaring 20s photograph of a figure of the 1920s, defined by restraint rather than spectacle. Approached with painterly restraint, this work treats the Roaring 20s as lived history - where identity was negotiated quietly, not performed. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where control defined those who navigated shifting social ground. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Photographic artwork © Wayne Heim",
+    "title": "Terms of Respect",
+    "description": "A painterly Roaring 20s fine art portrait defined by restraint, structure, and psychological control. Framed in warm window light, this 1920s portrait emphasizes posture, composure, and the subtle authority carried in stillness. Rather than romanticizing the jazz age, the image explores social hierarchy and identity through disciplined composition and tonal depth. Light and shadow shape a narrative of presence and consequence — hallmarks of Wayne Heim’s Roaring 20s photography and jazz age portraits. Part of Wayne Heim’s Facing History fine art photography collection. © Wayne Heim",
+    "alt": "Painterly 1920s fine art portrait of a formally dressed gentleman standing in warm window light, conveying quiet authority and restraint.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k9qB2jV/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
-      "roaring twenties portraits",
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
+      "roaring 20s photography",
+      "Roaring 20s portraits",
       "1920s portraits",
-      "roaring 20s art",
-      "roaring 20s photography"
+      "deco era fine art",
+      "roaring twenties portraits"
     ],
-    "story": "Delving into roaring 20s art, this work by Wayne Heim highlights 1920s portraits through roaring twenties portraits and roaring 20s art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He does not ask for attention. He occupies it.\n\nLight settles across his collar and sleeve, tracing the quiet precision of a man accustomed to being observed — and obeyed. There is no display here, no flourish. Only presence.\n\nRespect, in some rooms, is earned slowly. In others, it arrives the moment the door opens.",
+    "notes": "This composition leans into vertical structure and tonal control. The window light functions almost as a secondary character — revealing texture, carving form, and reinforcing the psychological distance between subject and viewer.\n\nThe restraint is deliberate. Rather than dramatize the era, the image studies composure and social positioning. Its strength lies in what is withheld: gesture minimized, emotion contained, authority implied rather than declared.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 3,
@@ -122,22 +149,31 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k9qB2jV/0/KQPR6P3s9Q2xNMTz74JMrMVtKRSqW2SC2dGsnMrnF/XL/_DSF3141-Edit-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k9qB2jV/0/KR2CKB59VjncLLfJ5MfBnbdQzDvZWjHJDM56J9p22/L/_DSF3141-Edit-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k9qB2jV/0/NLkN474cvKLZ7fWDXmdjSxxrJcDbsbTWjWRCHBJKV/S/_DSF3141-Edit-Edit-2-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-VqxgW5k",
     "title": "Just a Typical Saturday Afternoon",
-    "description": "Farmers passing time in the rocking chair on the front porch on a Saturday afternoon in the South.",
-    "alt": "Photographic artwork © Wayne Heim",
+    "description": "A painterly fine art photograph capturing two figures seated on a weathered wooden porch in the American South. Rendered with cinematic restraint, the composition studies generational contrast—experience and inheritance held within the same frame. The older man reclines in a rocking chair, cigar in hand, while the younger figure sits upright, absorbing more than he speaks. Light grazes timber and fabric, emphasizing texture, stillness, and atmosphere. Rather than dramatizing the moment, the image explores quiet mentorship, routine, and the slow architecture of influence. Part of Wayne Heim’s story-driven fine art photography collection. © Wayne Heim",
+    "alt": "Painterly fine art photograph of an older farmer in overalls smoking a cigar on a wooden porch beside a younger boy, both seated in rocking chairs against a rustic cabin backdrop.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-VqxgW5k/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's"
+      "1920s fine art photography",
+      "Roaring 20s portraits",
+      "roaring 20s photography",
+      "1920s portraits",
+      "roaring twenties portraits",
+      "roaring 20s art",
+      "jazz age portraits",
+      "roaring 20s inspired photography",
+      "silent film era photography"
     ],
-    "story": "Farmers passing time in the rocking chair on the front porch on a Saturday afternoon in the South.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The porch does not hurry.\n\nBoot heels rest easy against worn planks. A cigar burns slow in the quiet heat. Beside him, youth studies the distance between boyhood and whatever comes next.\n\nNothing urgent moves here. And yet, everything is being learned.",
+    "notes": "This work leans into environmental framing. The porch rail and vertical posts create a layered foreground that reinforces depth and lived-in space. The rocking chair introduces implied motion without requiring action—an echo of time passing slowly.\n\nWhat elevates the piece is its restraint. The figures are not posed in spectacle; they are held in routine. The tension lies in contrast—age beside youth, stillness beside anticipation. It is a study in inheritance rather than event.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 4,
@@ -146,26 +182,31 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-VqxgW5k/0/K2Kd3HGM6q2fBq4t529XsPVWWshhtkDG3JChKw3pm/L/_DSF2500-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-VqxgW5k/0/L6Z4nM23FHw2LDS3T8Z2VJ8GRwHf375VfVpK6FVHn/M/_DSF2500-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-VqxgW5k/0/KLm5WZX6m3f7HKtjkVzQ9gwSTMqF8DJXqgwKr23Nt/S/_DSF2500-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-NVz5zk2",
-    "title": "Roaring Twenties Portraits Moment",
-    "description": "A painterly Roaring 20s photograph of a figure of the 1920s, defined by tension rather than spectacle. Wayne Heim's Roaring 20s fine art photography explores a society in transition, focusing on individuals shaped by changing power, expectation, and consequence. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where the space between old rules and new freedoms held its own weight. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Just a Typical Saturday Afternoon",
+    "title": "Terms of Consideration",
+    "description": "A painterly example of 1920s fine art photography centered on restraint and psychological presence. This Roaring 20s portrait avoids spectacle, instead leaning into tonal depth, directional light, and compositional discipline. Rooted in the language of Roaring Twenties portraits, the image explores identity and consequence through subtle gesture and interior tension. Part of Wayne Heim’s Facing History fine art photography series. © Wayne Heim",
+    "alt": "Roaring 20s portrait of seated gentleman in soft window light",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-NVz5zk2/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
+      "1920s fine art photography",
+      "Roaring 20s portraits",
       "roaring twenties portraits",
       "1920s portraits",
       "roaring 20s photography",
-      "roaring 20s art"
+      "roaring 20s art",
+      "jazz age portraits",
+      "roaring 20s vignette",
+      "silent film era photography"
     ],
-    "story": "Wayne Heim's exploration of roaring twenties portraits comes alive in this piece, showcasing roaring 20s art and roaring 20s art. A testament to roaring 20s photography in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He sits without urgency, turned slightly toward the light as though weighing something no one else can see. The silence around him is not empty—it is deliberate. In that measured pause, judgment gathers shape.\n\nNothing in his posture asks for attention. Authority here is quiet, negotiated in stillness rather than declared aloud.",
+    "notes": "This composition is built on balance and compression. Light enters from the side, carving the form while preserving shadow depth, creating a painterly transition reminiscent of early portrait studies rather than staged reenactment. The muted palette reinforces the historical atmosphere without romanticizing it.\n\nRather than dramatizing the era, the work emphasizes interior authority—where decision, memory, and consequence are implied through stillness. The result is a Roaring 20s portrait that rewards sustained viewing, revealing its structure gradually through tone and restraint.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 5,
@@ -174,26 +215,30 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-NVz5zk2/0/LNcBFvKW7DQ6bP4tsxKXBnjJ8Nj6b5NnKnvtqvSZr/XL/_DSF3125-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-NVz5zk2/0/MhxrVjBbvB2SWTmWqVg4ksM2fGvKhpRGWJnCMMXLc/L/_DSF3125-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-NVz5zk2/0/KkLdww8vtFF7M5HkgdS9GvqnnJWWF72MKVcVHjj99/S/_DSF3125-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-9cZHdvB",
-    "title": "Capturing Roaring 20s Photography",
-    "description": "A painterly Roaring 20s photograph of a figure of the 1920s, defined by restraint rather than spectacle. Rather than romanticizing the era, Wayne Heim's Roaring 20s photography examines character, posture, and social tension beneath the surface of the period. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where control defined those who navigated shifting social ground. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
+    "title": "Terms of Order",
+    "description": "A painterly example of 1920s fine art photography, this image reflects the restrained discipline of Roaring 20s photography through posture, light, and psychological tension. Rather than spectacle, it explores character—where presence defines power and stillness carries consequence. \n\nRooted in the tonal depth of jazz age portraits and the compositional control of roaring twenties art prints, the work emphasizes authority through structure and shadow. Part of Wayne Heim’s exploration of roaring twenties portraits and 1920s portraits within his Facing History collection. © Wayne Heim",
+    "alt": "Roaring twenties portrait of a man standing on a wooden porch in restrained, painterly light",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9cZHdvB/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
       "roaring 20s photography",
-      "roaring twenties portraits",
+      "Roaring 20s Portraits",
       "1920s portraits",
+      "roaring twenties portraits",
       "roaring 20s art"
     ],
-    "story": "Delving into roaring twenties portraits, this work by Wayne Heim highlights roaring twenties portraits through roaring twenties portraits and roaring 20s art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He does not raise his voice. He does not need to. The stance, the set of the jaw, the hand resting steady against the rail—authority here is not performed, it is assumed.\n\nLight falls across him in quiet bands, separating figure from shadow, posture from hesitation. In the language of roaring twenties portraits, power often shouts. Here, it stands still.\n\nWhatever decision has just been made—or is about to be—belongs to him.",
+    "notes": "This piece demonstrates the compositional restraint central to strong Roaring 20s portraits. The vertical porch posts act as structural anchors, framing the figure within measured negative space while reinforcing a sense of institutional control. The railing becomes both physical boundary and psychological threshold.\n\nThe lighting is deliberately directional, sculpting the face and vest with tonal transitions reminiscent of early twentieth-century studio portraiture. Instead of theatrical contrast, the glow remains controlled—inviting sustained viewing rather than immediate impact.\n\nCollectors drawn to 1920s fine art photography and jazz age portraits will recognize the discipline here: authority communicated not through action, but through posture, spacing, and the quiet architecture of the frame.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 6,
@@ -202,26 +247,29 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9cZHdvB/0/MLvK9q2fLdX4KmqZSc5hhP5mmfsN4WD3MVq9xLjBw/XL/_O1H0037-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9cZHdvB/0/NL7zBwzqvL9VfBJ5mmZDdcvqVqPFLD5Sfnmf2HPHr/L/_O1H0037-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9cZHdvB/0/LcBwdzdM277wDMnSTsG3QPnK7sDMG7frLLwdKzwsn/S/_O1H0037-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-zrVCpMP",
-    "title": "Exploring Roaring Twenties Portraits",
-    "description": "A painterly Roaring 20s photograph of a figure of the 1920s, defined by tension rather than spectacle. Approached with painterly restraint, this work treats the Roaring 20s as lived history - where identity was negotiated quietly, not performed. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where the space between old rules and new freedoms held its own weight. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
+    "title": "Terms of Power",
+    "description": "A painterly Roaring 20s portrait rooted in 1920s fine art photography, this image explores quiet authority rather than performance. Wayne Heim’s approach to roaring twenties portraits emphasizes posture, light, and compositional discipline — allowing character to emerge through stillness instead of gesture. The controlled palette and directional light recall jazz age portraits while maintaining the psychological depth of roaring 20s art.\n\nPart of Wayne Heim’s Facing History fine art photography collection, this work reflects the narrative weight found in 1920s portraits and roaring 20s photography — where presence, restraint, and social hierarchy defined the space as much as words. © Wayne Heim",
+    "alt": "Roaring 20s fine art portrait of a composed gentleman seated with cane in painterly light",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-zrVCpMP/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
+      "roaring 20s photography",
       "roaring twenties portraits",
       "1920s portraits",
-      "roaring 20s art",
-      "roaring 20s photography"
+      "roaring 20s art"
     ],
-    "story": "Fine art image by Wayne Heim — part of Wayne Heim's",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He does not speak, yet the room has already adjusted to him. Hands resting over the head of a cane, posture measured, gaze held just beyond the present moment — authority here is quiet, negotiated, and understood.\n\nThis is not spectacle. It is the calm before a decision, where power lives in restraint rather than volume.",
+    "notes": "The strength of this piece lies in compositional control. The vertical timber and window frame anchor the subject, creating a subtle architectural authority around him. The cane becomes both physical support and symbolic device — a quiet marker of status rather than ornament.\n\nLight is sculpted to separate him from the darker interior, recalling early 20th-century portrait studios and the tonal restraint of Pictorialist photography. The emotional charge does not come from action but from contained presence — a man aware of his position in a shifting world, holding ground without raising his voice.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 7,
@@ -230,26 +278,30 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-zrVCpMP/0/Ms5MxwstMdRWzFjg76XN5KVQx4CTs4B3ch6T4LJgv/XL/_DSF2514-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-zrVCpMP/0/KtCvwNk89mhHJTv9P9TzTFkVFWM3frhgmvPX6k86J/L/_DSF2514-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-zrVCpMP/0/LT9bLcXVwfHNV2pp5DCV2hZHbMGndZqQwTZbQw2bw/S/_DSF2514-Edit-2-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-rxnpqCQ",
-    "title": "The Essence Of Roaring 20s Photography",
-    "description": "A painterly Roaring 20s photograph of a figure of the 1920s, defined by restraint rather than spectacle. Wayne Heim's Roaring 20s fine art photography explores a society in transition, focusing on individuals shaped by changing power, expectation, and consequence. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where control defined those who navigated shifting social ground. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Photographic artwork © Wayne Heim",
+    "title": "Unspoken Rank",
+    "description": "A painterly example of 1920s fine art photography, this Roaring 20s portrait emphasizes composure, structure, and psychological restraint. Light from the window carves subtle dimension into the subject’s posture while muted tonal control reflects the discipline found in serious roaring twenties portraits. Rather than spectacle, the image explores presence — where authority is implied through stillness.\n\nPart of Wayne Heim’s Roaring 20s portraits and Facing History fine art photography collection, this work aligns with jazz age portraits and roaring 20s art that prioritize character and interior weight over nostalgia. © Wayne Heim",
+    "alt": "Painterly Roaring 20s fine art portrait of a composed gentleman seated by a window with cane in restrained light",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-rxnpqCQ/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
       "roaring 20s photography",
-      "1920s portraits",
       "roaring twenties portraits",
-      "roaring 20s art"
+      "1920s portraits",
+      "roaring 20s art",
+      "roaring 20s inspired photography"
     ],
-    "story": "In \"Photographic artwork,\" Wayne Heim renders Jazz Age portraiture with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "Composure is not softness.\n\nIt is restraint held in plain view —\na quiet understanding\nthat not every strength needs motion.",
+    "notes": "“Unspoken Rank” is built on structural discipline. The vertical framing elements and grounded stance create visual hierarchy without exaggeration. The cane becomes a stabilizing axis within the composition — not decorative, but architectural.\n\nThe tonal range is deliberately restrained, echoing the quiet authority of early portrait traditions while maintaining modern clarity. This is not a portrait of action. It is a portrait of contained influence — where the strength lies in what remains still.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 8,
@@ -258,26 +310,31 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-rxnpqCQ/0/NF6xq7Krtg4RBHGCRNBrQcKHd4PkQVLFCLT5gTwGq/XL/_DSF2516-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-rxnpqCQ/0/KmrVkrxd2H8wqFdbGVJNXdJ973dTJ83HW8PDHGNRT/L/_DSF2516-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-rxnpqCQ/0/LQnMDSCNP7drG774TNDrqbKg8q4XpTKKrSmXkGq7x/S/_DSF2516-Edit-2-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-qgJkNtv",
-    "title": "The Essence Of Roaring Twenties Portraits",
-    "description": "A painterly Roaring 20s photograph of a figure of the 1920s, defined by tension rather than spectacle. Rather than romanticizing the era, Wayne Heim's Roaring 20s photography examines character, posture, and social tension beneath the surface of the period. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where the space between old rules and new freedoms held its own weight. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "New fine art photograph © Wayne Heim",
+    "title": "Posted Until Dawn",
+    "description": "A painterly Roaring 20s photography portrait defined by restraint rather than spectacle. “Posted Until Dawn” presents a figure in stillness — posture upright, gaze turned toward unseen movement beyond the frame. Light and shadow carve quiet authority into the scene, emphasizing vigilance over action.  \n\nPart of Wayne Heim’s Roaring 20s fine art photography collection, this image reflects the discipline and compositional control found in 1920s portraits and roaring twenties art — where presence carries more weight than gesture. © Wayne Heim",
+    "alt": "Roaring twenties portrait of a uniformed man standing in profile near a doorway, lit dramatically in painterly style",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-qgJkNtv/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
-      "roaring twenties portraits",
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
       "roaring 20s photography",
+      "Roaring 20s Portraits",
       "1920s portraits",
-      "roaring 20s art"
+      "roaring twenties portraits",
+      "roaring 20s art",
+      "1920s Bedford Village"
     ],
-    "story": "Delving into 1920s portraits, this work by Wayne Heim highlights 1920s portraits through 1920s portraits and roaring 20s photography. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He does not pace. He does not speak.  \nThe light finds him and settles along the edge of his coat, along the brim that shades his eyes.  \n\nWhatever is coming will come to him first.  \nUntil then, he remains.",
+    "notes": "“Posted Until Dawn” is constructed with classical portrait discipline — profile orientation, controlled light falloff, and architectural framing that echoes early twentieth-century formal portraiture. The stillness is intentional. Rather than dramatizing action, the composition leans into anticipation — a study in vigilance, authority, and psychological presence.\n\nThe badge and brim create compositional anchors, while the surrounding darkness compresses the space, heightening focus. The result is less about event and more about threshold — the quiet moment before something changes.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 9,
@@ -286,26 +343,33 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-qgJkNtv/0/MqX5r4nTRQQMrL39dptpbxXM65DRQmpR7qSGKf8Q7/XL/_DSF2591-Enhanced-NR-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-qgJkNtv/0/LNxNp4kL9mbjKjS3HBsn7bT3HXTtDRmpNwMHmGzNX/L/_DSF2591-Enhanced-NR-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-qgJkNtv/0/NdQcg9MM4NckH8LR9kXzGnFnkzfSpSccpw6L435cC/S/_DSF2591-Enhanced-NR-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-6NPsMpH",
-    "title": "Roaring Twenties Portraits",
-    "description": "A painterly Roaring 20s photograph of a figure of the 1920s, defined by restraint rather than spectacle. Approached with painterly restraint, this work treats the Roaring 20s as lived history - where identity was negotiated quietly, not performed. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where control defined those who navigated shifting social ground. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
+    "title": "Step Right Up",
+    "description": "A painterly Roaring 20s photograph set in 1920s Bedford Village, capturing a young shoeshine boy seated on a wooden porch outside a rustic storefront. Approached with painterly restraint, this Roaring 20s portrait emphasizes posture, patience, and the quiet dignity of small trades during a decade often remembered only for spectacle. The composition treats the 1920s as lived history — grounded in routine, labor, and personal ambition rather than glamour.\n\nLight, texture, and controlled color shape a narrative rooted in identity and transition, where the tools of trade become symbols of aspiration. Part of Wayne Heim’s Facing History fine art photography series. © Wayne Heim",
+    "alt": "Painterly 1920s portrait of a young shoeshine boy seated on a wooden porch in Bedford Village, shoeshine box beside him, waiting for customers.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-6NPsMpH/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
-      "roaring twenties portraits",
-      "1920s portraits",
+      "1920s fine art photography",
+      "Roaring 20s portraits",
       "roaring 20s photography",
-      "roaring 20s art"
+      "1920s portraits",
+      "1920s Bedford Village",
+      "Roaring 20s art",
+      "roaring twenties portraits",
+      "step into the roaring 20s",
+      "jazz age portraits",
+      "deco era fine art",
+      "roaring 20s vignette"
     ],
-    "story": "Wayne Heim's exploration of roaring 20s art comes alive in this piece, showcasing roaring 20s photography and 1920s portraits. A testament to roaring 20s art in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He watches the street the way grown men watch markets — alert, measuring, patient. The box at his feet is scuffed but cared for, the tools arranged with more pride than polish. No fanfare. No crowd. Just the quiet knowledge that someone will need him before the day is done.\n\nHe has learned to read shoes the way others read faces. Dust tells one story. Creases tell another. A scuff is not damage — it is opportunity. He waits not with boredom, but with readiness.\n\nAnd when the first pair slows in front of him, he will not hesitate.",
+    "notes": "This piece works through restraint rather than nostalgia. The composition echoes early 20th-century portraiture traditions, where posture and stillness carried psychological weight. The negative space and grounded palette separate it from decorative “Gatsby-era” imagery and place it closer to social realism — the kind of quiet storytelling seen in early American illustration.\n\nFor collectors building a Roaring 20s portrait collection, this image anchors the decade in lived experience. It speaks not of excess, but of beginnings — of small enterprise and the quiet architecture of ambition.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 10,
@@ -314,25 +378,32 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-6NPsMpH/0/MWp5TwbzGZQs2bCmsxW65XZKJrhmWsqR3SNr3mCD9/XL/_DSF2766-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-6NPsMpH/0/L6sqH2nMk9f72bM5NZ3pvTR2hsdrbXfDk8CmvqhcS/L/_DSF2766-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-6NPsMpH/0/K93gSFgJv6tZJXtJRf4W8qxwKTp4KrNjmnLqgND9n/S/_DSF2766-Edit-2-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-5CcF5N4",
-    "title": "Roaring 20s Art In Fine Art",
-    "description": "A painterly Roaring 20s photograph of a figure of the 1920s, defined by tension rather than spectacle. Wayne Heim's Roaring 20s fine art photography explores a society in transition, focusing on individuals shaped by changing power, expectation, and consequence. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where the space between old rules and new freedoms held its own weight. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
+    "title": "Posted",
+    "description": "A painterly Roaring 20s fine art photograph of a uniformed officer seated on a wooden porch, defined by posture rather than action. Boots planted, back resting against rough timber, chin lifted into the light — the image carries authority through stillness. Nothing in the frame strains for attention; control is implied, not performed.\n\nThis Roaring 20s portrait reflects an era negotiating power, order, and identity. Light and shadow separate figure from structure, giving the subject weight without spectacle. The composition favors vertical lines and grounded stance, reinforcing stability over motion. © Wayne Heim",
+    "alt": "Roaring 20s fine art portrait of a uniformed Jazz Age officer seated on a wooden porch, boots planted and chin lifted, conveying quiet authority through stillness.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5CcF5N4/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
-      "roaring 20s art",
+      "1920s fine art photography",
+      "Roaring 20s portraits",
+      "jazz age portraits",
       "roaring 20s photography",
-      "1920s portraits"
+      "1920s portraits",
+      "deco era fine art",
+      "historical portrait photography",
+      "roaring twenties art prints",
+      "bootlegger era portrait",
+      "speakeasy era imagery"
     ],
-    "story": "Wayne Heim's exploration of roaring 20s art comes alive in this piece, showcasing roaring 20s photography and roaring 20s art. A testament to roaring 20s photography in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He doesn’t move.\n\nHe doesn’t have to.\n\nThe uniform already speaks.",
+    "notes": "“Posted” is built on compositional restraint. The weight of the boots, the vertical siding, and the relaxed yet upright posture create a visual structure that feels immovable. This is authority expressed through presence rather than gesture — closer to portrait traditions that rely on mass and silhouette than theatrical narrative.\n\nThe strength of the piece lies in what it withholds. By avoiding overt action, the image invites prolonged viewing, rewarding collectors who value psychological steadiness over spectacle.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 11,
@@ -341,18 +412,36 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5CcF5N4/0/KFC5SgtHssZf9jZ2dgs5Pmg6N4GQn34TqBqXZpdvG/XL/_O1H0938-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5CcF5N4/0/LsxgZrCNSJtccRQG7G3zps749TM5hFpFMwKndq5QP/L/_O1H0938-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5CcF5N4/0/NGfn7hmhwhgQ6H9NTjrmWG5bjvgNBPf5WH2sgZh5r/S/_O1H0938-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-mMXRvh4",
-    "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "alt": "Wayne Heim – Fine Art Photography",
+    "title": "Terms of Agreement",
+    "description": "A painterly 1920s fine art photograph capturing a quiet exchange at Old Bedford Village. Framed like a Roaring 20s vignette, this image draws from jazz age portraits and roaring twenties photography to explore the tension beneath polite conversation. Suits, posture, and restraint evoke the atmosphere of bootleggers and businessmen navigating unseen agreements during the Gatsby era.\n\nPart of Wayne Heim’s historically themed fine art photography collection, this piece blends 1920s portraits with cinematic composition and controlled light. Inspired by roaring 20s art and deco era fine art aesthetics, it invites the viewer to step into the Roaring 20s — where silence often carried more weight than signatures. © Wayne Heim",
+    "alt": "Painterly 1920s fine art photograph of three men in period suits and hats in discussion on a wooden porch at Old Bedford Village, evoking Roaring 20s business and bootlegger tension.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-mMXRvh4/A",
-    "keywords": ["shoe shine", "1920s Bedford Village", "roaring 20's"],
-    "story": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "notes": "",
-    "rating": 0,
+
+    "keywords": [
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
+      "roaring 20s photography",
+      "Roaring 20s portraits",
+      "1920s portraits",
+      "bootleggers",
+      "deco era fine art",
+      "roaring twenties art prints",
+      "roaring twenties portraits",
+      "speakeasy portraits",
+      "roaring 20s vignette",
+      "silent film era photography",
+      "Old Bedford Village"
+    ],
+
+    "story": "“You understand what this means.”\n\nThe porch rail separates them from the street, but not from consequence. Hats tilt low. Voices stay measured. The old man keeps working his cloth into the leather, listening without looking up. Deals are never signed where everyone can see them.\n\nSome arrangements are spoken once and never repeated. After that, you’re simply bound to them.",
+    "notes": "“Terms of Agreement” functions through restraint rather than spectacle. The horizontal porch rail becomes both compositional anchor and psychological barrier, dividing public posture from private intent. The triangular positioning of the figures creates a quiet narrative tension — one speaks, one weighs, one listens.\n\nThe palette and softened atmosphere nod subtly to silent film era photography while maintaining modern painterly control. Like genre painters of the early 20th century who used everyday settings to imply larger social forces, this piece allows implication to carry the story. It rewards prolonged viewing — the kind where posture and distance begin to speak louder than words.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 12,
@@ -361,22 +450,35 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-mMXRvh4/8/MDRDvCHpMN2nFQcRxtRBKLK99TZbRxv8N4RxbqsXp/L/_O1H0073-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-mMXRvh4/8/Mh8xg95Thm8dpGggXTHfvDPFkwdmMWWn5VxSXgg47/M/_O1H0073-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-mMXRvh4/8/KXpdn3t4t878rdVfwj3TdjwXzknNDfLsNkm64zmsp/S/_O1H0073-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-k2W3gQV",
-    "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "alt": "1920's  at Old Bedford Village",
+    "title": "The Evening Marshal",
+    "description": "A painterly 1920s fine art photography portrait capturing the restrained authority of a lawman during the Roaring 20s at Old Bedford Village. Inspired by jazz age portraits and silent film era photography, this image blends cinematic light with historically themed storytelling. The controlled composition and shadowed atmosphere evoke roaring 20s photography and deco era fine art influences, presenting a figure defined by presence rather than action.\n\nPart of Wayne Heim’s 1920s fine art photography collection, this work reflects the tension between glamour and order that shaped the roaring twenties. Ideal for collectors of Roaring 20s portraits, Gatsby era art, and historically inspired fine art prints. © Wayne Heim",
+    "alt": "Painterly 1920s fine art photography portrait of a Roaring 20s marshal standing in shadowed doorway at Old Bedford Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k2W3gQV/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's"
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
+      "roaring 20s photography",
+      "Roaring 20s portraits",
+      "Step into the Roaring 20s",
+      "The Roaring 20s",
+      "1920s portraits",
+      "deco era fine art",
+      "gatsby era art",
+      "roaring twenties art prints",
+      "silent film era photography",
+      "Old Bedford Village"
     ],
-    "story": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He prefers the quiet hours.\n\nWhen the music fades and the Roaring 20s bravado slips back into doorways and smoke, someone still has to stand watch. He doesn’t chase noise. He measures it. A look, a pause, the weight of a hand on a doorframe — that is usually enough.\n\nBy morning, the town will remember only the laughter. He will remember who lingered too long in the shadows.",
+    "notes": "“The Evening Marshal” draws on the compositional restraint of early 20th-century portraiture and the chiaroscuro mood of silent film era photography. The figure is anchored in shadow, allowing light to sculpt form rather than dramatize action — a technique reminiscent of stage-lit jazz age portraits and early cinematic stills.\n\nRather than romanticizing the Roaring 20s, this piece introduces balance — glamour countered by order, spectacle countered by watchfulness. The subdued palette and painterly finish elevate the image beyond reenactment documentation, positioning it within deco era fine art traditions and collectible roaring twenties portraiture.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 13,
@@ -385,26 +487,31 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-k2W3gQV/10/LF5v3d5PJxMJkFQX28T75k9mMWgkWWQCRwdgVWtKf/XL/_DSF2597-Enhanced-NR-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-k2W3gQV/10/MNn3J9zDs6GtqQdxmLJQ3Hm7VdFcSqLTW92S3QzBB/L/_DSF2597-Enhanced-NR-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-k2W3gQV/10/MsccQZ565tjw9Vrv9g68SmRQJLvMhtLMNbFF9V6N6/S/_DSF2597-Enhanced-NR-Edit-2-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-m7STjq2",
-    "title": "Roaring 20s Photography",
-    "description": "A painterly Roaring 20s photograph of a figure of the 1920s, defined by restraint rather than spectacle. Rather than romanticizing the era, Wayne Heim's Roaring 20s photography examines character, posture, and social tension beneath the surface of the period. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where control defined those who navigated shifting social ground. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "1920's  at Old Bedford Village",
+    "title": "Operator",
+    "description": "A painterly 1920s fine art photograph capturing a uniformed figure mid-call, framed in shadow and restraint. This Roaring 20s photography piece explores tension, authority, and transition during the Jazz Age, where technology began tightening the distance between people — and consequences. \n\nRooted in 1920s fine art photography and evocative of Roaring 20s portraits, the image balances atmosphere with narrative presence. Light, posture, and controlled composition create a Roaring 20s vignette that feels both intimate and consequential. Part of Wayne Heim’s historically inspired fine art photography exploring character, social tension, and identity through era-authentic storytelling. © Wayne Heim",
+    "alt": "Roaring 20s portrait of a uniformed 1920s operator holding a vintage wall telephone receiver in a dimly lit interior, rendered in painterly fine art photography style",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-m7STjq2/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
-      "roaring 20s photography",
-      "roaring twenties portraits",
-      "roaring 20s art",
-      "1920s portraits"
+      "1920s fine art photography",
+      "Roaring 20s photography",
+      "Roaring 20s portraits",
+      "1920s portraits",
+      "jazz age portraits",
+      "Roaring 20s vignette",
+      "historically inspired photography",
+      "silent film era photography",
+      "Wayne Heim fine art"
     ],
-    "story": "Delving into roaring 20s photography, this work by Wayne Heim highlights 1920s portraits through roaring 20s art and 1920s portraits. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He doesn’t raise his voice.\n\nThe wire hums in his hand, thin as a promise and twice as fragile. News moves faster now — faster than men, faster than memory — and somewhere on the other end of the line someone is waiting to hear what he will say.\n\nHe pauses a half-second longer than necessary. Because once spoken, a thing cannot be called back.",
+    "notes": "“Operator” sits in the psychological space between message and consequence. The gesture is restrained, the composition anchored, the lighting reminiscent of early cinematic portraiture and silent film-era photography. \n\nRather than dramatizing the Jazz Age through spectacle, this work narrows its focus to character and pause — closer in spirit to narrative portrait painting than documentary reenactment. The tension lives in the held breath, not the action.\n\nAs part of Wayne Heim’s 1920s fine art photography, the piece reflects the transitional edge of the Roaring 20s — where technology, authority, and personal responsibility converged in quiet rooms long before the outside world reacted.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 14,
@@ -413,22 +520,32 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-m7STjq2/9/NN4m9CcvZQP7zJWfqSx5p9WJ8sBV3JksbxqcD8Mhz/XL/_DSF2612-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-m7STjq2/9/K6cn4cxPRdnFWNK5GdxZnTPGGBF6RFmCgGZz2Mzqw/L/_DSF2612-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-m7STjq2/9/NWv8qFW7bPDhQ3rvMVrnbNkjGFsFkPSvcQ97gdHX8/S/_DSF2612-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-K6mDKMn",
-    "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "alt": "Fine art image by Wayne Heim",
+    "title": "Reserved Judgment",
+    "description": "A painterly work of 1920s fine art photography capturing a poised figure at Old Bedford Village during a Roaring 20s event. Rather than romanticizing the Jazz Age, Wayne Heim’s roaring 20s photography focuses on posture, authority, and psychological tension within the social theater of the era. This piece aligns with jazz age portraits and deco era fine art traditions, emphasizing character over spectacle.\n\nPart of Wayne Heim’s exploration into roaring twenties portraits and 1920s portraits, this image blends cinematic restraint with historically grounded detail, creating a Roaring 20s vignette that rewards sustained viewing. © Wayne Heim",
+    "alt": "Man in 1920s suit and fedora standing with arms crossed at Old Bedford Village, painterly roaring 20s portrait",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-K6mDKMn/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's"
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
+      "roaring 20s photography",
+      "Roaring 20s portraits",
+      "1920s portraits",
+      "deco era fine art",
+      "Roaring 20s vignette",
+      "roaring twenties portraits",
+      "Old Bedford Village"
     ],
-    "story": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He doesn’t speak first.\n\nThe room moves around him — laughter too loud, deals made too quickly, alliances forming in the space between glances. He stands with arms folded, not defensive but patient, measuring posture, tone, hesitation. In an age that mistakes noise for power, restraint is the sharper instrument.\n\nSomeone will cross the line tonight. He’s already decided who.",
+    "notes": "“Reserved Judgment” operates through compositional control. The crossed arms form a closed triangular structure, anchoring the frame and establishing psychological tension. Negative space and shallow depth isolate the figure, allowing micro-expressions to carry narrative weight.\n\nThis work sits within the lineage of restrained portraiture — closer to cinematic stills and early 20th-century painted character studies than decorative period nostalgia. The piece invites the viewer to participate: What is he deciding? Who is being evaluated? That ambiguity is the engine of the image.\n\nAs part of Wayne Heim’s roaring 20s art exploration, the photograph bridges 1920s fine art photography with modern psychological portraiture, making it equally suited for collectors drawn to jazz age portraits, deco era fine art, and narrative-driven historical work.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 15,
@@ -437,26 +554,34 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-K6mDKMn/9/NXvK4zsj5Bcf2TL9RBSLRhNKRQgt9n5FCmkx6SHHB/XL/_O1H0307-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-K6mDKMn/9/L394thszznqR8gKkp39h4r3RbhSQ4BwwFrRqNzX6q/L/_O1H0307-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-K6mDKMn/9/MtgJ4KXQMhgbCfsdDBRdHhhr5frbfbZCVwV56spsB/S/_O1H0307-Edit-2-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-QBKhZS2",
-    "title": "Capturing Roaring 20s Photography",
-    "description": "A painterly Roaring 20s photograph of a figure of the 1920s, defined by tension rather than spectacle. Approached with painterly restraint, this work treats the Roaring 20s as lived history - where identity was negotiated quietly, not performed. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where the space between old rules and new freedoms held its own weight. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "1920's  at Old Bedford Village",
+    "title": "A Matter of Business",
+    "description": "A painterly Roaring 20s photography portrait set at Old Bedford Village, this fine art image explores the tension beneath the surface of the Roaring Twenties. Rather than spectacle, Wayne Heim approaches 1920s portraits with restraint — where posture, distance, and eye line shape the narrative.\n\nPart of his 1920s fine art photography series, this work reflects the quiet negotiations of the Jazz Age — moments where identity, authority, and risk moved through small conversations rather than public display. Light is sculpted with a deco-era fine art sensibility, creating a Roaring 20s vignette grounded in character rather than costume. © Wayne Heim",
+    "alt": "Roaring 20s fine art portrait of two men in period suits negotiating under a wooden awning at Old Bedford Village, 1920s inspired photography",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-QBKhZS2/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
       "roaring 20s photography",
+      "Roaring 20s portraits",
+      "1920s portraits",
+      "bootleggers",
+      "deco era fine art",
+      "roaring twenties art prints",
       "roaring twenties portraits",
-      "roaring 20s art",
-      "1920s portraits"
+      "Old Bedford Village",
+      "Roaring 20s vignette"
     ],
-    "story": "Wayne Heim captures \"1920's at Old Bedford Village\" with the restraint and intention of Art Deco era portraits. Light is sculpted, composition serves story. From",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He doesn’t raise his voice. He doesn’t need to.\n\nThe younger man waits, hat in hand, posture held somewhere between respect and calculation. Words pass quietly — the kind that never get written down. In this town, agreements aren’t announced. They are understood.\n\nWhatever is decided here will ripple outward. Not loudly. Not publicly. Just enough to change who stands where tomorrow.",
+    "notes": "“A Matter of Business” operates in the tradition of narrative portraiture rather than nostalgia. The composition is built on spatial tension — the vertical posts divide the frame like a stage proscenium, while the central figure anchors authority through stillness rather than gesture.\n\nHeim’s painterly restraint echoes early 20th-century portrait painting, where power was implied through posture and controlled light rather than theatrical action. The subdued palette and sculpted shadow reference deco-era fine art aesthetics while maintaining photographic clarity.\n\nThis piece rewards prolonged viewing — not for action, but for implication. It is a study in social gravity, where the real drama lies in what is not said.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 16,
@@ -465,18 +590,31 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-QBKhZS2/3/NjdTFzh2hCjfSjDjMWbGZhzCX3QqfTZnRnPTXrwJH/XL/_DSF3076-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-QBKhZS2/3/MCNsQ76N6Rmg59VQR4fBjjLZ6C6FwfKCGWZMLFvpX/L/_DSF3076-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-QBKhZS2/3/KzwQZPjJkjkJqc3nwjPJWXF8hwsgjZNCLv9M2LLHM/S/_DSF3076-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-pqpdH2v",
-    "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "alt": "Photographic artwork © Wayne Heim",
+    "title": "Holding the Threshold",
+    "description": "A painterly Roaring 20s photography portrait set at Old Bedford Village, this image captures a moment of restrained authority within the shifting social ground of the 1920s. Light pours through the doorway, sculpting the figure in classic jazz age restraint — a study in posture, tension, and decision.\n\nPart of Wayne Heim’s 1920s fine art photography series, this work draws from roaring twenties portraits and speakeasy portrait traditions while avoiding spectacle. The composition treats the Roaring 20s as lived history — where identity, loyalty, and quiet power defined the room long before a word was spoken. © Wayne Heim",
+    "alt": "Roaring 20s portrait of a man standing in a doorway at Old Bedford Village, light streaming behind him, evoking a 1920s speakeasy scene",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-pqpdH2v/A",
-    "keywords": ["shoe shine", "1920s Bedford Village", "roaring 20's"],
-    "story": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "notes": "",
-    "rating": 0,
+
+    "keywords": [
+      "1920s fine art photography",
+      "Roaring 20s",
+      "roaring 20s photography",
+      "Roaring 20s portraits",
+      "1920s portraits",
+      "speakeasy portraits",
+      "Old Bedford Village",
+      "jazz age portraits",
+      "roaring twenties art prints"
+    ],
+
+    "story": "He doesn’t block the doorway.\n\nHe simply stands there — one hand braced against the frame, the other resting near his vest as rain traces thin lines beyond the light. Inside, the room hums with quiet deals and careful words. Outside, the world waits.\n\nHe has learned that power is not in stepping forward. It is in deciding who does.",
+    "notes": "“Holding the Threshold” operates in the tradition of narrative portraiture, where stance and spatial control carry more weight than action. The doorway becomes both compositional anchor and psychological boundary — a device long used in painting to imply transition, authority, and moral choice.\n\nThe restrained palette and directional light recall early 20th-century portrait painting and the controlled chiaroscuro of classic cinema. Rather than romanticizing the Roaring 20s, the work emphasizes quiet negotiation — the unspoken agreements that shaped the jazz age as much as spectacle did.\n\nThis piece rewards sustained viewing. The longer one studies the light and the line of the body, the clearer it becomes: the real tension lives in what has not yet happened.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 17,
@@ -485,22 +623,33 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-pqpdH2v/8/NLnr59ZJ6dS9wc8krwhgTVbWjpBfsHrs7r2TdFf33/L/_DSF3175-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-pqpdH2v/8/MX5pFZLMTP4ZgjtB9QBLk9M6T9SgLhhjBpTszm4s5/M/_DSF3175-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-pqpdH2v/8/MTQkpSLddLPwzHtVHqN2Zrh5kckjw8Vhjrf7vvcRX/S/_DSF3175-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-5bqK2s3",
-    "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "alt": "1920's  at Old Bedford Village",
+    "title": "Afternoon Light",
+    "description": "A painterly 1920s fine art photography portrait capturing the quiet presence of a woman poised in a doorway at Old Bedford Village. Rather than spectacle, this Roaring 20s portrait emphasizes restraint, posture, and the subtle tension between interior shadow and exterior light. \n\nPart of Wayne Heim’s historically themed work exploring Roaring 20s photography and jazz age portraits, the image reflects the character and compositional discipline associated with 1920s portraits and roaring twenties art prints. Ideal for collectors drawn to 1920s fine art photography and narrative-driven Roaring 20s portraits. © Wayne Heim",
+    "alt": "Woman in 1920s dress standing in doorway at Old Bedford Village, soft afternoon light illuminating a Roaring 20s fine art portrait scene",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5bqK2s3/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's"
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
+      "roaring 20s photography",
+      "Roaring 20s Portraits",
+      "1920s portraits",
+      "Old Bedford Village",
+      "roaring twenties art prints",
+      "roaring twenties portraits",
+      "deco era fine art",
+      "roaring 20s vignette"
     ],
-    "story": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "She stands just inside the threshold, where shadow still remembers the room and light begins to claim the day. The street hums somewhere beyond the doorway, but she does not move toward it.\n\nThere is a steadiness in her posture — not hesitation, not retreat. Just a woman measuring the hour, knowing when to step forward and when to let the moment pass.\n\nSomewhere, music will start. Somewhere, decisions will be made. For now, she waits — and the waiting holds its own weight.",
+    "notes": "“Afternoon Light” is built on restraint. The composition uses the doorway as both frame and psychological threshold — a device reminiscent of early cinematic portraiture and Art Deco-era staging. The controlled palette and softened edges evoke silent film era photography, while the posture carries the authority of classic jazz age portraits.\n\nRather than dramatizing the Roaring 20s, this piece treats the era as lived experience — where identity is negotiated in quiet spaces before the public performance begins. The result is a Roaring 20s fine art portrait that rewards slow viewing and favors atmosphere over spectacle.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 18,
@@ -509,22 +658,33 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-5bqK2s3/9/MTgWRK62T6zG5Mrb3xmMgnDnV7zh8Fsd7QT5msvxZ/XL/_DSF3362-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-5bqK2s3/9/LX35st77RvR7j4BhxWShmNSM9tQZKvTSjLbK2L6GS/L/_DSF3362-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-5bqK2s3/9/LRSdnQqrW7bgn5bWdBvTCcT3rHmZgHg6GXVJrnXXg/S/_DSF3362-Edit-2-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-9mDvxMc",
-    "title": "1920's  at Old Bedford Village",
-    "description": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "alt": "1920's  at Old Bedford Village",
+    "title": "Badge and Silence",
+    "description": "A painterly 1920s fine art photograph rooted in restraint rather than spectacle, *Badge and Silence* explores quiet authority in the Roaring 20s. This 1920s portrait, created at Old Bedford Village, reflects the tension beneath public order—where lawmen, bootleggers, and shifting social codes defined the Jazz Age. Light, posture, and stillness shape a narrative aligned with roaring 20s photography and roaring twenties portraits, blending historical authenticity with cinematic control. Part of Wayne Heim’s 1920s fine art photography series. © Wayne Heim",
+    "alt": "1920s lawman seated on a wooden porch holding a revolver, painterly Roaring 20s portrait at Old Bedford Village",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9mDvxMc/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's"
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
+      "roaring 20s photography",
+      "roaring twenties portraits",
+      "1920s portraits",
+      "Bootleggers",
+      "deco era fine art",
+      "roaring 20s art",
+      "roaring twenties art prints",
+      "Old Bedford Village"
     ],
-    "story": "Reenactors at Old Bedford Village 1920's event. Gangsters, flappers, bootleggers abound.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He rests the revolver across his knees as if it were nothing more than a tool, but his hands don’t quite forget its weight. The porch boards creak beneath him, and somewhere beyond the fence line a door closes a little too quickly.\n\nHe has learned that most trouble doesn’t arrive shouting. It lingers. It tests the air. It waits for a man to blink.\n\nSo he sits. Watching the street without turning his head. Letting the silence speak first.",
+    "notes": "This work leans into compositional restraint reminiscent of early 20th-century portrait painting, where authority is conveyed through posture and negative space rather than action. The seated pose and architectural framing create a quiet stage—echoing the structural calm found in works by artists who understood that tension often lives in stillness.\n\nRather than dramatizing the era, Heim allows light and silence to carry the narrative. The revolver rests, not raised; the badge gleams without announcement. The result is a Roaring 20s vignette that resists nostalgia and instead suggests psychological gravity—an image that rewards prolonged viewing and settles into the room with understated power.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 19,
@@ -533,25 +693,35 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9mDvxMc/9/NhbqhP2KDHks49L5zPWSXznHthfw9gtcDB6wFMfvm/XL/_O1H0933-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9mDvxMc/9/KZ8XbtJRbm9KKjbLqcMTSVJfjKbnXt2Fhp3tNG3TM/L/_O1H0933-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9mDvxMc/9/LpX4MPkNS2MQbKsFqLcNttjqvLmD45f6xcpmVMwwL/S/_O1H0933-Edit-2-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-PXj364M",
-    "title": "Roaring 20s Art Moment",
-    "description": "A painterly Roaring 20s photograph of a figure of the 1920s, defined by restraint rather than spectacle. Wayne Heim's Roaring 20s fine art photography explores a society in transition, focusing on individuals shaped by changing power, expectation, and consequence. Light, posture, and restraint shape a narrative rooted in transition, identity, and memory - where control defined those who navigated shifting social ground. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "1920's  at Old Bedford Village",
+    "title": "Terms of the Evening",
+    "description": "A painterly Roaring 20s portrait from Old Bedford Village, capturing a jazz-age figure in a quiet interior defined by restraint, shadow, and consequence. Wayne Heim’s historically themed fine art photography draws from the atmosphere of the Roaring Twenties—where posture, silence, and the smallest gestures could read like a contract. This Roaring 20s photography vignette emphasizes character over spectacle, evoking speakeasy-era tension and Art Deco–era elegance through controlled light and composed stillness. © Wayne Heim",
+    "alt": "Roaring 20s portrait of a serious man in a dim interior doorway, lit from the side with a restrained, speakeasy-era mood",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/A",
+
     "keywords": [
-      "shoe shine",
-      "1920s Bedford Village",
-      "roaring 20's",
-      "roaring 20s art",
+      "1920s fine art photography",
+      "jazz age portraits",
+      "Roaring 20s",
       "roaring 20s photography",
-      "1920s portraits"
+      "Roaring 20s Portraits",
+      "1920s portraits",
+      "speakeasy portraits",
+      "Roaring 20s vignette",
+      "roaring 20s inspired photography",
+      "deco era fine art",
+      "gatsby era art",
+      "roaring twenties portraits",
+      "roaring twenties art prints"
     ],
-    "story": "Delving into 1920s portraits, this work by Wayne Heim highlights 1920s portraits through roaring 20s art and roaring 20s art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He doesn’t move toward the light—he lets it come to him.\n\nOut there, the world is loud with talk and music and other people’s certainty. In here, the pauses do the negotiating.\n\nWhatever was agreed to tonight will be remembered differently tomorrow.",
+    "notes": "“Terms of the Evening” is built on restraint—light held back, gesture pared down, story implied rather than declared. The composition leans into early 20th-century portrait sensibilities: a controlled tonal range, a quiet figure-ground relationship, and a cinematic use of negative space that lets the viewer feel the room. The period costuming and setting function as a stage, but the real subject is psychological: the tension between what’s said and what’s understood. It’s an image designed to reward long looking, where the mood carries the narrative and the era becomes atmosphere rather than ornament.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 20,
@@ -560,6 +730,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/KMgPzNNRSFVjPCg2VJQjTcJtwjwZ7BPtQMGfKQLNP/L/_DSF2781-Edit-L.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/NN7Lv5Hv2jQ72Fmk5c26mVq4WRzdHr7D26392s3Wv/M/_DSF2781-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/Mb2CQ6jQQzKLdQH79w64VjndqrLVKmhZLhHMnmstc/S/_DSF2781-Edit-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   }
 ];

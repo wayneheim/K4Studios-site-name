@@ -19,40 +19,6 @@
  * - /admin/analytics - password-protected analytics dashboard
  */
 
-// ═══════════════════════════════════════════════════════════════════════════
-// SHARED MODULES (Phase 1 extraction)
-// ═══════════════════════════════════════════════════════════════════════════
-import {
-  ALLOWED_BOTS,
-  BLOCKED_BOTS,
-  BLOCKED_IP_PREFIXES,
-  DATACENTER_PREFIXES,
-  VERIFIED_BOTS,
-  DATACENTER_CITIES,
-  DATACENTER_ASNS,
-  hashIP,
-  classifyUA,
-  isBlockedIP,
-  isDatacenterIP,
-  getVerifiedBotName,
-  isVerifiedSearchBot,
-  getGeoFromRequest,
-  detectDevice,
-  isSyntheticTraffic
-} from './src/shared/index.js';
-
-// ═══════════════════════════════════════════════════════════════════════════
-// ANALYTICS COLLECTOR (Phase 1 Step 5 — single orchestration boundary)
-// Worker never imports from classifier.js or storage.js directly.
-// ═══════════════════════════════════════════════════════════════════════════
-import {
-  isSearchBot,
-  logEdgeEvent,
-  logArtView,
-  logVerifiedBot,
-  updateBotIntelligence
-} from './src/analytics/collector.js';
-
 const MANIFEST_URL = "https://k4studios.com/image-manifest.json";
 const IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";
 const MANIFEST_CACHE_TTL = 3600; // seconds
@@ -69,8 +35,175 @@ const SIZE_FALLBACK = {
   src:["src", "s", "m", "l", "xl"]
 };
 
-// NOTE: calculateRiskScore now imported from ./src/analytics/classifier.js
-// NOTE: updateBotIntelligence now imported from ./src/analytics/storage.js
+// --------------------
+// GATEWAY BOT / SCRAPER LOGIC
+// --------------------
+const ALLOWED_BOTS =
+  /(googlebot|google-inspectiontool|adsbot-google|googleother|apis-google|bingbot|bingpreview|msnbot|duckduckbot|yandex|baiduspider|slurp|petalbot|ahrefsbot|ahrefssiteaudit|semrushbot|screaming\s*frog|sitebulb|applebot|facebookexternalhit|facebot|linkedinbot|twitterbot|pinterestbot|slackbot|discordbot|telegrambot|uptimerobot|uptime[- ]?kuma)/i;
+
+const BLOCKED_BOTS =
+  /(python|curl|scrapy|spider(?!.*google)|httpclient|axios|wget|postman|libwww-perl|powershell|java\/|node-fetch|okhttp)/i;
+
+// --------------------
+// BLOCKED IP RANGES (scrapers, AI harvesters)
+// --------------------
+// Format: [start, end] as numeric IPs or CIDR prefix
+const BLOCKED_IP_PREFIXES = [
+  '45.148.10.',   // NL scraper - systematic image harvester (identified 2026-02-13)
+  '146.59.19.',   // PL datacenter - no referrer bot pattern
+  '135.181.213.', // FI datacenter - no referrer bot pattern
+  '51.81.32.',    // US datacenter - no referrer bot pattern
+  '51.81.210.',   // US datacenter - no referrer bot pattern
+  '51.38.125.',   // DE datacenter - no referrer bot pattern
+  '51.68.143.',   // PL datacenter - no referrer bot pattern
+  '57.129.15.',   // DE datacenter - no referrer bot pattern
+  '57.128.197.',  // PL datacenter - no referrer bot pattern
+  '216.244.66.',  // DotBot crawler
+];
+
+function isBlockedIP(ip) {
+  if (!ip) return false;
+  return BLOCKED_IP_PREFIXES.some(prefix => ip.startsWith(prefix));
+}
+
+// Datacenter IP ranges that suggest bot behavior when combined with no referrer
+// IMPORTANT: Use specific /16 or /24 prefixes only — never /8 blocks like '3.'
+// Broad prefixes were catching residential ISP users from MX, SG, EU etc.
+const DATACENTER_PREFIXES = [
+  // OVH hosting (specific ranges, not broad /8)
+  '51.81.', '51.68.', '51.38.',     // OVH US/EU
+  '135.148.', '135.181.',            // OVH US / Hetzner FI
+  '146.59.',                         // OVH PL
+  '57.128.', '57.129.',              // OVH DE/EU
+  // AWS (specific known hosting /16 ranges)
+  '3.145.', '3.148.',               // AWS Ohio
+  '18.117.', '18.118.', '18.218.', '18.222.', // AWS Ohio
+  '34.205.', '34.224.', '34.235.',   // AWS US-East
+  '52.55.', '52.70.', '52.73.',      // AWS US-East
+  '54.236.',                         // AWS US-East
+  '15.204.',                         // OVH
+  // Hetzner, DigitalOcean, Vultr
+  '159.138.',                         // Huawei Cloud
+  '162.19.',                          // OVH
+  '185.170.',                         // Datacenter
+  '216.244.',                         // DotBot / hosting
+  // Chinese cloud (specific ranges)
+  '43.154.', '43.155.', '43.159.',   // Tencent Cloud specific
+  '101.32.', '101.33.',              // Tencent Cloud
+  '119.28.', '124.243.',             // Alibaba/Huawei
+];
+
+function isDatacenterIP(ip) {
+  if (!ip) return false;
+  return DATACENTER_PREFIXES.some(prefix => ip.startsWith(prefix));
+}
+
+// Verified search bots (never block, never throttle)
+const VERIFIED_BOTS = [
+  { name: 'Googlebot', pattern: /googlebot|google-inspectiontool|googleother|apis-google/i },
+  { name: 'Bingbot', pattern: /bingbot|bingpreview|msnbot/i },
+  { name: 'Applebot', pattern: /applebot/i },
+  { name: 'DuckDuckBot', pattern: /duckduckbot/i },
+  { name: 'Yandex', pattern: /yandex/i },
+  { name: 'Baidu', pattern: /baiduspider/i },
+  { name: 'Facebook', pattern: /facebookexternalhit|facebot/i },
+  { name: 'Twitter', pattern: /twitterbot/i },
+  { name: 'Pinterest', pattern: /pinterestbot/i },
+  { name: 'LinkedIn', pattern: /linkedinbot/i },
+  { name: 'OpenAI', pattern: /gptbot|chatgpt-user|oai-searchbot/i },
+  { name: 'Claude', pattern: /claudebot|anthropic-ai|claude-web/i },
+];
+
+function getVerifiedBotName(ua) {
+  if (!ua) return null;
+  for (const bot of VERIFIED_BOTS) {
+    if (bot.pattern.test(ua)) return bot.name;
+  }
+  return null;
+}
+
+function isVerifiedSearchBot(ua) {
+  return getVerifiedBotName(ua) !== null;
+}
+
+// --------------------
+// BOT INTELLIGENCE SYSTEM
+// --------------------
+// Risk levels:
+// 1 = Verified/Safe (search bots)
+// 2 = Suspicious but non-aggressive (watching)
+// 3 = High-confidence scraper (review recommended)
+// 4 = Malicious/Abusive (block candidate)
+
+/**
+ * Calculate risk score for an IP based on behavior patterns
+ * Returns: { score: number, rules: string[], riskLevel: 1|2|3|4 }
+ */
+function calculateRiskScore(stats) {
+  let score = 0;
+  const rules = [];
+  
+  // Verified bot = Risk 1, always safe
+  if (stats.is_verified_bot) {
+    return { score: 0, rules: ['verified_bot'], riskLevel: 1 };
+  }
+  
+  // Velocity: >3 requests/second sustained
+  if (stats.max_velocity > 3) {
+    score += 3;
+    rules.push('high_velocity');
+  }
+  
+  // Volume: >50 requests/hour
+  if (stats.requests_per_hour > 50) {
+    score += 2;
+    rules.push('high_volume');
+  }
+  
+  // No branching: 100% image_page, 0% gallery
+  if (stats.image_page_pct > 95 && stats.gallery_pct < 1) {
+    score += 3;
+    rules.push('no_branching');
+  }
+  
+  // No referrer + high volume
+  if (!stats.has_referrer && stats.total_requests > 20) {
+    score += 2;
+    rules.push('no_referrer_high_volume');
+  }
+  
+  // Datacenter IP
+  if (stats.is_datacenter) {
+    score += 1;
+    rules.push('datacenter_ip');
+  }
+  
+  // Multi-day presence (persistent scraper)
+  if (stats.days_seen > 2) {
+    score += Math.min(stats.days_seen - 1, 3);
+    rules.push('multi_day');
+  }
+  
+  // Suspicious country patterns (known bot havens + no referrer)
+  if (['NL', 'FI', 'PL', 'RU', 'CN'].includes(stats.country) && !stats.has_referrer) {
+    score += 1;
+    rules.push('suspicious_origin');
+  }
+  
+  // Determine risk level
+  let riskLevel;
+  if (score >= 8) {
+    riskLevel = 4; // Malicious
+  } else if (score >= 5) {
+    riskLevel = 3; // High-confidence scraper
+  } else if (score >= 2) {
+    riskLevel = 2; // Suspicious
+  } else {
+    riskLevel = 1; // Safe (low activity human)
+  }
+  
+  return { score, rules, riskLevel };
+}
 
 // getThrottleDelay REMOVED — risk scoring is label-only, never changes request behavior.
 // Throttling/blocking is manual-only via dashboard. See Hank's directive:
@@ -115,13 +248,117 @@ async function isIPBlocked(env, ipHash) {
   return blockedIpCache.has(ipHash);
 }
 
+/**
+ * Update suspected_bots table with aggregated stats from art_views
+ * Called periodically or on dashboard load
+ */
+async function updateBotIntelligence(env) {
+  if (!env?.DB) return;
+  
+  try {
+    // Aggregate suspicious activity from art_views (last 7 days)
+    // Also aggregate IPs that were auto-flagged as bots
+    const aggregateQuery = `
+      WITH ip_stats AS (
+        SELECT 
+          ip_hash,
+          COUNT(*) as total_requests,
+          COUNT(DISTINCT date(created_at)) as days_seen,
+          MIN(created_at) as first_seen,
+          MAX(created_at) as last_seen,
+          MAX(country) as country,
+          SUM(CASE WHEN referrer IS NOT NULL AND referrer != '' THEN 1 ELSE 0 END) > 0 as has_referrer,
+          ROUND(100.0 * SUM(CASE WHEN type = 'image_page' THEN 1 ELSE 0 END) / COUNT(*), 1) as image_page_pct,
+          ROUND(100.0 * SUM(CASE WHEN type IN ('gallery', 'gallery_view') THEN 1 ELSE 0 END) / COUNT(*), 1) as gallery_pct,
+          ROUND(COUNT(*) * 1.0 / (JULIANDAY(MAX(created_at)) - JULIANDAY(MIN(created_at)) + 0.001) / 24, 1) as requests_per_hour,
+          MAX(is_bot) as is_flagged_bot
+        FROM art_views
+        WHERE created_at > datetime('now', '-7 days')
+        GROUP BY ip_hash
+        HAVING COUNT(*) >= 5 OR MAX(is_bot) = 1
+      )
+      SELECT * FROM ip_stats
+      ORDER BY total_requests DESC
+      LIMIT 100
+    `;
+    
+    const statsResult = await env.DB.prepare(aggregateQuery).all();
+    const ipStats = statsResult.results || [];
+    
+    for (const stats of ipStats) {
+      // Check if datacenter IP
+      const isDatacenter = DATACENTER_PREFIXES.some(p => stats.ip_hash.startsWith(p.replace('.x', '.')));
+      
+      // Calculate risk (boost if auto-flagged as bot)
+      let { score, rules, riskLevel } = calculateRiskScore({
+        ...stats,
+        is_datacenter: isDatacenter,
+        is_verified_bot: false, // Can't verify from hash alone
+      });
+      
+      // If auto-flagged as bot (datacenter + no referrer), add a modest boost
+      // NOT auto-elevated to risk 3 anymore — the +30 score was nuclear
+      // (malicious threshold is 8) and caused mass false-positive throttling.
+      // Now just a +2 signal that combines with other rules normally.
+      if (stats.is_flagged_bot) {
+        score += 2;
+        rules.push('auto_flagged_bot');
+      }
+      
+      // Determine status: WATCHING by default, never auto-throttle.
+      // Throttling/blocking is manual-only via the dashboard.
+      // Auto-throttle was causing mass false positives (171 IPs throttled,
+      // including owner's IP and verified Facebook crawler).
+      let status = 'watching';
+      
+      // Upsert into suspected_bots (preserve blocked status)
+      await env.DB.prepare(`
+        INSERT INTO suspected_bots (ip_hash, risk_level, risk_score, rules_triggered, first_seen, last_seen, days_seen, total_requests, image_page_pct, has_referrer, is_datacenter, country, status, updated_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+        ON CONFLICT(ip_hash) DO UPDATE SET
+          risk_level = excluded.risk_level,
+          risk_score = excluded.risk_score,
+          rules_triggered = excluded.rules_triggered,
+          last_seen = excluded.last_seen,
+          days_seen = excluded.days_seen,
+          total_requests = excluded.total_requests,
+          image_page_pct = excluded.image_page_pct,
+          has_referrer = excluded.has_referrer,
+          updated_at = datetime('now'),
+          status = CASE WHEN suspected_bots.status IN ('blocked', 'verified') THEN suspected_bots.status ELSE excluded.status END
+      `).bind(
+        stats.ip_hash,
+        riskLevel,
+        score,
+        JSON.stringify(rules),
+        stats.first_seen,
+        stats.last_seen,
+        stats.days_seen,
+        stats.total_requests,
+        stats.image_page_pct,
+        stats.has_referrer ? 1 : 0,
+        isDatacenter ? 1 : 0,
+        stats.country,
+        status
+      ).run();
+    }
+    
+    return ipStats.length;
+  } catch (e) {
+    console.error('Bot intelligence update error:', e);
+    return 0;
+  }
+}
+
 const ALWAYS_ALLOWED = [
   "/sitemap.xml",
   "/robots.txt",
   "/e05ffc8ff8004372b01c0e153ba16b44.txt" // IndexNow key
 ];
 
-// NOTE: SEARCH_BOT_PATTERN now imported from ./src/analytics/classifier.js
+// Search bots for IMAGE PAGE 410 policy (narrower, intentionally)
+const SEARCH_BOT_PATTERN =
+  /(googlebot|google-inspectiontool|googleother|bingbot|bingpreview|msnbot|duckduckbot|yandex|baiduspider|slurp|applebot|facebookexternalhit|facebot|linkedinbot|twitterbot|pinterestbot)/i;
 
 // --------------------
 // EDGE + IN-MEM JSON CACHES
@@ -377,8 +614,29 @@ function getParentGallery(pathname) {
   return pathname.replace(/\/i-[a-zA-Z0-9-]+\/?$/, "");
 }
 
-// NOTE: isSearchBot now imported from ./src/analytics/classifier.js
-// NOTE: logEdgeEvent, logArtView, logVerifiedBot now imported from ./src/analytics/storage.js
+function isSearchBot(request) {
+  const ua = request.headers.get("User-Agent") || "";
+  return SEARCH_BOT_PATTERN.test(ua);
+}
+
+/**
+ * Log edge event directly to D1 (fire and forget via waitUntil)
+ * This is the correct place to log 301/410/302 events - at the edge.
+ */
+async function logEdgeEvent(env, eventType, path, imageId, isBot, request) {
+  try {
+    const referrer = request.headers.get("Referer") || null;
+    const country = request.cf?.country || null;
+    
+    await env.DB.prepare(`
+      INSERT INTO edge_events (event_type, path, image_id, is_bot, referrer, country)
+      VALUES (?, ?, ?, ?, ?, ?)
+    `).bind(eventType, path, imageId, isBot ? 1 : 0, referrer, country).run();
+  } catch (e) {
+    // Never let logging break the response
+    console.error('Edge event logging error:', e);
+  }
+}
 
 // --------------------
 // ART VIEWS TRACKING (Layer B)
@@ -386,7 +644,83 @@ function getParentGallery(pathname) {
 // Tracks actual art being viewed - server-side, no JS required
 // Types: 'image' (proxy), 'image_page' (/Galleries/*/i-*), 'gallery_view' (JS-verified gallery landing)
 
-// NOTE: isSyntheticTraffic, hashIP, classifyUA now imported from ./src/shared/
+// ═══════════════════════════════════════════════════════════════════════════
+// SHARED INGESTION GATE - Used by ALL write paths to filter synthetic traffic
+// This is the ONLY place bot filtering logic should live. One function, all paths.
+// ═══════════════════════════════════════════════════════════════════════════
+const DATACENTER_CITIES = [
+  'Ashburn', 'Moses Lake', 'Leesburg', 'Dublin', 'Prineville',
+  'Boardman', 'The Dalles', 'Forest City', 'Council Bluffs', 'Clonee'
+];
+const DATACENTER_ASNS = [
+  16509, 14618,  // Amazon AWS
+  8075,          // Microsoft Azure
+  15169, 396982, // Google Cloud
+  13335          // Cloudflare
+];
+
+/**
+ * Check if request is from synthetic/bot traffic that should be silently dropped.
+ * Returns true if the request should be BLOCKED (not written to D1).
+ */
+function isSyntheticTraffic(request) {
+  // 1) Datacenter city hard block
+  const city = request.cf?.city;
+  if (city && DATACENTER_CITIES.includes(city)) {
+    return true;
+  }
+  
+  // 2) ASN-based datacenter block
+  const asn = request.cf?.asn;
+  if (asn && DATACENTER_ASNS.includes(asn)) {
+    return true;
+  }
+  
+  // 3) Headless browser / bot UA detection
+  const ua = (request.headers.get("User-Agent") || "").toLowerCase();
+  if (
+    ua.includes('headless') ||
+    ua.includes('chrome-lighthouse') ||
+    ua.includes('phantomjs') ||
+    ua.includes('puppeteer') ||
+    ua.includes('selenium') ||
+    ua.includes('webdriver') ||
+    /\bcurl\b/.test(ua) ||
+    /\bbot\b/.test(ua) ||
+    /\bspider\b/.test(ua) ||
+    /\bcrawler\b/.test(ua) ||
+    ua === '' ||
+    ua === 'unknown'
+  ) {
+    return true;
+  }
+  
+  return false;
+}
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Hash IP for privacy - simple but effective
+ */
+function hashIP(ip) {
+  if (!ip) return 'unknown';
+  // Simple hash: take first 3 octets + day for daily uniqueness
+  const parts = ip.split('.');
+  if (parts.length < 3) return ip.slice(0, 8);
+  return `${parts[0]}.${parts[1]}.${parts[2]}.x`;
+}
+
+/**
+ * Classify UA as human or unknown (not trying to detect all bots here)
+ */
+function classifyUA(ua) {
+  if (!ua) return 'unknown';
+  const lower = ua.toLowerCase();
+  // Only mark as 'bot' if obviously a bot
+  if (BLOCKED_BOTS.test(lower)) return 'bot';
+  if (ALLOWED_BOTS.test(lower)) return 'bot';
+  return 'human';
+}
 
 /**
  * Prefer an IPv4 address when both IPv4+IPv6 may be present.
@@ -409,6 +743,99 @@ function getBestClientIP(request) {
   }
 
   return cfIp;
+}
+
+/**
+ * Log an art view - fires async, never blocks response
+ * Deduplication: one view per IP per target per hour
+ */
+async function logArtView(env, type, targetId, request, sessionId = null) {
+  try {
+    // Use shared ingestion gate - one function, all paths
+    if (isSyntheticTraffic(request)) return;
+    
+    const ip = request.headers.get("CF-Connecting-IP") || 
+               request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() || 
+               'unknown';
+    
+    // Hard block known scrapers - don't even log them
+    if (isBlockedIP(ip)) return;
+    
+    const ua = request.headers.get("User-Agent") || '';
+    const uaClass = classifyUA(ua);
+    
+    // Skip obvious bots for this layer - they're counted in Cloudflare
+    if (uaClass === 'bot') return;
+    
+    const ipHash = hashIP(ip);
+    const country = request.cf?.country || null;
+    const region = request.cf?.region || null;
+    const city = request.cf?.city || null;
+    const referrer = request.headers.get("Referer") || null;
+    
+    // Bot detection: only flag if datacenter IP + no referrer
+    // REMOVED: (isOnsiteType && !referrer) — was flagging 69-81% of real
+    // gallery/image_page views as bots. Many legitimate users visit without
+    // Referer headers: direct links, emails, bookmarks, privacy browsers.
+    // This false positive was cascading into auto_flagged_bot ? throttling.
+    const isBot = (isDatacenterIP(ip) && !referrer) ? 1 : 0;
+    
+    // Dedup strategy:
+    // - JS-verified calls pass session_id → dedup per session (same image in same session = 1 view)
+    // - Server-side calls (no session_id) → dedup per hour (fallback for non-JS safety net)
+    // Session-scoped dedup fixes the "phone swipe" problem: revisiting an image after
+    // grid browsing within the same clock hour was silently dropped by hourly dedup.
+    const dedupScope = sessionId ? `sid-${sessionId}` : new Date().toISOString().slice(0, 13);
+    const dedupKey = `${ipHash}:${targetId}:${type}:${dedupScope}`;
+    
+    await env.DB.prepare(`
+      INSERT OR IGNORE INTO art_views (type, target_id, ip_hash, ua_class, country, region, city, referrer, dedup_key, is_bot)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `).bind(type, targetId, ipHash, uaClass, country, region, city, referrer, dedupKey, isBot).run();
+  } catch (e) {
+    // Never let logging break the response
+    console.error('Art view logging error:', e);
+  }
+}
+
+/**
+ * Log verified search bot activity (Googlebot, Bingbot, etc.)
+ * This is GOOD - it means search engines are indexing your images!
+ */
+async function logVerifiedBot(env, imageId, request) {
+  try {
+    const ip = request.headers.get("CF-Connecting-IP") || 'unknown';
+    const ipHash = hashIP(ip);
+    const ua = request.headers.get("User-Agent") || '';
+    const country = request.cf?.country || null;
+    
+    // Extract bot name from user agent
+    let botName = 'unknown';
+    if (/googlebot/i.test(ua)) botName = 'googlebot';
+    else if (/bingbot/i.test(ua)) botName = 'bingbot';
+    else if (/applebot/i.test(ua)) botName = 'applebot';
+    else if (/yandexbot/i.test(ua)) botName = 'yandexbot';
+    else if (/duckduckbot/i.test(ua)) botName = 'duckduckbot';
+    else if (/baiduspider/i.test(ua)) botName = 'baidu';
+    else if (/facebookexternalhit/i.test(ua)) botName = 'facebook';
+    else if (/twitterbot/i.test(ua)) botName = 'twitter';
+    else if (/pinterestbot/i.test(ua)) botName = 'pinterest';
+    
+    // Upsert into suspected_bots with verified flag
+    await env.DB.prepare(`
+      INSERT INTO suspected_bots (ip_hash, risk_level, risk_score, rules_triggered, first_seen, last_seen, days_seen, total_requests, is_verified_bot, bot_name, country, status, updated_at)
+      VALUES (?, 0, 0, '[]', datetime('now'), datetime('now'), 1, 1, 1, ?, ?, 'verified', datetime('now'))
+      ON CONFLICT(ip_hash) DO UPDATE SET
+        last_seen = datetime('now'),
+        total_requests = total_requests + 1,
+        is_verified_bot = 1,
+        bot_name = excluded.bot_name,
+        status = 'verified',
+        updated_at = datetime('now')
+    `).bind(ipHash, botName, country).run();
+  } catch (e) {
+    console.error('Verified bot logging error:', e);
+  }
 }
 
 /**
@@ -519,13 +946,11 @@ async function handleGatewayRequest(request, env) {
     request.method === "HEAD" ||
     request.method === "OPTIONS"
   ) {
-    console.log("PROXY TARGET (always-allowed):", request.url);
     return fetch(request);
   }
 
   // Allow known bots through gateway (they still get image-page policy)
   if (ALLOWED_BOTS.test(ua)) {
-    console.log("PROXY TARGET (allowed-bot):", request.url);
     return fetch(request);
   }
 
@@ -582,7 +1007,6 @@ async function handleGatewayRequest(request, env) {
       console.log("Edge referrer capture:", { raw: edgeReferer, cookieValue });
       
       // Fetch the origin response
-      console.log("PROXY TARGET (cookie-set):", request.url);
       const originResponse = await fetch(request);
       
       // Clone response and add the cookie
@@ -595,14 +1019,36 @@ async function handleGatewayRequest(request, env) {
     }
   }
 
-  console.log("PROXY TARGET (default):", request.url);
   return fetch(request);
 }
 
 // --------------------
 // ANALYTICS: /track ENDPOINT
 // --------------------
-// NOTE: normalizeReferrer now imported from ./src/analytics/classifier.js
+function normalizeReferrer(referer) {
+  if (!referer) return "unknown";
+  const lower = referer.toLowerCase();
+  
+  // Handle already-normalized values (from cookie)
+  if (lower === "google" || lower === "bing" || lower === "facebook" || 
+      lower === "instagram" || lower === "twitter" || lower === "pinterest" || 
+      lower === "linkedin" || lower === "internal" || lower === "direct" || 
+      lower === "unknown" || lower === "other" || lower === "chatgpt") {
+    return lower;
+  }
+  
+  // Normalize full URLs
+  if (lower.includes("google.") || lower.includes("google/")) return "google";
+  if (lower.includes("bing.")) return "bing";
+  if (lower.includes("facebook.") || lower.includes("fb.")) return "facebook";
+  if (lower.includes("instagram.")) return "instagram";
+  if (lower.includes("twitter.") || lower.includes("x.com") || lower.includes("t.co/")) return "twitter";
+  if (lower.includes("chatgpt.com") || lower.includes("chat.openai.com")) return "chatgpt";
+  if (lower.includes("pinterest.")) return "pinterest";
+  if (lower.includes("linkedin.")) return "linkedin";
+  if (lower.includes("k4studios.com")) return "internal";
+  return "other";
+}
 
 async function handleTrackRequest(request, env) {
   // Only accept POST
@@ -4601,11 +5047,9 @@ export default {
 
     // 4) Everything else: gateway firewall
     try {
-      console.log("PROXY TARGET (gateway):", request.url);
       return await handleGatewayRequest(request, env);
     } catch (err) {
       console.error("Gateway error (failing open):", err);
-      console.log("PROXY TARGET (fallback):", request.url);
       return fetch(request);
     }
   }
