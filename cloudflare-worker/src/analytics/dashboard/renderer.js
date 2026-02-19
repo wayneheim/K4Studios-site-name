@@ -166,7 +166,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     .container { max-width: 1800px; margin: 0 auto; }
     h1 { color: #fff; margin-bottom: 20px; }
     h2 { color: #888; font-size: 14px; text-transform: uppercase; margin: 20px 0 10px; }
-    .controls { margin-bottom: 15px; display: flex; flex-wrap: wrap; gap: 5px; }
+    .controls { margin-bottom: 15px; display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
     .controls a { color: #4a9eff; text-decoration: none; padding: 5px 10px; border-radius: 4px; }
     .controls a:hover, .controls a.active { background: #333; }
     .pulse { display: flex; gap: 8px; margin-bottom: 8px; align-items: center; }
@@ -258,7 +258,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       .bot-intel-grid { grid-template-columns: 1fr !important; }
     }
     /* Trend chart styles */
-    .trend-chart { background: #252525; border-radius: 8px; padding: 20px; margin-bottom: 30px; }
+    .trend-chart { background: #252525; border-radius: 8px; padding: 20px; margin-top: 10px; margin-bottom: 30px; }
     .trend-chart h3 { color: #fff; font-size: 14px; margin-bottom: 15px; }
     .trend-bars { display: flex; align-items: flex-end; gap: 4px; height: 100px; padding-bottom: 25px; position: relative; }
     .trend-bar { flex: 1; min-width: 25px; max-width: 70px; background: linear-gradient(180deg, #4a9eff 0%, #2d7dd2 100%); border-radius: 4px 4px 0 0; position: relative; cursor: pointer; transition: all 0.2s; }
@@ -270,7 +270,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     .data-change-marker { color: #f59e0b; font-size: 14px; font-weight: bold; cursor: help; position: relative; top: -1px; margin-left: 1px; }
     .trend-bar-value { position: absolute; top: -22px; left: 50%; transform: translateX(-50%); font-size: 14px; color: #aaa; font-weight: 500; }
     .no-chart { color: #666; font-size: 13px; }
-    .ip-filter { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+    .ip-filter { display: flex; gap: 10px; align-items: center; }
     .ip-filter a { font-size: 12px; }
     .ip-filter .exclude-active { background: #7c3aed; color: #fff; }
     .ip-filter .bot-filter { background: #4b5563; color: #fff; }
@@ -289,21 +289,23 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <a href="?days=30${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 30 && !yesterday ? 'active' : ''}">30 Days</a>
     <a href="?days=90${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 90 && !yesterday ? 'active' : ''}">3 Months</a>
     <span style="background:#059669;padding:4px 10px;border-radius:4px;color:#fff;font-size:13px;">📅 ${greenBadgeLabel}</span>
-    <div class="ip-filter">
-      ${excludeIp 
-        ? `<span class="ip-badge">Excluding: ${excludeIp}</span><a href="${showAllUrl}">Show All IPs</a>`
-        : `<a href="${excludeMeUrl}" class="exclude-active">Exclude My IP</a>`
-      }
-      ${hideBots
-        ? `<a href="${showBotsUrl}" class="bot-filter active">🤖 Bots Hidden</a>`
-        : `<a href="${hideBotsUrl}" class="bot-filter">🤖 Hide Bots</a>`
-      }
-      ${hideChardon
-        ? `<a href="${showChardonUrl}" class="bot-filter active">🏠 Team Hidden</a>`
-        : `<a href="${hideChardonUrl}" class="bot-filter">🏠 Hide Team</a>`
-      }
+    <div style="margin-left:auto;display:flex;gap:10px;align-items:center;">
+      <div class="ip-filter">
+        ${excludeIp 
+          ? `<span class="ip-badge">Excluding: ${excludeIp}</span><a href="${showAllUrl}">Show All IPs</a>`
+          : `<a href="${excludeMeUrl}" class="exclude-active">Exclude My IP</a>`
+        }
+        ${hideBots
+          ? `<a href="${showBotsUrl}" class="bot-filter active">🤖 Bots Hidden</a>`
+          : `<a href="${hideBotsUrl}" class="bot-filter">🤖 Hide Bots</a>`
+        }
+        ${hideChardon
+          ? `<a href="${showChardonUrl}" class="bot-filter active">🏠 Team Hidden</a>`
+          : `<a href="${hideChardonUrl}" class="bot-filter">🏠 Hide Team</a>`
+        }
+      </div>
+      <a href="/__k4stats/export?days=${days}${yesterday ? '&yesterday=1' : ''}${hideBots ? '&hideBots=1' : ''}" class="export-btn" style="background: #2d4a2d; padding: 5px 12px; border-radius: 4px; color: #4ade80;">📥 Export CSV</a>
     </div>
-    <a href="/__k4stats/export?days=${days}${yesterday ? '&yesterday=1' : ''}${hideBots ? '&hideBots=1' : ''}" class="export-btn" style="margin-left: auto; background: #2d4a2d; padding: 5px 12px; border-radius: 4px; color: #4ade80;">📥 Export CSV</a>
   </div>
 
   ${trend.length > 1 ? `
