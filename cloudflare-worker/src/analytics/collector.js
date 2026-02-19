@@ -19,10 +19,10 @@ import {
 } from './classifier.js';
 
 import {
-  updateBotIntelligence,
-  logEdgeEvent,
-  logArtView,
-  logVerifiedBot
+  updateBotIntelligence as _updateBotIntelligence,
+  logEdgeEvent as _logEdgeEvent,
+  logArtView as _logArtView,
+  logVerifiedBot as _logVerifiedBot
 } from './storage.js';
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -30,15 +30,65 @@ import {
 // ═══════════════════════════════════════════════════════════════════════════
 
 export {
-  // Classifiers
+  // Classifiers (pure — no guard needed)
   calculateRiskScore,
   normalizeReferrer,
   isSearchBot,
-  SEARCH_BOT_PATTERN,
-
-  // Storage writers
-  updateBotIntelligence,
-  logEdgeEvent,
-  logArtView,
-  logVerifiedBot
+  SEARCH_BOT_PATTERN
 };
+
+// ═══════════════════════════════════════════════════════════════════════════
+// TIME BUDGET — Phase 2 Step 3 execution safety limit
+//
+// Prevents analytics from consuming excessive edge CPU under DB slowdown.
+// Resolves silently on timeout — no rejection, no branching.
+// ═══════════════════════════════════════════════════════════════════════════
+
+function withTimeout(promise, ms) {
+  return Promise.race([
+    promise,
+    new Promise(resolve =>
+      setTimeout(() => resolve("timeout"), ms)
+    )
+  ]);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// GUARDED STORAGE WRITERS — Phase 2 Step 2 failure isolation
+//
+// Every storage function is wrapped so rejected promises inside
+// ctx.waitUntil() never surface as unhandled-promise warnings.
+// Zero logic changes — only try/catch containment at the boundary.
+// ═══════════════════════════════════════════════════════════════════════════
+
+export async function logEdgeEvent(...args) {
+  try {
+    return await withTimeout(_logEdgeEvent(...args), 1500);
+  } catch (err) {
+    console.error("analytics failure [logEdgeEvent]:", err?.message || err);
+  }
+}
+
+export async function logArtView(...args) {
+  try {
+    return await withTimeout(_logArtView(...args), 1500);
+  } catch (err) {
+    console.error("analytics failure [logArtView]:", err?.message || err);
+  }
+}
+
+export async function logVerifiedBot(...args) {
+  try {
+    return await withTimeout(_logVerifiedBot(...args), 1500);
+  } catch (err) {
+    console.error("analytics failure [logVerifiedBot]:", err?.message || err);
+  }
+}
+
+export async function updateBotIntelligence(...args) {
+  try {
+    return await withTimeout(_updateBotIntelligence(...args), 1500);
+  } catch (err) {
+    console.error("analytics failure [updateBotIntelligence]:", err?.message || err);
+  }
+}

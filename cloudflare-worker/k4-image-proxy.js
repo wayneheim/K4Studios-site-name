@@ -604,7 +604,7 @@ async function handleGatewayRequest(request, env) {
 // --------------------
 // NOTE: normalizeReferrer now imported from ./src/analytics/classifier.js
 
-async function handleTrackRequest(request, env) {
+async function handleTrackRequest(request, env, ctx) {
   // Only accept POST
   if (request.method !== "POST") {
     return new Response("Method not allowed", { status: 405 });
@@ -714,7 +714,7 @@ async function handleTrackRequest(request, env) {
         ? (page_path.match(/\/(i-[a-zA-Z0-9_-]+)\/?$/)?.[1] || null)
         : null);
       if (targetId) {
-        await logArtView(env, 'chapter_view', targetId, request, session_id);
+        ctx.waitUntil(logArtView(env, 'chapter_view', targetId, request, session_id));
       }
     }
 
@@ -724,7 +724,7 @@ async function handleTrackRequest(request, env) {
         ? page_path.replace(/^\/Galleries\//, '').replace(/^\/Other\//, '').replace(/\/$/, '')
         : null);
       if (targetId) {
-        await logArtView(env, 'gallery_view', targetId, request, session_id);
+        ctx.waitUntil(logArtView(env, 'gallery_view', targetId, request, session_id));
       }
     }
 
@@ -3856,7 +3856,7 @@ async function handleSerpKeyword(request, env) {
  * Handle event tracking - zoom clicks, slideshow starts
  * Tracks user intent (button clicks) not image loads
  */
-async function handleTrackEvent(request, env) {
+async function handleTrackEvent(request, env, ctx) {
   if (!env?.DB) {
     return new Response('ok', { status: 200 }); // Fail silently
   }
@@ -3882,7 +3882,7 @@ async function handleTrackEvent(request, env) {
     }
     
     // Log the event using existing logArtView
-    await logArtView(env, type, imageId, request);
+    ctx.waitUntil(logArtView(env, type, imageId, request));
     
     return new Response('ok', { 
       status: 200,
@@ -4492,7 +4492,7 @@ export default {
       if (request.method === "OPTIONS") {
         return handleTrackOptions();
       }
-      return handleTrackRequest(request, env);
+      return handleTrackRequest(request, env, ctx);
     }
 
     // 0a) Edge event tracking (~301/410/404 from Netlify functions)
@@ -4569,7 +4569,7 @@ export default {
         });
       }
       if (request.method === "POST") {
-        return handleTrackEvent(request, env);
+        return handleTrackEvent(request, env, ctx);
       }
       return new Response('Method not allowed', { status: 405 });
     }
