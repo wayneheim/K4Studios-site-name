@@ -54,9 +54,9 @@ import {
 } from './src/analytics/collector.js';
 
 // ═══════════════════════════════════════════════════════════════════════════
-// ANALYTICS READ LAYER (Phase 3 — dashboard queries)
+// DASHBOARD CONTROLLER (Phase 4 — orchestrates all dashboard queries)
 // ═══════════════════════════════════════════════════════════════════════════
-import { getDashboardStats, getEventBreakdown, getGalleryPerformance, getReferrers, getGeography, getDailyTrend, getSessionMetrics, getTopPages, getTopImages, getEntryAnalysis, getEngagementDepth, getExitAnalysis, getEdgeEvents, getArtViews, getBotIntelligence } from './src/analytics/queries.js';
+import { handleDashboardRequest } from './src/analytics/dashboard/controller.js';
 
 const MANIFEST_URL = "https://k4studios.com/image-manifest.json";
 const IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";
@@ -1031,123 +1031,24 @@ async function handleAdminAnalytics(request, env) {
     // Chardon filter: exclude team member location
     const chardonClause = hideChardon ? `AND city != 'Chardon'` : "";
 
-    // Query 1 + 1b: Summary stats + new vs returning (extracted to queries.js)
+    // Build priorPeriodClause for getDashboardStats
     const priorPeriodClause = selectedDate
       ? `date(created_at, '-5 hours') < '${selectedDate}'`
       : (yesterday 
         ? `created_at < datetime('now', '-5 hours', '-1 day', 'start of day')`
         : `created_at < datetime('now', '-5 hours', '-${days} days')`
       );
-    const { summary, returningVisitors, newVisitors } = await getDashboardStats(env, {
-      dateClause, galleryClause, ipClause, botClause, chardonClause, priorPeriodClause
+
+    // Call dashboard controller — orchestrates all queries, returns assembled data
+    const dashboardData = await handleDashboardRequest(env, {
+      dateClause, galleryClause, ipClause, botClause, chardonClause,
+      priorPeriodClause, rangeDateClause, artIpClause,
+      yesterday, days, selectedDate, galleryFilter, excludeIp, viewerIp,
+      hideBots, hideChardon
     });
-
-    const { events, entries } = await getEventBreakdown(env, {
-      dateClause, galleryClause, ipClause, botClause, chardonClause
-    });
-
-    const galleries = await getGalleryPerformance(env, {
-      dateClause, ipClause, botClause, chardonClause
-    });
-
-    const referrers = await getReferrers(env, {
-      dateClause, galleryClause, ipClause, botClause, chardonClause
-    });
-
-    const geo = await getGeography(env, {
-      dateClause, galleryClause, ipClause, botClause, chardonClause
-    });
-
-    const trend = await getDailyTrend(env, {
-      rangeDateClause, galleryClause, ipClause, botClause, chardonClause
-    });
-
-    const { devices, bounceRate, avgDurationSecs, avgDurationFormatted, peakHours, deviceEngagement } = await getSessionMetrics(env, {
-      dateClause, galleryClause, ipClause, botClause, chardonClause
-    });
-
-    const pages = await getTopPages(env, {
-      dateClause, ipClause, botClause, chardonClause
-    });
-
-    const { images, uniqueImagesViewed, totalImageSessions, totalImageViews } = await getTopImages(env, {
-      dateClause, ipClause, botClause, chardonClause
-    });
-
-    const { themesClicked, cowboyJumps, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, botSessions, botPct } = await getEngagementDepth(env, {
-      dateClause, ipClause, botClause, chardonClause
-    });
-
-    const { entryPages, imagePageViewsFromEvents, imageEntrySessionsFromEvents, entryRefCounts } = await getEntryAnalysis(env, {
-      dateClause, ipClause, botClause, chardonClause
-    });
-
-    const { exitPages, exitSummary, exitByCategory } = await getExitAnalysis(env, {
-      dateClause, ipClause, botClause, chardonClause
-    });
-
-    const { edgeEvents, edgeSummary } = await getEdgeEvents(env, { yesterday, days });
-
-    const { artViewsSummary, artViewsByType, topArtViews } = await getArtViews(env, {
-      dateClause, ipClause, botClause, chardonClause, artIpClause
-    });
-
-    const botIntelligence = await getBotIntelligence(env);
 
     // Render HTML
-    const html = renderDashboard({
-      days,
-      yesterday,
-      selectedDate,
-      galleryFilter,
-      excludeIp,
-      viewerIp,
-      summary,
-      newVisitors,
-      returningVisitors,
-      cowboyJumps,
-      events: events.results || [],
-      entries: entries.results || [],
-      galleries: galleries.results || [],
-      referrers: referrers.results || [],
-      geo: geo.results || [],
-      trend: trend.results || [],
-      devices: devices.results || [],
-      pages: pages.results || [],
-      images: images.results || [],
-      uniqueImagesViewed,
-      totalImageSessions,
-      totalImageViews,
-      themesClicked: themesClicked.results || [],
-      topDepthSessions,
-      minEngagement,
-      maxEngagement,
-      avgDepthScore,
-      deepSessionPct,
-      deepSessions,
-      totalSessions,
-      exitPages,
-      exitSummary,
-      exitByCategory,
-      botPct,
-      botSessions,
-      hideBots,
-      hideChardon,
-      edgeEvents,
-      edgeSummary,
-      entryPages,
-      entryRefCounts,
-      imagePageViewsFromEvents,
-      imageEntrySessionsFromEvents,
-      bounceRate,
-      avgDurationFormatted,
-      peakHours,
-      deviceEngagement,
-      artViewsSummary,
-      artViewsByType,
-      topArtViews,
-      botIntelligence
-    });
+    const html = renderDashboard(dashboardData);
 
     return new Response(html, {
       status: 200,
