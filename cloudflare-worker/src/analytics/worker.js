@@ -1,5 +1,5 @@
 import { handleDashboardRequest } from "./dashboard/route.js";
-import { handleTrackRequest, handleTrackOptions } from "./collector.js";
+import { handleTrackRequest, handleTrackOptions, handleEdgeEvent, handleEdgeEventOptions, handleTrackEvent } from "./collector.js";
 import { handleExportCSV, handleBlockIP, handleUnblockIP, handleRefreshBots } from "./admin.js";
 
 export default {
@@ -39,6 +39,33 @@ export default {
         return handleTrackOptions();
       }
       return handleTrackRequest(request, env, ctx);
+    }
+
+    // Edge events (301/410/404 from Netlify functions)
+    if (url.pathname === "/edge-event") {
+      if (request.method === "OPTIONS") {
+        return handleEdgeEventOptions();
+      }
+      return handleEdgeEvent(request, env);
+    }
+
+    // Event tracking (zoom, slideshow, chapter_view)
+    if (url.pathname === "/__k4track/event") {
+      if (request.method === "OPTIONS") {
+        return new Response(null, {
+          status: 204,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Max-Age": "86400"
+          }
+        });
+      }
+      if (request.method === "POST") {
+        return handleTrackEvent(request, env, ctx);
+      }
+      return new Response('Method not allowed', { status: 405 });
     }
 
     // Passthrough — all other requests go to origin

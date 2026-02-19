@@ -18,7 +18,10 @@ export {
   logVerifiedBot,
   updateBotIntelligence,
   handleTrackRequest,
-  handleTrackOptions
+  handleTrackOptions,
+  handleEdgeEvent,
+  handleEdgeEventOptions,
+  handleTrackEvent
 } from './collector.js';
 
 // Admin API — /__k4stats sub-path endpoints

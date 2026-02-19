@@ -49,6 +49,8 @@ import {
   handleDashboardRequest,
   handleTrackRequest,
   handleTrackOptions,
+  handleEdgeEvent,
+  handleTrackEvent,
   isSearchBot,
   logEdgeEvent,
   logArtView,
@@ -544,56 +546,6 @@ async function handleGatewayRequest(request, env) {
   return fetch(request);
 }
 
-// --------------------
-// EDGE EVENTS: /edge-event (for 301/410/404 logging from Netlify functions)
-// --------------------
-async function handleEdgeEvent(request, env) {
-  try {
-    // Use shared ingestion gate - one function, all paths
-    if (isSyntheticTraffic(request)) {
-      return new Response('OK', { status: 200 }); // Silent drop
-    }
-    
-    const data = await request.json();
-    
-    // Required fields
-    const eventType = data.event_type || data.eventType || '404';
-    const path = data.path || data.page_path || null;
-    const imageId = data.image_id || data.imageId || null;
-    const isBot = data.is_bot || data.isBot ? 1 : 0;
-    const referrer = data.referrer || null;
-    const country = data.country || request.cf?.country || null;
-    
-    await env.DB.prepare(`
-      INSERT INTO edge_events (event_type, path, image_id, is_bot, referrer, country)
-      VALUES (?, ?, ?, ?, ?, ?)
-    `).bind(eventType, path, imageId, isBot, referrer, country).run();
-    
-    return new Response('OK', { 
-      status: 200,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST"
-      }
-    });
-  } catch (err) {
-    console.error("Edge event error:", err);
-    return new Response("Error", { status: 500 });
-  }
-}
-
-function handleEdgeEventOptions() {
-  return new Response(null, {
-    status: 204,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Max-Age": "86400"
-    }
-  });
-}
-
 // ====================
 // SERP TRACKER SYSTEM
 // ====================
@@ -892,51 +844,6 @@ async function handleSerpKeyword(request, env) {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });
-  }
-}
-
-/**
- * Handle event tracking - zoom clicks, slideshow starts
- * Tracks user intent (button clicks) not image loads
- */
-async function handleTrackEvent(request, env, ctx) {
-  if (!env?.DB) {
-    return new Response('ok', { status: 200 }); // Fail silently
-  }
-  
-  // Use shared ingestion gate - one function, all paths
-  if (isSyntheticTraffic(request)) {
-    return new Response('ok', { status: 200 }); // Silent drop
-  }
-  
-  try {
-    const body = await request.json();
-    const { type, imageId } = body;
-    
-    // Validate event type
-    const validTypes = ['xl_zoom', 'slideshow_start', 'chapter_view'];
-    if (!type || !validTypes.includes(type)) {
-      return new Response('ok', { status: 200 }); // Fail silently
-    }
-    
-    // Validate image ID
-    if (!imageId || !/^i-[a-zA-Z0-9]+$/.test(imageId)) {
-      return new Response('ok', { status: 200 }); // Fail silently
-    }
-    
-    // Log the event using existing logArtView
-    ctx.waitUntil(logArtView(env, type, imageId, request));
-    
-    return new Response('ok', { 
-      status: 200,
-      headers: { 
-        'Content-Type': 'text/plain',
-        'Access-Control-Allow-Origin': '*'
-      }
-    });
-  } catch (e) {
-    console.error('Track event error:', e);
-    return new Response('ok', { status: 200 }); // Fail silently
   }
 }
 
@@ -1530,18 +1437,18 @@ export default {
       return new Response(null, { status: 204 });
     }
 
-    // 0a) Analytics tracking endpoint (humans only reach here)
+    // 0a) Analytics tracking endpoints — delegated to analytics worker
     if (url.pathname === "/track") {
-      if (request.method === "OPTIONS") {
-        return handleTrackOptions();
+      if (env.ANALYTICS_ENABLED === "true" && env.ANALYTICS) {
+        return env.ANALYTICS.fetch(request);
       }
+      if (request.method === "OPTIONS") return handleTrackOptions();
       return handleTrackRequest(request, env, ctx);
     }
 
-    // 0a) Edge event tracking (~301/410/404 from Netlify functions)
     if (url.pathname === "/edge-event") {
-      if (request.method === "OPTIONS") {
-        return handleEdgeEventOptions();
+      if (env.ANALYTICS_ENABLED === "true" && env.ANALYTICS) {
+        return env.ANALYTICS.fetch(request);
       }
       return handleEdgeEvent(request, env);
     }
@@ -1583,8 +1490,11 @@ export default {
       return handleSerpKeyword(request, env);
     }
 
-    // 0j) Event tracking - zoom clicks, slideshow starts (user intent, not image loads)
+    // 0j) Event tracking — delegated to analytics worker
     if (url.pathname === "/__k4track/event") {
+      if (env.ANALYTICS_ENABLED === "true" && env.ANALYTICS) {
+        return env.ANALYTICS.fetch(request);
+      }
       if (request.method === "OPTIONS") {
         return new Response(null, {
           status: 204,
