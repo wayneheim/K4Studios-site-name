@@ -16,7 +16,7 @@ binding = "ANALYTICS"
 service = "k4-analytics"
 
 [vars]
-ANALYTICS_ENABLED = "false"
+ANALYTICS_ENABLED = "true"
 # MANIFEST_CACHE_TTL = "3600"
 
 # D1 Database for analytics
