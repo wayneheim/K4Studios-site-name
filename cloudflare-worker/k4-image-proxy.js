@@ -52,8 +52,7 @@ import {
   isSearchBot,
   logEdgeEvent,
   logArtView,
-  logVerifiedBot,
-  updateBotIntelligence
+  logVerifiedBot
 } from './src/analytics/index.js';
 
 const MANIFEST_URL = "https://k4studios.com/image-manifest.json";
@@ -95,10 +94,6 @@ async function loadBlockedIps(env) {
     console.error('Load blocked IPs error:', e);
     // Keep stale cache rather than clearing
   }
-}
-
-function invalidateBlockedIpCache() {
-  blockedIpCacheTime = 0;
 }
 
 /**
@@ -597,221 +592,6 @@ function handleEdgeEventOptions() {
       "Access-Control-Max-Age": "86400"
     }
   });
-}
-
-// --------------------
-// BOT MANAGEMENT API
-// --------------------
-
-/**
- * Block an IP (add to blocked_ips, takes effect immediately)
- * POST /__k4stats/block { ip_hash, reason? }
- */
-async function handleBlockIP(request, env) {
-  try {
-    const { ip_hash, reason } = await request.json();
-    
-    if (!ip_hash) {
-      return new Response(JSON.stringify({ error: 'ip_hash required' }), { 
-        status: 400, 
-        headers: { 'Content-Type': 'application/json' } 
-      });
-    }
-    
-    // Get current risk info from suspected_bots
-    const suspectInfo = await env.DB.prepare(`
-      SELECT risk_level, risk_score, rules_triggered, total_requests 
-      FROM suspected_bots WHERE ip_hash = ?
-    `).bind(ip_hash).first();
-    
-    // Invalidate in-memory cache so new block takes effect immediately
-    invalidateBlockedIpCache();
-    
-    // Insert into blocked_ips
-    await env.DB.prepare(`
-      INSERT INTO blocked_ips (ip_hash, risk_level, risk_score, rules_triggered, total_requests, reason, blocked_by)
-      VALUES (?, ?, ?, ?, ?, ?, 'manual')
-      ON CONFLICT(ip_hash) DO UPDATE SET
-        is_active = 1,
-        blocked_at = datetime('now'),
-        reason = excluded.reason,
-        unblocked_at = NULL
-    `).bind(
-      ip_hash,
-      suspectInfo?.risk_level || 4,
-      suspectInfo?.risk_score || 0,
-      suspectInfo?.rules_triggered || '[]',
-      suspectInfo?.total_requests || 0,
-      reason || 'Manual block from dashboard'
-    ).run();
-    
-    // Update suspected_bots status
-    await env.DB.prepare(`
-      UPDATE suspected_bots SET status = 'blocked', updated_at = datetime('now')
-      WHERE ip_hash = ?
-    `).bind(ip_hash).run();
-    
-    return new Response(JSON.stringify({ success: true, ip_hash }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' }
-    });
-  } catch (e) {
-    console.error('Block IP error:', e);
-    return new Response(JSON.stringify({ error: e.message }), { 
-      status: 500, 
-      headers: { 'Content-Type': 'application/json' } 
-    });
-  }
-}
-
-/**
- * Unblock an IP (keeps record, sets is_active = 0)
- * POST /__k4stats/unblock { ip_hash }
- */
-async function handleUnblockIP(request, env) {
-  try {
-    const { ip_hash } = await request.json();
-    
-    if (!ip_hash) {
-      return new Response(JSON.stringify({ error: 'ip_hash required' }), { 
-        status: 400, 
-        headers: { 'Content-Type': 'application/json' } 
-      });
-    }
-    
-    // Invalidate in-memory cache so unblock takes effect immediately
-    invalidateBlockedIpCache();
-    
-    // Soft-delete: set is_active = 0, record unblocked_at
-    await env.DB.prepare(`
-      UPDATE blocked_ips 
-      SET is_active = 0, unblocked_at = datetime('now')
-      WHERE ip_hash = ?
-    `).bind(ip_hash).run();
-    
-    // Downgrade suspected_bots status to watching (risk scoring is label-only, no enforcement)
-    await env.DB.prepare(`
-      UPDATE suspected_bots SET status = 'watching', updated_at = datetime('now')
-      WHERE ip_hash = ?
-    `).bind(ip_hash).run();
-    
-    return new Response(JSON.stringify({ success: true, ip_hash }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' }
-    });
-  } catch (e) {
-    console.error('Unblock IP error:', e);
-    return new Response(JSON.stringify({ error: e.message }), { 
-      status: 500, 
-      headers: { 'Content-Type': 'application/json' } 
-    });
-  }
-}
-
-/**
- * Refresh bot intelligence (recalculate risk scores)
- * POST /__k4stats/refresh-bots
- */
-async function handleRefreshBots(request, env) {
-  try {
-    const count = await updateBotIntelligence(env);
-    return new Response(JSON.stringify({ success: true, updated: count }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' }
-    });
-  } catch (e) {
-    console.error('Refresh bots error:', e);
-    return new Response(JSON.stringify({ error: e.message }), { 
-      status: 500, 
-      headers: { 'Content-Type': 'application/json' } 
-    });
-  }
-}
-
-// --------------------
-// ANALYTICS: /admin/analytics DASHBOARD
-// --------------------
-function withAdminNoCacheHeaders(baseHeaders = {}) {
-  const headers = new Headers(baseHeaders);
-  headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
-  headers.set("Pragma", "no-cache");
-  headers.set("Expires", "0");
-  // Ensure any intermediary cache varies by credentials.
-  headers.set("Vary", "Authorization");
-  return headers;
-}
-
-// CSV Export handler
-async function handleExportCSV(request, env) {
-  // Check auth
-  const authHeader = request.headers.get("Authorization");
-  const expected = "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
-  if (authHeader !== expected) {
-    return new Response("Unauthorized", {
-      status: 401,
-      headers: withAdminNoCacheHeaders({
-        "WWW-Authenticate": 'Basic realm="K4 Analytics Export"',
-        "Content-Type": "text/plain"
-      })
-    });
-  }
-
-  const url = new URL(request.url);
-  const days = parseInt(url.searchParams.get("days") || "30", 10);
-  const yesterday = url.searchParams.get("yesterday") === "1";
-
-  try {
-    // Build date filter
-    let dateClause;
-    if (yesterday) {
-      dateClause = `created_at >= datetime('now', '-5 hours', '-1 day', 'start of day') AND created_at < datetime('now', '-5 hours', 'start of day')`;
-    } else {
-      dateClause = `created_at > datetime('now', '-5 hours', '-${days} days')`;
-    }
-
-    const query = `
-      SELECT 
-        created_at, session_id, event, gallery_id, image_id, 
-        page_path, referrer, device, country, region, city, theme
-      FROM events 
-      WHERE ${dateClause}
-      ORDER BY created_at DESC
-    `;
-    const results = await env.DB.prepare(query).all();
-    const rows = results.results || [];
-
-    // Build CSV
-    const headers = ['created_at', 'session_id', 'event', 'gallery_id', 'image_id', 'page_path', 'referrer', 'device', 'country', 'region', 'city', 'theme'];
-    const csvRows = [headers.join(',')];
-    
-    for (const row of rows) {
-      const values = headers.map(h => {
-        const val = row[h] || '';
-        // Escape quotes and wrap in quotes if contains comma
-        const escaped = String(val).replace(/"/g, '""');
-        return escaped.includes(',') || escaped.includes('"') ? `"${escaped}"` : escaped;
-      });
-      csvRows.push(values.join(','));
-    }
-
-    const csv = csvRows.join('\n');
-    const filename = `k4-analytics-${yesterday ? 'yesterday' : days + 'days'}-${new Date().toISOString().slice(0,10)}.csv`;
-
-    return new Response(csv, {
-      headers: withAdminNoCacheHeaders({
-        'Content-Type': 'text/csv',
-        'Content-Disposition': `attachment; filename="${filename}"`,
-      })
-    });
-  } catch (err) {
-    console.error("Export error:", err);
-    return new Response(`Export error: ${err.message}`,
-      {
-        status: 500,
-        headers: withAdminNoCacheHeaders({ "Content-Type": "text/plain; charset=utf-8" })
-      }
-    );
-  }
 }
 
 // ====================
@@ -1766,35 +1546,16 @@ export default {
       return handleEdgeEvent(request, env);
     }
 
-    // 0b) Analytics dashboard
-    if (url.pathname === "/__k4stats") {
-      // Phase 5: optional delegation to standalone analytics worker
+    // 0b) Analytics — all /__k4stats paths delegated to analytics worker
+    if (url.pathname.startsWith("/__k4stats")) {
       if (env.ANALYTICS_ENABLED === "true" && env.ANALYTICS) {
         return env.ANALYTICS.fetch(request);
       }
-      return handleDashboardRequest(request, env, ctx);
-    }
-
-    // 0c) Analytics CSV export
-    if (url.pathname === "/__k4stats/export") {
-      return handleExportCSV(request, env);
-    }
-
-    // 0d) Bot management API - Block IP
-    // No separate auth check - these endpoints are only callable from the authenticated dashboard
-    // The POST-only + JSON body requirement provides basic protection
-    if (url.pathname === "/__k4stats/block" && request.method === "POST") {
-      return handleBlockIP(request, env);
-    }
-
-    // 0e) Bot management API - Unblock IP
-    if (url.pathname === "/__k4stats/unblock" && request.method === "POST") {
-      return handleUnblockIP(request, env);
-    }
-
-    // 0f) Bot management API - Refresh bot intelligence
-    if (url.pathname === "/__k4stats/refresh-bots" && request.method === "POST") {
-      return handleRefreshBots(request, env);
+      // Fallback: run dashboard locally if delegation disabled
+      if (url.pathname === "/__k4stats") {
+        return handleDashboardRequest(request, env, ctx);
+      }
+      return new Response("Analytics delegation required", { status: 503 });
     }
 
     // 0g) SERP Tracker Dashboard

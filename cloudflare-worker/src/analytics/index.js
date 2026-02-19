@@ -20,3 +20,11 @@ export {
   handleTrackRequest,
   handleTrackOptions
 } from './collector.js';
+
+// Admin API — /__k4stats sub-path endpoints
+export {
+  handleExportCSV,
+  handleBlockIP,
+  handleUnblockIP,
+  handleRefreshBots
+} from './admin.js';
