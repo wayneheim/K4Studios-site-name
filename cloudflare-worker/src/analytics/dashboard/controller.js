@@ -21,6 +21,8 @@ import {
   getBotIntelligence
 } from '../queries.js';
 
+import { renderDashboard } from './renderer.js';
+
 /**
  * Calls all dashboard query functions and assembles the result into
  * the exact data shape that renderDashboard() expects.
@@ -99,7 +101,7 @@ export async function handleDashboardRequest(env, filters) {
   const botIntelligence = await getBotIntelligence(env);
 
   // Assemble the exact data shape renderDashboard() expects
-  return {
+  const dashboardData = {
     days,
     yesterday,
     selectedDate,
@@ -152,4 +154,7 @@ export async function handleDashboardRequest(env, filters) {
     topArtViews,
     botIntelligence
   };
+
+  // Render and return HTML string
+  return renderDashboard(dashboardData);
 }
