@@ -56,7 +56,7 @@ import {
 // ═══════════════════════════════════════════════════════════════════════════
 // ANALYTICS READ LAYER (Phase 3 — dashboard queries)
 // ═══════════════════════════════════════════════════════════════════════════
-import { getDashboardStats, getEventBreakdown, getGalleryPerformance, getReferrers, getGeography, getDailyTrend, getSessionMetrics, getTopPages, getTopImages, getEntryAnalysis, getEngagementDepth, getExitAnalysis, getEdgeEvents, getArtViews } from './src/analytics/queries.js';
+import { getDashboardStats, getEventBreakdown, getGalleryPerformance, getReferrers, getGeography, getDailyTrend, getSessionMetrics, getTopPages, getTopImages, getEntryAnalysis, getEngagementDepth, getExitAnalysis, getEdgeEvents, getArtViews, getBotIntelligence } from './src/analytics/queries.js';
 
 const MANIFEST_URL = "https://k4studios.com/image-manifest.json";
 const IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";
@@ -1092,100 +1092,7 @@ async function handleAdminAnalytics(request, env) {
       dateClause, ipClause, botClause, chardonClause, artIpClause
     });
 
-    // Query 18: Bot Intelligence (suspected_bots + blocked_ips)
-    let botIntelligence = { suspects: [], blocked: [], verified: [], stats: { total: 0, risk3: 0, risk4: 0, blocked: 0, verified: 0 } };
-    try {
-      // Update bot intelligence (refresh risk scores)
-      await updateBotIntelligence(env);
-      
-      // Get suspected bots (Risk 2+)
-      const suspectsQuery = `
-        SELECT 
-          ip_hash,
-          risk_level,
-          risk_score,
-          rules_triggered,
-          first_seen,
-          last_seen,
-          days_seen,
-          total_requests,
-          image_page_pct,
-          has_referrer,
-          is_datacenter,
-          is_verified_bot,
-          bot_name,
-          country,
-          status
-        FROM suspected_bots
-        WHERE risk_level >= 2
-        ORDER BY risk_level DESC, risk_score DESC, total_requests DESC
-        LIMIT 50
-      `;
-      const suspectsResult = await env.DB.prepare(suspectsQuery).all();
-      botIntelligence.suspects = suspectsResult.results || [];
-      
-      // Get verified bots (good traffic!) with image/page breakdown
-      const verifiedQuery = `
-        SELECT 
-          sb.ip_hash, 
-          sb.bot_name, 
-          sb.total_requests, 
-          sb.last_seen, 
-          sb.country,
-          COALESCE(img.image_count, 0) as image_count,
-          COALESCE(pg.page_count, 0) as page_count
-        FROM suspected_bots sb
-        LEFT JOIN (
-          SELECT ip_hash, COUNT(*) as image_count 
-          FROM art_views 
-          WHERE type IN ('xl_zoom', 'external_image') 
-          GROUP BY ip_hash
-        ) img ON sb.ip_hash = img.ip_hash
-        LEFT JOIN (
-          SELECT ip_hash, COUNT(*) as page_count 
-          FROM art_views 
-          WHERE type IN ('image_page', 'gallery_view') 
-          GROUP BY ip_hash
-        ) pg ON sb.ip_hash = pg.ip_hash
-        WHERE sb.is_verified_bot = 1 AND sb.status = 'verified'
-        ORDER BY sb.total_requests DESC
-        LIMIT 20
-      `;
-      const verifiedResult = await env.DB.prepare(verifiedQuery).all();
-      botIntelligence.verified = verifiedResult.results || [];
-      botIntelligence.stats.verified = botIntelligence.verified.reduce((sum, v) => sum + v.total_requests, 0);
-      
-      // Get blocked IPs (including inactive for archive)
-      const blockedQuery = `
-        SELECT 
-          ip_hash,
-          risk_level,
-          risk_score,
-          rules_triggered,
-          total_requests,
-          blocked_at,
-          blocked_by,
-          reason,
-          unblocked_at,
-          is_active
-        FROM blocked_ips
-        ORDER BY is_active DESC, blocked_at DESC
-        LIMIT 50
-      `;
-      const blockedResult = await env.DB.prepare(blockedQuery).all();
-      botIntelligence.blocked = blockedResult.results || [];
-      
-      // Calculate stats (exclude blocked from watching/high-risk/candidates counts)
-      for (const s of botIntelligence.suspects) {
-        if (s.status !== 'blocked') {
-          botIntelligence.stats.total++;
-          if (s.risk_level === 3) botIntelligence.stats.risk3++;
-          if (s.risk_level >= 4) botIntelligence.stats.risk4++;
-        }
-      }
-    } catch (e) {
-      console.log('bot_intelligence query failed:', e.message);
-    }
+    const botIntelligence = await getBotIntelligence(env);
 
     // Render HTML
     const html = renderDashboard({
