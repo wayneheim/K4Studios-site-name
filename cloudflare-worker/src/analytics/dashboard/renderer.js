@@ -221,6 +221,15 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     .section-tip .tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; z-index: 1000; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); width: 220px; line-height: 1.4; }
     .section-tip .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #333; }
     .section-tip:hover .tooltip { display: block; }
+    /* Art Views header bar */
+    .artviews-header { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: rgba(255,255,255,0.03); border-radius: 8px; margin: 20px 0 12px 0; }
+    .artviews-header .artviews-title { font-weight: 600; font-size: 16px; letter-spacing: 0.04em; }
+    .artviews-header .artviews-title .subtle { margin-left: 10px; opacity: 0.6; font-size: 0.85em; color: #10b981; }
+    .artviews-header .help-trigger { position: relative; cursor: help; }
+    .artviews-header .help-trigger .info-icon { width: 18px; height: 18px; border-radius: 50%; background: #444; color: #888; font-size: 11px; display: inline-flex; align-items: center; justify-content: center; font-style: italic; }
+    .artviews-header .help-trigger .tooltip { display: none; position: absolute; bottom: 100%; right: 0; transform: none; background: #333; color: #e0e0e0; padding: 10px 14px; border-radius: 6px; font-size: 11px; z-index: 1000; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); width: 280px; line-height: 1.5; }
+    .artviews-header .help-trigger .tooltip::after { content: ''; position: absolute; top: 100%; right: 8px; border: 6px solid transparent; border-top-color: #333; }
+    .artviews-header .help-trigger:hover .tooltip { display: block; }
     /* Wide sections span 2 columns */
     .section.wide { grid-column: span 2; }
     /* Exit blocks - uniform width stacking */
@@ -463,12 +472,20 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     </div>
   </div>
 
-  <!-- Art Views Section (Multi-Layer Art Attention Tracking) -->
-  <h2 style="margin-top: 20px; margin-bottom: 8px;">🎨 Art Views <span style="font-size: 12px; color: #888; font-weight: normal;">(Chapters: JS-verified | External: Server-Side)</span></h2>
-  <p style="color: #888; margin: 0 0 10px 0; font-size: 12px;">
-    <strong style="color: #10b981;">Human art viewers (cleaned)</strong> — bots, scrapers, and datacenter traffic excluded. 
-    <span class="section-tip" style="display: inline;"><span class="info-icon">i</span><div class="tooltip">Chapters &amp; XL Zooms: counted from JS events (same-origin /track beacon). Galleries: derived from chapter views (every chapter has a gallery_id, so galleries browsed = distinct gallery_ids from chapter data). External embeds: server-side /img/ proxy logs. Bot exclusion: datacenter IPs without referrer, known scraper UAs.</div></span>
-  </p>
+  <!-- Art Views Section -->
+  <div class="artviews-header">
+    <div class="artviews-title">🎨 ART VIEWS <span class="subtle">Human art viewers (cleaned)</span></div>
+    <span class="help-trigger">
+      <span class="info-icon">i</span>
+      <div class="tooltip">
+        <strong>How Art Views are counted</strong><br><br>
+        • <strong>Chapters & XL Zooms</strong> → JS track events (same-origin)<br>
+        • <strong>Galleries</strong> → derived from chapter gallery_id views<br>
+        • <strong>External embeds</strong> → server-side proxy logs<br>
+        • <strong>Bot exclusion</strong> → datacenter IP + scraper UA filtering
+      </div>
+    </span>
+  </div>
   ${(topArtViews?.chapters?.length > 0 || topArtViews?.xlZooms?.length > 0 || topArtViews?.galleries?.length > 0) ? `
   <div class="art-views-grid">
       <!-- Chapters Column -->
