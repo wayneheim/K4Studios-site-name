@@ -6,9 +6,9 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    // Bot short-circuit for /track — verified bots get 204 silently
+    // Bot short-circuit for tracking endpoints — verified bots get 204 silently
     if (
-      url.pathname.startsWith('/track') &&
+      (url.pathname.startsWith('/track') || url.pathname.startsWith('/__k4e')) &&
       request.cf?.botManagement?.verifiedBot
     ) {
       return new Response(null, { status: 204 });
@@ -34,7 +34,7 @@ export default {
     }
 
     // Track endpoint (humans only reach here)
-    if (url.pathname === "/track") {
+    if (url.pathname === "/track" || url.pathname === "/__k4e") {
       if (request.method === "OPTIONS") {
         return handleTrackOptions();
       }

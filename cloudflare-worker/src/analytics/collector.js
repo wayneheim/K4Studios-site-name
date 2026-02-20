@@ -166,6 +166,27 @@ function makeVidSetCookieHeader(requestUrl, visitorId) {
   return `k4_vid=${value}; Path=/; Max-Age=31536000; SameSite=Lax; Secure${domainAttr}`;
 }
 
+function getAllowedOrigin(request) {
+  const origin = request?.headers?.get?.('Origin') || null;
+  if (!origin) return 'https://www.k4studios.com';
+  try {
+    const u = new URL(origin);
+    if (u.hostname === 'www.k4studios.com' || u.hostname === 'k4studios.com') {
+      return origin;
+    }
+  } catch (_) {
+    // ignore
+  }
+  return 'https://www.k4studios.com';
+}
+
+function applyNoStore(headers) {
+  headers.set('Cache-Control', 'no-store, max-age=0');
+  headers.set('Pragma', 'no-cache');
+  headers.set('Expires', '0');
+  return headers;
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // /track ENDPOINT — Phase 5 extraction from monolith
 // Identical logic, zero changes. Accepts POST with JSON body,
@@ -175,12 +196,14 @@ function makeVidSetCookieHeader(requestUrl, visitorId) {
 export async function handleTrackRequest(request, env, ctx) {
   // Only accept POST
   if (request.method !== "POST") {
-    return new Response("Method not allowed", { status: 405 });
+    const headers = applyNoStore(new Headers({ 'Content-Type': 'text/plain' }));
+    return new Response("Method not allowed", { status: 405, headers });
   }
 
   // Use shared ingestion gate - one function, all paths
   if (isSyntheticTraffic(request)) {
-    return new Response(null, { status: 204 }); // Silent drop
+    const headers = applyNoStore(new Headers());
+    return new Response(null, { status: 204, headers }); // Silent drop
   }
 
   try {
@@ -202,7 +225,8 @@ export async function handleTrackRequest(request, env, ctx) {
 
     // Event is required
     if (!event) {
-      return new Response("Missing event", { status: 400 });
+      const headers = applyNoStore(new Headers({ 'Content-Type': 'text/plain' }));
+      return new Response("Missing event", { status: 400, headers });
     }
 
     // Reject events from legacy SmugMug paths (photoshoots, not K4 galleries)
@@ -210,7 +234,8 @@ export async function handleTrackRequest(request, env, ctx) {
     const legacyPaths = ['/Photoshootsandevents/', '/Photography-Galleries/', '/Scheduled-Shoots/', '/Is-Winter/'];
     if (page_path && legacyPaths.some(p => page_path.startsWith(p))) {
       return new Response(JSON.stringify({ ok: true, filtered: 'legacy_path' }), {
-        status: 200, headers: { 'Content-Type': 'application/json' }
+        status: 200,
+        headers: applyNoStore(new Headers({ 'Content-Type': 'application/json' }))
       });
     }
 
@@ -291,10 +316,13 @@ export async function handleTrackRequest(request, env, ctx) {
     const vidSetCookie = existingVisitorId ? null : makeVidSetCookieHeader(request.url, visitorId);
 
     const headers = new Headers({
-      "Access-Control-Allow-Origin": "https://www.k4studios.com",
+      "Access-Control-Allow-Origin": getAllowedOrigin(request),
       "Access-Control-Allow-Methods": "POST",
-      "Access-Control-Allow-Headers": "Content-Type"
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Vary": "Origin"
     });
+
+    applyNoStore(headers);
 
     if (sidSetCookie) headers.append('Set-Cookie', sidSetCookie);
     if (vidSetCookie) headers.append('Set-Cookie', vidSetCookie);
@@ -306,7 +334,8 @@ export async function handleTrackRequest(request, env, ctx) {
 
   } catch (err) {
     console.error("Track error:", err);
-    return new Response("Error", { status: 500 });
+    const headers = applyNoStore(new Headers({ 'Content-Type': 'text/plain' }));
+    return new Response("Error", { status: 500, headers });
   }
 }
 
@@ -314,12 +343,12 @@ export async function handleTrackRequest(request, env, ctx) {
 export function handleTrackOptions() {
   return new Response(null, {
     status: 204,
-    headers: {
-      "Access-Control-Allow-Origin": "https://www.k4studios.com",
+    headers: applyNoStore(new Headers({
+      "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
       "Access-Control-Max-Age": "86400"
-    }
+    }))
   });
 }
 

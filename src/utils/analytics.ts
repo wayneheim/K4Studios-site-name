@@ -1,9 +1,36 @@
 /**
  * K4 Analytics - Client-side tracking helper
  * 
- * Sends events to /track endpoint on Cloudflare Worker
+ * Sends events to tracking endpoint on Cloudflare Worker
  * Uses sendBeacon for reliable delivery even on page unload
  */
+
+const TRACK_ENDPOINT = '/__k4e';
+
+function isK4Debug(): boolean {
+  if (typeof window === 'undefined') return false;
+  try {
+    return new URLSearchParams(window.location.search).has('k4debug');
+  } catch {
+    return false;
+  }
+}
+
+function resolveEndpointUrl(pathname: string): string {
+  if (typeof window === 'undefined') return pathname;
+  try {
+    return new URL(pathname, window.location.href).href;
+  } catch {
+    return pathname;
+  }
+}
+
+function getBuildId(): string | null {
+  if (typeof window === 'undefined') return null;
+  // Optional: allow build ID injection via global.
+  const w = window as any;
+  return typeof w.__K4_BUILD_ID === 'string' ? w.__K4_BUILD_ID : null;
+}
 
 // Session ID persists for the browser session
 function getSessionId(): string {
@@ -65,6 +92,82 @@ interface TrackContext {
   imageId?: string | null;
   pageType?: 'landing' | 'gallery' | 'image' | 'other';
   theme?: string | null;
+  trigger?: string | null;
+}
+
+type SendOutcome = {
+  send_method: 'sendBeacon' | 'fetch';
+  fetch_keepalive?: boolean;
+  fetch_cache?: 'no-store' | 'default';
+  endpoint_resolved_url: string;
+  attempted: boolean;
+  beacon_ok?: boolean;
+  response_status?: number;
+  redirected?: boolean;
+  response_url?: string;
+};
+
+function sendTrackingPayload(payloadJson: string, debugLabel?: string): void {
+  if (typeof window === 'undefined') return;
+
+  const debug = isK4Debug();
+  const endpointResolved = resolveEndpointUrl(TRACK_ENDPOINT);
+
+  const logDebug = (outcome: SendOutcome) => {
+    if (!debug) return;
+    // Intentionally console-only; avoids perturbing event delivery.
+    console.log('[k4] delivery', {
+      label: debugLabel || null,
+      host: window.location.host,
+      href: window.location.href,
+      referrer: document.referrer || null,
+      ...outcome
+    });
+  };
+
+  // Prefer sendBeacon for unload-safe delivery.
+  if (navigator.sendBeacon) {
+    const blob = new Blob([payloadJson], { type: 'application/json' });
+    const ok = navigator.sendBeacon(TRACK_ENDPOINT, blob);
+    logDebug({
+      send_method: 'sendBeacon',
+      endpoint_resolved_url: endpointResolved,
+      attempted: true,
+      beacon_ok: ok
+    });
+    return;
+  }
+
+  // Fetch fallback (keepalive + no-store)
+  fetch(TRACK_ENDPOINT, {
+    method: 'POST',
+    body: payloadJson,
+    headers: { 'Content-Type': 'application/json' },
+    keepalive: true,
+    cache: 'no-store',
+    credentials: 'same-origin'
+  })
+    .then((res) => {
+      logDebug({
+        send_method: 'fetch',
+        fetch_keepalive: true,
+        fetch_cache: 'no-store',
+        endpoint_resolved_url: endpointResolved,
+        attempted: true,
+        response_status: res.status,
+        redirected: res.redirected,
+        response_url: res.url
+      });
+    })
+    .catch(() => {
+      logDebug({
+        send_method: 'fetch',
+        fetch_keepalive: true,
+        fetch_cache: 'no-store',
+        endpoint_resolved_url: endpointResolved,
+        attempted: true
+      });
+    });
 }
 
 function shouldSkipDuplicateEvent(event: string, context: TrackContext, pagePath: string): boolean {
@@ -136,26 +239,17 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
     image_id: inferredImageId || null,
     page_type: inferredPageType || null,
     theme: context.theme || null,
+    trigger: context.trigger || null,
     referrer: entryReferrer,
     page_path: pagePath,
+    host: (typeof window !== 'undefined') ? window.location.host : null,
+    document_referrer: (typeof document !== 'undefined') ? (document.referrer || null) : null,
+    build: getBuildId(),
     event_ts_ms: Date.now(),        // Client timestamp for timing analysis
     event_order: getNextEventOrder() // Event sequence within session
   });
 
-  // Use sendBeacon for reliable delivery
-  if (navigator.sendBeacon) {
-    navigator.sendBeacon('/track', payload);
-  } else {
-    // Fallback to fetch for older browsers
-    fetch('/track', {
-      method: 'POST',
-      body: payload,
-      headers: { 'Content-Type': 'application/json' },
-      keepalive: true
-    }).catch(() => {
-      // Silently fail - analytics should never break the site
-    });
-  }
+  sendTrackingPayload(payload, event);
 }
 
 // Expose trackEvent globally for use in Astro components via onclick
@@ -168,6 +262,19 @@ if (typeof window !== 'undefined') {
  * Also initializes scroll depth tracking and updates page context for session exit
  */
 export function trackPageView(): void {
+  const debug = isK4Debug();
+  if (debug) {
+    console.log('[k4] bootstrap', {
+      href: window.location.href,
+      host: window.location.host,
+      ts: Date.now(),
+      build: getBuildId(),
+      endpoint: resolveEndpointUrl(TRACK_ENDPOINT)
+    });
+    // Debug-only server beacon proving bootstrap executed.
+    trackEvent('k4_debug_bootstrap', { pageType: 'other', trigger: 'bootstrap' });
+  }
+
   trackEvent('page_view');
 
   // Fire derived view beacons based on the current URL.
@@ -181,6 +288,9 @@ export function trackPageView(): void {
   // Install SPA navigation hooks once (pushState/replaceState/popstate)
   // so page/image views track even without full reload.
   installNavigationTracking();
+
+  // Pre-nav click capture for image links (covers full-nav and fast transitions)
+  installPreNavImageLinkTracking();
   
   // Initialize scroll depth tracking (main site pages only; excludes galleries/images)
   initScrollDepthTracking();
@@ -204,7 +314,10 @@ function trackDerivedViewsFromLocation(): void {
 
   const imageId = getImageIdFromPath(path);
   if (imageId) {
-    trackEvent('chapter_view', { imageId, pageType: 'image' });
+    trackEvent('chapter_view', { imageId, pageType: 'image', trigger: 'derived_location' });
+    if (isK4Debug()) {
+      trackEvent('k4_debug_chapter_emit', { imageId, pageType: 'image', trigger: 'derived_location' });
+    }
     return;
   }
 
@@ -219,17 +332,17 @@ function installNavigationTracking(): void {
   if (navTrackingInstalled) return;
   navTrackingInstalled = true;
 
-  const onNav = () => {
+  const onNav = (trigger: TrackContext['trigger']) => {
     // CRITICAL GUARDRAIL: do not re-track if path did not change
     if (lastTrackedPath === location.pathname) return;
     // Treat SPA navigation like a page view for context + view beacons.
-    trackEvent('page_view');
+    trackEvent('page_view', { trigger });
     trackDerivedViewsFromLocation();
     updatePageContext();
   };
 
   // back/forward
-  window.addEventListener('popstate', onNav);
+  window.addEventListener('popstate', () => onNav('popstate'));
 
   // patch pushState/replaceState
   const historyObj = window.history as History & {
@@ -244,15 +357,63 @@ function installNavigationTracking(): void {
 
     historyObj.pushState = function (...args) {
       const ret = (historyObj.__k4PushState as any)!.apply(this, args as any);
-      queueMicrotask(onNav);
+      queueMicrotask(() => onNav('pushstate'));
       return ret;
     };
     historyObj.replaceState = function (...args) {
       const ret = (historyObj.__k4ReplaceState as any)!.apply(this, args as any);
-      queueMicrotask(onNav);
+      queueMicrotask(() => onNav('replacestate'));
       return ret;
     };
   }
+}
+
+// ==========================================
+// PRE-NAV IMAGE LINK TRACKING
+// ==========================================
+
+let preNavClickInstalled = false;
+
+function installPreNavImageLinkTracking(): void {
+  if (typeof window === 'undefined' || typeof document === 'undefined') return;
+  if (preNavClickInstalled) return;
+  preNavClickInstalled = true;
+
+  document.addEventListener(
+    'click',
+    (e) => {
+      try {
+        // Only left-click without modifiers.
+        if (e.defaultPrevented) return;
+        if (e.button !== 0) return;
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+        const target = e.target as Element | null;
+        const a = target?.closest?.('a[href]') as HTMLAnchorElement | null;
+        if (!a) return;
+        if (a.target && a.target !== '_self') return;
+        if (a.hasAttribute('download')) return;
+
+        const href = a.getAttribute('href');
+        if (!href) return;
+
+        const url = new URL(href, window.location.href);
+        if (url.origin !== window.location.origin) return;
+
+        const imageId = getImageIdFromPath(url.pathname);
+        if (!imageId) return;
+
+        // Emit before navigation completes (protects against unload drops).
+        trackEvent('chapter_view', { imageId, pageType: 'image', trigger: 'internal_link_click' });
+        if (isK4Debug()) {
+          trackEvent('k4_debug_chapter_emit', { imageId, pageType: 'image', trigger: 'internal_link_click' });
+        }
+      } catch {
+        // never break navigation
+      }
+    },
+    true
+  );
 }
 
 // ==========================================
@@ -317,7 +478,8 @@ function fireSessionExit(): void {
   
   // Use sendBeacon for reliable delivery on page unload
   if (navigator.sendBeacon) {
-    navigator.sendBeacon('/track', payload);
+    const blob = new Blob([payload], { type: 'application/json' });
+    navigator.sendBeacon(TRACK_ENDPOINT, blob);
   }
 }
 

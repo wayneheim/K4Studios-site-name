@@ -689,6 +689,21 @@ export default function ChapterGalleryBase({
     if (window.location.pathname !== newUrl) window.history.pushState(null, "", newUrl);
   }, [currentIndex, hasEnteredChapters, basePath, galleryData, viewMode]);
 
+  // Always emit chapter_view when the active image changes.
+  // This is the most reliable signal for next/prev and internal navigation.
+  // Dedupe is enforced in src/utils/analytics.ts (per-image per-session).
+  useEffect(() => {
+    if (viewMode === "grid") return;
+    const imageId = galleryData[currentIndex]?.id;
+    if (!imageId) return;
+    trackEvent('chapter_view', {
+      galleryId: galleryKey,
+      imageId,
+      pageType: 'image',
+      trigger: 'index_change'
+    });
+  }, [currentIndex, galleryData, viewMode, galleryKey]);
+
   // ✅ Replaced old title updater with the hook
   const entry = galleryData[currentIndex];
   useMetaSwap(entry, titleBase, currentIndex);

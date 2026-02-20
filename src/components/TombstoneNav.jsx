@@ -115,13 +115,15 @@ export default function TombstoneNav({ items = [], title, subtitle, pageContext:
             // Use sendBeacon for reliable delivery during navigation
             if (navigator.sendBeacon) {
               const blob = new Blob([payload], { type: 'application/json' });
-              navigator.sendBeacon('/track', blob);
+              navigator.sendBeacon('/__k4e', blob);
             } else {
-              fetch('/track', {
+              fetch('/__k4e', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: payload,
-                keepalive: true
+                keepalive: true,
+                cache: 'no-store',
+                credentials: 'same-origin'
               }).catch(() => {});
             }
           };

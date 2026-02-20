@@ -146,10 +146,23 @@ const heroImageId = candidatePool[0]?.id || null;
     link.addEventListener('click', () => {
       const sessionId = sessionStorage.getItem('k4_session_id') || crypto.randomUUID();
       sessionStorage.setItem('k4_session_id', sessionId);
-      navigator.sendBeacon('/track', JSON.stringify({
+      const payload = JSON.stringify({
         session_id: sessionId,
         event: 'gallery_preview_click'
-      }));
+      });
+      if (navigator.sendBeacon) {
+        const blob = new Blob([payload], { type: 'application/json' });
+        navigator.sendBeacon('/__k4e', blob);
+      } else {
+        fetch('/__k4e', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: payload,
+          keepalive: true,
+          cache: 'no-store',
+          credentials: 'same-origin'
+        }).catch(() => {});
+      }
     });
   });
 
