@@ -1,5 +1,4 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { trackEvent } from "../utils/trackEvent";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id, size = "xl") => `/img/${id}/${size}`;
@@ -14,12 +13,9 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor,
   const bottomRef = useRef(null);
   const lensRef = useRef(null);
 
-  // Track zoom open and preload XL image
+  // Preload XL image for crossfade (zoom tracking is handled by proxy on XL fetch)
   useEffect(() => {
     if (!imageData?.id) return;
-    
-    // Track the zoom click (user intent)
-    trackEvent('xl_zoom', imageData.id);
     
     // Preload XL image for crossfade
     setXlLoaded(false);

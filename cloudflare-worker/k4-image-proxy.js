@@ -384,17 +384,21 @@ async function handleImageRequest(request, ctx, env) {
     // XL = proxy-verified zoom/slideshow (server-side, not spoofable)
     // L = chapter views (on-site) OR external embeds (off-site)
     if (env?.DB) {
+      // Read visitor_id from k4_vid cookie (Single Population Doctrine)
+      const cookieHeader = request.headers.get('Cookie') || '';
+      const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
+      const visitorId = vidCookieMatch ? vidCookieMatch[1] : null;
+      
       // XL = proxy-verified zoom intent (Phase: Art View Hardening)
       if (route.size === 'xl') {
-        ctx.waitUntil(logArtView(env, 'xl_zoom', route.imageId, request, null, 'proxy'));
+        ctx.waitUntil(logArtView(env, 'xl_zoom', route.imageId, request, null, 'proxy', visitorId));
       } else if (route.size === 'l') {
         const referer = request.headers.get('Referer') || '';
-        // On-site L-size = chapter view (proxy-verified)
         // Off-site L-size = external embed (Google Images, etc.)
-        if (referer.includes('k4studios.com') || referer.includes('localhost')) {
-          ctx.waitUntil(logArtView(env, 'chapter_view', route.imageId, request, null, 'proxy'));
-        } else {
-          ctx.waitUntil(logArtView(env, 'external_image', route.imageId, request, null, 'proxy'));
+        // Note: On-site L-size not logged here - it includes prefetch/warming which pollutes data
+        // Chapter views are tracked via JS on actual navigation
+        if (!referer.includes('k4studios.com') && !referer.includes('localhost') && referer) {
+          ctx.waitUntil(logArtView(env, 'external_image', route.imageId, request, null, 'proxy', visitorId));
         }
       }
       
