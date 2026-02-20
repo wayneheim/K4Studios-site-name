@@ -6,6 +6,7 @@
 
 export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, imageAccessOverview, viewerDepth, suppressionStats, botIntelligence }) {
   const s = summary || {};
+  const safeDeviceEngagement = Array.isArray(deviceEngagement) ? deviceEngagement : [];
   
   // Canonical list of all trackable events with display labels
   // Alphabetized: high-value events first, then passive/scroll events
@@ -158,14 +159,18 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     const rows = imageAccessOverview || [];
     let imageOnlyViews = 0;
     let externalViews = 0;
+    let chapterViews = 0;
+    let zoomViews = 0;
     for (const row of rows) {
       imageOnlyViews += (row?.unverified_views || 0);
       externalViews += (row?.external_views || 0);
+      chapterViews += (row?.chapter_views || 0);
+      zoomViews += (row?.xl_zooms || 0);
     }
     return {
       images: rows.length,
-      chapterViews: artViewsSummary?.chapter_views || 0,
-      zoomViews: artViewsSummary?.xl_zooms || 0,
+      chapterViews,
+      zoomViews,
       imageOnlyViews,
       externalViews
     };
@@ -495,7 +500,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
       <span class="value" style="color: #fff;">👤 ${artViewsSummary?.total || 0}</span>
       <span class="label" style="color: #ddd6fe;">Image Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
-      <div class="tooltip">JS-verified image views (human only). Chapter browsing (${artViewsSummary?.chapter_views || 0}) + External embeds (${artViewsSummary?.external_images || 0}). Server-side page loads: ${artViewsSummary?.image_pages || 0}.</div>
+      <div class="tooltip">Chapters = L-size chapter exposures (proxy-verified + cache-recovery). External embeds = server-side proxy logs. XL zooms are counted separately via JS intent beacons.</div>
     </div>
     ${suppressionStats?.activeSuppressedIPs > 0 ? `<div class="pulse-stat" style="background: linear-gradient(135deg, #475569 0%, #334155 100%);">
       <span class="value" style="color: #94a3b8;">🛡 ${suppressionStats.activeSuppressedIPs}</span>
@@ -511,15 +516,15 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <span class="info-icon">i</span>
       <div class="tooltip">
         <strong>How Art Views are counted</strong><br><br>
-        • <strong>Chapters & XL Zooms</strong> → JS track events (same-origin)<br>
-        • <strong>Galleries</strong> → derived from chapter gallery_id views<br>
-        • <strong>External embeds</strong> → server-side proxy logs<br>
+        • <strong>Chapters</strong> → proxy L-size image fetches with internal referer<br>
+        • <strong>XL Zooms</strong> → JS intent beacons (same-origin)<br>
+        • <strong>External embeds</strong> → proxy L-size fetches with external/no referer<br>
         • <strong>Bot exclusion</strong> → datacenter IP + scraper UA filtering
       </div>
     </span>
   </div>
-  ${(imageAccessOverview?.length > 0 || topArtViews?.galleries?.length > 0) ? `
-  <div style="display: grid; grid-template-columns: 1fr 280px; gap: 12px; max-width: 1780px; margin: 0 auto;">
+
+  <div style="display: grid; grid-template-columns: 1fr 280px 280px; gap: 12px; max-width: 1780px; margin: 0 auto;">
     <!-- Image Access Overview (unified panel) -->
     <div class="section" style="max-height: none;">
       <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap;">
@@ -571,6 +576,24 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         </div>
         ${(imageAccessOverview || []).map((row, i) => {
           const imageId = row.image_id?.startsWith('i-') ? row.image_id : null;
+          const rowDevices = Array.isArray(row.devices) ? row.devices : [];
+          const rawUrl = row.url ? String(row.url) : '';
+          const linkUrl = rawUrl
+            ? (rawUrl.startsWith('http') ? rawUrl : ('https://k4studios.com' + (rawUrl.startsWith('/') ? rawUrl : ('/' + rawUrl))))
+            : ('https://k4studios.com/art/' + row.image_id);
+          function deviceIconsHtml(devices) {
+            if (!Array.isArray(devices) || devices.length === 0) return '';
+            const iconMap = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', desktop: '🖥️', mobile: '📱', tablet: '📱', unknown: '❓' };
+            const labelMap = { ios: 'iOS', android: 'Android', mac: 'Mac', windows: 'Windows', linux: 'Linux', desktop: 'Desktop', mobile: 'Mobile', tablet: 'Tablet', unknown: 'Unknown' };
+            const uniq = Array.from(new Set(devices.map(d => String(d || '').toLowerCase()).filter(Boolean)));
+            const icons = uniq.slice(0, 4).map(d => {
+              const icon = iconMap[d] || '❓';
+              const label = labelMap[d] || d;
+              return '<span title="' + label + '" style="font-size:12px;">' + icon + '</span>';
+            }).join('');
+            return '<span title="Devices" style="display:inline-flex;align-items:center;gap:4px;opacity:0.85;">' + icons + '</span>';
+          }
+          const deviceIcons = deviceIconsHtml(rowDevices);
 
           const COUNTRY_COLORS = {
             US: '#5ab1ff',
@@ -676,14 +699,15 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           const unvColor = unvTotal > 0 ? '#f59e0b' : '#333';
           // Row border color based on primary badge
           const borderColor = row.badges.includes('C') ? '#a78bfa44' : row.badges.includes('E') ? '#3b82f644' : '#f59e0b44';
-          return '<a href="https://k4studios.com/art/' + row.image_id + '" target="_blank" class="access-row" data-badges="' + row.badges.join(',') + '" data-country="' + (geoCountry || '') + '" data-region="' + ((geo?.region || '') + '') + '" data-city="' + ((geo?.city || '') + '') + '" style="display:grid;grid-template-columns:90px 220px 180px 90px 90px 90px auto;gap:10px;align-items:center;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ' + borderColor + ';text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.04)\'" onmouseout="this.style.background=\'transparent\'">' +
+          return '<a href="' + linkUrl + '" target="_blank" class="access-row" data-badges="' + row.badges.join(',') + '" data-country="' + (geoCountry || '') + '" data-region="' + ((geo?.region || '') + '') + '" data-city="' + ((geo?.city || '') + '') + '" style="display:grid;grid-template-columns:90px 220px 180px 90px 90px 90px auto;gap:10px;align-items:center;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ' + borderColor + ';text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.04)\'" onmouseout="this.style.background=\'transparent\'">' +
             '<div style="display:flex;align-items:center;justify-content:center;width:90px;">' +
               (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 6 ? 'eager' : 'lazy') + '" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid ' + p.bdr + ';">' : '<span style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:1px solid ' + p.bdr + ';">🖼</span>') +
             '</div>' +
             '<div style="display:flex;flex-direction:column;gap:4px;min-width:0;padding-left:14px;">' +
               '<div style="display:flex;align-items:center;gap:6px;min-width:0;">' +
                 '<div style="display:flex;gap:2px;flex:0 0 auto;">' + badgeHtml + '</div>' +
-                '<span style="color:' + p.text + ';font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + row.image_id + '">' + row.image_id + '</span>' +
+                '<span style="color:' + p.text + ';font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;" title="' + row.image_id + '">' + row.image_id + '</span>' +
+                (deviceIcons ? '<span style="flex:0 0 auto;">' + deviceIcons + '</span>' : '') +
               '</div>' +
             '</div>' +
             '<span style="color:' + locColor + ';font-size:13px;opacity:0.82;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + locationText + '">' + locationText + '</span>' +
@@ -696,30 +720,66 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       </div>
       <p style="font-size: 9px; color: #555; margin-top: 6px;">C=JS-verified chapter · i=Image-only (no JS/cookie) · E=External embed · Source from referrer</p>
     </div>
-    <!-- Galleries sidebar -->
-    ${topArtViews?.galleries?.length > 0 ? `
+    <!-- Galleries sidebar (always visible) -->
     <div class="section" style="max-height: none;">
       <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #c4b5fd; display: flex; align-items: center; justify-content: space-between;">
         <span>📁 Galleries</span>
         <span style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%); color: #1f2937; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold;">${artViewsSummary?.galleries || 0}</span>
       </h4>
       <div style="display: flex; flex-direction: column; gap: 6px; max-height: 600px; overflow-y: auto; padding-right: 4px;">
-        ${(topArtViews.galleries || []).map((a, i) => {
-          const linkUrl = a.gallery_url ? 'https://k4studios.com' + a.gallery_url : '#';
-          return '<a href="' + linkUrl + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(196, 181, 253, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #c4b5fd; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(196,181,253,0.25)\'" onmouseout="this.style.background=\'rgba(196,181,253,0.1)\'">' +
-            '<span style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">📁</span>' +
-            '<div style="flex: 1; min-width: 0;">' +
-              '<div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500;" title="' + a.target_id + '">' + a.target_id + '</div>' +
-              '<div style="display: flex; gap: 8px; margin-top: 2px;">' +
-                '<span style="font-size: 12px; font-weight: bold; color: #c4b5fd;">' + a.views + '</span>' +
-                '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
-              '</div>' +
-            '</div>' +
-          '</a>';
-        }).join('')}
+        ${((topArtViews?.galleries || []).length === 0)
+          ? '<div style="color:#666;font-size:11px;padding:6px 2px;">No data yet</div>'
+          : (topArtViews.galleries || []).map((a, i) => {
+              const linkUrl = a.gallery_url ? 'https://k4studios.com' + a.gallery_url : '#';
+              const devices = Array.isArray(a.devices) ? a.devices : [];
+              function galleryDeviceIconsHtml(devs) {
+                if (!Array.isArray(devs) || devs.length === 0) return '';
+                const iconMap = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', desktop: '🖥️', mobile: '📱', tablet: '📱', unknown: '❓' };
+                const labelMap = { ios: 'iOS', android: 'Android', mac: 'Mac', windows: 'Windows', linux: 'Linux', desktop: 'Desktop', mobile: 'Mobile', tablet: 'Tablet', unknown: 'Unknown' };
+                const uniq = Array.from(new Set(devs.map(d => String(d || '').toLowerCase()).filter(Boolean)));
+                const icons = uniq.slice(0, 3).map(d => {
+                  const icon = iconMap[d] || '❓';
+                  const label = labelMap[d] || d;
+                  return '<span title="' + label + '" style="font-size:12px;">' + icon + '</span>';
+                }).join('');
+                return '<span title="Devices" style="display:inline-flex;align-items:center;gap:4px;opacity:0.85;">' + icons + '</span>';
+              }
+              const deviceIcons = galleryDeviceIconsHtml(devices);
+              return '<a href="' + linkUrl + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(196, 181, 253, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #c4b5fd; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(196,181,253,0.25)\'" onmouseout="this.style.background=\'rgba(196,181,253,0.1)\'">' +
+                '<span style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">📁</span>' +
+                '<div style="flex: 1; min-width: 0;">' +
+                  '<div style="display:flex; align-items:center; gap:6px;">'
+                    + '<div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; flex: 1; min-width: 0;" title="' + a.target_id + '">' + a.target_id + '</div>'
+                    + (deviceIcons ? deviceIcons : '')
+                  + '</div>' +
+                  '<div style="display: flex; gap: 8px; margin-top: 2px;">' +
+                    '<span style="font-size: 12px; font-weight: bold; color: #c4b5fd;">' + a.views + '</span>' +
+                    '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
+                  '</div>' +
+                '</div>' +
+              '</a>';
+            }).join('')
+        }
       </div>
     </div>
-    ` : ''}
+
+    <!-- Devices (moved up next to Galleries) -->
+    <div class="section" style="max-height: none;">
+      <div class="section-header">
+        <h3>Devices</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Sessions and engagement by device. Engage Lvl shows how deeply each platform's users interact.</div></span>
+      </div>
+      <table>
+        <tr><th>Platform</th><th>Sessions</th><th>Engage Lvl</th></tr>
+        ${safeDeviceEngagement.map(d => {
+          const icons = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', desktop: '🖥️', mobile: '📱', tablet: '📱', unknown: '❓' };
+          const labels = { ios: 'iOS', android: 'Android', mac: 'Mac', windows: 'Windows', linux: 'Linux', desktop: 'Desktop', mobile: 'Mobile', tablet: 'Tablet', unknown: 'Unknown' };
+          const engageColor = d.avg_depth >= 15 ? '#10b981' : d.avg_depth >= 8 ? '#f59e0b' : '#888';
+          return `<tr><td>${icons[d.device] || '❓'} ${labels[d.device] || d.device}</td><td>${d.sessions}</td><td style="color:${engageColor};font-weight:bold;">${d.avg_depth}</td></tr>`;
+        }).join('')}
+        ${safeDeviceEngagement.length === 0 ? '<tr><td colspan="3">No data yet</td></tr>' : ''}
+      </table>
+    </div>
   </div>
   <script>
     function filterAccess(type) {
@@ -774,7 +834,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       if (hdr) hdr.style.opacity = '1';
     }
   </script>
-  ` : ''}
+
 
 
 
@@ -911,23 +971,6 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         }
         return html;
       })()}
-    </div>
-
-    <div class="section">
-      <div class="section-header">
-        <h3>Devices</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Sessions and engagement by device. Engage Lvl shows how deeply each platform's users interact.</div></span>
-      </div>
-      <table>
-        <tr><th>Platform</th><th>Sessions</th><th>Engage Lvl</th></tr>
-        ${deviceEngagement.map(d => {
-          const icons = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', unknown: '❓' };
-          const labels = { ios: 'iOS', android: 'Android', mac: 'Mac', windows: 'Windows', linux: 'Linux', unknown: 'Unknown' };
-          const engageColor = d.avg_depth >= 15 ? '#10b981' : d.avg_depth >= 8 ? '#f59e0b' : '#888';
-          return `<tr><td>${icons[d.device] || '?'} ${labels[d.device] || d.device}</td><td>${d.sessions}</td><td style="color:${engageColor};font-weight:bold;">${d.avg_depth}</td></tr>`;
-        }).join('')}
-        ${deviceEngagement.length === 0 ? '<tr><td colspan="3">No data yet</td></tr>' : ''}
-      </table>
     </div>
 
     <div class="section">

@@ -689,16 +689,6 @@ export default function ChapterGalleryBase({
     if (window.location.pathname !== newUrl) window.history.pushState(null, "", newUrl);
   }, [currentIndex, hasEnteredChapters, basePath, galleryData, viewMode]);
 
-  // Track chapter views (Layer B - proves human via JS, not inflatable by bots)
-  useEffect(() => {
-    const alreadyOnImage = /\/i-[a-zA-Z0-9_-]+$/.test(window.location.pathname);
-    if (!hasEnteredChapters && !alreadyOnImage) return;
-    if (viewMode === "grid") return;
-    const imageId = galleryData[currentIndex]?.id;
-    if (!imageId) return;
-    track('chapter_view', { pageType: 'image', imageId });
-  }, [currentIndex, hasEnteredChapters, viewMode, galleryData]);
-
   // ✅ Replaced old title updater with the hook
   const entry = galleryData[currentIndex];
   useMetaSwap(entry, titleBase, currentIndex);

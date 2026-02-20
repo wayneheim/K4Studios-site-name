@@ -24,8 +24,33 @@ import {
   updateBotIntelligence as _updateBotIntelligence,
   logEdgeEvent as _logEdgeEvent,
   logArtView as _logArtView,
-  logVerifiedBot as _logVerifiedBot
+  logVerifiedBot as _logVerifiedBot,
+  logRawEvent as _logRawEvent
 } from './storage.js';
+
+async function recoverExposureFromZoom(env, request, visitorId, imageId, sessionId) {
+  try {
+    if (!env?.DB) return;
+    if (!visitorId || !imageId || !sessionId) return;
+
+    const existing = await env.DB.prepare(`
+      SELECT 1
+      FROM classified_events
+      WHERE visitor_id = ?
+        AND target_id = ?
+        AND event_type = 'chapter_exposure'
+        AND session_id = ?
+      LIMIT 1
+    `).bind(visitorId, imageId, sessionId).first();
+
+    if (existing) return;
+
+    // Recovery write: confirms exposure occurred but proxy missed it (cache/race/etc.)
+    await logArtView(env, 'chapter_exposure', imageId, request, sessionId, 'recovery', visitorId, null, null, 1, 'zoom');
+  } catch (err) {
+    console.error('Exposure recovery failed:', err?.message || err);
+  }
+}
 
 // ═══════════════════════════════════════════════════════════════════════════
 // RE-EXPORTS — stable API surface for the worker
@@ -79,6 +104,14 @@ export async function logArtView(...args) {
   }
 }
 
+export async function logRawEvent(...args) {
+  try {
+    return await withTimeout(_logRawEvent(...args), 1500);
+  } catch (err) {
+    console.error("analytics failure [logRawEvent]:", err?.message || err);
+  }
+}
+
 export async function logVerifiedBot(...args) {
   try {
     return await withTimeout(_logVerifiedBot(...args), 1500);
@@ -93,6 +126,44 @@ export async function updateBotIntelligence(...args) {
   } catch (err) {
     console.error("analytics failure [updateBotIntelligence]:", err?.message || err);
   }
+}
+
+function readCookieValue(cookieHeader, name) {
+  if (!cookieHeader || !name) return null;
+  const re = new RegExp('(?:^|;\\s*)' + name.replace(/[-/\\^$*+?.()|[\\]{}]/g, '\\$&') + '=([^;]+)');
+  const m = String(cookieHeader).match(re);
+  return m ? m[1] : null;
+}
+
+function makeSidSetCookieHeader(requestUrl, sessionId) {
+  if (!sessionId) return null;
+  let hostname = '';
+  try {
+    hostname = new URL(requestUrl).hostname || '';
+  } catch (_) {
+    hostname = '';
+  }
+
+  // Only set a cross-subdomain cookie on the real site.
+  // This prevents browser rejection on workers.dev and keeps behavior predictable.
+  const domainAttr = hostname.endsWith('k4studios.com') ? '; Domain=.k4studios.com' : '';
+  const value = encodeURIComponent(String(sessionId));
+  return `k4_sid=${value}; Path=/; Max-Age=86400; SameSite=Lax; Secure${domainAttr}`;
+}
+
+function makeVidSetCookieHeader(requestUrl, visitorId) {
+  if (!visitorId) return null;
+  let hostname = '';
+  try {
+    hostname = new URL(requestUrl).hostname || '';
+  } catch (_) {
+    hostname = '';
+  }
+
+  const domainAttr = hostname.endsWith('k4studios.com') ? '; Domain=.k4studios.com' : '';
+  const value = encodeURIComponent(String(visitorId));
+  // 1 year
+  return `k4_vid=${value}; Path=/; Max-Age=31536000; SameSite=Lax; Secure${domainAttr}`;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -162,55 +233,75 @@ export async function handleTrackRequest(request, env, ctx) {
       : null;
 
     // Read visitor_id from k4_vid cookie (Single Population Doctrine)
+    // If missing, mint it here (JS-verified by virtue of hitting /track).
     const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
-    const visitorId = vidCookieMatch ? vidCookieMatch[1] : null;
+    const existingVisitorId = vidCookieMatch ? vidCookieMatch[1] : null;
+    const mintedVisitorId = (!existingVisitorId && crypto?.randomUUID)
+      ? crypto.randomUUID()
+      : (!existingVisitorId ? (String(Date.now()) + '-' + Math.random().toString(16).slice(2)) : null);
+    const visitorId = existingVisitorId || mintedVisitorId;
+
+    // Session continuity: accept session_id from body, otherwise fall back to cookie.
+    const sidCookie = readCookieValue(cookieHeader, 'k4_sid');
+    const bestSessionId = session_id || sidCookie || null;
 
     // Store the raw edge referrer URL directly (for SQL LIKE matching)
     // normalizeReferrer is kept as fallback for old normalized cookie values
     const bestReferrer = edgeReferrer || clientReferrer;
     const referrer = bestReferrer || "unknown";
 
-    // V2 Architecture: All events go directly to raw_events via logArtView
-    // (Legacy 'events' table no longer exists)
-    
-    // JS-verified chapter views
-    if (event === 'chapter_view') {
-      const targetId = image_id || (typeof page_path === 'string'
-        ? (page_path.match(/\/(i-[a-zA-Z0-9_-]+)\/?$/)?.[1] || null)
-        : null);
-      if (targetId) {
-        ctx.waitUntil(logArtView(env, 'chapter_view', targetId, request, session_id, 'js', visitorId));
+    // V2 Architecture: All events go directly to raw_events.
+    // We still do special handling for key art events (target_id extraction + recovery),
+    // but we ALSO log every /track event name so the Event Breakdown panel stays live.
+
+    const normalizeGalleryTargetId = (path) => {
+      if (typeof path !== 'string') return null;
+      return path.replace(/^\/Galleries\//, '').replace(/^\/Other\//, '').replace(/\/$/, '');
+    };
+
+    const inferImageIdFromPath = (path) => {
+      if (typeof path !== 'string') return null;
+      return path.match(/\/(i-[a-zA-Z0-9_-]+)\/?$/)?.[1] || null;
+    };
+
+    const storedEventType = (event === 'zoom_open' || event === 'zoom') ? 'xl_zoom' : event;
+
+    let targetId = null;
+    if (storedEventType === 'chapter_view') {
+      targetId = image_id || inferImageIdFromPath(page_path);
+    } else if (storedEventType === 'xl_zoom') {
+      targetId = image_id || inferImageIdFromPath(page_path);
+      if (event === 'xl_zoom' && targetId && bestSessionId && visitorId) {
+        ctx.waitUntil(recoverExposureFromZoom(env, request, visitorId, targetId, bestSessionId));
       }
+    } else if (storedEventType === 'gallery_view') {
+      targetId = gallery_id || normalizeGalleryTargetId(page_path);
+    } else {
+      targetId = image_id || gallery_id || page_path || null;
     }
 
-    // xl_zoom = user intent beacon (never image request)
-    // Back-compat: legacy clients may emit zoom_open/zoom via /track
-    if (event === 'xl_zoom' || event === 'zoom_open' || event === 'zoom') {
-      const targetId = image_id || (typeof page_path === 'string'
-        ? (page_path.match(/\/(i-[a-zA-Z0-9_-]+)\/?$/)?.[1] || null)
-        : null);
-      if (targetId) {
-        ctx.waitUntil(logArtView(env, 'xl_zoom', targetId, request, session_id, 'js', visitorId));
-      }
-    }
+    ctx.waitUntil(logRawEvent(env, storedEventType, targetId, request, {
+      sessionId: bestSessionId,
+      source: 'js',
+      visitorId,
+      page: request.headers.get('Referer') || null
+    }));
 
-    // JS-verified gallery views
-    if (event === 'gallery_view') {
-      const targetId = gallery_id || (typeof page_path === 'string'
-        ? page_path.replace(/^\/Galleries\//, '').replace(/^\/Other\//, '').replace(/\/$/, '')
-        : null);
-      if (targetId) {
-        ctx.waitUntil(logArtView(env, 'gallery_view', targetId, request, session_id, 'js', visitorId));
-      }
-    }
+    const sidSetCookie = makeSidSetCookieHeader(request.url, bestSessionId);
+    const vidSetCookie = existingVisitorId ? null : makeVidSetCookieHeader(request.url, visitorId);
+
+    const headers = new Headers({
+      "Access-Control-Allow-Origin": "https://www.k4studios.com",
+      "Access-Control-Allow-Methods": "POST",
+      "Access-Control-Allow-Headers": "Content-Type"
+    });
+
+    if (sidSetCookie) headers.append('Set-Cookie', sidSetCookie);
+    if (vidSetCookie) headers.append('Set-Cookie', vidSetCookie);
 
     return new Response(null, {
       status: 204,
-      headers: {
-        "Access-Control-Allow-Origin": "https://www.k4studios.com",
-        "Access-Control-Allow-Methods": "POST",
-        "Access-Control-Allow-Headers": "Content-Type"
-      }
+      headers
     });
 
   } catch (err) {
@@ -298,7 +389,10 @@ export async function handleTrackEvent(request, env, ctx) {
 
   try {
     const body = await request.json();
-    const { type, imageId } = body;
+    const { type, imageId, session_id = null, sessionId = null } = body;
+    const cookieHeader = request.headers.get("cookie") || "";
+    const sidCookie = readCookieValue(cookieHeader, 'k4_sid');
+    const bestSessionId = session_id || sessionId || sidCookie || null;
 
     // xl_zoom = user intent beacon (never image request)
     // Back-compat: accept legacy zoom events, but canonicalize immediately.
@@ -312,18 +406,24 @@ export async function handleTrackEvent(request, env, ctx) {
     }
 
     // Read visitor_id from k4_vid cookie
-    const cookieHeader = request.headers.get("cookie") || "";
     const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
     const visitorId = vidCookieMatch ? vidCookieMatch[1] : null;
 
     const canonicalType = (type === 'zoom_open' || type === 'zoom') ? 'xl_zoom' : type;
-    ctx.waitUntil(logArtView(env, canonicalType, imageId, request, null, 'js', visitorId));
 
+    if (canonicalType === 'xl_zoom' && bestSessionId && visitorId) {
+      ctx.waitUntil(recoverExposureFromZoom(env, request, visitorId, imageId, bestSessionId));
+    }
+
+    ctx.waitUntil(logArtView(env, canonicalType, imageId, request, bestSessionId, 'js', visitorId));
+
+    const sidSetCookie = makeSidSetCookieHeader(request.url, bestSessionId);
     return new Response('ok', {
       status: 200,
       headers: {
         'Content-Type': 'text/plain',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
+        ...(sidSetCookie ? { 'Set-Cookie': sidSetCookie } : {})
       }
     });
   } catch (e) {

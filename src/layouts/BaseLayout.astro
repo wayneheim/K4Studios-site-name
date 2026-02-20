@@ -257,19 +257,29 @@ const keywords =
       }
     </script>
 
+    <!-- Session cookie bridge: make sessionStorage session_id available to same-origin image requests -->
+    <script>
+      (function () {
+        try {
+          var sid = sessionStorage.getItem('k4_session_id');
+          if (!sid) {
+            sid = (window.crypto && window.crypto.randomUUID)
+              ? window.crypto.randomUUID()
+              : (String(Date.now()) + '-' + Math.random().toString(16).slice(2));
+            sessionStorage.setItem('k4_session_id', sid);
+          }
+          if (sid) {
+            document.cookie = 'k4_sid=' + encodeURIComponent(sid) + '; Path=/; SameSite=Lax';
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- K4 Custom Analytics - track all page views -->
     <script>
-      import { trackPageView, getImageIdFromPath, trackEvent as track } from '../utils/analytics';
+      import { trackPageView } from '../utils/analytics';
 
       trackPageView();
-
-      // If this is a true image page (URL ends with /i-xxxx), log a first-party chapter_view.
-      // This does NOT run on the homepage/carousels because it keys off window.location.pathname,
-      // not <img> requests.
-      const imageId = getImageIdFromPath();
-      if (imageId) {
-        track('chapter_view', { pageType: 'image', imageId });
-      }
     </script>
     
     <!-- Allow pages to inject custom head content -->
@@ -315,7 +325,7 @@ const keywords =
       let needsClean = false;
       for (const m of mutations) {
         for (const n of m.addedNodes) {
-          if (n.nodeType === 1 && n.tagName === "SCRIPT") {
+          if (n.nodeType === 1 && (n as Element).tagName === "SCRIPT") {
             needsClean = true;
           }
         }

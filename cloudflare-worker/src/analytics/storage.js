@@ -41,12 +41,99 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
     const city = request.cf?.city || null;
     const cfAsn = request.cf?.asn || null;
     
-    const { sessionId = null, source = 'proxy', page = null, deltaMs = null, visitorId = null } = extras;
-    
-    await env.DB.prepare(`
-      INSERT INTO raw_events (ip, ip_hash, event_type, target_id, page, session_id, ua, referer, source, country, region, city, delta_ms, cf_asn, visitor_id)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    `).bind(ip, ipHash, eventType, targetId, page, sessionId, ua, referer, source, country, region, city, deltaMs, cfAsn, visitorId).run();
+    const {
+      sessionId = null,
+      source = 'proxy',
+      page = null,
+      deltaMs = null,
+      visitorId = null,
+      imgSize = null,
+      refType = null,
+      inferred = null,
+      inferredFrom = null
+    } = extras;
+
+    const baseColumns = [
+      'ip',
+      'ip_hash',
+      'event_type',
+      'target_id',
+      'page',
+      'session_id',
+      'ua',
+      'referer',
+      'source',
+      'country',
+      'region',
+      'city',
+      'delta_ms',
+      'cf_asn',
+      'visitor_id'
+    ];
+    const baseValues = [
+      ip,
+      ipHash,
+      eventType,
+      targetId,
+      page,
+      sessionId,
+      ua,
+      referer,
+      source,
+      country,
+      region,
+      city,
+      deltaMs,
+      cfAsn,
+      visitorId
+    ];
+
+    // Optional columns: only included when non-null.
+    // If the column doesn't exist in D1 yet, we detect and retry without it.
+    const optional = [
+      { name: 'img_size', value: imgSize },
+      { name: 'ref_type', value: refType },
+      { name: 'inferred', value: inferred },
+      { name: 'inferred_from', value: inferredFrom }
+    ].filter(o => o.value !== null && o.value !== undefined);
+
+    const missingColumnRegex = /no such column:\s*([a-zA-Z0-9_]+)/i;
+    for (let attempt = 0; attempt < 5; attempt++) {
+      try {
+        const columns = baseColumns.concat(optional.map(o => o.name));
+        const values = baseValues.concat(optional.map(o => o.value));
+        const placeholders = columns.map(() => '?').join(', ');
+
+        await env.DB.prepare(
+          `INSERT INTO raw_events (${columns.join(', ')}) VALUES (${placeholders})`
+        )
+          .bind(...values)
+          .run();
+
+        return;
+      } catch (e) {
+        const msg = String(e?.message || e);
+        const isMissingColumn = msg.includes('no such column') || msg.includes('has no column');
+        if (!isMissingColumn) throw e;
+
+        const match = msg.match(missingColumnRegex);
+        const missing = match?.[1] || null;
+        if (!missing) {
+          // Unknown missing-column shape — drop all optional columns and try one last time.
+          optional.length = 0;
+          continue;
+        }
+
+        const idx = optional.findIndex(o => o.name === missing);
+        if (idx >= 0) {
+          optional.splice(idx, 1);
+          continue;
+        }
+
+        // Missing a base column? Nothing we can do.
+        throw e;
+      }
+    }
   } catch (e) {
     // Never let logging break the response
     console.error('Raw event logging error:', e);
@@ -67,9 +154,9 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
  * @param {string} source - Source (js, proxy, edge)
  * @param {string|null} visitorId - Cookie-based visitor ID (k4_vid)
  */
-async function logArtView(env, type, targetId, request, sessionId = null, source = 'js', visitorId = null) {
+async function logArtView(env, type, targetId, request, sessionId = null, source = 'js', visitorId = null, imgSize = null, refType = null, inferred = null, inferredFrom = null) {
   const page = request.headers.get("Referer") || null;
-  await logRawEvent(env, type, targetId, request, { sessionId, source, page, visitorId });
+  await logRawEvent(env, type, targetId, request, { sessionId, source, page, visitorId, imgSize, refType, inferred, inferredFrom });
 }
 
 /**

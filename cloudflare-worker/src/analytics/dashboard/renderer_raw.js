@@ -457,7 +457,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
       <span class="value" style="color: #fff;">👤 ${artViewsSummary?.total || 0}</span>
       <span class="label" style="color: #ddd6fe;">Image Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
-      <div class="tooltip">JS-verified image views (human only). Chapter browsing (${artViewsSummary?.chapter_views || 0}) + External embeds (${artViewsSummary?.external_images || 0}). Server-side page loads: ${artViewsSummary?.image_pages || 0}.</div>
+      <div class="tooltip">Chapters = L-size chapter exposures (proxy-verified + cache-recovery). External embeds = server-side proxy logs. Server-side page loads: ${artViewsSummary?.image_pages || 0}. XL zooms are separate JS intent beacons.</div>
     </div>
   </div>
 
@@ -465,15 +465,15 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   <h2 style="margin-top: 20px; margin-bottom: 8px;">🎨 Art Views <span style="font-size: 12px; color: #888; font-weight: normal;">(Chapters: JS-verified | External: Server-Side)</span></h2>
   <p style="color: #888; margin: 0 0 10px 0; font-size: 12px;">
     <strong style="color: #10b981;">Human art viewers (cleaned)</strong> — bots, scrapers, and datacenter traffic excluded. 
-    <span class="section-tip" style="display: inline;"><span class="info-icon">i</span><div class="tooltip">Chapters &amp; XL Zooms: counted from JS events (same-origin /track beacon). Galleries: derived from chapter views (every chapter has a gallery_id, so galleries browsed = distinct gallery_ids from chapter data). External embeds: server-side /img/ proxy logs. Bot exclusion: datacenter IPs without referrer, known scraper UAs.</div></span>
+    <span class="section-tip" style="display: inline;"><span class="info-icon">i</span><div class="tooltip">Chapters: counted from chapter_exposure (L-size proxy exposures + cache-recovery). XL Zooms: counted from JS intent beacons. Galleries: derived from chapter exposure page context. External embeds: server-side /img/ proxy logs. Bot exclusion: via classified_events view.</div></span>
   </p>
-  ${(topArtViews?.chapters?.length > 0 || topArtViews?.xlZooms?.length > 0 || topArtViews?.galleries?.length > 0) ? `
+
   <div class="art-views-grid">
       <!-- Chapters Column -->
       <div>
         <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #a78bfa; display: flex; align-items: center; justify-content: space-between;">
           <span>📖 Chapters</span>
-          <span style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Chapters = explicit chapter interface views (events.event='chapter_view', same-origin /track). Beacon (workers.dev) is shown for debugging only: ${artViewsSummary?.chapter_views_beacon || 0}. First-party sanity: image page views=${imagePageViewsFromEvents}, image entry sessions=${imageEntrySessionsFromEvents}.">${artViewsSummary?.chapter_views || 0}</span>
+          <span style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Chapters = chapter_exposure (proxy-verified L renders + cache-recovery). First-party sanity: image page views=${imagePageViewsFromEvents}, image entry sessions=${imageEntrySessionsFromEvents}.">${artViewsSummary?.chapter_views || 0}</span>
         </h4>
         <div style="display: flex; flex-direction: column; gap: 6px; max-height: 600px; overflow-y: auto; padding-right: 4px;">
           ${(topArtViews.chapters || []).map((a, i) => {
@@ -540,7 +540,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     </div>
     <p style="font-size: 10px; color: #555; margin-top: 8px;">Chapters &amp; Zooms: JS-verified | Galleries: derived from chapter views | External: server-side proxy</p>
   </div>
-  ` : ''}
+
   
   <!-- External Traffic - 3-Column: Top Images | Displays | Visitors -->
   ${(artViewsSummary?.externalDisplays?.length > 0 || topArtViews?.external?.length > 0 || Object.keys(entryRefCounts).length > 0) ? `

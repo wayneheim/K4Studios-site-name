@@ -381,24 +381,58 @@ async function handleImageRequest(request, ctx, env) {
     }
 
     // Log art views by size:
-    // XL = proxy-verified zoom/slideshow (server-side, not spoofable)
-    // L = chapter views (on-site) OR external embeds (off-site)
+    // - L = can be a real chapter exposure OR an external embed
+    // - S/M = ignored (thumbnails/prefetch/noise)
+    // - XL = never logged from proxy (zoom intent is JS-only `xl_zoom` beacon)
     if (env?.DB) {
       // Read visitor_id from k4_vid cookie (Single Population Doctrine)
       const cookieHeader = request.headers.get('Cookie') || '';
       const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
       const visitorId = vidCookieMatch ? vidCookieMatch[1] : null;
-      
-      // XL = proxy-verified zoom intent (Phase: Art View Hardening)
-      if (route.size === 'xl') {
-        ctx.waitUntil(logArtView(env, 'xl_zoom', route.imageId, request, null, 'proxy', visitorId));
-      } else if (route.size === 'l') {
+
+      // Session bridge cookie (set by BaseLayout): enables session-scoped dedupe/recovery
+      let sessionId = null;
+      const sidCookieMatch = cookieHeader.match(/k4_sid=([^;]+)/);
+      if (sidCookieMatch) {
+        try {
+          sessionId = decodeURIComponent(sidCookieMatch[1]);
+        } catch {
+          sessionId = sidCookieMatch[1];
+        }
+      }
+
+      if (route.size === 'l') {
         const referer = request.headers.get('Referer') || '';
-        // Off-site L-size = external embed (Google Images, etc.)
-        // Note: On-site L-size not logged here - it includes prefetch/warming which pollutes data
-        // Chapter views are tracked via JS on actual navigation
-        if (!referer.includes('k4studios.com') && !referer.includes('localhost') && referer) {
-          ctx.waitUntil(logArtView(env, 'external_image', route.imageId, request, null, 'proxy', visitorId));
+
+        let refererUrl = null;
+        try {
+          refererUrl = referer ? new URL(referer) : null;
+        } catch {
+          refererUrl = null;
+        }
+
+        const refererHost = (refererUrl?.hostname || '').toLowerCase();
+        const refererPath = refererUrl?.pathname || '';
+
+        const isInternal =
+          refererHost === 'localhost' ||
+          refererHost === '127.0.0.1' ||
+          refererHost.endsWith('k4studios.com');
+
+        // Guardrail:
+        // Only count *chapter exposure* when the L-size image was requested from an actual
+        // image-detail page (…/i-XXXX) FOR THAT SAME IMAGE and the visitor has our k4_vid cookie.
+        // This prevents hero/carousel/preload/OG-scraper traffic from inflating chapters.
+        const isImagePageReferer = /\/(Galleries|Other)\/.*\/i-[a-zA-Z0-9-]+\/?$/.test(refererPath);
+        const normalizedRefererPath = (refererPath || '').replace(/\/+$/, '');
+        const isSameImagePageReferer = normalizedRefererPath.endsWith('/' + route.imageId);
+
+        if (isInternal && isImagePageReferer && isSameImagePageReferer && visitorId) {
+          ctx.waitUntil(logArtView(env, 'chapter_exposure', route.imageId, request, sessionId, 'proxy', visitorId, 'l', 'internal'));
+        } else if (!isInternal && referer) {
+          ctx.waitUntil(logArtView(env, 'external_image', route.imageId, request, sessionId, 'proxy', visitorId, 'l', 'external'));
+        } else if (!referer) {
+          ctx.waitUntil(logArtView(env, 'direct_image', route.imageId, request, sessionId, 'proxy', visitorId, 'l', 'direct'));
         }
       }
       
@@ -1604,23 +1638,10 @@ export default {
       return addVisitorIdCookie(response, visitorId, visitorIdIsNew);
     }
 
-    // 2) Gallery pages: proxy-verified tracking (SERVER TRUTH)
-    // Logs gallery_view when HTML page is delivered, not when JS mounts
+    // 2) Gallery pages: pass through.
+    // Gallery views are tracked via JS (/track → gallery_view). Do not double-log here.
     if ((url.pathname.startsWith("/Galleries/") || url.pathname.startsWith("/Other/")) && 
         !url.pathname.includes("/i-")) {
-      
-      // Only count real page loads (not assets/images/css/js)
-      const accept = request.headers.get("accept") || "";
-      
-      if (request.method === "GET" && accept.includes("text/html") && env?.DB) {
-        const gallerySlug = url.pathname
-          .replace(/^\/Galleries\//, "")
-          .replace(/^\/Other\//, "")
-          .replace(/\/$/, "");
-        
-        ctx.waitUntil(logArtView(env, "gallery_view", gallerySlug, request, null, "proxy", visitorId));
-      }
-      
       const response = await fetch(request);
       return addVisitorIdCookie(response, visitorId, visitorIdIsNew);
     }

@@ -17,7 +17,7 @@
 // Axis 1: population_type  — WHO caused the event
 //   Determined by event source, NOT by referer.
 //   human            → JS-verified (has k4_vid cookie, event from collector.js)
-//   external_non_js  → proxy-logged external_image_page (no JS ever executed)
+//   external_non_js  → proxy-logged L-size fetches (external_image/direct_image)
 //   bot              → classified_events.is_bot = 1
 //
 // Axis 2: access_type — HOW the request arrived
@@ -74,6 +74,41 @@ function classifyForEntryRef(referer) {
   if (host.includes('instagram')) return 'instagram';
   if (host.includes('linkedin')) return 'linkedin';
   return 'unattributed';
+}
+
+// ── Canonical image URL helper (used to avoid /art/i-... smart-404 function hits) ──
+const IMAGE_ID_MAP_URL = 'https://k4studios.com/imageIdMap.json';
+const IMAGE_ID_MAP_TTL_MS = 60 * 60 * 1000;
+let _imageIdMapCache = null;
+let _imageIdMapCacheTime = 0;
+
+async function getImageIdMapCached() {
+  const now = Date.now();
+  if (_imageIdMapCache && (now - _imageIdMapCacheTime) < IMAGE_ID_MAP_TTL_MS) {
+    return _imageIdMapCache;
+  }
+  try {
+    const res = await fetch(IMAGE_ID_MAP_URL, { headers: { 'Accept': 'application/json' } });
+    if (!res.ok) throw new Error('imageIdMap fetch failed: ' + res.status);
+    const data = await res.json();
+    if (data && typeof data === 'object') {
+      _imageIdMapCache = data;
+      _imageIdMapCacheTime = now;
+      return _imageIdMapCache;
+    }
+  } catch (e) {
+    // Keep last good cache if present.
+    console.log('imageIdMap fetch failed:', e?.message || e);
+  }
+  return _imageIdMapCache;
+}
+
+function getCanonicalGalleryPathForImageId(imageIdMap, imageId) {
+  if (!imageIdMap || !imageId) return null;
+  const raw = imageIdMap[imageId];
+  const path = Array.isArray(raw) ? raw[0] : raw;
+  if (!path || typeof path !== 'string') return null;
+  return String(path).replace(/\/+$/, '');
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -134,24 +169,35 @@ export async function getArtViews(env, filters) {
   };
   
   try {
-    // Summary by event type - FROM human_population → JOIN classified_events
+    // Summary counts:
+    // - Human-only: xl_zoom, gallery_view
+    // - External embeds: external_image/direct_image (no visitor_id cookie required)
     const summaryQuery = `
-      SELECT 
-        e.event_type,
-        COUNT(*) as views,
-        COUNT(DISTINCT e.target_id) as unique_targets,
-        COUNT(DISTINCT e.visitor_id) as unique_viewers
+      SELECT 'xl_zoom' as event_type, COUNT(*) as views
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
-      WHERE ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
-      GROUP BY e.event_type
+      WHERE e.event_type = 'xl_zoom'
+        AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+
+      UNION ALL
+
+      SELECT 'gallery_view' as event_type, COUNT(*) as views
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE e.event_type IN ('gallery', 'gallery_view')
+        AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+
+      UNION ALL
+
+      SELECT 'external_image' as event_type, COUNT(*) as views
+      FROM classified_events e
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
     `;
     const summaryResult = await env.DB.prepare(summaryQuery).all();
     
     for (const row of (summaryResult.results || [])) {
-      if (row.event_type === 'chapter' || row.event_type === 'chapter_view') {
-        artViewsSummary.chapter_views = row.views;
-      }
       if (row.event_type === 'xl_zoom') {
         artViewsSummary.xl_zooms = row.views;
       }
@@ -161,6 +207,28 @@ export async function getArtViews(env, filters) {
       if (row.event_type === 'external' || row.event_type === 'external_image') {
         artViewsSummary.external_images = row.views;
       }
+    }
+
+    // Chapters (canonical):
+    // - Count chapter_exposure only (proxy truth + recovery writes)
+    // - Dedup per (visitor_id, target_id, session_id)
+    // - Back-compat: if session_id is missing, dedup per day as a safe fallback
+    try {
+      const chapterViewsQuery = `
+        SELECT COUNT(*) as chapter_views
+        FROM (
+          SELECT e.visitor_id, e.target_id, COALESCE(e.session_id, 'd:' || date(e.ts)) as session_bucket
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
+          WHERE e.event_type = 'chapter_exposure'
+            AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+          GROUP BY e.visitor_id, e.target_id, session_bucket
+        )
+      `;
+      const chapterViewsResult = await env.DB.prepare(chapterViewsQuery).first();
+      artViewsSummary.chapter_views = chapterViewsResult?.chapter_views || 0;
+    } catch (e) {
+      console.log('Chapter views query failed:', e.message);
     }
     
     artViewsSummary.total = artViewsSummary.chapter_views + artViewsSummary.external_images;
@@ -172,62 +240,86 @@ export async function getArtViews(env, filters) {
   let topChapters = [];
   try {
     const topChaptersQuery = `
-      SELECT 
-        e.target_id,
+      WITH ranked AS (
+        SELECT
+          e.visitor_id as visitor_id,
+          e.target_id as target_id,
+          COALESCE(e.session_id, 'd:' || date(e.ts)) as session_bucket,
+          LOWER(COALESCE(hp.device_type, 'unknown')) as device,
+          e.country as country,
+          e.region as region,
+          e.city as city,
+          e.page as page,
+          ROW_NUMBER() OVER (
+            PARTITION BY e.visitor_id, e.target_id, COALESCE(e.session_id, 'd:' || date(e.ts))
+            ORDER BY e.ts DESC
+          ) as rn
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE e.event_type = 'chapter_exposure'
+          AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+      ),
+      chapter_pairs AS (
+        SELECT visitor_id, target_id, session_bucket, device, country, region, city, page
+        FROM ranked
+        WHERE rn = 1
+      )
+      SELECT
+        cp.target_id,
         COUNT(*) as views,
-        COUNT(DISTINCT e.visitor_id) as unique_viewers,
-        GROUP_CONCAT(DISTINCT e.country) as countries,
+        COUNT(DISTINCT cp.visitor_id) as unique_viewers,
+        GROUP_CONCAT(DISTINCT cp.device) as device_types,
+        GROUP_CONCAT(DISTINCT cp.country) as countries,
         (
-          SELECT e2.country
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('chapter', 'chapter_view')
-            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
+          SELECT cp2.page
+          FROM chapter_pairs cp2
+          WHERE cp2.target_id = cp.target_id
+            AND cp2.page IS NOT NULL
+          GROUP BY cp2.page
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as best_page,
+        (
+          SELECT cp2.country
+          FROM chapter_pairs cp2
+          WHERE cp2.target_id = cp.target_id
+            AND cp2.country IS NOT NULL
+          GROUP BY cp2.country, cp2.region, cp2.city
           ORDER BY COUNT(*) DESC
           LIMIT 1
         ) as geo_country,
         (
-          SELECT e2.region
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('chapter', 'chapter_view')
-            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
+          SELECT cp2.region
+          FROM chapter_pairs cp2
+          WHERE cp2.target_id = cp.target_id
+            AND cp2.country IS NOT NULL
+          GROUP BY cp2.country, cp2.region, cp2.city
           ORDER BY COUNT(*) DESC
           LIMIT 1
         ) as geo_region,
         (
-          SELECT e2.city
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('chapter', 'chapter_view')
-            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
+          SELECT cp2.city
+          FROM chapter_pairs cp2
+          WHERE cp2.target_id = cp.target_id
+            AND cp2.country IS NOT NULL
+          GROUP BY cp2.country, cp2.region, cp2.city
           ORDER BY COUNT(*) DESC
           LIMIT 1
         ) as geo_city
-      FROM human_population hp
-      JOIN classified_events e ON e.visitor_id = hp.visitor_id
-      WHERE e.event_type IN ('chapter', 'chapter_view')
-        AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
-      GROUP BY e.target_id
+      FROM chapter_pairs cp
+      GROUP BY cp.target_id
       ORDER BY views DESC
       LIMIT 20
     `;
     const result = await env.DB.prepare(topChaptersQuery).all();
     topChapters = (result.results || []).map(r => ({
-      type: 'chapter_view',
+      type: 'chapter_exposure',
       target_id: r.target_id,
       views: r.views,
       unique_viewers: r.unique_viewers,
+      devices: (r.device_types || '').split(',').map(s => (s || '').trim()).filter(Boolean),
       countries: r.countries,
+      url: r.best_page || null,
       geo: { country: r.geo_country, region: r.geo_region, city: r.geo_city }
     }));
   } catch (e) {
@@ -242,6 +334,19 @@ export async function getArtViews(env, filters) {
         e.target_id,
         COUNT(*) as views,
         COUNT(DISTINCT e.visitor_id) as unique_viewers,
+        GROUP_CONCAT(DISTINCT LOWER(COALESCE(hp.device_type, 'unknown'))) as device_types,
+        (
+          SELECT e2.page
+          FROM classified_events e2
+          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type = 'xl_zoom'
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.page IS NOT NULL
+          GROUP BY e2.page
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as best_page,
         (
           SELECT e2.country
           FROM classified_events e2
@@ -292,6 +397,8 @@ export async function getArtViews(env, filters) {
       target_id: r.target_id,
       views: r.views,
       unique_viewers: r.unique_viewers,
+      devices: (r.device_types || '').split(',').map(s => (s || '').trim()).filter(Boolean),
+      url: r.best_page || null,
       geo: { country: r.geo_country, region: r.geo_region, city: r.geo_city }
     }));
   } catch (e) {
@@ -305,7 +412,8 @@ export async function getArtViews(env, filters) {
       SELECT 
         e.target_id,
         COUNT(*) as views,
-        COUNT(DISTINCT e.visitor_id) as unique_viewers
+        COUNT(DISTINCT e.visitor_id) as unique_viewers,
+        GROUP_CONCAT(DISTINCT LOWER(COALESCE(hp.device_type, 'unknown'))) as device_types
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE e.event_type IN ('gallery', 'gallery_view')
@@ -319,7 +427,8 @@ export async function getArtViews(env, filters) {
       type: 'gallery_view',
       target_id: r.target_id,
       views: r.views,
-      unique_viewers: r.unique_viewers
+      unique_viewers: r.unique_viewers,
+      devices: (r.device_types || '').split(',').map(s => (s || '').trim()).filter(Boolean)
     }));
   } catch (e) {
     console.log('Top galleries query failed:', e.message);
@@ -335,7 +444,7 @@ export async function getArtViews(env, filters) {
           SUM(
             CASE
               WHEN e.event_type IN ('gallery', 'gallery_view') THEN 1
-              WHEN e.event_type IN ('chapter', 'chapter_view') THEN 2
+              WHEN e.event_type = 'chapter_exposure' THEN 2
               WHEN e.event_type = 'xl_zoom' THEN 5
               ELSE 0
             END
@@ -390,20 +499,22 @@ export async function getArtViews(env, filters) {
     console.log('Bot count query failed:', e.message);
   }
   
-  // Top external image page accesses (no JS = not human engagement)
+  // Top external/direct L-size image fetches (no JS required)
   let externalImageAccess = [];
   try {
-    const externalQuery = `
+    const externalQueryWithRefType = `
       SELECT 
         e.target_id,
         COUNT(*) as hits,
         e.referer,
+        e.ref_type,
         e.country,
         (
           SELECT e2.country
           FROM classified_events e2
           WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'external_image_page'
+            AND e2.event_type IN ('external_image', 'direct_image')
+            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
             AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
             AND e2.country IS NOT NULL
           GROUP BY e2.country, e2.region, e2.city
@@ -414,7 +525,8 @@ export async function getArtViews(env, filters) {
           SELECT e2.region
           FROM classified_events e2
           WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'external_image_page'
+            AND e2.event_type IN ('external_image', 'direct_image')
+            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
             AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
             AND e2.country IS NOT NULL
           GROUP BY e2.country, e2.region, e2.city
@@ -425,7 +537,8 @@ export async function getArtViews(env, filters) {
           SELECT e2.city
           FROM classified_events e2
           WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'external_image_page'
+            AND e2.event_type IN ('external_image', 'direct_image')
+            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
             AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
             AND e2.country IS NOT NULL
           GROUP BY e2.country, e2.region, e2.city
@@ -433,16 +546,84 @@ export async function getArtViews(env, filters) {
           LIMIT 1
         ) as geo_city
       FROM classified_events e
-      WHERE e.event_type = 'external_image_page'
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+      GROUP BY e.target_id, e.referer, e.ref_type
+      ORDER BY hits DESC
+      LIMIT 30
+    `;
+
+    const externalQueryLegacy = `
+      SELECT 
+        e.target_id,
+        COUNT(*) as hits,
+        e.referer,
+        e.country,
+        (
+          SELECT e2.country
+          FROM classified_events e2
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type IN ('external_image', 'direct_image')
+            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.country IS NOT NULL
+          GROUP BY e2.country, e2.region, e2.city
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as geo_country,
+        (
+          SELECT e2.region
+          FROM classified_events e2
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type IN ('external_image', 'direct_image')
+            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.country IS NOT NULL
+          GROUP BY e2.country, e2.region, e2.city
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as geo_region,
+        (
+          SELECT e2.city
+          FROM classified_events e2
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type IN ('external_image', 'direct_image')
+            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.country IS NOT NULL
+          GROUP BY e2.country, e2.region, e2.city
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as geo_city
+      FROM classified_events e
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.target_id, e.referer
       ORDER BY hits DESC
       LIMIT 30
     `;
-    const result = await env.DB.prepare(externalQuery).all();
+
+    let result;
+    try {
+      result = await env.DB.prepare(externalQueryWithRefType).all();
+    } catch (e) {
+      const msg = String(e?.message || e);
+      if (msg.includes('no such column') && msg.includes('ref_type')) {
+        result = await env.DB.prepare(externalQueryLegacy).all();
+      } else {
+        throw e;
+      }
+    }
     const accessPriority = { external_referral: 0, direct: 1, internal_navigation: 2, unknown: 3 };
     externalImageAccess = (result.results || []).map(r => {
-      const accessType = getAccessType(r.referer);
+      const accessType = r.ref_type
+        ? (r.ref_type === 'direct' ? 'direct'
+          : r.ref_type === 'external' ? 'external_referral'
+          : r.ref_type === 'internal' ? 'internal_navigation'
+          : 'unknown')
+        : getAccessType(r.referer);
       const referrerSource = accessType === 'external_referral'
         ? (getReferrerSource(r.referer) || 'Other')
         : accessType === 'direct' ? 'Direct'
@@ -472,7 +653,8 @@ export async function getArtViews(env, filters) {
     const totalQuery = `
       SELECT COUNT(*) as total
       FROM classified_events e
-      WHERE e.event_type = 'external_image_page'
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
     `;
     const result = await env.DB.prepare(totalQuery).first();
@@ -491,7 +673,8 @@ export async function getArtViews(env, filters) {
         e.region,
         COUNT(*) as hits
       FROM classified_events e
-      WHERE e.event_type = 'external_image_page'
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
         AND e.country IS NOT NULL
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.country, e.city, e.region
@@ -512,22 +695,53 @@ export async function getArtViews(env, filters) {
   // External reach by source (referrer classification)
   let externalReachSources = [];
   try {
-    const srcQuery = `
+    const srcQueryWithRefType = `
+      SELECT 
+        e.referer,
+        e.ref_type,
+        COUNT(*) as hits
+      FROM classified_events e
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+      GROUP BY e.referer, e.ref_type
+      ORDER BY hits DESC
+      LIMIT 50
+    `;
+
+    const srcQueryLegacy = `
       SELECT 
         e.referer,
         COUNT(*) as hits
       FROM classified_events e
-      WHERE e.event_type = 'external_image_page'
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.referer
       ORDER BY hits DESC
       LIMIT 20
     `;
-    const result = await env.DB.prepare(srcQuery).all();
+
+    let result;
+    try {
+      result = await env.DB.prepare(srcQueryWithRefType).all();
+    } catch (e) {
+      const msg = String(e?.message || e);
+      if (msg.includes('no such column') && msg.includes('ref_type')) {
+        result = await env.DB.prepare(srcQueryLegacy).all();
+      } else {
+        throw e;
+      }
+    }
     // Classify each row and aggregate by referrer_source (ALL access types)
     const sourceMap = {};
     for (const r of (result.results || [])) {
-      const accessType = getAccessType(r.referer);
+      const accessType = r.ref_type
+        ? (r.ref_type === 'direct' ? 'direct'
+          : r.ref_type === 'external' ? 'external_referral'
+          : r.ref_type === 'internal' ? 'internal_navigation'
+          : 'unknown')
+        : getAccessType(r.referer);
       const source = accessType === 'external_referral'
         ? (getReferrerSource(r.referer) || 'Other')
         : accessType === 'direct' ? 'Direct'
@@ -549,10 +763,22 @@ export async function getArtViews(env, filters) {
       SELECT 
         e.target_id,
         COUNT(*) as views,
-        COUNT(DISTINCT e.visitor_id) as unique_viewers,
-        e.referer
+        COUNT(DISTINCT e.ip) as unique_viewers,
+        (
+          SELECT e2.referer
+          FROM classified_events e2
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type IN ('external_image', 'direct_image')
+            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.referer IS NOT NULL
+          GROUP BY e2.referer
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as top_referer
       FROM classified_events e
-      WHERE e.event_type = 'external_image_page'
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.target_id
       ORDER BY views DESC
@@ -560,8 +786,8 @@ export async function getArtViews(env, filters) {
     `;
     const result = await env.DB.prepare(extImgQuery).all();
     topExternal = (result.results || []).map(r => {
-      const at = getAccessType(r.referer);
-      const src = at === 'external_referral' ? classifyForEntryRef(r.referer) : (at === 'direct' ? 'direct' : 'unattributed');
+      const at = getAccessType(r.top_referer);
+      const src = at === 'external_referral' ? classifyForEntryRef(r.top_referer) : (at === 'direct' ? 'direct' : 'unattributed');
       return {
         target_id: r.target_id,
         views: r.views,
@@ -577,25 +803,56 @@ export async function getArtViews(env, filters) {
   let externalDisplays = [];
   let noRefExternalViews = 0;
   try {
-    const dispQuery = `
+    const dispQueryWithRefType = `
+      SELECT 
+        e.referer,
+        e.ref_type,
+        COUNT(*) as views
+      FROM classified_events e
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+      GROUP BY e.referer, e.ref_type
+      ORDER BY views DESC
+      LIMIT 50
+    `;
+
+    const dispQueryLegacy = `
       SELECT 
         e.referer,
         COUNT(*) as views
       FROM classified_events e
-      WHERE e.event_type = 'external_image_page'
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.referer
       ORDER BY views DESC
       LIMIT 30
     `;
-    const result = await env.DB.prepare(dispQuery).all();
+
+    let result;
+    try {
+      result = await env.DB.prepare(dispQueryWithRefType).all();
+    } catch (e) {
+      const msg = String(e?.message || e);
+      if (msg.includes('no such column') && msg.includes('ref_type')) {
+        result = await env.DB.prepare(dispQueryLegacy).all();
+      } else {
+        throw e;
+      }
+    }
     const sourceMap = {};
     for (const r of (result.results || [])) {
-      if (!r.referer) {
+      if (r.ref_type === 'direct' || !r.referer) {
         noRefExternalViews += r.views;
         continue;
       }
-      const at = getAccessType(r.referer);
+      const at = r.ref_type
+        ? (r.ref_type === 'direct' ? 'direct'
+          : r.ref_type === 'external' ? 'external_referral'
+          : r.ref_type === 'internal' ? 'internal_navigation'
+          : 'unknown')
+        : getAccessType(r.referer);
       if (at === 'internal_navigation') continue; // skip internal
       const source = getReferrerSource(r.referer) || 'Other';
       sourceMap[source] = (sourceMap[source] || 0) + r.views;
@@ -607,21 +864,49 @@ export async function getArtViews(env, filters) {
     console.log('External displays query failed:', e.message);
   }
 
-  // ── V1-compat: entryRefCounts (all external_image_page by entry source key) ──
+  // ── V1-compat: entryRefCounts (all external/direct L-size fetches by entry source key) ──
   let entryRefCountsObj = {};
   try {
-    const entryQuery = `
+    const entryQueryWithRefType = `
+      SELECT 
+        e.referer,
+        e.ref_type,
+        COUNT(*) as cnt
+      FROM classified_events e
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+      GROUP BY e.referer, e.ref_type
+    `;
+
+    const entryQueryLegacy = `
       SELECT 
         e.referer,
         COUNT(*) as cnt
       FROM classified_events e
-      WHERE e.event_type = 'external_image_page'
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.referer
     `;
-    const result = await env.DB.prepare(entryQuery).all();
+
+    let result;
+    try {
+      result = await env.DB.prepare(entryQueryWithRefType).all();
+    } catch (e) {
+      const msg = String(e?.message || e);
+      if (msg.includes('no such column') && msg.includes('ref_type')) {
+        result = await env.DB.prepare(entryQueryLegacy).all();
+      } else {
+        throw e;
+      }
+    }
     for (const r of (result.results || [])) {
-      const key = classifyForEntryRef(r.referer);
+      const key = r.ref_type === 'direct'
+        ? 'direct'
+        : r.ref_type === 'internal'
+          ? 'unattributed'
+          : classifyForEntryRef(r.referer);
       entryRefCountsObj[key] = (entryRefCountsObj[key] || 0) + r.cnt;
     }
   } catch (e) {
@@ -636,9 +921,10 @@ export async function getArtViews(env, filters) {
         e.country,
         e.city,
         e.region,
-        COUNT(DISTINCT e.visitor_id) as unique_viewers
+        COUNT(DISTINCT e.ip) as unique_viewers
       FROM classified_events e
-      WHERE e.event_type = 'external_image_page'
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
         AND e.country IS NOT NULL
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.country, e.city, e.region
@@ -680,21 +966,38 @@ export async function getArtViews(env, filters) {
   }
   function ensureImage(id) {
     if (!imageMap[id]) {
-      imageMap[id] = { image_id: id, badges: [], chapter_views: 0, xl_zooms: 0, unverified_views: 0, external_views: 0, countries: new Set(), sources: [], geo: null, geo_priority: 99 };
+      imageMap[id] = { image_id: id, badges: [], chapter_views: 0, xl_zooms: 0, unverified_views: 0, external_views: 0, countries: new Set(), sources: [], geo: null, geo_priority: 99, devices: new Set(), url: null, url_priority: 99 };
     }
     return imageMap[id];
+  }
+  function normalizeUrl(raw) {
+    if (!raw) return null;
+    const s = String(raw).trim();
+    if (!s) return null;
+    return s;
+  }
+  function setUrlIfBetter(img, url, priority) {
+    const u = normalizeUrl(url);
+    if (!u) return;
+    if ((img.url_priority ?? 99) <= priority) return;
+    img.url = u;
+    img.url_priority = priority;
   }
   for (const c of topChapters) {
     const img = ensureImage(c.target_id);
     if (!img.badges.includes('C')) img.badges.push('C');
     img.chapter_views = c.views;
     setGeoIfBetter(img, c.geo, 0); // verified
+    setUrlIfBetter(img, c.url, 0);
     if (c.countries) c.countries.split(',').forEach(co => co && img.countries.add(co.trim()));
+    if (Array.isArray(c.devices)) c.devices.forEach(d => d && img.devices.add(String(d).toLowerCase()));
   }
   for (const z of topZooms) {
     const img = ensureImage(z.target_id);
     img.xl_zooms = z.views;
     setGeoIfBetter(img, z.geo, 0); // verified
+    setUrlIfBetter(img, z.url, 1);
+    if (Array.isArray(z.devices)) z.devices.forEach(d => d && img.devices.add(String(d).toLowerCase()));
   }
   for (const ext of externalImageAccess) {
     const img = ensureImage(ext.target_id);
@@ -716,6 +1019,26 @@ export async function getArtViews(env, filters) {
       if (!img.sources.includes('Internal')) img.sources.push('Internal');
     }
   }
+
+  // Backfill canonical URLs for image-only/unverified rows.
+  // Without this, the renderer falls back to `/art/i-...`, which triggers Netlify smart-404.
+  try {
+    const imageIdMap = await getImageIdMapCached();
+    if (imageIdMap) {
+      for (const img of Object.values(imageMap)) {
+        if (img?.image_id && !img.url) {
+          const galleryPath = getCanonicalGalleryPathForImageId(imageIdMap, img.image_id);
+          if (galleryPath) {
+            const canonicalUrl = 'https://k4studios.com' + galleryPath + '/' + img.image_id + '/';
+            setUrlIfBetter(img, canonicalUrl, 9);
+          }
+        }
+      }
+    }
+  } catch (e) {
+    console.log('Canonical URL backfill failed:', e?.message || e);
+  }
+
   const imageAccessOverview = Object.values(imageMap).map(img => ({
     image_id: img.image_id,
     badges: img.badges,
@@ -726,6 +1049,8 @@ export async function getArtViews(env, filters) {
     geo: img.geo,
     countries: Array.from(img.countries).filter(Boolean),
     sources: [...new Set(img.sources)],
+    devices: Array.from(img.devices).filter(Boolean),
+    url: img.url,
     total: img.chapter_views + img.xl_zooms + img.unverified_views + img.external_views
   })).sort((a, b) => b.total - a.total);
 
@@ -806,7 +1131,128 @@ export async function getDashboardStats(env, filters) {
 // ═══════════════════════════════════════════════════════════════════════════
 
 export async function getEventBreakdown(env, filters) {
-  return { events: { results: [] }, entries: { results: [] } };
+  try {
+    const { dateClause, ipClause, botClause, chardonClause } = filters;
+
+    const qualify = (clause) => (clause || '')
+      .replace(/\bts\b/g, 'e.ts')
+      .replace(/\bip\b/g, 'e.ip')
+      .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bcountry\b/g, 'e.country')
+      .replace(/\bregion\b/g, 'e.region')
+      .replace(/\breferer\b/g, 'e.referer');
+
+    // Legacy filter sometimes includes `device = 'unknown'`, but V2 does not persist
+    // a device column on events (device is derived at query-time elsewhere).
+    // Strip the device predicate so the query remains valid.
+    const safeBotClause = (botClause || '')
+      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, ' ')
+      .replace(/\bdevice\s*=\s*'unknown'\b/gi, '1=1');
+
+    const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
+
+    // Keep in sync with the canonical list in dashboard renderer.
+    // (Not including xl_zoom: it is handled separately.)
+    const trackedEvents = [
+      'browse_all_click',
+      'order_clicked',
+      'collector_notes_open',
+      'cowboy_jump',
+      'exit_to_gallery',
+      'gallery_explore_click',
+      'gallery_preview_click',
+      'guide_open',
+      'guide_close',
+      'guide_done',
+      'guide_click_outside',
+      'gallery_hero_click',
+      'more_info_open',
+      'nav_next',
+      'nav_prev',
+      'order_submitted',
+      'series_info',
+      'sister_image_click',
+      'slideshow_start',
+      'story_slider_click',
+      'theme_click',
+      'all_list_click',
+      'grid_open',
+      'grid_image_click',
+      'grid_show_more',
+      'grid_show_previous',
+      'scroll_25',
+      'scroll_50',
+      'scroll_75',
+      'scroll_100',
+      'page_view',
+      'session_exit'
+    ];
+    const trackedListSql = trackedEvents.map(e => `'${e}'`).join(', ');
+
+    const eventsQuery = `
+      SELECT
+        e.event_type AS event,
+        COUNT(*) AS count
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE ${where}
+        ${qualify(ipClause)}
+        ${qualify(safeBotClause)}
+        ${qualify(chardonClause)}
+        AND e.source = 'js'
+        AND e.event_type IN (${trackedListSql})
+      GROUP BY e.event_type
+      ORDER BY count DESC
+    `;
+
+    const events = await env.DB.prepare(eventsQuery).all();
+
+    // Gallery-Chapter Entry Points: for sessions that include a chapter_view,
+    // count the first JS event type seen in the session.
+    const entriesQuery = `
+      WITH session_events AS (
+        SELECT
+          e.session_id,
+          e.event_type,
+          ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.ts ASC) AS rn
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND e.source = 'js'
+          AND e.session_id IS NOT NULL
+      ),
+      chapter_sessions AS (
+        SELECT DISTINCT e.session_id
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND e.source = 'js'
+          AND e.event_type = 'chapter_view'
+          AND e.session_id IS NOT NULL
+      )
+      SELECT
+        se.event_type AS entry_source,
+        COUNT(*) AS sessions
+      FROM session_events se
+      JOIN chapter_sessions cs ON cs.session_id = se.session_id
+      WHERE se.rn = 1
+      GROUP BY se.event_type
+      ORDER BY sessions DESC
+      LIMIT 20
+    `;
+    const entries = await env.DB.prepare(entriesQuery).all();
+
+    return { events, entries };
+  } catch (e) {
+    console.log('Event breakdown query failed:', e.message);
+    return { events: { results: [] }, entries: { results: [] } };
+  }
 }
 
 export async function getGalleryPerformance(env, filters) {
@@ -840,18 +1286,184 @@ export async function getGeography(env, filters) {
 }
 
 export async function getDailyTrend(env, filters) {
-  return { results: [] };
+  try {
+    const { rangeDateClause, galleryClause, ipClause, botClause, chardonClause } = filters;
+
+    // The dashboard builds filter snippets assuming a single table with columns
+    // like ts, ip, city, device, gallery_id. This query uses an aliased join,
+    // so we qualify those column references to the classified_events side.
+    const qualify = (clause) => (clause || '')
+      .replace(/\bts\b/g, 'e.ts')
+      .replace(/\bgallery_id\b/g, 'e.gallery_id')
+      .replace(/\bip\b/g, 'e.ip')
+      .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bdevice\b/g, 'e.device')
+      .replace(/\bcountry\b/g, 'e.country')
+      .replace(/\bregion\b/g, 'e.region');
+
+    const where = qualify(rangeDateClause) || `date(e.ts, '-5 hours') = date('now', '-5 hours')`;
+
+    // Daily trend (for chart): human visitors + sessions per Eastern calendar day.
+    // Visitor definition comes from human_population (JS-verified k4_vid). Sessions
+    // are client session ids; NULL sessions are naturally excluded by COUNT(DISTINCT).
+    const trendQuery = `
+      SELECT
+        date(e.ts, '-5 hours') as day,
+        COUNT(DISTINCT e.visitor_id) as visitors,
+        COUNT(DISTINCT e.session_id) as sessions
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE ${where}
+        ${qualify(galleryClause)}
+        ${qualify(ipClause)}
+        ${qualify(botClause)}
+        ${qualify(chardonClause)}
+      GROUP BY date(e.ts, '-5 hours')
+      ORDER BY day ASC
+    `;
+
+    return await env.DB.prepare(trendQuery).all();
+  } catch (e) {
+    console.log('Daily trend query failed:', e.message);
+    return { results: [] };
+  }
 }
 
 export async function getSessionMetrics(env, filters) {
-  return {
-    devices: { results: [] },
-    bounceRate: 0,
-    avgDurationSecs: 0,
-    avgDurationFormatted: '0s',
-    peakHours: [],
-    deviceEngagement: []
-  };
+  try {
+    const { dateClause } = filters;
+    const where = dateClause?.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")';
+
+    // Devices must aggregate at the human/session layer (human_population),
+    // then be scoped to the time range via JOIN on classified_events.
+    const devicesQuery = `
+      SELECT 
+        LOWER(COALESCE(hp.device_type, 'unknown')) as device,
+        COUNT(DISTINCT hp.visitor_id) as sessions
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE ${where}
+      GROUP BY device
+      ORDER BY sessions DESC
+    `;
+    const devices = await env.DB.prepare(devicesQuery).all();
+
+    // Bounce rate: session_id is client-provided (sessionStorage). Some intent beacons omit session_id.
+    const bounceQuery = `
+      SELECT 
+        COUNT(*) as total_sessions,
+        SUM(CASE WHEN event_count = 1 THEN 1 ELSE 0 END) as bounce_sessions
+      FROM (
+        SELECT e.session_id, COUNT(*) as event_count
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where} AND e.session_id IS NOT NULL
+        GROUP BY e.session_id
+      )
+    `;
+    const bounceResult = await env.DB.prepare(bounceQuery).first();
+    const bounceRate = bounceResult?.total_sessions > 0
+      ? Math.round(100 * (bounceResult.bounce_sessions || 0) / bounceResult.total_sessions)
+      : 0;
+
+    // Avg session duration: time between first and last event per session.
+    const durationQuery = `
+      SELECT ROUND(AVG(duration_seconds), 0) as avg_duration
+      FROM (
+        SELECT 
+          e.session_id,
+          (JULIANDAY(MAX(e.ts)) - JULIANDAY(MIN(e.ts))) * 86400 as duration_seconds
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where} AND e.session_id IS NOT NULL
+        GROUP BY e.session_id
+        HAVING COUNT(*) > 1
+      )
+    `;
+    const durationResult = await env.DB.prepare(durationQuery).first();
+    const avgDurationSecs = durationResult?.avg_duration || 0;
+    const avgDurationFormatted = avgDurationSecs >= 60
+      ? `${Math.floor(avgDurationSecs / 60)}m ${Math.round(avgDurationSecs % 60)}s`
+      : `${Math.round(avgDurationSecs)}s`;
+
+    // Peak hours: compute busiest AM + PM hours (Eastern offset to match dashboard date filters).
+    const peakHoursQuery = `
+      SELECT 
+        CAST(strftime('%H', e.ts, '-5 hours') AS INTEGER) as hour,
+        COUNT(DISTINCT e.session_id) as sessions
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE ${where} AND e.session_id IS NOT NULL
+      GROUP BY hour
+      ORDER BY sessions DESC
+    `;
+    const peakHoursResult = await env.DB.prepare(peakHoursQuery).all();
+    const hourRows = peakHoursResult?.results || [];
+    const pickTop = (rows) => rows.sort((a, b) => (b.sessions || 0) - (a.sessions || 0))[0] || null;
+    const topAm = pickTop(hourRows.filter(r => (r.hour ?? 0) < 12));
+    const topPm = pickTop(hourRows.filter(r => (r.hour ?? 0) >= 12));
+    const formatHour = (hour24) => {
+      const h = Number(hour24) || 0;
+      const hour12 = h === 0 ? 12 : (h > 12 ? h - 12 : h);
+      const ampm = h >= 12 ? 'pm' : 'am';
+      return `${hour12}${ampm}`;
+    };
+    const peakHours = [
+      ...(topAm ? [{ period: 'AM', hour: formatHour(topAm.hour), sessions: topAm.sessions }] : []),
+      ...(topPm ? [{ period: 'PM', hour: formatHour(topPm.hour), sessions: topPm.sessions }] : [])
+    ];
+
+    // Device engagement: average depth score per human, grouped by device_type.
+    const deviceEngagementQuery = `
+      WITH viewer_depth AS (
+        SELECT
+          hp.visitor_id as visitor_id,
+          LOWER(COALESCE(hp.device_type, 'unknown')) as device,
+          SUM(
+            CASE e.event_type
+              WHEN 'gallery_view' THEN 1
+              WHEN 'gallery' THEN 1
+              WHEN 'chapter_view' THEN 2
+              WHEN 'chapter_exposure' THEN 2
+              WHEN 'xl_zoom' THEN 5
+              WHEN 'slideshow_start' THEN 2
+              ELSE 0
+            END
+          ) as depth_score
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where}
+        GROUP BY hp.visitor_id, device
+      )
+      SELECT
+        device,
+        COUNT(*) as sessions,
+        ROUND(AVG(depth_score), 1) as avg_depth
+      FROM viewer_depth
+      GROUP BY device
+      ORDER BY sessions DESC
+    `;
+    const deviceEngagementResult = await env.DB.prepare(deviceEngagementQuery).all();
+
+    return {
+      devices,
+      bounceRate,
+      avgDurationSecs,
+      avgDurationFormatted,
+      peakHours,
+      deviceEngagement: deviceEngagementResult?.results || []
+    };
+  } catch (e) {
+    console.log('Session metrics query failed:', e.message);
+    return {
+      devices: { results: [] },
+      bounceRate: 0,
+      avgDurationSecs: 0,
+      avgDurationFormatted: '0s',
+      peakHours: [],
+      deviceEngagement: []
+    };
+  }
 }
 
 export async function getTopPages(env, filters) {
@@ -872,19 +1484,67 @@ export async function getEntryAnalysis(env, filters) {
 }
 
 export async function getEngagementDepth(env, filters) {
-  return {
-    themesClicked: { results: [] },
-    cowboyJumps: 0,
-    topDepthSessions: [],
-    minEngagement: 0,
-    maxEngagement: 0,
-    avgDepthScore: 0,
-    deepSessionPct: 0,
-    deepSessions: 0,
-    totalSessions: 0,
-    botSessions: 0,
-    botPct: 0
-  };
+  try {
+    const { dateClause, ipClause, botClause, chardonClause } = filters;
+
+    const qualify = (clause) => (clause || '')
+      .replace(/\bts\b/g, 'e.ts')
+      .replace(/\bip\b/g, 'e.ip')
+      .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bcountry\b/g, 'e.country')
+      .replace(/\bregion\b/g, 'e.region')
+      .replace(/\breferer\b/g, 'e.referer');
+
+    const safeBotClause = (botClause || '')
+      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, ' ')
+      .replace(/\bdevice\s*=\s*'unknown'\b/gi, '1=1');
+
+    const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
+
+    const cowboyQuery = `
+      SELECT COUNT(*) AS count
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE ${where}
+        ${qualify(ipClause)}
+        ${qualify(safeBotClause)}
+        ${qualify(chardonClause)}
+        AND e.source = 'js'
+        AND e.event_type = 'cowboy_jump'
+    `;
+
+    const cowboyRow = await env.DB.prepare(cowboyQuery).first();
+    const cowboyJumps = cowboyRow?.count || 0;
+
+    return {
+      themesClicked: { results: [] },
+      cowboyJumps,
+      topDepthSessions: [],
+      minEngagement: 0,
+      maxEngagement: 0,
+      avgDepthScore: 0,
+      deepSessionPct: 0,
+      deepSessions: 0,
+      totalSessions: 0,
+      botSessions: 0,
+      botPct: 0
+    };
+  } catch (e) {
+    console.log('Engagement depth query failed:', e.message);
+    return {
+      themesClicked: { results: [] },
+      cowboyJumps: 0,
+      topDepthSessions: [],
+      minEngagement: 0,
+      maxEngagement: 0,
+      avgDepthScore: 0,
+      deepSessionPct: 0,
+      deepSessions: 0,
+      totalSessions: 0,
+      botSessions: 0,
+      botPct: 0
+    };
+  }
 }
 
 export async function getExitAnalysis(env, filters) {

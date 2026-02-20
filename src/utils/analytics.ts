@@ -170,11 +170,89 @@ if (typeof window !== 'undefined') {
 export function trackPageView(): void {
   trackEvent('page_view');
 
+  // Fire derived view beacons based on the current URL.
+  // This is important because parts of the site navigate via history.pushState
+  // and do not reload, so view events must be tied to URL changes.
+  trackDerivedViewsFromLocation();
+
   // Update page context for session exit tracking
   updatePageContext();
+
+  // Install SPA navigation hooks once (pushState/replaceState/popstate)
+  // so page/image views track even without full reload.
+  installNavigationTracking();
   
   // Initialize scroll depth tracking (main site pages only; excludes galleries/images)
   initScrollDepthTracking();
+}
+
+// ==========================================
+// SPA NAVIGATION TRACKING
+// ==========================================
+
+let navTrackingInstalled = false;
+let lastTrackedPath: string | null = null;
+
+function trackDerivedViewsFromLocation(): void {
+  if (typeof window === 'undefined') return;
+  // CRITICAL GUARDRAIL: prevent duplicate fires when UI state changes
+  // cause minor history updates or navigation hooks to re-run.
+  if (lastTrackedPath === location.pathname) return;
+  lastTrackedPath = location.pathname;
+
+  const path = window.location.pathname;
+
+  const imageId = getImageIdFromPath(path);
+  if (imageId) {
+    trackEvent('chapter_view', { imageId, pageType: 'image' });
+    return;
+  }
+
+  const galleryId = getGalleryIdFromPath(path);
+  if (galleryId) {
+    trackEvent('gallery_view', { galleryId, pageType: 'gallery' });
+  }
+}
+
+function installNavigationTracking(): void {
+  if (typeof window === 'undefined') return;
+  if (navTrackingInstalled) return;
+  navTrackingInstalled = true;
+
+  const onNav = () => {
+    // CRITICAL GUARDRAIL: do not re-track if path did not change
+    if (lastTrackedPath === location.pathname) return;
+    // Treat SPA navigation like a page view for context + view beacons.
+    trackEvent('page_view');
+    trackDerivedViewsFromLocation();
+    updatePageContext();
+  };
+
+  // back/forward
+  window.addEventListener('popstate', onNav);
+
+  // patch pushState/replaceState
+  const historyObj = window.history as History & {
+    __k4Patched?: 1;
+    __k4PushState?: History['pushState'];
+    __k4ReplaceState?: History['replaceState'];
+  };
+  if (!historyObj.__k4Patched) {
+    historyObj.__k4Patched = 1;
+    historyObj.__k4PushState = historyObj.pushState;
+    historyObj.__k4ReplaceState = historyObj.replaceState;
+
+    historyObj.pushState = function (...args) {
+      const ret = (historyObj.__k4PushState as any)!.apply(this, args as any);
+      queueMicrotask(onNav);
+      return ret;
+    };
+    historyObj.replaceState = function (...args) {
+      const ret = (historyObj.__k4ReplaceState as any)!.apply(this, args as any);
+      queueMicrotask(onNav);
+      return ret;
+    };
+  }
 }
 
 // ==========================================
@@ -364,6 +442,6 @@ export function getGalleryIdFromPath(path?: string): string | null {
  */
 export function getImageIdFromPath(path?: string): string | null {
   const p = path || (typeof window !== 'undefined' ? window.location.pathname : '');
-  const match = p.match(/(i-[a-zA-Z0-9-]+)\/?$/);
+  const match = p.match(/(i-[a-zA-Z0-9_-]+)\/?$/);
   return match ? match[1] : null;
 }

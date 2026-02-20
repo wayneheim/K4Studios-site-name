@@ -84,10 +84,27 @@ export async function handleDashboardRequest(request, env, ctx) {
       rangeDateClause = `ts > datetime('now', '-5 hours', '-${days} days')`;
     }
 
+    // Global filters must be baked into date/range clauses because many queries
+    // only use dateClause and ignore ipClause/chardonClause.
+    const globalParts = [];
+    if (excludeIp) globalParts.push(`(ip IS NULL OR ip != '${excludeIp}')`);
+
+    if (hideChardon) {
+      // Hide Team = hide Chardon + hide localhost dev referrers + hide the dashboard viewer's IP.
+      // (Viewer IP exclusion keeps this working even when your ISP/VPN IP changes.)
+      if (viewerIp) globalParts.push(`(ip IS NULL OR ip != '${viewerIp}')`);
+      globalParts.push(`city != 'Chardon'`);
+      globalParts.push(`(referer IS NULL OR referer NOT LIKE '%localhost%')`);
+    }
+
+    const globalFilterClause = globalParts.length ? (' AND ' + globalParts.join(' AND ')) : '';
+
+    rangeDateClause = `${rangeDateClause}${globalFilterClause}`;
+
     // If a specific Eastern calendar day is selected, render stats for that day
     // (but keep the trend chart using the current range).
     const dateClause = selectedDate
-      ? `date(ts, '-5 hours') = '${selectedDate}'`
+      ? `date(ts, '-5 hours') = '${selectedDate}'${globalFilterClause}`
       : rangeDateClause;
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
     const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
@@ -107,12 +124,12 @@ export async function handleDashboardRequest(request, env, ctx) {
     const chardonClause = hideChardon ? `AND city != 'Chardon'` : "";
 
     // Build priorPeriodClause for getDashboardStats
-    const priorPeriodClause = selectedDate
+    const priorPeriodClause = (selectedDate
       ? `date(ts, '-5 hours') < '${selectedDate}'`
       : (yesterday 
         ? `ts < datetime('now', '-5 hours', '-1 day', 'start of day')`
         : `ts < datetime('now', '-5 hours', '-${days} days')`
-      );
+      )) + globalFilterClause;
 
     // Call dashboard controller — orchestrates all queries + renders HTML
     const html = await runDashboardController(env, {
