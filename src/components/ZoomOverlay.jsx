@@ -13,7 +13,7 @@ export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor,
   const bottomRef = useRef(null);
   const lensRef = useRef(null);
 
-  // Preload XL image for crossfade (zoom tracking is handled by proxy on XL fetch)
+  // Preload XL image for crossfade (zoom tracking is counted from the zoom click beacon, not XL image loads)
   useEffect(() => {
     if (!imageData?.id) return;
     

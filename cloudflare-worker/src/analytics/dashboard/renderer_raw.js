@@ -529,8 +529,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
               '<div style="flex: 1; min-width: 0;">' +
                 '<div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500;" title="' + a.target_id + '">' + a.target_id + '</div>' +
                 '<div style="display: flex; gap: 8px; margin-top: 2px;">' +
-                  '<span style="font-size: 12px; font-weight: bold; color: #c4b5fd;">' + (a.images_viewed || 0) + ' imgs</span>' +
-                  '<span style="font-size: 11px; color: #888;">' + a.views + ' views</span>' +
+                  '<span style="font-size: 12px; font-weight: bold; color: #c4b5fd;">' + a.views + ' views</span>' +
                   '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
                 '</div>' +
               '</div>' +

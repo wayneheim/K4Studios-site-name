@@ -1137,7 +1137,8 @@ export default function ChapterGalleryBase({
                               // Disable zoom on mobile - users don't know to click, and matt preview makes images too small
                               if (!isMobile && !isLandscapeMobile) {
                                 setIsZoomed(true);
-                                track("zoom_open");
+                                // XL zoom is counted from the user intent click (beacon), not from loading the XL image.
+                                trackArtView('xl_zoom', galleryData[currentIndex]?.id);
                               }
                             }}
                             data-zoom-btn

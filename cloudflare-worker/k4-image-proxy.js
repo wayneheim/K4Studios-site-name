@@ -1592,6 +1592,12 @@ export default {
       const imageId = extractImageId(url.pathname);
       if (imageId && env?.DB) {
         ctx.waitUntil(logArtView(env, 'image_page', imageId, request, null, 'proxy', visitorId));
+        
+        // No k4_vid cookie = external/bot/no-JS access (not a returning human)
+        // These get their own classification separate from chapter_view
+        if (visitorIdIsNew) {
+          ctx.waitUntil(logArtView(env, 'external_image_page', imageId, request, null, 'proxy', visitorId));
+        }
       }
       
       const response = await fetch(request);

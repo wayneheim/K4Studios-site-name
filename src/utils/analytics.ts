@@ -71,10 +71,9 @@ function shouldSkipDuplicateEvent(event: string, context: TrackContext, pagePath
   // Only dedupe events where accidental double-firing is common.
   // chapter_view: dedupe for the ENTIRE session (same image = 1 view per session)
   // gallery_view: dedupe for the ENTIRE session (same gallery = 1 view per session)
-  // zoom_open: short window to catch rapid double-clicks
-  if (event !== 'chapter_view' && event !== 'gallery_view' && event !== 'zoom_open') return false;
+  if (event !== 'chapter_view' && event !== 'gallery_view') return false;
 
-  // gallery_view dedupes on galleryId; chapter_view/zoom_open dedupe on imageId
+  // gallery_view dedupes on galleryId; chapter_view dedupes on imageId
   const dedupId = event === 'gallery_view'
     ? (context.galleryId || getGalleryIdFromPath(pagePath))
     : (context.imageId || getImageIdFromPath(pagePath));
@@ -91,10 +90,6 @@ function shouldSkipDuplicateEvent(event: string, context: TrackContext, pagePath
     return false;
   }
 
-  // zoom_open: short window dedup only (1.5s)
-  const DEDUPE_WINDOW_MS = 1500;
-  if (last && now - last < DEDUPE_WINDOW_MS) return true;
-
   sessionStorage.setItem(key, String(now));
   return false;
 }
@@ -102,13 +97,13 @@ function shouldSkipDuplicateEvent(event: string, context: TrackContext, pagePath
 /**
  * Track a user interaction event
  * 
- * @param event - Event name (e.g., 'nav_next', 'zoom_open', 'cowboy_jump')
+ * @param event - Event name (e.g., 'nav_next', 'grid_open', 'cowboy_jump')
  * @param context - Optional context about the gallery/image/page
  * 
  * Event names:
  * - Entry: cowboy_jump, gallery_hero_click, gallery_explore_click, gallery_preview_click
  * - Navigation: nav_next, nav_prev
- * - Actions: grid_open, zoom_open, more_info_open, collector_notes_open
+ * - Actions: grid_open, more_info_open, collector_notes_open
  * - Other: sister_image_click, slideshow_start, guide_open
  */
 export function trackEvent(event: string, context: TrackContext = {}): void {

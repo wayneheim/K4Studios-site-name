@@ -170,46 +170,10 @@ export async function handleTrackRequest(request, env, ctx) {
     const bestReferrer = edgeReferrer || clientReferrer;
     const referrer = bestReferrer || "unknown";
 
-    // Detect device/platform from User-Agent
-    const ua = (request.headers.get("User-Agent") || "").toLowerCase();
-    let device = "unknown";
-    if (ua.includes("iphone") || ua.includes("ipad")) {
-      device = "ios";
-    } else if (ua.includes("android")) {
-      device = "android";
-    } else if (ua.includes("macintosh") || ua.includes("mac os")) {
-      device = "mac";
-    } else if (ua.includes("windows")) {
-      device = "windows";
-    } else if (ua.includes("linux")) {
-      device = "linux";
-    }
-
-    // Insert into D1
-    await env.DB.prepare(`
-      INSERT INTO events (session_id, event, gallery_id, image_id, page_type, referrer, country, region, city, ip, device, page_path, theme, raw_referrer, event_ts_ms, event_order)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    `).bind(
-      session_id,
-      event,
-      gallery_id,
-      image_id,
-      page_type,
-      referrer,
-      country,
-      region,
-      city,
-      ip,
-      device,
-      page_path,
-      theme,
-      clientReferrer,  // Store raw referrer for debugging
-      event_ts_ms,     // Client timestamp (ms since epoch)
-      event_order      // Event sequence within session
-    ).run();
-
-    // Mirror key JS-verified intents into art_views (keeps dashboard consistent)
-    // We do this here (same-origin /track) because cross-origin beacons are more likely to be blocked.
+    // V2 Architecture: All events go directly to raw_events via logArtView
+    // (Legacy 'events' table no longer exists)
+    
+    // JS-verified chapter views
     if (event === 'chapter_view') {
       const targetId = image_id || (typeof page_path === 'string'
         ? (page_path.match(/\/(i-[a-zA-Z0-9_-]+)\/?$/)?.[1] || null)
@@ -219,7 +183,18 @@ export async function handleTrackRequest(request, env, ctx) {
       }
     }
 
-    // Mirror JS-verified gallery views into art_views
+    // xl_zoom = user intent beacon (never image request)
+    // Back-compat: legacy clients may emit zoom_open/zoom via /track
+    if (event === 'xl_zoom' || event === 'zoom_open' || event === 'zoom') {
+      const targetId = image_id || (typeof page_path === 'string'
+        ? (page_path.match(/\/(i-[a-zA-Z0-9_-]+)\/?$/)?.[1] || null)
+        : null);
+      if (targetId) {
+        ctx.waitUntil(logArtView(env, 'xl_zoom', targetId, request, session_id, 'js', visitorId));
+      }
+    }
+
+    // JS-verified gallery views
     if (event === 'gallery_view') {
       const targetId = gallery_id || (typeof page_path === 'string'
         ? page_path.replace(/^\/Galleries\//, '').replace(/^\/Other\//, '').replace(/\/$/, '')
@@ -325,12 +300,14 @@ export async function handleTrackEvent(request, env, ctx) {
     const body = await request.json();
     const { type, imageId } = body;
 
-    const validTypes = ['xl_zoom', 'slideshow_start', 'chapter_view'];
+    // xl_zoom = user intent beacon (never image request)
+    // Back-compat: accept legacy zoom events, but canonicalize immediately.
+    const validTypes = ['xl_zoom', 'zoom_open', 'zoom', 'slideshow_start', 'chapter_view'];
     if (!type || !validTypes.includes(type)) {
       return new Response('ok', { status: 200 });
     }
 
-    if (!imageId || !/^i-[a-zA-Z0-9]+$/.test(imageId)) {
+    if (!imageId || !/^i-[a-zA-Z0-9_-]+$/.test(imageId)) {
       return new Response('ok', { status: 200 });
     }
 
@@ -339,7 +316,8 @@ export async function handleTrackEvent(request, env, ctx) {
     const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
     const visitorId = vidCookieMatch ? vidCookieMatch[1] : null;
 
-    ctx.waitUntil(logArtView(env, type, imageId, request, null, 'js', visitorId));
+    const canonicalType = (type === 'zoom_open' || type === 'zoom') ? 'xl_zoom' : type;
+    ctx.waitUntil(logArtView(env, canonicalType, imageId, request, null, 'js', visitorId));
 
     return new Response('ok', {
       status: 200,

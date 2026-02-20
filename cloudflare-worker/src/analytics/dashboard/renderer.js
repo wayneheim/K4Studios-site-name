@@ -4,7 +4,7 @@
 // NO DB access, NO env usage, NO filter logic — rendering only.
 // ═══════════════════════════════════════════════════════════════════════════
 
-export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, viewerDepth, suppressionStats, botIntelligence }) {
+export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, imageAccessOverview, viewerDepth, suppressionStats, botIntelligence }) {
   const s = summary || {};
   
   // Canonical list of all trackable events with display labels
@@ -32,7 +32,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     'slideshow_start': 'Slideshow Start',
     'story_slider_click': 'Story Slider Click',
     'theme_click': 'Theme Click',
-    // zoom_open is intentionally omitted: redundant with the XL Zooms metric above
+    // xl_zoom is intentionally omitted: it's counted separately as a user-intent metric (never image request)
 
     // -- Passive / system events --
     'all_list_click': 'All Galleries Click',
@@ -152,6 +152,23 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     if (days === 30) return '30 Day Tally';
     if (days === 90) return '3 Month Tally';
     return `${days}D Tally`;
+  })();
+
+  const imageAccessTotals = (() => {
+    const rows = imageAccessOverview || [];
+    let imageOnlyViews = 0;
+    let externalViews = 0;
+    for (const row of rows) {
+      imageOnlyViews += (row?.unverified_views || 0);
+      externalViews += (row?.external_views || 0);
+    }
+    return {
+      images: rows.length,
+      chapterViews: artViewsSummary?.chapter_views || 0,
+      zoomViews: artViewsSummary?.xl_zooms || 0,
+      imageOnlyViews,
+      externalViews
+    };
   })();
   
   return `<!DOCTYPE html>
@@ -501,182 +518,265 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       </div>
     </span>
   </div>
-  ${(topArtViews?.chapters?.length > 0 || topArtViews?.xlZooms?.length > 0 || topArtViews?.galleries?.length > 0) ? `
-  <div class="art-views-grid">
-      <!-- Chapters Column -->
-      <div>
-        <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #a78bfa; display: flex; align-items: center; justify-content: space-between;">
-          <span>📖 Chapters</span>
-          <span style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Chapters = explicit chapter interface views (events.event='chapter_view', same-origin /track). Beacon (workers.dev) is shown for debugging only: ${artViewsSummary?.chapter_views_beacon || 0}. First-party sanity: image page views=${imagePageViewsFromEvents}, image entry sessions=${imageEntrySessionsFromEvents}.">${artViewsSummary?.chapter_views || 0}</span>
-        </h4>
-        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 600px; overflow-y: auto; padding-right: 4px;">
-          ${(topArtViews.chapters || []).map((a, i) => {
-            const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
-            const linkUrl = a.page_url ? 'https://k4studios.com' + a.page_url : (imageId ? 'https://k4studios.com/art/' + imageId : '#');
-            return '<a href="' + linkUrl + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(167, 139, 250, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #a78bfa; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(167,139,250,0.25)\'" onmouseout="this.style.background=\'rgba(167,139,250,0.1)\'">' +
-              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 4 ? 'eager' : 'lazy') + '" style="width: 52px; height: 52px; object-fit: cover; border-radius: 4px; flex-shrink: 0;">' : '<span style="width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">🔍</span>') +
-              '<div style="flex: 1; min-width: 0;">' +
-                '<div style="color: #a78bfa; font-size: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + a.target_id + '</div>' +
-                '<div style="display: flex; gap: 8px; margin-top: 2px;">' +
-                  '<span style="font-size: 12px; font-weight: bold; color: #a78bfa;">' + a.views + ' views</span>' +
-                  '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
-                '</div>' +
-              '</div>' +
-            '</a>';
-          }).join('') || '<p style="color: #555; font-size: 10px;">No chapters yet</p>'}
+  ${(imageAccessOverview?.length > 0 || topArtViews?.galleries?.length > 0) ? `
+  <div style="display: grid; grid-template-columns: 1fr 280px; gap: 12px; max-width: 1780px; margin: 0 auto;">
+    <!-- Image Access Overview (unified panel) -->
+    <div class="section" style="max-height: none;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap;">
+        <h3 style="margin: 0;">📊 Image Access Overview</h3>
+        <div style="display: flex; gap: 3px;" id="accessFilterBtns">
+          <button onclick="filterAccess('all')" data-f="all" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #555; background: #444; color: #fff; font-size: 10px; cursor: pointer; font-weight: bold;">All</button>
+          <button onclick="filterAccess('C')" data-f="C" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #a78bfa55; background: #a78bfa22; color: #a78bfa; font-size: 10px; cursor: pointer;">C</button>
+          <button onclick="filterAccess('U')" data-f="U" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #f59e0b55; background: #f59e0b22; color: #f59e0b; font-size: 10px; cursor: pointer;">i</button>
+          <button onclick="filterAccess('E')" data-f="E" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #3b82f655; background: #3b82f622; color: #3b82f6; font-size: 10px; cursor: pointer;">E</button>
+        </div>
+        <span style="font-size: 10px; color: #555;">
+          <span style="color: #a78bfa;">C</span>=Chapter
+          <span style="color: #f59e0b;">i</span>=Image only
+          <span style="color: #3b82f6;">E</span>=External
+        </span>
+        <div style="margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #3a3a3a;background:#222;color:#cbd5e1;font-size:12px;letter-spacing:0.2px;">
+            <span style="font-size:11px;opacity:0.75;">IMG</span>
+            <span style="font-weight:800;color:#fff;">${imageAccessTotals.images}</span>
+          </span>
+          <span title="Chapter views" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #a78bfa55;background:#a78bfa14;color:#a78bfa;font-size:12px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#a78bfa22;color:#a78bfa;font-size:10px;font-weight:bold;border:1px solid #a78bfa55;">C</span>
+            <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.chapterViews}</span>
+          </span>
+          <span title="Zoom views" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #06b6d455;background:#06b6d414;color:#06b6d4;font-size:12px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:10px;font-weight:bold;border:1px solid #06b6d455;">Z</span>
+            <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.zoomViews}</span>
+          </span>
+          <span title="Image-only views (no JS/cookie)" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #f59e0b55;background:#f59e0b14;color:#f59e0b;font-size:12px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f59e0b22;color:#f59e0b;font-size:10px;font-weight:bold;border:1px solid #f59e0b55;">i</span>
+            <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.imageOnlyViews}</span>
+          </span>
+          <span title="External embed views" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #3b82f655;background:#3b82f614;color:#3b82f6;font-size:12px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#3b82f622;color:#3b82f6;font-size:10px;font-weight:bold;border:1px solid #3b82f655;">E</span>
+            <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.externalViews}</span>
+          </span>
         </div>
       </div>
-      <!-- XL Zooms Column -->
-      <div>
-        <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #06b6d4; display: flex; align-items: center; justify-content: space-between;">
-          <span>🔍 XL Zooms</span>
-          <span style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Zoom button clicks">${artViewsSummary?.xl_zooms || 0}</span>
-        </h4>
-        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 600px; overflow-y: auto; padding-right: 4px;">
-          ${(topArtViews.xlZooms || []).map((a, i) => {
-            const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
-            const linkUrl = a.page_url ? 'https://k4studios.com' + a.page_url : (imageId ? 'https://k4studios.com/art/' + imageId : '#');
-            return '<a href="' + linkUrl + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(6, 182, 212, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #06b6d4; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(6,182,212,0.25)\'" onmouseout="this.style.background=\'rgba(6,182,212,0.1)\'">' +
-              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 4 ? 'eager' : 'lazy') + '" style="width: 52px; height: 52px; object-fit: cover; border-radius: 4px; flex-shrink: 0;">' : '<span style="width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">📖</span>') +
-              '<div style="flex: 1; min-width: 0;">' +
-                '<div style="color: #06b6d4; font-size: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + a.target_id + '</div>' +
-                '<div style="display: flex; gap: 8px; margin-top: 2px;">' +
-                  '<span style="font-size: 12px; font-weight: bold; color: #06b6d4;">' + a.views + ' views</span>' +
-                  '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
-                '</div>' +
-              '</div>' +
-            '</a>';
-          }).join('') || '<p style="color: #555; font-size: 10px;">No XL zooms yet</p>'}
+      <div style="max-height: 650px; overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;" id="accessOverviewList">
+        <!-- Column headers (inside scroller so scrollbar doesn't shift columns) -->
+        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 90px 220px 180px 90px 90px 90px auto; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
+          <span style="display:flex;justify-content:center;">Image</span>
+          <span style="display:flex;justify-content:flex-start;padding-left:14px;">Type / ID</span>
+          <span onclick="sortAccessLocation()" id="accessLocationHeader" style="cursor:pointer; user-select:none;">📍 Location ⇅</span>
+          <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#a78bfa22;color:#a78bfa;font-size:9px;font-weight:bold;border:1px solid #a78bfa55;" title="Chapter views">C</span></span>
+          <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:9px;font-weight:bold;border:1px solid #06b6d455;" title="Zoom views">Z</span></span>
+          <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f59e0b22;color:#f59e0b;font-size:9px;font-weight:bold;border:1px solid #f59e0b55;" title="Image-only (no JS/cookie) + External">i</span></span>
+          <span>Source</span>
         </div>
-      </div>
-      <!-- Galleries Column -->
-      <div>
-        <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #c4b5fd; display: flex; align-items: center; justify-content: space-between;">
-          <span>📁 Galleries</span>
-          <span style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%); color: #1f2937; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; cursor: help;" title="Galleries browsed (derived from JS-verified chapter views)">${artViewsSummary?.galleries || 0}</span>
-        </h4>
-        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 600px; overflow-y: auto; padding-right: 4px;">
-          ${(topArtViews.galleries || []).map((a, i) => {
-            const linkUrl = a.gallery_url ? 'https://k4studios.com' + a.gallery_url : '#';
-            return '<a href="' + linkUrl + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(196, 181, 253, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #c4b5fd; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(196,181,253,0.25)\'" onmouseout="this.style.background=\'rgba(196,181,253,0.1)\'">' +
-              '<span style="width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 24px;">📁</span>' +
-              '<div style="flex: 1; min-width: 0;">' +
-                '<div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500;" title="' + a.target_id + '">' + a.target_id + '</div>' +
-                '<div style="display: flex; gap: 8px; margin-top: 2px;">' +
-                  '<span style="font-size: 12px; font-weight: bold; color: #c4b5fd;">' + (a.images_viewed || 0) + ' imgs</span>' +
-                  '<span style="font-size: 11px; color: #888;">' + a.views + ' views</span>' +
-                  '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
-                '</div>' +
-              '</div>' +
-            '</a>';
-          }).join('') || '<p style="color: #555; font-size: 10px;">No galleries yet</p>'}
-        </div>
-      </div>
-    </div>
-    <p style="font-size: 10px; color: #555; margin-top: 8px;">Chapters &amp; Zooms: JS-verified | Galleries: derived from chapter views | External: server-side proxy</p>
-  </div>
-  ` : ''}
-  
-  <!-- External Traffic - 3-Column: Top Images | Displays | Visitors -->
-  ${(artViewsSummary?.externalDisplays?.length > 0 || topArtViews?.external?.length > 0 || Object.keys(entryRefCounts).length > 0) ? `
-  <div class="section" style="margin-top: 10px; max-width: 1780px; margin-left: auto; margin-right: auto; max-height: none;">
-    <h3>🌐 External Traffic <span style="font-size: 11px; color: #888; font-weight: normal;">(off-site engagement)</span> <span style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; margin-left: 8px;">${artViewsSummary?.external_images || 0} embeds</span></h3>
-    <div class="external-grid">
-      <!-- Left: Top External Images -->
-      <div>
-        <div style="font-size: 11px; color: #f97316; font-weight: bold; margin-bottom: 8px; border-bottom: 1px solid #333; padding-bottom: 4px;">🏆 Top Images</div>
-        <div style="display: flex; flex-direction: column; gap: 6px; max-height: 600px; overflow-y: auto; padding-right: 4px;">
-          ${(topArtViews?.external || []).map((a, i) => {
-            const imageId = a.target_id.startsWith('i-') ? a.target_id : null;
-            const sourceIcons = { onsite: '🏠', google: '🔍', bing: '🅱️', pinterest: '📌', facebook: '📘', twitter: '🐦', duckduckgo: '🦆', unattributed: '🌐', other: '🌐', direct: '❓' };
-            const sourceColors = { onsite: '#10b981', google: '#4285f4', bing: '#00809d', pinterest: '#e60023', facebook: '#1877f2', twitter: '#1da1f2', duckduckgo: '#de5833', unattributed: '#f97316', other: '#f97316', direct: '#6b7280' };
-            const srcIcon = sourceIcons[a.top_source] || '🌐';
-            const srcColor = sourceColors[a.top_source] || '#f97316';
-            return '<a href="https://k4studios.com/art/' + a.target_id + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: ' + srcColor + '18; border-radius: 6px; padding: 4px; border-left: 3px solid ' + srcColor + '; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'' + srcColor + '35\'" onmouseout="this.style.background=\'' + srcColor + '18\'">' +
-              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 4 ? 'eager' : 'lazy') + '" style="width: 52px; height: 52px; object-fit: cover; border-radius: 4px; flex-shrink: 0;">' : '<span style="width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">' + srcIcon + '</span>') +
-              '<div style="flex: 1; min-width: 0;">' +
-                '<div style="color: ' + srcColor + '; font-size: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + a.target_id + '">' + a.target_id + '</div>' +
-                '<div style="display: flex; gap: 8px; margin-top: 2px; align-items: center;">' +
-                  '<span style="font-size: 14px;">' + srcIcon + '</span>' +
-                  '<span style="font-size: 12px; font-weight: bold; color: ' + srcColor + ';">' + a.views + ' views</span>' +
-                  '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
-                '</div>' +
-              '</div>' +
-            '</a>';
-          }).join('') || '<p style="color: #555; font-size: 10px;">No external embeds yet</p>'}
-        </div>
-      </div>
-      <!-- Center: Image Displays -->
-      <div>
-        <div style="font-size: 11px; color: #f97316; font-weight: bold; margin-bottom: 8px; border-bottom: 1px solid #333; padding-bottom: 4px;">📤 By Source</div>
-        <div style="display: flex; flex-direction: column; gap: 4px;">
-          ${(artViewsSummary.externalDisplays || []).map(r => {
-            const icons = { 'Google Images': '🔍', 'Google Search': '🔍', 'Bing Images': '🅱️', 'Bing Search': '🅱️', 'Pinterest': '📌', 'Facebook': '📘', 'Twitter/X': '🐦', 'Instagram': '📷', 'LinkedIn': '💼', 'DuckDuckGo': '🦆', 'Direct / No Referrer': '🔗', 'Yandex': '🇷🇺', 'Baidu': '🇨🇳' };
-            const icon = icons[r.source] || '🌐';
-            // For unknown referrers (raw URLs that didn't match any pattern), shorten the display
-            let displayName = r.source;
-            if (!icons[r.source] && r.source.startsWith('http')) {
-              try { displayName = new URL(r.source).hostname; } catch(e) {}
+        ${(imageAccessOverview || []).map((row, i) => {
+          const imageId = row.image_id?.startsWith('i-') ? row.image_id : null;
+
+          const COUNTRY_COLORS = {
+            US: '#5ab1ff',
+            CA: '#9bd67a',
+            GB: '#ffb86b',
+            FR: '#e68cff',
+            DE: '#ffd166',
+            BR: '#7ae582',
+            AU: '#ffa69e',
+            default: '#9aa3ad'
+          };
+          function formatLocation(g) {
+            if (!g) return '—';
+            const country = (g.country || '').toString().trim();
+            const region = (g.region || '').toString().trim();
+            const city = (g.city || '').toString().trim();
+            if (city && region) return city + ', ' + region + ', ' + country;
+            if (city) return city + ', ' + country;
+            return country || '—';
+          }
+          const geo = row.geo || null;
+          const geoCountry = (geo?.country || (row.countries && row.countries[0]) || '').toString().trim().toUpperCase();
+          const locationText = formatLocation({ country: geoCountry || (geo?.country || ''), region: geo?.region, city: geo?.city });
+          const locColor = COUNTRY_COLORS[geoCountry] || COUNTRY_COLORS.default;
+
+          const primaryBadge = row.badges.includes('C') ? 'C' : (row.badges.includes('E') ? 'E' : 'U');
+          const primaryColors = {
+            C: { text: '#a78bfa', bdr: '#a78bfa55' },
+            E: { text: '#3b82f6', bdr: '#3b82f655' },
+            U: { text: '#f59e0b', bdr: '#f59e0b55' }
+          };
+          const p = primaryColors[primaryBadge] || primaryColors.U;
+
+          const badgeHtml = row.badges.map(b => {
+            const colors = { C: { bg: '#a78bfa22', text: '#a78bfa', bdr: '#a78bfa55' }, U: { bg: '#f59e0b22', text: '#f59e0b', bdr: '#f59e0b55' }, E: { bg: '#3b82f622', text: '#3b82f6', bdr: '#3b82f655' } };
+            const c = colors[b] || colors.U;
+            const label = (b === 'U') ? 'i' : b;
+            return '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:' + c.bg + ';color:' + c.text + ';font-size:10px;font-weight:bold;border:1px solid ' + c.bdr + ';">' + label + '</span>';
+          }).join(' ');
+          const srcIcons = { 'Google Search': '🔍', 'Google Images': '🖼️', 'Bing': '🔍', 'Twitter/X': '🐦', 'Facebook': '📘', 'Pinterest': '📌', 'DuckDuckGo': '🦆', 'ChatGPT': '🤖', 'Direct': '🔗', 'Internal': '🏠', 'Unknown': '❓' };
+          function normalizeSourceDomain(raw) {
+            if (!raw) return '';
+            const s = String(raw).trim();
+            if (!s) return '';
+            try {
+              return new URL(s).hostname.toLowerCase();
+            } catch (_) {
+              // Might already be a hostname (or a friendly label like "Google Search")
+              return s.toLowerCase().replace(/^www\./, '').split('/')[0];
             }
-            return '<div style="display: flex; align-items: center; gap: 6px; padding: 4px 6px; background: #1a1a1a; border-radius: 4px;">' +
-              '<span style="font-size: 14px;">' + icon + '</span>' +
-              '<span style="color: #ccc; font-size: 11px; flex: 1;" title="' + r.source + '">' + displayName + '</span>' +
-              '<span style="color: #f97316; font-size: 11px; font-weight: bold;">' + r.views.toLocaleString() + '</span>' +
-            '</div>';
-          }).join('') || '<p style="color:#666; font-size: 10px;">No external displays</p>'}
-          ${artViewsSummary.noRefExternalViews > 0 ? 
-            '<div style="display: flex; align-items: center; gap: 6px; padding: 4px 6px; background: #1a1a1a; border-radius: 4px; border-left: 2px solid #ef4444; margin-top: 4px;" title="Image requests with no referrer header. Could be email clients, privacy browsers, or someone embedding your images with referrer stripped.">' +
-              '<span style="font-size: 14px;">⚠️</span>' +
-              '<span style="color: #ef4444; font-size: 11px; flex: 1;">Unknown Source</span>' +
-              '<span style="color: #ef4444; font-size: 11px; font-weight: bold;">' + artViewsSummary.noRefExternalViews.toLocaleString() + '</span>' +
-            '</div>' : ''}
-        </div>
+          }
+          function sourceBadgeHtml(rawSource) {
+            const domain = normalizeSourceDomain(rawSource);
+            const pretty = String(rawSource || '').trim();
+
+            let icon = srcIcons[pretty] || '🌐';
+            let label = pretty || 'Unknown';
+
+            // Recommended badges (domain + friendly label compatibility)
+            if (domain === 'google.com' || domain.endsWith('.google.com') || pretty === 'Google Search') {
+              icon = '🟢';
+              label = (domain === 'images.google.com' || pretty === 'Google Images') ? 'Google Images' : 'Google';
+            }
+            if (domain === 'images.google.com' || pretty === 'Google Images') {
+              icon = '🟢';
+              label = 'Google Images';
+            }
+            if (domain === 'pinterest.com' || domain.endsWith('.pinterest.com') || pretty === 'Pinterest') {
+              icon = '🔴';
+              label = 'Pinterest';
+            }
+            if (domain === 'bing.com' || domain.endsWith('.bing.com') || pretty === 'Bing') {
+              icon = '🔵';
+              label = 'Bing';
+            }
+            if (domain === 't.co' || domain.endsWith('.twitter.com') || domain === 'x.com' || domain.endsWith('.x.com') || pretty === 'Twitter/X') {
+              icon = '🐦';
+              label = 'Twitter';
+            }
+            if (domain === 'facebook.com' || domain.endsWith('.facebook.com') || domain === 'fb.com' || domain.endsWith('.fb.com') || pretty === 'Facebook') {
+              icon = '🔵';
+              label = 'Facebook';
+            }
+
+            const title = pretty || domain || 'Unknown';
+            const safeLabel = label || title;
+
+            return '<span title="' + title + '" style="display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:999px;border:1px solid #333;background:#1f1f1f;color:#cbd5e1;font-size:11px;line-height:1;white-space:nowrap;">'
+              + '<span style="font-size:12px;">' + icon + '</span>'
+              + '<span style="opacity:0.95;">' + safeLabel + '</span>'
+              + '</span>';
+          }
+          const sources = Array.isArray(row.sources) ? row.sources : [];
+          const srcHtml = sources.length > 0
+            ? sources.slice(0, 2).map(sourceBadgeHtml).join(' ')
+            : '<span title="No external referrer observed for this image yet" style="display:inline-flex;align-items:center;gap:6px;color:#666;font-size:11px;white-space:nowrap;">'
+              + '<span style="font-size:12px;">🌐</span>'
+              + '<span>Awaiting external referrer</span>'
+              + '</span>';
+          const chColor = row.chapter_views > 0 ? '#a78bfa' : '#333';
+          const zmColor = row.xl_zooms > 0 ? '#06b6d4' : '#333';
+          const unvTotal = row.unverified_views + row.external_views;
+          const unvColor = unvTotal > 0 ? '#f59e0b' : '#333';
+          // Row border color based on primary badge
+          const borderColor = row.badges.includes('C') ? '#a78bfa44' : row.badges.includes('E') ? '#3b82f644' : '#f59e0b44';
+          return '<a href="https://k4studios.com/art/' + row.image_id + '" target="_blank" class="access-row" data-badges="' + row.badges.join(',') + '" data-country="' + (geoCountry || '') + '" data-region="' + ((geo?.region || '') + '') + '" data-city="' + ((geo?.city || '') + '') + '" style="display:grid;grid-template-columns:90px 220px 180px 90px 90px 90px auto;gap:10px;align-items:center;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ' + borderColor + ';text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.04)\'" onmouseout="this.style.background=\'transparent\'">' +
+            '<div style="display:flex;align-items:center;justify-content:center;width:90px;">' +
+              (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 6 ? 'eager' : 'lazy') + '" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid ' + p.bdr + ';">' : '<span style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:1px solid ' + p.bdr + ';">🖼</span>') +
+            '</div>' +
+            '<div style="display:flex;flex-direction:column;gap:4px;min-width:0;padding-left:14px;">' +
+              '<div style="display:flex;align-items:center;gap:6px;min-width:0;">' +
+                '<div style="display:flex;gap:2px;flex:0 0 auto;">' + badgeHtml + '</div>' +
+                '<span style="color:' + p.text + ';font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + row.image_id + '">' + row.image_id + '</span>' +
+              '</div>' +
+            '</div>' +
+            '<span style="color:' + locColor + ';font-size:13px;opacity:0.82;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + locationText + '">' + locationText + '</span>' +
+            '<span style="display:flex;justify-content:center;font-weight:bold;color:' + chColor + ';font-size:14px;">' + (row.chapter_views || '—') + '</span>' +
+            '<span style="display:flex;justify-content:center;font-weight:bold;color:' + zmColor + ';font-size:14px;">' + (row.xl_zooms || '—') + '</span>' +
+            '<span style="display:flex;justify-content:center;font-weight:bold;color:' + unvColor + ';font-size:14px;">' + (unvTotal || '—') + '</span>' +
+            '<div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + srcHtml + '</div>' +
+          '</a>';
+        }).join('') || '<p style="color: #555; font-size: 11px;">No image access data yet</p>'}
       </div>
-      <!-- Right: Visitors to Site (from events table - JS tracking) -->
-      <div>
-        <div style="font-size: 11px; color: #22c55e; font-weight: bold; margin-bottom: 8px; border-bottom: 1px solid #333; padding-bottom: 4px;">📥 Visitors to Site</div>
-        <div style="display: flex; flex-direction: column; gap: 4px;">
-          ${(() => {
-            // Confirmed sources (clean referrer match)
-            const confirmed = [
-              { key: 'direct', label: 'Direct / Typed URL', icon: '🔗' },
-              { key: 'google_search', label: 'Google Search', icon: '🔍' },
-              { key: 'google_images', label: 'Google Images', icon: '🖼️' },
-              { key: 'bing_search', label: 'Bing Search', icon: '🅱️' },
-              { key: 'bing_images', label: 'Bing Images', icon: '🖼️' },
-              { key: 'pinterest', label: 'Pinterest', icon: '📌' },
-              { key: 'facebook', label: 'Facebook', icon: '📘' },
-              { key: 'twitter', label: 'Twitter/X', icon: '🐦' },
-              { key: 'chatgpt', label: 'ChatGPT', icon: '🤖' },
-              { key: 'instagram', label: 'Instagram', icon: '📷' },
-              { key: 'linkedin', label: 'LinkedIn', icon: '💼' },
-              { key: 'duckduckgo', label: 'DuckDuckGo', icon: '🦆' }
-            ];
-            const confirmedItems = confirmed
-              .filter(s => entryRefCounts[s.key])
-              .sort((a, b) => (entryRefCounts[b.key] || 0) - (entryRefCounts[a.key] || 0))
-              .map(s => '<div style="display: flex; align-items: center; gap: 6px; padding: 4px 6px; background: #1a1a1a; border-radius: 4px;">' +
-                '<span style="font-size: 14px;">' + s.icon + '</span>' +
-                '<span style="color: #ccc; font-size: 11px; flex: 1;">' + s.label + '</span>' +
-                '<span style="color: #22c55e; font-size: 11px; font-weight: bold;">' + entryRefCounts[s.key] + '</span>' +
-              '</div>');
-            // Unattributed (privacy-suppressed referrers - this is normal!)
-            const unattributed = entryRefCounts['unattributed'] || 0;
-            const unattributedItem = unattributed ? 
-              '<div style="display: flex; align-items: center; gap: 6px; padding: 4px 6px; background: #1a1a1a; border-radius: 4px; border-left: 2px solid #6b7280;" title="Privacy-suppressed referrers (mobile, in-app browsers, HTTPS). This is normal modern web behavior.">' +
-                '<span style="font-size: 14px;">🔒</span>' +
-                '<span style="color: #888; font-size: 11px; flex: 1;">Unattributed</span>' +
-                '<span style="color: #6b7280; font-size: 11px; font-weight: bold;">' + unattributed + '</span>' +
-              '</div>' : '';
-            const all = confirmedItems.join('') + unattributedItem;
-            return all || '<p style="color:#666; font-size: 10px;">No external visitors yet</p>';
-          })()}
-        </div>
-        <p style="font-size: 9px; color: #555; margin-top: 6px;">🔒 = privacy-suppressed (mobile, in-app, HTTPS)</p>
+      <p style="font-size: 9px; color: #555; margin-top: 6px;">C=JS-verified chapter · i=Image-only (no JS/cookie) · E=External embed · Source from referrer</p>
+    </div>
+    <!-- Galleries sidebar -->
+    ${topArtViews?.galleries?.length > 0 ? `
+    <div class="section" style="max-height: none;">
+      <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #c4b5fd; display: flex; align-items: center; justify-content: space-between;">
+        <span>📁 Galleries</span>
+        <span style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%); color: #1f2937; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold;">${artViewsSummary?.galleries || 0}</span>
+      </h4>
+      <div style="display: flex; flex-direction: column; gap: 6px; max-height: 600px; overflow-y: auto; padding-right: 4px;">
+        ${(topArtViews.galleries || []).map((a, i) => {
+          const linkUrl = a.gallery_url ? 'https://k4studios.com' + a.gallery_url : '#';
+          return '<a href="' + linkUrl + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(196, 181, 253, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #c4b5fd; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(196,181,253,0.25)\'" onmouseout="this.style.background=\'rgba(196,181,253,0.1)\'">' +
+            '<span style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">📁</span>' +
+            '<div style="flex: 1; min-width: 0;">' +
+              '<div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500;" title="' + a.target_id + '">' + a.target_id + '</div>' +
+              '<div style="display: flex; gap: 8px; margin-top: 2px;">' +
+                '<span style="font-size: 12px; font-weight: bold; color: #c4b5fd;">' + a.views + '</span>' +
+                '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
+              '</div>' +
+            '</div>' +
+          '</a>';
+        }).join('')}
       </div>
     </div>
+    ` : ''}
   </div>
+  <script>
+    function filterAccess(type) {
+      document.querySelectorAll('#accessFilterBtns button').forEach(function(b) {
+        if (type === 'all') {
+          b.style.opacity = b.dataset.f === 'all' ? '1' : '0.7';
+          b.style.fontWeight = b.dataset.f === 'all' ? 'bold' : 'normal';
+        } else {
+          b.style.opacity = b.dataset.f === type ? '1' : '0.4';
+          b.style.fontWeight = b.dataset.f === type ? 'bold' : 'normal';
+        }
+      });
+      document.querySelectorAll('.access-row').forEach(function(row) {
+        if (type === 'all') { row.style.display = 'grid'; return; }
+        var badges = row.dataset.badges.split(',');
+        row.style.display = badges.includes(type) ? 'grid' : 'none';
+      });
+    }
+
+    var accessLocationSortAsc = true;
+    function sortAccessLocation() {
+      var list = document.getElementById('accessOverviewList');
+      if (!list) return;
+
+      // first child is the sticky header
+      var children = Array.prototype.slice.call(list.children);
+      if (children.length <= 1) return;
+      var header = children[0];
+      var rows = children.slice(1).filter(function(el) { return el.classList && el.classList.contains('access-row'); });
+
+      rows.sort(function(a, b) {
+        function key(el) {
+          var c = (el.dataset.country || '').toUpperCase();
+          var r = (el.dataset.region || '').toUpperCase();
+          var ci = (el.dataset.city || '').toUpperCase();
+          return [c, r, ci].join('||');
+        }
+        var ka = key(a);
+        var kb = key(b);
+        if (ka < kb) return accessLocationSortAsc ? -1 : 1;
+        if (ka > kb) return accessLocationSortAsc ? 1 : -1;
+        return 0;
+      });
+
+      // Re-append in new order
+      list.innerHTML = '';
+      list.appendChild(header);
+      rows.forEach(function(r) { list.appendChild(r); });
+
+      accessLocationSortAsc = !accessLocationSortAsc;
+      var hdr = document.getElementById('accessLocationHeader');
+      if (hdr) hdr.style.opacity = '1';
+    }
+  </script>
   ` : ''}
+
+
 
   <!-- All sections grid -->\n  <div class="grid" style="margin-top: 20px;">
     <div class="section">
@@ -772,10 +872,10 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         const onsiteRows = Object.values(mergedOnsite).sort((a, b) => b.count - a.count).slice(0, 12);
         const onsiteMax = Math.max(...onsiteRows.map(g => g.count), 1);
 
-        // External reach (hotlinked images)
-        const extGeo = (artViewsSummary?.externalGeography || []).map(g => ({
+        // External reach (non-JS traffic: bots, bounces, blocked JS)
+        const extGeo = (externalReachGeo || []).map(g => ({
           label: [g.city, g.region, g.country].filter(Boolean).join(', '),
-          country: g.country, count: g.unique_viewers
+          country: g.country, count: g.hits
         }));
         const extMax = Math.max(...extGeo.map(g => g.count), 1);
 
@@ -787,12 +887,27 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         } else {
           html += '<p style="color:#666; margin-bottom: 12px;">No on-site data yet</p>';
         }
-        // External section
-        html += '<div style="margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #9ca3af;">🌐 External Reach <span style="font-weight: normal; font-size: 10px; opacity: 0.7;">(hotlinked images)</span></div>';
+        // External section (non-JS traffic — separate population)
+        html += '<div style="margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #f59e0b;">🌐 External Reach <span style="font-weight: normal; font-size: 10px; opacity: 0.7;">(non-JS traffic)</span></div>';
         if (extGeo.length > 0) {
-          html += '<div style="padding-right: 6px;">' + renderGeoRows(extGeo, extMax, (c) => '#6b7280') + '</div>';
+          html += '<div style="padding-right: 6px; margin-bottom: 12px;">' + renderGeoRows(extGeo, extMax, (c) => '#f59e0b') + '</div>';
         } else {
-          html += '<p style="color:#666">No external data yet</p>';
+          html += '<p style="color:#666; margin-bottom: 12px;">No external data yet</p>';
+        }
+        // External sources
+        if ((externalReachSources || []).length > 0) {
+          html += '<div style="margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #f59e0b;">📡 External Sources <span style="font-weight: normal; font-size: 10px; opacity: 0.7;">(non-JS traffic)</span></div>';
+          const srcIcons = { 'Google Search': '🔍', 'Google Images': '🖼️', 'Bing': '🔍', 'Twitter/X': '🐦', 'Facebook': '📘', 'Pinterest': '📌', 'DuckDuckGo': '🦆', 'ChatGPT': '🤖', 'Yandex': '🔍', 'Baidu': '🔍', 'Direct': '🔗', 'Internal': '🏠', 'Other': '🌐' };
+          html += '<div style="display: flex; flex-direction: column; gap: 3px;">';
+          for (const s of externalReachSources) {
+            const icon = srcIcons[s.source] || '🌐';
+            html += '<div style="display: flex; align-items: center; gap: 6px; padding: 3px 6px; background: #1a1a1a; border-radius: 4px;">' +
+              '<span style="font-size: 14px;">' + icon + '</span>' +
+              '<span style="color: #ccc; font-size: 11px; flex: 1;">' + s.source + '</span>' +
+              '<span style="color: #f59e0b; font-size: 11px; font-weight: bold;">' + s.hits + '</span>' +
+            '</div>';
+          }
+          html += '</div>';
         }
         return html;
       })()}

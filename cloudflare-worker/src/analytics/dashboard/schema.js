@@ -30,7 +30,7 @@ export function buildDashboardData(queryResults, filterParams) {
     entryPages, imagePageViewsFromEvents, imageEntrySessionsFromEvents, entryRefCounts,
     exitPages, exitSummary, exitByCategory,
     edgeEvents, edgeSummary,
-    artViewsSummary, artViewsByType, topArtViews, viewerDepth, suppressionStats,
+    artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, entryRefCountsObj, imageAccessOverview, viewerDepth, suppressionStats,
     botIntelligence
   } = queryResults;
 
@@ -80,7 +80,7 @@ export function buildDashboardData(queryResults, filterParams) {
     edgeEvents: edgeEvents?.results || [],
     edgeSummary: edgeSummary || [],
     entryPages: entryPages?.results || [],
-    entryRefCounts: entryRefCounts?.results || [],
+    entryRefCounts: entryRefCountsObj || {},
     imagePageViewsFromEvents,
     imageEntrySessionsFromEvents,
     bounceRate,
@@ -90,7 +90,12 @@ export function buildDashboardData(queryResults, filterParams) {
     artViewsSummary,
     artViewsByType,
     topArtViews,
+    externalImageAccess: externalImageAccess || [],
+    externalImageAccessTotal: externalImageAccessTotal || 0,
+    externalReachGeo: externalReachGeo || [],
+    externalReachSources: externalReachSources || [],
     viewerDepth,
+    imageAccessOverview: imageAccessOverview || [],
     suppressionStats,
     botIntelligence
   };
