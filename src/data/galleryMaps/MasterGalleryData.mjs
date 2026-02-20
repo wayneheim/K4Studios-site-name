@@ -11991,7 +11991,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/0/MNPXPHV4kMQwDJpRmK59tsRKt2k9LRZ9wnMjkTsQw/XL/12x18_O1H0006-Edit-2-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/0/MNPXPHV4kMQwDJpRmK59tsRKt2k9LRZ9wnMjkTsQw/XL/12x18_O1H0006-Edit-2-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/0/LrsP2CGWPpdRwGbGNVSGcHp5ZCCK9LFPzBrVpVfcX/S/12x18_O1H0006-Edit-2-Edit-S.jpg",
-      "rating": 0,
+      "rating": 5,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12004,7 +12004,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv/0/NWmKKjj4gs8KXGxNtZrjJzT9FrVfQrzPcFSW4gtGt/XL/_DSF3071-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv/0/NWmKKjj4gs8KXGxNtZrjJzT9FrVfQrzPcFSW4gtGt/XL/_DSF3071-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv/0/MHs2sGLV76Db4TRMFngqtzQBzFjzrVbj4dSkM4zcS/S/_DSF3071-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12017,7 +12017,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-KMhKvRb/0/LvC8pt8rggTnpmdKx3hKBcz5bLWWJBdcnkvH7ChTw/XL/_DSF2686-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-KMhKvRb/0/LvC8pt8rggTnpmdKx3hKBcz5bLWWJBdcnkvH7ChTw/XL/_DSF2686-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-KMhKvRb/0/NhS5XW6jGjtF86ZsDHSKp62j7z7pNrMQJwbCFbvzj/S/_DSF2686-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12030,7 +12030,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k9qB2jV/0/KQPR6P3s9Q2xNMTz74JMrMVtKRSqW2SC2dGsnMrnF/XL/_DSF3141-Edit-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k9qB2jV/0/KQPR6P3s9Q2xNMTz74JMrMVtKRSqW2SC2dGsnMrnF/XL/_DSF3141-Edit-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k9qB2jV/0/NLkN474cvKLZ7fWDXmdjSxxrJcDbsbTWjWRCHBJKV/S/_DSF3141-Edit-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12043,7 +12043,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-VqxgW5k/0/K2Kd3HGM6q2fBq4t529XsPVWWshhtkDG3JChKw3pm/L/_DSF2500-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-VqxgW5k/0/LjsZcGg4QL4rHJMLCXZmjJTcN7GZBL88bWpR2jfT8/XL/_DSF2500-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-VqxgW5k/0/KLm5WZX6m3f7HKtjkVzQ9gwSTMqF8DJXqgwKr23Nt/S/_DSF2500-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12056,7 +12056,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-NVz5zk2/0/LNcBFvKW7DQ6bP4tsxKXBnjJ8Nj6b5NnKnvtqvSZr/XL/_DSF3125-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-NVz5zk2/0/LNcBFvKW7DQ6bP4tsxKXBnjJ8Nj6b5NnKnvtqvSZr/XL/_DSF3125-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-NVz5zk2/0/KkLdww8vtFF7M5HkgdS9GvqnnJWWF72MKVcVHjj99/S/_DSF3125-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12069,7 +12069,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9cZHdvB/0/MLvK9q2fLdX4KmqZSc5hhP5mmfsN4WD3MVq9xLjBw/XL/_O1H0037-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9cZHdvB/0/MLvK9q2fLdX4KmqZSc5hhP5mmfsN4WD3MVq9xLjBw/XL/_O1H0037-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9cZHdvB/0/LcBwdzdM277wDMnSTsG3QPnK7sDMG7frLLwdKzwsn/S/_O1H0037-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12082,7 +12082,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-zrVCpMP/0/Ms5MxwstMdRWzFjg76XN5KVQx4CTs4B3ch6T4LJgv/XL/_DSF2514-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-zrVCpMP/0/Ms5MxwstMdRWzFjg76XN5KVQx4CTs4B3ch6T4LJgv/XL/_DSF2514-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-zrVCpMP/0/LT9bLcXVwfHNV2pp5DCV2hZHbMGndZqQwTZbQw2bw/S/_DSF2514-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12095,7 +12095,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-rxnpqCQ/0/NF6xq7Krtg4RBHGCRNBrQcKHd4PkQVLFCLT5gTwGq/XL/_DSF2516-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-rxnpqCQ/0/NF6xq7Krtg4RBHGCRNBrQcKHd4PkQVLFCLT5gTwGq/XL/_DSF2516-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-rxnpqCQ/0/LQnMDSCNP7drG774TNDrqbKg8q4XpTKKrSmXkGq7x/S/_DSF2516-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12108,7 +12108,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-qgJkNtv/0/MqX5r4nTRQQMrL39dptpbxXM65DRQmpR7qSGKf8Q7/XL/_DSF2591-Enhanced-NR-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-qgJkNtv/0/MqX5r4nTRQQMrL39dptpbxXM65DRQmpR7qSGKf8Q7/XL/_DSF2591-Enhanced-NR-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-qgJkNtv/0/NdQcg9MM4NckH8LR9kXzGnFnkzfSpSccpw6L435cC/S/_DSF2591-Enhanced-NR-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12121,7 +12121,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-6NPsMpH/0/MWp5TwbzGZQs2bCmsxW65XZKJrhmWsqR3SNr3mCD9/XL/_DSF2766-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-6NPsMpH/0/MWp5TwbzGZQs2bCmsxW65XZKJrhmWsqR3SNr3mCD9/XL/_DSF2766-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-6NPsMpH/0/K93gSFgJv6tZJXtJRf4W8qxwKTp4KrNjmnLqgND9n/S/_DSF2766-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12134,7 +12134,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5CcF5N4/0/KFC5SgtHssZf9jZ2dgs5Pmg6N4GQn34TqBqXZpdvG/XL/_O1H0938-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5CcF5N4/0/KFC5SgtHssZf9jZ2dgs5Pmg6N4GQn34TqBqXZpdvG/XL/_O1H0938-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5CcF5N4/0/NGfn7hmhwhgQ6H9NTjrmWG5bjvgNBPf5WH2sgZh5r/S/_O1H0938-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12147,7 +12147,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-mMXRvh4/8/MDRDvCHpMN2nFQcRxtRBKLK99TZbRxv8N4RxbqsXp/L/_O1H0073-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-mMXRvh4/8/NBz2PgNBRwgSDLp2CHX8sqQCGDccwtt9GsQ4QvsvM/XL/_O1H0073-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-mMXRvh4/8/KXpdn3t4t878rdVfwj3TdjwXzknNDfLsNkm64zmsp/S/_O1H0073-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12160,7 +12160,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-k2W3gQV/10/LF5v3d5PJxMJkFQX28T75k9mMWgkWWQCRwdgVWtKf/XL/_DSF2597-Enhanced-NR-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-k2W3gQV/10/LF5v3d5PJxMJkFQX28T75k9mMWgkWWQCRwdgVWtKf/XL/_DSF2597-Enhanced-NR-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-k2W3gQV/10/MsccQZ565tjw9Vrv9g68SmRQJLvMhtLMNbFF9V6N6/S/_DSF2597-Enhanced-NR-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12173,7 +12173,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-m7STjq2/9/NN4m9CcvZQP7zJWfqSx5p9WJ8sBV3JksbxqcD8Mhz/XL/_DSF2612-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-m7STjq2/9/NN4m9CcvZQP7zJWfqSx5p9WJ8sBV3JksbxqcD8Mhz/XL/_DSF2612-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-m7STjq2/9/NWv8qFW7bPDhQ3rvMVrnbNkjGFsFkPSvcQ97gdHX8/S/_DSF2612-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12186,7 +12186,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-K6mDKMn/9/NXvK4zsj5Bcf2TL9RBSLRhNKRQgt9n5FCmkx6SHHB/XL/_O1H0307-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-K6mDKMn/9/NXvK4zsj5Bcf2TL9RBSLRhNKRQgt9n5FCmkx6SHHB/XL/_O1H0307-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-K6mDKMn/9/MtgJ4KXQMhgbCfsdDBRdHhhr5frbfbZCVwV56spsB/S/_O1H0307-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12199,7 +12199,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-QBKhZS2/3/NjdTFzh2hCjfSjDjMWbGZhzCX3QqfTZnRnPTXrwJH/XL/_DSF3076-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-QBKhZS2/3/NjdTFzh2hCjfSjDjMWbGZhzCX3QqfTZnRnPTXrwJH/XL/_DSF3076-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-QBKhZS2/3/KzwQZPjJkjkJqc3nwjPJWXF8hwsgjZNCLv9M2LLHM/S/_DSF3076-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12212,7 +12212,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-pqpdH2v/8/NLnr59ZJ6dS9wc8krwhgTVbWjpBfsHrs7r2TdFf33/L/_DSF3175-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-pqpdH2v/8/KsTghngSTQv6ssvPQgLhZG7mVHGL4hWhkFxLZwhhK/XL/_DSF3175-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-pqpdH2v/8/MTQkpSLddLPwzHtVHqN2Zrh5kckjw8Vhjrf7vvcRX/S/_DSF3175-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12225,7 +12225,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-5bqK2s3/9/MTgWRK62T6zG5Mrb3xmMgnDnV7zh8Fsd7QT5msvxZ/XL/_DSF3362-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-5bqK2s3/9/MTgWRK62T6zG5Mrb3xmMgnDnV7zh8Fsd7QT5msvxZ/XL/_DSF3362-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-5bqK2s3/9/LRSdnQqrW7bgn5bWdBvTCcT3rHmZgHg6GXVJrnXXg/S/_DSF3362-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12238,7 +12238,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9mDvxMc/9/NhbqhP2KDHks49L5zPWSXznHthfw9gtcDB6wFMfvm/XL/_O1H0933-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9mDvxMc/9/NhbqhP2KDHks49L5zPWSXznHthfw9gtcDB6wFMfvm/XL/_O1H0933-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9mDvxMc/9/LpX4MPkNS2MQbKsFqLcNttjqvLmD45f6xcpmVMwwL/S/_O1H0933-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12251,7 +12251,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/KMgPzNNRSFVjPCg2VJQjTcJtwjwZ7BPtQMGfKQLNP/L/_DSF2781-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/KpkdQG9VLbRn3ZxpdHZZQhhWhGJb4hRRcbsDQHdxm/XL/_DSF2781-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/Mb2CQ6jQQzKLdQH79w64VjndqrLVKmhZLhHMnmstc/S/_DSF2781-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -12266,7 +12266,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-MhMbDtL/1/K78XXSWwSGFRk7z2LWL9pGG6fq4dWZnN38P2Ktw4W/XL/_WHZ6143-3-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-MhMbDtL/1/K78XXSWwSGFRk7z2LWL9pGG6fq4dWZnN38P2Ktw4W/XL/_WHZ6143-3-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-MhMbDtL/1/KtphWxz6sTVv7RqLxKKXRGs2jLdJWkz67QxdfpPQx/S/_WHZ6143-3-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12279,7 +12279,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-7rWrmHq/8/MFqtcjmcBBwWZgmBSGM6WJcHV6sNJQxMhfj7VjJRx/XL/_DSF2408-Edit-3-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-7rWrmHq/8/MFqtcjmcBBwWZgmBSGM6WJcHV6sNJQxMhfj7VjJRx/XL/_DSF2408-Edit-3-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-7rWrmHq/8/Lc7ZJ3TG2g7xjsxvRmDdnLkmvK6C8vT75Snr9dd4D/S/_DSF2408-Edit-3-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12292,7 +12292,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-jRPgZj3/2/MRsB8jNsZxzDvnJjz8KxBjccXZFxxpSzHpzsVjZRV/XL/_DSF2411-Edit-6-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-jRPgZj3/2/MRsB8jNsZxzDvnJjz8KxBjccXZFxxpSzHpzsVjZRV/XL/_DSF2411-Edit-6-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-jRPgZj3/2/MVbSKSXCP97w2FhCT8m5FFvj75H7B64wCdN3XT3p6/S/_DSF2411-Edit-6-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12305,7 +12305,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-Dc7Xpdw/6/MLPj93BGPczwZjMXsp2LpZ4BnLDKV7JKVvSNChZhh/XL/_DSF2475-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-Dc7Xpdw/6/MLPj93BGPczwZjMXsp2LpZ4BnLDKV7JKVvSNChZhh/XL/_DSF2475-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-Dc7Xpdw/6/NjjpMfMRv94KC5ZGQnFSj4fswPx8WB57k3V5P4G64/S/_DSF2475-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12318,7 +12318,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-trPHqZK/0/Ks92wcGW7cW5sdtFmqqcFRgHdb2z6qvTDwrKQ3R6V/L/_DSF2500-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-trPHqZK/0/MtfJMRm9Zw6NC7cHVfZcFjBn5BqQ5NCSjMTRMGXVw/XL/_DSF2500-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-trPHqZK/0/LnNxvrr8bwWgfHvSmdpmffvwKW2KxqvZfqp4MZBSj/S/_DSF2500-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12331,7 +12331,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-DfS7sz2/0/LnRj9Crx2B4q2ph5sBjpzCBXRRrXssPbkWBdZ7kF9/XL/_DSF2514-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-DfS7sz2/0/LnRj9Crx2B4q2ph5sBjpzCBXRRrXssPbkWBdZ7kF9/XL/_DSF2514-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-DfS7sz2/0/LQbWhV2HcPGjDDvMvhgdJG6BwqZLfLrqbxK5t8ZJm/S/_DSF2514-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12344,7 +12344,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-zKXCVqN/0/MrSd4vwG8wb277d2cCpJH7Jwkpgnn4BKQj4hC2SBC/XL/_DSF2516-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-zKXCVqN/0/MrSd4vwG8wb277d2cCpJH7Jwkpgnn4BKQj4hC2SBC/XL/_DSF2516-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-zKXCVqN/0/L8sc67dGWg6qkfBnrgXcwPDbnKjhJhd3Mt3N9zjG6/S/_DSF2516-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12357,7 +12357,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-W7rj9DJ/3/KzSwGgDhDTbvXqVXp4PBHjK2NThC54KdN4rCW8XDL/XL/_O1H0123-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-W7rj9DJ/3/KzSwGgDhDTbvXqVXp4PBHjK2NThC54KdN4rCW8XDL/XL/_O1H0123-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-W7rj9DJ/3/LQSnkq67N8RLrMdrxS4SVw33RQq9bcS33fFHCpZpv/S/_O1H0123-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12370,7 +12370,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm/1/LGG3ftw9GTj62QDsZSZQgrjwxFK5pjmdSFPxxDkcx/XL/Havana-Car-p-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm/1/LGG3ftw9GTj62QDsZSZQgrjwxFK5pjmdSFPxxDkcx/XL/Havana-Car-p-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm/1/LVMjfqS2rs9BBRZF8RNdFNNzVNjHtffNcdSpJsCj8/S/Havana-Car-p-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12383,7 +12383,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Pt7whDS/0/Lm3zKCJqs93XHKfZQVgmBpKSfpKs33krd7RQZvNmk/XL/_DSF2590-Enhanced-NR-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Pt7whDS/0/Lm3zKCJqs93XHKfZQVgmBpKSfpKs33krd7RQZvNmk/XL/_DSF2590-Enhanced-NR-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Pt7whDS/0/NHqHKFhcphq8M7XBCwWXbP573WFJKZxjWT7T6WzbM/S/_DSF2590-Enhanced-NR-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12396,7 +12396,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nDfspwn/9/LH8Tknz7htg9JkPLvBcdGbN4VhDqFHKKR5dMJc33t/XL/_DSF2597-Enhanced-NR-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nDfspwn/9/LH8Tknz7htg9JkPLvBcdGbN4VhDqFHKKR5dMJc33t/XL/_DSF2597-Enhanced-NR-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nDfspwn/9/K2shWRbFpsWq9cFWwwSWhpbRFnkFNktq8TfKsfJks/S/_DSF2597-Enhanced-NR-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12409,7 +12409,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-rWLJL2v/1/MgkLH33DHw8BS2gD3PSr4nGChrJ8bGwNRFVfRHkJd/L/_DSF2667-Edit-2-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-rWLJL2v/1/LsvFhGxtQbqP35m7Wp6VbpbxM8HDK3kVmjhWxCkWH/XL/_DSF2667-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-rWLJL2v/1/Kbprd9mPS2m3Xpw55LNsCRdVVJd8h2HvGh4WNCL9j/S/_DSF2667-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12422,7 +12422,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-QmjZvHF/0/KH6n2csKnCzDsMB7hK9jfvjHJmkb5wN2NRHdCLJ8P/XL/_DSF2766-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-QmjZvHF/0/KH6n2csKnCzDsMB7hK9jfvjHJmkb5wN2NRHdCLJ8P/XL/_DSF2766-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-QmjZvHF/0/KK27xgWS9vSnQTsL8Kz2TPD2ThkK8bNdfkBVbZzGp/S/_DSF2766-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12435,7 +12435,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-mgVpfhT/0/MJFT2RgHbL5zpMhpk6WHj67SVvhPF4MpmBj3kk2mk/L/_DSF2791-L.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-mgVpfhT/0/Mtt992j9xJ6vLdvGVcvLRhDD3KgRDccWnMDb8sRtF/XL/_DSF2791-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-mgVpfhT/0/LfLRL2mBMSnLdDsxH2KHTL6DCRqnb5NNnj3HDzVGp/S/_DSF2791-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12448,7 +12448,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-5WZKmbB/0/NQp8tBbDnPJ3n6sprHgLzrk9zHwQpskLj7xZQCsRQ/XL/_DSF2815-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-5WZKmbB/0/NQp8tBbDnPJ3n6sprHgLzrk9zHwQpskLj7xZQCsRQ/XL/_DSF2815-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-5WZKmbB/0/KjtFxwM9cnDM3MrfgMqkJhhFsGKNq5NtKprZTrZz7/S/_DSF2815-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12461,7 +12461,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-JMqBWxb/10/K3NB3cq79L5zvfLjkB3xr4qbbSPmCm8zvf4DNzzBZ/XL/_O1H0307-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-JMqBWxb/10/K3NB3cq79L5zvfLjkB3xr4qbbSPmCm8zvf4DNzzBZ/XL/_O1H0307-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-JMqBWxb/10/KkJGQnJbcbV3gxhzv8q65qxNMWr9n8dQkQjB4ZWFS/S/_O1H0307-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12474,7 +12474,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-7dksHnz/4/LtKzCqPz8D2Tmzt9hfxCz9BGwTKhG2kSKKnp8F5w2/XL/_O1H0321-Enhanced-NR-Edit-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-7dksHnz/4/LtKzCqPz8D2Tmzt9hfxCz9BGwTKhG2kSKKnp8F5w2/XL/_O1H0321-Enhanced-NR-Edit-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-7dksHnz/4/LdqLDSHx9rPbqzvjkP7dWFZvMndT9fLjLXB5M5FCv/S/_O1H0321-Enhanced-NR-Edit-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12487,7 +12487,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-cpRfZ8j/0/M7tpMTpwdLMWLfbx3kzHpzchfczQv9XHf6g5VfBBf/XL/_DSF3049-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-cpRfZ8j/0/M7tpMTpwdLMWLfbx3kzHpzchfczQv9XHf6g5VfBBf/XL/_DSF3049-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-cpRfZ8j/0/KK47FFmwwVZQ5FnPTv4pkRhtbjw6srSNFWJfDRWQZ/S/_DSF3049-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12500,7 +12500,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-KdGdjFZ/0/MxWpfjM5bRMc9qKtBWRZbNLmg6GZb65RSZv6jmB3J/XL/_DSF3123-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-KdGdjFZ/0/MxWpfjM5bRMc9qKtBWRZbNLmg6GZb65RSZv6jmB3J/XL/_DSF3123-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-KdGdjFZ/0/KdVnK84whJ3TxjQwtNNjMK9rHknCbvNXGtwVV9kZb/S/_DSF3123-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12513,7 +12513,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-fNTTW43/2/LhWDtD8rHrT8txZfXL8RCpcwTMhQpLjqb6NkKk46D/XL/_DSF3123-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-fNTTW43/2/LhWDtD8rHrT8txZfXL8RCpcwTMhQpLjqb6NkKk46D/XL/_DSF3123-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-fNTTW43/2/Lnk3ccpHGxJkhHwgLLBTmvrBpnmJr9Qv8LwD3N5gQ/S/_DSF3123-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12526,7 +12526,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-T2XDQPG/0/LNq4S4MLj4nmZ3G73dVkgQPd3J3fdMTXHnKRntrRR/XL/_DSF3141-Edit-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-T2XDQPG/0/LNq4S4MLj4nmZ3G73dVkgQPd3J3fdMTXHnKRntrRR/XL/_DSF3141-Edit-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-T2XDQPG/0/ML7k9VJNnFQjXDFQP4XVq9RsSXRZz86qL86chRPmH/S/_DSF3141-Edit-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12539,7 +12539,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-jm2ddJx/3/KGNm6HDSNvqJQ7PT8tHGdnX9LTkxvrGt6QVtt6DVp/XL/_DSF3249-Edit-Edit-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-jm2ddJx/3/KGNm6HDSNvqJQ7PT8tHGdnX9LTkxvrGt6QVtt6DVp/XL/_DSF3249-Edit-Edit-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-jm2ddJx/3/MmrbkdNDmhZT67dgK4mCnMFh89V8g5c6MD2kX3TDg/S/_DSF3249-Edit-Edit-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12552,7 +12552,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-xfjX34L/0/K3DwSnd8Zbk63QRX4tRSjrXJDfccRr8tQVwfBz24N/XL/_DSF3300-Edit-2-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-xfjX34L/0/K3DwSnd8Zbk63QRX4tRSjrXJDfccRr8tQVwfBz24N/XL/_DSF3300-Edit-2-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-xfjX34L/0/LWw7ZM9Rhxn8FSL5RhhSKJHngJ8pcZzv4xd2Q8qv7/S/_DSF3300-Edit-2-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12565,7 +12565,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Gzdmm73/0/KsH4SqC5FZKWCmPXjdgLGdmMQxtt596sbV5jcxqdh/XL/_DSF3546-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Gzdmm73/0/KsH4SqC5FZKWCmPXjdgLGdmMQxtt596sbV5jcxqdh/XL/_DSF3546-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Gzdmm73/0/NX5vbs6MR6mt9bwT6tD7Q2x7NRM24MvJLgwGmj3JF/S/_DSF3546-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12578,7 +12578,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-jQCkBDs/0/LtC73gWB5RJQz6n5tVJHrkjbwCnTMFrcs3rcnW5qM/XL/_DSF3556-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-jQCkBDs/0/LtC73gWB5RJQz6n5tVJHrkjbwCnTMFrcs3rcnW5qM/XL/_DSF3556-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-jQCkBDs/0/KFvBMtgQdZsBN6bHQsRPFX2s8PkGZdMH7ft7hxPsf/S/_DSF3556-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12591,7 +12591,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-sjtz7Fj/0/KrND2ZfVNFqZM6ZFNM6zXPbGNHFSqjwn879v8qFBx/XL/_DSF3571-Edit-XL.jpg",
       "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-sjtz7Fj/0/KrND2ZfVNFqZM6ZFNM6zXPbGNHFSqjwn879v8qFBx/XL/_DSF3571-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-sjtz7Fj/0/LcD9wjfcTfj2m2NHcfKB8J6RGq4fhx9LJhg72wQKx/S/_DSF3571-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -12604,7 +12604,7 @@ export const galleryDataMap   = {
       "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-zgNxHdz/3/MWBvHDT5H5X8vZ8zvGqvJ8FfDRQv89bsj2hvJGWxS/L/_DSF3594-Edit-L.jpg",
       "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-zgNxHdz/3/MqThb3bp27zBsfkKBvsKSvvKhtBWgdb9DsStQSv73/XL/_DSF3594-Edit-XL.jpg",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-zgNxHdz/3/K55kkpSSZxnq8gfs3kqd8Lm48RfTjTHhZmtrxpk54/S/_DSF3594-Edit-S.jpg",
-      "rating": 0,
+      "rating": 4,
       "visibility": "show",
       "galleries": [
         "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60500,7 +60500,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/0/MNPXPHV4kMQwDJpRmK59tsRKt2k9LRZ9wnMjkTsQw/XL/12x18_O1H0006-Edit-2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/0/MNPXPHV4kMQwDJpRmK59tsRKt2k9LRZ9wnMjkTsQw/XL/12x18_O1H0006-Edit-2-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-8zkKqtg/0/LrsP2CGWPpdRwGbGNVSGcHp5ZCCK9LFPzBrVpVfcX/S/12x18_O1H0006-Edit-2-Edit-S.jpg",
-    "rating": 0,
+    "rating": 5,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60513,7 +60513,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv/0/NWmKKjj4gs8KXGxNtZrjJzT9FrVfQrzPcFSW4gtGt/XL/_DSF3071-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv/0/NWmKKjj4gs8KXGxNtZrjJzT9FrVfQrzPcFSW4gtGt/XL/_DSF3071-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-WSh3Nqv/0/MHs2sGLV76Db4TRMFngqtzQBzFjzrVbj4dSkM4zcS/S/_DSF3071-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60526,7 +60526,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-KMhKvRb/0/LvC8pt8rggTnpmdKx3hKBcz5bLWWJBdcnkvH7ChTw/XL/_DSF2686-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-KMhKvRb/0/LvC8pt8rggTnpmdKx3hKBcz5bLWWJBdcnkvH7ChTw/XL/_DSF2686-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-KMhKvRb/0/NhS5XW6jGjtF86ZsDHSKp62j7z7pNrMQJwbCFbvzj/S/_DSF2686-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60539,7 +60539,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k9qB2jV/0/KQPR6P3s9Q2xNMTz74JMrMVtKRSqW2SC2dGsnMrnF/XL/_DSF3141-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k9qB2jV/0/KQPR6P3s9Q2xNMTz74JMrMVtKRSqW2SC2dGsnMrnF/XL/_DSF3141-Edit-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-k9qB2jV/0/NLkN474cvKLZ7fWDXmdjSxxrJcDbsbTWjWRCHBJKV/S/_DSF3141-Edit-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60552,7 +60552,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-VqxgW5k/0/K2Kd3HGM6q2fBq4t529XsPVWWshhtkDG3JChKw3pm/L/_DSF2500-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-VqxgW5k/0/LjsZcGg4QL4rHJMLCXZmjJTcN7GZBL88bWpR2jfT8/XL/_DSF2500-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-VqxgW5k/0/KLm5WZX6m3f7HKtjkVzQ9gwSTMqF8DJXqgwKr23Nt/S/_DSF2500-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60565,7 +60565,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-NVz5zk2/0/LNcBFvKW7DQ6bP4tsxKXBnjJ8Nj6b5NnKnvtqvSZr/XL/_DSF3125-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-NVz5zk2/0/LNcBFvKW7DQ6bP4tsxKXBnjJ8Nj6b5NnKnvtqvSZr/XL/_DSF3125-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-NVz5zk2/0/KkLdww8vtFF7M5HkgdS9GvqnnJWWF72MKVcVHjj99/S/_DSF3125-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60578,7 +60578,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9cZHdvB/0/MLvK9q2fLdX4KmqZSc5hhP5mmfsN4WD3MVq9xLjBw/XL/_O1H0037-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9cZHdvB/0/MLvK9q2fLdX4KmqZSc5hhP5mmfsN4WD3MVq9xLjBw/XL/_O1H0037-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-9cZHdvB/0/LcBwdzdM277wDMnSTsG3QPnK7sDMG7frLLwdKzwsn/S/_O1H0037-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60591,7 +60591,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-zrVCpMP/0/Ms5MxwstMdRWzFjg76XN5KVQx4CTs4B3ch6T4LJgv/XL/_DSF2514-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-zrVCpMP/0/Ms5MxwstMdRWzFjg76XN5KVQx4CTs4B3ch6T4LJgv/XL/_DSF2514-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-zrVCpMP/0/LT9bLcXVwfHNV2pp5DCV2hZHbMGndZqQwTZbQw2bw/S/_DSF2514-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60604,7 +60604,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-rxnpqCQ/0/NF6xq7Krtg4RBHGCRNBrQcKHd4PkQVLFCLT5gTwGq/XL/_DSF2516-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-rxnpqCQ/0/NF6xq7Krtg4RBHGCRNBrQcKHd4PkQVLFCLT5gTwGq/XL/_DSF2516-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-rxnpqCQ/0/LQnMDSCNP7drG774TNDrqbKg8q4XpTKKrSmXkGq7x/S/_DSF2516-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60617,7 +60617,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-qgJkNtv/0/MqX5r4nTRQQMrL39dptpbxXM65DRQmpR7qSGKf8Q7/XL/_DSF2591-Enhanced-NR-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-qgJkNtv/0/MqX5r4nTRQQMrL39dptpbxXM65DRQmpR7qSGKf8Q7/XL/_DSF2591-Enhanced-NR-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-qgJkNtv/0/NdQcg9MM4NckH8LR9kXzGnFnkzfSpSccpw6L435cC/S/_DSF2591-Enhanced-NR-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60630,7 +60630,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-6NPsMpH/0/MWp5TwbzGZQs2bCmsxW65XZKJrhmWsqR3SNr3mCD9/XL/_DSF2766-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-6NPsMpH/0/MWp5TwbzGZQs2bCmsxW65XZKJrhmWsqR3SNr3mCD9/XL/_DSF2766-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-6NPsMpH/0/K93gSFgJv6tZJXtJRf4W8qxwKTp4KrNjmnLqgND9n/S/_DSF2766-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60643,7 +60643,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5CcF5N4/0/KFC5SgtHssZf9jZ2dgs5Pmg6N4GQn34TqBqXZpdvG/XL/_O1H0938-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5CcF5N4/0/KFC5SgtHssZf9jZ2dgs5Pmg6N4GQn34TqBqXZpdvG/XL/_O1H0938-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-5CcF5N4/0/NGfn7hmhwhgQ6H9NTjrmWG5bjvgNBPf5WH2sgZh5r/S/_O1H0938-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60656,7 +60656,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-mMXRvh4/8/MDRDvCHpMN2nFQcRxtRBKLK99TZbRxv8N4RxbqsXp/L/_O1H0073-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-mMXRvh4/8/NBz2PgNBRwgSDLp2CHX8sqQCGDccwtt9GsQ4QvsvM/XL/_O1H0073-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-mMXRvh4/8/KXpdn3t4t878rdVfwj3TdjwXzknNDfLsNkm64zmsp/S/_O1H0073-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60669,7 +60669,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-k2W3gQV/10/LF5v3d5PJxMJkFQX28T75k9mMWgkWWQCRwdgVWtKf/XL/_DSF2597-Enhanced-NR-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-k2W3gQV/10/LF5v3d5PJxMJkFQX28T75k9mMWgkWWQCRwdgVWtKf/XL/_DSF2597-Enhanced-NR-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-k2W3gQV/10/MsccQZ565tjw9Vrv9g68SmRQJLvMhtLMNbFF9V6N6/S/_DSF2597-Enhanced-NR-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60682,7 +60682,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-m7STjq2/9/NN4m9CcvZQP7zJWfqSx5p9WJ8sBV3JksbxqcD8Mhz/XL/_DSF2612-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-m7STjq2/9/NN4m9CcvZQP7zJWfqSx5p9WJ8sBV3JksbxqcD8Mhz/XL/_DSF2612-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-m7STjq2/9/NWv8qFW7bPDhQ3rvMVrnbNkjGFsFkPSvcQ97gdHX8/S/_DSF2612-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60695,7 +60695,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-K6mDKMn/9/NXvK4zsj5Bcf2TL9RBSLRhNKRQgt9n5FCmkx6SHHB/XL/_O1H0307-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-K6mDKMn/9/NXvK4zsj5Bcf2TL9RBSLRhNKRQgt9n5FCmkx6SHHB/XL/_O1H0307-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-K6mDKMn/9/MtgJ4KXQMhgbCfsdDBRdHhhr5frbfbZCVwV56spsB/S/_O1H0307-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60708,7 +60708,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-QBKhZS2/3/NjdTFzh2hCjfSjDjMWbGZhzCX3QqfTZnRnPTXrwJH/XL/_DSF3076-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-QBKhZS2/3/NjdTFzh2hCjfSjDjMWbGZhzCX3QqfTZnRnPTXrwJH/XL/_DSF3076-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-QBKhZS2/3/KzwQZPjJkjkJqc3nwjPJWXF8hwsgjZNCLv9M2LLHM/S/_DSF3076-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60721,7 +60721,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-pqpdH2v/8/NLnr59ZJ6dS9wc8krwhgTVbWjpBfsHrs7r2TdFf33/L/_DSF3175-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-pqpdH2v/8/KsTghngSTQv6ssvPQgLhZG7mVHGL4hWhkFxLZwhhK/XL/_DSF3175-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-pqpdH2v/8/MTQkpSLddLPwzHtVHqN2Zrh5kckjw8Vhjrf7vvcRX/S/_DSF3175-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60734,7 +60734,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-5bqK2s3/9/MTgWRK62T6zG5Mrb3xmMgnDnV7zh8Fsd7QT5msvxZ/XL/_DSF3362-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-5bqK2s3/9/MTgWRK62T6zG5Mrb3xmMgnDnV7zh8Fsd7QT5msvxZ/XL/_DSF3362-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-5bqK2s3/9/LRSdnQqrW7bgn5bWdBvTCcT3rHmZgHg6GXVJrnXXg/S/_DSF3362-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60747,7 +60747,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9mDvxMc/9/NhbqhP2KDHks49L5zPWSXznHthfw9gtcDB6wFMfvm/XL/_O1H0933-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9mDvxMc/9/NhbqhP2KDHks49L5zPWSXznHthfw9gtcDB6wFMfvm/XL/_O1H0933-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-9mDvxMc/9/LpX4MPkNS2MQbKsFqLcNttjqvLmD45f6xcpmVMwwL/S/_O1H0933-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60760,7 +60760,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/KMgPzNNRSFVjPCg2VJQjTcJtwjwZ7BPtQMGfKQLNP/L/_DSF2781-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/KpkdQG9VLbRn3ZxpdHZZQhhWhGJb4hRRcbsDQHdxm/XL/_DSF2781-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color/i-PXj364M/2/Mb2CQ6jQQzKLdQH79w64VjndqrLVKmhZLhHMnmstc/S/_DSF2781-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color"
@@ -60773,7 +60773,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-MhMbDtL/1/K78XXSWwSGFRk7z2LWL9pGG6fq4dWZnN38P2Ktw4W/XL/_WHZ6143-3-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-MhMbDtL/1/K78XXSWwSGFRk7z2LWL9pGG6fq4dWZnN38P2Ktw4W/XL/_WHZ6143-3-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Scheduled-Shoots/Mark--Beth-Wedding/i-MhMbDtL/1/KtphWxz6sTVv7RqLxKKXRGs2jLdJWkz67QxdfpPQx/S/_WHZ6143-3-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60786,7 +60786,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-7rWrmHq/8/MFqtcjmcBBwWZgmBSGM6WJcHV6sNJQxMhfj7VjJRx/XL/_DSF2408-Edit-3-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-7rWrmHq/8/MFqtcjmcBBwWZgmBSGM6WJcHV6sNJQxMhfj7VjJRx/XL/_DSF2408-Edit-3-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-7rWrmHq/8/Lc7ZJ3TG2g7xjsxvRmDdnLkmvK6C8vT75Snr9dd4D/S/_DSF2408-Edit-3-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60799,7 +60799,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-jRPgZj3/2/MRsB8jNsZxzDvnJjz8KxBjccXZFxxpSzHpzsVjZRV/XL/_DSF2411-Edit-6-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-jRPgZj3/2/MRsB8jNsZxzDvnJjz8KxBjccXZFxxpSzHpzsVjZRV/XL/_DSF2411-Edit-6-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-jRPgZj3/2/MVbSKSXCP97w2FhCT8m5FFvj75H7B64wCdN3XT3p6/S/_DSF2411-Edit-6-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60812,7 +60812,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-Dc7Xpdw/6/MLPj93BGPczwZjMXsp2LpZ4BnLDKV7JKVvSNChZhh/XL/_DSF2475-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-Dc7Xpdw/6/MLPj93BGPczwZjMXsp2LpZ4BnLDKV7JKVvSNChZhh/XL/_DSF2475-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-Dc7Xpdw/6/NjjpMfMRv94KC5ZGQnFSj4fswPx8WB57k3V5P4G64/S/_DSF2475-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60825,7 +60825,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-trPHqZK/0/Ks92wcGW7cW5sdtFmqqcFRgHdb2z6qvTDwrKQ3R6V/L/_DSF2500-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-trPHqZK/0/MtfJMRm9Zw6NC7cHVfZcFjBn5BqQ5NCSjMTRMGXVw/XL/_DSF2500-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-trPHqZK/0/LnNxvrr8bwWgfHvSmdpmffvwKW2KxqvZfqp4MZBSj/S/_DSF2500-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60838,7 +60838,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-DfS7sz2/0/LnRj9Crx2B4q2ph5sBjpzCBXRRrXssPbkWBdZ7kF9/XL/_DSF2514-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-DfS7sz2/0/LnRj9Crx2B4q2ph5sBjpzCBXRRrXssPbkWBdZ7kF9/XL/_DSF2514-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-DfS7sz2/0/LQbWhV2HcPGjDDvMvhgdJG6BwqZLfLrqbxK5t8ZJm/S/_DSF2514-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60851,7 +60851,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-zKXCVqN/0/MrSd4vwG8wb277d2cCpJH7Jwkpgnn4BKQj4hC2SBC/XL/_DSF2516-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-zKXCVqN/0/MrSd4vwG8wb277d2cCpJH7Jwkpgnn4BKQj4hC2SBC/XL/_DSF2516-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-zKXCVqN/0/L8sc67dGWg6qkfBnrgXcwPDbnKjhJhd3Mt3N9zjG6/S/_DSF2516-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60864,7 +60864,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-W7rj9DJ/3/KzSwGgDhDTbvXqVXp4PBHjK2NThC54KdN4rCW8XDL/XL/_O1H0123-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-W7rj9DJ/3/KzSwGgDhDTbvXqVXp4PBHjK2NThC54KdN4rCW8XDL/XL/_O1H0123-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-W7rj9DJ/3/LQSnkq67N8RLrMdrxS4SVw33RQq9bcS33fFHCpZpv/S/_O1H0123-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60877,7 +60877,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm/1/LGG3ftw9GTj62QDsZSZQgrjwxFK5pjmdSFPxxDkcx/XL/Havana-Car-p-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm/1/LGG3ftw9GTj62QDsZSZQgrjwxFK5pjmdSFPxxDkcx/XL/Havana-Car-p-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-tpvJWLm/1/LVMjfqS2rs9BBRZF8RNdFNNzVNjHtffNcdSpJsCj8/S/Havana-Car-p-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60890,7 +60890,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Pt7whDS/0/Lm3zKCJqs93XHKfZQVgmBpKSfpKs33krd7RQZvNmk/XL/_DSF2590-Enhanced-NR-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Pt7whDS/0/Lm3zKCJqs93XHKfZQVgmBpKSfpKs33krd7RQZvNmk/XL/_DSF2590-Enhanced-NR-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Pt7whDS/0/NHqHKFhcphq8M7XBCwWXbP573WFJKZxjWT7T6WzbM/S/_DSF2590-Enhanced-NR-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60903,7 +60903,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nDfspwn/9/LH8Tknz7htg9JkPLvBcdGbN4VhDqFHKKR5dMJc33t/XL/_DSF2597-Enhanced-NR-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nDfspwn/9/LH8Tknz7htg9JkPLvBcdGbN4VhDqFHKKR5dMJc33t/XL/_DSF2597-Enhanced-NR-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-nDfspwn/9/K2shWRbFpsWq9cFWwwSWhpbRFnkFNktq8TfKsfJks/S/_DSF2597-Enhanced-NR-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60916,7 +60916,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-rWLJL2v/1/MgkLH33DHw8BS2gD3PSr4nGChrJ8bGwNRFVfRHkJd/L/_DSF2667-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-rWLJL2v/1/LsvFhGxtQbqP35m7Wp6VbpbxM8HDK3kVmjhWxCkWH/XL/_DSF2667-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-rWLJL2v/1/Kbprd9mPS2m3Xpw55LNsCRdVVJd8h2HvGh4WNCL9j/S/_DSF2667-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60929,7 +60929,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-QmjZvHF/0/KH6n2csKnCzDsMB7hK9jfvjHJmkb5wN2NRHdCLJ8P/XL/_DSF2766-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-QmjZvHF/0/KH6n2csKnCzDsMB7hK9jfvjHJmkb5wN2NRHdCLJ8P/XL/_DSF2766-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-QmjZvHF/0/KK27xgWS9vSnQTsL8Kz2TPD2ThkK8bNdfkBVbZzGp/S/_DSF2766-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60942,7 +60942,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-mgVpfhT/0/MJFT2RgHbL5zpMhpk6WHj67SVvhPF4MpmBj3kk2mk/L/_DSF2791-L.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-mgVpfhT/0/Mtt992j9xJ6vLdvGVcvLRhDD3KgRDccWnMDb8sRtF/XL/_DSF2791-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-mgVpfhT/0/LfLRL2mBMSnLdDsxH2KHTL6DCRqnb5NNnj3HDzVGp/S/_DSF2791-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60955,7 +60955,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-5WZKmbB/0/NQp8tBbDnPJ3n6sprHgLzrk9zHwQpskLj7xZQCsRQ/XL/_DSF2815-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-5WZKmbB/0/NQp8tBbDnPJ3n6sprHgLzrk9zHwQpskLj7xZQCsRQ/XL/_DSF2815-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-5WZKmbB/0/KjtFxwM9cnDM3MrfgMqkJhhFsGKNq5NtKprZTrZz7/S/_DSF2815-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60968,7 +60968,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-JMqBWxb/10/K3NB3cq79L5zvfLjkB3xr4qbbSPmCm8zvf4DNzzBZ/XL/_O1H0307-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-JMqBWxb/10/K3NB3cq79L5zvfLjkB3xr4qbbSPmCm8zvf4DNzzBZ/XL/_O1H0307-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-JMqBWxb/10/KkJGQnJbcbV3gxhzv8q65qxNMWr9n8dQkQjB4ZWFS/S/_O1H0307-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60981,7 +60981,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-7dksHnz/4/LtKzCqPz8D2Tmzt9hfxCz9BGwTKhG2kSKKnp8F5w2/XL/_O1H0321-Enhanced-NR-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-7dksHnz/4/LtKzCqPz8D2Tmzt9hfxCz9BGwTKhG2kSKKnp8F5w2/XL/_O1H0321-Enhanced-NR-Edit-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-7dksHnz/4/LdqLDSHx9rPbqzvjkP7dWFZvMndT9fLjLXB5M5FCv/S/_O1H0321-Enhanced-NR-Edit-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -60994,7 +60994,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-cpRfZ8j/0/M7tpMTpwdLMWLfbx3kzHpzchfczQv9XHf6g5VfBBf/XL/_DSF3049-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-cpRfZ8j/0/M7tpMTpwdLMWLfbx3kzHpzchfczQv9XHf6g5VfBBf/XL/_DSF3049-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-cpRfZ8j/0/KK47FFmwwVZQ5FnPTv4pkRhtbjw6srSNFWJfDRWQZ/S/_DSF3049-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -61007,7 +61007,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-KdGdjFZ/0/MxWpfjM5bRMc9qKtBWRZbNLmg6GZb65RSZv6jmB3J/XL/_DSF3123-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-KdGdjFZ/0/MxWpfjM5bRMc9qKtBWRZbNLmg6GZb65RSZv6jmB3J/XL/_DSF3123-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-KdGdjFZ/0/KdVnK84whJ3TxjQwtNNjMK9rHknCbvNXGtwVV9kZb/S/_DSF3123-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -61020,7 +61020,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-fNTTW43/2/LhWDtD8rHrT8txZfXL8RCpcwTMhQpLjqb6NkKk46D/XL/_DSF3123-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-fNTTW43/2/LhWDtD8rHrT8txZfXL8RCpcwTMhQpLjqb6NkKk46D/XL/_DSF3123-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-fNTTW43/2/Lnk3ccpHGxJkhHwgLLBTmvrBpnmJr9Qv8LwD3N5gQ/S/_DSF3123-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -61033,7 +61033,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-T2XDQPG/0/LNq4S4MLj4nmZ3G73dVkgQPd3J3fdMTXHnKRntrRR/XL/_DSF3141-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-T2XDQPG/0/LNq4S4MLj4nmZ3G73dVkgQPd3J3fdMTXHnKRntrRR/XL/_DSF3141-Edit-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-T2XDQPG/0/ML7k9VJNnFQjXDFQP4XVq9RsSXRZz86qL86chRPmH/S/_DSF3141-Edit-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -61046,7 +61046,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-jm2ddJx/3/KGNm6HDSNvqJQ7PT8tHGdnX9LTkxvrGt6QVtt6DVp/XL/_DSF3249-Edit-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-jm2ddJx/3/KGNm6HDSNvqJQ7PT8tHGdnX9LTkxvrGt6QVtt6DVp/XL/_DSF3249-Edit-Edit-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-jm2ddJx/3/MmrbkdNDmhZT67dgK4mCnMFh89V8g5c6MD2kX3TDg/S/_DSF3249-Edit-Edit-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -61059,7 +61059,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-xfjX34L/0/K3DwSnd8Zbk63QRX4tRSjrXJDfccRr8tQVwfBz24N/XL/_DSF3300-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-xfjX34L/0/K3DwSnd8Zbk63QRX4tRSjrXJDfccRr8tQVwfBz24N/XL/_DSF3300-Edit-2-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-xfjX34L/0/LWw7ZM9Rhxn8FSL5RhhSKJHngJ8pcZzv4xd2Q8qv7/S/_DSF3300-Edit-2-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -61072,7 +61072,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Gzdmm73/0/KsH4SqC5FZKWCmPXjdgLGdmMQxtt596sbV5jcxqdh/XL/_DSF3546-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Gzdmm73/0/KsH4SqC5FZKWCmPXjdgLGdmMQxtt596sbV5jcxqdh/XL/_DSF3546-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-Gzdmm73/0/NX5vbs6MR6mt9bwT6tD7Q2x7NRM24MvJLgwGmj3JF/S/_DSF3546-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -61085,7 +61085,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-jQCkBDs/0/LtC73gWB5RJQz6n5tVJHrkjbwCnTMFrcs3rcnW5qM/XL/_DSF3556-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-jQCkBDs/0/LtC73gWB5RJQz6n5tVJHrkjbwCnTMFrcs3rcnW5qM/XL/_DSF3556-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-jQCkBDs/0/KFvBMtgQdZsBN6bHQsRPFX2s8PkGZdMH7ft7hxPsf/S/_DSF3556-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -61098,7 +61098,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-sjtz7Fj/0/KrND2ZfVNFqZM6ZFNM6zXPbGNHFSqjwn879v8qFBx/XL/_DSF3571-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-sjtz7Fj/0/KrND2ZfVNFqZM6ZFNM6zXPbGNHFSqjwn879v8qFBx/XL/_DSF3571-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White/i-sjtz7Fj/0/LcD9wjfcTfj2m2NHcfKB8J6RGq4fhx9LJhg72wQKx/S/_DSF3571-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"
@@ -61111,7 +61111,7 @@ export const allImages        = [
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-zgNxHdz/3/MWBvHDT5H5X8vZ8zvGqvJ8FfDRQv89bsj2hvJGWxS/L/_DSF3594-Edit-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-zgNxHdz/3/MqThb3bp27zBsfkKBvsKSvvKhtBWgdb9DsStQSv73/XL/_DSF3594-Edit-XL.jpg",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Roaring-20s/i-zgNxHdz/3/K55kkpSSZxnq8gfs3kqd8Lm48RfTjTHhZmtrxpk54/S/_DSF3594-Edit-S.jpg",
-    "rating": 0,
+    "rating": 4,
     "visibility": "show",
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White"

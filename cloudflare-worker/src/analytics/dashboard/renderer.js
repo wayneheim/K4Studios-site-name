@@ -4,7 +4,7 @@
 // NO DB access, NO env usage, NO filter logic — rendering only.
 // ═══════════════════════════════════════════════════════════════════════════
 
-export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, botIntelligence }) {
+export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, viewerDepth, suppressionStats, botIntelligence }) {
   const s = summary || {};
   
   // Canonical list of all trackable events with display labels
@@ -455,6 +455,16 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   </div>
 
   <div class="pulse-row">
+    ${viewerDepth?.avgScore > 0 ? `<div class="pulse-stat collector">
+      <span class="value" style="color: #fff;">⭐ ${viewerDepth.avgScore}</span>
+      <span class="label" style="color: #c4b5fd;">Avg Depth <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #c4b5fd;">i</span></span>
+      <div class="tooltip">Viewer Depth Score — your TRUE NORTH metric. Measures engagement quality: gallery=1, image=2, zoom=5. Higher = deeper art engagement. Distribution: ${viewerDepth.distribution?.map(d => `${d.label}: ${d.count}`).join(', ') || 'none'}. Max today: ${viewerDepth.maxScore || 0}.</div>
+    </div>` : ''}
+    ${viewerDepth?.highDepthCount > 0 ? `<div class="pulse-stat" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
+      <span class="value" style="color: #fff;">🎯 ${viewerDepth.highDepthCount}</span>
+      <span class="label" style="color: #a7f3d0;">Collectors <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
+      <div class="tooltip">High-depth viewers (score 20+) exhibiting collector behavior: multiple images, zooms, intentional browsing. These are your potential buyers.</div>
+    </div>` : ''}
     ${cowboyJumps > 0 ? `<div class="pulse-stat highlight">
       <span class="value">🤠 ${cowboyJumps}</span>
       <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
@@ -470,6 +480,11 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <span class="label" style="color: #ddd6fe;">Image Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
       <div class="tooltip">JS-verified image views (human only). Chapter browsing (${artViewsSummary?.chapter_views || 0}) + External embeds (${artViewsSummary?.external_images || 0}). Server-side page loads: ${artViewsSummary?.image_pages || 0}.</div>
     </div>
+    ${suppressionStats?.activeSuppressedIPs > 0 ? `<div class="pulse-stat" style="background: linear-gradient(135deg, #475569 0%, #334155 100%);">
+      <span class="value" style="color: #94a3b8;">🛡 ${suppressionStats.activeSuppressedIPs}</span>
+      <span class="label" style="color: #94a3b8;">Filtered <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #94a3b8;">i</span></span>
+      <div class="tooltip">IPs on suppression list (noise exclusion). Site still works for them, just excluded from analytics. Events filtered today: ${suppressionStats.suppressedToday || 0}. Auto-expires after 30 days.</div>
+    </div>` : ''}
   </div>
 
   <!-- Art Views Section -->

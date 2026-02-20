@@ -75,19 +75,19 @@ export async function handleDashboardRequest(request, env, ctx) {
     let rangeDateClause;
     if (yesterday) {
       // Yesterday = Eastern calendar day before today
-      rangeDateClause = `date(created_at, '-5 hours') = date('now', '-5 hours', '-1 day')`;
+      rangeDateClause = `date(ts, '-5 hours') = date('now', '-5 hours', '-1 day')`;
     } else if (days === 1) {
       // Today = current Eastern calendar day
-      rangeDateClause = `date(created_at, '-5 hours') = date('now', '-5 hours')`;
+      rangeDateClause = `date(ts, '-5 hours') = date('now', '-5 hours')`;
     } else {
       // Last N days (rolling window from now)
-      rangeDateClause = `created_at > datetime('now', '-5 hours', '-${days} days')`;
+      rangeDateClause = `ts > datetime('now', '-5 hours', '-${days} days')`;
     }
 
     // If a specific Eastern calendar day is selected, render stats for that day
     // (but keep the trend chart using the current range).
     const dateClause = selectedDate
-      ? `date(created_at, '-5 hours') = '${selectedDate}'`
+      ? `date(ts, '-5 hours') = '${selectedDate}'`
       : rangeDateClause;
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
     const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
@@ -108,10 +108,10 @@ export async function handleDashboardRequest(request, env, ctx) {
 
     // Build priorPeriodClause for getDashboardStats
     const priorPeriodClause = selectedDate
-      ? `date(created_at, '-5 hours') < '${selectedDate}'`
+      ? `date(ts, '-5 hours') < '${selectedDate}'`
       : (yesterday 
-        ? `created_at < datetime('now', '-5 hours', '-1 day', 'start of day')`
-        : `created_at < datetime('now', '-5 hours', '-${days} days')`
+        ? `ts < datetime('now', '-5 hours', '-1 day', 'start of day')`
+        : `ts < datetime('now', '-5 hours', '-${days} days')`
       );
 
     // Call dashboard controller — orchestrates all queries + renders HTML

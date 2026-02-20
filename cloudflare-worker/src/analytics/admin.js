@@ -47,23 +47,23 @@ export async function handleExportCSV(request, env) {
   try {
     let dateClause;
     if (yesterday) {
-      dateClause = `created_at >= datetime('now', '-5 hours', '-1 day', 'start of day') AND created_at < datetime('now', '-5 hours', 'start of day')`;
+      dateClause = `ts >= datetime('now', '-5 hours', '-1 day', 'start of day') AND ts < datetime('now', '-5 hours', 'start of day')`;
     } else {
-      dateClause = `created_at > datetime('now', '-5 hours', '-${days} days')`;
+      dateClause = `ts > datetime('now', '-5 hours', '-${days} days')`;
     }
 
     const query = `
       SELECT 
-        created_at, session_id, event, gallery_id, image_id, 
-        page_path, referrer, device, country, region, city, theme
-      FROM events 
+        ts, session_id, event_type, target_id, 
+        page, referer, ua, country, region, city, visitor_id
+      FROM raw_events 
       WHERE ${dateClause}
-      ORDER BY created_at DESC
+      ORDER BY ts DESC
     `;
     const results = await env.DB.prepare(query).all();
     const rows = results.results || [];
 
-    const headers = ['created_at', 'session_id', 'event', 'gallery_id', 'image_id', 'page_path', 'referrer', 'device', 'country', 'region', 'city', 'theme'];
+    const headers = ['ts', 'session_id', 'event_type', 'target_id', 'page', 'referer', 'ua', 'country', 'region', 'city', 'visitor_id'];
     const csvRows = [headers.join(',')];
 
     for (const row of rows) {

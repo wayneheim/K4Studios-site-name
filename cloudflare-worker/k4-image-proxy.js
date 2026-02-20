@@ -73,6 +73,67 @@ const SIZE_FALLBACK = {
   src:["src", "s", "m", "l", "xl"]
 };
 
+// --------------------
+// VISITOR ID (k4_vid cookie)
+// Single Population Doctrine: 1 cookie = 1 human
+// --------------------
+const K4_VID_COOKIE_NAME = 'k4_vid';
+const K4_VID_MAX_AGE = 31536000; // 1 year in seconds
+
+/**
+ * Generate a UUID v4 for new visitors
+ */
+function generateVisitorId() {
+  return crypto.randomUUID();
+}
+
+/**
+ * Parse k4_vid from Cookie header
+ */
+function getVisitorIdFromRequest(request) {
+  const cookieHeader = request.headers.get('Cookie');
+  if (!cookieHeader) return null;
+  
+  const match = cookieHeader.match(new RegExp(`(?:^|;)\\s*${K4_VID_COOKIE_NAME}=([^;]+)`));
+  return match ? match[1] : null;
+}
+
+/**
+ * Get or create visitor_id for this request
+ * Returns { visitorId, isNew } where isNew indicates cookie should be set
+ */
+function getOrCreateVisitorId(request) {
+  const existingId = getVisitorIdFromRequest(request);
+  if (existingId) {
+    return { visitorId: existingId, isNew: false };
+  }
+  return { visitorId: generateVisitorId(), isNew: true };
+}
+
+/**
+ * Create Set-Cookie header for k4_vid
+ */
+function createVisitorIdCookie(visitorId) {
+  return `${K4_VID_COOKIE_NAME}=${visitorId}; Path=/; Max-Age=${K4_VID_MAX_AGE}; Secure; SameSite=Lax`;
+}
+
+/**
+ * Add visitor_id cookie to response if needed
+ */
+function addVisitorIdCookie(response, visitorId, isNew) {
+  if (!isNew) return response;
+  
+  // Clone response to add Set-Cookie header
+  const newHeaders = new Headers(response.headers);
+  newHeaders.append('Set-Cookie', createVisitorIdCookie(visitorId));
+  
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers: newHeaders
+  });
+}
+
 /**
  * In-memory cache for blocked IPs.
  * Loaded once from D1, refreshed every 60s or on block/unblock.
@@ -1428,6 +1489,10 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+    
+    // === VISITOR ID (Single Population Doctrine) ===
+    // Every request gets a visitor_id. Cookie ensures 1 browser = 1 human.
+    const { visitorId, isNew: visitorIdIsNew } = getOrCreateVisitorId(request);
 
     // 0) Bot short-circuit for /track — prevent Netlify function burn
     // Verified bots (Googlebot, Applebot, Bingbot, etc.) get 204 No Content
@@ -1517,24 +1582,40 @@ export default {
     // 1) Image detail pages: apply policy first, then log art view
     if (isImagePageRoute(url.pathname)) {
       const policyResponse = await handleImagePagePolicy(request, url.pathname, ctx, env);
-      if (policyResponse) return policyResponse;
+      if (policyResponse) return addVisitorIdCookie(policyResponse, visitorId, visitorIdIsNew);
       
       // Log image page view (someone viewing an image detail page)
       const imageId = extractImageId(url.pathname);
       if (imageId && env?.DB) {
-        ctx.waitUntil(logArtView(env, 'image_page', imageId, request));
+        ctx.waitUntil(logArtView(env, 'image_page', imageId, request, null, 'proxy', visitorId));
       }
       
-      return fetch(request);
+      const response = await fetch(request);
+      return addVisitorIdCookie(response, visitorId, visitorIdIsNew);
     }
 
-    // 2) Gallery pages: pass through (gallery tracking is now JS-verified via GalleryInfo.jsx → /track → gallery_view)
+    // 2) Gallery pages: proxy-verified tracking (SERVER TRUTH)
+    // Logs gallery_view when HTML page is delivered, not when JS mounts
     if ((url.pathname.startsWith("/Galleries/") || url.pathname.startsWith("/Other/")) && 
         !url.pathname.includes("/i-")) {
-      return fetch(request);
+      
+      // Only count real page loads (not assets/images/css/js)
+      const accept = request.headers.get("accept") || "";
+      
+      if (request.method === "GET" && accept.includes("text/html") && env?.DB) {
+        const gallerySlug = url.pathname
+          .replace(/^\/Galleries\//, "")
+          .replace(/^\/Other\//, "")
+          .replace(/\/$/, "");
+        
+        ctx.waitUntil(logArtView(env, "gallery_view", gallerySlug, request, null, "proxy", visitorId));
+      }
+      
+      const response = await fetch(request);
+      return addVisitorIdCookie(response, visitorId, visitorIdIsNew);
     }
 
-    // 3) /img proxy routes
+    // 3) /img proxy routes — no cookie for binary image responses
     if (url.pathname.startsWith("/img/")) {
       return handleImageRequest(request, ctx, env);
     }
@@ -1542,11 +1623,13 @@ export default {
     // 4) Everything else: gateway firewall
     try {
       console.log("PROXY TARGET (gateway):", request.url);
-      return await handleGatewayRequest(request, env);
+      const response = await handleGatewayRequest(request, env);
+      return addVisitorIdCookie(response, visitorId, visitorIdIsNew);
     } catch (err) {
       console.error("Gateway error (failing open):", err);
       console.log("PROXY TARGET (fallback):", request.url);
-      return fetch(request);
+      const response = await fetch(request);
+      return addVisitorIdCookie(response, visitorId, visitorIdIsNew);
     }
   }
 };

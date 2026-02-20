@@ -161,6 +161,10 @@ export async function handleTrackRequest(request, env, ctx) {
       ? decodeURIComponent(cookieMatch[1])
       : null;
 
+    // Read visitor_id from k4_vid cookie (Single Population Doctrine)
+    const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
+    const visitorId = vidCookieMatch ? vidCookieMatch[1] : null;
+
     // Store the raw edge referrer URL directly (for SQL LIKE matching)
     // normalizeReferrer is kept as fallback for old normalized cookie values
     const bestReferrer = edgeReferrer || clientReferrer;
@@ -211,7 +215,7 @@ export async function handleTrackRequest(request, env, ctx) {
         ? (page_path.match(/\/(i-[a-zA-Z0-9_-]+)\/?$/)?.[1] || null)
         : null);
       if (targetId) {
-        ctx.waitUntil(logArtView(env, 'chapter_view', targetId, request, session_id, 'js'));
+        ctx.waitUntil(logArtView(env, 'chapter_view', targetId, request, session_id, 'js', visitorId));
       }
     }
 
@@ -221,7 +225,7 @@ export async function handleTrackRequest(request, env, ctx) {
         ? page_path.replace(/^\/Galleries\//, '').replace(/^\/Other\//, '').replace(/\/$/, '')
         : null);
       if (targetId) {
-        ctx.waitUntil(logArtView(env, 'gallery_view', targetId, request, session_id, 'js'));
+        ctx.waitUntil(logArtView(env, 'gallery_view', targetId, request, session_id, 'js', visitorId));
       }
     }
 
@@ -330,7 +334,12 @@ export async function handleTrackEvent(request, env, ctx) {
       return new Response('ok', { status: 200 });
     }
 
-    ctx.waitUntil(logArtView(env, type, imageId, request, null, 'js'));
+    // Read visitor_id from k4_vid cookie
+    const cookieHeader = request.headers.get("cookie") || "";
+    const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
+    const visitorId = vidCookieMatch ? vidCookieMatch[1] : null;
+
+    ctx.waitUntil(logArtView(env, type, imageId, request, null, 'js', visitorId));
 
     return new Response('ok', {
       status: 200,

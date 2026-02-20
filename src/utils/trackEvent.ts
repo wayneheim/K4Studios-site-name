@@ -33,9 +33,9 @@ export function trackEvent(type: EventType, imageId: string | undefined | null) 
   if (fired[key]) return;
   fired[key] = 1;
   
-  // Fire and forget - send directly to CF worker for accurate geo data
-  // (Netlify proxy strips CF geo headers, so we bypass it)
-  const TRACK_URL = 'https://k4-image-proxy.wayneheim.workers.dev/__k4track/event';
+  // Fire and forget - send to same-origin endpoint which proxies to CF worker
+  // Same-origin ensures k4_vid cookie is sent for visitor tracking
+  const TRACK_URL = '/__k4track/event';
   const payload = JSON.stringify({ type, imageId });
   
   if (navigator.sendBeacon) {
@@ -46,6 +46,7 @@ export function trackEvent(type: EventType, imageId: string | undefined | null) 
       method: 'POST',
       body: payload,
       keepalive: true,
+      credentials: 'same-origin'
     }).catch(() => {}); // Ignore errors
   }
 }
