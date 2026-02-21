@@ -1,19 +1,40 @@
 // src/components/utils/getStructuredData.ts
 
 // Helper to convert image to proxy URL (never expose SmugMug URLs in structured data)
-function getProxyUrl(img: any, size: string = 'l'): string {
+function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null = 'SD'): string {
+  const prefix = sourcePrefix ? String(sourcePrefix).toUpperCase() : null;
+
+  const applyPrefix = (imageId: string) => {
+    if (!prefix) return imageId;
+    if (/^(OG|TW|PN|SD)-/i.test(imageId)) return imageId;
+    return `${prefix}-${imageId}`;
+  };
+
   // If we have an id, use the proxy
   if (img.id && img.id.startsWith('i-')) {
-    return `https://k4studios.com/img/${img.id}/${size}`;
+    return `https://k4studios.com/img/${applyPrefix(img.id)}/${size}`;
   }
   // Try to extract id from src URL
   const idMatch = img.src?.match(/\/(i-[a-zA-Z0-9]+)\//);
   if (idMatch) {
-    return `https://k4studios.com/img/${idMatch[1]}/${size}`;
+    return `https://k4studios.com/img/${applyPrefix(idMatch[1])}/${size}`;
   }
   // Fallback: if it's already a k4studios URL, use it
   if (img.src?.includes('k4studios.com')) {
-    return img.src;
+    try {
+      const u = new URL(String(img.src));
+      if (u.hostname.endsWith('k4studios.com')) {
+        const m = u.pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)\/?$/);
+        if (m) {
+          const canonicalId = m[2];
+          const safeSize = m[3] || size;
+          return `https://k4studios.com/img/${applyPrefix(canonicalId)}/${safeSize}`;
+        }
+      }
+    } catch {
+      // ignore and return as-is
+    }
+    return String(img.src);
   }
   // Last resort: return empty (shouldn't happen with proper data)
   return '';

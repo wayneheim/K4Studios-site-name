@@ -66,7 +66,6 @@ export {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // TIME BUDGET — Phase 2 Step 3 execution safety limit
-//
 // Prevents analytics from consuming excessive edge CPU under DB slowdown.
 // Resolves silently on timeout — no rejection, no branching.
 // ═══════════════════════════════════════════════════════════════════════════
@@ -137,6 +136,7 @@ function readCookieValue(cookieHeader, name) {
 
 function makeSidSetCookieHeader(requestUrl, sessionId) {
   if (!sessionId) return null;
+
   let hostname = '';
   try {
     hostname = new URL(requestUrl).hostname || '';
@@ -145,10 +145,9 @@ function makeSidSetCookieHeader(requestUrl, sessionId) {
   }
 
   // Only set a cross-subdomain cookie on the real site.
-  // This prevents browser rejection on workers.dev and keeps behavior predictable.
   const domainAttr = hostname.endsWith('k4studios.com') ? '; Domain=.k4studios.com' : '';
   const value = encodeURIComponent(String(sessionId));
-  return `k4_sid=${value}; Path=/; Max-Age=86400; SameSite=Lax; Secure${domainAttr}`;
+  return `k4_sid=${value}; Path=/; SameSite=Lax; Secure${domainAttr}`;
 }
 
 function makeVidSetCookieHeader(requestUrl, visitorId) {
@@ -207,7 +206,22 @@ export async function handleTrackRequest(request, env, ctx) {
   }
 
   try {
-    const body = await request.json();
+    let body;
+    try {
+      body = await request.json();
+    } catch (e) {
+      // Avoid 500s for malformed client payloads.
+      // Ad blockers, misconfigured beacons, or curl quoting issues can corrupt JSON.
+      const headers = new Headers({
+        'Content-Type': 'text/plain',
+        "Access-Control-Allow-Origin": getAllowedOrigin(request),
+        "Access-Control-Allow-Methods": "POST",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Vary": "Origin"
+      });
+      applyNoStore(headers);
+      return new Response('Invalid JSON', { status: 400, headers });
+    }
 
     // Extract event data
     const {
@@ -223,6 +237,10 @@ export async function handleTrackRequest(request, env, ctx) {
       event_order = null   // Event sequence within session
     } = body;
 
+    const normalizedPagePath = (typeof page_path === 'string' && page_path)
+      ? (page_path.startsWith('/') ? page_path : ('/' + page_path))
+      : null;
+
     // Event is required
     if (!event) {
       const headers = applyNoStore(new Headers({ 'Content-Type': 'text/plain' }));
@@ -232,7 +250,7 @@ export async function handleTrackRequest(request, env, ctx) {
     // Reject events from legacy SmugMug paths (photoshoots, not K4 galleries)
     // These paths return 410 Gone per _redirects but JS may still fire on cached pages
     const legacyPaths = ['/Photoshootsandevents/', '/Photography-Galleries/', '/Scheduled-Shoots/', '/Is-Winter/'];
-    if (page_path && legacyPaths.some(p => page_path.startsWith(p))) {
+    if (normalizedPagePath && legacyPaths.some(p => normalizedPagePath.startsWith(p))) {
       return new Response(JSON.stringify({ ok: true, filtered: 'legacy_path' }), {
         status: 200,
         headers: applyNoStore(new Headers({ 'Content-Type': 'application/json' }))
@@ -261,8 +279,9 @@ export async function handleTrackRequest(request, env, ctx) {
     // If missing, mint it here (JS-verified by virtue of hitting /track).
     const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
     const existingVisitorId = vidCookieMatch ? vidCookieMatch[1] : null;
-    const mintedVisitorId = (!existingVisitorId && crypto?.randomUUID)
-      ? crypto.randomUUID()
+    const cryptoObj = globalThis?.crypto;
+    const mintedVisitorId = (!existingVisitorId && typeof cryptoObj?.randomUUID === 'function')
+      ? cryptoObj.randomUUID()
       : (!existingVisitorId ? (String(Date.now()) + '-' + Math.random().toString(16).slice(2)) : null);
     const visitorId = existingVisitorId || mintedVisitorId;
 
@@ -292,24 +311,33 @@ export async function handleTrackRequest(request, env, ctx) {
     const storedEventType = (event === 'zoom_open' || event === 'zoom') ? 'xl_zoom' : event;
 
     let targetId = null;
-    if (storedEventType === 'chapter_view') {
-      targetId = image_id || inferImageIdFromPath(page_path);
+    if (storedEventType === 'page_view') {
+      // Dashboard queries expect `page_view.target_id` to be the canonical page path.
+      targetId = normalizedPagePath;
+    } else if (storedEventType === 'chapter_view') {
+      targetId = image_id || inferImageIdFromPath(normalizedPagePath);
     } else if (storedEventType === 'xl_zoom') {
-      targetId = image_id || inferImageIdFromPath(page_path);
+      targetId = image_id || inferImageIdFromPath(normalizedPagePath);
       if (event === 'xl_zoom' && targetId && bestSessionId && visitorId) {
-        ctx.waitUntil(recoverExposureFromZoom(env, request, visitorId, targetId, bestSessionId));
+        ctx?.waitUntil?.(recoverExposureFromZoom(env, request, visitorId, targetId, bestSessionId));
       }
     } else if (storedEventType === 'gallery_view') {
-      targetId = gallery_id || normalizeGalleryTargetId(page_path);
+      targetId = gallery_id || normalizeGalleryTargetId(normalizedPagePath);
+    } else if (storedEventType === 'theme_click') {
+      // Persist the theme label so Top Themes Clicked can aggregate.
+      targetId = theme || normalizedPagePath || null;
     } else {
-      targetId = image_id || gallery_id || page_path || null;
+      targetId = image_id || gallery_id || normalizedPagePath || null;
     }
 
-    ctx.waitUntil(logRawEvent(env, storedEventType, targetId, request, {
+    ctx?.waitUntil?.(logRawEvent(env, storedEventType, targetId, request, {
       sessionId: bestSessionId,
       source: 'js',
       visitorId,
-      page: request.headers.get('Referer') || null
+      // Use the client-reported page_path for easier SQL grouping.
+      page: normalizedPagePath || null,
+      // Preserve the best external referrer (edge cookie beats client hint).
+      refererOverride: bestReferrer || null
     }));
 
     const sidSetCookie = makeSidSetCookieHeader(request.url, bestSessionId);
@@ -363,19 +391,27 @@ export async function handleEdgeEvent(request, env) {
       return new Response('OK', { status: 200 });
     }
 
-    const data = await request.json();
+      let data;
+      try {
+        data = await request.json();
+      } catch (e) {
+        return new Response('Invalid JSON', {
+          status: 400,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "POST"
+          }
+        });
+      }
 
-    const eventType = data.event_type || data.eventType || '404';
+    const rawType = data.event_type || data.eventType || '404';
+    const eventType = String(rawType).trim() || '404';
     const path = data.path || data.page_path || null;
     const imageId = data.image_id || data.imageId || null;
-    const isBot = data.is_bot || data.isBot ? 1 : 0;
-    const referrer = data.referrer || null;
-    const country = data.country || request.cf?.country || null;
 
-    await env.DB.prepare(`
-      INSERT INTO edge_events (event_type, path, image_id, is_bot, referrer, country)
-      VALUES (?, ?, ?, ?, ?, ?)
-    `).bind(eventType, path, imageId, isBot, referrer, country).run();
+    // V2: edge events are logged into raw_events (source='edge').
+    // We intentionally do NOT persist is_bot here — bot classification happens via VIEWs.
+      await logEdgeEvent(env, eventType, path || 'unknown', imageId, false, request, null);
 
     return new Response('OK', {
       status: 200,
@@ -386,7 +422,9 @@ export async function handleEdgeEvent(request, env) {
     });
   } catch (err) {
     console.error("Edge event error:", err);
-    return new Response("Error", { status: 500 });
+      const url = new URL(request.url);
+      const debug = url.searchParams.get('k4debug') === '1';
+      return new Response(debug ? ("Error: " + (err?.message || String(err))) : "Error", { status: 500 });
   }
 }
 

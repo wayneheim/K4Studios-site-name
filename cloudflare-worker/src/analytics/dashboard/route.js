@@ -84,28 +84,68 @@ export async function handleDashboardRequest(request, env, ctx) {
       rangeDateClause = `ts > datetime('now', '-5 hours', '-${days} days')`;
     }
 
+    // Preserve the time-only clause (no global filters) so we can compute
+    // "how many were hidden" when Hide Bots is enabled.
+    const baseRangeDateClause = rangeDateClause;
+
     // Global filters must be baked into date/range clauses because many queries
     // only use dateClause and ignore ipClause/chardonClause.
-    const globalParts = [];
-    if (excludeIp) globalParts.push(`(ip IS NULL OR ip != '${excludeIp}')`);
+    //
+    // We keep two sets:
+    // - globalPartsNoBots: context filters (excludeIp / hideChardon)
+    // - globalPartsAll: context filters + Hide Bots (when enabled)
+    const globalPartsNoBots = [];
+    if (excludeIp) globalPartsNoBots.push(`(ip IS NULL OR ip != '${excludeIp}')`);
+
+    // If Hide Bots is enabled, we keep the actual predicate around for
+    // "Filtered"/hidden counts in the dashboard.
+    const hideBotsPredicate = hideBots
+      ? `(
+          -- Never hide the authenticated dashboard viewer by default.
+          -- If you want to remove your own traffic, use "Exclude My IP".
+          (${viewerIp ? `ip IS NOT NULL AND ip != '${viewerIp}' AND ` : ''}(
+            ip LIKE '3.%' OR ip LIKE '17.%' OR ip LIKE '18.%' OR ip LIKE '40.77.%' OR ip LIKE '52.%' OR ip LIKE '54.%' OR ip LIKE '65.55.%'
+            OR city = 'Ashburn'
+            OR ip_hash IN (SELECT ip_hash FROM blocked_ips WHERE is_active = 1)
+            OR ip_hash IN (
+              SELECT ip_hash FROM suspected_bots
+              WHERE status = 'blocked'
+                 OR is_verified_bot = 1
+                 OR is_datacenter = 1
+                 OR risk_level >= 3
+            )
+          ))
+        )`
+      : '';
 
     if (hideChardon) {
       // Hide Team = hide Chardon + hide localhost dev referrers + hide the dashboard viewer's IP.
       // (Viewer IP exclusion keeps this working even when your ISP/VPN IP changes.)
-      if (viewerIp) globalParts.push(`(ip IS NULL OR ip != '${viewerIp}')`);
-      globalParts.push(`city != 'Chardon'`);
-      globalParts.push(`(referer IS NULL OR referer NOT LIKE '%localhost%')`);
+      if (viewerIp) globalPartsNoBots.push(`(ip IS NULL OR ip != '${viewerIp}')`);
+      globalPartsNoBots.push(`city != 'Chardon'`);
+      globalPartsNoBots.push(`(referer IS NULL OR referer NOT LIKE '%localhost%')`);
     }
 
-    const globalFilterClause = globalParts.length ? (' AND ' + globalParts.join(' AND ')) : '';
+    const globalPartsAll = [...globalPartsNoBots];
+
+    if (hideBots) {
+      // Make Hide Bots apply globally (many panels only use dateClause/rangeDateClause).
+      // Uses both legacy heuristics and behavioral bot intelligence (suspected_bots).
+      globalPartsAll.push(`NOT ${hideBotsPredicate}`);
+    }
+
+    const globalFilterClause = globalPartsAll.length ? (' AND ' + globalPartsAll.join(' AND ')) : '';
+    const globalFilterClauseNoBots = globalPartsNoBots.length ? (' AND ' + globalPartsNoBots.join(' AND ')) : '';
 
     rangeDateClause = `${rangeDateClause}${globalFilterClause}`;
 
     // If a specific Eastern calendar day is selected, render stats for that day
     // (but keep the trend chart using the current range).
-    const dateClause = selectedDate
-      ? `date(ts, '-5 hours') = '${selectedDate}'${globalFilterClause}`
-      : rangeDateClause;
+    const baseDateClause = (selectedDate
+      ? `date(ts, '-5 hours') = '${selectedDate}'`
+      : baseRangeDateClause) + globalFilterClauseNoBots;
+
+    const dateClause = `${baseDateClause}${globalFilterClause}`;
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
     const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
     // Art views use ip_hash instead of raw IP (see hashIP())
@@ -114,12 +154,43 @@ export async function handleDashboardRequest(request, env, ctx) {
     // Combined art_views filter: IP exclusion + datacenter bot IPs + Chardon/localhost (via ip_hash + referrer)
     const artIpParts = [];
     if (excludeIpHash && excludeIpHash !== 'unknown') artIpParts.push(`ip_hash != '${excludeIpHash}'`);
-    if (hideBots) artIpParts.push(`NOT (ip_hash LIKE '3.%' OR ip_hash LIKE '17.%' OR ip_hash LIKE '18.%' OR ip_hash LIKE '40.77.%' OR ip_hash LIKE '52.%' OR ip_hash LIKE '54.%' OR ip_hash LIKE '65.55.%')`);
+    if (hideBots) {
+      // Hide bots for art-view panels:
+      // - hard-coded datacenter/searchbot prefixes (legacy)
+      // - active blocks
+      // - behavioral suspects (timing/velocity/volume/no-branching) from suspected_bots
+      artIpParts.push(
+        `NOT (
+          ip_hash LIKE '3.%' OR ip_hash LIKE '17.%' OR ip_hash LIKE '18.%' OR ip_hash LIKE '40.77.%' OR ip_hash LIKE '52.%' OR ip_hash LIKE '54.%' OR ip_hash LIKE '65.55.%'
+          OR ip_hash IN (SELECT ip_hash FROM blocked_ips WHERE is_active = 1)
+          OR ip_hash IN (
+            SELECT ip_hash FROM suspected_bots
+            WHERE status = 'blocked'
+               OR is_verified_bot = 1
+               OR is_datacenter = 1
+               OR risk_level >= 3
+          )
+        )`
+      );
+    }
     if (hideChardon && viewerIpHash && !excludeIpHash) artIpParts.push(`ip_hash != '${viewerIpHash}'`);
     if (hideChardon) artIpParts.push(`(referrer IS NULL OR referrer NOT LIKE '%localhost%')`);
     const artIpClause = artIpParts.length > 0 ? 'AND ' + artIpParts.join(' AND ') : '';
     // Bot filter: exclude AWS, Apple crawler (17.x), Microsoft/Bing (40.77.x, 65.55.x), Ashburn datacenter
-    const botClause = hideBots ? `AND NOT (ip LIKE '3.%' OR ip LIKE '17.%' OR ip LIKE '18.%' OR ip LIKE '40.77.%' OR ip LIKE '52.%' OR ip LIKE '54.%' OR ip LIKE '65.55.%' OR city = 'Ashburn' OR device = 'unknown')` : "";
+    const botClause = hideBots
+      ? `AND NOT (
+          ip LIKE '3.%' OR ip LIKE '17.%' OR ip LIKE '18.%' OR ip LIKE '40.77.%' OR ip LIKE '52.%' OR ip LIKE '54.%' OR ip LIKE '65.55.%'
+          OR city = 'Ashburn'
+          OR ip_hash IN (SELECT ip_hash FROM blocked_ips WHERE is_active = 1)
+          OR ip_hash IN (
+            SELECT ip_hash FROM suspected_bots
+            WHERE status = 'blocked'
+               OR is_verified_bot = 1
+               OR is_datacenter = 1
+               OR risk_level >= 3
+          )
+        )`
+      : "";
     // Chardon filter: exclude team member location
     const chardonClause = hideChardon ? `AND city != 'Chardon'` : "";
 
@@ -135,6 +206,7 @@ export async function handleDashboardRequest(request, env, ctx) {
     const html = await runDashboardController(env, {
       dateClause, galleryClause, ipClause, botClause, chardonClause,
       priorPeriodClause, rangeDateClause, artIpClause,
+      baseDateClause, hideBotsPredicate,
       yesterday, days, selectedDate, galleryFilter, excludeIp, viewerIp,
       hideBots, hideChardon
     });

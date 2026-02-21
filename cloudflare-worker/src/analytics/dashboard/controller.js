@@ -40,6 +40,7 @@ export async function handleDashboardRequest(env, filters) {
   const {
     dateClause, galleryClause, ipClause, botClause, chardonClause,
     priorPeriodClause, rangeDateClause, artIpClause,
+    baseDateClause, hideBotsPredicate,
     yesterday, days, selectedDate, galleryFilter, excludeIp, viewerIp,
     hideBots, hideChardon
   } = filters;
@@ -96,7 +97,8 @@ export async function handleDashboardRequest(env, filters) {
   const { edgeEvents, edgeSummary } = await getEdgeEvents(env, { yesterday, days });
 
   const { artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, entryRefCountsObj, imageAccessOverview, viewerDepth, suppressionStats } = await getArtViews(env, {
-    dateClause, ipClause, botClause, chardonClause, artIpClause
+    dateClause, ipClause, botClause, chardonClause, artIpClause,
+    baseDateClause, hideBotsPredicate, hideBots
   });
 
   const botIntelligence = await getBotIntelligence(env);

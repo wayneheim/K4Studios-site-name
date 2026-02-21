@@ -13,6 +13,13 @@
 // 1 cookie (k4_vid) = 1 human. IP addresses are irrelevant.
 // ═══════════════════════════════════════════════════════════════════════════
 
+import { updateBotIntelligence as refreshBotIntelligence } from './storage.js';
+
+// Internal synthetic agent (cache warmer) should never count in analytics.
+// We exclude it at ingestion in the image proxy, but also exclude it at query-time
+// so any historical rows don’t pollute dashboards.
+const notCacheWarmer = (alias) => `LOWER(COALESCE(${alias}.ua, '')) NOT LIKE '%k4-cache-warmer%'`;
+
 // ── 3-Axis Classification ──────────────────────────────────────────────
 // Axis 1: population_type  — WHO caused the event
 //   Determined by event source, NOT by referer.
@@ -53,6 +60,17 @@ function getReferrerSource(referer) {
   if (host.includes('baidu')) return 'Baidu';
   if (host.includes('chatgpt') || host.includes('openai')) return 'ChatGPT';
   return host; // fallback to raw hostname
+}
+
+function getAssetSourceLabel(assetSource) {
+  if (!assetSource) return null;
+  const s = String(assetSource).trim().toLowerCase();
+  if (!s) return null;
+  if (s === 'og') return 'Open Graph';
+  if (s === 'tw') return 'Twitter/X';
+  if (s === 'pn') return 'Pinterest';
+  if (s === 'sd') return 'Structured Data';
+  return null;
 }
 
 // Entry referrer classification — returns snake_case keys matching renderer's entryRefCounts
@@ -119,9 +137,36 @@ function getCanonicalGalleryPathForImageId(imageIdMap, imageId) {
  * Get human count - THE canonical count
  */
 export async function getHumanCount(env, dateClause = '') {
-  const query = dateClause 
-    ? `SELECT COUNT(DISTINCT visitor_id) as count FROM classified_events WHERE is_bot = 0 AND visitor_id IS NOT NULL AND ${dateClause}`
-    : `SELECT COUNT(*) as count FROM human_population`;
+  // JS proof-of-life gate:
+  // A visitor_id alone is NOT proof of a human (we set cookies server-side on HTML).
+  // To avoid cookie-only bots (e.g., SG/Helsinki scraping) polluting "human" counts,
+  // require that the visitor_id has produced at least one JS beacon at any point.
+  const jsProof = `EXISTS (
+    SELECT 1 FROM classified_events j
+    WHERE j.visitor_id = e.visitor_id
+      AND j.source = 'js'
+      AND j.visitor_id IS NOT NULL
+      AND j.visitor_id != ''
+  )`;
+
+  const query = dateClause
+    ? `
+      SELECT COUNT(DISTINCT e.visitor_id) as count
+      FROM classified_events e
+      WHERE e.is_bot = 0
+        AND e.visitor_id IS NOT NULL
+        AND e.visitor_id != ''
+        AND ${jsProof}
+        AND ${dateClause.replace(/\bts\b/g, 'e.ts')}
+    `
+    : `
+      SELECT COUNT(DISTINCT e.visitor_id) as count
+      FROM classified_events e
+      WHERE e.is_bot = 0
+        AND e.source = 'js'
+        AND e.visitor_id IS NOT NULL
+        AND e.visitor_id != ''
+    `;
   const result = await env.DB.prepare(query).first();
   return result?.count || 0;
 }
@@ -130,7 +175,12 @@ export async function getHumanCount(env, dateClause = '') {
  * Get all dashboard stats - V2 simplified
  */
 export async function getArtViews(env, filters) {
-  const { dateClause } = filters;
+  const { dateClause, baseDateClause, hideBotsPredicate, hideBots } = filters;
+  
+  // Many external-image panels intentionally include non-JS traffic (missing visitor_id),
+  // but when "Hide Bots" is enabled we should still suppress anything already classified
+  // as a bot in classified_events.
+  const notBotWhenHide = (alias) => (hideBots ? `AND COALESCE(${alias}.is_bot, 0) = 0` : '');
   
   // Start with human count - the foundation
   const humanCount = await getHumanCount(env, dateClause);
@@ -193,6 +243,8 @@ export async function getArtViews(env, filters) {
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
     `;
     const summaryResult = await env.DB.prepare(summaryQuery).all();
@@ -210,7 +262,7 @@ export async function getArtViews(env, filters) {
     }
 
     // Chapters (canonical):
-    // - Count chapter_exposure only (proxy truth + recovery writes)
+    // - Count chapter exposures from both proxy truth ('chapter_exposure') and JS beacons ('chapter_view')
     // - Dedup per (visitor_id, target_id, session_id)
     // - Back-compat: if session_id is missing, dedup per day as a safe fallback
     try {
@@ -220,7 +272,7 @@ export async function getArtViews(env, filters) {
           SELECT e.visitor_id, e.target_id, COALESCE(e.session_id, 'd:' || date(e.ts)) as session_bucket
           FROM human_population hp
           JOIN classified_events e ON e.visitor_id = hp.visitor_id
-          WHERE e.event_type = 'chapter_exposure'
+          WHERE e.event_type IN ('chapter_exposure', 'chapter_view')
             AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
           GROUP BY e.visitor_id, e.target_id, session_bucket
         )
@@ -256,7 +308,7 @@ export async function getArtViews(env, filters) {
           ) as rn
         FROM human_population hp
         JOIN classified_events e ON e.visitor_id = hp.visitor_id
-        WHERE e.event_type = 'chapter_exposure'
+        WHERE e.event_type IN ('chapter_exposure', 'chapter_view')
           AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       ),
       chapter_pairs AS (
@@ -309,7 +361,7 @@ export async function getArtViews(env, filters) {
       FROM chapter_pairs cp
       GROUP BY cp.target_id
       ORDER BY views DESC
-      LIMIT 20
+      LIMIT 2000
     `;
     const result = await env.DB.prepare(topChaptersQuery).all();
     topChapters = (result.results || []).map(r => ({
@@ -389,7 +441,7 @@ export async function getArtViews(env, filters) {
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.target_id
       ORDER BY views DESC
-      LIMIT 20
+      LIMIT 2000
     `;
     const result = await env.DB.prepare(topZoomsQuery).all();
     topZooms = (result.results || []).map(r => ({
@@ -444,7 +496,7 @@ export async function getArtViews(env, filters) {
           SUM(
             CASE
               WHEN e.event_type IN ('gallery', 'gallery_view') THEN 1
-              WHEN e.event_type = 'chapter_exposure' THEN 2
+              WHEN e.event_type IN ('chapter_exposure', 'chapter_view') THEN 2
               WHEN e.event_type = 'xl_zoom' THEN 5
               ELSE 0
             END
@@ -487,14 +539,42 @@ export async function getArtViews(env, filters) {
   // Bot count for suppression stats (not filtered out, just counted)
   let suppressionStats = { suppressedToday: 0, activeSuppressedIPs: 0 };
   try {
-    const botCountQuery = `
-      SELECT COUNT(*) as bot_events, COUNT(DISTINCT visitor_id) as bot_visitors
-      FROM classified_events 
-      WHERE is_bot = 1 AND ts > datetime('now', '-1 day')
-    `;
-    const botResult = await env.DB.prepare(botCountQuery).first();
-    suppressionStats.suppressedToday = botResult?.bot_events || 0;
-    suppressionStats.activeSuppressedIPs = botResult?.bot_visitors || 0;
+    if (hideBots && baseDateClause && hideBotsPredicate) {
+      // When Hide Bots is ON, show how many would have been excluded by the Hide Bots rule.
+      // Use visitor_id population to keep this comparable to other "human" panels.
+      const hiddenQuery = `
+        SELECT
+          COUNT(*) as hidden_events,
+          COUNT(DISTINCT visitor_id) as hidden_visitors
+        FROM classified_events
+        WHERE visitor_id IS NOT NULL
+          AND visitor_id != ''
+          AND is_bot = 0
+          AND EXISTS (
+            SELECT 1 FROM classified_events j
+            WHERE j.visitor_id = classified_events.visitor_id
+              AND j.source = 'js'
+          )
+          AND ${baseDateClause}
+          AND ${hideBotsPredicate}
+      `;
+      const hiddenResult = await env.DB.prepare(hiddenQuery).first();
+      suppressionStats.suppressedToday = hiddenResult?.hidden_events || 0;
+      suppressionStats.activeSuppressedIPs = hiddenResult?.hidden_visitors || 0;
+    } else {
+      // Default: show legacy "verified bot" classification counts for the same time window.
+      const botCountQuery = `
+        SELECT COUNT(*) as bot_events, COUNT(DISTINCT visitor_id) as bot_visitors
+        FROM classified_events
+        WHERE is_bot = 1
+          AND visitor_id IS NOT NULL
+          AND visitor_id != ''
+          AND ${dateClause || `ts > datetime('now', '-1 day')`}
+      `;
+      const botResult = await env.DB.prepare(botCountQuery).first();
+      suppressionStats.suppressedToday = botResult?.bot_events || 0;
+      suppressionStats.activeSuppressedIPs = botResult?.bot_visitors || 0;
+    }
   } catch (e) {
     console.log('Bot count query failed:', e.message);
   }
@@ -502,6 +582,67 @@ export async function getArtViews(env, filters) {
   // Top external/direct L-size image fetches (no JS required)
   let externalImageAccess = [];
   try {
+    const externalQueryWithRefTypeAndAssetSource = `
+      SELECT 
+        e.target_id,
+        COUNT(*) as hits,
+        e.referer,
+        e.ref_type,
+        e.asset_source,
+        e.country,
+        (
+          SELECT e2.country
+          FROM classified_events e2
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type IN ('external_image', 'direct_image')
+            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${notCacheWarmer('e2')}
+            ${notBotWhenHide('e2')}
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.country IS NOT NULL
+          GROUP BY e2.country, e2.region, e2.city
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as geo_country,
+        (
+          SELECT e2.region
+          FROM classified_events e2
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type IN ('external_image', 'direct_image')
+            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${notCacheWarmer('e2')}
+            ${notBotWhenHide('e2')}
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.country IS NOT NULL
+          GROUP BY e2.country, e2.region, e2.city
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as geo_region,
+        (
+          SELECT e2.city
+          FROM classified_events e2
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type IN ('external_image', 'direct_image')
+            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${notCacheWarmer('e2')}
+            ${notBotWhenHide('e2')}
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.country IS NOT NULL
+          GROUP BY e2.country, e2.region, e2.city
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as geo_city
+      FROM classified_events e
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
+        AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+      GROUP BY e.target_id, e.referer, e.ref_type, e.asset_source
+      ORDER BY hits DESC
+      LIMIT 2000
+    `;
+
     const externalQueryWithRefType = `
       SELECT 
         e.target_id,
@@ -515,6 +656,8 @@ export async function getArtViews(env, filters) {
           WHERE e2.target_id = e.target_id
             AND e2.event_type IN ('external_image', 'direct_image')
             AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${notCacheWarmer('e2')}
+            ${notBotWhenHide('e2')}
             AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
             AND e2.country IS NOT NULL
           GROUP BY e2.country, e2.region, e2.city
@@ -527,6 +670,8 @@ export async function getArtViews(env, filters) {
           WHERE e2.target_id = e.target_id
             AND e2.event_type IN ('external_image', 'direct_image')
             AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${notCacheWarmer('e2')}
+            ${notBotWhenHide('e2')}
             AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
             AND e2.country IS NOT NULL
           GROUP BY e2.country, e2.region, e2.city
@@ -539,6 +684,8 @@ export async function getArtViews(env, filters) {
           WHERE e2.target_id = e.target_id
             AND e2.event_type IN ('external_image', 'direct_image')
             AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${notCacheWarmer('e2')}
+            ${notBotWhenHide('e2')}
             AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
             AND e2.country IS NOT NULL
           GROUP BY e2.country, e2.region, e2.city
@@ -548,10 +695,12 @@ export async function getArtViews(env, filters) {
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.target_id, e.referer, e.ref_type
       ORDER BY hits DESC
-      LIMIT 30
+      LIMIT 2000
     `;
 
     const externalQueryLegacy = `
@@ -566,6 +715,8 @@ export async function getArtViews(env, filters) {
           WHERE e2.target_id = e.target_id
             AND e2.event_type IN ('external_image', 'direct_image')
             AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${notCacheWarmer('e2')}
+            ${notBotWhenHide('e2')}
             AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
             AND e2.country IS NOT NULL
           GROUP BY e2.country, e2.region, e2.city
@@ -578,6 +729,8 @@ export async function getArtViews(env, filters) {
           WHERE e2.target_id = e.target_id
             AND e2.event_type IN ('external_image', 'direct_image')
             AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${notCacheWarmer('e2')}
+            ${notBotWhenHide('e2')}
             AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
             AND e2.country IS NOT NULL
           GROUP BY e2.country, e2.region, e2.city
@@ -590,6 +743,8 @@ export async function getArtViews(env, filters) {
           WHERE e2.target_id = e.target_id
             AND e2.event_type IN ('external_image', 'direct_image')
             AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${notCacheWarmer('e2')}
+            ${notBotWhenHide('e2')}
             AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
             AND e2.country IS NOT NULL
           GROUP BY e2.country, e2.region, e2.city
@@ -599,18 +754,22 @@ export async function getArtViews(env, filters) {
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.target_id, e.referer
       ORDER BY hits DESC
-      LIMIT 30
+      LIMIT 2000
     `;
 
     let result;
     try {
-      result = await env.DB.prepare(externalQueryWithRefType).all();
+      result = await env.DB.prepare(externalQueryWithRefTypeAndAssetSource).all();
     } catch (e) {
       const msg = String(e?.message || e);
-      if (msg.includes('no such column') && msg.includes('ref_type')) {
+      if (msg.includes('no such column') && msg.includes('asset_source')) {
+        result = await env.DB.prepare(externalQueryWithRefType).all();
+      } else if (msg.includes('no such column') && msg.includes('ref_type')) {
         result = await env.DB.prepare(externalQueryLegacy).all();
       } else {
         throw e;
@@ -618,6 +777,7 @@ export async function getArtViews(env, filters) {
     }
     const accessPriority = { external_referral: 0, direct: 1, internal_navigation: 2, unknown: 3 };
     externalImageAccess = (result.results || []).map(r => {
+      const assetSourceLabel = getAssetSourceLabel(r.asset_source);
       const accessType = r.ref_type
         ? (r.ref_type === 'direct' ? 'direct'
           : r.ref_type === 'external' ? 'external_referral'
@@ -638,6 +798,8 @@ export async function getArtViews(env, filters) {
         hits: r.hits,
         access_type: accessType,
         referrer_source: referrerSource,
+        asset_source: r.asset_source || null,
+        asset_source_label: assetSourceLabel,
         referer_host: refererHost,
         country: r.country,
         geo: { country: r.geo_country, region: r.geo_region, city: r.geo_city }
@@ -655,6 +817,8 @@ export async function getArtViews(env, filters) {
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
     `;
     const result = await env.DB.prepare(totalQuery).first();
@@ -671,10 +835,14 @@ export async function getArtViews(env, filters) {
         e.country,
         e.city,
         e.region,
-        COUNT(*) as hits
+        COUNT(DISTINCT e.ip_hash) as hits
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
+        AND e.ip_hash IS NOT NULL
+        AND e.ip_hash != ''
         AND e.country IS NOT NULL
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.country, e.city, e.region
@@ -699,10 +867,14 @@ export async function getArtViews(env, filters) {
       SELECT 
         e.referer,
         e.ref_type,
-        COUNT(*) as hits
+        COUNT(DISTINCT e.ip_hash) as hits
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
+        AND e.ip_hash IS NOT NULL
+        AND e.ip_hash != ''
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.referer, e.ref_type
       ORDER BY hits DESC
@@ -712,10 +884,14 @@ export async function getArtViews(env, filters) {
     const srcQueryLegacy = `
       SELECT 
         e.referer,
-        COUNT(*) as hits
+        COUNT(DISTINCT e.ip_hash) as hits
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
+        AND e.ip_hash IS NOT NULL
+        AND e.ip_hash != ''
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.referer
       ORDER BY hits DESC
@@ -770,6 +946,8 @@ export async function getArtViews(env, filters) {
           WHERE e2.target_id = e.target_id
             AND e2.event_type IN ('external_image', 'direct_image')
             AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
+            AND ${notCacheWarmer('e2')}
+            ${notBotWhenHide('e2')}
             AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
             AND e2.referer IS NOT NULL
           GROUP BY e2.referer
@@ -779,6 +957,8 @@ export async function getArtViews(env, filters) {
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.target_id
       ORDER BY views DESC
@@ -811,6 +991,8 @@ export async function getArtViews(env, filters) {
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.referer, e.ref_type
       ORDER BY views DESC
@@ -824,6 +1006,8 @@ export async function getArtViews(env, filters) {
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.referer
       ORDER BY views DESC
@@ -875,6 +1059,8 @@ export async function getArtViews(env, filters) {
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.referer, e.ref_type
     `;
@@ -886,6 +1072,8 @@ export async function getArtViews(env, filters) {
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.referer
     `;
@@ -921,10 +1109,14 @@ export async function getArtViews(env, filters) {
         e.country,
         e.city,
         e.region,
-        COUNT(DISTINCT e.ip) as unique_viewers
+        COUNT(DISTINCT e.ip_hash) as unique_viewers
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
+        AND e.ip_hash IS NOT NULL
+        AND e.ip_hash != ''
         AND e.country IS NOT NULL
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.country, e.city, e.region
@@ -1011,6 +1203,9 @@ export async function getArtViews(env, filters) {
       setGeoIfBetter(img, ext.geo, 1); // unverified
     }
     if (ext.country) img.countries.add(ext.country);
+    if (ext.asset_source_label) {
+      img.sources.push(ext.asset_source_label);
+    }
     if (ext.referrer_source && ext.referrer_source !== 'Direct' && ext.referrer_source !== 'Internal' && ext.referrer_source !== 'Unknown') {
       img.sources.push(ext.referrer_source);
     } else if (ext.access_type === 'direct') {
@@ -1097,7 +1292,38 @@ export async function getDashboardStats(env, filters) {
     };
   }
   
-  // Get event count for humans
+  // Count distinct engaged sessions (client session_id) for humans.
+  // This is the closest thing to "real humans" in the dashboard sense:
+  // - JS beaconed (source='js')
+  // - page_view (session-scoped)
+  // - non-bot
+  let sessionCount = 0;
+  try {
+    const sessionsQuery = `
+      SELECT COUNT(DISTINCT e.session_id) as sessions
+      FROM classified_events e
+      WHERE e.event_type = 'page_view'
+        AND e.source = 'js'
+        AND COALESCE(e.is_bot, 0) = 0
+        AND e.session_id IS NOT NULL
+        AND e.visitor_id IS NOT NULL
+        AND e.visitor_id != ''
+        AND EXISTS (
+          SELECT 1 FROM classified_events j
+          WHERE j.visitor_id = e.visitor_id
+            AND j.source = 'js'
+            AND j.visitor_id IS NOT NULL
+            AND j.visitor_id != ''
+        )
+        AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+    `;
+    const result = await env.DB.prepare(sessionsQuery).first();
+    sessionCount = result?.sessions || 0;
+  } catch (e) {
+    console.log('Sessions count failed:', e.message);
+  }
+
+  // Get JS event count for humans (engagement beacons)
   let totalEvents = 0;
   try {
     const eventsQuery = `
@@ -1105,6 +1331,12 @@ export async function getDashboardStats(env, filters) {
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+        AND e.source = 'js'
+        AND EXISTS (
+          SELECT 1 FROM classified_events j
+          WHERE j.visitor_id = e.visitor_id
+            AND j.source = 'js'
+        )
     `;
     const result = await env.DB.prepare(eventsQuery).first();
     totalEvents = result?.count || 0;
@@ -1115,9 +1347,9 @@ export async function getDashboardStats(env, filters) {
   return {
     summary: {
       unique_visitors: humanCount,
-      sessions: humanCount, // In V2, sessions ≈ unique visitors for now
+      sessions: sessionCount,
       total_events: totalEvents,
-      avg_events_per_session: humanCount > 0 ? Math.round(totalEvents / humanCount * 10) / 10 : 0,
+      avg_events_per_session: sessionCount > 0 ? Math.round(totalEvents / sessionCount * 10) / 10 : 0,
       pct_navigated: 0,
       collector_notes_opens: 0
     },
@@ -1256,7 +1488,174 @@ export async function getEventBreakdown(env, filters) {
 }
 
 export async function getGalleryPerformance(env, filters) {
-  return { results: [] };
+  try {
+    const { dateClause, ipClause, botClause, chardonClause } = filters;
+
+    const qualify = (clause, alias) => (clause || '')
+      .replace(/\bts\b/g, `${alias}.ts`)
+      .replace(/\bip\b/g, `${alias}.ip`)
+      .replace(/\bcity\b/g, `${alias}.city`)
+      .replace(/\bcountry\b/g, `${alias}.country`)
+      .replace(/\bregion\b/g, `${alias}.region`);
+
+    const safeBotClause = (botClause || '')
+      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, ' ')
+      .replace(/\bdevice\s*=\s*'unknown'\b/gi, '1=1');
+
+    const whereE = qualify(dateClause, 'e') || 'e.ts > datetime("now", "-1 day")';
+    const whereE2 = qualify(dateClause, 'e2') || 'e2.ts > datetime("now", "-1 day")';
+
+    // Derive gallery base path from the page_view path.
+    const galleryQuery = `
+      WITH normalized_page_views AS (
+        SELECT
+          e.session_id,
+          (
+            CASE
+              WHEN COALESCE(NULLIF(e.page, ''), e.target_id) LIKE 'https://www.k4studios.com/%' THEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 25)
+              WHEN COALESCE(NULLIF(e.page, ''), e.target_id) LIKE 'https://k4studios.com/%' THEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 22)
+              WHEN COALESCE(NULLIF(e.page, ''), e.target_id) LIKE 'http://www.k4studios.com/%' THEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 24)
+              WHEN COALESCE(NULLIF(e.page, ''), e.target_id) LIKE 'http://k4studios.com/%' THEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 21)
+              ELSE COALESCE(NULLIF(e.page, ''), e.target_id)
+            END
+          ) AS page_path
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${whereE}
+          ${qualify(ipClause, 'e')}
+          ${qualify(safeBotClause, 'e')}
+          ${qualify(chardonClause, 'e')}
+          AND e.source = 'js'
+          AND e.event_type = 'page_view'
+          AND e.session_id IS NOT NULL
+          AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
+      ),
+      page_views AS (
+        SELECT
+          session_id,
+          page_path,
+          CASE
+            WHEN page_path LIKE '%/i-%' THEN (
+              CASE
+                WHEN SUBSTR(page_path, 1, INSTR(page_path, '/i-') - 1) LIKE '%/Gallery'
+                  THEN SUBSTR(SUBSTR(page_path, 1, INSTR(page_path, '/i-') - 1), 1, LENGTH(SUBSTR(page_path, 1, INSTR(page_path, '/i-') - 1)) - 8)
+                ELSE SUBSTR(page_path, 1, INSTR(page_path, '/i-') - 1)
+              END
+            )
+            WHEN page_path LIKE '%/Gallery' THEN SUBSTR(page_path, 1, LENGTH(page_path) - 8)
+            WHEN page_path LIKE '/Galleries/%' OR page_path LIKE '/Other/%' THEN (
+              CASE
+                WHEN RTRIM(page_path, '/') LIKE '%/Gallery' THEN SUBSTR(RTRIM(page_path, '/'), 1, LENGTH(RTRIM(page_path, '/')) - 8)
+                ELSE RTRIM(page_path, '/')
+              END
+            )
+            ELSE NULL
+          END AS base_path
+        FROM normalized_page_views
+        WHERE (page_path LIKE '/Galleries/%' OR page_path LIKE '/Other/%')
+          AND page_path NOT IN ('/Galleries', '/Galleries/', '/Other', '/Other/')
+      ),
+      session_gallery AS (
+        SELECT DISTINCT session_id, base_path
+        FROM page_views
+        WHERE base_path IS NOT NULL
+      ),
+      normalized_zoom_events AS (
+        SELECT DISTINCT
+          e.session_id,
+          (
+            CASE
+              WHEN e.page LIKE 'https://www.k4studios.com/%' THEN SUBSTR(e.page, 25)
+              WHEN e.page LIKE 'https://k4studios.com/%' THEN SUBSTR(e.page, 22)
+              WHEN e.page LIKE 'http://www.k4studios.com/%' THEN SUBSTR(e.page, 24)
+              WHEN e.page LIKE 'http://k4studios.com/%' THEN SUBSTR(e.page, 21)
+              ELSE e.page
+            END
+          ) AS page_path
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${whereE}
+          ${qualify(ipClause, 'e')}
+          ${qualify(safeBotClause, 'e')}
+          ${qualify(chardonClause, 'e')}
+          AND e.source = 'js'
+          AND e.event_type = 'xl_zoom'
+          AND e.session_id IS NOT NULL
+          AND e.page IS NOT NULL
+      ),
+      zoom_events AS (
+        SELECT DISTINCT
+          session_id,
+          CASE
+            WHEN page_path LIKE '%/i-%' THEN (
+              CASE
+                WHEN SUBSTR(page_path, 1, INSTR(page_path, '/i-') - 1) LIKE '%/Gallery'
+                  THEN SUBSTR(SUBSTR(page_path, 1, INSTR(page_path, '/i-') - 1), 1, LENGTH(SUBSTR(page_path, 1, INSTR(page_path, '/i-') - 1)) - 8)
+                ELSE SUBSTR(page_path, 1, INSTR(page_path, '/i-') - 1)
+              END
+            )
+            ELSE NULL
+          END AS base_path
+        FROM normalized_zoom_events
+      )
+      SELECT
+        sg.base_path AS gallery_id,
+        COUNT(DISTINCT sg.session_id) AS sessions,
+        ROUND(
+          100.0 * COUNT(DISTINCT CASE WHEN ze.session_id IS NOT NULL THEN sg.session_id END)
+          / NULLIF(COUNT(DISTINCT sg.session_id), 0),
+          1
+        ) AS zoom_pct,
+        ROUND(
+          1.0 * COUNT(e2.id) / NULLIF(COUNT(DISTINCT sg.session_id), 0),
+          1
+        ) AS avg_events
+      FROM session_gallery sg
+      LEFT JOIN zoom_events ze
+        ON ze.session_id = sg.session_id AND ze.base_path = sg.base_path
+      JOIN classified_events e2
+        ON e2.session_id = sg.session_id
+      WHERE e2.source = 'js'
+        AND ${whereE2}
+        ${qualify(ipClause, 'e2')}
+        ${qualify(safeBotClause, 'e2')}
+        ${qualify(chardonClause, 'e2')}
+      GROUP BY sg.base_path
+      ORDER BY sessions DESC
+      LIMIT 15
+    `;
+
+    const galleriesRaw = await env.DB.prepare(galleryQuery).all();
+    const rows = galleriesRaw?.results || [];
+
+    const results = rows.map(r => {
+      const fullPath = String(r.gallery_id || '');
+      const parts = fullPath.split('/').filter(Boolean);
+      const displayName = parts.slice(-2).join(' › ').replace(/-/g, ' ');
+
+      let gallery_type = 'other';
+      if (fullPath.includes('/Painterly-Fine-Art-Photography/')) {
+        gallery_type = 'painterly';
+      } else if (fullPath.includes('/Fine-Art-Photography/')) {
+        gallery_type = 'traditional';
+      } else if (fullPath.includes('/Engrained/') || fullPath.includes('/Archive/')) {
+        gallery_type = 'select';
+      }
+
+      return {
+        gallery_id: displayName || fullPath || 'Unknown',
+        gallery_type,
+        sessions: r.sessions || 0,
+        zoom_pct: r.zoom_pct || 0,
+        avg_events: r.avg_events || 0
+      };
+    });
+
+    return { results };
+  } catch (e) {
+    console.log('Gallery performance query failed:', e.message);
+    return { results: [] };
+  }
 }
 
 export async function getReferrers(env, filters) {
@@ -1274,6 +1673,11 @@ export async function getGeography(env, filters) {
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
         AND e.country IS NOT NULL
+        AND EXISTS (
+          SELECT 1 FROM classified_events j
+          WHERE j.visitor_id = e.visitor_id
+            AND j.source = 'js'
+        )
       GROUP BY e.country, e.region, e.city
       ORDER BY visitors DESC
       LIMIT 20
@@ -1309,8 +1713,16 @@ export async function getDailyTrend(env, filters) {
     const trendQuery = `
       SELECT
         date(e.ts, '-5 hours') as day,
-        COUNT(DISTINCT e.visitor_id) as visitors,
-        COUNT(DISTINCT e.session_id) as sessions
+        COUNT(DISTINCT CASE
+          WHEN e.source = 'js' AND e.event_type = 'page_view' AND COALESCE(e.is_bot, 0) = 0
+          THEN e.visitor_id
+          ELSE NULL
+        END) as visitors,
+        COUNT(DISTINCT CASE
+          WHEN e.source = 'js' AND e.event_type = 'page_view' AND COALESCE(e.is_bot, 0) = 0
+          THEN NULLIF(e.session_id, '')
+          ELSE NULL
+        END) as sessions
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${where}
@@ -1318,6 +1730,11 @@ export async function getDailyTrend(env, filters) {
         ${qualify(ipClause)}
         ${qualify(botClause)}
         ${qualify(chardonClause)}
+        AND EXISTS (
+          SELECT 1 FROM classified_events j
+          WHERE j.visitor_id = e.visitor_id
+            AND j.source = 'js'
+        )
       GROUP BY date(e.ts, '-5 hours')
       ORDER BY day ASC
     `;
@@ -1332,17 +1749,34 @@ export async function getDailyTrend(env, filters) {
 export async function getSessionMetrics(env, filters) {
   try {
     const { dateClause } = filters;
-    const where = dateClause?.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")';
+
+    // dateClause is built in dashboard/route.js and may include columns like ip/city/referer.
+    // Qualify those to the classified_events alias so JOIN queries don't become ambiguous.
+    const qualify = (clause) => (clause || '')
+      .replace(/\bts\b/g, 'e.ts')
+      .replace(/\bip\b/g, 'e.ip')
+      .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bcountry\b/g, 'e.country')
+      .replace(/\bregion\b/g, 'e.region')
+      .replace(/\breferer\b/g, 'e.referer')
+      .replace(/\bua\b/g, 'e.ua');
+
+    const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
+
+    // Session key fallback: if session_id is missing, bucket by visitor+Eastern day.
+    // This prevents Pulse metrics from collapsing to 0 when some beacons omit session_id.
+    const sessionKey = `COALESCE(NULLIF(e.session_id, ''), e.visitor_id || ':' || date(e.ts, '-5 hours'))`;
 
     // Devices must aggregate at the human/session layer (human_population),
     // then be scoped to the time range via JOIN on classified_events.
     const devicesQuery = `
       SELECT 
         LOWER(COALESCE(hp.device_type, 'unknown')) as device,
-        COUNT(DISTINCT hp.visitor_id) as sessions
+        COUNT(DISTINCT ${sessionKey}) as sessions
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${where}
+        AND e.source = 'js'
       GROUP BY device
       ORDER BY sessions DESC
     `;
@@ -1354,11 +1788,13 @@ export async function getSessionMetrics(env, filters) {
         COUNT(*) as total_sessions,
         SUM(CASE WHEN event_count = 1 THEN 1 ELSE 0 END) as bounce_sessions
       FROM (
-        SELECT e.session_id, COUNT(*) as event_count
+        SELECT ${sessionKey} as session_key, COUNT(*) as event_count
         FROM human_population hp
         JOIN classified_events e ON e.visitor_id = hp.visitor_id
-        WHERE ${where} AND e.session_id IS NOT NULL
-        GROUP BY e.session_id
+        WHERE ${where}
+          AND e.source = 'js'
+          AND e.visitor_id IS NOT NULL
+        GROUP BY session_key
       )
     `;
     const bounceResult = await env.DB.prepare(bounceQuery).first();
@@ -1371,12 +1807,14 @@ export async function getSessionMetrics(env, filters) {
       SELECT ROUND(AVG(duration_seconds), 0) as avg_duration
       FROM (
         SELECT 
-          e.session_id,
+          ${sessionKey} as session_key,
           (JULIANDAY(MAX(e.ts)) - JULIANDAY(MIN(e.ts))) * 86400 as duration_seconds
         FROM human_population hp
         JOIN classified_events e ON e.visitor_id = hp.visitor_id
-        WHERE ${where} AND e.session_id IS NOT NULL
-        GROUP BY e.session_id
+        WHERE ${where}
+          AND e.source = 'js'
+          AND e.visitor_id IS NOT NULL
+        GROUP BY session_key
         HAVING COUNT(*) > 1
       )
     `;
@@ -1390,10 +1828,12 @@ export async function getSessionMetrics(env, filters) {
     const peakHoursQuery = `
       SELECT 
         CAST(strftime('%H', e.ts, '-5 hours') AS INTEGER) as hour,
-        COUNT(DISTINCT e.session_id) as sessions
+        COUNT(DISTINCT ${sessionKey}) as sessions
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
-      WHERE ${where} AND e.session_id IS NOT NULL
+      WHERE ${where}
+        AND e.source = 'js'
+        AND e.visitor_id IS NOT NULL
       GROUP BY hour
       ORDER BY sessions DESC
     `;
@@ -1467,7 +1907,79 @@ export async function getSessionMetrics(env, filters) {
 }
 
 export async function getTopPages(env, filters) {
-  return { results: [] };
+  try {
+    const { dateClause, ipClause, botClause, chardonClause } = filters;
+
+    const qualify = (clause) => (clause || '')
+      .replace(/\bts\b/g, 'e.ts')
+      .replace(/\bip\b/g, 'e.ip')
+      .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bcountry\b/g, 'e.country')
+      .replace(/\bregion\b/g, 'e.region')
+      .replace(/\breferer\b/g, 'e.referer');
+
+    const safeBotClause = (botClause || '')
+      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, ' ')
+      .replace(/\bdevice\s*=\s*'unknown'\b/gi, '1=1');
+
+    const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
+
+    const pagesQuery = `
+      SELECT
+        CASE
+          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
+          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
+        END AS page_path,
+        COUNT(DISTINCT e.session_id) AS sessions,
+        COUNT(*) AS events
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE ${where}
+        ${qualify(ipClause)}
+        ${qualify(safeBotClause)}
+        ${qualify(chardonClause)}
+        AND e.source = 'js'
+        AND e.event_type = 'page_view'
+        AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
+        AND e.session_id IS NOT NULL
+        AND (CASE
+          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
+          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
+        END) NOT LIKE '%/i-%'
+        AND (CASE
+          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
+          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
+        END) NOT LIKE '/Photoshootsandevents/%'
+        AND (CASE
+          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
+          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
+        END) NOT LIKE '/Scheduled-Shoots/%'
+        AND (CASE
+          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
+          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
+        END) NOT LIKE '/Other/Photo-Shoots/%'
+        AND (CASE
+          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
+          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
+        END) NOT LIKE '/Other/Photo-Shoots-and-Themes/%'
+        AND (CASE
+          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
+          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
+        END) NOT LIKE '/Is-Winter/%'
+        AND (CASE
+          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
+          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
+        END) NOT LIKE '/Photography-Galleries/%'
+      GROUP BY page_path
+      ORDER BY sessions DESC
+      LIMIT 10
+    `;
+
+    return await env.DB.prepare(pagesQuery).all();
+  } catch (e) {
+    console.log('Top pages query failed:', e.message);
+    return { results: [] };
+  }
 }
 
 export async function getTopImages(env, filters) {
@@ -1475,12 +1987,133 @@ export async function getTopImages(env, filters) {
 }
 
 export async function getEntryAnalysis(env, filters) {
-  return {
-    entryPages: { results: [] },
-    imagePageViewsFromEvents: 0,
-    imageEntrySessionsFromEvents: 0,
-    entryRefCounts: { results: [] }
-  };
+  try {
+    const { dateClause, ipClause, botClause, chardonClause } = filters;
+
+    const qualify = (clause) => (clause || '')
+      .replace(/\bts\b/g, 'e.ts')
+      .replace(/\bip\b/g, 'e.ip')
+      .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bcountry\b/g, 'e.country')
+      .replace(/\bregion\b/g, 'e.region')
+      .replace(/\breferer\b/g, 'e.referer');
+
+    const safeBotClause = (botClause || '')
+      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, ' ')
+      .replace(/\bdevice\s*=\s*'unknown'\b/gi, '1=1');
+
+    const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
+
+    const entryPagesQuery = `
+      WITH first_pages AS (
+        SELECT
+          e.session_id,
+          CASE
+            WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
+            ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
+          END AS page_path,
+          e.referer AS referrer,
+          ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.ts ASC) AS rn
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND e.source = 'js'
+          AND e.event_type = 'page_view'
+          AND e.session_id IS NOT NULL
+          AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
+      )
+      SELECT
+        page_path,
+        CASE
+          WHEN referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' THEN 'direct'
+          WHEN referrer LIKE '%images.google.%' OR referrer LIKE '%google.%/imgres%' THEN 'google_images'
+          WHEN referrer LIKE '%google.%' THEN 'google_search'
+          WHEN referrer LIKE '%bing.%/images%' THEN 'bing_images'
+          WHEN referrer LIKE '%bing.%' THEN 'bing_search'
+          WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
+          WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
+          WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'twitter'
+          WHEN referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'chatgpt'
+          WHEN referrer LIKE '%instagram.%' THEN 'instagram'
+          WHEN referrer LIKE '%linkedin.%' THEN 'linkedin'
+          WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
+          WHEN referrer LIKE '%k4studios.com%' THEN 'internal'
+          ELSE 'unattributed'
+        END AS ref_source,
+        COUNT(DISTINCT session_id) AS sessions
+      FROM first_pages
+      WHERE rn = 1
+      GROUP BY page_path, ref_source
+      ORDER BY sessions DESC
+      LIMIT 15
+    `;
+
+    const entryPages = await env.DB.prepare(entryPagesQuery).all();
+
+    let imagePageViewsFromEvents = 0;
+    let imageEntrySessionsFromEvents = 0;
+    try {
+      const imagePageViewsQuery = `
+        SELECT COUNT(*) as views
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND e.source = 'js'
+          AND e.event_type = 'page_view'
+          AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
+          AND COALESCE(NULLIF(e.page, ''), e.target_id) LIKE '%/i-%'
+      `;
+      const imagePageViewsResult = await env.DB.prepare(imagePageViewsQuery).first();
+      imagePageViewsFromEvents = imagePageViewsResult?.views || 0;
+
+      const imageEntrySessionsQuery = `
+        WITH first_pages AS (
+          SELECT
+            e.session_id,
+            ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.ts ASC) AS rn,
+            COALESCE(NULLIF(e.page, ''), e.target_id) AS page_path
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
+          WHERE ${where}
+            ${qualify(ipClause)}
+            ${qualify(safeBotClause)}
+            ${qualify(chardonClause)}
+            AND e.source = 'js'
+            AND e.event_type = 'page_view'
+            AND e.session_id IS NOT NULL
+            AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
+        )
+        SELECT COUNT(DISTINCT session_id) as sessions
+        FROM first_pages
+        WHERE rn = 1 AND page_path LIKE '%/i-%'
+      `;
+      const imageEntrySessionsResult = await env.DB.prepare(imageEntrySessionsQuery).first();
+      imageEntrySessionsFromEvents = imageEntrySessionsResult?.sessions || 0;
+    } catch (e) {
+      console.log('Entry diagnostics query failed:', e.message);
+    }
+
+    return {
+      entryPages,
+      imagePageViewsFromEvents,
+      imageEntrySessionsFromEvents,
+      entryRefCounts: { results: [] }
+    };
+  } catch (e) {
+    console.log('Entry analysis query failed:', e.message);
+    return {
+      entryPages: { results: [] },
+      imagePageViewsFromEvents: 0,
+      imageEntrySessionsFromEvents: 0,
+      entryRefCounts: { results: [] }
+    };
+  }
 }
 
 export async function getEngagementDepth(env, filters) {
@@ -1516,8 +2149,35 @@ export async function getEngagementDepth(env, filters) {
     const cowboyRow = await env.DB.prepare(cowboyQuery).first();
     const cowboyJumps = cowboyRow?.count || 0;
 
+    // Top 10 themes clicked (theme label stored in target_id)
+    let themesClicked = { results: [] };
+    try {
+      const themesQuery = `
+        SELECT
+          e.target_id AS theme,
+          COUNT(DISTINCT e.session_id) AS sessions,
+          COUNT(*) AS clicks
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND e.source = 'js'
+          AND e.event_type = 'theme_click'
+          AND e.target_id IS NOT NULL
+          AND e.session_id IS NOT NULL
+        GROUP BY e.target_id
+        ORDER BY sessions DESC
+        LIMIT 10
+      `;
+      themesClicked = await env.DB.prepare(themesQuery).all();
+    } catch (e) {
+      console.log('Themes clicked query failed:', e.message);
+    }
+
     return {
-      themesClicked: { results: [] },
+      themesClicked,
       cowboyJumps,
       topDepthSessions: [],
       minEngagement: 0,
@@ -1548,57 +2208,337 @@ export async function getEngagementDepth(env, filters) {
 }
 
 export async function getExitAnalysis(env, filters) {
-  return {
-    exitPages: { results: [] },
-    exitSummary: {},
-    exitByCategory: []
-  };
+  try {
+    const { dateClause, ipClause, botClause, chardonClause } = filters;
+
+    const qualify = (clause) => (clause || '')
+      .replace(/\bts\b/g, 'e.ts')
+      .replace(/\bip\b/g, 'e.ip')
+      .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bcountry\b/g, 'e.country')
+      .replace(/\bregion\b/g, 'e.region')
+      .replace(/\breferer\b/g, 'e.referer');
+
+    const safeBotClause = (botClause || '')
+      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, ' ')
+      .replace(/\bdevice\s*=\s*'unknown'\b/gi, '1=1');
+
+    const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
+
+    // Find the last page_view per session (human JS sessions only)
+    const exitPagesQuery = `
+      WITH last_pages AS (
+        SELECT
+          e.session_id,
+          CASE
+            WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
+            ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
+          END AS page_path,
+          ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.ts DESC) AS rn
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND e.source = 'js'
+          AND e.event_type = 'page_view'
+          AND e.session_id IS NOT NULL
+          AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
+      )
+      SELECT
+        page_path,
+        COUNT(*) AS sessions
+      FROM last_pages
+      WHERE rn = 1
+      GROUP BY page_path
+      ORDER BY sessions DESC
+      LIMIT 15
+    `;
+
+    const exitPages = await env.DB.prepare(exitPagesQuery).all();
+    const rows = exitPages?.results || [];
+
+    const exitByCategory = {
+      home: 0,
+      gallery: 0,
+      images: 0,
+      landing: 0,
+      blog: 0,
+      photoshoots: 0,
+      other: 0
+    };
+
+    const isLandingPage = (path) => {
+      // A simple, stable heuristic: single-segment pages (e.g. /Western-Wall-Art/)
+      // are treated as landing/marketing pages.
+      if (!path || typeof path !== 'string') return false;
+      if (path === '/' || path === '') return false;
+      if (path.startsWith('/Galleries/') || path.startsWith('/Other/')) return false;
+      if (path.startsWith('/Blog/') || path.startsWith('/blog/')) return false;
+      if (path.startsWith('/Photoshootsandevents/') || path.startsWith('/Photography-Galleries/') || path.startsWith('/Scheduled-Shoots/')) return false;
+      return /^\/[^\/]+\/?$/.test(path);
+    };
+
+    for (const r of rows) {
+      const path = String(r.page_path || '');
+      const sessions = Number(r.sessions || 0);
+      if (!sessions) continue;
+
+      if (path === '/' || path === '') {
+        exitByCategory.home += sessions;
+      } else if (path.includes('/i-')) {
+        exitByCategory.images += sessions;
+      } else if (path.startsWith('/Galleries/') || path.startsWith('/Other/')) {
+        exitByCategory.gallery += sessions;
+      } else if (path.startsWith('/Blog/') || path.startsWith('/blog/')) {
+        exitByCategory.blog += sessions;
+      } else if (path.startsWith('/Photoshootsandevents/') || path.startsWith('/Photography-Galleries/') || path.startsWith('/Scheduled-Shoots/')) {
+        exitByCategory.photoshoots += sessions;
+      } else if (isLandingPage(path)) {
+        exitByCategory.landing += sessions;
+      } else {
+        exitByCategory.other += sessions;
+      }
+    }
+
+    const exitSummary = {
+      total_exit_sessions: rows.reduce((sum, r) => sum + Number(r.sessions || 0), 0)
+    };
+
+    return { exitPages, exitSummary, exitByCategory };
+  } catch (e) {
+    console.log('Exit analysis query failed:', e.message);
+    return { exitPages: { results: [] }, exitSummary: {}, exitByCategory: {} };
+  }
 }
 
 export async function getEdgeEvents(env, filters) {
-  return { edgeEvents: { results: [] }, edgeSummary: [] };
+  try {
+    const { yesterday, days } = filters || {};
+    const d = Math.max(1, Math.min(parseInt(days || '1', 10) || 1, 31));
+
+    const dateWhere = yesterday
+      ? `date(e.ts, '-5 hours') = date('now', '-5 hours', '-1 day')`
+      : `e.ts > datetime('now', '-${d} day')`;
+
+    const eventsQuery = `
+      SELECT
+        e.event_type,
+        e.target_id as path,
+        e.is_bot,
+        COUNT(*) as hits
+      FROM classified_events e
+      WHERE ${dateWhere}
+        AND e.source = 'edge'
+        AND e.event_type IN ('301','302','404','410','smart404_redirect','smart404_gone','smart404_fallback','smart404_homepage')
+      GROUP BY e.event_type, e.target_id, e.is_bot
+      ORDER BY hits DESC
+      LIMIT 60
+    `;
+    const edgeEvents = await env.DB.prepare(eventsQuery).all();
+
+    const summaryQuery = `
+      SELECT
+        e.event_type,
+        COUNT(*) as total,
+        SUM(CASE WHEN e.is_bot = 1 THEN 1 ELSE 0 END) as bot_hits,
+        SUM(CASE WHEN e.is_bot = 1 THEN 0 ELSE 1 END) as human_hits
+      FROM classified_events e
+      WHERE ${dateWhere}
+        AND e.source = 'edge'
+        AND e.event_type IN ('301','302','404','410','smart404_redirect','smart404_gone','smart404_fallback','smart404_homepage')
+      GROUP BY e.event_type
+      ORDER BY total DESC
+    `;
+    const edgeSummaryResult = await env.DB.prepare(summaryQuery).all();
+    const edgeSummary = edgeSummaryResult?.results || [];
+
+    return { edgeEvents, edgeSummary };
+  } catch (e) {
+    console.log('Edge events query failed:', e.message);
+    return { edgeEvents: { results: [] }, edgeSummary: [] };
+  }
 }
 
 export async function getBotIntelligence(env) {
-  // V2: Bot info comes from classified_events VIEW
   let botIntelligence = {
     suspects: [],
     blocked: [],
     verified: [],
     stats: { total: 0, risk3: 0, risk4: 0, blocked: 0, verified: 0 }
   };
-  
+
   try {
-    const botQuery = `
-      SELECT 
-        visitor_id,
-        COUNT(*) as total_requests,
-        MAX(country) as country,
-        MAX(ts) as last_seen
-      FROM classified_events
-      WHERE is_bot = 1 AND ts > datetime('now', '-7 days')
-      GROUP BY visitor_id
-      ORDER BY total_requests DESC
+    // Keep this cheap on normal dashboard loads.
+    // Only recompute if we've never computed, or if the last refresh is stale.
+    try {
+      const lastUpdate = await env.DB.prepare(
+        `
+          SELECT
+            MAX(updated_at) as last_update,
+            (JULIANDAY('now') - JULIANDAY(MAX(updated_at))) * 24 * 60 as minutes_old
+          FROM suspected_bots
+        `
+      ).first();
+      const minutesOld = Number(lastUpdate?.minutes_old);
+      if (!lastUpdate?.last_update || !Number.isFinite(minutesOld) || minutesOld > 15) {
+        await refreshBotIntelligence(env);
+      }
+    } catch {
+      // If suspected_bots doesn't exist (or parse issues), don't break dashboard.
+    }
+
+    const suspectsQuery = `
+      SELECT
+        ip_hash,
+        risk_level,
+        risk_score,
+        rules_triggered,
+        first_seen,
+        last_seen,
+        days_seen,
+        total_requests,
+        image_page_pct,
+        has_referrer,
+        is_datacenter,
+        is_verified_bot,
+        bot_name,
+        country,
+        status
+      FROM suspected_bots
+      WHERE risk_level >= 2
+      ORDER BY risk_level DESC, risk_score DESC, total_requests DESC
       LIMIT 50
     `;
-    const result = await env.DB.prepare(botQuery).all();
-    botIntelligence.suspects = (result.results || []).map(r => ({
-      visitor_id: r.visitor_id,
-      total_requests: r.total_requests,
-      country: r.country,
-      last_seen: r.last_seen,
-      risk_level: 2,
-      status: 'watching'
-    }));
-    botIntelligence.stats.total = botIntelligence.suspects.length;
+    let suspectsResult;
+    try {
+      suspectsResult = await env.DB.prepare(suspectsQuery).all();
+      botIntelligence.suspects = suspectsResult.results || [];
+    } catch {
+      botIntelligence.suspects = [];
+    }
+
+    // Fallback: if suspected_bots is empty/unavailable, derive a basic IP watchlist directly.
+    // This prevents the UI from rendering `undefined` values and keeps blocking usable.
+    if (
+      !Array.isArray(botIntelligence.suspects) ||
+      botIntelligence.suspects.length === 0 ||
+      botIntelligence.suspects.some(s => !s?.ip_hash)
+    ) {
+      const fallbackQuery = `
+        WITH base AS (
+          SELECT
+            ip_hash,
+            ts,
+            country,
+            referer,
+            is_bot
+          FROM classified_events
+          WHERE ts > datetime('now', '-7 days')
+            AND ip_hash IS NOT NULL
+            AND ip_hash != ''
+        )
+        SELECT
+          ip_hash,
+          COUNT(*) as total_requests,
+          COUNT(DISTINCT date(ts)) as days_seen,
+          MIN(ts) as first_seen,
+          MAX(ts) as last_seen,
+          MAX(country) as country,
+          SUM(CASE WHEN referer IS NOT NULL AND referer != '' THEN 1 ELSE 0 END) > 0 as has_referrer,
+          MAX(is_bot) as is_flagged_bot
+        FROM base
+        GROUP BY ip_hash
+        HAVING COUNT(*) >= 5 OR MAX(is_bot) = 1
+        ORDER BY total_requests DESC
+        LIMIT 50
+      `;
+
+      const fb = await env.DB.prepare(fallbackQuery).all();
+      botIntelligence.suspects = (fb.results || []).map(r => ({
+        ip_hash: r.ip_hash,
+        risk_level: 2,
+        risk_score: r.is_flagged_bot ? 2 : 0,
+        rules_triggered: JSON.stringify(r.is_flagged_bot ? ['auto_flagged_bot'] : []),
+        first_seen: r.first_seen,
+        last_seen: r.last_seen,
+        days_seen: r.days_seen,
+        total_requests: r.total_requests,
+        image_page_pct: null,
+        has_referrer: r.has_referrer ? 1 : 0,
+        is_datacenter: null,
+        is_verified_bot: 0,
+        bot_name: null,
+        country: r.country,
+        status: 'watching'
+      }));
+    }
+
+    const verifiedQuery = `
+      SELECT
+        sb.ip_hash,
+        sb.bot_name,
+        sb.total_requests,
+        sb.last_seen,
+        sb.country,
+        COALESCE(img.image_count, 0) as image_count,
+        COALESCE(pg.page_count, 0) as page_count
+      FROM suspected_bots sb
+      LEFT JOIN (
+        SELECT ip_hash, COUNT(*) as image_count
+        FROM raw_events
+        WHERE ts > datetime('now', '-7 days')
+          AND event_type = 'verified_bot'
+        GROUP BY ip_hash
+      ) img ON sb.ip_hash = img.ip_hash
+      LEFT JOIN (
+        SELECT ip_hash, COUNT(*) as page_count
+        FROM raw_events
+        WHERE ts > datetime('now', '-7 days')
+          AND event_type IN ('image_page', 'external_image_page')
+        GROUP BY ip_hash
+      ) pg ON sb.ip_hash = pg.ip_hash
+      WHERE sb.is_verified_bot = 1 AND sb.status = 'verified'
+      ORDER BY sb.total_requests DESC
+      LIMIT 20
+    `;
+    const verifiedResult = await env.DB.prepare(verifiedQuery).all();
+    botIntelligence.verified = verifiedResult.results || [];
+    botIntelligence.stats.verified = botIntelligence.verified.reduce(
+      (sum, v) => sum + (v.total_requests || 0),
+      0
+    );
+
+    const blockedQuery = `
+      SELECT
+        ip_hash,
+        risk_level,
+        risk_score,
+        rules_triggered,
+        total_requests,
+        blocked_at,
+        blocked_by,
+        reason,
+        unblocked_at,
+        is_active
+      FROM blocked_ips
+      ORDER BY is_active DESC, blocked_at DESC
+      LIMIT 50
+    `;
+    const blockedResult = await env.DB.prepare(blockedQuery).all();
+    botIntelligence.blocked = blockedResult.results || [];
+
+    for (const s of botIntelligence.suspects) {
+      if (s.status !== 'blocked') {
+        botIntelligence.stats.total++;
+        if (s.risk_level === 3) botIntelligence.stats.risk3++;
+        if (s.risk_level >= 4) botIntelligence.stats.risk4++;
+      }
+    }
   } catch (e) {
     console.log('Bot intelligence query failed:', e.message);
   }
-  
-  return botIntelligence;
-}
 
-// Export updateBotIntelligence as no-op for compatibility
-export async function updateBotIntelligence(env) {
-  return 0;
+  return botIntelligence;
 }

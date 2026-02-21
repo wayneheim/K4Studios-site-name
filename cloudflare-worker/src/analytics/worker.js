@@ -2,9 +2,33 @@ import { handleDashboardRequest } from "./dashboard/route.js";
 import { handleTrackRequest, handleTrackOptions, handleEdgeEvent, handleEdgeEventOptions, handleTrackEvent } from "./collector.js";
 import { handleExportCSV, handleBlockIP, handleUnblockIP, handleRefreshBots } from "./admin.js";
 
+function checkBasicAuth(request, env) {
+  const auth = request.headers.get("Authorization");
+  const expected = "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
+  return auth === expected;
+}
+
+function requireAuth() {
+  return new Response("Unauthorized", {
+    status: 401,
+    headers: {
+      "WWW-Authenticate": 'Basic realm="K4 Analytics"',
+      "Content-Type": "text/plain",
+      "Cache-Control": "no-store"
+    }
+  });
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    // Protect all dashboard/admin endpoints under /__k4stats*.
+    if (url.pathname.startsWith('/__k4stats')) {
+      if (!checkBasicAuth(request, env)) {
+        return requireAuth();
+      }
+    }
 
     // Bot short-circuit for tracking endpoints — verified bots get 204 silently
     if (

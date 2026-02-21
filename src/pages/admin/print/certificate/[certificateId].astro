@@ -6,6 +6,7 @@
  */
 
 import registry from "../../../../data/seriesRegistry.json";
+import { galleryData as engrainedData } from "../../../../data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs";
 
 const { certificateId } = Astro.params;
 
@@ -18,11 +19,29 @@ const editionNum = parseInt(parts[4] || '1', 10);
 
 // Find series data
 let imageTitle = "Untitled";
+let storedYearCreated = "";
 if (imageId) {
-  for (const [key, sId] of Object.entries(registry.images || {})) {
-    if (key.startsWith(imageId + ":") && registry.series?.[sId]) {
-      imageTitle = registry.series[sId].title || "Untitled";
-      break;
+  // For engrained tier, check the engrained data file first
+  if (tier === 'engrained') {
+    const engrainedItem = engrainedData.find(item => item.id === imageId);
+    if (engrainedItem) {
+      imageTitle = engrainedItem.title || "Untitled";
+      storedYearCreated = engrainedItem.yearCreated || "";
+    }
+  }
+  
+  // Fall back to seriesRegistry for all tiers (or if engrained not found)
+  if (!storedYearCreated || imageTitle === "Untitled") {
+    for (const [key, sId] of Object.entries(registry.images || {})) {
+      if (key.startsWith(imageId + ":") && registry.series?.[sId]) {
+        if (imageTitle === "Untitled") {
+          imageTitle = registry.series[sId].title || "Untitled";
+        }
+        if (!storedYearCreated) {
+          storedYearCreated = registry.series[sId].yearCreated || "";
+        }
+        break;
+      }
     }
   }
 }
@@ -39,9 +58,13 @@ const medium = seriesInfo.medium;
 const editionTotal = seriesInfo.editionSize;
 const editionNumFormatted = String(editionNum).padStart(editionTotal >= 100 ? 3 : 2, '0');
 const issueDate = new Date().toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
-const sizeFormatted = size.replace('x', '" × ') + '"';
-const yearMatch = imageTitle.match(/\b(19|20)\d{2}\b/);
-const yearCreated = yearMatch ? yearMatch[0] : new Date().getFullYear().toString();
+const sizeFormatted = size.replace(/x/i, '" \u00D7 ') + '"';
+// Use stored yearCreated first, fall back to extracting from title, then current year
+let yearCreated = storedYearCreated;
+if (!yearCreated) {
+  const yearMatch = imageTitle.match(/\b(19|20)\d{2}\b/);
+  yearCreated = yearMatch ? yearMatch[0] : new Date().getFullYear().toString();
+}
 ---
 
 <!DOCTYPE html>
@@ -80,7 +103,7 @@ const yearCreated = yearMatch ? yearMatch[0] : new Date().getFullYear().toString
     .signature-section { display: flex; justify-content: space-between; align-items: flex-end; width: 100%; max-width: 6in; margin: 20px auto 0; }
     .signature-block { text-align: center; }
     .signature-space { height: 45px; }
-    .signature-line { border-top: 1px solid #3a3632; width: 200px; padding-top: 8px; font-size: 15px; color: #3a3632; }
+    .signature-line { border-top: 1px solid #3a3632; width: 260px; padding-top: 8px; font-size: 15px; color: #3a3632; }
     .issue-date { text-align: right; font-size: 17px; }
     .issue-date .label { color: #6a6560; }
     .issue-date .value { color: #2b2b2b; font-style: italic; }

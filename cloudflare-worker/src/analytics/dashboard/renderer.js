@@ -167,8 +167,10 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       chapterViews += (row?.chapter_views || 0);
       zoomViews += (row?.xl_zooms || 0);
     }
+    const allViews = chapterViews + zoomViews + imageOnlyViews + externalViews;
     return {
-      images: rows.length,
+      uniqueImages: rows.length,
+      allViews,
       chapterViews,
       zoomViews,
       imageOnlyViews,
@@ -184,6 +186,14 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   <title>K4 Analytics</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --k4-scrollbar-size: 5px;
+      --k4-scrollbar-track: #111;
+      --k4-scrollbar-thumb: #333;
+      --k4-scrollbar-thumb-hover: #444;
+      --k4-panel-list-max: 450px;
+      --k4-grid-panel-max: 420px;
+    }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1a1a1a; color: #e0e0e0; padding: 20px; }
     .container { max-width: 1800px; margin: 0 auto; }
     h1 { color: #fff; margin-bottom: 20px; }
@@ -213,11 +223,12 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     .pulse-stat.collector .value { color: #fff; }
     .pulse-stat.collector .label { color: #c4b5fd; }
     .pulse-stat.collector .info-icon { background: rgba(255,255,255,0.2); color: #c4b5fd; }
-    /* Custom scrollbar for art lists */
-    #art-images-list::-webkit-scrollbar, #art-galleries-list::-webkit-scrollbar { width: 6px; }
-    #art-images-list::-webkit-scrollbar-track, #art-galleries-list::-webkit-scrollbar-track { background: #1a1a1a; border-radius: 3px; }
-    #art-images-list::-webkit-scrollbar-thumb, #art-galleries-list::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
-    #art-images-list::-webkit-scrollbar-thumb:hover, #art-galleries-list::-webkit-scrollbar-thumb:hover { background: #555; }
+    /* Custom scrollbar (thin + dark) */
+    * { scrollbar-width: thin; scrollbar-color: var(--k4-scrollbar-thumb) var(--k4-scrollbar-track); }
+    *::-webkit-scrollbar { width: var(--k4-scrollbar-size); height: var(--k4-scrollbar-size); }
+    *::-webkit-scrollbar-track { background: var(--k4-scrollbar-track); border-radius: 999px; }
+    *::-webkit-scrollbar-thumb { background: var(--k4-scrollbar-thumb); border-radius: 999px; }
+    *::-webkit-scrollbar-thumb:hover { background: var(--k4-scrollbar-thumb-hover); }
     table { width: 100%; border-collapse: collapse; background: #252525; border-radius: 8px; overflow: hidden; margin-bottom: 15px; }
     th, td { padding: 5px 8px; text-align: left; border-bottom: 1px solid #333; font-size: 12px; }
     th { background: #1a1a1a; color: #888; font-size: 12px; text-transform: uppercase; }
@@ -225,6 +236,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     /* Main grid - fixed 5-column layout, centered */
     .grid, .grid-tall { display: grid; grid-template-columns: repeat(5, 348px); gap: 10px; margin: 0 auto 10px auto; width: fit-content; }
     .section { background: #252525; border-radius: 8px; padding: 10px; overflow: visible; }
+    .grid > .section, .grid-tall > .section { max-height: var(--k4-grid-panel-max); overflow-y: auto; scrollbar-gutter: stable; }
     .section h3 { color: #fff; font-size: 13px; margin-bottom: 6px; }
     /* Bar chart styles */
     .bar-row { display: flex; align-items: center; padding: 4px 0; border-bottom: 1px solid #333; }
@@ -282,6 +294,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       h1 { font-size: 18px; }
       h2 { font-size: 13px; margin: 15px 0 8px; }
       .section { padding: 10px; max-height: none; }
+      .grid > .section, .grid-tall > .section { max-height: none; overflow: visible; }
       .bar-label { width: 80px; font-size: 10px; }
       .controls { gap: 3px; }
       .controls a { font-size: 10px; padding: 4px 6px; }
@@ -341,24 +354,24 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
 
   ${trend.length > 1 ? `
   <h3 style="color:#fff;font-size:14px;margin-bottom:6px;">
-    <span id="chart-title">Human Visitors per Day</span>
+    <span id="chart-title">Engaged Sessions per Day</span>
     <span style="float: right; font-size: 12px; font-weight: normal;">
-      <a href="#" id="toggle-visitors" style="color: #10b981; text-decoration: underline;">Visitors</a> |
-      <a href="#" id="toggle-sessions" style="color: #888; text-decoration: none;">Sessions</a>
+      <a href="#" id="toggle-visitors" style="color: #888; text-decoration: none;">Visitors</a> |
+      <a href="#" id="toggle-sessions" style="color: #4a9eff; text-decoration: underline;">Sessions</a>
     </span>
   </h3>
   <div class="trend-chart">
     <div class="trend-bars" id="trend-chart-bars">
       ${(() => {
-        const maxVisitors = Math.max(...trend.map(t => t.visitors), 1);
+        const maxSessions = Math.max(...trend.map(t => t.sessions), 1);
         return trend.map(t => {
-          const height = Math.max((t.visitors / maxVisitors * 100), 2);
+          const height = Math.max((t.sessions / maxSessions * 100), 2);
           const dateLabel = t.day.slice(5); // MM-DD format
           const isDataChangeDate = t.day === '2026-02-14';
           const isSelected = selectedDate === t.day;
           return `
             <div class="trend-bar${isSelected ? ' selected' : ''}" data-visitors="${t.visitors}" data-sessions="${t.sessions}" data-day="${t.day}" style="height: ${height}%" title="${t.day}: ${t.visitors} visitors, ${t.sessions} sessions">
-              <span class="trend-bar-value">${t.visitors}</span>
+              <span class="trend-bar-value">${t.sessions}</span>
               <span class="trend-bar-label">${dateLabel}${isDataChangeDate ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ''}</span>
             </div>
           `;
@@ -423,14 +436,17 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       
       visitorsLink.addEventListener('click', function(e) { e.preventDefault(); showVisitors(); });
       sessionsLink.addEventListener('click', function(e) { e.preventDefault(); showSessions(); });
+
+      // Default view: sessions (matches "real humans" = distinct session_id).
+      showSessions();
     })();
   </script>
   ` : trend.length === 1 ? `
   <div class="trend-chart">
-    <h3>Human Visitors</h3>
+    <h3>Engaged Sessions</h3>
     <div class="trend-bars" style="justify-content: center;">
       <div class="trend-bar" style="height: 100%; width: 80px;" title="${trend[0].day}: ${trend[0].visitors} visitors, ${trend[0].sessions} sessions">
-        <span class="trend-bar-value">${trend[0].visitors}</span>
+        <span class="trend-bar-value">${trend[0].sessions}</span>
         <span class="trend-bar-label">${trend[0].day.slice(5)}${trend[0].day === '2026-02-14' ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ''}</span>
       </div>
     </div>
@@ -495,17 +511,20 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
       <span class="value" style="color: #fff;">👤 ${artViewsSummary?.unique_viewers || 0}</span>
       <span class="label" style="color: #a7f3d0;">Art Viewers <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
-      <div class="tooltip">Unique IPs that viewed your art. Chapter viewers (JS-verified on-site): ${artViewsSummary?.onsite_viewers || 0}. External embeds: ${Math.max(0, (artViewsSummary?.unique_viewers || 0) - (artViewsSummary?.onsite_viewers || 0))}. Server-side page loads: ${artViewsSummary?.image_pages || 0} unique IPs.</div>
+      <div class="tooltip">Unique human visitors (cookie-based <strong>k4_vid</strong>) with JS proof-of-life. This is <em>not</em> a session count.</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
       <span class="value" style="color: #fff;">👤 ${artViewsSummary?.total || 0}</span>
-      <span class="label" style="color: #ddd6fe;">Image Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
-      <div class="tooltip">Chapters = L-size chapter exposures (proxy-verified + cache-recovery). External embeds = server-side proxy logs. XL zooms are counted separately via JS intent beacons.</div>
+      <span class="label" style="color: #ddd6fe;">Exposure Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
+      <div class="tooltip">Proxy-verified exposures: <strong>C</strong> (Chapters) + <strong>E</strong> (External image serves). It intentionally does <em>not</em> include <strong>Z</strong> (XL zoom intent) or gallery navigation.</div>
     </div>
     ${suppressionStats?.activeSuppressedIPs > 0 ? `<div class="pulse-stat" style="background: linear-gradient(135deg, #475569 0%, #334155 100%);">
       <span class="value" style="color: #94a3b8;">🛡 ${suppressionStats.activeSuppressedIPs}</span>
       <span class="label" style="color: #94a3b8;">Filtered <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #94a3b8;">i</span></span>
-      <div class="tooltip">IPs on suppression list (noise exclusion). Site still works for them, just excluded from analytics. Events filtered today: ${suppressionStats.suppressedToday || 0}. Auto-expires after 30 days.</div>
+      <div class="tooltip">${hideBots
+        ? `Visitors hidden by <strong>Hide Bots</strong> for this period. Hidden events: ${suppressionStats.suppressedToday || 0}.`
+        : `Legacy bot-classified visitors (UA/ASN). Bot events this period: ${suppressionStats.suppressedToday || 0}.`
+      }</div>
     </div>` : ''}
   </div>
 
@@ -541,9 +560,9 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           <span style="color: #3b82f6;">E</span>=External
         </span>
         <div style="margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
-          <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #3a3a3a;background:#222;color:#cbd5e1;font-size:12px;letter-spacing:0.2px;">
-            <span style="font-size:11px;opacity:0.75;">IMG</span>
-            <span style="font-weight:800;color:#fff;">${imageAccessTotals.images}</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #3a3a3a;background:#222;color:#cbd5e1;font-size:12px;letter-spacing:0.2px;" title="ALL = C + Z + i + E (total views). Unique images: ${imageAccessTotals.uniqueImages}">
+            <span style="font-size:11px;opacity:0.75;">ALL</span>
+            <span style="font-weight:800;color:#fff;">${imageAccessTotals.allViews}</span>
           </span>
           <span title="Chapter views" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #a78bfa55;background:#a78bfa14;color:#a78bfa;font-size:12px;">
             <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#a78bfa22;color:#a78bfa;font-size:10px;font-weight:bold;border:1px solid #a78bfa55;">C</span>
@@ -563,7 +582,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           </span>
         </div>
       </div>
-      <div style="max-height: 650px; overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;" id="accessOverviewList">
+      <div style="max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;" id="accessOverviewList">
         <!-- Column headers (inside scroller so scrollbar doesn't shift columns) -->
         <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 90px 220px 180px 90px 90px 90px auto; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
           <span style="display:flex;justify-content:center;">Image</span>
@@ -571,7 +590,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           <span onclick="sortAccessLocation()" id="accessLocationHeader" style="cursor:pointer; user-select:none;">📍 Location ⇅</span>
           <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#a78bfa22;color:#a78bfa;font-size:9px;font-weight:bold;border:1px solid #a78bfa55;" title="Chapter views">C</span></span>
           <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:9px;font-weight:bold;border:1px solid #06b6d455;" title="Zoom views">Z</span></span>
-          <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f59e0b22;color:#f59e0b;font-size:9px;font-weight:bold;border:1px solid #f59e0b55;" title="Image-only (no JS/cookie) + External">i</span></span>
+          <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f59e0b22;color:#f59e0b;font-size:9px;font-weight:bold;border:1px solid #f59e0b55;" title="Image-only (no JS/cookie)">i</span></span>
           <span>Source</span>
         </div>
         ${(imageAccessOverview || []).map((row, i) => {
@@ -583,7 +602,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             : ('https://k4studios.com/art/' + row.image_id);
           function deviceIconsHtml(devices) {
             if (!Array.isArray(devices) || devices.length === 0) return '';
-            const iconMap = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', desktop: '🖥️', mobile: '📱', tablet: '📱', unknown: '❓' };
+            const iconMap = { ios: '📱', android: '🅰️', mac: '🍎', windows: '🪟', linux: '🐧', desktop: '🖥️', mobile: '📱', tablet: '📱', unknown: '❓' };
             const labelMap = { ios: 'iOS', android: 'Android', mac: 'Mac', windows: 'Windows', linux: 'Linux', desktop: 'Desktop', mobile: 'Mobile', tablet: 'Tablet', unknown: 'Unknown' };
             const uniq = Array.from(new Set(devices.map(d => String(d || '').toLowerCase()).filter(Boolean)));
             const icons = uniq.slice(0, 4).map(d => {
@@ -633,7 +652,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             const label = (b === 'U') ? 'i' : b;
             return '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:' + c.bg + ';color:' + c.text + ';font-size:10px;font-weight:bold;border:1px solid ' + c.bdr + ';">' + label + '</span>';
           }).join(' ');
-          const srcIcons = { 'Google Search': '🔍', 'Google Images': '🖼️', 'Bing': '🔍', 'Twitter/X': '🐦', 'Facebook': '📘', 'Pinterest': '📌', 'DuckDuckGo': '🦆', 'ChatGPT': '🤖', 'Direct': '🔗', 'Internal': '🏠', 'Unknown': '❓' };
+          const srcIcons = { 'Google Search': '🔍', 'Google Images': '🖼️', 'Bing': '🔍', 'Twitter/X': '🐦', 'Facebook': '📘', 'Pinterest': '📌', 'DuckDuckGo': '🦆', 'ChatGPT': '🧠', 'Open Graph': '🕸️', 'Structured Data': '🧾', 'Direct': '🔗', 'Internal': '🏠', 'Unknown': '❓' };
           function normalizeSourceDomain(raw) {
             if (!raw) return '';
             const s = String(raw).trim();
@@ -671,7 +690,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             }
             if (domain === 't.co' || domain.endsWith('.twitter.com') || domain === 'x.com' || domain.endsWith('.x.com') || pretty === 'Twitter/X') {
               icon = '🐦';
-              label = 'Twitter';
+              label = 'Twitter/X';
             }
             if (domain === 'facebook.com' || domain.endsWith('.facebook.com') || domain === 'fb.com' || domain.endsWith('.fb.com') || pretty === 'Facebook') {
               icon = '🔵';
@@ -726,7 +745,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         <span>📁 Galleries</span>
         <span style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%); color: #1f2937; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold;">${artViewsSummary?.galleries || 0}</span>
       </h4>
-      <div style="display: flex; flex-direction: column; gap: 6px; max-height: 600px; overflow-y: auto; padding-right: 4px;">
+      <div id="art-galleries-list" style="display: flex; flex-direction: column; gap: 6px; max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;">
         ${((topArtViews?.galleries || []).length === 0)
           ? '<div style="color:#666;font-size:11px;padding:6px 2px;">No data yet</div>'
           : (topArtViews.galleries || []).map((a, i) => {
@@ -734,7 +753,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
               const devices = Array.isArray(a.devices) ? a.devices : [];
               function galleryDeviceIconsHtml(devs) {
                 if (!Array.isArray(devs) || devs.length === 0) return '';
-                const iconMap = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', desktop: '🖥️', mobile: '📱', tablet: '📱', unknown: '❓' };
+                const iconMap = { ios: '📱', android: '🅰️', mac: '🍎', windows: '🪟', linux: '🐧', desktop: '🖥️', mobile: '📱', tablet: '📱', unknown: '❓' };
                 const labelMap = { ios: 'iOS', android: 'Android', mac: 'Mac', windows: 'Windows', linux: 'Linux', desktop: 'Desktop', mobile: 'Mobile', tablet: 'Tablet', unknown: 'Unknown' };
                 const uniq = Array.from(new Set(devs.map(d => String(d || '').toLowerCase()).filter(Boolean)));
                 const icons = uniq.slice(0, 3).map(d => {
@@ -772,7 +791,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <table>
         <tr><th>Platform</th><th>Sessions</th><th>Engage Lvl</th></tr>
         ${safeDeviceEngagement.map(d => {
-          const icons = { ios: '📱', android: '🤖', mac: '🍎', windows: '🪟', linux: '🐧', desktop: '🖥️', mobile: '📱', tablet: '📱', unknown: '❓' };
+          const icons = { ios: '📱', android: '🅰️', mac: '🍎', windows: '🪟', linux: '🐧', desktop: '🖥️', mobile: '📱', tablet: '📱', unknown: '❓' };
           const labels = { ios: 'iOS', android: 'Android', mac: 'Mac', windows: 'Windows', linux: 'Linux', desktop: 'Desktop', mobile: 'Mobile', tablet: 'Tablet', unknown: 'Unknown' };
           const engageColor = d.avg_depth >= 15 ? '#10b981' : d.avg_depth >= 8 ? '#f59e0b' : '#888';
           return `<tr><td>${icons[d.device] || '❓'} ${labels[d.device] || d.device}</td><td>${d.sessions}</td><td style="color:${engageColor};font-weight:bold;">${d.avg_depth}</td></tr>`;
@@ -957,7 +976,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         // External sources
         if ((externalReachSources || []).length > 0) {
           html += '<div style="margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #f59e0b;">📡 External Sources <span style="font-weight: normal; font-size: 10px; opacity: 0.7;">(non-JS traffic)</span></div>';
-          const srcIcons = { 'Google Search': '🔍', 'Google Images': '🖼️', 'Bing': '🔍', 'Twitter/X': '🐦', 'Facebook': '📘', 'Pinterest': '📌', 'DuckDuckGo': '🦆', 'ChatGPT': '🤖', 'Yandex': '🔍', 'Baidu': '🔍', 'Direct': '🔗', 'Internal': '🏠', 'Other': '🌐' };
+          const srcIcons = { 'Google Search': '🔍', 'Google Images': '🖼️', 'Bing': '🔍', 'Twitter/X': '🐦', 'Facebook': '📘', 'Pinterest': '📌', 'DuckDuckGo': '🦆', 'ChatGPT': '🧠', 'Yandex': '🔍', 'Baidu': '🔍', 'Direct': '🔗', 'Internal': '🏠', 'Other': '🌐' };
           html += '<div style="display: flex; flex-direction: column; gap: 3px;">';
           for (const s of externalReachSources) {
             const icon = srcIcons[s.source] || '🌐';
@@ -988,6 +1007,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             smart404_fallback: '#ef4444',
             smart404_homepage: '#a855f7',
             '301': '#10b981',
+            '302': '#10b981',
             '410': '#f59e0b',
             '404': '#ef4444'
           };
@@ -997,6 +1017,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             smart404_fallback: '404',
             smart404_homepage: 'Home',
             '301': '301',
+            '302': '302',
             '410': '410',
             '404': '404'
           };
@@ -1015,6 +1036,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             smart404_fallback: '#ef4444',
             smart404_homepage: '#a855f7',
             '301': '#10b981',
+            '302': '#10b981',
             '410': '#f59e0b',
             '404': '#ef4444'
           };
@@ -1024,6 +1046,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             smart404_fallback: '404',
             smart404_homepage: 'Home',
             '301': '301',
+            '302': '302',
             '410': '410',
             '404': '404'
           };
@@ -1177,7 +1200,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   <div style="max-width: 1780px; margin: 0 auto;">
   <h2 style="margin-top: 30px;">🛡️ Bot Intelligence <span style="font-size: 12px; color: #888; font-weight: normal;">(Threat Classification)</span></h2>
   <p style="color: #888; margin: -10px 0 15px 0; font-size: 12px;">
-    Risk accumulates over time. Level 3 = high risk (review recommended). Level 4 = block candidate.
+    Risk accumulates over time. Level 3 = high risk (review). Level 4 = block candidate (enough evidence to block).
     <button onclick="refreshBotIntelligence()" style="margin-left: 10px; background: #333; color: #888; border: 1px solid #555; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 11px;">🔄 Refresh</button>
   </p>
   
@@ -1201,10 +1224,10 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <div class="pulse-stat" style="background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);">
       <span class="value" style="color: #fff;">🟣 ${botIntelligence?.stats?.risk4 || 0}</span>
       <span class="label" style="color: #f5d0fe;">Block Candidates <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #f5d0fe;">i</span></span>
-      <div class="tooltip"><strong>Risk score 8+.</strong> Likely malicious/abusive behavior. Review in High Risk Watchlist and consider blocking. Escalates from High Risk when: persistent multi-day scraping, extreme velocity, or multiple red flags combine.</div>
+      <div class="tooltip"><strong>Level 4 (top tier).</strong> Strong evidence of automation/scraping at meaningful volume (not a one-off). This level is intended to mean: <em>you have enough info to block</em>. If something lands here and looks like a real human, that's a grading bug — leave it unblocked and we should tighten the rules.</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
-      <span class="value" style="color: #fff;"><span style="text-shadow: 0 0 2px #000, 0 0 4px #000;">?</span> ${botIntelligence?.blocked?.filter(b => b.is_active)?.length || 0}</span>
+      <span class="value" style="color: #fff;"><span style="text-shadow: 0 0 2px #000, 0 0 4px #000;">⊖</span> ${botIntelligence?.blocked?.filter(b => b.is_active)?.length || 0}</span>
       <span class="label" style="color: #fecaca;">Blocked <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fecaca;">i</span></span>
       <div class="tooltip">Manually blocked IPs. Returns 403 Forbidden. Can unblock from Blocked IPs section below.</div>
     </div>
@@ -1229,7 +1252,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             'twitter': '🐦',
             'pinterest': '📌',
             'linkedin': '💼',
-            'openai': '🤖',
+            'openai': '🌀',
             'claude': '🧠',
           };
           const icon = botIcons[v.bot_name?.toLowerCase()] || '🤖';
@@ -1267,8 +1290,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             <th style="text-align: center; padding: 4px;">Action</th>
           </tr>
           ${(botIntelligence?.suspects || []).filter(s => s.risk_level >= 2 && s.status !== 'blocked').map(s => {
-            const riskColors = { 1: '#10b981', 2: '#fbbf24', 3: '#f97316', 4: '#ef4444' };
-            const riskIcons = { 1: '🟢', 2: '🟡', 3: '🟠', 4: '🔴' };
+            const riskColors = { 1: '#10b981', 2: '#fbbf24', 3: '#f97316', 4: '#a855f7' };
+            const riskIcons = { 1: '🟢', 2: '🟡', 3: '🟠', 4: '🟣' };
             const rules = JSON.parse(s.rules_triggered || '[]');
             const rulesShort = rules.slice(0, 2).map(r => r.replace(/_/g, ' ').slice(0, 12)).join(', ');
             const isBlocked = s.status === 'blocked';
@@ -1296,7 +1319,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
 
     <!-- Blocked IPs Archive -->
     <div class="section">
-      <h3>? Blocked IPs <span style="font-size: 11px; color: #666; font-weight: normal;">(Archive)</span></h3>
+      <h3>⊖ Blocked IPs <span style="font-size: 11px; color: #666; font-weight: normal;">(Archive)</span></h3>
       ${(botIntelligence?.blocked || []).length === 0 ? '<p style="color:#666">No blocked IPs yet</p>' : `
       <div style="max-height: 400px; overflow-y: auto;">
         <table style="width: 100%; font-size: 11px;">

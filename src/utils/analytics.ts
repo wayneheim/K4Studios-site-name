@@ -7,6 +7,18 @@
 
 const TRACK_ENDPOINT = '/__k4e';
 
+let inMemorySessionId: string | null = null;
+
+function safeRandomId(): string {
+  try {
+    const c = (globalThis as any)?.crypto;
+    if (c && typeof c.randomUUID === 'function') return c.randomUUID();
+  } catch {
+    // ignore
+  }
+  return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+}
+
 function isK4Debug(): boolean {
   if (typeof window === 'undefined') return false;
   try {
@@ -35,13 +47,20 @@ function getBuildId(): string | null {
 // Session ID persists for the browser session
 function getSessionId(): string {
   if (typeof window === 'undefined') return '';
-  
-  let sessionId = sessionStorage.getItem('k4_session_id');
-  if (!sessionId) {
-    sessionId = crypto.randomUUID();
-    sessionStorage.setItem('k4_session_id', sessionId);
+
+  // Prefer sessionStorage (best for session continuity), but never crash if unavailable.
+  try {
+    let sessionId = sessionStorage.getItem('k4_session_id');
+    if (!sessionId) {
+      sessionId = safeRandomId();
+      sessionStorage.setItem('k4_session_id', sessionId);
+    }
+    return sessionId;
+  } catch {
+    // Fallback: keep stable ID for this JS runtime.
+    if (!inMemorySessionId) inMemorySessionId = safeRandomId();
+    return inMemorySessionId;
   }
-  return sessionId;
 }
 
 // Event order counter - increments per session to track event sequence
@@ -61,6 +80,52 @@ function getCookie(name: string): string | null {
   if (typeof document === 'undefined') return null;
   const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
   return match ? match[2] : null;
+}
+
+type ClarityFn = (...args: any[]) => void;
+
+function getClarity(): ClarityFn | null {
+  if (typeof window === 'undefined') return null;
+  const w = window as any;
+  const c = w.clarity;
+  return typeof c === 'function' ? (c as ClarityFn) : null;
+}
+
+function syncClarityIdentity(): void {
+  // Best-effort only: never throw and never block event delivery.
+  try {
+    const clarity = getClarity();
+    if (!clarity) return;
+
+    const sessionId = getSessionId();
+    if (!sessionId) return;
+
+    const key = `k4_clarity_identified_${sessionId}`;
+    try {
+      if (sessionStorage.getItem(key) === '1') return;
+    } catch {
+      // ignore
+    }
+
+    // k4_vid is minted server-side and set as a cookie; it may not exist
+    // until after the first /__k4e request completes.
+    const visitorId = getCookie('k4_vid');
+    const userId = visitorId || sessionId;
+
+    // Clarity API: identify(userId, sessionId, pageId?)
+    clarity('identify', userId, sessionId, window.location.pathname);
+    // Also attach as custom properties for easy filtering.
+    clarity('set', 'k4_session_id', sessionId);
+    if (visitorId) clarity('set', 'k4_vid', visitorId);
+
+    try {
+      sessionStorage.setItem(key, '1');
+    } catch {
+      // ignore
+    }
+  } catch {
+    // ignore
+  }
 }
 
 // Get the entry referrer - prefer the edge-captured cookie, fallback to sessionStorage
@@ -213,6 +278,8 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
   // Skip if SSR
   if (typeof window === 'undefined') return;
 
+  try {
+
   // Use the ORIGINAL entry referrer for the session (not current document.referrer)
   const entryReferrer = getEntryReferrer();
 
@@ -250,6 +317,16 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
   });
 
   sendTrackingPayload(payload, event);
+
+  } catch (e) {
+    if (isK4Debug()) {
+      console.error('[k4] trackEvent failed', {
+        event,
+        href: (typeof window !== 'undefined') ? window.location.href : null,
+        message: (e as any)?.message || String(e)
+      });
+    }
+  }
 }
 
 // Expose trackEvent globally for use in Astro components via onclick
@@ -275,7 +352,19 @@ export function trackPageView(): void {
     trackEvent('k4_debug_bootstrap', { pageType: 'other', trigger: 'bootstrap' });
   }
 
+  // Best-effort correlation: tag Clarity with our IDs.
+  // If k4_vid doesn't exist yet, we'll retry after the first beacon.
+  syncClarityIdentity();
+
   trackEvent('page_view');
+
+  // Retry once shortly after first beacon so k4_vid cookie
+  // (minted server-side on /__k4e) can be picked up.
+  setTimeout(syncClarityIdentity, 1500);
+  // Clarity itself is loaded after window load + 2s, so also
+  // retry later to ensure the API exists.
+  setTimeout(syncClarityIdentity, 4500);
+  setTimeout(syncClarityIdentity, 9000);
 
   // Fire derived view beacons based on the current URL.
   // This is important because parts of the site navigate via history.pushState

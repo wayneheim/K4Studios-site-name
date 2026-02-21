@@ -1,8 +1,9 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-02-19T00:13:20.632Z",
-    "editionDataMigrated": "2025-12-27T01:58:37.244Z"
+    "lastUpdated": "2026-02-21T02:54:18.192Z",
+    "editionDataMigrated": "2025-12-27T01:58:37.244Z",
+    "lastSyncFrom": "Engrained-Series.mjs"
   },
   "images": {
     "i-wxLBqLg:/src/data/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs": "s-BB65wHk",
@@ -26262,7 +26263,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Hero’s Ride – Civil War on Birch",
+      "title": "Hero’s Ride – Civil War Soldier In Battle",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xqbdC8P/0/MGSqVLk33VwBcNtRgpQGJ5q3QWGSDMsqzwkrPw5h4/XL/Civil-War-Heros-ride-ws-XL.jpg",
       "occurrences": [
         {
@@ -26317,7 +26318,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Dust and Distance — A Cowboy’s Goodbye",
+      "title": "One Last Look",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/1/LMBSDtzhV4Z9Phctd8qgSHzdDKNmng4X4VKdDLSjw/XL/Cowboy-Long-Goodbye-ws-XL.jpg",
       "occurrences": [
         {
@@ -26335,7 +26336,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Morning Joe – Cowboy’s Sunrise",
+      "title": "Morning Joe",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/1/K2kw2sM6ZbwsVMtDjXnLN63FL9254Wjr8znhLc8Lk/XL/Cowboy-Morning-Joe-ws-XL.jpg",
       "occurrences": [
         {
@@ -26371,7 +26372,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Over My Dead Body: Frontier Stand-off ",
+      "title": "Over My Dead Body: Frontier Stand-off",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/0/NgDqhj49pW87nLKcm2hLTV4xpLcxmfPnDfspB8JZL/XL/Cowboy-Over-My-Dead-Body-ws-XL.jpg",
       "occurrences": [
         {
@@ -26485,7 +26486,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Aspen Grove",
+      "title": "Aspens",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/1/LGMW7HBRsH59NBL3LwXb6xL3wGzLFr3hV5JD4zRzb/XL/Landscape-Aspens-ws-XL.jpg",
       "occurrences": [
         {
@@ -26504,7 +26505,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Mountains Photography:  Painterly Photography: - Grand Buffalo - The Grand Tetons and Bison.",
+      "title": "Mountains Photography: Painterly Photography: - Grand Buffalo - The Grand Tetons and Bison.",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/LGtWNZBGm7wLDQ26K4XzfVGKkwmKHLmZRBnXtZpZk/XL/Landscape-Buffy-ws-XL.jpg",
       "occurrences": [
         {
@@ -26523,13 +26524,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Western Cotton Candy -  Jackson Hole Wyoming.",
+      "title": "Western Cotton Candy - Jackson Hole, Wyoming",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/LcZFTsWTvTFvChZchD3c4zSLDNc5ZHGzcDW97SbbD/XL/Landscape-Cotton-Canday-ws-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-b4wG4vh",
           "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
-          "title": "Cotton Candy",
+          "title": "Western Cotton Candy - Jackson Hole, Wyoming",
           "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/KSqk6crxLFp7zdjRfBmZz7xHq9zNLTg2VPRqKhPfQ/XL/Landscape-Cotton-Canday-ws-XL.jpg"
         }
       ],
@@ -26542,7 +26543,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Painterly Mountain Photography:  Crystal Mill 2",
+      "title": "The Mill, Still Kept",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/1/LfzVnKWgbD5K2vBRfBsjsXLzPpSJMsVgXGdQWx7Rs/XL/Landscape-Crystal-mill-ws-XL.jpg",
       "occurrences": [
         {
@@ -26561,7 +26562,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "In the Weeds - Tetons in Autumn - Jackson Hole Wyoming.",
+      "title": "In the Weeds",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/1/LPxP59ds4wCGZFJQH3hfJZhfpgPszwd8LgtF27kf9/XL/Landscape-In-the-weeds-ws-XL.jpg",
       "occurrences": [
         {
@@ -26636,7 +26637,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Farewell! – Western Departure",
+      "title": "Wave Goodbye",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/0/K3QvRVJkgM28sjdKQBvNjvdLGN4NbNs5mzQPTzkXS/XL/Settler-Wave-Goodbye-ws-XL.jpg",
       "occurrences": [
         {
@@ -32355,7 +32356,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Photography Printed On Wood In Fine Art",
+      "title": "Cough and Covenant",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4QZ7HPR/0/McfHBwQXhtv2bP3SsZ4rRdckwtgKkHk74hGrd6ZkB/L/Cough%20and%20Covenant%2016%20x%2020%20copy-L.jpg",
       "occurrences": [
         {
@@ -32374,7 +32375,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Photo Printed On Wood Panel Study",
+      "title": "Do you HEAR me now?!",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-5VmRqpZ/0/LJxzpQvJGxNSVrQ7mwrz63GtFmRpbXZfs48pVHqrG/L/Do%20you%20hear%20me%20now%2042%20x%2020%20copy-L.jpg",
       "occurrences": [
         {
@@ -32393,7 +32394,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Fine Art Photo Printed On Wood Panel",
+      "title": "Open Country Brothers",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-BmwzGg4/0/M96z5tk7w2Hp2fC6RwrZZTGtT4sgMWmmH3qbJx5mq/XL/Brothers%20of%20the%20Open%20Country%2034%20x%2020%20copy-XL.jpg",
       "occurrences": [
         {
@@ -32431,7 +32432,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "The Essence Of Wood-Mounted Art",
+      "title": "This Is the Hand — I Can Feel It",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-nmDtVXP/0/KwNcm2hP5xh7pBSXbLqqXFrjtv2GvhBkb9JzJjdDd/XL/This%20is%20the%20Hand%2018%20x%2024-XL.jpg",
       "occurrences": [
         {
@@ -32620,7 +32621,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Baltic Birch Wall Art And Photography Printed On Wood",
+      "title": "Loaded for Bear",
       "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-gFTwXkq/0/MMGs3tBxK5Bmf4r2bML7StkqHk9Dq5nQQR9L8Jctf/XL/Loaded%20for%20Bear%2016%20x%2020%20copy-XL.jpg",
       "occurrences": [
         {

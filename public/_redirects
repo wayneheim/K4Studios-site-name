@@ -52,6 +52,14 @@
 # Legacy test/renamed gallery paths
 /Galleries/zPainterly-Western-Cowboy-Portraits/*  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/:splat  301
 
+# Block obvious exploit/scraper paths (avoid burning Smart 404 function calls)
+/Galleries/*/hack/*  /  410!
+/Galleries/*/Hack/*  /  410!
+/Galleries/*/HACK/*  /  410!
+/galleries/*/hack/*  /  410!
+/galleries/*/Hack/*  /  410!
+/galleries/*/HACK/*  /  410!
+
 # Smart 404 for image pages - only triggers on actual 404s
 # If image page doesn't exist, call smart-404 function to find/redirect
 # Note: Netlify splat (*) captures everything, :id captures the image ID segment

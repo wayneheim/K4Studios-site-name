@@ -29,6 +29,21 @@ export function calculateRiskScore(stats) {
     score += 3;
     rules.push('high_velocity');
   }
+
+  // Inhuman session speed: headless browsers can fire many JS events in <1s.
+  // Uses session-level max events/sec computed from session_id timelines.
+  if ((stats.max_session_eps || 0) > 6) {
+    score += 3;
+    rules.push('inhuman_session_speed');
+  }
+
+  // Cookie churn: many distinct visitor IDs from one IP hash.
+  // This is a strong signal of automated JS traffic that tries to look "human"
+  // by rotating identities/cookies.
+  if ((stats.distinct_visitors || 0) >= 15 && (stats.total_requests || 0) >= 20) {
+    score += 4;
+    rules.push('cookie_churn');
+  }
   
   // Volume: >50 requests/hour
   if (stats.requests_per_hour > 50) {
@@ -61,9 +76,13 @@ export function calculateRiskScore(stats) {
   }
   
   // Suspicious country patterns (known bot havens + no referrer)
-  if (['NL', 'FI', 'PL', 'RU', 'CN'].includes(stats.country) && !stats.has_referrer) {
-    score += 1;
-    rules.push('suspicious_origin');
+  if (['NL', 'FI', 'PL', 'RU', 'CN', 'SG'].includes(stats.country)) {
+    const suspiciousByNoRef = !stats.has_referrer && (stats.total_requests || 0) > 10;
+    const suspiciousByVolume = (stats.total_requests || 0) > 80;
+    if (suspiciousByNoRef || suspiciousByVolume) {
+      score += 1;
+      rules.push('suspicious_origin');
+    }
   }
   
   // Determine risk level

@@ -114,7 +114,7 @@ exports.handler = async (event) => {
     // POST: Register or update series mappings
     if (event.httpMethod === "POST") {
       const body = JSON.parse(event.body || "{}");
-      const { action, imageId, tiers, linkedImageIds, primarySeriesId, title, src, batch, galleryPath, excludeSizes } = body;
+      const { action, imageId, tiers, linkedImageIds, primarySeriesId, title, src, batch, galleryPath, excludeSizes, yearCreated } = body;
 
       switch (action) {
         case "batchRegister": {
@@ -206,8 +206,9 @@ exports.handler = async (event) => {
               }
               
               series.linkedCount = series.occurrences.length;
-              if (imgTitle && !series.title) series.title = imgTitle;
-              if (imgSrc && !series.src) series.src = imgSrc;
+              // Always update series-level title/src when provided (sync from .mjs files)
+              if (imgTitle) series.title = imgTitle;
+              if (imgSrc) series.src = imgSrc;
             }
             
             results.push({ imageId: imgId, galleryPath: gPath, seriesId, registered: true });
@@ -278,6 +279,7 @@ exports.handler = async (event) => {
               occurrences: [],
               linkedCount: 0,
               excludeSizes: excludeSizes || {},
+              yearCreated: yearCreated || "",
               createdAt: new Date().toISOString()
             };
           }
@@ -293,6 +295,10 @@ exports.handler = async (event) => {
             // Update excludeSizes if provided
             if (excludeSizes !== undefined) {
               series.excludeSizes = excludeSizes;
+            }
+            // Update yearCreated if provided
+            if (yearCreated !== undefined) {
+              series.yearCreated = yearCreated;
             }
             if (!series.occurrences) series.occurrences = [];
             
@@ -310,8 +316,9 @@ exports.handler = async (event) => {
             }
             
             series.linkedCount = series.occurrences.length;
-            if (title && !series.title) series.title = title;
-            if (src && !series.src) series.src = src;
+            // Always update series-level title/src when provided (sync from .mjs files)
+            if (title) series.title = title;
+            if (src) series.src = src;
           }
 
           await writeRegistry(registry);

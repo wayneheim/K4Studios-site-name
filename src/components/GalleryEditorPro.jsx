@@ -337,6 +337,8 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
   const [excludeSizes, setExcludeSizes] = useState({}); // Excluded sizes per series
   const [pendingExcludeSizes, setPendingExcludeSizes] = useState(false); // Track if size changes need saving
   const [pendingSeriesChange, setPendingSeriesChange] = useState(false); // Track if series changes need saving
+  const [yearCreated, setYearCreated] = useState(""); // Year the artwork was created
+  const [pendingYearCreated, setPendingYearCreated] = useState(false); // Track if yearCreated needs saving
   const [loading, setLoading] = useState(false);
 
   // Initialize excludeSizes from hydrated data when current image changes
@@ -379,6 +381,13 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
           };
         }
         setEditionStates(states);
+        // Load yearCreated from series data
+        if (data.series?.yearCreated) {
+          setYearCreated(data.series.yearCreated);
+        } else {
+          setYearCreated("");
+        }
+        setPendingYearCreated(false);
       }
     } catch (err) {
       console.error("[SeriesStatusPanel] Error fetching edition state:", err);
@@ -564,6 +573,7 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
           galleryPath: galleryPath,
           tiers: storedTiers,
           excludeSizes: excludeSizes,
+          yearCreated: yearCreated || undefined,
           title: current.title || "",
           src: current.srcXL || current.src || ""
         })
@@ -572,6 +582,7 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
       if (regRes.ok) {
         setPendingExcludeSizes(false);
         setPendingSeriesChange(false);
+        setPendingYearCreated(false);
         // Update the current image's _excludeSizes to match
         onUpdate("_excludeSizes", excludeSizes);
       }
@@ -717,7 +728,7 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
           })}
           
           {/* Save button for all series data (shown when any changes pending) */}
-          {(pendingSeriesChange || pendingExcludeSizes ||
+          {(pendingSeriesChange || pendingExcludeSizes || pendingYearCreated ||
             Object.keys(pendingSoldBySize).some(k => Object.keys(pendingSoldBySize[k] || {}).length > 0) ||
             Object.keys(pendingPrintedBySize).some(k => Object.keys(pendingPrintedBySize[k] || {}).length > 0)) && (
             <button
@@ -729,6 +740,25 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
             </button>
           )}
         </div>
+      </div>
+
+      {/* Year Created Input */}
+      <div className="mb-4">
+        <label className="block text-xs opacity-70 mb-1">Year Created</label>
+        <input
+          type="text"
+          value={yearCreated}
+          onChange={(e) => {
+            const val = e.target.value.replace(/[^0-9]/g, "").slice(0, 4);
+            setYearCreated(val);
+            setPendingYearCreated(true);
+          }}
+          disabled={!backupMade || isRetired || loading}
+          placeholder="e.g. 2024"
+          className="w-24 px-2 py-1 border rounded text-sm"
+          maxLength={4}
+        />
+        <span className="ml-2 text-xs text-gray-500">For Certificate of Authenticity</span>
       </div>
 
       {/* Status Dropdown */}

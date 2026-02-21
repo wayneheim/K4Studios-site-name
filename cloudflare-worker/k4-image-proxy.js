@@ -113,19 +113,23 @@ function getOrCreateVisitorId(request) {
 /**
  * Create Set-Cookie header for k4_vid
  */
-function createVisitorIdCookie(visitorId) {
-  return `${K4_VID_COOKIE_NAME}=${visitorId}; Path=/; Max-Age=${K4_VID_MAX_AGE}; Secure; SameSite=Lax`;
+function createVisitorIdCookie(visitorId, hostname) {
+  const host = String(hostname || '').toLowerCase();
+  const domainAttr = host.endsWith('k4studios.com') ? '; Domain=.k4studios.com' : '';
+  return `${K4_VID_COOKIE_NAME}=${visitorId}; Path=/; Max-Age=${K4_VID_MAX_AGE}; Secure; SameSite=Lax${domainAttr}`;
 }
 
 /**
  * Add visitor_id cookie to response if needed
  */
-function addVisitorIdCookie(response, visitorId, isNew) {
+function addVisitorIdCookie(response, visitorId, isNew, request) {
   if (!isNew) return response;
   
   // Clone response to add Set-Cookie header
   const newHeaders = new Headers(response.headers);
-  newHeaders.append('Set-Cookie', createVisitorIdCookie(visitorId));
+  let hostname;
+  try { hostname = new URL(request?.url || '').hostname; } catch(e) { hostname = null; }
+  newHeaders.append('Set-Cookie', createVisitorIdCookie(visitorId, hostname));
   
   return new Response(response.body, {
     status: response.status,
@@ -183,6 +187,10 @@ let manifestCacheTime = 0;
 
 let imageIdMapCache = null;
 let imageIdMapCacheTime = 0;
+
+// Derived caches
+let knownGallerySetCache = null;
+let knownGallerySetCacheTime = 0;
 
 async function fetchJSONWithCache(ctx, url, memGet, memSet) {
   const now = Date.now();
@@ -243,14 +251,63 @@ function getImageIdMap(ctx) {
   );
 }
 
+function getKnownGallerySetFromImageIdMap(imageIdMap) {
+  if (!imageIdMap || typeof imageIdMap !== 'object') return new Set();
+  // Rebuild only when the underlying imageIdMap cache refreshes.
+  if (knownGallerySetCache && knownGallerySetCacheTime === imageIdMapCacheTime) {
+    return knownGallerySetCache;
+  }
+
+  const set = new Set();
+  for (const paths of Object.values(imageIdMap)) {
+    const pathArray = Array.isArray(paths) ? paths : [paths];
+    for (const p of pathArray) {
+      if (!p) continue;
+      set.add(String(p).toLowerCase());
+    }
+  }
+  knownGallerySetCache = set;
+  knownGallerySetCacheTime = imageIdMapCacheTime;
+  return set;
+}
+
 // --------------------
 // /img ROUTE RESOLUTION
 // --------------------
+const ASSET_SOURCE_PREFIXES = new Set(['OG', 'TW', 'PN', 'SD']);
+
 function parseImageRoute(pathname) {
   // allow optional trailing slash
-  const match = pathname.match(/^\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)\/?$/);
+  const match = pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)\/?$/);
   if (!match) return null;
-  return { imageId: match[1], size: match[2] };
+
+  const rawPrefix = match[1] || null;
+  const canonicalImageId = match[2];
+  const size = match[3];
+
+  const prefix = rawPrefix ? String(rawPrefix).replace('-', '').toUpperCase() : null;
+  if (prefix && !ASSET_SOURCE_PREFIXES.has(prefix)) return null;
+
+  const imageId = prefix ? `${prefix}-${canonicalImageId}` : canonicalImageId;
+  const assetSource = prefix ? prefix.toLowerCase() : null;
+
+  return { imageId, canonicalImageId, size, assetSource };
+}
+
+function rewriteLegacyProxyToImgRequest(request) {
+  const url = new URL(request.url);
+  const match = url.pathname.match(/^\/proxy\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\.(?:jpe?g|png|webp|gif|avif)\/?$/i);
+  if (!match) return null;
+  const rawPrefix = match[1] || null;
+  const canonicalImageId = match[2];
+
+  const prefix = rawPrefix ? String(rawPrefix).replace('-', '').toUpperCase() : null;
+  if (prefix && !ASSET_SOURCE_PREFIXES.has(prefix)) return null;
+
+  const imageId = prefix ? `${prefix}-${canonicalImageId}` : canonicalImageId;
+
+  url.pathname = `/img/${imageId}/l`;
+  return new Request(url.toString(), request);
 }
 
 function resolveImageUrl(manifest, imageId, requestedSize) {
@@ -320,6 +377,23 @@ const TRANSPARENT_PIXEL_GIF = new Uint8Array([
   0x3b // GIF trailer
 ]);
 
+function looksLikeBrowser(request) {
+  try {
+    const ua = request.headers.get('user-agent') || '';
+    const accept = request.headers.get('accept') || '';
+    const secFetchMode = request.headers.get('sec-fetch-mode') || '';
+    const secFetchSite = request.headers.get('sec-fetch-site') || '';
+
+    // Not perfect, but good enough to separate real browsers from aiohttp/curl/wget/etc.
+    const hasMozilla = /mozilla\//i.test(ua);
+    const wantsHtml = /text\/html/i.test(accept);
+    const hasFetchHints = Boolean(secFetchMode) || Boolean(secFetchSite);
+    return (hasMozilla && wantsHtml) || (wantsHtml && hasFetchHints);
+  } catch {
+    return false;
+  }
+}
+
 async function handleImageRequest(request, ctx, env) {
   const url = new URL(request.url);
   const route = parseImageRoute(url.pathname);
@@ -332,7 +406,7 @@ async function handleImageRequest(request, ctx, env) {
   }
 
   // Ghost image fallback - return transparent pixel instead of 404
-  if (route.imageId === GHOST_IMAGE_ID) {
+  if (route.canonicalImageId === GHOST_IMAGE_ID) {
     return new Response(TRANSPARENT_PIXEL_GIF, {
       status: 200,
       headers: {
@@ -369,9 +443,72 @@ async function handleImageRequest(request, ctx, env) {
     }
   }
 
+  // Canonicalize request URL for caching + manifest lookup.
+  // This prevents cache fragmentation when the same underlying image is requested with
+  // different attribution prefixes (OG/TW/PN/SD).
+  const canonicalUrl = new URL(request.url);
+  canonicalUrl.pathname = `/img/${route.canonicalImageId}/${route.size}`;
+  const canonicalRequest = (canonicalUrl.pathname === url.pathname)
+    ? request
+    : new Request(canonicalUrl.toString(), request);
+
+  // Cache lookup must happen on the canonical key.
+  // Order: request -> detect prefix -> strip prefix -> canonical id -> cache lookup -> manifest lookup.
+  try {
+    const cached = await caches.default.match(canonicalRequest);
+    if (cached) {
+      // Log attribution even if bytes are served from cache.
+      if (env?.DB) {
+        const ua = request.headers.get("User-Agent") || '';
+        const uaLower = ua.toLowerCase();
+        const isCacheWarmer = uaLower.includes('k4-cache-warmer');
+        if (!isCacheWarmer && route.size === 'l') {
+          const cookieHeader = request.headers.get('Cookie') || '';
+          const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
+          const visitorId = vidCookieMatch ? vidCookieMatch[1] : null;
+          let sessionId = null;
+          const sidCookieMatch = cookieHeader.match(/k4_sid=([^;]+)/);
+          if (sidCookieMatch) {
+            try { sessionId = decodeURIComponent(sidCookieMatch[1]); } catch { sessionId = sidCookieMatch[1]; }
+          }
+
+          const referer = request.headers.get('Referer') || '';
+          let refererUrl = null;
+          try { refererUrl = referer ? new URL(referer) : null; } catch { refererUrl = null; }
+          const refererHost = (refererUrl?.hostname || '').toLowerCase();
+          const refererPath = refererUrl?.pathname || '';
+          const isInternal =
+            refererHost === 'localhost' ||
+            refererHost === '127.0.0.1' ||
+            refererHost.endsWith('k4studios.com');
+          const isImagePageReferer = /\/(Galleries|Other)\/.*\/i-[a-zA-Z0-9-]+\/?$/.test(refererPath);
+          const normalizedRefererPath = (refererPath || '').replace(/\/+$/, '');
+          const isSameImagePageReferer = normalizedRefererPath.endsWith('/' + route.canonicalImageId);
+
+          if (isInternal && isImagePageReferer && isSameImagePageReferer && visitorId) {
+            ctx.waitUntil(logArtView(env, 'chapter_exposure', route.canonicalImageId, request, sessionId, 'proxy', visitorId, 'l', 'internal', null, null, route.assetSource));
+          } else if (!isInternal && referer) {
+            ctx.waitUntil(logArtView(env, 'external_image', route.canonicalImageId, request, sessionId, 'proxy', visitorId, 'l', 'external', null, null, route.assetSource));
+          } else if (!referer) {
+            ctx.waitUntil(logArtView(env, 'direct_image', route.canonicalImageId, request, sessionId, 'proxy', visitorId, 'l', 'direct', null, null, route.assetSource));
+          }
+
+          if (isVerifiedSearchBot(ua)) {
+            ctx.waitUntil(logVerifiedBot(env, route.canonicalImageId, request));
+          }
+        }
+      }
+
+      return cached;
+    }
+  } catch (e) {
+    // Fail open on cache API issues.
+    console.error('Cache lookup error:', e);
+  }
+
   try {
     const manifest = await getManifest(ctx);
-    const smugMugUrl = resolveImageUrl(manifest, route.imageId, route.size);
+    const smugMugUrl = resolveImageUrl(manifest, route.canonicalImageId, route.size);
 
     if (!smugMugUrl) {
       return new Response("Image not found", {
@@ -385,6 +522,13 @@ async function handleImageRequest(request, ctx, env) {
     // - S/M = ignored (thumbnails/prefetch/noise)
     // - XL = never logged from proxy (zoom intent is JS-only `xl_zoom` beacon)
     if (env?.DB) {
+      const ua = request.headers.get("User-Agent") || '';
+      const uaLower = ua.toLowerCase();
+
+      // Internal synthetic agent (cache warmer) should NOT pollute analytics.
+      // It intentionally fetches images "direct" (no referrer/cookies) to prime caches.
+      const isCacheWarmer = uaLower.includes('k4-cache-warmer');
+
       // Read visitor_id from k4_vid cookie (Single Population Doctrine)
       const cookieHeader = request.headers.get('Cookie') || '';
       const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
@@ -401,7 +545,7 @@ async function handleImageRequest(request, ctx, env) {
         }
       }
 
-      if (route.size === 'l') {
+      if (!isCacheWarmer && route.size === 'l') {
         const referer = request.headers.get('Referer') || '';
 
         let refererUrl = null;
@@ -425,25 +569,40 @@ async function handleImageRequest(request, ctx, env) {
         // This prevents hero/carousel/preload/OG-scraper traffic from inflating chapters.
         const isImagePageReferer = /\/(Galleries|Other)\/.*\/i-[a-zA-Z0-9-]+\/?$/.test(refererPath);
         const normalizedRefererPath = (refererPath || '').replace(/\/+$/, '');
-        const isSameImagePageReferer = normalizedRefererPath.endsWith('/' + route.imageId);
+        const canonicalId = route.canonicalImageId;
+        const assetSource = route.assetSource;
+        const isSameImagePageReferer = normalizedRefererPath.endsWith('/' + canonicalId);
 
         if (isInternal && isImagePageReferer && isSameImagePageReferer && visitorId) {
-          ctx.waitUntil(logArtView(env, 'chapter_exposure', route.imageId, request, sessionId, 'proxy', visitorId, 'l', 'internal'));
+          ctx.waitUntil(logArtView(env, 'chapter_exposure', canonicalId, request, sessionId, 'proxy', visitorId, 'l', 'internal', null, null, assetSource));
         } else if (!isInternal && referer) {
-          ctx.waitUntil(logArtView(env, 'external_image', route.imageId, request, sessionId, 'proxy', visitorId, 'l', 'external'));
+          ctx.waitUntil(logArtView(env, 'external_image', canonicalId, request, sessionId, 'proxy', visitorId, 'l', 'external', null, null, assetSource));
         } else if (!referer) {
-          ctx.waitUntil(logArtView(env, 'direct_image', route.imageId, request, sessionId, 'proxy', visitorId, 'l', 'direct'));
+          ctx.waitUntil(logArtView(env, 'direct_image', canonicalId, request, sessionId, 'proxy', visitorId, 'l', 'direct', null, null, assetSource));
         }
       }
       
       // Track verified search bots by User-Agent (free plan doesn't have botManagement)
-      const ua = request.headers.get("User-Agent") || '';
       if (isVerifiedSearchBot(ua)) {
-        ctx.waitUntil(logVerifiedBot(env, route.imageId, request));
+        ctx.waitUntil(logVerifiedBot(env, route.canonicalImageId, request));
       }
     }
 
-    return proxyImage(smugMugUrl, request);
+    const response = await proxyImage(smugMugUrl, canonicalRequest);
+
+    // Cache successful responses under the canonical key.
+    // Use waitUntil so we don't block serving.
+    try {
+      if (response?.status === 200) {
+        ctx.waitUntil(caches.default.put(canonicalRequest, response.clone()));
+      }
+    } catch (e) {
+      console.error('Cache put error:', e);
+    }
+
+    // If the request URL was prefixed, we still serve the canonical bytes.
+    // The response headers are already long-lived, so clients + edge can cache as well.
+    return response;
   } catch (err) {
     console.error("Image proxy error:", err);
     return new Response("Internal error", {
@@ -483,11 +642,35 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
   const imageId = extractImageId(pathname);
   if (!imageId) return null;
 
+  // Ghost image ID is a UI sentinel (state management) and should never be a real page.
+  // If someone requests a URL ending in i-k4studios, it's always junk traffic.
+  if (String(imageId).toLowerCase() === GHOST_IMAGE_ID.toLowerCase()) {
+    return new Response('Gone', {
+      status: 410,
+      headers: {
+        'X-Robots-Tag': 'noindex, nofollow',
+        'Cache-Control': 'public, max-age=86400'
+      }
+    });
+  }
+
+  // Preserve query string across canonical redirects (e.g., ?k4debug=1)
+  let search = '';
+  try {
+    search = new URL(request.url).search || '';
+  } catch (_) {
+    search = '';
+  }
+
   try {
     const [manifest, imageIdMap] = await Promise.all([
       getManifest(ctx),
       getImageIdMap(ctx)
     ]);
+
+    const knownGalleries = getKnownGallerySetFromImageIdMap(imageIdMap);
+    const isBrowser = looksLikeBrowser(request);
+    const isSearch = isSearchBot(request);
 
     // Image exists
     if (manifest[imageId]) {
@@ -502,17 +685,17 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
 
         // Wrong path entirely -> canonicalize to first known valid path
         if (!matchedPath) {
-          const canonicalUrl = `https://www.k4studios.com${validPaths[0]}/${imageId}`;
+          const canonicalUrl = `https://www.k4studios.com${validPaths[0]}/${imageId}${search}`;
           // Log edge event (fire and forget via waitUntil)
-          ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearchBot(request), request));
+          ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearch, request));
           return Response.redirect(canonicalUrl, 301);
         }
 
         // Case mismatch -> redirect to canonical casing
         if (matchedPath !== requestedGalleryPath) {
-          const canonicalUrl = `https://www.k4studios.com${matchedPath}/${imageId}`;
+          const canonicalUrl = `https://www.k4studios.com${matchedPath}/${imageId}${search}`;
           // Log edge event (fire and forget via waitUntil)
-          ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearchBot(request), request));
+          ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearch, request));
           return Response.redirect(canonicalUrl, 301);
         }
       }
@@ -525,14 +708,15 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
     const parentGallery = getParentGallery(pathname);
     
     // Check if parent gallery is a known valid gallery path
-    const isKnownGallery = imageIdMap && Object.values(imageIdMap).some(paths => {
-      const pathArray = Array.isArray(paths) ? paths : [paths];
-      return pathArray.some(p => p && p.toLowerCase() === parentGallery.toLowerCase());
-    });
+    const isKnownGallery = knownGalleries.has(String(parentGallery || '').toLowerCase());
 
-    // Bot OR unknown gallery -> 410 Gone
-    if (isSearchBot(request) || !isKnownGallery) {
-      ctx.waitUntil(logEdgeEvent(env, '410', pathname, imageId, isSearchBot(request), request));
+    // Missing image:
+    // - Search bots -> 410 (clean index)
+    // - Non-browser clients (scrapers, scanners) -> 410 (don't help, don't redirect)
+    // - Unknown gallery -> 410
+    // - Real browsers with known gallery -> 302 to gallery landing (good UX)
+    if (isSearch || !isBrowser || !isKnownGallery) {
+      ctx.waitUntil(logEdgeEvent(env, '410', pathname, imageId, isSearch, request));
       return new Response("Gone", {
         status: 410,
         headers: {
@@ -544,7 +728,7 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
 
     // Human with known gallery -> 302 fallback to parent gallery
     ctx.waitUntil(logEdgeEvent(env, '302', pathname, imageId, false, request));
-    return Response.redirect(`https://www.k4studios.com${parentGallery}`, 302);
+    return Response.redirect(`https://www.k4studios.com${parentGallery}${search}`, 302);
 
   } catch (err) {
     console.error("Image page policy error:", err);
@@ -786,7 +970,7 @@ async function runSerpCheck(env) {
       const parsed = parseSerpResponse(response);
       
       await env.DB.prepare(`
-        INSERT INTO serp_results 
+        INSERT OR REPLACE INTO serp_results 
         (keyword, engine, checked_at, our_rank, our_url, all_rankings, top_3_urls, full_serp_json)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
       `).bind(
@@ -1011,7 +1195,7 @@ async function handleSerpLaunch(request, env) {
               <input type="number" id="b-${idx}" placeholder="#" min="1" max="100" value="${bVal}">
             </div>
             <div class="save-group">
-              <button onclick="logRank(${idx}, '${safeKw}')" class="btn-log${hasLogged ? ' logged' : ''}">💾 Save</button>
+              <button onclick="logRank(this, ${idx}, '${safeKw}')" class="btn-log${hasLogged ? ' logged' : ''}">💾 Save</button>
               ${hasLogged ? '<span class="saved-date">Saved today</span>' : ''}
             </div>
           </div>
@@ -1177,7 +1361,7 @@ async function handleSerpLaunch(request, env) {
       window.open('https://www.bing.com/search?q=' + q, '_blank');
     }
     
-    async function logRank(idx, keyword) {
+    async function logRank(btn, idx, keyword) {
       const gRank = document.getElementById('g-' + idx).value || null;
       const gaiRank = document.getElementById('gai-' + idx).value || null;
       const bRank = document.getElementById('b-' + idx).value || null;
@@ -1187,9 +1371,8 @@ async function handleSerpLaunch(request, env) {
         return;
       }
       
-      const btn = event.target;
       btn.disabled = true;
-      btn.textContent = '...';
+      btn.textContent = 'Saving…';
       
       try {
         const res = await fetch('/__k4serp/log', {
@@ -1203,30 +1386,29 @@ async function handleSerpLaunch(request, env) {
             bing: bRank ? parseInt(bRank) : null
           })
         });
-        
-        if (res.ok) {
-          btn.textContent = '? Saved!';
-          btn.classList.add('saved');
-          btn.classList.add('logged');
-          // Update the saved date text
-          const saveGroup = btn.parentElement;
-          let dateSpan = saveGroup.querySelector('.saved-date');
-          if (!dateSpan) {
-            dateSpan = document.createElement('span');
-            dateSpan.className = 'saved-date';
-            saveGroup.appendChild(dateSpan);
-          }
-          dateSpan.textContent = 'Saved today';
-          setTimeout(() => {
-            btn.textContent = '💾 Save';
-            btn.classList.remove('saved');
-            btn.disabled = false;
-          }, 1500);
-        } else {
-          throw new Error('Failed to save');
+
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || data?.error) throw new Error(data?.error || 'Failed to save');
+
+        btn.textContent = 'Saved';
+        btn.classList.add('saved');
+        btn.classList.add('logged');
+        // Update the saved date text
+        const saveGroup = btn.parentElement;
+        let dateSpan = saveGroup.querySelector('.saved-date');
+        if (!dateSpan) {
+          dateSpan = document.createElement('span');
+          dateSpan.className = 'saved-date';
+          saveGroup.appendChild(dateSpan);
         }
+        dateSpan.textContent = 'Saved today';
+        setTimeout(() => {
+          btn.textContent = '💾 Save';
+          btn.classList.remove('saved');
+          btn.disabled = false;
+        }, 1200);
       } catch (e) {
-        btn.textContent = '? Error';
+        btn.textContent = 'Error';
         setTimeout(() => {
           btn.textContent = '💾 Save';
           btn.disabled = false;
@@ -1342,10 +1524,32 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     byKeywordEngine[r.keyword][r.engine] = r;
   }
   
-  const googleRanks = latestResults.filter(r => r.engine === 'google' && r.our_rank).map(r => r.our_rank);
-  const avgRank = googleRanks.length ? (googleRanks.reduce((a, b) => a + b, 0) / googleRanks.length) : null;
+  const getValidRank = (rank) => {
+    const n = Number(rank);
+    if (!Number.isFinite(n) || n <= 0) return null;
+    return n;
+  };
+
+  const ranksByEngine = (engine) =>
+    latestResults
+      .filter(r => r.engine === engine)
+      .map(r => getValidRank(r.our_rank))
+      .filter(Boolean);
+
+  const avg = (nums) => (nums.length ? (nums.reduce((a, b) => a + b, 0) / nums.length) : null);
+
+  const googleRanks = ranksByEngine('google');
+  const googleAiRanks = ranksByEngine('google_ai');
+  const bingRanks = ranksByEngine('bing');
+
+  const avgGoogle = avg(googleRanks);
+  const avgGoogleAi = avg(googleAiRanks);
+  const avgBing = avg(bingRanks);
+
   const lastCheck = latestResults.reduce((max, r) => !max || r.checked_at > max ? r.checked_at : max, null);
-  const rankedCount = googleRanks.length;
+  const rankedGoogleCount = googleRanks.length;
+  const rankedGoogleAiCount = googleAiRanks.length;
+  const rankedBingCount = bingRanks.length;
   
   const keywordRows = keywords.map(kw => {
     const engines = byKeywordEngine[kw.keyword] || {};
@@ -1366,7 +1570,31 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
       : '<span style="color:#888">—</span>';
     
     const trend = trendByKeyword[kw.keyword] || [];
-    const sparkline = trend.slice(-14).map(t => Math.min(MAX_RANK, Math.max(1, t.rank ?? MAX_RANK)));
+    const recentTrend = trend.slice(-14);
+    const sparkline = recentTrend.map(t => {
+      const v = getValidRank(t.rank) ?? MAX_RANK;
+      return Math.min(MAX_RANK, Math.max(1, v));
+    });
+
+    const validRecent = recentTrend.map(t => getValidRank(t.rank)).filter(Boolean);
+    const trendPoints = validRecent.length;
+    const trendStart = trendPoints ? validRecent[0] : null;
+    const trendEnd = trendPoints ? validRecent[validRecent.length - 1] : null;
+
+    let trendPct = null;
+    if (trendStart && trendEnd && trendStart > 0 && trendStart !== trendEnd) {
+      // Lower rank is better => improvement = start - end
+      trendPct = ((trendStart - trendEnd) / trendStart) * 100;
+    }
+
+    const trendBadge = (() => {
+      if (!trendPoints) return '<span style="color:#666">n=0</span>';
+      if (trendPct === null) return `<span style="color:#666">n=${trendPoints}</span>`;
+      const isBetter = trendPct > 0;
+      const color = isBetter ? '#10b981' : '#ef4444';
+      const arrow = isBetter ? '▲' : '▼';
+      return `<span style="color:${color}; font-weight:600">${arrow}${Math.abs(trendPct).toFixed(1)}% <span style="color:#666;font-weight:400">(n=${trendPoints})</span></span>`;
+    })();
     
     const rankCell = (rank) => {
       if (!rank) return '<td class="rank-cell">-</td>';
@@ -1383,16 +1611,23 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
         ${rankCell(gaiRank)}
         ${rankCell(bRank)}
         <td>
-          ${sparkline.length > 1 ? `
-            <svg class="sparkline" viewBox="0 0 70 20" preserveAspectRatio="none">
-              <polyline fill="none" stroke="#4a9eff" stroke-width="1.5" points="${
-                sparkline.map((v, i) => `${i * (70 / Math.max(sparkline.length - 1, 1))},${((v - 1) / (MAX_RANK - 1)) * 20}`).join(' ')
-              }"/>
-            </svg>
-          ` : '-'}
+          <div style="display:flex;align-items:center;gap:10px">
+            ${sparkline.length > 1 ? `
+              <svg class="sparkline" viewBox="0 0 70 20" preserveAspectRatio="none">
+                <polyline fill="none" stroke="#4a9eff" stroke-width="1.5" points="${
+                  sparkline.map((v, i) => `${i * (70 / Math.max(sparkline.length - 1, 1))},${((v - 1) / (MAX_RANK - 1)) * 20}`).join(' ')
+                }"/>
+              </svg>
+            ` : '<span style="color:#666">-</span>'}
+            ${trendBadge}
+          </div>
         </td>
         <td style="text-align:center">
-          <button onclick="deleteKeyword('${escapeHtml(kw.keyword)}')" style="background:none;border:none;color:#ef4444;cursor:pointer">?</button>
+          <button
+            onclick="deleteKeyword('${escapeHtml(kw.keyword)}')"
+            title="Remove keyword"
+            style="background:none;border:1px solid #444;border-radius:6px;color:#ef4444;cursor:pointer;padding:2px 8px"
+          >✕</button>
         </td>
       </tr>
     `;
@@ -1446,6 +1681,7 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
   </h1>
   
   <div class="controls">
+    <button class="primary" onclick="fetchNow()">Fetch Now</button>
     <a href="?days=7">7 Days</a>
     <a href="?days=30">30 Days</a>
     <a href="?days=90">90 Days</a>
@@ -1457,13 +1693,21 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
       <div class="value">${keywords.length}</div>
       <div class="label">Keywords</div>
     </div>
-    <div class="stat ${avgRank && avgRank <= 10 ? 'good' : ''}">
-      <div class="value">${avgRank ? avgRank.toFixed(1) : '-'}</div>
-      <div class="label">Avg Google Rank</div>
+    <div class="stat ${avgGoogle && avgGoogle <= 10 ? 'good' : ''}">
+      <div class="value">${avgGoogle ? avgGoogle.toFixed(1) : '-'}</div>
+      <div class="label">Avg Google (n=${rankedGoogleCount})</div>
+    </div>
+    <div class="stat ${avgGoogleAi && avgGoogleAi <= 10 ? 'good' : ''}">
+      <div class="value">${avgGoogleAi ? avgGoogleAi.toFixed(1) : '-'}</div>
+      <div class="label">Avg G-AI (n=${rankedGoogleAiCount})</div>
+    </div>
+    <div class="stat ${avgBing && avgBing <= 10 ? 'good' : ''}">
+      <div class="value">${avgBing ? avgBing.toFixed(1) : '-'}</div>
+      <div class="label">Avg Bing (n=${rankedBingCount})</div>
     </div>
     <div class="stat">
-      <div class="value">${rankedCount}/${keywords.length}</div>
-      <div class="label">Ranking</div>
+      <div class="value">${rankedGoogleCount}/${keywords.length}</div>
+      <div class="label">Google Ranking</div>
     </div>
   </div>
 
@@ -1476,7 +1720,7 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
         <th>Google</th>
         <th>G-AI</th>
         <th>Bing</th>
-        <th>14-Day Trend</th>
+        <th>14-Day Trend <span style="font-weight:400;color:#666">(↓ rank is better)</span></th>
         <th></th>
       </tr>
     </thead>
@@ -1492,6 +1736,30 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
   </div>
 
   <script>
+    async function fetchNow() {
+      const btn = document.querySelector('.controls button.primary');
+      if (!btn) return;
+      const prev = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Fetching…';
+      try {
+        const res = await fetch('/__k4serp/fetch', {
+          method: 'POST',
+          credentials: 'include'
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || data?.error) {
+          throw new Error(data?.error || ('Fetch failed (' + res.status + ')'));
+        }
+        location.reload();
+      } catch (err) {
+        alert(err?.message || 'Fetch failed');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = prev;
+      }
+    }
+
     async function addKeyword() {
       const keyword = document.getElementById('newKeyword').value.trim();
       if (!keyword) return alert('Enter a keyword');
@@ -1620,7 +1888,7 @@ export default {
     // 1) Image detail pages: apply policy first, then log art view
     if (isImagePageRoute(url.pathname)) {
       const policyResponse = await handleImagePagePolicy(request, url.pathname, ctx, env);
-      if (policyResponse) return addVisitorIdCookie(policyResponse, visitorId, visitorIdIsNew);
+      if (policyResponse) return addVisitorIdCookie(policyResponse, visitorId, visitorIdIsNew, request);
       
       // Log image page view (someone viewing an image detail page)
       const imageId = extractImageId(url.pathname);
@@ -1635,7 +1903,7 @@ export default {
       }
       
       const response = await fetch(request);
-      return addVisitorIdCookie(response, visitorId, visitorIdIsNew);
+      return addVisitorIdCookie(response, visitorId, visitorIdIsNew, request);
     }
 
     // 2) Gallery pages: pass through.
@@ -1643,10 +1911,21 @@ export default {
     if ((url.pathname.startsWith("/Galleries/") || url.pathname.startsWith("/Other/")) && 
         !url.pathname.includes("/i-")) {
       const response = await fetch(request);
-      return addVisitorIdCookie(response, visitorId, visitorIdIsNew);
+      return addVisitorIdCookie(response, visitorId, visitorIdIsNew, request);
     }
 
     // 3) /img proxy routes — no cookie for binary image responses
+    if (url.pathname.startsWith("/proxy/")) {
+      const rewritten = rewriteLegacyProxyToImgRequest(request);
+      if (!rewritten) {
+        return new Response("Invalid proxy route", {
+          status: 400,
+          headers: { "Cache-Control": "no-store" }
+        });
+      }
+      return handleImageRequest(rewritten, ctx, env);
+    }
+
     if (url.pathname.startsWith("/img/")) {
       return handleImageRequest(request, ctx, env);
     }
@@ -1655,12 +1934,12 @@ export default {
     try {
       console.log("PROXY TARGET (gateway):", request.url);
       const response = await handleGatewayRequest(request, env);
-      return addVisitorIdCookie(response, visitorId, visitorIdIsNew);
+      return addVisitorIdCookie(response, visitorId, visitorIdIsNew, request);
     } catch (err) {
       console.error("Gateway error (failing open):", err);
       console.log("PROXY TARGET (fallback):", request.url);
       const response = await fetch(request);
-      return addVisitorIdCookie(response, visitorId, visitorIdIsNew);
+      return addVisitorIdCookie(response, visitorId, visitorIdIsNew, request);
     }
   }
 };

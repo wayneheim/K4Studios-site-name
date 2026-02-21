@@ -2,6 +2,23 @@ name = "k4-analytics"
 main = "src/analytics/worker.js"
 compatibility_date = "2024-01-01"
 
+# Worker route configuration
+# If your Wrangler API token has permission to manage routes for the zone,
+# `wrangler deploy` will attach these automatically.
+# Otherwise, add the same patterns in Cloudflare Dashboard → Workers & Pages → k4-analytics → Settings → Triggers.
+routes = [
+	"www.k4studios.com/__k4e*",
+	"k4studios.com/__k4e*",
+	"www.k4studios.com/track*",
+	"k4studios.com/track*",
+	"www.k4studios.com/__k4track/event*",
+	"k4studios.com/__k4track/event*",
+	"www.k4studios.com/__k4stats*",
+	"k4studios.com/__k4stats*",
+	"www.k4studios.com/edge-event*",
+	"k4studios.com/edge-event*"
+]
+
 # Route configuration
 # Deploy to: k4studios.com/__k4stats, k4studios.com/track
 #

@@ -11,19 +11,80 @@
  * This function ONLY runs on actual 404s, not on every page load.
  */
 
-const imageIdMap = require('./imageIdMap.json');
-
-// Build case-insensitive lookup map
-const imageIdMapLower = {};
-for (const [key, value] of Object.entries(imageIdMap)) {
-  imageIdMapLower[key.toLowerCase()] = { path: value, originalId: key };
+let _imageIdMapLower = null;
+function getImageIdMapLower() {
+  if (_imageIdMapLower) return _imageIdMapLower;
+  const imageIdMap = require('./imageIdMap.json');
+  const lower = {};
+  for (const [key, value] of Object.entries(imageIdMap)) {
+    lower[key.toLowerCase()] = { path: value, originalId: key };
+  }
+  _imageIdMapLower = lower;
+  return _imageIdMapLower;
 }
 
-// Detect search engine bots by User-Agent
-function isBot(userAgent) {
+// Detect search engine crawlers by User-Agent (allowed)
+function isSearchCrawler(userAgent) {
   if (!userAgent) return false;
-  const botPattern = /googlebot|bingbot|yandex|baiduspider|duckduckbot|slurp|msnbot|ahrefsbot|semrushbot|petalbot/i;
-  return botPattern.test(userAgent);
+  // Intentionally narrow: keep link equity for major search engines.
+  // Do NOT include SEO tools/scrapers here (Ahrefs/Semrush/etc).
+  const crawlerPattern = /googlebot|bingbot|duckduckbot|slurp|yandex|baiduspider|msnbot|applebot/i;
+  return crawlerPattern.test(userAgent);
+}
+
+// Known non-search scrapers / automation clients (locked out)
+function isBlockedBotUa(userAgent) {
+  if (!userAgent) return false;
+  const p = /ahrefsbot|semrushbot|petalbot|mj12bot|dotbot|seznambot|serpstatbot|dataforseo|python-requests|aiohttp|curl|wget|go-http-client/i;
+  return p.test(userAgent);
+}
+
+function isSuspiciousPath(pathname) {
+  const p = String(pathname || '').toLowerCase();
+  // Keep minimal + high-signal: these are almost always exploit/scraper probes.
+  return p.includes('/hack/');
+}
+
+function hasValidSessionCookie(headers) {
+  const cookie = headers?.cookie || headers?.Cookie || '';
+  if (!cookie) return false;
+  return /(?:^|;\s*)k4_sid=/.test(cookie) || /(?:^|;\s*)k4_vid=/.test(cookie);
+}
+
+function getClientIp(headers) {
+  const h = headers || {};
+  const direct = h['x-nf-client-connection-ip'] || h['X-NF-Client-Connection-IP'];
+  if (direct) return String(direct);
+  const xff = h['x-forwarded-for'] || h['X-Forwarded-For'];
+  if (xff) return String(xff).split(',')[0].trim();
+  return '';
+}
+
+// Best-effort, in-memory rate limiter (per warm function instance).
+// Not perfect, but it helps reduce brute-force oracle behavior.
+const _ipBuckets = new Map();
+let _bucketOps = 0;
+function isHighRateIp(ip, opts = {}) {
+  if (!ip) return false;
+  const WINDOW_MS = 60_000;
+  const MAX_REQ = opts.isCrawler ? 60 : 25;
+  const now = Date.now();
+  let b = _ipBuckets.get(ip);
+  if (!b || (now - b.windowStart) > WINDOW_MS) {
+    b = { windowStart: now, count: 0 };
+  }
+  b.count += 1;
+  _ipBuckets.set(ip, b);
+
+  // Lazy prune to avoid unbounded growth
+  _bucketOps += 1;
+  if (_bucketOps % 200 === 0) {
+    for (const [k, v] of _ipBuckets.entries()) {
+      if ((now - v.windowStart) > (5 * WINDOW_MS)) _ipBuckets.delete(k);
+    }
+  }
+
+  return b.count > MAX_REQ;
 }
 
 // NOTE: Edge event logging (301/410/404) is now handled directly in the 
@@ -37,7 +98,8 @@ function isBot(userAgent) {
 exports.handler = async (event) => {
   // Get User-Agent for bot detection
   const userAgent = event.headers['user-agent'] || event.headers['User-Agent'] || '';
-  const isBotRequest = isBot(userAgent);
+  const isCrawler = isSearchCrawler(userAgent);
+  const isBlockedUa = isBlockedBotUa(userAgent);
   
   // Get path from query string (passed by _redirects) or from event.path
   const queryPath = event.queryStringParameters?.path || '';
@@ -46,11 +108,88 @@ exports.handler = async (event) => {
   
   // Also get the image ID directly from query params if available
   const queryId = event.queryStringParameters?.id || '';
+
+  // Preserve any extra query params across redirects (e.g. ?k4debug=1)
+  // The redirect rule always provides id/path; anything else should pass through.
+  const passthroughQuery = (() => {
+    try {
+      const qp = event.queryStringParameters || {};
+      const params = new URLSearchParams();
+      for (const [k, v] of Object.entries(qp)) {
+        if (k === 'id' || k === 'path') continue;
+        if (v === undefined || v === null) continue;
+        if (Array.isArray(v)) {
+          for (const vv of v) {
+            if (vv !== undefined && vv !== null && String(vv) !== '') params.append(k, String(vv));
+          }
+        } else {
+          if (String(v) !== '') params.set(k, String(v));
+        }
+      }
+      const s = params.toString();
+      return s ? `?${s}` : '';
+    } catch {
+      return '';
+    }
+  })();
   
   console.log(`[smart-404] Event path: ${eventPath}`);
   console.log(`[smart-404] Query path: ${queryPath}`);
   console.log(`[smart-404] Query id: ${queryId}`);
   console.log(`[smart-404] Using path: ${requestedPath}`);
+
+  // Don't help exploit probes discover real URLs.
+  if (isSuspiciousPath(requestedPath)) {
+    console.log(`[smart-404] Suspicious path blocked (410): ${requestedPath}`);
+    return {
+      statusCode: 410,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'public, max-age=86400',
+        'X-Robots-Tag': 'noindex, nofollow',
+        'X-Smart-404': 'blocked-suspicious'
+      },
+      body: 'Gone'
+    };
+  }
+
+  // Quill/Apollo-13: locked door unless proven on-site human session.
+  // Avoid using smart-404 as an oracle for brute-force ID probing.
+  const hasSession = hasValidSessionCookie(event.headers);
+  const clientIp = getClientIp(event.headers);
+  const highRate = isHighRateIp(clientIp, { isCrawler });
+
+  // Hard lockout: known scrapers/automation clients.
+  if (isBlockedUa) {
+    console.log('[smart-404] Locked: blocked UA');
+    return {
+      statusCode: 404,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'public, max-age=600',
+        'X-Robots-Tag': 'noindex, nofollow',
+        'X-Smart-404': 'locked'
+      },
+      body: 'Not Found'
+    };
+  }
+
+  // Allow: on-site humans (session cookie) OR major search crawlers.
+  // Lock out: no-session unknowns (bulk probes) and high-rate sources.
+  if (!(hasSession || isCrawler) || highRate) {
+    if (!hasSession && !isCrawler) console.log('[smart-404] Locked: no session and not a crawler');
+    if (highRate) console.log(`[smart-404] Locked: high rate from ${clientIp}`);
+    return {
+      statusCode: 404,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'public, max-age=600',
+        'X-Robots-Tag': 'noindex, nofollow',
+        'X-Smart-404': 'locked'
+      },
+      body: 'Not Found'
+    };
+  }
   
   // Extract image ID from path or use query param
   let imageId = queryId;
@@ -76,6 +215,7 @@ exports.handler = async (event) => {
   console.log(`[smart-404] Looking up image ID: ${imageId}`);
   
   // Look up the image in our map (case-insensitive)
+  const imageIdMapLower = getImageIdMapLower();
   const lookup = imageIdMapLower[imageId.toLowerCase()];
   // path is an array of gallery paths - prefer one that matches current gallery context
   const pathArray = lookup?.path;
@@ -119,7 +259,7 @@ exports.handler = async (event) => {
   
   if (correctGalleryPath) {
     // Found the image - redirect with canonical case
-    const redirectUrl = `${correctGalleryPath}/${canonicalImageId}`;
+    const redirectUrl = `${correctGalleryPath}/${canonicalImageId}${passthroughQuery}`;
     console.log(`[smart-404] Found! Redirecting to: ${redirectUrl}`);
     
     return {
@@ -159,7 +299,7 @@ exports.handler = async (event) => {
     return {
       statusCode: 302,
       headers: {
-        'Location': galleryLandingPath,
+        'Location': `${galleryLandingPath}${passthroughQuery}`,
         'Cache-Control': 'no-cache', // Don't cache redirects for humans
         'X-Smart-404': 'gallery-fallback-human'
       },
@@ -173,7 +313,7 @@ exports.handler = async (event) => {
   return {
     statusCode: 302,
     headers: {
-      'Location': '/',
+      'Location': `/${passthroughQuery}`,
       'Cache-Control': 'no-cache',
       'X-Smart-404': 'homepage-fallback'
     },

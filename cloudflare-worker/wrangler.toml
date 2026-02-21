@@ -38,3 +38,15 @@ port = 8787
 [env.production]
 # Routes are configured in Cloudflare Dashboard, not here
 # This prevents accidental route changes during deploys
+
+[env.production.vars]
+ANALYTICS_ENABLED = "true"
+
+[[env.production.services]]
+binding = "ANALYTICS"
+service = "k4-analytics"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "k4-analytics"
+database_id = "f2c159b0-b0f1-4056-934c-90e9b8a92e14"

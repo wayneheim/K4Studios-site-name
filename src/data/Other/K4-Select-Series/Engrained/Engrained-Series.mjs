@@ -143,6 +143,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/0/MxCgpQxwFgDvDvKjxX3hBrTLC9nGVBwNngTgzzcCn/S/Welcome%20Party%2030%20x%2020-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-J6Gdmr4/A",
+
     "keywords": [
       "western fine art photography",
       "painterly western photography",
@@ -177,24 +178,30 @@ export const galleryData = [
       "Engrained Series",
       "wood print fine art"
     ],
+
     "story": "Intent, resolve, fortune, neglect.\nThey gather for a midnight reckoning.\n\nWings of hubris melted by the rail’s bright light—\nblinded by station and contempt of creed,\neach begets the other.\n\nFrom the shadows, change is coming,\nthe schedule paid in full.\n\nWell-timed vengeance—\na moral bridge to span.\n\nLines will cross, and this all ends—\njustice dealt by unseen hands.",
     "notes": "“Hubris” fuses Western legend and classical myth, turning a familiar train-standoff into an allegory of downfall and shifting power. The four archetypes—Intent, Resolve, Fortune, Neglect—move like living forces, their shapes dissolving in the glare of the rail’s “second sun.” Heim’s painterly control of light and texture frames the drama as both personal and universal: a story of ambition meeting its limit, and of unseen hands finally tipping the scales. The Icarus motif, rendered in locomotive light, elevates this beyond mere narrative photography—this is a meditation on power, consequence, and the moment the forgotten reclaim the story.\nMuseum-ready, this image will stand as a high point of narrative Western art and a conversation piece for any collection.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
+
     "visibility": "show",
     "sortOrder": 44,
+
     "themes": {
       "lore-and-legacy": 3
     },
+
     "contentSource": "ai",
     "first_seen": "2026-01-22",
     "editionSize": 50,
-    "imageSize": "30\" X 20\"",
+    "imageSize": `30" X 20"`,
     "price": "$2000",
     "linkedImageId": "i-LL2Gp5r",
-    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    yearCreated: "2025"
   },
   {
     "id": "i-G8gfsL5",
@@ -1506,6 +1513,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wX39m6G/0/KzcbqH7SDjsjx3PqHHGkNLtp5Cbc3jxSvxjtCLZzG/S/3%20dollars%20for%20a%20whiskey%2016%20x%2024%20copy-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-wX39m6G/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -1532,24 +1540,30 @@ export const galleryData = [
       "photography printed on wood",
       "Engrained Series"
     ],
+
     "story": "“I’m pretty sure you must be talking to someone else—\n’Cause I asked how much for the whiskey,\nnot the redhead at the end of the bar.\n\nI’ve seen a lot of bars in a lot of these cow towns,\nand I ain’t ever seen no three-dollar whiskey.\n\nSo I’m gonna ask you one more time—\nYou talkin’ to me?”",
     "notes": "Beneath the cinematic surface, this image draws inspiration from Rembrandt and Caravaggio’s chiaroscuro, harnessing spot-lit highlights and controlled shadows rarely achieved in live western reenactment photography. The in-camera glass reflection and bokeh lend painterly depth, while the subject’s pose—caught between skepticism and indulgence—embodies the daily negotiation of risk and reward on the frontier. Collectors consistently remark on its moody palette and the way the scene pulls you in; it’s a standout example of modern western pictorialism—classic in feeling, contemporary in craft, and highly sought after by curators and collectors of fine art western photography.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Engrained"
     ],
+
     "visibility": "show",
     "sortOrder": 22,
+
     "themes": {
       "lore-and-legacy": 29
     },
+
     "contentSource": "ai",
     "first_seen": "2026-01-22",
     "editionSize": 50,
     "imageSize": `16" x 24"`,
     "price": "$1500",
     "linkedImageId": "i-MHGPvcs",
-    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs"
+    "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    yearCreated: "2025"
   },
   {
     "id": "i-HZVV8J2",
@@ -1876,7 +1890,7 @@ export const galleryData = [
   },
   {
     "id": "i-b4wG4vh",
-    "title": "Cotton Candy",
+    "title": "Western Cotton Candy - Jackson Hole, Wyoming",
     "description": "Painterly Photograph of some iconic Western Cotton Candy- A lone pink \"impressionistic\" cloud puff floating defiantly above the 55mph road sign. - Jackson Hole Wyoming. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
     "alt": "Painterly western landscape photograph of a single pink cloud floating above open Wyoming terrain near Jackson Hole at dusk.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/LcZFTsWTvTFvChZchD3c4zSLDNc5ZHGzcDW97SbbD/XL/Landscape-Cotton-Canday-ws-XL.jpg",

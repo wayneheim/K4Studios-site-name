@@ -10,14 +10,22 @@ import "@/styles/global.css";
 import { semantic } from "@/data/semantic/K4-Sem.ts";
 import { cleanRedirect } from "@/utils/cleanRedirect";
 import { siteNav } from "@/data/siteNav.ts";
-import imageIdMap from "@/data/imageIdMap.json";
+
+/* ---------- Smart 404 gating (Quill/Apollo-13) ---------- */
+const ua = Astro.request.headers.get('user-agent') || '';
+const cookie = Astro.request.headers.get('cookie') || '';
+const hasSessionCookie = /(?:^|;\s*)k4_sid=/.test(cookie) || /(?:^|;\s*)k4_vid=/.test(cookie);
+const crawlerPattern = /googlebot|bingbot|duckduckbot|slurp|yandex|baiduspider|msnbot|applebot/i;
+const isSearchCrawler = crawlerPattern.test(ua);
+const allowSmart404 = hasSessionCookie || isSearchCrawler;
 
 /* ---------- Smart 404: Check for moved images and redirect with proper 301 ---------- */
 const requestUrl = Astro.url.pathname;
 const imageIdMatch = requestUrl.match(/\/(i-[a-zA-Z0-9]+)\/?$/);
 
-if (imageIdMatch) {
+if (allowSmart404 && imageIdMatch) {
   const imageId = imageIdMatch[1];
+  const imageIdMap = (await import("@/data/imageIdMap.json")).default;
   const correctGalleryPath = imageIdMap[imageId];
   
   if (correctGalleryPath) {

@@ -665,6 +665,7 @@ export default function EngrainedStatusPanel({ current, backupMade, onUpdate, on
   const [localImageSize, setLocalImageSize] = useState("");
   const [localPrice, setLocalPrice] = useState("");
   const [localEditionSize, setLocalEditionSize] = useState(50);
+  const [localYearCreated, setLocalYearCreated] = useState(""); // Year the artwork was created
   
   // Link to Master modal
   const [linkModalOpen, setLinkModalOpen] = useState(false);
@@ -730,6 +731,7 @@ export default function EngrainedStatusPanel({ current, backupMade, onUpdate, on
       setLocalImageSize(current.imageSize || "");
       setLocalPrice(current.price || "");
       setLocalEditionSize(current.editionSize || 50);
+      setLocalYearCreated(current.yearCreated || "");
       setPendingChanges(false);
       setMasterImage(null); // Only clear when switching images, not on every update
       // Close any open modals when switching images
@@ -842,6 +844,7 @@ export default function EngrainedStatusPanel({ current, backupMade, onUpdate, on
       if (localImageSize) patch.imageSize = localImageSize;
       if (localPrice) patch.price = localPrice;
       if (localEditionSize) patch.editionSize = localEditionSize;
+      if (localYearCreated) patch.yearCreated = localYearCreated;
       
       if (Object.keys(patch).length > 0) {
         const res = await fetch("/.netlify/functions/engrainedData", {
@@ -859,7 +862,8 @@ export default function EngrainedStatusPanel({ current, backupMade, onUpdate, on
           onUpdate("_linkBatch", {
             imageSize: localImageSize || undefined,
             price: localPrice || undefined,
-            editionSize: localEditionSize || undefined
+            editionSize: localEditionSize || undefined,
+            yearCreated: localYearCreated || undefined
           });
         }
       }
@@ -1021,6 +1025,24 @@ export default function EngrainedStatusPanel({ current, backupMade, onUpdate, on
           onChange={(e) => { setLocalEditionSize(parseInt(e.target.value) || 50); setPendingChanges(true); }}
           className="w-24 px-3 py-2 bg-white rounded border border-teal-200 text-sm"
         />
+      </div>
+
+      {/* Year Created */}
+      <div className="mb-4">
+        <label className="block text-xs opacity-70 mb-1">Year Created</label>
+        <input
+          type="text"
+          value={localYearCreated}
+          onChange={(e) => {
+            const val = e.target.value.replace(/[^0-9]/g, "").slice(0, 4);
+            setLocalYearCreated(val);
+            setPendingChanges(true);
+          }}
+          placeholder="e.g. 2024"
+          className="w-24 px-3 py-2 bg-white rounded border border-teal-200 text-sm"
+          maxLength={4}
+        />
+        <span className="ml-2 text-xs text-gray-500">For Certificate of Authenticity</span>
       </div>
 
       {/* Edition Tracking */}
