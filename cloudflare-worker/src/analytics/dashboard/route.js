@@ -88,6 +88,12 @@ export async function handleDashboardRequest(request, env, ctx) {
     // "how many were hidden" when Hide Bots is enabled.
     const baseRangeDateClause = rangeDateClause;
 
+    // Truth-only date clause: respects selectedDate / range, but ignores all UI filters.
+    // Used for leaderboard-style panels that should not change based on presentation toggles.
+    const truthDateClause = (selectedDate
+      ? `date(ts, '-5 hours') = '${selectedDate}'`
+      : baseRangeDateClause);
+
     // Global filters must be baked into date/range clauses because many queries
     // only use dateClause and ignore ipClause/chardonClause.
     //
@@ -206,7 +212,7 @@ export async function handleDashboardRequest(request, env, ctx) {
     const html = await runDashboardController(env, {
       dateClause, galleryClause, ipClause, botClause, chardonClause,
       priorPeriodClause, rangeDateClause, artIpClause,
-      baseDateClause, hideBotsPredicate,
+      baseDateClause, truthDateClause, hideBotsPredicate,
       yesterday, days, selectedDate, galleryFilter, excludeIp, viewerIp,
       hideBots, hideChardon
     });

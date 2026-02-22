@@ -1,3 +1,6 @@
+# Normalize trailing slashes (prevents Smart-404 function burns)
+^/(.+)/$  /$1  301!
+
 # Redirect /Other to Glossary (no landing page exists)
 /Other  /Glossary  301
 
@@ -37,8 +40,8 @@
 /Scheduled-Shoots/*  /  410
 
 # Legacy Photography-Galleries paths (old SmugMug structure)
-/Photography-Galleries/*/i-*  /  410
-/Photography-Galleries/*  /  410
+/Photography-Galleries/*/i-:id  /.netlify/functions/smart-404?id=:id&path=/Photography-Galleries/:splat/i-:id  404!
+/Photography-Galleries/*  /Galleries/:splat  301
 
 # Legacy Pictorialist paths → redirect to current page
 /Pictorialist-Photography/*/i-*  /Pictorialist-Photography  301!

@@ -14,6 +14,29 @@ import { DATACENTER_PREFIXES } from '../shared/constants.js';
 import { calculateRiskScore } from './classifier.js';
 import { getVerifiedBotName } from '../shared/utils.js';
 
+function detectOGPlatform(request) {
+  const ua = (request?.headers?.get('user-agent') || '').toLowerCase();
+
+  if (ua.includes('facebookexternalhit')) return 'facebook';
+  if (ua.includes('facebot')) return 'facebook';
+
+  if (ua.includes('linkedinbot')) return 'linkedin';
+
+  if (ua.includes('discordbot')) return 'discord';
+
+  if (ua.includes('slackbot')) return 'slack';
+
+  if (ua.includes('twitterbot')) return 'twitter';
+  if (ua.includes('xbot')) return 'twitter';
+
+  if (ua.includes('whatsapp')) return 'whatsapp';
+
+  // Apple + privacy proxies usually hide identity
+  if (ua.includes('applebot')) return 'apple';
+
+  return 'unknown';
+}
+
 function riskLevelFromScore(score) {
   const s = Number(score || 0);
   if (s >= 8) return 4;
@@ -89,8 +112,17 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       refType = null,
       inferred = null,
       inferredFrom = null,
-      assetSource = null
+      assetSource = null,
+      ogPlatform: ogPlatformFromExtras = null
     } = extras;
+
+    let ogPlatform = ogPlatformFromExtras;
+
+    // Only compute OG platform when we're already in an OG-tagged population.
+    // This keeps normal traffic fast and preserves existing analytics semantics.
+    if ((ogPlatform === null || ogPlatform === undefined) && assetSource === 'og') {
+      ogPlatform = detectOGPlatform(request);
+    }
 
     const referer = refererOverride !== null && refererOverride !== undefined
       ? refererOverride
@@ -138,7 +170,8 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       { name: 'ref_type', value: refType },
       { name: 'inferred', value: inferred },
       { name: 'inferred_from', value: inferredFrom },
-      { name: 'asset_source', value: assetSource }
+      { name: 'asset_source', value: assetSource },
+      { name: 'og_platform', value: ogPlatform }
     ].filter(o => o.value !== null && o.value !== undefined);
 
     const missingColumnRegex = /no such column:\s*([a-zA-Z0-9_]+)/i;

@@ -3,7 +3,7 @@
     "version": "1.0",
     "description": "Edition state database - source of truth for edition counts and sales",
     "warning": "DO NOT manually edit sold counts. Use EditorPro or admin tools.",
-    "lastUpdated": "2026-02-21T03:15:57.761Z"
+    "lastUpdated": "2026-02-21T21:11:24.238Z"
   },
   "i-ncFcHDM:chronicle": {
     "imageId": "i-ncFcHDM",

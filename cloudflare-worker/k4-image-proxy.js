@@ -346,14 +346,14 @@ async function proxyImage(smugMugUrl, request) {
   const headers = {
     "Content-Type": imageResponse.headers.get("Content-Type") || "image/jpeg",
     "Cache-Control": "public, max-age=31536000, immutable",
+    "X-Robots-Tag": "noai, noimageai",
     "X-Content-Type-Options": "nosniff",
     "X-Frame-Options": "DENY",
     "X-Proxy-Origin": "k4studios"
   };
 
-  // Note: we intentionally do NOT add X-Robots-Tag on XL,
-  // because it can create confusing caching/indexing behavior.
-  // Index control should happen at page level, not on image bytes.
+  // NOTE: We intentionally avoid index-control directives on image bytes.
+  // `noai, noimageai` are opt-out signals for training, not indexing.
 
   return new Response(imageResponse.body, { status: 200, headers });
 }
@@ -394,6 +394,158 @@ function looksLikeBrowser(request) {
   }
 }
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function getFrictionTestOverride(request, env) {
+  try {
+    const secret = env?.K4_FRICTION_TEST_TOKEN;
+    if (!secret) return null;
+
+    const token = request.headers.get('X-K4-Friction-Test') || '';
+    if (!token || token !== secret) return null;
+
+    const url = new URL(request.url);
+    const asnStr = url.searchParams.get('k4friction_asn');
+    if (!asnStr) return null;
+    const asn = Number(asnStr);
+    if (!Number.isFinite(asn) || asn <= 0) return null;
+
+    const debug = url.searchParams.get('k4friction_debug') === '1';
+    return { asn, debug };
+  } catch {
+    return null;
+  }
+}
+
+function withFrictionDebugHeaders(response, debugInfo) {
+  if (!debugInfo?.enabled) return response;
+  try {
+    const headers = new Headers(response.headers);
+    headers.set(
+      'X-K4-Friction-Debug',
+      `enabled=1; asn=${debugInfo.asn ?? ''}; bypass=${debugInfo.discoveryBypass ? 1 : 0}; suspect=${debugInfo.suspect ? 1 : 0}; unique=${debugInfo.uniquePerMinute ?? ''}; delayMs=${debugInfo.delayMs ?? ''}; action=${debugInfo.action ?? ''}`
+    );
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers
+    });
+  } catch {
+    return response;
+  }
+}
+
+function ensureNoAIHeaders(response) {
+  try {
+    if (!response) return response;
+    const existing = response.headers?.get?.('X-Robots-Tag');
+    if (existing && String(existing).trim()) return response;
+
+    const headers = new Headers(response.headers);
+    headers.set('X-Robots-Tag', 'noai, noimageai');
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers
+    });
+  } catch {
+    return response;
+  }
+}
+
+function hasK4SessionCookies(request) {
+  const cookieHeader = request.headers.get('Cookie') || '';
+  return /(?:^|;)\s*k4_vid=/.test(cookieHeader) || /(?:^|;)\s*k4_sid=/.test(cookieHeader);
+}
+
+function isDiscoveryBotUA(uaRaw) {
+  // Explicit allowlist for discovery and preview ecosystems.
+  // Do NOT include AI crawlers here.
+  const ua = String(uaRaw || '');
+  return /(googlebot|google-inspectiontool|googleother|apis-google|adsbot-google|googlebot-image|bingbot|bingpreview|msnbot|applebot|duckduckbot|yandex|baiduspider|slurp|petalbot|facebookexternalhit|facebot|twitterbot|pinterestbot|linkedinbot|slackbot|discordbot|telegrambot)/i.test(ua);
+}
+
+function getSuspicionFlags({ request, asn, ua }) {
+  // Behavior-based: no referrer + no session cookies + hosting ASN.
+  // Do NOT trigger on UA alone.
+  const referer = request.headers.get('Referer') || request.headers.get('referer') || '';
+  const noReferrer = !referer;
+  const noSession = !hasK4SessionCookies(request);
+
+  const hostingASNs = new Set([
+    24940, // Hetzner
+    16276  // OVH
+  ]);
+
+  const hostingASN = hostingASNs.has(Number(asn || 0));
+  const isCacheWarmer = String(ua || '').toLowerCase().includes('k4-cache-warmer');
+
+  return {
+    noReferrer,
+    noSession,
+    hostingASN,
+    suspect: !isCacheWarmer && noReferrer && noSession && hostingASN
+  };
+}
+
+async function getAndMarkUniqueImagesPerMinute(ctx, { ipHash, canonicalImageId }) {
+  // Best-effort edge-cache counter (no DO/KV required).
+  // Tracks unique images per minute per ip_hash.
+  // Not perfectly atomic, but sufficient for selective friction.
+  const cache = caches.default;
+  const minuteBucket = Math.floor(Date.now() / 60000);
+  const safeIp = encodeURIComponent(String(ipHash || 'noip'));
+  const safeId = encodeURIComponent(String(canonicalImageId || 'noid'));
+  const base = `https://k4ratelimit.local/img/${minuteBucket}/${safeIp}`;
+
+  const markerReq = new Request(`${base}/u/${safeId}`);
+  const counterReq = new Request(`${base}/count`);
+
+  let isNewUnique = false;
+  try {
+    const markerHit = await cache.match(markerReq);
+    if (!markerHit) {
+      isNewUnique = true;
+      ctx.waitUntil(
+        cache.put(
+          markerReq,
+          new Response('1', {
+            headers: { 'Cache-Control': 'public, max-age=70' }
+          })
+        )
+      );
+    }
+  } catch (e) {
+    console.error('Rate-limit marker error:', e);
+  }
+
+  let count = 0;
+  try {
+    const existing = await cache.match(counterReq);
+    if (existing) {
+      count = parseInt(await existing.text(), 10) || 0;
+    }
+
+    if (isNewUnique) {
+      count = count + 1;
+      ctx.waitUntil(
+        cache.put(
+          counterReq,
+          new Response(String(count), {
+            headers: { 'Cache-Control': 'public, max-age=70' }
+          })
+        )
+      );
+    }
+  } catch (e) {
+    console.error('Rate-limit counter error:', e);
+  }
+
+  return { uniquePerMinute: count, isNewUnique };
+}
+
 async function handleImageRequest(request, ctx, env) {
   const url = new URL(request.url);
   const route = parseImageRoute(url.pathname);
@@ -412,6 +564,7 @@ async function handleImageRequest(request, ctx, env) {
       headers: {
         "Content-Type": "image/gif",
         "Cache-Control": "public, max-age=31536000, immutable",
+        "X-Robots-Tag": "noai, noimageai",
         "X-Ghost-Image": "true"
       }
     });
@@ -452,11 +605,102 @@ async function handleImageRequest(request, ctx, env) {
     ? request
     : new Request(canonicalUrl.toString(), request);
 
+  // Phase 1 Asset Protection: selective friction for suspected bulk harvesting.
+  // Runs BEFORE cache lookup (so scraping isn't free) while preserving canonical cache keys.
+  const frictionTest = getFrictionTestOverride(request, env);
+  const frictionDebug = {
+    enabled: Boolean(frictionTest?.debug),
+    asn: frictionTest?.asn ?? request.cf?.asn,
+    discoveryBypass: false,
+    suspect: false,
+    uniquePerMinute: null,
+    delayMs: null,
+    action: 'none'
+  };
+  try {
+    if (request.method === 'GET') {
+      const ua = request.headers.get('User-Agent') || '';
+      const discoveryBypass = isDiscoveryBotUA(ua);
+      const effectiveAsn = frictionTest?.asn ?? request.cf?.asn;
+      const flags = getSuspicionFlags({ request, asn: effectiveAsn, ua });
+      const protectSizes = new Set(['l', 'xl', 'src']);
+      const shouldProtectSize = protectSizes.has(String(route.size || '').toLowerCase());
+
+      frictionDebug.discoveryBypass = discoveryBypass;
+      frictionDebug.suspect = Boolean(flags?.suspect);
+
+      if (shouldProtectSize && !discoveryBypass && flags.suspect) {
+        const { uniquePerMinute } = await getAndMarkUniqueImagesPerMinute(ctx, {
+          ipHash,
+          canonicalImageId: route.canonicalImageId
+        });
+
+        frictionDebug.uniquePerMinute = uniquePerMinute;
+
+        // Emit a dashboard-visible metric when we actually apply friction.
+        // This is intentionally independent of the Hide Bots toggle.
+        const frictionAction = uniquePerMinute >= 40 ? '429' : 'delay';
+        frictionDebug.action = frictionAction;
+        if (env?.DB) {
+          ctx.waitUntil(
+            logArtView(
+              env,
+              'harvester_friction',
+              route.canonicalImageId,
+              request,
+              null,
+              'proxy',
+              null,
+              route.size,
+              'direct',
+              1,
+              frictionAction,
+              route.assetSource
+            )
+          );
+        }
+
+        // Hard stop only at clearly-bulk rates.
+        if (uniquePerMinute >= 40) {
+          return new Response('Too Many Requests', {
+            status: 429,
+            headers: {
+              'Cache-Control': 'no-store',
+              'Retry-After': '60'
+            }
+          });
+        }
+
+        // Progressive delay (SEO-safe, human-safe; makes bulk scraping expensive).
+        let delayMs = 650;
+        if (uniquePerMinute >= 10) delayMs = 1100;
+        if (uniquePerMinute >= 20) delayMs = 1600;
+
+        frictionDebug.delayMs = delayMs;
+        await sleep(delayMs);
+      }
+    }
+  } catch (e) {
+    // Fail open: never break images due to protection logic.
+    console.error('Selective friction error:', e);
+  }
+
   // Cache lookup must happen on the canonical key.
   // Order: request -> detect prefix -> strip prefix -> canonical id -> cache lookup -> manifest lookup.
   try {
     const cached = await caches.default.match(canonicalRequest);
     if (cached) {
+      const upgraded = ensureNoAIHeaders(cached);
+
+      // Refresh cache with upgraded headers so future hits are clean.
+      try {
+        if (upgraded && upgraded !== cached && upgraded.status === 200) {
+          ctx.waitUntil(caches.default.put(canonicalRequest, upgraded.clone()));
+        }
+      } catch (e) {
+        console.error('Cache refresh error:', e);
+      }
+
       // Log attribution even if bytes are served from cache.
       if (env?.DB) {
         const ua = request.headers.get("User-Agent") || '';
@@ -499,7 +743,7 @@ async function handleImageRequest(request, ctx, env) {
         }
       }
 
-      return cached;
+      return withFrictionDebugHeaders(upgraded, frictionDebug);
     }
   } catch (e) {
     // Fail open on cache API issues.
@@ -602,7 +846,7 @@ async function handleImageRequest(request, ctx, env) {
 
     // If the request URL was prefixed, we still serve the canonical bytes.
     // The response headers are already long-lived, so clients + edge can cache as well.
-    return response;
+    return withFrictionDebugHeaders(response, frictionDebug);
   } catch (err) {
     console.error("Image proxy error:", err);
     return new Response("Internal error", {
@@ -616,7 +860,7 @@ async function handleImageRequest(request, ctx, env) {
 // IMAGE PAGE POLICY
 // --------------------
 function isImagePageRoute(pathname) {
-  return /\/(Galleries|Other)\/.*\/i-[a-zA-Z0-9-]+\/?$/.test(pathname);
+  return /\/(Galleries|galleries|Other|other|Photography-Galleries)\/.*\/i-[a-zA-Z0-9-]+\/?$/.test(pathname);
 }
 
 function extractImageId(pathname) {
@@ -683,8 +927,28 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
         const requestedLower = requestedGalleryPath.toLowerCase();
         const matchedPath = validPaths.find(p => (p || "").toLowerCase() === requestedLower);
 
-        // Wrong path entirely -> canonicalize to first known valid path
+        // Wrong path entirely:
+        // - If the request is structurally shallower than a canonical path for this imageId
+        //   (requested gallery path is a strict prefix of a canonical gallery path), treat it
+        //   as mutation-probing and return a cheap cacheable 404.
+        // - Otherwise, canonicalize to the first known valid path (preserve link equity).
         if (!matchedPath) {
+          const requestedPrefixLower = `${requestedLower}/`;
+          const isMissingLeafProbe = validPaths.some(p => {
+            const pl = String(p || '').toLowerCase();
+            return pl.length > requestedLower.length && pl.startsWith(requestedPrefixLower);
+          });
+
+          if (isMissingLeafProbe) {
+            return new Response('Not Found', {
+              status: 404,
+              headers: {
+                'Cache-Control': 'public, max-age=86400',
+                'X-Robots-Tag': 'noindex, nofollow'
+              }
+            });
+          }
+
           const canonicalUrl = `https://www.k4studios.com${validPaths[0]}/${imageId}${search}`;
           // Log edge event (fire and forget via waitUntil)
           ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearch, request));
@@ -1795,6 +2059,63 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    // -----------------------------------------------------
+    // Legacy namespace trust + probe rejection (ingress)
+    // -----------------------------------------------------
+    // Policy:
+    // - Trust known legacy namespaces (e.g., /Photography-Galleries/) and let image-page policy handle canonicalization.
+    // - Reject unknown /i-xxxxx URLs outside known namespaces as crawler probes (cheap 404, no slash-normalization).
+    const path = url.pathname;
+    const imageIdAtEnd = /\/(i-[a-zA-Z0-9-]+)\/?$/.test(path);
+    const isLegacyNamespace = path === '/Photography-Galleries' || path.startsWith('/Photography-Galleries/');
+    const isKnownNamespace =
+      isLegacyNamespace ||
+      path.startsWith('/Galleries/') ||
+      path.startsWith('/Other/') ||
+      path.startsWith('/galleries/') ||
+      path.startsWith('/other/');
+
+    if (imageIdAtEnd && !isKnownNamespace) {
+      return new Response('Not Found', {
+        status: 404,
+        headers: {
+          'Cache-Control': 'public, max-age=86400',
+          'X-Robots-Tag': 'noindex, nofollow'
+        }
+      });
+    }
+
+    // =====================================================
+    // INVALID GALLERY IMAGE PATH GUARD (EARLY)
+    // Prevent crawler structure guessing from burning worker.
+    //
+    // NOTE: K4 has legitimate image pages like /Galleries/.../Color/i-xxxxx.
+    // This guard intentionally targets only the shallow guessed shape seen in crawls:
+    //   /Galleries/<slug>/i-xxxxx
+    //
+    // Ordering note:
+    // - This runs BEFORE trailing-slash canonicalization so we don't spend a 301 on junk.
+    // =====================================================
+    if (/^\/(?:Galleries|galleries)\/[^/]+\/i-[a-zA-Z0-9-]+\/?$/.test(path)) {
+      return new Response('Not Found', {
+        status: 404,
+        headers: {
+          'Cache-Control': 'public, max-age=86400',
+          'X-Robots-Tag': 'noindex, nofollow'
+        }
+      });
+    }
+
+    // Missing-leaf probe detection is handled universally in image-page policy
+    // via imageIdMap comparison (no gallery-specific hardcoding here).
+
+    // 0) Canonicalize trailing slashes (except root) at ingress.
+    // This should run before any routing/DB/image-policy logic executes.
+    if (path.length > 1 && path.endsWith('/')) {
+      url.pathname = path.replace(/\/+$/g, '');
+      return Response.redirect(url.toString(), 301);
+    }
     
     // === VISITOR ID (Single Population Doctrine) ===
     // Every request gets a visitor_id. Cookie ensures 1 browser = 1 human.
@@ -1908,7 +2229,7 @@ export default {
 
     // 2) Gallery pages: pass through.
     // Gallery views are tracked via JS (/track → gallery_view). Do not double-log here.
-    if ((url.pathname.startsWith("/Galleries/") || url.pathname.startsWith("/Other/")) && 
+    if ((url.pathname.startsWith("/Galleries/") || url.pathname.startsWith("/Other/") || url.pathname.startsWith("/galleries/") || url.pathname.startsWith("/other/")) && 
         !url.pathname.includes("/i-")) {
       const response = await fetch(request);
       return addVisitorIdCookie(response, visitorId, visitorIdIsNew, request);

@@ -1,0 +1,20 @@
+name = "k4-analytics"
+main = "src/analytics/worker.js"
+compatibility_date = "2024-01-01"
+
+# NOTE:
+# This config intentionally omits `routes = [...]`.
+# Routes are managed in the Cloudflare Dashboard to avoid route-API flakiness during deploy.
+
+[vars]
+# Environment variables (if needed)
+
+# D1 Database for analytics
+[[d1_databases]]
+binding = "DB"
+database_name = "k4-analytics"
+database_id = "f2c159b0-b0f1-4056-934c-90e9b8a92e14"
+
+# Development settings
+[dev]
+port = 8788

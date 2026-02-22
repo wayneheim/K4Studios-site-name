@@ -169,6 +169,31 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
 export const onRequest: MiddlewareHandler = async (context, next) => {
   const { pathname } = context.url;
 
+  // ✅ Redirect: legacy SmugMug /Photography-Galleries/ → modern /Galleries/
+  // NOTE: These paths can bypass Netlify's _redirects in SSR mode.
+  if (pathname === "/Photography-Galleries" || pathname.startsWith("/Photography-Galleries/")) {
+    const imageIdMatch = pathname.match(/\/(i-[a-zA-Z0-9]+)\/?$/);
+    if (imageIdMatch) {
+      const imageId = imageIdMatch[1];
+      const correctGalleryPaths = imageMap[imageId];
+      if (correctGalleryPaths && correctGalleryPaths.length > 0) {
+        const redirectUrl = `${correctGalleryPaths[0]}/${imageId}`;
+        console.log(`[legacy-301] ${pathname} → 301 to ${redirectUrl}`);
+        return new Response(null, {
+          status: 301,
+          headers: { Location: redirectUrl },
+        });
+      }
+    }
+
+    const rest = pathname.slice("/Photography-Galleries".length) || "";
+    const target = `/Galleries${rest || ""}`;
+    return new Response(null, {
+      status: 301,
+      headers: { Location: target },
+    });
+  }
+
   // ✅ EARLY EXIT: Redirect /img/* to Cloudflare Worker
   // This handles ALL image requests (including hardcoded paths in data files)
   // Uses 302 redirect so browser fetches from worker directly - no Netlify proxy needed
@@ -195,7 +220,6 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     "/Other/Photo-Shoots/",
     "/Other/Photo-Shoots-and-Themes/",
     "/Is-Winter/",
-    "/Photography-Galleries/",
     "/keyword/",  // SmugMug search/tag paths
   ];
   

@@ -18,7 +18,8 @@ import {
   getExitAnalysis,
   getEdgeEvents,
   getArtViews,
-  getBotIntelligence
+  getBotIntelligence,
+  getPeriodTotals
 } from '../queries.js';
 
 import { buildDashboardData } from './schema.js';
@@ -40,7 +41,7 @@ export async function handleDashboardRequest(env, filters) {
   const {
     dateClause, galleryClause, ipClause, botClause, chardonClause,
     priorPeriodClause, rangeDateClause, artIpClause,
-    baseDateClause, hideBotsPredicate,
+    baseDateClause, truthDateClause, hideBotsPredicate,
     yesterday, days, selectedDate, galleryFilter, excludeIp, viewerIp,
     hideBots, hideChardon
   } = filters;
@@ -50,7 +51,7 @@ export async function handleDashboardRequest(env, filters) {
     dateClause, galleryClause, ipClause, botClause, chardonClause, priorPeriodClause
   });
 
-  const { events, entries } = await getEventBreakdown(env, {
+  const { events } = await getEventBreakdown(env, {
     dateClause, galleryClause, ipClause, botClause, chardonClause
   });
 
@@ -74,8 +75,13 @@ export async function handleDashboardRequest(env, filters) {
     dateClause, galleryClause, ipClause, botClause, chardonClause
   });
 
+  // Top Pages is a leaderboard: it should not be rewritten by UI filter state.
+  // Use the truth-only date clause (time/range only), and ignore presentation filters.
   const pages = await getTopPages(env, {
-    dateClause, ipClause, botClause, chardonClause
+    dateClause: truthDateClause || dateClause,
+    ipClause: '',
+    botClause: '',
+    chardonClause: ''
   });
 
   const { images, uniqueImagesViewed, totalImageSessions, totalImageViews } = await getTopImages(env, {
@@ -103,10 +109,13 @@ export async function handleDashboardRequest(env, filters) {
 
   const botIntelligence = await getBotIntelligence(env);
 
+  // Get period-level unique totals (not summed daily) - use rangeDateClause for full period
+  const periodTotals = await getPeriodTotals(env, { dateClause: rangeDateClause, botClause, chardonClause });
+
   // Collect raw query results for schema assembly
   const queryResults = {
     summary, returningVisitors, newVisitors,
-    events, entries,
+    events,
     galleries,
     referrers,
     geo,
@@ -120,7 +129,8 @@ export async function handleDashboardRequest(env, filters) {
     exitPages, exitSummary, exitByCategory,
     edgeEvents, edgeSummary,
     artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, entryRefCountsObj, imageAccessOverview, viewerDepth, suppressionStats,
-    botIntelligence
+    botIntelligence,
+    periodTotals
   };
 
   // Assemble data shape then render

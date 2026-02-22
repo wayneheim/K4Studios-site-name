@@ -459,50 +459,103 @@ exports.handler = async (event) => {
         }
 
         case "unlink": {
-          // Unlink a specific gallery occurrence from its series
-          // This gives it a new unique seriesId (for handling SmugMug ID reuse)
-          if (!imageId || !galleryPath) {
-            return { statusCode: 400, headers, body: JSON.stringify({ error: "Missing imageId or galleryPath" }) };
+          // Unlink either:
+          // - a specific gallery occurrence from its series (imageId + galleryPath)
+          // - a single imageId from a linked group (imageId only)
+          if (!imageId) {
+            return { statusCode: 400, headers, body: JSON.stringify({ error: "Missing imageId" }) };
           }
-          
-          const occKey = makeKey(imageId, galleryPath);
-          const oldSeriesId = registry.images[occKey];
-          
+
+          if (galleryPath) {
+            // Unlink a specific gallery occurrence from its series
+            // This gives it a new unique seriesId (for handling SmugMug ID reuse)
+            const occKey = makeKey(imageId, galleryPath);
+            const oldSeriesId = registry.images[occKey];
+
+            if (!oldSeriesId) {
+              return { statusCode: 404, headers, body: JSON.stringify({ error: "Occurrence not found in registry" }) };
+            }
+
+            const oldSeries = registry.series[oldSeriesId];
+            if (!oldSeries || !oldSeries.occurrences || oldSeries.occurrences.length <= 1) {
+              return { statusCode: 400, headers, body: JSON.stringify({ error: "Cannot unlink - only one occurrence exists" }) };
+            }
+
+            // Find the occurrence to remove
+            const occIdx = oldSeries.occurrences.findIndex(o => o.galleryPath === galleryPath && o.imageId === imageId);
+            if (occIdx === -1) {
+              return { statusCode: 404, headers, body: JSON.stringify({ error: "Occurrence not found in series" }) };
+            }
+
+            const occ = oldSeries.occurrences[occIdx];
+
+            // Remove from old series
+            oldSeries.occurrences.splice(occIdx, 1);
+            oldSeries.linkedCount = oldSeries.occurrences.length;
+
+            // Create new series for this occurrence
+            const newSeriesId = generateSeriesId();
+            registry.images[occKey] = newSeriesId;
+            registry.series[newSeriesId] = {
+              primaryImageId: imageId,
+              tiers: [...(oldSeries.tiers || [])],
+              title: occ.title || "",
+              src: occ.src || "",
+              occurrences: [occ],
+              linkedCount: 1,
+              createdAt: new Date().toISOString(),
+              unlinkedFrom: oldSeriesId
+            };
+
+            await writeRegistry(registry);
+            return {
+              statusCode: 200,
+              headers,
+              body: JSON.stringify({
+                message: "Unlinked",
+                imageId,
+                galleryPath,
+                oldSeriesId,
+                newSeriesId,
+                oldSeriesOccurrences: oldSeries.linkedCount,
+                newSeries: registry.series[newSeriesId]
+              }),
+            };
+          }
+
+          // Remove an image from a linked group (creates new series for it)
+          const oldSeriesId = registry.images[imageId];
           if (!oldSeriesId) {
-            return { statusCode: 404, headers, body: JSON.stringify({ error: "Occurrence not found in registry" }) };
+            return { statusCode: 400, headers, body: JSON.stringify({ error: "Image not in registry" }) };
           }
-          
+
           const oldSeries = registry.series[oldSeriesId];
-          if (!oldSeries || !oldSeries.occurrences || oldSeries.occurrences.length <= 1) {
-            return { statusCode: 400, headers, body: JSON.stringify({ error: "Cannot unlink - only one occurrence exists" }) };
+          if (!oldSeries || oldSeries.linkedCount <= 1) {
+            return { statusCode: 400, headers, body: JSON.stringify({ error: "Image is not linked to others" }) };
           }
-          
-          // Find the occurrence to remove
-          const occIdx = oldSeries.occurrences.findIndex(o => o.galleryPath === galleryPath && o.imageId === imageId);
-          if (occIdx === -1) {
-            return { statusCode: 404, headers, body: JSON.stringify({ error: "Occurrence not found in series" }) };
-          }
-          
-          const occ = oldSeries.occurrences[occIdx];
-          
-          // Remove from old series
-          oldSeries.occurrences.splice(occIdx, 1);
-          oldSeries.linkedCount = oldSeries.occurrences.length;
-          
-          // Create new series for this occurrence
+
+          // Create new series for this image
           const newSeriesId = generateSeriesId();
-          registry.images[occKey] = newSeriesId;
+          registry.images[imageId] = newSeriesId;
           registry.series[newSeriesId] = {
             primaryImageId: imageId,
-            tiers: [...(oldSeries.tiers || [])],
-            title: occ.title || "",
-            src: occ.src || "",
-            occurrences: [occ],
             linkedCount: 1,
-            createdAt: new Date().toISOString(),
-            unlinkedFrom: oldSeriesId
+            tiers: [...oldSeries.tiers],
+            createdAt: new Date().toISOString()
           };
-          
+
+          // Update old series count
+          oldSeries.linkedCount--;
+
+          // If unlinked image was the primary, pick a new primary
+          if (oldSeries.primaryImageId === imageId) {
+            const remaining = Object.entries(registry.images)
+              .find(([imgId, sId]) => sId === oldSeriesId && imgId !== imageId);
+            if (remaining) {
+              oldSeries.primaryImageId = remaining[0];
+            }
+          }
+
           await writeRegistry(registry);
           return {
             statusCode: 200,
@@ -510,11 +563,8 @@ exports.handler = async (event) => {
             body: JSON.stringify({
               message: "Unlinked",
               imageId,
-              galleryPath,
-              oldSeriesId,
               newSeriesId,
-              oldSeriesOccurrences: oldSeries.linkedCount,
-              newSeries: registry.series[newSeriesId]
+              oldSeriesId
             }),
           };
         }
@@ -625,57 +675,6 @@ exports.handler = async (event) => {
               seriesId: keepSeriesId,
               linkedImageIds,
               series: registry.series[keepSeriesId]
-            }),
-          };
-        }
-
-        case "unlink": {
-          // Remove an image from a linked group (creates new series for it)
-          if (!imageId) {
-            return { statusCode: 400, headers, body: JSON.stringify({ error: "Missing imageId" }) };
-          }
-
-          const oldSeriesId = registry.images[imageId];
-          if (!oldSeriesId) {
-            return { statusCode: 400, headers, body: JSON.stringify({ error: "Image not in registry" }) };
-          }
-
-          const oldSeries = registry.series[oldSeriesId];
-          if (!oldSeries || oldSeries.linkedCount <= 1) {
-            return { statusCode: 400, headers, body: JSON.stringify({ error: "Image is not linked to others" }) };
-          }
-
-          // Create new series for this image
-          const newSeriesId = generateSeriesId();
-          registry.images[imageId] = newSeriesId;
-          registry.series[newSeriesId] = {
-            primaryImageId: imageId,
-            linkedCount: 1,
-            tiers: [...oldSeries.tiers],
-            createdAt: new Date().toISOString()
-          };
-
-          // Update old series count
-          oldSeries.linkedCount--;
-          
-          // If unlinked image was the primary, pick a new primary
-          if (oldSeries.primaryImageId === imageId) {
-            const remaining = Object.entries(registry.images)
-              .find(([imgId, sId]) => sId === oldSeriesId && imgId !== imageId);
-            if (remaining) {
-              oldSeries.primaryImageId = remaining[0];
-            }
-          }
-
-          await writeRegistry(registry);
-          return {
-            statusCode: 200,
-            headers,
-            body: JSON.stringify({
-              message: "Unlinked",
-              imageId,
-              newSeriesId,
-              oldSeriesId
             }),
           };
         }

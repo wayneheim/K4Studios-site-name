@@ -6,8 +6,9 @@
 // 
 // 1. human_population VIEW = the ONLY definition of "human" (by visitor_id / k4_vid cookie)
 // 2. classified_events VIEW = raw_events + is_bot flag (computed, not stored)
-// 3. ALL queries: FROM human_population hp JOIN classified_events e ON e.visitor_id = hp.visitor_id
-// 4. If humans = 0, ALL metrics = 0. Guaranteed by JOIN.
+// 3. Most queries: FROM human_population hp JOIN classified_events e ON e.visitor_id = hp.visitor_id
+//    (Some leaderboard / truth panels like Top Pages compute directly from classified_events.)
+// 4. If humans = 0, most human-only metrics = 0. Guaranteed by JOIN.
 //
 // Rule: Humans cause events. Events never define humans.
 // 1 cookie (k4_vid) = 1 human. IP addresses are irrelevant.
@@ -41,9 +42,10 @@ function getAccessType(referer) {
 // Axis 3: referrer_source — WHERE FROM (only meaningful when access_type = 'external_referral')
 function getReferrerSource(referer) {
   if (!referer) return null;
+  const r = referer.toLowerCase().trim();
+  if (r === 'direct' || r === '' || r === 'null') return 'Direct'; // explicit direct visits
   let host;
   try { host = new URL(referer).hostname.toLowerCase(); } catch(e) {
-    const r = referer.toLowerCase();
     if (r.includes('google')) return 'Google Search';
     if (r.includes('bing')) return 'Bing';
     return 'Other';
@@ -71,6 +73,31 @@ function getAssetSourceLabel(assetSource) {
   if (s === 'pn') return 'Pinterest';
   if (s === 'sd') return 'Structured Data';
   return null;
+}
+
+function formatOGPlatformLabel(ogPlatform) {
+  const p = String(ogPlatform || '').trim().toLowerCase();
+  if (!p) return null;
+  const map = {
+    facebook: 'Facebook',
+    discord: 'Discord',
+    slack: 'Slack',
+    linkedin: 'LinkedIn',
+    twitter: 'Twitter',
+    whatsapp: 'WhatsApp',
+    apple: 'Apple',
+    unknown: 'Unknown'
+  };
+  if (map[p]) return map[p];
+  return p.charAt(0).toUpperCase() + p.slice(1);
+}
+
+function formatAssetSourceLabel(assetSourceLabel, ogPlatform) {
+  if (!assetSourceLabel) return null;
+  if (assetSourceLabel !== 'Open Graph') return assetSourceLabel;
+  const plat = formatOGPlatformLabel(ogPlatform);
+  if (!plat) return 'Open Graph';
+  return `Open Graph (${plat})`;
 }
 
 // Entry referrer classification — returns snake_case keys matching renderer's entryRefCounts
@@ -287,7 +314,26 @@ export async function getArtViews(env, filters) {
   } catch (e) {
     console.log('Summary query failed:', e.message);
   }
-  
+
+  // Harvester friction counts (delay vs 429) — uses raw_events directly (no bot filter)
+  try {
+    const frictionQuery = `
+      SELECT
+        COUNT(*) as total,
+        SUM(CASE WHEN inferred_from = 'delay' THEN 1 ELSE 0 END) as delayed,
+        SUM(CASE WHEN inferred_from = '429' THEN 1 ELSE 0 END) as blocked_429
+      FROM raw_events
+      WHERE event_type = 'harvester_friction'
+        AND ${dateClause || 'ts > datetime("now", "-1 day")'}
+    `;
+    const frictionResult = await env.DB.prepare(frictionQuery).first();
+    artViewsSummary.harvester_friction_events = frictionResult?.total || 0;
+    artViewsSummary.harvester_friction_delay_events = frictionResult?.delayed || 0;
+    artViewsSummary.harvester_friction_429_events = frictionResult?.blocked_429 || 0;
+  } catch (e) {
+    console.log('Harvester friction query failed:', e.message);
+  }
+
   // Top chapters - FROM human_population → JOIN classified_events
   let topChapters = [];
   try {
@@ -296,12 +342,14 @@ export async function getArtViews(env, filters) {
         SELECT
           e.visitor_id as visitor_id,
           e.target_id as target_id,
+          e.event_type as event_type,
           COALESCE(e.session_id, 'd:' || date(e.ts)) as session_bucket,
           LOWER(COALESCE(hp.device_type, 'unknown')) as device,
           e.country as country,
           e.region as region,
           e.city as city,
           e.page as page,
+          e.referer as referer,
           ROW_NUMBER() OVER (
             PARTITION BY e.visitor_id, e.target_id, COALESCE(e.session_id, 'd:' || date(e.ts))
             ORDER BY e.ts DESC
@@ -312,7 +360,7 @@ export async function getArtViews(env, filters) {
           AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       ),
       chapter_pairs AS (
-        SELECT visitor_id, target_id, session_bucket, device, country, region, city, page
+        SELECT visitor_id, target_id, event_type, session_bucket, device, country, region, city, page, referer
         FROM ranked
         WHERE rn = 1
       )
@@ -322,6 +370,7 @@ export async function getArtViews(env, filters) {
         COUNT(DISTINCT cp.visitor_id) as unique_viewers,
         GROUP_CONCAT(DISTINCT cp.device) as device_types,
         GROUP_CONCAT(DISTINCT cp.country) as countries,
+        MAX(CASE WHEN cp.event_type = 'chapter_view' THEN 1 ELSE 0 END) as has_js_view,
         (
           SELECT cp2.page
           FROM chapter_pairs cp2
@@ -331,6 +380,16 @@ export async function getArtViews(env, filters) {
           ORDER BY COUNT(*) DESC
           LIMIT 1
         ) as best_page,
+        (
+          SELECT cp2.referer
+          FROM chapter_pairs cp2
+          WHERE cp2.target_id = cp.target_id
+            AND cp2.referer IS NOT NULL
+            AND cp2.referer NOT LIKE '%k4studios.com%'
+          GROUP BY cp2.referer
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as best_referer,
         (
           SELECT cp2.country
           FROM chapter_pairs cp2
@@ -364,16 +423,21 @@ export async function getArtViews(env, filters) {
       LIMIT 2000
     `;
     const result = await env.DB.prepare(topChaptersQuery).all();
-    topChapters = (result.results || []).map(r => ({
-      type: 'chapter_exposure',
-      target_id: r.target_id,
-      views: r.views,
-      unique_viewers: r.unique_viewers,
-      devices: (r.device_types || '').split(',').map(s => (s || '').trim()).filter(Boolean),
-      countries: r.countries,
-      url: r.best_page || null,
-      geo: { country: r.geo_country, region: r.geo_region, city: r.geo_city }
-    }));
+    topChapters = (result.results || []).map(r => {
+      const referrerSource = getReferrerSource(r.best_referer);
+      return {
+        type: 'chapter_exposure',
+        target_id: r.target_id,
+        views: r.views,
+        unique_viewers: r.unique_viewers,
+        has_js_view: r.has_js_view === 1,
+        devices: (r.device_types || '').split(',').map(s => (s || '').trim()).filter(Boolean),
+        countries: r.countries,
+        url: r.best_page || null,
+        geo: { country: r.geo_country, region: r.geo_region, city: r.geo_city },
+        referrer_source: referrerSource
+      };
+    });
   } catch (e) {
     console.log('Top chapters query failed:', e.message);
   }
@@ -472,16 +536,40 @@ export async function getArtViews(env, filters) {
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       GROUP BY e.target_id
       ORDER BY views DESC
-      LIMIT 15
+      LIMIT 50
     `;
     const result = await env.DB.prepare(topGalleriesQuery).all();
-    topGalleries = (result.results || []).map(r => ({
+    const rawGalleries = (result.results || []).map(r => ({
       type: 'gallery_view',
       target_id: r.target_id,
       views: r.views,
       unique_viewers: r.unique_viewers,
       devices: (r.device_types || '').split(',').map(s => (s || '').trim()).filter(Boolean)
     }));
+    
+    // Merge galleries that share the same leaf name (last 2 path segments)
+    // e.g., "K4-Select-Series/Engrained/Engrained-Series" and "Engrained/Engrained-Series" are the same
+    const getLeafKey = (path) => {
+      const parts = String(path || '').split('/').filter(Boolean);
+      return parts.slice(-2).join('/') || path;
+    };
+    const merged = new Map();
+    for (const g of rawGalleries) {
+      const key = getLeafKey(g.target_id);
+      if (merged.has(key)) {
+        const existing = merged.get(key);
+        existing.views += g.views;
+        existing.unique_viewers = Math.max(existing.unique_viewers, g.unique_viewers); // Approximate
+        g.devices.forEach(d => { if (!existing.devices.includes(d)) existing.devices.push(d); });
+        // Keep the longest path as the canonical target_id
+        if (g.target_id.length > existing.target_id.length) existing.target_id = g.target_id;
+      } else {
+        merged.set(key, { ...g });
+      }
+    }
+    topGalleries = Array.from(merged.values())
+      .sort((a, b) => b.views - a.views)
+      .slice(0, 15);
   } catch (e) {
     console.log('Top galleries query failed:', e.message);
   }
@@ -589,6 +677,7 @@ export async function getArtViews(env, filters) {
         e.referer,
         e.ref_type,
         e.asset_source,
+        e.og_platform,
         e.country,
         (
           SELECT e2.country
@@ -638,7 +727,7 @@ export async function getArtViews(env, filters) {
         AND ${notCacheWarmer('e')}
         ${notBotWhenHide('e')}
         AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
-      GROUP BY e.target_id, e.referer, e.ref_type, e.asset_source
+      GROUP BY e.target_id, e.referer, e.ref_type, e.asset_source, e.og_platform
       ORDER BY hits DESC
       LIMIT 2000
     `;
@@ -777,7 +866,7 @@ export async function getArtViews(env, filters) {
     }
     const accessPriority = { external_referral: 0, direct: 1, internal_navigation: 2, unknown: 3 };
     externalImageAccess = (result.results || []).map(r => {
-      const assetSourceLabel = getAssetSourceLabel(r.asset_source);
+      const assetSourceLabel = formatAssetSourceLabel(getAssetSourceLabel(r.asset_source), r.og_platform);
       const accessType = r.ref_type
         ? (r.ref_type === 'direct' ? 'direct'
           : r.ref_type === 'external' ? 'external_referral'
@@ -800,6 +889,7 @@ export async function getArtViews(env, filters) {
         referrer_source: referrerSource,
         asset_source: r.asset_source || null,
         asset_source_label: assetSourceLabel,
+        og_platform: r.og_platform || null,
         referer_host: refererHost,
         country: r.country,
         geo: { country: r.geo_country, region: r.geo_region, city: r.geo_city }
@@ -863,6 +953,26 @@ export async function getArtViews(env, filters) {
   // External reach by source (referrer classification)
   let externalReachSources = [];
   try {
+    const srcQueryWithRefTypeAndAssetSource = `
+      SELECT 
+        e.referer,
+        e.ref_type,
+        e.asset_source,
+        e.og_platform,
+        COUNT(DISTINCT e.ip_hash) as hits
+      FROM classified_events e
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer('e')}
+        ${notBotWhenHide('e')}
+        AND e.ip_hash IS NOT NULL
+        AND e.ip_hash != ''
+        AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+      GROUP BY e.referer, e.ref_type, e.asset_source, e.og_platform
+      ORDER BY hits DESC
+      LIMIT 50
+    `;
+
     const srcQueryWithRefType = `
       SELECT 
         e.referer,
@@ -900,10 +1010,12 @@ export async function getArtViews(env, filters) {
 
     let result;
     try {
-      result = await env.DB.prepare(srcQueryWithRefType).all();
+      result = await env.DB.prepare(srcQueryWithRefTypeAndAssetSource).all();
     } catch (e) {
       const msg = String(e?.message || e);
-      if (msg.includes('no such column') && msg.includes('ref_type')) {
+      if (msg.includes('no such column') && msg.includes('asset_source')) {
+        result = await env.DB.prepare(srcQueryWithRefType).all();
+      } else if (msg.includes('no such column') && msg.includes('ref_type')) {
         result = await env.DB.prepare(srcQueryLegacy).all();
       } else {
         throw e;
@@ -912,17 +1024,25 @@ export async function getArtViews(env, filters) {
     // Classify each row and aggregate by referrer_source (ALL access types)
     const sourceMap = {};
     for (const r of (result.results || [])) {
+      const assetLabel = formatAssetSourceLabel(getAssetSourceLabel(r.asset_source), r.og_platform);
+
       const accessType = r.ref_type
         ? (r.ref_type === 'direct' ? 'direct'
           : r.ref_type === 'external' ? 'external_referral'
           : r.ref_type === 'internal' ? 'internal_navigation'
           : 'unknown')
         : getAccessType(r.referer);
-      const source = accessType === 'external_referral'
-        ? (getReferrerSource(r.referer) || 'Other')
-        : accessType === 'direct' ? 'Direct'
-        : accessType === 'internal_navigation' ? 'Internal'
-        : 'Unknown';
+
+      // If the request was explicitly tagged by the proxy (OG/TW/PN/SD prefix),
+      // treat that as the source label for reach attribution.
+      const source = assetLabel
+        ? assetLabel
+        : accessType === 'external_referral'
+          ? (getReferrerSource(r.referer) || 'Other')
+          : accessType === 'direct' ? 'Direct'
+          : accessType === 'internal_navigation' ? 'Internal'
+          : 'Unknown';
+
       sourceMap[source] = (sourceMap[source] || 0) + r.hits;
     }
     externalReachSources = Object.entries(sourceMap)
@@ -1177,12 +1297,25 @@ export async function getArtViews(env, filters) {
   }
   for (const c of topChapters) {
     const img = ensureImage(c.target_id);
-    if (!img.badges.includes('C')) img.badges.push('C');
+    // "C" = JS-verified chapter_view, "I" = proxy-only chapter_exposure (image loaded, no JS)
+    const badge = c.has_js_view ? 'C' : 'I';
+    if (!img.badges.includes(badge)) img.badges.push(badge);
     img.chapter_views = c.views;
-    setGeoIfBetter(img, c.geo, 0); // verified
-    setUrlIfBetter(img, c.url, 0);
-    if (c.countries) c.countries.split(',').forEach(co => co && img.countries.add(co.trim()));
-    if (Array.isArray(c.devices)) c.devices.forEach(d => d && img.devices.add(String(d).toLowerCase()));
+    // Only set verified geo/sources for JS-verified events
+    if (c.has_js_view) {
+      setGeoIfBetter(img, c.geo, 0); // verified
+      setUrlIfBetter(img, c.url, 0);
+      if (c.countries) c.countries.split(',').forEach(co => co && img.countries.add(co.trim()));
+      if (Array.isArray(c.devices)) c.devices.forEach(d => d && img.devices.add(String(d).toLowerCase()));
+      // For chapter views (JS-verified), Direct IS a valid source - means real visitor typed URL
+      if (c.referrer_source && c.referrer_source !== 'Internal' && c.referrer_source !== 'Unknown') {
+        if (!img.sources.includes(c.referrer_source)) img.sources.push(c.referrer_source);
+      }
+    } else {
+      // Proxy-only: use external geo priority (2)
+      setGeoIfBetter(img, c.geo, 2);
+      setUrlIfBetter(img, c.url, 2);
+    }
   }
   for (const z of topZooms) {
     const img = ensureImage(z.target_id);
@@ -1439,51 +1572,10 @@ export async function getEventBreakdown(env, filters) {
 
     const events = await env.DB.prepare(eventsQuery).all();
 
-    // Gallery-Chapter Entry Points: for sessions that include a chapter_view,
-    // count the first JS event type seen in the session.
-    const entriesQuery = `
-      WITH session_events AS (
-        SELECT
-          e.session_id,
-          e.event_type,
-          ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.ts ASC) AS rn
-        FROM human_population hp
-        JOIN classified_events e ON e.visitor_id = hp.visitor_id
-        WHERE ${where}
-          ${qualify(ipClause)}
-          ${qualify(safeBotClause)}
-          ${qualify(chardonClause)}
-          AND e.source = 'js'
-          AND e.session_id IS NOT NULL
-      ),
-      chapter_sessions AS (
-        SELECT DISTINCT e.session_id
-        FROM human_population hp
-        JOIN classified_events e ON e.visitor_id = hp.visitor_id
-        WHERE ${where}
-          ${qualify(ipClause)}
-          ${qualify(safeBotClause)}
-          ${qualify(chardonClause)}
-          AND e.source = 'js'
-          AND e.event_type = 'chapter_view'
-          AND e.session_id IS NOT NULL
-      )
-      SELECT
-        se.event_type AS entry_source,
-        COUNT(*) AS sessions
-      FROM session_events se
-      JOIN chapter_sessions cs ON cs.session_id = se.session_id
-      WHERE se.rn = 1
-      GROUP BY se.event_type
-      ORDER BY sessions DESC
-      LIMIT 20
-    `;
-    const entries = await env.DB.prepare(entriesQuery).all();
-
-    return { events, entries };
+    return { events };
   } catch (e) {
     console.log('Event breakdown query failed:', e.message);
-    return { events: { results: [] }, entries: { results: [] } };
+    return { events: { results: [] } };
   }
 }
 
@@ -1665,10 +1757,16 @@ export async function getReferrers(env, filters) {
 export async function getGeography(env, filters) {
   try {
     const { dateClause } = filters;
+    // Returns both site visitors and art viewers per location
     const geoQuery = `
       SELECT 
         e.country, e.region, e.city,
-        COUNT(DISTINCT e.visitor_id) as visitors
+        COUNT(DISTINCT e.visitor_id) as visitors,
+        COUNT(DISTINCT CASE 
+          WHEN e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view') 
+          THEN e.visitor_id 
+          ELSE NULL 
+        END) as art_viewers
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
@@ -1686,6 +1784,48 @@ export async function getGeography(env, filters) {
   } catch (e) {
     console.log('Geography query failed:', e.message);
     return { results: [] };
+  }
+}
+
+// Period-level unique visitor totals (NOT summed daily counts)
+export async function getPeriodTotals(env, filters) {
+  try {
+    const { dateClause, botClause, chardonClause } = filters;
+    
+    // Qualify column references for the join
+    const qualifyBot = (clause) => (clause || '')
+      .replace(/\bts\b/g, 'e.ts')
+      .replace(/\bip\b/g, 'e.ip')
+      .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bcountry\b/g, 'e.country')
+      .replace(/\bregion\b/g, 'e.region');
+    
+    const periodQuery = `
+      SELECT 
+        COUNT(DISTINCT e.visitor_id) as total_visitors,
+        COUNT(DISTINCT CASE 
+          WHEN e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view') 
+          THEN e.visitor_id 
+          ELSE NULL 
+        END) as total_art_viewers
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+        AND e.source = 'js'
+        AND COALESCE(e.is_bot, 0) = 0
+        ${qualifyBot(botClause)}
+        ${qualifyBot(chardonClause)}
+        AND EXISTS (
+          SELECT 1 FROM classified_events j
+          WHERE j.visitor_id = e.visitor_id
+            AND j.source = 'js'
+        )
+    `;
+    const result = await env.DB.prepare(periodQuery).first();
+    return result || { total_visitors: 0, total_art_viewers: 0 };
+  } catch (e) {
+    console.log('Period totals query failed:', e.message);
+    return { total_visitors: 0, total_art_viewers: 0 };
   }
 }
 
@@ -1708,21 +1848,27 @@ export async function getDailyTrend(env, filters) {
     const where = qualify(rangeDateClause) || `date(e.ts, '-5 hours') = date('now', '-5 hours')`;
 
     // Daily trend (for chart): human visitors + sessions per Eastern calendar day.
-    // Visitor definition comes from human_population (JS-verified k4_vid). Sessions
-    // are client session ids; NULL sessions are naturally excluded by COUNT(DISTINCT).
+    // Visitor = any JS-verified human who visited the site (any event type).
+    // Sessions are client session ids; NULL sessions are naturally excluded by COUNT(DISTINCT).
+    // Art viewers = visitors who viewed actual art (chapter_view, xl_zoom, gallery_view).
     const trendQuery = `
       SELECT
         date(e.ts, '-5 hours') as day,
         COUNT(DISTINCT CASE
-          WHEN e.source = 'js' AND e.event_type = 'page_view' AND COALESCE(e.is_bot, 0) = 0
+          WHEN e.source = 'js' AND COALESCE(e.is_bot, 0) = 0
           THEN e.visitor_id
           ELSE NULL
         END) as visitors,
         COUNT(DISTINCT CASE
-          WHEN e.source = 'js' AND e.event_type = 'page_view' AND COALESCE(e.is_bot, 0) = 0
+          WHEN e.source = 'js' AND COALESCE(e.is_bot, 0) = 0
           THEN NULLIF(e.session_id, '')
           ELSE NULL
-        END) as sessions
+        END) as sessions,
+        COUNT(DISTINCT CASE
+          WHEN e.source = 'js' AND e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view') AND COALESCE(e.is_bot, 0) = 0
+          THEN e.visitor_id
+          ELSE NULL
+        END) as art_viewers
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${where}
@@ -1908,76 +2054,24 @@ export async function getSessionMetrics(env, filters) {
 
 export async function getTopPages(env, filters) {
   try {
-    const { dateClause, ipClause, botClause, chardonClause } = filters;
-
-    const qualify = (clause) => (clause || '')
-      .replace(/\bts\b/g, 'e.ts')
-      .replace(/\bip\b/g, 'e.ip')
-      .replace(/\bcity\b/g, 'e.city')
-      .replace(/\bcountry\b/g, 'e.country')
-      .replace(/\bregion\b/g, 'e.region')
-      .replace(/\breferer\b/g, 'e.referer');
-
-    const safeBotClause = (botClause || '')
-      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, ' ')
-      .replace(/\bdevice\s*=\s*'unknown'\b/gi, '1=1');
-
-    const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
+    const { dateClause } = filters;
+    const where = (dateClause || '').trim() || 'ts > datetime("now", "-1 day")';
 
     const pagesQuery = `
-      SELECT
-        CASE
-          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
-          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
-        END AS page_path,
-        COUNT(DISTINCT e.session_id) AS sessions,
-        COUNT(*) AS events
-      FROM human_population hp
-      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      SELECT page AS page_path, COUNT(*) AS views
+      FROM classified_events
       WHERE ${where}
-        ${qualify(ipClause)}
-        ${qualify(safeBotClause)}
-        ${qualify(chardonClause)}
-        AND e.source = 'js'
-        AND e.event_type = 'page_view'
-        AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
-        AND e.session_id IS NOT NULL
-        AND (CASE
-          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
-          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
-        END) NOT LIKE '%/i-%'
-        AND (CASE
-          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
-          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
-        END) NOT LIKE '/Photoshootsandevents/%'
-        AND (CASE
-          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
-          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
-        END) NOT LIKE '/Scheduled-Shoots/%'
-        AND (CASE
-          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
-          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
-        END) NOT LIKE '/Other/Photo-Shoots/%'
-        AND (CASE
-          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
-          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
-        END) NOT LIKE '/Other/Photo-Shoots-and-Themes/%'
-        AND (CASE
-          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
-          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
-        END) NOT LIKE '/Is-Winter/%'
-        AND (CASE
-          WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
-          ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
-        END) NOT LIKE '/Photography-Galleries/%'
-      GROUP BY page_path
-      ORDER BY sessions DESC
-      LIMIT 10
+        AND event_type IN ('page_view','gallery_view','chapter_view')
+        AND COALESCE(is_bot,0) = 0
+        AND page IS NOT NULL AND page != ''
+      GROUP BY page
+      ORDER BY views DESC
+      LIMIT 25
     `;
 
     return await env.DB.prepare(pagesQuery).all();
   } catch (e) {
-    console.log('Top pages query failed:', e.message);
+    console.log('Top pages query failed:', e.message, e.stack);
     return { results: [] };
   }
 }
@@ -2046,6 +2140,7 @@ export async function getEntryAnalysis(env, filters) {
         COUNT(DISTINCT session_id) AS sessions
       FROM first_pages
       WHERE rn = 1
+        AND referrer NOT LIKE '%k4studios.com%'  -- Exclude internal: not true entries
       GROUP BY page_path, ref_source
       ORDER BY sessions DESC
       LIMIT 15
@@ -2473,6 +2568,76 @@ export async function getBotIntelligence(env) {
         country: r.country,
         status: 'watching'
       }));
+    }
+
+    // Enrich suspects with friction stats (last 24h) for isLevel5BlockRecommended
+    try {
+      const frictionStatsQuery = `
+        WITH friction AS (
+          SELECT
+            ip_hash,
+            SUM(CASE WHEN inferred_from = '429' THEN 1 ELSE 0 END) as friction_429_24h,
+            SUM(CASE WHEN inferred_from = 'delay' THEN 1 ELSE 0 END) as delay_count
+          FROM raw_events
+          WHERE event_type = 'harvester_friction'
+            AND ts > datetime('now', '-24 hours')
+          GROUP BY ip_hash
+        ),
+        velocity AS (
+          SELECT
+            ip_hash,
+            MAX(minute_uniques) as peak_unique_images_per_minute_24h
+          FROM (
+            SELECT
+              ip_hash,
+              COUNT(DISTINCT target_id) as minute_uniques
+            FROM raw_events
+            WHERE event_type IN ('image_page', 'external_image_page', 'chapter_exposure', 'harvester_friction')
+              AND ts > datetime('now', '-24 hours')
+            GROUP BY ip_hash, strftime('%Y-%m-%d %H:%M', ts)
+          )
+          GROUP BY ip_hash
+        ),
+        delay_burst AS (
+          SELECT
+            ip_hash,
+            MAX(window_delays) as max_friction_delay_10m_24h
+          FROM (
+            SELECT
+              ip_hash,
+              COUNT(*) as window_delays
+            FROM raw_events
+            WHERE event_type = 'harvester_friction'
+              AND inferred_from = 'delay'
+              AND ts > datetime('now', '-24 hours')
+            GROUP BY ip_hash, strftime('%Y-%m-%d %H:', ts) || CAST((CAST(strftime('%M', ts) AS INTEGER) / 10) AS TEXT)
+          )
+          GROUP BY ip_hash
+        )
+        SELECT
+          f.ip_hash,
+          COALESCE(f.friction_429_24h, 0) as friction_429_24h,
+          COALESCE(v.peak_unique_images_per_minute_24h, 0) as peak_unique_images_per_minute_24h,
+          COALESCE(d.max_friction_delay_10m_24h, 0) as max_friction_delay_10m_24h
+        FROM friction f
+        LEFT JOIN velocity v ON v.ip_hash = f.ip_hash
+        LEFT JOIN delay_burst d ON d.ip_hash = f.ip_hash
+      `;
+      const frictionStats = await env.DB.prepare(frictionStatsQuery).all();
+      const frictionMap = new Map();
+      for (const row of (frictionStats.results || [])) {
+        frictionMap.set(row.ip_hash, row);
+      }
+      for (const suspect of botIntelligence.suspects) {
+        const fs = frictionMap.get(suspect.ip_hash);
+        if (fs) {
+          suspect.friction_429_24h = fs.friction_429_24h;
+          suspect.peak_unique_images_per_minute_24h = fs.peak_unique_images_per_minute_24h;
+          suspect.max_friction_delay_10m_24h = fs.max_friction_delay_10m_24h;
+        }
+      }
+    } catch (e) {
+      console.log('Friction stats enrichment failed:', e.message);
     }
 
     const verifiedQuery = `

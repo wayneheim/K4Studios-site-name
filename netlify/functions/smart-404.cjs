@@ -100,11 +100,15 @@ exports.handler = async (event) => {
   const userAgent = event.headers['user-agent'] || event.headers['User-Agent'] || '';
   const isCrawler = isSearchCrawler(userAgent);
   const isBlockedUa = isBlockedBotUa(userAgent);
+  const isBotRequest = isCrawler;
   
   // Get path from query string (passed by _redirects) or from event.path
   const queryPath = event.queryStringParameters?.path || '';
   const eventPath = event.path || '';
-  const requestedPath = queryPath || eventPath;
+  const requestedPathRaw = queryPath || eventPath;
+  const requestedPath = (requestedPathRaw && requestedPathRaw.length > 1)
+    ? requestedPathRaw.replace(/\/+$/g, '')
+    : requestedPathRaw;
   
   // Also get the image ID directly from query params if available
   const queryId = event.queryStringParameters?.id || '';

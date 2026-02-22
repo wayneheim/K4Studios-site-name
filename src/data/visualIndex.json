@@ -930,6 +930,99 @@
       },
       "analysisVersion": 7,
       "indexedAt": "2026-02-19T00:13:18.870Z"
+    },
+    "i-VGxwS5N": {
+      "imageId": "i-VGxwS5N",
+      "galleryPath": "src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+      "dhash": "0010110110110010010110010000000000000000000000000000000000000000",
+      "width": 384,
+      "height": 768,
+      "dominantColors": [
+        "#f0f0f0",
+        "#505030",
+        "#f0f0d0",
+        "#707050",
+        "#90b0b0"
+      ],
+      "warmCoolRatio": 0.71,
+      "saturationAvg": 0.29,
+      "brightnessAvg": 0.53,
+      "greenCoverage": 0.42,
+      "blueCoverage": 0.22,
+      "orangeCoverage": 0.18,
+      "redCoverage": 0.03,
+      "yellowCoverage": 0.15,
+      "purpleCoverage": 0,
+      "contrastScore": 0.48,
+      "toneDistribution": {
+        "shadows": 0.1,
+        "midtones": 0.68,
+        "highlights": 0.23
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-02-21T20:56:04.104Z"
+    },
+    "i-Spk5gdH": {
+      "imageId": "i-Spk5gdH",
+      "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+      "dhash": "0110110110110110110010010000000000000000000000000000000000000000",
+      "width": 341,
+      "height": 768,
+      "dominantColors": [
+        "#f0d0b0",
+        "#705050",
+        "#707050",
+        "#d0d0b0",
+        "#503030"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.26,
+      "brightnessAvg": 0.42,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.89,
+      "redCoverage": 0.07,
+      "yellowCoverage": 0.03,
+      "purpleCoverage": 0,
+      "contrastScore": 0.45,
+      "toneDistribution": {
+        "shadows": 0.21,
+        "midtones": 0.62,
+        "highlights": 0.17
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-02-21T21:09:38.519Z"
+    },
+    "i-rxQn29x": {
+      "imageId": "i-rxQn29x",
+      "galleryPath": "/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+      "dhash": "1100000101001001011010010100100111001001011000010000000000000000",
+      "width": 1024,
+      "height": 731,
+      "dominantColors": [
+        "#d0b090",
+        "#d0d0b0",
+        "#f0d0b0",
+        "#b09070",
+        "#b0b090"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.32,
+      "brightnessAvg": 0.61,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.91,
+      "redCoverage": 0,
+      "yellowCoverage": 0.08,
+      "purpleCoverage": 0,
+      "contrastScore": 0.32,
+      "toneDistribution": {
+        "shadows": 0.03,
+        "midtones": 0.67,
+        "highlights": 0.3
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-02-21T21:11:27.144Z"
     }
   }
 }

@@ -17,7 +17,7 @@
 export function buildDashboardData(queryResults, filterParams) {
   const {
     summary, returningVisitors, newVisitors,
-    events, entries,
+    events,
     galleries,
     referrers,
     geo,
@@ -31,7 +31,8 @@ export function buildDashboardData(queryResults, filterParams) {
     exitPages, exitSummary, exitByCategory,
     edgeEvents, edgeSummary,
     artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, entryRefCountsObj, imageAccessOverview, viewerDepth, suppressionStats,
-    botIntelligence
+    botIntelligence,
+    periodTotals
   } = queryResults;
 
   const {
@@ -51,13 +52,12 @@ export function buildDashboardData(queryResults, filterParams) {
     returningVisitors,
     cowboyJumps: cowboyJumps || 0,
     events: events?.results || [],
-    entries: entries?.results || [],
     galleries: galleries?.results || [],
     referrers: referrers?.results || [],
     geo: geo?.results || [],
     trend: trend?.results || [],
     devices: devices?.results || [],
-    pages: pages?.results || [],
+    pages: Array.isArray(pages) ? pages : (pages?.results || []),
     images: images?.results || [],
     uniqueImagesViewed,
     totalImageSessions,
@@ -97,6 +97,7 @@ export function buildDashboardData(queryResults, filterParams) {
     viewerDepth,
     imageAccessOverview: imageAccessOverview || [],
     suppressionStats,
-    botIntelligence
+    botIntelligence,
+    periodTotals: periodTotals || { total_visitors: 0, total_art_viewers: 0 }
   };
 }

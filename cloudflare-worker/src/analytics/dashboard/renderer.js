@@ -4,9 +4,54 @@
 // NO DB access, NO env usage, NO filter logic — rendering only.
 // ═══════════════════════════════════════════════════════════════════════════
 
-export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, imageAccessOverview, viewerDepth, suppressionStats, botIntelligence }) {
+export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, imageAccessOverview, viewerDepth, suppressionStats, botIntelligence, periodTotals }) {
   const s = summary || {};
   const safeDeviceEngagement = Array.isArray(deviceEngagement) ? deviceEngagement : [];
+  
+  // Calculate art viewers from trend data (visitors who viewed chapters/images/galleries)
+  const todayTrend = Array.isArray(trend) && trend.length > 0 ? trend[trend.length - 1] : null;
+  const artViewersToday = todayTrend?.art_viewers || 0;
+  const siteVisitorsToday = todayTrend?.visitors || 0;
+  
+  // Sum of daily counts (matches what the chart bars show)
+  const trendArr = Array.isArray(trend) ? trend : [];
+  const summedSiteVisitors = trendArr.reduce((sum, d) => sum + (d.visitors || 0), 0);
+  const summedArtViewers = trendArr.reduce((sum, d) => sum + (d.art_viewers || 0), 0);
+  // Period-level unique counts (deduplicated across days)
+  const uniqueSiteVisitors = periodTotals?.total_visitors || 0;
+  const uniqueArtViewers = periodTotals?.total_art_viewers || 0;
+  
+  // Multi-day periods show summed totals (matches bars adding up)
+  // Single day views show that day's actual stats
+  const isMultiDay = days > 1 && !selectedDate && !yesterday;
+  const isSingleDay = !isMultiDay; // Show full detail on single day views
+  const totalSiteVisitors = isMultiDay ? summedSiteVisitors : (trendArr[0]?.visitors || summedSiteVisitors);
+  const totalArtViewers = isMultiDay ? summedArtViewers : (trendArr[0]?.art_viewers || summedArtViewers);
+
+  // Governance protocol (Quill v2): Level 5 should mean mitigation resistance,
+  // not merely high volume. We use repeated 429 hard-stops as the proof signal.
+  const isLevel5BlockRecommended = (suspect) => {
+    if (!suspect || suspect.status === 'blocked') return false;
+    if ((suspect.risk_level || 0) < 4) return false;
+    if (suspect.is_verified_bot) return false;
+
+    // K4 Protocol: "Bad Actor Day" definition (high-confidence enforcement signal)
+    //  - >= 20 unique images/minute
+    //  - OR >= 40 delayed requests in any ~10-minute window (IP or ASN cluster)
+    // Escalation for manual block (Level 5): >= 10 returned 429s in a day
+    const hardStops24h = Number(suspect.friction_429_24h || 0);
+    if (hardStops24h >= 10) return true;
+
+    const peakUniquePerMin = Number(suspect.peak_unique_images_per_minute_24h || 0);
+    if (peakUniquePerMin >= 20) return true;
+
+    const delayBurstIp = Number(suspect.max_friction_delay_10m_24h || 0);
+    const delayBurstAsn = Number(suspect.max_friction_delay_10m_asn_24h || 0);
+    const delayBurst = Math.max(delayBurstIp, delayBurstAsn);
+    if (delayBurst >= 40) return true;
+
+    return false;
+  };
   
   // Canonical list of all trackable events with display labels
   // Alphabetized: high-value events first, then passive/scroll events
@@ -76,7 +121,6 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   const maxEventCount = Math.max(...allEvents.map(e => e.count), 1);
   const maxRefSessions = Math.max(...referrers.map(r => r.sessions), 1);
   const maxGeoVisitors = Math.max(...geo.map(g => g.visitors), 1);
-  const maxPageSessions = Math.max(...pages.map(p => p.sessions), 1);
   
   // Build base URL for filter links (preserves current filters)
   const baseParams = new URLSearchParams();
@@ -157,23 +201,35 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
 
   const imageAccessTotals = (() => {
     const rows = imageAccessOverview || [];
-    let imageOnlyViews = 0;
-    let externalViews = 0;
-    let chapterViews = 0;
+    let imageProxyViews = 0; // proxy-only chapter exposures + external embeds (subset)
+    let unverifiedViews = 0; // direct/internal non-JS views (badge U)
+    let externalViews = 0;   // subset of imageProxyViews (badge E)
+    let chapterJsViews = 0;  // ONLY JS-verified chapter views (badge C)
     let zoomViews = 0;
     for (const row of rows) {
-      imageOnlyViews += (row?.unverified_views || 0);
-      externalViews += (row?.external_views || 0);
-      chapterViews += (row?.chapter_views || 0);
-      zoomViews += (row?.xl_zooms || 0);
+      const badges = Array.isArray(row?.badges) ? row.badges : [];
+      const chapterViews = Number(row?.chapter_views || 0);
+      const proxyOnlyChapterViews = (badges.includes('I') && !badges.includes('C')) ? chapterViews : 0;
+      const jsChapterViews = badges.includes('C') ? chapterViews : 0;
+      const rowUnverifiedViews = Number(row?.unverified_views || 0);
+      const extViews = Number(row?.external_views || 0);
+
+      chapterJsViews += jsChapterViews;
+      zoomViews += Number(row?.xl_zooms || 0);
+      imageProxyViews += proxyOnlyChapterViews + extViews;
+      unverifiedViews += rowUnverifiedViews;
+      externalViews += extViews;
     }
-    const allViews = chapterViews + zoomViews + imageOnlyViews + externalViews;
+    // Note: External views are included inside the image-proxy bucket.
+    // ALL = C + Z + i + U  (where i includes E)
+    const allViews = chapterJsViews + zoomViews + imageProxyViews + unverifiedViews;
     return {
       uniqueImages: rows.length,
       allViews,
-      chapterViews,
+      chapterViews: chapterJsViews,
       zoomViews,
-      imageOnlyViews,
+      imageProxyViews,
+      unverifiedViews,
       externalViews
     };
   })();
@@ -237,6 +293,24 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     .grid, .grid-tall { display: grid; grid-template-columns: repeat(5, 348px); gap: 10px; margin: 0 auto 10px auto; width: fit-content; }
     .section { background: #252525; border-radius: 8px; padding: 10px; overflow: visible; }
     .grid > .section, .grid-tall > .section { max-height: var(--k4-grid-panel-max); overflow-y: auto; scrollbar-gutter: stable; }
+
+    /* Split-panel layout: avoid nested scrollbars by making the panel fixed-height
+       and putting the scroll only on the intended inner list region. */
+    .grid > .section.k4-split-panel,
+    .grid-tall > .section.k4-split-panel {
+      height: var(--k4-grid-panel-max);
+      max-height: var(--k4-grid-panel-max);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .k4-split-panel .k4-split-scroll {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      padding-right: 6px;
+      scrollbar-gutter: stable;
+    }
     .section h3 { color: #fff; font-size: 13px; margin-bottom: 6px; }
     /* Bar chart styles */
     .bar-row { display: flex; align-items: center; padding: 4px 0; border-bottom: 1px solid #333; }
@@ -255,6 +329,17 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     .section-tip .tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; z-index: 1000; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); width: 220px; line-height: 1.4; }
     .section-tip .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #333; }
     .section-tip:hover .tooltip { display: block; }
+    .mini-btn { font-size: 10px; padding: 3px 8px; border: 1px solid #444; border-radius: 6px; background: #1a1a1a; color: #ccc; cursor: pointer; }
+    .mini-btn:hover { background: #333; }
+    .k4-overlay { display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.75); justify-content:center; align-items:center; }
+    .k4-overlay.open { display:flex; }
+    .k4-overlay-box { background:#1a1a1a; border:1px solid #333; border-radius:10px; width:90vw; max-width:900px; max-height:85vh; display:flex; flex-direction:column; box-shadow:0 8px 32px rgba(0,0,0,.6); }
+    .k4-overlay-hdr { display:flex; justify-content:space-between; align-items:center; padding:10px 16px; border-bottom:1px solid #333; }
+    .k4-overlay-hdr h2 { margin:0; font-size:14px; color:#bbb; }
+    .k4-overlay-close { background:none; border:none; color:#888; font-size:20px; cursor:pointer; padding:0 4px; }
+    .k4-overlay-close:hover { color:#fff; }
+    .k4-overlay-body { overflow-y:auto; padding:12px 16px; flex:1; }
+    .k4-overlay-body pre { white-space:pre-wrap; word-break:break-word; margin:0; font-family:ui-monospace,Consolas,monospace; font-size:12px; line-height:1.6; color:#ddd; }
     /* Art Views header bar */
     .artviews-header { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: rgba(255,255,255,0.03); border-radius: 8px; margin: 20px 0 12px 0; }
     .artviews-header .artviews-title { font-weight: 600; font-size: 16px; letter-spacing: 0.04em; }
@@ -280,27 +365,309 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     @media (max-width: 768px) { .external-grid { grid-template-columns: 1fr; width: 100%; } }
     /* Mobile-friendly */
     @media (max-width: 768px) {
-      body { padding: 10px; }
-      .container { max-width: 100%; }
-      .grid, .grid-tall { grid-template-columns: 1fr; }
-      .section.wide { grid-column: span 1; }
+      /* ═══ MOBILE MASTER RESET ═══ */
+      /* Body: 95% width, centered, no edge touching */
+      body { 
+        padding: 0 !important; 
+        margin: 0 !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+      }
+      
+      /* Main container: 95% width, centered */
+      .container { 
+        width: 95% !important; 
+        max-width: 95% !important; 
+        margin: 0 auto !important; 
+        padding: 8px 0 !important;
+      }
+      
+      /* ═══ FORCE ALL GRIDS TO SINGLE COLUMN ═══ */
+      .grid, .grid-tall, .access-grid, .art-views-grid, .external-grid, .bot-intel-grid, .exit-grid {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
+      
+      /* Override ANY inline max-width or fit-content */
+      [style*="max-width"], [style*="fit-content"] {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      
+      /* ═══ ALL SECTIONS: UNIFORM WIDTH ═══ */
+      .section {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 12px 0 !important;
+        padding: 12px !important;
+        box-sizing: border-box !important;
+        max-height: none !important;
+        overflow: visible !important;
+      }
+
+      /* Split panels should not be fixed-height on mobile */
+      .section.k4-split-panel { height: auto !important; }
+      .section.k4-split-panel .k4-split-scroll {
+        overflow: visible !important;
+        padding-right: 0 !important;
+      }
+      
+      /* ═══ PULSE STATS ═══ */
       .pulse-row { flex-wrap: wrap; }
       .pulse-row .pulse-stat { flex: none; }
-      .pulse { flex-wrap: wrap; gap: 5px; }
-      .pulse .pulse-stat { flex: none; }
-      .pulse-stat { padding: 4px 8px; }
-      .pulse-stat .value { font-size: 14px; }
-      .pulse-stat .label { font-size: 9px; }
-      h1 { font-size: 18px; }
-      h2 { font-size: 13px; margin: 15px 0 8px; }
-      .section { padding: 10px; max-height: none; }
-      .grid > .section, .grid-tall > .section { max-height: none; overflow: visible; }
-      .bar-label { width: 80px; font-size: 10px; }
-      .controls { gap: 3px; }
-      .controls a { font-size: 10px; padding: 4px 6px; }
-      .exit-grid { grid-template-columns: 1fr; }
-      .bot-intel-grid { grid-template-columns: 1fr !important; }
+      .pulse { flex-wrap: wrap; gap: 6px; justify-content: center; width: 100% !important; }
+      .pulse .pulse-stat { flex: 1 1 calc(33% - 6px); min-width: 80px; max-width: 120px; }
+      .pulse-stat { padding: 6px 8px; }
+      .pulse-stat .value { font-size: 13px; }
+      .pulse-stat .label { font-size: 8px; }
+      
+      /* ═══ TYPOGRAPHY ═══ */
+      h1 { font-size: 18px; flex-wrap: wrap; gap: 8px; text-align: center; }
+      h1 a { font-size: 11px !important; margin-left: 0 !important; display: inline-block; }
+      h2 { font-size: 13px; margin: 12px 0 6px; text-align: center; }
+      h3 { font-size: 14px; }
+      
+      /* ═══ CONTROLS ═══ */
+      .controls { 
+        gap: 4px; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        padding: 0; 
+        width: 100% !important;
+      }
+      .controls a { font-size: 11px; padding: 6px 10px; }
+      .controls > div { width: 100%; margin-top: 8px; flex-wrap: wrap; gap: 6px; justify-content: center; }
+      .ip-filter { flex-wrap: wrap; gap: 6px; justify-content: center; width: 100%; }
+      .ip-filter a { font-size: 10px; padding: 5px 10px; }
+      .controls > span { order: -1; width: 100%; text-align: center; margin-bottom: 4px; }
+      
+      /* ═══ BAR CHARTS ═══ */
+      /* ═══ BAR CHARTS ═══ */
+      .bar-label { width: 90px; font-size: 10px; flex-shrink: 0 !important; }
+      .bar-row { 
+        width: 100% !important; 
+        display: flex !important;
+        align-items: center !important;
+      }
+      .bar-container { 
+        flex: 1 1 auto !important; 
+        min-width: 0 !important;
+        width: auto !important;
+      }
+      .bar-value { 
+        flex-shrink: 0 !important; 
+        min-width: 30px !important;
+        text-align: right !important;
+      }
+      
+      /* ═══ TREND CHART ═══ */
+      .trend-chart { 
+        padding: 12px !important; 
+        overflow-x: auto; 
+        margin-bottom: 15px; 
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .trend-chart h3 { font-size: 12px; margin-bottom: 8px; }
+      .trend-bars { min-width: auto; gap: 3px; height: 80px; }
+      .trend-bar { min-width: 30px; flex: 1; }
+      .trend-bar-label { font-size: 9px; bottom: -20px; }
+      .trend-bar-value { font-size: 10px; top: -16px; }
+      
+      /* ═══ TABLES ═══ */
+      .section table { 
+        display: table !important; 
+        width: 100% !important; 
+        table-layout: auto !important;
+      }
+      .section th, .section td {
+        padding: 6px 8px !important;
+      }
+
+      /* Blocked IPs archive: make columns distribute cleanly on mobile */
+      .blocked-ips-wrap { width: 100% !important; }
+      .blocked-ips-table {
+        width: 100% !important;
+        table-layout: fixed !important;
+      }
+      .blocked-ips-table th:nth-child(1), .blocked-ips-table td:nth-child(1) { width: 92px; }
+      .blocked-ips-table th:nth-child(3), .blocked-ips-table td:nth-child(3) { width: 56px; }
+      .blocked-ips-table th:nth-child(4), .blocked-ips-table td:nth-child(4) { width: 78px; }
+      .blocked-ips-table th:nth-child(5), .blocked-ips-table td:nth-child(5) { width: 78px; }
+      .blocked-ips-table th:not(:nth-child(2)), .blocked-ips-table td:not(:nth-child(2)) { white-space: nowrap !important; }
+      .blocked-ips-table th:nth-child(2), .blocked-ips-table td:nth-child(2) {
+        white-space: normal !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+      }
+      
+      /* ═══ ART VIEWS HEADER ═══ */
+      .artviews-header { flex-wrap: wrap; gap: 8px; padding: 8px; }
+      .artviews-header .artviews-title { font-size: 14px; }
+      
+      /* ═══ BOT INTEL ═══ */
+      .bot-intel-grid .section { padding: 8px; width: 100% !important; }
+      .bot-intel-grid table { font-size: 10px; width: 100% !important; }
+      .bot-intel-grid th, .bot-intel-grid td { padding: 4px 2px; }
+      
+      /* ═══ IMAGE ACCESS OVERVIEW ═══ */
+      #accessOverviewList { overflow-x: hidden; width: 100% !important; }
+      #accessOverviewList > div:first-of-type { display: none !important; }
+      
+      /* ═══ IMAGE ACCESS ROW: MOBILE CARD LAYOUT ═══ */
+      .access-row {
+        display: grid !important;
+        grid-template-columns: 72px 1fr 1fr 1fr !important;
+        grid-template-rows: auto auto auto auto auto !important;
+        gap: 6px 10px !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        padding: 12px !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+        align-items: start !important;
+      }
+      
+      /* CRITICAL: Allow ALL children to shrink */
+      .access-row, .access-row * {
+        min-width: 0 !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+      }
+      
+      /* Image container: Row 1, Col 1 */
+      .access-row > div:nth-child(1) { 
+        grid-row: 1 / 3 !important;
+        grid-column: 1 !important;
+        width: 64px !important;
+        justify-self: center !important;
+      }
+      .access-row img {
+        width: 64px !important;
+        height: 64px !important;
+        flex-shrink: 0 !important;
+        object-fit: cover !important;
+        border-radius: 6px !important;
+      }
+      
+      /* ID/badges column: Row 1, Col 2 */
+      .access-row > div:nth-child(2) { 
+        grid-row: 1 !important;
+        grid-column: 2 / -1 !important;
+        width: 100% !important;
+      }
+      
+      /* Location: Row 2, Col 2 */
+      .access-row > span:nth-child(3) {
+        grid-row: 2 !important;
+        grid-column: 2 / -1 !important;
+        width: 100% !important;
+        font-size: 12px !important;
+      }
+      
+      /* C/Z/i stats: Row 3, distribute across available width */
+      .access-row > span:nth-child(4),
+      .access-row > span:nth-child(5),
+      .access-row > span:nth-child(6) {
+        grid-row: 3 !important;
+        width: auto !important;
+        text-align: center !important;
+        padding: 4px 8px !important;
+        background: rgba(255,255,255,0.03) !important;
+        border-radius: 4px !important;
+        font-size: 13px !important;
+      }
+      .access-row > span:nth-child(4) { grid-column: 2 !important; }
+      .access-row > span:nth-child(5) { grid-column: 3 !important; }
+      .access-row > span:nth-child(6) { grid-column: 4 !important; }
+
+      /* U stat: Row 4, span width */
+      .access-row > span:nth-child(7) {
+        grid-row: 4 !important;
+        grid-column: 2 / -1 !important;
+        width: auto !important;
+        text-align: center !important;
+        padding: 4px 8px !important;
+        background: rgba(255,255,255,0.03) !important;
+        border-radius: 4px !important;
+        font-size: 13px !important;
+      }
+      
+      /* Source: Row 5, span full width */
+      .access-row > div:nth-child(8) {
+        grid-row: 5 !important;
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+        padding-top: 6px !important;
+        border-top: 1px solid rgba(255,255,255,0.06) !important;
+        margin-top: 4px !important;
+      }
+      
+      /* ID line: horizontal flow */
+      .access-idline { 
+        display: flex !important;
+        flex-wrap: wrap !important; 
+        gap: 6px !important;
+        align-items: center !important;
+      }
+      .access-id { 
+        font-size: 13px !important;
+      }
+      .access-devices { 
+        flex: 0 0 auto !important; 
+      }
+      
+      /* ═══ ACCESS STATS BADGES (header) ═══ */
+      .access-stats { 
+        flex-wrap: wrap !important; 
+        gap: 4px !important; 
+        justify-content: center !important; 
+        margin-left: 0 !important; 
+        width: 100% !important; 
+      }
+      .access-stats > span { font-size: 10px !important; padding: 3px 6px !important; }
+      #accessFilterBtns { flex-wrap: wrap; }
     }
+    /* Extra small mobile */
+    @media (max-width: 480px) {
+      body { padding: 5px; }
+      .pulse { gap: 4px; }
+      .pulse .pulse-stat { flex: 1 1 calc(50% - 4px); min-width: 0; max-width: none; }
+      .pulse-stat { padding: 5px 6px; }
+      .pulse-stat .value { font-size: 11px; }
+      .pulse-stat .label { font-size: 7px; letter-spacing: -0.3px; }
+      h1 { font-size: 15px; text-align: center; }
+      h1 a { font-size: 10px !important; }
+      h2 { font-size: 12px; text-align: center; }
+      .controls a { font-size: 10px; padding: 5px 8px; }
+      .controls > span { font-size: 11px !important; padding: 3px 8px !important; }
+      .ip-filter a { font-size: 9px; padding: 4px 8px; }
+      .trend-chart { padding: 8px; }
+      .trend-bars { height: 70px; gap: 2px; }
+      .trend-bar { min-width: 25px; }
+      .trend-bar-label { font-size: 8px; bottom: -18px; }
+      .trend-bar-value { font-size: 9px; top: -14px; }
+      .bar-label { width: 70px; font-size: 9px; }
+      .bar-value { font-size: 10px; }
+      th, td { padding: 4px 6px; font-size: 10px; }
+      /* Stack export button below filters */
+      .controls > div { flex-direction: column; align-items: center; }
+      .controls .export-btn { width: 100%; text-align: center; }
+      /* Chart header mobile */
+      .chart-header { display: flex; flex-direction: column; gap: 4px; text-align: center; }
+      /* Stats badges wrap */
+      .access-stats { flex-wrap: wrap; gap: 4px !important; justify-content: center !important; margin-left: 0 !important; width: 100%; }
+      .access-stats > span { font-size: 10px !important; padding: 3px 6px !important; }
+      /* Filter buttons */
+      #accessFilterBtns { flex-wrap: wrap; }
+      .chart-header #chart-title { font-size: 13px; }
+      .chart-totals { margin-left: 0 !important; font-size: 10px !important; }
+    }
+    /* Chart header default */
+    .chart-header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px; }
     /* Trend chart styles */
     .trend-chart { background: #252525; border-radius: 8px; padding: 20px; margin-top: 10px; margin-bottom: 30px; }
     .trend-chart h3 { color: #fff; font-size: 14px; }
@@ -352,26 +719,25 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     </div>
   </div>
 
+
+
   ${trend.length > 1 ? `
-  <h3 style="color:#fff;font-size:14px;margin-bottom:6px;">
-    <span id="chart-title">Engaged Sessions per Day</span>
-    <span style="float: right; font-size: 12px; font-weight: normal;">
-      <a href="#" id="toggle-visitors" style="color: #888; text-decoration: none;">Visitors</a> |
-      <a href="#" id="toggle-sessions" style="color: #4a9eff; text-decoration: underline;">Sessions</a>
-    </span>
+  <h3 class="chart-header" style="color:#fff;font-size:14px;margin-bottom:6px;">
+    <span id="chart-title">Site Visitors per Day</span>
+    <span class="chart-totals" style="font-size:12px;color:#888;margin-left:12px;">Total: <span style="color:#4a9eff;font-weight:bold;">${totalSiteVisitors}</span>${isMultiDay && uniqueSiteVisitors < summedSiteVisitors ? ` <span style="color:#666;">(${uniqueSiteVisitors} unique)</span>` : ''} visitors, <span style="color:#a855f7;font-weight:bold;">${totalArtViewers}</span>${isMultiDay && uniqueArtViewers < summedArtViewers ? ` <span style="color:#666;">(${uniqueArtViewers} unique)</span>` : ''} viewed art</span>
   </h3>
   <div class="trend-chart">
     <div class="trend-bars" id="trend-chart-bars">
       ${(() => {
-        const maxSessions = Math.max(...trend.map(t => t.sessions), 1);
+        const maxViewers = Math.max(...trend.map(t => t.visitors), 1);
         return trend.map(t => {
-          const height = Math.max((t.sessions / maxSessions * 100), 2);
+          const height = Math.max((t.visitors / maxViewers * 100), 2);
           const dateLabel = t.day.slice(5); // MM-DD format
           const isDataChangeDate = t.day === '2026-02-14';
           const isSelected = selectedDate === t.day;
           return `
-            <div class="trend-bar${isSelected ? ' selected' : ''}" data-visitors="${t.visitors}" data-sessions="${t.sessions}" data-day="${t.day}" style="height: ${height}%" title="${t.day}: ${t.visitors} visitors, ${t.sessions} sessions">
-              <span class="trend-bar-value">${t.sessions}</span>
+            <div class="trend-bar${isSelected ? ' selected' : ''}" data-visitors="${t.visitors}" data-sessions="${t.sessions}" data-art-viewers="${t.art_viewers || 0}" data-day="${t.day}" style="height: ${height}%" title="${t.day}: ${t.visitors} visitors (${t.art_viewers || 0} viewed art)">
+              <span class="trend-bar-value">${t.visitors}</span>
               <span class="trend-bar-label">${dateLabel}${isDataChangeDate ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ''}</span>
             </div>
           `;
@@ -381,11 +747,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   </div>
   <script>
     (function() {
-      const visitorsLink = document.getElementById('toggle-visitors');
-      const sessionsLink = document.getElementById('toggle-sessions');
-      const chartTitle = document.getElementById('chart-title');
       const bars = document.querySelectorAll('.trend-bar');
-      
       // Click on bar to load that day's data (preserve days for chart context)
       bars.forEach(bar => {
         bar.style.cursor = 'pointer';
@@ -403,50 +765,14 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           }
         });
       });
-      
-      function showVisitors() {
-        const maxVal = Math.max(...Array.from(bars).map(b => parseInt(b.dataset.visitors)), 1);
-        bars.forEach(bar => {
-          const val = parseInt(bar.dataset.visitors);
-          bar.style.height = Math.max((val / maxVal * 100), 2) + '%';
-          bar.querySelector('.trend-bar-value').textContent = val;
-          bar.title = bar.dataset.day + ': ' + val + ' visitors';
-        });
-        chartTitle.textContent = 'Human Visitors per Day';
-        visitorsLink.style.color = '#10b981';
-        visitorsLink.style.textDecoration = 'underline';
-        sessionsLink.style.color = '#888';
-        sessionsLink.style.textDecoration = 'none';
-      }
-      
-      function showSessions() {
-        const maxVal = Math.max(...Array.from(bars).map(b => parseInt(b.dataset.sessions)), 1);
-        bars.forEach(bar => {
-          const val = parseInt(bar.dataset.sessions);
-          bar.style.height = Math.max((val / maxVal * 100), 2) + '%';
-          bar.querySelector('.trend-bar-value').textContent = val;
-          bar.title = bar.dataset.day + ': ' + val + ' sessions';
-        });
-        chartTitle.textContent = 'Engaged Sessions per Day';
-        sessionsLink.style.color = '#4a9eff';
-        sessionsLink.style.textDecoration = 'underline';
-        visitorsLink.style.color = '#888';
-        visitorsLink.style.textDecoration = 'none';
-      }
-      
-      visitorsLink.addEventListener('click', function(e) { e.preventDefault(); showVisitors(); });
-      sessionsLink.addEventListener('click', function(e) { e.preventDefault(); showSessions(); });
-
-      // Default view: sessions (matches "real humans" = distinct session_id).
-      showSessions();
     })();
   </script>
   ` : trend.length === 1 ? `
   <div class="trend-chart">
-    <h3>Engaged Sessions</h3>
+    <h3>Site Visitors</h3>
     <div class="trend-bars" style="justify-content: center;">
-      <div class="trend-bar" style="height: 100%; width: 80px;" title="${trend[0].day}: ${trend[0].visitors} visitors, ${trend[0].sessions} sessions">
-        <span class="trend-bar-value">${trend[0].sessions}</span>
+      <div class="trend-bar" style="height: 100%; width: 80px;" title="${trend[0].day}: ${trend[0].visitors} visitors (${trend[0].art_viewers || 0} viewed art)">
+        <span class="trend-bar-value">${trend[0].visitors}</span>
         <span class="trend-bar-label">${trend[0].day.slice(5)}${trend[0].day === '2026-02-14' ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ''}</span>
       </div>
     </div>
@@ -503,20 +829,30 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <span class="label" style="color: #a7f3d0;">Collectors <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
       <div class="tooltip">High-depth viewers (score 20+) exhibiting collector behavior: multiple images, zooms, intentional browsing. These are your potential buyers.</div>
     </div>` : ''}
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);">
+      <span class="value" style="color: #fff;">🎨 ${totalArtViewers}/${totalSiteVisitors}</span>
+      <span class="label" style="color: #e9d5ff;">Art Viewers <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #e9d5ff;">i</span></span>
+      <div class="tooltip">Art Viewers vs Site Visitors (period total). Art Viewers = visitors who actually viewed art (chapters, galleries, or zoomed images). Site Visitors = all JS-verified page views including blog, homepage, etc. Today: ${artViewersToday}/${siteVisitorsToday}.</div>
+    </div>
     ${cowboyJumps > 0 ? `<div class="pulse-stat highlight">
       <span class="value">🤠 ${cowboyJumps}</span>
       <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
       <div class="tooltip">Total cowboy jump clicks. Every click counts!</div>
     </div>` : ''}
     <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-      <span class="value" style="color: #fff;">👤 ${artViewsSummary?.unique_viewers || 0}</span>
-      <span class="label" style="color: #a7f3d0;">Art Viewers <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
-      <div class="tooltip">Unique human visitors (cookie-based <strong>k4_vid</strong>) with JS proof-of-life. This is <em>not</em> a session count.</div>
+      <span class="value" style="color: #fff;">📊 ${s.sessions || 0}${minEngagement > 0 ? `<span style="opacity: 0.6; font-size: 0.7em;"> (${minEngagement}-${maxEngagement})</span>` : ''}</span>
+      <span class="label" style="color: #a7f3d0;">Engaged Sessions <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
+      <div class="tooltip">Engaged sessions: browser sessions where JS loaded and events fired. Range shows min-max engagement scores (zoom=4, notes=5, theme=3, nav=2).</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
       <span class="value" style="color: #fff;">👤 ${artViewsSummary?.total || 0}</span>
       <span class="label" style="color: #ddd6fe;">Exposure Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
       <div class="tooltip">Proxy-verified exposures: <strong>C</strong> (Chapters) + <strong>E</strong> (External image serves). It intentionally does <em>not</em> include <strong>Z</strong> (XL zoom intent) or gallery navigation.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);">
+      <span class="value" style="color: #fff;">🧊 ${artViewsSummary?.harvester_friction_events || 0}</span>
+      <span class="label" style="color: #cbd5e1;">Slowed <span class="info-icon" style="background: rgba(255,255,255,0.12); color: #cbd5e1;">i</span></span>
+      <div class="tooltip"><strong>Friction events (selected period):</strong> image requests where selective friction engaged. Includes both <em>delayed</em> (650-1600ms) and <em>429'd</em> (hard stop) requests. See 🧊 Harvester Friction section for breakdown.</div>
     </div>
     ${suppressionStats?.activeSuppressedIPs > 0 ? `<div class="pulse-stat" style="background: linear-gradient(135deg, #475569 0%, #334155 100%);">
       <span class="value" style="color: #94a3b8;">🛡 ${suppressionStats.activeSuppressedIPs}</span>
@@ -528,6 +864,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     </div>` : ''}
   </div>
 
+  ${isSingleDay ? `
   <!-- Art Views Section -->
   <div class="artviews-header">
     <div class="artviews-title">🎨 ART VIEWS <span class="subtle">Human art viewers (cleaned)</span></div>
@@ -543,7 +880,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     </span>
   </div>
 
-  <div style="display: grid; grid-template-columns: 1fr 280px 280px; gap: 12px; max-width: 1780px; margin: 0 auto;">
+  <div class="access-grid" style="display: grid; grid-template-columns: 1fr 280px 280px; gap: 12px; max-width: 1780px; margin: 0 auto;">
     <!-- Image Access Overview (unified panel) -->
     <div class="section" style="max-height: none;">
       <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap;">
@@ -551,20 +888,22 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         <div style="display: flex; gap: 3px;" id="accessFilterBtns">
           <button onclick="filterAccess('all')" data-f="all" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #555; background: #444; color: #fff; font-size: 10px; cursor: pointer; font-weight: bold;">All</button>
           <button onclick="filterAccess('C')" data-f="C" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #a78bfa55; background: #a78bfa22; color: #a78bfa; font-size: 10px; cursor: pointer;">C</button>
-          <button onclick="filterAccess('U')" data-f="U" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #f59e0b55; background: #f59e0b22; color: #f59e0b; font-size: 10px; cursor: pointer;">i</button>
+          <button onclick="filterAccess('I')" data-f="I" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #8b5cf655; background: #8b5cf622; color: #8b5cf6; font-size: 10px; cursor: pointer;">i</button>
+          <button onclick="filterAccess('U')" data-f="U" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #f59e0b55; background: #f59e0b22; color: #f59e0b; font-size: 10px; cursor: pointer;">U</button>
           <button onclick="filterAccess('E')" data-f="E" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #3b82f655; background: #3b82f622; color: #3b82f6; font-size: 10px; cursor: pointer;">E</button>
         </div>
         <span style="font-size: 10px; color: #555;">
-          <span style="color: #a78bfa;">C</span>=Chapter
-          <span style="color: #f59e0b;">i</span>=Image only
+          <span style="color: #a78bfa;">C</span>=Chapter JS
+          <span style="color: #8b5cf6;">i</span>=Image proxy
+          <span style="color: #f59e0b;">U</span>=Unverified
           <span style="color: #3b82f6;">E</span>=External
         </span>
-        <div style="margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
-          <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #3a3a3a;background:#222;color:#cbd5e1;font-size:12px;letter-spacing:0.2px;" title="ALL = C + Z + i + E (total views). Unique images: ${imageAccessTotals.uniqueImages}">
+        <div class="access-stats" style="margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #3a3a3a;background:#222;color:#cbd5e1;font-size:12px;letter-spacing:0.2px;" title="ALL = C + Z + i + U (total views). Note: i includes E. Unique images: ${imageAccessTotals.uniqueImages}">
             <span style="font-size:11px;opacity:0.75;">ALL</span>
             <span style="font-weight:800;color:#fff;">${imageAccessTotals.allViews}</span>
           </span>
-          <span title="Chapter views" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #a78bfa55;background:#a78bfa14;color:#a78bfa;font-size:12px;">
+          <span title="JS-verified chapter views (badge C only)" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #a78bfa55;background:#a78bfa14;color:#a78bfa;font-size:12px;">
             <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#a78bfa22;color:#a78bfa;font-size:10px;font-weight:bold;border:1px solid #a78bfa55;">C</span>
             <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.chapterViews}</span>
           </span>
@@ -572,11 +911,15 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:10px;font-weight:bold;border:1px solid #06b6d455;">Z</span>
             <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.zoomViews}</span>
           </span>
-          <span title="Image-only views (no JS/cookie)" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #f59e0b55;background:#f59e0b14;color:#f59e0b;font-size:12px;">
-            <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f59e0b22;color:#f59e0b;font-size:10px;font-weight:bold;border:1px solid #f59e0b55;">i</span>
-            <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.imageOnlyViews}</span>
+          <span title="Image-proxy views (proxy-only exposures + external embeds)" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #8b5cf655;background:#8b5cf614;color:#8b5cf6;font-size:12px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#8b5cf622;color:#8b5cf6;font-size:10px;font-weight:bold;border:1px solid #8b5cf655;">i</span>
+            <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.imageProxyViews}</span>
           </span>
-          <span title="External embed views" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #3b82f655;background:#3b82f614;color:#3b82f6;font-size:12px;">
+          <span title="Unverified views (non-JS direct/internal)" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #f59e0b55;background:#f59e0b14;color:#f59e0b;font-size:12px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f59e0b22;color:#f59e0b;font-size:10px;font-weight:bold;border:1px solid #f59e0b55;">U</span>
+            <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.unverifiedViews}</span>
+          </span>
+          <span title="External embed views (subset of i)" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #3b82f655;background:#3b82f614;color:#3b82f6;font-size:12px;">
             <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#3b82f622;color:#3b82f6;font-size:10px;font-weight:bold;border:1px solid #3b82f655;">E</span>
             <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.externalViews}</span>
           </span>
@@ -584,13 +927,14 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       </div>
       <div style="max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;" id="accessOverviewList">
         <!-- Column headers (inside scroller so scrollbar doesn't shift columns) -->
-        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 90px 220px 180px 90px 90px 90px auto; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
+        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 90px 220px 180px 90px 90px 90px 90px auto; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
           <span style="display:flex;justify-content:center;">Image</span>
           <span style="display:flex;justify-content:flex-start;padding-left:14px;">Type / ID</span>
           <span onclick="sortAccessLocation()" id="accessLocationHeader" style="cursor:pointer; user-select:none;">📍 Location ⇅</span>
           <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#a78bfa22;color:#a78bfa;font-size:9px;font-weight:bold;border:1px solid #a78bfa55;" title="Chapter views">C</span></span>
           <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:9px;font-weight:bold;border:1px solid #06b6d455;" title="Zoom views">Z</span></span>
-          <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f59e0b22;color:#f59e0b;font-size:9px;font-weight:bold;border:1px solid #f59e0b55;" title="Image-only (no JS/cookie)">i</span></span>
+          <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#8b5cf622;color:#8b5cf6;font-size:9px;font-weight:bold;border:1px solid #8b5cf655;" title="Image proxy (no JS)">i</span></span>
+          <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f59e0b22;color:#f59e0b;font-size:9px;font-weight:bold;border:1px solid #f59e0b55;" title="Unverified (non-JS direct/internal)">U</span></span>
           <span>Source</span>
         </div>
         ${(imageAccessOverview || []).map((row, i) => {
@@ -638,19 +982,20 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           const locationText = formatLocation({ country: geoCountry || (geo?.country || ''), region: geo?.region, city: geo?.city });
           const locColor = COUNTRY_COLORS[geoCountry] || COUNTRY_COLORS.default;
 
-          const primaryBadge = row.badges.includes('C') ? 'C' : (row.badges.includes('E') ? 'E' : 'U');
+          const primaryBadge = row.badges.includes('C') ? 'C' : (row.badges.includes('I') ? 'I' : (row.badges.includes('E') ? 'E' : 'U'));
           const primaryColors = {
             C: { text: '#a78bfa', bdr: '#a78bfa55' },
+            I: { text: '#8b5cf6', bdr: '#8b5cf655' },  // Image exposure (proxy only) - dimmer purple
             E: { text: '#3b82f6', bdr: '#3b82f655' },
             U: { text: '#f59e0b', bdr: '#f59e0b55' }
           };
           const p = primaryColors[primaryBadge] || primaryColors.U;
 
           const badgeHtml = row.badges.map(b => {
-            const colors = { C: { bg: '#a78bfa22', text: '#a78bfa', bdr: '#a78bfa55' }, U: { bg: '#f59e0b22', text: '#f59e0b', bdr: '#f59e0b55' }, E: { bg: '#3b82f622', text: '#3b82f6', bdr: '#3b82f655' } };
+            const colors = { C: { bg: '#a78bfa22', text: '#a78bfa', bdr: '#a78bfa55' }, I: { bg: '#8b5cf622', text: '#8b5cf6', bdr: '#8b5cf655' }, U: { bg: '#f59e0b22', text: '#f59e0b', bdr: '#f59e0b55' }, E: { bg: '#3b82f622', text: '#3b82f6', bdr: '#3b82f655' } };
             const c = colors[b] || colors.U;
-            const label = (b === 'U') ? 'i' : b;
-            return '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:' + c.bg + ';color:' + c.text + ';font-size:10px;font-weight:bold;border:1px solid ' + c.bdr + ';">' + label + '</span>';
+            const label = (b === 'U') ? 'u' : (b === 'I') ? 'i' : b;
+            return '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:' + c.bg + ';color:' + c.text + ';font-size:10px;font-weight:bold;border:1px solid ' + c.bdr + ';" title="' + (b === 'C' ? 'Chapter View (JS verified)' : b === 'I' ? 'Image Exposure (proxy only)' : b === 'E' ? 'External Referral' : 'Unverified') + '">' + label + '</span>';
           }).join(' ');
           const srcIcons = { 'Google Search': '🔍', 'Google Images': '🖼️', 'Bing': '🔍', 'Twitter/X': '🐦', 'Facebook': '📘', 'Pinterest': '📌', 'DuckDuckGo': '🦆', 'ChatGPT': '🧠', 'Open Graph': '🕸️', 'Structured Data': '🧾', 'Direct': '🔗', 'Internal': '🏠', 'Unknown': '❓' };
           function normalizeSourceDomain(raw) {
@@ -668,7 +1013,9 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             const domain = normalizeSourceDomain(rawSource);
             const pretty = String(rawSource || '').trim();
 
-            let icon = srcIcons[pretty] || '🌐';
+            const baseLabel = pretty.replace(/\s*\([^)]*\)\s*$/, '').trim();
+
+            let icon = srcIcons[pretty] || srcIcons[baseLabel] || '🌐';
             let label = pretty || 'Unknown';
 
             // Recommended badges (domain + friendly label compatibility)
@@ -697,6 +1044,16 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
               label = 'Facebook';
             }
 
+            if (baseLabel === 'Open Graph') {
+              icon = '🕸️';
+              label = pretty;
+            }
+
+            if (baseLabel === 'Structured Data') {
+              icon = '🧾';
+              label = pretty;
+            }
+
             const title = pretty || domain || 'Unknown';
             const safeLabel = label || title;
 
@@ -712,32 +1069,40 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
               + '<span style="font-size:12px;">🌐</span>'
               + '<span>Awaiting external referrer</span>'
               + '</span>';
-          const chColor = row.chapter_views > 0 ? '#a78bfa' : '#333';
+          const rowBadges = Array.isArray(row.badges) ? row.badges : [];
+          const chapterViewsRaw = Number(row.chapter_views || 0);
+          const cViews = rowBadges.includes('C') ? chapterViewsRaw : 0;
+          const proxyChapterViews = (rowBadges.includes('I') && !rowBadges.includes('C')) ? chapterViewsRaw : 0;
+          const iViews = proxyChapterViews + Number(row.external_views || 0);
+          const uViews = Number(row.unverified_views || 0);
+
+          const chColor = cViews > 0 ? '#a78bfa' : '#333';
           const zmColor = row.xl_zooms > 0 ? '#06b6d4' : '#333';
-          const unvTotal = row.unverified_views + row.external_views;
-          const unvColor = unvTotal > 0 ? '#f59e0b' : '#333';
+          const iColor = iViews > 0 ? '#8b5cf6' : '#333';
+          const uColor = uViews > 0 ? '#f59e0b' : '#333';
           // Row border color based on primary badge
-          const borderColor = row.badges.includes('C') ? '#a78bfa44' : row.badges.includes('E') ? '#3b82f644' : '#f59e0b44';
-          return '<a href="' + linkUrl + '" target="_blank" class="access-row" data-badges="' + row.badges.join(',') + '" data-country="' + (geoCountry || '') + '" data-region="' + ((geo?.region || '') + '') + '" data-city="' + ((geo?.city || '') + '') + '" style="display:grid;grid-template-columns:90px 220px 180px 90px 90px 90px auto;gap:10px;align-items:center;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ' + borderColor + ';text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.04)\'" onmouseout="this.style.background=\'transparent\'">' +
+          const borderColor = row.badges.includes('C') ? '#a78bfa44' : row.badges.includes('I') ? '#8b5cf644' : row.badges.includes('E') ? '#3b82f644' : '#f59e0b44';
+          return '<a href="' + linkUrl + '" target="_blank" class="access-row" data-badges="' + row.badges.join(',') + '" data-country="' + (geoCountry || '') + '" data-region="' + ((geo?.region || '') + '') + '" data-city="' + ((geo?.city || '') + '') + '" style="display:grid;grid-template-columns:90px 220px 180px 90px 90px 90px 90px auto;gap:10px;align-items:center;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ' + borderColor + ';text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.04)\'" onmouseout="this.style.background=\'transparent\'">' +
             '<div style="display:flex;align-items:center;justify-content:center;width:90px;">' +
               (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 6 ? 'eager' : 'lazy') + '" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid ' + p.bdr + ';">' : '<span style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:1px solid ' + p.bdr + ';">🖼</span>') +
             '</div>' +
             '<div style="display:flex;flex-direction:column;gap:4px;min-width:0;padding-left:14px;">' +
-              '<div style="display:flex;align-items:center;gap:6px;min-width:0;">' +
+              '<div class="access-idline" style="display:flex;align-items:center;gap:6px;min-width:0;">' +
                 '<div style="display:flex;gap:2px;flex:0 0 auto;">' + badgeHtml + '</div>' +
-                '<span style="color:' + p.text + ';font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;" title="' + row.image_id + '">' + row.image_id + '</span>' +
-                (deviceIcons ? '<span style="flex:0 0 auto;">' + deviceIcons + '</span>' : '') +
+                '<span class="access-id" style="color:' + p.text + ';font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;" title="' + row.image_id + '">' + row.image_id + '</span>' +
+                (deviceIcons ? '<span class="access-devices" style="flex:0 0 auto;">' + deviceIcons + '</span>' : '') +
               '</div>' +
             '</div>' +
             '<span style="color:' + locColor + ';font-size:13px;opacity:0.82;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + locationText + '">' + locationText + '</span>' +
-            '<span style="display:flex;justify-content:center;font-weight:bold;color:' + chColor + ';font-size:14px;">' + (row.chapter_views || '—') + '</span>' +
+            '<span style="display:flex;justify-content:center;font-weight:bold;color:' + chColor + ';font-size:14px;">' + (cViews || '—') + '</span>' +
             '<span style="display:flex;justify-content:center;font-weight:bold;color:' + zmColor + ';font-size:14px;">' + (row.xl_zooms || '—') + '</span>' +
-            '<span style="display:flex;justify-content:center;font-weight:bold;color:' + unvColor + ';font-size:14px;">' + (unvTotal || '—') + '</span>' +
+            '<span style="display:flex;justify-content:center;font-weight:bold;color:' + iColor + ';font-size:14px;">' + (iViews || '—') + '</span>' +
+            '<span style="display:flex;justify-content:center;font-weight:bold;color:' + uColor + ';font-size:14px;">' + (uViews || '—') + '</span>' +
             '<div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + srcHtml + '</div>' +
           '</a>';
         }).join('') || '<p style="color: #555; font-size: 11px;">No image access data yet</p>'}
       </div>
-      <p style="font-size: 9px; color: #555; margin-top: 6px;">C=JS-verified chapter · i=Image-only (no JS/cookie) · E=External embed · Source from referrer</p>
+      <p style="font-size: 9px; color: #555; margin-top: 6px;">C=JS-verified chapter · i=Image proxy (includes E) · U=Unverified · E=External embed</p>
     </div>
     <!-- Galleries sidebar (always visible) -->
     <div class="section" style="max-height: none;">
@@ -900,11 +1265,11 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       </script>
     </div>
 
-    <!-- Viewer Geography -->
-    <div class="section">
+    <!-- Site Geography -->
+    <div class="section k4-split-panel">
       <div class="section-header">
-        <h3>🗺️ Viewer Geography</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">On-site = JS-verified humans browsing galleries/images. External = where hotlinked images are served (CDN edge geo, approximate).</div></span>
+        <h3>🗺️ Site Geography</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">All JS-verified visitors by location (page views, galleries, images, everything).</div></span>
       </div>
       ${(() => {
         const countryColors = {
@@ -932,26 +1297,93 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           }).join('');
         }
 
-        // On-site: JS-verified art viewers (chapter_view + gallery_view)
-        const onsiteGeo = (artViewsSummary?.geography || []).map(g => ({
-          label: [g.city, g.region, g.country].filter(Boolean).join(', '),
-          country: g.country, count: g.unique_viewers
-        }));
-        // Site visitors from events table
+        // Site visitors (all JS-verified)
         const siteGeo = (geo || []).map(g => ({
           label: [g.city, g.region, g.country].filter(Boolean).join(', '),
-          country: g.country, count: g.visitors
+          country: g.country, visitors: g.visitors
         }));
-        // Merge on-site art viewers + site visitors, dedup by label, take max count
-        const mergedOnsite = {};
-        [...onsiteGeo, ...siteGeo].forEach(g => {
-          if (!mergedOnsite[g.label]) mergedOnsite[g.label] = { ...g };
-          else mergedOnsite[g.label].count = Math.max(mergedOnsite[g.label].count, g.count);
+        // Dedup by label, sum counts
+        const mergedGeo = {};
+        siteGeo.forEach(g => {
+          if (!mergedGeo[g.label]) mergedGeo[g.label] = { ...g };
+          else mergedGeo[g.label].visitors += g.visitors;
         });
-        const onsiteRows = Object.values(mergedOnsite).sort((a, b) => b.count - a.count).slice(0, 12);
-        const onsiteMax = Math.max(...onsiteRows.map(g => g.count), 1);
+        const siteRows = Object.values(mergedGeo).map(g => ({ ...g, count: g.visitors })).sort((a, b) => b.count - a.count);
+        const siteMax = Math.max(...siteRows.map(g => g.count), 1);
 
-        // External reach (non-JS traffic: bots, bounces, blocked JS)
+        if (siteRows.length > 0) {
+          return '<div class="k4-split-scroll">' + renderGeoRows(siteRows, siteMax, countryColor) + '</div>';
+        }
+        return '<p style="color:#666;">No site visitor data yet</p>';
+      })()}
+    </div>
+
+    <!-- Art Geography -->
+    <div class="section k4-split-panel">
+      <div class="section-header">
+        <h3>🎨 Art Geography</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Only visitors who viewed art (chapters, galleries, or zoomed images).</div></span>
+      </div>
+      ${(() => {
+        const countryColors = {
+          'US': '#a78bfa', 'FR': '#ef4444', 'DE': '#f97316', 'BR': '#22c55e', 'GB': '#6366f1',
+          'CA': '#ec4899', 'AU': '#eab308', 'MX': '#14b8a6', 'IN': '#f59e0b', 'JP': '#e11d48',
+          'IT': '#84cc16', 'ES': '#a855f7', 'NL': '#fb923c', 'AT': '#dc2626', 'HU': '#c026d3',
+          'SG': '#0ea5e9', 'HK': '#d946ef', 'CN': '#b91c1c', 'KR': '#2563eb', 'CO': '#fbbf24',
+          'PL': '#f43f5e', 'SE': '#06b6d4', 'NO': '#0284c7', 'FI': '#0369a1', 'CH': '#dc2626',
+          'RU': '#1d4ed8', 'UA': '#fcd34d', 'AR': '#60a5fa', 'ZA': '#a78bfa', 'NZ': '#2dd4bf',
+          'PT': '#e879f9', 'CG': '#f472b6', 'CL': '#38bdf8', 'PE': '#fbbf24', 'IE': '#4ade80',
+          'BE': '#facc15', 'CZ': '#7dd3fc', 'DK': '#ef4444', 'GR': '#0ea5e9', 'IL': '#6366f1',
+          'TW': '#d946ef', 'TH': '#f97316', 'PH': '#8b5cf6', 'TR': '#dc2626', 'RO': '#fde047',
+        };
+        function countryColor(code) {
+          if (countryColors[code]) return countryColors[code];
+          if (!code) return '#9ca3af';
+          let h = 0; for (let i = 0; i < code.length; i++) h = code.charCodeAt(i) * 31 + h;
+          const hue = Math.abs(h) % 360;
+          return 'hsl(' + hue + ', 70%, 55%)';
+        }
+        function renderGeoRows(items, maxCount, colorFn) {
+          return items.map(g => {
+            const barColor = colorFn(g.country);
+            return '<div class="bar-row"><span class="bar-label" title="' + g.label + '">' + g.label + '</span><div class="bar-container"><div class="bar" style="width: ' + (g.count / maxCount * 100).toFixed(1) + '%; background: ' + barColor + ';"></div></div><span class="bar-value">' + g.count + '</span></div>';
+          }).join('');
+        }
+
+        // Art viewers (chapter_view, xl_zoom, gallery_view)
+        const artGeo = (geo || []).filter(g => g.art_viewers > 0).map(g => ({
+          label: [g.city, g.region, g.country].filter(Boolean).join(', '),
+          country: g.country, art_viewers: g.art_viewers || 0
+        }));
+        // Dedup by label, sum counts
+        const mergedGeo = {};
+        artGeo.forEach(g => {
+          if (!mergedGeo[g.label]) mergedGeo[g.label] = { ...g };
+          else mergedGeo[g.label].art_viewers += g.art_viewers;
+        });
+        const artRows = Object.values(mergedGeo).map(g => ({ ...g, count: g.art_viewers })).sort((a, b) => b.count - a.count);
+        const artMax = Math.max(...artRows.map(g => g.count), 1);
+
+        if (artRows.length > 0) {
+          return '<div class="k4-split-scroll">' + renderGeoRows(artRows, artMax, countryColor) + '</div>';
+        }
+        return '<p style="color:#666;">No art viewer data yet</p>';
+      })()}
+    </div>
+
+    <!-- External Reach -->
+    <div class="section k4-split-panel">
+      <div class="section-header">
+        <h3>🌐 External Reach</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Non-JS traffic: bots, bounces, blocked JS. Separate population from verified visitors.</div></span>
+      </div>
+      ${(() => {
+        function renderGeoRows(items, maxCount) {
+          return items.map(g => {
+            return '<div class="bar-row"><span class="bar-label" title="' + g.label + '">' + g.label + '</span><div class="bar-container"><div class="bar" style="width: ' + (g.count / maxCount * 100).toFixed(1) + '%; background: #f59e0b;"></div></div><span class="bar-value">' + g.count + '</span></div>';
+          }).join('');
+        }
+
         const extGeo = (externalReachGeo || []).map(g => ({
           label: [g.city, g.region, g.country].filter(Boolean).join(', '),
           country: g.country, count: g.hits
@@ -959,30 +1391,23 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         const extMax = Math.max(...extGeo.map(g => g.count), 1);
 
         let html = '';
-        // On-site section
-        html += '<div style="margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #d1d5db;">👤 On-Site Visitors</div>';
-        if (onsiteRows.length > 0) {
-          html += '<div style="padding-right: 6px; margin-bottom: 12px;">' + renderGeoRows(onsiteRows, onsiteMax, countryColor) + '</div>';
-        } else {
-          html += '<p style="color:#666; margin-bottom: 12px;">No on-site data yet</p>';
-        }
-        // External section (non-JS traffic — separate population)
-        html += '<div style="margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #f59e0b;">🌐 External Reach <span style="font-weight: normal; font-size: 10px; opacity: 0.7;">(non-JS traffic)</span></div>';
         if (extGeo.length > 0) {
-          html += '<div style="padding-right: 6px; margin-bottom: 12px;">' + renderGeoRows(extGeo, extMax, (c) => '#f59e0b') + '</div>';
+          html += '<div class="k4-split-scroll" style="margin-bottom: 12px;">' + renderGeoRows(extGeo, extMax) + '</div>';
         } else {
           html += '<p style="color:#666; margin-bottom: 12px;">No external data yet</p>';
         }
         // External sources
         if ((externalReachSources || []).length > 0) {
-          html += '<div style="margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #f59e0b;">📡 External Sources <span style="font-weight: normal; font-size: 10px; opacity: 0.7;">(non-JS traffic)</span></div>';
-          const srcIcons = { 'Google Search': '🔍', 'Google Images': '🖼️', 'Bing': '🔍', 'Twitter/X': '🐦', 'Facebook': '📘', 'Pinterest': '📌', 'DuckDuckGo': '🦆', 'ChatGPT': '🧠', 'Yandex': '🔍', 'Baidu': '🔍', 'Direct': '🔗', 'Internal': '🏠', 'Other': '🌐' };
+          html += '<div style="margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #f59e0b;">📡 Sources</div>';
+          const srcIcons = { 'Google Search': '🔍', 'Google Images': '🖼️', 'Bing': '🅱️', 'Twitter/X': '🐦', 'Facebook': '📘', 'Pinterest': '📌', 'DuckDuckGo': '🦆', 'ChatGPT': '🧠', 'Open Graph': '🕸️', 'Structured Data': '🧾', 'Yandex': '🔍', 'Baidu': '🔍', 'Direct': '🔗', 'Internal': '🏠', 'Other': '🌐', 'Unknown': '❓' };
           html += '<div style="display: flex; flex-direction: column; gap: 3px;">';
-          for (const s of externalReachSources) {
-            const icon = srcIcons[s.source] || '🌐';
+          for (const s of externalReachSources.slice(0, 6)) {
+            const label = String(s.source || 'Unknown');
+            const base = label.replace(/\s*\([^)]*\)\s*$/, '').trim();
+            const icon = srcIcons[label] || srcIcons[base] || '🌐';
             html += '<div style="display: flex; align-items: center; gap: 6px; padding: 3px 6px; background: #1a1a1a; border-radius: 4px;">' +
               '<span style="font-size: 14px;">' + icon + '</span>' +
-              '<span style="color: #ccc; font-size: 11px; flex: 1;">' + s.source + '</span>' +
+              '<span style="color: #ccc; font-size: 11px; flex: 1;" title="' + label + '">' + label + '</span>' +
               '<span style="color: #f59e0b; font-size: 11px; font-weight: bold;">' + s.hits + '</span>' +
             '</div>';
           }
@@ -997,6 +1422,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         <h3 style="display: inline;">🧭 Index Health</h3>
         ${edgeEvents.length === 0 && edgeSummary.length === 0 ? '<span style="color:#666; margin-left: 12px;">No edge events yet</span>' : ''}
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Edge events: 301 redirects (canonical fixes), 410 Gone (removed content), 404 fallbacks. Healthy sites show these tapering over time.</div></span>
+        ${edgeEvents.length > 0 ? '<button class="mini-btn" type="button" onclick="k4OpenEdgeEventList()" title="Open full edge-event list in a new window (no truncation)">Full list</button>' : ''}
       </div>
       ${edgeSummary.length > 0 ? `
       <div style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
@@ -1055,7 +1481,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           const shortPath = e.path && e.path.length > 40 ? '...' + e.path.slice(-37) : (e.path || 'unknown');
           const botIcon = e.is_bot ? '🤖' : '👤';
           return `
-          <div style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
+          <div class="edge-row" data-hits="${e.hits || 0}" data-bot="${e.is_bot ? 1 : 0}" data-type="${label}" data-path="${e.path || ''}" style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
             <span style="background: ${color}22; color: ${color}; padding: 2px 8px; border-radius: 8px; font-size: 10px; flex-shrink: 0;">${label}</span>
             <span style="flex: 1; color: #ccc; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${e.path || ''}">${shortPath}</span>
             <span style="font-size: 11px;">${botIcon}</span>
@@ -1067,19 +1493,82 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     </div>
 
     <div class="section">
-      <h3>Top 10 Pages</h3>
+      <h3>Top 25 Pages</h3>
       ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        pages.map(p => {
-          const shortPath = p.page_path.length > 28 ? '...' + p.page_path.slice(-25) : p.page_path;
-          return `
+        (() => {
+          // Gallery landing pages (from galleryPrefetchMap.json)
+          const galleryPaths = new Set([
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color',
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White',
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color',
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White',
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color',
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White',
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color',
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White',
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color',
+            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White',
+            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery',
+            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery',
+            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery',
+            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery',
+            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery',
+            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains',
+            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water',
+            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets',
+            '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color',
+            '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White',
+            '/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars',
+            '/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color',
+            '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White',
+            '/Galleries/Fine-Art-Photography/Portraits/Color',
+            '/Galleries/Fine-Art-Photography/Portraits/Black-White',
+            '/Galleries/Fine-Art-Photography/Portraits/Reenactors',
+            '/Galleries/Fine-Art-Photography/Transportation/Boats',
+            '/Galleries/Fine-Art-Photography/Transportation/Cars',
+            '/Galleries/Fine-Art-Photography/Transportation/Military',
+            '/Galleries/Fine-Art-Photography/Transportation/Planes',
+            '/Galleries/Fine-Art-Photography/Transportation/Trains',
+            '/Galleries/Fine-Art-Photography/Architecture/Gallery',
+            '/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments',
+            '/Galleries/Fine-Art-Photography/Miscellaneous/Pets',
+            '/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife',
+            '/Other/K4-Select-Series/Engrained/Engrained-Series',
+          ]);
+          const maxViews = Math.max(...pages.map(p => p.views || 0), 1);
+          return pages.map((p, i) => {
+            const path = String(p.page_path || '/');
+            // Chapter = ends with /i-xxxxx (no further slash)
+            const isChapter = /\/i-[A-Za-z0-9]+$/.test(path);
+            const isGallery = galleryPaths.has(path);
+            const color = isChapter ? '#a78bfa' : isGallery ? '#10b981' : '#4a9eff';
+            const shortPath = path.length > 32 ? '...' + path.slice(-29) : path;
+            const count = p.views || 0;
+            return `
           <div class="bar-row">
-            <a class="bar-label" href="https://www.k4studios.com${p.page_path}" target="_blank" title="${p.page_path}" style="color: #4a9eff; text-decoration: none;">${shortPath}</a>
+            <a class="bar-label" href="https://www.k4studios.com${path}" target="_blank" title="${path}" style="color: ${color}; text-decoration: none;">${shortPath}</a>
             <div class="bar-container">
-              <div class="bar" style="width: ${(p.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
+              <div class="bar" style="width: ${((count / maxViews) * 100).toFixed(1)}%; background: ${color};"></div>
             </div>
-            <span class="bar-value">${p.sessions}</span>
-          </div>
-        `}).join('')
+            <span class="bar-value">${count}</span>
+          </div>`;
+          }).join('');
+        })()
       }
     </div>
 
@@ -1107,15 +1596,6 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         }).join('')}
       </table>
       `}
-    </div>
-
-    <div class="section">
-      <h3>Gallery-Chapter Entry Points</h3>
-      <table>
-        <tr><th>Source</th><th>Sessions</th></tr>
-        ${entries.map(e => `<tr><td>${formatEventName(e.entry_source)}</td><td>${e.sessions}</td></tr>`).join('')}
-        ${entries.length === 0 ? '<tr><td colspan="2">No data yet</td></tr>' : ''}
-      </table>
     </div>
 
     <div class="section">
@@ -1194,13 +1674,34 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         </div>
       </div>
     </div>
+
+    <div class="section" style="max-height: none;">
+      <div class="section-header">
+        <h3>🧊 Harvester Friction</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Selective friction engaged on image requests (delay or 429). This is your “X extraction attempts slowed” metric for the selected period.</div></span>
+      </div>
+      <div style="display:flex; flex-direction:column; gap: 10px;">
+        <div style="display:flex; align-items:baseline; justify-content:space-between; gap: 10px;">
+          <span style="color:#cbd5e1; font-weight:700;">Extraction attempts slowed</span>
+          <span style="color:#4a9eff; font-weight:900; font-size: 26px;">${artViewsSummary?.harvester_friction_events || 0}</span>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap: 10px; padding-top: 4px; border-top: 1px solid #333;">
+          <span style="color:#9ca3af;">⏳ Delayed</span>
+          <span style="color:#e5e7eb; font-weight:800;">${artViewsSummary?.harvester_friction_delay_events || 0}</span>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap: 10px;">
+          <span style="color:#9ca3af;">⛔ 429’d</span>
+          <span style="color:#e5e7eb; font-weight:800;">${artViewsSummary?.harvester_friction_429_events || 0}</span>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Bot Intelligence Section -->
   <div style="max-width: 1780px; margin: 0 auto;">
   <h2 style="margin-top: 30px;">🛡️ Bot Intelligence <span style="font-size: 12px; color: #888; font-weight: normal;">(Threat Classification)</span></h2>
   <p style="color: #888; margin: -10px 0 15px 0; font-size: 12px;">
-    Risk accumulates over time. Level 3 = high risk (review). Level 4 = block candidate (enough evidence to block).
+    Risk accumulates over time. 🟠 Level 3 = observe. 🟣 Level 4 = friction-managed extraction. 🟤 Level 5 = block recommended (≥10 429s/day OR sustained high-rate pulls).
     <button onclick="refreshBotIntelligence()" style="margin-left: 10px; background: #333; color: #888; border: 1px solid #555; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 11px;">🔄 Refresh</button>
   </p>
   
@@ -1222,10 +1723,24 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <div class="tooltip"><strong>Risk score 5-7.</strong> High-confidence scraper. Monitoring only — no automatic enforcement. Review and manually block if needed. Triggers: no referrer + high volume, no branching, datacenter IP, multi-day presence.</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);">
-      <span class="value" style="color: #fff;">🟣 ${botIntelligence?.stats?.risk4 || 0}</span>
-      <span class="label" style="color: #f5d0fe;">Block Candidates <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #f5d0fe;">i</span></span>
-      <div class="tooltip"><strong>Level 4 (top tier).</strong> Strong evidence of automation/scraping at meaningful volume (not a one-off). This level is intended to mean: <em>you have enough info to block</em>. If something lands here and looks like a real human, that's a grading bug — leave it unblocked and we should tighten the rules.</div>
+      <span class="value" style="color: #fff;">🟣 ${(() => {
+        const suspects = (botIntelligence?.suspects || []).filter(s => s && s.status !== 'blocked');
+        const blockRecommendedCount = suspects.filter(isLevel5BlockRecommended).length;
+        const frictionManagedCount = suspects.filter(s => (s.risk_level || 0) >= 4).length - blockRecommendedCount;
+        return suspects.length > 0 ? Math.max(0, frictionManagedCount) : Math.max(0, (botIntelligence?.stats?.risk4 || 0) - blockRecommendedCount);
+      })()}</span>
+      <span class="label" style="color: #f5d0fe;">Friction-Managed <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #f5d0fe;">i</span></span>
+      <div class="tooltip"><strong>Friction-managed IPs (cumulative, Level 4).</strong> Total count of unique IPs classified as automated extractors over time. These clients are automatically slowed (650-1600ms delay) or rate-limited (429 at ≥40 unique images/min) by the image proxy. See <em>🧊 Harvester Friction</em> for today's slowed requests.</div>
     </div>
+    ${(() => {
+      const suspects = (botIntelligence?.suspects || []).filter(s => s && s.status !== 'blocked');
+      const count = suspects.filter(isLevel5BlockRecommended).length;
+      return `<div class="pulse-stat" style="background: linear-gradient(135deg, #78350f 0%, #92400e 100%);">
+        <span class="value" style="color: #fff;">🟤 ${count}</span>
+        <span class="label" style="color: #fde68a;">Block Recommended <span class="info-icon" style="background: rgba(255,255,255,0.16); color: #fde68a;">i</span></span>
+        <div class="tooltip"><strong>Level 5 governance signal (UI-only).</strong> K4 Bad Actor Day: scraper persists after friction and generates <strong>≥10 429s/day</strong> OR shows sustained high-rate image pulls. Consider <em>Force Block</em> if it persists and is clearly non-beneficial traffic.</div>
+      </div>`;
+    })()}
     <div class="pulse-stat" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
       <span class="value" style="color: #fff;"><span style="text-shadow: 0 0 2px #000, 0 0 4px #000;">⊖</span> ${botIntelligence?.blocked?.filter(b => b.is_active)?.length || 0}</span>
       <span class="label" style="color: #fecaca;">Blocked <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fecaca;">i</span></span>
@@ -1275,14 +1790,17 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       }
     </div>
 
-    <!-- Suspected Bots (Risk 2+) -->
+    <!-- Suspected automation (governance view) -->
     <div class="section">
-      <h3>🎯 High-Risk Watchlist</h3>
+      <h3>🧭 Traffic Governance</h3>
+      <p style="color: #888; font-size: 10px; margin: -5px 0 10px 0;">Most automated traffic is mitigated automatically. Manual blocking should be reserved for persistent abuse.</p>
+      <div style="color:#666; font-size: 10px; margin: -6px 0 10px 0;">Protected (selected period): ⏳ ${artViewsSummary?.harvester_friction_delay_events || 0} delayed · ⛔ ${artViewsSummary?.harvester_friction_429_events || 0} 429</div>
       ${(botIntelligence?.suspects || []).length === 0 ? '<p style="color:#666">No suspicious IPs detected yet</p>' : `
       <div style="max-height: 400px; overflow-y: auto;">
         <table style="width: 100%; font-size: 11px;">
           <tr style="position: sticky; top: 0; background: #252525;">
             <th style="text-align: left; padding: 4px;">Risk</th>
+            <th style="text-align: left; padding: 4px;">Status</th>
             <th style="text-align: left; padding: 4px;">IP Hash</th>
             <th style="text-align: right; padding: 4px;">Reqs</th>
             <th style="text-align: left; padding: 4px;">Rules</th>
@@ -1290,21 +1808,39 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             <th style="text-align: center; padding: 4px;">Action</th>
           </tr>
           ${(botIntelligence?.suspects || []).filter(s => s.risk_level >= 2 && s.status !== 'blocked').map(s => {
-            const riskColors = { 1: '#10b981', 2: '#fbbf24', 3: '#f97316', 4: '#a855f7' };
-            const riskIcons = { 1: '🟢', 2: '🟡', 3: '🟠', 4: '🟣' };
+            const riskColors = { 1: '#10b981', 2: '#fbbf24', 3: '#f97316', 4: '#a855f7', 5: '#92400e' };
+            const riskIcons = { 1: '🟢', 2: '🟡', 3: '🟠', 4: '🟣', 5: '🟤' };
+            const isBlockRecommended = isLevel5BlockRecommended(s);
+            // Purple classification DOES NOT trigger blocking.
+            // Enforcement (delay / rate-limit / optional 429) is handled by the image proxy friction layer.
             const rules = JSON.parse(s.rules_triggered || '[]');
             const rulesShort = rules.slice(0, 2).map(r => r.replace(/_/g, ' ').slice(0, 12)).join(', ');
             const isBlocked = s.status === 'blocked';
-            const riskColor = riskColors[s.risk_level];
-            const riskIcon = riskIcons[s.risk_level];
+            const displayRiskLevel = isBlockRecommended ? 5 : (s.risk_level || 0);
+            const riskColor = riskColors[displayRiskLevel] || '#888';
+            const riskIcon = riskIcons[displayRiskLevel] || '❓';
             const rowStyle = isBlocked ? 'opacity: 0.5;' : '';
             const reqColor = s.total_requests > 100 ? '#ef4444' : '#888';
             const daysColor = s.days_seen > 2 ? '#f97316' : '#888';
+
+            const protectionStatus = isBlocked ? 'manual_block' : (isBlockRecommended ? 'block_recommended' : ((s.risk_level || 0) >= 4 ? 'friction_active' : 'observation'));
+            const statusBadges = {
+              friction_active: { bg: '#a855f722', color: '#f5d0fe', text: '🟣 Friction Active' },
+              block_recommended: { bg: '#92400e22', color: '#fde68a', text: '🟤 Block Recommended' },
+              observation: { bg: '#f9731622', color: '#fed7aa', text: '🟠 Observing' },
+              manual_block: { bg: '#dc262622', color: '#fecaca', text: '🔴 Manual Block' }
+            };
+            const status = statusBadges[protectionStatus] || statusBadges.observation;
+            const statusHtml = '<span title="' + protectionStatus + '" style="display:inline-flex;align-items:center;gap:6px;background:' + status.bg + ';color:' + status.color + ';padding:2px 6px;border-radius:999px;font-size:10px;">' + status.text + '</span>';
+
             const actionHtml = isBlocked 
               ? '<span style="color: #666;">Blocked</span>'
-              : "<button onclick=\"blockIP('" + s.ip_hash + "')\" style=\"background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;\">Block</button>";
+              : (isBlockRecommended
+                ? "<button onclick=\"blockIP('" + s.ip_hash + "')\" title=\"Block recommended: ≥10 429s/day or sustained high-rate pulls\" style=\"background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;\">Force Block</button>"
+                : "<button onclick=\"blockIP('" + s.ip_hash + "')\" title=\"Force a manual block (usually unnecessary; friction already mitigates most automation)\" style=\"background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;\">Force Block</button>");
             return '<tr style="border-bottom: 1px solid #333; '+rowStyle+'">' +
-              '<td style="padding: 6px 4px;"><span style="background: '+riskColor+'22; color: '+riskColor+'; padding: 2px 6px; border-radius: 8px; font-weight: bold;">'+riskIcon+' '+s.risk_level+'</span></td>' +
+              '<td style="padding: 6px 4px;"><span style="background: '+riskColor+'22; color: '+riskColor+'; padding: 2px 6px; border-radius: 8px; font-weight: bold;">'+riskIcon+' '+displayRiskLevel+'</span></td>' +
+              '<td style="padding: 6px 4px;">'+statusHtml+'</td>' +
               '<td style="padding: 6px 4px; font-family: monospace; font-size: 10px;">'+s.ip_hash+'<span style="color: #666; margin-left: 4px;">'+(s.country || '')+'</span></td>' +
               '<td style="padding: 6px 4px; text-align: right; font-weight: bold; color: '+reqColor+';">'+s.total_requests+'</td>' +
               '<td style="padding: 6px 4px; color: #888; font-size: 10px;" title="'+rules.join(', ')+'">'+rulesShort+(rules.length > 2 ? '...' : '')+'</td>' +
@@ -1321,8 +1857,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <div class="section">
       <h3>⊖ Blocked IPs <span style="font-size: 11px; color: #666; font-weight: normal;">(Archive)</span></h3>
       ${(botIntelligence?.blocked || []).length === 0 ? '<p style="color:#666">No blocked IPs yet</p>' : `
-      <div style="max-height: 400px; overflow-y: auto;">
-        <table style="width: 100%; font-size: 11px;">
+      <div class="blocked-ips-wrap" style="max-height: 400px; overflow-y: auto; width: 100%;">
+        <table class="blocked-ips-table" style="width: 100%; font-size: 11px;">
           <tr style="position: sticky; top: 0; background: #252525;">
             <th style="text-align: left; padding: 4px;">Status</th>
             <th style="text-align: left; padding: 4px;">IP Hash</th>
@@ -1352,13 +1888,37 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       </div>
       `}
     </div>
+
+    <!-- Harvester Friction -->
+    <div class="section">
+      <div class="section-header">
+        <h3>🧊 Harvester Friction</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Selective friction engaged on image requests (delay or 429). This is your "X extraction attempts slowed" metric for the selected period.</div></span>
+      </div>
+      <div style="display:flex; flex-direction:column; gap: 10px;">
+        <div style="display:flex; align-items:baseline; justify-content:space-between; gap: 10px;">
+          <span style="color:#cbd5e1; font-weight:700;">Extraction attempts slowed</span>
+          <span style="color:#4a9eff; font-weight:900; font-size: 26px;">${artViewsSummary?.harvester_friction_events || 0}</span>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap: 10px; padding-top: 4px; border-top: 1px solid #333;">
+          <span style="color:#9ca3af;">⏳ Delayed</span>
+          <span style="color:#e5e7eb; font-weight:800;">${artViewsSummary?.harvester_friction_delay_events || 0}</span>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap: 10px;">
+          <span style="color:#9ca3af;">⛔ 429'd</span>
+          <span style="color:#e5e7eb; font-weight:800;">${artViewsSummary?.harvester_friction_429_events || 0}</span>
+        </div>
+      </div>
+    </div>
   </div>
   </div>
+  ` : ''}
 
   <p style="margin-top: 30px; color: #666; font-size: 12px; max-width: 1780px; margin-left: auto; margin-right: auto;">
     Generated ${new Date().toISOString()} — ${periodLabel}
   </p>
 
+  ${isSingleDay ? `
   <script>
     // Art Views filter state - all on by default
     const artFilters = { image_page: true, xl_zoom: true, gallery: true, external_image: true };
@@ -1387,14 +1947,14 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
 
     // Bot Intelligence functions
     async function blockIP(ipHash) {
-      if (!confirm('Block IP: ' + ipHash + '?\\n\\nThis will take effect immediately.')) return;
+      if (!confirm('FORCE BLOCK IP: ' + ipHash + '?\n\nNote: Most automated traffic is already slowed/rate-limited automatically. Use manual blocking only for persistent abuse.\n\nThis takes effect immediately.')) return;
       
       try {
         const res = await fetch('/__k4stats/block', {
           method: 'POST',
           credentials: 'include',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ ip_hash: ipHash, reason: 'Manual block from dashboard' })
+          body: JSON.stringify({ ip_hash: ipHash, reason: 'Force block from governance dashboard' })
         });
         
         if (res.ok) {
@@ -1452,6 +2012,52 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         alert('Error: ' + e.message);
       }
     }
+  </script>
+  ` : ''}
+
+  <script>
+  function k4OpenEdgeEventList() {
+    var overlay = document.getElementById('k4-edge-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'k4-edge-overlay';
+      overlay.className = 'k4-overlay';
+      var box = document.createElement('div');
+      box.className = 'k4-overlay-box';
+      var hdr = document.createElement('div');
+      hdr.className = 'k4-overlay-hdr';
+      var h2 = document.createElement('h2');
+      h2.textContent = 'Edge Events (full paths)';
+      var closeBtn = document.createElement('button');
+      closeBtn.className = 'k4-overlay-close';
+      closeBtn.innerHTML = '&times;';
+      closeBtn.onclick = function() { overlay.classList.remove('open'); };
+      hdr.appendChild(h2);
+      hdr.appendChild(closeBtn);
+      var body = document.createElement('div');
+      body.className = 'k4-overlay-body';
+      var pre = document.createElement('pre');
+      pre.id = 'k4-edge-pre';
+      body.appendChild(pre);
+      box.appendChild(hdr);
+      box.appendChild(body);
+      overlay.appendChild(box);
+      overlay.addEventListener('click', function(ev) { if (ev.target === overlay) overlay.classList.remove('open'); });
+      document.body.appendChild(overlay);
+    }
+    var rows = document.querySelectorAll('.edge-row');
+    var lines = [];
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      var hits = r.getAttribute('data-hits') || '0';
+      var bot = r.getAttribute('data-bot') === '1' ? '\\uD83E\\uDD16' : '\\uD83D\\uDC64';
+      var type = r.getAttribute('data-type') || '';
+      var path = r.getAttribute('data-path') || '';
+      lines.push(hits + '\\t' + bot + '\\t' + type + '\\t' + path);
+    }
+    document.getElementById('k4-edge-pre').textContent = lines.join('\\n');
+    overlay.classList.add('open');
+  }
   </script>
 </div>
 </body>

@@ -14,6 +14,18 @@
   autoLaunch = false
 
 ##############################
+# ✅ Trailing Slash Normalization
+# Prevents Smart-404 function burns caused by slash variants.
+# Example: /Galleries/.../i-XXXXX/ -> /Galleries/.../i-XXXXX
+# Root (/) is untouched.
+##############################
+[[redirects]]
+from = "^/(.+)/$"
+to = "/$1"
+status = 301
+force = true
+
+##############################
 # ✅ URL Case Normalization (prevents duplicate content)
 # Redirect lowercase /galleries/ to proper-case /Galleries/
 # These are free CDN-level redirects, not function invocations
@@ -345,6 +357,12 @@ force = true
 
 # --- Old Photography-Galleries structure ---
 [[redirects]]
+from = "/Photography-Galleries/*/i-:id"
+to = "/.netlify/functions/smart-404?id=:id&path=/Photography-Galleries/:splat/i-:id"
+status = 404
+force = true
+
+[[redirects]]
 from = "/Photography-Galleries/*"
 to = "/Galleries/:splat"
 status = 301
@@ -522,14 +540,6 @@ from = "/Galleries/*/all"
 to = "/"
 status = 410
 force = true
-
-# Image IDs at wrong level (should be inside a gallery, not /Galleries/i-xxx)
-[[redirects]]
-from = "/Galleries/i-*"
-to = "/"
-status = 410
-force = true
-
 
 ##############################
 # ✅ Edge / Functions / Build

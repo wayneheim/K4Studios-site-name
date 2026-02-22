@@ -4,7 +4,7 @@
 // NO DB access, NO env usage, NO filter logic — rendering only.
 // ═══════════════════════════════════════════════════════════════════════════
 
-export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, entries, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, botIntelligence }) {
+export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, botIntelligence }) {
   const s = summary || {};
   
   // Canonical list of all trackable events with display labels
@@ -256,6 +256,17 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     .ip-filter .bot-filter { background: #4b5563; color: #fff; }
     .ip-filter .bot-filter.active { background: #059669; }
     .ip-badge { font-size: 11px; color: #888; background: #333; padding: 3px 8px; border-radius: 4px; }
+    .mini-btn { font-size: 10px; padding: 3px 8px; border: 1px solid #444; border-radius: 6px; background: #1a1a1a; color: #ccc; cursor: pointer; }
+    .mini-btn:hover { background: #333; }
+    .k4-overlay { display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.75); justify-content:center; align-items:center; }
+    .k4-overlay.open { display:flex; }
+    .k4-overlay-box { background:#1a1a1a; border:1px solid #333; border-radius:10px; width:90vw; max-width:900px; max-height:85vh; display:flex; flex-direction:column; box-shadow:0 8px 32px rgba(0,0,0,.6); }
+    .k4-overlay-hdr { display:flex; justify-content:space-between; align-items:center; padding:10px 16px; border-bottom:1px solid #333; }
+    .k4-overlay-hdr h2 { margin:0; font-size:14px; color:#bbb; }
+    .k4-overlay-close { background:none; border:none; color:#888; font-size:20px; cursor:pointer; padding:0 4px; }
+    .k4-overlay-close:hover { color:#fff; }
+    .k4-overlay-body { overflow-y:auto; padding:12px 16px; flex:1; }
+    .k4-overlay-body pre { white-space:pre-wrap; word-break:break-word; margin:0; font-family:ui-monospace,Consolas,monospace; font-size:12px; line-height:1.6; color:#ddd; }
   </style>
 </head>
 <body>
@@ -748,14 +759,14 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         // On-site section
         html += '<div style="margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #d1d5db;">👤 On-Site Visitors</div>';
         if (onsiteRows.length > 0) {
-          html += '<div style="padding-right: 6px; margin-bottom: 12px;">' + renderGeoRows(onsiteRows, onsiteMax, countryColor) + '</div>';
+          html += '<div style="max-height: 450px; overflow-y: auto; padding-right: 6px; margin-bottom: 12px; scrollbar-gutter: stable;">' + renderGeoRows(onsiteRows, onsiteMax, countryColor) + '</div>';
         } else {
           html += '<p style="color:#666; margin-bottom: 12px;">No on-site data yet</p>';
         }
         // External section
         html += '<div style="margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #9ca3af;">🌐 External Reach <span style="font-weight: normal; font-size: 10px; opacity: 0.7;">(hotlinked images)</span></div>';
         if (extGeo.length > 0) {
-          html += '<div style="padding-right: 6px;">' + renderGeoRows(extGeo, extMax, (c) => '#6b7280') + '</div>';
+          html += '<div style="max-height: 450px; overflow-y: auto; padding-right: 6px; scrollbar-gutter: stable;">' + renderGeoRows(extGeo, extMax, (c) => '#6b7280') + '</div>';
         } else {
           html += '<p style="color:#666">No external data yet</p>';
         }
@@ -785,6 +796,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         <h3 style="display: inline;">🧭 Index Health</h3>
         ${edgeEvents.length === 0 && edgeSummary.length === 0 ? '<span style="color:#666; margin-left: 12px;">No edge events yet</span>' : ''}
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Edge events: 301 redirects (canonical fixes), 410 Gone (removed content), 404 fallbacks. Healthy sites show these tapering over time.</div></span>
+        ${edgeEvents.length > 0 ? '<button class="mini-btn" type="button" onclick="k4OpenEdgeEventList()" title="Open full edge-event list in a new window (no truncation)">Full list</button>' : ''}
       </div>
       ${edgeSummary.length > 0 ? `
       <div style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
@@ -839,7 +851,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           const shortPath = e.path && e.path.length > 40 ? '...' + e.path.slice(-37) : (e.path || 'unknown');
           const botIcon = e.is_bot ? '🤖' : '👤';
           return `
-          <div style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
+          <div class="edge-row" data-hits="${e.hits || 0}" data-bot="${e.is_bot ? 1 : 0}" data-type="${label}" data-path="${e.path || ''}" style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
             <span style="background: ${color}22; color: ${color}; padding: 2px 8px; border-radius: 8px; font-size: 10px; flex-shrink: 0;">${label}</span>
             <span style="flex: 1; color: #ccc; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${e.path || ''}">${shortPath}</span>
             <span style="font-size: 11px;">${botIcon}</span>
@@ -891,15 +903,6 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         }).join('')}
       </table>
       `}
-    </div>
-
-    <div class="section">
-      <h3>Gallery-Chapter Entry Points</h3>
-      <table>
-        <tr><th>Source</th><th>Sessions</th></tr>
-        ${entries.map(e => `<tr><td>${formatEventName(e.entry_source)}</td><td>${e.sessions}</td></tr>`).join('')}
-        ${entries.length === 0 ? '<tr><td colspan="2">No data yet</td></tr>' : ''}
-      </table>
     </div>
 
     <div class="section">
@@ -1236,6 +1239,51 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         alert('Error: ' + e.message);
       }
     }
+  </script>
+
+  <script>
+  function k4OpenEdgeEventList() {
+    var overlay = document.getElementById('k4-edge-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'k4-edge-overlay';
+      overlay.className = 'k4-overlay';
+      var box = document.createElement('div');
+      box.className = 'k4-overlay-box';
+      var hdr = document.createElement('div');
+      hdr.className = 'k4-overlay-hdr';
+      var h2 = document.createElement('h2');
+      h2.textContent = 'Edge Events (full paths)';
+      var closeBtn = document.createElement('button');
+      closeBtn.className = 'k4-overlay-close';
+      closeBtn.innerHTML = '&times;';
+      closeBtn.onclick = function() { overlay.classList.remove('open'); };
+      hdr.appendChild(h2);
+      hdr.appendChild(closeBtn);
+      var body = document.createElement('div');
+      body.className = 'k4-overlay-body';
+      var pre = document.createElement('pre');
+      pre.id = 'k4-edge-pre';
+      body.appendChild(pre);
+      box.appendChild(hdr);
+      box.appendChild(body);
+      overlay.appendChild(box);
+      overlay.addEventListener('click', function(ev) { if (ev.target === overlay) overlay.classList.remove('open'); });
+      document.body.appendChild(overlay);
+    }
+    var rows = document.querySelectorAll('.edge-row');
+    var lines = [];
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      var hits = r.getAttribute('data-hits') || '0';
+      var bot = r.getAttribute('data-bot') === '1' ? '\\uD83E\\uDD16' : '\\uD83D\\uDC64';
+      var type = r.getAttribute('data-type') || '';
+      var path = r.getAttribute('data-path') || '';
+      lines.push(hits + '\\t' + bot + '\\t' + type + '\\t' + path);
+    }
+    document.getElementById('k4-edge-pre').textContent = lines.join('\\n');
+    overlay.classList.add('open');
+  }
   </script>
 </div>
 </body>
