@@ -12,6 +12,17 @@ const __dirname = path.dirname(__filename);
 const SITE_URL = 'https://www.k4studios.com';
 const LICENSE_URL = 'https://www.k4studios.com/About/License';
 
+const GHOST_IMAGE_ID = 'i-k4studios';
+
+function isHiddenImage(image) {
+  const visibility = String(image?.visibility || '').toLowerCase().trim();
+  if (visibility === 'ghost' || visibility === 'hidden' || visibility === 'hide') return true;
+  if (image?.id === GHOST_IMAGE_ID) return true;
+  if (image?.hidden === true) return true;
+  if (image?.show === false) return true;
+  return false;
+}
+
 // Gallery data sources for Cowboy section
 const COWBOY_GALLERIES = [
   {
@@ -48,8 +59,8 @@ function escapeXml(str) {
  * Generate <url> entry with nested <image:image> for a gallery image
  */
 function generateUrlEntry(image, urlBase) {
-  // Skip ghost/placeholder images
-  if (image.visibility === 'ghost' || image.id === 'i-k4studios') {
+  // Skip ghost/hidden/placeholder images
+  if (isHiddenImage(image)) {
     return null;
   }
 

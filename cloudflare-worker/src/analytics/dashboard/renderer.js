@@ -4,17 +4,22 @@
 // NO DB access, NO env usage, NO filter logic — rendering only.
 // ═══════════════════════════════════════════════════════════════════════════
 
-export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, imageAccessOverview, viewerDepth, suppressionStats, botIntelligence, periodTotals }) {
+export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, imageAccessOverview, viewerDepth, suppressionStats, botIntelligence, periodTotals, authHeader }) {
   const s = summary || {};
   const safeDeviceEngagement = Array.isArray(deviceEngagement) ? deviceEngagement : [];
   
+  // Trend is always the current range window (for charting), even when a specific
+  // calendar day is selected. When selectedDate is present, use the matching bar
+  // for any "this day" metrics instead of defaulting to the first/last element.
+  const trendArr = Array.isArray(trend) ? trend : [];
+  const selectedTrend = selectedDate ? (trendArr.find(d => d?.day === selectedDate) || null) : null;
+
   // Calculate art viewers from trend data (visitors who viewed chapters/images/galleries)
-  const todayTrend = Array.isArray(trend) && trend.length > 0 ? trend[trend.length - 1] : null;
+  const todayTrend = selectedTrend || (trendArr.length > 0 ? trendArr[trendArr.length - 1] : null);
   const artViewersToday = todayTrend?.art_viewers || 0;
   const siteVisitorsToday = todayTrend?.visitors || 0;
   
   // Sum of daily counts (matches what the chart bars show)
-  const trendArr = Array.isArray(trend) ? trend : [];
   const summedSiteVisitors = trendArr.reduce((sum, d) => sum + (d.visitors || 0), 0);
   const summedArtViewers = trendArr.reduce((sum, d) => sum + (d.art_viewers || 0), 0);
   // Period-level unique counts (deduplicated across days)
@@ -25,8 +30,9 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   // Single day views show that day's actual stats
   const isMultiDay = days > 1 && !selectedDate && !yesterday;
   const isSingleDay = !isMultiDay; // Show full detail on single day views
-  const totalSiteVisitors = isMultiDay ? summedSiteVisitors : (trendArr[0]?.visitors || summedSiteVisitors);
-  const totalArtViewers = isMultiDay ? summedArtViewers : (trendArr[0]?.art_viewers || summedArtViewers);
+  const singleDayTrend = selectedTrend || (trendArr[0] || null);
+  const totalSiteVisitors = isMultiDay ? summedSiteVisitors : (singleDayTrend?.visitors || summedSiteVisitors);
+  const totalArtViewers = isMultiDay ? summedArtViewers : (singleDayTrend?.art_viewers || summedArtViewers);
 
   // Governance protocol (Quill v2): Level 5 should mean mitigation resistance,
   // not merely high volume. We use repeated 429 hard-stops as the proof signal.
@@ -36,11 +42,13 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     if (suspect.is_verified_bot) return false;
 
     // K4 Protocol: "Bad Actor Day" definition (high-confidence enforcement signal)
-    //  - >= 20 unique images/minute
-    //  - OR >= 40 delayed requests in any ~10-minute window (IP or ASN cluster)
-    // Escalation for manual block (Level 5): >= 10 returned 429s in a day
-    const hardStops24h = Number(suspect.friction_429_24h || 0);
-    if (hardStops24h >= 10) return true;
+    //  - >= 10 returned 429s in a calendar day (ET) over last 7 days
+    //  - >= 20 unique images/minute (velocity)
+    //  - >= 40 delayed requests in any ~10-minute window (IP or ASN cluster)
+    //  - Sustained extraction: Level 4+ with >= 200 requests over 3+ days
+    //    (persistent scraper that friction hasn't deterred)
+    const hardStopsDay = Number(suspect.friction_429_max_day_7d || suspect.friction_429_24h || 0);
+    if (hardStopsDay >= 10) return true;
 
     const peakUniquePerMin = Number(suspect.peak_unique_images_per_minute_24h || 0);
     if (peakUniquePerMin >= 20) return true;
@@ -49,6 +57,12 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     const delayBurstAsn = Number(suspect.max_friction_delay_10m_asn_24h || 0);
     const delayBurst = Math.max(delayBurstIp, delayBurstAsn);
     if (delayBurst >= 40) return true;
+
+    // Sustained high-volume extraction: Level 4 scraper active 3+ days with 200+ requests
+    // means friction alone hasn't deterred them — escalate to block recommended.
+    const totalReqs = Number(suspect.total_requests || 0);
+    const daysSeen = Number(suspect.days_seen || 0);
+    if (totalReqs >= 200 && daysSeen >= 3) return true;
 
     return false;
   };
@@ -852,7 +866,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <div class="pulse-stat" style="background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);">
       <span class="value" style="color: #fff;">🧊 ${artViewsSummary?.harvester_friction_events || 0}</span>
       <span class="label" style="color: #cbd5e1;">Slowed <span class="info-icon" style="background: rgba(255,255,255,0.12); color: #cbd5e1;">i</span></span>
-      <div class="tooltip"><strong>Friction events (selected period):</strong> image requests where selective friction engaged. Includes both <em>delayed</em> (650-1600ms) and <em>429'd</em> (hard stop) requests. See 🧊 Harvester Friction section for breakdown.</div>
+      <div class="tooltip"><strong>Friction events (selected period):</strong> image requests where selective friction engaged. Includes both <em>delayed</em> (650-1600ms) and <em>429'd</em> (hard stop) requests. See Bot Intelligence for the breakdown.</div>
     </div>
     ${suppressionStats?.activeSuppressedIPs > 0 ? `<div class="pulse-stat" style="background: linear-gradient(135deg, #475569 0%, #334155 100%);">
       <span class="value" style="color: #94a3b8;">🛡 ${suppressionStats.activeSuppressedIPs}</span>
@@ -1675,40 +1689,27 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       </div>
     </div>
 
-    <div class="section" style="max-height: none;">
-      <div class="section-header">
-        <h3>🧊 Harvester Friction</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Selective friction engaged on image requests (delay or 429). This is your “X extraction attempts slowed” metric for the selected period.</div></span>
-      </div>
-      <div style="display:flex; flex-direction:column; gap: 10px;">
-        <div style="display:flex; align-items:baseline; justify-content:space-between; gap: 10px;">
-          <span style="color:#cbd5e1; font-weight:700;">Extraction attempts slowed</span>
-          <span style="color:#4a9eff; font-weight:900; font-size: 26px;">${artViewsSummary?.harvester_friction_events || 0}</span>
-        </div>
-        <div style="display:flex; align-items:center; justify-content:space-between; gap: 10px; padding-top: 4px; border-top: 1px solid #333;">
-          <span style="color:#9ca3af;">⏳ Delayed</span>
-          <span style="color:#e5e7eb; font-weight:800;">${artViewsSummary?.harvester_friction_delay_events || 0}</span>
-        </div>
-        <div style="display:flex; align-items:center; justify-content:space-between; gap: 10px;">
-          <span style="color:#9ca3af;">⛔ 429’d</span>
-          <span style="color:#e5e7eb; font-weight:800;">${artViewsSummary?.harvester_friction_429_events || 0}</span>
-        </div>
-      </div>
-    </div>
   </div>
 
   <!-- Bot Intelligence Section -->
   <div style="max-width: 1780px; margin: 0 auto;">
   <h2 style="margin-top: 30px;">🛡️ Bot Intelligence <span style="font-size: 12px; color: #888; font-weight: normal;">(Threat Classification)</span></h2>
-  <p style="color: #888; margin: -10px 0 15px 0; font-size: 12px;">
-    Risk accumulates over time. 🟠 Level 3 = observe. 🟣 Level 4 = friction-managed extraction. 🟤 Level 5 = block recommended (≥10 429s/day OR sustained high-rate pulls).
-    <button onclick="refreshBotIntelligence()" style="margin-left: 10px; background: #333; color: #888; border: 1px solid #555; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 11px;">🔄 Refresh</button>
-  </p>
+  <div style="display:flex; align-items:center; justify-content:space-between; gap: 12px; flex-wrap: wrap; color: #888; margin: -10px 0 12px 0; font-size: 12px;">
+    <div>
+      Risk accumulates over time. 🟠 Level 3 = observe. 🟣 Level 4 = friction-managed extraction. 🟤 Level 5 = block recommended (≥10 429s/day OR sustained high-rate pulls).
+    </div>
+    <div style="display:flex; align-items:center; gap: 10px; margin-left: auto;">
+      <div style="color:#666; font-size: 11px; padding: 4px 8px; border: 1px solid #333; border-radius: 999px; background: #1f1f1f; white-space: nowrap;">
+        Protected (selected period): 🧊 ${artViewsSummary?.harvester_friction_events || 0} slowed · ⏳ ${artViewsSummary?.harvester_friction_delay_events || 0} delayed · ⛔ ${artViewsSummary?.harvester_friction_429_events || 0} 429
+      </div>
+      <button onclick="refreshBotIntelligence()" style="background: #333; color: #888; border: 1px solid #555; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 11px; white-space: nowrap;">🔄 Refresh</button>
+    </div>
+  </div>
   
   <!-- Risk Summary Pills -->
   <div class="pulse" style="margin-bottom: 15px;">
     <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-      <span class="value" style="color: #fff;">🟢 ${botIntelligence?.verified?.length || 0}</span>
+      <span class="value" style="color: #fff;">🟢 ${botIntelligence?.stats?.verified_bots ?? (botIntelligence?.verified?.length || 0)}</span>
       <span class="label" style="color: #a7f3d0;">Verified Bots <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
       <div class="tooltip">Confirmed search engine bots (Googlebot, Bingbot, etc). Good traffic - they index your art for image search!</div>
     </div>
@@ -1730,7 +1731,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         return suspects.length > 0 ? Math.max(0, frictionManagedCount) : Math.max(0, (botIntelligence?.stats?.risk4 || 0) - blockRecommendedCount);
       })()}</span>
       <span class="label" style="color: #f5d0fe;">Friction-Managed <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #f5d0fe;">i</span></span>
-      <div class="tooltip"><strong>Friction-managed IPs (cumulative, Level 4).</strong> Total count of unique IPs classified as automated extractors over time. These clients are automatically slowed (650-1600ms delay) or rate-limited (429 at ≥40 unique images/min) by the image proxy. See <em>🧊 Harvester Friction</em> for today's slowed requests.</div>
+      <div class="tooltip"><strong>Friction-managed IPs (cumulative, Level 4).</strong> Total count of unique IPs classified as automated extractors over time. These clients are automatically slowed (650-1600ms delay) or rate-limited (429 at ≥40 unique images/min) by the image proxy. See <em>Protected (selected period)</em> for recent friction event volume.</div>
     </div>
     ${(() => {
       const suspects = (botIntelligence?.suspects || []).filter(s => s && s.status !== 'blocked');
@@ -1738,7 +1739,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       return `<div class="pulse-stat" style="background: linear-gradient(135deg, #78350f 0%, #92400e 100%);">
         <span class="value" style="color: #fff;">🟤 ${count}</span>
         <span class="label" style="color: #fde68a;">Block Recommended <span class="info-icon" style="background: rgba(255,255,255,0.16); color: #fde68a;">i</span></span>
-        <div class="tooltip"><strong>Level 5 governance signal (UI-only).</strong> K4 Bad Actor Day: scraper persists after friction and generates <strong>≥10 429s/day</strong> OR shows sustained high-rate image pulls. Consider <em>Force Block</em> if it persists and is clearly non-beneficial traffic.</div>
+        <div class="tooltip"><strong>Level 5 governance signal (UI-only).</strong> K4 Bad Actor Day: scraper persists after friction and generates <strong>≥10 429s/day</strong>, sustained high-rate image pulls (≥20 unique/min), delay bursts (≥40 in 10min), or <strong>≥200 requests over 3+ days</strong> at Level 4. Consider <em>Force Block</em> if clearly non-beneficial traffic.</div>
       </div>`;
     })()}
     <div class="pulse-stat" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
@@ -1752,9 +1753,13 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <!-- Verified Search Bots (Good!) -->
     <div class="section" style="border: 1px solid #10b98133;">
       <h3 style="color: #10b981;">🟢 Verified Search Bots</h3>
-      <p style="color: #888; font-size: 10px; margin: -5px 0 10px 0;">Search engines indexing your art for Google/Bing Images!</p>
+      <p style="color: #888; font-size: 10px; margin: -5px 0 10px 0;">Search engines indexing your art for Google/Bing Images!${(() => {
+        const total = botIntelligence?.stats?.verified_bots || 0;
+        const shown = (botIntelligence?.verified || []).length;
+        return total > shown && shown > 0 ? ` (Showing top ${shown} of ${total})` : '';
+      })()}</p>
       ${(botIntelligence?.verified || []).length === 0 ? '<p style="color:#666">No verified bots detected yet</p>' : 
-      '<div style="max-height: 300px; overflow-y: auto;">' +
+      '<div style="max-height: 400px; overflow-y: auto;">' +
         (botIntelligence?.verified || []).map(v => {
           const botIcons = {
             'googlebot': '🔍',
@@ -1793,8 +1798,11 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <!-- Suspected automation (governance view) -->
     <div class="section">
       <h3>🧭 Traffic Governance</h3>
-      <p style="color: #888; font-size: 10px; margin: -5px 0 10px 0;">Most automated traffic is mitigated automatically. Manual blocking should be reserved for persistent abuse.</p>
-      <div style="color:#666; font-size: 10px; margin: -6px 0 10px 0;">Protected (selected period): ⏳ ${artViewsSummary?.harvester_friction_delay_events || 0} delayed · ⛔ ${artViewsSummary?.harvester_friction_429_events || 0} 429</div>
+      <p style="color: #888; font-size: 10px; margin: -5px 0 10px 0;">Most automated traffic is mitigated automatically. Manual blocking should be reserved for persistent abuse.${(() => {
+        const total = botIntelligence?.stats?.total || 0;
+        const shown = (botIntelligence?.suspects || []).filter(s => s && s.status !== 'blocked').length;
+        return total > shown && shown > 0 ? ` (Showing top ${shown} of ${total})` : '';
+      })()}</p>
       ${(botIntelligence?.suspects || []).length === 0 ? '<p style="color:#666">No suspicious IPs detected yet</p>' : `
       <div style="max-height: 400px; overflow-y: auto;">
         <table style="width: 100%; font-size: 11px;">
@@ -1889,27 +1897,6 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       `}
     </div>
 
-    <!-- Harvester Friction -->
-    <div class="section">
-      <div class="section-header">
-        <h3>🧊 Harvester Friction</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Selective friction engaged on image requests (delay or 429). This is your "X extraction attempts slowed" metric for the selected period.</div></span>
-      </div>
-      <div style="display:flex; flex-direction:column; gap: 10px;">
-        <div style="display:flex; align-items:baseline; justify-content:space-between; gap: 10px;">
-          <span style="color:#cbd5e1; font-weight:700;">Extraction attempts slowed</span>
-          <span style="color:#4a9eff; font-weight:900; font-size: 26px;">${artViewsSummary?.harvester_friction_events || 0}</span>
-        </div>
-        <div style="display:flex; align-items:center; justify-content:space-between; gap: 10px; padding-top: 4px; border-top: 1px solid #333;">
-          <span style="color:#9ca3af;">⏳ Delayed</span>
-          <span style="color:#e5e7eb; font-weight:800;">${artViewsSummary?.harvester_friction_delay_events || 0}</span>
-        </div>
-        <div style="display:flex; align-items:center; justify-content:space-between; gap: 10px;">
-          <span style="color:#9ca3af;">⛔ 429'd</span>
-          <span style="color:#e5e7eb; font-weight:800;">${artViewsSummary?.harvester_friction_429_events || 0}</span>
-        </div>
-      </div>
-    </div>
   </div>
   </div>
   ` : ''}
@@ -1918,7 +1905,6 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     Generated ${new Date().toISOString()} — ${periodLabel}
   </p>
 
-  ${isSingleDay ? `
   <script>
     // Art Views filter state - all on by default
     const artFilters = { image_page: true, xl_zoom: true, gallery: true, external_image: true };
@@ -1945,14 +1931,25 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       });
     }
 
+    // Admin auth — embedded server-side (page is already auth-protected).
+    // fetch() doesn't reliably forward cached Basic Auth credentials,
+    // so we pass the header explicitly on all admin POST calls.
+    const _k4auth = '${(authHeader || '').replace(/'/g, "\\'")}';
+
+    function k4AdminFetch(url, opts) {
+      opts = opts || {};
+      opts.headers = Object.assign({ 'Authorization': _k4auth }, opts.headers || {});
+      opts.credentials = 'include';
+      return fetch(url, opts);
+    }
+
     // Bot Intelligence functions
     async function blockIP(ipHash) {
-      if (!confirm('FORCE BLOCK IP: ' + ipHash + '?\n\nNote: Most automated traffic is already slowed/rate-limited automatically. Use manual blocking only for persistent abuse.\n\nThis takes effect immediately.')) return;
+      if (!confirm('FORCE BLOCK IP: ' + ipHash + '?\\n\\nNote: Most automated traffic is already slowed/rate-limited automatically. Use manual blocking only for persistent abuse.\\n\\nThis takes effect immediately.')) return;
       
       try {
-        const res = await fetch('/__k4stats/block', {
+        const res = await k4AdminFetch('/__k4stats/block', {
           method: 'POST',
-          credentials: 'include',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ ip_hash: ipHash, reason: 'Force block from governance dashboard' })
         });
@@ -1961,8 +1958,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           alert('IP blocked successfully');
           location.reload();
         } else {
-          const data = await res.json();
-          alert('Error: ' + (data.error || 'Unknown error'));
+          const data = await res.json().catch(() => ({}));
+          alert('Error: ' + (data.error || 'HTTP ' + res.status));
         }
       } catch (e) {
         alert('Error: ' + e.message);
@@ -1973,9 +1970,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       if (!confirm('Unblock IP: ' + ipHash + '?')) return;
       
       try {
-        const res = await fetch('/__k4stats/unblock', {
+        const res = await k4AdminFetch('/__k4stats/unblock', {
           method: 'POST',
-          credentials: 'include',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ ip_hash: ipHash })
         });
@@ -1984,8 +1980,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           alert('IP unblocked successfully');
           location.reload();
         } else {
-          const data = await res.json();
-          alert('Error: ' + (data.error || 'Unknown error'));
+          const data = await res.json().catch(() => ({}));
+          alert('Error: ' + (data.error || 'HTTP ' + res.status));
         }
       } catch (e) {
         alert('Error: ' + e.message);
@@ -1994,9 +1990,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
 
     async function refreshBotIntelligence() {
       try {
-        const res = await fetch('/__k4stats/refresh-bots', {
+        const res = await k4AdminFetch('/__k4stats/refresh-bots', {
           method: 'POST',
-          credentials: 'include',
           headers: { 'Content-Type': 'application/json' }
         });
         
@@ -2005,15 +2000,14 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           alert('Bot intelligence refreshed. Updated ' + (data.updated || 0) + ' IPs.');
           location.reload();
         } else {
-          const data = await res.json();
-          alert('Error: ' + (data.error || 'Unknown error'));
+          const data = await res.json().catch(() => ({}));
+          alert('Error: ' + (data.error || 'HTTP ' + res.status));
         }
       } catch (e) {
         alert('Error: ' + e.message);
       }
     }
   </script>
-  ` : ''}
 
   <script>
   function k4OpenEdgeEventList() {

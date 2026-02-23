@@ -4,7 +4,7 @@
 import { writeFile, mkdir, readdir, stat, readFile } from 'node:fs/promises';
 import { execSync } from 'node:child_process';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,6 +12,27 @@ const __dirname = path.dirname(__filename);
 const SITE_URL = 'https://www.k4studios.com';
 const PAGES_DIR = path.resolve(__dirname, '..', 'src', 'pages');
 const SRC_DIR = path.resolve(__dirname, '..', 'src');
+const REPO_ROOT = path.resolve(__dirname, '..');
+
+const GHOST_IMAGE_ID = 'i-k4studios';
+const IMAGE_ID_REGEX = /^i-[A-Za-z0-9]+$/;
+
+function getGitLastModifiedIso(absoluteFilePath) {
+  try {
+    const rel = path.relative(REPO_ROOT, absoluteFilePath).replace(/\\/g, '/');
+    const out = execSync(`git log -1 --format=%cI -- "${rel}"`, {
+      cwd: REPO_ROOT,
+      stdio: ['ignore', 'pipe', 'ignore']
+    }).toString().trim();
+    return out || null;
+  } catch {
+    return null;
+  }
+}
+
+function getStableLastmodIso(absoluteFilePath, fallbackMtimeIso) {
+  return getGitLastModifiedIso(absoluteFilePath) || fallbackMtimeIso;
+}
 
 // Paths to exclude from sitemap (for static pages)
 const EXCLUDE_PATTERNS = [
@@ -109,10 +130,11 @@ async function walkDir(dir, baseDir = dir) {
       
       // Get file stats for lastmod
       const stats = await stat(fullPath);
+      const lastmod = getStableLastmodIso(fullPath, stats.mtime.toISOString());
       
       entries.push({
         loc: SITE_URL + urlPath,
-        lastmod: stats.mtime.toISOString(),
+        lastmod,
         changefreq: getChangeFreq(urlPath),
         priority: getPriority(urlPath),
       });
@@ -181,6 +203,8 @@ async function loadDynamicRoutes() {
     
     for (const { fullPath, relativePath } of dynamicRouteFiles) {
       const astroContent = await readFile(fullPath, 'utf8');
+      const astroStats = await stat(fullPath);
+      const astroLastmodIso = getStableLastmodIso(fullPath, astroStats.mtime.toISOString());
       
       // Parse the import to find the .mjs data file
       const dataFilePath = parseGalleryDataImport(astroContent, fullPath);
@@ -191,26 +215,45 @@ async function loadDynamicRoutes() {
       }
       
       // Check if the data file exists
+      let dataStats;
       try {
-        await stat(dataFilePath);
+        dataStats = await stat(dataFilePath);
       } catch {
         console.warn(`  Warning: Data file not found: ${dataFilePath}`);
         continue;
       }
-      
-      // Read the data file and extract IDs
-      const dataContent = await readFile(dataFilePath, 'utf8');
-      
-      const idRegex = /"id":\s*"([^"]+)"/g;
-      let idMatch;
-      const imageIds = [];
-      
-      while ((idMatch = idRegex.exec(dataContent)) !== null) {
-        imageIds.push(idMatch[1]);
+      const dataLastmodIso = getStableLastmodIso(dataFilePath, dataStats.mtime.toISOString());
+
+      // Load the data module and extract only *visible* image IDs.
+      // Regex-scraping IDs is dangerous (it picks up non-image IDs and hidden/ghost placeholders).
+      let galleryData;
+      try {
+        const mod = await import(pathToFileURL(dataFilePath).href);
+        galleryData = mod?.galleryData;
+      } catch (err) {
+        console.warn(`  Warning: Failed to import galleryData from: ${dataFilePath}`);
+        console.warn(`           ${err?.message || err}`);
+        continue;
       }
-      
+
+      if (!Array.isArray(galleryData)) {
+        console.warn(`  Warning: galleryData is not an array in: ${dataFilePath}`);
+        continue;
+      }
+
+      const imageIds = Array.from(
+        new Set(
+          galleryData
+            .filter((img) => img && typeof img.id === 'string')
+            .filter((img) => img.id !== GHOST_IMAGE_ID)
+            .filter((img) => img.visibility !== 'hidden' && img.visibility !== 'hide' && img.visibility !== 'ghost')
+            .map((img) => img.id)
+            .filter((id) => IMAGE_ID_REGEX.test(id))
+        )
+      );
+
       if (imageIds.length === 0) {
-        console.log(`  Skipping ${relativePath} - no IDs found in data file`);
+        console.log(`  Skipping ${relativePath} - no visible image IDs found in data file`);
         continue;
       }
       
@@ -222,12 +265,14 @@ async function loadDynamicRoutes() {
       console.log(`  ${relativePath}: ${imageIds.length} images`);
       
       // Create sitemap entries for each image
-      const now = new Date().toISOString();
+      const astroMs = Date.parse(astroLastmodIso) || astroStats.mtimeMs;
+      const dataMs = Date.parse(dataLastmodIso) || dataStats.mtimeMs;
+      const lastmod = new Date(Math.max(astroMs, dataMs)).toISOString();
       for (const imageId of imageIds) {
         const urlPath = `${urlBase}/${imageId}`;
         entries.push({
           loc: SITE_URL + urlPath,
-          lastmod: now,
+          lastmod,
           changefreq: 'monthly',
           priority: getPriority(urlBase),
         });

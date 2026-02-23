@@ -197,40 +197,53 @@ async function fetchJSONWithCache(ctx, url, memGet, memSet) {
 
   // in-memory cache
   const mem = memGet();
-  if (mem.data && now - mem.time < MANIFEST_CACHE_TTL * 1000) {
-    return mem.data;
-  }
+  const hasMemData = Boolean(mem?.data);
+  const isMemFresh = hasMemData && (now - mem.time < MANIFEST_CACHE_TTL * 1000);
+  if (isMemFresh) return mem.data;
 
-  // edge cache
-  const cache = caches.default;
-  const cacheKey = new Request(url);
-  let response = await cache.match(cacheKey);
+  // Keep stale memory data as a safety net.
+  // Rationale: transient failures fetching/parsing JSON during deploy/cold cache
+  // should not cause mass 404/410/500 signals to crawlers.
+  const staleMemData = hasMemData ? mem.data : null;
 
-  if (!response) {
-    response = await fetch(url, {
-      headers: {
-        Accept: "application/json",
-        "User-Agent": "K4-Image-Proxy-Worker/1.0"
+  try {
+    // edge cache
+    const cache = caches.default;
+    const cacheKey = new Request(url);
+    let response = await cache.match(cacheKey);
+
+    if (!response) {
+      response = await fetch(url, {
+        headers: {
+          Accept: "application/json",
+          "User-Agent": "K4-Image-Proxy-Worker/1.0"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`JSON fetch failed (${url}): ${response.status}`);
       }
-    });
 
-    if (!response.ok) {
-      throw new Error(`JSON fetch failed (${url}): ${response.status}`);
+      const responseToCache = new Response(response.clone().body, {
+        headers: {
+          "Content-Type": "application/json",
+          "Cache-Control": `public, max-age=${MANIFEST_CACHE_TTL}`
+        }
+      });
+
+      ctx.waitUntil(cache.put(cacheKey, responseToCache));
     }
 
-    const responseToCache = new Response(response.clone().body, {
-      headers: {
-        "Content-Type": "application/json",
-        "Cache-Control": `public, max-age=${MANIFEST_CACHE_TTL}`
-      }
-    });
-
-    ctx.waitUntil(cache.put(cacheKey, responseToCache));
+    const json = await response.json();
+    memSet(json, now);
+    return json;
+  } catch (err) {
+    if (staleMemData) {
+      console.error('JSON cache fallback (stale mem):', url, err?.message || err);
+      return staleMemData;
+    }
+    throw err;
   }
-
-  const json = await response.json();
-  memSet(json, now);
-  return json;
 }
 
 function getManifest(ctx) {
@@ -564,7 +577,7 @@ async function handleImageRequest(request, ctx, env) {
       headers: {
         "Content-Type": "image/gif",
         "Cache-Control": "public, max-age=31536000, immutable",
-        "X-Robots-Tag": "noai, noimageai",
+        "X-Robots-Tag": "noindex, nofollow, noimageindex, noai, noimageai",
         "X-Ghost-Image": "true"
       }
     });

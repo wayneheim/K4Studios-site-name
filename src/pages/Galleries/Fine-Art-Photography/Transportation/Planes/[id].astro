@@ -14,7 +14,7 @@ import { galleryData } from '@/data/Galleries/Fine-Art-Photography/Transportatio
 // Generate static paths for all visible images at build time
 export async function getStaticPaths() {
   return galleryData
-    .filter(img => img.visibility !== 'hidden' && img.visibility !== 'hide')
+    .filter(img => img.visibility !== 'hidden' && img.visibility !== 'hide' && img.visibility !== 'ghost' && img.id !== 'i-k4studios')
     .map(img => ({ params: { id: img.id } }));
 }
 

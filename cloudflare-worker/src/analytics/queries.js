@@ -14,8 +14,6 @@
 // 1 cookie (k4_vid) = 1 human. IP addresses are irrelevant.
 // ═══════════════════════════════════════════════════════════════════════════
 
-import { updateBotIntelligence as refreshBotIntelligence } from './storage.js';
-
 // Internal synthetic agent (cache warmer) should never count in analytics.
 // We exclude it at ingestion in the image proxy, but also exclude it at query-time
 // so any historical rows don’t pollute dashboards.
@@ -1894,7 +1892,7 @@ export async function getDailyTrend(env, filters) {
 
 export async function getSessionMetrics(env, filters) {
   try {
-    const { dateClause } = filters;
+    const { dateClause, galleryClause, ipClause, botClause, chardonClause } = filters;
 
     // dateClause is built in dashboard/route.js and may include columns like ip/city/referer.
     // Qualify those to the classified_events alias so JOIN queries don't become ambiguous.
@@ -1902,12 +1900,20 @@ export async function getSessionMetrics(env, filters) {
       .replace(/\bts\b/g, 'e.ts')
       .replace(/\bip\b/g, 'e.ip')
       .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bgallery_id\b/g, 'e.gallery_id')
       .replace(/\bcountry\b/g, 'e.country')
       .replace(/\bregion\b/g, 'e.region')
       .replace(/\breferer\b/g, 'e.referer')
-      .replace(/\bua\b/g, 'e.ua');
+      .replace(/\bua\b/g, 'e.ua')
+      .replace(/\bis_bot\b/g, 'COALESCE(e.is_bot, 0)');
 
-    const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
+    const where = [
+      qualify(dateClause) || 'e.ts > datetime("now", "-1 day")',
+      qualify(galleryClause),
+      qualify(ipClause),
+      qualify(botClause),
+      qualify(chardonClause),
+    ].filter(Boolean).join('\n        ');
 
     // Session key fallback: if session_id is missing, bucket by visitor+Eastern day.
     // This prevents Pulse metrics from collapsing to 0 when some beacons omit session_id.
@@ -2019,6 +2025,7 @@ export async function getSessionMetrics(env, filters) {
         FROM human_population hp
         JOIN classified_events e ON e.visitor_id = hp.visitor_id
         WHERE ${where}
+          AND e.source = 'js'
         GROUP BY hp.visitor_id, device
       )
       SELECT
@@ -2410,12 +2417,14 @@ export async function getExitAnalysis(env, filters) {
 
 export async function getEdgeEvents(env, filters) {
   try {
-    const { yesterday, days } = filters || {};
+    const { dateClause, yesterday, days } = filters || {};
     const d = Math.max(1, Math.min(parseInt(days || '1', 10) || 1, 31));
 
-    const dateWhere = yesterday
-      ? `date(e.ts, '-5 hours') = date('now', '-5 hours', '-1 day')`
-      : `e.ts > datetime('now', '-${d} day')`;
+    const dateWhere = dateClause
+      ? `${String(dateClause).replace(/\bts\b/g, 'e.ts')}`
+      : (yesterday
+        ? `date(e.ts, '-5 hours') = date('now', '-5 hours', '-1 day')`
+        : `e.ts > datetime('now', '-${d} day')`);
 
     const eventsQuery = `
       SELECT
@@ -2457,33 +2466,18 @@ export async function getEdgeEvents(env, filters) {
 }
 
 export async function getBotIntelligence(env) {
-  let botIntelligence = {
+  const botIntelligence = {
     suspects: [],
     blocked: [],
     verified: [],
-    stats: { total: 0, risk3: 0, risk4: 0, blocked: 0, verified: 0 }
+    stats: { total: 0, risk3: 0, risk4: 0, verified: 0, verified_bots: 0 },
   };
 
   try {
-    // Keep this cheap on normal dashboard loads.
-    // Only recompute if we've never computed, or if the last refresh is stale.
-    try {
-      const lastUpdate = await env.DB.prepare(
-        `
-          SELECT
-            MAX(updated_at) as last_update,
-            (JULIANDAY('now') - JULIANDAY(MAX(updated_at))) * 24 * 60 as minutes_old
-          FROM suspected_bots
-        `
-      ).first();
-      const minutesOld = Number(lastUpdate?.minutes_old);
-      if (!lastUpdate?.last_update || !Number.isFinite(minutesOld) || minutesOld > 15) {
-        await refreshBotIntelligence(env);
-      }
-    } catch {
-      // If suspected_bots doesn't exist (or parse issues), don't break dashboard.
-    }
+    const SUSPECTS_LIMIT = 500;
+    const VERIFIED_LIMIT = 20;
 
+    // Primary suspects list (excludes verified bots; blocked are still included in the table)
     const suspectsQuery = `
       SELECT
         ip_hash,
@@ -2502,24 +2496,21 @@ export async function getBotIntelligence(env) {
         country,
         status
       FROM suspected_bots
-      WHERE risk_level >= 2
+      WHERE is_verified_bot = 0
+        AND risk_level >= 2
+        AND status != 'blocked'
       ORDER BY risk_level DESC, risk_score DESC, total_requests DESC
-      LIMIT 50
+      LIMIT ${SUSPECTS_LIMIT}
     `;
-    let suspectsResult;
-    try {
-      suspectsResult = await env.DB.prepare(suspectsQuery).all();
-      botIntelligence.suspects = suspectsResult.results || [];
-    } catch {
-      botIntelligence.suspects = [];
-    }
 
-    // Fallback: if suspected_bots is empty/unavailable, derive a basic IP watchlist directly.
-    // This prevents the UI from rendering `undefined` values and keeps blocking usable.
+    const suspectsResult = await env.DB.prepare(suspectsQuery).all();
+    botIntelligence.suspects = suspectsResult?.results || [];
+
+    // Fallback if table is empty/corrupt (keeps UI usable)
     if (
       !Array.isArray(botIntelligence.suspects) ||
       botIntelligence.suspects.length === 0 ||
-      botIntelligence.suspects.some(s => !s?.ip_hash)
+      botIntelligence.suspects.some((s) => !s?.ip_hash)
     ) {
       const fallbackQuery = `
         WITH base AS (
@@ -2551,7 +2542,7 @@ export async function getBotIntelligence(env) {
       `;
 
       const fb = await env.DB.prepare(fallbackQuery).all();
-      botIntelligence.suspects = (fb.results || []).map(r => ({
+      botIntelligence.suspects = (fb?.results || []).map((r) => ({
         ip_hash: r.ip_hash,
         risk_level: 2,
         risk_score: r.is_flagged_bot ? 2 : 0,
@@ -2566,75 +2557,167 @@ export async function getBotIntelligence(env) {
         is_verified_bot: 0,
         bot_name: null,
         country: r.country,
-        status: 'watching'
+        status: 'watching',
       }));
     }
 
-    // Enrich suspects with friction stats (last 24h) for isLevel5BlockRecommended
+    // Totals for pills (not limited by the top-N table)
+    try {
+      const totalsQuery = `
+        SELECT
+          COUNT(*) AS total,
+          SUM(CASE WHEN risk_level = 3 THEN 1 ELSE 0 END) AS risk3,
+          SUM(CASE WHEN risk_level >= 4 THEN 1 ELSE 0 END) AS risk4
+        FROM suspected_bots
+        WHERE is_verified_bot = 0
+          AND risk_level >= 2
+          AND status != 'blocked'
+      `;
+      const totals = await env.DB.prepare(totalsQuery).first();
+      botIntelligence.stats.total = totals?.total || 0;
+      botIntelligence.stats.risk3 = totals?.risk3 || 0;
+      botIntelligence.stats.risk4 = totals?.risk4 || 0;
+    } catch (e) {
+      console.log('Bot intelligence totals query failed:', e.message);
+    }
+
+    // Enrich suspects with friction/velocity metrics for the dashboard recommendation.
     try {
       const frictionStatsQuery = `
-        WITH friction AS (
+        WITH suspects AS (
+          SELECT ip_hash
+          FROM suspected_bots
+          WHERE risk_level >= 2
+            AND is_verified_bot = 0
+            AND status != 'blocked'
+          ORDER BY risk_level DESC, risk_score DESC, total_requests DESC
+          LIMIT ${SUSPECTS_LIMIT}
+        ),
+
+        friction_429_by_day AS (
           SELECT
             ip_hash,
-            SUM(CASE WHEN inferred_from = '429' THEN 1 ELSE 0 END) as friction_429_24h,
-            SUM(CASE WHEN inferred_from = 'delay' THEN 1 ELSE 0 END) as delay_count
+            date(ts, '-5 hours') AS et_day,
+            COUNT(*) AS count_429
+          FROM raw_events
+          WHERE event_type = 'harvester_friction'
+            AND inferred_from = '429'
+            AND ts >= datetime('now', '-7 days')
+            AND ip_hash IN (SELECT ip_hash FROM suspects)
+          GROUP BY ip_hash, et_day
+        ),
+
+        friction_429_max AS (
+          SELECT
+            ip_hash,
+            MAX(count_429) AS friction_429_max_day_7d
+          FROM friction_429_by_day
+          GROUP BY ip_hash
+        ),
+
+        friction_24h AS (
+          SELECT
+            ip_hash,
+            SUM(CASE WHEN inferred_from = '429' THEN 1 ELSE 0 END) AS friction_429_24h,
+            SUM(CASE WHEN inferred_from = 'delay' THEN 1 ELSE 0 END) AS friction_delay_24h
           FROM raw_events
           WHERE event_type = 'harvester_friction'
             AND ts > datetime('now', '-24 hours')
+            AND ip_hash IN (SELECT ip_hash FROM suspects)
           GROUP BY ip_hash
         ),
+
         velocity AS (
           SELECT
             ip_hash,
-            MAX(minute_uniques) as peak_unique_images_per_minute_24h
+            MAX(unique_images_per_minute) AS peak_unique_images_per_minute_24h
           FROM (
             SELECT
               ip_hash,
-              COUNT(DISTINCT target_id) as minute_uniques
+              strftime('%Y-%m-%d %H:%M', ts) AS minute,
+              COUNT(DISTINCT image_id) AS unique_images_per_minute
             FROM raw_events
-            WHERE event_type IN ('image_page', 'external_image_page', 'chapter_exposure', 'harvester_friction')
+            WHERE image_id IS NOT NULL
               AND ts > datetime('now', '-24 hours')
-            GROUP BY ip_hash, strftime('%Y-%m-%d %H:%M', ts)
+              AND ip_hash IN (SELECT ip_hash FROM suspects)
+            GROUP BY ip_hash, minute
           )
           GROUP BY ip_hash
         ),
-        delay_burst AS (
+
+        delay_burst_ip AS (
           SELECT
             ip_hash,
-            MAX(window_delays) as max_friction_delay_10m_24h
+            MAX(window_delays) AS max_friction_delay_10m_24h
           FROM (
             SELECT
               ip_hash,
-              COUNT(*) as window_delays
+              (strftime('%s', ts) / 600) AS ten_min_bucket,
+              SUM(CASE WHEN event_type = 'harvester_friction' AND inferred_from = 'delay' THEN 1 ELSE 0 END) AS window_delays
             FROM raw_events
-            WHERE event_type = 'harvester_friction'
-              AND inferred_from = 'delay'
-              AND ts > datetime('now', '-24 hours')
-            GROUP BY ip_hash, strftime('%Y-%m-%d %H:', ts) || CAST((CAST(strftime('%M', ts) AS INTEGER) / 10) AS TEXT)
+            WHERE ts > datetime('now', '-24 hours')
+              AND ip_hash IN (SELECT ip_hash FROM suspects)
+            GROUP BY ip_hash, ten_min_bucket
           )
           GROUP BY ip_hash
+        ),
+
+        ip_asn AS (
+          SELECT
+            ip_hash,
+            MAX(cf_asn) AS cf_asn_last24h
+          FROM raw_events
+          WHERE ts > datetime('now', '-24 hours')
+            AND cf_asn IS NOT NULL
+            AND ip_hash IN (SELECT ip_hash FROM suspects)
+          GROUP BY ip_hash
+        ),
+
+        delay_burst_asn AS (
+          SELECT
+            cf_asn,
+            MAX(window_delays) AS max_friction_delay_10m_asn_24h
+          FROM (
+            SELECT
+              cf_asn,
+              (strftime('%s', ts) / 600) AS ten_min_bucket,
+              SUM(CASE WHEN event_type = 'harvester_friction' AND inferred_from = 'delay' THEN 1 ELSE 0 END) AS window_delays
+            FROM raw_events
+            WHERE ts > datetime('now', '-24 hours')
+              AND cf_asn IS NOT NULL
+              AND ip_hash IN (SELECT ip_hash FROM suspects)
+            GROUP BY cf_asn, ten_min_bucket
+          )
+          GROUP BY cf_asn
         )
+
         SELECT
-          f.ip_hash,
-          COALESCE(f.friction_429_24h, 0) as friction_429_24h,
-          COALESCE(v.peak_unique_images_per_minute_24h, 0) as peak_unique_images_per_minute_24h,
-          COALESCE(d.max_friction_delay_10m_24h, 0) as max_friction_delay_10m_24h
-        FROM friction f
-        LEFT JOIN velocity v ON v.ip_hash = f.ip_hash
-        LEFT JOIN delay_burst d ON d.ip_hash = f.ip_hash
+          s.ip_hash,
+          COALESCE(f24.friction_429_24h, 0) AS friction_429_24h,
+          COALESCE(f24.friction_delay_24h, 0) AS friction_delay_24h,
+          COALESCE(fm.friction_429_max_day_7d, 0) AS friction_429_max_day_7d,
+          COALESCE(v.peak_unique_images_per_minute_24h, 0) AS peak_unique_images_per_minute_24h,
+          COALESCE(dip.max_friction_delay_10m_24h, 0) AS max_friction_delay_10m_24h,
+          COALESCE(dasn.max_friction_delay_10m_asn_24h, 0) AS max_friction_delay_10m_asn_24h
+        FROM suspects s
+        LEFT JOIN friction_24h f24 ON f24.ip_hash = s.ip_hash
+        LEFT JOIN friction_429_max fm ON fm.ip_hash = s.ip_hash
+        LEFT JOIN velocity v ON v.ip_hash = s.ip_hash
+        LEFT JOIN delay_burst_ip dip ON dip.ip_hash = s.ip_hash
+        LEFT JOIN ip_asn ia ON ia.ip_hash = s.ip_hash
+        LEFT JOIN delay_burst_asn dasn ON dasn.cf_asn = ia.cf_asn_last24h
       `;
-      const frictionStats = await env.DB.prepare(frictionStatsQuery).all();
-      const frictionMap = new Map();
-      for (const row of (frictionStats.results || [])) {
-        frictionMap.set(row.ip_hash, row);
-      }
+
+      const frictionRows = (await env.DB.prepare(frictionStatsQuery).all())?.results || [];
+      const frictionMap = new Map(frictionRows.map((r) => [r.ip_hash, r]));
       for (const suspect of botIntelligence.suspects) {
-        const fs = frictionMap.get(suspect.ip_hash);
-        if (fs) {
-          suspect.friction_429_24h = fs.friction_429_24h;
-          suspect.peak_unique_images_per_minute_24h = fs.peak_unique_images_per_minute_24h;
-          suspect.max_friction_delay_10m_24h = fs.max_friction_delay_10m_24h;
-        }
+        const f = frictionMap.get(suspect.ip_hash);
+        suspect.friction_429_24h = f?.friction_429_24h || 0;
+        suspect.friction_delay_24h = f?.friction_delay_24h || 0;
+        suspect.friction_429_max_day_7d = f?.friction_429_max_day_7d || 0;
+        suspect.peak_unique_images_per_minute_24h = f?.peak_unique_images_per_minute_24h || 0;
+        suspect.max_friction_delay_10m_24h = f?.max_friction_delay_10m_24h || 0;
+        suspect.max_friction_delay_10m_asn_24h = f?.max_friction_delay_10m_asn_24h || 0;
       }
     } catch (e) {
       console.log('Friction stats enrichment failed:', e.message);
@@ -2666,14 +2749,26 @@ export async function getBotIntelligence(env) {
       ) pg ON sb.ip_hash = pg.ip_hash
       WHERE sb.is_verified_bot = 1 AND sb.status = 'verified'
       ORDER BY sb.total_requests DESC
-      LIMIT 20
+      LIMIT ${VERIFIED_LIMIT}
     `;
     const verifiedResult = await env.DB.prepare(verifiedQuery).all();
-    botIntelligence.verified = verifiedResult.results || [];
+    botIntelligence.verified = verifiedResult?.results || [];
     botIntelligence.stats.verified = botIntelligence.verified.reduce(
       (sum, v) => sum + (v.total_requests || 0),
       0
     );
+
+    try {
+      const verifiedTotalQuery = `
+        SELECT COUNT(*) AS verified_bots
+        FROM suspected_bots
+        WHERE is_verified_bot = 1 AND status = 'verified'
+      `;
+      const vt = await env.DB.prepare(verifiedTotalQuery).first();
+      botIntelligence.stats.verified_bots = vt?.verified_bots || 0;
+    } catch (e) {
+      console.log('Verified bots total query failed:', e.message);
+    }
 
     const blockedQuery = `
       SELECT
@@ -2692,15 +2787,8 @@ export async function getBotIntelligence(env) {
       LIMIT 50
     `;
     const blockedResult = await env.DB.prepare(blockedQuery).all();
-    botIntelligence.blocked = blockedResult.results || [];
+    botIntelligence.blocked = blockedResult?.results || [];
 
-    for (const s of botIntelligence.suspects) {
-      if (s.status !== 'blocked') {
-        botIntelligence.stats.total++;
-        if (s.risk_level === 3) botIntelligence.stats.risk3++;
-        if (s.risk_level >= 4) botIntelligence.stats.risk4++;
-      }
-    }
   } catch (e) {
     console.log('Bot intelligence query failed:', e.message);
   }

@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "astro dev --host",
     "dev:netlify": "netlify dev",
-    "build": "npm run gen:sitemap && npm run gen:master-data && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && astro build && node scripts/submit-indexnow.mjs && node scripts/warm-image-cache.mjs && npx cpx \"_redirects\" dist/",
-    "build:fast": "npm run gen:sitemap && npm run gen:master-data && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && astro build && npx cpx \"_redirects\" dist/",
+    "build": "npm run gen:sitemap && npm run gen:image-sitemaps && npm run gen:master-data && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && astro build && node scripts/submit-indexnow.mjs && node scripts/warm-image-cache.mjs && npx cpx \"_redirects\" dist/",
+    "build:fast": "npm run gen:sitemap && npm run gen:image-sitemaps && npm run gen:master-data && npm run gen:prefetch-map && npm run gen:image-id-map && npm run gen:sitemap:matches && npm run gen:story-slider && npm run gen:image-manifest && npm run copy:pricing && astro build && npx cpx \"_redirects\" dist/",
     "warm-cache": "node scripts/warm-image-cache.mjs",
     "warm-cache:force": "node scripts/warm-image-cache.mjs --force",
     "purge-gallery": "node scripts/purge-gallery.mjs",
@@ -18,6 +18,7 @@
     "gen:prefetch-map": "node scripts/generate-gallery-prefetch-map.cjs",
     "gen:image-id-map": "node scripts/generate-image-id-map.cjs",
     "gen:sitemap": "node scripts/generate-sitemap-data.mjs",
+    "gen:image-sitemaps": "node scripts/generate-image-sitemaps.mjs",
     "gen:sitemap:matches": "node scripts/generate-sitemap-matches.mjs",
     "gen:story-slider": "node scripts/generate-story-slider-data.cjs",
     "populate-archive": "node scripts/populate-archive.cjs",

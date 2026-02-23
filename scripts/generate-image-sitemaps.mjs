@@ -2,7 +2,8 @@
 // This is the professional pattern for large sites - allows GSC tracking per section
 // Usage: node scripts/generate-image-sitemaps.mjs
 
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readFile, stat } from 'node:fs/promises';
+import { execSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -12,6 +13,47 @@ const __dirname = path.dirname(__filename);
 const SITE_URL = 'https://www.k4studios.com';
 const LICENSE_URL = 'https://www.k4studios.com/About/License';
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
+const REPO_ROOT = path.resolve(__dirname, '..');
+
+const GHOST_IMAGE_ID = 'i-k4studios';
+
+function getGitLastModifiedMs(absoluteFilePath) {
+  try {
+    const rel = path.relative(REPO_ROOT, absoluteFilePath).replace(/\\/g, '/');
+    const out = execSync(`git log -1 --format=%cI -- "${rel}"`, {
+      cwd: REPO_ROOT,
+      stdio: ['ignore', 'pipe', 'ignore']
+    }).toString().trim();
+    const ms = Date.parse(out);
+    return Number.isFinite(ms) ? ms : null;
+  } catch {
+    return null;
+  }
+}
+
+async function writeIfChanged(filePath, content) {
+  try {
+    const existing = await readFile(filePath, 'utf8');
+    if (existing === content) return false;
+  } catch {
+    // File doesn't exist yet.
+  }
+
+  await writeFile(filePath, content, 'utf8');
+  return true;
+}
+
+function isHiddenImage(image) {
+  const visibility = String(image?.visibility || '').toLowerCase().trim();
+  if (visibility === 'ghost' || visibility === 'hidden' || visibility === 'hide') return true;
+  if (image?.id === GHOST_IMAGE_ID) return true;
+
+  // Various flags used across data sets
+  if (image?.hidden === true) return true;
+  if (image?.show === false) return true;
+
+  return false;
+}
 
 /**
  * SECTION DEFINITIONS
@@ -350,8 +392,8 @@ function escapeXml(str) {
  * Generate <url> entry with nested <image:image> for a gallery image
  */
 function generateUrlEntry(image, urlBase) {
-  // Skip ghost/placeholder images
-  if (image.visibility === 'ghost' || image.id === 'i-k4studios') {
+  // Skip ghost/hidden/placeholder images
+  if (isHiddenImage(image)) {
     return null;
   }
 
@@ -431,10 +473,9 @@ function generateSitemapIndex(sitemaps) {
   const footer = `</sitemapindex>
 `;
 
-  const now = new Date().toISOString();
-  const entries = sitemaps.map(s => `  <sitemap>
+  const entries = sitemaps.map((s) => `  <sitemap>
     <loc>${SITE_URL}/${s.filename}</loc>
-    <lastmod>${now}</lastmod>
+    ${s.lastmod ? `<lastmod>${s.lastmod}</lastmod>` : ''}
   </sitemap>`);
 
   return header + entries.join('\n') + '\n' + footer;
@@ -446,11 +487,20 @@ function generateSitemapIndex(sitemaps) {
 async function processSection(section) {
   const entries = [];
   const galleryCounts = {};
+  let sectionLastmodMs = 0;
 
   for (const gallery of section.galleries) {
     const dataPath = path.resolve(__dirname, gallery.dataPath);
     
     try {
+      try {
+        const dataStats = await stat(dataPath);
+        const gitMs = getGitLastModifiedMs(dataPath);
+        sectionLastmodMs = Math.max(sectionLastmodMs, gitMs || dataStats.mtimeMs);
+      } catch {
+        // If the data file doesn't exist, the import will throw and we'll skip.
+      }
+
       const module = await import(`file://${dataPath}`);
       const galleryData = module.galleryData;
 
@@ -477,7 +527,7 @@ async function processSection(section) {
     }
   }
 
-  return { entries, galleryCounts };
+  return { entries, galleryCounts, sectionLastmodMs };
 }
 
 async function main() {
@@ -492,7 +542,7 @@ async function main() {
   for (const section of SECTIONS) {
     console.log(`📂 ${section.displayName} (${section.name})`);
     
-    const { entries, galleryCounts } = await processSection(section);
+    const { entries, galleryCounts, sectionLastmodMs } = await processSection(section);
     
     if (entries.length === 0) {
       console.log(`   ⏭️  Skipped (no valid images)\n`);
@@ -503,10 +553,12 @@ async function main() {
     const filename = `image-sitemap-${section.name}.xml`;
     const xml = generateImageSitemap(entries);
     const outPath = path.join(PUBLIC_DIR, filename);
-    await writeFile(outPath, xml, 'utf8');
+    await writeIfChanged(outPath, xml);
+
+    const lastmod = sectionLastmodMs > 0 ? new Date(sectionLastmodMs).toISOString() : null;
 
     // Track for index
-    sitemapIndex.push({ filename, count: entries.length });
+    sitemapIndex.push({ filename, count: entries.length, lastmod });
     globalStats.totalImages += entries.length;
     globalStats.sections[section.name] = {
       displayName: section.displayName,
@@ -525,7 +577,7 @@ async function main() {
   // Generate sitemap index
   const indexXml = generateSitemapIndex(sitemapIndex);
   const indexPath = path.join(PUBLIC_DIR, 'image-sitemap-index.xml');
-  await writeFile(indexPath, indexXml, 'utf8');
+  await writeIfChanged(indexPath, indexXml);
 
   console.log('═══════════════════════════════════════════════');
   console.log(`📊 SUMMARY`);

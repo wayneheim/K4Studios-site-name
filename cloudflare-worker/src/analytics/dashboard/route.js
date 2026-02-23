@@ -208,13 +208,17 @@ export async function handleDashboardRequest(request, env, ctx) {
         : `ts < datetime('now', '-5 hours', '-${days} days')`
       )) + globalFilterClause;
 
+    // Pass the auth header to the renderer so admin JS calls can re-use it.
+    // This is safe: this page is only served after successful authentication.
+    const authHeader = request.headers.get('Authorization') || '';
+
     // Call dashboard controller — orchestrates all queries + renders HTML
     const html = await runDashboardController(env, {
       dateClause, galleryClause, ipClause, botClause, chardonClause,
       priorPeriodClause, rangeDateClause, artIpClause,
       baseDateClause, truthDateClause, hideBotsPredicate,
       yesterday, days, selectedDate, galleryFilter, excludeIp, viewerIp,
-      hideBots, hideChardon
+      hideBots, hideChardon, authHeader
     });
 
     return new Response(html, {

@@ -37,7 +37,7 @@ export function buildDashboardData(queryResults, filterParams) {
 
   const {
     days, yesterday, selectedDate, galleryFilter,
-    excludeIp, viewerIp, hideBots, hideChardon
+    excludeIp, viewerIp, hideBots, hideChardon, authHeader
   } = filterParams;
 
   return {
@@ -98,6 +98,7 @@ export function buildDashboardData(queryResults, filterParams) {
     imageAccessOverview: imageAccessOverview || [],
     suppressionStats,
     botIntelligence,
-    periodTotals: periodTotals || { total_visitors: 0, total_art_viewers: 0 }
+    periodTotals: periodTotals || { total_visitors: 0, total_art_viewers: 0 },
+    authHeader: authHeader || ''
   };
 }

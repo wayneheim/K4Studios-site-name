@@ -43,7 +43,7 @@ export async function handleDashboardRequest(env, filters) {
     priorPeriodClause, rangeDateClause, artIpClause,
     baseDateClause, truthDateClause, hideBotsPredicate,
     yesterday, days, selectedDate, galleryFilter, excludeIp, viewerIp,
-    hideBots, hideChardon
+    hideBots, hideChardon, authHeader
   } = filters;
 
   // Query 1 + 1b: Summary stats + new vs returning
@@ -100,7 +100,7 @@ export async function handleDashboardRequest(env, filters) {
     dateClause, ipClause, botClause, chardonClause
   });
 
-  const { edgeEvents, edgeSummary } = await getEdgeEvents(env, { yesterday, days });
+  const { edgeEvents, edgeSummary } = await getEdgeEvents(env, { dateClause, yesterday, days });
 
   const { artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, entryRefCountsObj, imageAccessOverview, viewerDepth, suppressionStats } = await getArtViews(env, {
     dateClause, ipClause, botClause, chardonClause, artIpClause,
@@ -136,7 +136,7 @@ export async function handleDashboardRequest(env, filters) {
   // Assemble data shape then render
   const dashboardData = buildDashboardData(queryResults, {
     days, yesterday, selectedDate, galleryFilter,
-    excludeIp, viewerIp, hideBots, hideChardon
+    excludeIp, viewerIp, hideBots, hideChardon, authHeader
   });
 
   // Render and return HTML string
