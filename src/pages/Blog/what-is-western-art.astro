@@ -17,7 +17,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
-import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
 
@@ -59,12 +59,28 @@ const image3 = {
 const pageTitle = "What Is Western Art? History, Meaning, and the Evolution of the American West in Art";
 const pageDescription = "Western art is more than cowboys and sunsets. Explore the history, meaning, and evolution of Western art from frontier paintings to contemporary photography.";
 
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImages[2].id, "l"),
+  getAbsoluteProxySrc(image1.id, "l"),
+  getAbsoluteProxySrc(image2.id, "l"),
+  getAbsoluteProxySrc(image3.id, "l"),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "Western Art", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
 const structuredData = getStructuredData({
   type: "Article",
   data: {
     headline: "What Is Western Art? History, Meaning, and the Evolution of the American West in Art",
     description: pageDescription,
     url: canonicalUrl,
+    image: structuredImageUrls,
     copyrightNotice: "© Wayne Heim",
     author: {
       "@type": "Person",
@@ -72,6 +88,10 @@ const structuredData = getStructuredData({
     },
     datePublished: "2026-02-04",
     articleSection: "Art History",
+    definedTerm: {
+      name: "Western Art",
+      description: pageDescription,
+    },
     keywords: [
       "western art",
       "what is western art",
@@ -115,6 +135,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
   structuredDataJSON={structuredData}
   meta={meta}
 >
+  <script type="application/ld+json" set:html={breadcrumbStructuredData} />
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={blogBreadcrumb} />

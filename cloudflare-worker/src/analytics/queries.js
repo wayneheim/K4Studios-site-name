@@ -341,6 +341,7 @@ export async function getArtViews(env, filters) {
           e.visitor_id as visitor_id,
           e.target_id as target_id,
           e.event_type as event_type,
+          e.ts as ts,
           COALESCE(e.session_id, 'd:' || date(e.ts)) as session_bucket,
           LOWER(COALESCE(hp.device_type, 'unknown')) as device,
           e.country as country,
@@ -358,7 +359,7 @@ export async function getArtViews(env, filters) {
           AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
       ),
       chapter_pairs AS (
-        SELECT visitor_id, target_id, event_type, session_bucket, device, country, region, city, page, referer
+        SELECT visitor_id, target_id, event_type, ts, session_bucket, device, country, region, city, page, referer
         FROM ranked
         WHERE rn = 1
       )
@@ -369,6 +370,7 @@ export async function getArtViews(env, filters) {
         GROUP_CONCAT(DISTINCT cp.device) as device_types,
         GROUP_CONCAT(DISTINCT cp.country) as countries,
         MAX(CASE WHEN cp.event_type = 'chapter_view' THEN 1 ELSE 0 END) as has_js_view,
+        MAX(cp.ts) as last_seen,
         (
           SELECT cp2.page
           FROM chapter_pairs cp2
@@ -429,6 +431,7 @@ export async function getArtViews(env, filters) {
         views: r.views,
         unique_viewers: r.unique_viewers,
         has_js_view: r.has_js_view === 1,
+        last_seen: r.last_seen || null,
         devices: (r.device_types || '').split(',').map(s => (s || '').trim()).filter(Boolean),
         countries: r.countries,
         url: r.best_page || null,
@@ -449,6 +452,7 @@ export async function getArtViews(env, filters) {
         COUNT(*) as views,
         COUNT(DISTINCT e.visitor_id) as unique_viewers,
         GROUP_CONCAT(DISTINCT LOWER(COALESCE(hp.device_type, 'unknown'))) as device_types,
+        MAX(e.ts) as last_seen,
         (
           SELECT e2.page
           FROM classified_events e2
@@ -511,6 +515,7 @@ export async function getArtViews(env, filters) {
       target_id: r.target_id,
       views: r.views,
       unique_viewers: r.unique_viewers,
+      last_seen: r.last_seen || null,
       devices: (r.device_types || '').split(',').map(s => (s || '').trim()).filter(Boolean),
       url: r.best_page || null,
       geo: { country: r.geo_country, region: r.geo_region, city: r.geo_city }
@@ -545,27 +550,17 @@ export async function getArtViews(env, filters) {
       devices: (r.device_types || '').split(',').map(s => (s || '').trim()).filter(Boolean)
     }));
     
-    // Merge galleries that share the same leaf name (last 2 path segments)
-    // e.g., "K4-Select-Series/Engrained/Engrained-Series" and "Engrained/Engrained-Series" are the same
-    const getLeafKey = (path) => {
+    // NO MERGE: gallery_id is now canonical at ingestion
+    // Just derive a short display_name for UI (last 2 segments) without changing identity
+    const getDisplayName = (path) => {
       const parts = String(path || '').split('/').filter(Boolean);
       return parts.slice(-2).join('/') || path;
     };
-    const merged = new Map();
-    for (const g of rawGalleries) {
-      const key = getLeafKey(g.target_id);
-      if (merged.has(key)) {
-        const existing = merged.get(key);
-        existing.views += g.views;
-        existing.unique_viewers = Math.max(existing.unique_viewers, g.unique_viewers); // Approximate
-        g.devices.forEach(d => { if (!existing.devices.includes(d)) existing.devices.push(d); });
-        // Keep the longest path as the canonical target_id
-        if (g.target_id.length > existing.target_id.length) existing.target_id = g.target_id;
-      } else {
-        merged.set(key, { ...g });
-      }
-    }
-    topGalleries = Array.from(merged.values())
+    
+    topGalleries = rawGalleries.map(g => ({
+      ...g,
+      display_name: getDisplayName(g.target_id)
+    }))
       .sort((a, b) => b.views - a.views)
       .slice(0, 15);
   } catch (e) {
@@ -672,6 +667,7 @@ export async function getArtViews(env, filters) {
       SELECT 
         e.target_id,
         COUNT(*) as hits,
+        MAX(e.ts) as last_seen,
         e.referer,
         e.ref_type,
         e.asset_source,
@@ -734,6 +730,7 @@ export async function getArtViews(env, filters) {
       SELECT 
         e.target_id,
         COUNT(*) as hits,
+        MAX(e.ts) as last_seen,
         e.referer,
         e.ref_type,
         e.country,
@@ -794,6 +791,7 @@ export async function getArtViews(env, filters) {
       SELECT 
         e.target_id,
         COUNT(*) as hits,
+        MAX(e.ts) as last_seen,
         e.referer,
         e.country,
         (
@@ -873,7 +871,7 @@ export async function getArtViews(env, filters) {
         : getAccessType(r.referer);
       const referrerSource = accessType === 'external_referral'
         ? (getReferrerSource(r.referer) || 'Other')
-        : accessType === 'direct' ? 'Direct'
+        : accessType === 'direct' ? 'No Referrer'
         : accessType === 'internal_navigation' ? 'Internal'
         : 'Unknown';
       let refererHost = null;
@@ -883,6 +881,7 @@ export async function getArtViews(env, filters) {
       return {
         target_id: r.target_id,
         hits: r.hits,
+        last_seen: r.last_seen || null,
         access_type: accessType,
         referrer_source: referrerSource,
         asset_source: r.asset_source || null,
@@ -1259,6 +1258,12 @@ export async function getArtViews(env, filters) {
 
   // ── Build unified Image Access Overview (merge chapters + zooms + unverified/external) ──
   const imageMap = {};
+  function setLastSeenIfLater(img, ts) {
+    if (!ts) return;
+    const t = String(ts).trim();
+    if (!t) return;
+    if (!img.last_seen || t > img.last_seen) img.last_seen = t;
+  }
   function normalizeGeo(g) {
     if (!g) return null;
     const country = (g.country || '').toString().trim() || null;
@@ -1276,7 +1281,7 @@ export async function getArtViews(env, filters) {
   }
   function ensureImage(id) {
     if (!imageMap[id]) {
-      imageMap[id] = { image_id: id, badges: [], chapter_views: 0, xl_zooms: 0, unverified_views: 0, external_views: 0, countries: new Set(), sources: [], geo: null, geo_priority: 99, devices: new Set(), url: null, url_priority: 99 };
+      imageMap[id] = { image_id: id, badges: [], chapter_views: 0, xl_zooms: 0, unverified_views: 0, external_views: 0, countries: new Set(), sources: [], geo: null, geo_priority: 99, devices: new Set(), url: null, url_priority: 99, last_seen: null };
     }
     return imageMap[id];
   }
@@ -1299,6 +1304,7 @@ export async function getArtViews(env, filters) {
     const badge = c.has_js_view ? 'C' : 'I';
     if (!img.badges.includes(badge)) img.badges.push(badge);
     img.chapter_views = c.views;
+    setLastSeenIfLater(img, c.last_seen);
     // Only set verified geo/sources for JS-verified events
     if (c.has_js_view) {
       setGeoIfBetter(img, c.geo, 0); // verified
@@ -1318,12 +1324,14 @@ export async function getArtViews(env, filters) {
   for (const z of topZooms) {
     const img = ensureImage(z.target_id);
     img.xl_zooms = z.views;
+    setLastSeenIfLater(img, z.last_seen);
     setGeoIfBetter(img, z.geo, 0); // verified
     setUrlIfBetter(img, z.url, 1);
     if (Array.isArray(z.devices)) z.devices.forEach(d => d && img.devices.add(String(d).toLowerCase()));
   }
   for (const ext of externalImageAccess) {
     const img = ensureImage(ext.target_id);
+    setLastSeenIfLater(img, ext.last_seen);
     if (ext.access_type === 'external_referral') {
       if (!img.badges.includes('E')) img.badges.push('E');
       img.external_views += ext.hits;
@@ -1337,10 +1345,12 @@ export async function getArtViews(env, filters) {
     if (ext.asset_source_label) {
       img.sources.push(ext.asset_source_label);
     }
-    if (ext.referrer_source && ext.referrer_source !== 'Direct' && ext.referrer_source !== 'Internal' && ext.referrer_source !== 'Unknown') {
-      img.sources.push(ext.referrer_source);
+    if (ext.access_type === 'external_referral') {
+      if (ext.referrer_source && ext.referrer_source !== 'Unknown') {
+        img.sources.push(ext.referrer_source);
+      }
     } else if (ext.access_type === 'direct') {
-      if (!img.sources.includes('Direct')) img.sources.push('Direct');
+      if (!img.sources.includes('No Referrer')) img.sources.push('No Referrer');
     } else if (ext.access_type === 'internal_navigation') {
       if (!img.sources.includes('Internal')) img.sources.push('Internal');
     }
@@ -1372,13 +1382,19 @@ export async function getArtViews(env, filters) {
     xl_zooms: img.xl_zooms,
     unverified_views: img.unverified_views,
     external_views: img.external_views,
+    last_seen: img.last_seen,
     geo: img.geo,
     countries: Array.from(img.countries).filter(Boolean),
     sources: [...new Set(img.sources)],
     devices: Array.from(img.devices).filter(Boolean),
     url: img.url,
     total: img.chapter_views + img.xl_zooms + img.unverified_views + img.external_views
-  })).sort((a, b) => b.total - a.total);
+  })).sort((a, b) => {
+    const ta = a.last_seen || '';
+    const tb = b.last_seen || '';
+    if (ta !== tb) return tb.localeCompare(ta);
+    return (b.total - a.total);
+  });
 
   return {
     artViewsSummary,
@@ -2147,7 +2163,7 @@ export async function getEntryAnalysis(env, filters) {
         COUNT(DISTINCT session_id) AS sessions
       FROM first_pages
       WHERE rn = 1
-        AND referrer NOT LIKE '%k4studios.com%'  -- Exclude internal: not true entries
+        AND (referrer IS NULL OR referrer NOT LIKE '%k4studios.com%')  -- Exclude internal: not true entries
       GROUP BY page_path, ref_source
       ORDER BY sessions DESC
       LIMIT 15

@@ -255,7 +255,7 @@ const tombstonesWithThumbs = landingWallArt.tombstones.map((stone: any) => {
       <div class="text-column">
         <section class="story-section">
           {wallArtStory.map((section: any, index: number) => (
-            <article class="story-block" key={index}>
+            <article class="story-block">
               {section.title && (
                 <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
               )}
@@ -263,8 +263,8 @@ const tombstonesWithThumbs = landingWallArt.tombstones.map((stone: any) => {
                 <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
               )}
 
-              {section.paragraphs?.map((para: string, i: number) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
+              {section.paragraphs?.map((para: string) => (
+                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
               ))}
             </article>
           ))}

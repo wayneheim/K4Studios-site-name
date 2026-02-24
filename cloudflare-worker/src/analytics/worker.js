@@ -1,6 +1,7 @@
 import { handleDashboardRequest } from "./dashboard/route.js";
+import { handleInspectRequest } from "./dashboard/inspect.js";
 import { handleTrackRequest, handleTrackOptions, handleEdgeEvent, handleEdgeEventOptions, handleTrackEvent } from "./collector.js";
-import { handleExportCSV, handleBlockIP, handleUnblockIP, handleRefreshBots } from "./admin.js";
+import { handleExportCSV, handleBlockIP, handleUnblockIP, handleRefreshBots, handleRecentEvents } from "./admin.js";
 
 function checkBasicAuth(request, env) {
   const auth = request.headers.get("Authorization");
@@ -43,6 +44,11 @@ export default {
       return handleDashboardRequest(request, env, ctx);
     }
 
+    // Geography drilldown
+    if (url.pathname === "/__k4stats/inspect") {
+      return handleInspectRequest(request, env, ctx);
+    }
+
     // Admin API sub-paths
     if (url.pathname === "/__k4stats/export") {
       return handleExportCSV(request, env);
@@ -55,6 +61,9 @@ export default {
     }
     if (url.pathname === "/__k4stats/refresh-bots" && request.method === "POST") {
       return handleRefreshBots(request, env);
+    }
+    if (url.pathname === "/__k4stats/recent") {
+      return handleRecentEvents(request, env);
     }
 
     // Track endpoint (humans only reach here)

@@ -19,7 +19,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
-import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
 
@@ -62,12 +62,32 @@ const image4 = {
 const pageTitle = "What Is Historical Western Photography? Definition and Distinction";
 const pageDescription = "Historical Western photography does not mean antique photographs. It refers to contemporary fine art depicting historical Western life through narrative construction and painterly composition.";
 
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImage.id, "l"),
+  getAbsoluteProxySrc(image1.id, "l"),
+  getAbsoluteProxySrc(image2.id, "l"),
+  getAbsoluteProxySrc(image3.id, "l"),
+  getAbsoluteProxySrc(image4.id, "l"),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "Western Art", item: "https://www.k4studios.com/Blog/what-is-western-art" },
+    { name: "Western Fine Art", item: "https://www.k4studios.com/Blog/what-is-western-fine-art" },
+    { name: "Western Fine Art Photography", item: "https://www.k4studios.com/Blog/what-is-western-fine-art-photography" },
+    { name: "Historical Western Photography", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
 const structuredData = getStructuredData({
   type: "Article",
   data: {
     headline: "What Is Historical Western Photography? Definition and Distinction",
     description: pageDescription,
     url: canonicalUrl,
+    image: structuredImageUrls,
     copyrightNotice: "© Wayne Heim",
     author: {
       "@type": "Person",
@@ -75,6 +95,10 @@ const structuredData = getStructuredData({
     },
     datePublished: "2026-02-13",
     articleSection: "Fine Art",
+    definedTerm: {
+      name: "Historical Western Photography",
+      description: pageDescription,
+    },
     keywords: [
       "historical western photography",
       "historical western art",
@@ -117,6 +141,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
   structuredDataJSON={structuredData}
   meta={meta}
 >
+  <script type="application/ld+json" set:html={breadcrumbStructuredData} />
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={blogBreadcrumb} />

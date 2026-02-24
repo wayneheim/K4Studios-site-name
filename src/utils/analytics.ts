@@ -128,26 +128,29 @@ function syncClarityIdentity(): void {
   }
 }
 
-// Get the entry referrer - prefer the edge-captured cookie, fallback to sessionStorage
+// Get the entry referrer - always prefer the edge-set cookie (worker updates it
+// on every top-level navigation), fall back to sessionStorage only when the
+// cookie has expired or is missing.
 function getEntryReferrer(): string | null {
   if (typeof window === 'undefined') return null;
-  
-  // Check sessionStorage first (already cached this session)
-  let entryReferrer = sessionStorage.getItem('k4_entry_referrer');
-  if (entryReferrer !== null) {
-    return entryReferrer || null;
-  }
-  
-  // Read from edge-set cookie (most reliable source)
+
+  // Cookie is the source of truth — the worker rewrites it on each top-level
+  // navigation (bookmark → "direct", external → encoded URL, internal → no-op).
   const cookieRef = getCookie('k4_entry_ref');
   if (cookieRef) {
-    // Already normalized by the worker (e.g., "google", "direct", "bing")
+    // Sync sessionStorage so it survives cookie expiry within the same tab
     sessionStorage.setItem('k4_entry_referrer', cookieRef);
     return cookieRef;
   }
-  
-  // Fallback: use document.referrer (less reliable but better than nothing)
-  entryReferrer = document.referrer || '';
+
+  // Cookie absent (expired / not yet set) — use cached sessionStorage value
+  const cached = sessionStorage.getItem('k4_entry_referrer');
+  if (cached !== null) {
+    return cached || null;
+  }
+
+  // Last resort: document.referrer (least reliable)
+  const entryReferrer = document.referrer || '';
   sessionStorage.setItem('k4_entry_referrer', entryReferrer);
   return entryReferrer || null;
 }
@@ -654,8 +657,9 @@ export function initScrollDepthTracking(): void {
 
 /**
  * Helper to extract gallery ID from URL path
- * Returns parent/child format for disambiguation (e.g., "Western-Cowboy-Portraits/Color")
- * Only returns value for actual gallery/image paths under /Galleries/ or /Other/
+ * Returns FULL canonical gallery path after /Galleries/ or /Other/
+ * e.g., "Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color"
+ * This ensures a single identity for each gallery across all tracking paths.
  */
 export function getGalleryIdFromPath(path?: string): string | null {
   const p = path || (typeof window !== 'undefined' ? window.location.pathname : '');
@@ -666,25 +670,22 @@ export function getGalleryIdFromPath(path?: string): string | null {
   
   if (!isGalleryPath) return null;
   
-  const parts = p.split('/').filter(Boolean);
+  // Strip the image ID suffix if present (e.g., /i-xxx at end)
+  let normalized = p.replace(/\/i-[a-zA-Z0-9_-]+\/?$/, '');
   
-  // If ends with image ID (i-xxx), use 2 segments before the image
-  const lastPart = parts[parts.length - 1];
-  if (lastPart?.startsWith('i-')) {
-    // e.g., /Galleries/.../Western-Cowboy-Portraits/Color/i-xxx -> Western-Cowboy-Portraits/Color
-    if (parts.length >= 3) {
-      return `${parts[parts.length - 3]}/${parts[parts.length - 2]}`;
-    }
-    return parts[parts.length - 2] || null;
+  // Strip trailing slash
+  normalized = normalized.replace(/\/$/, '');
+  
+  // Return FULL path after /Galleries/ or /Other/
+  // e.g., /Galleries/Painterly-Fine-Art-Photography/.../Color -> Painterly-Fine-Art-Photography/.../Color
+  if (normalized.includes('/Galleries/')) {
+    return normalized.split('/Galleries/')[1] || null;
+  }
+  if (normalized.includes('/Other/')) {
+    return normalized.split('/Other/')[1] || null;
   }
   
-  // For gallery pages, return last 2 segments for context
-  // e.g., /Galleries/.../Western-Cowboy-Portraits/Color -> Western-Cowboy-Portraits/Color
-  if (parts.length >= 2) {
-    return `${parts[parts.length - 2]}/${parts[parts.length - 1]}`;
-  }
-  
-  return parts[parts.length - 1] || null;
+  return null;
 }
 
 /**

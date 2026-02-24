@@ -105,7 +105,10 @@ export async function logArtView(...args) {
 
 export async function logRawEvent(...args) {
   try {
-    return await withTimeout(_logRawEvent(...args), 1500);
+    // Raw event writes are the critical path for engagement tracking.
+    // They already run under ctx.waitUntil(), so they won't block the response.
+    // Do NOT time-box them here, otherwise we can silently drop writes during D1 latency.
+    return await _logRawEvent(...args);
   } catch (err) {
     console.error("analytics failure [logRawEvent]:", err?.message || err);
   }

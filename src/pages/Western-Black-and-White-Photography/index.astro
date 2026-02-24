@@ -98,11 +98,14 @@ const featheredImages = getFeatheredImages({
 // ----------------------
 // STRUCTURED DATA
 // ----------------------
+const landingDescription =
+  landingWestern.subtitle || (landingWestern as any)?.description || "";
+
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
-    description: landingWestern.subtitle || landingWestern.description,
+    description: landingDescription,
     url: `https://k4studios.com${pagePath}`,
     keywords: landingWestern.keywords || [],
     copyrightNotice: "© Wayne Heim",
@@ -276,7 +279,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
       <div class="text-column">
         <section class="story-section">
           {westernStory.map((section: any, index: number) => (
-            <article class="story-block" key={index}>
+            <article class="story-block">
               {section.title && (
                 <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
               )}
@@ -288,13 +291,13 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
               )}
 
               {section.paragraphs?.map((para: string, i: number) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
+                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
               ))}
 
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item: string, j: number) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
+                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
                   ))}
                 </ul>
               )}

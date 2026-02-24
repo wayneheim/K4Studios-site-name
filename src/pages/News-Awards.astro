@@ -33,7 +33,23 @@ const pagePath = "/News-Awards";
 const gallerySectionPath = "/Galleries/Painterly-Fine-Art-Photography";
 const meta = getLandingMeta(gallerySectionPath);
 
-const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
+type AwardItem = { title: string; note: string };
+type StorySection = {
+  title?: string;
+  subhead?: string;
+  tagline?: string;
+  paragraphs?: string[];
+  awards?: AwardItem[];
+  list?: string[];
+};
+
+const westernStorySections = westernStory as unknown as StorySection[];
+
+const landingKeywords = Array.isArray((landingWestern as any)?.keywords)
+  ? (landingWestern as any).keywords
+  : [];
+
+const headingCount = westernStorySections.filter((block, i) => i > 0 && block.subhead).length;
 
 function findNavEntry(nav, url) {
   for (const entry of nav) {
@@ -56,10 +72,10 @@ const landingNav = findNavEntry(siteNav, gallerySectionPath);
 const galleryPaths = landingNav
   ? recursivelyGatherAllGalleryHrefs(landingNav)
   : [];
-const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
+const allGalleryData = import.meta.glob<{ galleryData?: any[] }>('@/data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
   const filePath = "@/data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
-  return allGalleryData[filePath]?.galleryData || [];
+  return allGalleryData[filePath]?.galleryData ?? [];
 });
 
 const featheredImages = getSideImages({
@@ -74,7 +90,7 @@ const structuredData = getStructuredData({
     headline: `${landingWestern.title} – ${landingWestern.subtitle}`,
     description: "Awards, juried exhibitions, and professional recognition for K4 Studios fine art photography by Wayne Heim.",
     url: `https://k4studios.com${pagePath}`,
-    keywords: landingWestern.keywords || [],
+    keywords: landingKeywords,
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,
@@ -122,18 +138,18 @@ const structuredData = getStructuredData({
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
-          {westernStory.map((section, index) => (
-            <article class="story-block" key={index}>
+          {westernStorySections.map((section) => (
+            <article class="story-block">
               {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
-              {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+              {section.paragraphs?.map((para) => (
+                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
               ))}
               {section.awards && section.awards.length > 0 && (
                 <ul class="awards-list">
-                  {section.awards.map((award, j) => (
-                    <li key={j} class="reveal-on-scroll">
+                  {section.awards.map((award) => (
+                    <li class="reveal-on-scroll">
                       <strong>{award.title}</strong>: <span set:html={autoLinkKeywordsInText(award.note, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
                     </li>
                   ))}
@@ -141,8 +157,8 @@ const structuredData = getStructuredData({
               )}
               {section.list && section.list.length > 0 && (
                 <ul>
-                  {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                  {section.list.map((item) => (
+                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
                   ))}
                 </ul>
               )}

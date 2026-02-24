@@ -116,9 +116,8 @@ export async function handleDashboardRequest(request, env, ctx) {
             OR ip_hash IN (
               SELECT ip_hash FROM suspected_bots
               WHERE status = 'blocked'
-                 OR is_verified_bot = 1
                  OR is_datacenter = 1
-                 OR risk_level >= 3
+                 OR risk_level >= 4
             )
           ))
         )`
@@ -172,9 +171,8 @@ export async function handleDashboardRequest(request, env, ctx) {
           OR ip_hash IN (
             SELECT ip_hash FROM suspected_bots
             WHERE status = 'blocked'
-               OR is_verified_bot = 1
                OR is_datacenter = 1
-               OR risk_level >= 3
+               OR risk_level >= 4
           )
         )`
       );
@@ -191,9 +189,8 @@ export async function handleDashboardRequest(request, env, ctx) {
           OR ip_hash IN (
             SELECT ip_hash FROM suspected_bots
             WHERE status = 'blocked'
-               OR is_verified_bot = 1
                OR is_datacenter = 1
-               OR risk_level >= 3
+               OR risk_level >= 4
           )
         )`
       : "";

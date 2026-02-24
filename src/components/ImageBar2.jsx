@@ -56,7 +56,10 @@ const allCarousels = import.meta.glob([
   "../data/Historical-Western-Art/carousel.ts"
 ], { eager: true });
 
-export default function ImageBar2({ slides, pageContext: propPageContext }) {
+/**
+ * @param {{ slides?: any[]; pageContext?: any }} props
+ */
+export default function ImageBar2({ slides = [], pageContext: propPageContext = null } = {}) {
   const trackRef = useRef(null);
   const [finalSlides, setFinalSlides] = useState(slides ?? []);
   // Duplicate slides for infinite scroll effect - done in React state, not DOM manipulation

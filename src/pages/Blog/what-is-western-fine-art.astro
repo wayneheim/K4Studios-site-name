@@ -18,7 +18,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
-import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
 
@@ -61,12 +61,33 @@ const image4 = {
 const pageTitle = "Western Fine Art: Definition, Distinction, and Why the Term Matters";
 const pageDescription = "Western fine art is not a medium—it's an authorship standard. Discover why the distinction between painting and photography no longer holds, and what elevates work to fine art.";
 
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImage.id, "l"),
+  getAbsoluteProxySrc(image1.id, "l"),
+  getAbsoluteProxySrc(image2.id, "l"),
+  getAbsoluteProxySrc(image3.id, "l"),
+  getAbsoluteProxySrc(image4.id, "l"),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    {
+      name: "Western Art",
+      item: "https://www.k4studios.com/Blog/what-is-western-art",
+    },
+    { name: "Western Fine Art", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
 const structuredData = getStructuredData({
   type: "Article",
   data: {
     headline: "Western Fine Art: Definition, Distinction, and Why the Term Matters",
     description: pageDescription,
     url: canonicalUrl,
+    image: structuredImageUrls,
     copyrightNotice: "© Wayne Heim",
     author: {
       "@type": "Person",
@@ -74,6 +95,10 @@ const structuredData = getStructuredData({
     },
     datePublished: "2026-02-02",
     articleSection: "Fine Art",
+    definedTerm: {
+      name: "Western Fine Art",
+      description: pageDescription,
+    },
     keywords: [
       "western fine art",
       "western fine art photography",
@@ -116,6 +141,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
   structuredDataJSON={structuredData}
   meta={meta}
 >
+  <script type="application/ld+json" set:html={breadcrumbStructuredData} />
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={blogBreadcrumb} />

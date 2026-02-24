@@ -201,12 +201,31 @@ export default function RebuiltScrollGrid({
           className="text-center pb-6 mb-4 border-b border-gray-200"
           style={{ fontFamily: "'Glegoo', serif" }}
         >
+          <div className="flex justify-center mb-3">
+            <img
+              src="/images/K4Logo-web.webp"
+              alt="K4 Studios"
+              style={{
+                width: 64,
+                height: 64,
+                borderRadius: '50%',
+                objectFit: 'cover',
+                opacity: 0.18,
+                filter: 'grayscale(10%)',
+                userSelect: 'none'
+              }}
+              draggable={false}
+            />
+          </div>
           <h1 
             className="text-2xl md:text-3xl font-semibold"
             style={{ color: "#5a4a3a" }}
           >
             {themeName}
           </h1>
+          <p className="mt-3 text-sm text-gray-500 max-w-2xl mx-auto">
+            Click any image to view the full story and preview the series.
+          </p>
           {themeDescription && (
             <p 
               className="mt-3 text-gray-600 max-w-2xl mx-auto text-sm md:text-base"
@@ -226,12 +245,11 @@ export default function RebuiltScrollGrid({
       {/* Header with hover/focus effect - hide when viewing a theme collection */}
       {!themeName && (
       <div
-        className="chapter-title-block mb-[-3rem] relative flex items-center justify-center gap-4"
+        className="chapter-title-block mb-[-3rem] relative flex flex-col items-center justify-center"
         // Remove top space on mobile (colCount===1); keep large offset for centered desktop presentation
         style={{ paddingTop: colCount === 1 ? "0px" : "150px" }}
       >
-        {/* Desktop-only circular logo absolutely centered above heading (no structural changes) */}
-        {/* Shows theme icon when viewing a theme, K4 logo otherwise */}
+        {/* Desktop-only circular logo centered above heading */}
         <div
           className="hidden md:flex flex-col items-center justify-center"
           style={{
@@ -252,8 +270,8 @@ export default function RebuiltScrollGrid({
                 handleClose();
               }
             }}
-            aria-label={themeName ? `Exit ${themeName} Theme Index` : "Exit Chapter Index"}
-            title={themeName ? `Theme: ${themeName}` : "Exit Index View"}
+            aria-label="Exit Chapter Index"
+            title="Exit Index View"
             style={{
               background: "none",
               border: "none",
@@ -263,14 +281,14 @@ export default function RebuiltScrollGrid({
             }}
           >
             <img
-              src={themeName ? "/images/theme%20icon.webp" : "/images/K4Logo-web.webp"}
-              alt={themeName ? `Theme: ${themeName}` : "K4 Studios"}
+              src="/images/K4Logo-web.webp"
+              alt="K4 Studios"
               style={{
                 width: 110,
                 height: 110,
-                borderRadius: themeName ? "12px" : "50%",
+                borderRadius: "50%",
                 objectFit: "cover",
-                opacity: themeName ? 0.55 : 0.17,
+                opacity: 0.17,
                 filter: "grayscale(10%)",
                 userSelect: "none",
               }}
@@ -278,22 +296,28 @@ export default function RebuiltScrollGrid({
             />
           </button>
         </div>
-        <div className="fade-line" style={{ marginBottom: "2.5rem" }} />
-        <h2
-          className="watermark-title whitespace-nowrap"
-          style={{
-            marginBottom: "4rem",
-            transition: "color .14s",
-            fontSize: "4rem",
-            fontWeight: 700,
-            color: "#5e4740",
-            opacity: ".17",
-            textAlign: "center",
-          }}
-        >
-          Chapter Index
-        </h2>
-        <div className="fade-line" style={{ marginBottom: "2.5rem" }} />
+
+        <div className="flex items-center justify-center gap-4 w-full" style={{ marginBottom: "1.25rem" }}>
+          <div className="fade-line" />
+          <h2
+            className="watermark-title whitespace-nowrap"
+            style={{
+              marginBottom: 0,
+              transition: "color .14s",
+              fontSize: "4rem",
+              fontWeight: 700,
+              color: "#5e4740",
+              opacity: ".17",
+              textAlign: "center",
+            }}
+          >
+            Chapter Index
+          </h2>
+          <div className="fade-line" />
+        </div>
+        <p className="text-sm text-gray-500 text-center max-w-xl mx-auto" style={{ marginBottom: "3rem" }}>
+          Click any image to view the full story and preview the series.
+        </p>
       </div>
       )}
 

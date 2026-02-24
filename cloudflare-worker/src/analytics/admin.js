@@ -26,6 +26,12 @@ function checkAuth(request, env) {
   return authHeader === expected;
 }
 
+function clampInt(value, { min, max, fallback }) {
+  const n = parseInt(String(value ?? ''), 10);
+  if (!Number.isFinite(n)) return fallback;
+  return Math.max(min, Math.min(max, n));
+}
+
 // --------------------
 // CSV Export
 // --------------------
@@ -200,6 +206,113 @@ export async function handleRefreshBots(request, env) {
     return new Response(JSON.stringify({ error: e.message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
+    });
+  }
+}
+
+// --------------------
+// Recent Events (debug)
+// --------------------
+// Auth required. Intended for quickly verifying ingestion + writes.
+// GET /__k4stats/recent?minutes=180&limit=100&event=guide_open
+export async function handleRecentEvents(request, env) {
+  if (!checkAuth(request, env)) {
+    return new Response("Unauthorized", {
+      status: 401,
+      headers: withAdminNoCacheHeaders({
+        "WWW-Authenticate": 'Basic realm="K4 Analytics Recent"',
+        "Content-Type": "text/plain"
+      })
+    });
+  }
+
+  if (!env?.DB) {
+    return new Response(JSON.stringify({ ok: false, error: 'DB not bound' }), {
+      status: 500,
+      headers: withAdminNoCacheHeaders({ 'Content-Type': 'application/json' })
+    });
+  }
+
+  const url = new URL(request.url);
+  const minutes = clampInt(url.searchParams.get('minutes'), { min: 1, max: 60 * 24 * 14, fallback: 180 }); // up to 14 days
+  const limit = clampInt(url.searchParams.get('limit'), { min: 1, max: 500, fallback: 100 });
+  const includeUa = url.searchParams.get('ua') === '1';
+
+  const eventType = (url.searchParams.get('event') || '').trim() || null;
+  const visitorId = (url.searchParams.get('visitor') || '').trim() || null;
+  const sessionId = (url.searchParams.get('session') || '').trim() || null;
+  const source = (url.searchParams.get('source') || '').trim() || null;
+
+  const where = [`ts > datetime('now', '-5 hours', '-${minutes} minutes')`];
+  const bindings = [];
+
+  if (eventType) {
+    where.push('event_type = ?');
+    bindings.push(eventType);
+  }
+  if (visitorId) {
+    where.push('visitor_id = ?');
+    bindings.push(visitorId);
+  }
+  if (sessionId) {
+    where.push('session_id = ?');
+    bindings.push(sessionId);
+  }
+  if (source) {
+    where.push('source = ?');
+    bindings.push(source);
+  }
+
+  try {
+    const uaSelect = includeUa ? ', r.ua' : '';
+    const query = `
+      SELECT
+        r.ts,
+        r.event_type,
+        r.target_id,
+        r.page,
+        r.source,
+        r.session_id,
+        r.visitor_id,
+        r.ip_hash,
+        r.country,
+        r.region,
+        r.city
+        ${uaSelect},
+        r.cf_asn,
+        COALESCE(r.is_bot, 0) as is_bot,
+        COALESCE(sb.risk_level, 0) as bot_risk_level,
+        sb.status as bot_status,
+        COALESCE(sb.is_datacenter, 0) as bot_is_datacenter,
+        COALESCE(sb.is_verified_bot, 0) as bot_is_verified_bot,
+        CASE WHEN bi.ip_hash IS NOT NULL AND bi.is_active = 1 THEN 1 ELSE 0 END as is_blocked
+      FROM classified_events r
+      LEFT JOIN suspected_bots sb ON sb.ip_hash = r.ip_hash
+      LEFT JOIN blocked_ips bi ON bi.ip_hash = r.ip_hash
+      WHERE ${where.join(' AND ').replace(/\bevent_type\b/g, 'r.event_type').replace(/\bvisitor_id\b/g, 'r.visitor_id').replace(/\bsession_id\b/g, 'r.session_id').replace(/\bsource\b/g, 'r.source')}
+      ORDER BY r.ts DESC
+      LIMIT ${limit}
+    `;
+
+    const result = await env.DB.prepare(query).bind(...bindings).all();
+    const rows = result.results || [];
+
+    return new Response(JSON.stringify({
+      ok: true,
+      minutes,
+      limit,
+      filters: { eventType, visitorId, sessionId, source },
+      includeUa,
+      rows
+    }), {
+      status: 200,
+      headers: withAdminNoCacheHeaders({ 'Content-Type': 'application/json' })
+    });
+  } catch (e) {
+    console.error('Recent events error:', e);
+    return new Response(JSON.stringify({ ok: false, error: e?.message || String(e) }), {
+      status: 500,
+      headers: withAdminNoCacheHeaders({ 'Content-Type': 'application/json' })
     });
   }
 }

@@ -17,7 +17,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
-import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
 
@@ -72,12 +72,32 @@ const darkImage3 = {
 const pageTitle = "What Is Western Cowboy Art? | K4 Studios";
 const pageDescription = "Western cowboy art centers on one of the most recognizable figures in American visual culture—exploring the history, myth, and enduring symbolism of the American cowboy.";
 
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImage.id, "l"),
+  getAbsoluteProxySrc(image1.id, "l"),
+  getAbsoluteProxySrc(image2.id, "l"),
+  getAbsoluteProxySrc(image3.id, "l"),
+  getAbsoluteProxySrc(darkImage1.id, "l"),
+  getAbsoluteProxySrc(darkImage2.id, "l"),
+  getAbsoluteProxySrc(darkImage3.id, "l"),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "Western Art", item: "https://www.k4studios.com/Blog/what-is-western-art" },
+    { name: "Western Cowboy Art", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
 const structuredData = getStructuredData({
   type: "Article",
   data: {
     headline: "What Is Western Cowboy Art?",
     description: pageDescription,
     url: canonicalUrl,
+    image: structuredImageUrls,
     copyrightNotice: "© Wayne Heim",
     author: {
       "@type": "Person",
@@ -85,6 +105,10 @@ const structuredData = getStructuredData({
     },
     datePublished: "2026-02-04",
     articleSection: "Fine Art Photography",
+    definedTerm: {
+      name: "Western Cowboy Art",
+      description: pageDescription,
+    },
     keywords: [
       "western cowboy art",
       "cowboy art",
@@ -127,6 +151,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
   structuredDataJSON={structuredData}
   meta={meta}
 >
+  <script type="application/ld+json" set:html={breadcrumbStructuredData} />
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={blogBreadcrumb} />

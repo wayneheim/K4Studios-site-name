@@ -25,8 +25,15 @@ import '@/styles/global.css';
 
 const sectionPath = "/Other/Series";
 const meta = getLandingMeta(sectionPath, "/images/editions-hero.webp");
-// Title for browser tab (meta comes from landingMetaDB)
-meta.title = meta.ogTitle;
+const pageTitle = meta.ogTitle;
+
+type StorySection = {
+  title?: string;
+  subhead?: string;
+  tagline?: string;
+  paragraphs?: string[];
+  list?: string[];
+};
 
 const headingCount = seriesStory.filter((block, i) => i > 0 && block.subhead).length;
 
@@ -55,8 +62,11 @@ const landingNav = findNavEntry(siteNav, gallerySectionPath);
 const galleryPaths = landingNav
   ? recursivelyGatherAllGalleryHrefs(landingNav)
   : [];
-const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
-const galleryDatas = galleryPaths.map(path => {
+const allGalleryData = import.meta.glob<{ galleryData: any[] }>(
+  '@/data/Galleries/**/*.mjs',
+  { eager: true }
+);
+const galleryDatas = galleryPaths.map((path) => {
   const filePath = "@/data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
   return allGalleryData[filePath]?.galleryData || [];
 });
@@ -111,7 +121,7 @@ const structuredData = getStructuredData({
 ---
 
 <BaseLayout
-  title={meta.title}
+  title={pageTitle}
   structuredDataJSON={structuredData}
   meta={meta}
 >
@@ -141,18 +151,18 @@ const structuredData = getStructuredData({
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
-          {seriesStory.map((section, index) => (
-            <article class="story-block" key={index}>
+          {seriesStory.map((section: StorySection, index: number) => (
+            <article class="story-block">
               {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
-              {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+              {section.paragraphs?.map((para: string, i: number) => (
+                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
-                  {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                  {section.list.map((item: string, j: number) => (
+                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
                   ))}
                 </ul>
               )}

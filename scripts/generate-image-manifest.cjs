@@ -32,6 +32,91 @@ const BACKUP_PATTERN = /[-_\s](copy|bak|backup|old)(\d*|[-_\s].*)?\.mjs$/i;
 // Files to exclude from manifest generation (stale/duplicate data)
 const EXCLUDED_FILES = ['MasterGalleryData.mjs'];
 
+const SIZE_RANK = Object.freeze({
+  TI: 1,
+  S: 2,
+  M: 3,
+  L: 4,
+  XL: 5,
+  UNKNOWN: 0
+});
+
+const DESIRED_RANK_BY_KEY = Object.freeze({
+  s: SIZE_RANK.S,
+  m: SIZE_RANK.M,
+  l: SIZE_RANK.L,
+  xl: SIZE_RANK.XL,
+  src: SIZE_RANK.XL
+});
+
+function detectUrlSizeRank(url) {
+  if (!url) return SIZE_RANK.UNKNOWN;
+  try {
+    // Prefer path segment when present
+    const segMatch = String(url).match(/\/(Ti|S|M|L|XL)\//);
+    if (segMatch) return SIZE_RANK[String(segMatch[1]).toUpperCase()] ?? SIZE_RANK.UNKNOWN;
+
+    // Fallback to suffix (rare)
+    const suffixMatch = String(url).match(/-(Ti|S|M|L|XL)\.(?:jpe?g|png|webp|gif|avif)(?:\?.*)?$/i);
+    if (suffixMatch) return SIZE_RANK[String(suffixMatch[1]).toUpperCase()] ?? SIZE_RANK.UNKNOWN;
+  } catch {
+    // ignore
+  }
+  return SIZE_RANK.UNKNOWN;
+}
+
+function pickPreferredUrl(existingUrl, candidateUrl, desiredRank) {
+  if (!candidateUrl) return existingUrl;
+  if (!existingUrl) return candidateUrl;
+
+  const existingRank = detectUrlSizeRank(existingUrl);
+  const candidateRank = detectUrlSizeRank(candidateUrl);
+
+  // If we can't determine sizes, avoid churn.
+  if (existingRank === SIZE_RANK.UNKNOWN && candidateRank === SIZE_RANK.UNKNOWN) return existingUrl;
+  if (existingRank === SIZE_RANK.UNKNOWN) return candidateUrl;
+  if (candidateRank === SIZE_RANK.UNKNOWN) return existingUrl;
+
+  const existingIsBigEnough = existingRank >= desiredRank;
+  const candidateIsBigEnough = candidateRank >= desiredRank;
+
+  // Prefer any option that meets/exceeds desired size.
+  if (existingIsBigEnough && !candidateIsBigEnough) return existingUrl;
+  if (!existingIsBigEnough && candidateIsBigEnough) return candidateUrl;
+
+  // If both meet/exceed desired size, choose the closest-to-desired (smallest that is still >= desired).
+  if (existingIsBigEnough && candidateIsBigEnough) {
+    const existingDiff = existingRank - desiredRank;
+    const candidateDiff = candidateRank - desiredRank;
+    if (candidateDiff < existingDiff) return candidateUrl;
+    if (existingDiff < candidateDiff) return existingUrl;
+    // Tie-breaker: keep existing
+    return existingUrl;
+  }
+
+  // If neither meets desired, choose the largest available.
+  if (candidateRank > existingRank) return candidateUrl;
+  return existingUrl;
+}
+
+function mergeUrlsByQuality(existing = {}, incoming = {}) {
+  const merged = { ...existing };
+  for (const key of ['s', 'm', 'l', 'xl', 'src']) {
+    if (!incoming[key]) continue;
+    const desiredRank = DESIRED_RANK_BY_KEY[key] ?? SIZE_RANK.UNKNOWN;
+    merged[key] = pickPreferredUrl(merged[key], incoming[key], desiredRank);
+  }
+
+  // Ensure `src` is the best available overall (used as last-resort fallback in the worker).
+  const bestOverall = ['xl', 'l', 'm', 's', 'src']
+    .map(k => merged[k])
+    .filter(Boolean)
+    .sort((a, b) => detectUrlSizeRank(b) - detectUrlSizeRank(a))[0];
+
+  if (bestOverall) merged.src = bestOverall;
+  return merged;
+}
+
 // Recursively find all .mjs files (excluding backups)
 function findMjsFiles(dir, files = []) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -43,6 +128,9 @@ function findMjsFiles(dir, files = []) {
         findMjsFiles(fullPath, files);
       }
     } else if (entry.name.endsWith('.mjs')) {
+      if (EXCLUDED_FILES.includes(entry.name)) {
+        continue;
+      }
       // Skip backup/copy files
       if (BACKUP_PATTERN.test(entry.name)) {
         continue;
@@ -146,9 +234,9 @@ async function main() {
       for (const { id, urls } of images) {
         // Merge with existing (in case same image appears in multiple galleries)
         if (manifest[id]) {
-          manifest[id] = { ...manifest[id], ...urls };
+          manifest[id] = mergeUrlsByQuality(manifest[id], urls);
         } else {
-          manifest[id] = urls;
+          manifest[id] = mergeUrlsByQuality({}, urls);
           imageCount++;
         }
         urlCount += Object.keys(urls).length;

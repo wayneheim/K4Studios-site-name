@@ -57,7 +57,9 @@ import {
   logVerifiedBot
 } from './src/analytics/index.js';
 
-const MANIFEST_URL = "https://k4studios.com/image-manifest.json";
+// Cache-bust parameter to avoid waiting on Cloudflare's cached manifest after deploys.
+// Update this when you need the worker to pick up a newly deployed manifest immediately.
+const MANIFEST_URL = "https://k4studios.com/image-manifest.json?v=20260223-699cdba7";
 const IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";
 const MANIFEST_CACHE_TTL = 3600; // seconds
 
@@ -473,6 +475,17 @@ function hasK4SessionCookies(request) {
   return /(?:^|;)\s*k4_vid=/.test(cookieHeader) || /(?:^|;)\s*k4_sid=/.test(cookieHeader);
 }
 
+function getFetchHints(request) {
+  try {
+    const secFetchSite = (request.headers.get('Sec-Fetch-Site') || request.headers.get('sec-fetch-site') || '').toLowerCase();
+    const secFetchDest = (request.headers.get('Sec-Fetch-Dest') || request.headers.get('sec-fetch-dest') || '').toLowerCase();
+    const secFetchMode = (request.headers.get('Sec-Fetch-Mode') || request.headers.get('sec-fetch-mode') || '').toLowerCase();
+    return { secFetchSite, secFetchDest, secFetchMode };
+  } catch {
+    return { secFetchSite: '', secFetchDest: '', secFetchMode: '' };
+  }
+}
+
 function isDiscoveryBotUA(uaRaw) {
   // Explicit allowlist for discovery and preview ecosystems.
   // Do NOT include AI crawlers here.
@@ -488,7 +501,9 @@ function getSuspicionFlags({ request, asn, ua }) {
   const noSession = !hasK4SessionCookies(request);
 
   const hostingASNs = new Set([
+    14618, // Amazon.com, Inc. (AWS) — common origin for bulk bots/scrapers
     24940, // Hetzner
+    209366, // Semrush (crawler infrastructure)
     16276  // OVH
   ]);
 
@@ -633,7 +648,9 @@ async function handleImageRequest(request, ctx, env) {
   try {
     if (request.method === 'GET') {
       const ua = request.headers.get('User-Agent') || '';
-      const discoveryBypass = isDiscoveryBotUA(ua);
+      // Never friction Cloudflare-verified bots (SEO/indexing safe).
+      const cfVerifiedBot = Boolean(request.cf?.botManagement?.verifiedBot);
+      const discoveryBypass = cfVerifiedBot || isDiscoveryBotUA(ua);
       const effectiveAsn = frictionTest?.asn ?? request.cf?.asn;
       const flags = getSuspicionFlags({ request, asn: effectiveAsn, ua });
       const protectSizes = new Set(['l', 'xl', 'src']);
@@ -730,6 +747,8 @@ async function handleImageRequest(request, ctx, env) {
           }
 
           const referer = request.headers.get('Referer') || '';
+          const { secFetchSite } = getFetchHints(request);
+          const looksLikeSameSiteSubresource = secFetchSite === 'same-origin' || secFetchSite === 'same-site';
           let refererUrl = null;
           try { refererUrl = referer ? new URL(referer) : null; } catch { refererUrl = null; }
           const refererHost = (refererUrl?.hostname || '').toLowerCase();
@@ -746,11 +765,13 @@ async function handleImageRequest(request, ctx, env) {
             ctx.waitUntil(logArtView(env, 'chapter_exposure', route.canonicalImageId, request, sessionId, 'proxy', visitorId, 'l', 'internal', null, null, route.assetSource));
           } else if (!isInternal && referer) {
             ctx.waitUntil(logArtView(env, 'external_image', route.canonicalImageId, request, sessionId, 'proxy', visitorId, 'l', 'external', null, null, route.assetSource));
-          } else if (!referer) {
+          } else if (!referer && !looksLikeSameSiteSubresource) {
             ctx.waitUntil(logArtView(env, 'direct_image', route.canonicalImageId, request, sessionId, 'proxy', visitorId, 'l', 'direct', null, null, route.assetSource));
           }
 
-          if (isVerifiedSearchBot(ua)) {
+          // Only treat a request as a *verified* bot when Cloudflare says so.
+          // UA matching is trivially spoofable and can poison bot intelligence.
+          if (request.cf?.botManagement?.verifiedBot) {
             ctx.waitUntil(logVerifiedBot(env, route.canonicalImageId, request));
           }
         }
@@ -804,6 +825,8 @@ async function handleImageRequest(request, ctx, env) {
 
       if (!isCacheWarmer && route.size === 'l') {
         const referer = request.headers.get('Referer') || '';
+        const { secFetchSite } = getFetchHints(request);
+        const looksLikeSameSiteSubresource = secFetchSite === 'same-origin' || secFetchSite === 'same-site';
 
         let refererUrl = null;
         try {
@@ -834,13 +857,14 @@ async function handleImageRequest(request, ctx, env) {
           ctx.waitUntil(logArtView(env, 'chapter_exposure', canonicalId, request, sessionId, 'proxy', visitorId, 'l', 'internal', null, null, assetSource));
         } else if (!isInternal && referer) {
           ctx.waitUntil(logArtView(env, 'external_image', canonicalId, request, sessionId, 'proxy', visitorId, 'l', 'external', null, null, assetSource));
-        } else if (!referer) {
+        } else if (!referer && !looksLikeSameSiteSubresource) {
           ctx.waitUntil(logArtView(env, 'direct_image', canonicalId, request, sessionId, 'proxy', visitorId, 'l', 'direct', null, null, assetSource));
         }
       }
       
-      // Track verified search bots by User-Agent (free plan doesn't have botManagement)
-      if (isVerifiedSearchBot(ua)) {
+      // Only treat a request as a *verified* bot when Cloudflare says so.
+      // UA matching is trivially spoofable and can poison bot intelligence.
+      if (request.cf?.botManagement?.verifiedBot) {
         ctx.waitUntil(logVerifiedBot(env, route.canonicalImageId, request));
       }
     }
@@ -1069,38 +1093,60 @@ async function handleGatewayRequest(request, env) {
       });
     }
 
-    // EDGE REFERRER CAPTURE: Set k4_entry_ref cookie on first HTML request
-    // This captures the true referrer before SPA navigation loses it
+    // EDGE REFERRER CAPTURE: Maintain k4_entry_ref on true top-level navigations.
+    // Goal: capture the *external* entry source before SPA navigation loses it,
+    // while also clearing stale external attribution on bookmark/typed visits.
     const cookies = request.headers.get("cookie") || "";
-    const hasEntryRefCookie = cookies.includes("k4_entry_ref=");
-    
+
     // Only set cookie on true top-level navigation (not SPA transitions or iframes)
-    const isTopLevelNav = 
+    const isTopLevelNav =
       request.headers.get("Sec-Fetch-Dest") === "document" &&
       request.headers.get("Sec-Fetch-Mode") === "navigate";
-    
-    if (!hasEntryRefCookie && isTopLevelNav) {
+
+    if (isTopLevelNav) {
       // Capture the raw referrer from the edge (most reliable source)
-      // Store the full URL so the SQL CASE can distinguish google_images vs google_search etc.
+      // Store the full URL so SQL can distinguish google_images vs google_search, etc.
       const edgeReferer = request.headers.get("referer") || "";
-      const cookieValue = edgeReferer 
-        ? encodeURIComponent(edgeReferer) 
-        : "direct";
-      
-      // Log for debugging
-      console.log("Edge referrer capture:", { raw: edgeReferer, cookieValue });
-      
-      // Fetch the origin response
-      console.log("PROXY TARGET (cookie-set):", request.url);
-      const originResponse = await fetch(request);
-      
-      // Clone response and add the cookie
-      const newResponse = new Response(originResponse.body, originResponse);
-      newResponse.headers.append(
-        "Set-Cookie",
-        `k4_entry_ref=${cookieValue}; Max-Age=3600; Path=/; Secure; SameSite=Lax`
-      );
-      return newResponse;
+
+      const cookieMatch = cookies.match(/(?:^|;\s*)k4_entry_ref=([^;]+)/);
+      const existingCookieValue = cookieMatch ? cookieMatch[1] : null;
+
+      // Do not treat internal navigation as a new "entry".
+      let isInternalReferer = false;
+      try {
+        if (edgeReferer) {
+          const u = new URL(edgeReferer);
+          const host = (u.hostname || '').toLowerCase();
+          isInternalReferer = host === 'localhost' || host === '127.0.0.1' || host.endsWith('k4studios.com');
+        }
+      } catch {
+        isInternalReferer = false;
+      }
+
+      // Overwrite rules:
+      // - No referer (bookmark/typed/new-tab) => overwrite to direct (clears stale Google).
+      // - External referer => overwrite to that referer (new entry source).
+      // - Internal referer => do not overwrite.
+      const desiredCookieValue = edgeReferer ? encodeURIComponent(edgeReferer) : 'direct';
+      const shouldSetCookie = (!edgeReferer || !isInternalReferer) && existingCookieValue !== desiredCookieValue;
+      if (shouldSetCookie) {
+        const cookieValue = desiredCookieValue;
+
+        // Log for debugging
+        console.log("Edge referrer capture:", { raw: edgeReferer, cookieValue });
+
+        // Fetch the origin response
+        console.log("PROXY TARGET (cookie-set):", request.url);
+        const originResponse = await fetch(request);
+
+        // Clone response and add the cookie
+        const newResponse = new Response(originResponse.body, originResponse);
+        newResponse.headers.append(
+          "Set-Cookie",
+          `k4_entry_ref=${cookieValue}; Max-Age=3600; Path=/; Secure; SameSite=Lax`
+        );
+        return newResponse;
+      }
     }
   }
 
@@ -2145,7 +2191,8 @@ export default {
     }
 
     // 0a) Analytics tracking endpoints — delegated to analytics worker
-    if (url.pathname === "/track") {
+    // NOTE: Client uses /__k4e as a less-adblock-prone alias.
+    if (url.pathname === "/track" || url.pathname === "/__k4e") {
       if (env.ANALYTICS_ENABLED === "true" && env.ANALYTICS) {
         return env.ANALYTICS.fetch(request);
       }

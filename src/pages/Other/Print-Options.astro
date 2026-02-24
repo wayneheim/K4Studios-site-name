@@ -23,6 +23,16 @@ import { painterlyStory as westernStory } from '@/data/Other/Print-Options/story
 
 import '@/styles/global.css';
 
+type AwardItem = { title: string; note: string };
+type StorySection = {
+  title?: string;
+  subhead?: string;
+  tagline?: string;
+  paragraphs?: string[];
+  awards?: AwardItem[];
+  list?: string[];
+};
+
 // ----------------------
 // DYNAMIC LOGIC SECTION
 // ----------------------
@@ -53,8 +63,11 @@ const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav
   ? recursivelyGatherAllGalleryHrefs(landingNav)
   : [];
-const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
-const galleryDatas = galleryPaths.map(path => {
+const allGalleryData = import.meta.glob<{ galleryData: any[] }>(
+  '@/data/Galleries/**/*.mjs',
+  { eager: true }
+);
+const galleryDatas = galleryPaths.map((path) => {
   const filePath = "@/data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
   return allGalleryData[filePath]?.galleryData || [];
 });
@@ -65,13 +78,17 @@ const featheredImages = getSideImages({
   poolMultiplier: 3
 });
 
+const landingDescription =
+  landingWestern.subtitle || (landingWestern as any)?.description || "";
+const landingKeywords = (landingWestern as any)?.keywords || [];
+
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
-    description: landingWestern.subtitle || landingWestern.description,
+    description: landingDescription,
     url: `https://k4studios.com${sectionPath}`,
-    keywords: landingWestern.keywords || [],
+    keywords: landingKeywords,
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,
@@ -126,18 +143,18 @@ const structuredData = getStructuredData({
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
-          {westernStory.map((section, index) => (
-            <article class="story-block" key={index}>
+          {westernStory.map((section: StorySection, index: number) => (
+            <article class="story-block">
               {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
-              {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+              {section.paragraphs?.map((para: string, i: number) => (
+                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
               ))}
               {section.awards && section.awards.length > 0 && (
                 <ul class="awards-list">
-                  {section.awards.map((award, j) => (
-                    <li key={j} class="reveal-on-scroll">
+                  {section.awards.map((award: AwardItem, j: number) => (
+                    <li class="reveal-on-scroll">
                       <strong>{award.title}</strong>: <span set:html={autoLinkKeywordsInText(award.note, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
                     </li>
                   ))}
@@ -145,8 +162,8 @@ const structuredData = getStructuredData({
               )}
               {section.list && section.list.length > 0 && (
                 <ul>
-                  {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                  {section.list.map((item: string, j: number) => (
+                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
                   ))}
                 </ul>
               )}

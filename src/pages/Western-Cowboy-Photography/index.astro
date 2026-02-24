@@ -85,6 +85,9 @@ const galleryDatas = galleryPaths.map((path) => {
 // Feathering uses headingCount to decide how many it needs
 const headingCount = westernStory.filter((block: any, i: number) => i > 0 && block.subhead).length;
 
+const landingDescription =
+  landingWestern.subtitle || (landingWestern as any)?.description || '';
+
 // ✅ Feathered images: cowboy-universe only
 const featheredImages = getFeatheredImages({
   sectionPath: imageSectionPath,
@@ -104,7 +107,7 @@ const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
-    description: landingWestern.subtitle || landingWestern.description,
+    description: landingDescription,
     url: `https://k4studios.com${pagePath}`,
     keywords: landingWestern.keywords || [],
     copyrightNotice: "© Wayne Heim",
@@ -280,7 +283,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
       <div class="text-column">
         <section class="story-section">
           {westernStory.map((section: any, index: number) => (
-            <article class="story-block" key={index}>
+            <article class="story-block">
               {section.title && (
                 <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
               )}
@@ -291,14 +294,14 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
                 <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
               )}
 
-              {section.paragraphs?.map((para: string, i: number) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
+              {section.paragraphs?.map((para: string) => (
+                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
               ))}
 
               {section.list && section.list.length > 0 && (
                 <ul>
-                  {section.list.map((item: string, j: number) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
+                  {section.list.map((item: string) => (
+                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
                   ))}
                 </ul>
               )}

@@ -755,6 +755,10 @@ const isSpeechActive = () => {
                  Chapter Index
                 </h2>
 
+                <p className="text-sm text-gray-600 max-w-xl mb-8 leading-relaxed">
+                  Click any image to view the full story and preview the series.
+                </p>
+
                 <div className="flex flex-wrap justify-center gap-4 mb-10 max-w-[614px] mx-auto">
                   {filteredData.filter(img => 
                     img.id !== "i-k4studios" &&

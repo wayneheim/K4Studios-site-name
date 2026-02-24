@@ -17,7 +17,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
-import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
 
@@ -60,12 +60,32 @@ const image4 = {
 const pageTitle = "What Is Artistic Western Photography? | K4 Studios";
 const pageDescription = "Artistic Western photography transforms the American West into fine art through composition, light, and vision—blending documentary roots with painterly intent.";
 
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImage.id, "l"),
+  getAbsoluteProxySrc(image1.id, "l"),
+  getAbsoluteProxySrc(image2.id, "l"),
+  getAbsoluteProxySrc(image3.id, "l"),
+  getAbsoluteProxySrc(image4.id, "l"),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "Western Art", item: "https://www.k4studios.com/Blog/what-is-western-art" },
+    { name: "Western Fine Art", item: "https://www.k4studios.com/Blog/what-is-western-fine-art" },
+    { name: "Western Fine Art Photography", item: "https://www.k4studios.com/Blog/what-is-western-fine-art-photography" },
+    { name: "Artistic Western Photography", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
 const structuredData = getStructuredData({
   type: "Article",
   data: {
     headline: "What Is Artistic Western Photography?",
     description: pageDescription,
     url: canonicalUrl,
+    image: structuredImageUrls,
     copyrightNotice: "© Wayne Heim",
     author: {
       "@type": "Person",
@@ -73,6 +93,11 @@ const structuredData = getStructuredData({
     },
     datePublished: "2026-02-02",
     articleSection: "Fine Art Photography",
+    definedTerm: {
+      name: "Artistic Western Photography",
+      description: "An expressive, interpretive approach within Western fine art photography where authorship shapes emotional meaning beyond documentary record.",
+      termSet: "https://www.k4studios.com/Glossary",
+    },
     keywords: [
       "artistic western photography",
       "western fine art photography",
@@ -114,6 +139,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
   structuredDataJSON={structuredData}
   meta={meta}
 >
+  <script type="application/ld+json" set:html={breadcrumbStructuredData} />
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={blogBreadcrumb} />

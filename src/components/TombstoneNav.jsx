@@ -39,7 +39,15 @@ function normalizeThumbUrl(url) {
   return url;
 }
 
-export default function TombstoneNav({ items = [], title, subtitle, pageContext: propPageContext }) {
+/**
+ * @param {{ items?: any[]; title?: any; subtitle?: any; pageContext?: any }} props
+ */
+export default function TombstoneNav({
+  items = [],
+  title = null,
+  subtitle = null,
+  pageContext: propPageContext = null,
+} = {}) {
   const gridClass = `tile-grid${items.length === 2 ? ' two-tiles' : ''}`;
 
   // Client-side random thumb selection from thumbs array

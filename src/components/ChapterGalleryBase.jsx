@@ -694,6 +694,10 @@ export default function ChapterGalleryBase({
   // Dedupe is enforced in src/utils/analytics.ts (per-image per-session).
   useEffect(() => {
     if (viewMode === "grid") return;
+    const alreadyOnImage = /\/i-[a-zA-Z0-9_-]+$/.test(window.location.pathname);
+    // Guardrail: preview-strip selection can change currentIndex before the user
+    // actually enters chapters. Do not count those as chapter views.
+    if (!hasEnteredChapters && !alreadyOnImage) return;
     const imageId = galleryData[currentIndex]?.id;
     if (!imageId) return;
     trackEvent('chapter_view', {
@@ -702,7 +706,7 @@ export default function ChapterGalleryBase({
       pageType: 'image',
       trigger: 'index_change'
     });
-  }, [currentIndex, galleryData, viewMode, galleryKey]);
+  }, [currentIndex, galleryData, viewMode, galleryKey, hasEnteredChapters]);
 
   // ✅ Replaced old title updater with the hook
   const entry = galleryData[currentIndex];

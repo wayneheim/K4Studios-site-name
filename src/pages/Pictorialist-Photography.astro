@@ -29,7 +29,23 @@ import '@/styles/global.css';
 // ----------------------
 
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History";
-const mobileCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
+
+type StorySection = {
+  title?: string;
+  subhead?: string;
+  tagline?: string;
+  paragraphs?: string[];
+  list?: string[];
+};
+
+const westernStorySections = westernStory as unknown as StorySection[];
+const mobileCount = westernStorySections.filter((block, i) => i > 0 && block.subhead).length;
+
+const landingDescription =
+  landingWestern.subtitle || (landingWestern as any)?.description || '';
+const landingKeywords = Array.isArray((landingWestern as any)?.keywords)
+  ? (landingWestern as any).keywords
+  : [];
 
 // --- COLLECT ALL DESCENDANT GALLERIES --- //
 function collectGalleryHrefs(node) {
@@ -53,10 +69,10 @@ function findNavEntry(nav, url) {
 const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav ? collectGalleryHrefs(landingNav) : [];
 
-const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
+const allGalleryData = import.meta.glob<{ galleryData?: any[] }>('@/data/Galleries/**/*.mjs', { eager: true });
 const galleryDatas = galleryPaths.map(path => {
   const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
-  return allGalleryData[filePath]?.galleryData || [];
+  return allGalleryData[filePath]?.galleryData ?? [];
 });
 
 const featheredImages = getSideImages({
@@ -70,9 +86,9 @@ const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
-    description: landingWestern.subtitle || landingWestern.description,
+    description: landingDescription,
     url: `https://k4studios.com${sectionPath}`,
-    keywords: landingWestern.keywords || [],
+    keywords: landingKeywords,
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,
@@ -133,8 +149,8 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
-          {westernStory.map((section, index) => (
-            <article class="story-block" key={index}>
+          {westernStorySections.map((section) => (
+            <article class="story-block">
               {section.title && (
                 <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
               )}
@@ -144,13 +160,13 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
               {section.tagline && (
                 <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
               )}
-              {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+              {section.paragraphs?.map((para) => (
+                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
-                  {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                  {section.list.map((item) => (
+                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
                   ))}
                 </ul>
               )}

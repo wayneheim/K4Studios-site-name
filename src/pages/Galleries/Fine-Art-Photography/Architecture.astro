@@ -55,8 +55,11 @@ const landingNav = findNavEntry(siteNav, sectionPath);
 const galleryPaths = landingNav
   ? recursivelyGatherAllGalleryHrefs(landingNav)
   : [];
-const allGalleryData = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
-const galleryDatas = galleryPaths.map(path => {
+const allGalleryData = import.meta.glob<{ galleryData: any[] }>(
+  '@/data/Galleries/**/*.mjs',
+  { eager: true }
+);
+const galleryDatas = galleryPaths.map((path) => {
   const filePath = `@/data/Galleries${path.replace(/^\/Galleries/, "")}.mjs`;
   return allGalleryData[filePath]?.galleryData || [];
 });
@@ -93,13 +96,17 @@ if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
 // ----------------------
 // Structured Data
 // ----------------------
+const landingDescription =
+  landingWestern.subtitle || (landingWestern as any)?.description || "";
+const landingKeywords = (landingWestern as any)?.keywords || [];
+
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
-    description: landingWestern.subtitle || landingWestern.description,
+    description: landingDescription,
     url: `https://k4studios.com${sectionPath}`,
-    keywords: landingWestern.keywords || [],
+    keywords: landingKeywords,
     copyrightNotice: "© Wayne Heim"
   },
   images: featheredImages,
@@ -161,17 +168,17 @@ const structuredData = getStructuredData({
       <div class="text-column">
         <section class="story-section">
           {westernStory.map((section, index) => (
-            <article class="story-block" key={index}>
+            <article class="story-block">
               {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
                   ))}
                 </ul>
               )}
@@ -179,7 +186,7 @@ const structuredData = getStructuredData({
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
       </div>
 
       <div class="sidebar-column hidden md:block">
@@ -188,6 +195,7 @@ const structuredData = getStructuredData({
             client:load
             heading="Collection Samples"
             images={featheredImagesSidebar}
+            displayCount={6}
           />
         </div>
       </div>

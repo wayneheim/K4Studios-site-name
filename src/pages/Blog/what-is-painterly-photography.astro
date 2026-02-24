@@ -12,7 +12,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
-import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 
 import "@/styles/global.css";
@@ -52,12 +52,32 @@ const image3 = {
 const pageTitle = "What Is Painterly Photography? Meaning, Misuse, and Fine Art Distinction";
 const pageDescription = "Painterly photography is a term used in many ways — from editing presets to fine art practice. This article distinguishes surface effects from the discipline of painterly fine art photography.";
 
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImage.id, "l"),
+  getAbsoluteProxySrc(image1.id, "l"),
+  getAbsoluteProxySrc(image2.id, "l"),
+  getAbsoluteProxySrc(image3.id, "l"),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "Western Art", item: "https://www.k4studios.com/Blog/what-is-western-art" },
+    { name: "Western Fine Art", item: "https://www.k4studios.com/Blog/what-is-western-fine-art" },
+    { name: "Western Fine Art Photography", item: "https://www.k4studios.com/Blog/what-is-western-fine-art-photography" },
+    { name: "Artistic Western Photography", item: "https://www.k4studios.com/Blog/what-is-artistic-western-photography" },
+    { name: "Painterly Photography", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
 const structuredData = getStructuredData({
   type: "Article",
   data: {
     headline: "What Is Painterly Photography?",
     description: pageDescription,
     url: canonicalUrl,
+    image: structuredImageUrls,
     copyrightNotice: "© Wayne Heim",
     author: {
       "@type": "Person",
@@ -65,6 +85,10 @@ const structuredData = getStructuredData({
     },
     datePublished: "2026-01-24",
     articleSection: "Photography",
+    definedTerm: {
+      name: "Painterly Photography",
+      description: pageDescription,
+    },
     keywords: [
       "painterly photography",
       "painterly fine art photography",
@@ -108,6 +132,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
   structuredDataJSON={structuredData}
   meta={meta}
 >
+  <script type="application/ld+json" set:html={breadcrumbStructuredData} />
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb={blogBreadcrumb} />

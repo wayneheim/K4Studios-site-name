@@ -131,7 +131,8 @@ const structuredData = getStructuredData({
               galleryDatas,
               featheredImages,
               galleryPaths,
-              defaultSemantic
+              defaultSemantic,
+              sectionPath
             )}
           />
         )}
@@ -143,7 +144,8 @@ const structuredData = getStructuredData({
               galleryDatas,
               featheredImages,
               galleryPaths,
-              defaultSemantic
+              defaultSemantic,
+              sectionPath
             )}
           />
         )}
@@ -155,7 +157,8 @@ const structuredData = getStructuredData({
               galleryDatas,
               featheredImages,
               galleryPaths,
-              defaultSemantic
+              defaultSemantic,
+              sectionPath
             )}
           />
         )}
@@ -168,7 +171,8 @@ const structuredData = getStructuredData({
               galleryDatas,
               featheredImages,
               galleryPaths,
-              defaultSemantic
+              defaultSemantic,
+              sectionPath
             )}
           />
         ))}
@@ -183,7 +187,8 @@ const structuredData = getStructuredData({
                   galleryDatas,
                   featheredImages,
                   galleryPaths,
-                  defaultSemantic
+                  defaultSemantic,
+                  sectionPath
                 )}
               />
             ))}
@@ -197,6 +202,7 @@ const structuredData = getStructuredData({
     client:load
     heading="Featured Portraits"
     images={featheredImages.slice(0, 5)}
+    displayCount={5}
   />
 
   <FAQAccordion items={westernFAQ} />
@@ -204,6 +210,7 @@ const structuredData = getStructuredData({
   <MobileStoryImages
     client:load
     images={sanitizeForClient(featheredImages)}
+    displayCount={headingCount}
   />
 
   <SiteFooter />

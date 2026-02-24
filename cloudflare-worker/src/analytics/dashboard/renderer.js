@@ -247,6 +247,11 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       externalViews
     };
   })();
+
+  // Pulse stat: proxy-verified exposures only (matches tooltip copy).
+  // C = JS-verified chapter views
+  // E = external embed views (subset of image-proxy bucket)
+  const exposureViews = (imageAccessTotals.chapterViews || 0) + (imageAccessTotals.externalViews || 0);
   
   return `<!DOCTYPE html>
 <html lang="en">
@@ -265,6 +270,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       --k4-grid-panel-max: 420px;
     }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1a1a1a; color: #e0e0e0; padding: 20px; }
+    body.k4-loading, body.k4-loading * { cursor: progress !important; }
     .container { max-width: 1800px; margin: 0 auto; }
     h1 { color: #fff; margin-bottom: 20px; }
     h2 { color: #888; font-size: 14px; text-transform: uppercase; margin: 20px 0 10px; }
@@ -859,7 +865,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <div class="tooltip">Engaged sessions: browser sessions where JS loaded and events fired. Range shows min-max engagement scores (zoom=4, notes=5, theme=3, nav=2).</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
-      <span class="value" style="color: #fff;">👤 ${artViewsSummary?.total || 0}</span>
+      <span class="value" style="color: #fff;">👤 ${exposureViews}</span>
       <span class="label" style="color: #ddd6fe;">Exposure Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
       <div class="tooltip">Proxy-verified exposures: <strong>C</strong> (Chapters) + <strong>E</strong> (External image serves). It intentionally does <em>not</em> include <strong>Z</strong> (XL zoom intent) or gallery navigation.</div>
     </div>
@@ -909,7 +915,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         <span style="font-size: 10px; color: #555;">
           <span style="color: #a78bfa;">C</span>=Chapter JS
           <span style="color: #8b5cf6;">i</span>=Image proxy
-          <span style="color: #f59e0b;">U</span>=Unverified
+          <span style="color: #f59e0b;">U</span>=Unverified (no cookie)
           <span style="color: #3b82f6;">E</span>=External
         </span>
         <div class="access-stats" style="margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
@@ -929,7 +935,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#8b5cf622;color:#8b5cf6;font-size:10px;font-weight:bold;border:1px solid #8b5cf655;">i</span>
             <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.imageProxyViews}</span>
           </span>
-          <span title="Unverified views (non-JS direct/internal)" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #f59e0b55;background:#f59e0b14;color:#f59e0b;font-size:12px;">
+          <span title="Unverified views (non-JS, missing visitor cookie). Source labels come from Referer header presence." style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #f59e0b55;background:#f59e0b14;color:#f59e0b;font-size:12px;">
             <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f59e0b22;color:#f59e0b;font-size:10px;font-weight:bold;border:1px solid #f59e0b55;">U</span>
             <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.unverifiedViews}</span>
           </span>
@@ -949,7 +955,10 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:9px;font-weight:bold;border:1px solid #06b6d455;" title="Zoom views">Z</span></span>
           <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#8b5cf622;color:#8b5cf6;font-size:9px;font-weight:bold;border:1px solid #8b5cf655;" title="Image proxy (no JS)">i</span></span>
           <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f59e0b22;color:#f59e0b;font-size:9px;font-weight:bold;border:1px solid #f59e0b55;" title="Unverified (non-JS direct/internal)">U</span></span>
-          <span>Source</span>
+          <span style="display:flex;align-items:center;gap:8px;">
+            <span>Source</span>
+            <span onclick="sortAccessTime()" id="accessTimeHeader" title="Sort by time (newest first)" style="cursor:pointer; user-select:none; font-size: 12px; opacity: 0.9;">🕒</span>
+          </span>
         </div>
         ${(imageAccessOverview || []).map((row, i) => {
           const imageId = row.image_id?.startsWith('i-') ? row.image_id : null;
@@ -1011,7 +1020,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             const label = (b === 'U') ? 'u' : (b === 'I') ? 'i' : b;
             return '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:' + c.bg + ';color:' + c.text + ';font-size:10px;font-weight:bold;border:1px solid ' + c.bdr + ';" title="' + (b === 'C' ? 'Chapter View (JS verified)' : b === 'I' ? 'Image Exposure (proxy only)' : b === 'E' ? 'External Referral' : 'Unverified') + '">' + label + '</span>';
           }).join(' ');
-          const srcIcons = { 'Google Search': '🔍', 'Google Images': '🖼️', 'Bing': '🔍', 'Twitter/X': '🐦', 'Facebook': '📘', 'Pinterest': '📌', 'DuckDuckGo': '🦆', 'ChatGPT': '🧠', 'Open Graph': '🕸️', 'Structured Data': '🧾', 'Direct': '🔗', 'Internal': '🏠', 'Unknown': '❓' };
+          const srcIcons = { 'Google Search': '🔍', 'Google Images': '🖼️', 'Bing': '🔍', 'Twitter/X': '🐦', 'Facebook': '📘', 'Pinterest': '📌', 'DuckDuckGo': '🦆', 'ChatGPT': '🧠', 'Open Graph': '🕸️', 'Structured Data': '🧾', 'No Referrer': '🔗', 'Direct': '🔗', 'Internal': '🏠', 'Unknown': '❓' };
           function normalizeSourceDomain(raw) {
             if (!raw) return '';
             const s = String(raw).trim();
@@ -1076,9 +1085,44 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
               + '<span style="opacity:0.95;">' + safeLabel + '</span>'
               + '</span>';
           }
+          function rankSourceForDisplay(src) {
+            const pretty = String(src || '').trim();
+            if (!pretty) return 999;
+            const baseLabel = pretty.replace(/\s*\([^)]*\)\s*$/, '').trim();
+
+            // Prefer actionable/diagnostic sources first.
+            const rank = {
+              'Google Images': 0,
+              'Google Search': 1,
+              'Google': 1,
+              'Bing': 2,
+              'Pinterest': 3,
+              'Twitter/X': 4,
+              'Facebook': 5,
+              'DuckDuckGo': 6,
+              'ChatGPT': 7,
+              'Open Graph': 20,
+              'Structured Data': 21,
+              'No Referrer': 80,
+              // Keep legacy label low-priority (older mental model)
+              'Direct': 85,
+              'Internal': 90,
+              'Unknown': 99
+            };
+            if (rank[pretty] != null) return rank[pretty];
+            if (rank[baseLabel] != null) return rank[baseLabel];
+            // Domains/other labels land in the middle.
+            return 40;
+          }
+
           const sources = Array.isArray(row.sources) ? row.sources : [];
-          const srcHtml = sources.length > 0
-            ? sources.slice(0, 2).map(sourceBadgeHtml).join(' ')
+          const sourcesSorted = sources
+            .map(s => String(s || '').trim())
+            .filter(Boolean)
+            .sort((a, b) => rankSourceForDisplay(a) - rankSourceForDisplay(b) || a.localeCompare(b));
+
+          const srcHtml = sourcesSorted.length > 0
+            ? sourcesSorted.slice(0, 2).map(sourceBadgeHtml).join(' ')
             : '<span title="No external referrer observed for this image yet" style="display:inline-flex;align-items:center;gap:6px;color:#666;font-size:11px;white-space:nowrap;">'
               + '<span style="font-size:12px;">🌐</span>'
               + '<span>Awaiting external referrer</span>'
@@ -1096,7 +1140,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           const uColor = uViews > 0 ? '#f59e0b' : '#333';
           // Row border color based on primary badge
           const borderColor = row.badges.includes('C') ? '#a78bfa44' : row.badges.includes('I') ? '#8b5cf644' : row.badges.includes('E') ? '#3b82f644' : '#f59e0b44';
-          return '<a href="' + linkUrl + '" target="_blank" class="access-row" data-badges="' + row.badges.join(',') + '" data-country="' + (geoCountry || '') + '" data-region="' + ((geo?.region || '') + '') + '" data-city="' + ((geo?.city || '') + '') + '" style="display:grid;grid-template-columns:90px 220px 180px 90px 90px 90px 90px auto;gap:10px;align-items:center;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ' + borderColor + ';text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.04)\'" onmouseout="this.style.background=\'transparent\'">' +
+          return '<a href="' + linkUrl + '" target="_blank" class="access-row" data-badges="' + row.badges.join(',') + '" data-country="' + (geoCountry || '') + '" data-region="' + ((geo?.region || '') + '') + '" data-city="' + ((geo?.city || '') + '') + '" data-lastseen="' + (row.last_seen || '') + '" style="display:grid;grid-template-columns:90px 220px 180px 90px 90px 90px 90px auto;gap:10px;align-items:center;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ' + borderColor + ';text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.04)\'" onmouseout="this.style.background=\'transparent\'">' +
             '<div style="display:flex;align-items:center;justify-content:center;width:90px;">' +
               (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 6 ? 'eager' : 'lazy') + '" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid ' + p.bdr + ';">' : '<span style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:1px solid ' + p.bdr + ';">🖼</span>') +
             '</div>' +
@@ -1143,11 +1187,12 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
                 return '<span title="Devices" style="display:inline-flex;align-items:center;gap:4px;opacity:0.85;">' + icons + '</span>';
               }
               const deviceIcons = galleryDeviceIconsHtml(devices);
+              const displayLabel = a.display_name || a.target_id;
               return '<a href="' + linkUrl + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(196, 181, 253, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #c4b5fd; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(196,181,253,0.25)\'" onmouseout="this.style.background=\'rgba(196,181,253,0.1)\'">' +
                 '<span style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">📁</span>' +
                 '<div style="flex: 1; min-width: 0;">' +
                   '<div style="display:flex; align-items:center; gap:6px;">'
-                    + '<div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; flex: 1; min-width: 0;" title="' + a.target_id + '">' + a.target_id + '</div>'
+                    + '<div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; flex: 1; min-width: 0;" title="' + a.target_id + '">' + displayLabel + '</div>'
                     + (deviceIcons ? deviceIcons : '')
                   + '</div>' +
                   '<div style="display: flex; gap: 8px; margin-top: 2px;">' +
@@ -1231,6 +1276,34 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       var hdr = document.getElementById('accessLocationHeader');
       if (hdr) hdr.style.opacity = '1';
     }
+
+    function sortAccessTime() {
+      var list = document.getElementById('accessOverviewList');
+      if (!list) return;
+
+      // first child is the sticky header
+      var children = Array.prototype.slice.call(list.children);
+      if (children.length <= 1) return;
+      var header = children[0];
+      var rows = children.slice(1).filter(function(el) { return el.classList && el.classList.contains('access-row'); });
+
+      rows.sort(function(a, b) {
+        var ka = a.dataset.lastseen || '';
+        var kb = b.dataset.lastseen || '';
+        // Newest first
+        if (ka < kb) return 1;
+        if (ka > kb) return -1;
+        return 0;
+      });
+
+      // Re-append in new order
+      list.innerHTML = '';
+      list.appendChild(header);
+      rows.forEach(function(r) { list.appendChild(r); });
+
+      var hdr = document.getElementById('accessTimeHeader');
+      if (hdr) hdr.style.opacity = '1';
+    }
   </script>
 
 
@@ -1305,16 +1378,38 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           return 'hsl(' + hue + ', 70%, 55%)';
         }
         function renderGeoRows(items, maxCount, colorFn) {
+          const buildInspectUrl = (g) => {
+            const params = new URLSearchParams();
+            if (g.country) params.set('country', g.country);
+            if (g.region) params.set('region', g.region);
+            if (g.city) params.set('city', g.city);
+            if (days) params.set('days', String(days));
+            if (yesterday) params.set('yesterday', '1');
+            if (selectedDate) params.set('date', selectedDate);
+            if (hideBots) params.set('hideBots', '1');
+            if (hideChardon) params.set('hideChardon', '1');
+            if (excludeIp) params.set('excludeIp', excludeIp);
+            return '/__k4stats/inspect?' + params.toString();
+          };
+
           return items.map(g => {
             const barColor = colorFn(g.country);
-            return '<div class="bar-row"><span class="bar-label" title="' + g.label + '">' + g.label + '</span><div class="bar-container"><div class="bar" style="width: ' + (g.count / maxCount * 100).toFixed(1) + '%; background: ' + barColor + ';"></div></div><span class="bar-value">' + g.count + '</span></div>';
+            const href = buildInspectUrl(g);
+            return '<div class="bar-row">'
+              + '<a class="bar-label" href="' + href + '" title="Inspect ' + g.label + '" style="color:#ccc; text-decoration:none;">' + g.label + '</a>'
+              + '<div class="bar-container"><div class="bar" style="width: ' + (g.count / maxCount * 100).toFixed(1) + '%; background: ' + barColor + ';"></div></div>'
+              + '<span class="bar-value">' + g.count + '</span>'
+              + '</div>';
           }).join('');
         }
 
         // Site visitors (all JS-verified)
         const siteGeo = (geo || []).map(g => ({
           label: [g.city, g.region, g.country].filter(Boolean).join(', '),
-          country: g.country, visitors: g.visitors
+          city: g.city,
+          region: g.region,
+          country: g.country,
+          visitors: g.visitors
         }));
         // Dedup by label, sum counts
         const mergedGeo = {};
@@ -1358,16 +1453,38 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           return 'hsl(' + hue + ', 70%, 55%)';
         }
         function renderGeoRows(items, maxCount, colorFn) {
+          const buildInspectUrl = (g) => {
+            const params = new URLSearchParams();
+            if (g.country) params.set('country', g.country);
+            if (g.region) params.set('region', g.region);
+            if (g.city) params.set('city', g.city);
+            if (days) params.set('days', String(days));
+            if (yesterday) params.set('yesterday', '1');
+            if (selectedDate) params.set('date', selectedDate);
+            if (hideBots) params.set('hideBots', '1');
+            if (hideChardon) params.set('hideChardon', '1');
+            if (excludeIp) params.set('excludeIp', excludeIp);
+            return '/__k4stats/inspect?' + params.toString();
+          };
+
           return items.map(g => {
             const barColor = colorFn(g.country);
-            return '<div class="bar-row"><span class="bar-label" title="' + g.label + '">' + g.label + '</span><div class="bar-container"><div class="bar" style="width: ' + (g.count / maxCount * 100).toFixed(1) + '%; background: ' + barColor + ';"></div></div><span class="bar-value">' + g.count + '</span></div>';
+            const href = buildInspectUrl(g);
+            return '<div class="bar-row">'
+              + '<a class="bar-label" href="' + href + '" title="Inspect ' + g.label + '" style="color:#ccc; text-decoration:none;">' + g.label + '</a>'
+              + '<div class="bar-container"><div class="bar" style="width: ' + (g.count / maxCount * 100).toFixed(1) + '%; background: ' + barColor + ';"></div></div>'
+              + '<span class="bar-value">' + g.count + '</span>'
+              + '</div>';
           }).join('');
         }
 
         // Art viewers (chapter_view, xl_zoom, gallery_view)
         const artGeo = (geo || []).filter(g => g.art_viewers > 0).map(g => ({
           label: [g.city, g.region, g.country].filter(Boolean).join(', '),
-          country: g.country, art_viewers: g.art_viewers || 0
+          city: g.city,
+          region: g.region,
+          country: g.country,
+          art_viewers: g.art_viewers || 0
         }));
         // Dedup by label, sum counts
         const mergedGeo = {};
@@ -1948,6 +2065,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       if (!confirm('FORCE BLOCK IP: ' + ipHash + '?\\n\\nNote: Most automated traffic is already slowed/rate-limited automatically. Use manual blocking only for persistent abuse.\\n\\nThis takes effect immediately.')) return;
       
       try {
+        document.body.classList.add('k4-loading');
         const res = await k4AdminFetch('/__k4stats/block', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -1960,9 +2078,11 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         } else {
           const data = await res.json().catch(() => ({}));
           alert('Error: ' + (data.error || 'HTTP ' + res.status));
+          document.body.classList.remove('k4-loading');
         }
       } catch (e) {
         alert('Error: ' + e.message);
+        document.body.classList.remove('k4-loading');
       }
     }
 
@@ -1970,6 +2090,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       if (!confirm('Unblock IP: ' + ipHash + '?')) return;
       
       try {
+        document.body.classList.add('k4-loading');
         const res = await k4AdminFetch('/__k4stats/unblock', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -1982,14 +2103,17 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         } else {
           const data = await res.json().catch(() => ({}));
           alert('Error: ' + (data.error || 'HTTP ' + res.status));
+          document.body.classList.remove('k4-loading');
         }
       } catch (e) {
         alert('Error: ' + e.message);
+        document.body.classList.remove('k4-loading');
       }
     }
 
     async function refreshBotIntelligence() {
       try {
+        document.body.classList.add('k4-loading');
         const res = await k4AdminFetch('/__k4stats/refresh-bots', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' }
@@ -2002,11 +2126,56 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
         } else {
           const data = await res.json().catch(() => ({}));
           alert('Error: ' + (data.error || 'HTTP ' + res.status));
+          document.body.classList.remove('k4-loading');
         }
       } catch (e) {
         alert('Error: ' + e.message);
+        document.body.classList.remove('k4-loading');
       }
     }
+  </script>
+
+  <script>
+    // UX: show progress cursor + hourglass immediately on navigation.
+    (function() {
+      function setLoading(clickedAnchor) {
+        try { document.body.classList.add('k4-loading'); } catch (e) {}
+
+        if (!clickedAnchor) return;
+        try {
+          if (clickedAnchor.dataset && clickedAnchor.dataset.k4LoadingApplied === '1') return;
+          // Only decorate simple text links to avoid mangling complex HTML.
+          if (clickedAnchor.children && clickedAnchor.children.length > 0) return;
+          const t = (clickedAnchor.textContent || '').trim();
+          if (!t || t.endsWith('⏳')) return;
+          clickedAnchor.dataset.k4LoadingApplied = '1';
+          clickedAnchor.textContent = t + ' ⏳';
+        } catch (e) {}
+      }
+
+      window.addEventListener('beforeunload', function() { setLoading(null); });
+
+      document.addEventListener('click', function(ev) {
+        if (ev.defaultPrevented) return;
+        if (ev.button !== 0) return;
+        if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+
+        const a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
+        if (!a) return;
+        if (a.target === '_blank') return;
+        if (!a.href) return;
+
+        // Same-page hash changes should not trigger loading.
+        try {
+          const u = new URL(a.href, window.location.href);
+          const cur = new URL(window.location.href);
+          const isHashOnly = (u.origin === cur.origin && u.pathname === cur.pathname && u.search === cur.search && u.hash && u.hash !== cur.hash);
+          if (isHashOnly) return;
+        } catch (e) {}
+
+        setLoading(a);
+      }, { capture: true });
+    })();
   </script>
 
   <script>
@@ -2054,6 +2223,189 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   }
   </script>
 </div>
+</body>
+</html>`;
+}
+
+export function renderInspectPage({ title, locationLabel, backUrl, sessions, timeline, selectedSessionId, baseInspectParams, error }) {
+  const safeSessions = Array.isArray(sessions) ? sessions : [];
+  const safeTimeline = Array.isArray(timeline) ? timeline : [];
+  const base = baseInspectParams || {};
+
+  const buildInspectUrl = (sessionId) => {
+    const params = new URLSearchParams();
+    if (base.country) params.set('country', base.country);
+    if (base.region) params.set('region', base.region);
+    if (base.city) params.set('city', base.city);
+    if (base.days) params.set('days', base.days);
+    if (base.yesterday === '1') params.set('yesterday', '1');
+    if (base.date) params.set('date', base.date);
+    if (base.hideBots === '1') params.set('hideBots', '1');
+    if (base.hideChardon === '1') params.set('hideChardon', '1');
+    if (base.excludeIp) params.set('excludeIp', base.excludeIp);
+    if (sessionId) params.set('session', sessionId);
+    return `/__k4stats/inspect?${params.toString()}`;
+  };
+
+  const refIcons = {
+    google_search: '🔍', google_images: '🖼️',
+    bing_search: '🅱️', bing_images: '🖼️',
+    pinterest: '📌', twitter: '🐦', facebook: '📘', instagram: '📷',
+    linkedin: '💼', duckduckgo: '🦆',
+    direct: '🔗', internal: '🔄', unattributed: '🔒'
+  };
+
+  const fmtDur = (sec) => {
+    const n = Number(sec || 0);
+    if (!Number.isFinite(n) || n <= 0) return '0s';
+    if (n < 60) return `${n}s`;
+    const m = Math.floor(n / 60);
+    const s = n % 60;
+    if (m < 60) return `${m}m ${s}s`;
+    const h = Math.floor(m / 60);
+    const mm = m % 60;
+    return `${h}h ${mm}m`;
+  };
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title || 'Inspect'}</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1a1a1a; color: #e0e0e0; padding: 20px; }
+    body.k4-loading, body.k4-loading * { cursor: progress !important; }
+    .container { max-width: 1400px; margin: 0 auto; }
+    h1 { color: #fff; margin-bottom: 10px; font-size: 18px; }
+    .sub { color: #aaa; font-size: 12px; margin-bottom: 14px; }
+    a { color: #4a9eff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .controls { margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .pill { background: #252525; border: 1px solid #333; border-radius: 8px; padding: 6px 10px; font-size: 12px; color: #ccc; }
+    .err { background: #3b1d1d; border: 1px solid #7f1d1d; color: #fecaca; padding: 10px; border-radius: 8px; margin-bottom: 12px; font-size: 12px; }
+    table { width: 100%; border-collapse: collapse; background: #252525; border-radius: 10px; overflow: hidden; margin-bottom: 14px; }
+    th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid #333; font-size: 12px; vertical-align: top; }
+    th { background: #1a1a1a; color: #888; font-size: 11px; text-transform: uppercase; }
+    tr:last-child td { border-bottom: none; }
+    .muted { color: #888; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; }
+    .row-selected { background: rgba(74, 158, 255, 0.10); }
+    .section { background: #252525; border-radius: 10px; padding: 12px; margin-bottom: 14px; border: 1px solid #333; }
+    .section h2 { font-size: 13px; color: #fff; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="controls">
+      <a href="${backUrl || '/__k4stats'}">← Back to dashboard</a>
+      <span class="pill">${locationLabel || ''}</span>
+      <span class="pill muted">Click a session to view timeline</span>
+    </div>
+
+    <h1>Inspect Geography</h1>
+    <div class="sub">Most recent JS sessions from this location.</div>
+
+    ${error ? `<div class="err">${String(error)}</div>` : ''}
+
+    <div class="section">
+      <h2>Recent Sessions</h2>
+      ${safeSessions.length === 0 ? '<div class="muted">No sessions found for this location in the selected window.</div>' : `
+      <table>
+        <tr><th>Last</th><th>Dur</th><th>Entry</th><th>From</th><th>Evts</th><th>Session</th></tr>
+        ${safeSessions.map(s => {
+          const sid = String(s.session_id || '');
+          const isSel = selectedSessionId && sid && sid === selectedSessionId;
+          const entry = String(s.entry_page || '/');
+          const shortEntry = entry.length > 44 ? '...' + entry.slice(-41) : entry;
+          const ref = String(s.ref_source || 'unattributed');
+          const refIcon = refIcons[ref] || '🔒';
+          const evts = Number(s.events || 0);
+          const last = String(s.last_ts || '');
+          const dur = fmtDur(s.duration_s);
+          const shortSid = sid ? sid.slice(0, 8) : '';
+          const href = buildInspectUrl(sid);
+          return `<tr class="${isSel ? 'row-selected' : ''}">
+            <td class="mono">${last}</td>
+            <td>${dur}</td>
+            <td title="${entry}"><a href="${href}">📄 ${shortEntry}</a></td>
+            <td title="${ref}">${refIcon}</td>
+            <td>${evts}</td>
+            <td class="mono"><a href="${href}">${shortSid}</a></td>
+          </tr>`;
+        }).join('')}
+      </table>
+      `}
+    </div>
+
+    <div class="section">
+      <h2>Session Timeline${selectedSessionId ? ` <span class="muted mono">(${selectedSessionId.slice(0, 8)})</span>` : ''}</h2>
+      ${!selectedSessionId ? '<div class="muted">Select a session above.</div>' : (safeTimeline.length === 0 ? '<div class="muted">No events found for that session.</div>' : `
+      <table>
+        <tr><th>Time</th><th>Event</th><th>Page/Target</th><th>Meta</th></tr>
+        ${safeTimeline.map(e => {
+          const ts = String(e.ts || '');
+          const type = String(e.event_type || '');
+          const path = String(e.page_path || '');
+          const shortPath = path.length > 60 ? '...' + path.slice(-57) : path;
+          const metaParts = [];
+          if (e.img_size) metaParts.push(String(e.img_size));
+          if (e.ref_type) metaParts.push(String(e.ref_type));
+          if (e.referer) metaParts.push(String(e.referer));
+          const meta = metaParts.join(' · ');
+          return `<tr>
+            <td class="mono">${ts}</td>
+            <td class="mono">${type}</td>
+            <td title="${path}">${shortPath || '<span class="muted">(none)</span>'}</td>
+            <td class="muted" title="${meta}">${meta.length > 80 ? meta.slice(0, 77) + '...' : meta}</td>
+          </tr>`;
+        }).join('')}
+      </table>
+      `)}
+    </div>
+  </div>
+
+<script>
+  // UX: show progress cursor + hourglass immediately on navigation.
+  (function() {
+    function setLoading(clickedAnchor) {
+      try { document.body.classList.add('k4-loading'); } catch (e) {}
+
+      if (!clickedAnchor) return;
+      try {
+        if (clickedAnchor.dataset && clickedAnchor.dataset.k4LoadingApplied === '1') return;
+        if (clickedAnchor.children && clickedAnchor.children.length > 0) return;
+        const t = (clickedAnchor.textContent || '').trim();
+        if (!t || t.endsWith('⏳')) return;
+        clickedAnchor.dataset.k4LoadingApplied = '1';
+        clickedAnchor.textContent = t + ' ⏳';
+      } catch (e) {}
+    }
+
+    window.addEventListener('beforeunload', function() { setLoading(null); });
+
+    document.addEventListener('click', function(ev) {
+      if (ev.defaultPrevented) return;
+      if (ev.button !== 0) return;
+      if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+      const a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
+      if (!a) return;
+      if (a.target === '_blank') return;
+      if (!a.href) return;
+
+      try {
+        const u = new URL(a.href, window.location.href);
+        const cur = new URL(window.location.href);
+        const isHashOnly = (u.origin === cur.origin && u.pathname === cur.pathname && u.search === cur.search && u.hash && u.hash !== cur.hash);
+        if (isHashOnly) return;
+      } catch (e) {}
+
+      setLoading(a);
+    }, { capture: true });
+  })();
+</script>
+
 </body>
 </html>`;
 }

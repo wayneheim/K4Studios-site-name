@@ -140,7 +140,7 @@ const glossaryBreadcrumb = `
 
 /* =============== datasets =============== */
 // 1) Eager .mjs gallery-source files
-const galleryDataModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
+const galleryDataModules = import.meta.glob<{ galleryData?: any[]; default?: any[] }>('@/data/Galleries/**/*.mjs', { eager: true });
 const mjsDatasets: Record<string, any[]> = {};
 for (const modPath in galleryDataModules) {
   // Skip backup/copy files (e.g., Color-copy1.mjs)
@@ -383,9 +383,8 @@ const meta = {
   ogDescription: "A site-wide glossary of storytelling terms with examples from Painterly and Traditional galleries."
 };
 
-const galleryDatas: any[] = [];
 const headingCount = 1;
-const featheredImages = getSideImages({ sectionPath, headingCount, galleryDatas });
+const featheredImages = getSideImages({ sectionPath, headingCount });
 const featheredImagesSidebar = featheredImages.slice(0, 5);
 
 const structuredData = getStructuredData({
@@ -478,7 +477,7 @@ const structuredData = getStructuredData({
           if (!sem.def && page.href.toLowerCase().includes('/traditional-fine-art-photography/transportation'))
             sem = semantic.transportationTraditional || sem;
           if (!sem.def && page.href.toLowerCase().includes('/traditional-fine-art-photography/architecture'))
-            sem = semantic.architectureTraditionalTraditional || sem;
+            sem = semantic.architectureTraditional || sem;
 
           let def = sem.def || "Explore the collection";
           let landingPhrases = sem.landingPhrases || [];
@@ -631,11 +630,11 @@ const structuredData = getStructuredData({
             })}
           </div>
         </section>
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
       </div>
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll">
-          <LandingRightImages heading="Collection Samples" images={featheredImagesSidebar} />
+          <LandingRightImages heading="Collection Samples" images={featheredImagesSidebar} displayCount={5} />
         </div>
       </div>
     </section>
