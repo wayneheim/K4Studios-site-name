@@ -4761,8 +4761,9 @@ function renderDashboard({
     <div style="margin-top:10px;">
       ${spPixelImageAccess.length > 0 ? `
       <div style="max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;">
-        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 220px 1fr 240px 220px 120px 120px 160px; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
-          <span>Image ID</span>
+        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 90px 240px 1fr 240px 220px 120px 120px 160px; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
+          <span style="display:flex;justify-content:center;">Image</span>
+          <span>Type / ID</span>
           <span>Gallery</span>
           <span>Location</span>
           <span>Source</span>
@@ -4782,9 +4783,17 @@ function renderDashboard({
     const loc = fmtLoc(r.city, r.region, r.country);
     const lastSeen = r.last_seen ? String(r.last_seen).replace("T", " ") : "\u2014";
     const srcPill = '<span title="Sister Pixel (V1)" style="display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:999px;border:1px solid #333;background:#1f1f1f;color:#cbd5e1;font-size:11px;line-height:1;white-space:nowrap;"><span style="font-size:12px;">S</span><span style="opacity:0.95;">Sister Pixel</span></span>';
-    return `<div style="display:grid;grid-template-columns: 220px 1fr 240px 220px 120px 120px 160px;gap:10px;padding:8px 8px;border-bottom:1px solid #222;align-items:center;font-size:13px;">
-      <div style="display:flex;flex-direction:column;gap:2px;">
-        <a href="${imageUrl}" target="_blank" rel="noopener" style="color:#c4b5fd;text-decoration:none;">${imageId || "(missing)"}</a>
+    const badgeS = '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:#33415522;color:#cbd5e1;font-size:10px;font-weight:bold;border:1px solid #33415555;" title="Sister Pixel (V1)">S</span>';
+    const thumb = imageId && imageId.startsWith("i-") ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="lazy" style="width:60px;height:60px;object-fit:cover;border-radius:6px;border:1px solid #333;">' : '<span style="width:60px;height:60px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:1px solid #333;">\u{1F5BC}</span>';
+    return `<div style="display:grid;grid-template-columns: 90px 240px 1fr 240px 220px 120px 120px 160px;gap:10px;padding:8px 8px;border-bottom:1px solid #222;align-items:center;font-size:13px;">
+      <div style="display:flex;align-items:center;justify-content:center;">
+        <a href="${imageUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;width:70px;">${thumb}</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;min-width:0;">
+        <div style="display:flex;align-items:center;gap:6px;min-width:0;">
+          <div style="flex:0 0 auto;">${badgeS}</div>
+          <a href="${imageUrl}" target="_blank" rel="noopener" style="color:#c4b5fd;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;" title="${imageId}">${imageId || "(missing)"}</a>
+        </div>
         <div style="font-size:11px;color:#6b7280;">pixel</div>
       </div>
       <div style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
