@@ -1777,6 +1777,9 @@ __name2(getCoverageVisibility, "getCoverageVisibility");
 async function getStatePixelTestRoaring20s(env, filters) {
   const { dateClause } = filters;
   const qualifiedDateClause = (dateClause || "").replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")';
+  const qualifiedDateClauseRaw = (dateClause || "").replace(/\bts\b/g, "r.ts").replace(/\be\.ts\b/g, "r.ts").replace(/\be2\.ts\b/g, "r.ts") || 'r.ts > datetime("now", "-1 day")';
+  const sisterPixelLayerPredicate = `1=1`;
+  const sisterPixelLayerPredicateBase = `1=1`;
   const isChapterImagePageExpr = `(
     e.page IS NOT NULL
     AND (
@@ -1801,16 +1804,27 @@ async function getStatePixelTestRoaring20s(env, filters) {
           CAST(strftime('%s', e.ts, '-5 hours') / 1800 AS INTEGER) AS bucket,
           e.event_type AS event_type,
           e.page AS page,
-          e.source AS source,
-          e.source_layer AS source_layer
-        FROM classified_events e
+          e.source AS source
+        FROM raw_events e
         WHERE ${qualifiedDateClause}
           AND ${notCacheWarmer("e")}
       )
       SELECT
-        SUM(CASE WHEN event_type = 'state_pixel' AND source_layer = 'sister_pixel_v1' THEN 1 ELSE 0 END) AS state_pixel_hits,
+        (
+          SELECT COUNT(*)
+          FROM raw_events r
+          WHERE ${qualifiedDateClauseRaw}
+            AND r.event_type = 'state_pixel'
+        ) AS state_pixel_hits,
+        (
+          SELECT COUNT(*)
+          FROM raw_events r
+          WHERE ${qualifiedDateClauseRaw}
+            AND r.event_type = 'state_pixel'
+            AND r.source_layer = 'sister_pixel_v1'
+        ) AS sister_pixel_v1_hits,
         SUM(CASE WHEN event_type = 'edge_page' AND source = 'edge' AND (${isChapterImagePageExpr.replace(/\be\.page\b/g, "page")}) THEN 1 ELSE 0 END) AS edge_page_hits,
-        COUNT(DISTINCT CASE WHEN event_type = 'state_pixel' AND source_layer = 'sister_pixel_v1'
+        COUNT(DISTINCT CASE WHEN event_type = 'state_pixel'
           THEN ip_hash || '|' || ua_class || '|' || bucket END) AS state_pixel_sessions,
         COUNT(DISTINCT CASE WHEN event_type = 'edge_page' AND source = 'edge' AND (${isChapterImagePageExpr.replace(/\be\.page\b/g, "page")})
           THEN ip_hash || '|' || ua_class || '|' || bucket END) AS edge_page_sessions
@@ -1820,11 +1834,10 @@ async function getStatePixelTestRoaring20s(env, filters) {
     const refQuery = `
       WITH src AS (
         SELECT e.referer AS referer
-        FROM classified_events e
+        FROM raw_events e
         WHERE ${qualifiedDateClause}
           AND ${notCacheWarmer("e")}
           AND e.event_type = 'state_pixel'
-          AND e.source_layer = 'sister_pixel_v1'
       )
       SELECT
         CASE
@@ -1855,11 +1868,10 @@ async function getStatePixelTestRoaring20s(env, filters) {
           e.visitor_id AS visitor_id,
           e.session_id AS session_id,
           e.target_id AS target_id
-        FROM classified_events e
+        FROM raw_events e
         WHERE ${qualifiedDateClause}
           AND ${notCacheWarmer("e")}
           AND e.event_type = 'state_pixel'
-          AND e.source_layer = 'sister_pixel_v1'
           AND e.visitor_id IS NOT NULL
           AND e.visitor_id != ''
       ),
@@ -1899,11 +1911,10 @@ async function getStatePixelTestRoaring20s(env, filters) {
           e.visitor_id AS visitor_id,
           e.session_id AS session_id,
           e.target_id AS target_id
-        FROM classified_events e
+        FROM raw_events e
         WHERE ${qualifiedDateClause}
           AND ${notCacheWarmer("e")}
           AND e.event_type = 'state_pixel'
-          AND e.source_layer = 'sister_pixel_v1'
           AND e.visitor_id IS NOT NULL
           AND e.visitor_id != ''
       ),
@@ -1955,6 +1966,7 @@ async function getStatePixelTestRoaring20s(env, filters) {
     const byGalleryRows = await env.DB.prepare(byGalleryQuery).all();
     return {
       state_pixel_hits: Number(summaryRow?.state_pixel_hits || 0),
+      sister_pixel_v1_hits: Number(summaryRow?.sister_pixel_v1_hits || 0),
       edge_page_hits: Number(summaryRow?.edge_page_hits || 0),
       state_pixel_sessions: Number(summaryRow?.state_pixel_sessions || 0),
       edge_page_sessions: Number(summaryRow?.edge_page_sessions || 0),
@@ -1984,6 +1996,7 @@ async function getStatePixelTestRoaring20s(env, filters) {
     console.log("State pixel test query failed:", e?.message || e);
     return {
       state_pixel_hits: 0,
+      sister_pixel_v1_hits: 0,
       edge_page_hits: 0,
       state_pixel_sessions: 0,
       edge_page_sessions: 0,
@@ -3544,7 +3557,12 @@ function buildDashboardData(queryResults, filterParams) {
     viewerDepth,
     suppressionStats,
     botIntelligence,
-    periodTotals
+    periodTotals,
+    coverageVisibility,
+    rawBehaviorDistribution,
+    statePixelTestRoaring20s,
+    topGalleryLandingPages,
+    browserViewsSummary
   } = queryResults;
   const {
     days,
@@ -3616,6 +3634,11 @@ function buildDashboardData(queryResults, filterParams) {
     suppressionStats,
     botIntelligence,
     periodTotals: periodTotals || { total_visitors: 0, total_art_viewers: 0 },
+    coverageVisibility,
+    rawBehaviorDistribution,
+    statePixelTestRoaring20s,
+    topGalleryLandingPages,
+    browserViewsSummary,
     authHeader: authHeader || ""
   };
 }
@@ -3726,6 +3749,7 @@ function renderDashboard({
   );
   const sp = statePixelTestRoaring20s || {};
   const spHits = Number(sp.state_pixel_hits || 0);
+  const spSisterV1Hits = Number(sp.sister_pixel_v1_hits || 0);
   const spEdgeHits = Number(sp.edge_page_hits || 0);
   const spHitRatioPct = spEdgeHits > 0 ? Math.round(spHits / spEdgeHits * 100) : 0;
   const spSessions = Number(sp.state_pixel_sessions || 0);
@@ -4575,6 +4599,11 @@ function renderDashboard({
       <span class="value" style="color: #fff;">\u{1F9EA} ${spHits}</span>
       <span class="label" style="color: #cbd5e1;">Pixel Exposures <span class="info-icon" style="background: rgba(255,255,255,0.12); color: #cbd5e1;">i</span></span>
       <div class="tooltip">Count of <strong>state_pixel</strong> requests with <code>source_layer=sister_pixel_v1</code>. Fired on <em>active image id</em> transitions (deduped) using a first-party 1\xD71 no-store pixel.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #111827 0%, #0b1220 100%);">
+      <span class="value" style="color: #fff;">\u{1F9EE} ${spSisterV1Hits}</span>
+      <span class="label" style="color: #cbd5e1;">DB Sister Pixel V1 (raw) <span class="info-icon" style="background: rgba(255,255,255,0.12); color: #cbd5e1;">i</span></span>
+      <div class="tooltip">Direct D1 count: <code>raw_events</code> where <code>event_type='state_pixel'</code> and <code>source_layer='sister_pixel_v1'</code> for the selected date window (same bucket logic as the dashboard filter).</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
       <span class="value" style="color: #fff;">\u{1F9F1} ${spEdgeHits}</span>
