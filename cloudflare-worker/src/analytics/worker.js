@@ -1964,6 +1964,62 @@ async function getStatePixelTestRoaring20s(env, filters) {
       LIMIT 25
     `;
     const byGalleryRows = await env.DB.prepare(byGalleryQuery).all();
+
+    const pixelImageAccessQuery = `
+      WITH sp AS (
+        SELECT
+          e.target_id AS target_id,
+          e.page AS page,
+          e.visitor_id AS visitor_id,
+          e.country AS country,
+          e.region AS region,
+          e.city AS city,
+          e.ts AS ts
+        FROM raw_events e
+        WHERE ${qualifiedDateClause}
+          AND ${notCacheWarmer("e")}
+          AND e.event_type = 'state_pixel'
+          AND e.source_layer = 'sister_pixel_v1'
+          AND e.target_id IS NOT NULL
+          AND e.target_id != ''
+      ),
+      ranked AS (
+        SELECT
+          target_id,
+          page,
+          country,
+          region,
+          city,
+          ts,
+          ROW_NUMBER() OVER (PARTITION BY target_id ORDER BY ts DESC) AS rn
+        FROM sp
+      ),
+      agg AS (
+        SELECT
+          target_id,
+          COUNT(*) AS exposures,
+          COUNT(DISTINCT CASE WHEN visitor_id IS NOT NULL AND visitor_id != '' THEN visitor_id END) AS viewers,
+          MAX(ts) AS last_seen
+        FROM sp
+        GROUP BY target_id
+      )
+      SELECT
+        a.target_id,
+        a.exposures,
+        a.viewers,
+        a.last_seen,
+        r.page,
+        r.country,
+        r.region,
+        r.city
+      FROM agg a
+      LEFT JOIN ranked r
+        ON r.target_id = a.target_id
+       AND r.rn = 1
+      ORDER BY a.exposures DESC, a.last_seen DESC
+      LIMIT 25
+    `;
+    const pixelImageAccessRows = await env.DB.prepare(pixelImageAccessQuery).all();
     return {
       state_pixel_hits: Number(summaryRow?.state_pixel_hits || 0),
       sister_pixel_v1_hits: Number(summaryRow?.sister_pixel_v1_hits || 0),
@@ -1990,7 +2046,8 @@ async function getStatePixelTestRoaring20s(env, filters) {
           viewerStatsRow?.pct_viewers_with_duplicates || 0
         )
       },
-      by_gallery: byGalleryRows?.results || []
+      by_gallery: byGalleryRows?.results || [],
+      pixel_image_access: pixelImageAccessRows?.results || []
     };
   } catch (e) {
     console.log("State pixel test query failed:", e?.message || e);
@@ -2010,7 +2067,8 @@ async function getStatePixelTestRoaring20s(env, filters) {
         viewers_with_duplicates: 0,
         pct_viewers_with_duplicates: 0
       },
-      by_gallery: []
+      by_gallery: [],
+      pixel_image_access: []
     };
   }
 }
@@ -3757,6 +3815,7 @@ function renderDashboard({
   const spSessionRatioPct = spEdgeSessions > 0 ? Math.round(spSessions / spEdgeSessions * 100) : 0;
   const spViewerStats = sp.viewer_stats || {};
   const spByGallery = Array.isArray(sp.by_gallery) ? sp.by_gallery : [];
+  const spPixelImageAccess = Array.isArray(sp.pixel_image_access) ? sp.pixel_image_access : [];
   const spViewers = Number(spViewerStats.viewers || 0);
   const spAvgExposuresPerViewer = Number(
     spViewerStats.avg_exposures_per_viewer || 0
@@ -3770,6 +3829,17 @@ function renderDashboard({
   const fmt2 = /* @__PURE__ */ __name2(
     (n) => Number.isFinite(Number(n)) ? Number(n).toFixed(2) : "0.00",
     "fmt2"
+  );
+  const fmtLoc = /* @__PURE__ */ __name2(
+    (city, region, country) => {
+      const c = (country || "").toString().trim();
+      const r = (region || "").toString().trim();
+      const ci = (city || "").toString().trim();
+      if (ci && r) return ci + ", " + r + (c ? ", " + c : "");
+      if (ci) return ci + (c ? ", " + c : "");
+      return c || "\u2014";
+    },
+    "fmtLoc"
   );
   const galleryLandingPathSet = new Set(GALLERY_LANDING_PATHS);
   const bvs = browserViewsSummary || {};
@@ -4679,6 +4749,53 @@ function renderDashboard({
         </tbody>
       </table>
       ` : `<div style="color:#aaa;font-size:13px;">No sister pixel gallery data for this period.</div>`}
+    </div>
+  </div>
+
+  <div class="section" style="max-width:1780px;margin:0 auto 18px;">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <h3 style="margin:0;">Pixel Image Access Overview (Test)</h3>
+      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Per-image breakout from <code>raw_events</code> for <code>event_type='state_pixel'</code> and <code>source_layer='sister_pixel_v1'</code>. This is a test mirror of the Art Views \u2192 \u201CImage Access Overview\u201D concept, but powered by pixels (not JS).</div></span>
+      <span style="margin-left:auto;font-size:12px;color:#888;">Rows: <strong style="color:#fff;">${spPixelImageAccess.length || 0}</strong></span>
+    </div>
+    <div style="margin-top:10px;">
+      ${spPixelImageAccess.length > 0 ? `
+      <div style="max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;">
+        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 220px 1fr 220px 120px 120px 160px; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
+          <span>Image ID</span>
+          <span>Gallery</span>
+          <span>Location</span>
+          <span style="text-align:right;">Exposures</span>
+          <span style="text-align:right;">Viewers</span>
+          <span>Last Seen</span>
+        </div>
+        ${spPixelImageAccess.map((r) => {
+    const imageId = String(r.target_id || "");
+    const rawPage = String(r.page || "");
+    const galleryPath = rawPage && rawPage.includes("/i-") ? rawPage.substring(0, rawPage.indexOf("/i-")) : rawPage;
+    const displayGallery = galleryDisplayNameFromPath(galleryPath || "") || "(missing)";
+    const galleryUrl = galleryPath && galleryPath.startsWith("/") ? "https://k4studios.com" + galleryPath : "";
+    const imageUrl = imageId ? "https://k4studios.com/art/" + imageId : "#";
+    const exposures = Number(r.exposures || 0);
+    const viewers = Number(r.viewers || 0);
+    const loc = fmtLoc(r.city, r.region, r.country);
+    const lastSeen = r.last_seen ? String(r.last_seen).replace("T", " ") : "\u2014";
+    return `<div style="display:grid;grid-template-columns: 220px 1fr 220px 120px 120px 160px;gap:10px;padding:8px 8px;border-bottom:1px solid #222;align-items:center;font-size:13px;">
+      <div style="display:flex;flex-direction:column;gap:2px;">
+        <a href="${imageUrl}" target="_blank" rel="noopener" style="color:#c4b5fd;text-decoration:none;">${imageId || "(missing)"}</a>
+        <div style="font-size:11px;color:#6b7280;">pixel</div>
+      </div>
+      <div style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+        ${galleryUrl ? `<a href="${galleryUrl}" target="_blank" rel="noopener" style="color:#93c5fd;text-decoration:none;" title="${galleryPath}">${displayGallery}</a>` : `<span style="color:#aaa;" title="${galleryPath}">${displayGallery}</span>`}
+      </div>
+      <div style="color:#9aa3ad;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${loc}</div>
+      <div style="text-align:right;">${exposures}</div>
+      <div style="text-align:right;">${viewers}</div>
+      <div style="color:#9aa3ad;">${lastSeen}</div>
+    </div>`;
+  }).join("")}
+      </div>
+      ` : `<div style="color:#aaa;font-size:13px;">No sister pixel per-image data for this period.</div>`}
     </div>
   </div>
 
