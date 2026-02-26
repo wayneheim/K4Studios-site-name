@@ -4761,10 +4761,11 @@ function renderDashboard({
     <div style="margin-top:10px;">
       ${spPixelImageAccess.length > 0 ? `
       <div style="max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;">
-        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 220px 1fr 220px 120px 120px 160px; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
+        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 220px 1fr 240px 220px 120px 120px 160px; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
           <span>Image ID</span>
           <span>Gallery</span>
           <span>Location</span>
+          <span>Source</span>
           <span style="text-align:right;">Exposures</span>
           <span style="text-align:right;">Viewers</span>
           <span>Last Seen</span>
@@ -4780,7 +4781,8 @@ function renderDashboard({
     const viewers = Number(r.viewers || 0);
     const loc = fmtLoc(r.city, r.region, r.country);
     const lastSeen = r.last_seen ? String(r.last_seen).replace("T", " ") : "\u2014";
-    return `<div style="display:grid;grid-template-columns: 220px 1fr 220px 120px 120px 160px;gap:10px;padding:8px 8px;border-bottom:1px solid #222;align-items:center;font-size:13px;">
+    const srcPill = '<span title="Sister Pixel (V1)" style="display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:999px;border:1px solid #333;background:#1f1f1f;color:#cbd5e1;font-size:11px;line-height:1;white-space:nowrap;"><span style="font-size:12px;">S</span><span style="opacity:0.95;">Sister Pixel</span></span>';
+    return `<div style="display:grid;grid-template-columns: 220px 1fr 240px 220px 120px 120px 160px;gap:10px;padding:8px 8px;border-bottom:1px solid #222;align-items:center;font-size:13px;">
       <div style="display:flex;flex-direction:column;gap:2px;">
         <a href="${imageUrl}" target="_blank" rel="noopener" style="color:#c4b5fd;text-decoration:none;">${imageId || "(missing)"}</a>
         <div style="font-size:11px;color:#6b7280;">pixel</div>
@@ -4789,6 +4791,7 @@ function renderDashboard({
         ${galleryUrl ? `<a href="${galleryUrl}" target="_blank" rel="noopener" style="color:#93c5fd;text-decoration:none;" title="${galleryPath}">${displayGallery}</a>` : `<span style="color:#aaa;" title="${galleryPath}">${displayGallery}</span>`}
       </div>
       <div style="color:#9aa3ad;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${loc}</div>
+      <div>${srcPill}</div>
       <div style="text-align:right;">${exposures}</div>
       <div style="text-align:right;">${viewers}</div>
       <div style="color:#9aa3ad;">${lastSeen}</div>
