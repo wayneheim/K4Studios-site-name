@@ -1,8 +1,9 @@
-﻿var __defProp = Object.defineProperty;
-var __name = (target, value) =>
-  __defProp(target, "name", { value, configurable: true });
+var __defProp = Object.defineProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 
-// src/shared/constants.js
+// src/analytics/worker.js
+var __defProp2 = Object.defineProperty;
+var __name2 = /* @__PURE__ */ __name((target, value) => __defProp2(target, "name", { value, configurable: true }), "__name");
 var DATACENTER_PREFIXES = [
   // OVH hosting (specific ranges, not broad /8)
   "51.81.",
@@ -56,13 +57,13 @@ var DATACENTER_PREFIXES = [
   "101.33.",
   // Tencent Cloud
   "119.28.",
-  "124.243.",
+  "124.243."
   // Alibaba/Huawei
 ];
 var VERIFIED_BOTS = [
   {
     name: "Googlebot",
-    pattern: /googlebot|google-inspectiontool|googleother|apis-google/i,
+    pattern: /googlebot|google-inspectiontool|googleother|apis-google/i
   },
   { name: "Bingbot", pattern: /bingbot|bingpreview|msnbot/i },
   { name: "Applebot", pattern: /applebot/i },
@@ -74,7 +75,7 @@ var VERIFIED_BOTS = [
   { name: "Pinterest", pattern: /pinterestbot/i },
   { name: "LinkedIn", pattern: /linkedinbot/i },
   { name: "OpenAI", pattern: /gptbot|chatgpt-user|oai-searchbot/i },
-  { name: "Claude", pattern: /claudebot|anthropic-ai|claude-web/i },
+  { name: "Claude", pattern: /claudebot|anthropic-ai|claude-web/i }
 ];
 var DATACENTER_CITIES = [
   "Ashburn",
@@ -86,20 +87,20 @@ var DATACENTER_CITIES = [
   "The Dalles",
   "Forest City",
   "Council Bluffs",
-  "Clonee",
+  "Clonee"
 ];
 var DATACENTER_ASNS = [
-  16509, 14618,
+  16509,
+  14618,
   // Amazon AWS
   8075,
   // Microsoft Azure
-  15169, 396982,
+  15169,
+  396982,
   // Google Cloud
-  13335,
+  13335
   // Cloudflare
 ];
-
-// src/shared/utils.js
 function getVerifiedBotName(ua) {
   if (!ua) return null;
   for (const bot of VERIFIED_BOTS) {
@@ -108,6 +109,7 @@ function getVerifiedBotName(ua) {
   return null;
 }
 __name(getVerifiedBotName, "getVerifiedBotName");
+__name2(getVerifiedBotName, "getVerifiedBotName");
 function hashIP(ip) {
   if (!ip) return "unknown";
   const parts = ip.split(".");
@@ -115,8 +117,7 @@ function hashIP(ip) {
   return `${parts[0]}.${parts[1]}.${parts[2]}.x`;
 }
 __name(hashIP, "hashIP");
-
-// src/shared/syntheticTraffic.js
+__name2(hashIP, "hashIP");
 function isSyntheticTraffic(request) {
   const city = request.cf?.city;
   if (city && DATACENTER_CITIES.includes(city)) {
@@ -127,27 +128,13 @@ function isSyntheticTraffic(request) {
     return true;
   }
   const ua = (request.headers.get("User-Agent") || "").toLowerCase();
-  if (
-    ua.includes("headless") ||
-    ua.includes("chrome-lighthouse") ||
-    ua.includes("phantomjs") ||
-    ua.includes("puppeteer") ||
-    ua.includes("selenium") ||
-    ua.includes("webdriver") ||
-    /\bcurl\b/.test(ua) ||
-    /\bbot\b/.test(ua) ||
-    /\bspider\b/.test(ua) ||
-    /\bcrawler\b/.test(ua) ||
-    ua === "" ||
-    ua === "unknown"
-  ) {
+  if (ua.includes("headless") || ua.includes("chrome-lighthouse") || ua.includes("phantomjs") || ua.includes("puppeteer") || ua.includes("selenium") || ua.includes("webdriver") || /\bcurl\b/.test(ua) || /\bbot\b/.test(ua) || /\bspider\b/.test(ua) || /\bcrawler\b/.test(ua) || ua === "" || ua === "unknown") {
     return true;
   }
   return false;
 }
 __name(isSyntheticTraffic, "isSyntheticTraffic");
-
-// src/analytics/dashboard/galleryLandingPaths.js
+__name2(isSyntheticTraffic, "isSyntheticTraffic");
 var GALLERY_LANDING_PATHS = [
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
@@ -199,20 +186,18 @@ var GALLERY_LANDING_PATHS = [
   "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments",
   "/Galleries/Fine-Art-Photography/Miscellaneous/Pets",
   "/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife",
-  "/Other/K4-Select-Series/Engrained/Engrained-Series",
+  "/Other/K4-Select-Series/Engrained/Engrained-Series"
 ];
-
-// src/analytics/queries.js
-var notCacheWarmer = /* @__PURE__ */ __name(
+var notCacheWarmer = /* @__PURE__ */ __name2(
   (alias) => `LOWER(COALESCE(${alias}.ua, '')) NOT LIKE '%k4-cache-warmer%'`,
-  "notCacheWarmer",
+  "notCacheWarmer"
 );
-var sqlStringLiteral = /* @__PURE__ */ __name(
+var sqlStringLiteral = /* @__PURE__ */ __name2(
   (value) => `'${String(value).replace(/'/g, "''")}'`,
-  "sqlStringLiteral",
+  "sqlStringLiteral"
 );
-var CANONICAL_GALLERY_LANDING_PATHS = GALLERY_LANDING_PATHS.map((p) =>
-  p && p[0] === "/" ? p : `/${p}`,
+var CANONICAL_GALLERY_LANDING_PATHS = GALLERY_LANDING_PATHS.map(
+  (p) => p && p[0] === "/" ? p : `/${p}`
 );
 var GALLERY_LANDING_IN_LIST = `(${CANONICAL_GALLERY_LANDING_PATHS.map(sqlStringLiteral).join(",")})`;
 function getAccessType(referer) {
@@ -227,6 +212,7 @@ function getAccessType(referer) {
   return "external_referral";
 }
 __name(getAccessType, "getAccessType");
+__name2(getAccessType, "getAccessType");
 function getReferrerSource(referer) {
   if (!referer) return null;
   const r = referer.toLowerCase().trim();
@@ -254,6 +240,7 @@ function getReferrerSource(referer) {
   return host;
 }
 __name(getReferrerSource, "getReferrerSource");
+__name2(getReferrerSource, "getReferrerSource");
 function getAssetSourceLabel(assetSource) {
   if (!assetSource) return null;
   const s = String(assetSource).trim().toLowerCase();
@@ -265,10 +252,9 @@ function getAssetSourceLabel(assetSource) {
   return null;
 }
 __name(getAssetSourceLabel, "getAssetSourceLabel");
+__name2(getAssetSourceLabel, "getAssetSourceLabel");
 function formatOGPlatformLabel(ogPlatform) {
-  const p = String(ogPlatform || "")
-    .trim()
-    .toLowerCase();
+  const p = String(ogPlatform || "").trim().toLowerCase();
   if (!p) return null;
   const map = {
     facebook: "Facebook",
@@ -278,12 +264,13 @@ function formatOGPlatformLabel(ogPlatform) {
     twitter: "Twitter",
     whatsapp: "WhatsApp",
     apple: "Apple",
-    unknown: "Unknown",
+    unknown: "Unknown"
   };
   if (map[p]) return map[p];
   return p.charAt(0).toUpperCase() + p.slice(1);
 }
 __name(formatOGPlatformLabel, "formatOGPlatformLabel");
+__name2(formatOGPlatformLabel, "formatOGPlatformLabel");
 function formatAssetSourceLabel(assetSourceLabel, ogPlatform) {
   if (!assetSourceLabel) return null;
   if (assetSourceLabel !== "Open Graph") return assetSourceLabel;
@@ -292,6 +279,7 @@ function formatAssetSourceLabel(assetSourceLabel, ogPlatform) {
   return `Open Graph (${plat})`;
 }
 __name(formatAssetSourceLabel, "formatAssetSourceLabel");
+__name2(formatAssetSourceLabel, "formatAssetSourceLabel");
 function classifyForEntryRef(referer) {
   if (!referer) return "direct";
   let host;
@@ -316,6 +304,7 @@ function classifyForEntryRef(referer) {
   return "unattributed";
 }
 __name(classifyForEntryRef, "classifyForEntryRef");
+__name2(classifyForEntryRef, "classifyForEntryRef");
 var IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";
 var IMAGE_ID_MAP_TTL_MS = 60 * 60 * 1e3;
 var _imageIdMapCache = null;
@@ -327,7 +316,7 @@ async function getImageIdMapCached() {
   }
   try {
     const res = await fetch(IMAGE_ID_MAP_URL, {
-      headers: { Accept: "application/json" },
+      headers: { Accept: "application/json" }
     });
     if (!res.ok) throw new Error("imageIdMap fetch failed: " + res.status);
     const data = await res.json();
@@ -342,6 +331,7 @@ async function getImageIdMapCached() {
   return _imageIdMapCache;
 }
 __name(getImageIdMapCached, "getImageIdMapCached");
+__name2(getImageIdMapCached, "getImageIdMapCached");
 function getCanonicalGalleryPathForImageId(imageIdMap, imageId) {
   if (!imageIdMap || !imageId) return null;
   const raw = imageIdMap[imageId];
@@ -350,6 +340,7 @@ function getCanonicalGalleryPathForImageId(imageIdMap, imageId) {
   return String(path).replace(/\/+$/, "");
 }
 __name(getCanonicalGalleryPathForImageId, "getCanonicalGalleryPathForImageId");
+__name2(getCanonicalGalleryPathForImageId, "getCanonicalGalleryPathForImageId");
 async function getHumanCount(env, dateClause = "") {
   const jsProof = `EXISTS (
     SELECT 1 FROM classified_events j
@@ -358,8 +349,7 @@ async function getHumanCount(env, dateClause = "") {
       AND j.visitor_id IS NOT NULL
       AND j.visitor_id != ''
   )`;
-  const query = dateClause
-    ? `
+  const query = dateClause ? `
       SELECT COUNT(DISTINCT e.visitor_id) as count
       FROM classified_events e
       WHERE e.is_bot = 0
@@ -367,8 +357,7 @@ async function getHumanCount(env, dateClause = "") {
         AND e.visitor_id != ''
         AND ${jsProof}
         AND ${dateClause.replace(/\bts\b/g, "e.ts")}
-    `
-    : `
+    ` : `
       SELECT COUNT(DISTINCT e.visitor_id) as count
       FROM classified_events e
       WHERE e.is_bot = 0
@@ -380,11 +369,12 @@ async function getHumanCount(env, dateClause = "") {
   return result?.count || 0;
 }
 __name(getHumanCount, "getHumanCount");
+__name2(getHumanCount, "getHumanCount");
 async function getArtViews(env, filters) {
   const { dateClause, baseDateClause, hideBotsPredicate, hideBots } = filters;
-  const notBotWhenHide = /* @__PURE__ */ __name(
-    (alias) => (hideBots ? `AND COALESCE(${alias}.is_bot, 0) = 0` : ""),
-    "notBotWhenHide",
+  const notBotWhenHide = /* @__PURE__ */ __name2(
+    (alias) => hideBots ? `AND COALESCE(${alias}.is_bot, 0) = 0` : "",
+    "notBotWhenHide"
   );
   const humanCount = await getHumanCount(env, dateClause);
   if (humanCount === 0) {
@@ -395,7 +385,7 @@ async function getArtViews(env, filters) {
         xl_zooms: 0,
         galleries: 0,
         external_images: 0,
-        total: 0,
+        total: 0
       },
       artViewsByType: [],
       topArtViews: { chapters: [], xlZooms: [], external: [], galleries: [] },
@@ -409,9 +399,9 @@ async function getArtViews(env, filters) {
         avgScore: 0,
         highDepthCount: 0,
         totalViewers: 0,
-        distribution: [],
+        distribution: []
       },
-      suppressionStats: { suppressedToday: 0, activeSuppressedIPs: 0 },
+      suppressionStats: { suppressedToday: 0, activeSuppressedIPs: 0 }
     };
   }
   let artViewsSummary = {
@@ -420,7 +410,7 @@ async function getArtViews(env, filters) {
     xl_zooms: 0,
     galleries: 0,
     external_images: 0,
-    total: 0,
+    total: 0
   };
   try {
     const summaryQuery = `
@@ -456,10 +446,7 @@ async function getArtViews(env, filters) {
       if (row.event_type === "gallery" || row.event_type === "gallery_view") {
         artViewsSummary.galleries = row.views;
       }
-      if (
-        row.event_type === "external" ||
-        row.event_type === "external_image"
-      ) {
+      if (row.event_type === "external" || row.event_type === "external_image") {
         artViewsSummary.external_images = row.views;
       }
     }
@@ -475,14 +462,12 @@ async function getArtViews(env, filters) {
           GROUP BY e.visitor_id, e.target_id, session_bucket
         )
       `;
-      const chapterViewsResult =
-        await env.DB.prepare(chapterViewsQuery).first();
+      const chapterViewsResult = await env.DB.prepare(chapterViewsQuery).first();
       artViewsSummary.chapter_views = chapterViewsResult?.chapter_views || 0;
     } catch (e) {
       console.log("Chapter views query failed:", e.message);
     }
-    artViewsSummary.total =
-      artViewsSummary.chapter_views + artViewsSummary.external_images;
+    artViewsSummary.total = artViewsSummary.chapter_views + artViewsSummary.external_images;
   } catch (e) {
     console.log("Summary query failed:", e.message);
   }
@@ -498,10 +483,8 @@ async function getArtViews(env, filters) {
     `;
     const frictionResult = await env.DB.prepare(frictionQuery).first();
     artViewsSummary.harvester_friction_events = frictionResult?.total || 0;
-    artViewsSummary.harvester_friction_delay_events =
-      frictionResult?.delayed || 0;
-    artViewsSummary.harvester_friction_429_events =
-      frictionResult?.blocked_429 || 0;
+    artViewsSummary.harvester_friction_delay_events = frictionResult?.delayed || 0;
+    artViewsSummary.harvester_friction_429_events = frictionResult?.blocked_429 || 0;
   } catch (e) {
     console.log("Harvester friction query failed:", e.message);
   }
@@ -663,23 +646,19 @@ async function getArtViews(env, filters) {
     topChapters = (result.results || []).map((r) => {
       const hasJsView = r.has_js_view === 1;
       const views = hasJsView ? r.js_views || 0 : r.proxy_views || 0;
-      const uniqueViewers = hasJsView
-        ? r.js_unique_viewers || 0
-        : r.proxy_unique_viewers || 0;
+      const uniqueViewers = hasJsView ? r.js_unique_viewers || 0 : r.proxy_unique_viewers || 0;
       const bestReferer = hasJsView ? r.best_referer_js : r.best_referer_proxy;
       const bestPage = hasJsView ? r.best_page_js : r.best_page_proxy;
       const lastSeen = hasJsView ? r.last_seen_js : r.last_seen_proxy;
-      const geo = hasJsView
-        ? {
-            country: r.geo_country_js,
-            region: r.geo_region_js,
-            city: r.geo_city_js,
-          }
-        : {
-            country: r.geo_country_proxy,
-            region: r.geo_region_proxy,
-            city: r.geo_city_proxy,
-          };
+      const geo = hasJsView ? {
+        country: r.geo_country_js,
+        region: r.geo_region_js,
+        city: r.geo_city_js
+      } : {
+        country: r.geo_country_proxy,
+        region: r.geo_region_proxy,
+        city: r.geo_city_proxy
+      };
       const referrerSource = getReferrerSource(bestReferer);
       return {
         type: hasJsView ? "chapter_view" : "chapter_exposure",
@@ -688,14 +667,11 @@ async function getArtViews(env, filters) {
         unique_viewers: uniqueViewers,
         has_js_view: hasJsView,
         last_seen: lastSeen || null,
-        devices: (r.device_types || "")
-          .split(",")
-          .map((s) => (s || "").trim())
-          .filter(Boolean),
+        devices: (r.device_types || "").split(",").map((s) => (s || "").trim()).filter(Boolean),
         countries: r.countries,
         url: bestPage || null,
         geo,
-        referrer_source: referrerSource,
+        referrer_source: referrerSource
       };
     });
   } catch (e) {
@@ -773,12 +749,9 @@ async function getArtViews(env, filters) {
       views: r.views,
       unique_viewers: r.unique_viewers,
       last_seen: r.last_seen || null,
-      devices: (r.device_types || "")
-        .split(",")
-        .map((s) => (s || "").trim())
-        .filter(Boolean),
+      devices: (r.device_types || "").split(",").map((s) => (s || "").trim()).filter(Boolean),
       url: r.best_page || null,
-      geo: { country: r.geo_country, region: r.geo_region, city: r.geo_city },
+      geo: { country: r.geo_country, region: r.geo_region, city: r.geo_city }
     }));
   } catch (e) {
     console.log("Top zooms query failed:", e.message);
@@ -816,30 +789,17 @@ async function getArtViews(env, filters) {
       target_id: r.target_id,
       views: r.views,
       unique_viewers: r.unique_viewers,
-      devices: (r.device_types || "")
-        .split(",")
-        .map((s) => (s || "").trim())
-        .filter(Boolean),
-      gallery_url:
-        r.best_page && String(r.best_page).startsWith("/")
-          ? r.best_page
-          : r.best_page
-            ? "/" + String(r.best_page).replace(/^\/+/, "")
-            : null,
+      devices: (r.device_types || "").split(",").map((s) => (s || "").trim()).filter(Boolean),
+      gallery_url: r.best_page && String(r.best_page).startsWith("/") ? r.best_page : r.best_page ? "/" + String(r.best_page).replace(/^\/+/, "") : null
     }));
-    const getDisplayName = /* @__PURE__ */ __name((path) => {
-      const parts = String(path || "")
-        .split("/")
-        .filter(Boolean);
+    const getDisplayName = /* @__PURE__ */ __name2((path) => {
+      const parts = String(path || "").split("/").filter(Boolean);
       return parts.slice(-2).join("/") || path;
     }, "getDisplayName");
-    topGalleries = rawGalleries
-      .map((g) => ({
-        ...g,
-        display_name: getDisplayName(g.target_id),
-      }))
-      .sort((a, b) => b.views - a.views)
-      .slice(0, 15);
+    topGalleries = rawGalleries.map((g) => ({
+      ...g,
+      display_name: getDisplayName(g.target_id)
+    })).sort((a, b) => b.views - a.views).slice(0, 15);
   } catch (e) {
     console.log("Top galleries query failed:", e.message);
   }
@@ -848,7 +808,7 @@ async function getArtViews(env, filters) {
     highDepthCount: 0,
     totalViewers: 0,
     distribution: [],
-    maxScore: 0,
+    maxScore: 0
   };
   try {
     const depthQuery = `
@@ -889,12 +849,12 @@ async function getArtViews(env, filters) {
         distribution: [
           {
             label: "Collectors (20+)",
-            count: depthResult.high_depth_count || 0,
+            count: depthResult.high_depth_count || 0
           },
           { label: "Engaged (10-19)", count: depthResult.engaged_count || 0 },
           { label: "Curious (3-9)", count: depthResult.curious_count || 0 },
-          { label: "Casual (<3)", count: depthResult.casual_count || 0 },
-        ],
+          { label: "Casual (<3)", count: depthResult.casual_count || 0 }
+        ]
       };
     }
   } catch (e) {
@@ -1124,7 +1084,7 @@ async function getArtViews(env, filters) {
     let result;
     try {
       result = await env.DB.prepare(
-        externalQueryWithRefTypeAndAssetSource,
+        externalQueryWithRefTypeAndAssetSource
       ).all();
     } catch (e) {
       const msg = String(e?.message || e);
@@ -1140,61 +1100,42 @@ async function getArtViews(env, filters) {
       external_referral: 0,
       direct: 1,
       internal_navigation: 2,
-      unknown: 3,
+      unknown: 3
     };
-    externalImageAccess = (result.results || [])
-      .map((r) => {
-        const assetSourceLabel = formatAssetSourceLabel(
-          getAssetSourceLabel(r.asset_source),
-          r.og_platform,
-        );
-        const accessType = r.ref_type
-          ? r.ref_type === "direct"
-            ? "direct"
-            : r.ref_type === "external"
-              ? "external_referral"
-              : r.ref_type === "internal"
-                ? "internal_navigation"
-                : "unknown"
-          : getAccessType(r.referer);
-        const referrerSource =
-          accessType === "external_referral"
-            ? getReferrerSource(r.referer) || "Other"
-            : accessType === "direct"
-              ? "No Referrer"
-              : accessType === "internal_navigation"
-                ? "Internal"
-                : "Unknown";
-        let refererHost = null;
-        if (r.referer) {
-          try {
-            refererHost = new URL(r.referer).hostname;
-          } catch (e) {}
-        }
-        return {
-          target_id: r.target_id,
-          hits: r.hits,
-          last_seen: r.last_seen || null,
-          access_type: accessType,
-          referrer_source: referrerSource,
-          asset_source: r.asset_source || null,
-          asset_source_label: assetSourceLabel,
-          og_platform: r.og_platform || null,
-          referer_host: refererHost,
-          country: r.country,
-          geo: {
-            country: r.geo_country,
-            region: r.geo_region,
-            city: r.geo_city,
-          },
-        };
-      })
-      .sort(
-        (a, b) =>
-          b.hits - a.hits ||
-          (accessPriority[a.access_type] ?? 9) -
-            (accessPriority[b.access_type] ?? 9),
+    externalImageAccess = (result.results || []).map((r) => {
+      const assetSourceLabel = formatAssetSourceLabel(
+        getAssetSourceLabel(r.asset_source),
+        r.og_platform
       );
+      const accessType = r.ref_type ? r.ref_type === "direct" ? "direct" : r.ref_type === "external" ? "external_referral" : r.ref_type === "internal" ? "internal_navigation" : "unknown" : getAccessType(r.referer);
+      const referrerSource = accessType === "external_referral" ? getReferrerSource(r.referer) || "Other" : accessType === "direct" ? "No Referrer" : accessType === "internal_navigation" ? "Internal" : "Unknown";
+      let refererHost = null;
+      if (r.referer) {
+        try {
+          refererHost = new URL(r.referer).hostname;
+        } catch (e) {
+        }
+      }
+      return {
+        target_id: r.target_id,
+        hits: r.hits,
+        last_seen: r.last_seen || null,
+        access_type: accessType,
+        referrer_source: referrerSource,
+        asset_source: r.asset_source || null,
+        asset_source_label: assetSourceLabel,
+        og_platform: r.og_platform || null,
+        referer_host: refererHost,
+        country: r.country,
+        geo: {
+          country: r.geo_country,
+          region: r.geo_region,
+          city: r.geo_city
+        }
+      };
+    }).sort(
+      (a, b) => b.hits - a.hits || (accessPriority[a.access_type] ?? 9) - (accessPriority[b.access_type] ?? 9)
+    );
   } catch (e) {
     console.log("External image access query failed:", e.message);
   }
@@ -1240,7 +1181,7 @@ async function getArtViews(env, filters) {
       country: r.country,
       city: r.city,
       region: r.region,
-      hits: r.hits,
+      hits: r.hits
     }));
   } catch (e) {
     console.log("External reach geo query failed:", e.message);
@@ -1316,31 +1257,13 @@ async function getArtViews(env, filters) {
     for (const r of result.results || []) {
       const assetLabel = formatAssetSourceLabel(
         getAssetSourceLabel(r.asset_source),
-        r.og_platform,
+        r.og_platform
       );
-      const accessType = r.ref_type
-        ? r.ref_type === "direct"
-          ? "direct"
-          : r.ref_type === "external"
-            ? "external_referral"
-            : r.ref_type === "internal"
-              ? "internal_navigation"
-              : "unknown"
-        : getAccessType(r.referer);
-      const source = assetLabel
-        ? assetLabel
-        : accessType === "external_referral"
-          ? getReferrerSource(r.referer) || "Other"
-          : accessType === "direct"
-            ? "Direct"
-            : accessType === "internal_navigation"
-              ? "Internal"
-              : "Unknown";
+      const accessType = r.ref_type ? r.ref_type === "direct" ? "direct" : r.ref_type === "external" ? "external_referral" : r.ref_type === "internal" ? "internal_navigation" : "unknown" : getAccessType(r.referer);
+      const source = assetLabel ? assetLabel : accessType === "external_referral" ? getReferrerSource(r.referer) || "Other" : accessType === "direct" ? "Direct" : accessType === "internal_navigation" ? "Internal" : "Unknown";
       sourceMap[source] = (sourceMap[source] || 0) + r.hits;
     }
-    externalReachSources = Object.entries(sourceMap)
-      .map(([source, hits]) => ({ source, hits }))
-      .sort((a, b) => b.hits - a.hits);
+    externalReachSources = Object.entries(sourceMap).map(([source, hits]) => ({ source, hits })).sort((a, b) => b.hits - a.hits);
   } catch (e) {
     console.log("External reach sources query failed:", e.message);
   }
@@ -1378,17 +1301,12 @@ async function getArtViews(env, filters) {
     const result = await env.DB.prepare(extImgQuery).all();
     topExternal = (result.results || []).map((r) => {
       const at = getAccessType(r.top_referer);
-      const src =
-        at === "external_referral"
-          ? classifyForEntryRef(r.top_referer)
-          : at === "direct"
-            ? "direct"
-            : "unattributed";
+      const src = at === "external_referral" ? classifyForEntryRef(r.top_referer) : at === "direct" ? "direct" : "unattributed";
       return {
         target_id: r.target_id,
         views: r.views,
         unique_viewers: r.unique_viewers,
-        top_source: src,
+        top_source: src
       };
     });
   } catch (e) {
@@ -1443,22 +1361,12 @@ async function getArtViews(env, filters) {
         noRefExternalViews += r.views;
         continue;
       }
-      const at = r.ref_type
-        ? r.ref_type === "direct"
-          ? "direct"
-          : r.ref_type === "external"
-            ? "external_referral"
-            : r.ref_type === "internal"
-              ? "internal_navigation"
-              : "unknown"
-        : getAccessType(r.referer);
+      const at = r.ref_type ? r.ref_type === "direct" ? "direct" : r.ref_type === "external" ? "external_referral" : r.ref_type === "internal" ? "internal_navigation" : "unknown" : getAccessType(r.referer);
       if (at === "internal_navigation") continue;
       const source = getReferrerSource(r.referer) || "Other";
       sourceMap[source] = (sourceMap[source] || 0) + r.views;
     }
-    externalDisplays = Object.entries(sourceMap)
-      .map(([source, views]) => ({ source, views }))
-      .sort((a, b) => b.views - a.views);
+    externalDisplays = Object.entries(sourceMap).map(([source, views]) => ({ source, views })).sort((a, b) => b.views - a.views);
   } catch (e) {
     console.log("External displays query failed:", e.message);
   }
@@ -1501,12 +1409,7 @@ async function getArtViews(env, filters) {
       }
     }
     for (const r of result.results || []) {
-      const key =
-        r.ref_type === "direct"
-          ? "direct"
-          : r.ref_type === "internal"
-            ? "unattributed"
-            : classifyForEntryRef(r.referer);
+      const key = r.ref_type === "direct" ? "direct" : r.ref_type === "internal" ? "unattributed" : classifyForEntryRef(r.referer);
       entryRefCountsObj[key] = (entryRefCountsObj[key] || 0) + r.cnt;
     }
   } catch (e) {
@@ -1538,7 +1441,7 @@ async function getArtViews(env, filters) {
       country: r.country,
       city: r.city,
       region: r.region,
-      unique_viewers: r.unique_viewers,
+      unique_viewers: r.unique_viewers
     }));
   } catch (e) {
     console.log("External geography query failed:", e.message);
@@ -1554,6 +1457,7 @@ async function getArtViews(env, filters) {
     if (!img.last_seen || t > img.last_seen) img.last_seen = t;
   }
   __name(setLastSeenIfLater, "setLastSeenIfLater");
+  __name2(setLastSeenIfLater, "setLastSeenIfLater");
   function normalizeGeo(g) {
     if (!g) return null;
     const country = (g.country || "").toString().trim() || null;
@@ -1563,6 +1467,7 @@ async function getArtViews(env, filters) {
     return { country, region, city };
   }
   __name(normalizeGeo, "normalizeGeo");
+  __name2(normalizeGeo, "normalizeGeo");
   function setGeoIfBetter(img, geo, priority) {
     const g = normalizeGeo(geo);
     if (!g) return;
@@ -1571,6 +1476,7 @@ async function getArtViews(env, filters) {
     img.geo_priority = priority;
   }
   __name(setGeoIfBetter, "setGeoIfBetter");
+  __name2(setGeoIfBetter, "setGeoIfBetter");
   function ensureImage(id) {
     if (!imageMap[id]) {
       imageMap[id] = {
@@ -1587,12 +1493,13 @@ async function getArtViews(env, filters) {
         devices: /* @__PURE__ */ new Set(),
         url: null,
         url_priority: 99,
-        last_seen: null,
+        last_seen: null
       };
     }
     return imageMap[id];
   }
   __name(ensureImage, "ensureImage");
+  __name2(ensureImage, "ensureImage");
   function normalizeUrl(raw) {
     if (!raw) return null;
     const s = String(raw).trim();
@@ -1600,6 +1507,7 @@ async function getArtViews(env, filters) {
     return s;
   }
   __name(normalizeUrl, "normalizeUrl");
+  __name2(normalizeUrl, "normalizeUrl");
   function setUrlIfBetter(img, url, priority) {
     const u = normalizeUrl(url);
     if (!u) return;
@@ -1608,6 +1516,7 @@ async function getArtViews(env, filters) {
     img.url_priority = priority;
   }
   __name(setUrlIfBetter, "setUrlIfBetter");
+  __name2(setUrlIfBetter, "setUrlIfBetter");
   for (const c of topChapters) {
     const img = ensureImage(c.target_id);
     const badge = c.has_js_view ? "C" : "I";
@@ -1618,16 +1527,10 @@ async function getArtViews(env, filters) {
       setGeoIfBetter(img, c.geo, 0);
       setUrlIfBetter(img, c.url, 0);
       if (c.countries)
-        c.countries
-          .split(",")
-          .forEach((co) => co && img.countries.add(co.trim()));
+        c.countries.split(",").forEach((co) => co && img.countries.add(co.trim()));
       if (Array.isArray(c.devices))
         c.devices.forEach((d) => d && img.devices.add(String(d).toLowerCase()));
-      if (
-        c.referrer_source &&
-        c.referrer_source !== "Internal" &&
-        c.referrer_source !== "Unknown"
-      ) {
+      if (c.referrer_source && c.referrer_source !== "Internal" && c.referrer_source !== "Unknown") {
         if (!img.sources.includes(c.referrer_source))
           img.sources.push(c.referrer_source);
       }
@@ -1678,11 +1581,10 @@ async function getArtViews(env, filters) {
         if (img?.image_id && !img.url) {
           const galleryPath = getCanonicalGalleryPathForImageId(
             imageIdMap,
-            img.image_id,
+            img.image_id
           );
           if (galleryPath) {
-            const canonicalUrl =
-              "https://k4studios.com" + galleryPath + "/" + img.image_id + "/";
+            const canonicalUrl = "https://k4studios.com" + galleryPath + "/" + img.image_id + "/";
             setUrlIfBetter(img, canonicalUrl, 9);
           }
         }
@@ -1691,32 +1593,26 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("Canonical URL backfill failed:", e?.message || e);
   }
-  const imageAccessOverview = Object.values(imageMap)
-    .map((img) => ({
-      image_id: img.image_id,
-      badges: img.badges,
-      chapter_views: img.chapter_views,
-      xl_zooms: img.xl_zooms,
-      unverified_views: img.unverified_views,
-      external_views: img.external_views,
-      last_seen: img.last_seen,
-      geo: img.geo,
-      countries: Array.from(img.countries).filter(Boolean),
-      sources: [...new Set(img.sources)],
-      devices: Array.from(img.devices).filter(Boolean),
-      url: img.url,
-      total:
-        img.chapter_views +
-        img.xl_zooms +
-        img.unverified_views +
-        img.external_views,
-    }))
-    .sort((a, b) => {
-      const ta = a.last_seen || "";
-      const tb = b.last_seen || "";
-      if (ta !== tb) return tb.localeCompare(ta);
-      return b.total - a.total;
-    });
+  const imageAccessOverview = Object.values(imageMap).map((img) => ({
+    image_id: img.image_id,
+    badges: img.badges,
+    chapter_views: img.chapter_views,
+    xl_zooms: img.xl_zooms,
+    unverified_views: img.unverified_views,
+    external_views: img.external_views,
+    last_seen: img.last_seen,
+    geo: img.geo,
+    countries: Array.from(img.countries).filter(Boolean),
+    sources: [...new Set(img.sources)],
+    devices: Array.from(img.devices).filter(Boolean),
+    url: img.url,
+    total: img.chapter_views + img.xl_zooms + img.unverified_views + img.external_views
+  })).sort((a, b) => {
+    const ta = a.last_seen || "";
+    const tb = b.last_seen || "";
+    if (ta !== tb) return tb.localeCompare(ta);
+    return b.total - a.total;
+  });
   return {
     artViewsSummary,
     artViewsByType: [],
@@ -1724,7 +1620,7 @@ async function getArtViews(env, filters) {
       chapters: topChapters,
       xlZooms: topZooms,
       external: topExternal,
-      galleries: topGalleries,
+      galleries: topGalleries
     },
     externalImageAccess,
     externalImageAccessTotal,
@@ -1733,10 +1629,11 @@ async function getArtViews(env, filters) {
     entryRefCountsObj,
     imageAccessOverview,
     viewerDepth,
-    suppressionStats,
+    suppressionStats
   };
 }
 __name(getArtViews, "getArtViews");
+__name2(getArtViews, "getArtViews");
 async function getDashboardStats(env, filters) {
   const { dateClause } = filters;
   const humanCount = await getHumanCount(env, dateClause);
@@ -1748,10 +1645,10 @@ async function getDashboardStats(env, filters) {
         total_events: 0,
         avg_events_per_session: 0,
         pct_navigated: 0,
-        collector_notes_opens: 0,
+        collector_notes_opens: 0
       },
       returningVisitors: 0,
-      newVisitors: 0,
+      newVisitors: 0
     };
   }
   let sessionCount = 0;
@@ -1803,23 +1700,19 @@ async function getDashboardStats(env, filters) {
       unique_visitors: humanCount,
       sessions: sessionCount,
       total_events: totalEvents,
-      avg_events_per_session:
-        sessionCount > 0
-          ? Math.round((totalEvents / sessionCount) * 10) / 10
-          : 0,
+      avg_events_per_session: sessionCount > 0 ? Math.round(totalEvents / sessionCount * 10) / 10 : 0,
       pct_navigated: 0,
-      collector_notes_opens: 0,
+      collector_notes_opens: 0
     },
     returningVisitors: 0,
-    newVisitors: humanCount,
+    newVisitors: humanCount
   };
 }
 __name(getDashboardStats, "getDashboardStats");
+__name2(getDashboardStats, "getDashboardStats");
 async function getCoverageVisibility(env, filters) {
   const { dateClause } = filters;
-  const qualifiedDateClause =
-    (dateClause || "").replace(/\bts\b/g, "e.ts") ||
-    'e.ts > datetime("now", "-1 day")';
+  const qualifiedDateClause = (dateClause || "").replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")';
   const uaClassExpr = `CASE
     WHEN LOWER(COALESCE(e.ua, '')) LIKE '%iphone%' OR LOWER(COALESCE(e.ua, '')) LIKE '%ipad%' OR LOWER(COALESCE(e.ua, '')) LIKE '%ipod%' THEN 'ios'
     WHEN LOWER(COALESCE(e.ua, '')) LIKE '%android%' THEN 'android'
@@ -1867,24 +1760,23 @@ async function getCoverageVisibility(env, filters) {
       edge_presence_sessions: Number(row?.edge_sessions || 0),
       edge_presence_sessions_with_js: Number(row?.edge_sessions_with_js || 0),
       edge_presence_sessions_with_image: Number(
-        row?.edge_sessions_with_image || 0,
-      ),
+        row?.edge_sessions_with_image || 0
+      )
     };
   } catch (e) {
     console.log("Coverage visibility query failed:", e?.message || e);
     return {
       edge_presence_sessions: 0,
       edge_presence_sessions_with_js: 0,
-      edge_presence_sessions_with_image: 0,
+      edge_presence_sessions_with_image: 0
     };
   }
 }
 __name(getCoverageVisibility, "getCoverageVisibility");
+__name2(getCoverageVisibility, "getCoverageVisibility");
 async function getStatePixelTestRoaring20s(env, filters) {
   const { dateClause } = filters;
-  const qualifiedDateClause =
-    (dateClause || "").replace(/\bts\b/g, "e.ts") ||
-    'e.ts > datetime("now", "-1 day")';
+  const qualifiedDateClause = (dateClause || "").replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")';
   const isChapterImagePageExpr = `(
     e.page IS NOT NULL
     AND (
@@ -2071,22 +1963,22 @@ async function getStatePixelTestRoaring20s(env, filters) {
         viewers: Number(viewerStatsRow?.viewers || 0),
         total_exposures: Number(viewerStatsRow?.total_exposures || 0),
         total_duplicate_exposures: Number(
-          viewerStatsRow?.total_duplicate_exposures || 0,
+          viewerStatsRow?.total_duplicate_exposures || 0
         ),
         avg_exposures_per_viewer: Number(
-          viewerStatsRow?.avg_exposures_per_viewer || 0,
+          viewerStatsRow?.avg_exposures_per_viewer || 0
         ),
         avg_duplicate_exposures_per_viewer: Number(
-          viewerStatsRow?.avg_duplicate_exposures_per_viewer || 0,
+          viewerStatsRow?.avg_duplicate_exposures_per_viewer || 0
         ),
         viewers_with_duplicates: Number(
-          viewerStatsRow?.viewers_with_duplicates || 0,
+          viewerStatsRow?.viewers_with_duplicates || 0
         ),
         pct_viewers_with_duplicates: Number(
-          viewerStatsRow?.pct_viewers_with_duplicates || 0,
-        ),
+          viewerStatsRow?.pct_viewers_with_duplicates || 0
+        )
       },
-      by_gallery: byGalleryRows?.results || [],
+      by_gallery: byGalleryRows?.results || []
     };
   } catch (e) {
     console.log("State pixel test query failed:", e?.message || e);
@@ -2103,18 +1995,17 @@ async function getStatePixelTestRoaring20s(env, filters) {
         avg_exposures_per_viewer: 0,
         avg_duplicate_exposures_per_viewer: 0,
         viewers_with_duplicates: 0,
-        pct_viewers_with_duplicates: 0,
+        pct_viewers_with_duplicates: 0
       },
-      by_gallery: [],
+      by_gallery: []
     };
   }
 }
 __name(getStatePixelTestRoaring20s, "getStatePixelTestRoaring20s");
+__name2(getStatePixelTestRoaring20s, "getStatePixelTestRoaring20s");
 async function getRawBehaviorDistribution(env, filters) {
   const { dateClause } = filters;
-  const qualifiedDateClause =
-    (dateClause || "").replace(/\bts\b/g, "e.ts") ||
-    'e.ts > datetime("now", "-1 day")';
+  const qualifiedDateClause = (dateClause || "").replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")';
   const uaClassExpr = `CASE
     WHEN LOWER(COALESCE(e.ua, '')) LIKE '%iphone%' OR LOWER(COALESCE(e.ua, '')) LIKE '%ipad%' OR LOWER(COALESCE(e.ua, '')) LIKE '%ipod%' THEN 'ios'
     WHEN LOWER(COALESCE(e.ua, '')) LIKE '%android%' THEN 'android'
@@ -2214,7 +2105,7 @@ async function getRawBehaviorDistribution(env, filters) {
         img_0: Number(row?.img_0 || 0),
         img_1_2: Number(row?.img_1_2 || 0),
         img_3_10: Number(row?.img_3_10 || 0),
-        img_10p: Number(row?.img_10p || 0),
+        img_10p: Number(row?.img_10p || 0)
       },
       avgGapBuckets: {
         total: gapSessions,
@@ -2222,8 +2113,8 @@ async function getRawBehaviorDistribution(env, filters) {
         b100_500: Number(row?.gap_100_500 || 0),
         b500_2000: Number(row?.gap_500_2000 || 0),
         b2000_10000: Number(row?.gap_2000_10000 || 0),
-        ge_10000: Number(row?.gap_ge_10000 || 0),
-      },
+        ge_10000: Number(row?.gap_ge_10000 || 0)
+      }
     };
   } catch (e) {
     console.log("Raw behavior distribution query failed:", e?.message || e);
@@ -2233,7 +2124,7 @@ async function getRawBehaviorDistribution(env, filters) {
         img_0: 0,
         img_1_2: 0,
         img_3_10: 0,
-        img_10p: 0,
+        img_10p: 0
       },
       avgGapBuckets: {
         total: 0,
@@ -2241,29 +2132,21 @@ async function getRawBehaviorDistribution(env, filters) {
         b100_500: 0,
         b500_2000: 0,
         b2000_10000: 0,
-        ge_10000: 0,
-      },
+        ge_10000: 0
+      }
     };
   }
 }
 __name(getRawBehaviorDistribution, "getRawBehaviorDistribution");
+__name2(getRawBehaviorDistribution, "getRawBehaviorDistribution");
 async function getEventBreakdown(env, filters) {
   try {
     const { dateClause, ipClause, botClause, chardonClause } = filters;
-    const qualify = /* @__PURE__ */ __name(
-      (clause) =>
-        (clause || "")
-          .replace(/\bts\b/g, "e.ts")
-          .replace(/\bip\b/g, "e.ip")
-          .replace(/\bcity\b/g, "e.city")
-          .replace(/\bcountry\b/g, "e.country")
-          .replace(/\bregion\b/g, "e.region")
-          .replace(/\breferer\b/g, "e.referer"),
-      "qualify",
+    const qualify = /* @__PURE__ */ __name2(
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region").replace(/\breferer\b/g, "e.referer"),
+      "qualify"
     );
-    const safeBotClause = (botClause || "")
-      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ")
-      .replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
+    const safeBotClause = (botClause || "").replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ").replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
     const trackedEvents = [
       "xl_zoom",
@@ -2298,7 +2181,7 @@ async function getEventBreakdown(env, filters) {
       "scroll_75",
       "scroll_100",
       "page_view",
-      "session_exit",
+      "session_exit"
     ];
     const trackedListSql = trackedEvents.map((e) => `'${e}'`).join(", ");
     const eventsQuery = `
@@ -2323,26 +2206,17 @@ async function getEventBreakdown(env, filters) {
   }
 }
 __name(getEventBreakdown, "getEventBreakdown");
+__name2(getEventBreakdown, "getEventBreakdown");
 async function getGalleryPerformance(env, filters) {
   try {
     const { dateClause, ipClause, botClause, chardonClause } = filters;
-    const qualify = /* @__PURE__ */ __name(
-      (clause, alias) =>
-        (clause || "")
-          .replace(/\bts\b/g, `${alias}.ts`)
-          .replace(/\bip\b/g, `${alias}.ip`)
-          .replace(/\bcity\b/g, `${alias}.city`)
-          .replace(/\bcountry\b/g, `${alias}.country`)
-          .replace(/\bregion\b/g, `${alias}.region`),
-      "qualify",
+    const qualify = /* @__PURE__ */ __name2(
+      (clause, alias) => (clause || "").replace(/\bts\b/g, `${alias}.ts`).replace(/\bip\b/g, `${alias}.ip`).replace(/\bcity\b/g, `${alias}.city`).replace(/\bcountry\b/g, `${alias}.country`).replace(/\bregion\b/g, `${alias}.region`),
+      "qualify"
     );
-    const safeBotClause = (botClause || "")
-      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ")
-      .replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
-    const whereE =
-      qualify(dateClause, "e") || 'e.ts > datetime("now", "-1 day")';
-    const whereE2 =
-      qualify(dateClause, "e2") || 'e2.ts > datetime("now", "-1 day")';
+    const safeBotClause = (botClause || "").replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ").replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
+    const whereE = qualify(dateClause, "e") || 'e.ts > datetime("now", "-1 day")';
+    const whereE2 = qualify(dateClause, "e2") || 'e2.ts > datetime("now", "-1 day")';
     const galleryQuery = `
       WITH normalized_page_views AS (
         SELECT
@@ -2472,10 +2346,7 @@ async function getGalleryPerformance(env, filters) {
         gallery_type = "painterly";
       } else if (fullPath.includes("/Fine-Art-Photography/")) {
         gallery_type = "traditional";
-      } else if (
-        fullPath.includes("/Engrained/") ||
-        fullPath.includes("/Archive/")
-      ) {
+      } else if (fullPath.includes("/Engrained/") || fullPath.includes("/Archive/")) {
         gallery_type = "select";
       }
       return {
@@ -2483,7 +2354,7 @@ async function getGalleryPerformance(env, filters) {
         gallery_type,
         sessions: r.sessions || 0,
         zoom_pct: r.zoom_pct || 0,
-        avg_events: r.avg_events || 0,
+        avg_events: r.avg_events || 0
       };
     });
     return { results };
@@ -2493,10 +2364,12 @@ async function getGalleryPerformance(env, filters) {
   }
 }
 __name(getGalleryPerformance, "getGalleryPerformance");
+__name2(getGalleryPerformance, "getGalleryPerformance");
 async function getReferrers(env, filters) {
   return { results: [] };
 }
 __name(getReferrers, "getReferrers");
+__name2(getReferrers, "getReferrers");
 async function getGeography(env, filters) {
   try {
     const { dateClause } = filters;
@@ -2543,18 +2416,13 @@ async function getGeography(env, filters) {
   }
 }
 __name(getGeography, "getGeography");
+__name2(getGeography, "getGeography");
 async function getPeriodTotals(env, filters) {
   try {
     const { dateClause, botClause, chardonClause } = filters;
-    const qualifyBot = /* @__PURE__ */ __name(
-      (clause) =>
-        (clause || "")
-          .replace(/\bts\b/g, "e.ts")
-          .replace(/\bip\b/g, "e.ip")
-          .replace(/\bcity\b/g, "e.city")
-          .replace(/\bcountry\b/g, "e.country")
-          .replace(/\bregion\b/g, "e.region"),
-      "qualifyBot",
+    const qualifyBot = /* @__PURE__ */ __name2(
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region"),
+      "qualifyBot"
     );
     const periodQuery = `
       SELECT 
@@ -2585,6 +2453,7 @@ async function getPeriodTotals(env, filters) {
   }
 }
 __name(getPeriodTotals, "getPeriodTotals");
+__name2(getPeriodTotals, "getPeriodTotals");
 async function getDailyTrend(env, filters) {
   try {
     const {
@@ -2592,23 +2461,13 @@ async function getDailyTrend(env, filters) {
       galleryClause,
       ipClause,
       botClause,
-      chardonClause,
+      chardonClause
     } = filters;
-    const qualify = /* @__PURE__ */ __name(
-      (clause) =>
-        (clause || "")
-          .replace(/\bts\b/g, "e.ts")
-          .replace(/\bgallery_id\b/g, "e.gallery_id")
-          .replace(/\bip\b/g, "e.ip")
-          .replace(/\bcity\b/g, "e.city")
-          .replace(/\bdevice\b/g, "e.device")
-          .replace(/\bcountry\b/g, "e.country")
-          .replace(/\bregion\b/g, "e.region"),
-      "qualify",
+    const qualify = /* @__PURE__ */ __name2(
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bgallery_id\b/g, "e.gallery_id").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bdevice\b/g, "e.device").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region"),
+      "qualify"
     );
-    const where =
-      qualify(rangeDateClause) ||
-      `date(e.ts, '-5 hours') = date('now', '-5 hours')`;
+    const where = qualify(rangeDateClause) || `date(e.ts, '-5 hours') = date('now', '-5 hours')`;
     const trendQuery = `
       SELECT
         date(e.ts, '-5 hours') as day,
@@ -2649,33 +2508,21 @@ async function getDailyTrend(env, filters) {
   }
 }
 __name(getDailyTrend, "getDailyTrend");
+__name2(getDailyTrend, "getDailyTrend");
 async function getSessionMetrics(env, filters) {
   try {
-    const { dateClause, galleryClause, ipClause, botClause, chardonClause } =
-      filters;
-    const qualify = /* @__PURE__ */ __name(
-      (clause) =>
-        (clause || "")
-          .replace(/\bts\b/g, "e.ts")
-          .replace(/\bip\b/g, "e.ip")
-          .replace(/\bcity\b/g, "e.city")
-          .replace(/\bgallery_id\b/g, "e.gallery_id")
-          .replace(/\bcountry\b/g, "e.country")
-          .replace(/\bregion\b/g, "e.region")
-          .replace(/\breferer\b/g, "e.referer")
-          .replace(/\bua\b/g, "e.ua")
-          .replace(/\bis_bot\b/g, "COALESCE(e.is_bot, 0)"),
-      "qualify",
+    const { dateClause, galleryClause, ipClause, botClause, chardonClause } = filters;
+    const qualify = /* @__PURE__ */ __name2(
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bgallery_id\b/g, "e.gallery_id").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region").replace(/\breferer\b/g, "e.referer").replace(/\bua\b/g, "e.ua").replace(/\bis_bot\b/g, "COALESCE(e.is_bot, 0)"),
+      "qualify"
     );
     const where = [
       qualify(dateClause) || 'e.ts > datetime("now", "-1 day")',
       qualify(galleryClause),
       qualify(ipClause),
       qualify(botClause),
-      qualify(chardonClause),
-    ]
-      .filter(Boolean)
-      .join("\n        ");
+      qualify(chardonClause)
+    ].filter(Boolean).join("\n        ");
     const sessionKey = `COALESCE(NULLIF(e.session_id, ''), e.visitor_id || ':' || date(e.ts, '-5 hours'))`;
     const devicesQuery = `
       SELECT 
@@ -2704,13 +2551,9 @@ async function getSessionMetrics(env, filters) {
       )
     `;
     const bounceResult = await env.DB.prepare(bounceQuery).first();
-    const bounceRate =
-      bounceResult?.total_sessions > 0
-        ? Math.round(
-            (100 * (bounceResult.bounce_sessions || 0)) /
-              bounceResult.total_sessions,
-          )
-        : 0;
+    const bounceRate = bounceResult?.total_sessions > 0 ? Math.round(
+      100 * (bounceResult.bounce_sessions || 0) / bounceResult.total_sessions
+    ) : 0;
     const durationQuery = `
       SELECT ROUND(AVG(duration_seconds), 0) as avg_duration
       FROM (
@@ -2728,10 +2571,7 @@ async function getSessionMetrics(env, filters) {
     `;
     const durationResult = await env.DB.prepare(durationQuery).first();
     const avgDurationSecs = durationResult?.avg_duration || 0;
-    const avgDurationFormatted =
-      avgDurationSecs >= 60
-        ? `${Math.floor(avgDurationSecs / 60)}m ${Math.round(avgDurationSecs % 60)}s`
-        : `${Math.round(avgDurationSecs)}s`;
+    const avgDurationFormatted = avgDurationSecs >= 60 ? `${Math.floor(avgDurationSecs / 60)}m ${Math.round(avgDurationSecs % 60)}s` : `${Math.round(avgDurationSecs)}s`;
     const peakHoursQuery = `
       SELECT 
         CAST(strftime('%H', e.ts, '-5 hours') AS INTEGER) as hour,
@@ -2746,38 +2586,33 @@ async function getSessionMetrics(env, filters) {
     `;
     const peakHoursResult = await env.DB.prepare(peakHoursQuery).all();
     const hourRows = peakHoursResult?.results || [];
-    const pickTop = /* @__PURE__ */ __name(
-      (rows) =>
-        rows.sort((a, b) => (b.sessions || 0) - (a.sessions || 0))[0] || null,
-      "pickTop",
+    const pickTop = /* @__PURE__ */ __name2(
+      (rows) => rows.sort((a, b) => (b.sessions || 0) - (a.sessions || 0))[0] || null,
+      "pickTop"
     );
     const topAm = pickTop(hourRows.filter((r) => (r.hour ?? 0) < 12));
     const topPm = pickTop(hourRows.filter((r) => (r.hour ?? 0) >= 12));
-    const formatHour = /* @__PURE__ */ __name((hour24) => {
+    const formatHour = /* @__PURE__ */ __name2((hour24) => {
       const h = Number(hour24) || 0;
       const hour12 = h === 0 ? 12 : h > 12 ? h - 12 : h;
       const ampm = h >= 12 ? "pm" : "am";
       return `${hour12}${ampm}`;
     }, "formatHour");
     const peakHours = [
-      ...(topAm
-        ? [
-            {
-              period: "AM",
-              hour: formatHour(topAm.hour),
-              sessions: topAm.sessions,
-            },
-          ]
-        : []),
-      ...(topPm
-        ? [
-            {
-              period: "PM",
-              hour: formatHour(topPm.hour),
-              sessions: topPm.sessions,
-            },
-          ]
-        : []),
+      ...topAm ? [
+        {
+          period: "AM",
+          hour: formatHour(topAm.hour),
+          sessions: topAm.sessions
+        }
+      ] : [],
+      ...topPm ? [
+        {
+          period: "PM",
+          hour: formatHour(topPm.hour),
+          sessions: topPm.sessions
+        }
+      ] : []
     ];
     const deviceEngagementQuery = `
       WITH viewer_depth AS (
@@ -2810,7 +2645,7 @@ async function getSessionMetrics(env, filters) {
       ORDER BY sessions DESC
     `;
     const deviceEngagementResult = await env.DB.prepare(
-      deviceEngagementQuery,
+      deviceEngagementQuery
     ).all();
     return {
       devices,
@@ -2818,7 +2653,7 @@ async function getSessionMetrics(env, filters) {
       avgDurationSecs,
       avgDurationFormatted,
       peakHours,
-      deviceEngagement: deviceEngagementResult?.results || [],
+      deviceEngagement: deviceEngagementResult?.results || []
     };
   } catch (e) {
     console.log("Session metrics query failed:", e.message);
@@ -2828,11 +2663,12 @@ async function getSessionMetrics(env, filters) {
       avgDurationSecs: 0,
       avgDurationFormatted: "0s",
       peakHours: [],
-      deviceEngagement: [],
+      deviceEngagement: []
     };
   }
 }
 __name(getSessionMetrics, "getSessionMetrics");
+__name2(getSessionMetrics, "getSessionMetrics");
 async function getTopPages(env, filters) {
   try {
     const { dateClause } = filters;
@@ -2856,6 +2692,7 @@ async function getTopPages(env, filters) {
   }
 }
 __name(getTopPages, "getTopPages");
+__name2(getTopPages, "getTopPages");
 async function getTopGalleryLandingPages(env, filters) {
   try {
     const { dateClause } = filters;
@@ -2910,23 +2747,15 @@ async function getTopGalleryLandingPages(env, filters) {
   }
 }
 __name(getTopGalleryLandingPages, "getTopGalleryLandingPages");
+__name2(getTopGalleryLandingPages, "getTopGalleryLandingPages");
 async function getBrowserViewsSummary(env, filters) {
   try {
     const { dateClause, ipClause, botClause, chardonClause } = filters;
-    const qualify = /* @__PURE__ */ __name(
-      (clause) =>
-        (clause || "")
-          .replace(/\bts\b/g, "e.ts")
-          .replace(/\bip\b/g, "e.ip")
-          .replace(/\bcity\b/g, "e.city")
-          .replace(/\bcountry\b/g, "e.country")
-          .replace(/\bregion\b/g, "e.region")
-          .replace(/\breferer\b/g, "e.referer"),
-      "qualify",
+    const qualify = /* @__PURE__ */ __name2(
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region").replace(/\breferer\b/g, "e.referer"),
+      "qualify"
     );
-    const safeBotClause = (botClause || "")
-      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ")
-      .replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
+    const safeBotClause = (botClause || "").replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ").replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
     const isChapterPage = `(page_path GLOB '*/i-*' AND page_path NOT GLOB '*/i-*/*')`;
     const q = `
@@ -2986,7 +2815,7 @@ async function getBrowserViewsSummary(env, filters) {
       gallery_landing_views: Number(row?.gallery_landing_views || 0),
       gallery_landing_viewers: Number(row?.gallery_landing_viewers || 0),
       chapter_image_views: Number(row?.chapter_image_views || 0),
-      chapter_image_viewers: Number(row?.chapter_image_viewers || 0),
+      chapter_image_viewers: Number(row?.chapter_image_viewers || 0)
     };
   } catch (e) {
     console.log("Browser views summary query failed:", e.message, e.stack);
@@ -2998,37 +2827,30 @@ async function getBrowserViewsSummary(env, filters) {
       gallery_landing_views: 0,
       gallery_landing_viewers: 0,
       chapter_image_views: 0,
-      chapter_image_viewers: 0,
+      chapter_image_viewers: 0
     };
   }
 }
 __name(getBrowserViewsSummary, "getBrowserViewsSummary");
+__name2(getBrowserViewsSummary, "getBrowserViewsSummary");
 async function getTopImages(env, filters) {
   return {
     images: { results: [] },
     uniqueImagesViewed: 0,
     totalImageSessions: 0,
-    totalImageViews: 0,
+    totalImageViews: 0
   };
 }
 __name(getTopImages, "getTopImages");
+__name2(getTopImages, "getTopImages");
 async function getEntryAnalysis(env, filters) {
   try {
     const { dateClause, ipClause, botClause, chardonClause } = filters;
-    const qualify = /* @__PURE__ */ __name(
-      (clause) =>
-        (clause || "")
-          .replace(/\bts\b/g, "e.ts")
-          .replace(/\bip\b/g, "e.ip")
-          .replace(/\bcity\b/g, "e.city")
-          .replace(/\bcountry\b/g, "e.country")
-          .replace(/\bregion\b/g, "e.region")
-          .replace(/\breferer\b/g, "e.referer"),
-      "qualify",
+    const qualify = /* @__PURE__ */ __name2(
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region").replace(/\breferer\b/g, "e.referer"),
+      "qualify"
     );
-    const safeBotClause = (botClause || "")
-      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ")
-      .replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
+    const safeBotClause = (botClause || "").replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ").replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
     const entryPagesQuery = `
       WITH first_pages AS (
@@ -3094,8 +2916,7 @@ async function getEntryAnalysis(env, filters) {
           AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
           AND COALESCE(NULLIF(e.page, ''), e.target_id) LIKE '%/i-%'
       `;
-      const imagePageViewsResult =
-        await env.DB.prepare(imagePageViewsQuery).first();
+      const imagePageViewsResult = await env.DB.prepare(imagePageViewsQuery).first();
       imagePageViewsFromEvents = imagePageViewsResult?.views || 0;
       const imageEntrySessionsQuery = `
         WITH first_pages AS (
@@ -3119,7 +2940,7 @@ async function getEntryAnalysis(env, filters) {
         WHERE rn = 1 AND page_path LIKE '%/i-%'
       `;
       const imageEntrySessionsResult = await env.DB.prepare(
-        imageEntrySessionsQuery,
+        imageEntrySessionsQuery
       ).first();
       imageEntrySessionsFromEvents = imageEntrySessionsResult?.sessions || 0;
     } catch (e) {
@@ -3129,7 +2950,7 @@ async function getEntryAnalysis(env, filters) {
       entryPages,
       imagePageViewsFromEvents,
       imageEntrySessionsFromEvents,
-      entryRefCounts: { results: [] },
+      entryRefCounts: { results: [] }
     };
   } catch (e) {
     console.log("Entry analysis query failed:", e.message);
@@ -3137,28 +2958,20 @@ async function getEntryAnalysis(env, filters) {
       entryPages: { results: [] },
       imagePageViewsFromEvents: 0,
       imageEntrySessionsFromEvents: 0,
-      entryRefCounts: { results: [] },
+      entryRefCounts: { results: [] }
     };
   }
 }
 __name(getEntryAnalysis, "getEntryAnalysis");
+__name2(getEntryAnalysis, "getEntryAnalysis");
 async function getEngagementDepth(env, filters) {
   try {
     const { dateClause, ipClause, botClause, chardonClause } = filters;
-    const qualify = /* @__PURE__ */ __name(
-      (clause) =>
-        (clause || "")
-          .replace(/\bts\b/g, "e.ts")
-          .replace(/\bip\b/g, "e.ip")
-          .replace(/\bcity\b/g, "e.city")
-          .replace(/\bcountry\b/g, "e.country")
-          .replace(/\bregion\b/g, "e.region")
-          .replace(/\breferer\b/g, "e.referer"),
-      "qualify",
+    const qualify = /* @__PURE__ */ __name2(
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region").replace(/\breferer\b/g, "e.referer"),
+      "qualify"
     );
-    const safeBotClause = (botClause || "")
-      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ")
-      .replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
+    const safeBotClause = (botClause || "").replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ").replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
     const cowboyQuery = `
       SELECT COUNT(*) AS count
@@ -3209,7 +3022,7 @@ async function getEngagementDepth(env, filters) {
       deepSessions: 0,
       totalSessions: 0,
       botSessions: 0,
-      botPct: 0,
+      botPct: 0
     };
   } catch (e) {
     console.log("Engagement depth query failed:", e.message);
@@ -3224,28 +3037,20 @@ async function getEngagementDepth(env, filters) {
       deepSessions: 0,
       totalSessions: 0,
       botSessions: 0,
-      botPct: 0,
+      botPct: 0
     };
   }
 }
 __name(getEngagementDepth, "getEngagementDepth");
+__name2(getEngagementDepth, "getEngagementDepth");
 async function getExitAnalysis(env, filters) {
   try {
     const { dateClause, ipClause, botClause, chardonClause } = filters;
-    const qualify = /* @__PURE__ */ __name(
-      (clause) =>
-        (clause || "")
-          .replace(/\bts\b/g, "e.ts")
-          .replace(/\bip\b/g, "e.ip")
-          .replace(/\bcity\b/g, "e.city")
-          .replace(/\bcountry\b/g, "e.country")
-          .replace(/\bregion\b/g, "e.region")
-          .replace(/\breferer\b/g, "e.referer"),
-      "qualify",
+    const qualify = /* @__PURE__ */ __name2(
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region").replace(/\breferer\b/g, "e.referer"),
+      "qualify"
     );
-    const safeBotClause = (botClause || "")
-      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ")
-      .replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
+    const safeBotClause = (botClause || "").replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ").replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
     const exitPagesQuery = `
       WITH last_pages AS (
@@ -3285,19 +3090,15 @@ async function getExitAnalysis(env, filters) {
       landing: 0,
       blog: 0,
       photoshoots: 0,
-      other: 0,
+      other: 0
     };
-    const isLandingPage = /* @__PURE__ */ __name((path) => {
+    const isLandingPage = /* @__PURE__ */ __name2((path) => {
       if (!path || typeof path !== "string") return false;
       if (path === "/" || path === "") return false;
       if (path.startsWith("/Galleries/") || path.startsWith("/Other/"))
         return false;
       if (path.startsWith("/Blog/") || path.startsWith("/blog/")) return false;
-      if (
-        path.startsWith("/Photoshootsandevents/") ||
-        path.startsWith("/Photography-Galleries/") ||
-        path.startsWith("/Scheduled-Shoots/")
-      )
+      if (path.startsWith("/Photoshootsandevents/") || path.startsWith("/Photography-Galleries/") || path.startsWith("/Scheduled-Shoots/"))
         return false;
       return /^\/[^\/]+\/?$/.test(path);
     }, "isLandingPage");
@@ -3313,11 +3114,7 @@ async function getExitAnalysis(env, filters) {
         exitByCategory.gallery += sessions;
       } else if (path.startsWith("/Blog/") || path.startsWith("/blog/")) {
         exitByCategory.blog += sessions;
-      } else if (
-        path.startsWith("/Photoshootsandevents/") ||
-        path.startsWith("/Photography-Galleries/") ||
-        path.startsWith("/Scheduled-Shoots/")
-      ) {
+      } else if (path.startsWith("/Photoshootsandevents/") || path.startsWith("/Photography-Galleries/") || path.startsWith("/Scheduled-Shoots/")) {
         exitByCategory.photoshoots += sessions;
       } else if (isLandingPage(path)) {
         exitByCategory.landing += sessions;
@@ -3328,8 +3125,8 @@ async function getExitAnalysis(env, filters) {
     const exitSummary = {
       total_exit_sessions: rows.reduce(
         (sum, r) => sum + Number(r.sessions || 0),
-        0,
-      ),
+        0
+      )
     };
     return { exitPages, exitSummary, exitByCategory };
   } catch (e) {
@@ -3338,15 +3135,12 @@ async function getExitAnalysis(env, filters) {
   }
 }
 __name(getExitAnalysis, "getExitAnalysis");
+__name2(getExitAnalysis, "getExitAnalysis");
 async function getEdgeEvents(env, filters) {
   try {
     const { dateClause, yesterday, days } = filters || {};
     const d = Math.max(1, Math.min(parseInt(days || "1", 10) || 1, 31));
-    const dateWhere = dateClause
-      ? `${String(dateClause).replace(/\bts\b/g, "e.ts")}`
-      : yesterday
-        ? `date(e.ts, '-5 hours') = date('now', '-5 hours', '-1 day')`
-        : `e.ts > datetime('now', '-${d} day')`;
+    const dateWhere = dateClause ? `${String(dateClause).replace(/\bts\b/g, "e.ts")}` : yesterday ? `date(e.ts, '-5 hours') = date('now', '-5 hours', '-1 day')` : `e.ts > datetime('now', '-${d} day')`;
     const eventsQuery = `
       SELECT
         e.event_type,
@@ -3384,12 +3178,13 @@ async function getEdgeEvents(env, filters) {
   }
 }
 __name(getEdgeEvents, "getEdgeEvents");
+__name2(getEdgeEvents, "getEdgeEvents");
 async function getBotIntelligence(env) {
   const botIntelligence = {
     suspects: [],
     blocked: [],
     verified: [],
-    stats: { total: 0, risk3: 0, risk4: 0, verified: 0, verified_bots: 0 },
+    stats: { total: 0, risk3: 0, risk4: 0, verified: 0, verified_bots: 0 }
   };
   try {
     const SUSPECTS_LIMIT = 500;
@@ -3420,11 +3215,7 @@ async function getBotIntelligence(env) {
     `;
     const suspectsResult = await env.DB.prepare(suspectsQuery).all();
     botIntelligence.suspects = suspectsResult?.results || [];
-    if (
-      !Array.isArray(botIntelligence.suspects) ||
-      botIntelligence.suspects.length === 0 ||
-      botIntelligence.suspects.some((s) => !s?.ip_hash)
-    ) {
+    if (!Array.isArray(botIntelligence.suspects) || botIntelligence.suspects.length === 0 || botIntelligence.suspects.some((s) => !s?.ip_hash)) {
       const fallbackQuery = `
         WITH base AS (
           SELECT
@@ -3459,7 +3250,7 @@ async function getBotIntelligence(env) {
         risk_level: 2,
         risk_score: r.is_flagged_bot ? 2 : 0,
         rules_triggered: JSON.stringify(
-          r.is_flagged_bot ? ["auto_flagged_bot"] : [],
+          r.is_flagged_bot ? ["auto_flagged_bot"] : []
         ),
         first_seen: r.first_seen,
         last_seen: r.last_seen,
@@ -3471,7 +3262,7 @@ async function getBotIntelligence(env) {
         is_verified_bot: 0,
         bot_name: null,
         country: r.country,
-        status: "watching",
+        status: "watching"
       }));
     }
     try {
@@ -3617,19 +3408,16 @@ async function getBotIntelligence(env) {
         LEFT JOIN ip_asn ia ON ia.ip_hash = s.ip_hash
         LEFT JOIN delay_burst_asn dasn ON dasn.cf_asn = ia.cf_asn_last24h
       `;
-      const frictionRows =
-        (await env.DB.prepare(frictionStatsQuery).all())?.results || [];
+      const frictionRows = (await env.DB.prepare(frictionStatsQuery).all())?.results || [];
       const frictionMap = new Map(frictionRows.map((r) => [r.ip_hash, r]));
       for (const suspect of botIntelligence.suspects) {
         const f = frictionMap.get(suspect.ip_hash);
         suspect.friction_429_24h = f?.friction_429_24h || 0;
         suspect.friction_delay_24h = f?.friction_delay_24h || 0;
         suspect.friction_429_max_day_7d = f?.friction_429_max_day_7d || 0;
-        suspect.peak_unique_images_per_minute_24h =
-          f?.peak_unique_images_per_minute_24h || 0;
+        suspect.peak_unique_images_per_minute_24h = f?.peak_unique_images_per_minute_24h || 0;
         suspect.max_friction_delay_10m_24h = f?.max_friction_delay_10m_24h || 0;
-        suspect.max_friction_delay_10m_asn_24h =
-          f?.max_friction_delay_10m_asn_24h || 0;
+        suspect.max_friction_delay_10m_asn_24h = f?.max_friction_delay_10m_asn_24h || 0;
       }
     } catch (e) {
       console.log("Friction stats enrichment failed:", e.message);
@@ -3666,7 +3454,7 @@ async function getBotIntelligence(env) {
     botIntelligence.verified = verifiedResult?.results || [];
     botIntelligence.stats.verified = botIntelligence.verified.reduce(
       (sum, v) => sum + (v.total_requests || 0),
-      0,
+      0
     );
     try {
       const verifiedTotalQuery = `
@@ -3703,8 +3491,7 @@ async function getBotIntelligence(env) {
   return botIntelligence;
 }
 __name(getBotIntelligence, "getBotIntelligence");
-
-// src/analytics/dashboard/schema.js
+__name2(getBotIntelligence, "getBotIntelligence");
 function buildDashboardData(queryResults, filterParams) {
   const {
     summary,
@@ -3757,7 +3544,7 @@ function buildDashboardData(queryResults, filterParams) {
     viewerDepth,
     suppressionStats,
     botIntelligence,
-    periodTotals,
+    periodTotals
   } = queryResults;
   const {
     days,
@@ -3768,7 +3555,7 @@ function buildDashboardData(queryResults, filterParams) {
     viewerIp,
     hideBots,
     hideChardon,
-    authHeader,
+    authHeader
   } = filterParams;
   return {
     days,
@@ -3829,12 +3616,11 @@ function buildDashboardData(queryResults, filterParams) {
     suppressionStats,
     botIntelligence,
     periodTotals: periodTotals || { total_visitors: 0, total_art_viewers: 0 },
-    authHeader: authHeader || "",
+    authHeader: authHeader || ""
   };
 }
 __name(buildDashboardData, "buildDashboardData");
-
-// src/analytics/dashboard/renderer.js
+__name2(buildDashboardData, "buildDashboardData");
 function renderDashboard({
   days,
   yesterday,
@@ -3899,40 +3685,32 @@ function renderDashboard({
   suppressionStats,
   botIntelligence,
   periodTotals,
-  authHeader,
+  authHeader
 }) {
   const s = summary || {};
-  const safeDeviceEngagement = Array.isArray(deviceEngagement)
-    ? deviceEngagement
-    : [];
+  const safeDeviceEngagement = Array.isArray(deviceEngagement) ? deviceEngagement : [];
   const cv = coverageVisibility || {};
   const edgePresenceSessions = Number(cv.edge_presence_sessions || 0);
   const edgeSessionsWithImage = Number(
-    cv.edge_presence_sessions_with_image || 0,
+    cv.edge_presence_sessions_with_image || 0
   );
   const edgePresenceSessionsWithJs = Number(
-    cv.edge_presence_sessions_with_js || 0,
+    cv.edge_presence_sessions_with_js || 0
   );
   const jsSessionIds = Number(s.sessions || 0);
   const privacyHiddenHumans = Math.max(
     0,
-    edgePresenceSessions - edgePresenceSessionsWithJs,
+    edgePresenceSessions - edgePresenceSessionsWithJs
   );
-  const coverageRatioPct =
-    edgePresenceSessions > 0
-      ? Math.round((edgePresenceSessionsWithJs / edgePresenceSessions) * 100)
-      : 0;
-  const edgeToImagePct =
-    edgePresenceSessions > 0
-      ? Math.round((edgeSessionsWithImage / edgePresenceSessions) * 100)
-      : 0;
+  const coverageRatioPct = edgePresenceSessions > 0 ? Math.round(edgePresenceSessionsWithJs / edgePresenceSessions * 100) : 0;
+  const edgeToImagePct = edgePresenceSessions > 0 ? Math.round(edgeSessionsWithImage / edgePresenceSessions * 100) : 0;
   const rbd = rawBehaviorDistribution || {};
   const ic = rbd.imageCountBuckets || {
     total: 0,
     img_0: 0,
     img_1_2: 0,
     img_3_10: 0,
-    img_10p: 0,
+    img_10p: 0
   };
   const gb = rbd.avgGapBuckets || {
     total: 0,
@@ -3940,39 +3718,35 @@ function renderDashboard({
     b100_500: 0,
     b500_2000: 0,
     b2000_10000: 0,
-    ge_10000: 0,
+    ge_10000: 0
   };
-  const pct = /* @__PURE__ */ __name(
-    (n, d) => (d > 0 ? Math.round((Number(n || 0) / d) * 100) : 0),
-    "pct",
+  const pct = /* @__PURE__ */ __name2(
+    (n, d) => d > 0 ? Math.round(Number(n || 0) / d * 100) : 0,
+    "pct"
   );
   const sp = statePixelTestRoaring20s || {};
   const spHits = Number(sp.state_pixel_hits || 0);
   const spEdgeHits = Number(sp.edge_page_hits || 0);
-  const spHitRatioPct =
-    spEdgeHits > 0 ? Math.round((spHits / spEdgeHits) * 100) : 0;
+  const spHitRatioPct = spEdgeHits > 0 ? Math.round(spHits / spEdgeHits * 100) : 0;
   const spSessions = Number(sp.state_pixel_sessions || 0);
   const spEdgeSessions = Number(sp.edge_page_sessions || 0);
-  const spSessionRatioPct =
-    spEdgeSessions > 0 ? Math.round((spSessions / spEdgeSessions) * 100) : 0;
-  const spTopReferrers = Array.isArray(sp.top_referrers)
-    ? sp.top_referrers
-    : [];
+  const spSessionRatioPct = spEdgeSessions > 0 ? Math.round(spSessions / spEdgeSessions * 100) : 0;
+  const spTopReferrers = Array.isArray(sp.top_referrers) ? sp.top_referrers : [];
   const spViewerStats = sp.viewer_stats || {};
   const spByGallery = Array.isArray(sp.by_gallery) ? sp.by_gallery : [];
   const spViewers = Number(spViewerStats.viewers || 0);
   const spAvgExposuresPerViewer = Number(
-    spViewerStats.avg_exposures_per_viewer || 0,
+    spViewerStats.avg_exposures_per_viewer || 0
   );
   const spAvgDupExposuresPerViewer = Number(
-    spViewerStats.avg_duplicate_exposures_per_viewer || 0,
+    spViewerStats.avg_duplicate_exposures_per_viewer || 0
   );
   const spPctViewersWithDupes = Number(
-    spViewerStats.pct_viewers_with_duplicates || 0,
+    spViewerStats.pct_viewers_with_duplicates || 0
   );
-  const fmt2 = /* @__PURE__ */ __name(
-    (n) => (Number.isFinite(Number(n)) ? Number(n).toFixed(2) : "0.00"),
-    "fmt2",
+  const fmt2 = /* @__PURE__ */ __name2(
+    (n) => Number.isFinite(Number(n)) ? Number(n).toFixed(2) : "0.00",
+    "fmt2"
   );
   const galleryLandingPathSet = new Set(GALLERY_LANDING_PATHS);
   const bvs = browserViewsSummary || {};
@@ -3982,59 +3756,46 @@ function renderDashboard({
   const galleryLandingViewers = Number(bvs.gallery_landing_viewers || 0);
   const chapterImageViews = Number(bvs.chapter_image_views || 0);
   const chapterImageViewers = Number(bvs.chapter_image_viewers || 0);
-  const safeTopGalleryLandingPages = Array.isArray(topGalleryLandingPages)
-    ? topGalleryLandingPages
-    : [];
+  const safeTopGalleryLandingPages = Array.isArray(topGalleryLandingPages) ? topGalleryLandingPages : [];
   const topGalleryLandingTotalViews = safeTopGalleryLandingPages.reduce(
     (sum, r) => sum + Number(r?.views || 0),
-    0,
+    0
   );
-  const galleryDisplayNameFromPath = /* @__PURE__ */ __name((path) => {
-    const parts = String(path || "")
-      .split("/")
-      .filter(Boolean);
-    const clean =
-      parts[0] === "Galleries" || parts[0] === "Other" ? parts.slice(1) : parts;
+  const galleryDisplayNameFromPath = /* @__PURE__ */ __name2((path) => {
+    const parts = String(path || "").split("/").filter(Boolean);
+    const clean = parts[0] === "Galleries" || parts[0] === "Other" ? parts.slice(1) : parts;
     return clean.slice(-2).join("/") || String(path || "");
   }, "galleryDisplayNameFromPath");
   const trendArr = Array.isArray(trend) ? trend : [];
-  const selectedTrend = selectedDate
-    ? trendArr.find((d) => d?.day === selectedDate) || null
-    : null;
-  const todayTrend =
-    selectedTrend ||
-    (trendArr.length > 0 ? trendArr[trendArr.length - 1] : null);
+  const selectedTrend = selectedDate ? trendArr.find((d) => d?.day === selectedDate) || null : null;
+  const todayTrend = selectedTrend || (trendArr.length > 0 ? trendArr[trendArr.length - 1] : null);
   const artViewersToday = todayTrend?.art_viewers || 0;
   const siteVisitorsToday = todayTrend?.visitors || 0;
   const summedSiteVisitors = trendArr.reduce(
     (sum, d) => sum + (d.visitors || 0),
-    0,
+    0
   );
   const summedArtViewers = trendArr.reduce(
     (sum, d) => sum + (d.art_viewers || 0),
-    0,
+    0
   );
   const uniqueSiteVisitors = periodTotals?.total_visitors || 0;
   const uniqueArtViewers = periodTotals?.total_art_viewers || 0;
   const isMultiDay = days > 1 && !selectedDate && !yesterday;
   const isSingleDay = !isMultiDay;
   const singleDayTrend = selectedTrend || trendArr[0] || null;
-  const totalSiteVisitors = isMultiDay
-    ? summedSiteVisitors
-    : singleDayTrend?.visitors || summedSiteVisitors;
-  const totalArtViewers = isMultiDay
-    ? summedArtViewers
-    : singleDayTrend?.art_viewers || summedArtViewers;
-  const isLevel5BlockRecommended = /* @__PURE__ */ __name((suspect) => {
+  const totalSiteVisitors = isMultiDay ? summedSiteVisitors : singleDayTrend?.visitors || summedSiteVisitors;
+  const totalArtViewers = isMultiDay ? summedArtViewers : singleDayTrend?.art_viewers || summedArtViewers;
+  const isLevel5BlockRecommended = /* @__PURE__ */ __name2((suspect) => {
     if (!suspect || suspect.status === "blocked") return false;
     if ((suspect.risk_level || 0) < 4) return false;
     if (suspect.is_verified_bot) return false;
     const hardStopsDay = Number(
-      suspect.friction_429_max_day_7d || suspect.friction_429_24h || 0,
+      suspect.friction_429_max_day_7d || suspect.friction_429_24h || 0
     );
     if (hardStopsDay >= 10) return true;
     const peakUniquePerMin = Number(
-      suspect.peak_unique_images_per_minute_24h || 0,
+      suspect.peak_unique_images_per_minute_24h || 0
     );
     if (peakUniquePerMin >= 20) return true;
     const delayBurstIp = Number(suspect.max_friction_delay_10m_24h || 0);
@@ -4080,7 +3841,7 @@ function renderDashboard({
     scroll_50: "Scroll 50%",
     scroll_75: "Scroll 75%",
     scroll_100: "Scroll 100%",
-    session_exit: "Session Exit",
+    session_exit: "Session Exit"
   };
   const eventCounts = {};
   events.forEach((e) => {
@@ -4091,14 +3852,12 @@ function renderDashboard({
       eventCounts["slideshow_start"] = artViewsSummary.slideshow_starts;
     }
   }
-  const allEvents = Object.keys(eventLabels)
-    .map((key) => ({
-      event: key,
-      label: eventLabels[key],
-      count: eventCounts[key] || 0,
-    }))
-    .sort((a, b) => b.count - a.count);
-  const formatEventName = /* @__PURE__ */ __name((name) => {
+  const allEvents = Object.keys(eventLabels).map((key) => ({
+    event: key,
+    label: eventLabels[key],
+    count: eventCounts[key] || 0
+  })).sort((a, b) => b.count - a.count);
+  const formatEventName = /* @__PURE__ */ __name2((name) => {
     if (eventLabels[name]) return eventLabels[name];
     return name.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
   }, "formatEventName");
@@ -4148,20 +3907,12 @@ function renderDashboard({
   const periodLabel = yesterday ? "Yesterday" : `Last ${days} day(s)`;
   const greenBadgeLabel = (() => {
     const today = /* @__PURE__ */ new Date();
-    const fmt = /* @__PURE__ */ __name(
+    const fmt = /* @__PURE__ */ __name2(
       (d) => d.toISOString().slice(0, 10),
-      "fmt",
+      "fmt"
     );
     if (selectedDate) {
-      const prefix = yesterday
-        ? "Yesterday"
-        : days === 1
-          ? "Today"
-          : days === 7
-            ? "7D"
-            : days === 30
-              ? "30D"
-              : "3M";
+      const prefix = yesterday ? "Yesterday" : days === 1 ? "Today" : days === 7 ? "7D" : days === 30 ? "30D" : "3M";
       return `${prefix} \u2014 ${selectedDate}`;
     }
     if (days === 1 && !yesterday) return fmt(today);
@@ -4185,8 +3936,7 @@ function renderDashboard({
     for (const row of rows) {
       const badges = Array.isArray(row?.badges) ? row.badges : [];
       const chapterViews = Number(row?.chapter_views || 0);
-      const proxyOnlyChapterViews =
-        badges.includes("I") && !badges.includes("C") ? chapterViews : 0;
+      const proxyOnlyChapterViews = badges.includes("I") && !badges.includes("C") ? chapterViews : 0;
       const jsChapterViews = badges.includes("C") ? chapterViews : 0;
       const rowUnverifiedViews = Number(row?.unverified_views || 0);
       const extViews = Number(row?.external_views || 0);
@@ -4196,8 +3946,7 @@ function renderDashboard({
       unverifiedViews += rowUnverifiedViews;
       externalViews += extViews;
     }
-    const allViews =
-      chapterJsViews + zoomViews + imageProxyViews + unverifiedViews;
+    const allViews = chapterJsViews + zoomViews + imageProxyViews + unverifiedViews;
     return {
       uniqueImages: rows.length,
       allViews,
@@ -4205,24 +3954,16 @@ function renderDashboard({
       zoomViews,
       imageProxyViews,
       unverifiedViews,
-      externalViews,
+      externalViews
     };
   })();
-  const otherAccessViews =
-    (imageAccessTotals.unverifiedViews || 0) +
-    (imageAccessTotals.externalViews || 0);
+  const otherAccessViews = (imageAccessTotals.unverifiedViews || 0) + (imageAccessTotals.externalViews || 0);
   const internalProxyViews = Math.max(
     0,
-    (imageAccessTotals.imageProxyViews || 0) -
-      (imageAccessTotals.externalViews || 0),
+    (imageAccessTotals.imageProxyViews || 0) - (imageAccessTotals.externalViews || 0)
   );
-  const coreAccessViews =
-    (imageAccessTotals.chapterViews || 0) +
-    (imageAccessTotals.zoomViews || 0) +
-    internalProxyViews;
-  const exposureViews =
-    (imageAccessTotals.chapterViews || 0) +
-    (imageAccessTotals.externalViews || 0);
+  const coreAccessViews = (imageAccessTotals.chapterViews || 0) + (imageAccessTotals.zoomViews || 0) + internalProxyViews;
+  const exposureViews = (imageAccessTotals.chapterViews || 0) + (imageAccessTotals.externalViews || 0);
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -4688,9 +4429,7 @@ function renderDashboard({
 
 
 
-  ${
-    trend.length > 1
-      ? `
+  ${trend.length > 1 ? `
   <h3 class="chart-header" style="color:#fff;font-size:14px;margin-bottom:6px;">
     <span id="chart-title">Site Visitors per Day</span>
     <span class="chart-totals" style="font-size:12px;color:#888;margin-left:12px;">Total: <span style="color:#4a9eff;font-weight:bold;">${totalSiteVisitors}</span>${isMultiDay && uniqueSiteVisitors < summedSiteVisitors ? ` <span style="color:#666;">(${uniqueSiteVisitors} unique)</span>` : ""} visitors, <span style="color:#a855f7;font-weight:bold;">${totalArtViewers}</span>${isMultiDay && uniqueArtViewers < summedArtViewers ? ` <span style="color:#666;">(${uniqueArtViewers} unique)</span>` : ""} viewed images</span>
@@ -4698,22 +4437,20 @@ function renderDashboard({
   <div class="trend-chart">
     <div class="trend-bars" id="trend-chart-bars">
       ${(() => {
-        const maxViewers = Math.max(...trend.map((t) => t.visitors), 1);
-        return trend
-          .map((t) => {
-            const height = Math.max((t.visitors / maxViewers) * 100, 2);
-            const dateLabel = t.day.slice(5);
-            const isDataChangeDate = t.day === "2026-02-14";
-            const isSelected = selectedDate === t.day;
-            return `
+    const maxViewers = Math.max(...trend.map((t) => t.visitors), 1);
+    return trend.map((t) => {
+      const height = Math.max(t.visitors / maxViewers * 100, 2);
+      const dateLabel = t.day.slice(5);
+      const isDataChangeDate = t.day === "2026-02-14";
+      const isSelected = selectedDate === t.day;
+      return `
             <div class="trend-bar${isSelected ? " selected" : ""}" data-visitors="${t.visitors}" data-sessions="${t.sessions}" data-art-viewers="${t.art_viewers || 0}" data-day="${t.day}" style="height: ${height}%" title="${t.day}: ${t.visitors} visitors (${t.art_viewers || 0} viewed images)">
               <span class="trend-bar-value">${t.visitors}</span>
               <span class="trend-bar-label">${dateLabel}${isDataChangeDate ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ""}</span>
             </div>
           `;
-          })
-          .join("");
-      })()}
+    }).join("");
+  })()}
     </div>
   </div>
   <script>
@@ -4738,9 +4475,7 @@ function renderDashboard({
       });
     })();
   <\/script>
-  `
-      : trend.length === 1
-        ? `
+  ` : trend.length === 1 ? `
   <div class="trend-chart">
     <h3>Site Visitors</h3>
     <div class="trend-bars" style="justify-content: center;">
@@ -4750,9 +4485,7 @@ function renderDashboard({
       </div>
     </div>
   </div>
-  `
-        : ""
-  }
+  ` : ""}
 
   <h2>Browser Views (JS)</h2>
   <div class="pulse-row">
@@ -4795,15 +4528,11 @@ function renderDashboard({
       <span class="label">Avg Time <span class="info-icon">i</span></span>
       <div class="tooltip">Average session duration (first to last event). Only counts sessions with 2+ events. For art browsing, 2+ min is good engagement.</div>
     </div>
-    ${
-      peakHours.length > 0
-        ? `<div class="pulse-stat">
+    ${peakHours.length > 0 ? `<div class="pulse-stat">
       <span class="value" style="color:#f472b6;">${peakHours.map((h) => h.hour).join(", ")}</span>
       <span class="label">Peak <span class="info-icon">i</span></span>
       <div class="tooltip">Highest traffic hour in morning (AM) and evening (PM) periods. ${peakHours.map((h) => `${h.period}: ${h.hour} (${h.sessions} sessions)`).join(", ")}. Great for social posting timing.</div>
-    </div>`
-        : ""
-    }
+    </div>` : ""}
     <div class="pulse-stat">
       <span class="value" style="color: ${bounceRate > 60 ? "#ef4444" : bounceRate > 40 ? "#f59e0b" : "#10b981"};">${bounceRate}%</span>
       <span class="label" style="color: ${bounceRate > 60 ? "#fecaca" : bounceRate > 40 ? "#fed7aa" : "#a7f3d0"};">Bounce <span class="info-icon" style="background: rgba(255,255,255,0.2); color: ${bounceRate > 60 ? "#fecaca" : bounceRate > 40 ? "#fed7aa" : "#a7f3d0"};">i</span></span>
@@ -4897,9 +4626,7 @@ function renderDashboard({
       <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Breakout is derived from the pixel request\u2019s referrer path captured as <code>page</code>. We strip the trailing <code>/i-...</code> to get the gallery root.</div></span>
     </div>
     <div style="margin-top:10px;">
-      ${
-        spByGallery.length > 0
-          ? `
+      ${spByGallery.length > 0 ? `
       <table style="width:100%;border-collapse:collapse;">
         <thead>
           <tr style="color:#888;font-size:12px;text-align:left;">
@@ -4911,26 +4638,19 @@ function renderDashboard({
           </tr>
         </thead>
         <tbody style="font-size:13px;">
-          ${spByGallery
-            .map((r) => {
-              const galleryPath = String(r.gallery_path || "");
-              const displayLabel = galleryDisplayNameFromPath(galleryPath);
-              const linkUrl =
-                galleryPath && galleryPath.startsWith("/")
-                  ? "https://k4studios.com" + galleryPath
-                  : "#";
-              const exposures = Number(r.exposures || 0);
-              const viewers = Number(r.viewers || 0);
-              const avgPerViewer = Number(r.avg_exposures_per_viewer || 0);
-              const pctDupes = Number(r.pct_viewers_with_duplicates || 0);
-              return `<tr><td style="padding:8px 0;border-bottom:1px solid #222;"><a href="${linkUrl}" target="_blank" rel="noopener" style="color:#c4b5fd;text-decoration:none;" title="${galleryPath}">${displayLabel}</a></td><td style="padding:8px 0;border-bottom:1px solid #222;">${exposures}</td><td style="padding:8px 0;border-bottom:1px solid #222;">${viewers}</td><td style="padding:8px 0;border-bottom:1px solid #222;">${fmt2(avgPerViewer)}</td><td style="padding:8px 0;border-bottom:1px solid #222;">${fmt2(pctDupes)}%</td></tr>`;
-            })
-            .join("")}
+          ${spByGallery.map((r) => {
+    const galleryPath = String(r.gallery_path || "");
+    const displayLabel = galleryDisplayNameFromPath(galleryPath);
+    const linkUrl = galleryPath && galleryPath.startsWith("/") ? "https://k4studios.com" + galleryPath : "#";
+    const exposures = Number(r.exposures || 0);
+    const viewers = Number(r.viewers || 0);
+    const avgPerViewer = Number(r.avg_exposures_per_viewer || 0);
+    const pctDupes = Number(r.pct_viewers_with_duplicates || 0);
+    return `<tr><td style="padding:8px 0;border-bottom:1px solid #222;"><a href="${linkUrl}" target="_blank" rel="noopener" style="color:#c4b5fd;text-decoration:none;" title="${galleryPath}">${displayLabel}</a></td><td style="padding:8px 0;border-bottom:1px solid #222;">${exposures}</td><td style="padding:8px 0;border-bottom:1px solid #222;">${viewers}</td><td style="padding:8px 0;border-bottom:1px solid #222;">${fmt2(avgPerViewer)}</td><td style="padding:8px 0;border-bottom:1px solid #222;">${fmt2(pctDupes)}%</td></tr>`;
+  }).join("")}
         </tbody>
       </table>
-      `
-          : `<div style="color:#aaa;font-size:13px;">No sister pixel gallery data for this period.</div>`
-      }
+      ` : `<div style="color:#aaa;font-size:13px;">No sister pixel gallery data for this period.</div>`}
     </div>
   </div>
 
@@ -4940,9 +4660,7 @@ function renderDashboard({
       <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Top referer hosts for <strong>state_pixel</strong> requests in this test. Blank/missing referers are shown as <code>(none)</code>.</div></span>
     </div>
     <div style="margin-top:10px;">
-      ${
-        spTopReferrers.length > 0
-          ? `
+      ${spTopReferrers.length > 0 ? `
       <table style="width:100%;border-collapse:collapse;">
         <thead>
           <tr style="color:#888;font-size:12px;text-align:left;">
@@ -4954,9 +4672,7 @@ function renderDashboard({
           ${spTopReferrers.map((r) => `<tr><td style="padding:8px 0;border-bottom:1px solid #222;">${r.ref_host}</td><td style="padding:8px 0;border-bottom:1px solid #222;">${r.hits}</td></tr>`).join("")}
         </tbody>
       </table>
-      `
-          : `<div style="color:#aaa;font-size:13px;">No sister pixel referrer data for this period.</div>`
-      }
+      ` : `<div style="color:#aaa;font-size:13px;">No sister pixel referrer data for this period.</div>`}
     </div>
   </div>
 
@@ -5014,9 +4730,7 @@ function renderDashboard({
     </div>
   </div>
 
-  ${
-    isSingleDay
-      ? `
+  ${isSingleDay ? `
   <!-- Art Views Section -->
   <div class="artviews-header">
     <div class="artviews-title">\u{1F3A8} ART VIEWS <span class="subtle">Human art viewers (cleaned)</span></div>
@@ -5097,401 +4811,220 @@ function renderDashboard({
             <span onclick="sortAccessTime()" id="accessTimeHeader" title="Sort by time (newest first)" style="cursor:pointer; user-select:none; font-size: 12px; opacity: 0.9;">\u{1F552}</span>
           </span>
         </div>
-        ${
-          (imageAccessOverview || [])
-            .map((row, i) => {
-              const imageId = row.image_id?.startsWith("i-")
-                ? row.image_id
-                : null;
-              const rowDevices = Array.isArray(row.devices) ? row.devices : [];
-              const rawUrl = row.url ? String(row.url) : "";
-              const linkUrl = rawUrl
-                ? rawUrl.startsWith("http")
-                  ? rawUrl
-                  : "https://k4studios.com" +
-                    (rawUrl.startsWith("/") ? rawUrl : "/" + rawUrl)
-                : "https://k4studios.com/art/" + row.image_id;
-              function deviceIconsHtml(devices2) {
-                if (!Array.isArray(devices2) || devices2.length === 0)
-                  return "";
-                const iconMap = {
-                  ios: "\u{1F4F1}",
-                  android: "\u{1F170}\uFE0F",
-                  mac: "\u{1F34E}",
-                  windows: "\u{1FA9F}",
-                  linux: "\u{1F427}",
-                  desktop: "\u{1F5A5}\uFE0F",
-                  mobile: "\u{1F4F1}",
-                  tablet: "\u{1F4F1}",
-                  unknown: "\u2753",
-                };
-                const labelMap = {
-                  ios: "iOS",
-                  android: "Android",
-                  mac: "Mac",
-                  windows: "Windows",
-                  linux: "Linux",
-                  desktop: "Desktop",
-                  mobile: "Mobile",
-                  tablet: "Tablet",
-                  unknown: "Unknown",
-                };
-                const uniq = Array.from(
-                  new Set(
-                    devices2
-                      .map((d) => String(d || "").toLowerCase())
-                      .filter(Boolean),
-                  ),
-                );
-                const icons = uniq
-                  .slice(0, 4)
-                  .map((d) => {
-                    const icon = iconMap[d] || "\u2753";
-                    const label = labelMap[d] || d;
-                    return (
-                      '<span title="' +
-                      label +
-                      '" style="font-size:12px;">' +
-                      icon +
-                      "</span>"
-                    );
-                  })
-                  .join("");
-                return (
-                  '<span title="Devices" style="display:inline-flex;align-items:center;gap:4px;opacity:0.85;">' +
-                  icons +
-                  "</span>"
-                );
-              }
-              __name(deviceIconsHtml, "deviceIconsHtml");
-              const deviceIcons = deviceIconsHtml(rowDevices);
-              const COUNTRY_COLORS = {
-                US: "#5ab1ff",
-                CA: "#9bd67a",
-                GB: "#ffb86b",
-                FR: "#e68cff",
-                DE: "#ffd166",
-                BR: "#7ae582",
-                AU: "#ffa69e",
-                default: "#9aa3ad",
-              };
-              function formatLocation(g) {
-                if (!g) return "\u2014";
-                const country = (g.country || "").toString().trim();
-                const region = (g.region || "").toString().trim();
-                const city = (g.city || "").toString().trim();
-                if (city && region)
-                  return city + ", " + region + ", " + country;
-                if (city) return city + ", " + country;
-                return country || "\u2014";
-              }
-              __name(formatLocation, "formatLocation");
-              const geo2 = row.geo || null;
-              const geoCountry = (
-                geo2?.country ||
-                (row.countries && row.countries[0]) ||
-                ""
-              )
-                .toString()
-                .trim()
-                .toUpperCase();
-              const locationText = formatLocation({
-                country: geoCountry || geo2?.country || "",
-                region: geo2?.region,
-                city: geo2?.city,
-              });
-              const locColor =
-                COUNTRY_COLORS[geoCountry] || COUNTRY_COLORS.default;
-              const primaryBadge = row.badges.includes("C")
-                ? "C"
-                : row.badges.includes("I")
-                  ? "I"
-                  : row.badges.includes("E")
-                    ? "E"
-                    : "U";
-              const primaryColors = {
-                C: { text: "#a78bfa", bdr: "#a78bfa55" },
-                I: { text: "#8b5cf6", bdr: "#8b5cf655" },
-                // Image exposure (proxy only) - dimmer purple
-                E: { text: "#3b82f6", bdr: "#3b82f655" },
-                U: { text: "#f59e0b", bdr: "#f59e0b55" },
-              };
-              const p = primaryColors[primaryBadge] || primaryColors.U;
-              const badgeHtml = row.badges
-                .map((b) => {
-                  const colors = {
-                    C: { bg: "#a78bfa22", text: "#a78bfa", bdr: "#a78bfa55" },
-                    I: { bg: "#8b5cf622", text: "#8b5cf6", bdr: "#8b5cf655" },
-                    U: { bg: "#f59e0b22", text: "#f59e0b", bdr: "#f59e0b55" },
-                    E: { bg: "#3b82f622", text: "#3b82f6", bdr: "#3b82f655" },
-                  };
-                  const c = colors[b] || colors.U;
-                  const label = b === "U" ? "u" : b === "I" ? "i" : b;
-                  return (
-                    '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:' +
-                    c.bg +
-                    ";color:" +
-                    c.text +
-                    ";font-size:10px;font-weight:bold;border:1px solid " +
-                    c.bdr +
-                    ';" title="' +
-                    (b === "C"
-                      ? "Chapter View (JS verified)"
-                      : b === "I"
-                        ? "Image Exposure (proxy only)"
-                        : b === "E"
-                          ? "External Referral"
-                          : "Unverified") +
-                    '">' +
-                    label +
-                    "</span>"
-                  );
-                })
-                .join(" ");
-              const srcIcons = {
-                "Google Search": "\u{1F50D}",
-                "Google Images": "\u{1F5BC}\uFE0F",
-                Bing: "\u{1F50D}",
-                "Twitter/X": "\u{1F426}",
-                Facebook: "\u{1F4D8}",
-                Pinterest: "\u{1F4CC}",
-                DuckDuckGo: "\u{1F986}",
-                ChatGPT: "\u{1F9E0}",
-                "Open Graph": "\u{1F578}\uFE0F",
-                "Structured Data": "\u{1F9FE}",
-                "No Referrer": "\u{1F517}",
-                Direct: "\u{1F517}",
-                Internal: "\u{1F3E0}",
-                Unknown: "\u2753",
-              };
-              function normalizeSourceDomain(raw) {
-                if (!raw) return "";
-                const s2 = String(raw).trim();
-                if (!s2) return "";
-                try {
-                  return new URL(s2).hostname.toLowerCase();
-                } catch (_) {
-                  return s2
-                    .toLowerCase()
-                    .replace(/^www\./, "")
-                    .split("/")[0];
-                }
-              }
-              __name(normalizeSourceDomain, "normalizeSourceDomain");
-              function sourceBadgeHtml(rawSource) {
-                const domain = normalizeSourceDomain(rawSource);
-                const pretty = String(rawSource || "").trim();
-                const baseLabel = pretty.replace(/\s*\([^)]*\)\s*$/, "").trim();
-                let icon =
-                  srcIcons[pretty] || srcIcons[baseLabel] || "\u{1F310}";
-                let label = pretty || "Unknown";
-                if (
-                  domain === "google.com" ||
-                  domain.endsWith(".google.com") ||
-                  pretty === "Google Search"
-                ) {
-                  icon = "\u{1F7E2}";
-                  label =
-                    domain === "images.google.com" || pretty === "Google Images"
-                      ? "Google Images"
-                      : "Google";
-                }
-                if (
-                  domain === "images.google.com" ||
-                  pretty === "Google Images"
-                ) {
-                  icon = "\u{1F7E2}";
-                  label = "Google Images";
-                }
-                if (
-                  domain === "pinterest.com" ||
-                  domain.endsWith(".pinterest.com") ||
-                  pretty === "Pinterest"
-                ) {
-                  icon = "\u{1F534}";
-                  label = "Pinterest";
-                }
-                if (
-                  domain === "bing.com" ||
-                  domain.endsWith(".bing.com") ||
-                  pretty === "Bing"
-                ) {
-                  icon = "\u{1F535}";
-                  label = "Bing";
-                }
-                if (
-                  domain === "t.co" ||
-                  domain.endsWith(".twitter.com") ||
-                  domain === "x.com" ||
-                  domain.endsWith(".x.com") ||
-                  pretty === "Twitter/X"
-                ) {
-                  icon = "\u{1F426}";
-                  label = "Twitter/X";
-                }
-                if (
-                  domain === "facebook.com" ||
-                  domain.endsWith(".facebook.com") ||
-                  domain === "fb.com" ||
-                  domain.endsWith(".fb.com") ||
-                  pretty === "Facebook"
-                ) {
-                  icon = "\u{1F535}";
-                  label = "Facebook";
-                }
-                if (baseLabel === "Open Graph") {
-                  icon = "\u{1F578}\uFE0F";
-                  label = pretty;
-                }
-                if (baseLabel === "Structured Data") {
-                  icon = "\u{1F9FE}";
-                  label = pretty;
-                }
-                const title = pretty || domain || "Unknown";
-                const safeLabel = label || title;
-                return (
-                  '<span title="' +
-                  title +
-                  '" style="display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:999px;border:1px solid #333;background:#1f1f1f;color:#cbd5e1;font-size:11px;line-height:1;white-space:nowrap;"><span style="font-size:12px;">' +
-                  icon +
-                  '</span><span style="opacity:0.95;">' +
-                  safeLabel +
-                  "</span></span>"
-                );
-              }
-              __name(sourceBadgeHtml, "sourceBadgeHtml");
-              function rankSourceForDisplay(src) {
-                const pretty = String(src || "").trim();
-                if (!pretty) return 999;
-                const baseLabel = pretty.replace(/\s*\([^)]*\)\s*$/, "").trim();
-                const rank = {
-                  "Google Images": 0,
-                  "Google Search": 1,
-                  Google: 1,
-                  Bing: 2,
-                  Pinterest: 3,
-                  "Twitter/X": 4,
-                  Facebook: 5,
-                  DuckDuckGo: 6,
-                  ChatGPT: 7,
-                  "Open Graph": 20,
-                  "Structured Data": 21,
-                  "No Referrer": 80,
-                  // Keep legacy label low-priority (older mental model)
-                  Direct: 85,
-                  Internal: 90,
-                  Unknown: 99,
-                };
-                if (rank[pretty] != null) return rank[pretty];
-                if (rank[baseLabel] != null) return rank[baseLabel];
-                return 40;
-              }
-              __name(rankSourceForDisplay, "rankSourceForDisplay");
-              const sources = Array.isArray(row.sources) ? row.sources : [];
-              const sourcesSorted = sources
-                .map((s2) => String(s2 || "").trim())
-                .filter(Boolean)
-                .sort(
-                  (a, b) =>
-                    rankSourceForDisplay(a) - rankSourceForDisplay(b) ||
-                    a.localeCompare(b),
-                );
-              const srcHtml =
-                sourcesSorted.length > 0
-                  ? sourcesSorted.slice(0, 2).map(sourceBadgeHtml).join(" ")
-                  : '<span title="No external referrer observed for this image yet" style="display:inline-flex;align-items:center;gap:6px;color:#666;font-size:11px;white-space:nowrap;"><span style="font-size:12px;">\u{1F310}</span><span>Awaiting external referrer</span></span>';
-              const rowBadges = Array.isArray(row.badges) ? row.badges : [];
-              const chapterViewsRaw = Number(row.chapter_views || 0);
-              const cViews = rowBadges.includes("C") ? chapterViewsRaw : 0;
-              const proxyChapterViews =
-                rowBadges.includes("I") && !rowBadges.includes("C")
-                  ? chapterViewsRaw
-                  : 0;
-              const uViews = Number(row.unverified_views || 0);
-              const iViews = proxyChapterViews;
-              const otherHits = uViews + Number(row.external_views || 0);
-              const chColor = cViews > 0 ? "#a78bfa" : "#333";
-              const zmColor = row.xl_zooms > 0 ? "#06b6d4" : "#333";
-              const iColor = iViews > 0 ? "#8b5cf6" : "#333";
-              const uColor = uViews > 0 ? "#f59e0b" : "#333";
-              const borderColor = row.badges.includes("C")
-                ? "#a78bfa44"
-                : row.badges.includes("I")
-                  ? "#8b5cf644"
-                  : row.badges.includes("E")
-                    ? "#3b82f644"
-                    : "#f59e0b44";
-              return (
-                '<a href="' +
-                linkUrl +
-                '" target="_blank" class="access-row" data-badges="' +
-                row.badges.join(",") +
-                '" data-primary="' +
-                primaryBadge +
-                '" data-otherhits="' +
-                otherHits +
-                '" data-country="' +
-                (geoCountry || "") +
-                '" data-region="' +
-                ((geo2?.region || "") + "") +
-                '" data-city="' +
-                ((geo2?.city || "") + "") +
-                '" data-lastseen="' +
-                (row.last_seen || "") +
-                '" style="display:grid;grid-template-columns:90px 220px 180px 90px 90px 90px auto;gap:10px;align-items:center;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ' +
-                borderColor +
-                `;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='rgba(255,255,255,0.04)'" onmouseout="this.style.background='transparent'"><div style="display:flex;align-items:center;justify-content:center;width:90px;">` +
-                (imageId
-                  ? '<img src="https://k4studios.com/img/' +
-                    imageId +
-                    '/s" alt="" loading="' +
-                    (i < 6 ? "eager" : "lazy") +
-                    '" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid ' +
-                    p.bdr +
-                    ';">'
-                  : '<span style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:1px solid ' +
-                    p.bdr +
-                    ';">\u{1F5BC}</span>') +
-                '</div><div style="display:flex;flex-direction:column;gap:4px;min-width:0;padding-left:14px;"><div class="access-idline" style="display:flex;align-items:center;gap:6px;min-width:0;"><div style="display:flex;gap:2px;flex:0 0 auto;">' +
-                badgeHtml +
-                '</div><span class="access-id" style="color:' +
-                p.text +
-                ';font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;" title="' +
-                row.image_id +
-                '">' +
-                row.image_id +
-                "</span>" +
-                (deviceIcons
-                  ? '<span class="access-devices" style="flex:0 0 auto;">' +
-                    deviceIcons +
-                    "</span>"
-                  : "") +
-                '</div></div><span style="color:' +
-                locColor +
-                ';font-size:13px;opacity:0.82;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' +
-                locationText +
-                '">' +
-                locationText +
-                '</span><span style="display:flex;justify-content:center;font-weight:bold;color:' +
-                chColor +
-                ';font-size:14px;">' +
-                (cViews || "\u2014") +
-                '</span><span style="display:flex;justify-content:center;font-weight:bold;color:' +
-                zmColor +
-                ';font-size:14px;">' +
-                (row.xl_zooms || "\u2014") +
-                '</span><span style="display:flex;justify-content:center;font-weight:bold;color:' +
-                iColor +
-                ';font-size:14px;">' +
-                (iViews || "\u2014") +
-                '</span><div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' +
-                srcHtml +
-                "</div></a>"
-              );
-            })
-            .join("") ||
-          '<p style="color: #555; font-size: 11px;">No image access data yet</p>'
-        }
+        ${(imageAccessOverview || []).map((row, i) => {
+    const imageId = row.image_id?.startsWith("i-") ? row.image_id : null;
+    const rowDevices = Array.isArray(row.devices) ? row.devices : [];
+    const rawUrl = row.url ? String(row.url) : "";
+    const linkUrl = rawUrl ? rawUrl.startsWith("http") ? rawUrl : "https://k4studios.com" + (rawUrl.startsWith("/") ? rawUrl : "/" + rawUrl) : "https://k4studios.com/art/" + row.image_id;
+    function deviceIconsHtml(devices2) {
+      if (!Array.isArray(devices2) || devices2.length === 0)
+        return "";
+      const iconMap = {
+        ios: "\u{1F4F1}",
+        android: "\u{1F170}\uFE0F",
+        mac: "\u{1F34E}",
+        windows: "\u{1FA9F}",
+        linux: "\u{1F427}",
+        desktop: "\u{1F5A5}\uFE0F",
+        mobile: "\u{1F4F1}",
+        tablet: "\u{1F4F1}",
+        unknown: "\u2753"
+      };
+      const labelMap = {
+        ios: "iOS",
+        android: "Android",
+        mac: "Mac",
+        windows: "Windows",
+        linux: "Linux",
+        desktop: "Desktop",
+        mobile: "Mobile",
+        tablet: "Tablet",
+        unknown: "Unknown"
+      };
+      const uniq = Array.from(
+        new Set(
+          devices2.map((d) => String(d || "").toLowerCase()).filter(Boolean)
+        )
+      );
+      const icons = uniq.slice(0, 4).map((d) => {
+        const icon = iconMap[d] || "\u2753";
+        const label = labelMap[d] || d;
+        return '<span title="' + label + '" style="font-size:12px;">' + icon + "</span>";
+      }).join("");
+      return '<span title="Devices" style="display:inline-flex;align-items:center;gap:4px;opacity:0.85;">' + icons + "</span>";
+    }
+    __name(deviceIconsHtml, "deviceIconsHtml");
+    __name2(deviceIconsHtml, "deviceIconsHtml");
+    const deviceIcons = deviceIconsHtml(rowDevices);
+    const COUNTRY_COLORS = {
+      US: "#5ab1ff",
+      CA: "#9bd67a",
+      GB: "#ffb86b",
+      FR: "#e68cff",
+      DE: "#ffd166",
+      BR: "#7ae582",
+      AU: "#ffa69e",
+      default: "#9aa3ad"
+    };
+    function formatLocation(g) {
+      if (!g) return "\u2014";
+      const country = (g.country || "").toString().trim();
+      const region = (g.region || "").toString().trim();
+      const city = (g.city || "").toString().trim();
+      if (city && region)
+        return city + ", " + region + ", " + country;
+      if (city) return city + ", " + country;
+      return country || "\u2014";
+    }
+    __name(formatLocation, "formatLocation");
+    __name2(formatLocation, "formatLocation");
+    const geo2 = row.geo || null;
+    const geoCountry = (geo2?.country || row.countries && row.countries[0] || "").toString().trim().toUpperCase();
+    const locationText = formatLocation({
+      country: geoCountry || geo2?.country || "",
+      region: geo2?.region,
+      city: geo2?.city
+    });
+    const locColor = COUNTRY_COLORS[geoCountry] || COUNTRY_COLORS.default;
+    const primaryBadge = row.badges.includes("C") ? "C" : row.badges.includes("I") ? "I" : row.badges.includes("E") ? "E" : "U";
+    const primaryColors = {
+      C: { text: "#a78bfa", bdr: "#a78bfa55" },
+      I: { text: "#8b5cf6", bdr: "#8b5cf655" },
+      // Image exposure (proxy only) - dimmer purple
+      E: { text: "#3b82f6", bdr: "#3b82f655" },
+      U: { text: "#f59e0b", bdr: "#f59e0b55" }
+    };
+    const p = primaryColors[primaryBadge] || primaryColors.U;
+    const badgeHtml = row.badges.map((b) => {
+      const colors = {
+        C: { bg: "#a78bfa22", text: "#a78bfa", bdr: "#a78bfa55" },
+        I: { bg: "#8b5cf622", text: "#8b5cf6", bdr: "#8b5cf655" },
+        U: { bg: "#f59e0b22", text: "#f59e0b", bdr: "#f59e0b55" },
+        E: { bg: "#3b82f622", text: "#3b82f6", bdr: "#3b82f655" }
+      };
+      const c = colors[b] || colors.U;
+      const label = b === "U" ? "u" : b === "I" ? "i" : b;
+      return '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:' + c.bg + ";color:" + c.text + ";font-size:10px;font-weight:bold;border:1px solid " + c.bdr + ';" title="' + (b === "C" ? "Chapter View (JS verified)" : b === "I" ? "Image Exposure (proxy only)" : b === "E" ? "External Referral" : "Unverified") + '">' + label + "</span>";
+    }).join(" ");
+    const srcIcons = {
+      "Google Search": "\u{1F50D}",
+      "Google Images": "\u{1F5BC}\uFE0F",
+      Bing: "\u{1F50D}",
+      "Twitter/X": "\u{1F426}",
+      Facebook: "\u{1F4D8}",
+      Pinterest: "\u{1F4CC}",
+      DuckDuckGo: "\u{1F986}",
+      ChatGPT: "\u{1F9E0}",
+      "Open Graph": "\u{1F578}\uFE0F",
+      "Structured Data": "\u{1F9FE}",
+      "No Referrer": "\u{1F517}",
+      Direct: "\u{1F517}",
+      Internal: "\u{1F3E0}",
+      Unknown: "\u2753"
+    };
+    function normalizeSourceDomain(raw) {
+      if (!raw) return "";
+      const s2 = String(raw).trim();
+      if (!s2) return "";
+      try {
+        return new URL(s2).hostname.toLowerCase();
+      } catch (_) {
+        return s2.toLowerCase().replace(/^www\./, "").split("/")[0];
+      }
+    }
+    __name(normalizeSourceDomain, "normalizeSourceDomain");
+    __name2(normalizeSourceDomain, "normalizeSourceDomain");
+    function sourceBadgeHtml(rawSource) {
+      const domain = normalizeSourceDomain(rawSource);
+      const pretty = String(rawSource || "").trim();
+      const baseLabel = pretty.replace(/\s*\([^)]*\)\s*$/, "").trim();
+      let icon = srcIcons[pretty] || srcIcons[baseLabel] || "\u{1F310}";
+      let label = pretty || "Unknown";
+      if (domain === "google.com" || domain.endsWith(".google.com") || pretty === "Google Search") {
+        icon = "\u{1F7E2}";
+        label = domain === "images.google.com" || pretty === "Google Images" ? "Google Images" : "Google";
+      }
+      if (domain === "images.google.com" || pretty === "Google Images") {
+        icon = "\u{1F7E2}";
+        label = "Google Images";
+      }
+      if (domain === "pinterest.com" || domain.endsWith(".pinterest.com") || pretty === "Pinterest") {
+        icon = "\u{1F534}";
+        label = "Pinterest";
+      }
+      if (domain === "bing.com" || domain.endsWith(".bing.com") || pretty === "Bing") {
+        icon = "\u{1F535}";
+        label = "Bing";
+      }
+      if (domain === "t.co" || domain.endsWith(".twitter.com") || domain === "x.com" || domain.endsWith(".x.com") || pretty === "Twitter/X") {
+        icon = "\u{1F426}";
+        label = "Twitter/X";
+      }
+      if (domain === "facebook.com" || domain.endsWith(".facebook.com") || domain === "fb.com" || domain.endsWith(".fb.com") || pretty === "Facebook") {
+        icon = "\u{1F535}";
+        label = "Facebook";
+      }
+      if (baseLabel === "Open Graph") {
+        icon = "\u{1F578}\uFE0F";
+        label = pretty;
+      }
+      if (baseLabel === "Structured Data") {
+        icon = "\u{1F9FE}";
+        label = pretty;
+      }
+      const title = pretty || domain || "Unknown";
+      const safeLabel = label || title;
+      return '<span title="' + title + '" style="display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:999px;border:1px solid #333;background:#1f1f1f;color:#cbd5e1;font-size:11px;line-height:1;white-space:nowrap;"><span style="font-size:12px;">' + icon + '</span><span style="opacity:0.95;">' + safeLabel + "</span></span>";
+    }
+    __name(sourceBadgeHtml, "sourceBadgeHtml");
+    __name2(sourceBadgeHtml, "sourceBadgeHtml");
+    function rankSourceForDisplay(src) {
+      const pretty = String(src || "").trim();
+      if (!pretty) return 999;
+      const baseLabel = pretty.replace(/\s*\([^)]*\)\s*$/, "").trim();
+      const rank = {
+        "Google Images": 0,
+        "Google Search": 1,
+        Google: 1,
+        Bing: 2,
+        Pinterest: 3,
+        "Twitter/X": 4,
+        Facebook: 5,
+        DuckDuckGo: 6,
+        ChatGPT: 7,
+        "Open Graph": 20,
+        "Structured Data": 21,
+        "No Referrer": 80,
+        // Keep legacy label low-priority (older mental model)
+        Direct: 85,
+        Internal: 90,
+        Unknown: 99
+      };
+      if (rank[pretty] != null) return rank[pretty];
+      if (rank[baseLabel] != null) return rank[baseLabel];
+      return 40;
+    }
+    __name(rankSourceForDisplay, "rankSourceForDisplay");
+    __name2(rankSourceForDisplay, "rankSourceForDisplay");
+    const sources = Array.isArray(row.sources) ? row.sources : [];
+    const sourcesSorted = sources.map((s2) => String(s2 || "").trim()).filter(Boolean).sort(
+      (a, b) => rankSourceForDisplay(a) - rankSourceForDisplay(b) || a.localeCompare(b)
+    );
+    const srcHtml = sourcesSorted.length > 0 ? sourcesSorted.slice(0, 2).map(sourceBadgeHtml).join(" ") : '<span title="No external referrer observed for this image yet" style="display:inline-flex;align-items:center;gap:6px;color:#666;font-size:11px;white-space:nowrap;"><span style="font-size:12px;">\u{1F310}</span><span>Awaiting external referrer</span></span>';
+    const rowBadges = Array.isArray(row.badges) ? row.badges : [];
+    const chapterViewsRaw = Number(row.chapter_views || 0);
+    const cViews = rowBadges.includes("C") ? chapterViewsRaw : 0;
+    const proxyChapterViews = rowBadges.includes("I") && !rowBadges.includes("C") ? chapterViewsRaw : 0;
+    const uViews = Number(row.unverified_views || 0);
+    const iViews = proxyChapterViews;
+    const otherHits = uViews + Number(row.external_views || 0);
+    const chColor = cViews > 0 ? "#a78bfa" : "#333";
+    const zmColor = row.xl_zooms > 0 ? "#06b6d4" : "#333";
+    const iColor = iViews > 0 ? "#8b5cf6" : "#333";
+    const uColor = uViews > 0 ? "#f59e0b" : "#333";
+    const borderColor = row.badges.includes("C") ? "#a78bfa44" : row.badges.includes("I") ? "#8b5cf644" : row.badges.includes("E") ? "#3b82f644" : "#f59e0b44";
+    return '<a href="' + linkUrl + '" target="_blank" class="access-row" data-badges="' + row.badges.join(",") + '" data-primary="' + primaryBadge + '" data-otherhits="' + otherHits + '" data-country="' + (geoCountry || "") + '" data-region="' + ((geo2?.region || "") + "") + '" data-city="' + ((geo2?.city || "") + "") + '" data-lastseen="' + (row.last_seen || "") + '" style="display:grid;grid-template-columns:90px 220px 180px 90px 90px 90px auto;gap:10px;align-items:center;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ' + borderColor + `;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='rgba(255,255,255,0.04)'" onmouseout="this.style.background='transparent'"><div style="display:flex;align-items:center;justify-content:center;width:90px;">` + (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 6 ? "eager" : "lazy") + '" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid ' + p.bdr + ';">' : '<span style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:1px solid ' + p.bdr + ';">\u{1F5BC}</span>') + '</div><div style="display:flex;flex-direction:column;gap:4px;min-width:0;padding-left:14px;"><div class="access-idline" style="display:flex;align-items:center;gap:6px;min-width:0;"><div style="display:flex;gap:2px;flex:0 0 auto;">' + badgeHtml + '</div><span class="access-id" style="color:' + p.text + ';font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;" title="' + row.image_id + '">' + row.image_id + "</span>" + (deviceIcons ? '<span class="access-devices" style="flex:0 0 auto;">' + deviceIcons + "</span>" : "") + '</div></div><span style="color:' + locColor + ';font-size:13px;opacity:0.82;letter-spacing:0.2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + locationText + '">' + locationText + '</span><span style="display:flex;justify-content:center;font-weight:bold;color:' + chColor + ';font-size:14px;">' + (cViews || "\u2014") + '</span><span style="display:flex;justify-content:center;font-weight:bold;color:' + zmColor + ';font-size:14px;">' + (row.xl_zooms || "\u2014") + '</span><span style="display:flex;justify-content:center;font-weight:bold;color:' + iColor + ';font-size:14px;">' + (iViews || "\u2014") + '</span><div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + srcHtml + "</div></a>";
+  }).join("") || '<p style="color: #555; font-size: 11px;">No image access data yet</p>'}
       </div>
       <p style="font-size: 9px; color: #555; margin-top: 6px;">C=JS-verified chapter \xB7 i=Image proxy (includes E) \xB7 U=Unverified \xB7 E=External embed</p>
     </div>
@@ -5502,34 +5035,12 @@ function renderDashboard({
         <span style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%); color: #1f2937; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold;">${topGalleryLandingTotalViews}</span>
       </h4>
       <div id="art-galleries-list" style="display: flex; flex-direction: column; gap: 6px; max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;">
-        ${
-          (safeTopGalleryLandingPages || []).length === 0
-            ? '<div style="color:#666;font-size:11px;padding:6px 2px;">No data yet</div>'
-            : (safeTopGalleryLandingPages || [])
-                .map((a, i) => {
-                  const pagePath = String(a.page_path || "").startsWith("/")
-                    ? String(a.page_path || "")
-                    : "/" + String(a.page_path || "").replace(/^\/+/, "");
-                  const linkUrl = pagePath
-                    ? "https://k4studios.com" + pagePath
-                    : "#";
-                  const displayLabel = galleryDisplayNameFromPath(pagePath);
-                  return (
-                    '<a href="' +
-                    linkUrl +
-                    `" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(196, 181, 253, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #c4b5fd; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.25)'" onmouseout="this.style.background='rgba(196,181,253,0.1)'"><span style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">\u{1F4C1}</span><div style="flex: 1; min-width: 0;"><div style="display:flex; align-items:center; gap:6px;"><div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; flex: 1; min-width: 0;" title="` +
-                    pagePath +
-                    '">' +
-                    displayLabel +
-                    '</div></div><div style="display: flex; gap: 8px; margin-top: 2px;"><span style="font-size: 12px; font-weight: bold; color: #c4b5fd;">' +
-                    (a.views || 0) +
-                    '</span><span style="font-size: 11px; color: #888;">' +
-                    (a.unique_viewers || 0) +
-                    " \u{1F464}</span></div></div></a>"
-                  );
-                })
-                .join("")
-        }
+        ${(safeTopGalleryLandingPages || []).length === 0 ? '<div style="color:#666;font-size:11px;padding:6px 2px;">No data yet</div>' : (safeTopGalleryLandingPages || []).map((a, i) => {
+    const pagePath = String(a.page_path || "").startsWith("/") ? String(a.page_path || "") : "/" + String(a.page_path || "").replace(/^\/+/, "");
+    const linkUrl = pagePath ? "https://k4studios.com" + pagePath : "#";
+    const displayLabel = galleryDisplayNameFromPath(pagePath);
+    return '<a href="' + linkUrl + `" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(196, 181, 253, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #c4b5fd; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.25)'" onmouseout="this.style.background='rgba(196,181,253,0.1)'"><span style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">\u{1F4C1}</span><div style="flex: 1; min-width: 0;"><div style="display:flex; align-items:center; gap:6px;"><div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; flex: 1; min-width: 0;" title="` + pagePath + '">' + displayLabel + '</div></div><div style="display: flex; gap: 8px; margin-top: 2px;"><span style="font-size: 12px; font-weight: bold; color: #c4b5fd;">' + (a.views || 0) + '</span><span style="font-size: 11px; color: #888;">' + (a.unique_viewers || 0) + " \u{1F464}</span></div></div></a>";
+  }).join("")}
       </div>
     </div>
 
@@ -5541,39 +5052,32 @@ function renderDashboard({
       </div>
       <table>
         <tr><th>Platform</th><th>Sessions</th><th>Engage Lvl</th></tr>
-        ${safeDeviceEngagement
-          .map((d) => {
-            const icons = {
-              ios: "\u{1F4F1}",
-              android: "\u{1F170}\uFE0F",
-              mac: "\u{1F34E}",
-              windows: "\u{1FA9F}",
-              linux: "\u{1F427}",
-              desktop: "\u{1F5A5}\uFE0F",
-              mobile: "\u{1F4F1}",
-              tablet: "\u{1F4F1}",
-              unknown: "\u2753",
-            };
-            const labels = {
-              ios: "iOS",
-              android: "Android",
-              mac: "Mac",
-              windows: "Windows",
-              linux: "Linux",
-              desktop: "Desktop",
-              mobile: "Mobile",
-              tablet: "Tablet",
-              unknown: "Unknown",
-            };
-            const engageColor =
-              d.avg_depth >= 15
-                ? "#10b981"
-                : d.avg_depth >= 8
-                  ? "#f59e0b"
-                  : "#888";
-            return `<tr><td>${icons[d.device] || "\u2753"} ${labels[d.device] || d.device}</td><td>${d.sessions}</td><td style="color:${engageColor};font-weight:bold;">${d.avg_depth}</td></tr>`;
-          })
-          .join("")}
+        ${safeDeviceEngagement.map((d) => {
+    const icons = {
+      ios: "\u{1F4F1}",
+      android: "\u{1F170}\uFE0F",
+      mac: "\u{1F34E}",
+      windows: "\u{1FA9F}",
+      linux: "\u{1F427}",
+      desktop: "\u{1F5A5}\uFE0F",
+      mobile: "\u{1F4F1}",
+      tablet: "\u{1F4F1}",
+      unknown: "\u2753"
+    };
+    const labels = {
+      ios: "iOS",
+      android: "Android",
+      mac: "Mac",
+      windows: "Windows",
+      linux: "Linux",
+      desktop: "Desktop",
+      mobile: "Mobile",
+      tablet: "Tablet",
+      unknown: "Unknown"
+    };
+    const engageColor = d.avg_depth >= 15 ? "#10b981" : d.avg_depth >= 8 ? "#f59e0b" : "#888";
+    return `<tr><td>${icons[d.device] || "\u2753"} ${labels[d.device] || d.device}</td><td>${d.sessions}</td><td style="color:${engageColor};font-weight:bold;">${d.avg_depth}</td></tr>`;
+  }).join("")}
         ${safeDeviceEngagement.length === 0 ? '<tr><td colspan="3">No data yet</td></tr>' : ""}
       </table>
     </div>
@@ -5761,19 +5265,17 @@ function renderDashboard({
         ">A?Z</button>
       </div>
       <div id="eventList" style="padding-right: 6px;">
-      ${allEvents
-        .map(
-          (e) => `
+      ${allEvents.map(
+    (e) => `
           <div class="bar-row" data-label="${e.label}" data-count="${e.count}">
             <span class="bar-label" title="${e.label}">${e.label}</span>
             <div class="bar-container">
-              <div class="bar" style="width: ${((e.count / maxEventCount) * 100).toFixed(1)}%"></div>
+              <div class="bar" style="width: ${(e.count / maxEventCount * 100).toFixed(1)}%"></div>
             </div>
             <span class="bar-value">${e.count}</span>
           </div>
-        `,
-        )
-        .join("")}
+        `
+  ).join("")}
       </div>
       <script>
         var eventSortMode = 'count';
@@ -5804,124 +5306,104 @@ function renderDashboard({
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">All JS-verified visitors by location (page views, galleries, images, everything).</div></span>
       </div>
       ${(() => {
-        const countryColors = {
-          US: "#3b82f6",
-          FR: "#ef4444",
-          DE: "#f97316",
-          BR: "#22c55e",
-          GB: "#6366f1",
-          CA: "#ec4899",
-          AU: "#eab308",
-          MX: "#14b8a6",
-          IN: "#f59e0b",
-          JP: "#e11d48",
-          IT: "#84cc16",
-          ES: "#a855f7",
-          NL: "#fb923c",
-          AT: "#dc2626",
-          HU: "#c026d3",
-          SG: "#0ea5e9",
-          HK: "#d946ef",
-          CN: "#b91c1c",
-          KR: "#2563eb",
-          CO: "#fbbf24",
-          PL: "#f43f5e",
-          SE: "#06b6d4",
-          NO: "#0284c7",
-          FI: "#0369a1",
-          CH: "#dc2626",
-          RU: "#1d4ed8",
-          UA: "#fcd34d",
-          AR: "#60a5fa",
-          ZA: "#a78bfa",
-          NZ: "#2dd4bf",
-          PT: "#e879f9",
-          CG: "#f472b6",
-          CL: "#38bdf8",
-          PE: "#fbbf24",
-          IE: "#4ade80",
-          BE: "#facc15",
-          CZ: "#7dd3fc",
-          DK: "#ef4444",
-          GR: "#0ea5e9",
-          IL: "#6366f1",
-          TW: "#d946ef",
-          TH: "#f97316",
-          PH: "#8b5cf6",
-          TR: "#dc2626",
-          RO: "#fde047",
-        };
-        function countryColor(code) {
-          if (countryColors[code]) return countryColors[code];
-          if (!code) return "#9ca3af";
-          let h = 0;
-          for (let i = 0; i < code.length; i++) h = code.charCodeAt(i) * 31 + h;
-          const hue = Math.abs(h) % 360;
-          return "hsl(" + hue + ", 70%, 55%)";
-        }
-        __name(countryColor, "countryColor");
-        function renderGeoRows(items, maxCount, colorFn) {
-          const buildInspectUrl = /* @__PURE__ */ __name((g) => {
-            const params = new URLSearchParams();
-            if (g.country) params.set("country", g.country);
-            if (g.region) params.set("region", g.region);
-            if (g.city) params.set("city", g.city);
-            if (days) params.set("days", String(days));
-            if (yesterday) params.set("yesterday", "1");
-            if (selectedDate) params.set("date", selectedDate);
-            if (hideBots) params.set("hideBots", "1");
-            if (hideChardon) params.set("hideChardon", "1");
-            if (excludeIp) params.set("excludeIp", excludeIp);
-            return "/__k4stats/inspect?" + params.toString();
-          }, "buildInspectUrl");
-          return items
-            .map((g) => {
-              const barColor = colorFn(g.country);
-              const href = buildInspectUrl(g);
-              return (
-                '<div class="bar-row"><a class="bar-label" href="' +
-                href +
-                '" title="Inspect ' +
-                g.label +
-                '" style="color:#ccc; text-decoration:none;">' +
-                g.label +
-                '</a><div class="bar-container"><div class="bar" style="width: ' +
-                ((g.count / maxCount) * 100).toFixed(1) +
-                "%; background: " +
-                barColor +
-                ';"></div></div><span class="bar-value">' +
-                g.count +
-                "</span></div>"
-              );
-            })
-            .join("");
-        }
-        __name(renderGeoRows, "renderGeoRows");
-        const siteGeo = (geo || []).map((g) => ({
-          label: [g.city, g.region, g.country].filter(Boolean).join(", "),
-          city: g.city,
-          region: g.region,
-          country: g.country,
-          visitors: g.visitors,
-        }));
-        const mergedGeo = {};
-        siteGeo.forEach((g) => {
-          if (!mergedGeo[g.label]) mergedGeo[g.label] = { ...g };
-          else mergedGeo[g.label].visitors += g.visitors;
-        });
-        const siteRows = Object.values(mergedGeo)
-          .map((g) => ({ ...g, count: g.visitors }))
-          .sort((a, b) => b.count - a.count);
-        const siteMax = Math.max(...siteRows.map((g) => g.count), 1);
-        if (siteRows.length > 0) {
-          return (
-            '<div class="k4-split-scroll">' +
-            renderGeoRows(siteRows, siteMax, countryColor) +
-            "</div>"
-          );
-        }
-        return '<p style="color:#666;">No site visitor data yet</p>';
-      })()}
+    const countryColors = {
+      US: "#3b82f6",
+      FR: "#ef4444",
+      DE: "#f97316",
+      BR: "#22c55e",
+      GB: "#6366f1",
+      CA: "#ec4899",
+      AU: "#eab308",
+      MX: "#14b8a6",
+      IN: "#f59e0b",
+      JP: "#e11d48",
+      IT: "#84cc16",
+      ES: "#a855f7",
+      NL: "#fb923c",
+      AT: "#dc2626",
+      HU: "#c026d3",
+      SG: "#0ea5e9",
+      HK: "#d946ef",
+      CN: "#b91c1c",
+      KR: "#2563eb",
+      CO: "#fbbf24",
+      PL: "#f43f5e",
+      SE: "#06b6d4",
+      NO: "#0284c7",
+      FI: "#0369a1",
+      CH: "#dc2626",
+      RU: "#1d4ed8",
+      UA: "#fcd34d",
+      AR: "#60a5fa",
+      ZA: "#a78bfa",
+      NZ: "#2dd4bf",
+      PT: "#e879f9",
+      CG: "#f472b6",
+      CL: "#38bdf8",
+      PE: "#fbbf24",
+      IE: "#4ade80",
+      BE: "#facc15",
+      CZ: "#7dd3fc",
+      DK: "#ef4444",
+      GR: "#0ea5e9",
+      IL: "#6366f1",
+      TW: "#d946ef",
+      TH: "#f97316",
+      PH: "#8b5cf6",
+      TR: "#dc2626",
+      RO: "#fde047"
+    };
+    function countryColor(code) {
+      if (countryColors[code]) return countryColors[code];
+      if (!code) return "#9ca3af";
+      let h = 0;
+      for (let i = 0; i < code.length; i++) h = code.charCodeAt(i) * 31 + h;
+      const hue = Math.abs(h) % 360;
+      return "hsl(" + hue + ", 70%, 55%)";
+    }
+    __name(countryColor, "countryColor");
+    __name2(countryColor, "countryColor");
+    function renderGeoRows(items, maxCount, colorFn) {
+      const buildInspectUrl = /* @__PURE__ */ __name2((g) => {
+        const params = new URLSearchParams();
+        if (g.country) params.set("country", g.country);
+        if (g.region) params.set("region", g.region);
+        if (g.city) params.set("city", g.city);
+        if (days) params.set("days", String(days));
+        if (yesterday) params.set("yesterday", "1");
+        if (selectedDate) params.set("date", selectedDate);
+        if (hideBots) params.set("hideBots", "1");
+        if (hideChardon) params.set("hideChardon", "1");
+        if (excludeIp) params.set("excludeIp", excludeIp);
+        return "/__k4stats/inspect?" + params.toString();
+      }, "buildInspectUrl");
+      return items.map((g) => {
+        const barColor = colorFn(g.country);
+        const href = buildInspectUrl(g);
+        return '<div class="bar-row"><a class="bar-label" href="' + href + '" title="Inspect ' + g.label + '" style="color:#ccc; text-decoration:none;">' + g.label + '</a><div class="bar-container"><div class="bar" style="width: ' + (g.count / maxCount * 100).toFixed(1) + "%; background: " + barColor + ';"></div></div><span class="bar-value">' + g.count + "</span></div>";
+      }).join("");
+    }
+    __name(renderGeoRows, "renderGeoRows");
+    __name2(renderGeoRows, "renderGeoRows");
+    const siteGeo = (geo || []).map((g) => ({
+      label: [g.city, g.region, g.country].filter(Boolean).join(", "),
+      city: g.city,
+      region: g.region,
+      country: g.country,
+      visitors: g.visitors
+    }));
+    const mergedGeo = {};
+    siteGeo.forEach((g) => {
+      if (!mergedGeo[g.label]) mergedGeo[g.label] = { ...g };
+      else mergedGeo[g.label].visitors += g.visitors;
+    });
+    const siteRows = Object.values(mergedGeo).map((g) => ({ ...g, count: g.visitors })).sort((a, b) => b.count - a.count);
+    const siteMax = Math.max(...siteRows.map((g) => g.count), 1);
+    if (siteRows.length > 0) {
+      return '<div class="k4-split-scroll">' + renderGeoRows(siteRows, siteMax, countryColor) + "</div>";
+    }
+    return '<p style="color:#666;">No site visitor data yet</p>';
+  })()}
     </div>
 
     <!-- Image Geography (JS) -->
@@ -5931,126 +5413,104 @@ function renderDashboard({
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Only visitors who loaded chapter/image pages (JS chapter_view; matches the /i-... universe).</div></span>
       </div>
       ${(() => {
-        const countryColors = {
-          US: "#a78bfa",
-          FR: "#ef4444",
-          DE: "#f97316",
-          BR: "#22c55e",
-          GB: "#6366f1",
-          CA: "#ec4899",
-          AU: "#eab308",
-          MX: "#14b8a6",
-          IN: "#f59e0b",
-          JP: "#e11d48",
-          IT: "#84cc16",
-          ES: "#a855f7",
-          NL: "#fb923c",
-          AT: "#dc2626",
-          HU: "#c026d3",
-          SG: "#0ea5e9",
-          HK: "#d946ef",
-          CN: "#b91c1c",
-          KR: "#2563eb",
-          CO: "#fbbf24",
-          PL: "#f43f5e",
-          SE: "#06b6d4",
-          NO: "#0284c7",
-          FI: "#0369a1",
-          CH: "#dc2626",
-          RU: "#1d4ed8",
-          UA: "#fcd34d",
-          AR: "#60a5fa",
-          ZA: "#a78bfa",
-          NZ: "#2dd4bf",
-          PT: "#e879f9",
-          CG: "#f472b6",
-          CL: "#38bdf8",
-          PE: "#fbbf24",
-          IE: "#4ade80",
-          BE: "#facc15",
-          CZ: "#7dd3fc",
-          DK: "#ef4444",
-          GR: "#0ea5e9",
-          IL: "#6366f1",
-          TW: "#d946ef",
-          TH: "#f97316",
-          PH: "#8b5cf6",
-          TR: "#dc2626",
-          RO: "#fde047",
-        };
-        function countryColor(code) {
-          if (countryColors[code]) return countryColors[code];
-          if (!code) return "#9ca3af";
-          let h = 0;
-          for (let i = 0; i < code.length; i++) h = code.charCodeAt(i) * 31 + h;
-          const hue = Math.abs(h) % 360;
-          return "hsl(" + hue + ", 70%, 55%)";
-        }
-        __name(countryColor, "countryColor");
-        function renderGeoRows(items, maxCount, colorFn) {
-          const buildInspectUrl = /* @__PURE__ */ __name((g) => {
-            const params = new URLSearchParams();
-            if (g.country) params.set("country", g.country);
-            if (g.region) params.set("region", g.region);
-            if (g.city) params.set("city", g.city);
-            if (days) params.set("days", String(days));
-            if (yesterday) params.set("yesterday", "1");
-            if (selectedDate) params.set("date", selectedDate);
-            if (hideBots) params.set("hideBots", "1");
-            if (hideChardon) params.set("hideChardon", "1");
-            if (excludeIp) params.set("excludeIp", excludeIp);
-            return "/__k4stats/inspect?" + params.toString();
-          }, "buildInspectUrl");
-          return items
-            .map((g) => {
-              const barColor = colorFn(g.country);
-              const href = buildInspectUrl(g);
-              return (
-                '<div class="bar-row"><a class="bar-label" href="' +
-                href +
-                '" title="Inspect ' +
-                g.label +
-                '" style="color:#ccc; text-decoration:none;">' +
-                g.label +
-                '</a><div class="bar-container"><div class="bar" style="width: ' +
-                ((g.count / maxCount) * 100).toFixed(1) +
-                "%; background: " +
-                barColor +
-                ';"></div></div><span class="bar-value">' +
-                g.count +
-                "</span></div>"
-              );
-            })
-            .join("");
-        }
-        __name(renderGeoRows, "renderGeoRows");
-        const artGeo = (geo || [])
-          .filter((g) => g.art_viewers > 0)
-          .map((g) => ({
-            label: [g.city, g.region, g.country].filter(Boolean).join(", "),
-            city: g.city,
-            region: g.region,
-            country: g.country,
-            art_viewers: g.art_viewers || 0,
-          }));
-        const mergedGeo = {};
-        artGeo.forEach((g) => {
-          if (!mergedGeo[g.label]) mergedGeo[g.label] = { ...g };
-          else mergedGeo[g.label].art_viewers += g.art_viewers;
-        });
-        const artRows = Object.values(mergedGeo)
-          .map((g) => ({ ...g, count: g.art_viewers }))
-          .sort((a, b) => b.count - a.count);
-        const artMax = Math.max(...artRows.map((g) => g.count), 1);
-        if (artRows.length > 0) {
-          return (
-            '<div class="k4-split-scroll">' +
-            renderGeoRows(artRows, artMax, countryColor) +
-            "</div>"
-          );
-        }
-        return '<p style="color:#666;">No art viewer data yet</p>';
-      })()}
+    const countryColors = {
+      US: "#a78bfa",
+      FR: "#ef4444",
+      DE: "#f97316",
+      BR: "#22c55e",
+      GB: "#6366f1",
+      CA: "#ec4899",
+      AU: "#eab308",
+      MX: "#14b8a6",
+      IN: "#f59e0b",
+      JP: "#e11d48",
+      IT: "#84cc16",
+      ES: "#a855f7",
+      NL: "#fb923c",
+      AT: "#dc2626",
+      HU: "#c026d3",
+      SG: "#0ea5e9",
+      HK: "#d946ef",
+      CN: "#b91c1c",
+      KR: "#2563eb",
+      CO: "#fbbf24",
+      PL: "#f43f5e",
+      SE: "#06b6d4",
+      NO: "#0284c7",
+      FI: "#0369a1",
+      CH: "#dc2626",
+      RU: "#1d4ed8",
+      UA: "#fcd34d",
+      AR: "#60a5fa",
+      ZA: "#a78bfa",
+      NZ: "#2dd4bf",
+      PT: "#e879f9",
+      CG: "#f472b6",
+      CL: "#38bdf8",
+      PE: "#fbbf24",
+      IE: "#4ade80",
+      BE: "#facc15",
+      CZ: "#7dd3fc",
+      DK: "#ef4444",
+      GR: "#0ea5e9",
+      IL: "#6366f1",
+      TW: "#d946ef",
+      TH: "#f97316",
+      PH: "#8b5cf6",
+      TR: "#dc2626",
+      RO: "#fde047"
+    };
+    function countryColor(code) {
+      if (countryColors[code]) return countryColors[code];
+      if (!code) return "#9ca3af";
+      let h = 0;
+      for (let i = 0; i < code.length; i++) h = code.charCodeAt(i) * 31 + h;
+      const hue = Math.abs(h) % 360;
+      return "hsl(" + hue + ", 70%, 55%)";
+    }
+    __name(countryColor, "countryColor");
+    __name2(countryColor, "countryColor");
+    function renderGeoRows(items, maxCount, colorFn) {
+      const buildInspectUrl = /* @__PURE__ */ __name2((g) => {
+        const params = new URLSearchParams();
+        if (g.country) params.set("country", g.country);
+        if (g.region) params.set("region", g.region);
+        if (g.city) params.set("city", g.city);
+        if (days) params.set("days", String(days));
+        if (yesterday) params.set("yesterday", "1");
+        if (selectedDate) params.set("date", selectedDate);
+        if (hideBots) params.set("hideBots", "1");
+        if (hideChardon) params.set("hideChardon", "1");
+        if (excludeIp) params.set("excludeIp", excludeIp);
+        return "/__k4stats/inspect?" + params.toString();
+      }, "buildInspectUrl");
+      return items.map((g) => {
+        const barColor = colorFn(g.country);
+        const href = buildInspectUrl(g);
+        return '<div class="bar-row"><a class="bar-label" href="' + href + '" title="Inspect ' + g.label + '" style="color:#ccc; text-decoration:none;">' + g.label + '</a><div class="bar-container"><div class="bar" style="width: ' + (g.count / maxCount * 100).toFixed(1) + "%; background: " + barColor + ';"></div></div><span class="bar-value">' + g.count + "</span></div>";
+      }).join("");
+    }
+    __name(renderGeoRows, "renderGeoRows");
+    __name2(renderGeoRows, "renderGeoRows");
+    const artGeo = (geo || []).filter((g) => g.art_viewers > 0).map((g) => ({
+      label: [g.city, g.region, g.country].filter(Boolean).join(", "),
+      city: g.city,
+      region: g.region,
+      country: g.country,
+      art_viewers: g.art_viewers || 0
+    }));
+    const mergedGeo = {};
+    artGeo.forEach((g) => {
+      if (!mergedGeo[g.label]) mergedGeo[g.label] = { ...g };
+      else mergedGeo[g.label].art_viewers += g.art_viewers;
+    });
+    const artRows = Object.values(mergedGeo).map((g) => ({ ...g, count: g.art_viewers })).sort((a, b) => b.count - a.count);
+    const artMax = Math.max(...artRows.map((g) => g.count), 1);
+    if (artRows.length > 0) {
+      return '<div class="k4-split-scroll">' + renderGeoRows(artRows, artMax, countryColor) + "</div>";
+    }
+    return '<p style="color:#666;">No art viewer data yet</p>';
+  })()}
     </div>
 
     <!-- External Reach -->
@@ -6060,82 +5520,56 @@ function renderDashboard({
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Non-JS traffic: bots, bounces, blocked JS. Separate population from verified visitors.</div></span>
       </div>
       ${(() => {
-        function renderGeoRows(items, maxCount) {
-          return items
-            .map((g) => {
-              return (
-                '<div class="bar-row"><span class="bar-label" title="' +
-                g.label +
-                '">' +
-                g.label +
-                '</span><div class="bar-container"><div class="bar" style="width: ' +
-                ((g.count / maxCount) * 100).toFixed(1) +
-                '%; background: #f59e0b;"></div></div><span class="bar-value">' +
-                g.count +
-                "</span></div>"
-              );
-            })
-            .join("");
-        }
-        __name(renderGeoRows, "renderGeoRows");
-        const extGeo = (externalReachGeo || []).map((g) => ({
-          label: [g.city, g.region, g.country].filter(Boolean).join(", "),
-          country: g.country,
-          count: g.hits,
-        }));
-        const extMax = Math.max(...extGeo.map((g) => g.count), 1);
-        let html = "";
-        if (extGeo.length > 0) {
-          html +=
-            '<div class="k4-split-scroll" style="margin-bottom: 12px;">' +
-            renderGeoRows(extGeo, extMax) +
-            "</div>";
-        } else {
-          html +=
-            '<p style="color:#666; margin-bottom: 12px;">No external data yet</p>';
-        }
-        if ((externalReachSources || []).length > 0) {
-          html +=
-            '<div style="margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #f59e0b;">\u{1F4E1} Sources</div>';
-          const srcIcons = {
-            "Google Search": "\u{1F50D}",
-            "Google Images": "\u{1F5BC}\uFE0F",
-            Bing: "\u{1F171}\uFE0F",
-            "Twitter/X": "\u{1F426}",
-            Facebook: "\u{1F4D8}",
-            Pinterest: "\u{1F4CC}",
-            DuckDuckGo: "\u{1F986}",
-            ChatGPT: "\u{1F9E0}",
-            "Open Graph": "\u{1F578}\uFE0F",
-            "Structured Data": "\u{1F9FE}",
-            Yandex: "\u{1F50D}",
-            Baidu: "\u{1F50D}",
-            Direct: "\u{1F517}",
-            Internal: "\u{1F3E0}",
-            Other: "\u{1F310}",
-            Unknown: "\u2753",
-          };
-          html +=
-            '<div style="display: flex; flex-direction: column; gap: 3px;">';
-          for (const s2 of externalReachSources.slice(0, 6)) {
-            const label = String(s2.source || "Unknown");
-            const base = label.replace(/\s*\([^)]*\)\s*$/, "").trim();
-            const icon = srcIcons[label] || srcIcons[base] || "\u{1F310}";
-            html +=
-              '<div style="display: flex; align-items: center; gap: 6px; padding: 3px 6px; background: #1a1a1a; border-radius: 4px;"><span style="font-size: 14px;">' +
-              icon +
-              '</span><span style="color: #ccc; font-size: 11px; flex: 1;" title="' +
-              label +
-              '">' +
-              label +
-              '</span><span style="color: #f59e0b; font-size: 11px; font-weight: bold;">' +
-              s2.hits +
-              "</span></div>";
-          }
-          html += "</div>";
-        }
-        return html;
-      })()}
+    function renderGeoRows(items, maxCount) {
+      return items.map((g) => {
+        return '<div class="bar-row"><span class="bar-label" title="' + g.label + '">' + g.label + '</span><div class="bar-container"><div class="bar" style="width: ' + (g.count / maxCount * 100).toFixed(1) + '%; background: #f59e0b;"></div></div><span class="bar-value">' + g.count + "</span></div>";
+      }).join("");
+    }
+    __name(renderGeoRows, "renderGeoRows");
+    __name2(renderGeoRows, "renderGeoRows");
+    const extGeo = (externalReachGeo || []).map((g) => ({
+      label: [g.city, g.region, g.country].filter(Boolean).join(", "),
+      country: g.country,
+      count: g.hits
+    }));
+    const extMax = Math.max(...extGeo.map((g) => g.count), 1);
+    let html = "";
+    if (extGeo.length > 0) {
+      html += '<div class="k4-split-scroll" style="margin-bottom: 12px;">' + renderGeoRows(extGeo, extMax) + "</div>";
+    } else {
+      html += '<p style="color:#666; margin-bottom: 12px;">No external data yet</p>';
+    }
+    if ((externalReachSources || []).length > 0) {
+      html += '<div style="margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #f59e0b;">\u{1F4E1} Sources</div>';
+      const srcIcons = {
+        "Google Search": "\u{1F50D}",
+        "Google Images": "\u{1F5BC}\uFE0F",
+        Bing: "\u{1F171}\uFE0F",
+        "Twitter/X": "\u{1F426}",
+        Facebook: "\u{1F4D8}",
+        Pinterest: "\u{1F4CC}",
+        DuckDuckGo: "\u{1F986}",
+        ChatGPT: "\u{1F9E0}",
+        "Open Graph": "\u{1F578}\uFE0F",
+        "Structured Data": "\u{1F9FE}",
+        Yandex: "\u{1F50D}",
+        Baidu: "\u{1F50D}",
+        Direct: "\u{1F517}",
+        Internal: "\u{1F3E0}",
+        Other: "\u{1F310}",
+        Unknown: "\u2753"
+      };
+      html += '<div style="display: flex; flex-direction: column; gap: 3px;">';
+      for (const s2 of externalReachSources.slice(0, 6)) {
+        const label = String(s2.source || "Unknown");
+        const base = label.replace(/\s*\([^)]*\)\s*$/, "").trim();
+        const icon = srcIcons[label] || srcIcons[base] || "\u{1F310}";
+        html += '<div style="display: flex; align-items: center; gap: 6px; padding: 3px 6px; background: #1a1a1a; border-radius: 4px;"><span style="font-size: 14px;">' + icon + '</span><span style="color: #ccc; font-size: 11px; flex: 1;" title="' + label + '">' + label + '</span><span style="color: #f59e0b; font-size: 11px; font-weight: bold;">' + s2.hits + "</span></div>";
+      }
+      html += "</div>";
+    }
+    return html;
+  })()}
     </div>
 
     <div class="section">
@@ -6145,75 +5579,63 @@ function renderDashboard({
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Edge events: 301 redirects (canonical fixes), 410 Gone (removed content), 404 fallbacks. Healthy sites show these tapering over time.</div></span>
         ${edgeEvents.length > 0 ? '<button class="mini-btn" type="button" onclick="k4OpenEdgeEventList()" title="Open full edge-event list in a new window (no truncation)">Full list</button>' : ""}
       </div>
-      ${
-        edgeSummary.length > 0
-          ? `
+      ${edgeSummary.length > 0 ? `
       <div style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
-        ${edgeSummary
-          .map((s2) => {
-            const typeColors = {
-              smart404_redirect: "#10b981",
-              smart404_gone: "#f59e0b",
-              smart404_fallback: "#ef4444",
-              smart404_homepage: "#a855f7",
-              301: "#10b981",
-              302: "#10b981",
-              410: "#f59e0b",
-              404: "#ef4444",
-            };
-            const typeLabels = {
-              smart404_redirect: "301",
-              smart404_gone: "410",
-              smart404_fallback: "404",
-              smart404_homepage: "Home",
-              301: "301",
-              302: "302",
-              410: "410",
-              404: "404",
-            };
-            const color = typeColors[s2.event_type] || "#888";
-            const label = typeLabels[s2.event_type] || s2.event_type;
-            return `<span style="background: ${color}22; color: ${color}; padding: 4px 10px; border-radius: 12px; font-size: 11px;">${label}: ${s2.total} <span style="opacity:0.7">(\u{1F916}${s2.bot_hits} \u{1F464}${s2.human_hits})</span></span>`;
-          })
-          .join("")}
+        ${edgeSummary.map((s2) => {
+    const typeColors = {
+      smart404_redirect: "#10b981",
+      smart404_gone: "#f59e0b",
+      smart404_fallback: "#ef4444",
+      smart404_homepage: "#a855f7",
+      301: "#10b981",
+      302: "#10b981",
+      410: "#f59e0b",
+      404: "#ef4444"
+    };
+    const typeLabels = {
+      smart404_redirect: "301",
+      smart404_gone: "410",
+      smart404_fallback: "404",
+      smart404_homepage: "Home",
+      301: "301",
+      302: "302",
+      410: "410",
+      404: "404"
+    };
+    const color = typeColors[s2.event_type] || "#888";
+    const label = typeLabels[s2.event_type] || s2.event_type;
+    return `<span style="background: ${color}22; color: ${color}; padding: 4px 10px; border-radius: 12px; font-size: 11px;">${label}: ${s2.total} <span style="opacity:0.7">(\u{1F916}${s2.bot_hits} \u{1F464}${s2.human_hits})</span></span>`;
+  }).join("")}
       </div>
-      `
-          : ""
-      }
-      ${
-        edgeEvents.length > 0
-          ? `
+      ` : ""}
+      ${edgeEvents.length > 0 ? `
       <div>
-        ${edgeEvents
-          .map((e) => {
-            const eventColors = {
-              smart404_redirect: "#10b981",
-              smart404_gone: "#f59e0b",
-              smart404_fallback: "#ef4444",
-              smart404_homepage: "#a855f7",
-              301: "#10b981",
-              302: "#10b981",
-              410: "#f59e0b",
-              404: "#ef4444",
-            };
-            const eventLabels2 = {
-              smart404_redirect: "301",
-              smart404_gone: "410",
-              smart404_fallback: "404",
-              smart404_homepage: "Home",
-              301: "301",
-              302: "302",
-              410: "410",
-              404: "404",
-            };
-            const color = eventColors[e.event_type] || "#888";
-            const label = eventLabels2[e.event_type] || e.event_type;
-            const shortPath =
-              e.path && e.path.length > 40
-                ? "..." + e.path.slice(-37)
-                : e.path || "unknown";
-            const botIcon = e.is_bot ? "\u{1F916}" : "\u{1F464}";
-            return `
+        ${edgeEvents.map((e) => {
+    const eventColors = {
+      smart404_redirect: "#10b981",
+      smart404_gone: "#f59e0b",
+      smart404_fallback: "#ef4444",
+      smart404_homepage: "#a855f7",
+      301: "#10b981",
+      302: "#10b981",
+      410: "#f59e0b",
+      404: "#ef4444"
+    };
+    const eventLabels2 = {
+      smart404_redirect: "301",
+      smart404_gone: "410",
+      smart404_fallback: "404",
+      smart404_homepage: "Home",
+      301: "301",
+      302: "302",
+      410: "410",
+      404: "404"
+    };
+    const color = eventColors[e.event_type] || "#888";
+    const label = eventLabels2[e.event_type] || e.event_type;
+    const shortPath = e.path && e.path.length > 40 ? "..." + e.path.slice(-37) : e.path || "unknown";
+    const botIcon = e.is_bot ? "\u{1F916}" : "\u{1F464}";
+    return `
           <div class="edge-row" data-hits="${e.hits || 0}" data-bot="${e.is_bot ? 1 : 0}" data-type="${label}" data-path="${e.path || ""}" style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
             <span style="background: ${color}22; color: ${color}; padding: 2px 8px; border-radius: 8px; font-size: 10px; flex-shrink: 0;">${label}</span>
             <span style="flex: 1; color: #ccc; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${e.path || ""}">${shortPath}</span>
@@ -6221,47 +5643,33 @@ function renderDashboard({
             <span style="color: #888; font-size: 12px; font-weight: bold;">${e.hits}</span>
           </div>
         `;
-          })
-          .join("")}
+  }).join("")}
       </div>
-      `
-          : ""
-      }
+      ` : ""}
     </div>
 
     <div class="section">
       <h3>Top 25 Pages</h3>
-      ${
-        pages.length === 0
-          ? '<p style="color:#666">No data yet</p>'
-          : (() => {
-              const galleryPaths = new Set(GALLERY_LANDING_PATHS);
-              const maxViews = Math.max(...pages.map((p) => p.views || 0), 1);
-              return pages
-                .map((p, i) => {
-                  const path = String(p.page_path || "/");
-                  const isChapter = /\/i-[A-Za-z0-9]+$/.test(path);
-                  const isGallery = galleryPaths.has(path);
-                  const color = isChapter
-                    ? "#a78bfa"
-                    : isGallery
-                      ? "#10b981"
-                      : "#4a9eff";
-                  const shortPath =
-                    path.length > 32 ? "..." + path.slice(-29) : path;
-                  const count = p.views || 0;
-                  return `
+      ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : (() => {
+    const galleryPaths = new Set(GALLERY_LANDING_PATHS);
+    const maxViews = Math.max(...pages.map((p) => p.views || 0), 1);
+    return pages.map((p, i) => {
+      const path = String(p.page_path || "/");
+      const isChapter = /\/i-[A-Za-z0-9]+$/.test(path);
+      const isGallery = galleryPaths.has(path);
+      const color = isChapter ? "#a78bfa" : isGallery ? "#10b981" : "#4a9eff";
+      const shortPath = path.length > 32 ? "..." + path.slice(-29) : path;
+      const count = p.views || 0;
+      return `
           <div class="bar-row">
             <a class="bar-label" href="https://www.k4studios.com${path}" target="_blank" title="${path}" style="color: ${color}; text-decoration: none;">${shortPath}</a>
             <div class="bar-container">
-              <div class="bar" style="width: ${((count / maxViews) * 100).toFixed(1)}%; background: ${color};"></div>
+              <div class="bar" style="width: ${(count / maxViews * 100).toFixed(1)}%; background: ${color};"></div>
             </div>
             <span class="bar-value">${count}</span>
           </div>`;
-                })
-                .join("");
-            })()
-      }
+    }).join("");
+  })()}
     </div>
 
     <div class="section">
@@ -6269,84 +5677,62 @@ function renderDashboard({
         <h3>? Top Entry Pages (Sessions)</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Counts <strong>sessions</strong> (not page views). Each row is the <em>first</em> JS page_view in a session, grouped by page + referrer source. Table includes all page types (Site, Gallery, Chapter). \u{1F50D}=Google Search, \u{1F5BC}\uFE0F=Images, \u{1F171}\uFE0F=Bing, \u{1F4CC}=Pinterest, \u{1F426}=Twitter, \u{1F4D8}=Facebook, \u{1F517}=Direct</div></span>
       </div>
-      ${
-        entryPages.length === 0
-          ? '<p style="color:#666">No data yet</p>'
-          : `
+      ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
       <table>
         <tr><th>Page</th><th>From</th><th>Sess</th></tr>
-        ${entryPages
-          .slice(0, 15)
-          .map((p) => {
-            const rawPath = String(p.page_path || "/");
-            const fullPath = rawPath.startsWith("/") ? rawPath : `/${rawPath}`;
-            const isChapter = /\/i-[A-Za-z0-9]+$/.test(fullPath);
-            const isGalleryLanding =
-              !isChapter && galleryLandingPathSet.has(fullPath);
-            const typeColor = isChapter
-              ? "#a78bfa"
-              : isGalleryLanding
-                ? "#10b981"
-                : "#4a9eff";
-            const shortPath = (() => {
-              const path = fullPath;
-              const maxLen = 34;
-              if (path.length <= maxLen) return path;
-              const startLen = 14;
-              const endLen = Math.max(8, maxLen - startLen - 3);
-              return path.slice(0, startLen) + "..." + path.slice(-endLen);
-            })();
-            const pageIcon = isChapter
-              ? "\u{1F5BC}\uFE0F"
-              : isGalleryLanding
-                ? "\u{1F4C1}"
-                : "\u{1F4C4}";
-            const refIcons = {
-              google_search: "\u{1F50D}",
-              google_images: "\u{1F5BC}\uFE0F",
-              bing_search: "\u{1F171}\uFE0F",
-              bing_images: "\u{1F5BC}\uFE0F",
-              pinterest: "\u{1F4CC}",
-              twitter: "\u{1F426}",
-              facebook: "\u{1F4D8}",
-              instagram: "\u{1F4F7}",
-              linkedin: "\u{1F4BC}",
-              duckduckgo: "\u{1F986}",
-              direct: "\u{1F517}",
-              internal: "\u{1F504}",
-              unattributed: "\u{1F512}",
-            };
-            const refIcon = refIcons[p.ref_source] || "\u{1F512}";
-            return `<tr><td title="${fullPath}" style="color:${typeColor};">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
-          })
-          .join("")}
+        ${entryPages.slice(0, 15).map((p) => {
+    const rawPath = String(p.page_path || "/");
+    const fullPath = rawPath.startsWith("/") ? rawPath : `/${rawPath}`;
+    const isChapter = /\/i-[A-Za-z0-9]+$/.test(fullPath);
+    const isGalleryLanding = !isChapter && galleryLandingPathSet.has(fullPath);
+    const typeColor = isChapter ? "#a78bfa" : isGalleryLanding ? "#10b981" : "#4a9eff";
+    const shortPath = (() => {
+      const path = fullPath;
+      const maxLen = 34;
+      if (path.length <= maxLen) return path;
+      const startLen = 14;
+      const endLen = Math.max(8, maxLen - startLen - 3);
+      return path.slice(0, startLen) + "..." + path.slice(-endLen);
+    })();
+    const pageIcon = isChapter ? "\u{1F5BC}\uFE0F" : isGalleryLanding ? "\u{1F4C1}" : "\u{1F4C4}";
+    const refIcons = {
+      google_search: "\u{1F50D}",
+      google_images: "\u{1F5BC}\uFE0F",
+      bing_search: "\u{1F171}\uFE0F",
+      bing_images: "\u{1F5BC}\uFE0F",
+      pinterest: "\u{1F4CC}",
+      twitter: "\u{1F426}",
+      facebook: "\u{1F4D8}",
+      instagram: "\u{1F4F7}",
+      linkedin: "\u{1F4BC}",
+      duckduckgo: "\u{1F986}",
+      direct: "\u{1F517}",
+      internal: "\u{1F504}",
+      unattributed: "\u{1F512}"
+    };
+    const refIcon = refIcons[p.ref_source] || "\u{1F512}";
+    return `<tr><td title="${fullPath}" style="color:${typeColor};">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
+  }).join("")}
       </table>
-      `
-      }
+      `}
     </div>
 
     <div class="section">
       <h3>\u{1F3A8} Top 10 Themes Clicked</h3>
-      ${
-        themesClicked.length === 0
-          ? '<p style="color:#666">No theme clicks yet</p>'
-          : `
+      ${themesClicked.length === 0 ? '<p style="color:#666">No theme clicks yet</p>' : `
       <table>
         <tr><th>Theme</th><th>Sessions</th><th>Clicks</th></tr>
-        ${themesClicked
-          .map(
-            (t) => `
+        ${themesClicked.map(
+    (t) => `
           <tr>
             <td>${formatEventName(t.theme || "Unknown")}</td>
             <td>${t.sessions}</td>
             <td>${t.clicks}</td>
           </tr>
-        `,
-          )
-          .join("")}
+        `
+  ).join("")}
       </table>
-      `
-      }
+      `}
     </div>
 
     <div class="section">
@@ -6422,36 +5808,32 @@ function renderDashboard({
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);">
       <span class="value" style="color: #fff;">\u{1F7E3} ${(() => {
-        const suspects = (botIntelligence?.suspects || []).filter(
-          (s2) => s2 && s2.status !== "blocked",
-        );
-        const blockRecommendedCount = suspects.filter(
-          isLevel5BlockRecommended,
-        ).length;
-        const frictionManagedCount =
-          suspects.filter((s2) => (s2.risk_level || 0) >= 4).length -
-          blockRecommendedCount;
-        return suspects.length > 0
-          ? Math.max(0, frictionManagedCount)
-          : Math.max(
-              0,
-              (botIntelligence?.stats?.risk4 || 0) - blockRecommendedCount,
-            );
-      })()}</span>
+    const suspects = (botIntelligence?.suspects || []).filter(
+      (s2) => s2 && s2.status !== "blocked"
+    );
+    const blockRecommendedCount = suspects.filter(
+      isLevel5BlockRecommended
+    ).length;
+    const frictionManagedCount = suspects.filter((s2) => (s2.risk_level || 0) >= 4).length - blockRecommendedCount;
+    return suspects.length > 0 ? Math.max(0, frictionManagedCount) : Math.max(
+      0,
+      (botIntelligence?.stats?.risk4 || 0) - blockRecommendedCount
+    );
+  })()}</span>
       <span class="label" style="color: #f5d0fe;">Friction-Managed <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #f5d0fe;">i</span></span>
       <div class="tooltip"><strong>Friction-managed IPs (cumulative, Level 4).</strong> Total count of unique IPs classified as automated extractors over time. These clients are automatically slowed (650-1600ms delay) or rate-limited (429 at \u226540 unique images/min) by the image proxy. See <em>Protected (selected period)</em> for recent friction event volume.</div>
     </div>
     ${(() => {
-      const suspects = (botIntelligence?.suspects || []).filter(
-        (s2) => s2 && s2.status !== "blocked",
-      );
-      const count = suspects.filter(isLevel5BlockRecommended).length;
-      return `<div class="pulse-stat" style="background: linear-gradient(135deg, #78350f 0%, #92400e 100%);">
+    const suspects = (botIntelligence?.suspects || []).filter(
+      (s2) => s2 && s2.status !== "blocked"
+    );
+    const count = suspects.filter(isLevel5BlockRecommended).length;
+    return `<div class="pulse-stat" style="background: linear-gradient(135deg, #78350f 0%, #92400e 100%);">
         <span class="value" style="color: #fff;">\u{1F7E4} ${count}</span>
         <span class="label" style="color: #fde68a;">Block Recommended <span class="info-icon" style="background: rgba(255,255,255,0.16); color: #fde68a;">i</span></span>
         <div class="tooltip"><strong>Level 5 governance signal (UI-only).</strong> K4 Bad Actor Day: scraper persists after friction and generates <strong>\u226510 429s/day</strong>, sustained high-rate image pulls (\u226520 unique/min), delay bursts (\u226540 in 10min), or <strong>\u2265200 requests over 3+ days</strong> at Level 4. Consider <em>Force Block</em> if clearly non-beneficial traffic.</div>
       </div>`;
-    })()}
+  })()}
     <div class="pulse-stat" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
       <span class="value" style="color: #fff;"><span style="text-shadow: 0 0 2px #000, 0 0 4px #000;">\u2296</span> ${botIntelligence?.blocked?.filter((b) => b.is_active)?.length || 0}</span>
       <span class="label" style="color: #fecaca;">Blocked <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fecaca;">i</span></span>
@@ -6464,79 +5846,45 @@ function renderDashboard({
     <div class="section" style="border: 1px solid #10b98133;">
       <h3 style="color: #10b981;">\u{1F7E2} Verified Search Bots</h3>
       <p style="color: #888; font-size: 10px; margin: -5px 0 10px 0;">Search engines indexing your art for Google/Bing Images!${(() => {
-        const total = botIntelligence?.stats?.verified_bots || 0;
-        const shown = (botIntelligence?.verified || []).length;
-        return total > shown && shown > 0
-          ? ` (Showing top ${shown} of ${total})`
-          : "";
-      })()}</p>
-      ${
-        (botIntelligence?.verified || []).length === 0
-          ? '<p style="color:#666">No verified bots detected yet</p>'
-          : '<div style="max-height: 400px; overflow-y: auto;">' +
-            (botIntelligence?.verified || [])
-              .map((v) => {
-                const botIcons = {
-                  googlebot: "\u{1F50D}",
-                  bingbot: "\u{1F171}\uFE0F",
-                  applebot: "\u{1F34E}",
-                  duckduckbot: "\u{1F986}",
-                  yandex: "\u{1F1F7}\u{1F1FA}",
-                  baidu: "\u{1F1E8}\u{1F1F3}",
-                  facebook: "\u{1F4D8}",
-                  twitter: "\u{1F426}",
-                  pinterest: "\u{1F4CC}",
-                  linkedin: "\u{1F4BC}",
-                  openai: "\u{1F300}",
-                  claude: "\u{1F9E0}",
-                };
-                const icon = botIcons[v.bot_name?.toLowerCase()] || "\u{1F916}";
-                const displayName = v.bot_name
-                  ? v.bot_name.charAt(0).toUpperCase() + v.bot_name.slice(1)
-                  : "Unknown";
-                const imgCount = v.image_count || 0;
-                const pgCount = v.page_count || 0;
-                const breakdown =
-                  imgCount > 0 || pgCount > 0
-                    ? "\u{1F5BC}\uFE0F " +
-                      imgCount +
-                      " images, \u{1F4C4} " +
-                      pgCount +
-                      " pages"
-                    : v.total_requests + " requests";
-                return (
-                  '<div style="display: flex; align-items: center; padding: 8px; margin-bottom: 6px; background: #10b98111; border-radius: 6px; gap: 10px;"><span style="font-size: 18px;">' +
-                  icon +
-                  '</span><div style="flex: 1;"><div style="color: #10b981; font-weight: bold; font-size: 12px;">' +
-                  displayName +
-                  '</div><div style="color: #888; font-size: 10px;">' +
-                  breakdown +
-                  '</div></div><span style="color: #666; font-size: 10px;">' +
-                  (v.country || "") +
-                  "</span></div>"
-                );
-              })
-              .join("") +
-            "</div>"
-      }
+    const total = botIntelligence?.stats?.verified_bots || 0;
+    const shown = (botIntelligence?.verified || []).length;
+    return total > shown && shown > 0 ? ` (Showing top ${shown} of ${total})` : "";
+  })()}</p>
+      ${(botIntelligence?.verified || []).length === 0 ? '<p style="color:#666">No verified bots detected yet</p>' : '<div style="max-height: 400px; overflow-y: auto;">' + (botIntelligence?.verified || []).map((v) => {
+    const botIcons = {
+      googlebot: "\u{1F50D}",
+      bingbot: "\u{1F171}\uFE0F",
+      applebot: "\u{1F34E}",
+      duckduckbot: "\u{1F986}",
+      yandex: "\u{1F1F7}\u{1F1FA}",
+      baidu: "\u{1F1E8}\u{1F1F3}",
+      facebook: "\u{1F4D8}",
+      twitter: "\u{1F426}",
+      pinterest: "\u{1F4CC}",
+      linkedin: "\u{1F4BC}",
+      openai: "\u{1F300}",
+      claude: "\u{1F9E0}"
+    };
+    const icon = botIcons[v.bot_name?.toLowerCase()] || "\u{1F916}";
+    const displayName = v.bot_name ? v.bot_name.charAt(0).toUpperCase() + v.bot_name.slice(1) : "Unknown";
+    const imgCount = v.image_count || 0;
+    const pgCount = v.page_count || 0;
+    const breakdown = imgCount > 0 || pgCount > 0 ? "\u{1F5BC}\uFE0F " + imgCount + " images, \u{1F4C4} " + pgCount + " pages" : v.total_requests + " requests";
+    return '<div style="display: flex; align-items: center; padding: 8px; margin-bottom: 6px; background: #10b98111; border-radius: 6px; gap: 10px;"><span style="font-size: 18px;">' + icon + '</span><div style="flex: 1;"><div style="color: #10b981; font-weight: bold; font-size: 12px;">' + displayName + '</div><div style="color: #888; font-size: 10px;">' + breakdown + '</div></div><span style="color: #666; font-size: 10px;">' + (v.country || "") + "</span></div>";
+  }).join("") + "</div>"}
     </div>
 
     <!-- Suspected automation (governance view) -->
     <div class="section">
       <h3>\u{1F9ED} Traffic Governance</h3>
       <p style="color: #888; font-size: 10px; margin: -5px 0 10px 0;">Most automated traffic is mitigated automatically. Manual blocking should be reserved for persistent abuse.${(() => {
-        const total = botIntelligence?.stats?.total || 0;
-        const shown = (botIntelligence?.suspects || []).filter(
-          (s2) => s2 && s2.status !== "blocked",
-        ).length;
-        return total > shown && shown > 0
-          ? ` (Showing top ${shown} of ${total})`
-          : "";
-      })()}</p>
-      ${
-        (botIntelligence?.suspects || []).length === 0
-          ? '<p style="color:#666">No suspicious IPs detected yet</p>'
-          : `
+    const total = botIntelligence?.stats?.total || 0;
+    const shown = (botIntelligence?.suspects || []).filter(
+      (s2) => s2 && s2.status !== "blocked"
+    ).length;
+    return total > shown && shown > 0 ? ` (Showing top ${shown} of ${total})` : "";
+  })()}</p>
+      ${(botIntelligence?.suspects || []).length === 0 ? '<p style="color:#666">No suspicious IPs detected yet</p>' : `
       <div style="max-height: 400px; overflow-y: auto;">
         <table style="width: 100%; font-size: 11px;">
           <tr style="position: sticky; top: 0; background: #252525;">
@@ -6548,137 +5896,68 @@ function renderDashboard({
             <th style="text-align: center; padding: 4px;">Days</th>
             <th style="text-align: center; padding: 4px;">Action</th>
           </tr>
-          ${(botIntelligence?.suspects || [])
-            .filter((s2) => s2.risk_level >= 2 && s2.status !== "blocked")
-            .map((s2) => {
-              const riskColors = {
-                1: "#10b981",
-                2: "#fbbf24",
-                3: "#f97316",
-                4: "#a855f7",
-                5: "#92400e",
-              };
-              const riskIcons = {
-                1: "\u{1F7E2}",
-                2: "\u{1F7E1}",
-                3: "\u{1F7E0}",
-                4: "\u{1F7E3}",
-                5: "\u{1F7E4}",
-              };
-              const isBlockRecommended = isLevel5BlockRecommended(s2);
-              const rules = JSON.parse(s2.rules_triggered || "[]");
-              const rulesShort = rules
-                .slice(0, 2)
-                .map((r) => r.replace(/_/g, " ").slice(0, 12))
-                .join(", ");
-              const isBlocked = s2.status === "blocked";
-              const displayRiskLevel = isBlockRecommended
-                ? 5
-                : s2.risk_level || 0;
-              const riskColor = riskColors[displayRiskLevel] || "#888";
-              const riskIcon = riskIcons[displayRiskLevel] || "\u2753";
-              const rowStyle = isBlocked ? "opacity: 0.5;" : "";
-              const reqColor = s2.total_requests > 100 ? "#ef4444" : "#888";
-              const daysColor = s2.days_seen > 2 ? "#f97316" : "#888";
-              const protectionStatus = isBlocked
-                ? "manual_block"
-                : isBlockRecommended
-                  ? "block_recommended"
-                  : (s2.risk_level || 0) >= 4
-                    ? "friction_active"
-                    : "observation";
-              const statusBadges = {
-                friction_active: {
-                  bg: "#a855f722",
-                  color: "#f5d0fe",
-                  text: "\u{1F7E3} Friction Active",
-                },
-                block_recommended: {
-                  bg: "#92400e22",
-                  color: "#fde68a",
-                  text: "\u{1F7E4} Block Recommended",
-                },
-                observation: {
-                  bg: "#f9731622",
-                  color: "#fed7aa",
-                  text: "\u{1F7E0} Observing",
-                },
-                manual_block: {
-                  bg: "#dc262622",
-                  color: "#fecaca",
-                  text: "\u{1F534} Manual Block",
-                },
-              };
-              const status =
-                statusBadges[protectionStatus] || statusBadges.observation;
-              const statusHtml =
-                '<span title="' +
-                protectionStatus +
-                '" style="display:inline-flex;align-items:center;gap:6px;background:' +
-                status.bg +
-                ";color:" +
-                status.color +
-                ';padding:2px 6px;border-radius:999px;font-size:10px;">' +
-                status.text +
-                "</span>";
-              const actionHtml = isBlocked
-                ? '<span style="color: #666;">Blocked</span>'
-                : isBlockRecommended
-                  ? `<button onclick="blockIP('` +
-                    s2.ip_hash +
-                    `')" title="Block recommended: \u226510 429s/day or sustained high-rate pulls" style="background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Force Block</button>`
-                  : `<button onclick="blockIP('` +
-                    s2.ip_hash +
-                    `')" title="Force a manual block (usually unnecessary; friction already mitigates most automation)" style="background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Force Block</button>`;
-              return (
-                '<tr style="border-bottom: 1px solid #333; ' +
-                rowStyle +
-                '"><td style="padding: 6px 4px;"><span style="background: ' +
-                riskColor +
-                "22; color: " +
-                riskColor +
-                '; padding: 2px 6px; border-radius: 8px; font-weight: bold;">' +
-                riskIcon +
-                " " +
-                displayRiskLevel +
-                '</span></td><td style="padding: 6px 4px;">' +
-                statusHtml +
-                '</td><td style="padding: 6px 4px; font-family: monospace; font-size: 10px;">' +
-                s2.ip_hash +
-                '<span style="color: #666; margin-left: 4px;">' +
-                (s2.country || "") +
-                '</span></td><td style="padding: 6px 4px; text-align: right; font-weight: bold; color: ' +
-                reqColor +
-                ';">' +
-                s2.total_requests +
-                '</td><td style="padding: 6px 4px; color: #888; font-size: 10px;" title="' +
-                rules.join(", ") +
-                '">' +
-                rulesShort +
-                (rules.length > 2 ? "..." : "") +
-                '</td><td style="padding: 6px 4px; text-align: center;"><span style="color: ' +
-                daysColor +
-                ';">' +
-                s2.days_seen +
-                '</span></td><td style="padding: 6px 4px; text-align: center;">' +
-                actionHtml +
-                "</td></tr>"
-              );
-            })
-            .join("")}
+          ${(botIntelligence?.suspects || []).filter((s2) => s2.risk_level >= 2 && s2.status !== "blocked").map((s2) => {
+    const riskColors = {
+      1: "#10b981",
+      2: "#fbbf24",
+      3: "#f97316",
+      4: "#a855f7",
+      5: "#92400e"
+    };
+    const riskIcons = {
+      1: "\u{1F7E2}",
+      2: "\u{1F7E1}",
+      3: "\u{1F7E0}",
+      4: "\u{1F7E3}",
+      5: "\u{1F7E4}"
+    };
+    const isBlockRecommended = isLevel5BlockRecommended(s2);
+    const rules = JSON.parse(s2.rules_triggered || "[]");
+    const rulesShort = rules.slice(0, 2).map((r) => r.replace(/_/g, " ").slice(0, 12)).join(", ");
+    const isBlocked = s2.status === "blocked";
+    const displayRiskLevel = isBlockRecommended ? 5 : s2.risk_level || 0;
+    const riskColor = riskColors[displayRiskLevel] || "#888";
+    const riskIcon = riskIcons[displayRiskLevel] || "\u2753";
+    const rowStyle = isBlocked ? "opacity: 0.5;" : "";
+    const reqColor = s2.total_requests > 100 ? "#ef4444" : "#888";
+    const daysColor = s2.days_seen > 2 ? "#f97316" : "#888";
+    const protectionStatus = isBlocked ? "manual_block" : isBlockRecommended ? "block_recommended" : (s2.risk_level || 0) >= 4 ? "friction_active" : "observation";
+    const statusBadges = {
+      friction_active: {
+        bg: "#a855f722",
+        color: "#f5d0fe",
+        text: "\u{1F7E3} Friction Active"
+      },
+      block_recommended: {
+        bg: "#92400e22",
+        color: "#fde68a",
+        text: "\u{1F7E4} Block Recommended"
+      },
+      observation: {
+        bg: "#f9731622",
+        color: "#fed7aa",
+        text: "\u{1F7E0} Observing"
+      },
+      manual_block: {
+        bg: "#dc262622",
+        color: "#fecaca",
+        text: "\u{1F534} Manual Block"
+      }
+    };
+    const status = statusBadges[protectionStatus] || statusBadges.observation;
+    const statusHtml = '<span title="' + protectionStatus + '" style="display:inline-flex;align-items:center;gap:6px;background:' + status.bg + ";color:" + status.color + ';padding:2px 6px;border-radius:999px;font-size:10px;">' + status.text + "</span>";
+    const actionHtml = isBlocked ? '<span style="color: #666;">Blocked</span>' : isBlockRecommended ? `<button onclick="blockIP('` + s2.ip_hash + `')" title="Block recommended: \u226510 429s/day or sustained high-rate pulls" style="background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Force Block</button>` : `<button onclick="blockIP('` + s2.ip_hash + `')" title="Force a manual block (usually unnecessary; friction already mitigates most automation)" style="background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Force Block</button>`;
+    return '<tr style="border-bottom: 1px solid #333; ' + rowStyle + '"><td style="padding: 6px 4px;"><span style="background: ' + riskColor + "22; color: " + riskColor + '; padding: 2px 6px; border-radius: 8px; font-weight: bold;">' + riskIcon + " " + displayRiskLevel + '</span></td><td style="padding: 6px 4px;">' + statusHtml + '</td><td style="padding: 6px 4px; font-family: monospace; font-size: 10px;">' + s2.ip_hash + '<span style="color: #666; margin-left: 4px;">' + (s2.country || "") + '</span></td><td style="padding: 6px 4px; text-align: right; font-weight: bold; color: ' + reqColor + ';">' + s2.total_requests + '</td><td style="padding: 6px 4px; color: #888; font-size: 10px;" title="' + rules.join(", ") + '">' + rulesShort + (rules.length > 2 ? "..." : "") + '</td><td style="padding: 6px 4px; text-align: center;"><span style="color: ' + daysColor + ';">' + s2.days_seen + '</span></td><td style="padding: 6px 4px; text-align: center;">' + actionHtml + "</td></tr>";
+  }).join("")}
         </table>
       </div>
-      `
-      }
+      `}
     </div>
 
     <!-- Blocked IPs Archive -->
     <div class="section">
       <h3>\u2296 Blocked IPs <span style="font-size: 11px; color: #666; font-weight: normal;">(Archive)</span></h3>
-      ${
-        (botIntelligence?.blocked || []).length === 0
-          ? '<p style="color:#666">No blocked IPs yet</p>'
-          : `
+      ${(botIntelligence?.blocked || []).length === 0 ? '<p style="color:#666">No blocked IPs yet</p>' : `
       <div class="blocked-ips-wrap" style="max-height: 400px; overflow-y: auto; width: 100%;">
         <table class="blocked-ips-table" style="width: 100%; font-size: 11px;">
           <tr style="position: sticky; top: 0; background: #252525;">
@@ -6688,58 +5967,27 @@ function renderDashboard({
             <th style="text-align: left; padding: 4px;">Blocked</th>
             <th style="text-align: center; padding: 4px;">Action</th>
           </tr>
-          ${(botIntelligence?.blocked || [])
-            .map((b) => {
-              const isActive = b.is_active === 1;
-              const blockedDate = b.blocked_at
-                ? new Date(b.blocked_at).toLocaleDateString()
-                : "-";
-              const rowStyle = !isActive ? "opacity: 0.4;" : "";
-              const statusBg = isActive ? "#dc262622" : "#37415122";
-              const statusColor = isActive ? "#ef4444" : "#6b7280";
-              const statusText = isActive
-                ? "\u26D4 Active"
-                : "\u2713 Unblocked";
-              const actionHtml = isActive
-                ? `<button onclick="unblockIP('` +
-                  b.ip_hash +
-                  `')" style="background: #374151; color: #9ca3af; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Unblock</button>`
-                : '<span style="color: #666;">\u2014</span>';
-              return (
-                '<tr style="border-bottom: 1px solid #333; ' +
-                rowStyle +
-                '"><td style="padding: 6px 4px;"><span style="background: ' +
-                statusBg +
-                "; color: " +
-                statusColor +
-                '; padding: 2px 6px; border-radius: 8px; font-size: 10px;">' +
-                statusText +
-                '</span></td><td style="padding: 6px 4px; font-family: monospace; font-size: 10px;">' +
-                b.ip_hash +
-                '</td><td style="padding: 6px 4px; text-align: right; color: #888;">' +
-                (b.total_requests || "-") +
-                '</td><td style="padding: 6px 4px; color: #666; font-size: 10px;">' +
-                blockedDate +
-                '</td><td style="padding: 6px 4px; text-align: center;">' +
-                actionHtml +
-                "</td></tr>"
-              );
-            })
-            .join("")}
+          ${(botIntelligence?.blocked || []).map((b) => {
+    const isActive = b.is_active === 1;
+    const blockedDate = b.blocked_at ? new Date(b.blocked_at).toLocaleDateString() : "-";
+    const rowStyle = !isActive ? "opacity: 0.4;" : "";
+    const statusBg = isActive ? "#dc262622" : "#37415122";
+    const statusColor = isActive ? "#ef4444" : "#6b7280";
+    const statusText = isActive ? "\u26D4 Active" : "\u2713 Unblocked";
+    const actionHtml = isActive ? `<button onclick="unblockIP('` + b.ip_hash + `')" style="background: #374151; color: #9ca3af; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Unblock</button>` : '<span style="color: #666;">\u2014</span>';
+    return '<tr style="border-bottom: 1px solid #333; ' + rowStyle + '"><td style="padding: 6px 4px;"><span style="background: ' + statusBg + "; color: " + statusColor + '; padding: 2px 6px; border-radius: 8px; font-size: 10px;">' + statusText + '</span></td><td style="padding: 6px 4px; font-family: monospace; font-size: 10px;">' + b.ip_hash + '</td><td style="padding: 6px 4px; text-align: right; color: #888;">' + (b.total_requests || "-") + '</td><td style="padding: 6px 4px; color: #666; font-size: 10px;">' + blockedDate + '</td><td style="padding: 6px 4px; text-align: center;">' + actionHtml + "</td></tr>";
+  }).join("")}
         </table>
       </div>
-      `
-      }
+      `}
     </div>
 
   </div>
   </div>
-  `
-      : ""
-  }
+  ` : ""}
 
   <p style="margin-top: 30px; color: #666; font-size: 12px; max-width: 1780px; margin-left: auto; margin-right: auto;">
-    Generated ${/* @__PURE__ */ new Date().toISOString()} \u2014 ${periodLabel}
+    Generated ${/* @__PURE__ */ (/* @__PURE__ */ new Date()).toISOString()} \u2014 ${periodLabel}
   </p>
 
   <script>
@@ -6947,6 +6195,7 @@ function renderDashboard({
 </html>`;
 }
 __name(renderDashboard, "renderDashboard");
+__name2(renderDashboard, "renderDashboard");
 function renderInspectPage({
   title,
   locationLabel,
@@ -6955,12 +6204,12 @@ function renderInspectPage({
   timeline,
   selectedSessionId,
   baseInspectParams,
-  error,
+  error
 }) {
   const safeSessions = Array.isArray(sessions) ? sessions : [];
   const safeTimeline = Array.isArray(timeline) ? timeline : [];
   const base = baseInspectParams || {};
-  const buildInspectUrl = /* @__PURE__ */ __name((sessionId) => {
+  const buildInspectUrl = /* @__PURE__ */ __name2((sessionId) => {
     const params = new URLSearchParams();
     if (base.country) params.set("country", base.country);
     if (base.region) params.set("region", base.region);
@@ -6987,9 +6236,9 @@ function renderInspectPage({
     duckduckgo: "\u{1F986}",
     direct: "\u{1F517}",
     internal: "\u{1F504}",
-    unattributed: "\u{1F512}",
+    unattributed: "\u{1F512}"
   };
-  const fmtDur = /* @__PURE__ */ __name((sec) => {
+  const fmtDur = /* @__PURE__ */ __name2((sec) => {
     const n = Number(sec || 0);
     if (!Number.isFinite(n) || n <= 0) return "0s";
     if (n < 60) return `${n}s`;
@@ -7044,27 +6293,22 @@ function renderInspectPage({
 
     <div class="section">
       <h2>Recent Sessions</h2>
-      ${
-        safeSessions.length === 0
-          ? '<div class="muted">No sessions found for this location in the selected window.</div>'
-          : `
+      ${safeSessions.length === 0 ? '<div class="muted">No sessions found for this location in the selected window.</div>' : `
       <table>
         <tr><th>Last</th><th>Dur</th><th>Entry</th><th>From</th><th>Evts</th><th>Session</th></tr>
-        ${safeSessions
-          .map((s) => {
-            const sid = String(s.session_id || "");
-            const isSel = selectedSessionId && sid && sid === selectedSessionId;
-            const entry = String(s.entry_page || "/");
-            const shortEntry =
-              entry.length > 44 ? "..." + entry.slice(-41) : entry;
-            const ref = String(s.ref_source || "unattributed");
-            const refIcon = refIcons[ref] || "\u{1F512}";
-            const evts = Number(s.events || 0);
-            const last = String(s.last_ts || "");
-            const dur = fmtDur(s.duration_s);
-            const shortSid = sid ? sid.slice(0, 8) : "";
-            const href = buildInspectUrl(sid);
-            return `<tr class="${isSel ? "row-selected" : ""}">
+        ${safeSessions.map((s) => {
+    const sid = String(s.session_id || "");
+    const isSel = selectedSessionId && sid && sid === selectedSessionId;
+    const entry = String(s.entry_page || "/");
+    const shortEntry = entry.length > 44 ? "..." + entry.slice(-41) : entry;
+    const ref = String(s.ref_source || "unattributed");
+    const refIcon = refIcons[ref] || "\u{1F512}";
+    const evts = Number(s.events || 0);
+    const last = String(s.last_ts || "");
+    const dur = fmtDur(s.duration_s);
+    const shortSid = sid ? sid.slice(0, 8) : "";
+    const href = buildInspectUrl(sid);
+    return `<tr class="${isSel ? "row-selected" : ""}">
             <td class="mono">${last}</td>
             <td>${dur}</td>
             <td title="${entry}"><a href="${href}">\u{1F4C4} ${shortEntry}</a></td>
@@ -7072,45 +6316,35 @@ function renderInspectPage({
             <td>${evts}</td>
             <td class="mono"><a href="${href}">${shortSid}</a></td>
           </tr>`;
-          })
-          .join("")}
+  }).join("")}
       </table>
-      `
-      }
+      `}
     </div>
 
     <div class="section">
       <h2>Session Timeline${selectedSessionId ? ` <span class="muted mono">(${selectedSessionId.slice(0, 8)})</span>` : ""}</h2>
-      ${
-        !selectedSessionId
-          ? '<div class="muted">Select a session above.</div>'
-          : safeTimeline.length === 0
-            ? '<div class="muted">No events found for that session.</div>'
-            : `
+      ${!selectedSessionId ? '<div class="muted">Select a session above.</div>' : safeTimeline.length === 0 ? '<div class="muted">No events found for that session.</div>' : `
       <table>
         <tr><th>Time</th><th>Event</th><th>Page/Target</th><th>Meta</th></tr>
-        ${safeTimeline
-          .map((e) => {
-            const ts = String(e.ts || "");
-            const type = String(e.event_type || "");
-            const path = String(e.page_path || "");
-            const shortPath = path.length > 60 ? "..." + path.slice(-57) : path;
-            const metaParts = [];
-            if (e.img_size) metaParts.push(String(e.img_size));
-            if (e.ref_type) metaParts.push(String(e.ref_type));
-            if (e.referer) metaParts.push(String(e.referer));
-            const meta = metaParts.join(" \xB7 ");
-            return `<tr>
+        ${safeTimeline.map((e) => {
+    const ts = String(e.ts || "");
+    const type = String(e.event_type || "");
+    const path = String(e.page_path || "");
+    const shortPath = path.length > 60 ? "..." + path.slice(-57) : path;
+    const metaParts = [];
+    if (e.img_size) metaParts.push(String(e.img_size));
+    if (e.ref_type) metaParts.push(String(e.ref_type));
+    if (e.referer) metaParts.push(String(e.referer));
+    const meta = metaParts.join(" \xB7 ");
+    return `<tr>
             <td class="mono">${ts}</td>
             <td class="mono">${type}</td>
             <td title="${path}">${shortPath || '<span class="muted">(none)</span>'}</td>
             <td class="muted" title="${meta}">${meta.length > 80 ? meta.slice(0, 77) + "..." : meta}</td>
           </tr>`;
-          })
-          .join("")}
+  }).join("")}
       </table>
-      `
-      }
+      `}
     </div>
   </div>
 
@@ -7158,8 +6392,7 @@ function renderInspectPage({
 </html>`;
 }
 __name(renderInspectPage, "renderInspectPage");
-
-// src/analytics/dashboard/controller.js
+__name2(renderInspectPage, "renderInspectPage");
 async function handleDashboardRequest(env, filters) {
   const {
     dateClause,
@@ -7181,7 +6414,7 @@ async function handleDashboardRequest(env, filters) {
     viewerIp,
     hideBots,
     hideChardon,
-    authHeader,
+    authHeader
   } = filters;
   const { summary, returningVisitors, newVisitors } = await getDashboardStats(
     env,
@@ -7191,42 +6424,42 @@ async function handleDashboardRequest(env, filters) {
       ipClause,
       botClause,
       chardonClause,
-      priorPeriodClause,
-    },
+      priorPeriodClause
+    }
   );
   const { events } = await getEventBreakdown(env, {
     dateClause,
     galleryClause,
     ipClause,
     botClause,
-    chardonClause,
+    chardonClause
   });
   const galleries = await getGalleryPerformance(env, {
     dateClause,
     ipClause,
     botClause,
-    chardonClause,
+    chardonClause
   });
   const referrers = await getReferrers(env, {
     dateClause,
     galleryClause,
     ipClause,
     botClause,
-    chardonClause,
+    chardonClause
   });
   const geo = await getGeography(env, {
     dateClause,
     galleryClause,
     ipClause,
     botClause,
-    chardonClause,
+    chardonClause
   });
   const trend = await getDailyTrend(env, {
     rangeDateClause,
     galleryClause,
     ipClause,
     botClause,
-    chardonClause,
+    chardonClause
   });
   const {
     devices,
@@ -7234,27 +6467,26 @@ async function handleDashboardRequest(env, filters) {
     avgDurationSecs,
     avgDurationFormatted,
     peakHours,
-    deviceEngagement,
+    deviceEngagement
   } = await getSessionMetrics(env, {
     dateClause,
     galleryClause,
     ipClause,
     botClause,
-    chardonClause,
+    chardonClause
   });
   const pages = await getTopPages(env, {
     dateClause: truthDateClause || dateClause,
     ipClause: "",
     botClause: "",
-    chardonClause: "",
+    chardonClause: ""
   });
-  const { images, uniqueImagesViewed, totalImageSessions, totalImageViews } =
-    await getTopImages(env, {
-      dateClause,
-      ipClause,
-      botClause,
-      chardonClause,
-    });
+  const { images, uniqueImagesViewed, totalImageSessions, totalImageViews } = await getTopImages(env, {
+    dateClause,
+    ipClause,
+    botClause,
+    chardonClause
+  });
   const {
     themesClicked,
     cowboyJumps,
@@ -7266,23 +6498,23 @@ async function handleDashboardRequest(env, filters) {
     deepSessions,
     totalSessions,
     botSessions,
-    botPct,
+    botPct
   } = await getEngagementDepth(env, {
     dateClause,
     ipClause,
     botClause,
-    chardonClause,
+    chardonClause
   });
   const {
     entryPages,
     imagePageViewsFromEvents,
     imageEntrySessionsFromEvents,
-    entryRefCounts,
+    entryRefCounts
   } = await getEntryAnalysis(env, {
     dateClause,
     ipClause,
     botClause,
-    chardonClause,
+    chardonClause
   });
   const { exitPages, exitSummary, exitByCategory } = await getExitAnalysis(
     env,
@@ -7290,13 +6522,13 @@ async function handleDashboardRequest(env, filters) {
       dateClause,
       ipClause,
       botClause,
-      chardonClause,
-    },
+      chardonClause
+    }
   );
   const { edgeEvents, edgeSummary } = await getEdgeEvents(env, {
     dateClause,
     yesterday,
-    days,
+    days
   });
   const {
     artViewsSummary,
@@ -7309,7 +6541,7 @@ async function handleDashboardRequest(env, filters) {
     entryRefCountsObj,
     imageAccessOverview,
     viewerDepth,
-    suppressionStats,
+    suppressionStats
   } = await getArtViews(env, {
     dateClause,
     ipClause,
@@ -7318,29 +6550,29 @@ async function handleDashboardRequest(env, filters) {
     artIpClause,
     baseDateClause,
     hideBotsPredicate,
-    hideBots,
+    hideBots
   });
   const botIntelligence = await getBotIntelligence(env);
   const periodTotals = await getPeriodTotals(env, {
     dateClause: rangeDateClause,
     botClause,
-    chardonClause,
+    chardonClause
   });
   const coverageVisibility = await getCoverageVisibility(env, { dateClause });
   const rawBehaviorDistribution = await getRawBehaviorDistribution(env, {
-    dateClause,
+    dateClause
   });
   const statePixelTestRoaring20s = await getStatePixelTestRoaring20s(env, {
-    dateClause,
+    dateClause
   });
   const topGalleryLandingPages = await getTopGalleryLandingPages(env, {
-    dateClause,
+    dateClause
   });
   const browserViewsSummary = await getBrowserViewsSummary(env, {
     dateClause,
     ipClause,
     botClause,
-    chardonClause,
+    chardonClause
   });
   const queryResults = {
     summary,
@@ -7398,7 +6630,7 @@ async function handleDashboardRequest(env, filters) {
     rawBehaviorDistribution,
     statePixelTestRoaring20s,
     topGalleryLandingPages,
-    browserViewsSummary,
+    browserViewsSummary
   };
   const dashboardData = buildDashboardData(queryResults, {
     days,
@@ -7409,13 +6641,12 @@ async function handleDashboardRequest(env, filters) {
     viewerIp,
     hideBots,
     hideChardon,
-    authHeader,
+    authHeader
   });
   return renderDashboard(dashboardData);
 }
 __name(handleDashboardRequest, "handleDashboardRequest");
-
-// src/analytics/dashboard/route.js
+__name2(handleDashboardRequest, "handleDashboardRequest");
 function withAdminNoCacheHeaders(baseHeaders = {}) {
   const headers = new Headers(baseHeaders);
   headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
@@ -7425,36 +6656,35 @@ function withAdminNoCacheHeaders(baseHeaders = {}) {
   return headers;
 }
 __name(withAdminNoCacheHeaders, "withAdminNoCacheHeaders");
+__name2(withAdminNoCacheHeaders, "withAdminNoCacheHeaders");
 function checkBasicAuth(request, env) {
   const auth = request.headers.get("Authorization");
-  const expected =
-    "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
+  const expected = "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
   return auth === expected;
 }
 __name(checkBasicAuth, "checkBasicAuth");
+__name2(checkBasicAuth, "checkBasicAuth");
 function requireAuth() {
   return new Response("Unauthorized", {
     status: 401,
     headers: withAdminNoCacheHeaders({
       "WWW-Authenticate": 'Basic realm="K4 Analytics"',
-      "Content-Type": "text/plain",
-    }),
+      "Content-Type": "text/plain"
+    })
   });
 }
 __name(requireAuth, "requireAuth");
+__name2(requireAuth, "requireAuth");
 function getBestClientIP(request) {
   const cfIp = request.headers.get("CF-Connecting-IP") || null;
   const xff = request.headers.get("X-Forwarded-For") || null;
-  const isIPv4 = /* @__PURE__ */ __name(
+  const isIPv4 = /* @__PURE__ */ __name2(
     (ip) => typeof ip === "string" && ip.includes(".") && !ip.includes(":"),
-    "isIPv4",
+    "isIPv4"
   );
   if (isIPv4(cfIp)) return cfIp;
   if (xff) {
-    const parts = xff
-      .split(",")
-      .map((s) => s.trim())
-      .filter(Boolean);
+    const parts = xff.split(",").map((s) => s.trim()).filter(Boolean);
     const firstIPv4 = parts.find(isIPv4);
     if (firstIPv4) return firstIPv4;
     if (parts.length > 0) return parts[0];
@@ -7462,6 +6692,7 @@ function getBestClientIP(request) {
   return cfIp;
 }
 __name(getBestClientIP, "getBestClientIP");
+__name2(getBestClientIP, "getBestClientIP");
 async function handleDashboardRequest2(request, env, ctx) {
   if (!checkBasicAuth(request, env)) {
     return requireAuth();
@@ -7470,9 +6701,7 @@ async function handleDashboardRequest2(request, env, ctx) {
   const days = parseInt(url.searchParams.get("days") || "1", 10);
   const yesterday = url.searchParams.get("yesterday") === "1";
   const selectedDateRaw = url.searchParams.get("date");
-  const selectedDate = /^\d{4}-\d{2}-\d{2}$/.test(selectedDateRaw || "")
-    ? selectedDateRaw
-    : null;
+  const selectedDate = /^\d{4}-\d{2}-\d{2}$/.test(selectedDateRaw || "") ? selectedDateRaw : null;
   const galleryFilter = url.searchParams.get("gallery") || null;
   const excludeIp = url.searchParams.get("excludeIp") || null;
   const hideBots = url.searchParams.get("hideBots") === "1";
@@ -7488,14 +6717,11 @@ async function handleDashboardRequest2(request, env, ctx) {
       rangeDateClause = `ts > datetime('now', '-5 hours', '-${days} days')`;
     }
     const baseRangeDateClause = rangeDateClause;
-    const truthDateClause = selectedDate
-      ? `date(ts, '-5 hours') = '${selectedDate}'`
-      : baseRangeDateClause;
+    const truthDateClause = selectedDate ? `date(ts, '-5 hours') = '${selectedDate}'` : baseRangeDateClause;
     const globalPartsNoBots = [];
     if (excludeIp)
       globalPartsNoBots.push(`(ip IS NULL OR ip != '${excludeIp}')`);
-    const hideBotsPredicate = hideBots
-      ? `(
+    const hideBotsPredicate = hideBots ? `(
           -- Never hide the authenticated dashboard viewer by default.
           -- If you want to remove your own traffic, use "Exclude My IP".
           (${viewerIp ? `ip IS NOT NULL AND ip != '${viewerIp}' AND ` : ""}(
@@ -7509,42 +6735,28 @@ async function handleDashboardRequest2(request, env, ctx) {
                  OR risk_level >= 4
             )
           ))
-        )`
-      : "";
+        )` : "";
     if (hideChardon) {
       if (viewerIp)
         globalPartsNoBots.push(`(ip IS NULL OR ip != '${viewerIp}')`);
       globalPartsNoBots.push(`city != 'Chardon'`);
       globalPartsNoBots.push(
-        `(referer IS NULL OR referer NOT LIKE '%localhost%')`,
+        `(referer IS NULL OR referer NOT LIKE '%localhost%')`
       );
     }
     const globalPartsAll = [...globalPartsNoBots];
     if (hideBots) {
       globalPartsAll.push(`NOT ${hideBotsPredicate}`);
     }
-    const globalFilterClause = globalPartsAll.length
-      ? " AND " + globalPartsAll.join(" AND ")
-      : "";
-    const globalFilterClauseNoBots = globalPartsNoBots.length
-      ? " AND " + globalPartsNoBots.join(" AND ")
-      : "";
+    const globalFilterClause = globalPartsAll.length ? " AND " + globalPartsAll.join(" AND ") : "";
+    const globalFilterClauseNoBots = globalPartsNoBots.length ? " AND " + globalPartsNoBots.join(" AND ") : "";
     rangeDateClause = `${rangeDateClause}${globalFilterClause}`;
-    const baseDateClause =
-      (selectedDate
-        ? `date(ts, '-5 hours') = '${selectedDate}'`
-        : baseRangeDateClause) + globalFilterClauseNoBots;
+    const baseDateClause = (selectedDate ? `date(ts, '-5 hours') = '${selectedDate}'` : baseRangeDateClause) + globalFilterClauseNoBots;
     const dateClause = `${baseDateClause}${globalFilterClause}`;
-    const galleryClause = galleryFilter
-      ? `AND gallery_id = '${galleryFilter}'`
-      : "";
-    const ipClause = excludeIp
-      ? `AND (ip IS NULL OR ip != '${excludeIp}')`
-      : "";
-    const excludeIpHash =
-      excludeIp && excludeIp !== "unknown" ? hashIP(excludeIp) : null;
-    const viewerIpHash =
-      viewerIp && viewerIp !== "unknown" ? hashIP(viewerIp) : null;
+    const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
+    const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
+    const excludeIpHash = excludeIp && excludeIp !== "unknown" ? hashIP(excludeIp) : null;
+    const viewerIpHash = viewerIp && viewerIp !== "unknown" ? hashIP(viewerIp) : null;
     const artIpParts = [];
     if (excludeIpHash && excludeIpHash !== "unknown")
       artIpParts.push(`ip_hash != '${excludeIpHash}'`);
@@ -7559,17 +6771,15 @@ async function handleDashboardRequest2(request, env, ctx) {
                OR is_datacenter = 1
                OR risk_level >= 4
           )
-        )`,
+        )`
       );
     }
     if (hideChardon && viewerIpHash && !excludeIpHash)
       artIpParts.push(`ip_hash != '${viewerIpHash}'`);
     if (hideChardon)
       artIpParts.push(`(referrer IS NULL OR referrer NOT LIKE '%localhost%')`);
-    const artIpClause =
-      artIpParts.length > 0 ? "AND " + artIpParts.join(" AND ") : "";
-    const botClause = hideBots
-      ? `AND NOT (
+    const artIpClause = artIpParts.length > 0 ? "AND " + artIpParts.join(" AND ") : "";
+    const botClause = hideBots ? `AND NOT (
           ip LIKE '3.%' OR ip LIKE '17.%' OR ip LIKE '18.%' OR ip LIKE '40.77.%' OR ip LIKE '52.%' OR ip LIKE '54.%' OR ip LIKE '65.55.%'
           OR city = 'Ashburn'
           OR ip_hash IN (SELECT ip_hash FROM blocked_ips WHERE is_active = 1)
@@ -7579,16 +6789,9 @@ async function handleDashboardRequest2(request, env, ctx) {
                OR is_datacenter = 1
                OR risk_level >= 4
           )
-        )`
-      : "";
+        )` : "";
     const chardonClause = hideChardon ? `AND city != 'Chardon'` : "";
-    const priorPeriodClause =
-      (selectedDate
-        ? `date(ts, '-5 hours') < '${selectedDate}'`
-        : yesterday
-          ? `ts < datetime('now', '-5 hours', '-1 day', 'start of day')`
-          : `ts < datetime('now', '-5 hours', '-${days} days')`) +
-      globalFilterClause;
+    const priorPeriodClause = (selectedDate ? `date(ts, '-5 hours') < '${selectedDate}'` : yesterday ? `ts < datetime('now', '-5 hours', '-1 day', 'start of day')` : `ts < datetime('now', '-5 hours', '-${days} days')`) + globalFilterClause;
     const authHeader = request.headers.get("Authorization") || "";
     const html = await handleDashboardRequest(env, {
       dateClause,
@@ -7610,27 +6813,26 @@ async function handleDashboardRequest2(request, env, ctx) {
       viewerIp,
       hideBots,
       hideChardon,
-      authHeader,
+      authHeader
     });
     return new Response(html, {
       status: 200,
       headers: withAdminNoCacheHeaders({
-        "Content-Type": "text/html; charset=utf-8",
-      }),
+        "Content-Type": "text/html; charset=utf-8"
+      })
     });
   } catch (err) {
     console.error("Admin analytics error:", err);
     return new Response(`Error: ${err.message}`, {
       status: 500,
       headers: withAdminNoCacheHeaders({
-        "Content-Type": "text/plain; charset=utf-8",
-      }),
+        "Content-Type": "text/plain; charset=utf-8"
+      })
     });
   }
 }
-__name(handleDashboardRequest2, "handleDashboardRequest");
-
-// src/analytics/dashboard/inspect.js
+__name(handleDashboardRequest2, "handleDashboardRequest2");
+__name2(handleDashboardRequest2, "handleDashboardRequest");
 function withAdminNoCacheHeaders2(baseHeaders = {}) {
   const headers = new Headers(baseHeaders);
   headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
@@ -7639,15 +6841,18 @@ function withAdminNoCacheHeaders2(baseHeaders = {}) {
   headers.set("Vary", "Authorization");
   return headers;
 }
-__name(withAdminNoCacheHeaders2, "withAdminNoCacheHeaders");
+__name(withAdminNoCacheHeaders2, "withAdminNoCacheHeaders2");
+__name2(withAdminNoCacheHeaders2, "withAdminNoCacheHeaders");
 function sqlString(value) {
   return String(value || "").replace(/'/g, "''");
 }
 __name(sqlString, "sqlString");
+__name2(sqlString, "sqlString");
 function parseBool01(value) {
   return value === "1" || value === "true";
 }
 __name(parseBool01, "parseBool01");
+__name2(parseBool01, "parseBool01");
 function buildDateWhere({ days, yesterday, selectedDate }) {
   const nDays = Number.isFinite(days) ? days : 1;
   if (selectedDate) {
@@ -7662,6 +6867,7 @@ function buildDateWhere({ days, yesterday, selectedDate }) {
   return `e.ts > datetime('now', '-5 hours', '-${Math.max(1, Math.min(30, nDays))} days')`;
 }
 __name(buildDateWhere, "buildDateWhere");
+__name2(buildDateWhere, "buildDateWhere");
 function classifyRefSourceSql(refCol = "entry_referer") {
   return `CASE
     WHEN ${refCol} IS NULL OR ${refCol} = '' OR ${refCol} = 'unknown' OR ${refCol} = 'direct' THEN 'direct'
@@ -7681,14 +6887,13 @@ function classifyRefSourceSql(refCol = "entry_referer") {
   END`;
 }
 __name(classifyRefSourceSql, "classifyRefSourceSql");
+__name2(classifyRefSourceSql, "classifyRefSourceSql");
 async function handleInspectRequest(request, env) {
   const url = new URL(request.url);
   const days = parseInt(url.searchParams.get("days") || "1", 10);
   const yesterday = parseBool01(url.searchParams.get("yesterday"));
   const selectedDateRaw = url.searchParams.get("date");
-  const selectedDate = /^\d{4}-\d{2}-\d{2}$/.test(selectedDateRaw || "")
-    ? selectedDateRaw
-    : null;
+  const selectedDate = /^\d{4}-\d{2}-\d{2}$/.test(selectedDateRaw || "") ? selectedDateRaw : null;
   const hideBots = parseBool01(url.searchParams.get("hideBots"));
   const hideChardon = parseBool01(url.searchParams.get("hideChardon"));
   const excludeIp = url.searchParams.get("excludeIp") || null;
@@ -7698,7 +6903,7 @@ async function handleInspectRequest(request, env) {
   const sessionId = (url.searchParams.get("session") || "").trim();
   const limit = Math.max(
     5,
-    Math.min(50, parseInt(url.searchParams.get("limit") || "25", 10)),
+    Math.min(50, parseInt(url.searchParams.get("limit") || "25", 10))
   );
   if (!country) {
     const html2 = renderInspectPage({
@@ -7708,18 +6913,16 @@ async function handleInspectRequest(request, env) {
       sessions: [],
       timeline: [],
       selectedSessionId: null,
-      error: "Missing required parameter: country",
+      error: "Missing required parameter: country"
     });
     return new Response(html2, {
       status: 400,
       headers: withAdminNoCacheHeaders2({
-        "Content-Type": "text/html; charset=utf-8",
-      }),
+        "Content-Type": "text/html; charset=utf-8"
+      })
     });
   }
-  const locationLabel = [city || null, region || null, country || null]
-    .filter(Boolean)
-    .join(", ");
+  const locationLabel = [city || null, region || null, country || null].filter(Boolean).join(", ");
   const dateWhere = buildDateWhere({ days, yesterday, selectedDate });
   const parts = [dateWhere];
   parts.push(`e.source = 'js'`);
@@ -7794,13 +6997,13 @@ async function handleInspectRequest(request, env) {
       sessions: [],
       timeline: [],
       selectedSessionId: null,
-      error: `Query failed: ${e.message}`,
+      error: `Query failed: ${e.message}`
     });
     return new Response(html2, {
       status: 500,
       headers: withAdminNoCacheHeaders2({
-        "Content-Type": "text/html; charset=utf-8",
-      }),
+        "Content-Type": "text/html; charset=utf-8"
+      })
     });
   }
   let timeline = [];
@@ -7833,8 +7036,8 @@ async function handleInspectRequest(request, env) {
           target_id: "",
           img_size: "",
           ref_type: "",
-          referer: `Timeline query failed: ${e.message}`,
-        },
+          referer: `Timeline query failed: ${e.message}`
+        }
       ];
     }
   }
@@ -7862,19 +7065,18 @@ async function handleInspectRequest(request, env) {
       date: selectedDate || "",
       hideBots: hideBots ? "1" : "0",
       hideChardon: hideChardon ? "1" : "0",
-      excludeIp: excludeIp || "",
-    },
+      excludeIp: excludeIp || ""
+    }
   });
   return new Response(html, {
     status: 200,
     headers: withAdminNoCacheHeaders2({
-      "Content-Type": "text/html; charset=utf-8",
-    }),
+      "Content-Type": "text/html; charset=utf-8"
+    })
   });
 }
 __name(handleInspectRequest, "handleInspectRequest");
-
-// src/analytics/classifier.js
+__name2(handleInspectRequest, "handleInspectRequest");
 function calculateRiskScore(stats) {
   let score = 0;
   const rules = [];
@@ -7889,10 +7091,7 @@ function calculateRiskScore(stats) {
     score += 3;
     rules.push("inhuman_session_speed");
   }
-  if (
-    (stats.distinct_visitors || 0) >= 15 &&
-    (stats.total_requests || 0) >= 20
-  ) {
+  if ((stats.distinct_visitors || 0) >= 15 && (stats.total_requests || 0) >= 20) {
     score += 4;
     rules.push("cookie_churn");
   }
@@ -7917,8 +7116,7 @@ function calculateRiskScore(stats) {
     rules.push("multi_day");
   }
   if (["NL", "FI", "PL", "RU", "CN", "SG"].includes(stats.country)) {
-    const suspiciousByNoRef =
-      !stats.has_referrer && (stats.total_requests || 0) > 10;
+    const suspiciousByNoRef = !stats.has_referrer && (stats.total_requests || 0) > 10;
     const suspiciousByVolume = (stats.total_requests || 0) > 80;
     if (suspiciousByNoRef || suspiciousByVolume) {
       score += 1;
@@ -7938,8 +7136,7 @@ function calculateRiskScore(stats) {
   return { score, rules, riskLevel };
 }
 __name(calculateRiskScore, "calculateRiskScore");
-
-// src/analytics/storage.js
+__name2(calculateRiskScore, "calculateRiskScore");
 function detectOGPlatform(request) {
   const ua = (request?.headers?.get("user-agent") || "").toLowerCase();
   if (ua.includes("facebookexternalhit")) return "facebook";
@@ -7954,6 +7151,7 @@ function detectOGPlatform(request) {
   return "unknown";
 }
 __name(detectOGPlatform, "detectOGPlatform");
+__name2(detectOGPlatform, "detectOGPlatform");
 function riskLevelFromScore(score) {
   const s = Number(score || 0);
   if (s >= 8) return 4;
@@ -7962,6 +7160,7 @@ function riskLevelFromScore(score) {
   return 1;
 }
 __name(riskLevelFromScore, "riskLevelFromScore");
+__name2(riskLevelFromScore, "riskLevelFromScore");
 function isLevel4BlockCandidate({
   score,
   rules,
@@ -7969,40 +7168,26 @@ function isLevel4BlockCandidate({
   daysSeen,
   requestsPerHour,
   maxVelocity,
-  maxSessionEps,
+  maxSessionEps
 }) {
   const s = Number(score || 0);
   if (s < 8) return false;
   const total = Number(totalRequests || 0);
   if (total < 30) return false;
   const r = new Set(Array.isArray(rules) ? rules : []);
-  const hasHardSignal =
-    r.has("cookie_churn") ||
-    r.has("inhuman_session_speed") ||
-    r.has("high_velocity");
+  const hasHardSignal = r.has("cookie_churn") || r.has("inhuman_session_speed") || r.has("high_velocity");
   const isPersistent = Number(daysSeen || 1) >= 2;
   const isExtremeVolume = Number(requestsPerHour || 0) >= 120 || total >= 120;
-  const isNoRefHighVolume =
-    r.has("no_referrer_high_volume") &&
-    (Number(requestsPerHour || 0) >= 60 || total >= 60);
-  const isVeryFast =
-    Number(maxVelocity || 0) >= 5 || Number(maxSessionEps || 0) >= 10;
-  return (
-    hasHardSignal ||
-    isPersistent ||
-    isExtremeVolume ||
-    isNoRefHighVolume ||
-    isVeryFast
-  );
+  const isNoRefHighVolume = r.has("no_referrer_high_volume") && (Number(requestsPerHour || 0) >= 60 || total >= 60);
+  const isVeryFast = Number(maxVelocity || 0) >= 5 || Number(maxSessionEps || 0) >= 10;
+  return hasHardSignal || isPersistent || isExtremeVolume || isNoRefHighVolume || isVeryFast;
 }
 __name(isLevel4BlockCandidate, "isLevel4BlockCandidate");
+__name2(isLevel4BlockCandidate, "isLevel4BlockCandidate");
 async function logRawEvent(env, eventType, targetId, request, extras = {}) {
   try {
     if (!env?.DB) return;
-    const ip =
-      request.headers.get("CF-Connecting-IP") ||
-      request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() ||
-      "unknown";
+    const ip = request.headers.get("CF-Connecting-IP") || request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() || "unknown";
     const ipHash = hashIP(ip);
     const ua = request.headers.get("User-Agent") || "";
     const country = request.cf?.country || null;
@@ -8021,19 +7206,13 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       inferred = null,
       inferredFrom = null,
       assetSource = null,
-      ogPlatform: ogPlatformFromExtras = null,
+      ogPlatform: ogPlatformFromExtras = null
     } = extras;
     let ogPlatform = ogPlatformFromExtras;
-    if (
-      (ogPlatform === null || ogPlatform === void 0) &&
-      assetSource === "og"
-    ) {
+    if ((ogPlatform === null || ogPlatform === void 0) && assetSource === "og") {
       ogPlatform = detectOGPlatform(request);
     }
-    const referer =
-      refererOverride !== null && refererOverride !== void 0
-        ? refererOverride
-        : request.headers.get("Referer") || null;
+    const referer = refererOverride !== null && refererOverride !== void 0 ? refererOverride : request.headers.get("Referer") || null;
     const baseColumns = [
       "ip",
       "ip_hash",
@@ -8049,7 +7228,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       "city",
       "delta_ms",
       "cf_asn",
-      "visitor_id",
+      "visitor_id"
     ];
     const baseValues = [
       ip,
@@ -8066,7 +7245,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       city,
       deltaMs,
       cfAsn,
-      visitorId,
+      visitorId
     ];
     const optional = [
       { name: "img_size", value: imgSize },
@@ -8074,7 +7253,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       { name: "inferred", value: inferred },
       { name: "inferred_from", value: inferredFrom },
       { name: "asset_source", value: assetSource },
-      { name: "og_platform", value: ogPlatform },
+      { name: "og_platform", value: ogPlatform }
     ].filter((o) => o.value !== null && o.value !== void 0);
     const missingColumnRegex = /no such column:\s*([a-zA-Z0-9_]+)/i;
     for (let attempt = 0; attempt < 5; attempt++) {
@@ -8083,15 +7262,12 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
         const values = baseValues.concat(optional.map((o) => o.value));
         const placeholders = columns.map(() => "?").join(", ");
         await env.DB.prepare(
-          `INSERT INTO raw_events (${columns.join(", ")}) VALUES (${placeholders})`,
-        )
-          .bind(...values)
-          .run();
+          `INSERT INTO raw_events (${columns.join(", ")}) VALUES (${placeholders})`
+        ).bind(...values).run();
         return;
       } catch (e) {
         const msg = String(e?.message || e);
-        const isMissingColumn =
-          msg.includes("no such column") || msg.includes("has no column");
+        const isMissingColumn = msg.includes("no such column") || msg.includes("has no column");
         if (!isMissingColumn) throw e;
         const match = msg.match(missingColumnRegex);
         const missing = match?.[1] || null;
@@ -8112,20 +7288,8 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
   }
 }
 __name(logRawEvent, "logRawEvent");
-async function logArtView(
-  env,
-  type,
-  targetId,
-  request,
-  sessionId = null,
-  source = "js",
-  visitorId = null,
-  imgSize = null,
-  refType = null,
-  inferred = null,
-  inferredFrom = null,
-  assetSource = null,
-) {
+__name2(logRawEvent, "logRawEvent");
+async function logArtView(env, type, targetId, request, sessionId = null, source = "js", visitorId = null, imgSize = null, refType = null, inferred = null, inferredFrom = null, assetSource = null) {
   const page = request.headers.get("Referer") || null;
   await logRawEvent(env, type, targetId, request, {
     sessionId,
@@ -8136,26 +7300,20 @@ async function logArtView(
     refType,
     inferred,
     inferredFrom,
-    assetSource,
+    assetSource
   });
 }
 __name(logArtView, "logArtView");
-async function logEdgeEvent(
-  env,
-  eventType,
-  path,
-  imageId,
-  isBot,
-  request,
-  visitorId = null,
-) {
+__name2(logArtView, "logArtView");
+async function logEdgeEvent(env, eventType, path, imageId, isBot, request, visitorId = null) {
   await logRawEvent(env, eventType, path, request, {
     source: "edge",
     visitorId,
-    inferredFrom: imageId || null,
+    inferredFrom: imageId || null
   });
 }
 __name(logEdgeEvent, "logEdgeEvent");
+__name2(logEdgeEvent, "logEdgeEvent");
 async function updateBotIntelligence(env) {
   if (!env?.DB) return 0;
   try {
@@ -8274,8 +7432,8 @@ async function updateBotIntelligence(env) {
     const ipStats = statsResult.results || [];
     let upserted = 0;
     for (const stats of ipStats) {
-      const isDatacenter = DATACENTER_PREFIXES.some((p) =>
-        String(stats.ip_hash || "").startsWith(p),
+      const isDatacenter = DATACENTER_PREFIXES.some(
+        (p) => String(stats.ip_hash || "").startsWith(p)
       );
       const requestsPerHour = Number(stats.max_per_hour || 0);
       const maxVelocity = Number(stats.max_per_minute || 0) / 60;
@@ -8283,10 +7441,8 @@ async function updateBotIntelligence(env) {
       if (stats.is_verified_bot) {
         try {
           const uaRow = await env.DB.prepare(
-            `SELECT ua FROM raw_events WHERE ip_hash = ? AND event_type = 'verified_bot' ORDER BY ts DESC LIMIT 1`,
-          )
-            .bind(stats.ip_hash)
-            .first();
+            `SELECT ua FROM raw_events WHERE ip_hash = ? AND event_type = 'verified_bot' ORDER BY ts DESC LIMIT 1`
+          ).bind(stats.ip_hash).first();
           botName = getVerifiedBotName(uaRow?.ua || "") || "verified_bot";
         } catch {
           botName = "verified_bot";
@@ -8295,7 +7451,7 @@ async function updateBotIntelligence(env) {
       const {
         score: baseScore,
         rules: baseRules,
-        riskLevel: baseRiskLevel,
+        riskLevel: baseRiskLevel
       } = calculateRiskScore({
         total_requests: Number(stats.total_requests || 0),
         distinct_visitors: Number(stats.distinct_visitors || 0),
@@ -8308,7 +7464,7 @@ async function updateBotIntelligence(env) {
         has_referrer: Boolean(stats.has_referrer),
         is_datacenter: isDatacenter,
         is_verified_bot: Boolean(stats.is_verified_bot),
-        country: stats.country || null,
+        country: stats.country || null
       });
       let score = baseScore;
       const rules = [...baseRules];
@@ -8325,7 +7481,7 @@ async function updateBotIntelligence(env) {
           daysSeen: Number(stats.days_seen || 1),
           requestsPerHour,
           maxVelocity,
-          maxSessionEps: Number(stats.max_session_eps || 0),
+          maxSessionEps: Number(stats.max_session_eps || 0)
         });
         if (!ok) riskLevel = 3;
       }
@@ -8373,27 +7529,25 @@ async function updateBotIntelligence(env) {
             ELSE excluded.status
           END,
           classifier_version = 3
-      `,
-      )
-        .bind(
-          stats.ip_hash,
-          riskLevel,
-          score,
-          JSON.stringify(rules),
-          stats.first_seen,
-          stats.last_seen,
-          Number(stats.days_seen || 1),
-          Number(stats.total_requests || 0),
-          maxVelocity,
-          Number(stats.image_page_pct || 0),
-          stats.has_referrer ? 1 : 0,
-          isDatacenter ? 1 : 0,
-          stats.is_verified_bot ? 1 : 0,
-          botName,
-          stats.country,
-          status,
-        )
-        .run();
+      `
+      ).bind(
+        stats.ip_hash,
+        riskLevel,
+        score,
+        JSON.stringify(rules),
+        stats.first_seen,
+        stats.last_seen,
+        Number(stats.days_seen || 1),
+        Number(stats.total_requests || 0),
+        maxVelocity,
+        Number(stats.image_page_pct || 0),
+        stats.has_referrer ? 1 : 0,
+        isDatacenter ? 1 : 0,
+        stats.is_verified_bot ? 1 : 0,
+        botName,
+        stats.country,
+        status
+      ).run();
       upserted++;
     }
     return upserted;
@@ -8403,15 +7557,8 @@ async function updateBotIntelligence(env) {
   }
 }
 __name(updateBotIntelligence, "updateBotIntelligence");
-
-// src/analytics/collector.js
-async function recoverExposureFromZoom(
-  env,
-  request,
-  visitorId,
-  imageId,
-  sessionId,
-) {
+__name2(updateBotIntelligence, "updateBotIntelligence");
+async function recoverExposureFromZoom(env, request, visitorId, imageId, sessionId) {
   try {
     if (!env?.DB) return;
     if (!visitorId || !imageId || !sessionId) return;
@@ -8424,10 +7571,8 @@ async function recoverExposureFromZoom(
         AND event_type = 'chapter_exposure'
         AND session_id = ?
       LIMIT 1
-    `,
-    )
-      .bind(visitorId, imageId, sessionId)
-      .first();
+    `
+    ).bind(visitorId, imageId, sessionId).first();
     if (existing) return;
     await logArtView2(
       env,
@@ -8440,20 +7585,22 @@ async function recoverExposureFromZoom(
       null,
       null,
       1,
-      "zoom",
+      "zoom"
     );
   } catch (err) {
     console.error("Exposure recovery failed:", err?.message || err);
   }
 }
 __name(recoverExposureFromZoom, "recoverExposureFromZoom");
+__name2(recoverExposureFromZoom, "recoverExposureFromZoom");
 function withTimeout(promise, ms) {
   return Promise.race([
     promise,
-    new Promise((resolve) => setTimeout(() => resolve("timeout"), ms)),
+    new Promise((resolve) => setTimeout(() => resolve("timeout"), ms))
   ]);
 }
 __name(withTimeout, "withTimeout");
+__name2(withTimeout, "withTimeout");
 async function logEdgeEvent2(...args) {
   try {
     return await withTimeout(logEdgeEvent(...args), 1500);
@@ -8461,7 +7608,8 @@ async function logEdgeEvent2(...args) {
     console.error("analytics failure [logEdgeEvent]:", err?.message || err);
   }
 }
-__name(logEdgeEvent2, "logEdgeEvent");
+__name(logEdgeEvent2, "logEdgeEvent2");
+__name2(logEdgeEvent2, "logEdgeEvent");
 async function logArtView2(...args) {
   try {
     return await withTimeout(logArtView(...args), 1500);
@@ -8469,7 +7617,8 @@ async function logArtView2(...args) {
     console.error("analytics failure [logArtView]:", err?.message || err);
   }
 }
-__name(logArtView2, "logArtView");
+__name(logArtView2, "logArtView2");
+__name2(logArtView2, "logArtView");
 async function logRawEvent2(...args) {
   try {
     return await logRawEvent(...args);
@@ -8477,16 +7626,18 @@ async function logRawEvent2(...args) {
     console.error("analytics failure [logRawEvent]:", err?.message || err);
   }
 }
-__name(logRawEvent2, "logRawEvent");
+__name(logRawEvent2, "logRawEvent2");
+__name2(logRawEvent2, "logRawEvent");
 function readCookieValue(cookieHeader, name) {
   if (!cookieHeader || !name) return null;
   const re = new RegExp(
-    "(?:^|;\\s*)" + name.replace(/[-/\\^$*+?.()|[\\]{}]/g, "\\$&") + "=([^;]+)",
+    "(?:^|;\\s*)" + name.replace(/[-/\\^$*+?.()|[\\]{}]/g, "\\$&") + "=([^;]+)"
   );
   const m = String(cookieHeader).match(re);
   return m ? m[1] : null;
 }
 __name(readCookieValue, "readCookieValue");
+__name2(readCookieValue, "readCookieValue");
 function makeSidSetCookieHeader(requestUrl, sessionId) {
   if (!sessionId) return null;
   let hostname = "";
@@ -8495,13 +7646,12 @@ function makeSidSetCookieHeader(requestUrl, sessionId) {
   } catch (_) {
     hostname = "";
   }
-  const domainAttr = hostname.endsWith("k4studios.com")
-    ? "; Domain=.k4studios.com"
-    : "";
+  const domainAttr = hostname.endsWith("k4studios.com") ? "; Domain=.k4studios.com" : "";
   const value = encodeURIComponent(String(sessionId));
   return `k4_sid=${value}; Path=/; SameSite=Lax; Secure${domainAttr}`;
 }
 __name(makeSidSetCookieHeader, "makeSidSetCookieHeader");
+__name2(makeSidSetCookieHeader, "makeSidSetCookieHeader");
 function makeVidSetCookieHeader(requestUrl, visitorId) {
   if (!visitorId) return null;
   let hostname = "";
@@ -8510,13 +7660,12 @@ function makeVidSetCookieHeader(requestUrl, visitorId) {
   } catch (_) {
     hostname = "";
   }
-  const domainAttr = hostname.endsWith("k4studios.com")
-    ? "; Domain=.k4studios.com"
-    : "";
+  const domainAttr = hostname.endsWith("k4studios.com") ? "; Domain=.k4studios.com" : "";
   const value = encodeURIComponent(String(visitorId));
   return `k4_vid=${value}; Path=/; Max-Age=31536000; SameSite=Lax; Secure${domainAttr}`;
 }
 __name(makeVidSetCookieHeader, "makeVidSetCookieHeader");
+__name2(makeVidSetCookieHeader, "makeVidSetCookieHeader");
 function getAllowedOrigin(request) {
   const origin = request?.headers?.get?.("Origin") || null;
   if (!origin) return "https://www.k4studios.com";
@@ -8525,10 +7674,12 @@ function getAllowedOrigin(request) {
     if (u.hostname === "www.k4studios.com" || u.hostname === "k4studios.com") {
       return origin;
     }
-  } catch (_) {}
+  } catch (_) {
+  }
   return "https://www.k4studios.com";
 }
 __name(getAllowedOrigin, "getAllowedOrigin");
+__name2(getAllowedOrigin, "getAllowedOrigin");
 function applyNoStore(headers) {
   headers.set("Cache-Control", "no-store, max-age=0");
   headers.set("Pragma", "no-cache");
@@ -8536,6 +7687,7 @@ function applyNoStore(headers) {
   return headers;
 }
 __name(applyNoStore, "applyNoStore");
+__name2(applyNoStore, "applyNoStore");
 async function handleTrackRequest(request, env, ctx) {
   if (request.method !== "POST") {
     const headers = applyNoStore(new Headers({ "Content-Type": "text/plain" }));
@@ -8555,7 +7707,7 @@ async function handleTrackRequest(request, env, ctx) {
         "Access-Control-Allow-Origin": getAllowedOrigin(request),
         "Access-Control-Allow-Methods": "POST",
         "Access-Control-Allow-Headers": "Content-Type",
-        Vary: "Origin",
+        Vary: "Origin"
       });
       applyNoStore(headers2);
       return new Response("Invalid JSON", { status: 400, headers: headers2 });
@@ -8571,18 +7723,13 @@ async function handleTrackRequest(request, env, ctx) {
       page_path = null,
       event_ts_ms = null,
       // Client timestamp for timing analysis
-      event_order = null,
+      event_order = null
       // Event sequence within session
     } = body;
-    const normalizedPagePath =
-      typeof page_path === "string" && page_path
-        ? page_path.startsWith("/")
-          ? page_path
-          : "/" + page_path
-        : null;
+    const normalizedPagePath = typeof page_path === "string" && page_path ? page_path.startsWith("/") ? page_path : "/" + page_path : null;
     if (!event) {
       const headers2 = applyNoStore(
-        new Headers({ "Content-Type": "text/plain" }),
+        new Headers({ "Content-Type": "text/plain" })
       );
       return new Response("Missing event", { status: 400, headers: headers2 });
     }
@@ -8590,61 +7737,44 @@ async function handleTrackRequest(request, env, ctx) {
       "/Photoshootsandevents/",
       "/Photography-Galleries/",
       "/Scheduled-Shoots/",
-      "/Is-Winter/",
+      "/Is-Winter/"
     ];
-    if (
-      normalizedPagePath &&
-      legacyPaths.some((p) => normalizedPagePath.startsWith(p))
-    ) {
+    if (normalizedPagePath && legacyPaths.some((p) => normalizedPagePath.startsWith(p))) {
       return new Response(
         JSON.stringify({ ok: true, filtered: "legacy_path" }),
         {
           status: 200,
           headers: applyNoStore(
-            new Headers({ "Content-Type": "application/json" }),
-          ),
-        },
+            new Headers({ "Content-Type": "application/json" })
+          )
+        }
       );
     }
     const country = request.cf?.country || null;
     const region = request.cf?.region || null;
     const city = request.cf?.city || null;
-    const ip =
-      request.headers.get("CF-Connecting-IP") ||
-      request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() ||
-      null;
+    const ip = request.headers.get("CF-Connecting-IP") || request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() || null;
     const cookieHeader = request.headers.get("cookie") || "";
     const cookieMatch = cookieHeader.match(/k4_entry_ref=([^;]+)/);
-    const edgeReferrer = cookieMatch
-      ? decodeURIComponent(cookieMatch[1])
-      : null;
+    const edgeReferrer = cookieMatch ? decodeURIComponent(cookieMatch[1]) : null;
     const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
     const existingVisitorId = vidCookieMatch ? vidCookieMatch[1] : null;
     const cryptoObj = globalThis?.crypto;
-    const mintedVisitorId =
-      !existingVisitorId && typeof cryptoObj?.randomUUID === "function"
-        ? cryptoObj.randomUUID()
-        : !existingVisitorId
-          ? String(Date.now()) + "-" + Math.random().toString(16).slice(2)
-          : null;
+    const mintedVisitorId = !existingVisitorId && typeof cryptoObj?.randomUUID === "function" ? cryptoObj.randomUUID() : !existingVisitorId ? String(Date.now()) + "-" + Math.random().toString(16).slice(2) : null;
     const visitorId = existingVisitorId || mintedVisitorId;
     const sidCookie = readCookieValue(cookieHeader, "k4_sid");
     const bestSessionId = session_id || sidCookie || null;
     const bestReferrer = edgeReferrer || clientReferrer;
     const referrer = bestReferrer || "unknown";
-    const normalizeGalleryTargetId = /* @__PURE__ */ __name((path) => {
+    const normalizeGalleryTargetId = /* @__PURE__ */ __name2((path) => {
       if (typeof path !== "string") return null;
-      return path
-        .replace(/^\/Galleries\//, "")
-        .replace(/^\/Other\//, "")
-        .replace(/\/$/, "");
+      return path.replace(/^\/Galleries\//, "").replace(/^\/Other\//, "").replace(/\/$/, "");
     }, "normalizeGalleryTargetId");
-    const inferImageIdFromPath = /* @__PURE__ */ __name((path) => {
+    const inferImageIdFromPath = /* @__PURE__ */ __name2((path) => {
       if (typeof path !== "string") return null;
       return path.match(/\/(i-[a-zA-Z0-9_-]+)\/?$/)?.[1] || null;
     }, "inferImageIdFromPath");
-    const storedEventType =
-      event === "zoom_open" || event === "zoom" ? "xl_zoom" : event;
+    const storedEventType = event === "zoom_open" || event === "zoom" ? "xl_zoom" : event;
     let targetId = null;
     if (storedEventType === "page_view") {
       targetId = normalizedPagePath;
@@ -8659,8 +7789,8 @@ async function handleTrackRequest(request, env, ctx) {
             request,
             visitorId,
             targetId,
-            bestSessionId,
-          ),
+            bestSessionId
+          )
         );
       }
     } else if (storedEventType === "gallery_view") {
@@ -8678,25 +7808,23 @@ async function handleTrackRequest(request, env, ctx) {
         // Use the client-reported page_path for easier SQL grouping.
         page: normalizedPagePath || null,
         // Preserve the best external referrer (edge cookie beats client hint).
-        refererOverride: bestReferrer || null,
-      }),
+        refererOverride: bestReferrer || null
+      })
     );
     const sidSetCookie = makeSidSetCookieHeader(request.url, bestSessionId);
-    const vidSetCookie = existingVisitorId
-      ? null
-      : makeVidSetCookieHeader(request.url, visitorId);
+    const vidSetCookie = existingVisitorId ? null : makeVidSetCookieHeader(request.url, visitorId);
     const headers = new Headers({
       "Access-Control-Allow-Origin": getAllowedOrigin(request),
       "Access-Control-Allow-Methods": "POST",
       "Access-Control-Allow-Headers": "Content-Type",
-      Vary: "Origin",
+      Vary: "Origin"
     });
     applyNoStore(headers);
     if (sidSetCookie) headers.append("Set-Cookie", sidSetCookie);
     if (vidSetCookie) headers.append("Set-Cookie", vidSetCookie);
     return new Response(null, {
       status: 204,
-      headers,
+      headers
     });
   } catch (err) {
     console.error("Track error:", err);
@@ -8705,6 +7833,7 @@ async function handleTrackRequest(request, env, ctx) {
   }
 }
 __name(handleTrackRequest, "handleTrackRequest");
+__name2(handleTrackRequest, "handleTrackRequest");
 function handleTrackOptions() {
   return new Response(null, {
     status: 204,
@@ -8713,12 +7842,13 @@ function handleTrackOptions() {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "POST, OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type",
-        "Access-Control-Max-Age": "86400",
-      }),
-    ),
+        "Access-Control-Max-Age": "86400"
+      })
+    )
   });
 }
 __name(handleTrackOptions, "handleTrackOptions");
+__name2(handleTrackOptions, "handleTrackOptions");
 async function handleEdgeEvent(request, env) {
   try {
     if (isSyntheticTraffic(request)) {
@@ -8732,8 +7862,8 @@ async function handleEdgeEvent(request, env) {
         status: 400,
         headers: {
           "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "POST",
-        },
+          "Access-Control-Allow-Methods": "POST"
+        }
       });
     }
     const rawType = data.event_type || data.eventType || "404";
@@ -8747,14 +7877,14 @@ async function handleEdgeEvent(request, env) {
       imageId,
       false,
       request,
-      null,
+      null
     );
     return new Response("OK", {
       status: 200,
       headers: {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST",
-      },
+        "Access-Control-Allow-Methods": "POST"
+      }
     });
   } catch (err) {
     console.error("Edge event error:", err);
@@ -8762,11 +7892,12 @@ async function handleEdgeEvent(request, env) {
     const debug = url.searchParams.get("k4debug") === "1";
     return new Response(
       debug ? "Error: " + (err?.message || String(err)) : "Error",
-      { status: 500 },
+      { status: 500 }
     );
   }
 }
 __name(handleEdgeEvent, "handleEdgeEvent");
+__name2(handleEdgeEvent, "handleEdgeEvent");
 function handleEdgeEventOptions() {
   return new Response(null, {
     status: 204,
@@ -8774,11 +7905,12 @@ function handleEdgeEventOptions() {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Max-Age": "86400",
-    },
+      "Access-Control-Max-Age": "86400"
+    }
   });
 }
 __name(handleEdgeEventOptions, "handleEdgeEventOptions");
+__name2(handleEdgeEventOptions, "handleEdgeEventOptions");
 async function handleTrackEvent(request, env, ctx) {
   if (!env?.DB) {
     return new Response("ok", { status: 200 });
@@ -8797,7 +7929,7 @@ async function handleTrackEvent(request, env, ctx) {
       "zoom_open",
       "zoom",
       "slideshow_start",
-      "chapter_view",
+      "chapter_view"
     ];
     if (!type || !validTypes.includes(type)) {
       return new Response("ok", { status: 200 });
@@ -8807,8 +7939,7 @@ async function handleTrackEvent(request, env, ctx) {
     }
     const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
     const visitorId = vidCookieMatch ? vidCookieMatch[1] : null;
-    const canonicalType =
-      type === "zoom_open" || type === "zoom" ? "xl_zoom" : type;
+    const canonicalType = type === "zoom_open" || type === "zoom" ? "xl_zoom" : type;
     if (canonicalType === "xl_zoom" && bestSessionId && visitorId) {
       ctx.waitUntil(
         recoverExposureFromZoom(
@@ -8816,8 +7947,8 @@ async function handleTrackEvent(request, env, ctx) {
           request,
           visitorId,
           imageId,
-          bestSessionId,
-        ),
+          bestSessionId
+        )
       );
     }
     ctx.waitUntil(
@@ -8828,8 +7959,8 @@ async function handleTrackEvent(request, env, ctx) {
         request,
         bestSessionId,
         "js",
-        visitorId,
-      ),
+        visitorId
+      )
     );
     const sidSetCookie = makeSidSetCookieHeader(request.url, bestSessionId);
     return new Response("ok", {
@@ -8837,8 +7968,8 @@ async function handleTrackEvent(request, env, ctx) {
       headers: {
         "Content-Type": "text/plain",
         "Access-Control-Allow-Origin": "*",
-        ...(sidSetCookie ? { "Set-Cookie": sidSetCookie } : {}),
-      },
+        ...sidSetCookie ? { "Set-Cookie": sidSetCookie } : {}
+      }
     });
   } catch (e) {
     console.error("Track event error:", e);
@@ -8846,8 +7977,7 @@ async function handleTrackEvent(request, env, ctx) {
   }
 }
 __name(handleTrackEvent, "handleTrackEvent");
-
-// src/analytics/admin.js
+__name2(handleTrackEvent, "handleTrackEvent");
 function withAdminNoCacheHeaders3(baseHeaders = {}) {
   const headers = new Headers(baseHeaders);
   headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
@@ -8856,28 +7986,30 @@ function withAdminNoCacheHeaders3(baseHeaders = {}) {
   headers.set("Vary", "Authorization");
   return headers;
 }
-__name(withAdminNoCacheHeaders3, "withAdminNoCacheHeaders");
+__name(withAdminNoCacheHeaders3, "withAdminNoCacheHeaders3");
+__name2(withAdminNoCacheHeaders3, "withAdminNoCacheHeaders");
 function checkAuth(request, env) {
   const authHeader = request.headers.get("Authorization");
-  const expected =
-    "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
+  const expected = "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
   return authHeader === expected;
 }
 __name(checkAuth, "checkAuth");
+__name2(checkAuth, "checkAuth");
 function clampInt(value, { min, max, fallback }) {
   const n = parseInt(String(value ?? ""), 10);
   if (!Number.isFinite(n)) return fallback;
   return Math.max(min, Math.min(max, n));
 }
 __name(clampInt, "clampInt");
+__name2(clampInt, "clampInt");
 async function handleExportCSV(request, env) {
   if (!checkAuth(request, env)) {
     return new Response("Unauthorized", {
       status: 401,
       headers: withAdminNoCacheHeaders3({
         "WWW-Authenticate": 'Basic realm="K4 Analytics Export"',
-        "Content-Type": "text/plain",
-      }),
+        "Content-Type": "text/plain"
+      })
     });
   }
   const url = new URL(request.url);
@@ -8911,55 +8043,52 @@ async function handleExportCSV(request, env) {
       "country",
       "region",
       "city",
-      "visitor_id",
+      "visitor_id"
     ];
     const csvRows = [headers.join(",")];
     for (const row of rows) {
       const values = headers.map((h) => {
         const val = row[h] || "";
         const escaped = String(val).replace(/"/g, '""');
-        return escaped.includes(",") || escaped.includes('"')
-          ? `"${escaped}"`
-          : escaped;
+        return escaped.includes(",") || escaped.includes('"') ? `"${escaped}"` : escaped;
       });
       csvRows.push(values.join(","));
     }
     const csv = csvRows.join("\n");
-    const filename = `k4-analytics-${yesterday ? "yesterday" : days + "days"}-${/* @__PURE__ */ new Date().toISOString().slice(0, 10)}.csv`;
+    const filename = `k4-analytics-${yesterday ? "yesterday" : days + "days"}-${/* @__PURE__ */ (/* @__PURE__ */ new Date()).toISOString().slice(0, 10)}.csv`;
     return new Response(csv, {
       headers: withAdminNoCacheHeaders3({
         "Content-Type": "text/csv",
-        "Content-Disposition": `attachment; filename="${filename}"`,
-      }),
+        "Content-Disposition": `attachment; filename="${filename}"`
+      })
     });
   } catch (err) {
     console.error("Export error:", err);
     return new Response(`Export error: ${err.message}`, {
       status: 500,
       headers: withAdminNoCacheHeaders3({
-        "Content-Type": "text/plain; charset=utf-8",
-      }),
+        "Content-Type": "text/plain; charset=utf-8"
+      })
     });
   }
 }
 __name(handleExportCSV, "handleExportCSV");
+__name2(handleExportCSV, "handleExportCSV");
 async function handleBlockIP(request, env) {
   try {
     const { ip_hash, reason } = await request.json();
     if (!ip_hash) {
       return new Response(JSON.stringify({ error: "ip_hash required" }), {
         status: 400,
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json" }
       });
     }
     const suspectInfo = await env.DB.prepare(
       `
       SELECT risk_level, risk_score, rules_triggered, total_requests 
       FROM suspected_bots WHERE ip_hash = ?
-    `,
-    )
-      .bind(ip_hash)
-      .first();
+    `
+    ).bind(ip_hash).first();
     await env.DB.prepare(
       `
       INSERT INTO blocked_ips (ip_hash, risk_level, risk_score, rules_triggered, total_requests, reason, blocked_by)
@@ -8969,45 +8098,42 @@ async function handleBlockIP(request, env) {
         blocked_at = datetime('now'),
         reason = excluded.reason,
         unblocked_at = NULL
-    `,
-    )
-      .bind(
-        ip_hash,
-        suspectInfo?.risk_level || 4,
-        suspectInfo?.risk_score || 0,
-        suspectInfo?.rules_triggered || "[]",
-        suspectInfo?.total_requests || 0,
-        reason || "Manual block from dashboard",
-      )
-      .run();
+    `
+    ).bind(
+      ip_hash,
+      suspectInfo?.risk_level || 4,
+      suspectInfo?.risk_score || 0,
+      suspectInfo?.rules_triggered || "[]",
+      suspectInfo?.total_requests || 0,
+      reason || "Manual block from dashboard"
+    ).run();
     await env.DB.prepare(
       `
       UPDATE suspected_bots SET status = 'blocked', updated_at = datetime('now')
       WHERE ip_hash = ?
-    `,
-    )
-      .bind(ip_hash)
-      .run();
+    `
+    ).bind(ip_hash).run();
     return new Response(JSON.stringify({ success: true, ip_hash }), {
       status: 200,
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     });
   } catch (e) {
     console.error("Block IP error:", e);
     return new Response(JSON.stringify({ error: e.message }), {
       status: 500,
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     });
   }
 }
 __name(handleBlockIP, "handleBlockIP");
+__name2(handleBlockIP, "handleBlockIP");
 async function handleUnblockIP(request, env) {
   try {
     const { ip_hash } = await request.json();
     if (!ip_hash) {
       return new Response(JSON.stringify({ error: "ip_hash required" }), {
         status: 400,
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json" }
       });
     }
     await env.DB.prepare(
@@ -9015,73 +8141,71 @@ async function handleUnblockIP(request, env) {
       UPDATE blocked_ips 
       SET is_active = 0, unblocked_at = datetime('now')
       WHERE ip_hash = ?
-    `,
-    )
-      .bind(ip_hash)
-      .run();
+    `
+    ).bind(ip_hash).run();
     await env.DB.prepare(
       `
       UPDATE suspected_bots SET status = 'watching', updated_at = datetime('now')
       WHERE ip_hash = ?
-    `,
-    )
-      .bind(ip_hash)
-      .run();
+    `
+    ).bind(ip_hash).run();
     return new Response(JSON.stringify({ success: true, ip_hash }), {
       status: 200,
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     });
   } catch (e) {
     console.error("Unblock IP error:", e);
     return new Response(JSON.stringify({ error: e.message }), {
       status: 500,
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     });
   }
 }
 __name(handleUnblockIP, "handleUnblockIP");
+__name2(handleUnblockIP, "handleUnblockIP");
 async function handleRefreshBots(request, env) {
   try {
     const count = await updateBotIntelligence(env);
     return new Response(JSON.stringify({ success: true, updated: count }), {
       status: 200,
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     });
   } catch (e) {
     console.error("Refresh bots error:", e);
     return new Response(JSON.stringify({ error: e.message }), {
       status: 500,
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     });
   }
 }
 __name(handleRefreshBots, "handleRefreshBots");
+__name2(handleRefreshBots, "handleRefreshBots");
 async function handleRecentEvents(request, env) {
   if (!checkAuth(request, env)) {
     return new Response("Unauthorized", {
       status: 401,
       headers: withAdminNoCacheHeaders3({
         "WWW-Authenticate": 'Basic realm="K4 Analytics Recent"',
-        "Content-Type": "text/plain",
-      }),
+        "Content-Type": "text/plain"
+      })
     });
   }
   if (!env?.DB) {
     return new Response(JSON.stringify({ ok: false, error: "DB not bound" }), {
       status: 500,
-      headers: withAdminNoCacheHeaders3({ "Content-Type": "application/json" }),
+      headers: withAdminNoCacheHeaders3({ "Content-Type": "application/json" })
     });
   }
   const url = new URL(request.url);
   const minutes = clampInt(url.searchParams.get("minutes"), {
     min: 1,
     max: 60 * 24 * 14,
-    fallback: 180,
+    fallback: 180
   });
   const limit = clampInt(url.searchParams.get("limit"), {
     min: 1,
     max: 500,
-    fallback: 100,
+    fallback: 100
   });
   const includeUa = url.searchParams.get("ua") === "1";
   const eventType = (url.searchParams.get("event") || "").trim() || null;
@@ -9132,18 +8256,11 @@ async function handleRecentEvents(request, env) {
       FROM classified_events r
       LEFT JOIN suspected_bots sb ON sb.ip_hash = r.ip_hash
       LEFT JOIN blocked_ips bi ON bi.ip_hash = r.ip_hash
-      WHERE ${where
-        .join(" AND ")
-        .replace(/\bevent_type\b/g, "r.event_type")
-        .replace(/\bvisitor_id\b/g, "r.visitor_id")
-        .replace(/\bsession_id\b/g, "r.session_id")
-        .replace(/\bsource\b/g, "r.source")}
+      WHERE ${where.join(" AND ").replace(/\bevent_type\b/g, "r.event_type").replace(/\bvisitor_id\b/g, "r.visitor_id").replace(/\bsession_id\b/g, "r.session_id").replace(/\bsource\b/g, "r.source")}
       ORDER BY r.ts DESC
       LIMIT ${limit}
     `;
-    const result = await env.DB.prepare(query)
-      .bind(...bindings)
-      .all();
+    const result = await env.DB.prepare(query).bind(...bindings).all();
     const rows = result.results || [];
     return new Response(
       JSON.stringify({
@@ -9152,14 +8269,14 @@ async function handleRecentEvents(request, env) {
         limit,
         filters: { eventType, visitorId, sessionId, source },
         includeUa,
-        rows,
+        rows
       }),
       {
         status: 200,
         headers: withAdminNoCacheHeaders3({
-          "Content-Type": "application/json",
-        }),
-      },
+          "Content-Type": "application/json"
+        })
+      }
     );
   } catch (e) {
     console.error("Recent events error:", e);
@@ -9168,33 +8285,33 @@ async function handleRecentEvents(request, env) {
       {
         status: 500,
         headers: withAdminNoCacheHeaders3({
-          "Content-Type": "application/json",
-        }),
-      },
+          "Content-Type": "application/json"
+        })
+      }
     );
   }
 }
 __name(handleRecentEvents, "handleRecentEvents");
-
-// src/analytics/worker.js
+__name2(handleRecentEvents, "handleRecentEvents");
 function checkBasicAuth2(request, env) {
   const auth = request.headers.get("Authorization");
-  const expected =
-    "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
+  const expected = "Basic " + btoa("k4admin:" + (env.ANALYTICS_PASSWORD || "k4analytics2024"));
   return auth === expected;
 }
-__name(checkBasicAuth2, "checkBasicAuth");
+__name(checkBasicAuth2, "checkBasicAuth2");
+__name2(checkBasicAuth2, "checkBasicAuth");
 function requireAuth2() {
   return new Response("Unauthorized", {
     status: 401,
     headers: {
       "WWW-Authenticate": 'Basic realm="K4 Analytics"',
       "Content-Type": "text/plain",
-      "Cache-Control": "no-store",
-    },
+      "Cache-Control": "no-store"
+    }
   });
 }
-__name(requireAuth2, "requireAuth");
+__name(requireAuth2, "requireAuth2");
+__name2(requireAuth2, "requireAuth");
 var worker_default = {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -9203,11 +8320,7 @@ var worker_default = {
         return requireAuth2();
       }
     }
-    if (
-      (url.pathname.startsWith("/track") ||
-        url.pathname.startsWith("/__k4e")) &&
-      request.cf?.botManagement?.verifiedBot
-    ) {
+    if ((url.pathname.startsWith("/track") || url.pathname.startsWith("/__k4e")) && request.cf?.botManagement?.verifiedBot) {
       return new Response(null, { status: 204 });
     }
     if (url.pathname === "/__k4stats") {
@@ -9225,10 +8338,7 @@ var worker_default = {
     if (url.pathname === "/__k4stats/unblock" && request.method === "POST") {
       return handleUnblockIP(request, env);
     }
-    if (
-      url.pathname === "/__k4stats/refresh-bots" &&
-      request.method === "POST"
-    ) {
+    if (url.pathname === "/__k4stats/refresh-bots" && request.method === "POST") {
       return handleRefreshBots(request, env);
     }
     if (url.pathname === "/__k4stats/recent") {
@@ -9254,8 +8364,8 @@ var worker_default = {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "POST, OPTIONS",
             "Access-Control-Allow-Headers": "Content-Type",
-            "Access-Control-Max-Age": "86400",
-          },
+            "Access-Control-Max-Age": "86400"
+          }
         });
       }
       if (request.method === "POST") {
@@ -9264,6 +8374,9 @@ var worker_default = {
       return new Response("Method not allowed", { status: 405 });
     }
     return fetch(request);
-  },
+  }
 };
-export { worker_default as default };
+export {
+  worker_default as default
+};
+//# sourceMappingURL=worker.js.map
