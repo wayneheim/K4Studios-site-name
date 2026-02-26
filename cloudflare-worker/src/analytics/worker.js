@@ -3755,7 +3755,6 @@ function renderDashboard({
   const spSessions = Number(sp.state_pixel_sessions || 0);
   const spEdgeSessions = Number(sp.edge_page_sessions || 0);
   const spSessionRatioPct = spEdgeSessions > 0 ? Math.round(spSessions / spEdgeSessions * 100) : 0;
-  const spTopReferrers = Array.isArray(sp.top_referrers) ? sp.top_referrers : [];
   const spViewerStats = sp.viewer_stats || {};
   const spByGallery = Array.isArray(sp.by_gallery) ? sp.by_gallery : [];
   const spViewers = Number(spViewerStats.viewers || 0);
@@ -4680,28 +4679,6 @@ function renderDashboard({
         </tbody>
       </table>
       ` : `<div style="color:#aaa;font-size:13px;">No sister pixel gallery data for this period.</div>`}
-    </div>
-  </div>
-
-  <div class="section" style="max-width:1780px;margin:0 auto 18px;">
-    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-      <h3 style="margin:0;">Referrers (Sister Pixel)</h3>
-      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Top referer hosts for <strong>state_pixel</strong> requests in this test. Blank/missing referers are shown as <code>(none)</code>.</div></span>
-    </div>
-    <div style="margin-top:10px;">
-      ${spTopReferrers.length > 0 ? `
-      <table style="width:100%;border-collapse:collapse;">
-        <thead>
-          <tr style="color:#888;font-size:12px;text-align:left;">
-            <th style="padding:6px 0;border-bottom:1px solid #333;">Referrer</th>
-            <th style="padding:6px 0;border-bottom:1px solid #333;">Hits</th>
-          </tr>
-        </thead>
-        <tbody style="font-size:13px;">
-          ${spTopReferrers.map((r) => `<tr><td style="padding:8px 0;border-bottom:1px solid #222;">${r.ref_host}</td><td style="padding:8px 0;border-bottom:1px solid #222;">${r.hits}</td></tr>`).join("")}
-        </tbody>
-      </table>
-      ` : `<div style="color:#aaa;font-size:13px;">No sister pixel referrer data for this period.</div>`}
     </div>
   </div>
 
