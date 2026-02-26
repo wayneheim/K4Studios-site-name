@@ -706,6 +706,21 @@ export default function ChapterGalleryBase({
       pageType: 'image',
       trigger: 'index_change'
     });
+
+    // Sister Pixel: deduped pixel-style event for chapter views (human proof-of-life).
+    // Fires once per image per session.
+    try {
+      const key = `k4_dedupe_sister_pixel:${imageId}`;
+      if (!sessionStorage.getItem(key)) {
+        sessionStorage.setItem(key, '1');
+        trackEvent('state_pixel', {
+          galleryId: galleryKey,
+          imageId,
+          sourceLayer: 'sister_pixel_v1',
+          trigger: 'chapter_view'
+        });
+      }
+    } catch (_) {}
   }, [currentIndex, galleryData, viewMode, galleryKey, hasEnteredChapters]);
 
   // ✅ Replaced old title updater with the hook
