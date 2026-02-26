@@ -2016,10 +2016,66 @@ async function getStatePixelTestRoaring20s(env, filters) {
       LEFT JOIN ranked r
         ON r.target_id = a.target_id
        AND r.rn = 1
-      ORDER BY a.exposures DESC, a.last_seen DESC
-      LIMIT 25
+      ORDER BY a.last_seen DESC, a.exposures DESC
+      LIMIT 200
     `;
     const pixelImageAccessRows = await env.DB.prepare(pixelImageAccessQuery).all();
+
+    const zoomPixelImageAccessQuery = `
+      WITH sp AS (
+        SELECT
+          e.target_id AS target_id,
+          e.page AS page,
+          e.visitor_id AS visitor_id,
+          e.country AS country,
+          e.region AS region,
+          e.city AS city,
+          e.ts AS ts
+        FROM raw_events e
+        WHERE ${qualifiedDateClause}
+          AND ${notCacheWarmer("e")}
+          AND e.event_type = 'state_pixel'
+          AND e.source_layer = 'zoom_pixel_v1'
+          AND e.target_id IS NOT NULL
+          AND e.target_id != ''
+      ),
+      ranked AS (
+        SELECT
+          target_id,
+          page,
+          country,
+          region,
+          city,
+          ts,
+          ROW_NUMBER() OVER (PARTITION BY target_id ORDER BY ts DESC) AS rn
+        FROM sp
+      ),
+      agg AS (
+        SELECT
+          target_id,
+          COUNT(*) AS exposures,
+          COUNT(DISTINCT CASE WHEN visitor_id IS NOT NULL AND visitor_id != '' THEN visitor_id END) AS viewers,
+          MAX(ts) AS last_seen
+        FROM sp
+        GROUP BY target_id
+      )
+      SELECT
+        a.target_id,
+        a.exposures,
+        a.viewers,
+        a.last_seen,
+        r.page,
+        r.country,
+        r.region,
+        r.city
+      FROM agg a
+      LEFT JOIN ranked r
+        ON r.target_id = a.target_id
+       AND r.rn = 1
+      ORDER BY a.last_seen DESC, a.exposures DESC
+      LIMIT 200
+    `;
+    const zoomPixelImageAccessRows = await env.DB.prepare(zoomPixelImageAccessQuery).all();
     return {
       state_pixel_hits: Number(summaryRow?.state_pixel_hits || 0),
       sister_pixel_v1_hits: Number(summaryRow?.sister_pixel_v1_hits || 0),
@@ -2047,7 +2103,8 @@ async function getStatePixelTestRoaring20s(env, filters) {
         )
       },
       by_gallery: byGalleryRows?.results || [],
-      pixel_image_access: pixelImageAccessRows?.results || []
+      pixel_image_access: pixelImageAccessRows?.results || [],
+      zoom_pixel_image_access: zoomPixelImageAccessRows?.results || []
     };
   } catch (e) {
     console.log("State pixel test query failed:", e?.message || e);
@@ -2068,7 +2125,8 @@ async function getStatePixelTestRoaring20s(env, filters) {
         pct_viewers_with_duplicates: 0
       },
       by_gallery: [],
-      pixel_image_access: []
+      pixel_image_access: [],
+      zoom_pixel_image_access: []
     };
   }
 }
@@ -3816,6 +3874,7 @@ function renderDashboard({
   const spViewerStats = sp.viewer_stats || {};
   const spByGallery = Array.isArray(sp.by_gallery) ? sp.by_gallery : [];
   const spPixelImageAccess = Array.isArray(sp.pixel_image_access) ? sp.pixel_image_access : [];
+  const spZoomPixelImageAccess = Array.isArray(sp.zoom_pixel_image_access) ? sp.zoom_pixel_image_access : [];
   const spViewers = Number(spViewerStats.viewers || 0);
   const spAvgExposuresPerViewer = Number(
     spViewerStats.avg_exposures_per_viewer || 0
@@ -4808,6 +4867,65 @@ function renderDashboard({
   }).join("")}
       </div>
       ` : `<div style="color:#aaa;font-size:13px;">No sister pixel per-image data for this period.</div>`}
+    </div>
+  </div>
+
+  <div class="section" style="max-width:1780px;margin:0 auto 18px;">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <h3 style="margin:0;">Zoom Pixel Image Access Overview (Test)</h3>
+      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Per-image breakout from <code>raw_events</code> for <code>event_type='state_pixel'</code> and <code>source_layer='zoom_pixel_v1'</code>. Fired on the user\u2019s zoom-open click (JS-gated), then recorded as a pixel-style event for segmentation.</div></span>
+      <span style="margin-left:auto;font-size:12px;color:#888;">Rows: <strong style="color:#fff;">${spZoomPixelImageAccess.length || 0}</strong></span>
+    </div>
+    <div style="margin-top:10px;">
+      ${spZoomPixelImageAccess.length > 0 ? `
+      <div style="max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;">
+        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 90px 240px 1fr 240px 220px 120px 120px 160px; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
+          <span style="display:flex;justify-content:center;">Image</span>
+          <span>Type / ID</span>
+          <span>Gallery</span>
+          <span>Location</span>
+          <span>Source</span>
+          <span style="text-align:right;">Exposures</span>
+          <span style="text-align:right;">Viewers</span>
+          <span>Last Seen</span>
+        </div>
+        ${spZoomPixelImageAccess.map((r) => {
+    const imageId = String(r.target_id || "");
+    const rawPage = String(r.page || "");
+    const galleryPath = rawPage && rawPage.includes("/i-") ? rawPage.substring(0, rawPage.indexOf("/i-")) : rawPage;
+    const displayGallery = galleryDisplayNameFromPath(galleryPath || "") || "(missing)";
+    const galleryUrl = galleryPath && galleryPath.startsWith("/") ? "https://k4studios.com" + galleryPath : "";
+    const imageUrl = imageId ? "https://k4studios.com/art/" + imageId : "#";
+    const exposures = Number(r.exposures || 0);
+    const viewers = Number(r.viewers || 0);
+    const loc = fmtLoc(r.city, r.region, r.country);
+    const lastSeen = r.last_seen ? String(r.last_seen).replace("T", " ") : "\u2014";
+    const srcPill = '<span title="Zoom Pixel (V1)" style="display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:999px;border:1px solid #333;background:#1f1f1f;color:#cbd5e1;font-size:11px;line-height:1;white-space:nowrap;"><span style="display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:10px;font-weight:bold;border:1px solid #06b6d455;">Z</span><span style="opacity:0.95;">Zoom Pixel</span></span>';
+    const badgeZ = '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:10px;font-weight:bold;border:1px solid #06b6d455;" title="Zoom Pixel (V1)">Z</span>';
+    const thumb = imageId && imageId.startsWith("i-") ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="lazy" style="width:60px;height:60px;object-fit:cover;border-radius:6px;border:1px solid #333;">' : '<span style="width:60px;height:60px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:1px solid #333;">\u{1F5BC}</span>';
+    return `<div style="display:grid;grid-template-columns: 90px 240px 1fr 240px 220px 120px 120px 160px;gap:10px;padding:8px 8px;border-bottom:1px solid #222;align-items:center;font-size:13px;">
+      <div style="display:flex;align-items:center;justify-content:center;">
+        <a href="${imageUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;width:70px;">${thumb}</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;min-width:0;">
+        <div style="display:flex;align-items:center;gap:6px;min-width:0;">
+          <div style="flex:0 0 auto;">${badgeZ}</div>
+          <a href="${imageUrl}" target="_blank" rel="noopener" style="color:#c4b5fd;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;" title="${imageId}">${imageId || "(missing)"}</a>
+        </div>
+        <div style="font-size:11px;color:#6b7280;">pixel</div>
+      </div>
+      <div style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+        ${galleryUrl ? `<a href="${galleryUrl}" target="_blank" rel="noopener" style="color:#93c5fd;text-decoration:none;" title="${galleryPath}">${displayGallery}</a>` : `<span style="color:#aaa;" title="${galleryPath}">${displayGallery}</span>`}
+      </div>
+      <div style="color:#9aa3ad;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${loc}</div>
+      <div>${srcPill}</div>
+      <div style="text-align:right;">${exposures}</div>
+      <div style="text-align:right;">${viewers}</div>
+      <div style="color:#9aa3ad;">${lastSeen}</div>
+    </div>`;
+  }).join("")}
+      </div>
+      ` : `<div style="color:#aaa;font-size:13px;">No zoom pixel per-image data for this period.</div>`}
     </div>
   </div>
 
