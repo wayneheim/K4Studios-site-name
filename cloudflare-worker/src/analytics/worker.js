@@ -7336,6 +7336,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       refererOverride = null,
       deltaMs = null,
       visitorId = null,
+      sourceLayer = null,
       imgSize = null,
       refType = null,
       inferred = null,
@@ -7383,6 +7384,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       visitorId
     ];
     const optional = [
+      { name: "source_layer", value: sourceLayer },
       { name: "img_size", value: imgSize },
       { name: "ref_type", value: refType },
       { name: "inferred", value: inferred },
@@ -7852,6 +7854,7 @@ async function handleTrackRequest(request, env, ctx) {
       event = null,
       gallery_id = null,
       image_id = null,
+      source_layer = null,
       page_type = null,
       theme = null,
       referrer: clientReferrer = null,
@@ -7940,6 +7943,7 @@ async function handleTrackRequest(request, env, ctx) {
         sessionId: bestSessionId,
         source: "js",
         visitorId,
+        sourceLayer: typeof source_layer === "string" && source_layer ? source_layer : null,
         // Use the client-reported page_path for easier SQL grouping.
         page: normalizedPagePath || null,
         // Preserve the best external referrer (edge cookie beats client hint).

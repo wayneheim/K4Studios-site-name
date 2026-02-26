@@ -158,6 +158,7 @@ function getEntryReferrer(): string | null {
 interface TrackContext {
   galleryId?: string | null;
   imageId?: string | null;
+  sourceLayer?: string | null;
   pageType?: 'landing' | 'gallery' | 'image' | 'other';
   theme?: string | null;
   trigger?: string | null;
@@ -307,6 +308,7 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
     event,
     gallery_id: inferredGalleryId || null,
     image_id: inferredImageId || null,
+    source_layer: context.sourceLayer || null,
     page_type: inferredPageType || null,
     theme: context.theme || null,
     trigger: context.trigger || null,

@@ -1146,8 +1146,27 @@ export default function ChapterGalleryBase({
                               // Disable zoom on mobile - users don't know to click, and matt preview makes images too small
                               if (!isMobile && !isLandscapeMobile) {
                                 setIsZoomed(true);
+                                const imageId = galleryData[currentIndex]?.id;
                                 // XL zoom is counted from the user intent click (beacon), not from loading the XL image.
-                                trackArtView('xl_zoom', galleryData[currentIndex]?.id);
+                                trackArtView('xl_zoom', imageId);
+
+                                // Pixel-style zoom open signal (segmented in analytics by source_layer)
+                                // Dedup per image per session to avoid accidental double-counting.
+                                try {
+                                  if (imageId) {
+                                    const key = `k4_dedupe_zoom_pixel:${imageId}`;
+                                    const fired = sessionStorage.getItem(key);
+                                    if (!fired) {
+                                      sessionStorage.setItem(key, '1');
+                                      trackEvent('state_pixel', {
+                                        galleryId: galleryKey,
+                                        imageId,
+                                        sourceLayer: 'zoom_pixel_v1',
+                                        trigger: 'xl_zoom'
+                                      });
+                                    }
+                                  }
+                                } catch (_) {}
                               }
                             }}
                             data-zoom-btn
