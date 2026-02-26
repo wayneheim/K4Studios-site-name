@@ -19,7 +19,12 @@ import {
   getEdgeEvents,
   getArtViews,
   getBotIntelligence,
-  getPeriodTotals
+  getPeriodTotals,
+  getCoverageVisibility,
+  getRawBehaviorDistribution,
+  getStatePixelTestRoaring20s,
+  getTopGalleryLandingPages,
+  getBrowserViewsSummary
 } from '../queries.js';
 
 import { buildDashboardData } from './schema.js';
@@ -112,6 +117,12 @@ export async function handleDashboardRequest(env, filters) {
   // Get period-level unique totals (not summed daily) - use rangeDateClause for full period
   const periodTotals = await getPeriodTotals(env, { dateClause: rangeDateClause, botClause, chardonClause });
 
+  const coverageVisibility = await getCoverageVisibility(env, { dateClause });
+  const rawBehaviorDistribution = await getRawBehaviorDistribution(env, { dateClause });
+  const statePixelTestRoaring20s = await getStatePixelTestRoaring20s(env, { dateClause });
+  const topGalleryLandingPages = await getTopGalleryLandingPages(env, { dateClause });
+  const browserViewsSummary = await getBrowserViewsSummary(env, { dateClause, ipClause, botClause, chardonClause });
+
   // Collect raw query results for schema assembly
   const queryResults = {
     summary, returningVisitors, newVisitors,
@@ -130,7 +141,12 @@ export async function handleDashboardRequest(env, filters) {
     edgeEvents, edgeSummary,
     artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, entryRefCountsObj, imageAccessOverview, viewerDepth, suppressionStats,
     botIntelligence,
-    periodTotals
+    periodTotals,
+    coverageVisibility,
+    rawBehaviorDistribution,
+    statePixelTestRoaring20s,
+    topGalleryLandingPages,
+    browserViewsSummary
   };
 
   // Assemble data shape then render

@@ -14,10 +14,16 @@
 // 1 cookie (k4_vid) = 1 human. IP addresses are irrelevant.
 // ═══════════════════════════════════════════════════════════════════════════
 
+import { GALLERY_LANDING_PATHS } from './dashboard/galleryLandingPaths.js';
+
 // Internal synthetic agent (cache warmer) should never count in analytics.
 // We exclude it at ingestion in the image proxy, but also exclude it at query-time
 // so any historical rows don’t pollute dashboards.
 const notCacheWarmer = (alias) => `LOWER(COALESCE(${alias}.ua, '')) NOT LIKE '%k4-cache-warmer%'`;
+
+const sqlStringLiteral = (value) => `'${String(value).replace(/'/g, "''")}'`;
+const CANONICAL_GALLERY_LANDING_PATHS = GALLERY_LANDING_PATHS.map((p) => (p && p[0] === '/' ? p : `/${p}`));
+const GALLERY_LANDING_IN_LIST = `(${CANONICAL_GALLERY_LANDING_PATHS.map(sqlStringLiteral).join(',')})`;
 
 // ── 3-Axis Classification ──────────────────────────────────────────────
 // Axis 1: population_type  — WHO caused the event
@@ -336,106 +342,181 @@ export async function getArtViews(env, filters) {
   let topChapters = [];
   try {
     const topChaptersQuery = `
-      WITH ranked AS (
-        SELECT
-          e.visitor_id as visitor_id,
-          e.target_id as target_id,
-          e.event_type as event_type,
-          e.ts as ts,
-          COALESCE(e.session_id, 'd:' || date(e.ts)) as session_bucket,
-          LOWER(COALESCE(hp.device_type, 'unknown')) as device,
-          e.country as country,
-          e.region as region,
-          e.city as city,
-          e.page as page,
-          e.referer as referer,
-          ROW_NUMBER() OVER (
-            PARTITION BY e.visitor_id, e.target_id, COALESCE(e.session_id, 'd:' || date(e.ts))
-            ORDER BY e.ts DESC
-          ) as rn
-        FROM human_population hp
-        JOIN classified_events e ON e.visitor_id = hp.visitor_id
-        WHERE e.event_type IN ('chapter_exposure', 'chapter_view')
-          AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
-      ),
-      chapter_pairs AS (
-        SELECT visitor_id, target_id, event_type, ts, session_bucket, device, country, region, city, page, referer
-        FROM ranked
-        WHERE rn = 1
-      )
       SELECT
-        cp.target_id,
-        COUNT(*) as views,
-        COUNT(DISTINCT cp.visitor_id) as unique_viewers,
-        GROUP_CONCAT(DISTINCT cp.device) as device_types,
-        GROUP_CONCAT(DISTINCT cp.country) as countries,
-        MAX(CASE WHEN cp.event_type = 'chapter_view' THEN 1 ELSE 0 END) as has_js_view,
-        MAX(cp.ts) as last_seen,
+        e.target_id,
+        SUM(CASE WHEN e.event_type = 'chapter_view' THEN 1 ELSE 0 END) as js_views,
+        SUM(CASE WHEN e.event_type = 'chapter_exposure' THEN 1 ELSE 0 END) as proxy_views,
+        COUNT(DISTINCT CASE WHEN e.event_type = 'chapter_view' THEN e.visitor_id ELSE NULL END) as js_unique_viewers,
+        COUNT(DISTINCT CASE WHEN e.event_type = 'chapter_exposure' THEN e.visitor_id ELSE NULL END) as proxy_unique_viewers,
+        GROUP_CONCAT(DISTINCT LOWER(COALESCE(hp.device_type, 'unknown'))) as device_types,
+        GROUP_CONCAT(DISTINCT e.country) as countries,
+        MAX(CASE WHEN e.event_type = 'chapter_view' THEN 1 ELSE 0 END) as has_js_view,
+        MAX(CASE WHEN e.event_type = 'chapter_view' THEN e.ts ELSE NULL END) as last_seen_js,
+        MAX(CASE WHEN e.event_type = 'chapter_exposure' THEN e.ts ELSE NULL END) as last_seen_proxy,
+
         (
-          SELECT cp2.page
-          FROM chapter_pairs cp2
-          WHERE cp2.target_id = cp.target_id
-            AND cp2.page IS NOT NULL
-          GROUP BY cp2.page
+          SELECT e2.page
+          FROM classified_events e2
+          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type = 'chapter_view'
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.page IS NOT NULL
+          GROUP BY e2.page
           ORDER BY COUNT(*) DESC
           LIMIT 1
-        ) as best_page,
+        ) as best_page_js,
         (
-          SELECT cp2.referer
-          FROM chapter_pairs cp2
-          WHERE cp2.target_id = cp.target_id
-            AND cp2.referer IS NOT NULL
-            AND cp2.referer NOT LIKE '%k4studios.com%'
-          GROUP BY cp2.referer
+          SELECT e2.page
+          FROM classified_events e2
+          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type = 'chapter_exposure'
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.page IS NOT NULL
+          GROUP BY e2.page
           ORDER BY COUNT(*) DESC
           LIMIT 1
-        ) as best_referer,
+        ) as best_page_proxy,
+
         (
-          SELECT cp2.country
-          FROM chapter_pairs cp2
-          WHERE cp2.target_id = cp.target_id
-            AND cp2.country IS NOT NULL
-          GROUP BY cp2.country, cp2.region, cp2.city
+          SELECT e2.referer
+          FROM classified_events e2
+          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type = 'chapter_view'
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.referer IS NOT NULL
+            AND e2.referer NOT LIKE '%k4studios.com%'
+          GROUP BY e2.referer
           ORDER BY COUNT(*) DESC
           LIMIT 1
-        ) as geo_country,
+        ) as best_referer_js,
         (
-          SELECT cp2.region
-          FROM chapter_pairs cp2
-          WHERE cp2.target_id = cp.target_id
-            AND cp2.country IS NOT NULL
-          GROUP BY cp2.country, cp2.region, cp2.city
+          SELECT e2.referer
+          FROM classified_events e2
+          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type = 'chapter_exposure'
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.referer IS NOT NULL
+            AND e2.referer NOT LIKE '%k4studios.com%'
+          GROUP BY e2.referer
           ORDER BY COUNT(*) DESC
           LIMIT 1
-        ) as geo_region,
+        ) as best_referer_proxy,
+
         (
-          SELECT cp2.city
-          FROM chapter_pairs cp2
-          WHERE cp2.target_id = cp.target_id
-            AND cp2.country IS NOT NULL
-          GROUP BY cp2.country, cp2.region, cp2.city
+          SELECT e2.country
+          FROM classified_events e2
+          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type = 'chapter_view'
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.country IS NOT NULL
+          GROUP BY e2.country, e2.region, e2.city
           ORDER BY COUNT(*) DESC
           LIMIT 1
-        ) as geo_city
-      FROM chapter_pairs cp
-      GROUP BY cp.target_id
-      ORDER BY views DESC
+        ) as geo_country_js,
+        (
+          SELECT e2.region
+          FROM classified_events e2
+          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type = 'chapter_view'
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.country IS NOT NULL
+          GROUP BY e2.country, e2.region, e2.city
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as geo_region_js,
+        (
+          SELECT e2.city
+          FROM classified_events e2
+          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type = 'chapter_view'
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.country IS NOT NULL
+          GROUP BY e2.country, e2.region, e2.city
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as geo_city_js,
+
+        (
+          SELECT e2.country
+          FROM classified_events e2
+          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type = 'chapter_exposure'
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.country IS NOT NULL
+          GROUP BY e2.country, e2.region, e2.city
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as geo_country_proxy,
+        (
+          SELECT e2.region
+          FROM classified_events e2
+          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type = 'chapter_exposure'
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.country IS NOT NULL
+          GROUP BY e2.country, e2.region, e2.city
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as geo_region_proxy,
+        (
+          SELECT e2.city
+          FROM classified_events e2
+          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
+          WHERE e2.target_id = e.target_id
+            AND e2.event_type = 'chapter_exposure'
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+            AND e2.country IS NOT NULL
+          GROUP BY e2.country, e2.region, e2.city
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as geo_city_proxy
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE e.event_type IN ('chapter_exposure', 'chapter_view')
+        AND ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+      GROUP BY e.target_id
+      ORDER BY (
+        CASE
+          WHEN MAX(CASE WHEN e.event_type = 'chapter_view' THEN 1 ELSE 0 END) = 1
+          THEN SUM(CASE WHEN e.event_type = 'chapter_view' THEN 1 ELSE 0 END)
+          ELSE SUM(CASE WHEN e.event_type = 'chapter_exposure' THEN 1 ELSE 0 END)
+        END
+      ) DESC
       LIMIT 2000
     `;
     const result = await env.DB.prepare(topChaptersQuery).all();
     topChapters = (result.results || []).map(r => {
-      const referrerSource = getReferrerSource(r.best_referer);
+      const hasJsView = r.has_js_view === 1;
+      const views = hasJsView ? (r.js_views || 0) : (r.proxy_views || 0);
+      const uniqueViewers = hasJsView ? (r.js_unique_viewers || 0) : (r.proxy_unique_viewers || 0);
+      const bestReferer = hasJsView ? r.best_referer_js : r.best_referer_proxy;
+      const bestPage = hasJsView ? r.best_page_js : r.best_page_proxy;
+      const lastSeen = hasJsView ? r.last_seen_js : r.last_seen_proxy;
+      const geo = hasJsView
+        ? { country: r.geo_country_js, region: r.geo_region_js, city: r.geo_city_js }
+        : { country: r.geo_country_proxy, region: r.geo_region_proxy, city: r.geo_city_proxy };
+
+      const referrerSource = getReferrerSource(bestReferer);
       return {
-        type: 'chapter_exposure',
+        type: hasJsView ? 'chapter_view' : 'chapter_exposure',
         target_id: r.target_id,
-        views: r.views,
-        unique_viewers: r.unique_viewers,
-        has_js_view: r.has_js_view === 1,
-        last_seen: r.last_seen || null,
+        views,
+        unique_viewers: uniqueViewers,
+        has_js_view: hasJsView,
+        last_seen: lastSeen || null,
         devices: (r.device_types || '').split(',').map(s => (s || '').trim()).filter(Boolean),
         countries: r.countries,
-        url: r.best_page || null,
-        geo: { country: r.geo_country, region: r.geo_region, city: r.geo_city },
+        url: bestPage || null,
+        geo,
         referrer_source: referrerSource
       };
     });
@@ -532,7 +613,18 @@ export async function getArtViews(env, filters) {
         e.target_id,
         COUNT(*) as views,
         COUNT(DISTINCT e.visitor_id) as unique_viewers,
-        GROUP_CONCAT(DISTINCT LOWER(COALESCE(hp.device_type, 'unknown'))) as device_types
+        GROUP_CONCAT(DISTINCT LOWER(COALESCE(hp.device_type, 'unknown'))) as device_types,
+        (
+          SELECT e2.page
+          FROM classified_events e2
+          WHERE e2.event_type IN ('gallery', 'gallery_view')
+            AND e2.target_id = e.target_id
+            AND e2.page IS NOT NULL
+            AND ${dateClause.replace(/\bts\b/g, 'e2.ts') || 'e2.ts > datetime("now", "-1 day")'}
+          GROUP BY e2.page
+          ORDER BY COUNT(*) DESC
+          LIMIT 1
+        ) as best_page
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE e.event_type IN ('gallery', 'gallery_view')
@@ -547,7 +639,8 @@ export async function getArtViews(env, filters) {
       target_id: r.target_id,
       views: r.views,
       unique_viewers: r.unique_viewers,
-      devices: (r.device_types || '').split(',').map(s => (s || '').trim()).filter(Boolean)
+      devices: (r.device_types || '').split(',').map(s => (s || '').trim()).filter(Boolean),
+      gallery_url: (r.best_page && String(r.best_page).startsWith('/')) ? r.best_page : (r.best_page ? '/' + String(r.best_page).replace(/^\/+/, '') : null)
     }));
     
     // NO MERGE: gallery_id is now canonical at ingestion
@@ -1506,6 +1599,465 @@ export async function getDashboardStats(env, filters) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
+// COVERAGE / VISIBILITY — Presence vs JS vs Attention
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Coverage & Visibility panel
+ *
+ * Estimates "edge sessions" using an ephemeral clustering key:
+ *   ip_hash + ua_class + 30min_bucket
+ *
+ * This is NOT identity; it's a deterministic dedupe key so we can compare:
+ *  - Presence (edge_page)
+ *  - Attention proxy signals (image fetches)
+ *  - JS sessions (shown elsewhere as summary.sessions)
+ */
+export async function getCoverageVisibility(env, filters) {
+  const { dateClause } = filters;
+
+  const qualifiedDateClause = (dateClause || '').replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")';
+
+  const uaClassExpr = `CASE
+    WHEN LOWER(COALESCE(e.ua, '')) LIKE '%iphone%' OR LOWER(COALESCE(e.ua, '')) LIKE '%ipad%' OR LOWER(COALESCE(e.ua, '')) LIKE '%ipod%' THEN 'ios'
+    WHEN LOWER(COALESCE(e.ua, '')) LIKE '%android%' THEN 'android'
+    WHEN LOWER(COALESCE(e.ua, '')) LIKE '%mac os%' AND LOWER(COALESCE(e.ua, '')) LIKE '%safari%' AND LOWER(COALESCE(e.ua, '')) NOT LIKE '%chrome%' THEN 'mac_safari'
+    WHEN LOWER(COALESCE(e.ua, '')) LIKE '%mobile%' THEN 'mobile'
+    ELSE 'desktop'
+  END`;
+
+  try {
+    const query = `
+      WITH base AS (
+        SELECT
+          e.ip_hash AS ip_hash,
+          ${uaClassExpr} AS ua_class,
+          CAST(strftime('%s', e.ts, '-5 hours') / 1800 AS INTEGER) AS bucket,
+          e.event_type AS event_type,
+          e.source AS source
+        FROM classified_events e
+        WHERE ${qualifiedDateClause}
+          AND ${notCacheWarmer('e')}
+      ),
+      edge AS (
+        SELECT DISTINCT ip_hash, ua_class, bucket
+        FROM base
+        WHERE event_type = 'edge_page'
+          AND source = 'edge'
+      ),
+      js AS (
+        SELECT DISTINCT ip_hash, ua_class, bucket
+        FROM base
+        WHERE event_type = 'page_view'
+          AND source = 'js'
+      ),
+      img AS (
+        SELECT DISTINCT ip_hash, ua_class, bucket
+        FROM base
+        WHERE event_type IN ('chapter_exposure', 'direct_image', 'external_image')
+      )
+      SELECT
+        (SELECT COUNT(*) FROM edge) AS edge_sessions,
+        (SELECT COUNT(*) FROM edge JOIN js USING(ip_hash, ua_class, bucket)) AS edge_sessions_with_js,
+        (SELECT COUNT(*) FROM edge JOIN img USING(ip_hash, ua_class, bucket)) AS edge_sessions_with_image
+    `;
+
+    const row = await env.DB.prepare(query).first();
+    return {
+      edge_presence_sessions: Number(row?.edge_sessions || 0),
+      edge_presence_sessions_with_js: Number(row?.edge_sessions_with_js || 0),
+      edge_presence_sessions_with_image: Number(row?.edge_sessions_with_image || 0)
+    };
+  } catch (e) {
+    console.log('Coverage visibility query failed:', e?.message || e);
+    return {
+      edge_presence_sessions: 0,
+      edge_presence_sessions_with_js: 0,
+      edge_presence_sessions_with_image: 0
+    };
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SISTER PIXEL V1 — Roaring-20s Color (controlled rollout)
+//
+// Notes:
+// - Artwork remains cached for UX.
+// - Pixel is first-party, tiny, and explicitly no-store.
+// - Client fires on active-image transitions and includes `v=` cache-bust.
+// - Worker maps `v` presence to source_layer = sister_pixel_v1.
+// ═══════════════════════════════════════════════════════════════════════════
+
+export async function getStatePixelTestRoaring20s(env, filters) {
+  const { dateClause } = filters;
+
+  const qualifiedDateClause = (dateClause || '').replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")';
+  const isChapterImagePageExpr = `(
+    e.page IS NOT NULL
+    AND (
+      substr(e.page, 1, 10) = '/Galleries/'
+      OR substr(e.page, 1, 7) = '/Other/'
+    )
+    AND instr(e.page, '/i-') > 0
+  )`;
+
+  const uaClassExpr = `CASE
+    WHEN LOWER(COALESCE(e.ua, '')) LIKE '%iphone%' OR LOWER(COALESCE(e.ua, '')) LIKE '%ipad%' OR LOWER(COALESCE(e.ua, '')) LIKE '%ipod%' THEN 'ios'
+    WHEN LOWER(COALESCE(e.ua, '')) LIKE '%android%' THEN 'android'
+    WHEN LOWER(COALESCE(e.ua, '')) LIKE '%mac os%' AND LOWER(COALESCE(e.ua, '')) LIKE '%safari%' AND LOWER(COALESCE(e.ua, '')) NOT LIKE '%chrome%' THEN 'mac_safari'
+    WHEN LOWER(COALESCE(e.ua, '')) LIKE '%mobile%' THEN 'mobile'
+    ELSE 'desktop'
+  END`;
+
+  try {
+    const summaryQuery = `
+      WITH base AS (
+        SELECT
+          e.ip_hash AS ip_hash,
+          ${uaClassExpr} AS ua_class,
+          CAST(strftime('%s', e.ts, '-5 hours') / 1800 AS INTEGER) AS bucket,
+          e.event_type AS event_type,
+          e.page AS page,
+          e.source AS source,
+          e.source_layer AS source_layer
+        FROM classified_events e
+        WHERE ${qualifiedDateClause}
+          AND ${notCacheWarmer('e')}
+      )
+      SELECT
+        SUM(CASE WHEN event_type = 'state_pixel' AND source_layer = 'sister_pixel_v1' THEN 1 ELSE 0 END) AS state_pixel_hits,
+        SUM(CASE WHEN event_type = 'edge_page' AND source = 'edge' AND (${isChapterImagePageExpr.replace(/\be\.page\b/g, 'page')}) THEN 1 ELSE 0 END) AS edge_page_hits,
+        COUNT(DISTINCT CASE WHEN event_type = 'state_pixel' AND source_layer = 'sister_pixel_v1'
+          THEN ip_hash || '|' || ua_class || '|' || bucket END) AS state_pixel_sessions,
+        COUNT(DISTINCT CASE WHEN event_type = 'edge_page' AND source = 'edge' AND (${isChapterImagePageExpr.replace(/\be\.page\b/g, 'page')})
+          THEN ip_hash || '|' || ua_class || '|' || bucket END) AS edge_page_sessions
+      FROM base
+    `;
+
+    const summaryRow = await env.DB.prepare(summaryQuery).first();
+
+    const refQuery = `
+      WITH src AS (
+        SELECT e.referer AS referer
+        FROM classified_events e
+        WHERE ${qualifiedDateClause}
+          AND ${notCacheWarmer('e')}
+          AND e.event_type = 'state_pixel'
+          AND e.source_layer = 'sister_pixel_v1'
+      )
+      SELECT
+        CASE
+          WHEN referer IS NULL OR referer = '' THEN '(none)'
+          WHEN instr(referer, '://') > 0 THEN lower(
+            substr(
+              referer,
+              instr(referer, '://') + 3,
+              CASE
+                WHEN instr(substr(referer, instr(referer, '://') + 3), '/') > 0
+                  THEN instr(substr(referer, instr(referer, '://') + 3), '/') - 1
+                ELSE length(referer)
+              END
+            )
+          )
+          ELSE lower(referer)
+        END AS ref_host,
+        COUNT(*) AS hits
+      FROM src
+      GROUP BY ref_host
+      ORDER BY hits DESC
+      LIMIT 10
+    `;
+
+    const refRows = await env.DB.prepare(refQuery).all();
+
+    // Per-viewer/session behavior (identity-based) using visitor_id + session_id.
+    // Computes:
+    // - avg exposures per viewer
+    // - avg duplicate exposures per viewer (same image re-viewed within a visit)
+    // - % viewers who had >=1 duplicate in a visit
+    const viewerStatsQuery = `
+      WITH sp AS (
+        SELECT
+          e.visitor_id AS visitor_id,
+          e.session_id AS session_id,
+          e.target_id AS target_id
+        FROM classified_events e
+        WHERE ${qualifiedDateClause}
+          AND ${notCacheWarmer('e')}
+          AND e.event_type = 'state_pixel'
+          AND e.source_layer = 'sister_pixel_v1'
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
+      ),
+      by_visit AS (
+        SELECT
+          visitor_id,
+          COALESCE(NULLIF(session_id, ''), 'nosid:' || visitor_id) AS visit_id,
+          COUNT(*) AS exposures,
+          COUNT(DISTINCT target_id) AS unique_images
+        FROM sp
+        GROUP BY visitor_id, visit_id
+      ),
+      by_viewer AS (
+        SELECT
+          visitor_id,
+          SUM(exposures) AS exposures,
+          SUM(exposures - unique_images) AS duplicate_exposures,
+          MAX(CASE WHEN exposures > unique_images THEN 1 ELSE 0 END) AS has_duplicates
+        FROM by_visit
+        GROUP BY visitor_id
+      )
+      SELECT
+        COUNT(*) AS viewers,
+        SUM(exposures) AS total_exposures,
+        SUM(duplicate_exposures) AS total_duplicate_exposures,
+        AVG(exposures) AS avg_exposures_per_viewer,
+        AVG(duplicate_exposures) AS avg_duplicate_exposures_per_viewer,
+        SUM(CASE WHEN has_duplicates = 1 THEN 1 ELSE 0 END) AS viewers_with_duplicates,
+        (100.0 * SUM(CASE WHEN has_duplicates = 1 THEN 1 ELSE 0 END) / NULLIF(COUNT(*), 0)) AS pct_viewers_with_duplicates
+      FROM by_viewer
+    `;
+
+    const viewerStatsRow = await env.DB.prepare(viewerStatsQuery).first();
+
+    // Gallery breakout based on the internal referrer path captured as `page`.
+    // Derives gallery root by stripping trailing `/i-...` when present.
+    const byGalleryQuery = `
+      WITH sp AS (
+        SELECT
+          e.page AS page,
+          e.visitor_id AS visitor_id,
+          e.session_id AS session_id,
+          e.target_id AS target_id
+        FROM classified_events e
+        WHERE ${qualifiedDateClause}
+          AND ${notCacheWarmer('e')}
+          AND e.event_type = 'state_pixel'
+          AND e.source_layer = 'sister_pixel_v1'
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
+      ),
+      sp_norm AS (
+        SELECT
+          CASE
+            WHEN page IS NULL OR page = '' THEN '(missing)'
+            WHEN instr(page, '/i-') > 0 THEN substr(page, 1, instr(page, '/i-') - 1)
+            ELSE page
+          END AS gallery_path,
+          visitor_id,
+          COALESCE(NULLIF(session_id, ''), 'nosid:' || visitor_id) AS visit_id,
+          target_id
+        FROM sp
+      ),
+      by_visit AS (
+        SELECT
+          gallery_path,
+          visitor_id,
+          visit_id,
+          COUNT(*) AS exposures,
+          COUNT(DISTINCT target_id) AS unique_images
+        FROM sp_norm
+        GROUP BY gallery_path, visitor_id, visit_id
+      ),
+      by_viewer AS (
+        SELECT
+          gallery_path,
+          visitor_id,
+          SUM(exposures) AS exposures,
+          SUM(exposures - unique_images) AS duplicate_exposures,
+          MAX(CASE WHEN exposures > unique_images THEN 1 ELSE 0 END) AS has_duplicates
+        FROM by_visit
+        GROUP BY gallery_path, visitor_id
+      )
+      SELECT
+        gallery_path,
+        COUNT(*) AS viewers,
+        SUM(exposures) AS exposures,
+        AVG(exposures) AS avg_exposures_per_viewer,
+        AVG(duplicate_exposures) AS avg_duplicate_exposures_per_viewer,
+        SUM(CASE WHEN has_duplicates = 1 THEN 1 ELSE 0 END) AS viewers_with_duplicates,
+        (100.0 * SUM(CASE WHEN has_duplicates = 1 THEN 1 ELSE 0 END) / NULLIF(COUNT(*), 0)) AS pct_viewers_with_duplicates
+      FROM by_viewer
+      GROUP BY gallery_path
+      ORDER BY exposures DESC
+      LIMIT 25
+    `;
+
+    const byGalleryRows = await env.DB.prepare(byGalleryQuery).all();
+
+    return {
+      state_pixel_hits: Number(summaryRow?.state_pixel_hits || 0),
+      edge_page_hits: Number(summaryRow?.edge_page_hits || 0),
+      state_pixel_sessions: Number(summaryRow?.state_pixel_sessions || 0),
+      edge_page_sessions: Number(summaryRow?.edge_page_sessions || 0),
+      top_referrers: refRows?.results || [],
+      viewer_stats: {
+        viewers: Number(viewerStatsRow?.viewers || 0),
+        total_exposures: Number(viewerStatsRow?.total_exposures || 0),
+        total_duplicate_exposures: Number(viewerStatsRow?.total_duplicate_exposures || 0),
+        avg_exposures_per_viewer: Number(viewerStatsRow?.avg_exposures_per_viewer || 0),
+        avg_duplicate_exposures_per_viewer: Number(viewerStatsRow?.avg_duplicate_exposures_per_viewer || 0),
+        viewers_with_duplicates: Number(viewerStatsRow?.viewers_with_duplicates || 0),
+        pct_viewers_with_duplicates: Number(viewerStatsRow?.pct_viewers_with_duplicates || 0)
+      },
+      by_gallery: byGalleryRows?.results || []
+    };
+  } catch (e) {
+    console.log('State pixel test query failed:', e?.message || e);
+    return {
+      state_pixel_hits: 0,
+      edge_page_hits: 0,
+      state_pixel_sessions: 0,
+      edge_page_sessions: 0,
+      top_referrers: [],
+      viewer_stats: {
+        viewers: 0,
+        total_exposures: 0,
+        total_duplicate_exposures: 0,
+        avg_exposures_per_viewer: 0,
+        avg_duplicate_exposures_per_viewer: 0,
+        viewers_with_duplicates: 0,
+        pct_viewers_with_duplicates: 0
+      },
+      by_gallery: []
+    };
+  }
+}
+
+/**
+ * Raw Behavior Distribution (diagnostic only)
+ *
+ * Shows how edge presence sessions behave, without classification:
+ *  - Edge sessions by distinct image count in the same 30-min bucket
+ *  - Avg image request gap histogram (sessions with >= 2 image requests)
+ */
+export async function getRawBehaviorDistribution(env, filters) {
+  const { dateClause } = filters;
+
+  const qualifiedDateClause = (dateClause || '').replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")';
+
+  const uaClassExpr = `CASE
+    WHEN LOWER(COALESCE(e.ua, '')) LIKE '%iphone%' OR LOWER(COALESCE(e.ua, '')) LIKE '%ipad%' OR LOWER(COALESCE(e.ua, '')) LIKE '%ipod%' THEN 'ios'
+    WHEN LOWER(COALESCE(e.ua, '')) LIKE '%android%' THEN 'android'
+    WHEN LOWER(COALESCE(e.ua, '')) LIKE '%mac os%' AND LOWER(COALESCE(e.ua, '')) LIKE '%safari%' AND LOWER(COALESCE(e.ua, '')) NOT LIKE '%chrome%' THEN 'mac_safari'
+    WHEN LOWER(COALESCE(e.ua, '')) LIKE '%mobile%' THEN 'mobile'
+    ELSE 'desktop'
+  END`;
+
+  try {
+    const query = `
+      WITH base AS (
+        SELECT
+          e.ip_hash AS ip_hash,
+          ${uaClassExpr} AS ua_class,
+          CAST(strftime('%s', e.ts, '-5 hours') / 1800 AS INTEGER) AS bucket,
+          e.ts AS ts,
+          e.event_type AS event_type,
+          e.target_id AS target_id,
+          e.source AS source
+        FROM classified_events e
+        WHERE ${qualifiedDateClause}
+          AND ${notCacheWarmer('e')}
+      ),
+      edge AS (
+        SELECT DISTINCT ip_hash, ua_class, bucket
+        FROM base
+        WHERE event_type = 'edge_page'
+          AND source = 'edge'
+      ),
+      img AS (
+        SELECT ip_hash, ua_class, bucket, ts, target_id
+        FROM base
+        WHERE event_type IN (
+          'image_page',
+          'external_image_page',
+          'chapter_exposure',
+          'direct_image',
+          'external_image'
+        )
+          AND target_id IS NOT NULL
+          AND target_id != ''
+      ),
+      img_counts AS (
+        SELECT ip_hash, ua_class, bucket, COUNT(DISTINCT target_id) AS img_count
+        FROM img
+        GROUP BY ip_hash, ua_class, bucket
+      ),
+      edge_with_counts AS (
+        SELECT e.ip_hash, e.ua_class, e.bucket, COALESCE(c.img_count, 0) AS img_count
+        FROM edge e
+        LEFT JOIN img_counts c USING (ip_hash, ua_class, bucket)
+      ),
+      img_seq AS (
+        SELECT
+          ip_hash, ua_class, bucket,
+          CAST(strftime('%s', ts, '-5 hours') * 1000 AS INTEGER) AS tms
+        FROM img
+      ),
+      gaps AS (
+        SELECT
+          ip_hash, ua_class, bucket,
+          (tms - LAG(tms) OVER (PARTITION BY ip_hash, ua_class, bucket ORDER BY tms)) AS gap_ms
+        FROM img_seq
+      ),
+      avg_gaps AS (
+        SELECT ip_hash, ua_class, bucket, AVG(gap_ms) AS avg_gap_ms
+        FROM gaps
+        WHERE gap_ms IS NOT NULL AND gap_ms > 0
+        GROUP BY ip_hash, ua_class, bucket
+      ),
+      edge_with_gap AS (
+        SELECT e.ip_hash, e.ua_class, e.bucket, g.avg_gap_ms
+        FROM edge e
+        JOIN avg_gaps g USING (ip_hash, ua_class, bucket)
+      )
+      SELECT
+        -- Image-count buckets (all edge presence sessions)
+        (SELECT COUNT(*) FROM edge_with_counts) AS total_edge_sessions,
+        (SELECT SUM(CASE WHEN img_count = 0 THEN 1 ELSE 0 END) FROM edge_with_counts) AS img_0,
+        (SELECT SUM(CASE WHEN img_count BETWEEN 1 AND 2 THEN 1 ELSE 0 END) FROM edge_with_counts) AS img_1_2,
+        (SELECT SUM(CASE WHEN img_count BETWEEN 3 AND 10 THEN 1 ELSE 0 END) FROM edge_with_counts) AS img_3_10,
+        (SELECT SUM(CASE WHEN img_count >= 11 THEN 1 ELSE 0 END) FROM edge_with_counts) AS img_10p,
+
+        -- Timing histogram (only sessions with >= 2 image requests)
+        (SELECT COUNT(*) FROM edge_with_gap) AS gap_sessions,
+        (SELECT SUM(CASE WHEN avg_gap_ms < 100 THEN 1 ELSE 0 END) FROM edge_with_gap) AS gap_lt_100,
+        (SELECT SUM(CASE WHEN avg_gap_ms >= 100 AND avg_gap_ms < 500 THEN 1 ELSE 0 END) FROM edge_with_gap) AS gap_100_500,
+        (SELECT SUM(CASE WHEN avg_gap_ms >= 500 AND avg_gap_ms < 2000 THEN 1 ELSE 0 END) FROM edge_with_gap) AS gap_500_2000,
+        (SELECT SUM(CASE WHEN avg_gap_ms >= 2000 AND avg_gap_ms < 10000 THEN 1 ELSE 0 END) FROM edge_with_gap) AS gap_2000_10000,
+        (SELECT SUM(CASE WHEN avg_gap_ms >= 10000 THEN 1 ELSE 0 END) FROM edge_with_gap) AS gap_ge_10000
+    `;
+
+    const row = await env.DB.prepare(query).first();
+    const totalEdgeSessions = Number(row?.total_edge_sessions || 0);
+    const gapSessions = Number(row?.gap_sessions || 0);
+    return {
+      imageCountBuckets: {
+        total: totalEdgeSessions,
+        img_0: Number(row?.img_0 || 0),
+        img_1_2: Number(row?.img_1_2 || 0),
+        img_3_10: Number(row?.img_3_10 || 0),
+        img_10p: Number(row?.img_10p || 0)
+      },
+      avgGapBuckets: {
+        total: gapSessions,
+        lt_100: Number(row?.gap_lt_100 || 0),
+        b100_500: Number(row?.gap_100_500 || 0),
+        b500_2000: Number(row?.gap_500_2000 || 0),
+        b2000_10000: Number(row?.gap_2000_10000 || 0),
+        ge_10000: Number(row?.gap_ge_10000 || 0)
+      }
+    };
+  } catch (e) {
+    console.log('Raw behavior distribution query failed:', e?.message || e);
+    return {
+      imageCountBuckets: { total: 0, img_0: 0, img_1_2: 0, img_3_10: 0, img_10p: 0 },
+      avgGapBuckets: { total: 0, lt_100: 0, b100_500: 0, b500_2000: 0, b2000_10000: 0, ge_10000: 0 }
+    };
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
 // STUB FUNCTIONS — Required by existing dashboard but simplified for V2
 // ═══════════════════════════════════════════════════════════════════════════
 
@@ -1531,8 +2083,8 @@ export async function getEventBreakdown(env, filters) {
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
 
     // Keep in sync with the canonical list in dashboard renderer.
-    // (Not including xl_zoom: it is handled separately.)
     const trackedEvents = [
+      'xl_zoom',
       'browse_all_click',
       'order_clicked',
       'collector_notes_open',
@@ -1568,12 +2120,15 @@ export async function getEventBreakdown(env, filters) {
     ];
     const trackedListSql = trackedEvents.map(e => `'${e}'`).join(', ');
 
+    // Event Breakdown is a JS event inventory panel.
+    // Do NOT require a human_population JOIN here: some JS events (notably legacy zoom beacons)
+    // may arrive without a persisted visitor_id cookie, but are still real interactions.
+    // We still respect Hide Bots / Exclude IP / Hide Team via the clauses.
     const eventsQuery = `
       SELECT
         e.event_type AS event,
         COUNT(*) AS count
-      FROM human_population hp
-      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      FROM classified_events e
       WHERE ${where}
         ${qualify(ipClause)}
         ${qualify(safeBotClause)}
@@ -1773,26 +2328,40 @@ export async function getGeography(env, filters) {
     const { dateClause } = filters;
     // Returns both site visitors and art viewers per location
     const geoQuery = `
-      SELECT 
-        e.country, e.region, e.city,
-        COUNT(DISTINCT e.visitor_id) as visitors,
-        COUNT(DISTINCT CASE 
-          WHEN e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view') 
-          THEN e.visitor_id 
-          ELSE NULL 
-        END) as art_viewers
-      FROM human_population hp
-      JOIN classified_events e ON e.visitor_id = hp.visitor_id
-      WHERE ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
-        AND e.country IS NOT NULL
-        AND EXISTS (
-          SELECT 1 FROM classified_events j
-          WHERE j.visitor_id = e.visitor_id
-            AND j.source = 'js'
-        )
-      GROUP BY e.country, e.region, e.city
-      ORDER BY visitors DESC
-      LIMIT 20
+      WITH base AS (
+        SELECT 
+          e.country, e.region, e.city,
+          COUNT(DISTINCT e.visitor_id) as visitors,
+          COUNT(DISTINCT CASE 
+            WHEN e.event_type = 'chapter_view'
+            THEN e.visitor_id 
+            ELSE NULL 
+          END) as art_viewers
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+          AND e.country IS NOT NULL
+          AND EXISTS (
+            SELECT 1 FROM classified_events j
+            WHERE j.visitor_id = e.visitor_id
+              AND j.source = 'js'
+          )
+        GROUP BY e.country, e.region, e.city
+      ),
+      top_visitors AS (
+        SELECT * FROM base
+        ORDER BY visitors DESC
+        LIMIT 50
+      ),
+      top_art AS (
+        SELECT * FROM base
+        WHERE art_viewers > 0
+        ORDER BY art_viewers DESC
+        LIMIT 50
+      )
+      SELECT * FROM top_visitors
+      UNION
+      SELECT * FROM top_art
     `;
     return await env.DB.prepare(geoQuery).all();
   } catch (e) {
@@ -1818,7 +2387,7 @@ export async function getPeriodTotals(env, filters) {
       SELECT 
         COUNT(DISTINCT e.visitor_id) as total_visitors,
         COUNT(DISTINCT CASE 
-          WHEN e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view') 
+          WHEN e.event_type = 'chapter_view'
           THEN e.visitor_id 
           ELSE NULL 
         END) as total_art_viewers
@@ -1879,7 +2448,7 @@ export async function getDailyTrend(env, filters) {
           ELSE NULL
         END) as sessions,
         COUNT(DISTINCT CASE
-          WHEN e.source = 'js' AND e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view') AND COALESCE(e.is_bot, 0) = 0
+          WHEN e.source = 'js' AND e.event_type = 'chapter_view' AND COALESCE(e.is_bot, 0) = 0
           THEN e.visitor_id
           ELSE NULL
         END) as art_viewers
@@ -2084,7 +2653,8 @@ export async function getTopPages(env, filters) {
       SELECT page AS page_path, COUNT(*) AS views
       FROM classified_events
       WHERE ${where}
-        AND event_type IN ('page_view','gallery_view','chapter_view')
+        AND source = 'js'
+        AND event_type = 'page_view'
         AND COALESCE(is_bot,0) = 0
         AND page IS NOT NULL AND page != ''
       GROUP BY page
@@ -2096,6 +2666,159 @@ export async function getTopPages(env, filters) {
   } catch (e) {
     console.log('Top pages query failed:', e.message, e.stack);
     return { results: [] };
+  }
+}
+
+export async function getTopGalleryLandingPages(env, filters) {
+  try {
+    const { dateClause } = filters;
+    const where = (dateClause || '').trim() || 'ts > datetime("now", "-1 day")';
+
+    // Same semantics as Top Pages, but restricted to *curated* gallery landing pages.
+    // This avoids treating all /Galleries/* content pages as “gallery landings”.
+    const galleryPagesQuery = `
+      WITH e AS (
+        SELECT
+          CASE
+            WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
+            ELSE '/' || raw_page
+          END AS page_path,
+          visitor_id,
+          source,
+          event_type,
+          is_bot
+        FROM (
+          SELECT
+            COALESCE(NULLIF(page, ''), NULLIF(target_id, '')) AS raw_page,
+            visitor_id,
+            source,
+            event_type,
+            is_bot,
+            ts,
+            ip,
+            city,
+            country,
+            region,
+            referer,
+            ua
+          FROM classified_events
+          WHERE ${where}
+        )
+        WHERE raw_page IS NOT NULL
+      )
+      SELECT
+        page_path,
+        COUNT(*) AS views,
+        COUNT(DISTINCT NULLIF(visitor_id, '')) AS unique_viewers
+      FROM e
+      WHERE source = 'js'
+        AND event_type = 'page_view'
+        AND COALESCE(is_bot,0) = 0
+        AND page_path IN ${GALLERY_LANDING_IN_LIST}
+      GROUP BY page_path
+      ORDER BY views DESC
+      LIMIT 15
+    `;
+
+    return await env.DB.prepare(galleryPagesQuery).all();
+  } catch (e) {
+    console.log('Top gallery landing pages query failed:', e.message, e.stack);
+    return { results: [] };
+  }
+}
+
+export async function getBrowserViewsSummary(env, filters) {
+  try {
+    const { dateClause, ipClause, botClause, chardonClause } = filters;
+
+    const qualify = (clause) => (clause || '')
+      .replace(/\bts\b/g, 'e.ts')
+      .replace(/\bip\b/g, 'e.ip')
+      .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bcountry\b/g, 'e.country')
+      .replace(/\bregion\b/g, 'e.region')
+      .replace(/\breferer\b/g, 'e.referer');
+
+    const safeBotClause = (botClause || '')
+      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, ' ')
+      .replace(/\bdevice\s*=\s*'unknown'\b/gi, '1=1');
+
+    const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
+
+    const isChapterPage = `(page_path GLOB '*/i-*' AND page_path NOT GLOB '*/i-*/*')`;
+
+    const q = `
+      WITH normalized AS (
+        SELECT
+          CASE
+            WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
+            ELSE '/' || raw_page
+          END AS page_path,
+          visitor_id
+        FROM (
+          SELECT
+            COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) AS raw_page,
+            NULLIF(e.visitor_id, '') AS visitor_id
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
+          WHERE ${where}
+            ${qualify(ipClause)}
+            ${qualify(safeBotClause)}
+            ${qualify(chardonClause)}
+            AND ${notCacheWarmer('e')}
+            AND e.source = 'js'
+            AND e.event_type = 'page_view'
+            AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
+            AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
+        )
+      )
+      SELECT
+        COUNT(*) AS js_page_views,
+        COUNT(DISTINCT visitor_id) AS js_page_viewers,
+
+        -- 1) Site pages/content: everything except gallery landing pages and /i- chapter/image pages
+        SUM(CASE
+          WHEN page_path NOT IN ${GALLERY_LANDING_IN_LIST}
+           AND NOT ${isChapterPage}
+          THEN 1 ELSE 0 END) AS site_content_views,
+        COUNT(DISTINCT CASE
+          WHEN page_path NOT IN ${GALLERY_LANDING_IN_LIST}
+           AND NOT ${isChapterPage}
+          THEN visitor_id ELSE NULL END) AS site_content_viewers,
+
+        -- 2) Gallery landing page loads (browser)
+        SUM(CASE WHEN page_path IN ${GALLERY_LANDING_IN_LIST} THEN 1 ELSE 0 END) AS gallery_landing_views,
+        COUNT(DISTINCT CASE WHEN page_path IN ${GALLERY_LANDING_IN_LIST} THEN visitor_id ELSE NULL END) AS gallery_landing_viewers,
+
+        -- 3) Chapter/Image page loads (browser) — /i- pages
+        SUM(CASE WHEN ${isChapterPage} THEN 1 ELSE 0 END) AS chapter_image_views,
+        COUNT(DISTINCT CASE WHEN ${isChapterPage} THEN visitor_id ELSE NULL END) AS chapter_image_viewers
+      FROM normalized
+    `;
+
+    const row = await env.DB.prepare(q).first();
+    return {
+      js_page_views: Number(row?.js_page_views || 0),
+      js_page_viewers: Number(row?.js_page_viewers || 0),
+      site_content_views: Number(row?.site_content_views || 0),
+      site_content_viewers: Number(row?.site_content_viewers || 0),
+      gallery_landing_views: Number(row?.gallery_landing_views || 0),
+      gallery_landing_viewers: Number(row?.gallery_landing_viewers || 0),
+      chapter_image_views: Number(row?.chapter_image_views || 0),
+      chapter_image_viewers: Number(row?.chapter_image_viewers || 0)
+    };
+  } catch (e) {
+    console.log('Browser views summary query failed:', e.message, e.stack);
+    return {
+      js_page_views: 0,
+      js_page_viewers: 0,
+      site_content_views: 0,
+      site_content_viewers: 0,
+      gallery_landing_views: 0,
+      gallery_landing_viewers: 0,
+      chapter_image_views: 0,
+      chapter_image_viewers: 0
+    };
   }
 }
 
@@ -2651,9 +3374,9 @@ export async function getBotIntelligence(env) {
             SELECT
               ip_hash,
               strftime('%Y-%m-%d %H:%M', ts) AS minute,
-              COUNT(DISTINCT image_id) AS unique_images_per_minute
+              COUNT(DISTINCT target_id) AS unique_images_per_minute
             FROM raw_events
-            WHERE image_id IS NOT NULL
+            WHERE target_id IS NOT NULL
               AND ts > datetime('now', '-24 hours')
               AND ip_hash IN (SELECT ip_hash FROM suspects)
             GROUP BY ip_hash, minute

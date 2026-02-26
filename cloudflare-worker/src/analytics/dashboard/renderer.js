@@ -4,9 +4,59 @@
 // NO DB access, NO env usage, NO filter logic — rendering only.
 // ═══════════════════════════════════════════════════════════════════════════
 
-export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, imageAccessOverview, viewerDepth, suppressionStats, botIntelligence, periodTotals, authHeader }) {
+import { GALLERY_LANDING_PATHS } from './galleryLandingPaths.js';
+
+export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, galleries, referrers, geo, trend, devices, coverageVisibility, rawBehaviorDistribution, statePixelTestRoaring20s, pages, topGalleryLandingPages, browserViewsSummary, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, imageAccessOverview, viewerDepth, suppressionStats, botIntelligence, periodTotals, authHeader }) {
   const s = summary || {};
   const safeDeviceEngagement = Array.isArray(deviceEngagement) ? deviceEngagement : [];
+
+  const cv = coverageVisibility || {};
+  const edgePresenceSessions = Number(cv.edge_presence_sessions || 0);
+  const edgeSessionsWithImage = Number(cv.edge_presence_sessions_with_image || 0);
+  const edgePresenceSessionsWithJs = Number(cv.edge_presence_sessions_with_js || 0);
+  const jsSessionIds = Number(s.sessions || 0);
+  const privacyHiddenHumans = Math.max(0, edgePresenceSessions - edgePresenceSessionsWithJs);
+  const coverageRatioPct = edgePresenceSessions > 0 ? Math.round((edgePresenceSessionsWithJs / edgePresenceSessions) * 100) : 0;
+  const edgeToImagePct = edgePresenceSessions > 0 ? Math.round((edgeSessionsWithImage / edgePresenceSessions) * 100) : 0;
+
+  const rbd = rawBehaviorDistribution || {};
+  const ic = rbd.imageCountBuckets || { total: 0, img_0: 0, img_1_2: 0, img_3_10: 0, img_10p: 0 };
+  const gb = rbd.avgGapBuckets || { total: 0, lt_100: 0, b100_500: 0, b500_2000: 0, b2000_10000: 0, ge_10000: 0 };
+  const pct = (n, d) => (d > 0 ? Math.round((Number(n || 0) / d) * 100) : 0);
+
+  const sp = statePixelTestRoaring20s || {};
+  const spHits = Number(sp.state_pixel_hits || 0);
+  const spEdgeHits = Number(sp.edge_page_hits || 0);
+  const spHitRatioPct = spEdgeHits > 0 ? Math.round((spHits / spEdgeHits) * 100) : 0;
+  const spSessions = Number(sp.state_pixel_sessions || 0);
+  const spEdgeSessions = Number(sp.edge_page_sessions || 0);
+  const spSessionRatioPct = spEdgeSessions > 0 ? Math.round((spSessions / spEdgeSessions) * 100) : 0;
+  const spTopReferrers = Array.isArray(sp.top_referrers) ? sp.top_referrers : [];
+  const spViewerStats = sp.viewer_stats || {};
+  const spByGallery = Array.isArray(sp.by_gallery) ? sp.by_gallery : [];
+  const spViewers = Number(spViewerStats.viewers || 0);
+  const spAvgExposuresPerViewer = Number(spViewerStats.avg_exposures_per_viewer || 0);
+  const spAvgDupExposuresPerViewer = Number(spViewerStats.avg_duplicate_exposures_per_viewer || 0);
+  const spPctViewersWithDupes = Number(spViewerStats.pct_viewers_with_duplicates || 0);
+  const fmt2 = (n) => (Number.isFinite(Number(n)) ? Number(n).toFixed(2) : '0.00');
+
+  const galleryLandingPathSet = new Set(GALLERY_LANDING_PATHS);
+
+  const bvs = browserViewsSummary || {};
+  const siteContentViews = Number(bvs.site_content_views || 0);
+  const siteContentViewers = Number(bvs.site_content_viewers || 0);
+  const galleryLandingViews = Number(bvs.gallery_landing_views || 0);
+  const galleryLandingViewers = Number(bvs.gallery_landing_viewers || 0);
+  const chapterImageViews = Number(bvs.chapter_image_views || 0);
+  const chapterImageViewers = Number(bvs.chapter_image_viewers || 0);
+
+  const safeTopGalleryLandingPages = Array.isArray(topGalleryLandingPages) ? topGalleryLandingPages : [];
+  const topGalleryLandingTotalViews = safeTopGalleryLandingPages.reduce((sum, r) => sum + Number(r?.views || 0), 0);
+  const galleryDisplayNameFromPath = (path) => {
+    const parts = String(path || '').split('/').filter(Boolean);
+    const clean = (parts[0] === 'Galleries' || parts[0] === 'Other') ? parts.slice(1) : parts;
+    return clean.slice(-2).join('/') || String(path || '');
+  };
   
   // Trend is always the current range window (for charting), even when a specific
   // calendar day is selected. When selectedDate is present, use the matching bar
@@ -71,40 +121,38 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   // Alphabetized: high-value events first, then passive/scroll events
   const eventLabels = {
     // -- High-value user interactions --
+    'page_view': 'Page View',
+    'xl_zoom': 'XL Zoom',
     'browse_all_click': 'Browse All Click',
+    'all_list_click': 'All List Click',
     'order_clicked': 'Buy Button Click',
+    'order_submitted': 'Order Submitted',
     'collector_notes_open': 'Collector Notes',
+    'more_info_open': 'More Info',
     'cowboy_jump': 'Cowboy Jump',
     'exit_to_gallery': 'Exit to Gallery',
     'gallery_explore_click': 'Gallery Explore Click',
     'gallery_preview_click': 'Gallery Preview Click',
+    'gallery_hero_click': 'Gallery Hero Click',
     'guide_open': 'Guide',
     'guide_close': 'Guide - Close',
     'guide_done': 'Guide - Done',
     'guide_click_outside': 'Guide - Click Outside',
-    'gallery_hero_click': 'Hero Image Click',
-    'more_info_open': 'More About Image',
-    'nav_next': 'Nav - Next',
-    'nav_prev': 'Nav - Prev',
-    'order_submitted': 'Order Inquiry Sent',
+    'nav_next': 'Nav Next',
+    'nav_prev': 'Nav Prev',
     'series_info': 'Series Info',
     'sister_image_click': 'Sister Image Click',
     'slideshow_start': 'Slideshow Start',
     'story_slider_click': 'Story Slider Click',
     'theme_click': 'Theme Click',
-    // xl_zoom is intentionally omitted: it's counted separately as a user-intent metric (never image request)
-
-    // -- Passive / system events --
-    'all_list_click': 'All Galleries Click',
-    'grid_open': 'Grid - Open',
-    'grid_image_click': 'Grid - Image Click',
-    'grid_show_more': 'Grid - Show More',
-    'grid_show_previous': 'Grid - Show Previous',
-    'scroll_25': 'Page - 25% Scroll',
-    'scroll_50': 'Page - 50% Scroll',
-    'scroll_75': 'Page - 75% Scroll',
-    'scroll_100': 'Page - 100% Scroll',
-    'page_view': 'Page View',
+    'grid_open': 'Grid Open',
+    'grid_image_click': 'Grid Image Click',
+    'grid_show_more': 'Grid Show More',
+    'grid_show_previous': 'Grid Show Previous',
+    'scroll_25': 'Scroll 25%',
+    'scroll_50': 'Scroll 50%',
+    'scroll_75': 'Scroll 75%',
+    'scroll_100': 'Scroll 100%',
     'session_exit': 'Session Exit'
   };
   
@@ -114,7 +162,10 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   
   // Inject slideshow_start from art_views (Layer B) into event counts
   if (artViewsSummary?.slideshow_starts) {
-    eventCounts['slideshow_start'] = (eventCounts['slideshow_start'] || 0) + artViewsSummary.slideshow_starts;
+    // Only backfill if it wasn't already returned by the Event Breakdown query.
+    if (eventCounts['slideshow_start'] == null) {
+      eventCounts['slideshow_start'] = artViewsSummary.slideshow_starts;
+    }
   }
   
   const allEvents = Object.keys(eventLabels).map(key => ({
@@ -248,6 +299,10 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     };
   })();
 
+  const otherAccessViews = (imageAccessTotals.unverifiedViews || 0) + (imageAccessTotals.externalViews || 0);
+  const internalProxyViews = Math.max(0, (imageAccessTotals.imageProxyViews || 0) - (imageAccessTotals.externalViews || 0));
+  const coreAccessViews = (imageAccessTotals.chapterViews || 0) + (imageAccessTotals.zoomViews || 0) + internalProxyViews;
+
   // Pulse stat: proxy-verified exposures only (matches tooltip copy).
   // C = JS-verified chapter views
   // E = external embed views (subset of image-proxy bucket)
@@ -288,8 +343,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     .pulse-stat .value { font-size: 18px; font-weight: bold; color: #4a9eff; }
     .pulse-stat .label { font-size: 11px; color: #888; display: flex; align-items: center; gap: 4px; }
     .pulse-stat .info-icon { width: 12px; height: 12px; border-radius: 50%; background: #444; color: #888; font-size: 9px; display: inline-flex; align-items: center; justify-content: center; font-style: italic; }
-    .pulse-stat .tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; white-space: nowrap; z-index: 1000; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); max-width: 280px; white-space: normal; line-height: 1.4; }
-    .pulse-stat .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #333; }
+    .pulse-stat .tooltip { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; white-space: nowrap; z-index: 1000; margin-top: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); max-width: 280px; white-space: normal; line-height: 1.4; }
+    .pulse-stat .tooltip::after { content: ''; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-bottom-color: #333; }
     .pulse-stat:hover .tooltip { display: block; }
     .pulse-stat.highlight { background: linear-gradient(135deg, #d97706 0%, #b45309 100%); }
     .pulse-stat.highlight .value { color: #fff; }
@@ -346,8 +401,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     .section-header h3 { margin: 0; }
     .section-tip { position: relative; cursor: help; }
     .section-tip .info-icon { width: 14px; height: 14px; border-radius: 50%; background: #444; color: #888; font-size: 10px; display: inline-flex; align-items: center; justify-content: center; font-style: italic; }
-    .section-tip .tooltip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; z-index: 1000; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); width: 220px; line-height: 1.4; }
-    .section-tip .tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #333; }
+    .section-tip .tooltip { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #333; color: #e0e0e0; padding: 8px 12px; border-radius: 6px; font-size: 11px; z-index: 1000; margin-top: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); width: 220px; line-height: 1.4; }
+    .section-tip .tooltip::after { content: ''; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-bottom-color: #333; }
     .section-tip:hover .tooltip { display: block; }
     .mini-btn { font-size: 10px; padding: 3px 8px; border: 1px solid #444; border-radius: 6px; background: #1a1a1a; color: #ccc; cursor: pointer; }
     .mini-btn:hover { background: #333; }
@@ -366,8 +421,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     .artviews-header .artviews-title .subtle { margin-left: 10px; opacity: 0.6; font-size: 0.85em; color: #10b981; }
     .artviews-header .help-trigger { position: relative; cursor: help; }
     .artviews-header .help-trigger .info-icon { width: 18px; height: 18px; border-radius: 50%; background: #444; color: #888; font-size: 11px; display: inline-flex; align-items: center; justify-content: center; font-style: italic; }
-    .artviews-header .help-trigger .tooltip { display: none; position: absolute; bottom: 100%; right: 0; transform: none; background: #333; color: #e0e0e0; padding: 10px 14px; border-radius: 6px; font-size: 11px; z-index: 1000; margin-bottom: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); width: 280px; line-height: 1.5; }
-    .artviews-header .help-trigger .tooltip::after { content: ''; position: absolute; top: 100%; right: 8px; border: 6px solid transparent; border-top-color: #333; }
+    .artviews-header .help-trigger .tooltip { display: none; position: absolute; top: 100%; right: 0; transform: none; background: #333; color: #e0e0e0; padding: 10px 14px; border-radius: 6px; font-size: 11px; z-index: 1000; margin-top: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); width: 280px; line-height: 1.5; }
+    .artviews-header .help-trigger .tooltip::after { content: ''; position: absolute; bottom: 100%; right: 8px; border: 6px solid transparent; border-bottom-color: #333; }
     .artviews-header .help-trigger:hover .tooltip { display: block; }
     /* Wide sections span 2 columns */
     .section.wide { grid-column: span 2; }
@@ -461,7 +516,6 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       .controls a { font-size: 11px; padding: 6px 10px; }
       .controls > div { width: 100%; margin-top: 8px; flex-wrap: wrap; gap: 6px; justify-content: center; }
       .ip-filter { flex-wrap: wrap; gap: 6px; justify-content: center; width: 100%; }
-      .ip-filter a { font-size: 10px; padding: 5px 10px; }
       .controls > span { order: -1; width: 100%; text-align: center; margin-bottom: 4px; }
       
       /* ═══ BAR CHARTS ═══ */
@@ -474,7 +528,6 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       }
       .bar-container { 
         flex: 1 1 auto !important; 
-        min-width: 0 !important;
         width: auto !important;
       }
       .bar-value { 
@@ -603,22 +656,10 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       .access-row > span:nth-child(4) { grid-column: 2 !important; }
       .access-row > span:nth-child(5) { grid-column: 3 !important; }
       .access-row > span:nth-child(6) { grid-column: 4 !important; }
-
-      /* U stat: Row 4, span width */
-      .access-row > span:nth-child(7) {
-        grid-row: 4 !important;
-        grid-column: 2 / -1 !important;
-        width: auto !important;
-        text-align: center !important;
-        padding: 4px 8px !important;
-        background: rgba(255,255,255,0.03) !important;
-        border-radius: 4px !important;
-        font-size: 13px !important;
-      }
       
       /* Source: Row 5, span full width */
-      .access-row > div:nth-child(8) {
-        grid-row: 5 !important;
+      .access-row > div:nth-child(7) {
+        grid-row: 4 !important;
         grid-column: 1 / -1 !important;
         width: 100% !important;
         padding-top: 6px !important;
@@ -744,7 +785,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   ${trend.length > 1 ? `
   <h3 class="chart-header" style="color:#fff;font-size:14px;margin-bottom:6px;">
     <span id="chart-title">Site Visitors per Day</span>
-    <span class="chart-totals" style="font-size:12px;color:#888;margin-left:12px;">Total: <span style="color:#4a9eff;font-weight:bold;">${totalSiteVisitors}</span>${isMultiDay && uniqueSiteVisitors < summedSiteVisitors ? ` <span style="color:#666;">(${uniqueSiteVisitors} unique)</span>` : ''} visitors, <span style="color:#a855f7;font-weight:bold;">${totalArtViewers}</span>${isMultiDay && uniqueArtViewers < summedArtViewers ? ` <span style="color:#666;">(${uniqueArtViewers} unique)</span>` : ''} viewed art</span>
+    <span class="chart-totals" style="font-size:12px;color:#888;margin-left:12px;">Total: <span style="color:#4a9eff;font-weight:bold;">${totalSiteVisitors}</span>${isMultiDay && uniqueSiteVisitors < summedSiteVisitors ? ` <span style="color:#666;">(${uniqueSiteVisitors} unique)</span>` : ''} visitors, <span style="color:#a855f7;font-weight:bold;">${totalArtViewers}</span>${isMultiDay && uniqueArtViewers < summedArtViewers ? ` <span style="color:#666;">(${uniqueArtViewers} unique)</span>` : ''} viewed images</span>
   </h3>
   <div class="trend-chart">
     <div class="trend-bars" id="trend-chart-bars">
@@ -756,7 +797,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           const isDataChangeDate = t.day === '2026-02-14';
           const isSelected = selectedDate === t.day;
           return `
-            <div class="trend-bar${isSelected ? ' selected' : ''}" data-visitors="${t.visitors}" data-sessions="${t.sessions}" data-art-viewers="${t.art_viewers || 0}" data-day="${t.day}" style="height: ${height}%" title="${t.day}: ${t.visitors} visitors (${t.art_viewers || 0} viewed art)">
+            <div class="trend-bar${isSelected ? ' selected' : ''}" data-visitors="${t.visitors}" data-sessions="${t.sessions}" data-art-viewers="${t.art_viewers || 0}" data-day="${t.day}" style="height: ${height}%" title="${t.day}: ${t.visitors} visitors (${t.art_viewers || 0} viewed images)">
               <span class="trend-bar-value">${t.visitors}</span>
               <span class="trend-bar-label">${dateLabel}${isDataChangeDate ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ''}</span>
             </div>
@@ -791,13 +832,32 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   <div class="trend-chart">
     <h3>Site Visitors</h3>
     <div class="trend-bars" style="justify-content: center;">
-      <div class="trend-bar" style="height: 100%; width: 80px;" title="${trend[0].day}: ${trend[0].visitors} visitors (${trend[0].art_viewers || 0} viewed art)">
+      <div class="trend-bar" style="height: 100%; width: 80px;" title="${trend[0].day}: ${trend[0].visitors} visitors (${trend[0].art_viewers || 0} viewed images)">
         <span class="trend-bar-value">${trend[0].visitors}</span>
         <span class="trend-bar-label">${trend[0].day.slice(5)}${trend[0].day === '2026-02-14' ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ''}</span>
       </div>
     </div>
   </div>
   ` : ''}
+
+  <h2>Browser Views (JS)</h2>
+  <div class="pulse-row">
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);">
+      <span class="value" style="color: #fff;">📄 ${siteContentViews}</span>
+      <span class="label" style="color: #cbd5e1;">Site Pages / Content <span class="info-icon" style="background: rgba(255,255,255,0.12); color: #cbd5e1;">i</span></span>
+      <div class="tooltip">Count of <strong>JS page_view</strong> (page loads). If 6 people hit Home, that’s 6. If 1 person revisits Home 8 times, that’s 8. Includes everything EXCEPT leaf gallery landing pages and chapter/image pages (/i-...). This is <em>not</em> sessions and <em>not</em> unique pages. Viewers: ${siteContentViewers}.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+      <span class="value" style="color: #fff;">🖼 ${galleryLandingViews}</span>
+      <span class="label" style="color: #a7f3d0;">Gallery Landing Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
+      <div class="tooltip">Count of <strong>JS page_view</strong> (page loads) to <em>leaf gallery landing pages</em> (the gallery roots that contain images — essentially the chapter URL without the trailing <code>/i-...</code>). Content/collection pages under <code>/Galleries</code> are treated as Site Content. Viewers: ${galleryLandingViewers}.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
+      <span class="value" style="color: #fff;">🔍 ${chapterImageViews}</span>
+      <span class="label" style="color: #ddd6fe;">Chapter - Image Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
+      <div class="tooltip">Count of <strong>JS page_view</strong> (page loads) to chapter/image pages (URL contains /i-...). Viewers: ${chapterImageViewers}.</div>
+    </div>
+  </div>
 
   <h2>Pulse</h2>
   <div class="pulse">
@@ -810,11 +870,6 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <span class="value"><span style="color:#10b981">${newVisitors}</span>/<span style="color:#f59e0b">${returningVisitors}</span></span>
       <span class="label">New/Ret <span class="info-icon">i</span></span>
       <div class="tooltip">New: IPs never seen before this period. Returning: IPs that visited previously. Green = new, Orange = returning.</div>
-    </div>
-    <div class="pulse-stat">
-      <span class="value">${s.sessions || 0}${minEngagement > 0 ? `<span style="opacity: 0.6; font-size: 0.7em;"> (${minEngagement}-${maxEngagement})</span>` : ''}</span>
-      <span class="label">Engaged <span class="info-icon">i</span></span>
-      <div class="tooltip">Engaged sessions: browser sessions where JS loaded and events fired. Range shows min-max engagement scores (zoom=4, notes=5, theme=3, nav=2).</div>
     </div>
     <div class="pulse-stat">
       <span class="value">${s.avg_events_per_session || 0}</span>
@@ -831,57 +886,201 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <span class="label">Peak <span class="info-icon">i</span></span>
       <div class="tooltip">Highest traffic hour in morning (AM) and evening (PM) periods. ${peakHours.map(h => `${h.period}: ${h.hour} (${h.sessions} sessions)`).join(', ')}. Great for social posting timing.</div>
     </div>` : ''}
-    <div class="pulse-stat" style="background: ${bounceRate > 60 ? 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)' : bounceRate > 40 ? 'linear-gradient(135deg, #c2410c 0%, #9a3412 100%)' : 'linear-gradient(135deg, #10b981 0%, #059669 100%)'};">
-      <span class="value" style="color: #fff;">${bounceRate}%</span>
-      <span class="label" style="color: ${bounceRate > 40 ? '#fed7aa' : '#a7f3d0'};">Bounce <span class="info-icon" style="background: rgba(255,255,255,0.2); color: ${bounceRate > 40 ? '#fed7aa' : '#a7f3d0'};">i</span></span>
+    <div class="pulse-stat">
+      <span class="value" style="color: ${bounceRate > 60 ? '#ef4444' : bounceRate > 40 ? '#f59e0b' : '#10b981'};">${bounceRate}%</span>
+      <span class="label" style="color: ${bounceRate > 60 ? '#fecaca' : bounceRate > 40 ? '#fed7aa' : '#a7f3d0'};">Bounce <span class="info-icon" style="background: rgba(255,255,255,0.2); color: ${bounceRate > 60 ? '#fecaca' : bounceRate > 40 ? '#fed7aa' : '#a7f3d0'};">i</span></span>
       <div class="tooltip">Sessions with only 1 event (came and left immediately). Lower is better. Above 60% = concern, below 40% = great.</div>
     </div>
   </div>
 
+  <h2>Coverage &amp; Visibility</h2>
   <div class="pulse-row">
-    ${viewerDepth?.avgScore > 0 ? `<div class="pulse-stat collector">
-      <span class="value" style="color: #fff;">⭐ ${viewerDepth.avgScore}</span>
-      <span class="label" style="color: #c4b5fd;">Avg Depth <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #c4b5fd;">i</span></span>
-      <div class="tooltip">Viewer Depth Score — your TRUE NORTH metric. Measures engagement quality: gallery=1, image=2, zoom=5. Higher = deeper art engagement. Distribution: ${viewerDepth.distribution?.map(d => `${d.label}: ${d.count}`).join(', ') || 'none'}. Max today: ${viewerDepth.maxScore || 0}.</div>
-    </div>` : ''}
-    ${viewerDepth?.highDepthCount > 0 ? `<div class="pulse-stat" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
-      <span class="value" style="color: #fff;">🎯 ${viewerDepth.highDepthCount}</span>
-      <span class="label" style="color: #a7f3d0;">Collectors <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
-      <div class="tooltip">High-depth viewers (score 20+) exhibiting collector behavior: multiple images, zooms, intentional browsing. These are your potential buyers.</div>
-    </div>` : ''}
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);">
-      <span class="value" style="color: #fff;">🎨 ${totalArtViewers}/${totalSiteVisitors}</span>
-      <span class="label" style="color: #e9d5ff;">Art Viewers <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #e9d5ff;">i</span></span>
-      <div class="tooltip">Art Viewers vs Site Visitors (period total). Art Viewers = visitors who actually viewed art (chapters, galleries, or zoomed images). Site Visitors = all JS-verified page views including blog, homepage, etc. Today: ${artViewersToday}/${siteVisitorsToday}.</div>
-    </div>
-    ${cowboyJumps > 0 ? `<div class="pulse-stat highlight">
-      <span class="value">🤠 ${cowboyJumps}</span>
-      <span class="label">Cowboy Jump <span class="info-icon">i</span></span>
-      <div class="tooltip">Total cowboy jump clicks. Every click counts!</div>
-    </div>` : ''}
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-      <span class="value" style="color: #fff;">📊 ${s.sessions || 0}${minEngagement > 0 ? `<span style="opacity: 0.6; font-size: 0.7em;"> (${minEngagement}-${maxEngagement})</span>` : ''}</span>
-      <span class="label" style="color: #a7f3d0;">Engaged Sessions <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
-      <div class="tooltip">Engaged sessions: browser sessions where JS loaded and events fired. Range shows min-max engagement scores (zoom=4, notes=5, theme=3, nav=2).</div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);">
+      <span class="value" style="color: #fff;">🧱 ${edgePresenceSessions}</span>
+      <span class="label" style="color: #cbd5e1;">Total Edge Presence <span class="info-icon" style="background: rgba(255,255,255,0.12); color: #cbd5e1;">i</span></span>
+      <div class="tooltip">Count of <strong>edge_page</strong> top-level HTML navigations clustered into 30-minute buckets by <code>ip_hash + ua_class</code>. This is presence without identity; it includes privacy browsers and JS-blocked visits.</div>
     </div>
     <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
-      <span class="value" style="color: #fff;">👤 ${exposureViews}</span>
-      <span class="label" style="color: #ddd6fe;">Exposure Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
-      <div class="tooltip">Proxy-verified exposures: <strong>C</strong> (Chapters) + <strong>E</strong> (External image serves). It intentionally does <em>not</em> include <strong>Z</strong> (XL zoom intent) or gallery navigation.</div>
+      <span class="value" style="color: #fff;">✅ ${edgePresenceSessionsWithJs}</span>
+      <span class="label" style="color: #ddd6fe;">JS Verified Sessions <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
+      <div class="tooltip">Count of edge presence sessions (same <code>ip_hash + ua_class + 30-min bucket</code> key) that also produced ≥1 <strong>JS page_view</strong>. (Raw JS <code>session_id</code> count for this period: <strong>${jsSessionIds}</strong>.)</div>
     </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+      <span class="value" style="color: #fff;">🕶 ${privacyHiddenHumans}</span>
+      <span class="label" style="color: #ffedd5;">Privacy Hidden Humans <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ffedd5;">i</span></span>
+      <div class="tooltip">Estimated sessions present at the edge but missing JS beacons: <code>Edge Presence - JS Verified Sessions</code>. This approximates Safari/adblock/cookie-wiped/JS-failed traffic.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+      <span class="value" style="color: #fff;">📈 ${coverageRatioPct}%</span>
+      <span class="label" style="color: #a7f3d0;">Coverage Ratio <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
+      <div class="tooltip">Share of edge presence that becomes JS-verified: <code>JS Sessions / Edge Presence</code>.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #22d3ee 0%, #0284c7 100%);">
+      <span class="value" style="color: #fff;">🖼 ${edgeSessionsWithImage} <span style="color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 700;">(${edgeToImagePct}%)</span></span>
+      <span class="label" style="color: #cffafe;">Edge → Image Conversion <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #cffafe;">i</span></span>
+      <div class="tooltip">Edge presence sessions that fetched ≥1 image via the proxy (<code>chapter_exposure</code>, <code>direct_image</code>, <code>external_image</code>) in the same 30-minute bucket. Note: this is <em>server-observed fetch</em> conversion; browser cache + preloading can make a real on-screen view produce <em>no</em> new proxy request.</div>
+    </div>
+  </div>
+
+  <h2>Sister Pixel (V1) — All Galleries</h2>
+  <div class="pulse-row">
     <div class="pulse-stat" style="background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);">
-      <span class="value" style="color: #fff;">🧊 ${artViewsSummary?.harvester_friction_events || 0}</span>
-      <span class="label" style="color: #cbd5e1;">Slowed <span class="info-icon" style="background: rgba(255,255,255,0.12); color: #cbd5e1;">i</span></span>
-      <div class="tooltip"><strong>Friction events (selected period):</strong> image requests where selective friction engaged. Includes both <em>delayed</em> (650-1600ms) and <em>429'd</em> (hard stop) requests. See Bot Intelligence for the breakdown.</div>
+      <span class="value" style="color: #fff;">🧪 ${spHits}</span>
+      <span class="label" style="color: #cbd5e1;">Pixel Exposures <span class="info-icon" style="background: rgba(255,255,255,0.12); color: #cbd5e1;">i</span></span>
+      <div class="tooltip">Count of <strong>state_pixel</strong> requests with <code>source_layer=sister_pixel_v1</code>. Fired on <em>active image id</em> transitions (deduped) using a first-party 1×1 no-store pixel.</div>
     </div>
-    ${suppressionStats?.activeSuppressedIPs > 0 ? `<div class="pulse-stat" style="background: linear-gradient(135deg, #475569 0%, #334155 100%);">
-      <span class="value" style="color: #94a3b8;">🛡 ${suppressionStats.activeSuppressedIPs}</span>
-      <span class="label" style="color: #94a3b8;">Filtered <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #94a3b8;">i</span></span>
-      <div class="tooltip">${hideBots
-        ? `Visitors hidden by <strong>Hide Bots</strong> for this period. Hidden events: ${suppressionStats.suppressedToday || 0}.`
-        : `Legacy bot-classified visitors (UA/ASN). Bot events this period: ${suppressionStats.suppressedToday || 0}.`
-      }</div>
-    </div>` : ''}
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
+      <span class="value" style="color: #fff;">🧱 ${spEdgeHits}</span>
+      <span class="label" style="color: #ddd6fe;">Edge Arrivals <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
+      <div class="tooltip">Count of <strong>edge_page</strong> top-level HTML navigations to chapter image pages (path starts with <code>/Galleries/</code> or <code>/Other/</code> and contains <code>/i-</code>). Baseline for exposure→arrival ratio.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+      <span class="value" style="color: #fff;">📈 ${spHitRatioPct}%</span>
+      <span class="label" style="color: #a7f3d0;">Exposure → Edge Ratio <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
+      <div class="tooltip">Exposure depth index for this scope: <code>pixel_exposures / edge_arrivals</code>. Rough interpretation: ~1 single-image visits; 2–5 light browsing; 5–20 deep engagement; 20+ slideshow behavior.</div>
+    </div>
+    <div class="pulse-stat" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+      <span class="value" style="color: #fff;">🧩 ${spSessions} <span style="color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 700;">(${spSessionRatioPct}%)</span></span>
+      <span class="label" style="color: #ffedd5;">Pixel Sessions (Inferred) <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ffedd5;">i</span></span>
+      <div class="tooltip">Distinct 30-min buckets clustered by <code>ip_hash + ua_class</code> that produced at least one state pixel hit. Percent is <code>pixel_sessions / edge_sessions</code>.</div>
+    </div>
+  </div>
+
+  <div class="section" style="max-width:1780px;margin:0 auto 18px;">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <h3 style="margin:0;">Viewer Behavior (Sister Pixel)</h3>
+      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Identity-based view of sister pixel behavior using <code>visitor_id</code> and <code>session_id</code>. “Duplicates” = exposures where a visitor re-viewed the same image within the same visit (visit = session_id, with a fallback if missing).</div></span>
+    </div>
+    <div style="margin-top:10px;">
+      <table style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr style="color:#888;font-size:12px;text-align:left;">
+            <th style="padding:6px 0;border-bottom:1px solid #333;">Viewers</th>
+            <th style="padding:6px 0;border-bottom:1px solid #333;">Avg exposures / viewer</th>
+            <th style="padding:6px 0;border-bottom:1px solid #333;">Avg duplicate exposures / viewer</th>
+            <th style="padding:6px 0;border-bottom:1px solid #333;">% viewers w/ duplicates</th>
+          </tr>
+        </thead>
+        <tbody style="font-size:13px;">
+          <tr>
+            <td style="padding:8px 0;border-bottom:1px solid #222;">${spViewers}</td>
+            <td style="padding:8px 0;border-bottom:1px solid #222;">${fmt2(spAvgExposuresPerViewer)}</td>
+            <td style="padding:8px 0;border-bottom:1px solid #222;">${fmt2(spAvgDupExposuresPerViewer)}</td>
+            <td style="padding:8px 0;border-bottom:1px solid #222;">${fmt2(spPctViewersWithDupes)}%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section" style="max-width:1780px;margin:0 auto 18px;">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <h3 style="margin:0;">By Gallery (Sister Pixel)</h3>
+      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Breakout is derived from the pixel request’s referrer path captured as <code>page</code>. We strip the trailing <code>/i-...</code> to get the gallery root.</div></span>
+    </div>
+    <div style="margin-top:10px;">
+      ${spByGallery.length > 0 ? `
+      <table style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr style="color:#888;font-size:12px;text-align:left;">
+            <th style="padding:6px 0;border-bottom:1px solid #333;">Gallery</th>
+            <th style="padding:6px 0;border-bottom:1px solid #333;">Exposures</th>
+            <th style="padding:6px 0;border-bottom:1px solid #333;">Viewers</th>
+            <th style="padding:6px 0;border-bottom:1px solid #333;">Avg / viewer</th>
+            <th style="padding:6px 0;border-bottom:1px solid #333;">% w/ dupes</th>
+          </tr>
+        </thead>
+        <tbody style="font-size:13px;">
+          ${spByGallery.map(r => {
+            const galleryPath = String(r.gallery_path || '');
+            const displayLabel = galleryDisplayNameFromPath(galleryPath);
+            const linkUrl = galleryPath && galleryPath.startsWith('/') ? ('https://k4studios.com' + galleryPath) : '#';
+            const exposures = Number(r.exposures || 0);
+            const viewers = Number(r.viewers || 0);
+            const avgPerViewer = Number(r.avg_exposures_per_viewer || 0);
+            const pctDupes = Number(r.pct_viewers_with_duplicates || 0);
+            return `<tr><td style="padding:8px 0;border-bottom:1px solid #222;"><a href="${linkUrl}" target="_blank" rel="noopener" style="color:#c4b5fd;text-decoration:none;" title="${galleryPath}">${displayLabel}</a></td><td style="padding:8px 0;border-bottom:1px solid #222;">${exposures}</td><td style="padding:8px 0;border-bottom:1px solid #222;">${viewers}</td><td style="padding:8px 0;border-bottom:1px solid #222;">${fmt2(avgPerViewer)}</td><td style="padding:8px 0;border-bottom:1px solid #222;">${fmt2(pctDupes)}%</td></tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+      ` : `<div style="color:#aaa;font-size:13px;">No sister pixel gallery data for this period.</div>`}
+    </div>
+  </div>
+
+  <div class="section" style="max-width:1780px;margin:0 auto 18px;">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <h3 style="margin:0;">Referrers (Sister Pixel)</h3>
+      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Top referer hosts for <strong>state_pixel</strong> requests in this test. Blank/missing referers are shown as <code>(none)</code>.</div></span>
+    </div>
+    <div style="margin-top:10px;">
+      ${spTopReferrers.length > 0 ? `
+      <table style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr style="color:#888;font-size:12px;text-align:left;">
+            <th style="padding:6px 0;border-bottom:1px solid #333;">Referrer</th>
+            <th style="padding:6px 0;border-bottom:1px solid #333;">Hits</th>
+          </tr>
+        </thead>
+        <tbody style="font-size:13px;">
+          ${spTopReferrers.map(r => `<tr><td style="padding:8px 0;border-bottom:1px solid #222;">${r.ref_host}</td><td style="padding:8px 0;border-bottom:1px solid #222;">${r.hits}</td></tr>`).join('')}
+        </tbody>
+      </table>
+      ` : `<div style="color:#aaa;font-size:13px;">No sister pixel referrer data for this period.</div>`}
+    </div>
+  </div>
+
+  <h2>Raw Behavior Distribution</h2>
+  <div style="display:grid;grid-template-columns: 1fr 1fr;gap:12px;max-width:1780px;margin:0 auto 18px;">
+    <div class="section" style="max-height:none;">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <h3 style="margin:0;">Edge Sessions by Proxy Image Fetch Count</h3>
+        <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Buckets computed from <strong>distinct image IDs</strong> fetched via the proxy within the same edge presence session key (30-minute bucket). This is <em>not</em> a per-person test trace, and it is <em>not</em> guaranteed to equal “images viewed” because browser cache + preloading can suppress new fetches. Repeats of the same image ID do not increase the count.</div></span>
+        <span style="margin-left:auto;font-size:12px;color:#888;">Total: <strong style="color:#fff;">${ic.total || 0}</strong></span>
+      </div>
+      <div style="margin-top:10px;">
+        <table style="width:100%;border-collapse:collapse;">
+          <thead>
+            <tr style="color:#888;font-size:12px;text-align:left;">
+              <th style="padding:6px 0;border-bottom:1px solid #333;">Images</th>
+              <th style="padding:6px 0;border-bottom:1px solid #333;">Sessions</th>
+              <th style="padding:6px 0;border-bottom:1px solid #333;">%</th>
+            </tr>
+          </thead>
+          <tbody style="font-size:13px;">
+            <tr><td style="padding:8px 0;border-bottom:1px solid #222;">0</td><td style="padding:8px 0;border-bottom:1px solid #222;">${ic.img_0 || 0}</td><td style="padding:8px 0;border-bottom:1px solid #222;color:#aaa;">${pct(ic.img_0, ic.total)}%</td></tr>
+            <tr><td style="padding:8px 0;border-bottom:1px solid #222;">1–2</td><td style="padding:8px 0;border-bottom:1px solid #222;">${ic.img_1_2 || 0}</td><td style="padding:8px 0;border-bottom:1px solid #222;color:#aaa;">${pct(ic.img_1_2, ic.total)}%</td></tr>
+            <tr><td style="padding:8px 0;border-bottom:1px solid #222;">3–10</td><td style="padding:8px 0;border-bottom:1px solid #222;">${ic.img_3_10 || 0}</td><td style="padding:8px 0;border-bottom:1px solid #222;color:#aaa;">${pct(ic.img_3_10, ic.total)}%</td></tr>
+            <tr><td style="padding:8px 0;">10+</td><td style="padding:8px 0;">${ic.img_10p || 0}</td><td style="padding:8px 0;color:#aaa;">${pct(ic.img_10p, ic.total)}%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section" style="max-height:none;">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <h3 style="margin:0;">Avg Proxy Image Request Gap (Histogram)</h3>
+        <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">For edge presence sessions with ≥2 proxy image fetches, compute gaps between consecutive fetch timestamps and take the session’s average gap, then bucket it. This measures <em>server-observed fetch cadence</em>, which can differ from on-screen viewing due to caching and preloading.</div></span>
+        <span style="margin-left:auto;font-size:12px;color:#888;">Sessions w/ gap: <strong style="color:#fff;">${gb.total || 0}</strong></span>
+      </div>
+      <div style="margin-top:10px;">
+        <table style="width:100%;border-collapse:collapse;">
+          <thead>
+            <tr style="color:#888;font-size:12px;text-align:left;">
+              <th style="padding:6px 0;border-bottom:1px solid #333;">Avg gap</th>
+              <th style="padding:6px 0;border-bottom:1px solid #333;">Sessions</th>
+              <th style="padding:6px 0;border-bottom:1px solid #333;">%</th>
+            </tr>
+          </thead>
+          <tbody style="font-size:13px;">
+            <tr><td style="padding:8px 0;border-bottom:1px solid #222;">&lt;100ms</td><td style="padding:8px 0;border-bottom:1px solid #222;">${gb.lt_100 || 0}</td><td style="padding:8px 0;border-bottom:1px solid #222;color:#aaa;">${pct(gb.lt_100, gb.total)}%</td></tr>
+            <tr><td style="padding:8px 0;border-bottom:1px solid #222;">100–500ms</td><td style="padding:8px 0;border-bottom:1px solid #222;">${gb.b100_500 || 0}</td><td style="padding:8px 0;border-bottom:1px solid #222;color:#aaa;">${pct(gb.b100_500, gb.total)}%</td></tr>
+            <tr><td style="padding:8px 0;border-bottom:1px solid #222;">500ms–2s</td><td style="padding:8px 0;border-bottom:1px solid #222;">${gb.b500_2000 || 0}</td><td style="padding:8px 0;border-bottom:1px solid #222;color:#aaa;">${pct(gb.b500_2000, gb.total)}%</td></tr>
+            <tr><td style="padding:8px 0;border-bottom:1px solid #222;">2s–10s</td><td style="padding:8px 0;border-bottom:1px solid #222;">${gb.b2000_10000 || 0}</td><td style="padding:8px 0;border-bottom:1px solid #222;color:#aaa;">${pct(gb.b2000_10000, gb.total)}%</td></tr>
+            <tr><td style="padding:8px 0;">≥10s</td><td style="padding:8px 0;">${gb.ge_10000 || 0}</td><td style="padding:8px 0;color:#aaa;">${pct(gb.ge_10000, gb.total)}%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
   ${isSingleDay ? `
@@ -906,22 +1105,19 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap;">
         <h3 style="margin: 0;">📊 Image Access Overview</h3>
         <div style="display: flex; gap: 3px;" id="accessFilterBtns">
-          <button onclick="filterAccess('all')" data-f="all" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #555; background: #444; color: #fff; font-size: 10px; cursor: pointer; font-weight: bold;">All</button>
           <button onclick="filterAccess('C')" data-f="C" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #a78bfa55; background: #a78bfa22; color: #a78bfa; font-size: 10px; cursor: pointer;">C</button>
           <button onclick="filterAccess('I')" data-f="I" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #8b5cf655; background: #8b5cf622; color: #8b5cf6; font-size: 10px; cursor: pointer;">i</button>
-          <button onclick="filterAccess('U')" data-f="U" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #f59e0b55; background: #f59e0b22; color: #f59e0b; font-size: 10px; cursor: pointer;">U</button>
-          <button onclick="filterAccess('E')" data-f="E" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #3b82f655; background: #3b82f622; color: #3b82f6; font-size: 10px; cursor: pointer;">E</button>
+          <button onclick="openOtherAccess()" data-f="other" title="U + E (unverified/external)" style="padding: 2px 8px; border-radius: 4px; border: 1px solid #666; background: transparent; color: #bbb; font-size: 10px; cursor: pointer;">Other</button>
         </div>
         <span style="font-size: 10px; color: #555;">
           <span style="color: #a78bfa;">C</span>=Chapter JS
           <span style="color: #8b5cf6;">i</span>=Image proxy
-          <span style="color: #f59e0b;">U</span>=Unverified (no cookie)
-          <span style="color: #3b82f6;">E</span>=External
+          <span style="color: #999;">Other</span>=U + E (non-JS)
         </span>
         <div class="access-stats" style="margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
-          <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #3a3a3a;background:#222;color:#cbd5e1;font-size:12px;letter-spacing:0.2px;" title="ALL = C + Z + i + U (total views). Note: i includes E. Unique images: ${imageAccessTotals.uniqueImages}">
-            <span style="font-size:11px;opacity:0.75;">ALL</span>
-            <span style="font-weight:800;color:#fff;">${imageAccessTotals.allViews}</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #3a3a3a;background:#222;color:#cbd5e1;font-size:12px;letter-spacing:0.2px;" title="TOTAL = C + Z + i (core only). Unique images: ${imageAccessTotals.uniqueImages}">
+            <span style="font-size:11px;opacity:0.75;">TOTAL</span>
+            <span style="font-weight:800;color:#fff;">${coreAccessViews}</span>
           </span>
           <span title="JS-verified chapter views (badge C only)" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #a78bfa55;background:#a78bfa14;color:#a78bfa;font-size:12px;">
             <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#a78bfa22;color:#a78bfa;font-size:10px;font-weight:bold;border:1px solid #a78bfa55;">C</span>
@@ -931,30 +1127,38 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:10px;font-weight:bold;border:1px solid #06b6d455;">Z</span>
             <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.zoomViews}</span>
           </span>
-          <span title="Image-proxy views (proxy-only exposures + external embeds)" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #8b5cf655;background:#8b5cf614;color:#8b5cf6;font-size:12px;">
+          <span title="Image-proxy views (proxy-only exposures with internal referer; excludes U/E)" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #8b5cf655;background:#8b5cf614;color:#8b5cf6;font-size:12px;">
             <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#8b5cf622;color:#8b5cf6;font-size:10px;font-weight:bold;border:1px solid #8b5cf655;">i</span>
-            <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.imageProxyViews}</span>
+            <span style="font-weight:800;color:#e5e7eb;">${internalProxyViews}</span>
           </span>
-          <span title="Unverified views (non-JS, missing visitor cookie). Source labels come from Referer header presence." style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #f59e0b55;background:#f59e0b14;color:#f59e0b;font-size:12px;">
-            <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f59e0b22;color:#f59e0b;font-size:10px;font-weight:bold;border:1px solid #f59e0b55;">U</span>
-            <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.unverifiedViews}</span>
+          <span title="Other = Unverified (U) + External (E). Non-JS image fetches: previews, embeds, privacy browsers, crawlers." style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #666;background:#1f1f1f;color:#cbd5e1;font-size:12px;">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#2a2a2a;color:#bbb;font-size:10px;font-weight:bold;border:1px solid #555;">O</span>
+            <span style="font-weight:800;color:#e5e7eb;">${otherAccessViews}</span>
           </span>
-          <span title="External embed views (subset of i)" style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:7px;border:1px solid #3b82f655;background:#3b82f614;color:#3b82f6;font-size:12px;">
-            <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#3b82f622;color:#3b82f6;font-size:10px;font-weight:bold;border:1px solid #3b82f655;">E</span>
-            <span style="font-weight:800;color:#e5e7eb;">${imageAccessTotals.externalViews}</span>
-          </span>
+        </div>
+      </div>
+
+      <div id="otherAccessModal" style="display:none; position:fixed; inset:0; z-index:9999; background: rgba(0,0,0,0.72);" onclick="if(event.target===this) closeOtherAccess()">
+        <div style="max-width: 1200px; margin: 40px auto; background: #161616; border: 1px solid #2a2a2a; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+          <div style="display:flex; align-items:center; justify-content:space-between; padding: 10px 12px; background: #1f1f1f; border-bottom: 1px solid #2a2a2a;">
+            <div style="display:flex; flex-direction:column; gap:2px;">
+              <div style="font-size: 13px; font-weight: 800; color:#e5e7eb;">Other Image Access (U/E)</div>
+              <div style="font-size: 11px; color:#9aa3ad;">Non-JS fetches: previews, embeds, privacy browsers, crawlers. Not counted as confirmed on-site views.</div>
+            </div>
+            <button onclick="closeOtherAccess()" style="border:1px solid #444; background: #111; color:#ddd; font-size: 12px; padding: 6px 10px; border-radius: 6px; cursor: pointer;">Close</button>
+          </div>
+          <div style="max-height: 70vh; overflow:auto;" id="otherAccessList"></div>
         </div>
       </div>
       <div style="max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;" id="accessOverviewList">
         <!-- Column headers (inside scroller so scrollbar doesn't shift columns) -->
-        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 90px 220px 180px 90px 90px 90px 90px auto; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
+        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 90px 220px 180px 90px 90px 90px auto; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
           <span style="display:flex;justify-content:center;">Image</span>
           <span style="display:flex;justify-content:flex-start;padding-left:14px;">Type / ID</span>
           <span onclick="sortAccessLocation()" id="accessLocationHeader" style="cursor:pointer; user-select:none;">📍 Location ⇅</span>
           <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#a78bfa22;color:#a78bfa;font-size:9px;font-weight:bold;border:1px solid #a78bfa55;" title="Chapter views">C</span></span>
           <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:9px;font-weight:bold;border:1px solid #06b6d455;" title="Zoom views">Z</span></span>
           <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#8b5cf622;color:#8b5cf6;font-size:9px;font-weight:bold;border:1px solid #8b5cf655;" title="Image proxy (no JS)">i</span></span>
-          <span style="display:flex;justify-content:center;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f59e0b22;color:#f59e0b;font-size:9px;font-weight:bold;border:1px solid #f59e0b55;" title="Unverified (non-JS direct/internal)">U</span></span>
           <span style="display:flex;align-items:center;gap:8px;">
             <span>Source</span>
             <span onclick="sortAccessTime()" id="accessTimeHeader" title="Sort by time (newest first)" style="cursor:pointer; user-select:none; font-size: 12px; opacity: 0.9;">🕒</span>
@@ -1131,8 +1335,9 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           const chapterViewsRaw = Number(row.chapter_views || 0);
           const cViews = rowBadges.includes('C') ? chapterViewsRaw : 0;
           const proxyChapterViews = (rowBadges.includes('I') && !rowBadges.includes('C')) ? chapterViewsRaw : 0;
-          const iViews = proxyChapterViews + Number(row.external_views || 0);
           const uViews = Number(row.unverified_views || 0);
+          const iViews = proxyChapterViews;
+          const otherHits = uViews + Number(row.external_views || 0);
 
           const chColor = cViews > 0 ? '#a78bfa' : '#333';
           const zmColor = row.xl_zooms > 0 ? '#06b6d4' : '#333';
@@ -1140,7 +1345,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           const uColor = uViews > 0 ? '#f59e0b' : '#333';
           // Row border color based on primary badge
           const borderColor = row.badges.includes('C') ? '#a78bfa44' : row.badges.includes('I') ? '#8b5cf644' : row.badges.includes('E') ? '#3b82f644' : '#f59e0b44';
-          return '<a href="' + linkUrl + '" target="_blank" class="access-row" data-badges="' + row.badges.join(',') + '" data-country="' + (geoCountry || '') + '" data-region="' + ((geo?.region || '') + '') + '" data-city="' + ((geo?.city || '') + '') + '" data-lastseen="' + (row.last_seen || '') + '" style="display:grid;grid-template-columns:90px 220px 180px 90px 90px 90px 90px auto;gap:10px;align-items:center;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ' + borderColor + ';text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.04)\'" onmouseout="this.style.background=\'transparent\'">' +
+          return '<a href="' + linkUrl + '" target="_blank" class="access-row" data-badges="' + row.badges.join(',') + '" data-primary="' + primaryBadge + '" data-otherhits="' + otherHits + '" data-country="' + (geoCountry || '') + '" data-region="' + ((geo?.region || '') + '') + '" data-city="' + ((geo?.city || '') + '') + '" data-lastseen="' + (row.last_seen || '') + '" style="display:grid;grid-template-columns:90px 220px 180px 90px 90px 90px auto;gap:10px;align-items:center;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ' + borderColor + ';text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.04)\'" onmouseout="this.style.background=\'transparent\'">' +
             '<div style="display:flex;align-items:center;justify-content:center;width:90px;">' +
               (imageId ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (i < 6 ? 'eager' : 'lazy') + '" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid ' + p.bdr + ';">' : '<span style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:1px solid ' + p.bdr + ';">🖼</span>') +
             '</div>' +
@@ -1155,7 +1360,6 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             '<span style="display:flex;justify-content:center;font-weight:bold;color:' + chColor + ';font-size:14px;">' + (cViews || '—') + '</span>' +
             '<span style="display:flex;justify-content:center;font-weight:bold;color:' + zmColor + ';font-size:14px;">' + (row.xl_zooms || '—') + '</span>' +
             '<span style="display:flex;justify-content:center;font-weight:bold;color:' + iColor + ';font-size:14px;">' + (iViews || '—') + '</span>' +
-            '<span style="display:flex;justify-content:center;font-weight:bold;color:' + uColor + ';font-size:14px;">' + (uViews || '—') + '</span>' +
             '<div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + srcHtml + '</div>' +
           '</a>';
         }).join('') || '<p style="color: #555; font-size: 11px;">No image access data yet</p>'}
@@ -1166,38 +1370,24 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <div class="section" style="max-height: none;">
       <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #c4b5fd; display: flex; align-items: center; justify-content: space-between;">
         <span>📁 Galleries</span>
-        <span style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%); color: #1f2937; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold;">${artViewsSummary?.galleries || 0}</span>
+        <span style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%); color: #1f2937; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold;">${topGalleryLandingTotalViews}</span>
       </h4>
       <div id="art-galleries-list" style="display: flex; flex-direction: column; gap: 6px; max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;">
-        ${((topArtViews?.galleries || []).length === 0)
+        ${((safeTopGalleryLandingPages || []).length === 0)
           ? '<div style="color:#666;font-size:11px;padding:6px 2px;">No data yet</div>'
-          : (topArtViews.galleries || []).map((a, i) => {
-              const linkUrl = a.gallery_url ? 'https://k4studios.com' + a.gallery_url : '#';
-              const devices = Array.isArray(a.devices) ? a.devices : [];
-              function galleryDeviceIconsHtml(devs) {
-                if (!Array.isArray(devs) || devs.length === 0) return '';
-                const iconMap = { ios: '📱', android: '🅰️', mac: '🍎', windows: '🪟', linux: '🐧', desktop: '🖥️', mobile: '📱', tablet: '📱', unknown: '❓' };
-                const labelMap = { ios: 'iOS', android: 'Android', mac: 'Mac', windows: 'Windows', linux: 'Linux', desktop: 'Desktop', mobile: 'Mobile', tablet: 'Tablet', unknown: 'Unknown' };
-                const uniq = Array.from(new Set(devs.map(d => String(d || '').toLowerCase()).filter(Boolean)));
-                const icons = uniq.slice(0, 3).map(d => {
-                  const icon = iconMap[d] || '❓';
-                  const label = labelMap[d] || d;
-                  return '<span title="' + label + '" style="font-size:12px;">' + icon + '</span>';
-                }).join('');
-                return '<span title="Devices" style="display:inline-flex;align-items:center;gap:4px;opacity:0.85;">' + icons + '</span>';
-              }
-              const deviceIcons = galleryDeviceIconsHtml(devices);
-              const displayLabel = a.display_name || a.target_id;
+          : (safeTopGalleryLandingPages || []).map((a, i) => {
+              const pagePath = String(a.page_path || '').startsWith('/') ? String(a.page_path || '') : ('/' + String(a.page_path || '').replace(/^\/+/, ''));
+              const linkUrl = pagePath ? ('https://k4studios.com' + pagePath) : '#';
+              const displayLabel = galleryDisplayNameFromPath(pagePath);
               return '<a href="' + linkUrl + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(196, 181, 253, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #c4b5fd; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(196,181,253,0.25)\'" onmouseout="this.style.background=\'rgba(196,181,253,0.1)\'">' +
                 '<span style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">📁</span>' +
                 '<div style="flex: 1; min-width: 0;">' +
                   '<div style="display:flex; align-items:center; gap:6px;">'
-                    + '<div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; flex: 1; min-width: 0;" title="' + a.target_id + '">' + displayLabel + '</div>'
-                    + (deviceIcons ? deviceIcons : '')
+                    + '<div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; flex: 1; min-width: 0;" title="' + pagePath + '">' + displayLabel + '</div>'
                   + '</div>' +
                   '<div style="display: flex; gap: 8px; margin-top: 2px;">' +
-                    '<span style="font-size: 12px; font-weight: bold; color: #c4b5fd;">' + a.views + '</span>' +
-                    '<span style="font-size: 11px; color: #888;">' + a.unique_viewers + ' 👤</span>' +
+                    '<span style="font-size: 12px; font-weight: bold; color: #c4b5fd;">' + (a.views || 0) + '</span>' +
+                    '<span style="font-size: 11px; color: #888;">' + (a.unique_viewers || 0) + ' 👤</span>' +
                   '</div>' +
                 '</div>' +
               '</a>';
@@ -1227,20 +1417,104 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   <script>
     function filterAccess(type) {
       document.querySelectorAll('#accessFilterBtns button').forEach(function(b) {
-        if (type === 'all') {
-          b.style.opacity = b.dataset.f === 'all' ? '1' : '0.7';
-          b.style.fontWeight = b.dataset.f === 'all' ? 'bold' : 'normal';
-        } else {
-          b.style.opacity = b.dataset.f === type ? '1' : '0.4';
-          b.style.fontWeight = b.dataset.f === type ? 'bold' : 'normal';
+        if (b.dataset.f === 'other') {
+          b.style.opacity = '0.8';
+          b.style.fontWeight = 'normal';
+          return;
         }
+        b.style.opacity = b.dataset.f === type ? '1' : '0.4';
+        b.style.fontWeight = b.dataset.f === type ? 'bold' : 'normal';
       });
       document.querySelectorAll('.access-row').forEach(function(row) {
-        if (type === 'all') { row.style.display = 'grid'; return; }
-        var badges = row.dataset.badges.split(',');
+        var badges = (row.dataset.badges || '').split(',').filter(Boolean);
         row.style.display = badges.includes(type) ? 'grid' : 'none';
       });
     }
+
+    function openOtherAccess() {
+      var modal = document.getElementById('otherAccessModal');
+      var list = document.getElementById('otherAccessList');
+      if (!modal || !list) return;
+
+      list.innerHTML = '';
+      var rows = Array.prototype.slice.call(document.querySelectorAll('#accessOverviewList .access-row'));
+      var others = rows.filter(function(r) {
+        var p = (r.dataset.primary || '').trim();
+        return p === 'U' || p === 'E';
+      });
+
+      // Copy the sticky header for consistent columns.
+      var header = document.querySelector('#accessOverviewList > div');
+      if (header) {
+        var h = header.cloneNode(true);
+        h.style.position = 'sticky';
+        h.style.top = '0';
+        h.style.zIndex = '2';
+
+        // Repurpose the i column header to mean Other hits in this popup.
+        try {
+          var otherCol = h.children && h.children[5];
+          if (otherCol) {
+            var badge = otherCol.querySelector('span');
+            if (badge) {
+              badge.textContent = 'O';
+              badge.style.background = '#2a2a2a';
+              badge.style.color = '#bbb';
+              badge.style.borderColor = '#555';
+              badge.title = 'Other hits (U/E)';
+            }
+            otherCol.title = 'Other hits (U/E)';
+          }
+        } catch (e) {}
+
+        list.appendChild(h);
+      }
+
+      if (others.length === 0) {
+        var empty = document.createElement('div');
+        empty.style.padding = '12px';
+        empty.style.color = '#777';
+        empty.style.fontSize = '12px';
+        empty.textContent = 'No U/E rows for this selection.';
+        list.appendChild(empty);
+      } else {
+        others.forEach(function(r) {
+          var clone = r.cloneNode(true);
+          clone.style.display = 'grid';
+
+          // In the popup, show Other hits in the i column.
+          try {
+            var spans = clone.querySelectorAll(':scope > span');
+            var iStat = spans && spans.length >= 4 ? spans[3] : null;
+            var otherHits = Number(r.dataset.otherhits || 0);
+            var p = (r.dataset.primary || '').trim();
+            if (iStat) {
+              iStat.textContent = otherHits || '—';
+              iStat.style.color = (p === 'E') ? '#3b82f6' : (p === 'U') ? '#f59e0b' : '#bbb';
+            }
+          } catch (e) {}
+
+          list.appendChild(clone);
+        });
+      }
+
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeOtherAccess() {
+      var modal = document.getElementById('otherAccessModal');
+      if (!modal) return;
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeOtherAccess();
+    });
+
+    // Default view: show only JS-verified chapter clicks.
+    try { filterAccess('C'); } catch (e) {}
 
     var accessLocationSortAsc = true;
     function sortAccessLocation() {
@@ -1312,7 +1586,10 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   <!-- All sections grid -->\n  <div class="grid" style="margin-top: 20px;">
     <div class="section">
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2px;">
-        <h3 style="margin:0;">Event Breakdown</h3>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <h3 style="margin:0;">Event Breakdown</h3>
+          <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Counts of <strong>JS beacons</strong> (source <code>js</code>) for the selected time range. If JS is blocked, or if you set <code>Exclude IP</code>/<code>Hide Bots</code> filters, your clicks may not appear here.</div></span>
+        </div>
         <button id="eventSortToggle" onclick="toggleEventSort()" title="Toggle sort: Alphabetical / By Count" style="
           font-size:10px; padding:2px 8px; border:1px solid #ccc; border-radius:4px;
           background:#f5f0eb; color:#666; cursor:pointer; font-family:monospace; letter-spacing:0.5px;
@@ -1427,11 +1704,11 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       })()}
     </div>
 
-    <!-- Art Geography -->
+    <!-- Image Geography (JS) -->
     <div class="section k4-split-panel">
       <div class="section-header">
-        <h3>🎨 Art Geography</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Only visitors who viewed art (chapters, galleries, or zoomed images).</div></span>
+        <h3>🎨 Image Geography (JS)</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Only visitors who loaded chapter/image pages (JS chapter_view; matches the /i-... universe).</div></span>
       </div>
       ${(() => {
         const countryColors = {
@@ -1627,60 +1904,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <h3>Top 25 Pages</h3>
       ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
         (() => {
-          // Gallery landing pages (from galleryPrefetchMap.json)
-          const galleryPaths = new Set([
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color',
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White',
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color',
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White',
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color',
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White',
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color',
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White',
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color',
-            '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White',
-            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery',
-            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery',
-            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery',
-            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery',
-            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery',
-            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains',
-            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water',
-            '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets',
-            '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color',
-            '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White',
-            '/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars',
-            '/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color',
-            '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White',
-            '/Galleries/Fine-Art-Photography/Portraits/Color',
-            '/Galleries/Fine-Art-Photography/Portraits/Black-White',
-            '/Galleries/Fine-Art-Photography/Portraits/Reenactors',
-            '/Galleries/Fine-Art-Photography/Transportation/Boats',
-            '/Galleries/Fine-Art-Photography/Transportation/Cars',
-            '/Galleries/Fine-Art-Photography/Transportation/Military',
-            '/Galleries/Fine-Art-Photography/Transportation/Planes',
-            '/Galleries/Fine-Art-Photography/Transportation/Trains',
-            '/Galleries/Fine-Art-Photography/Architecture/Gallery',
-            '/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments',
-            '/Galleries/Fine-Art-Photography/Miscellaneous/Pets',
-            '/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife',
-            '/Other/K4-Select-Series/Engrained/Engrained-Series',
-          ]);
+          // Gallery landing pages
+          const galleryPaths = new Set(GALLERY_LANDING_PATHS);
           const maxViews = Math.max(...pages.map(p => p.views || 0), 1);
           return pages.map((p, i) => {
             const path = String(p.page_path || '/');
@@ -1705,16 +1930,30 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
 
     <div class="section">
       <div class="section-header">
-        <h3>? Top Entry Pages</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page visited in each session. 🔍=Google Search, 🖼️=Images, 🅱️=Bing, 📌=Pinterest, 🐦=Twitter, 📘=Facebook, 🔗=Direct, 🔄=Internal</div></span>
+        <h3>? Top Entry Pages (Sessions)</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Counts <strong>sessions</strong> (not page views). Each row is the <em>first</em> JS page_view in a session, grouped by page + referrer source. Table includes all page types (Site, Gallery, Chapter). 🔍=Google Search, 🖼️=Images, 🅱️=Bing, 📌=Pinterest, 🐦=Twitter, 📘=Facebook, 🔗=Direct</div></span>
       </div>
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
       <table>
         <tr><th>Page</th><th>From</th><th>Sess</th></tr>
         ${entryPages.slice(0, 15).map(p => {
-          const isImage = p.page_path.includes('/i-');
-          const shortPath = p.page_path.length > 30 ? '...' + p.page_path.slice(-27) : p.page_path;
-          const pageIcon = isImage ? '🖼️' : '📄';
+          const rawPath = String(p.page_path || '/');
+          const fullPath = rawPath.startsWith('/') ? rawPath : `/${rawPath}`;
+          // Match Top 25 classification: chapter pages end with /i-xxxxx (no further slash)
+          const isChapter = /\/i-[A-Za-z0-9]+$/.test(fullPath);
+          const isGalleryLanding = !isChapter && galleryLandingPathSet.has(fullPath);
+          const typeColor = isChapter ? '#a78bfa' : isGalleryLanding ? '#10b981' : '#4a9eff';
+
+          const shortPath = (() => {
+            const path = fullPath;
+            const maxLen = 34;
+            if (path.length <= maxLen) return path;
+            const startLen = 14; // keep prefix (/Galleries, /Other, /blog, etc.) visible
+            const endLen = Math.max(8, maxLen - startLen - 3);
+            return path.slice(0, startLen) + '...' + path.slice(-endLen);
+          })();
+
+          const pageIcon = isChapter ? '🖼️' : isGalleryLanding ? '📁' : '📄';
           const refIcons = { 
             google_search: '🔍', google_images: '🖼️', 
             bing_search: '🅱️', bing_images: '🖼️', 
@@ -1723,34 +1962,10 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             direct: '🔗', internal: '🔄', unattributed: '🔒' 
           };
           const refIcon = refIcons[p.ref_source] || '🔒';
-          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
+          return `<tr><td title="${fullPath}" style="color:${typeColor};">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
         }).join('')}
       </table>
       `}
-    </div>
-
-    <div class="section">
-      <div class="section-header">
-        <h3>Gallery Performance</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Image views grouped by gallery. Colors: 🟣 Painterly, 🔵 Traditional, 🟠 K4 Select</div></span>
-      </div>
-      <table>
-        <tr><th>Gallery</th><th>Sess</th><th>Zoom%</th><th>Avg</th></tr>
-        ${galleries.map(g => {
-          const typeColors = { painterly: '#a855f7', traditional: '#4a9eff', select: '#f59e0b' };
-          const color = typeColors[g.gallery_type] || '#888';
-          return `<tr>
-            <td style="display: flex; align-items: center; gap: 8px;">
-              <span style="width: 8px; height: 8px; border-radius: 50%; background: ${color}; flex-shrink: 0;"></span>
-              ${formatEventName(g.gallery_id || 'Unknown')}
-            </td>
-            <td>${g.sessions}</td>
-            <td>${g.zoom_pct || 0}%</td>
-            <td>${g.avg_events || 0}</td>
-          </tr>`;
-        }).join('')}
-        ${galleries.length === 0 ? '<tr><td colspan="4">No data yet</td></tr>' : ''}
-      </table>
     </div>
 
     <div class="section">
