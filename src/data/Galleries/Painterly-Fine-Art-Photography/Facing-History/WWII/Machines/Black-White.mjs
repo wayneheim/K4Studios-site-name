@@ -1141,19 +1141,26 @@ export const galleryData = [
   },
   {
     "id": "i-TD5LPgq",
-    "title": "History'S Greatest Conflicts Portrait",
-    "description": "A monochrome World War II photograph of a WWII soldier, defined by resolve rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where purpose held steady when the world did not. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Before Landfall",
+    "description": "A black and white World War II fine art photograph capturing soldiers in formation aboard a landing craft just before disembarkation. Rendered within the Men & Machines B/W aesthetic, the composition emphasizes collective resolve against WWII military equipment. Rather than spectacle, the image studies anticipation — the quiet tension between battle-ready machines and the men they deliver. Part of Wayne Heim’s Facing History series. © Wayne Heim",
+    "alt": "Black and white WWII photograph of soldiers standing in landing craft approaching shore, men and machines fine art image.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-TD5LPgq/A",
+
     "keywords": [
-      "history's greatest conflicts",
+      "men & machines b/w",
+      "black & white wwii machines",
+      "wwii military equipment b/w",
+      "battle-ready machines",
       "mechanical war art",
       "wwii tanks and trucks",
-      "military machinery prints"
+      "military machinery prints",
+      "facing history series",
+      "world war ii fine art photography"
     ],
-    "story": "In \"History's Greatest Conflicts Portrait,\" Wayne Heim renders K4 Studios fine art with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "They face forward, helmets catching the light, hands fixed to steel. The shoreline is somewhere ahead, unseen but certain. No one speaks. The sea carries them toward whatever waits.",
+    "notes": "“Before Landfall” explores the psychological space between transit and impact. The linear composition of helmets and shoulders reinforces unity and shared exposure, while the steel railing anchors the frame in industrial mass. Within the Men & Machines B/W framework, the machinery is not dominant — it is vessel and inevitability. The story lives in the collective forward gaze.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 35,
@@ -1162,7 +1169,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MK3wtpkJf4Bvsh2VjJjpXDDQmNTWQMWwS8MFdT985/XL/_ANA4478-Edit-2-XL.jpg",
     "srcM": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MhHFvsDzCz3cVNt2vZvs39WkCXXXxwjFPj752vVq6/L/_ANA4478-Edit-2-L.jpg",
     "srcS": "https://photos.smugmug.com/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-TD5LPgq/1/MwqxvQLzr2bq2RPdvPkGs2hBVPmJckXLCn4GRT4fr/S/_ANA4478-Edit-2-S.jpg",
-    "srcOriginal": ""
+    "srcOriginal": "",
+    contentSource: "ai"
   },
   {
     "id": "i-dhFcdtJ",

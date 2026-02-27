@@ -1960,6 +1960,37 @@
       },
       "analysisVersion": 7,
       "indexedAt": "2026-02-27T17:12:01.738Z"
+    },
+    "i-TD5LPgq": {
+      "imageId": "i-TD5LPgq",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White.mjs",
+      "dhash": "1010010000010101011011001011010100111001000000000000000000000000",
+      "width": 592,
+      "height": 768,
+      "dominantColors": [
+        "#d0d0d0",
+        "#d0d0b0",
+        "#d0b0b0",
+        "#b0b0b0",
+        "#f0f0d0"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.06,
+      "brightnessAvg": 0.8,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.06,
+      "redCoverage": 0,
+      "yellowCoverage": 0.02,
+      "purpleCoverage": 0,
+      "contrastScore": 0.11,
+      "toneDistribution": {
+        "shadows": 0,
+        "midtones": 0.08,
+        "highlights": 0.92
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-02-27T17:37:49.089Z"
     }
   }
 }
