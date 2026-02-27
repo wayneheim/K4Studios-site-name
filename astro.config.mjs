@@ -39,12 +39,15 @@ export default defineConfig({
     },
     server: {
       host: true,
-      port: 8888,
-      origin: 'http://localhost:8888',
+      // Keep Astro on the default dev port so Netlify Dev can proxy correctly.
+      // (netlify.toml [dev].targetPort = 4321)
+      port: 4321,
+      strictPort: true,
+      origin: 'http://localhost:4321',
       hmr: {
         protocol: 'ws',
         host: 'localhost',
-        port: 8888
+        port: 4321
       },
       allowedHosts: ['.trycloudflare.com', 'localhost', '127.0.0.1']
     }

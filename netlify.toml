@@ -9,7 +9,9 @@
 # ✅ Local Development Settings
 ##############################
 [dev]
-  command = "npm run dev"
+  framework = "astro"
+  command = "npx astro dev --host --port 4321 --strictPort"
+  port = 8888
   targetPort = 4321
   autoLaunch = false
 

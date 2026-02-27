@@ -36,6 +36,72 @@
 			"args": [],
 			"isBackground": false,
 			"group": "build"
+		},
+		{
+			"label": "Benchmark build",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$sw=[System.Diagnostics.Stopwatch]::StartNew(); npm run build; $code=$LASTEXITCODE; $sw.Stop(); Write-Output ('BENCH_RESULT script=build seconds=' + [math]::Round($sw.Elapsed.TotalSeconds,2) + ' exit=' + $code); exit $code"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Benchmark build fixed",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$sw=[System.Diagnostics.Stopwatch]::StartNew(); npm run build; $code=$LASTEXITCODE; $sw.Stop(); $sec=[math]::Round($sw.Elapsed.TotalSeconds,2); Write-Output \"BENCH_RESULT script=build seconds=$sec exit=$code\"; exit $code"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Benchmark astro fast fixed",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$sw=[System.Diagnostics.Stopwatch]::StartNew(); npm run build:astro:fast; $code=$LASTEXITCODE; $sw.Stop(); $sec=[math]::Round($sw.Elapsed.TotalSeconds,2); Write-Output \"BENCH_RESULT script=build:astro:fast seconds=$sec exit=$code\"; exit $code"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Benchmark sequential build comparison",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"if (Test-Path .netlify) { Remove-Item -Recurse -Force .netlify }; if (Test-Path .astro) { Remove-Item -Recurse -Force .astro }; $sw1=[System.Diagnostics.Stopwatch]::StartNew(); npm run build; $code1=$LASTEXITCODE; $sw1.Stop(); $sec1=[math]::Round($sw1.Elapsed.TotalSeconds,2); Write-Output \"BENCH_RESULT script=build seconds=$sec1 exit=$code1\"; if ($code1 -ne 0) { exit $code1 }; if (Test-Path .netlify) { Remove-Item -Recurse -Force .netlify }; if (Test-Path .astro) { Remove-Item -Recurse -Force .astro }; $sw2=[System.Diagnostics.Stopwatch]::StartNew(); npm run build:astro:fast; $code2=$LASTEXITCODE; $sw2.Stop(); $sec2=[math]::Round($sw2.Elapsed.TotalSeconds,2); Write-Output \"BENCH_RESULT script=build:astro:fast seconds=$sec2 exit=$code2\"; if ($code2 -ne 0) { exit $code2 }; $delta=[math]::Round($sec1-$sec2,2); $pct=[math]::Round((($sec1-$sec2)/$sec1)*100,2); Write-Output \"BENCH_RESULT delta_seconds=$delta improvement_pct=$pct\""
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Benchmark to file",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$results='benchmark-results.txt'; $buildLog='benchmark-build.log'; $fastLog='benchmark-astro-fast.log'; Remove-Item $results,$buildLog,$fastLog -ErrorAction SilentlyContinue; if (Test-Path .netlify) { Remove-Item -Recurse -Force .netlify }; if (Test-Path .astro) { Remove-Item -Recurse -Force .astro }; $sw1=[System.Diagnostics.Stopwatch]::StartNew(); npm run build *> $buildLog; $code1=$LASTEXITCODE; $sw1.Stop(); $sec1=[math]::Round($sw1.Elapsed.TotalSeconds,2); Add-Content $results \"BENCH_RESULT script=build seconds=$sec1 exit=$code1\"; if ($code1 -ne 0) { exit $code1 }; if (Test-Path .netlify) { Remove-Item -Recurse -Force .netlify }; if (Test-Path .astro) { Remove-Item -Recurse -Force .astro }; $sw2=[System.Diagnostics.Stopwatch]::StartNew(); npm run build:astro:fast *> $fastLog; $code2=$LASTEXITCODE; $sw2.Stop(); $sec2=[math]::Round($sw2.Elapsed.TotalSeconds,2); Add-Content $results \"BENCH_RESULT script=build:astro:fast seconds=$sec2 exit=$code2\"; if ($code2 -ne 0) { exit $code2 }; $delta=[math]::Round($sec1-$sec2,2); $pct=[math]::Round((($sec1-$sec2)/$sec1)*100,2); Add-Content $results \"BENCH_RESULT delta_seconds=$delta improvement_pct=$pct\""
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Benchmark to file retry",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$results='bench_results.txt'; $buildLog='bench_build.log'; $fastLog='bench_fast.log'; Remove-Item -Path $results -ErrorAction SilentlyContinue; Remove-Item -Path $buildLog -ErrorAction SilentlyContinue; Remove-Item -Path $fastLog -ErrorAction SilentlyContinue; if (Test-Path .netlify) { Remove-Item -Recurse -Force .netlify }; if (Test-Path .astro) { Remove-Item -Recurse -Force .astro }; $sw1=[System.Diagnostics.Stopwatch]::StartNew(); npm run build *> $buildLog; $code1=$LASTEXITCODE; $sw1.Stop(); $sec1=[math]::Round($sw1.Elapsed.TotalSeconds,2); Add-Content -Path $results -Value \"BENCH_RESULT script=build seconds=$sec1 exit=$code1\"; if ($code1 -ne 0) { exit $code1 }; if (Test-Path .netlify) { Remove-Item -Recurse -Force .netlify }; if (Test-Path .astro) { Remove-Item -Recurse -Force .astro }; $sw2=[System.Diagnostics.Stopwatch]::StartNew(); npm run build:astro:fast *> $fastLog; $code2=$LASTEXITCODE; $sw2.Stop(); $sec2=[math]::Round($sw2.Elapsed.TotalSeconds,2); Add-Content -Path $results -Value \"BENCH_RESULT script=build:astro:fast seconds=$sec2 exit=$code2\"; if ($code2 -ne 0) { exit $code2 }; $delta=[math]::Round($sec1-$sec2,2); $pct=[math]::Round((($sec1-$sec2)/$sec1)*100,2); Add-Content -Path $results -Value \"BENCH_RESULT delta_seconds=$delta improvement_pct=$pct\""
+			],
+			"isBackground": false
 		}
 	]
 }

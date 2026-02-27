@@ -1687,7 +1687,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             // Chapter = ends with /i-xxxxx (no further slash)
             const isChapter = /\/i-[A-Za-z0-9]+$/.test(path);
             const isGallery = galleryPaths.has(path);
-            const color = isChapter ? '#a78bfa' : isGallery ? '#10b981' : '#4a9eff';
+            const color = isChapter ? '#10b981' : isGallery ? '#eab308' : '#4a9eff';
             const shortPath = path.length > 32 ? '...' + path.slice(-29) : path;
             const count = p.views || 0;
             return `
