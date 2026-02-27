@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, loadSeriesRegistry } from "../data/seriesDefinitions.js";
 import { getProxySrc } from "@/utils/imageProxy.js";
 import { warmImage } from "../utils/warmImage";
-import { trackEvent } from "../utils/analytics";
+import { trackEvent, emitActionPixel } from "../utils/analytics";
 
 const BATCH_SIZES = { 1: 25, 2: 24, 3: 30 };
 
@@ -193,6 +193,22 @@ export default function RebuiltScrollGrid({
     };
   }, []);
 
+  // Pixel tracking for grid open (generic vs theme-specific).
+  // Emit every open so repeated grid usage is counted per session.
+  useEffect(() => {
+    try {
+      const isThemeGrid = Boolean(themeName);
+      const layer = isThemeGrid ? "theme_grid_open_pixel_v1" : "grid_open_pixel_v1";
+      emitActionPixel(isThemeGrid ? 'theme_grid_open' : 'grid_open', null, {
+        galleryId: galleryKey,
+        sourceLayer: layer,
+        trigger: isThemeGrid ? "theme_grid_open" : "grid_open",
+        pageType: "image",
+        theme: isThemeGrid ? String(themeName) : null,
+      });
+    } catch (_) {}
+  }, [galleryKey, themeName]);
+
   return (
     <section className="bg-white py-10 px-6">
       {/* Theme Header - shown when viewing a shared theme collection */}
@@ -329,6 +345,13 @@ export default function RebuiltScrollGrid({
             style={{ border: "2px solid #d1d5db", position: "relative" }}
             onClick={() => {
               trackEvent('grid_show_previous', { galleryId: galleryKey, pageType: 'image' });
+              emitActionPixel('grid_show_previous', null, {
+                galleryId: galleryKey,
+                sourceLayer: 'grid_show_previous_pixel_v1',
+                trigger: 'grid_show_previous',
+                pageType: 'image',
+                theme: themeName ? String(themeName) : null,
+              });
               setSimIndex(loadedRange.start);
               setAnchorOnNextUpdate(false);
               setPendingPrepend(true);
@@ -385,6 +408,14 @@ export default function RebuiltScrollGrid({
                       galleryId: galleryKey,
                       imageId: entry.id,
                       pageType: 'image'
+                    });
+                    const isThemeGrid = Boolean(themeName);
+                    emitActionPixel(isThemeGrid ? 'theme_grid_image_click' : 'grid_image_click', entry.id, {
+                      galleryId: galleryKey,
+                      sourceLayer: isThemeGrid ? 'theme_grid_image_click_pixel_v1' : 'grid_image_click_pixel_v1',
+                      trigger: isThemeGrid ? 'theme_grid_image_click' : 'grid_image_click',
+                      pageType: 'image',
+                      theme: isThemeGrid ? String(themeName) : null,
                     });
                   }
                   onCardClick?.(globalIndex);
@@ -537,6 +568,13 @@ export default function RebuiltScrollGrid({
             className="px-6 py-2 bg-[#f9f6f2] rounded-full border border-gray-300 font-medium text-sm hover:bg-[#f8e8d7] shadow-md transition"
             onClick={() => {
               trackEvent('grid_show_more', { galleryId: galleryKey, pageType: 'image' });
+              emitActionPixel('grid_show_more', null, {
+                galleryId: galleryKey,
+                sourceLayer: 'grid_show_more_pixel_v1',
+                trigger: 'grid_show_more',
+                pageType: 'image',
+                theme: themeName ? String(themeName) : null,
+              });
               setSimIndex(end - 1);
               setAnchorOnNextUpdate(true);
             }}

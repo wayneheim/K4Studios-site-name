@@ -158,6 +158,64 @@ const structuredData = JSON.stringify({
 </aside>
 
 <script define:vars={{ collectionName, ctaLink, analyticsLabel }}>
+  const emitActionPixel = (action, imageId = null, extra = {}) => {
+    try {
+      if (window.k4emitActionPixel) {
+        window.k4emitActionPixel(action, imageId, extra);
+        return;
+      }
+      const params = new URLSearchParams({
+        t: 'action',
+        e: action,
+        v: String(Date.now())
+      });
+      if (imageId) params.set('id', imageId);
+      if (extra?.sourceLayer) params.set('sl', String(extra.sourceLayer));
+      if (extra?.galleryId) params.set('g', String(extra.galleryId));
+      if (extra?.pageType) params.set('pt', String(extra.pageType));
+      if (extra?.trigger) params.set('tr', String(extra.trigger));
+      const img = new Image();
+      img.referrerPolicy = 'same-origin';
+      img.src = `/_state?${params.toString()}`;
+    } catch {}
+  };
+
+  const sendK4 = (eventName, extra = {}) => {
+    try {
+      if (window.k4track) {
+        window.k4track(eventName, extra);
+        return;
+      }
+    } catch {}
+
+    const sessionId = sessionStorage.getItem('k4_session_id') ||
+      (sessionStorage.setItem('k4_session_id', crypto.randomUUID()), sessionStorage.getItem('k4_session_id'));
+
+    const payload = JSON.stringify({
+      session_id: sessionId,
+      event: eventName,
+      gallery_id: analyticsLabel,
+      page_type: 'landing',
+      source_layer: extra?.sourceLayer || null,
+      trigger: extra?.trigger || null,
+      theme: extra?.theme || null,
+    });
+
+    if (navigator.sendBeacon) {
+      const blob = new Blob([payload], { type: 'application/json' });
+      navigator.sendBeacon('/__k4e', blob);
+    } else {
+      fetch('/__k4e', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: payload,
+        keepalive: true,
+        cache: 'no-store',
+        credentials: 'same-origin'
+      }).catch(() => {});
+    }
+  };
+
   // Track clicks on the Featured Collection CTA (cowboy jump widget)
   document.addEventListener('DOMContentLoaded', () => {
     const widget = document.querySelector('.featured-collection-widget');
@@ -167,32 +225,8 @@ const structuredData = JSON.stringify({
       link.addEventListener('click', () => {
         // Skip logging on localhost (admin/dev work)
         if (window.location.hostname === 'localhost') return;
-        
-        // Track via Cloudflare D1 analytics
-        const sessionId = sessionStorage.getItem('k4_session_id') || 
-          (sessionStorage.setItem('k4_session_id', crypto.randomUUID()), sessionStorage.getItem('k4_session_id'));
-        
-        const payload = JSON.stringify({
-          session_id: sessionId,
-          event: 'cowboy_jump',
-          gallery_id: analyticsLabel,
-          page_type: 'landing'
-        });
-        
-        // Use sendBeacon for reliable delivery during navigation
-        if (navigator.sendBeacon) {
-          const blob = new Blob([payload], { type: 'application/json' });
-          navigator.sendBeacon('/__k4e', blob);
-        } else {
-          fetch('/__k4e', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: payload,
-            keepalive: true,
-            cache: 'no-store',
-            credentials: 'same-origin'
-          }).catch(() => {});
-        }
+
+        sendK4('cowboy_jump', { galleryId: analyticsLabel, pageType: 'landing' });
       });
     }
     

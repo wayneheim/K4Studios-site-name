@@ -5,6 +5,7 @@ import { ShoppingCart, VolumeX, Volume2 } from "lucide-react";
 import PunchInIntro from "./PunchInIntro.jsx";
 import { getProxySrc } from "@/utils/imageProxy.js";
 import { warmImage } from "../utils/warmImage";
+import { emitActionPixel } from "../utils/analytics";
 
 // Helper function to select the best image source for slideshow display
 // Uses proxy URL to avoid exposing SmugMug URLs in rendered HTML
@@ -549,7 +550,14 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
             >
               {/* Prev */}
               <button
-                onClick={goPrev}
+                onClick={() => {
+                  emitActionPixel('slideshow_nav_prev', current?.id || null, {
+                    sourceLayer: 'slideshow_nav_prev_pixel_v1',
+                    pageType: 'image',
+                    trigger: 'slideshow_control'
+                  });
+                  goPrev();
+                }}
                 className="bg-white/10 text-white rounded px-2 sm:px-3 py-1 hover:bg-white/20 transition btn whitespace-nowrap text-xs sm:text-sm leading-none flex items-center gap-1"
                 aria-label="Previous image"
                 title="Previous image"
@@ -560,7 +568,14 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
 
               {/* Next */}
               <button
-                onClick={goNext}
+                onClick={() => {
+                  emitActionPixel('slideshow_nav_next', current?.id || null, {
+                    sourceLayer: 'slideshow_nav_next_pixel_v1',
+                    pageType: 'image',
+                    trigger: 'slideshow_control'
+                  });
+                  goNext();
+                }}
                 className="bg-white/10 text-white rounded px-2 sm:px-3 py-1 hover:bg-white/20 transition btn whitespace-nowrap text-xs sm:text-sm leading-none flex items-center gap-1"
                 aria-label="Next image"
                 title="Next image"

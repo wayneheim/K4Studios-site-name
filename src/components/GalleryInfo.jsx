@@ -5,7 +5,7 @@ import ThemeBlock from "./ThemeBlock.jsx";
 import { themes } from "@/data/themes/themes.mjs";
 import { warmImage } from "../utils/warmImage";
 import { getProxySrc } from "../utils/imageProxy";
-import { trackEvent } from "../utils/analytics";
+import { trackEvent, emitActionPixel } from "../utils/analytics";
 
 /* ---------------------------------------------------------
    Check if gallery has matching themes
@@ -167,6 +167,22 @@ export default function GalleryInfo({
       ? `${trimmedBase}/${heroImage.id}`
       : exploreHref;
 
+  const handleHeroImageClick = () => {
+    const heroId = heroImage?.id || null;
+    trackEvent("gallery_hero_click", {
+      imageId: heroId,
+      galleryId: trimmedBase || null,
+      pageType: "gallery",
+      trigger: "gallery_landing_hero"
+    });
+    emitActionPixel("gallery_hero_click", heroId, {
+      galleryId: trimmedBase || null,
+      sourceLayer: "gallery_hero_click_pixel_v1",
+      pageType: "gallery",
+      trigger: "gallery_landing_hero"
+    });
+  };
+
   // Track hero image loaded state for graceful fade-in
   const [heroLoaded, setHeroLoaded] = useState(false);
 
@@ -308,7 +324,7 @@ export default function GalleryInfo({
                   cursor: 'pointer'
                 }}
                 aria-label="Explore the gallery"
-                onClick={() => trackEvent("gallery_hero_click")}
+                onClick={handleHeroImageClick}
               >
                 <figure style={{ position: 'relative', minHeight: '200px' }}>
                   {/* Placeholder skeleton while loading */}
@@ -367,7 +383,7 @@ export default function GalleryInfo({
                 marginBottom: '0.75rem'
               }}
               aria-label="View this image"
-              onClick={() => trackEvent("gallery_hero_click")}
+              onClick={handleHeroImageClick}
               onMouseEnter={() => {
                 // Trigger glow effect on explore button
                 const exploreButton = document.querySelector('.explore-section');
@@ -453,7 +469,19 @@ export default function GalleryInfo({
             textDecoration: "none",
             color: "inherit",
           }}
-          onClick={() => trackEvent("gallery_explore_click")}
+          onClick={() => {
+            trackEvent("gallery_explore_click", {
+              galleryId: trimmedBase || null,
+              pageType: "gallery",
+              trigger: "explore_the_gallery"
+            });
+            emitActionPixel("gallery_explore_click", lowestSortImage?.id || null, {
+              galleryId: trimmedBase || null,
+              sourceLayer: "gallery_explore_click_pixel_v1",
+              pageType: "gallery",
+              trigger: "explore_the_gallery"
+            });
+          }}
         >
           Explore the Gallery
           <span

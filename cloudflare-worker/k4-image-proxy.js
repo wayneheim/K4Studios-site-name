@@ -50,7 +50,6 @@ import {
   handleTrackRequest,
   handleTrackOptions,
   handleEdgeEvent,
-  handleTrackEvent,
   isSearchBot,
   logEdgeEvent,
   logArtView,
@@ -2207,6 +2206,14 @@ export default {
       return handleEdgeEvent(request, env);
     }
 
+    // 0a2) State pixels — delegated to analytics worker
+    if (url.pathname === "/_state") {
+      if (env.ANALYTICS_ENABLED === "true" && env.ANALYTICS) {
+        return env.ANALYTICS.fetch(request);
+      }
+      return new Response("Analytics delegation required", { status: 503 });
+    }
+
     // 0b) Analytics — all /__k4stats paths delegated to analytics worker
     if (url.pathname.startsWith("/__k4stats")) {
       if (env.ANALYTICS_ENABLED === "true" && env.ANALYTICS) {
@@ -2242,28 +2249,6 @@ export default {
     // 0i) SERP Tracker - Keyword management
     if (url.pathname === "/__k4serp/keyword" && request.method === "POST") {
       return handleSerpKeyword(request, env);
-    }
-
-    // 0j) Event tracking — delegated to analytics worker
-    if (url.pathname === "/__k4track/event") {
-      if (env.ANALYTICS_ENABLED === "true" && env.ANALYTICS) {
-        return env.ANALYTICS.fetch(request);
-      }
-      if (request.method === "OPTIONS") {
-        return new Response(null, {
-          status: 204,
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "POST, OPTIONS",
-            "Access-Control-Allow-Headers": "Content-Type",
-            "Access-Control-Max-Age": "86400"
-          }
-        });
-      }
-      if (request.method === "POST") {
-        return handleTrackEvent(request, env, ctx);
-      }
-      return new Response('Method not allowed', { status: 405 });
     }
 
     // 1) Image detail pages: apply policy first, then log art view

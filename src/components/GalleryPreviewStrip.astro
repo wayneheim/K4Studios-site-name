@@ -127,6 +127,7 @@ const heroImageId = candidatePool[0]?.id || null;
           class={`gallery-thumb anim-${direction}`}
           title={img.title ?? img.alt ?? "Gallery image"}
           style={`animation-delay: ${delay}ms`}
+          data-image-id={img.id}
           data-preview-click
         >
           <img
@@ -144,6 +145,7 @@ const heroImageId = candidatePool[0]?.id || null;
   // Track preview strip clicks
   document.querySelectorAll('[data-preview-click]').forEach(link => {
     link.addEventListener('click', () => {
+      const imageId = link.getAttribute('data-image-id') || null;
       const sessionId = sessionStorage.getItem('k4_session_id') || crypto.randomUUID();
       sessionStorage.setItem('k4_session_id', sessionId);
       const payload = JSON.stringify({
@@ -163,6 +165,29 @@ const heroImageId = candidatePool[0]?.id || null;
           credentials: 'same-origin'
         }).catch(() => {});
       }
+
+      try {
+        if (window.k4emitActionPixel) {
+          window.k4emitActionPixel('gallery_preview_click', imageId, {
+            sourceLayer: 'gallery_preview_click_pixel_v1',
+            pageType: 'gallery',
+            trigger: 'gallery_preview_strip'
+          });
+        } else {
+          const params = new URLSearchParams({
+            t: 'action',
+            e: 'gallery_preview_click',
+            sl: 'gallery_preview_click_pixel_v1',
+            pt: 'gallery',
+            tr: 'gallery_preview_strip',
+            v: String(Date.now())
+          });
+          if (imageId) params.set('id', imageId);
+          const img = new Image();
+          img.referrerPolicy = 'same-origin';
+          img.src = `/_state?${params.toString()}`;
+        }
+      } catch {}
     });
   });
 

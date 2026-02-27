@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
 import PunchInIntro from "./PunchInIntro.jsx";
 import { warmImage } from "../utils/warmImage";
+import { emitActionPixel } from "../utils/analytics";
 
 export default function StoryShow({ images, startImageId, onExit }) {
   const [index, setIndex] = useState(0);
@@ -397,7 +398,14 @@ export default function StoryShow({ images, startImageId, onExit }) {
             >
               {/* Only Prev, Next, and Exit buttons remain */}
               <button
-                onClick={() => setIndex((i) => (i - 1 + orderedImages.length) % orderedImages.length)}
+                onClick={() => {
+                  emitActionPixel('slideshow_nav_prev', current?.id || null, {
+                    sourceLayer: 'slideshow_nav_prev_pixel_v1',
+                    pageType: 'image',
+                    trigger: 'slideshow_control'
+                  });
+                  setIndex((i) => (i - 1 + orderedImages.length) % orderedImages.length);
+                }}
                 className="bg-white/10 text-white rounded px-3 py-1 hover:bg-white/20 transition btn"
                 aria-label="Previous slide"
                 title="Previous slide"
@@ -405,7 +413,14 @@ export default function StoryShow({ images, startImageId, onExit }) {
                 ◀ Prev
               </button>
               <button
-                onClick={() => setIndex((i) => (i + 1) % orderedImages.length)}
+                onClick={() => {
+                  emitActionPixel('slideshow_nav_next', current?.id || null, {
+                    sourceLayer: 'slideshow_nav_next_pixel_v1',
+                    pageType: 'image',
+                    trigger: 'slideshow_control'
+                  });
+                  setIndex((i) => (i + 1) % orderedImages.length);
+                }}
                 className="bg-white/10 text-white rounded px-3 py-1 hover:bg-white/20 transition btn"
                 aria-label="Next slide"
                 title="Next slide"

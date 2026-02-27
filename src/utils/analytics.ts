@@ -164,6 +164,101 @@ interface TrackContext {
   trigger?: string | null;
 }
 
+interface ActionPixelContext {
+  galleryId?: string | null;
+  sourceLayer?: string | null;
+  pageType?: 'landing' | 'gallery' | 'image' | 'other';
+  theme?: string | null;
+  trigger?: string | null;
+  pixelType?: 'action' | 'image' | 'page';
+}
+
+const PIXEL_ENDPOINT = '/_state';
+const DEFAULT_PIXEL_LAYER_BY_ACTION: Record<string, string> = {
+  chapter_view: 'sister_pixel_v1',
+  xl_zoom: 'zoom_pixel_v1',
+  zoom_open: 'zoom_pixel_v1',
+  grid_open: 'grid_open_pixel_v1',
+  theme_grid_open: 'theme_grid_open_pixel_v1',
+  grid_image_click: 'grid_image_click_pixel_v1',
+  theme_grid_image_click: 'theme_grid_image_click_pixel_v1',
+  grid_show_more: 'grid_show_more_pixel_v1',
+  grid_show_previous: 'grid_show_previous_pixel_v1',
+  cowboy_jump: 'cowboy_jump_pixel_v1',
+  order_clicked: 'order_clicked_pixel_v1',
+  order_submitted: 'order_submitted_pixel_v1',
+  series_info: 'series_info_pixel_v1',
+  more_info_open: 'more_info_open_pixel_v1',
+  sister_image_click: 'sister_image_click_pixel_v1',
+  slideshow_start: 'slideshow_start_pixel_v1',
+  slideshow_nav_prev: 'slideshow_nav_prev_pixel_v1',
+  slideshow_nav_next: 'slideshow_nav_next_pixel_v1',
+  browse_all_open: 'browse_all_open_pixel_v1',
+  browse_all_image_click: 'browse_all_image_click_pixel_v1',
+  gallery_hero_click: 'gallery_hero_click_pixel_v1',
+  gallery_preview_click: 'gallery_preview_click_pixel_v1',
+  gallery_explore_click: 'gallery_explore_click_pixel_v1',
+  gallery_landing_view: 'gallery_landing_view_pixel_v1',
+  exit_to_gallery: 'exit_to_gallery_pixel_v1',
+  site_content_view: 'site_content_view_pixel_v1',
+  scroll_25: 'scroll_25_pixel_v1',
+  scroll_50: 'scroll_50_pixel_v1',
+  scroll_75: 'scroll_75_pixel_v1',
+  scroll_100: 'scroll_100_pixel_v1',
+  collector_notes_open: 'collector_notes_open_pixel_v1',
+  guide_open: 'guide_open_pixel_v1',
+  guide_close: 'guide_close_pixel_v1',
+  guide_done: 'guide_done_pixel_v1',
+  guide_click_outside: 'guide_click_outside_pixel_v1',
+};
+
+const inflightActionPixels: HTMLImageElement[] = [];
+const recentTrackEventTs = new Map<string, number>();
+const recentActionPixelTs = new Map<string, number>();
+const TRACK_EVENT_DEDUPE_WINDOW_MS = 2500;
+const ACTION_PIXEL_DEDUPE_WINDOW_MS = 2500;
+const EVENT_SAMPLE_RATES: Record<string, number> = {
+  site_content_view: 0.5
+};
+
+function stableHash(input: string): number {
+  let hash = 2166136261;
+  for (let index = 0; index < input.length; index += 1) {
+    hash ^= input.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function shouldSampleOutEvent(event: string, key: string): boolean {
+  const rate = EVENT_SAMPLE_RATES[event];
+  if (typeof rate !== 'number' || rate >= 1) return false;
+  if (rate <= 0) return true;
+  const bucket = stableHash(`${event}|${key}`) / 4294967295;
+  return bucket > rate;
+}
+
+function shouldDropBurstDuplicate(
+  memory: Map<string, number>,
+  key: string,
+  ttlMs: number
+): boolean {
+  const now = Date.now();
+  const last = memory.get(key) || 0;
+  if (now - last < ttlMs) return true;
+
+  memory.set(key, now);
+
+  if (memory.size > 500) {
+    const cutoff = now - ttlMs * 4;
+    for (const [existingKey, timestamp] of memory.entries()) {
+      if (timestamp < cutoff) memory.delete(existingKey);
+    }
+  }
+
+  return false;
+}
+
 type SendOutcome = {
   send_method: 'sendBeacon' | 'fetch';
   fetch_keepalive?: boolean;
@@ -303,6 +398,31 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
   // Prevent accidental double-counting
   if (shouldSkipDuplicateEvent(event, context, pagePath)) return;
 
+  const sampleKey = [
+    getSessionId(),
+    inferredImageId || '',
+    inferredGalleryId || '',
+    inferredPageType || '',
+    pagePath
+  ].join('|');
+
+  if (shouldSampleOutEvent(event, sampleKey)) {
+    return;
+  }
+
+  const burstKey = [
+    event,
+    inferredImageId || '',
+    inferredGalleryId || '',
+    inferredPageType || '',
+    context.trigger || '',
+    pagePath
+  ].join('|');
+
+  if (shouldDropBurstDuplicate(recentTrackEventTs, burstKey, TRACK_EVENT_DEDUPE_WINDOW_MS)) {
+    return;
+  }
+
   const payload = JSON.stringify({
     session_id: getSessionId(),
     event,
@@ -334,9 +454,90 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
   }
 }
 
+export function emitActionPixel(action: string, imageId: string | null = null, context: ActionPixelContext = {}): void {
+  if (typeof window === 'undefined') return;
+
+  try {
+    const pagePath = window.location.pathname;
+    const inferredImageId = imageId ?? getImageIdFromPath(pagePath);
+    const inferredGalleryId = context.galleryId ?? getGalleryIdFromPath(pagePath);
+    if (!inferredImageId && (inferredGalleryId === '/' || inferredGalleryId === '')) {
+      return;
+    }
+    const inferredPageType: ActionPixelContext['pageType'] = context.pageType ?? (
+      inferredImageId ? 'image'
+        : inferredGalleryId ? 'gallery'
+          : (pagePath === '/' || pagePath === '') ? 'landing'
+            : 'other'
+    );
+
+    const pixelType = context.pixelType || 'action';
+    const layer = context.sourceLayer || DEFAULT_PIXEL_LAYER_BY_ACTION[action] || `${action}_pixel_v1`;
+    const params = new URLSearchParams({
+      t: pixelType,
+      e: action,
+      v: String(Date.now())
+    });
+
+    if (inferredImageId) params.set('id', inferredImageId);
+    if (inferredGalleryId) params.set('g', inferredGalleryId);
+    if (inferredPageType) params.set('pt', inferredPageType);
+    if (layer) params.set('sl', layer);
+    if (context.theme) params.set('th', String(context.theme));
+    if (context.trigger) params.set('tr', String(context.trigger));
+
+    const sampleKey = [
+      getSessionId(),
+      inferredImageId || '',
+      inferredGalleryId || '',
+      inferredPageType || '',
+      layer || '',
+      context.trigger || '',
+      pixelType,
+      window.location.pathname
+    ].join('|');
+
+    if (shouldSampleOutEvent(action, sampleKey)) {
+      return;
+    }
+
+    const burstKey = [
+      action,
+      inferredImageId || '',
+      inferredGalleryId || '',
+      inferredPageType || '',
+      layer || '',
+      context.trigger || '',
+      pixelType
+    ].join('|');
+
+    if (shouldDropBurstDuplicate(recentActionPixelTs, burstKey, ACTION_PIXEL_DEDUPE_WINDOW_MS)) {
+      return;
+    }
+
+    const img = new Image();
+    img.referrerPolicy = 'same-origin';
+    inflightActionPixels.push(img);
+    img.onload = img.onerror = () => {
+      const idx = inflightActionPixels.indexOf(img);
+      if (idx >= 0) inflightActionPixels.splice(idx, 1);
+    };
+    img.src = `${PIXEL_ENDPOINT}?${params.toString()}`;
+  } catch (e) {
+    if (isK4Debug()) {
+      console.error('[k4] emitActionPixel failed', {
+        action,
+        href: (typeof window !== 'undefined') ? window.location.href : null,
+        message: (e as any)?.message || String(e)
+      });
+    }
+  }
+}
+
 // Expose trackEvent globally for use in Astro components via onclick
 if (typeof window !== 'undefined') {
   (window as any).k4track = trackEvent;
+  (window as any).k4emitActionPixel = emitActionPixel;
 }
 
 /**
@@ -375,6 +576,7 @@ export function trackPageView(): void {
   // This is important because parts of the site navigate via history.pushState
   // and do not reload, so view events must be tied to URL changes.
   trackDerivedViewsFromLocation();
+  emitSiteContentPagePixel('page_load');
 
   // Update page context for session exit tracking
   updatePageContext();
@@ -418,6 +620,12 @@ function trackDerivedViewsFromLocation(): void {
   const galleryId = getGalleryIdFromPath(path);
   if (galleryId) {
     trackEvent('gallery_view', { galleryId, pageType: 'gallery' });
+    emitActionPixel('gallery_landing_view', null, {
+      galleryId,
+      pageType: 'gallery',
+      sourceLayer: 'gallery_landing_view_pixel_v1',
+      trigger: 'derived_location'
+    });
   }
 }
 
@@ -432,7 +640,9 @@ function installNavigationTracking(): void {
     // Treat SPA navigation like a page view for context + view beacons.
     trackEvent('page_view', { trigger });
     trackDerivedViewsFromLocation();
+    emitSiteContentPagePixel(trigger || 'nav');
     updatePageContext();
+    initScrollDepthTracking();
   };
 
   // back/forward
@@ -508,6 +718,23 @@ function installPreNavImageLinkTracking(): void {
     },
     true
   );
+}
+
+function emitSiteContentPagePixel(trigger: string): void {
+  if (typeof window === 'undefined') return;
+
+  const path = window.location.pathname;
+  const imageId = getImageIdFromPath(path);
+  const galleryId = getGalleryIdFromPath(path);
+
+  if (imageId || galleryId) return;
+
+  emitActionPixel('site_content_view', null, {
+    sourceLayer: 'site_content_view_pixel_v1',
+    pageType: path === '/' ? 'landing' : 'other',
+    pixelType: 'page',
+    trigger
+  });
 }
 
 // ==========================================
@@ -640,10 +867,10 @@ export function initScrollDepthTracking(): void {
     for (const threshold of thresholds) {
       if (scrollPercent >= threshold && !scrollThresholdsFired.has(threshold)) {
         scrollThresholdsFired.add(threshold);
-        trackEvent(`scroll_${threshold}`, {
+        emitActionPixel(`scroll_${threshold}`, null, {
           pageType,
-          imageId: null,
-          galleryId: null
+          sourceLayer: `scroll_${threshold}_pixel_v1`,
+          trigger: 'scroll_depth'
         });
       }
     }

@@ -126,4 +126,3 @@
 
 # Analytics tracking - proxy to Cloudflare Worker
 /track  https://k4-image-proxy.wayneheim.workers.dev/track  200!
-/__k4track/event  https://k4-image-proxy.wayneheim.workers.dev/__k4track/event  200!

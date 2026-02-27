@@ -1,6 +1,5 @@
 import { warmImage } from "../utils/warmImage";
-import { trackEvent } from "../utils/analytics";
-import { trackEvent as trackArtView } from "../utils/trackEvent";
+import { trackEvent, emitActionPixel } from "../utils/analytics";
 import { useState, useRef, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight, Info } from "lucide-react";
@@ -169,6 +168,11 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
       onClick={() => {
         // Close tour when clicking anywhere outside the tip box
         trackEvent("guide_click_outside");
+        emitActionPixel('guide_click_outside', imageId || null, {
+          sourceLayer: 'guide_click_outside_pixel_v1',
+          trigger: 'guide_click_outside',
+          pageType: 'image'
+        });
         setIsOpen(false);
         onClose && onClose();
       }}
@@ -218,6 +222,11 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
                 type="button"
                 onClick={() => {
                   trackEvent("guide_done");
+                  emitActionPixel('guide_done', imageId || null, {
+                    sourceLayer: 'guide_done_pixel_v1',
+                    trigger: 'guide_done',
+                    pageType: 'image'
+                  });
                   closeTour();
                 }}
                 style={{ pointerEvents: "auto", background: "#7b1e1e", color: "#fff", border: "1px solid #6b1a1a", borderRadius: 8, padding: "6px 12px", fontSize: 13, cursor: "pointer" }}
@@ -230,6 +239,11 @@ function GalleryTour({ sectionKey, imageId, openNonce = 0, onClose }) {
               title="Close guide"
               onClick={() => {
                 trackEvent("guide_close");
+                emitActionPixel('guide_close', imageId || null, {
+                  sourceLayer: 'guide_close_pixel_v1',
+                  trigger: 'guide_close',
+                  pageType: 'image'
+                });
                 setIsOpen(false); onClose && onClose();
               }}
               style={{ pointerEvents: "auto", background: "#fff", color: "#444", border: "1px solid #c0c0c0", borderRadius: 88, padding: "5px 8px", fontSize: 12, cursor: "pointer" }}
@@ -271,9 +285,32 @@ export default function ChapterGalleryBase({
 }) {
   const sectionUrl = findSectionUrl(basePath);
 
+  const pixelLayerByEvent = {
+    order_clicked: 'order_clicked_pixel_v1',
+    order_submitted: 'order_submitted_pixel_v1',
+    series_info: 'series_info_pixel_v1',
+    more_info_open: 'more_info_open_pixel_v1',
+    sister_image_click: 'sister_image_click_pixel_v1',
+    slideshow_start: 'slideshow_start_pixel_v1',
+    collector_notes_open: 'collector_notes_open_pixel_v1',
+    exit_to_gallery: 'exit_to_gallery_pixel_v1',
+    guide_open: 'guide_open_pixel_v1'
+  };
+
   // Helper to track events with gallery context
   const track = (event, extraContext = {}) => {
     trackEvent(event, { galleryId: galleryKey, ...extraContext });
+
+    const pixelLayer = pixelLayerByEvent[event];
+    if (pixelLayer) {
+      emitActionPixel(event, extraContext?.imageId || null, {
+        galleryId: galleryKey,
+        sourceLayer: pixelLayer,
+        trigger: event,
+        pageType: extraContext?.pageType || 'image',
+        theme: extraContext?.theme || null
+      });
+    }
   };
 
   // Note: page_view is now tracked globally in BaseLayout.astro
@@ -707,20 +744,14 @@ export default function ChapterGalleryBase({
       trigger: 'index_change'
     });
 
-    // Sister Pixel: deduped pixel-style event for chapter views (human proof-of-life).
-    // Fires once per image per session.
-    try {
-      const key = `k4_dedupe_sister_pixel:${imageId}`;
-      if (!sessionStorage.getItem(key)) {
-        sessionStorage.setItem(key, '1');
-        trackEvent('state_pixel', {
-          galleryId: galleryKey,
-          imageId,
-          sourceLayer: 'sister_pixel_v1',
-          trigger: 'chapter_view'
-        });
-      }
-    } catch (_) {}
+    // Sister Pixel: emit on every chapter-view transition to capture repeat usage.
+    emitActionPixel('chapter_view', imageId, {
+      galleryId: galleryKey,
+      sourceLayer: 'sister_pixel_v1',
+      trigger: 'chapter_view',
+      pageType: 'image',
+      pixelType: 'image'
+    });
   }, [currentIndex, galleryData, viewMode, galleryKey, hasEnteredChapters]);
 
   // ✅ Replaced old title updater with the hook
@@ -1163,25 +1194,18 @@ export default function ChapterGalleryBase({
                                 setIsZoomed(true);
                                 const imageId = galleryData[currentIndex]?.id;
                                 // XL zoom is counted from the user intent click (beacon), not from loading the XL image.
-                                trackArtView('xl_zoom', imageId);
+                                trackEvent('xl_zoom', { imageId, pageType: 'image', galleryId: galleryKey, trigger: 'xl_zoom' });
 
-                                // Pixel-style zoom open signal (segmented in analytics by source_layer)
-                                // Dedup per image per session to avoid accidental double-counting.
-                                try {
-                                  if (imageId) {
-                                    const key = `k4_dedupe_zoom_pixel:${imageId}`;
-                                    const fired = sessionStorage.getItem(key);
-                                    if (!fired) {
-                                      sessionStorage.setItem(key, '1');
-                                      trackEvent('state_pixel', {
-                                        galleryId: galleryKey,
-                                        imageId,
-                                        sourceLayer: 'zoom_pixel_v1',
-                                        trigger: 'xl_zoom'
-                                      });
-                                    }
-                                  }
-                                } catch (_) {}
+                                // Pixel-style zoom open signal (segmented in analytics by source_layer).
+                                // Emit every click so repeat zoom usage is measurable per session.
+                                if (imageId) {
+                                  emitActionPixel('xl_zoom', imageId, {
+                                    galleryId: galleryKey,
+                                    sourceLayer: 'zoom_pixel_v1',
+                                    trigger: 'xl_zoom',
+                                    pageType: 'image'
+                                  });
+                                }
                               }
                             }}
                             data-zoom-btn
@@ -1654,7 +1678,7 @@ export default function ChapterGalleryBase({
                             <button
                               type="button"
                               onClick={() => {
-                                track('slideshow_start', { pageType: 'image', imageId: galleryData[currentIndex]?.id });
+                                track('slideshow_start', { pageType: 'image', imageId: galleryData[currentIndex]?.id, trigger: 'play_slideshow' });
                                 if (!tourOpen()) {
                                   setShowStoryShow(true);
                                 }
@@ -1697,7 +1721,7 @@ export default function ChapterGalleryBase({
                           <button
                             type="button"
                             onClick={() => {
-                              track('slideshow_start', { pageType: 'image', imageId: galleryData[currentIndex]?.id });
+                              track('slideshow_start', { pageType: 'image', imageId: galleryData[currentIndex]?.id, trigger: 'play_slideshow' });
                               if (!tourOpen()) {
                                 setShowStoryShow(true);
                               }
@@ -1846,11 +1870,11 @@ export default function ChapterGalleryBase({
                         style={{ margin: 0 }}
                         onToggle={(e) => {
                           if (e.target.open) {
-                            track("more_info_open");
+                            const currentId = galleryData[currentIndex]?.id || null;
+                            track("more_info_open", { imageId: currentId, pageType: 'image', trigger: 'more_about_toggle' });
                             
                             // Warm sister link image immediately on panel open
                             // User reading time (5-10s) provides the warm window naturally
-                            const currentId = galleryData[currentIndex]?.id;
                             if (currentId) {
                               // Find sister match for this image
                               const match = sitemapMatches.find(m => m.a.includes(currentId));
@@ -1976,7 +2000,7 @@ export default function ChapterGalleryBase({
                             return (
                               <a 
                                 href={href}
-                                onClick={() => track("sister_image_click")}
+                                onClick={() => track("sister_image_click", { imageId: currentId, pageType: 'image', trigger: 'explore_more_photos' })}
                                 style={{
                                   display: 'block',
                                   marginTop: '1rem',

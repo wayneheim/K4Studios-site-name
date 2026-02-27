@@ -11,7 +11,7 @@
  * - Triggered from footer, expands in-place
  */
 import { useState, useEffect, useRef } from 'react';
-import { trackEvent } from '../utils/analytics';
+import { trackEvent, emitActionPixel } from '../utils/analytics';
 
 // ✅ Grid styling matches /all.astro
 const gridStyles = {
@@ -89,7 +89,7 @@ const truncateStory = (story, maxLen = 100) => {
 /**
  * Single image card component
  */
-function ImageCard({ item, index, basePath }) {
+function ImageCard({ item, index, basePath, onImageClick }) {
   const [isHovered, setIsHovered] = useState(false);
   
   const title = cleanText(item.title || `Image ${index + 1}`);
@@ -105,7 +105,7 @@ function ImageCard({ item, index, basePath }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <a href={linkUrl} style={cardLinkStyles}>
+      <a href={linkUrl} style={cardLinkStyles} onClick={() => onImageClick?.(item.id)}>
         <img
           src={imgSrc}
           alt={altText}
@@ -155,7 +155,13 @@ export default function BrowseAllGrid({
 
   // ✅ Handle expand with optional history state
   const handleExpand = () => {
-    trackEvent('browse_all_click');
+    trackEvent('browse_all_click', { galleryId: basePath, pageType: 'gallery', trigger: 'view_all_images_open' });
+    emitActionPixel('browse_all_open', null, {
+      galleryId: basePath,
+      sourceLayer: 'browse_all_open_pixel_v1',
+      pageType: 'gallery',
+      trigger: 'view_all_images_open'
+    });
     setIsExpanded(true);
     // Shallow history state for back-button sanity (no URL change)
     if (typeof window !== 'undefined') {
@@ -170,6 +176,21 @@ export default function BrowseAllGrid({
     if (gridRef.current) {
       gridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  };
+
+  const handleGridImageClick = (imageId) => {
+    trackEvent('browse_all_image_click', {
+      galleryId: basePath,
+      imageId,
+      pageType: 'image',
+      trigger: 'view_all_images_grid'
+    });
+    emitActionPixel('browse_all_image_click', imageId || null, {
+      galleryId: basePath,
+      sourceLayer: 'browse_all_image_click_pixel_v1',
+      pageType: 'image',
+      trigger: 'view_all_images_grid'
+    });
   };
 
   // ✅ Listen for back button to collapse
@@ -259,6 +280,7 @@ export default function BrowseAllGrid({
                 item={item}
                 index={idx}
                 basePath={basePath}
+                onImageClick={handleGridImageClick}
               />
             ))}
           </div>
