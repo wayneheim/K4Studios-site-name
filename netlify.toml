@@ -159,6 +159,19 @@ from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/*"
 to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/index.html"
 status = 200
 
+# Fix short Engrained image URLs (missing /Engrained-Series)
+[[redirects]]
+from = "/Other/K4-Select-Series/Engrained/i-:id"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Other/K4-Select-Series/Engrained/i-:id/*"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/:splat"
+status = 301
+force = true
+
 
 # --- Traditional (Fine-Art-Photography) Deep-Link Fixes ---
 [[redirects]]
@@ -349,6 +362,14 @@ for = "/fonts/*"
 for = "/*/i-*/*"
   [headers.values]
   Cache-Control = "no-cache, no-store, must-revalidate"
+
+# Data endpoints (JSON) — must never be edge-cached (prevents cached 404s)
+[[headers]]
+for = "/data/*"
+  [headers.values]
+  Cache-Control = "no-store, max-age=0"
+  CDN-Cache-Control = "no-store"
+  Netlify-CDN-Cache-Control = "no-store"
 
 # Regular HTML pages (landing, blog, glossary, etc.)
 [[headers]]

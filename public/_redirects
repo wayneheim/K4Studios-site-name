@@ -8,6 +8,10 @@
 /Other/Blog  /Blog  301
 /Other/Blog/*  /Blog/:splat  301
 
+# Engrained short image URLs (missing /Engrained-Series) → canonical
+/Other/K4-Select-Series/Engrained/i-:id/*  /Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/:splat  301!
+/Other/K4-Select-Series/Engrained/i-:id  /Other/K4-Select-Series/Engrained/Engrained-Series/i-:id  301!
+
 # Block access to source files in production (should never be crawled)
 # In dev: These files exist so redirect won't trigger
 # In prod: Returns 410 Gone

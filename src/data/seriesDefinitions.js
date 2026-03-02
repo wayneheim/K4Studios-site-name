@@ -144,7 +144,10 @@ export async function loadSeriesRegistry() {
   
   registryLoadPromise = (async () => {
     try {
-      const res = await fetch("/data/seriesRegistry.json", { cache: "no-store" });
+      // Always add a querystring cache-buster.
+      // We've seen CDN/edge cache a 404 for the bare URL; a querystring reliably bypasses that.
+      const cacheBuster = Date.now();
+      const res = await fetch(`/data/seriesRegistry.json?_t=${cacheBuster}`, { cache: "no-store" });
       if (res.ok) {
         registryCache = await res.json();
         return registryCache;
