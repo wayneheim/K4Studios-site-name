@@ -98,9 +98,8 @@ to = "/sitemap.xml"
 status = 301
 force = true
 
-# Redirect bare lightbox page to 410 Gone (legacy SmugMug endpoint)
-# NOTE: /Galleries/lightbox?dataset=... is allowed for internal "View Complete Gallery" use
-# Only the bare URL without query params is blocked
+# Block bare lightbox page (no ?dataset= param)
+# Lightbox with ?dataset= is a real gallery page — allowed through
 [[redirects]]
 from = "/Galleries/lightbox"
 to = "/410.html"
@@ -236,6 +235,18 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/Other/Photo-Shoots"
+to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Other/Photo-Shoots/*"
+to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots"
+status = 301
+force = true
+
+[[redirects]]
 from = "/bio"
 to = "/Other/Bio"
 status = 301
@@ -288,8 +299,8 @@ force = true
 
 [[redirects]]
 from = "/keyword*"
-to = "/Glossary"
-status = 301
+to = "/404.html"
+status = 404
 force = true
 
 [[redirects]]
@@ -499,19 +510,7 @@ query = "*"
 
 # Legacy Photo-Shoots paths (archive content on SmugMug, not advertised here)
 [[redirects]]
-from = "/Other/Photo-Shoots"
-to = "/"
-status = 410
-force = true
-
-[[redirects]]
 from = "/Other/Photo-Shoots-and-Themes/*"
-to = "/"
-status = 410
-force = true
-
-[[redirects]]
-from = "/Other/Photo-Shoots/*"
 to = "/"
 status = 410
 force = true

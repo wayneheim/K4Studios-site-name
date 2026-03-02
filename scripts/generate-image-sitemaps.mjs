@@ -17,6 +17,10 @@ const REPO_ROOT = path.resolve(__dirname, '..');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
 
+function isGhostImageId(id) {
+  return String(id || '').trim().toLowerCase() === GHOST_IMAGE_ID;
+}
+
 function getGitLastModifiedMs(absoluteFilePath) {
   try {
     const rel = path.relative(REPO_ROOT, absoluteFilePath).replace(/\\/g, '/');
@@ -46,7 +50,7 @@ async function writeIfChanged(filePath, content) {
 function isHiddenImage(image) {
   const visibility = String(image?.visibility || '').toLowerCase().trim();
   if (visibility === 'ghost' || visibility === 'hidden' || visibility === 'hide') return true;
-  if (image?.id === GHOST_IMAGE_ID) return true;
+  if (isGhostImageId(image?.id)) return true;
 
   // Various flags used across data sets
   if (image?.hidden === true) return true;

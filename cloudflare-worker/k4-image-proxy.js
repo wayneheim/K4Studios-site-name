@@ -914,6 +914,38 @@ function getParentGallery(pathname) {
   return pathname.replace(/\/i-[a-zA-Z0-9-]+\/?$/, "");
 }
 
+async function createBranded404Response(request) {
+  try {
+    const reqUrl = new URL(request.url);
+    const notFoundUrl = `${reqUrl.origin}/404.html`;
+    const pageResp = await fetch(notFoundUrl, { method: 'GET' });
+
+    if (pageResp && (pageResp.ok || pageResp.status === 404)) {
+      const headers = new Headers(pageResp.headers);
+      headers.set('Cache-Control', 'public, max-age=86400');
+      headers.set('X-Robots-Tag', 'noindex, nofollow');
+      if (!headers.get('Content-Type')) {
+        headers.set('Content-Type', 'text/html; charset=utf-8');
+      }
+
+      return new Response(pageResp.body, {
+        status: 404,
+        headers
+      });
+    }
+  } catch (e) {
+    console.error('Branded 404 fetch error:', e);
+  }
+
+  return new Response('Not Found', {
+    status: 404,
+    headers: {
+      'Cache-Control': 'public, max-age=86400',
+      'X-Robots-Tag': 'noindex, nofollow'
+    }
+  });
+}
+
 /**
  * Policy:
  * - If image exists:
@@ -932,8 +964,19 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
   // Ghost image ID is a UI sentinel (state management) and should never be a real page.
   // If someone requests a URL ending in i-k4studios, it's always junk traffic.
   if (String(imageId).toLowerCase() === GHOST_IMAGE_ID.toLowerCase()) {
-    return new Response('Gone', {
-      status: 410,
+    const isBrowser = looksLikeBrowser(request);
+    const isSearch = isSearchBot(request);
+
+    // Human UX: behave like Smart-404 fallback and send to homepage.
+    if (isBrowser && !isSearch) {
+      ctx.waitUntil(logEdgeEvent(env, '302', pathname, imageId, false, request));
+      return Response.redirect('https://www.k4studios.com/', 302);
+    }
+
+    // Bots/non-browser: keep a hard 404 for clean crawl signaling.
+    ctx.waitUntil(logEdgeEvent(env, '404', pathname, imageId, isSearch, request));
+    return new Response('Not Found', {
+      status: 404,
       headers: {
         'X-Robots-Tag': 'noindex, nofollow',
         'Cache-Control': 'public, max-age=86400'
@@ -976,6 +1019,17 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
         //   as mutation-probing and return a cheap cacheable 404.
         // - Otherwise, canonicalize to the first known valid path (preserve link equity).
         if (!matchedPath) {
+          const galleryLeafPath = validPaths.find(p => {
+            const pl = String(p || '').toLowerCase();
+            return pl === `${requestedLower}/gallery`;
+          });
+
+          if (galleryLeafPath) {
+            const canonicalUrl = `https://www.k4studios.com${galleryLeafPath}/${imageId}${search}`;
+            ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearch, request));
+            return Response.redirect(canonicalUrl, 301);
+          }
+
           const requestedPrefixLower = `${requestedLower}/`;
           const isMissingLeafProbe = validPaths.some(p => {
             const pl = String(p || '').toLowerCase();
@@ -2133,6 +2187,23 @@ export default {
     // - Trust known legacy namespaces (e.g., /Photography-Galleries/) and let image-page policy handle canonicalization.
     // - Reject unknown /i-xxxxx URLs outside known namespaces as crawler probes (cheap 404, no slash-normalization).
     const path = url.pathname;
+    const lowerPath = path.toLowerCase();
+
+    // Legacy SmugMug keyword URL junk should always be hard-404.
+    // Prevents homepage fallback with junk path preserved in the address bar.
+    if (/(^|\/)keyword(?:\/|$)/i.test(path)) {
+      return await createBranded404Response(request);
+    }
+
+    // Bare /Galleries/lightbox (no ?dataset=) is a dead SmugMug endpoint → 410.
+    // Lightbox WITH ?dataset= is a real gallery page — pass through to origin.
+    if (lowerPath === '/galleries/lightbox' && !url.searchParams.has('dataset')) {
+      return new Response('Gone', {
+        status: 410,
+        headers: { 'X-Robots-Tag': 'noindex', 'Cache-Control': 'public, max-age=86400' }
+      });
+    }
+
     const imageIdAtEnd = /\/(i-[a-zA-Z0-9-]+)\/?$/.test(path);
     const isLegacyNamespace = path === '/Photography-Galleries' || path.startsWith('/Photography-Galleries/');
     const isKnownNamespace =
@@ -2150,6 +2221,21 @@ export default {
           'X-Robots-Tag': 'noindex, nofollow'
         }
       });
+    }
+
+    // =====================================================
+    // LEGACY Traditional-Photos → Fine-Art-Photography REDIRECTS
+    // "Traditional-Photos" was the old SmugMug name for what is now
+    // "Fine-Art-Photography" on the new site. Simple segment swap covers
+    // every sub-path and image-level URL universally.
+    //
+    // Why at the worker: Netlify _redirects had a catch-all that served the
+    // homepage body with 410 status — users saw the homepage on a dead URL.
+    // Handling here gives instant effect without a site rebuild.
+    // =====================================================
+    if (/\/traditional-photos(?:\/|$)/i.test(path)) {
+      const rewritten = path.replace(/\/Traditional-Photos/i, '/Fine-Art-Photography');
+      return Response.redirect(`https://www.k4studios.com${rewritten}`, 301);
     }
 
     // =====================================================

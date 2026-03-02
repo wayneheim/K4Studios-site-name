@@ -73,6 +73,7 @@ Disallow: /services/
 Disallow: /_rpc/
 Disallow: /upload/
 Disallow: /video/
+Disallow: /keyword/
 Disallow: /src/
 Disallow: /frame/
 Allow: /
@@ -102,6 +103,7 @@ Disallow: /services/
 Disallow: /_rpc/
 Disallow: /upload/
 Disallow: /video/
+Disallow: /keyword/
 Allow: /
 User-agent: Bingbot-Image
 Allow: /
@@ -109,6 +111,7 @@ User-agent: DuckDuckBot
 Disallow: /api/
 Disallow: /api/v2/
 Disallow: /api/v3/
+Disallow: /keyword/
 Allow: /
 
 # --- Applebot and related services ---

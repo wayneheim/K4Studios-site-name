@@ -234,7 +234,9 @@ const cleanForDisplay = (val = "") =>
                       <span itemprop="name">{label}</span>
                     </a>
                   ) : (
-                    <span itemprop="name">{label}</span>
+                    <a itemprop="item" href={pathAccumulator}>
+                      <span itemprop="name">{label}</span>
+                    </a>
                   )}
                   <meta itemprop="position" content={String(breadcrumbPosition++)} />
                 </li>
@@ -326,11 +328,11 @@ const cleanForDisplay = (val = "") =>
       },
       creator: { "@type": "Person", name: "Wayne Heim" },
       creditText: "© Wayne Heim – K4 Studios",
-      about: `${clean(galleryName)} from Wayne Heim’s painterly fine art series.`,
+      about: `${cleanForJson(galleryName)} from Wayne Heim's painterly fine art series.`,
       hasPart: galleryData.map((item) => ({
         "@type": "ImageObject",
-        name: clean(item.title),
-        description: clean(item.description || item.alt || item.title),
+        name: cleanForJson(item.title),
+        description: cleanForJson(item.description || item.alt || item.title),
         // Cap at L to keep XL out of bot-discoverable structured data
         contentUrl: `https://www.k4studios.com${getProxySrc(item.id, 'l')}`,
         url: `https://www.k4studios.com${baseUrl}/${item.id}`

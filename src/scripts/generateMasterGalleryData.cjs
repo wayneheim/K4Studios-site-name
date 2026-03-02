@@ -108,6 +108,10 @@ function findNavNodeByHref(node, href) {
   return null;
 }
 
+function isGhostImageId(id) {
+  return String(id || '').trim().toLowerCase() === 'i-k4studios';
+}
+
     let raw;
     try {
       const mod = await import('file://' + fileToUse);
@@ -116,8 +120,8 @@ function findNavNodeByHref(node, href) {
       console.error(`Failed loading ${fileToUse}:`, e);
       continue;
     }
-    // filter out your studio watermark & cap
-    const filtered = raw.filter(img => img.id !== 'i-k4studios');
+    // Filter out ghost sentinel rows from all internal image lists.
+    const filtered = raw.filter(img => !isGhostImageId(img?.id));
     const curated  = filtered;
 
     // Always use the original href as the key, regardless of file location

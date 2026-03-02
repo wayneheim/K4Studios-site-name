@@ -14,10 +14,14 @@ const LICENSE_URL = 'https://www.k4studios.com/About/License';
 
 const GHOST_IMAGE_ID = 'i-k4studios';
 
+function isGhostImageId(id) {
+  return String(id || '').trim().toLowerCase() === GHOST_IMAGE_ID;
+}
+
 function isHiddenImage(image) {
   const visibility = String(image?.visibility || '').toLowerCase().trim();
   if (visibility === 'ghost' || visibility === 'hidden' || visibility === 'hide') return true;
-  if (image?.id === GHOST_IMAGE_ID) return true;
+  if (isGhostImageId(image?.id)) return true;
   if (image?.hidden === true) return true;
   if (image?.show === false) return true;
   return false;

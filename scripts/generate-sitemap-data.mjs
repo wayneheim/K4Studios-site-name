@@ -1,7 +1,7 @@
 // Generates src/data/sitemap.ts by scanning local Astro pages AND their connected gallery data files
 // Usage: node scripts/generate-sitemap-data.mjs
 
-import { writeFile, mkdir, readdir, stat, readFile } from 'node:fs/promises';
+import { writeFile, mkdir, readdir, stat } from 'node:fs/promises';
 import { execSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -11,11 +11,15 @@ const __dirname = path.dirname(__filename);
 
 const SITE_URL = 'https://www.k4studios.com';
 const PAGES_DIR = path.resolve(__dirname, '..', 'src', 'pages');
-const SRC_DIR = path.resolve(__dirname, '..', 'src');
 const REPO_ROOT = path.resolve(__dirname, '..');
+const MASTER_GALLERY_DATA_FILE = path.resolve(__dirname, '..', 'src', 'data', 'galleryMaps', 'MasterGalleryData.mjs');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
 const IMAGE_ID_REGEX = /^i-[A-Za-z0-9]+$/;
+
+function isGhostImageId(id) {
+  return String(id || '').trim().toLowerCase() === GHOST_IMAGE_ID;
+}
 
 function getGitLastModifiedIso(absoluteFilePath) {
   try {
@@ -144,148 +148,59 @@ async function walkDir(dir, baseDir = dir) {
   return entries;
 }
 
-// Find all [id].astro dynamic route files
-async function findDynamicRouteFiles(dir, baseDir = dir) {
-  const files = [];
-  const items = await readdir(dir, { withFileTypes: true });
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item.name);
-    if (item.isDirectory()) {
-      const subFiles = await findDynamicRouteFiles(fullPath, baseDir);
-      files.push(...subFiles);
-    } else if (item.isFile() && item.name === '[id].astro') {
-      const relativePath = path.relative(baseDir, path.dirname(fullPath));
-      files.push({ fullPath, relativePath });
-    }
-  }
-  
-  return files;
-}
-
-// Parse a [id].astro file to find the imported galleryData .mjs file
-function parseGalleryDataImport(astroContent, astroFilePath) {
-  // Look for: import { galleryData } from '...something.mjs'
-  const importRegex = /import\s*\{\s*galleryData\s*\}\s*from\s*['"]([^'"]+\.mjs)['"]/;
-  const match = astroContent.match(importRegex);
-  
-  if (!match) return null;
-  
-  let importPath = match[1];
-  
-  // Resolve relative paths or aliases
-  if (importPath.startsWith('@/')) {
-    // @/ alias points to src/
-    importPath = path.resolve(SRC_DIR, importPath.slice(2));
-  } else if (importPath.startsWith('@data/')) {
-    // @data/ alias points to src/data/
-    importPath = path.resolve(SRC_DIR, 'data', importPath.slice(6));
-  } else if (importPath.startsWith('../') || importPath.startsWith('./')) {
-    // Relative path from the astro file's directory
-    importPath = path.resolve(path.dirname(astroFilePath), importPath);
-  } else {
-    // Could be other alias patterns - log warning
-    console.warn(`  Unknown import path format: ${importPath}`);
-    return null;
-  }
-  
-  return importPath;
-}
-
-// Scan [id].astro files and their connected .mjs data files to extract image IDs
+// Build dynamic image pages from MasterGalleryData.
+// MasterGalleryData keys are canonical gallery hrefs sourced from siteNav.
 async function loadDynamicRoutes() {
   const entries = [];
-  
+
   try {
-    console.log('Finding [id].astro dynamic route files...');
-    const dynamicRouteFiles = await findDynamicRouteFiles(PAGES_DIR);
-    console.log(`Found ${dynamicRouteFiles.length} dynamic route files`);
-    
-    for (const { fullPath, relativePath } of dynamicRouteFiles) {
-      const astroContent = await readFile(fullPath, 'utf8');
-      const astroStats = await stat(fullPath);
-      const astroLastmodIso = getStableLastmodIso(fullPath, astroStats.mtime.toISOString());
-      
-      // Parse the import to find the .mjs data file
-      const dataFilePath = parseGalleryDataImport(astroContent, fullPath);
-      
-      if (!dataFilePath) {
-        console.log(`  Skipping ${relativePath}/[id].astro - no galleryData import found`);
-        continue;
-      }
-      
-      // Check if the data file exists
-      let dataStats;
-      try {
-        dataStats = await stat(dataFilePath);
-      } catch {
-        console.warn(`  Warning: Data file not found: ${dataFilePath}`);
-        continue;
-      }
-      const dataLastmodIso = getStableLastmodIso(dataFilePath, dataStats.mtime.toISOString());
+    console.log('Loading dynamic routes from MasterGalleryData (siteNav-keyed)...');
+    const masterStats = await stat(MASTER_GALLERY_DATA_FILE);
+    const masterLastmod = getStableLastmodIso(MASTER_GALLERY_DATA_FILE, masterStats.mtime.toISOString());
 
-      // Load the data module and extract only *visible* image IDs.
-      // Regex-scraping IDs is dangerous (it picks up non-image IDs and hidden/ghost placeholders).
-      let galleryData;
-      try {
-        const mod = await import(pathToFileURL(dataFilePath).href);
-        galleryData = mod?.galleryData;
-      } catch (err) {
-        console.warn(`  Warning: Failed to import galleryData from: ${dataFilePath}`);
-        console.warn(`           ${err?.message || err}`);
-        continue;
-      }
+    const masterMod = await import(pathToFileURL(MASTER_GALLERY_DATA_FILE).href);
+    const galleryDataMap = masterMod?.galleryDataMap;
 
-      if (!Array.isArray(galleryData)) {
-        console.warn(`  Warning: galleryData is not an array in: ${dataFilePath}`);
-        continue;
-      }
+    if (!galleryDataMap || typeof galleryDataMap !== 'object') {
+      console.warn('  Warning: galleryDataMap missing in MasterGalleryData.mjs');
+      return entries;
+    }
+
+    for (const [rawHref, images] of Object.entries(galleryDataMap)) {
+      const href = String(rawHref || '').trim();
+      if (!href.startsWith('/')) continue;
+      if (!Array.isArray(images) || images.length === 0) continue;
 
       const imageIds = Array.from(
         new Set(
-          galleryData
+          images
             .filter((img) => img && typeof img.id === 'string')
-            .filter((img) => img.id !== GHOST_IMAGE_ID)
+            .filter((img) => !isGhostImageId(img.id))
             .filter((img) => img.visibility !== 'hidden' && img.visibility !== 'hide' && img.visibility !== 'ghost')
-            .map((img) => img.id)
+            .map((img) => String(img.id).trim())
             .filter((id) => IMAGE_ID_REGEX.test(id))
         )
       );
 
-      if (imageIds.length === 0) {
-        console.log(`  Skipping ${relativePath} - no visible image IDs found in data file`);
-        continue;
-      }
-      
-      // Convert the relative path to a URL path
-      // e.g., "Galleries/Fine-Art-Photography/Architecture/Gallery" 
-      //    -> "/Galleries/Fine-Art-Photography/Architecture/Gallery"
-      const urlBase = '/' + relativePath.replace(/\\/g, '/');
-      
-      console.log(`  ${relativePath}: ${imageIds.length} images`);
-      
-      // Create sitemap entries for each image
-      const astroMs = Date.parse(astroLastmodIso) || astroStats.mtimeMs;
-      const dataMs = Date.parse(dataLastmodIso) || dataStats.mtimeMs;
-      const lastmod = new Date(Math.max(astroMs, dataMs)).toISOString();
+      if (imageIds.length === 0) continue;
+
       for (const imageId of imageIds) {
-        const urlPath = `${urlBase}/${imageId}`;
+        const urlPath = `${href}/${imageId}`;
         entries.push({
           loc: SITE_URL + urlPath,
-          lastmod,
+          lastmod: masterLastmod,
           changefreq: 'monthly',
-          priority: getPriority(urlBase),
+          priority: getPriority(href),
         });
       }
     }
-    
-    console.log(`Generated ${entries.length} dynamic route entries from connected data files`);
-    
+
+    console.log(`Generated ${entries.length} dynamic route entries from MasterGalleryData`);
   } catch (err) {
     console.error('Error loading dynamic routes:', err.message);
     console.error(err.stack);
   }
-  
+
   return entries;
 }
 
