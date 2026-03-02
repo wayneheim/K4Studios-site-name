@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
+import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
@@ -59,6 +60,7 @@ const structuredData = getStructuredData({
 
 const meta = {
   ...getLandingMeta(sectionPath, coverImageAbsolute),
+  description: "A conversation with Quill about fire as truth, metaphor, and rebirth in Wayne Heim's Western image 'One Way Out.'",
   ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Conversations With Quill: One Way Out",
   ogDescription: "A conversation with Quill about fire as truth, metaphor, and rebirth in Wayne Heim's Western image 'One Way Out.'",
@@ -104,7 +106,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
 <BaseLayout
   title="Conversations With Quill – One Way Out"
-  structuredDataJSON={structuredData}
   meta={meta}
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
@@ -149,6 +150,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     <!-- Story Content -->
     <!-- ===================== -->
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <BlogJsonLd json={structuredData}>
       <article class="story-block space-y-4">
         <h3>Intro</h3>
         <p><em>The American West has always burned. Yet most Western art looks away from fire, preferring sunsets, dust, or lone riders on open plains. Rarely do we see the flames that scarred landscapes, ended lives, and cleared the way for rebirth. In “One Way Out,” Wayne Heim doesn’t just paint fire into the frame — he makes it the story. Not as spectacle, but as metaphor: trauma, endurance, and renewal. In this conversation, we dive into how fire shapes the land, the people, and the myths of the West.</em></p>
@@ -181,6 +183,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>🔗 Explore the full <a href="/Western-Fine-Art-Photography">Western Fine Art Photography</a> collection | <a href="https://k4studios.com" class="underline">k4studios.com</a></p>
       </article>
+      </BlogJsonLd>
     </section>
 
     <!-- Western Art Definitions -->

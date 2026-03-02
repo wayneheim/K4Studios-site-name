@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
+import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
@@ -56,6 +57,7 @@ const structuredData = getStructuredData({
 
 const meta = {
   ...getLandingMeta(sectionPath, coverImageAbsolute),
+  description: "A conversation with Quill about light, judgment, and inevitability in Wayne Heim's Western fine art photograph 'Inevitable.'",
   ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Inside the Frame: Inevitable",
   ogDescription: "A conversation with Quill about light, judgment, and inevitability in Wayne Heim's Western fine art photograph 'Inevitable.'",
@@ -102,7 +104,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
 <BaseLayout
   title="Inside the Frame: Inevitable"
-  structuredDataJSON={structuredData}
   meta={meta}
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
@@ -147,6 +148,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     <!-- Story Block -->
     <!-- ===================== -->
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <BlogJsonLd json={structuredData}>
       <article class="story-block space-y-4">
 
         <!-- Intro -->
@@ -234,6 +236,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         `)} />
 
       </article>
+      </BlogJsonLd>
     </section>
 
     <!-- Western Art Definitions -->

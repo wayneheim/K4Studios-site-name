@@ -26,6 +26,7 @@ from = "^/(.+)/$"
 to = "/$1"
 status = 301
 force = true
+regex = true
 
 ##############################
 # ✅ URL Case Normalization (prevents duplicate content)

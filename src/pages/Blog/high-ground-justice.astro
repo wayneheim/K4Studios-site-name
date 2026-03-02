@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
+import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
@@ -59,6 +60,7 @@ const structuredData = getStructuredData({
 
 const meta = {
   ...getLandingMeta(sectionPath, coverImageAbsolute),
+  description: "A conversation with Quill about layered storytelling, composition, and painterly meaning behind Wayne Heim's Western image 'High Ground Justice.'",
   ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Inside the Frame: High Ground Justice",
   ogDescription: "A conversation with Quill about layered storytelling, composition, and painterly meaning behind Wayne Heim's Western image 'High Ground Justice.'",
@@ -107,7 +109,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
 <BaseLayout
   title="Conversations With Quill – High Ground Justice"
-  structuredDataJSON={structuredData}
   meta={meta}
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
@@ -158,6 +159,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     <!-- Story Content -->
     <!-- ===================== -->
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <BlogJsonLd json={structuredData}>
       <article class="story-block space-y-4">
         <p><strong>Quill:</strong></p>
         <p>Hey Wayne, thanks for sitting down with me. Let’s talk about your new piece — <em>High Ground Justice</em>.</p>
@@ -281,6 +283,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>🔗 Explore the full <a href="/Western-Fine-Art-Photography">Western Fine Art Photography</a> collection | <a href="https://k4studios.com" class="underline">k4studios.com</a></p>
       </article>
+      </BlogJsonLd>
     </section>
 
     <!-- Western Art Definitions -->

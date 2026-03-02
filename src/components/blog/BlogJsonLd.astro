@@ -1,0 +1,74 @@
+---
+/**
+ * BlogJsonLd.astro — Auto-populates articleBody from rendered content
+ *
+ * Wraps the article prose section of a blog post.
+ * At build time:
+ *   1. Renders the slot (article HTML)
+ *   2. Strips HTML → plain text
+ *   3. Takes first N words as articleBody
+ *   4. Injects a <script type="application/ld+json"> with enriched structured data
+ *   5. Re-emits the original slot HTML
+ *
+ * Usage:
+ *   <BlogJsonLd json={structuredData}>
+ *     <article>...</article>
+ *   </BlogJsonLd>
+ *
+ * The parent page should NOT pass structuredDataJSON to BaseLayout
+ * when using this component (to avoid duplicate JSON-LD).
+ */
+
+interface Props {
+  /** JSON string from getStructuredData({ type: "BlogPosting", ... }) */
+  json: string;
+  /** Max words to extract for articleBody (default: 300) */
+  maxWords?: number;
+}
+
+const { json, maxWords = 300 } = Astro.props;
+
+// 1. Render slot content to HTML string
+const slotHtml = await Astro.slots.render('default');
+
+// 2. Strip HTML → plain text
+const plainText = slotHtml
+  // Remove script/style blocks entirely
+  .replace(/<script[\s\S]*?<\/script>/gi, '')
+  .replace(/<style[\s\S]*?<\/style>/gi, '')
+  // Remove HTML tags
+  .replace(/<[^>]+>/g, ' ')
+  // Decode common HTML entities
+  .replace(/&nbsp;/gi, ' ')
+  .replace(/&amp;/g, '&')
+  .replace(/&lt;/g, '<')
+  .replace(/&gt;/g, '>')
+  .replace(/&quot;/g, '"')
+  .replace(/&#39;/g, "'")
+  .replace(/&rsquo;/g, "'")
+  .replace(/&lsquo;/g, "'")
+  .replace(/&rdquo;/g, '"')
+  .replace(/&ldquo;/g, '"')
+  .replace(/&mdash;/g, '—')
+  .replace(/&ndash;/g, '–')
+  .replace(/&hellip;/g, '…')
+  .replace(/&#\d+;/g, '')
+  // Collapse whitespace
+  .replace(/\s+/g, ' ')
+  .trim();
+
+// 3. Extract first N words
+const words = plainText.split(/\s+/).filter(Boolean);
+const excerpt = words.slice(0, maxWords).join(' ') + (words.length > maxWords ? '…' : '');
+
+// 4. Parse JSON-LD, enrich with articleBody + real wordCount
+const parsed = JSON.parse(json);
+parsed.articleBody = excerpt;
+parsed.wordCount = words.length;
+
+// 5. Normalize host (same as BaseLayout's normalizeK4Host)
+const enrichedJson = JSON.stringify(parsed, null, 2)
+  .replace(/https?:\/\/k4studios\.com/gi, 'https://www.k4studios.com');
+---
+<Fragment set:html={`<script type="application/ld+json">${enrichedJson}</script>`} />
+<Fragment set:html={slotHtml} />

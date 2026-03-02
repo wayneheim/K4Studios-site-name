@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
+import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
@@ -59,6 +60,7 @@ const structuredData = getStructuredData({
 
 const meta = {
   ...getLandingMeta(sectionPath, coverImageAbsolute),
+  description: "A conversation with Quill about allegory, hidden moments, and the superhuman endurance of women in Wayne Heim's Western image 'Dust or Desperation.'",
   ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Inside the Frame: Dust or Desperation",
   ogDescription: "A conversation with Quill about allegory, hidden moments, and the superhuman endurance of women in Wayne Heim's Western image 'Dust or Desperation.'",
@@ -105,7 +107,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
 <BaseLayout
   title="Conversations With Quill – Dust or Desperation"
-  structuredDataJSON={structuredData}
   meta={meta}
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
@@ -150,6 +151,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     <!-- Story Content -->
     <!-- ===================== -->
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <BlogJsonLd json={structuredData}>
       <article class="story-block space-y-4">
 
         <!-- NEW INTRO -->
@@ -202,6 +204,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>🔗 Explore the full <a href="/Western-Fine-Art-Photography">Western Fine Art Photography</a> collection | <a href="https://k4studios.com" class="underline">k4studios.com</a></p>
       </article>
+      </BlogJsonLd>
     </section>
 
     <!-- Western Art Definitions -->

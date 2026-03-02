@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
+import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
@@ -61,6 +62,7 @@ const breadcrumbsJSON = getBlogBreadcrumbList({
 
 const meta = {
   ...getLandingMeta(sectionPath, coverImageAbsolute),
+  description: "A conversation with Quill about gaze, awareness, and painterly storytelling in Wayne Heim's Western fine art photograph 'Eye of the Hunt.'",
   ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Inside the Frame: Eye of the Hunt",
   ogDescription: "A conversation with Quill about gaze, awareness, and painterly storytelling in Wayne Heim's Western fine art photograph 'Eye of the Hunt.'",
@@ -107,7 +109,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
 <BaseLayout
   title="Inside the Frame: Eye of the Hunt"
-  structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbsJSON}
   meta={meta}
 >
@@ -149,6 +150,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
   {/* Story Block */}
   {/* ===================== */}
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <BlogJsonLd json={structuredData}>
       <article class="story-block space-y-4">
 
   {/* Title & Story */}
@@ -213,6 +215,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>🔗 Explore the full <a href="/Western-Fine-Art-Photography">Western Fine Art Photography</a> collection | <a href="https://k4studios.com" class="underline">k4studios.com</a></p>
       </article>
+      </BlogJsonLd>
     </section>
 
     <!-- Western Art Definitions -->

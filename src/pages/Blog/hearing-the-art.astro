@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
+import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
@@ -63,8 +64,7 @@ const breadcrumbsJSON = getBlogBreadcrumbList({
 });
 
 const meta = {
-  ...getLandingMeta(sectionPath, coverImageAbsolute),
-  ogUrl: `https://k4studios.com${sectionPath}`,
+  ...getLandingMeta(sectionPath, coverImageAbsolute),  description: "A conversation about how images paired with restrained text elicit an experience closer to listening to music \u2014 inviting viewers to participate, not just observe.",  ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Conversations With Quill – Hearing the Art",
   ogDescription: "A conversation about how images paired with restrained text elicit an experience closer to listening to music — inviting viewers to participate, not just observe.",
   ogImage: coverImageAbsolute,
@@ -110,7 +110,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
 <BaseLayout
   title="Conversations With Quill – Hearing the Art"
-  structuredDataJSON={structuredData}
+
   breadcrumbsJSON={breadcrumbsJSON}
   meta={meta}
 >
@@ -156,6 +156,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     <!-- Story Block -->
     <!-- ===================== -->
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <BlogJsonLd json={structuredData}>
       <article class="story-block space-y-4">
 
         <!-- Summary/Setup Paragraph -->
@@ -459,6 +460,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>🔗 Explore the full <a href="/Western-Fine-Art-Photography">Western Fine Art Photography</a> collection | <a href="https://k4studios.com" class="underline">k4studios.com</a></p>
       </article>
+      </BlogJsonLd>
     </section>
 
     <!-- Western Art Definitions -->

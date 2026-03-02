@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
+import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
@@ -58,6 +59,7 @@ const structuredData = getStructuredData({
 
 const meta = {
   ...getLandingMeta(sectionPath, coverImageAbsolute),
+  description: "Good art is not about convincing the viewer the moment is real \u2014 it's about convincing them the moment matters.",
   ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Inside the Frame: When the Medium Disappears",
   ogDescription: "Good art is not about convincing the viewer the moment is real — it's about convincing them the moment matters.",
@@ -106,7 +108,6 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
 <BaseLayout
   title="Inside the Frame – When the Medium Disappears"
-  structuredDataJSON={structuredData}
   meta={meta}
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
@@ -151,6 +152,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     <!-- Story Content -->
     <!-- ===================== -->
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <BlogJsonLd json={structuredData}>
       <article class="story-block space-y-4">
 
         <p class="lead-text" style="font-size:1.15rem; font-style:italic; color:#555; margin-bottom:1.5rem;">
@@ -326,6 +328,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
         <p>🔗 Explore the full <a href="/Galleries">Galleries</a> | <a href="https://k4studios.com" class="underline">k4studios.com</a></p>
       </article>
+      </BlogJsonLd>
     </section>
 
     <SiteFooter 

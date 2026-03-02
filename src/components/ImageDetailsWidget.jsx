@@ -20,6 +20,8 @@
  * @param {string} galleryTitle - The gallery/chapter title
  * @param {string} sisterLink - Optional link to related images
  */
+import blogImageMap from "../data/blogImageMap.js";
+
 export default function ImageDetailsWidget({ 
   image, 
   galleryTitle,
@@ -382,6 +384,24 @@ export default function ImageDetailsWidget({
                       {image.notes}
                     </p>
                   </div>
+                )}
+                {/* Featured in blog — links image → conversation post */}
+                {imageId && blogImageMap[imageId] && (
+                  <a
+                    href={blogImageMap[imageId].url}
+                    style={{
+                      display: 'block',
+                      marginTop: '1rem',
+                      paddingTop: '0.75rem',
+                      borderTop: '1px dashed rgba(200, 190, 180, 0.4)',
+                      fontSize: '0.8rem',
+                      color: '#7b1e1e',
+                      textDecoration: 'none',
+                      fontFamily: "'Glegoo', serif"
+                    }}
+                  >
+                    📖 Featured in <em>Inside the Frame: {blogImageMap[imageId].title}</em>
+                  </a>
                 )}
               </div>
             </details>

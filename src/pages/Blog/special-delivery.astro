@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
 import BaseLayout    from "@/layouts/BaseLayout.astro";
+import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
@@ -64,8 +65,7 @@ const breadcrumbsJSON = getBlogBreadcrumbList({
 });
 
 const meta = {
-  ...getLandingMeta(sectionPath, coverImageAbsolute),
-  ogUrl: `https://k4studios.com${sectionPath}`,
+  ...getLandingMeta(sectionPath, coverImageAbsolute),  description: "A conversation about hubris, power, and the moment when certainty gives way \u2014 exploring Wayne Heim's painterly Western image 'Special Delivery.'",  ogUrl: `https://k4studios.com${sectionPath}`,
   ogTitle: "Inside the Frame – Special Delivery",
   ogDescription: "A conversation about hubris, power, and the moment when certainty gives way — exploring Wayne Heim's painterly Western image 'Special Delivery.'",
   ogImage: coverImageAbsolute,
@@ -111,7 +111,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
 <BaseLayout
   title="Inside the Frame – Special Delivery"
-  structuredDataJSON={structuredData}
+
   breadcrumbsJSON={breadcrumbsJSON}
   meta={meta}
 >
@@ -157,6 +157,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
     <!-- Story Block -->
     <!-- ===================== -->
     <section class="story-section max-w-[860px] mx-auto px-4">
+      <BlogJsonLd json={structuredData}>
       <article class="story-block space-y-4">
 
         <!-- Summary/Setup Paragraph -->
@@ -300,6 +301,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         <p>🔗 <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" class="text-[#8b0000] hover:underline">Explore the full Western Fine Art Photography collection</a> | <a href="/" class="text-[#8b0000] hover:underline">k4studios.com</a></p>
 
       </article>
+      </BlogJsonLd>
     </section>
 
     <!-- Western Art Definitions -->

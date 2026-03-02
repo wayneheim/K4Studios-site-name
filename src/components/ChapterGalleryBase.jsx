@@ -22,6 +22,7 @@ import useMetaSwap from "./hooks/useMetaSwap.js";
 import { siteNav } from "../data/siteNav.js";
 import { useImageFallbackRedirect } from "./utils/useImageFallbackRedirect.js";
 import { themes } from "../data/themes/themes.mjs";
+import blogImageMap from "../data/blogImageMap.js";
 
 /* =========================================================
    Image Proxy URL Generator
@@ -1970,6 +1971,31 @@ export default function ChapterGalleryBase({
                               </p>
                             </div>
                           )}
+
+                          {/* Featured in blog — links image → conversation post */}
+                          {(() => {
+                            const currentId = galleryData[currentIndex]?.id;
+                            const blog = currentId && blogImageMap[currentId];
+                            if (!blog) return null;
+                            return (
+                              <a
+                                href={blog.url}
+                                onClick={() => track("blog_link_click", { imageId: currentId, pageType: 'image', trigger: 'featured_in_blog' })}
+                                style={{
+                                  display: 'block',
+                                  marginTop: '1rem',
+                                  paddingTop: '0.75rem',
+                                  borderTop: '1px dashed rgba(200, 190, 180, 0.4)',
+                                  fontSize: '0.8rem',
+                                  color: '#7b1e1e',
+                                  textDecoration: 'none',
+                                  fontFamily: "'Glegoo', serif"
+                                }}
+                              >
+                                📖 Featured in <em>Inside the Frame: {blog.title}</em>
+                              </a>
+                            );
+                          })()}
                           
                           {/* Discover related - uses sitemapMatches for cross-gallery linking */}
                           {(() => {
