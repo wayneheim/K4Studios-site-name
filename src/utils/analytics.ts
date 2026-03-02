@@ -478,6 +478,9 @@ export function emitActionPixel(action: string, imageId: string | null = null, c
       e: action,
       v: String(Date.now())
     });
+    const sid = getSessionId();
+    if (sid) params.set('sid', sid);
+    if (window.location.pathname) params.set('path', window.location.pathname);
 
     if (inferredImageId) params.set('id', inferredImageId);
     if (inferredGalleryId) params.set('g', inferredGalleryId);
@@ -576,6 +579,7 @@ export function trackPageView(): void {
   // This is important because parts of the site navigate via history.pushState
   // and do not reload, so view events must be tied to URL changes.
   trackDerivedViewsFromLocation();
+  emitPagePixel('page_load');
   emitSiteContentPagePixel('page_load');
 
   // Update page context for session exit tracking
@@ -598,6 +602,7 @@ export function trackPageView(): void {
 
 let navTrackingInstalled = false;
 let lastTrackedPath: string | null = null;
+let lastPagePixelPath: string | null = null;
 
 function trackDerivedViewsFromLocation(): void {
   if (typeof window === 'undefined') return;
@@ -629,6 +634,31 @@ function trackDerivedViewsFromLocation(): void {
   }
 }
 
+function emitPagePixel(trigger: string): void {
+  if (typeof window === 'undefined') return;
+  const path = window.location.pathname;
+  if (lastPagePixelPath === path) return;
+  lastPagePixelPath = path;
+
+  const imageId = getImageIdFromPath(path);
+  const galleryId = getGalleryIdFromPath(path);
+  const pageType: ActionPixelContext['pageType'] = imageId
+    ? 'image'
+    : galleryId
+      ? 'gallery'
+      : (path === '/' || path === '')
+        ? 'landing'
+        : 'other';
+
+  emitActionPixel('page_view', imageId, {
+    galleryId,
+    pageType,
+    pixelType: 'page',
+    sourceLayer: 'page_pixel_v1',
+    trigger
+  });
+}
+
 function installNavigationTracking(): void {
   if (typeof window === 'undefined') return;
   if (navTrackingInstalled) return;
@@ -640,6 +670,7 @@ function installNavigationTracking(): void {
     // Treat SPA navigation like a page view for context + view beacons.
     trackEvent('page_view', { trigger });
     trackDerivedViewsFromLocation();
+    emitPagePixel(trigger || 'nav');
     emitSiteContentPagePixel(trigger || 'nav');
     updatePageContext();
     initScrollDepthTracking();

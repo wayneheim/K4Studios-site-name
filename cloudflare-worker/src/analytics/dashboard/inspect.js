@@ -32,7 +32,10 @@ function buildDateWhere({ days, yesterday, selectedDate }) {
     return `date(e.ts, '-5 hours') = date('now', '-5 hours')`;
   }
 
-  return `e.ts > datetime('now', '-5 hours', '-${Math.max(1, Math.min(30, nDays))} days')`;
+  // Calendar-day window in Eastern time, inclusive of today.
+  const clamped = Math.max(1, Math.min(30, nDays));
+  const backDays = Math.max(0, clamped - 1);
+  return `date(e.ts, '-5 hours') >= date('now', '-5 hours', '-${backDays} days')`;
 }
 
 function classifyRefSourceSql(refCol = 'entry_referer') {

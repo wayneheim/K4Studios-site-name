@@ -4,7 +4,7 @@
 // Response construction. Worker delegates here with zero dashboard logic.
 // ═══════════════════════════════════════════════════════════════════════════
 import { hashIP } from '../../shared/index.js';
-import { handleDashboardRequest as runDashboardController } from './controller.js';
+import { handleDashboardRequest as runDashboardController, handleDashboardSection as runDashboardSection } from './controller.js';
 
 function withAdminNoCacheHeaders(baseHeaders = {}) {
   const headers = new Headers(baseHeaders);
@@ -61,6 +61,8 @@ export async function handleDashboardRequest(request, env, ctx) {
   const yesterday = url.searchParams.get("yesterday") === "1";
   const selectedDateRaw = url.searchParams.get("date");
   const selectedDate = /^\d{4}-\d{2}-\d{2}$/.test(selectedDateRaw || "") ? selectedDateRaw : null;
+  const section = url.searchParams.get('section');
+  const refresh = url.searchParams.get('refresh') === '1';
   const galleryFilter = url.searchParams.get("gallery") || null;
   const excludeIp = url.searchParams.get("excludeIp") || null;
   const hideBots = url.searchParams.get("hideBots") === "1";
@@ -80,8 +82,10 @@ export async function handleDashboardRequest(request, env, ctx) {
       // Today = current Eastern calendar day
       rangeDateClause = `date(ts, '-5 hours') = date('now', '-5 hours')`;
     } else {
-      // Last N days (rolling window from now)
-      rangeDateClause = `ts > datetime('now', '-5 hours', '-${days} days')`;
+      // Last N days (calendar days in Eastern time, inclusive of today)
+      const n = Math.max(1, days);
+      const backDays = Math.max(0, n - 1);
+      rangeDateClause = `date(ts, '-5 hours') >= date('now', '-5 hours', '-${backDays} days')`;
     }
 
     // Preserve the time-only clause (no global filters) so we can compute
@@ -200,14 +204,36 @@ export async function handleDashboardRequest(request, env, ctx) {
     // Build priorPeriodClause for getDashboardStats
     const priorPeriodClause = (selectedDate
       ? `date(ts, '-5 hours') < '${selectedDate}'`
-      : (yesterday 
+      : (yesterday
         ? `ts < datetime('now', '-5 hours', '-1 day', 'start of day')`
-        : `ts < datetime('now', '-5 hours', '-${days} days')`
+        : (() => {
+            const n = Math.max(1, days);
+            const backDays = Math.max(0, n - 1);
+            return `date(ts, '-5 hours') < date('now', '-5 hours', '-${backDays} days')`;
+          })()
       )) + globalFilterClause;
 
     // Pass the auth header to the renderer so admin JS calls can re-use it.
     // This is safe: this page is only served after successful authentication.
     const authHeader = request.headers.get('Authorization') || '';
+
+    // Section-only request (lazy-load blocks)
+    if (section) {
+      const html = await runDashboardSection(env, {
+        dateClause, galleryClause, ipClause, botClause, chardonClause,
+        priorPeriodClause, rangeDateClause, artIpClause,
+        baseDateClause, truthDateClause, hideBotsPredicate,
+        yesterday, days, selectedDate, galleryFilter, excludeIp, viewerIp,
+        hideBots, hideChardon, authHeader
+      }, section, refresh);
+
+      return new Response(html, {
+        status: 200,
+        headers: withAdminNoCacheHeaders({
+          "Content-Type": "text/html; charset=utf-8"
+        })
+      });
+    }
 
     // Call dashboard controller — orchestrates all queries + renders HTML
     const html = await runDashboardController(env, {

@@ -2116,6 +2116,7 @@ async function getStatePixelTestRoaring20s(env, filters) {
           e.city AS city,
           e.source_layer AS source_layer,
           e.ua AS user_agent,
+          e.referer AS referer,
           e.ts AS ts
         FROM raw_events e
         WHERE ${qualifiedDateClause}
@@ -2138,6 +2139,7 @@ async function getStatePixelTestRoaring20s(env, filters) {
           city,
           source_layer,
           user_agent,
+          referer,
           ts,
           ROW_NUMBER() OVER (PARTITION BY target_id ORDER BY ts DESC) AS rn
         FROM sp
@@ -2165,7 +2167,8 @@ async function getStatePixelTestRoaring20s(env, filters) {
         r.region,
         r.city,
         r.source_layer,
-        r.user_agent
+        r.user_agent,
+        r.referer
       FROM agg a
       LEFT JOIN ranked r
         ON r.target_id = a.target_id
@@ -2687,6 +2690,18 @@ async function getDailyTrend(env, filters) {
       "qualify"
     );
     const where = qualify(rangeDateClause) || `date(e.ts, '-5 hours') = date('now', '-5 hours')`;
+    const pixelActorExpr = `
+      CASE
+        WHEN r.visitor_id IS NOT NULL AND r.visitor_id != '' THEN 'v:' || r.visitor_id
+        ELSE 'h:' || COALESCE(NULLIF(r.ip_hash, ''), COALESCE(NULLIF(r.ip, ''), 'unknown')) || '|' ||
+          CASE
+            WHEN LOWER(COALESCE(r.ua, '')) LIKE '%iphone%' OR LOWER(COALESCE(r.ua, '')) LIKE '%ipad%' OR LOWER(COALESCE(r.ua, '')) LIKE '%ipod%' THEN 'ios'
+            WHEN LOWER(COALESCE(r.ua, '')) LIKE '%android%' THEN 'android'
+            WHEN LOWER(COALESCE(r.ua, '')) LIKE '%mobile%' THEN 'mobile'
+            ELSE 'desktop'
+          END
+      END
+    `;
     const trendQuery = `
       SELECT
         date(e.ts, '-5 hours') as day,
@@ -2701,10 +2716,17 @@ async function getDailyTrend(env, filters) {
           ELSE NULL
         END) as sessions,
         COUNT(DISTINCT CASE
-          WHEN e.source = 'js' AND e.event_type = 'chapter_view' AND COALESCE(e.is_bot, 0) = 0
+          WHEN e.source = 'js' AND e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view') AND COALESCE(e.is_bot, 0) = 0
           THEN e.visitor_id
           ELSE NULL
-        END) as art_viewers
+        END) as art_viewers,
+        (
+          SELECT COUNT(DISTINCT ${pixelActorExpr})
+          FROM raw_events r
+          WHERE date(r.ts, '-5 hours') = date(e.ts, '-5 hours')
+            AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND ${notCacheWarmer('r')}
+        ) as pixel_reach
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${where}
@@ -3168,29 +3190,40 @@ async function getEntryAnalysis(env, filters) {
           referrer,
           ROW_NUMBER() OVER (PARTITION BY session_key ORDER BY ts ASC) AS rn
         FROM base_events
+      ),
+      session_ext_ref AS (
+        SELECT session_key, referrer,
+          ROW_NUMBER() OVER (PARTITION BY session_key ORDER BY ts ASC) AS rn
+        FROM base_events
+        WHERE referrer IS NOT NULL
+          AND referrer != ''
+          AND referrer != 'unknown'
+          AND referrer != 'direct'
+          AND referrer NOT LIKE '%k4studios.com%'
       )
       SELECT
-        page_path,
+        fp.page_path,
         CASE
-          WHEN referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' THEN 'direct'
-          WHEN referrer LIKE '%images.google.%' OR referrer LIKE '%google.%/imgres%' THEN 'google_images'
-          WHEN referrer LIKE '%google.%' THEN 'google_search'
-          WHEN referrer LIKE '%bing.%/images%' THEN 'bing_images'
-          WHEN referrer LIKE '%bing.%' THEN 'bing_search'
-          WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
-          WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
-          WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'twitter'
-          WHEN referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'chatgpt'
-          WHEN referrer LIKE '%instagram.%' THEN 'instagram'
-          WHEN referrer LIKE '%linkedin.%' THEN 'linkedin'
-          WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
-          WHEN referrer LIKE '%k4studios.com%' THEN 'internal'
+          WHEN COALESCE(ser.referrer, fp.referrer) IS NULL OR COALESCE(ser.referrer, fp.referrer) = '' OR COALESCE(ser.referrer, fp.referrer) = 'unknown' OR COALESCE(ser.referrer, fp.referrer) = 'direct' THEN 'direct'
+          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%images.google.%' OR COALESCE(ser.referrer, fp.referrer) LIKE '%google.%/imgres%' THEN 'google_images'
+          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%google.%' THEN 'google_search'
+          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%bing.%/images%' THEN 'bing_images'
+          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%bing.%' THEN 'bing_search'
+          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%pinterest.%' THEN 'pinterest'
+          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%facebook.%' OR COALESCE(ser.referrer, fp.referrer) LIKE '%fb.%' THEN 'facebook'
+          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%twitter.%' OR COALESCE(ser.referrer, fp.referrer) LIKE '%t.co/%' OR COALESCE(ser.referrer, fp.referrer) LIKE '%x.com%' THEN 'twitter'
+          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%chatgpt.com%' OR COALESCE(ser.referrer, fp.referrer) LIKE '%chat.openai.com%' THEN 'chatgpt'
+          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%instagram.%' THEN 'instagram'
+          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%linkedin.%' THEN 'linkedin'
+          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%duckduckgo.%' THEN 'duckduckgo'
+          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%k4studios.com%' THEN 'internal'
           ELSE 'unattributed'
         END AS ref_source,
-        COUNT(DISTINCT session_key) AS sessions
-      FROM first_pages
-      WHERE rn = 1
-      GROUP BY page_path, ref_source
+        COUNT(DISTINCT fp.session_key) AS sessions
+      FROM first_pages fp
+      LEFT JOIN session_ext_ref ser ON ser.session_key = fp.session_key AND ser.rn = 1
+      WHERE fp.rn = 1
+      GROUP BY fp.page_path, ref_source
       ORDER BY sessions DESC
       LIMIT 25
     `;
@@ -4922,7 +4955,7 @@ function renderDashboard({
   ${trend.length > 1 ? `
   <h3 class="chart-header" style="color:#fff;font-size:14px;margin-bottom:6px;">
     <span id="chart-title">Site Visitors per Day</span>
-    <span class="chart-totals" style="font-size:12px;color:#888;margin-left:12px;">Total: <span style="color:#4a9eff;font-weight:bold;">${totalSiteVisitors}</span>${isMultiDay && uniqueSiteVisitors < summedSiteVisitors ? ` <span style="color:#666;">(${uniqueSiteVisitors} unique)</span>` : ""} visitors, <span style="color:#a855f7;font-weight:bold;">${totalArtViewers}</span>${isMultiDay && uniqueArtViewers < summedArtViewers ? ` <span style="color:#666;">(${uniqueArtViewers} unique)</span>` : ""} viewed images</span>
+    <span class="chart-totals" style="font-size:12px;color:#888;margin-left:12px;">Total: <span style="color:#4a9eff;font-weight:bold;">${totalSiteVisitors}</span>${isMultiDay && uniqueSiteVisitors < summedSiteVisitors ? ` <span style="color:#666;">(${uniqueSiteVisitors} unique)</span>` : ""} visitors, <span style="color:#a855f7;font-weight:bold;">${totalArtViewers}</span>${isMultiDay && uniqueArtViewers < summedArtViewers ? ` <span style="color:#666;">(${uniqueArtViewers} unique)</span>` : ""} viewed images, <span style="color:#10b981;font-weight:bold;">${trendArr.reduce((s, d) => s + (d.pixel_reach || 0), 0)}</span> pixel reach</span>
   </h3>
   <div class="trend-chart">
     <div class="trend-bars" id="trend-chart-bars">
@@ -4934,7 +4967,7 @@ function renderDashboard({
       const isDataChangeDate = t.day === "2026-02-14";
       const isSelected = selectedDate === t.day;
       return `
-            <div class="trend-bar${isSelected ? " selected" : ""}" data-visitors="${t.visitors}" data-sessions="${t.sessions}" data-art-viewers="${t.art_viewers || 0}" data-day="${t.day}" style="height: ${height}%" title="${t.day}: ${t.visitors} visitors (${t.art_viewers || 0} viewed images)">
+            <div class="trend-bar${isSelected ? " selected" : ""}" data-visitors="${t.visitors}" data-sessions="${t.sessions}" data-art-viewers="${t.art_viewers || 0}" data-pixel-reach="${t.pixel_reach || 0}" data-day="${t.day}" style="height: ${height}%" title="${t.day}: ${t.visitors} visitors, ${t.art_viewers || 0} viewed images, ${t.pixel_reach || 0} pixel reach">
               <span class="trend-bar-value">${t.visitors}</span>
               <span class="trend-bar-label">${dateLabel}${isDataChangeDate ? '<span class="data-change-marker" title="Referrer tracking &amp; data granularity improved on this date. Data before this date uses less precise source attribution.">*</span>' : ""}</span>
             </div>
@@ -5106,11 +5139,13 @@ function renderDashboard({
     <div style="margin-top:10px;">
       ${spPixelImageAccess.length > 0 ? `
       <div style="max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;" id="pixelAccessList">
-        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 90px 180px minmax(140px, 1fr) minmax(180px, 1.2fr) 96px 70px 70px; gap: 12px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
+        <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 90px 180px minmax(120px, 1fr) minmax(140px, 1fr) 90px minmax(100px, 0.8fr) 70px 60px 60px; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
           <span style="display:flex;justify-content:center;">Image</span>
           <span>Type / ID</span>
           <span>\u{1F4C1} Gallery</span>
           <span>\u{1F4CD} Location</span>
+          <span>\u{1F4BB} Platform</span>
+          <span>\u{1F517} Referrer</span>
           <span style="display:flex;justify-content:flex-start;"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:9px;font-weight:bold;border:1px solid #06b6d455;" title="Zoom views">Z</span></span>
           <span style="text-align:center;">Exp</span>
           <span style="text-align:center;">View</span>
@@ -5134,18 +5169,69 @@ function renderDashboard({
     // Device/platform detection from user_agent
     const ua = String(r.user_agent || "").toLowerCase();
     let deviceIcon = "";
-    if (ua.includes("iphone") || ua.includes("ipad")) {
-      deviceIcon = '<span title="iOS" style="font-size:13px;">📱</span>';
+    let platformLabel = "";
+    if (ua.includes("iphone")) {
+      deviceIcon = '<span title="iOS / iPhone" style="font-size:13px;">\u{1F4F1}</span>';
+      platformLabel = "iPhone";
+    } else if (ua.includes("ipad")) {
+      deviceIcon = '<span title="iOS / iPad" style="font-size:13px;">\u{1F4F1}</span>';
+      platformLabel = "iPad";
+    } else if (ua.includes("android") && ua.includes("mobile")) {
+      deviceIcon = '<span title="Android Mobile" style="font-size:13px;">\u{1F4F1}</span>';
+      platformLabel = "Android";
     } else if (ua.includes("android")) {
-      deviceIcon = '<span title="Android" style="font-size:13px;">🅰️</span>';
+      deviceIcon = '<span title="Android Tablet" style="font-size:13px;">\u{1F4F1}</span>';
+      platformLabel = "Android Tab";
     } else if (ua.includes("macintosh") || ua.includes("mac os")) {
-      deviceIcon = '<span title="Mac" style="font-size:13px;">🍎</span>';
+      deviceIcon = '<span title="Mac" style="font-size:13px;">\u{1F34E}</span>';
+      platformLabel = "Mac";
     } else if (ua.includes("windows")) {
-      deviceIcon = '<span title="Windows" style="font-size:13px;">🪟</span>';
-    } else if (ua.includes("linux")) {
-      deviceIcon = '<span title="Linux" style="font-size:13px;">🐧</span>';
+      deviceIcon = '<span title="Windows" style="font-size:13px;">\u{1FA9F}</span>';
+      platformLabel = "Windows";
+    } else if (ua.includes("linux") && !ua.includes("android")) {
+      deviceIcon = '<span title="Linux" style="font-size:13px;">\u{1F427}</span>';
+      platformLabel = "Linux";
+    } else if (ua.includes("bot") || ua.includes("crawl") || ua.includes("spider")) {
+      deviceIcon = '<span title="Bot/Crawler" style="font-size:13px;">\u{1F916}</span>';
+      platformLabel = "Bot";
     } else if (ua) {
-      deviceIcon = '<span title="Desktop" style="font-size:13px;">🖥️</span>';
+      deviceIcon = '<span title="Desktop" style="font-size:13px;">\u{1F5A5}\uFE0F</span>';
+      platformLabel = "Desktop";
+    }
+    // Referrer classification
+    const rawRef = String(r.referer || "").trim();
+    let refLabel = "";
+    let refIcon = "";
+    let refColor = "#6b7280";
+    if (!rawRef || rawRef === "unknown" || rawRef === "direct") {
+      refLabel = "Direct"; refIcon = "\u{1F517}"; refColor = "#6b7280";
+    } else if (rawRef.includes("images.google.") || (rawRef.includes("google.") && rawRef.includes("/imgres"))) {
+      refLabel = "Google Img"; refIcon = "\u{1F5BC}\uFE0F"; refColor = "#f59e0b";
+    } else if (rawRef.includes("google.")) {
+      refLabel = "Google"; refIcon = "\u{1F50D}"; refColor = "#4a9eff";
+    } else if (rawRef.includes("bing.") && rawRef.includes("/images")) {
+      refLabel = "Bing Img"; refIcon = "\u{1F5BC}\uFE0F"; refColor = "#f59e0b";
+    } else if (rawRef.includes("bing.")) {
+      refLabel = "Bing"; refIcon = "\u{1F171}\uFE0F"; refColor = "#10b981";
+    } else if (rawRef.includes("pinterest.")) {
+      refLabel = "Pinterest"; refIcon = "\u{1F4CC}"; refColor = "#e11d48";
+    } else if (rawRef.includes("facebook.") || rawRef.includes("fb.")) {
+      refLabel = "Facebook"; refIcon = "\u{1F4D8}"; refColor = "#3b82f6";
+    } else if (rawRef.includes("twitter.") || rawRef.includes("t.co/") || rawRef.includes("x.com")) {
+      refLabel = "Twitter/X"; refIcon = "\u{1F426}"; refColor = "#38bdf8";
+    } else if (rawRef.includes("chatgpt.com") || rawRef.includes("openai.com")) {
+      refLabel = "ChatGPT"; refIcon = "\u{1F916}"; refColor = "#10b981";
+    } else if (rawRef.includes("instagram.")) {
+      refLabel = "Instagram"; refIcon = "\u{1F4F7}"; refColor = "#e879f9";
+    } else if (rawRef.includes("linkedin.")) {
+      refLabel = "LinkedIn"; refIcon = "\u{1F4BC}"; refColor = "#3b82f6";
+    } else if (rawRef.includes("duckduckgo.")) {
+      refLabel = "DDG"; refIcon = "\u{1F986}"; refColor = "#f97316";
+    } else if (rawRef.includes("k4studios.com")) {
+      refLabel = "Internal"; refIcon = "\u{1F504}"; refColor = "#6b7280";
+    } else {
+      try { refLabel = new URL(rawRef).hostname.replace(/^www\\./, ""); } catch (_) { refLabel = "Other"; }
+      refIcon = "\u{1F310}"; refColor = "#9ca3af";
     }
     // P badge (lime green) for pixel view
     const pBadge = '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:#84cc1622;color:#84cc16;font-size:10px;font-weight:bold;border:1px solid #84cc1655;" title="Pixel View">P</span>';
@@ -5155,7 +5241,7 @@ function renderDashboard({
       : '<span style="display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:20px;padding:0 6px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:10px;font-weight:bold;border:1px solid #06b6d455;" title="Zoom views: ' + zoomViews + ' / ' + exposures + '">' + zoomViews + '</span>';
     const thumb = imageId && imageId.startsWith("i-") ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (idx < 6 ? "eager" : "lazy") + '" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid #84cc1644;">' : '<span style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:1px solid #333;">\u{1F5BC}</span>';
     const borderColor = hasZoom ? "#06b6d444" : "#84cc1644";
-    return `<div class="pixel-access-row" style="display:grid;grid-template-columns: 90px 180px minmax(140px, 1fr) minmax(180px, 1.2fr) 96px 70px 70px;gap:12px;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ${borderColor};align-items:center;font-size:13px;transition:background 0.15s;" onmouseover="this.style.background='rgba(255,255,255,0.04)'" onmouseout="this.style.background='transparent'">
+    return `<div class="pixel-access-row" style="display:grid;grid-template-columns: 90px 180px minmax(120px, 1fr) minmax(140px, 1fr) 90px minmax(100px, 0.8fr) 70px 60px 60px;gap:10px;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ${borderColor};align-items:center;font-size:13px;transition:background 0.15s;" onmouseover="this.style.background='rgba(255,255,255,0.04)'" onmouseout="this.style.background='transparent'">
       <div style="display:flex;align-items:center;justify-content:center;">
         <a href="${imageUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;">${thumb}</a>
       </div>
@@ -5171,8 +5257,15 @@ function renderDashboard({
         ${galleryUrl ? `<a href="${galleryUrl}" target="_blank" rel="noopener" style="color:#93c5fd;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${galleryPath}">${displayGallery}</a>` : `<span style="color:#aaa;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${galleryPath}">${displayGallery}</span>`}
       </div>
       <div style="display:flex;align-items:center;gap:6px;color:#9aa3ad;overflow:hidden;">
-        ${deviceIcon ? `<span style="display:inline-flex;align-items:center;flex-shrink:0;">${deviceIcon}</span>` : ""}
         <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${loc}">${loc}</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:4px;min-width:0;">
+        ${deviceIcon ? `<span style="display:inline-flex;align-items:center;flex-shrink:0;">${deviceIcon}</span>` : ""}
+        <span style="font-size:11px;color:#9aa3ad;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${platformLabel}</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:4px;min-width:0;overflow:hidden;" title="${rawRef}">
+        <span style="flex-shrink:0;">${refIcon}</span>
+        <span style="font-size:11px;color:${refColor};overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${refLabel}</span>
       </div>
       <div style="display:flex;justify-content:flex-start;">${zDisplay}</div>
       <div style="text-align:center;font-weight:bold;color:#e5e7eb;">${exposures}</div>
@@ -8448,16 +8541,22 @@ async function handleStatePixelRequest(request, env, ctx) {
     const cryptoObj = globalThis?.crypto;
     const mintedVisitorId = !existingVisitorId && typeof cryptoObj?.randomUUID === "function" ? cryptoObj.randomUUID() : !existingVisitorId ? String(Date.now()) + "-" + Math.random().toString(16).slice(2) : null;
     const visitorId = existingVisitorId || mintedVisitorId;
-    const referer = request.headers.get("Referer") || null;
+    const httpReferer = request.headers.get("Referer") || null;
     let normalizedPagePath = null;
-    if (referer) {
+    if (httpReferer) {
       try {
-        normalizedPagePath = new URL(referer).pathname || null;
+        normalizedPagePath = new URL(httpReferer).pathname || null;
       } catch (_) {
         normalizedPagePath = null;
       }
     }
     const pagePath = pagePathParam || normalizedPagePath || null;
+    // Read k4_entry_ref cookie (set by edge proxy) for the real external referrer.
+    // The HTTP Referer for pixel requests is always the hosting k4studios page,
+    // which is useless for attribution. The cookie captures the true entry source.
+    const entryRefMatch = cookieHeader.match(/k4_entry_ref=([^;]+)/);
+    const entryReferer = entryRefMatch ? decodeURIComponent(entryRefMatch[1]) : null;
+    const storedReferer = entryReferer || httpReferer;
     const targetId = pixelType === "page" ? pagePath : imageId || galleryId || pagePath || null;
     const eventType = pixelType === "image" ? "state_pixel" : pixelType === "page" ? "page_pixel" : "action_pixel";
     ctx?.waitUntil?.(
@@ -8467,7 +8566,7 @@ async function handleStatePixelRequest(request, env, ctx) {
         visitorId,
         sourceLayer,
         page: pagePath,
-        refererOverride: referer,
+        refererOverride: storedReferer,
         pageType,
         theme,
         trigger

@@ -1,0 +1,170 @@
+﻿[
+    {
+        "kind":  "valid",
+        "status":  "200",
+        "expected":  "200",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-2NT6fPf"
+    },
+    {
+        "kind":  "valid",
+        "status":  "200",
+        "expected":  "200",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-2xDqgqS"
+    },
+    {
+        "kind":  "valid",
+        "status":  "200",
+        "expected":  "200",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-32QwpNJ"
+    },
+    {
+        "kind":  "valid",
+        "status":  "200",
+        "expected":  "200",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3DWdjDb"
+    },
+    {
+        "kind":  "valid",
+        "status":  "200",
+        "expected":  "200",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3dZtNxv"
+    },
+    {
+        "kind":  "valid",
+        "status":  "200",
+        "expected":  "200",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3grzD9s"
+    },
+    {
+        "kind":  "valid",
+        "status":  "200",
+        "expected":  "200",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3JtKnsk"
+    },
+    {
+        "kind":  "valid",
+        "status":  "200",
+        "expected":  "200",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3jzjDGJ"
+    },
+    {
+        "kind":  "valid",
+        "status":  "200",
+        "expected":  "200",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3R8rc7C"
+    },
+    {
+        "kind":  "valid",
+        "status":  "200",
+        "expected":  "200",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3S3RMNW"
+    },
+    {
+        "kind":  "valid",
+        "status":  "200",
+        "expected":  "200",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-3XJGN8s"
+    },
+    {
+        "kind":  "valid",
+        "status":  "200",
+        "expected":  "200",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-4mqhqMP"
+    },
+    {
+        "kind":  "shallow-probe",
+        "status":  "404",
+        "expected":  "404",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Architecture/i-FAKEAA1"
+    },
+    {
+        "kind":  "shallow-probe",
+        "status":  "404",
+        "expected":  "404",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Landscapes/i-FAKEAA2"
+    },
+    {
+        "kind":  "shallow-probe",
+        "status":  "404",
+        "expected":  "404",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/galleries/portraits/i-FAKEAA3"
+    },
+    {
+        "kind":  "shallow-probe",
+        "status":  "404",
+        "expected":  "404",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Misc/i-FAKEAA4"
+    },
+    {
+        "kind":  "namespace-fuzz",
+        "status":  "404",
+        "expected":  "404",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/wp-admin/i-FAKEB01"
+    },
+    {
+        "kind":  "namespace-fuzz",
+        "status":  "404",
+        "expected":  "404",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/blog/test/i-FAKEB02"
+    },
+    {
+        "kind":  "namespace-fuzz",
+        "status":  "404",
+        "expected":  "404",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/category/test/i-FAKEB03"
+    },
+    {
+        "kind":  "namespace-fuzz",
+        "status":  "404",
+        "expected":  "404",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/random/junk/i-FAKEB04"
+    },
+    {
+        "kind":  "legacy-namespace",
+        "status":  "301",
+        "expected":  "301",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Photography-Galleries/something/i-2NT6fPf"
+    },
+    {
+        "kind":  "legacy-namespace",
+        "status":  "301",
+        "expected":  "301",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Photography-Galleries/something/i-2xDqgqS"
+    },
+    {
+        "kind":  "wrong-path-real-id",
+        "status":  "301",
+        "expected":  "301",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/Gallery/i-2NT6fPf"
+    },
+    {
+        "kind":  "wrong-path-real-id",
+        "status":  "301",
+        "expected":  "301",
+        "ok":  true,
+        "url":  "https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/Gallery/i-2xDqgqS"
+    }
+]

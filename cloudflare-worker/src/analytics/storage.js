@@ -108,6 +108,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       refererOverride = null,
       deltaMs = null,
       visitorId = null,
+      sourceLayer = null,
       imgSize = null,
       refType = null,
       inferred = null,
@@ -166,6 +167,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
     // Optional columns: only included when non-null.
     // If the column doesn't exist in D1 yet, we detect and retry without it.
     const optional = [
+      { name: 'source_layer', value: sourceLayer },
       { name: 'img_size', value: imgSize },
       { name: 'ref_type', value: refType },
       { name: 'inferred', value: inferred },

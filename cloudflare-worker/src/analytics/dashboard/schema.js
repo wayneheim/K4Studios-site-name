@@ -32,6 +32,7 @@ export function buildDashboardData(queryResults, filterParams) {
     edgeEvents, edgeSummary,
     artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, entryRefCountsObj, imageAccessOverview, viewerDepth, suppressionStats,
     botIntelligence,
+    blockRecommendedCount,
     periodTotals
   } = queryResults;
 
@@ -98,6 +99,7 @@ export function buildDashboardData(queryResults, filterParams) {
     imageAccessOverview: imageAccessOverview || [],
     suppressionStats,
     botIntelligence,
+    blockRecommendedCount,
     periodTotals: periodTotals || { total_visitors: 0, total_art_viewers: 0 },
     authHeader: authHeader || ''
   };

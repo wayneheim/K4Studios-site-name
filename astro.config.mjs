@@ -12,13 +12,8 @@ export default defineConfig({
  site: 'https://www.k4studios.com',   // 👈 Add this
   // Enforce no trailing slashes for routes
   trailingSlash: 'never',
-  
-  // ⚠️ IMPORTANT: Netlify adapter requires 'server' mode for SSR capability.
-  // To achieve "static by default" behavior:
-  //   - Add `export const prerender = true` to ALL pages that should be static
-  //   - Only pages with `prerender = false` (like [id].astro) will use SSR/functions
-  // Without explicit prerender flags, ALL pages hit Netlify Functions!
-  // This caused 125k+ function calls in 29 days and an outage.
+
+  // Netlify adapter requires server output for SSR routes and dynamic admin/tools pages.
   output: 'server',
   adapter: netlify(),
   integrations: [

@@ -67,11 +67,6 @@ from = "/robots.txt"
 to = "/robots.txt"
 status = 200
 
-[[redirects]]
-from = "/sitemap.xml"
-to = "/sitemap.xml"
-status = 200
-
 # Redirect legacy Astro sitemap files to main sitemap
 [[redirects]]
 from = "/sitemap-index.xml"
@@ -85,12 +80,30 @@ to = "/sitemap.xml"
 status = 301
 force = true
 
+[[redirects]]
+from = "/sitemap_index.xml"
+to = "/sitemap.xml"
+status = 301
+force = true
+
+[[redirects]]
+from = "/sitemapindex.xml"
+to = "/sitemap.xml"
+status = 301
+force = true
+
+[[redirects]]
+from = "/sitemap1.xml"
+to = "/sitemap.xml"
+status = 301
+force = true
+
 # Redirect bare lightbox page to 410 Gone (legacy SmugMug endpoint)
 # NOTE: /Galleries/lightbox?dataset=... is allowed for internal "View Complete Gallery" use
 # Only the bare URL without query params is blocked
 [[redirects]]
 from = "/Galleries/lightbox"
-to = "/"
+to = "/410.html"
 status = 410
 force = false
 
@@ -370,11 +383,11 @@ to = "/Galleries/:splat"
 status = 301
 force = true
 
-# --- Photoshoots and Events (legacy SmugMug archives, not canon) ---
+# --- Photoshoots and Events → SmugMug archive ---
 [[redirects]]
 from = "/Photoshootsandevents/*"
-to = "/"
-status = 410
+to = "https://wayne-heim.smugmug.com/Other/Photo-Shoots/:splat"
+status = 301
 force = true
 
 # --- Legacy Fine-Art-Photography duplicates ---
@@ -558,3 +571,8 @@ force = true
 
 [build]
   command = "npm run build && node scripts/purge-cloudflare.js"
+
+# Local/utility build context for prebuilt deploy workflows.
+# Does NOT affect production builds unless you explicitly run with this context.
+[context.branch-deploy]
+  command = "npm run build:fast"

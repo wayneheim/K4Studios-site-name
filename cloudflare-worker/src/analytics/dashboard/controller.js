@@ -19,11 +19,12 @@ import {
   getEdgeEvents,
   getArtViews,
   getBotIntelligence,
-  getPeriodTotals
+  getPeriodTotals,
+  getBlockRecommendedCount
 } from '../queries.js';
 
 import { buildDashboardData } from './schema.js';
-import { renderDashboard } from './renderer.js';
+import { renderDashboard, renderDashboardSection } from './renderer.js';
 
 /**
  * Calls all dashboard query functions and assembles the result into
@@ -75,10 +76,11 @@ export async function handleDashboardRequest(env, filters) {
     dateClause, galleryClause, ipClause, botClause, chardonClause
   });
 
-  // Top Pages is a leaderboard: it should not be rewritten by UI filter state.
-  // Use the truth-only date clause (time/range only), and ignore presentation filters.
+  // Top Pages should respect the same filter context as Entry Pages so the
+  // dashboard stays internally consistent when Hide Bots / Hide Team / Exclude IP
+  // are enabled.
   const pages = await getTopPages(env, {
-    dateClause: truthDateClause || dateClause,
+    dateClause,
     ipClause: '',
     botClause: '',
     chardonClause: ''
@@ -96,18 +98,21 @@ export async function handleDashboardRequest(env, filters) {
     dateClause, ipClause, botClause, chardonClause
   });
 
-  const { exitPages, exitSummary, exitByCategory } = await getExitAnalysis(env, {
-    dateClause, ipClause, botClause, chardonClause
-  });
+  const exitPages = { results: [] };
+  const exitSummary = {};
+  const exitByCategory = {};
 
-  const { edgeEvents, edgeSummary } = await getEdgeEvents(env, { dateClause, yesterday, days });
+  const edgeEvents = { results: [] };
+  const edgeSummary = [];
 
   const { artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, entryRefCountsObj, imageAccessOverview, viewerDepth, suppressionStats } = await getArtViews(env, {
     dateClause, ipClause, botClause, chardonClause, artIpClause,
     baseDateClause, hideBotsPredicate, hideBots
   });
 
-  const botIntelligence = await getBotIntelligence(env);
+  const blockRecommendedCount = await getBlockRecommendedCount(env);
+
+  const botIntelligence = null;
 
   // Get period-level unique totals (not summed daily) - use rangeDateClause for full period
   const periodTotals = await getPeriodTotals(env, { dateClause: rangeDateClause, botClause, chardonClause });
@@ -130,6 +135,7 @@ export async function handleDashboardRequest(env, filters) {
     edgeEvents, edgeSummary,
     artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, entryRefCountsObj, imageAccessOverview, viewerDepth, suppressionStats,
     botIntelligence,
+    blockRecommendedCount,
     periodTotals
   };
 
@@ -141,4 +147,54 @@ export async function handleDashboardRequest(env, filters) {
 
   // Render and return HTML string
   return renderDashboard(dashboardData);
+}
+
+export async function handleDashboardSection(env, filters, section) {
+  const {
+    dateClause, ipClause, botClause, chardonClause, artIpClause,
+    baseDateClause, hideBotsPredicate, hideBots,
+    yesterday, days, selectedDate, galleryFilter, excludeIp, viewerIp,
+    hideChardon, authHeader
+  } = filters;
+
+  if (section === 'external-reach') {
+    const { externalReachGeo, externalReachSources } = await getArtViews(env, {
+      dateClause, ipClause, botClause, chardonClause, artIpClause,
+      baseDateClause, hideBotsPredicate, hideBots
+    });
+    return renderDashboardSection('external-reach', {
+      days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, hideBots, hideChardon,
+      externalReachGeo, externalReachSources
+    });
+  }
+
+  if (section === 'index-health') {
+    const { edgeEvents, edgeSummary } = await getEdgeEvents(env, { dateClause, yesterday, days });
+    return renderDashboardSection('index-health', {
+      days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, hideBots, hideChardon,
+      edgeEvents: edgeEvents?.results || [], edgeSummary: edgeSummary || []
+    });
+  }
+
+  if (section === 'exit') {
+    const { exitPages, exitSummary, exitByCategory } = await getExitAnalysis(env, { dateClause, ipClause, botClause, chardonClause });
+    return renderDashboardSection('exit', {
+      days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, hideBots, hideChardon,
+      exitPages: exitPages?.results || [], exitSummary: exitSummary || {}, exitByCategory: exitByCategory || {}
+    });
+  }
+
+  if (section === 'bot-intel') {
+    const { artViewsSummary } = await getArtViews(env, {
+      dateClause, ipClause, botClause, chardonClause, artIpClause,
+      baseDateClause, hideBotsPredicate, hideBots
+    });
+    const botIntelligence = await getBotIntelligence(env);
+    return renderDashboardSection('bot-intel', {
+      days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, hideBots, hideChardon,
+      artViewsSummary, botIntelligence, authHeader
+    });
+  }
+
+  return '<div class="k4-section-placeholder">Unknown section.</div>';
 }

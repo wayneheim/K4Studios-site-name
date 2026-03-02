@@ -328,6 +328,33 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(allEntries, null, 2)};
   console.log(`Wrote ${allEntries.length} entries to ${path.relative(path.resolve(__dirname, '..'), outFile)}`);
   console.log(`  - ${staticEntries.length} static pages`);
   console.log(`  - ${dynamicEntries.length} dynamic gallery pages`);
+
+  // Also emit a static public/sitemap.xml so `/sitemap.xml` works even when deploying
+  // prebuilt artifacts without SSR/function bundles.
+  const xmlEscape = (value) => String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+
+  const urlsXml = allEntries.map((entry) => {
+    const loc = `<loc>${xmlEscape(entry.loc)}</loc>`;
+    const lastmod = entry.lastmod ? `<lastmod>${xmlEscape(entry.lastmod)}</lastmod>` : '';
+    const changefreq = entry.changefreq ? `<changefreq>${xmlEscape(entry.changefreq)}</changefreq>` : '';
+    const priority = typeof entry.priority === 'number' ? `<priority>${entry.priority.toFixed(1)}</priority>` : '';
+    return `  <url>\n    ${loc}\n    ${lastmod}\n    ${changefreq}\n    ${priority}\n  </url>`
+      .replace(/\n\s*\n/g, '\n');
+  }).join('\n');
+
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsXml}\n</urlset>\n`;
+
+  const publicDir = path.resolve(__dirname, '..', 'public');
+  await mkdir(publicDir, { recursive: true });
+  const publicSitemapPath = path.join(publicDir, 'sitemap.xml');
+  await writeFile(publicSitemapPath, sitemapXml, 'utf8');
+  console.log(`Wrote static sitemap XML to ${path.relative(path.resolve(__dirname, '..'), publicSitemapPath)}`);
 }
 
 main().catch((err) => {

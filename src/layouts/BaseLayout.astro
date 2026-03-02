@@ -40,14 +40,20 @@ const siteUrl =
   new URL('https://www.k4studios.com');
 
 const siteOrigin = siteUrl.origin;
+const canonicalOrigin = import.meta.env.PROD ? 'https://www.k4studios.com' : siteOrigin;
 
 const ensureAbsoluteUrl = (value) => {
   if (!value) return null;
   try {
-    return new URL(value, siteOrigin).toString();
+    return new URL(value, canonicalOrigin).toString();
   } catch {
     return value;
   }
+};
+
+const normalizeK4Host = (value) => {
+  if (!value || typeof value !== 'string') return value;
+  return value.replace(/https?:\/\/k4studios\.com/gi, 'https://www.k4studios.com');
 };
 
 // Titles
@@ -127,22 +133,22 @@ const toAbsoluteProxyUrl = (src: string, size = 'l', sourcePrefix: string | null
   // Extract image ID and convert to absolute proxy URL
   const imageId = extractImageId(src) || (src.startsWith('i-') ? src : null);
   if (imageId) {
-    return `https://k4studios.com/img/${applyPrefix(imageId)}/${size}`;
+    return `${canonicalOrigin}/img/${applyPrefix(imageId)}/${size}`;
   }
   // Already a proxy URL? Make it absolute
   if (src.startsWith('/img/')) {
-    if (!prefix) return `https://k4studios.com${src}`;
+    if (!prefix) return `${canonicalOrigin}${src}`;
     try {
-      const u = new URL(`https://k4studios.com${src}`);
+      const u = new URL(`${canonicalOrigin}${src}`);
       const m = u.pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)\/?$/);
       if (m) {
         const canonicalId = m[2];
-        return `https://k4studios.com/img/${applyPrefix(canonicalId)}/${size}`;
+        return `${canonicalOrigin}/img/${applyPrefix(canonicalId)}/${size}`;
       }
     } catch {
       // ignore and fall through
     }
-    return `https://k4studios.com${src}`;
+    return `${canonicalOrigin}${src}`;
   }
   // Fallback - try to use as-is (shouldn't happen)
   return ensureAbsoluteUrl(src);
@@ -180,6 +186,9 @@ const keywords =
   (Array.isArray(preloadImage?.keywords)
     ? preloadImage.keywords.join(', ')
     : preloadImage?.keywords || '');
+
+const normalizedStructuredDataJSON = normalizeK4Host(structuredDataJSON);
+const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
 ---
 
 <!DOCTYPE html>
@@ -198,8 +207,8 @@ const keywords =
     {isImagePage && <meta name="robots" content="noai, noimageai" />}
     <link rel="canonical" href={canonicalUrl} />
 
-    {structuredDataJSON && <script type="application/ld+json" set:html={structuredDataJSON}></script>}
-    {breadcrumbsJSON && <script type="application/ld+json" set:html={breadcrumbsJSON}></script>}
+    {normalizedStructuredDataJSON && <script type="application/ld+json" set:html={normalizedStructuredDataJSON}></script>}
+    {normalizedBreadcrumbsJSON && <script type="application/ld+json" set:html={normalizedBreadcrumbsJSON}></script>}
 
     <!-- ✅ OG / Twitter -->
     <meta property="og:title" content={cleanTitle} />

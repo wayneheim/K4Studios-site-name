@@ -1,47 +1,14 @@
 ---
-// ⚠️ MUST be SSR — static 404s can't inspect request paths
-// Smart-404 logic needs Astro.url.pathname to be the *actual* broken URL
-export const prerender = false;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import "@/styles/global.css";
 
 import { semantic } from "@/data/semantic/K4-Sem.ts";
-import { cleanRedirect } from "@/utils/cleanRedirect";
 import { siteNav } from "@/data/siteNav.ts";
 
-/* ---------- Smart 404 gating (Quill/Apollo-13) ---------- */
-const ua = Astro.request.headers.get('user-agent') || '';
-const cookie = Astro.request.headers.get('cookie') || '';
-const hasSessionCookie = /(?:^|;\s*)k4_sid=/.test(cookie) || /(?:^|;\s*)k4_vid=/.test(cookie);
-const crawlerPattern = /googlebot|bingbot|duckduckbot|slurp|yandex|baiduspider|msnbot|applebot/i;
-const isSearchCrawler = crawlerPattern.test(ua);
-const allowSmart404 = hasSessionCookie || isSearchCrawler;
-
-/* ---------- Smart 404: Check for moved images and redirect with proper 301 ---------- */
-const requestUrl = Astro.url.pathname;
-const imageIdMatch = requestUrl.match(/\/(i-[a-zA-Z0-9]+)\/?$/);
-
-if (allowSmart404 && imageIdMatch) {
-  const imageId = imageIdMatch[1];
-  const imageIdMap = (await import("@/data/imageIdMap.json")).default;
-  const correctGalleryPath = imageIdMap[imageId];
-  
-  if (correctGalleryPath) {
-    // Image found in a different gallery - 301 redirect
-    const redirectUrl = `${correctGalleryPath}/${imageId}`;
-    console.log(`[smart-404] Redirecting ${imageId} to ${redirectUrl}`);
-    return cleanRedirect(redirectUrl, 301);
-  } else {
-    // Image not found anywhere - redirect to gallery landing page
-    const galleryLandingPath = requestUrl.replace(/\/i-[a-zA-Z0-9]+\/?$/, '');
-    if (galleryLandingPath && galleryLandingPath !== requestUrl) {
-      console.log(`[smart-404] Image ${imageId} not found, redirecting to gallery: ${galleryLandingPath}`);
-      return cleanRedirect(galleryLandingPath, 301);
-    }
-  }
-}
+// NOTE: The site is deployed as a static build for prebuilt deploy reliability.
+// Smart 404 redirects are handled by the Netlify `smart-404` function via `_redirects`.
 
 /* ---------- helpers ---------- */
 function normalizeHref(href = "") {

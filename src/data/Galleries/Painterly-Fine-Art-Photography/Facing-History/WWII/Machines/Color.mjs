@@ -24,9 +24,9 @@ export const galleryData = [
   },
   {
     "id": "i-rBtrrtx",
-    "title": "Wwii Tanks And Trucks Moment",
-    "description": "A painterly World War II photograph of a tank crewman, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Tracks Across Memory",
+    "description": "A painterly World War II photograph centered on presence rather than spectacle. The advancing Sherman tank becomes less a weapon and more a moving weight — a study in endurance, consequence, and mechanical resolve. Light and restrained tonality transform WWII military equipment into a meditation on imprint and aftermath.\n\nThis image reflects the psychological dimension of mechanized warfare, where battle-ready machines carried not only firepower, but the lived experience of those inside them. © Wayne Heim",
+    "alt": "World War II Sherman tank driving across muddy terrain under an overcast sky, viewed from a low angle with visible tracks, armor details, and crew positioned atop the vehicle.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/4/KgKZrcPFzpcjnMW6Rk8SbkLZNNLtPKv5ZhPNcnJ74/XL/_PEN0153-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/4/KgKZrcPFzpcjnMW6Rk8SbkLZNNLtPKv5ZhPNcnJ74/XL/_PEN0153-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/4/MBFztRDD3t4GVFrWNRhfLpxKfgGGgt8wGjj7ZWw75/L/_PEN0153-Edit-L.jpg",
@@ -34,28 +34,37 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/4/KH9sqMw5XnzZsHdPkdQfc7JjWCM75XQrxWMSqrdvt/S/_PEN0153-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rBtrrtx/A",
+
     "keywords": [
       "wwii tanks and trucks",
-      "history's greatest conflicts",
       "battle-ready machines",
-      "military machinery prints",
-      "mechanical war art"
+      "WWII military equipment color",
+      "mechanical war art",
+      "vivid WWII mechanized might",
+      "men and machines color",
+      "painterly WWII photography",
+      "world war ii tank",
+      "armored vehicle photography"
     ],
-    "story": "Delving into military machinery prints, this work by Wayne Heim highlights battle-ready machines through mechanical war art and battle-ready machines. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The tank moves because it must. Steel does not argue with the ground. Its tracks carve into mud already disturbed by too many passing decisions, grinding earth into something that will not smooth over easily.\n\nInside, the world is vibration and command — short words, practiced hands, the steady discipline of men and machines working as one. Outside, the sky offers no judgment. Only distance.\n\nWhen the engine finally quiets, the tracks remain — pressed deep, deliberate. Long after the sound fades, the ground keeps the shape of what passed through.",
+    "notes": "The composition emphasizes mass and forward momentum, allowing the tank to function as a moving landscape rather than an action subject. The low vantage point grants the machine a monumental presence, while restrained color and atmospheric handling soften documentary realism into painterly interpretation.\n\nThis approach aligns with traditions that treat industrial subjects as studies of weight and consequence, where form, texture, and environment carry emotional meaning. The image invites slow viewing, encouraging attention to surface, scale, and the quiet tension between mechanical power and human vulnerability contained within it.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 0,
+
     "themes": {
       "tanks": 3
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-wRxHNc4",
-    "title": "Military Machinery Prints Portrait",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Out of the Dust",
+    "description": "A painterly World War II photograph capturing a Sherman tank advancing through drifting dust and filtered light. Rather than emphasizing combat, the image focuses on presence and emergence — the quiet inevitability of battle-ready machines moving forward through uncertain terrain. Atmosphere and restrained color transform WWII military equipment into a cinematic study of motion, weight, and anticipation.\n\nThe image reflects the union of men and machines within mechanized warfare, where movement itself carried consequence and history advanced one measured track at a time. © Wayne Heim",
+    "alt": "World War II Sherman tank driving forward through dust on a dirt road with a soldier visible atop the turret, surrounded by trees and diffused sunlight.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wRxHNc4/4/LksZHWfN5CFgBwTRZQW93cLqB8CSkKr3jsGtTwJxb/XL/_OLY0401_tonemapped-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wRxHNc4/4/LksZHWfN5CFgBwTRZQW93cLqB8CSkKr3jsGtTwJxb/XL/_OLY0401_tonemapped-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wRxHNc4/4/LksZHWfN5CFgBwTRZQW93cLqB8CSkKr3jsGtTwJxb/XL/_OLY0401_tonemapped-Edit-XL.jpg",
@@ -63,28 +72,37 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-wRxHNc4/4/MJDhmR2fNnhtQkKCtpJLPhGjjrtT8QkgpgT8rFM28/S/_OLY0401_tonemapped-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-wRxHNc4/A",
+
     "keywords": [
-      "military machinery prints",
-      "mechanical war art",
+      "wwii tanks and trucks",
       "battle-ready machines",
-      "history's greatest conflicts",
-      "wwii tanks and trucks"
+      "WWII military equipment color",
+      "mechanical war art",
+      "vivid WWII mechanized might",
+      "men and machines color",
+      "painterly WWII photography",
+      "world war ii tank",
+      "armored vehicle photography"
     ],
-    "story": "Delving into wwii tanks and trucks, this work by Wayne Heim highlights military machinery prints through wwii tanks and trucks and mechanical war art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The tank emerges slowly, pushing through dust that refuses to settle. Its movement feels inevitable, as though the road had been waiting for it long before the engine turned over. Steel and earth meet without ceremony, each accepting the other’s weight.\n\nThe crew rides high above the noise, eyes forward, watching a world blurred by motion and uncertainty. Orders have already been given. What lies ahead is unknown, but hesitation has no place here — only momentum.\n\nWhen the dust falls back to the ground, the machine will be gone. Only the disturbed air and fading tracks will suggest that something heavy, and human, passed through.",
+    "notes": "The composition emphasizes emergence rather than confrontation, allowing atmosphere and motion to shape the emotional reading of the image. Dust becomes an active compositional element, softening mechanical hardness and aligning the work with painterly traditions where environment carries narrative weight as strongly as subject.\n\nThe elevated viewpoint of the crew contrasts with the grounded mass of the vehicle, creating a tension between human vulnerability and industrial power. This balance transforms the tank from a symbol of aggression into a study of passage — a moment suspended between departure and arrival, where movement itself becomes the story.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 1,
+
     "themes": {
       "tanks": 15
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-LMvspP9",
-    "title": "The Essence Of Mechanical War Art",
-    "description": "Discover the mechanical war art in this powerful wwii tanks and trucks by Wayne Heim. A compelling work that embodies history's greatest conflicts, history's greatest conflicts, and mechanical war art. Perfect for art lovers seeking mechanical war art to enhance their collection. © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "title": "Steel in Motion",
+    "description": "A painterly World War II photograph capturing a Sherman tank advancing through churned sand and drifting light. Rather than dramatizing combat, the image centers on movement itself — the raw inevitability of battle-ready machines pushing forward through uncertain terrain. Atmosphere and restrained color elevate WWII military equipment into a cinematic study of force, velocity, and consequence.\n\nThis work reflects the union of men and machines within mechanized warfare, where motion carried both survival and history forward. © Wayne Heim",
+    "alt": "World War II Sherman tank driving forcefully through sandy terrain with dust rising around it, soldiers visible atop the turret, surrounded by trees and filtered light.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/Mbmg8h4XLjDRdp3PVX3QpPRSpFSHSfGRpXrkQmF59/XL/_OLY0452-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/Mbmg8h4XLjDRdp3PVX3QpPRSpFSHSfGRpXrkQmF59/XL/_OLY0452-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/Mbmg8h4XLjDRdp3PVX3QpPRSpFSHSfGRpXrkQmF59/XL/_OLY0452-XL.jpg",
@@ -92,28 +110,37 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-LMvspP9/4/NGHzx3FgjCXJWM4rxjGbDMvJbV7zkxsqp6cstkZgq/S/_OLY0452-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-LMvspP9/A",
+
     "keywords": [
-      "mechanical war art",
       "wwii tanks and trucks",
-      "history's greatest conflicts",
-      "military machinery prints",
-      "battle-ready machines"
+      "battle-ready machines",
+      "WWII military equipment color",
+      "mechanical war art",
+      "vivid WWII mechanized might",
+      "men and machines color",
+      "painterly WWII photography",
+      "world war ii tank",
+      "armored vehicle photography"
     ],
-    "story": "Delving into military machinery prints, this work by Wayne Heim highlights battle-ready machines through battle-ready machines and battle-ready machines. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The tank surges forward, steel cutting through sand and light. Dust lifts around it, briefly swallowing shape and sound before falling back into place.\n\nAbove the armor, eyes scan ahead — not for glory, only for what waits. Momentum is the only certainty.\n\nWhen the dust clears, the machine will be farther on. The ground will remember the weight.",
+    "notes": "The composition emphasizes thrust and mass, allowing motion to define the emotional register of the image. Sand and atmosphere act as painterly elements, softening mechanical hardness while reinforcing momentum and scale.\n\nThe low, forward-leaning posture of the vehicle creates a visual tension between human presence and industrial force — transforming the tank from pure machinery into a study of directed power. The result is not spectacle, but inevitability.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 2,
+
     "themes": {
       "tanks": 8
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-fmd9mTF",
-    "title": "Battle-Ready Machines Study",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "title": "Silent Patrol",
+    "description": "A painterly World War II photograph capturing the USS Cod moving through open water under a brooding sky. Rather than dramatizing combat, the image centers on restraint and endurance — the quiet authority of battle-ready machines navigating uncertain seas. Tonal control and atmosphere elevate WWII military equipment into a cinematic meditation on vigilance and resolve.\n\nThis work reflects the unseen dimension of mechanized war at sea, where silence carried as much consequence as firepower. © Wayne Heim",
+    "alt": "World War II submarine USS Cod moving through dark ocean water beneath a dramatic, overcast sky, viewed from a low angle showing the bow and hull.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fmd9mTF/2/NZLJLcw4ZpJFSkGRLk3LBn6cc5X6vfV6Z3mwpG95x/XL/_ANA3303-Edit-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fmd9mTF/2/NZLJLcw4ZpJFSkGRLk3LBn6cc5X6vfV6Z3mwpG95x/XL/_ANA3303-Edit-Edit-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fmd9mTF/2/NZLJLcw4ZpJFSkGRLk3LBn6cc5X6vfV6Z3mwpG95x/XL/_ANA3303-Edit-Edit-Edit-Edit-XL.jpg",
@@ -121,25 +148,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-fmd9mTF/2/M4ntP6BpCmmMx2JKDk5cdSQ6dSv8wHGRSrC95fz9B/S/_ANA3303-Edit-Edit-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-fmd9mTF/A",
+
     "keywords": [
       "battle-ready machines",
-      "history's greatest conflicts",
       "mechanical war art",
-      "wwii tanks and trucks",
-      "military machinery prints"
+      "WWII military equipment color",
+      "men and machines color",
+      "vivid WWII mechanized might",
+      "military machinery prints",
+      "world war ii submarine",
+      "naval war photography"
     ],
-    "story": "Battle-ready Machines Study. Wayne Heim's approach to painterly photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The bow cuts clean through dark water, steady and unhurried. Above, the sky gathers weight, but the vessel does not answer it. It simply moves.\n\nNo flags wave. No cheers follow. Beneath the surface lies distance measured in pressure and patience.\n\nWhen it slips past the horizon, the sea will close behind it — as if it had never been there.",
+    "notes": "The composition emphasizes mass and forward glide, allowing the submarine to function as a study in contained power rather than spectacle. The low vantage point and compressed horizon grant the hull a monumental stillness, echoing maritime painting traditions where atmosphere and scale convey emotional gravity.\n\nMuted tonality and restrained contrast align the work with painterly realism, transforming industrial form into psychological presence. The image invites prolonged viewing, where sea and steel share equal weight — and silence becomes the dominant force.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    contentSource: "ai"
   },
   {
     "id": "i-dgwZgpw",
-    "title": "Wwii Tanks And Trucks In Fine Art",
-    "description": "A painterly World War II photograph of a tank crewman, defined by resolve rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where purpose held steady when the world did not. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim '21",
+    "title": "Silent Patrol",
+    "description": "A painterly World War II photograph capturing the USS Cod moving through open water under a brooding sky. Rather than dramatizing combat, the image centers on restraint and endurance — the quiet authority of battle-ready machines navigating uncertain seas. Tonal control and atmosphere elevate WWII military equipment into a cinematic meditation on vigilance and resolve.\n\nThis work reflects the unseen dimension of mechanized war at sea, where silence carried as much consequence as firepower. © Wayne Heim",
+    "alt": "World War II submarine USS Cod moving through dark ocean water beneath a dramatic, overcast sky, viewed from a low angle showing the bow and hull.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/KQC8Dp42RMzVPKTvMHbqpwkqZttNFL7rq8GNBJgW2/XL/_ANA3303-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/KQC8Dp42RMzVPKTvMHbqpwkqZttNFL7rq8GNBJgW2/XL/_ANA3303-Edit-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/KQC8Dp42RMzVPKTvMHbqpwkqZttNFL7rq8GNBJgW2/XL/_ANA3303-Edit-Edit-Edit-XL.jpg",
@@ -147,24 +180,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-dgwZgpw/1/NSF5wF9jFXcqJvFPSrLnDbnZxDWC3HWn4XBnvZPRQ/S/_ANA3303-Edit-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-dgwZgpw/A",
+
     "keywords": [
-      "wwii tanks and trucks",
+      "battle-ready machines",
       "mechanical war art",
+      "WWII military equipment color",
+      "men and machines color",
+      "vivid WWII mechanized might",
       "military machinery prints",
-      "history's greatest conflicts"
+      "world war ii submarine",
+      "naval war photography"
     ],
-    "story": "Wayne Heim's exploration of wwii tanks and trucks comes alive in this piece, showcasing history's greatest conflicts and military machinery prints. A testament to mechanical war art in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The bow cuts clean through dark water, steady and unhurried. Above, the sky gathers weight, but the vessel does not answer it. It simply moves.\n\nNo flags wave. No cheers follow. Beneath the surface lies distance measured in pressure and patience.\n\nWhen it slips past the horizon, the sea will close behind it — as if it had never been there.",
+    "notes": "The composition emphasizes mass and forward glide, allowing the submarine to function as a study in contained power rather than spectacle. The low vantage point and compressed horizon grant the hull a monumental stillness, echoing maritime painting traditions where atmosphere and scale convey emotional gravity.\n\nMuted tonality and restrained contrast align the work with painterly realism, transforming industrial form into psychological presence. The image invites prolonged viewing, where sea and steel share equal weight — and silence becomes the dominant force.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 4
+    "sortOrder": 4,
+    contentSource: "ai"
   },
   {
     "id": "i-RRNrLTb",
-    "title": "History'S Greatest Conflicts Moment",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim '21",
+    "title": "The Long Horizon",
+    "description": "A painterly World War II photograph capturing the USS Cod extended across open water beneath a brooding sky. Rather than focusing on action, the image emphasizes scale and isolation — the quiet authority of battle-ready machines navigating immense distance. Controlled tonality and atmospheric restraint elevate WWII military equipment into a cinematic meditation on vigilance and endurance.\n\nThis work reflects the psychological dimension of naval warfare, where silence, distance, and patience carried as much weight as visible conflict. © Wayne Heim",
+    "alt": "World War II submarine USS Cod traveling across open ocean under dark, dramatic storm clouds, viewed in wide profile with the horizon stretching behind it.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-RRNrLTb/1/K9JS2jrTk2GgNsKPmcQdx4wC67HMGCTnn8VL86ZHs/XL/_ANA3291-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-RRNrLTb/1/K9JS2jrTk2GgNsKPmcQdx4wC67HMGCTnn8VL86ZHs/XL/_ANA3291-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-RRNrLTb/1/NNXxJTmfJpkVVBdWQFT4MFWjhZLSDwQgQKnHJ6xMj/L/_ANA3291-Edit-Edit-L.jpg",
@@ -172,24 +212,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-RRNrLTb/1/KNGpMs647q4JtQVJKmB4CZNjGT5krMRNG9678mLvn/S/_ANA3291-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-RRNrLTb/A",
+
     "keywords": [
-      "history's greatest conflicts",
       "battle-ready machines",
       "mechanical war art",
-      "military machinery prints"
+      "WWII military equipment color",
+      "men and machines color",
+      "vivid WWII mechanized might",
+      "military machinery prints",
+      "world war ii submarine",
+      "naval war photography"
     ],
-    "story": "Wayne Heim captures \"History's Greatest Conflicts Moment\" with the restraint and intention of fine art photography. Light is sculpted, composition serves story. From",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The submarine stretches across the water like a line drawn with intention. Sea and sky press in from every side, but it keeps its course — steady, unhurried.\n\nAbove, weather gathers without promise. Below, depth waits without light.\n\nWhen it reaches the horizon, nothing will mark the crossing. Only the sea will know it was there.",
+    "notes": "The elongated horizontal composition reinforces the vastness of sea and sky, positioning the submarine as both dominant and vulnerable within its environment. The compressed tonal range and dramatic cloud structure echo maritime painting traditions where atmosphere conveys psychological weight as much as physical scale.\n\nBy minimizing spectacle and emphasizing distance, the image transforms industrial form into a study of endurance — a restrained examination of presence against immensity.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    contentSource: "ai"
   },
   {
     "id": "i-7r4cQqR",
-    "title": "Fine Art History'S Greatest Conflicts",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim '21",
+    "title": "Straight Ahead",
+    "description": "A painterly World War II photograph capturing a Sherman tank advancing directly toward the viewer across open terrain. Rather than emphasizing combat, the image centers on resolve and inevitability — the quiet authority of battle-ready machines moving forward with purpose. Controlled light and restrained tonality transform WWII military equipment into a cinematic study of momentum and presence.\n\nThe work reflects the union of men and machines within mechanized warfare, where direction itself carried consequence and history advanced one deliberate movement at a time. © Wayne Heim",
+    "alt": "World War II Sherman tank driving forward across dusty terrain toward the viewer, soldiers visible in the turret under a muted sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7r4cQqR/1/NHmdTBTFFcHTFNv2DMkf4HjVjFXXQdhkBNM4qZVcs/XL/_PEN0128-Enhanced-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7r4cQqR/1/NHmdTBTFFcHTFNv2DMkf4HjVjFXXQdhkBNM4qZVcs/XL/_PEN0128-Enhanced-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7r4cQqR/1/KMFg8dw5Df6XsNnqgjrLsMZsDHwd3fsRh2rsm5qhb/L/_PEN0128-Enhanced-Edit-Edit-2-L.jpg",
@@ -197,28 +244,37 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-7r4cQqR/1/MwHxKwhhNDLcc5NtckKtn2PXrgLpbBJR25VffZTrd/S/_PEN0128-Enhanced-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-7r4cQqR/A",
+
     "keywords": [
-      "history's greatest conflicts",
-      "battle-ready machines",
       "wwii tanks and trucks",
+      "battle-ready machines",
+      "WWII military equipment color",
       "mechanical war art",
-      "military machinery prints"
+      "vivid WWII mechanized might",
+      "men and machines color",
+      "painterly WWII photography",
+      "world war ii tank",
+      "armored vehicle photography"
     ],
-    "story": "Fine Art History's Greatest Conflicts. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The tank comes forward without hesitation, its path already chosen. Steel meets open ground with steady purpose, carrying men who have learned to look only ahead.\n\nDust lifts and falls around the tracks, briefly hiding what moves through it. Nothing stops. Nothing turns aside.\n\nWhen it passes, the land settles again — unchanged at a distance, altered where the weight has crossed.",
+    "notes": "The frontal composition establishes immediate confrontation between viewer and machine, emphasizing presence over action. By placing the vehicle on axis, the image adopts a formal symmetry often associated with portraiture, transforming industrial machinery into a subject of psychological weight.\n\nMuted color and atmospheric handling soften mechanical detail into painterly mass, allowing scale and posture to carry emotional meaning. The result is a restrained study of inevitability — motion defined not by speed, but by certainty.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 6,
+
     "themes": {
       "tanks": 9
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-FTgjc8C",
-    "title": "Fine Art Battle-Ready Machines",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Heading Home",
+    "description": "A painterly World War II photograph capturing the USS Cod moving across open sea beneath a dramatic sky, evoking the quiet transition from conflict toward return. Rather than depicting battle, the image centers on endurance and passage — the restrained authority of a battle-ready machine carrying its crew homeward through vast and uncertain waters. Atmospheric light and controlled tonality transform WWII military equipment into a cinematic meditation on distance, survival, and reunion.\n\nThe work reflects the emotional aftermath of naval warfare, where the journey home carried its own weight of memory and consequence. © Wayne Heim",
+    "alt": "World War II submarine USS Cod traveling across open ocean toward the viewer under dramatic storm clouds, leaving a visible wake behind it.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-FTgjc8C/1/NQ5HjnMZJP357NgP3DnfMdZHrX2zkH22N9FGTsqHT/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-FTgjc8C/1/NQ5HjnMZJP357NgP3DnfMdZHrX2zkH22N9FGTsqHT/XL/_ANA3350-Enhanced-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-FTgjc8C/1/MQ3fFW52WCsppFQdWdWs4nGxD4XjzV2WdtgFJFp7M/L/_ANA3350-Enhanced-Edit-Edit-2-L.jpg",
@@ -226,24 +282,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-FTgjc8C/1/KpVcCcMFjPt3kzTzCTs3Gt54SCtZsf3j4zNzHpg2h/S/_ANA3350-Enhanced-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FTgjc8C/A",
+
     "keywords": [
       "battle-ready machines",
-      "wwii tanks and trucks",
+      "WWII military equipment color",
+      "men and machines color",
       "mechanical war art",
-      "military machinery prints"
+      "vivid WWII mechanized might",
+      "military machinery prints",
+      "world war ii submarine",
+      "naval war photography"
     ],
-    "story": "Wayne Heim's exploration of military machinery prints comes alive in this piece, showcasing mechanical war art and battle-ready machines. A testament to military machinery prints in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The submarine turns toward familiar waters, its wake stretching behind like a memory unwilling to fade. Storm clouds linger overhead, but the course is set — steady, certain.\n\nNo celebration marks the journey. Only distance closing, mile by quiet mile.\n\nSomewhere beyond the horizon waits land, and lives paused long enough to wonder who will return.",
+    "notes": "The centered composition and receding wake establish a narrative of return rather than advance, shifting the emotional tone from confrontation to reflection. Sea and sky dominate the frame, reducing the vessel’s scale just enough to emphasize isolation while preserving authority.\n\nAtmospheric restraint and subdued color handling align the work with maritime painting traditions in which weather and distance carry psychological meaning. The image becomes less a record of war and more a study of passage — the quiet moment when motion turns toward home.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    contentSource: "ai"
   },
   {
     "id": "i-Tfg5j96",
-    "title": "History'S Greatest Conflicts - Military Machinery Prints",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim '21",
+    "title": "Waiting on Orders",
+    "description": "A painterly World War II photograph capturing a naval serviceman in a quiet moment aboard ship. Rather than dramatizing combat, the image centers on presence and restraint — the human dimension within battle-ready machines. Subdued color and controlled light elevate WWII military equipment into a cinematic study of pause, duty, and anticipation.\n\nThis work reflects the lived experience behind mechanical war art, where history’s greatest conflicts were carried not only by steel, but by the men who stood beside it. © Wayne Heim",
+    "alt": "World War II naval serviceman wearing a helmet and life vest leaning against a ship structure, with ocean visible behind him under a muted sky.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MRLHxKXknjnrcSPBgNrS8m7drgc6B7FRc453NF9dX/XL/_PEN0783-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MRLHxKXknjnrcSPBgNrS8m7drgc6B7FRc453NF9dX/XL/_PEN0783-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/MRLHxKXknjnrcSPBgNrS8m7drgc6B7FRc453NF9dX/XL/_PEN0783-Edit-2-XL.jpg",
@@ -251,24 +314,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Tfg5j96/3/KL5Z66dcM2gxqCZ4SvPZ84rZqjh97HnX6ZqxzD7fd/S/_PEN0783-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Tfg5j96/A",
+
     "keywords": [
-      "history's greatest conflicts",
-      "military machinery prints",
+      "men and machines color",
+      "WWII military equipment color",
+      "wwii tanks and trucks",
+      "battle-ready machines",
       "mechanical war art",
-      "battle-ready machines"
+      "military machinery prints",
+      "world war ii naval serviceman",
+      "naval war photography"
     ],
-    "story": "Wayne Heim captures \"History's Greatest Conflicts - Military Machinery Prints\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He leans against cold steel, one hand resting where the paint has worn thin. The sea moves behind him, steady and indifferent.\n\nThere is always a pause before motion — a breath between instruction and action. In that space, a man measures what he knows and what he doesn’t.\n\nSoon enough, someone will speak. For now, he waits.",
+    "notes": "The composition adopts a portrait sensibility, placing the figure in quiet dialogue with the surrounding machinery. By softening industrial detail through painterly tonality, the image balances mechanical mass with human vulnerability.\n\nThe restrained posture and off-axis gaze introduce psychological tension without overt drama. In this work, machinery becomes context rather than spectacle, reinforcing the theme that history’s greatest conflicts were experienced in moments of stillness as much as in action.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    contentSource: "ai"
   },
   {
     "id": "i-N9sBgRs",
-    "title": "Mechanical War Art Portrait",
-    "description": "A painterly World War II photograph of a things are about to get messy, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Things are about to get messy.",
+    "title": "On My Mark",
+    "description": "A painterly World War II photograph capturing a naval officer mid-gesture, signaling movement amid battle-ready machines and waiting men. Rather than dramatizing chaos, the image centers on command and suspended tension — the split second before motion becomes irreversible. Controlled light and restrained tonality elevate WWII military equipment and uniformed figures into a cinematic study of authority and anticipation.\n\nThis work reflects the human force behind mechanical war art, where history’s greatest conflicts turned on gestures as much as firepower. © Wayne Heim",
+    "alt": "World War II naval officer wearing a USN helmet raising his arm to signal, with uniformed servicemen standing behind him on a ship deck under a muted sky.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/K5c2gxv7gHXv5r3QBD4XCshmjKVxfXpXK6ZPWdgnW/XL/_PEN0798-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/K5c2gxv7gHXv5r3QBD4XCshmjKVxfXpXK6ZPWdgnW/XL/_PEN0798-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/NTMb3nkxwrJ3dG8G3DHQKxnMTjVzPcmpNBfXknTjp/L/_PEN0798-Edit-Edit-2-L.jpg",
@@ -276,25 +346,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-N9sBgRs/3/LRjZ95GQXSNRjDXhcd6fF2SBCJrpLLNJPqtdgtj9q/S/_PEN0798-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-N9sBgRs/A",
+
     "keywords": [
-      "mechanical war art",
+      "men and machines color",
+      "WWII military equipment color",
       "wwii tanks and trucks",
       "battle-ready machines",
+      "mechanical war art",
       "military machinery prints",
-      "history's greatest conflicts"
+      "world war ii naval officer",
+      "vivid WWII mechanized might"
     ],
-    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights history's greatest conflicts through mechanical war art and battle-ready machines. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "His arm lifts into the wind, cutting through noise no one else can hear. Around him, men tighten their grip on straps and steel, waiting for the smallest shift in tone.\n\nThere is always a second when everything hangs — before boots move, before engines surge, before consequence decides its direction.\n\nHe does not shout. He only marks the moment.",
+    "notes": "The composition places the raised arm at the visual apex, creating a dynamic diagonal that activates the entire frame. This gesture becomes both formal anchor and narrative pivot, transforming a simple signal into a study of suspended action.\n\nMuted color and softened edges align the image with painterly realism, tempering documentary immediacy with interpretive restraint. The result is a psychological portrait of command — a moment where authority, responsibility, and consequence converge before the first movement begins.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    contentSource: "ai"
   },
   {
     "id": "i-x3ZPvH9",
-    "title": "Wwii Tanks And Trucks In Fine Art",
-    "description": "A painterly World War II photograph of a get ready boys, defined by resolve rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where purpose held steady when the world did not. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Get Ready Boys.",
+    "title": "Between Sea and Shore",
+    "description": "A painterly World War II photograph capturing soldiers poised aboard a landing craft moments before disembarkation. Rather than depicting combat, the image centers on anticipation and resolve — the quiet tension carried by men and machines at the threshold of action. Controlled light and restrained tonality elevate WWII military equipment into a cinematic study of transition, duty, and uncertainty.\n\nThe work reflects the human dimension within history’s greatest conflicts, where decisive moments often began in silence before the first step forward. © Wayne Heim",
+    "alt": "World War II soldiers standing aboard a landing craft facing forward toward open water and shoreline, wearing helmets and full gear under soft daylight.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LWqpJVWj7Xsx6DVxkftTdNcBJN6RvfSK7m8P2pLPg/XL/_PEN0264-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LWqpJVWj7Xsx6DVxkftTdNcBJN6RvfSK7m8P2pLPg/XL/_PEN0264-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/LWqpJVWj7Xsx6DVxkftTdNcBJN6RvfSK7m8P2pLPg/XL/_PEN0264-Edit-XL.jpg",
@@ -302,24 +378,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-x3ZPvH9/2/KVK5ZL339PGTWw7mjGVtSNk7BS5LRVRv4b6qBB5z7/S/_PEN0264-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-x3ZPvH9/A",
+
     "keywords": [
+      "men and machines color",
+      "WWII military equipment color",
       "wwii tanks and trucks",
-      "history's greatest conflicts",
+      "battle-ready machines",
       "mechanical war art",
-      "military machinery prints"
+      "military machinery prints",
+      "world war ii soldiers",
+      "landing craft photography"
     ],
-    "story": "Wayne Heim's exploration of history's greatest conflicts comes alive in this piece, showcasing military machinery prints and wwii tanks and trucks. A testament to wwii tanks and trucks in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "They stand facing forward, packs tight against their backs, the ocean breathing behind them. No one speaks. The moment before movement belongs to thought alone.\n\nAhead lies land not yet touched, distance measured in steps still waiting to be taken.\n\nSoon the ramp will fall. For now, they stand between sea and shore.",
+    "notes": "The composition places the viewer directly behind the soldiers, creating a participatory perspective that transforms observation into presence. The strong directional lines of the craft guide the eye toward the unseen shore, emphasizing psychological anticipation over visible action.\n\nMuted color and painterly restraint soften historical detail into atmosphere, aligning the image with traditions that explore transition and human vulnerability within monumental events. The result is a study of threshold — the instant suspended between safety and consequence.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    contentSource: "ai"
   },
   {
     "id": "i-Rb3fQ5d",
-    "title": "The Essence Of History'S Greatest Conflicts",
-    "description": "Discover the history's greatest conflicts in this powerful battle-ready machines by Wayne Heim. A compelling work that embodies wwii tanks and trucks, battle-ready machines, and mechanical war art. Perfect for art lovers seeking history's greatest conflicts to enhance their collection. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Shoulder to Shoulder",
+    "description": "A painterly World War II photograph capturing soldiers gathered along the edge of a landing craft as they approach shore. Rather than depicting combat, the image centers on shared resolve and quiet anticipation — the human presence within battle-ready machines. Controlled light and restrained tonality elevate WWII military equipment into a cinematic study of unity, tension, and the moments before action begins.\n\nThe work reflects the collective experience within history’s greatest conflicts, where courage was often found not alone, but standing beside others facing the same uncertain horizon. © Wayne Heim",
+    "alt": "World War II soldiers standing closely together along the side of a landing craft looking toward the horizon under a dramatic sky.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/MpVXBhbpXTgdp8QZVGdLMGMRgg23kkJ24hLPkhWkV/XL/_ANA4472-Edit2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/MpVXBhbpXTgdp8QZVGdLMGMRgg23kkJ24hLPkhWkV/XL/_ANA4472-Edit2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/MpVXBhbpXTgdp8QZVGdLMGMRgg23kkJ24hLPkhWkV/XL/_ANA4472-Edit2-XL.jpg",
@@ -327,25 +410,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color/i-Rb3fQ5d/2/Lmwzxfzp6WM2RXFQdr2wfkNLZckfd8ZmGzbxCmWZC/S/_ANA4472-Edit2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Rb3fQ5d/A",
+
     "keywords": [
-      "history's greatest conflicts",
-      "battle-ready machines",
+      "men and machines color",
+      "WWII military equipment color",
       "wwii tanks and trucks",
+      "battle-ready machines",
       "mechanical war art",
-      "military machinery prints"
+      "military machinery prints",
+      "world war ii soldiers",
+      "landing craft photography"
     ],
-    "story": "Wayne Heim's exploration of wwii tanks and trucks comes alive in this piece, showcasing military machinery prints and wwii tanks and trucks. A testament to mechanical war art in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "They stand pressed close along the rail, hands steady against the motion of the sea. No one looks back. The horizon ahead holds every unanswered question.\n\nGear shifts softly, metal taps against metal, and the wind carries only the sound of water moving past the hull.\n\nTogether, they wait — shoulder to shoulder — until waiting is no longer possible.",
+    "notes": "The composition emphasizes repetition and rhythm through aligned figures, creating a visual cadence that reinforces collective identity over individual portraiture. The viewer’s perspective places them within the formation, transforming observation into participation.\n\nMuted color and atmospheric restraint soften documentary detail into painterly unity, allowing posture and proximity to carry emotional meaning. The image becomes a study of solidarity — a shared moment suspended between anticipation and action.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    contentSource: "ai"
   },
   {
     "id": "i-h6zMQW8",
-    "title": "Wwii Tanks And Trucks Portrait",
-    "description": "A painterly World War II photograph of a tank crewman, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Landfall",
+    "description": "A painterly World War II photograph capturing soldiers disembarking from a landing craft and moving toward shore. Rather than depicting combat itself, the image centers on commitment — the moment when battle-ready machines give way to human resolve. Atmospheric light and restrained tonality transform WWII military equipment into a cinematic study of transition, courage, and irreversible action.\n\nThe work reflects the defining threshold within history’s greatest conflicts, where ordinary steps carried extraordinary consequence. © Wayne Heim",
+    "alt": "World War II soldiers wading through shallow water after exiting a landing craft, moving toward shore with gear and rifles under muted daylight.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/0/NFTXzfPF9KbWSBfpM5R32Ddj7D445hWcB6nZsV8MD/XL/_PEN1121-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/0/NFTXzfPF9KbWSBfpM5R32Ddj7D445hWcB6nZsV8MD/XL/_PEN1121-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/0/M7t4ZdwL2XPMbktjzszW8pfqwx9PgchvcKXRJ5tMj/L/_PEN1121-Edit-Edit-L.jpg",
@@ -353,24 +442,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/0/LjL5zXcHdXvLD3CR69MwLW6n7fV2gcXDkx8Gs5ST5/S/_PEN1121-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-h6zMQW8/A",
+
     "keywords": [
+      "men and machines color",
+      "WWII military equipment color",
       "wwii tanks and trucks",
       "battle-ready machines",
       "mechanical war art",
-      "military machinery prints"
+      "military machinery prints",
+      "world war ii soldiers",
+      "landing craft photography"
     ],
-    "story": "Wayne Heim's exploration of military machinery prints comes alive in this piece, showcasing battle-ready machines and military machinery prints. A testament to mechanical war art in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "Boots meet water without hesitation, the sea breaking around them as they move forward. Behind them, the craft waits only long enough to release the next wave.\n\nNo one pauses. The shoreline ahead holds everything unknown, every outcome already set in motion.\n\nWith each step, the distance between past and future disappears beneath the tide.",
+    "notes": "The composition emphasizes forward movement through layered depth, guiding the viewer’s eye from the landing craft toward the advancing figures. Repetition of posture and equipment creates rhythm, reinforcing collective action over individual identity.\n\nMuted palette and painterly restraint soften documentary immediacy, allowing atmosphere and gesture to carry emotional weight. The image becomes a study of transition — the precise moment when arrival transforms into history.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    contentSource: "ai"
   },
   {
     "id": "i-vsx5t6W",
-    "title": "Military Machinery Prints - History'S Greatest Conflicts",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim '23",
+    "title": "Committed",
+    "description": "A painterly World War II photograph capturing a soldier stepping from landing craft into open water, defined by resolve rather than spectacle. This Men & Machines Color work emphasizes the human presence within WWII military equipment color imagery, focusing on battle-ready machines and the individuals who carried history forward.\n\nLight, restraint, and atmosphere transform mechanical war art into a study of commitment — where the act of stepping forward marked the beginning of consequence. © Wayne Heim",
+    "alt": "World War II soldier stepping into surf from a landing craft during amphibious assault, wearing full gear under natural light.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/0/Md6gsKpgK53sSjZPVNbBVvkzMcNJ3PhxfrLpb95Vr/XL/_PEN1134-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/0/Md6gsKpgK53sSjZPVNbBVvkzMcNJ3PhxfrLpb95Vr/XL/_PEN1134-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/0/Md6gsKpgK53sSjZPVNbBVvkzMcNJ3PhxfrLpb95Vr/XL/_PEN1134-Edit-Edit-2-XL.jpg",
@@ -378,25 +474,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/0/LHjF3CNWNDXksMkMRkDPxtCGbBs9KV4mW66WKLtZv/S/_PEN1134-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vsx5t6W/A",
+
     "keywords": [
-      "military machinery prints",
-      "history's greatest conflicts",
-      "wwii tanks and trucks",
+      "men and machines color",
+      "WWII military equipment color",
       "battle-ready machines",
-      "mechanical war art"
+      "mechanical war art",
+      "amphibious landing",
+      "World War II fine art photography",
+      "historical military imagery",
+      "wartime resolve"
     ],
-    "story": "Military Machinery Prints - History's Greatest Conflicts — part of Wayne Heim's",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He steps forward because the moment has already decided. Water breaks around his boots, cold and immediate, while steel and men wait behind him.\n\nThere is no rehearsal for this. Only movement.\n\nOnce committed, there is no return to the deck.",
+    "notes": "The composition isolates the decisive gesture — forward balance, water displacement, body committed to motion — transforming a historical reenactment moment into psychological portraiture. The painterly restraint softens industrial detail while preserving material authenticity, aligning the work with traditions that treat military subjects as studies of consequence rather than spectacle.\n\nHere, machinery serves as threshold. The human step carries the narrative.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    contentSource: "ai"
   },
   {
     "id": "i-snvP87s",
-    "title": "Battle-Ready Machines And Military Machinery Prints",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim '23",
+    "title": "Standing Ready",
+    "description": "A painterly World War II photograph centered on armored presence rather than action, portraying a tank as both machine and witness. This Men & Machines Color image explores WWII military equipment color through atmosphere and restraint, emphasizing battle-ready machines poised between stillness and motion.\n\nLight and texture elevate mechanical war art beyond documentation, revealing the quiet tension held within wwii tanks and trucks before history moves forward. © Wayne Heim",
+    "alt": "World War II tank resting in field under muted sky, captured in painterly fine art style emphasizing armored presence and atmosphere.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/0/NBtpFh38XffLBNxXGMBVrVX3HVnVZd5MrvqXdpTCH/XL/_O1H0252-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/0/NBtpFh38XffLBNxXGMBVrVX3HVnVZd5MrvqXdpTCH/XL/_O1H0252-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/0/NBtpFh38XffLBNxXGMBVrVX3HVnVZd5MrvqXdpTCH/XL/_O1H0252-Edit-XL.jpg",
@@ -404,27 +506,36 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/0/KwqzJ3LkgMbjPJqQ7PKcNxHBTbxzJbCNrWjmcXDCf/S/_O1H0252-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-snvP87s/A",
+
     "keywords": [
+      "men and machines color",
+      "WWII military equipment color",
       "battle-ready machines",
-      "military machinery prints",
+      "mechanical war art",
       "wwii tanks and trucks",
-      "mechanical war art"
+      "World War II fine art photography",
+      "armored vehicle art",
+      "historical military imagery"
     ],
-    "story": "Wayne Heim captures \"Battle-ready Machines And Military Machinery Prints\" with the restraint and intention of K4 Studios fine art. Light is sculpted, composition serves story. From",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The engine is silent, but nothing about it is at rest.\n\nSteel waits the way soldiers wait — prepared, patient, knowing movement will come soon enough. For now, it holds its ground, carrying the weight of what it was built to do.",
+    "notes": "Rather than depicting combat, the composition focuses on latent force — the mass, geometry, and presence of armored machinery held in suspension. The softened painterly treatment allows the vehicle to read simultaneously as artifact and character, aligning the work with traditions that treat military subjects as psychological landscape as much as historical record.\n\nThe machine waits, and in that waiting, the narrative forms.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 14,
+
     "themes": {
       "tanks": 10
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-Cwv4Sf2",
-    "title": "Wwii Tanks And Trucks Moment",
-    "description": "A painterly World War II photograph of a tank crewman, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim '23",
+    "title": "Thunder of the Line",
+    "description": "A painterly World War II photograph capturing synchronized artillery discharge at the exact moment of ignition. This Men & Machines Color image embodies Color WWII Machines and WWII Military Equipment Color through disciplined composition and atmospheric control.\n\nRather than chaos, the scene presents battle-ready machines operating in unison — a study in mechanical war art and Vivid WWII Mechanized Might. Within wwii tanks and trucks, force becomes geometry, flame becomes structure, and power becomes narrative. © Wayne Heim",
+    "alt": "World War II artillery and tanks firing in coordinated line at dusk, flames erupting from barrels in dramatic painterly fine art style.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Cwv4Sf2/2/MPTk32D9bx2n6nWwmJHHf4QfXsKd23TKzrMjHbTQ7/XL/_O1H0573-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Cwv4Sf2/2/MPTk32D9bx2n6nWwmJHHf4QfXsKd23TKzrMjHbTQ7/XL/_O1H0573-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Cwv4Sf2/2/KpGzJkFDNc6drFzLbMkWRNhLwZ8ctPLDDQRPpcNDb/L/_O1H0573-Edit-Edit-L.jpg",
@@ -432,26 +543,37 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Cwv4Sf2/2/KNSF26ppQcvtL3XjFGtKTJCnzr88dnjhHxxGjLvC3/S/_O1H0573-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Cwv4Sf2/A",
+
     "keywords": [
+      "men and machines color",
+      "color WWII machines",
+      "WWII military equipment color",
       "wwii tanks and trucks",
       "battle-ready machines",
-      "history's greatest conflicts"
+      "mechanical war art",
+      "vivid WWII mechanized might",
+      "World War II fine art photography",
+      "historical artillery imagery"
     ],
-    "story": "Tanks And Trucks Moment. Wayne Heim's approach to painterly photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The command passes. The barrels answer.\n\nFlame blooms against the darkening sky, and the ground absorbs the recoil. For a breath, the world narrows to fire and force — then the smoke begins to drift.",
+    "notes": "The composition emphasizes simultaneity — aligned barrels, synchronized ignition, repeated form. The painterly restraint prevents the fire from becoming spectacle alone, allowing structure and rhythm to dominate.\n\nHere, machinery is not background to history. It is the voice of it.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 15,
+
     "themes": {
       "tanks": 11
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-GXrCDJh",
-    "title": "Wwii Tanks And Trucks Portrait",
-    "description": "A painterly World War II photograph of a tank crewman, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Wayne Heim – Fine Art Photography",
+    "title": "Line of Fire",
+    "description": "A painterly World War II photograph capturing artillery discharge at the exact instant of ignition. This Men & Machines Color work explores Color WWII Machines and WWII Military Equipment Color through disciplined composition and controlled atmosphere.\n\nRather than chaos, the scene reveals battle-ready machines operating with precision — an expression of mechanical war art and Vivid WWII Mechanized Might. Within wwii tanks and trucks, geometry and flame converge, transforming force into structure and history into visual rhythm. © Wayne Heim",
+    "alt": "World War II artillery and tanks firing in coordinated line at dusk, flames erupting from barrels in painterly fine art style.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-GXrCDJh/1/Nf9Jcdc9TWXT2m2sTPB44zzRbBQsRxrKG9gBPVSKz/XL/_O1H0615-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-GXrCDJh/1/Nf9Jcdc9TWXT2m2sTPB44zzRbBQsRxrKG9gBPVSKz/XL/_O1H0615-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-GXrCDJh/1/KHZ3gjQ9WPmc2CvrWgDSmNBsbzzWBHrKJmhpQmNzq/L/_O1H0615-Edit-2-L.jpg",
@@ -459,28 +581,37 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-GXrCDJh/1/NSSnFKsKvCDJCQ4wgPp2bJrLNF9Zt8WhzMTsdzNmK/S/_O1H0615-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GXrCDJh/A",
+
     "keywords": [
+      "men and machines color",
+      "color WWII machines",
+      "WWII military equipment color",
       "wwii tanks and trucks",
-      "military machinery prints",
       "battle-ready machines",
       "mechanical war art",
-      "history's greatest conflicts"
+      "vivid WWII mechanized might",
+      "World War II fine art photography",
+      "historical artillery imagery"
     ],
-    "story": "Delving into mechanical war art, this work by Wayne Heim highlights history's greatest conflicts through history's greatest conflicts and mechanical war art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The barrels align. The order holds for half a breath.\n\nThen the horizon fractures.\n\nFlame cuts the dusk, recoil drives steel backward, and the sound arrives a heartbeat later.",
+    "notes": "The composition emphasizes trajectory and repetition — extended barrels, aligned chassis, synchronized ignition. The painterly restraint prevents the fire from overwhelming the structure, allowing rhythm and directional force to dominate.\n\nHere, machinery becomes horizon-maker — not background to history, but the line that reshaped it.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 16,
+
     "themes": {
       "tanks": 12
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-Z6f9LZn",
-    "title": "Exploring Battle-Ready Machines",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "New fine art photograph © Wayne Heim",
+    "title": "Engines Under Fire",
+    "description": "A painterly World War II photograph capturing armored vehicles advancing through active discharge and drifting smoke. This Men & Machines Color work explores Color WWII Machines and WWII Military Equipment Color with emphasis on battle-ready machines operating under sustained force.\n\nRather than isolated spectacle, the image presents mechanical war art as coordinated momentum — a display of Vivid WWII Mechanized Might within wwii tanks and trucks where steel, fire, and motion converge. © Wayne Heim",
+    "alt": "World War II tanks firing while advancing through smoke at dusk, captured in painterly fine art style with dramatic flame and armored detail.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Z6f9LZn/1/LgHP5VZjCkCKtTrzChHDLsLLLqGp5hxvXLJP6dhzK/XL/_O1H0726-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Z6f9LZn/1/LgHP5VZjCkCKtTrzChHDLsLLLqGp5hxvXLJP6dhzK/XL/_O1H0726-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Z6f9LZn/1/MMrR2VtkTp4W59ZWsBxdBpRqSkKcR6WL4VXVdcHTq/L/_O1H0726-Edit-Edit-2-L.jpg",
@@ -488,28 +619,37 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-Z6f9LZn/1/Kvch9Ttf634ScPDSBrJS25p96DZxnQj6tPncFrMZw/S/_O1H0726-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Z6f9LZn/A",
+
     "keywords": [
+      "men and machines color",
+      "color WWII machines",
+      "WWII military equipment color",
+      "wwii tanks and trucks",
       "battle-ready machines",
       "mechanical war art",
-      "wwii tanks and trucks",
-      "history's greatest conflicts",
-      "military machinery prints"
+      "vivid WWII mechanized might",
+      "World War II fine art photography",
+      "historical armored vehicle imagery"
     ],
-    "story": "Wayne Heim captures \"New fine art photograph\" with the restraint and intention of painterly photography. Light is sculpted, composition serves story. From",
-    "notes": "",
-    "rating": 0,
+
+    "story": "Smoke thickens. Steel does not slow.\n\nFlame tears forward from the barrel, and the line keeps moving through it — engines driving beneath the roar.",
+    "notes": "The composition layers flame, smoke, and armor into a compressed visual field, emphasizing forward pressure rather than isolated ignition. Silhouetted figures atop the vehicles anchor scale and reinforce the human presence within mechanized force.\n\nHere, machinery does not dominate the landscape — it reshapes it while moving through it.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 17,
+
     "themes": {
       "tanks": 13
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-CzvL3Mk",
-    "title": "Wwii Tanks And Trucks And History'S Greatest Conflicts",
-    "description": "A painterly World War II photograph of a tank firing line - wwii armor, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Tank Firing Line - WWII Armor",
+    "title": "The Firing Line",
+    "description": "A painterly World War II photograph capturing a full armored firing line at the moment of synchronized discharge. This Men & Machines Color image explores Color WWII Machines and WWII Military Equipment Color through disciplined composition and panoramic scale.\n\nThe scene presents battle-ready machines in coordinated force — an expression of mechanical war art and Vivid WWII Mechanized Might within wwii tanks and trucks. Flame, geometry, and repetition converge, transforming raw power into structured history. © Wayne Heim",
+    "alt": "World War II tanks and artillery firing in coordinated line at dusk, flames erupting across the horizon in painterly fine art style.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-CzvL3Mk/1/MT35qsBXmcL6GxDqj5FNrM73KhKsfw3ckTVmMw6rp/XL/20220817_201343-6-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-CzvL3Mk/1/MT35qsBXmcL6GxDqj5FNrM73KhKsfw3ckTVmMw6rp/XL/20220817_201343-6-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-CzvL3Mk/1/L7vdrt3HsSF8nJSSfdd4JF5ShRd99ZSFQhwQb3vJ9/L/20220817_201343-6-Edit-L.jpg",
@@ -517,27 +657,37 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2022-D-Day-Conneaut-Reenactment/i-CzvL3Mk/1/M7Cp5gT5mW5fD9vMFmCdsz7WcfXtcrMNmJ7Bcd8RX/S/20220817_201343-6-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-CzvL3Mk/A",
+
     "keywords": [
+      "men and machines color",
+      "color WWII machines",
+      "WWII military equipment color",
       "wwii tanks and trucks",
-      "history's greatest conflicts",
-      "military machinery prints",
-      "battle-ready machines"
+      "battle-ready machines",
+      "mechanical war art",
+      "vivid WWII mechanized might",
+      "World War II fine art photography",
+      "historical armored artillery imagery"
     ],
-    "story": "Wayne Heim's exploration of wwii tanks and trucks comes alive in this piece, showcasing wwii tanks and trucks and wwii tanks and trucks. A testament to battle-ready machines in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "They do not fire alone.\n\nSteel aligns against the darkening sky, barrels leveled in quiet agreement. Then the command moves through them — and the horizon erupts.",
+    "notes": "The composition emphasizes alignment and collective force — repeated forms, synchronized ignition, and a horizontal rhythm that stretches across the frame. The painterly restraint prevents spectacle from overwhelming structure, allowing pattern and scale to carry the visual authority.\n\nHere, machinery becomes chorus rather than solo — history written in coordinated flame.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 18,
+
     "themes": {
       "tanks": 1
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-TVmp5NX",
-    "title": "Exploring History'S Greatest Conflicts",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Fine art image by Wayne Heim",
+    "title": "Wings Through Cloud",
+    "description": "A painterly World War II photograph capturing a frontal aircraft approach suspended within cloud and open sky. This Men & Machines Color work explores Color WWII Machines and WWII Military Equipment Color through symmetry, restraint, and controlled atmosphere.\n\nThe aircraft becomes both machine and presence — a study in battle-ready machines rendered as mechanical war art and Vivid WWII Mechanized Might. Rather than spectacle, the composition emphasizes alignment, velocity, and inevitability. © Wayne Heim",
+    "alt": "World War II military aircraft flying head-on through cloud cover, centered composition in painterly fine art style.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TVmp5NX/3/KvvhSTmX7mFzccBW5mM2GVtbHmtPmJK7zTNJhVNkm/XL/_OLY1828-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TVmp5NX/3/KvvhSTmX7mFzccBW5mM2GVtbHmtPmJK7zTNJhVNkm/XL/_OLY1828-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TVmp5NX/3/LJTMK2Wn5mVP7GP6ZcLTszbSsgGDvFBKJhF4zQVJC/L/_OLY1828-L.jpg",
@@ -545,25 +695,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TVmp5NX/3/LNmwKFQz9dTHS3Ptr7vHC4Z4SDTRwFz2776dPNNdC/S/_OLY1828-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-TVmp5NX/A",
+
     "keywords": [
-      "history's greatest conflicts",
-      "military machinery prints",
+      "men and machines color",
+      "color WWII machines",
+      "WWII military equipment color",
+      "battle-ready machines",
       "mechanical war art",
-      "wwii tanks and trucks",
-      "battle-ready machines"
+      "vivid WWII mechanized might",
+      "World War II aviation fine art",
+      "historical military aircraft imagery"
     ],
-    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights battle-ready machines through mechanical war art and battle-ready machines. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "It does not turn.\n\nThe engine holds its note, the wings cut clean through vapor, and the sky opens just long enough to reveal what is coming.\n\nThen the clouds begin to close again.",
+    "notes": "The composition relies on frontal symmetry and atmospheric compression, allowing the aircraft to read as icon rather than action frame. The painterly treatment softens mechanical detail while preserving structural geometry, placing emphasis on approach and inevitability rather than engagement.\n\nHere, machinery does not dominate the sky — it inhabits it.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    contentSource: "ai"
   },
   {
     "id": "i-sr9WMcn",
-    "title": "Mechanical War Art Study",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "title": "Emerging from Cloud",
+    "description": "A painterly World War II photograph capturing a military aircraft rising through vertical light and cloud. This Men & Machines Color image explores Color WWII Machines and WWII Military Equipment Color through symmetry, atmosphere, and controlled restraint.\n\nThe aircraft reads as battle-ready machine rendered as mechanical war art and Vivid WWII Mechanized Might — not in combat, but in emergence. Light becomes structure, cloud becomes threshold, and steel becomes silhouette. © Wayne Heim",
+    "alt": "World War II military aircraft flying upward through bright cloud break, centered composition in painterly fine art style.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sr9WMcn/3/NDV3pS5rxXTqMQcjzvKRq6hq33XQprjszrftP4QSJ/XL/_OLY1830-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sr9WMcn/3/NDV3pS5rxXTqMQcjzvKRq6hq33XQprjszrftP4QSJ/XL/_OLY1830-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sr9WMcn/3/NDV3pS5rxXTqMQcjzvKRq6hq33XQprjszrftP4QSJ/XL/_OLY1830-Edit-Edit-XL.jpg",
@@ -571,24 +727,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-sr9WMcn/3/LZ6Tbwp5t9qkGXgB39LWmwhKHCkgSxLKjPRT7jGBp/S/_OLY1830-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-sr9WMcn/A",
+
     "keywords": [
-      "mechanical war art",
-      "history's greatest conflicts",
+      "men and machines color",
+      "color WWII machines",
+      "WWII military equipment color",
       "battle-ready machines",
-      "military machinery prints"
+      "mechanical war art",
+      "vivid WWII mechanized might",
+      "World War II aviation fine art",
+      "historical military aircraft imagery"
     ],
-    "story": "Delving into battle-ready machines, this work by Wayne Heim highlights history's greatest conflicts through mechanical war art and military machinery prints. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The sky parts just enough.\n\nPropeller blur cuts the light, wings steady against the break in vapor. For a moment, the machine is neither hidden nor fully revealed.\n\nThen the clouds begin to gather again.",
+    "notes": "The vertical composition emphasizes ascent and revelation rather than engagement. Diffused light softens mechanical edges while preserving geometric symmetry, allowing the aircraft to read as emblematic form suspended between concealment and presence.\n\nHere, machinery does not conquer the sky — it passes through it.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    contentSource: "ai"
   },
   {
     "id": "i-kX8Wksp",
-    "title": "History'S Greatest Conflicts Moment",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "title": "Command Position",
+    "description": "A painterly World War II photograph capturing a tank commander elevated above armored steel at the moment of engagement. This Men & Machines Color image explores WWII Military Equipment Color through proximity and presence, balancing battle-ready machines with the human figure who guides them.\n\nRather than spectacle alone, the composition renders mechanical war art as shared responsibility — an expression of Vivid WWII Mechanized Might within wwii tanks and trucks where authority and vulnerability occupy the same position. © Wayne Heim",
+    "alt": "World War II tank commander standing in turret during engagement, viewed from low angle in painterly fine art style.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kX8Wksp/3/MK9cS3XLqdxgp66SX88CsVSphRJjGQLcpbws5wBwQ/XL/_OLY2745-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kX8Wksp/3/MK9cS3XLqdxgp66SX88CsVSphRJjGQLcpbws5wBwQ/XL/_OLY2745-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kX8Wksp/3/MK7jDWSD5HgWZfSH7WhKtkjmPrrLJ8V5ftSndSbBm/L/_OLY2745-L.jpg",
@@ -596,27 +759,36 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-kX8Wksp/3/LqgXqCCJmVPtpBpXpVLMZzFHSQcJWzrW825HV6Crz/S/_OLY2745-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-kX8Wksp/A",
+
     "keywords": [
-      "history's greatest conflicts",
-      "military machinery prints",
+      "men and machines color",
+      "WWII military equipment color",
       "wwii tanks and trucks",
-      "battle-ready machines"
+      "battle-ready machines",
+      "mechanical war art",
+      "vivid WWII mechanized might",
+      "World War II tank fine art",
+      "historical armored vehicle imagery"
     ],
-    "story": "In \"History's Greatest Conflicts Moment,\" Wayne Heim renders Wayne Heim photography with the tonal depth and compositional discipline of classical painting. A study in light, posture, and consequence.",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He rises above the armor, exposed to sky and consequence.\n\nBelow him, steel answers to his direction. Around him, the horizon waits to respond.",
+    "notes": "The low vantage point emphasizes elevation and exposure — the commander visually separated from the mass of armor beneath him. The painterly restraint softens mechanical detail while preserving structural geometry, allowing the human figure to function as both focal point and axis of force.\n\nHere, machinery amplifies authority — but does not replace it.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 21,
+
     "themes": {
       "tanks": 5
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-pd3hvNk",
-    "title": "Wwii Tanks And Trucks In Fine Art",
-    "description": "A painterly World War II photograph of a tank crewman, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "title": "The Recoil",
+    "description": "A painterly World War II photograph capturing the precise moment after artillery discharge, when motion reverses and force settles. This Men & Machines Color image explores WWII Military Equipment Color through atmosphere and structural clarity, centering wwii tanks and trucks within open terrain and sky.\n\nRather than spectacle, the composition studies battle-ready machines as mechanical war art and Vivid WWII Mechanized Might — emphasizing recoil, consequence, and the quiet reset between commands. © Wayne Heim",
+    "alt": "World War II tank firing with visible smoke plume and recoil, captured in painterly fine art style against open sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-pd3hvNk/3/LwvMTsr3H6qRJbsxfNMCw5fjf7BkhsXSv37mM8tXL/XL/_OLY2790-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-pd3hvNk/3/LwvMTsr3H6qRJbsxfNMCw5fjf7BkhsXSv37mM8tXL/XL/_OLY2790-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-pd3hvNk/3/Mzfnt6bWnFNFBTFpzGPwqkQHkDQ9jwr3wS94XKXjr/L/_OLY2790-L.jpg",
@@ -624,27 +796,36 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-pd3hvNk/3/MgVgb7DqHRn7WZ9r5MDkb6MGBSpLQ7wNK9sjRfMN7/S/_OLY2790-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-pd3hvNk/A",
+
     "keywords": [
+      "men and machines color",
+      "WWII military equipment color",
       "wwii tanks and trucks",
       "battle-ready machines",
-      "history's greatest conflicts",
-      "mechanical war art"
+      "mechanical war art",
+      "vivid WWII mechanized might",
+      "World War II tank fine art",
+      "historical armored vehicle imagery"
     ],
-    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights mechanical war art through mechanical war art and wwii tanks and trucks. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The shot leaves the barrel.\n\nSteel shifts backward, smoke blooms outward, and the ground absorbs what the sky has already heard.\n\nThen everything steadies again.",
+    "notes": "The visual tension lies not in the ignition but in the return — the slight backward shift of steel, the rounded smoke form expanding into open air, the grounded stability of the chassis beneath it. The painterly restraint allows negative space and sky to carry weight equal to the machine itself.\n\nHere, power is measured not only in force delivered, but in what remains afterward.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 22,
+
     "themes": {
       "tanks": 0
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-ttDPKwH",
-    "title": "Wwii Tanks And Trucks And Battle-Ready Machines",
-    "description": "A painterly World War II photograph of a tank crewman, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "title": "Armor in the Haze",
+    "description": "A painterly World War II fine art photograph depicting armored forces emerging through drifting dust and atmosphere. Emphasizing restraint over spectacle, the image explores the relationship between man and machine—where battle-ready machines carried not only firepower but the weight of responsibility. Light, texture, and composition evoke the visual language of historical wartime imagery while transforming documentation into narrative fine art. Part of Wayne Heim’s Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII tank crew advancing through dust haze — painterly military fine art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/NHBGzGhQvT3PLkxf2rNRB7vwP65rskh37x2ZnJNcW/XL/_OLY2994-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/NHBGzGhQvT3PLkxf2rNRB7vwP65rskh37x2ZnJNcW/XL/_OLY2994-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/NT82LcBJGGkFr7RfF3sdctcKzLZrnzLsv8KjLdHXp/L/_OLY2994-Edit-L.jpg",
@@ -652,27 +833,34 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-ttDPKwH/4/Kdr47XGMtPsS2DVGzd7Zr8f7Zq9mrLGB8v8Kz3ftC/S/_OLY2994-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-ttDPKwH/A",
+
     "keywords": [
       "wwii tanks and trucks",
       "battle-ready machines",
-      "history's greatest conflicts",
-      "mechanical war art"
+      "mechanical war art",
+      "WWII military equipment color",
+      "men and machines color",
+      "vivid WWII mechanized might"
     ],
-    "story": "Delving into mechanical war art, this work by Wayne Heim highlights history's greatest conflicts through mechanical war art and history's greatest conflicts. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The tank moves forward through dust and memory, its presence felt before its sound. Faces rise above the armor, scanning a horizon that offers no certainty—only duty. In this suspended moment between movement and consequence, steel and human resolve advance together into the unknown.",
+    "notes": "This image draws on the visual tradition of mid-century wartime photography, where atmosphere often softened the boundary between documentation and memory. The dust veil becomes both environmental reality and metaphor—obscuring certainty while emphasizing forward motion. The restrained palette and compositional balance echo classical military imagery while positioning the work within contemporary narrative fine art photography, emphasizing endurance and human presence within mechanized warfare.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 23,
+
     "themes": {
       "tanks": 7
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-TGwqTRB",
-    "title": "Wwii Tanks And Trucks Study",
-    "description": "Delve into wwii tanks and trucks via this mechanical war art by Wayne Heim. Highlighting military machinery prints through military machinery prints and mechanical war art, it's great for collectors interested in wwii tanks and trucks. © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "title": "Shock Through Silence",
+    "description": "A painterly World War II fine art photograph capturing a tank crew advancing under fire, rendered with restrained tonal control and atmospheric depth. The explosion blooms into dust rather than spectacle, emphasizing presence and endurance over chaos. Part of Wayne Heim’s Facing History series, this work explores the relationship between men and machines—where battle-ready machines carried consequence as much as force. The softened palette and textured finish echo archival wartime imagery while transforming mechanical war art into narrative fine art. © Wayne Heim",
+    "alt": "WWII tank advancing through explosion and dust — painterly mechanical war art",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/LQD9PznV6PfJTkmzTZhppBphSfXtcC98pd9s9Vr8q/XL/_OLY3066-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/LQD9PznV6PfJTkmzTZhppBphSfXtcC98pd9s9Vr8q/XL/_OLY3066-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/LvMwhTZdnNX7zZjGXW5Df4QNL6ZS7WTbx5MSLmMdV/L/_OLY3066-Edit-Edit-L.jpg",
@@ -680,27 +868,34 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-TGwqTRB/5/MHHpgBPrX4S46vpGZx8tfZSmkpCpK9SqhJRfRGCvg/S/_OLY3066-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-TGwqTRB/A",
+
     "keywords": [
       "wwii tanks and trucks",
+      "battle-ready machines",
       "mechanical war art",
-      "military machinery prints",
-      "history's greatest conflicts"
+      "WWII military equipment color",
+      "men and machines color",
+      "vivid WWII mechanized might"
     ],
-    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights wwii tanks and trucks through mechanical war art and mechanical war art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The blast erupts, but the world does not shatter.  \nDust swallows the violence almost as quickly as it forms, turning thunder into breath. Steel answers, men brace, and forward motion resumes as if interruption were simply part of the rhythm.",
+    "notes": "This image balances kinetic force with painterly restraint. The explosion functions compositionally as a tonal counterweight rather than a dramatic centerpiece, allowing the eye to move through the frame instead of stopping at impact. By diffusing the blast within atmospheric haze, the work aligns more closely with mid-century documentary war photography and classical compositional discipline than modern spectacle-driven imagery. The emphasis remains on endurance and forward motion—the psychological weight of mechanized warfare rather than its theatrics.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 24,
+
     "themes": {
       "tanks": 14
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-S4sbv3n",
-    "title": "Exploring Battle-Ready Machines",
-    "description": "Explore battle-ready machines with Wayne Heim's military machinery prints. This battle-ready machines piece conveys battle-ready machines, wwii tanks and trucks, and battle-ready machines, perfect for fans of military machinery prints. © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "title": "Ghosts in the Smoke",
+    "description": "A painterly World War II fine art photograph emerging from smoke and drifting powder, where men and machines appear as layered silhouettes rather than spectacle. The atmosphere softens the machinery, transforming battle-ready machines into shapes of memory and endurance. Part of Wayne Heim’s Facing History series, this work explores mechanical war art through restraint—allowing WWII tanks and trucks to dissolve into tone, texture, and consequence rather than action. The archival palette and aged finish echo historical wartime imagery while elevating the scene into narrative fine art photography. © Wayne Heim",
+    "alt": "WWII tank and crew emerging through heavy smoke — painterly mechanical war art",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/Lrw95Qwmx9cZks6rNTXbx8W2NHdX4LhhXnLF7Cfzz/XL/_OLY3071-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/Lrw95Qwmx9cZks6rNTXbx8W2NHdX4LhhXnLF7Cfzz/XL/_OLY3071-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/Lrw95Qwmx9cZks6rNTXbx8W2NHdX4LhhXnLF7Cfzz/XL/_OLY3071-XL.jpg",
@@ -708,27 +903,34 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-S4sbv3n/3/LfQHfwNZjr6pRCgWZbPppPBj2mvqPVFznvSzXnW3Z/S/_OLY3071-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-S4sbv3n/A",
+
     "keywords": [
-      "battle-ready machines",
-      "military machinery prints",
       "wwii tanks and trucks",
-      "mechanical war art"
+      "battle-ready machines",
+      "mechanical war art",
+      "WWII military equipment color",
+      "men and machines color",
+      "vivid WWII mechanized might"
     ],
-    "story": "Wayne Heim's exploration of mechanical war art comes alive in this piece, showcasing military machinery prints and battle-ready machines. A testament to wwii tanks and trucks in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The blast has already passed.  \nWhat remains is movement without certainty—figures half-seen through powder and heat. Steel looms, but it is the human silhouette that lingers, suspended between presence and disappearance.",
+    "notes": "This composition leans into atmospheric abstraction, allowing smoke to function as both physical element and narrative veil. The machinery becomes secondary to tonal mass and silhouette, echoing mid-century war photography where clarity was often sacrificed to environment. By muting detail and emphasizing presence, the image shifts focus from combat spectacle to psychological residue—the way memory retains form but loses sharp edges. It stands as one of the quieter yet more interpretive works within the mechanized series.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 25,
+
     "themes": {
       "tanks": 2
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-65Xkcpk",
-    "title": "History'S Greatest Conflicts - Mechanical War Art",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "title": "Forward Under Fire",
+    "description": "A painterly World War II fine art photograph capturing an armored advance amid smoke and recoil, where battle-ready machines push forward through dust and uncertainty. Emphasizing motion and resolve rather than spectacle, this image reflects the disciplined power of WWII tanks and trucks and the human decisions carried within them. Part of Wayne Heim’s Facing History series, the work explores mechanical war art through atmosphere, light, and historical restraint, transforming military machinery into narrative-driven fine art photography rooted in service, consequence, and endurance. © Wayne Heim",
+    "alt": "WWII tank advancing through smoke and dust under fire — mechanical war art photograph",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/LG6qNKttJxpWCVm5jH8nrmxdjGLh8cL8FNp3kNdvR/XL/_WHK2138-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/LG6qNKttJxpWCVm5jH8nrmxdjGLh8cL8FNp3kNdvR/XL/_WHK2138-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/KFtvg6Cw9CFmq7gJT8SJQ3qjTwpVwcsRZ2fvsqkgt/L/_WHK2138-Edit-L.jpg",
@@ -736,28 +938,34 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2017/i-65Xkcpk/4/M3mnvxZVmGD32DxRWTJ28gVTFG7sMVZw4VL6NzSvP/S/_WHK2138-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-65Xkcpk/A",
+
     "keywords": [
-      "history's greatest conflicts",
-      "mechanical war art",
       "wwii tanks and trucks",
       "battle-ready machines",
-      "military machinery prints"
+      "mechanical war art",
+      "WWII military equipment color",
+      "men and machines color",
+      "vivid WWII mechanized might"
     ],
-    "story": "\"History's Greatest Conflicts - Mechanical War Art\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
-    "notes": "",
-    "rating": 0,
+
+    "story": "Dust rises before the sound fully fades.  \nSteel moves forward without hesitation—crews committed to motion, knowing that stopping was often the greater danger. In war, momentum was survival.",
+    "notes": "This image emphasizes forward motion as compositional structure. The tank’s advance anchors the frame while smoke and dust soften the environment, creating a tension between mechanical certainty and atmospheric instability. The restrained palette and painterly tonality reference mid-century wartime imagery while shifting the scene from documentation toward interpretation, positioning the machine not as spectacle but as an instrument of duty moving through uncertainty.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 26,
+
     "themes": {
       "tanks": 16
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-LbnS49s",
-    "title": "Mechanical War Art Study",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "title": "The Crossing",
+    "description": "A painterly World War II fine art photograph capturing soldiers at the threshold of landing—suspended between water and war. Emphasizing human resolve over spectacle, the composition focuses on posture, atmosphere, and the psychological weight of advance. While part of Wayne Heim’s broader exploration of mechanical war art and WWII military history, this image centers on men before machines—where battle-ready forces carried duty long before engagement began. Light, restraint, and compositional discipline transform the moment into narrative fine art rooted in service, consequence, and memory. © Wayne Heim",
+    "alt": "WWII soldiers stepping off landing craft ramp — painterly war photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/LxsCQ5xFDwcXSwwSQqRGbLgw8JFFg6D5hGbKr7W6W/XL/_PEN0791-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/LxsCQ5xFDwcXSwwSQqRGbLgw8JFFg6D5hGbKr7W6W/XL/_PEN0791-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/KS5jwftt8F6FJhd7zkgZsBhf2rhFvQjXrq6tzSfQq/L/_PEN0791-Edit-2-L.jpg",
@@ -765,25 +973,28 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-LbnS49s/1/Ln2rggKQbnGNHvJS3BdSn56PCMhSfkPzPQWLnn8Rk/S/_PEN0791-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-LbnS49s/A",
+
     "keywords": [
+      "wwii military equipment color",
+      "men and machines color",
       "mechanical war art",
-      "military machinery prints",
-      "history's greatest conflicts",
-      "wwii tanks and trucks",
-      "battle-ready machines"
+      "battle-ready machines",
+      "history's greatest conflicts"
     ],
-    "story": "Mechanical War Art Study. Wayne Heim's approach to painterly photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The ramp lowers and hesitation has no place to stand.  \nBetween sea and shore, between training and consequence, men move forward because the order has already been given. In this narrow threshold, history waits only a step away.",
+    "notes": "This image draws upon the visual structure of classic wartime reportage, where transitional moments carried more emotional weight than combat itself. The lowered ramp creates a literal and compositional threshold, dividing safety from inevitability. By emphasizing stance, gesture, and directional movement rather than chaos, the work aligns with historical military photography while shifting toward interpretive fine art. It stands as a human anchor within the mechanized WWII series—placing resolve before machinery and consequence before spectacle.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    contentSource: "ai"
   },
   {
     "id": "i-BNVxGWx",
-    "title": "Capturing Wwii Tanks And Trucks",
-    "description": "A painterly World War II photograph of a tank crewman, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Orders Over Water",
+    "description": "A painterly World War II fine art photograph capturing soldiers in transit across open water, suspended between preparation and engagement. Emphasizing human presence over machinery, the composition focuses on posture, compression, and directional movement. Though part of Wayne Heim’s broader exploration of mechanical war art and WWII military history, this image centers on men before machines—where battle-ready forces carried instruction, responsibility, and resolve long before contact. The restrained palette and atmospheric treatment echo historical wartime imagery while elevating the moment into narrative fine art photography grounded in service and consequence. © Wayne Heim",
+    "alt": "WWII soldiers riding landing craft across open water — painterly war photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/Lh7sQDMPcnB66L28sHHPgfmzgQBBDPTppHrRzRCfD/XL/_PEN0871-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/Lh7sQDMPcnB66L28sHHPgfmzgQBBDPTppHrRzRCfD/XL/_PEN0871-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/KFGkpLbq6MS6fJNxhsTVStMjwrjrCFb2mvLCqNXkd/L/_PEN0871-Edit-L.jpg",
@@ -791,23 +1002,28 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-BNVxGWx/1/KxzJJ8Cf8hPJjpV7FqtVPnFthQ6VhJDLjr6QLnmbP/S/_PEN0871-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-BNVxGWx/A",
+
     "keywords": [
       "wwii tanks and trucks",
-      "military machinery prints",
-      "battle-ready machines"
+      "battle-ready machines",
+      "WWII military equipment color",
+      "men and machines color",
+      "mechanical war art"
     ],
-    "story": "Wayne Heim's exploration of battle-ready machines comes alive in this piece, showcasing battle-ready machines and wwii tanks and trucks. A testament to wwii tanks and trucks in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The shoreline is not yet visible, but the order has already been given.  \nMen sit shoulder to shoulder with salt spray and silence, carried forward by command rather than certainty. The sea offers no reassurance—only distance closing.",
+    "notes": "This work draws from the compositional tradition of wartime transport imagery, where tension resides not in action but in anticipation. The open water functions as negative space—an expanse that heightens psychological compression within the vessel. By prioritizing faces, stance, and directional momentum, the image shifts focus from spectacle to inevitability. It strengthens the series’ narrative arc by portraying the moments of obedience and forward motion that preceded mechanized engagement.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    contentSource: "ai"
   },
   {
     "id": "i-HwgrDkM",
-    "title": "Wwii Tanks And Trucks In Fine Art",
-    "description": "A painterly World War II photograph of a tank crewman, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Between Shores",
+    "description": "A painterly World War II fine art photograph capturing soldiers aboard a landing craft crossing open water toward an uncertain shore. Emphasizing atmosphere, posture, and collective resolve over spectacle, the composition centers on the human threshold before engagement. Muted tonal transitions and restrained color echo historical wartime imagery while elevating the scene into narrative fine art. © Wayne Heim",
+    "alt": "WWII soldiers standing aboard landing craft crossing open water toward shore — painterly war photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/M9z4njr5FmvsJmS7kwKxxMzG46sNjCn7kF5dWKddz/XL/_PEN0875-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/M9z4njr5FmvsJmS7kwKxxMzG46sNjCn7kF5dWKddz/XL/_PEN0875-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/M4SGdD68ZnCrQGRNfcK4zRpd8qKZkBQdm5n7g68rc/L/_PEN0875-Edit-Edit-L.jpg",
@@ -815,24 +1031,28 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-HwgrDkM/1/LD4wh2GVNQ6b5ZQxwzWZJWvbFDXpCZ9vf5KXtPdwf/S/_PEN0875-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-HwgrDkM/A",
+
     "keywords": [
-      "wwii tanks and trucks",
+      "men and machines color",
+      "WWII military equipment color",
+      "mechanical war art",
       "battle-ready machines",
-      "military machinery prints",
-      "mechanical war art"
+      "history's greatest conflicts"
     ],
-    "story": "\"Tanks And Trucks In Fine Art\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The shoreline lies somewhere ahead, unseen but inevitable.  \nMen stand shoulder to shoulder, suspended between departure and arrival, between memory and mandate.\n\nThe sea offers no promise—only distance closing.",
+    "notes": "This image focuses on transition rather than combat. The open water functions as negative space, amplifying the compression of figures within the vessel. By emphasizing stillness and directional movement, the work aligns with historical wartime photography while shifting toward interpretive fine art. It serves as a narrative bridge within the series—placing the viewer in the psychological space between safety and inevitability.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    contentSource: "ai"
   },
   {
     "id": "i-NdnMjDd",
-    "title": "Fine Art Military Machinery Prints",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Holding the Line at Sea",
+    "description": "A painterly World War II fine art photograph capturing a soldier standing watch aboard a landing craft as it moves across open water. Emphasizing vigilance over spectacle, the composition centers on posture, restraint, and the quiet tension before engagement. Part of Wayne Heim’s exploration of mechanical war art and WWII military equipment color, the image reflects the relationship between men and machines—where battle-ready forces carried discipline long before contact. Rendered with cinematic atmosphere and historical sensitivity, the work transforms wartime transit into narrative fine art grounded in service and consequence. © Wayne Heim",
+    "alt": "WWII soldier standing watch on landing craft at sea — painterly mechanical war art photography",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/Kx6HwP4dhvv7dx4j3K4xqwRwtC3Sjnpf3LGQ6K2xK/XL/_PEN0163-Edit-Edit-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/Kx6HwP4dhvv7dx4j3K4xqwRwtC3Sjnpf3LGQ6K2xK/XL/_PEN0163-Edit-Edit-3-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/KMkQM4qtwHprvWhBDLmbmVJxJjWSSqmbDdx36Ljss/L/_PEN0163-Edit-Edit-3-L.jpg",
@@ -840,23 +1060,28 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-NdnMjDd/1/MB7dSFS3gw7gpsbgjHXfthqd785xFsSsPg8wdHpxX/S/_PEN0163-Edit-Edit-3-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-NdnMjDd/A",
+
     "keywords": [
-      "military machinery prints",
+      "men and machines color",
+      "WWII military equipment color",
       "mechanical war art",
-      "wwii tanks and trucks"
+      "battle-ready machines",
+      "vivid WWII mechanized might"
     ],
-    "story": "Wayne Heim's exploration of mechanical war art comes alive in this piece, showcasing wwii tanks and trucks and military machinery prints. A testament to military machinery prints in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The horizon offers nothing but distance.  \nMen steady themselves against salt and steel, eyes forward, orders unchanged. Between open water and unseen shore, the line holds.",
+    "notes": "This image emphasizes psychological vigilance rather than combat action. The soldier’s stance anchors the composition while open water functions as expansive negative space, reinforcing isolation and responsibility. The restrained tonal palette references mid-century wartime imagery while shifting toward interpretive fine art. Within the Facing History series, it serves as a study in discipline—where tension resides not in gunfire, but in readiness.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    contentSource: "ai"
   },
   {
     "id": "i-S3XQ9VZ",
-    "title": "Wwii Tanks And Trucks And Battle-Ready Machines",
-    "description": "A painterly World War II photograph of a tank crewman, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "The Narrow Passage",
+    "description": "A painterly World War II fine art photograph depicting soldiers packed tightly within a landing craft advancing toward shore. Rendered with cinematic restraint and subdued tonal control, the image emphasizes collective presence and psychological tension rather than spectacle. The compressed composition heightens anticipation, capturing the human dimension of war in the moments before action unfolds. Part of Wayne Heim’s Facing History series. © Wayne Heim",
+    "alt": "Painterly World War II photograph of soldiers standing closely together inside a landing craft moving toward shore, captured with cinematic light and restrained historical atmosphere.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/LVGbfzbrHsNxQJPXhVWXpB2B5zjfCc94JgGtfzb33/XL/_PEN0288-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/LVGbfzbrHsNxQJPXhVWXpB2B5zjfCc94JgGtfzb33/XL/_PEN0288-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/NNJ5phRrJmFcmMHFXGRnjJcfr534QLknNqJfdtkN9/L/_PEN0288-Edit-2-L.jpg",
@@ -864,25 +1089,32 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-S3XQ9VZ/1/LJXTnXTbTJc45SLs2qQH5Mq8CMqQGSLgmgqBzT6th/S/_PEN0288-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-S3XQ9VZ/A",
+
     "keywords": [
-      "wwii tanks and trucks",
+      "men and machines color",
+      "wwii military equipment color",
       "battle-ready machines",
       "mechanical war art",
-      "history's greatest conflicts",
-      "military machinery prints"
+      "vivid wwii mechanized might",
+      "wwii landing craft",
+      "painterly war photography",
+      "historical reenactment photography",
+      "cinematic historical photography"
     ],
-    "story": "Tanks And Trucks And Battle-ready Machines. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
-    "notes": "",
-    "rating": 0,
+
+    "story": "There is no room to turn back here. Shoulder presses against shoulder as the craft moves forward, carrying each man toward a future already decided but not yet seen. No speeches, no heroics — only breath, weight, and waiting. In this confined space, courage is quiet, shared in silence as the distance to shore slowly disappears.",
+    "notes": "This work uses compression as narrative, a compositional approach rooted in historical battle painting where proximity intensifies emotional presence. The tight framing removes spectacle and places the viewer within the shared space of the soldiers, emphasizing collective fate over individual heroism. Restrained color and controlled light reinforce the transitional moment — a passage defined not by action, but by the certainty that action is imminent.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    contentSource: "ai"
   },
   {
     "id": "i-X6D266B",
-    "title": "Exploring History'S Greatest Conflicts",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Eyes on the Horizon",
+    "description": "A painterly World War II fine art photograph capturing soldiers aboard a landing craft as they approach shore. Rendered with cinematic restraint and subdued tonal control, the image emphasizes expression, posture, and quiet anticipation rather than spectacle. The composition centers on gaze and direction, highlighting the psychological moment before arrival. Part of Wayne Heim’s Facing History series. © Wayne Heim",
+    "alt": "Painterly World War II photograph of soldiers aboard a landing craft looking toward the horizon, captured in cinematic light with restrained historical atmosphere.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/MdSt3HwDDqD9B85PSdLW3r4LDbvC6KM9Fn8pqVGB9/XL/_ANA4477-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/MdSt3HwDDqD9B85PSdLW3r4LDbvC6KM9Fn8pqVGB9/XL/_ANA4477-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/L8gg2Wd7RN6Mn8jfdS6f4tDWVDD7sVPWnsKqrtX43/L/_ANA4477-Edit-2-L.jpg",
@@ -890,25 +1122,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-X6D266B/1/KcSnGRLVDppnW4xHPf79X8TMnKSQWcRSR7hjmBPhf/S/_ANA4477-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-X6D266B/A",
+
     "keywords": [
-      "history's greatest conflicts",
-      "military machinery prints",
+      "men and machines color",
+      "wwii military equipment color",
       "wwii tanks and trucks",
       "battle-ready machines",
-      "mechanical war art"
+      "mechanical war art",
+      "vivid wwii mechanized might",
+      "wwii landing craft soldiers",
+      "painterly war photography"
     ],
-    "story": "Delving into military machinery prints, this work by Wayne Heim highlights battle-ready machines through mechanical war art and military machinery prints. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He studies the distance as if it might answer something. The shoreline remains unseen, but its presence is felt in every tightened grip and steady breath. In this narrowing stretch of water, anticipation replaces noise. What waits ahead is certain — only its shape is unknown.",
+    "notes": "This piece focuses on perception as narrative. By isolating gaze and forward motion, the image transforms anticipation into its central subject. The restrained palette and directional composition reinforce the recurring Facing History theme of transition — the quiet threshold before history asserts itself.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    contentSource: "ai"
   },
   {
     "id": "i-jwJCCdg",
-    "title": "Military Machinery Prints Portrait",
-    "description": "Discover the military machinery prints in this powerful battle-ready machines by Wayne Heim. A compelling work that embodies military machinery prints, military machinery prints, and battle-ready machines. Perfect for art lovers seeking military machinery prints to enhance their collection. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Held Before the Storm",
+    "description": "A painterly World War II fine art photograph capturing soldiers tightly positioned inside a landing craft moments before arrival. Rendered with cinematic restraint and controlled light, the image emphasizes touch, proximity, and psychological tension rather than spectacle. The close composition transforms gesture into narrative, highlighting the human weight carried beneath battle-ready machines. Part of Wayne Heim’s Facing History series. © Wayne Heim",
+    "alt": "Painterly World War II photograph of a soldier gripping his helmet inside a landing craft, surrounded by fellow troops in tight formation.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/MWSpzgTN2Fw9C5wKD3pTKF9jzfpsXvJWfgr624Gt9/XL/_PEN0411-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/MWSpzgTN2Fw9C5wKD3pTKF9jzfpsXvJWfgr624Gt9/XL/_PEN0411-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/MKxfk3WqbXBXbFzhpbgMR8QQrmBPhPVSrNs3HB9JC/L/_PEN0411-Edit-L.jpg",
@@ -916,24 +1154,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jwJCCdg/1/Mt7h4RVwLMxLzS4QWkHQwpzPxQ2XzTFhLGVXz9WW9/S/_PEN0411-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-jwJCCdg/A",
+
     "keywords": [
-      "military machinery prints",
+      "men and machines color",
+      "wwii military equipment color",
+      "wwii tanks and trucks",
       "battle-ready machines",
-      "history's greatest conflicts",
-      "mechanical war art"
+      "mechanical war art",
+      "vivid wwii mechanized might",
+      "painterly war photography",
+      "historical reenactment photography"
     ],
-    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights mechanical war art through history's greatest conflicts and history's greatest conflicts. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "His hand rests against the curve of steel as if steadying more than the helmet itself. Around him, bodies press close, movement limited, breath shared. The moment hangs suspended — not yet impact, not yet chaos — only the quiet brace before everything changes.",
+    "notes": "This work centers on gesture as narrative. The hand against the helmet becomes a compositional anchor — a subtle human counterpoint to the machinery and steel that surround it. By compressing space and isolating touch, the image draws viewers into the intimate threshold before action, reinforcing the Facing History theme of transition and quiet resolve.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    contentSource: "ai"
   },
   {
     "id": "i-8Sgjrk6",
-    "title": "Military Machinery Prints Study",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Field of Steel",
+    "description": "A painterly World War II fine art photograph capturing soldiers tightly grouped within a landing craft, their helmets forming a rhythmic field of form and repetition. Cinematic light and restrained color emphasize unity, tension, and collective movement rather than individual action. Part of Wayne Heim’s *Facing History* series exploring the human experience within moments of historical transition. © Wayne Heim",
+    "alt": "Painterly World War II photograph of soldiers packed closely together in a landing craft, helmets forming a repeating pattern under cinematic light.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/KDSwd6Zk9nL5dbhNMwpp8H6p6Bs23XgGg2zQHvMVJ/XL/_PEN0418-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/KDSwd6Zk9nL5dbhNMwpp8H6p6Bs23XgGg2zQHvMVJ/XL/_PEN0418-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/NQ5bs6HVwDsS857bvKgLFXBRSQLJLxDVH5vsStQvm/L/_PEN0418-Edit-L.jpg",
@@ -941,23 +1186,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8Sgjrk6/1/LVqrhdzTfLqkm6jWX3d73pvphBhGPSCMHmC5xd9Dq/S/_PEN0418-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-8Sgjrk6/A",
+
     "keywords": [
-      "military machinery prints",
-      "battle-ready machines",
-      "mechanical war art"
+      "world war ii fine art photography",
+      "wwii soldiers",
+      "landing craft wwii",
+      "painterly war photography",
+      "military formation",
+      "facing history series",
+      "historical reenactment photography",
+      "cinematic historical photography",
+      "collective military movement",
+      "narrative war imagery"
     ],
-    "story": "Military Machinery Prints Study — part of Wayne Heim's",
-    "notes": "",
-    "rating": 0,
+
+    "story": "Helmets gather like a single surface, individual lives momentarily erased by shared purpose. Packed shoulder to shoulder, they move forward together — not as heroes or names, but as momentum itself. In this brief passage, war becomes collective weight, carried in silence.",
+    "notes": "This image emphasizes mass over individuality — a compositional approach rooted in history painting, where repetition and pattern communicate psychological scale. The helmets create a visual field that transforms soldiers into collective presence, reinforcing themes of shared fate and unified motion. By minimizing spectacle and focusing on structure and rhythm, the work invites prolonged viewing and reflection on the human dimension within large historical events.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    contentSource: "ai"
   },
   {
     "id": "i-NzVgz27",
-    "title": "Exploring History'S Greatest Conflicts",
-    "description": "Discover the history's greatest conflicts in this powerful wwii tanks and trucks by Wayne Heim. A compelling work that embodies battle-ready machines, history's greatest conflicts, and mechanical war art. Perfect for art lovers seeking history's greatest conflicts to enhance their collection. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Signal to the Sky",
+    "description": "A painterly World War II fine art photograph capturing soldiers on the shoreline raising their helmets skyward in a moment of shared relief and reflection. Rendered with cinematic restraint and muted tonal control, the image emphasizes collective gesture and emotional aftermath rather than combat spectacle. Light, posture, and atmosphere shape a narrative rooted in survival, memory, and the quiet human moments that follow conflict. Part of Wayne Heim’s *Facing History* fine art photography series. © Wayne Heim",
+    "alt": "Painterly World War II photograph of soldiers on a beach raising helmets into the air in a moment of relief, rendered with cinematic light and restrained historical atmosphere.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/L5PPgtfHwSNbzxdqtW4sLtbRgP93G59gcx5ssGjbF/XL/_ANA4673-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/L5PPgtfHwSNbzxdqtW4sLtbRgP93G59gcx5ssGjbF/XL/_ANA4673-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/L9Nw956vWV4pJfBrFj3qGdTKH5Mv3NRZqnCJNwH66/L/_ANA4673-Edit-L.jpg",
@@ -965,24 +1220,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NzVgz27/2/MgDxds45ZZ9TWMsjTpW58HSZvwXrXPpTtVF33x8JZ/S/_ANA4673-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-NzVgz27/A",
+
     "keywords": [
-      "history's greatest conflicts",
+      "men and machines color",
+      "wwii military equipment color",
       "wwii tanks and trucks",
       "battle-ready machines",
-      "mechanical war art"
+      "mechanical war art",
+      "vivid wwii mechanized might",
+      "painterly war photography",
+      "facing history series",
+      "cinematic historical photography",
+      "historical reenactment photography"
     ],
-    "story": "Exploring History's Greatest Conflicts. Wayne Heim's approach to Wayne Heim photography transforms this scene into fine art — where atmosphere, restraint, and narrative converge. From the",
-    "notes": "",
-    "rating": 0,
+
+    "story": "Helmets rise into the air — a brief release between survival and memory. For a moment, the weight lifts, carried upward in a gesture that belongs as much to relief as to remembrance. Around them, the shore is quiet again, holding the echo of what has just passed.\n\nNo victory is shouted here. Only acknowledgment — that they endured, that they arrived, and that some moments are too large for words.",
+    "notes": "This image centers on gesture as narrative — a device frequently used in historical painting to convey meaning without explicit action. The raised helmets transform the scene from documentation into interpretation, shifting focus from conflict itself to the emotional space immediately afterward.\n\nThe open composition contrasts earlier moments of compression within the series, allowing breath and horizon to enter the frame. This transition from confinement to openness reinforces the psychological passage from danger toward survival, a defining theme within the *Facing History* body of work.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    contentSource: "ai"
   },
   {
     "id": "i-kg2nPNc",
-    "title": "History'S Greatest Conflicts Portrait",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Carrying On",
+    "description": "A painterly World War II fine art photograph capturing soldiers advancing inland after a beach landing. Rendered with restrained cinematic light and subdued tonal control, the image emphasizes endurance, collective movement, and the quiet psychological aftermath of arrival rather than spectacle. Part of Wayne Heim’s Facing History series exploring the human dimension of history carried forward step by step. © Wayne Heim",
+    "alt": "Painterly World War II photograph of soldiers walking inland across sand after landing, captured with cinematic light and restrained historical atmosphere.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/NQpX4hVxV3JNfmjQ83p2xLCjp6nRDwDKMPSN7nj7N/XL/_ANA4940-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/NQpX4hVxV3JNfmjQ83p2xLCjp6nRDwDKMPSN7nj7N/XL/_ANA4940-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/NQpX4hVxV3JNfmjQ83p2xLCjp6nRDwDKMPSN7nj7N/XL/_ANA4940-Edit-XL.jpg",
@@ -990,24 +1254,31 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-kg2nPNc/1/KRcKTMfjgP3q95S6s7zvKKMgC36JLxMJj9dBw9gtk/S/_ANA4940-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-kg2nPNc/A",
+
     "keywords": [
-      "history's greatest conflicts",
-      "battle-ready machines",
-      "wwii tanks and trucks",
-      "military machinery prints"
+      "men and machines color",
+      "wwii military equipment color",
+      "wwii soldiers advancing",
+      "painterly war photography",
+      "historical reenactment photography",
+      "cinematic historical photography",
+      "wwii landing aftermath",
+      "facing history series"
     ],
-    "story": "Delving into military machinery prints, this work by Wayne Heim highlights battle-ready machines through military machinery prints and battle-ready machines. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The noise has passed, but the weight remains. Boots press forward through sand and heat, each step less about triumph than continuation. No one looks back. Whatever was left at the waterline belongs to another shore.\n\nThey move because moving forward is the only answer left.",
+    "notes": "This work centers on continuation rather than climax. By showing the soldiers from behind, the composition removes individual identity and elevates posture and direction as narrative devices. The image reflects a key Facing History theme: history is not only shaped in moments of impact, but in the quiet resolve to keep walking afterward.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    contentSource: "ai"
   },
   {
     "id": "i-8RsnRLj",
-    "title": "History'S Greatest Conflicts Moment",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "No Time for Hesitation",
+    "description": "A painterly World War II photograph capturing an American soldier advancing under pressure, defined by urgency rather than spectacle. Rendered with cinematic restraint and historical sensitivity, the image emphasizes motion, vulnerability, and human resolve in moments where action precedes certainty. Light and posture place the viewer inside the immediacy of wartime experience, where survival depends on forward motion alone. Part of the Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII soldier advancing across open terrain with rifle in hand, captured in cinematic painterly lighting and historical military uniform",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/MrrqszbHhvtFzsdw6Hw2FCPx7z3mwMWsWcGJPfmT3/XL/_PEN0995-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/MrrqszbHhvtFzsdw6Hw2FCPx7z3mwMWsWcGJPfmT3/XL/_PEN0995-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/LMLRPfGkvdFdL3VZrSv3N8cwMnjMsFg4449wpcr99/L/_PEN0995-Edit-L.jpg",
@@ -1015,25 +1286,32 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8RsnRLj/1/MqBVhvKpHdH3MssG4vKvDPswx5GMtLrPNBL58zQ93/S/_PEN0995-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-8RsnRLj/A",
+
     "keywords": [
-      "history's greatest conflicts",
-      "military machinery prints",
-      "wwii tanks and trucks",
-      "battle-ready machines",
-      "mechanical war art"
+      "WWII fine art photography",
+      "World War II soldier portrait",
+      "painterly war photography",
+      "historical military art",
+      "cinematic WWII imagery",
+      "advancing soldier WWII",
+      "narrative war photography",
+      "Facing History series",
+      "psychological war portrait"
     ],
-    "story": "Wayne Heim's exploration of battle-ready machines comes alive in this piece, showcasing mechanical war art and battle-ready machines. A testament to history's greatest conflicts in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The order comes, but he is already moving.\n\nThere is no clean beginning to a moment like this. Sand shifts, straps pull tight against his shoulders, breath cuts short as open ground replaces cover. The body commits before the mind can measure the distance.\n\nSomewhere behind him is safety. Somewhere ahead is consequence. Hesitation belongs to another life — one that ended the instant his boot left the earth.",
+    "notes": "The composition isolates forward momentum as the central narrative device. A compressed frame and low horizon create immediacy, placing the viewer within the unstable interval between order and outcome. Rather than dramatizing battle, the image captures commitment itself — the irreversible act of stepping into exposure.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 37
+    "sortOrder": 37,
+    contentSource: "ai"
   },
   {
     "id": "i-B6rBNj5",
-    "title": "Capturing Military Machinery Prints",
-    "description": "Discover the military machinery prints in this powerful battle-ready machines by Wayne Heim. A compelling work that embodies wwii tanks and trucks, mechanical war art, and history's greatest conflicts. Perfect for art lovers seeking military machinery prints to enhance their collection. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Beneath the Wings of War",
+    "description": "A painterly World War II aviation photograph capturing military machinery in flight, emphasizing scale, tension, and mechanical presence over spectacle. Rendered with cinematic restraint and historical sensitivity, the image explores the psychological space between mission and uncertainty, where machine and human resolve merge against an unforgiving sky. Part of the Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII military aircraft flying overhead viewed from below in cinematic painterly lighting with historical aviation detail",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/LDmh8NWFDP8Jr83FVHm75pBxcGSMXvKLGJ8cP6HF3/XL/_PEN0383-Edit-c-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/LDmh8NWFDP8Jr83FVHm75pBxcGSMXvKLGJ8cP6HF3/XL/_PEN0383-Edit-c-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/K77bp75WS8mLwfRVrFpfqf7GFH6N9NKZTsVR5Vn68/L/_PEN0383-Edit-c-L.jpg",
@@ -1041,25 +1319,30 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-B6rBNj5/2/Mv4p77b3xQRK7Z6x325Np3Qd3WHk86QM6KfDVfT8M/S/_PEN0383-Edit-c-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-B6rBNj5/A",
+
     "keywords": [
-      "military machinery prints",
-      "battle-ready machines",
+      "Men & Machines Color",
+      "Color WWII Machines",
+      "WWII Military Equipment Color",
       "wwii tanks and trucks",
+      "battle-ready machines",
       "mechanical war art",
-      "history's greatest conflicts"
+      "Vivid WWII Mechanized Might"
     ],
-    "story": "Wayne Heim's exploration of battle-ready machines comes alive in this piece, showcasing battle-ready machines and mechanical war art. A testament to wwii tanks and trucks in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The ground disappears long before fear arrives.\n\nEngines hold a steady rhythm, drowning thought beneath vibration and wind. Below, the world shrinks into fields and water, distant enough to feel unreal, close enough to remember what waits when the mission ends. Each man aboard carries his own silence, measured not in miles but in what may not return with them.\n\nFrom the earth, the aircraft looks unstoppable. Inside, they understand how fragile momentum truly is.",
+    "notes": "The composition shifts perspective to the observer below, transforming the aircraft into both protector and instrument of consequence. Strong diagonal structure and compressed framing emphasize mass and motion while maintaining pictorial restraint. The image aligns with wartime visual traditions that elevate machinery into symbolic presence, allowing scale and atmosphere to carry narrative weight rather than action itself.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    contentSource: "ai"
   },
   {
     "id": "i-jGXWq3f",
-    "title": "History'S Greatest Conflicts And Wwii Tanks And Trucks",
-    "description": "Discover the history's greatest conflicts in this powerful wwii tanks and trucks by Wayne Heim. A compelling work that embodies military machinery prints, wwii tanks and trucks, and history's greatest conflicts. Perfect for art lovers seeking history's greatest conflicts to enhance their collection. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Steel Leads the Way",
+    "description": "A painterly World War II photograph capturing armored military machinery advancing with deliberate force. Rendered with cinematic restraint and historical sensitivity, the image emphasizes mechanical presence and human dependence on war machines rather than spectacle. Dust, texture, and posture merge to portray the psychological and physical momentum of battlefield advance. Part of the Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII tank advancing with soldiers riding and operating mounted machine gun in painterly cinematic wartime scene",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/KdSDMMp6VmJ6kD2KtJxrRv25kDqkhrDjpBrPN7SD6/XL/_OL36216-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/KdSDMMp6VmJ6kD2KtJxrRv25kDqkhrDjpBrPN7SD6/XL/_OL36216-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/LrzBq9cn79GMkd5sFPC9ddQ8c6bLX4w2n9wbkkwS3/L/_OL36216-Edit-L.jpg",
@@ -1067,27 +1350,35 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-jGXWq3f/1/KsDBH4MFt7fk8h5Xj62DptjjqLkdTgzwfxJXtqr6T/S/_OL36216-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-jGXWq3f/A",
+
     "keywords": [
-      "history's greatest conflicts",
+      "Men & Machines Color",
+      "Color WWII Machines",
+      "WWII Military Equipment Color",
       "wwii tanks and trucks",
-      "military machinery prints",
-      "mechanical war art"
+      "battle-ready machines",
+      "mechanical war art",
+      "Vivid WWII Mechanized Might"
     ],
-    "story": "This image embodies military machinery prints and wwii tanks and trucks, captured by Wayne Heim in his signature style. It reflects mechanical war art with a touch of history's greatest conflicts. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The machine moves first.\n\nTracks grind forward through dust and noise, carrying men who understand that armor is both shield and promise. Inside the steel shell, every vibration travels through bone and breath, a constant reminder that survival depends as much on momentum as protection.\n\nInfantry will follow. Ground will be taken. But in this moment, it is the weight of steel that breaks hesitation and turns intention into advance.",
+    "notes": "The composition balances human vulnerability against industrial mass, placing the armored vehicle as both subject and environment. Forward orientation and low visual weight emphasize inevitability rather than aggression, aligning the image with interpretive wartime traditions where machinery becomes symbolic of collective momentum. The narrative emerges from tension between protection and exposure, allowing motion and scale to carry meaning without overt dramatization.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 39,
+
     "themes": {
       "tanks": 6
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-FMDBqqF",
-    "title": "Exploring Mechanical War Art",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Guardians of the Gun",
+    "description": "A painterly World War II photograph portraying an armored crew positioned atop their vehicle in a moment of guarded stillness. Rendered with cinematic restraint and historical sensitivity, the image emphasizes the relationship between soldier and machine, where protection, responsibility, and endurance merge within the aftermath of advance. Texture, posture, and atmosphere shape a narrative rooted in vigilance rather than spectacle. Part of the Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII tank crew positioned atop armored vehicle in painterly cinematic wartime scene showing soldiers maintaining watch",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/MG73r6bKsKxfmQRttgVP2c7LxPfHnkSS5dhw7fMTk/XL/_O2H8754-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/MG73r6bKsKxfmQRttgVP2c7LxPfHnkSS5dhw7fMTk/XL/_O2H8754-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/LCcmWCcLxv8txGdN8QsZPtPfMPvVcjX8nTDpfn8Zz/L/_O2H8754-Edit-L.jpg",
@@ -1095,28 +1386,35 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/0/Kjrvqjw3qvw3xSg2LTqBqxtCC6KrNpxd9kgtgVhzj/S/_O2H8754-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FMDBqqF/A",
+
     "keywords": [
-      "mechanical war art",
-      "battle-ready machines",
-      "military machinery prints",
+      "Men & Machines Color",
+      "Color WWII Machines",
+      "WWII Military Equipment Color",
       "wwii tanks and trucks",
-      "history's greatest conflicts"
+      "battle-ready machines",
+      "mechanical war art",
+      "Vivid WWII Mechanized Might"
     ],
-    "story": "Wayne Heim's exploration of military machinery prints comes alive in this piece, showcasing wwii tanks and trucks and mechanical war art. A testament to history's greatest conflicts in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The engine rests, but vigilance does not.\n\nDust settles slowly across steel and canvas as the crew scans a horizon that refuses certainty. The machine beneath them carries scars of distance and weight, yet it is the men who remain alert — listening for movement, watching for the moment quiet turns again into command.\n\nVictory is never announced. It is only guarded, one watchful breath at a time.",
+    "notes": "The composition emphasizes vertical authority and quiet control, positioning the crew as custodians of both machine and moment. By removing visible combat, the image shifts attention toward sustained vigilance — a theme common in interpretive wartime imagery where endurance replaces action as the defining narrative. Steel becomes environment as much as subject, reinforcing the interdependence between human presence and mechanized power.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 40,
+
     "themes": {
       "tanks": 17
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-rZX5GhQ",
-    "title": "Battle-Ready Machines Study",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by aftermath rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim",
+    "title": "Seen Through the Glass",
+    "description": "A painterly World War II photograph viewed from inside a military vehicle, framing soldiers at rest beyond the windshield. Rendered with cinematic restraint and historical sensitivity, the image emphasizes perspective, distance, and quiet vigilance rather than spectacle. The composition explores the psychological boundary between observer and participant, where calm exists only as a temporary interval. Part of the Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII soldiers seated outside canvas tent viewed through vehicle windshield in painterly cinematic wartime scene",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/MvHSQ75hktGHkGHXNtxQQSsZF5ZvbkBhdN3pjhHbf/XL/_W3H3947-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/MvHSQ75hktGHkGHXNtxQQSsZF5ZvbkBhdN3pjhHbf/XL/_W3H3947-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/LP2tts9bJtgbmMrbMf84ZWX99ngRGbgs48TkhMFmL/L/_W3H3947-Edit-L.jpg",
@@ -1124,25 +1422,30 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/D-Day-Conneaut-2014/i-rZX5GhQ/5/KpcmqMZdTPXJGngWrvpjfK5MXwHF6vLkv8Dchdw7T/S/_W3H3947-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rZX5GhQ/A",
+
     "keywords": [
+      "Men & Machines Color",
+      "Color WWII Machines",
+      "WWII Military Equipment Color",
+      "wwii tanks and trucks",
       "battle-ready machines",
       "mechanical war art",
-      "history's greatest conflicts",
-      "wwii tanks and trucks",
-      "military machinery prints"
+      "Vivid WWII Mechanized Might"
     ],
-    "story": "Wayne Heim's exploration of battle-ready machines comes alive in this piece, showcasing wwii tanks and trucks and military machinery prints. A testament to military machinery prints in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The engine is off, but no one relaxes.\n\nThrough the windshield, the men sit in a loose line before the tent, boots planted, rifles within reach. Conversation drifts, pauses, resumes — not about what’s coming, but about small things that keep the air steady. The frame of the vehicle turns the moment into something observed rather than entered.\n\nFrom this side of the glass, war feels distant. On the other side, they know how quickly distance disappears.",
+    "notes": "The framing device of the windshield creates a layered composition, establishing separation while reinforcing proximity. Machine becomes vantage point rather than weapon, shifting emphasis toward observation and anticipation. The work aligns with interpretive wartime imagery that privileges atmosphere and psychological space, allowing stillness to carry narrative tension without visible action.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    contentSource: "ai"
   },
   {
     "id": "i-F9HpvdL",
-    "title": "Mechanical War Art - History'S Greatest Conflicts",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Relaxing    Photography by Wayne Heim",
+    "title": "Silhouettes of Duty",
+    "description": "A painterly World War II photograph capturing artillery crew and field gun silhouetted against a fading sky. Rendered with cinematic restraint and historical sensitivity, the image emphasizes form, atmosphere, and quiet vigilance over spectacle. Light reduces detail to shape, transforming machinery and men into enduring symbols of presence and responsibility. Part of the Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII artillery crew and field gun silhouetted at sunset in painterly cinematic wartime scene",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/LVtqcFwJMPPj6Xz8zrZchW38WTFRLvrQrTVmGnz9G/XL/_WHZ2646-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/LVtqcFwJMPPj6Xz8zrZchW38WTFRLvrQrTVmGnz9G/XL/_WHZ2646-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/KWP9X8bJBZLSQqr9TJCnbhTdcnCSKs6jR5rrRncgk/L/_WHZ2646-L.jpg",
@@ -1150,24 +1453,30 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/DDay-Conneaut-2015-1/i-F9HpvdL/3/NBTfXLSTRvzNb9R6CrJ2NRfBcJVFjDthZ8WqNMms2/S/_WHZ2646-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-F9HpvdL/A",
+
     "keywords": [
+      "Men & Machines Color",
+      "Color WWII Machines",
+      "WWII Military Equipment Color",
+      "wwii tanks and trucks",
+      "battle-ready machines",
       "mechanical war art",
-      "history's greatest conflicts",
-      "military machinery prints",
-      "battle-ready machines"
+      "Vivid WWII Mechanized Might"
     ],
-    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights history's greatest conflicts through mechanical war art and mechanical war art. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The sun lowers without ceremony.\n\nAgainst the fading light, the gun stands ready, its outline sharp and unyielding while the men beside it remain indistinct — figures defined more by posture than by face. Conversation is minimal. Movements are measured. Even in stillness, the shape of the weapon reminds them what the night may ask.\n\nWhen daylight leaves, duty does not.",
+    "notes": "By reducing figures and machinery to silhouette, the composition removes individual identity in favor of archetype. The artillery piece becomes both instrument and monument, its angular form cutting into the sky with quiet authority. The restrained palette and strong horizon line align the work with interpretive wartime imagery where light and mass carry narrative weight, allowing atmosphere to convey endurance rather than action.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    contentSource: "ai"
   },
   {
     "id": "i-8KVCjVK",
-    "title": "Wwii Tanks And Trucks In Fine Art",
-    "description": "A painterly World War II photograph of a tank crewman, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Wayne Heim ©2015",
+    "title": "Into the Blinding Sky",
+    "description": "A painterly World War II aviation photograph capturing a military aircraft climbing into intense sunlight and open sky. Rendered with cinematic restraint and historical sensitivity, the image emphasizes scale, elevation, and mechanical resolve rather than spectacle. Light and atmosphere transform machinery into silhouette and symbol, exploring the fragile distance between mission and consequence. Part of the Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII military aircraft viewed from below flying into bright sun and dramatic sky in painterly cinematic style",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/Ngz9RFKXMZPhnjpWWHtTZX3mXWwVD5G9vGF4JvJKv/XL/_ANA5110-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/Ngz9RFKXMZPhnjpWWHtTZX3mXWwVD5G9vGF4JvJKv/XL/_ANA5110-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/NjFmvxSSHfJMFR3qm8MGdkB84hF49RHc2JT4fnmLF/L/_ANA5110-Edit-Edit-L.jpg",
@@ -1175,25 +1484,30 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Miscellaneous-Collections/Historic-Reenactments/2021-D-day-Conneaut-Reenactment/i-8KVCjVK/1/NdtXXt76krdz9j7c6thRQFPFxPKbb7dTWM3xgMBCT/S/_ANA5110-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-8KVCjVK/A",
+
     "keywords": [
+      "Men & Machines Color",
+      "Color WWII Machines",
+      "WWII Military Equipment Color",
       "wwii tanks and trucks",
-      "military machinery prints",
-      "history's greatest conflicts",
       "battle-ready machines",
-      "mechanical war art"
+      "mechanical war art",
+      "Vivid WWII Mechanized Might"
     ],
-    "story": "Wayne Heim's exploration of military machinery prints comes alive in this piece, showcasing mechanical war art and wwii tanks and trucks. A testament to battle-ready machines in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The light offers no cover.\n\nWings cut through glare and cloud as engines pull the aircraft higher, away from fields and shoreline now lost beneath haze. From below, it looks like ascent — clean, almost triumphant. Inside, each man feels the vibration that reminds him how thin metal can be.\n\nThe sky does not choose sides. It only receives what rises into it.",
+    "notes": "The upward perspective and strong radial light shift the aircraft from object to icon, elevating form into near-archetype. By compressing detail beneath intense illumination, the composition emphasizes contrast between industrial mass and atmospheric vastness. The work aligns with interpretive wartime imagery that balances mechanical power with existential exposure, allowing light itself to carry narrative tension.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 43
+    "sortOrder": 43,
+    contentSource: "ai"
   },
   {
     "id": "i-M7RwTB4",
-    "title": "Battle-Ready Machines Portrait",
-    "description": "Delve into battle-ready machines via this battle-ready machines by Wayne Heim. Highlighting battle-ready machines through history's greatest conflicts and military machinery prints, it's great for collectors interested in battle-ready machines. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Calibrating the Moment",
+    "description": "A painterly World War II photograph capturing a gun crew in a moment of focused preparation. Rendered with cinematic restraint and historical sensitivity, the image emphasizes human concentration and mechanical precision rather than spectacle. Texture, posture, and light draw attention to the intimate relationship between soldier and instrument, where calculation becomes a form of endurance. Part of the Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII soldiers operating and adjusting field gun equipment in painterly cinematic wartime scene",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/LTkjZBGCJrHsCxnB3TSbLQ4JVGTCcdRrH3JBQSBjs/XL/_OL33272-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/LTkjZBGCJrHsCxnB3TSbLQ4JVGTCcdRrH3JBQSBjs/XL/_OL33272-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/KTLqbHf5JSXFhxFjx8npsNW2L8FL4dDWhfHXXrsx8/L/_OL33272-Edit-Edit-L.jpg",
@@ -1201,27 +1515,35 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/2/K4XdsfMLT5fMD5CgNSMvRPM3HpbsJr5kqjMkfkzxN/S/_OL33272-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-M7RwTB4/A",
+
     "keywords": [
+      "Men & Machines Color",
+      "Color WWII Machines",
+      "WWII Military Equipment Color",
+      "wwii tanks and trucks",
       "battle-ready machines",
-      "history's greatest conflicts",
-      "military machinery prints",
-      "wwii tanks and trucks"
+      "mechanical war art",
+      "Vivid WWII Mechanized Might"
     ],
-    "story": "\"Battle-ready Machines Portrait\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He adjusts the dial as if precision alone can steady what comes next.\n\nMetal answers to measured hands, not emotion. The sight is aligned, the angle confirmed, the weight understood through repetition. Beside him, another watches, knowing that calculation is the only form of control they are allowed.\n\nWar may be chaos at a distance. Here, it is reduced to degrees, tension, and timing.",
+    "notes": "The composition narrows the battlefield into a study of hands, angles, and intent. By focusing on adjustment rather than discharge, the image transforms artillery from spectacle into process. The restrained palette and textured surface echo interpretive wartime traditions where machinery becomes extension of disciplined human will, allowing precision to carry the narrative weight.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 44,
+
     "themes": {
       "tanks": 4
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-FDHCvzp",
-    "title": "Fine Art Mechanical War Art",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. Approaching World War II imagery with documentary discipline, Wayne Heim's work prioritizes memory, presence, and lived consequence over reenactment theatrics. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Eyes on the Horizon",
+    "description": "A painterly World War II photograph capturing an armored crew positioned atop their vehicle, framed in a moment of poised vigilance. Rendered with cinematic restraint and historical sensitivity, the image emphasizes leadership, anticipation, and the psychological tension between readiness and action. Atmosphere and posture define the narrative, where machinery becomes both platform and responsibility. Part of the Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII tank crew standing atop armored vehicle scanning horizon in painterly cinematic wartime scene",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/KMgWPZJrxr6dpWKqHPRMdWsMhBLGd4hJWrgvf3gNG/XL/_OL33286-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/KMgWPZJrxr6dpWKqHPRMdWsMhBLGd4hJWrgvf3gNG/XL/_OL33286-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/LJxgWGNjLzkP9RF2NBwcfFtStvSf2Mxw5BpPdBsTr/L/_OL33286-Edit-Edit-L.jpg",
@@ -1229,27 +1551,35 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/3/LTNWCbm5tX99DhCQq2ZwcJW7pZPkptWLVzwtnSxZH/S/_OL33286-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-FDHCvzp/A",
+
     "keywords": [
+      "Men & Machines Color",
+      "Color WWII Machines",
+      "WWII Military Equipment Color",
+      "wwii tanks and trucks",
+      "battle-ready machines",
       "mechanical war art",
-      "history's greatest conflicts",
-      "military machinery prints",
-      "wwii tanks and trucks"
+      "Vivid WWII Mechanized Might"
     ],
-    "story": "Delving into history's greatest conflicts, this work by Wayne Heim highlights history's greatest conflicts through military machinery prints and wwii tanks and trucks. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "He scans the distance as if the answer might appear before the question is spoken.\n\nThe tank beneath him hums with contained force, steel steady, engine patient. Around him, the crew waits without appearing to wait — hands resting, posture alert, each man reading the land for movement that has not yet shown itself.\n\nThe horizon rarely warns. It simply changes.",
+    "notes": "The elevated stance and outward gaze establish authority without overt dramatization. By removing visible conflict, the composition shifts focus to anticipation — a theme consistent with interpretive wartime imagery where restraint heightens tension. Steel functions as both structure and stage, reinforcing the interdependence between human judgment and mechanized power.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 45,
+
     "themes": {
       "tanks": 18
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-n3N8NRr",
-    "title": "Battle-Ready Machines Moment",
-    "description": "A painterly World War II photograph of a WWII soldier, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "First Steps Into History",
+    "description": "A painterly World War II photograph capturing soldiers at the moment a landing craft ramp opens to the sea. Rendered with cinematic restraint and historical sensitivity, the image emphasizes transition, exposure, and collective resolve rather than spectacle. Composition and atmosphere place the viewer at the threshold between protection and vulnerability, where action becomes irreversible. Part of the Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII soldiers stepping forward from landing craft ramp into open water in painterly cinematic wartime scene",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/LvqbcX6w6PLjSpgXmM5rtN6wwhs9Fgm35pv8z2Vnp/XL/_PEN0791-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/LvqbcX6w6PLjSpgXmM5rtN6wwhs9Fgm35pv8z2Vnp/XL/_PEN0791-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/M696LhZTGCjdwRc8KTtRMVZbd64PWTJMVJvKMcHBv/L/_PEN0791-Edit-2-L.jpg",
@@ -1257,25 +1587,30 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/2/NWdgwmWNNsJSMPT8nf7D2ZKdsb2Dz4LzrsCDn3qDf/S/_PEN0791-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-n3N8NRr/A",
+
     "keywords": [
+      "Men & Machines Color",
+      "Color WWII Machines",
+      "WWII Military Equipment Color",
+      "wwii tanks and trucks",
       "battle-ready machines",
       "mechanical war art",
-      "wwii tanks and trucks",
-      "military machinery prints",
-      "history's greatest conflicts"
+      "Vivid WWII Mechanized Might"
     ],
-    "story": "Wayne Heim's exploration of wwii tanks and trucks comes alive in this piece, showcasing history's greatest conflicts and history's greatest conflicts. A testament to mechanical war art in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The ramp lowers, and hesitation disappears with it.\n\nWind and salt rush in as boots meet steel, then water, then whatever waits beyond the edge of sight. The men do not look at one another; they look forward, into distance that offers no promise and no mercy.\n\nHistory is rarely written in comfort. It is written in steps taken when there is no safe direction left.",
+    "notes": "The composition centers on threshold — the physical and psychological shift from enclosure to exposure. By framing the open ramp as both doorway and risk, the image transforms machinery into passage rather than weapon. The restrained palette and forward movement align with interpretive wartime imagery where commitment, not combat, defines the narrative weight.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    contentSource: "ai"
   },
   {
     "id": "i-59zQzXC",
-    "title": "Exploring Mechanical War Art",
-    "description": "Explore mechanical war art with Wayne Heim's history's greatest conflicts. This history's greatest conflicts piece conveys battle-ready machines, mechanical war art, and mechanical war art, perfect for fans of history's greatest conflicts. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Signal to Advance",
+    "description": "A painterly World War II photograph capturing a landing craft commander signaling soldiers forward at the threshold of deployment. Rendered with cinematic restraint and historical sensitivity, the image emphasizes leadership, collective resolve, and the human moment that transforms preparation into action. Composition and atmosphere focus on command and response rather than spectacle, placing the viewer within the irreversible instant before advance. Part of the Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII landing craft commander signaling soldiers forward in painterly cinematic wartime scene",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/L6xknpDKXJMhfpb4StcjMSJVC6FsTzvJmHxQbtBwm/XL/_PEN0808-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/L6xknpDKXJMhfpb4StcjMSJVC6FsTzvJmHxQbtBwm/XL/_PEN0808-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/K85C4sj4WNVpJSZVHXDcPWz5HdkK25NbmNzPrJCqb/L/_PEN0808-Edit-Edit-L.jpg",
@@ -1283,24 +1618,30 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/2/M26T93Zf7rt7wz3PLqfkWMhB9gWhW35k8z78PNphF/S/_PEN0808-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-59zQzXC/A",
+
     "keywords": [
-      "mechanical war art",
-      "history's greatest conflicts",
+      "Men & Machines Color",
+      "Color WWII Machines",
+      "WWII Military Equipment Color",
+      "wwii tanks and trucks",
       "battle-ready machines",
-      "wwii tanks and trucks"
+      "mechanical war art",
+      "Vivid WWII Mechanized Might"
     ],
-    "story": "Delving into wwii tanks and trucks, this work by Wayne Heim highlights battle-ready machines through wwii tanks and trucks and wwii tanks and trucks. A powerful statement in photography. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The gesture is small, but everyone understands it.\n\nAn arm rises above the steel edge of the craft, cutting through wind and noise with unmistakable clarity. Conversation ends without words. Boots shift forward. Each man moves not because fear has vanished, but because hesitation is no longer permitted.\n\nSome moments decide themselves. Others are decided by the signal to move.",
+    "notes": "The composition centers authority through gesture rather than rank or insignia. By isolating the raised arm against open space, the image transforms command into a universal visual language understood without dialogue. The restrained palette and compressed framing align with interpretive wartime imagery where decision — not combat — carries the narrative weight, emphasizing the human catalyst behind collective motion.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    contentSource: "ai"
   },
   {
     "id": "i-Dd5XSHd",
-    "title": "Mechanical War Art And Battle-Ready Machines",
-    "description": "A painterly World War II photograph of a take her out, defined by aftermath rather than spectacle. Wayne Heim's World War II fine art photography is grounded in historical respect and restraint, focusing on the individuals who carried the weight of global conflict rather than its spectacle. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where what followed the fighting defined those who returned. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "Take her out.",
+    "title": "Marked for Advance",
+    "description": "A painterly World War II photograph capturing a landing craft commander signaling advance, framed in a restrained and minimal composition. Rendered with cinematic sensitivity and historical respect, the image emphasizes gesture, authority, and the human catalyst behind collective motion. The steel foreground and open sky create a visual threshold between preparation and action. Part of the Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII landing craft commander raising hand to signal advance in painterly cinematic wartime scene",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/Lx5M9KCSsXKdsrTzvbFRNfRfjF7BZM4XKKmSSgkF9/XL/_PEN0830-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/Lx5M9KCSsXKdsrTzvbFRNfRfjF7BZM4XKKmSSgkF9/XL/_PEN0830-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/KvXsqhm5Zht9KDfBZvK7hmz4RjgRSLrnbWQv3KxNM/L/_PEN0830-Edit-L.jpg",
@@ -1308,25 +1649,30 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/3/M6gg7vtr4PHRR74DNJmJ7g7BLnBXQR8C8XNn88FxW/S/_PEN0830-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-Dd5XSHd/A",
+
     "keywords": [
-      "mechanical war art",
-      "battle-ready machines",
+      "Men & Machines Color",
+      "Color WWII Machines",
+      "WWII Military Equipment Color",
       "wwii tanks and trucks",
-      "military machinery prints",
-      "history's greatest conflicts"
+      "battle-ready machines",
+      "mechanical war art",
+      "Vivid WWII Mechanized Might"
     ],
-    "story": "Wayne Heim captures \"Take her out.\" with the restraint and intention of Wayne Heim photography. Light is sculpted, composition serves story. From",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The gesture is deliberate, held just long enough to be understood.\n\nAbove the steel lip of the craft, a single hand rises against the muted sky. Faces remain partially hidden, but the meaning is clear — direction has been chosen, and waiting is no longer an option. The sea offers no reassurance, only distance.\n\nSome moments are not shouted. They are marked, and then carried out.",
+    "notes": "The composition isolates gesture as narrative center, stripping away extraneous detail to elevate command into symbol. By compressing the frame and allowing steel to dominate the foreground, the image emphasizes transition and inevitability. The restrained palette and minimalism align with interpretive wartime imagery where a single action carries the weight of collective consequence.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    contentSource: "ai"
   },
   {
     "id": "i-vZNLBNp",
-    "title": "Wwii Tanks And Trucks - Military Machinery Prints",
-    "description": "A painterly World War II photograph of a tank crewman, defined by duty rather than spectacle. This image is part of Wayne Heim's World War II fine art photography, emphasizing service, sacrifice, and the quiet burden carried by those who lived through the war. Light, posture, and restraint shape a narrative rooted in service, consequence, and memory - where service demanded everything and promised nothing. Part of Wayne Heim's Facing History fine art photography series. © Wayne Heim",
-    "alt": "#1",
+    "title": "Waiting for the Shore",
+    "description": "A painterly World War II photograph capturing soldiers aboard a landing craft in the quiet moments before arrival. Defined by restraint rather than spectacle, the image emphasizes anticipation, service, and the psychological weight carried by those crossing toward uncertainty. Light, posture, and composition create a narrative rooted in memory and consequence—where the story exists in the waiting as much as in what follows. Part of Wayne Heim’s Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII soldiers aboard landing craft waiting for shore in painterly World War II fine art photograph",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/MFGbXwmBND3R2Hcj5gwwbShtHwFvgM53m2znHN2MC/XL/_PEN0836-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/MFGbXwmBND3R2Hcj5gwwbShtHwFvgM53m2znHN2MC/XL/_PEN0836-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/NCHm6k5Ft42vZ2dNRHJ9B8X6rjMLrXMJtN7sXvghJ/L/_PEN0836-Edit-L.jpg",
@@ -1334,24 +1680,28 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/3/LhCsDnKFdmfd4cFCVXmsGvN3k4wGj9dZDN6Wvd3qL/S/_PEN0836-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-vZNLBNp/A",
+
     "keywords": [
       "wwii tanks and trucks",
       "military machinery prints",
       "history's greatest conflicts",
-      "battle-ready machines"
+      "battle-ready machines",
+      "mechanical war art"
     ],
-    "story": "Tanks And Trucks - Military Machinery Prints — part of Wayne Heim's",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The boat moves forward, but no one speaks of where it will end. Hands grip cold steel, eyes fixed somewhere beyond the horizon, each man measuring the distance in silence rather than miles. The sea carries them whether they are ready or not.\n\nThere is no battle yet—only waiting. Helmets low, shoulders tight, they exist in the narrow space between safety and history, suspended in a moment where anticipation weighs heavier than fear.\n\nSoon the ramp will fall. Until then, they watch, breathe, and hold fast to the thin certainty that forward is the only direction left.",
+    "notes": "This image draws its strength from restraint rather than action, echoing the compositional traditions of wartime illustration and mid-century narrative painting where anticipation becomes the central subject. The framing along the steel rail compresses space, placing viewers inside the craft rather than as observers, transforming the scene into a shared psychological moment. Like the strongest works of pictorial war art, the tension lies not in combat but in imminence—the fragile pause before history moves forward.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    contentSource: "ai"
   },
   {
     "id": "i-rhM88g4",
-    "title": "The Essence Of History'S Greatest Conflicts",
-    "description": "Explore history's greatest conflicts with Wayne Heim's history's greatest conflicts. This battle-ready machines piece conveys military machinery prints, wwii tanks and trucks, and history's greatest conflicts, perfect for fans of history's greatest conflicts. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "Crossing Under Gray Skies",
+    "description": "A painterly World War II photograph depicting soldiers crossing open water aboard a landing craft under heavy skies. Defined by atmosphere and restraint rather than spectacle, the image emphasizes anticipation, endurance, and the shared uncertainty of those carried toward conflict. Composition and muted light transform the crossing into a psychological landscape, reflecting service, consequence, and memory. Part of Wayne Heim’s Facing History fine art photography series. © Wayne Heim",
+    "alt": "WWII landing craft crossing open water under gray skies in painterly World War II fine art photograph",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/LkvmXx3zvwCX8RNDPD8NWLKcQQfpZVzG3PKs7JnDh/XL/_OL37022-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/LkvmXx3zvwCX8RNDPD8NWLKcQQfpZVzG3PKs7JnDh/XL/_OL37022-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/Lt2g9PPP5CSKtnkCZCGzvsML4XgmbT6MM38HwffX9/L/_OL37022-Edit-Edit-L.jpg",
@@ -1359,6 +1709,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/2/LGpbW78fHR6VvQnFhcrxn4Cx5LZ3MNCzV2677jB2Q/S/_OL37022-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-rhM88g4/A",
+
     "keywords": [
       "history's greatest conflicts",
       "battle-ready machines",
@@ -1366,18 +1717,20 @@ export const galleryData = [
       "wwii tanks and trucks",
       "mechanical war art"
     ],
-    "story": "Wayne Heim's exploration of history's greatest conflicts comes alive in this piece, showcasing mechanical war art and battle-ready machines. A testament to military machinery prints in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The shoreline is still unseen, hidden somewhere beyond the dull line where sea meets sky. Engines hum beneath their feet as the craft cuts forward, carrying men who understand that the journey itself has already changed them.\n\nNo one speaks above the wind. Each man watches the horizon in his own way—some searching, some remembering, some simply waiting for the moment when distance disappears and decisions can no longer be postponed.\n\nThe water rolls endlessly beneath them, indifferent to courage or fear. Under gray skies, they move together toward history, held between the safety behind them and the unknown waiting ahead.",
+    "notes": "This composition leans into scale and atmosphere, echoing maritime wartime imagery where environment becomes an equal subject to the figures themselves. The wide framing diminishes individual identity in favor of collective experience, allowing the sea and sky to carry emotional weight. Like classic narrative war painting, tension emerges through distance and inevitability—the long approach before history fully reveals itself.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    contentSource: "ai"
   },
   {
     "id": "i-GwTMZZK",
-    "title": "Battle-Ready Machines In Fine Art",
-    "description": "Explore battle-ready machines with Wayne Heim's wwii tanks and trucks. This mechanical war art piece conveys battle-ready machines, mechanical war art, and battle-ready machines, perfect for fans of wwii tanks and trucks. © Wayne Heim",
-    "alt": "© Wayne Heim 2021",
+    "title": "The Long Crossing",
+    "description": "A painterly World War II photograph capturing soldiers crossing open water toward an uncertain shore. Emphasizing atmosphere, scale, and emotional restraint, the image reflects the psychological weight carried before battle rather than its spectacle. Light, distance, and composition transform military movement into a contemplative narrative rooted in service, consequence, and memory. Part of Wayne Heim’s Facing History fine art photography series. © Wayne Heim",
+    "alt": "World War II soldiers crossing open water under dark skies during wartime transport",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/2/MkvGT6Hmtbn9DqcfXGxwqj8pxJrGjtTds4fDMrjLB/XL/_PEN0366-Edit2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/2/MkvGT6Hmtbn9DqcfXGxwqj8pxJrGjtTds4fDMrjLB/XL/_PEN0366-Edit2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/2/MPH34CbMqJGZzZwWC7tm99Fc63qdGtb6s8CgKRkHK/L/_PEN0366-Edit2-L.jpg",
@@ -1385,17 +1738,21 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/2/NgcVt4ctmfQXzKG9gcRBFqNHvdMSdzBTR2fFx5WKf/S/_PEN0366-Edit2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color/i-GwTMZZK/A",
+
     "keywords": [
       "battle-ready machines",
       "wwii tanks and trucks",
       "mechanical war art",
-      "military machinery prints"
+      "military machinery prints",
+      "history's greatest conflicts"
     ],
-    "story": "Wayne Heim's exploration of battle-ready machines comes alive in this piece, showcasing military machinery prints and mechanical war art. A testament to battle-ready machines in fine art. © Wayne Heim",
-    "notes": "",
-    "rating": 0,
+
+    "story": "The water offered no comfort, only distance. Engines droned beneath steel decks as the shoreline disappeared behind them, replaced by the slow certainty of open sea. No one spoke much. Each man carried his own thoughts, measuring the space between who he had been and who he would become once land returned to view.\n\nGray skies pressed low, flattening the horizon until sea and sky became indistinguishable. Orders would come soon enough, but for now there was only motion — forward, inevitable, shared. The crossing itself was a quiet threshold, a moment suspended between safety and history.\n\nSomewhere ahead waited noise, chaos, and consequence. Here, there was only wind, salt, and the understanding that turning back was no longer part of the story.",
+    "notes": "This image shifts focus from combat to anticipation — the rarely depicted psychological space before history unfolds. The distant composition intentionally reduces individual identity, echoing historical photography and maritime painting traditions where scale conveys vulnerability and inevitability. The restrained palette and expansive negative space invite prolonged viewing, allowing collectors to experience the emotional tension of transition rather than action.",
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 51,
+    contentSource: "ai"
   }
 ];

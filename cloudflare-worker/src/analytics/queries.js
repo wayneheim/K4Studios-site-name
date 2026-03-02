@@ -1860,6 +1860,18 @@ export async function getDailyTrend(env, filters) {
       .replace(/\bregion\b/g, 'e.region');
 
     const where = qualify(rangeDateClause) || `date(e.ts, '-5 hours') = date('now', '-5 hours')`;
+    const pixelActorExpr = `
+      CASE
+        WHEN r.visitor_id IS NOT NULL AND r.visitor_id != '' THEN 'v:' || r.visitor_id
+        ELSE 'h:' || COALESCE(NULLIF(r.ip_hash, ''), COALESCE(NULLIF(r.ip, ''), 'unknown')) || '|' ||
+          CASE
+            WHEN LOWER(COALESCE(r.ua, '')) LIKE '%iphone%' OR LOWER(COALESCE(r.ua, '')) LIKE '%ipad%' OR LOWER(COALESCE(r.ua, '')) LIKE '%ipod%' THEN 'ios'
+            WHEN LOWER(COALESCE(r.ua, '')) LIKE '%android%' THEN 'android'
+            WHEN LOWER(COALESCE(r.ua, '')) LIKE '%mobile%' THEN 'mobile'
+            ELSE 'desktop'
+          END
+      END
+    `;
 
     // Daily trend (for chart): human visitors + sessions per Eastern calendar day.
     // Visitor = any JS-verified human who visited the site (any event type).
@@ -1882,7 +1894,14 @@ export async function getDailyTrend(env, filters) {
           WHEN e.source = 'js' AND e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view') AND COALESCE(e.is_bot, 0) = 0
           THEN e.visitor_id
           ELSE NULL
-        END) as art_viewers
+        END) as art_viewers,
+        (
+          SELECT COUNT(DISTINCT ${pixelActorExpr})
+          FROM raw_events r
+          WHERE date(r.ts, '-5 hours') = date(e.ts, '-5 hours')
+            AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND ${notCacheWarmer('r')}
+        ) as pixel_reach
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${where}
@@ -2077,17 +2096,34 @@ export async function getSessionMetrics(env, filters) {
 
 export async function getTopPages(env, filters) {
   try {
-    const { dateClause } = filters;
-    const where = (dateClause || '').trim() || 'ts > datetime("now", "-1 day")';
+    const { dateClause, ipClause, botClause, chardonClause } = filters;
+
+    const qualify = (clause) => (clause || '')
+      .replace(/\bts\b/g, 'e.ts')
+      .replace(/\bip\b/g, 'e.ip')
+      .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bcountry\b/g, 'e.country')
+      .replace(/\bregion\b/g, 'e.region')
+      .replace(/\breferer\b/g, 'e.referer');
+
+    const safeBotClause = (botClause || '')
+      .replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, ' ')
+      .replace(/\bdevice\s*=\s*'unknown'\b/gi, '1=1');
+
+    const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
 
     const pagesQuery = `
-      SELECT page AS page_path, COUNT(*) AS views
-      FROM classified_events
+      SELECT e.page AS page_path, COUNT(*) AS views
+      FROM classified_events e
       WHERE ${where}
-        AND event_type IN ('page_view','gallery_view','chapter_view')
-        AND COALESCE(is_bot,0) = 0
-        AND page IS NOT NULL AND page != ''
-      GROUP BY page
+        ${qualify(ipClause)}
+        ${qualify(safeBotClause)}
+        ${qualify(chardonClause)}
+        AND e.event_type = 'page_pixel'
+        AND e.source = 'pixel'
+        AND COALESCE(e.is_bot,0) = 0
+        AND e.page IS NOT NULL AND e.page != ''
+      GROUP BY e.page
       ORDER BY views DESC
       LIMIT 25
     `;
@@ -2126,31 +2162,59 @@ export async function getEntryAnalysis(env, filters) {
         SELECT
           e.session_id,
           CASE
-            WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), e.target_id), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), e.target_id)
-            ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
+            WHEN SUBSTR(NULLIF(e.page, ''), 1, 1) = '/' THEN NULLIF(e.page, '')
+            ELSE '/' || NULLIF(e.page, '')
           END AS page_path,
           e.referer AS referrer,
+          e.ua AS ua,
           ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.ts ASC) AS rn
-        FROM human_population hp
-        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        FROM classified_events e
         WHERE ${where}
           ${qualify(ipClause)}
           ${qualify(safeBotClause)}
           ${qualify(chardonClause)}
-          AND e.source = 'js'
-          AND e.event_type = 'page_view'
+          AND e.event_type = 'page_pixel'
+          AND e.source = 'pixel'
           AND e.session_id IS NOT NULL
-          AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
+          AND e.page IS NOT NULL AND e.page != ''
+          AND LOWER(NULLIF(e.page, '')) NOT LIKE 'http%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '/http%'
+          AND LOWER(NULLIF(e.page, '')) NOT LIKE 'android-app:%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '/android-app:%'
+          AND LOWER(NULLIF(e.page, '')) NOT LIKE 'ios-app:%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '/ios-app:%'
+          AND LOWER(NULLIF(e.page, '')) NOT LIKE 'intent:%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '/intent:%'
+          AND LOWER(NULLIF(e.page, '')) NOT LIKE 'market:%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '/market:%'
+          AND LOWER(NULLIF(e.page, '')) NOT LIKE 'mailto:%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '/mailto:%'
+          AND LOWER(NULLIF(e.page, '')) NOT LIKE 'tel:%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '/tel:%'
+          AND LOWER(NULLIF(e.page, '')) NOT LIKE 'file:%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '/file:%'
+          AND LOWER(NULLIF(e.page, '')) NOT LIKE 'data:%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '/data:%'
+          AND LOWER(NULLIF(e.page, '')) NOT LIKE 'javascript:%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '/javascript:%'
+          AND LOWER(NULLIF(e.page, '')) NOT LIKE 'about:%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '/about:%'
+          AND LOWER(NULLIF(e.page, '')) NOT LIKE 'blob:%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '/blob:%'
+            AND LOWER(NULLIF(e.page, '')) NOT LIKE '%://%'
       )
       SELECT
         page_path,
         CASE
+          WHEN (referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct')
+            AND LOWER(COALESCE(ua, '')) LIKE '%pinterest%'
+            THEN 'pinterest_app'
           WHEN referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' THEN 'direct'
           WHEN referrer LIKE '%images.google.%' OR referrer LIKE '%google.%/imgres%' THEN 'google_images'
           WHEN referrer LIKE '%google.%' THEN 'google_search'
           WHEN referrer LIKE '%bing.%/images%' THEN 'bing_images'
           WHEN referrer LIKE '%bing.%' THEN 'bing_search'
-          WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
+          WHEN referrer LIKE '%pinterest.%' THEN 'pinterest_web'
           WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
           WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'twitter'
           WHEN referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'chatgpt'
@@ -2176,14 +2240,13 @@ export async function getEntryAnalysis(env, filters) {
     try {
       const imagePageViewsQuery = `
         SELECT COUNT(*) as views
-        FROM human_population hp
-        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        FROM classified_events e
         WHERE ${where}
           ${qualify(ipClause)}
           ${qualify(safeBotClause)}
           ${qualify(chardonClause)}
-          AND e.source = 'js'
-          AND e.event_type = 'page_view'
+          AND e.source = 'pixel'
+          AND e.event_type = 'page_pixel'
           AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
           AND COALESCE(NULLIF(e.page, ''), e.target_id) LIKE '%/i-%'
       `;
@@ -2196,14 +2259,13 @@ export async function getEntryAnalysis(env, filters) {
             e.session_id,
             ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.ts ASC) AS rn,
             COALESCE(NULLIF(e.page, ''), e.target_id) AS page_path
-          FROM human_population hp
-          JOIN classified_events e ON e.visitor_id = hp.visitor_id
+          FROM classified_events e
           WHERE ${where}
             ${qualify(ipClause)}
             ${qualify(safeBotClause)}
             ${qualify(chardonClause)}
-            AND e.source = 'js'
-            AND e.event_type = 'page_view'
+            AND e.source = 'pixel'
+            AND e.event_type = 'page_pixel'
             AND e.session_id IS NOT NULL
             AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
         )
@@ -2353,14 +2415,13 @@ export async function getExitAnalysis(env, filters) {
             ELSE '/' || COALESCE(NULLIF(e.page, ''), e.target_id)
           END AS page_path,
           ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.ts DESC) AS rn
-        FROM human_population hp
-        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        FROM classified_events e
         WHERE ${where}
           ${qualify(ipClause)}
           ${qualify(safeBotClause)}
           ${qualify(chardonClause)}
-          AND e.source = 'js'
-          AND e.event_type = 'page_view'
+          AND e.source = 'pixel'
+          AND e.event_type = 'page_pixel'
           AND e.session_id IS NOT NULL
           AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
       )
@@ -2810,4 +2871,121 @@ export async function getBotIntelligence(env) {
   }
 
   return botIntelligence;
+}
+
+export async function getBlockRecommendedCount(env) {
+  try {
+    const query = `
+      WITH suspects AS (
+        SELECT ip_hash, total_requests, days_seen
+        FROM suspected_bots
+        WHERE is_verified_bot = 0
+          AND risk_level >= 4
+          AND status != 'blocked'
+      ),
+      friction_429_by_day AS (
+        SELECT
+          ip_hash,
+          date(ts, '-5 hours') AS et_day,
+          COUNT(*) AS count_429
+        FROM raw_events
+        WHERE event_type = 'harvester_friction'
+          AND inferred_from = '429'
+          AND ts >= datetime('now', '-7 days')
+          AND ip_hash IN (SELECT ip_hash FROM suspects)
+        GROUP BY ip_hash, et_day
+      ),
+      friction_429_max AS (
+        SELECT ip_hash, MAX(count_429) AS friction_429_max_day_7d
+        FROM friction_429_by_day
+        GROUP BY ip_hash
+      ),
+      velocity AS (
+        SELECT
+          ip_hash,
+          MAX(unique_images_per_minute) AS peak_unique_images_per_minute_24h
+        FROM (
+          SELECT
+            ip_hash,
+            strftime('%Y-%m-%d %H:%M', ts) AS minute,
+            COUNT(DISTINCT image_id) AS unique_images_per_minute
+          FROM raw_events
+          WHERE image_id IS NOT NULL
+            AND ts > datetime('now', '-24 hours')
+            AND ip_hash IN (SELECT ip_hash FROM suspects)
+          GROUP BY ip_hash, minute
+        )
+        GROUP BY ip_hash
+      ),
+      delay_burst_ip AS (
+        SELECT
+          ip_hash,
+          MAX(window_delays) AS max_friction_delay_10m_24h
+        FROM (
+          SELECT
+            ip_hash,
+            (strftime('%s', ts) / 600) AS ten_min_bucket,
+            SUM(CASE WHEN event_type = 'harvester_friction' AND inferred_from = 'delay' THEN 1 ELSE 0 END) AS window_delays
+          FROM raw_events
+          WHERE ts > datetime('now', '-24 hours')
+            AND ip_hash IN (SELECT ip_hash FROM suspects)
+          GROUP BY ip_hash, ten_min_bucket
+        )
+        GROUP BY ip_hash
+      ),
+      ip_asn AS (
+        SELECT ip_hash, MAX(cf_asn) AS cf_asn_last24h
+        FROM raw_events
+        WHERE ts > datetime('now', '-24 hours')
+          AND cf_asn IS NOT NULL
+          AND ip_hash IN (SELECT ip_hash FROM suspects)
+        GROUP BY ip_hash
+      ),
+      delay_burst_asn AS (
+        SELECT
+          cf_asn,
+          MAX(window_delays) AS max_friction_delay_10m_asn_24h
+        FROM (
+          SELECT
+            cf_asn,
+            (strftime('%s', ts) / 600) AS ten_min_bucket,
+            SUM(CASE WHEN event_type = 'harvester_friction' AND inferred_from = 'delay' THEN 1 ELSE 0 END) AS window_delays
+          FROM raw_events
+          WHERE ts > datetime('now', '-24 hours')
+            AND cf_asn IS NOT NULL
+            AND ip_hash IN (SELECT ip_hash FROM suspects)
+          GROUP BY cf_asn, ten_min_bucket
+        )
+        GROUP BY cf_asn
+      ),
+      enriched AS (
+        SELECT
+          s.ip_hash,
+          s.total_requests,
+          s.days_seen,
+          COALESCE(fm.friction_429_max_day_7d, 0) AS friction_429_max_day_7d,
+          COALESCE(v.peak_unique_images_per_minute_24h, 0) AS peak_unique_images_per_minute_24h,
+          COALESCE(dip.max_friction_delay_10m_24h, 0) AS max_friction_delay_10m_24h,
+          COALESCE(dasn.max_friction_delay_10m_asn_24h, 0) AS max_friction_delay_10m_asn_24h
+        FROM suspects s
+        LEFT JOIN friction_429_max fm ON fm.ip_hash = s.ip_hash
+        LEFT JOIN velocity v ON v.ip_hash = s.ip_hash
+        LEFT JOIN delay_burst_ip dip ON dip.ip_hash = s.ip_hash
+        LEFT JOIN ip_asn ia ON ia.ip_hash = s.ip_hash
+        LEFT JOIN delay_burst_asn dasn ON dasn.cf_asn = ia.cf_asn_last24h
+      )
+      SELECT COUNT(*) AS block_recommended
+      FROM enriched
+      WHERE friction_429_max_day_7d >= 10
+         OR peak_unique_images_per_minute_24h >= 20
+         OR max_friction_delay_10m_24h >= 40
+         OR max_friction_delay_10m_asn_24h >= 40
+         OR (total_requests >= 200 AND days_seen >= 3)
+    `;
+    const row = await env.DB.prepare(query).first();
+    return row?.block_recommended || 0;
+  } catch (e) {
+    console.log('Block recommended count query failed:', e.message);
+    return 0;
+  }
 }

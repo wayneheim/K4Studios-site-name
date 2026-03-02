@@ -214,8 +214,16 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   // - If found → 301 redirect to correct location (preserve link authority)
   // - If NOT found → 410 Gone (truly removed content)
   // - If NO image ID → 410 Gone (just a gallery listing, not matchable)
+  // Photoshootsandevents → redirect to SmugMug archive
+  if (pathname.startsWith("/Photoshootsandevents/")) {
+    const smugmugPath = pathname.replace("/Photoshootsandevents/", "/Other/Photo-Shoots/");
+    return new Response(null, {
+      status: 301,
+      headers: { Location: `https://wayne-heim.smugmug.com${smugmugPath}` },
+    });
+  }
+
   const legacyGonePrefixes = [
-    "/Photoshootsandevents/",
     "/Scheduled-Shoots/",
     "/Other/Photo-Shoots/",
     "/Other/Photo-Shoots-and-Themes/",

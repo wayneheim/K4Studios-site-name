@@ -606,8 +606,16 @@ async function handleImageRequest(request, ctx, env) {
   const ip = request.headers.get("CF-Connecting-IP") || 
              request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim();
   const ipHash = hashIP(ip);
+
+  // SEO SAFETY: Never block verified search bots (Bingbot, Googlebot, etc.)
+  // even if their IP ends up in blocked_ips by accident.
+  // cf.botManagement.verifiedBot is authoritative (Cloudflare-verified, not spoofable).
+  // isDiscoveryBotUA is a UA fallback for plans without Bot Management.
+  const ua = request.headers.get('User-Agent') || '';
+  const cfVerifiedBot = Boolean(request.cf?.botManagement?.verifiedBot);
+  const isDiscoveryBot = cfVerifiedBot || isDiscoveryBotUA(ua);
   
-  if (env?.DB && ipHash) {
+  if (env?.DB && ipHash && !isDiscoveryBot) {
     try {
       const isBlocked = await isIPBlocked(env, ipHash);
       if (isBlocked) {
@@ -646,10 +654,8 @@ async function handleImageRequest(request, ctx, env) {
   };
   try {
     if (request.method === 'GET') {
-      const ua = request.headers.get('User-Agent') || '';
-      // Never friction Cloudflare-verified bots (SEO/indexing safe).
-      const cfVerifiedBot = Boolean(request.cf?.botManagement?.verifiedBot);
-      const discoveryBypass = cfVerifiedBot || isDiscoveryBotUA(ua);
+      // Reuse ua / cfVerifiedBot / isDiscoveryBot computed above (SEO safety guard).
+      const discoveryBypass = isDiscoveryBot;
       const effectiveAsn = frictionTest?.asn ?? request.cf?.asn;
       const flags = getSuspicionFlags({ request, asn: effectiveAsn, ua });
       const protectSizes = new Set(['l', 'xl', 'src']);
@@ -915,8 +921,9 @@ function getParentGallery(pathname) {
  *   - If case mismatch -> 301 to canonical casing
  *   - Else -> pass through (return null)
  * - If image missing:
- *   - bot -> 410 Gone (cacheable)
- *   - human -> 302 to parent gallery
+ *   - bot/non-browser/unknown-gallery -> 404 Not Found (never existed)
+ *   - human with known gallery -> 302 to parent gallery
+ *   (410 reserved for ghost sentinel i-k4studios and explicit _redirects only)
  */
 async function handleImagePagePolicy(request, pathname, ctx, env) {
   const imageId = extractImageId(pathname);
@@ -1011,14 +1018,15 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
     const isKnownGallery = knownGalleries.has(String(parentGallery || '').toLowerCase());
 
     // Missing image:
-    // - Search bots -> 410 (clean index)
-    // - Non-browser clients (scrapers, scanners) -> 410 (don't help, don't redirect)
-    // - Unknown gallery -> 410
-    // - Real browsers with known gallery -> 302 to gallery landing (good UX)
+    // - 404 for everyone except browsers with known gallery context (302 for UX).
+    // WHY 404 not 410: These IDs never existed — they're probe traffic or stale
+    // references, not intentionally deleted content. 410 signals permanent removal
+    // of something that *was* real, which poisons crawl trust at scale.
+    // 410 is reserved for the ghost sentinel (i-k4studios) and explicit _redirects.
     if (isSearch || !isBrowser || !isKnownGallery) {
-      ctx.waitUntil(logEdgeEvent(env, '410', pathname, imageId, isSearch, request));
-      return new Response("Gone", {
-        status: 410,
+      ctx.waitUntil(logEdgeEvent(env, '404', pathname, imageId, isSearch, request));
+      return new Response("Not Found", {
+        status: 404,
         headers: {
           "X-Robots-Tag": "noindex",
           "Cache-Control": "public, max-age=86400" // 1 day

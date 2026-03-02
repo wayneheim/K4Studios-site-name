@@ -5,7 +5,7 @@
  * It looks up the image ID in a pre-built map and either:
  * 1. Redirects to the correct gallery if the image moved (301)
  * 2. For NOT FOUND images:
- *    - Bots get 410 Gone (removes ghost URLs from index)
+ *    - Bots get 404 Not Found (never-existed IDs, not permanent deletions)
  *    - Humans get 302 redirect to gallery landing (good UX)
  * 
  * This function ONLY runs on actual 404s, not on every page load.
@@ -282,17 +282,20 @@ exports.handler = async (event) => {
   const galleryLandingPath = requestedPath.replace(/\/i-[a-zA-Z0-9]+\/?$/, '');
   
   if (isBotRequest) {
-    // Bot: Return 410 Gone to remove ghost URL from index
-    console.log(`[smart-404] Bot detected, returning 410 Gone for: ${imageId}`);
+    // Bot: Return 404 Not Found — these IDs never existed (probe/stale traffic).
+    // 410 was poisoning Bing crawl trust by signaling permanent deletion at scale.
+    // 410 is now reserved for explicit legacy _redirects rules only.
+    console.log(`[smart-404] Bot detected, returning 404 for unknown: ${imageId}`);
     
     return {
-      statusCode: 410,
+      statusCode: 404,
       headers: {
         'Content-Type': 'text/html',
-        'Cache-Control': 'public, max-age=86400', // Cache for 1 day (safer than 1 year)
-        'X-Smart-404': 'gone-bot'
+        'Cache-Control': 'public, max-age=86400',
+        'X-Robots-Tag': 'noindex',
+        'X-Smart-404': 'notfound-bot'
       },
-      body: '<!DOCTYPE html><html><head><title>Gone</title></head><body><h1>410 Gone</h1><p>This image has been permanently removed.</p></body></html>'
+      body: '<!DOCTYPE html><html><head><title>Not Found</title></head><body><h1>404 Not Found</h1><p>This image does not exist.</p></body></html>'
     };
   }
   

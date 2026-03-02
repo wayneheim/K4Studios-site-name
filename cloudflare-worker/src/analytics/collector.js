@@ -232,6 +232,7 @@ export async function handleTrackRequest(request, env, ctx) {
       event = null,
       gallery_id = null,
       image_id = null,
+      source_layer = null,
       page_type = null,
       theme = null,
       referrer: clientReferrer = null,
@@ -337,6 +338,7 @@ export async function handleTrackRequest(request, env, ctx) {
       sessionId: bestSessionId,
       source: 'js',
       visitorId,
+      sourceLayer: (typeof source_layer === 'string' && source_layer) ? source_layer : null,
       // Use the client-reported page_path for easier SQL grouping.
       page: normalizedPagePath || null,
       // Preserve the best external referrer (edge cookie beats client hint).
