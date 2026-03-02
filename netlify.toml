@@ -478,13 +478,6 @@ force = true
 # ✅ Crawl-Debt Cleanup
 ##############################
 
-# Legacy SmugMug keyword URLs (e.g., /keyword/cowboy, /keyword/xyz)
-[[redirects]]
-from = "/keyword/*"
-to = "/"
-status = 410
-force = true
-
 # Legacy SmugMug lightbox params (k= is SmugMug's image key param)
 # NOTE: Our internal ?dataset= is allowed for "View Complete Gallery"
 [[redirects]]

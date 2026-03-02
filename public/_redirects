@@ -83,8 +83,18 @@
 /Color-back2/*   /Color/:splat   301!
 /Other/Print-Options  /Other/Series  301
 
-# Redirect gallery folders missing /Gallery suffix
-/Galleries/Fine-Art-Photography/Landscapes/By-Location/West  /Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery  301
+# Redirect gallery folders missing /Gallery suffix → canonical /Gallery path
+# Fine-Art-Photography By-Location (force! because .astro landing pages exist at bare paths)
+/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest    /Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery    301!
+/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast  /Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery  301!
+/Galleries/Fine-Art-Photography/Landscapes/By-Location/South      /Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery      301!
+/Galleries/Fine-Art-Photography/Landscapes/By-Location/West       /Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery       301!
+# Painterly By-Location (no .astro pages at bare paths — these 404 without redirects)
+/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International  /Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery  301
+/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest        /Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery        301
+/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast      /Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery      301
+/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South          /Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery          301
+/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West           /Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery           301
 
 # Fix duplicate path segment (Bing indexed malformed URL)
 /Western-Fine-Art-Photography/Western-Fine-Art-Photography  /Western-Fine-Art-Photography  301
