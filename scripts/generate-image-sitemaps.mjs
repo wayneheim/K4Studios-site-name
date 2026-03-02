@@ -373,7 +373,7 @@ const SECTIONS = [
     galleries: [
       {
         dataPath: '../src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs',
-        urlBase: '/Other/K4-Select-Series/Engrained'
+        urlBase: '/Other/K4-Select-Series/Engrained/Engrained-Series'
       }
     ]
   }

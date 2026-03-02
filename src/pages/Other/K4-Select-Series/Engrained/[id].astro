@@ -1,0 +1,33 @@
+---
+/**
+ * Static Image Detail Page (Engrained)
+ *
+ * Canonical image URLs for Engrained live directly under:
+ *   /Other/K4-Select-Series/Engrained/i-XXXX
+ */
+export const prerender = true;
+
+import GalleryShell from '../../../../components/GalleryShell-Engrained-Series.astro';
+import { entranceData as BWEntranceData } from '../../../../data/Other/K4-Select-Series/Engrained/EngrainedSeriesEntranceData.ts';
+import { galleryData } from '../../../../data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs';
+
+export async function getStaticPaths() {
+  return galleryData
+    .filter(
+      (img) =>
+        img.visibility !== 'hidden' &&
+        img.visibility !== 'hide' &&
+        img.visibility !== 'ghost' &&
+        img.id !== 'i-k4studios'
+    )
+    .map((img) => ({ params: { id: img.id } }));
+}
+
+const { id } = Astro.params;
+---
+
+<GalleryShell
+  breadcrumb={BWEntranceData.breadcrumb}
+  entranceData={BWEntranceData}
+  initialImageId={id}
+/>

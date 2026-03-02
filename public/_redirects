@@ -8,7 +8,8 @@
 /Other/Blog  /Blog  301
 /Other/Blog/*  /Blog/:splat  301
 
-# Fix malformed Engrained image URLs missing /Engrained-Series
+# Canonicalize Engrained image URLs to SmugMug-mirroring structure:
+#   /Other/K4-Select-Series/Engrained/Engrained-Series/i-XXXX
 /Other/K4-Select-Series/Engrained/i-:id  /Other/K4-Select-Series/Engrained/Engrained-Series/i-:id  301!
 /Other/K4-Select-Series/Engrained/i-:id/*  /Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/:splat  301!
 

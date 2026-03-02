@@ -159,16 +159,17 @@ from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/*"
 to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/index.html"
 status = 200
 
-# Fix malformed Engrained image URLs missing /Engrained-Series
+# Canonicalize Engrained image URLs to SmugMug-mirroring structure:
+#   /Other/K4-Select-Series/Engrained/Engrained-Series/i-XXXX
 [[redirects]]
-from = "/Other/K4-Select-Series/Engrained/i-:id"
-to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id"
+from = "^/Other/K4-Select-Series/Engrained/(i-[^/]+)$"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/$1"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Other/K4-Select-Series/Engrained/i-:id/*"
-to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/:splat"
+from = "^/Other/K4-Select-Series/Engrained/(i-[^/]+)/(.*)$"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/$1/$2"
 status = 301
 force = true
 
