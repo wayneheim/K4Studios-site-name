@@ -2363,6 +2363,10 @@ export default {
       }
       
       const response = await fetch(request);
+      if (response.status === 404) {
+        const branded404 = await createBranded404Response(request);
+        return addVisitorIdCookie(branded404, visitorId, visitorIdIsNew, request);
+      }
       return addVisitorIdCookie(response, visitorId, visitorIdIsNew, request);
     }
 
