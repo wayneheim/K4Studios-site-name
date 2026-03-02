@@ -159,16 +159,28 @@ from = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/*"
 to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/index.html"
 status = 200
 
-# Fix short Engrained image URLs (missing /Engrained-Series)
+# Fix Engrained image URL variants → canonical /Engrained/Engrained-Series/
 [[redirects]]
-from = "/Other/K4-Select-Series/Engrained/i-:id"
-to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id"
+from = "/Other/K4-Select-Series/:image"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/:image"
 status = 301
 force = true
 
 [[redirects]]
-from = "/Other/K4-Select-Series/Engrained/i-:id/*"
-to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/:splat"
+from = "/Other/K4-Select-Series/:image/*"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/:image/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Other/K4-Select-Series/Engrained/:image"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/:image"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Other/K4-Select-Series/Engrained/:image/*"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/:image/:splat"
 status = 301
 force = true
 
