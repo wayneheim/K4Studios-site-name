@@ -10,8 +10,8 @@
 
 # Canonicalize Engrained image URLs to SmugMug-mirroring structure:
 #   /Other/K4-Select-Series/Engrained/Engrained-Series/i-XXXX
-/Other/K4-Select-Series/Engrained/i-:id  /Other/K4-Select-Series/Engrained/Engrained-Series/i-:id  301!
-/Other/K4-Select-Series/Engrained/i-:id/*  /Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/:splat  301!
+^/Other/K4-Select-Series/Engrained/(i-[^/]+)$  /Other/K4-Select-Series/Engrained/Engrained-Series/$1  301!
+^/Other/K4-Select-Series/Engrained/(i-[^/]+)/(.*)$  /Other/K4-Select-Series/Engrained/Engrained-Series/$1/$2  301!
 
 # Block access to source files in production (should never be crawled)
 # In dev: These files exist so redirect won't trigger
