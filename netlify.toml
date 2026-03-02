@@ -414,6 +414,19 @@ to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Po
 status = 301
 force = true
 
+# --- Legacy Painterly-Photography WWII path ---
+[[redirects]]
+from = "/Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII"
+status = 301
+force = true
+
+[[redirects]]
+from = "/Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography/*"
+to = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/:splat"
+status = 301
+force = true
+
 # --- Old Photography-Galleries structure ---
 [[redirects]]
 from = "/Photography-Galleries/*/i-:id"

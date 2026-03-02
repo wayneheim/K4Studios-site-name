@@ -66,6 +66,10 @@
 # Legacy test/renamed gallery paths
 /Galleries/zPainterly-Western-Cowboy-Portraits/*  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/:splat  301
 
+# Legacy Painterly-Photography WWII path
+/Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography  /Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII  301!
+/Galleries/Painterly-Photography/Historical-Themed-Fine-Art-Photography/WWII-Themed-Fine-Art-Photography/*  /Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/:splat  301!
+
 # Block obvious exploit/scraper paths (avoid burning Smart 404 function calls)
 /Galleries/*/hack/*  /410.html  410!
 /Galleries/*/Hack/*  /410.html  410!
