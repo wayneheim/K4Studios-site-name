@@ -135,9 +135,14 @@
 
 # Block SmugMug API endpoints - these should never be crawled (case variations)
 # Use 410 Gone to tell Google to de-index and stop crawling
+/api  /410.html  410
 /api/*  /410.html  410
 /Api/*  /410.html  410
 /API/*  /410.html  410
+/v2  /410.html  410
+/v2/*  /410.html  410
+/V2  /410.html  410
+/V2/*  /410.html  410
 
 # Analytics tracking - proxy to Cloudflare Worker
 /track  https://k4-image-proxy.wayneheim.workers.dev/track  200!
