@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-03-02T18:14:57.131Z",
+    "lastUpdated": "2026-03-02T18:45:21.125Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z",
     "lastSyncFrom": "Engrained-Series.mjs"
   },
@@ -1977,7 +1977,17 @@
     "i-BWMJW2Z:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-uRVFJCg",
     "i-H6jtL93:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-GdeDBKg",
     "i-LcWVBPt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-wRPHjLS",
-    "i-pX6JVNs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-63uJXgb"
+    "i-pX6JVNs:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-63uJXgb",
+    "i-sGQLsK8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-NrXuhh3",
+    "i-Gz4Jq9R:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-xMj6pZ7",
+    "i-TCM54GK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-LPzzTpZ",
+    "i-jrpB3bj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-ZctzHpq",
+    "i-t9XL2ZG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-gwanrGe",
+    "i-mtXJmf8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-nLAd8ZM",
+    "i-3NCLt4s:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-QkKk2eA",
+    "i-kFMq3s4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-hdswsB5",
+    "i-kFDzhBL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-vXsREJV",
+    "i-F75PGSb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-jFpf6zZ"
   },
   "series": {
     "s-BB65wHk": {
@@ -36271,13 +36281,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Heroic Portraits Portrait",
+      "title": "Moments of Readiness",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-V5dwLbs/0/MbB7bGcphVLhT8GWmmZ6NR5SWHKsjPnPt886SjJb5/XL/_FWH6143-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-V5dwLbs",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
-          "title": "Heroic Portraits Portrait",
+          "title": "Moments of Readiness",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-V5dwLbs/0/MbB7bGcphVLhT8GWmmZ6NR5SWHKsjPnPt886SjJb5/XL/_FWH6143-Edit-XL.jpg"
         }
       ],
@@ -47571,6 +47581,206 @@
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-03-02T18:14:57.130Z"
+    },
+    "s-NrXuhh3": {
+      "primaryImageId": "i-sGQLsK8",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Sailor Reflects",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-sGQLsK8/1/NShTdqWxFvsSLXNDPGWfBh6bRWHRSZfkJwzPMbmpP/XL/_DSF3899-Edit-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-sGQLsK8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "The Sailor Reflects",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-sGQLsK8/1/NShTdqWxFvsSLXNDPGWfBh6bRWHRSZfkJwzPMbmpP/XL/_DSF3899-Edit-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-02T18:15:58.905Z"
+    },
+    "s-xMj6pZ7": {
+      "primaryImageId": "i-Gz4Jq9R",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Camp Watch",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Gz4Jq9R/0/MxZ9XKpJzh7fMkKsn56HTN77P6m9JJ27754Wc6Pfh/XL/_FWH5511-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Gz4Jq9R",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Camp Watch",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Gz4Jq9R/0/MxZ9XKpJzh7fMkKsn56HTN77P6m9JJ27754Wc6Pfh/XL/_FWH5511-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-02T18:20:06.454Z"
+    },
+    "s-LPzzTpZ": {
+      "primaryImageId": "i-TCM54GK",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Watchful Eyes",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-TCM54GK/0/KKHdfFHKbfbqPr6HN4JNMxXkNpfDNzDL4tR5D7Fx8/XL/_FWH5915-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-TCM54GK",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Watchful Eyes",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-TCM54GK/0/KKHdfFHKbfbqPr6HN4JNMxXkNpfDNzDL4tR5D7Fx8/XL/_FWH5915-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-02T18:23:30.517Z"
+    },
+    "s-ZctzHpq": {
+      "primaryImageId": "i-jrpB3bj",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "All Smiles",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-jrpB3bj/0/LmLmGmH9vW5LbftQbNd5N94h3ZWmPLZpQFXC4mH4m/XL/_FWH5927-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-jrpB3bj",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "All Smiles",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-jrpB3bj/0/LmLmGmH9vW5LbftQbNd5N94h3ZWmPLZpQFXC4mH4m/XL/_FWH5927-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-02T18:26:07.225Z"
+    },
+    "s-gwanrGe": {
+      "primaryImageId": "i-t9XL2ZG",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Moments of Grace",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-t9XL2ZG/0/Nb4ZvpTjRSQN4VbtVmGf4qr9b8cHWVQzVmFQqN3BR/XL/_FWH6096-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-t9XL2ZG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Moments of Grace",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-t9XL2ZG/0/Nb4ZvpTjRSQN4VbtVmGf4qr9b8cHWVQzVmFQqN3BR/XL/_FWH6096-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-02T18:28:29.877Z"
+    },
+    "s-nLAd8ZM": {
+      "primaryImageId": "i-mtXJmf8",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "French Resistance Watch",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-mtXJmf8/0/LnGwK6KpgdMg2Ff43bpKRGphXTv33p2fNxJGHvH6G/XL/_FWH6146-Edit-2-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-mtXJmf8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "French Resistance Watch",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-mtXJmf8/0/LnGwK6KpgdMg2Ff43bpKRGphXTv33p2fNxJGHvH6G/XL/_FWH6146-Edit-2-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-02T18:35:03.224Z"
+    },
+    "s-QkKk2eA": {
+      "primaryImageId": "i-3NCLt4s",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Wartime Resolve",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-3NCLt4s/0/KxfhmGGHnp5MqDmM75cnnWxGWww2hQgLRDBGTtLFk/XL/_FWH6177-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-3NCLt4s",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Wartime Resolve",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-3NCLt4s/0/KxfhmGGHnp5MqDmM75cnnWxGWww2hQgLRDBGTtLFk/XL/_FWH6177-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-02T18:37:24.774Z"
+    },
+    "s-hdswsB5": {
+      "primaryImageId": "i-kFMq3s4",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Steadfast Gaze",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kFMq3s4/0/K5sVB95DqhQKWZvffhHRC8p8XjR3q5tCQ6KhLzmJL/XL/_FWH6216-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-kFMq3s4",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Steadfast Gaze",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kFMq3s4/0/K5sVB95DqhQKWZvffhHRC8p8XjR3q5tCQ6KhLzmJL/XL/_FWH6216-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-02T18:41:26.832Z"
+    },
+    "s-vXsREJV": {
+      "primaryImageId": "i-kFDzhBL",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "State Your Business",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kFDzhBL/0/KmczMdvC4Kz3k2JKx97frBX5xx4ZTphK5rNKptCSq/XL/_FWH6223-Enhanced-NR-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-kFDzhBL",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "State Your Business",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kFDzhBL/0/KmczMdvC4Kz3k2JKx97frBX5xx4ZTphK5rNKptCSq/XL/_FWH6223-Enhanced-NR-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-02T18:42:24.303Z"
+    },
+    "s-jFpf6zZ": {
+      "primaryImageId": "i-F75PGSb",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Along the Line",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-F75PGSb/0/MRqpwGJLgMWmRQvdCZqHskHStmvXQcJNVvLKZN87C/XL/_FWH6305-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-F75PGSb",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Along the Line",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-F75PGSb/0/MRqpwGJLgMWmRQvdCZqHskHStmvXQcJNVvLKZN87C/XL/_FWH6305-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-02T18:43:17.351Z"
     }
   }
 }

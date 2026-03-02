@@ -1,0 +1,29 @@
+[
+  {
+    "file": "./src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
+    "altCount": 89,
+    "descCount": 89,
+    "badAltCount": 0,
+    "badDescCount": 0,
+    "badAlt": [],
+    "badDesc": []
+  },
+  {
+    "file": "./src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+    "altCount": 527,
+    "descCount": 527,
+    "badAltCount": 0,
+    "badDescCount": 0,
+    "badAlt": [],
+    "badDesc": []
+  },
+  {
+    "file": "./src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
+    "altCount": 221,
+    "descCount": 221,
+    "badAltCount": 0,
+    "badDescCount": 0,
+    "badAlt": [],
+    "badDesc": []
+  }
+]

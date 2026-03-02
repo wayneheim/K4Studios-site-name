@@ -7,6 +7,23 @@ import {
   allImages
 } from '@data/galleryMaps/MasterGalleryData.mjs';
 
+const CANONICAL_LINK_MAP: Record<string, string> = {
+  'artistic western photography': '/Blog/what-is-artistic-western-photography',
+  'cowboy fine art photography': '/Cowboy-Fine-Art-Photography',
+  'fine art photography': '/Galleries/Fine-Art-Photography',
+  'historical themed western photography': '/Blog/what-is-historical-western-photography',
+  'historical western art': '/Historical-Western-Art',
+  'historical western photography': '/Blog/what-is-historical-western-photography',
+  'painterly fine art photography': '/Galleries/Painterly-Fine-Art-Photography',
+  'painterly photography': '/Blog/what-is-painterly-photography',
+  'western art': '/Blog/what-is-western-art',
+  'western black and white photography': '/Western-Black-and-White-Photography',
+  'western cowboy art': '/Blog/what-is-western-cowboy-art',
+  'western cowboy photography': '/Western-Cowboy-Photography',
+  'western cowboy portraits': '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits',
+  'western fine art': '/Blog/what-is-western-fine-art'
+};
+
 function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&");
 }
@@ -111,6 +128,31 @@ function normalizeKW(kw: string): string {
     .toLowerCase();
 }
 
+function normalizePath(path: string): string {
+  return String(path || '').replace(/\/+$/, '').toLowerCase();
+}
+
+function getPhraseLinkForKW(
+  kwLower: string,
+  semantic: typeof defaultSemantic
+): string | null {
+  const normKW = normalizeKW(kwLower);
+  for (const key of Object.keys(semantic)) {
+    if (key === 'synonymMap') continue;
+    const sec = (semantic as any)[key];
+    for (const bucket of ['landingPhrases', 'imagePhrases']) {
+      const phrases = sec?.[bucket] || [];
+      const found = phrases.find(
+        (p: any) => p?.use && p?.link && normalizeKW(p.phrase) === normKW
+      );
+      if (found?.link) {
+        return found.link;
+      }
+    }
+  }
+  return null;
+}
+
 function getAllImageSectionsForKW(
   kwLower: string,
   semantic: typeof defaultSemantic
@@ -161,18 +203,33 @@ function getAllImageSectionsForKW(
   return sections;
 }
 
+function hashToIndex(seed: string, length: number): number {
+  if (length <= 0) return 0;
+  let hash = 2166136261;
+  for (let i = 0; i < seed.length; i++) {
+    hash ^= seed.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0) % length;
+}
+
+function pickDeterministic<T>(items: T[], seed: string): T | undefined {
+  if (!items.length) return undefined;
+  return items[hashToIndex(seed, items.length)];
+}
+
 export function autoLinkKeywordsInText(
   html: string,
   _galleryDatas: any[],
   featheredImages: { id: string }[],
   _galleryPaths: string[],
   semantic = defaultSemantic,
-  pagePath: string  // REQUIRED - no default, must be passed explicitly
+  pagePath = ''
 ): string {
   if (!html) return html;
   
   // Normalize pagePath for comparison
-  const currentPath = (pagePath || '').replace(/\/+$/, '').toLowerCase();
+  const currentPath = normalizePath(pagePath || '');
 
   const exclude = new Set(featheredImages.map(i => i.id));
 
@@ -241,6 +298,22 @@ export function autoLinkKeywordsInText(
       href = overrides[matchText] || overrides[lc];
     }
 
+    // a.1) canonical SEO routing for priority phrases
+    if (!href && CANONICAL_LINK_MAP[lc]) {
+      const canonicalTarget = CANONICAL_LINK_MAP[lc];
+      if (normalizePath(canonicalTarget) !== currentPath) {
+        href = canonicalTarget;
+      }
+    }
+
+    // a.2) explicit semantic phrase-level link override
+    if (!href) {
+      const phraseLink = getPhraseLinkForKW(lc, semantic);
+      if (phraseLink && normalizePath(phraseLink) !== currentPath) {
+        href = phraseLink;
+      }
+    }
+
     // b) semantic landing — but if it points to the CURRENT page, use fallbackImagePath for image linking
     if (!href) {
       const res = getSectionForKW(lc, semantic);
@@ -251,7 +324,7 @@ export function autoLinkKeywordsInText(
           skipLinking = true;
         } else {
           // Normalize target path for comparison
-          const normTarget = targetPath.replace(/\/+$/, '').toLowerCase();
+          const normTarget = normalizePath(targetPath);
           
           // If linking to same page, use fallbackImagePath if defined
           if (normTarget === currentPath) {
@@ -327,7 +400,8 @@ export function autoLinkKeywordsInText(
         if (filtered.length) poolEntries = filtered;
 
         if (poolEntries.length) {
-          const pick = poolEntries[Math.floor(Math.random() * poolEntries.length)];
+          const pick = pickDeterministic(poolEntries, `${currentPath}|${lc}|image`);
+          if (!pick) continue;
           const base = pick.galleryKey.startsWith('/')
             ? pick.galleryKey
             : '/' + pick.galleryKey;
@@ -343,9 +417,10 @@ export function autoLinkKeywordsInText(
         // Exclude Archive images from universal pool
         let pool = allImages.filter(img => !exclude.has(img.id) && !isArchiveImage(img));
         if (!pool.length) pool = allImages.filter(img => !isArchiveImage(img));
-        const pick = pool[Math.floor(Math.random() * pool.length)];
-        const secRaw = pick.galleries?.[0] || sectionPath.replace(/^\//, '');
-        href = `/${secRaw}/${pick.id}`;
+        const pick = pickDeterministic(pool, `${currentPath}|${lc}|universal`);
+        if (!pick) continue;
+        const secRaw = String(pick.galleries?.[0] || '').replace(/^\/+/, '');
+        href = secRaw ? `/${secRaw}/${pick.id}` : `/Galleries/${pick.id}`;
       }
     }
 
@@ -401,7 +476,8 @@ export function autoLinkKeywordsInText(
             const filtered2 = poolEntries2.filter(e => !exclude.has(e.img.id));
             if (filtered2.length) poolEntries2 = filtered2;
             if (poolEntries2.length) {
-              const pick2 = poolEntries2[Math.floor(Math.random() * poolEntries2.length)];
+              const pick2 = pickDeterministic(poolEntries2, `${currentPath}|${lc}|${syn}|syn`);
+              if (!pick2) continue;
               const base2 = pick2.galleryKey.startsWith('/')
                 ? pick2.galleryKey
                 : '/' + pick2.galleryKey;

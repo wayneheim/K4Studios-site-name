@@ -5685,6 +5685,347 @@
       },
       "analysisVersion": 7,
       "indexedAt": "2026-03-02T18:14:57.209Z"
+    },
+    "i-sGQLsK8": {
+      "imageId": "i-sGQLsK8",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+      "dhash": "0000011101000011110000111100100010011000001101111000111000000000",
+      "width": 1024,
+      "height": 768,
+      "dominantColors": [
+        "#707050",
+        "#505030",
+        "#705050",
+        "#907050",
+        "#303030"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.22,
+      "brightnessAvg": 0.33,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.81,
+      "redCoverage": 0,
+      "yellowCoverage": 0.21,
+      "purpleCoverage": 0,
+      "contrastScore": 0.24,
+      "toneDistribution": {
+        "shadows": 0.16,
+        "midtones": 0.84,
+        "highlights": 0
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-02T18:15:59.007Z"
+    },
+    "i-Gz4Jq9R": {
+      "imageId": "i-Gz4Jq9R",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+      "dhash": "0010011000110001000011100110001100010000000000000000000000000000",
+      "width": 576,
+      "height": 768,
+      "dominantColors": [
+        "#303030",
+        "#505030",
+        "#707050",
+        "#505050",
+        "#503030"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.16,
+      "brightnessAvg": 0.33,
+      "greenCoverage": 0.01,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.67,
+      "redCoverage": 0,
+      "yellowCoverage": 0.28,
+      "purpleCoverage": 0,
+      "contrastScore": 0.35,
+      "toneDistribution": {
+        "shadows": 0.37,
+        "midtones": 0.59,
+        "highlights": 0.04
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-02T18:20:06.536Z"
+    },
+    "i-TCM54GK": {
+      "imageId": "i-TCM54GK",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+      "dhash": "1000000110010100101001010100111001010010000000000000000000000000",
+      "width": 576,
+      "height": 768,
+      "dominantColors": [
+        "#909070",
+        "#b0b090",
+        "#707050",
+        "#505050",
+        "#d0d0b0"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.14,
+      "brightnessAvg": 0.53,
+      "greenCoverage": 0.17,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.12,
+      "redCoverage": 0,
+      "yellowCoverage": 0.74,
+      "purpleCoverage": 0,
+      "contrastScore": 0.34,
+      "toneDistribution": {
+        "shadows": 0.03,
+        "midtones": 0.81,
+        "highlights": 0.16
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-02T18:23:30.587Z"
+    },
+    "i-jrpB3bj": {
+      "imageId": "i-jrpB3bj",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+      "dhash": "0011100010110110101101001000110001110011000000000000000000000000",
+      "width": 561,
+      "height": 768,
+      "dominantColors": [
+        "#505030",
+        "#707050",
+        "#907050",
+        "#d0b090",
+        "#303030"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.25,
+      "brightnessAvg": 0.41,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.99,
+      "redCoverage": 0,
+      "yellowCoverage": 0.01,
+      "purpleCoverage": 0,
+      "contrastScore": 0.4,
+      "toneDistribution": {
+        "shadows": 0.19,
+        "midtones": 0.72,
+        "highlights": 0.09
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-02T18:26:07.277Z"
+    },
+    "i-t9XL2ZG": {
+      "imageId": "i-t9XL2ZG",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+      "dhash": "0011101111001100101100011001110011010010000000000000000000000000",
+      "width": 614,
+      "height": 768,
+      "dominantColors": [
+        "#d0d0b0",
+        "#f0d0d0",
+        "#f0d0b0",
+        "#f0f0d0",
+        "#f0f0f0"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.35,
+      "brightnessAvg": 0.77,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.96,
+      "redCoverage": 0.03,
+      "yellowCoverage": 0.01,
+      "purpleCoverage": 0,
+      "contrastScore": 0.28,
+      "toneDistribution": {
+        "shadows": 0.01,
+        "midtones": 0.23,
+        "highlights": 0.76
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-02T18:28:29.971Z"
+    },
+    "i-V5dwLbs": {
+      "imageId": "i-V5dwLbs",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+      "dhash": "0110100100001110001100110001110011100111000000000000000000000000",
+      "width": 576,
+      "height": 768,
+      "dominantColors": [
+        "#d0d0b0",
+        "#b0b090",
+        "#b09070",
+        "#d0d0d0",
+        "#907050"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.26,
+      "brightnessAvg": 0.61,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.88,
+      "redCoverage": 0,
+      "yellowCoverage": 0.12,
+      "purpleCoverage": 0,
+      "contrastScore": 0.36,
+      "toneDistribution": {
+        "shadows": 0.04,
+        "midtones": 0.61,
+        "highlights": 0.35
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-02T18:30:57.418Z"
+    },
+    "i-mtXJmf8": {
+      "imageId": "i-mtXJmf8",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+      "dhash": "1011000110101101111011001010110011110110000000000000000000000000",
+      "width": 576,
+      "height": 768,
+      "dominantColors": [
+        "#f0d0b0",
+        "#909070",
+        "#b09070",
+        "#d0d0b0",
+        "#d0b090"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.28,
+      "brightnessAvg": 0.59,
+      "greenCoverage": 0.03,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.76,
+      "redCoverage": 0,
+      "yellowCoverage": 0.2,
+      "purpleCoverage": 0,
+      "contrastScore": 0.36,
+      "toneDistribution": {
+        "shadows": 0.03,
+        "midtones": 0.69,
+        "highlights": 0.28
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-02T18:35:03.319Z"
+    },
+    "i-3NCLt4s": {
+      "imageId": "i-3NCLt4s",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+      "dhash": "1100110011000110101100101001010011100111000000000000000000000000",
+      "width": 576,
+      "height": 768,
+      "dominantColors": [
+        "#f0f0d0",
+        "#d0d0b0",
+        "#f0f0f0",
+        "#d0b090",
+        "#b0b090"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.35,
+      "brightnessAvg": 0.74,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.88,
+      "redCoverage": 0,
+      "yellowCoverage": 0.12,
+      "purpleCoverage": 0,
+      "contrastScore": 0.33,
+      "toneDistribution": {
+        "shadows": 0.01,
+        "midtones": 0.41,
+        "highlights": 0.58
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-02T18:37:24.833Z"
+    },
+    "i-kFMq3s4": {
+      "imageId": "i-kFMq3s4",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+      "dhash": "0111100110001100111001111001110111101110000000000000000000000000",
+      "width": 576,
+      "height": 768,
+      "dominantColors": [
+        "#707050",
+        "#909070",
+        "#b0b090",
+        "#b09070",
+        "#907050"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.22,
+      "brightnessAvg": 0.46,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.57,
+      "redCoverage": 0,
+      "yellowCoverage": 0.41,
+      "purpleCoverage": 0,
+      "contrastScore": 0.32,
+      "toneDistribution": {
+        "shadows": 0.09,
+        "midtones": 0.88,
+        "highlights": 0.02
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-02T18:41:26.887Z"
+    },
+    "i-kFDzhBL": {
+      "imageId": "i-kFDzhBL",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+      "dhash": "1111111011110111101100011000111010010000000000000000000000000000",
+      "width": 576,
+      "height": 768,
+      "dominantColors": [
+        "#301010",
+        "#101010",
+        "#303010",
+        "#503010",
+        "#503030"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.39,
+      "brightnessAvg": 0.21,
+      "greenCoverage": 0.01,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.81,
+      "redCoverage": 0.17,
+      "yellowCoverage": 0.02,
+      "purpleCoverage": 0,
+      "contrastScore": 0.33,
+      "toneDistribution": {
+        "shadows": 0.72,
+        "midtones": 0.27,
+        "highlights": 0.01
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-02T18:42:24.334Z"
+    },
+    "i-F75PGSb": {
+      "imageId": "i-F75PGSb",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+      "dhash": "1000100111000110001100011000110011100111000000000000000000000000",
+      "width": 614,
+      "height": 768,
+      "dominantColors": [
+        "#f0f0d0",
+        "#f0f0f0",
+        "#d0d0b0",
+        "#b0b090",
+        "#f0d0d0"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.32,
+      "brightnessAvg": 0.68,
+      "greenCoverage": 0.12,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.49,
+      "redCoverage": 0,
+      "yellowCoverage": 0.46,
+      "purpleCoverage": 0,
+      "contrastScore": 0.45,
+      "toneDistribution": {
+        "shadows": 0.04,
+        "midtones": 0.41,
+        "highlights": 0.55
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-02T18:43:17.425Z"
     }
   }
 }

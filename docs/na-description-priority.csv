@@ -1,0 +1,90 @@
+index,id,title,length,score,tier,subjectMissing,locationMissing,intentMissing,salesTone
+0,i-k4studios,"Welcome K4 Studios",53,3,LIGHT,1,1,1,0
+1,i-7hD9CCh,"At the Water’s Edge",472,3,LIGHT,0,0,1,0
+2,i-rRdrQBg,"Above the Divide",376,4,MEDIUM,0,0,0,1
+3,i-4Hz6D7k,"Carried Forward",458,3,LIGHT,0,1,0,0
+4,i-LmpRvHw,"Watching the High Ground",501,6,HIGH,0,0,1,0
+5,i-89qzJ6S,"Brothers of the Open Country",557,7,HIGH,0,0,1,1
+6,i-wWNfZsT,"The Higher Silence",599,5,MEDIUM,0,1,1,0
+7,i-2s2LtQp,"High Country Sentinel",425,3,LIGHT,0,0,0,1
+8,i-5j2Knmb,"Eye of the Hunt",643,5,MEDIUM,1,0,0,1
+9,i-gL3Nnth,"Justified — or Damned “A Claustrophobic Consequence of Decisions”",568,5,MEDIUM,1,0,1,0
+10,i-WfRwfpM,"Standing Into Tomorrow",441,4,MEDIUM,0,1,1,0
+11,i-69qsFwx,"Young Warrior",390,5,MEDIUM,0,1,1,1
+12,i-QNdCxKN,"The Moment Before",479,3,LIGHT,0,1,0,0
+13,i-KtmPcCf,"Crossing in Silence",357,4,MEDIUM,0,1,1,1
+14,i-NgkC4Zt,"Elder of the Crossing",473,3,LIGHT,0,1,0,0
+15,i-6NQ6hQZ,"High Ground Justice",658,8,HIGH,1,1,0,1
+16,i-qLzRgbS,"In the Presence of Time",417,6,HIGH,0,0,1,1
+17,i-WMs24Db,"Watching Them Leave",654,6,HIGH,0,0,0,1
+18,i-phBP9Mt,"Held by Those Before",535,4,MEDIUM,0,1,0,0
+19,i-Ns73cwK,"Keeper of the Flame",385,5,MEDIUM,0,1,1,1
+20,i-h679dhn,"Carried Without Words",531,4,MEDIUM,0,1,0,0
+21,i-QJXw3Sj,"Red Stripe",343,6,HIGH,0,1,1,1
+22,i-WXNSQzk,"Taken by the Hand",475,3,LIGHT,0,1,0,0
+23,i-tMGHpqv,"The Long Way Through",480,3,LIGHT,0,1,0,0
+24,i-zZJbbHG,"Wrapped in What Remains",401,3,LIGHT,0,1,0,0
+25,i-FTCst2K,"Wrapped in Memory",423,3,LIGHT,0,1,0,0
+26,i-cNbW8wV,"Held by the Land",435,3,LIGHT,0,1,0,0
+27,i-thpSjMG,"Bearing the West",452,4,MEDIUM,0,1,1,0
+28,i-vJSCrqC,"Where the Land Widens",577,7,HIGH,0,1,0,1
+29,i-CD6rgtF,"Ancestral Ground",469,3,LIGHT,0,1,0,0
+30,i-Z7vtvZg,"Leading the Way",592,6,HIGH,0,0,0,1
+31,i-Cq3rbHT,"Bearing the Morning",480,3,LIGHT,0,1,0,0
+32,i-zt2btJ7,"Rooted in Breath",477,3,LIGHT,0,1,0,0
+33,i-bvn9Rmz,"Between Drumbeats",524,6,HIGH,0,1,1,1
+34,i-sDZFJ6t,"Unspoken",540,6,HIGH,0,1,1,1
+35,i-whbHxkn,"Done the Right Way",506,5,MEDIUM,0,1,1,0
+36,i-FkPcsBV,"Point the Way",396,3,LIGHT,0,1,0,0
+37,i-c3vWMgt,"No Clean Ending",596,9,HIGH,1,1,1,1
+38,i-hHVb4vC,"Carried by the Cry",673,7,HIGH,0,1,0,1
+39,i-Z54nXZm,"Watching the Wind",534,4,MEDIUM,0,1,0,0
+40,i-R7jg62J,"No Turning Back",537,5,MEDIUM,0,1,1,0
+41,i-9frbWfJ,"No Warning Given",425,4,MEDIUM,0,1,1,0
+42,i-4Wsxmqv,"Deviation of Destiny",392,4,MEDIUM,0,0,1,1
+43,i-4zxZQQ2,"Point of Decision",545,7,HIGH,0,1,0,1
+44,i-67Qt8WM,"Held Close",429,4,MEDIUM,0,1,1,0
+45,i-Z8pZLnt,"Held Close",429,4,MEDIUM,0,1,1,0
+46,i-z4mTWBb,"Held Breath",616,5,MEDIUM,0,1,0,1
+47,i-Gk8bBLn,"Driving the Water",466,3,LIGHT,0,1,0,0
+48,i-bxDjH9c,"Still Aim",506,4,MEDIUM,0,1,0,0
+49,i-V96Rgmj,"Eyes to the Brush",502,4,MEDIUM,0,1,0,0
+50,i-7vSccct,"No Room for Error",458,4,MEDIUM,0,1,1,0
+51,i-m3DqTjX,"Where the Story Points",443,6,HIGH,1,1,0,0
+52,i-sGW55ch,"Before the Eyes of the Hills",351,5,MEDIUM,0,1,0,1
+53,i-gQmqxZJ,"The Weight of Feathers",465,3,LIGHT,0,1,0,0
+54,i-nZbDC9C,"Held by Memory",513,5,MEDIUM,0,1,1,0
+55,i-KG7ZwXT,"The Waterline",508,4,MEDIUM,0,1,0,0
+56,i-tfZTHXq,"Held on the Sight",486,3,LIGHT,0,1,0,0
+57,i-8NsWqJQ,"Before the Strike Is Named",703,8,HIGH,0,1,1,1
+58,i-6vszqTK,"What the River Took",447,2,LIGHT,0,0,0,0
+59,i-7zpT5Hs,"Watcher on the River",524,3,LIGHT,0,0,0,0
+60,i-wmDznTm,"Drawn Before Thought",475,3,LIGHT,0,1,0,0
+61,i-LwWLjbH,"Held on the Current",474,2,LIGHT,0,0,0,0
+62,i-kVr4LnG,"Under Open Sky",453,3,LIGHT,0,1,0,0
+63,i-zDcr5T3,"Standing at Ease",450,3,LIGHT,0,1,0,0
+64,i-xfVhZw7,"After the Drums Fade",412,3,LIGHT,0,1,0,0
+65,i-rR76nKr,"The Effort Shows",469,3,LIGHT,0,1,0,0
+66,i-qnRRJK2,"Carried by the Cry",673,7,HIGH,0,1,0,1
+67,i-fCSxt3j,"The Long Line Home",451,4,MEDIUM,0,1,1,0
+68,i-7CjNq8p,"He Carries the Quiet",564,4,MEDIUM,0,1,0,0
+69,i-B3mmMvb,"Still Before the Wind",464,3,LIGHT,0,1,0,0
+70,i-vP6ZvBw,"Bearing the Morning",480,3,LIGHT,0,1,0,0
+71,i-FJWqP6b,"The Weight of the Draw",649,6,HIGH,0,1,0,0
+72,i-BJWt4zd,"Still Enough to Hear It",635,6,HIGH,0,1,0,0
+73,i-jWFcDHr,"Breath Before Thunder",361,6,HIGH,0,1,1,1
+74,i-qFwnr64,"The Higher Silence",599,5,MEDIUM,0,1,1,0
+75,i-StJWnTh,"He Stands Ready",525,4,MEDIUM,0,1,0,0
+76,i-567K6d3,"Across Quiet Water",431,3,LIGHT,0,1,0,0
+77,i-JbWnV3V,"Unspoken Lineage",506,4,MEDIUM,0,1,0,0
+78,i-RwCs5gt,"The Camp Holds",421,4,MEDIUM,0,1,1,0
+79,i-zjtVmT8,"Through Still Waters",370,6,HIGH,0,1,1,1
+80,i-FBQjX95,"The Draw Holds",453,3,LIGHT,0,1,0,0
+81,i-9FCHdBp,"Watching the Sky Settle",471,4,MEDIUM,0,1,1,0
+82,i-bWw2GPZ,"The Weight Between Steps",476,3,LIGHT,0,1,0,0
+83,i-48G2HVM,"Carrying What Remains",422,6,HIGH,0,1,1,0
+84,i-VVwZ7gM,"Brothers of the Open Country",557,7,HIGH,0,0,1,1
+85,i-RnKtV3Z,"The Higher Silence",599,5,MEDIUM,0,1,1,0
+86,i-q3f95K3,"Held in Profile",443,3,LIGHT,0,1,0,0
+87,i-sSHtMSC,"Before the Trigger Breaks",447,3,LIGHT,0,1,0,0
+88,i-Jbxc4G6,"Still Enough to Aim",547,4,MEDIUM,0,1,0,0

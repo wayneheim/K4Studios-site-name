@@ -11,11 +11,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const SITE_URL = 'https://www.k4studios.com';
-const LICENSE_URL = 'https://www.k4studios.com/About/License';
+const LICENSE_URL = 'https://www.k4studios.com/licensing';
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const REPO_ROOT = path.resolve(__dirname, '..');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
+const MAX_IMAGE_CAPTION_LENGTH = 480;
 
 function isGhostImageId(id) {
   return String(id || '').trim().toLowerCase() === GHOST_IMAGE_ID;
@@ -392,6 +393,14 @@ function escapeXml(str) {
     .replace(/'/g, '&apos;');
 }
 
+function normalizeCaptionText(value) {
+  if (!value) return '';
+  return String(value)
+    .replace(/[\u0000-\u001F\u007F]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 /**
  * Generate <url> entry with nested <image:image> for a gallery image
  */
@@ -415,28 +424,31 @@ function generateUrlEntry(image, urlBase) {
   const captionParts = [];
   
   // Primary: description
-  if (image.description && image.description.trim()) {
-    captionParts.push(image.description.trim());
+  const descriptionText = normalizeCaptionText(image.description);
+  if (descriptionText) {
+    captionParts.push(descriptionText);
   }
   
   // Secondary: story (if different from description)
-  if (image.story && image.story.trim()) {
-    const storyTrimmed = image.story.trim();
+  const storyText = normalizeCaptionText(image.story);
+  if (storyText) {
+    const storyTrimmed = storyText;
     // Only add if meaningfully different from description
-    if (!image.description || !image.description.includes(storyTrimmed.substring(0, 50))) {
+    if (!descriptionText || !descriptionText.includes(storyTrimmed.substring(0, 50))) {
       captionParts.push(storyTrimmed);
     }
   }
   
   // Tertiary: notes (collector context, historical references, art criticism)
-  if (image.notes && image.notes.trim()) {
-    captionParts.push(image.notes.trim());
+  const notesText = normalizeCaptionText(image.notes);
+  if (notesText) {
+    captionParts.push(notesText);
   }
   
-  // Join with paragraph separator, truncate if too long
-  let caption = captionParts.join(' ') || image.title || 'Fine Art Photograph by Wayne Heim';
-  if (caption.length > 2000) {
-    caption = caption.substring(0, 1997) + '...';
+  // Join with paragraph separator, then cap for concise image search snippets
+  let caption = normalizeCaptionText(captionParts.join(' ')) || normalizeCaptionText(image.title) || 'Fine Art Photograph by Wayne Heim';
+  if (caption.length > MAX_IMAGE_CAPTION_LENGTH) {
+    caption = caption.substring(0, MAX_IMAGE_CAPTION_LENGTH - 3).trimEnd() + '...';
   }
 
   // Use title as image title
@@ -559,7 +571,16 @@ async function main() {
     const outPath = path.join(PUBLIC_DIR, filename);
     await writeIfChanged(outPath, xml);
 
-    const lastmod = sectionLastmodMs > 0 ? new Date(sectionLastmodMs).toISOString() : null;
+    let sitemapFileMs = 0;
+    try {
+      const outStats = await stat(outPath);
+      sitemapFileMs = outStats.mtimeMs;
+    } catch {
+      // Ignore; fallback to section data timestamp.
+    }
+
+    const lastmodMs = Math.max(sectionLastmodMs || 0, sitemapFileMs || 0);
+    const lastmod = lastmodMs > 0 ? new Date(lastmodMs).toISOString() : null;
 
     // Track for index
     sitemapIndex.push({ filename, count: entries.length, lastmod });

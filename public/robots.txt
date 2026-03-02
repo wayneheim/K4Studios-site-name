@@ -216,3 +216,4 @@ Allow: /
 Sitemap: https://www.k4studios.com/sitemap.xml
 Sitemap: https://www.k4studios.com/blog-sitemap.xml
 Sitemap: https://www.k4studios.com/image-sitemap-index.xml
+Sitemap: https://www.k4studios.com/image-sitemap-cowboy.xml
