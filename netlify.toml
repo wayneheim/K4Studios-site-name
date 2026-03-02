@@ -162,14 +162,14 @@ status = 200
 # Canonicalize Engrained image URLs to SmugMug-mirroring structure:
 #   /Other/K4-Select-Series/Engrained/Engrained-Series/i-XXXX
 [[redirects]]
-from = "^/Other/K4-Select-Series/Engrained/(i-[^/]+)$"
-to = "/Other/K4-Select-Series/Engrained/Engrained-Series/$1"
+from = "/Other/K4-Select-Series/Engrained/i-:id"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id"
 status = 301
 force = true
 
 [[redirects]]
-from = "^/Other/K4-Select-Series/Engrained/(i-[^/]+)/(.*)$"
-to = "/Other/K4-Select-Series/Engrained/Engrained-Series/$1/$2"
+from = "/Other/K4-Select-Series/Engrained/i-:id/*"
+to = "/Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/:splat"
 status = 301
 force = true
 
