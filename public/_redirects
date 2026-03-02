@@ -8,11 +8,9 @@
 /Other/Blog  /Blog  301
 /Other/Blog/*  /Blog/:splat  301
 
-# Engrained image URL variants → canonical /Engrained/Engrained-Series/
-/Other/K4-Select-Series/:image  /Other/K4-Select-Series/Engrained/Engrained-Series/:image  301!
-/Other/K4-Select-Series/:image/*  /Other/K4-Select-Series/Engrained/Engrained-Series/:image/:splat  301!
-/Other/K4-Select-Series/Engrained/:image  /Other/K4-Select-Series/Engrained/Engrained-Series/:image  301!
-/Other/K4-Select-Series/Engrained/:image/*  /Other/K4-Select-Series/Engrained/Engrained-Series/:image/:splat  301!
+# Fix malformed Engrained image URLs missing /Engrained-Series
+/Other/K4-Select-Series/Engrained/i-:id  /Other/K4-Select-Series/Engrained/Engrained-Series/i-:id  301!
+/Other/K4-Select-Series/Engrained/i-:id/*  /Other/K4-Select-Series/Engrained/Engrained-Series/i-:id/:splat  301!
 
 # Block access to source files in production (should never be crawled)
 # In dev: These files exist so redirect won't trigger
