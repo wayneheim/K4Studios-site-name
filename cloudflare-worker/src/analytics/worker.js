@@ -340,61 +340,71 @@ async function getHumanCount(env, dateClause = "") {
       AND j.visitor_id IS NOT NULL
       AND j.visitor_id != ''
   )`;
-  const query = dateClause ? `
-      SELECT COUNT(DISTINCT e.visitor_id) as count
-      FROM classified_events e
-      WHERE e.is_bot = 0
-        AND e.visitor_id IS NOT NULL
-        AND e.visitor_id != ''
-        AND ${jsProof}
-        AND ${dateClause.replace(/\bts\b/g, "e.ts")}
-    ` : `
-      SELECT COUNT(DISTINCT e.visitor_id) as count
-      FROM classified_events e
-      WHERE e.is_bot = 0
-        AND e.source = 'js'
-        AND e.visitor_id IS NOT NULL
-        AND e.visitor_id != ''
-    `;
+    const query = dateClause ? `
+        SELECT COUNT(DISTINCT e.visitor_id) as count
+        FROM classified_events e
+        WHERE e.is_bot = 0
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
+          AND ${jsProof}
+          AND ${dateClause.replace(/\bts\b/g, "e.ts")}
+      ` : `
+        SELECT COUNT(DISTINCT e.visitor_id) as count
+        FROM classified_events e
+        WHERE e.is_bot = 0
+          AND e.source = 'js'
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
+      `;
   const result = await env.DB.prepare(query).first();
   return result?.count || 0;
 }
 __name(getHumanCount, "getHumanCount");
 __name2(getHumanCount, "getHumanCount");
 async function getArtViews(env, filters) {
-  const { dateClause, baseDateClause, hideBotsPredicate, hideBots } = filters;
+  const { dateClause, baseDateClause, hideBotsPredicate, hideBots, selectedDate } = filters;
   const notBotWhenHide = /* @__PURE__ */ __name2(
     (alias) => hideBots ? `AND COALESCE(${alias}.is_bot, 0) = 0` : "",
     "notBotWhenHide"
   );
-  const humanCount = await getHumanCount(env, dateClause);
-  if (humanCount === 0) {
-    return {
-      artViewsSummary: {
-        unique_viewers: 0,
-        chapter_views: 0,
-        xl_zooms: 0,
-        galleries: 0,
-        external_images: 0,
-        total: 0
-      },
-      artViewsByType: [],
-      topArtViews: { chapters: [], xlZooms: [], external: [], galleries: [] },
-      externalImageAccess: [],
-      externalImageAccessTotal: 0,
-      externalReachGeo: [],
-      externalReachSources: [],
-      entryRefCountsObj: {},
-      imageAccessOverview: [],
-      viewerDepth: {
-        avgScore: 0,
-        highDepthCount: 0,
-        totalViewers: 0,
-        distribution: []
-      },
-      suppressionStats: { suppressedToday: 0, activeSuppressedIPs: 0 }
-    };
-  }
+    const humanCount = await getHumanCount(env, dateClause);
+    if (humanCount === 0) {
+      return {
+        artViewsSummary: {
+          unique_viewers: 0,
+          chapter_views: 0,
+          xl_zooms: 0,
+          galleries: 0,
+          external_images: 0,
+          total: 0
+        },
+        artViewsByType: [],
+        topArtViews: { chapters: [], xlZooms: [], external: [], galleries: [] },
+        externalImageAccess: [],
+        externalImageAccessTotal: 0,
+        externalReachGeo: [],
+        externalReachSources: [],
+        externalDailySummary: {
+          generatedAt: (/* @__PURE__ */ new Date()).toISOString(),
+          todayLabel: selectedDate || "Today",
+          yesterdayLabel: selectedDate ? "Prev Day" : "Yesterday",
+          today: { total: 0, u: 0, e: 0 },
+          yesterday: { total: 0, u: 0, e: 0 },
+          delta: 0,
+          pct: 0,
+          topSources: []
+        },
+        entryRefCountsObj: {},
+        imageAccessOverview: [],
+        viewerDepth: {
+          avgScore: 0,
+          highDepthCount: 0,
+          totalViewers: 0,
+          distribution: []
+        },
+        suppressionStats: { suppressedToday: 0, activeSuppressedIPs: 0 }
+      };
+    }
   let artViewsSummary = {
     unique_viewers: humanCount,
     chapter_views: 0,
@@ -1258,6 +1268,62 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("External reach sources query failed:", e.message);
   }
+  let externalDailySummary = {
+    generatedAt: (/* @__PURE__ */ new Date()).toISOString(),
+    todayLabel: selectedDate || "Today",
+    yesterdayLabel: selectedDate ? "Prev Day" : "Yesterday",
+    today: { total: 0, u: 0, e: 0 },
+    yesterday: { total: 0, u: 0, e: 0 },
+    delta: 0,
+    pct: 0,
+    topSources: externalReachSources.slice(0, 3)
+  };
+  try {
+    const labelToday = selectedDate || "Today";
+    const labelYesterday = selectedDate ? "Prev Day" : "Yesterday";
+    const dayExpr = selectedDate ? `'${selectedDate}'` : `date('now', '-5 hours')`;
+    const prevDayExpr = selectedDate ? `date('${selectedDate}', '-1 day')` : `date('now', '-5 hours', '-1 day')`;
+    const dailyQuery = `
+      SELECT
+        date(e.ts, '-5 hours') as day,
+        COUNT(*) as total,
+        SUM(CASE WHEN COALESCE(e.ref_type, '') = 'external' THEN 1 ELSE 0 END) as e_hits,
+        SUM(CASE WHEN COALESCE(e.ref_type, '') != 'external' THEN 1 ELSE 0 END) as u_hits
+      FROM classified_events e
+      WHERE e.event_type IN ('external_image', 'direct_image')
+        AND (e.visitor_id IS NULL OR e.visitor_id = '')
+        AND ${notCacheWarmer("e")}
+        ${notBotWhenHide("e")}
+        AND date(e.ts, '-5 hours') IN (${dayExpr}, ${prevDayExpr})
+      GROUP BY date(e.ts, '-5 hours')
+    `;
+    const daily = await env.DB.prepare(dailyQuery).all();
+    const byDay = /* @__PURE__ */ new Map((daily.results || []).map((r) => [String(r.day || ""), {
+      total: Number(r.total || 0),
+      u: Number(r.u_hits || 0),
+      e: Number(r.e_hits || 0)
+    }]));
+    const dayKey = selectedDate || (/* @__PURE__ */ new Date(Date.now() - 5 * 60 * 60 * 1e3)).toISOString().slice(0, 10);
+    const prevDateObj = new Date(dayKey + "T00:00:00Z");
+    prevDateObj.setUTCDate(prevDateObj.getUTCDate() - 1);
+    const prevKey = prevDateObj.toISOString().slice(0, 10);
+    const todayData = byDay.get(dayKey) || { total: 0, u: 0, e: 0 };
+    const yesterdayData = byDay.get(prevKey) || { total: 0, u: 0, e: 0 };
+    const delta = todayData.total - yesterdayData.total;
+    const pct = yesterdayData.total > 0 ? Math.round(delta / yesterdayData.total * 1e3) / 10 : 0;
+    externalDailySummary = {
+      generatedAt: (/* @__PURE__ */ new Date()).toISOString(),
+      todayLabel: labelToday,
+      yesterdayLabel: labelYesterday,
+      today: todayData,
+      yesterday: yesterdayData,
+      delta,
+      pct,
+      topSources: externalReachSources.slice(0, 3)
+    };
+  } catch (e) {
+    console.log("External daily summary query failed:", e.message);
+  }
   let topExternal = [];
   try {
     const extImgQuery = `
@@ -1440,170 +1506,7 @@ async function getArtViews(env, filters) {
   artViewsSummary.externalDisplays = externalDisplays;
   artViewsSummary.noRefExternalViews = noRefExternalViews;
   artViewsSummary.externalGeography = externalGeography;
-  const imageMap = {};
-  function setLastSeenIfLater(img, ts) {
-    if (!ts) return;
-    const t = String(ts).trim();
-    if (!t) return;
-    if (!img.last_seen || t > img.last_seen) img.last_seen = t;
-  }
-  __name(setLastSeenIfLater, "setLastSeenIfLater");
-  __name2(setLastSeenIfLater, "setLastSeenIfLater");
-  function normalizeGeo(g) {
-    if (!g) return null;
-    const country = (g.country || "").toString().trim() || null;
-    const region = (g.region || "").toString().trim() || null;
-    const city = (g.city || "").toString().trim() || null;
-    if (!country && !region && !city) return null;
-    return { country, region, city };
-  }
-  __name(normalizeGeo, "normalizeGeo");
-  __name2(normalizeGeo, "normalizeGeo");
-  function setGeoIfBetter(img, geo, priority) {
-    const g = normalizeGeo(geo);
-    if (!g) return;
-    if ((img.geo_priority ?? 99) <= priority) return;
-    img.geo = g;
-    img.geo_priority = priority;
-  }
-  __name(setGeoIfBetter, "setGeoIfBetter");
-  __name2(setGeoIfBetter, "setGeoIfBetter");
-  function ensureImage(id) {
-    if (!imageMap[id]) {
-      imageMap[id] = {
-        image_id: id,
-        badges: [],
-        chapter_views: 0,
-        xl_zooms: 0,
-        unverified_views: 0,
-        external_views: 0,
-        countries: /* @__PURE__ */ new Set(),
-        sources: [],
-        geo: null,
-        geo_priority: 99,
-        devices: /* @__PURE__ */ new Set(),
-        url: null,
-        url_priority: 99,
-        last_seen: null
-      };
-    }
-    return imageMap[id];
-  }
-  __name(ensureImage, "ensureImage");
-  __name2(ensureImage, "ensureImage");
-  function normalizeUrl(raw) {
-    if (!raw) return null;
-    const s = String(raw).trim();
-    if (!s) return null;
-    return s;
-  }
-  __name(normalizeUrl, "normalizeUrl");
-  __name2(normalizeUrl, "normalizeUrl");
-  function setUrlIfBetter(img, url, priority) {
-    const u = normalizeUrl(url);
-    if (!u) return;
-    if ((img.url_priority ?? 99) <= priority) return;
-    img.url = u;
-    img.url_priority = priority;
-  }
-  __name(setUrlIfBetter, "setUrlIfBetter");
-  __name2(setUrlIfBetter, "setUrlIfBetter");
-  for (const c of topChapters) {
-    const img = ensureImage(c.target_id);
-    const badge = c.has_js_view ? "C" : "I";
-    if (!img.badges.includes(badge)) img.badges.push(badge);
-    img.chapter_views = c.views;
-    setLastSeenIfLater(img, c.last_seen);
-    if (c.has_js_view) {
-      setGeoIfBetter(img, c.geo, 0);
-      setUrlIfBetter(img, c.url, 0);
-      if (c.countries)
-        c.countries.split(",").forEach((co) => co && img.countries.add(co.trim()));
-      if (Array.isArray(c.devices))
-        c.devices.forEach((d) => d && img.devices.add(String(d).toLowerCase()));
-      if (c.referrer_source && c.referrer_source !== "Internal" && c.referrer_source !== "Unknown") {
-        if (!img.sources.includes(c.referrer_source))
-          img.sources.push(c.referrer_source);
-      }
-    } else {
-      setGeoIfBetter(img, c.geo, 2);
-      setUrlIfBetter(img, c.url, 2);
-    }
-  }
-  for (const z of topZooms) {
-    const img = ensureImage(z.target_id);
-    img.xl_zooms = z.views;
-    setLastSeenIfLater(img, z.last_seen);
-    setGeoIfBetter(img, z.geo, 0);
-    setUrlIfBetter(img, z.url, 1);
-    if (Array.isArray(z.devices))
-      z.devices.forEach((d) => d && img.devices.add(String(d).toLowerCase()));
-  }
-  for (const ext of externalImageAccess) {
-    const img = ensureImage(ext.target_id);
-    setLastSeenIfLater(img, ext.last_seen);
-    if (ext.access_type === "external_referral") {
-      if (!img.badges.includes("E")) img.badges.push("E");
-      img.external_views += ext.hits;
-      setGeoIfBetter(img, ext.geo, 2);
-    } else {
-      if (!img.badges.includes("U")) img.badges.push("U");
-      img.unverified_views += ext.hits;
-      setGeoIfBetter(img, ext.geo, 1);
-    }
-    if (ext.country) img.countries.add(ext.country);
-    if (ext.asset_source_label) {
-      img.sources.push(ext.asset_source_label);
-    }
-    if (ext.access_type === "external_referral") {
-      if (ext.referrer_source && ext.referrer_source !== "Unknown") {
-        img.sources.push(ext.referrer_source);
-      }
-    } else if (ext.access_type === "direct") {
-      if (!img.sources.includes("No Referrer")) img.sources.push("No Referrer");
-    } else if (ext.access_type === "internal_navigation") {
-      if (!img.sources.includes("Internal")) img.sources.push("Internal");
-    }
-  }
-  try {
-    const imageIdMap = await getImageIdMapCached();
-    if (imageIdMap) {
-      for (const img of Object.values(imageMap)) {
-        if (img?.image_id && !img.url) {
-          const galleryPath = getCanonicalGalleryPathForImageId(
-            imageIdMap,
-            img.image_id
-          );
-          if (galleryPath) {
-            const canonicalUrl = "https://k4studios.com" + galleryPath + "/" + img.image_id + "/";
-            setUrlIfBetter(img, canonicalUrl, 9);
-          }
-        }
-      }
-    }
-  } catch (e) {
-    console.log("Canonical URL backfill failed:", e?.message || e);
-  }
-  const imageAccessOverview = Object.values(imageMap).map((img) => ({
-    image_id: img.image_id,
-    badges: img.badges,
-    chapter_views: img.chapter_views,
-    xl_zooms: img.xl_zooms,
-    unverified_views: img.unverified_views,
-    external_views: img.external_views,
-    last_seen: img.last_seen,
-    geo: img.geo,
-    countries: Array.from(img.countries).filter(Boolean),
-    sources: [...new Set(img.sources)],
-    devices: Array.from(img.devices).filter(Boolean),
-    url: img.url,
-    total: img.chapter_views + img.xl_zooms + img.unverified_views + img.external_views
-  })).sort((a, b) => {
-    const ta = a.last_seen || "";
-    const tb = b.last_seen || "";
-    if (ta !== tb) return tb.localeCompare(ta);
-    return b.total - a.total;
-  });
+  const imageAccessOverview = [];
   return {
     artViewsSummary,
     artViewsByType: [],
@@ -1617,6 +1520,7 @@ async function getArtViews(env, filters) {
     externalImageAccessTotal,
     externalReachGeo,
     externalReachSources,
+    externalDailySummary,
     entryRefCountsObj,
     imageAccessOverview,
     viewerDepth,
@@ -1944,6 +1848,20 @@ async function getStatePixelTestRoaring20s(env, filters) {
           FROM raw_events r
           WHERE ${qualifiedDateClauseRaw}
             AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND r.source_layer = 'chapter_nav_prev_pixel_v1'
+        ) AS chapter_nav_prev_pixel_v1_hits,
+        (
+          SELECT COUNT(*)
+          FROM raw_events r
+          WHERE ${qualifiedDateClauseRaw}
+            AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND r.source_layer = 'chapter_nav_next_pixel_v1'
+        ) AS chapter_nav_next_pixel_v1_hits,
+        (
+          SELECT COUNT(*)
+          FROM raw_events r
+          WHERE ${qualifiedDateClauseRaw}
+            AND r.event_type IN ('state_pixel', 'action_pixel')
             AND r.source_layer = 'slideshow_nav_prev_pixel_v1'
         ) AS slideshow_nav_prev_pixel_v1_hits,
         (
@@ -2203,6 +2121,8 @@ async function getStatePixelTestRoaring20s(env, filters) {
       more_info_open_pixel_v1_hits: Number(summaryRow?.more_info_open_pixel_v1_hits || 0),
       sister_image_click_pixel_v1_hits: Number(summaryRow?.sister_image_click_pixel_v1_hits || 0),
       slideshow_start_pixel_v1_hits: Number(summaryRow?.slideshow_start_pixel_v1_hits || 0),
+      chapter_nav_prev_pixel_v1_hits: Number(summaryRow?.chapter_nav_prev_pixel_v1_hits || 0),
+      chapter_nav_next_pixel_v1_hits: Number(summaryRow?.chapter_nav_next_pixel_v1_hits || 0),
       slideshow_nav_prev_pixel_v1_hits: Number(summaryRow?.slideshow_nav_prev_pixel_v1_hits || 0),
       slideshow_nav_next_pixel_v1_hits: Number(summaryRow?.slideshow_nav_next_pixel_v1_hits || 0),
       collector_notes_open_pixel_v1_hits: Number(summaryRow?.collector_notes_open_pixel_v1_hits || 0),
@@ -2265,6 +2185,8 @@ async function getStatePixelTestRoaring20s(env, filters) {
       more_info_open_pixel_v1_hits: 0,
       sister_image_click_pixel_v1_hits: 0,
       slideshow_start_pixel_v1_hits: 0,
+      chapter_nav_prev_pixel_v1_hits: 0,
+      chapter_nav_next_pixel_v1_hits: 0,
       slideshow_nav_prev_pixel_v1_hits: 0,
       slideshow_nav_next_pixel_v1_hits: 0,
       collector_notes_open_pixel_v1_hits: 0,
@@ -3899,6 +3821,7 @@ function buildDashboardData(queryResults, filterParams) {
     externalImageAccessTotal,
     externalReachGeo,
     externalReachSources,
+    externalDailySummary,
     entryRefCountsObj,
     imageAccessOverview,
     viewerDepth,
@@ -3974,6 +3897,16 @@ function buildDashboardData(queryResults, filterParams) {
     externalImageAccessTotal: externalImageAccessTotal || 0,
     externalReachGeo: externalReachGeo || [],
     externalReachSources: externalReachSources || [],
+    externalDailySummary: externalDailySummary || {
+      generatedAt: (/* @__PURE__ */ new Date()).toISOString(),
+      todayLabel: selectedDate || "Today",
+      yesterdayLabel: selectedDate ? "Prev Day" : "Yesterday",
+      today: { total: 0, u: 0, e: 0 },
+      yesterday: { total: 0, u: 0, e: 0 },
+      delta: 0,
+      pct: 0,
+      topSources: []
+    },
     viewerDepth,
     imageAccessOverview: imageAccessOverview || [],
     suppressionStats,
@@ -4044,6 +3977,7 @@ function renderDashboard({
   externalImageAccessTotal,
   externalReachGeo,
   externalReachSources,
+  externalDailySummary,
   imageAccessOverview,
   viewerDepth,
   suppressionStats,
@@ -4089,6 +4023,12 @@ function renderDashboard({
     sp.sister_image_click_pixel_v1_hits || 0
   );
   const spSlideshowStartV1Hits = Number(sp.slideshow_start_pixel_v1_hits || 0);
+  const spChapterNavPrevV1Hits = Number(
+    sp.chapter_nav_prev_pixel_v1_hits || 0
+  );
+  const spChapterNavNextV1Hits = Number(
+    sp.chapter_nav_next_pixel_v1_hits || 0
+  );
   const spSlideshowNavPrevV1Hits = Number(
     sp.slideshow_nav_prev_pixel_v1_hits || 0
   );
@@ -4127,6 +4067,8 @@ function renderDashboard({
     spMoreInfoOpenV1Hits,
     spSisterImageClickV1Hits,
     spSlideshowStartV1Hits,
+    spChapterNavPrevV1Hits,
+    spChapterNavNextV1Hits,
     spSlideshowNavPrevV1Hits,
     spSlideshowNavNextV1Hits,
     spCollectorNotesV1Hits,
@@ -4223,6 +4165,21 @@ function renderDashboard({
   const totalArtViewers = isMultiDay ? summedArtViewers : singleDayTrend?.art_viewers || summedArtViewers;
   const isLevel5BlockRecommended = /* @__PURE__ */ __name2((suspect) => {
     if (!suspect || suspect.status === "blocked") return false;
+    const knownSearchBots = /* @__PURE__ */ new Set([
+      "googlebot",
+      "bingbot",
+      "duckduckbot",
+      "yandexbot",
+      "baiduspider",
+      "applebot",
+      "slurp",
+      "petalbot",
+      "ccbot",
+      "facebookexternalhit"
+    ]);
+    const botName = String(suspect.bot_name || "").trim().toLowerCase();
+    if (suspect.status === "verified") return false;
+    if (botName && knownSearchBots.has(botName)) return false;
     if ((suspect.risk_level || 0) < 4) return false;
     if (suspect.is_verified_bot) return false;
     const hardStopsDay = Number(
@@ -4365,6 +4322,11 @@ function renderDashboard({
     p.delete("hideChardon");
     return "?" + p.toString();
   })();
+  const refreshUEUrl = (() => {
+    const p = new URLSearchParams(baseParams);
+    p.set("refreshUE", "1");
+    return "?" + p.toString();
+  })();
   const periodLabel = yesterday ? "Yesterday" : `Last ${days} day(s)`;
   const greenBadgeLabel = (() => {
     const today = /* @__PURE__ */ new Date();
@@ -4425,6 +4387,16 @@ function renderDashboard({
   );
   const coreAccessViews = (imageAccessTotals.chapterViews || 0) + (imageAccessTotals.zoomViews || 0) + internalProxyViews;
   const exposureViews = (imageAccessTotals.chapterViews || 0) + (imageAccessTotals.externalViews || 0);
+  const extSummary = externalDailySummary || {
+    generatedAt: (/* @__PURE__ */ new Date()).toISOString(),
+    todayLabel: selectedDate || "Today",
+    yesterdayLabel: selectedDate ? "Prev Day" : "Yesterday",
+    today: { total: 0, u: 0, e: 0 },
+    yesterday: { total: 0, u: 0, e: 0 },
+    delta: 0,
+    pct: 0,
+    topSources: []
+  };
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -4481,8 +4453,8 @@ function renderDashboard({
     th, td { padding: 5px 8px; text-align: left; border-bottom: 1px solid #333; font-size: 12px; }
     th { background: #1a1a1a; color: #888; font-size: 12px; text-transform: uppercase; }
     tr:last-child td { border-bottom: none; }
-    /* Main grid - fixed 5-column layout, centered */
-    .grid, .grid-tall { display: grid; grid-template-columns: repeat(5, 348px); gap: 10px; margin: 0 auto 10px auto; width: fit-content; }
+    /* Main grid - 4-column full-width layout to match other containers */
+    .grid, .grid-tall { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 0 auto 10px auto; width: 100%; max-width: 1780px; }
     .section { background: #252525; border-radius: 8px; padding: 10px; overflow: visible; }
     .grid > .section, .grid-tall > .section { max-height: var(--k4-grid-panel-max); overflow-y: auto; scrollbar-gutter: stable; }
 
@@ -4507,7 +4479,7 @@ function renderDashboard({
     /* Bar chart styles */
     .bar-row { display: flex; align-items: center; padding: 4px 0; border-bottom: 1px solid #333; }
     .bar-row:last-child { border-bottom: none; }
-    .bar-label { width: 110px; flex-shrink: 0; font-size: 11px; color: #ccc; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .bar-label { width: 100px; flex-shrink: 0; font-size: 11px; color: #ccc; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .bar-container { flex: 1; background: #1a1a1a; border-radius: 4px; height: 16px; margin: 0 6px; overflow: hidden; }
     .bar { height: 100%; background: linear-gradient(90deg, #4a9eff 0%, #2d7dd2 100%); border-radius: 4px; transition: width 0.3s ease; }
     .bar-value { width: 35px; flex-shrink: 0; text-align: right; font-size: 12px; color: #888; }
@@ -5279,24 +5251,36 @@ function renderDashboard({
 
 
   ${isSingleDay ? `
-  <!-- Art Views Section -->
-  <div class="artviews-header">
-    <div class="artviews-title">\u{1F3A8} ART VIEWS <span class="subtle">Human art viewers (cleaned)</span></div>
-    <span class="help-trigger">
-      <span class="info-icon">i</span>
-      <div class="tooltip">
-        <strong>How Art Views are counted</strong><br><br>
-        \u2022 <strong>Chapters</strong> \u2192 proxy L-size image fetches with internal referer<br>
-        \u2022 <strong>XL Zooms</strong> \u2192 JS intent beacons (same-origin)<br>
-        \u2022 <strong>External embeds</strong> \u2192 proxy L-size fetches with external/no referer<br>
-        \u2022 <strong>Bot exclusion</strong> \u2192 datacenter IP + scraper UA filtering
-      </div>
-    </span>
-  </div>
-
-  <div class="access-grid" style="display: grid; grid-template-columns: 1fr 280px 280px; gap: 12px; max-width: 1780px; margin: 0 auto;">
-    <!-- Image Access Overview (unified panel) -->
+  <div class="access-grid" style="display:none; grid-template-columns: 1fr 280px; gap: 12px; max-width: 1780px; margin: 0 auto;">
     <div class="section" style="max-height: none;">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+        <h3 style="margin:0;">🌐 External Reach (Daily)</h3>
+        <a href="${refreshUEUrl}" class="mini-btn" style="text-decoration:none;">↻ Refresh</a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+        <div style="background:#1f1f1f;border:1px solid #333;border-radius:6px;padding:8px;">
+          <div style="font-size:10px;color:#9aa3ad;">${extSummary.todayLabel}</div>
+          <div style="font-size:18px;font-weight:800;color:#f59e0b;">${Number(extSummary?.today?.total || 0)}</div>
+          <div style="font-size:11px;color:#cbd5e1;">U ${Number(extSummary?.today?.u || 0)} · E ${Number(extSummary?.today?.e || 0)}</div>
+        </div>
+        <div style="background:#1f1f1f;border:1px solid #333;border-radius:6px;padding:8px;">
+          <div style="font-size:10px;color:#9aa3ad;">${extSummary.yesterdayLabel}</div>
+          <div style="font-size:18px;font-weight:800;color:#93c5fd;">${Number(extSummary?.yesterday?.total || 0)}</div>
+          <div style="font-size:11px;color:#cbd5e1;">U ${Number(extSummary?.yesterday?.u || 0)} · E ${Number(extSummary?.yesterday?.e || 0)}</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+        <span style="font-size:11px;color:#9aa3ad;">Delta:</span>
+        <span style="font-size:12px;font-weight:700;color:${Number(extSummary?.delta || 0) >= 0 ? "#f59e0b" : "#93c5fd"};">${Number(extSummary?.delta || 0) >= 0 ? "+" : ""}${Number(extSummary?.delta || 0)} (${Number(extSummary?.pct || 0)}%)</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;">
+        ${(Array.isArray(extSummary?.topSources) && extSummary.topSources.length > 0 ? extSummary.topSources : (externalReachSources || []).slice(0, 4)).map((s2) => '<div style="display:flex;align-items:center;justify-content:space-between;background:#1a1a1a;border-radius:4px;padding:4px 6px;"><span style="color:#ccc;font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+String(s2?.source || "Unknown")+'</span><span style="color:#f59e0b;font-size:11px;font-weight:700;">'+Number(s2?.hits || 0)+'</span></div>').join("") || '<div style="color:#666;font-size:11px;">No external source data yet</div>'}
+      </div>
+      <div style="margin-top:8px;font-size:10px;color:#666;">Generated ${String(extSummary?.generatedAt || "").replace("T", " ").slice(0, 19)}Z</div>
+    </div>
+
+    <!-- Image Access Overview (unified panel) -->
+    <div class="section" style="max-height: none; display:none;">
       <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap;">
         <h3 style="margin: 0;">\u{1F4CA} Image Access Overview</h3>
         <span style="font-size: 10px; color: #9aa3ad;">External / Unidentified art views (U + E, non-JS signals)</span>
@@ -5534,24 +5518,7 @@ function renderDashboard({
       </div>
       <p style="font-size: 9px; color: #555; margin-top: 6px;">O = External/Unidentified non-JS art views (U + E)</p>
     </div>
-    <!-- Galleries sidebar (always visible) -->
-    <div class="section" style="max-height: none;">
-      <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #c4b5fd; display: flex; align-items: center; justify-content: space-between;">
-        <span>\u{1F4C1} Galleries</span>
-        <span style="background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%); color: #1f2937; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold;">${topGalleryLandingTotalViews}</span>
-      </h4>
-      <div id="art-galleries-list" style="display: flex; flex-direction: column; gap: 6px; max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;">
-        ${(galleryCellRows || []).length === 0 ? '<div style="color:#666;font-size:11px;padding:6px 2px;">No data yet</div>' : (galleryCellRows || []).map((a, i) => {
-    const pagePath = String(a.page_path || "").startsWith("/") ? String(a.page_path || "") : "/" + String(a.page_path || "").replace(/^\/+/, "");
-    const linkUrl = pagePath ? "https://k4studios.com" + pagePath : "#";
-    const displayLabel = galleryDisplayNameFromPath(pagePath);
-    const totalActivity = Number(a.total_activity || 0);
-    return '<a href="' + linkUrl + '" target="_blank" style="display: flex; align-items: center; gap: 8px; background: rgba(196, 181, 253, 0.1); border-radius: 6px; padding: 4px; border-left: 3px solid #c4b5fd; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background=\'rgba(196,181,253,0.25)\'" onmouseout="this.style.background=\'rgba(196,181,253,0.1)\'"><span style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #333; border-radius: 4px; font-size: 20px;">\u{1F4C1}</span><div style="flex: 1; min-width: 0;"><div style="display:flex; align-items:center; gap:6px;"><div style="color: #c4b5fd; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; flex: 1; min-width: 0;" title="' + pagePath + '">' + displayLabel + '</div></div><div style="display: flex; gap: 8px; margin-top: 2px; align-items:center;"><span style="font-size: 12px; font-weight: bold; color: #c4b5fd;">' + totalActivity + '</span><span style="font-size: 11px; color: #888;">' + (a.unique_viewers || 0) + ' \u{1F464}</span></div></div></a>';
-  }).join("")}
-      </div>
-    </div>
-
-    <!-- Devices (moved up next to Galleries) -->
+    <!-- Devices -->
     <div class="section" style="max-height: none;">
       <div class="section-header">
         <h3>Devices</h3>
@@ -5659,7 +5626,7 @@ function renderDashboard({
 
   <!-- All sections grid -->
   <div class="grid" style="margin-top: 20px;">
-    <div class="section">
+    <div class="section" style="order: 5;">
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2px;">
         <div style="display:flex; align-items:center; gap:10px;">
           <h3 style="margin:0;">Pixel Event Tracking</h3>
@@ -5842,6 +5809,20 @@ function renderDashboard({
           </div>
           <span class="bar-value">${spSlideshowStartV1Hits}</span>
         </div>
+        <div class="bar-row" data-label="Chapter Nav Prev (total)" data-count="${spChapterNavPrevV1Hits}">
+          <span class="bar-label" title="Chapter Nav Prev (total)">Chapter Nav Prev (total)</span>
+          <div class="bar-container">
+            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spChapterNavPrevV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #22d3ee 0%, #155e75 100%);"></div>
+          </div>
+          <span class="bar-value">${spChapterNavPrevV1Hits}</span>
+        </div>
+        <div class="bar-row" data-label="Chapter Nav Next (total)" data-count="${spChapterNavNextV1Hits}">
+          <span class="bar-label" title="Chapter Nav Next (total)">Chapter Nav Next (total)</span>
+          <div class="bar-container">
+            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spChapterNavNextV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #2dd4bf 0%, #115e59 100%);"></div>
+          </div>
+          <span class="bar-value">${spChapterNavNextV1Hits}</span>
+        </div>
         <div class="bar-row" data-label="Slideshow Prev (total)" data-count="${spSlideshowNavPrevV1Hits}">
           <span class="bar-label" title="Slideshow Prev (total)">Slideshow Prev (total)</span>
           <div class="bar-container">
@@ -5874,7 +5855,7 @@ function renderDashboard({
     </div>
 
     <!-- Site Geography -->
-    <div class="section k4-split-panel">
+    <div class="section k4-split-panel" style="order: 3;">
       <div class="section-header">
         <h3>\u{1F5FA}\uFE0F Site Geography</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Geography for non-gallery, non-image page browsing (excludes gallery landing pages and <code>/i-...</code> image pages), grouped by location.</div></span>
@@ -5981,7 +5962,7 @@ function renderDashboard({
     </div>
 
     <!-- Image Geography (JS) -->
-    <div class="section k4-split-panel">
+    <div class="section k4-split-panel" style="order: 4;">
       <div class="section-header">
         <h3>\u{1F3A8} Image Geography (JS)</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Unique JS visitors with image P-pixel activity (state/action pixels on valid i-* targets).</div></span>
@@ -6087,8 +6068,8 @@ function renderDashboard({
   })()}
     </div>
 
-    <!-- External Reach -->
-    <div class="section k4-split-panel">
+    <!-- External Reach (moved to Art Views row) -->
+    <div class="section k4-split-panel" style="display:none;">
       <div class="section-header">
         <h3>\u{1F310} External Reach</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Non-JS traffic: bots, bounces, blocked JS. Separate population from verified visitors.</div></span>
@@ -6146,7 +6127,77 @@ function renderDashboard({
   })()}
     </div>
 
-    <div class="section">
+    <div class="section" style="order: 7; max-height: none;">
+      <div class="section-header" style="justify-content:space-between;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <h3 style="margin:0;">🌐 External Reach (Daily)</h3>
+          <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">External Reach (Daily) shows U/E non-JS traffic for a single selected date.</div></span>
+        </div>
+        ${isSingleDay ? `<a href="${refreshUEUrl}" class="mini-btn" style="text-decoration:none;">↻ Refresh</a>` : ``}
+      </div>
+      <div style="min-width:0;">
+          ${isSingleDay ? `
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+            <div style="background:#1f1f1f;border:1px solid #333;border-radius:6px;padding:8px;">
+              <div style="font-size:10px;color:#9aa3ad;">${extSummary.todayLabel}</div>
+              <div style="font-size:18px;font-weight:800;color:#f59e0b;">${Number(extSummary?.today?.total || 0)}</div>
+              <div style="font-size:11px;color:#cbd5e1;">U ${Number(extSummary?.today?.u || 0)} · E ${Number(extSummary?.today?.e || 0)}</div>
+            </div>
+            <div style="background:#1f1f1f;border:1px solid #333;border-radius:6px;padding:8px;">
+              <div style="font-size:10px;color:#9aa3ad;">${extSummary.yesterdayLabel}</div>
+              <div style="font-size:18px;font-weight:800;color:#93c5fd;">${Number(extSummary?.yesterday?.total || 0)}</div>
+              <div style="font-size:11px;color:#cbd5e1;">U ${Number(extSummary?.yesterday?.u || 0)} · E ${Number(extSummary?.yesterday?.e || 0)}</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+            <span style="font-size:11px;color:#9aa3ad;">Delta:</span>
+            <span style="font-size:12px;font-weight:700;color:${Number(extSummary?.delta || 0) >= 0 ? "#f59e0b" : "#93c5fd"};">${Number(extSummary?.delta || 0) >= 0 ? "+" : ""}${Number(extSummary?.delta || 0)} (${Number(extSummary?.pct || 0)}%)</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            ${(Array.isArray(extSummary?.topSources) && extSummary.topSources.length > 0 ? extSummary.topSources : (externalReachSources || []).slice(0, 4)).map((s2) => '<div style="display:flex;align-items:center;justify-content:space-between;background:#1a1a1a;border-radius:4px;padding:4px 6px;"><span style="color:#ccc;font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+String(s2?.source || "Unknown")+'</span><span style="color:#f59e0b;font-size:11px;font-weight:700;">'+Number(s2?.hits || 0)+'</span></div>').join("") || '<div style="color:#666;font-size:11px;">No external source data yet</div>'}
+          </div>
+          <div style="margin-top:8px;font-size:10px;color:#666;">Generated ${String(extSummary?.generatedAt || "").replace("T", " ").slice(0, 19)}Z</div>
+          ` : `
+          <div style="color:#666;font-size:12px;opacity:0.8;">Select a single date to view daily external reach.</div>
+          `}
+
+          <div style="margin-top: 10px; border-top: 1px solid #333; padding-top: 10px;">
+            <div style="font-size:11px;color:#9aa3ad;margin:0 0 6px 0;font-weight:600;">Devices</div>
+            <table>
+              <tr><th>Platform</th><th>Sessions</th><th>Engage</th></tr>
+              ${safeDeviceEngagement.map((d) => {
+    const icons = {
+      ios: "\u{1F4F1}",
+      android: "\u{1F170}\uFE0F",
+      mac: "\u{1F34E}",
+      windows: "\u{1FA9F}",
+      linux: "\u{1F427}",
+      desktop: "\u{1F5A5}\uFE0F",
+      mobile: "\u{1F4F1}",
+      tablet: "\u{1F4F1}",
+      unknown: "\u2753"
+    };
+    const labels = {
+      ios: "iOS",
+      android: "Android",
+      mac: "Mac",
+      windows: "Windows",
+      linux: "Linux",
+      desktop: "Desktop",
+      mobile: "Mobile",
+      tablet: "Tablet",
+      unknown: "Unknown"
+    };
+    const engageColor = d.avg_depth >= 15 ? "#10b981" : d.avg_depth >= 8 ? "#f59e0b" : "#888";
+    return `<tr><td>${icons[d.device] || "\u2753"} ${labels[d.device] || d.device}</td><td>${d.sessions}</td><td style="color:${engageColor};font-weight:bold;">${d.avg_depth}</td></tr>`;
+  }).join("")}
+              ${safeDeviceEngagement.length === 0 ? '<tr><td colspan="3">No data yet</td></tr>' : ""}
+            </table>
+          </div>
+      </div>
+    </div>
+
+    <div class="section" style="order: 6;">
       <div class="section-header" style="margin-bottom: ${edgeEvents.length === 0 && edgeSummary.length === 0 ? "0" : "12px"};">
         <h3 style="display: inline;">\u{1F9ED} Index Health</h3>
         ${edgeEvents.length === 0 && edgeSummary.length === 0 ? '<span style="color:#666; margin-left: 12px;">No edge events yet</span>' : ""}
@@ -6222,15 +6273,15 @@ function renderDashboard({
       ` : ""}
     </div>
 
-    <div class="section">
+    <div class="section" style="order: 1;">
       <div class="section-header">
         <h3>Top 25 Site Pages</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Top overall linkable pages from page-bearing events (page/content, gallery landing, and chapter/image traffic). Colors: blue=site, green=images, yellow=gallery landing.</div></span>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Top overall linkable pages from page-bearing events. Colors: blue=site, green=images, yellow=gallery landing.</div></span>
       </div>
       ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : (() => {
     const galleryPaths = new Set(GALLERY_LANDING_PATHS);
     const maxViews = Math.max(...pages.map((p) => p.views || 0), 1);
-    return pages.map((p, i) => {
+    const rowsHtml = pages.map((p, i) => {
       const path = String(p.page_path || "/");
       const isChapter = /\/i-[A-Za-z0-9]+$/.test(path);
       const isGallery = galleryPaths.has(path);
@@ -6246,18 +6297,20 @@ function renderDashboard({
             <span class="bar-value">${count}</span>
           </div>`;
     }).join("");
+    return `<div style="max-height: 320px; overflow: auto; padding-right: 4px;">${rowsHtml}</div>`;
   })()}
     </div>
 
-    <div class="section">
+    <div class="section" style="order: 2;">
       <div class="section-header">
         <h3>Top 25 Entry Pages (Sessions)</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Counts <strong>sessions</strong> from page-bearing events. Each row is the first linkable page hit in a session (any page type), grouped by page + referrer source. Includes site pages, gallery landing pages, and chapter/image pages. \u{1F50D}=Google Search, \u{1F5BC}\uFE0F=Images, \u{1F171}\uFE0F=Bing, \u{1F4CC}=Pinterest, \u{1F426}=Twitter, \u{1F4D8}=Facebook, \u{1F517}=Direct</div></span>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page hit in a session, grouped by page + referrer source. Includes site pages, gallery landing pages, and chapter/image pages.</div></span>
       </div>
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
-      <table>
-        <tr><th>Page</th><th>From</th><th>Sess</th></tr>
-        ${entryPages.slice(0, 25).map((p) => {
+      <div style="max-height: 320px; overflow: auto; padding-right: 4px;">
+        <table>
+          <tr><th>Page</th><th>From</th><th>Sess</th></tr>
+          ${entryPages.slice(0, 25).map((p) => {
     const rawPath = String(p.page_path || "/");
     const fullPath = rawPath.startsWith("/") ? rawPath : `/${rawPath}`;
     const isChapter = /\/i-[A-Za-z0-9]+$/.test(fullPath);
@@ -6290,31 +6343,14 @@ function renderDashboard({
     const refIcon = refIcons[p.ref_source] || "\u{1F512}";
     return `<tr><td title="${fullPath}" style="color:${typeColor};">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
   }).join("")}
-      </table>
+        </table>
+      </div>
       `}
     </div>
 
-    <div class="section">
-      <h3>\u{1F3A8} Top 10 Themes Clicked</h3>
-      ${themesClicked.length === 0 ? '<p style="color:#666">No theme clicks yet</p>' : `
-      <table>
-        <tr><th>Theme</th><th>Sessions</th><th>Clicks</th></tr>
-        ${themesClicked.map(
-    (t) => `
-          <tr>
-            <td>${formatEventName(t.theme || "Unknown")}</td>
-            <td>${t.sessions}</td>
-            <td>${t.clicks}</td>
-          </tr>
-        `
-  ).join("")}
-      </table>
-      `}
-    </div>
-
-    <div class="section">
+    <div class="section" style="order: 8;">
       <div class="section-header">
-        <h3>\u{1F6AA} Where People Leave</h3>
+        <h3>\u{1F6AA} Where People Leave + Themes</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Exit pages: where sessions ended. Shows which page types are natural endpoints vs potential problems.</div></span>
       </div>
       <div class="exit-grid">
@@ -6347,6 +6383,28 @@ function renderDashboard({
           <span class="label" style="color: #d1d5db;">Other</span>
         </div>
       </div>
+
+      <div style="margin-top: 10px; border-top: 1px solid #333; padding-top: 10px;">
+        <div style="font-size:11px;color:#9aa3ad;margin:0 0 6px 0;font-weight:600;">\u{1F3A8} Top 10 Themes Clicked</div>
+        ${themesClicked.length === 0 ? '<p style="color:#666">No theme clicks yet</p>' : `
+        <div style="max-height: 210px; overflow: auto; padding-right: 4px;">
+          <table>
+            <tr><th>Theme</th><th>Sessions</th><th>Clicks</th></tr>
+            ${themesClicked.map(
+  (t) => `
+              <tr>
+                <td>${formatEventName(t.theme || "Unknown")}</td>
+                <td>${t.sessions}</td>
+                <td>${t.clicks}</td>
+              </tr>
+            `
+).join("")}
+          </table>
+        </div>
+        `}
+      </div>
+
+      
     </div>
 
   </div>
@@ -6362,6 +6420,7 @@ function renderDashboard({
       <div style="color:#666; font-size: 11px; padding: 4px 8px; border: 1px solid #333; border-radius: 999px; background: #1f1f1f; white-space: nowrap;">
         Protected (selected period): \u{1F9CA} ${artViewsSummary?.harvester_friction_events || 0} slowed \xB7 \u23F3 ${artViewsSummary?.harvester_friction_delay_events || 0} delayed \xB7 \u26D4 ${artViewsSummary?.harvester_friction_429_events || 0} 429
       </div>
+      <button onclick="blockAllLevel5()" style="background:#92400e; color:#fde68a; border:1px solid #b45309; padding:3px 8px; border-radius:4px; cursor:pointer; font-size:11px; white-space: nowrap;">\u{1F7E4} Block All Level 5</button>
       <button onclick="refreshBotIntelligence()" style="background: #333; color: #888; border: 1px solid #555; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 11px; white-space: nowrap;">\u{1F504} Refresh</button>
     </div>
   </div>
@@ -6473,7 +6532,20 @@ function renderDashboard({
             <th style="text-align: center; padding: 4px;">Days</th>
             <th style="text-align: center; padding: 4px;">Action</th>
           </tr>
-          ${(botIntelligence?.suspects || []).filter((s2) => s2.risk_level >= 2 && s2.status !== "blocked").map((s2) => {
+          ${(botIntelligence?.suspects || []).filter((s2) => s2.risk_level >= 2 && s2.status !== "blocked").sort((a, b) => {
+    const aBlock = isLevel5BlockRecommended(a) ? 1 : 0;
+    const bBlock = isLevel5BlockRecommended(b) ? 1 : 0;
+    if (aBlock !== bBlock) return bBlock - aBlock;
+    const aRisk = Number(a?.risk_level || 0);
+    const bRisk = Number(b?.risk_level || 0);
+    if (aRisk !== bRisk) return bRisk - aRisk;
+    const aScore = Number(a?.risk_score || 0);
+    const bScore = Number(b?.risk_score || 0);
+    if (aScore !== bScore) return bScore - aScore;
+    const aReq = Number(a?.total_requests || 0);
+    const bReq = Number(b?.total_requests || 0);
+    return bReq - aReq;
+  }).map((s2) => {
     const riskColors = {
       1: "#10b981",
       2: "#fbbf24",
@@ -6524,7 +6596,7 @@ function renderDashboard({
     const status = statusBadges[protectionStatus] || statusBadges.observation;
     const statusHtml = '<span title="' + protectionStatus + '" style="display:inline-flex;align-items:center;gap:6px;background:' + status.bg + ";color:" + status.color + ';padding:2px 6px;border-radius:999px;font-size:10px;">' + status.text + "</span>";
     const actionHtml = isBlocked ? '<span style="color: #666;">Blocked</span>' : isBlockRecommended ? `<button onclick="blockIP('` + s2.ip_hash + `')" title="Block recommended: \u226510 429s/day or sustained high-rate pulls" style="background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Force Block</button>` : `<button onclick="blockIP('` + s2.ip_hash + `')" title="Force a manual block (usually unnecessary; friction already mitigates most automation)" style="background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Force Block</button>`;
-    return '<tr style="border-bottom: 1px solid #333; ' + rowStyle + '"><td style="padding: 6px 4px;"><span style="background: ' + riskColor + "22; color: " + riskColor + '; padding: 2px 6px; border-radius: 8px; font-weight: bold;">' + riskIcon + " " + displayRiskLevel + '</span></td><td style="padding: 6px 4px;">' + statusHtml + '</td><td style="padding: 6px 4px; font-family: monospace; font-size: 10px;">' + s2.ip_hash + '<span style="color: #666; margin-left: 4px;">' + (s2.country || "") + '</span></td><td style="padding: 6px 4px; text-align: right; font-weight: bold; color: ' + reqColor + ';">' + s2.total_requests + '</td><td style="padding: 6px 4px; color: #888; font-size: 10px;" title="' + rules.join(", ") + '">' + rulesShort + (rules.length > 2 ? "..." : "") + '</td><td style="padding: 6px 4px; text-align: center;"><span style="color: ' + daysColor + ';">' + s2.days_seen + '</span></td><td style="padding: 6px 4px; text-align: center;">' + actionHtml + "</td></tr>";
+    return '<tr data-level5="' + (isBlockRecommended ? "1" : "0") + '" data-iphash="' + s2.ip_hash + '" style="border-bottom: 1px solid #333; ' + rowStyle + '"><td style="padding: 6px 4px;"><span style="background: ' + riskColor + "22; color: " + riskColor + '; padding: 2px 6px; border-radius: 8px; font-weight: bold;">' + riskIcon + " " + displayRiskLevel + '</span></td><td style="padding: 6px 4px;">' + statusHtml + '</td><td style="padding: 6px 4px; font-family: monospace; font-size: 10px;">' + s2.ip_hash + '<span style="color: #666; margin-left: 4px;">' + (s2.country || "") + '</span></td><td style="padding: 6px 4px; text-align: right; font-weight: bold; color: ' + reqColor + ';">' + s2.total_requests + '</td><td style="padding: 6px 4px; color: #888; font-size: 10px;" title="' + rules.join(", ") + '">' + rulesShort + (rules.length > 2 ? "..." : "") + '</td><td style="padding: 6px 4px; text-align: center;"><span style="color: ' + daysColor + ';">' + s2.days_seen + '</span></td><td style="padding: 6px 4px; text-align: center;">' + actionHtml + "</td></tr>";
   }).join("")}
         </table>
       </div>
@@ -6622,6 +6694,37 @@ function renderDashboard({
           location.reload();
         } else {
           const data = await res.json().catch(() => ({}));
+          alert('Error: ' + (data.error || 'HTTP ' + res.status));
+          document.body.classList.remove('k4-loading');
+        }
+      } catch (e) {
+        alert('Error: ' + e.message);
+        document.body.classList.remove('k4-loading');
+      }
+    }
+
+    async function blockAllLevel5() {
+      const rows = Array.from(document.querySelectorAll('tr[data-level5="1"][data-iphash]'));
+      const ipHashes = Array.from(new Set(rows.map(r => (r.getAttribute('data-iphash') || '').trim()).filter(Boolean)));
+      if (ipHashes.length === 0) {
+        alert('No Level 5 entries available to block.');
+        return;
+      }
+      if (!confirm('FORCE BLOCK all Level 5 entries now?\\n\\nCount: ' + ipHashes.length + '\\n\\nThis will immediately activate manual blocks for each listed IP.')) return;
+
+      try {
+        document.body.classList.add('k4-loading');
+        const res = await k4AdminFetch('/__k4stats/block-bulk', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ip_hashes: ipHashes, reason: 'Bulk Level 5 block from governance dashboard' })
+        });
+
+        const data = await res.json().catch(() => ({}));
+        if (res.ok) {
+          alert('Bulk block completed. Blocked ' + (data.blocked || 0) + ' IPs.');
+          location.reload();
+        } else {
           alert('Error: ' + (data.error || 'HTTP ' + res.status));
           document.body.classList.remove('k4-loading');
         }
@@ -7115,6 +7218,7 @@ async function handleDashboardRequest(env, filters) {
     externalImageAccessTotal,
     externalReachGeo,
     externalReachSources,
+    externalDailySummary,
     entryRefCountsObj,
     imageAccessOverview,
     viewerDepth,
@@ -7127,7 +7231,8 @@ async function handleDashboardRequest(env, filters) {
     artIpClause,
     baseDateClause,
     hideBotsPredicate,
-    hideBots
+    hideBots,
+    selectedDate
   });
   const botIntelligence = await getBotIntelligence(env);
   const periodTotals = await getPeriodTotals(env, {
@@ -7193,6 +7298,7 @@ async function handleDashboardRequest(env, filters) {
     externalImageAccessTotal,
     externalReachGeo,
     externalReachSources,
+    externalDailySummary,
     entryRefCountsObj,
     imageAccessOverview,
     viewerDepth,
@@ -7303,7 +7409,6 @@ async function handleDashboardRequest2(request, env, ctx) {
               SELECT ip_hash FROM suspected_bots
               WHERE status = 'blocked'
                  OR is_datacenter = 1
-                 OR risk_level >= 4
             )
           ))
         )` : "";
@@ -7340,7 +7445,6 @@ async function handleDashboardRequest2(request, env, ctx) {
             SELECT ip_hash FROM suspected_bots
             WHERE status = 'blocked'
                OR is_datacenter = 1
-               OR risk_level >= 4
           )
         )`
       );
@@ -7358,7 +7462,6 @@ async function handleDashboardRequest2(request, env, ctx) {
             SELECT ip_hash FROM suspected_bots
             WHERE status = 'blocked'
                OR is_datacenter = 1
-               OR risk_level >= 4
           )
         )` : "";
     const chardonClause = hideChardon ? `AND city != 'Chardon'` : "";
@@ -8795,6 +8898,64 @@ async function handleBlockIP(request, env) {
 }
 __name(handleBlockIP, "handleBlockIP");
 __name2(handleBlockIP, "handleBlockIP");
+async function handleBulkBlockIP(request, env) {
+  try {
+    const { ip_hashes, reason } = await request.json();
+    const hashes = Array.isArray(ip_hashes) ? ip_hashes.map((v) => String(v || "").trim()).filter(Boolean) : [];
+    if (hashes.length === 0) {
+      return new Response(JSON.stringify({ error: "ip_hashes required" }), {
+        status: 400,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
+    let blocked = 0;
+    for (const ip_hash of hashes) {
+      const suspectInfo = await env.DB.prepare(
+        `
+        SELECT risk_level, risk_score, rules_triggered, total_requests
+        FROM suspected_bots WHERE ip_hash = ?
+      `
+      ).bind(ip_hash).first();
+      await env.DB.prepare(
+        `
+        INSERT INTO blocked_ips (ip_hash, risk_level, risk_score, rules_triggered, total_requests, reason, blocked_by)
+        VALUES (?, ?, ?, ?, ?, ?, 'manual')
+        ON CONFLICT(ip_hash) DO UPDATE SET
+          is_active = 1,
+          blocked_at = datetime('now'),
+          reason = excluded.reason,
+          unblocked_at = NULL
+      `
+      ).bind(
+        ip_hash,
+        suspectInfo?.risk_level || 4,
+        suspectInfo?.risk_score || 0,
+        suspectInfo?.rules_triggered || "[]",
+        suspectInfo?.total_requests || 0,
+        reason || "Bulk Level 5 block from dashboard"
+      ).run();
+      await env.DB.prepare(
+        `
+        UPDATE suspected_bots SET status = 'blocked', updated_at = datetime('now')
+        WHERE ip_hash = ?
+      `
+      ).bind(ip_hash).run();
+      blocked++;
+    }
+    return new Response(JSON.stringify({ success: true, blocked }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" }
+    });
+  } catch (e) {
+    console.error("Bulk block IP error:", e);
+    return new Response(JSON.stringify({ error: e.message }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" }
+    });
+  }
+}
+__name(handleBulkBlockIP, "handleBulkBlockIP");
+__name2(handleBulkBlockIP, "handleBulkBlockIP");
 async function handleUnblockIP(request, env) {
   try {
     const { ip_hash } = await request.json();
@@ -9002,6 +9163,9 @@ var worker_default = {
     }
     if (url.pathname === "/__k4stats/block" && request.method === "POST") {
       return handleBlockIP(request, env);
+    }
+    if (url.pathname === "/__k4stats/block-bulk" && request.method === "POST") {
+      return handleBulkBlockIP(request, env);
     }
     if (url.pathname === "/__k4stats/unblock" && request.method === "POST") {
       return handleUnblockIP(request, env);

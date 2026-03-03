@@ -287,6 +287,8 @@ export default function ChapterGalleryBase({
   const sectionUrl = findSectionUrl(basePath);
 
   const pixelLayerByEvent = {
+    nav_prev: 'chapter_nav_prev_pixel_v1',
+    nav_next: 'chapter_nav_next_pixel_v1',
     order_clicked: 'order_clicked_pixel_v1',
     order_submitted: 'order_submitted_pixel_v1',
     series_info: 'series_info_pixel_v1',

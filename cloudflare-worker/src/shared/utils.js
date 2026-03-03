@@ -42,10 +42,8 @@ export function isVerifiedSearchBot(ua) {
  */
 export function hashIP(ip) {
   if (!ip) return 'unknown';
-  // Simple hash: take first 3 octets + day for daily uniqueness
-  const parts = ip.split('.');
-  if (parts.length < 3) return ip.slice(0, 8);
-  return `${parts[0]}.${parts[1]}.${parts[2]}.x`;
+  // Return full IP for bot verification (e.g. Bing verify-bingbot)
+  return ip;
 }
 
 /**

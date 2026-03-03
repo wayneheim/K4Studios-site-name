@@ -2575,7 +2575,7 @@ export async function getBotIntelligence(env) {
       FROM suspected_bots
       WHERE is_verified_bot = 0
         AND risk_level >= 2
-        AND status != 'blocked'
+        AND status NOT IN ('blocked', 'verified')
       ORDER BY risk_level DESC, risk_score DESC, total_requests DESC
       LIMIT ${SUSPECTS_LIMIT}
     `;
@@ -2666,7 +2666,7 @@ export async function getBotIntelligence(env) {
           FROM suspected_bots
           WHERE risk_level >= 2
             AND is_verified_bot = 0
-            AND status != 'blocked'
+            AND status NOT IN ('blocked', 'verified')
           ORDER BY risk_level DESC, risk_score DESC, total_requests DESC
           LIMIT ${SUSPECTS_LIMIT}
         ),
@@ -2877,11 +2877,24 @@ export async function getBlockRecommendedCount(env) {
   try {
     const query = `
       WITH suspects AS (
-        SELECT ip_hash, total_requests, days_seen
+        SELECT ip_hash, total_requests, days_seen, bot_name
         FROM suspected_bots
         WHERE is_verified_bot = 0
           AND risk_level >= 4
-          AND status != 'blocked'
+          AND status NOT IN ('blocked', 'verified')
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%bing%'
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%msnbot%'
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%adidxbot%'
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%google%'
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%applebot%'
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%duckduckbot%'
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%yandex%'
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%baidu%'
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%ahrefs%'
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%semrush%'
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%barkrowler%'
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%mj12%'
+          AND LOWER(COALESCE(bot_name, '')) NOT LIKE '%dotbot%'
       ),
       friction_429_by_day AS (
         SELECT

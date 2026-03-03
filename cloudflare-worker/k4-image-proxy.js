@@ -489,7 +489,7 @@ function isDiscoveryBotUA(uaRaw) {
   // Explicit allowlist for discovery and preview ecosystems.
   // Do NOT include AI crawlers here.
   const ua = String(uaRaw || '');
-  return /(googlebot|google-inspectiontool|googleother|apis-google|adsbot-google|googlebot-image|bingbot|bingpreview|msnbot|applebot|duckduckbot|yandex|baiduspider|slurp|petalbot|facebookexternalhit|facebot|twitterbot|pinterestbot|linkedinbot|slackbot|discordbot|telegrambot)/i.test(ua);
+  return /(googlebot|google-inspectiontool|googleother|apis-google|adsbot-google|googlebot-image|bingbot|bingpreview|msnbot|applebot|duckduckbot|yandex|baiduspider|slurp|petalbot|ahrefsbot|ahrefssiteaudit|semrushbot|facebookexternalhit|facebot|twitterbot|pinterestbot|linkedinbot|slackbot|discordbot|telegrambot)/i.test(ua);
 }
 
 function getSuspicionFlags({ request, asn, ua }) {

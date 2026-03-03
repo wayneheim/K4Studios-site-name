@@ -191,6 +191,8 @@ const DEFAULT_PIXEL_LAYER_BY_ACTION: Record<string, string> = {
   more_info_open: 'more_info_open_pixel_v1',
   sister_image_click: 'sister_image_click_pixel_v1',
   slideshow_start: 'slideshow_start_pixel_v1',
+  nav_prev: 'chapter_nav_prev_pixel_v1',
+  nav_next: 'chapter_nav_next_pixel_v1',
   slideshow_nav_prev: 'slideshow_nav_prev_pixel_v1',
   slideshow_nav_next: 'slideshow_nav_next_pixel_v1',
   browse_all_open: 'browse_all_open_pixel_v1',

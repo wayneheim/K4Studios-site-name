@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-03-02T18:45:21.125Z",
+    "lastUpdated": "2026-03-03T17:50:16.518Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z",
     "lastSyncFrom": "Engrained-Series.mjs"
   },
@@ -1987,7 +1987,28 @@
     "i-3NCLt4s:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-QkKk2eA",
     "i-kFMq3s4:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-hdswsB5",
     "i-kFDzhBL:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-vXsREJV",
-    "i-F75PGSb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-jFpf6zZ"
+    "i-F75PGSb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-jFpf6zZ",
+    "i-qkT6tbt:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-MgKBUAQ",
+    "i-KMsgzd3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-kCHjx64",
+    "i-jzFxhks:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-AP9SwqF",
+    "i-CFxRg4Q:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-R6CAZZR",
+    "i-NB2VdMF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-GaaN3Hz",
+    "i-SVVwgdB:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-xavsgk6",
+    "i-4KGPqXG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-EG9U3TK",
+    "i-8GPzCR2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-HDsb5rM",
+    "i-4RqT5V2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-K3aBaSn",
+    "i-KJRfSX6:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-ZnfCbPZ",
+    "i-DdQNwSd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-MawhAXN",
+    "i-DBKtchF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-4mXpvjd",
+    "i-JjdvrPP:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-JwVbffA",
+    "i-g7XMbW7:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-tet5YdJ",
+    "i-Zz2XVGJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-nRCvTgE",
+    "i-9Cz4fTQ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-N5rdQUG",
+    "i-7q5zrqn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-B5gCVUZ",
+    "i-wVWVrJ3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-S4uVjBx",
+    "i-fmx3qJx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-BGbVMWS",
+    "i-kGV7mcx:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-9AQTKye",
+    "i-tjk6VD8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs": "s-HgpsabT"
   },
   "series": {
     "s-BB65wHk": {
@@ -36329,13 +36350,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Drink this down.",
+      "title": "Drink this down",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-TVzzS9r/0/LBR3R5Xdsb6Jj943ZsXCrgjDJ5X4m73HXkZfr4Lr9/XL/_HF23015-Edit-2-Edit-Edit-2-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-TVzzS9r",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
-          "title": "Drink this down.",
+          "title": "Drink this down",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-TVzzS9r/0/LBR3R5Xdsb6Jj943ZsXCrgjDJ5X4m73HXkZfr4Lr9/XL/_HF23015-Edit-2-Edit-Edit-2-XL.jpg"
         }
       ],
@@ -36349,13 +36370,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Heroic Portraits Moment",
+      "title": "Under Her Watch",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-G6zt5mq/0/LszK5tbh69XgQMQb9zJrL7HpCPWnCnj26nZ3LjfQM/XL/_HF23124-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-G6zt5mq",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
-          "title": "Heroic Portraits Moment",
+          "title": "Under Her Watch",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-G6zt5mq/0/LszK5tbh69XgQMQb9zJrL7HpCPWnCnj26nZ3LjfQM/XL/_HF23124-Edit-XL.jpg"
         }
       ],
@@ -36369,13 +36390,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Greatest Generation Photos Portrait",
+      "title": "Leaning on Each Other",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-rpdHJRT/0/Mx9j2ZW8kRZSpCMHnZqZRccWMrV7qmK6TMk2tdTJs/XL/_HF23182-Edit-2-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-rpdHJRT",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
-          "title": "Greatest Generation Photos Portrait",
+          "title": "Leaning on Each Other",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-rpdHJRT/0/Mx9j2ZW8kRZSpCMHnZqZRccWMrV7qmK6TMk2tdTJs/XL/_HF23182-Edit-2-XL.jpg"
         }
       ],
@@ -36389,13 +36410,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Wwii Photography Portrait",
+      "title": "In the Aftermath",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-bmNF7xF/0/MrFRzDdXkwMQjs8K24QmcVg7HrkbqqSrrXw4g57cF/XL/_HF23236-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-bmNF7xF",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
-          "title": "Wwii Photography Portrait",
+          "title": "In the Aftermath",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-bmNF7xF/0/MrFRzDdXkwMQjs8K24QmcVg7HrkbqqSrrXw4g57cF/XL/_HF23236-Edit-XL.jpg"
         }
       ],
@@ -36409,13 +36430,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Moments Of Connection - Moments Of Connection",
+      "title": "Calling It In",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-bmQp8CX/0/MwwTSGwg2M8n2NWRbXrF8jntKdmhSP5WTfVdZCzBX/XL/_HF23902-Edit-2-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-bmQp8CX",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
-          "title": "Moments Of Connection - Moments Of Connection",
+          "title": "Calling It In",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-bmQp8CX/0/MwwTSGwg2M8n2NWRbXrF8jntKdmhSP5WTfVdZCzBX/XL/_HF23902-Edit-2-XL.jpg"
         }
       ],
@@ -47781,6 +47802,426 @@
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-03-02T18:43:17.351Z"
+    },
+    "s-MgKBUAQ": {
+      "primaryImageId": "i-qkT6tbt",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "All the Light She Carried",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qkT6tbt/0/LKK5FtBrkQB3s3dpqqjZ295nbzFHqgfbGJDdBGGds/XL/_HF21578-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-qkT6tbt",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "All the Light She Carried",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-qkT6tbt/0/LKK5FtBrkQB3s3dpqqjZ295nbzFHqgfbGJDdBGGds/XL/_HF21578-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:10:48.602Z"
+    },
+    "s-kCHjx64": {
+      "primaryImageId": "i-KMsgzd3",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "A Smile for the Future",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-KMsgzd3/0/Ln7B8xR6RVWGfBcBLw38LqZLvNkCvP5P2jwMhkzc4/XL/_HF21589-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-KMsgzd3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "A Smile for the Future",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-KMsgzd3/0/Ln7B8xR6RVWGfBcBLw38LqZLvNkCvP5P2jwMhkzc4/XL/_HF21589-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:13:18.737Z"
+    },
+    "s-AP9SwqF": {
+      "primaryImageId": "i-jzFxhks",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Listening for the Call",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-jzFxhks/0/MpFW79jXfZcSNP9Zh8dfBxTP2PSVMcBG9r9qHPBbb/XL/_HF21617-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-jzFxhks",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Listening for the Call",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-jzFxhks/0/MpFW79jXfZcSNP9Zh8dfBxTP2PSVMcBG9r9qHPBbb/XL/_HF21617-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:14:12.695Z"
+    },
+    "s-R6CAZZR": {
+      "primaryImageId": "i-CFxRg4Q",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Composure in the Ranks",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-CFxRg4Q/0/LcwrGqwdWZCSgFXW5XV83bNBW7kzHgJctxWmm3QjV/XL/_HF21618-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-CFxRg4Q",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Composure in the Ranks",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-CFxRg4Q/0/LcwrGqwdWZCSgFXW5XV83bNBW7kzHgJctxWmm3QjV/XL/_HF21618-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:15:30.093Z"
+    },
+    "s-GaaN3Hz": {
+      "primaryImageId": "i-NB2VdMF",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Called to Care",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NB2VdMF/0/Kh6pLBtVJb9frfLFkQp2L2wqcfpDzcrRrnhDvwQMx/XL/_HF21621-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-NB2VdMF",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Called to Care",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-NB2VdMF/0/Kh6pLBtVJb9frfLFkQp2L2wqcfpDzcrRrnhDvwQMx/XL/_HF21621-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:16:24.890Z"
+    },
+    "s-xavsgk6": {
+      "primaryImageId": "i-SVVwgdB",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Coffee Before the Clouds",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-SVVwgdB/0/NVchkdMrdM6fkFhSsPWjF6zv9hRDDB4CjvT5TKgKw/XL/_HF21640-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-SVVwgdB",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Coffee Before the Clouds",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-SVVwgdB/0/NVchkdMrdM6fkFhSsPWjF6zv9hRDDB4CjvT5TKgKw/XL/_HF21640-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:17:43.340Z"
+    },
+    "s-EG9U3TK": {
+      "primaryImageId": "i-4KGPqXG",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Long Afternoon",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-4KGPqXG/0/LSmfQ43PPxSdzQp48kMHMpk6PTLBf3Zz8TNxbmcpR/XL/_HF22411-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-4KGPqXG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "The Long Afternoon",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-4KGPqXG/0/LSmfQ43PPxSdzQp48kMHMpk6PTLBf3Zz8TNxbmcpR/XL/_HF22411-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:18:51.070Z"
+    },
+    "s-HDsb5rM": {
+      "primaryImageId": "i-8GPzCR2",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Composure Under Brim",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8GPzCR2/0/M4D42PMqZVKgNMMmMGjS3b7xrW5tXSf68QzcNDxDj/XL/_HF23409-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-8GPzCR2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Composure Under Brim",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-8GPzCR2/0/M4D42PMqZVKgNMMmMGjS3b7xrW5tXSf68QzcNDxDj/XL/_HF23409-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:27:58.895Z"
+    },
+    "s-K3aBaSn": {
+      "primaryImageId": "i-4RqT5V2",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Transmission Received",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-4RqT5V2/0/LFN6szNzjXWBnNtPC6hV9JMsKmrXrPxqD69qCbLBN/XL/_HF23526-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-4RqT5V2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Transmission Received",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-4RqT5V2/0/LFN6szNzjXWBnNtPC6hV9JMsKmrXrPxqD69qCbLBN/XL/_HF23526-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:30:48.582Z"
+    },
+    "s-ZnfCbPZ": {
+      "primaryImageId": "i-KJRfSX6",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Held Steady",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-KJRfSX6/0/Mxwg6ZxrPmLQjhgtCVzwwgKd4VnHh7R6t3mjtgJxC/XL/_HF23639-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-KJRfSX6",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Held Steady",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-KJRfSX6/0/Mxwg6ZxrPmLQjhgtCVzwwgKd4VnHh7R6t3mjtgJxC/XL/_HF23639-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:31:33.886Z"
+    },
+    "s-MawhAXN": {
+      "primaryImageId": "i-DdQNwSd",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Composure Under Canvas",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-DdQNwSd/1/MXFqqFw47Cgbk7SrFqccMjhwdW5jsfg74kCKJdrTn/XL/_HF23710-Edit-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-DdQNwSd",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Composure Under Canvas",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-DdQNwSd/1/MXFqqFw47Cgbk7SrFqccMjhwdW5jsfg74kCKJdrTn/XL/_HF23710-Edit-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:32:33.965Z"
+    },
+    "s-4mXpvjd": {
+      "primaryImageId": "i-DBKtchF",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Grace Under Orders",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-DBKtchF/0/KVvdDMGqpTFPrVmS4XMm2Lcp7mr8pWvRNgf4GGZtq/XL/_HF23738-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-DBKtchF",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Grace Under Orders",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-DBKtchF/0/KVvdDMGqpTFPrVmS4XMm2Lcp7mr8pWvRNgf4GGZtq/XL/_HF23738-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:33:34.424Z"
+    },
+    "s-JwVbffA": {
+      "primaryImageId": "i-JjdvrPP",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Keeping It Running",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-JjdvrPP/0/M9qC72kSFzgDm95V7pQv8BRXJdDv8gKjzsBcpSDVs/XL/_HF23820-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-JjdvrPP",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Keeping It Running",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-JjdvrPP/0/M9qC72kSFzgDm95V7pQv8BRXJdDv8gKjzsBcpSDVs/XL/_HF23820-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:36:48.507Z"
+    },
+    "s-tet5YdJ": {
+      "primaryImageId": "i-g7XMbW7",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "A Lighter Moment",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-g7XMbW7/0/KLrfzZVnGt6cTXr4mGqG3Hnh9nDSWqM4DQBvGQ2f6/XL/_HF23836-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-g7XMbW7",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "A Lighter Moment",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-g7XMbW7/0/KLrfzZVnGt6cTXr4mGqG3Hnh9nDSWqM4DQBvGQ2f6/XL/_HF23836-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:38:15.129Z"
+    },
+    "s-nRCvTgE": {
+      "primaryImageId": "i-Zz2XVGJ",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Off Duty, For a Minute",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Zz2XVGJ/0/NNq35p83Mb4DnhXVpzm9T4v4SRqQnQz6DHLmRMdhZ/XL/_HF23987-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-Zz2XVGJ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Off Duty, For a Minute",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-Zz2XVGJ/0/NNq35p83Mb4DnhXVpzm9T4v4SRqQnQz6DHLmRMdhZ/XL/_HF23987-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:41:33.155Z"
+    },
+    "s-N5rdQUG": {
+      "primaryImageId": "i-9Cz4fTQ",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Weight on the Strap",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-9Cz4fTQ/0/NXzP3XVdBf58cWKXwCFr35kpnGQZMxDGL59BRnh7m/XL/_HF24168-Edit-Edit-2-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-9Cz4fTQ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Weight on the Strap",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-9Cz4fTQ/0/NXzP3XVdBf58cWKXwCFr35kpnGQZMxDGL59BRnh7m/XL/_HF24168-Edit-Edit-2-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:43:18.728Z"
+    },
+    "s-B5gCVUZ": {
+      "primaryImageId": "i-7q5zrqn",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Shouldering Tomorrow",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-7q5zrqn/0/MwVr484wN2dwhrp3tv5jKsWmn87vsTmZgqFk9LbdQ/XL/_HF24198-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-7q5zrqn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Shouldering Tomorrow",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-7q5zrqn/0/MwVr484wN2dwhrp3tv5jKsWmn87vsTmZgqFk9LbdQ/XL/_HF24198-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:44:20.378Z"
+    },
+    "s-S4uVjBx": {
+      "primaryImageId": "i-wVWVrJ3",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Into the Distance",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-wVWVrJ3/0/NZBBTXjXj6k97JdrdF2M4VZsWFhdq9mTQzBKcGH5g/XL/_HF24223-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-wVWVrJ3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Into the Distance",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-wVWVrJ3/0/NZBBTXjXj6k97JdrdF2M4VZsWFhdq9mTQzBKcGH5g/XL/_HF24223-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:45:19.591Z"
+    },
+    "s-BGbVMWS": {
+      "primaryImageId": "i-fmx3qJx",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "The Quiet Formation",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-fmx3qJx/0/LJmp5V7Bq6FVMfwPrktxFvs3GDrwnGsMr7TG6FqJh/XL/_HF24242-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-fmx3qJx",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "The Quiet Formation",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-fmx3qJx/0/LJmp5V7Bq6FVMfwPrktxFvs3GDrwnGsMr7TG6FqJh/XL/_HF24242-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:46:11.348Z"
+    },
+    "s-9AQTKye": {
+      "primaryImageId": "i-kGV7mcx",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Letters From the Front",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kGV7mcx/0/LF9mWwqh8Mq8w7tp5bZCbbWHWnSgsTwJ9HGZwn8KL/XL/_HF24647-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-kGV7mcx",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Letters From the Front",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-kGV7mcx/0/LF9mWwqh8Mq8w7tp5bZCbbWHWnSgsTwJ9HGZwn8KL/XL/_HF24647-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:49:19.466Z"
+    },
+    "s-HgpsabT": {
+      "primaryImageId": "i-tjk6VD8",
+      "tiers": [
+        "sketch"
+      ],
+      "title": "Still Bright in Wartime",
+      "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-tjk6VD8/0/MMzHfwR5kZ7wbDkcFvjkMbzZ4nqGdK4LF29WZTM8L/XL/_HF24651-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-tjk6VD8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
+          "title": "Still Bright in Wartime",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color/i-tjk6VD8/0/MMzHfwR5kZ7wbDkcFvjkMbzZ4nqGdK4LF29WZTM8L/XL/_HF24651-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-03-03T17:50:13.573Z"
     }
   }
 }
