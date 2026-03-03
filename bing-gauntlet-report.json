@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-03-03T20:47:14.265Z",
+  "sitemap": {
+    "root_status": 200,
+    "root_is_index": false,
+    "root_loc_count": 3812
+  },
+  "status_sweep": {
+    "sample_size": 50,
+    "status_counts": {
+      "200": 50
+    },
+    "x_robots_counts": {},
+    "suspicious": []
+  },
+  "triage": {
+    "selected": {
+      "blogUrl": "https://www.k4studios.com/Blog/10-oclock-staging",
+      "galleryUrl": "https://www.k4studios.com/Galleries/Fine-Art-Photography",
+      "imageUrl": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-2NT6fPf"
+    },
+    "blog": {
+      "url": "https://www.k4studios.com/Blog/10-oclock-staging",
+      "final_url": "https://www.k4studios.com/Blog/10-oclock-staging",
+      "status": 200,
+      "x_robots_tag": null,
+      "meta_robots": null,
+      "canonical": "https://www.k4studios.com/Blog/10-oclock-staging",
+      "canonical_self": true,
+      "h1_count": 1,
+      "p_count": 17,
+      "html_bytes": 74041
+    },
+    "gallery": {
+      "url": "https://www.k4studios.com/Galleries/Fine-Art-Photography",
+      "final_url": "https://www.k4studios.com/Galleries/Fine-Art-Photography",
+      "status": 200,
+      "x_robots_tag": null,
+      "meta_robots": null,
+      "canonical": "https://www.k4studios.com/Galleries/Fine-Art-Photography",
+      "canonical_self": true,
+      "h1_count": 1,
+      "p_count": 18,
+      "html_bytes": 150716
+    },
+    "image": {
+      "url": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-2NT6fPf",
+      "final_url": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-2NT6fPf",
+      "status": 200,
+      "x_robots_tag": null,
+      "meta_robots": "index, follow, noai, noimageai",
+      "canonical": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-2NT6fPf",
+      "canonical_self": true,
+      "h1_count": 1,
+      "p_count": 2,
+      "html_bytes": 34166
+    }
+  },
+  "flags": []
+}

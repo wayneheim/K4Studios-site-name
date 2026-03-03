@@ -94,6 +94,15 @@ var DATACENTER_ASNS = [
   396982,
   13335
 ];
+var TRUSTED_TEST_IPS = /* @__PURE__ */ new Set([
+  "184.56.48.57"
+]);
+function normalizeIpHash(value) {
+  if (!value) return "";
+  return String(value).split(",")[0]?.trim() || "";
+}
+__name(normalizeIpHash, "normalizeIpHash");
+__name2(normalizeIpHash, "normalizeIpHash");
 function getVerifiedBotName(ua) {
   if (!ua) return null;
   for (const bot of VERIFIED_BOTS) {
@@ -103,11 +112,144 @@ function getVerifiedBotName(ua) {
 }
 __name(getVerifiedBotName, "getVerifiedBotName");
 __name2(getVerifiedBotName, "getVerifiedBotName");
+var crawlerStatusTableInitPromise = null;
+async function ensureCrawlerStatusTable(env) {
+  if (!env?.DB) return;
+  if (crawlerStatusTableInitPromise) {
+    await crawlerStatusTableInitPromise;
+    return;
+  }
+  crawlerStatusTableInitPromise = (async () => {
+    await env.DB.prepare(
+      `CREATE TABLE IF NOT EXISTS crawler_status_daily (
+        day TEXT NOT NULL,
+        ip_hash TEXT NOT NULL,
+        bot_name TEXT NOT NULL,
+        total_requests INTEGER NOT NULL DEFAULT 0,
+        status_200 INTEGER NOT NULL DEFAULT 0,
+        status_301 INTEGER NOT NULL DEFAULT 0,
+        status_302 INTEGER NOT NULL DEFAULT 0,
+        status_404 INTEGER NOT NULL DEFAULT 0,
+        status_410 INTEGER NOT NULL DEFAULT 0,
+        status_429 INTEGER NOT NULL DEFAULT 0,
+        status_5xx INTEGER NOT NULL DEFAULT 0,
+        updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+        PRIMARY KEY (day, ip_hash, bot_name)
+      )`
+    ).run();
+    await env.DB.prepare(
+      `CREATE INDEX IF NOT EXISTS idx_crawler_status_daily_ip_day ON crawler_status_daily (ip_hash, day)`
+    ).run();
+    await env.DB.prepare(
+      `CREATE INDEX IF NOT EXISTS idx_crawler_status_daily_bot_day ON crawler_status_daily (bot_name, day)`
+    ).run();
+  })();
+  try {
+    await crawlerStatusTableInitPromise;
+  } catch (e) {
+    crawlerStatusTableInitPromise = null;
+    throw e;
+  }
+}
+__name(ensureCrawlerStatusTable, "ensureCrawlerStatusTable");
+__name2(ensureCrawlerStatusTable, "ensureCrawlerStatusTable");
+function getCrawlerStatusDeltas(eventType, inferredFrom = null) {
+  const normalizedType = String(eventType || "").trim().toLowerCase();
+  const normalizedFrom = String(inferredFrom || "").trim().toLowerCase();
+  const deltas = {
+    total_requests: 0,
+    status_200: 0,
+    status_301: 0,
+    status_302: 0,
+    status_404: 0,
+    status_410: 0,
+    status_429: 0,
+    status_5xx: 0
+  };
+  if (!normalizedType) return deltas;
+  if (normalizedType === "301") {
+    deltas.total_requests = 1;
+    deltas.status_301 = 1;
+    return deltas;
+  }
+  if (normalizedType === "302") {
+    deltas.total_requests = 1;
+    deltas.status_302 = 1;
+    return deltas;
+  }
+  if (normalizedType === "404") {
+    deltas.total_requests = 1;
+    deltas.status_404 = 1;
+    return deltas;
+  }
+  if (normalizedType === "410" || normalizedType === "smart404_gone") {
+    deltas.total_requests = 1;
+    deltas.status_410 = 1;
+    return deltas;
+  }
+  if (normalizedType === "429" || normalizedType === "harvester_friction" && normalizedFrom === "429") {
+    deltas.total_requests = 1;
+    deltas.status_429 = 1;
+    return deltas;
+  }
+  if (/^5\d\d$/.test(normalizedType)) {
+    deltas.total_requests = 1;
+    deltas.status_5xx = 1;
+    return deltas;
+  }
+  if (normalizedType === "200" || normalizedType === "verified_bot" || normalizedType === "image_page" || normalizedType === "external_image_page" || normalizedType === "direct_image") {
+    deltas.total_requests = 1;
+    deltas.status_200 = 1;
+    return deltas;
+  }
+  return deltas;
+}
+__name(getCrawlerStatusDeltas, "getCrawlerStatusDeltas");
+__name2(getCrawlerStatusDeltas, "getCrawlerStatusDeltas");
+async function recordCrawlerStatusDaily(env, ipHash, botName, eventType, inferredFrom = null) {
+  if (!env?.DB || !ipHash || !botName) return;
+  const deltas = getCrawlerStatusDeltas(eventType, inferredFrom);
+  if (!deltas.total_requests) return;
+  try {
+    await ensureCrawlerStatusTable(env);
+    await env.DB.prepare(
+      `INSERT INTO crawler_status_daily (
+        day, ip_hash, bot_name, total_requests, status_200, status_301, status_302, status_404, status_410, status_429, status_5xx, updated_at
+      ) VALUES (
+        date('now', '-5 hours'), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now')
+      )
+      ON CONFLICT(day, ip_hash, bot_name) DO UPDATE SET
+        total_requests = total_requests + excluded.total_requests,
+        status_200 = status_200 + excluded.status_200,
+        status_301 = status_301 + excluded.status_301,
+        status_302 = status_302 + excluded.status_302,
+        status_404 = status_404 + excluded.status_404,
+        status_410 = status_410 + excluded.status_410,
+        status_429 = status_429 + excluded.status_429,
+        status_5xx = status_5xx + excluded.status_5xx,
+        updated_at = datetime('now')`
+    ).bind(
+      ipHash,
+      botName,
+      deltas.total_requests,
+      deltas.status_200,
+      deltas.status_301,
+      deltas.status_302,
+      deltas.status_404,
+      deltas.status_410,
+      deltas.status_429,
+      deltas.status_5xx
+    ).run();
+  } catch (e) {
+    console.log("Crawler status aggregate write failed:", e.message);
+  }
+}
+__name(recordCrawlerStatusDaily, "recordCrawlerStatusDaily");
+__name2(recordCrawlerStatusDaily, "recordCrawlerStatusDaily");
 function hashIP(ip) {
   if (!ip) return "unknown";
-  const parts = ip.split(".");
-  if (parts.length < 3) return ip.slice(0, 8);
-  return `${parts[0]}.${parts[1]}.${parts[2]}.x`;
+  const normalized = String(ip).split(",")[0]?.trim();
+  return normalized || "unknown";
 }
 __name(hashIP, "hashIP");
 __name2(hashIP, "hashIP");
@@ -3471,6 +3613,7 @@ async function getBotIntelligence(env) {
   try {
     const SUSPECTS_LIMIT = 500;
     const VERIFIED_LIMIT = 20;
+    await ensureCrawlerStatusTable(env);
     const suspectsQuery = `
       SELECT
         ip_hash,
@@ -3672,6 +3815,31 @@ async function getBotIntelligence(env) {
             GROUP BY cf_asn, ten_min_bucket
           )
           GROUP BY cf_asn
+        ),
+
+        known_search_ua_14d AS (
+          SELECT
+            ip_hash,
+            SUM(CASE WHEN
+              LOWER(COALESCE(ua, '')) LIKE '%googlebot%'
+              OR LOWER(COALESCE(ua, '')) LIKE '%google-inspectiontool%'
+              OR LOWER(COALESCE(ua, '')) LIKE '%googlebot-image%'
+              OR LOWER(COALESCE(ua, '')) LIKE '%bingbot%'
+              OR LOWER(COALESCE(ua, '')) LIKE '%bingpreview%'
+              OR LOWER(COALESCE(ua, '')) LIKE '%msnbot%'
+              OR LOWER(COALESCE(ua, '')) LIKE '%duckduckbot%'
+              OR LOWER(COALESCE(ua, '')) LIKE '%yandex%'
+              OR LOWER(COALESCE(ua, '')) LIKE '%baiduspider%'
+              OR LOWER(COALESCE(ua, '')) LIKE '%applebot%'
+              OR LOWER(COALESCE(ua, '')) LIKE '%slurp%'
+              OR LOWER(COALESCE(ua, '')) LIKE '%petalbot%'
+              OR LOWER(COALESCE(ua, '')) LIKE '%ccbot%'
+            THEN 1 ELSE 0 END) AS known_search_ua_hits_14d,
+            COUNT(*) AS total_ua_events_14d
+          FROM raw_events
+          WHERE ts > datetime('now', '-14 days')
+            AND ip_hash IN (SELECT ip_hash FROM suspects)
+          GROUP BY ip_hash
         )
 
         SELECT
@@ -3681,7 +3849,13 @@ async function getBotIntelligence(env) {
           COALESCE(fm.friction_429_max_day_7d, 0) AS friction_429_max_day_7d,
           COALESCE(v.peak_unique_images_per_minute_24h, 0) AS peak_unique_images_per_minute_24h,
           COALESCE(dip.max_friction_delay_10m_24h, 0) AS max_friction_delay_10m_24h,
-          COALESCE(dasn.max_friction_delay_10m_asn_24h, 0) AS max_friction_delay_10m_asn_24h
+          COALESCE(dasn.max_friction_delay_10m_asn_24h, 0) AS max_friction_delay_10m_asn_24h,
+          COALESCE(ks.known_search_ua_hits_14d, 0) AS known_search_ua_hits_14d,
+          CASE
+            WHEN COALESCE(ks.total_ua_events_14d, 0) > 0
+            THEN (1.0 * COALESCE(ks.known_search_ua_hits_14d, 0)) / ks.total_ua_events_14d
+            ELSE 0
+          END AS known_search_ua_ratio_14d
         FROM suspects s
         LEFT JOIN friction_24h f24 ON f24.ip_hash = s.ip_hash
         LEFT JOIN friction_429_max fm ON fm.ip_hash = s.ip_hash
@@ -3689,6 +3863,7 @@ async function getBotIntelligence(env) {
         LEFT JOIN delay_burst_ip dip ON dip.ip_hash = s.ip_hash
         LEFT JOIN ip_asn ia ON ia.ip_hash = s.ip_hash
         LEFT JOIN delay_burst_asn dasn ON dasn.cf_asn = ia.cf_asn_last24h
+        LEFT JOIN known_search_ua_14d ks ON ks.ip_hash = s.ip_hash
       `;
       const frictionRows = (await env.DB.prepare(frictionStatsQuery).all())?.results || [];
       const frictionMap = new Map(frictionRows.map((r) => [r.ip_hash, r]));
@@ -3700,6 +3875,8 @@ async function getBotIntelligence(env) {
         suspect.peak_unique_images_per_minute_24h = f?.peak_unique_images_per_minute_24h || 0;
         suspect.max_friction_delay_10m_24h = f?.max_friction_delay_10m_24h || 0;
         suspect.max_friction_delay_10m_asn_24h = f?.max_friction_delay_10m_asn_24h || 0;
+        suspect.known_search_ua_hits_14d = f?.known_search_ua_hits_14d || 0;
+        suspect.known_search_ua_ratio_14d = f?.known_search_ua_ratio_14d || 0;
       }
     } catch (e) {
       console.log("Friction stats enrichment failed:", e.message);
@@ -3711,23 +3888,30 @@ async function getBotIntelligence(env) {
         sb.total_requests,
         sb.last_seen,
         sb.country,
-        COALESCE(img.image_count, 0) as image_count,
-        COALESCE(pg.page_count, 0) as page_count
+        COALESCE(cs.status_total_7d, 0) as status_total_7d,
+        COALESCE(cs.status_200_7d, 0) as status_200_7d,
+        COALESCE(cs.status_301_7d, 0) as status_301_7d,
+        COALESCE(cs.status_302_7d, 0) as status_302_7d,
+        COALESCE(cs.status_404_7d, 0) as status_404_7d,
+        COALESCE(cs.status_410_7d, 0) as status_410_7d,
+        COALESCE(cs.status_429_7d, 0) as status_429_7d,
+        COALESCE(cs.status_5xx_7d, 0) as status_5xx_7d
       FROM suspected_bots sb
       LEFT JOIN (
-        SELECT ip_hash, COUNT(*) as image_count
-        FROM raw_events
-        WHERE ts > datetime('now', '-7 days')
-          AND event_type = 'verified_bot'
+        SELECT
+          ip_hash,
+          SUM(total_requests) as status_total_7d,
+          SUM(status_200) as status_200_7d,
+          SUM(status_301) as status_301_7d,
+          SUM(status_302) as status_302_7d,
+          SUM(status_404) as status_404_7d,
+          SUM(status_410) as status_410_7d,
+          SUM(status_429) as status_429_7d,
+          SUM(status_5xx) as status_5xx_7d
+        FROM crawler_status_daily
+        WHERE day >= date('now', '-5 hours', '-6 days')
         GROUP BY ip_hash
-      ) img ON sb.ip_hash = img.ip_hash
-      LEFT JOIN (
-        SELECT ip_hash, COUNT(*) as page_count
-        FROM raw_events
-        WHERE ts > datetime('now', '-7 days')
-          AND event_type IN ('image_page', 'external_image_page')
-        GROUP BY ip_hash
-      ) pg ON sb.ip_hash = pg.ip_hash
+      ) cs ON sb.ip_hash = cs.ip_hash
       WHERE sb.is_verified_bot = 1 AND sb.status = 'verified'
       ORDER BY sb.total_requests DESC
       LIMIT ${VERIFIED_LIMIT}
@@ -4165,6 +4349,7 @@ function renderDashboard({
   const totalArtViewers = isMultiDay ? summedArtViewers : singleDayTrend?.art_viewers || summedArtViewers;
   const isLevel5BlockRecommended = /* @__PURE__ */ __name2((suspect) => {
     if (!suspect || suspect.status === "blocked") return false;
+    if (TRUSTED_TEST_IPS.has(normalizeIpHash(suspect.ip_hash))) return false;
     const knownSearchBots = /* @__PURE__ */ new Set([
       "googlebot",
       "bingbot",
@@ -4180,6 +4365,9 @@ function renderDashboard({
     const botName = String(suspect.bot_name || "").trim().toLowerCase();
     if (suspect.status === "verified") return false;
     if (botName && knownSearchBots.has(botName)) return false;
+    const knownSearchUaHits14d = Number(suspect.known_search_ua_hits_14d || 0);
+    const knownSearchUaRatio14d = Number(suspect.known_search_ua_ratio_14d || 0);
+    if (knownSearchUaHits14d >= 20 && knownSearchUaRatio14d >= 0.6) return false;
     if ((suspect.risk_level || 0) < 4) return false;
     if (suspect.is_verified_bot) return false;
     const hardStopsDay = Number(
@@ -6471,7 +6659,7 @@ function renderDashboard({
       </div>`;
   })()}
     <div class="pulse-stat" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
-      <span class="value" style="color: #fff;"><span style="text-shadow: 0 0 2px #000, 0 0 4px #000;">\u2296</span> ${botIntelligence?.blocked?.filter((b) => b.is_active)?.length || 0}</span>
+      <span class="value" style="color: #fff;"><span style="text-shadow: 0 0 2px #000, 0 0 4px #000;">\u2296</span> ${botIntelligence?.blocked?.filter((b) => Number(b.is_active) === 1)?.length || 0}</span>
       <span class="label" style="color: #fecaca;">Blocked <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fecaca;">i</span></span>
       <div class="tooltip">Manually blocked IPs. Returns 403 Forbidden. Can unblock from Blocked IPs section below.</div>
     </div>
@@ -6503,10 +6691,32 @@ function renderDashboard({
     };
     const icon = botIcons[v.bot_name?.toLowerCase()] || "\u{1F916}";
     const displayName = v.bot_name ? v.bot_name.charAt(0).toUpperCase() + v.bot_name.slice(1) : "Unknown";
-    const imgCount = v.image_count || 0;
-    const pgCount = v.page_count || 0;
-    const breakdown = imgCount > 0 || pgCount > 0 ? "\u{1F5BC}\uFE0F " + imgCount + " images, \u{1F4C4} " + pgCount + " pages" : v.total_requests + " requests";
-    return '<div style="display: flex; align-items: center; padding: 8px; margin-bottom: 6px; background: #10b98111; border-radius: 6px; gap: 10px;"><span style="font-size: 18px;">' + icon + '</span><div style="flex: 1;"><div style="color: #10b981; font-weight: bold; font-size: 12px;">' + displayName + '</div><div style="color: #888; font-size: 10px;">' + breakdown + '</div></div><span style="color: #666; font-size: 10px;">' + (v.country || "") + "</span></div>";
+    const total7d = v.status_total_7d || 0;
+    const status200 = v.status_200_7d || 0;
+    const status301 = v.status_301_7d || 0;
+    const status302 = v.status_302_7d || 0;
+    const status404 = v.status_404_7d || 0;
+    const status410 = v.status_410_7d || 0;
+    const status429 = v.status_429_7d || 0;
+    const status5xx = v.status_5xx_7d || 0;
+    const breakdown = total7d > 0 ? total7d + " status-coded requests (7d)" : v.total_requests + " lifetime requests";
+    const metricCell = (label, value) => {
+      const style = value > 0 ? "font-weight:700; color:#e5e7eb;" : "color:#9ca3af;";
+      return '<span style="display:inline-block; ' + style + '">' + label + ': ' + value + '</span>';
+    };
+    const separator = '<span style="display:inline-block; margin:0 5px; color:#4b5563;">|</span>';
+    const signalParts = [
+      { label: "T", value: total7d },
+      { label: "200", value: status200 },
+      { label: "301", value: status301 },
+      { label: "302", value: status302 },
+      { label: "404", value: status404 },
+      { label: "410", value: status410 },
+      { label: "429", value: status429 },
+      { label: "5xx", value: status5xx }
+    ].filter((s2) => s2.label === "T" || Number(s2.value || 0) > 0);
+    const statusSignals = signalParts.map((s2) => metricCell(s2.label, s2.value)).join(separator);
+    return '<div style="display: flex; align-items: center; padding: 8px; margin-bottom: 6px; background: #10b98111; border-radius: 6px; gap: 10px;"><span style="font-size: 18px;">' + icon + '</span><div style="flex: 1;"><div style="display:flex; align-items:center; justify-content:space-between; gap:10px;"><div style="color: #10b981; font-weight: bold; font-size: 12px;">' + displayName + '</div><div style="color: #9ca3af; font-size: 10px; letter-spacing:0; white-space: nowrap;">' + statusSignals + '</div></div><div style="color: #888; font-size: 10px;">' + breakdown + '</div></div><span style="color: #666; font-size: 10px;">' + (v.country || "") + '</span></div>';
   }).join("") + "</div>"}
     </div>
 
@@ -6617,7 +6827,7 @@ function renderDashboard({
             <th style="text-align: center; padding: 4px;">Action</th>
           </tr>
           ${(botIntelligence?.blocked || []).map((b) => {
-    const isActive = b.is_active === 1;
+    const isActive = Number(b.is_active) === 1;
     const blockedDate = b.blocked_at ? new Date(b.blocked_at).toLocaleDateString() : "-";
     const rowStyle = !isActive ? "opacity: 0.4;" : "";
     const statusBg = isActive ? "#dc262622" : "#37415122";
@@ -7864,6 +8074,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
     const ip = request.headers.get("CF-Connecting-IP") || request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim() || "unknown";
     const ipHash = hashIP(ip);
     const ua = request.headers.get("User-Agent") || "";
+    const verifiedBotName = getVerifiedBotName(ua);
     const country = request.cf?.country || null;
     const region = request.cf?.region || null;
     const city = request.cf?.city || null;
@@ -7940,6 +8151,9 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
         await env.DB.prepare(
           `INSERT INTO raw_events (${columns.join(", ")}) VALUES (${placeholders})`
         ).bind(...values).run();
+        if (verifiedBotName) {
+          await recordCrawlerStatusDaily(env, ipHash, verifiedBotName, eventType, inferredFrom);
+        }
         return;
       } catch (e) {
         const msg = String(e?.message || e);
@@ -8108,13 +8322,18 @@ async function updateBotIntelligence(env) {
     const ipStats = statsResult.results || [];
     let upserted = 0;
     for (const stats of ipStats) {
+      const normalizedIpHash = normalizeIpHash(stats.ip_hash);
+      const isTrustedTestIp = TRUSTED_TEST_IPS.has(normalizedIpHash);
       const isDatacenter = DATACENTER_PREFIXES.some(
         (p) => String(stats.ip_hash || "").startsWith(p)
       );
       const requestsPerHour = Number(stats.max_per_hour || 0);
       const maxVelocity = Number(stats.max_per_minute || 0) / 60;
       let botName = null;
-      if (stats.is_verified_bot) {
+      const isVerifiedBot = Boolean(stats.is_verified_bot) || isTrustedTestIp;
+      if (isTrustedTestIp) {
+        botName = "trusted_tester";
+      } else if (isVerifiedBot) {
         try {
           const uaRow = await env.DB.prepare(
             `SELECT ua FROM raw_events WHERE ip_hash = ? AND event_type = 'verified_bot' ORDER BY ts DESC LIMIT 1`
@@ -8139,16 +8358,22 @@ async function updateBotIntelligence(env) {
         gallery_pct: Number(stats.gallery_pct || 0),
         has_referrer: Boolean(stats.has_referrer),
         is_datacenter: isDatacenter,
-        is_verified_bot: Boolean(stats.is_verified_bot),
+        is_verified_bot: isVerifiedBot,
         country: stats.country || null
       });
       let score = baseScore;
       const rules = [...baseRules];
-      if (stats.is_flagged_bot) {
+      if (stats.is_flagged_bot && !isTrustedTestIp) {
         score += 2;
         rules.push("auto_flagged_bot");
       }
       let riskLevel = Math.max(baseRiskLevel, riskLevelFromScore(score));
+      if (isTrustedTestIp) {
+        score = 0;
+        riskLevel = 1;
+        rules.length = 0;
+        rules.push("trusted_test_ip_allowlist");
+      }
       if (riskLevel >= 4) {
         const ok = isLevel4BlockCandidate({
           score,
@@ -8162,6 +8387,7 @@ async function updateBotIntelligence(env) {
         if (!ok) riskLevel = 3;
       }
       const status = stats.is_verified_bot ? "verified" : "watching";
+      const effectiveStatus = isVerifiedBot ? "verified" : "watching";
       await env.DB.prepare(
         `
         INSERT INTO suspected_bots (
@@ -8219,10 +8445,10 @@ async function updateBotIntelligence(env) {
         Number(stats.image_page_pct || 0),
         stats.has_referrer ? 1 : 0,
         isDatacenter ? 1 : 0,
-        stats.is_verified_bot ? 1 : 0,
+        isVerifiedBot ? 1 : 0,
         botName,
         stats.country,
-        status
+        effectiveStatus
       ).run();
       upserted++;
     }
@@ -8848,9 +9074,16 @@ __name2(handleExportCSV, "handleExportCSV");
 async function handleBlockIP(request, env) {
   try {
     const { ip_hash, reason } = await request.json();
-    if (!ip_hash) {
+    const normalizedIpHash = normalizeIpHash(ip_hash);
+    if (!normalizedIpHash) {
       return new Response(JSON.stringify({ error: "ip_hash required" }), {
         status: 400,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
+    if (TRUSTED_TEST_IPS.has(normalizedIpHash)) {
+      return new Response(JSON.stringify({ error: "trusted_test_ip_cannot_be_blocked", ip_hash: normalizedIpHash }), {
+        status: 409,
         headers: { "Content-Type": "application/json" }
       });
     }
@@ -8859,7 +9092,7 @@ async function handleBlockIP(request, env) {
       SELECT risk_level, risk_score, rules_triggered, total_requests 
       FROM suspected_bots WHERE ip_hash = ?
     `
-    ).bind(ip_hash).first();
+    ).bind(normalizedIpHash).first();
     await env.DB.prepare(
       `
       INSERT INTO blocked_ips (ip_hash, risk_level, risk_score, rules_triggered, total_requests, reason, blocked_by)
@@ -8871,7 +9104,7 @@ async function handleBlockIP(request, env) {
         unblocked_at = NULL
     `
     ).bind(
-      ip_hash,
+      normalizedIpHash,
       suspectInfo?.risk_level || 4,
       suspectInfo?.risk_score || 0,
       suspectInfo?.rules_triggered || "[]",
@@ -8883,8 +9116,8 @@ async function handleBlockIP(request, env) {
       UPDATE suspected_bots SET status = 'blocked', updated_at = datetime('now')
       WHERE ip_hash = ?
     `
-    ).bind(ip_hash).run();
-    return new Response(JSON.stringify({ success: true, ip_hash }), {
+    ).bind(normalizedIpHash).run();
+    return new Response(JSON.stringify({ success: true, ip_hash: normalizedIpHash }), {
       status: 200,
       headers: { "Content-Type": "application/json" }
     });
@@ -8901,15 +9134,17 @@ __name2(handleBlockIP, "handleBlockIP");
 async function handleBulkBlockIP(request, env) {
   try {
     const { ip_hashes, reason } = await request.json();
-    const hashes = Array.isArray(ip_hashes) ? ip_hashes.map((v) => String(v || "").trim()).filter(Boolean) : [];
+    const hashes = Array.isArray(ip_hashes) ? ip_hashes.map((v) => normalizeIpHash(v)).filter(Boolean) : [];
     if (hashes.length === 0) {
       return new Response(JSON.stringify({ error: "ip_hashes required" }), {
         status: 400,
         headers: { "Content-Type": "application/json" }
       });
     }
+    const filteredHashes = hashes.filter((v) => !TRUSTED_TEST_IPS.has(v));
+    const skippedTrusted = hashes.filter((v) => TRUSTED_TEST_IPS.has(v));
     let blocked = 0;
-    for (const ip_hash of hashes) {
+    for (const ip_hash of filteredHashes) {
       const suspectInfo = await env.DB.prepare(
         `
         SELECT risk_level, risk_score, rules_triggered, total_requests
@@ -8942,7 +9177,7 @@ async function handleBulkBlockIP(request, env) {
       ).bind(ip_hash).run();
       blocked++;
     }
-    return new Response(JSON.stringify({ success: true, blocked }), {
+    return new Response(JSON.stringify({ success: true, blocked, skipped_trusted: skippedTrusted }), {
       status: 200,
       headers: { "Content-Type": "application/json" }
     });

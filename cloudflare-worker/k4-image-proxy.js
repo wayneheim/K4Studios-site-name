@@ -1037,30 +1037,17 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
           });
 
           if (isMissingLeafProbe) {
-            // Default policy: treat missing-leaf URLs as mutation probing and 404.
-            // Exception: legacy Engrained image-detail URLs shipped without the leaf gallery folder.
-            // Example legacy: /Other/K4-Select-Series/Engrained/i-XXXX
-            // Canonical:      /Other/K4-Select-Series/Engrained/Engrained-Series/i-XXXX
-            const allowLegacyMissingLeafRedirect = requestedLower === '/other/k4-select-series/engrained';
-            if (allowLegacyMissingLeafRedirect) {
-              const canonicalMissingLeafPath = validPaths.find(p => {
-                const pl = String(p || '').toLowerCase();
-                return pl.startsWith(requestedPrefixLower);
-              });
-              if (canonicalMissingLeafPath) {
-                const canonicalUrl = `https://www.k4studios.com${canonicalMissingLeafPath}/${imageId}${search}`;
-                ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearch, request));
-                return Response.redirect(canonicalUrl, 301);
-              }
+            // Image ID is valid and canonical path is known. For missing-leaf requests,
+            // prefer canonical 301 recovery over 404 so search engines consolidate signals.
+            const canonicalMissingLeafPath = validPaths.find(p => {
+              const pl = String(p || '').toLowerCase();
+              return pl.startsWith(requestedPrefixLower);
+            }) || validPaths[0];
+            if (canonicalMissingLeafPath) {
+              const canonicalUrl = `https://www.k4studios.com${canonicalMissingLeafPath}/${imageId}${search}`;
+              ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearch, request));
+              return Response.redirect(canonicalUrl, 301);
             }
-
-            return new Response('Not Found', {
-              status: 404,
-              headers: {
-                'Cache-Control': 'public, max-age=86400',
-                'X-Robots-Tag': 'noindex, nofollow'
-              }
-            });
           }
 
           const canonicalUrl = `https://www.k4studios.com${validPaths[0]}/${imageId}${search}`;

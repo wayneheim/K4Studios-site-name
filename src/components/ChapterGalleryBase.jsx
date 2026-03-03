@@ -1816,7 +1816,7 @@ export default function ChapterGalleryBase({
                       </a>
                     </div>
 
-                    {/* Title - H3 for chapter label (lower SEO weight), H2 for actual title */}
+                    {/* Title - H3 for chapter label (lower SEO weight), H1 for actual title */}
                     {(() => {
                       const chapterTitle = galleryData[currentIndex]?.meta?.ogTitle ||
                         galleryData[currentIndex]?.title ||
@@ -1833,12 +1833,12 @@ export default function ChapterGalleryBase({
                           >
                             Chapter {currentIndex + 1}:
                           </h3>
-                          <h2
+                          <h1
                             className="font-semibold tracking-wide text-[#85644b] chapter-title"
                             style={{ fontSize: isMobile ? mobileTitleSize : "1.55rem", opacity: 0.5, lineHeight: "1.35", marginTop: 0, marginBottom: 0 }}
                           >
                             {chapterTitle}
-                          </h2>
+                          </h1>
                         </div>
                       );
                     })()}
@@ -1928,18 +1928,6 @@ export default function ChapterGalleryBase({
                           borderTop: '1px dashed rgba(200, 190, 180, 0.4)',
                           textAlign: 'left'
                         }}>
-                          {/* H1 for SEO - the image title */}
-                          <h1 style={{
-                            fontSize: '0.85rem',
-                            fontWeight: '500',
-                            letterSpacing: '0.04em',
-                            color: '#7a6a58',
-                            textAlign: 'left',
-                            margin: '0 0 0.75rem',
-                            fontFamily: "'Glegoo', serif"
-                          }} itemProp="name">
-                            {galleryData[currentIndex]?.title || galleryData[currentIndex]?.alt}
-                          </h1>
                           {galleryData[currentIndex]?.description && (
                             <p itemProp="description" style={{ margin: '0 0 1rem' }}>
                               {galleryData[currentIndex].description}

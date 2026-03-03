@@ -1,0 +1,360 @@
+{
+  "generated_at": "2026-03-03T20:26:11.024Z",
+  "summary": {
+    "sample_size": 34,
+    "bucket_A_never_existed": {
+      "count": 31,
+      "pct": 91.18
+    },
+    "bucket_B_previously_existed_removed": {
+      "count": 3,
+      "pct": 8.82
+    },
+    "bucket_C_currently_valid_misclassified": {
+      "count": 0,
+      "pct": 0
+    }
+  },
+  "details": [
+    {
+      "image_id": "i-2M5sP6g",
+      "last_seen": "2026-03-03 16:53:20",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots/Ohio/Ohio-Slideshow/n-QWw7c9/i-2M5sP6g",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-MX9k7zf",
+      "last_seen": "2026-03-03 12:58:43",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Iceland/Iceland/i-MX9k7zf",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-dqhKHgR",
+      "last_seen": "2026-03-03 08:49:16",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Miscellaneous-Collections/Other/2019-Art-Show-Images/Slideshow/n-7jtJHZ/i-dqhKHgR",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-N8HtrQd",
+      "last_seen": "2026-03-03 01:23:04",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Canada/Canadian-Rockies-Banff-and-Jasper/i-N8HtrQd",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-HhrXcC5",
+      "last_seen": "2026-03-02 21:24:40",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Old-Buildings-and-Structures/Modern/i-HhrXcC5",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-DMcvWT8",
+      "last_seen": "2026-03-02 13:35:28",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Canada-Photography/Canadian-Rockies-Banff-and-Jasper/i-DMcvWT8",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-7mzzbvp",
+      "last_seen": "2026-03-02 13:35:28",
+      "hit_count": 1,
+      "sample_url": "/galleries/painterly-fine-art-photography/facing-history/western-cowboy-portraits/color/i-7mzzbvp",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": true,
+      "bucket": "B"
+    },
+    {
+      "image_id": "i-6ZCjSkj",
+      "last_seen": "2026-03-02 09:11:22",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-6ZCjSkj",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-kRxhgLK",
+      "last_seen": "2026-03-02 06:51:48",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-kRxhgLK",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-535QhwL",
+      "last_seen": "2026-03-02 03:38:20",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Landscapes-Gallery/Landscapes/i-535QhwL",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-qvvvqph",
+      "last_seen": "2026-03-01 18:56:22",
+      "hit_count": 1,
+      "sample_url": "/galleries/painterly-fine-art-photography/facing-history/western-cowboy-portraits/black-white/i-qvvvqph",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": true,
+      "bucket": "B"
+    },
+    {
+      "image_id": "i-FAKEQ9",
+      "last_seen": "2026-03-01 17:46:49",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FAKEQ9",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-FAKEQ8",
+      "last_seen": "2026-03-01 17:46:49",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FAKEQ8",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-FAKEQ7",
+      "last_seen": "2026-03-01 17:46:49",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FAKEQ7",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-FAKEQ10",
+      "last_seen": "2026-03-01 17:46:49",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FAKEQ10",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-FAKEQ6",
+      "last_seen": "2026-03-01 17:46:48",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FAKEQ6",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-FAKEQ5",
+      "last_seen": "2026-03-01 17:46:48",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FAKEQ5",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-FAKEQ4",
+      "last_seen": "2026-03-01 17:46:48",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FAKEQ4",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-FAKEQ3",
+      "last_seen": "2026-03-01 17:46:48",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FAKEQ3",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-FAKEQ2",
+      "last_seen": "2026-03-01 17:46:48",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FAKEQ2",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-FAKEQ1",
+      "last_seen": "2026-03-01 17:46:48",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Fine-Art-Photography/Architecture/Gallery/i-FAKEQ1",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-FAKEID1",
+      "last_seen": "2026-03-01 17:45:22",
+      "hit_count": 3,
+      "sample_url": "/Galleries/Fine-Art-Photography/Architecture/Gallery/Gallery/i-FAKEID1",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-cTR3R9B",
+      "last_seen": "2026-02-27 01:05:48",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Canada/Canadian-Rockies-Banff-and-Jasper/i-cTR3R9B",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-l4hpxbq",
+      "last_seen": "2026-02-26 18:46:33",
+      "hit_count": 1,
+      "sample_url": "/galleries/fine-art-photography/transportation/cars/i-l4hpxbq",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": true,
+      "bucket": "B"
+    },
+    {
+      "image_id": "i-dKPTXJC",
+      "last_seen": "2026-02-26 18:12:40",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Traditional-Photos/Landscapes-Gallery/Location/Landscapes-International/The-Faroe-Islands/i-dKPTXJC",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-MkS77R7",
+      "last_seen": "2026-02-26 17:12:26",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-MkS77R7",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-HB8nTpJ",
+      "last_seen": "2026-02-26 09:30:43",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots/Tennessee/Memphis/i-HB8nTpJ",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-qnj3zHc",
+      "last_seen": "2026-02-26 03:03:13",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots/Wyoming/Wyoming--Yellowstone/i-qnj3zHc",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-nSZDVsL",
+      "last_seen": "2026-02-25 21:34:52",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Faroe-Islands-Iceland/Iceland-to-Faroe-Islands-Back-Black-and-White/i-nSZDVsL",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-cL7FWdH",
+      "last_seen": "2026-02-25 07:58:44",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Miscellaneous-Collections/Other/2019-Art-Show-Images/Slideshow/n-7jtJHZ/i-cL7FWdH",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-2x2DpZN",
+      "last_seen": "2026-02-25 06:39:42",
+      "hit_count": 1,
+      "sample_url": "/Galleries/Traditional-Photos/Miscellaneous-Fine-Art-Photography/Strange-Lights/i-2x2DpZN",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-GpK2XBG",
+      "last_seen": "2026-02-25 05:07:25",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Miscellaneous-Collections/Airplanes/Liberty-Aviation-Museum/i-GpK2XBG",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-dkhHKsk",
+      "last_seen": "2026-02-24 23:40:15",
+      "hit_count": 1,
+      "sample_url": "/Other/Photo-Shoots-and-Themes/Miscellaneous-Collections/Airplanes/2011-Cleveland-Air-Show/i-dkhHKsk",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    },
+    {
+      "image_id": "i-DoesNotExist123",
+      "last_seen": "2026-02-24 22:28:15",
+      "hit_count": 3,
+      "sample_url": "/Galleries/Fine-Art-Photography/Portraits/Reenactors/i-DoesNotExist123",
+      "in_current_imageIdMap": false,
+      "in_current_manifest": false,
+      "historical_in_git": false,
+      "bucket": "A"
+    }
+  ]
+}
