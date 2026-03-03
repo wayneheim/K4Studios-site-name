@@ -37,6 +37,41 @@ function getProxySrc(imageId, size = 'm') {
   return `/img/${imageId}/${safeSize}`;
 }
 
+function buildCaptionExcerpt(description, minChars = 150, maxChars = 280) {
+  if (!description || typeof description !== "string") {
+    return { text: "", truncated: false };
+  }
+
+  const cleanText = description.replace(/\s+/g, " ").trim();
+  if (!cleanText) {
+    return { text: "", truncated: false };
+  }
+
+  if (cleanText.length <= maxChars) {
+    return { text: cleanText, truncated: false };
+  }
+
+  const boundedText = cleanText.slice(0, maxChars + 1);
+
+  // Prefer ending at a sentence break after minChars when possible
+  const sentenceBoundaryMatches = [...boundedText.matchAll(/[.!?](?=\s|$)/g)];
+  const preferredBoundary = sentenceBoundaryMatches
+    .map((m) => m.index)
+    .filter((idx) => typeof idx === "number" && idx >= minChars)
+    .pop();
+
+  let cutIndex = typeof preferredBoundary === "number" ? preferredBoundary + 1 : -1;
+
+  if (cutIndex === -1) {
+    const safeSlice = boundedText.slice(0, maxChars);
+    const lastSpace = safeSlice.lastIndexOf(" ");
+    cutIndex = lastSpace > minChars ? lastSpace : maxChars;
+  }
+
+  const text = cleanText.slice(0, cutIndex).trim();
+  return { text, truncated: cutIndex < cleanText.length };
+}
+
 /* =========================================================
    Helper function to find section landing page from siteNav
    ========================================================= */
@@ -761,6 +796,13 @@ export default function ChapterGalleryBase({
   const entry = galleryData[currentIndex];
   useMetaSwap(entry, titleBase, currentIndex);
 
+  const imageCaptionExcerpt = useMemo(() => {
+    const description = galleryData[currentIndex]?.description;
+    const minChars = isMobile ? 115 : 150;
+    const maxChars = isMobile ? 200 : 280;
+    return buildCaptionExcerpt(description, minChars, maxChars);
+  }, [galleryData, currentIndex, isMobile]);
+
   // Clean URL if intro visible
   useEffect(() => {
     const introEl = document.getElementById("intro-section");
@@ -1363,6 +1405,30 @@ export default function ChapterGalleryBase({
                       {/* Removed absolute-positioned mobile arrows; moved to row near slideshow */}
                     </div>
 
+                    {/* Subtle caption excerpt (from "More about this image" description) */}
+                    {imageCaptionExcerpt?.text && (
+                      <div className="mx-auto mt-2 mb-2 px-3" style={{ maxWidth: isMobile ? '390px' : '500px' }}>
+                        <p
+                          className="image-caption"
+                          style={{
+                            textAlign: 'center',
+                            fontStyle: 'italic',
+                            fontSize: isMobile ? '0.70rem' : '0.78rem',
+                            lineHeight: '1.35',
+                            opacity: 0.52,
+                            minHeight: '2.7em',
+                            display: '-webkit-box',
+                            WebkitLineClamp: 2,
+                            WebkitBoxOrient: 'vertical',
+                            overflow: 'hidden'
+                          }}
+                          aria-label="Caption excerpt"
+                        >
+                          “{imageCaptionExcerpt.text}{imageCaptionExcerpt.truncated ? '...' : ''}”
+                        </p>
+                      </div>
+                    )}
+
                     {/* Unified Nav Row + Guide trigger */}
                     <div className={`flex items-center justify-center gap-2 mb-1 ${isMobile ? 'mt-2' : 'mt-4'}`}>
                       {/* Toolbar */}
@@ -1816,7 +1882,7 @@ export default function ChapterGalleryBase({
                       </a>
                     </div>
 
-                    {/* Title - H3 for chapter label (lower SEO weight), H1 for actual title */}
+                    {/* Title - styled chapter label + H1 for actual title */}
                     {(() => {
                       const chapterTitle = galleryData[currentIndex]?.meta?.ogTitle ||
                         galleryData[currentIndex]?.title ||
@@ -1827,12 +1893,12 @@ export default function ChapterGalleryBase({
                       const mobileTitleSize = titleLength > 40 ? '1.0rem' : titleLength > 30 ? '1.15rem' : '1.35rem';
                       return (
                         <div className="text-center" style={{ fontFamily: "'Glegoo', serif", marginBottom: isMobile ? "1.5rem" : "0.5rem" }}>
-                          <h3
+                          <p
                             className="font-semibold tracking-wide text-[#85644b]"
                             style={{ fontSize: "1.55rem", opacity: 0.5, lineHeight: "1.35", marginBottom: isMobile ? "0.75rem" : "0.25rem" }}
                           >
                             Chapter {currentIndex + 1}:
-                          </h3>
+                          </p>
                           <h1
                             className="font-semibold tracking-wide text-[#85644b] chapter-title"
                             style={{ fontSize: isMobile ? mobileTitleSize : "1.55rem", opacity: 0.5, lineHeight: "1.35", marginTop: 0, marginBottom: 0 }}

@@ -81,14 +81,15 @@ export function getStructuredData({
     organizationSameAs = [],
   } = defaults;
 
-  const todayIso = new Date().toISOString().split("T")[0];
-
   /* ============================================================
      TYPE: GALLERY / COLLECTION PAGE
   ============================================================ */
   if (type === "gallery") {
     const featuredImages = images.slice(0, 8).map((img) => {
       const proxyUrl = getProxyUrl(img, 'l');
+      const publishedDate = img.datePublished || img.dateCreated;
+      const modifiedDate = img.dateModified;
+
       return {
         "@type": "ImageObject",
         "@id": proxyUrl ? `${proxyUrl}#image` : undefined,
@@ -112,8 +113,8 @@ export function getStructuredData({
           name: creatorName,
           url: creatorUrl,
         },
-        datePublished: img.datePublished || img.dateCreated || todayIso,
-        dateModified: img.dateModified || img.datePublished || todayIso,
+        ...(publishedDate ? { datePublished: publishedDate } : {}),
+        ...(modifiedDate ? { dateModified: modifiedDate } : {}),
         ...(img.keywords?.length
           ? { keywords: Array.isArray(img.keywords) ? img.keywords.join(", ") : img.keywords }
           : {}),
@@ -122,6 +123,9 @@ export function getStructuredData({
         ...(img.height ? { height: img.height } : {}),
       };
     });
+
+    const collectionPublishedDate = data.datePublished || data.dateCreated;
+    const collectionModifiedDate = data.dateModified;
 
     const collectionObj: any = {
       "@context": "https://schema.org",
@@ -143,8 +147,8 @@ export function getStructuredData({
         description: data.description,
         image: featuredImages,
       },
-      datePublished: data.datePublished || data.dateCreated || todayIso,
-      dateModified: data.dateModified || data.datePublished || todayIso,
+      ...(collectionPublishedDate ? { datePublished: collectionPublishedDate } : {}),
+      ...(collectionModifiedDate ? { dateModified: collectionModifiedDate } : {}),
       creator: { "@type": "Person", name: creatorName, url: creatorUrl },
       copyrightHolder: { "@type": "Person", name: creatorName, url: creatorUrl },
       copyrightNotice: data.copyrightNotice || copyrightNotice,
@@ -165,6 +169,8 @@ export function getStructuredData({
   ============================================================ */
   if (type === "image") {
     const proxyUrl = getProxyUrl(data, 'l');
+    const imagePublishedDate = data.datePublished || data.dateCreated;
+    const imageModifiedDate = data.dateModified;
     const obj: any = {
       "@context": "https://schema.org",
       "@type": "ImageObject",
@@ -198,8 +204,8 @@ export function getStructuredData({
         { "@type": "Thing", name: "Historical Portraiture" },
       ],
       isAccessibleForFree: true,
-      datePublished: data.datePublished || data.dateCreated || todayIso,
-      dateModified: data.dateModified || data.datePublished || todayIso,
+      ...(imagePublishedDate ? { datePublished: imagePublishedDate } : {}),
+      ...(imageModifiedDate ? { dateModified: imageModifiedDate } : {}),
       inLanguage: "en",
       mainEntityOfPage: { "@type": "WebPage", "@id": data.pageUrl || data.url },
       potentialAction: {

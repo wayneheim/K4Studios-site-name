@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-ncFcHDM",
     "title": "One Last Look",
-    "description": "A striking Western portrait capturing the quiet weight of goodbye. This painterly fine art image features a bearded cowboy in a red shirt and wide-brimmed hat, standing alone after a parting moment.’s signature technique blends textured layers, subdued color tones, and evocative storytelling to reflect the emotional solitude of the American frontier. Ideal for collectors seeking Western wall art that feels cinematic, honest, and rooted in timeless grit. © Wayne Heim",
+    "description": "A striking Western portrait capturing the quiet weight of goodbye. This painterly fine art image features a bearded cowboy in a red shirt and wide-brimmed hat, standing alone after a parting moment.Wayne Heim's signature technique blends textured layers, subdued color tones, and evocative storytelling to reflect the emotional solitude of the American frontier. Ideal for collectors seeking Western wall art that feels cinematic, honest, and rooted in timeless grit. © Wayne Heim",
     "alt": "Western cowboy standing alone in painterly morning light, red shirt and hat, reflecting after a parting moment.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KNVfXXkzZWQPzsknRPt6jKWTWbr7q9gSJHFHLd8kr/XL/cowboy%20photography%20painting_HF29245-250-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KNVfXXkzZWQPzsknRPt6jKWTWbr7q9gSJHFHLd8kr/XL/cowboy%20photography%20painting_HF29245-250-XL.jpg",

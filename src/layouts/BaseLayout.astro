@@ -181,12 +181,6 @@ const inferMimeType = (url) => {
 
 const ogImageType = meta.ogImageType || inferMimeType(ogImage) || 'image/jpeg';
 const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 'summary');
-const keywords =
-  meta.keywords ||
-  (Array.isArray(preloadImage?.keywords)
-    ? preloadImage.keywords.join(', ')
-    : preloadImage?.keywords || '');
-
 const normalizedStructuredDataJSON = normalizeK4Host(structuredDataJSON);
 const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
 ---
@@ -200,7 +194,6 @@ const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
 
     <title>{cleanTitle}</title>
     <meta name="description" content={seoDescription} />
-    {keywords && <meta name="keywords" content={keywords} />}
     <meta name="author" content="Wayne Heim" />
     <meta name="copyright" content="© Wayne Heim, K4 Studios" />
     <meta name="creator" content="Wayne Heim" />
