@@ -1,0 +1,74 @@
+---
+/**
+ * HybridThesis.astro
+ *
+ * The authority thesis block for Hybrid Hub pages.
+ * Contains the H1 (critical for SSR semantics) and an introductory paragraph.
+ *
+ * Props:
+ *   heading  — The H1 text (e.g. "Cowboy & Western Fine Art Photography for Collectors")
+ *   subtitle — Optional subheading (H2 or styled span)
+ *   body     — 1-3 paragraphs as an array of strings
+ */
+interface Props {
+  heading: string;
+  subtitle?: string;
+  body: string[];
+}
+
+const { heading, subtitle, body } = Astro.props;
+---
+
+<section class="hybrid-thesis reveal-on-scroll">
+  <h1 class="hybrid-thesis__heading">{heading}</h1>
+  {subtitle && <p class="hybrid-thesis__subtitle">{subtitle}</p>}
+  <div class="hybrid-thesis__body">
+    {body.map((p) => <p set:html={p} />)}
+  </div>
+</section>
+
+<style>
+  .hybrid-thesis {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 1.5rem 2.5rem;
+    font-family: 'Glegoo', serif;
+  }
+
+  .hybrid-thesis__heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.25;
+    margin: 0 0 0.75rem;
+  }
+
+  .hybrid-thesis__subtitle {
+    font-size: 1.1rem;
+    color: #6d5b4a;
+    margin: 0 0 1.5rem;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .hybrid-thesis__body p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #3a3530;
+    margin: 0 0 1rem;
+    text-align: left;
+  }
+
+  @media (max-width: 600px) {
+    .hybrid-thesis__heading {
+      font-size: 1.5rem;
+    }
+    .hybrid-thesis__subtitle {
+      font-size: 1rem;
+    }
+    .hybrid-thesis {
+      padding: 2rem 1rem 1.5rem;
+    }
+  }
+</style>

@@ -3,11 +3,11 @@ import React from "react";
 
 // NOTE: FAQPage structured data is injected at the page level, not here.
 // This component only renders the FAQ UI accordion.
-export default function FAQAccordion({ items }) {
+export default function FAQAccordion({ items, compact = false, showHeading = true }) {
   return (
     <>
-    <section className="faq">
-      <h2>Frequently Asked Questions</h2>
+    <section className={`faq${compact ? " faq--compact" : ""}`}>
+      {showHeading && <h2>Frequently Asked Questions</h2>}
       {items.map((item, idx) => (
         <details key={idx} className="faq-item">
           <summary dangerouslySetInnerHTML={{ __html: `<b>${item.q}</b>` }} />
@@ -94,6 +94,12 @@ export default function FAQAccordion({ items }) {
           z-index: 10;
         }
 
+        /* Compact variant (used by hybrid hub pages) */
+        .faq.faq--compact {
+          padding: 1.35rem;
+          margin: 2rem auto;
+        }
+
         .faq * {
           font-family: inherit;
         }
@@ -134,13 +140,22 @@ export default function FAQAccordion({ items }) {
         }
 
         .faq details {
-        margin-top: -1.5rem;
+          margin-top: -1.5rem;
           padding-top: .5rem;
           padding-left: 1.25rem;
           padding-right: 1.25rem;
           margin-bottom: 1.5rem;
           border-bottom: 1.5px solid #d1cec8ff;
           padding-bottom: 1rem;
+        }
+
+        .faq.faq--compact details {
+          margin-top: -0.9rem;
+          padding-top: 0.35rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          margin-bottom: 0.95rem;
+          padding-bottom: 0.75rem;
         }
 
         .faq details:hover {
@@ -159,6 +174,11 @@ export default function FAQAccordion({ items }) {
           cursor: pointer;
         }
 
+        .faq.faq--compact summary {
+          margin-top: 0.35rem;
+          margin-bottom: 0.2rem;
+        }
+
         .faq summary:hover {
           color: rgba(95, 82, 76, 1);
         }
@@ -168,6 +188,11 @@ export default function FAQAccordion({ items }) {
           color: rgba(95, 82, 76, 1);
           margin-top: 0.5rem;
           padding-left: 1.5rem;
+        }
+
+        .faq.faq--compact p {
+          margin-top: 0.35rem;
+          padding-left: 1.15rem;
         }
 
         .faq ul {

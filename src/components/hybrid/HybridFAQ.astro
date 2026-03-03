@@ -1,0 +1,66 @@
+---
+/**
+ * HybridFAQ.astro
+ *
+ * SSR wrapper for hybrid-hub collector-focused FAQ.
+ * Renders 5 questions via the existing FAQAccordion component,
+ * and injects FAQPage JSON-LD structured data.
+ *
+ * Props:
+ *   heading  — Section heading (default: "Collector Questions")
+ *   faqItems — Array of { q: string, a: string|string[] } (supports legacy {question, answer})
+ */
+import FAQAccordion from "../FAQAccordion.jsx";
+
+interface FAQItem {
+  q?: string;
+  a?: string | string[];
+  question?: string;
+  answer?: string | string[];
+}
+interface Props {
+  heading?: string;
+  faqItems: FAQItem[];
+}
+
+const { heading = "Collector Questions", faqItems } = Astro.props;
+
+// FAQAccordion expects { q, a } shape
+const items = faqItems.map((f) => ({
+  q: f.q ?? f.question ?? "",
+  a: f.a ?? f.answer ?? "",
+}));
+---
+
+<section class="hybrid-faq reveal-on-scroll">
+  <h2 class="hybrid-faq__heading">{heading}</h2>
+  <FAQAccordion items={items} compact showHeading={false} client:load />
+</section>
+
+<style>
+  .hybrid-faq {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 2.5rem;
+    font-family: 'Glegoo', serif;
+    border-top: 1px solid #e8e2da;
+  }
+
+  .hybrid-faq__heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 1.5rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .hybrid-faq__heading {
+      font-size: 1.25rem;
+    }
+    .hybrid-faq {
+      padding: 1.5rem 1rem 2rem;
+    }
+  }
+</style>

@@ -1,0 +1,61 @@
+---
+/**
+ * HybridPrints.astro
+ *
+ * Short collector-focused section about print editions and substrates.
+ * Sits between Definition and Catalog in the hub layout.
+ *
+ * Props:
+ *   heading    — e.g. "Western Fine Art Photography Prints"
+ *   paragraphs — Array of HTML strings (1-2 paragraphs)
+ */
+interface Props {
+  heading: string;
+  paragraphs: string[];
+}
+
+const { heading, paragraphs } = Astro.props;
+---
+
+<section class="hybrid-prints reveal-on-scroll">
+  <h2 class="hybrid-prints__heading">{heading}</h2>
+  <div class="hybrid-prints__body">
+    {paragraphs.map((p) => <p set:html={p} />)}
+  </div>
+</section>
+
+<style>
+  .hybrid-prints {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 2.5rem;
+    font-family: 'Glegoo', serif;
+    border-top: 1px solid #e8e2da;
+  }
+
+  .hybrid-prints__heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 1rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .hybrid-prints__body p {
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: #3a3530;
+    margin: 0 0 1rem;
+    text-align: left;
+  }
+
+  @media (max-width: 600px) {
+    .hybrid-prints__heading {
+      font-size: 1.25rem;
+    }
+    .hybrid-prints {
+      padding: 1.5rem 1rem 2rem;
+    }
+  }
+</style>

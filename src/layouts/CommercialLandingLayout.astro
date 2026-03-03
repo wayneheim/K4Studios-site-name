@@ -1,0 +1,130 @@
+---
+/**
+ * CommercialLandingLayout.astro
+ *
+ * Layout for commercial-intent landing pages (prints, for-sale, editions).
+ * Structurally leaner than HybridHubLayout — no carousel, no thesis.
+ *
+ * Section order:
+ *   Header → Hero → Editions → Grid → SubCategories → Confidence → Footer
+ */
+import BaseLayout from './BaseLayout.astro';
+import LandingHeader from '@/components/Landing-Header.jsx';
+import SiteFooter from '@/components/Footer.astro';
+import '@/styles/global.css';
+import '@/styles/oneupheader.css';
+
+export const prerender = true;
+
+const {
+  title,
+  breadcrumb,
+  meta = {},
+  structuredDataJSON,
+  breadcrumbsJSON,
+} = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  structuredDataJSON={structuredDataJSON}
+  breadcrumbsJSON={breadcrumbsJSON}
+  meta={meta}
+>
+  <slot name="head" slot="head" />
+
+  <main class="commercial-landing bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+
+    <!-- Header / Nav -->
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={breadcrumb} />
+    </div>
+
+    <!-- Hero (H1 + copy + CTA) -->
+    <section class="cl-hero-section" aria-label="Overview">
+      <slot name="hero" />
+    </section>
+
+    <!-- Edition Tiers -->
+    <section class="cl-editions-section reveal-on-scroll" aria-label="Edition tiers">
+      <slot name="editions" />
+    </section>
+
+    <!-- Image Grid -->
+    <section class="cl-grid-section reveal-on-scroll" id="prints-grid" aria-label="Available prints">
+      <slot name="grid" />
+    </section>
+
+    <!-- Sub-Category Links -->
+    <section class="cl-subcats-section reveal-on-scroll" aria-label="Browse collections">
+      <slot name="subcategories" />
+    </section>
+
+    <!-- Purchase Confidence -->
+    <section class="cl-confidence-section reveal-on-scroll" aria-label="Quality and presentation">
+      <slot name="confidence" />
+    </section>
+
+    <SiteFooter class="pt-8 pb-12" />
+  </main>
+
+  <!-- Reveal-on-scroll observer -->
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const els = document.querySelectorAll(".reveal-on-scroll");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        els.forEach(el => observer.observe(el));
+      } else {
+        els.forEach(el => el.classList.add("is-visible"));
+      }
+    });
+  </script>
+
+  <style>
+    .commercial-landing {
+      font-family: 'Glegoo', serif;
+    }
+
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+      visibility: hidden;
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+
+    .cl-hero-section {
+      padding: 1.5rem 0 1rem;
+    }
+    .cl-editions-section {
+      padding: 1rem 0;
+    }
+    .cl-grid-section {
+      padding: 2rem 0;
+    }
+    .cl-subcats-section {
+      padding: 1.5rem 0;
+    }
+    .cl-confidence-section {
+      padding: 1.5rem 0 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .cl-hero-section {
+        padding: 1rem 0 0.5rem;
+      }
+    }
+  </style>
+</BaseLayout>

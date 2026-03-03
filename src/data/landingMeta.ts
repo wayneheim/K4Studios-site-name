@@ -559,6 +559,21 @@ export const landingMetaDB = {
     keywords: "Western black and white photography, black and white cowboy photography, monochrome Western art, black and white cowboy portraits, dramatic Western photography, fine art black and white, Wayne Heim",
   },
 
+  // ✅ HYBRID AUTHORITY–COMMERCE HUB — Collector onboarding page
+  "/western-fine-art-photography-collection": {
+    ogTitle: "Western Fine Art Photography Collection | K4 Studios",
+    ogDescription:
+      "Curated collection of cowboy and Western fine art photography by Wayne Heim. Painterly limited-edition prints for collectors — archival paper, canvas, and Engrained wood panels.",
+    ogImage: "/images/cowboy.webp",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Western Fine Art Photography Collection | K4 Studios",
+    twitterDescription:
+      "Cowboy and Western fine art photography for collectors. Painterly limited-edition prints by Wayne Heim.",
+    twitterImage: "/images/cowboy.webp",
+    keywords: "western fine art photography, western fine art photography collection, cowboy fine art photography, painterly Western art, cowboy portraits, limited edition prints, Wayne Heim, Engrained wood prints",
+  },
+
   // ✅ COWBOY AUTHORITY HUB – "Cowboy" as PRIMARY subject entity
   "/Cowboy-Fine-Art-Photography": {
     ogTitle: "Cowboy Fine Art Photography – Wayne Heim",

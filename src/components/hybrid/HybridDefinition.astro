@@ -1,0 +1,83 @@
+---
+/**
+ * HybridDefinition.astro
+ *
+ * The "What Is …?" definition block for Hybrid Hub pages.
+ * Provides a concise, authoritative 200-250 word definition of the subject,
+ * followed by a "Read the full definition →" link to the deep-dive blog essay.
+ *
+ * Props:
+ *   heading    — e.g. "What Is Western Fine Art Photography?"
+ *   paragraphs — Array of HTML strings (2-3 paragraphs, ~200-250 words total)
+ *   essayHref  — URL of the deep-dive blog essay
+ *   essayLabel — CTA text (default: "Read the full definition →")
+ */
+interface Props {
+  heading: string;
+  paragraphs: string[];
+  essayHref: string;
+  essayLabel?: string;
+}
+
+const { heading, paragraphs, essayHref, essayLabel = "Read the full definition →" } = Astro.props;
+---
+
+<section class="hybrid-definition reveal-on-scroll">
+  <h2 class="hybrid-definition__heading">{heading}</h2>
+  <div class="hybrid-definition__body">
+    {paragraphs.map((p) => <p set:html={p} />)}
+  </div>
+  <a href={essayHref} class="hybrid-definition__link">{essayLabel}</a>
+</section>
+
+<style>
+  .hybrid-definition {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 2.5rem;
+    font-family: 'Glegoo', serif;
+    border-top: 1px solid #e8e2da;
+  }
+
+  .hybrid-definition__heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 1rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .hybrid-definition__body p {
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: #3a3530;
+    margin: 0 0 1rem;
+    text-align: left;
+  }
+
+  .hybrid-definition__link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #8b5a2b;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    font-family: 'Glegoo', serif;
+  }
+  .hybrid-definition__link:hover {
+    border-color: #8b5a2b;
+    color: #6d3f1a;
+  }
+
+  @media (max-width: 600px) {
+    .hybrid-definition__heading {
+      font-size: 1.25rem;
+    }
+    .hybrid-definition {
+      padding: 1.5rem 1rem 2rem;
+    }
+  }
+</style>
