@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-03-04T00:53:45.487Z",
+    "lastUpdated": "2026-03-04T03:35:25.347Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z",
     "lastSyncFrom": "Engrained-Series.mjs"
   },
@@ -2046,7 +2046,8 @@
     "i-z7QmfM5:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-6kc5gJ3",
     "i-kvdDsK8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-WBhfScw",
     "i-jsJGz2c:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-6rvrUQb",
-    "i-fLNLCcT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-m5sPDQc"
+    "i-fLNLCcT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White.mjs": "s-m5sPDQc",
+    "i-89qzJ6S:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-rVHQ54A"
   },
   "series": {
     "s-BB65wHk": {
@@ -12608,13 +12609,13 @@
         "foundation",
         "legend"
       ],
-      "title": "Dust and Distance — A Cowboy’s Goodbye",
+      "title": "One Last Look",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KNVfXXkzZWQPzsknRPt6jKWTWbr7q9gSJHFHLd8kr/XL/cowboy%20photography%20painting_HF29245-250-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-ncFcHDM",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Dust and Distance — A Cowboy’s Goodbye",
+          "title": "One Last Look",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KNVfXXkzZWQPzsknRPt6jKWTWbr7q9gSJHFHLd8kr/XL/cowboy%20photography%20painting_HF29245-250-XL.jpg"
         },
         {
@@ -12671,7 +12672,7 @@
         "chronicle",
         "legend"
       ],
-      "title": "Cowboy Art In Fine Art",
+      "title": "Color of Conviction",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/KnvBmX4rj79BPNfL7Zw5SLJq34CMwKZntgL7fP6bp/XL/_WHO0893-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -12803,7 +12804,7 @@
         "chronicle",
         "legend"
       ],
-      "title": "Over My Dead Body: Frontier Stand-off ",
+      "title": "Over My Dead Body: Frontier Stand-off",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MgTD8rSCgsDJVpFJp8MMrqrC5fFZGT7qHBHjvjbGR/XL/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -12994,13 +12995,13 @@
         "foundation",
         "chronicle"
       ],
-      "title": "Pinkerton's Grasp",
+      "title": "Pinkerton’s Grasp",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kQfftQ2/0/MxbF3npDhGmgmrrmtFn56qf5vbspsswfMwMcpwGHL/XL/_WHO0532-1266-1267-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-kQfftQ2",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Pinkerton's Grasp",
+          "title": "Pinkerton’s Grasp",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kQfftQ2/0/MxbF3npDhGmgmrrmtFn56qf5vbspsswfMwMcpwGHL/XL/_WHO0532-1266-1267-XL.jpg"
         }
       ],
@@ -13234,7 +13235,7 @@
         "foundation",
         "chronicle"
       ],
-      "title": "The Essence Of Outlaw Portraits",
+      "title": "Lasso in Motion",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4XLSsnC/0/K9P3KhQn5FfHJCTTkLX5VTspNGPgK2DjJSqDk5qPc/XL/_HF21794-Edit-Edit-XL.jpg",
       "occurrences": [
         {
@@ -13484,7 +13485,7 @@
         "foundation",
         "chronicle"
       ],
-      "title": "Exploring Outlaw Portraits",
+      "title": "Outlaw Watch",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/1/LRnzXB6F46R24jsXfgtrB54wqkxFVXpXH99wpQqw6/XL/_HF26194-Edit-XL.jpg",
       "occurrences": [
         {
@@ -13661,13 +13662,13 @@
         "foundation",
         "chronicle"
       ],
-      "title": "Shadows on the Ridge",
+      "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LDq7zSzrMs3gDgSF2BwqVPsjDLcFWkDxFj3mBWBpD/XL/_HF25859-1151-1156-1159-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-Wx5scCf",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Shadows on the Ridge",
+          "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LDq7zSzrMs3gDgSF2BwqVPsjDLcFWkDxFj3mBWBpD/XL/_HF25859-1151-1156-1159-XL.jpg"
         }
       ],
@@ -15964,7 +15965,7 @@
         "foundation",
         "chronicle"
       ],
-      "title": "Fine Art Western Photography In Fine Art",
+      "title": "Lifted",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G7csptc/1/Nb7htkPs3R6QKt3KVVLmnG7w5ttnP8v9PTDKwXxbd/XL/_HF26959-Edit-Edit-XL.jpg",
       "occurrences": [
         {
@@ -27340,7 +27341,7 @@
         "foundation",
         "chronicle"
       ],
-      "title": "\"Welcome Party\"",
+      "title": "\"Special Delivery\"",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg",
       "occurrences": [
         {
@@ -33206,7 +33207,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Brothers of the Open Country",
+      "title": "Open Country Brothers",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
       "occurrences": [
         {
@@ -33214,9 +33215,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs",
           "title": "Brothers of the Open Country",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-89qzJ6S",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "Open Country Brothers",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-01-30T16:25:33.179Z"
     },
