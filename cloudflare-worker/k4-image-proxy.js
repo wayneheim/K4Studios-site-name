@@ -1443,12 +1443,14 @@ async function handleSerpDashboard(request, env) {
       trendByKeyword[r.keyword].push({ date: r.checked_at, rank: r.our_rank });
     }
     
+    const authHeader = request.headers.get('Authorization');
     const html = renderSerpDashboard({
       days,
       keywords: keywords.results || [],
       latestResults: latestResults.results || [],
       previousMap: prevMap,
-      trendByKeyword
+      trendByKeyword,
+      authHeader
     });
     
     return new Response(html, { headers: { 'Content-Type': 'text/html' } });
@@ -1749,6 +1751,8 @@ async function handleSerpLaunch(request, env) {
       window.open('https://www.bing.com/search?q=' + q, '_blank');
     }
     
+    const authHeaderLp = ${JSON.stringify(request.headers.get('Authorization') || '')};
+
     async function logRank(btn, idx, keyword) {
       const gRank = document.getElementById('g-' + idx).value || null;
       const gaiRank = document.getElementById('gai-' + idx).value || null;
@@ -1763,10 +1767,9 @@ async function handleSerpLaunch(request, env) {
       btn.textContent = 'Saving…';
       
       try {
-        const res = await fetch('/__k4serp/log', {
+        const res = await fetch('/__k4serp?op=log', {
           method: 'POST',
-          credentials: 'include',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', 'Authorization': authHeaderLp },
           body: JSON.stringify({ 
             keyword, 
             google: gRank ? parseInt(gRank) : null,
@@ -1904,7 +1907,7 @@ function checkSerpAuth(request, env) {
   return null;
 }
 
-function renderSerpDashboard({ days, keywords, latestResults, previousMap, trendByKeyword }) {
+function renderSerpDashboard({ days, keywords, latestResults, previousMap, trendByKeyword, authHeader }) {
   // Group results by keyword, then by engine
   const byKeywordEngine = {};
   for (const r of latestResults) {
@@ -2064,7 +2067,7 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
 <body>
   <h1>
     🔍 K4 SERP Tracker 
-    <a href="/__k4serp/launch">🚀 Launch Pad</a>
+    <a href="/__k4serp?op=launch">🚀 Launch Pad</a>
     <a href="/__k4stats">? Analytics</a>
   </h1>
   
@@ -2124,6 +2127,8 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
   </div>
 
   <script>
+    const _authHeader = ${JSON.stringify(authHeader || '')};
+
     async function fetchNow() {
       const btn = document.querySelector('.controls button.primary');
       if (!btn) return;
@@ -2131,9 +2136,9 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
       btn.disabled = true;
       btn.textContent = 'Fetching…';
       try {
-        const res = await fetch('/__k4serp/fetch', {
+        const res = await fetch('/__k4serp?op=fetch', {
           method: 'POST',
-          credentials: 'include'
+          headers: { 'Authorization': _authHeader }
         });
         const data = await res.json().catch(() => ({}));
         if (!res.ok || data?.error) {
@@ -2152,25 +2157,25 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
       const keyword = document.getElementById('newKeyword').value.trim();
       if (!keyword) return alert('Enter a keyword');
       
-      const res = await fetch('/__k4serp/keyword', {
-        method: 'POST', credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch('/__k4serp?op=keyword', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': _authHeader },
         body: JSON.stringify({ action: 'add', keyword })
       });
       if (res.ok) location.reload();
-      else alert('Error adding keyword');
+      else { const d = await res.json().catch(() => null); alert(d?.error || 'Error adding keyword (' + res.status + ')'); }
     }
     
     async function deleteKeyword(keyword) {
       if (!confirm('Delete "' + keyword + '"?')) return;
       
-      const res = await fetch('/__k4serp/keyword', {
-        method: 'POST', credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch('/__k4serp?op=keyword', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': _authHeader },
         body: JSON.stringify({ action: 'delete', keyword })
       });
       if (res.ok) location.reload();
-      else alert('Error deleting keyword');
+      else { const d = await res.json().catch(() => null); alert(d?.error || 'Error deleting keyword (' + res.status + ')'); }
     }
   </script>
 </body>
@@ -2204,6 +2209,13 @@ export default {
     // /Photoshootsandevents/.../i-xxx as an unknown namespace.
     if (/^\/Photoshootsandevents(\/|$)/i.test(path)) {
       return Response.redirect('https://wayne-heim.smugmug.com/Other/Photo-Shoots', 301);
+    }
+
+    // Legacy /Other/Photo-Shoots* → SmugMug archive (301, preserve full path).
+    // These are old SmugMug gallery URLs that no longer exist on k4studios.
+    // Must run before the image-page pipeline which would 404 on unknown image IDs.
+    if (/^\/Other\/Photo-Shoots/i.test(path)) {
+      return Response.redirect('https://wayne-heim.smugmug.com' + path, 301);
     }
 
     // Bare /Galleries/lightbox (no ?dataset=) is a dead SmugMug endpoint → 410.
@@ -2331,29 +2343,25 @@ export default {
       return new Response("Analytics delegation required", { status: 503 });
     }
 
-    // 0g) SERP Tracker Dashboard
-    if (url.pathname === "/__k4serp") {
+    // 0g) SERP Tracker — route all SERP sub-paths here so they work
+    //     even when only /__k4serp is in the Cloudflare route table.
+    if (url.pathname === "/__k4serp" || url.pathname.startsWith("/__k4serp/")) {
+      const subPath = url.pathname.replace("/__k4serp", "") || "/";
+      // Also support ?op= query param for when sub-paths don't reach the worker
+      const op = url.searchParams.get("op") || subPath;
+
+      // POST sub-routes
+      if (request.method === "POST") {
+        if (op === "/keyword" || op === "keyword") return handleSerpKeyword(request, env);
+        if (op === "/fetch"   || op === "fetch")   return handleSerpFetch(request, env);
+        if (op === "/log"     || op === "log")     return handleSerpLog(request, env);
+      }
+
+      // GET sub-routes
+      if (op === "/launch" || op === "launch") return handleSerpLaunch(request, env);
+
+      // Default: dashboard
       return handleSerpDashboard(request, env);
-    }
-
-    // 0g-launch) SERP Launch Pad - quick search links
-    if (url.pathname === "/__k4serp/launch") {
-      return handleSerpLaunch(request, env);
-    }
-
-    // 0g-log) SERP Log - save manual rank entry
-    if (url.pathname === "/__k4serp/log" && request.method === "POST") {
-      return handleSerpLog(request, env);
-    }
-
-    // 0h) SERP Tracker - Manual fetch trigger
-    if (url.pathname === "/__k4serp/fetch" && request.method === "POST") {
-      return handleSerpFetch(request, env);
-    }
-
-    // 0i) SERP Tracker - Keyword management
-    if (url.pathname === "/__k4serp/keyword" && request.method === "POST") {
-      return handleSerpKeyword(request, env);
     }
 
     // 1) Image detail pages: apply policy first, then log art view

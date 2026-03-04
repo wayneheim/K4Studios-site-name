@@ -5091,7 +5091,7 @@ function renderDashboard({
 </head>
 <body>
 <div class="container">
-  <h1>K4 Analytics <a href="/__k4serp" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none;margin-left:20px">\u{1F4CA} SERP</a> <a href="/__k4serp/launch" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none">\u{1F680} Launch Pad</a></h1>
+  <h1>K4 Analytics <a href="/__k4serp" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none;margin-left:20px">\u{1F4CA} SERP</a> <a href="/__k4serp?op=launch" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none">\u{1F680} Launch Pad</a></h1>
   
   <div class="controls">
     <a href="?days=1${excludeIp ? "&excludeIp=" + excludeIp : ""}${hideBots ? "&hideBots=1" : ""}${hideChardon ? "&hideChardon=1" : ""}" class="${days === 1 && !yesterday ? "active" : ""}">Today*</a>
@@ -7366,10 +7366,10 @@ async function handleDashboardRequest(env, filters) {
     chardonClause
   });
   const pages = await getTopPages(env, {
-    dateClause: truthDateClause || dateClause,
-    ipClause: "",
-    botClause: "",
-    chardonClause: ""
+    dateClause,
+    ipClause,
+    botClause,
+    chardonClause
   });
   const { images, uniqueImagesViewed, totalImageSessions, totalImageViews } = await getTopImages(env, {
     dateClause,

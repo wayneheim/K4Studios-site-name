@@ -81,9 +81,9 @@ export async function handleDashboardRequest(env, filters) {
   // are enabled.
   const pages = await getTopPages(env, {
     dateClause,
-    ipClause: '',
-    botClause: '',
-    chardonClause: ''
+    ipClause,
+    botClause,
+    chardonClause
   });
 
   const { images, uniqueImagesViewed, totalImageSessions, totalImageViews } = await getTopImages(env, {

@@ -2113,7 +2113,7 @@ export async function getTopPages(env, filters) {
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
 
     const pagesQuery = `
-      SELECT e.page AS page_path, COUNT(*) AS views
+      SELECT e.page AS page_path, COUNT(*) AS sessions
       FROM classified_events e
       WHERE ${where}
         ${qualify(ipClause)}
@@ -2124,7 +2124,7 @@ export async function getTopPages(env, filters) {
         AND COALESCE(e.is_bot,0) = 0
         AND e.page IS NOT NULL AND e.page != ''
       GROUP BY e.page
-      ORDER BY views DESC
+      ORDER BY sessions DESC
       LIMIT 25
     `;
 
