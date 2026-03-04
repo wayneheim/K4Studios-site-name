@@ -194,9 +194,6 @@ const ogAlt = selectedImage?.alt || selectedImage?.title || fixMojibake(usedEntr
 
 const meta = {
   description: pageDescription,
-  keywords: currentImage?.keywords 
-    ? (Array.isArray(currentImage.keywords) ? currentImage.keywords.join(', ') : currentImage.keywords)
-    : undefined,
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogImage: ogImage,

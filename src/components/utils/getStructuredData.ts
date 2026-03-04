@@ -50,6 +50,29 @@ function getLicenseUrl(img: any): string {
   return 'https://k4studios.com/Contact';
 }
 
+/**
+ * Strip collector-notes prose that was accidentally concatenated into
+ * the keywords array.  Everything from the <<COLLECTOR NOTES>> sentinel
+ * onward (including sentence-fragment entries that follow it) is removed.
+ */
+function sanitizeKeywords(kw: string | string[] | undefined): string | undefined {
+  if (!kw) return undefined;
+  const arr = Array.isArray(kw) ? kw : [kw];
+  const clean: string[] = [];
+  for (const entry of arr) {
+    const idx = entry.indexOf('<<COLLECTOR NOTES>>');
+    if (idx !== -1) {
+      // keep only the portion before the sentinel
+      const before = entry.substring(0, idx).replace(/\s+$/, '');
+      if (before) clean.push(before);
+      break;           // everything after this entry is collector-notes text
+    }
+    clean.push(entry);
+  }
+  if (clean.length === 0) return undefined;
+  return clean.join(', ');
+}
+
 export function getStructuredData({
   type,
   data,
@@ -115,9 +138,6 @@ export function getStructuredData({
         },
         ...(publishedDate ? { datePublished: publishedDate } : {}),
         ...(modifiedDate ? { dateModified: modifiedDate } : {}),
-        ...(img.keywords?.length
-          ? { keywords: Array.isArray(img.keywords) ? img.keywords.join(", ") : img.keywords }
-          : {}),
         ...(img.thumbnailUrl ? { thumbnailUrl: getProxyUrl(img, 's') } : {}),
         ...(img.width ? { width: img.width } : {}),
         ...(img.height ? { height: img.height } : {}),
@@ -156,9 +176,8 @@ export function getStructuredData({
     };
 
     if (data.keywords) {
-      collectionObj.keywords = Array.isArray(data.keywords)
-        ? data.keywords.join(", ")
-        : data.keywords;
+      const cleaned = sanitizeKeywords(data.keywords);
+      if (cleaned) collectionObj.keywords = cleaned;
     }
 
     return JSON.stringify(collectionObj, null, 2);
@@ -244,10 +263,6 @@ export function getStructuredData({
     if (data.thumbnailUrl) obj.thumbnailUrl = data.thumbnailUrl;
     if (data.width) obj.width = data.width;
     if (data.height) obj.height = data.height;
-    if (data.keywords?.length)
-      obj.keywords = Array.isArray(data.keywords)
-        ? data.keywords.join(", ")
-        : data.keywords;
 
     return JSON.stringify(obj, null, 2);
   }
@@ -320,7 +335,10 @@ export function getStructuredData({
       inLanguage: "en",
     };
 
-    if (data.keywords?.length) obj.keywords = data.keywords.join(", ");
+    if (data.keywords?.length) {
+      const cleaned = sanitizeKeywords(data.keywords);
+      if (cleaned) obj.keywords = cleaned;
+    }
     if (data.articleSection) obj.articleSection = data.articleSection;
 
     return JSON.stringify(obj, null, 2);
@@ -373,7 +391,7 @@ export function getStructuredData({
       copyrightNotice: data.copyrightNotice || copyrightNotice,
       inLanguage: "en",
       ...(data.articleSection ? { articleSection: data.articleSection } : {}),
-      ...(data.keywords?.length ? { keywords: data.keywords.join(", ") } : {}),
+      ...(data.keywords?.length ? { keywords: sanitizeKeywords(data.keywords) } : {}),
     };
 
     // Add DefinedTerm schema if this is a definition page

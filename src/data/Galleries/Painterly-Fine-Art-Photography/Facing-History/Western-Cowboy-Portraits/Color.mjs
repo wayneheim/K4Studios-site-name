@@ -68,23 +68,6 @@ export const galleryData = [
       "outlaw portraits",
       "cowboy painting art",
       "cowboy portrait",
-      "historic western prints\n\n<<COLLECTOR NOTES>>\nWayne Heim’s work resists easy categorization. It fuses the emotional gravity of illustration with the immediacy of photography",
-      "crafting visual narratives that feel at once timeless and intimate. In this piece",
-      "a quiet departure becomes a moment of reckoning—his subject frozen not by indecision",
-      "but by the weight of what’s already been decided. The cloud-laden valley mirrors the silence between them; the light",
-      "muted and hesitant",
-      "becomes part of the emotional architecture.\n\nThere are echoes of the Pictorialist tradition—softened edges",
-      "diffused light",
-      "and a painter’s grasp of structure—but Heim’s images never lean on nostalgia. Instead",
-      "they distill a mood: one that feels cinematic",
-      "interior",
-      "and poised between myth and memory.\n\nThis isn’t painterly surface for painterly’s sake. Where others mimic",
-      "Heim defines. His subjects aren’t costumes posed in front of a lens",
-      "but characters suspended in time—carrying the emotional freight of history",
-      "love",
-      "loss",
-      "and consequence.\n\nIn a genre often diluted by trope and imitation",
-      "this image refuses cliché. It’s not about the goodbye—it’s about everything left unsaid after."
     ],
 
     "story": "As the lone coach disappeared down the lonely road, he stood silent—rooted by more than trail dust. Would their paths ever cross again? As a man of few but deliberate words, had he said too little… too much? Should he have asked her not to go?\n\nThe questions would hang heavy on his heart — like the low-lying clouds blanketing the valley floor, choking out the day’s first light.\n\nBut the decision was made. And the road ahead—was now his alone to walk.",
@@ -152,10 +135,6 @@ export const galleryData = [
       "fine art cowboy photography",
       "cowboy portrait",
       "cowboy painting art",
-      "cowboy fine art prints\n\n<<COLLECTOR NOTES>>\n“Meant What I Said!” is all about Western attitude—coiled tension",
-      "sunlit drama",
-      "and the weight of a promise made face-to-face. The painterly detail and dynamic composition recall classic film and iconic Western paintings",
-      "making this piece a standout for collectors who appreciate stories told without a word."
     ],
 
     "story": "What’d I say about you and your mouth? I told you—I meant what I said when I said it. Time for words and talking is over. Thinking now you might be better at bleeding than listening. Reckon we ought to find out?",
@@ -206,14 +185,6 @@ export const galleryData = [
       "cowboy portrait",
       "western painterly photography",
       "Painterly Western photography",
-      "painterly cowboy portraits\n\n<<COLLECTOR NOTES>>\nThis piece captures what many Western painters strive for but rarely achieve—a perfect marriage of in-camera action",
-      "painterly light",
-      "and narrative ambiguity",
-      "all created in a single unbroken take with live riders and authentic period gear. The composition channels the dynamism of Remington and the raw storytelling of Charlie Russell",
-      "while the sun-bleached palette and kinetic framing place it squarely in the lineage of American pictorialism. Gallery owners love works like this for their visceral impact; collectors appreciate the technical challenge (try freezing three galloping horses",
-      "tack flying",
-      "dust in the air",
-      "and everyone hitting their mark) and the way the image lets you feel both the danger and thrill of a frontier “last hand.” It’s the kind of photograph that doesn’t just tell a story—it dares you to ride along."
     ],
 
     "story": "Dust spirals and hooves fly as the last hand is played out under a pale, unblinking sky. Three riders, every muscle and nerve taut with gamble and grit, thunder forward—there’s no room left for bluffing, no time to count the cost. In this wild rush, history is measured not by who wins, but by who dares to ride straight into the storm, knowing the deck was never meant to be fair.",
@@ -285,10 +256,6 @@ export const galleryData = [
       "Painterly Western photography",
       "photography western",
       "cowboy artwork prints",
-      "cowboy fine art prints\n\n<<COLLECTOR NOTES>>\n“Day in Review” uses dramatic light and shadow to capture the quiet moments that define Western life. The stance",
-      "the worn gear",
-      "and the lone wagon speak to a day’s labor and a night’s reflection—classic themes in both historic and contemporary Western art. This image echoes the golden-hour mood beloved by painters like Remington and Russell",
-      "offering collectors a scene rich with atmosphere and timeless character."
     ],
 
     "story": "What breaks first: the trail, the day, or a man’s resolve? Funny, how the hardest part of any journey isn’t what’s ahead—it’s what you carry with you and what you left behind. Fact is, the real trouble’s between my ears, decisions that can’t be unmade. At this point, only thing certain is the ache in my bones and the twelve cans of beans I got to get us to Laramie before the snow flies.",
@@ -344,12 +311,6 @@ export const galleryData = [
       "cowboy fine art prints",
       "cowboy portrait",
       "cowboy painting art",
-      "old west fine art prints\n\n<<COLLECTOR NOTES>>\nThis work stands out for its painterly composition and narrative clarity",
-      "achieved in a single exposure on a moving trail with live horses—no digital composites or studio tricks. The dynamic gesture and interplay of light reference the Western “return home” archetype immortalized by N.C. Wyeth and the storybook canvases of American regionalists",
-      "while the open sky and lush foreground evoke the optimism and complexity of new beginnings. Collectors and gallery owners value the technical difficulty of balancing movement",
-      "light",
-      "and emotional story in real time—something rarely seen in the age of staged or AI-generated Western art—and the piece has become a conversation-starter wherever it’s shown",
-      "evoking that universal longing for a place to call home."
     ],
 
     "story": "Sun splits the clouds as hoofbeats hush the grass, two shadows sliding side by side across the wide plain. His arm carves the horizon, confident, certain—yet her silence lingers, gaze tethered to a world behind the eyes. Guide or guest, captive or kin—only the wind knows for sure. Home drifts somewhere ahead, but between the riders rides every question left unasked, every story the land itself will not surrender.",
@@ -406,13 +367,6 @@ export const galleryData = [
       "cowboy painting art",
       "fine art cowboy photography",
       "historic western prints",
-      "painterly technique\n\n<<COLLECTOR NOTES>>\nThis piece exemplifies Heim’s ability to portray interpersonal nuance within a painterly",
-      "historically grounded aesthetic. The triangular composition—horse",
-      "Indigenous scout",
-      "trapper—creates a stable visual structure that reinforces the sense of alliance. Textural layering and soft atmospheric light evoke the tonal sensitivity of classic Western illustrators while preserving the authenticity of lived experience. The work carries emotional and cultural resonance",
-      "making it a standout selection for collectors who appreciate Western art that honors story",
-      "lineage",
-      "and human connection."
     ],
 
     "story": "Sharp fall air hangs heavy like morning dew.  \nChange is in the air—seasons and society, both forcing their own agenda upon this land.\n\nThey come by wagonload now, each one hoping for a new beginning—hunting for answers, a fresh start, or just a path forward.\n\nCarving, forging, reshaping this life with Eastern wealth and virtues, they claim what’s ours for theirs.  \nYears, old friend, we shared this place as brothers—one mind - wrapped in different cloths.\n\nClouds of change gather, dappled and restless, over the valley floor.  \nBoth season and change move at will, ushering a future that neither hope nor protest can hold back.",
@@ -480,15 +434,6 @@ export const galleryData = [
       "painterly technique",
       "cowboy artwork prints",
       "cowboy fine art prints",
-      "old west fine art prints\n\n<<COLLECTOR NOTES>>\nThe off-frame tension is pure storytelling—anchored by the rifle’s diagonal and resolved by the window frame’s vertical pull. The light carves across rough wool and weathered timber like a chiaroscuro etching",
-      "revealing the figure not as staged drama",
-      "but as lived consequence.\n\nThis is painterly photography with muscle: sculpted tonality",
-      "smart restraint",
-      "and tight composition that favors shape and story over spectacle. The bucket in the foreground subtly expands scale and texture while avoiding visual clutter. In a tradition that nods to Remington’s interiors and Wyeth’s emotional stillness",
-      "the image holds the moment between breath and action. A study in edge",
-      "mood",
-      "and memory—crafted",
-      "not captured."
     ],
 
     "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming.\n\nThe old bones creak different when death’s on the wind.  \nSun’s almost up. Judgment time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!",
@@ -545,16 +490,6 @@ export const galleryData = [
       "cowboy artwork prints",
       "cowboy fine art prints",
       "Painterly Western photography",
-      "western art\n\n<<COLLECTOR NOTES>>\n“Till Death Do Us Part” distills one of the most intimate and human moments in the Western canon: the quiet intersection of love",
-      "mortality",
-      "and devotion on the frontier. Lantern light pools gently across the figures",
-      "sculpting the scene in warm",
-      "painterly tones that recall the emotional restraint of Wyeth and the narrative weight of classic American illustration.\n\nThe composition anchors the viewer in the closeness of the couple—their faces pressed together",
-      "hands intertwined—while the darkened edges of the frame suggest the encroaching uncertainty beyond their small circle of light. The textures of worn fabric",
-      "rough wood",
-      "and soft illumination create a tactile sense of place",
-      "grounding the scene in lived experience rather than myth. What elevates the work is its sincerity: a portrayal of frontier hardship not as spectacle",
-      "but as a shared human passage. It offers collectors a piece of Western storytelling that is both timeless and profoundly intimate."
     ],
 
     "story": "She knows. She’s known for some time. “Jim says I’m always right… God, please — not this time. Should we shoulder to shoulder, breath to breath. However long, whatever the cost. He struggles — for air, for words to comfort, for a little more time beside her. “Don’t you worry, Milly… I think I got this thing on the ropes…” She’d give her own soul to make that be true. It was his dream to head West — the life they were meant to build together now reduced to a footnote in their journey. So many questions. So many tomorrows that may never come. But those aren’t for now.\n\nIn this moment — his touch, his warmth, his vow whispered in the dark — is all that matters. Till death do us part.",
@@ -603,9 +538,6 @@ export const galleryData = [
       "american frontier portrait",
       "cowboy fine art prints",
       "western themed art",
-      "cowboy artwork prints\n\n<<COLLECTOR NOTES>>\nHeim’s mastery is quiet—his painterly light softens the boundaries between work and reflection",
-      "capturing the West at its most ambiguous. The subdued palette and blurred edges recall the contemplative mood of Wyeth and Russell",
-      "yet the moment belongs fully to the present. Hands and rope become metaphors for both resolve and uncertainty; every detail"
     ],
 
     "story": "Dirt-muted colors permeate the morning rodeo-light, dust, and destiny circling the haze for position.\n\nRopes and reins—duty and emotion—each arguing for control before the moment decides for them.\n\nHands clench path and purpose. One works to rein in, the other struggles with letting go.\n\nYet in that cloud of chaos that screens true vision and shapes untold, the matter and the irrelevant become sifted, silenced—yielding a focus honed.  \nIt’s from that mask, that filter of conscience, that clarity can thrive.\n\nClarity of purpose, of path, and of what must wait—  \nat the end of the rope.",
