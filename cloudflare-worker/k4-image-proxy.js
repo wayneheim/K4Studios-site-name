@@ -2199,6 +2199,13 @@ export default {
       return await createBranded404Response(request);
     }
 
+    // Legacy Photoshootsandevents → SmugMug archive (301).
+    // Must run BEFORE the imageIdAtEnd namespace guard, which would 404
+    // /Photoshootsandevents/.../i-xxx as an unknown namespace.
+    if (/^\/Photoshootsandevents(\/|$)/i.test(path)) {
+      return Response.redirect('https://wayne-heim.smugmug.com/Other/Photo-Shoots', 301);
+    }
+
     // Bare /Galleries/lightbox (no ?dataset=) is a dead SmugMug endpoint → 410.
     // Lightbox WITH ?dataset= is a real gallery page — pass through to origin.
     if (lowerPath === '/galleries/lightbox' && !url.searchParams.has('dataset')) {

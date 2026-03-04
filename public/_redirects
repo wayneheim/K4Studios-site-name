@@ -40,10 +40,10 @@
 # Legacy Photo-Shoots paths now canonicalized to SmugMug archive root
 /Other/Photo-Shoots  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
 /Other/Photo-Shoots/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
-/Other/Photo-Shoots-and-Themes/*  /410.html  410
-/Is-Winter/*  /410.html  410
-/Photoshootsandevents/*  /410.html  410
-/Scheduled-Shoots/*  /410.html  410
+/Other/Photo-Shoots-and-Themes/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
+/Is-Winter/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
+/Photoshootsandevents/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
+/Scheduled-Shoots/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
 
 # Legacy Photography-Galleries paths (old SmugMug structure)
 /Photography-Galleries/*/i-:id  /.netlify/functions/smart-404?id=:id&path=/Photography-Galleries/:splat/i-:id  404!
@@ -113,7 +113,7 @@
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Art-of-War-WWII/Black-White  /Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White  301
 /Galleries/Painterly-Fine-Art-Photography/Facing-History/Native-American-Portraits  /Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color  301
 
-*/Photoshootsandevents/*  /410.html  410
+*/Photoshootsandevents/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
 /data/system/*  /410.html  410
 
 # Legacy SmugMug frame/slideshow URLs
