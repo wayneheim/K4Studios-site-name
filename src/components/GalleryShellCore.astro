@@ -11,6 +11,7 @@ import GalleryInfo from "@/components/GalleryInfo.jsx";
 import Footer from "@/components/Footer.astro";
 
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { getBreadcrumbList } from "@/components/utils/getStructuredData.ts";
 import { sitemapMatches } from "@/data/sitemapMatches.ts";
 
 interface Props {
@@ -107,10 +108,20 @@ const canonicalUrl = `${siteBase}${pathOnly.replace(/\/$/, "")}${themeParam ? `?
 const galleryAbsUrl = `${siteBase}${previewPath}`;
 
 /** ---------------------------------------------------------------
+ * Detect if this is an image page or shared theme link
+ * (moved early — needed for breadcrumb + structured data decisions)
+ * --------------------------------------------------------------- */
+const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
+const isImagePage = lastSegment.startsWith("i-");
+// Check for ?view=grid (shared theme links should skip intro)
+const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
+const skipIntro = isImagePage || isDirectGridView;
+
+/** ---------------------------------------------------------------
  * Structured data
  * --------------------------------------------------------------- */
 const imageStructuredData = currentImage
-  ? getStructuredData({ type: "image", data: currentImage })
+  ? getStructuredData({ type: "image", data: { ...currentImage, pageUrl: canonicalUrl, galleryUrl: galleryAbsUrl, galleryTitle: fixMojibake(usedEntranceData.title) } })
   : getStructuredData({
       type: "gallery",
       data: {
@@ -120,6 +131,35 @@ const imageStructuredData = currentImage
       },
       images: previewImages,
     });
+
+/** ---------------------------------------------------------------
+ * Breadcrumb JSON-LD (image pages only)
+ * Derives hierarchy from galleryPath segments so Bing can
+ * place each image page within the site structure.
+ * --------------------------------------------------------------- */
+function buildBreadcrumbItems(galleryPath: string, imageTitle: string | undefined, pageUrl: string) {
+  const items: Array<{ name: string; item: string }> = [
+    { name: "Home", item: "https://www.k4studios.com/" },
+  ];
+  // Split galleryPath into segments, e.g. /Galleries/Painterly-.../Facing-.../Western-.../Color
+  const segments = galleryPath.replace(/^\//, "").split("/");
+  let accumulated = "";
+  for (const seg of segments) {
+    accumulated += "/" + seg;
+    // Human-readable: replace hyphens with spaces
+    const label = seg.replace(/-/g, " ");
+    items.push({ name: label, item: `https://www.k4studios.com${accumulated}` });
+  }
+  // Add the current image page as the last breadcrumb
+  if (imageTitle) {
+    items.push({ name: imageTitle, item: pageUrl });
+  }
+  return items;
+}
+
+const breadcrumbsJSON = isImagePage && currentImage
+  ? getBreadcrumbList(buildBreadcrumbItems(galleryPath, fixMojibake(currentImage.title), canonicalUrl))
+  : undefined;
 
 /** ---------------------------------------------------------------
  * Page Title & Descriptions
@@ -171,22 +211,13 @@ const meta = {
 };
 
 /** ---------------------------------------------------------------
- * Detect if this is an image page or shared theme link
- * --------------------------------------------------------------- */
-const lastSegment = Astro.url?.pathname?.split("/").pop() || "";
-const isImagePage = lastSegment.startsWith("i-");
-// Check for ?view=grid (shared theme links should skip intro)
-const isDirectGridView = Astro.url.searchParams.get("view") === "grid";
-const skipIntro = isImagePage || isDirectGridView;
-
-/** ---------------------------------------------------------------
  * Sister/Related Images Link for SEO internal linking
  * --------------------------------------------------------------- */
 const currentImageId = currentImage?.id || initialImageId;
 let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || null;
 ---
 
-<BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData}>
+<BaseLayout title={pageTitle} meta={meta} structuredDataJSON={imageStructuredData} breadcrumbsJSON={breadcrumbsJSON}>
   <div id="gallery-content" class="flex-grow relative">
     {/* Header */}
     {!skipIntro && (

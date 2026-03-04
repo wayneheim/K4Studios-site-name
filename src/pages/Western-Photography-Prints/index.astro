@@ -24,14 +24,11 @@ const canonicalUrl = `https://www.k4studios.com${pagePath}`;
 const engrainedHref = "/Other/K4-Select-Series/Engrained";
 
 // ─── Structured Data ─────────────────────────────────────────────────────────
-const breadcrumbsJSON = JSON.stringify(
-  getBreadcrumbList([
-    { name: "Home", item: "https://www.k4studios.com/" },
-    { name: "Western Photography Prints", item: canonicalUrl },
-  ]),
-  null,
-  2
-);
+// getBreadcrumbList already returns a JSON string — do not double-stringify
+const breadcrumbsJSON = getBreadcrumbList([
+  { name: "Home", item: "https://www.k4studios.com/" },
+  { name: "Western Photography Prints", item: canonicalUrl },
+]);
 
 // CollectionPage + ItemList (top 8 images)
 const collectionSchema = JSON.stringify(

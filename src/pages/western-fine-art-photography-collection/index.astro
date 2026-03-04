@@ -95,18 +95,14 @@ const linkedCloseParagraphs     = linkedAll.slice(tLen + dLen);
 // ─── Structured Data ─────────────────────────────────────────────────────────
 const stripHtml = (text: string) => text.replace(/<[^>]*>/g, "").trim();
 
-// Breadcrumbs
-const breadcrumbsJSON = JSON.stringify(
-  getBreadcrumbList([
-    { name: "Home", item: "https://www.k4studios.com/" },
-    {
-      name: "Western Fine Art Photography Collection",
-      item: canonicalUrl,
-    },
-  ]),
-  null,
-  2
-);
+// Breadcrumbs (getBreadcrumbList already returns a JSON string)
+const breadcrumbsJSON = getBreadcrumbList([
+  { name: "Home", item: "https://www.k4studios.com/" },
+  {
+    name: "Western Fine Art Photography Collection",
+    item: canonicalUrl,
+  },
+]);
 
 // FAQPage
 const faqStructuredData = JSON.stringify(
