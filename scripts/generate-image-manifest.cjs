@@ -22,6 +22,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { pathToFileURL } = require('url');
 
 const DATA_DIR = path.join(__dirname, '..', 'src', 'data');
 const OUTPUT_FILE = path.join(__dirname, '..', 'public', 'image-manifest.json');
@@ -141,72 +142,44 @@ function findMjsFiles(dir, files = []) {
   return files;
 }
 
-// Extract image objects from .mjs file content using regex
-// We don't eval - we just extract id + src fields directly
-function extractImagesFromContent(content) {
+function isSmugMugUrl(url) {
+  return typeof url === 'string' && /^https:\/\/photos\.smugmug\.com/i.test(url);
+}
+
+function urlMatchesId(url, id) {
+  return typeof url === 'string' && typeof id === 'string' && url.includes(`/${id}/`);
+}
+
+function extractImagesFromGalleryData(galleryData) {
   const images = [];
-  
-  // Find all image IDs and their positions
-  const idMatches = [...content.matchAll(/"id"\s*:\s*"(i-[^"]+)"/g)];
-  
-  for (let i = 0; i < idMatches.length; i++) {
-    const idMatch = idMatches[i];
-    const id = idMatch[1];
-    if (id === 'i-k4studios') continue;
-    
-    const idPos = idMatch.index;
-    
-    // Find the OPENING brace before this id
-    let braceCount = 0;
-    let objStart = idPos;
-    for (let j = idPos; j >= 0; j--) {
-      if (content[j] === '}') braceCount++;
-      if (content[j] === '{') {
-        if (braceCount === 0) {
-          objStart = j;
-          break;
-        }
-        braceCount--;
-      }
-    }
-    
-    // Find the CLOSING brace after this id (matching the opening)
-    braceCount = 1;
-    let objEnd = content.length;
-    for (let j = objStart + 1; j < content.length; j++) {
-      if (content[j] === '{') braceCount++;
-      if (content[j] === '}') {
-        braceCount--;
-        if (braceCount === 0) {
-          objEnd = j + 1;
-          break;
-        }
-      }
-    }
-    
-    // Extract ONLY this object's content - no bleeding into other entries!
-    const context = content.substring(objStart, objEnd);
-    
-    // Extract src URLs from this object only
-    const srcMatch = context.match(/"src"\s*:\s*"(https:\/\/photos\.smugmug\.com[^"]*)"/);
-    const srcSMatch = context.match(/"srcS"\s*:\s*"(https:\/\/photos\.smugmug\.com[^"]*)"/);
-    const srcMMatch = context.match(/"srcM"\s*:\s*"(https:\/\/photos\.smugmug\.com[^"]*)"/);
-    const srcLMatch = context.match(/"srcL"\s*:\s*"(https:\/\/photos\.smugmug\.com[^"]*)"/);
-    const srcXLMatch = context.match(/"srcXL"\s*:\s*"(https:\/\/photos\.smugmug\.com[^"]*)"/);
-    
+  if (!Array.isArray(galleryData)) return images;
+
+  for (const item of galleryData) {
+    const id = item && typeof item.id === 'string' ? item.id : '';
+    if (!id.startsWith('i-') || id === 'i-k4studios') continue;
+
     const urls = {};
-    if (srcSMatch) urls.s = srcSMatch[1];
-    if (srcMMatch) urls.m = srcMMatch[1];
-    if (srcLMatch) urls.l = srcLMatch[1];
-    if (srcXLMatch) urls.xl = srcXLMatch[1];
-    if (srcMatch) urls.src = srcMatch[1];
-    
+    if (isSmugMugUrl(item.srcS) && urlMatchesId(item.srcS, id)) urls.s = item.srcS;
+    if (isSmugMugUrl(item.srcM) && urlMatchesId(item.srcM, id)) urls.m = item.srcM;
+    if (isSmugMugUrl(item.srcL) && urlMatchesId(item.srcL, id)) urls.l = item.srcL;
+    if (isSmugMugUrl(item.srcXL) && urlMatchesId(item.srcXL, id)) urls.xl = item.srcXL;
+    if (isSmugMugUrl(item.src) && urlMatchesId(item.src, id)) urls.src = item.src;
+
     if (Object.keys(urls).length > 0) {
       images.push({ id, urls });
     }
   }
-  
+
   return images;
+}
+
+async function loadGalleryData(filePath) {
+  const fileUrl = pathToFileURL(filePath).href;
+  const mod = await import(`${fileUrl}?t=${Date.now()}`);
+
+  if (Array.isArray(mod.galleryData)) return mod.galleryData;
+  if (Array.isArray(mod.default)) return mod.default;
+  return [];
 }
 
 // Main execution
@@ -223,8 +196,8 @@ async function main() {
   
   for (const filePath of mjsFiles) {
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      const images = extractImagesFromContent(content);
+      const galleryData = await loadGalleryData(filePath);
+      const images = extractImagesFromGalleryData(galleryData);
       
       if (images.length === 0) {
         skippedFiles++;

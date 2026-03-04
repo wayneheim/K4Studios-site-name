@@ -50,7 +50,7 @@ export const galleryData = [
       "museum quality",
       "western decor",
       "character study",
-      "warm palette",
+      "warm p alette",
       "cowboy art",
       "cowboy artwork",
       "cowboy portraits",
@@ -67,11 +67,11 @@ export const galleryData = [
       "painterly technique",
       "outlaw portraits",
       "cowboy painting art",
-      "cowboy portrait",
+      "cowboy portrait"
     ],
 
     "story": "As the lone coach disappeared down the lonely road, he stood silent—rooted by more than trail dust. Would their paths ever cross again? As a man of few but deliberate words, had he said too little… too much? Should he have asked her not to go?\n\nThe questions would hang heavy on his heart — like the low-lying clouds blanketing the valley floor, choking out the day’s first light.\n\nBut the decision was made. And the road ahead—was now his alone to walk.",
-    "notes": "Wayne Heim’s work resists easy categorization. It fuses the emotional gravity of illustration with the immediacy of photography, crafting visual narratives that feel at once timeless and intimate. In this piece, a quiet departure becomes a moment of reckoning—his subject frozen not by indecision, but by the weight of what’s already been decided. The cloud-laden valley mirrors the silence between them; the light, muted and hesitant, becomes part of the emotional architecture.\n\nThere are echoes of the Pictorialist tradition—softened edges, diffused light, and a painter’s grasp of structure—but Heim’s images never lean on nostalgia. Instead, they distill a mood: one that feels cinematic, interior, and poised between myth and memory.\n\nThis isn’t painterly surface for painterly’s sake. Where others mimic, Heim defines. His subjects aren’t costumes posed in front of a lens, but characters suspended in time—carrying the emotional freight of history, love, loss, and consequence.\n\nIn a genre often diluted by trope and imitation, this image refuses cliché. It’s not about the goodbye—it’s about everything left unsaid after.",
+    "notes": "This work resists easy categorization. It fuses the emotional gravity of illustration with the immediacy of photography, crafting visual narratives that feel at once timeless and intimate. In this piece, a quiet departure becomes a moment of reckoning—his subject frozen not by indecision, but by the weight of what’s already been decided. The cloud-laden valley mirrors the silence between them; the light, muted and hesitant, becomes part of the emotional architecture.\n\nThere are echoes of the Pictorialist tradition—softened edges, diffused light, and a painter’s grasp of structure—but Heim’s images never lean on nostalgia. Instead, they distill a mood: one that feels cinematic, interior, and poised between myth and memory.\n\nThis isn’t painterly surface for painterly’s sake. Where others mimic, Heim defines. His subjects aren’t costumes posed in front of a lens, but characters suspended in time—carrying the emotional freight of history, love, loss, and consequence.\n\nIn a genre often diluted by trope and imitation, this image refuses cliché. It’s not about the goodbye—it’s about everything left unsaid after.",
     "rating": 5,
 
     "galleries": [
@@ -134,11 +134,11 @@ export const galleryData = [
       "cowboy artwork prints",
       "fine art cowboy photography",
       "cowboy portrait",
-      "cowboy painting art",
+      "cowboy painting art"
     ],
 
     "story": "What’d I say about you and your mouth? I told you—I meant what I said when I said it. Time for words and talking is over. Thinking now you might be better at bleeding than listening. Reckon we ought to find out?",
-    "notes": "“Meant What I Said!” is all about Western attitude—coiled tension, sunlit drama, and the weight of a promise made face-to-face. The painterly detail and dynamic composition recall classic film and iconic Western paintings, making this piece a standout for collectors who appreciate stories told without a word.",
+    "notes": "A moment of frontier defiance is captured at the precise instant when tension peaks but action has not yet begun. The low, forward angle places the viewer directly in the line of confrontation, creating the unsettling immediacy of a classic Western standoff. Sunlit dust, weathered leather, and the flash of a drawn revolver combine to build a cinematic sense of pressure within the frame.\n\nThe composition echoes the dramatic storytelling traditions of Western painting and early frontier illustration, where posture and gesture carry the emotional weight of the scene. The coiled rope, red neckerchief, and steady gaze serve as visual anchors that balance movement with control, allowing the narrative to unfold through suggestion rather than action. The result is a striking example of painterly Western fine art photography that transforms a single moment into an enduring piece of frontier drama.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -255,11 +255,11 @@ export const galleryData = [
       "painterly cowboy portraits",
       "Painterly Western photography",
       "photography western",
-      "cowboy artwork prints",
+      "cowboy artwork prints"
     ],
 
     "story": "What breaks first: the trail, the day, or a man’s resolve? Funny, how the hardest part of any journey isn’t what’s ahead—it’s what you carry with you and what you left behind. Fact is, the real trouble’s between my ears, decisions that can’t be unmade. At this point, only thing certain is the ache in my bones and the twelve cans of beans I got to get us to Laramie before the snow flies.",
-    "notes": "“Day in Review” uses dramatic light and shadow to capture the quiet moments that define Western life. The stance, the worn gear, and the lone wagon speak to a day’s labor and a night’s reflection—classic themes in both historic and contemporary Western art. This image echoes the golden-hour mood beloved by painters like Remington and Russell, offering collectors a scene rich with atmosphere and timeless character.",
+    "notes": "Some Western images are built around action, but this piece leans into the quieter tradition of frontier reflection. The work explores the psychological pause that often follows a long day on the trail—the moment when distance, decisions, and consequence settle in. Rather than dramatizing the journey itself, the image centers on the weight carried after the miles are behind you.\n\nThis approach echoes a long lineage within Western art where solitude and contemplation become the true narrative. The restrained composition and warm evening light place emphasis on endurance and presence, inviting the viewer to consider the inner landscape as much as the physical one. It is a Western story told not through motion, but through stillness.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -366,12 +366,12 @@ export const galleryData = [
       "cowboy portrait",
       "cowboy painting art",
       "fine art cowboy photography",
-      "historic western prints",
+      "historic western prints"
     ],
 
     "story": "Sharp fall air hangs heavy like morning dew.  \nChange is in the air—seasons and society, both forcing their own agenda upon this land.\n\nThey come by wagonload now, each one hoping for a new beginning—hunting for answers, a fresh start, or just a path forward.\n\nCarving, forging, reshaping this life with Eastern wealth and virtues, they claim what’s ours for theirs.  \nYears, old friend, we shared this place as brothers—one mind - wrapped in different cloths.\n\nClouds of change gather, dappled and restless, over the valley floor.  \nBoth season and change move at will, ushering a future that neither hope nor protest can hold back.",
     "notes": "This piece exemplifies Heim’s ability to portray interpersonal nuance within a painterly, historically grounded aesthetic. The triangular composition—horse, Indigenous scout, trapper—creates a stable visual structure that reinforces the sense of alliance. Textural layering and soft atmospheric light evoke the tonal sensitivity of classic Western illustrators while preserving the authenticity of lived experience. The work carries emotional and cultural resonance, making it a standout selection for collectors who appreciate Western art that honors story, lineage, and human connection.",
-    "rating": 0,
+    "rating": 5,
 
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
@@ -489,11 +489,11 @@ export const galleryData = [
       "painterly technique",
       "cowboy artwork prints",
       "cowboy fine art prints",
-      "Painterly Western photography",
+      "Painterly Western photography"
     ],
 
     "story": "She knows. She’s known for some time. “Jim says I’m always right… God, please — not this time. Should we shoulder to shoulder, breath to breath. However long, whatever the cost. He struggles — for air, for words to comfort, for a little more time beside her. “Don’t you worry, Milly… I think I got this thing on the ropes…” She’d give her own soul to make that be true. It was his dream to head West — the life they were meant to build together now reduced to a footnote in their journey. So many questions. So many tomorrows that may never come. But those aren’t for now.\n\nIn this moment — his touch, his warmth, his vow whispered in the dark — is all that matters. Till death do us part.",
-    "notes": "“Till Death Do Us Part” distills one of the most intimate and human moments in the Western canon: the quiet intersection of love, mortality, and devotion on the frontier. Lantern light pools gently across the figures, sculpting the scene in warm, painterly tones that recall the emotional restraint of Wyeth and the narrative weight of classic American illustration.\n\nThe composition anchors the viewer in the closeness of the couple—their faces pressed together, hands intertwined—while the darkened edges of the frame suggest the encroaching uncertainty beyond their small circle of light. The textures of worn fabric, rough wood, and soft illumination create a tactile sense of place, grounding the scene in lived experience rather than myth. What elevates the work is its sincerity: a portrayal of frontier hardship not as spectacle, but as a shared human passage. It offers collectors a piece of Western storytelling that is both timeless and profoundly intimate.",
+    "notes": "This image distills one of the most intimate and human moments in the Western canon: the quiet intersection of love, mortality, and devotion on the frontier. Lantern light pools gently across the figures, sculpting the scene in warm, painterly tones that recall the emotional restraint of Wyeth and the narrative weight of classic American illustration.\n\nThe composition anchors the viewer in the closeness of the couple—their faces pressed together, hands intertwined—while the darkened edges of the frame suggest the encroaching uncertainty beyond their small circle of light. The textures of worn fabric, rough wood, and soft illumination create a tactile sense of place, grounding the scene in lived experience rather than myth. What elevates the work is its sincerity: a portrayal of frontier hardship not as spectacle, but as a shared human passage. It offers collectors a piece of Western storytelling that is both timeless and profoundly intimate.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -513,7 +513,7 @@ export const galleryData = [
   {
     "id": "i-bq4FKvX",
     "title": "End of His Rope",
-    "description": "A painterly Western portrait of a cowboy at dawn, quietly working a rope through his hands in the soft haze of the American frontier. Warm ochre tones, dust-lit atmosphere, and cinematic morning light create a contemplative scene rooted in Western fine art photography. The subtle gesture of rope and reins reflects the discipline and introspection of frontier life, blending the storytelling tradition of classic Western art with the emotional restraint of painterly Western photography.",
+    "description": "A painterly Western portrait of a cowboy at dawn, quietly working a rope through his hands in the soft haze of the American frontier. Warm ochre tones, dust-lit atmosphere, and cinematic morning light create a contemplative scene rooted in Western fine art photography. The subtle gesture of rope and reins reflects the discipline and introspection of frontier life, blending the storytelling tradition of classic Western art with the emotional restraint of painterly Western photography.\n\n© Wayne Heim",
     "alt": "Painterly western cowboy portrait at dawn holding a rope in warm frontier light, cinematic fine art western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
@@ -537,11 +537,11 @@ export const galleryData = [
       "wild west painterly photography",
       "american frontier portrait",
       "cowboy fine art prints",
-      "western themed art",
+      "western themed art"
     ],
 
     "story": "Dirt-muted colors permeate the morning rodeo-light, dust, and destiny circling the haze for position.\n\nRopes and reins—duty and emotion—each arguing for control before the moment decides for them.\n\nHands clench path and purpose. One works to rein in, the other struggles with letting go.\n\nYet in that cloud of chaos that screens true vision and shapes untold, the matter and the irrelevant become sifted, silenced—yielding a focus honed.  \nIt’s from that mask, that filter of conscience, that clarity can thrive.\n\nClarity of purpose, of path, and of what must wait—  \nat the end of the rope.",
-    "notes": "Heim’s mastery is quiet—his painterly light softens the boundaries between work and reflection, capturing the West at its most ambiguous. The subdued palette and blurred edges recall the contemplative mood of Wyeth and Russell, yet the moment belongs fully to the present. Hands and rope become metaphors for both resolve and uncertainty; every detail",
+    "notes": "Quiet mastery defines the tone of this work. The painterly handling of light and texture softens the boundary between labor and reflection, allowing the image to operate on a more contemplative level than a typical Western portrait. The subdued palette and gentle haze echo the tradition of Western art that favors atmosphere and introspection over spectacle.\n\nThe gesture of rope work becomes less about action and more about discipline—an emblem of control, patience, and the steady rhythm of frontier life. In this sense, the image aligns with the reflective strain of Western painting where ordinary moments carry deeper psychological weight. The result is a piece rooted in the visual language of the frontier yet guided by restraint, inviting viewers to linger in the space between effort and thought.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -557,7 +557,7 @@ export const galleryData = [
   {
     "id": "i-r5Pb7zJ",
     "title": "Signs",
-    "description": "A frontier scout kneels in the dust studying faint tracks while his horse waits behind him in the warm morning light. The painterly Western scene blends cinematic atmosphere with Western fine art photography, capturing the quiet tension of tracking across the American frontier. Subdued earth tones, textured haze, and careful composition echo classic Western art while emphasizing the contemplative discipline of a lone tracker at work.",
+    "description": "A frontier scout kneels in the dust studying faint tracks while his horse waits behind him in the warm morning light. The painterly Western scene blends cinematic atmosphere with Western fine art photography, capturing the quiet tension of tracking across the American frontier. Subdued earth tones, textured haze, and careful composition echo classic Western art while emphasizing the contemplative discipline of a lone tracker at work.\n\n© Wayne Heim",
     "alt": "Painterly western frontier scout kneeling to study tracks in the dust with rifle and horse behind him in warm morning light.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/0/KNmd7QVj7vX6V98PbRwNh7mc4VmKhdF62T8nFrVXP/XL/_HF21312-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r5Pb7zJ/0/KNmd7QVj7vX6V98PbRwNh7mc4VmKhdF62T8nFrVXP/XL/_HF21312-Edit-XL.jpg",
@@ -615,7 +615,7 @@ export const galleryData = [
     ],
 
     "story": "Follow orders. Do your job. Always comin' from those tellin', not doin'. Hunting another man just cuz he followed orders? That don’t sit easy on my shoulders. Six days out. Just like the rattlesnakes chasing mice—that’s gotta count for somethin’. Was fixin’ to turn back this morning then, like a finger from God himself: commandin’, revealin’, testing my resolve. I could still turn back. Nobody would ever know. Except… I would. He would. Leaning in so both warmth and light can cleanse my soul—strugglin’ to see, see what others missed, I finally see it. And with the clarity and weight of revelation, I know what I must do – follow the sign.",
-    "notes": "“Signs” channels the introspective, dust-laden solemnity found in the works of Remington and Russell, yet pushes beyond the heroic tropes into something more psychological and human. The composition leads the eye downward—from the scout’s bowed head to the faint trace on the ground—mirroring the internal journey he confronts. The warm chiaroscuro and controlled painterly toning nod subtly to Wyeth’s emotional restraint and the layered storytelling of narrative illustration.\n\nWhat distinguishes this piece is its quiet gravity: a man suspended between obligation and moral reckoning, framed not as an icon but as a character caught in a moment of truth. The textures, tones, and sculpted light elevate the photograph into a painterly tableau, yielding a work that resonates with collectors seeking depth, atmosphere, and a contemporary voice rooted in classic Western artistry.",
+    "notes": "This scene channels the introspective, dust-laden solemnity found in the works of Remington and Russell, yet pushes beyond the heroic tropes into something more psychological and human. The composition leads the eye downward—from the scout’s bowed head to the faint trace on the ground—mirroring the internal journey he confronts. The warm chiaroscuro and controlled painterly toning nod subtly to Wyeth’s emotional restraint and the layered storytelling of narrative illustration.\n\nWhat distinguishes this piece is its quiet gravity: a man suspended between obligation and moral reckoning, framed not as an icon but as a character caught in a moment of truth. The textures, tones, and sculpted light elevate the photograph into a painterly tableau, yielding a work that resonates with collectors seeking depth, atmosphere, and a contemporary voice rooted in classic Western artistry.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -631,7 +631,7 @@ export const galleryData = [
   {
     "id": "i-trZrk2w",
     "title": "Night Raid",
-    "description": "Two frontier riders pause in the darkness of a rocky canyon, scanning the night for movement as their horses stand ready beneath them. The painterly Western scene uses dramatic light and shadow to evoke the suspense of a midnight mission on the American frontier. Cinematic composition, textured atmosphere, and subdued tones place the viewer inside a moment of quiet vigilance common to Western fine art photography and narrative cowboy imagery.",
+    "description": "Two frontier riders pause in the darkness of a rocky canyon, scanning the night for movement as their horses stand ready beneath them. The painterly Western scene uses dramatic light and shadow to evoke the suspense of a midnight mission on the American frontier. Cinematic composition, textured atmosphere, and subdued tones place the viewer inside a moment of quiet vigilance common to Western fine art photography and narrative cowboy imagery.\n\n© Wayne Heim",
     "alt": "Painterly western cowboys on horseback at night scanning the distance in a rocky canyon, cinematic frontier scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-trZrk2w/0/Kfn33Kx639Vbd8gk8hJ7Wb3cTLcXS9r5rzCq3PL2z/XL/_WHO2966-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-trZrk2w/0/Kfn33Kx639Vbd8gk8hJ7Wb3cTLcXS9r5rzCq3PL2z/XL/_WHO2966-Edit-Edit-XL.jpg",
@@ -684,7 +684,7 @@ export const galleryData = [
   {
     "id": "i-LL2Gp5r",
     "title": "\"Special Delivery\"",
-    "description": "Four shadowed figures stand on the rails before a halted night train, their forms emerging through thick fog under the engine’s blazing headlamp. The painterly Western scene blends cinematic light and atmosphere with Western fine art photography, capturing a tense moment of confrontation on the frontier. Dramatic contrast, textured haze, and layered composition create a narrative rich with ambiguity, where power, consequence, and reckoning unfold in silence.",
+    "description": "Four shadowed figures stand on the rails before a halted night train, their forms emerging through thick fog under the engine’s blazing headlamp. The painterly Western scene blends cinematic light and atmosphere with Western fine art photography, capturing a tense moment of confrontation on the frontier. Dramatic contrast, textured haze, and layered composition create a narrative rich with ambiguity, where power, consequence, and reckoning unfold in silence.\n\n© Wayne Heim",
     "alt": "Four western figures standing on railroad tracks in fog before a night train headlight, painterly cinematic western scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LL2Gp5r/0/K7ZTgrRFVTzZKWGWw7DzX254qLdSkR7LzJPqs6qKs/XL/_HF26159-1335-1336-XL.jpg",
@@ -739,7 +739,7 @@ export const galleryData = [
   {
     "id": "i-Sc9hZGs",
     "title": "Change of Plans",
-    "description": "Two armed men scramble for cover against the rough logs of a frontier cabin, rifles raised as the tension of a sudden gunfight hangs in the air. The painterly Western scene uses muted tones, drifting mist, and cinematic composition to capture the chaos and improvisation of conflict on the American frontier. Textured atmosphere and dramatic posture create a moment of raw suspense within the tradition of Western fine art photography.",
+    "description": "Two armed men scramble for cover against the rough logs of a frontier cabin, rifles raised as the tension of a sudden gunfight hangs in the air. The painterly Western scene uses muted tones, drifting mist, and cinematic composition to capture the chaos and improvisation of conflict on the American frontier. Textured atmosphere and dramatic posture create a moment of raw suspense within the tradition of Western fine art photography.\n\n© Wayne Heim",
     "alt": "Two western gunmen taking cover beside a log cabin during a frontier gunfight, painterly cinematic western scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Sc9hZGs/0/Kj28Xb8TsJZgHqvW3xK2ZxzGShFW7hgMsVdcGtjQb/XL/_HF27820-1265-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Sc9hZGs/0/Kj28Xb8TsJZgHqvW3xK2ZxzGShFW7hgMsVdcGtjQb/XL/_HF27820-1265-XL.jpg",
@@ -780,7 +780,7 @@ export const galleryData = [
     ],
 
     "story": "Not what they planned. Not even close.\n\nA shout, a shot, and suddenly every step is the wrong one. Hunkered low, backs to the wall—counting breaths, trading glances, hoping for an opening. One signal, maybe, and they’re running again. Or not. This wasn’t the plan. But out here, plans don’t last long.",
-    "notes": "“Change of Plans” places the viewer inside the instant where control disappears and instinct takes over. The crouched figures, raised rifles, and battered logs create a choreography of survival—two men improvising in the middle of a plan gone wrong. Rather than depicting heroism, the image captures the raw uncertainty that defined many moments of frontier conflict.\n\nCool slate tones and drifting haze heighten the tension, while the painterly treatment softens the edges into a cinematic tableau. The composition pulls the viewer into the corner with the figures, making the danger feel immediate and personal. For collectors, the piece offers a vivid narrative fragment—an unfinished story where the outcome hangs in the balance.",
+    "notes": "A sudden shift from plan to instinct defines the tension within the scene. Rather than celebrating heroic action, the work explores the fragile line between control and chaos—those moments when preparation dissolves and survival takes over. The figures move through the frame with urgency, creating a rhythm of motion and hesitation that mirrors the uncertainty of frontier conflict.\n\nMuted tones and drifting haze soften the edges of the confrontation, allowing the painterly treatment to transform violence into atmosphere and narrative tension. The composition draws the viewer inward, compressing space and placing them close to the unfolding moment. What remains is not resolution, but the uneasy suspension that often defines the most human stories of the frontier.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -795,7 +795,7 @@ export const galleryData = [
   {
     "id": "i-NxjDRLV",
     "title": "No coyotes, just a snake!",
-    "description": "A tense nighttime confrontation unfolds on the porch of a frontier cabin as a homesteader lowers his rifle while a well-dressed visitor gestures with papers in hand. The painterly Western scene uses cool blue night tones, candlelight, and cinematic composition to capture the quiet drama of conflict on the American frontier. The moment reflects the human struggles of land, debt, and survival often woven into narrative Western fine art photography.",
+    "description": "A tense nighttime confrontation unfolds on the porch of a frontier cabin as a homesteader lowers his rifle while a well-dressed visitor gestures with papers in hand. The painterly Western scene uses cool blue night tones, candlelight, and cinematic composition to capture the quiet drama of conflict on the American frontier. The moment reflects the human struggles of land, debt, and survival often woven into narrative Western fine art photography.\n\n© Wayne Heim",
     "alt": "Painterly western homestead porch confrontation at night with rifle, candlelight, and a man holding eviction papers.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NxjDRLV/0/MnDgx5cjRNJskndx89G8csRMnbsNFdPGwTBc77Vrh/XL/_HF27594-1262-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NxjDRLV/0/MnDgx5cjRNJskndx89G8csRMnbsNFdPGwTBc77Vrh/XL/_HF27594-1262-XL.jpg",
@@ -838,7 +838,7 @@ export const galleryData = [
     ],
 
     "story": "No coyotes after all—just a snake in the yard.\n\nFigures it’d be a suit and ledger, not fangs and fur. Boots and bluster, waving papers like they mean more than the roof overhead.\n\nHe lowers the rifle, breath heavy, jaw set.  \nShe holds the candle steady, eyes on the man who’s already taken too much.\n\nTonight, at least, the snake goes home empty.",
-    "notes": "“No Coyotes, Just a Snake!” reframes the classic frontier scare as something far more human—the quiet threat of power carried not by teeth or claws, but by paper and authority. The scene unfolds on a weathered porch under cool night light, where a homesteader, a candlelit witness, and a man with documents stand locked in uneasy balance.\n\nThe painterly tones and restrained composition heighten the emotional tension, emphasizing the moral stakes rather than physical action. A lowered rifle, a steady flame, and a ledger held like a weapon transform the moment into allegory. For collectors, the piece speaks to the deeper conflicts of frontier life—where survival was often decided not by the wilderness, but by the men who claimed to own it.",
+    "notes": "The painterly handling of light and shadow reinforces the emotional gravity of the scene. Cool tones and restrained composition draw attention to posture, distance, and the fragile balance between resistance and inevitability. What unfolds is a Western narrative rooted in moral tension rather than spectacle, echoing the tradition of frontier storytelling where survival was often determined not by strength, but by the rules imposed upon the land and the people who lived there.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -854,7 +854,7 @@ export const galleryData = [
   {
     "id": "i-kQfftQ2",
     "title": "Pinkerton’s Grasp",
-    "description": "A violent struggle erupts on a frontier porch as two men grapple with a lawman while a third stands above them, weapon drawn. The painterly Western scene captures the raw intensity of justice and vengeance colliding on the American frontier. Dramatic posture, sculpted light, and textured tones emphasize the physical tension and moral ambiguity that define narrative Western fine art photography.",
+    "description": "A violent struggle erupts on a frontier porch as two men grapple with a lawman while a third stands above them, weapon drawn. The painterly Western scene captures the raw intensity of justice and vengeance colliding on the American frontier. Dramatic posture, sculpted light, and textured tones emphasize the physical tension and moral ambiguity that define narrative Western fine art photography.\n\n© Wayne Heim",
     "alt": "Painterly western scene of three men fighting on a frontier porch, one choking a lawman while another stands with a gun.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kQfftQ2/0/MxbF3npDhGmgmrrmtFn56qf5vbspsswfMwMcpwGHL/XL/_WHO0532-1266-1267-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kQfftQ2/0/MxbF3npDhGmgmrrmtFn56qf5vbspsswfMwMcpwGHL/XL/_WHO0532-1266-1267-XL.jpg",
@@ -893,7 +893,7 @@ export const galleryData = [
     ],
 
     "story": "Even moral rot must collect its dues. Hubris—power—unchecked orders—and now, at last, he’s gone too far. A badge, a weapon, the tools that once shielded his conscience now betray him. One misstep, one reach too far, and the choke of consequence finds them all. A desperate struggle—a reckoning in motion—one final grasp at life’s blind justice.",
-    "notes": "“Pinkerton’s Grasp” explores the thin line between authority and reckoning on the Western frontier. The chokehold at the center of the frame becomes both a literal and symbolic struggle, suggesting the moment when power finally meets resistance. Three figures lock together in a tense triangle—one overreaching, one fighting back, and one standing ready to decide how the moment will end.\n\nMuted tones and painterly textures heighten the scene’s emotional gravity, transforming the violent clash into a dramatic tableau. The composition draws the viewer directly into the chaos of the moment while leaving the outcome unresolved. For collectors, the image offers a compelling study of consequence and moral ambiguity rendered through the cinematic language of painterly Western photography.",
+    "notes": "There is a thin line between authority and reckoning on the Western frontier. The chokehold at the center of the frame becomes both a literal and symbolic struggle, suggesting the moment when power finally meets resistance. Three figures lock together in a tense triangle—one overreaching, one fighting back, and one standing ready to decide how the moment will end.\n\nMuted tones and painterly textures heighten the scene’s emotional gravity, transforming the violent clash into a dramatic tableau. The composition draws the viewer directly into the chaos of the moment while leaving the outcome unresolved. For collectors, the image offers a compelling study of consequence and moral ambiguity rendered through the cinematic language of painterly Western photography.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -908,7 +908,7 @@ export const galleryData = [
   {
     "id": "i-46kWCqc",
     "title": "No Looking Back",
-    "description": "Cold morning light and drifting mist surround a solitary rider pushing through the shallows of a wide frontier river. The quiet tension of departure hangs in the air as horse and rider move steadily forward, leaving whatever waits behind them in the blue distance. A cinematic moment rendered through painterly Western photography, where atmosphere, restraint, and narrative ambiguity define the emotional weight of the scene.",
+    "description": "Cold morning light and drifting mist surround a solitary rider pushing through the shallows of a wide frontier river. The quiet tension of departure hangs in the air as horse and rider move steadily forward, leaving whatever waits behind them in the blue distance. A cinematic moment rendered through painterly Western photography, where atmosphere, restraint, and narrative ambiguity define the emotional weight of the scene.\n\n© Wayne Heim",
     "alt": "Solitary cowboy on horseback riding through a shallow river at dawn under a blue misty sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-46kWCqc/0/NVSzN3dbJWtxBKHT2GV28s73WCx5MjTj7NpW5KJxw/XL/_HF20949-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-46kWCqc/0/NVSzN3dbJWtxBKHT2GV28s73WCx5MjTj7NpW5KJxw/XL/_HF20949-Edit-Edit-2-XL.jpg",
@@ -971,7 +971,7 @@ export const galleryData = [
   {
     "id": "i-RsLmsLZ",
     "title": "Color of Conviction",
-    "description": "An old prospector kneels at the edge of a quiet frontier stream, patiently working his pan through the cold water as tall grass sways behind him. Time seems to slow in the moment—every movement deliberate, every swirl of the pan another small wager against doubt. Rendered with painterly depth and natural tones, the scene captures the quiet perseverance and stubborn hope that defined countless lives across the American frontier.",
+    "description": "An old prospector kneels at the edge of a quiet frontier stream, patiently working his pan through the cold water as tall grass sways behind him. Time seems to slow in the moment—every movement deliberate, every swirl of the pan another small wager against doubt. Rendered with painterly depth and natural tones, the scene captures the quiet perseverance and stubborn hope that defined countless lives across the American frontier.\n\n© Wayne Heim",
     "alt": "Elderly gold prospector with a long beard kneeling beside a creek while panning for gold in a Western frontier setting.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/KnvBmX4rj79BPNfL7Zw5SLJq34CMwKZntgL7fP6bp/XL/_WHO0893-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RsLmsLZ/0/KnvBmX4rj79BPNfL7Zw5SLJq34CMwKZntgL7fP6bp/XL/_WHO0893-Edit-2-XL.jpg",
@@ -1020,7 +1020,7 @@ export const galleryData = [
   {
     "id": "i-G7csptc",
     "title": "Lifted",
-    "description": "Morning light spills across a rising hillside as a lone rider pauses along the narrow trail, eyes closed and face lifted toward the warmth of the day. The quiet moment between movement and decision hangs in the air while horse and rider stand balanced against the rugged Western landscape. Rendered in soft painterly textures and natural earth tones, the image reflects the quiet strength, reflection, and inward resolve that define narrative Western fine art photography.",
+    "description": "Morning light spills across a rising hillside as a lone rider pauses along the narrow trail, eyes closed and face lifted toward the warmth of the day. The quiet moment between movement and decision hangs in the air while horse and rider stand balanced against the rugged Western landscape. Rendered in soft painterly textures and natural earth tones, the image reflects the quiet strength, reflection, and inward resolve that define narrative Western fine art photography.\n\n© Wayne Heim",
     "alt": "Frontier woman on horseback pausing on a steep hillside trail with eyes closed and face lifted into the morning sun.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G7csptc/1/Nb7htkPs3R6QKt3KVVLmnG7w5ttnP8v9PTDKwXxbd/XL/_HF26959-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G7csptc/1/Nb7htkPs3R6QKt3KVVLmnG7w5ttnP8v9PTDKwXxbd/XL/_HF26959-Edit-Edit-XL.jpg",
@@ -1078,7 +1078,7 @@ export const galleryData = [
   {
     "id": "i-NDnxRkx",
     "title": "Outlaw Watch",
-    "description": "A lone rider sits tall in the saddle, horse steady beneath her as she studies the distant horizon of the open frontier. Dusty hills and wide sky frame the quiet tension of the moment, where patience and awareness matter more than speed. Rendered with painterly texture and warm Western light, the image captures the calm vigilance and disciplined stillness that define narrative Western fine art photography.",
+    "description": "A lone rider sits tall in the saddle, horse steady beneath her as she studies the distant horizon of the open frontier. Dusty hills and wide sky frame the quiet tension of the moment, where patience and awareness matter more than speed. Rendered with painterly texture and warm Western light, the image captures the calm vigilance and disciplined stillness that define narrative Western fine art photography.\n\n© Wayne Heim",
     "alt": "Cowgirl on horseback pausing on a hillside while watching the distant horizon of the Western frontier.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/1/LRnzXB6F46R24jsXfgtrB54wqkxFVXpXH99wpQqw6/XL/_HF26194-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NDnxRkx/1/LRnzXB6F46R24jsXfgtrB54wqkxFVXpXH99wpQqw6/XL/_HF26194-Edit-XL.jpg",
@@ -1134,7 +1134,7 @@ export const galleryData = [
   {
     "id": "i-4XLSsnC",
     "title": "Lasso in Motion",
-    "description": "A cowboy charges across open ground as the rope rises into a wide spinning arc above him, horse and rider moving as one through the dust of the frontier. The moment captures the split second where instinct, training, and motion align. Rendered in warm Western tones and painterly texture, the image conveys the speed, skill, and kinetic grace that define classic cowboy horsemanship in narrative Western fine art photography.",
+    "description": "A cowboy charges across open ground as the rope rises into a wide spinning arc above him, horse and rider moving as one through the dust of the frontier. The moment captures the split second where instinct, training, and motion align. Rendered in warm Western tones and painterly texture, the image conveys the speed, skill, and kinetic grace that define classic cowboy horsemanship in narrative Western fine art photography.\n\n© Wayne Heim",
     "alt": "Cowboy riding fast while spinning a lasso above his head across open Western landscape.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4XLSsnC/0/K9P3KhQn5FfHJCTTkLX5VTspNGPgK2DjJSqDk5qPc/XL/_HF21794-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4XLSsnC/0/K9P3KhQn5FfHJCTTkLX5VTspNGPgK2DjJSqDk5qPc/XL/_HF21794-Edit-Edit-XL.jpg",
@@ -1188,7 +1188,7 @@ export const galleryData = [
   {
     "id": "i-Wx5scCf",
     "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
-    "description": "Three figures move through a steep rocky hillside where stone outcrops and dry grass tighten the space around them. One man sits wounded while two others close in from opposite sides, the terrain shaping the moment as much as the men themselves. The scene unfolds like a Western tableau—compressed, tense, and inevitable—captured in painterly Western photography that explores consequence, confrontation, and the fragile line between justice and survival on the frontier.",
+    "description": "Three figures move through a steep rocky hillside where stone outcrops and dry grass tighten the space around them. One man sits wounded while two others close in from opposite sides, the terrain shaping the moment as much as the men themselves. The scene unfolds like a Western tableau—compressed, tense, and inevitable—captured in painterly Western photography that explores consequence, confrontation, and the fragile line between justice and survival on the frontier.\n\n© Wayne Heim",
     "alt": "Three men confronting each other across rocky Western hillside terrain with one wounded figure seated against the stone.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LDq7zSzrMs3gDgSF2BwqVPsjDLcFWkDxFj3mBWBpD/XL/_HF25859-1151-1156-1159-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LDq7zSzrMs3gDgSF2BwqVPsjDLcFWkDxFj3mBWBpD/XL/_HF25859-1151-1156-1159-XL.jpg",
@@ -1222,7 +1222,7 @@ export const galleryData = [
     ],
 
     "story": "Among the stone and sage...\n\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history.",
-    "notes": "Justified — or Damned is less about combat than the terrain that traps it. Every slope and stone tightens the noose—nature funneling men toward consequence. Heim’s painterly textures reveal not violence, but reckoning: the moment when instinct gives way to confession. The composition’s compression—earth pressing inward—mirrors moral pressure. It recalls the tonal weight of Goya’s fatal encounters and the compositional storytelling of Remington’s late works, but reframed through Heim’s contemporary lens: where light exposes not heroism, but humanity. It’s a scene of entrapment, not conquest—the West as moral crucible, where even the righteous erode beneath the wind.",
+    "notes": "Every slope and stone tightens the noose—nature funneling men toward consequence. The painterly textures reveal not violence, but reckoning: the moment when instinct gives way to confession. The composition’s compression—earth pressing inward—mirrors moral pressure. It recalls the tonal weight of Goya’s fatal encounters and the compositional storytelling of Remington’s late works, but reframed through Heim’s contemporary lens: where light exposes not heroism, but humanity. It’s a scene of entrapment, not conquest—the West as moral crucible, where even the righteous erode beneath the wind.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1237,7 +1237,7 @@ export const galleryData = [
   {
     "id": "i-Nn7scqm",
     "title": "Do you HEAR me now?!",
-    "description": "A frontier homestead becomes the stage for a tense confrontation as a determined woman raises a stick across a split-rail fence, refusing to yield ground. Two men stand beyond the boundary, their presence pressing against the fragile line between property and intrusion. The painterly Western scene captures a moment where ordinary people become fierce defenders of home, land, and dignity on the American frontier.",
+    "description": "A frontier homestead becomes the stage for a tense confrontation as a determined woman raises a stick across a split-rail fence, refusing to yield ground. Two men stand beyond the boundary, their presence pressing against the fragile line between property and intrusion. The painterly Western scene captures a moment where ordinary people become fierce defenders of home, land, and dignity on the American frontier.\n\n© Wayne Heim",
     "alt": "Frontier woman confronting two men across a wooden fence at a rural homestead while raising a stick in defiance.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/0/MzHkg4NLj6bnhzTxsVMgJgP2VX8ZhDvsgSX3RWLtK/XL/_HF20588-1294-1295-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Nn7scqm/0/MzHkg4NLj6bnhzTxsVMgJgP2VX8ZhDvsgSX3RWLtK/XL/_HF20588-1294-1295-XL.jpg",
@@ -1275,7 +1275,7 @@ export const galleryData = [
     ],
 
     "story": "She’s had enough of men with papers and empty promises, enough of being talked down to from horseback or the other side of a fence. The price of “progress” is written on her face as she makes her stand, voice ringing sharper than the stick she raises. One step closer and he’ll find out just how loud a woman can get when her land and family are on the line.",
-    "notes": "Negotiation turns to showdown in this charged moment where a woman draws the line against railroad “progress,” her body language a blend of fury and resolve as she defends her family’s claim; every detail—from the pointed gun to the wary posture of the men—speaks to the untold stories of ordinary people forced to become extraordinary when their way of life is threatened by ambition and greed.",
+    "notes": "The power of the work lies in its tension of stance rather than action. The confrontation unfolds along a simple boundary, yet the emotional weight extends far beyond the fence itself. In Western visual tradition, such boundaries often symbolize the fragile balance between independence and intrusion, turning a quiet rural setting into a stage for moral resolve.\n\nThe restrained palette and painterly softness temper what could otherwise be a purely dramatic scene. Instead of spectacle, the composition emphasizes posture, distance, and the charged stillness between opposing wills. The result is a study in frontier defiance—where strength is expressed not through violence, but through the refusal to yield ground.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1291,7 +1291,7 @@ export const galleryData = [
   {
     "id": "i-cV5gwWZ",
     "title": "Final Deposit",
-    "description": "Outside a weathered frontier cabin, grief erupts into action as a man raises a club against a debt collector pressing a widow for payment. The confrontation unfolds in a narrow space between doorway and yard, where loss, anger, and justice collide. Rendered with painterly texture and cinematic Western light, the image captures the raw emotional tension and moral reckoning that often simmered beneath the quiet surface of frontier life.",
+    "description": "Outside a weathered frontier cabin, grief erupts into action as a man raises a club against a debt collector pressing a widow for payment. The confrontation unfolds in a narrow space between doorway and yard, where loss, anger, and justice collide. Rendered with painterly texture and cinematic Western light, the image captures the raw emotional tension and moral reckoning that often simmered beneath the quiet surface of frontier life.\n\n© Wayne Heim",
     "alt": "Frontier man swinging a club at a debt collector outside a log cabin while a widow watches from the doorway.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-cV5gwWZ/1/NRpH52zNFB4KXS4JXkcrF9d7ZfrRdmqG9nJwTTtpC/XL/_HF21020-1218-1219-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-cV5gwWZ/1/NRpH52zNFB4KXS4JXkcrF9d7ZfrRdmqG9nJwTTtpC/XL/_HF21020-1218-1219-XL.jpg",
@@ -1333,7 +1333,7 @@ export const galleryData = [
     ],
 
     "story": "Fate, destiny, or God’s will? Testing. Pushing. Driving a person to the edge of breaking. Everyone knew he was in trouble—but today? For God’s sake… the ground over him isn’t even cold. And yet here he comes, this soulless robber baron, all too eager to “do his job.” “Help the poor widow,” he says—ledger in hand, eyes on her grief as if sorrow were just another line item to collect.\n\nNight or wrong, we make our stand—not only for Henry… but for every one of us they’ve bled dry. One final act. One final message. One final deposit.",
-    "notes": "“Final Deposit” examines the charged crossroads where grief, injustice, and frontier resolve collide. The widow framed in the doorway forms the emotional backbone of the piece, her stillness counterbalanced by the explosive motion of the raised weapon and the recoiling official. The diagonal energy, worn textures evoke the narrative drama of classic Western illustration, while the painterly finish softens the brutality into a sculpted, almost timeless tableau.\n\nLight carves across the figures with an intentional asymmetry—one side anchored in sorrow, the other in retaliation—giving the work a tension reminiscent of Remington’s late emotional studies and the moral storytelling of Rockwell. What emerges is a frontier moment suspended between justice and consequence, rendered with cinematic clarity and quiet empathy. It stands as a portrait of a community pushed past its limits, visually rich and narratively potent.",
+    "notes": "This moment examines the charged crossroads where grief, injustice, and frontier resolve collide. The widow framed in the doorway forms the emotional backbone of the piece, her stillness counterbalanced by the explosive motion of the raised weapon and the recoiling official. The diagonal energy, worn textures evoke the narrative drama of classic Western illustration, while the painterly finish softens the brutality into a sculpted, almost timeless tableau.\n\nLight carves across the figures with an intentional asymmetry—one side anchored in sorrow, the other in retaliation—giving the work a tension reminiscent of Remington’s late emotional studies and the moral storytelling of Rockwell. What emerges is a frontier moment suspended between justice and consequence, rendered with cinematic clarity and quiet empathy. It stands as a portrait of a community pushed past its limits, visually rich and narratively potent.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -1350,7 +1350,7 @@ export const galleryData = [
   {
     "id": "i-bfKMXS9",
     "title": "Three Wise Men",
-    "description": "Three men hold position on the porch of a weathered frontier cabin, rifles ready as they brace for whatever may come across the open ground. Their staggered stance forms a tight defensive line—each watching a different angle, each carrying the quiet weight of the moment. Rendered in painterly Western tones and cinematic light, the scene captures the tense calm before confrontation that defines narrative Western fine art photography.",
+    "description": "Three men hold position on the porch of a weathered frontier cabin, rifles ready as they brace for whatever may come across the open ground. Their staggered stance forms a tight defensive line—each watching a different angle, each carrying the quiet weight of the moment. Rendered in painterly Western tones and cinematic light, the scene captures the tense calm before confrontation that defines narrative Western fine art photography.\n\n© Wayne Heim",
     "alt": "Three armed cowboys standing on the porch of a log cabin holding rifles and watching the frontier.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bfKMXS9/1/LGHTQ2nfb4GLwcpQbgc4VRS6mGfTM3Sgdtg4Gk5zc/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8834-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bfKMXS9/1/LGHTQ2nfb4GLwcpQbgc4VRS6mGfTM3Sgdtg4Gk5zc/XL/Western%20Themed%20Cowboy%20Portrait%20Photography%20_ANA8834-Edit-2-XL.jpg",
@@ -1416,7 +1416,7 @@ export const galleryData = [
   {
     "id": "i-rfFBRQM",
     "title": "Untimely Parting",
-    "description": "Grieving figures gather outside a small frontier church, their posture revealing the raw weight of loss and farewell. One woman collapses to her knees while another hides her face, and a man stands beside them searching the sky as if for answers that will not come. Rendered in painterly Western tones and cinematic light, the scene reflects the quieter realities behind frontier life—moments of mourning, resilience, and the human cost woven into the mythology of the American West. © Wayne Heim",
+    "description": "Grieving figures gather outside a small frontier church, their posture revealing the raw weight of loss and farewell. One woman collapses to her knees while another hides her face, and a man stands beside them searching the sky as if for answers that will not come. Rendered in painterly Western tones and cinematic light, the scene reflects the quieter realities behind frontier life—moments of mourning, resilience, and the human cost woven into the mythology of the American West. \n\n© Wayne Heim",
     "alt": "Three grieving frontier figures outside a small church mourning beside a grave in a painterly Western scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rfFBRQM/0/K3KRNqHCc6TMPqKsMqWWrhk2dHQfJjP8N2BJRthPV/XL/_HF29878-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rfFBRQM/0/K3KRNqHCc6TMPqKsMqWWrhk2dHQfJjP8N2BJRthPV/XL/_HF29878-Edit-2-XL.jpg",
@@ -1451,7 +1451,7 @@ export const galleryData = [
     ],
 
     "story": "Struggling for words… or even the air to breathe. Knees buckle beneath the crushing weight of reality, grief, and unanswered questions. In this moment, strength escapes — sorrow spilling from every pore. A widow, a daughter, a sister, a brother… souls and purpose suddenly shattered. The reality of a final goodbye consumes the senses. One fragile moment belonging only to them— a last farewell to the life and dreams they planned together. Here now, before God and those who watch and wonder. Just one moment — because mercy, time, and the journey forward wait for none. Somehow… some way… tomorrow we find the strength to press on. The first of many unforeseen tolls now paid in full — and the long road West can finally begin.",
-    "notes": "“Untimely Parting” stands as a testament to the realities beneath Western myth—the grief and interruption that shadowed even the boldest journeys. The composition is spare, placing all focus on gesture: hands raised to faces, heads bent, one figure looking skyward as if pleading for answers. The muted palette and soft edges amplify the weight of silence, while the church in the background anchors the moment in ritual and community. There’s a stillness here, reminiscent of 19th-century narrative painting, where emotion radiates from posture and negative space. What sets this piece apart is its willingness to pause at the threshold of loss—not to offer resolution, but to witness, and to honor the unseen stories that shaped the West. For collectors, it’s an image of empathy and quiet bravery, rendered with painterly grace and emotional fidelity.",
+    "notes": "The work centers on the emotional threshold between loss and endurance. Rather than seeking resolution, it holds the viewer within the fragile space where grief first takes form—when silence carries more weight than words and the future briefly feels uncertain. The strength of the moment lies in its restraint, allowing vulnerability to stand openly within a landscape so often associated with toughness.\n\nThe restrained palette and painterly softness reinforce this emotional gravity. Rather than dramatizing the moment, the composition leans into stillness, allowing gesture and posture to carry the weight of meaning. In doing so, the piece echoes the contemplative tradition of narrative Western art, where sorrow, resilience, and faith coexist within the same fragile moment of silence.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",

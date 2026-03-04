@@ -1,4 +1,4 @@
-var __defProp = Object.defineProperty;
+﻿var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 
 // src/analytics/worker.js
@@ -505,11 +505,13 @@ __name(getHumanCount, "getHumanCount");
 __name2(getHumanCount, "getHumanCount");
 async function getArtViews(env, filters) {
   const { dateClause, baseDateClause, hideBotsPredicate, hideBots, selectedDate } = filters;
+  const _at = {}; // art views internal timings
+  const _atm = async (label, fn) => { const s = Date.now(); const r = await fn(); _at[label] = Date.now() - s; return r; };
   const notBotWhenHide = /* @__PURE__ */ __name2(
     (alias) => hideBots ? `AND COALESCE(${alias}.is_bot, 0) = 0` : "",
     "notBotWhenHide"
   );
-    const humanCount = await getHumanCount(env, dateClause);
+    const humanCount = await _atm('humanCnt', () => getHumanCount(env, dateClause));
     if (humanCount === 0) {
       return {
         artViewsSummary: {
@@ -555,6 +557,9 @@ async function getArtViews(env, filters) {
     external_images: 0,
     total: 0
   };
+
+  const _p = [];
+  _p.push((async () => {
   try {
     const summaryQuery = `
       SELECT 'xl_zoom' as event_type, COUNT(*) as views
@@ -568,6 +573,7 @@ async function getArtViews(env, filters) {
       SELECT 'gallery_view' as event_type, COUNT(*) as views
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
+
       WHERE e.event_type IN ('gallery', 'gallery_view')
         AND ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
 
@@ -614,6 +620,8 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("Summary query failed:", e.message);
   }
+  })());
+  _p.push((async () => {
   try {
     const frictionQuery = `
       SELECT
@@ -631,7 +639,9 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("Harvester friction query failed:", e.message);
   }
+  })());
   let topChapters = [];
+  _p.push((async () => {
   try {
     const topChaptersQuery = `
       SELECT
@@ -646,131 +656,16 @@ async function getArtViews(env, filters) {
         MAX(CASE WHEN e.event_type = 'chapter_view' THEN e.ts ELSE NULL END) as last_seen_js,
         MAX(CASE WHEN e.event_type = 'chapter_exposure' THEN e.ts ELSE NULL END) as last_seen_proxy,
 
-        (
-          SELECT e2.page
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'chapter_view'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.page IS NOT NULL
-          GROUP BY e2.page
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as best_page_js,
-        (
-          SELECT e2.page
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'chapter_exposure'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.page IS NOT NULL
-          GROUP BY e2.page
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as best_page_proxy,
-
-        (
-          SELECT e2.referer
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'chapter_view'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.referer IS NOT NULL
-            AND e2.referer NOT LIKE '%k4studios.com%'
-          GROUP BY e2.referer
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as best_referer_js,
-        (
-          SELECT e2.referer
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'chapter_exposure'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.referer IS NOT NULL
-            AND e2.referer NOT LIKE '%k4studios.com%'
-          GROUP BY e2.referer
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as best_referer_proxy,
-
-        (
-          SELECT e2.country
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'chapter_view'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_country_js,
-        (
-          SELECT e2.region
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'chapter_view'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_region_js,
-        (
-          SELECT e2.city
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'chapter_view'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_city_js,
-
-        (
-          SELECT e2.country
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'chapter_exposure'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_country_proxy,
-        (
-          SELECT e2.region
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'chapter_exposure'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_region_proxy,
-        (
-          SELECT e2.city
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'chapter_exposure'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_city_proxy
+        NULL as best_page_js,
+        NULL as best_page_proxy,
+        NULL as best_referer_js,
+        NULL as best_referer_proxy,
+        NULL as geo_country_js,
+        NULL as geo_region_js,
+        NULL as geo_city_js,
+        NULL as geo_country_proxy,
+        NULL as geo_region_proxy,
+        NULL as geo_city_proxy
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE e.event_type IN ('chapter_exposure', 'chapter_view')
@@ -820,7 +715,9 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("Top chapters query failed:", e.message);
   }
+  })());
   let topZooms = [];
+  _p.push((async () => {
   try {
     const topZoomsQuery = `
       SELECT 
@@ -829,54 +726,10 @@ async function getArtViews(env, filters) {
         COUNT(DISTINCT e.visitor_id) as unique_viewers,
         GROUP_CONCAT(DISTINCT LOWER(COALESCE(hp.device_type, 'unknown'))) as device_types,
         MAX(e.ts) as last_seen,
-        (
-          SELECT e2.page
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'xl_zoom'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.page IS NOT NULL
-          GROUP BY e2.page
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as best_page,
-        (
-          SELECT e2.country
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'xl_zoom'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_country,
-        (
-          SELECT e2.region
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'xl_zoom'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_region,
-        (
-          SELECT e2.city
-          FROM classified_events e2
-          JOIN human_population hp2 ON e2.visitor_id = hp2.visitor_id
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type = 'xl_zoom'
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_city
+        NULL as best_page,
+        NULL as geo_country,
+        NULL as geo_region,
+        NULL as geo_city
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE e.event_type = 'xl_zoom'
@@ -899,7 +752,9 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("Top zooms query failed:", e.message);
   }
+  })());
   let topGalleries = [];
+  _p.push((async () => {
   try {
     const topGalleriesQuery = `
       SELECT 
@@ -907,17 +762,7 @@ async function getArtViews(env, filters) {
         COUNT(*) as views,
         COUNT(DISTINCT e.visitor_id) as unique_viewers,
         GROUP_CONCAT(DISTINCT LOWER(COALESCE(hp.device_type, 'unknown'))) as device_types,
-        (
-          SELECT e2.page
-          FROM classified_events e2
-          WHERE e2.event_type IN ('gallery', 'gallery_view')
-            AND e2.target_id = e.target_id
-            AND e2.page IS NOT NULL
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-          GROUP BY e2.page
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as best_page
+        NULL as best_page
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE e.event_type IN ('gallery', 'gallery_view')
@@ -946,6 +791,7 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("Top galleries query failed:", e.message);
   }
+  })());
   let viewerDepth = {
     avgScore: 0,
     highDepthCount: 0,
@@ -953,6 +799,7 @@ async function getArtViews(env, filters) {
     distribution: [],
     maxScore: 0
   };
+  _p.push((async () => {
   try {
     const depthQuery = `
       WITH viewer_scores AS (
@@ -1003,7 +850,9 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("Depth query failed:", e.message);
   }
+  })());
   let suppressionStats = { suppressedToday: 0, activeSuppressedIPs: 0 };
+  _p.push((async () => {
   try {
     if (hideBots && baseDateClause && hideBotsPredicate) {
       const hiddenQuery = `
@@ -1041,7 +890,9 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("Bot count query failed:", e.message);
   }
+  })());
   let externalImageAccess = [];
+  _p.push((async () => {
   try {
     const externalQueryWithRefTypeAndAssetSource = `
       SELECT 
@@ -1053,48 +904,9 @@ async function getArtViews(env, filters) {
         e.asset_source,
         e.og_platform,
         e.country,
-        (
-          SELECT e2.country
-          FROM classified_events e2
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('external_image', 'direct_image')
-            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
-            AND ${notCacheWarmer("e2")}
-            ${notBotWhenHide("e2")}
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_country,
-        (
-          SELECT e2.region
-          FROM classified_events e2
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('external_image', 'direct_image')
-            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
-            AND ${notCacheWarmer("e2")}
-            ${notBotWhenHide("e2")}
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_region,
-        (
-          SELECT e2.city
-          FROM classified_events e2
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('external_image', 'direct_image')
-            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
-            AND ${notCacheWarmer("e2")}
-            ${notBotWhenHide("e2")}
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_city
+        e.country as geo_country,
+        NULL as geo_region,
+        NULL as geo_city
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
@@ -1113,48 +925,9 @@ async function getArtViews(env, filters) {
         e.referer,
         e.ref_type,
         e.country,
-        (
-          SELECT e2.country
-          FROM classified_events e2
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('external_image', 'direct_image')
-            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
-            AND ${notCacheWarmer("e2")}
-            ${notBotWhenHide("e2")}
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_country,
-        (
-          SELECT e2.region
-          FROM classified_events e2
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('external_image', 'direct_image')
-            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
-            AND ${notCacheWarmer("e2")}
-            ${notBotWhenHide("e2")}
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_region,
-        (
-          SELECT e2.city
-          FROM classified_events e2
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('external_image', 'direct_image')
-            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
-            AND ${notCacheWarmer("e2")}
-            ${notBotWhenHide("e2")}
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_city
+        e.country as geo_country,
+        NULL as geo_region,
+        NULL as geo_city
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
@@ -1172,48 +945,9 @@ async function getArtViews(env, filters) {
         MAX(e.ts) as last_seen,
         e.referer,
         e.country,
-        (
-          SELECT e2.country
-          FROM classified_events e2
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('external_image', 'direct_image')
-            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
-            AND ${notCacheWarmer("e2")}
-            ${notBotWhenHide("e2")}
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_country,
-        (
-          SELECT e2.region
-          FROM classified_events e2
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('external_image', 'direct_image')
-            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
-            AND ${notCacheWarmer("e2")}
-            ${notBotWhenHide("e2")}
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_region,
-        (
-          SELECT e2.city
-          FROM classified_events e2
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('external_image', 'direct_image')
-            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
-            AND ${notCacheWarmer("e2")}
-            ${notBotWhenHide("e2")}
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.country IS NOT NULL
-          GROUP BY e2.country, e2.region, e2.city
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as geo_city
+        e.country as geo_country,
+        NULL as geo_region,
+        NULL as geo_city
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
@@ -1282,7 +1016,9 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("External image access query failed:", e.message);
   }
+  })());
   let externalImageAccessTotal = 0;
+  _p.push((async () => {
   try {
     const totalQuery = `
       SELECT COUNT(*) as total
@@ -1298,7 +1034,9 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("External image access total query failed:", e.message);
   }
+  })());
   let externalReachGeo = [];
+  _p.push((async () => {
   try {
     const geoQuery = `
       SELECT 
@@ -1329,7 +1067,9 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("External reach geo query failed:", e.message);
   }
+  })());
   let externalReachSources = [];
+  _p.push((async () => {
   try {
     const srcQueryWithRefTypeAndAssetSource = `
       SELECT 
@@ -1410,6 +1150,7 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("External reach sources query failed:", e.message);
   }
+  })());
   let externalDailySummary = {
     generatedAt: (/* @__PURE__ */ new Date()).toISOString(),
     todayLabel: selectedDate || "Today",
@@ -1418,8 +1159,9 @@ async function getArtViews(env, filters) {
     yesterday: { total: 0, u: 0, e: 0 },
     delta: 0,
     pct: 0,
-    topSources: externalReachSources.slice(0, 3)
+    topSources: []
   };
+  _p.push((async () => {
   try {
     const labelToday = selectedDate || "Today";
     const labelYesterday = selectedDate ? "Prev Day" : "Yesterday";
@@ -1461,32 +1203,21 @@ async function getArtViews(env, filters) {
       yesterday: yesterdayData,
       delta,
       pct,
-      topSources: externalReachSources.slice(0, 3)
+      topSources: []
     };
   } catch (e) {
     console.log("External daily summary query failed:", e.message);
   }
+  })());
   let topExternal = [];
+  _p.push((async () => {
   try {
     const extImgQuery = `
       SELECT 
         e.target_id,
         COUNT(*) as views,
         COUNT(DISTINCT e.ip) as unique_viewers,
-        (
-          SELECT e2.referer
-          FROM classified_events e2
-          WHERE e2.target_id = e.target_id
-            AND e2.event_type IN ('external_image', 'direct_image')
-            AND (e2.visitor_id IS NULL OR e2.visitor_id = '')
-            AND ${notCacheWarmer("e2")}
-            ${notBotWhenHide("e2")}
-            AND ${dateClause.replace(/\bts\b/g, "e2.ts") || 'e2.ts > datetime("now", "-1 day")'}
-            AND e2.referer IS NOT NULL
-          GROUP BY e2.referer
-          ORDER BY COUNT(*) DESC
-          LIMIT 1
-        ) as top_referer
+        NULL as top_referer
       FROM classified_events e
       WHERE e.event_type IN ('external_image', 'direct_image')
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
@@ -1511,8 +1242,10 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("Top external images query failed:", e.message);
   }
+  })());
   let externalDisplays = [];
   let noRefExternalViews = 0;
+  _p.push((async () => {
   try {
     const dispQueryWithRefType = `
       SELECT 
@@ -1569,7 +1302,9 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("External displays query failed:", e.message);
   }
+  })());
   let entryRefCountsObj = {};
+  _p.push((async () => {
   try {
     const entryQueryWithRefType = `
       SELECT 
@@ -1614,7 +1349,9 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("Entry ref counts query failed:", e.message);
   }
+  })());
   let externalGeography = [];
+  _p.push((async () => {
   try {
     const extGeoQuery = `
       SELECT 
@@ -1645,6 +1382,11 @@ async function getArtViews(env, filters) {
   } catch (e) {
     console.log("External geography query failed:", e.message);
   }
+  })());
+
+  await Promise.all(_p);
+  externalDailySummary.topSources = externalReachSources.slice(0, 3);
+
   artViewsSummary.externalDisplays = externalDisplays;
   artViewsSummary.noRefExternalViews = noRefExternalViews;
   artViewsSummary.externalGeography = externalGeography;
@@ -1692,35 +1434,16 @@ async function getDashboardStats(env, filters) {
   let sessionCount = 0;
   try {
     const sessionsQuery = `
-      WITH base_events AS (
-        SELECT
-          COALESCE(
-            NULLIF(e.session_id, ''),
-            NULLIF(e.session_id_v2, ''),
-            NULLIF(e.visitor_id, ''),
-            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
-          ) AS session_key
-        FROM classified_events e
-        WHERE ${where}
-          AND COALESCE(e.is_bot, 0) = 0
-          AND ${notCacheWarmer("e")}
-          AND e.event_type IN (
-            'page_pixel',
-            'page_view',
-            'edge_page',
-            'image_page',
-            'external_image_page',
-            'chapter_view',
-            'chapter_exposure',
-            'state_pixel',
-            'action_pixel',
-            'gallery_view'
-          )
-      )
-      SELECT COUNT(DISTINCT session_key) as sessions
-      FROM base_events
-      WHERE session_key IS NOT NULL
-        AND session_key != ''
+      SELECT COUNT(DISTINCT e.session_id) as sessions
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE ${where}
+        AND COALESCE(e.is_bot, 0) = 0
+        AND ${notCacheWarmer("e")}
+        AND e.source = 'js'
+        AND e.event_type = 'page_view'
+        AND e.session_id IS NOT NULL
+        AND e.session_id != ''
     `;
     const result = await env.DB.prepare(sessionsQuery).first();
     sessionCount = result?.sessions || 0;
@@ -1731,22 +1454,12 @@ async function getDashboardStats(env, filters) {
   try {
     const eventsQuery = `
       SELECT COUNT(*) as count
-      FROM classified_events e
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${where}
         AND COALESCE(e.is_bot, 0) = 0
         AND ${notCacheWarmer("e")}
-        AND e.event_type IN (
-          'page_pixel',
-          'page_view',
-          'edge_page',
-          'image_page',
-          'external_image_page',
-          'chapter_view',
-          'chapter_exposure',
-          'state_pixel',
-          'action_pixel',
-          'gallery_view'
-        )
+        AND e.source = 'js'
     `;
     const result = await env.DB.prepare(eventsQuery).first();
     totalEvents = result?.count || 0;
@@ -2055,7 +1768,6 @@ async function getStatePixelTestRoaring20s(env, filters) {
           THEN ip_hash || '|' || ua_class || '|' || bucket END) AS edge_page_sessions
       FROM base
     `;
-    const summaryRow = await env.DB.prepare(summaryQuery).first();
     const refQuery = `
       WITH src AS (
         SELECT e.referer AS referer
@@ -2086,7 +1798,6 @@ async function getStatePixelTestRoaring20s(env, filters) {
       ORDER BY hits DESC
       LIMIT 10
     `;
-    const refRows = await env.DB.prepare(refQuery).all();
     const viewerStatsQuery = `
       WITH sp AS (
         SELECT
@@ -2128,7 +1839,6 @@ async function getStatePixelTestRoaring20s(env, filters) {
         (100.0 * SUM(CASE WHEN has_duplicates = 1 THEN 1 ELSE 0 END) / NULLIF(COUNT(*), 0)) AS pct_viewers_with_duplicates
       FROM by_viewer
     `;
-    const viewerStatsRow = await env.DB.prepare(viewerStatsQuery).first();
     const byGalleryQuery = `
       WITH image_views AS (
         SELECT
@@ -2163,8 +1873,6 @@ async function getStatePixelTestRoaring20s(env, filters) {
       ORDER BY image_views DESC
       LIMIT 25
     `;
-    const byGalleryRows = await env.DB.prepare(byGalleryQuery).all();
-
     const pixelImageAccessQuery = `
       WITH sp AS (
         SELECT
@@ -2235,7 +1943,13 @@ async function getStatePixelTestRoaring20s(env, filters) {
        AND r.rn = 1
       ORDER BY a.last_seen DESC, a.exposures DESC
     `;
-    const pixelImageAccessRows = await env.DB.prepare(pixelImageAccessQuery).all();
+    const [summaryRow, refRows, viewerStatsRow, byGalleryRows, pixelImageAccessRows] = await Promise.all([
+      env.DB.prepare(summaryQuery).first(),
+      env.DB.prepare(refQuery).all(),
+      env.DB.prepare(viewerStatsQuery).first(),
+      env.DB.prepare(byGalleryQuery).all(),
+      env.DB.prepare(pixelImageAccessQuery).all()
+    ]);
     return {
       state_pixel_hits: Number(summaryRow?.state_pixel_hits || 0),
       sister_pixel_v1_hits: Number(summaryRow?.sister_pixel_v1_hits || 0),
@@ -2636,19 +2350,41 @@ async function getGeography(env, filters) {
         GROUP BY country, region, city
       ),
       art_base AS (
-        SELECT
-          e.country, e.region, e.city,
-          COUNT(DISTINCT COALESCE(NULLIF(e.visitor_id, ''), 'ip:' || COALESCE(e.ip, 'unknown'))) as art_viewers
-        FROM classified_events e
-        WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
-          AND e.country IS NOT NULL
-          AND e.event_type IN ('state_pixel', 'action_pixel')
-          AND e.target_id LIKE 'i-%'
-          AND e.target_id NOT LIKE '%/%'
-          ${qualify(botClause)}
-          ${qualify(chardonClause)}
-          ${qualify(ipClause)}
-        GROUP BY e.country, e.region, e.city
+        SELECT country, region, city, SUM(art_viewers) as art_viewers
+        FROM (
+          -- Pixel events on image targets (state_pixel, action_pixel)
+          SELECT
+            e.country, e.region, e.city,
+            COUNT(DISTINCT COALESCE(NULLIF(e.visitor_id, ''), 'ip:' || COALESCE(e.ip, 'unknown'))) as art_viewers
+          FROM classified_events e
+          WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
+            AND e.country IS NOT NULL
+            AND e.event_type IN ('state_pixel', 'action_pixel')
+            AND e.target_id LIKE 'i-%'
+            AND e.target_id NOT LIKE '%/%'
+            ${qualify(botClause)}
+            ${qualify(chardonClause)}
+            ${qualify(ipClause)}
+          GROUP BY e.country, e.region, e.city
+
+          UNION ALL
+
+          -- JS image-level events from verified humans (chapter_view, xl_zoom)
+          SELECT
+            e.country, e.region, e.city,
+            COUNT(DISTINCT e.visitor_id) as art_viewers
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
+          WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
+            AND e.country IS NOT NULL
+            AND e.source = 'js'
+            AND e.event_type IN ('chapter_view', 'xl_zoom')
+            ${qualify(botClause)}
+            ${qualify(chardonClause)}
+            ${qualify(ipClause)}
+          GROUP BY e.country, e.region, e.city
+        )
+        GROUP BY country, region, city
       ),
       base AS (
         SELECT
@@ -2840,7 +2576,6 @@ async function getSessionMetrics(env, filters) {
       GROUP BY device
       ORDER BY sessions DESC
     `;
-    const devices = await env.DB.prepare(devicesQuery).all();
     const bounceQuery = `
       SELECT 
         COUNT(*) as total_sessions,
@@ -2855,10 +2590,6 @@ async function getSessionMetrics(env, filters) {
         GROUP BY session_key
       )
     `;
-    const bounceResult = await env.DB.prepare(bounceQuery).first();
-    const bounceRate = bounceResult?.total_sessions > 0 ? Math.round(
-      100 * (bounceResult.bounce_sessions || 0) / bounceResult.total_sessions
-    ) : 0;
     const durationQuery = `
       SELECT ROUND(AVG(duration_seconds), 0) as avg_duration
       FROM (
@@ -2874,9 +2605,6 @@ async function getSessionMetrics(env, filters) {
         HAVING COUNT(*) > 1
       )
     `;
-    const durationResult = await env.DB.prepare(durationQuery).first();
-    const avgDurationSecs = durationResult?.avg_duration || 0;
-    const avgDurationFormatted = avgDurationSecs >= 60 ? `${Math.floor(avgDurationSecs / 60)}m ${Math.round(avgDurationSecs % 60)}s` : `${Math.round(avgDurationSecs)}s`;
     const peakHoursQuery = `
       SELECT 
         CAST(strftime('%H', e.ts, '-5 hours') AS INTEGER) as hour,
@@ -2889,36 +2617,6 @@ async function getSessionMetrics(env, filters) {
       GROUP BY hour
       ORDER BY sessions DESC
     `;
-    const peakHoursResult = await env.DB.prepare(peakHoursQuery).all();
-    const hourRows = peakHoursResult?.results || [];
-    const pickTop = /* @__PURE__ */ __name2(
-      (rows) => rows.sort((a, b) => (b.sessions || 0) - (a.sessions || 0))[0] || null,
-      "pickTop"
-    );
-    const topAm = pickTop(hourRows.filter((r) => (r.hour ?? 0) < 12));
-    const topPm = pickTop(hourRows.filter((r) => (r.hour ?? 0) >= 12));
-    const formatHour = /* @__PURE__ */ __name2((hour24) => {
-      const h = Number(hour24) || 0;
-      const hour12 = h === 0 ? 12 : h > 12 ? h - 12 : h;
-      const ampm = h >= 12 ? "pm" : "am";
-      return `${hour12}${ampm}`;
-    }, "formatHour");
-    const peakHours = [
-      ...topAm ? [
-        {
-          period: "AM",
-          hour: formatHour(topAm.hour),
-          sessions: topAm.sessions
-        }
-      ] : [],
-      ...topPm ? [
-        {
-          period: "PM",
-          hour: formatHour(topPm.hour),
-          sessions: topPm.sessions
-        }
-      ] : []
-    ];
     const deviceEngagementQuery = `
       WITH viewer_depth AS (
         SELECT
@@ -2949,9 +2647,47 @@ async function getSessionMetrics(env, filters) {
       GROUP BY device
       ORDER BY sessions DESC
     `;
-    const deviceEngagementResult = await env.DB.prepare(
-      deviceEngagementQuery
-    ).all();
+    const [devices, bounceResult, durationResult, peakHoursResult, deviceEngagementResult] = await Promise.all([
+      env.DB.prepare(devicesQuery).all(),
+      env.DB.prepare(bounceQuery).first(),
+      env.DB.prepare(durationQuery).first(),
+      env.DB.prepare(peakHoursQuery).all(),
+      env.DB.prepare(deviceEngagementQuery).all()
+    ]);
+    const bounceRate = bounceResult?.total_sessions > 0 ? Math.round(
+      100 * (bounceResult.bounce_sessions || 0) / bounceResult.total_sessions
+    ) : 0;
+    const avgDurationSecs = durationResult?.avg_duration || 0;
+    const avgDurationFormatted = avgDurationSecs >= 60 ? `${Math.floor(avgDurationSecs / 60)}m ${Math.round(avgDurationSecs % 60)}s` : `${Math.round(avgDurationSecs)}s`;
+    const hourRows = peakHoursResult?.results || [];
+    const pickTop = /* @__PURE__ */ __name2(
+      (rows) => rows.sort((a, b) => (b.sessions || 0) - (a.sessions || 0))[0] || null,
+      "pickTop"
+    );
+    const topAm = pickTop(hourRows.filter((r) => (r.hour ?? 0) < 12));
+    const topPm = pickTop(hourRows.filter((r) => (r.hour ?? 0) >= 12));
+    const formatHour = /* @__PURE__ */ __name2((hour24) => {
+      const h = Number(hour24) || 0;
+      const hour12 = h === 0 ? 12 : h > 12 ? h - 12 : h;
+      const ampm = h >= 12 ? "pm" : "am";
+      return `${hour12}${ampm}`;
+    }, "formatHour");
+    const peakHours = [
+      ...topAm ? [
+        {
+          period: "AM",
+          hour: formatHour(topAm.hour),
+          sessions: topAm.sessions
+        }
+      ] : [],
+      ...topPm ? [
+        {
+          period: "PM",
+          hour: formatHour(topPm.hour),
+          sessions: topPm.sessions
+        }
+      ] : []
+    ];
     return {
       devices,
       bounceRate,
@@ -2976,8 +2712,13 @@ __name(getSessionMetrics, "getSessionMetrics");
 __name2(getSessionMetrics, "getSessionMetrics");
 async function getTopPages(env, filters) {
   try {
-    const { dateClause } = filters;
-    const where = (dateClause || "").trim() || 'e.ts > datetime("now", "-1 day")';
+    const { dateClause, ipClause, botClause, chardonClause } = filters;
+    const qualify = /* @__PURE__ */ __name2(
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region").replace(/\breferer\b/g, "e.referer"),
+      "qualify"
+    );
+    const safeBotClause = (botClause || "").replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ").replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
+    const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
     const pagesQuery = `
       WITH normalized AS (
         SELECT
@@ -2992,13 +2733,16 @@ async function getTopPages(env, filters) {
               NULLIF(e.page, ''),
               CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
             ) AS raw_page
-          FROM classified_events e
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
           WHERE ${where}
+            ${qualify(ipClause)}
+            ${qualify(safeBotClause)}
+            ${qualify(chardonClause)}
+            AND ${notCacheWarmer("e")}
             AND COALESCE(e.is_bot,0) = 0
-            AND e.event_type IN (
-              'page_pixel',
-              'page_view'
-            )
+            AND e.source = 'js'
+            AND e.event_type = 'page_view'
         ) p
         WHERE raw_page IS NOT NULL
           AND LOWER(raw_page) NOT LIKE 'http%'
@@ -3099,17 +2843,16 @@ async function getBrowserViewsSummary(env, filters) {
               CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
             ) AS raw_page,
             NULLIF(e.visitor_id, '') AS visitor_id
-          FROM classified_events e
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
           WHERE ${where}
             ${qualify(ipClause)}
             ${qualify(safeBotClause)}
             ${qualify(chardonClause)}
             AND ${notCacheWarmer("e")}
             AND COALESCE(e.is_bot,0) = 0
-            AND e.event_type IN (
-              'page_pixel',
-              'page_view'
-            )
+            AND e.source = 'js'
+            AND e.event_type = 'page_view'
             AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
             AND COALESCE(
               NULLIF(e.page, ''),
@@ -3225,24 +2968,14 @@ async function getEntryAnalysis(env, filters) {
             e.referer,
             e.ts,
             COALESCE(NULLIF(e.page, ''), CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END) AS raw_page
-          FROM classified_events e
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
           WHERE ${where}
             ${qualify(ipClause)}
             ${qualify(safeBotClause)}
             ${qualify(chardonClause)}
             AND COALESCE(e.is_bot,0) = 0
-            AND e.event_type IN (
-              'page_pixel',
-              'page_view',
-              'edge_page',
-              'image_page',
-              'external_image_page',
-              'chapter_view',
-              'chapter_exposure',
-              'state_pixel',
-              'action_pixel',
-              'gallery_view'
-            )
+            AND e.source = 'js'
         ) e
         WHERE raw_page IS NOT NULL
           AND LOWER(raw_page) NOT LIKE 'http%'
@@ -3291,11 +3024,7 @@ async function getEntryAnalysis(env, filters) {
       ORDER BY sessions DESC
       LIMIT 25
     `;
-    const entryPages = await env.DB.prepare(entryPagesQuery).all();
-    let imagePageViewsFromEvents = 0;
-    let imageEntrySessionsFromEvents = 0;
-    try {
-      const imagePageViewsQuery = `
+    const imagePageViewsQuery = `
         SELECT COUNT(*) as views
         FROM human_population hp
         JOIN classified_events e ON e.visitor_id = hp.visitor_id
@@ -3308,9 +3037,7 @@ async function getEntryAnalysis(env, filters) {
           AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
           AND COALESCE(NULLIF(e.page, ''), e.target_id) LIKE '%/i-%'
       `;
-      const imagePageViewsResult = await env.DB.prepare(imagePageViewsQuery).first();
-      imagePageViewsFromEvents = imagePageViewsResult?.views || 0;
-      const imageEntrySessionsQuery = `
+    const imageEntrySessionsQuery = `
         WITH first_pages AS (
           SELECT
             e.session_id,
@@ -3331,13 +3058,13 @@ async function getEntryAnalysis(env, filters) {
         FROM first_pages
         WHERE rn = 1 AND page_path LIKE '%/i-%'
       `;
-      const imageEntrySessionsResult = await env.DB.prepare(
-        imageEntrySessionsQuery
-      ).first();
-      imageEntrySessionsFromEvents = imageEntrySessionsResult?.sessions || 0;
-    } catch (e) {
-      console.log("Entry diagnostics query failed:", e.message);
-    }
+    const [entryPages, imagePageViewsResult, imageEntrySessionsResult] = await Promise.all([
+      env.DB.prepare(entryPagesQuery).all(),
+      env.DB.prepare(imagePageViewsQuery).first().catch(e => { console.log("Image page views query failed:", e.message); return null; }),
+      env.DB.prepare(imageEntrySessionsQuery).first().catch(e => { console.log("Image entry sessions query failed:", e.message); return null; })
+    ]);
+    const imagePageViewsFromEvents = imagePageViewsResult?.views || 0;
+    const imageEntrySessionsFromEvents = imageEntrySessionsResult?.sessions || 0;
     return {
       entryPages,
       imagePageViewsFromEvents,
@@ -3690,26 +3417,17 @@ async function getBotIntelligence(env) {
         status: "watching"
       }));
     }
-    try {
-      const totalsQuery = `
-        SELECT
-          COUNT(*) AS total,
-          SUM(CASE WHEN risk_level = 3 THEN 1 ELSE 0 END) AS risk3,
-          SUM(CASE WHEN risk_level >= 4 THEN 1 ELSE 0 END) AS risk4
-        FROM suspected_bots
-        WHERE is_verified_bot = 0
-          AND risk_level >= 2
-          AND status != 'blocked'
-      `;
-      const totals = await env.DB.prepare(totalsQuery).first();
-      botIntelligence.stats.total = totals?.total || 0;
-      botIntelligence.stats.risk3 = totals?.risk3 || 0;
-      botIntelligence.stats.risk4 = totals?.risk4 || 0;
-    } catch (e) {
-      console.log("Bot intelligence totals query failed:", e.message);
-    }
-    try {
-      const frictionStatsQuery = `
+    const totalsQuery = `
+      SELECT
+        COUNT(*) AS total,
+        SUM(CASE WHEN risk_level = 3 THEN 1 ELSE 0 END) AS risk3,
+        SUM(CASE WHEN risk_level >= 4 THEN 1 ELSE 0 END) AS risk4
+      FROM suspected_bots
+      WHERE is_verified_bot = 0
+        AND risk_level >= 2
+        AND status != 'blocked'
+    `;
+    const frictionStatsQuery = `
         WITH suspects AS (
           SELECT ip_hash
           FROM suspected_bots
@@ -3864,23 +3582,7 @@ async function getBotIntelligence(env) {
         LEFT JOIN ip_asn ia ON ia.ip_hash = s.ip_hash
         LEFT JOIN delay_burst_asn dasn ON dasn.cf_asn = ia.cf_asn_last24h
         LEFT JOIN known_search_ua_14d ks ON ks.ip_hash = s.ip_hash
-      `;
-      const frictionRows = (await env.DB.prepare(frictionStatsQuery).all())?.results || [];
-      const frictionMap = new Map(frictionRows.map((r) => [r.ip_hash, r]));
-      for (const suspect of botIntelligence.suspects) {
-        const f = frictionMap.get(suspect.ip_hash);
-        suspect.friction_429_24h = f?.friction_429_24h || 0;
-        suspect.friction_delay_24h = f?.friction_delay_24h || 0;
-        suspect.friction_429_max_day_7d = f?.friction_429_max_day_7d || 0;
-        suspect.peak_unique_images_per_minute_24h = f?.peak_unique_images_per_minute_24h || 0;
-        suspect.max_friction_delay_10m_24h = f?.max_friction_delay_10m_24h || 0;
-        suspect.max_friction_delay_10m_asn_24h = f?.max_friction_delay_10m_asn_24h || 0;
-        suspect.known_search_ua_hits_14d = f?.known_search_ua_hits_14d || 0;
-        suspect.known_search_ua_ratio_14d = f?.known_search_ua_ratio_14d || 0;
-      }
-    } catch (e) {
-      console.log("Friction stats enrichment failed:", e.message);
-    }
+    `;
     const verifiedQuery = `
       SELECT
         sb.ip_hash,
@@ -3916,23 +3618,11 @@ async function getBotIntelligence(env) {
       ORDER BY sb.total_requests DESC
       LIMIT ${VERIFIED_LIMIT}
     `;
-    const verifiedResult = await env.DB.prepare(verifiedQuery).all();
-    botIntelligence.verified = verifiedResult?.results || [];
-    botIntelligence.stats.verified = botIntelligence.verified.reduce(
-      (sum, v) => sum + (v.total_requests || 0),
-      0
-    );
-    try {
-      const verifiedTotalQuery = `
-        SELECT COUNT(*) AS verified_bots
-        FROM suspected_bots
-        WHERE is_verified_bot = 1 AND status = 'verified'
-      `;
-      const vt = await env.DB.prepare(verifiedTotalQuery).first();
-      botIntelligence.stats.verified_bots = vt?.verified_bots || 0;
-    } catch (e) {
-      console.log("Verified bots total query failed:", e.message);
-    }
+    const verifiedTotalQuery = `
+      SELECT COUNT(*) AS verified_bots
+      FROM suspected_bots
+      WHERE is_verified_bot = 1 AND status = 'verified'
+    `;
     const blockedQuery = `
       SELECT
         ip_hash,
@@ -3949,7 +3639,34 @@ async function getBotIntelligence(env) {
       ORDER BY is_active DESC, blocked_at DESC
       LIMIT 50
     `;
-    const blockedResult = await env.DB.prepare(blockedQuery).all();
+    const [totals, frictionRows, verifiedResult, vt, blockedResult] = await Promise.all([
+      env.DB.prepare(totalsQuery).first().catch(e => { console.log("Bot totals query failed:", e.message); return null; }),
+      env.DB.prepare(frictionStatsQuery).all().then(r => r?.results || []).catch(e => { console.log("Friction stats query failed:", e.message); return []; }),
+      env.DB.prepare(verifiedQuery).all().catch(e => { console.log("Verified query failed:", e.message); return { results: [] }; }),
+      env.DB.prepare(verifiedTotalQuery).first().catch(e => { console.log("Verified total query failed:", e.message); return null; }),
+      env.DB.prepare(blockedQuery).all().catch(e => { console.log("Blocked query failed:", e.message); return { results: [] }; })
+    ]);
+    botIntelligence.stats.total = totals?.total || 0;
+    botIntelligence.stats.risk3 = totals?.risk3 || 0;
+    botIntelligence.stats.risk4 = totals?.risk4 || 0;
+    const frictionMap = new Map(frictionRows.map((r) => [r.ip_hash, r]));
+    for (const suspect of botIntelligence.suspects) {
+      const f = frictionMap.get(suspect.ip_hash);
+      suspect.friction_429_24h = f?.friction_429_24h || 0;
+      suspect.friction_delay_24h = f?.friction_delay_24h || 0;
+      suspect.friction_429_max_day_7d = f?.friction_429_max_day_7d || 0;
+      suspect.peak_unique_images_per_minute_24h = f?.peak_unique_images_per_minute_24h || 0;
+      suspect.max_friction_delay_10m_24h = f?.max_friction_delay_10m_24h || 0;
+      suspect.max_friction_delay_10m_asn_24h = f?.max_friction_delay_10m_asn_24h || 0;
+      suspect.known_search_ua_hits_14d = f?.known_search_ua_hits_14d || 0;
+      suspect.known_search_ua_ratio_14d = f?.known_search_ua_ratio_14d || 0;
+    }
+    botIntelligence.verified = verifiedResult?.results || [];
+    botIntelligence.stats.verified = botIntelligence.verified.reduce(
+      (sum, v) => sum + (v.total_requests || 0),
+      0
+    );
+    botIntelligence.stats.verified_bots = vt?.verified_bots || 0;
     botIntelligence.blocked = blockedResult?.results || [];
   } catch (e) {
     console.log("Bot intelligence query failed:", e.message);
@@ -4266,8 +3983,6 @@ function renderDashboard({
     spViewerStats.avg_duplicate_exposures_per_viewer || 0
   );
   const spPctViewersWithDupes = Number(spViewerStats.pct_viewers_with_duplicates || 0);
-  const pulsePixelExposures = Number(sp.sister_pixel_v1_hits || 0);
-  const spSessions = Number(sp.state_pixel_sessions || 0);
   const spByGallery = Array.isArray(sp.by_gallery) ? sp.by_gallery : [];
   const spPixelImageAccess = Array.isArray(sp.pixel_image_access) ? sp.pixel_image_access : [];
   const safeTopGalleryLandingPages = Array.isArray(topGalleryLandingPages) ? topGalleryLandingPages : [];
@@ -4594,8 +4309,8 @@ function renderDashboard({
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --k4-scrollbar-size: 5px;
-      --k4-scrollbar-track: #111;
+      --k4-scrollbar-size: 8px;
+      --k4-scrollbar-track: #1f1f1f;
       --k4-scrollbar-thumb: #333;
       --k4-scrollbar-thumb-hover: #444;
       --k4-panel-list-max: 450px;
@@ -4759,6 +4474,8 @@ function renderDashboard({
         max-height: none !important;
         overflow: visible !important;
       }
+      .section, .section * { min-width: 0 !important; }
+      .section-header { width: 100% !important; flex-wrap: wrap !important; }
 
       /* Split panels should not be fixed-height on mobile */
       .section.k4-split-panel { height: auto !important; }
@@ -4797,7 +4514,7 @@ function renderDashboard({
       
       /* \u2550\u2550\u2550 BAR CHARTS \u2550\u2550\u2550 */
       /* \u2550\u2550\u2550 BAR CHARTS \u2550\u2550\u2550 */
-      .bar-label { width: 90px; font-size: 10px; flex-shrink: 0 !important; }
+      .bar-label { width: 72px; font-size: 10px; flex-shrink: 0 !important; }
       .bar-row { 
         width: 100% !important; 
         display: flex !important;
@@ -4809,7 +4526,7 @@ function renderDashboard({
       }
       .bar-value { 
         flex-shrink: 0 !important; 
-        min-width: 30px !important;
+        min-width: 24px !important;
         text-align: right !important;
       }
       
@@ -4831,10 +4548,18 @@ function renderDashboard({
       .section table { 
         display: table !important; 
         width: 100% !important; 
-        table-layout: auto !important;
+        table-layout: fixed !important;
       }
       .section th, .section td {
         padding: 6px 8px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+      }
+      .section th:first-child, .section td:first-child {
+        white-space: normal !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
       }
 
       /* Blocked IPs archive: make columns distribute cleanly on mobile */
@@ -4862,6 +4587,25 @@ function renderDashboard({
       .bot-intel-grid .section { padding: 8px; width: 100% !important; }
       .bot-intel-grid table { font-size: 10px; width: 100% !important; }
       .bot-intel-grid th, .bot-intel-grid td { padding: 4px 2px; }
+      .bot-intel-toolbar { align-items: flex-start !important; }
+      .bot-intel-toolbar-copy { min-width: 0 !important; width: 100% !important; }
+      .bot-intel-actions {
+        width: 100% !important;
+        margin-left: 0 !important;
+        justify-content: flex-start !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+      }
+      .bot-intel-summary-pill {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        white-space: normal !important;
+        line-height: 1.35 !important;
+      }
+      .bot-intel-actions button {
+        flex: 1 1 140px !important;
+        min-width: 0 !important;
+      }
       
       /* \u2550\u2550\u2550 IMAGE ACCESS OVERVIEW \u2550\u2550\u2550 */
       #accessOverviewList { overflow-x: hidden; width: 100% !important; }
@@ -5170,27 +4914,19 @@ function renderDashboard({
   </div>
   ` : ""}
 
-  <h2>Browser Views</h2>
-  <div class="pulse-row">
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);">
-      <span class="value" style="color: #fff;">\u{1F4C4} ${siteContentViews}</span>
-      <span class="label" style="color: #cbd5e1;">Site Pages / Content <span class="info-icon" style="background: rgba(255,255,255,0.12); color: #cbd5e1;">i</span></span>
-      <div class="tooltip">Count of browser page-load events (<code>page_view</code> + <code>page_pixel</code>) mapped to site content pages. If 6 people hit Home, that\u2019s 6. If 1 person revisits Home 8 times, that\u2019s 8. Includes everything EXCEPT leaf gallery landing pages and chapter/image pages (/i-...). This is <em>not</em> sessions and <em>not</em> unique pages. Viewers: ${siteContentViewers}.</div>
-    </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-      <span class="value" style="color: #fff;">\u{1F5BC} ${galleryLandingViews}</span>
-      <span class="label" style="color: #a7f3d0;">Gallery Landing Views <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #a7f3d0;">i</span></span>
-      <div class="tooltip">Count of browser page-load events (<code>page_view</code> + <code>page_pixel</code>) to <em>leaf gallery landing pages</em> (the gallery roots that contain images \u2014 essentially the chapter URL without the trailing <code>/i-...</code>). Content/collection pages under <code>/Galleries</code> are treated as Site Content. Viewers: ${galleryLandingViewers}.</div>
-    </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
-      <span class="value" style="color: #fff;">\u{1F50D} <span style="color:#ddd6fe;">${chapterImageViews}</span>/<span style="color:#f5d0fe;">${externalDirectImageLoads}</span></span>
-      <span class="label" style="color: #ddd6fe;">Image Views (Chapter/Direct) <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #ddd6fe;">i</span></span>
-      <div class="tooltip">Split image loads: <strong>${chapterImageViews}</strong> chapter page image loads from <code>page_view</code>/<code>page_pixel</code> on <code>/i-...</code> pages (Viewers: ${chapterImageViewers}), and <strong>${externalDirectImageLoads}</strong> external/direct image loads (<code>external_image</code>, <code>direct_image</code>, <code>external_image_page</code>).</div>
-    </div>
-  </div>
-
   <h2>Pulse</h2>
   <div class="pulse">
+    <div class="pulse-stat">
+      <span class="value">
+        <span style="display:inline-flex;flex-direction:column;align-items:center;line-height:1.0;">
+          <span>${chapterImageViews}</span>
+          <span style="font-size:12px;line-height:0.8;margin:0;">-</span>
+          <span>${externalDirectImageLoads}</span>
+        </span>
+      </span>
+      <span class="label">Image Views (Chapter/Direct) <span class="info-icon">i</span></span>
+      <div class="tooltip">Split image loads: <strong>${chapterImageViews}</strong> chapter page image loads from <code>page_view</code>/<code>page_pixel</code> on <code>/i-...</code> pages (Viewers: ${chapterImageViewers}), and <strong>${externalDirectImageLoads}</strong> external/direct image loads (<code>external_image</code>, <code>direct_image</code>, <code>external_image_page</code>).</div>
+    </div>
     <div class="pulse-stat">
       <span class="value">${s.unique_visitors > 0 ? (s.sessions / s.unique_visitors).toFixed(1) : "0"}</span>
       <span class="label">Sessions/Visitor <span class="info-icon">i</span></span>
@@ -5205,16 +4941,6 @@ function renderDashboard({
       <span class="value">${s.avg_events_per_session || 0}</span>
       <span class="label">Average Engagement <span class="info-icon">i</span></span>
       <div class="tooltip">Average number of tracked engagement events per session.</div>
-    </div>
-    <div class="pulse-stat">
-      <span class="value" style="color:#10b981;">${pulsePixelExposures}</span>
-      <span class="label">Pixel Exposures <span class="info-icon">i</span></span>
-      <div class="tooltip">Count of <strong>state_pixel</strong> events where <code>source_layer=sister_pixel_v1</code>. Excludes <code>action_pixel</code> so this reflects real exposure hits, not redundant action events.</div>
-    </div>
-    <div class="pulse-stat">
-      <span class="value">${spSessions}</span>
-      <span class="label">Pixel Sessions <span class="info-icon">i</span></span>
-      <div class="tooltip">Distinct 30-minute buckets clustered by <code>ip_hash + ua_class</code> that produced at least one sister pixel exposure event.</div>
     </div>
     <div class="pulse-stat">
       <span class="value" style="color:#22d3ee;">${avgDurationFormatted}</span>
@@ -5442,19 +5168,19 @@ function renderDashboard({
   <div class="access-grid" style="display:none; grid-template-columns: 1fr 280px; gap: 12px; max-width: 1780px; margin: 0 auto;">
     <div class="section" style="max-height: none;">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
-        <h3 style="margin:0;">🌐 External Reach (Daily)</h3>
-        <a href="${refreshUEUrl}" class="mini-btn" style="text-decoration:none;">↻ Refresh</a>
+        <h3 style="margin:0;">&#127760; External Reach (Daily)</h3>
+        <a href="${refreshUEUrl}" class="mini-btn" style="text-decoration:none;">&#8635; Refresh</a>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
         <div style="background:#1f1f1f;border:1px solid #333;border-radius:6px;padding:8px;">
           <div style="font-size:10px;color:#9aa3ad;">${extSummary.todayLabel}</div>
           <div style="font-size:18px;font-weight:800;color:#f59e0b;">${Number(extSummary?.today?.total || 0)}</div>
-          <div style="font-size:11px;color:#cbd5e1;">U ${Number(extSummary?.today?.u || 0)} · E ${Number(extSummary?.today?.e || 0)}</div>
+          <div style="font-size:11px;color:#cbd5e1;">U ${Number(extSummary?.today?.u || 0)} &middot; E ${Number(extSummary?.today?.e || 0)}</div>
         </div>
         <div style="background:#1f1f1f;border:1px solid #333;border-radius:6px;padding:8px;">
           <div style="font-size:10px;color:#9aa3ad;">${extSummary.yesterdayLabel}</div>
           <div style="font-size:18px;font-weight:800;color:#93c5fd;">${Number(extSummary?.yesterday?.total || 0)}</div>
-          <div style="font-size:11px;color:#cbd5e1;">U ${Number(extSummary?.yesterday?.u || 0)} · E ${Number(extSummary?.yesterday?.e || 0)}</div>
+          <div style="font-size:11px;color:#cbd5e1;">U ${Number(extSummary?.yesterday?.u || 0)} &middot; E ${Number(extSummary?.yesterday?.e || 0)}</div>
         </div>
       </div>
       <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
@@ -6152,8 +5878,8 @@ function renderDashboard({
     <!-- Image Geography (JS) -->
     <div class="section k4-split-panel" style="order: 4;">
       <div class="section-header">
-        <h3>\u{1F3A8} Image Geography (JS)</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Unique JS visitors with image P-pixel activity (state/action pixels on valid i-* targets).</div></span>
+        <h3>\u{1F3A8} Image Geography</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Locations of visitors who interacted with images â€” derived from both pixel activity (state/action pixels on i-* targets) and JS image events (chapter_view, xl_zoom from verified humans).</div></span>
       </div>
       ${(() => {
     const countryColors = {
@@ -6318,10 +6044,10 @@ function renderDashboard({
     <div class="section" style="order: 7; max-height: none;">
       <div class="section-header" style="justify-content:space-between;">
         <div style="display:flex;align-items:center;gap:8px;">
-          <h3 style="margin:0;">🌐 External Reach (Daily)</h3>
+          <h3 style="margin:0;">&#127760; External Reach (Daily)</h3>
           <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">External Reach (Daily) shows U/E non-JS traffic for a single selected date.</div></span>
         </div>
-        ${isSingleDay ? `<a href="${refreshUEUrl}" class="mini-btn" style="text-decoration:none;">↻ Refresh</a>` : ``}
+        ${isSingleDay ? `<a href="${refreshUEUrl}" class="mini-btn" style="text-decoration:none;">&#8635; Refresh</a>` : ``}
       </div>
       <div style="min-width:0;">
           ${isSingleDay ? `
@@ -6329,12 +6055,12 @@ function renderDashboard({
             <div style="background:#1f1f1f;border:1px solid #333;border-radius:6px;padding:8px;">
               <div style="font-size:10px;color:#9aa3ad;">${extSummary.todayLabel}</div>
               <div style="font-size:18px;font-weight:800;color:#f59e0b;">${Number(extSummary?.today?.total || 0)}</div>
-              <div style="font-size:11px;color:#cbd5e1;">U ${Number(extSummary?.today?.u || 0)} · E ${Number(extSummary?.today?.e || 0)}</div>
+              <div style="font-size:11px;color:#cbd5e1;">U ${Number(extSummary?.today?.u || 0)} &middot; E ${Number(extSummary?.today?.e || 0)}</div>
             </div>
             <div style="background:#1f1f1f;border:1px solid #333;border-radius:6px;padding:8px;">
               <div style="font-size:10px;color:#9aa3ad;">${extSummary.yesterdayLabel}</div>
               <div style="font-size:18px;font-weight:800;color:#93c5fd;">${Number(extSummary?.yesterday?.total || 0)}</div>
-              <div style="font-size:11px;color:#cbd5e1;">U ${Number(extSummary?.yesterday?.u || 0)} · E ${Number(extSummary?.yesterday?.e || 0)}</div>
+              <div style="font-size:11px;color:#cbd5e1;">U ${Number(extSummary?.yesterday?.u || 0)} &middot; E ${Number(extSummary?.yesterday?.e || 0)}</div>
             </div>
           </div>
           <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
@@ -6461,10 +6187,10 @@ function renderDashboard({
       ` : ""}
     </div>
 
-    <div class="section" style="order: 1;">
+    <div class="section k4-split-panel" style="order: 1;">
       <div class="section-header">
-        <h3>Top 25 Site Pages</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Top overall linkable pages from page-bearing events. Colors: blue=site, green=images, yellow=gallery landing.</div></span>
+        <h3>Top 25 Pages</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Top overall linkable pages from page-bearing events. Includes site pages, image/chapter pages, and gallery landing pages. Colors: blue=site, green=images, yellow=gallery landing.</div></span>
       </div>
       ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : (() => {
     const galleryPaths = new Set(GALLERY_LANDING_PATHS);
@@ -6485,7 +6211,7 @@ function renderDashboard({
             <span class="bar-value">${count}</span>
           </div>`;
     }).join("");
-    return `<div style="max-height: 320px; overflow: auto; padding-right: 4px;">${rowsHtml}</div>`;
+    return `<div class="k4-split-scroll" style="padding-right: 4px;">${rowsHtml}</div>`;
   })()}
     </div>
 
@@ -6495,9 +6221,14 @@ function renderDashboard({
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page hit in a session, grouped by page + referrer source. Includes site pages, gallery landing pages, and chapter/image pages.</div></span>
       </div>
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
-      <div style="max-height: 320px; overflow: auto; padding-right: 4px;">
-        <table>
-          <tr><th>Page</th><th>From</th><th>Sess</th></tr>
+      <div style="max-height: 320px; overflow: auto; padding-right: 0; padding-left: 0;">
+        <table style="table-layout: fixed; width: 100%;">
+          <colgroup>
+            <col>
+            <col style="width: 34px;">
+            <col style="width: 46px;">
+          </colgroup>
+          <tr><th style="padding-left:6px;padding-right:4px;">Page</th><th style="text-align:center;padding-left:4px;padding-right:4px;">F</th><th style="text-align:right;padding-left:4px;padding-right:4px;">Ses</th></tr>
           ${entryPages.slice(0, 25).map((p) => {
     const rawPath = String(p.page_path || "/");
     const fullPath = rawPath.startsWith("/") ? rawPath : `/${rawPath}`;
@@ -6506,7 +6237,7 @@ function renderDashboard({
     const typeColor = isChapter ? "#84cc16" : isGalleryLanding ? "#eab308" : "#4a9eff";
     const shortPath = (() => {
       const path = fullPath;
-      const maxLen = 34;
+      const maxLen = 28;
       if (path.length <= maxLen) return path;
       const startLen = 14;
       const endLen = Math.max(8, maxLen - startLen - 3);
@@ -6529,7 +6260,7 @@ function renderDashboard({
       unattributed: "\u{1F512}"
     };
     const refIcon = refIcons[p.ref_source] || "\u{1F512}";
-    return `<tr><td title="${fullPath}" style="color:${typeColor};">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
+    return `<tr><td title="${fullPath}" style="color:${typeColor};padding-left:6px;padding-right:4px;"><span style="display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom;">${pageIcon} ${shortPath}</span></td><td title="${p.ref_source}" style="text-align:center;padding-left:4px;padding-right:4px;">${refIcon}</td><td style="text-align:right;padding-left:4px;padding-right:4px;">${p.sessions}</td></tr>`;
   }).join("")}
         </table>
       </div>
@@ -6600,12 +6331,12 @@ function renderDashboard({
   <!-- Bot Intelligence Section -->
   <div style="max-width: 1780px; margin: 0 auto;">
   <h2 style="margin-top: 30px;">\u{1F6E1}\uFE0F Bot Intelligence <span style="font-size: 12px; color: #888; font-weight: normal;">(Threat Classification)</span></h2>
-  <div style="display:flex; align-items:center; justify-content:space-between; gap: 12px; flex-wrap: wrap; color: #888; margin: -10px 0 12px 0; font-size: 12px;">
-    <div>
+  <div class="bot-intel-toolbar" style="display:flex; align-items:center; justify-content:space-between; gap: 12px; flex-wrap: wrap; color: #888; margin: -10px 0 12px 0; font-size: 12px;">
+    <div class="bot-intel-toolbar-copy">
       Risk accumulates over time. \u{1F7E0} Level 3 = observe. \u{1F7E3} Level 4 = friction-managed extraction. \u{1F7E4} Level 5 = block recommended (\u226510 429s/day OR sustained high-rate pulls).
     </div>
-    <div style="display:flex; align-items:center; gap: 10px; margin-left: auto;">
-      <div style="color:#666; font-size: 11px; padding: 4px 8px; border: 1px solid #333; border-radius: 999px; background: #1f1f1f; white-space: nowrap;">
+    <div class="bot-intel-actions" style="display:flex; align-items:center; gap: 10px; margin-left: auto;">
+      <div class="bot-intel-summary-pill" style="color:#666; font-size: 11px; padding: 4px 8px; border: 1px solid #333; border-radius: 999px; background: #1f1f1f; white-space: nowrap;">
         Protected (selected period): \u{1F9CA} ${artViewsSummary?.harvester_friction_events || 0} slowed \xB7 \u23F3 ${artViewsSummary?.harvester_friction_delay_events || 0} delayed \xB7 \u26D4 ${artViewsSummary?.harvester_friction_429_events || 0} 429
       </div>
       <button onclick="blockAllLevel5()" style="background:#92400e; color:#fde68a; border:1px solid #b45309; padding:3px 8px; border-radius:4px; cursor:pointer; font-size:11px; white-space: nowrap;">\u{1F7E4} Block All Level 5</button>
@@ -7306,7 +7037,12 @@ async function handleDashboardRequest(env, filters) {
     hideChardon,
     authHeader
   } = filters;
-  const { summary, returningVisitors, newVisitors } = await getDashboardStats(
+
+  // â”€â”€ Timing instrumentation â”€â”€
+  const _t = {};
+  const _tm = async (label, fn) => { const s = Date.now(); const r = await fn(); _t[label] = Date.now() - s; return r; };
+
+  const { summary, returningVisitors, newVisitors } = await _tm('dashStats', () => getDashboardStats(
     env,
     {
       dateClause,
@@ -7316,152 +7052,58 @@ async function handleDashboardRequest(env, filters) {
       chardonClause,
       priorPeriodClause
     }
-  );
-  const { events } = await getEventBreakdown(env, {
-    dateClause,
-    galleryClause,
-    ipClause,
-    botClause,
-    chardonClause
-  });
-  const galleries = await getGalleryPerformance(env, {
-    dateClause,
-    ipClause,
-    botClause,
-    chardonClause
-  });
-  const referrers = await getReferrers(env, {
-    dateClause,
-    galleryClause,
-    ipClause,
-    botClause,
-    chardonClause
-  });
-  const geo = await getGeography(env, {
-    dateClause,
-    galleryClause,
-    ipClause,
-    botClause,
-    chardonClause
-  });
-  const trend = await getDailyTrend(env, {
-    rangeDateClause,
-    galleryClause,
-    ipClause,
-    botClause,
-    chardonClause
-  });
-  const {
-    devices,
-    bounceRate,
-    avgDurationSecs,
-    avgDurationFormatted,
-    peakHours,
-    deviceEngagement
-  } = await getSessionMetrics(env, {
-    dateClause,
-    galleryClause,
-    ipClause,
-    botClause,
-    chardonClause
-  });
-  const pages = await getTopPages(env, {
-    dateClause,
-    ipClause,
-    botClause,
-    chardonClause
-  });
-  const { images, uniqueImagesViewed, totalImageSessions, totalImageViews } = await getTopImages(env, {
-    dateClause,
-    ipClause,
-    botClause,
-    chardonClause
-  });
-  const {
-    themesClicked,
-    cowboyJumps,
-    topDepthSessions,
-    minEngagement,
-    maxEngagement,
-    avgDepthScore,
-    deepSessionPct,
-    deepSessions,
-    totalSessions,
-    botSessions,
-    botPct
-  } = await getEngagementDepth(env, {
-    dateClause,
-    ipClause,
-    botClause,
-    chardonClause
-  });
-  const {
-    entryPages,
-    imagePageViewsFromEvents,
-    imageEntrySessionsFromEvents,
-    entryRefCounts
-  } = await getEntryAnalysis(env, {
-    dateClause,
-    ipClause,
-    botClause,
-    chardonClause
-  });
-  const { exitPages, exitSummary, exitByCategory } = await getExitAnalysis(
-    env,
-    {
-      dateClause,
-      ipClause,
-      botClause,
-      chardonClause
-    }
-  );
-  const { edgeEvents, edgeSummary } = await getEdgeEvents(env, {
-    dateClause,
-    yesterday,
-    days
-  });
-  const {
-    artViewsSummary,
-    artViewsByType,
-    topArtViews,
-    externalImageAccess,
-    externalImageAccessTotal,
-    externalReachGeo,
-    externalReachSources,
-    externalDailySummary,
-    entryRefCountsObj,
-    imageAccessOverview,
-    viewerDepth,
-    suppressionStats
-  } = await getArtViews(env, {
-    dateClause,
-    ipClause,
-    botClause,
-    chardonClause,
-    artIpClause,
-    baseDateClause,
-    hideBotsPredicate,
-    hideBots,
-    selectedDate
-  });
-  const botIntelligence = await getBotIntelligence(env);
-  const periodTotals = await getPeriodTotals(env, {
-    dateClause: rangeDateClause,
-    botClause,
-    chardonClause
-  });
-  const statePixelTestRoaring20s = await getStatePixelTestRoaring20s(env, {
-    dateClause
-  });
-  const topGalleryLandingPages = await getTopGalleryLandingPages(env, {
-    dateClause
-  });
-  const browserViewsSummary = await getBrowserViewsSummary(env, {
-    dateClause,
-    ipClause,
-    botClause,
-    chardonClause
-  });
+  ));
+
+  // â”€â”€ Parallel batch: All independent queries â”€â”€
+  const [
+    eventBreakdownResult,
+    galleries,
+    referrers,
+    geo,
+    trend,
+    sessionMetricsResult,
+    pages,
+    imagesResult,
+    engagementResult,
+    entryAnalysisResult,
+    exitResult,
+    edgeResult,
+    artViewsResult,
+    botIntelligence,
+    periodTotals,
+    statePixelTestRoaring20s,
+    topGalleryLandingPages,
+    browserViewsSummary
+  ] = await Promise.all([
+    _tm('eventBreak', () => getEventBreakdown(env, { dateClause, galleryClause, ipClause, botClause, chardonClause })),
+    _tm('galleries', () => getGalleryPerformance(env, { dateClause, ipClause, botClause, chardonClause })),
+    _tm('referrers', () => getReferrers(env, { dateClause, galleryClause, ipClause, botClause, chardonClause })),
+    _tm('geo', () => getGeography(env, { dateClause, galleryClause, ipClause, botClause, chardonClause })),
+    _tm('trend', () => getDailyTrend(env, { rangeDateClause, galleryClause, ipClause, botClause, chardonClause })),
+    _tm('sessions', () => getSessionMetrics(env, { dateClause, galleryClause, ipClause, botClause, chardonClause })),
+    _tm('topPages', () => getTopPages(env, { dateClause, ipClause, botClause, chardonClause })),
+    _tm('topImages', () => getTopImages(env, { dateClause, ipClause, botClause, chardonClause })),
+    _tm('engagement', () => getEngagementDepth(env, { dateClause, ipClause, botClause, chardonClause })),
+    _tm('entry', () => getEntryAnalysis(env, { dateClause, ipClause, botClause, chardonClause })),
+    _tm('exit', () => getExitAnalysis(env, { dateClause, ipClause, botClause, chardonClause })),
+    _tm('edge', () => getEdgeEvents(env, { dateClause, yesterday, days })),
+    _tm('artViews', () => getArtViews(env, { dateClause, ipClause, botClause, chardonClause, artIpClause, baseDateClause, hideBotsPredicate, hideBots, selectedDate })),
+    _tm('botIntel', () => getBotIntelligence(env)),
+    _tm('periodTot', () => getPeriodTotals(env, { dateClause: rangeDateClause, botClause, chardonClause })),
+    _tm('statePix', () => getStatePixelTestRoaring20s(env, { dateClause })),
+    _tm('gallLand', () => getTopGalleryLandingPages(env, { dateClause })),
+    _tm('browser', () => getBrowserViewsSummary(env, { dateClause, ipClause, botClause, chardonClause }))
+  ]);
+
+  // Destructure parallel results
+  const { events } = eventBreakdownResult;
+  const { devices, bounceRate, avgDurationSecs, avgDurationFormatted, peakHours, deviceEngagement } = sessionMetricsResult;
+  const { images, uniqueImagesViewed, totalImageSessions, totalImageViews } = imagesResult;
+  const { themesClicked, cowboyJumps, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, botSessions, botPct } = engagementResult;
+  const { entryPages, imagePageViewsFromEvents, imageEntrySessionsFromEvents, entryRefCounts } = entryAnalysisResult;
+  const { exitPages, exitSummary, exitByCategory } = exitResult;
+  const { edgeEvents, edgeSummary } = edgeResult;
+  const { artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, externalDailySummary, entryRefCountsObj, imageAccessOverview, viewerDepth, suppressionStats } = artViewsResult;
   const queryResults = {
     summary,
     returningVisitors,
@@ -7530,7 +7172,7 @@ async function handleDashboardRequest(env, filters) {
     hideChardon,
     authHeader
   });
-  return renderDashboard(dashboardData);
+  return { html: renderDashboard(dashboardData), _timings: _t };
 }
 __name(handleDashboardRequest, "handleDashboardRequest");
 __name2(handleDashboardRequest, "handleDashboardRequest");
@@ -7595,16 +7237,27 @@ async function handleDashboardRequest2(request, env, ctx) {
   const hideChardon = url.searchParams.get("hideChardon") === "1";
   const viewerIp = getBestClientIP(request);
   try {
+    // Index-friendly timestamp range predicates (avoid function-wrapped date(ts, '-5 hours'))
+    const buildEasternDayClause = (dayOffset = 0) => {
+      const off = dayOffset ? `, '${dayOffset} days'` : '';
+      return `ts >= datetime('now', '-5 hours'${off}, 'start of day', '+5 hours') AND ts < datetime('now', '-5 hours'${off}, 'start of day', '+1 day', '+5 hours')`;
+    };
+    const buildEasternDateClauseForLiteral = (dateStr) => {
+      return `ts >= datetime('${dateStr}', '+5 hours') AND ts < datetime('${dateStr}', '+1 day', '+5 hours')`;
+    };
+    const buildEasternRangeClause = (numDays) => {
+      return `ts >= datetime('now', '-5 hours', '-${numDays} days', 'start of day', '+5 hours') AND ts < datetime('now', '-5 hours', 'start of day', '+1 day', '+5 hours')`;
+    };
     let rangeDateClause;
     if (yesterday) {
-      rangeDateClause = `date(ts, '-5 hours') = date('now', '-5 hours', '-1 day')`;
+      rangeDateClause = buildEasternDayClause(-1);
     } else if (days === 1) {
-      rangeDateClause = `date(ts, '-5 hours') = date('now', '-5 hours')`;
+      rangeDateClause = buildEasternDayClause();
     } else {
-      rangeDateClause = `ts > datetime('now', '-5 hours', '-${days} days')`;
+      rangeDateClause = buildEasternRangeClause(days);
     }
     const baseRangeDateClause = rangeDateClause;
-    const truthDateClause = selectedDate ? `date(ts, '-5 hours') = '${selectedDate}'` : baseRangeDateClause;
+    const truthDateClause = selectedDate ? buildEasternDateClauseForLiteral(selectedDate) : baseRangeDateClause;
     const globalPartsNoBots = [];
     if (excludeIp)
       globalPartsNoBots.push(`(ip IS NULL OR ip != '${excludeIp}')`);
@@ -7637,7 +7290,7 @@ async function handleDashboardRequest2(request, env, ctx) {
     const globalFilterClause = globalPartsAll.length ? " AND " + globalPartsAll.join(" AND ") : "";
     const globalFilterClauseNoBots = globalPartsNoBots.length ? " AND " + globalPartsNoBots.join(" AND ") : "";
     rangeDateClause = `${rangeDateClause}${globalFilterClause}`;
-    const baseDateClause = (selectedDate ? `date(ts, '-5 hours') = '${selectedDate}'` : baseRangeDateClause) + globalFilterClauseNoBots;
+    const baseDateClause = (selectedDate ? buildEasternDateClauseForLiteral(selectedDate) : baseRangeDateClause) + globalFilterClauseNoBots;
     const dateClause = `${baseDateClause}${globalFilterClause}`;
     const galleryClause = galleryFilter ? `AND gallery_id = '${galleryFilter}'` : "";
     const ipClause = excludeIp ? `AND (ip IS NULL OR ip != '${excludeIp}')` : "";
@@ -7675,9 +7328,9 @@ async function handleDashboardRequest2(request, env, ctx) {
           )
         )` : "";
     const chardonClause = hideChardon ? `AND city != 'Chardon'` : "";
-    const priorPeriodClause = (selectedDate ? `date(ts, '-5 hours') < '${selectedDate}'` : yesterday ? `ts < datetime('now', '-5 hours', '-1 day', 'start of day')` : `ts < datetime('now', '-5 hours', '-${days} days')`) + globalFilterClause;
+    const priorPeriodClause = (selectedDate ? `ts < datetime('${selectedDate}', '+5 hours')` : yesterday ? `ts < datetime('now', '-5 hours', '-1 day', 'start of day', '+5 hours')` : `ts < datetime('now', '-5 hours', '-${days} days', 'start of day', '+5 hours')`) + globalFilterClause;
     const authHeader = request.headers.get("Authorization") || "";
-    const html = await handleDashboardRequest(env, {
+    const { html, _timings } = await handleDashboardRequest(env, {
       dateClause,
       galleryClause,
       ipClause,
@@ -7699,10 +7352,12 @@ async function handleDashboardRequest2(request, env, ctx) {
       hideChardon,
       authHeader
     });
+    const timingHeader = Object.entries(_timings || {}).map(([k,v]) => `${k};dur=${v}`).join(', ');
     return new Response(html, {
       status: 200,
       headers: withAdminNoCacheHeaders({
-        "Content-Type": "text/html; charset=utf-8"
+        "Content-Type": "text/html; charset=utf-8",
+        "Server-Timing": timingHeader
       })
     });
   } catch (err) {

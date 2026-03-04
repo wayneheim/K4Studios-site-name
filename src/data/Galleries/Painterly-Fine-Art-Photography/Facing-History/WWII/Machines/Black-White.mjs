@@ -25,8 +25,8 @@ export const galleryData = [
   {
     "id": "i-wdnJQwf",
     "title": "History’s Edge",
-    "description": "“History’s Edge” is a cinematic black and white WWII fine art photograph capturing soldiers approaching shore during a beach landing. Part of the Men & Machines B/W series, the image explores the human moment within mechanized warfare, highlighting WWII Military Equipment B/W, battle-ready machines, and Monochrome WWII Mechanized Might through restrained, painterly composition. © Wayne Heim",
-    "alt": "Black and white WWII beach landing scene showing soldiers and battle-ready machines approaching shore.",
+    "description": "WWII soldiers crouch inside a landing craft as surf crashes against the ramp during a tense amphibious beach assault. Packed gear, rifles, and steel helmets crowd the narrow vessel as the shoreline approaches, capturing the charged seconds before combat begins. The scene reflects the human side of mechanized warfare, blending documentary realism with the dramatic atmosphere of black and white WWII military photography and historic beach landing imagery.\n\n© Wayne Heim",
+    "alt": "WWII soldiers crouched inside a landing craft as waves crash against the ramp during a beach assault approach.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wdnJQwf/A",
 
     "keywords": [
@@ -41,7 +41,7 @@ export const galleryData = [
     ],
 
     "story": "Cold spray struck steel as the shoreline crept closer. No one spoke. Each man faced forward, suspended between training and reality, knowing that once the ramp dropped, everything would change.\n\nIn this narrow stretch of water there was only breath, resolve, and the quiet understanding that turning back no longer existed.",
-    "notes": "Viewed from within the landing craft, the composition places the viewer among the soldiers, emphasizing anticipation over action. Tonal restraint and compressed framing unify men and machines into a single forward motion, transforming a historical moment into a cinematic study of resolve at history’s edge.",
+    "notes": "The composition gains its strength from compression and proximity. By placing the viewer within the landing craft itself, the work removes the distance usually associated with historical imagery and replaces it with a sense of shared anticipation. Bodies, equipment, and steel surfaces form a tight visual rhythm that pushes the entire frame forward.\n\nThe restrained tonal range reinforces that momentum. Water, metal, and uniform textures merge into a unified field of motion, allowing direction and collective resolve to dominate the visual language. What emerges is not a spectacle of battle, but a study of the suspended instant before action—when preparation gives way to history.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -57,8 +57,8 @@ export const galleryData = [
   {
     "id": "i-t6xx8Cq",
     "title": "Steel Overhead",
-    "description": "“Steel Overhead” is a cinematic black and white WWII aviation photograph capturing the underside of a battle-ready aircraft in flight. Part of the Men & Machines B/W series, the image highlights WWII Military Equipment B/W and Monochrome WWII Mechanized Might through dramatic perspective and tonal restraint. This work embodies mechanical war art, emphasizing the power and presence of battle-ready machines within history’s greatest conflicts. Ideal for collectors of Black & White WWII Machines, military machinery prints, and historically grounded fine art photography. © Wayne Heim",
-    "alt": "Black and white WWII aircraft photographed from below, showing battle-ready machines in flight.",
+    "description": "A WWII transport aircraft roars overhead, captured from a dramatic low-angle perspective that reveals the underside of the wings, engines, and invasion stripes as it cuts across the sky. The composition emphasizes the scale and power of WWII aviation, highlighting the mechanical presence of battle-ready aircraft in flight. Rendered in high-contrast black and white, the image evokes the era of Allied air operations, airborne missions, and the industrial strength that defined military aviation during the Second World War.\n\n© Wayne Heim",
+    "alt": "WWII military aircraft flying overhead photographed from below, showing engines, wings, and invasion stripes during flight.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-t6xx8Cq/A",
 
     "keywords": [
@@ -73,7 +73,7 @@ export const galleryData = [
     ],
 
     "story": "It passed above in a rush of wind and vibration, engines cutting through sky and bone alike. For those on the ground, the sound arrived first — a rising tremor that turned every eye upward.\n\nSteel moved where birds once ruled, carrying weight far beyond its frame. In that fleeting shadow, men measured distance, timing, and fate, knowing that what crossed the sky would soon redraw the earth below.",
-    "notes": "Composed from a low vantage point, the aircraft dominates the frame, transforming the sky into a stage for Monochrome WWII Mechanized Might. The converging lines of wing and fuselage create forward thrust, while restrained black and white tonality emphasizes structure over spectacle.\n\nWithin the Men & Machines B/W collection, this piece examines how mechanical presence alone can alter human space. It is not the moment of impact that defines the image, but the charged interval before consequence — when steel overhead becomes both shield and shadow.",
+    "notes": "The strength of the work lies in perspective. By positioning the viewer beneath the aircraft, the composition transforms the sky into a field of motion where structure and force dominate the visual experience. Wings, engines, and fuselage lines converge in a way that emphasizes the sheer physical authority of flight.\n\nMonochrome tonality heightens this structural clarity. Stripped of color, the aircraft becomes a study in form, mass, and direction, echoing the broader visual tradition of mechanical power in wartime imagery. The result is less a portrait of a single machine than a meditation on the presence of aviation itself—steel crossing the sky with purpose and inevitability.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -89,8 +89,8 @@ export const galleryData = [
   {
     "id": "i-qrSVhmS",
     "title": "Thunder Answered",
-    "description": "“Thunder Answered” is a cinematic black and white WWII fine art photograph capturing a battle-ready artillery piece erupting into flame against the night sky. Part of the Men & Machines B/W series, the image emphasizes WWII Military Equipment B/W and Monochrome WWII Mechanized Might through stark contrast and vertical composition. Rooted in mechanical war art, the work highlights battle-ready machines and the disciplined tension of wartime artillery within history’s greatest conflicts. © Wayne Heim",
-    "alt": "Black and white WWII artillery cannon firing at night, flame erupting above sandbags and silhouetted soldiers.",
+    "description": "A dramatic artillery cannon erupts into flame during a nighttime firing sequence, illuminating sandbags, crew positions, and defensive fortifications across the dark battlefield. This cinematic black and white WWII fine art photograph captures the explosive force of wartime artillery and the disciplined coordination required to operate heavy battlefield weapons. The stark monochrome treatment emphasizes WWII military equipment, battlefield engineering, and the raw mechanical power of artillery under combat conditions.\n\n© Wayne Heim",
+    "alt": "Artillery cannon firing at night during WWII, a massive muzzle flash lighting sandbags and silhouetted soldiers.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-qrSVhmS/A",
 
     "keywords": [
@@ -105,7 +105,7 @@ export const galleryData = [
     ],
 
     "story": "The command had already been given. What remained was timing.\n\nThe barrel rose against the dark horizon, a narrow line between earth and sky. Then the night tore open — light blooming upward in a violent flower of fire. For a heartbeat, everything stood illuminated: sandbags, silhouettes, the stillness of men braced for recoil.\n\nIn the echo that followed, there was no triumph. Only distance closing, somewhere beyond sight, where thunder had finally been answered.",
-    "notes": "This composition relies on vertical force — the artillery barrel anchoring the frame as fire expands upward in a stark, almost floral burst. The high-contrast black and white treatment heightens the sensation of Monochrome WWII Mechanized Might, allowing light to carve form from darkness.\n\nWithin the Men & Machines B/W collection, the piece examines the moment of release rather than aftermath. The viewer stands beside the crew, sharing the tension before recoil and the charged silence that follows — a study in mechanical power rendered with restraint.",
+    "notes": "The composition is built on a single axis of force. The artillery barrel anchors the frame while the blast erupts upward in a column of light, briefly turning darkness into a stage for motion, energy, and mechanical power.\n\nIllumination becomes the defining element of the work. For a split second the flare reveals ground textures, defensive structures, and the presence of the crew before the scene collapses back into shadow. The result reflects the controlled precision of wartime engineering — a moment where timing, machinery, and human coordination converge in a single violent release.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -121,8 +121,8 @@ export const galleryData = [
   {
     "id": "i-8fbHpXN",
     "title": "A Moment Off Duty",
-    "description": "“A Moment Off Duty” is a cinematic black and white WWII fine art photograph capturing a soldier at rest beside a battle-ready vehicle. Part of the Men & Machines B/W series, the image highlights Black & White WWII Machines and WWII Military Equipment B/W through restrained composition and documentary realism. Rooted in mechanical war art, the piece reflects Monochrome WWII Mechanized Might while emphasizing the human presence behind battle-ready machines. © Wayne Heim",
-    "alt": "Black and white WWII soldier seated beside a military jeep, resting with a cup in hand.",
+    "description": "A WWII soldier sits in the grass beside a military jeep, holding a tin cup during a quiet pause between duties. This black and white WWII fine art photograph highlights the contrast between the human presence of wartime soldiers and the mechanical backdrop of military vehicles. The composition blends documentary realism with the visual language of WWII military equipment photography, emphasizing the relationship between soldiers, field vehicles, and the quieter moments that existed within the machinery of war.\n\n© Wayne Heim",
+    "alt": "Soldier sitting in the grass beside a WWII military jeep, holding a tin cup during a quiet moment of rest.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-8fbHpXN/A",
 
     "keywords": [
@@ -137,7 +137,7 @@ export const galleryData = [
     ],
 
     "story": "The engine had long since cooled. The orders, for now, were quiet.\n\nHe sat in the grass beside the jeep, boots stretched forward, cap low against the sun. A tin cup rested easy in his hand — not ceremony, not strategy, just a small claim on stillness. Behind him, steel waited. Ahead of him, uncertainty remained.\n\nFor this brief pocket of time, the war loosened its grip. Not gone — never gone — just resting beside him in the shade.",
-    "notes": "The composition balances human stillness against mechanical presence. The jeep forms a structural backdrop, its lines and textures reinforcing Monochrome WWII Mechanized Might, while the seated figure anchors the emotional center.\n\nWithin the Men & Machines B/W collection, this work shifts focus from action to aftermath. It is not spectacle that defines the image, but pause — the quiet interval where man and machine share the same ground, waiting for what comes next.",
+    "notes": "The work explores the tension between machine and moment. The jeep, with its rigid geometry and wartime markings, represents the mechanical structure of the conflict, while the seated figure introduces a rare pause within that system — a brief reclaiming of ordinary human rhythm.\n\nRather than focusing on action, the composition emphasizes stillness. The surrounding machinery waits in silence while the figure occupies a small pocket of calm beside it. This restraint allows the image to function less as a depiction of war and more as a reflection on the fleeting spaces of humanity that exist within it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -153,8 +153,8 @@ export const galleryData = [
   {
     "id": "i-2MP7Gvv",
     "title": "The Long Barrel",
-    "description": "“The Long Barrel” is a cinematic black and white WWII fine art photograph focusing on the stark geometry of battle-ready artillery. Part of the Men & Machines B/W series, the image emphasizes WWII Military Equipment B/W and Monochrome WWII Mechanized Might through minimalist composition and strong linear perspective. Rooted in mechanical war art, the work highlights battle-ready machines as symbols of tension and intent within history’s greatest conflicts. © Wayne Heim",
-    "alt": "Black and white WWII artillery cannon viewed from the front, emphasizing the long barrel and mechanical structure.",
+    "description": "A dramatic front-facing view of a WWII artillery cannon reveals the long barrel and intricate mechanical structure of battlefield weaponry. Captured as a black and white WWII fine art photograph, the composition emphasizes the engineering design and physical scale of heavy artillery used during the Second World War. The stark monochrome treatment highlights WWII military equipment, mechanical war machines, and the industrial precision that defined wartime artillery systems.\n\n© Wayne Heim",
+    "alt": "Front view of a large artillery cannon with an extended barrel, highlighting the mechanical structure of WWII battlefield artillery.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-2MP7Gvv/A",
 
     "keywords": [
@@ -169,7 +169,7 @@ export const galleryData = [
     ],
 
     "story": "It stretched toward the horizon, silent and unwavering. No motion, no flame — only potential held in steel.\n\nCrew and command faded from view, leaving the machine alone with its purpose. Every angle spoke of direction, of distance measured long before the first sound would break the air.\n\nIn stillness, the weapon waited — not for fury, but for the moment when intention would become consequence.",
-    "notes": "This composition reduces warfare to form and direction. The extended barrel becomes a visual axis, guiding the viewer’s eye outward beyond the frame and into implied distance. By isolating structure over action, the image transforms WWII Military Equipment B/W into a study of anticipation rather than conflict.\n\nWithin the Men & Machines B/W collection, the piece explores restraint — a moment before recoil, before sound, where mechanical design alone carries emotional weight. The result is both architectural and cinematic, emphasizing intention over spectacle.",
+    "notes": "The work centers on direction and structural force. The extended barrel forms a dominant visual axis that pulls the viewer’s gaze outward, transforming the frame into a study of distance, trajectory, and implied motion.\n\nRather than focusing on combat itself, the composition isolates engineering and form. Mechanical components, rivets, and mounting structures become the visual language of the piece, turning the machine into an architectural presence where tension exists not in action, but in the anticipation of it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -185,8 +185,8 @@ export const galleryData = [
   {
     "id": "i-89dTvpV",
     "title": "Skyward Fire",
-    "description": "“Skyward Fire” is a cinematic black and white WWII fine art photograph capturing a battle-ready artillery cannon erupting into flame at dusk. Part of the Men & Machines B/W series, the image highlights WWII Military Equipment B/W and Monochrome WWII Mechanized Might through dramatic vertical composition and stark contrast. Rooted in mechanical war art, the work emphasizes battle-ready machines and the disciplined force of wartime artillery within history’s greatest conflicts. © Wayne Heim",
-    "alt": "Black and white WWII artillery cannon firing at dusk, flame and smoke rising into the sky.",
+    "description": "A towering artillery gun fires into the evening sky, sending flame and smoke upward during a dramatic battlefield firing sequence. Captured as a black and white WWII fine art photograph, the vertical composition emphasizes the scale and power of wartime artillery and the disciplined coordination required to operate heavy battlefield weapons. The stark monochrome treatment highlights WWII military equipment, battlefield engineering, and the mechanical force behind artillery operations during the Second World War.\n\n© Wayne Heim",
+    "alt": "Soldiers operating a large field gun at dusk as flame and smoke erupt high into the sky during a WWII firing sequence.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-89dTvpV/A",
 
     "keywords": [
@@ -201,7 +201,7 @@ export const galleryData = [
     ],
 
     "story": "The barrel held steady against the fading light, a thin line dividing earth from sky. Then the silence split.\n\nFlame surged upward, smoke twisting into the darkening air as the recoil shuddered through steel and bone alike. For a moment, the night was illuminated — not by stars, but by intention made visible.\n\nWhen the echo rolled outward across the horizon, only smoke remained, drifting where the fire had reached.",
-    "notes": "The composition is built on vertical force — the cannon forming a visual axis that draws the eye upward into expanding smoke. The restrained black and white treatment enhances Monochrome WWII Mechanized Might, allowing light and shadow to carry emotional weight without spectacle.\n\nWithin the Men & Machines B/W collection, this piece focuses on ascent rather than aftermath. It is the upward surge — the instant when mechanical intention becomes visible — that defines the image, creating a cinematic study of power suspended against the sky.",
+    "notes": "The structure of the composition is built on vertical force. Steel, smoke, and sky align along a single upward axis, transforming the act of firing into a column of motion that pulls the viewer’s gaze beyond the horizon.\n\nWhat gives the image weight is restraint rather than spectacle. The surrounding landscape remains quiet while the burst of energy briefly reveals the mechanics of power and coordination. In that instant, machinery, timing, and human discipline converge into a single visible expression of force.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -217,8 +217,8 @@ export const galleryData = [
   {
     "id": "i-Sns3Ksn",
     "title": "Silhouettes at Dusk",
-    "description": "“Silhouettes at Dusk” is a cinematic black and white WWII fine art photograph capturing soldiers and battle-ready artillery framed against a fading horizon. Part of the Men & Machines B/W series, the image emphasizes Black & White WWII Machines and WWII Military Equipment B/W through dramatic silhouette and tonal restraint. Rooted in mechanical war art, the composition highlights battle-ready machines and Monochrome WWII Mechanized Might while focusing on anticipation rather than action. © Wayne Heim",
-    "alt": "Black and white WWII soldiers silhouetted beside artillery at dusk.",
+    "description": "Soldiers stand beside a field gun silhouetted against the fading horizon during a quiet moment on a WWII battlefield. Captured as a dramatic black and white WWII fine art photograph, the composition emphasizes the stark outline of soldiers and military equipment framed by the last band of evening light. The high-contrast monochrome treatment highlights WWII military equipment, battlefield artillery crews, and the disciplined presence of soldiers operating heavy war machines during the Second World War.\n\n© Wayne Heim",
+    "alt": "Silhouetted soldiers standing beside a large field gun at dusk on a WWII battlefield.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-Sns3Ksn/A",
 
     "keywords": [
@@ -233,7 +233,7 @@ export const galleryData = [
     ],
 
     "story": "The sky dimmed to a narrow band of fading light, and the figures stood in quiet outline against it. No faces, no rank — only posture and purpose.\n\nThe gun angled upward, a dark geometry cutting into the last glow of evening. Around it, men moved in measured rhythm, their shapes merging with steel and shadow alike.\n\nNight approached without ceremony. What would follow was understood. For now, they stood suspended between light and consequence.",
-    "notes": "The strength of this piece lies in reduction. By rendering figures and machinery as silhouette, the image removes distraction and elevates form, posture, and line. The artillery’s upward angle anchors the frame, while the horizon compresses the space into a narrow band of fading light.\n\nWithin the Men & Machines B/W collection, this work explores the quiet discipline that precedes action. It is not the flash of firing that defines the scene, but the held moment before — where men and machine share the same darkened outline against the sky.",
+    "notes": "The power of the work lies in reduction. By rendering figures and machinery as pure silhouette, the composition strips away detail and allows posture, line, and proportion to carry the emotional weight of the scene.\n\nThe upward angle of the gun introduces a strong directional force, while the narrow band of remaining light compresses the horizon into a thin stage of contrast. In this restrained space, soldiers and machine share the same dark outline, transforming the image into a study of anticipation rather than action.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -249,8 +249,8 @@ export const galleryData = [
   {
     "id": "i-F2WkVxc",
     "title": "Winter Mechanized",
-    "description": "“Winter Mechanized” is a cinematic black and white WWII fine art photograph capturing a battle-ready tank advancing through snow-covered terrain. Part of the Men & Machines B/W series, the image highlights Black & White WWII Machines and WWII Military Equipment B/W through strong horizontal composition and tonal contrast. Rooted in mechanical war art, the work emphasizes Monochrome WWII Mechanized Might and the disciplined presence of battle-ready machines within history’s greatest conflicts. © Wayne Heim",
-    "alt": "Black and white WWII tank driving through snow-covered landscape with visible tracks in the frost.",
+    "description": "A WWII Sherman tank advances through a snow-covered landscape, its tracks cutting through frost and winter terrain during a cold-weather military operation. Captured as a black and white WWII fine art photograph, the scene highlights the presence of armored vehicles and battlefield machinery moving through harsh environmental conditions. The stark monochrome treatment emphasizes WWII military equipment, armored tanks, and the disciplined mechanical force that defined wartime ground operations during the Second World War.\n\n© Wayne Heim",
+    "alt": "Sherman tank moving through a snowy landscape during a WWII winter operation, leaving tracks in the frost.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-F2WkVxc/A",
 
     "keywords": [
@@ -265,7 +265,7 @@ export const galleryData = [
     ],
 
     "story": "Snow softened the earth but not the steel.\n\nTracks carved deliberate lines through frost and drift, the tank moving forward with the steady certainty of weight and design. No rush, no spectacle — only momentum pressing against the quiet of winter.\n\nIn the stillness of white and gray, machine and landscape met without sentiment. The cold held everything in place, except the advance.",
-    "notes": "The composition balances mass against emptiness — the tank’s armored form set against open winter terrain. Snow amplifies contrast, isolating structure and emphasizing the geometry of tracks and turret. The restrained black and white treatment reinforces Monochrome WWII Mechanized Might without resorting to spectacle.\n\nWithin the Men & Machines B/W collection, this work focuses on persistence rather than battle. The advance through cold terrain becomes a study in controlled power — steel moving forward against resistance, defined not by explosion, but by inevitability.",
+    "notes": "The composition emphasizes mass and momentum. The armored form occupies the frame with quiet authority, its heavy structure advancing across open winter terrain where snow and sky create a restrained visual field.\n\nBy placing the machine within a softened landscape, the image contrasts mechanical weight with environmental stillness. The geometry of the tracks and turret introduces a sense of inevitability, turning the scene into a study of controlled power moving steadily through resistance rather than a spectacle of battle.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -281,8 +281,8 @@ export const galleryData = [
   {
     "id": "i-JgPqTqV",
     "title": "Rolling Steel",
-    "description": "“Rolling Steel” is a cinematic black and white WWII fine art photograph capturing a battle-ready tank advancing across open terrain. Part of the Men & Machines B/W series, the image emphasizes Black & White WWII Machines and WWII Military Equipment B/W through grounded perspective and tonal restraint. Rooted in mechanical war art, the composition highlights Monochrome WWII Mechanized Might and the disciplined force of battle-ready machines within history’s greatest conflicts. © Wayne Heim",
-    "alt": "Black and white WWII tank driving forward across dirt terrain with visible tracks and turret aimed ahead.",
+    "description": "Armored steel moves across open terrain as a WWII Sherman tank advances during a battlefield maneuver, its tracks biting into the dirt and dust rising behind it. This black and white WWII fine art photograph highlights armored military vehicles and the mechanical force of WWII ground warfare. The monochrome treatment emphasizes WWII military equipment, battlefield engineering, and the disciplined design of armored tanks used during the Second World War.\n\n© Wayne Heim",
+    "alt": "Armored vehicle advancing across dirt terrain during a WWII ground operation with dust rising behind its tracks.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-JgPqTqV/A",
 
     "keywords": [
@@ -297,7 +297,7 @@ export const galleryData = [
     ],
 
     "story": "The ground gave way beneath its weight, tracks biting into dirt as the turret held its line. No rush. No hesitation. Just motion measured in tons.\n\nSteel moved forward with a confidence born of design, its presence reshaping the landscape without asking permission. Dust lifted, engines growled low, and the horizon narrowed to whatever lay ahead.\n\nIn the steady rhythm of its advance, there was no spectacle — only inevitability.",
-    "notes": "The composition anchors the tank low in the frame, emphasizing mass and forward momentum. The textured earth and rising dust reinforce the sensation of weight, while restrained black and white tonality isolates structure and form.\n\nWithin the Men & Machines B/W collection, this piece centers on movement rather than conflict. The tank’s steady advance becomes a study in controlled power — steel in motion, defined not by explosion, but by certainty.",
+    "notes": "Weight and momentum define the visual structure of the work. The armored vehicle sits low in the frame, allowing the heavy tracks and forward orientation to communicate steady movement through the landscape.\n\nSurface texture reinforces that sense of force. Dirt, steel, and shadow interact across the frame, emphasizing the physical mass of the machine while restrained monochrome tonality isolates form and structure. The result becomes less about battle itself and more about the quiet inevitability of engineered power moving forward.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -313,8 +313,8 @@ export const galleryData = [
   {
     "id": "i-wRbqxRm",
     "title": "Through the Dust",
-    "description": "“Through the Dust” is a cinematic black and white WWII fine art photograph capturing a battle-ready tank advancing across rugged terrain. Part of the Men & Machines B/W series, the image highlights Black & White WWII Machines and WWII Military Equipment B/W through dynamic motion and tonal restraint. Rooted in mechanical war art, the work emphasizes Monochrome WWII Mechanized Might and the coordinated presence of soldiers and battle-ready machines within history’s greatest conflicts. © Wayne Heim",
-    "alt": "Black and white WWII tank advancing through dusty terrain with soldiers riding atop the armored vehicle.",
+    "description": "A WWII armored tank pushes forward through dusty terrain with soldiers riding atop the vehicle during a battlefield maneuver. Captured as a black and white WWII fine art photograph, the image highlights armored military vehicles and the coordinated movement of soldiers operating heavy battlefield machinery. The monochrome treatment emphasizes WWII military equipment, armored tanks, and the disciplined mechanical force that characterized WWII ground operations.\n\n© Wayne Heim",
+    "alt": "Soldiers riding atop an armored tank moving through dusty terrain during a WWII ground maneuver.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-wRbqxRm/A",
 
     "keywords": [
@@ -329,7 +329,7 @@ export const galleryData = [
     ],
 
     "story": "The tracks churned forward, lifting earth into the air behind them. Dust softened the edges of steel and men alike, turning movement into memory even as it happened.\n\nFaces remained steady above the armor, eyes fixed ahead. Orders were simple: keep moving. The machine carried them forward, its weight pressing certainty into uncertain ground.\n\nIn the drifting haze, progress was measured not in distance, but in momentum.",
-    "notes": "The composition balances movement and structure, with dust acting as both atmosphere and narrative device. The tank’s forward angle creates directional tension, while the figures atop the armor reinforce the relationship between human presence and mechanical force.\n\nWithin the Men & Machines B/W collection, this work captures transition rather than climax. The advancing vehicle becomes a symbol of persistence — steel and humanity moving together through uncertainty, defined by motion rather than spectacle.",
+    "notes": "Movement and structure shape the visual language of the work. The armored vehicle advances with steady weight through rising dust, creating a sense of controlled momentum that dominates the frame.\n\nAtmosphere becomes an active element within the scene. The drifting dust softens the edges of steel and landscape, allowing the figures atop the vehicle to emerge as part of the machine’s forward motion. The result reflects the quiet coordination between human presence and mechanical force that defined modern warfare.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -345,8 +345,8 @@ export const galleryData = [
   {
     "id": "i-QpWNnWp",
     "title": "Passing Overhead",
-    "description": "“Passing Overhead” is a cinematic black and white WWII fine art photograph capturing a battle-ready aircraft viewed from below in flight. Part of the Men & Machines B/W series, the image highlights Black & White WWII Machines and WWII Military Equipment B/W through strong diagonal composition and tonal restraint. Rooted in mechanical war art, the work emphasizes Monochrome WWII Mechanized Might and the commanding presence of battle-ready machines within history’s greatest conflicts. © Wayne Heim",
-    "alt": "Black and white WWII aircraft flying overhead, viewed from below with visible wing and propeller.",
+    "description": "Viewed from directly below, the underside of a WWII military aircraft cuts across the sky with its wing and spinning propeller dominating the frame. This black and white WWII fine art photograph emphasizes the scale and engineering of wartime aviation while highlighting the structure of WWII military aircraft in flight. The restrained monochrome treatment reinforces the visual language of WWII military equipment and the mechanical precision that defined aerial operations during the Second World War.\n\n© Wayne Heim",
+    "alt": "WWII military aircraft flying overhead viewed from below, showing the underside of the wing and spinning propeller.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-QpWNnWp/A",
 
     "keywords": [
@@ -361,7 +361,7 @@ export const galleryData = [
     ],
 
     "story": "The engine note arrived before the shadow.\n\nSteel crossed the sky in a steady line, wings cutting through open air with deliberate calm. From below, the machine felt larger than distance allowed — a presence defined not by noise alone, but by the awareness it left in its wake.\n\nIt did not pause. It did not circle. It moved on, leaving only the memory of motion suspended above the earth.",
-    "notes": "The composition is driven by angle and proximity. The underside perspective compresses sky and structure, turning the aircraft into a dominant geometric form that moves across the frame with controlled force. The restrained black and white treatment enhances Monochrome WWII Mechanized Might, allowing light and shadow to define contour and tension.\n\nWithin the Men & Machines B/W collection, this piece centers on presence rather than action. It is the passing moment — the brief intersection of earth and sky — that carries the weight of anticipation and distance.",
+    "notes": "Perspective becomes the defining force of the image. By positioning the viewer beneath the aircraft, the frame compresses sky and structure together, allowing the wing and fuselage to read as a bold geometric form crossing open air.\n\nLight and shadow carve the machine’s contours against the sky. With no horizon to anchor the scene, the aircraft appears suspended in motion, transforming a fleeting overhead pass into a study of scale, presence, and mechanical design.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -377,8 +377,8 @@ export const galleryData = [
   {
     "id": "i-xjxgdxN",
     "title": "Waiting Among Them",
-    "description": "“Waiting Among Them” is a cinematic black and white WWII fine art photograph capturing a soldier poised within a gathered unit before movement begins. Part of the Men & Machines B/W series, the image reflects Black & White WWII Machines and WWII Military Equipment B/W through intimate composition and tonal restraint. Rooted in mechanical war art, the work emphasizes battle-ready machines and Monochrome WWII Mechanized Might while centering the human presence within history’s greatest conflicts. © Wayne Heim",
-    "alt": "Black and white WWII soldier kneeling with rifle among fellow troops before movement.",
+    "description": "A WWII soldier kneels among fellow troops with rifle in hand as a unit gathers before movement on the battlefield. This black and white WWII fine art photograph highlights the human presence within wartime military formations, capturing soldiers preparing for action during the Second World War. The monochrome treatment emphasizes WWII soldiers, military uniforms, and battlefield readiness within the tense moments before engagement.\n\n© Wayne Heim",
+    "alt": "WWII soldier kneeling with rifle among fellow troops gathered closely together before a battlefield movement.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-xjxgdxN/A",
 
     "keywords": [
@@ -393,7 +393,7 @@ export const galleryData = [
     ],
 
     "story": "He did not stand apart.\n\nKneeling within the circle of uniforms and canvas straps, he held his rifle close, eyes lifted but distant. Around him, boots shifted and voices carried in low tones, but his stillness held.\n\nThe moment was not yet action. Not yet chaos. It was the thin space before it — where breath steadied, hands adjusted their grip, and the weight of what was coming settled quietly among them.",
-    "notes": "The composition draws focus inward, isolating a single figure within the surrounding formation. The layered uniforms and equipment create texture and depth, while the restrained black and white treatment reinforces Monochrome WWII Mechanized Might without overt spectacle.\n\nWithin the Men & Machines B/W collection, this piece shifts attention from machinery to readiness. It captures the quiet interval before command — when presence, posture, and shared anticipation define the atmosphere more than motion itself.",
+    "notes": "The composition draws focus inward, isolating a single figure within the surrounding formation. The layered uniforms and equipment create texture and depth, while the restrained black and white treatment reinforces a sense of gravity and quiet concentration.\n\nAttention shifts from machinery to human readiness. Surrounded by fellow soldiers, the central figure becomes a point of stillness within the larger formation, reflecting the quiet interval before command—when posture, breath, and anticipation define the moment more than motion itself.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -409,8 +409,8 @@ export const galleryData = [
   {
     "id": "i-f8W25wQ",
     "title": "After the Blast",
-    "description": "“After the Blast” is a black and white WWII fine art photograph centered on human consequence within mechanical war art. Part of the Men & Machines B/W collection, the image contrasts the scale of battle-ready machines and WWII tanks and trucks with the intimate urgency of care. Rendered in the tonal discipline of Black & White WWII Machines and WWII Military Equipment B/W, the composition emphasizes Monochrome WWII Mechanized Might while redirecting focus toward the cost carried by those within history’s greatest conflicts. © Wayne Heim",
-    "alt": "Black and white WWII soldiers tending to a wounded comrade on the battlefield.",
+    "description": "Hands press firmly against a wounded soldier as fellow troops kneel in the churned earth, working urgently to keep him alive amid the aftermath of battle. This black and white WWII fine art photograph focuses on the human cost within military operations, contrasting battlefield machinery with the fragile reality of soldiers under fire. The monochrome treatment highlights WWII soldiers, battlefield medical aid, and the stark human consequences present within the machinery of war. \n\n© Wayne Heim",
+    "alt": "Soldiers kneeling around a wounded comrade providing battlefield aid during World War II.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-f8W25wQ/A",
 
     "keywords": [
@@ -425,7 +425,7 @@ export const galleryData = [
     ],
 
     "story": "The noise had already passed.\n\nSmoke thinned. Orders faded. What remained was breath — uneven, urgent — and the steady pressure of hands that refused to let go.\n\nKneeling in the churned earth, they worked without spectacle. No heroics. No grand gesture. Just the stubborn insistence that life, even here, was worth holding onto.",
-    "notes": "This piece resists spectacle. The framing isolates hands, posture, and tension rather than battlefield theatrics, allowing the viewer to feel the compression of the moment. Tonal restraint and controlled contrast create depth without distraction.\n\nWithin the broader Men & Machines B/W series, “After the Blast” underscores the human dimension embedded inside mechanical war art — a quiet counterpoint to machinery and momentum, where consequence becomes the central subject.",
+    "notes": "Human presence dominates this image through the close framing of hands, posture, and physical contact between the soldiers. The visual weight falls not on combat, but on the quiet determination of men refusing to abandon one another in the immediate aftermath of violence.\n\nBy narrowing the scene to gesture and proximity, the image becomes less about the spectacle of war and more about the fragile persistence of life inside it. The restrained tonal range and intimate scale allow the viewer to feel the tension of the moment without distraction.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -441,8 +441,8 @@ export const galleryData = [
   {
     "id": "i-pNv5vGW",
     "title": "Wings Over War",
-    "description": "“Wings Over War” is a black and white WWII aviation photograph exploring mechanical war art through the presence of flight. Part of the Men & Machines B/W collection, the image emphasizes WWII Military Equipment B/W and the quiet authority of battle-ready machines moving through open sky. The restrained tonal range and painterly composition align with Black & White WWII Machines and Monochrome WWII Mechanized Might, transforming military aircraft into symbols of momentum within history’s greatest conflicts. © Wayne Heim",
-    "alt": "Black and white WWII military aircraft flying through cloudy sky viewed from below.",
+    "description": "A twin-engine WWII bomber cuts through layered clouds as it passes overhead, its wings and engines silhouetted against the shifting sky. Rendered in monochrome, the photograph highlights the engineering and presence of wartime military aircraft operating above the battlefield. The monochrome treatment emphasizes WWII military aviation, battle-ready aircraft, and the mechanical power of flight during the Second World War. \n\n© Wayne Heim",
+    "alt": "Twin-engine WWII bomber aircraft flying overhead through dramatic clouds viewed from below.",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White/i-pNv5vGW/A",
 
     "keywords": [
@@ -457,7 +457,7 @@ export const galleryData = [
     ],
 
     "story": "They came from the clouds without warning — not silent, but distant, like thunder deciding where to fall.\n\nBelow, the world waited. Fields, roads, and men paused beneath the passing shadow, each knowing the sky no longer belonged to peace. Engines carved their path forward, carrying weight measured not in steel alone, but in decisions already made far from the ground.\n\nFor a moment, they were only shapes against the gray — moving onward, leaving uncertainty in their wake.",
-    "notes": "This image relies on negative space and atmospheric restraint rather than action. The aircraft occupies a transitional space — neither arrival nor departure — allowing tension to exist within the sky itself.\n\nThe composition echoes pictorialist traditions where tone and atmosphere guide emotional reading. Within the Men & Machines B/W series, “Wings Over War” shifts focus from ground conflict to aerial presence, expanding the narrative of machinery beyond battlefield contact into psychological territory defined by anticipation and consequence.",
+    "notes": "Atmosphere carries the weight of this image as the aircraft emerges from shifting cloud layers, allowing the sky itself to become an active element of the composition. The bomber appears momentarily suspended between presence and disappearance, reinforcing the uncertain tension of wartime flight.\n\nThe restrained tonal palette and expansive negative space emphasize scale and isolation, drawing attention to the aircraft’s form while allowing atmosphere and silence to frame the moment.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

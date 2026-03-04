@@ -29,17 +29,17 @@ export const storySliderData = [
   {
     "id": "i-44jcjTQ",
     "title": "Over My Dead Body: Frontier Stand-off",
-    "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming. \n\nThe old bones creak different when death’s on the wind.\nSun’s almost up. Judgment time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!"
+    "story": "They said they’d come for me— just didn’t think it’d be today.\n\nMartha, forgive me. I’m about to do what needed doing. Those boys have it coming.\n\nThe old bones creak different when death’s on the wind.  \nSun’s almost up. Judgment time. Nothing left now but the awkward silence— the kind where even the birds hold their breath.\n\nI don’t know where this takes me, but I know this: some of you are coming with me!"
   },
   {
     "id": "i-B7ZSdfs",
     "title": "Till Death Do Us Part",
-    "story": "She knows. She’s known for some time. “Jim says I’m always right…” God, please — not this time. Shoulder to shoulder, breath to breath. However long, whatever the cost. He struggles — for air, for words to comfort, for a little more time beside her. “Don’t you worry, Milly… I think I got this thing on the ropes…” She’d give her own soul to make that be true. It was his dream to head West — the life they were meant to build together now reduced to a footnote in their journey. So many questions. So many tomorrows that may never come. But those aren’t for now.\n\nIn this moment — his touch, his warmth, his vow whispered in the dark — is all that matters. Till death do us part."
+    "story": "She knows. She’s known for some time. “Jim says I’m always right… God, please — not this time. Should we shoulder to shoulder, breath to breath. However long, whatever the cost. He struggles — for air, for words to comfort, for a little more time beside her. “Don’t you worry, Milly… I think I got this thing on the ropes…” She’d give her own soul to make that be true. It was his dream to head West — the life they were meant to build together now reduced to a footnote in their journey. So many questions. So many tomorrows that may never come. But those aren’t for now.\n\nIn this moment — his touch, his warmth, his vow whispered in the dark — is all that matters. Till death do us part."
   },
   {
     "id": "i-r5Pb7zJ",
     "title": "Signs",
-    "story": "Follow orders. Do your job. Always comin’ from those tellin’, not doin’. Hunting another man just cuz he followed more orders? That don’t sit easy on my shoulders. Six days out. Just like the rattlesnakes chasing mice— that’s gotta count for somethin’. Was fixin’ to turn back this morning— then, like a finger from God himself: commanding, revealing, testing my resolve. I could still turn back. Nobody would ever know. Except… I would. He would. Leaning in so both warmth and light can cleanse my soul — struggling to see, see what others missed, I finally see it. And with the clarity and weight of revelation, I know what I must do — follow the sign."
+    "story": "Follow orders. Do your job. Always comin' from those tellin', not doin'. Hunting another man just cuz he followed orders? That don’t sit easy on my shoulders. Six days out. Just like the rattlesnakes chasing mice—that’s gotta count for somethin’. Was fixin’ to turn back this morning then, like a finger from God himself: commandin’, revealin’, testing my resolve. I could still turn back. Nobody would ever know. Except… I would. He would. Leaning in so both warmth and light can cleanse my soul—strugglin’ to see, see what others missed, I finally see it. And with the clarity and weight of revelation, I know what I must do – follow the sign."
   },
   {
     "id": "i-trZrk2w",
@@ -54,7 +54,7 @@ export const storySliderData = [
   {
     "id": "i-Wx5scCf",
     "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
-    "story": "Among the stone and sage...\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history."
+    "story": "Among the stone and sage...\n\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history."
   },
   {
     "id": "i-Nn7scqm",
@@ -64,7 +64,7 @@ export const storySliderData = [
   {
     "id": "i-cV5gwWZ",
     "title": "Final Deposit",
-    "story": "Fate, destiny, or God’s will? Testing. Pushing. Driving a person to the edge of breaking. Everyone knew he was in trouble— but today? For God’s sake… the ground over him isn’t even cold. And yet here he comes, this soulless robber baron, all too eager to “do his job.” “Help the poor widow,” he says— ledger in hand, eyes on her grief as if sorrow were just another line item to collect.\n\nRight or wrong, we make our stand— not only for Henry… but for every one of us they’ve bled dry. One final act. One final message. One final deposit."
+    "story": "Fate, destiny, or God’s will? Testing. Pushing. Driving a person to the edge of breaking. Everyone knew he was in trouble—but today? For God’s sake… the ground over him isn’t even cold. And yet here he comes, this soulless robber baron, all too eager to “do his job.” “Help the poor widow,” he says—ledger in hand, eyes on her grief as if sorrow were just another line item to collect.\n\nNight or wrong, we make our stand—not only for Henry… but for every one of us they’ve bled dry. One final act. One final message. One final deposit."
   },
   {
     "id": "i-bfKMXS9",
@@ -79,7 +79,7 @@ export const storySliderData = [
   {
     "id": "i-5Md3dQ3",
     "title": "It's Just a One Day Ride to Spearfish. What Could Possibly Go Wrong?",
-    "story": "One day, he said.\nEasy ride, he promised. Sun up, sun down, back before the lamp’s gone cold.\n\nBut her head finds his shoulder, and in the hush between words, she knows:\nIt’s never just a day, never just a ride.\n\nPlans are easy. Goodbyes—never are."
+    "story": "One day, he said.\nEasy ride, he promised. Sun up, sun down, back before the lamp’s gone cold.\n\nBut her head finds his shoulder, and in the hush between words, she knows:\nIt’s never just a day, never just a ride.\n\nPlans are easy. Goodbyes—never are.\n\nA painterly Western portrait capturing the quiet tension of departure. A man ready to ride reassures with a steady smile while the woman at his side leans in, holding back words she cannot say. Sun-washed tones and soft texture turn the moment into a layered story of hope, worry, and the fragile promises that often preceded a frontier journey. © Wayne Heim"
   },
   {
     "id": "i-HBRmWg4",

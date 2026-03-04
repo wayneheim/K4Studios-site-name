@@ -2113,17 +2113,36 @@ export async function getTopPages(env, filters) {
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
 
     const pagesQuery = `
-      SELECT e.page AS page_path, COUNT(*) AS sessions
-      FROM classified_events e
-      WHERE ${where}
-        ${qualify(ipClause)}
-        ${qualify(safeBotClause)}
-        ${qualify(chardonClause)}
-        AND e.event_type = 'page_pixel'
-        AND e.source = 'pixel'
-        AND COALESCE(e.is_bot,0) = 0
-        AND e.page IS NOT NULL AND e.page != ''
-      GROUP BY e.page
+      WITH normalized AS (
+        SELECT
+          CASE
+            WHEN SUBSTR(raw_page, 1, 1) = '/'
+              THEN raw_page
+            ELSE '/' || raw_page
+          END AS page_path
+        FROM (
+          SELECT
+            COALESCE(
+              NULLIF(e.page, ''),
+              CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
+            ) AS raw_page
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
+          WHERE ${where}
+            ${qualify(ipClause)}
+            ${qualify(safeBotClause)}
+            ${qualify(chardonClause)}
+            AND ${notCacheWarmer('e')}
+            AND COALESCE(e.is_bot,0) = 0
+            AND e.source = 'js'
+            AND e.event_type = 'page_view'
+        ) p
+        WHERE raw_page IS NOT NULL
+          AND LOWER(raw_page) NOT LIKE 'http%'
+      )
+      SELECT page_path, COUNT(*) AS sessions
+      FROM normalized
+      GROUP BY page_path
       ORDER BY sessions DESC
       LIMIT 25
     `;
@@ -2168,13 +2187,16 @@ export async function getEntryAnalysis(env, filters) {
           e.referer AS referrer,
           e.ua AS ua,
           ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.ts ASC) AS rn
-        FROM classified_events e
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
         WHERE ${where}
           ${qualify(ipClause)}
           ${qualify(safeBotClause)}
           ${qualify(chardonClause)}
-          AND e.event_type = 'page_pixel'
-          AND e.source = 'pixel'
+          AND ${notCacheWarmer('e')}
+          AND COALESCE(e.is_bot,0) = 0
+          AND e.event_type = 'page_view'
+          AND e.source = 'js'
           AND e.session_id IS NOT NULL
           AND e.page IS NOT NULL AND e.page != ''
           AND LOWER(NULLIF(e.page, '')) NOT LIKE 'http%'
@@ -2240,13 +2262,16 @@ export async function getEntryAnalysis(env, filters) {
     try {
       const imagePageViewsQuery = `
         SELECT COUNT(*) as views
-        FROM classified_events e
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
         WHERE ${where}
           ${qualify(ipClause)}
           ${qualify(safeBotClause)}
           ${qualify(chardonClause)}
-          AND e.source = 'pixel'
-          AND e.event_type = 'page_pixel'
+          AND ${notCacheWarmer('e')}
+          AND COALESCE(e.is_bot,0) = 0
+          AND e.source = 'js'
+          AND e.event_type = 'page_view'
           AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
           AND COALESCE(NULLIF(e.page, ''), e.target_id) LIKE '%/i-%'
       `;
@@ -2259,13 +2284,16 @@ export async function getEntryAnalysis(env, filters) {
             e.session_id,
             ROW_NUMBER() OVER (PARTITION BY e.session_id ORDER BY e.ts ASC) AS rn,
             COALESCE(NULLIF(e.page, ''), e.target_id) AS page_path
-          FROM classified_events e
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
           WHERE ${where}
             ${qualify(ipClause)}
             ${qualify(safeBotClause)}
             ${qualify(chardonClause)}
-            AND e.source = 'pixel'
-            AND e.event_type = 'page_pixel'
+            AND ${notCacheWarmer('e')}
+            AND COALESCE(e.is_bot,0) = 0
+            AND e.source = 'js'
+            AND e.event_type = 'page_view'
             AND e.session_id IS NOT NULL
             AND (e.page IS NOT NULL OR e.target_id IS NOT NULL)
         )

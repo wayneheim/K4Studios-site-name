@@ -58,9 +58,10 @@ import {
 
 // Cache-bust parameter to avoid waiting on Cloudflare's cached manifest after deploys.
 // Update this when you need the worker to pick up a newly deployed manifest immediately.
-const MANIFEST_URL = "https://k4studios.com/image-manifest.json?v=20260223-699cdba7";
+const MANIFEST_URL = "https://69a88c025cf35e6ac8875487--k4studios.netlify.app/image-manifest.json";
 const IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";
 const MANIFEST_CACHE_TTL = 3600; // seconds
+const IMAGE_CACHE_KEY_VERSION = "20260304-idfix1";
 
 // --------------------
 // SIZE FALLBACK CHAINS
@@ -335,6 +336,25 @@ function resolveImageUrl(manifest, imageId, requestedSize) {
   return null;
 }
 
+function resolveImageUrls(manifest, imageId, requestedSize) {
+  const imageData = manifest[imageId];
+  if (!imageData) return [];
+
+  const fallbackChain = SIZE_FALLBACK[requestedSize] || SIZE_FALLBACK.m;
+  const seen = new Set();
+  const urls = [];
+
+  for (const size of fallbackChain) {
+    const candidate = imageData[size];
+    if (!candidate) continue;
+    if (seen.has(candidate)) continue;
+    seen.add(candidate);
+    urls.push(candidate);
+  }
+
+  return urls;
+}
+
 async function proxyImage(smugMugUrl, request) {
   const imageResponse = await fetch(smugMugUrl, {
     headers: {
@@ -370,6 +390,36 @@ async function proxyImage(smugMugUrl, request) {
   // `noai, noimageai` are opt-out signals for training, not indexing.
 
   return new Response(imageResponse.body, { status: 200, headers });
+}
+
+async function proxyImageWithFallback(smugMugUrls, request) {
+  if (!Array.isArray(smugMugUrls) || smugMugUrls.length === 0) {
+    return new Response("Image not found", {
+      status: 404,
+      headers: { "Cache-Control": "no-store" }
+    });
+  }
+
+  let lastNotOk = null;
+  for (const url of smugMugUrls) {
+    try {
+      const response = await proxyImage(url, request);
+      if (response.status === 200) {
+        return response;
+      }
+      lastNotOk = response;
+      if (response.status >= 500) {
+        return response;
+      }
+    } catch (e) {
+      console.error('Upstream fallback fetch error:', e);
+    }
+  }
+
+  return lastNotOk || new Response("Image not found", {
+    status: 404,
+    headers: { "Cache-Control": "no-store" }
+  });
 }
 
 // --------------------
@@ -636,6 +686,7 @@ async function handleImageRequest(request, ctx, env) {
   // different attribution prefixes (OG/TW/PN/SD).
   const canonicalUrl = new URL(request.url);
   canonicalUrl.pathname = `/img/${route.canonicalImageId}/${route.size}`;
+  canonicalUrl.searchParams.set("__k4v", IMAGE_CACHE_KEY_VERSION);
   const canonicalRequest = (canonicalUrl.pathname === url.pathname)
     ? request
     : new Request(canonicalUrl.toString(), request);
@@ -791,9 +842,9 @@ async function handleImageRequest(request, ctx, env) {
 
   try {
     const manifest = await getManifest(ctx);
-    const smugMugUrl = resolveImageUrl(manifest, route.canonicalImageId, route.size);
+    const smugMugUrls = resolveImageUrls(manifest, route.canonicalImageId, route.size);
 
-    if (!smugMugUrl) {
+    if (smugMugUrls.length === 0) {
       return new Response("Image not found", {
         status: 404,
         headers: { "Cache-Control": "no-store" }
@@ -874,7 +925,7 @@ async function handleImageRequest(request, ctx, env) {
       }
     }
 
-    const response = await proxyImage(smugMugUrl, canonicalRequest);
+    const response = await proxyImageWithFallback(smugMugUrls, canonicalRequest);
 
     // Cache successful responses under the canonical key.
     // Use waitUntil so we don't block serving.
@@ -902,16 +953,73 @@ async function handleImageRequest(request, ctx, env) {
 // IMAGE PAGE POLICY
 // --------------------
 function isImagePageRoute(pathname) {
-  return /\/(Galleries|galleries|Other|other|Photography-Galleries)\/.*\/i-[a-zA-Z0-9-]+\/?$/.test(pathname);
+  return /\/(Galleries|galleries|Other|other|Photography-Galleries)\/.*\/[iI]-[a-zA-Z0-9-]+\/?$/.test(pathname);
 }
 
 function extractImageId(pathname) {
-  const match = pathname.match(/(i-[a-zA-Z0-9-]+)\/?$/);
-  return match ? match[1] : null;
+  const match = pathname.match(/([iI]-[a-zA-Z0-9-]+)\/?$/);
+  if (!match) return null;
+  const raw = String(match[1]);
+  if (raw.length < 2) return null;
+  // Canonical prefix is lower-case i-; preserve the rest exactly for ID lookup.
+  return `i-${raw.slice(2)}`;
 }
 
 function getParentGallery(pathname) {
-  return pathname.replace(/\/i-[a-zA-Z0-9-]+\/?$/, "");
+  return pathname.replace(/\/[iI]-[a-zA-Z0-9-]+\/?$/, "");
+}
+
+let canonicalImageIdLookupCache = null;
+let canonicalImageIdLookupManifestTime = 0;
+let canonicalImageIdLookupMapTime = 0;
+
+function getCanonicalImageIdLookup(manifest, imageIdMap) {
+  if (
+    canonicalImageIdLookupCache &&
+    canonicalImageIdLookupManifestTime === manifestCacheTime &&
+    canonicalImageIdLookupMapTime === imageIdMapCacheTime
+  ) {
+    return canonicalImageIdLookupCache;
+  }
+
+  const lookup = new Map();
+
+  if (manifest && typeof manifest === 'object') {
+    for (const key of Object.keys(manifest)) {
+      if (!key) continue;
+      const k = String(key);
+      const lower = k.toLowerCase();
+      if (!lookup.has(lower)) lookup.set(lower, k);
+    }
+  }
+
+  if (imageIdMap && typeof imageIdMap === 'object') {
+    for (const key of Object.keys(imageIdMap)) {
+      if (!key) continue;
+      const k = String(key);
+      const lower = k.toLowerCase();
+      if (!lookup.has(lower)) lookup.set(lower, k);
+    }
+  }
+
+  canonicalImageIdLookupCache = lookup;
+  canonicalImageIdLookupManifestTime = manifestCacheTime;
+  canonicalImageIdLookupMapTime = imageIdMapCacheTime;
+  return lookup;
+}
+
+function resolveCanonicalImageId(imageId, manifest, imageIdMap) {
+  if (!imageId) return null;
+
+  if (manifest && Object.prototype.hasOwnProperty.call(manifest, imageId)) {
+    return imageId;
+  }
+  if (imageIdMap && Object.prototype.hasOwnProperty.call(imageIdMap, imageId)) {
+    return imageId;
+  }
+
+  const lookup = getCanonicalImageIdLookup(manifest, imageIdMap);
+  return lookup.get(String(imageId).toLowerCase()) || null;
 }
 
 async function createBranded404Response(request) {
@@ -1002,9 +1110,11 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
     const isBrowser = looksLikeBrowser(request);
     const isSearch = isSearchBot(request);
 
-    // Image exists
-    if (manifest[imageId]) {
-      const validPathsRaw = imageIdMap ? imageIdMap[imageId] : null;
+    const canonicalImageId = resolveCanonicalImageId(imageId, manifest, imageIdMap);
+
+    // Image exists (exact or case-insensitive canonical match)
+    if (canonicalImageId) {
+      const validPathsRaw = imageIdMap ? (imageIdMap[canonicalImageId] || imageIdMap[imageId]) : null;
       const requestedGalleryPath = getParentGallery(pathname);
 
       if (validPathsRaw) {
@@ -1025,7 +1135,7 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
           });
 
           if (galleryLeafPath) {
-            const canonicalUrl = `https://www.k4studios.com${galleryLeafPath}/${imageId}${search}`;
+            const canonicalUrl = `https://www.k4studios.com${galleryLeafPath}/${canonicalImageId}${search}`;
             ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearch, request));
             return Response.redirect(canonicalUrl, 301);
           }
@@ -1044,25 +1154,29 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
               return pl.startsWith(requestedPrefixLower);
             }) || validPaths[0];
             if (canonicalMissingLeafPath) {
-              const canonicalUrl = `https://www.k4studios.com${canonicalMissingLeafPath}/${imageId}${search}`;
+              const canonicalUrl = `https://www.k4studios.com${canonicalMissingLeafPath}/${canonicalImageId}${search}`;
               ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearch, request));
               return Response.redirect(canonicalUrl, 301);
             }
           }
 
-          const canonicalUrl = `https://www.k4studios.com${validPaths[0]}/${imageId}${search}`;
+          const canonicalUrl = `https://www.k4studios.com${validPaths[0]}/${canonicalImageId}${search}`;
           // Log edge event (fire and forget via waitUntil)
           ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearch, request));
           return Response.redirect(canonicalUrl, 301);
         }
 
-        // Case mismatch -> redirect to canonical casing
-        if (matchedPath !== requestedGalleryPath) {
-          const canonicalUrl = `https://www.k4studios.com${matchedPath}/${imageId}${search}`;
+        // Case/path mismatch or image-id case mismatch -> redirect to canonical casing.
+        if (matchedPath !== requestedGalleryPath || canonicalImageId !== imageId) {
+          const canonicalUrl = `https://www.k4studios.com${matchedPath}/${canonicalImageId}${search}`;
           // Log edge event (fire and forget via waitUntil)
           ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearch, request));
           return Response.redirect(canonicalUrl, 301);
         }
+      } else if (canonicalImageId !== imageId) {
+        const canonicalUrl = `https://www.k4studios.com${requestedGalleryPath}/${canonicalImageId}${search}`;
+        ctx.waitUntil(logEdgeEvent(env, '301', pathname, imageId, isSearch, request));
+        return Response.redirect(canonicalUrl, 301);
       }
 
       // Correct path -> pass through to origin static page

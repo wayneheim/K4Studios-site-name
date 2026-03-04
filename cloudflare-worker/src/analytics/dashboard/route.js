@@ -50,6 +50,19 @@ function getBestClientIP(request) {
   return cfIp;
 }
 
+function buildEasternDayClause(column = 'ts', offsetDays = 0) {
+  const offset = offsetDays === 0 ? '' : `, '${offsetDays} day'`;
+  return `${column} >= datetime('now', '-5 hours', 'start of day'${offset}, '+5 hours') AND ${column} < datetime('now', '-5 hours', 'start of day'${offset}, '+1 day', '+5 hours')`;
+}
+
+function buildEasternDateClauseForLiteral(dateStr, column = 'ts') {
+  return `${column} >= datetime('${dateStr} 05:00:00') AND ${column} < datetime('${dateStr} 05:00:00', '+1 day')`;
+}
+
+function buildEasternRangeClause(column = 'ts', backDays = 0) {
+  return `${column} >= datetime('now', '-5 hours', 'start of day', '-${backDays} days', '+5 hours') AND ${column} < datetime('now', '-5 hours', 'start of day', '+1 day', '+5 hours')`;
+}
+
 export async function handleDashboardRequest(request, env, ctx) {
   // Check auth
   if (!checkBasicAuth(request, env)) {
@@ -72,20 +85,19 @@ export async function handleDashboardRequest(request, env, ctx) {
   const viewerIp = getBestClientIP(request);
 
   try {
-    // Build date filter (adjusted for Eastern Time, UTC-5)
-    // Use date() comparison for calendar day matching in Eastern time
+    // Build date filter as ET timestamp ranges (index-friendly; avoids date(ts, ...)).
     let rangeDateClause;
     if (yesterday) {
-      // Yesterday = Eastern calendar day before today
-      rangeDateClause = `date(ts, '-5 hours') = date('now', '-5 hours', '-1 day')`;
+      // Yesterday = Eastern calendar day before today.
+      rangeDateClause = buildEasternDayClause('ts', -1);
     } else if (days === 1) {
-      // Today = current Eastern calendar day
-      rangeDateClause = `date(ts, '-5 hours') = date('now', '-5 hours')`;
+      // Today = current Eastern calendar day.
+      rangeDateClause = buildEasternDayClause('ts', 0);
     } else {
-      // Last N days (calendar days in Eastern time, inclusive of today)
+      // Last N days (calendar days in Eastern time, inclusive of today).
       const n = Math.max(1, days);
       const backDays = Math.max(0, n - 1);
-      rangeDateClause = `date(ts, '-5 hours') >= date('now', '-5 hours', '-${backDays} days')`;
+      rangeDateClause = buildEasternRangeClause('ts', backDays);
     }
 
     // Preserve the time-only clause (no global filters) so we can compute
@@ -95,7 +107,7 @@ export async function handleDashboardRequest(request, env, ctx) {
     // Truth-only date clause: respects selectedDate / range, but ignores all UI filters.
     // Used for leaderboard-style panels that should not change based on presentation toggles.
     const truthDateClause = (selectedDate
-      ? `date(ts, '-5 hours') = '${selectedDate}'`
+      ? buildEasternDateClauseForLiteral(selectedDate, 'ts')
       : baseRangeDateClause);
 
     // Global filters must be baked into date/range clauses because many queries
@@ -151,7 +163,7 @@ export async function handleDashboardRequest(request, env, ctx) {
     // If a specific Eastern calendar day is selected, render stats for that day
     // (but keep the trend chart using the current range).
     const baseDateClause = (selectedDate
-      ? `date(ts, '-5 hours') = '${selectedDate}'`
+      ? buildEasternDateClauseForLiteral(selectedDate, 'ts')
       : baseRangeDateClause) + globalFilterClauseNoBots;
 
     const dateClause = `${baseDateClause}${globalFilterClause}`;
@@ -203,13 +215,13 @@ export async function handleDashboardRequest(request, env, ctx) {
 
     // Build priorPeriodClause for getDashboardStats
     const priorPeriodClause = (selectedDate
-      ? `date(ts, '-5 hours') < '${selectedDate}'`
+      ? `ts < datetime('${selectedDate} 05:00:00')`
       : (yesterday
-        ? `ts < datetime('now', '-5 hours', '-1 day', 'start of day')`
+        ? `ts < datetime('now', '-5 hours', 'start of day', '-1 day', '+5 hours')`
         : (() => {
             const n = Math.max(1, days);
             const backDays = Math.max(0, n - 1);
-            return `date(ts, '-5 hours') < date('now', '-5 hours', '-${backDays} days')`;
+            return `ts < datetime('now', '-5 hours', 'start of day', '-${backDays} days', '+5 hours')`;
           })()
       )) + globalFilterClause;
 
