@@ -230,7 +230,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "\"Medic Rescue Mission - WWII Reenactment Photo\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Medic Rescue Mission - WWII Reenactment Photo\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -290,7 +290,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "\"Medic Rescue Mission - WWII Reenactment Photo\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Medic Rescue Mission - WWII Reenactment Photo\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -380,7 +380,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "\"Medic Rescue Mission - WWII Reenactment Photo\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Medic Rescue Mission - WWII Reenactment Photo\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -650,7 +650,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "\"Sending up protectin.\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Sending up protectin.\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1100,7 +1100,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "\"Medical needed.\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Medical needed.\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1220,7 +1220,7 @@ export const galleryData = [
       "fig",
       "k4 studios"
     ],
-    "story": "\"Full charge.\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Full charge.\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1719,7 +1719,7 @@ export const galleryData = [
       "war zone photography",
       "Second World War"
     ],
-    "story": "\"Painterly Photography: Finding cover.\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Painterly Photography: Finding cover.\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2241,7 +2241,7 @@ export const galleryData = [
       "war zone photography",
       "battlefield moments"
     ],
-    "story": "\"Fine Art Wwii Action Art\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Fine Art Wwii Action Art\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2310,7 +2310,7 @@ export const galleryData = [
       "battlefield moments",
       "Second World War"
     ],
-    "story": "\"Artistic Documentary And War Zone Photography\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Artistic Documentary And War Zone Photography\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3120,7 +3120,7 @@ export const galleryData = [
       "battlefield moments",
       "wwii artistic documentary"
     ],
-    "story": "\"Second World War - Second World War\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Second World War - Second World War\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4031,7 +4031,7 @@ export const galleryData = [
       "Second World War",
       "war zone photography"
     ],
-    "story": "\"Capturing Wwii Battlefield\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Capturing Wwii Battlefield\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4101,7 +4101,7 @@ export const galleryData = [
       "war zone photography",
       "wwii artistic documentary"
     ],
-    "story": "\"Exploring Battlefield Moments\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Exploring Battlefield Moments\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5126,7 +5126,7 @@ export const galleryData = [
       "battlefield moments",
       "wwii artistic documentary"
     ],
-    "story": "\"War Zone Photography Portrait\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"War Zone Photography Portrait\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5582,7 +5582,7 @@ export const galleryData = [
       "Second World War",
       "war zone photography"
     ],
-    "story": "\"Battlefield Moments Moment\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Battlefield Moments Moment\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],

@@ -1891,7 +1891,7 @@ export const galleryData = [
       "WWII battlefield",
       "battlefield moments"
     ],
-    "story": "\"Capturing War Zone Photography\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Capturing War Zone Photography\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1918,7 +1918,7 @@ export const galleryData = [
       "Second World War",
       "WWII battlefield"
     ],
-    "story": "\"Action Art Study\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Action Art Study\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1998,7 +1998,7 @@ export const galleryData = [
       "Second World War",
       "WWII battlefield"
     ],
-    "story": "\"War Zone Photography - War Zone Photography\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"War Zone Photography - War Zone Photography\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2426,7 +2426,7 @@ export const galleryData = [
       "wwii artistic documentary",
       "battlefield moments"
     ],
-    "story": "\"Photographic artwork\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Photographic artwork\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2853,7 +2853,7 @@ export const galleryData = [
       "Second World War",
       "battlefield moments"
     ],
-    "story": "\"Action Art Study\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Action Art Study\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3269,7 +3269,7 @@ export const galleryData = [
       "WWII battlefield",
       "Second World War"
     ],
-    "story": "\"Woman Reenactor Photography by Wayne Heim\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Woman Reenactor Photography by Wayne Heim\" — fine art photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],

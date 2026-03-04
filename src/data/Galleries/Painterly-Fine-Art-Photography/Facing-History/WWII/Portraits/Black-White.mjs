@@ -1899,7 +1899,7 @@ export const galleryData = [
       "heroic portraits",
       "greatest generation photos"
     ],
-    "story": "\"Pilot Black & White Photography by Wayne Heim\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Pilot Black & White Photography by Wayne Heim\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -1930,7 +1930,7 @@ export const galleryData = [
       "heroic portraits",
       "moments of connection"
     ],
-    "story": "\"Wartime Portraits Portrait\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Wartime Portraits Portrait\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2358,7 +2358,7 @@ export const galleryData = [
       "heroic portraits",
       "moments of connection"
     ],
-    "story": "\"Wartime Portraits Moment\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Wartime Portraits Moment\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -2481,7 +2481,7 @@ export const galleryData = [
       "wartime portraits",
       "heroic portraits"
     ],
-    "story": "\"Capturing Wwii Photography\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Capturing Wwii Photography\" — Wayne Heim photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -3914,7 +3914,7 @@ export const galleryData = [
       "moments of connection",
       "wartime portraits"
     ],
-    "story": "\"Heroic Portraits And Greatest Generation Photos\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Heroic Portraits And Greatest Generation Photos\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4407,7 +4407,7 @@ export const galleryData = [
       "greatest generation photos",
       "wwii photography"
     ],
-    "story": "\"Moments Of Connection - Moments Of Connection\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Moments Of Connection - Moments Of Connection\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4434,7 +4434,7 @@ export const galleryData = [
       "heroic portraits",
       "wwii photography"
     ],
-    "story": "\"Pilot Black & White Photography by Wayne Heim\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Pilot Black & White Photography by Wayne Heim\" — painterly photography. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -4602,7 +4602,7 @@ export const galleryData = [
       "greatest generation photos",
       "moments of connection"
     ],
-    "story": "\"Photography Study\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Photography Study\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],
@@ -5215,7 +5215,7 @@ export const galleryData = [
       "heroic portraits",
       "wwii photography"
     ],
-    "story": "\"Greatest Generation Photos - Moments Of Connection\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the",
+    "story": "\"Greatest Generation Photos - Moments Of Connection\" — K4 Studios fine art. This painterly image by Wayne Heim captures a moment of quiet intensity, where light and composition tell the story. Part of the Facing History series by Wayne Heim.",
     "notes": "",
     "rating": 0,
     "galleries": [],

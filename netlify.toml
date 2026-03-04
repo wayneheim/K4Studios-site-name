@@ -238,6 +238,12 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/Galleries/Fine-Art-Photography/Portraits-and-People"
+to = "/Galleries/Fine-Art-Photography/Portraits"
+status = 301
+force = true
+
+[[redirects]]
 from = "/Other/K4-Select-Series/Series-{1,2}"
 to = "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Series-:splat"
 status = 301
