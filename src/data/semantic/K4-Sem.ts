@@ -157,6 +157,10 @@ facingHistory: {
     { phrase: "historical prints", rating: 4, use: true },
     { phrase: "historic photography", rating: 4, use: true },
 
+    // Western-historical bridge (door page cross-authority)
+    { phrase: "historical western photography", rating: 4, use: true },
+    { phrase: "american frontier history", rating: 4, use: true },
+
     // Long-tail / glossary only (semantic expansion)
     { phrase: "History in Fine Art", rating: 3, use: true },
     { phrase: "fine art painterly photography", rating: 3, use: true },

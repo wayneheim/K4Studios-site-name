@@ -111,6 +111,79 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
 <!-- ✅ JSON-LD Structured Data for SEO -->
 <script type="application/ld+json" is:inline set:html={structuredData}></script>
 
+<!-- ✅ Article Structured Data for topical authority -->
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pictorialist Photography: From 19th-Century Movement to Modern Painterly Fine Art",
+  "author": {
+    "@type": "Person",
+    "name": "Wayne Heim"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "K4 Studios",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.k4studios.com/images/k4-logo.png"
+    }
+  },
+  "description": "An in-depth explanation of pictorialist photography, its historical roots in the 19th century, and how its principles continue today through modern painterly fine art photography.",
+  "mainEntityOfPage": "https://www.k4studios.com/Pictorialist-Photography"
+}
+</script>
+
+<!-- ✅ FAQ Schema for AI citation -->
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is pictorialist photography?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pictorialist photography is an artistic movement that emerged in the late nineteenth century when photographers began rejecting the idea that a camera should simply record reality. Early pictorialists believed photography could function as fine art—capable of mood, interpretation, and emotional storytelling. The movement helped establish photography as a legitimate artistic medium, and modern pictorialist photography continues that tradition today."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Wayne Heim's approach differ from the historic Pictorialists?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wayne fuses traditional pictorialist principles—mood, texture, narrative intent—with digital technique and a storyteller's eye trained in medical illustration and fine art. The spirit is inherited; the execution is distinctly contemporary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the connection between pictorialism and painterly photography?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Painterly photography descends directly from the pictorialist tradition. The principles are the same—atmosphere, interpretation, authorial craft—applied through contemporary tools and artistic vision. Pictorialism gave painterly photography its philosophical foundation and historical credibility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is modern pictorialist photography different from filters or AI effects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every image is handcrafted from concept to print. There is no shortcut. The painterly quality comes from lived experience, emotional intent, and years of disciplined creative practice—not a slider or a preset."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does pictorialism matter today?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a sea of mass-produced images, modern pictorialism is about authorship, vision, and making art that lingers—inviting viewers to pause, look again, and feel something that stays."
+      }
+    }
+  ]
+}
+</script>
+
 <BaseLayout
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   meta={landingMeta}
@@ -139,6 +212,9 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
         <h2 class="page-subtitle fade-in reveal-on-scroll">
           {landingWestern.subtitle}
         </h2>
+        <p class="page-summary fade-in reveal-on-scroll">
+          Pictorialist photography is an artistic movement that began in the late nineteenth century and continues today through modern painterly fine art photography.
+        </p>
       </div>
     </section>
 
@@ -189,16 +265,6 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       </div>
     </section>
 
-    <section class="pb-10">
-      <input type="checkbox" id="faq-toggle" class="more-toggle" />
-      <div class="truncate-container" style="min-height:0;">
-        <div class="truncate-text">
-          {/* <FAQAccordion items={facingFAQ} /> */}
-        </div>
-      </div>
-      <label for="faq-toggle" class="more-toggle-label"></label>
-    </section>
-
     <SiteFooter class="pt-8 pb-12" />
   </main>
 
@@ -215,17 +281,6 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
           });
         }, { threshold: 0.15 });
         els.forEach(el => observer.observe(el));
-      }
-      const faqToggle = document.getElementById("faq-toggle");
-      const truncateContainer = document.querySelector(".truncate-container");
-      if (truncateContainer && faqToggle) {
-        const summaryClicked = null;
-        truncateContainer.addEventListener("click", (e) => {
-          const summary = e.target.closest("summary");
-          if (summary && !faqToggle.checked) {
-            faqToggle.checked = true;
-          }
-        });
       }
     });
   </script>
@@ -260,7 +315,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
       letter-spacing: -0.04em;
     }
     .section-heading-wrap {
-      margin-top: -2.5rem;
+      margin-top: -4.5rem;
       margin-bottom: 1rem;
     }
     .sidebar-column {
@@ -291,7 +346,7 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     transition-delay: .2s;
   }
   .section-heading-wrap {
-    margin: -1.5rem 0 1.5rem 0;
+    margin: -3.8rem 0 1.5rem 0;
     text-align: center;
   }
   .section-heading .page-title {
@@ -303,6 +358,15 @@ if (!landingMeta.twitterUrl) landingMeta.twitterUrl = `https://k4studios.com${se
     font-weight: 500;
     color: #6d5b4a;
     opacity: .9;
+  }
+  .section-heading .page-summary {
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: #7a6a5a;
+    opacity: .85;
+    width: min(100%, 760px);
+    margin: 0.5rem auto 0;
+    line-height: 1.5;
   }
   .story-section {
     line-height: 1.3;

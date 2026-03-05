@@ -102,6 +102,79 @@ const structuredData = getStructuredData({
 });
 ---
 
+<!-- Article Structured Data for topical authority -->
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Historical Reenactment Photography: Capturing Living History From Battlefields to Frontier Towns",
+  "author": {
+    "@type": "Person",
+    "name": "Wayne Heim"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "K4 Studios",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.k4studios.com/images/k4-logo.png"
+    }
+  },
+  "description": "A comprehensive guide to historical reenactment photography—what living history events look like, how to photograph reenactors, and where to find events near you.",
+  "mainEntityOfPage": "https://www.k4studios.com/Historical-Reenactment-Photography"
+}
+</script>
+
+<!-- FAQ Schema for AI citation -->
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a historical reenactment and why does it matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A historical reenactment is living history—participants restage moments from the past so audiences can see, hear, and feel them in real time. It blends research, material culture, and performance to turn history into experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a reenactor and a living historian?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are often the same people. 'Reenactor' highlights the performance; 'living historian' emphasizes the research and teaching. Both roles aim for accurate representation—from clothing and tools to drill, rations, and routines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are reenactments family-friendly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—most are designed for the public. Expect educational talks, museum-style exhibits, and plenty of opportunities to ask questions. Check each event's schedule for age-appropriate programs and loud-noise advisories."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What camera gear works best at reenactments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A short telephoto zoom (70–200mm or 80–200mm) lets you work at a respectful distance and capture candid moments. Add a fast prime for low light and a lens hood to cut flare. Pack extra batteries and cards—and consider ear protection for blank-fire demonstrations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the etiquette for photographing reenactors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Be respectful and avoid interrupting in-character moments or safety briefings. Ask when unsure—some roles may prefer not to be photographed. Don't cross ropes or lines, follow staff instructions, and if you post images, credit the event or unit when possible."
+      }
+    }
+  ]
+}
+</script>
+
 <BaseLayout
   title={`${landingWestern.title} – ${landingWestern.subtitle}`}
   structuredDataJSON={structuredData}
@@ -132,6 +205,9 @@ const structuredData = getStructuredData({
         <h2 class="page-subtitle fade-in reveal-on-scroll">
           {landingWestern.subtitle}
         </h2>
+        <p class="page-summary fade-in reveal-on-scroll">
+          Historical reenactment photography captures living history events and the people who bring the past to life—from Civil War battlefields to Wild West frontier towns.
+        </p>
       </div>
     </section>
 
@@ -309,6 +385,16 @@ ul li::marker {
       font-weight: 500;
       color: #6d5b4a;
       opacity: .9;
+    }
+
+    .section-heading .page-summary {
+      font-size: 0.92rem;
+      font-weight: 400;
+      color: #7a6a5a;
+      opacity: .85;
+      max-width: 900px;
+      margin: 0.5rem auto 0;
+      line-height: 1.5;
     }
 
     .story-section {

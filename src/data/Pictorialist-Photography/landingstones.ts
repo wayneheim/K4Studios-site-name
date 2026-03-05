@@ -1,7 +1,7 @@
 export const landingWestern = {
     //Pictorialist Photography
   title: "Pictorialist Photography",
-  subtitle: "Pushing the Boundaries of Photography—Then and Now",
+  subtitle: "From 19th-Century Movement to Modern Painterly Fine Art Photography",
    breadcrumb: "Pictorialist Photography",
 
   tombstones: [

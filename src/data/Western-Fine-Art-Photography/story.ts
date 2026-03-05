@@ -1,49 +1,48 @@
 ﻿export const painterlyStory = [
 
-  // 1. OPENING - GALLERY/COLLECTION PRESENTATION (fully commercial)
+  // 1. DEFINITION BLOCK (anchor paragraph for AI scraping)
   {
-    title: "Western Fine Art Photography",
+    title: "What Is Western Fine Art Photography?",
     paragraphs: [
-      "This gallery presents a curated body of work by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a> - narrative cowboy portraits, frontier character studies, and Indigenous presence from across the American West - created as fine art for collectors and viewers seeking depth, restraint, and lasting resonance.",
-      "Here, 'Western art' refers to the American West — frontier life, cowboys, and 19th-century Western history — not European or Western civilization art traditions.",
-      "These images are built to be lived with. They reward sustained viewing, invite interpretation, and reveal meaning gradually rather than delivering it at a glance.",
-      "For a deeper exploration of the discipline behind this work, see <a href='/Blog/what-is-western-fine-art-photography' style='color:#8b5a2b; text-decoration:underline;'>What Is Western Fine Art Photography</a>."
+      "Western fine art photography is an authored interpretation of the American West shaped through painterly photographic craft, narrative restraint, and deliberate artistic vision. It is not a photo of a cowboy. It is not a scenic postcard with a Western label. It is closer to the tradition of Western art\u2014work that carries lineage from painters like Frederic Remington and Charles M. Russell\u2014because it is built to communicate mood, labor, myth, and place.",
+      "At K4 Studios, that tradition takes a specific form: <a href=\"/Pictorialist-Photography\">painterly photography</a> rooted in the Pictorialist conviction that a photograph should interpret the world, not simply record it. Light is sculpted. Tone is controlled. Composition serves narrative restraint rather than spectacle. The result occupies a space between painting and photography\u2014authored, layered, and built to endure.",
+      "Here, \u2018Western art\u2019 refers to the American West\u2014frontier life, cowboys, and 19th-century Western history\u2014not European or Western civilization art traditions."
     ]
   },
 
-  // 2. CHARACTER OVER ARCHETYPE
+  // 2. HISTORICAL CONTEXT (the roots)
+  {
+    subhead: "The Historical Roots of Western Photography",
+    paragraphs: [
+      "Western photography emerged alongside westward expansion in the mid-1800s. Early practitioners like Timothy O\u2019Sullivan documented frontier geology and settlement, while Edward S. Curtis created extensive portraits of Native American tribes\u2014work that remains influential and contested. Through the 20th century, photographers\u2014from Ansel Adams to documentary ranch photographers\u2014shaped how the West was seen.",
+      "Contemporary western fine art photography builds on this lineage while questioning its myths\u2014focusing on character, lived experience, and narrative complexity rather than spectacle. The photographs in this collection belong to that tradition: rooted in history, shaped by craft, and focused on the human presence that defines the American West. The work presented here continues that tradition through painterly photographic interpretation."
+    ]
+  },
+
+  // 3. THE NARRATIVE APPROACH
   {
     subhead: "Character Over Archetype",
     paragraphs: [
-      "The figures that appear here - cowboys, ranchers, frontier individuals - are presented not as archetypes, but as people. Expression, stillness, and bearing carry the story. A glance replaces gesture. A hand resting on a tool carries more weight than action.",
-      "These images resist simplification. Meaning emerges slowly, through familiarity and return viewing, rather than immediate explanation."
+      "The figures that appear here\u2014cowboys, ranchers, frontier individuals\u2014are presented not as archetypes, but as people. Expression, stillness, and bearing carry the story. A glance replaces gesture. A hand resting on a tool carries more weight than action.",
+      "These images resist simplification. Meaning emerges slowly, through familiarity and return viewing, rather than immediate explanation. Each photograph functions as a single frame from a larger, unfinished narrative\u2014a One-Image Movie\u2122 waiting to be completed by the viewer."
     ]
   },
 
-  // 3. INDIGENOUS PRESENCE
+  // 4. INDIGENOUS PRESENCE
   {
     subhead: "Indigenous Presence in the American West",
     paragraphs: [
-      "This body of work acknowledges that the American West cannot be understood without Indigenous presence. These portraits represent continuity rather than reenactment - living people, living culture, grounded in collaboration, research, and respect.",
+      "The story of the American West cannot be told through a single perspective. This body of work acknowledges that reality by presenting Indigenous presence as continuity rather than reenactment\u2014living people, living culture, grounded in collaboration, research, and respect.",
       "Each portrait stands as part of a larger narrative thread, woven into the broader collection without isolation or tokenism."
     ]
   },
 
-  // 4. LONG VIEWING
+  // 5. THE PAINTERLY PROCESS
   {
-    subhead: "Images That Reward Long Viewing",
+    subhead: "The Painterly Process",
     paragraphs: [
-      "The photographs in this collection are designed to unfold through time. They do not rush toward resolution or explanation. Atmosphere, posture, and tonal restraint allow the viewer to enter the image rather than consume it.",
-      "Details surface gradually. Meaning accumulates through attention."
-    ]
-  },
-
-  // 5. CRAFT & PROCESS
-  {
-    subhead: "Craft & Process Behind the Work",
-    paragraphs: [
-      "Light is sculpted. Tone is controlled. Composition serves narrative restraint rather than spectacle. The visual language of this work draws from the Pictorialist tradition, applying painterly discipline to photographic process.",
-      "Every decision - framing, exposure, tonal balance - is made in service of story. To understand how this approach differs from conventional photography, <a href='/Painterly-Western-Photography'>explore the discipline behind the work</a>."
+      "The visual language of this work draws from the Pictorialist tradition, applying painterly discipline to photographic process. Every decision\u2014framing, exposure, tonal balance\u2014is made in service of story. Light is sculpted to reveal character. Texture is layered to create atmosphere. Color is shaped until the image reads with the weight of a painting while remaining unmistakably photographic.",
+      "This is not a filter or a preset. It is a process closer to painting: deliberate, iterative, and guided by decades of experience in medical illustration and fine art. The painterly quality comes from lived experience and disciplined creative practice\u2014not automation."
     ]
   },
 
@@ -51,8 +50,8 @@
   {
     subhead: "For Collectors",
     paragraphs: [
-      "This collection is created for collectors who value depth over decoration and narrative integrity over trend. Each image is intended to live with the viewer - revealing more through familiarity rather than immediate impact.",
-      "These works are produced with museum-quality materials and archival intent, designed to endure both physically and emotionally."
+      "This collection is created for collectors who value depth over decoration and narrative integrity over trend. Each image is intended to live with the viewer\u2014revealing more through familiarity rather than immediate impact.",
+      "These works are produced with museum-quality materials and archival intent, designed to endure both physically and emotionally. Whether on archival paper, premium canvas, or Wayne\u2019s proprietary <a href=\"/Other/K4-Select-Series/Engrained\">Engrained wood panel prints</a>\u2014where the image is layered into Baltic birch using a five-layer UV process\u2014every print is numbered, signed, and hand-inspected for tonal fidelity."
     ]
   },
 
@@ -60,8 +59,8 @@
   {
     subhead: "Step Inside the Story",
     paragraphs: [
-      "Each photograph functions as a single frame from a larger, unfinished narrative - a One-Image Movie waiting to be completed by the viewer.",
-      "This page presents a curated body of work focused on character, presence, and the emotional landscape of the American West - fine art photography shaped by restraint, craft, and lived experience."
+      "The doorway above begins with the frontier era that shaped the mythology of the American West. From there, Facing History opens into galleries where individual stories unfold across a larger historical landscape. Each image is a marker\u2014a tombstone of sorts\u2014recording the story, legacy, and lived experience of those who shaped the frontier.",
+      "These are not galleries you browse. They are rooms you enter. The history behind them runs deeper than any single frame can hold."
     ]
   }
 ];

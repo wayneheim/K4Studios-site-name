@@ -2,9 +2,10 @@
 export const painterlyStory = [
   /* ──────────────────────────────────────── 1 */
   {
-    title: "Historical Reenactments: Where History Lives (and Breathes)",
+    title: "What Is Historical Reenactment Photography?",
     paragraphs: [
-      `Historical reenactments have a long, rich lineage—stretching back at least to Roman times, when epic battles were restaged in vast amphitheaters for the public to witness. Today’s living history events continue that impulse to make the past present, giving audiences a visceral, multi-sensory way to learn and remember.`
+      `Historical reenactment photography is the practice of documenting and artistically interpreting living history events—public gatherings where participants portray historical figures, re-create battles, and demonstrate period crafts, clothing, and daily life. At its best, reenactment photography captures not just what happened, but what it felt like to be there.`,
+      `Historical reenactments themselves have a long, rich lineage—stretching back at least to Roman times, when epic battles were restaged in vast amphitheaters for the public to witness. Today's living history events continue that impulse to make the past present, giving audiences a visceral, multi-sensory way to learn and remember.`
     ]
   },
 

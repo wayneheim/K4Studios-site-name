@@ -66,10 +66,18 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
   if (selected.length === 0) return null;
 
   const getExcerpt = (story: string, maxLength = 280) => {
-    if (story.length <= maxLength) return story;
-    const truncated = story.slice(0, maxLength);
+    const normalize = (text: string) =>
+      text
+        .trim()
+        // Avoid quote artifacts from pasted/encoded content (some sources include leading/trailing quotes).
+        .replace(/^[\s\u00A0]*["“]+\s*/u, '')
+        .replace(/\s*["”]+[\s\u00A0]*$/u, '');
+
+    const cleaned = normalize(story);
+    if (cleaned.length <= maxLength) return cleaned;
+    const truncated = cleaned.slice(0, maxLength);
     const lastSpace = truncated.lastIndexOf(' ');
-    return truncated.slice(0, lastSpace) + '...';
+    return normalize(truncated.slice(0, lastSpace) + '...');
   };
 
   // Structured data for SEO
@@ -157,18 +165,12 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
               >
                 "{selected[current].title}"
               </h4>
-              <div className={`flex gap-1 mb-4 ${isSecondary ? 'ml-1' : 'ml-2'}`}>
-                <span 
-                  className={`leading-none -mt-1 ${isSecondary ? 'text-2xl' : 'text-3xl'}`} 
-                  style={{ fontFamily: 'Georgia, serif', color: isSecondary ? 'rgba(74, 60, 46, 0.2)' : 'rgba(74, 60, 46, 0.3)' }}
-                >"</span>
-                <p 
-                  className={`text-[#6b5d4d] leading-[1.7] ${isSecondary ? 'text-[14px]' : 'text-[15px]'}`} 
-                  style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}
-                >
-                  {getExcerpt(selected[current].story, isSecondary ? 200 : 280)}
-                </p>
-              </div>
+              <p 
+                className={`text-[#6b5d4d] leading-[1.7] mb-4 ${isSecondary ? 'ml-1 text-[14px]' : 'ml-2 text-[15px]'}`} 
+                style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}
+              >
+                {getExcerpt(selected[current].story, isSecondary ? 200 : 280)}
+              </p>
               <span
                 className="inline-flex items-center"
                 style={{ color: '#5a4d40', fontSize: isSecondary ? '11px' : '12px' }}

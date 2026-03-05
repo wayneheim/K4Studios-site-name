@@ -1,7 +1,7 @@
 export const landingWestern = {
     //Painterly Photogrqphy
   title: "Historical Reenactment Events & Reenactor Photography",
-  subtitle: "Reenactors Keeping History Alive",
+  subtitle: "From Civil War Battlefields to Wild West Frontier Towns",
    breadcrumb: "Historical Reenactment Photography",
 
   tombstones: [
