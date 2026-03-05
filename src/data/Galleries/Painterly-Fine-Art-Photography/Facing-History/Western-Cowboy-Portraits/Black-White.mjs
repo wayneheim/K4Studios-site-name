@@ -3297,8 +3297,8 @@ export const galleryData = [
   {
     "id": "i-dm5pNmb",
     "title": "When He Speaks",
-    "description": "A painterly black and white Western portrait of an older man speaking into a microphone, his expression shaped by years of lived experience. This fine art photograph emphasizes restraint over performance, drawing from documentary Americana and narrative Western portraiture. Authority here is earned rather than claimed, inviting the viewer to listen closely to meaning rather than volume. Ideal for collectors seeking story-driven Western wall art rooted in character and voice. © Wayne Heim.",
-    "alt": "Painterly black and white Western portrait of an older man speaking into a microphone, conveying authority, experience, and narrative",
+    "description": "An older Western figure pauses mid-speech, pipe resting between his lips as years of experience settle into the lines of his face. The portrait carries the quiet authority of someone accustomed to being heard without raising his voice. Presented in the atmospheric tones of painterly Western photography, the image reflects the enduring character and storytelling tradition of the American frontier. \n\n© Wayne Heim",
+    "alt": "Older western man with long beard and bowler hat speaking into a microphone in a black and white frontier portrait.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dm5pNmb/2/K2TzkB5nqXMSrWJSDV5fWWd2qQZQ8jvkbKcfhgw76/XL/_HF21794-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dm5pNmb/2/K2TzkB5nqXMSrWJSDV5fWWd2qQZQ8jvkbKcfhgw76/XL/_HF21794-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dm5pNmb/2/K2TzkB5nqXMSrWJSDV5fWWd2qQZQ8jvkbKcfhgw76/XL/_HF21794-Edit-XL.jpg",
@@ -3306,37 +3306,48 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dm5pNmb/2/KxbqJVDhm8cmXCKxs4FLvJCKvVLSMB8mgPKLBmmh7/S/_HF21794-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-dm5pNmb/A",
+
     "keywords": [
-      "western portrait",
-      "painterly western photography",
-      "black and white western art",
-      "narrative western",
-      "americana portrait",
-      "documentary western style",
-      "western wall art",
-      "voice of experience",
-      "frontier storytelling",
-      "vintage western tone",
-      "story rich fine art",
-      "character study",
-      "western fine art photography",
-      "cowboy artwork",
+      "American frontier",
       "cowboy art",
+      "cowboy artwork",
+      "cowboy portraits",
+      "cowboys",
+      "fine art Western photography",
+      "frontier life",
+      "narrative Western art",
+      "painterly cowboy photography",
+      "painterly Western images",
+      "painterly Western photograph",
+      "Pictorialist tradition",
+      "rugged spirit",
+      "the American West",
+      "western cowboy art",
+      "Western Cowboy Portraits",
+      "western cowboys",
+      "western fine art",
+      "western themed art",
+      "wild west painterly photography",
+      "wild west photography"
     ],
+
     "story": "When he speaks, the room shifts. Not loud. Not rushed. Just enough to pull the noise down a notch.\n\nYears settle into his voice—the kind you don’t rehearse, the kind earned by standing in places where words mattered. The microphone isn’t there to amplify him; it’s there to make sure nothing gets missed.\n\nHe doesn’t talk to fill space. He talks because something needs saying, and because the room knows better than to interrupt when experience finally clears its throat.",
-    "notes": "“When He Speaks” centers on authority earned rather than performed. The image draws its strength from restraint—an older man mid-address, framed not as a spectacle, but as a witness whose words carry weight because of where they come from. The microphone functions less as amplification and more as a quiet symbol of trust, suggesting that what’s being said matters enough to be heard clearly.\n\nThe painterly black and white treatment recalls documentary portraiture and early American storytelling, where character outweighed polish. Subtle tonal transitions and controlled contrast allow the face to read like a landscape shaped by time, observation, and judgment.\n\nThis work belongs to a narrative Western lineage that values implication over drama. It invites the viewer to lean in—not for volume, but for meaning—positioning the subject as a keeper of stories rather than a performer of them.",
+    "notes": "The portrait focuses on presence rather than performance. A steady gaze, weathered features, and relaxed posture suggest a man whose authority comes from experience rather than volume. The soft atmospheric treatment surrounding the figure allows the face and hat to emerge gradually from the haze, echoing the visual language of early Western portraiture. Subtle tonal transitions and restrained composition reinforce the feeling of a voice shaped by years of observation, storytelling, and frontier life.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 73
+    "sortOrder": 73,
+    contentSource: "ai"
   },
   {
     "id": "i-PfVhxQT",
     "title": "First Light, First Cup",
-    "description": "A painterly black and white Western image capturing a quiet morning ritual on the frontier, as a cowboy warms his hands around a cup of coffee at first light. Steam rises against the cold air, emphasizing stillness, routine, and resolve before the labor of the day begins. This fine art photograph reflects the understated rhythm of frontier life, blending narrative restraint with classic Western atmosphere for collectors drawn to story-driven Americana and timeless Western wall art. © Wayne Heim.",
-    "alt": "Painterly black and white Western photograph of a cowboy holding a cup of coffee at dawn, steam rising in a quiet frontier camp.",
+    "description": "At the edge of a quiet camp, a cowboy stands over the morning fire with a cup warming his hands as steam lifts into the cold air. Tents and cooking gear frame the moment, capturing the small rituals that shaped daily life on the American frontier. Rendered in the soft tones of painterly Western photography, the scene reflects the calm resolve that begins many days in the West. \n\n© Wayne Heim",
+    "alt": "Cowboy standing by a campfire at a frontier camp drinking coffee at dawn in a black and white western scene.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-PfVhxQT/0/Lvjz6wTs2gKFTvXDHXmCsXtjQqvP7jV8c846GrRCv/XL/_HF21124-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-PfVhxQT/0/Lvjz6wTs2gKFTvXDHXmCsXtjQqvP7jV8c846GrRCv/XL/_HF21124-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-PfVhxQT/0/Lvjz6wTs2gKFTvXDHXmCsXtjQqvP7jV8c846GrRCv/XL/_HF21124-Edit-XL.jpg",
@@ -3344,31 +3355,40 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-PfVhxQT/0/M32mJ64ktDHRcZJgS85cXVWdBjv5jkVgNKVH5X8xN/S/_HF21124-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-PfVhxQT/A",
+
     "keywords": [
-      "western cowboy photography",
-      "painterly western art",
-      "frontier life",
-      "morning ritual",
-      "cowboy camp",
-      "black and white western",
-      "narrative western photography",
-      "american frontier",
-      "western wall art",
-      "story-driven americana",
-      "rugged solitude",
-      "quiet moments",
-      "vintage western tone",
+      "American frontier",
+      "cowboy art",
       "cowboy portraits",
       "cowboys",
+      "fine art Western photography",
+      "frontier life",
+      "narrative Western art",
+      "painterly cowboy photography",
+      "painterly Western images",
+      "painterly Western photograph",
+      "rugged spirit",
+      "the American West",
+      "western cowboy art",
+      "Western Cowboy Portraits",
+      "western cowboys",
+      "western fine art",
+      "western themed art",
+      "wild west painterly photography",
+      "wild west photography"
     ],
+
     "story": "The fire is still thinking about waking up.  \nSteam lifts slow from the cup, drifting into the cold like it’s unsure it wants to stay.\n\nHe stands there a moment longer than he needs to, hands wrapped around the warmth, listening to the camp breathe—canvas shifting, embers settling, the quiet before men start moving. This is the last soft moment the day will offer. After this, the world asks things of him.\n\nFirst light breaks over the tents. He drinks.  \nThen the work begins.",
-    "notes": "“First Light, First Cup” distills the frontier experience to its most elemental pause—warmth held briefly before the demands of the day take over. The composition favors restraint over drama, allowing atmosphere, posture, and ritual to carry the narrative weight. Rendered in painterly black and white, the image recalls early pictorialist traditions and classic Western aesthetics, where tone and texture suggested endurance rather than spectacle.\n\nWhat elevates the work is its focus on the unguarded interval: a moment of preparation rather than action, solitude rather than display. Steam, stillness, and quiet resolve form a timeless archetype of labor and self-reliance. The piece functions less as a portrait of a man and more as a meditation on frontier rhythm—where survival was built one small ritual at a time.",
+    "notes": "The image centers on the quiet rhythm of frontier mornings. The figure stands alone beside the fire, surrounded by simple camp tools that hint at the work waiting beyond the moment. Smoke, steam, and soft grain lend the photograph an atmospheric quality reminiscent of early documentary imagery of the American West. Rather than dramatizing action, the composition honors the brief pause before the day begins—where warmth, silence, and routine shape the cadence of frontier life.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 74
+    "sortOrder": 74,
+    contentSource: "ai"
   },
   {
     "id": "i-53b8wQ2",
