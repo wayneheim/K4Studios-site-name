@@ -3248,8 +3248,8 @@ export const galleryData = [
   {
     "id": "i-x2xNvsM",
     "title": "Small But Mighty",
-    "description": "A painterly black and white Western portrait of a young frontier girl—hat tilted, eyes unwavering, stance defiant. This fine art photograph channels both innocence and grit, blending story-rich Americana with the classic tones of vintage cowboy art. Perfect for collectors seeking narrative-driven wall art, authentic Western portraiture, and evocative depictions of the American West. © Wayne Heim.",
-    "alt": "Black and white Western portrait—young frontier girl stands firm, hat tilted, painterly fine art cowboy photography.",
+    "description": "A young frontier girl faces the camera with steady eyes and wind-tossed hair, her cap pulled low as dust and light drift softly around her. The portrait captures a quiet strength shaped by the hard rhythms of frontier life, where confidence often came early. Rendered with the atmospheric tones of painterly cowboy photography, the image reflects the resilience and character that grew alongside the American frontier. \n\n© Wayne Heim",
+    "alt": "Frontier girl in cap standing with steady gaze in a soft black and white western portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-x2xNvsM/1/L4jjNCD33HQJ5dDdjK9wFDnWxZqJjNS6sFmbvznxp/XL/_HF22145-Edit-2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-x2xNvsM/1/L4jjNCD33HQJ5dDdjK9wFDnWxZqJjNS6sFmbvznxp/XL/_HF22145-Edit-2-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-x2xNvsM/1/L4jjNCD33HQJ5dDdjK9wFDnWxZqJjNS6sFmbvznxp/XL/_HF22145-Edit-2-Edit-XL.jpg",
@@ -3257,31 +3257,42 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-x2xNvsM/1/Lx7qLDtzHQxVFk3fsr54ZbWPgjxW38XnXhP7gxcWK/S/_HF22145-Edit-2-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-x2xNvsM/A",
+
     "keywords": [
-      "western portrait",
-      "painterly cowboy photography",
-      "frontier life",
-      "american frontier",
+      "American frontier",
       "cowboy art",
-      "small but mighty",
-      "grit & glory",
-      "wild west photography",
-      "narrative western",
-      "vintage western portrait",
-      "story-rich",
-      "americana photography",
+      "cowboy artwork",
+      "cowboy portraits",
+      "cowboys",
+      "fine art Western photography",
+      "frontier life",
+      "narrative Western art",
+      "painterly cowboy photography",
+      "painterly Western images",
+      "painterly Western photograph",
+      "Pictorialist tradition",
       "rugged spirit",
-      "western wall art",
-      "youth resilience",
+      "the American West",
+      "western cowboy art",
+      "Western Cowboy Portraits",
+      "western cowboys",
+      "western fine art",
+      "western themed art",
+      "wild west painterly photography",
+      "wild west photography"
     ],
+
     "story": "She stands her ground, eyes steady—daring the world to doubt her.\n\nMost folks see a child, but out here on the frontier, toughness isn’t measured by size. She’s learned to hold her own, boots planted firm in dust and promise. Every stubborn day, every scraped knee, every lesson learned the hard way just adds to her legend in the making.\n\nOn the edge of the American West, it’s the small ones you learn not to overlook.",
-    "notes": "“Small But Mighty” channels the indomitable spirit of youth on the American frontier. The painterly black and white process evokes early Western portraiture, blending innocence with a palpable sense of resolve. Every detail—the set jaw, weathered hat, and steady gaze—speaks to a legacy shaped not by comfort, but by challenge. This piece celebrates the overlooked heroes of the West: the children who learned grit, courage, and tenacity at an early age. It stands as both portrait and archetype, a testament to resilience woven into the very fabric of the frontier.",
+    "notes": "The portrait draws its power from simplicity and presence. The subject’s direct gaze and upright posture anchor the composition, while the soft atmospheric treatment surrounds her with a sense of frontier dust and distance. Subtle tonal transitions and period styling echo early photographic portraiture, allowing the image to sit comfortably within the tradition of Western character studies. The result is both a personal portrait and a broader reflection of the quiet resilience often found in frontier life.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 72
+    "sortOrder": 72,
+    contentSource: "ai"
   },
   {
     "id": "i-dm5pNmb",

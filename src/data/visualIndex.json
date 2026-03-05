@@ -4578,6 +4578,31 @@
       },
       "analysisVersion": 7,
       "indexedAt": "2026-03-05T18:51:21.776Z"
+    },
+    "i-x2xNvsM": {
+      "imageId": "i-x2xNvsM",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
+      "dhash": "1111110111001110001100101001110011110000000000000000000000000000",
+      "width": 576,
+      "height": 768,
+      "dominantColors": [],
+      "warmCoolRatio": 0.5,
+      "saturationAvg": 0,
+      "brightnessAvg": 0.5,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0,
+      "redCoverage": 0,
+      "yellowCoverage": 0,
+      "purpleCoverage": 0,
+      "contrastScore": 0.34,
+      "toneDistribution": {
+        "shadows": 0.03,
+        "midtones": 0.78,
+        "highlights": 0.19
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-05T18:54:06.301Z"
     }
   }
 }
