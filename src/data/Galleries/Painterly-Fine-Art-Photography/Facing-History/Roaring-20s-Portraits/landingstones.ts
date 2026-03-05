@@ -17,7 +17,7 @@ export const landingWestern = {
   ],
 
   breadcrumb: 
-  `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> | Roaring 20's Art`,
+  `<a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=1920s" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Facing History</a> | Roaring 20's Art`,
 
   tombstones: [
     {

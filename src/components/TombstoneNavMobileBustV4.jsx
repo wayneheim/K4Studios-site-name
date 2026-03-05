@@ -435,7 +435,7 @@ export default function TombstoneNav({
 
         /* ── Wheelhouse focus mode ── */
         .tile-grid.has-focus .tile.is-focused {
-          transform: scale(1.18) translateY(-20px);
+          transform: scale(1.1) translateY(-14px);
           filter: none;
           z-index: 3;
         }
@@ -454,13 +454,13 @@ export default function TombstoneNav({
 
         @media (hover: hover) and (pointer: fine) {
           .tile-grid.has-focus:hover .tile.is-focused {
-            transform: scale(1.18) translateY(-20px);
+            transform: scale(1.08) translateY(-12px);
             filter: none;
             z-index: 3;
           }
 
           .tile-grid.has-focus:hover .tile.is-focused.is-muted-by-hover {
-            transform: scale(1.18) translateY(-20px);
+            transform: scale(1.08) translateY(-12px);
             filter: grayscale(88%) brightness(0.56);
             z-index: 3;
           }
@@ -478,11 +478,6 @@ export default function TombstoneNav({
         }
 
         @media (max-width: 767px) {
-          .tile-grid:not(.has-focus) .tile:last-child:nth-child(odd) {
-            grid-column: 1 / -1;
-            justify-self: center;
-          }
-
           .tombstone-divider {
             margin: 0.25rem auto 0.45rem;
           }
@@ -504,12 +499,12 @@ export default function TombstoneNav({
             order: -1 !important;
             grid-column: 1 / -1;
             justify-self: center;
-            transform: scale(1.05) translateY(-15px);
+            transform: scale(1.0) translateY(-11px);
             z-index: 3;
           }
 
           .tile-grid.has-focus .tile.is-focused .tombstone-card {
-            max-width: 164px;
+            max-width: 154px;
           }
 
           .tile-grid.has-focus .tile.is-dimmed {
@@ -528,7 +523,7 @@ export default function TombstoneNav({
           }
 
           .tile-grid.has-focus .tile.is-focused {
-            transform: scale(1.05) translateY(-15px);
+            transform: scale(1.0) translateY(-11px);
           }
         }
 

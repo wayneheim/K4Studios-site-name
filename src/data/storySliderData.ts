@@ -79,7 +79,7 @@ export const storySliderData = [
   {
     "id": "i-5Md3dQ3",
     "title": "It's Just a One Day Ride to Spearfish. What Could Possibly Go Wrong?",
-    "story": "One day, he said.\nEasy ride, he promised. Sun up, sun down, back before the lamp’s gone cold.\n\nBut her head finds his shoulder, and in the hush between words, she knows:\nIt’s never just a day, never just a ride.\n\nPlans are easy. Goodbyes—never are.\n\nA painterly Western portrait capturing the quiet tension of departure. A man ready to ride reassures with a steady smile while the woman at his side leans in, holding back words she cannot say. Sun-washed tones and soft texture turn the moment into a layered story of hope, worry, and the fragile promises that often preceded a frontier journey. © Wayne Heim"
+    "story": "One day, he said.\nEasy ride, he promised. Sun up, sun down, back before the lamp’s gone cold.\n\nBut her head finds his shoulder, and in the hush between words, she knows:\nIt’s never just a day, never just a ride.\n\nPlans are easy. Goodbyes—never are."
   },
   {
     "id": "i-HBRmWg4",

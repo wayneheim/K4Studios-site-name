@@ -1,0 +1,42 @@
+---
+export const prerender = true;
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import TombstoneNav from '@/components/TombstoneNav.jsx';
+import { landingWestern } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/landingstones.ts';
+---
+
+<BaseLayout title="DEV — Facing History Focus Test">
+  <meta name="robots" content="noindex, nofollow" slot="head" />
+
+  <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+    <div class="max-w-[900px] mx-auto px-4 pt-8">
+      <h1 class="text-2xl font-bold mb-2 text-center" style="font-family: 'Glegoo', serif;">
+        Facing History — Wheelhouse Focus Test
+      </h1>
+      <p class="mb-6 text-sm text-center" style="color: #6d5b4a;">
+        <a href="/dev/facing-history" class="underline hover:text-[#8b0000]">No focus</a> &middot;
+        <a href="?focus=civilwar" class="underline hover:text-[#8b0000]">civilwar</a> &middot;
+        <a href="?focus=frontier" class="underline hover:text-[#8b0000]">frontier</a> &middot;
+        <a href="?focus=1920s" class="underline hover:text-[#8b0000]">1920s</a> &middot;
+        <a href="?focus=wwii" class="underline hover:text-[#8b0000]">wwii</a>
+      </p>
+
+      <div class="py-5">
+        <TombstoneNav client:load items={landingWestern.tombstones} />
+      </div>
+
+      <div class="mt-12 p-4 bg-[#f8f5f0] rounded border border-[#e0d8cc] text-sm" style="font-family: 'Glegoo', serif;">
+        <p class="font-bold mb-2">Dev Notes:</p>
+        <ul class="list-disc pl-5 space-y-1" style="color: #555;">
+          <li>Tombstones reorder via CSS <code>order</code> to center the focused era</li>
+          <li>Drop-in animation masks the reorder (all tiles invisible until ~1s)</li>
+          <li>Animation delay synced to visual position, not DOM index &mdash; left-to-right sweep preserved</li>
+          <li>Focused tile: enlarged, proud (translateY -8px), gold accent border</li>
+          <li>Siblings: dimmed grayscale &mdash; hover restores them</li>
+          <li>No SSR change &mdash; Googlebot always sees default DOM order</li>
+          <li>Live Facing History page needs <code>client:load</code> on TombstoneNav to activate</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

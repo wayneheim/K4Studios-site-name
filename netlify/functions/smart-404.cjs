@@ -3,15 +3,44 @@
  * 
  * This serverless function handles 404s for image pages (/Galleries/.../i-xxxxx).
  * It looks up the image ID in a pre-built map and either:
- * 1. Redirects to the correct gallery if the image moved (301)
- * 2. For NOT FOUND images:
- *    - Bots get 404 Not Found (never-existed IDs, not permanent deletions)
- *    - Humans get 302 redirect to gallery landing (good UX)
+ * 1. Redirects to the correct gallery if the image moved (301) — same for all UAs
+ * 2. Returns the branded 404 page if the image ID is unknown — same for all UAs
+ * 
+ * Bots (Bingbot, Googlebot, etc.) and humans receive IDENTICAL responses.
+ * The only UA-based difference is in the gating layer (not the outcome):
+ *   - Crawlers are admitted without a session cookie; humans require k4_vid/k4_sid
+ *   - Crawlers get a higher rate-limit cap (60/min vs 25/min)
  * 
  * This function ONLY runs on actual 404s, not on every page load.
  */
 
 let _imageIdMapLower = null;
+let _knownGalleryPathsLower = null;
+let _branded404Html = null;
+let _branded404FetchedAt = 0;
+const BRANDED_404_CACHE_TTL_MS = 300000;
+
+const SPECIAL_IMAGE_IDS = new Set(['i-k4studios']);
+const IMAGE_ID_STRICT_REGEX = /^i-[A-Za-z0-9]{6,10}$/;
+
+function isStrictImageId(id) {
+  if (!id) return false;
+  if (SPECIAL_IMAGE_IDS.has(String(id).toLowerCase())) return true;
+  return IMAGE_ID_STRICT_REGEX.test(String(id));
+}
+
+function normalizePath(path) {
+  if (!path) return '';
+  const trimmed = String(path).trim();
+  if (!trimmed) return '';
+  return trimmed.length > 1 ? trimmed.replace(/\/+$/g, '') : trimmed;
+}
+
+function getParentGalleryPath(pathname) {
+  const normalized = normalizePath(pathname);
+  return normalized.replace(/\/[iI]-[A-Za-z0-9-]+\/?$/, '');
+}
+
 function getImageIdMapLower() {
   if (_imageIdMapLower) return _imageIdMapLower;
   const imageIdMap = require('./imageIdMap.json');
@@ -21,6 +50,31 @@ function getImageIdMapLower() {
   }
   _imageIdMapLower = lower;
   return _imageIdMapLower;
+}
+
+function getKnownGalleryPathsLower() {
+  if (_knownGalleryPathsLower) return _knownGalleryPathsLower;
+
+  const imageIdMapLower = getImageIdMapLower();
+  const paths = new Set();
+
+  for (const value of Object.values(imageIdMapLower)) {
+    const pathValue = value?.path;
+    if (!pathValue) continue;
+
+    if (Array.isArray(pathValue)) {
+      for (const p of pathValue) {
+        const n = normalizePath(p).toLowerCase();
+        if (n) paths.add(n);
+      }
+    } else {
+      const n = normalizePath(pathValue).toLowerCase();
+      if (n) paths.add(n);
+    }
+  }
+
+  _knownGalleryPathsLower = paths;
+  return _knownGalleryPathsLower;
 }
 
 // Detect search engine crawlers by User-Agent (allowed)
@@ -58,6 +112,53 @@ function getClientIp(headers) {
   const xff = h['x-forwarded-for'] || h['X-Forwarded-For'];
   if (xff) return String(xff).split(',')[0].trim();
   return '';
+}
+
+function getOriginFromEvent(event) {
+  const headers = event?.headers || {};
+  const host = headers['x-forwarded-host'] || headers['X-Forwarded-Host'] || headers.host || headers.Host;
+  const proto = headers['x-forwarded-proto'] || headers['X-Forwarded-Proto'] || 'https';
+  if (host) return `${proto}://${host}`;
+  return 'https://www.k4studios.com';
+}
+
+async function getBranded404Html(event) {
+  const now = Date.now();
+  if (_branded404Html && (now - _branded404FetchedAt) < BRANDED_404_CACHE_TTL_MS) {
+    return _branded404Html;
+  }
+
+  const origin = getOriginFromEvent(event);
+  const url = `${origin}/404.html`;
+  try {
+    const resp = await fetch(url, { method: 'GET' });
+    if (resp && (resp.ok || resp.status === 404)) {
+      const html = await resp.text();
+      if (html && html.trim()) {
+        _branded404Html = html;
+        _branded404FetchedAt = now;
+        return _branded404Html;
+      }
+    }
+  } catch (e) {
+    console.log(`[smart-404] branded 404 fetch failed: ${e?.message || e}`);
+  }
+
+  return '<!DOCTYPE html><html><head><title>Not Found</title></head><body><h1>404 Not Found</h1></body></html>';
+}
+
+async function createBranded404Response(event, reason, maxAge = 86400) {
+  const html = await getBranded404Html(event);
+  return {
+    statusCode: 404,
+    headers: {
+      'Content-Type': 'text/html; charset=utf-8',
+      'Cache-Control': `public, max-age=${maxAge}`,
+      'X-Robots-Tag': 'noindex, nofollow',
+      'X-Smart-404': reason
+    },
+    body: html
+  };
 }
 
 // Best-effort, in-memory rate limiter (per warm function instance).
@@ -166,16 +267,7 @@ exports.handler = async (event) => {
   // Hard lockout: known scrapers/automation clients.
   if (isBlockedUa) {
     console.log('[smart-404] Locked: blocked UA');
-    return {
-      statusCode: 404,
-      headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
-        'Cache-Control': 'public, max-age=600',
-        'X-Robots-Tag': 'noindex, nofollow',
-        'X-Smart-404': 'locked'
-      },
-      body: 'Not Found'
-    };
+    return createBranded404Response(event, 'locked', 600);
   }
 
   // Allow: on-site humans (session cookie) OR major search crawlers.
@@ -183,16 +275,7 @@ exports.handler = async (event) => {
   if (!(hasSession || isCrawler) || highRate) {
     if (!hasSession && !isCrawler) console.log('[smart-404] Locked: no session and not a crawler');
     if (highRate) console.log(`[smart-404] Locked: high rate from ${clientIp}`);
-    return {
-      statusCode: 404,
-      headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
-        'Cache-Control': 'public, max-age=600',
-        'X-Robots-Tag': 'noindex, nofollow',
-        'X-Smart-404': 'locked'
-      },
-      body: 'Not Found'
-    };
+    return createBranded404Response(event, 'locked', 600);
   }
   
   // Extract image ID from path or use query param
@@ -206,14 +289,28 @@ exports.handler = async (event) => {
   if (imageId && !imageId.startsWith('i-')) {
     imageId = 'i-' + imageId;
   }
+
+  // Fast-fail junk IDs before any map lookup
+  if (!isStrictImageId(imageId)) {
+    console.log(`[smart-404] Invalid image ID shape: ${imageId}`);
+    return createBranded404Response(event, 'invalid-id-format');
+  }
+
+  // Validate parent gallery path before ID lookup
+  const parentGalleryPath = getParentGalleryPath(requestedPath);
+  const knownGalleryPaths = getKnownGalleryPathsLower();
+  const parentGalleryLower = String(parentGalleryPath || '').toLowerCase();
+  const hasKnownGalleryExact = knownGalleryPaths.has(parentGalleryLower);
+  const hasKnownGalleryLeaf = knownGalleryPaths.has(`${parentGalleryLower}/gallery`);
+  if (!(hasKnownGalleryExact || hasKnownGalleryLeaf)) {
+    console.log(`[smart-404] Unknown gallery path: ${parentGalleryPath}`);
+    return createBranded404Response(event, 'invalid-gallery-path');
+  }
   
   if (!imageId) {
     // Not an image page request - pass through to normal 404
     console.log(`[smart-404] No image ID found, passing to 404`);
-    return {
-      statusCode: 404,
-      body: 'Not Found'
-    };
+    return createBranded404Response(event, 'no-image-id');
   }
   
   console.log(`[smart-404] Looking up image ID: ${imageId}`);
@@ -277,53 +374,8 @@ exports.handler = async (event) => {
     };
   }
   
-  // Image not found anywhere
-  // Bots get 410 Gone (kills ghost URLs), humans get redirect to gallery
-  const galleryLandingPath = requestedPath.replace(/\/i-[a-zA-Z0-9]+\/?$/, '');
-  
-  if (isBotRequest) {
-    // Bot: Return 404 Not Found — these IDs never existed (probe/stale traffic).
-    // 410 was poisoning Bing crawl trust by signaling permanent deletion at scale.
-    // 410 is now reserved for explicit legacy _redirects rules only.
-    console.log(`[smart-404] Bot detected, returning 404 for unknown: ${imageId}`);
-    
-    return {
-      statusCode: 404,
-      headers: {
-        'Content-Type': 'text/html',
-        'Cache-Control': 'public, max-age=86400',
-        'X-Robots-Tag': 'noindex',
-        'X-Smart-404': 'notfound-bot'
-      },
-      body: '<!DOCTYPE html><html><head><title>Not Found</title></head><body><h1>404 Not Found</h1><p>This image does not exist.</p></body></html>'
-    };
-  }
-  
-  // Human: Redirect to gallery landing page for good UX
-  if (galleryLandingPath && galleryLandingPath !== requestedPath) {
-    console.log(`[smart-404] Human visitor, redirecting to gallery: ${galleryLandingPath}`);
-    
-    return {
-      statusCode: 302,
-      headers: {
-        'Location': `${galleryLandingPath}${passthroughQuery}`,
-        'Cache-Control': 'no-cache', // Don't cache redirects for humans
-        'X-Smart-404': 'gallery-fallback-human'
-      },
-      body: ''
-    };
-  }
-  
-  // Fallback to homepage if we can't determine a gallery
-  console.log(`[smart-404] No gallery path, redirecting to homepage`);
-  
-  return {
-    statusCode: 302,
-    headers: {
-      'Location': `/${passthroughQuery}`,
-      'Cache-Control': 'no-cache',
-      'X-Smart-404': 'homepage-fallback'
-    },
-    body: ''
-  };
+  // Image ID shape and gallery path are valid, but ID is unknown.
+  // Deterministic crawl-safe response for all UAs.
+  console.log(`[smart-404] Unknown image ID (deterministic 404): ${imageId}`);
+  return createBranded404Response(event, 'notfound');
 };

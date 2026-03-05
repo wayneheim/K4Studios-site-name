@@ -21,7 +21,7 @@ export const landingWestern = {
 
   breadcrumb: `
     <a 
-      href="/Galleries/Painterly-Fine-Art-Photography/Facing-History"
+      href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier"
       style="
         color: inherit;
         text-decoration: none;

@@ -1,0 +1,38 @@
+---
+export const prerender = true;
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import TombstoneNav from '@/components/TombstoneNavMobileBustV4.jsx';
+import { landingWestern } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/landingstones.ts';
+---
+
+<BaseLayout title="DEV — Facing History Focus Test v4">
+  <meta name="robots" content="noindex, nofollow" slot="head" />
+
+  <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+    <div class="max-w-[900px] mx-auto px-4 pt-8">
+      <h1 class="text-2xl font-bold mb-2 text-center" style="font-family: 'Glegoo', serif;">
+        Facing History — Wheelhouse Focus Test (v4)
+      </h1>
+      <p class="mb-6 text-sm text-center" style="color: #6d5b4a;">
+        <a href="/dev/facing-history-v4?v=20260305c" class="underline hover:text-[#8b0000]">No focus</a> &middot;
+        <a href="?focus=civilwar&v=20260305c" class="underline hover:text-[#8b0000]">civilwar</a> &middot;
+        <a href="?focus=frontier&v=20260305c" class="underline hover:text-[#8b0000]">frontier</a> &middot;
+        <a href="?focus=1920s&v=20260305c" class="underline hover:text-[#8b0000]">1920s</a> &middot;
+        <a href="?focus=wwii&v=20260305c" class="underline hover:text-[#8b0000]">wwii</a>
+      </p>
+
+      <div class="py-5" data-version="20260305c">
+        <TombstoneNav client:load items={landingWestern.tombstones} />
+      </div>
+
+      <div class="mt-12 p-4 bg-[#f8f5f0] rounded border border-[#e0d8cc] text-sm" style="font-family: 'Glegoo', serif;">
+        <p class="font-bold mb-2">Dev Notes:</p>
+        <ul class="list-disc pl-5 space-y-1" style="color: #555;">
+          <li>Version tag: 20260305c (new cache-bust marker)</li>
+          <li>Uses TombstoneNavMobileBustV4 module path (fresh JS fetch)</li>
+          <li>Focused tombstone intentionally reduced for easier comparison</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

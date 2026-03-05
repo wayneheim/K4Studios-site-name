@@ -1840,18 +1840,21 @@ async function getStatePixelTestRoaring20s(env, filters) {
       FROM by_viewer
     `;
     const byGalleryQuery = `
-      WITH image_views AS (
+      WITH image_views_raw AS (
         SELECT
           CASE
             WHEN e.page IS NULL OR e.page = '' THEN NULL
             WHEN instr(e.page, '/i-') > 0 THEN substr(e.page, 1, instr(e.page, '/i-') - 1)
             ELSE NULL
           END AS gallery_path,
-          e.target_id AS image_id
+          e.target_id AS image_id,
+          COALESCE(NULLIF(e.visitor_id, ''), 'ip:' || COALESCE(NULLIF(e.ip_hash, ''), 'unknown')) AS viewer_key,
+          COALESCE(NULLIF(e.session_id, ''), 'nosid:' || date(e.ts)) AS visit_id
         FROM raw_events e
         WHERE ${qualifiedDateClause}
           AND ${notCacheWarmer("e")}
-          AND e.event_type IN ('state_pixel', 'action_pixel')
+          AND e.event_type = 'state_pixel'
+          AND e.source_layer = 'sister_pixel_v1'
           AND e.page IS NOT NULL
           AND e.page != ''
           AND (e.page LIKE '/Galleries/%/i-%' OR e.page LIKE '/Other/%/i-%')
@@ -1861,6 +1864,14 @@ async function getStatePixelTestRoaring20s(env, filters) {
           AND e.target_id NOT LIKE '%/%'
           AND e.target_id NOT LIKE 'i-test%'
           AND COALESCE(e.source_layer, '') != 'cowboy_jump_pixel_v1'
+      ),
+      image_views AS (
+        SELECT DISTINCT
+          gallery_path,
+          image_id,
+          viewer_key,
+          visit_id
+        FROM image_views_raw
       )
       SELECT
         gallery_path,
@@ -1889,7 +1900,8 @@ async function getStatePixelTestRoaring20s(env, filters) {
         FROM raw_events e
         WHERE ${qualifiedDateClause}
           AND ${notCacheWarmer("e")}
-          AND e.event_type IN ('state_pixel', 'action_pixel')
+          AND e.event_type = 'state_pixel'
+          AND e.source_layer = 'sister_pixel_v1'
           AND e.target_id IS NOT NULL
           AND e.target_id != ''
           AND e.target_id LIKE 'i-%'
@@ -4456,6 +4468,14 @@ function renderDashboard({
         max-width: 100% !important;
         margin: 0 !important;
       }
+
+      /* Preserve intentionally hidden sections/panels on mobile */
+      .section[style*="display:none"],
+      .section[style*="display: none"],
+      .access-grid[style*="display:none"],
+      .access-grid[style*="display: none"] {
+        display: none !important;
+      }
       
       /* Override ANY inline max-width or fit-content */
       [style*="max-width"], [style*="fit-content"] {
@@ -5019,7 +5039,7 @@ function renderDashboard({
   <div class="section" style="max-width:1780px;margin:0 auto 18px;">
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
       <h3 style="margin:0;">Sister Pixel Image Access Overview</h3>
-      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Per-image breakout from <code>raw_events</code> for <code>event_type='state_pixel'</code>. Includes all <code>source_layer</code> values (e.g. Sister Pixel + Zoom Pixel). This is a test mirror of the Art Views \u2192 \u201CImage Access Overview\u201D concept, but powered by pixels (not JS).</div></span>
+      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Per-image breakout from <code>raw_events</code> for <code>event_type='state_pixel'</code> with <code>source_layer='sister_pixel_v1'</code> only. This now matches the Sister Pixel pulse counter semantics.</div></span>
       <span style="margin-left:auto;font-size:12px;color:#888;">Rows: <strong style="color:#fff;">${spPixelImageAccess.length || 0}</strong></span>
     </div>
     <div style="margin-top:10px;">
