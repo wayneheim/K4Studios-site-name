@@ -489,6 +489,20 @@ export const landingMetaDB = {
     twitterImage: "/og/traditional.jpg",
   },
 
+  "/Fine-Art-Photography-of-the-American-West": {
+    ogTitle: "Fine Art Photography of the American West – Wayne Heim",
+    ogDescription:
+      "Fine art photography of the American West by Wayne Heim — painterly portraits, frontier stories, Indigenous presence, and the landscapes that shaped the historical American frontier.",
+    ogImage: "/images/cowboy.webp",
+    ogType: "website",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Fine Art Photography of the American West – Wayne Heim",
+    twitterDescription:
+      "Painterly fine art photography of the American West. Cowboys, frontier settlers, Indigenous portraits, and Western landscapes by Wayne Heim.",
+    twitterImage: "/images/cowboy.webp",
+    keywords: "fine art photography american west, american west photography, american west fine art, american frontier photography, western fine art photography, painterly western photography, historical american west art, cowboy fine art photography, Wayne Heim",
+  },
+
   "/Historical-Western-Art": {
     ogTitle: "Historical Western Art – Wayne Heim",
     ogDescription:

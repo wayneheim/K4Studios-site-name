@@ -47,6 +47,7 @@ const allCarousels = import.meta.glob([
   "../data/Galleries/**/carousel.ts",
   "../data/Other/**/carousel.ts",
   "../data/Cowboy-Fine-Art-Photography/carousel.ts",
+  "../data/Fine-Art-Photography-of-the-American-West/carousel.ts",
   "../data/Painterly-Western-Photography/carousel.ts",
   "../data/Western-Fine-Art-Photography/carousel.ts",
   "../data/Western-Black-and-White-Photography/carousel.ts",

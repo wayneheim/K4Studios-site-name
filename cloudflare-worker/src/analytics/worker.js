@@ -1919,7 +1919,26 @@ async function getStatePixelTestRoaring20s(env, filters) {
           SUM(CASE WHEN source_layer = 'zoom_pixel_v1' THEN 1 ELSE 0 END) AS zoom_views,
           COUNT(DISTINCT CASE WHEN visitor_id IS NOT NULL AND visitor_id != '' THEN visitor_id END) AS viewers,
           MAX(ts) AS last_seen,
-          GROUP_CONCAT(DISTINCT source_layer) AS source_layers
+          GROUP_CONCAT(DISTINCT source_layer) AS source_layers,
+          (
+            SELECT GROUP_CONCAT(loc_label, ' • ')
+            FROM (
+              SELECT
+                CASE
+                  WHEN COALESCE(NULLIF(s2.city, ''), '') != '' AND COALESCE(NULLIF(s2.region, ''), '') != '' THEN s2.city || ', ' || s2.region || CASE WHEN COALESCE(NULLIF(s2.country, ''), '') != '' THEN ', ' || s2.country ELSE '' END
+                  WHEN COALESCE(NULLIF(s2.city, ''), '') != '' THEN s2.city || CASE WHEN COALESCE(NULLIF(s2.country, ''), '') != '' THEN ', ' || s2.country ELSE '' END
+                  WHEN COALESCE(NULLIF(s2.region, ''), '') != '' THEN s2.region || CASE WHEN COALESCE(NULLIF(s2.country, ''), '') != '' THEN ', ' || s2.country ELSE '' END
+                  WHEN COALESCE(NULLIF(s2.country, ''), '') != '' THEN s2.country
+                  ELSE 'Unknown'
+                END AS loc_label,
+                COUNT(*) AS loc_hits,
+                MAX(s2.ts) AS loc_last_seen
+              FROM sp s2
+              WHERE s2.target_id = sp.target_id
+              GROUP BY s2.country, s2.region, s2.city
+              ORDER BY loc_hits DESC, loc_last_seen DESC
+            )
+          ) AS location_labels
         FROM sp
         GROUP BY target_id
       )
@@ -1930,6 +1949,7 @@ async function getStatePixelTestRoaring20s(env, filters) {
         a.viewers,
         a.last_seen,
         a.source_layers,
+        a.location_labels,
         r.page,
         r.country,
         r.region,
@@ -5048,6 +5068,8 @@ function renderDashboard({
     const zoomViews = Number(r.zoom_views || 0);
     const viewers = Number(r.viewers || 0);
     const loc = fmtLoc(r.city, r.region, r.country);
+    const locationLabels = String(r.location_labels || "").trim();
+    const locDisplay = locationLabels || loc;
     const layerStr = String(r.source_layers || r.source_layer || "").trim();
     const layers = layerStr ? layerStr.split(",").map((s) => s.trim()).filter(Boolean) : [];
     const hasSister = layers.includes("sister_pixel_v1") || String(r.source_layer || "") === "sister_pixel_v1";
@@ -5143,7 +5165,7 @@ function renderDashboard({
         ${galleryUrl ? `<a href="${galleryUrl}" target="_blank" rel="noopener" style="color:#93c5fd;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${galleryPath}">${displayGallery}</a>` : `<span style="color:#aaa;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${galleryPath}">${displayGallery}</span>`}
       </div>
       <div style="display:flex;align-items:center;gap:6px;color:#9aa3ad;overflow:hidden;">
-        <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${loc}">${loc}</span>
+        <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${locDisplay}">${locDisplay}</span>
       </div>
       <div style="display:flex;align-items:center;gap:4px;min-width:0;">
         ${deviceIcon ? `<span style="display:inline-flex;align-items:center;flex-shrink:0;">${deviceIcon}</span>` : ""}
