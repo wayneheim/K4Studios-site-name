@@ -1,12 +1,74 @@
 {
   "version": "1.0",
   "images": {
-    "i-53b8wQ2": {
-      "imageId": "i-53b8wQ2",
-      "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
-      "dhash": "0001100011100010001100011000110011100111000000000000000000000000",
-      "width": 564,
-      "height": 767,
+    "i-x6rrj3V": {
+      "imageId": "i-x6rrj3V",
+      "galleryPath": "src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+      "dhash": "0110101101011010110101011000110111101111000000000000000000000000",
+      "width": 576,
+      "height": 768,
+      "dominantColors": [
+        "#101010",
+        "#d0d0b0",
+        "#303030",
+        "#103030",
+        "#d0b090"
+      ],
+      "warmCoolRatio": 0.76,
+      "saturationAvg": 0.26,
+      "brightnessAvg": 0.33,
+      "greenCoverage": 0,
+      "blueCoverage": 0.24,
+      "orangeCoverage": 0.52,
+      "redCoverage": 0.08,
+      "yellowCoverage": 0.04,
+      "purpleCoverage": 0.02,
+      "contrastScore": 0.54,
+      "toneDistribution": {
+        "shadows": 0.51,
+        "midtones": 0.33,
+        "highlights": 0.15
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-06T18:33:39.833Z"
+    },
+    "i-Lk9XZKB": {
+      "imageId": "i-Lk9XZKB",
+      "galleryPath": "src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+      "dhash": "0001000100010001010100110011000100000000000000000000000000000000",
+      "width": 512,
+      "height": 768,
+      "dominantColors": [
+        "#d0d0b0",
+        "#503030",
+        "#303010",
+        "#d0b090",
+        "#505030"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.3,
+      "brightnessAvg": 0.43,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.99,
+      "redCoverage": 0.01,
+      "yellowCoverage": 0,
+      "purpleCoverage": 0,
+      "contrastScore": 0.46,
+      "toneDistribution": {
+        "shadows": 0.27,
+        "midtones": 0.57,
+        "highlights": 0.16
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-06T18:33:53.159Z"
+    },
+    "i-Bfms6gj": {
+      "imageId": "i-Bfms6gj",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
+      "dhash": "0000011100000111000101110001011100000111000011110000000000000000",
+      "width": 1023,
+      "height": 731,
       "dominantColors": [],
       "warmCoolRatio": 0.5,
       "saturationAvg": 0,
@@ -17,14 +79,45 @@
       "redCoverage": 0,
       "yellowCoverage": 0,
       "purpleCoverage": 0,
-      "contrastScore": 0.36,
+      "contrastScore": 0.3,
       "toneDistribution": {
-        "shadows": 0.06,
-        "midtones": 0.77,
-        "highlights": 0.17
+        "shadows": 0.07,
+        "midtones": 0.87,
+        "highlights": 0.06
       },
       "analysisVersion": 7,
-      "indexedAt": "2026-03-06T17:57:59.995Z"
+      "indexedAt": "2026-03-06T18:42:30.494Z"
+    },
+    "i-Vpmx6ck": {
+      "imageId": "i-Vpmx6ck",
+      "galleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
+      "dhash": "0000000010000101000011000101101101011110000000000000000000000000",
+      "width": 576,
+      "height": 768,
+      "dominantColors": [
+        "#101010",
+        "#303030",
+        "#505050",
+        "#301010",
+        "#303010"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.19,
+      "brightnessAvg": 0.16,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.84,
+      "redCoverage": 0,
+      "yellowCoverage": 0,
+      "purpleCoverage": 0,
+      "contrastScore": 0.21,
+      "toneDistribution": {
+        "shadows": 0.75,
+        "midtones": 0.25,
+        "highlights": 0
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-06T18:43:39.802Z"
     }
   }
 }

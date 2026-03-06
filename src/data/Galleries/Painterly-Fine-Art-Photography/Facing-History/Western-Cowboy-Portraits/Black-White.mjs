@@ -3438,8 +3438,8 @@ export const galleryData = [
   {
     "id": "i-nd3Wr3d",
     "title": "All Smiles",
-    "description": "A painterly black and white Western image capturing a couple moving through a frontier street, their expressions suggesting ease, familiarity, and unspoken understanding. The woman’s smile leads the moment, while the figure behind her observes quietly, adding tension beneath the surface calm. Rendered with a soft pictorialist tone, this fine art photograph reflects the social rituals and resilience of frontier life, offering collectors a narrative-rich piece of Americana and Western wall art grounded in human nuance rather than spectacle. © Wayne Heim.",
-    "alt": "Painterly black and white Western photograph of a smiling frontier woman walking through a cowboy town with a man following behind",
+    "description": "A frontier couple moves along a wooden street in a historic cowboy town, capturing the quiet social rhythms of daily life in the American West. The image reflects the character-driven tradition of fine art Western photography, emphasizing atmosphere, posture, and subtle human interaction within a frontier setting. \n\n© Wayne Heim.",
+    "alt": "Smiling frontier woman walking through a Western street with a bearded man following behind near wooden buildings",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-nd3Wr3d/2/KvmSq87sRs9CTF2wHHdvDtVWqNhNMfH3rsT3dzjJN/XL/Wild%20West%20Cowgirl%20Photo%20_HF26483-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-nd3Wr3d/2/KvmSq87sRs9CTF2wHHdvDtVWqNhNMfH3rsT3dzjJN/XL/Wild%20West%20Cowgirl%20Photo%20_HF26483-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-nd3Wr3d/2/KvmSq87sRs9CTF2wHHdvDtVWqNhNMfH3rsT3dzjJN/XL/Wild%20West%20Cowgirl%20Photo%20_HF26483-Edit-XL.jpg",
@@ -3447,37 +3447,41 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-nd3Wr3d/2/L5Njqcgd4Z92tWP98M77stXTSxFL7cFvvWHD2phGz/S/Wild%20West%20Cowgirl%20Photo%20_HF26483-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-nd3Wr3d/A",
+
     "keywords": [
       "American frontier",
+      "frontier life",
       "cowboy art",
       "cowboy artwork",
       "cowboy portraits",
       "western cowboys",
-      "frontier life",
       "narrative Western art",
       "painterly cowboy photography",
-      "painterly Western images",
+      "fine art Western photography",
       "pictorialist tradition",
       "rugged spirit",
       "the American West",
       "western themed art",
-      "fine art Western photography",
-      "Americana photography",
+      "Americana photography"
     ],
+
     "story": "She’s smiling before anything happens.  \nBefore the joke lands. Before the comment finds its mark.\n\nIt’s the kind of smile that arrives early, practiced enough to pass for ease. He’s a step behind her, watching the way it works—how it smooths the edges, how it keeps the day moving forward. Out here, cheer travels faster than truth.\n\nSomeone says something just off to the side. She doesn’t stop walking. Doesn’t turn. The smile holds, steady as a habit learned young.\n\nAll smiles, for now.",
-    "notes": "“All Smiles” explores the quieter social armor of the frontier—the practiced ease worn in public spaces where endurance often passed for cheer. Rather than presenting joy as spectacle, the image lingers on expression as strategy, capturing how composure, posture, and timing carried as much weight as words. The figures move forward, not toward a destination, but through a moment shaped by observation and restraint.\n\nRendered in painterly black and white, the work draws from pictorialist tradition and early Western street portraiture, where atmosphere and human nuance outweighed overt narrative. What emerges is an archetype of frontier resilience expressed through grace rather than force. The smile becomes less an emotion than a decision—an act of continuity in a world that rarely slowed down to ask how one was truly doing.",
+    "notes": "The composition relies on gesture and pacing rather than spectacle. The woman’s forward movement anchors the frame while the trailing figure introduces quiet narrative tension, creating a layered human moment typical of frontier street life. Soft pictorialist rendering and restrained tonal contrast allow posture, expression, and atmosphere to carry the visual weight of the scene.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 76
+    "sortOrder": 76,
+    contentSource: "ai"
   },
   {
     "id": "i-Bfms6gj",
     "title": "Time Out",
-    "description": "A painterly black and white Western image of a chuckwagon cook taking a brief rest beside his wagon, caught in a quiet pause between labor and duty. Seated and reflective, he embodies the physical toll and earned stillness of frontier life. The scene emphasizes restraint, texture, and atmosphere, drawing the viewer into the unspoken rhythms of work, fatigue, and resolve that defined the American West. This fine art photograph offers collectors a narrative-rich meditation on labor, endurance, and momentary rest within classic Western wall art. © Wayne Heim.",
-    "alt": "Painterly black and white Western photograph of a chuckwagon cook seated beside his wagon, resting briefly during frontier work.",
+    "description": "An aging chuckwagon cook rests beside his wagon after a long stretch of frontier work, surrounded by the tools and provisions that sustained life on the trail. The image reflects the endurance and quiet routines of frontier labor through the lens of fine art Western photography, emphasizing atmosphere, texture, and the working culture of the American West. \n\n© Wayne Heim.",
+    "alt": "Older chuckwagon cook seated beside a wagon and supplies, resting during frontier trail work.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Bfms6gj/0/LSkRbfKVqMWnRmZ766dnc8BkLg54k88wgLrjnfh6S/XL/_HF21127-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Bfms6gj/0/LSkRbfKVqMWnRmZ766dnc8BkLg54k88wgLrjnfh6S/XL/_HF21127-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Bfms6gj/0/LbMkkjLvDjbQStJZGbT5DrfLCvB5VLH8NLKDnwnkt/L/_HF21127-Edit-Edit-2-L.jpg",
@@ -3485,6 +3489,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Bfms6gj/0/Kg5zP3snDGT6Xh5LKHtmpBcBV3gWzDCz84TRMdNFp/S/_HF21127-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Bfms6gj/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -3499,23 +3504,27 @@ export const galleryData = [
       "rugged spirit",
       "the American West",
       "western cowboy art",
-      "fine art Western photography",
-      "Americana photography",
+      "western fine art",
+      "Americana photography"
     ],
+
     "story": "Just a minute. That’s all I told myself. Sit down. Let the legs remember they’re still mine. The wagon can wait. Everything always can.\n\nHunger’ll be back soon enough, lining up like it always does. Pots, voices, the next round of asking. For now there’s just the creak of wood, the cooling metal, the weight of the day finally sitting where it belongs.\n\nAlright.  \nThat’s enough.",
-    "notes": "“Time Out” captures a rare pause within the relentless cadence of frontier labor. Rather than depicting work itself, the image focuses on the moment when effort briefly releases its grip—when the body claims a seat before the day demands it again. The figure’s posture, settled yet temporary, conveys fatigue without surrender.\n\nRendered in painterly black and white, the photograph draws from pictorialist traditions that favored atmosphere and human truth over action. The chuckwagon and surrounding tools frame the subject not as props, but as quiet witnesses to routine endurance. The work stands as a meditation on labor, age, and earned rest—acknowledging that even in a world built on constant motion, stillness had its place, if only for a moment.",
+    "notes": "Rather than depicting action, the composition lingers on the aftermath of effort. The seated figure, framed by wagon wheels and trail gear, becomes a quiet study of endurance and routine within frontier life. Soft pictorialist rendering and subdued tonal contrast emphasize atmosphere and texture, allowing the physical tools of the trail to echo the long rhythms of labor that shaped the American West.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 77
+    "sortOrder": 77,
+    contentSource: "ai"
   },
   {
     "id": "i-Vpmx6ck",
     "title": "Lunch Time",
-    "description": "A painterly black and white Western image of a homesteader cook tending a pot over an open stove, caught in the quiet judgment before a frontier meal is served. Steam rises as she stirs, emphasizing patience, experience, and care rather than urgency. The scene reflects the understated labor that sustained life in the American West, blending narrative restraint with classic Western atmosphere. This fine art photograph offers collectors a story-driven meditation on endurance, service, and the rhythm of frontier living. © Wayne Heim.",
-    "alt": "Painterly black and white Western photograph of a frontier woman stirring a pot over an outdoor stove, preparing lunch with quiet focus.",
+    "description": "A frontier cook prepares a midday meal over a small trail stove, surrounded by the practical tools of everyday life on the American frontier. The photograph reflects the quiet routines and working culture that sustained communities of the American West, presented through the visual language of fine art Western photography. \n\n© Wayne Heim.",
+    "alt": "Frontier woman stirring a pot over a small outdoor stove while preparing a meal at a Western camp.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-Vpmx6ck/0/McTMxQrzvz2QJx647WmGSKcG9jFNV7h3LxFsbPMCh/XL/_HF21807-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-Vpmx6ck/0/McTMxQrzvz2QJx647WmGSKcG9jFNV7h3LxFsbPMCh/XL/_HF21807-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-Vpmx6ck/0/McTMxQrzvz2QJx647WmGSKcG9jFNV7h3LxFsbPMCh/XL/_HF21807-XL.jpg",
@@ -3523,6 +3532,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-Vpmx6ck/0/KgmgskG2KK9hBKCHKXthCQcbT4Pp875Tnb8Fmbbq8/S/_HF21807-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Vpmx6ck/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -3537,17 +3547,22 @@ export const galleryData = [
       "rugged spirit",
       "the American West",
       "western themed art",
+      "western cowboy art",
       "fine art Western photography",
-      "Americana photography",
+      "Americana photography"
     ],
+
     "story": "It’s not ready yet.  \nThey’ll say it is, but I know better. Stew tells you when it’s done—when the smell settles, when the heat stops rushing and starts holding.\n\nI’ve fed enough men to know the look they get when they’re waiting. Hats tipped back, eyes drifting this way. Let them wait. A few more turns of the spoon won’t hurt them. Might do them some good.\n\nThere.  \nNow it’ll hold.",
-    "notes": "“Lunch Time” centers on the often-unseen labor that sustained frontier life—the steady, practiced work that happened between moments of action. Rather than dramatizing the meal itself, the image focuses on preparation and judgment, capturing the cook’s quiet authority over timing, heat, and readiness. The posture and gesture suggest experience earned through repetition rather than instruction.\n\nRendered in painterly black and white, the photograph draws from pictorialist traditions where atmosphere and human presence carried narrative weight. Steam, texture, and subdued light emphasize patience and care as essential frontier skills. The work stands as a tribute to endurance expressed through service, reminding the viewer that survival in the West depended as much on those who fed the day as those who rode into it.",
+    "notes": "The scene centers on preparation rather than spectacle, drawing attention to the steady labor that sustained frontier camps and ranch life. The cook’s posture and deliberate gesture anchor the composition while the stove, pot, and surrounding tools frame a quiet moment of daily routine. Soft tonal transitions and pictorialist atmosphere allow texture, steam, and light to shape the mood of the image, emphasizing the human rhythm behind frontier survival.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 78
+    "sortOrder": 78,
+    contentSource: "ai"
   },
   {
     "id": "i-QhR6h4T",
