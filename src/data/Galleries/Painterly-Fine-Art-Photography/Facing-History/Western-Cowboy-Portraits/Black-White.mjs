@@ -3393,8 +3393,8 @@ export const galleryData = [
   {
     "id": "i-53b8wQ2",
     "title": "Interruptions",
-    "description": "A painterly black and white Western image capturing a cowboy mid-pause as his quiet moment is interrupted. Holding a cup of coffee, he stands between solitude and demand, his expression signaling restraint, authority, and resolve. The scene emphasizes tension through stillness, drawing on classic Western atmosphere and narrative ambiguity. This fine art photograph reflects the understated rhythm of frontier life and the unspoken negotiations that shaped it, making it a compelling piece for collectors drawn to story-driven Americana and timeless Western wall art. © Wayne Heim.",
-    "alt": "Painterly black and white Western photograph of a cowboy holding a cup of coffee, pausing as he looks up during a quiet interruption on the",
+    "description": "A lone cowboy pauses outside a weathered frontier building, holding a cup of coffee as he glances toward an unseen interruption. His stance suggests a moment broken mid-routine, where quiet reflection gives way to the presence of someone approaching. The painterly black and white treatment and subdued atmosphere emphasize stillness, texture, and narrative tension rooted in everyday frontier life.\n\n© Wayne Heim",
+    "alt": "Cowboy holding a cup of coffee outside a frontier building, pausing mid-moment.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-53b8wQ2/1/NGhRNMbpdtNrXXszSXKpzwSPP7QSVCwzDn4T2TGmp/XL/_HF26276-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-53b8wQ2/1/NGhRNMbpdtNrXXszSXKpzwSPP7QSVCwzDn4T2TGmp/XL/_HF26276-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-53b8wQ2/1/NGhRNMbpdtNrXXszSXKpzwSPP7QSVCwzDn4T2TGmp/XL/_HF26276-Edit-XL.jpg",
@@ -3402,31 +3402,38 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-53b8wQ2/1/K3HpNqnrch2fcRHvt8rVBkX77R2GPXHt3bwcS2PbR/S/_HF26276-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-53b8wQ2/A",
+
     "keywords": [
       "black and white western photography",
-      "painterly cowboy art",
+      "painterly cowboy photography",
+      "western cowboy portraits",
       "narrative western art",
       "frontier life",
-      "cowboy portrait",
-      "rugged spirit",
-      "pictorialist tradition",
       "american frontier",
+      "western fine art photography",
+      "pictorialist tradition",
+      "rugged spirit",
       "western wall art",
-      "story-driven americana",
-      "quiet tension",
-      "western cowboy photography",
-      "cowboy artwork",
-      "painterly technique",
-      "cowboy artwork prints",
+      "cinematic stills",
+      "frontier photography",
+      "americana photography",
+      "painterly western photography",
+      "cowboy portrait",
+      "western themed art",
+      "western photography prints"
     ],
+
     "story": "The cup is still warm in his hand when it happens.  \nNot loud. Not urgent. Just enough movement to fracture the quiet.\n\nHe doesn’t turn right away. Lets the moment stretch, lets whoever it is feel the weight of the pause. Coffee first. Breath next. Some things deserve to finish before the world steps in.\n\nThen he looks up—slow, measured.  \nThe kind of look that asks a question without opening his mouth.\n\nWhatever you came for, it better be worth breaking the silence.",
-    "notes": "“Interruptions” centers on a moment of fracture—when solitude gives way to demand. Rather than dramatizing action, the image holds tension in suspension, allowing posture, expression, and timing to carry the weight. The figure’s pause becomes the subject, recalling pictorialist and early Western portrait traditions where meaning was implied through restraint rather than declaration.\n\nThe painterly black and white treatment reinforces this quiet authority, emphasizing texture, light, and atmosphere over narrative resolution. What emerges is an archetype of frontier life shaped as much by interruption as by intention—a reminder that control, even briefly held, was often the most valuable currency. The work invites the viewer into that suspended moment, asking them to complete the story that the image deliberately leaves unresolved.",
+    "notes": "Rather than action, the piece centers on interruption—the quiet moment when a private pause meets the outside world. The coffee cup becomes an anchor for the scene, grounding the figure in an ordinary ritual while the body language suggests something unsaid entering the frame.\n\nThe painterly black and white treatment emphasizes texture and atmosphere over spectacle. Weathered wood, soft fog, and restrained contrast recall the tonal discipline of pictorialist photography and early Western portrait traditions.\n\nWhat holds the image together is the pause itself. The figure’s posture and gaze imply a story continuing just beyond the edge of the frame, inviting viewers to step into the narrative rather than simply observe it.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 75
+    "sortOrder": 75,
+    contentSource: "ai"
   },
   {
     "id": "i-nd3Wr3d",

@@ -12269,39 +12269,7 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 234
   },
-  {
-    "id": "i-tg6PTwd",
-    "title": "Go On, Then",
-    "description": "This painterly Western portrait captures a moment of restrained tension and quiet authority in the American frontier. Rendered as fine art Western photography, the image emphasizes character, posture, and psychological presence rather than action, drawing from Pictorialist tradition and narrative Western art. The work reflects the grit and lived experience of the Old West through cinematic lighting and deliberate stillness. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Western portrait of a frontier man standing with arms crossed, conveying quiet authority and restrained tension in fine art Western photography",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/ML2RwQH7QG79Zpgb8RnGC3dLTb4wtc4CJphc3VnZM/XL/_HF25195-1367-1377-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/ML2RwQH7QG79Zpgb8RnGC3dLTb4wtc4CJphc3VnZM/XL/_HF25195-1367-1377-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NJVHGncW6PtG4zB8sPqB5NHK97nmX574zrNhndPMM/L/_HF25195-1367-1377-L.jpg",
-    "srcM": "",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/0/NZJjWKmDDVjvRcZzNXrLwb8pSsSh66PpMG6dvXH8r/S/_HF25195-1367-1377-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tg6PTwd/A",
-    "keywords": [
-      "American frontier",
-      "cowboy portraits",
-      "fine art Western photography",
-      "painterly Western photograph",
-      "narrative Western art",
-      "Western fine art",
-      "Western cowboys",
-      "rugged spirit",
-      "Pictorialist tradition",
-      "Western portrait art"
-    ],
-    "story": "He doesn’t interrupt.  \nDoesn’t shift his weight. Doesn’t blink.\n\nArms folded, jaw set, he lets the silence do the work. Whatever needs explaining can take its time—he’s heard promises before, excuses too.\n\nIf there’s something worth saying, now’s the moment. If not, he’ll stay right where he is.",
-    "notes": "This image leans on posture and restraint rather than gesture, aligning more closely with late Pictorialist portrait traditions than action-driven Western imagery. The crossed arms and squared stance create a closed composition that invites psychological reading, allowing the viewer to project motive, history, and outcome. It is a study in tension held—not released—making it a quietly powerful addition for collectors drawn to narrative depth and character-driven Western fine art.",
-    "rating": 4,
-    "galleries": [
-      "Other/Photo-Shoots/Pennsylvannia"
-    ],
-    "visibility": "show",
-    "sortOrder": 235
-  },
+
   {
     "id": "i-n8TX2qS",
     "title": "Sheriff",
@@ -18086,43 +18054,6 @@ export const galleryData = [
     }
   },
   {
-    "id": "i-pVMMLRp",
-    "title": "Driving the Day",
-    "description": "A painterly Western photograph capturing a working cowboy driving longhorn cattle through rugged terrain, defined by labor rather than spectacle. This fine art Western photography focuses on frontier life as lived experience—where movement, restraint, and responsibility shape the narrative. Light, posture, and environment combine to reflect the rhythm of the American West and the discipline of cowboy work. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Working cowboy driving longhorn cattle through rugged terrain, painterly Western fine art photograph depicting frontier life.",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pVMMLRp/0/KrnMJj4SxjfDnBZN72Nz6nQTZ3xvCTFXwMBbCwLdg/XL/_WHO4172-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pVMMLRp/0/KrnMJj4SxjfDnBZN72Nz6nQTZ3xvCTFXwMBbCwLdg/XL/_WHO4172-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pVMMLRp/0/MRjtZ98RSSzjLTk6tbJzjMsPPvpP7bq45bC6WDgcw/L/_WHO4172-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pVMMLRp/0/Lmns4ktTk5ksP8GWPCZppm7Js2FSrVjWVMF2W9jhX/M/_WHO4172-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pVMMLRp/0/K2BZPcsBcf2n2mzS8CM8dchpL54Bkhq5RMLndqCMQ/S/_WHO4172-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pVMMLRp/A",
-    "keywords": [
-      "frontier life",
-      "western fine art photography",
-      "cowboy art",
-      "western cowboy art",
-      "wild west photography",
-      "painterly western photography",
-      "western cowboys",
-      "cowboy artwork",
-      "american frontier",
-      "western themed art",
-      "rugged spirit",
-      "frontier photography",
-      "western fine art"
-    ],
-    "story": "Morning hasn’t finished deciding what it will be yet.\n\nThe cattle move because they must, and he moves because they do. There’s no hurry, no drama—just the quiet math of pressure and patience, reading the ground, reading the animals, keeping the line from breaking.\n\nBy nightfall the work will be behind them, but the day belongs to this stretch of trail, this slow agreement between man, animal, and land.",
-    "notes": "This image draws strength from controlled movement and spatial tension rather than overt action. The diagonal flow of the herd establishes visual momentum, while the rider’s elevated position anchors authority without dominance. The muted palette and textured atmosphere echo pictorialist traditions, yet the composition remains firmly contemporary—an image about work, consequence, and continuity. A strong piece for collectors drawn to narrative Western art rooted in authenticity rather than myth.",
-    "rating": 3,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 377,
-    "themes": {
-      "cowboys-and-horses": 82
-    }
-  },
-  {
     "id": "i-Fx7pPGJ",
     "title": "Moment",
     "description": "A painterly Western fine art photograph capturing a longhorn in a suspended instant of presence and power. This cinematic Western image emphasizes stillness, texture, and contained force rather than action. Rooted in narrative Western art and the pictorialist tradition, the photograph explores tension, endurance, and the quiet authority carried by the living symbols of the American frontier. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
@@ -19212,40 +19143,7 @@ export const galleryData = [
       "frontier-women": 43
     }
   },
-  {
-    "id": "i-GmTkrzR",
-    "title": "Held Between Breaths",
-    "description": "Held Between Breaths is a painterly Western photograph capturing a quiet, intimate moment of frontier life. Rendered in fine art Western photography style, the image emphasizes restraint, care, and narrative tension rather than action. Subtle light, muted color, and controlled composition place the viewer inside a private pause shared between rider and horse.\n\nThis cinematic Western portrait reflects the pictorialist tradition and narrative Western art approach, offering collectors a contemplative vision of the American frontier rooted in stillness and emotional weight. © Wayne Heim",
-    "alt": "Painterly Western fine art photograph of a frontier woman pausing beside her horse in a quiet moment before continuing the trail",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/LZL6hDbDDKM7kmMk4kwRtVLdTrsvxzG2rnZKLpmQ3/XL/_HF22644-1174-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/LZL6hDbDDKM7kmMk4kwRtVLdTrsvxzG2rnZKLpmQ3/XL/_HF22644-1174-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/NQ85d6v88NKF9tVwWBqnCsFzMkC4wVmT2tH6sR2xW/L/_HF22644-1174-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/KxsjJjZtBWrzQX8PJpSDx4kprM26zNWW4RSPHT76j/M/_HF22644-1174-M.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/0/LQpHzWCxJg5s9tqx5MQvrj2tP52b2PgtmmgHn5NBb/S/_HF22644-1174-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GmTkrzR/A",
-    "keywords": [
-      "western fine art photography",
-      "painterly Western photograph",
-      "narrative Western art",
-      "frontier life",
-      "American frontier portraits",
-      "western cowboy art",
-      "western fine art",
-      "pictorialist tradition",
-      "cinematic western photography",
-      "historic western prints",
-      "painterly Western images",
-      "cowboy artwork",
-      "cowboy portraits"
-    ],
-    "story": "She pauses longer than necessary, hands steady, eyes focused on the small details that matter.\nThe trail will call soon enough, but not yet.\nFor now, this moment is held—quiet, deliberate, and unspoken.\n\nThe horse shifts slightly, sensing the stillness.\nNothing urgent. Nothing wasted.\nJust a breath taken before motion returns.",
-    "notes": "This work draws from pictorialist principles where atmosphere and suggestion carry greater weight than spectacle. The composition prioritizes intimacy over scale, allowing the viewer to linger inside the moment rather than observe it from a distance.\n\nThe restrained palette and softened edges echo early Western portraiture while maintaining a contemporary cinematic sensibility. It is a piece designed to reward prolonged viewing—one that reveals its tension quietly, breath by breath.",
-    "rating": 4,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 406
-  },
+ 
   {
     "id": "i-CmScKnv",
     "title": "What They Stand For",
@@ -22506,50 +22404,6 @@ export const galleryData = [
       "frontier-women": 75,
       "whispering-reflection": 83
     }
-  },
-  {
-    "id": "i-bzp2Pxw",
-    "title": "The Work at Hand",
-    "description": "A painterly Western fine art photograph capturing a working cowboy in the act of roping livestock, emphasizing timing, coordination, and lived skill over spectacle. This image aligns with a pictorialist approach to Western photography, where motion is disciplined and purposeful, and narrative emerges through repetition and control. Dust, posture, and restrained composition frame frontier labor as a practiced craft rather than a performance. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Painterly Western fine art photograph of a working cowboy roping livestock on horseback in the American frontier",
-    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/Kx334rMmVsQ5QJbrcsm3wCqHk72nrbCJGSL2gGmNw/XL/_WHO3980-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/Kx334rMmVsQ5QJbrcsm3wCqHk72nrbCJGSL2gGmNw/XL/_WHO3980-Edit-XL.jpg",
-    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/Kx334rMmVsQ5QJbrcsm3wCqHk72nrbCJGSL2gGmNw/XL/_WHO3980-Edit-XL.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/Lm4pN873KfF8bgGNGb7DckBqdjmnTCD7xxbQMHJqH/L/_WHO3980-Edit-L.jpg",
-    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/0/KPPR8SLGGG7g6ZD2JtbHtZq5z7rXBKLHWnbDCKgT9/S/_WHO3980-Edit-S.jpg",
-    "srcOriginal": "",
-    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bzp2Pxw/A",
-    "keywords": [
-      "American frontier",
-      "cowboy art",
-      "cowboy artwork",
-      "cowboy portraits",
-      "cowboys",
-      "western cowboy art",
-      "western fine art",
-      "western fine art photography",
-      "painterly western photography",
-      "painterly western images",
-      "narrative western art",
-      "frontier life",
-      "the American West",
-      "western themed art",
-      "wild west photography",
-      "American frontier portraits",
-      "Americana photography",
-      "frontier photography",
-      "cinematic stills",
-      "rugged spirit",
-      "western painterly photography",
-      "working cowboy",
-      "roping cattle"
-    ],
-    "story": "The rope leaves his hand without hesitation.\n\nHorse, rider, and animal move as one—each adjustment answered before it’s noticed. There’s no flourish, no pause to measure the moment. The decision was made long before the loop ever rose.\n\nThis is what practice looks like when it stops needing attention.",
-    "notes": "This image belongs to a lineage of Western work that treats labor as an expression of intelligence rather than force. The clean arc of the rope and the balanced movement of horse and rider reflect pictorialist values—where clarity of action and restraint of gesture carry the emotional weight.\n\nRather than elevating the moment into spectacle, the photograph honors repetition and precision. The result is a Western scene grounded in credibility and skill, rewarding extended viewing as the quiet coordination between figures continues to reveal itself.",
-    "rating": 4,
-    "galleries": [],
-    "visibility": "show",
-    "sortOrder": 489
   },
   {
     "id": "i-xgqQnWv",
