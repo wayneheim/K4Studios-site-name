@@ -17,7 +17,17 @@ export const facingHistoryStory = [
 
   // >>> STORY SLIDER INSERT POINT <<<
 
-  // 2: WESTERN FRONTIER
+  // 2: UNDERSTANDING BEFORE INTERPRETATION
+  {
+    subhead: "Before the Legend",
+    paragraphs: [
+      "Telling these stories through photography is unusual. Historically, only painters and filmmakers have gone this deep into the lives behind the American frontier\u2014the real people, the real struggles, the choices that built the framework the modern West stands on.",
+      "But you cannot reinterpret a story you have never understood. Picasso mastered realism before he reshaped form. Leonardo studied anatomy before he reimagined flight. The same principle applies here: before the legend came the lives that built it.",
+      "That conviction drives every image in Facing History. The work does not begin with myth. It begins with the individual\u2014and earns the mythology from there."
+    ]
+  },
+
+  // 3: WESTERN FRONTIER
   {
     subhead: "The Western Frontier — Grit, Myth & the Quiet Pulse of the West",
     paragraphs: [
@@ -32,7 +42,7 @@ export const facingHistoryStory = [
     ]
   },
 
-  // 3: CIVIL WAR
+  // 4: CIVIL WAR
   {
     subhead: "Civil War Portraits — Valor, Resolve & the Weight of a Nation",
     paragraphs: [
@@ -45,7 +55,7 @@ export const facingHistoryStory = [
     ]
   },
 
-  // 4: WWII
+  // 5: WWII
   {
     subhead: "WWII Portraits — Sacrifice, Brotherhood & the Human Heart in Wartime",
     paragraphs: [
@@ -58,7 +68,7 @@ export const facingHistoryStory = [
     ]
   },
 
-  // 5: ROARING 20s
+  // 6: ROARING 20s
   {
     subhead: "The Roaring 20s — Jazz, Rebellion & Velvet Shadows",
     paragraphs: [
@@ -72,7 +82,7 @@ export const facingHistoryStory = [
     ]
   },
 
-  // 6: ENGRAINED SERIES
+  // 7: ENGRAINED SERIES
   {
     subhead: "The Engrained Series — When Story Meets Woodgrain",
     paragraphs: [
@@ -85,7 +95,7 @@ export const facingHistoryStory = [
     ]
   },
 
-  // 7: WHY IT MATTERS
+  // 8: WHY IT MATTERS
   {
     subhead: "Why Story-Driven Historical Photography Matters",
     paragraphs: [
@@ -96,7 +106,7 @@ export const facingHistoryStory = [
     ]
   },
 
-  // 8: COLLECTOR CTA
+  // 9: COLLECTOR CTA
   {
     subhead: "Bring History Home",
     paragraphs: [
@@ -105,7 +115,7 @@ export const facingHistoryStory = [
     ]
   },
 
-  // 9: STORY VS AI
+  // 10: STORY VS AI
   {
     subhead: "Where Storytelling Triumphs Over Algorithms",
     paragraphs: [

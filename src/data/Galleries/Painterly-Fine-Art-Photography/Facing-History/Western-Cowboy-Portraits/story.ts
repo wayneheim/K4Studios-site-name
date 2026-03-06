@@ -53,7 +53,8 @@ export const westernStory = [
       `Much of Western imagery repeats what we already know — or think we know. These portraits look elsewhere.`,
       `Rather than reinforcing archetypes, Wayne’s work studies individuals: miners, drifters, scouts, settlers — people who wagered everything on a promise large enough to break them.`,
       `Here, posture matters less than presence. Costume gives way to consequence. The West is no longer a stage — it becomes a place where choices linger and silence carries weight.`,
-      `This is historically themed Western fine art focused not on legend, but on lived experience — the moments history skipped but humanity remembers.`
+      `This is historically themed Western fine art focused not on legend, but on lived experience — the moments history skipped but humanity remembers.`,
+      `Telling these stories through photography is rare. Painters and filmmakers have long owned this territory — the real struggles behind the frontier myth. This work joins that tradition, beginning not with the legend but with the lives that built it.`
     ]
   },
 

@@ -41,8 +41,7 @@ export const painterlyStory = [
     paragraphs: [
       "From storm-battered landscapes to Western outlaws and Civil War widows, every subject I photograph is a vessel for something larger: memory, myth, and the echo of unspoken lives.",
       "This site isn’t a portfolio. It’s a conversation—a slow turn through lives half-remembered. A photo-narrative anthology where every frame is a page torn from a book that never got written.",
-      "Some viewers walk away with admiration. Others walk away unsettled. I’m not aiming for applause. I’m aiming for resonance.",
-      "<p style='text-align: center; font-size: 1.25rem; font-weight: bold; margin-top: 1.5rem;'>Embrace the Past. Live the Story.</p>"
+      "Some viewers walk away with admiration. Others walk away unsettled. I’m not aiming for applause. I’m aiming for resonance.",      "Most photographers don't tell these stories. Painters and filmmakers have owned this ground for generations — the real lives behind the myth of the American West. I believe you can't reinterpret a story you've never understood. So the work starts there: before the legend, with the lives that built it.",      "<p style='text-align: center; font-size: 1.25rem; font-weight: bold; margin-top: 1.5rem;'>Embrace the Past. Live the Story.</p>"
     ]
   }
 ];

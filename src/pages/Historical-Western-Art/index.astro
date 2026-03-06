@@ -8,15 +8,13 @@ import LandingRightImages from '@/components/LandingRightImages.jsx';
 import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
+import StorySlider        from '@/components/StorySlider.tsx';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 
-// Gallery data for feathering
+// Gallery data for feathering + StorySlider
 import { galleryData as cowboyColorDataFull }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
-import { galleryData as cowboyBWData }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
-import { galleryData as cowboyNAData }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs';
+import { storySliderImageIds } from '@/data/storySlider.ts';
 
 import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
@@ -47,6 +45,13 @@ const pagePath = "/Historical-Western-Art";
 // ✅ A REAL siteNav node to power feathering + gallery pool + autolinking
 const imageSectionPath =
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
+
+// ----------------------
+// STORY SLIDER DATA (cowboy color images that match storySlider IDs)
+// ----------------------
+const colorStoryData = cowboyColorDataFull
+  .filter((img: any) => storySliderImageIds.includes(img.id))
+  .map((img: any) => ({ id: img.id, title: img.title, story: img.story }));
 
 // ----------------------
 // NAV HELPERS
@@ -199,34 +204,12 @@ if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${pagePath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${pagePath}`;
 
 // ----------------------
-// DYNAMIC TOMBSTONE THUMBNAILS
+// TOMBSTONE THUMBNAILS (all hardcoded)
 // ----------------------
-function getTombstoneThumbs(galleryData: any[]): string[] {
-  const validImages = galleryData
-    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost')
-    .slice(0, 10);
-  return validImages
-    .map((img: any) => img.id ? getProxySrc(img.id, 's') : '')
-    .filter((src: string) => src !== '');
-}
-
-const tombstoneGalleryMap: Record<string, any[]> = {
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color': cowboyColorDataFull,
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White': cowboyBWData,
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color': cowboyNAData,
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History': cowboyColorDataFull, // Use cowboy color for Facing History parent
-};
-
-const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => {
-  if (stone.thumb) return { ...stone, thumbs: [stone.thumb] };
-  const galleryData = tombstoneGalleryMap[stone.href];
-  const thumbs = galleryData ? getTombstoneThumbs(galleryData) : [];
-  return {
-    ...stone,
-    thumb: thumbs[0] || '',
-    thumbs,
-  };
-});
+const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => ({
+  ...stone,
+  thumbs: [stone.thumb],
+}));
 ---
 
 <BaseLayout
@@ -235,10 +218,24 @@ const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => {
   breadcrumbsJSON={breadcrumbData}
   meta={meta}
 >
-  <!-- FAQ Structured Data for rich snippets (Day 4 requirement) -->
+  <!-- FAQ Structured Data -->
   <script type="application/ld+json" set:html={faqStructuredData} slot="head"></script>
-  <!-- WebPage Schema (subject authority - Historical Western Art as PRIMARY) -->
+  <!-- WebPage Schema -->
   <script type="application/ld+json" set:html={webPageSchema} slot="head"></script>
+  <!-- Article Schema -->
+  <script is:inline type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Historical Western Art: Art Depicting the Frontier Era of the American West",
+    "description": "Historical Western art is artwork that depicts the frontier era of the American West—cowboys, settlers, Indigenous life, and the people who shaped the landscape long before modern Western culture emerged.",
+    "author": { "@type": "Person", "name": "Wayne Heim", "url": "https://k4studios.com/" },
+    "publisher": { "@type": "Organization", "name": "K4 Studios", "url": "https://k4studios.com/" },
+    "mainEntityOfPage": "https://k4studios.com/Historical-Western-Art",
+    "datePublished": "2025-06-01",
+    "dateModified": "2026-03-05"
+  }
+  </script>
   
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
@@ -262,37 +259,67 @@ const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => {
       </div>
     </section>
 
-    <div class="py-5">
+    <p class="page-summary reveal-on-scroll">
+      Historical Western art is artwork that depicts the frontier era of the American West—cowboys, settlers, Indigenous life, and the people who shaped the landscape long before modern Western culture emerged.
+    </p>
+
+    <section class="collections-nav-section">
+      <h2 class="collections-heading slide-in-left">Explore the Stories of the American West</h2>
       <TombstoneNav client:load items={tombstonesWithThumbs} />
-    </div>
+    </section>
 
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
           {historicalStory.map((section: any, index: number) => (
-            <article class="story-block" key={index}>
-              {section.title && (
-                <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-              )}
-              {section.subhead && (
-                <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-              )}
-              {section.tagline && (
-                <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-              )}
+            <>
+              {index === 1 && colorStoryData.length > 0 && (
+                <div class="story-slider-wrapper reveal-on-scroll">
+                  <div class="story-slider-skeleton relative bg-[#f4f1ec] rounded-lg shadow-sm px-5 py-4 max-w-xl mx-auto border border-[#e0d9cf] mb-8 h-[240px] overflow-hidden opacity-90">
+                    <p class="text-[10px] uppercase tracking-[0.12em] text-[#a09080] mb-3">How Story Lives in These Images</p>
+                    <div class="animate-pulse">
+                      <div class="h-4 bg-[#e0d9cf] rounded w-3/4 mb-3"></div>
+                      <div class="h-3.5 bg-[#e0d9cf] rounded w-full mb-2"></div>
+                      <div class="h-3.5 bg-[#e0d9cf] rounded w-5/6 mb-2"></div>
+                      <div class="h-3.5 bg-[#e0d9cf] rounded w-4/6"></div>
+                    </div>
+                  </div>
 
-              {section.paragraphs?.map((para: string, i: number) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-              ))}
-
-              {section.list && section.list.length > 0 && (
-                <ul>
-                  {section.list.map((item: string, j: number) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-                  ))}
-                </ul>
+                  <StorySlider
+                    client:only="react"
+                    stories={colorStoryData}
+                    galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
+                    variant="secondary"
+                  />
+                </div>
               )}
-            </article>
+              {index === 4 && (
+                <hr class="story-chapter-divider reveal-on-scroll" />
+              )}
+              <article class="story-block">
+                {section.title && (
+                  <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
+                )}
+                {section.subhead && (
+                  <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
+                )}
+                {section.tagline && (
+                  <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
+                )}
+
+                {section.paragraphs?.map((para: string) => (
+                  <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
+                ))}
+
+                {section.list && section.list.length > 0 && (
+                  <ul>
+                    {section.list.map((item: string) => (
+                      <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
+                    ))}
+                  </ul>
+                )}
+              </article>
+            </>
           ))}
         </section>
 
@@ -355,13 +382,47 @@ const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => {
     ul li { margin-top: 0.15em; margin-left: 1.5em; }
     ul li::marker { margin-top: 0.15em; font-size: 1.2em; color: gray; }
 
+    /* ── Page summary ── */
+    :global(.page-summary) {
+      max-width: 680px; margin: -0.5rem auto 1.8rem; padding: 0 1.2rem;
+      font-family: 'Glegoo', serif; font-size: 1.04rem; line-height: 1.55;
+      color: #4a3e34; text-align: center; opacity: 0.92;
+    }
+
+    /* ── Collections nav ── */
+    :global(.collections-nav-section) {
+      max-width: 1200px; margin: 0 auto 1.2rem; padding: 0.6rem 1rem 0;
+    }
+    :global(.collections-heading) {
+      font-family: 'Glegoo', serif; font-size: 1.08rem; font-weight: 600;
+      color: #5a4a3b; text-align: center; margin-bottom: 0.6rem; letter-spacing: -0.02em;
+    }
+
+    /* ── Chapter divider ── */
+    :global(.story-chapter-divider) {
+      border: none; border-top: 1px solid #c8b89a; max-width: 220px;
+      margin: 2.2rem auto 2.4rem; opacity: 0.55;
+    }
+
+    /* ── Tombstone hover: unified no-scale, no-grayscale ── */
+    :global(.tombstone-grid .tombstone-item) { transition: opacity 0.3s ease; }
+    :global(.tombstone-grid:hover .tombstone-item) { opacity: 0.65; }
+    :global(.tombstone-grid .tombstone-item:hover) { opacity: 1; }
+    :global(.tombstone-grid .tombstone-item img) {
+      filter: none !important; transform: none !important;
+      transition: none !important;
+    }
+    :global(.tombstone-grid .tombstone-item:hover img) {
+      filter: none !important; transform: none !important;
+    }
+
     @media (max-width: 768px) {
       .section-heading .page-title { font-size: 1.5rem; line-height: 1.3; }
       .section-heading .page-subtitle {
         max-width: 42ch; margin-left: auto; margin-right: auto; text-align: center;
         font-size: 1rem; line-height: 1.4; letter-spacing: -0.04em;
       }
-      .section-heading-wrap { margin-top: 1rem; margin-bottom: 1rem; }
+      .section-heading-wrap { margin-top: 0.6rem; margin-bottom: 1rem; }
       .sidebar-column { display: none; }
       .story-section { letter-spacing: -0.03em; }
       .story-block h2 {
@@ -379,7 +440,7 @@ const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => {
     .fade-in.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
     .page-title.fade-in { transition-delay: .2s; }
 
-    .section-heading-wrap { margin: -3rem 0 1.5rem; text-align: center; }
+    .section-heading-wrap { margin: -3.4rem 0 1.5rem; text-align: center; }
     .section-heading .page-title { font-size: 2rem; margin-bottom: .4rem; }
     .section-heading .page-subtitle { font-size: 1rem; font-weight: 500; color: #6d5b4a; opacity: .9; }
 

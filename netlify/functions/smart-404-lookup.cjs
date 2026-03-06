@@ -12,18 +12,6 @@ function getImageIdMap() {
   return _imageIdMap;
 }
 
-function isBlockedBotUa(userAgent) {
-  if (!userAgent) return false;
-  const p = /ahrefsbot|semrushbot|petalbot|mj12bot|dotbot|seznambot|serpstatbot|dataforseo|python-requests|aiohttp|curl|wget|go-http-client/i;
-  return p.test(userAgent);
-}
-
-function hasValidSessionCookie(headers) {
-  const cookie = headers?.cookie || headers?.Cookie || '';
-  if (!cookie) return false;
-  return /(?:^|;\s*)k4_sid=/.test(cookie) || /(?:^|;\s*)k4_vid=/.test(cookie);
-}
-
 function getClientIp(headers) {
   const h = headers || {};
   const direct = h['x-nf-client-connection-ip'] || h['X-NF-Client-Connection-IP'];
@@ -49,12 +37,10 @@ function isHighRateIp(ip) {
 }
 
 exports.handler = async (event) => {
-  const userAgent = event.headers?.['user-agent'] || event.headers?.['User-Agent'] || '';
-  const hasSession = hasValidSessionCookie(event.headers);
   const highRate = isHighRateIp(getClientIp(event.headers));
 
-  // Quill/Apollo-13: don't act as an oracle unless proven human session.
-  if (!hasSession || isBlockedBotUa(userAgent) || highRate) {
+  // UA-agnostic lockout for high-rate sources.
+  if (highRate) {
     return {
       statusCode: 404,
       headers: {

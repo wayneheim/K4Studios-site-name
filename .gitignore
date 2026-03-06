@@ -147,3 +147,9 @@ NUL.*
 # Cloudflare / Miniflare local state
 cloudflare-worker/.wrangler/
 cloudflare-worker/.dev.vars
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example

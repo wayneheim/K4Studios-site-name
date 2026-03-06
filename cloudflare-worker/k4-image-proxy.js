@@ -58,7 +58,7 @@ import {
 
 // Cache-bust parameter to avoid waiting on Cloudflare's cached manifest after deploys.
 // Update this when you need the worker to pick up a newly deployed manifest immediately.
-const MANIFEST_URL = "https://www.k4studios.com/image-manifest.json?v=20260305-main-sync";
+const MANIFEST_URL = "https://69a88c025cf35e6ac8875487--k4studios.netlify.app/image-manifest.json";
 const IMAGE_ID_MAP_URL = "https://k4studios.com/imageIdMap.json";
 const MANIFEST_CACHE_TTL = 3600; // seconds
 const IMAGE_CACHE_KEY_VERSION = "20260304-idfix1";
@@ -657,15 +657,12 @@ async function handleImageRequest(request, ctx, env) {
              request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim();
   const ipHash = hashIP(ip);
 
-  // SEO SAFETY: Never block verified search bots (Bingbot, Googlebot, etc.)
-  // even if their IP ends up in blocked_ips by accident.
-  // cf.botManagement.verifiedBot is authoritative (Cloudflare-verified, not spoofable).
-  // isDiscoveryBotUA is a UA fallback for plans without Bot Management.
+  // Apply blocked IP policy uniformly (no bot-specific bypass).
   const ua = request.headers.get('User-Agent') || '';
   const cfVerifiedBot = Boolean(request.cf?.botManagement?.verifiedBot);
-  const isDiscoveryBot = cfVerifiedBot || isDiscoveryBotUA(ua);
+  const isDiscoveryBot = false;
   
-  if (env?.DB && ipHash && !isDiscoveryBot) {
+  if (env?.DB && ipHash) {
     try {
       const isBlocked = await isIPBlocked(env, ipHash);
       if (isBlocked) {
@@ -705,7 +702,7 @@ async function handleImageRequest(request, ctx, env) {
   };
   try {
     if (request.method === 'GET') {
-      // Reuse ua / cfVerifiedBot / isDiscoveryBot computed above (SEO safety guard).
+      // No discovery-bot bypass: apply friction uniformly by behavior.
       const discoveryBypass = isDiscoveryBot;
       const effectiveAsn = frictionTest?.asn ?? request.cf?.asn;
       const flags = getSuspicionFlags({ request, asn: effectiveAsn, ua });
@@ -965,14 +962,6 @@ function extractImageId(pathname) {
   return `i-${raw.slice(2)}`;
 }
 
-const IMAGE_ID_STRICT_REGEX = /^i-[A-Za-z0-9]{6,10}$/;
-
-function isStrictImageId(id) {
-  if (!id) return false;
-  if (String(id).toLowerCase() === GHOST_IMAGE_ID.toLowerCase()) return true;
-  return IMAGE_ID_STRICT_REGEX.test(String(id));
-}
-
 function getParentGallery(pathname) {
   return pathname.replace(/\/[iI]-[a-zA-Z0-9-]+\/?$/, "");
 }
@@ -1030,21 +1019,19 @@ function resolveCanonicalImageId(imageId, manifest, imageIdMap) {
   return lookup.get(String(imageId).toLowerCase()) || null;
 }
 
-const FALLBACK_404_HTML = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page Not Found | K4 Studios</title><style>body{font-family:sans-serif;background:#111;color:#ccc;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;margin:0;text-align:center}h1{color:#fff;font-size:2rem;margin-bottom:.5rem}p{margin:.5rem 0}a{color:#a0c4ff;text-decoration:none}a:hover{text-decoration:underline}</style></head><body><h1>404 &mdash; Page Not Found</h1><p>The page you requested could not be found.</p><p><a href="/">Return to K4 Studios</a></p></body></html>`;
-
 async function createBranded404Response(request) {
-  // The site's real 404 page is now a prerendered static file (/404.html).
-  // Fetch it from origin (returns 200) and serve with 404 status.
   try {
     const reqUrl = new URL(request.url);
     const notFoundUrl = `${reqUrl.origin}/404.html`;
     const pageResp = await fetch(notFoundUrl, { method: 'GET' });
 
-    if (pageResp && pageResp.ok) {
+    if (pageResp && (pageResp.ok || pageResp.status === 404)) {
       const headers = new Headers(pageResp.headers);
       headers.set('Cache-Control', 'public, max-age=86400');
       headers.set('X-Robots-Tag', 'noindex, nofollow');
-      headers.set('Content-Type', 'text/html; charset=utf-8');
+      if (!headers.get('Content-Type')) {
+        headers.set('Content-Type', 'text/html; charset=utf-8');
+      }
 
       return new Response(pageResp.body, {
         status: 404,
@@ -1055,12 +1042,10 @@ async function createBranded404Response(request) {
     console.error('Branded 404 fetch error:', e);
   }
 
-  // Fallback: inline branded HTML if /404.html fetch fails.
-  return new Response(FALLBACK_404_HTML, {
+  return new Response('Not Found', {
     status: 404,
     headers: {
-      'Content-Type': 'text/html; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600',
+      'Cache-Control': 'public, max-age=86400',
       'X-Robots-Tag': 'noindex, nofollow'
     }
   });
@@ -1073,36 +1058,28 @@ async function createBranded404Response(request) {
  *   - If case mismatch -> 301 to canonical casing
  *   - Else -> pass through (return null)
  * - If image missing:
- *   - bot/non-browser/unknown-gallery -> 404 Not Found (never existed)
- *   - human with known gallery -> 302 to parent gallery
+ *   - 404 Not Found (never existed)
  *   (410 reserved for ghost sentinel i-k4studios and explicit _redirects only)
  */
 async function handleImagePagePolicy(request, pathname, ctx, env) {
   const imageId = extractImageId(pathname);
   if (!imageId) return null;
 
-  // Fast-fail malformed/junk IDs before manifest/map lookup.
-  if (!isStrictImageId(imageId)) {
-    const isSearch = isSearchBot(request);
-    ctx.waitUntil(logEdgeEvent(env, '404', pathname, imageId, isSearch, request));
-    return createBranded404Response(request);
-  }
-
   // Ghost image ID is a UI sentinel (state management) and should never be a real page.
   // If someone requests a URL ending in i-k4studios, it's always junk traffic.
   if (String(imageId).toLowerCase() === GHOST_IMAGE_ID.toLowerCase()) {
-    const isBrowser = looksLikeBrowser(request);
     const isSearch = isSearchBot(request);
 
-    // Human UX: behave like Smart-404 fallback and send to homepage.
-    if (isBrowser && !isSearch) {
-      ctx.waitUntil(logEdgeEvent(env, '302', pathname, imageId, false, request));
-      return Response.redirect('https://www.k4studios.com/', 302);
-    }
-
-    // Bots/non-browser: keep a hard 404 for clean crawl signaling.
+    // Always return 404 for ghost sentinel to keep behavior identical for
+    // crawlers and human viewers.
     ctx.waitUntil(logEdgeEvent(env, '404', pathname, imageId, isSearch, request));
-    return createBranded404Response(request);
+    return new Response('Not Found', {
+      status: 404,
+      headers: {
+        'X-Robots-Tag': 'noindex, nofollow',
+        'Cache-Control': 'public, max-age=86400'
+      }
+    });
   }
 
   // Preserve query string across canonical redirects (e.g., ?k4debug=1)
@@ -1119,28 +1096,14 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
       getImageIdMap(ctx)
     ]);
 
-    const knownGalleries = getKnownGallerySetFromImageIdMap(imageIdMap);
-    const isBrowser = looksLikeBrowser(request);
     const isSearch = isSearchBot(request);
-    const requestedGalleryPath = getParentGallery(pathname);
-    const requestedGalleryLower = String(requestedGalleryPath || '').toLowerCase();
-    const hasKnownGalleryExact = knownGalleries.has(requestedGalleryLower);
-    const hasKnownGalleryLeaf = knownGalleries.has(`${requestedGalleryLower}/gallery`);
-
-    // Strict path allowlist gate:
-    // If parent gallery path is not real/known, do NOT attempt ID rescue.
-    // This prevents junk path mutation probes (e.g. /Hack/.../i-XXXX) from
-    // triggering expensive lookup + canonical redirect behavior.
-    if (!(hasKnownGalleryExact || hasKnownGalleryLeaf)) {
-      ctx.waitUntil(logEdgeEvent(env, '404', pathname, imageId, isSearch, request));
-      return createBranded404Response(request);
-    }
 
     const canonicalImageId = resolveCanonicalImageId(imageId, manifest, imageIdMap);
 
     // Image exists (exact or case-insensitive canonical match)
     if (canonicalImageId) {
       const validPathsRaw = imageIdMap ? (imageIdMap[canonicalImageId] || imageIdMap[imageId]) : null;
+      const requestedGalleryPath = getParentGallery(pathname);
 
       if (validPathsRaw) {
         const validPaths = Array.isArray(validPathsRaw) ? validPathsRaw : [validPathsRaw];
@@ -1209,18 +1172,20 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
     }
 
     // Image missing
-    const parentGallery = getParentGallery(pathname);
-    
-    // Check if parent gallery is a known valid gallery path
-    const isKnownGallery = knownGalleries.has(String(parentGallery || '').toLowerCase());
-
     // Missing image:
-    // Deterministic 404 for all UAs to avoid divergent crawler/human outcomes.
+    // - 404 for everyone (same behavior for crawlers and humans).
     // WHY 404 not 410: These IDs never existed — they're probe traffic or stale
-    // references, not intentionally deleted content. 410 is reserved for explicit
-    // legacy removals and the ghost sentinel.
+    // references, not intentionally deleted content. 410 signals permanent removal
+    // of something that *was* real, which poisons crawl trust at scale.
+    // 410 is reserved for the ghost sentinel (i-k4studios) and explicit _redirects.
     ctx.waitUntil(logEdgeEvent(env, '404', pathname, imageId, isSearch, request));
-    return createBranded404Response(request);
+    return new Response("Not Found", {
+      status: 404,
+      headers: {
+        "X-Robots-Tag": "noindex",
+        "Cache-Control": "public, max-age=86400" // 1 day
+      }
+    });
 
   } catch (err) {
     console.error("Image page policy error:", err);
@@ -1244,12 +1209,6 @@ async function handleGatewayRequest(request, env) {
     request.method === "OPTIONS"
   ) {
     console.log("PROXY TARGET (always-allowed):", request.url);
-    return fetch(request);
-  }
-
-  // Allow known bots through gateway (they still get image-page policy)
-  if (ALLOWED_BOTS.test(ua)) {
-    console.log("PROXY TARGET (allowed-bot):", request.url);
     return fetch(request);
   }
 
@@ -2363,7 +2322,13 @@ export default {
       path.startsWith('/other/');
 
     if (imageIdAtEnd && !isKnownNamespace) {
-      return createBranded404Response(request);
+      return new Response('Not Found', {
+        status: 404,
+        headers: {
+          'Cache-Control': 'public, max-age=86400',
+          'X-Robots-Tag': 'noindex, nofollow'
+        }
+      });
     }
 
     // =====================================================
@@ -2393,7 +2358,13 @@ export default {
     // - This runs BEFORE trailing-slash canonicalization so we don't spend a 301 on junk.
     // =====================================================
     if (/^\/(?:Galleries|galleries)\/[^/]+\/i-[a-zA-Z0-9-]+\/?$/.test(path)) {
-      return createBranded404Response(request);
+      return new Response('Not Found', {
+        status: 404,
+        headers: {
+          'Cache-Control': 'public, max-age=86400',
+          'X-Robots-Tag': 'noindex, nofollow'
+        }
+      });
     }
 
     // Missing-leaf probe detection is handled universally in image-page policy

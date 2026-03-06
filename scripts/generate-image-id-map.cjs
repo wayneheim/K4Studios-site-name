@@ -23,6 +23,7 @@ const MASTER_DATA_PATH = path.join(__dirname, '../src/data/galleryMaps/MasterGal
 const OUTPUT_PATH_FUNCTIONS = path.join(__dirname, '../netlify/functions/imageIdMap.json');
 const OUTPUT_PATH_SRC = path.join(__dirname, '../src/data/imageIdMap.json');
 const OUTPUT_PATH_PUBLIC = path.join(__dirname, '../public/imageIdMap.json');
+const GHOST_IMAGE_ID = 'i-k4studios';
 
 // Values that mean "hidden" (not including "ghost" which is different)
 const HIDDEN_VISIBILITY = ['hidden', 'non', 'none', ''];
@@ -30,6 +31,10 @@ const HIDDEN_VISIBILITY = ['hidden', 'non', 'none', ''];
 function isHidden(visibility) {
   const val = (visibility || 'show').toLowerCase().trim();
   return HIDDEN_VISIBILITY.includes(val);
+}
+
+function isGhostImageId(id) {
+  return String(id || '').trim().toLowerCase() === GHOST_IMAGE_ID;
 }
 
 async function generateImageIdMap() {
@@ -50,8 +55,13 @@ async function generateImageIdMap() {
   for (const [galleryPath, images] of Object.entries(galleryDataMap)) {
     for (const img of images) {
       if (!img.id) continue;
+
+      // Ghost sentinel must never be emitted into any imageIdMap output.
+      if (isGhostImageId(img.id)) {
+        continue;
+      }
       
-      // Skip hidden images - they should be in Archive.mjs with visibility: show
+      // Skip hidden/ghost images - they should not be canonical redirect targets.
       if (isHidden(img.visibility)) {
         hiddenCount++;
         continue;

@@ -25,7 +25,9 @@
     "gen:sitemap:matches": "node scripts/generate-sitemap-matches.mjs",
     "gen:story-slider": "node scripts/generate-story-slider-data.cjs",
     "populate-archive": "node scripts/populate-archive.cjs",
-    "preview": "astro preview"
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "repository": {
     "type": "git",
@@ -40,6 +42,7 @@
   "homepage": "https://github.com/wayneheim/K4-Studios#readme",
   "dependencies": {
     "@astrojs/check": "^0.9.5",
+    "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/netlify": "^6.5.2",
     "@astrojs/react": "^4.3.0",
     "@astrojs/tailwind": "^6.0.2",
@@ -75,6 +78,7 @@
     "@astrojs/sitemap": "^3.6.0",
     "cpx": "^1.5.0",
     "playwright": "^1.56.1",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "wrangler": "^4.71.0"
   }
 }

@@ -64,7 +64,8 @@ export const oneImageMoviePage = {
         `<strong>Painting</strong> — for its control of light, color, and emotional tone.`,
         `<strong>Photography</strong> — for its grounding in reality and lived detail.`,
         `<strong>Cinema</strong> — for its sense of motion, story, and framing.`,
-        `Wayne's images draw influence from painters like Remington, Wyeth, Rockwell, and the Pictorialists—yet they remain unmistakably photographic. This fusion creates the cinematic painterly aesthetic that defines the medium.`
+        `Wayne's images draw influence from painters like Remington, Wyeth, Rockwell, and the Pictorialists—yet they remain unmistakably photographic. This fusion creates the cinematic painterly aesthetic that defines the medium.`,
+        `Historically, only painters and filmmakers have told the real stories behind figures like the American cowboy — the struggle, the labor, the lives that built the legend. The One-Image Movie™ brings that same depth to photography: not illustrating the myth, but earning it from the ground up.`
       ]
     },
 

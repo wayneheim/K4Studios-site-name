@@ -232,7 +232,8 @@ const tombstoneGalleryMap: Record<string, any[]> = {
 
 const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
   if (stone.thumb) return { ...stone, thumbs: [stone.thumb] };
-  const galleryData = tombstoneGalleryMap[stone.href];
+  // Use _thumbSource for gallery lookup (all hrefs now point to Facing History)
+  const galleryData = tombstoneGalleryMap[stone._thumbSource || stone.href];
   const thumbs = galleryData ? getTombstoneThumbs(galleryData) : [];
   return {
     ...stone,
@@ -252,6 +253,29 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
   <script type="application/ld+json" set:html={faqStructuredData} slot="head"></script>
   <!-- WebPage Schema (subject authority - Cowboy as PRIMARY) -->
   <script type="application/ld+json" set:html={webPageSchema} slot="head"></script>
+
+  <!-- Article Structured Data for topical authority -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cowboy Fine Art Photography: Character-Driven Cowboy Portraits as Authored Fine Art",
+    "author": {
+      "@type": "Person",
+      "name": "Wayne Heim"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "K4 Studios",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.k4studios.com/images/k4-logo.png"
+      }
+    },
+    "description": "A comprehensive guide to cowboy fine art photography — what it is, where cowboy art meets photography, the painterly process, and how character-driven cowboy portraits interpret the American West as authored fine art.",
+    "mainEntityOfPage": "https://www.k4studios.com/Cowboy-Fine-Art-Photography"
+  }
+  </script>
   
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
@@ -272,12 +296,17 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
       <div class="section-heading">
         <h1 class="page-title fade-in reveal-on-scroll">{landingCowboy.title}</h1>
         <h2 class="page-subtitle fade-in reveal-on-scroll">{landingCowboy.subtitle}</h2>
+        <p class="page-summary fade-in reveal-on-scroll">
+          Cowboy fine art photography is authored portraiture that treats the cowboy as a subject worthy of the same interpretive craft traditionally reserved for painted figures.
+        </p>
       </div>
     </section>
 
-    <div class="py-5">
+    <!-- Tombstones restored to top position -->
+    <section class="collections-nav-section">
+      <h3 class="collections-heading fade-in reveal-on-scroll">Explore the Stories of the American West</h3>
       <TombstoneNav client:load items={tombstonesWithThumbs} />
-    </div>
+    </section>
 
     <section class="story-layout">
       <div class="text-column">
@@ -306,14 +335,11 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
                 </ul>
               )}
 
-              {/* Insert StorySlider — one image, one suspended moment */}
-              {index === 1 && (
-                <div class="story-slider-wrapper reveal-on-scroll mt-8 mb-6">
-                  <p class="text-center text-sm text-[#7a6a5a] italic mb-4 max-w-md mx-auto">
-                    One image. One suspended moment. Each cowboy portrait carries a story fragment — a frame from a film that was never made.
-                  </p>
+              {/* Insert StorySlider (secondary variant - reduced visual weight) */}
+              {index === 0 && (
+                <div class="story-slider-wrapper reveal-on-scroll mt-6">
                   <div class="story-slider-skeleton relative bg-[#f4f1ec] rounded-lg shadow-sm px-5 py-4 max-w-xl mx-auto border border-[#e0d9cf] mb-8 h-[240px] overflow-hidden opacity-90">
-                    <p class="text-[10px] uppercase tracking-[0.12em] text-[#a09080] mb-3">Story Fragment</p>
+                    <p class="text-[10px] uppercase tracking-[0.12em] text-[#a09080] mb-3">How Story Lives in These Images</p>
                     <div class="animate-pulse">
                       <div class="h-4 bg-[#e0d9cf] rounded w-3/4 mb-3"></div>
                       <div class="h-3.5 bg-[#e0d9cf] rounded w-full mb-2"></div>
@@ -329,6 +355,10 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
                     variant="secondary"
                   />
                 </div>
+              )}
+
+              {section.subhead === "Character Over Archetype" && (
+                <div class="story-chapter-divider reveal-on-scroll" aria-hidden="true"></div>
               )}
             </article>
           ))}
@@ -399,7 +429,7 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
         max-width: 42ch; margin-left: auto; margin-right: auto; text-align: center;
         font-size: 1rem; line-height: 1.4; letter-spacing: -0.04em;
       }
-      .section-heading-wrap { margin-top: 1rem; margin-bottom: 1rem; }
+      .section-heading-wrap { margin-top: 0.6rem; margin-bottom: 1rem; }
       .sidebar-column { display: none; }
       .story-section { letter-spacing: -0.03em; }
       .story-block h2 {
@@ -417,7 +447,7 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
     .fade-in.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
     .page-title.fade-in { transition-delay: .2s; }
 
-    .section-heading-wrap { margin: -3rem 0 1.5rem; text-align: center; }
+    .section-heading-wrap { margin: -3.4rem 0 1.5rem; text-align: center; }
     .section-heading .page-title { font-size: 2rem; margin-bottom: .4rem; }
     .section-heading .page-subtitle { font-size: 1rem; font-weight: 500; color: #6d5b4a; opacity: .9; }
 
@@ -463,5 +493,105 @@ const tombstonesWithThumbs = landingCowboy.tombstones.map((stone: any) => {
       margin-top: -0.75rem;
     }
     .sample-fade.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
+
+    /* Page summary sentence */
+    .page-summary {
+      max-width: 900px;
+      margin: 0.6rem auto 0;
+      font-size: 1.02rem;
+      line-height: 1.55;
+      color: #6d5b4a;
+      font-family: 'Glegoo', serif;
+      text-align: center;
+      opacity: 0.92;
+    }
+    @media (max-width: 768px) {
+      .page-summary { font-size: 0.95rem; padding: 0 1rem; max-width: 90%; }
+    }
+
+    /* Collections nav section (tombstones) */
+    .collections-nav-section {
+      padding: 1.75rem 0 1.5rem;
+      text-align: center;
+    }
+
+    /* Visual chapter break between narrative sections */
+    .story-chapter-divider {
+      max-width: 42ch;
+      margin: 2.25rem auto 1.25rem;
+      border-top: 1px solid #e0d9cf;
+      opacity: 0.9;
+    }
+    .collections-heading {
+      margin: 1.3rem auto 0.03rem;
+      font-size: 1.16rem;
+      line-height: 1.25;
+      font-weight: 700;
+      color: #8a7a6b;
+      font-family: 'Glegoo', serif;
+      text-align: center;
+      letter-spacing: -0.01em;
+    }
+
+    /* TombstoneNav has built-in top padding; tighten it here so the title sits on the divider */
+    .collections-nav-section :global(.tombstone-nav) {
+      padding: 0.1rem 1rem 2rem;
+      margin: 0;
+    }
+    .collections-nav-section :global(.tombstone-divider) {
+      margin: 0.7rem auto 1.5rem;
+    }
+
+    /* Cowboy hub: unified gateway behavior (all tiles go same place)
+       - no hover scaling
+       - no grayscale/brightness on hover
+       - keep the default tombstone depth
+       - only show the stronger shadow on hover */
+    .collections-nav-section :global(.tombstone-card) {
+      transition: box-shadow 0.28s ease-in-out !important;
+      box-shadow:
+        inset 0 -1px 1px rgba(255, 255, 255, 0.6),
+        inset 0 1px 2px rgba(0, 0, 0, 0.08),
+        0 8px 20px rgba(0, 0, 0, 0.1),
+        0 10px 26px rgba(0, 0, 0, 0),
+        0 0 0 2px rgba(189, 162, 124, 0);
+      transform: none;
+    }
+    .collections-nav-section :global(.tile:hover .tombstone-card) {
+      box-shadow:
+        inset 0 -1px 1px rgba(255, 255, 255, 0.6),
+        inset 0 1px 2px rgba(0, 0, 0, 0.08),
+        0 8px 20px rgba(0, 0, 0, 0.1),
+        0 10px 26px rgba(0, 0, 0, 0.28),
+        0 0 0 2px rgba(189, 162, 124, 0.38);
+      transform: none;
+    }
+    /* Unified hover cue: hover anywhere on the grid triggers all cards */
+    @media (hover: hover) and (pointer: fine) {
+      .collections-nav-section :global(.tile-grid:hover .tombstone-card) {
+        box-shadow:
+          inset 0 -1px 1px rgba(255, 255, 255, 0.6),
+          inset 0 1px 2px rgba(0, 0, 0, 0.08),
+          0 8px 20px rgba(0, 0, 0, 0.1),
+          0 10px 26px rgba(0, 0, 0, 0.28),
+          0 0 0 2px rgba(189, 162, 124, 0.38);
+        transform: none;
+      }
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .collections-nav-section :global(.tile-grid:hover .tile) {
+        transform: none;
+        filter: none;
+      }
+      .collections-nav-section :global(.tile-grid:hover .tile:hover) {
+        transform: none;
+        filter: none;
+        z-index: auto;
+      }
+    }
+    @media (max-width: 768px) {
+      .collections-nav-section { padding-top: 1.55rem; }
+      .collections-heading { font-size: 1.03rem; margin: 0.95rem auto 0.05rem; }
+    }
   </style>
 </BaseLayout>

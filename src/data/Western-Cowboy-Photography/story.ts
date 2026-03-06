@@ -1,77 +1,66 @@
 ﻿export const cowboyStory = [
 
-  // 1. OPENING - GALLERY/COLLECTION INTENT (Quill-approved)
+  // 1. DEFINITION BLOCK (anchor paragraph for AI scraping)
   {
-    title: "Western Cowboy Photography",
+    title: "What Is Western Cowboy Photography?",
     paragraphs: [
-      "This gallery presents Western cowboy photography by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a> - restrained, narrative-driven cowboy portraits shaped by lived experience, historical grounding, and painterly craft. These works move beyond spectacle to focus on character, presence, and the quiet authority of the individuals who define the American West.",
-      "Here, 'Western art' refers to the American West — frontier life, cowboys, and 19th-century Western history — not European or Western civilization art traditions.",
-      "Wayne Heim creates historically themed Western fine art photography, using narrative, painterly composition to explore the psychological lives of the American frontier. The work is rooted in the 19th-century frontier rather than contemporary Western ranch life.",
-      "Built to reward long viewing, these images invite interpretation rather than explanation. Meaning unfolds gradually through posture, light, and stillness - moments held between action and aftermath.",
-      "For a deeper exploration of the genre and its traditions, see <a href='/Blog/what-is-western-fine-art-photography' style='color:#8b5a2b; text-decoration:underline;'>What Is Western Fine Art Photography</a>."
+      "Western cowboy photography is a form of fine art photography that isolates the cowboy—not as costume or cliché, but as a human subject shaped by labor, landscape, and a specific historical moment. It is not a rodeo snapshot. It is not a prop-room portrait. It is character-driven photographic work rooted in the same tradition that gave us Frederic Remington's cowboys and Charles M. Russell's frontier camps: authentic subjects, controlled composition, and narrative intent.",
+      "At K4 Studios, that tradition is realized through <a href=\"/Pictorialist-Photography\">painterly photography</a>—a disciplined process where light, tone, and texture are shaped until the image reads with the weight of a painting while remaining unmistakably photographic. The result is cowboy portraiture built for long viewing, not quick consumption.",
+      "Here, \u2018Western art\u2019 refers to the American West—frontier life, cowboys, and 19th-century Western history—not European or Western civilization art traditions."
     ]
   },
 
-  // 2. CHARACTER STUDIES
+  // 2. HISTORICAL ROOTS
   {
-    subhead: "Character Studies",
+    subhead: "The Historical Roots of Cowboy Photography",
     paragraphs: [
-      "A cowboy portrait is not a snapshot. It is a study of character - the way light falls across weathered skin, the quiet authority of a settled posture, the history written into hands and eyes.",
-      "Each subject is an individual first. What emerges is cowboy portraiture that rewards long viewing and resists easy interpretation."
+      "The cowboy entered photography almost as soon as the camera entered the West. Early images were documentary—trail drives, cattle camps, ranch hands posed beside their string of horses. By the early 1900s, Wild West shows and Hollywood had flattened the cowboy into spectacle: a figure defined by action rather than character.",
+      "Western cowboy photography reclaims the ground between those poles. It draws from the documentary impulse—real people, real settings—while applying the interpretive craft that documentary alone resists. The photographs in this collection belong to that lineage: historically grounded, visually authored, and focused on the individual rather than the myth. Before the legend came the lives that built it—and that is where this work begins."
     ]
   },
 
-  // 3. AUTHENTIC SUBJECTS
+  // 3. CHARACTER OVER COSTUME
   {
-    subhead: "Authentic Subjects",
+    subhead: "Character Over Costume",
     paragraphs: [
-      "These images are created with working cowboys, ranchers, and historically informed frontier figures whose understanding of the West runs deep.",
-      "Nothing is staged for effect. The camera becomes a witness rather than a director - genuine relationship, careful observation, and historical integrity."
+      "The figures that appear here—cowboys, ranchers, frontier interpreters—are presented as individuals, not archetypes. Expression carries more than action. A hand resting on a saddle horn carries more weight than a thrown rope. Stillness replaces spectacle.",
+      "Each portrait functions as a One-Image Movie\u2122—a single frame from a larger, unfinished narrative waiting to be completed by the viewer. Meaning emerges slowly, through return viewing, not immediate explanation."
     ]
   },
 
-  // 4. CINEMATIC STORYTELLING
+  // 4. AUTHENTIC SUBJECTS
   {
-    subhead: "Cinematic Storytelling",
+    subhead: "Authentic Subjects, Not Props",
     paragraphs: [
-      "Each photograph exists as a One-Image Movie - a single frame designed to carry the emotional weight of a larger narrative. The dust hasn't fully settled. The gaze hasn't broken. The story is suspended in time.",
-      "This approach invites the viewer to step inside the frame - to complete what the image begins."
+      "These images are created with working cowboys, ranchers, and living-history interpreters whose knowledge of the West runs deep—people who understand period clothing, tools, and material culture because they have researched and lived it.",
+      "Nothing is staged for spectacle. The camera becomes a witness rather than a director. What emerges is cowboy photography grounded in genuine relationship, careful observation, and historical integrity."
     ]
   },
 
-  // 5. CRAFT & PROCESS
+  // 5. THE PAINTERLY PROCESS
   {
-    subhead: "Craft & Process",
+    subhead: "The Painterly Process",
     paragraphs: [
-      "The visual language of this work draws from the Pictorialist tradition - light is sculpted, tone is controlled, and composition serves narrative restraint.",
-      "This painterly approach transforms cowboy portraits into fine art objects rather than documentation. <a href='/Painterly-Western-Photography'>Explore the painterly Western approach</a>."
+      "The visual language of this work draws from the Pictorialist tradition, applying painterly discipline to photographic process. Light is sculpted to reveal character. Texture is layered to create atmosphere. Color is shaped until the image reads like a painting while remaining a photograph.",
+      "This is not a filter or a preset. It is a process closer to painting: deliberate, iterative, and guided by decades of experience in medical illustration and fine art. The painterly quality comes from lived creative practice—not automation. <a href='/Painterly-Western-Photography'>Explore the painterly Western approach</a>."
     ]
   },
 
-  // 6. PRINT OPTIONS
-  {
-    subhead: "Print Options",
-    paragraphs: [
-      "Cowboy fine art prints are available on archival paper as well as in the Engrained Series - printed directly onto Baltic Birch, where natural wood grain becomes part of the image.",
-      "Each print is crafted to collector standards, built to endure, and designed to command presence in any space. <a href='/Other/K4-Select-Series/Engrained'>Explore the Engrained series</a>."
-    ]
-  },
-
-  // 7. FOR COLLECTORS
+  // 6. FOR COLLECTORS
   {
     subhead: "For Collectors",
     paragraphs: [
-      "This collection is created for collectors who value depth over decoration - those drawn to cowboy art that carries emotional weight and narrative integrity.",
-      "Each portrait is meant to live with you - not as an object glanced at once, but as a presence that continues to reveal itself over time."
+      "This collection is created for collectors who value depth over decoration—those drawn to cowboy art that carries emotional weight and narrative integrity rather than nostalgic cliché.",
+      "These works are produced with museum-quality materials and archival intent: numbering, signing, and hand-inspection for tonal fidelity. Whether on archival paper, premium canvas, or Wayne\u2019s proprietary <a href=\"/Other/K4-Select-Series/Engrained\">Engrained wood panel prints</a>—where the image is layered into Baltic birch using a five-layer UV process—every print is built to endure."
     ]
   },
 
-  // 8. CLOSING
+  // 7. CLOSING
   {
     subhead: "Step Inside the Story",
     paragraphs: [
-      "Each cowboy portrait stands as a single frame from a larger, unfinished narrative - a One-Image Movie waiting for you to step inside.",
-      "This page presents cowboy photography focused on authentic character, grit, and the human truth of the American West."
+      "The doorway above opens into Facing History—galleries where individual cowboy stories unfold across a larger frontier landscape. Each image is a marker, recording the character, grit, and lived experience of those who shaped the American West.",
+      "These are not galleries you browse. They are rooms you enter. The history behind them runs deeper than any single frame can hold."
     ]
   }
 ];

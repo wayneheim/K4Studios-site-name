@@ -5,11 +5,9 @@
  * It looks up the image ID in a pre-built map and either:
  * 1. Redirects to the correct gallery if the image moved (301) — same for all UAs
  * 2. Returns the branded 404 page if the image ID is unknown — same for all UAs
- * 
- * Bots (Bingbot, Googlebot, etc.) and humans receive IDENTICAL responses.
- * The only UA-based difference is in the gating layer (not the outcome):
- *   - Crawlers are admitted without a session cookie; humans require k4_vid/k4_sid
- *   - Crawlers get a higher rate-limit cap (60/min vs 25/min)
+ *
+ * Bots (Bingbot, Googlebot, etc.) and humans receive IDENTICAL behavior.
+ * Gating is UA-agnostic (session + rate based).
  * 
  * This function ONLY runs on actual 404s, not on every page load.
  */
@@ -75,22 +73,6 @@ function getKnownGalleryPathsLower() {
 
   _knownGalleryPathsLower = paths;
   return _knownGalleryPathsLower;
-}
-
-// Detect search engine crawlers by User-Agent (allowed)
-function isSearchCrawler(userAgent) {
-  if (!userAgent) return false;
-  // Intentionally narrow: keep link equity for major search engines.
-  // Do NOT include SEO tools/scrapers here (Ahrefs/Semrush/etc).
-  const crawlerPattern = /googlebot|bingbot|duckduckbot|slurp|yandex|baiduspider|msnbot|applebot/i;
-  return crawlerPattern.test(userAgent);
-}
-
-// Known non-search scrapers / automation clients (locked out)
-function isBlockedBotUa(userAgent) {
-  if (!userAgent) return false;
-  const p = /ahrefsbot|semrushbot|petalbot|mj12bot|dotbot|seznambot|serpstatbot|dataforseo|python-requests|aiohttp|curl|wget|go-http-client/i;
-  return p.test(userAgent);
 }
 
 function isSuspiciousPath(pathname) {
@@ -165,10 +147,10 @@ async function createBranded404Response(event, reason, maxAge = 86400) {
 // Not perfect, but it helps reduce brute-force oracle behavior.
 const _ipBuckets = new Map();
 let _bucketOps = 0;
-function isHighRateIp(ip, opts = {}) {
+function isHighRateIp(ip) {
   if (!ip) return false;
   const WINDOW_MS = 60_000;
-  const MAX_REQ = opts.isCrawler ? 60 : 25;
+  const MAX_REQ = 30;
   const now = Date.now();
   let b = _ipBuckets.get(ip);
   if (!b || (now - b.windowStart) > WINDOW_MS) {
@@ -197,12 +179,6 @@ function isHighRateIp(ip, opts = {}) {
 // See: Quill's architectural guidance from 2026-02-08
 
 exports.handler = async (event) => {
-  // Get User-Agent for bot detection
-  const userAgent = event.headers['user-agent'] || event.headers['User-Agent'] || '';
-  const isCrawler = isSearchCrawler(userAgent);
-  const isBlockedUa = isBlockedBotUa(userAgent);
-  const isBotRequest = isCrawler;
-  
   // Get path from query string (passed by _redirects) or from event.path
   const queryPath = event.queryStringParameters?.path || '';
   const eventPath = event.path || '';
@@ -262,18 +238,11 @@ exports.handler = async (event) => {
   // Avoid using smart-404 as an oracle for brute-force ID probing.
   const hasSession = hasValidSessionCookie(event.headers);
   const clientIp = getClientIp(event.headers);
-  const highRate = isHighRateIp(clientIp, { isCrawler });
+  const highRate = isHighRateIp(clientIp);
 
-  // Hard lockout: known scrapers/automation clients.
-  if (isBlockedUa) {
-    console.log('[smart-404] Locked: blocked UA');
-    return createBranded404Response(event, 'locked', 600);
-  }
-
-  // Allow: on-site humans (session cookie) OR major search crawlers.
   // Lock out: no-session unknowns (bulk probes) and high-rate sources.
-  if (!(hasSession || isCrawler) || highRate) {
-    if (!hasSession && !isCrawler) console.log('[smart-404] Locked: no session and not a crawler');
+  if (!hasSession || highRate) {
+    if (!hasSession) console.log('[smart-404] Locked: no session');
     if (highRate) console.log(`[smart-404] Locked: high rate from ${clientIp}`);
     return createBranded404Response(event, 'locked', 600);
   }

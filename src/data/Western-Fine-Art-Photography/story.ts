@@ -15,7 +15,7 @@
     subhead: "The Historical Roots of Western Photography",
     paragraphs: [
       "Western photography emerged alongside westward expansion in the mid-1800s. Early practitioners like Timothy O\u2019Sullivan documented frontier geology and settlement, while Edward S. Curtis created extensive portraits of Native American tribes\u2014work that remains influential and contested. Through the 20th century, photographers\u2014from Ansel Adams to documentary ranch photographers\u2014shaped how the West was seen.",
-      "Contemporary western fine art photography builds on this lineage while questioning its myths\u2014focusing on character, lived experience, and narrative complexity rather than spectacle. The photographs in this collection belong to that tradition: rooted in history, shaped by craft, and focused on the human presence that defines the American West. The work presented here continues that tradition through painterly photographic interpretation."
+      "This work builds on that lineage while questioning its myths\u2014focusing on character, lived experience, and narrative complexity rather than spectacle. The photographs here tell the stories of the people who created the framework the modern West is built upon\u2014individual lives shaped by labor, risk, and endurance on the frontier. Before the legend came the lives that built it\u2014and that is where this work begins. That history is interpreted through painterly photographic craft, not simply recorded."
     ]
   },
 
