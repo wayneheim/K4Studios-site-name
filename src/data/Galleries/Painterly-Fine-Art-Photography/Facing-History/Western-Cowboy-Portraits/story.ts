@@ -4,14 +4,13 @@ export const westernStory = [
   {
     breadcrumb: "Western Cowboy Portraits",
     title: "Painterly Western Cowboy Portraits",
-    subhead: "Cinematic fine art photography shaped by light, history, and human consequence.",
+    subhead: "The Hidden Framework Behind the Frontier Legend — Fine Art Photography Built on Silence, Grit, and Human Consequence.",
     tagline: "For collectors drawn to story over spectacle.",
     paragraphs: [
-      `The American West is crowded with legends — yet so few of the real stories survived. The quiet ones. The human ones. The moments too honest for Hollywood and too fragile for textbooks.`,
-      `Wayne Heim’s painterly Western fine art photography explores those spaces through a disciplined Western photography style rooted in history, restraint, and narrative weight — imagery designed to feel lived in rather than staged.`,
-      `This work is often described as <strong>Western themed photography</strong> not because it illustrates myth, but because it studies people shaped by land, consequence, and time.`,
-      `These are not costume studies or nostalgic reenactments. They are character-driven cowboy portraits shaped by grit, resolve, longing, and the fragile hope carried into an unforgiving land.`,
-      `Each image is constructed to hold tension — a moment suspended between what has just happened and what must happen next — inviting the viewer to step inside rather than observe from a distance.`,
+      `The American West is crowded with legends — yet so few of the real stories survived. Not the gunfights. Not the sunsets. The quiet scaffolding beneath them: the resolve measured in a stranger’s posture, the wife who kept the ranch solvent while the legend rode out, the weathered hands that told a longer story than any dime novel ever captured.`,
+      `Wayne Heim’s painterly Western fine art photography explores that hidden framework — the invisible architecture that held the frontier’s icons up. These are not costume studies or nostalgic reenactments. They are character-driven cowboy portraits shaped by grit, resolve, longing, and the fragile hope carried into an unforgiving land.`,
+      `Every icon has scaffolding. The gunslinger who walked into legend did so because someone else held the line behind him. The trail boss earned his name because of the crew who never got one. By revealing those unseen figures and unspoken moments, each portrait expands beyond a single frame into a complete story — and the legend itself gains gravity it never had when standing alone.`,
+      `Each image is built around a suspended moment — the breath before the draw, the silence after the choice, the pause between what has just happened and what must happen next. This is the <strong>One-Image Movie™</strong> architecture: one frame that implies the whole story because it reveals the invisible framework beneath the myth.`,
       `This is Western fine art photography for collectors drawn to atmosphere, authenticity, and story — images that linger long after the frame is left behind.`
     ]
   },
@@ -23,11 +22,10 @@ export const westernStory = [
     subhead: "What Painterly Western Photography Means",
     tagline: "Structure Before Texture. Intent Before Effect.",
     paragraphs: [
-      `Painterly Western photography is not a filter, preset, or visual trend. It is a disciplined fine art approach grounded in control, restraint, and narrative intent.`,
-      `The process begins before the shutter is pressed — with light shaped deliberately, tonal hierarchy established, and composition designed to carry emotional and psychological weight.`,
-      `Rooted in the Pictorialist tradition and refined through decades of illustration, Wayne approaches photography with a painter’s understanding of form, balance, and consequence.`,
-      `Texture follows structure. Color carries meaning. Shadow holds narrative weight rather than simply going dark.`,
-      `This discipline is what separates painterly fine art photography from surface stylization — and why these images feel inhabited rather than decorative.`
+      `Painterly Western photography is not a filter, preset, or visual trend. It is a disciplined fine art approach grounded in control, restraint, and narrative intent — and it exists for a specific reason: to make the invisible visible.`,
+      `The process begins before the shutter is pressed — with light shaped deliberately, tonal hierarchy established, and composition designed to carry emotional and psychological weight. Every decision serves the story’s hidden framework: where does the eye rest? What is implied beyond the frame? What unseen moment does this silence carry?`,
+      `Rooted in the Pictorialist tradition and refined through decades of illustration, Wayne approaches photography with a painter’s understanding of form, balance, and consequence. Texture follows structure. Color carries meaning. Shadow holds narrative weight rather than simply going dark.`,
+      `This discipline is what allows a single image to hold a whole story — not by showing everything, but by implying the scaffolding beneath. It is why these portraits feel inhabited rather than decorative, and why the moment before and the moment after live inside the frame even when neither is shown.`
     ]
   },
 
@@ -36,58 +34,56 @@ export const westernStory = [
     subhead: "The Frontier in Light and Shadow",
     tagline: "Color for breath. Black and white for bone.",
     paragraphs: [
-      `The American West was never singular. It existed between fire and ash, dust and night, hope and reckoning. Wayne’s Western photography reflects that complexity through both color and monochrome interpretations.`
+      `The American West was never singular. It existed between fire and ash, dust and night, hope and reckoning. Wayne’s Western photography reflects that complexity through both color and monochrome interpretations — each revealing different layers of the hidden framework beneath the legend.`
     ],
     list: [
-      `<strong>Painterly Cowboy Portraits (Color):</strong> Sun-warmed riders, dust suspended in gold, faces shaped by directional light. Cinematic, intimate, and alive.`,
-      `<strong>Black & White Western Photography:</strong> A historically grounded Western photography style reduced to structure and intent — images that feel unearthed rather than captured.`,
-      `<strong>Native American Fine Art Portraits:</strong> Historically themed portraits created with research, restraint, and reverence. Every garment, gesture, and expression treated as part of a living continuum, not a symbol.`
+      `<strong>Painterly Cowboy Portraits (Color):</strong> Sun-warmed riders, dust suspended in gold, faces shaped by directional light. Color carries the breath of the frontier — the warmth of a world that was alive, dangerous, and full of consequence for those who inhabited it, not just those who became famous for it.`,
+      `<strong>Black & White Western Photography:</strong> Stripped to structure and intent, monochrome exposes the scaffolding directly — the bone beneath the myth. Images that feel unearthed rather than captured, as though the hidden framework was always there, waiting to be uncovered.`,
+      `<strong>Native American Fine Art Portraits:</strong> Historically themed portraits created with research, restraint, and reverence. Among the most overlooked figures in the Western story, these subjects represent an entire civilization whose framework held the land together long before the frontier narrative began — and whose story the legend was built on top of, not beside.`
     ]
   },
 
   /* 4: CANON */
   {
     subhead: "Reconsidering the Western Canon",
-    tagline: "Beyond Myth. Toward Human Consequence.",
+    tagline: "The icon gets the statue. The scaffolding gets the truth.",
     paragraphs: [
-      `Much of Western imagery repeats what we already know — or think we know. These portraits look elsewhere.`,
-      `Rather than reinforcing archetypes, Wayne’s work studies individuals: miners, drifters, scouts, settlers — people who wagered everything on a promise large enough to break them.`,
-      `Here, posture matters less than presence. Costume gives way to consequence. The West is no longer a stage — it becomes a place where choices linger and silence carries weight.`,
-      `This is historically themed Western fine art focused not on legend, but on lived experience — the moments history skipped but humanity remembers.`,
-      `Telling these stories through photography is rare. Painters and filmmakers have long owned this territory — the real struggles behind the frontier myth. This work joins that tradition, beginning not with the legend but with the lives that built it.`
+      `Much of Western imagery repeats what we already know — or think we know. The hero rides in. The legend is born. But this work looks elsewhere: at the people who never made the painting but without whom the painting would never have existed.`,
+      `Miners, drifters, scouts, settlers, the wives and daughters who held the infrastructure of frontier life together while history turned its lens on the man with the fastest draw — Wayne’s portraits study individuals rather than archetypes. Posture matters less than presence. Costume gives way to consequence. The West becomes a place where choices linger and silence carries weight.`,
+      `This is the Picasso principle applied to the frontier: you cannot reinterpret a story you have never understood. Before the legend came the lives that built it. Before the myth came the quiet framework that bore its weight. By studying that hidden architecture first, the work earns its interpretation — and the viewer sees the legend more fully than repetition ever allowed.`,
+      `Telling these stories through photography is rare. Painters and filmmakers have long owned this territory. This work joins that tradition, beginning not with the icon but with the scaffolding the icon stands on.`
     ]
   },
 
   /* 5: ENGRAINED */
   {
     subhead: "The Engrained Series — Western Portraits Printed on Wood",
-    tagline: "When Story Becomes Artifact",
+    tagline: "When Story Becomes Artifact.",
     paragraphs: [
       `Some stories should not live on paper. They deserve material that already understands time.`,
-      `The Engrained Series prints select Western portraits directly onto Baltic Birch, allowing the natural grain to move through the image like memory through smoke.`,
-      `Each piece is singular. Each carries variation, texture, and imperfection — not as effect, but as evidence of material, history, and presence.`
+      `The Engrained Series prints select Western portraits directly onto Baltic Birch, allowing the natural grain to move through the image like memory through smoke. Each piece is singular — carrying variation, texture, and imperfection not as effect, but as evidence of material, history, and presence.`,
+      `For work built on hidden scaffolding, the Engrained treatment is especially powerful. The wood’s imperfection becomes part of the story’s framework — and the portrait gains the tactile weight of something unearthed rather than something printed. The legend’s bones finally have a surface that matches.`
     ]
   },
 
   /* 6: COLLECTOR LOGIC */
   {
     subhead: "Why Collect Wayne Heim’s Western Art",
-    tagline: "Authenticity. Discipline. Narrative Weight.",
+    tagline: "Not the legend retold. The framework revealed.",
     paragraphs: [
-      `Collectors are drawn to this work because it occupies rare ground — between fine art and lived experience.`,
-      `This is not cowboy décor. Not cosplay. Not spectacle.`,
-      `It is legacy-driven Western fine art photography — historically themed, narratively restrained, and built with compositional discipline. Images that reward long looking and remain present long after the room goes quiet.`
+      `Collectors are drawn to this work because it occupies rare ground — between fine art and lived experience, between the celebrated icon and the invisible architecture that held it up.`,
+      `This is not cowboy décor. Not cosplay. Not spectacle. It is legacy-driven Western fine art photography — historically themed, narratively restrained, and built with compositional discipline that serves the story’s hidden framework.`,
+      `Images that reward long looking. That reveal new scaffolding each time. That remain present long after the room goes quiet — because the story inside them is larger than the frame.`
     ]
   },
 
   /* 7: BRAND CONCEPT */
   {
     subhead: "Own a Chapter of the American West",
-    tagline: "For collectors who want more than decoration.",
+    tagline: "The icon alone is a poster. The icon with its scaffolding is a story.",
     paragraphs: [
-      `Every image functions as a single frame from a larger, unseen story — deliberately unresolved.`,
-      `This is the One-Image Movie™: not an answer, but an invitation.`,
-      `Bring home not just a print, but a story that continues every time you pass it.`
+      `Every image functions as a single frame from a larger, unseen story — deliberately unresolved. This is the <strong>One-Image Movie™</strong>: one frame that holds the whole architecture because it implies the moment before, the moment after, and the unnamed figure who never got the recognition but without whom the legend could not stand.`,
+      `Bring home not just a print, but the story behind the story — a piece of the hidden framework of the American West that continues every time you pass it.`
     ]
   }
 
