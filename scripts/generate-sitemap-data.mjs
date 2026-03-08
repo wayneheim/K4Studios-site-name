@@ -270,6 +270,51 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(allEntries, null, 2)};
   const publicSitemapPath = path.join(publicDir, 'sitemap.xml');
   await writeFile(publicSitemapPath, sitemapXml, 'utf8');
   console.log(`Wrote static sitemap XML to ${path.relative(path.resolve(__dirname, '..'), publicSitemapPath)}`);
+
+  // ── Blog sitemap ──────────────────────────────────────────────────────
+  const BLOG_PATH_RE = /^https?:\/\/www\.k4studios\.com\/Blog(?:$|\/)/i;
+  const blogEntries = allEntries.filter((e) => BLOG_PATH_RE.test(String(e.loc || '')));
+
+  const blogUrlsXml = blogEntries.map((entry) => {
+    const loc = `<loc>${xmlEscape(entry.loc)}</loc>`;
+    const lastmod = entry.lastmod ? `<lastmod>${xmlEscape(entry.lastmod)}</lastmod>` : '';
+    const changefreq = entry.changefreq ? `<changefreq>${xmlEscape(entry.changefreq)}</changefreq>` : '';
+    const priority = typeof entry.priority === 'number' ? `<priority>${entry.priority.toFixed(1)}</priority>` : '';
+    return `  <url>\n    ${loc}\n    ${lastmod}\n    ${changefreq}\n    ${priority}\n  </url>`
+      .replace(/\n\s*\n/g, '\n');
+  }).join('\n');
+
+  const blogSitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${blogUrlsXml}\n</urlset>\n`;
+
+  const blogSitemapPath = path.join(publicDir, 'blog-sitemap.xml');
+  await writeFile(blogSitemapPath, blogSitemapXml, 'utf8');
+  console.log(`Wrote static blog sitemap XML (${blogEntries.length} entries) to ${path.relative(path.resolve(__dirname, '..'), blogSitemapPath)}`);
+
+  // ── Master sitemap index ──────────────────────────────────────────────
+  // Enumerate all image-sitemap-*.xml files in public/ (exclude the index itself)
+  const publicFiles = await readdir(publicDir);
+  const imageSitemapFiles = publicFiles
+    .filter((f) => f.startsWith('image-sitemap-') && f.endsWith('.xml') && f !== 'image-sitemap-index.xml')
+    .sort();
+
+  const childSitemaps = [
+    'sitemap.xml',
+    'blog-sitemap.xml',
+    'image-sitemap-index.xml',
+    ...imageSitemapFiles,
+  ];
+
+  const sitemapIndexEntries = childSitemaps.map((file) => {
+    return `  <sitemap>\n    <loc>${SITE_URL}/${file}</loc>\n    <lastmod>${timestamp}</lastmod>\n  </sitemap>`;
+  }).join('\n');
+
+  const sitemapIndexXml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapIndexEntries}\n</sitemapindex>\n`;
+
+  const sitemapIndexPath = path.join(publicDir, 'sitemap-index.xml');
+  await writeFile(sitemapIndexPath, sitemapIndexXml, 'utf8');
+  console.log(`Wrote master sitemap index (${childSitemaps.length} sitemaps) to ${path.relative(path.resolve(__dirname, '..'), sitemapIndexPath)}`);
 }
 
 main().catch((err) => {

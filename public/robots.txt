@@ -213,7 +213,20 @@ Allow: /
 # Content-signal: search=yes, ai-train=no
 
 # --- Sitemaps ---
+# Master index wraps everything; individual entries give Bing per-sitemap Index Coverage tracking
+Sitemap: https://www.k4studios.com/sitemap-index.xml
 Sitemap: https://www.k4studios.com/sitemap.xml
 Sitemap: https://www.k4studios.com/blog-sitemap.xml
 Sitemap: https://www.k4studios.com/image-sitemap-index.xml
 Sitemap: https://www.k4studios.com/image-sitemap-cowboy.xml
+Sitemap: https://www.k4studios.com/image-sitemap-wwii.xml
+Sitemap: https://www.k4studios.com/image-sitemap-civilwar.xml
+Sitemap: https://www.k4studios.com/image-sitemap-roaring20s.xml
+Sitemap: https://www.k4studios.com/image-sitemap-landscapes-painterly.xml
+Sitemap: https://www.k4studios.com/image-sitemap-landscapes-traditional.xml
+Sitemap: https://www.k4studios.com/image-sitemap-painterly-misc.xml
+Sitemap: https://www.k4studios.com/image-sitemap-portraits.xml
+Sitemap: https://www.k4studios.com/image-sitemap-transportation.xml
+Sitemap: https://www.k4studios.com/image-sitemap-miscellaneous.xml
+Sitemap: https://www.k4studios.com/image-sitemap-architecture.xml
+Sitemap: https://www.k4studios.com/image-sitemap-engrained.xml
