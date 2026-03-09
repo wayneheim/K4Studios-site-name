@@ -333,6 +333,21 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   }
 
   const response = await next();
+
+  // Route page-level misses to branded custom 404 page.
+  // Keep asset/API 404s untouched.
+  if (
+    response.status === 404 &&
+    pathname !== "/404" &&
+    context.request.method === "GET" &&
+    !/\.[a-z0-9]+$/i.test(pathname)
+  ) {
+    return new Response(null, {
+      status: 302,
+      headers: { Location: "/404" },
+    });
+  }
+
   const contentType = response.headers.get("content-type") || "";
 
   if (contentType.includes("text/html")) {
