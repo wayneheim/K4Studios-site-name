@@ -279,6 +279,25 @@
 				"scripts/generate-image-sitemaps.mjs"
 			],
 			"isBackground": false
+		},
+		{
+			"label": "Regenerate image sitemaps concise",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"scripts/generate-image-sitemaps.mjs"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Final predeploy build check",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false
 		}
 	]
 }

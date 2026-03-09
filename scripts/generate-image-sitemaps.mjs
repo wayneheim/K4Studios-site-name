@@ -16,8 +16,9 @@ const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const REPO_ROOT = path.resolve(__dirname, '..');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
-const MAX_IMAGE_CAPTION_LENGTH = 900;
+const MAX_IMAGE_CAPTION_LENGTH = 700;
 const CAPTION_SENTENCE_LOOKBACK = 220;
+const CAPTION_HOOK_MAX_LENGTH = 180;
 
 function capImageCaption(caption) {
   const normalized = normalizeCaptionText(caption);
@@ -458,6 +459,26 @@ function normalizeCaptionText(value) {
     .trim();
 }
 
+function extractShortNarrativeHook(value) {
+  const normalized = normalizeCaptionText(value);
+  if (!normalized) return '';
+
+  const sentenceMatch = normalized.match(/^.+?[.!?](?=(?:["')\]]|\s|$))/);
+  const firstSentence = sentenceMatch ? sentenceMatch[0].trim() : normalized;
+
+  if (firstSentence.length <= CAPTION_HOOK_MAX_LENGTH) {
+    return firstSentence;
+  }
+
+  const softTrim = firstSentence.slice(0, CAPTION_HOOK_MAX_LENGTH).trimEnd();
+  const lastWordBreak = softTrim.lastIndexOf(' ');
+  if (lastWordBreak > Math.floor(CAPTION_HOOK_MAX_LENGTH * 0.75)) {
+    return `${softTrim.slice(0, lastWordBreak).trimEnd()}...`;
+  }
+
+  return `${softTrim}...`;
+}
+
 /**
  * Generate <url> entry with nested <image:image> for a gallery image
  */
@@ -476,8 +497,7 @@ function generateUrlEntry(image, urlBase) {
   // Use proxy URLs capped at L - never expose XL or raw SmugMug URLs to bots
   const imageUrl = `${SITE_URL}/img/${image.id}/l`;
   
-  // Build rich caption from description + story + notes
-  // Combine all available text fields for maximum semantic value
+  // Build concise caption for sitemap usage: description + optional short narrative hook
   const captionParts = [];
   
   // Primary: description
@@ -486,20 +506,14 @@ function generateUrlEntry(image, urlBase) {
     captionParts.push(descriptionText);
   }
   
-  // Secondary: story (if different from description)
+  // Secondary: optional one-sentence narrative hook (if different from description)
   const storyText = normalizeCaptionText(image.story);
   if (storyText) {
-    const storyTrimmed = storyText;
-    // Only add if meaningfully different from description
-    if (!descriptionText || !descriptionText.includes(storyTrimmed.substring(0, 50))) {
-      captionParts.push(storyTrimmed);
+    const hookText = extractShortNarrativeHook(storyText);
+    // Only add hook if meaningfully different from description
+    if (hookText && (!descriptionText || !descriptionText.includes(hookText.substring(0, 40)))) {
+      captionParts.push(hookText);
     }
-  }
-  
-  // Tertiary: notes (collector context, historical references, art criticism)
-  const notesText = normalizeCaptionText(image.notes);
-  if (notesText) {
-    captionParts.push(notesText);
   }
   
   // Join with paragraph separator, then cap for concise image search snippets

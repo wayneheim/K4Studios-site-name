@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-03-07T23:56:39.527Z",
+    "lastUpdated": "2026-03-09T00:00:59.874Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z",
     "lastSyncFrom": "Engrained-Series.mjs"
   },
@@ -12894,7 +12894,8 @@
       "linkedCount": 1,
       "excludeSizes": {
         "legend": [
-          "40\" x 60\""
+          "40\" x 60\"",
+          "30\" x 40\""
         ]
       },
       "createdAt": "2025-12-22T21:30:57.636Z",
@@ -12921,7 +12922,8 @@
       "primaryImageId": "i-NdQnj6P",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
       "title": "The Slow Breath of Evening",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NdQnj6P/0/MDV9QGgNC3C3hFLwJ53BFSxTLBvNbPcPtvJqddCq3/XL/_WHO8015-955-XL.jpg",
@@ -13036,9 +13038,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "chronicle": [
-          "20\" x 24\""
-        ]
+        "chronicle": []
       },
       "createdAt": "2025-12-22T21:31:53.856Z",
       "editionData": {
@@ -13619,7 +13619,8 @@
       "tiers": [
         "sketch",
         "foundation",
-        "chronicle"
+        "chronicle",
+        "legend"
       ],
       "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Wx5scCf/0/LDq7zSzrMs3gDgSF2BwqVPsjDLcFWkDxFj3mBWBpD/XL/_HF25859-1151-1156-1159-XL.jpg",
@@ -13912,7 +13913,8 @@
       "primaryImageId": "i-qB47jJT",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
       "title": "A Quiet Understanding",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qB47jJT/0/KK4XrgdgW669SqpCJWFFhgxkCTJXsVdgPQVjcDprt/XL/_WHO7107-Edit-XL.jpg",
@@ -13926,7 +13928,10 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": []
+        "foundation": [],
+        "chronicle": [
+          "20\" x 24\""
+        ]
       },
       "createdAt": "2025-12-22T21:41:37.488Z"
     },
@@ -14173,7 +14178,8 @@
       "primaryImageId": "i-Vr8vzjt",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
       "title": "This Is Where I Stand",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Vr8vzjt/0/NVc5cNFSDXmwWcLZdbGPVDwdfBq2NXWzxbLNWR9LG/XL/_WHO1699-1184-1190-XL.jpg",
@@ -14186,7 +14192,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-22T21:44:12.501Z"
     },
     "s-Vnd2mqH": {
@@ -14565,7 +14575,8 @@
       "primaryImageId": "i-ShhCNkX",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
       "title": "Miles to Go",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-ShhCNkX/0/KSxzs9TCd6hb98VK9VdQ966LgjM9vHKjpTMv5Pt6G/XL/_WHO5919-909-XL.jpg",
@@ -14599,7 +14610,8 @@
       "primaryImageId": "i-c3vWMgt",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
       "title": "Able Reckoning — The Instant of Consequence",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c3vWMgt/1/KvC6GBPW4Xq4ssXsNgpntxf8rx4DwQgJFRBcbgV6N/XL/_HF26004-1161-1162-XL.jpg",
@@ -14618,7 +14630,11 @@
         }
       ],
       "linkedCount": 2,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-22T21:45:46.881Z"
     },
     "s-YTgk7pt": {
@@ -15329,7 +15345,8 @@
       "primaryImageId": "i-5HpSkgR",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
       "title": "Unfinished Business",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-5HpSkgR/0/NV5hG2zP8SbsSN6V79RKZ5nqm6HmS2N92XFShpNW7/L/_HF23379-819-2-L.jpg",
@@ -15342,7 +15359,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-22T21:49:58.122Z",
       "editionData": {
         "chronicle": {
@@ -15421,7 +15442,8 @@
       "primaryImageId": "i-5FX3W9r",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
       "title": "Morning Joe",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-5FX3W9r/3/KwV2wHFdfNq9PHm2HV77hrvsSKKQtG3b94LcdzPRj/XL/Painterly%20Cowboy%20Portrait%20Photography%20_DSF8812-Edit-2-Edit-2-XL.jpg",
@@ -15434,7 +15456,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-22T21:50:18.895Z",
       "editionData": {
         "chronicle": {
@@ -15753,7 +15779,8 @@
       "primaryImageId": "i-MF3xPCZ",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
       "title": "Dead Man’s Reach",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MF3xPCZ/0/MRrFzX5N5qt8V85vqnhgPVrvghqCGDkgfxQnx7vW3/XL/_WHO2914-1146-XL.jpg",
@@ -15766,7 +15793,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-22T21:51:32.615Z",
       "editionData": {
         "chronicle": {
@@ -15987,7 +16018,8 @@
       "primaryImageId": "i-M2WdKTL",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
       "title": "Still Following",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-M2WdKTL/0/LP47NQ2Dzqb56TwQrh63MtGpDLDJssSPFPzVBM2Z4/XL/_WHO2056-Edit-XL.jpg",
@@ -16000,7 +16032,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-22T21:52:16.783Z",
       "editionData": {
         "chronicle": {
@@ -16202,7 +16238,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-22T21:52:49.745Z",
       "editionData": {
         "chronicle": {
@@ -16355,11 +16395,10 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ],
+        "foundation": [],
         "chronicle": [
-          "20\" x 24\""
+          "20\" x 24\"",
+          "16\" x 20\""
         ]
       },
       "createdAt": "2025-12-22T21:53:16.716Z",
@@ -16628,7 +16667,8 @@
       "primaryImageId": "i-7Jzf69b",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
       "title": "Cowboy Decisions",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-7Jzf69b/2/KhMF2sqvPqNsK6dbpwf3vrLfDkpRBRk9v5CjCvr6X/XL/old%20wild%20west%20cowboy%20portrait%20_DSF9773-Edit-3-XL.jpg",
@@ -16641,7 +16681,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-22T21:54:25.455Z",
       "editionData": {
         "chronicle": {
@@ -16728,7 +16772,8 @@
       "primaryImageId": "i-vP376vx",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
       "title": "Who Goes There?",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-vP376vx/3/MvxPFZN8cXdTg7pxpHfssR2RJcdZcSPsKd8KcFQJK/XL/Painterly%20cowboy%20portrait_HF21025-Enhanced-NR-Edit-XL.jpg",
@@ -16741,7 +16786,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-22T21:54:38.384Z",
       "editionData": {
         "chronicle": {
@@ -17456,9 +17505,10 @@
       "primaryImageId": "i-zH8SD79",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
-      "title": "Dead to Rights",
+      "title": "The Unforgiving Moment",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-zH8SD79/4/MSfPBrqff76D87G4KPVtSjmfgFBRJfXH54mTZ4ct2/XL/_O2H2299-Edit-2-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -17469,7 +17519,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-22T21:57:25.173Z"
     },
     "s-VHhs2R8": {
@@ -17837,7 +17891,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "I beg your pardon?",
+      "title": "I Beg Your Pardon?",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-CgCxXGG/2/KShdt4Xzv4nMTZtm7SrnLjZxM838SQGXt6RzwT46J/XL/Western%20Cowboy%20Portrait%20Photography%20_ANA1082-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -17849,9 +17903,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2025-12-22T21:58:35.829Z"
     },
@@ -18070,9 +18122,10 @@
       "primaryImageId": "i-6BgfRxb",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
-      "title": "Cowboy Art: Gold!",
+      "title": "Worth the Bend",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-6BgfRxb/7/M3xgzVTMPHn5mb9d3Z9wWsZXGLRbRBVFNkNZTJVzk/XL/Cowboy%20wall%20art%20_DSF9064-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -18083,7 +18136,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-22T21:59:30.018Z"
     },
     "s-YQSxsYk": {
@@ -19223,7 +19280,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Western Fine Art - Frontier Life",
+      "title": "Home Ground",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-dwVgbxR/0/KrHbh42LGrND32HB6VhjGfksQ43BpBCq9fVL6stRx/L/_O2H1242-787-L.jpg",
       "occurrences": [
         {
@@ -19247,7 +19304,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Frontier Life And Painterly Cowboy Portraits",
+      "title": "No Time to Miss",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-GBvFP8Q/0/MftN9MbNnTjQ9np6WpDp8xLmwbPM74N3TrWm4RLqQ/L/_O2H3505-866-867-869-2-L.jpg",
       "occurrences": [
         {
@@ -19258,7 +19315,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2025-12-22T22:03:16.355Z"
     },
     "s-gbK7MBC": {
@@ -19605,7 +19666,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Cowboy Art Portrait",
+      "title": "Fence-Post Confidence",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QGCQt7M/0/L9Npngb36f4Lm7GLjhHP259fbV6ZnC3Vbc8P2jgzw/L/_O2H1782-Edit-Edit-2-L.jpg",
       "occurrences": [
         {
@@ -19617,9 +19678,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2025-12-22T22:04:35.346Z"
     },
@@ -20134,9 +20193,10 @@
       "primaryImageId": "i-RdTR7GD",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
-      "title": "Cowboy Art: Saying Goodbye",
+      "title": "Saying Goodbye",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-RdTR7GD/1/KgNbvrKPzc7PVwvNwbxpgCCqhV447fLrmk8DkL4pZ/XL/Western%20themed%20fine%20art%20photography%20_HF28863-321-2-XL.jpg",
       "occurrences": [
         {
@@ -20147,7 +20207,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-22T22:17:57.234Z",
       "editionData": {
         "chronicle": {
@@ -20365,7 +20429,7 @@
         "foundation",
         "chronicle"
       ],
-      "title": "Cowboy Artwork Cowboy",
+      "title": "Earned the Hard Way",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5T9mQqT/1/MjVZ5qvXLTqFtbSDnVkJ5QLmbFGcMVgkpfPBbFqnL/XL/_HF21845-926-XL.jpg",
       "occurrences": [
         {
@@ -20507,7 +20571,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Cowboy Art: Cowboy and his Peace Maker",
+      "title": "Cowboy and His Peace Maker",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-7mLbVvP/3/NF2gd4dHvjS4LqMzDdK68z37bZrbpB8HffGHbTT7P/XL/cowboy%20portrait%20photography%20_O1H0302-Edit-Edit-XL.jpg",
       "occurrences": [
         {
@@ -20519,9 +20583,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2025-12-22T22:20:00.917Z"
     },
@@ -20623,9 +20685,10 @@
     "s-m56QbLG": {
       "primaryImageId": "i-PxNFNhQ",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "The Essence Of Wild West Photography",
+      "title": "Taking Water",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-PxNFNhQ/0/MTPBvm96dh2z5VF37rRnRBVgg735MJJsxCrVvdTn4/XL/_WHO7504-938-940-XL.jpg",
       "occurrences": [
         {
@@ -20896,10 +20959,9 @@
       "primaryImageId": "i-jXC3shm",
       "tiers": [
         "sketch",
-        "foundation",
-        "chronicle"
+        "foundation"
       ],
-      "title": "Cowboy Art Portrait",
+      "title": "Common Cause",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jXC3shm/0/MvKfmqbBvm5NCX4HNzTb5hPkkr4FZWLCnDsQps3ZP/XL/_WHO5028-Edit-XL.jpg",
       "occurrences": [
         {
@@ -21060,9 +21122,10 @@
     "s-x8TdPVW": {
       "primaryImageId": "i-D5kv9Q6",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Cowboy Art: Snake Oil Sam",
+      "title": "Snake Oil Sam",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-D5kv9Q6/2/LsJgwfzkF6zRGpgZGwkkPG9KDPNJXTkdWR4VCgg8D/XL/retro%20vintage%20cowboy%20art%20_O1H5704-Edit-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -21073,12 +21136,14 @@
         }
       ],
       "linkedCount": 1,
-      "createdAt": "2025-12-22T22:33:37.248Z"
+      "createdAt": "2025-12-22T22:33:37.248Z",
+      "excludeSizes": {}
     },
     "s-EsDLqZF": {
       "primaryImageId": "i-TVSQHzg",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Doubtful",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TVSQHzg/3/MHzWmf32Kb5PgczLN27snrKDc9cC7r7bfw2zKFCrk/XL/western%20painterly%20portrait%20photography%20_HF22146-Edit-2-XL.jpg",
@@ -21116,9 +21181,10 @@
     "s-3Thg5vN": {
       "primaryImageId": "i-tVxgfZN",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Cowboy Art:  The Kid",
+      "title": "Still Learning",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-tVxgfZN/1/LqQnZzkCbd3zqr5bV8DCPShsfKcBBS2cVjrdczk85/XL/Western%20themed%20fine%20art%20photography%20_HF28337-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -21129,7 +21195,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2025-12-22T23:09:14.302Z"
     },
     "s-XkhW56n": {
@@ -21154,9 +21224,10 @@
     "s-8XbzYZS": {
       "primaryImageId": "i-S2sZdJB",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Exploring Outlaw Portraits",
+      "title": "Just Leaning",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-S2sZdJB/0/MKHjVsjkfWfTLjrxDBKXMhC7V6mmnzFnDg2q2Pp8t/L/_O2H2798-853-2-L.jpg",
       "occurrences": [
         {
@@ -21167,7 +21238,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2025-12-22T23:09:26.099Z"
     },
     "s-Qpunthc": {
@@ -21197,9 +21272,10 @@
     "s-UdnWZ4F": {
       "primaryImageId": "i-7RWxjz3",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Cowboy Art: Aunt Mildred",
+      "title": "Still Smiling",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-7RWxjz3/1/LWtQZTmrckj5dj45bmzFjPGxfSXpspdMqmVm56rrp/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29022-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -21210,16 +21286,19 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2025-12-22T23:11:25.584Z"
     },
     "s-GrhuCwg": {
       "primaryImageId": "i-9q5B7FX",
       "tiers": [
-        "sketch",
-        "foundation"
+        "sketch"
       ],
-      "title": "Cowboy Western Fine Art",
+      "title": "Still Standing",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-9q5B7FX/0/KpV9MfxjhVQ8Z4bQB5DGxWDsVSwX45kNbPSXChs7g/L/_O2H0586-Edit-Edit-Edit-2-L.jpg",
       "occurrences": [
         {
@@ -21232,7 +21311,8 @@
       "linkedCount": 1,
       "excludeSizes": {
         "foundation": [
-          "11\" x 14\""
+          "11\" x 14\"",
+          "8\" x 10\""
         ]
       },
       "createdAt": "2025-12-22T23:12:23.087Z"
@@ -21283,9 +21363,10 @@
     "s-L79rZGJ": {
       "primaryImageId": "i-Ns6ZkrF",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Cowboy Art: All Aglow",
+      "title": "All Aglow",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Ns6ZkrF/1/KkvFXsjjsT7Z92BnfkgrRkmD6LFGRB9sWW4n959SX/XL/Western%20themed%20fine%20art%20photography%20_HF28270-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -21510,7 +21591,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Cowboy Painting Art - Outlaw Portraits",
+      "title": "Measured Shot",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fsL7pfL/0/KtzJSvChmqWS7SgsfHWmwWcHph8xdWnXsvfnqdk95/XL/_WHO9057-Edit-XL.jpg",
       "occurrences": [
         {
@@ -21522,9 +21603,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2025-12-23T01:07:54.562Z"
     },
@@ -21534,7 +21613,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Powerful Works Of Art - Western Fine Art",
+      "title": "The Quiet Shot",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qDkTww8/0/KSNrdNLQ5Fw86DQjdZ4rhNKPXCc2QtJL2F6kjgPkb/XL/_WHO9055-Edit-XL.jpg",
       "occurrences": [
         {
@@ -21546,9 +21625,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2025-12-23T01:08:06.162Z"
     },
@@ -21630,7 +21707,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Cowboy Art: By Lantern Light",
+      "title": "By Lantern Light",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Photoshoot-Old-Bedford-Village-PA/i-79P6kHT/2/M2Z35L3tBBpBZvhJJv5MWbZW3pXfSSthSHbLMcVST/XL/western%20themed%20fine%20art%20photography%20_O1H5383-Edit-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -21641,7 +21718,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2025-12-23T01:08:52.952Z"
     },
     "s-KmU6tax": {
@@ -21812,10 +21893,9 @@
     "s-ZpVfEmM": {
       "primaryImageId": "i-DK8t88F",
       "tiers": [
-        "sketch",
-        "foundation"
+        "sketch"
       ],
-      "title": "Cowboy Art In Fine Art",
+      "title": "Closing the Distance",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DK8t88F/0/KWGMVcwMzSpFvw6bStbvThF8H2pkSPJqvj9QJtgnS/XL/_HF26618-1000-Edit-XL.jpg",
       "occurrences": [
         {
@@ -21921,9 +22001,10 @@
       "primaryImageId": "i-CmHHjwV",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
-      "title": "Western Cowboy Art And Cowboy Art",
+      "title": "Where the Day Lets Go",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CmHHjwV/0/MZksrnScHqF7NhPX4CXstzw43wMz5Pptqr2qDgRrW/XL/_HF26194-Edit-XL.jpg",
       "occurrences": [
         {
@@ -21934,7 +22015,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-23T01:10:53.948Z",
       "editionData": {
         "chronicle": {
@@ -21971,9 +22056,10 @@
       "primaryImageId": "i-Q3Qm4f2",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
-      "title": "Western Cowboy Art Portrait",
+      "title": "Held in Thought",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Q3Qm4f2/1/Lc9mVbTFsn5hJMh8wtnkkF7qhcrSHDccPrxQhRtgm/XL/_WHO2737-Edit-XL.jpg",
       "occurrences": [
         {
@@ -21985,8 +22071,9 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
+        "foundation": [],
+        "chronicle": [
+          "20\" x 24\""
         ]
       },
       "createdAt": "2025-12-23T01:11:11.326Z"
@@ -22109,7 +22196,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Cowboy Portraits Moment",
+      "title": "The Pause That Counts",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-kjWmdVL/0/LXBtMC4jZ6WzcTn6JNfzwFBSJx6NT2vbH6Tw4zwN3/L/_O2H2861-681-L.jpg",
       "occurrences": [
         {
@@ -22120,7 +22207,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2025-12-23T01:12:03.564Z"
     },
     "s-KrLxJMK": {
@@ -22712,7 +22803,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Essence Of Rugged Spirit",
+      "title": "The Long Draw",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-3HM43Zv/0/LL3jKjh4T5dPgMcSqPDbzjvd2XLP6TfcL3bsN6Jmp/L/_O2H0031-769-L.jpg",
       "occurrences": [
         {
@@ -22724,9 +22815,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2025-12-23T01:15:51.337Z"
     },
@@ -22853,7 +22942,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Western Cowboys And Frontier Life",
+      "title": "Pinned Down",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KgkW54w/0/KQVNq9jGhLvLzLckCGt6FdKx5p4nLB5Sm9SbjtWhJ/XL/_WHO2950-1150-XL.jpg",
       "occurrences": [
         {
@@ -22865,9 +22954,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2025-12-23T01:16:44.854Z"
     },
@@ -22951,9 +23038,10 @@
       "primaryImageId": "i-h6SnLK4",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
-      "title": "Powerful Works Of Art And Western Canon",
+      "title": "Under a Watchful Sky",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h6SnLK4/0/LJx7jDBDsN8hD89MFbFvjtC6Cq5KntPXxXv2254JV/XL/_WHO7014-Edit-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -22964,7 +23052,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-23T01:17:32.028Z",
       "editionData": {
         "chronicle": {
@@ -23001,9 +23093,10 @@
       "primaryImageId": "i-JcHKH5f",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
-      "title": "Painterly Cowboy Portraits Portrait",
+      "title": "Before the Shot",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/0/KMFZc4BfSkWqtjpmXNdvKQ4B5pBgWjRwdk98H7WJs/XL/_WHO3989-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -23014,7 +23107,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-23T01:17:48.657Z",
       "editionData": {
         "chronicle": {
@@ -23034,7 +23131,7 @@
         "foundation",
         "chronicle"
       ],
-      "title": "Painterly Cowboy Portraits In Fine Art",
+      "title": "Reading the Land",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cRmVc3S/1/KKgmFL3LX2GNqtKh57c5G72RnGx9W38prf8PQDz4L/XL/_WHO6052-915-XL.jpg",
       "occurrences": [
         {
@@ -23045,7 +23142,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-23T01:17:58.887Z",
       "editionData": {
         "chronicle": {
@@ -23334,9 +23435,10 @@
       "primaryImageId": "i-WMs24Db",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
-      "title": "Painterly Cowboy Portraits Moment",
+      "title": "Across Without Her",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K9NHz9qg7FDtJjZghppvPx9gLcLV28DGk4FTnWwHw/XL/_HF27665-Edit-XL.jpg",
       "occurrences": [
         {
@@ -23353,7 +23455,11 @@
         }
       ],
       "linkedCount": 2,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-23T01:19:51.668Z",
       "editionData": {
         "chronicle": {
@@ -23425,9 +23531,10 @@
       "primaryImageId": "i-LWJjbct",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
-      "title": "Historic Western Prints Moment",
+      "title": "Riding Into It",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LWJjbct/0/K8zMSXDSvVVxxKbNgBvNvtMCZHMK7sVsMbDVKKdsB/XL/_WHO8149-Edit-Edit-Edit-3-XL.jpg",
       "occurrences": [
         {
@@ -23438,7 +23545,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-23T01:20:17.432Z"
     },
     "s-4SYGN6X": {
@@ -23921,9 +24032,10 @@
     "s-djTHK4L": {
       "primaryImageId": "i-KTGLfqc",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Cowboy Art: Is that you Jim?",
+      "title": "Is That You, Jim?",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-KTGLfqc/2/KDSJXsvjNkq9vmjXvxWsf7FJh7M2C9QvHDsnT8dNG/XL/vintage%20western%20themed%20art%20_O1H1893-Edit-XL.jpg",
       "occurrences": [
         {
@@ -23934,7 +24046,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2025-12-23T01:24:06.112Z"
     },
     "s-qjvm6Vv": {
@@ -24011,7 +24127,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Western Cowboys - Cowboy Art",
+      "title": "Waiting on the Answer",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-qwPBrns/1/LpL8tZx2GN9Jm63PkBKfZxnRC8zSBf7sbX4ZVzTTx/L/_HF23450-827-L.jpg",
       "occurrences": [
         {
@@ -24023,9 +24139,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2025-12-23T01:24:56.523Z"
     },
@@ -24059,7 +24173,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Essence Of Fine Art Western Photography",
+      "title": "Held at the Shoulder",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CgTvzgP/0/K4KcSDQBmjQ9mZfXjQp4x6d6t73VjfcGRMtwmNc3F/XL/_WHO1631-1200-1201-2-XL.jpg",
       "occurrences": [
         {
@@ -24071,9 +24185,7 @@
       ],
       "linkedCount": 1,
       "excludeSizes": {
-        "foundation": [
-          "11\" x 14\""
-        ]
+        "foundation": []
       },
       "createdAt": "2025-12-23T01:25:21.297Z"
     },
@@ -24482,9 +24594,10 @@
     "s-XYDp7ve": {
       "primaryImageId": "i-zqZPZF6",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Cowboy Art: End of a long day.",
+      "title": "End of a Long Day",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zqZPZF6/3/MK6DgWXqgM4FBnQtHTmqmhvpwhsfhv2x5f2tKnP5s/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF28702-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
       "occurrences": [
         {
@@ -24495,7 +24608,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2025-12-23T01:28:31.650Z"
     },
     "s-dr4jmAa": {
@@ -26006,9 +26123,10 @@
       "primaryImageId": "i-Z7vtvZg",
       "tiers": [
         "sketch",
-        "foundation"
+        "foundation",
+        "chronicle"
       ],
-      "title": "Western Landscapes Fine Art - Cowboy Art",
+      "title": "No Short Way Home",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/MVPQV5ZhxNQmrT6KNTKqVXGq8vSrXL7fqCV2cJg7L/XL/_HF21068-Edit-XL.jpg",
       "occurrences": [
         {
@@ -26025,7 +26143,11 @@
         }
       ],
       "linkedCount": 2,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2025-12-23T01:39:04.288Z"
     },
     "s-zNbXEN7": {
@@ -27317,9 +27439,10 @@
     "s-PSSK5gx": {
       "primaryImageId": "i-N7Wb28h",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Fine Art Western Landscapes Fine Art",
+      "title": "Running Toward Supper",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N7Wb28h/0/LKRF8LQSjDSfgctz7g9NTRqNCVWJnn9XNw69dLxCh/XL/_WHO0861-1243-XL.jpg",
       "occurrences": [
         {
@@ -27336,9 +27459,10 @@
     "s-2z9pYYs": {
       "primaryImageId": "i-w6bDSqM",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Cowboy Artwork Study",
+      "title": "What Still Holds",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-w6bDSqM/0/LR6V3GtsVZ5xTMnj5H4Wqr5k2mffFwSBc27LFMzcd/XL/_HF20212-1230-XL.jpg",
       "occurrences": [
         {
@@ -27349,7 +27473,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-14T15:07:33.242Z"
     },
     "s-fry2x8e": {
@@ -27374,9 +27502,10 @@
     "s-9WeZYzB": {
       "primaryImageId": "i-m2dqhjT",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Cowboys Portrait",
+      "title": "Bearer of the Light",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/0/MXdHKqV23WWCPN2sb3PVHnRGS3vXg9xHf4B8PGGb2/XL/_HF25639-1356-XL.jpg",
       "occurrences": [
         {
@@ -27393,9 +27522,10 @@
     "s-YYBeqqk": {
       "primaryImageId": "i-8X7hMPk",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Capturing Historic Western Prints",
+      "title": "Standing the Night",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8X7hMPk/0/LMD6DDHJjF2nPxCcpqKcKbGFFCC8jTv9Dd3PzVPsn/XL/_HF26027-1343-XL.jpg",
       "occurrences": [
         {
@@ -27406,7 +27536,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-14T15:08:15.943Z"
     },
     "s-hjdWQQ5": {
@@ -27431,9 +27565,10 @@
     "s-Q4S8TsW": {
       "primaryImageId": "i-jWBQ5p8",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Exploring Frontier Life",
+      "title": "Your Deal",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jWBQ5p8/1/McmBwnB2gr8NxmnPGN5hJLzXw737jNNxSSgZVfRWH/XL/_HF21832-1306-1308-XL.jpg",
       "occurrences": [
         {
@@ -27450,9 +27585,10 @@
     "s-FDHvFdu": {
       "primaryImageId": "i-xZsZzd9",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Capturing Painterly Western Photograph",
+      "title": "Behind the Stone",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xZsZzd9/0/LSGVPK5vSXnMCjPj2RzTZWGpCw8hxt7qXPcXRstCM/XL/_HF24895-1362-XL.jpg",
       "occurrences": [
         {
@@ -27463,15 +27599,20 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-14T15:10:35.243Z"
     },
     "s-gCV2dGB": {
       "primaryImageId": "i-67qk8zR",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
-      "title": "Fine Art American Frontier Portraits",
+      "title": "Front Porch Years",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-67qk8zR/0/Ls9CHC5GfVKzqdq7XmW5tDwGMPVt5WKP6w3fjs7LL/XL/_HF25019-1365-XL.jpg",
       "occurrences": [
         {
@@ -27482,7 +27623,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-14T15:10:47.992Z"
     },
     "s-PYkLDAH": {
@@ -27564,9 +27709,11 @@
     "s-LcVx75U": {
       "primaryImageId": "i-GSQ3KDN",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation",
+        "chronicle"
       ],
-      "title": "Cowboy Portraits - Frontier Life",
+      "title": "Above the Dust",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/0/LNgzsQcCJDTvwf2dfwk8vtFv3HswtRdMS4qdN638R/XL/_WHO3730-Edit-XL.jpg",
       "occurrences": [
         {
@@ -27577,13 +27724,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2026-01-14T15:14:01.194Z"
     },
     "s-xcvU4hC": {
       "primaryImageId": "i-WBDjhsD",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Capturing Cowboys",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WBDjhsD/2/KMmHXvzXmRwKNDVT8Lr7Z2qK6X5VNMQKwHJdZ2DVB/XL/_HF26679-1001-XL.jpg",
@@ -27956,7 +28108,8 @@
     "s-ztLhPyb": {
       "primaryImageId": "i-vpt6C9V",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Worth Every Mile",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-vpt6C9V/0/MVNmX4VhWBrJb9Lv8FMmrZM8fRZQkRdb9Pr3TS2GW/L/_HF22208-1050-2-L.jpg",
@@ -27975,7 +28128,8 @@
     "s-ExD2T8z": {
       "primaryImageId": "i-MDrw6sD",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Warmed Enough",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/1/KrW35NZ8h8RT3SQGFVB52VjmFMdMhbHcmZJSKDg6L/XL/Cowboy%20painting%20_HF21067-Enhanced-NR-Edit-Edit-Edit-XL.jpg",
@@ -28108,7 +28262,9 @@
     "s-yTXQvq2": {
       "primaryImageId": "i-z9Pfbc5",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation",
+        "chronicle"
       ],
       "title": "Ahead of the Others",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z9Pfbc5/0/M5kNs7chNbcPKNZ4Q4whJLQN6zSRmsLTCK3Psk5V9/XL/_WHO4863-Edit-XL.jpg",
@@ -28121,7 +28277,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2026-01-16T16:43:41.721Z"
     },
     "s-ske3CxS": {
@@ -28146,7 +28306,8 @@
     "s-KBhknKJ": {
       "primaryImageId": "i-BzFqL6f",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Range Rider",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/2/K36kdtfJhQ6vP9zG6SmjdQVMsN4qKKgT3vhmcrF77/XL/_WHO2926-1147-2-XL.jpg",
@@ -28159,13 +28320,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:06:46.431Z"
     },
     "s-LvhcUhH": {
       "primaryImageId": "i-JsN8MfX",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "No Shelter Promised",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JsN8MfX/0/L3VC8SCdPsfrdwCr7jTdd3GfLxpfLcg7P3TWbhgQD/XL/_WHO8343-Edit-XL.jpg",
@@ -28178,13 +28344,19 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:08:46.591Z"
     },
     "s-nrzymzE": {
       "primaryImageId": "i-mfNsJNb",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation",
+        "chronicle"
       ],
       "title": "Trail Hand",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-mfNsJNb/1/Lc7f2t54vdGqjwmWm2ZsFx3mq88hXChpgvLMXtT8S/XL/_WHO4884-Edit-Edit-Edit-XL.jpg",
@@ -28222,7 +28394,8 @@
     "s-5Xcr2Sk": {
       "primaryImageId": "i-KwjDZfx",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Something Ahead",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KwjDZfx/3/KJ5tVb7j2jZG4mNCRVsJKJDcwNkFGFVxTJTQ6DFZd/XL/_WHO8397-Edit-2-XL.jpg",
@@ -28235,13 +28408,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:19:40.649Z"
     },
     "s-NWwn2Wd": {
       "primaryImageId": "i-JvkzcpM",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "By Firelight",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JvkzcpM/3/LBBwv4FnQk5wCDjzjwwfrwXDtg4LD3sSPnH8TJTnH/XL/_WHO8057-XL.jpg",
@@ -28254,7 +28432,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:23:18.062Z"
     },
     "s-5xPsNWR": {
@@ -28298,7 +28480,8 @@
     "s-XLEr5hB": {
       "primaryImageId": "i-jGrpdg5",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Range Rider",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jGrpdg5/0/KpX7LFSQFRrjkNpvkjcWh3XN2Ks7mjckKfSLCLq3Q/XL/_WHO5315-Edit-Edit-Edit-2-XL.jpg",
@@ -28311,7 +28494,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:26:37.694Z"
     },
     "s-mgtGQZU": {
@@ -28355,7 +28542,8 @@
     "s-TJ69AmQ": {
       "primaryImageId": "i-3Wh6vt9",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Already Aimed",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-3Wh6vt9/0/LPqP2nHr5RrjsRzfTVZ6R3t2qvRQH5BF5N9z3Dc2X/XL/_HF24507-1331-XL.jpg",
@@ -28368,13 +28556,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:31:27.692Z"
     },
     "s-fAh8aAy": {
       "primaryImageId": "i-KBXKqD5",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "She Doesn’t Miss",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/0/MHG9V8SFpvGhxPbrnXS4xGkPWJH7bfg3WQ3TBW7DD/XL/_WHO1637-1198-1199-XL.jpg",
@@ -28387,13 +28580,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:32:34.189Z"
     },
     "s-2AFYnc8": {
       "primaryImageId": "i-VrRHHjr",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "The Door Stayed Open",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-VrRHHjr/1/NTHPB7XwrskhWDR7dsnRQNtmLMdhX5zWs7FXmPXtp/XL/_HF27537-1261-XL.jpg",
@@ -28406,7 +28604,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:33:45.382Z"
     },
     "s-Xmx4Kjm": {
@@ -28431,7 +28633,8 @@
     "s-3GhkxJ7": {
       "primaryImageId": "i-tLfLDqk",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Coming Through the Door",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tLfLDqk/2/NC9VZqLt9xkHqFprnrVKNRCjJchbNRJtb338Jppqk/XL/_WHO0026-1260-XL.jpg",
@@ -28444,7 +28647,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:36:22.975Z"
     },
     "s-mYmznXg": {
@@ -28488,7 +28695,8 @@
     "s-9EeFBC8": {
       "primaryImageId": "i-3nZvZTj",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Nothing to Prove",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-3nZvZTj/0/LmrpQvj95bz4QsHbczcMcs4CpHkQvDRVzzmR8BBd6/XL/_HF20492-Edit-XL.jpg",
@@ -28501,13 +28709,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:39:43.323Z"
     },
     "s-mNZzKPt": {
       "primaryImageId": "i-CNrD7G7",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Held Close",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/MKJz4Lt8vSv6fzJKzktrkpfWswZxVfbgCRbBFkPwN/XL/_HF29924-1328-XL.jpg",
@@ -28520,7 +28733,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:48:15.783Z"
     },
     "s-xjSCacP": {
@@ -28564,7 +28781,8 @@
     "s-5N6N6Hq": {
       "primaryImageId": "i-nqxJWx3",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Clock Can Wait",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-nqxJWx3/0/MN8zGZrWftGBvjnVgTkdXHxTLZpkScpCpWtFFJSfL/XL/_HF25007-1364-XL.jpg",
@@ -28583,7 +28801,8 @@
     "s-bqGMCCy": {
       "primaryImageId": "i-jZ8xKwR",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "A Measure of Gravity",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-jZ8xKwR/0/Lp2FV7CjCRtTkz3Kkc6wXfs4QcpPHWCjxNS93nPp9/XL/_HF24834-1360-XL.jpg",
@@ -28596,13 +28815,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:57:17.169Z"
     },
     "s-sjAN9CY": {
       "primaryImageId": "i-BpW5dbj",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Just a Moment",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-BpW5dbj/0/KttPMKFBLzF2L86wT2vZHCX22SfmzLTs26b3LrWnv/XL/_HF21238-1015-XL.jpg",
@@ -28615,13 +28839,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T20:58:29.888Z"
     },
     "s-Rj6SvLT": {
       "primaryImageId": "i-sH4qBFd",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "No Time for Words",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-sH4qBFd/0/NZv7pTWwLrPv2VXQxPpJJHtjGTpZ5x3Pd3F3jhPWF/XL/_WHO1564-1384-XL.jpg",
@@ -28634,7 +28863,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T22:37:10.847Z"
     },
     "s-qwFGcVG": {
@@ -28659,7 +28892,8 @@
     "s-3QpyGEK": {
       "primaryImageId": "i-b2k3Wd5",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Smoke and Silence",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-b2k3Wd5/0/KxrBB3SgkZBK7C8SgLP4NFmKFJrRBwZ9fvWvsmMb3/XL/_WHO2015-1386-1405-1406-XL.jpg",
@@ -28672,13 +28906,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T22:39:00.469Z"
     },
     "s-Dhw45Eu": {
       "primaryImageId": "i-8rcVT5Z",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Behind the Barrel",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/MLNZKN4XgSwVFHXJJNXDjdjW69gCTQBtXzwtcfnPL/XL/_WHO3344-1399-1400-2-XL.jpg",
@@ -28697,7 +28936,9 @@
     "s-9UgBzk9": {
       "primaryImageId": "i-LJk7wFZ",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation",
+        "chronicle"
       ],
       "title": "Tending the Wounded",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-LJk7wFZ/1/Kvv5L9hgnbpcZvfFTBjJvs3mWwcKx3cscTdn2LMtG/XL/_HF28510-1376-XL.jpg",
@@ -28710,7 +28951,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2026-01-16T22:41:55.012Z"
     },
     "s-rM44qVz": {
@@ -28754,7 +28999,8 @@
     "s-9XCBEyX": {
       "primaryImageId": "i-Q5gq9MD",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Order",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q5gq9MD/0/NMcWVZdLMwZNhBGdgwtLw9gDkV5FdStSsCjKMwB2d/XL/_HF28325-1370-XL.jpg",
@@ -28767,7 +29013,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T22:45:43.507Z"
     },
     "s-M3AmzLZ": {
@@ -28811,7 +29061,8 @@
     "s-t6Dyk3S": {
       "primaryImageId": "i-z4M6gCv",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "He Thinks He’s Funny",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/NBmwzCZs7fnCS2Bn6RKpp6c9ggqMjRjfKV3nT2hvk/XL/_HF28750-1379-XL.jpg",
@@ -28824,13 +29075,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T22:50:00.399Z"
     },
     "s-GJAF8tv": {
       "primaryImageId": "i-GRPQRdL",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "No Hurry Left",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-GRPQRdL/0/NL45jcH3fwsTqHWcwc7NsDfsNsDvMLNxzpPTbcq6p/XL/_HF21159-Edit-XL.jpg",
@@ -28843,7 +29099,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T22:51:16.922Z"
     },
     "s-4KL6xsu": {
@@ -28868,7 +29128,8 @@
     "s-HfRxE6H": {
       "primaryImageId": "i-hcXLMwK",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "What He Waits For",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/M3Znccz9NqVRLbcVggWnBqFGPVGnr7TgLgBDtxckQ/XL/_HF28482-1374-1375-1378-XL.jpg",
@@ -28887,7 +29148,8 @@
     "s-eqKJD4X": {
       "primaryImageId": "i-MZjsFRB",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "What She Keeps",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/KX6tzvvKKMjrfVgPFdBpHRbC3ctLZjW6Hg4WV235d/XL/_HF28456-1373-2-XL.jpg",
@@ -28925,7 +29187,8 @@
     "s-m7AAh9T": {
       "primaryImageId": "i-jqZzRpS",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Held in Common",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-jqZzRpS/0/M23KSdd76g5JKL6nXz2F4qX5nTfRg3RmmnJ3zFVdv/XL/_HF22131-1046-2-XL.jpg",
@@ -28938,7 +29201,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T22:59:55.507Z"
     },
     "s-wPxRNKY": {
@@ -28963,7 +29230,8 @@
     "s-d8fEZeN": {
       "primaryImageId": "i-KK8RzH7",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Still on the Line",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/MwqP59VFgfBwPd6Sf9kJv7GdzhJCHT98ZWkLzxqVX/XL/_HF29362-1380-XL.jpg",
@@ -28976,13 +29244,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T23:02:42.612Z"
     },
     "s-jh4RfNh": {
       "primaryImageId": "i-cK7wRqP",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "The Long Afternoon",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-cK7wRqP/0/NXNWB2MdfpnCtp7QBSKJxkHWs9gR8hScMDmR4KTfz/XL/_HF21205-Edit-XL.jpg",
@@ -28995,13 +29268,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T23:04:09.729Z"
     },
     "s-6pLg6mV": {
       "primaryImageId": "i-F7q2SDf",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Passing the Time",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-F7q2SDf/0/MJHxppRBZZqrDBRJXkvWFGnW5Sp5bjD6rxk3ZRFHG/XL/_HF21271-1058-XL.jpg",
@@ -29014,7 +29292,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T23:05:32.652Z"
     },
     "s-C3dXmdt": {
@@ -29039,7 +29321,8 @@
     "s-p66xauW": {
       "primaryImageId": "i-zswx22S",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Just This Once",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-zswx22S/0/KVSn78MBK5jxRScxzdM7qk8j3bg53W84BGPvMS4xm/XL/_HF21898-1026-XL.jpg",
@@ -29058,7 +29341,8 @@
     "s-byprp2H": {
       "primaryImageId": "i-BJckfhC",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "When Words Fail",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-BJckfhC/1/LTHf29kqcw7tGHsT4XKHLxDtqHVQJjX95KXFpqFXW/XL/_HF21936-1020-XL.jpg",
@@ -29077,7 +29361,8 @@
     "s-ZWvPfdG": {
       "primaryImageId": "i-459nCWS",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Held for Safety",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-459nCWS/0/KXdxMQRzTgC3fHw7Sh6kmPbPXTWKfCFDDmnGmQXQx/XL/_HF22003-1040-XL.jpg",
@@ -29090,13 +29375,19 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T23:10:49.531Z"
     },
     "s-E6KAdj3": {
       "primaryImageId": "i-KJsmT8q",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation",
+        "chronicle"
       ],
       "title": "Keeping Watch",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-KJsmT8q/0/KkGHN9bThNhpLzDGnZVT9K89JxVZHpX3BxzJm5hw3/XL/_HF22086-1044-2-XL.jpg",
@@ -29109,7 +29400,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "chronicle": [
+          "20\" x 24\""
+        ]
+      },
       "createdAt": "2026-01-16T23:11:24.548Z"
     },
     "s-sD6uBDB": {
@@ -29210,7 +29505,8 @@
     "s-dj6JKy3": {
       "primaryImageId": "i-Tcg3LZS",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "No Rest for the Wicked",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Tcg3LZS/2/MS7JzTCZz6nXtPLsMzRXqh735xLGb6MrtDr6k7GWg/XL/_O2H2281-Edit-Edit-Edit-2-XL.jpg",
@@ -29223,7 +29519,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T23:21:40.273Z"
     },
     "s-Ax4zHcB": {
@@ -29267,7 +29567,8 @@
     "s-wGuL3sw": {
       "primaryImageId": "i-4pVqPVw",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "The Undertaker",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-4pVqPVw/4/M6D3b2SFBgKqsNV9STF2R67bPBBzLsNMbpPGn77Qr/XL/Old%20West%20themed%20photo%20_HF26296-Edit-Edit-XL.jpg",
@@ -29280,7 +29581,11 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-16T23:26:27.104Z"
     },
     "s-tJJUmVv": {
@@ -33050,7 +33355,8 @@
     "s-nHCdUjy": {
       "primaryImageId": "i-wHspqpJ",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Where She Leans",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wHspqpJ/0/NcbFbBhPNzfmNSRhjtX8pWmcgt6LW4pdXPhMHx3KG/XL/_WHO6737-Edit-2-XL.jpg",
@@ -33063,13 +33369,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-30T16:00:01.666Z"
     },
     "s-fJjqUSW": {
       "primaryImageId": "i-6XC3VfC",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Reading the Land",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6XC3VfC/0/LJC7WqW2FF8p7vZGBSvfdHKcC3r522Rfcp46gvTH6/XL/_WHO6052-915-XL.jpg",
@@ -33088,7 +33399,8 @@
     "s-usuqqpZ": {
       "primaryImageId": "i-Fjhdhf2",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "The Weight of the Flag",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Fjhdhf2/0/KTVVdvgskQvpftf5PgP23FK2z6qXmcJMxGL7gcWjM/XL/_HF27627-Edit-XL.jpg",
@@ -33101,13 +33413,18 @@
         }
       ],
       "linkedCount": 1,
-      "excludeSizes": {},
+      "excludeSizes": {
+        "foundation": [
+          "11\" x 14\""
+        ]
+      },
       "createdAt": "2026-01-30T16:03:07.061Z"
     },
     "s-NgMnvUc": {
       "primaryImageId": "i-MFksKj9",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "Brass and Breath",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MFksKj9/1/Lt8RZLZ6zHLzBNCXTs7kBXsZhJt7X4cv4kt58KdBG/XL/_HF27565-Edit-XL.jpg",
@@ -33126,7 +33443,8 @@
     "s-W6RxH4a": {
       "primaryImageId": "i-psMRwPB",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation"
       ],
       "title": "The Signal Holds",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-psMRwPB/3/KpBHgTbH3kbz4n7DKWHQV9w523nmjJtRRCjbNfL6x/XL/_HF27565-Edit-2-XL.jpg",
@@ -33164,7 +33482,9 @@
     "s-rVHQ54A": {
       "primaryImageId": "i-89qzJ6S",
       "tiers": [
-        "sketch"
+        "sketch",
+        "foundation",
+        "chronicle"
       ],
       "title": "Open Country Brothers",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
