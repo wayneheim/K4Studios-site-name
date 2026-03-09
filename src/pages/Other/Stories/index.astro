@@ -28,26 +28,27 @@ import "@/styles/global.css";
 // Dynamic Logic
 // ----------------------
 const sectionPath = "/Other/Stories";
+const siteOrigin = "https://www.k4studios.com";
 
 const structuredData = getStructuredData({
   type: "BlogPosting",
   data: {
     headline: "K4 Studios Picture Show Stories",
     description: "Interactive visual stories and cinematic narratives showcasing Wayne Heim's fine art photography through immersive picture shows.",
-    url: `https://k4studios.com${sectionPath}`,
+    url: `${siteOrigin}${sectionPath}`,
     copyrightNotice: "© Wayne Heim",
     author: { "@type": "Person", name: "Wayne Heim" },
-    image: stories.map(story => `https://k4studios.com${normalizeImageSrc(story.cover, 'l')}`),
+    image: stories.map(story => `${siteOrigin}${normalizeImageSrc(story.cover, 'l')}`),
     articleSection: "Visual Storytelling",
     keywords: ["picture shows", "visual stories", "cinematic narratives", "western fine art", "Wayne Heim", "immersive photography", "themed exhibitions"],
     wordCount: 900
   },
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
+    license: `${siteOrigin}/copyright`,
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: `${siteOrigin}/`
   }
 });
 
@@ -57,19 +58,19 @@ const itemListStructuredData = {
   "@type": "ItemList",
   name: "K4 Studios Picture Show Stories",
   description: "Artist-curated visual storytelling collections by Wayne Heim, combining fine art photography, history, and cinematic narrative.",
-  url: "https://k4studios.com/Other/Stories",
+  url: `${siteOrigin}/Other/Stories`,
   creator: {
     "@type": "Person",
     name: "Wayne Heim",
-    url: "https://k4studios.com"
+    url: siteOrigin
   },
   itemListElement: stories.map((story, index) => ({
     "@type": "BlogPosting",
     position: index + 1,
     headline: story.title,
-    url: `https://k4studios.com/Other/Stories/${story.slug}`,
+    url: `${siteOrigin}/Other/Stories/${story.slug}`,
     datePublished: story.date,
-    image: `https://k4studios.com${normalizeImageSrc(story.cover, 'l')}`,
+    image: `${siteOrigin}${normalizeImageSrc(story.cover, 'l')}`,
     description: story.excerpt,
     author: { "@type": "Person", name: "Wayne Heim" }
   }))
@@ -80,15 +81,15 @@ const breadcrumbStructuredData = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://k4studios.com" },
-    { "@type": "ListItem", position: 2, name: "Stories", item: "https://k4studios.com/Other/Stories" }
+    { "@type": "ListItem", position: 1, name: "Home", item: siteOrigin },
+    { "@type": "ListItem", position: 2, name: "Stories", item: `${siteOrigin}/Other/Stories` }
   ]
 };
 
 const landingImgUrl = stories[0]?.cover || "";
 const meta = getLandingMeta(sectionPath, landingImgUrl);
-if (!meta.ogUrl)      meta.ogUrl      = `https://k4studios.com${sectionPath}`;
-if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${sectionPath}`;
+if (!meta.ogUrl)      meta.ogUrl      = `${siteOrigin}${sectionPath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `${siteOrigin}${sectionPath}`;
 
 meta.description = "Explore artist-curated visual stories from Wayne Heim — themed mini shows blending fine art photography, painterly style, and historical narrative.";
 meta.keywords = "visual storytelling, fine art photography, painterly photography, historical photography, themed art collections, picture shows, Wayne Heim, Facing History, cinematic photography, curated photo stories";
@@ -130,7 +131,7 @@ const galleryPaths = Object.keys(galleryDataMap);
   meta={meta}
 >
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
-    <link rel="canonical" href="https://k4studios.com/Other/Stories" />
+    <link rel="canonical" href="https://www.k4studios.com/Other/Stories" />
 
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb="Other › Stories" />

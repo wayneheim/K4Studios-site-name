@@ -167,6 +167,118 @@
 				"--json"
 			],
 			"isBackground": false
+		},
+		{
+			"label": "Run sitemap audit",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"tmp_sitemap_audit.py"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Spot check live sitemap URLs",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$pages=@('https://www.k4studios.com/Galleries/Fine-Art-Photography/Architecture/Gallery/i-fszvgmq','https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Cars/i-c8SFXzH','https://www.k4studios.com/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color/i-4S3C7Hx'); $imgs=@('https://www.k4studios.com/img/i-fszvgmq/l','https://www.k4studios.com/img/i-c8SFXzH/l','https://www.k4studios.com/img/i-4S3C7Hx/l'); foreach($u in $imgs){ $h=curl.exe -s -I $u; $s=($h|Select-String '^HTTP/'|Select-Object -First 1).Line; Write-Output \"IMG $u | $s\" }; foreach($u in $pages){ $h=curl.exe -s -I $u; $s=($h|Select-String '^HTTP/'|Select-Object -First 1).Line; $html=curl.exe -s $u; $canon=($html|Select-String '<link rel=\"canonical\" href=\"[^\"]+\"'|Select-Object -First 1).Matches.Value; Write-Output \"PAGE $u | $s | $canon\" }"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Run live spot checks",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"tmp_spotcheck.ps1"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Run live spot checks to file",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-Command",
+				"./tmp_spotcheck.ps1 *> tmp_spotcheck.out"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Run XML escape scan",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"tmp_xml_escape_scan.py"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Check xmllint availability",
+			"type": "shell",
+			"command": "xmllint",
+			"args": [
+				"--version"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Audit image caption lengths",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$files = Get-ChildItem public -Filter 'image-sitemap-*.xml'; $lengths = @(); foreach ($f in $files) { $content = Get-Content $f.FullName -Raw; $matches = [regex]::Matches($content, '<image:caption>(.*?)</image:caption>', 'Singleline'); foreach ($m in $matches) { $t = [System.Text.RegularExpressions.Regex]::Replace($m.Groups[1].Value, '\\s+', ' ').Trim(); $lengths += $t.Length } }; $max = 0; if ($lengths.Count -gt 0) { $max = ($lengths | Measure-Object -Maximum).Maximum }; $over900 = ($lengths | Where-Object { $_ -gt 900 }).Count; $over800 = ($lengths | Where-Object { $_ -gt 800 }).Count; Write-Output \"FILES=$($files.Count)\"; Write-Output \"CAPTIONS=$($lengths.Count)\"; Write-Output \"MAX=$max\"; Write-Output \"OVER_900=$over900\"; Write-Output \"OVER_800=$over800\""
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Quick sitemap caption audit py",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"-c",
+				"import glob, re; files=sorted(glob.glob('public/image-sitemap-*.xml')); text='\\n'.join(open(f,encoding='utf-8').read() for f in files); caps=re.findall(r'<image:caption>(.*?)</image:caption>', text, re.S); lens=[len(' '.join(c.split())) for c in caps]; print('FILES',len(files)); print('CAPTIONS',len(lens)); print('MAX',max(lens) if lens else 0); print('OVER_900',sum(1 for n in lens if n>900)); print('OVER_800',sum(1 for n in lens if n>800))"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Run tmp caption audit script",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"tmp_caption_audit.cjs"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Regenerate image sitemaps now",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"scripts/generate-image-sitemaps.mjs"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Regenerate image sitemaps final cap",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"scripts/generate-image-sitemaps.mjs"
+			],
+			"isBackground": false
 		}
 	]
 }

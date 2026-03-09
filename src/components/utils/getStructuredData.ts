@@ -76,6 +76,38 @@ function sanitizeKeywords(kw: string | string[] | undefined): string | undefined
   return clean.join(', ');
 }
 
+function canonicalizeK4Host(value: string): string {
+  if (!value || typeof value !== "string") return value;
+  return value
+    .replace(/https?:\/\/(?:www\.)?k4studios\.com/gi, "https://www.k4studios.com")
+    .replace(/https%3A%2F%2F(?:www\.)?k4studios\.com/gi, "https%3A%2F%2Fwww.k4studios.com")
+    .replace(/https?:\\\/\\\/(?:www\.)?k4studios\.com/gi, "https:\\/\\/www.k4studios.com");
+}
+
+function normalizeSchemaValue<T>(value: T): T {
+  if (typeof value === "string") {
+    return canonicalizeK4Host(value) as T;
+  }
+
+  if (Array.isArray(value)) {
+    return value.map((item) => normalizeSchemaValue(item)) as T;
+  }
+
+  if (value && typeof value === "object") {
+    const normalized: Record<string, any> = {};
+    for (const [key, nestedValue] of Object.entries(value as Record<string, any>)) {
+      normalized[key] = normalizeSchemaValue(nestedValue);
+    }
+    return normalized as T;
+  }
+
+  return value;
+}
+
+function stringifySchema(value: any): string {
+  return JSON.stringify(normalizeSchemaValue(value), null, 2);
+}
+
 export function getStructuredData({
   type,
   data,
@@ -183,7 +215,7 @@ export function getStructuredData({
       if (cleaned) collectionObj.keywords = cleaned;
     }
 
-    return JSON.stringify(collectionObj, null, 2);
+    return stringifySchema(collectionObj);
   }
 
   /* ============================================================
@@ -191,17 +223,18 @@ export function getStructuredData({
   ============================================================ */
   if (type === "image") {
     const proxyUrl = getProxyUrl(data, 'l');
+    const artworkPageUrl = data.pageUrl || data.url;
     const imagePublishedDate = data.datePublished || data.dateCreated;
     const imageModifiedDate = data.dateModified;
     const obj: any = {
       "@context": "https://schema.org",
       "@type": ["ImageObject", "VisualArtwork"],
-      "@id": proxyUrl ? `${proxyUrl}#image` : `${data.url}#image`,
+      "@id": artworkPageUrl ? `${artworkPageUrl}#image` : (proxyUrl ? `${proxyUrl}#image` : undefined),
       name: data.title,
       description: data.description,
       caption: data.alt || data.title,
       contentUrl: proxyUrl || undefined,
-      url: proxyUrl || undefined,
+      url: artworkPageUrl || undefined,
       encodingFormat: data.mimeType || "image/jpeg",
       identifier: data.id || data.smugId || data.src?.split("/").pop() || "",
       license: data.license || license,
@@ -271,7 +304,7 @@ export function getStructuredData({
     if (data.width) obj.width = data.width;
     if (data.height) obj.height = data.height;
 
-    return JSON.stringify(obj, null, 2);
+    return stringifySchema(obj);
   }
 
   /* ============================================================
@@ -348,7 +381,7 @@ export function getStructuredData({
     }
     if (data.articleSection) obj.articleSection = data.articleSection;
 
-    return JSON.stringify(obj, null, 2);
+    return stringifySchema(obj);
   }
 
   /* ============================================================
@@ -427,7 +460,7 @@ export function getStructuredData({
       };
     }
 
-    return JSON.stringify(articleObj, null, 2);
+    return stringifySchema(articleObj);
   }
 
   return "";
@@ -447,16 +480,12 @@ export function getBreadcrumbList(
     item: it.item,
   }));
   const last = items[items.length - 1];
-  return JSON.stringify(
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "@id": id || `${last.item}#breadcrumbs`,
-      itemListElement,
-    },
-    null,
-    2
-  );
+  return stringifySchema({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": id || `${last.item}#breadcrumbs`,
+    itemListElement,
+  });
 }
 
 export function getBlogBreadcrumbList(

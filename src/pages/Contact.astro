@@ -4,6 +4,8 @@ import Layout from '../layouts/BaseLayout.astro';
 import LandingHeader from '@/components/Landing-Header.jsx';
 import '@/styles/global.css';
 
+const siteOrigin = 'https://www.k4studios.com';
+
 // Check for licensing inquiry params
 const url = Astro.url;
 const licenseId = url.searchParams.get('license');
@@ -23,7 +25,7 @@ I'm interested in licensing or purchasing the following image from K4 Studios:
 
 Title: ${decodeURIComponent(imageTitle)}
 Image ID: ${licenseId}
-View at: https://k4studios.com/img/${licenseId}/l
+View at: ${siteOrigin}/img/${licenseId}/l
 
 Please let me know about licensing options and pricing.
 
@@ -38,9 +40,9 @@ const contactStructuredData = JSON.stringify({
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://k4studios.com/#wayne-heim",
+      "@id": `${siteOrigin}/#wayne-heim`,
       "name": "Wayne Heim",
-      "url": "https://k4studios.com",
+      "url": siteOrigin,
       "email": "mailto:wayneheim@aol.com",
       "jobTitle": "Fine Art Photographer",
       "knowsAbout": [
@@ -50,16 +52,16 @@ const contactStructuredData = JSON.stringify({
         "Narrative photography"
       ],
       "affiliation": {
-        "@id": "https://k4studios.com/#k4-studios"
+        "@id": `${siteOrigin}/#k4-studios`
       }
     },
     {
       "@type": "Organization",
-      "@id": "https://k4studios.com/#k4-studios",
+      "@id": `${siteOrigin}/#k4-studios`,
       "name": "K4 Studios",
-      "url": "https://k4studios.com",
+      "url": siteOrigin,
       "founder": {
-        "@id": "https://k4studios.com/#wayne-heim"
+        "@id": `${siteOrigin}/#wayne-heim`
       },
       "email": "mailto:wayneheim@aol.com",
       "areaServed": "United States",
@@ -73,7 +75,7 @@ const contactStructuredData = JSON.stringify({
 
 const contactMeta = {
   description: "Contact Wayne Heim at K4 Studios – Fine art photography inquiries, print purchases, and licensing requests.",
-  canonicalUrl: "https://k4studios.com/Contact"
+  canonicalUrl: `${siteOrigin}/Contact`
 };
 
 const breadcrumb = "Other › Contact";

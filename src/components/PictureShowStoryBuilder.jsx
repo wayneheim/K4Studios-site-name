@@ -218,18 +218,18 @@ const structuredDataJSON = getStructuredData({
   data: {
     title: storyMeta.showTitle,
     description: storyMeta.description,
-    url: \`https://k4studios.com/Other/Stories/${safeSlug}\`,
+    url: \`https://www.k4studios.com/Other/Stories/${safeSlug}\`,
     keywords: storyMeta.keywords,
     copyrightNotice: "© Wayne Heim, k4studios.com. All rights reserved."
   },
   images: storyData,
   defaults: {
-    copyrightNotice: "© Wayne Heim, k4studios.com. All rights reserved.",
-    license: "https://k4studios.com/licensing",
-    acquireLicensePage: "https://k4studios.com/licensing",
+    copyrightNotice: "© Wayne Heim, www.k4studios.com. All rights reserved.",
+    license: "https://www.k4studios.com/licensing",
+    acquireLicensePage: "https://www.k4studios.com/licensing",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
 ---

@@ -17,6 +17,8 @@ const {
   galleryTitle = ""
 } = Astro.props;
 
+const siteOrigin = 'https://www.k4studios.com';
+
 // Get actual runtime URL
 const currentPath = Astro.url.pathname;
 const isBlog = currentPath.startsWith('/Blog');
@@ -34,14 +36,14 @@ const showPreviewBar =
 const toShareUrl = (src: string | undefined) => {
   if (!src) return undefined;
   // Already a proxy URL - make absolute
-  if (src.startsWith('/img/')) return `https://k4studios.com${src}`;
+  if (src.startsWith('/img/')) return `${siteOrigin}${src}`;
   // Static image - make absolute  
-  if (src.startsWith('/images/')) return `https://k4studios.com${src}`;
+  if (src.startsWith('/images/')) return `${siteOrigin}${src}`;
   // Extract ID from SmugMug URL and convert to proxy
   const imageId = extractImageId(src);
-  if (imageId) return `https://k4studios.com/img/${imageId}/xl`;
+  if (imageId) return `${siteOrigin}/img/${imageId}/xl`;
   // Already absolute proxy URL
-  if (src.includes('k4studios.com/img/')) return src;
+  if (src.includes('k4studios.com/img/')) return src.replace(/https?:\/\/(?:www\.)?k4studios\.com/i, siteOrigin);
   // Unknown - return undefined to avoid leaking
   return undefined;
 };
@@ -58,7 +60,7 @@ const galleriesWithAllPages: Record<string, string> = {
 const hasAuthoredAllPage = Object.prototype.hasOwnProperty.call(galleriesWithAllPages, previewPath);
 const allPageHref = hasAuthoredAllPage ? `${previewPath}/all` : null;
 const allPageLinkText = hasAuthoredAllPage ? galleriesWithAllPages[previewPath] : null;
-const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `https://k4studios.com/img/${previewImages[0].id}/xl` : undefined);
+const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `${siteOrigin}/img/${previewImages[0].id}/xl` : undefined);
 ---
 
 <footer

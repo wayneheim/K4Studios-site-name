@@ -42,18 +42,18 @@ const siteUrl =
 const siteOrigin = siteUrl.origin;
 const canonicalOrigin = import.meta.env.PROD ? 'https://www.k4studios.com' : siteOrigin;
 
+const normalizeK4Host = (value) => {
+  if (!value || typeof value !== 'string') return value;
+  return value.replace(/https?:\/\/(?:www\.)?k4studios\.com/gi, 'https://www.k4studios.com');
+};
+
 const ensureAbsoluteUrl = (value) => {
   if (!value) return null;
   try {
-    return new URL(value, canonicalOrigin).toString();
+    return normalizeK4Host(new URL(value, canonicalOrigin).toString());
   } catch {
-    return value;
+    return normalizeK4Host(value);
   }
-};
-
-const normalizeK4Host = (value) => {
-  if (!value || typeof value !== 'string') return value;
-  return value.replace(/https?:\/\/k4studios\.com/gi, 'https://www.k4studios.com');
 };
 
 // Titles
@@ -114,7 +114,7 @@ if (isImagePage && preloadImage?.src) {
 }
 
 const canonicalUrl = ensureAbsoluteUrl(meta.canonicalUrl || Astro.url?.pathname || '/');
-const ogUrl = canonicalUrl;
+const ogUrl = ensureAbsoluteUrl(meta.ogUrl || canonicalUrl);
 
 // Convert any SmugMug URLs to proxy format for OG/Twitter images
 // Default to 'l' to protect XL from bot discovery
@@ -162,7 +162,7 @@ const ogType = isImagePage ? "article" : (meta.ogType || "website");
 
 const twitterTitle = meta.twitterTitle || cleanTitle;
 const twitterImage = toAbsoluteProxyUrl(meta.twitterImage || rawOgImage, 'l', 'TW');
-const twitterUrl = ogUrl;
+const twitterUrl = ensureAbsoluteUrl(meta.twitterUrl || ogUrl);
 
 const inferMimeType = (url) => {
   if (!url) return null;

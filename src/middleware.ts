@@ -5,6 +5,59 @@ import imageIdMap from "@/data/imageIdMap.json";
 // Type assertion for the imageIdMap
 const imageMap = imageIdMap as Record<string, string[]>;
 
+let knownGalleryPathsLower: Set<string> | null = null;
+
+function normalizePath(pathname: string): string {
+  if (!pathname) return "";
+  const trimmed = String(pathname).trim();
+  if (!trimmed) return "";
+  return trimmed.length > 1 ? trimmed.replace(/\/+$/g, "") : trimmed;
+}
+
+function getParentGalleryPath(pathname: string): string {
+  const normalized = normalizePath(pathname);
+  return normalized.replace(/\/[iI]-[A-Za-z0-9-]+\/?$/, "");
+}
+
+function getKnownGalleryPathsLower(): Set<string> {
+  if (knownGalleryPathsLower) return knownGalleryPathsLower;
+
+  const paths = new Set<string>();
+
+  for (const rawValue of Object.values(imageMap)) {
+    const values = Array.isArray(rawValue) ? rawValue : [rawValue];
+    for (const value of values) {
+      const normalized = normalizePath(String(value || "")).toLowerCase();
+      if (normalized) paths.add(normalized);
+    }
+  }
+
+  knownGalleryPathsLower = paths;
+  return knownGalleryPathsLower;
+}
+
+function isWhitelistedGalleryParent(pathname: string): boolean {
+  const parentLower = normalizePath(getParentGalleryPath(pathname)).toLowerCase();
+  if (!parentLower) return false;
+
+  const knownPaths = getKnownGalleryPathsLower();
+  if (knownPaths.has(parentLower)) return true;
+
+  if (parentLower.endsWith("/gallery")) {
+    return knownPaths.has(parentLower.slice(0, -"/gallery".length));
+  }
+
+  return knownPaths.has(`${parentLower}/gallery`);
+}
+
+function normalizeK4HostInSchemaContent(content: string): string {
+  if (!content || typeof content !== "string") return content;
+  return content
+    .replace(/https?:\/\/(?:www\.)?k4studios\.com/gi, "https://www.k4studios.com")
+    .replace(/https%3A%2F%2F(?:www\.)?k4studios\.com/gi, "https%3A%2F%2Fwww.k4studios.com")
+    .replace(/https?:\\\/\\\/(?:www\.)?k4studios\.com/gi, "https:\\/\\/www.k4studios.com");
+}
+
 function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
   let changed = false;
 
@@ -96,8 +149,11 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
   html = html.replace(
     /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi,
     (match, content) => {
+      const normalizedContent = normalizeK4HostInSchemaContent(content);
+      if (normalizedContent !== content) changed = true;
+
       try {
-        const json = JSON.parse(content.trim());
+        const json = JSON.parse(normalizedContent.trim());
         const items = Array.isArray(json) ? json : [json];
         
         // Explicitly allowed schema types - NEVER remove these
@@ -123,7 +179,7 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
         });
         
         if (hasAllowedType) {
-          return match; // NEVER touch allowed schema types
+          return normalizedContent === content ? match : match.replace(content, normalizedContent); // NEVER remove allowed schema types
         }
         
         // Check if this is an ImageObject (SmugMug injects these)
@@ -139,9 +195,9 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
         }
         
         // Check if it's from SmugMug (they inject incomplete ImageObject)
-        const isSmugMug = content.includes("photos.smugmug.com");
+        const isSmugMug = normalizedContent.includes("photos.smugmug.com");
         if (!isSmugMug) {
-          return match; // Keep non-SmugMug ImageObject
+          return normalizedContent === content ? match : match.replace(content, normalizedContent); // Keep non-SmugMug ImageObject
         }
         
         // For SmugMug ImageObject, require @id to be valid
@@ -156,7 +212,7 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
       } catch {
         // ignore non-JSON or invalid blocks
       }
-      return match;
+      return normalizedContent === content ? match : match.replace(content, normalizedContent);
     }
   );
 
@@ -176,7 +232,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     if (imageIdMatch) {
       const imageId = imageIdMatch[1];
       const correctGalleryPaths = imageMap[imageId];
-      if (correctGalleryPaths && correctGalleryPaths.length > 0) {
+      if (correctGalleryPaths && correctGalleryPaths.length > 0 && isWhitelistedGalleryParent(pathname)) {
         const redirectUrl = `${correctGalleryPaths[0]}/${imageId}`;
         console.log(`[legacy-301] ${pathname} → 301 to ${redirectUrl}`);
         return new Response(null, {
@@ -184,6 +240,9 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
           headers: { Location: redirectUrl },
         });
       }
+
+      console.log(`[legacy-301] Blocked smart redirect for non-whitelisted parent: ${pathname}`);
+      return next();
     }
 
     const rest = pathname.slice("/Photography-Galleries".length) || "";
@@ -239,7 +298,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
       const imageId = imageIdMatch[1];
       const correctGalleryPaths = imageMap[imageId];
       
-      if (correctGalleryPaths && correctGalleryPaths.length > 0) {
+      if (correctGalleryPaths && correctGalleryPaths.length > 0 && isWhitelistedGalleryParent(pathname)) {
         // Image found in curated gallery - 301 redirect to preserve authority
         const redirectUrl = `${correctGalleryPaths[0]}/${imageId}`;
         console.log(`[smart-410] Legacy path ${pathname} → 301 to ${redirectUrl}`);
@@ -247,6 +306,9 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
           status: 301,
           headers: { Location: redirectUrl },
         });
+      }
+      if (correctGalleryPaths && correctGalleryPaths.length > 0) {
+        console.log(`[smart-410] Blocked smart redirect for non-whitelisted parent: ${pathname}`);
       }
       // Image ID provided but not found anywhere → 410
       console.log(`[smart-410] Legacy image ${imageId} not found in any gallery → 410`);

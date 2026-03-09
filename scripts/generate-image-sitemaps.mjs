@@ -16,7 +16,64 @@ const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const REPO_ROOT = path.resolve(__dirname, '..');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
-const MAX_IMAGE_CAPTION_LENGTH = 1200;
+const MAX_IMAGE_CAPTION_LENGTH = 900;
+const CAPTION_SENTENCE_LOOKBACK = 220;
+
+function capImageCaption(caption) {
+  const normalized = normalizeCaptionText(caption);
+  if (normalized.length <= MAX_IMAGE_CAPTION_LENGTH) {
+    return normalized;
+  }
+
+  const hardLimit = MAX_IMAGE_CAPTION_LENGTH - 3;
+  const hardSlice = normalized.slice(0, hardLimit).trimEnd();
+  const searchStart = Math.max(0, hardSlice.length - CAPTION_SENTENCE_LOOKBACK);
+  const tail = hardSlice.slice(searchStart);
+
+  const sentenceMatches = [...tail.matchAll(/[.!?](?=(?:["')\]]|\s|$))/g)];
+  if (sentenceMatches.length > 0) {
+    const lastSentence = sentenceMatches[sentenceMatches.length - 1];
+    const sentenceBreak = searchStart + lastSentence.index + 1;
+    if (sentenceBreak >= Math.floor(hardLimit * 0.7)) {
+      return hardSlice.slice(0, sentenceBreak).trimEnd() + '...';
+    }
+  }
+
+  const lastWordBreak = hardSlice.lastIndexOf(' ');
+  if (lastWordBreak >= Math.floor(hardLimit * 0.85)) {
+    return hardSlice.slice(0, lastWordBreak).trimEnd() + '...';
+  }
+
+  return hardSlice + '...';
+}
+
+function clampCaptionForXml(caption) {
+  const normalized = normalizeCaptionText(caption);
+  if (!normalized) return normalized;
+
+  if (escapeXml(normalized).length <= MAX_IMAGE_CAPTION_LENGTH) {
+    return normalized;
+  }
+
+  const minimumLength = Math.floor(MAX_IMAGE_CAPTION_LENGTH * 0.6);
+  let working = normalized;
+
+  while (working.length > minimumLength && escapeXml(`${working}...`).length > MAX_IMAGE_CAPTION_LENGTH) {
+    const lastWordBreak = working.lastIndexOf(' ');
+    if (lastWordBreak <= 0) break;
+    working = working.slice(0, lastWordBreak).trimEnd();
+  }
+
+  if (escapeXml(`${working}...`).length > MAX_IMAGE_CAPTION_LENGTH) {
+    let hardTrimmed = working;
+    while (hardTrimmed.length > 0 && escapeXml(`${hardTrimmed}...`).length > MAX_IMAGE_CAPTION_LENGTH) {
+      hardTrimmed = hardTrimmed.slice(0, -1);
+    }
+    working = hardTrimmed.trimEnd();
+  }
+
+  return working ? `${working}...` : normalized.slice(0, Math.max(0, MAX_IMAGE_CAPTION_LENGTH - 3)).trimEnd() + '...';
+}
 
 function isGhostImageId(id) {
   return String(id || '').trim().toLowerCase() === GHOST_IMAGE_ID;
@@ -446,10 +503,8 @@ function generateUrlEntry(image, urlBase) {
   }
   
   // Join with paragraph separator, then cap for concise image search snippets
-  let caption = normalizeCaptionText(captionParts.join(' ')) || normalizeCaptionText(image.title) || 'Fine Art Photograph by Wayne Heim';
-  if (caption.length > MAX_IMAGE_CAPTION_LENGTH) {
-    caption = caption.substring(0, MAX_IMAGE_CAPTION_LENGTH - 3).trimEnd() + '...';
-  }
+  const captionSource = normalizeCaptionText(captionParts.join(' ')) || normalizeCaptionText(image.title) || 'Fine Art Photograph by Wayne Heim';
+  const caption = clampCaptionForXml(capImageCaption(captionSource));
 
   // Use title as image title
   const title = image.title || image.alt || 'Fine Art Photograph';
