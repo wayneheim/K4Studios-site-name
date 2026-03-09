@@ -53,8 +53,8 @@ const collectionSchema = JSON.stringify(
     ],
     mainEntity: {
       "@type": "ItemList",
-      numberOfItems: Math.min(gridImages.length, 8),
-      itemListElement: gridImages.slice(0, 8).map((img, i) => ({
+      numberOfItems: gridImages.length,
+      itemListElement: gridImages.map((img, i) => ({
         "@type": "ListItem",
         position: i + 1,
         item: {

@@ -49,17 +49,17 @@ function ensureAlt(img: any) {
 }
 
 // Skip first 9 per gallery so we don't duplicate the pillar page's picks.
-// 10 color, 8 B&W, 6 NA = 24 total grid images, starting at position 10.
+// 30 color + 18 B&W + 12 NA = 60 total grid images (15 rows × 4 cols).
 const OFFSET = 9;
-const colorGrid = topRated(colorGallery, 10, OFFSET).map((img: any) => ({
+const colorGrid = topRated(colorGallery, 30, OFFSET).map((img: any) => ({
   id: img.id, title: img.title, alt: ensureAlt(img),
   href: `${colorPath}/${img.id}`,
 }));
-const bwGrid = topRated(bwGallery, 8, OFFSET).map((img: any) => ({
+const bwGrid = topRated(bwGallery, 18, OFFSET).map((img: any) => ({
   id: img.id, title: img.title, alt: ensureAlt(img),
   href: `${bwPath}/${img.id}`,
 }));
-const naGrid = topRated(naGallery, 6, OFFSET).map((img: any) => ({
+const naGrid = topRated(naGallery, 12, OFFSET).map((img: any) => ({
   id: img.id, title: img.title, alt: ensureAlt(img),
   href: `${naPath}/${img.id}`,
 }));

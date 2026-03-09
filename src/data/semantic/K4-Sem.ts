@@ -543,6 +543,8 @@ glossaryBlackWhiteWesternArt: {
     { phrase: "western cowboy art", rating: 5, use: true },
     { phrase: "cowboy portraits", rating: 5, use: true },
     { phrase: "cowboy art", rating: 5, use: true },
+    { phrase: "frontier cowboy", rating: 5, use: true },
+    { phrase: "Western frontier", rating: 5, use: true },
     { phrase: "cowboys", rating: 5, use: true },
     { phrase: "Western cowboys", rating: 5, use: true },
     { phrase: "cowboy artwork", rating: 5, use: true },

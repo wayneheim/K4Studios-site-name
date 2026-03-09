@@ -2,7 +2,7 @@ export const landingWestern = {
   // Facing History — Historically Themed Fine Art Photography
   title: "Facing History — Historically Themed Fine Art Photography",
   subtitle:
-    "Story-Driven Portraits — Living History Interpreted Through Painterly Fine Art",
+    "Western Frontier \u2022 Civil War \u2022 World War II \u2022 The Roaring Twenties",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [

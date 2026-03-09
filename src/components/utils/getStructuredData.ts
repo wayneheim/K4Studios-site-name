@@ -1,7 +1,7 @@
 // src/components/utils/getStructuredData.ts
 
 // Helper to convert image to proxy URL (never expose SmugMug URLs in structured data)
-function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null = 'SD'): string {
+function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null = null): string {
   const prefix = sourcePrefix ? String(sourcePrefix).toUpperCase() : null;
 
   const applyPrefix = (imageId: string) => {
@@ -10,14 +10,17 @@ function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null =
     return `${prefix}-${imageId}`;
   };
 
+  // Strip any existing source prefix to get bare ID
+  const stripPrefix = (imageId: string) => imageId.replace(/^(OG|TW|PN|SD)-/i, '');
+
   // If we have an id, use the proxy
   if (img.id && img.id.startsWith('i-')) {
-    return `https://k4studios.com/img/${applyPrefix(img.id)}/${size}`;
+    return `https://www.k4studios.com/img/${applyPrefix(stripPrefix(img.id))}/${size}`;
   }
   // Try to extract id from src URL
   const idMatch = img.src?.match(/\/(i-[a-zA-Z0-9]+)\//);
   if (idMatch) {
-    return `https://k4studios.com/img/${applyPrefix(idMatch[1])}/${size}`;
+    return `https://www.k4studios.com/img/${applyPrefix(stripPrefix(idMatch[1]))}/${size}`;
   }
   // Fallback: if it's already a k4studios URL, use it
   if (img.src?.includes('k4studios.com')) {
@@ -28,7 +31,7 @@ function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null =
         if (m) {
           const canonicalId = m[2];
           const safeSize = m[3] || size;
-          return `https://k4studios.com/img/${applyPrefix(canonicalId)}/${safeSize}`;
+          return `https://www.k4studios.com/img/${applyPrefix(canonicalId)}/${safeSize}`;
         }
       }
     } catch {
@@ -45,9 +48,9 @@ function getLicenseUrl(img: any): string {
   const id = img.id || img.src?.match(/\/(i-[a-zA-Z0-9]+)\//)?.[1] || '';
   const title = encodeURIComponent(img.title || 'Untitled');
   if (id) {
-    return `https://k4studios.com/Contact?license=${id}&title=${title}`;
+    return `https://www.k4studios.com/Contact?license=${id}&title=${title}`;
   }
-  return 'https://k4studios.com/Contact';
+  return 'https://www.k4studios.com/Contact';
 }
 
 /**
@@ -94,12 +97,12 @@ export function getStructuredData({
   }
 }): string {
   const {
-    copyrightNotice = "© Wayne Heim, k4studios.com. All rights reserved.",
-    license = "https://k4studios.com/licensing",
-    acquireLicensePage = "https://k4studios.com/licensing",
+    copyrightNotice = "© Wayne Heim, www.k4studios.com. All rights reserved.",
+    license = "https://www.k4studios.com/licensing",
+    acquireLicensePage = "https://www.k4studios.com/licensing",
     creditText = "Wayne Heim",
     creatorName = "Wayne Heim",
-    creatorUrl = "https://k4studios.com/",
+    creatorUrl = "https://www.k4studios.com/",
     creatorSameAs = [],
     organizationSameAs = [],
   } = defaults;
@@ -192,7 +195,7 @@ export function getStructuredData({
     const imageModifiedDate = data.dateModified;
     const obj: any = {
       "@context": "https://schema.org",
-      "@type": "ImageObject",
+      "@type": ["ImageObject", "VisualArtwork"],
       "@id": proxyUrl ? `${proxyUrl}#image` : `${data.url}#image`,
       name: data.title,
       description: data.description,
@@ -216,6 +219,10 @@ export function getStructuredData({
         name: creatorName,
         url: creatorUrl,
       },
+      // VisualArtwork properties (top-level for Google)
+      artMedium: data.artMedium || "Archival fine art print",
+      artform: data.artform || "Fine Art Photography",
+      artworkSurface: data.artworkSurface || "Archival paper",
       genre: data.genre || "Fine Art Photography",
       about: data.about || [
         { "@type": "Thing", name: "Painterly Fine Art Photography" },
@@ -352,12 +359,12 @@ export function getStructuredData({
     
     const publisherObj = {
       "@type": "Organization",
-      "@id": "https://k4studios.com/#organization",
+      "@id": "https://www.k4studios.com/#organization",
       name: "K4 Studios",
-      url: "https://k4studios.com/",
+      url: "https://www.k4studios.com/",
       logo: {
         "@type": "ImageObject",
-        url: "https://k4studios.com/images/K4Logo-web-c.webp",
+        url: "https://www.k4studios.com/images/K4Logo-web-c.webp",
         width: 512,
         height: 512,
       },
@@ -401,7 +408,7 @@ export function getStructuredData({
         "@id": `${data.url}#definedterm`,
         name: data.definedTerm.name,
         description: data.definedTerm.description,
-        inDefinedTermSet: data.definedTerm.termSet || "https://k4studios.com/Glossary",
+        inDefinedTermSet: data.definedTerm.termSet || "https://www.k4studios.com/Glossary",
       };
     }
 

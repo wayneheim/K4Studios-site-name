@@ -16,7 +16,7 @@ const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const REPO_ROOT = path.resolve(__dirname, '..');
 
 const GHOST_IMAGE_ID = 'i-k4studios';
-const MAX_IMAGE_CAPTION_LENGTH = 480;
+const MAX_IMAGE_CAPTION_LENGTH = 1200;
 
 function isGhostImageId(id) {
   return String(id || '').trim().toLowerCase() === GHOST_IMAGE_ID;
