@@ -2323,133 +2323,35 @@ __name(getReferrers, "getReferrers");
 __name2(getReferrers, "getReferrers");
 async function getGeography(env, filters) {
   try {
-    const { dateClause, botClause, chardonClause, ipClause } = filters;
+    const { dateClause, galleryClause, botClause, chardonClause, ipClause } = filters;
     const qualify = /* @__PURE__ */ __name2(
-      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region"),
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bgallery_id\b/g, "e.gallery_id").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region"),
       "qualify"
     );
+    const where = dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")';
+    // Site Geography: only JS-verified, non-bot events so totals match Pulse visitor counts.
     const geoQuery = `
-      WITH site_events AS (
-        SELECT
-          e.country,
-          e.region,
-          e.city,
-          COALESCE(NULLIF(e.visitor_id, ''), 'ip:' || COALESCE(e.ip, 'unknown')) AS actor,
-          CASE
-            WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
-            ELSE '/' || raw_page
-          END AS page_path
-        FROM (
-          SELECT
-            e.country,
-            e.region,
-            e.city,
-            e.visitor_id,
-            e.ip,
-            COALESCE(NULLIF(e.page, ''), CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END) AS raw_page
-          FROM classified_events e
-          WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
-            AND e.country IS NOT NULL
-            AND e.event_type IN ('page_pixel', 'page_view', 'edge_page', 'image_page', 'external_image_page')
-            ${qualify(botClause)}
-            ${qualify(chardonClause)}
-            ${qualify(ipClause)}
-        ) e
-        WHERE raw_page IS NOT NULL
-          AND LOWER(raw_page) NOT LIKE 'http%'
-      ),
-      site_base AS (
-        SELECT
-          country,
-          region,
-          city,
-          COUNT(DISTINCT actor) AS visitors
-        FROM site_events
-        WHERE page_path NOT IN ${GALLERY_LANDING_IN_LIST}
-          AND NOT (page_path GLOB '*/i-*' AND page_path NOT GLOB '*/i-*/*')
-        GROUP BY country, region, city
-      ),
-      art_base AS (
-        SELECT country, region, city, SUM(art_viewers) as art_viewers
-        FROM (
-          -- Pixel events on image targets (state_pixel, action_pixel)
-          SELECT
-            e.country, e.region, e.city,
-            COUNT(DISTINCT COALESCE(NULLIF(e.visitor_id, ''), 'ip:' || COALESCE(e.ip, 'unknown'))) as art_viewers
-          FROM classified_events e
-          WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
-            AND e.country IS NOT NULL
-            AND e.event_type IN ('state_pixel', 'action_pixel')
-            AND e.target_id LIKE 'i-%'
-            AND e.target_id NOT LIKE '%/%'
-            ${qualify(botClause)}
-            ${qualify(chardonClause)}
-            ${qualify(ipClause)}
-          GROUP BY e.country, e.region, e.city
-
-          UNION ALL
-
-          -- JS image-level events from verified humans (chapter_view, xl_zoom)
-          SELECT
-            e.country, e.region, e.city,
-            COUNT(DISTINCT e.visitor_id) as art_viewers
-          FROM human_population hp
-          JOIN classified_events e ON e.visitor_id = hp.visitor_id
-          WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
-            AND e.country IS NOT NULL
-            AND e.source = 'js'
-            AND e.event_type IN ('chapter_view', 'xl_zoom')
-            ${qualify(botClause)}
-            ${qualify(chardonClause)}
-            ${qualify(ipClause)}
-          GROUP BY e.country, e.region, e.city
-        )
-        GROUP BY country, region, city
-      ),
-      base AS (
-        SELECT
-          v.country,
-          v.region,
-          v.city,
-          v.visitors,
-          COALESCE(a.art_viewers, 0) as art_viewers
-        FROM site_base v
-        LEFT JOIN art_base a
-          ON COALESCE(a.country, '') = COALESCE(v.country, '')
-         AND COALESCE(a.region, '') = COALESCE(v.region, '')
-         AND COALESCE(a.city, '') = COALESCE(v.city, '')
-
-        UNION ALL
-
-        SELECT
-          a.country,
-          a.region,
-          a.city,
-          0 as visitors,
-          a.art_viewers
-        FROM art_base a
-        WHERE NOT EXISTS (
-          SELECT 1
-          FROM site_base v
-          WHERE COALESCE(v.country, '') = COALESCE(a.country, '')
-            AND COALESCE(v.region, '') = COALESCE(a.region, '')
-            AND COALESCE(v.city, '') = COALESCE(a.city, '')
-        )
-      ),
-      top_visitors AS (
-        SELECT * FROM base
-        ORDER BY visitors DESC, country, region, city
-        LIMIT 200
-      ),
-      top_art AS (
-        SELECT * FROM base
-        WHERE art_viewers > 0
-        ORDER BY art_viewers DESC, country, region, city
-        LIMIT 500
-      )
-      SELECT * FROM top_visitors
-      UNION
-      SELECT * FROM top_art
+      SELECT 
+        e.country, e.region, e.city,
+        COUNT(DISTINCT e.visitor_id) as visitors,
+        COUNT(DISTINCT CASE 
+          WHEN e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view') 
+          THEN e.visitor_id 
+          ELSE NULL 
+        END) as art_viewers
+      FROM human_population hp
+      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      WHERE ${where}
+        AND e.source = 'js'
+        AND COALESCE(e.is_bot, 0) = 0
+        AND e.country IS NOT NULL
+        ${qualify(galleryClause)}
+        ${qualify(ipClause)}
+        ${qualify(botClause)}
+        ${qualify(chardonClause)}
+      GROUP BY e.country, e.region, e.city
+      ORDER BY visitors DESC
+      LIMIT 20
     `;
     return await env.DB.prepare(geoQuery).all();
   } catch (e) {

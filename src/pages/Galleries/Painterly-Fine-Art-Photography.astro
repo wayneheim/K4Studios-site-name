@@ -202,6 +202,89 @@ const featuredCollectionImage = {
                   <a href="/Other/Seeing" class="text-sm text-[#8b0000] hover:underline">Explore the Seeing essays →</a>
                 </aside>
               )}
+              {index === 0 && (
+                <section class="painterly-portrait-examples">
+                  <h2>Examples of Painterly Portrait Photography</h2>
+
+                  <p>
+                    Painterly portrait photography applies the tonal hierarchy, directional lighting,
+                    and narrative restraint of classical painting traditions to the human subject.
+                    These examples demonstrate how the painterly approach translates the emotional
+                    presence of portrait painting into photographic form.
+                  </p>
+
+                  <div class="portrait-example-grid">
+                    <figure class="portrait-tile">
+                      <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-c5K798H" aria-label="Open portrait: Old Master–inspired painterly Western portrait">
+                        <div class="portrait-media">
+                          <img
+                            src="/img/i-c5K798H/s"
+                            alt="Old Master–lit painterly Western portrait photography with directional light and deep tonal contrast"
+                            title="Old Master–inspired painterly Western portrait"
+                            loading="lazy"
+                            width="600"
+                            height="800"
+                          />
+                        </div>
+                      </a>
+                      <figcaption>Directional lighting and tonal hierarchy shape this painterly Western portrait study.</figcaption>
+                    </figure>
+
+                    <figure class="portrait-tile">
+                      <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Vr8vzjt" aria-label="Open portrait: Rembrandt-lit painterly Western portrait">
+                        <div class="portrait-media">
+                          <img
+                            src="/img/i-Vr8vzjt/s"
+                            alt="Fine art portrait photography in the painterly tradition using Rembrandt-style side lighting"
+                            title="Rembrandt-lit painterly Western portrait"
+                            loading="lazy"
+                            width="600"
+                            height="800"
+                          />
+                        </div>
+                      </a>
+                      <figcaption>Painterly portrait photography inspired by classical side-lit portrait composition.</figcaption>
+                    </figure>
+
+                    <figure class="portrait-tile">
+                      <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-NdQnj6P" aria-label="Open portrait: Cinematic shadow in painterly portrait style">
+                        <div class="portrait-media">
+                          <img
+                            src="/img/i-NdQnj6P/s"
+                            alt="Western portrait rendered in a painterly photographic style with restrained color and cinematic shadow"
+                            title="Cinematic shadow in painterly portrait style"
+                            loading="lazy"
+                            width="600"
+                            height="800"
+                          />
+                        </div>
+                      </a>
+                      <figcaption>Atmospheric tonality and narrative restraint define this painterly portrait example.</figcaption>
+                    </figure>
+
+                    <figure class="portrait-tile">
+                      <a href="/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits/i-dznf8sd" aria-label="Open portrait: Classical atmosphere in painterly portrait photography">
+                        <div class="portrait-media">
+                          <img
+                            src="/img/i-dznf8sd/s"
+                            alt="Painterly portrait photography translating classical portrait painting atmosphere into photographic form"
+                            title="Classical atmosphere in painterly portrait photography"
+                            loading="lazy"
+                            width="600"
+                            height="800"
+                          />
+                        </div>
+                      </a>
+                      <figcaption>Classical portrait language and controlled tonal depth reinforce the painterly concept.</figcaption>
+                    </figure>
+                  </div>
+
+                  <p class="portrait-caption">
+                    These portraits illustrate how painterly photography blends photographic realism
+                    with the visual language of traditional painting.
+                  </p>
+                </section>
+              )}
               {/* Insert StorySlider after section 1 (One-Image Movie intro) */}
               {index === 1 && (
                 <div class="story-slider-wrapper reveal-on-scroll mt-8">
@@ -406,6 +489,18 @@ ul li::marker {
       margin-bottom: 0.55rem;
     }
 
+    .story-section .story-block:first-child h2 {
+      letter-spacing: -0.045em;
+      white-space: nowrap;
+      font-size: 1.58rem;
+    }
+
+    @media (max-width: 1024px) {
+      .story-section .story-block:first-child h2 {
+        white-space: normal;
+      }
+    }
+
     .story-block h3 {
       font-weight: 500;
       font-size: 1.2rem;
@@ -509,6 +604,58 @@ ul li::marker {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
+}
+
+.painterly-portrait-examples {
+  margin-top: 2rem;
+}
+
+.portrait-example-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 300px));
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.portrait-tile {
+  margin: 0;
+}
+
+.portrait-media {
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.portrait-tile figcaption {
+  font-size: 0.88rem;
+  line-height: 1.35;
+  color: #5a4a3b;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .portrait-example-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portrait-example-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portrait-example-grid .portrait-tile:nth-child(2) img {
+  object-position: 30% center;
+}
+
+.portrait-example-grid .portrait-tile:nth-child(4) img {
+  transform: scale(1.08);
+  transform-origin: center center;
 }
 
 

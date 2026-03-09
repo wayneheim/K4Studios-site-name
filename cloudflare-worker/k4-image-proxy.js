@@ -1073,13 +1073,7 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
     // Always return 404 for ghost sentinel to keep behavior identical for
     // crawlers and human viewers.
     ctx.waitUntil(logEdgeEvent(env, '404', pathname, imageId, isSearch, request));
-    return new Response('Not Found', {
-      status: 404,
-      headers: {
-        'X-Robots-Tag': 'noindex, nofollow',
-        'Cache-Control': 'public, max-age=86400'
-      }
-    });
+    return await createBranded404Response(request);
   }
 
   // Preserve query string across canonical redirects (e.g., ?k4debug=1)
@@ -1111,13 +1105,7 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
 
       if (!isKnownGalleryExact && !isKnownGalleryMissingLeaf) {
         ctx.waitUntil(logEdgeEvent(env, '404', pathname, imageId, isSearch, request));
-        return new Response("Not Found", {
-          status: 404,
-          headers: {
-            "X-Robots-Tag": "noindex",
-            "Cache-Control": "public, max-age=86400"
-          }
-        });
+        return await createBranded404Response(request);
       }
 
       if (validPathsRaw) {
@@ -1192,13 +1180,7 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
     // of something that *was* real, which poisons crawl trust at scale.
     // 410 is reserved for the ghost sentinel (i-k4studios) and explicit _redirects.
     ctx.waitUntil(logEdgeEvent(env, '404', pathname, imageId, isSearch, request));
-    return new Response("Not Found", {
-      status: 404,
-      headers: {
-        "X-Robots-Tag": "noindex",
-        "Cache-Control": "public, max-age=86400" // 1 day
-      }
-    });
+    return await createBranded404Response(request);
 
   } catch (err) {
     console.error("Image page policy error:", err);
@@ -2335,13 +2317,7 @@ export default {
       path.startsWith('/other/');
 
     if (imageIdAtEnd && !isKnownNamespace) {
-      return new Response('Not Found', {
-        status: 404,
-        headers: {
-          'Cache-Control': 'public, max-age=86400',
-          'X-Robots-Tag': 'noindex, nofollow'
-        }
-      });
+      return await createBranded404Response(request);
     }
 
     // =====================================================
@@ -2371,13 +2347,7 @@ export default {
     // - This runs BEFORE trailing-slash canonicalization so we don't spend a 301 on junk.
     // =====================================================
     if (/^\/(?:Galleries|galleries)\/[^/]+\/i-[a-zA-Z0-9-]+\/?$/.test(path)) {
-      return new Response('Not Found', {
-        status: 404,
-        headers: {
-          'Cache-Control': 'public, max-age=86400',
-          'X-Robots-Tag': 'noindex, nofollow'
-        }
-      });
+      return await createBranded404Response(request);
     }
 
     // Missing-leaf probe detection is handled universally in image-page policy

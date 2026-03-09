@@ -1770,8 +1770,21 @@ export async function getReferrers(env, filters) {
 
 export async function getGeography(env, filters) {
   try {
-    const { dateClause } = filters;
-    // Returns both site visitors and art viewers per location
+    const { dateClause, galleryClause, ipClause, botClause, chardonClause } = filters;
+
+    // Qualify column references for the join (same pattern as other queries)
+    const qualify = (clause) => (clause || '')
+      .replace(/\bts\b/g, 'e.ts')
+      .replace(/\bip\b/g, 'e.ip')
+      .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bgallery_id\b/g, 'e.gallery_id')
+      .replace(/\bcountry\b/g, 'e.country')
+      .replace(/\bregion\b/g, 'e.region');
+
+    const where = dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")';
+
+    // Returns both site visitors and art viewers per location.
+    // Only counts JS-verified, non-bot events so geo totals match Pulse visitor counts.
     const geoQuery = `
       SELECT 
         e.country, e.region, e.city,
@@ -1783,13 +1796,14 @@ export async function getGeography(env, filters) {
         END) as art_viewers
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
-      WHERE ${dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")'}
+      WHERE ${where}
+        AND e.source = 'js'
+        AND COALESCE(e.is_bot, 0) = 0
         AND e.country IS NOT NULL
-        AND EXISTS (
-          SELECT 1 FROM classified_events j
-          WHERE j.visitor_id = e.visitor_id
-            AND j.source = 'js'
-        )
+        ${qualify(galleryClause)}
+        ${qualify(ipClause)}
+        ${qualify(botClause)}
+        ${qualify(chardonClause)}
       GROUP BY e.country, e.region, e.city
       ORDER BY visitors DESC
       LIMIT 20
