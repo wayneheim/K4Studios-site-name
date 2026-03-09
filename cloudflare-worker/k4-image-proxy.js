@@ -1104,11 +1104,24 @@ async function handleImagePagePolicy(request, pathname, ctx, env) {
     if (canonicalImageId) {
       const validPathsRaw = imageIdMap ? (imageIdMap[canonicalImageId] || imageIdMap[imageId]) : null;
       const requestedGalleryPath = getParentGallery(pathname);
+      const requestedLower = String(requestedGalleryPath || '').toLowerCase();
+      const knownGallerySet = getKnownGallerySetFromImageIdMap(imageIdMap);
+      const isKnownGalleryExact = knownGallerySet.has(requestedLower);
+      const isKnownGalleryMissingLeaf = knownGallerySet.has(`${requestedLower}/gallery`);
+
+      if (!isKnownGalleryExact && !isKnownGalleryMissingLeaf) {
+        ctx.waitUntil(logEdgeEvent(env, '404', pathname, imageId, isSearch, request));
+        return new Response("Not Found", {
+          status: 404,
+          headers: {
+            "X-Robots-Tag": "noindex",
+            "Cache-Control": "public, max-age=86400"
+          }
+        });
+      }
 
       if (validPathsRaw) {
         const validPaths = Array.isArray(validPathsRaw) ? validPathsRaw : [validPathsRaw];
-
-        const requestedLower = requestedGalleryPath.toLowerCase();
         const matchedPath = validPaths.find(p => (p || "").toLowerCase() === requestedLower);
 
         // Wrong path entirely:

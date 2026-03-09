@@ -298,6 +298,49 @@
 				"build"
 			],
 			"isBackground": false
+		},
+		{
+			"label": "Deploy image proxy worker now",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Set-Location cloudflare-worker; npx wrangler deploy"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Deploy worker forced and verify urls",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Set-Location cloudflare-worker; cmd /c \"echo y| npx wrangler deploy\"; Set-Location ..; $urls=@('https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/hack/Northeast/i-pxM7nq8','https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Locatiion/Northeast/i-pxM7nq8','https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/i-pxM7nq8'); foreach($u in $urls){ $h=curl.exe -s -I $u; $status=($h|Select-String '^HTTP/'|Select-Object -First 1).Line; $loc=($h|Select-String '^location:'|Select-Object -First 1).Line; if(-not $loc){$loc='location: (none)'}; Write-Output \"$status | $u | $loc\" }"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Deploy image proxy forced",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Set-Location cloudflare-worker; cmd /c \"echo y| npx wrangler deploy\""
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Build after 404 redirect patch",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"build:fast"
+			],
+			"isBackground": false
 		}
 	]
 }

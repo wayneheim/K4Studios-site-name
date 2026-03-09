@@ -58,6 +58,13 @@ function normalizeK4HostInSchemaContent(content: string): string {
     .replace(/https?:\\\/\\\/(?:www\.)?k4studios\.com/gi, "https:\\/\\/www.k4studios.com");
 }
 
+function redirectToCustom404(): Response {
+  return new Response(null, {
+    status: 302,
+    headers: { Location: "/404" },
+  });
+}
+
 function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
   let changed = false;
 
@@ -242,7 +249,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
       }
 
       console.log(`[legacy-301] Blocked smart redirect for non-whitelisted parent: ${pathname}`);
-      return next();
+      return redirectToCustom404();
     }
 
     const rest = pathname.slice("/Photography-Galleries".length) || "";
@@ -310,14 +317,11 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
       if (correctGalleryPaths && correctGalleryPaths.length > 0) {
         console.log(`[smart-410] Blocked smart redirect for non-whitelisted parent: ${pathname}`);
       }
-      // Image ID provided but not found anywhere → 410
-      console.log(`[smart-410] Legacy image ${imageId} not found in any gallery → 410`);
+      // Image ID provided but not found anywhere → custom 404
+      console.log(`[smart-410] Legacy image ${imageId} not found in any gallery → /404`);
     }
-    // No image ID or image not found → 410
-    return new Response("410 Gone - This content has been permanently removed.", {
-      status: 410,
-      headers: { "Content-Type": "text/plain" },
-    });
+    // No image ID or image not found → custom 404
+    return redirectToCustom404();
   }
 
   // ✅ REDIRECT: Legacy Pictorialist paths → current Pictorialist page
