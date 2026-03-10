@@ -169,10 +169,18 @@ export async function handleDashboardSection(env, filters, section) {
   }
 
   if (section === 'index-health') {
-    const { edgeEvents, edgeSummary } = await getEdgeEvents(env, { dateClause, yesterday, days });
+    const { edgeEvents, edgeSummary, edgeSuppression } = await getEdgeEvents(env, {
+      dateClause,
+      yesterday,
+      days,
+      hideBots,
+      ipClause,
+      botClause,
+      chardonClause
+    });
     return renderDashboardSection('index-health', {
       days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, hideBots, hideChardon,
-      edgeEvents: edgeEvents?.results || [], edgeSummary: edgeSummary || []
+      edgeEvents: edgeEvents?.results || [], edgeSummary: edgeSummary || [], edgeSuppression: edgeSuppression || { hidden_total: 0, hidden_bot: 0, hidden_probe_noise: 0 }
     });
   }
 

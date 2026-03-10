@@ -12,6 +12,9 @@ const { breadcrumb, entranceData, initialImageId } = Astro.props;
 const safeInitialImageId = (initialImageId && initialImageId !== "i-k4studios") 
   ? initialImageId 
   : (allImages[1]?.id || allImages[0]?.id);
+const chapterInitialImageId = (initialImageId && initialImageId !== "i-k4studios")
+  ? initialImageId
+  : "i-k4studios";
 ---
 
 <GalleryShellCore
@@ -23,5 +26,5 @@ const safeInitialImageId = (initialImageId && initialImageId !== "i-k4studios")
   entranceData={entranceData}
   initialImageId={safeInitialImageId}
 >
-  <ChapterViewer slot="chapter-viewer" client:load initialImageId={safeInitialImageId} />
+  <ChapterViewer slot="chapter-viewer" client:load initialImageId={chapterInitialImageId} />
 </GalleryShellCore>

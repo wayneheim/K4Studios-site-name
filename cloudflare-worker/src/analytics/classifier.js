@@ -62,6 +62,13 @@ export function calculateRiskScore(stats) {
     score += 2;
     rules.push('no_referrer_high_volume');
   }
+
+  // Repeated malformed image-page probes (random i-IDs on invalid paths).
+  // User-requested threshold: flag after 10+ such 404 attempts from one IP hash.
+  if ((stats.malformed_404_probes || 0) >= 10) {
+    score += 5;
+    rules.push('malformed_404_probe_burst');
+  }
   
   // Datacenter IP
   if (stats.is_datacenter) {

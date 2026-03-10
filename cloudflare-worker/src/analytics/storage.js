@@ -336,6 +336,14 @@ async function updateBotIntelligence(env) {
             100.0 * SUM(CASE WHEN event_type IN ('gallery', 'gallery_view') THEN 1 ELSE 0 END) / COUNT(*),
             1
           ) as gallery_pct,
+          SUM(CASE
+            WHEN source = 'edge'
+              AND event_type = '404'
+              AND target_id IS NOT NULL
+              AND target_id LIKE '%/i-%'
+            THEN 1
+            ELSE 0
+          END) as malformed_404_probes,
           MAX(CASE WHEN event_type = 'verified_bot' THEN 1 ELSE 0 END) as is_verified_bot,
           MAX(is_bot) as is_flagged_bot
         FROM base
@@ -408,6 +416,7 @@ async function updateBotIntelligence(env) {
         requests_per_hour: requestsPerHour,
         image_page_pct: Number(stats.image_page_pct || 0),
         gallery_pct: Number(stats.gallery_pct || 0),
+        malformed_404_probes: Number(stats.malformed_404_probes || 0),
         has_referrer: Boolean(stats.has_referrer),
         is_datacenter: isDatacenter,
         is_verified_bot: Boolean(stats.is_verified_bot),

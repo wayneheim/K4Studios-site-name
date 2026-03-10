@@ -4,7 +4,7 @@
 // NO DB access, NO env usage, NO filter logic — rendering only.
 // ═══════════════════════════════════════════════════════════════════════════
 
-export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, externalReachGeo, externalReachSources, botIntelligence, blockRecommendedCount }) {
+export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, edgeSuppression, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, externalReachGeo, externalReachSources, botIntelligence, blockRecommendedCount }) {
   const s = summary || {};
   
   // Canonical list of all trackable events with display labels
@@ -797,6 +797,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <div class="section k4-lazy" id="k4-section-index-health" data-section="index-health" data-loaded="0">
       <div class="section-header">
         <h3 style="display: inline;">🧭 Index Health</h3>
+        ${hideBots && Number(edgeSuppression?.hidden_total || 0) > 0 ? `<span style="margin-left:10px;padding:2px 8px;border-radius:999px;background:#3f3f46;color:#d4d4d8;font-size:11px;vertical-align:middle;">Hidden ${Number(edgeSuppression.hidden_total || 0)} (🤖${Number(edgeSuppression.hidden_bot || 0)} 🕸${Number(edgeSuppression.hidden_probe_noise || 0)})</span>` : ''}
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Edge events: 301 redirects (canonical fixes), 410 Gone (removed content), 404 fallbacks. Healthy sites show these tapering over time.</div></span>
         <button class="mini-btn k4-section-toggle" type="button" onclick="k4ToggleLazySection('index-health')">Show</button>
       </div>
@@ -829,11 +830,12 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       </div>
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
       <table>
-        <tr><th>Page</th><th>From</th><th>Sess</th></tr>
+        <tr><th>Page</th><th>S</th><th>From</th><th>Sess</th></tr>
         ${entryPages.slice(0, 15).map(p => {
           const isImage = p.page_path.includes('/i-');
           const shortPath = p.page_path.length > 30 ? '...' + p.page_path.slice(-27) : p.page_path;
           const pageIcon = isImage ? '🖼️' : '📄';
+          const sourceKind = String(p.source_kind || 'J').toUpperCase() === 'P' ? 'P' : 'J';
           const refIcons = { 
             google_search: '🔍', google_images: '🖼️', 
             bing_search: '🅱️', bing_images: '🖼️', 
@@ -842,7 +844,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             direct: '🔗', internal: '🔄', unattributed: '🔒' 
           };
           const refIcon = refIcons[p.ref_source] || '🔒';
-          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
+          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${sourceKind === 'P' ? 'Pixel' : 'JavaScript'}" style="text-align:center;color:${sourceKind === 'P' ? '#f59e0b' : '#60a5fa'};font-weight:700;">${sourceKind}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
         }).join('')}
       </table>
       `}
@@ -1151,7 +1153,7 @@ function renderExternalReachContent({ externalReachGeo = [], externalReachSource
   return html;
 }
 
-function renderIndexHealthContent({ edgeEvents = [], edgeSummary = [] }) {
+function renderIndexHealthContent({ edgeEvents = [], edgeSummary = [], hideBots = false, edgeSuppression = { hidden_total: 0, hidden_bot: 0, hidden_probe_noise: 0 } }) {
   let html = '';
 
   if (edgeSummary.length > 0) {
@@ -1177,8 +1179,12 @@ function renderIndexHealthContent({ edgeEvents = [], edgeSummary = [] }) {
         };
         const color = typeColors[s.event_type] || '#888';
         const label = typeLabels[s.event_type] || s.event_type;
-        return '<span style="background: ' + color + '22; color: ' + color + '; padding: 4px 10px; border-radius: 12px; font-size: 11px;">' + label + ': ' + s.total + ' <span style="opacity:0.7">(🤖' + s.bot_hits + ' 👤' + s.human_hits + ')</span></span>';
+        const countsLabel = hideBots ? '(👤' + s.human_hits + ')' : '(🤖' + s.bot_hits + ' 👤' + s.human_hits + ')';
+        return '<span style="background: ' + color + '22; color: ' + color + '; padding: 4px 10px; border-radius: 12px; font-size: 11px;">' + label + ': ' + s.total + ' <span style="opacity:0.7">' + countsLabel + '</span></span>';
       }).join('') +
+      ((hideBots && Number(edgeSuppression?.hidden_total || 0) > 0)
+        ? '<span style="background:#3f3f4622;color:#a1a1aa;padding:4px 10px;border-radius:12px;font-size:11px;">Hidden: ' + Number(edgeSuppression.hidden_total || 0) + ' <span style="opacity:0.7;">(🤖' + Number(edgeSuppression.hidden_bot || 0) + ' 🕸' + Number(edgeSuppression.hidden_probe_noise || 0) + ')</span></span>'
+        : '') +
     '</div>';
   }
 

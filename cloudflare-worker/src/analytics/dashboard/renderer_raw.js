@@ -4,7 +4,7 @@
 // NO DB access, NO env usage, NO filter logic — rendering only.
 // ═══════════════════════════════════════════════════════════════════════════
 
-export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, botIntelligence }) {
+export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, excludeIp, viewerIp, summary, newVisitors, returningVisitors, cowboyJumps, events, galleries, referrers, geo, trend, devices, pages, images, uniqueImagesViewed, totalImageSessions, totalImageViews, themesClicked, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, exitPages, exitSummary, exitByCategory, botPct, botSessions, hideBots, hideChardon, edgeEvents, edgeSummary, edgeSuppression, entryPages, entryRefCounts, imagePageViewsFromEvents, imageEntrySessionsFromEvents, bounceRate, avgDurationFormatted, peakHours, deviceEngagement, artViewsSummary, artViewsByType, topArtViews, botIntelligence }) {
   const s = summary || {};
   
   // Canonical list of all trackable events with display labels
@@ -821,8 +821,9 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           };
           const color = typeColors[s.event_type] || '#888';
           const label = typeLabels[s.event_type] || s.event_type;
-          return `<span style="background: ${color}22; color: ${color}; padding: 4px 10px; border-radius: 12px; font-size: 11px;">${label}: ${s.total} <span style="opacity:0.7">(🤖${s.bot_hits} 👤${s.human_hits})</span></span>`;
+          return `<span style="background: ${color}22; color: ${color}; padding: 4px 10px; border-radius: 12px; font-size: 11px;">${label}: ${s.total} <span style="opacity:0.7">${hideBots ? `(👤${s.human_hits})` : `(🤖${s.bot_hits} 👤${s.human_hits})`}</span></span>`;
         }).join('')}
+        ${hideBots && Number(edgeSuppression?.hidden_total || 0) > 0 ? `<span style="background:#3f3f4622;color:#a1a1aa;padding:4px 10px;border-radius:12px;font-size:11px;">Hidden: ${Number(edgeSuppression.hidden_total || 0)} <span style="opacity:0.7;">(🤖${Number(edgeSuppression.hidden_bot || 0)} 🕸${Number(edgeSuppression.hidden_probe_noise || 0)})</span></span>` : ''}
       </div>
       ` : ''}
       ${edgeEvents.length > 0 ? `
@@ -849,9 +850,11 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
           const color = eventColors[e.event_type] || '#888';
           const label = eventLabels[e.event_type] || e.event_type;
           const shortPath = e.path && e.path.length > 40 ? '...' + e.path.slice(-37) : (e.path || 'unknown');
-          const botIcon = e.is_bot ? '🤖' : '👤';
+          const botState = e.bot_state || (Number(e.bot_hits || 0) > 0 && Number(e.human_hits || 0) > 0 ? 'mixed' : (Number(e.bot_hits || 0) > 0 ? 'bot' : 'human'));
+          const isProbeNoise = Number(e.is_probe_noise || 0) === 1 || botState === 'probe';
+          const botIcon = isProbeNoise ? '🕸' : (botState === 'mixed' ? '🤖👤' : (botState === 'bot' ? '🤖' : '👤'));
           return `
-          <div class="edge-row" data-hits="${e.hits || 0}" data-bot="${e.is_bot ? 1 : 0}" data-type="${label}" data-path="${e.path || ''}" style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
+          <div class="edge-row" data-hits="${e.hits || 0}" data-bot="${botState}" data-type="${label}" data-path="${e.path || ''}" style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
             <span style="background: ${color}22; color: ${color}; padding: 2px 8px; border-radius: 8px; font-size: 10px; flex-shrink: 0;">${label}</span>
             <span style="flex: 1; color: #ccc; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${e.path || ''}">${shortPath}</span>
             <span style="font-size: 11px;">${botIcon}</span>
@@ -886,11 +889,12 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       </div>
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
       <table>
-        <tr><th>Page</th><th>From</th><th>Sess</th></tr>
+        <tr><th>Page</th><th>S</th><th>From</th><th>Sess</th></tr>
         ${entryPages.slice(0, 15).map(p => {
           const isImage = p.page_path.includes('/i-');
           const shortPath = p.page_path.length > 30 ? '...' + p.page_path.slice(-27) : p.page_path;
           const pageIcon = isImage ? '🖼️' : '📄';
+          const sourceKind = String(p.source_kind || 'J').toUpperCase() === 'P' ? 'P' : 'J';
           const refIcons = { 
             google_search: '🔍', google_images: '🖼️', 
             bing_search: '🅱️', bing_images: '🖼️', 
@@ -899,7 +903,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             direct: '🔗', internal: '🔄', unattributed: '🔒' 
           };
           const refIcon = refIcons[p.ref_source] || '🔒';
-          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
+          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${sourceKind === 'P' ? 'Pixel' : 'JavaScript'}" style="text-align:center;color:${sourceKind === 'P' ? '#f59e0b' : '#60a5fa'};font-weight:700;">${sourceKind}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
         }).join('')}
       </table>
       `}
@@ -1276,7 +1280,8 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     for (var i = 0; i < rows.length; i++) {
       var r = rows[i];
       var hits = r.getAttribute('data-hits') || '0';
-      var bot = r.getAttribute('data-bot') === '1' ? '\\uD83E\\uDD16' : '\\uD83D\\uDC64';
+      var botState = r.getAttribute('data-bot') || 'human';
+      var bot = botState === 'mixed' ? '\\uD83E\\uDD16\\uD83D\\uDC64' : (botState === 'bot' ? '\\uD83E\\uDD16' : '\\uD83D\\uDC64');
       var type = r.getAttribute('data-type') || '';
       var path = r.getAttribute('data-path') || '';
       lines.push(hits + '\\t' + bot + '\\t' + type + '\\t' + path);

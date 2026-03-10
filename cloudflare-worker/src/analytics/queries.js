@@ -2241,6 +2241,7 @@ export async function getEntryAnalysis(env, filters) {
       )
       SELECT
         page_path,
+        'J' AS source_kind,
         CASE
           WHEN (referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct')
             AND LOWER(COALESCE(ua, '')) LIKE '%pinterest%'
@@ -2536,8 +2537,26 @@ export async function getExitAnalysis(env, filters) {
 
 export async function getEdgeEvents(env, filters) {
   try {
-    const { dateClause, yesterday, days } = filters || {};
+    const { dateClause, yesterday, days, hideBots, ipClause, botClause, chardonClause } = filters || {};
     const d = Math.max(1, Math.min(parseInt(days || '1', 10) || 1, 31));
+    const qualify = (clause) => (clause || '')
+      .replace(/\bts\b/g, 'e.ts')
+      .replace(/\bip\b/g, 'e.ip')
+      .replace(/\bcity\b/g, 'e.city')
+      .replace(/\bcountry\b/g, 'e.country')
+      .replace(/\bregion\b/g, 'e.region');
+    const notBotWhenHide = hideBots ? `AND COALESCE(e.is_bot, 0) = 0` : '';
+    const notProbeNoiseWhenHide = hideBots
+      ? `AND NOT (
+          e.target_id LIKE '/Galleries/%/i-%'
+          AND INSTR(e.target_id, '/i-') > 0
+          AND EXISTS (
+            SELECT 1
+            FROM probe_noise_families pnf
+            WHERE pnf.path_prefix = SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1)
+          )
+        )`
+      : '';
 
     const dateWhere = dateClause
       ? `${String(dateClause).replace(/\bts\b/g, 'e.ts')}`
@@ -2546,22 +2565,77 @@ export async function getEdgeEvents(env, filters) {
         : `e.ts > datetime('now', '-${d} day')`);
 
     const eventsQuery = `
+      WITH probe_noise_families AS (
+        SELECT
+          SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1) as path_prefix
+        FROM classified_events e
+        WHERE ${dateWhere}
+          AND e.source = 'edge'
+          AND e.event_type = '404'
+          AND e.target_id LIKE '/Galleries/%/i-%'
+          AND INSTR(e.target_id, '/i-') > 0
+        GROUP BY path_prefix
+        HAVING COUNT(DISTINCT e.ip_hash) >= 10
+      )
       SELECT
         e.event_type,
         e.target_id as path,
-        e.is_bot,
-        COUNT(*) as hits
+        COUNT(*) as hits,
+        SUM(CASE WHEN COALESCE(e.is_bot, 0) = 1 THEN 1 ELSE 0 END) as bot_hits,
+        SUM(CASE WHEN COALESCE(e.is_bot, 0) = 0 THEN 1 ELSE 0 END) as human_hits,
+        CASE
+          WHEN e.target_id LIKE '/Galleries/%/i-%'
+            AND INSTR(e.target_id, '/i-') > 0
+            AND EXISTS (
+              SELECT 1
+              FROM probe_noise_families pnf
+              WHERE pnf.path_prefix = SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1)
+            ) THEN 1
+          ELSE 0
+        END as is_probe_noise,
+        CASE
+          WHEN (
+            e.target_id LIKE '/Galleries/%/i-%'
+            AND INSTR(e.target_id, '/i-') > 0
+            AND EXISTS (
+              SELECT 1
+              FROM probe_noise_families pnf
+              WHERE pnf.path_prefix = SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1)
+            )
+          ) THEN 'probe'
+          WHEN SUM(CASE WHEN COALESCE(e.is_bot, 0) = 1 THEN 1 ELSE 0 END) > 0
+            AND SUM(CASE WHEN COALESCE(e.is_bot, 0) = 0 THEN 1 ELSE 0 END) > 0 THEN 'mixed'
+          WHEN SUM(CASE WHEN COALESCE(e.is_bot, 0) = 1 THEN 1 ELSE 0 END) > 0 THEN 'bot'
+          ELSE 'human'
+        END as bot_state
       FROM classified_events e
       WHERE ${dateWhere}
         AND e.source = 'edge'
+        ${qualify(ipClause)}
+        ${qualify(botClause)}
+        ${qualify(chardonClause)}
+        ${notBotWhenHide}
+        ${notProbeNoiseWhenHide}
         AND e.event_type IN ('301','302','404','410','smart404_redirect','smart404_gone','smart404_fallback','smart404_homepage')
-      GROUP BY e.event_type, e.target_id, e.is_bot
+      GROUP BY e.event_type, e.target_id
       ORDER BY hits DESC
       LIMIT 60
     `;
     const edgeEvents = await env.DB.prepare(eventsQuery).all();
 
     const summaryQuery = `
+      WITH probe_noise_families AS (
+        SELECT
+          SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1) as path_prefix
+        FROM classified_events e
+        WHERE ${dateWhere}
+          AND e.source = 'edge'
+          AND e.event_type = '404'
+          AND e.target_id LIKE '/Galleries/%/i-%'
+          AND INSTR(e.target_id, '/i-') > 0
+        GROUP BY path_prefix
+        HAVING COUNT(DISTINCT e.ip_hash) >= 10
+      )
       SELECT
         e.event_type,
         COUNT(*) as total,
@@ -2570,6 +2644,11 @@ export async function getEdgeEvents(env, filters) {
       FROM classified_events e
       WHERE ${dateWhere}
         AND e.source = 'edge'
+        ${qualify(ipClause)}
+        ${qualify(botClause)}
+        ${qualify(chardonClause)}
+        ${notBotWhenHide}
+        ${notProbeNoiseWhenHide}
         AND e.event_type IN ('301','302','404','410','smart404_redirect','smart404_gone','smart404_fallback','smart404_homepage')
       GROUP BY e.event_type
       ORDER BY total DESC
@@ -2577,10 +2656,62 @@ export async function getEdgeEvents(env, filters) {
     const edgeSummaryResult = await env.DB.prepare(summaryQuery).all();
     const edgeSummary = edgeSummaryResult?.results || [];
 
-    return { edgeEvents, edgeSummary };
+    let edgeSuppression = { hidden_total: 0, hidden_bot: 0, hidden_probe_noise: 0 };
+    if (hideBots) {
+      const suppressionQuery = `
+        WITH probe_noise_families AS (
+          SELECT
+            SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1) as path_prefix
+          FROM classified_events e
+          WHERE ${dateWhere}
+            AND e.source = 'edge'
+            AND e.event_type = '404'
+            AND e.target_id LIKE '/Galleries/%/i-%'
+            AND INSTR(e.target_id, '/i-') > 0
+          GROUP BY path_prefix
+          HAVING COUNT(DISTINCT e.ip_hash) >= 10
+        )
+        SELECT
+          COUNT(*) as hidden_total,
+          SUM(CASE WHEN COALESCE(e.is_bot, 0) = 1 THEN 1 ELSE 0 END) as hidden_bot,
+          SUM(CASE
+            WHEN (
+              e.target_id LIKE '/Galleries/%/i-%'
+              AND INSTR(e.target_id, '/i-') > 0
+              AND EXISTS (
+                SELECT 1
+                FROM probe_noise_families pnf
+                WHERE pnf.path_prefix = SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1)
+              )
+            ) THEN 1 ELSE 0 END
+          ) as hidden_probe_noise
+        FROM classified_events e
+        WHERE ${dateWhere}
+          AND e.source = 'edge'
+          ${qualify(ipClause)}
+          ${qualify(botClause)}
+          ${qualify(chardonClause)}
+          AND e.event_type IN ('301','302','404','410','smart404_redirect','smart404_gone','smart404_fallback','smart404_homepage')
+          AND (
+            COALESCE(e.is_bot, 0) = 1
+            OR (
+              e.target_id LIKE '/Galleries/%/i-%'
+              AND INSTR(e.target_id, '/i-') > 0
+              AND EXISTS (
+                SELECT 1
+                FROM probe_noise_families pnf
+                WHERE pnf.path_prefix = SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1)
+              )
+            )
+          )
+      `;
+      edgeSuppression = (await env.DB.prepare(suppressionQuery).first()) || edgeSuppression;
+    }
+
+    return { edgeEvents, edgeSummary, edgeSuppression };
   } catch (e) {
     console.log('Edge events query failed:', e.message);
-    return { edgeEvents: { results: [] }, edgeSummary: [] };
+    return { edgeEvents: { results: [] }, edgeSummary: [], edgeSuppression: { hidden_total: 0, hidden_bot: 0, hidden_probe_noise: 0 } };
   }
 }
 

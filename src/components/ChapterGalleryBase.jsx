@@ -320,6 +320,9 @@ export default function ChapterGalleryBase({
   initialImageId
 }) {
   const sectionUrl = findSectionUrl(basePath);
+  const isImageDetailRender = Boolean(
+    initialImageId && String(initialImageId).toLowerCase() !== "i-k4studios"
+  );
 
   const pixelLayerByEvent = {
     nav_prev: 'chapter_nav_prev_pixel_v1',
@@ -1894,6 +1897,7 @@ export default function ChapterGalleryBase({
                       // Dynamic font size: shrink for long titles on mobile
                       const titleLength = chapterTitle?.length || 0;
                       const mobileTitleSize = titleLength > 40 ? '1.0rem' : titleLength > 30 ? '1.15rem' : '1.35rem';
+                      const ChapterTitleTag = isImageDetailRender ? "h1" : "h2";
                       return (
                         <div className="text-center" style={{ fontFamily: "'Glegoo', serif", marginBottom: isMobile ? "1.5rem" : "0.5rem" }}>
                           <p
@@ -1902,12 +1906,12 @@ export default function ChapterGalleryBase({
                           >
                             Chapter {currentIndex + 1}:
                           </p>
-                          <h1
+                          <ChapterTitleTag
                             className="font-semibold tracking-wide text-[#85644b] chapter-title"
                             style={{ fontSize: isMobile ? mobileTitleSize : "1.55rem", opacity: 0.5, lineHeight: "1.35", marginTop: 0, marginBottom: 0 }}
                           >
                             {chapterTitle}
-                          </h1>
+                          </ChapterTitleTag>
                         </div>
                       );
                     })()}
