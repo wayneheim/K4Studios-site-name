@@ -35,6 +35,13 @@ Disallow: /*.mjs$
 Disallow: /*.ts$
 Disallow: /*.cjs$
 
+# Analytics & internal endpoints (not content, no crawl value)
+Disallow: /track
+Disallow: /__k4e
+Disallow: /__k4stats
+Disallow: /__k4serp
+Disallow: /edge-event
+
 # Legacy SmugMug paths - content no longer exists on this site (returns 410 Gone)
 Disallow: /Other/Photo-Shoots/
 Disallow: /Other/Photo-Shoots-and-Themes/
