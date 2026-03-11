@@ -5,7 +5,7 @@
 // GATEWAY BOT / SCRAPER LOGIC
 // --------------------
 export const ALLOWED_BOTS =
-  /(googlebot|google-inspectiontool|adsbot-google|googleother|apis-google|bingbot|bingpreview|msnbot|duckduckbot|yandex|baiduspider|slurp|petalbot|ahrefsbot|ahrefssiteaudit|semrushbot|screaming\s*frog|sitebulb|applebot|facebookexternalhit|facebot|linkedinbot|twitterbot|pinterestbot|slackbot|discordbot|telegrambot|uptimerobot|uptime[- ]?kuma)/i;
+  /(googlebot|google-inspectiontool|adsbot-google|googleother|apis-google|bingbot|bingpreview|msnbot|bingimagesbot|duckduckbot|yandex|baiduspider|slurp|petalbot|ahrefsbot|ahrefssiteaudit|semrushbot|screaming\s*frog|sitebulb|applebot|facebookexternalhit|facebot|linkedinbot|twitterbot|pinterestbot|slackbot|discordbot|telegrambot|uptimerobot|uptime[- ]?kuma)/i;
 
 export const BLOCKED_BOTS =
   /(python|curl|scrapy|spider(?!.*google)|httpclient|axios|wget|postman|libwww-perl|powershell|java\/|node-fetch|okhttp)/i;
@@ -54,7 +54,7 @@ export const DATACENTER_PREFIXES = [
 // Verified search bots (never block, never throttle)
 export const VERIFIED_BOTS = [
   { name: 'Googlebot', pattern: /googlebot|google-inspectiontool|googleother|apis-google/i },
-  { name: 'Bingbot', pattern: /bingbot|bingpreview|msnbot/i },
+  { name: 'Bingbot', pattern: /bingbot|bingpreview|msnbot|bingimagesbot/i },
   { name: 'Applebot', pattern: /applebot/i },
   { name: 'DuckDuckBot', pattern: /duckduckbot/i },
   { name: 'Yandex', pattern: /yandex/i },

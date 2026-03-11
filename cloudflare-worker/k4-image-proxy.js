@@ -124,9 +124,45 @@ function createVisitorIdCookie(visitorId, hostname) {
 /**
  * Add visitor_id cookie to response if needed
  */
+/**
+ * Returns true if this request is from a bot/crawler and should not receive
+ * a Set-Cookie header. Bots don't store cookies anyway, and Set-Cookie on a
+ * public Cache-Control page causes Bing Webmaster Tools URL inspection to fail
+ * with "Error encountered while inspecting URL" even though the page is 200.
+ *
+ * Signals checked (any one is sufficient):
+ * 1. UA matches known discovery/social/SEO bot list (isDiscoveryBotUA)
+ * 2. UA contains generic bot/crawler/spider/preview tokens
+ * 3. Sec-Fetch-Site header is absent — real browsers always send it on
+ *    navigation; bots universally omit all Sec-Fetch-* headers
+ * 4. Sec-Fetch-Site is "none" with no Sec-Fetch-Mode — direct fetches without
+ *    browser navigation context (e.g. headless scrapers)
+ */
+function shouldSuppressCookie(request) {
+  const ua = request?.headers?.get('User-Agent') || '';
+
+  // 1. Known discovery/social/SEO bots
+  if (isDiscoveryBotUA(ua)) return true;
+
+  // 2. Generic bot/crawler/spider/preview tokens in UA
+  if (/bot|crawler|spider|preview/i.test(ua)) return true;
+
+  // 3. Sec-Fetch-Site absent → not a browser navigation
+  const secFetchSite = request?.headers?.get('Sec-Fetch-Site');
+  if (secFetchSite === null || secFetchSite === undefined) return true;
+
+  // 4. Sec-Fetch-Site: none with no Sec-Fetch-Mode (headless / non-browser fetch)
+  const secFetchMode = request?.headers?.get('Sec-Fetch-Mode');
+  if (secFetchSite === 'none' && !secFetchMode) return true;
+
+  return false;
+}
+
 function addVisitorIdCookie(response, visitorId, isNew, request) {
+  if (shouldSuppressCookie(request)) return response;
+
   if (!isNew) return response;
-  
+
   // Clone response to add Set-Cookie header
   const newHeaders = new Headers(response.headers);
   let hostname;
@@ -380,14 +416,16 @@ async function proxyImage(smugMugUrl, request) {
   const headers = {
     "Content-Type": imageResponse.headers.get("Content-Type") || "image/jpeg",
     "Cache-Control": "public, max-age=31536000, immutable",
-    "X-Robots-Tag": "noai, noimageai",
+    "X-Robots-Tag": "noindex, noai, noimageai",
     "X-Content-Type-Options": "nosniff",
     "X-Frame-Options": "DENY",
     "X-Proxy-Origin": "k4studios"
   };
 
-  // NOTE: We intentionally avoid index-control directives on image bytes.
-  // `noai, noimageai` are opt-out signals for training, not indexing.
+  // `noindex` prevents the /img/ URL itself from being indexed as a page.
+  // This does NOT affect Google Image Search — images are indexed via the
+  // gallery page URLs, not the raw proxy URLs.
+  // `noai, noimageai` are opt-out signals for AI training.
 
   return new Response(imageResponse.body, { status: 200, headers });
 }
@@ -539,7 +577,7 @@ function isDiscoveryBotUA(uaRaw) {
   // Explicit allowlist for discovery and preview ecosystems.
   // Do NOT include AI crawlers here.
   const ua = String(uaRaw || '');
-  return /(googlebot|google-inspectiontool|googleother|apis-google|adsbot-google|googlebot-image|bingbot|bingpreview|msnbot|applebot|duckduckbot|yandex|baiduspider|slurp|petalbot|ahrefsbot|ahrefssiteaudit|semrushbot|facebookexternalhit|facebot|twitterbot|pinterestbot|linkedinbot|slackbot|discordbot|telegrambot)/i.test(ua);
+  return /(googlebot|google-inspectiontool|googleother|apis-google|adsbot-google|googlebot-image|bingbot|bingpreview|msnbot|bingimagesbot|applebot|duckduckbot|yandex|baiduspider|slurp|petalbot|ahrefsbot|ahrefssiteaudit|semrushbot|facebookexternalhit|facebot|twitterbot|pinterestbot|linkedinbot|slackbot|discordbot|telegrambot)/i.test(ua);
 }
 
 function getSuspicionFlags({ request, asn, ua }) {
@@ -838,7 +876,7 @@ async function handleImageRequest(request, ctx, env) {
   }
 
   try {
-    const manifest = await getManifest(ctx);
+    const [manifest, imageIdMap] = await Promise.all([getManifest(ctx), getImageIdMap(ctx)]);
     const smugMugUrls = resolveImageUrls(manifest, route.canonicalImageId, route.size);
 
     if (smugMugUrls.length === 0) {
@@ -922,7 +960,20 @@ async function handleImageRequest(request, ctx, env) {
       }
     }
 
-    const response = await proxyImageWithFallback(smugMugUrls, canonicalRequest);
+    let response = await proxyImageWithFallback(smugMugUrls, canonicalRequest);
+
+    // Add canonical Link header so Google can associate /img/ bytes with the gallery page.
+    // Uses the same imageIdMap the smart-404 relies on: imageId → ['/Galleries/...']
+    if (response?.status === 200) {
+      const galleryPaths = imageIdMap?.[route.canonicalImageId];
+      const galleryPath = Array.isArray(galleryPaths) ? galleryPaths[0] : galleryPaths;
+      if (galleryPath) {
+        const canonicalPageUrl = `https://www.k4studios.com${galleryPath}/${route.canonicalImageId}`;
+        const newHeaders = new Headers(response.headers);
+        newHeaders.set('Link', `<${canonicalPageUrl}>; rel="canonical"`);
+        response = new Response(response.body, { status: 200, headers: newHeaders });
+      }
+    }
 
     // Cache successful responses under the canonical key.
     // Use waitUntil so we don't block serving.

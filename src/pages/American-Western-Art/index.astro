@@ -2,16 +2,15 @@
 export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
-import ImageBar2          from '@/components/ImageBar2.jsx';
 import TombstoneNav       from '@/components/TombstoneNav.jsx';
 import LandingRightImages from '@/components/LandingRightImages.jsx';
 import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import StorySlider        from '@/components/StorySlider.tsx';
+import HybridBookCarousel from '@/components/hybrid/HybridBookCarousel.jsx';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 
-// Story slider can still point at a cowboy gallery (fine)
 import { galleryData as cowboyColorDataFull }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
 import { galleryData as cowboyBWData }
@@ -28,40 +27,131 @@ import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
-// ✅ HUB-SCOPED DATA SOURCES
-import { landingWestern }
-  from '@/data/Western-Fine-Art-Photography/landingstones.ts';
-import { painterlyStory as westernStory }
-  from '@/data/Western-Fine-Art-Photography/story.ts';
-import { facingFAQ }
-  from '@/data/Western-Fine-Art-Photography/faq.ts';
+import { landingAmericanWesternArt }
+  from '@/data/American-Western-Art/landingstones.ts';
+import { americanWesternArtStory }
+  from '@/data/American-Western-Art/story.ts';
+import { americanWesternArtFAQ }
+  from '@/data/American-Western-Art/faq.ts';
 
 import '@/styles/global.css';
-// If your hub page relied on this for header styling, keep it:
 import '@/styles/oneupheader.css';
 
-// ----------------------
-// PATHS
-// ----------------------
+const pagePath = "/American-Western-Art";
+const openingDefinition = [
+  "American Western art is artistic work that interprets the people, landscapes, and historical forces that shaped the American West. Traditionally expressed through painting and sculpture, Western art has long explored frontier life, Indigenous cultures, ranching traditions, and the dramatic landscapes of the West.",
+  "Today the Western art tradition extends beyond brush and bronze. Contemporary artists use photography, film, and mixed media to continue interpreting the Western experience.",
+  "In this sense, American Western art is not defined by medium but by subject: the stories, characters, and landscapes that formed the mythology and reality of the American frontier."
+];
 
-// ✅ The actual page URL
-const pagePath = "/Western-Fine-Art-Photography";
+const openingBridgeLine = "The American West has always been interpreted through art.";
 
-// ✅ A REAL siteNav node to power feathering + gallery pool + autolinking
-// (This is why Cowboy page works — we emulate that here)
+const signatureThesisLine = "Before the legend came the lives that built it.";
+
 const imageSectionPath =
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
 
-// ----------------------
-// STORY SLIDER DATA
-// ----------------------
+const carouselGalleryBasePath =
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
+
+const carouselLinkMap: Record<string, string> = {
+  color: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  bw: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+  na: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
+};
+
+const curatedCarouselIds = [
+  'i-LCspRF4',
+  'i-7Mzzbvp',
+  'i-qMQf7b6',
+  'i-HfQ5NVR',
+  'i-LmpRvHw',
+  'i-89qzJ6S',
+];
+
+const curatedSampleIds = [
+  'i-89qzJ6S',
+  'i-LmpRvHw',
+  'i-qMQf7b6',
+  'i-HfQ5NVR',
+  'i-LCspRF4',
+  'i-7Mzzbvp',
+  'i-rRdrQBg',
+  'i-4Hz6D7k',
+];
+
+function ensureAlt(img: any) {
+  const base = (img?.alt || img?.title || '').trim();
+  if (!base) return 'Painterly American Western art by Wayne Heim';
+  if (!img?.alt) return `${base} — painterly American Western art by Wayne Heim`;
+  return base;
+}
+
+function topRated(data: any[], count: number) {
+  return data
+    .filter((img: any) => img.visibility !== 'ghost' && img.id !== 'i-k4studios' && img.rating >= 4)
+    .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
+    .slice(0, count);
+}
+
+function findCuratedImage(id: string) {
+  const colorMatch = cowboyColorDataFull.find((img: any) => img.id === id);
+  if (colorMatch) return { img: colorMatch, href: `${carouselLinkMap.color}/${id}` };
+
+  const bwMatch = cowboyBWData.find((img: any) => img.id === id);
+  if (bwMatch) return { img: bwMatch, href: `${carouselLinkMap.bw}/${id}` };
+
+  const naMatch = cowboyNAData.find((img: any) => img.id === id);
+  if (naMatch) return { img: naMatch, href: `${carouselLinkMap.na}/${id}` };
+
+  return null;
+}
+
+const curatedCarouselSlides = curatedCarouselIds
+  .map(findCuratedImage)
+  .filter(Boolean)
+  .map(({ img, href }: any) => ({
+    id: img.id,
+    title: img.title,
+    alt: ensureAlt(img),
+    story: img.story || '',
+    href,
+  }));
+
+const fallbackCarouselSlides = [
+  ...topRated(cowboyColorDataFull, 2).map((img: any) => ({
+    id: img.id,
+    title: img.title,
+    alt: ensureAlt(img),
+    story: img.story || '',
+    href: `${carouselLinkMap.color}/${img.id}`,
+  })),
+  ...topRated(cowboyBWData, 2).map((img: any) => ({
+    id: img.id,
+    title: img.title,
+    alt: ensureAlt(img),
+    story: img.story || '',
+    href: `${carouselLinkMap.bw}/${img.id}`,
+  })),
+  ...topRated(cowboyNAData, 2).map((img: any) => ({
+    id: img.id,
+    title: img.title,
+    alt: ensureAlt(img),
+    story: img.story || '',
+    href: `${carouselLinkMap.na}/${img.id}`,
+  })),
+];
+
+const carouselSlides = curatedCarouselSlides.length >= 6
+  ? curatedCarouselSlides
+  : fallbackCarouselSlides;
+
+const carouselIds = new Set(carouselSlides.map((img: any) => img.id));
+
 const cowboyColorData = cowboyColorDataFull
   .filter((img: any) => storySliderImageIds.includes(img.id))
   .map((img: any) => ({ id: img.id, title: img.title, story: img.story }));
 
-// ----------------------
-// NAV HELPERS
-// ----------------------
 function findNavEntry(nav: any[], url: string): any | null {
   for (const entry of nav) {
     if (entry.href === url) return entry;
@@ -73,101 +163,81 @@ function findNavEntry(nav: any[], url: string): any | null {
   return null;
 }
 
-// Cowboy page uses children-only; keep same behavior for a clean pool.
 const landingNav = findNavEntry(siteNav as any, imageSectionPath);
 const galleryPaths: string[] = landingNav?.children?.map((c: any) => c.href) || [];
 
-// Load galleryData for those galleryPaths
 const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true }) as any;
 const galleryDatas = galleryPaths.map((path) => {
   const filePath = "../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
   return allGalleryData[filePath]?.galleryData || [];
 });
 
-// Feathering uses headingCount to decide how many it needs
-const headingCount = westernStory.filter((block: any, i: number) => i > 0 && block.subhead).length;
+const headingCount = americanWesternArtStory.filter((block: any, i: number) => i > 0 && block.subhead).length;
 
 const landingDescription =
-  landingWestern.subtitle || (landingWestern as any)?.description || '';
+  landingAmericanWesternArt.subtitle || '';
 
-const [introSectionRaw, ...mainStorySections] = westernStory;
-const introSection: any = introSectionRaw;
-
-// ✅ Feathered images: now strictly cowboy-universe, because imageSectionPath is cowboy node
 const featheredImages = getFeatheredImages({
   sectionPath: imageSectionPath,
   headingCount: Math.max(headingCount, 9),
   galleryDatas,
   galleryPaths,
-  minRating: 3,      // Lower threshold to get more images
-  fallbackMin: 1,    // Allow any rated image as fallback
-  poolMultiplier: 3  // 3x images for client-side rotation
+  minRating: 3,
+  fallbackMin: 1,
+  poolMultiplier: 3
 });
-// Pass full pool to component for client-side rotation
 
-const topGridImages = featheredImages.slice(0, 6);
-const gridCaptionVariants = [
-  'Narrative Western portrait',
-  'Painterly Western fine art photography',
-  'Frontier storytelling portrait',
-  'Character study of the American West',
-  'Painterly frontier portrait',
-  'Western fine art character study',
-];
+const topSampleImages = featheredImages.filter((img: any) => !carouselIds.has(img.id));
+const reorderedSampleImages = [...topSampleImages].sort((a: any, b: any) => {
+  const aIndex = curatedSampleIds.indexOf(a.id);
+  const bIndex = curatedSampleIds.indexOf(b.id);
+  const aRank = aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex;
+  const bRank = bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex;
+  return aRank - bRank;
+});
+const sampleImages = reorderedSampleImages.length >= 6 ? reorderedSampleImages : featheredImages;
 
-// ----------------------
-// STRUCTURED DATA (URL MUST BE THE HUB PAGE)
-// ----------------------
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
-    title: landingWestern.title,
+    title: landingAmericanWesternArt.title,
     description: landingDescription,
-    url: `https://k4studios.com${pagePath}`,
-    keywords: landingWestern.keywords || [],
+    url: `https://www.k4studios.com${pagePath}`,
+    keywords: landingAmericanWesternArt.keywords || [],
     copyrightNotice: "© Wayne Heim",
-    // Enhanced "about" topics specific to Western subject matter
     about: [
-      { "@type": "Thing", name: "Western Fine Art Photography" },
-      { "@type": "Thing", name: "American West Art" },
-      { "@type": "Thing", name: "Cowboy Portraiture" },
-      { "@type": "Thing", name: "American Frontier" },
-      { "@type": "Thing", name: "19th Century United States" },
-      { "@type": "Thing", name: "Indigenous Portraits" },
-      { "@type": "Thing", name: "Old West" },
+      { "@type": "Thing", name: "American Western Art" },
+      { "@type": "Thing", name: "Western Art" },
+      { "@type": "Thing", name: "Art of the American West" },
+      { "@type": "Thing", name: "Contemporary Western Art" },
+      { "@type": "Thing", name: "Western Art Photography" },
+      { "@type": "Thing", name: "Painterly Photography" },
     ],
-    genre: "Western Fine Art Photography",
+    genre: "American Western Art",
   },
   images: featheredImages,
   defaults: {
     copyrightNotice: "© Wayne Heim",
-    license: "https://k4studios.com/copyright",
-    acquireLicensePage: "https://k4studios.com/Other/Print-Options",
+    license: "https://www.k4studios.com/copyright",
+    acquireLicensePage: "https://www.k4studios.com/Other/Print-Options",
     creditText: "Wayne Heim",
     creatorName: "Wayne Heim",
-    creatorUrl: "https://k4studios.com/"
+    creatorUrl: "https://www.k4studios.com/"
   }
 });
 
-// ----------------------
-// BREADCRUMB STRUCTURED DATA
-// ----------------------
 const breadcrumbData = getBreadcrumbList([
-  { name: "Home", item: "https://k4studios.com/" },
-  { name: "Western Fine Art Photography", item: `https://k4studios.com${pagePath}` },
+  { name: "Home", item: "https://www.k4studios.com/" },
+  { name: "American Western Art", item: `https://www.k4studios.com${pagePath}` },
 ]);
 
-// ----------------------
-// FAQ STRUCTURED DATA (for rich snippets)
-// ----------------------
-// Helper to strip HTML tags for plain text answers
 const stripHtml = (text: string) => text.replace(/<[^>]*>/g, '').trim();
 
 const faqStructuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": `https://k4studios.com${pagePath}#faq`,
-  mainEntity: facingFAQ.slice(0, 10).map((item: any) => ({
+  "@id": `https://www.k4studios.com${pagePath}#faq`,
+  mainEntity: americanWesternArtFAQ.slice(0, 10).map((item: any) => ({
     "@type": "Question",
     name: item.q,
     acceptedAnswer: {
@@ -177,43 +247,38 @@ const faqStructuredData = JSON.stringify({
   })),
 }, null, 2);
 
-// ----------------------
-// WEBPAGE SCHEMA (subject authority - Western focus)
-// ----------------------
 const webPageSchema = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": `https://k4studios.com${pagePath}#webpage`,
-  url: `https://k4studios.com${pagePath}`,
-  name: "Western Fine Art Photography",
-  description: "Western fine art photography by Wayne Heim featuring cowboy portraits, frontier characters, and painterly western photography.",
+  "@id": `https://www.k4studios.com${pagePath}#webpage`,
+  url: `https://www.k4studios.com${pagePath}`,
+  name: "American Western Art",
+  description: "American Western art by Wayne Heim—painterly photography interpreting the people, landscapes, and historical forces that shaped the American West.",
   inLanguage: "en",
   isPartOf: {
     "@type": "WebSite",
-    "@id": "https://k4studios.com/#website",
+    "@id": "https://www.k4studios.com/#website",
     name: "K4 Studios",
-    url: "https://k4studios.com/"
+    url: "https://www.k4studios.com/"
   },
   about: [
-    { "@type": "Thing", name: "Western Fine Art Photography" },
-    { "@type": "Thing", name: "Cowboy Photography" },
-    { "@type": "Thing", name: "Frontier Portraiture" },
-    { "@type": "Thing", name: "American West Photography" }
+    { "@type": "Thing", name: "American Western Art" },
+    { "@type": "Thing", name: "Western Art" },
+    { "@type": "Thing", name: "American West Art" },
+    { "@type": "Thing", name: "Western Art Tradition" }
   ],
-  author: { "@id": "https://k4studios.com/#person" },
-  creator: { "@id": "https://k4studios.com/#person" },
-  copyrightHolder: { "@id": "https://k4studios.com/#person" },
-  mainEntity: { "@id": `https://k4studios.com${pagePath}#imagegallery` },
+  author: { "@id": "https://www.k4studios.com/#person" },
+  creator: { "@id": "https://www.k4studios.com/#person" },
+  copyrightHolder: { "@id": "https://www.k4studios.com/#person" },
+  mainEntity: { "@id": `https://www.k4studios.com${pagePath}#imagegallery` },
 }, null, 2);
 
-// OG/Twitter image: first feathered image
 function makeAbsoluteUrl(src?: string) {
   if (!src) return "";
   if (src.startsWith("http://") || src.startsWith("https://")) return src;
-  return `https://k4studios.com${src.startsWith("/") ? src : "/" + src}`;
+  return `https://www.k4studios.com${src.startsWith("/") ? src : "/" + src}`;
 }
 
-// Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
   return `/img/${imageId}/${size}`;
@@ -222,63 +287,51 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
 const landingImg = featheredImages[0];
 const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
 
-// ✅ Meta should be keyed to the HUB PAGE, not the cowboy gallery path
 const meta = getLandingMeta(pagePath, landingImgUrl);
-if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${pagePath}`;
-if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${pagePath}`;
+if (!meta.ogUrl) meta.ogUrl = `https://www.k4studios.com${pagePath}`;
+if (!meta.twitterUrl) meta.twitterUrl = `https://www.k4studios.com${pagePath}`;
 
-// ----------------------
-// DYNAMIC TOMBSTONE THUMBNAILS
-// ----------------------
-// Helper: Get an array of valid thumbnail URLs from gallery data (first 10 images)
 function getTombstoneThumbs(galleryData: any[]): string[] {
   const validImages = galleryData
     .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost')
-    .slice(0, 10); // Pool of first 10 images
+    .slice(0, 10);
   return validImages
     .map((img: any) => img.id ? getProxySrc(img.id, 's') : '')
     .filter((src: string) => src !== '');
 }
 
-// Map gallery hrefs to their data for dynamic thumb lookup
 const tombstoneGalleryMap: Record<string, any[]> = {
   '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color': cowboyColorDataFull,
   '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White': cowboyBWData,
   '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color': cowboyNAData,
 };
 
-// Build tombstones with thumbs array for client-side random selection
-const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
-  // If thumb is already set, keep it as single item
+const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: any) => {
   if (stone.thumb) return { ...stone, thumbs: [stone.thumb] };
-  // Use _thumbSource for gallery lookup (all hrefs now point to Facing History)
   const galleryData = tombstoneGalleryMap[stone._thumbSource || stone.href];
   const thumbs = galleryData ? getTombstoneThumbs(galleryData) : [];
   return {
     ...stone,
-    thumb: thumbs[0] || '', // Fallback for SSR
-    thumbs, // Array for client-side random selection
+    thumb: thumbs[0] || '',
+    thumbs,
   };
 });
 ---
 
 <BaseLayout
-  title="Western Fine Art Photography – Wayne Heim"
+  title="American Western Art – Wayne Heim | K4 Studios"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}
 >
-  <!-- FAQ Structured Data for rich snippets -->
   <script type="application/ld+json" set:html={faqStructuredData} slot="head"></script>
-  <!-- WebPage Schema (subject authority) -->
   <script type="application/ld+json" set:html={webPageSchema} slot="head"></script>
 
-  <!-- Article Structured Data for topical authority -->
   <script type="application/ld+json" is:inline>
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Western Fine Art Photography: Narrative Cowboy & Frontier Portraits of the American West",
+    "headline": "American Western Art: Painterly Photography Interpreting the American West",
     "author": {
       "@type": "Person",
       "name": "Wayne Heim"
@@ -291,90 +344,54 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
         "url": "https://www.k4studios.com/images/k4-logo.png"
       }
     },
-    "description": "A comprehensive guide to western fine art photography — what it is, its historical roots, the painterly process, and how narrative cowboy and frontier portraits interpret the American West as authored fine art.",
-    "mainEntityOfPage": "https://www.k4studios.com/Western-Fine-Art-Photography"
+    "description": "American Western art interprets the people, landscapes, and historical forces that shaped the American West. Today that tradition extends beyond painting and sculpture into contemporary photographic interpretation.",
+    "mainEntityOfPage": "https://www.k4studios.com/American-Western-Art"
   }
   </script>
-  
+
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
-      <LandingHeader client:load breadcrumb={landingWestern.breadcrumb} />
+      <LandingHeader client:load breadcrumb={landingAmericanWesternArt.breadcrumb} />
     </div>
 
     <div class="mobile-breadcrumb-wrapper">
-      <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
+      <div class="mobile-breadcrumb" set:html={landingAmericanWesternArt.breadcrumb} />
     </div>
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
-      <div class="carousel-fade reveal-on-scroll">
-        <ImageBar2 client:load />
+      <div class="hero-carousel-section reveal-on-scroll">
+        <HybridBookCarousel
+          client:load
+          slides={carouselSlides}
+          galleryBasePath={carouselGalleryBasePath}
+          kicker="A Western Art Narrative"
+          counterLabel="Scene"
+        />
       </div>
     </div>
 
     <section class="section-heading-wrap">
       <div class="section-heading">
-        <h1 class="page-title fade-in reveal-on-scroll">{landingWestern.title}</h1>
-        <h2 class="page-subtitle fade-in reveal-on-scroll">{landingWestern.subtitle}</h2>
-        <p class="page-summary fade-in reveal-on-scroll">
-          Western fine art photography is an authored interpretation of the American West created through painterly photographic craft, narrative restraint, and deliberate artistic vision.
-        </p>
-        <p class="page-context-link fade-in reveal-on-scroll">
-          Western fine art photography exists within the broader tradition of <a href="/American-Western-Art">American Western art</a>, where artists interpret the frontier experience through painting, sculpture, and now photographic craft. Explore the deeper definitions in <a href="/Western-Photography-Art">Western Photography Art</a> and step into the larger narrative world of <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier">Facing History</a>.
-        </p>
+        <h1 class="page-title fade-in reveal-on-scroll">{landingAmericanWesternArt.title}</h1>
+        <h2 class="page-subtitle fade-in reveal-on-scroll">{landingAmericanWesternArt.subtitle}</h2>
+        <div class="page-summary fade-in reveal-on-scroll">
+          {openingDefinition.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+          <p class="opening-bridge-line">{openingBridgeLine}</p>
+        </div>
       </div>
     </section>
 
-    <!-- Tombstones restored to top position -->
     <section class="collections-nav-section">
-      <h3 class="collections-heading fade-in reveal-on-scroll">Explore the Stories of the American West</h3>
+      <h3 class="collections-heading fade-in reveal-on-scroll">Explore the Western Art Collection</h3>
       <TombstoneNav client:load items={tombstonesWithThumbs} />
-    </section>
-
-    <section class="story-section story-intro-section box-section reveal-on-scroll">
-      <article class="story-block story-intro-panel">
-        {introSection.title && (
-          <h2 class="slide-in-left story-intro-title" set:html={autoLinkKeywordsInText(introSection.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-        )}
-        {introSection.subhead && (
-          <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(introSection.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-        )}
-        {(introSection as any)?.tagline && (
-          <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText((introSection as any).tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-        )}
-
-        {introSection.paragraphs?.map((para: string, paraIndex: number) => (
-          <>
-            <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
-            {paraIndex === 0 && (
-              <section class="intent-grid-section reveal-on-scroll" aria-label="Western fine art photography image gallery">
-                <h3 class="intent-grid-heading">Examples of Western Fine Art Photography</h3>
-                <div class="intent-grid-wrap">
-                  {topGridImages.map((image: any) => (
-                    <a class="intent-grid-card" href={image.href}>
-                      <img
-                        src={image.id ? getProxySrc(image.id, 'm') : ''}
-                        alt={image.alt || image.title || 'Western fine art photography image'}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <span class="intent-grid-caption">
-                        <strong>{image.title || 'Western Fine Art Photography'}</strong>
-                        <em>{gridCaptionVariants[topGridImages.indexOf(image) % gridCaptionVariants.length]}</em>
-                      </span>
-                    </a>
-                  ))}
-                </div>
-              </section>
-            )}
-          </>
-        ))}
-      </article>
     </section>
 
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
-          {mainStorySections.map((section: any, index: number) => (
+          {americanWesternArtStory.map((section: any, index: number) => (
             <article class="story-block">
               {section.title && (
                 <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
@@ -387,7 +404,13 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
               )}
 
               {section.paragraphs?.map((para: string) => (
-                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
+                <p
+                  class:list={[
+                    'reveal-on-scroll',
+                    para === signatureThesisLine && 'signature-thesis-line'
+                  ]}
+                  set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)}
+                />
               ))}
 
               {section.list && section.list.length > 0 && (
@@ -398,7 +421,6 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
                 </ul>
               )}
 
-              {/* Insert StorySlider (secondary variant - reduced visual weight) */}
               {index === 0 && (
                 <div class="story-slider-wrapper reveal-on-scroll mt-6">
                   <div class="story-slider-skeleton relative bg-[#f4f1ec] rounded-lg shadow-sm px-5 py-4 max-w-xl mx-auto border border-[#e0d9cf] mb-8 h-[240px] overflow-hidden opacity-90">
@@ -420,14 +442,14 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
                 </div>
               )}
 
-              {section.subhead === "Character Over Archetype" && (
+              {section.subhead === "Character Over Spectacle" && (
                 <div class="story-chapter-divider reveal-on-scroll" aria-hidden="true"></div>
               )}
             </article>
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(sampleImages)} displayCount={headingCount} />
       </div>
 
       <div class="sidebar-column hidden md:block">
@@ -435,7 +457,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
           <LandingRightImages
             client:load
             heading="Collection Samples"
-            images={featheredImages}
+            images={sampleImages}
             displayCount={6}
           />
         </div>
@@ -446,7 +468,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
       <input type="checkbox" id="faq-toggle" class="more-toggle" />
       <div class="truncate-container" style="min-height:0;">
         <div class="truncate-text">
-          <FAQAccordion items={facingFAQ} />
+          <FAQAccordion items={americanWesternArtFAQ} />
         </div>
       </div>
       <label for="faq-toggle" class="more-toggle-label"></label>
@@ -518,33 +540,20 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
       line-height: 1.3; padding: 2rem 1.5rem; max-width: 860px; margin: 0 auto;
       font-family: 'Glegoo', serif;
     }
-    .story-intro-section {
-      max-width: 1120px;
-      padding-top: 0.6rem;
-      padding-bottom: 1.35rem;
-    }
-    .box-section {
-      margin-top: 2rem;
-    }
-    .story-intro-panel {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 2rem 2.25rem 1.8rem;
-      background: #f4f1ec;
-      border: 1px solid rgba(0,0,0,0.05);
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-    }
     .story-block { margin-bottom: 2.5rem; }
     .story-block h2 { font-weight: 500; font-size: 1.65rem; margin-bottom: 0.55rem; }
-    .story-intro-title {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
     .story-block h3 { font-weight: 500; font-size: 1.2rem; margin-top: -0.5rem; margin-bottom: -.025rem; color: #5a4a3b; }
     .story-block .tagline { font-size: 1.05rem; font-weight: 500; margin-bottom: 1rem; color: #7a6250; }
     .story-block p { line-height: 1.6; margin-bottom: 1rem; font-size: 1.01rem; }
+    .story-block p.signature-thesis-line {
+      margin: 1.25rem 0 1.15rem;
+      font-size: 1.18rem;
+      line-height: 1.35;
+      text-align: center;
+      font-weight: 600;
+      color: #4f3f31;
+      letter-spacing: -0.015em;
+    }
     .story-block ul { padding-left: 1.4rem; margin-top: 0.5rem; }
     .story-block li { margin-bottom: 0.5rem; font-size: 1rem; }
 
@@ -562,14 +571,6 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
       transition-delay: 1s;
     }
 
-    .carousel-fade {
-      opacity: 0; transform: translateY(0px);
-      transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-      transition-delay: 0.0s;
-      visibility: hidden;
-    }
-    .carousel-fade.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
-
     .sample-fade {
       opacity: 0; transform: translateY(0px);
       transition: opacity 1.5s ease-out, transform 1.5s ease-out;
@@ -579,7 +580,6 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
     }
     .sample-fade.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
 
-    /* Page summary sentence */
     .page-summary {
       max-width: 900px;
       margin: 0.6rem auto 0;
@@ -590,138 +590,41 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
       text-align: center;
       opacity: 0.92;
     }
-    .page-context-link {
-      max-width: 920px;
-      margin: 0.9rem auto 0;
-      font-size: 0.99rem;
-      line-height: 1.6;
-      color: #6b5b4c;
-      font-family: 'Glegoo', serif;
-      text-align: center;
-      opacity: 0.94;
+    .page-summary p {
+      margin: 0 0 0.9rem;
     }
-    .page-context-link a {
-      color: #7a4d25;
-      text-decoration: underline;
-      text-underline-offset: 0.12em;
+    .page-summary p:last-child {
+      margin-bottom: 0;
     }
-    .page-context-link a:hover {
-      color: #5d3617;
+    .page-summary p.opening-bridge-line {
+      margin-top: 1.15rem;
+      font-weight: 600;
+      color: #5a4a3b;
     }
     @media (max-width: 768px) {
       .page-summary { font-size: 0.95rem; padding: 0 1rem; max-width: 90%; }
-      .page-context-link { font-size: 0.94rem; padding: 0 1rem; max-width: 92%; }
     }
 
-    .intent-grid-section {
-      max-width: 980px;
-      margin: 0.45rem auto 1.55rem;
-      padding: 0;
+    .hero-carousel-section {
+      max-width: 1200px;
+      margin: 0 auto 2rem;
+      padding: 0 1rem;
       opacity: 0;
-      visibility: hidden;
-      transform: translateY(10px);
+      transform: translateY(12px);
       transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+      visibility: hidden;
     }
-    .intent-grid-section.is-visible {
+    .hero-carousel-section.is-visible {
       opacity: 1;
-      visibility: visible;
       transform: translateY(0);
-    }
-    .intent-grid-wrap {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.85rem;
-      margin-top: 0.45rem;
-    }
-    .intent-grid-heading {
-      margin: 0 0 1.9rem;
-      font-size: 1.08rem;
-      line-height: 1.3;
-      font-weight: 700;
-      color: #7a6a5c;
-      font-family: 'Glegoo', serif;
-      text-align: center;
-      clear: both;
-    }
-    .intent-grid-card {
-      display: block;
-      text-decoration: none;
-      max-width: 250px;
-      margin: 0 auto;
-    }
-    .intent-grid-card img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      display: block;
-      border-radius: 8px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.16);
-      transition: transform 0.24s ease, box-shadow 0.24s ease;
-      background: #efe9e1;
-    }
-    .intent-grid-card:hover img {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.22);
-    }
-    .intent-grid-caption {
-      display: block;
-      margin-top: 0.42rem;
-      font-size: 0.84rem;
-      line-height: 1.3;
-      color: #5d4d3f;
-      font-family: 'Glegoo', serif;
-      text-align: center;
-      min-height: 2.7rem;
-    }
-    .intent-grid-caption strong {
-      display: block;
-      font-weight: 600;
-      color: #4d3c30;
-    }
-    .intent-grid-caption em {
-      display: block;
-      margin-top: 0.08rem;
-      font-style: normal;
-      color: #7a6a5c;
-    }
-    @media (max-width: 900px) {
-      .story-intro-panel {
-        padding: 1.6rem 1.35rem 1.45rem;
-      }
-      .intent-grid-section {
-        max-width: 760px;
-      }
-      .intent-grid-wrap {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-    @media (max-width: 560px) {
-      .story-intro-section {
-        padding-left: 0.85rem;
-        padding-right: 0.85rem;
-      }
-      .story-intro-panel {
-        padding: 1.25rem 0.95rem 1.15rem;
-        border-radius: 12px;
-      }
-      .intent-grid-section {
-        max-width: 420px;
-      }
-      .intent-grid-wrap {
-        grid-template-columns: 1fr;
-      }
-      .intent-grid-card {
-        max-width: 280px;
-      }
+      visibility: visible;
     }
 
-    /* Collections nav section (tombstones) */
     .collections-nav-section {
       padding: 1.75rem 0 1.5rem;
       text-align: center;
     }
 
-    /* Visual chapter break between narrative sections */
     .story-chapter-divider {
       max-width: 42ch;
       margin: 2.25rem auto 1.25rem;
@@ -750,7 +653,6 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
       opacity: 0.92;
     }
 
-    /* TombstoneNav has built-in top padding; tighten it here so the title sits on the divider */
     .collections-nav-section :global(.tombstone-nav) {
       padding: 0.1rem 1rem 2rem;
       margin: 0;
@@ -759,11 +661,6 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
       margin: 0.7rem auto 1.5rem;
     }
 
-    /* Western hub: unified gateway behavior (all tiles go same place)
-       - no hover scaling
-       - no grayscale/brightness on hover
-       - keep the default tombstone depth
-       - only show the stronger shadow on hover */
     .collections-nav-section :global(.tombstone-card) {
       transition: box-shadow 0.28s ease-in-out !important;
       box-shadow:
@@ -783,7 +680,6 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
         0 0 0 2px rgba(189, 162, 124, 0.38);
       transform: none;
     }
-    /* Unified hover cue: hover anywhere on the grid triggers all cards */
     @media (hover: hover) and (pointer: fine) {
       .collections-nav-section :global(.tile-grid:hover .tombstone-card) {
         box-shadow:

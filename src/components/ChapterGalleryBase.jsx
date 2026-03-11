@@ -1897,7 +1897,7 @@ export default function ChapterGalleryBase({
                       // Dynamic font size: shrink for long titles on mobile
                       const titleLength = chapterTitle?.length || 0;
                       const mobileTitleSize = titleLength > 40 ? '1.0rem' : titleLength > 30 ? '1.15rem' : '1.35rem';
-                      const ChapterTitleTag = isImageDetailRender ? "h1" : "h2";
+                      const ChapterTitleTag = isImageDetailRender ? "h1" : "h3";
                       return (
                         <div className="text-center" style={{ fontFamily: "'Glegoo', serif", marginBottom: isMobile ? "1.5rem" : "0.5rem" }}>
                           <p

@@ -12,7 +12,7 @@
 
   // 2. HISTORICAL CONTEXT (the roots)
   {
-    subhead: "The Historical Roots of Western Photography",
+    subhead: "The Historical Roots of Western Fine Art Photography",
     paragraphs: [
       "Western photography emerged alongside westward expansion in the mid-1800s. Early practitioners like Timothy O\u2019Sullivan documented frontier geology and settlement, while Edward S. Curtis created extensive portraits of Native American tribes\u2014work that remains influential and contested. Through the 20th century, photographers\u2014from Ansel Adams to documentary ranch photographers\u2014shaped how the West was seen.",
       "This work builds on that lineage while questioning its myths\u2014focusing on character, lived experience, and narrative complexity rather than spectacle. The photographs here tell the stories of the people who created the framework the modern West is built upon\u2014individual lives shaped by labor, risk, and endurance on the frontier. Before the legend came the lives that built it\u2014and that is where this work begins. That history is interpreted through painterly photographic craft, not simply recorded."
@@ -39,7 +39,7 @@
 
   // 5. THE PAINTERLY PROCESS
   {
-    subhead: "The Painterly Process",
+    subhead: "The Painterly Process in Western Fine Art Photography",
     paragraphs: [
       "The visual language of this work draws from the Pictorialist tradition, applying painterly discipline to photographic process. Every decision\u2014framing, exposure, tonal balance\u2014is made in service of story. Light is sculpted to reveal character. Texture is layered to create atmosphere. Color is shaped until the image reads with the weight of a painting while remaining unmistakably photographic.",
       "This is not a filter or a preset. It is a process closer to painting: deliberate, iterative, and guided by decades of experience in medical illustration and fine art. The painterly quality comes from lived experience and disciplined creative practice\u2014not automation."
@@ -48,7 +48,7 @@
 
   // 6. FOR COLLECTORS
   {
-    subhead: "For Collectors",
+    subhead: "For Collectors of Western Fine Art Photography",
     paragraphs: [
       "This collection is created for collectors who value depth over decoration and narrative integrity over trend. Each image is intended to live with the viewer\u2014revealing more through familiarity rather than immediate impact.",
       "These works are produced with museum-quality materials and archival intent, designed to endure both physically and emotionally. Whether on archival paper, premium canvas, or Wayne\u2019s proprietary <a href=\"/Other/K4-Select-Series/Engrained\">Engrained wood panel prints</a>\u2014where the image is layered into Baltic birch using a five-layer UV process\u2014every print is numbered, signed, and hand-inspected for tonal fidelity."

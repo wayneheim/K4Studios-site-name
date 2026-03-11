@@ -23,7 +23,12 @@ const FADE_MS = 1200;
 // Proxy helper — never expose SmugMug URLs
 const getProxySrc = (id, size = "l") => `/img/${id}/${size}`;
 
-export default function HybridBookCarousel({ slides = [], galleryBasePath = "" }) {
+export default function HybridBookCarousel({
+  slides = [],
+  galleryBasePath = "",
+  kicker = "",
+  counterLabel = "",
+}) {
   const [active, setActive] = useState(0);
   const [fading, setFading] = useState(false);
   const [textPhase, setTextPhase] = useState("idle");
@@ -72,9 +77,9 @@ export default function HybridBookCarousel({ slides = [], galleryBasePath = "" }
   if (!slides.length) return null;
 
   const current = slides[active];
-  const chapterLink = current.id
+  const chapterLink = current.href || (current.id
     ? `${galleryBasePath}/${current.id}`
-    : galleryBasePath;
+    : galleryBasePath);
 
   return (
     <div
@@ -107,6 +112,7 @@ export default function HybridBookCarousel({ slides = [], galleryBasePath = "" }
             key={active}
             className={`hybrid-book-text-swipe${textPhase === "exiting" ? " is-exiting" : ""}${textPhase === "entering" ? " is-entering" : ""}`}
           >
+            {kicker ? <p className="hybrid-book-kicker">{kicker}</p> : null}
             <p className="hybrid-book-title">{current.title}</p>
             <p className="hybrid-book-story">{current.story}</p>
             <a href={chapterLink} className="hybrid-book-cta">
@@ -139,7 +145,7 @@ export default function HybridBookCarousel({ slides = [], galleryBasePath = "" }
       {/* ── Slide counter (subtle) ── */}
       {total > 1 && (
         <div className="hybrid-book-counter" aria-hidden="true">
-          {active + 1} / {total}
+          {counterLabel ? `${counterLabel} ${active + 1} of ${total}` : `${active + 1} / ${total}`}
         </div>
       )}
 
@@ -246,6 +252,16 @@ export default function HybridBookCarousel({ slides = [], galleryBasePath = "" }
           }
         }
 
+        .hybrid-book-kicker {
+          margin: 0 0 0.45rem;
+          font-size: 0.7rem;
+          line-height: 1.2;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: #9b8772;
+          font-weight: 600;
+        }
+
         .hybrid-book-title {
           font-size: 1.5rem;
           font-weight: 600;
@@ -338,6 +354,10 @@ export default function HybridBookCarousel({ slides = [], galleryBasePath = "" }
           }
           .hybrid-book-title {
             font-size: 1.25rem;
+          }
+          .hybrid-book-kicker {
+            font-size: 0.66rem;
+            margin-bottom: 0.35rem;
           }
           .hybrid-book-story {
             font-size: 0.9rem;
