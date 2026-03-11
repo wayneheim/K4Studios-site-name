@@ -13,6 +13,7 @@
   // 2. HISTORICAL CONTEXT (the roots)
   {
     subhead: "The Historical Roots of Western Fine Art Photography",
+      "Within that Western branch, the work touches <a href=\"/Narrative-Western-Art\">Narrative Western Art</a> when story leads the frame and <a href=\"/Contemporary-Western-Art\">Contemporary Western Art</a> when the tradition is carried forward in present-tense form.",
     paragraphs: [
       "Western photography emerged alongside westward expansion in the mid-1800s. Early practitioners like Timothy O\u2019Sullivan documented frontier geology and settlement, while Edward S. Curtis created extensive portraits of Native American tribes\u2014work that remains influential and contested. Through the 20th century, photographers\u2014from Ansel Adams to documentary ranch photographers\u2014shaped how the West was seen.",
       "This work builds on that lineage while questioning its myths\u2014focusing on character, lived experience, and narrative complexity rather than spectacle. The photographs here tell the stories of the people who created the framework the modern West is built upon\u2014individual lives shaped by labor, risk, and endurance on the frontier. Before the legend came the lives that built it\u2014and that is where this work begins. That history is interpreted through painterly photographic craft, not simply recorded."
@@ -21,6 +22,7 @@
 
   // 3. THE NARRATIVE APPROACH
   {
+      "For the broader stylistic framework beyond Western subject matter, see <a href=\"/Galleries/Painterly-Fine-Art-Photography\">Painterly Fine Art Photography</a>, where the same discipline is applied across multiple narrative worlds.",
     subhead: "Character Over Archetype",
     paragraphs: [
       "The figures that appear here\u2014cowboys, ranchers, frontier individuals\u2014are presented not as archetypes, but as people. Expression, stillness, and bearing carry the story. A glance replaces gesture. A hand resting on a tool carries more weight than action.",

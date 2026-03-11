@@ -61,8 +61,6 @@ Disallow: /*?format=rss
 Disallow: /*?format=atom
 Disallow: /*&format=rss
 Disallow: /*&format=atom
-
-User-agent: *
 Disallow: /hack/feed.mg
 
 # --- Google services ---

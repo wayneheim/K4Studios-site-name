@@ -698,12 +698,12 @@ async function handleImageRequest(request, ctx, env) {
   // Apply blocked IP policy uniformly (no bot-specific bypass).
   const ua = request.headers.get('User-Agent') || '';
   const cfVerifiedBot = Boolean(request.cf?.botManagement?.verifiedBot);
-  const isDiscoveryBot = false;
+  const isDiscoveryBot = ALLOWED_BOTS.test(ua) || cfVerifiedBot;
   
   if (env?.DB && ipHash) {
     try {
       const isBlocked = await isIPBlocked(env, ipHash);
-      if (isBlocked) {
+      if (isBlocked && !cfVerifiedBot) {
         // Return 403 for blocked IPs - they get nothing
         return new Response("Blocked", {
           status: 403,
@@ -1247,6 +1247,7 @@ async function handleGatewayRequest(request, env) {
   const url = new URL(request.url);
   const ua = request.headers.get("user-agent") || "";
   const accept = request.headers.get("accept") || "";
+  const isAllowedBot = ALLOWED_BOTS.test(ua) || Boolean(request.cf?.botManagement?.verifiedBot);
 
   // Always allow these paths + HEAD/OPTIONS
   if (
@@ -1267,7 +1268,7 @@ async function handleGatewayRequest(request, env) {
       .map(c => c.trim().toUpperCase());
 
     const country = request.cf?.country;
-    if (country && blockedCountries.includes(country)) {
+    if (country && blockedCountries.includes(country) && !isAllowedBot) {
       return new Response("Access Denied", {
         status: 403,
         headers: {
@@ -1278,7 +1279,7 @@ async function handleGatewayRequest(request, env) {
     }
 
     // Block obvious scraper UAs (HTML only)
-    if (BLOCKED_BOTS.test(ua)) {
+    if (BLOCKED_BOTS.test(ua) && !isAllowedBot) {
       console.log("Blocked UA:", ua);
       return new Response("Blocked", {
         status: 403,

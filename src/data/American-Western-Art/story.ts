@@ -26,6 +26,7 @@ export const americanWesternArtStory = [
       "Over time photography became another medium through which artists interpret the American West.",
       "Early frontier photographers documented landscapes and expeditions. Over time the camera developed into a creative instrument capable of shaping atmosphere, narrative, and emotional tone.",
       "Today photography occupies a legitimate place within the Western art tradition.",
+      "For a story-first branch of that tradition, see <a href=\"/Narrative-Western-Art\">Narrative Western Art</a>. For its present-tense extension, see <a href=\"/Contemporary-Western-Art\">Contemporary Western Art</a>.",
       "Through painterly techniques, controlled light, and narrative composition, contemporary photographers interpret the same frontier stories that earlier painters explored with brush and canvas.",
       "The subject remains the same.",
       "Only the medium has evolved."
@@ -36,7 +37,7 @@ export const americanWesternArtStory = [
     paragraphs: [
       "One of the defining qualities of strong Western art is its focus on character.",
       "While Western imagery often features dramatic landscapes, horses, and sweeping skies, the most compelling works return attention to the individuals who lived within that world.",
-      "A rider pausing before a long journey.",
+      "A rider pausing before a long journey begins.",
       "A ranch hand measuring distance across open country.",
       "A quiet moment of reflection before a decision that cannot be undone.",
       "These moments reveal the human reality of the frontier.",
@@ -57,6 +58,7 @@ export const americanWesternArtStory = [
     paragraphs: [
       "The work presented at K4 Studios approaches Western art through painterly photography.",
       "Using tonal sculpting, layered textures, and controlled color grading, photographs are developed until they carry the visual weight of painting while remaining rooted in the authenticity of the photographic moment.",
+      "That approach becomes more specific in <a href=\"/Western-Fine-Art-Photography\">Western Fine Art Photography</a> and broader in <a href=\"/Galleries/Painterly-Fine-Art-Photography\">Painterly Fine Art Photography</a>, where the same authored discipline is applied across multiple subjects.",
       "The goal is not to imitate painting, but to continue the Western art tradition through the language of photography.",
       "Each image becomes a narrative fragment of the American West—an unfinished story the viewer is invited to enter."
     ]

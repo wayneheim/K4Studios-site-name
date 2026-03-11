@@ -6,7 +6,8 @@ export const painterlyStory = [
     paragraphs: [
       "Painterly fine art photography is a narrative-driven photographic discipline rooted in atmosphere, emotional weight, and intention. Rather than documenting what happened, it explores what it felt like — using light, tone, structure, and restraint to carry story through a single frame.",
       "At K4 Studios, painterly photography represents one of two core approaches to image-making. Some work here is rendered through a painterly, cinematic lens. Other work is presented as traditional fine art photography. Both are authored with intention. This page focuses on the painterly discipline.",
-      "Wayne Heim's painterly photography spans <a href='/Blog/what-is-western-fine-art-photography' style='color:#1a5f7a; text-decoration:underline;'>Western fine art</a> narratives, historically themed portraits, landscapes, and Americana subjects — unified not by subject matter, but by narrative construction and emotional truth."
+      "Wayne Heim's painterly photography spans <a href='/Blog/what-is-western-fine-art-photography' style='color:#1a5f7a; text-decoration:underline;'>Western fine art</a> narratives, historically themed portraits, landscapes, and Americana subjects — unified not by subject matter, but by narrative construction and emotional truth.",
+      "Within that broader discipline, <a href=\"/Western-Fine-Art-Photography\">Western Fine Art Photography</a> focuses the painterly approach on frontier subject matter, while <a href=\"/American-Western-Art\">American Western Art</a> places that work inside the longer lineage of the West."
     ]
   },
 
@@ -102,6 +103,7 @@ export const painterlyStory = [
     subhead: "Choosing Your Path",
     paragraphs: [
       "From here, you may explore painterly Western narratives, historically themed work, landscapes, or compare this approach with traditional fine art photography elsewhere on the site.",
+      "If you want the story-first branch, move into <a href=\"/Narrative-Western-Art\">Narrative Western Art</a>. If you want the present-tense continuation of the tradition, move into <a href=\"/Contemporary-Western-Art\">Contemporary Western Art</a>. <a href=\"/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier\">Facing History</a> remains the core gallery path where those ideas become images.",
       "Both disciplines are intentional. This page defines the painterly path."
     ]
   },

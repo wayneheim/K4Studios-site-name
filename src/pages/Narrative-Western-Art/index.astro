@@ -27,24 +27,22 @@ import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
-import { landingAmericanWesternArt }
-  from '@/data/American-Western-Art/landingstones.ts';
-import { americanWesternArtStory }
-  from '@/data/American-Western-Art/story.ts';
-import { americanWesternArtFAQ }
-  from '@/data/American-Western-Art/faq.ts';
+import { landingNarrativeWesternArt }
+  from '@/data/Narrative-Western-Art/landingstones.ts';
+import { narrativeWesternArtStory }
+  from '@/data/Narrative-Western-Art/story.ts';
+import { narrativeWesternArtFAQ }
+  from '@/data/Narrative-Western-Art/faq.ts';
 
 import '@/styles/global.css';
 import '@/styles/oneupheader.css';
 
-const pagePath = "/American-Western-Art";
+const pagePath = "/Narrative-Western-Art";
 const openingDefinition = [
-  "American Western art is the visual tradition that interprets the people, landscapes, and historical forces that shaped the American frontier.",
-  "First expressed through painting and sculpture, the tradition established by artists such as Frederic Remington and Charles M. Russell continues today through photography and contemporary visual storytelling.",
-  "American Western art is defined less by medium than by subject: the stories, characters, and landscapes that formed both the mythology and the lived reality of the frontier."
+  "Narrative Western art is Western art built on story. It uses the people, atmosphere, and emotional pressure of the American West to suggest a larger dramatic world beyond the frame.",
+  "Rather than relying on Western symbols alone, narrative Western art invites the viewer to sense what happened before the image, what tension lives inside it, and what may come after it.",
+  "The result is Western art that asks to be entered, not simply glanced at."
 ];
-
-const openingBridgeLine = "The American West has always been interpreted through art — and each generation adds its own voice to that tradition.";
 
 const signatureThesisLine = "Before the legend came the lives that built it.";
 
@@ -60,80 +58,47 @@ const carouselLinkMap: Record<string, string> = {
   na: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
 };
 
-const curatedCarouselIds = [
-  'i-LCspRF4',
-  'i-7Mzzbvp',
-  'i-qMQf7b6',
-  'i-HfQ5NVR',
-  'i-LmpRvHw',
-  'i-89qzJ6S',
-];
-
 const curatedSampleIds = [
-  'i-89qzJ6S',
-  'i-LmpRvHw',
-  'i-qMQf7b6',
-  'i-HfQ5NVR',
-  'i-LCspRF4',
-  'i-7Mzzbvp',
   'i-rRdrQBg',
   'i-4Hz6D7k',
+  'i-89qzJ6S',
+  'i-LmpRvHw',
+  'i-qMQf7b6',
+  'i-HfQ5NVR',
+  'i-LCspRF4',
+  'i-7Mzzbvp',
 ];
 
 function ensureAlt(img: any) {
   const base = (img?.alt || img?.title || '').trim();
-  if (!base) return 'Painterly American Western art by Wayne Heim';
-  if (!img?.alt) return `${base} — painterly American Western art by Wayne Heim`;
+  if (!base) return 'Narrative Western art by Wayne Heim';
+  if (!img?.alt) return `${base} — narrative Western art by Wayne Heim`;
   return base;
 }
 
-function topRated(data: any[], count: number) {
+function topRated(data: any[], count: number, skipCount: number = 0) {
   return data
     .filter((img: any) => img.visibility !== 'ghost' && img.id !== 'i-k4studios' && img.rating >= 4)
     .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
-    .slice(0, count);
+    .slice(skipCount, skipCount + count);
 }
 
-function findCuratedImage(id: string) {
-  const colorMatch = cowboyColorDataFull.find((img: any) => img.id === id);
-  if (colorMatch) return { img: colorMatch, href: `${carouselLinkMap.color}/${id}` };
-
-  const bwMatch = cowboyBWData.find((img: any) => img.id === id);
-  if (bwMatch) return { img: bwMatch, href: `${carouselLinkMap.bw}/${id}` };
-
-  const naMatch = cowboyNAData.find((img: any) => img.id === id);
-  if (naMatch) return { img: naMatch, href: `${carouselLinkMap.na}/${id}` };
-
-  return null;
-}
-
-const curatedCarouselSlides = curatedCarouselIds
-  .map(findCuratedImage)
-  .filter(Boolean)
-  .map(({ img, href }: any) => ({
-    id: img.id,
-    title: img.title,
-    alt: ensureAlt(img),
-    story: img.story || '',
-    href,
-  }));
-
-const fallbackCarouselSlides = [
-  ...topRated(cowboyColorDataFull, 2).map((img: any) => ({
+const carouselSlides = [
+  ...topRated(cowboyColorDataFull, 2, 10).map((img: any) => ({
     id: img.id,
     title: img.title,
     alt: ensureAlt(img),
     story: img.story || '',
     href: `${carouselLinkMap.color}/${img.id}`,
   })),
-  ...topRated(cowboyBWData, 2).map((img: any) => ({
+  ...topRated(cowboyBWData, 2, 10).map((img: any) => ({
     id: img.id,
     title: img.title,
     alt: ensureAlt(img),
     story: img.story || '',
     href: `${carouselLinkMap.bw}/${img.id}`,
   })),
-  ...topRated(cowboyNAData, 2).map((img: any) => ({
+  ...topRated(cowboyNAData, 2, 5).map((img: any) => ({
     id: img.id,
     title: img.title,
     alt: ensureAlt(img),
@@ -141,10 +106,6 @@ const fallbackCarouselSlides = [
     href: `${carouselLinkMap.na}/${img.id}`,
   })),
 ];
-
-const carouselSlides = curatedCarouselSlides.length >= 6
-  ? curatedCarouselSlides
-  : fallbackCarouselSlides;
 
 const carouselIds = new Set(carouselSlides.map((img: any) => img.id));
 
@@ -172,10 +133,10 @@ const galleryDatas = galleryPaths.map((path) => {
   return allGalleryData[filePath]?.galleryData || [];
 });
 
-const headingCount = americanWesternArtStory.filter((block: any, i: number) => i > 0 && block.subhead).length;
+const headingCount = narrativeWesternArtStory.filter((block: any, i: number) => i > 0 && block.subhead).length;
 
 const landingDescription =
-  landingAmericanWesternArt.subtitle || '';
+  landingNarrativeWesternArt.subtitle || '';
 
 const featheredImages = getFeatheredImages({
   sectionPath: imageSectionPath,
@@ -200,20 +161,20 @@ const sampleImages = reorderedSampleImages.length >= 6 ? reorderedSampleImages :
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
-    title: landingAmericanWesternArt.title,
+    title: landingNarrativeWesternArt.title,
     description: landingDescription,
     url: `https://www.k4studios.com${pagePath}`,
-    keywords: landingAmericanWesternArt.keywords || [],
+    keywords: landingNarrativeWesternArt.keywords || [],
     copyrightNotice: "© Wayne Heim",
     about: [
-      { "@type": "Thing", name: "American Western Art" },
-      { "@type": "Thing", name: "Western Art" },
-      { "@type": "Thing", name: "Art of the American West" },
-      { "@type": "Thing", name: "Contemporary Western Art" },
-      { "@type": "Thing", name: "Western Art Photography" },
+      { "@type": "Thing", name: "Narrative Western Art" },
+      { "@type": "Thing", name: "Western Narrative Art" },
+      { "@type": "Thing", name: "Story-Driven Western Art" },
+      { "@type": "Thing", name: "Cowboy Narrative Art" },
+      { "@type": "Thing", name: "Western Art Storytelling" },
       { "@type": "Thing", name: "Painterly Photography" },
     ],
-    genre: "American Western Art",
+    genre: "Narrative Western Art",
   },
   images: featheredImages,
   defaults: {
@@ -228,7 +189,7 @@ const structuredData = getStructuredData({
 
 const breadcrumbData = getBreadcrumbList([
   { name: "Home", item: "https://www.k4studios.com/" },
-  { name: "American Western Art", item: `https://www.k4studios.com${pagePath}` },
+  { name: "Narrative Western Art", item: `https://www.k4studios.com${pagePath}` },
 ]);
 
 const stripHtml = (text: string) => text.replace(/<[^>]*>/g, '').trim();
@@ -237,7 +198,7 @@ const faqStructuredData = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": `https://www.k4studios.com${pagePath}#faq`,
-  mainEntity: americanWesternArtFAQ.slice(0, 10).map((item: any) => ({
+  mainEntity: narrativeWesternArtFAQ.slice(0, 10).map((item: any) => ({
     "@type": "Question",
     name: item.q,
     acceptedAnswer: {
@@ -252,8 +213,8 @@ const webPageSchema = JSON.stringify({
   "@type": "WebPage",
   "@id": `https://www.k4studios.com${pagePath}#webpage`,
   url: `https://www.k4studios.com${pagePath}`,
-  name: "American Western Art",
-  description: "American Western art by Wayne Heim—painterly photography interpreting the people, landscapes, and historical forces that shaped the American West.",
+  name: "Narrative Western Art",
+  description: "Narrative Western art by Wayne Heim—story-driven painterly photography interpreting the people, atmosphere, and implied drama of the American West.",
   inLanguage: "en",
   isPartOf: {
     "@type": "WebSite",
@@ -262,10 +223,10 @@ const webPageSchema = JSON.stringify({
     url: "https://www.k4studios.com/"
   },
   about: [
-    { "@type": "Thing", name: "American Western Art" },
-    { "@type": "Thing", name: "Western Art" },
-    { "@type": "Thing", name: "American West Art" },
-    { "@type": "Thing", name: "Western Art Tradition" }
+    { "@type": "Thing", name: "Narrative Western Art" },
+    { "@type": "Thing", name: "Western Narrative Art" },
+    { "@type": "Thing", name: "Story-Driven Western Art" },
+    { "@type": "Thing", name: "One-Image Movie" }
   ],
   author: { "@id": "https://www.k4studios.com/#person" },
   creator: { "@id": "https://www.k4studios.com/#person" },
@@ -306,7 +267,7 @@ const tombstoneGalleryMap: Record<string, any[]> = {
   '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color': cowboyNAData,
 };
 
-const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: any) => {
+const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: any) => {
   if (stone.thumb) return { ...stone, thumbs: [stone.thumb] };
   const galleryData = tombstoneGalleryMap[stone._thumbSource || stone.href];
   const thumbs = galleryData ? getTombstoneThumbs(galleryData) : [];
@@ -319,7 +280,7 @@ const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: an
 ---
 
 <BaseLayout
-  title="American Western Art – Wayne Heim | K4 Studios"
+  title="Narrative Western Art – Wayne Heim | K4 Studios"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}
@@ -331,7 +292,7 @@ const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: an
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "American Western Art: Painterly Photography Interpreting the American West",
+    "headline": "Narrative Western Art: Story-Driven Painterly Art of the American West",
     "author": {
       "@type": "Person",
       "name": "Wayne Heim"
@@ -344,18 +305,18 @@ const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: an
         "url": "https://www.k4studios.com/images/k4-logo.png"
       }
     },
-    "description": "American Western art interprets the people, landscapes, and historical forces that shaped the American West. Today that tradition extends beyond painting and sculpture into contemporary photographic interpretation.",
-    "mainEntityOfPage": "https://www.k4studios.com/American-Western-Art"
+    "description": "Narrative Western art interprets the American West through story, character, atmosphere, and implied drama rather than subject matter alone.",
+    "mainEntityOfPage": "https://www.k4studios.com/Narrative-Western-Art"
   }
   </script>
 
   <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
     <div class="drawer-mode">
-      <LandingHeader client:load breadcrumb={landingAmericanWesternArt.breadcrumb} />
+      <LandingHeader client:load breadcrumb={landingNarrativeWesternArt.breadcrumb} />
     </div>
 
     <div class="mobile-breadcrumb-wrapper">
-      <div class="mobile-breadcrumb" set:html={landingAmericanWesternArt.breadcrumb} />
+      <div class="mobile-breadcrumb" set:html={landingNarrativeWesternArt.breadcrumb} />
     </div>
 
     <div class="w-full max-w-[1200px] mx-auto px-4">
@@ -364,7 +325,7 @@ const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: an
           client:load
           slides={carouselSlides}
           galleryBasePath={carouselGalleryBasePath}
-          kicker="A Western Art Narrative"
+          kicker="Story Lives Here"
           counterLabel="Scene"
         />
       </div>
@@ -372,26 +333,25 @@ const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: an
 
     <section class="section-heading-wrap">
       <div class="section-heading">
-        <h1 class="page-title fade-in reveal-on-scroll">{landingAmericanWesternArt.title}</h1>
-        <h2 class="page-subtitle fade-in reveal-on-scroll">{landingAmericanWesternArt.subtitle}</h2>
+        <h1 class="page-title fade-in reveal-on-scroll">{landingNarrativeWesternArt.title}</h1>
+        <h2 class="page-subtitle fade-in reveal-on-scroll">{landingNarrativeWesternArt.subtitle}</h2>
         <div class="page-summary fade-in reveal-on-scroll">
           {openingDefinition.map((paragraph) => (
             <p>{paragraph}</p>
           ))}
-          <p class="opening-bridge-line">{openingBridgeLine}</p>
         </div>
       </div>
     </section>
 
     <section class="collections-nav-section">
-      <h3 class="collections-heading fade-in reveal-on-scroll">Explore the Western Art Collection</h3>
+      <h3 class="collections-heading fade-in reveal-on-scroll">Explore the Narrative Collection</h3>
       <TombstoneNav client:load items={tombstonesWithThumbs} />
     </section>
 
     <section class="story-layout">
       <div class="text-column">
         <section class="story-section">
-          {americanWesternArtStory.map((section: any, index: number) => (
+          {narrativeWesternArtStory.map((section: any, index: number) => (
             <article class="story-block">
               {section.title && (
                 <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, pagePath)} />
@@ -421,7 +381,7 @@ const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: an
                 </ul>
               )}
 
-              {index === 0 && (
+              {(section.title === "Narrative Time in Western Art" || section.subhead === "Narrative Time in Western Art") && (
                 <div class="story-slider-wrapper reveal-on-scroll mt-6">
                   <div class="story-slider-skeleton relative bg-[#f4f1ec] rounded-lg shadow-sm px-5 py-4 max-w-xl mx-auto border border-[#e0d9cf] mb-8 h-[240px] overflow-hidden opacity-90">
                     <p class="text-[10px] uppercase tracking-[0.12em] text-[#a09080] mb-3">How Story Lives in These Images</p>
@@ -439,10 +399,14 @@ const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: an
                     galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
                     variant="secondary"
                   />
+
+                  <p class="story-slider-caption reveal-on-scroll">
+                    See how a single image can suggest<br />an entire Western story beyond the frame.
+                  </p>
                 </div>
               )}
 
-              {section.subhead === "Character Over Spectacle" && (
+              {section.subhead === "Character Before Spectacle" && (
                 <div class="story-chapter-divider reveal-on-scroll" aria-hidden="true"></div>
               )}
             </article>
@@ -468,7 +432,7 @@ const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: an
       <input type="checkbox" id="faq-toggle" class="more-toggle" />
       <div class="truncate-container" style="min-height:0;">
         <div class="truncate-text">
-          <FAQAccordion items={americanWesternArtFAQ} />
+          <FAQAccordion items={narrativeWesternArtFAQ} />
         </div>
       </div>
       <label for="faq-toggle" class="more-toggle-label"></label>
@@ -557,6 +521,23 @@ const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: an
     .story-block ul { padding-left: 1.4rem; margin-top: 0.5rem; }
     .story-block li { margin-bottom: 0.5rem; font-size: 1rem; }
 
+    .story-slider-wrapper {
+      text-align: center;
+    }
+
+    .story-slider-caption {
+      display: block;
+      max-width: 24rem;
+      margin: 0.6rem auto 0;
+      padding: 0 0.5rem;
+      font-size: 0.82rem;
+      line-height: 1.4;
+      text-align: center;
+      color: #7a6a5c;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
     .page-subtitle.fade-in {
       opacity: 0 !important;
       transform: translateY(-12px);
@@ -595,11 +576,6 @@ const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: an
     }
     .page-summary p:last-child {
       margin-bottom: 0;
-    }
-    .page-summary p.opening-bridge-line {
-      margin-top: 1.15rem;
-      font-weight: 600;
-      color: #5a4a3b;
     }
     @media (max-width: 768px) {
       .page-summary { font-size: 0.95rem; padding: 0 1rem; max-width: 90%; }
