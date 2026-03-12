@@ -79,6 +79,7 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
     const lastSpace = truncated.lastIndexOf(' ');
     return normalize(truncated.slice(0, lastSpace) + '...');
   };
+  const siteOrigin = 'https://www.k4studios.com';
 
   // Structured data for SEO
   const structuredData = {
@@ -92,7 +93,7 @@ export default function StorySlider({ stories, galleryPath, variant = 'primary' 
       "position": index + 1,
       "name": item.title,
       "description": getExcerpt(item.story, 160),
-      "url": `https://k4studios.net${galleryPath}/${item.id}`
+      "url": `${siteOrigin}${galleryPath}/${item.id}`
     }))
   };
 

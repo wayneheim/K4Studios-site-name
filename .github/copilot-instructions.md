@@ -66,8 +66,9 @@ Admin JS actions (Force Block, Unblock, Refresh) embed the auth header server-si
 The Astro site deploys automatically via Netlify on push to `main`. For manual builds:
 
 ```powershell
-npm run build        # full build (includes IndexNow + cache warming)
-npm run build:fast   # skip IndexNow + cache warming
+npm run build        # full build (includes cache warming)
+npm run build:fast   # skip cache warming
+npm run release:prebuilt  # build, deploy to Netlify, then live-verify new URLs before IndexNow
 ```
 
 Local dev:

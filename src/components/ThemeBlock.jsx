@@ -58,6 +58,7 @@ export default function ThemeBlock({ galleryKey }) {
 
   const needsExpansion = galleryThemes.length > VISIBLE_COUNT;
   const hiddenCount = galleryThemes.length - VISIBLE_COUNT;
+  const siteOrigin = "https://www.k4studios.com";
 
   // Build structured data for SEO (ItemList of themes)
   const structuredData = {
@@ -75,7 +76,7 @@ export default function ThemeBlock({ galleryKey }) {
         "position": index + 1,
         "name": t.name,
         "description": t.description || `Explore the ${t.name} theme`,
-        "url": `https://k4studios.net${themeUrl}`
+        "url": `${siteOrigin}${themeUrl}`
       };
     })
   };

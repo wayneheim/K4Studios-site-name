@@ -53,126 +53,107 @@ export const galleryData = [
       "warm p alette",
       "cowboy art",
       "cowboy artwork",
-      "cowboy portraits",
       "cowboys",
       "Explore Western Photography",
       "painterly Western images",
       "painterly cowboy photography",
       "narrative Western art",
-      "rugged spirit",
       "painterly Western photography",
       "fine art Western photography",
       "Western Cowboy Portraits",
       "wild west photography",
       "painterly technique",
-      "outlaw portraits",
       "cowboy painting art",
       "cowboy portrait"
     ],
 
     "story": "As the lone coach disappeared down the lonely road, he stood silent—rooted by more than trail dust. Would their paths ever cross again? As a man of few but deliberate words, had he said too little… too much? Should he have asked her not to go?\n\nThe questions would hang heavy on his heart — like the low-lying clouds blanketing the valley floor, choking out the day’s first light.\n\nBut the decision was made. And the road ahead—was now his alone to walk.",
-    "notes": "This work resists easy categorization. It fuses the emotional gravity of illustration with the immediacy of photography, crafting visual narratives that feel at once timeless and intimate. In this piece, a quiet departure becomes a moment of reckoning—his subject frozen not by indecision, but by the weight of what’s already been decided. The cloud-laden valley mirrors the silence between them; the light, muted and hesitant, becomes part of the emotional architecture.\n\nThere are echoes of the Pictorialist tradition—softened edges, diffused light, and a painter’s grasp of structure—but Heim’s images never lean on nostalgia. Instead, they distill a mood: one that feels cinematic, interior, and poised between myth and memory.\n\nThis isn’t painterly surface for painterly’s sake. Where others mimic, Heim defines. His subjects aren’t costumes posed in front of a lens, but characters suspended in time—carrying the emotional freight of history, love, loss, and consequence.\n\nIn a genre often diluted by trope and imitation, this image refuses cliché. It’s not about the goodbye—it’s about everything left unsaid after.",
     "rating": 5,
 
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
-
     "visibility": "",
     "sortOrder": 0,
 
     "themes": {
       "sketches-of-legends": 0,
-      "whispering-reflection": 2
     },
 
     contentSource: "ai"
   },
-  {
+    {
     "id": "i-c5K798H",
     "title": "Meant What I Said!",
     "description": "A defiant cowboy faces the viewer with revolver extended, a coiled rope and red neckerchief framing the tension of the moment. This painterly Western portrait captures the split second before action, blending cinematic storytelling with textured atmosphere drawn from the mythology of the American frontier. The bold stance, dramatic angle, and sunlit dust evoke classic Western showdowns while preserving the authenticity and grit of fine art Western photography.\n\n© Wayne Heim",
     "alt": "Cowboy aiming revolver toward viewer with red neckerchief and coiled rope in foreground, painterly Western showdown portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/KD6DwH9bM3GBqrRn2JRswzfsNp8pzNVH2h89njVx5/XL/_HF28455-Edit-XL.jpg",
-    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/KD6DwH9bM3GBqrRn2JRswzfsNp8pzNVH2h89njVx5/XL/_HF28455-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/KD6DwH9bM3GBqrRn2JRswzfsNp8pzNVH2h89njVx5/XL/_HF28455-Edit-XL.jpg",
     "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/NgvpvqtnjC7ctKpJN6X94hDKRx69QQhhf84WBSVJ7/L/_HF28455-Edit-L.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/0/K75GgvxGvp4dNNcZZNPfQbBNSGX826M6mxncTR8HJ/S/_HF28455-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c5K798H/A",
-
     "keywords": [
       "western art",
       "cowboy",
       "fine art photography",
       "portrait",
-      "revolver",
       "rope",
       "red scarf",
       "grit",
       "attitude",
       "showdown",
-      "American West",
       "painterly",
       "narrative",
       "classic",
       "Wayne Heim",
       "cowboy art",
-      "fine art Western photography",
       "painterly Western photograph",
       "Western Cowboy Portraits",
       "wild west photography",
       "cowboy artwork",
-      "cowboy portraits",
       "Explore Western Photography",
       "painterly Western images",
       "western cowboy art",
       "wild west painterly photography",
       "outlaw portraits",
       "painterly technique",
-      "western grit",
       "cowboy artwork prints",
       "fine art cowboy photography",
       "cowboy portrait",
       "cowboy painting art"
     ],
-
     "story": "What’d I say about you and your mouth? I told you—I meant what I said when I said it. Time for words and talking is over. Thinking now you might be better at bleeding than listening. Reckon we ought to find out?",
     "notes": "A moment of frontier defiance is captured at the precise instant when tension peaks but action has not yet begun. The low, forward angle places the viewer directly in the line of confrontation, creating the unsettling immediacy of a classic Western standoff. Sunlit dust, weathered leather, and the flash of a drawn revolver combine to build a cinematic sense of pressure within the frame.\n\nThe composition echoes the dramatic storytelling traditions of Western painting and early frontier illustration, where posture and gesture carry the emotional weight of the scene. The coiled rope, red neckerchief, and steady gaze serve as visual anchors that balance movement with control, allowing the narrative to unfold through suggestion rather than action. The result is a striking example of painterly Western fine art photography that transforms a single moment into an enduring piece of frontier drama.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1,
 
     "themes": {
       "cowboys-with-horses": 0,
       "law-outlaws": 14,
       "sketches-of-legends": 13
-    },
+  	},
 
     contentSource: "ai"
   },
   {
     "id": "i-7Mzzbvp",
-    "title": "Last Hand",
     "description": "Three cowboys charge across open prairie with revolvers raised, dust exploding beneath pounding hooves as the moment surges toward confrontation. This painterly Western action scene captures the raw speed and danger of frontier life, blending cinematic motion with textured atmosphere and historic tone. The composition freezes a split second of pursuit and resolve, evoking the spirit of classic Western storytelling while retaining the authenticity of fine art Western photography.\n\n© Wayne Heim",
     "alt": "Three cowboys galloping on horseback across dusty prairie with revolvers drawn, painterly Western action scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/NGKPsMCt7qGfMDNnXCFxCrN2DdmcQNdKhddf3vZRs/XL/_WHO5378-Edit-2-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/NGKPsMCt7qGfMDNnXCFxCrN2DdmcQNdKhddf3vZRs/XL/_WHO5378-Edit-2-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/KfdfV5Fh5wVNXpdwjhzRJpjhqCwgtcVc6cjScp8pF/L/_WHO5378-Edit-2-Edit-Edit-L.jpg",
-    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/NXf3gDHVtPdmpxV9SDC2JGhk4DqzkH59jRsDGBhbN/M/_WHO5378-Edit-2-Edit-Edit-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/0/MsFBSd9mBpwWMFpnxfggfLrKfrZzNkSz2KtjWgM4G/S/_WHO5378-Edit-2-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7Mzzbvp/A",
 
     "keywords": [
-      "cowboy artwork",
       "powerful works of art",
       "historic western prints",
       "western canon",
       "outlaw portraits",
       "cowboy portraits",
-      "Explore Western Photography",
       "painterly Western images",
       "painterly cowboy photography",
       "rugged spirit",

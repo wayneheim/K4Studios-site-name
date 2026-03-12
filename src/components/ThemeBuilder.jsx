@@ -1476,7 +1476,7 @@ export default function ThemeBuilder() {
                       .replace(/^src\/data\/Galleries\//, '/Galleries/')
                       .replace(/^src\/data\/Other\//, '/Other/')
                       .replace(/\.mjs$/, '');
-                    return `${typeof window !== 'undefined' ? window.location.origin : 'https://k4studios.net'}${datasetPath}?theme=${themeSlug}&view=grid`;
+                    return `${typeof window !== 'undefined' ? window.location.origin : 'https://www.k4studios.com'}${datasetPath}?theme=${themeSlug}&view=grid`;
                   })()}
                   className="flex-1 text-xs px-2 py-1 border rounded bg-white font-mono"
                   onClick={(e) => e.target.select()}

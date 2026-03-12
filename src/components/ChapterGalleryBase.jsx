@@ -608,6 +608,7 @@ export default function ChapterGalleryBase({
   const [showSeriesInfoPopup, setShowSeriesInfoPopup] = useState(false);
   const [seriesInfoScrollTo, setSeriesInfoScrollTo] = useState(null);
   const [showEngrainedInfoPopup, setShowEngrainedInfoPopup] = useState(false);
+  const [enableEntryAnimation, setEnableEntryAnimation] = useState(false);
 
   const prevIndex = useRef(currentIndex);
   const notesBtnRef = useRef(null);
@@ -870,7 +871,10 @@ export default function ChapterGalleryBase({
   }, [galleryData, basePath]);
 
   // Mount class
-  useEffect(() => { document.body.classList.add("react-mounted"); }, []);
+  useEffect(() => {
+    document.body.classList.add("react-mounted");
+    setEnableEntryAnimation(true);
+  }, []);
 
   // Arrow key nav (disabled during tour)
   useEffect(() => {
@@ -1174,7 +1178,7 @@ export default function ChapterGalleryBase({
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentIndex}
-                  initial={{ opacity: 0, x: direction > 0 ? 150 : -150 }}
+                  initial={enableEntryAnimation ? { opacity: 0, x: direction > 0 ? 150 : -150 } : false}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: direction > 0 ? -150 : 150 }}
                   transition={{ duration: 0.6, ease: [0.45, 0, 0.55, 1] }}
