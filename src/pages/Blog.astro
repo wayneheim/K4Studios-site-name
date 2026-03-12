@@ -30,7 +30,7 @@ import "@/styles/global.css";
 // ----------------------
 const sectionPath = "/Blog";
 
-const structuredData = getStructuredData({
+const structuredData = (getStructuredData as any)({
   type: "Blog",
   data: {
     name: "Inside the Frame",
@@ -89,6 +89,15 @@ const allGalleryImages = [
 
 const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
 const previewPath = "/Galleries"; // Needed for GalleryPreviewStrip to render
+
+const foundationalEssay = {
+  href: "/Blog/when-the-medium-disappears",
+  title: "Inside the Frame: When the Medium Disappears",
+  date: "2025-09-29",
+  excerpt: "A defining reflection on how medium shapes meaning — and when it should step aside.",
+  chip: "Essay",
+  initial: "E",
+};
 
 // Setup for keyword linking
 const galleryDatas = Object.values(galleryDataMap).flat();
@@ -169,16 +178,36 @@ const galleryPaths = Object.keys(galleryDataMap);
       </div>
     </section>
 
-    <!-- Full-width divider before Foundational Essay -->
-    <div class="cornerstones-divider"></div>
-
     <!-- Foundational Essay Section -->
-    <section class="foundational-essay max-w-2xl mx-auto px-4 py-8 text-center">
-      <h3 class="text-sm font-semibold tracking-widest text-gray-500 uppercase mb-4">Foundational Essay</h3>
-      <a href="/Blog/when-the-medium-disappears" class="block group">
-        <h2 class="text-2xl font-bold mb-2 group-hover:text-[#8b0000] transition-colors">Inside the Frame: When the Medium Disappears</h2>
-        <p class="text-gray-600 italic">A defining reflection on how medium shapes meaning — and when it should step aside.</p>
-      </a>
+    <section class="foundational-essay story-layout" style="font-family: 'Glegoo', serif;">
+      <div class="text-column">
+        <h3 class="foundational-kicker">Foundational Essay</h3>
+        <article class="story-block mb-10">
+          <div class="foundational-card group flex flex-col md:flex-row md:items-start gap-4 items-center md:items-start">
+            <a href={foundationalEssay.href} aria-label={foundationalEssay.title} class="flex-shrink-0">
+              <div class="foundational-art" aria-hidden="true">
+                <div class="foundational-art-inner">
+                  <span class="foundational-chip">{foundationalEssay.chip}</span>
+                  <div class="foundational-art-body">
+                    <span class="foundational-initial">{foundationalEssay.initial}</span>
+                    <span class="foundational-art-copy">On medium, meaning, and restraint</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <div class="flex-1 min-w-0">
+              <h2 class="text-xl font-bold mb-2">
+                <a href={foundationalEssay.href}>{foundationalEssay.title}</a>
+              </h2>
+              <p class="text-sm text-gray-600 mb-2">{foundationalEssay.date}</p>
+              <p class="mb-4">{foundationalEssay.excerpt}</p>
+              <a href={foundationalEssay.href} class="underline text-blue-700">Read essay →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="sidebar-column hidden md:block" aria-hidden="true"></div>
     </section>
 
     <!-- Full-width divider before Cornerstones -->
@@ -205,8 +234,146 @@ const galleryPaths = Object.keys(galleryDataMap);
       background: linear-gradient(to right, transparent, #d0d0d0 8%, #d0d0d0 92%, transparent);
       margin: 1rem auto 0;
     }
+
+    .foundational-essay {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      text-align: left;
+    }
+
+    .foundational-kicker {
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8e7a66;
+      margin: 0 0 1.35rem;
+      font-family: 'Glegoo', serif;
+    }
+
+    .foundational-card {
+      align-items: center;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      text-decoration: none;
+      background: transparent;
+      text-align: left;
+    }
+
+    .foundational-card:hover {
+      transform: none;
+    }
+
+    .foundational-art {
+      width: 200px;
+      height: 200px;
+      border-radius: 16px;
+      background:
+        linear-gradient(125deg, rgba(255, 247, 232, 0.08), rgba(255, 247, 232, 0.02) 38%, rgba(111, 82, 54, 0.03) 100%),
+        repeating-linear-gradient(17deg, rgba(96, 68, 45, 0.022) 0 1px, transparent 1px 8px),
+        repeating-linear-gradient(83deg, rgba(255, 248, 236, 0.025) 0 1px, transparent 1px 11px),
+        repeating-linear-gradient(41deg, rgba(118, 86, 58, 0.018) 0 1px, transparent 1px 13px),
+        linear-gradient(145deg, #b99773 0%, #c6a885 38%, #dcc6a7 100%);
+      box-shadow:
+        inset 0 0 0 1px rgba(91, 63, 38, 0.14),
+        0 8px 20px rgba(84, 59, 37, 0.08);
+      overflow: hidden;
+    }
+
+    .foundational-art-inner {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1rem;
+      color: #3b2a1d;
+    }
+
+    .foundational-art-body {
+      flex: 1;
+      position: relative;
+      min-height: 0;
+      padding-left: 4.95rem;
+      padding-top: 0.55rem;
+    }
+
+    .foundational-chip {
+      align-self: flex-start;
+      padding: 0.24rem 0.55rem;
     
+      border-radius: 999px;
+      background: rgba(255, 249, 240, 0.72);
+      border: 1px solid rgba(111, 80, 52, 0.14);
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+
+    .foundational-initial {
+      position: absolute;
+      left: -0.50rem;
+      top: 0.5rem;
+      bottom: -0.35rem;
+      display: block;
+      font-size: 9.8rem;
+      line-height: 0.68;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      font-family: 'Glegoo', serif;
+      color: #5c493b;
+      text-shadow:
+        0.5px 0.5px 0 rgba(255, 247, 234, 0.55),
+        1px 1px 0 rgba(255, 241, 223, 0.28),
+        -0.8px -0.8px 0 rgba(83, 60, 40, 0.18),
+        -1.6px -1.6px 2px rgba(88, 63, 41, 0.10),
+        1.8px 2px 2px rgba(121, 89, 59, 0.16);
+    }
+
+    .foundational-art-copy {
+      position: absolute;
+      top: 2.71rem;
+      right: 0.75rem;
+      bottom: 2.845rem;
+      width: 3.55rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 0.83rem;
+      line-height: 1.72;
+      letter-spacing: 0.1em;
+      color: rgba(69, 48, 31, 0.92);
+      text-wrap: balance;
+    }
+
     @media (max-width: 768px) {
+      .foundational-essay {
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      .foundational-card {
+        text-align: center;
+      }
+
+      .foundational-art {
+        width: min(200px, 100%);
+        height: 200px;
+      }
+
+      .foundational-art-inner {
+        align-items: center;
+      }
+
+      .foundational-art-body {
+        width: 100%;
+      }
+
+      .foundational-art-copy {
+        max-width: none;
+      }
+
       .cornerstones-divider {
         margin-top: 0.5rem !important;
       }

@@ -124,6 +124,68 @@
       },
       "analysisVersion": 7,
       "indexedAt": "2026-03-11T17:29:26.070Z"
+    },
+    "i-4cdDwZt": {
+      "imageId": "i-4cdDwZt",
+      "galleryPath": "src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+      "dhash": "0010010110010010010110110000000000000000000000000000000000000000",
+      "width": 384,
+      "height": 768,
+      "dominantColors": [
+        "#907050",
+        "#f0f0d0",
+        "#b09070",
+        "#305070",
+        "#507090"
+      ],
+      "warmCoolRatio": 0.62,
+      "saturationAvg": 0.29,
+      "brightnessAvg": 0.52,
+      "greenCoverage": 0,
+      "blueCoverage": 0.37,
+      "orangeCoverage": 0.45,
+      "redCoverage": 0.03,
+      "yellowCoverage": 0.01,
+      "purpleCoverage": 0.03,
+      "contrastScore": 0.4,
+      "toneDistribution": {
+        "shadows": 0.04,
+        "midtones": 0.79,
+        "highlights": 0.17
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-12T18:49:27.134Z"
+    },
+    "i-b4wG4vh": {
+      "imageId": "i-b4wG4vh",
+      "galleryPath": "src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
+      "dhash": "0111010011101100110110110000000000000000000000000000000000000000",
+      "width": 384,
+      "height": 768,
+      "dominantColors": [
+        "#d0b090",
+        "#b09070",
+        "#d0d0b0",
+        "#505030",
+        "#d09070"
+      ],
+      "warmCoolRatio": 1,
+      "saturationAvg": 0.25,
+      "brightnessAvg": 0.51,
+      "greenCoverage": 0,
+      "blueCoverage": 0,
+      "orangeCoverage": 0.88,
+      "redCoverage": 0.04,
+      "yellowCoverage": 0.01,
+      "purpleCoverage": 0,
+      "contrastScore": 0.38,
+      "toneDistribution": {
+        "shadows": 0.09,
+        "midtones": 0.78,
+        "highlights": 0.13
+      },
+      "analysisVersion": 7,
+      "indexedAt": "2026-03-12T19:28:31.436Z"
     }
   }
 }

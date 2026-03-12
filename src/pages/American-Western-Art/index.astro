@@ -9,6 +9,7 @@ import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import StorySlider        from '@/components/StorySlider.tsx';
 import HybridBookCarousel from '@/components/hybrid/HybridBookCarousel.jsx';
+import WesternGuideNav    from '@/components/authority/WesternGuideNav.astro';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 
 import { galleryData as cowboyColorDataFull }
@@ -473,6 +474,8 @@ const tombstonesWithThumbs = landingAmericanWesternArt.tombstones.map((stone: an
       </div>
       <label for="faq-toggle" class="more-toggle-label"></label>
     </section>
+
+    <WesternGuideNav currentPath={pagePath} />
 
     <SiteFooter class="pt-8 pb-12" />
   </main>

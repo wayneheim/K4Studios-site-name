@@ -17,6 +17,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import WesternGuideNav from '@/components/authority/WesternGuideNav.astro';
 import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 import "@/styles/global.css";
@@ -389,6 +390,8 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <!-- Western Art Series Navigation -->
     <WesternDefinitions variant="definition" currentPage={1} />
+
+    <WesternGuideNav currentPath={sectionPath} />
 
     <SiteFooter />
   </main>

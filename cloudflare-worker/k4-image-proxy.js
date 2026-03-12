@@ -217,6 +217,66 @@ const ALWAYS_ALLOWED = [
   "/e05ffc8ff8004372b01c0e153ba16b44.txt" // IndexNow key
 ];
 
+function createBotTestResponse(request) {
+  const url = new URL(request.url);
+  const now = new Date().toISOString();
+  const ua = request.headers.get('user-agent') || '';
+  const country = request.cf?.country || 'unknown';
+  const asn = request.cf?.asn || 'unknown';
+
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>K4 Bot Test Endpoint</title>
+</head>
+<body style="font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.55;color:#222;">
+  <h1 style="margin-bottom:12px;">K4 Bot Test Endpoint</h1>
+  <p>This is a temporary worker-served HTML probe used to test crawler access without origin rendering, HTML bot blocking, or image friction.</p>
+  <ul>
+    <li><strong>Path:</strong> ${url.pathname}</li>
+    <li><strong>Generated:</strong> ${now}</li>
+    <li><strong>Method:</strong> ${request.method}</li>
+    <li><strong>Country:</strong> ${country}</li>
+    <li><strong>ASN:</strong> ${asn}</li>
+  </ul>
+  <p style="font-size:12px;color:#666;word-break:break-word;"><strong>User-Agent:</strong> ${escapeHtml(ua)}</p>
+</body>
+</html>`;
+
+  return new Response(html, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/html; charset=UTF-8',
+      'Cache-Control': 'no-store, max-age=0',
+      'X-K4-Bot-Test': '1'
+    }
+  });
+}
+
+function getWebsiteCanonicalRedirect(url) {
+  try {
+    const host = String(url?.hostname || '').toLowerCase();
+    const isWebsiteHost = host === 'k4studios.com' || host === 'www.k4studios.com';
+    if (!isWebsiteHost) return null;
+
+    const needsHostCanonical = host !== 'www.k4studios.com';
+    const needsSlashCanonical = url.pathname.length > 1 && url.pathname.endsWith('/');
+
+    if (!needsHostCanonical && !needsSlashCanonical) return null;
+
+    const canonicalUrl = new URL(url.toString());
+    canonicalUrl.hostname = 'www.k4studios.com';
+    if (needsSlashCanonical) {
+      canonicalUrl.pathname = canonicalUrl.pathname.replace(/\/+$/g, '');
+    }
+    return canonicalUrl.toString();
+  } catch {
+    return null;
+  }
+}
+
 // --------------------
 // EDGE + IN-MEM JSON CACHES
 // --------------------
@@ -698,12 +758,12 @@ async function handleImageRequest(request, ctx, env) {
   // Apply blocked IP policy uniformly (no bot-specific bypass).
   const ua = request.headers.get('User-Agent') || '';
   const cfVerifiedBot = Boolean(request.cf?.botManagement?.verifiedBot);
-  const isDiscoveryBot = ALLOWED_BOTS.test(ua) || cfVerifiedBot;
+  const isDiscoveryBot = false;
   
   if (env?.DB && ipHash) {
     try {
       const isBlocked = await isIPBlocked(env, ipHash);
-      if (isBlocked && !cfVerifiedBot) {
+      if (isBlocked) {
         // Return 403 for blocked IPs - they get nothing
         return new Response("Blocked", {
           status: 403,
@@ -1247,7 +1307,6 @@ async function handleGatewayRequest(request, env) {
   const url = new URL(request.url);
   const ua = request.headers.get("user-agent") || "";
   const accept = request.headers.get("accept") || "";
-  const isAllowedBot = ALLOWED_BOTS.test(ua) || Boolean(request.cf?.botManagement?.verifiedBot);
 
   // Always allow these paths + HEAD/OPTIONS
   if (
@@ -1268,7 +1327,7 @@ async function handleGatewayRequest(request, env) {
       .map(c => c.trim().toUpperCase());
 
     const country = request.cf?.country;
-    if (country && blockedCountries.includes(country) && !isAllowedBot) {
+    if (country && blockedCountries.includes(country)) {
       return new Response("Access Denied", {
         status: 403,
         headers: {
@@ -1279,7 +1338,7 @@ async function handleGatewayRequest(request, env) {
     }
 
     // Block obvious scraper UAs (HTML only)
-    if (BLOCKED_BOTS.test(ua) && !isAllowedBot) {
+    if (BLOCKED_BOTS.test(ua)) {
       console.log("Blocked UA:", ua);
       return new Response("Blocked", {
         status: 403,
@@ -2405,11 +2464,19 @@ export default {
     // Missing-leaf probe detection is handled universally in image-page policy
     // via imageIdMap comparison (no gallery-specific hardcoding here).
 
-    // 0) Canonicalize trailing slashes (except root) at ingress.
-    // This should run before any routing/DB/image-policy logic executes.
-    if (path.length > 1 && path.endsWith('/')) {
-      url.pathname = path.replace(/\/+$/g, '');
-      return Response.redirect(url.toString(), 301);
+    // 0) Canonicalize website host + trailing slash at ingress in a single hop.
+    // This prevents k4studios.com/path/ -> www.k4studios.com/path -> www.k4studios.com/path
+    // redirect chains for new pages and keeps Bing crawl paths cleaner.
+    const websiteCanonicalRedirect = getWebsiteCanonicalRedirect(url);
+    if (websiteCanonicalRedirect) {
+      return Response.redirect(websiteCanonicalRedirect, 301);
+    }
+
+    // 0a) Temporary crawler probe URL.
+    // Purpose: isolate Bing access from origin rendering, HTML bot detection,
+    // and image friction without disabling protections site-wide.
+    if (url.pathname === '/__k4bot-test' || url.pathname.startsWith('/__k4bot-test/')) {
+      return createBotTestResponse(request);
     }
     
     // === VISITOR ID (Single Population Doctrine) ===

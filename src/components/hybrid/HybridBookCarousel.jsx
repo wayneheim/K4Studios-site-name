@@ -102,6 +102,7 @@ export default function HybridBookCarousel({
               loading={active === 0 ? "eager" : "lazy"}
               fetchpriority={active === 0 ? "high" : undefined}
               decoding="async"
+              style={current.imageScale ? { transform: `scale(${current.imageScale})` } : undefined}
             />
           </a>
         </div>
@@ -152,9 +153,10 @@ export default function HybridBookCarousel({
       <style>{`
         .hybrid-book-carousel {
           position: relative;
-          max-width: 1100px;
+          width: 100%;
+          max-width: 100%;
           margin: 0 auto;
-          padding: 0 1rem;
+          padding: 0;
         }
 
         .hybrid-book-spread {
@@ -185,15 +187,13 @@ export default function HybridBookCarousel({
           align-items: center;
           justify-content: center;
           height: 100%;
-          padding: 1.25rem;
+          padding: 1rem 1rem 1rem 1.25rem;
           background: #f9f7f4;
           box-sizing: border-box;
         }
         .hybrid-book-image img {
-          max-width: 100%;
-          max-height: 100%;
-          width: auto;
-          height: auto;
+          width: 100%;
+          height: 100%;
           object-fit: contain;
           border-radius: 10px;
           display: block;
@@ -214,6 +214,7 @@ export default function HybridBookCarousel({
           padding: 2.5rem 2rem;
           font-family: 'Glegoo', serif;
           overflow: hidden;
+          min-height: 650px;
         }
 
         .hybrid-book-text-swipe {
@@ -350,6 +351,7 @@ export default function HybridBookCarousel({
             flex: 1 1 0%;
             max-width: 100%;
             height: auto;
+            min-height: 0;
             padding: 1.5rem 1.25rem;
           }
           .hybrid-book-title {

@@ -1,0 +1,267 @@
+---
+export const prerender = true;
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CornerstoneArticle from '@/components/authority/CornerstoneArticle.astro';
+import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
+
+import { galleryData as cowboyColor }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+import { galleryData as cowboyNA }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs';
+import { galleryData as westLandscapes }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs';
+import { galleryData as civilWarColor }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs';
+
+const pagePath = '/Masters-of-American-Western-Art';
+const canonicalUrl = `https://www.k4studios.com${pagePath}`;
+const pageTitle = 'Masters of American Western Art | History of the Artists Who Defined the West';
+const pageDescription = 'Explore the masters of American Western art through frontier history, landscape painting, and the rise of photography in the visual tradition of the American West.';
+
+function topRated(data: any[], count: number, skip = 0) {
+  return (data || [])
+    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost' && (img.rating || 0) >= 4)
+    .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
+    .slice(skip, skip + count);
+}
+
+function ensureAlt(img: any, fallback: string) {
+  return (img?.alt || img?.title || fallback || '').trim();
+}
+
+function findImage(data: any[], id: string) {
+  return (data || []).find((img: any) => img?.id === id);
+}
+
+function topRatedExcludingTitles(data: any[], count: number, excludedTitles: string[], skip = 0) {
+  const excluded = new Set(excludedTitles.map((title) => title.toLowerCase()));
+  return (data || [])
+    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost' && (img.rating || 0) >= 4)
+    .filter((img: any) => !excluded.has(String(img.title || '').toLowerCase()))
+    .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
+    .slice(skip, skip + count);
+}
+
+function makeSlide(img: any, hrefBase: string, fallback: string) {
+  return {
+    id: img.id,
+    title: img.title,
+    alt: ensureAlt(img, fallback),
+    story: img.story || img.description || '',
+    href: `${hrefBase}/${img.id}`,
+  };
+}
+
+function uniqueSlides(slides: any[]) {
+  const seen = new Set<string>();
+  return slides.filter((slide) => {
+    if (!slide?.id || seen.has(slide.id)) return false;
+    seen.add(slide.id);
+    return true;
+  });
+}
+
+const slides = uniqueSlides([
+  {
+    ...makeSlide(
+      findImage(cowboyColor, 'i-bfKMXS9'),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+      'Western rider portrait'
+    ),
+  },
+  ...topRatedExcludingTitles(cowboyColor, 1, ['Meant What I Said!', 'One Last Look'], 0).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color', 'Western rider portrait')),
+  ...topRatedExcludingTitles(westLandscapes, 2, ['Open Country', 'Closed'], 0).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery', 'Western landscape')),
+  {
+    ...makeSlide(
+      findImage(cowboyColor, 'i-7VWX9vk'),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+      'Western rider portrait'
+    ),
+    imageScale: 1.1,
+  },
+  ...topRated(cowboyNA, 1, 0).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color', 'Portrait from the American West')),
+]);
+
+const sampleSlides = uniqueSlides([
+  ...['i-bq4FKvX', 'i-r5Pb7zJ', 'i-trZrk2w', 'i-LL2Gp5r'].map((id) =>
+    makeSlide(
+      findImage(cowboyColor, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+      'Western rider portrait'
+    )
+  ),
+]);
+
+const breadcrumb = `Home › Masters of American Western Art`;
+
+const introParagraphs = [
+  'Western art emerged when artists began interpreting the frontier as more than geography. The American West became a visual subject because painters, illustrators, sculptors, and later photographers gave its people, distances, and conflicts a durable artistic form.',
+];
+
+const sections = [
+  {
+    heading: 'The Birth of Western Art',
+    paragraphs: [
+      'Western art grew alongside westward expansion, military campaigns, surveying expeditions, rail movement, and the national imagination surrounding frontier life. As the American West became a contested space of migration, labor, violence, and myth, artists turned that transformation into images that helped shape how the region would be remembered.',
+      'Within that larger context, artists such as Frederic Remington, Charles M. Russell, Albert Bierstadt, and Thomas Moran became central not simply because they were famous, but because they helped establish the visual categories of the West: riders in motion, frontier conflict, sweeping distance, monumental weather, and the emotional scale of open land.',
+      'For a broader definition of the tradition itself, see <a href="/Blog/what-is-western-art">What Is Western Art</a>. For the next step in this lineage, continue into <a href="/American-Western-Art">American Western Art</a>.'
+    ]
+  },
+  {
+    heading: 'The Artists Who Defined the Western Myth',
+    paragraphs: [
+      'The masters of Western art did more than record frontier subjects. They shaped the visual mythology of the American West. Heroic cowboy imagery, cavalry scenes, frontier encounters, and dramatic campfire narratives taught viewers how to imagine the region long before most of them ever saw it in person.',
+      'That mythology was powerful because it combined specific detail with symbolic force. A lone rider could stand for endurance. A dust-filled horizon could suggest destiny. A group of figures crossing difficult ground could become an image of national struggle, courage, or ambition. Western art became one of the main ways the frontier was translated into cultural memory.'
+    ]
+  },
+  {
+    heading: 'Landscape and the American Frontier',
+    paragraphs: [
+      'Landscape painters such as Bierstadt and Moran gave Western art its sense of scale. In their work, the land was never just background. Mountains, rivers, weather, and distance acted as narrative environment, placing human action inside something larger, older, and less controllable than any single figure.',
+      'That is why landscape remains essential to the Western tradition. The emotional scale of the West comes from the relationship between people and place: exposure, movement, silence, and the feeling that the land itself carries memory. Wayne Heim’s own <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery">Western landscapes</a> continue that inheritance through painterly photographic craft.'
+    ]
+  },
+  {
+    heading: 'Photography Enters Western Art',
+    paragraphs: [
+      'Photography first entered Western art as documentation. Early photographs of the American West served surveys, expeditions, railroad promotion, and historical record. They showed terrain, settlements, encampments, and individuals with a degree of factual immediacy that painting could not provide in the same way.',
+      'But the medium did not remain purely documentary. Over time, photography became interpretive. Composition, atmosphere, tone, authorship, and narrative intent allowed photographers to move from record-making toward art-making. That transition matters because it opens the path to <a href="/Photography-in-Western-Art">Photography in Western Art</a>, where the medium becomes part of the larger Western art tradition rather than remaining a separate category outside it.'
+    ]
+  },
+  {
+    heading: 'Western Art Today',
+    paragraphs: [
+      'Contemporary artists still return to the American West because the subject remains alive: landscape, identity, labor, memory, myth, and historical consequence continue to invite interpretation. The strongest contemporary work does not imitate the old masters mechanically but extends their questions into new mediums. That continuation appears across painting, sculpture, photography, and mixed media.',
+      'At K4 Studios, that continuation appears in painterly, story-driven photographic work that treats Western imagery as authored art rather than décor. Continue into <a href="/American-Western-Art">American Western Art</a> for the broader tradition, or move directly into <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier">Facing History</a> to see how those ideas play out in finished images.'
+    ]
+  }
+];
+
+const relatedLinks = [
+  {
+    href: '/American-Western-Art',
+    label: 'American Western Art',
+    description: 'The main bridge page connecting the historical tradition to Wayne Heim’s present-day interpretation of the American West.'
+  },
+  {
+    href: '/Western-Fine-Art-Photography',
+    label: 'Western Fine Art Photography',
+    description: 'A deeper look at authored Western photography as fine art rather than documentary or decorative imagery.'
+  },
+  {
+    href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier',
+    label: 'Facing History',
+    description: 'Enter the gallery world where Western character, atmosphere, and historical narrative become fully visual.'
+  },
+  {
+    href: '/Photography-in-Western-Art',
+    label: 'Photography in Western Art',
+    description: 'Follow the medium-specific bridge from frontier documentation to narrative Western photography.'
+  }
+];
+
+const faqItems = [
+  {
+    q: 'Who are the masters of American Western art?',
+    a: 'Frederic Remington, Charles M. Russell, Albert Bierstadt, and Thomas Moran are among the most important historical figures because they helped define the visual language of riders, frontier myth, landscape scale, and the American West in art.'
+  },
+  {
+    q: 'Why do Remington and Russell matter in Western art?',
+    a: 'They matter because they helped establish the enduring imagery of the cowboy, the frontier camp, mounted movement, and the human drama of Western expansion. Their work shaped how later generations imagined the American West.'
+  },
+  {
+    q: 'Is Western art only about painting?',
+    a: 'No. Western art began most visibly in painting and sculpture, but the tradition now extends into photography and other media when the work interprets the people, land, and historical experience of the American West with artistic intent.'
+  },
+  {
+    q: 'How does this connect to photography today?',
+    a: 'Contemporary Western photography continues the tradition by using authorship, atmosphere, and narrative interpretation to carry frontier subjects forward in a modern medium. That is the bridge into Photography in Western Art and Western Fine Art Photography.'
+  }
+];
+
+const heroImage = slides[0] ? `https://www.k4studios.com/img/${slides[0].id}/l` : 'https://www.k4studios.com/images/K4Logo-web-c.webp';
+
+const structuredData = getStructuredData({
+  type: 'Article',
+  data: {
+    title: 'Masters of American Western Art',
+    headline: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl,
+    image: heroImage,
+    articleSection: sections.map((section) => section.heading),
+    keywords: [
+      'masters of American Western art',
+      'western art masters',
+      'famous western artists',
+      'western art painters',
+      'Remington and Russell',
+      'American West art history'
+    ],
+    faqItems: faqItems.map((item) => ({
+      question: item.q,
+      answer: Array.isArray(item.a) ? item.a.join(' ') : item.a,
+    })),
+  },
+  defaults: {
+    creatorName: 'Wayne Heim',
+    creatorUrl: 'https://www.k4studios.com/'
+  }
+});
+
+const breadcrumbData = getBreadcrumbList([
+  { name: 'Home', item: 'https://www.k4studios.com/' },
+  { name: 'Masters of American Western Art', item: canonicalUrl },
+]);
+
+const meta = {
+  title: pageTitle,
+  description: pageDescription,
+  canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogImage: heroImage,
+  ogUrl: canonicalUrl,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: heroImage,
+  twitterUrl: canonicalUrl,
+};
+---
+
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbData} meta={meta}>
+  <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+    <CornerstoneArticle
+      breadcrumb={breadcrumb}
+      title="Masters of American Western Art"
+      subtitle="A historical guide to the painters, landscapes, and frontier imagery that shaped the visual tradition of the American West."
+      summary="This page sits above American Western Art and traces how frontier experience became artistic tradition through myth-making, monumental landscape painting, and the later arrival of photography."
+      contextHtml="For a working definition of the larger tradition, visit <a href='/Blog/what-is-western-art'>What Is Western Art</a>. From there continue into <a href='/American-Western-Art'>American Western Art</a> and the gallery world of <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier'>Facing History</a>."
+      contextPlacement="below-carousel"
+      introParagraphs={introParagraphs}
+      quoteFirstIntroParagraph={true}
+      sections={sections}
+      slides={slides}
+      sampleSlides={sampleSlides}
+      relatedHeading="Explore Western Art at K4 Studios"
+      relatedLinks={relatedLinks}
+      faqHeading="Masters of Western Art FAQ"
+      faqItems={faqItems}
+      sampleGroups={[
+        {
+          afterSection: 2,
+          imageIndexes: [0, 1],
+          caption: 'These images reflect the visual foundations of Western art—frontier character, atmosphere, and landscape that helped shape the tradition.',
+        },
+        {
+          afterSection: 4,
+          imageIndexes: [2, 3],
+          caption: 'These later examples show how the Western art tradition extends into photography through authorship, interpretation, and narrative intent.',
+        },
+      ]}
+      carouselKicker="Western Art Tradition"
+      carouselCounterLabel="Masterworks"
+    />
+  </main>
+</BaseLayout>

@@ -1,0 +1,246 @@
+---
+export const prerender = true;
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CornerstoneArticle from '@/components/authority/CornerstoneArticle.astro';
+import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
+
+import { galleryData as cowboyColor }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+import { galleryData as cowboyBW }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
+import { galleryData as cowboyNA }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs';
+import { galleryData as westLandscapes }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs';
+
+const pagePath = '/Cowboy-Photography';
+const canonicalUrl = `https://www.k4studios.com${pagePath}`;
+const pageTitle = 'Cowboy Photography | Narrative Cowboy Portraits and Western Fine Art Photography';
+const pageDescription = 'Discover cowboy photography as an art form through frontier history, cowboy portrait photography, painterly Western imagery, and narrative fine art rooted in the American West.';
+
+function topRated(data: any[], count: number, skip = 0) {
+  return (data || [])
+    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost' && (img.rating || 0) >= 4)
+    .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
+    .slice(skip, skip + count);
+}
+
+function ensureAlt(img: any, fallback: string) {
+  return (img?.alt || img?.title || fallback || '').trim();
+}
+
+function topRatedExcludingTitles(data: any[], count: number, excludedTitles: string[], skip = 0) {
+  const excluded = new Set(excludedTitles.map((title) => title.toLowerCase()));
+  return (data || [])
+    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost' && (img.rating || 0) >= 4)
+    .filter((img: any) => !excluded.has(String(img.title || '').toLowerCase()))
+    .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
+    .slice(skip, skip + count);
+}
+
+function makeSlide(img: any, hrefBase: string, fallback: string) {
+  return {
+    id: img.id,
+    title: img.title,
+    alt: ensureAlt(img, fallback),
+    story: img.story || img.description || '',
+    href: `${hrefBase}/${img.id}`,
+  };
+}
+
+function uniqueSlides(slides: any[]) {
+  const seen = new Set<string>();
+  return slides.filter((slide) => {
+    if (!slide?.id || seen.has(slide.id)) return false;
+    seen.add(slide.id);
+    return true;
+  });
+}
+
+const slides = uniqueSlides([
+  ...topRated(cowboyColor, 2, 0).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color', 'Cowboy portrait photography')),
+  ...topRated(cowboyBW, 2, 2).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White', 'Black and white cowboy photography')),
+  ...topRated(cowboyColor, 1, 3).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color', 'Cowboy portrait photography')),
+  ...topRated(cowboyBW, 1, 5).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White', 'Black and white cowboy photography')),
+]);
+
+const sampleSlides = uniqueSlides([
+  ...topRated(cowboyColor, 5, 3).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color', 'Cowboy portrait photography')),
+  ...topRated(cowboyBW, 5, 3).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White', 'Black and white cowboy photography')),
+  ...topRated(cowboyNA, 4, 2).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color', 'Portrait from the American West')),
+  ...topRated(westLandscapes, 2, 0).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery', 'Western environment landscape')),
+])
+  .filter((slide) => !slides.some((heroSlide) => heroSlide.id === slide.id))
+  .slice(0, 4)
+  .map((slide, index) => {
+    if (index === 0) return { ...slide, imageObjectPosition: 'center 20%' };
+    if (index === 2) return { ...slide, imageObjectPosition: 'center 15%' };
+    return slide;
+  });
+
+const breadcrumb = `Home › Cowboy Photography`;
+
+const introParagraphs = [
+  'The cowboy is one of the most photographed figures in American culture, but much of the cowboy photography online is either stock imagery, event coverage, or lifestyle content. The artistic side of the subject is much thinner. This page defines cowboy photography as an authored Western art form shaped by character, atmosphere, and narrative intention.',
+];
+
+const sections = [
+  {
+    heading: 'The Cowboy in Photography',
+    paragraphs: [
+      'Cowboys entered photography early because they stood near the center of frontier labor, ranch culture, and the public imagination of the American West. Early images often documented working life, tack, camps, horses, and the people who moved through cattle country and open range.',
+      'Those photographs matter historically, but they do not exhaust the subject. Cowboy photography can also operate inside the larger tradition of <a href="/American-Western-Art">American Western Art</a>, where the figure becomes a vehicle for character, myth, memory, and the artistic interpretation of frontier life.',
+      'The cowboy became one of the defining figures of Western art through painters such as Frederic Remington and Charles M. Russell, whose imagery helped establish the visual language the medium still draws from today.'
+    ]
+  },
+  {
+    heading: 'Documentary vs Artistic Cowboy Photography',
+    paragraphs: [
+      'Documentary cowboy photography records events, work, people, and places. It may be excellent documentary work, but its primary job is evidence. Artistic cowboy photography asks something different: how should this figure be interpreted? What kind of mood, narrative tension, or symbolic weight should the image carry?',
+      'That distinction separates rodeo coverage and ranch lifestyle photography from fine art Western imagery. The artistic branch is defined less by subject alone than by authorship, composition, atmosphere, and the deliberate shaping of meaning. For the broader medium-level argument, see <a href="/Photography-in-Western-Art">Photography in Western Art</a>.'
+    ]
+  },
+  {
+    heading: 'Cowboy Portrait Photography',
+    paragraphs: [
+      'Cowboy portrait photography works best when the figure is treated as a person rather than a prop. Expression, gesture, posture, clothing wear, weather, and surroundings all contribute to the sense that a life exists beyond the frame. A portrait becomes more than costume when it carries memory, labor, and consequence.',
+      'That is where environment matters. The land, the road, the fence line, the horse, and the light are not accessories. They help tell the story. Wayne Heim’s cowboy portraits use those elements to create slow-reading images built around character rather than spectacle.'
+    ]
+  },
+  {
+    heading: 'Painterly Western Photography',
+    paragraphs: [
+      'Painterly Western photography extends cowboy imagery into a more interpretive visual language. Tone is restrained. Texture is layered. Color and contrast are shaped so the photograph carries the weight of a painting while remaining unmistakably photographic. The goal is not effect for its own sake, but emotional weight.',
+      'This approach aligns cowboy photography with narrative Western art rather than commercial décor. It also connects directly to <a href="/Western-Fine-Art-Photography">Western Fine Art Photography</a>, where authored craft and painterly restraint define the work across multiple frontier subjects.'
+    ]
+  }
+];
+
+const relatedLinks = [
+  {
+    href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+    label: 'Cowboy Portraits',
+    description: 'Enter the cowboy portrait gallery where individual frontier characters take on the full weight of atmosphere and story.'
+  },
+  {
+    href: '/Western-Fine-Art-Photography',
+    label: 'Western Fine Art Photography',
+    description: 'The broader photographic branch connecting cowboy imagery to the larger visual tradition of the American West.'
+  },
+  {
+    href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier',
+    label: 'Facing History',
+    description: 'The gallery destination where cowboy portraits, frontier stories, and historical atmosphere converge.'
+  },
+  {
+    href: '/Photography-in-Western-Art',
+    label: 'Photography in Western Art',
+    description: 'See how photography moved from Western documentation into authored narrative art.'
+  }
+];
+
+const faqItems = [
+  {
+    q: 'What is cowboy photography?',
+    a: 'Cowboy photography is photography centered on cowboy subjects, ranch figures, frontier character, and the visual culture of the American West. It can range from documentary work to painterly fine art depending on how the image is authored.'
+  },
+  {
+    q: 'How is cowboy photography different from rodeo photography?',
+    a: 'Rodeo photography usually documents live performance and action. Cowboy photography as an art form can be quieter and more interpretive, focusing on portraiture, atmosphere, environment, and the suggestion of a larger story.'
+  },
+  {
+    q: 'Can cowboy portrait photography be fine art?',
+    a: 'Yes. Cowboy portrait photography becomes fine art when it is shaped by composition, tonal control, atmosphere, and narrative intent rather than being treated as a quick costume image or commercial stock subject.'
+  },
+  {
+    q: 'Where does cowboy photography fit in Western art?',
+    a: 'Cowboy photography sits within the larger tradition of American Western art. It continues the same long-running interest in frontier character, myth, labor, and the visual storytelling of the American West.'
+  }
+];
+
+const heroImage = slides[0] ? `https://www.k4studios.com/img/${slides[0].id}/l` : 'https://www.k4studios.com/images/K4Logo-web-c.webp';
+
+const structuredData = getStructuredData({
+  type: 'Article',
+  data: {
+    title: 'Cowboy Photography',
+    headline: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl,
+    image: heroImage,
+    articleSection: sections.map((section) => section.heading),
+    keywords: [
+      'cowboy photography',
+      'western cowboy photography',
+      'cowboy portrait photography',
+      'cowboy photo art',
+      'cowboy photos',
+      'painterly western photography'
+    ],
+    faqItems: faqItems.map((item) => ({
+      question: item.q,
+      answer: Array.isArray(item.a) ? item.a.join(' ') : item.a,
+    })),
+  },
+  defaults: {
+    creatorName: 'Wayne Heim',
+    creatorUrl: 'https://www.k4studios.com/'
+  }
+});
+
+const breadcrumbData = getBreadcrumbList([
+  { name: 'Home', item: 'https://www.k4studios.com/' },
+  { name: 'Cowboy Photography', item: canonicalUrl },
+]);
+
+const meta = {
+  title: pageTitle,
+  description: pageDescription,
+  canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogImage: heroImage,
+  ogUrl: canonicalUrl,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: heroImage,
+  twitterUrl: canonicalUrl,
+};
+---
+
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbData} meta={meta}>
+  <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+    <CornerstoneArticle
+      breadcrumb={breadcrumb}
+      title="Cowboy Photography"
+      subtitle="An educational guide defining cowboy photography as an artistic subject within the larger tradition of Western art."
+      summary="Cowboy photography is widely associated with stock imagery, rodeo coverage, or lifestyle. This guide reframes the subject as an artistic tradition within narrative Western fine art photography."
+      contextHtml="Cowboy photography sits between <a href='/American-Western-Art'>American Western Art</a>, <a href='/Photography-in-Western-Art'>Photography in Western Art</a>, and <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>, with <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier'>Facing History</a> as the gallery destination."
+      contextPlacement="below-carousel"
+      introParagraphs={introParagraphs}
+      quoteFirstIntroParagraph={true}
+      sections={sections}
+      slides={slides}
+      sampleSlides={sampleSlides}
+      relatedHeading="Explore Cowboy Photography"
+      relatedLinks={relatedLinks}
+      faqHeading="Cowboy Photography FAQ"
+      faqItems={faqItems}
+      sampleGroups={[
+        {
+          afterSection: 2,
+          imageIndexes: [0, 1],
+          caption: 'These images reflect the documentary foundations of cowboy photography—terrain, labor, and the lived environments of the frontier.',
+        },
+        {
+          afterSection: 3,
+          imageIndexes: [2, 3],
+          caption: 'These portraits show the medium shifting toward authored cowboy art—where atmosphere, character, and narrative carry the frame.',
+        },
+      ]}
+      carouselKicker="Cowboy as Subject"
+      carouselCounterLabel="Portrait"
+    />
+  </main>
+</BaseLayout>

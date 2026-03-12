@@ -1,3 +1,6 @@
+# Collapse apex + trailing slash to canonical www no-slash in one hop
+https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
+
 # Normalize trailing slashes (prevents Smart-404 function burns)
 ^/(.+)/$  /$1  301!
 

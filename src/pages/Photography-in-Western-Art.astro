@@ -1,0 +1,294 @@
+---
+export const prerender = true;
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CornerstoneArticle from '@/components/authority/CornerstoneArticle.astro';
+import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
+
+import { galleryData as cowboyColor }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+import { galleryData as cowboyBW }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
+import { galleryData as cowboyNA }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs';
+import { galleryData as westLandscapes }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs';
+
+const pagePath = '/Photography-in-Western-Art';
+const canonicalUrl = `https://www.k4studios.com${pagePath}`;
+const pageTitle = 'Photography in Western Art | From Frontier Documentation to Narrative Western Photography';
+const pageDescription = 'Learn how photography entered the Western art tradition, moving from frontier documentation toward authorship, atmosphere, and narrative Western fine art photography.';
+
+function ensureAlt(img: any, fallback: string) {
+  return (img?.alt || img?.title || fallback || '').trim();
+}
+
+function findImage(data: any[], id: string) {
+  return (data || []).find((img: any) => img?.id === id);
+}
+
+function makeSlide(img: any, hrefBase: string, fallback: string) {
+  return {
+    id: img.id,
+    title: img.title,
+    alt: ensureAlt(img, fallback),
+    story: img.story || img.description || '',
+    href: `${hrefBase}/${img.id}`,
+  };
+}
+
+function uniqueSlides(slides: any[]) {
+  const seen = new Set<string>();
+  return slides.filter((slide) => {
+    if (!slide?.id || seen.has(slide.id)) return false;
+    seen.add(slide.id);
+    return true;
+  });
+}
+
+const slides = uniqueSlides([
+  ...['i-g7SCMTD'].map((id) =>
+    makeSlide(
+      findImage(westLandscapes, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery',
+      'Western landscape photograph'
+    )
+  ),
+  ...['i-rRdrQBg'].map((id) =>
+    makeSlide(
+      findImage(cowboyNA, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
+      'Western portrait photograph'
+    )
+  ),
+  ...['i-jWDDpC4'].map((id) =>
+    makeSlide(
+      findImage(westLandscapes, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery',
+      'Western landscape photograph'
+    )
+  ),
+  ...['i-Sc9hZGs', 'i-NxjDRLV'].map((id) =>
+    makeSlide(
+      findImage(cowboyColor, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+      'Narrative cowboy portrait'
+    )
+  ),
+  ...['i-Txh4c8k'].map((id) =>
+    makeSlide(
+      findImage(cowboyBW, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
+      'Black and white Western portrait'
+    )
+  ),
+]);
+
+const sampleSlides = uniqueSlides([
+  ...['i-NHkKNbH'].map((id) =>
+    makeSlide(
+      findImage(westLandscapes, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery',
+      'Western landscape photograph'
+    )
+  ),
+  ...['i-kQfftQ2'].map((id) =>
+    makeSlide(
+      findImage(cowboyColor, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+      'Narrative cowboy portrait'
+    )
+  ),
+  ...['i-kxnK2MM'].map((id) =>
+    makeSlide(
+      findImage(cowboyBW, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
+      'Black and white Western portrait'
+    )
+  ),
+  ...['i-4Hz6D7k'].map((id) =>
+    makeSlide(
+      findImage(cowboyNA, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
+      'Western portrait photograph'
+    )
+  ),
+]);
+
+const breadcrumb = `Home › Photography in Western Art`;
+
+const introParagraphs = [
+  'Photography belongs inside the Western art tradition because the tradition has always been defined by artistic interpretation of the American West, not by a single medium. What began in painting and sculpture expanded naturally once photographers learned to move beyond evidence and into atmosphere, authorship, and story.',
+];
+
+const sections = [
+  {
+    heading: 'Western Art Before Photography',
+    paragraphs: [
+      'Before cameras entered the scene, Western art was built through painting, illustration, and sculpture. Frontier painters and sculptors established the visual language of the West through riders, camps, battle scenes, distance, weather, and the recurring tension between human ambition and open land.',
+      'That earlier tradition matters because it supplied the mythology photography would eventually inherit. If you want the larger definition behind this subject, start with <a href="/Blog/what-is-western-art">What Is Western Art</a> and then move into <a href="/Masters-of-American-Western-Art">Masters of American Western Art</a> for the historical framework.'
+    ]
+  },
+  {
+    heading: 'Early Photography of the American West',
+    paragraphs: [
+      'The earliest photography of the American West was tied to expeditions, surveys, territorial mapping, rail development, settlement, and historical documentation. Photographs functioned as evidence: they recorded topography, camps, towns, equipment, and the lived conditions of a region still being culturally assembled.',
+      'Early photographers such as Timothy O\'Sullivan, Carleton Watkins, and William Henry Jackson produced some of the first major visual records of the West. Their photographs helped shape public understanding of frontier landscapes and established a documentary foundation that later Western artists and photographers would reinterpret more subjectively.',
+      'That documentary role gave photography enormous historical value. It showed the frontier with a factual directness that painting could not replicate in the same way. But at this stage, photography often served record first and interpretation second.'
+    ]
+  },
+  {
+    heading: 'From Documentation to Interpretation',
+    paragraphs: [
+      'The turning point came when photographers began using composition, atmosphere, tonal structure, and point of view to shape meaning rather than merely collect evidence. The West could now be photographed not only as a place that existed, but as a subject that could be interpreted.',
+      'This shift from documentation to interpretation is where photographic art begins. Narrative photography, painterly technique, and deliberate sequencing of light and gesture allow the image to carry emotional and symbolic force. That bridge leads directly toward <a href="/Western-Fine-Art-Photography">Western Fine Art Photography</a>, where authorship becomes central.'
+    ]
+  },
+  {
+    heading: 'Photography as Western Art',
+    paragraphs: [
+      'Western art is defined by authorship, composition, and intent—not by medium alone. A photograph can belong fully to Western art when it is created as an authored interpretation of the American West rather than as commercial stock, casual décor, or journalistic record.',
+      'That principle matters strategically. It explains why photography is not a side category beneath Western art, but one of the contemporary forms through which the tradition continues. It also clarifies the relationship between <a href="/American-Western-Art">American Western Art</a> and the photographic branch that grows out of it.'
+    ]
+  },
+  {
+    heading: 'Narrative Photography of the American West',
+    paragraphs: [
+      'Narrative Western photography goes beyond scenic description. It uses character, environment, silence, tension, and implication to suggest a larger story beyond the frame. This is where painterly photography becomes especially important, because texture, restraint, and tonal control help the photograph function like a slow-reading work rather than a quick image hit.',
+      'At K4 Studios, that approach leads into story-driven frontier imagery, historical atmosphere, and character portraits gathered inside <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier">Facing History</a>. It also overlaps naturally with <a href="/Cowboy-Photography">Cowboy Photography</a>, where one of the West’s most persistent subjects becomes an artistic form in its own right.'
+    ]
+  }
+];
+
+const relatedLinks = [
+  {
+    href: '/Blog/what-is-western-art',
+    label: 'What Is Western Art',
+    description: 'The root definition page explaining the larger cultural and artistic tradition of the American West.'
+  },
+  {
+    href: '/American-Western-Art',
+    label: 'American Western Art',
+    description: 'The main bridge page connecting the historical Western art tradition to modern interpretation.'
+  },
+  {
+    href: '/Western-Fine-Art-Photography',
+    label: 'Western Fine Art Photography',
+    description: 'A deeper treatment of authored Western photography shaped by painterly process and narrative intent.'
+  },
+  {
+    href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier',
+    label: 'Facing History',
+    description: 'The gallery destination where Western storytelling through photography becomes fully visual.'
+  },
+  {
+    href: '/Masters-of-American-Western-Art',
+    label: 'Masters of American Western Art',
+    description: 'The authority page above this one, tracing the historical painters and myth-makers who shaped the tradition.'
+  }
+];
+
+const faqItems = [
+  {
+    q: 'What is Western photography?',
+    a: 'Western photography is photography centered on the people, landscapes, labor, and historical imagination of the American West. It can be documentary, commercial, or fine art depending on how the work is made and why.'
+  },
+  {
+    q: 'How is Western photography different from Western art?',
+    a: 'Western art is the larger tradition. Western photography is one medium within that tradition. When photography is shaped by authorship, composition, and interpretive intent, it belongs inside Western art rather than outside it.'
+  },
+  {
+    q: 'Who were the first photographers of the American West?',
+    a: 'Important early photographers of the American West include Timothy O\'Sullivan, Carleton Watkins, and William Henry Jackson. Their images documented expeditions, frontier landscapes, and Western terrain for both historical record and public imagination.'
+  },
+  {
+    q: 'Can photography be considered Western art?',
+    a: 'Yes. Photography can be Western art when it interprets the American West through authorship, composition, atmosphere, and narrative intent rather than functioning only as stock imagery or raw documentation.'
+  }
+];
+
+const heroImage = slides[0] ? `https://www.k4studios.com/img/${slides[0].id}/l` : 'https://www.k4studios.com/images/K4Logo-web-c.webp';
+
+const structuredData = getStructuredData({
+  type: 'Article',
+  data: {
+    title: 'Photography in Western Art',
+    headline: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl,
+    image: heroImage,
+    articleSection: sections.map((section) => section.heading),
+    keywords: [
+      'photography in western art',
+      'western photography history',
+      'photography of the American West',
+      'western fine art photography',
+      'western photography artists',
+      'narrative western photography'
+    ],
+    faqItems: faqItems.map((item) => ({
+      question: item.q,
+      answer: Array.isArray(item.a) ? item.a.join(' ') : item.a,
+    })),
+  },
+  defaults: {
+    creatorName: 'Wayne Heim',
+    creatorUrl: 'https://www.k4studios.com/'
+  }
+});
+
+const breadcrumbData = getBreadcrumbList([
+  { name: 'Home', item: 'https://www.k4studios.com/' },
+  { name: 'Photography in Western Art', item: canonicalUrl },
+]);
+
+const meta = {
+  title: pageTitle,
+  description: pageDescription,
+  canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogImage: heroImage,
+  ogUrl: canonicalUrl,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: heroImage,
+  twitterUrl: canonicalUrl,
+};
+---
+
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbData} meta={meta}>
+  <main class="bg-[#ffffff] text-[#2c2c2c] font-serif min-h-screen overflow-x-hidden">
+    <CornerstoneArticle
+      breadcrumb={breadcrumb}
+      title="Photography in Western Art"
+      subtitle="A guide connecting frontier documentation, photographic interpretation, and the larger tradition of Western art."
+      summary="This page explains how photography moved from record-making into authorship, atmosphere, and narrative Western fine art—without stepping outside the American West tradition it ultimately extends."
+      contextHtml="This guide connects <a href='/Masters-of-American-Western-Art'>Masters of American Western Art</a> to <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>, with <a href='/American-Western-Art'>American Western Art</a> serving as the interpretive bridge between them."
+      contextPlacement="below-carousel"
+      introParagraphs={introParagraphs}
+      quoteFirstIntroParagraph={true}
+      sections={sections}
+      slides={slides}
+      sampleSlides={sampleSlides}
+      relatedHeading="Western Storytelling Through Photography"
+      relatedLinks={relatedLinks}
+      faqHeading="Photography in Western Art FAQ"
+      faqItems={faqItems}
+      sampleGroups={[
+        {
+          afterSection: 2,
+          imageIndexes: [0, 1],
+          caption: 'Contemporary Western art builds on the storytelling foundations first documented by early photographers—exploring terrain, labor, and lived environments of the frontier.',
+        },
+        {
+          afterSection: 4,
+          imageIndexes: [2, 3],
+          caption: 'Contemporary Western photography extends that tradition through interpretation—using composition, atmosphere, and character to suggest story rather than simply record place.',
+        },
+      ]}
+      carouselKicker="Photography and the West"
+      carouselCounterLabel="Featured"
+    />
+  </main>
+</BaseLayout>

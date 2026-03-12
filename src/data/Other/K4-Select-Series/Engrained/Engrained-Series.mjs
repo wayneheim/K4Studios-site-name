@@ -2072,7 +2072,7 @@ export const galleryData = [
   },
   {
     "id": "i-b4wG4vh",
-    "title": "Western Cotton Candy - Jackson Hole, Wyoming",
+    "title": "Cotton Candy - Jackson Hole, Wyoming",
     "description": "Painterly Photograph of some iconic Western Cotton Candy- A lone pink \"impressionistic\" cloud puff floating defiantly above the 55mph road sign. - Jackson Hole Wyoming. Painterly landscape mountain photography. Fine art painterly mountain photography. © Wayne Heim",
     "alt": "Painterly western landscape photograph of a single pink cloud floating above open Wyoming terrain near Jackson Hole at dusk.",
     "src": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/LcZFTsWTvTFvChZchD3c4zSLDNc5ZHGzcDW97SbbD/XL/Landscape-Cotton-Canday-ws-XL.jpg",
@@ -2116,7 +2116,7 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/NVMQVQ2ftVtj2WH9X3ftZ8RPv4gJgGJB6ndxpRW9X/L/Landscape-Cotton-Canday-ws-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/MM9fjDBRt87TtVGLZ57Zqd6wdqJCrS6MrVDVMFVGp/M/Landscape-Cotton-Canday-ws-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/0/Kn93nzk472f47vfHv9DwtFXHWjt5ZXDnNXrVJGc5N/S/Landscape-Cotton-Canday-ws-S.jpg",
-    contentSource: "ai",
+    contentSource: "human",
     yearCreated: "2025"
   },
   {
@@ -2153,7 +2153,7 @@ export const galleryData = [
     "sortOrder": 13,
     "editionSize": 50,
     "imageSize": `12" × 24"`,
-    "price": "$1000",
+    "price": "$1100",
     "linkedImageId": "i-8JHmjF9",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs",
     "srcXL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/LcXPr4NDKFdLNsd3VmNxg4fH9bqsQHNN4mvtdrPWK/XL/Landscape-Buffy-ws-XL.jpg",

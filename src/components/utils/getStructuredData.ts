@@ -114,7 +114,7 @@ export function getStructuredData({
   images = [],
   defaults = {},
 }: {
-  type: "gallery" | "image" | "BlogPosting" | "Article",
+  type: "gallery" | "image" | "Blog" | "BlogPosting" | "Article",
   data: any,
   images?: any[],
   defaults?: {
@@ -305,6 +305,54 @@ export function getStructuredData({
     if (data.height) obj.height = data.height;
 
     return stringifySchema(obj);
+  }
+
+  /* ============================================================
+     TYPE: BLOG INDEX / BLOG PAGE
+  ============================================================ */
+  if (type === "Blog") {
+    const blogObj: any = {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "@id": `${data.url}#blog`,
+      name: data.name || data.title,
+      headline: data.name || data.title,
+      description: data.description,
+      url: data.url,
+      mainEntityOfPage: { "@type": "WebPage", "@id": data.url },
+      inLanguage: "en",
+      author: data.author || {
+        "@type": "Person",
+        name: creatorName,
+        url: creatorUrl,
+        ...(creatorSameAs.length ? { sameAs: creatorSameAs } : {}),
+      },
+      publisher: {
+        "@type": "Organization",
+        "@id": "https://www.k4studios.com/#organization",
+        name: "K4 Studios",
+        url: "https://www.k4studios.com/",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://www.k4studios.com/images/K4Logo-web-c.webp",
+          width: 512,
+          height: 512,
+        },
+        ...(organizationSameAs.length ? { sameAs: organizationSameAs } : {}),
+      },
+      copyrightHolder: {
+        "@type": "Person",
+        name: creatorName,
+        url: creatorUrl,
+      },
+      copyrightNotice: data.copyrightNotice || copyrightNotice,
+    };
+
+    if (Array.isArray(data.blogPost) && data.blogPost.length) {
+      blogObj.blogPost = data.blogPost;
+    }
+
+    return stringifySchema(blogObj);
   }
 
   /* ============================================================
