@@ -22801,8 +22801,14 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.k4studios.com/Other/Stories/Lore-and-Legacy-Chapter-1</loc>
+    <lastmod>2026-03-12T23:19:58-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.k4studios.com/Other/Stories/Outlaws-and-Bandits</loc>
-    <lastmod>2026-01-31T11:04:26-05:00</lastmod>
+    <lastmod>2026-03-12T23:19:58-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

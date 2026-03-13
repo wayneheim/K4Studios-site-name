@@ -18,7 +18,6 @@ export const storySliderData = [
   },
   {
     "id": "i-7Mzzbvp",
-    "title": "Last Hand",
     "story": "Dust spirals and hooves fly as the last hand is played out under a pale, unblinking sky. Three riders, every muscle and nerve taut with gamble and grit, thunder forward—there’s no room left for bluffing, no time to count the cost. In this wild rush, history is measured not by who wins, but by who dares to ride straight into the storm, knowing the deck was never meant to be fair."
   },
   {
