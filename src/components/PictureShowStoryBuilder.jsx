@@ -73,6 +73,24 @@ function normalizePath(p = "") {
   return p.replace(/\\/g, "/");
 }
 
+function getAudioFileName(src = "") {
+  if (!src) return "";
+  if (src.startsWith("http")) return decodeURIComponent(src.split("/").pop() || "");
+  if (src.startsWith("/")) return src.split("/").pop() || "";
+  return src;
+}
+
+function toBase64FromArrayBuffer(buffer) {
+  const bytes = new Uint8Array(buffer);
+  const chunkSize = 0x8000;
+  let binary = "";
+  for (let index = 0; index < bytes.length; index += chunkSize) {
+    const chunk = bytes.subarray(index, index + chunkSize);
+    binary += String.fromCharCode(...chunk);
+  }
+  return btoa(binary);
+}
+
 function stripRoot(p) {
   const n = normalizePath(p);
   for (const root of DATA_ROOTS) {
@@ -135,25 +153,56 @@ async function saveShowToServer(showArray, showMeta) {
 
   const R2_BASE = "https://media.k4studios.com/";
 
+  async function remoteFileExists(url) {
+    try {
+      const res = await fetch(url, { method: "HEAD" });
+      return res.ok;
+    } catch {
+      return false;
+    }
+  }
+
   async function uploadAudio(fileObj, destKey, label) {
-    // Check cache first — works even without a fileObj (e.g. loaded show)
-    if (audioCache[destKey]) {
-      console.log(`(cached) ${label}: ${destKey}`);
-      return audioCache[destKey];
+    // If we have a fresh File object, always upload and overwrite the target key.
+    // This guarantees recovery from bad/corrupt existing objects in R2.
+    if (!fileObj && audioCache[destKey]) {
+      const cachedUrl = audioCache[destKey];
+      if (await remoteFileExists(cachedUrl)) {
+        console.log(`(cached) ${label}: ${destKey}`);
+        return cachedUrl;
+      }
+      delete audioCache[destKey];
+      localStorage.setItem("r2AudioCache", JSON.stringify(audioCache));
     }
     // No File object means audio was already uploaded in a prior session.
-    // Derive the expected R2 URL and cache it so future runs skip the upload.
+    // Only accept the derived URL if the file actually exists in R2.
     if (!fileObj) {
       const derivedUrl = R2_BASE + destKey;
-      console.log(`(derived R2 URL — no file object) ${label}: ${derivedUrl}`);
-      audioCache[destKey] = derivedUrl;
-      localStorage.setItem("r2AudioCache", JSON.stringify(audioCache));
-      uploadedAudio += 1;
-      return derivedUrl;
+      if (await remoteFileExists(derivedUrl)) {
+        console.log(`(derived R2 URL — verified) ${label}: ${derivedUrl}`);
+        audioCache[destKey] = derivedUrl;
+        localStorage.setItem("r2AudioCache", JSON.stringify(audioCache));
+        uploadedAudio += 1;
+        return derivedUrl;
+      }
+      throw new Error(`Missing audio in R2 for ${label}. Reattach the file to overwrite it.`);
     }
+    delete audioCache[destKey];
+    localStorage.setItem("r2AudioCache", JSON.stringify(audioCache));
     console.log(`Uploading ${uploadIndex++}: ${label}...`);
     const url = `/.netlify/functions/uploadToR2?destKey=${encodeURIComponent(destKey)}`;
-    const res = await fetch(url, { method: "POST", headers: { "Content-Type": fileObj.type || "application/octet-stream" }, body: fileObj });
+    const arrayBuffer = await fileObj.arrayBuffer();
+    const base64 = toBase64FromArrayBuffer(arrayBuffer);
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        destKey,
+        contentBase64: base64,
+        contentType: fileObj.type || "audio/mpeg",
+        payloadType: "audio",
+      }),
+    });
     const data = await res.json();
     if (!data.url) throw new Error(data.error || "No URL returned");
     audioCache[destKey] = data.url;
@@ -167,10 +216,10 @@ async function saveShowToServer(showArray, showMeta) {
 
   // Per-slide audio
   for (const slide of showArray) {
-    if (slide.audioSrc && !slide.audioSrc.startsWith("http")) {
-      // Use actual File object if available (new session); otherwise derive R2 URL
-      const fileObj = slide.audioFile || null;
-      const fileName = slide.audioSrc.startsWith("/") ? slide.audioSrc.split("/").pop() : slide.audioSrc;
+    const fileObj = slide.audioFile || null;
+    if (slide.audioSrc && (fileObj || !slide.audioSrc.startsWith("http"))) {
+      // If a fresh File exists, upload it even if audioSrc currently points at an HTTP URL.
+      const fileName = getAudioFileName(slide.audioSrc);
       const destKey = `StoryShows/${safeSlug}/${fileName}`;
       try {
         slide.audioSrc = await uploadAudio(fileObj, destKey, fileName);
@@ -188,13 +237,13 @@ async function saveShowToServer(showArray, showMeta) {
   let ghostAudioMode = showMeta.globalAudioMode || "mute";
   if (ghostAudioMode !== "mute" && showMeta.globalAudioSrc) {
     const rawSrc = showMeta.globalAudioSrc;
-    if (rawSrc.startsWith("http")) {
+    if (rawSrc.startsWith("http") && !showMeta.globalAudioFile) {
       // Already a full URL (previously uploaded) — use as-is
       globalAudioUrl = rawSrc;
     } else {
       // Upload (or derive R2 URL if no File object available)
       const fileObj = showMeta.globalAudioFile || null;
-      const fileName = rawSrc.startsWith("/") ? rawSrc.split("/").pop() : rawSrc;
+      const fileName = getAudioFileName(rawSrc);
       const destKey = `StoryShows/${safeSlug}/${fileName}`;
       try {
         globalAudioUrl = await uploadAudio(fileObj, destKey, fileName);
@@ -718,6 +767,7 @@ export default function PictureShowStoryBuilder() {
             // Clear stored session data
             localStorage.removeItem(TEMP_KEY);
             localStorage.removeItem(META_KEY);
+            localStorage.removeItem("r2AudioCache");
 
             // Reset state visually
             setPicked([]);
@@ -818,6 +868,7 @@ export default function PictureShowStoryBuilder() {
                   
                   localStorage.removeItem(TEMP_KEY);
                   localStorage.removeItem(META_KEY);
+                  localStorage.removeItem("r2AudioCache");
                   setPicked([]);
                   setSlides([]);
                   setShowLoaded(false);
@@ -959,6 +1010,7 @@ export default function PictureShowStoryBuilder() {
                         // Reset the builder
                         localStorage.removeItem(TEMP_KEY);
                         localStorage.removeItem(META_KEY);
+                        localStorage.removeItem("r2AudioCache");
                         setPicked([]);
                         setSlides([]);
                         setShowLoaded(false);
@@ -1028,12 +1080,16 @@ export default function PictureShowStoryBuilder() {
               accept="audio/*"
               onChange={(e) => {
                 const file = e.target.files?.[0];
-                if (!file) return;
+                if (!file) {
+                  e.target.value = "";
+                  return;
+                }
                 setShowMeta((m) => ({
                   ...m,
                   globalAudioSrc: file.name || file.path || "",
                   globalAudioFile: file,              // ✅ keep actual File object
                 }));
+                e.target.value = "";
               }}
             />
             {/* Radio buttons for audio mode */}
@@ -1441,7 +1497,10 @@ export default function PictureShowStoryBuilder() {
                 <input
                   type="file"
                   accept="audio/*"
-                  onChange={(e) => onAudioPick(e.target.files?.[0])}
+                  onChange={(e) => {
+                    onAudioPick(e.target.files?.[0]);
+                    e.target.value = "";
+                  }}
                   disabled={Boolean(showMeta.globalAudioSrc && showMeta.globalAudioSrc.trim() !== "" && showMeta.globalAudioMode === "score" && !audioMuted)}
                   style={showMeta.globalAudioSrc && showMeta.globalAudioSrc.trim() !== "" && showMeta.globalAudioMode === "score" && !audioMuted ? { opacity: 0.5, cursor: "not-allowed" } : {}}
                 />

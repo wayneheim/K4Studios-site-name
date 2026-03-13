@@ -11,7 +11,7 @@ export const storyMeta = {
   "watermarkText": "© Wayne Heim",
   "copyrightName": "Wayne Heim",
   "copyrightYear": "2026",
-  "savedAt": "2026-03-13T03:18:14.662Z",
+  "savedAt": "2026-03-13T04:22:17.873Z",
   "introMeta": {
     "introText": "K4 Studios presents the Fine Art Photography of Wayne Heim.",
     "showTitle": "Lore & Legacy - Chapter 1",
@@ -124,7 +124,7 @@ export const storyData = [
     "linkedImageId": "i-c5K798H",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
     "yearCreated": "2026",
-    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/Meant What I Said.mp3",
+    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/Meant What I Said2.mp3",
     "audioLocal": "",
     "audioFile": {}
   },
@@ -185,7 +185,7 @@ export const storyData = [
     "linkedImageId": "i-Vr8vzjt",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
     "yearCreated": "2026",
-    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/This is where I stand 3f.mp3",
+    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/This is where I stand 3f2.mp3",
     "audioLocal": "",
     "audioFile": {}
   },
@@ -254,7 +254,7 @@ export const storyData = [
     "linkedImageId": "i-LL2Gp5r",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
     "yearCreated": "2026",
-    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/Special delivery4f.mp3",
+    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/Special delivery4f2.mp3",
     "audioLocal": "",
     "audioFile": {}
   },
@@ -315,7 +315,7 @@ export const storyData = [
     "linkedImageId": "i-B7ZSdfs",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
     "yearCreated": "2026",
-    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/till death do us part 5ffff.mp3",
+    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/till death do us part 5ffff2.mp3",
     "audioLocal": "",
     "audioFile": {}
   },
@@ -385,7 +385,7 @@ export const storyData = [
     "linkedImageId": "i-kQfftQ2",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
     "yearCreated": "2026",
-    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/pinkertons grasp v1f.mp3",
+    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/pinkertons grasp v1f2.mp3",
     "audioLocal": "",
     "audioFile": {}
   },
@@ -446,7 +446,7 @@ export const storyData = [
     "linkedImageId": "i-rfFBRQM",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
     "yearCreated": "2026",
-    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/Untimely Parting v2f.mp3",
+    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/Untimely Parting v2f2.mp3",
     "audioLocal": "",
     "audioFile": {}
   },
@@ -509,7 +509,7 @@ export const storyData = [
     "linkedImageId": "i-T7TFJX2",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
     "yearCreated": "2026",
-    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/this is the hand v5f.mp3",
+    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/this is the hand v5f2.mp3",
     "audioLocal": "",
     "audioFile": {}
   },
@@ -572,7 +572,7 @@ export const storyData = [
     "linkedImageId": "i-trZrk2w",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
     "yearCreated": "2026",
-    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/night raid 1f.mp3",
+    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/night raid 1f2.mp3",
     "audioLocal": "",
     "audioFile": {}
   },
@@ -635,7 +635,7 @@ export const storyData = [
     "linkedImageId": "i-7VWX9vk",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
     "yearCreated": "2026",
-    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/one way out v2f.mp3",
+    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/one way out v2f2.mp3",
     "audioLocal": "",
     "audioFile": {}
   },
@@ -689,7 +689,7 @@ export const storyData = [
     "linkedImageId": "i-8Ddjt5W",
     "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
     "yearCreated": "2026",
-    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/Worth Every Mile 5f.mp3",
+    "audioSrc": "https://media.k4studios.com/StoryShows/Lore-and-Legacy-Chapter-1/Worth Every Mile 5f2.mp3",
     "audioLocal": "",
     "audioFile": {}
   }
