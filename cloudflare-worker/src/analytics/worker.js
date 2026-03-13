@@ -1898,6 +1898,26 @@ async function getStatePixelTestRoaring20s(env, filters) {
           AND e.target_id != '/'
           AND COALESCE(e.source_layer, '') != 'cowboy_jump_pixel_v1'
       ),
+      hardened AS (
+        SELECT
+          e.target_id AS target_id,
+          COUNT(*) AS hardened_views,
+          COUNT(DISTINCT CASE WHEN e.visitor_id IS NOT NULL AND e.visitor_id != '' THEN e.visitor_id END) AS hardened_viewers,
+          MAX(e.ts) AS hardened_last_seen
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${qualifiedDateClause}
+          AND ${notCacheWarmer("e")}
+          AND COALESCE(e.is_bot, 0) = 0
+          AND e.source = 'js'
+          AND e.event_type = 'qualified_chapter_view'
+          AND e.target_id IS NOT NULL
+          AND e.target_id != ''
+          AND e.target_id LIKE 'i-%'
+          AND e.target_id NOT LIKE '%/%'
+          AND e.target_id NOT LIKE 'i-test%'
+        GROUP BY e.target_id
+      ),
       ranked AS (
         SELECT
           target_id,
@@ -1948,6 +1968,9 @@ async function getStatePixelTestRoaring20s(env, filters) {
         a.zoom_views,
         a.viewers,
         a.last_seen,
+        COALESCE(h.hardened_views, 0) AS hardened_views,
+        COALESCE(h.hardened_viewers, 0) AS hardened_viewers,
+        h.hardened_last_seen,
         a.source_layers,
         a.location_labels,
         r.page,
@@ -1958,10 +1981,12 @@ async function getStatePixelTestRoaring20s(env, filters) {
         r.user_agent,
         r.referer
       FROM agg a
+      JOIN hardened h
+        ON h.target_id = a.target_id
       LEFT JOIN ranked r
         ON r.target_id = a.target_id
        AND r.rn = 1
-      ORDER BY a.last_seen DESC, a.exposures DESC
+      ORDER BY h.hardened_last_seen DESC, a.last_seen DESC, a.exposures DESC
     `;
     const [summaryRow, refRows, viewerStatsRow, byGalleryRows, pixelImageAccessRows] = await Promise.all([
       env.DB.prepare(summaryQuery).first(),
@@ -2323,35 +2348,133 @@ __name(getReferrers, "getReferrers");
 __name2(getReferrers, "getReferrers");
 async function getGeography(env, filters) {
   try {
-    const { dateClause, galleryClause, botClause, chardonClause, ipClause } = filters;
+    const { dateClause, botClause, chardonClause, ipClause } = filters;
     const qualify = /* @__PURE__ */ __name2(
-      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bgallery_id\b/g, "e.gallery_id").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region"),
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region"),
       "qualify"
     );
-    const where = dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")';
-    // Site Geography: only JS-verified, non-bot events so totals match Pulse visitor counts.
     const geoQuery = `
-      SELECT 
-        e.country, e.region, e.city,
-        COUNT(DISTINCT e.visitor_id) as visitors,
-        COUNT(DISTINCT CASE 
-          WHEN e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view') 
-          THEN e.visitor_id 
-          ELSE NULL 
-        END) as art_viewers
-      FROM human_population hp
-      JOIN classified_events e ON e.visitor_id = hp.visitor_id
-      WHERE ${where}
-        AND e.source = 'js'
-        AND COALESCE(e.is_bot, 0) = 0
-        AND e.country IS NOT NULL
-        ${qualify(galleryClause)}
-        ${qualify(ipClause)}
-        ${qualify(botClause)}
-        ${qualify(chardonClause)}
-      GROUP BY e.country, e.region, e.city
-      ORDER BY visitors DESC
-      LIMIT 20
+      WITH site_events AS (
+        SELECT
+          e.country,
+          e.region,
+          e.city,
+          COALESCE(NULLIF(e.visitor_id, ''), 'ip:' || COALESCE(e.ip, 'unknown')) AS actor,
+          CASE
+            WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
+            ELSE '/' || raw_page
+          END AS page_path
+        FROM (
+          SELECT
+            e.country,
+            e.region,
+            e.city,
+            e.visitor_id,
+            e.ip,
+            COALESCE(NULLIF(e.page, ''), CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END) AS raw_page
+          FROM classified_events e
+          WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
+            AND e.country IS NOT NULL
+            AND e.event_type IN ('page_pixel', 'page_view', 'edge_page', 'image_page', 'external_image_page')
+            ${qualify(botClause)}
+            ${qualify(chardonClause)}
+            ${qualify(ipClause)}
+        ) e
+        WHERE raw_page IS NOT NULL
+          AND LOWER(raw_page) NOT LIKE 'http%'
+      ),
+      site_base AS (
+        SELECT
+          country,
+          region,
+          city,
+          COUNT(DISTINCT actor) AS visitors
+        FROM site_events
+        WHERE page_path NOT IN ${GALLERY_LANDING_IN_LIST}
+          AND NOT (page_path GLOB '*/i-*' AND page_path NOT GLOB '*/i-*/*')
+        GROUP BY country, region, city
+      ),
+      art_base AS (
+        SELECT country, region, city, SUM(art_viewers) as art_viewers
+        FROM (
+          -- Pixel events on image targets (state_pixel, action_pixel)
+          SELECT
+            e.country, e.region, e.city,
+            COUNT(DISTINCT COALESCE(NULLIF(e.visitor_id, ''), 'ip:' || COALESCE(e.ip, 'unknown'))) as art_viewers
+          FROM classified_events e
+          WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
+            AND e.country IS NOT NULL
+            AND e.event_type IN ('state_pixel', 'action_pixel')
+            AND e.target_id LIKE 'i-%'
+            AND e.target_id NOT LIKE '%/%'
+            ${qualify(botClause)}
+            ${qualify(chardonClause)}
+            ${qualify(ipClause)}
+          GROUP BY e.country, e.region, e.city
+
+          UNION ALL
+
+          -- JS image-level events from verified humans (chapter_view, xl_zoom)
+          SELECT
+            e.country, e.region, e.city,
+            COUNT(DISTINCT e.visitor_id) as art_viewers
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
+          WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
+            AND e.country IS NOT NULL
+            AND e.source = 'js'
+            AND e.event_type IN ('chapter_view', 'xl_zoom')
+            ${qualify(botClause)}
+            ${qualify(chardonClause)}
+            ${qualify(ipClause)}
+          GROUP BY e.country, e.region, e.city
+        )
+        GROUP BY country, region, city
+      ),
+      base AS (
+        SELECT
+          v.country,
+          v.region,
+          v.city,
+          v.visitors,
+          COALESCE(a.art_viewers, 0) as art_viewers
+        FROM site_base v
+        LEFT JOIN art_base a
+          ON COALESCE(a.country, '') = COALESCE(v.country, '')
+         AND COALESCE(a.region, '') = COALESCE(v.region, '')
+         AND COALESCE(a.city, '') = COALESCE(v.city, '')
+
+        UNION ALL
+
+        SELECT
+          a.country,
+          a.region,
+          a.city,
+          0 as visitors,
+          a.art_viewers
+        FROM art_base a
+        WHERE NOT EXISTS (
+          SELECT 1
+          FROM site_base v
+          WHERE COALESCE(v.country, '') = COALESCE(a.country, '')
+            AND COALESCE(v.region, '') = COALESCE(a.region, '')
+            AND COALESCE(v.city, '') = COALESCE(a.city, '')
+        )
+      ),
+      top_visitors AS (
+        SELECT * FROM base
+        ORDER BY visitors DESC, country, region, city
+        LIMIT 200
+      ),
+      top_art AS (
+        SELECT * FROM base
+        WHERE art_viewers > 0
+        ORDER BY art_viewers DESC, country, region, city
+        LIMIT 500
+      )
+      SELECT * FROM top_visitors
+      UNION
+      SELECT * FROM top_art
     `;
     return await env.DB.prepare(geoQuery).all();
   } catch (e) {
@@ -2668,10 +2791,40 @@ async function getTopPages(env, filters) {
         ) p
         WHERE raw_page IS NOT NULL
           AND LOWER(raw_page) NOT LIKE 'http%'
+      ),
+      hardened AS (
+        SELECT
+          CASE
+            WHEN SUBSTR(raw_page, 1, 1) = '/'
+              THEN raw_page
+            ELSE '/' || raw_page
+          END AS page_path,
+          COUNT(*) AS hardened_views
+        FROM (
+          SELECT
+            COALESCE(
+              NULLIF(e.page, ''),
+              CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
+            ) AS raw_page
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
+          WHERE ${where}
+            ${qualify(ipClause)}
+            ${qualify(safeBotClause)}
+            ${qualify(chardonClause)}
+            AND ${notCacheWarmer("e")}
+            AND COALESCE(e.is_bot,0) = 0
+            AND e.source = 'js'
+            AND e.event_type = 'qualified_chapter_view'
+        ) h
+        WHERE raw_page IS NOT NULL
+          AND LOWER(raw_page) NOT LIKE 'http%'
+        GROUP BY page_path
       )
-      SELECT page_path, COUNT(*) AS views
-      FROM normalized
-      GROUP BY page_path
+      SELECT n.page_path, COUNT(*) AS views, COALESCE(MAX(h.hardened_views), 0) AS hardened_views
+      FROM normalized n
+      LEFT JOIN hardened h ON h.page_path = n.page_path
+      GROUP BY n.page_path
       ORDER BY views DESC
       LIMIT 25
     `;
@@ -2878,10 +3031,6 @@ async function getEntryAnalysis(env, filters) {
             WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
             ELSE '/' || raw_page
           END AS page_path,
-          CASE
-            WHEN e.source = 'pixel' THEN 'P'
-            ELSE 'J'
-          END AS source_kind,
           e.referer AS referrer,
           e.ts
         FROM (
@@ -2891,7 +3040,6 @@ async function getEntryAnalysis(env, filters) {
             e.visitor_id,
             e.ip_hash,
             e.ip,
-            e.source,
             e.referer,
             e.ts,
             COALESCE(NULLIF(e.page, ''), CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END) AS raw_page
@@ -2902,10 +3050,7 @@ async function getEntryAnalysis(env, filters) {
             ${qualify(safeBotClause)}
             ${qualify(chardonClause)}
             AND COALESCE(e.is_bot,0) = 0
-            AND (
-              (e.source = 'js' AND e.event_type = 'page_view')
-              OR (e.source = 'pixel' AND e.event_type = 'page_pixel')
-            )
+            AND e.source = 'js'
         ) e
         WHERE raw_page IS NOT NULL
           AND LOWER(raw_page) NOT LIKE 'http%'
@@ -2914,7 +3059,6 @@ async function getEntryAnalysis(env, filters) {
         SELECT
           session_key,
           page_path,
-          source_kind,
           referrer,
           ROW_NUMBER() OVER (PARTITION BY session_key ORDER BY ts ASC) AS rn
         FROM base_events
@@ -2928,10 +3072,37 @@ async function getEntryAnalysis(env, filters) {
           AND referrer != 'unknown'
           AND referrer != 'direct'
           AND referrer NOT LIKE '%k4studios.com%'
+      ),
+      hardened AS (
+        SELECT
+          CASE
+            WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
+            ELSE '/' || raw_page
+          END AS page_path,
+          COUNT(*) AS hardened_views
+        FROM (
+          SELECT
+            COALESCE(
+              NULLIF(e.page, ''),
+              CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
+            ) AS raw_page
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
+          WHERE ${where}
+            ${qualify(ipClause)}
+            ${qualify(safeBotClause)}
+            ${qualify(chardonClause)}
+            AND ${notCacheWarmer("e")}
+            AND COALESCE(e.is_bot,0) = 0
+            AND e.source = 'js'
+            AND e.event_type = 'qualified_chapter_view'
+        ) h
+        WHERE raw_page IS NOT NULL
+          AND LOWER(raw_page) NOT LIKE 'http%'
+        GROUP BY page_path
       )
       SELECT
         fp.page_path,
-        fp.source_kind,
         CASE
           WHEN COALESCE(ser.referrer, fp.referrer) IS NULL OR COALESCE(ser.referrer, fp.referrer) = '' OR COALESCE(ser.referrer, fp.referrer) = 'unknown' OR COALESCE(ser.referrer, fp.referrer) = 'direct' THEN 'direct'
           WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%images.google.%' OR COALESCE(ser.referrer, fp.referrer) LIKE '%google.%/imgres%' THEN 'google_images'
@@ -2948,11 +3119,13 @@ async function getEntryAnalysis(env, filters) {
           WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%k4studios.com%' THEN 'internal'
           ELSE 'unattributed'
         END AS ref_source,
-        COUNT(DISTINCT fp.session_key) AS sessions
+        COUNT(DISTINCT fp.session_key) AS sessions,
+        COALESCE(MAX(h.hardened_views), 0) AS hardened_views
       FROM first_pages fp
       LEFT JOIN session_ext_ref ser ON ser.session_key = fp.session_key AND ser.rn = 1
+      LEFT JOIN hardened h ON h.page_path = fp.page_path
       WHERE fp.rn = 1
-      GROUP BY fp.page_path, fp.source_kind, ref_source
+      GROUP BY fp.page_path, ref_source
       ORDER BY sessions DESC
       LIMIT 25
     `;
@@ -3221,94 +3394,25 @@ __name(getExitAnalysis, "getExitAnalysis");
 __name2(getExitAnalysis, "getExitAnalysis");
 async function getEdgeEvents(env, filters) {
   try {
-    const { dateClause, yesterday, days, hideBots, ipClause, botClause, chardonClause } = filters || {};
+    const { dateClause, yesterday, days } = filters || {};
     const d = Math.max(1, Math.min(parseInt(days || "1", 10) || 1, 31));
-    const qualify = /* @__PURE__ */ __name2(
-      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region"),
-      "qualify"
-    );
-    const notBotWhenHide = hideBots ? `AND COALESCE(e.is_bot, 0) = 0` : "";
-    const notProbeNoiseWhenHide = hideBots ? `AND NOT (
-          e.target_id LIKE '/Galleries/%/i-%'
-          AND INSTR(e.target_id, '/i-') > 0
-          AND EXISTS (
-            SELECT 1
-            FROM probe_noise_families pnf
-            WHERE pnf.path_prefix = SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1)
-          )
-        )` : "";
     const dateWhere = dateClause ? `${String(dateClause).replace(/\bts\b/g, "e.ts")}` : yesterday ? `date(e.ts, '-5 hours') = date('now', '-5 hours', '-1 day')` : `e.ts > datetime('now', '-${d} day')`;
     const eventsQuery = `
-      WITH probe_noise_families AS (
-        SELECT
-          SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1) as path_prefix
-        FROM classified_events e
-        WHERE ${dateWhere}
-          AND e.source = 'edge'
-          AND e.event_type = '404'
-          AND e.target_id LIKE '/Galleries/%/i-%'
-          AND INSTR(e.target_id, '/i-') > 0
-        GROUP BY path_prefix
-        HAVING COUNT(DISTINCT e.ip_hash) >= 10
-      )
       SELECT
         e.event_type,
         e.target_id as path,
-        COUNT(*) as hits,
-        SUM(CASE WHEN COALESCE(e.is_bot, 0) = 1 THEN 1 ELSE 0 END) as bot_hits,
-        SUM(CASE WHEN COALESCE(e.is_bot, 0) = 0 THEN 1 ELSE 0 END) as human_hits,
-        CASE
-          WHEN e.target_id LIKE '/Galleries/%/i-%'
-            AND INSTR(e.target_id, '/i-') > 0
-            AND EXISTS (
-              SELECT 1
-              FROM probe_noise_families pnf
-              WHERE pnf.path_prefix = SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1)
-            ) THEN 1
-          ELSE 0
-        END as is_probe_noise,
-        CASE
-          WHEN (
-            e.target_id LIKE '/Galleries/%/i-%'
-            AND INSTR(e.target_id, '/i-') > 0
-            AND EXISTS (
-              SELECT 1
-              FROM probe_noise_families pnf
-              WHERE pnf.path_prefix = SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1)
-            )
-          ) THEN 'probe'
-          WHEN SUM(CASE WHEN COALESCE(e.is_bot, 0) = 1 THEN 1 ELSE 0 END) > 0
-            AND SUM(CASE WHEN COALESCE(e.is_bot, 0) = 0 THEN 1 ELSE 0 END) > 0 THEN 'mixed'
-          WHEN SUM(CASE WHEN COALESCE(e.is_bot, 0) = 1 THEN 1 ELSE 0 END) > 0 THEN 'bot'
-          ELSE 'human'
-        END as bot_state
+        e.is_bot,
+        COUNT(*) as hits
       FROM classified_events e
       WHERE ${dateWhere}
         AND e.source = 'edge'
-        ${qualify(ipClause)}
-        ${qualify(botClause)}
-        ${qualify(chardonClause)}
-        ${notBotWhenHide}
-        ${notProbeNoiseWhenHide}
         AND e.event_type IN ('301','302','404','410','smart404_redirect','smart404_gone','smart404_fallback','smart404_homepage')
-      GROUP BY e.event_type, e.target_id
+      GROUP BY e.event_type, e.target_id, e.is_bot
       ORDER BY hits DESC
       LIMIT 60
     `;
     const edgeEvents = await env.DB.prepare(eventsQuery).all();
     const summaryQuery = `
-      WITH probe_noise_families AS (
-        SELECT
-          SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1) as path_prefix
-        FROM classified_events e
-        WHERE ${dateWhere}
-          AND e.source = 'edge'
-          AND e.event_type = '404'
-          AND e.target_id LIKE '/Galleries/%/i-%'
-          AND INSTR(e.target_id, '/i-') > 0
-        GROUP BY path_prefix
-        HAVING COUNT(DISTINCT e.ip_hash) >= 10
-      )
       SELECT
         e.event_type,
         COUNT(*) as total,
@@ -3317,72 +3421,16 @@ async function getEdgeEvents(env, filters) {
       FROM classified_events e
       WHERE ${dateWhere}
         AND e.source = 'edge'
-        ${qualify(ipClause)}
-        ${qualify(botClause)}
-        ${qualify(chardonClause)}
-        ${notBotWhenHide}
-        ${notProbeNoiseWhenHide}
         AND e.event_type IN ('301','302','404','410','smart404_redirect','smart404_gone','smart404_fallback','smart404_homepage')
       GROUP BY e.event_type
       ORDER BY total DESC
     `;
     const edgeSummaryResult = await env.DB.prepare(summaryQuery).all();
     const edgeSummary = edgeSummaryResult?.results || [];
-    let edgeSuppression = { hidden_total: 0, hidden_bot: 0, hidden_probe_noise: 0 };
-    if (hideBots) {
-      const suppressionQuery = `
-        WITH probe_noise_families AS (
-          SELECT
-            SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1) as path_prefix
-          FROM classified_events e
-          WHERE ${dateWhere}
-            AND e.source = 'edge'
-            AND e.event_type = '404'
-            AND e.target_id LIKE '/Galleries/%/i-%'
-            AND INSTR(e.target_id, '/i-') > 0
-          GROUP BY path_prefix
-          HAVING COUNT(DISTINCT e.ip_hash) >= 10
-        )
-        SELECT
-          COUNT(*) as hidden_total,
-          SUM(CASE WHEN COALESCE(e.is_bot, 0) = 1 THEN 1 ELSE 0 END) as hidden_bot,
-          SUM(CASE
-            WHEN (
-              e.target_id LIKE '/Galleries/%/i-%'
-              AND INSTR(e.target_id, '/i-') > 0
-              AND EXISTS (
-                SELECT 1
-                FROM probe_noise_families pnf
-                WHERE pnf.path_prefix = SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1)
-              )
-            ) THEN 1 ELSE 0 END
-          ) as hidden_probe_noise
-        FROM classified_events e
-        WHERE ${dateWhere}
-          AND e.source = 'edge'
-          ${qualify(ipClause)}
-          ${qualify(botClause)}
-          ${qualify(chardonClause)}
-          AND e.event_type IN ('301','302','404','410','smart404_redirect','smart404_gone','smart404_fallback','smart404_homepage')
-          AND (
-            COALESCE(e.is_bot, 0) = 1
-            OR (
-              e.target_id LIKE '/Galleries/%/i-%'
-              AND INSTR(e.target_id, '/i-') > 0
-              AND EXISTS (
-                SELECT 1
-                FROM probe_noise_families pnf
-                WHERE pnf.path_prefix = SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1)
-              )
-            )
-          )
-      `;
-      edgeSuppression = (await env.DB.prepare(suppressionQuery).first()) || edgeSuppression;
-    }
-    return { edgeEvents, edgeSummary, edgeSuppression };
+    return { edgeEvents, edgeSummary };
   } catch (e) {
     console.log("Edge events query failed:", e.message);
-    return { edgeEvents: { results: [] }, edgeSummary: [], edgeSuppression: { hidden_total: 0, hidden_bot: 0, hidden_probe_noise: 0 } };
+    return { edgeEvents: { results: [] }, edgeSummary: [] };
   }
 }
 __name(getEdgeEvents, "getEdgeEvents");
@@ -3772,7 +3820,6 @@ function buildDashboardData(queryResults, filterParams) {
     exitByCategory,
     edgeEvents,
     edgeSummary,
-    edgeSuppression,
     artViewsSummary,
     artViewsByType,
     topArtViews,
@@ -3841,7 +3888,6 @@ function buildDashboardData(queryResults, filterParams) {
     hideChardon,
     edgeEvents: edgeEvents?.results || [],
     edgeSummary: edgeSummary || [],
-    edgeSuppression: edgeSuppression || { hidden_total: 0, hidden_bot: 0, hidden_probe_noise: 0 },
     entryPages: entryPages?.results || [],
     entryRefCounts: entryRefCountsObj || {},
     imagePageViewsFromEvents,
@@ -3922,7 +3968,6 @@ function renderDashboard({
   hideChardon,
   edgeEvents,
   edgeSummary,
-  edgeSuppression,
   entryPages,
   entryRefCounts,
   imagePageViewsFromEvents,
@@ -5079,7 +5124,7 @@ function renderDashboard({
   <div class="section" style="max-width:1780px;margin:0 auto 18px;">
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
       <h3 style="margin:0;">Sister Pixel Image Access Overview</h3>
-      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Per-image breakout from <code>raw_events</code> for <code>event_type='state_pixel'</code>. Includes all <code>source_layer</code> values (e.g. Sister Pixel + Zoom Pixel). This is a test mirror of the Art Views \u2192 \u201CImage Access Overview\u201D concept, but powered by pixels (not JS).</div></span>
+      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Per-image breakout from pixel exposure rows, but only for images that also earned at least one hardened JS <code>qualified_chapter_view</code>. Keeps raw sister-pixel exposure counts while defaulting this panel to likely real human image views.</div></span>
       <span style="margin-left:auto;font-size:12px;color:#888;">Rows: <strong style="color:#fff;">${spPixelImageAccess.length || 0}</strong></span>
     </div>
     <div style="margin-top:10px;">
@@ -5107,6 +5152,8 @@ function renderDashboard({
     const exposures = Number(r.exposures || 0);
     const zoomViews = Number(r.zoom_views || 0);
     const viewers = Number(r.viewers || 0);
+    const hardenedViews = Number(r.hardened_views || 0);
+    const hardenedViewers = Number(r.hardened_viewers || 0);
     const loc = fmtLoc(r.city, r.region, r.country);
     const locationLabels = String(r.location_labels || "").trim();
     const locDisplay = locationLabels || loc;
@@ -5183,6 +5230,7 @@ function renderDashboard({
     }
     // P badge (lime green) for pixel view
     const pBadge = '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:#84cc1622;color:#84cc16;font-size:10px;font-weight:bold;border:1px solid #84cc1655;" title="Pixel View">P</span>';
+    const hBadge = hardenedViews > 0 ? '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:#38bdf822;color:#38bdf8;font-size:10px;font-weight:bold;border:1px solid #38bdf855;" title="Hardened image view confirmed. Qualified views: ' + hardenedViews + ' / viewers: ' + hardenedViewers + '">H</span>' : '';
     // Z column: numeric zoom count with the same cyan Z styling
     const zDisplay = zoomViews === 0
       ? '<span style="display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:20px;padding:0 6px;border-radius:3px;background:#6b728022;color:#6b7280;font-size:10px;font-weight:bold;border:1px solid #6b728055;" title="Zoom views: 0 / ' + exposures + '">0</span>'
@@ -5195,10 +5243,10 @@ function renderDashboard({
       </div>
       <div style="display:flex;flex-direction:column;gap:4px;min-width:0;">
         <div style="display:flex;align-items:center;gap:6px;min-width:0;">
-          <div style="flex:0 0 auto;display:flex;gap:4px;">${pBadge}</div>
+          <div style="flex:0 0 auto;display:flex;gap:4px;">${hBadge}${pBadge}</div>
           <a href="${imageUrl}" target="_blank" rel="noopener" style="color:#84cc16;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;" title="${imageId}">${imageId || "(missing)"}</a>
         </div>
-        <div style="font-size:11px;color:#6b7280;">pixel</div>
+        <div style="font-size:11px;color:#6b7280;">${hardenedViews > 0 ? 'hardened + pixel' : 'pixel'}</div>
       </div>
       <div style="display:flex;align-items:center;gap:6px;min-width:0;overflow:hidden;">
         <span style="font-size:14px;flex-shrink:0;">\u{1F4C1}</span>
@@ -6205,9 +6253,8 @@ function renderDashboard({
     };
     const color = typeColors[s2.event_type] || "#888";
     const label = typeLabels[s2.event_type] || s2.event_type;
-    return `<span style="background: ${color}22; color: ${color}; padding: 4px 10px; border-radius: 12px; font-size: 11px;">${label}: ${s2.total} <span style="opacity:0.7">${hideBots ? `(\u{1F464}${s2.human_hits})` : `(\u{1F916}${s2.bot_hits} \u{1F464}${s2.human_hits})`}</span></span>`;
+    return `<span style="background: ${color}22; color: ${color}; padding: 4px 10px; border-radius: 12px; font-size: 11px;">${label}: ${s2.total} <span style="opacity:0.7">(\u{1F916}${s2.bot_hits} \u{1F464}${s2.human_hits})</span></span>`;
   }).join("")}
-        ${hideBots && Number(edgeSuppression?.hidden_total || 0) > 0 ? `<span style="background:#3f3f4622;color:#a1a1aa;padding:4px 10px;border-radius:12px;font-size:11px;">Hidden: ${Number(edgeSuppression.hidden_total || 0)} <span style="opacity:0.7;">(\u{1F916}${Number(edgeSuppression.hidden_bot || 0)} \u{1F578}${Number(edgeSuppression.hidden_probe_noise || 0)})</span></span>` : ""}
       </div>
       ` : ""}
       ${edgeEvents.length > 0 ? `
@@ -6236,11 +6283,9 @@ function renderDashboard({
     const color = eventColors[e.event_type] || "#888";
     const label = eventLabels2[e.event_type] || e.event_type;
     const shortPath = e.path && e.path.length > 40 ? "..." + e.path.slice(-37) : e.path || "unknown";
-        const botState = e.bot_state || (Number(e.bot_hits || 0) > 0 && Number(e.human_hits || 0) > 0 ? "mixed" : Number(e.bot_hits || 0) > 0 ? "bot" : "human");
-        const isProbeNoise = Number(e.is_probe_noise || 0) === 1 || botState === "probe";
-        const botIcon = isProbeNoise ? "\u{1F578}" : botState === "mixed" ? "\u{1F916}\u{1F464}" : botState === "bot" ? "\u{1F916}" : "\u{1F464}";
+    const botIcon = e.is_bot ? "\u{1F916}" : "\u{1F464}";
     return `
-          <div class="edge-row" data-hits="${e.hits || 0}" data-bot="${botState}" data-type="${label}" data-path="${e.path || ""}" style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
+          <div class="edge-row" data-hits="${e.hits || 0}" data-bot="${e.is_bot ? 1 : 0}" data-type="${label}" data-path="${e.path || ""}" style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">
             <span style="background: ${color}22; color: ${color}; padding: 2px 8px; border-radius: 8px; font-size: 10px; flex-shrink: 0;">${label}</span>
             <span style="flex: 1; color: #ccc; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${e.path || ""}">${shortPath}</span>
             <span style="font-size: 11px;">${botIcon}</span>
@@ -6263,13 +6308,15 @@ function renderDashboard({
     const rowsHtml = pages.map((p, i) => {
       const path = String(p.page_path || "/");
       const isChapter = /\/i-[A-Za-z0-9]+$/.test(path);
+      const isHardened = isChapter && Number(p.hardened_views || 0) > 0;
       const isGallery = galleryPaths.has(path);
       const color = isChapter ? "#84cc16" : isGallery ? "#eab308" : "#4a9eff";
       const shortPath = path.length > 32 ? "..." + path.slice(-29) : path;
       const count = p.views || 0;
+      const hardenedBadge = isHardened ? '<span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#38bdf822;color:#38bdf8;font-size:10px;font-weight:bold;border:1px solid #38bdf855;flex:0 0 auto;" title="Hardened image view confirmed">H</span>' : '';
       return `
           <div class="bar-row">
-            <a class="bar-label" href="https://www.k4studios.com${path}" target="_blank" title="${path}" style="color: ${color}; text-decoration: none;">${shortPath}</a>
+            <a class="bar-label" href="https://www.k4studios.com${path}" target="_blank" title="${path}" style="color: ${color}; text-decoration: none; display:flex; align-items:center; gap:6px; min-width:0;">${hardenedBadge}<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${shortPath}</span></a>
             <div class="bar-container">
               <div class="bar" style="width: ${(count / maxViews * 100).toFixed(1)}%; background: ${color};"></div>
             </div>
@@ -6290,15 +6337,15 @@ function renderDashboard({
         <table style="table-layout: fixed; width: 100%;">
           <colgroup>
             <col>
-            <col style="width: 32px;">
             <col style="width: 34px;">
             <col style="width: 46px;">
           </colgroup>
-          <tr><th style="padding-left:6px;padding-right:4px;">Page</th><th style="text-align:center;padding-left:4px;padding-right:4px;">S</th><th style="text-align:center;padding-left:4px;padding-right:4px;">F</th><th style="text-align:right;padding-left:4px;padding-right:4px;">Ses</th></tr>
+          <tr><th style="padding-left:6px;padding-right:4px;">Page</th><th style="text-align:center;padding-left:4px;padding-right:4px;">F</th><th style="text-align:right;padding-left:4px;padding-right:4px;">Ses</th></tr>
           ${entryPages.slice(0, 25).map((p) => {
     const rawPath = String(p.page_path || "/");
     const fullPath = rawPath.startsWith("/") ? rawPath : `/${rawPath}`;
     const isChapter = /\/i-[A-Za-z0-9]+$/.test(fullPath);
+            const isHardened = isChapter && Number(p.hardened_views || 0) > 0;
     const isGalleryLanding = !isChapter && GALLERY_LANDING_PATHS.includes(fullPath);
     const typeColor = isChapter ? "#84cc16" : isGalleryLanding ? "#eab308" : "#4a9eff";
     const shortPath = (() => {
@@ -6310,6 +6357,7 @@ function renderDashboard({
       return path.slice(0, startLen) + "..." + path.slice(-endLen);
     })();
     const pageIcon = isChapter ? "\u{1F5BC}\uFE0F" : isGalleryLanding ? "\u{1F4C1}" : "\u{1F4C4}";
+    const hardenedBadge = isHardened ? '<span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#38bdf822;color:#38bdf8;font-size:10px;font-weight:bold;border:1px solid #38bdf855;flex:0 0 auto;" title="Hardened image view confirmed">H</span>' : '';
     const refIcons = {
       google_search: "\u{1F50D}",
       google_images: "\u{1F5BC}\uFE0F",
@@ -6326,8 +6374,7 @@ function renderDashboard({
       unattributed: "\u{1F512}"
     };
     const refIcon = refIcons[p.ref_source] || "\u{1F512}";
-    const sourceKind = String(p.source_kind || "J").toUpperCase() === "P" ? "P" : "J";
-    return `<tr><td title="${fullPath}" style="color:${typeColor};padding-left:6px;padding-right:4px;"><span style="display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom;">${pageIcon} ${shortPath}</span></td><td title="${sourceKind === "P" ? "Pixel" : "JavaScript"}" style="text-align:center;padding-left:4px;padding-right:4px;color:${sourceKind === "P" ? "#f59e0b" : "#60a5fa"};font-weight:700;">${sourceKind}</td><td title="${p.ref_source}" style="text-align:center;padding-left:4px;padding-right:4px;">${refIcon}</td><td style="text-align:right;padding-left:4px;padding-right:4px;">${p.sessions}</td></tr>`;
+    return `<tr><td title="${fullPath}" style="color:${typeColor};padding-left:6px;padding-right:4px;"><span style="display:inline-flex;align-items:center;gap:6px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom;">${hardenedBadge}<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${pageIcon} ${shortPath}</span></span></td><td title="${p.ref_source}" style="text-align:center;padding-left:4px;padding-right:4px;">${refIcon}</td><td style="text-align:right;padding-left:4px;padding-right:4px;">${p.sessions}</td></tr>`;
   }).join("")}
         </table>
       </div>
@@ -6869,8 +6916,7 @@ function renderDashboard({
     for (var i = 0; i < rows.length; i++) {
       var r = rows[i];
       var hits = r.getAttribute('data-hits') || '0';
-      var botState = r.getAttribute('data-bot') || 'human';
-      var bot = botState === 'mixed' ? '\\uD83E\\uDD16\\uD83D\\uDC64' : (botState === 'bot' ? '\\uD83E\\uDD16' : '\\uD83D\\uDC64');
+      var bot = r.getAttribute('data-bot') === '1' ? '\\uD83E\\uDD16' : '\\uD83D\\uDC64';
       var type = r.getAttribute('data-type') || '';
       var path = r.getAttribute('data-path') || '';
       lines.push(hits + '\\t' + bot + '\\t' + type + '\\t' + path);
@@ -7154,7 +7200,7 @@ async function handleDashboardRequest(env, filters) {
     _tm('engagement', () => getEngagementDepth(env, { dateClause, ipClause, botClause, chardonClause })),
     _tm('entry', () => getEntryAnalysis(env, { dateClause, ipClause, botClause, chardonClause })),
     _tm('exit', () => getExitAnalysis(env, { dateClause, ipClause, botClause, chardonClause })),
-    _tm('edge', () => getEdgeEvents(env, { dateClause, yesterday, days, hideBots, ipClause, botClause, chardonClause })),
+    _tm('edge', () => getEdgeEvents(env, { dateClause, yesterday, days })),
     _tm('artViews', () => getArtViews(env, { dateClause, ipClause, botClause, chardonClause, artIpClause, baseDateClause, hideBotsPredicate, hideBots, selectedDate })),
     _tm('botIntel', () => getBotIntelligence(env)),
     _tm('periodTot', () => getPeriodTotals(env, { dateClause: rangeDateClause, botClause, chardonClause })),
@@ -7170,7 +7216,7 @@ async function handleDashboardRequest(env, filters) {
   const { themesClicked, cowboyJumps, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, botSessions, botPct } = engagementResult;
   const { entryPages, imagePageViewsFromEvents, imageEntrySessionsFromEvents, entryRefCounts } = entryAnalysisResult;
   const { exitPages, exitSummary, exitByCategory } = exitResult;
-  const { edgeEvents, edgeSummary, edgeSuppression } = edgeResult;
+  const { edgeEvents, edgeSummary } = edgeResult;
   const { artViewsSummary, artViewsByType, topArtViews, externalImageAccess, externalImageAccessTotal, externalReachGeo, externalReachSources, externalDailySummary, entryRefCountsObj, imageAccessOverview, viewerDepth, suppressionStats } = artViewsResult;
   const queryResults = {
     summary,
@@ -7211,7 +7257,6 @@ async function handleDashboardRequest(env, filters) {
     exitByCategory,
     edgeEvents,
     edgeSummary,
-    edgeSuppression,
     artViewsSummary,
     artViewsByType,
     topArtViews,
@@ -7715,10 +7760,6 @@ function calculateRiskScore(stats) {
     score += 2;
     rules.push("no_referrer_high_volume");
   }
-  if ((stats.malformed_404_probes || 0) >= 10) {
-    score += 5;
-    rules.push("malformed_404_probe_burst");
-  }
   if (stats.is_datacenter) {
     score += 1;
     rules.push("datacenter_ip");
@@ -8008,14 +8049,6 @@ async function updateBotIntelligence(env) {
             100.0 * SUM(CASE WHEN event_type IN ('gallery', 'gallery_view') THEN 1 ELSE 0 END) / COUNT(*),
             1
           ) as gallery_pct,
-          SUM(CASE
-            WHEN source = 'edge'
-              AND event_type = '404'
-              AND target_id IS NOT NULL
-              AND target_id LIKE '%/i-%'
-            THEN 1
-            ELSE 0
-          END) as malformed_404_probes,
           MAX(CASE WHEN event_type = 'verified_bot' THEN 1 ELSE 0 END) as is_verified_bot,
           MAX(is_bot) as is_flagged_bot
         FROM base
@@ -8092,7 +8125,6 @@ async function updateBotIntelligence(env) {
         requests_per_hour: requestsPerHour,
         image_page_pct: Number(stats.image_page_pct || 0),
         gallery_pct: Number(stats.gallery_pct || 0),
-        malformed_404_probes: Number(stats.malformed_404_probes || 0),
         has_referrer: Boolean(stats.has_referrer),
         is_datacenter: isDatacenter,
         is_verified_bot: isVerifiedBot,

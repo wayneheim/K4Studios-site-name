@@ -2142,7 +2142,7 @@ export const galleryData = [
     ],
 
     "story": "Painterly Photograph of The Grand Tetons and Bison (Buffalo). Tetons are the iconic rugged mountains in Jackson Hole Wyoming. Painterly landscape mountain photography. © Wayne Heim",
-    "notes": "",
+    "notes": "Cool shot of the Tetons",
     "rating": 5,
 
     "galleries": [
@@ -2160,7 +2160,8 @@ export const galleryData = [
     "srcL": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/MQMzHDGhQMGvW4HgqGzwKzBwxMrFxjKGJ6pKPGSTk/L/Landscape-Buffy-ws-L.jpg",
     "srcM": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/NL9DWXqLsDzdJRKPK7Pxzzf3hvm98X4DqSp7GwSVg/M/Landscape-Buffy-ws-M.jpg",
     "srcS": "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/1/Mq6jCzD8V6Hgm3D8BCWwfLzHnGG54BwWThbLh3dLg/S/Landscape-Buffy-ws-S.jpg",
-    yearCreated: "2024"
+    yearCreated: "2024",
+    contentSource: "human"
   },
   {
     "id": "i-VGxwS5N",

@@ -1,145 +1,123 @@
 export const facingHistoryStory = [
 
-  // 0: INTRO THESIS (no heading — sits under the H1 from landingstones)
+  // 1: INTRO
   {
+    title: "Storied & Historically Themed Fine Art Photography",
+    subhead: "Facing History — Embrace the Past. Live the Story.",
     paragraphs: [
-      "Legends and icons rarely stand alone. They rise on the shoulders of countless unnamed people whose sacrifices, choices, and quiet acts of duty made the legend possible.",
-      "To understand the icon, you have to explore the structure beneath it.",
-      "Facing History expands the visual story of the great time-zones of American history — revealing the human architecture beneath the legends of the American West, the Civil War, World War II, and the Roaring Twenties."
+      "Every photograph is a marker — a record of a moment, a life, a choice that existed before us. Facing History is a collection of those markers. It spans the American frontier, the Civil War, World War II, and the Roaring Twenties — eras whose people, struggles, and consequences built the framework the modern world stands on. Each image here functions as a tombstone of sorts: not an ending, but a testament to a story that refuses to disappear.",
+      "These works are not casual recreations or costume-driven portraits. They are story-built studies shaped with painterly craft, researched authenticity, and the disciplined eye of a medical illustrator turned cinematic storyteller. The work begins with understanding — the real lives, the real stakes, the choices that built the framework legend was later draped over. Only from that foundation does interpretation follow.",
+      "Many portraits function as <strong>One-Image Movies™</strong>—single frames constructed with the emotional gravity of a complete story arc. A breath before a decision. A pause weighted with consequence. These are moments still in motion, inviting the viewer to step inside the narrative.",
+      "For collectors of painterly fine art, historically themed portraiture, and story-rich reenactment photography, Facing History offers a curated journey into worlds that feel both familiar and newly alive."
     ]
   },
 
-  // >>> STORY SLIDER + SEEING ESSAYS INSERT AFTER INDEX 0 <<<
+  // >>> STORY SLIDER INSERT POINT <<<
 
-  // 1: THE STORY BENEATH THE STORY (H2)
+  // 2: UNDERSTANDING BEFORE INTERPRETATION
   {
-    title: "The Story Beneath the Story",
+    subhead: "Before the Legend",
     paragraphs: [
-      "History tends to remember the loudest moments — the gunfight, the charge, the victory speech, the roaring celebration. But the emotional truth of an era often lives somewhere quieter: in hesitation, in resolve, in the private decisions made before the moment history chose to record.",
-      "Facing History looks toward those spaces.",
-      "Each image begins with historical grounding but moves toward something more intimate — the human tension surrounding the moment. A glance across a doorway. A soldier steadying his hands before entering a field tent. A woman holding together a homestead while the legend rode into town.",
-      "The figures in these photographs are not meant to illustrate history from a distance. They are meant to bring viewers close enough to feel the moment before and the moment after — where the true gravity of a story often lives."
+      "Telling these stories through photography is unusual. Historically, only painters and filmmakers have gone this deep—into the lives behind the American frontier, the weight carried by Civil War soldiers, the quiet courage of a generation at war, the contradictions of an era that danced on the edge of collapse. The real people. The real struggles. The choices that shaped what came after.",
+      "But you cannot reinterpret a story you have never understood. Picasso mastered realism before he reshaped form. Leonardo studied anatomy before he reimagined flight. The same principle applies here: before the legend came the lives that built it.",
+      "That conviction drives every image in Facing History. The work does not begin with myth or period spectacle. It begins with the individual—and earns the mythology from there."
     ]
   },
 
-  // 2: ONE-IMAGE MOVIES (H2)
+  // 3: WESTERN FRONTIER
   {
-    title: "One-Image Movies™",
-    paragraphs: [
-      "Many works in Facing History are constructed as One-Image Movies™ — photographs designed to carry the emotional gravity of an entire story arc inside a single frame.",
-      "Something has just happened. Or something is about to.",
-      "The photograph offers only the hinge moment — the pause where possibility, consequence, and human intuition collide.",
-      "The rest of the story belongs to the viewer.",
-      "When a viewer steps into that moment, the image becomes more than documentation or illustration. It becomes a shared narrative space where memory, imagination, and lived experience complete the story in a different way for every person who encounters it.",
-      "In that sense, the image is not the end of the story. It is the beginning of a conversation."
-    ]
-  },
-
-  // 3: TIME-ZONES OF AMERICAN HISTORY (H2)
-  {
-    title: "Time-Zones of American History",
-    paragraphs: [
-      "The worlds explored in Facing History span more than a century of American life. Each era carries its own tensions, mythology, and emotional landscape — yet all share the same underlying truth: legends are rarely built alone.",
-      "These galleries move through four distinct time-zones of American history, each revealing the human structure beneath the stories we think we already know."
-    ]
-  },
-
-  // 4: THE AMERICAN WEST (H3 — sub-section of Time-Zones)
-  {
-    subhead: "Time-Zone: The American West",
-    tagline: "Grit, Myth & the Quiet Pulse of the Frontier",
-    paragraphs: [
-      "The American West is one of the most mythologized landscapes in history. Gunfighters, cowboys, cattle drives, and frontier towns have long defined the visual language of Western art.",
-      "Yet the real frontier ran on quieter forces — intuition, restraint, endurance, and the everyday labor that kept a fragile world alive.",
-      "These painterly Western photographs explore the emotional architecture beneath the legend. The moment before the draw. The pause before a stranger steps through the doorway. The weight carried by those who rarely made it into the dime novels.",
-      "Built through cinematic composition and narrative restraint, the Western galleries reveal a frontier shaped not only by action, but by the silence surrounding it."
+    subhead: "The Western Frontier — Grit, Myth & the Quiet Pulse of the West",
+    paragraphs: [      "Here, 'Western art' refers to the American West — frontier life, cowboys, and 19th-century Western history — not European or Western civilization art traditions.",      "Wayne Heim’s painterly Western photography explores the frontier not as legend alone, but as psychology. These Western cowboy portraits are built on restraint, texture, and cinematic stillness—old West imagery shaped by silence as much as action.",
+      "Rather than posing novelty or nostalgia, the work focuses on presence: posture, gaze, weathered detail, and the emotional weight carried by those who inhabit the myth of the American West.",
+      "Many Western portraits follow the <strong>One-Image Movie™</strong> architecture—the moment before the draw, the breath after the choice, the tension between strangers measuring resolve. Light becomes subtext; shadow becomes motive.",
+      "Drawing from the lineage of Remington, Catlin, Wyeth, and Rockwell, Wayne honors Western tradition while pushing beyond cliché, creating painterly cowboy art grounded in humanity rather than trope.",
+      "Collectors seeking Western fine art prints, cowboy artwork, and historically inspired Western photography will find imagery built with subtle tension, emotional depth, and mythic restraint."
     ],
     list: [
-      "Explore Western Fine Art Photography →"
+      "Explore Western Fine Art Photography — A frontier shaped by mood and story"
     ]
   },
 
-  // 5: THE CIVIL WAR (H3)
+  // 4: CIVIL WAR
   {
-    subhead: "Time-Zone: The Civil War",
-    tagline: "Resolve, Division & the Weight of a Nation",
+    subhead: "Civil War Portraits — Valor, Resolve & the Weight of a Nation",
     paragraphs: [
-      "History often remembers the Civil War through its generals and turning points. Yet the war was carried by thousands of private struggles — soldiers writing letters they could not fully finish, surgeons working through candlelight, and families waiting for news that might never come.",
-      "The Civil War portraits within Facing History live inside those quieter spaces.",
-      "Smoke, fatigue, stillness, and expression replace spectacle. The emotional center shifts from battlefield drama to the human hinge between endurance and consequence.",
-      "These works honor the era not by recreating its famous moments, but by revealing the unseen weight that made those moments real."
+      "Wayne’s Civil War portraits focus on the human cost of conflict rather than battlefield spectacle. Smoke, stillness, and expression replace action, creating painterly Civil War photography rooted in character and consequence.",
+      "Each portrait captures a single frame from an unwritten epic—the emotional hinge between what has been endured and what must follow. Posture becomes narrative. Shadow becomes memory.",
+      "Collectors of Civil War themed fine art photography will find works that honor courage, doubt, and sacrifice with restraint and psychological depth rather than reenactment excess."
     ],
     list: [
-      "Explore Civil War Portraits →"
+      "Explore Civil War Portraits — History preserved through light and silence"
     ]
   },
 
-  // 6: WORLD WAR II (H3)
+  // 5: WWII
   {
-    subhead: "Time-Zone: World War II",
-    tagline: "Brotherhood, Sacrifice & Shared Courage",
+    subhead: "WWII Portraits — Sacrifice, Brotherhood & the Human Heart in Wartime",
     paragraphs: [
-      "By the time history reaches World War II, the emotional architecture changes.",
-      "Courage becomes collective.",
-      "The war was carried not by isolated heroes, but by the quiet bond between people who depended on each other for survival. A hand on a shoulder. A glance across machinery. The silent agreement between soldiers who know what comes next.",
-      "These painterly wartime portraits explore that human proximity. Mud, fatigue, and camaraderie become part of the emotional language of the frame.",
-      "The result is historically grounded imagery where the true subject is often not the war itself, but the human connection that made enduring it possible."
+      "The WWII series moves beyond documentation into story-driven wartime portraiture. Mud, machinery, fatigue, and quiet exchanges form the emotional language of these painterly WWII photographs.",
+      "Each image holds the weight of an unseen film—intentional light, deliberate stillness, and gestures that speak louder than action. These portraits meditate on courage, fear, camaraderie, and survival.",
+      "Ideal for collectors of WWII fine art photography, military history art, and historically themed imagery grounded in authenticity rather than spectacle."
     ],
     list: [
-      "Explore WWII Portraits →"
+      "Discover WWII Portraits — Stories carried in silence"
     ]
   },
 
-  // 7: THE ROARING TWENTIES (H3)
+  // 6: ROARING 20s
   {
-    subhead: "Time-Zone: The Roaring Twenties",
-    tagline: "Glamour, Defiance & Velvet Shadows",
+    subhead: "The Roaring 20s — Jazz, Rebellion & Velvet Shadows",
     paragraphs: [
-      "After the weight of war, the Roaring Twenties arrived wrapped in elegance, rebellion, and carefully worn confidence.",
-      "But glamour often hides its own scaffolding.",
-      "Behind the bootleggers, jazz clubs, and flapper dresses stood a generation grappling with the aftermath of war, prohibition, and a rapidly changing world.",
-      "The Jazz-Age portraits within Facing History explore that tension — where style meets consequence and charm meets danger.",
-      "These images feel less like historical reenactment and more like cinematic character studies: a glance before a deal is struck, a moment of doubt behind a confident smile, the silence after a door closes."
+      "The Roaring 20s was defined by contradiction—elegance and danger, glamour and grit. Wayne’s painterly Jazz-Age portraits explore that tension through light, wardrobe, posture, and mood.",
+      "Bootleggers slipping through smoke, flappers defying convention, and figures caught between excess and consequence form cinematic character studies rather than period tableaux.",
+      "Many images feel like stills from a noir yet to be filmed, implying full narratives just beyond the frame—light becomes intrigue, shadow becomes plotline.",
+      "Perfect for collectors drawn to Jazz-Age aesthetics, Gatsby-era mood, and historically themed fine art photography with psychological depth."
     ],
     list: [
-      "Step into the Roaring Twenties →"
+      "Step into the Roaring 20s — Glamour, tension, and story"
     ]
   },
 
-  // 8: THE ENGRAINED SERIES (H2)
+  // 7: ENGRAINED SERIES
   {
-    title: "The Engrained Series — When Story Meets Woodgrain",
+    subhead: "The Engrained Series — When Story Meets Woodgrain",
     paragraphs: [
-      "Select images within Facing History are presented as part of the Engrained Series — painterly photographs printed directly onto Baltic Birch using a five-layer UV process.",
-      "The natural wood grain becomes part of the image itself, moving through shadow and texture like memory moving through time.",
-      "For stories grounded in history, the material adds an additional layer of presence. The image feels less reproduced and more discovered — an artifact shaped by both craft and narrative."
+      "Select Facing History images are offered as part of the Engrained Series—painterly historical portraits printed directly onto Baltic Birch using a proprietary five-layer UV process.",
+      "Natural wood grain interacts with image texture, deepening atmosphere and reinforcing the sense of artifact, permanence, and lived history.",
+      "Many Engrained works intensify the <strong>One-Image Movie™</strong> experience, gaining tactile presence and mythic weight when story meets material."
     ],
     list: [
-      "View the Engrained Series →"
+      "View the Engrained Series — Stories etched in grain and light"
     ]
   },
 
-  // 9: WHY IT MATTERS (H2)
+  // 8: WHY IT MATTERS
   {
-    title: "Why Story-Driven Historical Photography Matters",
+    subhead: "Why Story-Driven Historical Photography Matters",
     paragraphs: [
-      "In an era increasingly filled with instant imagery and AI-generated visuals, the discipline of narrative photography becomes more important — not less.",
-      "A machine can reproduce appearances. It cannot uncover the human architecture behind a legend.",
-      "The works within Facing History are shaped through research, staging, collaboration with historical interpreters, and a long practice of narrative restraint. Each photograph is built to hold more than visual detail — it is built to hold emotional consequence.",
-      "Rooted in the pictorialist tradition and informed by a background in medical illustration, the work focuses on posture, structure, light, and psychological presence until a single image carries the narrative gravity of a scene.",
-      "The icon alone is an image. The story beneath it is what allows it to endure."
+      "In an era dominated by speed, automation, and AI-generated imagery, Facing History insists on the human hand. Every subject is real. Every detail is researched. Every shadow is earned.",
+      "Rooted in the Pictorialist tradition and shaped by Wayne’s background in medical illustration, these works sculpt emotion, tension, and restraint until a single image carries narrative gravity.",
+      "Painterly photography gives history its breath back—allowing truth and imagination to coexist while leaving space for reflection rather than instruction.",
+      "That is why it endures. Not for perfection, but for presence."
     ]
   },
 
-  // 10: BRING HISTORY HOME (H2)
+  // 9: COLLECTOR CTA
   {
-    title: "Bring History Home",
+    subhead: "Bring History Home",
     paragraphs: [
-      "Facing History offers more than historically themed photography. These works invite viewers to step into the emotional architecture behind the legends of American life.",
-      "Each image holds a moment suspended between what has happened and what will follow. When the viewer completes that story, the image becomes something more than a photograph — it becomes a shared act of storytelling between artist and viewer.",
-      "And the quiet truths inside those moments begin to reveal themselves.",
-      "<em>“We stand on the shoulders of those who came before us.”</em>",
-      "<em>— History speaks softly —<br/>carrying meaning for those willing to slow down, see, and listen.</em>"
+      "Facing History—Civil War resolve, Western myth, WWII resilience, Jazz-Age intrigue—offers more than themed photography. These are narrative artifacts crafted for collectors who want their walls to speak.",
+      "If you value mood, psychology, restraint, and story, there is a moment here waiting to live in your space."
+    ]
+  },
+
+  // 10: STORY VS AI
+  {
+    subhead: "Where Storytelling Triumphs Over Algorithms",
+    paragraphs: [
+      "Painterly photography stands apart from traditional photography and AI-generated imagery because it carries intent. These images are built, not synthesized.",
+      "AI can replicate appearance, but it cannot replicate empathy, research, lived presence, or the instinct to honor a moment. Wayne’s Facing History portraits are shaped from authenticity—real reenactors, real light, and decades of narrative craft.",
+      "For collectors who value story over novelty and meaning over convenience, Facing History offers fine art rooted in truth, imagination, and reverence."
     ]
   }
 ];

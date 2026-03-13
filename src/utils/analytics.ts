@@ -340,9 +340,9 @@ function shouldSkipDuplicateEvent(event: string, context: TrackContext, pagePath
   // Only dedupe events where accidental double-firing is common.
   // chapter_view: dedupe for the ENTIRE session (same image = 1 view per session)
   // gallery_view: dedupe for the ENTIRE session (same gallery = 1 view per session)
-  if (event !== 'chapter_view' && event !== 'gallery_view') return false;
+  if (event !== 'chapter_view' && event !== 'qualified_chapter_view' && event !== 'gallery_view') return false;
 
-  // gallery_view dedupes on galleryId; chapter_view dedupes on imageId
+  // gallery_view dedupes on galleryId; chapter-style events dedupe on imageId
   const dedupId = event === 'gallery_view'
     ? (context.galleryId || getGalleryIdFromPath(pagePath))
     : (context.imageId || getImageIdFromPath(pagePath));
@@ -352,7 +352,7 @@ function shouldSkipDuplicateEvent(event: string, context: TrackContext, pagePath
   const now = Date.now();
   const last = parseInt(sessionStorage.getItem(key) || '0', 10);
 
-  if (event === 'chapter_view' || event === 'gallery_view') {
+  if (event === 'chapter_view' || event === 'qualified_chapter_view' || event === 'gallery_view') {
     // Session-scoped: once viewed, don't log it again this session
     if (last) return true;
     sessionStorage.setItem(key, String(now));

@@ -318,7 +318,7 @@ export async function handleTrackRequest(request, env, ctx) {
     if (storedEventType === 'page_view') {
       // Dashboard queries expect `page_view.target_id` to be the canonical page path.
       targetId = normalizedPagePath;
-    } else if (storedEventType === 'chapter_view') {
+    } else if (storedEventType === 'chapter_view' || storedEventType === 'qualified_chapter_view') {
       targetId = image_id || inferImageIdFromPath(normalizedPagePath);
     } else if (storedEventType === 'xl_zoom') {
       targetId = image_id || inferImageIdFromPath(normalizedPagePath);

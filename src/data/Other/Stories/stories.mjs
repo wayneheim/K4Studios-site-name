@@ -5,6 +5,7 @@ import { storyMeta as demoShowMeta, storyData as demoShowData } from "./DemoShow
 import { storyMeta as outlawsBanditsMeta, storyData as outlawsBanditsData } from "./Outlaws-and-Bandits.mjs";
 import { storyMeta as costOfJourneyMeta, storyData as costOfJourneyData } from "./The-Cost-of-the-Journey.mjs";
 import { storyMeta as loreAndLegacyChapter1Meta, storyData as loreAndLegacyChapter1Data } from "./Lore-and-Legacy-Chapter-1.mjs";
+import { storyMeta as loreAndLegacyChapter2Meta, storyData as loreAndLegacyChapter2Data } from "./Lore-and-Legacy-Chapter-2.mjs";
 
 // Helper function to get the first non-ghost slide's thumbnail image
 function getFirstSlideThumbnail(storyData) {
@@ -17,6 +18,15 @@ function getFirstSlideThumbnail(storyData) {
 }
 
 export const stories = [
+  {
+    slug: "Lore-and-Legacy-Chapter-2",
+    title: loreAndLegacyChapter2Meta.showTitle,
+    date: loreAndLegacyChapter2Meta.savedAt ? new Date(loreAndLegacyChapter2Meta.savedAt).toISOString().split('T')[0] : "2026-03-13",
+    excerpt: loreAndLegacyChapter2Meta.description,
+    cover: getFirstSlideThumbnail(loreAndLegacyChapter2Data),
+    keywords: loreAndLegacyChapter2Meta.keywords,
+    alt: loreAndLegacyChapter2Meta.alt
+  },
   {
     slug: "Lore-and-Legacy-Chapter-1",
     title: loreAndLegacyChapter1Meta.showTitle,

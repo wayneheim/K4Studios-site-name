@@ -211,14 +211,14 @@ export const landingMetaDB = {
       "Western Fine Art Photography – Cowboy Portraits by Wayne Heim",
     ogDescription:
       "Painterly western cowboy portraits and frontier storytelling—Western fine art photography, Old West characters, and Native American portraits crafted with cinematic tone.",
-    ogImage: "https://www.k4studios.com/img/i-7Mzzbvp/l",
+    ogImage: "https://k4studios.com/img/i-7Mzzbvp/l",
     ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle:
       "Western Fine Art Photography – Cowboy Portraits",
     twitterDescription:
       "Painterly western portraits and fine art storytelling by Wayne Heim.",
-    twitterImage: "https://www.k4studios.com/img/i-7Mzzbvp/l",
+    twitterImage: "https://k4studios.com/img/i-7Mzzbvp/l",
     keywords: "Western cowboy portraits, cowboy photography, Western fine art photography, Old West photography, Native American portraits, frontier portraits, Wayne Heim",
   },
 

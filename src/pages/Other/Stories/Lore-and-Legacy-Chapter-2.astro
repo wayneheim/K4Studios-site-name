@@ -1,0 +1,48 @@
+---
+export const prerender = true;
+// Auto-generated Astro page for Lore-and-Legacy-Chapter-2
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PictureShowBase from "@/components/PictureShowBase.jsx";
+import { storyMeta, storyData } from "@/data/Other/Stories/Lore-and-Legacy-Chapter-2.mjs";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+const structuredDataJSON = getStructuredData({
+  type: "gallery",
+  data: {
+    title: storyMeta.showTitle,
+    description: storyMeta.description,
+    url: `https://www.k4studios.com/Other/Stories/Lore-and-Legacy-Chapter-2`,
+    keywords: storyMeta.keywords,
+    copyrightNotice: "© Wayne Heim, k4studios.com. All rights reserved."
+  },
+  images: storyData,
+  defaults: {
+    copyrightNotice: "© Wayne Heim, www.k4studios.com. All rights reserved.",
+    license: "https://www.k4studios.com/licensing",
+    acquireLicensePage: "https://www.k4studios.com/licensing",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://www.k4studios.com/"
+  }
+});
+---
+
+<BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON}>
+  <noscript>
+    <img
+      src="/images/stories/Lore-and-Legacy-Chapter-2-hero.jpg"
+      alt="${storyMeta.showTitle} – Cinematic Picture Show"
+      style="width:100%;height:auto;display:block;"
+    />
+  </noscript>
+  <PictureShowBase
+    client:load
+    rawData={storyData}
+    basePath="/Other/Stories/Lore-and-Legacy-Chapter-2"
+    titleBase={storyMeta.showTitle}
+    globalAudioSrc={storyMeta.globalAudioSrc || ""}
+    globalAudioMode={storyMeta.globalAudioMode || "score"}
+    introMeta={storyMeta.introMeta || {}}
+    outroMeta={storyMeta.outroMeta || {}}
+  />
+</BaseLayout>

@@ -522,6 +522,9 @@ export default function PictureShowStoryBuilder() {
     });
   }
 
+  // Counter to force-remount file inputs (guarantees same-name re-picks fire onChange)
+  const [fileInputKey, setFileInputKey] = useState(0);
+
   /* ---------- editing & reorder grid (combined) ---------- */
   const [slides, setSlides] = useState([]); // this includes ghost/closing once built
 
@@ -734,6 +737,7 @@ export default function PictureShowStoryBuilder() {
                 }}
               >{showMeta.globalAudioSrc ? "Replace" : "Add Audio"}</button>
               <input
+                key={`replace-audio-${fileInputKey}`}
                 id="replace-audio-input"
                 type="file"
                 accept="audio/*"
@@ -746,7 +750,7 @@ export default function PictureShowStoryBuilder() {
                     setShowMeta(m => ({ ...m, globalAudioSrc: String(file.name), globalAudioFile: file }));
                   }
                   setAudioPopup(false);
-                  e.target.value = ""; // reset input for future use
+                  setFileInputKey(k => k + 1);
                 }}
               />
             </div>
@@ -1076,20 +1080,18 @@ export default function PictureShowStoryBuilder() {
             <h4 style={{ fontWeight: 700, marginBottom: 6 }}>Background Audio</h4>
             {/* File picker */}
             <input
+              key={`step1-audio-${fileInputKey}`}
               type="file"
               accept="audio/*"
               onChange={(e) => {
                 const file = e.target.files?.[0];
-                if (!file) {
-                  e.target.value = "";
-                  return;
-                }
+                if (!file) return;
                 setShowMeta((m) => ({
                   ...m,
                   globalAudioSrc: file.name || file.path || "",
                   globalAudioFile: file,              // ✅ keep actual File object
                 }));
-                e.target.value = "";
+                setFileInputKey(k => k + 1);
               }}
             />
             {/* Radio buttons for audio mode */}
@@ -1495,11 +1497,12 @@ export default function PictureShowStoryBuilder() {
               <div style={{ marginBottom: 10 }}>
                 <label style={{ fontWeight: 700, display: "block", marginBottom: 4 }}>Audio (optional)</label>
                 <input
+                  key={`slide-audio-${fileInputKey}`}
                   type="file"
                   accept="audio/*"
                   onChange={(e) => {
                     onAudioPick(e.target.files?.[0]);
-                    e.target.value = "";
+                    setFileInputKey(k => k + 1);
                   }}
                   disabled={Boolean(showMeta.globalAudioSrc && showMeta.globalAudioSrc.trim() !== "" && showMeta.globalAudioMode === "score" && !audioMuted)}
                   style={showMeta.globalAudioSrc && showMeta.globalAudioSrc.trim() !== "" && showMeta.globalAudioMode === "score" && !audioMuted ? { opacity: 0.5, cursor: "not-allowed" } : {}}

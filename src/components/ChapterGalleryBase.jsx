@@ -612,6 +612,8 @@ export default function ChapterGalleryBase({
 
   const prevIndex = useRef(currentIndex);
   const notesBtnRef = useRef(null);
+  const chapterImageRef = useRef(null);
+  const qualifiedViewTimerRef = useRef(null);
 
   // Effect to borrow notes content from widget to popup (one-way move)
   // SEO only cares about initial SSR state - after that, DOM can change freely
@@ -794,6 +796,73 @@ export default function ChapterGalleryBase({
       pageType: 'image',
       pixelType: 'image'
     });
+  }, [currentIndex, galleryData, viewMode, galleryKey, hasEnteredChapters]);
+
+  useEffect(() => {
+    if (qualifiedViewTimerRef.current) {
+      window.clearTimeout(qualifiedViewTimerRef.current);
+      qualifiedViewTimerRef.current = null;
+    }
+
+    if (viewMode === "grid") return;
+
+    const alreadyOnImage = /\/i-[a-zA-Z0-9_-]+$/.test(window.location.pathname);
+    if (!hasEnteredChapters && !alreadyOnImage) return;
+
+    const imageId = galleryData[currentIndex]?.id;
+    if (!imageId) return;
+
+    const armQualifiedView = () => {
+      if (qualifiedViewTimerRef.current) {
+        window.clearTimeout(qualifiedViewTimerRef.current);
+        qualifiedViewTimerRef.current = null;
+      }
+
+      const imgEl = chapterImageRef.current;
+      const isLoaded = !!(imgEl && imgEl.complete && imgEl.naturalWidth > 0);
+      if (!isLoaded) return;
+      if (document.visibilityState !== "visible") return;
+
+      qualifiedViewTimerRef.current = window.setTimeout(() => {
+        const activeImageId = galleryData[currentIndex]?.id;
+        const activeImgEl = chapterImageRef.current;
+        const stillLoaded = !!(activeImgEl && activeImgEl.complete && activeImgEl.naturalWidth > 0);
+        if (activeImageId !== imageId) return;
+        if (!stillLoaded) return;
+        if (document.visibilityState !== "visible") return;
+
+        trackEvent('qualified_chapter_view', {
+          galleryId: galleryKey,
+          imageId,
+          pageType: 'image',
+          sourceLayer: 'hardened_chapter_view_v1',
+          trigger: '1s_visible_loaded'
+        });
+      }, 1000);
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        armQualifiedView();
+      } else if (qualifiedViewTimerRef.current) {
+        window.clearTimeout(qualifiedViewTimerRef.current);
+        qualifiedViewTimerRef.current = null;
+      }
+    };
+
+    const imgEl = chapterImageRef.current;
+    armQualifiedView();
+    imgEl?.addEventListener('load', armQualifiedView);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      if (qualifiedViewTimerRef.current) {
+        window.clearTimeout(qualifiedViewTimerRef.current);
+        qualifiedViewTimerRef.current = null;
+      }
+      imgEl?.removeEventListener('load', armQualifiedView);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   }, [currentIndex, galleryData, viewMode, galleryKey, hasEnteredChapters]);
 
   // ✅ Replaced old title updater with the hook
@@ -1203,6 +1272,7 @@ export default function ChapterGalleryBase({
                           style={{ width: 'fit-content', maxWidth: '100%', margin: '0 auto' }}
                         >
                           <img
+                            ref={chapterImageRef}
                             src={getProxySrc(galleryData[currentIndex]?.id, 'l')}
                             alt={galleryData[currentIndex]?.alt || galleryData[currentIndex]?.title}
                             className="chapter-image-mobile rounded-lg block"
