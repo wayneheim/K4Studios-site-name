@@ -1,8 +1,8 @@
 ---
-// Auto-generated Astro page for Outlaws-and-Bandits
+// Auto-generated Astro page for Lore-and-Legacy-Chapter-1
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
-import { storyMeta, storyData } from "@/data/Other/Stories/Outlaws-and-Bandits.mjs";
+import { storyMeta, storyData } from "@/data/Other/Stories/Lore-and-Legacy-Chapter-1.mjs";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 
 const structuredDataJSON = getStructuredData({
@@ -10,7 +10,7 @@ const structuredDataJSON = getStructuredData({
   data: {
     title: storyMeta.showTitle,
     description: storyMeta.description,
-    url: `https://www.k4studios.com/Other/Stories/Outlaws-and-Bandits`,
+    url: `https://www.k4studios.com/Other/Stories/Lore-and-Legacy-Chapter-1`,
     keywords: storyMeta.keywords,
     copyrightNotice: "© Wayne Heim, k4studios.com. All rights reserved."
   },
@@ -29,7 +29,7 @@ const structuredDataJSON = getStructuredData({
 <BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON}>
   <noscript>
     <img
-      src="/images/stories/Outlaws-and-Bandits-hero.jpg"
+      src="/images/stories/Lore-and-Legacy-Chapter-1-hero.jpg"
       alt="${storyMeta.showTitle} – Cinematic Picture Show"
       style="width:100%;height:auto;display:block;"
     />
@@ -37,7 +37,7 @@ const structuredDataJSON = getStructuredData({
   <PictureShowBase
     client:load
     rawData={storyData}
-    basePath="/Other/Stories/Outlaws-and-Bandits"
+    basePath="/Other/Stories/Lore-and-Legacy-Chapter-1"
     titleBase={storyMeta.showTitle}
     globalAudioSrc={storyMeta.globalAudioSrc || ""}
     globalAudioMode={storyMeta.globalAudioMode || "score"}

@@ -133,11 +133,23 @@ async function saveShowToServer(showArray, showMeta) {
   let uploadedAudio = 0;
   let failedAudio = [];
 
+  const R2_BASE = "https://media.k4studios.com/";
+
   async function uploadAudio(fileObj, destKey, label) {
-    if (!fileObj) throw new Error("No file object provided for upload");
+    // Check cache first — works even without a fileObj (e.g. loaded show)
     if (audioCache[destKey]) {
       console.log(`(cached) ${label}: ${destKey}`);
       return audioCache[destKey];
+    }
+    // No File object means audio was already uploaded in a prior session.
+    // Derive the expected R2 URL and cache it so future runs skip the upload.
+    if (!fileObj) {
+      const derivedUrl = R2_BASE + destKey;
+      console.log(`(derived R2 URL — no file object) ${label}: ${derivedUrl}`);
+      audioCache[destKey] = derivedUrl;
+      localStorage.setItem("r2AudioCache", JSON.stringify(audioCache));
+      uploadedAudio += 1;
+      return derivedUrl;
     }
     console.log(`Uploading ${uploadIndex++}: ${label}...`);
     const url = `/.netlify/functions/uploadToR2?destKey=${encodeURIComponent(destKey)}`;
@@ -156,8 +168,8 @@ async function saveShowToServer(showArray, showMeta) {
   // Per-slide audio
   for (const slide of showArray) {
     if (slide.audioSrc && !slide.audioSrc.startsWith("http")) {
-      // Assume slide.audioFile contains the actual File object
-      const fileObj = slide.audioFile;
+      // Use actual File object if available (new session); otherwise derive R2 URL
+      const fileObj = slide.audioFile || null;
       const fileName = slide.audioSrc.startsWith("/") ? slide.audioSrc.split("/").pop() : slide.audioSrc;
       const destKey = `StoryShows/${safeSlug}/${fileName}`;
       try {
@@ -174,17 +186,23 @@ async function saveShowToServer(showArray, showMeta) {
   // --- Store global audio only in ghost slide, upload if needed ---
   let globalAudioUrl = "";
   let ghostAudioMode = showMeta.globalAudioMode || "mute";
-  if (ghostAudioMode !== "mute" && showMeta.globalAudioFile) {
-    // Upload global audio file to R2
-    const fileObj = showMeta.globalAudioFile;
-    const fileName = showMeta.globalAudioSrc;
-    const destKey = `StoryShows/${safeSlug}/${fileName}`;
-    try {
-      globalAudioUrl = await uploadAudio(fileObj, destKey, fileName);
-    } catch (err) {
-      console.error("Global audio upload failed:", err);
-      globalAudioUrl = "";
-      failedAudio.push(fileName || "(global audio)");
+  if (ghostAudioMode !== "mute" && showMeta.globalAudioSrc) {
+    const rawSrc = showMeta.globalAudioSrc;
+    if (rawSrc.startsWith("http")) {
+      // Already a full URL (previously uploaded) — use as-is
+      globalAudioUrl = rawSrc;
+    } else {
+      // Upload (or derive R2 URL if no File object available)
+      const fileObj = showMeta.globalAudioFile || null;
+      const fileName = rawSrc.startsWith("/") ? rawSrc.split("/").pop() : rawSrc;
+      const destKey = `StoryShows/${safeSlug}/${fileName}`;
+      try {
+        globalAudioUrl = await uploadAudio(fileObj, destKey, fileName);
+      } catch (err) {
+        console.error("Global audio upload failed:", err);
+        globalAudioUrl = "";
+        failedAudio.push(fileName || "(global audio)");
+      }
     }
   }
   // If muted, globalAudioUrl stays empty
