@@ -5,6 +5,13 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import PictureShowBase from "@/components/PictureShowBase.jsx";
 import { storyMeta, storyData } from "@/data/Other/Stories/Lore-and-Legacy-Chapter-1.mjs";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { normalizeImageSrc } from "@/utils/imageProxy.js";
+
+const coverSlide = storyData.find((slide) => slide.visibility !== "ghost") || storyData[0];
+const noscriptImage = normalizeImageSrc(
+  coverSlide?.id || coverSlide?.srcS || coverSlide?.srcM || coverSlide?.src || coverSlide?.srcL || "/images/K4-Stories logo1b.webp",
+  "l"
+);
 
 const structuredDataJSON = getStructuredData({
   type: "gallery",
@@ -30,7 +37,7 @@ const structuredDataJSON = getStructuredData({
 <BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON}>
   <noscript>
     <img
-      src="/images/stories/Lore-and-Legacy-Chapter-1-hero.jpg"
+      src={noscriptImage}
       alt="${storyMeta.showTitle} – Cinematic Picture Show"
       style="width:100%;height:auto;display:block;"
     />

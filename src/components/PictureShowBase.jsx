@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright, Mail } from "lucide-react";
+import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright, Mail, House } from "lucide-react";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 import ShareDrawer from "./ShareDrawer.jsx";
 import SimpleStoryShow from "./Gallery-Slideshow.jsx";
 import StoryShowWithAudio from "./Gallery-Slideshow-Story.jsx";
+import imageIdMap from "../data/imageIdMap.json";
 import { getProxySrc, normalizeImageSrc } from "../utils/imageProxy.js";
 import { warmImage } from "../utils/warmImage";
 import { trackEvent as track, emitActionPixel } from "../utils/analytics";
@@ -17,6 +18,98 @@ const getBestImageSrc = (image) => {
   if (image.id) return getProxySrc(image.id, 'xl');
   // Normalize any URL to proxy format
   return normalizeImageSrc(image.srcXL || image.srcL || image.srcM || image.src || "", 'xl');
+};
+
+const normalizePublicPath = (input = "") => {
+  if (!input || typeof input !== "string") return "";
+
+  let normalized = input.replace(/\\/g, "/").trim();
+  normalized = normalized.replace(/^src\/(data|pages)\//, "");
+  normalized = normalized.replace(/\.(mjs|astro)$/i, "");
+  normalized = normalized.replace(/^\/+/, "");
+
+  if (!normalized) return "";
+  if (normalized.startsWith("Galleries/") || normalized.startsWith("Other/")) {
+    return `/${normalized}`;
+  }
+  if (normalized.startsWith("K4-Select-Series/")) {
+    return `/Other/${normalized}`;
+  }
+
+  return `/${normalized}`;
+};
+
+const getCanonicalChapterBasePath = (paths = [], image = null) => {
+  if (!Array.isArray(paths) || paths.length === 0) return "";
+
+  const normalizedPaths = paths
+    .map((path) => normalizePublicPath(path))
+    .filter(Boolean);
+
+  if (normalizedPaths.length === 0) return "";
+  if (!image) return normalizedPaths[0];
+
+  const hintPaths = [
+    image.linkedGalleryPath,
+    ...(Array.isArray(image.galleries) ? image.galleries : []),
+  ]
+    .map((path) => normalizePublicPath(path))
+    .filter(Boolean);
+
+  if (hintPaths.length === 0) return normalizedPaths[0];
+
+  for (const hintPath of hintPaths) {
+    const exactMatch = normalizedPaths.find((path) => path === hintPath);
+    if (exactMatch) return exactMatch;
+  }
+
+  for (const hintPath of hintPaths) {
+    const partialMatch = normalizedPaths.find(
+      (path) => path.startsWith(hintPath) || hintPath.startsWith(path)
+    );
+    if (partialMatch) return partialMatch;
+  }
+
+  const wantsOtherRoute = hintPaths.some((path) => path.startsWith("/Other/"));
+  if (wantsOtherRoute) {
+    const otherMatch = normalizedPaths.find((path) => path.startsWith("/Other/"));
+    if (otherMatch) return otherMatch;
+  }
+
+  const wantsGalleryRoute = hintPaths.some((path) => path.startsWith("/Galleries/"));
+  if (wantsGalleryRoute) {
+    const galleryMatch = normalizedPaths.find((path) => path.startsWith("/Galleries/"));
+    if (galleryMatch) return galleryMatch;
+  }
+
+  return normalizedPaths[0];
+};
+
+const getChapterImageHref = (image) => {
+  if (!image) return "#";
+
+  const imageIds = [image.id, image.linkedImageId].filter(Boolean);
+  for (const imageId of imageIds) {
+    const mappedPaths = imageIdMap[imageId];
+    const canonicalBasePath = getCanonicalChapterBasePath(mappedPaths, image);
+    if (canonicalBasePath) {
+      return `${canonicalBasePath}/${imageId}`;
+    }
+  }
+
+  const canonicalBasePath = normalizePublicPath(image.linkedGalleryPath);
+  const canonicalImageId = image.linkedImageId || image.id;
+  if (canonicalBasePath && canonicalImageId) {
+    return `${canonicalBasePath}/${canonicalImageId}`;
+  }
+
+  const fallbackGalleryPath = Array.isArray(image.galleries) ? image.galleries[0] : "";
+  const fallbackBasePath = normalizePublicPath(fallbackGalleryPath);
+  if (fallbackBasePath && image.id) {
+    return `${fallbackBasePath}/${image.id}`;
+  }
+
+  return "#";
 };
 
 export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score", introMeta = {}, outroMeta = {} }) {
@@ -96,6 +189,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   }, [globalAudioSrc, effectiveGlobalAudioMode, filteredData]);
 
   const [volume, setVolume] = useState(defaultVolume);
+  const exitHref = basePath || "/";
 
   useEffect(() => {
     currentIndexRef.current = currentIndex;
@@ -768,7 +862,7 @@ const isSpeechActive = () => {
                   ).map((img, idx) => (
                     <a
                       key={idx}
-                      href={img.galleries && img.galleries.length > 0 ? `/Galleries/${img.galleries[0].replace('Galleries/', '').replace('.mjs', '')}/${img.id}` : "#"}
+                      href={getChapterImageHref(img)}
                       className="group block rounded-md overflow-hidden border border-gray-300 hover:shadow-md transition-all"
                     >
                       <img
@@ -780,16 +874,30 @@ const isSpeechActive = () => {
                   ))}
                 </div>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    stopSpeech();
-                    setCurrentIndex(0);
-                  }}
-                  className="px-6 py-2 bg-[#85644b] text-white rounded-md hover:bg-[#6b4f3a] transition"
-                >
-                  Back to Start
-                </button>
+                <div className="flex flex-wrap items-center justify-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      stopSpeech();
+                      setCurrentIndex(0);
+                    }}
+                    className="px-6 py-2 bg-[#85644b] text-white rounded-md hover:bg-[#6b4f3a] transition"
+                  >
+                    Back to Start
+                  </button>
+
+                  <a
+                    href={exitHref}
+                    onClick={() => {
+                      stopSpeech();
+                    }}
+                    className="px-4 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-100 flex items-center gap-2 text-gray-700"
+                    title="Exit story"
+                  >
+                    <House className="w-4 h-4" aria-hidden="true" />
+                    <span>Exit Story</span>
+                  </a>
+                </div>
 
               </motion.div>
             ) : (
@@ -1153,6 +1261,21 @@ const isSpeechActive = () => {
                     >
                       <MonitorPlay className="w-4 h-4 text-gray-400" />
                     </button>
+                  )}
+
+                  {currentIndex > 0 && (
+                    <a
+                      href={exitHref}
+                      onClick={() => {
+                        stopSpeech();
+                      }}
+                      className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-100 flex items-center gap-2"
+                      title="Exit story"
+                      aria-label="Exit story"
+                    >
+                      <House className="w-4 h-4 text-gray-500" aria-hidden="true" />
+                      <span className="hidden sm:inline">Exit</span>
+                    </a>
                   )}
                 </div>
 

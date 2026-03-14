@@ -5,6 +5,7 @@ import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter    from "@/components/Footer.astro";
 import { getStructuredData } from "@/components/utils/getStructuredData.ts";
 import { getLandingMeta } from "@/data/landingMeta.ts";
+import { normalizeImageSrc } from "@/utils/imageProxy.js";
 
 import { stories } from "@/data/Other/Stories/stories.mjs";
 import "@/styles/global.css";
@@ -26,6 +27,7 @@ const toAbsoluteUrl = (value) => {
 };
 
 const defaultCoverImage = stories.length > 0 ? stories[0].cover : "/images/K4-Stories logo1b.webp";
+const normalizedDefaultCoverImage = normalizeImageSrc(defaultCoverImage, "l");
 
 const structuredData = getStructuredData({
   type: "BlogPosting",
@@ -35,7 +37,7 @@ const structuredData = getStructuredData({
     url: toAbsoluteUrl(sectionPath),
     copyrightNotice: "© Wayne Heim",
     author: { "@type": "Person", name: "Wayne Heim" },
-    image: toAbsoluteUrl(defaultCoverImage),
+    image: toAbsoluteUrl(normalizedDefaultCoverImage),
     articleSection: "Visual Storytelling",
     keywords: ["picture shows", "interactive photography", "visual storytelling", "cinematic art", "Wayne Heim", "western fine art", "immersive presentations"],
     wordCount: 800
@@ -70,7 +72,7 @@ const itemListStructuredData = {
       typeof show.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(show.date)
         ? `${show.date}T00:00:00Z`
         : show.date,
-    image: toAbsoluteUrl(show.cover || defaultCoverImage),
+    image: toAbsoluteUrl(normalizeImageSrc(show.cover || defaultCoverImage, "l")),
     description: show.excerpt,
     author: {
       "@type": "Person",
@@ -90,7 +92,7 @@ const breadcrumbStructuredData = {
   ]
 };
 
-const landingImgUrl = defaultCoverImage;
+const landingImgUrl = normalizedDefaultCoverImage;
 const meta = getLandingMeta(sectionPath, landingImgUrl);
 if (!meta.ogUrl) meta.ogUrl = toAbsoluteUrl(sectionPath);
 if (!meta.twitterUrl) meta.twitterUrl = toAbsoluteUrl(sectionPath);
@@ -152,7 +154,7 @@ meta.twitterCard = "summary_large_image";
                 <div class="flex flex-col md:flex-row md:items-start gap-4">
                   <a href={`/Other/Stories/${show.slug}`} aria-label={show.title} class="flex-shrink-0">
                     <img
-                      src={show.cover}
+                      src={normalizeImageSrc(show.cover, 's')}
                       alt={show.alt || show.title}
                       class="rounded-2xl shadow max-w-[120px] h-[120px] object-cover"
                       style="aspect-ratio: 1/1;"
