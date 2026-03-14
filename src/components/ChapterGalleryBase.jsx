@@ -2253,6 +2253,7 @@ export default function ChapterGalleryBase({
                   window.scrollTo(0, 0);
                 }}
                 initialImageIndex={currentIndex}
+                isEngrainedSeries={isEngrainedSeries}
                 style={{ display: viewMode === "grid" ? "block" : "none" }}
                 // Pass theme info for shared theme links (grid header)
                 themeName={activeTheme?.name || null}

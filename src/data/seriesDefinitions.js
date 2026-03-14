@@ -17,8 +17,8 @@ export const SERIES_DEFINITIONS = {
     icon: "✽",
     description: "Open edition proof prints on archival matte paper.",
     showEdition: false,
-    fulfillment: "smugmug", // Uses buyLink
-    buttonLabel: "Order",
+    fulfillment: "contact",
+    buttonLabel: "Contact Us to Order",
     sortOrder: 1,
   },
   foundation: {
@@ -26,8 +26,8 @@ export const SERIES_DEFINITIONS = {
     icon: "✯",
     description: "Open edition archival prints in collector-friendly sizes.",
     showEdition: false,
-    fulfillment: "smugmug",
-    buttonLabel: "Order",
+    fulfillment: "contact",
+    buttonLabel: "Contact Us to Order",
     sortOrder: 2,
   },
   chronicle: {

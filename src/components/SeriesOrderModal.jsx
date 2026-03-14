@@ -352,52 +352,6 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                       {cardCopy?.[seriesKey] || pricingConfigFallback.cardCopy?.[seriesKey] || descriptions?.[seriesKey] || def.description}
                     </p>
 
-                    {/* For SmugMug fulfillment: show pricing list then order button */}
-                    {def.fulfillment === "smugmug" && (
-                      <>
-                        {/* Pricing list (stacked format) */}
-                        <div className="text-sm mb-2 ml-1">
-                          {pricingList ? (
-                            <ul className="space-y-1">
-                              {pricingList.map(({ size, price }) => (
-                                <li key={size} className="flex items-center gap-1.5">
-                                  <span className="text-gray-400">•</span>
-                                  <span className="text-gray-700">{size}: ${price.toLocaleString()}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          ) : (
-                            <p className="italic text-gray-600">Pricing: Call</p>
-                          )}
-                        </div>
-
-                        {/* Order Button */}
-                        <a
-                          href={image.buyLink || "#"}
-                          target="_blank"
-                          rel="noopener noreferrer nofollow"
-                          className="inline-block w-full text-center px-3 py-1.5 text-white rounded text-sm transition-all font-medium"
-                          style={{
-                            background: "linear-gradient(to bottom, #f59e0b 0%, #d97706 100%)",
-                            boxShadow: "0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3)",
-                            border: "1px solid #b45309",
-                            textShadow: "0 1px 1px rgba(0,0,0,0.2)",
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.background = "linear-gradient(to bottom, #d97706 0%, #b45309 100%)";
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.background = "linear-gradient(to bottom, #f59e0b 0%, #d97706 100%)";
-                          }}
-                          onClick={() => {
-                            trackEvent?.("order_submitted");
-                          }}
-                        >
-                          {def.buttonLabel}
-                        </a>
-                      </>
-                    )}
-
                     {/* For contact fulfillment: show clickable size buttons that open mailto */}
                     {def.fulfillment === "contact" && (
                       <div className="space-y-1.5">

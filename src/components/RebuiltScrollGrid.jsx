@@ -35,6 +35,7 @@ export default function RebuiltScrollGrid({
   initialImageIndex = 0,
   galleryKey = "default",
   onClose,
+  isEngrainedSeries = false,
   // Optional theme props for shared theme links (grid landing view)
   themeName = null,
   themeDescription = null,
@@ -208,6 +209,30 @@ export default function RebuiltScrollGrid({
       });
     } catch (_) {}
   }, [galleryKey, themeName]);
+
+  const isEngrainedEntry = (entry) => {
+    if (!entry) return false;
+    if (isEngrainedSeries) return true;
+
+    const candidates = [
+      entry.buyLink,
+      entry.src,
+      entry.srcXL,
+      entry.srcL,
+      entry.srcM,
+      entry.srcS,
+      entry.linkedGalleryPath,
+      ...(Array.isArray(entry.galleries) ? entry.galleries : []),
+    ]
+      .filter(Boolean)
+      .map((value) => String(value).toLowerCase());
+
+    return candidates.some((value) =>
+      value.includes("/other/k4-select-series/engrained/engrained-series/") ||
+      value.includes("other/photo-shoots/engrained") ||
+      value.includes("/engrained/")
+    );
+  };
 
   return (
     <section className="bg-white py-10 px-6">
@@ -477,6 +502,22 @@ export default function RebuiltScrollGrid({
               >
                 {/* Series Icons Row */}
                 {(() => {
+                  if (isEngrainedEntry(entry)) {
+                    const engrainedDef = SERIES_DEFINITIONS.engrained;
+                    return (
+                      <div className="flex items-center gap-4 mb-1">
+                        <span className="flex items-center">
+                          <span
+                            className="text-[15px] text-cyan-900/50"
+                            title={`${engrainedDef.label} Series Member`}
+                          >
+                            {engrainedDef.icon || SERIES_ICONS.engrained}
+                          </span>
+                        </span>
+                      </div>
+                    );
+                  }
+
                   const effectiveSeries = getEffectiveSeries(entry, seriesRegistry);
                   const displaySeries = effectiveSeries
                     .filter(s => SERIES_DEFINITIONS[s] && s !== "engrained")

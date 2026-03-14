@@ -1234,7 +1234,7 @@ const isSpeechActive = () => {
                 )}
 {/* Shopping Cart & Notes Buttons */}
                 <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap items-center justify-center gap-3 mt-3`}>
-                  {currentImage?.buyLink && (
+                  {currentIndex > 0 && currentImage?.id && !isEndOfStory && (
                     <button
                       type="button"
                       onClick={() => {
