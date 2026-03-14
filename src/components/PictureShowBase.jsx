@@ -1,15 +1,19 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright, Mail, House } from "lucide-react";
+import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright, Mail } from "lucide-react";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
+import EngrainedOrderModal from "./EngrainedOrderModal.jsx";
 import ShareDrawer from "./ShareDrawer.jsx";
+import SeriesOrderModal from "./SeriesOrderModal.jsx";
 import SimpleStoryShow from "./Gallery-Slideshow.jsx";
 import StoryShowWithAudio from "./Gallery-Slideshow-Story.jsx";
 import imageIdMap from "../data/imageIdMap.json";
 import { getProxySrc, normalizeImageSrc } from "../utils/imageProxy.js";
 import { warmImage } from "../utils/warmImage";
 import { trackEvent as track, emitActionPixel } from "../utils/analytics";
+
+const ENGRAINED_BASE_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
 
 // Helper function to select the best image source for slideshow display
 const getBestImageSrc = (image) => {
@@ -88,28 +92,42 @@ const getCanonicalChapterBasePath = (paths = [], image = null) => {
 const getChapterImageHref = (image) => {
   if (!image) return "#";
 
+  const canonicalBasePath = getCanonicalImageBasePath(image);
+  const canonicalImageId = image.id || image.linkedImageId;
+  if (canonicalBasePath && canonicalImageId) {
+    return `${canonicalBasePath}/${canonicalImageId}`;
+  }
+
+  return "#";
+};
+
+const getCanonicalImageBasePath = (image) => {
+  if (!image) return "";
+
   const imageIds = [image.id, image.linkedImageId].filter(Boolean);
   for (const imageId of imageIds) {
     const mappedPaths = imageIdMap[imageId];
     const canonicalBasePath = getCanonicalChapterBasePath(mappedPaths, image);
     if (canonicalBasePath) {
-      return `${canonicalBasePath}/${imageId}`;
+      return canonicalBasePath;
     }
   }
 
-  const canonicalBasePath = normalizePublicPath(image.linkedGalleryPath);
-  const canonicalImageId = image.linkedImageId || image.id;
-  if (canonicalBasePath && canonicalImageId) {
-    return `${canonicalBasePath}/${canonicalImageId}`;
+  const linkedBasePath = normalizePublicPath(image.linkedGalleryPath);
+  if (linkedBasePath) {
+    return linkedBasePath;
   }
 
   const fallbackGalleryPath = Array.isArray(image.galleries) ? image.galleries[0] : "";
-  const fallbackBasePath = normalizePublicPath(fallbackGalleryPath);
-  if (fallbackBasePath && image.id) {
-    return `${fallbackBasePath}/${image.id}`;
-  }
+  return normalizePublicPath(fallbackGalleryPath);
+};
 
-  return "#";
+const usesEngrainedOrderModal = (image, basePath = "") => {
+  const normalizedBasePath = normalizePublicPath(basePath);
+  if (normalizedBasePath === ENGRAINED_BASE_PATH) return true;
+
+  const canonicalBasePath = getCanonicalImageBasePath(image);
+  return canonicalBasePath === ENGRAINED_BASE_PATH;
 };
 
 export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score", introMeta = {}, outroMeta = {} }) {
@@ -138,6 +156,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const [showNotes, setShowNotes] = useState(false);
   const [direction, setDirection] = useState(1);
   const [showSlideshow, setShowSlideshow] = useState(false);
+  const [showEngrainedOrderModal, setShowEngrainedOrderModal] = useState(false);
+  const [showSeriesOrderModal, setShowSeriesOrderModal] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
 
   const [isCardHovered, setIsCardHovered] = useState(false);
@@ -540,6 +560,10 @@ useEffect(() => {
 
   const currentImage = filteredData[currentIndex];
   const isEndOfStory = currentIndex >= filteredData.length;
+  const currentImageUsesEngrainedOrderModal = useMemo(
+    () => usesEngrainedOrderModal(currentImage, basePath),
+    [currentImage, basePath]
+  );
 
   // Orchestrate the 3-stage hover for the opening card only
   useEffect(() => {
@@ -1211,16 +1235,22 @@ const isSpeechActive = () => {
 {/* Shopping Cart & Notes Buttons */}
                 <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap items-center justify-center gap-3 mt-3`}>
                   {currentImage?.buyLink && (
-                    <a
-                      href={currentImage?.buyLink}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
+                    <button
+                      type="button"
+                      onClick={() => {
+                        track("order_clicked");
+                        if (currentImageUsesEngrainedOrderModal) {
+                          setShowEngrainedOrderModal(true);
+                          return;
+                        }
+                        setShowSeriesOrderModal(true);
+                      }}
                       className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-100 flex items-center gap-2"
                       aria-label="Order"
                     >
                       <ShoppingCart className="w-4 h-4 text-gray-500" aria-hidden="true" />
                       <span className="hidden sm:inline">Order</span>
-                    </a>
+                    </button>
                   )}
 
                   {currentIndex > 0 && (
@@ -1256,10 +1286,10 @@ const isSpeechActive = () => {
                         });
                         startSlideshow({ advanceFromIntro: false, immediate: true });
                       }}
-                      className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-900 flex items-center gap-2"
+                      className="px-2 py-2 border border-[#8B4513] rounded-md text-sm bg-white hover:bg-[#f7efe7] flex items-center gap-2"
                       title="Launch Cinematic Mode"
                     >
-                      <MonitorPlay className="w-4 h-4 text-gray-400" />
+                      <MonitorPlay className="w-4 h-4 text-[#8B4513]" />
                     </button>
                   )}
 
@@ -1269,12 +1299,11 @@ const isSpeechActive = () => {
                       onClick={() => {
                         stopSpeech();
                       }}
-                      className="px-2 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-100 flex items-center gap-2"
+                      className="px-2 py-2 border border-gray-200 rounded-md text-sm bg-white hover:bg-gray-50 flex items-center gap-2"
                       title="Exit story"
                       aria-label="Exit story"
                     >
-                      <House className="w-4 h-4 text-gray-500" aria-hidden="true" />
-                      <span className="hidden sm:inline">Exit</span>
+                      <span className="hidden sm:inline text-gray-400">Exit</span>
                     </a>
                   )}
                 </div>
@@ -1461,6 +1490,20 @@ const isSpeechActive = () => {
           </div>
         </footer>
       </div>
+
+      <EngrainedOrderModal
+        isOpen={showEngrainedOrderModal}
+        onClose={() => setShowEngrainedOrderModal(false)}
+        image={currentImage}
+        trackEvent={track}
+      />
+
+      <SeriesOrderModal
+        isOpen={showSeriesOrderModal}
+        onClose={() => setShowSeriesOrderModal(false)}
+        image={currentImage}
+        trackEvent={track}
+      />
 
       {showSlideshow && (
         <StoryShow
