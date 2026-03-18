@@ -178,6 +178,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const currentIndexRef = useRef(0);
   // swipe tracking
   const touchStart = useRef({ x: 0, y: 0, t: 0 });
+  const touchLast = useRef({ x: 0, y: 0 });
+  const swipeTrackingEnabled = useRef(false);
 
 
   // Normalize incoming data: strip any explicit closing slide since the viewer renders its own end page
@@ -538,26 +540,41 @@ useEffect(() => {
   };
 
   // --- touch swipe handlers (mobile) ---
-  const SWIPE_MIN_X = 60; // px
-  const SWIPE_MAX_Y = 50; // px vertical tolerance
-  const SWIPE_MAX_MS = 700; // ms
+  const SWIPE_MIN_X = 45; // px
+  const SWIPE_MAX_MS = 800; // ms
 
   const handleTouchStart = (e) => {
     if (isZoomed) return; // don't hijack when zoom overlay open
+    if (e.target instanceof Element && e.target.closest('[data-swipe-exempt="true"]')) {
+      swipeTrackingEnabled.current = false;
+      return;
+    }
     const t = e.changedTouches?.[0] || e.touches?.[0];
     if (!t) return;
+    swipeTrackingEnabled.current = true;
     touchStart.current = { x: t.clientX, y: t.clientY, t: Date.now() };
+    touchLast.current = { x: t.clientX, y: t.clientY };
+  };
+
+  const handleTouchMove = (e) => {
+    if (isZoomed || !swipeTrackingEnabled.current) return;
+    const t = e.touches?.[0] || e.changedTouches?.[0];
+    if (!t) return;
+    touchLast.current = { x: t.clientX, y: t.clientY };
   };
 
   const handleTouchEnd = (e) => {
-    if (isZoomed) return;
-    const t = e.changedTouches?.[0] || e.touches?.[0];
+    if (isZoomed || !swipeTrackingEnabled.current) return;
+    swipeTrackingEnabled.current = false;
+    const t = e.changedTouches?.[0] || e.touches?.[0] || touchLast.current;
     if (!t) return;
     const dx = t.clientX - touchStart.current.x;
     const dy = t.clientY - touchStart.current.y;
     const dt = Date.now() - touchStart.current.t;
-    // only horizontal, quick-ish swipes
-    if (Math.abs(dx) >= SWIPE_MIN_X && Math.abs(dy) <= SWIPE_MAX_Y && dt <= SWIPE_MAX_MS) {
+    const absX = Math.abs(dx);
+    const absY = Math.abs(dy);
+    // Prefer horizontal intent, but allow natural diagonal thumb swipes on mobile.
+    if (absX >= SWIPE_MIN_X && absX > absY * 1.15 && dt <= SWIPE_MAX_MS) {
       if (dx < 0) {
         // swipe left → next
         goNext();
@@ -978,6 +995,7 @@ const isSpeechActive = () => {
                 transition={{ duration: 0.45 }}
                 className="w-full flex flex-col items-center overflow-visible"
                 onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
                 style={{ touchAction: 'pan-y' }}
               >
@@ -1251,7 +1269,7 @@ const isSpeechActive = () => {
                   </div>
                 ) : (
                   /* IMAGE - border removed, kept simple to avoid narrow image spacing issues */
-                  <div className={`w-full px-5 sm:px-6 md:px-8 flex items-start justify-center ${presentationMode ? 'pt-12 sm:pt-16 md:pt-24' : 'pt-2 sm:pt-4 md:pt-8'}`} style={{ boxSizing: 'border-box' }}>
+                  <div className={`w-full px-5 sm:px-6 md:px-8 flex items-start justify-center ${presentationMode ? 'pt-8 sm:pt-10 md:pt-16' : 'pt-2 sm:pt-4 md:pt-8'}`} style={{ boxSizing: 'border-box' }}>
                     <div className="relative" style={{ lineHeight: 0 }}>
                       <img
                         src={getBestImageSrc(currentImage)}
@@ -1517,7 +1535,7 @@ const isSpeechActive = () => {
                           <span className="text-[1.5rem] leading-none text-[#85644b]">◆</span>
                           <span className="h-px flex-1 bg-[#888]" />
                         </div>
-                        <div className="mt-14 sm:mt-16 flex justify-center">
+                        <div className="mt-8 sm:mt-10 flex justify-center">
                           <button
                             type="button"
                             onClick={() => {
@@ -1553,7 +1571,7 @@ const isSpeechActive = () => {
                 )}
 
                       {presentationMode && currentIndex > 0 && presentationRailSlides.length > 0 && !isEndOfStory && (
-                      <div className="mt-16 sm:mt-20 w-full px-2 sm:px-4 md:px-6 pb-2">
+                      <div className="mt-8 sm:mt-10 w-full px-2 sm:px-4 md:px-6 pb-2">
                         <style>{`
                           .presentation-rail-scroll {
                             scrollbar-width: thin;
@@ -1592,10 +1610,11 @@ const isSpeechActive = () => {
                             <SquareChevronLeft className="w-7 h-7 sm:w-8 sm:h-8" />
                           </button>
                           <div className="min-w-0 flex-1 rounded-xl border border-[#d9cec1] bg-[#faf7f2]/95 px-2 py-3 shadow-sm backdrop-blur-sm">
-                            <div className="presentation-rail-scroll overflow-x-auto py-2">
+                            <div className="presentation-rail-scroll overflow-x-auto py-2" data-swipe-exempt="true">
                               <div className="flex w-max min-w-full gap-3 px-1">
                               {presentationRailSlides.map(({ img, index }) => {
                                 const isActive = index === currentIndex;
+                                const isLastThumbnail = index === presentationRailSlides[presentationRailSlides.length - 1]?.index;
                                 return (
                                   <button
                                     key={`${img.id || img.src || index}-${index}`}
@@ -1603,18 +1622,18 @@ const isSpeechActive = () => {
                                     onClick={() => {
                                       stopSpeech();
                                       trackStoryAction('story_slider_click', img.id || null, {
-                                        trigger: `presentation_thumb_${index}`
+                                        trigger: isLastThumbnail ? 'presentation_thumb_back_to_start' : `presentation_thumb_${index}`
                                       }, {
                                         sourceLayer: 'presentation_thumb_click_pixel_v1'
                                       });
-                                      setCurrentIndex(index);
+                                      setCurrentIndex(isLastThumbnail ? 0 : index);
                                     }}
                                     className={`group shrink-0 overflow-hidden rounded-md border transition-all duration-200 ${
                                       isActive
                                         ? "border-[#d3b7a2] shadow-md ring-4 ring-[#d3b7a2]/85 ring-offset-2 ring-offset-[#faf7f2]"
                                         : "border-gray-300 hover:border-[#c7b19e]"
                                     }`}
-                                    title={img.title || `Slide ${index}`}
+                                    title={isLastThumbnail ? 'Back to Start' : (img.title || `Slide ${index}`)}
                                   >
                                     <img
                                       src={normalizeImageSrc(img.src, 's')}
