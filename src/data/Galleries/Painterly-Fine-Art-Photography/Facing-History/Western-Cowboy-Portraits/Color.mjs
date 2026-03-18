@@ -25,8 +25,8 @@ export const galleryData = [
   {
     "id": "i-ncFcHDM",
     "title": "One Last Look",
-    "description": "A solitary cowboy remains on the quiet road after a parting, his red shirt and wide-brimmed hat standing out against the soft haze of a clouded Western morning. This painterly Western portrait captures the reflective stillness that follows a farewell, blending textured atmosphere with cinematic frontier storytelling. Subtle grain, restrained color, and historic tone give the image the presence of classic Western art while retaining the authenticity of fine art photography.\n\n© Wayne Heim",
-    "alt": "Bearded cowboy in red shirt and wide-brim hat standing alone on a dusty frontier road beneath low morning clouds, painterly Western cowboy portrait.",
+    "description": "A bearded man in a red shirt stands alone against an open landscape, his posture steady as soft morning light settles across his face and clothing. This Western portrait captures a moment of quiet reflection on the American frontier through fine art Western photography. \n\n© Wayne Heim",
+    "alt": "A bearded cowboy in a red shirt and wide-brimmed hat stands alone in soft morning light, facing forward in an open Western landscape.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KNVfXXkzZWQPzsknRPt6jKWTWbr7q9gSJHFHLd8kr/XL/cowboy%20photography%20painting_HF29245-250-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KNVfXXkzZWQPzsknRPt6jKWTWbr7q9gSJHFHLd8kr/XL/cowboy%20photography%20painting_HF29245-250-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM/2/KNVfXXkzZWQPzsknRPt6jKWTWbr7q9gSJHFHLd8kr/XL/cowboy%20photography%20painting_HF29245-250-XL.jpg",
@@ -73,6 +73,7 @@ export const galleryData = [
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "",
     "sortOrder": 0,
 
@@ -80,7 +81,8 @@ export const galleryData = [
       "sketches-of-legends": 0,
     },
 
-    contentSource: "ai"
+    contentSource: "ai",
+    collectorNotes: "The figure is presented frontally, meeting the viewer with a steady, unguarded presence. The composition avoids dramatic gesture, instead allowing stillness and directness to define the encounter. This creates a sense of quiet confrontation—less about action, more about what remains unsaid.\n\nThere is a strong connection to portrait traditions that favor psychological presence over narrative explanation. The softened edges and restrained palette echo pictorialist influence, while the subject’s stance and isolation ground the image firmly in Western visual language. The result is a work that holds attention through simplicity, inviting the viewer to linger in the space between departure and memory."
   },
     {
     "id": "i-c5K798H",
@@ -366,7 +368,7 @@ export const galleryData = [
     "id": "i-44jcjTQ",
     "title": "Over My Dead Body: Frontier Stand-off",
     "description": "An older cowboy stands inside a frontier cabin, rifle raised as he peers through a weathered window toward the uncertain yard beyond. Warm morning light spills across rough timber walls and worn wool, creating a dramatic interplay of shadow and glow that heightens the tension of the moment. This painterly Western portrait blends historic atmosphere with cinematic storytelling, capturing the quiet resolve of a lone frontiersman preparing to defend what’s his.\n\n© Wayne Heim",
-    "alt": "Older cowboy holding a rifle while watching through a cabin window in warm morning light, painterly Western frontier portrait.",
+    "alt": "Color Western portrait of an older cowboy holding a rifle at a cabin window, braced in anticipation.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MgTD8rSCgsDJVpFJp8MMrqrC5fFZGT7qHBHjvjbGR/XL/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MgTD8rSCgsDJVpFJp8MMrqrC5fFZGT7qHBHjvjbGR/XL/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-44jcjTQ/3/MgTD8rSCgsDJVpFJp8MMrqrC5fFZGT7qHBHjvjbGR/XL/cowboy%20art%20_O1H0384-Edit-2-Edit-2-Edit-2-XL.jpg",
@@ -494,7 +496,7 @@ export const galleryData = [
   {
     "id": "i-bq4FKvX",
     "title": "End of His Rope",
-    "description": "A painterly Western portrait of a cowboy at dawn, quietly working a rope through his hands in the soft haze of the American frontier. Warm ochre tones, dust-lit atmosphere, and cinematic morning light create a contemplative scene rooted in Western fine art photography. The subtle gesture of rope and reins reflects the discipline and introspection of frontier life, blending the storytelling tradition of classic Western art with the emotional restraint of painterly Western photography.\n\n© Wayne Heim",
+    "description": "A painterly Western portrait of a cowboy at dawn, quietly working a rope through his hands in the soft haze of the American frontier. Warm ochre tones, dust-lit atmosphere, and cinematic morning light create a contemplative scene rooted in Western fine art photography. \n\n© Wayne Heim",
     "alt": "Painterly western cowboy portrait at dawn holding a rope in warm frontier light, cinematic fine art western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bq4FKvX/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
@@ -1378,7 +1380,7 @@ export const galleryData = [
     ],
 
     "story": "Just like we planned, boys.\nKeep it tight, aim for the meaty bits, and we’ll all be home in time for some of Martha’s pie.\n\nRemember now—why we’re here. This ain’t just about land or cattle. This is about drawing a line. A man’s gotta stand for somethin’. So breathe steady, don’t flinch—and let’s make this one count.",
-    "notes": "This composition channels the storytelling discipline of painters and illustrators like N.C. Wyeth—artists who knew how to load stillness with tension. The three men are staggered just enough to suggest individual roles in a shared purpose, while their diagonal orientation and the porch lines behind them build a strong triangular structure—a classic tool for directing the eye and implying stability before chaos. The painterly finish softens the grit, letting the image breathe with the weight of memory. It’s a scene suspended between anticipation and aftermath—ideal for collectors who value depth beyond décor.",
+    "notes": "Tension enters before anything happens. The figures are already committed—each stance measured, each position deliberate—creating a shared sense of purpose without a single movement wasted.\n\nThe triangular grouping reinforces stability while quietly building pressure, a structure often seen in classical narrative painting. Rather than dramatizing action, the image holds itself in anticipation, allowing the viewer to feel the moment just before consequence. It’s this restraint—this refusal to resolve—that gives the work its staying power.",
     "rating": 5,
 
     "galleries": [
@@ -2867,7 +2869,7 @@ export const galleryData = [
   {
     "id": "i-pNSX6cp",
     "title": "Hired Gun – Ranger on the Rails",
-    "description": "A lone lawman stands beside a railcar inside a dim station, head lowered beneath the brim of his hat while warm light falls across worn leather and travel-stained clothing. The vertical framing and deep shadows isolate the figure against the train, emphasizing posture, weight, and presence. Painterly color tones and directional lighting give the portrait a cinematic quality, highlighting the quiet authority and endurance often associated with frontier lawmen. \n\n© Wayne Heim",
+    "description": "A lone Western figure stands beside a railcar, head lowered and hand resting near his sidearm, as light falls across worn fabric and weathered wood. The vertical composition emphasizes stillness and weight, capturing a quiet moment along the American frontier tied to rail travel and duty. \n\n© Wayne Heim",
     "alt": "Lawman standing beside a railcar inside a train station, hat brim lowered as warm light falls across his coat and revolver.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/LKsw8cZvh3Fj76tKzrdgnj2VVdwKNCG8L2nfRcRdJ/XL/painterly%20cowboy%20photography%20_HF28526-301-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-pNSX6cp/1/LKsw8cZvh3Fj76tKzrdgnj2VVdwKNCG8L2nfRcRdJ/XL/painterly%20cowboy%20photography%20_HF28526-301-XL.jpg",
@@ -2898,7 +2900,7 @@ export const galleryData = [
     ],
 
     "story": "Security my ass. The tracks clatter beneath me, and every mile behind means one less sin to carry. But the West always has unfinished business.",
-    "notes": "This portrait exemplifies Wayne Heim’s narrative approach—restraint, shadow, and psychological tension replace spectacle. Echoes of pictorialist tradition and Rembrandt’s palette frame the figure not as a legend, but as a witness to the West’s harsh realities. Each detail—the set jaw, the light on worn leather, the posture shaped by a lifetime of lines crossed and rules bent—roots this work in both art-historical lineage and modern collector sensibility. For those building a collection of painterly cowboy artwork prints or searching for Western fine art photography with genuine mythic undertones, “Hired Gun” offers a cinematic window into the liminal space between law, survival, and the stories we tell to justify both.",
+    "notes": "The vertical framing compresses the figure into a narrow field, reinforcing a sense of containment and inward focus. Rather than action, the composition leans on posture—the downward gaze, the resting hand—to carry narrative weight.\n\nThere is a quiet lineage here to portrait traditions that favor restraint over spectacle. The environment is not staged as backdrop but absorbed into the figure’s presence, allowing texture—wood, fabric, metal—to echo the psychological tone. The result is a piece that holds tension through stillness, inviting prolonged viewing rather than immediate resolution.",
     "rating": 5,
 
     "galleries": [
@@ -4522,7 +4524,7 @@ export const galleryData = [
   {
     "id": "i-5FX3W9r",
     "title": "Morning Joe",
-    "description": "Morning settles gently over the camp as a cowboy pauses with a tin cup of coffee, the first warmth of the day lifting the corners of his grin. Dusty light filters through the trees while the quiet rhythm of camp life begins to stir around him. Captured in the nostalgic tones of painterly Western photography, the scene reflects the small, human moments that lived between the long miles and hard work of frontier life. \n\n© Wayne Heim",
+    "description": "A smiling man sits at a rustic table, lifting a tin cup as soft light washes over his face and the surrounding wood textures. This relaxed moment captures the warmth and ease of frontier life through fine art Western photography. \n\n© Wayne Heim",
     "alt": "Smiling cowboy with mustache holding coffee cup in rustic Old West kitchen, painterly vintage-style Western photograph by Wayne Heim",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-5FX3W9r/3/KwV2wHFdfNq9PHm2HV77hrvsSKKQtG3b94LcdzPRj/XL/Painterly%20Cowboy%20Portrait%20Photography%20_DSF8812-Edit-2-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-5FX3W9r/3/KwV2wHFdfNq9PHm2HV77hrvsSKKQtG3b94LcdzPRj/XL/Painterly%20Cowboy%20Portrait%20Photography%20_DSF8812-Edit-2-Edit-2-XL.jpg",
@@ -4823,8 +4825,8 @@ export const galleryData = [
   {
     "id": "i-JKnW497",
     "title": "Wounded: Blood on the Bandolier",
-    "description": "A Western portrait of a vaquero wearing a wide-brim hat and bandolier, his hand pressed against his side as he looks downward in a moment of strain. Dust-softened tones and controlled lighting emphasize the textures of leather, cloth, and weathered skin. The restrained palette and atmosphere reflect the painterly approach of Wayne Heim’s Western fine art photography, shaping the figure into a quiet character study rooted in the visual language of the American frontier. \n\n© Wayne Heim",
-    "alt": "Color Western portrait of a vaquero in a wide-brim hat with a bandolier across his chest and a coil of rope over his shoulder, eyes down as he clutches a fresh wound at his left side.",
+    "description": "A man in a wide-brimmed hat lowers his gaze as he grips his side, a bandolier crossing his chest and a coil of rope resting over his shoulder. The tight framing and softened edges isolate the moment, shaping a tense study of pain and endurance within the American frontier through fine art western photography. \n\n© Wayne Heim",
+    "alt": "Vaquero with bandolier across his chest clutching a wound, head lowered in a tense moment within a Western frontier setting.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-JKnW497/6/L7m5TNv3VdmJ44jZMrT8VqVH6ZScFqRR4pvfw3xD5/XL/cowboy%20photography%20_O2H0496-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-JKnW497/6/L7m5TNv3VdmJ44jZMrT8VqVH6ZScFqRR4pvfw3xD5/XL/cowboy%20photography%20_O2H0496-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-JKnW497/6/L7m5TNv3VdmJ44jZMrT8VqVH6ZScFqRR4pvfw3xD5/XL/cowboy%20photography%20_O2H0496-Edit-Edit-XL.jpg",
@@ -4862,7 +4864,7 @@ export const galleryData = [
     ],
 
     "story": "Pain, pause, and disbelief. How could this be? Heat and wetness slowly creeped under his belt. Blood sticking to his bandolier and boots. \n\nThe crack of her shot landed a heartbeat late, gunpowder sweet in the air he exclaims: “Who the hell taught her to shoot like that?”",
-    "notes": "This image seizes the moment between recoil and reckoning. The vaquero’s bowed head and blood-striped gear create a triangle of tension that drags the eye down through grit, leather, and story. It’s not violence that holds this frame—it’s aftermath. Reflection. Vulnerability in silhouette.\n\nNote the tonal discipline: warm earth and scorched whites. Not a drop of color wasted. In a world where Western imagery often shouts, this one whispers and still cuts through. The bandolier isn’t just visual weight—it’s a scar across the frame. The restraint here is its power. No theatrics. Just storytelling with steel in its spine.\n\nThis is Wayne Heim at his most cinematic: marrying painterly control with raw narrative gravity. The kind of piece that doesn’t just fill a wall—it deepens a room.",
+    "notes": "The piece is driven by diagonal tension—the bandolier crossing the chest, the downward tilt of the head, the inward pull of the arm. These lines converge to create a contained, internalized moment rather than outward action.\n\nThe restrained palette and softened transitions place the work within a pictorialist lineage, where atmosphere and suggestion outweigh explicit narrative. The figure is not presented as spectacle, but as a study in physical and psychological weight. The result is a piece that lingers in the aftermath, inviting the viewer to engage with the quiet intensity of the moment rather than its cause.",
     "rating": 4,
 
     "galleries": [
@@ -9416,8 +9418,8 @@ export const galleryData = [
   {
     "id": "i-w3JBvXs",
     "title": "Wave Goodbye",
-    "description": "A young woman leans from a train platform with her arm raised in farewell, her expression caught between warmth and distance as the moment of departure unfolds. Soft light and generous negative space emphasize the emotional pause between presence and absence, capturing a fleeting goodbye in the quiet language of painterly Western photography. \n\n© Wayne Heim",
-    "alt": "Painterly Western photograph of a woman holding a farewell gesture from a train platform.",
+    "description": "A woman pauses mid-gesture on a train platform, her raised hand held in the quiet space between presence and departure. This narrative western art image uses light, posture, and negative space to suggest a fleeting moment shaped by memory, distance, and the passage of time. \n\n© Wayne Heim",
+    "alt": "Painterly Western photograph of a woman holding a farewell gesture from a train platform, capturing a quiet moment of departure on the American frontier.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/MtDGwXMWf2nWqwWKdqVQV8LcRhrJS5K6M7nMTxS8z/XL/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/MtDGwXMWf2nWqwWKdqVQV8LcRhrJS5K6M7nMTxS8z/XL/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-w3JBvXs/1/MtDGwXMWf2nWqwWKdqVQV8LcRhrJS5K6M7nMTxS8z/XL/Western%20themed%20fine%20art%20photography%20_HF21981-Enhanced-NR-Edit-XL.jpg",
@@ -15174,8 +15176,8 @@ export const galleryData = [
   {
     "id": "i-8Ddjt5W",
     "title": "Worth Every Mile",
-    "description": "A painterly Western photograph capturing a moment of reunion at the edge of a frontier homestead. A man returns, dust and distance still clinging to him, finding solace in the arms he traveled so far to reach. Rather than dramatizing romance, the image lingers in the weight of arrival—where hardship, devotion, and endurance converge in a single, quiet embrace.\n\nWayne Heim’s Western fine art photography approaches love in the American West as something earned rather than promised, shaped by separation, weather, and time. This piece reflects the emotional cost of frontier life, where affection was measured not by words, but by the miles endured to return home.\n© Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "Painterly Western fine art photograph of a cowboy embracing a woman outside a frontier homestead, conveying reunion, love, and the cost of distance in the American West",
+    "description": "A couple embraces outside a weathered homestead, their movement caught in a moment of return shaped by distance and time. This narrative western art photograph captures reunion as a physical and emotional convergence, where gesture, fabric, and proximity carry the weight of the journey behind it. \n\n© Wayne Heim",
+    "alt": "Cowboy embracing a woman outside a rustic homestead, dress and coat moving with the wind in a cinematic Western reunion scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KzZMBSfv7RGNTQC8GnZGcrRRC9pk6NGHFqZ4ZVw6r/XL/_HF22208-1050-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KzZMBSfv7RGNTQC8GnZGcrRRC9pk6NGHFqZ4ZVw6r/XL/_HF22208-1050-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-8Ddjt5W/0/KzZMBSfv7RGNTQC8GnZGcrRRC9pk6NGHFqZ4ZVw6r/XL/_HF22208-1050-2-XL.jpg",
@@ -15200,7 +15202,7 @@ export const galleryData = [
       "western fine art"
     ],
     "story": "Every mile—dirt, dusk, rain, and weather. Danger and duty, hardship and hope, all raging in epic battle against your love. \n\nLike a beacon, it guided me, shepherding me through the storm… bringing me back to your arms. The embrace—the kiss—worth every mile.",
-    "notes": "This composition is built around motion and return. The diagonal sweep of the figures creates a sense of momentum that resolves only in the embrace, reinforcing the narrative of distance overcome. Soft, directional light wraps the subjects, allowing fabric, posture, and proximity to carry the emotional weight without sentimentality.\n\nWhat sets this work apart within the Western canon is its treatment of intimacy as an outcome of endurance rather than idealism. Love is not staged—it is arrived at. The result is a rare Western image where romance feels earned, grounded in physical journey and emotional cost rather than nostalgia.",
+    "notes": "Movement becomes meaning here—the figures are not simply posed, but carried into the moment by momentum. The diagonal sweep of fabric and posture gives the embrace a sense of arrival that feels earned rather than staged.\n\nThis approach reflects a lineage within Western art that treats intimacy as consequence, not sentiment. The environment remains present but secondary, allowing the emotional gravity to center on human connection shaped by distance and endurance. The result is a piece that holds both motion and stillness at once, inviting the viewer into the space where they meet.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

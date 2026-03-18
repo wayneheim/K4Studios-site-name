@@ -25,7 +25,7 @@ export const galleryData = [
   {
     "id": "i-xhX479V",
     "title": "Through the Smoke",
-    "description": "A painterly Civil War photograph of a Union cavalry soldier riding through battlefield smoke, defined by duty rather than spectacle. Wayne Heim’s Civil War fine art photography emphasizes restraint, historical atmosphere, and psychological presence over reenactment theatrics. The disciplined composition, muted tonal palette, and forward momentum create a narrative rooted in consequence and command. Part of Wayne Heim’s Facing History collection, this piece reflects American Civil War imagery shaped with the tonal depth of classical painting and the cinematic structure of narrative portraiture. © Wayne Heim",
+    "description": "A Civil War soldier rides forward on horseback through a haze of smoke, with distant figures and a faint American flag receding into the background. His uniform and steady posture place him within the tension of an active battlefield, capturing a moment of forward movement within Civil War photography.\n\n© Wayne Heim",
     "alt": "Union Civil War cavalry soldier riding a chestnut horse through battlefield smoke, American flag faint in the background – painterly Civil War fine art photography by Wayne Heim",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color/i-xhX479V/A",
 
@@ -49,7 +49,7 @@ export const galleryData = [
     ],
 
     "story": "The air tastes of iron and damp earth. Hooves press forward into a world already disappearing, smoke folding the distance into something close and uncertain. I do not look back.\n\nOrders ride heavier than the saber at my side. Behind me, shapes blur—flag, men, the memory of a line that held. Ahead, only gray and the sound of breathing beneath me.\n\nHistory does not announce itself. It advances quietly, step by measured step, carried through the smoke by men who know the cost.",
-    "notes": "Through the Smoke recalls the mounted authority seen in 19th-century battle painting, yet it refuses spectacle. The composition borrows from classical equestrian portraiture—horse and rider forming a unified triangular structure—while the dissolving background softens into atmospheric haze reminiscent of historical oil studies.\n\nRather than dramatizing combat, Wayne Heim positions the figure in a suspended threshold moment: not charge, not retreat, but advance under burden. The muted greens and grays compress space, forcing attention onto posture, grip, and the subtle tension between control and uncertainty.\n\nAs part of the Facing History series, this work stands within a lineage that values narrative gravity over pageantry. It is not a reenactment image; it is an authored study of leadership, resolve, and the quiet weight carried forward into American history.",
+    "notes": "The strength of this piece comes from its restraint. The rider is not framed in dramatic action, but in steady forward motion—grounded, deliberate, and already within consequence.\n\nCompositional layering—the softened background figures, the partial flag, the forward-facing posture—creates depth without spectacle. It aligns with early war imagery and painterly traditions where presence outweighs performance.\n\nThe Engrained surface reinforces permanence. The image does not sit on top—it settles into the material, allowing history to feel carried rather than displayed.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",

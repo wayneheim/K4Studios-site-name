@@ -1,0 +1,56 @@
+---
+export const prerender = true;
+// Auto-generated Astro page for Lore-and-Legacy-Show
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PictureShowBase from "@/components/PictureShowBase.jsx";
+import { storyMeta, storyData } from "@/data/Other/Stories/Lore-and-Legacy-Show.mjs";
+import { getStructuredData } from "@/components/utils/getStructuredData.ts";
+import { normalizeImageSrc } from "@/utils/imageProxy.js";
+
+const coverSlide = storyData.find((slide) => slide.visibility !== "ghost") || storyData[0];
+const noscriptImage = normalizeImageSrc(
+  coverSlide?.id || coverSlide?.srcS || coverSlide?.srcM || coverSlide?.src || coverSlide?.srcL || "/images/K4-Stories logo1b.webp",
+  "l"
+);
+
+const structuredDataJSON = getStructuredData({
+  type: "gallery",
+  data: {
+    title: storyMeta.showTitle,
+    description: storyMeta.description,
+    url: `https://www.k4studios.com/Other/Stories/Lore-and-Legacy-Show`,
+    keywords: storyMeta.keywords,
+    copyrightNotice: "© Wayne Heim, k4studios.com. All rights reserved."
+  },
+  images: storyData,
+  defaults: {
+    copyrightNotice: "© Wayne Heim, www.k4studios.com. All rights reserved.",
+    license: "https://www.k4studios.com/licensing",
+    acquireLicensePage: "https://www.k4studios.com/licensing",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://www.k4studios.com/"
+  }
+});
+---
+
+<BaseLayout title={storyMeta.showTitle} structuredDataJSON={structuredDataJSON}>
+  <noscript>
+    <img
+      src={noscriptImage}
+      alt="${storyMeta.showTitle} – Cinematic Picture Show"
+      style="width:100%;height:auto;display:block;"
+    />
+  </noscript>
+  <PictureShowBase
+    client:load
+    rawData={storyData}
+    basePath="/Other/Stories/Lore-and-Legacy-Show"
+    titleBase={storyMeta.showTitle}
+    globalAudioSrc={storyMeta.globalAudioSrc || ""}
+    globalAudioMode={storyMeta.globalAudioMode || "score"}
+    presentationMode={storyMeta.presentationMode === true}
+    introMeta={storyMeta.introMeta || {}}
+    outroMeta={storyMeta.outroMeta || {}}
+  />
+</BaseLayout>

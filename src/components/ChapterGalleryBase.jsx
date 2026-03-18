@@ -1,5 +1,5 @@
 import { warmImage } from "../utils/warmImage";
-import { trackEvent, emitActionPixel } from "../utils/analytics";
+import { trackEvent, emitActionPixel, emitChapterViewPixel } from "../utils/analytics";
 import { useState, useRef, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight, Info } from "lucide-react";
@@ -694,7 +694,7 @@ export default function ChapterGalleryBase({
     setIsExpanded(false);
     setCurrentIndex((i) => {
       const newIndex = Math.max(i - 1, 0);
-      track("nav_prev");
+      track("nav_prev", { imageId: galleryData[newIndex]?.id, pageType: 'image' });
       return newIndex;
     });
   };
@@ -704,7 +704,7 @@ export default function ChapterGalleryBase({
     setIsExpanded(false);
     setCurrentIndex((i) => {
       const newIndex = Math.min(i + 1, galleryData.length - 1);
-      track("nav_next");
+      track("nav_next", { imageId: galleryData[newIndex]?.id, pageType: 'image' });
       return newIndex;
     });
   };
@@ -789,13 +789,12 @@ export default function ChapterGalleryBase({
       trigger: 'index_change'
     });
 
-    // Sister Pixel: emit on every chapter-view transition to capture repeat usage.
-    emitActionPixel('chapter_view', imageId, {
+    // Sister Pixel: emit on every chapter-view transition, but share a path-aware
+    // guard with the global URL tracker so direct image entries don't double-fire.
+    emitChapterViewPixel(imageId, {
       galleryId: galleryKey,
-      sourceLayer: 'sister_pixel_v1',
       trigger: 'chapter_view',
-      pageType: 'image',
-      pixelType: 'image'
+      pageType: 'image'
     });
   }, [currentIndex, galleryData, viewMode, galleryKey, hasEnteredChapters]);
 

@@ -1731,6 +1731,13 @@ async function getStatePixelTestRoaring20s(env, filters) {
           FROM raw_events r
           WHERE ${qualifiedDateClauseRaw}
             AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND r.source_layer = 'story_audio_toggle_pixel_v1'
+        ) AS story_audio_toggle_pixel_v1_hits,
+        (
+          SELECT COUNT(*)
+          FROM raw_events r
+          WHERE ${qualifiedDateClauseRaw}
+            AND r.event_type IN ('state_pixel', 'action_pixel')
             AND r.source_layer = 'collector_notes_open_pixel_v1'
         ) AS collector_notes_open_pixel_v1_hits,
         (
@@ -1981,12 +1988,15 @@ async function getStatePixelTestRoaring20s(env, filters) {
         r.user_agent,
         r.referer
       FROM agg a
-      JOIN hardened h
+      LEFT JOIN hardened h
         ON h.target_id = a.target_id
       LEFT JOIN ranked r
         ON r.target_id = a.target_id
        AND r.rn = 1
-      ORDER BY h.hardened_last_seen DESC, a.last_seen DESC, a.exposures DESC
+      ORDER BY CASE WHEN COALESCE(h.hardened_views, 0) > 0 THEN 0 ELSE 1 END,
+               h.hardened_last_seen DESC,
+               a.last_seen DESC,
+               a.exposures DESC
     `;
     const [summaryRow, refRows, viewerStatsRow, byGalleryRows, pixelImageAccessRows] = await Promise.all([
       env.DB.prepare(summaryQuery).first(),
@@ -2026,6 +2036,7 @@ async function getStatePixelTestRoaring20s(env, filters) {
       chapter_nav_next_pixel_v1_hits: Number(summaryRow?.chapter_nav_next_pixel_v1_hits || 0),
       slideshow_nav_prev_pixel_v1_hits: Number(summaryRow?.slideshow_nav_prev_pixel_v1_hits || 0),
       slideshow_nav_next_pixel_v1_hits: Number(summaryRow?.slideshow_nav_next_pixel_v1_hits || 0),
+      story_audio_toggle_pixel_v1_hits: Number(summaryRow?.story_audio_toggle_pixel_v1_hits || 0),
       collector_notes_open_pixel_v1_hits: Number(summaryRow?.collector_notes_open_pixel_v1_hits || 0),
       guide_open_pixel_v1_hits: Number(summaryRow?.guide_open_pixel_v1_hits || 0),
       guide_close_pixel_v1_hits: Number(summaryRow?.guide_close_pixel_v1_hits || 0),
@@ -2090,6 +2101,7 @@ async function getStatePixelTestRoaring20s(env, filters) {
       chapter_nav_next_pixel_v1_hits: 0,
       slideshow_nav_prev_pixel_v1_hits: 0,
       slideshow_nav_next_pixel_v1_hits: 0,
+      story_audio_toggle_pixel_v1_hits: 0,
       collector_notes_open_pixel_v1_hits: 0,
       guide_open_pixel_v1_hits: 0,
       guide_close_pixel_v1_hits: 0,
@@ -2151,6 +2163,9 @@ async function getEventBreakdown(env, filters) {
       "grid_open",
       "grid_image_click",
       "grid_show_more",
+      "slideshow_nav_prev",
+      "slideshow_nav_next",
+      "story_audio_toggle",
       "grid_show_previous",
       "scroll_25",
       "scroll_50",
@@ -2169,6 +2184,7 @@ async function getEventBreakdown(env, filters) {
         ${qualify(ipClause)}
         ${qualify(safeBotClause)}
         ${qualify(chardonClause)}
+        AND ${notCacheWarmer("e")}
         AND e.source = 'js'
         AND e.event_type IN (${trackedListSql})
       GROUP BY e.event_type
@@ -2765,19 +2781,39 @@ async function getTopPages(env, filters) {
     const safeBotClause = (botClause || "").replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ").replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
     const pagesQuery = `
-      WITH normalized AS (
+      WITH page_signals AS (
         SELECT
           CASE
             WHEN SUBSTR(raw_page, 1, 1) = '/'
               THEN raw_page
             ELSE '/' || raw_page
-          END AS page_path
+          END AS page_path,
+          SUM(CASE WHEN signal_source = 'pixel' THEN 1 ELSE 0 END) AS pixel_views,
+          SUM(CASE WHEN signal_source = 'js' THEN 1 ELSE 0 END) AS js_views
         FROM (
           SELECT
             COALESCE(
               NULLIF(e.page, ''),
               CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
-            ) AS raw_page
+            ) AS raw_page,
+            'pixel' AS signal_source
+          FROM classified_events e
+          WHERE ${where}
+            ${qualify(ipClause)}
+            ${qualify(safeBotClause)}
+            ${qualify(chardonClause)}
+            AND ${notCacheWarmer("e")}
+            AND COALESCE(e.is_bot,0) = 0
+            AND e.event_type IN ('page_pixel', 'edge_page', 'image_page', 'external_image_page')
+
+          UNION ALL
+
+          SELECT
+            COALESCE(
+              NULLIF(e.page, ''),
+              CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
+            ) AS raw_page,
+            'js' AS signal_source
           FROM human_population hp
           JOIN classified_events e ON e.visitor_id = hp.visitor_id
           WHERE ${where}
@@ -2791,6 +2827,7 @@ async function getTopPages(env, filters) {
         ) p
         WHERE raw_page IS NOT NULL
           AND LOWER(raw_page) NOT LIKE 'http%'
+        GROUP BY page_path
       ),
       hardened AS (
         SELECT
@@ -2821,11 +2858,18 @@ async function getTopPages(env, filters) {
           AND LOWER(raw_page) NOT LIKE 'http%'
         GROUP BY page_path
       )
-      SELECT n.page_path, COUNT(*) AS views, COALESCE(MAX(h.hardened_views), 0) AS hardened_views
-      FROM normalized n
-      LEFT JOIN hardened h ON h.page_path = n.page_path
-      GROUP BY n.page_path
-      ORDER BY views DESC
+      SELECT
+        ps.page_path,
+        CASE
+          WHEN ps.pixel_views > 0 THEN ps.pixel_views
+          ELSE ps.js_views
+        END AS views,
+        ps.pixel_views,
+        ps.js_views,
+        COALESCE(h.hardened_views, 0) AS hardened_views
+      FROM page_signals ps
+      LEFT JOIN hardened h ON h.page_path = ps.page_path
+      ORDER BY views DESC, ps.pixel_views DESC, ps.js_views DESC, ps.page_path ASC
       LIMIT 25
     `;
     return await env.DB.prepare(pagesQuery).all();
@@ -2971,6 +3015,99 @@ async function getBrowserViewsSummary(env, filters) {
       FROM normalized
     `;
     const row = await env.DB.prepare(q).first();
+    const funnelQuery = `
+      WITH page_sessions AS (
+        SELECT
+          COALESCE(
+            NULLIF(e.session_id, ''),
+            NULLIF(e.session_id_v2, ''),
+            NULLIF(e.visitor_id, ''),
+            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
+          ) AS session_key,
+          CASE
+            WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
+            ELSE '/' || raw_page
+          END AS page_path,
+          MAX(CASE WHEN e.event_type = 'page_pixel' THEN 1 ELSE 0 END) AS has_page_pixel,
+          MAX(CASE WHEN e.source = 'js' AND e.event_type = 'page_view' THEN 1 ELSE 0 END) AS has_js_page_view
+        FROM (
+          SELECT
+            e.session_id,
+            e.session_id_v2,
+            e.visitor_id,
+            e.ip_hash,
+            e.ip,
+            e.ts,
+            COALESCE(
+              NULLIF(e.page, ''),
+              CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
+            ) AS raw_page,
+            e.event_type,
+            e.source
+          FROM classified_events e
+          WHERE ${where}
+            ${qualify(ipClause)}
+            ${qualify(safeBotClause)}
+            ${qualify(chardonClause)}
+            AND ${notCacheWarmer("e")}
+            AND COALESCE(e.is_bot,0) = 0
+            AND e.event_type IN ('page_pixel', 'page_view')
+        ) e
+        WHERE raw_page IS NOT NULL
+          AND LOWER(raw_page) NOT LIKE 'http%'
+          AND (page_path GLOB '*/i-*' AND page_path NOT GLOB '*/i-*/*')
+        GROUP BY session_key, page_path
+      ),
+      image_sessions AS (
+        SELECT
+          COALESCE(
+            NULLIF(e.session_id, ''),
+            NULLIF(e.session_id_v2, ''),
+            NULLIF(e.visitor_id, ''),
+            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
+          ) AS session_key,
+          e.target_id AS image_id,
+          MAX(CASE WHEN e.event_type = 'state_pixel' AND e.source_layer = 'sister_pixel_v1' THEN 1 ELSE 0 END) AS has_sister_pixel,
+          MAX(CASE WHEN e.source = 'js' AND e.event_type = 'chapter_view' THEN 1 ELSE 0 END) AS has_chapter_js,
+          MAX(CASE WHEN e.source = 'js' AND e.event_type = 'qualified_chapter_view' THEN 1 ELSE 0 END) AS has_hardened_js
+        FROM classified_events e
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND ${notCacheWarmer("e")}
+          AND COALESCE(e.is_bot,0) = 0
+          AND e.target_id LIKE 'i-%'
+          AND e.target_id NOT LIKE '%/%'
+          AND e.target_id NOT LIKE 'i-test%'
+        GROUP BY session_key, image_id
+      ),
+      paired AS (
+        SELECT
+          p.session_key,
+          p.page_path,
+          p.has_page_pixel,
+          p.has_js_page_view,
+          MAX(COALESCE(i.has_sister_pixel, 0)) AS has_sister_pixel,
+          MAX(COALESCE(i.has_chapter_js, 0)) AS has_chapter_js,
+          MAX(COALESCE(i.has_hardened_js, 0)) AS has_hardened_js
+        FROM page_sessions p
+        LEFT JOIN image_sessions i
+          ON i.session_key = p.session_key
+         AND p.page_path LIKE '%' || i.image_id
+        GROUP BY p.session_key, p.page_path, p.has_page_pixel, p.has_js_page_view
+      )
+      SELECT
+        COUNT(*) AS image_page_sessions,
+        SUM(CASE WHEN has_page_pixel = 1 THEN 1 ELSE 0 END) AS page_pixel_sessions,
+        SUM(CASE WHEN has_sister_pixel = 1 THEN 1 ELSE 0 END) AS sister_pixel_sessions,
+        SUM(CASE WHEN has_chapter_js = 1 THEN 1 ELSE 0 END) AS chapter_js_sessions,
+        SUM(CASE WHEN has_hardened_js = 1 THEN 1 ELSE 0 END) AS hardened_sessions,
+        SUM(CASE WHEN has_page_pixel = 1 AND has_sister_pixel = 0 THEN 1 ELSE 0 END) AS page_without_sister_sessions,
+        SUM(CASE WHEN has_page_pixel = 1 AND has_chapter_js = 0 THEN 1 ELSE 0 END) AS page_without_chapter_js_sessions
+      FROM paired
+    `;
+    const funnelRow = await env.DB.prepare(funnelQuery).first();
     return {
       js_page_views: Number(row?.js_page_views || 0),
       js_page_viewers: Number(row?.js_page_viewers || 0),
@@ -2980,7 +3117,16 @@ async function getBrowserViewsSummary(env, filters) {
       gallery_landing_viewers: Number(row?.gallery_landing_viewers || 0),
       chapter_image_views: Number(row?.chapter_image_views || 0),
       chapter_image_viewers: Number(row?.chapter_image_viewers || 0),
-      external_direct_image_loads: Number(row?.external_direct_image_loads || 0)
+      external_direct_image_loads: Number(row?.external_direct_image_loads || 0),
+      image_funnel: {
+        image_page_sessions: Number(funnelRow?.image_page_sessions || 0),
+        page_pixel_sessions: Number(funnelRow?.page_pixel_sessions || 0),
+        sister_pixel_sessions: Number(funnelRow?.sister_pixel_sessions || 0),
+        chapter_js_sessions: Number(funnelRow?.chapter_js_sessions || 0),
+        hardened_sessions: Number(funnelRow?.hardened_sessions || 0),
+        page_without_sister_sessions: Number(funnelRow?.page_without_sister_sessions || 0),
+        page_without_chapter_js_sessions: Number(funnelRow?.page_without_chapter_js_sessions || 0)
+      }
     };
   } catch (e) {
     console.log("Browser views summary query failed:", e.message, e.stack);
@@ -2993,7 +3139,16 @@ async function getBrowserViewsSummary(env, filters) {
       gallery_landing_viewers: 0,
       chapter_image_views: 0,
       chapter_image_viewers: 0,
-      external_direct_image_loads: 0
+      external_direct_image_loads: 0,
+      image_funnel: {
+        image_page_sessions: 0,
+        page_pixel_sessions: 0,
+        sister_pixel_sessions: 0,
+        chapter_js_sessions: 0,
+        hardened_sessions: 0,
+        page_without_sister_sessions: 0,
+        page_without_chapter_js_sessions: 0
+      }
     };
   }
 }
@@ -3021,36 +3176,58 @@ async function getEntryAnalysis(env, filters) {
     const entryPagesQuery = `
       WITH base_events AS (
         SELECT
-          COALESCE(
-            NULLIF(e.session_id, ''),
-            NULLIF(e.session_id_v2, ''),
-            NULLIF(e.visitor_id, ''),
-            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
-          ) AS session_key,
+          session_key,
           CASE
             WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
             ELSE '/' || raw_page
           END AS page_path,
-          e.referer AS referrer,
-          e.ts
+          referrer,
+          ts,
+          signal_source
         FROM (
           SELECT
-            e.session_id,
-            e.session_id_v2,
-            e.visitor_id,
-            e.ip_hash,
-            e.ip,
+            COALESCE(
+              NULLIF(e.session_id, ''),
+              NULLIF(e.session_id_v2, ''),
+              NULLIF(e.visitor_id, ''),
+              'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
+            ) AS session_key,
             e.referer,
             e.ts,
-            COALESCE(NULLIF(e.page, ''), CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END) AS raw_page
+            COALESCE(NULLIF(e.page, ''), CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END) AS raw_page,
+            'pixel' AS signal_source
+          FROM classified_events e
+          WHERE ${where}
+            ${qualify(ipClause)}
+            ${qualify(safeBotClause)}
+            ${qualify(chardonClause)}
+            AND ${notCacheWarmer("e")}
+            AND COALESCE(e.is_bot,0) = 0
+            AND e.event_type IN ('page_pixel', 'edge_page', 'image_page', 'external_image_page')
+
+          UNION ALL
+
+          SELECT
+            COALESCE(
+              NULLIF(e.session_id, ''),
+              NULLIF(e.session_id_v2, ''),
+              NULLIF(e.visitor_id, ''),
+              'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
+            ) AS session_key,
+            e.referer,
+            e.ts,
+            COALESCE(NULLIF(e.page, ''), CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END) AS raw_page,
+            'js' AS signal_source
           FROM human_population hp
           JOIN classified_events e ON e.visitor_id = hp.visitor_id
           WHERE ${where}
             ${qualify(ipClause)}
             ${qualify(safeBotClause)}
             ${qualify(chardonClause)}
+            AND ${notCacheWarmer("e")}
             AND COALESCE(e.is_bot,0) = 0
             AND e.source = 'js'
+            AND e.event_type = 'page_view'
         ) e
         WHERE raw_page IS NOT NULL
           AND LOWER(raw_page) NOT LIKE 'http%'
@@ -3072,6 +3249,15 @@ async function getEntryAnalysis(env, filters) {
           AND referrer != 'unknown'
           AND referrer != 'direct'
           AND referrer NOT LIKE '%k4studios.com%'
+      ),
+      session_page_signals AS (
+        SELECT
+          session_key,
+          page_path,
+          MAX(CASE WHEN signal_source = 'pixel' THEN 1 ELSE 0 END) AS has_pixel,
+          MAX(CASE WHEN signal_source = 'js' THEN 1 ELSE 0 END) AS has_js
+        FROM base_events
+        GROUP BY session_key, page_path
       ),
       hardened AS (
         SELECT
@@ -3119,14 +3305,21 @@ async function getEntryAnalysis(env, filters) {
           WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%k4studios.com%' THEN 'internal'
           ELSE 'unattributed'
         END AS ref_source,
-        COUNT(DISTINCT fp.session_key) AS sessions,
+        CASE
+          WHEN SUM(CASE WHEN COALESCE(sps.has_pixel, 0) = 1 THEN 1 ELSE 0 END) > 0
+            THEN SUM(CASE WHEN COALESCE(sps.has_pixel, 0) = 1 THEN 1 ELSE 0 END)
+          ELSE COUNT(DISTINCT fp.session_key)
+        END AS sessions,
+        SUM(CASE WHEN COALESCE(sps.has_pixel, 0) = 1 THEN 1 ELSE 0 END) AS pixel_sessions,
+        SUM(CASE WHEN COALESCE(sps.has_js, 0) = 1 THEN 1 ELSE 0 END) AS js_sessions,
         COALESCE(MAX(h.hardened_views), 0) AS hardened_views
       FROM first_pages fp
       LEFT JOIN session_ext_ref ser ON ser.session_key = fp.session_key AND ser.rn = 1
+      LEFT JOIN session_page_signals sps ON sps.session_key = fp.session_key AND sps.page_path = fp.page_path
       LEFT JOIN hardened h ON h.page_path = fp.page_path
       WHERE fp.rn = 1
       GROUP BY fp.page_path, ref_source
-      ORDER BY sessions DESC
+      ORDER BY sessions DESC, pixel_sessions DESC, js_sessions DESC, fp.page_path ASC
       LIMIT 25
     `;
     const imagePageViewsQuery = `
@@ -4041,6 +4234,9 @@ function renderDashboard({
   const spSlideshowNavNextV1Hits = Number(
     sp.slideshow_nav_next_pixel_v1_hits || 0
   );
+  const spStoryAudioToggleV1Hits = Number(
+    sp.story_audio_toggle_pixel_v1_hits || 0
+  );
   const spCollectorNotesV1Hits = Number(sp.collector_notes_open_pixel_v1_hits || 0);
   const spGuideButtonsV1Hits =
     Number(sp.guide_open_pixel_v1_hits || 0) +
@@ -4077,6 +4273,7 @@ function renderDashboard({
     spChapterNavNextV1Hits,
     spSlideshowNavPrevV1Hits,
     spSlideshowNavNextV1Hits,
+    spStoryAudioToggleV1Hits,
     spCollectorNotesV1Hits,
     spGuideButtonsV1Hits,
     1
@@ -4132,6 +4329,16 @@ function renderDashboard({
   const chapterImageViews = Number(bvs.chapter_image_views || 0);
   const chapterImageViewers = Number(bvs.chapter_image_viewers || 0);
   const externalDirectImageLoads = Number(bvs.external_direct_image_loads || 0);
+  const imageFunnel = bvs.image_funnel || {};
+  const imagePageSessions = Number(imageFunnel.image_page_sessions || 0);
+  const pagePixelSessions = Number(imageFunnel.page_pixel_sessions || 0);
+  const sisterPixelSessions = Number(imageFunnel.sister_pixel_sessions || 0);
+  const chapterJsSessions = Number(imageFunnel.chapter_js_sessions || 0);
+  const hardenedImageSessions = Number(imageFunnel.hardened_sessions || 0);
+  const pageWithoutSisterSessions = Number(imageFunnel.page_without_sister_sessions || 0);
+  const pageWithoutChapterJsSessions = Number(imageFunnel.page_without_chapter_js_sessions || 0);
+  const funnelBase = Math.max(pagePixelSessions, imagePageSessions, 0);
+  const funnelPct = (value) => funnelBase > 0 ? Math.round(value / funnelBase * 1e3) / 10 : 0;
   const fmt2 = /* @__PURE__ */ __name2(
     (n) => Number.isFinite(Number(n)) ? Number(n).toFixed(2) : "0.00",
     "fmt2"
@@ -4231,6 +4438,9 @@ function renderDashboard({
     series_info: "Series Info",
     sister_image_click: "Sister Image Click",
     slideshow_start: "Slideshow Start",
+    slideshow_nav_prev: "Slideshow Prev",
+    slideshow_nav_next: "Slideshow Next",
+    story_audio_toggle: "Story Audio Toggle",
     story_slider_click: "Story Slider Click",
     theme_click: "Theme Click",
     grid_open: "Grid Open",
@@ -4503,6 +4713,7 @@ function renderDashboard({
     .section-tip:hover .tooltip { display: block; }
     .mini-btn { font-size: 10px; padding: 3px 8px; border: 1px solid #444; border-radius: 6px; background: #1a1a1a; color: #ccc; cursor: pointer; }
     .mini-btn:hover { background: #333; }
+    .mini-btn.active { background: #0f172a; color: #e2e8f0; border-color: #475569; }
     .k4-overlay { display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.75); justify-content:center; align-items:center; }
     .k4-overlay.open { display:flex; }
     .k4-overlay-box { background:#1a1a1a; border:1px solid #333; border-radius:10px; width:90vw; max-width:900px; max-height:85vh; display:flex; flex-direction:column; box-shadow:0 8px 32px rgba(0,0,0,.6); }
@@ -5065,6 +5276,47 @@ function renderDashboard({
   </div>
 
   <div class="section" style="max-width:1780px;margin:0 auto 18px;">
+    <div class="section-header">
+      <h3>Image View Funnel</h3>
+      <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Session-based progression for image pages. Base is sessions that reached an <code>/i-...</code> page and logged a page pixel. This makes the gap between arrival and actual image-view tracking visible in one place.</div></span>
+    </div>
+    <div class="pulse-row">
+      <div class="pulse-stat" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+        <span class="value" style="color:#e2e8f0;">${pagePixelSessions}</span>
+        <span class="label" style="color:#cbd5e1;">Image Page Sessions <span class="info-icon" style="background:rgba(255,255,255,0.14);color:#cbd5e1;">i</span></span>
+        <div class="tooltip">Sessions that reached an image page and produced a page pixel. This is the funnel baseline for on-page image behavior.</div>
+      </div>
+      <div class="pulse-stat" style="background: linear-gradient(135deg, #166534 0%, #15803d 100%);">
+        <span class="value" style="color:#f0fdf4;">${sisterPixelSessions} <span style="font-size:12px;opacity:0.9;">(${funnelPct(sisterPixelSessions)}%)</span></span>
+        <span class="label" style="color:#dcfce7;">Sister Pixel Sessions <span class="info-icon" style="background:rgba(255,255,255,0.14);color:#dcfce7;">i</span></span>
+        <div class="tooltip">Sessions with an image-targeted <code>sister_pixel_v1</code> after image-page arrival. If this lags badly behind image page sessions, the issue is either bounce or missing image-view capture.</div>
+      </div>
+      <div class="pulse-stat" style="background: linear-gradient(135deg, #92400e 0%, #b45309 100%);">
+        <span class="value" style="color:#fff7ed;">${chapterJsSessions} <span style="font-size:12px;opacity:0.9;">(${funnelPct(chapterJsSessions)}%)</span></span>
+        <span class="label" style="color:#fed7aa;">Chapter JS Sessions <span class="info-icon" style="background:rgba(255,255,255,0.14);color:#fed7aa;">i</span></span>
+        <div class="tooltip">Sessions with JS <code>chapter_view</code> on the image target. This shows how often JS confirms image progression after arrival.</div>
+      </div>
+      <div class="pulse-stat" style="background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%);">
+        <span class="value" style="color:#e0f2fe;">${hardenedImageSessions} <span style="font-size:12px;opacity:0.9;">(${funnelPct(hardenedImageSessions)}%)</span></span>
+        <span class="label" style="color:#bae6fd;">Hardened Sessions <span class="info-icon" style="background:rgba(255,255,255,0.14);color:#bae6fd;">i</span></span>
+        <div class="tooltip">Sessions with <code>qualified_chapter_view</code>. This is the strongest confirmation layer and is expected to be lower than sister pixel or chapter JS.</div>
+      </div>
+    </div>
+    <div class="pulse-row" style="margin-bottom:0;">
+      <div class="pulse-stat" style="background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 100%);">
+        <span class="value" style="color:#fee2e2;">${pageWithoutSisterSessions} <span style="font-size:12px;opacity:0.9;">(${funnelPct(pageWithoutSisterSessions)}%)</span></span>
+        <span class="label" style="color:#fecaca;">Page Without Sister <span class="info-icon" style="background:rgba(255,255,255,0.14);color:#fecaca;">i</span></span>
+        <div class="tooltip">Image-page sessions that never produced a sister pixel. This is the main discrepancy bucket between arrival and image-view tracking.</div>
+      </div>
+      <div class="pulse-stat" style="background: linear-gradient(135deg, #713f12 0%, #a16207 100%);">
+        <span class="value" style="color:#fef3c7;">${pageWithoutChapterJsSessions} <span style="font-size:12px;opacity:0.9;">(${funnelPct(pageWithoutChapterJsSessions)}%)</span></span>
+        <span class="label" style="color:#fde68a;">Page Without Chapter JS <span class="info-icon" style="background:rgba(255,255,255,0.14);color:#fde68a;">i</span></span>
+        <div class="tooltip">Image-page sessions that never produced a JS <code>chapter_view</code>. This helps separate pixel-only browsing from JS-confirmed image interaction.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="max-width:1780px;margin:0 auto 18px;">
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
       <h3 style="margin:0;">Viewer Behavior (Sister Pixel)</h3>
       <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Identity-based view of sister pixel behavior using <code>visitor_id</code> and <code>session_id</code>. \u201CDuplicates\u201D = exposures where a visitor re-viewed the same image within the same visit (visit = session_id, with a fallback if missing).</div></span>
@@ -5124,7 +5376,7 @@ function renderDashboard({
   <div class="section" style="max-width:1780px;margin:0 auto 18px;">
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
       <h3 style="margin:0;">Sister Pixel Image Access Overview</h3>
-      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Per-image breakout from pixel exposure rows, but only for images that also earned at least one hardened JS <code>qualified_chapter_view</code>. Keeps raw sister-pixel exposure counts while defaulting this panel to likely real human image views.</div></span>
+      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Per-image breakout from image-targeted pixel exposure rows. This panel includes pixel-only image traffic again, including privacy-blocked or JS-suppressed visits. <code>H</code> marks images that also earned at least one hardened JS <code>qualified_chapter_view</code>; rows without <code>H</code> remain visible as pixel-only evidence.</div></span>
       <span style="margin-left:auto;font-size:12px;color:#888;">Rows: <strong style="color:#fff;">${spPixelImageAccess.length || 0}</strong></span>
     </div>
     <div style="margin-top:10px;">
@@ -5236,7 +5488,7 @@ function renderDashboard({
       ? '<span style="display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:20px;padding:0 6px;border-radius:3px;background:#6b728022;color:#6b7280;font-size:10px;font-weight:bold;border:1px solid #6b728055;" title="Zoom views: 0 / ' + exposures + '">0</span>'
       : '<span style="display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:20px;padding:0 6px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:10px;font-weight:bold;border:1px solid #06b6d455;" title="Zoom views: ' + zoomViews + ' / ' + exposures + '">' + zoomViews + '</span>';
     const thumb = imageId && imageId.startsWith("i-") ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (idx < 6 ? "eager" : "lazy") + '" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid #84cc1644;">' : '<span style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:1px solid #333;">\u{1F5BC}</span>';
-    const borderColor = hasZoom ? "#06b6d444" : "#84cc1644";
+    const borderColor = hardenedViews > 0 ? "#38bdf844" : hasZoom ? "#06b6d444" : hasSister ? "#84cc1644" : "#64748b44";
     return `<div class="pixel-access-row" style="display:grid;grid-template-columns: 90px 180px minmax(120px, 1fr) minmax(140px, 1fr) 90px minmax(100px, 0.8fr) 70px 60px 60px;gap:10px;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ${borderColor};align-items:center;font-size:13px;transition:background 0.15s;" onmouseover="this.style.background='rgba(255,255,255,0.04)'" onmouseout="this.style.background='transparent'">
       <div style="display:flex;align-items:center;justify-content:center;">
         <a href="${imageUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;">${thumb}</a>
@@ -5246,7 +5498,7 @@ function renderDashboard({
           <div style="flex:0 0 auto;display:flex;gap:4px;">${hBadge}${pBadge}</div>
           <a href="${imageUrl}" target="_blank" rel="noopener" style="color:#84cc16;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;" title="${imageId}">${imageId || "(missing)"}</a>
         </div>
-        <div style="font-size:11px;color:#6b7280;">${hardenedViews > 0 ? 'hardened + pixel' : 'pixel'}</div>
+        <div style="font-size:11px;color:#6b7280;">${hardenedViews > 0 ? 'hardened + pixel' : 'pixel only'}</div>
       </div>
       <div style="display:flex;align-items:center;gap:6px;min-width:0;overflow:hidden;">
         <span style="font-size:14px;flex-shrink:0;">\u{1F4C1}</span>
@@ -5643,6 +5895,55 @@ function renderDashboard({
       var hdr = document.getElementById('accessTimeHeader');
       if (hdr) hdr.style.opacity = '1';
     }
+
+    function setPixelEventSort(mode) {
+      var list = document.getElementById('pixelEventList');
+      if (!list) return;
+
+      var rows = Array.prototype.slice.call(list.querySelectorAll('.bar-row'));
+      if (rows.length <= 1) return;
+
+      var currentMode = list.dataset.sortMode || 'count';
+      var currentDirection = list.dataset.sortDirection || 'desc';
+      var nextDirection = 'desc';
+
+      if (mode === 'alpha') {
+        nextDirection = currentMode === 'alpha' && currentDirection === 'asc' ? 'desc' : 'asc';
+      }
+
+      rows.sort(function(a, b) {
+        if (mode === 'alpha') {
+          var aLabel = (a.dataset.label || '').toLowerCase();
+          var bLabel = (b.dataset.label || '').toLowerCase();
+          return nextDirection === 'asc'
+            ? aLabel.localeCompare(bLabel)
+            : bLabel.localeCompare(aLabel);
+        }
+
+        var aCount = Number(a.dataset.count || '0');
+        var bCount = Number(b.dataset.count || '0');
+        if (bCount !== aCount) return bCount - aCount;
+
+        var aFallback = (a.dataset.label || '').toLowerCase();
+        var bFallback = (b.dataset.label || '').toLowerCase();
+        return aFallback.localeCompare(bFallback);
+      });
+
+      rows.forEach(function(row) {
+        list.appendChild(row);
+      });
+
+      var countBtn = document.getElementById('pixelSortCount');
+      var alphaBtn = document.getElementById('pixelSortAlpha');
+      if (countBtn) countBtn.classList.toggle('active', mode === 'count');
+      if (alphaBtn) alphaBtn.classList.toggle('active', mode === 'alpha');
+      list.dataset.sortMode = mode;
+      list.dataset.sortDirection = nextDirection;
+      if (alphaBtn) {
+        alphaBtn.textContent = nextDirection === 'asc' ? 'A-Z' : 'Z-A';
+        alphaBtn.title = nextDirection === 'asc' ? 'Sort alphabetically ascending' : 'Sort alphabetically descending';
+      }
+    }
   <\/script>
 
 
@@ -5656,8 +5957,12 @@ function renderDashboard({
           <h3 style="margin:0;">Pixel Event Tracking</h3>
           <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Temporary pixel totals for the selected date window from <code>raw_events</code> where <code>event_type IN ('state_pixel','action_pixel')</code>. Useful while pixel trackers are being rolled into Event Breakdown.</div></span>
         </div>
+        <div style="display:flex; align-items:center; gap:6px;">
+          <button type="button" id="pixelSortCount" class="mini-btn active" onclick="setPixelEventSort('count')" title="Sort by highest count first">Count</button>
+          <button type="button" id="pixelSortAlpha" class="mini-btn" onclick="setPixelEventSort('alpha')" title="Sort alphabetically ascending">A-Z</button>
+        </div>
       </div>
-      <div style="padding-right: 6px;">
+      <div id="pixelEventList" data-sort-mode="count" data-sort-direction="desc" style="padding-right: 6px;">
         <div class="bar-row" data-label="Zoom (total)" data-count="${spZoomV1Hits}">
           <span class="bar-label" title="Zoom (total)">Zoom (total)</span>
           <div class="bar-container">
@@ -5861,6 +6166,13 @@ function renderDashboard({
           </div>
           <span class="bar-value">${spSlideshowNavNextV1Hits}</span>
         </div>
+        <div class="bar-row" data-label="Story Audio Toggle (total)" data-count="${spStoryAudioToggleV1Hits}">
+          <span class="bar-label" title="Story Audio Toggle (total)">Story Audio Toggle (total)</span>
+          <div class="bar-container">
+            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spStoryAudioToggleV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #f59e0b 0%, #92400e 100%);"></div>
+          </div>
+          <span class="bar-value">${spStoryAudioToggleV1Hits}</span>
+        </div>
         <div class="bar-row" data-label="Collector Notes (total)" data-count="${spCollectorNotesV1Hits}">
           <span class="bar-label" title="Collector Notes (total)">Collector Notes (total)</span>
           <div class="bar-container">
@@ -5876,6 +6188,7 @@ function renderDashboard({
           <span class="bar-value">${spGuideButtonsV1Hits}</span>
         </div>
       </div>
+      <script>setPixelEventSort('count');<\/script>
     </div>
 
     <!-- Site Geography -->
@@ -6297,10 +6610,27 @@ function renderDashboard({
       ` : ""}
     </div>
 
+    ${(() => {
+    const renderTrackingBadges = (options) => {
+      const badges = [];
+      const hasPixel = Number(options?.pixel || 0) > 0;
+      const hasJs = Number(options?.js || 0) > 0;
+      const isHardened = !!options?.hardened;
+      if (hasJs && !hasPixel) {
+        badges.push({ label: "J", title: "JS-only fallback for this row", bg: "#f59e0b22", text: "#f59e0b", border: "#f59e0b55" });
+      }
+      if (isHardened) {
+        badges.push({ label: "H", title: "Qualified image view confirmed", bg: "#38bdf822", text: "#38bdf8", border: "#38bdf855" });
+      }
+      if (badges.length === 0) return "";
+      return badges.map((badge) => '<span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:' + badge.bg + ';color:' + badge.text + ';font-size:10px;font-weight:bold;border:1px solid ' + badge.border + ';flex:0 0 auto;" title="' + badge.title + '">' + badge.label + '</span>').join('');
+    };
+
+    return `
     <div class="section k4-split-panel" style="order: 1;">
       <div class="section-header">
-        <h3>Top 25 Pages</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Top overall linkable pages from page-bearing events. Includes site pages, image/chapter pages, and gallery landing pages. Colors: blue=site, green=images, yellow=gallery landing.</div></span>
+        <h3>Top 25 Pages (Pixel-First)</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Ranks pages by pixel-backed page counts when available, then falls back to JS page views where pixels are missing. J means JS-only fallback. H means a qualified image confirmation. Colors: blue=site, green=images, yellow=gallery landing.</div></span>
       </div>
       ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : (() => {
     const galleryPaths = new Set(GALLERY_LANDING_PATHS);
@@ -6309,18 +6639,23 @@ function renderDashboard({
       const path = String(p.page_path || "/");
       const isChapter = /\/i-[A-Za-z0-9]+$/.test(path);
       const isHardened = isChapter && Number(p.hardened_views || 0) > 0;
+      const pixelViews = Number(p.pixel_views || 0);
+      const jsViews = Number(p.js_views || 0);
       const isGallery = galleryPaths.has(path);
       const color = isChapter ? "#84cc16" : isGallery ? "#eab308" : "#4a9eff";
       const shortPath = path.length > 32 ? "..." + path.slice(-29) : path;
       const count = p.views || 0;
-      const hardenedBadge = isHardened ? '<span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#38bdf822;color:#38bdf8;font-size:10px;font-weight:bold;border:1px solid #38bdf855;flex:0 0 auto;" title="Hardened image view confirmed">H</span>' : '';
+      const signalBadges = renderTrackingBadges({ pixel: pixelViews, js: jsViews, hardened: isHardened });
+      const countTitle = pixelViews > 0
+        ? 'Pixel-backed count: ' + pixelViews + (jsViews > 0 ? ' | JS confirmations: ' + jsViews : '')
+        : 'JS fallback count: ' + jsViews;
       return `
           <div class="bar-row">
-            <a class="bar-label" href="https://www.k4studios.com${path}" target="_blank" title="${path}" style="color: ${color}; text-decoration: none; display:flex; align-items:center; gap:6px; min-width:0;">${hardenedBadge}<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${shortPath}</span></a>
+            <a class="bar-label" href="https://www.k4studios.com${path}" target="_blank" title="${path}" style="color: ${color}; text-decoration: none; display:flex; align-items:center; gap:6px; min-width:0;">${signalBadges}<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${shortPath}</span></a>
             <div class="bar-container">
               <div class="bar" style="width: ${(count / maxViews * 100).toFixed(1)}%; background: ${color};"></div>
             </div>
-            <span class="bar-value">${count}</span>
+            <span class="bar-value" title="${countTitle}">${count}</span>
           </div>`;
     }).join("");
     return `<div class="k4-split-scroll" style="padding-right: 4px;">${rowsHtml}</div>`;
@@ -6329,8 +6664,8 @@ function renderDashboard({
 
     <div class="section" style="order: 2;">
       <div class="section-header">
-        <h3>Top 25 Entry Pages (Sessions)</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page hit in a session, grouped by page + referrer source. Includes site pages, gallery landing pages, and chapter/image pages.</div></span>
+        <h3>Top 25 Entry Pages (Pixel-First Sessions)</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Ranks first-hit session entries by pixel-backed session counts when available, then falls back to JS session starts where pixels are missing. J means JS-only fallback. H means a qualified image confirmation.</div></span>
       </div>
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
       <div style="max-height: 320px; overflow: auto; padding-right: 0; padding-left: 0;">
@@ -6346,6 +6681,8 @@ function renderDashboard({
     const fullPath = rawPath.startsWith("/") ? rawPath : `/${rawPath}`;
     const isChapter = /\/i-[A-Za-z0-9]+$/.test(fullPath);
             const isHardened = isChapter && Number(p.hardened_views || 0) > 0;
+            const pixelSessions = Number(p.pixel_sessions || 0);
+            const jsSessions = Number(p.js_sessions || 0);
     const isGalleryLanding = !isChapter && GALLERY_LANDING_PATHS.includes(fullPath);
     const typeColor = isChapter ? "#84cc16" : isGalleryLanding ? "#eab308" : "#4a9eff";
     const shortPath = (() => {
@@ -6357,7 +6694,7 @@ function renderDashboard({
       return path.slice(0, startLen) + "..." + path.slice(-endLen);
     })();
     const pageIcon = isChapter ? "\u{1F5BC}\uFE0F" : isGalleryLanding ? "\u{1F4C1}" : "\u{1F4C4}";
-    const hardenedBadge = isHardened ? '<span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#38bdf822;color:#38bdf8;font-size:10px;font-weight:bold;border:1px solid #38bdf855;flex:0 0 auto;" title="Hardened image view confirmed">H</span>' : '';
+    const signalBadges = renderTrackingBadges({ pixel: pixelSessions, js: jsSessions, hardened: isHardened });
     const refIcons = {
       google_search: "\u{1F50D}",
       google_images: "\u{1F5BC}\uFE0F",
@@ -6374,12 +6711,17 @@ function renderDashboard({
       unattributed: "\u{1F512}"
     };
     const refIcon = refIcons[p.ref_source] || "\u{1F512}";
-    return `<tr><td title="${fullPath}" style="color:${typeColor};padding-left:6px;padding-right:4px;"><span style="display:inline-flex;align-items:center;gap:6px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom;">${hardenedBadge}<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${pageIcon} ${shortPath}</span></span></td><td title="${p.ref_source}" style="text-align:center;padding-left:4px;padding-right:4px;">${refIcon}</td><td style="text-align:right;padding-left:4px;padding-right:4px;">${p.sessions}</td></tr>`;
+    const countTitle = pixelSessions > 0
+      ? 'Pixel-backed entry sessions: ' + pixelSessions + (jsSessions > 0 ? ' | JS entry sessions: ' + jsSessions : '')
+      : 'JS fallback entry sessions: ' + jsSessions;
+    return `<tr><td title="${fullPath}" style="color:${typeColor};padding-left:6px;padding-right:4px;"><span style="display:inline-flex;align-items:center;gap:6px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom;">${signalBadges}<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${pageIcon} ${shortPath}</span></span></td><td title="${p.ref_source}" style="text-align:center;padding-left:4px;padding-right:4px;">${refIcon}</td><td title="${countTitle}" style="text-align:right;padding-left:4px;padding-right:4px;">${p.sessions}</td></tr>`;
   }).join("")}
         </table>
       </div>
       `}
     </div>
+    `;
+  })()}
 
     <div class="section" style="order: 8;">
       <div class="section-header">
@@ -8541,6 +8883,7 @@ const PIXEL_LAYER_BY_ACTION = {
   slideshow_start: "slideshow_start_pixel_v1",
   slideshow_nav_prev: "slideshow_nav_prev_pixel_v1",
   slideshow_nav_next: "slideshow_nav_next_pixel_v1",
+  story_audio_toggle: "story_audio_toggle_pixel_v1",
   browse_all_open: "browse_all_open_pixel_v1",
   browse_all_image_click: "browse_all_image_click_pixel_v1",
   gallery_hero_click: "gallery_hero_click_pixel_v1",

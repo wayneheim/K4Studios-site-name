@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright, Mail } from "lucide-react";
+import { SquareChevronLeft, SquareChevronRight, ShoppingCart, Notebook, MonitorPlay, Volume2, VolumeX, Copyright, Mail, House } from "lucide-react";
 import "./ScrollFlipZoomStyles.css";
 import "../styles/global.css";
 import EngrainedOrderModal from "./EngrainedOrderModal.jsx";
@@ -130,7 +130,7 @@ const usesEngrainedOrderModal = (image, basePath = "") => {
   return canonicalBasePath === ENGRAINED_BASE_PATH;
 };
 
-export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score", introMeta = {}, outroMeta = {} }) {
+export default function PictureShowBase({ rawData = [], basePath = "", titleBase = "", globalAudioSrc = "", globalAudioMode = "score", presentationMode = false, introMeta = {}, outroMeta = {} }) {
   // Detect if this is a story (has audio or intro metadata) vs gallery (neither)
   const isStory = useMemo(() => {
     return Boolean(globalAudioSrc) || Object.keys(introMeta).length > 0 || Object.keys(outroMeta).length > 0;
@@ -190,6 +190,18 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
       return rawData || [];
     }
   }, [rawData]);
+
+  const presentationRailSlides = useMemo(() => {
+    return filteredData
+      .map((img, index) => ({ img, index }))
+      .filter(({ img }) =>
+        img?.id !== "i-k4studios" &&
+        img?.id !== "i-k4video-intro" &&
+        img?.id !== "i-k4video-outro" &&
+        !img?._isIntro &&
+        !img?._isOutro
+      );
+  }, [filteredData]);
 
   // Determine default volume: 30% for ambient, 50% for score, 70% for mixed/individual audio
   const defaultVolume = useMemo(() => {
@@ -287,9 +299,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   }, [
     showSlideshow,
     isMuted,
-    effectiveGlobalAudioMode,
     scoreAudioSrc,
-    ambientAudioSrc,
     volume,
   ]);
 
@@ -488,7 +498,7 @@ useEffect(() => {
       }, 100);
     } else {
       setCurrentIndex(i => {
-  const newIndex = Math.min(i + 1, filteredData.length);
+        const newIndex = Math.min(i + 1, filteredData.length);
         // Trigger audio for new image after a short delay
         setTimeout(() => {
           if (showSlideshow && filteredData[newIndex]?.audioSrc && !isMuted) {
@@ -664,6 +674,19 @@ const isSpeechActive = () => {
     }
   };
 
+  const trackStoryAction = (event, imageId = null, details = {}, pixelOverrides = {}) => {
+    track(event, {
+      pageType: 'story',
+      imageId,
+      ...details,
+    });
+    emitActionPixel(event, imageId, {
+      pageType: 'story',
+      ...details,
+      ...pixelOverrides,
+    });
+  };
+
 
 
 
@@ -827,6 +850,17 @@ const isSpeechActive = () => {
 
   // Compute safe speaking flag once
   const safeSpeaking = isSpeaking || isSpeechActive();
+  const introLayoutH = false;
+  const actionButtonsH = presentationMode;
+  const notesPanelH = false;
+  const progressNavH = false;
+  const storyTextH = presentationMode;
+  const footerH = presentationMode;
+  const introTitleClassName = presentationMode ? "font-semibold mb-2 text-5xl sm:text-6xl" : "font-semibold mb-1 text-3xl";
+  const introLabelClassName = presentationMode ? "text-3xl sm:text-4xl block text-[#85644b]" : "text-xl block  text-[#85644b]";
+  const introStoryClassName = presentationMode ? "italic text-lg sm:text-2xl leading-relaxed text-gray-700 mb-5" : "italic text-sm leading-relaxed text-gray-700 mb-4";
+  const slideTitleClassName = presentationMode ? "text-[#85644b] font-semibold mb-3 text-3xl sm:text-4xl" : `text-[#85644b] font-semibold mb-2 ${currentIndex === 0 ? 'text-3xl' : 'text-xl'}`;
+  const slideStoryClassName = presentationMode ? "italic text-xl sm:text-2xl leading-relaxed" : "italic text-base leading-relaxed";
 
   return (
     <>
@@ -887,6 +921,13 @@ const isSpeechActive = () => {
                     <a
                       key={idx}
                       href={getChapterImageHref(img)}
+                      onClick={() => {
+                        trackStoryAction('grid_image_click', img.id || null, {
+                          trigger: 'story_end_index'
+                        }, {
+                          sourceLayer: 'grid_image_click_pixel_v1'
+                        });
+                      }}
                       className="group block rounded-md overflow-hidden border border-gray-300 hover:shadow-md transition-all"
                     >
                       <img
@@ -914,6 +955,9 @@ const isSpeechActive = () => {
                     href={exitHref}
                     onClick={() => {
                       stopSpeech();
+                      trackStoryAction('exit_to_gallery', currentImage?.id || null, {
+                        trigger: 'story_end_exit'
+                      });
                     }}
                     className="px-4 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-100 flex items-center gap-2 text-gray-700"
                     title="Exit story"
@@ -938,7 +982,7 @@ const isSpeechActive = () => {
                 style={{ touchAction: 'pan-y' }}
               >
                 {/* CARD CONTAINER FOR START PAGE */}
-                {currentIndex === 0 ? (
+                {!introLayoutH && currentIndex === 0 ? (
                   <div className="w-full px-3 sm:px-4 md:px-0 mt-8 md:mt-16 lg:mt-20">
                     <motion.div
                       initial={false}
@@ -947,7 +991,7 @@ const isSpeechActive = () => {
                         stack: {},
                         fan: { transition: { staggerChildren: 0, delayChildren: 0 } }
                       }}
-                      style={{ position: 'relative', maxWidth: '28rem', margin: '0 auto', overflow: 'visible', padding: '.25rem 0', perspective: '1000px' }}
+                      style={{ position: 'relative', maxWidth: presentationMode ? '40rem' : '28rem', margin: '0 auto', overflow: 'visible', padding: '.25rem 0', perspective: '1000px' }}
                     >
                       {/* Shadow stack cards animate from a neat stack to fanned offsets */}
                       {[ 
@@ -1084,7 +1128,7 @@ const isSpeechActive = () => {
                         onClick={goNext}
                         onMouseEnter={() => setIsCardHovered(true)}
                         onMouseLeave={() => setIsCardHovered(false)}
-                        className="k4-card pt-4 sm:pt-8 md:pt-12 px-8 pb-6 cursor-pointer flex flex-col will-change-transform max-w-md mx-auto group"
+                        className={`k4-card pt-4 sm:pt-8 md:pt-12 px-8 pb-6 cursor-pointer flex flex-col will-change-transform mx-auto group ${presentationMode ? 'max-w-2xl' : 'max-w-md'}`}
                         style={{
                           position: 'relative',
                           zIndex: 10,
@@ -1092,7 +1136,7 @@ const isSpeechActive = () => {
                       >
                       {/* IMAGE CONTAINER (three-stage hover: src -> src2 -> src3) */}
                       <div
-                        className="relative mb-6 max-w-md mx-auto"
+                        className={`relative mb-6 mx-auto ${presentationMode ? 'max-w-2xl' : 'max-w-md'}`}
                         style={{
                           background: '#f7f3eb',
                           WebkitUserDrag: 'none',
@@ -1139,10 +1183,10 @@ const isSpeechActive = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.27, duration: 0.36, ease: "easeOut" }}
-                        className="text-center max-w-sm mx-auto"
+                        className={`text-center mx-auto ${presentationMode ? 'max-w-2xl' : 'max-w-sm'}`}
                       >
                         <h1
-                          className="font-semibold mb-1 text-3xl"
+                          className={introTitleClassName}
                           style={{
                             opacity: 0.7,
                             fontFamily: "'Glegoo', serif",
@@ -1156,7 +1200,7 @@ const isSpeechActive = () => {
                               const parts = title.split("Prologue:");
                               return (
                                 <>
-                                  <span className="text-xl block  text-[#85644b]">Prologue:</span>
+                                  <span className={introLabelClassName}>Prologue:</span>
                                   <span
                                     className="text-2xl font-bold"
                                     style={{
@@ -1182,7 +1226,7 @@ const isSpeechActive = () => {
                           })()}
                         </h1>
                         {currentImage?.story && (
-                          <p className="italic text-sm leading-relaxed text-gray-700 mb-4">
+                          <p className={introStoryClassName}>
                             {currentImage.story}
                           </p>
                         )}
@@ -1207,7 +1251,7 @@ const isSpeechActive = () => {
                   </div>
                 ) : (
                   /* IMAGE - border removed, kept simple to avoid narrow image spacing issues */
-                  <div className="w-full px-5 sm:px-6 md:px-8 flex items-start justify-center pt-2 sm:pt-4 md:pt-8" style={{ boxSizing: 'border-box' }}>
+                  <div className={`w-full px-5 sm:px-6 md:px-8 flex items-start justify-center ${presentationMode ? 'pt-12 sm:pt-16 md:pt-24' : 'pt-2 sm:pt-4 md:pt-8'}`} style={{ boxSizing: 'border-box' }}>
                     <div className="relative" style={{ lineHeight: 0 }}>
                       <img
                         src={getBestImageSrc(currentImage)}
@@ -1232,7 +1276,8 @@ const isSpeechActive = () => {
                     </div>
                   </div>
                 )}
-{/* Shopping Cart & Notes Buttons */}
+
+                {!actionButtonsH && (
                 <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap items-center justify-center gap-3 mt-3`}>
                   {currentIndex > 0 && currentImage?.id && !isEndOfStory && (
                     <button
@@ -1257,6 +1302,12 @@ const isSpeechActive = () => {
                     <button
                       type="button"
                       onClick={() => {
+                        const nextExpandedState = !showNotes;
+                        if (nextExpandedState && currentImage?.notes) {
+                          trackStoryAction('collector_notes_open', currentImage?.id || null, {
+                            trigger: 'story_collector_notes'
+                          });
+                        }
                         if (currentImage?.notes) setShowNotes((p) => !p);
                       }}
                       className={`px-4 py-2 border border-gray-300 rounded-md text-sm flex items-center gap-2 ${currentImage?.notes ? 'bg-white hover:bg-gray-100 cursor-pointer' : 'bg-white'}`}
@@ -1298,6 +1349,9 @@ const isSpeechActive = () => {
                       href={exitHref}
                       onClick={() => {
                         stopSpeech();
+                        trackStoryAction('exit_to_gallery', currentImage?.id || null, {
+                          trigger: 'story_exit_button'
+                        });
                       }}
                       className="px-2 py-2 border border-gray-200 rounded-md text-sm bg-white hover:bg-gray-50 flex items-center gap-2"
                       title="Exit story"
@@ -1307,8 +1361,10 @@ const isSpeechActive = () => {
                     </a>
                   )}
                 </div>
+                )}
 
                 {/* NOTES PANEL */}
+                {!notesPanelH && (
                 <AnimatePresence>
                   {showNotes && currentImage?.notes && (
                     <motion.div
@@ -1327,14 +1383,23 @@ const isSpeechActive = () => {
                     </motion.div>
                   )}
                 </AnimatePresence>
+                )}
 
                 {/* PROGRESS DOTS & NAV */}
+                {!progressNavH && (
                 <div className={`w-full ${currentIndex > 0 ? 'px-5 sm:px-6 md:px-8' : ''} flex flex-wrap justify-center items-center gap-1 mt-2 max-w-full`} style={{ boxSizing: 'border-box' }}>
                   {/* PREV BUTTON */}
-                  {currentIndex > 0 && (
+                  {currentIndex > 0 && !presentationMode && (
                     <button
                       type="button"
-                      onClick={goPrev}
+                      onClick={() => {
+                        trackStoryAction('nav_prev', currentImage?.id || null, {
+                          trigger: 'story_sequence_prev'
+                        }, {
+                          sourceLayer: 'chapter_nav_prev_pixel_v1'
+                        });
+                        goPrev();
+                      }}
                       className="w-8 h-10 sm:w-10 sm:h-12 flex items-center justify-center text-gray-400 hover:text-[#8B4513]  rounded transition-all duration-200"
                       title="Previous"
                     >
@@ -1343,15 +1408,22 @@ const isSpeechActive = () => {
                   )}
 
                   {/* PROGRESS DOTS */}
-                  {currentIndex > 0 && Array.from({ length: filteredData.length + 1 }, (_, idx) => idx).map((idx) => (
+                  {currentIndex > 0 && !presentationMode && Array.from({ length: filteredData.length + 1 }, (_, idx) => idx).map((idx) => (
                     <button
                       key={idx}
+                      type="button"
                       onClick={() => {
                         stopSpeech();
+                        trackStoryAction('story_slider_click', currentImage?.id || null, {
+                          trigger: `story_dot_${idx}`
+                        }, {
+                          sourceLayer: 'story_slider_click_pixel_v1'
+                        });
                         setCurrentIndex(idx);
                       }}
+                      aria-current={idx === currentIndex ? 'step' : undefined}
                       className={`w-2 h-2.5 rounded-full transition-all duration-300 hover:ring-2 hover:ring-[#8B4513] hover:ring-opacity-100 ${
-                        idx === currentIndex ? "bg-[#8B4513]" : "bg-gray-300"
+                        idx === currentIndex ? 'bg-[#8B4513]' : 'bg-gray-300'
                       }`}
                       style={{
                         opacity: idx === currentIndex ? 1 : 0.4,
@@ -1362,10 +1434,17 @@ const isSpeechActive = () => {
                   ))}
 
                   {/* NEXT BUTTON */}
-                  {currentIndex > 0 && (
+                  {currentIndex > 0 && !presentationMode && (
                     <button
                       type="button"
-                      onClick={goNext}
+                      onClick={() => {
+                        trackStoryAction('nav_next', currentImage?.id || null, {
+                          trigger: currentIndex === 0 ? 'story_intro_begin' : 'story_sequence_next'
+                        }, {
+                          sourceLayer: 'chapter_nav_next_pixel_v1'
+                        });
+                        goNext();
+                      }}
                       className="w-8 h-10 sm:w-10 sm:h-12 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
                       title="Next"
                     >
@@ -1374,10 +1453,15 @@ const isSpeechActive = () => {
                   )}
 
                   {/* TEXT-TO-SPEECH BUTTON */}
-                  {currentIndex > 0 && !isEndOfStory && currentImage?.audioSrc && (
+                  {currentIndex > 0 && !isEndOfStory && currentImage?.audioSrc && !presentationMode && (
                     <button
                       type="button"
                       onClick={() => {
+                        trackStoryAction('story_audio_toggle', currentImage?.id || null, {
+                          trigger: safeSpeaking ? 'story_audio_stop' : 'story_audio_play'
+                        }, {
+                          sourceLayer: 'story_audio_toggle_pixel_v1'
+                        });
                         if (safeSpeaking) {
                           stopSpeech();
                         } else {
@@ -1395,6 +1479,7 @@ const isSpeechActive = () => {
                     </button>
                   )}
                 </div>
+                )}
 
                 {/* TEXT SECTION - Only for non-start pages */}
                 {currentIndex > 0 && (
@@ -1407,7 +1492,7 @@ const isSpeechActive = () => {
                     className="mt-10 text-center max-w-3xl px-5 sm:px-6 md:px-8"
                   >
                     <h1
-                      className={`text-[#85644b] font-semibold mb-2 ${currentIndex === 0 ? 'text-3xl' : 'text-xl'}`}
+                      className={slideTitleClassName}
                       style={{ opacity: 0.7, fontFamily: "'Glegoo', serif" }}
                     >
                       {(() => {
@@ -1425,19 +1510,150 @@ const isSpeechActive = () => {
                         return title;
                       })()}
                     </h1>
-                    {currentImage?.story && (
-                      <p className="italic text-base leading-relaxed">
+                    {presentationMode && currentImage?.audioSrc && (
+                      <>
+                        <div className="mt-8 mb-4 mx-auto flex w-full max-w-[200px] items-center justify-center gap-4" aria-hidden="true">
+                          <span className="h-px flex-1 bg-[#888]" />
+                          <span className="text-[1.5rem] leading-none text-[#85644b]">◆</span>
+                          <span className="h-px flex-1 bg-[#888]" />
+                        </div>
+                        <div className="mt-14 sm:mt-16 flex justify-center">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              trackStoryAction('story_audio_toggle', currentImage?.id || null, {
+                                trigger: safeSpeaking ? 'presentation_audio_stop' : 'presentation_audio_play'
+                              }, {
+                                sourceLayer: 'presentation_audio_toggle_pixel_v1'
+                              });
+                              if (safeSpeaking) {
+                                stopSpeech();
+                              } else {
+                                speakText();
+                              }
+                            }}
+                            className={`w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full border transition-all duration-200 opacity-25 hover:opacity-75 ${
+                              safeSpeaking
+                                ? "text-blue-600 border-blue-500 bg-blue-50 hover:bg-blue-100"
+                                : "text-[#8B4513] border-[#5f4230] bg-white hover:bg-[#f7efe7]"
+                            }`}
+                            title={safeSpeaking ? "Stop audio" : "Play audio"}
+                          >
+                            <Volume2 className="w-7 h-7 sm:w-8 sm:h-8" />
+                          </button>
+                        </div>
+                      </>
+                    )}
+                    {!storyTextH && currentImage?.story && (
+                      <p className={slideStoryClassName}>
                         {currentImage.story}
                       </p>
                     )}
                   </motion.div>
                 )}
+
+                      {presentationMode && currentIndex > 0 && presentationRailSlides.length > 0 && !isEndOfStory && (
+                      <div className="mt-16 sm:mt-20 w-full px-2 sm:px-4 md:px-6 pb-2">
+                        <style>{`
+                          .presentation-rail-scroll {
+                            scrollbar-width: thin;
+                            scrollbar-color: #c7ccd1 #eceff1;
+                          }
+                          .presentation-rail-scroll::-webkit-scrollbar {
+                            height: 10px;
+                          }
+                          .presentation-rail-scroll::-webkit-scrollbar-track {
+                            background: #eceff1;
+                            border-radius: 999px;
+                          }
+                          .presentation-rail-scroll::-webkit-scrollbar-thumb {
+                            background: #c7ccd1;
+                            border-radius: 999px;
+                            border: 2px solid #eceff1;
+                          }
+                          .presentation-rail-scroll::-webkit-scrollbar-thumb:hover {
+                            background: #b7bdc4;
+                          }
+                        `}</style>
+                        <div className="mx-auto flex w-full max-w-[900px] items-center gap-3">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              trackStoryAction('nav_prev', currentImage?.id || null, {
+                                trigger: 'presentation_strip_prev'
+                              }, {
+                                sourceLayer: 'presentation_strip_prev_pixel_v1'
+                              });
+                              goPrev();
+                            }}
+                            className="shrink-0 w-10 h-12 sm:w-12 sm:h-14 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
+                            title="Previous"
+                          >
+                            <SquareChevronLeft className="w-7 h-7 sm:w-8 sm:h-8" />
+                          </button>
+                          <div className="min-w-0 flex-1 rounded-xl border border-[#d9cec1] bg-[#faf7f2]/95 px-2 py-3 shadow-sm backdrop-blur-sm">
+                            <div className="presentation-rail-scroll overflow-x-auto py-2">
+                              <div className="flex w-max min-w-full gap-3 px-1">
+                              {presentationRailSlides.map(({ img, index }) => {
+                                const isActive = index === currentIndex;
+                                return (
+                                  <button
+                                    key={`${img.id || img.src || index}-${index}`}
+                                    type="button"
+                                    onClick={() => {
+                                      stopSpeech();
+                                      trackStoryAction('story_slider_click', img.id || null, {
+                                        trigger: `presentation_thumb_${index}`
+                                      }, {
+                                        sourceLayer: 'presentation_thumb_click_pixel_v1'
+                                      });
+                                      setCurrentIndex(index);
+                                    }}
+                                    className={`group shrink-0 overflow-hidden rounded-md border transition-all duration-200 ${
+                                      isActive
+                                        ? "border-[#d3b7a2] shadow-md ring-4 ring-[#d3b7a2]/85 ring-offset-2 ring-offset-[#faf7f2]"
+                                        : "border-gray-300 hover:border-[#c7b19e]"
+                                    }`}
+                                    title={img.title || `Slide ${index}`}
+                                  >
+                                    <img
+                                      src={normalizeImageSrc(img.src, 's')}
+                                      alt={img.alt || img.title}
+                                      className={`h-[84px] w-[84px] object-cover transition-opacity duration-200 ${
+                                        isActive ? "opacity-100" : "opacity-75 group-hover:opacity-100"
+                                      }`}
+                                    />
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          </div>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              trackStoryAction('nav_next', currentImage?.id || null, {
+                                trigger: 'presentation_strip_next'
+                              }, {
+                                sourceLayer: 'presentation_strip_next_pixel_v1'
+                              });
+                              goNext();
+                            }}
+                            className="shrink-0 w-10 h-12 sm:w-12 sm:h-14 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
+                            title="Next"
+                          >
+                            <SquareChevronRight className="w-7 h-7 sm:w-8 sm:h-8" />
+                          </button>
+                        </div>
+                      </div>
+                    )}
               </motion.div>
             )}
           </AnimatePresence>
         </div>
 
         {/* Footer */}
+        {!footerH && (
         <footer
           className="bg-[#fff] font-serif text-center pb-16 w-full mt-12"
           style={{ fontFamily: "'Glegoo', serif" }}
@@ -1489,6 +1705,7 @@ const isSpeechActive = () => {
             </div>
           </div>
         </footer>
+        )}
       </div>
 
       <EngrainedOrderModal

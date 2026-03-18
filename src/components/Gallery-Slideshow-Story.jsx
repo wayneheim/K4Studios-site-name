@@ -5,7 +5,7 @@ import { ShoppingCart, VolumeX, Volume2 } from "lucide-react";
 import PunchInIntro from "./PunchInIntro.jsx";
 import { getProxySrc } from "@/utils/imageProxy.js";
 import { warmImage } from "../utils/warmImage";
-import { emitActionPixel } from "../utils/analytics";
+import { emitActionPixel, trackEvent as track } from "../utils/analytics";
 
 // Helper function to select the best image source for slideshow display
 // Uses proxy URL to avoid exposing SmugMug URLs in rendered HTML
@@ -551,9 +551,14 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
               {/* Prev */}
               <button
                 onClick={() => {
+                  track('slideshow_nav_prev', {
+                    pageType: 'story',
+                    imageId: current?.id || null,
+                    trigger: 'slideshow_control'
+                  });
                   emitActionPixel('slideshow_nav_prev', current?.id || null, {
                     sourceLayer: 'slideshow_nav_prev_pixel_v1',
-                    pageType: 'image',
+                    pageType: 'story',
                     trigger: 'slideshow_control'
                   });
                   goPrev();
@@ -569,9 +574,14 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
               {/* Next */}
               <button
                 onClick={() => {
+                  track('slideshow_nav_next', {
+                    pageType: 'story',
+                    imageId: current?.id || null,
+                    trigger: 'slideshow_control'
+                  });
                   emitActionPixel('slideshow_nav_next', current?.id || null, {
                     sourceLayer: 'slideshow_nav_next_pixel_v1',
-                    pageType: 'image',
+                    pageType: 'story',
                     trigger: 'slideshow_control'
                   });
                   goNext();
@@ -590,6 +600,17 @@ export default function StoryShow({ images, startImageId, onExit, isMuted = fals
                 <div className="relative group">
                   <button
                     onClick={() => {
+                      const nextMutedState = !isMuted;
+                      track('story_audio_toggle', {
+                        pageType: 'story',
+                        imageId: current?.id || null,
+                        trigger: nextMutedState ? 'story_audio_mute' : 'story_audio_unmute'
+                      });
+                      emitActionPixel('story_audio_toggle', current?.id || null, {
+                        sourceLayer: 'story_audio_toggle_pixel_v1',
+                        pageType: 'story',
+                        trigger: nextMutedState ? 'story_audio_mute' : 'story_audio_unmute'
+                      });
                       if (isMuted) {
                         // Unmuting - play individual image audio if available and not already playing
                         setIsMuted(false);

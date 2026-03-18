@@ -4,8 +4,10 @@ import { storyMeta as westernLivingHistoryMeta, storyData as westernLivingHistor
 import { storyMeta as demoShowMeta, storyData as demoShowData } from "./DemoShow.mjs";
 import { storyMeta as outlawsBanditsMeta, storyData as outlawsBanditsData } from "./Outlaws-and-Bandits.mjs";
 import { storyMeta as costOfJourneyMeta, storyData as costOfJourneyData } from "./The-Cost-of-the-Journey.mjs";
+import { storyMeta as loreAndLegacyShowMeta, storyData as loreAndLegacyShowData } from "./Lore-and-Legacy-Show.mjs";
 import { storyMeta as loreAndLegacyChapter1Meta, storyData as loreAndLegacyChapter1Data } from "./Lore-and-Legacy-Chapter-1.mjs";
 import { storyMeta as loreAndLegacyChapter2Meta, storyData as loreAndLegacyChapter2Data } from "./Lore-and-Legacy-Chapter-2.mjs";
+import { storyMeta as loreAndLegacyChapter3Meta, storyData as loreAndLegacyChapter3Data } from "./Lore-and-Legacy-Chapter-3.mjs";
 
 // Helper function to get the first non-ghost slide's thumbnail image
 function getFirstSlideThumbnail(storyData) {
@@ -18,6 +20,24 @@ function getFirstSlideThumbnail(storyData) {
 }
 
 export const stories = [
+  {
+    slug: "Lore-and-Legacy-Show",
+    title: loreAndLegacyShowMeta.showTitle,
+    date: loreAndLegacyShowMeta.savedAt ? new Date(loreAndLegacyShowMeta.savedAt).toISOString().split('T')[0] : "2026-03-17",
+    excerpt: loreAndLegacyShowMeta.description,
+    cover: getFirstSlideThumbnail(loreAndLegacyShowData),
+    keywords: loreAndLegacyShowMeta.keywords,
+    alt: loreAndLegacyShowMeta.alt
+  },
+  {
+    slug: "Lore-and-Legacy-Chapter-3",
+    title: loreAndLegacyChapter3Meta.showTitle,
+    date: loreAndLegacyChapter3Meta.savedAt ? new Date(loreAndLegacyChapter3Meta.savedAt).toISOString().split('T')[0] : "2026-03-17",
+    excerpt: loreAndLegacyChapter3Meta.description,
+    cover: getFirstSlideThumbnail(loreAndLegacyChapter3Data),
+    keywords: loreAndLegacyChapter3Meta.keywords,
+    alt: loreAndLegacyChapter3Meta.alt
+  },
   {
     slug: "Lore-and-Legacy-Chapter-2",
     title: loreAndLegacyChapter2Meta.showTitle,

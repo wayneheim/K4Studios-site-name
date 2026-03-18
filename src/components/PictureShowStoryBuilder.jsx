@@ -324,6 +324,7 @@ const structuredDataJSON = getStructuredData({
     titleBase={storyMeta.showTitle}
     globalAudioSrc={storyMeta.globalAudioSrc || ""}
     globalAudioMode={storyMeta.globalAudioMode || "score"}
+    presentationMode={storyMeta.presentationMode === true}
     introMeta={storyMeta.introMeta || {}}
     outroMeta={storyMeta.outroMeta || {}}
   />
@@ -404,6 +405,23 @@ const CLOSING_TEMPLATE = {
 const TEMP_KEY = "K4_Show_Temp_Selected"; // holds working slides (excluding ghost/closing)
 const META_KEY = "K4_Show_Meta"; // holds show meta like title/intro
 
+const createDefaultShowMeta = () => ({
+  showTitle: "Untitled Picture Show",
+  prologueTitle: "Prologue:",
+  openingParagraph: "",
+  description: "",
+  keywords: [],
+  alt: "",
+  closingText: CLOSING_TEMPLATE.description,
+  globalAudioSrc: "",
+  globalAudioMode: "score",
+  presentationMode: false,
+  showWatermark: false,
+  watermarkText: "© Wayne Heim",
+  copyrightName: "Wayne Heim",
+  copyrightYear: new Date().getFullYear().toString(),
+});
+
 export default function PictureShowStoryBuilder() {
   // --- Show loaded flag for floating continue button ---
   const [showLoaded, setShowLoaded] = useState(false);
@@ -419,37 +437,12 @@ export default function PictureShowStoryBuilder() {
   /* ---------- meta ---------- */
   const [showMeta, setShowMeta] = useState(() => {
     try {
-      return JSON.parse(localStorage.getItem(META_KEY) || "null") || {
-        showTitle: "Untitled Picture Show",
-        prologueTitle: "Prologue:",
-        openingParagraph: "",
-        description: "",
-        keywords: [],
-        alt: "",
-        closingText: CLOSING_TEMPLATE.description,
-        globalAudioSrc: "",
-        globalAudioMode: "score", // default
-        showWatermark: false,
-        watermarkText: "© Wayne Heim",
-        copyrightName: "Wayne Heim",
-        copyrightYear: new Date().getFullYear().toString(),
+      return {
+        ...createDefaultShowMeta(),
+        ...(JSON.parse(localStorage.getItem(META_KEY) || "null") || {}),
       };
     } catch {
-      return {
-        showTitle: "Untitled Picture Show",
-        prologueTitle: "Prologue:",
-        openingParagraph: "",
-        description: "",
-        keywords: [],
-        alt: "",
-        closingText: CLOSING_TEMPLATE.description,
-        globalAudioSrc: "",
-        globalAudioMode: "score", // default
-        showWatermark: false,
-        watermarkText: "© Wayne Heim",
-        copyrightName: "Wayne Heim",
-        copyrightYear: new Date().getFullYear().toString(),
-      };
+      return createDefaultShowMeta();
     }
   });
 
@@ -884,21 +877,7 @@ export default function PictureShowStoryBuilder() {
                   setSlides([]);
                   setShowLoaded(false);
                   setLoadedShowSlug(null);
-                  setShowMeta({
-                    showTitle: "Untitled Picture Show",
-                    prologueTitle: "Prologue:",
-                    openingParagraph: "",
-                    description: "",
-                    keywords: [],
-                    alt: "",
-                    closingText: "Every photograph carries a fragment of the past — thank you for walking through this story. Continue exploring the gallery below.",
-                    globalAudioSrc: "",
-                    globalAudioMode: "score",
-                    showWatermark: false,
-                    watermarkText: "© Wayne Heim",
-                    copyrightName: "Wayne Heim",
-                    copyrightYear: new Date().getFullYear().toString(),
-                  });
+                  setShowMeta(createDefaultShowMeta());
                   showTitleClearedRef.current = false;
                 }}
                 style={{
@@ -953,6 +932,7 @@ export default function PictureShowStoryBuilder() {
                     );
 
                     setShowMeta({
+                      ...createDefaultShowMeta(),
                       ...storyMeta,
                       prologueTitle,
                       openingParagraph,
@@ -1145,6 +1125,31 @@ export default function PictureShowStoryBuilder() {
                 Audio File: {showMeta.globalAudioSrc}
               </div>
             )}
+          </div>
+
+          <div
+            style={{
+              marginTop: 14,
+              padding: 12,
+              border: "1px solid #d2c4b5",
+              borderRadius: 8,
+              background: "#faf8f4",
+            }}
+          >
+            <h4 style={{ fontWeight: 700, marginBottom: 6 }}>Presentation Mode</h4>
+            <label style={{ display: "block", marginBottom: 6 }}>
+              <input
+                type="checkbox"
+                checked={showMeta.presentationMode === true}
+                onChange={(e) =>
+                  setShowMeta((m) => ({ ...m, presentationMode: e.target.checked }))
+                }
+              />{" "}
+              Use streamlined booth walkthrough mode for this show
+            </label>
+            <div style={{ fontSize: 12, opacity: 0.7 }}>
+              Hides the extra story controls and shows a scrollable preview strip at the bottom of each page.
+            </div>
           </div>
 
           {/* 🖼️ Watermark Section */}

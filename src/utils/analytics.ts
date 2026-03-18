@@ -605,6 +605,25 @@ export function trackPageView(): void {
 let navTrackingInstalled = false;
 let lastTrackedPath: string | null = null;
 let lastPagePixelPath: string | null = null;
+let lastChapterPixelKey: string | null = null;
+
+export function emitChapterViewPixel(imageId: string | null, context: ActionPixelContext = {}): void {
+  if (typeof window === 'undefined') return;
+  if (!imageId) return;
+
+  const pagePath = window.location.pathname;
+  const pixelKey = `${pagePath}|${imageId}`;
+  if (lastChapterPixelKey === pixelKey) return;
+  lastChapterPixelKey = pixelKey;
+
+  emitActionPixel('chapter_view', imageId, {
+    galleryId: context.galleryId,
+    sourceLayer: context.sourceLayer || 'sister_pixel_v1',
+    trigger: context.trigger || 'chapter_view',
+    pageType: context.pageType || 'image',
+    pixelType: context.pixelType || 'image'
+  });
+}
 
 function trackDerivedViewsFromLocation(): void {
   if (typeof window === 'undefined') return;
@@ -617,7 +636,13 @@ function trackDerivedViewsFromLocation(): void {
 
   const imageId = getImageIdFromPath(path);
   if (imageId) {
-    trackEvent('chapter_view', { imageId, pageType: 'image', trigger: 'derived_location' });
+    const galleryId = getGalleryIdFromPath(path);
+    trackEvent('chapter_view', { imageId, galleryId, pageType: 'image', trigger: 'derived_location' });
+    emitChapterViewPixel(imageId, {
+      galleryId,
+      pageType: 'image',
+      trigger: 'derived_location'
+    });
     if (isK4Debug()) {
       trackEvent('k4_debug_chapter_emit', { imageId, pageType: 'image', trigger: 'derived_location' });
     }
