@@ -351,12 +351,17 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   const contentType = response.headers.get("content-type") || "";
 
   if (contentType.includes("text/html")) {
-    // ✅ Read body directly - we'll always return a new Response anyway
+    // Avoid consuming Astro's streamed HTML responses in dev.
+    if (import.meta.env.DEV) {
+      return response;
+    }
+
+    // Read from a clone so the original response body remains untouched if cleanup fails.
     let body: string;
     try {
-      body = await response.text();
+      body = await response.clone().text();
     } catch (e) {
-      // If stream is already locked/consumed, return as-is
+      // If clone/read fails, preserve the original response.
       console.warn(`⚠️ Could not read response body on ${context.url.pathname}:`, e);
       return response;
     }
@@ -365,7 +370,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     if (body.length > 1000000) {
       return new Response(body, {
         status: response.status,
-        headers: response.headers,
+        headers: new Headers(response.headers),
       });
     }
 
@@ -376,7 +381,7 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     // ✅ Always return a new Response to avoid stream issues
     return new Response(cleaned, {
       status: response.status,
-      headers: response.headers,
+      headers: new Headers(response.headers),
     });
   }
 

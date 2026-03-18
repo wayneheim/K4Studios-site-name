@@ -176,6 +176,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   const audioRef = useRef(null);
   const ambientAudioRef = useRef(null);
   const currentIndexRef = useRef(0);
+  const presentationRailScrollerRef = useRef(null);
+  const presentationRailItemRefs = useRef({});
   // swipe tracking
   const touchStart = useRef({ x: 0, y: 0, t: 0 });
   const touchLast = useRef({ x: 0, y: 0 });
@@ -205,6 +207,8 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
       );
   }, [filteredData]);
 
+  const lastPresentationSlideIndex = presentationRailSlides[presentationRailSlides.length - 1]?.index ?? -1;
+
   // Determine default volume: 30% for ambient, 50% for score, 70% for mixed/individual audio
   const defaultVolume = useMemo(() => {
     if (globalAudioSrc && filteredData.length > 0) {
@@ -228,6 +232,24 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
   useEffect(() => {
     currentIndexRef.current = currentIndex;
   }, [currentIndex]);
+
+  useEffect(() => {
+    const reachedEndOfStory = currentIndex >= filteredData.length;
+    if (!presentationMode || currentIndex <= 0 || reachedEndOfStory) return;
+    const scroller = presentationRailScrollerRef.current;
+    const activeThumb = presentationRailItemRefs.current[currentIndex];
+    if (!scroller || !activeThumb) return;
+
+    const targetLeft = activeThumb.offsetLeft - (scroller.clientWidth - activeThumb.offsetWidth) / 2;
+    const maxScrollLeft = Math.max(scroller.scrollWidth - scroller.clientWidth, 0);
+    const nextScrollLeft = Math.min(Math.max(targetLeft, 0), maxScrollLeft);
+
+    const rafId = requestAnimationFrame(() => {
+      scroller.scrollTo({ left: nextScrollLeft, behavior: 'smooth' });
+    });
+
+    return () => cancelAnimationFrame(rafId);
+  }, [currentIndex, filteredData.length, presentationMode]);
 
   // Find score audio source from data (full volume background music)
   const scoreAudioSrc = useMemo(() => {
@@ -986,7 +1008,8 @@ const isSpeechActive = () => {
 
               </motion.div>
             ) : (
-              // ===================== IMAGE SEQUENCE =====================
+              <>
+              {/* ===================== IMAGE SEQUENCE ===================== */}
               <motion.div
                 key={currentIndex}
                 initial={{ opacity: 0, x: direction > 0 ? 100 : -100 }}
@@ -1269,8 +1292,20 @@ const isSpeechActive = () => {
                   </div>
                 ) : (
                   /* IMAGE - border removed, kept simple to avoid narrow image spacing issues */
-                  <div className={`w-full px-5 sm:px-6 md:px-8 flex items-start justify-center ${presentationMode ? 'pt-8 sm:pt-10 md:pt-16' : 'pt-2 sm:pt-4 md:pt-8'}`} style={{ boxSizing: 'border-box' }}>
-                    <div className="relative" style={{ lineHeight: 0 }}>
+                  <div className={`w-full px-5 sm:px-6 md:px-8 flex items-start justify-center ${presentationMode ? 'pt-2 sm:pt-3 md:pt-6' : 'pt-2 sm:pt-4 md:pt-8'}`} style={{ boxSizing: 'border-box' }}>
+                    <div
+                      className="relative"
+                      style={{ lineHeight: 0, cursor: presentationMode && currentIndex === lastPresentationSlideIndex ? 'pointer' : 'default' }}
+                      onClick={presentationMode && currentIndex === lastPresentationSlideIndex ? () => {
+                        stopSpeech();
+                        trackStoryAction('presentation_last_image_back_to_start', currentImage?.id || null, {
+                          trigger: 'presentation_main_image_back_to_start'
+                        }, {
+                          sourceLayer: 'presentation_main_image_back_to_start_pixel_v1'
+                        });
+                        setCurrentIndex(0);
+                      } : undefined}
+                    >
                       <img
                         src={getBestImageSrc(currentImage)}
                         alt={currentImage?.alt || currentImage?.title}
@@ -1507,7 +1542,7 @@ const isSpeechActive = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="mt-10 text-center max-w-3xl px-5 sm:px-6 md:px-8"
+                    className={`text-center max-w-3xl px-5 sm:px-6 md:px-8 ${presentationMode ? 'mt-5 sm:mt-6' : 'mt-10'}`}
                   >
                     <h1
                       className={slideTitleClassName}
@@ -1530,12 +1565,12 @@ const isSpeechActive = () => {
                     </h1>
                     {presentationMode && currentImage?.audioSrc && (
                       <>
-                        <div className="mt-8 mb-4 mx-auto flex w-full max-w-[200px] items-center justify-center gap-4" aria-hidden="true">
+                        <div className="mt-4 mb-2 mx-auto flex w-full max-w-[180px] items-center justify-center gap-3" aria-hidden="true">
                           <span className="h-px flex-1 bg-[#888]" />
-                          <span className="text-[1.5rem] leading-none text-[#85644b]">◆</span>
+                          <span className="text-[1.25rem] leading-none text-[#85644b]">◆</span>
                           <span className="h-px flex-1 bg-[#888]" />
                         </div>
-                        <div className="mt-8 sm:mt-10 flex justify-center">
+                        <div className="mt-4 sm:mt-5 mb-2 sm:mb-3 flex justify-center">
                           <button
                             type="button"
                             onClick={() => {
@@ -1550,14 +1585,14 @@ const isSpeechActive = () => {
                                 speakText();
                               }
                             }}
-                            className={`w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full border transition-all duration-200 opacity-25 hover:opacity-75 ${
+                            className={`w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full border transition-all duration-200 opacity-25 hover:opacity-75 ${
                               safeSpeaking
                                 ? "text-blue-600 border-blue-500 bg-blue-50 hover:bg-blue-100"
                                 : "text-[#8B4513] border-[#5f4230] bg-white hover:bg-[#f7efe7]"
                             }`}
                             title={safeSpeaking ? "Stop audio" : "Play audio"}
                           >
-                            <Volume2 className="w-7 h-7 sm:w-8 sm:h-8" />
+                            <Volume2 className="w-6 h-6 sm:w-7 sm:h-7" />
                           </button>
                         </div>
                       </>
@@ -1569,104 +1604,110 @@ const isSpeechActive = () => {
                     )}
                   </motion.div>
                 )}
-
-                      {presentationMode && currentIndex > 0 && presentationRailSlides.length > 0 && !isEndOfStory && (
-                      <div className="mt-8 sm:mt-10 w-full px-2 sm:px-4 md:px-6 pb-2">
-                        <style>{`
-                          .presentation-rail-scroll {
-                            scrollbar-width: thin;
-                            scrollbar-color: #c7ccd1 #eceff1;
-                          }
-                          .presentation-rail-scroll::-webkit-scrollbar {
-                            height: 10px;
-                          }
-                          .presentation-rail-scroll::-webkit-scrollbar-track {
-                            background: #eceff1;
-                            border-radius: 999px;
-                          }
-                          .presentation-rail-scroll::-webkit-scrollbar-thumb {
-                            background: #c7ccd1;
-                            border-radius: 999px;
-                            border: 2px solid #eceff1;
-                          }
-                          .presentation-rail-scroll::-webkit-scrollbar-thumb:hover {
-                            background: #b7bdc4;
-                          }
-                        `}</style>
-                        <div className="mx-auto flex w-full max-w-[900px] items-center gap-3">
-                          <button
-                            type="button"
-                            onClick={() => {
-                              trackStoryAction('nav_prev', currentImage?.id || null, {
-                                trigger: 'presentation_strip_prev'
-                              }, {
-                                sourceLayer: 'presentation_strip_prev_pixel_v1'
-                              });
-                              goPrev();
-                            }}
-                            className="shrink-0 w-10 h-12 sm:w-12 sm:h-14 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
-                            title="Previous"
-                          >
-                            <SquareChevronLeft className="w-7 h-7 sm:w-8 sm:h-8" />
-                          </button>
-                          <div className="min-w-0 flex-1 rounded-xl border border-[#d9cec1] bg-[#faf7f2]/95 px-2 py-3 shadow-sm backdrop-blur-sm">
-                            <div className="presentation-rail-scroll overflow-x-auto py-2" data-swipe-exempt="true">
-                              <div className="flex w-max min-w-full gap-3 px-1">
-                              {presentationRailSlides.map(({ img, index }) => {
-                                const isActive = index === currentIndex;
-                                const isLastThumbnail = index === presentationRailSlides[presentationRailSlides.length - 1]?.index;
-                                return (
-                                  <button
-                                    key={`${img.id || img.src || index}-${index}`}
-                                    type="button"
-                                    onClick={() => {
-                                      stopSpeech();
-                                      trackStoryAction('story_slider_click', img.id || null, {
-                                        trigger: isLastThumbnail ? 'presentation_thumb_back_to_start' : `presentation_thumb_${index}`
-                                      }, {
-                                        sourceLayer: 'presentation_thumb_click_pixel_v1'
-                                      });
-                                      setCurrentIndex(isLastThumbnail ? 0 : index);
-                                    }}
-                                    className={`group shrink-0 overflow-hidden rounded-md border transition-all duration-200 ${
-                                      isActive
-                                        ? "border-[#d3b7a2] shadow-md ring-4 ring-[#d3b7a2]/85 ring-offset-2 ring-offset-[#faf7f2]"
-                                        : "border-gray-300 hover:border-[#c7b19e]"
-                                    }`}
-                                    title={isLastThumbnail ? 'Back to Start' : (img.title || `Slide ${index}`)}
-                                  >
-                                    <img
-                                      src={normalizeImageSrc(img.src, 's')}
-                                      alt={img.alt || img.title}
-                                      className={`h-[84px] w-[84px] object-cover transition-opacity duration-200 ${
-                                        isActive ? "opacity-100" : "opacity-75 group-hover:opacity-100"
-                                      }`}
-                                    />
-                                  </button>
-                                );
-                              })}
-                            </div>
-                          </div>
-                          </div>
-                          <button
-                            type="button"
-                            onClick={() => {
-                              trackStoryAction('nav_next', currentImage?.id || null, {
-                                trigger: 'presentation_strip_next'
-                              }, {
-                                sourceLayer: 'presentation_strip_next_pixel_v1'
-                              });
-                              goNext();
-                            }}
-                            className="shrink-0 w-10 h-12 sm:w-12 sm:h-14 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
-                            title="Next"
-                          >
-                            <SquareChevronRight className="w-7 h-7 sm:w-8 sm:h-8" />
-                          </button>
+              </motion.div>
+              {presentationMode && currentIndex > 0 && presentationRailSlides.length > 0 && !isEndOfStory && (
+                <div className="mt-8 sm:mt-10 w-full px-2 sm:px-4 md:px-6 pb-2">
+                  <style>{`
+                    .presentation-rail-scroll {
+                      scrollbar-width: thin;
+                      scrollbar-color: #c7ccd1 #eceff1;
+                    }
+                    .presentation-rail-scroll::-webkit-scrollbar {
+                      height: 10px;
+                    }
+                    .presentation-rail-scroll::-webkit-scrollbar-track {
+                      background: #eceff1;
+                      border-radius: 999px;
+                    }
+                    .presentation-rail-scroll::-webkit-scrollbar-thumb {
+                      background: #c7ccd1;
+                      border-radius: 999px;
+                      border: 2px solid #eceff1;
+                    }
+                    .presentation-rail-scroll::-webkit-scrollbar-thumb:hover {
+                      background: #b7bdc4;
+                    }
+                  `}</style>
+                  <div className="mx-auto flex w-full max-w-[900px] items-center gap-3">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        trackStoryAction('nav_prev', currentImage?.id || null, {
+                          trigger: 'presentation_strip_prev'
+                        }, {
+                          sourceLayer: 'presentation_strip_prev_pixel_v1'
+                        });
+                        goPrev();
+                      }}
+                      className="shrink-0 w-10 h-12 sm:w-12 sm:h-14 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
+                      title="Previous"
+                    >
+                      <SquareChevronLeft className="w-7 h-7 sm:w-8 sm:h-8" />
+                    </button>
+                    <div className="min-w-0 flex-1 rounded-xl border border-[#d9cec1] bg-[#faf7f2]/95 px-2 py-3 shadow-sm backdrop-blur-sm">
+                      <div className="presentation-rail-scroll overflow-x-auto py-2" data-swipe-exempt="true" ref={presentationRailScrollerRef}>
+                        <div className="flex w-max min-w-full gap-3 px-1">
+                          {presentationRailSlides.map(({ img, index }) => {
+                            const isActive = index === currentIndex;
+                            return (
+                              <button
+                                key={`${img.id || img.src || index}-${index}`}
+                                ref={(node) => {
+                                  if (node) {
+                                    presentationRailItemRefs.current[index] = node;
+                                  } else {
+                                    delete presentationRailItemRefs.current[index];
+                                  }
+                                }}
+                                type="button"
+                                onClick={() => {
+                                  stopSpeech();
+                                  trackStoryAction('story_slider_click', img.id || null, {
+                                    trigger: `presentation_thumb_${index}`
+                                  }, {
+                                    sourceLayer: 'presentation_thumb_click_pixel_v1'
+                                  });
+                                  setCurrentIndex(index);
+                                }}
+                                className={`group shrink-0 overflow-hidden rounded-md border transition-all duration-200 ${
+                                  isActive
+                                    ? "border-[#d3b7a2] shadow-md ring-4 ring-[#d3b7a2]/85 ring-offset-2 ring-offset-[#faf7f2]"
+                                    : "border-gray-300 hover:border-[#c7b19e]"
+                                }`}
+                                title={img.title || `Slide ${index}`}
+                              >
+                                <img
+                                  src={normalizeImageSrc(img.src, 's')}
+                                  alt={img.alt || img.title}
+                                  className={`h-[84px] w-[84px] object-cover transition-opacity duration-200 ${
+                                    isActive ? "opacity-100" : "opacity-75 group-hover:opacity-100"
+                                  }`}
+                                />
+                              </button>
+                            );
+                          })}
                         </div>
                       </div>
-                    )}
-              </motion.div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        trackStoryAction('nav_next', currentImage?.id || null, {
+                          trigger: 'presentation_strip_next'
+                        }, {
+                          sourceLayer: 'presentation_strip_next_pixel_v1'
+                        });
+                        goNext();
+                      }}
+                      className="shrink-0 w-10 h-12 sm:w-12 sm:h-14 flex items-center justify-center text-gray-400 hover:text-[#8B4513] rounded transition-all duration-200"
+                      title="Next"
+                    >
+                      <SquareChevronRight className="w-7 h-7 sm:w-8 sm:h-8" />
+                    </button>
+                  </div>
+                </div>
+              )}
+              </>
             )}
           </AnimatePresence>
         </div>

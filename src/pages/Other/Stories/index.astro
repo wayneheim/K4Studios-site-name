@@ -133,6 +133,8 @@ const galleryPaths = Object.keys(galleryDataMap);
   <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
     <link rel="canonical" href="https://www.k4studios.com/Other/Stories" />
 
+    <div class="page-container w-full max-w-[1200px] mx-auto px-4 sm:px-5 md:px-6">
+
     <div class="drawer-mode">
       <LandingHeader client:load breadcrumb="Other › Stories" />
     </div>
@@ -153,7 +155,7 @@ const galleryPaths = Object.keys(galleryDataMap);
       />
     </section>
 
-    <section class="intro-text max-w-6xl mx-auto px-4 text-center mb-10">
+    <section class="intro-text max-w-6xl mx-auto px-2 sm:px-4 text-center mb-10">
       <h2 class="text-4xl font-extrabold mb-2">K4 Studios Picture Show Stories</h2>
       <h3 class="text-2xl font-semibold mb-8 text-gray-700">A Visual Blog</h3>
       <p
@@ -168,7 +170,7 @@ const galleryPaths = Object.keys(galleryDataMap);
       />
     </section>
 
-    <section class="story-layout" style="font-family: 'Glegoo', serif;">
+    <section class="story-layout px-2 sm:px-0" style="font-family: 'Glegoo', serif;">
       <div class="text-column">
         {stories.map(story => (
           <article class="story-block mb-10">
@@ -225,6 +227,8 @@ const galleryPaths = Object.keys(galleryDataMap);
       label="Explore Galleries"
       class="pt-8 pb-12"
     />
+
+    </div>
 
     <!-- MOBILE OVERFLOW PATCH -->
     <style>
