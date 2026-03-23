@@ -25,8 +25,8 @@ export const galleryData = [
   {
     "id": "i-7hD9CCh",
     "title": "At the Water’s Edge",
-    "description": "A painterly fine art photograph portraying a Native American woman at the edge of a river, captured in a moment of quiet attention and balance. Rooted in narrative Western art and guided by a pictorialist sensibility, the image emphasizes relationship over action—between figure, water, and tradition. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Native American woman standing at the river’s edge in painterly fine art photography, expressing tradition, presence, and quiet reflection",
+    "description": "A Native American woman kneels at the edge of a river, her hand lowered into the water while she steadies a long rifle at her side. Fringed clothing, braids, and gear are visible as she leans forward, with ripples forming around her fingers. This painterly Native American photography image captures a quiet interaction with the water in an outdoor setting. \n\n© Wayne Heim",
+    "alt": "Native American woman kneeling at a river’s edge with hand in the water and rifle beside her.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/0/Ng4bCdQhv8c3vf9fKxNCdDfq5P4n9MFTQsKrv4Sf4/XL/_WHO1626-886-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/0/Ng4bCdQhv8c3vf9fKxNCdDfq5P4n9MFTQsKrv4Sf4/XL/_WHO1626-886-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/3/LRQ3WDw8JFjGJQTvZBMjf3kHCPcgXgbCVCkPCpTq7/L/_WHO1676-887-888-2-L.jpg",
@@ -34,6 +34,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/3/M4QtNPq297SZ2BDkg6TXF3dKP9gm5SJmszVM47hpx/S/_WHO1676-887-888-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-7hD9CCh/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American portraits",
@@ -48,20 +49,22 @@ export const galleryData = [
       "Western Native American gallery",
       "Native American wall art",
       "fine art Western photography",
-      "pictorialist tradition",
+      "pictorialist tradition"
     ],
+
     "story": "She moves slowly, not to avoid the water,  \nbut to acknowledge it.\n\nNothing is taken without notice.  \nThe river sets the pace, and she follows.\n\nThis is not a pause.  \nIt’s a conversation.",
     "notes": "This image is grounded in observation rather than interpretation, allowing gesture and setting to carry meaning without intrusion. The figure’s posture and placement emphasize attentiveness and continuity, aligning the work with pictorialist traditions that privilege presence over explanation.\n\nThe painterly surface treatment softens detail while preserving intent, encouraging the viewer to slow down and engage with the moment on its own terms. By centering respect, restraint, and relationship to place, the work appeals to collectors drawn to fine art that honors lived tradition through quiet, enduring imagery.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 0
+    "sortOrder": 0,
+    contentSource: "ai"
   },
   {
     "id": "i-rRdrQBg",
     "title": "Above the Divide",
-    "description": "A sweeping Western art photograph, featuring three Native American riders poised on horseback atop a sunlit cliff. With painterly texture and cinematic scope, this image celebrates the spirit of exploration and the timeless grandeur of the American West. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Three Native American riders on horseback atop a rocky cliff under a dramatic sky, painterly Western art photograph.",
+    "description": "A Native American rider sits on horseback along a high ridge, wearing traditional regalia with a feathered headdress. The horse stands still against an open sky, with distant landscape and clouds filling the background. This image holds a sense of Native American heritage through its setting, dress, and position above the land. \n\n© Wayne Heim",
+    "alt": "Figure in feathered headdress seated on a horse along a ridge beneath a wide, clouded sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/LhMVZt54VBgBSfMCPgdZhC3VghscbNcSPfgjws4tp/XL/_WHO1062-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/LhMVZt54VBgBSfMCPgdZhC3VghscbNcSPfgjws4tp/XL/_WHO1062-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
@@ -69,35 +72,34 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rRdrQBg/0/M4ncFnR4RL5jvDPc9HFCZZZTZJ5hNhscXSpfTWPst/S/_WHO1570-Pano-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-rRdrQBg/A",
+
     "keywords": [
-      "western art",
-      "western photography",
-      "fine art",
-      "landscape",
-      "high country",
-      "frontier",
-      "journey",
-      "destiny",
-      "native american",
-      "rider",
-      "morning light",
-      "storm",
-      "vista",
-      "storytelling",
-      "cowboy",
+      "Native American fine art photography",
+      "Native American portraits",
+      "Native American rider",
+      "painterly Native American images",
+      "western fine art photography",
+      "frontier landscape",
+      "horseback rider",
+      "Native American tradition",
+      "high country western",
+      "cinematic western photography",
+      "Native American photography"
     ],
+
     "story": "Bathing in the morning light, stormy distance lingers. We have been this way before but THIS, this is different. There. That, that there is our future. That is where we need to be. That is where the winds will take us. As grand as this vista… this is the journey we must make. There we make our stand. There we will let our voice be heard. That is where we make our story.",
-    "notes": "Heim’s use of elevation, dramatic clouds, and clustered composition creates a sense of anticipation and narrative tension, recalling the heroic tableaus of classic Western cinema. The painterly treatment softens the raw landscape, highlighting light, form, and the emotional weight of the scene. For collectors, this image is a tribute to the legacy of Western art — a piece that invites new stories with every viewing.",
+    "notes": "The image is structured around elevation and isolation, placing the rider in a position that separates foreground from distant land while maintaining a strong vertical presence. The horizon line sits low, allowing sky and atmosphere to carry visual weight, a compositional approach seen in Western painting traditions where land and figure share narrative responsibility. The stillness of the horse contrasts with the movement implied in the clouds, creating tension without overt action. The painterly handling softens transitions while preserving clarity in the subject, allowing the work to balance scale, presence, and restraint.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    contentSource: "ai"
   },
   {
     "id": "i-4Hz6D7k",
     "title": "Carried Forward",
-    "description": "A painterly fine art photograph honoring a Native American figure defined by presence rather than spectacle. Rendered with restraint and historical awareness, this image reflects Native American photography rooted in identity, continuity, and cultural endurance. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly Native American portrait in fine art photography",
+    "description": "An elder stands in traditional regalia against a quiet, neutral backdrop, his gaze set forward as natural light reveals the textures of feather, leather, and skin. This Native American fine art photograph centers on presence and continuity, grounded in cultural identity and lived experience. \n\n© Wayne Heim",
+    "alt": "Elder Native American man wearing feathered headdress and breastplate, looking ahead in a painterly fine art image.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/1/KvnVJgjSnm9Vphqk8VSjwcLmqgtBwRSc7JRpD32pS/XL/_HF29701-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/1/KvnVJgjSnm9Vphqk8VSjwcLmqgtBwRSc7JRpD32pS/XL/_HF29701-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/0/LMk6v3Lhjk7fgM8p5dzC7w8zKdVr5zZm9Khq4JxCq/L/_WHO3989-Edit-2-L.jpg",
@@ -105,6 +107,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/0/LnpTmc5XFghrqhmsKHCF2PFPBnxSBhKhZFg2xkwbF/S/_WHO3989-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-4Hz6D7k/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -113,20 +116,22 @@ export const galleryData = [
       "painterly Native American images",
       "Indigenous experience",
       "Native American heritage art",
-      "Native American tradition",
+      "Native American tradition"
     ],
+
     "story": "He does not look back.\n\nWhat came before is already moving through him —\nhands, breath, posture —\nthings learned long before words were used to explain them.\n\nWhat remains is not memory,\nbut continuation.",
     "notes": "This work draws from pictorialist restraint rather than dramatic gesture, allowing posture and light to carry meaning. The composition echoes the quiet authority found in early ethnographic portraiture while rejecting its distance, replacing it with presence and continuity. The painterly surface softens time, positioning the figure not as a subject of history, but as a living extension of it — an image that endures through understatement.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 2
+    "sortOrder": 2,
+    contentSource: "ai"
   },
   {
     "id": "i-LmpRvHw",
     "title": "Watching the High Ground",
-    "description": "A cinematic, painterly Western fine art photograph depicting a Native American man standing watch beside his horse, staff held upright beneath a widening sky. The image evokes vigilance, authority, and ancestral responsibility, rendered with soft archival tones and restrained light. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Native American man standing beside his horse holding a staff, feathers lifting in the wind, painterly Western fine art photograph",
+    "description": "Standing beside his horse with a staff held upright, an elder faces outward beneath a widening sky as wind lifts the feathers tied near the top. Details in the beadwork, leather, and hair are defined by soft natural light, while the open backdrop keeps attention on the figure and his stance. Rooted in lived experience, this scene reflects continuity and watchfulness within Native American photography. \n\n© Wayne Heim",
+    "alt": "Elder Native American man with long hair stands beside a horse holding a staff with feathers, looking into the distance.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/NbkTFbFvpWFNc8fVqPX6FV2g5TL8NKVxXZDBfCDzq/XL/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/NbkTFbFvpWFNc8fVqPX6FV2g5TL8NKVxXZDBfCDzq/XL/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/NbkTFbFvpWFNc8fVqPX6FV2g5TL8NKVxXZDBfCDzq/XL/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-XL.jpg",
@@ -134,6 +139,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/NHGdJwSS8NnXzdpvpdqnB6TjvCk5cWhFV2sT6DRFk/S/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -143,20 +149,22 @@ export const galleryData = [
       "Native American heritage art",
       "Native American tradition",
       "spirit of the West",
-      "Western Native American gallery",
+      "Western Native American gallery"
     ],
+
     "story": "He does not look down.\nHe looks past—past the ridge, past the hour, past the noise that never quite reaches this place.\n\nThe horse shifts once, then settles.\nWind lifts the feathers, tests the silence.\nNothing announces itself.\nThat’s how it has always been.",
     "notes": "This piece draws its strength from restraint rather than drama. The upright staff, calm posture, and elevated gaze establish quiet authority—an image that feels inherited rather than staged. The composition echoes the lineage of classical Western portraiture while rejecting romantic excess, allowing presence and posture to carry the narrative. It is a work that holds space rather than fills it, rewarding long looking and lived interpretation.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    contentSource: "ai"
   },
   {
     "id": "i-89qzJ6S",
-    "title": "Brothers of the Open Country",
-    "description": "A powerful painterly Western portrait depicting the quiet unity between two frontier companions—one Indigenous, one a seasoned trapper—standing beside a saddled horse under dramatic skies. The composition emphasizes restraint, lived experience, and narrative depth without spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as archival Western wall art for collectors of fine art photography.",
-    "alt": "Indigenous scout and frontier trapper standing together with a horse, painterly Western portrait.",
+    "title": "Open Country Brothers",
+    "description": "Two seasoned frontiersmen stand beside a saddled horse beneath a vast Western sky, one pointing toward the distant horizon as if tracing the path of memory across the open range. The painterly Western portrait captures a moment of quiet alliance between cultures and lifetimes shaped by the frontier. Rich textures, historic detail, and cinematic light create a narrative-driven scene that reflects both companionship and the shifting tides of the American West.\n\n© Wayne Heim",
+    "alt": "Indigenous scout and frontier trapper standing beside a horse under dramatic prairie sky, painterly Western portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/M93ZG5HHfWZt4FjL9DpcrSjkrRJ5ZMLxLvt4HmmrK/XL/_HF29136-Edit-2-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-89qzJ6S/1/KFC7vkSrbSkrPPGFpZSVfcqfV48gC7WztZpHz8Rg2/L/_HF29136-Edit-2-Edit-L.jpg",
@@ -181,6 +189,23 @@ export const galleryData = [
       "cowboy art",
       "fine art Western photography",
       "painterly Western photograph",
+      "Western Cowboy Portraits",
+      "western cowboy art",
+      "painterly Western images",
+      "wild west painterly photography",
+      "western painterly photography",
+      "cowboy portrait",
+      "cowboy painting art",
+      "fine art cowboy photography",
+      "historic western prints",
+      "Engrained Prints",
+      "Engrained Series",
+      "photography printed on wood",
+      "Native American art prints",
+      "Native American fine art photography",
+      "Native American photography",
+      "Native American Portraits",
+      "painterly Native American portraits"
     ],
 
     "story": "Sharp fall air hangs heavy like morning dew.\nChange is in the air—seasons and society, both forcing their own agenda upon this land.\n\nThey come by wagonload now, each one hoping for a new beginning—hunting for answers, a fresh start, or just a path forward.\n\nCarving, forging, reshaping this life with Eastern wealth and virtues, they claim what’s ours for theirs.\nYears, old friend, we shared this place as brothers—one mind - wrapped in different cloths.\n\nClouds of change gather, dappled and restless, over the valley floor.\nBoth season and change move at will, ushering a future that neither hope nor protest can hold back.",
@@ -198,8 +223,8 @@ export const galleryData = [
   {
     "id": "i-wWNfZsT",
     "title": "The Higher Silence",
-    "description": "The Higher Silence is a painterly Western fine art photograph that reflects Indigenous presence through restraint rather than spectacle. Composed with deliberate vertical separation, the image emphasizes watchfulness, lineage, and quiet authority. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Painterly Western fine art photograph depicting two Indigenous figures positioned in quiet watchfulness, one standing above and one seated",
+    "description": "Two figures occupy different elevations along a weathered rock formation, one standing above while the other sits below, focused on a small object held in her hands. Clothing details—beadwork, fringe, and fabric—are revealed through soft daylight against an open sky. The spacing between them and the surrounding landscape reflects a quiet moment of interaction and continuity within Indigenous experience. This scene is captured as a Native American fine art photograph. \n\n© Wayne Heim",
+    "alt": "Young Native American girl standing above another seated figure on a rock, both in traditional clothing under an open sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wWNfZsT/1/KXfGf8ckrkX3mRXR999RFqFqqXXpMfkTqdLfVrB5F/XL/_HF28699-Edit-1487-1494-1496-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wWNfZsT/1/KXfGf8ckrkX3mRXR999RFqFqqXXpMfkTqdLfVrB5F/XL/_HF28699-Edit-1487-1494-1496-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wWNfZsT/1/Kzw2gCnxLBZfTxqkdmGMgNWv3x6KKDMRWfhRG4bQG/L/_HF28699-Edit-1487-1494-1496-L.jpg",
@@ -209,22 +234,19 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wWNfZsT/A",
 
     "keywords": [
-      "painterly Western photography",
+      "Native American art prints",
       "Native American fine art photography",
-      "Indigenous portrait art",
-      "narrative Western art",
-      "painterly Western images",
-      "American West fine art",
-      "Native American portraits",
-      "Western fine art photography",
-      "heritage and tradition in art",
-      "Indigenous experience",
-      "museum-quality Western photography",
       "Native American photography",
+      "Native American portraits",
+      "Indigenous experience",
+      "Native American heritage art",
+      "Native American tradition",
+      "spirit of the West",
+      "painterly Native American images"
     ],
 
     "story": "They do not speak because nothing here requires explanation. One watches from above, steady and alert. The other listens from below, learning the shape of the world through stillness. This is how knowledge passes—not by instruction, but by proximity. Between them lives a silence earned over generations, a quiet that holds memory, responsibility, and the weight of what must be protected before it can be named.",
-    "notes": "This work draws its strength from compositional restraint and relational space. By separating figures vertically, the image establishes a visual language of guardianship and inheritance without relying on symbolism or overt narrative cues. The silence is intentional—allowing posture, distance, and gaze to carry meaning. Rooted in painterly photographic tradition, The Higher Silence stands as a meditation on continuity and responsibility, offering collectors a piece that deepens with time rather than declares itself at first glance.",
+    "notes": "This piece draws its strength from separation and relationship rather than overt action. The vertical positioning creates a quiet hierarchy without force, allowing the viewer to move between figures rather than settle on one. It echoes traditions of visual storytelling where knowledge is passed through proximity and observation rather than instruction. The restraint keeps the moment open, allowing meaning to form slowly over time rather than declare itself immediately.",
     "rating": 4,
 
     "galleries": [
@@ -238,8 +260,8 @@ export const galleryData = [
   {
     "id": "i-2s2LtQp",
     "title": "High Country Sentinel",
-    "description": "A dramatic Western art photograph, featuring a Native American rider in full regalia, poised on horseback atop a sunlit ridge. “High Country Sentinel” blends painterly technique with classic composition, celebrating the spirit of guardianship and the open majesty of the American West. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "Native American rider in full headdress on horseback, silhouetted on a high ridge beneath a dramatic sky, painterly Western art.",
+    "description": "High on a rocky rise, a rider in full regalia sits on horseback against an expansive sky while another figure moves below along the ledge. The terrain is layered with stone, brush, and open space, with light revealing the textures of the hillside and figures. The elevation and distance between them create a sense of watch and movement within a Western landscape, captured as a Native American photography scene. \n\n© Wayne Heim",
+    "alt": "Rider in traditional Native American regalia on horseback atop a rocky ridge, with a second figure walking below.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/0/MqDHxQCXBdDSp2c2SV5W2rBv6gg5n3bFR5QvrWTRk/XL/_WHO1570-Pano-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/1/MJr79bZrTb3Nx97V74zshkS572zKRz8QxNSZW3KWb/XL/_WHO2552-Edit-XL.jpg",
@@ -247,35 +269,32 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/1/MjVrkVrTqGwXnxtLS93NDhHqqHHjWqkQ9wJp5sxLv/S/_WHO2552-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-2s2LtQp/A",
+
     "keywords": [
-      "western art",
-      "western photography",
-      "native american portrait",
-      "fine art",
-      "archival",
-      "historical",
-      "painterly",
-      "ceremonial",
-      "traditional dress",
-      "american frontier",
-      "wall decor",
-      "legacy",
       "Native American art prints",
       "Native American fine art photography",
       "Native American photography",
+      "Native American portraits",
+      "Indigenous experience",
+      "Native American heritage art",
+      "Native American tradition",
+      "spirit of the West",
+      "Western Native American gallery"
     ],
+
     "story": "High ground, open sky — this is where the world stretches wide. I stand watch so the stories don’t disappear. The wind carries more than words up here. Let them see we were here.",
-    "notes": "A masterclass in Western art composition, this image leverages elevation, silhouette, and sweeping sky to monumental effect. Heim’s painterly approach softens edges, adding dreamlike atmosphere, while the subject’s upright posture and placement recall Remington’s heroic riders. A piece that honors both the land and those who watch over it.",
+    "notes": "This image builds its strength through vertical distance and spatial tension. The rider holds the upper ground while the second figure anchors the lower plane, creating a visual dialogue between watchfulness and movement. The composition recalls the elevated vantage points seen in Western painting traditions, where height suggests awareness rather than dominance. The restraint in gesture allows the land and positioning to carry the narrative, reinforcing a sense of guardianship tied to place.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    contentSource: "ai"
   },
   {
     "id": "i-5j2Knmb",
     "title": "Eye of the Hunt",
-    "description": "“Eye of the Hunt” by award-winning fine art photographer captures the primal focus and unity of two Native hunters poised in a painterly tableau of discipline and grace. Rendered in Wayne’s signature painterly fine art photography style, the image fuses historical. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Two Native American hunters in traditional clothing draw bows in unison, their eyes fixed on a distant target, bathed in soft painterly",
+    "description": "Two figures draw bows in unison, bodies aligned and eyes fixed on a point beyond the frame. The tension in the bowstrings and hands is matched by stillness in their posture, with natural light shaping the textures of wood, leather, and fabric. The close framing keeps focus on the moment of aim and coordination, captured as a painterly Native American image grounded in precision and control. \n\n© Wayne Heim",
+    "alt": "Two Native American hunters aiming bows together, focused on a distant target with intense concentration.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/2/LDZZnxmV5Grh5VsVD6DbKCP6KRK6jgZZSMScd84Pd/XL/_WHO6565-Edit-2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/2/LDZZnxmV5Grh5VsVD6DbKCP6KRK6jgZZSMScd84Pd/XL/_WHO6565-Edit-2-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/2/MC5LhSnKVfCfnkWrmm7hRnKnnzQhGN77cshsbKcRP/L/_WHO6565-Edit-2-Edit-L.jpg",
@@ -283,35 +302,32 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/2/LkdhkV7PvPKwKmwR6wbZR4sR877xm6r8TMWXN6B4W/S/_WHO6565-Edit-2-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5j2Knmb/A",
+
     "keywords": [
-      "painterly fine art photography",
-      "Native American art",
-      "Western fine art",
-      "historical photography",
-      "pictorialism",
-      "frontier storytelling",
-      "Wayne Heim",
-      "Facing History",
-      "cinematic photography",
-      "museum quality prints",
-      "Native portrait art",
-      "historical reenactment",
-      "fine art wall decor",
-      "heritage photography",
-      "Western narrative art",
+      "Native American art prints",
+      "Native American fine art photography",
+      "Native American photography",
+      "Native American portraits",
+      "Indigenous experience",
+      "Native American heritage art",
+      "Native American tradition",
+      "painterly Native American portraits",
+      "spirit of the West"
     ],
+
     "story": "The air holds its breath. The bow, the hand, the heartbeat — all align.\nBut it’s the eye that commands. Not the eye that aims, but the one that knows.\n\nIt sees beyond quarry or chase. It sees you. The watcher becomes the watched —\ncaught in the same stillness, the same fragile truth of being seen.\n\nHere, the hunt is not pursuit, but revelation.",
-    "notes": "In “Eye of the Hunt,” Heim channels the compositional restraint of N.C. Wyeth and the emotional immediacy of drawing the viewer into a suspended moment between action and anticipation. The diagonal thrust of the bow contrasts against the softened background tones, guiding the eye toward the unseen target while anchoring the narrative in layered gesture and gaze. Subtle chromatic blending and edge diffusion heighten the painterly illusion—an homage to the Pictorialist masters who blurred photography into art. This is storytelling distilled to instinct: form, breath, and silence.",
+    "notes": "The diagonal line of the bow creates forward tension while the mirrored posture binds the two figures into a unified action. Rather than emphasizing motion, the image holds at the edge of release, where anticipation becomes the subject. It reflects a disciplined visual restraint, allowing alignment, breath, and focus to carry the narrative weight.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    contentSource: "ai"
   },
   {
     "id": "i-gL3Nnth",
     "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
-    "description": "Justified — or Damned unfolds within a landscape that feels alive with judgment. Wayne Heim’s painterly fine-art photography transforms a tense Western encounter into a study of inevitability: men caught not in victory or defeat, but in the moral narrowing of fate. The composition emphasizes restraint, lived experience, and narrative depth without spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly fine-art photograph of three men caught in a standoff among rocky hills and sagebrush — a cinematic Western tableau exploring narrative tension",
+    "description": "Three figures move through a steep rocky hillside where stone outcrops and dry grass tighten the space around them. One man sits wounded while two others close in from opposite sides, the terrain shaping the moment as much as the men themselves. The scene unfolds like a Western tableau—compressed, tense, and inevitable—captured in painterly Western photography that explores consequence, confrontation, and the fragile line between justice and survival on the frontier.\n\n© Wayne Heim",
+    "alt": "Three men confronting each other across rocky Western hillside terrain with one wounded figure seated against the stone.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gL3Nnth/0/LnxkbXNFRDnVKbTd2XghjJ4fBXxHB6JDNp4BDzTBc/XL/_HF25859-1151-1156-1159-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gL3Nnth/0/LnxkbXNFRDnVKbTd2XghjJ4fBXxHB6JDNp4BDzTBc/XL/_HF25859-1151-1156-1159-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gL3Nnth/0/NPcT9jsfC5WjRTcRZrsGCbPLXLQmbhGrFwXMDv3n6/L/_HF25859-1151-1156-1159-L.jpg",
@@ -319,35 +335,52 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gL3Nnth/0/Ksc7CtQwsSbDnp953nZPL8zHMzHbcJxngmnxR3PHk/S/_HF25859-1151-1156-1159-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gL3Nnth/A",
+
     "keywords": [
       "western fine art photography",
-      "painterly storytelling",
-      "Wayne Heim",
-      "Justified or Damned",
-      "frontier art",
-      "historical reenactment photography",
-      "western conflict art",
-      "painterly realism",
-      "rembrandt light western",
-      "wyeth western art",
+      "painterly western storytelling",
+      "three-way standoff",
+      "frontier consequence",
+      "cinematic cowboy art",
       "moral ambiguity",
-      "western fine art print",
-      "narrative photography",
-      "fine art western wall art",
-      "timeless western imagery",
+      "American frontier",
+      "narrative western art",
+      "painterly cowboy photography",
+      "wild west photography",
+      "pictorialist tradition",
+      "western themed art",
+      "dramatic western tableau",
+      "Wayne Heim",
+      "classic western scene",
+      "painterly Western images",
+      "painterly Western photograph",
+      "fine art Western photography",
+      "cowboy artwork",
+      "cowboy portraits",
+      "fine art wood prints",
+      "Engrained Series",
+      "Engrained Prints",
+      "wood print fine art",
+      "Native American art prints",
+      "Native American fine art photography",
+      "painterly Native American portraits",
+      "Western Native American gallery",
+      "Native American photography"
     ],
-    "story": "Among the stone and sage...\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history.",
-    "notes": "",
+
+    "story": "Among the stone and sage...\n\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history.",
+    "notes": "Every slope and stone tightens the noose—nature funneling men toward consequence. The painterly textures reveal not violence, but reckoning: the moment when instinct gives way to confession. The composition’s compression—earth pressing inward—mirrors moral pressure. It recalls the tonal weight of Goya’s fatal encounters and the compositional storytelling of Remington’s late works, but reframed through Heim’s contemporary lens: where light exposes not heroism, but humanity. It’s a scene of entrapment, not conquest—the West as moral crucible, where even the righteous erode beneath the wind.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    contentSource: "ai"
   },
   {
     "id": "i-WfRwfpM",
     "title": "Standing Into Tomorrow",
-    "description": "A painterly fine art photograph honoring a Native American woman in quiet resolve, defined by presence rather than spectacle. Guided by a pictorialist sensibility, the image emphasizes continuity, identity, and forward-looking strength within Native American life. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Native American woman standing in open light in painterly fine art photography, expressing dignity, continuity, and forward presence",
+    "description": "A woman stands in open light, turned slightly as her gaze moves beyond the frame, with soft atmosphere surrounding her figure. Details in the dress, fringe, and braids are gently revealed, while the background remains diffused and unobtrusive. The stillness and forward orientation suggest direction and presence, captured here as a Native American photography portrait. \n\n© Wayne Heim",
+    "alt": "Native American woman standing in soft light, wearing traditional dress with braids and looking off into the distance.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WfRwfpM/0/LXZs4gzLQsvczGN2kr8WMMdNdZRRLXFHrczchhFRX/XL/_HF29518-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WfRwfpM/0/LXZs4gzLQsvczGN2kr8WMMdNdZRRLXFHrczchhFRX/XL/_HF29518-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WfRwfpM/0/LXZs4gzLQsvczGN2kr8WMMdNdZRRLXFHrczchhFRX/XL/_HF29518-Edit-2-XL.jpg",
@@ -355,6 +388,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WfRwfpM/0/KkDTKbgnDHfR5q8F5ttdZWjJs2JN8qT7X7cn4n5Mx/S/_HF29518-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WfRwfpM/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American portraits",
@@ -369,19 +403,21 @@ export const galleryData = [
       "Native American wall art",
       "spirit of the West",
       "fine art Western photography",
-      "pictorialist tradition",
+      "pictorialist tradition"
     ],
+
     "story": "She doesn’t look back to remember.  \nShe looks forward to continue.\n\nThe wind moves past her without instruction.  \nThe land already knows who she is.\n\nWhat she carries isn’t history alone—  \nit’s direction.",
     "notes": "This image centers presence over symbolism, allowing posture, light, and stillness to communicate continuity without narration. The figure’s stance and forward gaze align with pictorialist approaches that privilege lived identity and quiet authority rather than historical reenactment.\n\nThe painterly surface softens edges while preserving intent, inviting the viewer to slow down and engage with the subject on her own terms. By emphasizing continuity and direction, the work appeals to collectors drawn to fine art that honors Indigenous presence through restraint, dignity, and enduring forward motion.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 9
+    "sortOrder": 9,
+    contentSource: "ai"
   },
   {
     "id": "i-69qsFwx",
     "title": "Young Warrior",
-    "description": "A vibrant, painterly portrait capturing a young Native American warrior standing tall by the water. Bathed in sunlight and tradition, this Western art photograph celebrates youthful courage, ceremonial heritage, and the living spirit of the Old West. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
+    "description": "A young figure stands near the water’s edge, holding a staff upright as his voice breaks into the open air. His posture is lifted and expressive, with movement carried through his raised arm and open mouth. Light softens the scene while revealing detail in the headdress, beadwork, and textures of his clothing, set against the calm surface behind him. \n\n© Wayne Heim",
     "alt": "Young Native American boy in ceremonial dress holding a spear, standing by water in painterly fine art style.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-69qsFwx/0/MpfZhzbJmGb45pdK7LZF9nBmNC37WbpPgJr8D35VM/XL/_WHO2423-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-69qsFwx/0/MpfZhzbJmGb45pdK7LZF9nBmNC37WbpPgJr8D35VM/XL/_WHO2423-Edit-Edit-Edit-XL.jpg",
@@ -390,8 +426,8 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-69qsFwx/0/MDvTGp6dkn7CGNs2vtHjwF6xccRwnrn79w6PQHzrg/S/_WHO2685-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-69qsFwx/A",
+
     "keywords": [
-      "a",
       "fine art",
       "photography",
       "archival",
@@ -405,20 +441,22 @@ export const galleryData = [
       "Native American photography",
       "Native American heritage art",
       "Native American fine art photography",
-      "Native American art prints",
+      "Native American art prints"
     ],
+
     "story": "One big yell, just to see if they’re watching. Don’t think I’m brave?—I’ll show ’em. I am fierce, I am important… Big things come in small packages. My time is coming. Let ’em watch. They WILL know my name.",
     "notes": "Light defines the story here — golden and directional, it wraps the young warrior and throws his outline into quiet relief against the water. The composition is intimate but strong: the subject is framed just off-center, spear angled upward, drawing the eye through the image and hinting at future growth. Heim’s painterly style softens detail without losing energy, balancing realism and romanticism in classic Western Art fashion. For collectors, this piece captures the fleeting spark of youth with the timeless storytelling of great Western-themed art.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    contentSource: "ai"
   },
   {
     "id": "i-QNdCxKN",
     "title": "The Moment Before",
-    "description": "A painterly fine art photograph honoring a Native American figure in a moment of focused readiness, defined by restraint rather than spectacle. Rooted in fine art Native American photography, this image emphasizes presence, tension, and embodied awareness. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Native American figure holding a spear in a moment of readiness, painterly fine art photography expressing focus and tension",
+    "description": "A figure moves forward with a spear held low and extended, body angled and intent as dust lifts around his steps. Face paint, fur, and layered materials are revealed through soft, diffused light, while the background fades into a neutral field that keeps attention on the action. The forward motion and grounded stance hold the moment just before release, defined by focus and controlled movement. \n\n© Wayne Heim",
+    "alt": "Native American fine art photography of a warrior with face paint lunging forward holding a spear, captured in a painterly style.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/1/MdcGHDPzMsxp5bGpXpWLKdfS2zt7Mn5Zc736MMQRG/XL/_HF27362-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/1/MdcGHDPzMsxp5bGpXpWLKdfS2zt7Mn5Zc736MMQRG/XL/_HF27362-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/3/NHnRzZhQL8WfZZWTCLjpjCf9SBSk6dX652zftfvJh/XL/_HF27522-Edit-XL.jpg",
@@ -426,6 +464,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QNdCxKN/3/K6xKzPvMhTgS6GLZw9MsSwdZfLsmpRGSx2thKghnB/S/_HF27522-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-QNdCxKN/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American portraits",
@@ -441,19 +480,22 @@ export const galleryData = [
       "heritage and tradition in art",
       "fine art Western photography",
       "pictorialist tradition",
+      "Native American photography"
     ],
+
     "story": "Everything tightens just ahead of motion.  \nThe body knows it before the mind gives permission.\n\nBreath held—not in fear, but readiness.  \nThe ground listens.\n\nWhatever comes next will arrive quickly.  \nThis is the last quiet it allows.",
-    "notes": "This work centers on the suspended instant before action, where physical posture and concentrated stillness carry the emotional weight of the image. Rather than depicting motion itself, the composition invites attention to readiness, awareness, and the discipline required to hold both.\n\nThe painterly treatment softens edges while preserving intensity, allowing the subject’s presence to remain grounded and human. Collectors drawn to Indigenous fine art that values restraint, cultural respect, and psychological depth will recognize this piece as one that rewards prolonged looking and quiet contemplation.",
+    "notes": "Rather than depicting motion itself, the composition invites attention to readiness, awareness, and the discipline required to hold both.\n\nThe painterly treatment softens edges while preserving intensity, allowing the subject’s presence to remain grounded and human. Collectors drawn to Indigenous fine art that values restraint, cultural respect, and psychological depth will recognize this piece as one that rewards prolonged looking and quiet contemplation.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 11
+    "sortOrder": 11,
+    contentSource: "ai"
   },
   {
     "id": "i-KtmPcCf",
     "title": "Crossing in Silence",
-    "description": "A painterly Western art photograph, depicting a Native American man in traditional dress at the water’s edge. This contemplative image captures the quiet moments between journeys, where reflection and memory meet. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Native American man in fringed clothing crouched by the water’s edge, studying his reflection, painterly Western art photograph.",
+    "description": "Crouched at the water’s edge, a man leans forward with a rifle held close as his reflection breaks across the surface. Fringe and fabric hang low, nearly touching the water, while soft light reveals texture in the clothing and shoreline. The shallow depth and muted background keep focus on the interaction between figure and water, holding the moment in quiet observation. \n\n© Wayne Heim",
+    "alt": "Native American photography of a man in fringed clothing crouching by the water with a rifle, studying his reflection.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/2/Lj6QBVbS4rWP6n92R65CZpX8sjm3KccJ7TJXzHcZp/XL/_WHO1676-887-888-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/2/Lj6QBVbS4rWP6n92R65CZpX8sjm3KccJ7TJXzHcZp/XL/_WHO1676-887-888-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/2/LvN9vBc2JK479758Wk9cJjS3v69Jzqk9QTtHxmBzb/L/_WHO1676-887-888-3-L.jpg",
@@ -461,6 +503,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KtmPcCf/2/K2wsHV4jH3PbdLrnBmxJ59mfz64MdrDtL8X68DKmj/S/_WHO1676-887-888-3-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-KtmPcCf/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American portraits",
@@ -474,19 +517,21 @@ export const galleryData = [
       "fine art Western photography",
       "ceremonial dress",
       "historical Native American portrait",
-      "archival Western portrait",
+      "archival Western portrait"
     ],
+
     "story": "Dew lifts from the meadow in the morning glow. I pause at the crossing. Thirst for knowledge? Thirst for adventure? Thirst for answers… or thirst for life and the spirit of those who passed this way before me.",
-    "notes": "The painterly light and low, early glow create a contemplative mood, highlighting both the textures of water and the quiet poise of the figure. Heim’s use of reflection and negative space draws the viewer into the story, blurring lines between past and present. This piece bridges Western art tradition and contemporary storytelling, inviting collectors to linger at the edge where memory and new journeys meet.",
+    "notes": "This piece holds its power in the space between the figure and his reflection. The slight distortion in the water prevents a clean mirror, turning the image into something less about likeness and more about recognition. The low posture and forward lean create an intimate viewing angle, drawing the eye downward rather than outward. It echoes a long tradition of reflective imagery in Western art, where water becomes a threshold between states—past and present, memory and continuation—without ever resolving into a fixed meaning.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 12
+    "sortOrder": 12,
+    contentSource: "ai"
   },
   {
     "id": "i-NgkC4Zt",
     "title": "Elder of the Crossing",
-    "description": "A painterly Native American portrait centered on presence, age, and continuity rather than spectacle. This fine art photograph emphasizes Indigenous experience through expression, texture, and restraint, allowing tradition and memory to speak quietly through the subject’s gaze. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
+    "description": "An elder is shown in close portrait, his expression steady as textured light moves across his face and ceremonial headdress. The background falls into a warm, layered field that keeps attention on the lines, materials, and presence of the figure. Details in the adornment and skin are rendered with clarity, holding the moment in quiet stillness. \n\n© Wayne Heim",
     "alt": "Native American elder in traditional ceremonial headdress, weathered expression and steady gaze, rendered in painterly fine art photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NgkC4Zt/0/Ldc2DvrgzRsGtfcQHrmxCX9X3Jj6t8pJ8FzVzNrxT/XL/_WHO2838-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NgkC4Zt/0/Ldc2DvrgzRsGtfcQHrmxCX9X3Jj6t8pJ8FzVzNrxT/XL/_WHO2838-Edit-XL.jpg",
@@ -495,6 +540,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NgkC4Zt/1/LjqDBDHrz9DFPXRffF4cknPQrGkHjdq3NHPkRRLwB/S/_HF24846-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-NgkC4Zt/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -503,20 +549,22 @@ export const galleryData = [
       "Indigenous experience",
       "Native American heritage art",
       "Native American tradition",
-      "spirit of the West",
+      "spirit of the West"
     ],
+
     "story": "He has stood at this threshold longer than the path remembers itself.  \nNot watching for arrivals—watching for what is carried forward.\n\nTime moves around him, not through him.  \nWhat matters has already been decided.",
     "notes": "This portrait draws its strength from restraint. The subdued palette, textured background, and controlled light place emphasis on the subject’s expression rather than costume or setting. Painterly surface treatment and classical portrait structure align the work with historical Western and ethnographic portrait traditions while maintaining contemporary sensitivity. The result is a piece that rewards prolonged viewing, inviting collectors to engage with the quiet authority carried by age, memory, and lived experience.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 13
+    "sortOrder": 13,
+    contentSource: "ai"
   },
   {
     "id": "i-6NQ6hQZ",
     "title": "High Ground Justice",
-    "description": "Fine art Western photograph capturing a cinematic three-way standoff in a painterly, high-drama landscape. Shot in the wild terrain of the American West, this image blends traditional Western themes with layered storytelling—evoking tension, narrative ambiguity, and classic film. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Three men locked in a cinematic standoff across a rugged Western hillside—one crouching behind rocks, one aiming from higher ground, and with cinematic tension.",
+    "description": "A figure raises a bow overhead, body turned and arm extended as light falls across painted skin, fur, and layered adornment. The background remains subdued, allowing the gesture and materials to carry the scene. Details in the headdress, face paint, and chest piece are clearly defined, holding the moment in tension and readiness. Captured within a Native American fine art photography context, the image emphasizes action held just before release. \n\n© Wayne Heim",
+    "alt": "Native American warrior with face paint raising a bow overhead, wearing traditional headdress and chest piece in a painterly scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6NQ6hQZ/0/LM599HhPqKD7B5LjM2ddv6PQCpW6xpL3hLCk7VcbQ/XL/_HF27324-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6NQ6hQZ/0/LM599HhPqKD7B5LjM2ddv6PQCpW6xpL3hLCk7VcbQ/XL/_HF27324-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6NQ6hQZ/1/KH3H8n6nbzTq34W7FpFxX9ChJPSSX7mNNcdFhfHJ9/L/_HF27362-Edit-L.jpg",
@@ -524,35 +572,32 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6NQ6hQZ/1/MGtzcDRG4J5ZqsWJwLLB4qPKJ7GpssFwzHXnnvZBs/S/_HF27362-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-6NQ6hQZ/A",
+
     "keywords": [
-      "western fine art photography",
-      "cowboy standoff artwork",
-      "painterly cowboy photography",
-      "three-way standoff",
-      "cinematic western art",
-      "narrative cowboy photo",
-      "American frontier art",
-      "historical reenactment photography",
-      "old west showdown",
-      "fine art storytelling photography",
-      "cowboy wall decor",
-      "collector western photo",
-      "tension in western art",
-      "framed cowboy print",
-      "Artist Ride photography",
+      "Native American art prints",
+      "Native American fine art photography",
+      "Native American photography",
+      "Native American portraits",
+      "Indigenous experience",
+      "Native American heritage art",
+      "Native American tradition",
+      "painterly Native American portraits",
+      "spirit of the West"
     ],
+
     "story": "All lines lead to conflict.\nTrees stand watch from above, silent patrons to the stage below. Cliffs, angered and jagged — their edge… the box… the ring of reckoning.\n\nShadows press in, clouds gather on winds of judgment, textures pulling, tightening the grip. A bold, harsh narrator carves — its voice in shadow, speaking violence against the soft hush of summer grass.\n\nAll lines converge. Justice? Vengeance? Opportunity? Only the wind sings this song.",
-    "notes": "High Ground Justice, a masterclass in compositional tension. The image pulses with cinematic energy—each natural element choreographed to guide the eye and elevate the confrontation at its heart.\n\nThe scene is architected through visual geometry: the angled cliff echoing the attacker’s posture, the dark tree boxing him in, a triangular shadow driving us toward the man climbing the ridge. Every line of the land participates in the judgment. Trees observe. Shadows accuse. Grass betrays. And the cliff itself demands consequence. This is not just a conflict of men—but of place, memory, and fate.\n\nAbove, the trees stand like silent jurors. There's a mythic weight here—part Remington, part Greek tragedy. We’re left not with clarity, but questions: justice, revenge, or seized opportunity? This isn’t just a captured moment—it’s a constructed parable.",
+    "notes": "Rather than depicting motion itself, this image holds at the threshold of it. The raised bow introduces a vertical force that directs the eye upward, while the grounded stance anchors the figure in place. This contrast creates a controlled tension, where the moment feels suspended rather than resolved. The surrounding restraint keeps attention on the figure’s posture and intent, allowing the narrative to emerge through direction and readiness rather than action.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 14
+    "sortOrder": 14,
+    contentSource: "ai"
   },
   {
     "id": "i-qLzRgbS",
     "title": "In the Presence of Time",
-    "description": "A powerful Native American portrait in traditional regalia, captured in painterly light and archival tones. This fine art photograph bridges the worlds of Western art, Western photography, and historical portraiture, honoring the dignity and legacy of the American frontier. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Native American man in traditional regalia, feathered headdress blowing in the wind, standing against a textured background in painterly light",
+    "description": "An elder sits wrapped in layered garments, turned slightly as his gaze extends beyond the frame. Wind lifts strands of hair and small elements of adornment, while soft, diffused light reveals the textures of fabric and skin. The background falls away into a pale, open field, keeping focus on the figure and his presence within the space. \n\n© Wayne Heim",
+    "alt": "Seated elder in traditional clothing with wind moving his hair, looking into the distance in Native American fine art photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/2/KLGwmMR57nK2V8mWm5Wcm7K2ChC39txffFTFh5WfB/XL/_HF20466-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/2/KLGwmMR57nK2V8mWm5Wcm7K2ChC39txffFTFh5WfB/XL/_HF20466-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/0/LbnXc2dCPxrjJDjw6FPBCRBKXFXhBghG5PfD7jLzQ/XL/_WHO6157-Edit-XL.jpg",
@@ -560,33 +605,32 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/0/Lg5bGG5Q2SmdLsSnJtszBZW5s9BgPMTdbKHPGPZKx/S/_WHO6157-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-qLzRgbS/A",
+
     "keywords": [
-      "Native American fine art photography",
-      "Native American portraits",
-      "Indigenous heritage art",
-      "Native American tradition",
-      "Indigenous experience",
-      "painterly Native American images",
       "Native American art prints",
-      "Western Native American gallery",
-      "spirit of the American West",
-      "fine art Western photography",
-      "historical Native American portrait",
-      "ceremonial regalia",
-      "archival Western portrait",
+      "Native American fine art photography",
+      "Native American photography",
+      "Native American portraits",
+      "Indigenous experience",
+      "Native American heritage art",
+      "Native American tradition",
+      "spirit of the West",
+      "painterly Native American images"
     ],
+
     "story": "He stands against the dust of ages, regalia shifting in the wind, gaze fixed on the line where memory meets horizon. The old stories, their legacy, alive in every feather and every wrinkle—each one earned, each one carried forward. The journey forward is written by those who remember.",
-    "notes": "This portrait exemplifies Western art tradition, from its respectful composition to its painterly finish. Heim’s use of archival backgrounds and soft, directional light draws attention to the subject’s gaze and ceremonial attire, echoing the timeless style of classic Western photography. A must-have for collectors of Native American portraiture, fine art, and historical Western imagery.",
+    "notes": "Time becomes the quiet subject here, carried through expression, posture, and surface detail rather than action. The seated position introduces a grounded stillness, while the outward gaze extends the image beyond the frame. Light and atmosphere soften the scene without removing its clarity, allowing age, experience, and presence to emerge gradually. It is a work that invites longer viewing, where meaning accumulates rather than declares itself.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    contentSource: "ai"
   },
   {
     "id": "i-WMs24Db",
     "title": "Watching Them Leave",
-    "description": "A cinematic, painterly fine art photograph capturing a quiet moment along a river crossing, where a Native American figure remains on the bank as others pass into the water beyond. The composition emphasizes restraint, lived experience, and narrative depth without spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as archival Western wall art for collectors of fine art photography.",
-    "alt": "Native American figure standing along a riverbank watching riders cross the water, painterly Western fine art photography.",
+    "description": "A young figure stands at the river’s edge, turned slightly as riders move through the water beyond her. Grass and shoreline frame the foreground while the background softens into distance, keeping focus on her stillness against the motion behind. The spacing between figures and water creates a quiet sense of pause and separation, held within a Native American photography scene. \n\n© Wayne Heim",
+    "alt": "Young girl in traditional clothing standing by a riverbank watching riders cross the water in the distance.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K9NHz9qg7FDtJjZghppvPx9gLcLV28DGk4FTnWwHw/XL/_HF27665-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K9NHz9qg7FDtJjZghppvPx9gLcLV28DGk4FTnWwHw/XL/_HF27665-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K9NHz9qg7FDtJjZghppvPx9gLcLV28DGk4FTnWwHw/XL/_HF27665-Edit-XL.jpg",
@@ -594,6 +638,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K98ZRzXVwqB6JRbQQgFJX8NMKNG9przLQ3G7cXjCb/S/_HF27665-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/A",
+
     "keywords": [
       "Native American photography",
       "Native American portraits",
@@ -605,20 +650,22 @@ export const galleryData = [
       "painterly Native American images",
       "Western fine art photography",
       "historical Western imagery",
-      "Native American wall art",
+      "Native American wall art"
     ],
+
     "story": "They step into the water without looking back.  \nHooves disturb the surface, then settle. The river takes them piece by piece.\n\nI stay where the ground is still certain.  \nSomeone has to remember how this moment looked before it moved on.",
     "notes": "This piece draws power from what is withheld rather than shown. The decision to anchor one figure in stillness while others move forward introduces quiet tension and emotional gravity. Painterly softness and layered depth echo pictorialist traditions, allowing memory and absence to carry as much weight as action. The image rewards slow viewing, offering a contemplative counterpoint to more overt Western narratives.",
-    "rating": 0,
+    "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 16
+    "sortOrder": 16,
+    contentSource: "ai"
   },
   {
     "id": "i-phBP9Mt",
     "title": "Held by Those Before",
-    "description": "Held by Those Before* is a painterly work of Native American fine art photography centered on generational continuity rather than nostalgia. This photograph reflects Indigenous experience and Native American tradition as lived inheritance, expressing the spirit of the West. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "Painterly Native American portrait expressing generational continuity, Indigenous experience, and the spirit of the American West",
+    "description": "A seated woman works quietly while a child stands just behind her, positioned slightly higher as if already stepping into what comes next. Their placement creates a natural line of inheritance, where action and observation exist at the same time. The restrained tones and soft falloff hold the moment in stillness, grounding it within painterly Native American portraits. \n\n© Wayne Heim",
+    "alt": "Woman seated working with tools while a child stands behind her in traditional clothing, arranged in a layered generational portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-phBP9Mt/1/NfmkmsfqLDL4DJnL9xqfCvQKGT7srGvsHrcTTLmf9/XL/_HF28699-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-phBP9Mt/1/NfmkmsfqLDL4DJnL9xqfCvQKGT7srGvsHrcTTLmf9/XL/_HF28699-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-phBP9Mt/1/NfmkmsfqLDL4DJnL9xqfCvQKGT7srGvsHrcTTLmf9/XL/_HF28699-Edit-Edit-XL.jpg",
@@ -626,6 +673,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-phBP9Mt/1/LDVBGSQxkRfxsSrr4jGLzhcnhpB8p8dbKSWG2x3cH/S/_HF28699-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-phBP9Mt/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -639,20 +687,22 @@ export const galleryData = [
       "spirit of the West",
       "spirit of the American West",
       "Western Native American gallery",
-      "heritage and tradition in art",
+      "heritage and tradition in art"
     ],
+
     "story": "Nothing is being taught out loud.\n\nWhat matters has already been placed.\nIt waits to be noticed.\n\nThe weight comes later.\nFor now, it simply rests.",
-    "notes": "This image draws from pictorial traditions that favor implication over explanation, allowing meaning to surface through proximity and posture rather than instruction. The arrangement of figures establishes lineage without hierarchy, emphasizing continuity instead of contrast.\n\nMuted tones and controlled detail resist sentimentality, keeping the moment grounded and credible. The work invites sustained viewing, where the viewer senses responsibility passing quietly from one generation to the next—unmarked, but unmistakable.",
+    "notes": "The arrangement of figures establishes lineage without hierarchy, emphasizing continuity instead of contrast.\n\nMuted tones and controlled detail resist sentimentality, keeping the moment grounded and credible. The work invites sustained viewing, where the viewer senses responsibility passing quietly from one generation to the next—unmarked, but unmistakable.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 17
+    "sortOrder": 17,
+    contentSource: "ai"
   },
   {
     "id": "i-Ns73cwK",
     "title": "Keeper of the Flame",
-    "description": "A painterly Western art portrait titled “Keeper of the Flame,” featuring a Native American elder adorned in ceremonial headdress with striking red ribbons and beadwork. The composition emphasizes restraint, lived experience, and narrative depth without spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Native American elder in a feathered headdress with red ribbons, warm painterly tones, Western art portrait symbolizing tradition and historical atmosphere",
+    "description": "Two figures sit back to back on a large rock beside the water, one in a feathered headdress and the other turned toward the open landscape. Their bodies remain close while their attention moves in opposite directions, holding the moment in quiet stillness within a Native American fine art photography scene. \n\n© Wayne Heim",
+    "alt": "Back-to-back figures in traditional clothing sitting on a rock near a river, one wearing a feathered headdress and facing away toward the landscape.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Ns73cwK/0/M9Jk3CqFS4v8jWbvKbzBrcXdZWjH89ScXtg4TF67Q/XL/_WHO4968-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Ns73cwK/0/M9Jk3CqFS4v8jWbvKbzBrcXdZWjH89ScXtg4TF67Q/XL/_WHO4968-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Ns73cwK/3/M4fcPPX58ZrCnt6Q4bzNSZQ3rzq8CQTxbWgM3KXHd/L/_WHO5639-Edit-L.jpg",
@@ -660,35 +710,32 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Ns73cwK/3/LtMhKXKswfpb3DJbgjSJ4MqR3mPpt3zdV6J8GM2Nd/S/_WHO5639-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Ns73cwK/A",
+
     "keywords": [
-      "western art",
-      "western photography",
-      "fine art",
-      "native american",
-      "elder",
-      "portrait",
-      "headdress",
-      "feather",
-      "red ribbon",
-      "flame",
-      "tradition",
-      "resilience",
-      "beadwork",
-      "honor",
-      "legacy",
+      "Native American fine art photography",
+      "Native American portraits",
+      "Native American photography",
+      "Indigenous experience",
+      "Native American tradition",
+      "spirit of the West",
+      "painterly Native American portraits",
+      "Western Native American gallery",
+      "Native American wall art"
     ],
+
     "story": "Burning embers… whispering stories of the people before us. Ghosts flicker—reflecting their tales in every bead and feather—pride, honor, lessons forged inside tradition. Generations gather to kindle flames, passing memory, love, and lessons. Their story comes alive. Their fire burns. Through us, the keepers of their flame.",
-    "notes": "“Keeper of the Flame” uses classic portraiture—three-quarter pose, warm tonal palette, and painterly background—to draw the eye to the subject’s dignified face and elaborate regalia. Notice how the rich reds and earth tones echo the symbolic fire of tradition, while the textured details—fur, beadwork, feathers—reward a closer look. The soft, glowing backdrop gives the piece a timeless, almost mythic aura, referencing both Western art and the atmospheric style of painters like Rembrandt and Wyeth. More than a likeness, it’s a study in narrative, technique, and enduring spirit.",
+    "notes": "Connection here is carried through proximity rather than interaction, allowing the relationship to exist without overt gesture. The figures share space but not direction, creating a subtle tension that invites longer viewing.\n\nThe image leans into quiet continuity—suggesting lineage and shared presence—while avoiding sentimentality. It reflects a painterly approach where stillness and separation carry equal weight.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    contentSource: "ai"
   },
   {
     "id": "i-h679dhn",
     "title": "Carried Without Words",
-    "description": "A painterly fine art photograph capturing a quiet moment of Native American tradition, where ritual is expressed through action rather than display. Set along the water’s edge, this image reflects Indigenous experience, Native American heritage art, and the enduring spirit of the West. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Native American woman kneeling at the water performing a quiet traditional act in a painterly fine art photograph",
+    "description": "A woman kneels at the water’s edge, tilting a container as it fills while her hands steady it against the current. Another figure stands just behind her, partially out of focus, adding depth to the scene without drawing attention away. The shoreline, water, and figures come together in a quiet moment within a Native American fine art photography setting. \n\n© Wayne Heim",
+    "alt": "Native American woman kneeling at the water performing a quiet traditional act in a painterly fine art photograph.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/KVTLxxQwM7HdcwgDV8Kvv3xnn6QNzvfsCT3T5Spwq/XL/_WHO0338-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/0/KVTLxxQwM7HdcwgDV8Kvv3xnn6QNzvfsCT3T5Spwq/XL/_WHO0338-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/3/NLRqF6bz66jjxbMtDChwqPqjpRbScmq5BztBtR8jD/XL/_WHO0618-Edit-XL.jpg",
@@ -696,6 +743,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/3/K3HTWCKcTZPVc94wzJJbr5LJpCkvnHWZtDFrB5jh3/S/_WHO0618-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-h679dhn/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -705,20 +753,22 @@ export const galleryData = [
       "Indigenous experience",
       "Native American heritage art",
       "Native American tradition",
-      "spirit of the West",
+      "spirit of the West"
     ],
+
     "story": "She kneels where the water slows,  \nwhere the surface listens.\n\nNothing is spoken.  \nWhat matters has already been learned by the hands.\n\nThe river takes it without comment,  \nand keeps moving.",
-    "notes": "This piece draws its strength from restraint. The composition favors stillness over drama, allowing gesture and posture to carry meaning without explanation. The softened tonal range and painterly surface echo pictorialist traditions while maintaining a contemporary sensitivity to presence and dignity. The image functions less as a depiction of ritual and more as an acknowledgment of continuity — an unbroken line of knowledge carried through everyday acts. It rewards slow looking, revealing its depth through quiet attention rather than narrative instruction.",
+    "notes": "The softened tonal range and painterly surface echo pictorialist traditions while maintaining a contemporary sensitivity to presence and dignity. The image functions less as a depiction of ritual and more as an acknowledgment of continuity — an unbroken line of knowledge carried through everyday acts. It rewards slow looking, revealing its depth through quiet attention rather than narrative instruction.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 19
+    "sortOrder": 19,
+    contentSource: "ai"
   },
   {
     "id": "i-QJXw3Sj",
     "title": "Red Stripe",
-    "description": "A painterly Western art portrait titled “Red Stripe,” featuring a Native American woman wrapped in a signature red-striped blanket, her gaze calm against the wind. The composition emphasizes restraint, lived experience, and narrative depth without spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "The wind finds every weakness but never breaks me. Blanket wrapped tight, I wait and watch, trusting in warmth and memory to outlast distant horizon.",
+    "description": "A young figure walks through tall grass, head slightly lowered, hands holding a small object at waist level. Two others follow behind at a distance, softened by depth and atmosphere, their presence felt more than defined. The open field and muted light keep the focus on the forward movement through the landscape. \n\n© Wayne Heim",
+    "alt": "Young Native American boy walking through tall grass with two figures behind him, one wearing traditional attire and another in red clothing.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/LZmHGfQv8tMgnvDzDvX2wxMcNzL5NLsCRBd3Dgp94/XL/_WHO2514-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/LZmHGfQv8tMgnvDzDvX2wxMcNzL5NLsCRBd3Dgp94/XL/_WHO2514-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/MSFS8gTP8SMCZtqsvkF8fRPzdqhF4m8Hkr3qvcZWC/L/_WHO4466-Edit-L.jpg",
@@ -726,35 +776,32 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-QJXw3Sj/0/M8GRnMdzZPwLtwFrnj7jvQRjhL7cLrCNWdtR3h74k/S/_WHO4466-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-QJXw3Sj/A",
+
     "keywords": [
-      "western art",
-      "western photography",
-      "fine art",
-      "native american",
-      "woman",
-      "portrait",
-      "blanket",
-      "red stripe",
-      "resilience",
-      "strength",
-      "painterly",
-      "beauty",
-      "wind",
-      "hope",
-      "memory",
+      "Native American fine art photography",
+      "Native American portraits",
+      "Native American photography",
+      "Indigenous experience",
+      "Native American tradition",
+      "spirit of the West",
+      "painterly Native American portraits",
+      "Western Native American gallery",
+      "Native American wall art"
     ],
+
     "story": "Red stripe—tradition, shield, warrior blood. Wind claws, storm presses close. Hold steady. Quiet strength—resilient, defiant, forged from our enduring spirit. Blanket tightens, eyes search for resolution. Protection. Inside, I carry and protect hope. Will is tested, but red remains—vivid as courage, silent as resolve.",
-    "notes": "“Red Stripe” pays homage to the enduring spirit found in Western art and historical portraiture. The blanket’s bold color anchors the composition, symbolizing both tradition and protection. Subtle windblown details and painterly texture evoke a story of quiet strength—a portrait that captures the resilience and hope that define life on the frontier.",
+    "notes": "Movement carries the structure of this piece, with the lead figure grounded in the present while the others remain slightly removed in space and clarity. This separation creates a natural sense of progression without forcing narrative.\n\nThe image balances individuality and continuity, allowing the viewer to read both a singular moment and a broader sense of passage through time. The restraint in gesture and expression keeps the focus on presence rather than performance.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 20
+    "sortOrder": 20,
+    contentSource: "ai"
   },
   {
     "id": "i-WXNSQzk",
     "title": "Taken by the Hand",
-    "description": "Taken by the Hand* is a painterly work of Native American fine art photography centered on guidance rather than destination. The scene unfolds through restrained light and softened transitions, allowing relationship and motion to carry the narrative weight. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "Painterly Native American scene of a child guided by an elder, expressing Indigenous experience, tradition, and the spirit of the American",
+    "description": "A child walks beside an adult, their hands joined as they move forward together. The child looks outward while the adult’s attention stays ahead, guiding the direction without breaking stride. A third figure enters from the opposite side, partially visible, adding to the sense of movement through the space. \n\n© Wayne Heim",
+    "alt": "Child holding an adult’s hand while walking past another figure, depicting a moment of guidance in Native American photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MWbpQRmQw7DXf6KMrVCnBhXNcv4b2gN6V5ws6TWQj/XL/_WHO0135-Edit-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MWbpQRmQw7DXf6KMrVCnBhXNcv4b2gN6V5ws6TWQj/XL/_WHO0135-Edit-3-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/LWZFKnGKskLR6gXgN5kHHt4JTKXp64BWghV3pHtdL/XL/_WHO0204-Edit-XL.jpg",
@@ -762,6 +809,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MDsr8cx8d75VzppjZpjdmMsWfRChNnHvrPjhhz7Nr/S/_WHO0204-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-WXNSQzk/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -775,20 +823,22 @@ export const galleryData = [
       "spirit of the West",
       "spirit of the American West",
       "Western Native American gallery",
-      "heritage and tradition in art",
+      "heritage and tradition in art"
     ],
+
     "story": "She doesn’t know where they’re going.\nOnly that the grip doesn’t loosen.\n\nThe ground changes. Light shifts.\nWhat matters stays close.\n\nSome lessons arrive before words.\nThey are learned by walking.",
-    "notes": "This image draws from pictorial traditions that privilege relationship over event and guidance over declaration. The figures are arranged to emphasize connection and transition, with negative space allowing movement to register as meaning rather than action.\n\nMuted tones and softened edges resist sentimentality, situating the work within a lineage of Western and Indigenous art that values continuity, instruction, and lived inheritance. The photograph rewards sustained viewing, revealing its depth through posture, spacing, and the quiet authority of shared direction.",
+    "notes": "The figures are arranged to emphasize connection and transition, with negative space allowing movement to register as meaning rather than action.\n\nMuted tones and softened edges resist sentimentality, situating the work within a lineage of Western and Indigenous art that values continuity, instruction, and lived inheritance. The photograph rewards sustained viewing, revealing its depth through posture, spacing, and the quiet authority of shared direction.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 21
+    "sortOrder": 21,
+    contentSource: "ai"
   },
   {
     "id": "i-tMGHpqv",
     "title": "The Long Way Through",
-    "description": "A painterly fine art photograph capturing a quiet moment of movement and distance within Native American tradition. This image reflects Indigenous experience and Native American heritage art through restraint rather than spectacle, emphasizing continuity, presence, and the spirit of the American West. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as archival Western wall art for collectors of fine art photography.",
-    "alt": "Painterly Native American fine art photography showing riders moving through the American West",
+    "description": "A rider moves through tall grass on horseback, looking off to the side while another follows behind at a measured distance. The path narrows through the landscape, guiding both figures forward without bringing them together. The movement feels steady and unhurried as they continue across the open ground. \n\n© Wayne Heim",
+    "alt": "Young Native American woman riding a horse through tall grass with another rider following behind.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tMGHpqv/0/Lgh3c2fT7gntBP7XSmQhkwtnJTvShjm5hfV3gGPjT/XL/_HF21068-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tMGHpqv/0/Lgh3c2fT7gntBP7XSmQhkwtnJTvShjm5hfV3gGPjT/XL/_HF21068-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tMGHpqv/0/NWPrW8rvbdThWVCHqLWtknRnNDsGbtC8VSXvKcLh7/L/_HF21068-Edit-L.jpg",
@@ -796,6 +846,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tMGHpqv/0/LLzQ7tPtSnf9rBWbVdg9dwN8HdQ3r77PnFrGcNDrW/S/_HF21068-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tMGHpqv/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -805,22 +856,26 @@ export const galleryData = [
       "Native American heritage art",
       "Native American tradition",
       "spirit of the West",
-      "Western Native American gallery",
+      "Western Native American gallery"
     ],
+
     "story": "They didn’t choose the open ground.\nThey chose the path that bends, the one that asks more time and gives fewer answers.\n\nShe rides first, eyes forward, carrying whatever decision was made before the others spoke.\nBehind her, the space stays deliberate.\nClose enough to follow. Far enough to remain separate.\n\nNothing feels unfinished.\nOnly longer than expected.",
     "notes": "This work relies on spacing and restraint to carry its narrative weight. The separation between figures functions as compositional tension, echoing traditions found in pictorialist photography and early Western portraiture where implication mattered more than action. Soft tonal transitions and controlled contrast slow the eye, encouraging prolonged viewing rather than immediate resolution. The image belongs to a lineage of Western art that values quiet authority, continuity, and psychological presence over dramatization.",
-    "rating": 0,
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 22
+    "sortOrder": 22,
+    contentSource: "ai"
   },
   {
     "id": "i-zZJbbHG",
     "title": "Wrapped in What Remains",
-    "description": "A painterly Native American portrait rooted in stillness and restraint, this fine art photograph reflects Indigenous experience, Native American tradition, and the quiet strength carried through generations. Rendered in a soft, pictorial style, the image emphasizes dignity over spectacle, honoring continuity, memory, and presence. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Painterly Native American portrait expressing Indigenous experience and quiet strength",
+    "description": "Wrapped in a red blanket, she stands in the open field with her hands drawn inward, holding the fabric close against her chest. Her gaze drops slightly as the surrounding grass and hillside fall away into soft focus behind her. The quiet posture centers the moment within a Native American portrait. \n\n© Wayne Heim",
+    "alt": "Woman standing in a field wrapped in a blanket, looking downward while holding it close.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/LWZFKnGKskLR6gXgN5kHHt4JTKXp64BWghV3pHtdL/XL/_WHO0204-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/LWZFKnGKskLR6gXgN5kHHt4JTKXp64BWghV3pHtdL/XL/_WHO0204-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/Nfn8LSBhxL2z5R9gMBF2gJ8NF8JbxzmPGFgV5mBMS/L/_WHO0338-Edit-L.jpg",
@@ -828,6 +883,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/MD7RbqMBSTV2FNNpVxDdTSKwm5wFHggmwx35RpvFn/S/_WHO0338-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zZJbbHG/A",
+
     "keywords": [
       "Native American art prints",
       "Native American photography",
@@ -836,20 +892,22 @@ export const galleryData = [
       "Indigenous experience",
       "Native American heritage art",
       "Native American tradition",
-      "spirit of the West",
+      "spirit of the West"
     ],
+
     "story": "She stands still, not waiting—listening.  \nTo the weight of cloth, to the quiet between breaths, to the things that stay after words are gone.\n\nThe wind lifts the edge of her garment but doesn’t take it.  \nSome things are meant to be held, not followed.\n\nWhatever comes next will arrive on its own time.  \nFor now, she remains—gathered, present, unyielding.",
-    "notes": "This work draws its power from restraint—using minimal gesture, softened edges, and subdued color to create emotional gravity without narrative closure. The composition favors inward tension over outward action, inviting prolonged viewing and personal interpretation. Its painterly surface and quiet authority place it within a lineage of fine art portraiture that values presence, memory, and endurance over momentary drama.",
+    "notes": "Stillness carries the weight here, with the figure held in a contained, inward gesture rather than outward action. The act of drawing the blanket close becomes the central anchor, allowing presence to take precedence over narrative.\n\nThe image avoids overt symbolism, instead relying on posture and restraint to hold attention. Its strength comes from what is withheld—inviting the viewer to sit with the quiet rather than resolve it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    contentSource: "ai"
   },
   {
     "id": "i-FTCst2K",
     "title": "Wrapped in Memory",
-    "description": "A painterly Native American portrait rooted in quiet strength and continuity. This fine art photograph reflects Indigenous experience through restraint rather than spectacle, honoring Native American tradition, heritage, and presence. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as archival Western wall art for collectors of fine art photography.",
-    "alt": "Painterly Native American portrait reflecting Indigenous heritage and quiet strength.",
+    "description": "Wrapped in a striped blanket, she faces forward with her hands gathered at the front, holding the fabric close. Her expression remains steady as the background softens into an open, muted landscape. The moment is held in place within a Native American portrait. \n\n© Wayne Heim",
+    "alt": "Woman wrapped in a striped blanket looking forward, feather in her hair, set against a softly blurred landscape.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/K8wPVfPrjCMmPBCnWCJGw7GzwKFTQwqcN75Jwbdcs/XL/_WHO2202-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/K8wPVfPrjCMmPBCnWCJGw7GzwKFTQwqcN75Jwbdcs/XL/_WHO2202-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/LT2hvQ7dcQJWg5zdS4w35KHgFDwSqZz27GDpBPmmF/XL/_WHO2281-Edit-Edit-XL.jpg",
@@ -857,8 +915,8 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/Lnf45sHGDnFwMJRP4R6v4Gf5GdcC3HXBbtXq5rZLR/S/_WHO2281-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-FTCst2K/A",
+
     "keywords": [
-      "a",
       "fine art",
       "photography",
       "archival",
@@ -871,19 +929,22 @@ export const galleryData = [
       "Native American photography",
       "spirit of the West",
       "painterly Native American images",
+      "Native American fine art photography"
     ],
+
     "story": "The weight is familiar.  \nNot heavy—just known.\n\nWhat she carries was given before it was chosen.  \nWorn soft by hands that learned patience long before her own.\n\nShe stands still, not waiting—  \nalready holding what matters.",
-    "notes": "This work draws its power from restraint—allowing posture, expression, and texture to carry meaning without narrative instruction. The painterly treatment softens edges while preserving presence, aligning with pictorialist traditions and the lineage of portraiture that values dignity over display. It is a piece about continuity: what is inherited, protected, and quietly carried forward.",
+    "notes": "What holds attention here is the balance between direct presence and restraint. The figure meets the viewer without overt gesture, allowing expression and posture to carry the weight of the image.\n\nThe surface softening and subdued environment keep focus on the face and the act of holding the blanket, reinforcing a sense of continuity without relying on narrative cues. The result is a piece that remains grounded while inviting extended viewing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 24
+    "sortOrder": 24,
+    contentSource: "ai"
   },
   {
     "id": "i-cNbW8wV",
     "title": "Held by the Land",
-    "description": "A painterly Native American fine art photograph portraying quiet strength, continuity, and presence. This image reflects Native American photography grounded in heritage, tradition, and the spirit of the West. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Painterly Native American woman walking through the landscape in fine art photography.",
+    "description": "Moving across the open ground, she walks with a staff in hand, her gaze turned slightly to the side as the landscape stretches out behind her. The terrain remains soft and muted, keeping attention on her steady pace within a painterly Native American photography scene. \n\n© Wayne Heim",
+    "alt": "Woman walking through a rugged landscape holding a wooden staff, dressed in traditional clothing.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/0/LfbKQpX3tSXNRNz9jsjJsdxGFzGdktCLRvGHJcvsC/XL/_WHO3531-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/0/LfbKQpX3tSXNRNz9jsjJsdxGFzGdktCLRvGHJcvsC/XL/_WHO3531-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/1/NB485BPKHD5dS3QZN6xmQGznJwwXW65dgfRPcFPLN/XL/_HF29691-Edit-XL.jpg",
@@ -891,6 +952,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/1/LB7pS5DFVjPVdt3jXWMGnX8SCDTC5m7nZkQW5N6qj/S/_HF29691-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-cNbW8wV/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -899,20 +961,22 @@ export const galleryData = [
       "Indigenous experience",
       "spirit of the West",
       "Native American tradition",
-      "Native American heritage art",
+      "Native American heritage art"
     ],
+
     "story": "She does not rush.\n\nEach step answers something older than the path itself —  \na memory pressed into dust, stone, and grass.\n\nThe land carries her forward,\nand she allows it.",
-    "notes": "This work draws from the pictorialist tradition, favoring tonal restraint, softened edges, and narrative implication over literal description. The figure is positioned not as subject alone, but as part of the land itself — echoing approaches seen in early American tonalism and later Western illustrators who understood presence as story. Its strength lies in what is withheld, allowing the viewer to step into the silence and complete the moment themselves.",
+    "notes": "The figure is positioned not as subject alone, but as part of the land itself — echoing approaches seen in early American tonalism and later Western illustrators who understood presence as story. Its strength lies in what is withheld, allowing the viewer to step into the silence and complete the moment themselves.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 25
+    "sortOrder": 25,
+    contentSource: "ai"
   },
   {
     "id": "i-thpSjMG",
     "title": "Bearing the West",
-    "description": "Bearing the West* is a painterly Native American fine art photograph grounded in presence rather than performance. The figure is rendered with restrained light and softened edges, allowing posture and bearing to carry the narrative weight. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Painterly Native American portrait of a woman standing against open land, expressing dignity, tradition, and the spirit of the American West",
+    "description": "Standing against an open sky, she faces to the side with her posture upright and steady, her hands resting naturally at her sides. The dress falls straight with subtle movement at the edges, while the background fades into a soft blend of sky and land. The figure remains clearly defined within the open space. \n\n© Wayne Heim",
+    "alt": "A Native American woman standing in an open landscape looking to the side in a Native American portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/0/LcDck6RhXRKm2MvPsw7tQhbHzcTKr2Tqw4nnPdpCj/XL/_HF29518-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/0/LcDck6RhXRKm2MvPsw7tQhbHzcTKr2Tqw4nnPdpCj/XL/_HF29518-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/0/LcDck6RhXRKm2MvPsw7tQhbHzcTKr2Tqw4nnPdpCj/XL/_HF29518-Edit-XL.jpg",
@@ -920,6 +984,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/0/KNcPn7HHQvFHsmmS2pmfZBZkxrPxkpSTJvL6ppQ3D/S/_HF29518-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -933,20 +998,22 @@ export const galleryData = [
       "spirit of the West",
       "spirit of the American West",
       "Western Native American gallery",
-      "heritage and tradition in art",
+      "heritage and tradition in art"
     ],
+
     "story": "She doesn’t claim the land.\nShe answers it.\n\nWind moves first.\nThen stillness settles where her feet are set.\n\nNothing asks her to prove herself.\nStanding is enough.",
     "notes": "This image aligns with pictorial traditions that privilege posture and spatial relationship over narrative action. The upright stance and open horizon establish authority through balance rather than dominance, allowing presence to register without symbolic reinforcement.\n\nSoft tonal transitions and restrained contrast resist dramatization, situating the figure within a lineage of Western and Indigenous portraiture that values endurance, continuity, and lived identity. The work invites prolonged viewing, rewarding attention to bearing, proportion, and quiet resolve.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 26
+    "sortOrder": 26,
+    contentSource: "ai"
   },
   {
     "id": "i-vJSCrqC",
     "title": "Where the Land Widens",
-    "description": "A cinematic, painterly fine art photograph depicting Native American riders paused on a high bluff, surveying the open landscape below. This Western fine art image blends historical portraiture with expansive environmental storytelling, emphasizing presence, restraint, and quiet authority. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Native American riders on horseback standing atop a rocky bluff overlooking an open Western landscape, painterly fine art photography.",
+    "description": "At the edge of a rocky bluff, three riders sit on horseback, paused as they look out across the open land below. The cliff drops away beneath them while the sky rises wide above, holding the figures in a moment of still observation. The scene remains grounded in scale and distance as they face the landscape together. \n\n© Wayne Heim",
+    "alt": "Three riders on horseback standing on a rocky cliff overlooking a vast landscape in Native American photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/0/LXcgC4RNw9LLgGGWfvWV5hbsnwwqwDNRFS9782TGN/XL/_WHO0707-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/0/LXcgC4RNw9LLgGGWfvWV5hbsnwwqwDNRFS9782TGN/XL/_WHO0707-Edit-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/1/MnLdDbrdcqRbJb4QbNPxN6tHvX9PhCw5bXgzbdZmb/L/_WHO1062-Edit-Edit-L.jpg",
@@ -954,6 +1021,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vJSCrqC/1/LCT8ZvrM62GJLmmJp2fTbXPXfk3NVqvhHvVX5VK6G/S/_WHO1062-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-vJSCrqC/A",
+
     "keywords": [
       "Native American photography",
       "Native American portraits",
@@ -965,20 +1033,22 @@ export const galleryData = [
       "painterly Native American images",
       "Native American tradition",
       "Native American wall art",
-      "Western landscape portrait",
+      "Western landscape portrait"
     ],
+
     "story": "They stop where the ground opens up and the sky feels larger than it should.  \nNothing urgent. Nothing spoken. Just the sense that once you move past this point, the world will not narrow again.\n\nHorses breathe. Wind passes through grass older than memory.  \nThe land does not tell them where to go—but it makes clear what it will allow.",
-    "notes": "This piece draws its strength from scale and restraint rather than spectacle. The figures are intentionally held small against the land, reinforcing a relationship of continuity rather than dominance. Painterly texture and atmospheric distance echo traditions found in early Western pictorialism while maintaining a contemporary, cinematic quiet. The result is an image that invites slow looking—where land, memory, and presence widen together.",
+    "notes": "Scale does the work here, placing the figures against the expanse rather than elevating them above it. Their pause at the edge allows the land to carry equal presence, shifting the focus from action to relationship.\n\nThe grouping holds together without overlap or gesture, letting spacing define connection. This restraint keeps the image open, inviting the viewer to sit within the distance rather than resolve it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 27
+    "sortOrder": 27,
+    contentSource: "ai"
   },
   {
     "id": "i-CD6rgtF",
-    "title": "Ancestral Ground",
-    "description": "A painterly fine art photograph depicting Indigenous figures within a rugged Western landscape, defined by presence rather than spectacle. This image frames Native American experience through land and scale, emphasizing continuity, memory, and relationship to place. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Indigenous figures moving across a rocky hillside landscape, small in scale against the land, painterly fine art Western photograph",
+    "title": "Justified — or Damned “A Claustrophobic Consequence of Decisions”",
+    "description": "Three figures move through a steep rocky hillside where stone outcrops and dry grass tighten the space around them. One man sits wounded while two others close in from opposite sides, the terrain shaping the moment as much as the men themselves. The scene unfolds like a Western tableau—compressed, tense, and inevitable—captured in painterly Western photography that explores consequence, confrontation, and the fragile line between justice and survival on the frontier.\n\n© Wayne Heim",
+    "alt": "Three men confronting each other across rocky Western hillside terrain with one wounded figure seated against the stone.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/KmHXFd8MFFCLTpg7SH72LN3SwhQPWNkXvQsDGcdBN/XL/_HF25860-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/KmHXFd8MFFCLTpg7SH72LN3SwhQPWNkXvQsDGcdBN/XL/_HF25860-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/MghZ7PrSDzVhns2qKkVR2xtddsw3NCB3mxScsgwp2/L/_WHO3211-Edit-Edit-Edit-L.jpg",
@@ -986,31 +1056,52 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-CD6rgtF/0/NHkb48JKZjk6XmxRWhqxvrNgtrM8Kr9ww7vkXHHvh/S/_WHO3211-Edit-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-CD6rgtF/A",
+
     "keywords": [
-      "Native American fine art photography",
-      "Indigenous experience",
-      "Native American tradition",
-      "Western Native American gallery",
-      "painterly Native American images",
+      "western fine art photography",
+      "painterly western storytelling",
+      "three-way standoff",
+      "frontier consequence",
+      "cinematic cowboy art",
+      "moral ambiguity",
+      "American frontier",
+      "narrative western art",
+      "painterly cowboy photography",
+      "wild west photography",
+      "pictorialist tradition",
+      "western themed art",
+      "dramatic western tableau",
+      "Wayne Heim",
+      "classic western scene",
+      "painterly Western images",
+      "painterly Western photograph",
+      "fine art Western photography",
+      "cowboy artwork",
+      "cowboy portraits",
+      "fine art wood prints",
+      "Engrained Series",
+      "Engrained Prints",
+      "wood print fine art",
       "Native American art prints",
-      "spirit of the American West",
-      "fine art Western landscape photography",
-      "Indigenous heritage art",
-      "heritage and tradition in art",
-      "archival Western imagery",
+      "Native American fine art photography",
+      "painterly Native American portraits",
+      "Western Native American gallery",
+      "Native American photography"
     ],
-    "story": "The land does not ask to be claimed.\nIt remembers who stood here long before names were given to hills and valleys.\n\nMovement is slow, deliberate—measured against stone, grass, and sky.\nNothing rushes this place. Nothing ever has.\n\nWhat remains is presence.\nWhat endures is ground that knows its people.",
-    "notes": "This work places the land in equal dialogue with the figures who move through it, reversing the usual hierarchy of subject and setting. Scale and distance are used deliberately, allowing terrain, sky, and silence to carry as much meaning as human presence. The result is a quiet assertion of continuity—identity expressed not through action, but through belonging. For collectors, this piece stands as a contemplative landscape anchored in Indigenous narrative, where history is held by the ground itself.",
+
+    "story": "Among the stone and sage...\n\nfunneled by nature’s unforgiving hand—\nstone, brush, and consequence intertwine.\nContours conspire to bring upon a reckoning.\nInstinct becomes confession, and the line between justified and damned erodes into the dust carried on the winds of history.",
+    "notes": "Every slope and stone tightens the noose—nature funneling men toward consequence. The painterly textures reveal not violence, but reckoning: the moment when instinct gives way to confession. The composition’s compression—earth pressing inward—mirrors moral pressure. It recalls the tonal weight of Goya’s fatal encounters and the compositional storytelling of Remington’s late works, but reframed through Heim’s contemporary lens: where light exposes not heroism, but humanity. It’s a scene of entrapment, not conquest—the West as moral crucible, where even the righteous erode beneath the wind.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 28
+    "sortOrder": 28,
+    contentSource: "ai"
   },
   {
     "id": "i-Z7vtvZg",
     "title": "Leading the Way",
-    "description": "A painterly Western fine art photograph depicting a Native American woman guiding the way on horseback, rendered with restraint, dignity, and narrative clarity. Blending Native American photography with painterly technique, the composition emphasizes movement through landscape and cultural memory. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Native American woman leading riders on horseback through open grassland in a painterly Western fine art photograph",
+    "description": "Moving through tall grass on horseback, she rides slightly ahead while another rider follows behind at a distance. Her gaze turns to the side as the horse continues forward, the path opening through the field. The moment holds steady within a Native American photography scene. \n\n© Wayne Heim",
+    "alt": "Rider on horseback moving through tall grass with another rider following behind.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/MVPQV5ZhxNQmrT6KNTKqVXGq8vSrXL7fqCV2cJg7L/XL/_HF21068-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/MVPQV5ZhxNQmrT6KNTKqVXGq8vSrXL7fqCV2cJg7L/XL/_HF21068-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/MVPQV5ZhxNQmrT6KNTKqVXGq8vSrXL7fqCV2cJg7L/XL/_HF21068-Edit-XL.jpg",
@@ -1018,6 +1109,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/0/Lzwf9X9NZfwFWDCpcfpvSsGNkvPZwqbhcVvMrwb9h/S/_HF21068-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z7vtvZg/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -1030,20 +1122,22 @@ export const galleryData = [
       "spirit of the West",
       "spirit of the American West",
       "painterly Native American images",
-      "Native American wall art",
+      "Native American wall art"
     ],
+
     "story": "She moves first.\nNot because she must—\nbecause she knows where the ground holds.\n\nThe horse reads her weight, the land opens just enough.\nBehind her, others follow without question.\n\nSome paths are chosen.\nOthers are remembered.\nThis one is led.",
-    "notes": "This piece centers leadership as an inherited instinct rather than a declared role. The forward placement of the rider, balanced against the receding figures behind her, creates a visual hierarchy rooted in trust and continuity. Painterly texture, controlled light, and measured pacing place the subject within the land’s rhythm, recalling pictorialist traditions and classic Western composition. A strong, grounded work that speaks to guidance, lineage, and cultural persistence—well suited for collectors drawn to Indigenous narratives carried forward through Western fine art.",
+    "notes": "The forward placement of the rider, balanced against the receding figures behind her, creates a visual hierarchy rooted in trust and continuity. Painterly texture, controlled light, and measured pacing place the subject within the land’s rhythm, recalling pictorialist traditions and classic Western composition. A strong, grounded work that speaks to guidance, lineage, and cultural persistence—well suited for collectors drawn to Indigenous narratives carried forward through Western fine art.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 29
+    "sortOrder": 29,
+    contentSource: "ai"
   },
   {
     "id": "i-Cq3rbHT",
     "title": "Bearing the Morning",
-    "description": "A painterly fine art photograph honoring Native American tradition through presence, dignity, and restraint. This image reflects Indigenous experience and Native American heritage art within the spirit of the American West, rendered in a soft pictorialist style that emphasizes continuity over spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Painterly Native American fine art photography of a rider moving through the American West",
+    "description": "Set against an open sky, the rider sits upright as the horse moves forward, fringe and beadwork shifting with each step. His gaze holds off into the distance, steady and unhurried, grounded within a painterly Native American fine art photography composition. \n\n© Wayne Heim",
+    "alt": "Native American rider on horseback wearing traditional headdress and regalia against open sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/0/NLKH2sCmcgMTWjZBVZrdsKQ8fB3dV5rjLpBWw4fqF/XL/_WHO4561-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/0/NLKH2sCmcgMTWjZBVZrdsKQ8fB3dV5rjLpBWw4fqF/XL/_WHO4561-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/0/KJJdmrJmQhpwhmhx9R4td4q3dDgnGbWQNFV89bJDk/L/_WHO4561-Edit-Edit-2-L.jpg",
@@ -1051,6 +1145,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/0/KS24fNQc2tKJBpq6xzBnFQTmPft9FsmXvbmc8WLTN/S/_WHO4561-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -1060,22 +1155,26 @@ export const galleryData = [
       "Native American heritage art",
       "Native American tradition",
       "spirit of the West",
-      "Western Native American gallery",
+      "Western Native American gallery"
     ],
+
     "story": "He doesn’t ride to be seen.\nHe rides because the land still expects him to pass through it.\n\nThe horse knows the pace. The regalia settles with each step.\nNothing here is hurried. Nothing needs proving.\n\nThe day opens the same way it always has—\nby being met.",
-    "notes": "This piece relies on compositional balance and tonal restraint rather than overt drama. The centered posture, measured movement, and softened background echo pictorialist traditions that prioritize atmosphere and psychological presence. The work aligns with a lineage of Western art that values continuity, dignity, and cultural respect, allowing the subject to exist within the frame without explanation or embellishment.",
-    "rating": 0,
+    "notes": "The centered posture, measured movement, and softened background echo pictorialist traditions that prioritize atmosphere and psychological presence. The work aligns with a lineage of Western art that values continuity, dignity, and cultural respect, allowing the subject to exist within the frame without explanation or embellishment.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 30
+    "sortOrder": 30,
+    contentSource: "ai"
   },
   {
     "id": "i-zt2btJ7",
     "title": "Rooted in Breath",
-    "description": "A painterly fine art photograph honoring a Native American figure, defined by presence rather than spectacle. This image approaches Indigenous identity with restraint and historical awareness, emphasizing continuity, memory, and lived connection to the land. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Native American figure standing calmly, grounded and ceremonial, in a painterly fine art portrait",
+    "description": "Framed by a softened, atmospheric background, he stands with shoulders relaxed and gaze set outward, the textures of regalia and earth blending into a quiet, grounded presence. The composition settles into stillness within a Native American fine art photography portrait. \n\n© Wayne Heim",
+    "alt": "Man standing in traditional Native American regalia against a soft textured background.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/NB485BPKHD5dS3QZN6xmQGznJwwXW65dgfRPcFPLN/XL/_HF29691-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/NB485BPKHD5dS3QZN6xmQGznJwwXW65dgfRPcFPLN/XL/_HF29691-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/Mq279fZhKTB5LQFNJJ6rkP3J2Qv3F3fGsBSxJ6VjK/L/_HF29701-Edit-L.jpg",
@@ -1083,6 +1182,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/NGw3MB5zmmB9VbLNMwb7nfLFdfs67sm38cTWrPv2D/S/_HF29701-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zt2btJ7/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American portraits",
@@ -1094,20 +1194,22 @@ export const galleryData = [
       "Native American art prints",
       "Western Native American gallery",
       "heritage and tradition in art",
-      "fine art Western photography",
+      "fine art Western photography"
     ],
+
     "story": "He stands where the land exhales.\n\nNot performing. Not waiting.\nSimply present—breath rising and falling in time with the earth beneath his feet.\n\nNothing is announced.\nWhat matters has already been carried forward.",
-    "notes": "This work centers on presence rather than action, drawing strength from stillness and breath. The composition echoes pictorialist restraint, where texture and light quietly guide the eye instead of overt narrative cues. The figure’s grounded posture and ceremonial bearing establish a sense of continuity—identity carried forward not through display, but through endurance. For collectors, this piece offers a contemplative counterpoint to conventional Western imagery, standing as a meditation on what remains when time, noise, and urgency fall away.",
+    "notes": "This piece leans fully into stillness as structure. The figure is not positioned as spectacle, but as presence—held within a softened field that removes distraction and compresses time. The near-monochrome palette and controlled texture echo pictorialist traditions, where atmosphere carries as much weight as form.\n\nThe vertical composition reinforces dignity and continuity, allowing the posture and regalia to read clearly without exaggeration. Rather than directing the viewer, the image holds space—inviting a slower engagement where identity is felt through endurance and quiet authority rather than action.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 31
+    "sortOrder": 31,
+    contentSource: "ai"
   },
   {
     "id": "i-bvn9Rmz",
     "title": "Between Drumbeats",
-    "description": "A painterly Native American portrait centered on ceremonial stillness and controlled presence. This fine art photograph emphasizes restraint over spectacle, using muted tones, textured light, and deliberate posture to evoke vigilance, responsibility, and inherited duty. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Native American man holding a staff, standing alert in ceremonial attire with a calm, watchful expression in painterly fine art style",
+    "description": "Standing with a staff held close, he faces forward as dust softens the space around him, the background fading into light and texture. His posture remains steady, the moment contained within a Native American portrait in painterly fine art photography. \n\n© Wayne Heim",
+    "alt": "Ceremonial figure holding a staff, standing in soft dust with painted face and traditional adornment.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bvn9Rmz/0/KPdCnDcLfxdb9srr7d5TkcHMc7xXj2dbwN5wB4XsV/XL/_HF20736-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bvn9Rmz/0/KPdCnDcLfxdb9srr7d5TkcHMc7xXj2dbwN5wB4XsV/XL/_HF20736-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bvn9Rmz/0/KPdCnDcLfxdb9srr7d5TkcHMc7xXj2dbwN5wB4XsV/XL/_HF20736-Edit-XL.jpg",
@@ -1115,6 +1217,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bvn9Rmz/0/KPJxF22rCWCNkgqGVtt4SsFMZ7cdcjSd2b4wnJfhF/S/_HF20736-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bvn9Rmz/A",
+
     "keywords": [
       "Native American portrait",
       "Native American photography",
@@ -1125,20 +1228,22 @@ export const galleryData = [
       "painterly Native American images",
       "fine art photography",
       "western art",
-      "archival style portrait",
+      "archival style portrait"
     ],
+
     "story": "The sound has already passed.  \nThe next one hasn’t arrived yet.\n\nIn that narrow space, he waits.  \nNot frozen—listening.  \nThe moment decides when it’s time to move.",
     "notes": "This portrait is built around the pause rather than the action. The composition draws its strength from balance, posture, and negative space, allowing cultural weight to emerge without explanation. Painterly texture and subdued contrast reinforce a sense of readiness and responsibility, creating an image that holds tension quietly and rewards prolonged viewing.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 32
+    "sortOrder": 32,
+    contentSource: "ai"
   },
   {
     "id": "i-sDZFJ6t",
     "title": "Unspoken",
-    "description": "A painterly Native American portrait rendered with restraint and quiet emotional gravity. This fine art photograph emphasizes presence over performance, using soft light, textured tones, and cinematic stillness to evoke memory, continuity, and identity. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Native American woman wrapped in a blanket, gazing forward with a calm, introspective expression in painterly fine art portrait style",
+    "description": "Her face holds steady as the blanket gathers close, the wind catching loose strands of hair while the background dissolves into a muted field. The image settles into a quiet moment within painterly Native American portrait photography. \n\n© Wayne Heim",
+    "alt": "Close-up portrait of a woman wrapped in a blanket with windblown hair against a soft textured background.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/M3d9mnw38Tn6p4P4MWdv5JKVN9DpJCgHJdfRRb2cM/XL/_WHO2415-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/M3d9mnw38Tn6p4P4MWdv5JKVN9DpJCgHJdfRRb2cM/XL/_WHO2415-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/LNRs3sPRDZW8r3v7P5vqNtzD88QWSbbJGwkvvsSJC/L/_WHO2514-Edit-2-L.jpg",
@@ -1146,6 +1251,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sDZFJ6t/0/L7w7SVFh3Nb7w3BMjxG9r5WJ8f2qfPZScJN6x7gBW/S/_WHO2514-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sDZFJ6t/A",
+
     "keywords": [
       "fine art photography",
       "Native American portrait",
@@ -1156,20 +1262,22 @@ export const galleryData = [
       "spirit of the West",
       "painterly Native American images",
       "western art",
-      "archival style portrait",
+      "archival style portrait"
     ],
+
     "story": "The words stay where they are.  \nNot hidden—just unoffered.  \nWind lifts the edge of the blanket, then lets it fall again.\n\nShe looks past the moment, not away from it.  \nWhat matters doesn’t need shaping into sound.  \nIt has already been carried long enough.",
-    "notes": "This work is built on restraint. The composition avoids overt symbolism, allowing expression, texture, and light to carry the emotional weight. Soft focus and tonal layering echo pictorialist traditions while maintaining a contemporary psychological presence. The result is an intimate portrait that rewards sustained viewing—quiet, dignified, and resolutely human.",
+    "notes": "This piece draws its strength from proximity and restraint. The close framing removes context, allowing expression, texture, and atmosphere to carry the weight of the image. The blanket becomes both form and boundary—guiding the eye while reinforcing a sense of interior space.\n\nSoft tonal transitions and controlled focus echo pictorialist influence, where mood is constructed through surface and light rather than narrative cues. The result is an intimate, contemplative work that invites sustained viewing, revealing nuance through stillness rather than overt gesture.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 33
+    "sortOrder": 33,
+    contentSource: "ai"
   },
   {
     "id": "i-whbHxkn",
     "title": "Done the Right Way",
-    "description": "A painterly Native American portrait rooted in heritage and tradition rather than performance. This fine art photograph reflects Native American photography shaped by restraint, continuity, and lived Indigenous experience. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly Native American portrait reflecting heritage and tradition",
+    "description": "She stands at the edge of the water where time seems to slow, her posture shaped by something older than the moment itself. There is no performance here—only continuity, carried forward through gesture and stillness. This painterly Native American fine art photography piece reflects heritage and tradition not as history, but as something still lived and quietly honored. \n\n© Wayne Heim",
+    "alt": "Woman in traditional dress holding feathers beside water, a painterly Native American portrait rooted in heritage and tradition.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-whbHxkn/1/Ngq9k9qWTmPB5vQwcC5vt36pHjB4DhL9XL3JmvCgc/XL/_WHO2615-1181-1182-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-whbHxkn/1/Ngq9k9qWTmPB5vQwcC5vt36pHjB4DhL9XL3JmvCgc/XL/_WHO2615-1181-1182-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-whbHxkn/1/Ngq9k9qWTmPB5vQwcC5vt36pHjB4DhL9XL3JmvCgc/XL/_WHO2615-1181-1182-XL.jpg",
@@ -1177,30 +1285,35 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-whbHxkn/1/MLmmgv6Z3gft9h4T9J2QsfTRNKmfM9fMFTdSJsGtG/S/_WHO2615-1181-1182-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-whbHxkn/A",
+
     "keywords": [
       "Native American art prints",
+      "Native American fine art photography",
       "Native American photography",
-      "Native American Portraits",
+      "Native American portraits",
       "painterly Native American portraits",
       "spirit of the West",
+      "Western Native American gallery",
       "heritage and tradition in art",
       "Indigenous experience",
       "Native American heritage art",
       "Native American tradition",
-      "Native American wall art",
+      "Native American wall art"
     ],
+
     "story": "She moves without hurry, because there is no reason to rush what has already lasted this long.\n\nThe water waits. The moment waits.\nEverything that matters has been done this way before.\n\nWhatever comes next is not hers to decide—only to carry forward without changing it.",
-    "notes": "This work reflects a lineage of pictorial restraint found in early American ethnographic photography and later refined by painters who understood that dignity is revealed through posture, timing, and silence. Compositionally reduced and tonally restrained, the image avoids spectacle in favor of continuity—placing the subject within an unbroken rhythm of practice and responsibility. It rewards prolonged viewing, where meaning accumulates slowly, not instantly.",
+    "notes": "There is a quiet discipline at work in this image, where meaning is carried through stillness rather than gesture. The composition favors profile and restraint, allowing posture and silhouette to speak without interruption, while the softened environment removes anything that might compete with that presence. It draws from a lineage of pictorial sensitivity—where dignity is revealed gradually, not announced. What holds the piece together is its sense of continuity: a moment that feels less observed than inherited, shaped by repetition, care, and time.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 34
+    "sortOrder": 34,
+    contentSource: "ai"
   },
   {
     "id": "i-FkPcsBV",
     "title": "Point the Way",
-    "description": "A painterly Western fine art photograph capturing a moment of direction and decision on the frontier. This image blends cinematic cowboy art with Native American presence, emphasizing gesture, restraint, and shared awareness. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Painterly Western fine art photograph of a cowboy and Native American rider pointing the way on horseback",
+    "description": "Direction is decided in a single gesture, long before words ever follow. The raised arm cuts through the moment with quiet authority, while the rider holds steady between movement and restraint. This painterly Western fine art photography piece captures a shared awareness between figures, where the path forward is understood rather than spoken—rooted in spirit of the West and lived frontier experience. \n\n© Wayne Heim",
+    "alt": "Cowboy on horseback aiming a rifle while Native American woman points forward, a painterly Western fine art photography scene of direction and movement.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/0/L7sDxLDkxRkJxNd8zncGt5stsSbZxm8fbqFcNRj4g/XL/_HF20929-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/0/L7sDxLDkxRkJxNd8zncGt5stsSbZxm8fbqFcNRj4g/XL/_HF20929-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/0/KzNJ7s367XKPQBZJSg9xtfPwH66SsFhPzCWnLnsWz/L/_HF20929-Edit-Edit-L.jpg",
@@ -1208,30 +1321,37 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/0/KXH4NsPxsXnpRRHMNxwwwvjJXNL74mBdRM5Wc3zXN/S/_HF20929-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
       "Native American photography",
-      "Native American Portraits",
+      "Native American portraits",
+      "painterly Native American portraits",
       "painterly Native American images",
-      "Indigenous experience",
       "spirit of the West",
+      "spirit of the American West",
       "Western Native American gallery",
       "heritage and tradition in art",
+      "Indigenous experience",
+      "Native American heritage art",
       "Native American tradition",
+      "Native American wall art"
     ],
+
     "story": "He doesn’t shout.\nHe doesn’t hurry.\n\nHe lifts his arm and the world shifts with it.\nWhat matters now isn’t where they’ve been—\nonly where this moment insists they go.\n\nThe answer is already there.\nSomeone just has to follow it.",
-    "notes": "This piece emphasizes narrative clarity through gesture rather than action. The raised arm functions as both compositional anchor and symbolic device, guiding the viewer’s eye while reinforcing the shared tension between movement and restraint. The painterly treatment softens immediacy, placing the image within the lineage of Western storytelling where meaning is implied rather than declared.",
+    "notes": "Gesture becomes the anchor in this composition, replacing action with intention. The extended arm does more than indicate direction—it establishes authority within the frame, guiding both the viewer and the second figure into alignment. The interplay between the mounted rider and the grounded figure creates a tension between motion and stillness, reinforcing a shared understanding rather than hierarchy. Painterly softness removes immediacy, placing the image within a broader lineage of Western narrative work where meaning unfolds through suggestion, not declaration.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 35
+    "sortOrder": 35,
+    contentSource: "ai"
   },
   {
     "id": "i-c3vWMgt",
     "title": "No Clean Ending",
-    "description": "A cinematic painterly Western fine art photograph capturing a moment of violent imbalance during a frontier confrontation. Rooted in historical Western photography and painterly tradition, the composition emphasizes tension, physical struggle, and moral ambiguity—where outcomes. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as archival Western wall art for collectors of fine art photography.",
-    "alt": "Cowboy struggle during a violent frontier confrontation, painterly Western fine art photography with cinematic tension",
+    "description": "The moment fractures before it resolves, bodies colliding in a struggle that refuses to settle into anything clean or final. Balance gives way to force, and force gives way to consequence, where no one fully controls what happens next. This painterly Western fine art photography scene captures the instability of conflict, where intent dissolves into reaction and the outcome lingers unresolved. \n\n© Wayne Heim",
+    "alt": "Frontier struggle between two men on rocky terrain with rifle, cinematic Western confrontation captured in painterly detail.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c3vWMgt/1/KvC6GBPW4Xq4ssXsNgpntxf8rx4DwQgJFRBcbgV6N/XL/_HF26004-1161-1162-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c3vWMgt/1/KvC6GBPW4Xq4ssXsNgpntxf8rx4DwQgJFRBcbgV6N/XL/_HF26004-1161-1162-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c3vWMgt/1/M7qTHNf5Zw7TRTH5LX7qF5nWkS25743QTwLJZntFx/L/_HF26004-1161-1162-L.jpg",
@@ -1239,6 +1359,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c3vWMgt/1/MCf5HZpjnTfG6VLpDqrsjtNBkhbgNV966FpkFwmkh/S/_HF26004-1161-1162-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c3vWMgt/A",
+
     "keywords": [
       "fine art photography",
       "western art",
@@ -1255,19 +1376,23 @@ export const galleryData = [
       "narrative western photography",
       "Native American photography",
       "Western Native American gallery",
+      "Native American fine art photography",
+      "Native American art prints"
     ],
+
     "story": "Someone thought it would end faster than this.  \nA clean pull. A clean fall. A clean line between before and after.\n\nBut nothing lands the way it’s imagined. Hands slip. Weight shifts. The ground refuses to cooperate. What began as intent turns into struggle, and struggle turns into something that can’t be taken back.\n\nThere is no clean ending—only the moment where everyone realizes it at the same time.",
-    "notes": "This work draws from the darker lineage of Western art—where conflict is unresolved and heroism is stripped of romance. The compressed composition and physical overlap of figures heighten a sense of instability, echoing the psychological tension found in late Remington studies and narrative realism rather than theatrical bravado. Painterly texture and restrained color keep the violence grounded, allowing the image to function not as spectacle, but as consequence. A compelling acquisition for collectors drawn to Western works that confront truth rather than myth.",
+    "notes": "Instability defines the structure of this image. The figures are locked in opposing forces, creating a visual tension that pulls the eye across the frame without offering resolution. The composition avoids clear hierarchy—no single figure dominates—reinforcing the idea that control has already been lost. This aligns with a darker lineage of Western art, where conflict is not heroic but consequential, echoing the psychological weight found in late narrative realism. The painterly restraint keeps the violence grounded, allowing the scene to register as lived experience rather than spectacle.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 36
+    "sortOrder": 36,
+    contentSource: "ai"
   },
   {
     "id": "i-hHVb4vC",
     "title": "Carried by the Cry",
-    "description": "Carried by the Cry is a painterly Western fine art photograph that captures motion, force, and embodied expression within Native American narrative tradition. The image depicts a moment of full release—where movement, sound, and intention converge—rendered through a painterly photographic approach. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Painterly Western fine art photograph of a Native American warrior in motion, gripping a spear and releasing a cry, conveying force, voice",
+    "description": "A Native American warrior is captured mid-motion, gripping a spear as his expression breaks into a full release of voice and force. The painterly treatment emphasizes movement through flowing hair, fabric, and gesture, creating a sense of continuous energy rather than a frozen moment. This Western fine art photography piece reflects embodied expression within Native American narrative tradition, where motion and presence carry meaning as much as the moment itself. \n\n© Wayne Heim",
+    "alt": "Warrior in motion gripping a spear and shouting, a painterly Western fine art photography scene of force and release.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/2/KJNKKMVsd8t977NpwVvFggb7LHHjP8rTKmcjG2Kf2/XL/_WHO1224-901-902-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/2/KJNKKMVsd8t977NpwVvFggb7LHHjP8rTKmcjG2Kf2/XL/_WHO1224-901-902-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-hHVb4vC/1/MFpMp8fp9hR8SZ6JMgmjmhQQkXjb6rS7T4xgJk5mw/L/_WHO5909-908-L.jpg",
@@ -1291,23 +1416,24 @@ export const galleryData = [
       "frontier life",
       "Americana photography",
       "historically themed photography",
-      "cinematic stills",
+      "cinematic stills"
     ],
 
     "story": "The sound does not rise from anger.  \nIt rises from the body remembering what it was made to do.\n\nMuscle, breath, and motion collapse into a single release—no hesitation, no performance. The cry is not aimed outward. It moves through him, carried by the ground beneath his feet and the history beneath his skin.\n\nThis is not violence. It is voice made physical.",
-    "notes": "This image occupies the opposite end of the narrative spectrum from restraint. Where stillness holds power in suspension, motion releases it.\n\nThe figure is not depicted as symbol or archetype, but as presence—caught mid-action, mid-voice, mid-truth. Painterly motion blur and textural depth reinforce the sense that the moment cannot be contained, only witnessed.\n\nCarried by the Cry stands as a statement of embodied history and agency, inviting viewers to confront power not as spectacle, but as something earned, lived, and voiced through the body itself.",
+    "notes": "This image occupies the opposite end of the narrative spectrum from restraint. Where stillness holds power in suspension, motion releases it.\n\nThe figure is not depicted as symbol or archetype, but as presence—caught mid-action, mid-voice, mid-truth. Painterly motion blur and textural depth reinforce the sense that the moment cannot be contained, only witnessed.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 37,
     autoGenerated: false,
-    autoTitle: false
+    autoTitle: false,
+    contentSource: "ai"
   },
   {
     "id": "i-Z54nXZm",
     "title": "Watching the Wind",
-    "description": "A painterly fine art photograph portraying a Native American figure in quiet communion with the land. Defined by restraint rather than spectacle, this image reflects Native American heritage art through stillness, dignity, and presence. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly Native American portrait reflecting heritage, tradition, and the spirit of the American West",
+    "description": "A Native American man stands in profile wearing a feathered headdress, partially surrounded by drifting smoke that softens the edges of the scene. His posture is steady and composed, with the environment blending into the figure through a restrained, painterly treatment. This Western fine art photography image reflects heritage and tradition through stillness, presence, and connection to the land. \n\n© Wayne Heim",
+    "alt": "Native American man in feathered headdress standing in smoke, a painterly Native American portrait with soft atmospheric detail.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z54nXZm/0/KshX8MCZFtDBzRsXCZhQcjVbNXmPJwBR3NCFbsm2K/XL/_WHO3500-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z54nXZm/0/KshX8MCZFtDBzRsXCZhQcjVbNXmPJwBR3NCFbsm2K/XL/_WHO3500-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z54nXZm/0/MknHDnrrJ4sKmLFz9C6Fn9XT3B7rkP74w3h29w3L2/L/_WHO3500-Edit-Edit-L.jpg",
@@ -1315,6 +1441,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z54nXZm/0/MLHJKb5FqzgpJbjVvdWTcgckJZ24DnctwJ8n3cXfd/S/_WHO3500-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z54nXZm/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -1324,22 +1451,26 @@ export const galleryData = [
       "Indigenous experience",
       "Native American heritage art",
       "Native American tradition",
-      "spirit of the West",
+      "spirit of the West"
     ],
+
     "story": "The land moves first.\nNot fast—just enough to be felt.\n\nHe does not follow it with his eyes.\nHe lets it pass through him,\nthe way it always has.\n\nSome things aren’t watched for change.\nThey’re watched to make sure they’re still there.",
     "notes": "This work draws from the pictorialist tradition, favoring atmosphere and tonal restraint over explicit narrative. The composition allows the subject to exist within the land rather than against it, echoing early ethnographic portraiture while rejecting its distance. The softened edges, subdued contrast, and deliberate stillness invite prolonged viewing, positioning the figure not as a momentary subject, but as a presence shaped by continuity and lived history.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 38
+    "sortOrder": 38,
+    contentSource: "ai"
   },
   {
     "id": "i-R7jg62J",
     "title": "No Turning Back",
-    "description": "A painterly Native American fine art photograph capturing a moment of physical resolve and ancestral endurance. Rooted in Native American heritage art and the spirit of the West, this work honors continuity, presence, and the weight of choice carried forward through Native. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Native American canoe crossing captured in painterly fine art photography",
+    "description": "A canoe cuts through rough water as a man drives the paddle forward with full force, his posture locked into the effort of the crossing. Spray and motion blur merge with the figure, reinforcing the intensity while maintaining a restrained, painterly treatment. This Native American fine art photography scene reflects heritage and tradition through endurance and movement within the spirit of the American West. \n\n© Wayne Heim",
+    "alt": "Man paddling a canoe through rough water, a painterly Native American fine art photography scene of motion and force.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-R7jg62J/1/KX82PKddWtQrBNh36Djm29TbWc2QdJ5JSd4sqL7Wd/XL/_WHO6355-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-R7jg62J/1/KX82PKddWtQrBNh36Djm29TbWc2QdJ5JSd4sqL7Wd/XL/_WHO6355-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-R7jg62J/1/MjQ4FxQdrbZWnpFC97CSBBX7LjR9r9g5q42xBxnZ9/L/_WHO6355-Edit-L.jpg",
@@ -1347,6 +1478,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-R7jg62J/1/Lqw8LnszmDKcRJdcPStWKDVhMzbMxnSZT6cV8HNqK/S/_WHO6355-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-R7jg62J/A",
+
     "keywords": [
       "fine art photography",
       "Native American fine art photography",
@@ -1358,20 +1490,22 @@ export const galleryData = [
       "Native American heritage art",
       "Native American tradition",
       "spirit of the West",
-      "painterly Native American images",
+      "painterly Native American images"
     ],
+
     "story": "The river does not ask.\n\nIt pulls, it presses, it decides how much strength will be required.\nThere is no pause left in the body—only motion, only commitment.\n\nWhatever waits on the far bank will be earned.\nWhatever is lost has already been released.",
     "notes": "This piece draws its power from tension rather than drama—motion held inside restraint. The composition places the viewer within the struggle, not as witness to conflict, but as participant in effort. The painterly surface softens the scene just enough to let gesture and posture carry meaning, echoing the tradition of narrative Western art while resisting romantic excess. The result is an image that feels earned, grounded, and quietly monumental.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 39
+    "sortOrder": 39,
+    contentSource: "ai"
   },
   {
     "id": "i-9frbWfJ",
     "title": "No Warning Given",
-    "description": "A painterly fine art photograph depicting a Native American ambush scene shaped by tension, terrain, and restraint. This work presents Native American photography as lived presence rather than spectacle, emphasizing Indigenous experience through posture, proximity, and decision. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "painterly Native American fine art photograph depicting a tense ambush moment in the American West",
+    "description": "Two men struggle on rocky ground while a third figure stands above them, holding position along the slope. The terrain is uneven and close, with bodies pressed into the space as the moment unfolds. This Native American fine art photography scene reflects heritage and tradition within the American West.\n\n© Wayne Heim",
+    "alt": "Two men in a tense struggle on rocky terrain with a third figure above.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/1/MJr79bZrTb3Nx97V74zshkS572zKRz8QxNSZW3KWb/XL/_WHO2552-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/1/MJr79bZrTb3Nx97V74zshkS572zKRz8QxNSZW3KWb/XL/_WHO2552-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/0/MtKXR9ZxNjqV9qgJDgsLVKs3FnQjswwxNkqzDgMTQ/L/_WHO2870-Edit-L.jpg",
@@ -1379,6 +1513,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9frbWfJ/0/KtDKSL46kWGVWrQ9zRWVkPWTkfwPRRxGCGTZtpPWS/S/_WHO2870-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-9frbWfJ/A",
+
     "keywords": [
       "Native American photography",
       "Native American art prints",
@@ -1386,20 +1521,22 @@ export const galleryData = [
       "Indigenous experience",
       "spirit of the West",
       "heritage and tradition in art",
-      "painterly Native American images",
+      "painterly Native American images"
     ],
+
     "story": "The ground rises faster than expected.\nBranches snap. Breath tightens.\nWhatever was planned has already begun.\n\nThere is no signal, no shouted order.\nOnly movement—sudden, committed, irreversible.\nThe space between them disappears.\n\nLater, this moment will be named.\nNow, it simply happens.",
-    "notes": "This piece relies on compression rather than action—foreground and background collapsing into a single moment of consequence. The composition echoes historical Western narrative painting while maintaining photographic restraint, allowing the viewer to inhabit uncertainty rather than observe resolution. Its power lies in what is withheld: motive, outcome, judgment—leaving tension suspended and unresolved.",
+    "notes": "Compression drives the structure of this image, pulling foreground and background into a single plane of consequence. The elevated figure introduces a vertical hierarchy, but control remains ambiguous, as the lower struggle holds the visual weight. This arrangement echoes narrative strategies found in Western painting, where terrain is not backdrop but participant, shaping both movement and outcome. The painterly restraint prevents the scene from becoming spectacle, allowing the tension to register as immediate and unresolved rather than theatrical.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 40
+    "sortOrder": 40,
+    contentSource: "ai"
   },
   {
     "id": "i-4Wsxmqv",
     "title": "Deviation of Destiny",
-    "description": "A cinematic, painterly Western portrait capturing a Native American rider at a literal and figurative crossroads. The composition emphasizes restraint, lived experience, and narrative depth without spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "Native American rider and horse at a crossroads, both alert and facing forward, painterly fine art Western portrait.",
+    "description": "A man stands beside his horse, holding the reins while facing forward with a steady, composed posture. The scene is softened by dust and light, blending the figure and animal into a quiet, unified presence. This Native American fine art photography portrait reflects heritage and tradition within the American West. \n\n© Wayne Heim",
+    "alt": "Native American man standing beside a horse holding reins in a dusty Western setting.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/LHQnH52gpCBqgMDDNXb8qKxJQ9BXmctrNGWkFzPMM/XL/_HF29032-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/LHQnH52gpCBqgMDDNXb8qKxJQ9BXmctrNGWkFzPMM/XL/_HF29032-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/MhzR8smg5LN5gxmJFRRV6kZjLVKTcP89X8dVS87sh/XL/_HF29302-Edit-XL.jpg",
@@ -1407,6 +1544,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Wsxmqv/0/Mrd4Lc9vdZBQ5nZRSn7xNHHqsrjHBMHf4njL4gsMR/S/_HF29302-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-4Wsxmqv/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American portraits",
@@ -1421,20 +1559,22 @@ export const galleryData = [
       "Native American wall art",
       "heritage and tradition in art",
       "fine art Western photography",
-      "pictorialist tradition",
+      "pictorialist tradition"
     ],
+
     "story": "A split, a fork, a deviation of destiny. Dust and spirits unsettled. He feels it too… ears forward, waiting on me. Hardest part is standing still. Breathe. Decide. A choice. The weight. The path I’ll take. Destiny calls beyond the rise.",
-    "notes": "A meditation on fate and choice, this piece recalls the crossroads motif in Western art. The pause between paths is rendered with painterly texture and narrative restraint — echoing the psychological tension of Wyeth and the storytelling gaze of Remington. Dust, light, and shadow become the true subjects, making this image both timeless and freshly cinematic. For collectors, Deviation of Destiny stands as a visual riddle: every viewing invites a new answer to which path is truly yours.",
+    "notes": "A meditation on fate and choice, this piece recalls the crossroads motif in Western art. The pause between paths is rendered with painterly texture and narrative restraint — echoing the psychological tension of Wyeth and the storytelling gaze of Remington. Dust, light, and shadow become the true subjects, making this image both timeless and freshly cinematic.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 41
+    "sortOrder": 41,
+    contentSource: "ai"
   },
   {
     "id": "i-4zxZQQ2",
     "title": "Point of Decision",
-    "description": "A cinematic Western fine art photograph capturing a moment of leadership and resolve, rendered in a painterly photographic style. Light, atmosphere, and restraint shape a narrative rooted in heritage, continuity, and the enduring spirit of the American West. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly Western fine art photograph depicting Native American riders choosing a direction on the trail",
+    "description": "Two riders pause on a narrow path, one raising his arm to indicate a direction while the other remains seated behind him. The horses stand steady beneath them as the landscape opens ahead, framed by light and distance. This Western fine art photography scene reflects heritage and tradition through movement and decision within the spirit of the American West. \n\n© Wayne Heim",
+    "alt": "Two riders on horseback pausing on a trail as one points ahead.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/0/MtXwtqvsRWsZJqjNQj54Q7Xbs5k96s25ZVxNz7q7J/XL/_HF20974-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/0/MtXwtqvsRWsZJqjNQj54Q7Xbs5k96s25ZVxNz7q7J/XL/_HF20974-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/0/MtXwtqvsRWsZJqjNQj54Q7Xbs5k96s25ZVxNz7q7J/XL/_HF20974-Edit-Edit-XL.jpg",
@@ -1442,6 +1582,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/0/L56vzKLBpfmg6qTmDc23DDFpj2ShnmvQ4Q8cKZ2xR/S/_HF20974-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4zxZQQ2/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -1452,20 +1593,22 @@ export const galleryData = [
       "spirit of the West",
       "Western Native American gallery",
       "Native American heritage art",
-      "Native American tradition",
+      "Native American tradition"
     ],
+
     "story": "The trail does not argue.\nIt waits.\n\nOne hand lifts. A direction is chosen.\nWhat comes next is not debated — it is carried.\n\nBehind them, the ground already knows their weight.\nAhead, the distance has begun to listen.",
     "notes": "This work centers on restraint rather than action, placing emphasis on the quiet authority of decision-making. The composition draws from classical Western narrative structure, where gesture replaces motion and leadership is expressed through stillness. Its strength lies in implication — a moment that holds both consequence and continuity — making it a compelling anchor piece within a story-driven Western fine art collection.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 42
+    "sortOrder": 42,
+    contentSource: "ai"
   },
   {
     "id": "i-67Qt8WM",
     "title": "Held Close",
-    "description": "A painterly fine art photograph portraying a Native American figure in a moment of quiet resolve. Rendered with restraint and cinematic stillness, the image emphasizes presence over spectacle, honoring Indigenous experience through dignity, memory, and continuity. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Native American portrait showing a moment of quiet reflection and tradition",
+    "description": "A man stands in quiet stillness, hands held together as he looks off to the side, his posture calm and composed. The scene is softened by light and atmosphere, blending the figure into a subdued, painterly environment. This Native American fine art photography portrait reflects heritage and tradition through presence and restraint. \n\n© Wayne Heim",
+    "alt": "Side profile of a man with clasped hands emerging through soft haze, a muted and atmospheric portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/NNc9RjZRPfShrwTz2R93KK8q7XzP3f7cvTj8rQML4/XL/_WHO1255-897-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/0/NNc9RjZRPfShrwTz2R93KK8q7XzP3f7cvTj8rQML4/XL/_WHO1255-897-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-67Qt8WM/1/KHdNQWSKDD2j4RHvxnLvtrZGWpKvB73tV2TjbJBV8/XL/_WHO0574-904-905-XL.jpg",
@@ -1484,7 +1627,7 @@ export const galleryData = [
       "Native American heritage art",
       "Native American tradition",
       "spirit of the West",
-      "Native American wall art",
+      "Native American wall art"
     ],
 
     "story": "He keeps it near, not for protection,\nbut because some things lose their meaning\nonce they’re set down.\n\nThe wind moves past him.\nTime does too.\nWhat he carries stays.\n\nNothing needs saying.\nWhat matters is already held.",
@@ -1494,13 +1637,14 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 43,
     autoGenerated: false,
-    autoTitle: false
+    autoTitle: false,
+    contentSource: "ai"
   },
   {
     "id": "i-Z8pZLnt",
     "title": "Held Close",
-    "description": "A painterly fine art photograph portraying a Native American figure in a moment of quiet resolve. Rendered with restraint and cinematic stillness, the image emphasizes presence over spectacle, honoring Indigenous experience through dignity, memory, and continuity. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "Painterly Native American portrait showing a moment of quiet reflection and tradition",
+    "description": "A man stands in quiet stillness, hands held together as he looks off to the side, his posture calm and composed. The scene is softened by light and atmosphere, blending the figure into a subdued, painterly environment. This Native American fine art photography portrait reflects heritage and tradition through presence and restraint. \n\n© Wayne Heim",
+    "alt": "Side profile of a man with clasped hands emerging through soft haze, a muted and atmospheric portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/LccN5fvKmnCqhvtMxj4TsXKxHZNTbbWF4jJrQhwgk/XL/_WHO1255-896-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/LccN5fvKmnCqhvtMxj4TsXKxHZNTbbWF4jJrQhwgk/XL/_WHO1255-896-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z8pZLnt/0/NNc9RjZRPfShrwTz2R93KK8q7XzP3f7cvTj8rQML4/XL/_WHO1255-897-XL.jpg",
@@ -1519,7 +1663,7 @@ export const galleryData = [
       "Native American heritage art",
       "Native American tradition",
       "spirit of the West",
-      "Native American wall art",
+      "Native American wall art"
     ],
 
     "story": "He keeps it near, not for protection,\nbut because some things lose their meaning\nonce they’re set down.\n\nThe wind moves past him.\nTime does too.\nWhat he carries stays.\n\nNothing needs saying.\nWhat matters is already held.",
@@ -1529,13 +1673,14 @@ export const galleryData = [
     "visibility": "show",
     "sortOrder": 44,
     autoGenerated: false,
-    autoTitle: false
+    autoTitle: false,
+    contentSource: "ai"
   },
   {
     "id": "i-z4mTWBb",
     "title": "Held Breath",
-    "description": "A painterly Native American fine art photograph capturing a moment of absolute tension and restraint. Rendered with cinematic light and muted tonal control, the image emphasizes presence over action—where focus, stillness, and awareness carry the full narrative weight. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Native American portrait capturing a moment of intense focus and stillness",
+    "description": "A rifle is drawn to shoulder as a man narrows his focus, sighting down the barrel with controlled stillness. Dust and light drift through the frame, softening the edges while holding attention on the act of aim. This Native American fine art photography portrait reflects heritage and tradition within the spirit of the American West. \n\n© Wayne Heim",
+    "alt": "Figure aiming a long rifle with intense concentration, framed by drifting haze and softened light.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/1/LLcRhWSJhrbbdQ22NMCt7tVTTpJ9nN2B4BX6wJzHX/XL/_WHO1264-895-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/1/LLcRhWSJhrbbdQ22NMCt7tVTTpJ9nN2B4BX6wJzHX/XL/_WHO1264-895-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/0/LccN5fvKmnCqhvtMxj4TsXKxHZNTbbWF4jJrQhwgk/XL/_WHO1255-896-XL.jpg",
@@ -1543,6 +1688,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-z4mTWBb/0/NCtmnk6bh799ggRkzLRWgGS5RDLFThLrR3KRphT24/S/_WHO1255-896-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-z4mTWBb/A",
+
     "keywords": [
       "fine art",
       "photography",
@@ -1558,20 +1704,22 @@ export const galleryData = [
       "painterly Native American images",
       "Indigenous experience",
       "spirit of the West",
-      "heritage and tradition in art",
+      "heritage and tradition in art"
     ],
+
     "story": "The world narrows to a single line.\nWind pauses. Sound falls away.\nEverything that mattered a moment ago no longer applies.\n\nThis is the space between decision and consequence—\nwhere instinct speaks louder than memory,\nand time forgets how to move.\n\nNothing advances.\nNothing retreats.\nThe breath stays where it is.",
-    "notes": "This piece relies on restraint rather than motion, drawing from pictorialist traditions where atmosphere and psychological tension define the composition. The controlled palette and softened edges allow the viewer to enter the moment rather than observe it from a distance. Its strength lies in what is withheld—action, resolution, certainty—placing it firmly within a lineage of narrative Western imagery that values implication over explanation.",
+    "notes": "Stillness becomes the defining force in this image, where tension is carried through alignment rather than motion. The horizontal line of the rifle creates a visual axis that anchors the frame, guiding the eye while reinforcing the subject’s focus. The surrounding atmosphere softens the environment, removing distraction and isolating the act of aim as the central event. This restraint places the image within a tradition of Western figuration where action is implied but not yet released, holding the viewer at the threshold between intention and outcome.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 45
+    "sortOrder": 45,
+    contentSource: "ai"
   },
   {
     "id": "i-Gk8bBLn",
     "title": "Driving the Water",
-    "description": "Driving the Water* is a painterly work of Native American fine art photography centered on exertion and authority rather than spectacle. The moment is defined by resistance—water pressing back, effort meeting consequence—rendered through compressed space and controlled light. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Native American portrait exerting force against the river, expressing Indigenous experience and the spirit of the American West",
+    "description": "A canoe cuts through the water as the figure drives forward with force and control, body leaning into the resistance of the current. The moment centers on exertion and intent, where movement is shaped by pressure, balance, and the steady rhythm of effort against the river.\n\n© Wayne Heim",
+    "alt": "A Native American canoeist paddling hard through the river, capturing the spirit of the American West in a moment of strength and motion.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Gk8bBLn/0/KdGP25pr56zsbpsqzJsGC5kxkN35k6BHS7p2spzNS/XL/_WHO6372-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Gk8bBLn/0/KdGP25pr56zsbpsqzJsGC5kxkN35k6BHS7p2spzNS/XL/_WHO6372-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Gk8bBLn/0/KwHbm5MwxXrRWgJMwfrmJh9vn38Sm52Fr9xprsw2N/XL/_HF24995-Edit-XL.jpg",
@@ -1579,6 +1727,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Gk8bBLn/0/LhRgd89gVX67bVDz4xgtgqnWt2BVhcLSdtHcN9SkC/S/_HF24995-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-Gk8bBLn/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -1592,20 +1741,22 @@ export const galleryData = [
       "spirit of the West",
       "spirit of the American West",
       "Western Native American gallery",
-      "heritage and tradition in art",
+      "heritage and tradition in art"
     ],
+
     "story": "The paddle bites and holds.\n\nMuscle answers current.  \nThe canoe shudders, then moves.\n\nThis isn’t crossing.  \nIt’s insisting.",
     "notes": "This image emphasizes physical authority through posture, gesture, and resistance rather than narrative outcome. The forward lean, tightened grip, and opposing vectors between paddle and current place the viewer inside the exertion itself.\n\nThe composition aligns with Western art traditions that privilege strength and control without dramatization. Softened edges and restrained contrast prevent heroic exaggeration, allowing effort and consequence to remain grounded and credible—an approach that rewards close, sustained viewing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 46
+    "sortOrder": 46,
+    contentSource: "ai"
   },
   {
     "id": "i-bxDjH9c",
     "title": "Still Aim",
-    "description": "A painterly Native American portrait capturing the discipline, restraint, and quiet authority of Indigenous experience. Rooted in the spirit of the West, the image reflects continuity, awareness, and control—hallmarks of painterly Native American fine art photography. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Native American portrait showing Indigenous figure at full draw, capturing stillness, focus, and spirit of the West",
+    "description": "Draw held at full tension, the figure remains locked in place as focus narrows and movement disappears. The moment centers on control and precision, where posture, breath, and alignment carry the weight of what comes next. \n\n© Wayne Heim",
+    "alt": "An archer at full draw aiming with intense focus and stillness.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/2/MkfZVP83n6CfxDPSD8tLmx9vnhz3b2nDmbgrfBFKn/XL/_WHO5804-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/2/MkfZVP83n6CfxDPSD8tLmx9vnhz3b2nDmbgrfBFKn/XL/_WHO5804-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/1/KpZJZX52m5C5njM5sBc2Sks4c6FWSRgnqLdFQNBrH/XL/_WHO5832-920-XL.jpg",
@@ -1613,6 +1764,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bxDjH9c/1/LbZvqqbJ8GdHvNSTfPNR5mvK79rHpL7GJ66FMw8kK/S/_WHO5832-920-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-bxDjH9c/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -1622,20 +1774,22 @@ export const galleryData = [
       "Indigenous experience",
       "spirit of the West",
       "Native American heritage art",
-      "Western Native American gallery",
+      "Western Native American gallery"
     ],
+
     "story": "The world narrows until there is only breath and tension.  \nWind presses, muscles answer, doubt is dismissed without ceremony.  \n\nNothing is rushed.  \nNothing is wasted.  \nThe moment waits because it must.",
-    "notes": "This work is defined by restraint rather than action. The composition recalls pictorialist discipline—where tension is carried by posture, line, and atmosphere instead of motion. The controlled palette and shallow depth reinforce a sense of inevitability, placing the viewer inside the moment just before release. It is a piece that rewards prolonged viewing, revealing its power through stillness rather than drama.",
+    "notes": "This image is structured around compression—both physical and visual. The drawn bow creates a taut diagonal that pulls against the frame, countered by the stillness of the subject’s posture. That opposition between tension and control places the viewer directly inside the moment before release. The softened environment removes narrative distraction, allowing gesture and alignment to carry meaning in the tradition of Western figurative restraint.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 47
+    "sortOrder": 47,
+    contentSource: "ai"
   },
   {
     "id": "i-V96Rgmj",
     "title": "Eyes to the Brush",
-    "description": "Eyes to the Brush* is a painterly moment in Native American fine art photography, centered on vigilance rather than action. The figure is held in quiet readiness, framed by softened foliage and restrained light that compresses time instead of accelerating it. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Painterly Native American portrait showing quiet vigilance, heritage, and the spirit of the American West in a moment of stillness",
+    "description": "Seated low in the brush, the figure holds the rifle across his body while scanning the distance, posture steady and deliberate. The moment centers on awareness and restraint, where attention moves before action and the landscape shapes what follows. \n\n© Wayne Heim",
+    "alt": "Native American portrait of a man holding a rifle while watching the brush with quiet focus.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/0/MggWQRwDzZCsQ3TGqcPXbrDF56Qvg5wrJXmwdvPX9/XL/_WHO0996-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/0/MggWQRwDzZCsQ3TGqcPXbrDF56Qvg5wrJXmwdvPX9/XL/_WHO0996-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/2/LBVLp52L8TCvJZs3mjw4V3HMJ57Zp5VZwGdSWPz5K/L/_HF24203-Edit-L.jpg",
@@ -1643,6 +1797,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-V96Rgmj/2/Kb2rRcNXqtkqnn2WLVh49LPJkJhstMSqv9BsZVnrT/S/_HF24203-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-V96Rgmj/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -1656,20 +1811,22 @@ export const galleryData = [
       "spirit of the West",
       "spirit of the American West",
       "Western Native American gallery",
-      "heritage and tradition in art",
+      "heritage and tradition in art"
     ],
+
     "story": "Nothing moves, and that’s what matters.\n\nThe grass holds its breath.  \nSound thins. Distance tightens.\n\nHe doesn’t aim yet.  \nHe measures what the land is willing to give.",
-    "notes": "This image operates within a pictorial lineage that values atmosphere and psychological tension over narrative resolution. Softened edges, compressed depth, and controlled contrast place the viewer inside a moment of decision without revealing its outcome.\n\nThe composition echoes traditions seen in early ethnographic portraiture and later Western painters who prioritized dignity, restraint, and internal strength. Negative space and muted motion allow the figure’s awareness to carry the weight of the image, positioning the work as contemplative rather than illustrative—an approach that invites long looking and sustained interpretation.",
+    "notes": "This composition is built on lateral tension rather than forward action. The rifle extends horizontally across the frame, creating a quiet barrier between the subject and the unseen distance he studies. That line, paired with the grounded seated posture, stabilizes the image while directing the viewer’s attention outward. The softened brush compresses space, placing emphasis on vigilance and anticipation rather than outcome, aligning the work with a pictorial tradition where atmosphere carries narrative weight.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 48
+    "sortOrder": 48,
+    contentSource: "ai"
   },
   {
     "id": "i-7vSccct",
     "title": "No Room for Error",
-    "description": "A painterly fine art photograph capturing a moment of absolute precision and shared focus. This Western-inspired image draws from Native American portrait tradition, blending cinematic tension with restraint and stillness. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Native American archers aiming together in a moment of focus — painterly fine art photography",
+    "description": "Two figures draw and hold in a shared moment of precision, focus narrowing as movement disappears. The moment centers on coordination and control, where timing and discipline hold the outcome in suspension. \n\n© Wayne Heim",
+    "alt": "Two Native American archers aiming together with bows drawn in a moment of intense focus.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7vSccct/3/MC3LGDRXWHJLPFQPkB9GVt9fBvMJxdZFLmJZL44nk/XL/_WHO6565-Edit-2-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7vSccct/3/MC3LGDRXWHJLPFQPkB9GVt9fBvMJxdZFLmJZL44nk/XL/_WHO6565-Edit-2-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7vSccct/3/MPngS476GKrqPzmDLJP5mxbmRk5b8trVn8ttVhktx/L/_WHO6565-Edit-2-Edit-2-L.jpg",
@@ -1677,6 +1834,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7vSccct/3/KshZ3tKh6MgNMw73bdxXW2QPsc9QrwTG75vVg9p7L/S/_WHO6565-Edit-2-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7vSccct/A",
+
     "keywords": [
       "fine art photography",
       "Native American art prints",
@@ -1686,20 +1844,22 @@ export const galleryData = [
       "Native American tradition",
       "spirit of the West",
       "heritage and tradition in art",
-      "Western Native American gallery",
+      "Western Native American gallery"
     ],
+
     "story": "The world narrows to a single line.\n\nBreath held. Muscles steady. Everything unnecessary stripped away.\n\nThere is no second chance waiting beyond this moment.",
     "notes": "This work is built on restraint rather than motion. The tension comes not from release, but from control—two figures aligned in purpose, sharing responsibility and consequence. The composition echoes classical Western and pictorialist traditions while rejecting dramatization in favor of psychological weight. It rewards prolonged viewing, revealing how discipline and stillness can carry more power than action itself.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 49
+    "sortOrder": 49,
+    contentSource: "ai"
   },
   {
     "id": "i-m3DqTjX",
     "title": "Where the Story Points",
-    "description": "A painterly fine art Western photograph depicting two figures aligned in quiet observation, framed by open land and shared focus. This image explores convergence rather than contrast, emphasizing presence, restraint, and the unspoken agreements that shape history. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Painterly fine art Western photograph of two figures pointing toward the horizon.",
+    "description": "Two figures stand side by side, attention fixed on the distance as a hand lifts to mark direction. The moment centers on shared awareness, where recognition passes quietly between them and the path ahead is understood without words. \n\n© Wayne Heim",
+    "alt": "Two men standing with a horse, one pointing toward the horizon in a moment of quiet direction and focus.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-m3DqTjX/1/K7VKnvcFMcCfPkjtNLcDkLNTFgsLvt5VdnmhPF26B/XL/_HF29136-Edit-Edit-3-1327-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-m3DqTjX/1/K7VKnvcFMcCfPkjtNLcDkLNTFgsLvt5VdnmhPF26B/XL/_HF29136-Edit-Edit-3-1327-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-m3DqTjX/1/KvxHm897nP6DdZb3hfdmsP8JcRJTzPJrtCpRKxm94/L/_HF29136-Edit-Edit-3-1327-L.jpg",
@@ -1707,6 +1867,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-m3DqTjX/1/LS8gNDfCvqqN9rfTmdPdGPsZ8sBj5N5L6J3LsvCKL/S/_HF29136-Edit-Edit-3-1327-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-m3DqTjX/A",
+
     "keywords": [
       "fine art photography",
       "painterly western photography",
@@ -1721,20 +1882,22 @@ export const galleryData = [
       "Native American Portraits",
       "Western Native American gallery",
       "painterly Native American portraits",
-      "Indigenous experience",
+      "Indigenous experience"
     ],
+
     "story": "Neither of them speaks.  \nThere’s no need to explain what’s already visible.\n\nA hand lifts, a direction chosen—  \nnot as instruction, but as recognition.  \nSome stories don’t belong to one voice.",
-    "notes": "This work centers on alignment rather than opposition. The composition draws the eye along the shared gesture, allowing meaning to unfold through posture and spacing instead of expression. The softened tonal range and atmospheric treatment echo traditions of narrative pictorialism, where implication carries more weight than declaration. It is an image about direction—how stories are carried forward not by words, but by where attention is placed.",
+    "notes": "This image is anchored in shared direction rather than individual action. The raised hand functions as a visual signal, guiding both the companion and the viewer toward an unseen destination. The presence of the horse reinforces readiness and movement without requiring it to occur. By holding the moment at the point of recognition, the work emphasizes how decisions are often formed quietly, carried through gesture and attention rather than declaration.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 50
+    "sortOrder": 50,
+    contentSource: "ai"
   },
   {
     "id": "i-sGW55ch",
     "title": "Before the Eyes of the Hills",
-    "description": "A haunting moment from Wayne Heim’s painterly Western fine art photography series, blending Native American portraiture with cinematic atmosphere. The composition emphasizes restraint, lived experience, and narrative depth within the American West. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Native American man on horseback with rifle, riding through dusty Western terrain in painterly fine art style.",
+    "description": "A rider sits steady in the saddle as the horse faces forward, presence held against a quiet, open landscape. The moment centers on stillness and endurance, where time feels slowed and the weight of distance settles into the figure and mount alike. \n\n© Wayne Heim",
+    "alt": "Man on horseback in Native American attire holding a rifle, facing forward in a quiet Western setting.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/3/MvHKdkWz5rrXDmH46nSmWwXxHhqj8DHhDdH9LjSGm/XL/_WHO2172-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/3/MvHKdkWz5rrXDmH46nSmWwXxHhqj8DHhDdH9LjSGm/XL/_WHO2172-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/4/K2n9SrVWLBj6LnFC2LGxCKLDTjCHCfrXZ9ddtMf8B/L/_WHO2299-Edit-Edit-2-L.jpg",
@@ -1742,35 +1905,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sGW55ch/4/M3KvQbth62SnJpkqZB4ht27nLsFpN3Qz6zpdNQrGD/S/_WHO2299-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-sGW55ch/A",
+
     "keywords": [
-      "native american",
-      "fine art",
-      "cowboy",
-      "western",
-      "portrait",
-      "painterly",
-      "photography",
-      "historical",
-      "reenactment",
-      "archival",
-      "old west",
-      "storytelling",
-      "cinematic",
-      "wyeth",
-      "catlin",
+      "Native American fine art photography",
+      "Native American photography",
+      "Native American art prints",
+      "Native American portraits",
+      "painterly Native American portraits",
+      "Western Native American gallery",
+      "spirit of the West",
+      "Indigenous experience",
+      "Native American heritage art",
+      "Native American wall art"
     ],
+
     "story": "This I ride for shadows on the hills.\nNames only the wind remembers.\nA warning. A prayer… or just a promise to the dust.\nThe old stones and the sky watch on in judgment.\nSilence, watching — keepers of the truth.",
-    "notes": "There’s a painterly restraint here — a stillness reminiscent of Andrew Wyeth’s muted palettes and the narrative silence of Catlin’s field portraits. The tonal wash and central composition lead the eye without force, letting the subject’s expression do the talking. More than a portrait, this is a cinematic still from a forgotten past — where story and setting fuse under the haze of memory.",
+    "notes": "Presence leads this image, carried through the direct, unwavering stance of both rider and horse. The forward-facing posture creates a sense of confrontation without aggression, holding the viewer in a sustained moment of recognition. With detail softened around the edges, attention remains fixed on the relationship between figure and mount, allowing the image to operate as both portrait and quiet declaration of endurance.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 51
+    "sortOrder": 51,
+    contentSource: "ai"
   },
   {
     "id": "i-gQmqxZJ",
     "title": "The Weight of Feathers",
-    "description": "A painterly fine art portrait depicting a Native American figure rendered with restraint, dignity, and historical awareness. This image reflects Wayne Heim’s approach to Native American photography—quietly cinematic, rooted in continuity, and shaped by presence rather than spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly fine art portrait of a Native American figure honoring heritage and tradition.",
+    "description": "A profile view holds the figure in quiet focus, gaze set beyond the frame as the feathered headdress rises with weight and presence. The moment centers on identity and continuity, where what is carried is felt more than shown. \n\n© Wayne Heim",
+    "alt": "Side profile of a Native American man wearing a feathered headdress, standing in a calm and reflective moment.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gQmqxZJ/0/MKmF5WncWz2JPX9QkHcmfnGdTp7sRcJ9rmxHG8rKT/XL/_WHO6048-923-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gQmqxZJ/0/MKmF5WncWz2JPX9QkHcmfnGdTp7sRcJ9rmxHG8rKT/XL/_WHO6048-923-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gQmqxZJ/0/MKmF5WncWz2JPX9QkHcmfnGdTp7sRcJ9rmxHG8rKT/XL/_WHO6048-923-XL.jpg",
@@ -1778,29 +1939,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gQmqxZJ/0/LmF9NH94v4XmWFGmBwt8Pnn8HFFw33NxMgQ8GDSLG/S/_WHO6048-923-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gQmqxZJ/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
+      "Native American photography",
       "Native American portraits",
-      "painterly Native American images",
-      "Indigenous experience",
-      "Native American heritage art",
-      "Native American tradition",
+      "painterly Native American portraits",
       "spirit of the West",
       "Western Native American gallery",
+      "Indigenous experience",
+      "Native American heritage art",
+      "Native American wall art"
     ],
+
     "story": "He does not look toward the past, yet it rests on him all the same.  \nEach feather carries a season, a decision, a name spoken once and never again.  \nHe stands still—not from hesitation, but from knowing exactly where he belongs.\n\nWhat presses on his shoulders is not ceremony.  \nIt is memory, held upright.",
-    "notes": "This work emphasizes stillness as structure rather than absence. The composition recalls early pictorialist portraiture, where posture and restraint carried narrative weight more powerfully than action. Subtle tonal transitions and softened edges allow the subject’s presence to dominate, positioning the figure as a bearer of lineage rather than a performer of history. The result is a museum-minded piece that rewards prolonged viewing and quiet consideration.",
+    "notes": "Identity anchors this image through profile and bearing rather than direct engagement. The turned gaze shifts attention away from the viewer, placing emphasis on what lies beyond the frame. The headdress introduces vertical weight and historical presence, while the softened surroundings reduce distraction. The result is a work that holds its meaning through quiet continuity, allowing heritage to be felt as a living, carried presence rather than a fixed symbol.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    contentSource: "ai"
   },
   {
     "id": "i-nZbDC9C",
     "title": "Held by Memory",
-    "description": "A painterly Native American portrait rooted in stillness and restraint, this fine art photograph honors Indigenous experience through presence rather than spectacle. Light, texture, and quiet posture shape a narrative of Native American tradition, heritage, and continuity. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "painterly Native American portrait conveying Indigenous experience and tradition",
+    "description": "Seated in quiet profile, the figure holds steady as attention lifts beyond the immediate, posture relaxed but grounded. The moment centers on presence and reflection, where stillness carries more weight than movement. \n\n© Wayne Heim",
+    "alt": "Elder Native American man seated in profile, looking into the distance with calm and reflective expression.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/1/LPJkK7RgGkqVmSZpkCwLrf9zPS2QrpGZj9cjkCVrG/XL/_HF20466-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/1/LPJkK7RgGkqVmSZpkCwLrf9zPS2QrpGZj9cjkCVrG/XL/_HF20466-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/3/K467CkJJBfmSCkwqL5znz98RG3rbthdD3HKSQCTt5/L/_HF20466-Edit-L.jpg",
@@ -1808,30 +1973,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nZbDC9C/3/NKfD2D6xFMwkHP6QTHzNNCwNN5kFwzdB9p5tkhsLT/S/_HF20466-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-nZbDC9C/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
       "Native American photography",
-      "Native American Portraits",
+      "Native American portraits",
       "painterly Native American portraits",
+      "spirit of the West",
       "Indigenous experience",
       "Native American heritage art",
       "Native American tradition",
-      "spirit of the West",
-      "Native American wall art",
+      "Native American wall art"
     ],
+
     "story": "He does not look toward the past.\nHe stands with it.\n\nWhat was given was not meant to be carried lightly.\nIt settles into the hands, the shoulders, the breath — not as burden, but as presence.\n\nSome things are not remembered.\nThey are held.",
-    "notes": "This work draws from a pictorialist tradition where restraint, tonal control, and quiet composition guide emotional weight. The figure is not framed as subject or symbol, but as presence — echoing the lineage of early documentary portraiture while maintaining contemporary sensitivity. The subdued palette and softened edges reinforce a sense of time held in suspension, allowing the image to function as a contemplative piece that rewards slow viewing and sustained engagement.",
+    "notes": "Time settles into this image through posture and gaze rather than action. The seated position lowers the energy of the frame, creating a sense of grounded presence that contrasts with the upward direction of the figure’s attention. The softened tonal field removes distraction, allowing the viewer to engage with the quiet weight of experience. This is a work that invites slow looking, where meaning emerges through stillness rather than narrative progression.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 53
+    "sortOrder": 53,
+    contentSource: "ai"
   },
   {
     "id": "i-KG7ZwXT",
     "title": "The Waterline",
-    "description": "The Waterline* is a restrained work of Native American fine art photography focused on endurance rather than display. Rendered in monochrome with softened edges and compressed contrast, the image emphasizes physical consequence—weight, cold, and balance—over narrative. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Native American portrait crossing cold water, expressing Indigenous experience, endurance, and the spirit of the American West",
+    "description": "Stepping through shallow water, the figure moves forward with measured control, rifle held low as balance and footing take priority. The moment centers on endurance and progression, where each step carries weight against the resistance of the current. \n\n© Wayne Heim",
+    "alt": "Native American man wading through water with a rifle in a moment of endurance in Western fine art photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/2/MBVn7H63mjJjvc6bhsQTxK3msmpx7wg4kzhQP9cvm/XL/_WHO1676-887-888-3-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/2/MBVn7H63mjJjvc6bhsQTxK3msmpx7wg4kzhQP9cvm/XL/_WHO1676-887-888-3-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/3/KcjQwcf69KnC4Np3QMbxxhSSCW6KhkNDgsnCg7c9s/L/_WHO1676-887-888-L.jpg",
@@ -1839,6 +2007,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KG7ZwXT/3/MtgshDH9mmFBxrVKPV6vTmb5HgT7xCzJ8k8pBF3sK/S/_WHO1676-887-888-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-KG7ZwXT/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -1852,20 +2021,22 @@ export const galleryData = [
       "spirit of the West",
       "spirit of the American West",
       "Western Native American gallery",
-      "heritage and tradition in art",
+      "heritage and tradition in art"
     ],
+
     "story": "Cold reaches first.\n\nBoots find nothing solid, then something—then nothing again.  \nThe rifle stays low. The body learns the rest.\n\nThere’s no pause for choosing.  \nOnly the line where staying dry stops being an option.",
     "notes": "This image draws from pictorialist traditions that privilege atmosphere and physical presence over spectacle. The subdued tonal range and softened transitions reduce narrative certainty, allowing the body’s posture and load to carry the weight of the moment.\n\nCompositionally, the lowered horizon and encroaching negative space heighten the sense of instability, placing the viewer at the edge of balance alongside the subject. The work aligns with Western art lineages that emphasize endurance, restraint, and lived consequence—inviting sustained looking rather than symbolic reading.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 54
+    "sortOrder": 54,
+    contentSource: "ai"
   },
   {
     "id": "i-tfZTHXq",
     "title": "Held on the Sight",
-    "description": "Held on the Sight* is a painterly work of Native American fine art photography centered on concentration rather than action. Rendered in monochrome with softened edges and compressed contrast, the image suspends time at the moment of aim—where focus outweighs motion. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Painterly Native American portrait focused in aim, expressing Indigenous experience, restraint, and the spirit of the American West",
+    "description": "Held at full aim, the figure remains fixed in place as focus tightens and movement disappears. The moment centers on concentration and control, where breath, posture, and intent carry everything forward. \n\n© Wayne Heim",
+    "alt": "Side view of a Native American man aiming a rifle, capturing stillness and precision in painterly Western fine art photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/2/NLgqVKtJv7xJvnGmcNPfrJD6GLLCZ4LQLRrzJvCTv/XL/_WHO1264-895-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/2/NLgqVKtJv7xJvnGmcNPfrJD6GLLCZ4LQLRrzJvCTv/XL/_WHO1264-895-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/1/LLcRhWSJhrbbdQ22NMCt7tVTTpJ9nN2B4BX6wJzHX/XL/_WHO1264-895-2-XL.jpg",
@@ -1873,33 +2044,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tfZTHXq/1/NG386n8HbkDkgrkrgVjpVZ9kqvW78WXh9d8hrQRT8/S/_WHO1264-895-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-tfZTHXq/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
-      "Native American Portraits",
-      "painterly Native American portraits",
       "Native American art prints",
-      "Native American wall art",
+      "Native American portraits",
+      "painterly Native American portraits",
+      "spirit of the West",
+      "Indigenous experience",
       "Native American heritage art",
       "Native American tradition",
-      "Indigenous experience",
-      "spirit of the West",
-      "spirit of the American West",
-      "Western Native American gallery",
-      "heritage and tradition in art",
+      "Western Native American gallery"
     ],
+
     "story": "Everything narrows.\n\nBreath thins. The world quiets to a single line.\nNothing pulls him forward or back.\n\nThe decision has already been made.\nThe rest is holding.",
-    "notes": "This image aligns with pictorial traditions that privilege psychological compression over narrative release. The tightened posture and narrowed field of attention hold the viewer inside focus itself, withholding outcome by design.\n\nRestrained tonal range and softened transitions prevent dramatization, keeping the moment disciplined and credible. The work rewards sustained viewing, where meaning accumulates through stillness, alignment, and the quiet authority of unwavering attention.",
+    "notes": "Focus defines this image through compression of time and attention. The act of aiming becomes less about action and more about sustained control, where the figure holds the moment in suspension. The softened tonal field removes distraction, allowing the viewer to remain inside the tension of concentration. This restraint aligns with pictorial traditions that favor psychological weight over narrative release, rewarding prolonged engagement through stillness and intent.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 55
+    "sortOrder": 55,
+    contentSource: "ai"
   },
   {
     "id": "i-8NsWqJQ",
     "title": "Before the Strike Is Named",
-    "description": "Before the Strike Is Named is a painterly Western fine art photograph rooted in restraint, presence, and embodied resolve. Through disciplined composition, controlled contrast, and a pictorialist-informed approach, the work reflects a moment where force exists without release. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "Painterly Western fine art photograph of a Native American warrior holding a spear in stillness, conveying restraint, readiness, and historical atmosphere",
+    "description": "Crouched low, the figure grips a spear and holds steady, body angled forward as attention fixes on something beyond the frame. The moment centers on readiness and control, where movement is contained and directed through posture and position. \n\n© Wayne Heim",
+    "alt": "Native American warrior crouched with a spear in a moment of readiness in painterly Western fine art photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/K7XTDHVRfmJ6r9fQptQSLP6tnmjD5ms88Wv6nKzrF/XL/_HF27362-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/K7XTDHVRfmJ6r9fQptQSLP6tnmjD5ms88Wv6nKzrF/XL/_HF27362-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/0/MrM9fVNbDDvqVgtw3J9JVV4DMTNxwC7W3v967DxJ4/L/_HF27362-Edit-L.jpg",
@@ -1909,25 +2080,20 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-8NsWqJQ/A",
 
     "keywords": [
-      "painterly Western photography",
-      "painterly Western images",
-      "fine art Western photography",
-      "narrative Western art",
-      "pictorialist tradition",
       "Native American fine art photography",
+      "Native American photography",
+      "Native American art prints",
       "Native American portraits",
+      "painterly Native American portraits",
+      "spirit of the West",
       "Indigenous experience",
       "Native American heritage art",
-      "spirit of the American West",
-      "American frontier",
-      "frontier life",
-      "Americana photography",
-      "historically themed photography",
-      "cinematic stills",
+      "Native American tradition",
+      "Western Native American gallery"
     ],
 
     "story": "He does not advance. He does not retreat.  \nThe weapon is already steady in his hands, held not for display, but for necessity.\n\nThis is the moment before motion becomes consequence—when intent has settled into the body and nothing more needs to be decided. The air is quiet enough to hear breath, muscle, memory. Whatever comes next will not be sudden. It will be exact.",
-    "notes": "This image belongs to a lineage of Western narrative art where implication carries more weight than action. The power of the work lies in what is withheld—the strike unnamed, the outcome unresolved.\n\nBy holding the figure in suspension, the composition places the viewer inside the moment of choice rather than its aftermath. The painterly handling softens the edges without diminishing authority, aligning the piece with pictorialist tradition while remaining grounded in photographic authorship.\n\nBefore the Strike Is Named functions as a single-frame psychological study—cinematic, restrained, and deeply human—inviting long viewing and quiet contemplation rather than immediate interpretation.",
+    "notes": "Tension is carried through stance and compression of the body rather than overt motion. The lowered posture brings the figure closer to the ground, creating a sense of immediacy and engagement with the terrain. The forward angle of the spear directs attention outward, establishing a line of intent without requiring action to occur. This restraint places the image within a tradition of Western narrative work where the moment before action holds the greatest weight.",
     "rating": 4,
 
     "galleries": [
@@ -1941,8 +2107,8 @@ export const galleryData = [
   {
     "id": "i-6vszqTK",
     "title": "What the River Took",
-    "description": "A high-tension painterly Native American portrait capturing a moment where motion, resolve, and consequence converge. This fine art photograph reflects Indigenous experience through force and restraint, honoring Native American tradition and lived endurance rather than spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Painterly Native American portrait in motion on a river, expressing Indigenous experience and resolve.",
+    "description": "A canoe cuts through fast water as the lead figure drives forward, face tightened and voice released into the effort. This scene reflects painterly Native American fine art photography grounded in endurance and lived experience. © Wayne Heim",
+    "alt": "Figure paddling hard through river current, expression intense, captured in a cinematic Western scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6vszqTK/0/KWVrZ5Sf7wSpbMgk5SxxrH8CS2MP4kB9KGJ4mrd6N/XL/_WHO6355-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6vszqTK/0/KWVrZ5Sf7wSpbMgk5SxxrH8CS2MP4kB9KGJ4mrd6N/XL/_WHO6355-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6vszqTK/0/KDjmXDh7R2kLms3kG9xqrnjcWs8Z57jnrhCVMNTbM/L/_WHO6355-Edit-L.jpg",
@@ -1950,6 +2116,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6vszqTK/0/KLdRcRW8qkhb4DZ8gNZtVjTtH8TXqhsc4Xtt9Jhkr/S/_WHO6355-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6vszqTK/A",
+
     "keywords": [
       "a",
       "fine art",
@@ -1963,20 +2130,22 @@ export const galleryData = [
       "Indigenous experience",
       "Native American photography",
       "spirit of the West",
-      "painterly Native American images",
+      "painterly Native American images"
     ],
+
     "story": "The water keeps moving.  \nIt doesn’t slow for shouting, or fear, or doubt.\n\nEverything that mattered was already surrendered upstream.  \nNames. Promises. The easy version of mercy.\n\nWhat remains is momentum—  \nand the knowledge that once released, nothing comes back the same.",
-    "notes": "This piece operates at the edge of control—where motion overtakes deliberation. The painterly handling tempers intensity with structure, allowing energy to read as purpose rather than chaos. Composition and tonal restraint echo historical pictorialism while asserting a contemporary narrative weight. It is an image about consequence: what is taken, what is carried forward, and what cannot be retrieved once set in motion.",
+    "notes": "This work leans into forward force rather than reflection—the moment where decision has already been made and the body carries it through. The tension is not in what might happen, but in what cannot be undone. The framing keeps the viewer close to the action, allowing expression and effort to carry the narrative weight. \n\nThere’s a lineage here that echoes the more physical side of Western narrative painting—where survival, motion, and commitment replace mythic distance. The image holds energy without exaggeration, grounding intensity in something lived rather than performed.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 57
+    "sortOrder": 57,
+    contentSource: "ai"
   },
   {
     "id": "i-7zpT5Hs",
     "title": "Watcher on the River",
-    "description": "A painterly portrait rooted in Native American fine art photography, *Watcher on the River* captures a moment of quiet vigilance shaped by heritage, tradition, and restraint. Rendered with softened edges and controlled tonality, the image leans away from spectacle and toward presence—where stillness carries meaning. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as archival Western wall art for collectors of fine art photography.",
-    "alt": "Painterly Native American portrait of a figure watching the river, capturing heritage, tradition, and the spirit of the American West",
+    "description": "A lone figure steadies in the canoe as the river moves beneath him, attention fixed on something beyond the frame. The moment is quiet but alert—held between motion and watchfulness, where presence matters more than action. This image reflects Western fine art photography grounded in restraint, awareness, and the enduring rhythm of frontier life. \n\n© Wayne Heim",
+    "alt": "Man in canoe holding a bow, watching the river ahead in a painterly Western art scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7zpT5Hs/0/LpVQcfrJw2mW4fh8BfMjMRr59n2RMzt5DF47QGhqj/XL/_WHO6005-921-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7zpT5Hs/0/LpVQcfrJw2mW4fh8BfMjMRr59n2RMzt5DF47QGhqj/XL/_WHO6005-921-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7zpT5Hs/0/KHs7gNdb4QwHZ5Wx5mgTbZnhcZCnxd8FVr4bHxP7w/L/_WHO6005-921-2-L.jpg",
@@ -1984,6 +2153,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7zpT5Hs/0/Mm8CTPZLCwzc5bqG4sL4W6WdsVgZmjsPRRrfncbwd/S/_WHO6005-921-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7zpT5Hs/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -1997,19 +2167,21 @@ export const galleryData = [
       "spirit of the West",
       "spirit of the American West",
       "Western Native American gallery",
-      "heritage and tradition in art",
+      "heritage and tradition in art"
     ],
+
     "story": "The water moves, but he does not.  \nCurrent slides past the canoe in soft, patient lines, carrying sound, reflection, memory.\n\nHe watches the far bank—not searching, not waiting.  \nJust present.  \nThe way you stay when leaving has never really been an option.\n\nSome moments aren’t meant to be crossed.  \nThey’re meant to be held.",
-    "notes": "This work draws from a pictorial tradition where atmosphere and restraint carry as much weight as subject. The softened transitions, controlled contrast, and subdued motion recall early photographic pictorialism while aligning with the narrative discipline found in painters such as Catlin and later Western illustrators who emphasized presence over action.\n\nCompositionally, the canoe and figure are held in deliberate balance against the open water, allowing negative space to function as narrative space. The image resists dramatization, inviting longer looking and quieter interpretation—an approach that positions the piece within a lineage of Western art focused on endurance, continuity, and internal strength rather than frontier myth.",
+    "notes": "Compositionally, the canoe and figure are held in deliberate balance against the open water, allowing negative space to function as narrative space. The image resists dramatization, inviting longer looking and quieter interpretation—an approach that positions the piece within a lineage of Western art focused on endurance, continuity, and internal strength rather than frontier myth.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 58
+    "sortOrder": 58,
+    contentSource: "ai"
   },
   {
     "id": "i-wmDznTm",
     "title": "Drawn Before Thought",
-    "description": "A painterly fine art photograph capturing Native American tradition through controlled tension and restraint. This image reflects Indigenous experience and heritage through presence rather than spectacle, blending historic awareness with cinematic stillness. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
+    "description": "A painterly fine art photograph capturing Native American tradition through controlled tension and restraint. This image reflects Indigenous experience and heritage through presence rather than spectacle, blending historic awareness with cinematic stillness.\n\n© Wayne Heim",
     "alt": "Painterly Native American portrait capturing tension and Indigenous tradition in fine art photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wmDznTm/1/MqvJV44FzksQrz7sXwf37pMq6JWh8PDTvwTCwDNCF/XL/_WHO5804-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wmDznTm/1/MqvJV44FzksQrz7sXwf37pMq6JWh8PDTvwTCwDNCF/XL/_WHO5804-Edit-XL.jpg",
@@ -2018,6 +2190,7 @@ export const galleryData = [
     "srcS": "",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-wmDznTm/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -2027,20 +2200,22 @@ export const galleryData = [
       "Native American heritage art",
       "Native American tradition",
       "painterly Native American portraits",
-      "spirit of the West",
+      "spirit of the West"
     ],
+
     "story": "There is no decision left to make.\n\nThe body has already chosen—  \nmuscle remembering what the mind hasn’t finished forming.  \nBreath tightens. The world narrows.\n\nWhatever happens next will arrive before doubt has time to speak.",
     "notes": "This work draws from pictorialist restraint and early ethnographic portraiture while rejecting spectacle in favor of psychological tension. The composition holds the subject at the threshold of action—where discipline, memory, and bodily knowledge converge. Motion is implied, not shown, allowing the viewer to inhabit the moment rather than observe it. The softened edges and compressed tonal range echo historic photographic processes, reinforcing the sense that this image exists outside of modern time and closer to lived memory.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 59
+    "sortOrder": 59,
+    contentSource: "ai"
   },
   {
     "id": "i-LwWLjbH",
-    "title": "Held on the Current",
-    "description": "A painterly fine art photograph capturing a Native American figure in motion, set within the quiet tension of river and shoreline. Emphasizing restraint over spectacle, the image blends pictorialist softness with controlled focus, allowing movement, light, and texture to shape the narrative. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly Native American fine art photograph of a bowman navigating a river with focused intention",
+    "title": "Watcher on the River",
+    "description": "A lone figure steadies in the canoe as the river moves beneath him, attention fixed on something beyond the frame. The moment is quiet but alert—held between motion and watchfulness, where presence matters more than action. This image reflects Western fine art photography grounded in restraint, awareness, and the enduring rhythm of frontier life. \n\n© Wayne Heim",
+    "alt": "Man in canoe holding a bow, watching the river ahead in a painterly Western art scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LwWLjbH/2/MfR4DH9JkVHvQm8kpFSR95chKN67qp54QhZdG4PPC/XL/_WHO6005-921-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LwWLjbH/2/MfR4DH9JkVHvQm8kpFSR95chKN67qp54QhZdG4PPC/XL/_WHO6005-921-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LwWLjbH/2/LPgjLSNS57TmbfV3SPbkTjgmmrqghhLjnmt3rbvzt/L/_WHO6005-921-L.jpg",
@@ -2048,30 +2223,36 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LwWLjbH/2/KcLQHr3rCBTJhkLptNQtbLM9BLpLr5C89JJKVrgW9/S/_WHO6005-921-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LwWLjbH/A",
+
     "keywords": [
-      "Native American art prints",
       "Native American fine art photography",
       "Native American photography",
       "Native American portraits",
-      "painterly Native American images",
-      "Indigenous experience",
+      "painterly Native American portraits",
+      "Native American art prints",
+      "Native American wall art",
       "Native American heritage art",
       "Native American tradition",
+      "Indigenous experience",
+      "spirit of the West",
       "spirit of the American West",
       "Western Native American gallery",
+      "heritage and tradition in art"
     ],
-    "story": "The water moves whether he does or not.\nIt carries weight, sound, consequence.\n\nHe does not rush it.\nThe bow stays drawn, the body steady,\nreading the river the way others read faces.\n\nThis is not about speed.\nIt is about knowing when the current agrees.",
-    "notes": "This image balances motion and control with deliberate restraint. The forward tension of the drawn bow contrasts with the slow authority of the water, creating a visual dialogue between action and patience. Painterly handling softens the edges while preserving intent, echoing pictorialist influence without sacrificing narrative clarity. It is a work that holds attention through quiet force — an image about decision, timing, and the knowledge carried beneath the surface.",
+
+    "story": "The water moves, but he does not.  \nCurrent slides past the canoe in soft, patient lines, carrying sound, reflection, memory.\n\nHe watches the far bank—not searching, not waiting.  \nJust present.  \nThe way you stay when leaving has never really been an option.\n\nSome moments aren’t meant to be crossed.  \nThey’re meant to be held.",
+    "notes": "Compositionally, the canoe and figure are held in deliberate balance against the open water, allowing negative space to function as narrative space. The image resists dramatization, inviting longer looking and quieter interpretation—an approach that positions the piece within a lineage of Western art focused on endurance, continuity, and internal strength rather than frontier myth.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 60
+    "sortOrder": 60,
+    contentSource: "ai"
   },
   {
     "id": "i-kVr4LnG",
     "title": "Under Open Sky",
-    "description": "A painterly Native American portrait grounded in presence rather than spectacle, this fine art photograph reflects the enduring spirit of the West and the quiet authority of tradition. Rendered with restraint and atmospheric depth, the image honors Indigenous experience through stillness, continuity, and relationship to land. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly Native American portrait under open sky in fine art photography",
+    "description": "A rider moves quietly across open ground, framed by distance and sky, where the land stretches without urgency or demand. The scene carries stillness and self-possession—nothing forced, nothing pursued—just presence held against the wide horizon. \n\n© Wayne Heim",
+    "alt": "Native American fine art photography of a rider on horseback under open sky, conveying stillness and presence.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kVr4LnG/0/MJ7Z9BHQKB3wQTr24JsMwSzRWRNPptSCQMC6Qp3Rm/XL/_WHO4561-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kVr4LnG/0/MJ7Z9BHQKB3wQTr24JsMwSzRWRNPptSCQMC6Qp3Rm/XL/_WHO4561-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kVr4LnG/0/Lk6VdXhpmDmnBR99BkBR7kQx3QPJzcxVhKjfsWZrJ/L/_WHO4561-Edit-Edit-L.jpg",
@@ -2079,6 +2260,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kVr4LnG/0/KSkLQbfd7DZjFwdkSftsb49sDmdNGxvVnkQwGrQzQ/S/_WHO4561-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-kVr4LnG/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -2091,22 +2273,26 @@ export const galleryData = [
       "Indigenous experience",
       "Native American heritage art",
       "Native American tradition",
-      "Native American wall art",
+      "Native American wall art"
     ],
+
     "story": "The ground is quiet here.  \nNot empty—listening.\n\nHe sits where the land opens and the horizon offers no instruction.  \nOnly distance, only weather, only time moving the long way around.\n\nNothing is being claimed.  \nNothing needs proving.",
-    "notes": "This work draws its strength from composure and spatial restraint. The figure is placed within the land rather than against it, allowing negative space and atmosphere to carry equal narrative weight. Subtle tonal layering and softened edges echo pictorialist traditions while maintaining contemporary clarity. The result is a portrait that feels ceremonial without pageantry—meant to be lived with, not decoded.",
+    "notes": "The figure is placed within the land rather than against it, allowing negative space and atmosphere to carry equal narrative weight. Subtle tonal layering and softened edges echo pictorialist traditions while maintaining contemporary clarity. The result is a portrait that feels ceremonial without pageantry—meant to be lived with, not decoded.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 61
+    "sortOrder": 61,
+    contentSource: "ai"
   },
   {
     "id": "i-zDcr5T3",
     "title": "Standing at Ease",
-    "description": "Standing at Ease* is a painterly work of Native American fine art photography centered on composure rather than display. Rendered in monochrome with softened transitions and restrained contrast, the image emphasizes balance, posture, and quiet readiness. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Painterly Native American portrait of a figure standing calmly with quiet authority, expressing Indigenous experience and the spirit of distant horizon.",
+    "description": "A figure stands grounded and steady, rifle held without tension as the body settles into its own rhythm. Strength is carried quietly here—nothing performed, nothing forced—just balance held in place over time. \n\n© Wayne Heim",
+    "alt": "Man standing with rifle in a calm, composed stance, captured in Native American fine art photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KHwcQBfWJ2Hv55Qg43gzrJ56gjbWCvvVr6PhzpRJm/XL/_HF24217-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/KHwcQBfWJ2Hv55Qg43gzrJ56gjbWCvvVr6PhzpRJm/XL/_HF24217-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
@@ -2114,6 +2300,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zDcr5T3/0/K2c9cpst3Hd8sbMnNKrKW4zpHRpgmZf7QHzpLP32D/S/_HF24217-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zDcr5T3/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -2127,20 +2314,22 @@ export const galleryData = [
       "spirit of the West",
       "spirit of the American West",
       "Western Native American gallery",
-      "heritage and tradition in art",
+      "heritage and tradition in art"
     ],
+
     "story": "Nothing presses him forward.\n\nThe rifle rests where it belongs.\nBreath finds its own pace.\n\nStrength doesn’t announce itself.\nIt settles.",
     "notes": "This image aligns with pictorial traditions that privilege composure over action and authority over gesture. The relaxed stance and lowered tension place the viewer in a moment where readiness exists without urgency.\n\nSoft tonal compression and muted detail prevent heroic emphasis, allowing presence to remain grounded and credible. The work rewards prolonged viewing, where meaning accumulates through posture, stillness, and the quiet confidence of a figure fully at rest within himself.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 62
+    "sortOrder": 62,
+    contentSource: "ai"
   },
   {
     "id": "i-xfVhZw7",
     "title": "After the Drums Fade",
-    "description": "A painterly fine art photograph centered on a Native American figure, rendered with restraint and historical sensitivity. This work emphasizes presence over spectacle, allowing stillness, texture, and light to shape the narrative. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly Native American portrait expressing heritage and tradition in fine art photography",
+    "description": "A figure holds still in profile, the weight of presence carried without gesture or display. The quiet feels earned, shaped by time rather than momentary action, where what remains matters more than what has passed. This image reflects painterly Native American fine art photography grounded in continuity and restraint. \n\n© Wayne Heim",
+    "alt": "Profile view of a man in traditional headdress standing in stillness, softly framed by atmosphere and light.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xfVhZw7/0/MWCJWz4c29WtJjZKQ5CXjt97RB245s3vN3q8vSr9z/XL/_WHO6048-923-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xfVhZw7/0/MWCJWz4c29WtJjZKQ5CXjt97RB245s3vN3q8vSr9z/XL/_WHO6048-923-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xfVhZw7/0/MWCJWz4c29WtJjZKQ5CXjt97RB245s3vN3q8vSr9z/XL/_WHO6048-923-2-XL.jpg",
@@ -2148,30 +2337,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xfVhZw7/0/MRnGzC2SBJNK2g4x9sJHXRqdWQdRLdWR7tRt4z8mS/S/_WHO6048-923-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xfVhZw7/A",
+
     "keywords": [
-      "Native American art prints",
       "Native American fine art photography",
-      "Native American photography",
       "Native American portraits",
+      "Native American art prints",
       "painterly Native American portraits",
       "Indigenous experience",
       "Native American heritage art",
       "Native American tradition",
       "spirit of the West",
       "Western Native American gallery",
+      "fine art Western photography"
     ],
+
     "story": "The sound has already passed.\nWhat remains is the space it left behind.\n\nBreath slows. The ground listens.\nThis moment belongs to what comes after —\nafter the call, after the movement, after the watching eyes turn away.\n\nHe stands where noise once lived,\ncarrying what does not need to be explained.",
-    "notes": "This piece draws its strength from restraint. The composition resists performance, favoring quiet authority and internal gravity. The softened edges and atmospheric handling echo pictorialist influence while allowing cultural identity to remain intact rather than stylized. It is an image that asks the viewer to slow down — to recognize that the most powerful moments often occur after the ceremony ends, when meaning settles into silence.",
+    "notes": "Silence carries the weight here more than any visible action. The figure exists without performance, allowing presence itself to become the subject rather than narrative or event.\n\nThere is a clear lineage here tied to pictorialist restraint and early ethnographic portraiture, but without distance or objectification. The softened edges and tonal quiet pull the viewer into a slower kind of engagement—one that asks for patience rather than reaction. The result is a work that holds space rather than fills it, rewarding those willing to remain with it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 63
+    "sortOrder": 63,
+    contentSource: "ai"
   },
   {
     "id": "i-rR76nKr",
     "title": "The Effort Shows",
-    "description": "The Effort Shows* is a painterly work of Native American fine art photography centered on exertion and immediacy rather than display. Rendered in monochrome with compressed contrast and softened edges, the image foregrounds physical consequence—strain, grip, and motion carried through the body. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "Painterly Native American portrait showing visible exertion and strength, expressing Indigenous experience and the spirit of the American",
+    "description": "A figure drives forward with visible strain, hands locked and body fully committed to the effort. The intensity reads through tension and motion, where nothing is held back and the outcome is carried in the action itself. \n\n© Wayne Heim",
+    "alt": "Man gripping a spear with force, expression strained, captured in a high-intensity painterly Western scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/1/LkgR77BRdwK9NfF4g3mWDL7JKRRzgHzhrcC4tXdvV/XL/_WHO1224-901-902-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/1/LkgR77BRdwK9NfF4g3mWDL7JKRRzgHzhrcC4tXdvV/XL/_WHO1224-901-902-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/3/LmGLCFGHGFbhRmXjs6g5WzPZ4vdbmMZz6V4Jnjdx8/L/_WHO1224-901-902-L.jpg",
@@ -2179,6 +2371,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rR76nKr/3/MWszQ3nXNzWBh4bm2wLQ4JcP4ChQrLQFRbqKZb99C/S/_WHO1224-901-902-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-rR76nKr/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -2192,20 +2385,22 @@ export const galleryData = [
       "spirit of the West",
       "spirit of the American West",
       "Western Native American gallery",
-      "heritage and tradition in art",
+      "heritage and tradition in art"
     ],
+
     "story": "There’s no hiding it now.\n\nMuscle tightens. Breath breaks rhythm.\nThe body answers before the mind can soften it.\n\nWhatever comes next is earned.\nNothing here is borrowed.",
-    "notes": "This image aligns with pictorial traditions that privilege bodily truth over narrative clarity. The tightened posture, angled force lines, and incomplete motion hold the viewer inside effort rather than outcome.\n\nRestrained tonal range and softened transitions prevent theatrical exaggeration, keeping the moment grounded in physical consequence. The work rewards sustained viewing, where meaning accumulates through tension, grip, and the unmistakable visibility of work being done.",
+    "notes": "Restrained tonal range and softened transitions prevent theatrical exaggeration, keeping the moment grounded in physical consequence. The work rewards sustained viewing, where meaning accumulates through tension, grip, and the unmistakable visibility of work being done.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 64
+    "sortOrder": 64,
+    contentSource: "ai"
   },
   {
     "id": "i-qnRRJK2",
     "title": "Carried by the Cry",
-    "description": "Carried by the Cry is a painterly Western fine art photograph that captures motion, force, and embodied expression within Native American narrative tradition. The image depicts a moment of full release—where movement, sound, and intention converge—rendered through a painterly photographic approach. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "Painterly Western fine art photograph of a Native American warrior in motion, gripping a spear and releasing a cry, conveying force, voice",
+    "description": "A surge of motion breaks through restraint as the figure drives forward, voice and effort carried through the body at once. Energy reads in the grip, the expression, and the forward push—nothing held back, nothing softened. This image reflects painterly Native American fine art photography rooted in force, release, and lived intensity. \n\n© Wayne Heim",
+    "alt": "Figure gripping a spear mid-motion, expression intense, captured in a painterly Western action scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qnRRJK2/0/Lx8kQh5JP68gTzbJkt5NkVJfxpDgXjS83TBkg4wfm/XL/_WHO1224-901-902-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qnRRJK2/0/Lx8kQh5JP68gTzbJkt5NkVJfxpDgXjS83TBkg4wfm/XL/_WHO1224-901-902-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qnRRJK2/0/MZPVbT7r5RLRTsfSHGKdCd45FSpWPF39gD7QSHMPM/L/_WHO1224-901-902-L.jpg",
@@ -2215,25 +2410,20 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qnRRJK2/A",
 
     "keywords": [
-      "painterly Western photography",
-      "painterly Western images",
-      "fine art Western photography",
-      "narrative Western art",
       "Native American fine art photography",
       "Native American portraits",
+      "Native American photography",
+      "painterly Native American portraits",
       "Indigenous experience",
       "Native American heritage art",
       "Native American tradition",
-      "spirit of the American West",
-      "American frontier",
-      "frontier life",
-      "Americana photography",
-      "historically themed photography",
-      "cinematic stills",
+      "spirit of the West",
+      "cinematic Western art",
+      "narrative Western photography"
     ],
 
     "story": "The sound does not rise from anger.  \nIt rises from the body remembering what it was made to do.\n\nMuscle, breath, and motion collapse into a single release—no hesitation, no performance. The cry is not aimed outward. It moves through him, carried by the ground beneath his feet and the history beneath his skin.\n\nThis is not violence. It is voice made physical.",
-    "notes": "This image occupies the opposite end of the narrative spectrum from restraint. Where stillness holds power in suspension, motion releases it.\n\nThe figure is not depicted as symbol or archetype, but as presence—caught mid-action, mid-voice, mid-truth. Painterly motion blur and textural depth reinforce the sense that the moment cannot be contained, only witnessed.\n\nCarried by the Cry stands as a statement of embodied history and agency, inviting viewers to confront power not as spectacle, but as something earned, lived, and voiced through the body itself.",
+    "notes": "Force becomes the language here—direct, unfiltered, and fully embodied. The figure is not posed within a story but caught inside its release, where motion carries meaning more clearly than any constructed narrative.\n\nThis work connects to a lineage of Western imagery that leans into physical truth rather than mythic distance. The intensity is grounded, not theatrical, allowing the viewer to feel the effort rather than observe it from afar. It is a piece that holds its power in momentum—what has already been set in motion and cannot be recalled.",
     "rating": 4,
 
     "galleries": [
@@ -2249,8 +2439,8 @@ export const galleryData = [
   {
     "id": "i-fCSxt3j",
     "title": "The Long Line Home",
-    "description": "A painterly fine art photograph portraying a Native American rider moving through land shaped by memory and time. This image emphasizes presence over action, drawing from Western and Native American portrait traditions to convey continuity, endurance, and belonging. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Native American rider on horseback moving forward with quiet resolve — painterly fine art photography",
+    "description": "A Native American rider on horseback moves through open terrain with a steady, composed posture. The image emphasizes calm forward movement, environmental openness, and a grounded sense of presence, characteristic of painterly Native American fine art photography rooted in heritage and continuity. \n\n© Wayne Heim",
+    "alt": "Rider on horseback facing forward, expression calm, moving through open land with quiet resolve.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fCSxt3j/0/MjwhMShpnN37kn3V3GJJjLqtcMBpcLLfkNrPcLP4k/XL/_WHO2172-Edit-2-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fCSxt3j/0/MjwhMShpnN37kn3V3GJJjLqtcMBpcLLfkNrPcLP4k/XL/_WHO2172-Edit-2-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fCSxt3j/0/MjwhMShpnN37kn3V3GJJjLqtcMBpcLLfkNrPcLP4k/XL/_WHO2172-Edit-2-Edit-XL.jpg",
@@ -2258,29 +2448,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fCSxt3j/0/LS7GpQNtwvxnTjTft6JDCBqkQLmTS2C92TpN7CprV/S/_WHO2172-Edit-2-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fCSxt3j/A",
+
     "keywords": [
-      "fine art photography",
+      "Native American fine art photography",
+      "Native American portraits",
       "Native American art prints",
-      "Native American photography",
       "painterly Native American portraits",
       "Indigenous experience",
       "Native American heritage art",
       "Native American tradition",
       "spirit of the West",
       "Western Native American gallery",
+      "fine art Western photography"
     ],
+
     "story": "The road is familiar, even if the years are not.\n\nEach step forward carries the weight of those who came before,\nnot as burden,\nbut as direction.\n\nHe does not rush.\nHome has been waiting longer than he has.",
-    "notes": "This piece is anchored in forward motion without urgency. The rider and horse read as a single, deliberate form—an image built on trust, familiarity, and shared history. The composition echoes the Western canon’s respect for the mounted figure while shifting the emphasis from conquest to continuity. It is a work about return, not arrival, where the land recognizes the rider as much as the rider recognizes the land.",
+    "notes": "Return, rather than arrival, carries the weight here. The figure and horse move as one, not driven by urgency but guided by familiarity—an understanding shaped over time rather than in the moment.\n\nThis work leans into a quieter lineage of Western imagery, where endurance and continuity replace conquest. The forward motion is deliberate, almost reflective, allowing the viewer to feel the passage of time rather than a single event. It is a piece that holds its strength in steadiness—where meaning builds through presence rather than action.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 66
+    "sortOrder": 66,
+    contentSource: "ai"
   },
   {
     "id": "i-7CjNq8p",
     "title": "He Carries the Quiet",
-    "description": "This painterly fine art photograph presents a Native American figure defined by quiet authority rather than action, emphasizing restraint, presence, and vigilance within the spirit of the American West. The composition emphasizes restraint, lived experience, and narrative depth without spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Native American figure holding a rifle in painterly fine art photography",
+    "description": "A Native American figure stands grounded and composed, holding a rifle with quiet authority. The image emphasizes presence, restraint, and lived experience, reflecting the enduring spirit of the West through painterly Native American fine art photography. \n\n© Wayne Heim",
+    "alt": "Native American figure holding a rifle in painterly fine art photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/Lv5JZzTfqN6mFQRrHNXsgCqbQzZ8pmHw8DjCJhBtk/XL/_WHO1979-Edit-XL.jpg",
@@ -2288,6 +2482,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/NBZpn7kfThmWG9VWcd8xsCtx3HfMmNHQcj2RhBjd6/S/_WHO1979-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-7CjNq8p/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -2297,20 +2492,22 @@ export const galleryData = [
       "Indigenous experience",
       "Native American heritage art",
       "Native American tradition",
-      "spirit of the West",
+      "spirit of the West"
     ],
+
     "story": "Nothing presses him forward.\nNothing pulls him back.\n\nThe weight he bears is not the rifle,\nbut the pause before it is needed.\n\nHe stands where sound thins out\nand decisions learn to wait.",
     "notes": "The strength of this piece lies in its restraint. Composition, posture, and softened tonal control place emphasis on psychological presence rather than narrative action, aligning the work with the lineage of Western art that values implication over event. The figure’s stillness becomes the focal point, allowing the viewer to sense history, responsibility, and continuity without instruction. It is a work that rewards patience, revealing its gravity through balance, texture, and quiet resolve.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 67
+    "sortOrder": 67,
+    contentSource: "ai"
   },
   {
     "id": "i-B3mmMvb",
     "title": "Still Before the Wind",
-    "description": "This painterly fine art photograph captures a Native American figure in a moment of stillness, defined by presence rather than action. Rooted in Native American heritage art and Indigenous experience, the image reflects continuity, restraint, and the quiet authority of tradition. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Native American portrait reflecting Indigenous tradition and the spirit of the American West",
+    "description": "A Native American figure stands composed beneath a feathered headdress, wrapped in layered textiles that signal identity, continuity, and place. The image emphasizes presence and quiet authority, drawing from Indigenous experience and rendered through painterly Western fine art photography. \n\n© Wayne Heim",
+    "alt": "Native American man in ceremonial headdress standing calmly with patterned garments in a painterly portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-B3mmMvb/0/M49gwgpcNKnp332BrdD9r3L29S6wPhFpP6mjvdZbs/XL/_WHO3500-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-B3mmMvb/0/M49gwgpcNKnp332BrdD9r3L29S6wPhFpP6mjvdZbs/XL/_WHO3500-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-B3mmMvb/0/LzvFTwSMRHcrLjcx4QPBHvskj4ZT6QP9xtjrH5XmW/L/_WHO3500-Edit-Edit-2-L.jpg",
@@ -2318,31 +2515,42 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-B3mmMvb/0/KFFrLtdLDr4wLwrwLpSHNMhPWX69zhcsqLjFcsCGp/S/_WHO3500-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-B3mmMvb/A",
+
     "keywords": [
-      "Native American art prints",
+      "Western fine art photography",
+      "Native American portrait photography",
+      "Indigenous portrait art",
+      "painterly Western portraits",
+      "Native American heritage photography",
+      "spirit of the West",
+      "historical portrait photography",
+      "cultural fine art prints",
+      "Western wall art",
+      "Indigenous fine art",
       "Native American fine art photography",
       "Native American photography",
-      "Native American portraits",
-      "painterly Native American portraits",
-      "Indigenous experience",
-      "Native American heritage art",
-      "Native American tradition",
-      "spirit of the West",
+      "Native American Portraits",
+      "Native American art prints",
+      "painterly Native American portraits"
     ],
+
     "story": "The horse settles before he does.  \nA breath passes. Then another.\n\nNothing needs deciding yet.  \nThis is the pause where the land listens first.",
-    "notes": "This work draws from pictorialist restraint, where atmosphere and gesture carry more weight than narrative clarity. The composition favors quiet balance over drama, allowing the subject’s presence to anchor the frame rather than perform within it. Soft diffusion and controlled tonal range echo early photographic traditions while maintaining a contemporary stillness, positioning the image as both historically aware and psychologically grounded.",
+    "notes": "Rather than dramatizing the figure, this work settles into stillness as its primary language. The subject is not performing identity—he inhabits it. The softened atmosphere and restrained tonal handling echo pictorialist traditions while allowing cultural presence to carry the weight. It is a piece that invites slow looking, where meaning emerges through posture, adornment, and the quiet confidence of being fully rooted in place.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 68
+    "sortOrder": 68,
+    contentSource: "ai"
   },
   {
     "id": "i-vP6ZvBw",
     "title": "Bearing the Morning",
-    "description": "A painterly fine art photograph honoring Native American tradition through presence, dignity, and restraint. This image reflects Indigenous experience and Native American heritage art within the spirit of the American West, rendered in a soft pictorialist style that emphasizes continuity over spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Painterly Native American fine art photography of a rider moving through the American West",
+    "description": "Mounted against a wide, open backdrop, a Native American figure advances with measured calm, his presence defined by heritage and continuity rather than urgency. Painterly Western fine art photography conveys dignity, restraint, and the enduring rhythm of the land. \n\n© Wayne Heim",
+    "alt": "Mounted Native American man in traditional headdress riding forward across open terrain in painterly Western portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vP6ZvBw/0/LztMwk7dmvd9vsRMzkt49ZL283T2zNv6xKKXjxC7n/XL/_WHO4561-Edit-Edit-2-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vP6ZvBw/0/LztMwk7dmvd9vsRMzkt49ZL283T2zNv6xKKXjxC7n/XL/_WHO4561-Edit-Edit-2-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vP6ZvBw/0/Lf7FNdvNdHwBcvQ2NJ7SKRJk5jS45ngQhQ3jkxs7G/L/_WHO4561-Edit-Edit-2-2-L.jpg",
@@ -2350,6 +2558,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vP6ZvBw/0/Mh7Xc7J7qq2qN29Fr4Q2BZDS3t35gJVRjMFFCshDx/S/_WHO4561-Edit-Edit-2-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vP6ZvBw/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -2359,22 +2568,26 @@ export const galleryData = [
       "Native American heritage art",
       "Native American tradition",
       "spirit of the West",
-      "Western Native American gallery",
+      "Western Native American gallery"
     ],
+
     "story": "He doesn’t ride to be seen.\nHe rides because the land still expects him to pass through it.\n\nThe horse knows the pace. The regalia settles with each step.\nNothing here is hurried. Nothing needs proving.\n\nThe day opens the same way it always has—\nby being met.",
     "notes": "This piece relies on compositional balance and tonal restraint rather than overt drama. The centered posture, measured movement, and softened background echo pictorialist traditions that prioritize atmosphere and psychological presence. The work aligns with a lineage of Western art that values continuity, dignity, and cultural respect, allowing the subject to exist within the frame without explanation or embellishment.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 69
+    "sortOrder": 69,
+    contentSource: "ai"
   },
   {
     "id": "i-FJWqP6b",
     "title": "The Weight of the Draw",
-    "description": "The Weight of the Draw is a painterly Western fine art photograph that captures a Native American figure at full draw, suspended in the charged stillness before release. Rooted in pictorialist tradition and cinematic restraint, the image emphasizes physical tension, emotional focus, and the quiet. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly Western fine art photograph of a Native American figure drawing a bow, captured in a moment of focused stillness and restrained",
+    "description": "At full draw, a Native American figure holds tension in the body rather than releasing it, where breath, memory, and intention align into a single point of focus. This painterly Native American fine art photography emphasizes restraint, discipline, and the quiet authority carried in stillness before action. \n\n© Wayne Heim",
+    "alt": "Figure aiming a bow at full draw, eyes fixed and body steady in a moment of intense concentration.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/3/L5wNj6tj8STXBMMDKQG2XCq9sxtCgJv33Mf2SfRQZ/XL/_WHO5832-920-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/3/L5wNj6tj8STXBMMDKQG2XCq9sxtCgJv33Mf2SfRQZ/XL/_WHO5832-920-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FJWqP6b/3/L5wNj6tj8STXBMMDKQG2XCq9sxtCgJv33Mf2SfRQZ/XL/_WHO5832-920-XL.jpg",
@@ -2385,18 +2598,19 @@ export const galleryData = [
 
     "keywords": [
       "Native American fine art photography",
-      "painterly Western photography",
+      "Native American photography",
+      "Native American portraits",
       "Indigenous portrait art",
-      "Western canon photography",
+      "painterly Native American portraits",
+      "Western fine art photography",
       "narrative Western art",
-      "pictorialist tradition",
-      "cinematic Western image",
+      "cinematic portrait",
       "Native American wall art",
-      "spirit of the American West",
+      "spirit of the West"
     ],
 
     "story": "The moment does not rush him.\n\nMuscle holds. Breath steadies. Time narrows to a single decision carried in the body rather than the mind. The bow is not raised in haste or anger, but with the accumulated memory of practice, necessity, and resolve.\n\nThis is not the instant of release—it is the heavier moment before, when intention settles and the outcome is already known.",
-    "notes": "This image lives in the space where action is earned rather than announced. The power of the work is not found in motion, but in restraint—in the tension carried through posture, grip, and gaze.\n\nEchoing the pictorialist lineage while asserting a contemporary Western voice, The Weight of the Draw rewards long looking. It is a work about readiness, responsibility, and the quiet gravity of decisions that cannot be taken back. Intended for collectors drawn to narrative depth, cultural presence, and images that hold a room without raising their voice.",
+    "notes": "Held tension defines this piece more than any implied release. The figure is not depicted in action, but in the discipline required to arrive at it. The image leans into pictorialist restraint—softened atmosphere, controlled tonal range—allowing the viewer to feel the psychological compression of the moment. It is a work about intention fully realized before it ever becomes visible.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
@@ -2406,8 +2620,8 @@ export const galleryData = [
   {
     "id": "i-BJWt4zd",
     "title": "Still Enough to Hear It",
-    "description": "Still Enough to Hear It is a painterly Western fine art photograph that captures a Native American figure in a moment of heightened awareness and restraint. The composition emphasizes restraint, lived experience, and narrative depth without spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Black and white painterly Western fine art photograph of a Native American figure holding a rifle, seated in stillness and focused attention",
+    "description": "Seated low with a rifle resting across his hands, a Native American figure holds attention inward, grounded in awareness rather than movement. This painterly Western fine art photography reflects restraint, presence, and the quiet discipline carried through lived experience. \n\n© Wayne Heim",
+    "alt": "Seated Native American man holding a rifle, looking off with focused attention in a quiet outdoor setting.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/NJSmXVrmJtPJqH3xdwzJjCb6TJJ6h23nGVfV7PC9F/XL/_WHO0996-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/NJSmXVrmJtPJqH3xdwzJjCb6TJJ6h23nGVfV7PC9F/XL/_WHO0996-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BJWt4zd/0/MZV99wzJ2qPrxfVrqpGMwg28k5NFHthcXwkd6FzHh/L/_WHO0996-Edit-L.jpg",
@@ -2418,18 +2632,21 @@ export const galleryData = [
 
     "keywords": [
       "Native American fine art photography",
-      "painterly Western photography",
+      "Western fine art photography",
+      "Native American portraits",
       "Indigenous portrait art",
-      "Western canon photography",
+      "painterly Western portraits",
+      "Native American heritage photography",
       "narrative Western art",
-      "pictorialist tradition",
-      "cinematic Western image",
+      "cinematic portrait",
       "Native American wall art",
-      "spirit of the American West",
+      "spirit of the West",
+      "Native American photography",
+      "painterly Native American portraits"
     ],
 
     "story": "He does not scan the horizon for movement.  \nHe listens for what changes before it moves.\n\nThe body settles first—weight low, grip relaxed, breath slowed until sound returns to the land. What matters will announce itself eventually. Until then, there is no advantage in haste.\n\nStillness is not absence here. It is attention refined enough to hear what others miss.",
-    "notes": "This image lives in the tension between motion and restraint. Its power comes not from what is happening, but from what is being anticipated. The figure’s posture, gaze, and stillness suggest a learned relationship with time—one shaped by experience rather than urgency.\n\nStill Enough to Hear It belongs to a lineage of Western works that reward patience. It invites long looking and quiet reflection, making it well suited for collectors drawn to narrative subtlety, psychological presence, and images that hold authority without declaring it.",
+    "notes": "What defines this piece is not action, but the readiness beneath it. The figure is settled, yet alert—an embodiment of attention shaped over time. The subdued tonal range and softened edges echo pictorialist influence, allowing the viewer to feel the internal state rather than observe an external event. It is a work about awareness held in reserve, where stillness becomes a form of control.",
     "rating": 4,
 
     "galleries": [
@@ -2443,8 +2660,8 @@ export const galleryData = [
   {
     "id": "i-jWFcDHr",
     "title": "Breath Before Thunder",
-    "description": "A dramatic, painterly Western art photograph capturing a Native American marksman poised in a cloud of dust, rifle steady and eyes sharp. The composition emphasizes restraint, lived experience, and narrative depth without spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Native American man in fringed buckskin aiming a rifle, focused and intense, in a painterly Western art photograph.",
+    "description": "A Native American figure fires a rifle, captured at the instant of release as smoke and force move outward from the barrel. The image focuses on timing, control, and the physical reality of the action within painterly Western fine art photography. \n\n© Wayne Heim",
+    "alt": "Native American man firing a rifle with visible muzzle flash and smoke, captured mid-action.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jWFcDHr/1/KgDDgW7gkmtK9CSqSRMTTXBfrjNfWZJ8vZV7GCb5n/XL/_WHO1458-891-893-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jWFcDHr/1/KgDDgW7gkmtK9CSqSRMTTXBfrjNfWZJ8vZV7GCb5n/XL/_WHO1458-891-893-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jWFcDHr/2/LdbcfBNP7vSgHHNWrGckfSz39HV7dMxkBvkMwjz8M/XL/_WHO1264-894-XL.jpg",
@@ -2452,35 +2669,36 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-jWFcDHr/2/M3q4Xsqb7wrf4tKrcXnCVZmBzL3nbCmRGfrX4tskH/S/_WHO1264-894-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-jWFcDHr/A",
+
     "keywords": [
-      "western art",
-      "western photography",
-      "fine art",
-      "marksman",
-      "native american",
-      "rifle",
-      "dust",
-      "tension",
-      "moment",
-      "action",
-      "tradition",
-      "american west",
-      "buckskin",
-      "resolve",
-      "cinematic",
+      "Native American fine art photography",
+      "Western fine art photography",
+      "Native American portraits",
+      "Indigenous photography",
+      "painterly Western photography",
+      "American West imagery",
+      "rifle marksman",
+      "historical reenactment photography",
+      "cinematic Western scene",
+      "Western wall art",
+      "Native American photography",
+      "Western Native American gallery",
+      "Native American art prints"
     ],
+
     "story": "One shot. For honor... for memory... for the right to tell our story. Dust in my throat, pulse in my ears—breathe. Heartbeat before thunder. Steady hand. Present of day fades to silence. Nothing matters but the mark. We write our chapter with this outcome.",
-    "notes": "A textbook study in split-second tension, this image captures the iconic “moment before the shot” celebrated in both Western art and frontier storytelling. Notice the use of negative space and the way the dust softens the background, echoing classic pictorialist techniques from the early 20th century. The subject’s traditional buckskin fringe and hand-wrought rifle evoke the era’s authenticity, while the pose channels the spirit of countless legendary scouts, hunters, and warriors who defined the American West. It’s not just about action—it’s about honor, focus, and the weight of every decision. Pieces like this often anchor Western-themed collections, serving as both a talking point and a bridge between art, myth, and history.",
+    "notes": "This piece is built around a precise instant—the release itself. The subject is not posed but engaged, with attention fixed and movement resolved into a single outcome. The visual weight comes from timing and clarity rather than embellishment, allowing the viewer to read the action directly without distraction.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 72
+    "sortOrder": 72,
+    contentSource: "ai"
   },
   {
     "id": "i-qFwnr64",
     "title": "The Higher Silence",
-    "description": "The Higher Silence is a painterly Western fine art photograph that reflects Indigenous presence through restraint rather than spectacle. Composed with deliberate vertical separation, the image emphasizes watchfulness, lineage, and quiet authority. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly Western fine art photograph depicting two Indigenous figures positioned in quiet watchfulness, one standing above and one seated",
+    "description": "Two figures occupy different elevations along a weathered rock formation, one standing above while the other sits below, focused on a small object held in her hands. Clothing details—beadwork, fringe, and fabric—are revealed through soft daylight against an open sky. The spacing between them and the surrounding landscape reflects a quiet moment of interaction and continuity within Indigenous experience. This scene is captured as a Native American fine art photograph. \n\n© Wayne Heim",
+    "alt": "Young Native American girl standing above another seated figure on a rock, both in traditional clothing under an open sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qFwnr64/0/NHRVCV3tTXPKBGZNJJ5N2qxNmzKwpJpkRZCd7x44Z/XL/_HF28699-Edit-Edit-4-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qFwnr64/0/NHRVCV3tTXPKBGZNJJ5N2qxNmzKwpJpkRZCd7x44Z/XL/_HF28699-Edit-Edit-4-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qFwnr64/0/NHRVCV3tTXPKBGZNJJ5N2qxNmzKwpJpkRZCd7x44Z/XL/_HF28699-Edit-Edit-4-XL.jpg",
@@ -2490,22 +2708,19 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qFwnr64/A",
 
     "keywords": [
-      "painterly Western photography",
+      "Native American art prints",
       "Native American fine art photography",
-      "Indigenous portrait art",
-      "narrative Western art",
-      "painterly Western images",
-      "American West fine art",
-      "Native American portraits",
-      "Western fine art photography",
-      "heritage and tradition in art",
-      "Indigenous experience",
-      "museum-quality Western photography",
       "Native American photography",
+      "Native American portraits",
+      "Indigenous experience",
+      "Native American heritage art",
+      "Native American tradition",
+      "spirit of the West",
+      "painterly Native American images"
     ],
 
     "story": "They do not speak because nothing here requires explanation. One watches from above, steady and alert. The other listens from below, learning the shape of the world through stillness. This is how knowledge passes—not by instruction, but by proximity. Between them lives a silence earned over generations, a quiet that holds memory, responsibility, and the weight of what must be protected before it can be named.",
-    "notes": "This work draws its strength from compositional restraint and relational space. By separating figures vertically, the image establishes a visual language of guardianship and inheritance without relying on symbolism or overt narrative cues. The silence is intentional—allowing posture, distance, and gaze to carry meaning. Rooted in painterly photographic tradition, The Higher Silence stands as a meditation on continuity and responsibility, offering collectors a piece that deepens with time rather than declares itself at first glance.",
+    "notes": "This piece draws its strength from separation and relationship rather than overt action. The vertical positioning creates a quiet hierarchy without force, allowing the viewer to move between figures rather than settle on one. It echoes traditions of visual storytelling where knowledge is passed through proximity and observation rather than instruction. The restraint keeps the moment open, allowing meaning to form slowly over time rather than declare itself immediately.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
@@ -2515,8 +2730,8 @@ export const galleryData = [
   {
     "id": "i-StJWnTh",
     "title": "He Stands Ready",
-    "description": "This painterly fine art photograph presents a Native American figure defined by readiness rather than action, capturing the quiet authority that exists before decision becomes motion. Rooted in restraint and historical awareness, the image emphasizes presence, vigilance, and resolve. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "Native American warrior standing with rifle in painterly fine art photography",
+    "description": "Facing forward with a rifle held at rest, a Native American figure stands composed, defined by readiness and quiet control rather than movement. The image reflects presence, vigilance, and continuity within painterly Western fine art photography. \n\n© Wayne Heim",
+    "alt": "A composed figure in traditional regalia holds a rifle with quiet authority in a painterly Native American portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/2/M9RQmdb6bMtSXHTmXXxfJ6Kpwcd9hQpD5BRNL6w5Z/XL/_HF24203-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/2/M9RQmdb6bMtSXHTmXXxfJ6Kpwcd9hQpD5BRNL6w5Z/XL/_HF24203-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/0/KHwcQBfWJ2Hv55Qg43gzrJ56gjbWCvvVr6PhzpRJm/XL/_HF24217-Edit-XL.jpg",
@@ -2524,29 +2739,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-StJWnTh/0/KdGjW2RxRHTTfWBCt7sJXq95dB9g3RV5bw9sbnLSb/S/_HF24217-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-StJWnTh/A",
+
     "keywords": [
-      "fine art photography",
-      "Native American art prints",
-      "Native American photography",
+      "Native American fine art photography",
+      "Western fine art photography",
       "Native American portraits",
-      "Indigenous experience",
+      "Indigenous portrait photography",
+      "painterly Western portraits",
       "Native American heritage art",
-      "Native American tradition",
-      "spirit of the West",
-      "painterly Native American images",
+      "cultural fine art prints",
+      "Western wall art",
+      "Indigenous experience",
+      "spirit of the West"
     ],
+
     "story": "He does not look for trouble.\nHe waits for it to decide whether it will arrive.\n\nThe rifle is not raised, not lowered.\nHeld where it belongs — between what has already happened\nand whatever comes next.\n\nNothing moves.\nThat is how he knows the moment is close.",
-    "notes": "This work draws its power from what is withheld rather than displayed. The composition echoes the tradition of Western and frontier painting where tension is built through posture, stillness, and psychological weight instead of overt drama. The softened edges and muted palette place the figure within a timeless visual language, allowing the subject to feel anchored to both land and lineage. It is a piece that rewards slow looking, revealing its strength through restraint and compositional balance rather than spectacle.",
+    "notes": "What carries the image is not action, but restraint. The figure is positioned between past and outcome, holding a readiness that never needs to announce itself. The visual language stays grounded and direct, allowing posture and presence to communicate the weight of experience without embellishment.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 74
+    "sortOrder": 74,
+    contentSource: "ai"
   },
   {
     "id": "i-567K6d3",
     "title": "Across Quiet Water",
-    "description": "Across Quiet Water* is a painterly work of Native American fine art photography centered on shared awareness rather than movement. Softened light and compressed distance slow the moment, allowing heritage and tradition to speak through stillness. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Native American portrait of two figures in a canoe, expressing shared vigilance, heritage, and the spirit of the American West",
+    "description": "A painterly fine art photograph of two Native American figures seated in a canoe moving across calm water, surrounded by tall reeds and soft reflections. The image focuses on stillness, presence, and the relationship between the figures and the quiet surface of the water.\n\n© Wayne Heim",
+    "alt": "Painterly Native American portrait of two figures in a canoe, expressing shared vigilance, heritage, and the spirit of the American West.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-567K6d3/0/NdNswj9fNLQ73JWX7LPNKG5hsSZkcXf5sQKsQ5zPJ/XL/_WHO6112-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-567K6d3/0/NdNswj9fNLQ73JWX7LPNKG5hsSZkcXf5sQKsQ5zPJ/XL/_WHO6112-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-567K6d3/2/Mx2T2f8btVBsSh3GZLH9sGpmJ8JTqXJSp7WncH7RS/L/_WHO5788-Edit-L.jpg",
@@ -2554,6 +2773,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-567K6d3/2/KXcQp4VxKh58P96DwFGtFjhB2xc9t4k8DjVpnmc5P/S/_WHO5788-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-567K6d3/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -2567,20 +2787,22 @@ export const galleryData = [
       "spirit of the West",
       "spirit of the American West",
       "Western Native American gallery",
-      "heritage and tradition in art",
+      "heritage and tradition in art"
     ],
+
     "story": "The canoe barely disturbs the surface.\n\nReeds bend, then settle.  \nSound carries farther than it should.\n\nThey don’t speak.  \nThey read what the water is willing to show.",
     "notes": "This piece draws from pictorial traditions that favor atmosphere and relational tension over narrative resolution. The paired figures establish a quiet dialogue within the frame, their stillness reinforced by softened edges and restrained tonal contrast.\n\nCompositionally, the canoe becomes a stabilizing axis against open water and distant grass, allowing negative space to function as narrative weight. The work aligns with Western art traditions that privilege dignity, continuity, and shared presence—inviting prolonged viewing rather than immediate interpretation.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 75
+    "sortOrder": 75,
+    contentSource: "ai"
   },
   {
     "id": "i-JbWnV3V",
     "title": "Unspoken Lineage",
-    "description": "Unspoken Lineage* is a painterly work of Native American fine art photography centered on continuity rather than ceremony. The image favors restraint—softened edges, controlled light, and quiet bearing—to allow heritage to register as lived presence. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly Native American portrait expressing Indigenous experience, tradition, and unspoken lineage through quiet presence",
+    "description": "A painterly fine art photograph of a Native American man standing outdoors in traditional regalia, wearing a horned headdress and holding a relaxed, grounded posture. The image emphasizes quiet presence, heritage, and lived experience within a natural setting. \n\n© Wayne Heim",
+    "alt": "A Native American man in traditional dress with a horned headdress stands calmly in a painterly portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/K2M9dDMLGdbLRRHvzZqxj4rpFSrP2tjCLP937GzPW/XL/_WHO2117-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/K2M9dDMLGdbLRRHvzZqxj4rpFSrP2tjCLP937GzPW/XL/_WHO2117-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/M3d9mnw38Tn6p4P4MWdv5JKVN9DpJCgHJdfRRb2cM/XL/_WHO2415-Edit-XL.jpg",
@@ -2588,33 +2810,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JbWnV3V/0/KtnQwtdQCKc7xGCx6g9Px34SdLNTjXpxjGsnvQxzV/S/_WHO2415-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-JbWnV3V/A",
+
     "keywords": [
       "Native American fine art photography",
-      "Native American photography",
-      "Native American Portraits",
+      "Native American portraits",
+      "Indigenous portrait photography",
       "painterly Native American portraits",
-      "Native American art prints",
-      "Native American wall art",
       "Native American heritage art",
-      "Native American tradition",
+      "cultural fine art prints",
+      "Western wall art",
       "Indigenous experience",
       "spirit of the West",
-      "spirit of the American West",
-      "Western Native American gallery",
-      "heritage and tradition in art",
+      "Native American art prints"
     ],
+
     "story": "Nothing needs explaining.\n\nWhat he carries isn’t for display.  \nIt settles into posture, into breath, into the way he stands without addressing the room.\n\nSome things survive by being lived.\nNot named.",
-    "notes": "This image aligns with pictorial traditions that privilege bearing over action and continuity over event. The subject’s stillness and understated posture allow lineage to emerge through presence rather than symbol",
+    "notes": "Carried through this piece is a sense of continuity rather than display. The figure’s posture and stillness allow heritage to register as something lived, not performed. The image holds attention through restraint, offering a quiet, enduring presence that reveals more the longer it is considered.",
     "rating": 2,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 76
+    "sortOrder": 76,
+    contentSource: "ai"
   },
   {
     "id": "i-RwCs5gt",
     "title": "The Camp Holds",
-    "description": "The Camp Holds* is a painterly Western fine art photograph centered on land as witness rather than stage. The scene is defined by stillness—structures at rest, weather passing through, time compressed into place. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Painterly Western landscape with historic Native American camp, expressing memory, stillness, and the spirit of the American West",
+    "description": "A quiet Native American camp set within open landscape, featuring tipis among trees and low brush beneath a moody sky. The image captures still ground, weathered terrain, and a sense of place shaped by history and time. \n\n© Wayne Heim",
+    "alt": "Tipis and trees stand in a quiet Native American camp within a painterly Western landscape under a cloudy sky",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RwCs5gt/0/KhqxmLmsRCX4Wp6jBPGRpKqxk7DBXDN9bMcZFzvM6/XL/_HF25562-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RwCs5gt/0/KhqxmLmsRCX4Wp6jBPGRpKqxk7DBXDN9bMcZFzvM6/XL/_HF25562-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RwCs5gt/0/L3XCXC2B9xFc2pBzqkrT9NMfRgSLJkqgdWvdWH6rj/L/_HF25562-Edit-2-L.jpg",
@@ -2622,6 +2844,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RwCs5gt/0/L4hcJrXGVQqNmDq9g6HmGX4zbXcNMmJ3NFrd7vKNx/S/_HF25562-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RwCs5gt/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -2631,20 +2854,22 @@ export const galleryData = [
       "heritage and tradition in art",
       "spirit of the West",
       "spirit of the American West",
-      "Western Native American gallery",
+      "Western Native American gallery"
     ],
+
     "story": "No one speaks, and nothing has moved on.\n\nThe ground keeps its shapes.\nThe shelters still know where they stood.\n\nWhat happened here doesn’t ask to be reenacted.\nIt remains.",
     "notes": "This work aligns with pictorial traditions that privilege place over presence, allowing absence to carry narrative weight. The composition resists central focus, encouraging the eye to move slowly across ground, shelter, and sky as equal participants.\n\nMuted color, softened transitions, and restrained contrast remove the scene from illustration and return it to contemplation. The photograph invites prolonged viewing, where meaning accumulates through attention to land, spacing, and the quiet persistence of what remains.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 77
+    "sortOrder": 77,
+    contentSource: "ai"
   },
   {
     "id": "i-zjtVmT8",
     "title": "Through Still Waters",
-    "description": "A suspenseful, painterly Western art photograph capturing a Native American man poised in a canoe with bow drawn, slipping through misty water and swaying reeds. The composition emphasizes restraint, lived experience, and narrative depth without spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Native American man in a canoe, bow drawn, moving through misty reeds and water in painterly Western art photograph.",
+    "description": "Positioned along a rocky ridge, three Native American riders on horseback overlook a wide stretch of open terrain dotted with trees and brush. The scene conveys elevation, distance, and a quiet sense of watchfulness within the surrounding landscape. \n\n© Wayne Heim",
+    "alt": "Three Native American riders on horseback stand along a rocky ridge in a painterly Western landscape.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zjtVmT8/0/MNwKQJwzS4467v7ZQBThSHJmhXkmThTC6psMst99S/XL/_WHO0336-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zjtVmT8/0/MNwKQJwzS4467v7ZQBThSHJmhXkmThTC6psMst99S/XL/_WHO0336-Edit-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zjtVmT8/2/M3qp9wzQxvR46jHxthhGFpWWsJQfqJwnD8FsmjPTM/L/_WHO0707-Edit-Edit-Edit-L.jpg",
@@ -2652,35 +2877,35 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zjtVmT8/2/Kc9kjVchdngh9CbKGChdHL4KBPK4QLVjWQFVnVfW3/S/_WHO0707-Edit-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zjtVmT8/A",
+
     "keywords": [
-      "western art",
-      "western photography",
-      "fine art",
-      "native american",
-      "canoe",
-      "river",
-      "crossing",
-      "water",
-      "stealth",
-      "frontier",
-      "story",
-      "adventure",
-      "journey",
-      "historical",
-      "painterly",
+      "Native American fine art photography",
+      "Western fine art photography",
+      "Native American riders",
+      "Indigenous portrait photography",
+      "painterly Western landscape",
+      "Native American heritage art",
+      "Western wall art",
+      "spirit of the West",
+      "frontier landscape",
+      "historical Western photography",
+      "Native American photography",
+      "Native American art prints"
     ],
+
     "story": "Rustle of thistle, swaying of reeds… Mist curling round paddle strokes and ripples. Element of surprise is ours. Bow now drawn, breath held in. Calculating. In a flash, we light this fire.",
-    "notes": "Heim’s composition turns the river into a stage: layered mist, reeds, and water lead the viewer to the poised archer, every detail heightening the sense of anticipation. Painterly tones, carefully orchestrated light, and subtle reflection give this piece the narrative depth of classic Western art, with a fresh cinematic edge. For collectors, it’s a moment of quiet tension—caught between strategy and action, legend and lived memory.",
+    "notes": "Set above the surrounding terrain, the figures read as observers rather than participants. The elevation creates distance, allowing the land to carry equal weight in the image. The piece holds in a space of awareness—where presence, position, and environment define the experience more than action.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 78
+    "sortOrder": 78,
+    contentSource: "ai"
   },
   {
     "id": "i-FBQjX95",
     "title": "The Draw Holds",
-    "description": "The Draw Holds* is a painterly work of Native American fine art photography focused on restraint and unresolved tension. The image centers on intention rather than outcome, compressing time at the moment before release. Part of the Facing History series in Western fine art photography. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Painterly Native American portrait at full draw, capturing Indigenous experience, restraint, and the spirit of the American West",
+    "description": "At full draw, a Native American archer stands in shallow water with bow tensioned and focus fixed forward. The scene captures control, balance, and readiness, with water and air held still around the figure. \n\n© Wayne Heim",
+    "alt": "A Native American archer stands in water with bow fully drawn, focused and steady in a painterly portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FBQjX95/1/MTZqWw5L2w4HqzGcpSgsFt2kVzQ87ZxVxbrm48hWc/XL/_WHO5832-920-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FBQjX95/1/MTZqWw5L2w4HqzGcpSgsFt2kVzQ87ZxVxbrm48hWc/XL/_WHO5832-920-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FBQjX95/1/MTZqWw5L2w4HqzGcpSgsFt2kVzQ87ZxVxbrm48hWc/XL/_WHO5832-920-2-XL.jpg",
@@ -2688,33 +2913,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FBQjX95/1/LJMGMHT6bVMF7vCdsKKX353Wn8p6WN6Kg4SxKnqT8/S/_WHO5832-920-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FBQjX95/A",
+
     "keywords": [
       "Native American fine art photography",
-      "Native American photography",
-      "Native American Portraits",
+      "Native American portraits",
+      "Indigenous portrait photography",
       "painterly Native American portraits",
-      "Native American art prints",
-      "Native American wall art",
       "Native American heritage art",
-      "Native American tradition",
+      "Western fine art photography",
+      "Native American wall art",
       "Indigenous experience",
       "spirit of the West",
-      "spirit of the American West",
-      "Western Native American gallery",
-      "heritage and tradition in art",
+      "cultural fine art prints"
     ],
+
     "story": "The bow is already asking its question.\n\nBreath tightens. The string hums.\nEverything else waits its turn.\n\nHe does not rush what cannot be taken back.\nThe moment holds him as much as he holds it.",
-    "notes": "This image operates in a lineage that values tension held in suspension rather than narrative payoff. The full draw becomes a structural device—locking the composition into a state of controlled imbalance where outcome is deliberately withheld.\n\nSoft focus transitions and restrained contrast prevent dramatization, keeping attention on posture, line, and intent. The work aligns with Western pictorial traditions that privilege discipline, internal control, and psychological weight, rewarding prolonged viewing rather than immediate resolution.",
+    "notes": "Suspended between action and release, the image holds in a space where control defines the moment. The tension is physical but contained, expressed through posture, line, and focus rather than motion. It is a study in restraint, where outcome is secondary to the discipline required to hold it.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 79
+    "sortOrder": 79,
+    contentSource: "ai"
   },
   {
     "id": "i-9FCHdBp",
     "title": "Watching the Sky Settle",
-    "description": "A painterly fine art photograph portraying a Native American figure in a moment of stillness and awareness. Rooted in Indigenous experience and Native American tradition, this image emphasizes presence, continuity, and quiet authority rather than spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "Painterly Native American portrait expressing Indigenous heritage and quiet authority",
+    "description": "Looking upward, a Native American man stands beside his horse, holding a staff with a feathered adornment. The scene conveys stillness, patience, and awareness, with the figure grounded against a soft, open sky. \n\n© Wayne Heim",
+    "alt": "A figure in traditional Native American regalia looks upward while standing beside a horse and holding a staff in a painterly portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9FCHdBp/0/KK3x6sqdPxWSLfqQrGGdzKsRntf3Fj2M5xPRfMcNp/XL/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9FCHdBp/0/KK3x6sqdPxWSLfqQrGGdzKsRntf3Fj2M5xPRfMcNp/XL/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9FCHdBp/1/NPhQJzPJWN6qmrcq8wNbcTf9sxKTF5kwGdnhpXjsJ/L/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-L.jpg",
@@ -2722,29 +2947,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9FCHdBp/1/LQLQjfr8Zk7LJZRzdctqk28dsGV6kt6mJQq6GDLTH/S/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9FCHdBp/A",
+
     "keywords": [
-      "Native American art prints",
       "Native American fine art photography",
-      "Native American photography",
       "Native American portraits",
-      "Indigenous experience",
+      "Indigenous portrait photography",
+      "painterly Native American portraits",
       "Native American heritage art",
-      "Native American tradition",
-      "painterly Native American images",
+      "Western fine art photography",
+      "Native American wall art",
+      "Indigenous experience",
       "spirit of the West",
+      "cultural fine art prints"
     ],
+
     "story": "He does not look up for answers.\nHe looks up to measure time.\n\nThe sky shifts, light softens, and the moment stretches long enough to listen.\nWhat he carries is not urgency — it is patience, earned and practiced.\n\nSome decisions are made before movement ever begins.\nThis is one of them.",
-    "notes": "This work draws strength from restraint, aligning with a pictorialist tradition where atmosphere and intention outweigh overt action. The composition emphasizes vertical balance and negative space, allowing the figure to occupy the frame with calm authority rather than dominance. Subtle tonal control and softened edges evoke the quiet endurance found in historic Native American portraiture, positioning the image as contemplative rather than illustrative. The result is a piece that rewards sustained viewing, offering presence, dignity, and continuity rather than narrative resolution.",
+    "notes": "Held in a quiet upward gaze, the figure reflects a relationship with time rather than urgency. The presence of the horse and staff reinforces continuity and lived experience, while the restrained posture allows the image to settle into stillness rather than action.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 80
+    "sortOrder": 80,
+    contentSource: "ai"
   },
   {
     "id": "i-48G2HVM",
     "title": "Carrying What Remains",
-    "description": "A painterly fine art Western photograph portraying a Native American figure in quiet motion, defined by restraint rather than spectacle. This image emphasizes inward reflection, continuity, and the lived weight of memory, rendered through cinematic light and softened texture. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly fine art Western photograph of a Native American figure walking in quiet reflection.",
+    "description": "Head lowered and eyes cast down, a Native American figure moves forward through a muted landscape, defined by quiet motion and inward focus. The image reflects restraint, presence, and continuity within painterly Western fine art photography. \n\n© Wayne Heim",
+    "alt": "A Native American figure walks forward with head lowered in a quiet, reflective scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-48G2HVM/0/MZ4cWThBh2qmvCss5XrCDcZmb7CpCcWXwHJFLRfwL/XL/_WHO1469-889-890-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-48G2HVM/0/MZ4cWThBh2qmvCss5XrCDcZmb7CpCcWXwHJFLRfwL/XL/_WHO1469-889-890-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-48G2HVM/0/MZ4cWThBh2qmvCss5XrCDcZmb7CpCcWXwHJFLRfwL/XL/_WHO1469-889-890-XL.jpg",
@@ -2752,6 +2981,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-48G2HVM/0/LgDgj2Ntj2LpDbRWNrscBNWC9bf7FkcRjMRRGRcmD/S/_WHO1469-889-890-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-48G2HVM/A",
+
     "keywords": [
       "fine art photography",
       "painterly western photography",
@@ -2766,20 +2996,22 @@ export const galleryData = [
       "painterly Native American portraits",
       "Native American fine art photography",
       "Native American photography",
-      "Native American Portraits",
+      "Native American Portraits"
     ],
+
     "story": "He doesn’t look up.  \nNot out of shame—out of habit.  \nThe ground remembers more than faces ever will.\n\nEach step settles something old.  \nNames, places, moments that no longer ask to be spoken.  \nWhat’s carried isn’t heavy because of weight—but because it stays.",
     "notes": "This work is built on restraint. The downward gaze, softened edges, and muted palette place the emphasis on interior life rather than outward identity. Compositionally, the figure is allowed space to exist within atmosphere rather than dominate it, echoing traditions of pictorialism and narrative Western art where meaning emerges slowly. The image functions as a pause—an acknowledgment that history is often carried forward quietly, one step at a time.",
     "rating": 3,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 82
+    "sortOrder": 82,
+    contentSource: "ai"
   },
   {
     "id": "i-VVwZ7gM",
-    "title": "Brothers of the Open Country",
-    "description": "A powerful painterly Western portrait depicting the quiet unity between two frontier companions—one Indigenous, one a seasoned trapper—standing beside a saddled horse under dramatic skies. The composition emphasizes restraint, lived experience, and narrative depth without spectacle. Part of the Facing History series in Western fine art photography. © Wayne Heim. Offered as an archival fine art print for Western art collectors.",
-    "alt": "Indigenous scout and frontier trapper standing together with a horse, painterly Western portrait.",
+    "title": "Open Country Brothers",
+    "description": "Two seasoned frontiersmen stand beside a saddled horse beneath a vast Western sky, one pointing toward the distant horizon as if tracing the path of memory across the open range. The painterly Western portrait captures a moment of quiet alliance between cultures and lifetimes shaped by the frontier. Rich textures, historic detail, and cinematic light create a narrative-driven scene that reflects both companionship and the shifting tides of the American West.\n\n© Wayne Heim",
+    "alt": "Indigenous scout and frontier trapper standing beside a horse under dramatic prairie sky, painterly Western portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MQ8W8ps65TvmVMWnhxSMpH4zqg9P8bCR5qvzsnXNz/XL/_HF29136-Edit-Edit-3-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-VVwZ7gM/4/MCjVLLscvMzW9txvBcpWQPBbzgNPwjQwS4sWtqqvG/L/_HF29136-Edit-Edit-3-2-L.jpg",
@@ -2804,6 +3036,23 @@ export const galleryData = [
       "cowboy art",
       "fine art Western photography",
       "painterly Western photograph",
+      "Western Cowboy Portraits",
+      "western cowboy art",
+      "painterly Western images",
+      "wild west painterly photography",
+      "western painterly photography",
+      "cowboy portrait",
+      "cowboy painting art",
+      "fine art cowboy photography",
+      "historic western prints",
+      "Engrained Prints",
+      "Engrained Series",
+      "photography printed on wood",
+      "Native American art prints",
+      "Native American fine art photography",
+      "Native American photography",
+      "Native American Portraits",
+      "painterly Native American portraits"
     ],
 
     "story": "Sharp fall air hangs heavy like morning dew.\nChange is in the air—seasons and society, both forcing their own agenda upon this land.\n\nThey come by wagonload now, each one hoping for a new beginning—hunting for answers, a fresh start, or just a path forward.\n\nCarving, forging, reshaping this life with Eastern wealth and virtues, they claim what’s ours for theirs.\nYears, old friend, we shared this place as brothers—one mind - wrapped in different cloths.\n\nClouds of change gather, dappled and restless, over the valley floor.\nBoth season and change move at will, ushering a future that neither hope nor protest can hold back.",
@@ -2817,8 +3066,8 @@ export const galleryData = [
   {
     "id": "i-RnKtV3Z",
     "title": "The Higher Silence",
-    "description": "The Higher Silence is a painterly Western fine art photograph that reflects Indigenous presence through restraint rather than spectacle. Composed with deliberate vertical separation, the image emphasizes watchfulness, lineage, and quiet authority. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Western fine art photograph depicting two Indigenous figures positioned in quiet watchfulness, one standing above and one seated",
+    "description": "Two Indigenous figures occupy different elevations, one standing above while the other sits below, connected through stillness and shared presence. The image emphasizes watchfulness, relationship, and continuity within painterly Western fine art photography. \n\n© Wayne Heim",
+    "alt": "Two Native American figures, one standing above and one seated below, positioned in quiet observation.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RnKtV3Z/1/L74G3WLtCTG8wtjWz42CqTM8LqSJPPrxfXXSRLwrc/XL/_HF28699-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RnKtV3Z/1/L74G3WLtCTG8wtjWz42CqTM8LqSJPPrxfXXSRLwrc/XL/_HF28699-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RnKtV3Z/1/L74G3WLtCTG8wtjWz42CqTM8LqSJPPrxfXXSRLwrc/XL/_HF28699-Edit-Edit-2-XL.jpg",
@@ -2828,22 +3077,22 @@ export const galleryData = [
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RnKtV3Z/A",
 
     "keywords": [
-      "painterly Western photography",
       "Native American fine art photography",
-      "Indigenous portrait art",
-      "narrative Western art",
-      "painterly Western images",
-      "American West fine art",
-      "Native American portraits",
       "Western fine art photography",
-      "heritage and tradition in art",
+      "Native American portraits",
+      "Indigenous portrait photography",
+      "painterly Western photography",
+      "narrative Western art",
+      "Native American heritage art",
+      "cultural fine art prints",
+      "Western wall art",
       "Indigenous experience",
-      "museum-quality Western photography",
-      "Native American photography",
+      "Native American art prints",
+      "Native American photography"
     ],
 
     "story": "They do not speak because nothing here requires explanation. One watches from above, steady and alert. The other listens from below, learning the shape of the world through stillness. This is how knowledge passes—not by instruction, but by proximity. Between them lives a silence earned over generations, a quiet that holds memory, responsibility, and the weight of what must be protected before it can be named.",
-    "notes": "This work draws its strength from compositional restraint and relational space. By separating figures vertically, the image establishes a visual language of guardianship and inheritance without relying on symbolism or overt narrative cues. The silence is intentional—allowing posture, distance, and gaze to carry meaning. Rooted in painterly photographic tradition, The Higher Silence stands as a meditation on continuity and responsibility, offering collectors a piece that deepens with time rather than declares itself at first glance.",
+    "notes": "The strength of this work comes from the relationship between the two figures rather than any single action. Their positions suggest awareness, guidance, and continuity without requiring explanation. The image invites the viewer to read the connection through posture and distance, allowing meaning to emerge gradually through observation.",
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
@@ -2852,9 +3101,9 @@ export const galleryData = [
   },
   {
     "id": "i-q3f95K3",
-    "title": "Held in Profile",
-    "description": "A painterly Native American portrait defined by restraint and quiet authority. This fine art photograph honors Indigenous presence through stillness rather than spectacle, drawing on Native American tradition, heritage, and lived continuity. Part of the Facing History series in Western fine art photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Native American portrait in profile expressing Indigenous heritage and quiet authority.",
+    "title": "The Weight of Feathers",
+    "description": "A profile view holds the figure in quiet focus, gaze set beyond the frame as the feathered headdress rises with weight and presence. The moment centers on identity and continuity, where what is carried is felt more than shown. \n\n© Wayne Heim",
+    "alt": "Side profile of a Native American man wearing a feathered headdress, standing in a calm and reflective moment.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-q3f95K3/1/NXnpdTwR53rB98VnnGFwSvFwnRLCxBRqnXMzfBBn9/XL/_WHO6048-922-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-q3f95K3/1/NXnpdTwR53rB98VnnGFwSvFwnRLCxBRqnXMzfBBn9/XL/_WHO6048-922-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-q3f95K3/1/NXnpdTwR53rB98VnnGFwSvFwnRLCxBRqnXMzfBBn9/XL/_WHO6048-922-XL.jpg",
@@ -2862,33 +3111,33 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-q3f95K3/1/LfGKqfbkgsx7rCrWqnNL45Bj43Hv4pktKFScTwZck/S/_WHO6048-922-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-q3f95K3/A",
+
     "keywords": [
-      "a",
-      "fine art",
-      "photography",
-      "archival",
-      "historical",
-      "western",
-      "portrait",
-      "Native American tradition",
-      "Native American heritage art",
-      "Indigenous experience",
+      "Native American art prints",
+      "Native American fine art photography",
       "Native American photography",
+      "Native American portraits",
+      "painterly Native American portraits",
       "spirit of the West",
-      "painterly Native American images",
+      "Western Native American gallery",
+      "Indigenous experience",
+      "Native American heritage art",
+      "Native American wall art"
     ],
-    "story": "He doesn’t look toward the noise.  \nHe listens past it.\n\nWhat matters isn’t approaching—it’s already here.  \nCarried in posture. In breath. In the way stillness settles before choice.\n\nNothing needs announcing.  \nHistory knows where to stand.",
-    "notes": "This work relies on compositional restraint—using profile, softened edges, and muted contrast to let presence carry meaning. The painterly treatment echoes pictorialist traditions while maintaining contemporary narrative clarity. Rather than depict action, the image holds tension in suspension, offering a study in dignity, continuity, and the quiet authority of standing one’s ground.",
+
+    "story": "He does not look toward the past, yet it rests on him all the same.  \nEach feather carries a season, a decision, a name spoken once and never again.  \nHe stands still—not from hesitation, but from knowing exactly where he belongs.\n\nWhat presses on his shoulders is not ceremony.  \nIt is memory, held upright.",
+    "notes": "Identity anchors this image through profile and bearing rather than direct engagement. The turned gaze shifts attention away from the viewer, placing emphasis on what lies beyond the frame. The headdress introduces vertical weight and historical presence, while the softened surroundings reduce distraction. The result is a work that holds its meaning through quiet continuity, allowing heritage to be felt as a living, carried presence rather than a fixed symbol.",
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 85
+    "sortOrder": 85,
+    contentSource: "ai"
   },
   {
     "id": "i-sSHtMSC",
-    "title": "Before the Trigger Breaks",
-    "description": "A painterly fine art photograph capturing a moment of controlled tension and resolve within Native American history. Rendered with restraint and cinematic stillness, this image reflects Indigenous experience shaped by focus, discipline, and consequence. Part of the Facing History series in Western fine art photography. © Wayne Heim. Available as archival Western wall art for collectors of fine art photography.",
-    "alt": "Native American archer holding aim in a moment of tension — fine art photography",
+    "title": "Held Breath",
+    "description": "A rifle is drawn to shoulder as a man narrows his focus, sighting down the barrel with controlled stillness. Dust and light drift through the frame, softening the edges while holding attention on the act of aim. This Native American fine art photography portrait reflects heritage and tradition within the spirit of the American West. \n\n© Wayne Heim",
+    "alt": "Figure aiming a long rifle with intense concentration, framed by drifting haze and softened light.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sSHtMSC/2/LdbcfBNP7vSgHHNWrGckfSz39HV7dMxkBvkMwjz8M/XL/_WHO1264-894-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sSHtMSC/2/LdbcfBNP7vSgHHNWrGckfSz39HV7dMxkBvkMwjz8M/XL/_WHO1264-894-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sSHtMSC/2/LdbcfBNP7vSgHHNWrGckfSz39HV7dMxkBvkMwjz8M/XL/_WHO1264-894-XL.jpg",
@@ -2896,29 +3145,38 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sSHtMSC/2/M3q4Xsqb7wrf4tKrcXnCVZmBzL3nbCmRGfrX4tskH/S/_WHO1264-894-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sSHtMSC/A",
+
     "keywords": [
-      "Native American art prints",
-      "Native American fine art photography",
+      "fine art",
+      "photography",
+      "archival",
+      "historical",
+      "western",
+      "portrait",
       "Native American photography",
-      "Native American portraits",
-      "Indigenous experience",
-      "heritage and tradition in art",
-      "Native American tradition",
+      "Native American fine art photography",
+      "Native American art prints",
+      "Native American Portraits",
+      "painterly Native American portraits",
       "painterly Native American images",
-      "spirit of the American West",
+      "Indigenous experience",
+      "spirit of the West",
+      "heritage and tradition in art"
     ],
-    "story": "The world has narrowed to a single line.\n\nBreath held. Weight settled. Time stretched thin enough to tear.\nEverything that mattered arrived before this moment—\nand nothing beyond it has been decided yet.\n\nHe does not rush.\nHe waits for the instant when hesitation disappears.",
-    "notes": "This work draws its strength from restraint rather than action. The composition deliberately suspends resolution, allowing tension to exist without release. Painterly diffusion softens the environment while sharpening intent, placing the viewer inside the moment just before consequence. Influenced by the narrative discipline of pictorialism and the psychological weight found in historic Western and Indigenous portraiture, the image invites contemplation rather than conclusion—an enduring pause that rewards sustained viewing.",
+
+    "story": "The world narrows to a single line.\nWind pauses. Sound falls away.\nEverything that mattered a moment ago no longer applies.\n\nThis is the space between decision and consequence—\nwhere instinct speaks louder than memory,\nand time forgets how to move.\n\nNothing advances.\nNothing retreats.\nThe breath stays where it is.",
+    "notes": "Stillness becomes the defining force in this image, where tension is carried through alignment rather than motion. The horizontal line of the rifle creates a visual axis that anchors the frame, guiding the eye while reinforcing the subject’s focus. The surrounding atmosphere softens the environment, removing distraction and isolating the act of aim as the central event. This restraint places the image within a tradition of Western figuration where action is implied but not yet released, holding the viewer at the threshold between intention and outcome.",
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 86
+    "sortOrder": 86,
+    contentSource: "ai"
   },
   {
     "id": "i-Jbxc4G6",
     "title": "Still Enough to Aim",
-    "description": "A painterly fine art photograph capturing a moment of disciplined stillness before action. Rather than depicting motion or impact, this image centers on vigilance, restraint, and the psychological weight of readiness. Part of the Facing History series in Western fine art photography. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Native American archer holding a drawn bow in a moment of stillness, rendered in painterly fine art photography emphasizing restraint",
+    "description": "Set low in the water, a Native American archer draws a bow from within a canoe, eyes fixed and posture steady. The scene captures focus, control, and readiness, with the surrounding water held quiet around the figure. \n\n© Wayne Heim",
+    "alt": "An archer in a canoe draws a bow while aiming forward in a calm, painterly scene.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/0/LPRCpfjRSRXG4bxRszMpfrm7XnssVBBmmDShFRrtS/XL/_WHO5788-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/0/LPRCpfjRSRXG4bxRszMpfrm7XnssVBBmmDShFRrtS/XL/_WHO5788-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Jbxc4G6/2/L3LmXzhW2j6CszwWddw4v4W4KQrXfq6N9CZXNzzHD/L/_WHO5804-Edit-L.jpg",
@@ -2939,7 +3197,7 @@ export const galleryData = [
       "cultural heritage art",
       "vigilance and restraint",
       "cinematic stillness",
-      "Western canon photography",
+      "Western canon photography"
     ],
 
     "story": "He does not rush the moment.\nThe world narrows, not from urgency, but from attention.\n\nBreath slows. Ground steadies. The bow does not tremble because the body has already decided.\nNothing here is spectacle. Nothing is performance.\nThis is the discipline before motion—the quiet agreement between intention and restraint.\n\nThe arrow has not yet been released.\nBut the choice already has.",

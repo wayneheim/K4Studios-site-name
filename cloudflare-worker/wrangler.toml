@@ -17,6 +17,7 @@ service = "k4-analytics"
 
 [vars]
 ANALYTICS_ENABLED = "true"
+IMAGE_VERIFIED_BOT_BYPASS = "true"
 # MANIFEST_CACHE_TTL = "3600"
 
 # D1 Database for analytics
@@ -41,6 +42,7 @@ port = 8787
 
 [env.production.vars]
 ANALYTICS_ENABLED = "true"
+IMAGE_VERIFIED_BOT_BYPASS = "true"
 
 [[env.production.services]]
 binding = "ANALYTICS"

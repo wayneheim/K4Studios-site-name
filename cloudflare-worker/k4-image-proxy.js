@@ -577,7 +577,19 @@ function isDiscoveryBotUA(uaRaw) {
   // Explicit allowlist for discovery and preview ecosystems.
   // Do NOT include AI crawlers here.
   const ua = String(uaRaw || '');
-  return /(googlebot|google-inspectiontool|googleother|apis-google|adsbot-google|googlebot-image|bingbot|bingpreview|msnbot|bingimagesbot|applebot|duckduckbot|yandex|baiduspider|slurp|petalbot|ahrefsbot|ahrefssiteaudit|semrushbot|facebookexternalhit|facebot|twitterbot|pinterestbot|linkedinbot|slackbot|discordbot|telegrambot)/i.test(ua);
+  return /(googlebot|google-inspectiontool|googleother|apis-google|adsbot-google|googlebot-image|bingbot|bingpreview|msnbot|bingimagesbot|adidxbot|applebot|duckduckbot|yandex|baiduspider|slurp|petalbot|ahrefsbot|ahrefssiteaudit|semrushbot|facebookexternalhit|facebot|twitterbot|pinterestbot|linkedinbot|slackbot|discordbot|telegrambot)/i.test(ua);
+}
+
+function shouldBypassImageControls(env, request, uaRaw) {
+  if (String(env?.IMAGE_VERIFIED_BOT_BYPASS || '').toLowerCase() !== 'true') {
+    return false;
+  }
+
+  if (!request?.cf?.botManagement?.verifiedBot) {
+    return false;
+  }
+
+  return isVerifiedSearchBot(uaRaw) || isDiscoveryBotUA(uaRaw);
 }
 
 function getSuspicionFlags({ request, asn, ua }) {
@@ -695,12 +707,11 @@ async function handleImageRequest(request, ctx, env) {
              request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim();
   const ipHash = hashIP(ip);
 
-  // Apply blocked IP policy uniformly (no bot-specific bypass).
   const ua = request.headers.get('User-Agent') || '';
   const cfVerifiedBot = Boolean(request.cf?.botManagement?.verifiedBot);
-  const isDiscoveryBot = false;
+  const bypassImageControls = shouldBypassImageControls(env, request, ua);
   
-  if (env?.DB && ipHash) {
+  if (env?.DB && ipHash && !bypassImageControls) {
     try {
       const isBlocked = await isIPBlocked(env, ipHash);
       if (isBlocked) {
@@ -732,7 +743,7 @@ async function handleImageRequest(request, ctx, env) {
   const frictionDebug = {
     enabled: Boolean(frictionTest?.debug),
     asn: frictionTest?.asn ?? request.cf?.asn,
-    discoveryBypass: false,
+    discoveryBypass: bypassImageControls,
     suspect: false,
     uniquePerMinute: null,
     delayMs: null,
@@ -740,8 +751,7 @@ async function handleImageRequest(request, ctx, env) {
   };
   try {
     if (request.method === 'GET') {
-      // No discovery-bot bypass: apply friction uniformly by behavior.
-      const discoveryBypass = isDiscoveryBot;
+      const discoveryBypass = bypassImageControls;
       const effectiveAsn = frictionTest?.asn ?? request.cf?.asn;
       const flags = getSuspicionFlags({ request, asn: effectiveAsn, ua });
       const protectSizes = new Set(['l', 'xl', 'src']);
@@ -862,7 +872,7 @@ async function handleImageRequest(request, ctx, env) {
 
           // Only treat a request as a *verified* bot when Cloudflare says so.
           // UA matching is trivially spoofable and can poison bot intelligence.
-          if (request.cf?.botManagement?.verifiedBot) {
+          if (cfVerifiedBot) {
             ctx.waitUntil(logVerifiedBot(env, route.canonicalImageId, request));
           }
         }
@@ -955,7 +965,7 @@ async function handleImageRequest(request, ctx, env) {
       
       // Only treat a request as a *verified* bot when Cloudflare says so.
       // UA matching is trivially spoofable and can poison bot intelligence.
-      if (request.cf?.botManagement?.verifiedBot) {
+      if (cfVerifiedBot) {
         ctx.waitUntil(logVerifiedBot(env, route.canonicalImageId, request));
       }
     }

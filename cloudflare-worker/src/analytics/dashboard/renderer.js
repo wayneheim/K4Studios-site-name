@@ -75,7 +75,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   const maxEventCount = Math.max(...allEvents.map(e => e.count), 1);
   const maxRefSessions = Math.max(...referrers.map(r => r.sessions), 1);
   const maxGeoVisitors = Math.max(...geo.map(g => g.visitors), 1);
-  const maxPageSessions = Math.max(...pages.map(p => p.sessions), 1);
+  const maxPageSessions = Math.max(...pages.map(p => Number(p.views || p.events || p.sessions || 0)), 1);
   
   // Build base URL for filter links (preserves current filters)
   const baseParams = new URLSearchParams();
@@ -807,17 +807,17 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     </div>
 
     <div class="section">
-      <h3>Top 10 Pages</h3>
+      <h3>Top 25 Pages</h3>
       ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : 
-        pages.map(p => {
+        pages.slice(0, 25).map(p => {
           const shortPath = p.page_path.length > 28 ? '...' + p.page_path.slice(-25) : p.page_path;
           return `
           <div class="bar-row">
             <a class="bar-label" href="https://www.k4studios.com${p.page_path}" target="_blank" title="${p.page_path}" style="color: #4a9eff; text-decoration: none;">${shortPath}</a>
             <div class="bar-container">
-              <div class="bar" style="width: ${(p.sessions / maxPageSessions * 100).toFixed(1)}%"></div>
+              <div class="bar" style="width: ${(Number(p.views || p.events || p.sessions || 0) / maxPageSessions * 100).toFixed(1)}%"></div>
             </div>
-            <span class="bar-value">${p.sessions}</span>
+            <span class="bar-value" title="Views: ${Number(p.views || p.events || 0)} | Sessions: ${Number(p.sessions || 0)}">${Number(p.views || p.events || p.sessions || 0)}</span>
           </div>
         `}).join('')
       }
@@ -831,7 +831,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
       <table>
         <tr><th>Page</th><th>S</th><th>From</th><th>Sess</th></tr>
-        ${entryPages.slice(0, 15).map(p => {
+        ${entryPages.slice(0, 25).map(p => {
           const isImage = p.page_path.includes('/i-');
           const shortPath = p.page_path.length > 30 ? '...' + p.page_path.slice(-27) : p.page_path;
           const pageIcon = isImage ? '🖼️' : '📄';
@@ -1312,6 +1312,7 @@ function renderBotIntelligenceContent({ botIntelligence }) {
       '<div style="max-height: 300px; overflow-y: auto;">' +
         (botIntelligence?.verified || []).map(v => {
           const botIcons = {
+            'google-image': '🖼️',
             'googlebot': '🔍',
             'bingbot': '🅱️',
             'applebot': '🍎',
@@ -1326,7 +1327,23 @@ function renderBotIntelligenceContent({ botIntelligence }) {
             'claude': '🧠'
           };
           const icon = botIcons[v.bot_name?.toLowerCase()] || '🤖';
-          const displayName = v.bot_name ? v.bot_name.charAt(0).toUpperCase() + v.bot_name.slice(1) : 'Unknown';
+          const displayNames = {
+            'google-image': 'Google Image',
+            'googlebot': 'Googlebot',
+            'bingbot': 'Bingbot',
+            'applebot': 'Applebot',
+            'duckduckbot': 'DuckDuckBot',
+            'yandex': 'Yandex',
+            'baidu': 'Baidu',
+            'facebook': 'Facebook',
+            'twitter': 'Twitter',
+            'pinterest': 'Pinterest',
+            'linkedin': 'LinkedIn',
+            'openai': 'OpenAI',
+            'claude': 'Claude'
+          };
+          const normalizedBotName = v.bot_name?.toLowerCase();
+          const displayName = displayNames[normalizedBotName] || (v.bot_name ? v.bot_name.charAt(0).toUpperCase() + v.bot_name.slice(1) : 'Unknown');
           const imgCount = v.image_count || 0;
           const pgCount = v.page_count || 0;
           const breakdown = imgCount > 0 || pgCount > 0

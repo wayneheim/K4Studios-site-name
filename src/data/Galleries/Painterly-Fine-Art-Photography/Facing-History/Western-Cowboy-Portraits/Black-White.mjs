@@ -8116,8 +8116,8 @@ export const galleryData = [
   {
     "id": "i-pmdsNRZ",
     "title": "When Pretend Narrows",
-    "description": "A painterly black and white Western photograph depicting a frontier child in a moment where play gives way to vigilance. This fine art Western photography image explores early confrontation with consequence on the American frontier, rendered with pictorialist softness and restrained cinematic tension. Light, texture, and controlled focus shape a narrative rooted in innocence narrowing toward awareness. © Wayne Heim.",
-    "alt": "Painterly black and white Western photograph of a frontier child holding a rifle in quiet concentration, captured with pictorialist",
+    "description": "Leaning against a rough stone wall, a woman holds a long rifle with both hands, the barrel extending outward from the frame. Her seated posture is grounded and steady, with her gaze aligned along the length of the weapon. The shallow depth of field softens the surrounding environment, isolating her form and the rifle, while this example of narrative Western photography emphasizes line, focus, and the relationship between subject and setting. \n\n© Wayne Heim",
+    "alt": "A woman sits against a stone wall holding a long rifle, aiming outward.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pmdsNRZ/0/KdkDFCNPjmq4T4PDxNF97w8bVxTgTkqZJMbNSSWFJ/XL/_HF29819-1268-1271-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pmdsNRZ/0/KdkDFCNPjmq4T4PDxNF97w8bVxTgTkqZJMbNSSWFJ/XL/_HF29819-1268-1271-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pmdsNRZ/0/MmGcLCB5wxqg3qrsCwGd5xCZX6Thphw6LGq2TrBR5/L/_HF29819-1268-1271-L.jpg",
@@ -8125,6 +8125,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pmdsNRZ/0/MqF9WNXtCv3HTvzvFFnxdkp2DdHzhhgHTXshLJ9nx/S/_HF29819-1268-1271-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-pmdsNRZ/A",
+
     "keywords": [
       "painterly Western photography",
       "fine art Western photography",
@@ -8139,20 +8140,22 @@ export const galleryData = [
       "Americana photography",
       "western fine art",
       "western themed art",
-      "authentic frontier art prints",
+      "authentic frontier art prints"
     ],
+
     "story": "At first it was a game.  \nSomething borrowed, something heavy, something that made him feel older than he was.\n\nThen the world stopped moving the way it should. The angle mattered. The waiting mattered. Whatever came next would not belong to pretending anymore.\n\nHe holds still.  \nThat part comes naturally.",
-    "notes": "This image draws from the pictorialist tradition, where softness is used to heighten psychological weight rather than diminish it. The shallow focus and tonal restraint guide attention inward, allowing the moment to unfold as an internal reckoning rather than an external action.\n\nThe composition recalls the quieter narrative studies found in the work of Frederic Remington’s lesser-known interior scenes and the moral stillness present in Andrew Wyeth’s figurative moments—where implication carries more force than depiction.\n\nBy suspending the image at the threshold between play and consequence, the work invites prolonged viewing. It rewards collectors drawn to Western fine art that engages restraint, ethical tension, and the uneasy transition from innocence into awareness.",
+    "notes": "The shallow focus and tonal restraint guide attention inward, allowing the moment to unfold as an internal reckoning rather than an external action.\n\nThe composition recalls the quieter narrative studies found in the work of Frederic Remington’s lesser-known interior scenes and the moral stillness present in Andrew Wyeth’s figurative moments—where implication carries more force than depiction.\n\nBy suspending the image at the threshold between play and consequence, the work invites prolonged viewing. It rewards collectors drawn to Western fine art that engages restraint, ethical tension, and the uneasy transition from innocence into awareness.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 192
+    "sortOrder": 192,
+    contentSource: "ai"
   },
   {
     "id": "i-PvHHPSq",
     "title": "The Moment After Amen",
-    "description": "A painterly black and white Western photograph depicting a frontier family gathered in stillness, suspended in the quiet immediately following prayer. This fine art Western photography image explores belief, ritual, and shared gravity on the American frontier, where faith often existed without certainty. Rendered with pictorialist softness and cinematic restraint, light and composition emphasize collective pause over action. © Wayne Heim.",
-    "alt": "Painterly black and white Western photograph of a frontier family standing together after prayer, captured with soft light and quiet",
+    "description": "A small group stands gathered outside a church, their positions close and still in the moments following prayer. One figure kneels in front while the others remain upright, heads slightly bowed or lifted, creating a layered composition of posture and gesture. The church structure rises softly in the background, and this example of fine art Western photography emphasizes arrangement, setting, and the quiet pause shared between figures. \n\n© Wayne Heim",
+    "alt": "A family stands together outside a church while one figure kneels in front, captured in a quiet moment after prayer .",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-PvHHPSq/0/NStBXRs8pQzCdtZKVBs3Z7FMjjcMdTr2kgRvNtXH7/XL/_HF29878-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-PvHHPSq/0/NStBXRs8pQzCdtZKVBs3Z7FMjjcMdTr2kgRvNtXH7/XL/_HF29878-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-PvHHPSq/0/NStBXRs8pQzCdtZKVBs3Z7FMjjcMdTr2kgRvNtXH7/XL/_HF29878-Edit-XL.jpg",
@@ -8160,6 +8163,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-PvHHPSq/0/L56Kxf4KrDQKsp2hwKM54P5WDGmH6SjjCtKrjzcmZ/S/_HF29878-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-PvHHPSq/A",
+
     "keywords": [
       "painterly Western photography",
       "fine art Western photography",
@@ -8173,20 +8177,22 @@ export const galleryData = [
       "Americana photography",
       "western fine art",
       "western themed art",
-      "authentic frontier art prints",
+      "authentic frontier art prints"
     ],
+
     "story": "No one moves right away.  \nThe words have finished, but their weight hasn’t settled yet.\n\nEach of them holds something different in the silence—fear, hope, habit, obligation. Whatever was asked for is no longer private. It belongs to the air between them now.\n\nThey wait.  \nThat, too, is part of it.",
-    "notes": "This image draws from the pictorialist tradition, where tonal subtlety and controlled softness are used to shape emotional weight rather than describe detail. The composition privileges shared stillness, allowing belief to register as atmosphere instead of declaration.\n\nThe scene recalls the moral quiet found in Andrew Wyeth’s figurative work and the restrained narrative interiors of early American realist painters, where faith is implied through posture and proximity rather than overt symbolism.\n\nBy focusing on the moment *after* ritual, the work resists sentimentality and invites reflection. It rewards collectors drawn to Western fine art that explores communal experience, inherited belief, and the fragile space between hope and resignation on the American frontier.",
+    "notes": "The scene recalls the moral quiet found in Andrew Wyeth’s figurative work and the restrained narrative interiors of early American realist painters, where faith is implied through posture and proximity rather than overt symbolism.\n\nBy focusing on the moment *after* ritual, the work resists sentimentality and invites reflection. It rewards collectors drawn to Western fine art that explores communal experience, inherited belief, and the fragile space between hope and resignation on the American frontier.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 193
+    "sortOrder": 193,
+    contentSource: "ai"
   },
   {
     "id": "i-J5qRTMq",
     "title": "The Weight They Share",
-    "description": "A painterly black and white Western photograph portraying a frontier family bound by shared grief and quiet resolve. This fine art Western photography image emphasizes collective strength over spectacle, using restrained light, shallow focus, and compositional gravity to explore loss and protection on the American frontier. Rendered with pictorialist softness and cinematic restraint, the moment lingers in what is carried rather than what is spoken. © Wayne Heim.",
-    "alt": "Painterly black and white Western photograph of a frontier family gathered in shared grief, captured with soft light and restrained",
+    "description": "Grouped closely together, three figures form a vertical arrangement with one kneeling in front and two standing behind, their bodies angled inward. Hands rest on shoulders and heads, creating a connected structure of touch and support. The shallow focus softens the background while keeping attention on posture and interaction, and this example of Western fine art photography emphasizes proximity, gesture, and shared presence within the frame. \n\n© Wayne Heim",
+    "alt": "Three figures gather closely together, one kneeling while two stand behind with hands resting in a gesture of support.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-J5qRTMq/0/MPBRX325Z2dhQHwKztkpVRW4g7cZCPhtGMBSkK9mk/XL/_HF29970-1283-1285-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-J5qRTMq/0/MPBRX325Z2dhQHwKztkpVRW4g7cZCPhtGMBSkK9mk/XL/_HF29970-1283-1285-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-J5qRTMq/0/MPBRX325Z2dhQHwKztkpVRW4g7cZCPhtGMBSkK9mk/XL/_HF29970-1283-1285-XL.jpg",
@@ -8194,6 +8200,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-J5qRTMq/0/MrmnXXVphr7bDF2ktvB27wV36BMrFCVJHt7MD2QCr/S/_HF29970-1283-1285-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-J5qRTMq/A",
+
     "keywords": [
       "painterly Western photography",
       "fine art Western photography",
@@ -8207,20 +8214,22 @@ export const galleryData = [
       "Americana photography",
       "western fine art",
       "western themed art",
-      "authentic frontier art prints",
+      "authentic frontier art prints"
     ],
+
     "story": "No one says it out loud.  \nThey don’t need to. The posture already knows what words would only bruise.\n\nHands gather where they can. Shoulders take on more than they were meant to. Whatever comes next will be faced together—or not at all.\n\nThey hold.  \nBecause letting go would mean admitting what’s already been lost.",
     "notes": "This image draws from the pictorialist tradition, where tonal restraint and softened edges are used to deepen emotional resonance rather than romanticize the scene. The controlled focus and vertical composition concentrate attention on shared burden—how grief redistributes itself among those who remain.\n\nThe quiet gravity recalls the moral stillness found in Andrew Wyeth’s figurative work and the subdued narrative interiors of early American realist painting, where meaning emerges through posture and proximity instead of overt gesture.\n\nBy centering the act of holding—of staying present under weight—the work invites prolonged viewing. It rewards collectors drawn to Western fine art that values psychological depth, communal experience, and the unspoken costs of frontier life.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 194
+    "sortOrder": 194,
+    contentSource: "ai"
   },
   {
     "id": "i-CcZtSGv",
     "title": "Resting on What Remains",
-    "description": "A painterly black and white Western portrait of an aging cowboy at rest, rendered with pictorialist softness and quiet cinematic restraint. This fine art Western photography image explores reflection, endurance, and earned stillness on the American frontier, where time leaves its mark without spectacle. Light, texture, and composition emphasize presence shaped by years rather than action. © Wayne Heim.",
-    "alt": "Painterly black and white Western portrait of an aging cowboy resting on a wooden fence, captured with soft light and reflective restraint.",
+    "description": "Seated along a wooden fence, an older cowboy rests with one arm draped over the rail, his posture relaxed but upright. The surrounding landscape falls softly out of focus, placing emphasis on his figure and the worn texture of the fence. His gaze is directed outward across the open land, and this example of Americana photography highlights stillness, setting, and the relationship between figure and environment. \n\n© Wayne Heim",
+    "alt": "An older cowboy sits on a wooden fence, looking out across open land with a calm, steady posture.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CcZtSGv/0/MGZNQmcm3SzsV98QcCncSRHMFsDZZqgjjV79Ldwvd/XL/_HF20212-1229-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CcZtSGv/0/MGZNQmcm3SzsV98QcCncSRHMFsDZZqgjjV79Ldwvd/XL/_HF20212-1229-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CcZtSGv/0/MGZNQmcm3SzsV98QcCncSRHMFsDZZqgjjV79Ldwvd/XL/_HF20212-1229-XL.jpg",
@@ -8228,6 +8237,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CcZtSGv/0/Nhd6nRbwCb2ckjkqnst7Khwb48gDH6PxXvQpVLNxh/S/_HF20212-1229-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CcZtSGv/A",
+
     "keywords": [
       "painterly Western photography",
       "fine art Western photography",
@@ -8241,20 +8251,22 @@ export const galleryData = [
       "Americana photography",
       "western fine art",
       "western themed art",
-      "authentic frontier art prints",
+      "authentic frontier art prints"
     ],
+
     "story": "He doesn’t sit so much as settle.  \nThe fence has learned his weight the way the land learned his footsteps—slowly, over years.\n\nNothing is urgent anymore. The work behind him speaks louder than anything ahead. What remains is not rest, exactly, but permission to stop measuring the day.\n\nHe looks out.  \nThe ground answers by staying still.",
     "notes": "This work draws from the pictorialist tradition, using tonal restraint and softened detail to allow time itself to become the subject. The stillness is deliberate, positioning the figure as part of the landscape rather than separate from it.\n\nThe composition carries echoes of Frederic Remington’s quieter late-period figures and the reflective restraint found in Andrew Wyeth’s rural studies—where meaning resides not in action, but in what has already passed.\n\nBy focusing on rest as a form of arrival, the image invites prolonged viewing. It rewards collectors drawn to Western fine art that values endurance, memory, and the dignity earned through years lived close to the land.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 195
+    "sortOrder": 195,
+    contentSource: "ai"
   },
   {
     "id": "i-dFdV442",
     "title": "Before Anyone Steps In",
-    "description": "A painterly black and white Western photograph capturing a frontier moment suspended at a threshold. This fine art Western photography image explores decision, social gravity, and restraint, using light, shadow, and framing to emphasize the tension between interior and exterior life on the American frontier. Rendered with cinematic stillness and pictorialist softness, meaning gathers in what has not yet been done. © Wayne Heim.",
-    "alt": "Painterly black and white Western photograph of a frontier couple paused in a doorway, framed by light and shadow in quiet anticipation.",
+    "description": "Framed from inside a dim interior, a doorway opens to reveal two figures standing just outside, paused before entering. The threshold divides light and shadow, with the exterior scene sharply defined against the darker interior space. Their posture suggests hesitation or conversation, while this example of narrative Western photography emphasizes framing, depth, and the contrast between interior and exterior environments. \n\n© Wayne Heim",
+    "alt": "From inside a dark room, a doorway frames two figures standing outside, paused before stepping in.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-dFdV442/1/L6QtKQLG5x3bt6mn84f8gMhTG6Dcq34JHjD8LRnXp/XL/_WHO1122-1216-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-dFdV442/1/L6QtKQLG5x3bt6mn84f8gMhTG6Dcq34JHjD8LRnXp/XL/_WHO1122-1216-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-dFdV442/1/L6QtKQLG5x3bt6mn84f8gMhTG6Dcq34JHjD8LRnXp/XL/_WHO1122-1216-XL.jpg",
@@ -8262,6 +8274,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-dFdV442/1/NX6K95KXh5sdMHJtRjhjfPLfzNSz5qtNkTnC6htM2/S/_WHO1122-1216-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-dFdV442/A",
+
     "keywords": [
       "painterly Western photography",
       "fine art Western photography",
@@ -8276,20 +8289,22 @@ export const galleryData = [
       "Americana photography",
       "western fine art",
       "western themed art",
-      "authentic frontier art prints",
+      "authentic frontier art prints"
     ],
+
     "story": "They haven’t crossed yet.  \nThe doorway holds them—inside still warm, outside already asking for something.\n\nNo one interrupts the pause. Whatever is decided next will change how the room remembers them, how the street receives them. The open door listens.\n\nThey wait.  \nThat’s the last moment that belongs to both sides.",
-    "notes": "This work draws from pictorialist strategies that privilege atmosphere over description, allowing the doorway to function as a psychological boundary rather than a simple architectural frame. The controlled contrast and softened detail slow the eye, encouraging the viewer to inhabit the pause.\n\nThe composition carries echoes of cinematic Western staging and the moral thresholds found in Andrew Wyeth’s interiors, where the space between rooms becomes the true subject. Here, restraint replaces action, and anticipation carries the narrative weight.\n\nBy centering the moment before movement, the image invites prolonged viewing. It rewards collectors drawn to Western fine art that explores choice, social consequence, and the quiet power of what has not yet crossed the line.",
+    "notes": "The controlled contrast and softened detail slow the eye, encouraging the viewer to inhabit the pause.\n\nThe composition carries echoes of cinematic Western staging and the moral thresholds found in Andrew Wyeth’s interiors, where the space between rooms becomes the true subject. Here, restraint replaces action, and anticipation carries the narrative weight.\n\nBy centering the moment before movement, the image invites prolonged viewing. It rewards collectors drawn to Western fine art that explores choice, social consequence, and the quiet power of what has not yet crossed the line.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 196
+    "sortOrder": 196,
+    contentSource: "ai"
   },
   {
     "id": "i-G7vCDcw",
     "title": "Where He Finally Rests",
-    "description": "A painterly black and white Western photograph set within a frontier interior, capturing a moment of injury, care, and quiet survival. This fine art Western photography image focuses on intimacy after consequence, rendered with restrained lamplight, shallow focus, and cinematic stillness. Texture and shadow shape a narrative rooted in endurance, tenderness, and the human cost of frontier life. © Wayne Heim.",
-    "alt": "Painterly black and white Western photograph of a frontier couple inside a cabin, sharing a quiet moment of care by lamplight.",
+    "description": "Inside a dim cabin, a woman leans close as she steadies an injured man resting against her. Lamplight falls softly across their faces, isolating the gesture of care from the surrounding space. The composition draws attention to proximity and touch, where stillness becomes the central language. Rooted in frontier life, the moment reflects endurance shaped not by action, but by what is quietly carried and held. \n\n© Wayne Heim",
+    "alt": "A woman tends to an injured man inside a cabin, illuminated by soft lamplight as she steadies him gently.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-G7vCDcw/0/LQBfC6ZtcdB7GNT4tdGRfnrDR6pq9wpZrdcgcfMCJ/XL/_HF21393-1250-1251-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-G7vCDcw/0/LQBfC6ZtcdB7GNT4tdGRfnrDR6pq9wpZrdcgcfMCJ/XL/_HF21393-1250-1251-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-G7vCDcw/0/LQBfC6ZtcdB7GNT4tdGRfnrDR6pq9wpZrdcgcfMCJ/XL/_HF21393-1250-1251-XL.jpg",
@@ -8297,6 +8312,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-G7vCDcw/0/K8pTV9Xvz537sJVmsFjPDXcWn7XpcD4xV4hQwm3kq/S/_HF21393-1250-1251-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-G7vCDcw/A",
+
     "keywords": [
       "painterly Western photography",
       "fine art Western photography",
@@ -8312,20 +8328,22 @@ export const galleryData = [
       "Americana photography",
       "western fine art",
       "western themed art",
-      "authentic frontier art prints",
+      "authentic frontier art prints"
     ],
+
     "story": "He lets the weight go all at once.  \nNot the pain—that stays—but the effort of holding himself together.\n\nHer hands steady him the way the walls do, the way the lamp does. Nothing hurried. Nothing wasted. This is what remains when the night closes in.\n\nHe breathes.  \nThat is enough for now.",
-    "notes": "This work draws from the pictorialist tradition, using softened edges and controlled contrast to elevate emotional proximity over description. The lamplit interior compresses space, allowing care itself to function as the central action.\n\nThe composition echoes the quiet domestic gravity found in Andrew Wyeth’s interior studies and the restrained pauses of early cinematic Westerns, where tenderness carries equal weight to violence. Meaning accrues through touch, not gesture.\n\nBy centering rest as an earned state rather than relief, the image invites prolonged viewing. It rewards collectors drawn to Western fine art that values intimacy, consequence, and the fragile acts of care that sustain life on the frontier.",
+    "notes": "The lamplit interior compresses space, allowing care itself to function as the central action.\n\nBy centering rest as an earned state rather than relief, the image invites prolonged viewing. It rewards collectors drawn to Western fine art that values intimacy, consequence, and the fragile acts of care that sustain life on the frontier.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 197
+    "sortOrder": 197,
+    contentSource: "ai"
   },
   {
     "id": "i-nnV6qtS",
     "title": "Where the Trail Speaks",
-    "description": "A painterly black and white Western photograph portraying a cowboy reading the ground with practiced restraint. This fine art Western photography image emphasizes frontier skill and patience over bravado, rendered with controlled light, textured shadow, and cinematic stillness. Composition and proximity focus attention on quiet competence—the work beneath the noise of the American frontier. © Wayne Heim.",
-    "alt": "Painterly black and white Western photograph of a cowboy crouched beside his horse, studying tracks on the ground with quiet focus.",
+    "description": "A cowboy pauses beside his horse to study tracks pressed into the dirt, emphasizing quiet observation over movement. This Western photograph highlights the skill of tracking within frontier life, using controlled light and softened detail to draw attention to gesture, posture, and terrain. The composition reflects a restrained approach to cowboy imagery, focusing on patience, awareness, and the lived experience of the American West.\n\n© Wayne Heim",
+    "alt": "Cowboy crouched beside his horse examining tracks in the dirt, a quiet moment of focus in painterly Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nnV6qtS/0/NTGjd3SrNGD4SPBmZXNsHP7qDhVNZ74LrN4hX7ncR/XL/_HF21312-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nnV6qtS/0/NTGjd3SrNGD4SPBmZXNsHP7qDhVNZ74LrN4hX7ncR/XL/_HF21312-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nnV6qtS/0/LSXBSMnCGXDqzg3Z6wFCqghK6ztzgVSCzJP95nZHR/L/_HF21312-Edit-2-L.jpg",
@@ -8333,6 +8351,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nnV6qtS/0/KTt35M6VnFtGRmGMnLhDWdWGDdVp9wbwK5MXCQ7qx/S/_HF21312-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nnV6qtS/A",
+
     "keywords": [
       "painterly Western photography",
       "fine art Western photography",
@@ -8348,24 +8367,28 @@ export const galleryData = [
       "cinematic stills",
       "Americana photography",
       "western fine art",
-      "western themed art",
+      "western themed art"
     ],
+
     "story": "He lowers himself without ceremony.  \nThe horse waits. The land doesn’t rush him.\n\nDust tells its story in pieces—weight, direction, a pause where someone thought better of moving fast. He listens with his hands, not his eyes.\n\nThat’s enough.  \nThe rest will come when it’s ready.",
-    "notes": "This image draws on pictorialist restraint to slow the viewer’s reading of the scene, allowing texture and gesture to carry meaning. Softened edges and directional light privilege intent over action, turning the act of tracking into a psychological study.\n\nThe composition recalls the quiet authority found in Frederic Remington’s less theatrical figures and the observational discipline of early documentary Western imagery—where knowledge of the land replaces spectacle.\n\nBy centering competence as a form of character, the work invites prolonged viewing. It rewards collectors drawn to Western fine art that values patience, earned skill, and the subtle intelligence required to move through frontier spaces without leaving a mark.",
+    "notes": "Softened edges and directional light privilege intent over action, turning the act of tracking into a psychological study.\n\nThe composition recalls the quiet authority found in Frederic Remington’s less theatrical figures and the observational discipline of early documentary Western imagery—where knowledge of the land replaces spectacle.\n\nBy centering competence as a form of character, the work invites prolonged viewing. It rewards collectors drawn to Western fine art that values patience, earned skill, and the subtle intelligence required to move through frontier spaces without leaving a mark.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 198,
+
     "themes": {
       "cowboys-with-horses": 15,
       "cowboys-horses-b-w": 15
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-GzcBLWP",
     "title": "Seeing It First",
-    "description": "A painterly Western fine art photograph capturing a moment of watchfulness and restraint on the American frontier. This narrative Western image reflects cinematic Western photography and the pictorialist tradition, emphasizing atmosphere, anticipation, and shared instinct. Rooted in painterly Western imagery and authentic frontier life, the work highlights the quiet intelligence and vigilance that defined the Western experience. © Wayne Heim",
-    "alt": "Painterly Western fine art photography of two cowboys scanning the distant frontier on horseback",
+    "description": "Mounted riders pause within a wooded stretch of frontier terrain, scanning ahead for movement or sign. This Western photograph captures a moment of vigilance and positioning, emphasizing the relationship between rider, horse, and environment in the American West. Direction of gaze and body alignment reinforce awareness and readiness. \n\n© Wayne Heim",
+    "alt": "Cowboys on horseback looking into the distance through trees, a moment of focus in painterly Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GzcBLWP/0/NTsFJMqPm7GG7pqd48TTRHjQsnMqzZgn9DHbNF9GZ/XL/_WHO4863-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GzcBLWP/0/NTsFJMqPm7GG7pqd48TTRHjQsnMqzZgn9DHbNF9GZ/XL/_WHO4863-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GzcBLWP/0/NKhKfJjTL6cJjn6fzHFPTNdRpXN6TZCMbhjRTQwWJ/L/_WHO4863-Edit-L.jpg",
@@ -8373,6 +8396,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GzcBLWP/0/NZbcgrqw6LtBQ22tPfHPCVLLmB5rLWF3GbHZnqZdN/S/_WHO4863-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GzcBLWP/A",
+
     "keywords": [
       "painterly western images",
       "western canon",
@@ -8387,22 +8411,26 @@ export const galleryData = [
       "western cowboys",
       "cowboys",
       "Explore Western Photography",
-      "painterly cowboy photography",
+      "painterly cowboy photography"
     ],
+
     "story": "They stop before the land does.\n\nOne hand shades the eyes. The other keeps the reins loose, patient. Whatever’s out there hasn’t announced itself yet—but it will. The silence has weight, and they know how to read it.\n\nSome men ride to arrive. Others ride to notice what everyone else will miss.",
     "notes": "This piece draws from the pictorialist approach, favoring mood and narrative tension over overt action. The composition places the viewer slightly behind the moment, echoing classic Western paintings where anticipation carries more weight than resolution. The shared gesture and directional gaze recall the compositional storytelling of artists like Remington, while the softened tonal transitions align with painterly photographic traditions. It is a work built on restraint—rewarding viewers who linger and read the land alongside the figures.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 199
+    "sortOrder": 199,
+    contentSource: "ai"
   },
   {
     "id": "i-vPsFX8r",
     "title": "Signal at First Light",
-    "description": "Signal at First Light is a painterly Western fine art portrait rooted in American frontier history and narrative restraint. Rendered in black and white, the image emphasizes psychological presence over action, allowing silence, posture, and timing to define the scene. Drawing from the Western canon and frontier portrait traditions, this fine art Western photography work reflects how decisions once traveled across open ground—carried by sound, consequence, and human resolve. Created for collectors who value narrative depth and enduring imagery, this piece rewards long viewing and quiet attention. © Wayne Heim",
-    "alt": "Painterly black and white fine art Western portrait of a frontier bugler sounding a morning signal, evoking American frontier history",
+    "description": "A uniformed frontier soldier raises a brass bugle to his lips while mounted on horseback, signaling the start of the day. This Western photograph captures a Civil War–era moment defined by communication, duty, and timing in the American frontier landscape. Details of uniform, posture, and instrument reflect historical accuracy and the role of sound in coordinating movement across open terrain. \n\n© Wayne Heim",
+    "alt": "Frontier soldier on horseback sounding a bugle at dawn, a moment of duty in fine art Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vPsFX8r/0/NRJmsBGMr7kfrX2R572fpf665pVBpr49K6BZMbjkS/XL/_HF27565-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vPsFX8r/0/NRJmsBGMr7kfrX2R572fpf665pVBpr49K6BZMbjkS/XL/_HF27565-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vPsFX8r/0/KMSKnLqHFR99PM2M3mqg2jqds5KFrTKsgcdZsbDWn/L/_HF27565-Edit-L.jpg",
@@ -8426,11 +8454,11 @@ export const galleryData = [
       "cowboys",
       "frontier history",
       "historical Western portrait",
-      "narrative Western art",
+      "narrative Western art"
     ],
 
     "story": "The note rises before the day fully arrives. Breath, metal, and intention meet in a moment that cannot be retrieved once released. He does not look to confirm who hears it—he knows they will. This image holds the pause between darkness and motion, where history does not announce itself loudly, but arrives all the same.",
-    "notes": "This image aligns with a tradition of Western narrative art where implication carries more weight than depiction. The restrained gesture and disciplined tonal control recall the compositional intelligence of artists such as Frederic Remington and N.C. Wyeth—not through imitation, but through shared understanding that anticipation often holds greater power than resolution. The photograph’s painterly handling softens transitions without sacrificing structure, placing it within a pictorialist-informed approach while remaining grounded in photographic authorship. As a single-frame narrative, Signal at First Light functions as a cinematic still—an image that invites the viewer to inhabit the moment just before history begins to move.",
+    "notes": "The restrained gesture and disciplined tonal control recall the compositional intelligence of artists such as Frederic Remington and N.C. Wyeth—not through imitation, but through shared understanding that anticipation often holds greater power than resolution. The photograph’s painterly handling softens transitions without sacrificing structure, placing it within a pictorialist-informed approach while remaining grounded in photographic authorship. As a single-frame narrative, Signal at First Light functions as a cinematic still—an image that invites the viewer to inhabit the moment just before history begins to move.",
     "rating": 4,
 
     "galleries": [
@@ -8444,8 +8472,8 @@ export const galleryData = [
   {
     "id": "i-cxmJsHf",
     "title": "Held Note",
-    "description": "Held Note is a painterly Western fine art portrait rooted in American frontier history and narrative restraint. Rendered in black and white, the image favors intimacy over scale, focusing on the psychological weight carried by the figure rather than the distance the signal will travel. Drawing from the Western canon and frontier portrait traditions, this fine art Western photography work reflects how authority once resided not in spectacle, but in presence. Created for collectors who value subtlety, narrative tension, and enduring imagery, this piece rewards close and sustained viewing. © Wayne Heim",
-    "alt": "Painterly black and white fine art Western portrait of a frontier bugler holding a signal call, emphasizing American frontier history",
+    "description": "A mounted bugler holds a sustained call, captured mid-signal with the instrument raised and posture fixed. This Western portrait highlights the role of sound in coordinating movement across open terrain, with attention to uniform detail, timing, and discipline. The image reflects elements of historical Western photography, emphasizing communication and structure within frontier settings. \n\n© Wayne Heim",
+    "alt": "Frontier soldier on horseback holding a bugle to his lips, paused mid-call in a quiet moment of control.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/2/NG4LS8JRqtjF7kQxs8CQkTP6zgkdBWbx5FCKz7KQj/XL/_HF27565-Edit-2-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/2/NG4LS8JRqtjF7kQxs8CQkTP6zgkdBWbx5FCKz7KQj/XL/_HF27565-Edit-2-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/2/L9gWqS2tktTmQ2n27kvGtFNBft9T9FscQjN45rCnC/L/_HF27565-Edit-2-2-L.jpg",
@@ -8469,11 +8497,11 @@ export const galleryData = [
       "cowboys",
       "frontier history",
       "historical Western portrait",
-      "narrative Western art",
+      "narrative Western art"
     ],
 
     "story": "The sound has not left him yet. Breath is drawn, metal is raised, and everything that follows is suspended in a single instant. This image lives in that narrow space where intention outweighs action—where the decision is complete, even if the world has not responded.",
-    "notes": "This work operates within a tradition of Western narrative art that privileges restraint over declaration. The compressed framing and disciplined tonal range recall pictorialist principles, where mood and psychological presence guide interpretation more than explicit action. The image aligns with the narrative intelligence found in artists such as Frederic Remington and N.C. Wyeth—not through imitation, but through shared understanding that authority can reside in stillness. As a single-frame narrative, Held Note functions as a cinematic still—an image that invites the viewer to linger in the moment before history commits itself.",
+    "notes": "The compressed framing and disciplined tonal range recall pictorialist principles, where mood and psychological presence guide interpretation more than explicit action. The image aligns with the narrative intelligence found in artists such as Frederic Remington and N.C. Wyeth—not through imitation, but through shared understanding that authority can reside in stillness. As a single-frame narrative, Held Note functions as a cinematic still—an image that invites the viewer to linger in the moment before history commits itself.",
     "rating": 4,
 
     "galleries": [
@@ -8487,8 +8515,8 @@ export const galleryData = [
   {
     "id": "i-rKDPWRZ",
     "title": "Around the Corner",
-    "description": "A painterly black and white Western fine art photograph capturing a cowboy paused in tension, partially concealed by stone. This cinematic Western image explores frontier life through restraint and anticipation, blending rugged spirit with narrative Western art. Created in Wayne Heim’s signature painterly Western photography style, the piece reflects the American frontier as a place of consequence, patience, and quiet resolve. c Wayne Heim",
-    "alt": "Painterly Western fine art photography of a cowboy waiting in shadow around a stone corner",
+    "description": "A cowboy leans around a stone corner with a rifle in hand, partially concealed while watching the space ahead. This Western photograph captures a moment of tension and positioning, emphasizing cover, line of sight, and readiness within a frontier setting. Architectural elements and body placement reinforce the use of environment in navigating risk. \n\n© Wayne Heim",
+    "alt": "Man with rifle peering around a stone corner, partially hidden as he watches the space ahead.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rKDPWRZ/0/KtwV5FrgJQCQDV2x6RF28GXhv872tvGZMpFWxxXsq/XL/_HF24922-1361-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rKDPWRZ/0/KtwV5FrgJQCQDV2x6RF28GXhv872tvGZMpFWxxXsq/XL/_HF24922-1361-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rKDPWRZ/0/M4qs5QNqtWjL65cm6Drd7CZQMfSBmBXQmZbFBwGt3/L/_HF24922-1361-L.jpg",
@@ -8496,6 +8524,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rKDPWRZ/0/M2JGVTwtMFrb8khs72Sk5psgZ98NHjS8tCrpkN96s/S/_HF24922-1361-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-rKDPWRZ/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -8511,22 +8540,26 @@ export const galleryData = [
       "wild west photography",
       "American frontier portraits",
       "Americana photography",
-      "authentic frontier art prints",
+      "authentic frontier art prints"
     ],
+
     "story": "He doesn’t rush the step.\n\nCorners have taught him better than that. Stone holds sound. Shadows remember movement. He waits long enough to let the world speak first.\n\nWhatever comes next will announce itself. It always does.",
-    "notes": "This image leans into the Pictorialist tradition, using controlled light, texture, and soft atmospheric falloff to create emotional depth rather than overt action. The composition echoes the narrative restraint found in artists like Frederic Remington, not in subject alone but in the psychology of the moment—what is withheld rather than shown.\n\nPrinted on Baltic Birch, the natural grain subtly interacts with the shadow structure, reinforcing the tension between permanence and uncertainty. This is a piece that rewards slow viewing, revealing its story in layers rather than spectacle.",
+    "notes": "The composition is built on concealment and reveal—stone acting as both barrier and narrative device. The figure is not centered but discovered, echoing a tradition where tension is carried in what is withheld rather than shown outright.\n\nThere is a clear lineage to the quieter side of Western painting, where anticipation outweighs action. The controlled framing and directional gaze recall the compositional restraint seen in artists like Remington, but translated here through a photographic lens that favors immediacy over spectacle.\n\nLight falloff and softened edges guide attention without force, allowing the viewer to enter the scene gradually. It is a work that holds its moment tightly—rewarding those who stay long enough to recognize that the real subject is not confrontation, but the space just before it.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 202
+    "sortOrder": 202,
+    contentSource: "ai"
   },
   {
     "id": "i-5xcvjQJ",
     "title": "The World at Her Height",
-    "description": "A painterly Western fine art photograph capturing a quiet moment of guidance on the American frontier. An adult and child walk hand in hand, framed by soft light and textured shadow, evoking themes of protection, inheritance, and early understanding. This narrative-driven Western image reflects a restrained, pictorialist approach to fine art Western photography, where meaning emerges through gesture and atmosphere rather than spectacle. © Wayne Heim.",
-    "alt": "Painterly Western photograph of an adult guiding a child on the American frontier",
+    "description": "An adult and child walk hand in hand through a wooded frontier setting, captured at a low angle that emphasizes scale and perspective. This Western photograph highlights early experience, guidance, and movement through natural terrain in the American West. Environmental framing, posture, and proximity focus attention on relationship and shared direction. \n\n© Wayne Heim",
+    "alt": "Adult walking hand in hand with a child through trees on the frontier, viewed from a low perspective.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5xcvjQJ/0/McmSqNbLTLrnbFbmNHHjTLWVCNqNcCNc284pPHnCD/XL/_WHO0135-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5xcvjQJ/0/McmSqNbLTLrnbFbmNHHjTLWVCNqNcCNc284pPHnCD/XL/_WHO0135-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5xcvjQJ/0/McmSqNbLTLrnbFbmNHHjTLWVCNqNcCNc284pPHnCD/XL/_WHO0135-Edit-2-XL.jpg",
@@ -8534,6 +8567,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5xcvjQJ/0/NNcQ9KJjDDCNkQDfchrkmJ8csHnkHxf5sFj8qRj4R/S/_WHO0135-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5xcvjQJ/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -8548,20 +8582,22 @@ export const galleryData = [
       "painterly technique",
       "cowboy artwork prints",
       "cowboy art",
-      "fine art Western photography",
+      "fine art Western photography"
     ],
+
     "story": "He slows his steps without saying why.  \nThe ground looks different from where she walks—roots taller, shadows longer, questions closer to the surface.\n\nShe tightens her grip, not afraid, just learning.  \nEvery pause is a lesson. Every forward step is permission.\n\nHe doesn’t explain the world to her.  \nHe lets her meet it at her own height.",
-    "notes": "This piece draws from the pictorialist tradition, where softness, tonal restraint, and emotional suggestion guide the viewer more than explicit action. The composition echoes the moral storytelling found in early Western illustration and genre painting—less about conquest, more about continuity. The lowered perspective subtly places the viewer inside the child’s experience, reinforcing the theme of inherited knowledge and quiet guidance. It is a Western image rooted in human scale and lived passage, rather than mythic exaggeration.",
+    "notes": "The lowered viewpoint is central to the structure of the image, shifting authority away from the adult and placing the viewer within the child’s experience. This compositional decision aligns with traditions that favor lived perspective over observation from a distance.\n\nSoft focus and tonal restraint draw from pictorialist principles, allowing atmosphere to carry meaning without overt direction. The image resists dramatization, instead grounding itself in continuity—how knowledge, movement, and understanding are passed quietly from one generation to the next.\n\nThere is a subtle departure here from the dominant Western canon of conquest and scale. Instead, the work leans into human passage, where significance is found not in expansion, but in the act of being led forward through unfamiliar ground.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 203
+    "sortOrder": 203,
+    contentSource: "ai"
   },
   {
     "id": "i-Q3ZbWvV",
     "title": "Waiting on the Day",
-    "description": "A painterly black and white Western fine art photograph capturing a cowboy at rest along a weathered porch, suspended between labor and quiet reflection. This cinematic Western image explores frontier life through restraint and stillness, blending rugged spirit with narrative Western art. Created in Wayne Heim’s signature painterly Western photography style, the piece reflects the American West as a place shaped by patience, endurance, and earned calm. c Wayne Heim",
-    "alt": "Painterly Western fine art photography of a cowboy resting on a wooden porch in quiet reflection",
+    "description": "A cowboy sits on a wooden porch with one boot resting on a rung, leaning back against the wall as he pauses between moments of work. This photograph captures stillness within a frontier setting, with attention to posture, environment, and the passage of time. Weathered wood, shadow, and relaxed positioning emphasize a quiet interval of rest. \n\n© Wayne Heim",
+    "alt": "Man resting on a wooden porch with one leg raised, a quiet moment in fine art Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q3ZbWvV/0/K3h8ZpfsqXVHcjdbCr5d7SGw7TRVZLzsK84VFj9qC/XL/_HF24980-1363-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q3ZbWvV/0/K3h8ZpfsqXVHcjdbCr5d7SGw7TRVZLzsK84VFj9qC/XL/_HF24980-1363-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q3ZbWvV/0/K43XfHTLRFkbHP9twkMV8LTN8xTVSZZ6dmWbsqdzn/L/_HF24980-1363-L.jpg",
@@ -8569,6 +8605,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q3ZbWvV/0/LQ3pnq7bjd85Nnd6bzrLhDdwWzr8pKjgP6j5q4D8p/S/_HF24980-1363-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Q3ZbWvV/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -8584,22 +8621,26 @@ export const galleryData = [
       "wild west photography",
       "American frontier portraits",
       "Americana photography",
-      "authentic frontier art prints",
+      "authentic frontier art prints"
     ],
+
     "story": "The porch creaks once, then settles.\n\nBoot heel hooked on a rung, hat brim low, he lets the hours move past without him. Work will come when it’s ready. So will trouble. He’s learned not to hurry either.\n\nSome days are for motion. This one is for listening.",
-    "notes": "This piece draws from the Pictorialist tradition, emphasizing mood, texture, and tonal control over action. The composition favors pause and posture—echoing the psychological quiet found in Frederic Remington’s lesser-known interior moments and the lived-in calm of Wyeth’s rural figures—where character is revealed through stillness.\n\nPrinted on Baltic Birch, the natural grain complements the weathered wood and fabric textures, reinforcing the theme of time passing without spectacle. It is a contemplative Western image—one that invites slow viewing and rewards collectors drawn to narrative depth rather than motion.",
+    "notes": "The structure of the image is built on pause—an intentional absence of action that allows character to emerge through posture and environment. The seated figure, angled slightly away, creates a sense of inward space rather than outward engagement.\n\nThis approach aligns with the quieter lineage of Western art, where figures are defined not by what they do, but by how they hold stillness. There is an echo of Wyeth’s restraint here, where everyday moments carry weight through composition and tonal control rather than narrative declaration.\n\nThe textures of wood, fabric, and shadow work together without competition, reinforcing a sense of time passing without urgency. It is a piece that invites a slower pace of viewing, where meaning accumulates gradually rather than presenting itself all at once.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 204
+    "sortOrder": 204,
+    contentSource: "ai"
   },
   {
     "id": "i-2GsTkqf",
     "title": "Standing His Ground",
-    "description": "A painterly Western fine art photograph capturing a cowboy standing with quiet authority, framed by wood, light, and restraint. This image reflects frontier life through a Pictorialist-influenced approach, emphasizing rugged spirit, western canon, and narrative Western art. Created as fine art Western photography, the work leans into stillness, posture, and presence rather than spectacle. c Wayne Heim.",
-    "alt": "Painterly Western fine art portrait of a cowboy standing in quiet confidence",
+    "description": "A man stands with arms crossed against a wooden post, wearing a hat and vest in a frontier setting. This cowboy portrait focuses on posture, clothing, and proximity to the structure, with visible wood grain and soft background detail. The image presents a standing figure positioned at rest within a Western environment. \n\n© Wayne Heim",
+    "alt": "Man in hat and vest standing with arms crossed against a wooden post in a frontier setting.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2GsTkqf/0/Mbjz3zqSKsLpMZSTpWX3TjhBWS2ZpJ8jbfFDZ8sQf/XL/_HF25195-1367-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2GsTkqf/0/Mbjz3zqSKsLpMZSTpWX3TjhBWS2ZpJ8jbfFDZ8sQf/XL/_HF25195-1367-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2GsTkqf/0/KVZfxDnPCtR3WHz85dKg5gKRRCqSfJ29vFTmnVrH6/L/_HF25195-1367-L.jpg",
@@ -8607,6 +8648,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2GsTkqf/0/LZfMDgnXkprcszdw6hr9VMLJPbrzzBxFZqQS7fvSH/S/_HF25195-1367-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-2GsTkqf/A",
+
     "keywords": [
       "cowboy art",
       "cowboy portraits",
@@ -8622,22 +8664,26 @@ export const galleryData = [
       "wild west photography",
       "western cowboy art",
       "pictorialist tradition",
-      "western painterly photography",
+      "western painterly photography"
     ],
+
     "story": "He doesn’t move when the noise shifts.\n\nArms crossed, back against weathered timber, he lets the moment come to him instead of chasing it. Whatever’s next will announce itself soon enough.\n\nSome men rush toward trouble. Others know it always finds you.",
     "notes": "This piece draws from the Pictorialist tradition, prioritizing mood, restraint, and tonal depth over literal storytelling. The composition echoes the quiet authority found in works by Frederic Remington and early Western illustrators, where posture and negative space carry as much narrative weight as action. The softened edges and controlled contrast reinforce the sense of time, patience, and earned confidence—hallmarks of enduring Western imagery designed to live comfortably alongside both historic and contemporary fine art collections.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 205
+    "sortOrder": 205,
+    contentSource: "ai"
   },
   {
     "id": "i-Ld6kTtM",
     "title": "High Tension",
-    "description": "A painterly Western photograph capturing a moment of raw confrontation and frontier resolve. This cinematic cowboy portrait draws from the Pictorialist tradition, emphasizing restraint, atmosphere, and psychological tension over spectacle. Rooted in the visual language of the American frontier, the image reflects rugged spirit, western canon influence, and narrative-driven fine art Western photography. © Wayne Heim",
-    "alt": "High-tension Western cowboy portrait in painterly fine art photography",
+    "description": "A cowboy crouches behind a wooden barrel while aiming a revolver, using the object as cover in an open frontier setting. This image captures a moment of gunfire, with visible smoke and positioning that emphasizes distance, line of sight, and use of terrain. Clothing, posture, and props reflect a historical cowboy scenario. \n\n© Wayne Heim",
+    "alt": "Shooter crouched behind a barrel firing a revolver, captured mid-shot in fine art Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Ld6kTtM/0/LDxLm4VQ3Dvm8XqmZB6nZDBJbtdzmc3NKQv5CV3MN/XL/_WHO3344-1399-1400-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Ld6kTtM/0/LDxLm4VQ3Dvm8XqmZB6nZDBJbtdzmc3NKQv5CV3MN/XL/_WHO3344-1399-1400-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Ld6kTtM/0/M5kSVxSkvC53tMzCsG9wxrwW6KbgQB8nQBvtpJ6BZ/L/_WHO3344-1399-1400-L.jpg",
@@ -8645,6 +8691,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Ld6kTtM/0/MLvm4tHvDwzZmqnkHsnzbF3ww52k66xXMBj5GmX4v/S/_WHO3344-1399-1400-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Ld6kTtM/A",
+
     "keywords": [
       "cowboy art",
       "cowboy portraits",
@@ -8659,22 +8706,26 @@ export const galleryData = [
       "Western canon",
       "wild west photography",
       "cinematic stills",
-      "western grit",
+      "western grit"
     ],
+
     "story": "The barrel is cold against his palm.\nBreath held just long enough to matter.\n\nEverything narrows—wood grain, weight, distance.\nThis isn’t bravado or speed.\nIt’s the quiet moment where decision hardens.\n\nAfter this, there will be noise.\nBefore it, there is only resolve.",
-    "notes": "This piece leans heavily into the Pictorialist mindset—where mood, timing, and emotional gravity outweigh literal action. The composition echoes the psychological restraint found in early Western illustration and photography, where tension is carried by posture and shadow rather than motion.\n\nThe framing and tonal control place the viewer inside the moment, not as a witness to violence, but as a participant in consequence. This approach aligns more closely with narrative painters and illustrators of the Western canon than modern action imagery, reinforcing the work’s place within story-driven, cinematic Western fine art.",
+    "notes": "This scene leans heavily into the Pictorialist mindset—where mood, timing, and emotional gravity outweigh literal action. The composition echoes the psychological restraint found in early Western illustration and photography, where tension is carried by posture and shadow rather than motion.\n\nThe framing and tonal control place the viewer inside the moment, not as a witness to violence, but as a participant in consequence. This approach aligns more closely with narrative painters and illustrators of the Western canon than modern action imagery, reinforcing the work’s place within story-driven, cinematic Western fine art.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 206
+    "sortOrder": 206,
+    contentSource: "ai"
   },
   {
     "id": "i-6CvnjQ5",
     "title": "By Lamplight",
-    "description": "A painterly black and white Western fine art photograph capturing a quiet frontier interior illuminated by lamplight. This image reflects frontier life through narrative Western art, emphasizing stillness, restraint, and domestic solitude within the American frontier. Rendered in a Pictorialist tradition, the photograph evokes authentic frontier art prints, cinematic stills, and fine art Western photography rooted in atmosphere and story. © Wayne Heim",
-    "alt": "Painterly Western fine art photograph of a frontier woman reading by lamplight",
+    "description": "A woman sits at a wooden table inside a dimly lit room, holding a book as light from a nearby lamp falls across her face and hands. Interior details such as the door, floorboards, and simple furnishings frame the scene, while her seated posture and downward gaze focus attention on the act of reading. The composition centers on a quiet indoor moment within a frontier setting. \n\n© Wayne Heim",
+    "alt": "Painterly Western fine art photograph of a frontier woman reading by lamplight.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6CvnjQ5/0/LTPdpBhr6KjX9P9GQBS2dDQsknmZgrKM2tCDGVs2q/XL/_HF28456-1373-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6CvnjQ5/0/LTPdpBhr6KjX9P9GQBS2dDQsknmZgrKM2tCDGVs2q/XL/_HF28456-1373-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6CvnjQ5/0/Mp45HdpFfdSZQ5Xd5w79JRbf4C2hp987SHFxbFz6M/L/_HF28456-1373-L.jpg",
@@ -8682,6 +8733,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6CvnjQ5/0/MJ29Lwvj3bbQWXxv659t2vj7T8fGfJXzf9h3D8T2c/S/_HF28456-1373-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-6CvnjQ5/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -8696,22 +8748,26 @@ export const galleryData = [
       "western themed art",
       "western fine art",
       "wild west photography",
-      "western art",
+      "western art"
     ],
+
     "story": "The room has finally gone quiet.\n\nThe work is done, the voices have faded, and the night has settled into the walls. She turns a page slowly, not rushing the moment, not chasing tomorrow. The light is just enough—never more than it needs to be.\n\nOutside, the world waits. Inside, time loosens its grip.",
     "notes": "This work draws from the quiet interior moments often absent in traditional Western imagery, aligning more closely with the atmospheric restraint of the Pictorialist movement and the domestic stillness found in early Wyeth interiors rather than action-driven Western canon. The controlled lamplight, softened tonal transitions, and deliberate composition elevate the scene beyond reenactment into contemplative fine art. It serves as a counterweight to frontier mythology—reminding the viewer that endurance, memory, and resolve were often forged in silence, not spectacle.",
     "rating": 5,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 207
+    "sortOrder": 207,
+    contentSource: "ai"
   },
   {
     "id": "i-NrDBPzM",
     "title": "A Long Look Inward",
-    "description": "A painterly Western fine art photograph capturing a cowboy in a moment of quiet reflection, lit by low interior light and shaped by shadow and restraint. This image explores frontier life beyond action, emphasizing inner resolve, lived experience, and psychological stillness. Rendered in a pictorialist-inspired style, it reflects the timeless character of the American West through narrative Western art and fine art Western photography. © Wayne Heim",
-    "alt": "Painterly Western fine art portrait of a cowboy seated indoors in quiet reflection, capturing rugged spirit and frontier life",
+    "description": "A long-haired cowboy sits indoors holding a metal cup, lit from the side by a single light source. This Western photograph captures a seated figure in a frontier interior, with visible clothing details, hat, and textured background. The composition emphasizes posture, lighting direction, and the enclosed setting. \n\n© Wayne Heim",
+    "alt": "Long-haired cowboy seated indoors holding a cup, side-lit in fine art Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NrDBPzM/0/LHSrKQTzWkPKgtDN5wwhZrDBSHCBdxVmtSCMSwmFK/XL/_HF28482-1374-1375-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NrDBPzM/0/LHSrKQTzWkPKgtDN5wwhZrDBSHCBdxVmtSCMSwmFK/XL/_HF28482-1374-1375-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NrDBPzM/0/K742J3WRwZ3tMgnjXXfp26d4HFJV9LKTW5HJpmSLV/L/_HF28482-1374-1375-L.jpg",
@@ -8719,6 +8775,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NrDBPzM/0/NPN7x4zvKtc6QtkcWCTQCMfqFQR5S8h67WF2dsSg4/S/_HF28482-1374-1375-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-NrDBPzM/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -8734,22 +8791,26 @@ export const galleryData = [
       "rugged spirit",
       "the American West",
       "western cowboy art",
-      "Western Cowboy Portraits",
+      "Western Cowboy Portraits"
     ],
+
     "story": "The room has gone quiet enough for thoughts to speak.\n\nHe doesn’t rush them. Lets them arrive on their own terms—one memory at a time, one truth at a time. The cup cools in his hand while the day finishes settling behind him.\n\nSome reckonings don’t need witnesses.",
-    "notes": "This work draws from the pictorialist tradition, prioritizing mood, interior light, and psychological presence over overt action. The restrained composition and softened tonal transitions echo the quiet authority found in early twentieth-century photographic portraiture while remaining grounded in Western narrative realism.\n\nRather than dramatizing the cowboy myth, this image pauses within it—offering collectors a contemplative counterpoint to the genre’s more kinetic canon. It is a piece about endurance, interior life, and the moments that define a man when no one else is watching.",
+    "notes": "The restrained composition and softened tonal transitions echo the quiet authority found in early twentieth-century photographic portraiture while remaining grounded in Western narrative realism.\n\nRather than dramatizing the cowboy myth, this image pauses within it—offering collectors a contemplative counterpoint to the genre’s more kinetic canon. It is a piece about endurance, interior life, and the moments that define a man when no one else is watching.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 208
+    "sortOrder": 208,
+    contentSource: "ai"
   },
   {
     "id": "i-Q9ddntR",
     "title": "Held at the Ready",
-    "description": "A painterly black and white Western action portrait capturing a mounted cowboy with rifle raised, caught in the charged instant before the next move. This fine art Western photograph leans into cinematic tension and frontier grit, blending rugged spirit with a Pictorialist tradition of softened light and story-forward restraint. Ideal for collectors drawn to narrative Western art, wild west painterly photography, and authentic frontier art prints. © Wayne Heim",
-    "alt": "Painterly Western photograph of a mounted cowboy holding a rifle at the ready, cinematic tension and rugged spirit in the American frontier.",
+    "description": "A mounted cowboy holds a rifle upright while riding through uneven terrain, captured mid-movement with the horse angled upward. The scene shows control of both reins and weapon, with visible tack, clothing, and surrounding brush. This image reflects elements of frontier photography, focusing on positioning, elevation, and readiness in the American West. \n\n© Wayne Heim",
+    "alt": "Mounted cowboy holding a rifle while riding uphill, captured in fine art Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Q9ddntR/2/NNg5LfbZcWx9RrCRGVF7tbG7WxdCSZhQxB7hx7f5f/XL/_WHO0739-Edit-Edit-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Q9ddntR/2/NNg5LfbZcWx9RrCRGVF7tbG7WxdCSZhQxB7hx7f5f/XL/_WHO0739-Edit-Edit-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Q9ddntR/2/NNg5LfbZcWx9RrCRGVF7tbG7WxdCSZhQxB7hx7f5f/XL/_WHO0739-Edit-Edit-Edit-Edit-2-XL.jpg",
@@ -8757,6 +8818,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Q9ddntR/2/KXdVvPp6m3BXBfNS9XJhr3kPxckBgkhk3SSjxsMcV/S/_WHO0739-Edit-Edit-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Q9ddntR/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -8772,20 +8834,22 @@ export const galleryData = [
       "Pictorialist tradition",
       "rugged spirit",
       "the American West",
-      "western cowboy art",
+      "western cowboy art"
     ],
+
     "story": "The saddle creaks once—then goes quiet, like it knows better.\n\nHe doesn’t aim at a man. He aims at what’s about to happen—at the second the world stops pretending. Breath held, reins gathered, jaw set in that old way that says he’s already made peace with the cost.\n\nIf someone wants to call it courage, fine. He calls it timing—and he intends to keep it.",
     "notes": "This piece lives in the razor-thin space between stillness and consequence—an action portrait built on restraint rather than spectacle. The raised rifle and forward posture create a strong diagonal that carries the eye through the frame, while the softened tonal handling keeps the scene grounded in mood, not bravado.\n\nThere’s a clear lineage here to the narrative clarity of classic Western illustration—Remington’s sense of compressed motion and Wyeth’s gift for charged quiet—translated through a photographic, Pictorialist-inflected finish. It’s a work that rewards close viewing: the tension isn’t shouted; it’s held, measured, and deliberate—exactly the kind of cinematic Western statement that anchors a wall with presence.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 209
+    "sortOrder": 209,
+    contentSource: "ai"
   },
   {
     "id": "i-tMGHpqv",
     "title": "Leading the Way",
-    "description": "A painterly Western fine art photograph capturing a quiet moment of frontier life, where leadership is shown through motion rather than command. This image reflects narrative Western art and fine art Western photography, blending cinematic restraint with the spirit of the American frontier. Rooted in painterly Western imagery and authentic frontier presence, the work emphasizes direction, resolve, and timeless Western character. © Wayne Heim",
-    "alt": "Painterly Western fine art photography of a woman riding forward through open frontier land",
+    "description": "A woman rides a horse through tall grass with another rider visible behind her, moving forward across open terrain. This fine art image captures mounted travel in a frontier setting, with attention to reins, posture, and surrounding landscape. The composition emphasizes forward motion and spacing between riders within the scene. \n\n© Wayne Heim",
+    "alt": "Woman riding a horse through tall grass with another rider following behind across open terrain.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tMGHpqv/0/Lgh3c2fT7gntBP7XSmQhkwtnJTvShjm5hfV3gGPjT/XL/_HF21068-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tMGHpqv/0/Lgh3c2fT7gntBP7XSmQhkwtnJTvShjm5hfV3gGPjT/XL/_HF21068-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tMGHpqv/0/NWPrW8rvbdThWVCHqLWtknRnNDsGbtC8VSXvKcLh7/L/_HF21068-Edit-L.jpg",
@@ -8793,6 +8857,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tMGHpqv/0/LLzQ7tPtSnf9rBWbVdg9dwN8HdQ3r77PnFrGcNDrW/S/_HF21068-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tMGHpqv/A",
+
     "keywords": [
       "western cowboy art",
       "frontier life",
@@ -8807,22 +8872,26 @@ export const galleryData = [
       "authentic frontier art prints",
       "cowboy portraits",
       "cowboys",
-      "cowboy art",
+      "cowboy art"
     ],
+
     "story": "She rides ahead without looking back.\n\nThe grass parts, the ground opens, and the decision has already been made. Whatever follows will follow on its own time. She does not slow for permission, nor does she check to see who agrees.\n\nSome paths aren’t chosen. They’re claimed by the one willing to go first.",
-    "notes": "This piece leans into the pictorialist tradition, prioritizing atmosphere and gesture over spectacle. The composition echoes classic Western painting structures—figures advancing through space rather than confronting the viewer—recalling the narrative restraint seen in artists like Remington and Wyeth. The softened tonal range and controlled contrast reinforce the sense of inevitability, positioning the rider not as a subject being observed, but as a force already in motion. This work rewards prolonged viewing, revealing leadership as an act of quiet certainty rather than dominance.",
+    "notes": "The composition is built on forward movement, with the lead figure placed slightly ahead and separated from the second rider, creating a natural sense of progression through space. This spacing establishes hierarchy without overt emphasis, allowing the viewer to read direction and intent through positioning alone.\n\nThere is a strong connection to traditional Western compositions where figures move through landscape rather than confront the viewer. The diagonal flow created by the horse and terrain carries the eye upward and forward, reinforcing a sense of travel rather than momentary action.\n\nSoftened tonal transitions and controlled contrast keep the image grounded in atmosphere, aligning with a pictorialist approach that favors cohesion over sharp delineation. The result is a piece that prioritizes continuity and movement through environment, inviting the viewer to follow rather than observe from a distance.",
     "rating": 5,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 210
+    "sortOrder": 210,
+    contentSource: "ai"
   },
   {
     "id": "i-crv6h7r",
     "title": "Held Close",
-    "description": "Held Close is a painterly Western fine art portrait centered on intimacy rather than frontier spectacle. Rendered in black and white, the image emphasizes softness, proximity, and emotional restraint, allowing the bond between subject and animal to carry the narrative. Rooted in the pictorialist tradition and narrative Western art, this fine art Western photography work reflects a quieter side of the American West—one defined not by endurance alone, but by gentleness and refuge. Created for collectors who value subtle emotion and images that reward stillness, this piece invites prolonged, contemplative viewing. © Wayne Heim",
-    "alt": "Painterly black and white fine art Western portrait of a young girl resting against a horse, expressing trust, tenderness, and quiet",
+    "description": "A young girl rests her head against the face of a horse, standing close beside the animal. The image shows the child’s hair, clothing, and closed eyes, along with the horse’s bridle and muzzle. This Western photograph captures a child and horse positioned together in a quiet outdoor setting. \n\n© Wayne Heim",
+    "alt": "Young girl resting her head against a horse’s face, standing close beside the animal in a calm moment.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-crv6h7r/0/K8HGjFCn63Jc2fsXVGFK5bG9d4cP6nxphs579J9RG/XL/_WHO6737-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-crv6h7r/0/K8HGjFCn63Jc2fsXVGFK5bG9d4cP6nxphs579J9RG/XL/_WHO6737-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-crv6h7r/0/L9JvhMHzKTP6wn7TpwnCx8nrWVwVkvJWfqjGBwDd3/L/_WHO6737-Edit-2-L.jpg",
@@ -8846,11 +8915,11 @@ export const galleryData = [
       "cowboys",
       "frontier life",
       "narrative Western art",
-      "pictorialist tradition",
+      "pictorialist tradition"
     ],
 
     "story": "She does not cling. She rests. The weight of her head settles where it has learned the world will not intrude. There is no signal, no motion demanded—only the quiet agreement between two living things that this moment can remain unguarded. Whatever waits beyond the frame is held back by trust.",
-    "notes": "This work reflects a lineage of Western art that values emotional truth over dramatization. The close framing and softened tonal transitions draw from pictorialist principles, where atmosphere and feeling guide interpretation more than overt action. The image resonates with traditions found in both Western painting and early photographic portraiture, where human presence is defined by trust, proximity, and restraint. By allowing the subject to exist without performance or tension, Held Close becomes a quiet counterpoint within the Western canon—an image that speaks to protection, companionship, and the moments history does not record, yet life depends on.",
+    "notes": "The close framing and softened tonal transitions draw from pictorialist principles, where atmosphere and feeling guide interpretation more than overt action. The image resonates with traditions found in both Western painting and early photographic portraiture, where human presence is defined by trust, proximity, and restraint. By allowing the subject to exist without performance or tension, Held Close becomes a quiet counterpoint within the Western canon—an image that speaks to protection, companionship, and the moments history does not record, yet life depends on.",
     "rating": 4,
 
     "galleries": [
@@ -8864,8 +8933,8 @@ export const galleryData = [
   {
     "id": "i-fhnpqP8",
     "title": "The Weight of Years",
-    "description": "The Weight of Years is a painterly Western fine art portrait shaped by time, restraint, and lived authority. Rendered in black and white, the image emphasizes texture, weathered presence, and psychological depth over narrative action. Drawing from the Western canon and frontier portrait traditions, this fine art Western photography work reflects a West defined not by myth, but by longevity—where character is earned slowly and carried quietly. Created for collectors who value authenticity and images that deepen with time, this piece rewards sustained viewing and reflection. © Wayne Heim",
-    "alt": "Painterly black and white fine art Western portrait of an elderly cowboy with a weathered beard and hat, expressing endurance, time, and",
+    "description": "An older man with a long beard wears a wide-brimmed hat and looks to the side while standing outdoors. His hair, facial features, and clothing are visible, along with soft background elements and natural light. This Western portrait shows a single figure positioned in an open setting. \n\n© Wayne Heim",
+    "alt": "Elderly cowboy with a long beard and hat looking off to the side in fine art Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fhnpqP8/0/KFNFDWZJJPRKg3WCNK5WQLrgFcmGBBvNwjb228Rs5/XL/_HF29303-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fhnpqP8/0/KFNFDWZJJPRKg3WCNK5WQLrgFcmGBBvNwjb228Rs5/XL/_HF29303-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fhnpqP8/0/NFtmtLVHTCRmWCPz6s6dTVRnMr426ns54RsqGWCR2/L/_HF29303-Edit-L.jpg",
@@ -8889,11 +8958,11 @@ export const galleryData = [
       "cowboys",
       "frontier life",
       "rugged spirit",
-      "the American West",
+      "the American West"
     ],
 
     "story": "Nothing in him is rushed anymore. The years have already done their work—settling into his posture, his gaze, the way he carries silence without explanation. He is not waiting for what comes next. He has learned that endurance does not announce itself. It simply remains.",
-    "notes": "This image belongs to a lineage of Western portraiture that values consequence over narrative flourish. The emphasis on texture, age, and tonal restraint recalls the compositional intelligence found in artists such as Frederic Remington and Andrew Wyeth, where time itself becomes a defining subject. The painterly handling softens transitions while preserving structural honesty, allowing the figure to feel both monumental and human. Rather than illustrating myth, The Weight of Years presents endurance as lived experience—an image that gains authority not through action, but through the accumulation of time.",
+    "notes": "This image belongs to a lineage of Western portraiture that values consequence over narrative flourish. The emphasis on texture, age, and tonal restraint recalls the compositional intelligence found in artists such as Frederic Remington and Andrew Wyeth, where time itself becomes a defining subject. The painterly handling softens transitions while preserving structural honesty, allowing the figure to feel both monumental and human.",
     "rating": 4,
 
     "galleries": [
@@ -8907,8 +8976,8 @@ export const galleryData = [
   {
     "id": "i-stm5tCK",
     "title": "The Way Forward",
-    "description": "The Way Forward is a painterly Western fine art photograph rooted in American frontier life and narrative Western art. Rendered in black and white, the image captures a shared moment of decision, where movement is implied but not yet taken. Drawing from the Western canon and pictorialist tradition, this fine art Western photography work emphasizes gesture, distance, and consequence over action. Designed for collectors who value cinematic storytelling and enduring imagery, the piece rewards sustained viewing and reflection. © Wayne Heim",
-    "alt": "Painterly black and white fine art Western photograph of two riders on horseback as one points toward the horizon, conveying direction",
+    "description": "Two riders pause along a rough path, one lifting his arm to indicate something beyond the frame while the other remains still, watching. The landscape opens quietly around them, with ground texture, distance, and sky shaping the scene. This piece centers on a moment of decision held in suspension rather than action, where direction is suggested but not yet taken. \n\n© Wayne Heim",
+    "alt": "Two riders on horseback paused on a frontier path, one pointing toward the distance in painterly Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-stm5tCK/0/LNQZf8wNJgLJphcSb4RKWpdnzTFqpsGKRQt84BGQK/XL/_HF20974-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-stm5tCK/0/LNQZf8wNJgLJphcSb4RKWpdnzTFqpsGKRQt84BGQK/XL/_HF20974-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-stm5tCK/0/K4kWmC5kW5z7Bt9HXSHLSqpFnQRf5fR4bKgrn3Rq6/L/_HF20974-Edit-Edit-L.jpg",
@@ -8932,11 +9001,11 @@ export const galleryData = [
       "cowboy portraits",
       "cowboys",
       "narrative Western art",
-      "cinematic stills",
+      "cinematic stills"
     ],
 
     "story": "He raises his hand not to command, but to commit. The land does not argue. The direction is chosen, and in that choice the future narrows into a single line. She watches, understanding that once the path is named, there is no clean way to unname it.",
-    "notes": "This work aligns with a tradition of Western narrative imagery that treats decision as the true dramatic center. The raised gesture functions as a compositional anchor, guiding the eye while implying consequence beyond the frame. Influenced by the narrative restraint seen in artists such as Frederic Remington and N.C. Wyeth, the image avoids spectacle in favor of implication. The painterly handling softens transitions while preserving structure, allowing land, figure, and gesture to share equal weight. The Way Forward operates as a single cinematic frame—an image defined not by movement itself, but by the moment movement becomes inevitable.",
+    "notes": "The raised gesture functions as a compositional anchor, guiding the eye while implying consequence beyond the frame. Influenced by the narrative restraint seen in artists such as Frederic Remington and N.C. Wyeth, the image avoids spectacle in favor of implication. The painterly handling softens transitions while preserving structure, allowing land, figure, and gesture to share equal weight.",
     "rating": 4,
 
     "galleries": [
@@ -8950,8 +9019,8 @@ export const galleryData = [
   {
     "id": "i-KPgFcrw",
     "title": "The Turn",
-    "description": "The Turn is a painterly Western fine art photograph capturing control, skill, and physical authority in motion. Rendered in black and white, the image emphasizes balance and precision over chaos, revealing the quiet intelligence behind speed. Rooted in frontier life and the Western canon, this fine art Western photography work reflects the lived reality of working cowboys, where movement is deliberate and mistakes carry consequence. Created for collectors who value authenticity, grit, and images that convey earned mastery, this piece rewards close, sustained viewing. © Wayne Heim",
-    "alt": "Painterly black and white fine art Western photograph of a cowboy guiding a horse through a sharp turn in dust, expressing control, skill",
+    "description": "Dust lifts as a horse cuts sharply across the ground, its rider leaning into the turn with reins drawn tight. The movement is fast but controlled, with both figures working in sync as they redirect momentum in a confined space. This moment reflects the physical demands and timing central to working cowboy art and frontier life. \n\n© Wayne Heim",
+    "alt": "Horse and rider executing a sharp turn in dust, showing control and motion in painterly Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KPgFcrw/1/NhBpLbSG5xnnRmwNWvhx86b4MWp8w8Hskx9mZC3DK/XL/_WHO4255-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KPgFcrw/1/NhBpLbSG5xnnRmwNWvhx86b4MWp8w8Hskx9mZC3DK/XL/_WHO4255-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-KPgFcrw/1/K9dbdgW3RXjrcKqLJnrMMf8NhQzwV4BX7fN6ZN8d8/L/_WHO4255-Edit-Edit-2-L.jpg",
@@ -8975,11 +9044,11 @@ export const galleryData = [
       "cowboys",
       "frontier photography",
       "rugged spirit",
-      "the American West",
+      "the American West"
     ],
 
     "story": "There is no hesitation here—only timing. Horse and rider commit together, weight and rein answering in the same breath. Dust lifts, muscle tightens, and the ground gives just enough to let the decision hold. This is not spectacle. It is work, practiced until instinct replaces thought.",
-    "notes": "This image reflects a tradition of Western imagery that prioritizes function over display. The composition centers on the exchange between horse and rider, where control is expressed through restraint rather than force. The painterly handling softens dust and motion without sacrificing structural clarity, aligning the photograph with pictorialist-informed approaches while remaining grounded in documentary truth. Like the strongest works in the Western canon, The Turn finds its power not in speed itself, but in mastery—an image shaped by repetition, trust, and the quiet authority of work done well.",
+    "notes": "The composition is built around the circular energy of the turn, where horse and rider form a unified structure rather than separate subjects. The line of motion is reinforced through the arc of the horse’s body and the rider’s posture, creating a controlled tension that recalls the functional clarity seen in Western artists such as Frederic Remington. Dust is treated not as atmosphere alone, but as a compositional element that defines space and movement, while the restrained tonal handling keeps the image grounded. The result is a work that emphasizes mastery through alignment, repetition, and quiet authority rather than overt drama.",
     "rating": 4,
 
     "galleries": [
@@ -8993,8 +9062,8 @@ export const galleryData = [
   {
     "id": "i-BLhK5vz",
     "title": "Listening for What Follows",
-    "description": "A painterly black and white Western portrait capturing a quiet moment of attention and restraint on the American frontier. This fine art Western photography image reflects narrative Western art rooted in observation rather than action, where meaning gathers in stillness. Rendered in a pictorialist-inspired style, the image blends soft light, tonal restraint, and emotional tension to evoke frontier life and the lived psychology of the American West. © Wayne Heim.",
-    "alt": "Painterly black and white Western portrait of a frontier woman listening intently, rendered in a soft pictorialist style with cinematic",
+    "description": "A woman in period dress faces slightly off-frame, her expression steady while a second figure remains softened in the background. Light falls across her face and bonnet, isolating her presence against a muted setting. This fine art Western photography image captures a moment of attention and awareness within a frontier setting, where stillness defines the scene more than action. \n\n© Wayne Heim",
+    "alt": "Frontier woman in period dress looking off-frame with a blurred figure behind her in painterly Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BLhK5vz/0/LmPk7VPbs9hMnxRhkFNcCsn3zLt8n9VG6NjTL49g2/XL/_WHO0764-1309-1310-1311-1312-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BLhK5vz/0/LmPk7VPbs9hMnxRhkFNcCsn3zLt8n9VG6NjTL49g2/XL/_WHO0764-1309-1310-1311-1312-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BLhK5vz/0/KS53dqDPSFcxxJGjxQNLLh4cx3zRw49kcKVk9nBpQ/L/_WHO0764-1309-1310-1311-1312-L.jpg",
@@ -9002,6 +9071,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BLhK5vz/0/Mc9sqS2S5CNTxgBKKjZxCrptH2j33RvHK5hZFB3pv/S/_WHO0764-1309-1310-1311-1312-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BLhK5vz/A",
+
     "keywords": [
       "painterly Western photography",
       "fine art Western photography",
@@ -9017,20 +9087,22 @@ export const galleryData = [
       "western fine art",
       "western themed art",
       "the American West",
-      "authentic frontier art prints",
+      "authentic frontier art prints"
     ],
+
     "story": "She listens without turning her head.  \nThe sound comes first—boots on wood, breath held too long, someone deciding whether to speak.\n\nHer face gives nothing away. Whatever arrives next has already been weighed, measured against what she knows of people and how they fail to say what they mean.\n\nBehind her, the world keeps its distance.  \nThat, too, is intentional.",
-    "notes": "This portrait draws from the pictorialist tradition, where softness and tonal control are used not for nostalgia, but for psychological focus. The shallow depth and gentle diffusion guide attention inward, encouraging the viewer to read the subject’s awareness rather than her surroundings.\n\nThe composition echoes early twentieth-century narrative portraiture, where meaning often lived in anticipation rather than action. Stillness becomes the subject, allowing the image to function as a cinematic pause rather than a descriptive scene.\n\nAs part of a broader body of painterly Western imagery, this work rewards quiet viewing. It speaks to collectors drawn to Western fine art that values emotional gravity, restraint, and the unspoken tensions embedded in frontier life.",
+    "notes": "This portrait leans into the pictorialist lineage through controlled softness and tonal diffusion, allowing the subject’s awareness to carry the image rather than overt action. The shallow depth of field separates foreground from background without severing their relationship, creating a quiet tension between presence and context. The handling recalls early narrative portraiture, where anticipation often held more weight than event. The result is a restrained, psychologically oriented image that invites prolonged viewing through subtle shifts in expression and light.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 215
+    "sortOrder": 215,
+    contentSource: "ai"
   },
   {
     "id": "i-FqBfMJG",
     "title": "What He Carries Home",
-    "description": "A painterly black and white Western photograph capturing a moment of care and quiet intimacy inside a frontier interior. This fine art Western photography image explores the human cost carried home from hard lives, rendered with restrained light, shallow focus, and cinematic stillness. Texture, shadow, and proximity shape a narrative rooted in consequence, tenderness, and survival on the American frontier. © Wayne Heim.",
-    "alt": "Painterly black and white Western photograph of a frontier couple inside a cabin, sharing a quiet moment of care and intimacy by lamplight.",
+    "description": "Inside a dim cabin, a man lies resting while a woman leans close, her hands gently supporting his face. A single lamp casts soft light across the scene, revealing simple interior details and the closeness between them. This fine art Western photography image presents a quiet moment of care within a frontier setting, where proximity and stillness define the interaction. \n\n© Wayne Heim",
+    "alt": "Woman tending to an injured man by lamplight inside a frontier cabin in painterly Western photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-FqBfMJG/0/LJsz5bsTFhP7fVPPthwHzL3h2rh2t7QHbsjzXV4mJ/XL/_HF21354-1220-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-FqBfMJG/0/LJsz5bsTFhP7fVPPthwHzL3h2rh2t7QHbsjzXV4mJ/XL/_HF21354-1220-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-FqBfMJG/0/LJsz5bsTFhP7fVPPthwHzL3h2rh2t7QHbsjzXV4mJ/XL/_HF21354-1220-XL.jpg",
@@ -9038,6 +9110,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-FqBfMJG/0/Lg4hWR4dpD8hPXf8cwD27fRMJWgWcJ4n7zFVWTkXP/S/_HF21354-1220-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-FqBfMJG/A",
+
     "keywords": [
       "painterly Western photography",
       "fine art Western photography",
@@ -9053,20 +9126,22 @@ export const galleryData = [
       "Americana photography",
       "western fine art",
       "western themed art",
-      "authentic frontier art prints",
+      "authentic frontier art prints"
     ],
+
     "story": "He brings it back with him every time.  \nNot just the ache, not just the blood—something quieter that doesn’t set down easily.\n\nHer hands know where to go. They’ve learned the map of him by heart, learned which silences mean pain and which mean fear pretending not to be.\n\nThe lamp burns low.  \nFor now, this is enough.",
-    "notes": "This work draws from the pictorialist tradition, using softened edges and controlled contrast to privilege emotional proximity over detail. The lamplit interior compresses space, allowing care itself to become the central action.\n\nThe composition echoes the quiet domestic gravity found in Andrew Wyeth’s interior studies and the restrained narrative pauses of early cinematic Westerns, where tenderness carries as much weight as violence. Meaning accumulates through touch, not gesture.\n\nBy focusing on what returns home unseen, the image invites prolonged viewing. It rewards collectors drawn to Western fine art that values intimacy, consequence, and the fragile acts of care that sustain life on the frontier.",
+    "notes": "By focusing on what returns home unseen, the image invites prolonged viewing. It rewards collectors drawn to Western fine art that values intimacy, consequence, and the fragile acts of care that sustain life on the frontier.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 216
+    "sortOrder": 216,
+    contentSource: "ai"
   },
   {
     "id": "i-xLcb2sZ",
     "title": "Frontier Matriarch",
-    "description": "A painterly Western fine art portrait depicting a woman shaped by frontier life, rendered in a soft pictorialist style that emphasizes presence over spectacle. This narrative Western image reflects the quiet authority of the American frontier, blending Western fine art photography with historic Western portraiture traditions. Light, texture, and restraint evoke endurance, memory, and lived experience within the American West. © Wayne Heim.",
-    "alt": "Painterly Western portrait of a frontier woman in historic Western fine art photography",
+    "description": "A woman stands facing forward in period clothing, her posture relaxed and her expression steady. The soft background and gentle tonal fade isolate her figure, allowing facial features and texture to remain the focus. This Western fine art photography portrait presents a single subject in a quiet, centered frame with minimal environmental detail. \n\n© Wayne Heim",
+    "alt": "Older woman in period dress and hat standing calmly against a soft background.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xLcb2sZ/0/LV4HbKHwDT2hvRXjmGqXzMnQdFcgKS66gcWFDWhcw/XL/_HF24609-1359-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xLcb2sZ/0/LV4HbKHwDT2hvRXjmGqXzMnQdFcgKS66gcWFDWhcw/XL/_HF24609-1359-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xLcb2sZ/0/NC2gMq7hkRGRmCjPtqjKsSPWFJ3cjdks7qvCTzZzj/L/_HF24609-1359-L.jpg",
@@ -9074,6 +9149,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xLcb2sZ/0/Lvq8BMhkFLZpFtw8WztPx5h4Hsf4HDpr47DDXdCxd/S/_HF24609-1359-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-xLcb2sZ/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -9089,22 +9165,26 @@ export const galleryData = [
       "painterly Western photograph",
       "rugged spirit",
       "the American West",
-      "western themed art",
+      "western themed art"
     ],
+
     "story": "She does not pose for the past.  \nThe past already knows her.\n\nYears sit lightly on her shoulders, earned, not worn.  \nEvery line remembers weather, work, waiting.\n\nShe stands as proof that the frontier did not belong only to those who left marks in ledgers or stone.  \nSome of it survived because she stayed.",
-    "notes": "This work draws directly from the Pictorialist tradition, favoring tonal softness and emotional gravity over sharp realism. The portrait echoes the dignity found in early American studio photography and Western illustration, where subjects were framed not as symbols, but as survivors of lived systems. There are quiet parallels to the moral weight seen in artists such as Käsebier and the human-centered restraint found in Western genre painting. The result is a Western image grounded in endurance and authority rather than myth or nostalgia.",
-    "rating": 0,
+    "notes": "The portrait echoes the dignity found in early American studio photography and Western illustration, where subjects were framed not as symbols, but as survivors of lived systems. There are quiet parallels to the moral weight seen in artists such as Käsebier and the human-centered restraint found in Western genre painting. The result is a Western image grounded in endurance and authority rather than myth or nostalgia.",
+    "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 217
+    "sortOrder": 217,
+    contentSource: "ai"
   },
   {
     "id": "i-vc6XQPf",
     "title": "Cowboy’s Pause",
-    "description": "A painterly sepia-toned Western photograph of a cowboy in mid-pause, captured with narrative weight and compositional restraint. Wayne Heim’s fine art cowboy photography highlights the lived reality of the American frontier, where anticipation, observation, and quiet resolve define the essence of western life. Ideal for collectors seeking authentic cowboy art, outlaw portraits, and fine art Western photography. (© Wayne Heim.)",
-    "alt": "Sepia-toned fine art Western photograph of a cowboy pausing with rifle",
+    "description": "A man stands with a rifle resting against his shoulder, dressed in period clothing with a hat and gear suited for travel. His stance is upright and still, with open space surrounding him and a soft, faded background. This painterly cowboy photography portrait isolates the figure in a quiet moment, focusing on presence rather than action. \n\n© Wayne Heim",
+    "alt": "Man in cowboy attire holding a rifle and standing in a relaxed stance against a soft background.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/M3wwqpzMpSFZm2MCgqHFFmkmWvNW7Zbdp8szLnvSP/XL/_HF24846-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/M3wwqpzMpSFZm2MCgqHFFmkmWvNW7Zbdp8szLnvSP/XL/_HF24846-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/M3wwqpzMpSFZm2MCgqHFFmkmWvNW7Zbdp8szLnvSP/XL/_HF24846-Edit-XL.jpg",
@@ -9112,6 +9192,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/1/LjqDBDHrz9DFPXRffF4cknPQrGkHjdq3NHPkRRLwB/S/_HF24846-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vc6XQPf/A",
+
     "keywords": [
       "cowboy art",
       "cowboy portraits",
@@ -9127,20 +9208,22 @@ export const galleryData = [
       "painterly Western images",
       "Western cowboys",
       "western cowboy art",
-      "cowboy artwork prints",
+      "cowboy artwork prints"
     ],
+
     "story": "He leans on his rifle, shoulders squared, eyes scanning the horizon. A moment of stillness in the dust and heat—a breath held between past and future, between decision and action. Out here, a pause can carry the weight of life itself.\n\nThe wind stirs the brim of his hat, dust skimming the edges of his coat, but he remains grounded. Each detail—the shift of a horse, the distant call of a crow, the faint outline of a ridge—maps a story only he can read. In this quiet, he gathers himself for whatever comes next.",
-    "notes": "This piece exemplifies Wayne Heim’s mastery of narrative Western photography: the interplay of light and shadow, the careful framing of stance and gaze, and the implied tension of what lies beyond the frame. The cowboy’s pause is not just a moment of rest, but a study in anticipation, observation, and frontier awareness.\n\nCollectors will appreciate the layered storytelling—the disciplined composition and painterly technique evoke both historical tradition and cinematic drama. The image stands as a tribute to the quiet resilience and measured courage that defined life on the American frontier.",
+    "notes": "Collectors will appreciate the layered storytelling—the disciplined composition and painterly technique evoke both historical tradition and cinematic drama. The image stands as a tribute to the quiet resilience and measured courage that defined life on the American frontier.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 218
+    "sortOrder": 218,
+    contentSource: "ai"
   },
   {
     "id": "i-xMCZJNR",
     "title": "Where Are They Going?",
-    "description": "A painterly black and white Western portrait of an older lawman, caught mid-watch at a frosted window. This image channels the pictorialist tradition and classic Western portraiture, using directional light and atmospheric texture to heighten anticipation and narrative tension. The composition captures the quiet authority and psychological weight that define frontier vigilance, giving the viewer a window into both the character and the myth of the American West. © Wayne Heim",
-    "alt": "Older lawman looking out a frosted window in painterly black and white Western portrait",
+    "description": "An older man stands near a window, one hand resting along the frame as he looks outward. Light from outside falls across his face and coat, contrasting with the darker interior behind him. Frosted glass and worn wood details frame the scene, giving context to the setting.\n\n© Wayne Heim",
+    "alt": "Older man in a hat looking out a frosted window with light falling across his face in a Western portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-xMCZJNR/0/KH82NhZvvf4pMZSsBMcCP7jW8rPH2zjW9KHDHTZkm/XL/_O1H0580-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-xMCZJNR/0/KH82NhZvvf4pMZSsBMcCP7jW8rPH2zjW9KHDHTZkm/XL/_O1H0580-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-xMCZJNR/0/LcQh7Sh8w6wB99LCG8XG3fTBX5twptr87chvSQSpR/L/_O1H0580-Edit-Edit-L.jpg",
@@ -9148,6 +9231,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-xMCZJNR/0/KXkrnzXRgNQXZDVfmPVNvRj3D9K8wgTh4wNwBRSMr/S/_O1H0580-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-xMCZJNR/A",
+
     "keywords": [
       "American frontier",
       "cowboy artwork",
@@ -9163,22 +9247,26 @@ export const galleryData = [
       "the American West",
       "pictorialist tradition",
       "lawman",
-      "cinematic stills",
+      "cinematic stills"
     ],
+
     "story": "He leans forward, careful not to fog the glass with his breath, eyes scanning the morning for whatever moves first.\n\nBehind the window, everything feels quiet but charged—a lawman’s patience tested not by action, but by the waiting that comes before it. He’s learned that trouble rarely shows itself in a rush. It arrives in the margins, in the silence, long before the first sound.\n\nEvery time he looks, he’s measuring which story is about to walk through that door—and which ones will never return.",
-    "notes": "This portrait blends the visual storytelling of early Western photographers and pictorialist painters, leveraging shadow, reflection, and subtle gesture to convey the psychology of waiting. The careful composition places the subject in a liminal space—neither inside nor outside, but balanced on the edge of story and anticipation.\n\nInspired by traditions reaching from Remington to Steichen, the work offers collectors a nuanced take on the lawman archetype, celebrating restraint, poise, and the unsung tension that holds the West together. Its quiet surface conceals a world of narrative beneath, inviting long study and",
-    "rating": 0,
+    "notes": "The structure of the image is defined by the interplay between interior shadow and exterior light, creating a natural divide that mirrors the subject’s position. The window frame acts as both boundary and guide, directing attention while reinforcing a sense of separation between spaces. The restrained tonal range allows subtle shifts in light to carry the visual weight, recalling approaches seen in early photographic portraiture and Western illustration. The result is a work that emphasizes presence through stillness, where tension is held not in action but in observation.",
+    "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "",
-    "sortOrder": 219
+    "sortOrder": 219,
+    contentSource: "ai"
   },
   {
     "id": "i-QJR63LW",
     "title": "Questioning",
-    "description": "A painterly black and white Western portrait of an older marshal, composed with restraint and psychological depth. The image draws from the pictorialist tradition, using softened edges, tonal control, and quiet posture to emphasize moral tension rather than action. This portrait reflects the contemplative side of frontier justice, where experience tempers authority and judgment is never rushed. © Wayne Heim",
-    "alt": "Older marshal standing in a black and white painterly Western portrait with a questioning expression",
+    "description": "An older man stands facing forward, dressed in period clothing with a vest, bow tie, and badge pinned at his chest. His posture is upright, with a steady gaze directed toward the viewer. The background falls away into a soft tonal fade, keeping attention on his face and upper body while minimizing surrounding detail. \n\n© Wayne Heim",
+    "alt": "Older lawman in vest and bow tie with a badge, standing in a black and white Western portrait.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-QJR63LW/2/KcNZ5BtvVqV9jcWt8G8C2zqTb4Qj6ZBDwV2sr8f7J/XL/_O2H3071-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-QJR63LW/2/KcNZ5BtvVqV9jcWt8G8C2zqTb4Qj6ZBDwV2sr8f7J/XL/_O2H3071-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-QJR63LW/2/KcNZ5BtvVqV9jcWt8G8C2zqTb4Qj6ZBDwV2sr8f7J/XL/_O2H3071-Edit-Edit-XL.jpg",
@@ -9186,6 +9274,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-QJR63LW/2/Kbh5v6HKDZJ9NtdqR4ngnRprrCZbHNXtDswmw6bJX/S/_O2H3071-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-QJR63LW/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -9200,22 +9289,26 @@ export const galleryData = [
       "the American West",
       "Western Cowboy Portraits",
       "western cowboys",
-      "lawman portrait",
+      "lawman portrait"
     ],
+
     "story": "He stands still, letting the room settle before he does.\n\nThe answers came easily once. Now they arrive slower, carrying weight, asking to be held up to the light before they’re allowed to pass. Years have taught him that certainty is usually the first thing to lie.\n\nWhatever verdict waits ahead, he’s already turning it over—deciding whether it deserves his trust.",
     "notes": "This portrait leans into the quieter lineage of Western imagery—where authority is suggested through presence rather than force. The frontal composition and subdued expression invite comparison to late‑era Remington figures and early pictorialist portraiture, where character was conveyed through tone and posture instead of narrative action.\n\nThe softened vignette and controlled contrast place the subject in a psychological space rather than a physical one, allowing the viewer to engage with uncertainty as the central theme. It is a work rooted in moral gravity and restraint, offering collectors a study of frontier leadership shaped as much by doubt as by resolve.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "hidden",
-    "sortOrder": 220
+    "sortOrder": 220,
+    contentSource: "ai"
   },
   {
     "id": "i-p6nks3C",
     "title": "Trail Hand",
-    "description": "A painterly sepia-toned Western portrait of a young girl beside a canvas tent, framed by an adult’s presence and the textures of grass and afternoon shadow. This image draws on pictorialist and Americana traditions to celebrate the quiet observation and subtle courage that mark the start of life on the American frontier. Soft light, careful composition, and period detail evoke both nostalgia and resilience. © Wayne Heim",
-    "alt": "Young frontier girl standing beside a canvas tent, painterly sepia Western portrait",
+    "description": "A young girl stands near a canvas tent, holding an adult’s hand while looking outward across the open ground. Tall grass and soft light frame the scene, with surrounding figures partially visible at the edges. This moment centers on stillness and attention within a frontier setting, where the child’s position and gaze anchor the scene. \n\n© Wayne Heim",
+    "alt": "Young frontier girl standing beside a canvas tent.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-p6nks3C/0/KsqGK7Lh4cMsC5wRsGBFkb8x2JqKDjJQ65wp4gTmK/XL/_WHO0135-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-p6nks3C/0/KsqGK7Lh4cMsC5wRsGBFkb8x2JqKDjJQ65wp4gTmK/XL/_WHO0135-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-p6nks3C/0/KsqGK7Lh4cMsC5wRsGBFkb8x2JqKDjJQ65wp4gTmK/XL/_WHO0135-Edit-XL.jpg",
@@ -9234,7 +9327,7 @@ export const galleryData = [
       "painterly Western photography",
       "pictorialist tradition",
       "the American West",
-      "narrative Western art",
+      "narrative Western art"
     ],
 
     "story": "She stands on the edge of camp, small hand curled in anticipation, watching the world beyond the canvas wall.\n\nThe grown-ups talk low, their shapes broken by afternoon light and tall grass. Whatever is coming next, she’s learned the first lesson of the trail: wait, watch, and listen before you step.\n\nEvery journey starts with a pause, and her story is just beginning.",

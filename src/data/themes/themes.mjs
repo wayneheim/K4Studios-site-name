@@ -168,10 +168,16 @@ export const themes = [
     "updatedAt": "2026-01-07T23:40:20.413Z"
   },
   {
-    "name": "Lore and Legacy",
+    "name": "Lore & Legacy",
     "slug": "lore-and-legacy",
     "dataset": "src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs",
-    "description": "This collection gathers works that weave together the myth and reality of the American West—where every image is a living story, and every print a piece of lasting legacy. Encounter the arc of hope, struggle, and quiet revelation that shaped both the frontier and those who crossed it.",
+    "introLead": "You saw a moment.",
+    "introFollow": "Now step back into and explore each One-Image Movie.",
+    "description": "This collection brings together the pieces featured at the Great Western Art Show-each one part of a larger narrative, each one unfinished until you step inside it.",
+    "transitionLine": "Brows the images below and feel the emotion and experience each story.",
+    "storyUrl": "/Other/Stories/Lore-and-Legacy-Show",
+    "storyCta": "Take a Narrated Tour",
+    "imageCountLabel": "33 images in this collection",
     "visible": true,
     "imageCount": 32,
     "firstImage": "i-rxQn29x",

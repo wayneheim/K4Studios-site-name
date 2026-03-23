@@ -5,7 +5,7 @@
 // GATEWAY BOT / SCRAPER LOGIC
 // --------------------
 export const ALLOWED_BOTS =
-  /(googlebot|google-inspectiontool|adsbot-google|googleother|apis-google|bingbot|bingpreview|msnbot|bingimagesbot|duckduckbot|yandex|baiduspider|slurp|petalbot|ahrefsbot|ahrefssiteaudit|semrushbot|screaming\s*frog|sitebulb|applebot|facebookexternalhit|facebot|linkedinbot|twitterbot|pinterestbot|slackbot|discordbot|telegrambot|uptimerobot|uptime[- ]?kuma)/i;
+  /(googlebot|googlebot-image|google-inspectiontool|adsbot-google|googleother|apis-google|bingbot|bingpreview|msnbot|bingimagesbot|adidxbot|duckduckbot|yandex|baiduspider|slurp|petalbot|ahrefsbot|ahrefssiteaudit|semrushbot|screaming\s*frog|sitebulb|applebot|facebookexternalhit|facebot|linkedinbot|twitterbot|pinterestbot|slackbot|discordbot|telegrambot|uptimerobot|uptime[- ]?kuma)/i;
 
 export const BLOCKED_BOTS =
   /(python|curl|scrapy|spider(?!.*google)|httpclient|axios|wget|postman|libwww-perl|powershell|java\/|node-fetch|okhttp)/i;
@@ -53,18 +53,19 @@ export const DATACENTER_PREFIXES = [
 
 // Verified search bots (never block, never throttle)
 export const VERIFIED_BOTS = [
-  { name: 'Googlebot', pattern: /googlebot|google-inspectiontool|googleother|apis-google/i },
-  { name: 'Bingbot', pattern: /bingbot|bingpreview|msnbot|bingimagesbot/i },
-  { name: 'Applebot', pattern: /applebot/i },
-  { name: 'DuckDuckBot', pattern: /duckduckbot/i },
-  { name: 'Yandex', pattern: /yandex/i },
-  { name: 'Baidu', pattern: /baiduspider/i },
-  { name: 'Facebook', pattern: /facebookexternalhit|facebot/i },
-  { name: 'Twitter', pattern: /twitterbot/i },
-  { name: 'Pinterest', pattern: /pinterestbot/i },
-  { name: 'LinkedIn', pattern: /linkedinbot/i },
-  { name: 'OpenAI', pattern: /gptbot|chatgpt-user|oai-searchbot/i },
-  { name: 'Claude', pattern: /claudebot|anthropic-ai|claude-web/i },
+  { name: 'google-image', pattern: /googlebot-image/i },
+  { name: 'googlebot', pattern: /googlebot|google-inspectiontool|googleother|apis-google|adsbot-google/i },
+  { name: 'bingbot', pattern: /bingbot|bingpreview|msnbot|bingimagesbot|adidxbot/i },
+  { name: 'applebot', pattern: /applebot/i },
+  { name: 'duckduckbot', pattern: /duckduckbot/i },
+  { name: 'yandex', pattern: /yandex/i },
+  { name: 'baidu', pattern: /baiduspider/i },
+  { name: 'facebook', pattern: /facebookexternalhit|facebot/i },
+  { name: 'twitter', pattern: /twitterbot/i },
+  { name: 'pinterest', pattern: /pinterestbot/i },
+  { name: 'linkedin', pattern: /linkedinbot/i },
+  { name: 'openai', pattern: /gptbot|chatgpt-user|oai-searchbot/i },
+  { name: 'claude', pattern: /claudebot|anthropic-ai|claude-web/i },
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════

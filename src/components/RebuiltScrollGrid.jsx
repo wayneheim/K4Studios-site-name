@@ -38,7 +38,13 @@ export default function RebuiltScrollGrid({
   isEngrainedSeries = false,
   // Optional theme props for shared theme links (grid landing view)
   themeName = null,
+  themeIntroLead = null,
+  themeIntroFollow = null,
   themeDescription = null,
+  themeTransitionLine = null,
+  themeStoryUrl = null,
+  themeStoryCta = null,
+  themeImageCountLabel = null,
   themeImageCount = null,
 }) {
   const [colCount, setColCount] = useState(getColCount());
@@ -264,21 +270,50 @@ export default function RebuiltScrollGrid({
           >
             {themeName}
           </h1>
-          <p className="mt-3 text-sm text-gray-500 max-w-2xl mx-auto">
-            Click any image to view the full story and preview the series.
-          </p>
+          {themeIntroLead && (
+            <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto" style={{ color: "#4b392d", lineHeight: 1.45 }}>
+              {themeIntroLead}
+            </p>
+          )}
+          {themeIntroFollow && (
+            <p className="mt-1 text-base md:text-lg max-w-2xl mx-auto" style={{ color: "#6a5444", lineHeight: 1.5 }}>
+              {themeIntroFollow}
+            </p>
+          )}
           {themeDescription && (
             <p 
-              className="mt-3 text-gray-600 max-w-2xl mx-auto text-sm md:text-base"
+              className="mt-4 text-gray-600 max-w-2xl mx-auto text-sm md:text-base"
               style={{ lineHeight: 1.6 }}
             >
               {themeDescription}
             </p>
           )}
-          {themeImageCount && (
-            <p className="mt-2 text-xs text-gray-400">
-              {themeImageCount} image{themeImageCount !== 1 ? 's' : ''} in this collection
+          {themeTransitionLine && (
+            <p className="mt-4 max-w-2xl mx-auto text-sm md:text-base" style={{ color: "#7b6658", lineHeight: 1.6 }}>
+              {themeTransitionLine}
             </p>
+          )}
+          {themeStoryUrl && themeStoryCta && (
+            <div className="mt-5 flex flex-col sm:flex-row justify-center items-center gap-3">
+              <a
+                href={themeStoryUrl}
+                className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm md:text-base"
+                style={{ color: "#f7efe4", background: "#7a4e36", textDecoration: "none" }}
+              >
+                ▶ {themeStoryCta}
+              </a>
+            </div>
+          )}
+          {themeImageCountLabel ? (
+            <p className="mt-3 text-xs text-gray-400">
+              {themeImageCountLabel}
+            </p>
+          ) : (
+            themeImageCount && (
+              <p className="mt-2 text-xs text-gray-400">
+                {themeImageCount} image{themeImageCount !== 1 ? 's' : ''} in this collection
+              </p>
+            )
           )}
         </header>
       )}

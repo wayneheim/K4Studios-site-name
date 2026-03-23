@@ -1033,6 +1033,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       '<div style="max-height: 300px; overflow-y: auto;">' +
         (botIntelligence?.verified || []).map(v => {
           const botIcons = {
+            'google-image': '🖼️',
             'googlebot': '🔍',
             'bingbot': '🅱️', 
             'applebot': '🍎',
@@ -1047,7 +1048,23 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
             'claude': '🧠',
           };
           const icon = botIcons[v.bot_name?.toLowerCase()] || '🤖';
-          const displayName = v.bot_name ? v.bot_name.charAt(0).toUpperCase() + v.bot_name.slice(1) : 'Unknown';
+          const displayNames = {
+            'google-image': 'Google Image',
+            'googlebot': 'Googlebot',
+            'bingbot': 'Bingbot',
+            'applebot': 'Applebot',
+            'duckduckbot': 'DuckDuckBot',
+            'yandex': 'Yandex',
+            'baidu': 'Baidu',
+            'facebook': 'Facebook',
+            'twitter': 'Twitter',
+            'pinterest': 'Pinterest',
+            'linkedin': 'LinkedIn',
+            'openai': 'OpenAI',
+            'claude': 'Claude'
+          };
+          const normalizedBotName = v.bot_name?.toLowerCase();
+          const displayName = displayNames[normalizedBotName] || (v.bot_name ? v.bot_name.charAt(0).toUpperCase() + v.bot_name.slice(1) : 'Unknown');
           const imgCount = v.image_count || 0;
           const pgCount = v.page_count || 0;
           const breakdown = imgCount > 0 || pgCount > 0 

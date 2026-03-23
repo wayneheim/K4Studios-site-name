@@ -1731,7 +1731,7 @@ async function getStatePixelTestRoaring20s(env, filters) {
           FROM raw_events r
           WHERE ${qualifiedDateClauseRaw}
             AND r.event_type IN ('state_pixel', 'action_pixel')
-            AND r.source_layer = 'story_audio_toggle_pixel_v1'
+            AND r.source_layer IN ('story_audio_toggle_pixel_v1', 'presentation_audio_toggle_pixel_v1')
         ) AS story_audio_toggle_pixel_v1_hits,
         (
           SELECT COUNT(*)
@@ -2781,95 +2781,81 @@ async function getTopPages(env, filters) {
     const safeBotClause = (botClause || "").replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ").replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
     const pagesQuery = `
-      WITH page_signals AS (
+      WITH filtered_events AS (
         SELECT
+          COALESCE(
+            NULLIF(e.session_id, ''),
+            NULLIF(e.session_id_v2, ''),
+            NULLIF(e.visitor_id, ''),
+            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
+          ) AS session_key,
           CASE
-            WHEN SUBSTR(raw_page, 1, 1) = '/'
-              THEN raw_page
-            ELSE '/' || raw_page
+            WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
+            ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
           END AS page_path,
-          SUM(CASE WHEN signal_source = 'pixel' THEN 1 ELSE 0 END) AS pixel_views,
-          SUM(CASE WHEN signal_source = 'js' THEN 1 ELSE 0 END) AS js_views
-        FROM (
-          SELECT
-            COALESCE(
-              NULLIF(e.page, ''),
-              CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
-            ) AS raw_page,
-            'pixel' AS signal_source
-          FROM classified_events e
-          WHERE ${where}
-            ${qualify(ipClause)}
-            ${qualify(safeBotClause)}
-            ${qualify(chardonClause)}
-            AND ${notCacheWarmer("e")}
-            AND COALESCE(e.is_bot,0) = 0
-            AND e.event_type IN ('page_pixel', 'edge_page', 'image_page', 'external_image_page')
-
-          UNION ALL
-
-          SELECT
-            COALESCE(
-              NULLIF(e.page, ''),
-              CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
-            ) AS raw_page,
-            'js' AS signal_source
-          FROM human_population hp
-          JOIN classified_events e ON e.visitor_id = hp.visitor_id
-          WHERE ${where}
-            ${qualify(ipClause)}
-            ${qualify(safeBotClause)}
-            ${qualify(chardonClause)}
-            AND ${notCacheWarmer("e")}
-            AND COALESCE(e.is_bot,0) = 0
-            AND e.source = 'js'
-            AND e.event_type = 'page_view'
-        ) p
-        WHERE raw_page IS NOT NULL
-          AND LOWER(raw_page) NOT LIKE 'http%'
-        GROUP BY page_path
+          e.ts,
+          CASE
+            WHEN e.event_type IN ('page_pixel', 'edge_page') THEN 'P'
+            ELSE 'J'
+          END AS source_kind
+        FROM classified_events e
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND ${notCacheWarmer("e")}
+          AND COALESCE(e.is_bot, 0) = 0
+          AND (
+            e.event_type IN ('page_pixel', 'edge_page')
+            OR (e.event_type = 'page_view' AND e.source = 'js')
+          )
+          AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
+          AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE 'http%'
+          AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '/http%'
+          AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '%://%'
+          AND NOT (
+            COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) LIKE '/i-%'
+            AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) NOT LIKE '/i-%/%'
+          )
       ),
-      hardened AS (
-        SELECT
+      not_found_hits AS (
+        SELECT DISTINCT
+          COALESCE(
+            NULLIF(e.session_id, ''),
+            NULLIF(e.session_id_v2, ''),
+            NULLIF(e.visitor_id, ''),
+            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
+          ) AS session_key,
           CASE
-            WHEN SUBSTR(raw_page, 1, 1) = '/'
-              THEN raw_page
-            ELSE '/' || raw_page
-          END AS page_path,
-          COUNT(*) AS hardened_views
-        FROM (
-          SELECT
-            COALESCE(
-              NULLIF(e.page, ''),
-              CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
-            ) AS raw_page
-          FROM human_population hp
-          JOIN classified_events e ON e.visitor_id = hp.visitor_id
-          WHERE ${where}
-            ${qualify(ipClause)}
-            ${qualify(safeBotClause)}
-            ${qualify(chardonClause)}
-            AND ${notCacheWarmer("e")}
-            AND COALESCE(e.is_bot,0) = 0
-            AND e.source = 'js'
-            AND e.event_type = 'qualified_chapter_view'
-        ) h
-        WHERE raw_page IS NOT NULL
-          AND LOWER(raw_page) NOT LIKE 'http%'
-        GROUP BY page_path
+            WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
+            ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
+          END AS page_path
+        FROM classified_events e
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND ${notCacheWarmer("e")}
+          AND COALESCE(e.is_bot, 0) = 0
+          AND e.event_type IN ('404', '410', 'smart404_redirect', 'smart404_gone', 'smart404_fallback', 'smart404_homepage')
+          AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
       )
       SELECT
-        ps.page_path,
-        CASE
-          WHEN ps.pixel_views > 0 THEN ps.pixel_views
-          ELSE ps.js_views
-        END AS views,
-        ps.pixel_views,
-        ps.js_views,
-        COALESCE(h.hardened_views, 0) AS hardened_views
-      FROM page_signals ps
-      LEFT JOIN hardened h ON h.page_path = ps.page_path
-      ORDER BY views DESC, ps.pixel_views DESC, ps.js_views DESC, ps.page_path ASC
+        fe.page_path,
+        COUNT(*) AS views,
+        COUNT(*) AS events,
+        COUNT(DISTINCT fe.session_key) AS sessions,
+        COUNT(DISTINCT CASE WHEN fe.source_kind = 'P' THEN fe.session_key END) AS pixel_sessions,
+        COUNT(DISTINCT CASE WHEN fe.source_kind = 'J' THEN fe.session_key END) AS js_sessions
+      FROM filtered_events fe
+      WHERE NOT EXISTS (
+        SELECT 1
+        FROM not_found_hits nf
+        WHERE nf.session_key = fe.session_key
+          AND nf.page_path = fe.page_path
+      )
+      GROUP BY fe.page_path
+      ORDER BY views DESC, sessions DESC, fe.page_path ASC
       LIMIT 25
     `;
     return await env.DB.prepare(pagesQuery).all();
@@ -3174,152 +3160,112 @@ async function getEntryAnalysis(env, filters) {
     const safeBotClause = (botClause || "").replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ").replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
     const entryPagesQuery = `
-      WITH base_events AS (
+      WITH filtered_events AS (
         SELECT
-          session_key,
+          COALESCE(
+            NULLIF(e.session_id, ''),
+            NULLIF(e.session_id_v2, ''),
+            NULLIF(e.visitor_id, ''),
+            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
+          ) AS session_key,
           CASE
-            WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
-            ELSE '/' || raw_page
+            WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
+            ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
           END AS page_path,
-          referrer,
-          ts,
-          signal_source
-        FROM (
-          SELECT
-            COALESCE(
-              NULLIF(e.session_id, ''),
-              NULLIF(e.session_id_v2, ''),
-              NULLIF(e.visitor_id, ''),
-              'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
-            ) AS session_key,
-            e.referer,
-            e.ts,
-            COALESCE(NULLIF(e.page, ''), CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END) AS raw_page,
-            'pixel' AS signal_source
-          FROM classified_events e
-          WHERE ${where}
-            ${qualify(ipClause)}
-            ${qualify(safeBotClause)}
-            ${qualify(chardonClause)}
-            AND ${notCacheWarmer("e")}
-            AND COALESCE(e.is_bot,0) = 0
-            AND e.event_type IN ('page_pixel', 'edge_page', 'image_page', 'external_image_page')
-
-          UNION ALL
-
-          SELECT
-            COALESCE(
-              NULLIF(e.session_id, ''),
-              NULLIF(e.session_id_v2, ''),
-              NULLIF(e.visitor_id, ''),
-              'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
-            ) AS session_key,
-            e.referer,
-            e.ts,
-            COALESCE(NULLIF(e.page, ''), CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END) AS raw_page,
-            'js' AS signal_source
-          FROM human_population hp
-          JOIN classified_events e ON e.visitor_id = hp.visitor_id
-          WHERE ${where}
-            ${qualify(ipClause)}
-            ${qualify(safeBotClause)}
-            ${qualify(chardonClause)}
-            AND ${notCacheWarmer("e")}
-            AND COALESCE(e.is_bot,0) = 0
-            AND e.source = 'js'
-            AND e.event_type = 'page_view'
-        ) e
-        WHERE raw_page IS NOT NULL
-          AND LOWER(raw_page) NOT LIKE 'http%'
+          e.referer AS referrer,
+          e.ua AS ua,
+          e.ts,
+          CASE
+            WHEN e.event_type IN ('page_pixel', 'edge_page') THEN 'P'
+            ELSE 'J'
+          END AS source_kind
+        FROM classified_events e
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND ${notCacheWarmer("e")}
+          AND COALESCE(e.is_bot, 0) = 0
+          AND (
+            e.event_type IN ('page_pixel', 'edge_page')
+            OR (e.event_type = 'page_view' AND e.source = 'js')
+          )
+          AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
+          AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE 'http%'
+          AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '/http%'
+          AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '%://%'
+          AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) NOT LIKE '%/i-%'
+          AND NOT (
+            COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) LIKE '/i-%'
+            AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) NOT LIKE '/i-%/%'
+          )
       ),
-      first_pages AS (
+      first_hits AS (
         SELECT
           session_key,
           page_path,
           referrer,
+          ua,
+          source_kind,
           ROW_NUMBER() OVER (PARTITION BY session_key ORDER BY ts ASC) AS rn
-        FROM base_events
+        FROM filtered_events
       ),
-      session_ext_ref AS (
-        SELECT session_key, referrer,
-          ROW_NUMBER() OVER (PARTITION BY session_key ORDER BY ts ASC) AS rn
-        FROM base_events
-        WHERE referrer IS NOT NULL
-          AND referrer != ''
-          AND referrer != 'unknown'
-          AND referrer != 'direct'
-          AND referrer NOT LIKE '%k4studios.com%'
-      ),
-      session_page_signals AS (
-        SELECT
-          session_key,
-          page_path,
-          MAX(CASE WHEN signal_source = 'pixel' THEN 1 ELSE 0 END) AS has_pixel,
-          MAX(CASE WHEN signal_source = 'js' THEN 1 ELSE 0 END) AS has_js
-        FROM base_events
-        GROUP BY session_key, page_path
-      ),
-      hardened AS (
-        SELECT
+      not_found_hits AS (
+        SELECT DISTINCT
+          COALESCE(
+            NULLIF(e.session_id, ''),
+            NULLIF(e.session_id_v2, ''),
+            NULLIF(e.visitor_id, ''),
+            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
+          ) AS session_key,
           CASE
-            WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
-            ELSE '/' || raw_page
-          END AS page_path,
-          COUNT(*) AS hardened_views
-        FROM (
-          SELECT
-            COALESCE(
-              NULLIF(e.page, ''),
-              CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
-            ) AS raw_page
-          FROM human_population hp
-          JOIN classified_events e ON e.visitor_id = hp.visitor_id
-          WHERE ${where}
-            ${qualify(ipClause)}
-            ${qualify(safeBotClause)}
-            ${qualify(chardonClause)}
-            AND ${notCacheWarmer("e")}
-            AND COALESCE(e.is_bot,0) = 0
-            AND e.source = 'js'
-            AND e.event_type = 'qualified_chapter_view'
-        ) h
-        WHERE raw_page IS NOT NULL
-          AND LOWER(raw_page) NOT LIKE 'http%'
-        GROUP BY page_path
+            WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
+            ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
+          END AS page_path
+        FROM classified_events e
+        WHERE ${where}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND ${notCacheWarmer("e")}
+          AND COALESCE(e.is_bot, 0) = 0
+          AND e.event_type IN ('404', '410', 'smart404_redirect', 'smart404_gone', 'smart404_fallback', 'smart404_homepage')
+          AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
       )
       SELECT
-        fp.page_path,
+        page_path,
+        source_kind,
         CASE
-          WHEN COALESCE(ser.referrer, fp.referrer) IS NULL OR COALESCE(ser.referrer, fp.referrer) = '' OR COALESCE(ser.referrer, fp.referrer) = 'unknown' OR COALESCE(ser.referrer, fp.referrer) = 'direct' THEN 'direct'
-          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%images.google.%' OR COALESCE(ser.referrer, fp.referrer) LIKE '%google.%/imgres%' THEN 'google_images'
-          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%google.%' THEN 'google_search'
-          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%bing.%/images%' THEN 'bing_images'
-          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%bing.%' THEN 'bing_search'
-          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%pinterest.%' THEN 'pinterest'
-          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%facebook.%' OR COALESCE(ser.referrer, fp.referrer) LIKE '%fb.%' THEN 'facebook'
-          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%twitter.%' OR COALESCE(ser.referrer, fp.referrer) LIKE '%t.co/%' OR COALESCE(ser.referrer, fp.referrer) LIKE '%x.com%' THEN 'twitter'
-          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%chatgpt.com%' OR COALESCE(ser.referrer, fp.referrer) LIKE '%chat.openai.com%' THEN 'chatgpt'
-          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%instagram.%' THEN 'instagram'
-          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%linkedin.%' THEN 'linkedin'
-          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%duckduckgo.%' THEN 'duckduckgo'
-          WHEN COALESCE(ser.referrer, fp.referrer) LIKE '%k4studios.com%' THEN 'internal'
+          WHEN (referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct')
+            AND LOWER(COALESCE(ua, '')) LIKE '%pinterest%'
+            THEN 'pinterest'
+          WHEN referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' THEN 'direct'
+          WHEN referrer LIKE '%images.google.%' OR referrer LIKE '%google.%/imgres%' THEN 'google_images'
+          WHEN referrer LIKE '%google.%' THEN 'google_search'
+          WHEN referrer LIKE '%bing.%/images%' THEN 'bing_images'
+          WHEN referrer LIKE '%bing.%' THEN 'bing_search'
+          WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
+          WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
+          WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'twitter'
+          WHEN referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'chatgpt'
+          WHEN referrer LIKE '%instagram.%' THEN 'instagram'
+          WHEN referrer LIKE '%linkedin.%' THEN 'linkedin'
+          WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
+          WHEN referrer LIKE '%k4studios.com%' THEN 'internal'
           ELSE 'unattributed'
         END AS ref_source,
-        CASE
-          WHEN SUM(CASE WHEN COALESCE(sps.has_pixel, 0) = 1 THEN 1 ELSE 0 END) > 0
-            THEN SUM(CASE WHEN COALESCE(sps.has_pixel, 0) = 1 THEN 1 ELSE 0 END)
-          ELSE COUNT(DISTINCT fp.session_key)
-        END AS sessions,
-        SUM(CASE WHEN COALESCE(sps.has_pixel, 0) = 1 THEN 1 ELSE 0 END) AS pixel_sessions,
-        SUM(CASE WHEN COALESCE(sps.has_js, 0) = 1 THEN 1 ELSE 0 END) AS js_sessions,
-        COALESCE(MAX(h.hardened_views), 0) AS hardened_views
-      FROM first_pages fp
-      LEFT JOIN session_ext_ref ser ON ser.session_key = fp.session_key AND ser.rn = 1
-      LEFT JOIN session_page_signals sps ON sps.session_key = fp.session_key AND sps.page_path = fp.page_path
-      LEFT JOIN hardened h ON h.page_path = fp.page_path
-      WHERE fp.rn = 1
-      GROUP BY fp.page_path, ref_source
-      ORDER BY sessions DESC, pixel_sessions DESC, js_sessions DESC, fp.page_path ASC
+        COUNT(*) AS sessions
+      FROM first_hits
+      WHERE rn = 1
+        AND (referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' OR referrer NOT LIKE '%k4studios.com%')
+        AND NOT EXISTS (
+          SELECT 1
+          FROM not_found_hits nf
+          WHERE nf.session_key = first_hits.session_key
+            AND nf.page_path = first_hits.page_path
+        )
+      GROUP BY page_path, source_kind, ref_source
+      ORDER BY sessions DESC, page_path ASC
       LIMIT 25
     `;
     const imagePageViewsQuery = `
@@ -6634,17 +6580,17 @@ function renderDashboard({
       </div>
       ${pages.length === 0 ? '<p style="color:#666">No data yet</p>' : (() => {
     const galleryPaths = new Set(GALLERY_LANDING_PATHS);
-    const maxViews = Math.max(...pages.map((p) => p.views || 0), 1);
+    const maxViews = Math.max(...pages.map((p) => Number(p.sessions || p.views || 0)), 1);
     const rowsHtml = pages.map((p, i) => {
       const path = String(p.page_path || "/");
       const isChapter = /\/i-[A-Za-z0-9]+$/.test(path);
       const isHardened = isChapter && Number(p.hardened_views || 0) > 0;
-      const pixelViews = Number(p.pixel_views || 0);
-      const jsViews = Number(p.js_views || 0);
+      const pixelViews = Number(p.pixel_sessions || p.pixel_views || 0);
+      const jsViews = Number(p.js_sessions || p.js_views || 0);
       const isGallery = galleryPaths.has(path);
       const color = isChapter ? "#84cc16" : isGallery ? "#eab308" : "#4a9eff";
       const shortPath = path.length > 32 ? "..." + path.slice(-29) : path;
-      const count = p.views || 0;
+      const count = Number(p.sessions || p.views || 0);
       const signalBadges = renderTrackingBadges({ pixel: pixelViews, js: jsViews, hardened: isHardened });
       const countTitle = pixelViews > 0
         ? 'Pixel-backed count: ' + pixelViews + (jsViews > 0 ? ' | JS confirmations: ' + jsViews : '')

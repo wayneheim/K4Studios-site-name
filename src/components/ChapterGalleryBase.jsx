@@ -2256,7 +2256,13 @@ export default function ChapterGalleryBase({
                 style={{ display: viewMode === "grid" ? "block" : "none" }}
                 // Pass theme info for shared theme links (grid header)
                 themeName={activeTheme?.name || null}
+                themeIntroLead={activeTheme?.introLead || null}
+                themeIntroFollow={activeTheme?.introFollow || null}
                 themeDescription={activeTheme?.description || null}
+                themeTransitionLine={activeTheme?.transitionLine || null}
+                themeStoryUrl={activeTheme?.storyUrl || null}
+                themeStoryCta={activeTheme?.storyCta || null}
+                themeImageCountLabel={activeTheme?.imageCountLabel || null}
                 themeImageCount={activeTheme ? galleryData.length : null}
               />
             )}
