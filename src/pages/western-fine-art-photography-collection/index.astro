@@ -99,7 +99,7 @@ const stripHtml = (text: string) => text.replace(/<[^>]*>/g, "").trim();
 const breadcrumbsJSON = getBreadcrumbList([
   { name: "Home", item: "https://www.k4studios.com/" },
   {
-    name: "Western Fine Art Photography Collection",
+    name: "Cowboy & Frontier Fine Art Prints",
     item: canonicalUrl,
   },
 ]);
@@ -140,8 +140,8 @@ const webPageSchema = JSON.stringify(
       url: "https://www.k4studios.com/",
     },
     about: [
-      { "@type": "Thing", name: "Western Fine Art Photography" },
       { "@type": "Thing", name: "Cowboy Fine Art Photography" },
+      { "@type": "Thing", name: "Frontier Fine Art Prints" },
       { "@type": "Thing", name: "Painterly Photography" },
       { "@type": "Thing", name: "Western Art for Collectors" },
       { "@type": "Thing", name: "Limited Edition Art Prints" },

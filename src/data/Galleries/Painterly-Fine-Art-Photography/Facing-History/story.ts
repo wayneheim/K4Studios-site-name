@@ -7,7 +7,9 @@ export const facingHistoryStory = [
     paragraphs: [
       "Every photograph is a marker — a record of a moment, a life, a choice that existed before us. Facing History is a collection of those markers. It spans the American frontier, the Civil War, World War II, and the Roaring Twenties — eras whose people, struggles, and consequences built the framework the modern world stands on. Each image here functions as a tombstone of sorts: not an ending, but a testament to a story that refuses to disappear.",
       "These works are not casual recreations or costume-driven portraits. They are story-built studies shaped with painterly craft, researched authenticity, and the disciplined eye of a medical illustrator turned cinematic storyteller. The work begins with understanding — the real lives, the real stakes, the choices that built the framework legend was later draped over. Only from that foundation does interpretation follow.",
-      "Many portraits function as <strong>One-Image Movies™</strong>—single frames constructed with the emotional gravity of a complete story arc. A breath before a decision. A pause weighted with consequence. These are moments still in motion, inviting the viewer to step inside the narrative.",
+      "Across the collection, history is treated not as static subject matter but as lived narrative, with each image opening outward into what came before the moment and what may follow after it.",
+      "At its best, the work closes the distance between viewer and history until the past stops feeling observed and starts feeling present.",
+      "Many portraits function as <strong>One-Image Movies™</strong> — single frames constructed with the emotional gravity of a complete story arc. A breath before a decision. A pause weighted with consequence. These are moments still in motion, inviting the viewer to step inside the narrative.",
       "For collectors of painterly fine art, historically themed portraiture, and story-rich reenactment photography, Facing History offers a curated journey into worlds that feel both familiar and newly alive."
     ]
   },
@@ -20,7 +22,8 @@ export const facingHistoryStory = [
     paragraphs: [
       "Telling these stories through photography is unusual. Historically, only painters and filmmakers have gone this deep—into the lives behind the American frontier, the weight carried by Civil War soldiers, the quiet courage of a generation at war, the contradictions of an era that danced on the edge of collapse. The real people. The real struggles. The choices that shaped what came after.",
       "But you cannot reinterpret a story you have never understood. Picasso mastered realism before he reshaped form. Leonardo studied anatomy before he reimagined flight. The same principle applies here: before the legend came the lives that built it.",
-      "That conviction drives every image in Facing History. The work does not begin with myth or period spectacle. It begins with the individual—and earns the mythology from there."
+      "That conviction drives every image in Facing History. The work does not begin with myth or period spectacle. It begins with the individual—and earns the mythology from there.",
+      "The One-Image Movie idea grows naturally from that discipline. A frame can only feel unfinished in a meaningful way when the life inside it has first been understood."
     ]
   },
 

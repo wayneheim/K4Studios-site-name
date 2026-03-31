@@ -39,9 +39,10 @@ import '@/styles/oneupheader.css';
 
 const pagePath = "/Narrative-Western-Art";
 const openingDefinition = [
-  "Narrative Western art is Western art built on story. It uses the people, atmosphere, and emotional pressure of the American West to suggest a larger dramatic world beyond the frame.",
-  "Rather than relying on Western symbols alone, narrative Western art invites the viewer to sense what happened before the image, what tension lives inside it, and what may come after it.",
-  "The result is Western art that asks to be entered, not simply glanced at."
+  "Narrative Western art is a form of Western art that tells stories of the American West through frontier life, historical events, and cultural experience rather than simple representation. It may also be described as storytelling in Western art or Western narrative art, but the core idea is the same: a still image carries the pressure of a larger story.",
+  "Rather than functioning as a sealed statement, narrative Western art presents a moment within something larger, often shaped by history, myth, labor, memory, and consequence. The strongest examples feel like an ongoing story rather than a complete declaration, implying what happened before the frame and what may come after it.",
+  "Traditionally, this approach has been expressed through painting and illustration, where artists like Charles Russell and Frederic Remington used composition, gesture, and setting to convey story within a single frame. Today, narrative Western art continues that tradition across both traditional and modern mediums, exploring the people, conflicts, and lived realities of the American West through story.",
+  "Narrative Western art is not just a style. It is a way of seeing the American West through story, and at its best it opens outward into what led to the moment and what may follow from it."
 ];
 
 const signatureThesisLine = "Before the legend came the lives that built it.";
@@ -305,7 +306,7 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
         "url": "https://www.k4studios.com/images/k4-logo.png"
       }
     },
-    "description": "Narrative Western art interprets the American West through story, character, atmosphere, and implied drama rather than subject matter alone.",
+    "description": "Narrative Western art is a form of Western art that tells stories of the American West through frontier life, historical experience, and visual storytelling rather than subject matter alone.",
     "mainEntityOfPage": "https://www.k4studios.com/Narrative-Western-Art"
   }
   </script>
@@ -334,6 +335,9 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
     <section class="section-heading-wrap">
       <div class="section-heading">
         <h1 class="page-title fade-in reveal-on-scroll">{landingNarrativeWesternArt.title}</h1>
+        <p class="page-context-link fade-in reveal-on-scroll" style="margin-top:0.75rem; margin-bottom:0.25rem; font-weight:600;">
+          Narrative Western Art — Definition, Meaning, and Examples
+        </p>
         <h2 class="page-subtitle fade-in reveal-on-scroll">{landingNarrativeWesternArt.subtitle}</h2>
         <div class="page-summary fade-in reveal-on-scroll">
           {openingDefinition.map((paragraph) => (
@@ -345,6 +349,9 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
 
     <section class="collections-nav-section">
       <h3 class="collections-heading fade-in reveal-on-scroll">Explore the Narrative Collection</h3>
+      <p class="collections-context fade-in reveal-on-scroll">
+        These collections provide real examples of narrative Western art in practice.
+      </p>
       <TombstoneNav client:load items={tombstonesWithThumbs} />
     </section>
 
@@ -563,16 +570,16 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
 
     .page-summary {
       max-width: 900px;
-      margin: 0.6rem auto 0;
+      margin: 0.85rem auto 0;
       font-size: 1.02rem;
-      line-height: 1.55;
+      line-height: 1.68;
       color: #6d5b4a;
       font-family: 'Glegoo', serif;
-      text-align: center;
+      text-align: left;
       opacity: 0.92;
     }
     .page-summary p {
-      margin: 0 0 0.9rem;
+      margin: 0 0 1rem;
     }
     .page-summary p:last-child {
       margin-bottom: 0;
@@ -599,6 +606,16 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
     .collections-nav-section {
       padding: 1.75rem 0 1.5rem;
       text-align: center;
+    }
+
+    .collections-context {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-family: 'Glegoo', serif;
+      font-size: 0.98rem;
+      line-height: 1.55;
+      color: #6d5b4a;
     }
 
     .story-chapter-divider {

@@ -2,16 +2,23 @@ export const facingFAQ = [
   {
     q: "What is Western fine art photography?",
     a: [
-      "Western fine art photography explores the human experience of the American West — not as icon or cliché, but as lived reality. It is a narrative-driven photographic style focused on character, presence, and story rather than spectacle.",
-      "Wayne Heim’s Western fine art photography emphasizes people shaped by land, labor, weather, and time, creating Western-themed portraits and scenes grounded in authenticity rather than mythology."
+      "Western fine art photography is authored photography of the American West created as fine art rather than as decor, stock imagery, or straightforward documentation. It uses composition, light, atmosphere, and narrative restraint to interpret Western subjects with lasting artistic intent.",
+      "Wayne Heim’s Western fine art photography emphasizes people shaped by land, labor, weather, and time, creating painterly Western portraits and frontier scenes grounded in character, atmosphere, and narrative consequence rather than cliché."
+    ],
+  },
+  {
+    q: "Is Western fine art photography the same as Western wall art or decor photography?",
+    a: [
+      "No. Western wall art and decor photography usually describe a commercial styling category. Western fine art photography is an authored art category centered on interpretation, narrative depth, and long-term artistic value.",
+      "The difference is intent. Decor is made to match a room. Fine art is made to hold meaning over time."
     ],
   },
 
   {
     q: "How does Western fine art photography differ from traditional Western photography?",
     a: [
-      "Traditional Western photography often centers on iconic imagery, dramatic landscapes, or romanticized frontier myth. Western fine art photography moves beyond surface imagery and familiar visual tropes.",
-      "Rather than reinforcing legend, this Western photography style examines the lived human experience of the West — quietly, deliberately, and with emotional restraint."
+      "Traditional Western photography often centers on iconic imagery, dramatic landscapes, rodeo action, lifestyle branding, or romanticized frontier myth. Western fine art photography moves beyond surface imagery and familiar visual tropes.",
+      "Rather than reinforcing legend or selling a Western look, this photographic discipline examines the lived human experience of the West — quietly, deliberately, and with emotional restraint."
     ],
   },
 

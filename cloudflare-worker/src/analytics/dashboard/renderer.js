@@ -404,35 +404,15 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   <h2>Pulse</h2>
   <div class="pulse">
     <div class="pulse-stat">
-      <span class="value">${s.unique_visitors || 0}</span>
-      <span class="label">JS Visitors <span class="info-icon">i</span></span>
-      <div class="tooltip">Unique IPs with JS events (Layer C). Only counts visitors whose browser loaded JavaScript and triggered events. Does NOT include image-only viewers — see Art Views below for complete picture.</div>
-    </div>
-    <div class="pulse-stat">
       <span class="value"><span style="color:#10b981">${newVisitors}</span>/<span style="color:#f59e0b">${returningVisitors}</span></span>
       <span class="label">New/Ret <span class="info-icon">i</span></span>
       <div class="tooltip">New: IPs never seen before this period. Returning: IPs that visited previously. Green = new, Orange = returning.</div>
-    </div>
-    <div class="pulse-stat">
-      <span class="value">${s.sessions || 0}${minEngagement > 0 ? `<span style="opacity: 0.6; font-size: 0.7em;"> (${minEngagement}-${maxEngagement})</span>` : ''}</span>
-      <span class="label">Engaged <span class="info-icon">i</span></span>
-      <div class="tooltip">Engaged sessions: browser sessions where JS loaded and events fired. Range shows min-max engagement scores (zoom=4, notes=5, theme=3, nav=2).</div>
-    </div>
-    <div class="pulse-stat">
-      <span class="value">${s.avg_events_per_session || 0}</span>
-      <span class="label">Avg/Sess <span class="info-icon">i</span></span>
-      <div class="tooltip">Average events per session. Higher = more engaged visitors exploring galleries and images.</div>
     </div>
     <div class="pulse-stat">
       <span class="value" style="color:#22d3ee;">⏱️ ${avgDurationFormatted}</span>
       <span class="label">Avg Time <span class="info-icon">i</span></span>
       <div class="tooltip">Average session duration (first to last event). Only counts sessions with 2+ events. For art browsing, 2+ min is good engagement.</div>
     </div>
-    ${peakHours.length > 0 ? `<div class="pulse-stat">
-      <span class="value" style="color:#f472b6;">🕐 ${peakHours.map(h => h.hour).join(', ')}</span>
-      <span class="label">Peak <span class="info-icon">i</span></span>
-      <div class="tooltip">Busiest hours (EST): ${peakHours.map(h => `${h.hour} (${h.sessions} sessions)`).join(', ')}. Useful for social media posting timing.</div>
-    </div>` : ''}
     <div class="pulse-stat">
       <span class="value" style="color:#10b981">${s.pct_navigated || 0}%</span>
       <span class="label">Nav <span class="info-icon">i</span></span>
@@ -1193,6 +1173,8 @@ function renderIndexHealthContent({ edgeEvents = [], edgeSummary = [], hideBots 
       '<button class="mini-btn" type="button" onclick="k4OpenEdgeEventList()" title="Open full edge-event list in a new window (no truncation)">Full list</button>' +
     '</div>';
 
+    html += '<div style="margin: 0 0 8px 0; color: #9ca3af; font-size: 11px;">* = likely human redirect</div>';
+
     html += '<div>' + edgeEvents.map(e => {
       const eventColors = {
         smart404_redirect: '#10b981',
@@ -1214,10 +1196,11 @@ function renderIndexHealthContent({ edgeEvents = [], edgeSummary = [], hideBots 
       };
       const color = eventColors[e.event_type] || '#888';
       const label = eventLabels[e.event_type] || e.event_type;
+      const marker = Number(e.likely_human_301 || 0) === 1 ? '*' : '';
       const shortPath = e.path && e.path.length > 40 ? '...' + e.path.slice(-37) : (e.path || 'unknown');
       const botIcon = e.is_bot ? '🤖' : '👤';
       return '<div class="edge-row" data-hits="' + (e.hits || 0) + '" data-bot="' + (e.is_bot ? 1 : 0) + '" data-type="' + label + '" data-path="' + (e.path || '') + '" style="display: flex; align-items: center; padding: 6px 0; border-bottom: 1px solid #333; gap: 8px;">' +
-        '<span style="background: ' + color + '22; color: ' + color + '; padding: 2px 8px; border-radius: 8px; font-size: 10px; flex-shrink: 0;">' + label + '</span>' +
+        '<span style="background: ' + color + '22; color: ' + color + '; padding: 2px 8px; border-radius: 8px; font-size: 10px; flex-shrink: 0;">' + label + marker + '</span>' +
         '<span style="flex: 1; color: #ccc; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="' + (e.path || '') + '">' + shortPath + '</span>' +
         '<span style="font-size: 11px;">' + botIcon + '</span>' +
         '<span style="color: #888; font-size: 12px; font-weight: bold;">' + e.hits + '</span>' +

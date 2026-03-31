@@ -504,9 +504,22 @@ async function getHumanCount(env, dateClause = "") {
 __name(getHumanCount, "getHumanCount");
 __name2(getHumanCount, "getHumanCount");
 async function getArtViews(env, filters) {
-  const { dateClause, baseDateClause, hideBotsPredicate, hideBots, selectedDate } = filters;
+  const {
+    dateClause,
+    baseDateClause,
+    hideBotsPredicate,
+    hideBots,
+    selectedDate,
+    ipClause,
+    botClause,
+    chardonClause
+  } = filters;
   const _at = {}; // art views internal timings
   const _atm = async (label, fn) => { const s = Date.now(); const r = await fn(); _at[label] = Date.now() - s; return r; };
+  const qualify = /* @__PURE__ */ __name2(
+    (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region").replace(/\breferer\b/g, "e.referer"),
+    "qualify"
+  );
   const notBotWhenHide = /* @__PURE__ */ __name2(
     (alias) => hideBots ? `AND COALESCE(${alias}.is_bot, 0) = 0` : "",
     "notBotWhenHide"
@@ -616,7 +629,7 @@ async function getArtViews(env, filters) {
     } catch (e) {
       console.log("Chapter views query failed:", e.message);
     }
-    artViewsSummary.total = artViewsSummary.chapter_views + artViewsSummary.external_images;
+    artViewsSummary.total = artViewsSummary.chapter_views + artViewsSummary.xl_zooms + artViewsSummary.galleries + artViewsSummary.external_images;
   } catch (e) {
     console.log("Summary query failed:", e.message);
   }
@@ -1178,6 +1191,9 @@ async function getArtViews(env, filters) {
         AND (e.visitor_id IS NULL OR e.visitor_id = '')
         AND ${notCacheWarmer("e")}
         ${notBotWhenHide("e")}
+        ${qualify(ipClause)}
+        ${qualify(botClause)}
+        ${qualify(chardonClause)}
         AND date(e.ts, '-5 hours') IN (${dayExpr}, ${prevDayExpr})
       GROUP BY date(e.ts, '-5 hours')
     `;
@@ -1414,8 +1430,20 @@ async function getArtViews(env, filters) {
 __name(getArtViews, "getArtViews");
 __name2(getArtViews, "getArtViews");
 async function getDashboardStats(env, filters) {
-  const { dateClause } = filters;
-  const where = (dateClause || "").replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")';
+  const {
+    dateClause,
+    priorPeriodClause,
+    galleryClause,
+    ipClause,
+    botClause,
+    chardonClause
+  } = filters;
+  const qualify = /* @__PURE__ */ __name2(
+    (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bgallery_id\b/g, "e.gallery_id").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region"),
+    "qualify"
+  );
+  const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
+  const priorWhere = qualify(priorPeriodClause) || 'e.ts < datetime("now", "-1 day")';
   const humanCount = await getHumanCount(env, dateClause);
   if (humanCount === 0) {
     return {
@@ -1438,6 +1466,10 @@ async function getDashboardStats(env, filters) {
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${where}
+        ${qualify(galleryClause)}
+        ${qualify(ipClause)}
+        ${qualify(botClause)}
+        ${qualify(chardonClause)}
         AND COALESCE(e.is_bot, 0) = 0
         AND ${notCacheWarmer("e")}
         AND e.source = 'js'
@@ -1457,6 +1489,10 @@ async function getDashboardStats(env, filters) {
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${where}
+        ${qualify(galleryClause)}
+        ${qualify(ipClause)}
+        ${qualify(botClause)}
+        ${qualify(chardonClause)}
         AND COALESCE(e.is_bot, 0) = 0
         AND ${notCacheWarmer("e")}
         AND e.source = 'js'
@@ -1466,6 +1502,55 @@ async function getDashboardStats(env, filters) {
   } catch (e) {
     console.log("Events count failed:", e.message);
   }
+
+  let newVisitors = humanCount;
+  let returningVisitors = 0;
+  try {
+    const visitorBreakdownQuery = `
+      WITH current_visitors AS (
+        SELECT DISTINCT e.visitor_id
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where}
+          ${qualify(galleryClause)}
+          ${qualify(ipClause)}
+          ${qualify(botClause)}
+          ${qualify(chardonClause)}
+          AND COALESCE(e.is_bot, 0) = 0
+          AND ${notCacheWarmer("e")}
+          AND e.source = 'js'
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
+      ),
+      prior_visitors AS (
+        SELECT DISTINCT e.visitor_id
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${priorWhere}
+          ${qualify(galleryClause)}
+          ${qualify(ipClause)}
+          ${qualify(botClause)}
+          ${qualify(chardonClause)}
+          AND COALESCE(e.is_bot, 0) = 0
+          AND ${notCacheWarmer("e")}
+          AND e.source = 'js'
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
+      )
+      SELECT
+        COUNT(*) AS total_current,
+        SUM(CASE WHEN pv.visitor_id IS NOT NULL THEN 1 ELSE 0 END) AS returning_visitors
+      FROM current_visitors cv
+      LEFT JOIN prior_visitors pv ON pv.visitor_id = cv.visitor_id
+    `;
+    const visitorBreakdown = await env.DB.prepare(visitorBreakdownQuery).first();
+    const totalCurrent = Number(visitorBreakdown?.total_current || 0);
+    returningVisitors = Number(visitorBreakdown?.returning_visitors || 0);
+    newVisitors = Math.max(totalCurrent - returningVisitors, 0);
+  } catch (e) {
+    console.log("Visitor breakdown failed:", e.message);
+  }
+
   return {
     summary: {
       unique_visitors: humanCount,
@@ -1475,8 +1560,8 @@ async function getDashboardStats(env, filters) {
       pct_navigated: 0,
       collector_notes_opens: 0
     },
-    returningVisitors: 0,
-    newVisitors: humanCount
+    returningVisitors,
+    newVisitors
   };
 }
 __name(getDashboardStats, "getDashboardStats");
@@ -1485,6 +1570,7 @@ async function getStatePixelTestRoaring20s(env, filters) {
   const { dateClause } = filters;
   const qualifiedDateClause = (dateClause || "").replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")';
   const qualifiedDateClauseRaw = (dateClause || "").replace(/\bts\b/g, "r.ts").replace(/\be\.ts\b/g, "r.ts").replace(/\be2\.ts\b/g, "r.ts") || 'r.ts > datetime("now", "-1 day")';
+  const qualifiedDateClauseClassified = (dateClause || "").replace(/\bts\b/g, "c.ts").replace(/\be\.ts\b/g, "c.ts").replace(/\be2\.ts\b/g, "c.ts") || 'c.ts > datetime("now", "-1 day")';
   const sisterPixelLayerPredicate = `1=1`;
   const sisterPixelLayerPredicateBase = `1=1`;
   const isChapterImagePageExpr = `(
@@ -1619,7 +1705,46 @@ async function getStatePixelTestRoaring20s(env, filters) {
           FROM raw_events r
           WHERE ${qualifiedDateClauseRaw}
             AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND r.source_layer IN ('home_lore_legacy_image_click_pixel_v1', 'home_lore_legacy_cta_click_pixel_v1')
+        ) AS home_lore_legacy_collection_click_pixel_v1_hits,
+        (
+          SELECT COUNT(*)
+          FROM raw_events r
+          WHERE ${qualifiedDateClauseRaw}
+            AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND r.source_layer = 'home_lore_legacy_image_click_pixel_v1'
+        ) AS home_lore_legacy_image_click_pixel_v1_hits,
+        (
+          SELECT COUNT(*)
+          FROM raw_events r
+          WHERE ${qualifiedDateClauseRaw}
+            AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND r.source_layer = 'home_lore_legacy_cta_click_pixel_v1'
+        ) AS home_lore_legacy_cta_click_pixel_v1_hits,
+        (
+          SELECT COUNT(*)
+          FROM raw_events r
+          WHERE ${qualifiedDateClauseRaw}
+            AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND r.source_layer = 'home_lore_legacy_audio_click_pixel_v1'
+        ) AS home_lore_legacy_audio_click_pixel_v1_hits,
+        (
+          SELECT COUNT(*)
+          FROM raw_events r
+          WHERE ${qualifiedDateClauseRaw}
+            AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND r.source_layer = 'theme_lore_legacy_audio_click_pixel_v1'
+        ) AS theme_lore_legacy_audio_click_pixel_v1_hits,
+        (
+          SELECT COUNT(*)
+          FROM raw_events r
+          WHERE ${qualifiedDateClauseRaw}
+            AND r.event_type IN ('state_pixel', 'action_pixel')
             AND r.source_layer = 'gallery_landing_view_pixel_v1'
+            AND NOT (
+              INSTR(COALESCE(r.referer, ''), '/i-') > 0
+              AND SUBSTR(COALESCE(r.referer, ''), INSTR(COALESCE(r.referer, ''), '/i-') + 3) NOT LIKE '%/%'
+            )
         ) AS gallery_landing_view_pixel_v1_hits,
         (
           SELECT COUNT(*)
@@ -1900,30 +2025,42 @@ async function getStatePixelTestRoaring20s(env, filters) {
           AND e.target_id IS NOT NULL
           AND e.target_id != ''
           AND e.target_id LIKE 'i-%'
-            AND e.target_id NOT LIKE '%/%'
+          AND e.target_id NOT LIKE '%/%'
           AND e.target_id NOT LIKE 'i-test%'
           AND e.target_id != '/'
           AND COALESCE(e.source_layer, '') != 'cowboy_jump_pixel_v1'
+          AND NOT (
+            COALESCE(e.source_layer, '') = 'sister_pixel_v1'
+            AND (
+              e.target_id = 'i-j3GV785'
+              OR e.page = '/Galleries/Portraits-and-People/Historical-Reenactor-Portraits/i-j3GV785'
+              OR e.page = '/Galleries/Portraits-and-People/Historical-Reenactor-Portraits/i-j3GV785/'
+            )
+          )
       ),
-      hardened AS (
+      js_signals AS (
         SELECT
-          e.target_id AS target_id,
-          COUNT(*) AS hardened_views,
-          COUNT(DISTINCT CASE WHEN e.visitor_id IS NOT NULL AND e.visitor_id != '' THEN e.visitor_id END) AS hardened_viewers,
-          MAX(e.ts) AS hardened_last_seen
+          c.target_id AS target_id,
+          SUM(CASE WHEN c.event_type = 'chapter_view' THEN 1 ELSE 0 END) AS js_views,
+          SUM(CASE WHEN c.event_type = 'qualified_chapter_view' THEN 1 ELSE 0 END) AS hardened_views,
+          MAX(CASE WHEN c.event_type = 'chapter_view' THEN 1 ELSE 0 END) AS has_js_signal,
+          MAX(CASE WHEN c.event_type = 'qualified_chapter_view' THEN 1 ELSE 0 END) AS has_hardened_signal,
+          COUNT(DISTINCT CASE WHEN c.event_type = 'chapter_view' AND c.visitor_id IS NOT NULL AND c.visitor_id != '' THEN c.visitor_id END) AS js_viewers,
+          COUNT(DISTINCT CASE WHEN c.event_type = 'qualified_chapter_view' AND c.visitor_id IS NOT NULL AND c.visitor_id != '' THEN c.visitor_id END) AS hardened_viewers,
+          MAX(CASE WHEN c.event_type = 'qualified_chapter_view' THEN c.ts ELSE NULL END) AS hardened_last_seen
         FROM human_population hp
-        JOIN classified_events e ON e.visitor_id = hp.visitor_id
-        WHERE ${qualifiedDateClause}
-          AND ${notCacheWarmer("e")}
-          AND COALESCE(e.is_bot, 0) = 0
-          AND e.source = 'js'
-          AND e.event_type = 'qualified_chapter_view'
-          AND e.target_id IS NOT NULL
-          AND e.target_id != ''
-          AND e.target_id LIKE 'i-%'
-          AND e.target_id NOT LIKE '%/%'
-          AND e.target_id NOT LIKE 'i-test%'
-        GROUP BY e.target_id
+        JOIN classified_events c ON c.visitor_id = hp.visitor_id
+        WHERE ${qualifiedDateClauseClassified}
+          AND ${notCacheWarmer("c")}
+          AND COALESCE(c.is_bot, 0) = 0
+          AND c.source = 'js'
+          AND c.event_type IN ('chapter_view', 'qualified_chapter_view')
+          AND c.target_id IS NOT NULL
+          AND c.target_id != ''
+          AND c.target_id LIKE 'i-%'
+          AND c.target_id NOT LIKE '%/%'
+          AND c.target_id NOT LIKE 'i-test%'
+        GROUP BY c.target_id
       ),
       ranked AS (
         SELECT
@@ -1943,6 +2080,7 @@ async function getStatePixelTestRoaring20s(env, filters) {
         SELECT
           target_id,
           COUNT(*) AS exposures,
+          SUM(CASE WHEN source_layer = 'order_clicked_pixel_v1' THEN 1 ELSE 0 END) AS buy_clicks,
           SUM(CASE WHEN source_layer = 'zoom_pixel_v1' THEN 1 ELSE 0 END) AS zoom_views,
           COUNT(DISTINCT CASE WHEN visitor_id IS NOT NULL AND visitor_id != '' THEN visitor_id END) AS viewers,
           MAX(ts) AS last_seen,
@@ -1972,12 +2110,19 @@ async function getStatePixelTestRoaring20s(env, filters) {
       SELECT
         a.target_id,
         a.exposures,
+        a.buy_clicks,
         a.zoom_views,
         a.viewers,
         a.last_seen,
-        COALESCE(h.hardened_views, 0) AS hardened_views,
-        COALESCE(h.hardened_viewers, 0) AS hardened_viewers,
-        h.hardened_last_seen,
+        COALESCE(js.hardened_views, 0) AS hardened_views,
+        COALESCE(js.hardened_viewers, 0) AS hardened_viewers,
+        js.hardened_last_seen,
+        COALESCE(js.js_views, 0) AS js_views,
+        a.exposures AS pixel_views,
+        COALESCE(js.js_viewers, 0) AS js_viewers,
+        COALESCE(js.has_js_signal, 0) AS has_js_signal,
+        1 AS has_pixel_signal,
+        COALESCE(js.has_hardened_signal, 0) AS has_hardened_signal,
         a.source_layers,
         a.location_labels,
         r.page,
@@ -1988,13 +2133,15 @@ async function getStatePixelTestRoaring20s(env, filters) {
         r.user_agent,
         r.referer
       FROM agg a
-      LEFT JOIN hardened h
-        ON h.target_id = a.target_id
+      LEFT JOIN js_signals js
+        ON js.target_id = a.target_id
       LEFT JOIN ranked r
         ON r.target_id = a.target_id
        AND r.rn = 1
-      ORDER BY CASE WHEN COALESCE(h.hardened_views, 0) > 0 THEN 0 ELSE 1 END,
-               h.hardened_last_seen DESC,
+      ORDER BY CASE WHEN a.buy_clicks > 0 THEN 0 ELSE 1 END,
+               a.buy_clicks DESC,
+               CASE WHEN COALESCE(js.has_js_signal, 0) = 1 THEN 0 ELSE 1 END,
+               CASE WHEN COALESCE(js.hardened_views, 0) > 0 THEN 0 ELSE 1 END,
                a.last_seen DESC,
                a.exposures DESC
     `;
@@ -2020,6 +2167,11 @@ async function getStatePixelTestRoaring20s(env, filters) {
       gallery_preview_click_pixel_v1_hits: Number(summaryRow?.gallery_preview_click_pixel_v1_hits || 0),
       gallery_hero_click_pixel_v1_hits: Number(summaryRow?.gallery_hero_click_pixel_v1_hits || 0),
       gallery_explore_click_pixel_v1_hits: Number(summaryRow?.gallery_explore_click_pixel_v1_hits || 0),
+      home_lore_legacy_collection_click_pixel_v1_hits: Number(summaryRow?.home_lore_legacy_collection_click_pixel_v1_hits || 0),
+      home_lore_legacy_image_click_pixel_v1_hits: Number(summaryRow?.home_lore_legacy_image_click_pixel_v1_hits || 0),
+      home_lore_legacy_cta_click_pixel_v1_hits: Number(summaryRow?.home_lore_legacy_cta_click_pixel_v1_hits || 0),
+      home_lore_legacy_audio_click_pixel_v1_hits: Number(summaryRow?.home_lore_legacy_audio_click_pixel_v1_hits || 0),
+      theme_lore_legacy_audio_click_pixel_v1_hits: Number(summaryRow?.theme_lore_legacy_audio_click_pixel_v1_hits || 0),
       gallery_landing_view_pixel_v1_hits: Number(summaryRow?.gallery_landing_view_pixel_v1_hits || 0),
       exit_to_gallery_pixel_v1_hits: Number(summaryRow?.exit_to_gallery_pixel_v1_hits || 0),
       scroll_25_pixel_v1_hits: Number(summaryRow?.scroll_25_pixel_v1_hits || 0),
@@ -2085,6 +2237,11 @@ async function getStatePixelTestRoaring20s(env, filters) {
       gallery_preview_click_pixel_v1_hits: 0,
       gallery_hero_click_pixel_v1_hits: 0,
       gallery_explore_click_pixel_v1_hits: 0,
+      home_lore_legacy_collection_click_pixel_v1_hits: 0,
+      home_lore_legacy_image_click_pixel_v1_hits: 0,
+      home_lore_legacy_cta_click_pixel_v1_hits: 0,
+      home_lore_legacy_audio_click_pixel_v1_hits: 0,
+      theme_lore_legacy_audio_click_pixel_v1_hits: 0,
       gallery_landing_view_pixel_v1_hits: 0,
       exit_to_gallery_pixel_v1_hits: 0,
       scroll_25_pixel_v1_hits: 0,
@@ -2364,133 +2521,107 @@ __name(getReferrers, "getReferrers");
 __name2(getReferrers, "getReferrers");
 async function getGeography(env, filters) {
   try {
-    const { dateClause, botClause, chardonClause, ipClause } = filters;
+    const { dateClause, galleryClause, botClause, chardonClause, ipClause } = filters;
     const qualify = /* @__PURE__ */ __name2(
-      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region"),
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region").replace(/\bgallery_id\b/g, "e.gallery_id"),
       "qualify"
     );
+    const normalizedPathExpr = `
+      CASE
+        WHEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) LIKE '/%' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
+        WHEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) LIKE 'https://www.k4studios.com/%' THEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 24)
+        WHEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) LIKE 'https://k4studios.com/%' THEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 21)
+        WHEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) LIKE 'http://www.k4studios.com/%' THEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 23)
+        WHEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) LIKE 'http://k4studios.com/%' THEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 20)
+        ELSE COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
+      END
+    `;
+    const isImageTrafficExpr = `(
+      (
+        COALESCE(NULLIF(e.target_id, ''), '') LIKE 'i-%'
+        AND COALESCE(NULLIF(e.target_id, ''), '') NOT LIKE '%/%'
+      )
+      OR (${normalizedPathExpr}) LIKE '%/i-%'
+    )`;
     const geoQuery = `
-      WITH site_events AS (
+      WITH in_range_visitors AS (
+        SELECT DISTINCT e.visitor_id
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
+          AND e.source = 'js'
+          AND COALESCE(e.is_bot, 0) = 0
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
+          ${qualify(galleryClause)}
+          ${qualify(botClause)}
+          ${qualify(chardonClause)}
+          ${qualify(ipClause)}
+          AND NOT ${isImageTrafficExpr}
+      ),
+      visitor_location_ranked AS (
         SELECT
+          e.visitor_id,
           e.country,
           e.region,
           e.city,
-          COALESCE(NULLIF(e.visitor_id, ''), 'ip:' || COALESCE(e.ip, 'unknown')) AS actor,
-          CASE
-            WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
-            ELSE '/' || raw_page
-          END AS page_path
-        FROM (
-          SELECT
-            e.country,
-            e.region,
-            e.city,
-            e.visitor_id,
-            e.ip,
-            COALESCE(NULLIF(e.page, ''), CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END) AS raw_page
-          FROM classified_events e
-          WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
-            AND e.country IS NOT NULL
-            AND e.event_type IN ('page_pixel', 'page_view', 'edge_page', 'image_page', 'external_image_page')
-            ${qualify(botClause)}
-            ${qualify(chardonClause)}
-            ${qualify(ipClause)}
-        ) e
-        WHERE raw_page IS NOT NULL
-          AND LOWER(raw_page) NOT LIKE 'http%'
+          COUNT(*) AS loc_events,
+          MAX(e.ts) AS last_seen_ts,
+          ROW_NUMBER() OVER (
+            PARTITION BY e.visitor_id
+            ORDER BY COUNT(*) DESC, MAX(e.ts) DESC
+          ) AS rn
+        FROM in_range_visitors irv
+        JOIN classified_events e ON e.visitor_id = irv.visitor_id
+        WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
+          AND e.source = 'js'
+          AND COALESCE(e.is_bot, 0) = 0
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
+          AND e.country IS NOT NULL
+          AND e.country != ''
+          ${qualify(galleryClause)}
+          ${qualify(botClause)}
+          ${qualify(chardonClause)}
+          ${qualify(ipClause)}
+          AND NOT ${isImageTrafficExpr}
+        GROUP BY e.visitor_id, e.country, e.region, e.city
       ),
-      site_base AS (
+      visitor_home AS (
         SELECT
+          visitor_id,
           country,
           region,
-          city,
-          COUNT(DISTINCT actor) AS visitors
-        FROM site_events
-        WHERE page_path NOT IN ${GALLERY_LANDING_IN_LIST}
-          AND NOT (page_path GLOB '*/i-*' AND page_path NOT GLOB '*/i-*/*')
-        GROUP BY country, region, city
+          city
+        FROM visitor_location_ranked
+        WHERE rn = 1
       ),
-      art_base AS (
-        SELECT country, region, city, SUM(art_viewers) as art_viewers
-        FROM (
-          -- Pixel events on image targets (state_pixel, action_pixel)
-          SELECT
-            e.country, e.region, e.city,
-            COUNT(DISTINCT COALESCE(NULLIF(e.visitor_id, ''), 'ip:' || COALESCE(e.ip, 'unknown'))) as art_viewers
-          FROM classified_events e
-          WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
-            AND e.country IS NOT NULL
-            AND e.event_type IN ('state_pixel', 'action_pixel')
-            AND e.target_id LIKE 'i-%'
-            AND e.target_id NOT LIKE '%/%'
-            ${qualify(botClause)}
-            ${qualify(chardonClause)}
-            ${qualify(ipClause)}
-          GROUP BY e.country, e.region, e.city
-
-          UNION ALL
-
-          -- JS image-level events from verified humans (chapter_view, xl_zoom)
-          SELECT
-            e.country, e.region, e.city,
-            COUNT(DISTINCT e.visitor_id) as art_viewers
-          FROM human_population hp
-          JOIN classified_events e ON e.visitor_id = hp.visitor_id
-          WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
-            AND e.country IS NOT NULL
-            AND e.source = 'js'
-            AND e.event_type IN ('chapter_view', 'xl_zoom')
-            ${qualify(botClause)}
-            ${qualify(chardonClause)}
-            ${qualify(ipClause)}
-          GROUP BY e.country, e.region, e.city
-        )
-        GROUP BY country, region, city
-      ),
-      base AS (
-        SELECT
-          v.country,
-          v.region,
-          v.city,
-          v.visitors,
-          COALESCE(a.art_viewers, 0) as art_viewers
-        FROM site_base v
-        LEFT JOIN art_base a
-          ON COALESCE(a.country, '') = COALESCE(v.country, '')
-         AND COALESCE(a.region, '') = COALESCE(v.region, '')
-         AND COALESCE(a.city, '') = COALESCE(v.city, '')
-
-        UNION ALL
-
-        SELECT
-          a.country,
-          a.region,
-          a.city,
-          0 as visitors,
-          a.art_viewers
-        FROM art_base a
-        WHERE NOT EXISTS (
-          SELECT 1
-          FROM site_base v
-          WHERE COALESCE(v.country, '') = COALESCE(a.country, '')
-            AND COALESCE(v.region, '') = COALESCE(a.region, '')
-            AND COALESCE(v.city, '') = COALESCE(a.city, '')
-        )
-      ),
-      top_visitors AS (
-        SELECT * FROM base
-        ORDER BY visitors DESC, country, region, city
-        LIMIT 200
-      ),
-      top_art AS (
-        SELECT * FROM base
-        WHERE art_viewers > 0
-        ORDER BY art_viewers DESC, country, region, city
-        LIMIT 500
+      art_visitors AS (
+        SELECT DISTINCT e.visitor_id
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
+          AND e.source = 'js'
+          AND COALESCE(e.is_bot, 0) = 0
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
+          AND e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view')
+          ${qualify(galleryClause)}
+          ${qualify(botClause)}
+          ${qualify(chardonClause)}
+          ${qualify(ipClause)}
       )
-      SELECT * FROM top_visitors
-      UNION
-      SELECT * FROM top_art
+      SELECT
+        vh.country,
+        vh.region,
+        vh.city,
+        COUNT(*) AS visitors,
+        SUM(CASE WHEN av.visitor_id IS NOT NULL THEN 1 ELSE 0 END) AS art_viewers
+      FROM visitor_home vh
+      LEFT JOIN art_visitors av ON av.visitor_id = vh.visitor_id
+      GROUP BY vh.country, vh.region, vh.city
+      ORDER BY visitors DESC, vh.country, vh.region, vh.city
+      LIMIT 20
     `;
     return await env.DB.prepare(geoQuery).all();
   } catch (e) {
@@ -2511,7 +2642,7 @@ async function getPeriodTotals(env, filters) {
       SELECT 
         COUNT(DISTINCT e.visitor_id) as total_visitors,
         COUNT(DISTINCT CASE 
-          WHEN e.event_type = 'chapter_view'
+          WHEN e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view')
           THEN e.visitor_id 
           ELSE NULL 
         END) as total_art_viewers
@@ -2839,6 +2970,14 @@ async function getTopPages(env, filters) {
           AND COALESCE(e.is_bot, 0) = 0
           AND e.event_type IN ('404', '410', 'smart404_redirect', 'smart404_gone', 'smart404_fallback', 'smart404_homepage')
           AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
+      ),
+      not_found_paths AS (
+        SELECT DISTINCT
+          CASE
+            WHEN page_path = '/' THEN '/'
+            ELSE RTRIM(page_path, '/')
+          END AS page_path_norm
+        FROM not_found_hits
       )
       SELECT
         fe.page_path,
@@ -2854,6 +2993,14 @@ async function getTopPages(env, filters) {
         WHERE nf.session_key = fe.session_key
           AND nf.page_path = fe.page_path
       )
+        AND NOT EXISTS (
+          SELECT 1
+          FROM not_found_paths nfp
+          WHERE nfp.page_path_norm = CASE
+            WHEN fe.page_path = '/' THEN '/'
+            ELSE RTRIM(fe.page_path, '/')
+          END
+        )
       GROUP BY fe.page_path
       ORDER BY views DESC, sessions DESC, fe.page_path ASC
       LIMIT 25
@@ -2877,11 +3024,17 @@ async function getTopGalleryLandingPages(env, filters) {
             WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
             ELSE '/' || raw_page
           END AS page_path,
-          NULLIF(e.visitor_id, '') AS visitor_id
+          NULLIF(e.visitor_id, '') AS visitor_id,
+          CASE
+            WHEN INSTR(COALESCE(referrer, ''), '/i-') > 0
+              AND SUBSTR(COALESCE(referrer, ''), INSTR(COALESCE(referrer, ''), '/i-') + 3) NOT LIKE '%/%'
+            THEN 1 ELSE 0
+          END AS is_chapter_referrer
         FROM (
           SELECT
             e.visitor_id,
             e.event_type,
+            e.referer AS referrer,
             COALESCE(
               NULLIF(e.page, ''),
               CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
@@ -2911,6 +3064,7 @@ async function getTopGalleryLandingPages(env, filters) {
         COUNT(DISTINCT NULLIF(visitor_id, '')) AS unique_viewers
       FROM e
       WHERE page_path IN ${GALLERY_LANDING_IN_LIST}
+        AND is_chapter_referrer = 0
       GROUP BY page_path
       ORDER BY views DESC
       LIMIT 25
@@ -2940,14 +3094,20 @@ async function getBrowserViewsSummary(env, filters) {
             WHEN SUBSTR(raw_page, 1, 1) = '/' THEN raw_page
             ELSE '/' || raw_page
           END AS page_path,
-          visitor_id
+          visitor_id,
+          CASE
+            WHEN INSTR(COALESCE(referrer, ''), '/i-') > 0
+              AND SUBSTR(COALESCE(referrer, ''), INSTR(COALESCE(referrer, ''), '/i-') + 3) NOT LIKE '%/%'
+            THEN 1 ELSE 0
+          END AS is_chapter_referrer
         FROM (
           SELECT
             COALESCE(
               NULLIF(e.page, ''),
               CASE WHEN SUBSTR(COALESCE(e.target_id, ''), 1, 1) = '/' THEN NULLIF(e.target_id, '') ELSE NULL END
             ) AS raw_page,
-            NULLIF(e.visitor_id, '') AS visitor_id
+            NULLIF(e.visitor_id, '') AS visitor_id,
+            e.referer AS referrer
           FROM human_population hp
           JOIN classified_events e ON e.visitor_id = hp.visitor_id
           WHERE ${where}
@@ -2980,8 +3140,14 @@ async function getBrowserViewsSummary(env, filters) {
           THEN visitor_id ELSE NULL END) AS site_content_viewers,
 
         -- 2) Gallery landing page loads (browser)
-        SUM(CASE WHEN page_path IN ${GALLERY_LANDING_IN_LIST} THEN 1 ELSE 0 END) AS gallery_landing_views,
-        COUNT(DISTINCT CASE WHEN page_path IN ${GALLERY_LANDING_IN_LIST} THEN visitor_id ELSE NULL END) AS gallery_landing_viewers,
+        SUM(CASE
+          WHEN page_path IN ${GALLERY_LANDING_IN_LIST}
+           AND is_chapter_referrer = 0
+          THEN 1 ELSE 0 END) AS gallery_landing_views,
+        COUNT(DISTINCT CASE
+          WHEN page_path IN ${GALLERY_LANDING_IN_LIST}
+           AND is_chapter_referrer = 0
+          THEN visitor_id ELSE NULL END) AS gallery_landing_viewers,
 
         -- 3) Chapter/Image page loads (browser) \u2014 /i- pages
         SUM(CASE WHEN ${isChapterPage} THEN 1 ELSE 0 END) AS chapter_image_views,
@@ -3054,8 +3220,7 @@ async function getBrowserViewsSummary(env, filters) {
           ) AS session_key,
           e.target_id AS image_id,
           MAX(CASE WHEN e.event_type = 'state_pixel' AND e.source_layer = 'sister_pixel_v1' THEN 1 ELSE 0 END) AS has_sister_pixel,
-          MAX(CASE WHEN e.source = 'js' AND e.event_type = 'chapter_view' THEN 1 ELSE 0 END) AS has_chapter_js,
-          MAX(CASE WHEN e.source = 'js' AND e.event_type = 'qualified_chapter_view' THEN 1 ELSE 0 END) AS has_hardened_js
+          MAX(CASE WHEN e.source = 'js' AND e.event_type = 'chapter_view' THEN 1 ELSE 0 END) AS has_chapter_js
         FROM classified_events e
         WHERE ${where}
           ${qualify(ipClause)}
@@ -3075,8 +3240,7 @@ async function getBrowserViewsSummary(env, filters) {
           p.has_page_pixel,
           p.has_js_page_view,
           MAX(COALESCE(i.has_sister_pixel, 0)) AS has_sister_pixel,
-          MAX(COALESCE(i.has_chapter_js, 0)) AS has_chapter_js,
-          MAX(COALESCE(i.has_hardened_js, 0)) AS has_hardened_js
+          MAX(COALESCE(i.has_chapter_js, 0)) AS has_chapter_js
         FROM page_sessions p
         LEFT JOIN image_sessions i
           ON i.session_key = p.session_key
@@ -3086,11 +3250,9 @@ async function getBrowserViewsSummary(env, filters) {
       SELECT
         COUNT(*) AS image_page_sessions,
         SUM(CASE WHEN has_page_pixel = 1 THEN 1 ELSE 0 END) AS page_pixel_sessions,
-        SUM(CASE WHEN has_sister_pixel = 1 THEN 1 ELSE 0 END) AS sister_pixel_sessions,
-        SUM(CASE WHEN has_chapter_js = 1 THEN 1 ELSE 0 END) AS chapter_js_sessions,
-        SUM(CASE WHEN has_hardened_js = 1 THEN 1 ELSE 0 END) AS hardened_sessions,
-        SUM(CASE WHEN has_page_pixel = 1 AND has_sister_pixel = 0 THEN 1 ELSE 0 END) AS page_without_sister_sessions,
-        SUM(CASE WHEN has_page_pixel = 1 AND has_chapter_js = 0 THEN 1 ELSE 0 END) AS page_without_chapter_js_sessions
+        SUM(CASE WHEN has_page_pixel = 1 AND has_sister_pixel = 1 THEN 1 ELSE 0 END) AS sister_pixel_sessions,
+        SUM(CASE WHEN has_page_pixel = 1 AND has_chapter_js = 1 THEN 1 ELSE 0 END) AS chapter_js_sessions,
+        SUM(CASE WHEN has_page_pixel = 1 AND has_sister_pixel = 1 AND has_chapter_js = 1 THEN 1 ELSE 0 END) AS both_signals_sessions
       FROM paired
     `;
     const funnelRow = await env.DB.prepare(funnelQuery).first();
@@ -3109,9 +3271,7 @@ async function getBrowserViewsSummary(env, filters) {
         page_pixel_sessions: Number(funnelRow?.page_pixel_sessions || 0),
         sister_pixel_sessions: Number(funnelRow?.sister_pixel_sessions || 0),
         chapter_js_sessions: Number(funnelRow?.chapter_js_sessions || 0),
-        hardened_sessions: Number(funnelRow?.hardened_sessions || 0),
-        page_without_sister_sessions: Number(funnelRow?.page_without_sister_sessions || 0),
-        page_without_chapter_js_sessions: Number(funnelRow?.page_without_chapter_js_sessions || 0)
+        both_signals_sessions: Number(funnelRow?.both_signals_sessions || 0)
       }
     };
   } catch (e) {
@@ -3131,9 +3291,7 @@ async function getBrowserViewsSummary(env, filters) {
         page_pixel_sessions: 0,
         sister_pixel_sessions: 0,
         chapter_js_sessions: 0,
-        hardened_sessions: 0,
-        page_without_sister_sessions: 0,
-        page_without_chapter_js_sessions: 0
+        both_signals_sessions: 0
       }
     };
   }
@@ -3141,12 +3299,183 @@ async function getBrowserViewsSummary(env, filters) {
 __name(getBrowserViewsSummary, "getBrowserViewsSummary");
 __name2(getBrowserViewsSummary, "getBrowserViewsSummary");
 async function getTopImages(env, filters) {
-  return {
-    images: { results: [] },
-    uniqueImagesViewed: 0,
-    totalImageSessions: 0,
-    totalImageViews: 0
-  };
+  try {
+    const { dateClause, galleryClause, ipClause, botClause, chardonClause } = filters;
+    const qualify = /* @__PURE__ */ __name2(
+      (clause) => (clause || "").replace(/\bts\b/g, "e.ts").replace(/\bgallery_id\b/g, "e.gallery_id").replace(/\bip\b/g, "e.ip").replace(/\bcity\b/g, "e.city").replace(/\bcountry\b/g, "e.country").replace(/\bregion\b/g, "e.region").replace(/\breferer\b/g, "e.referer"),
+      "qualify"
+    );
+    const safeBotClause = (botClause || "").replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ").replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
+    const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
+    const sessionKey = `COALESCE(NULLIF(e.session_id, ''), NULLIF(e.session_id_v2, ''), NULLIF(e.visitor_id, ''), 'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30))`;
+
+    const topImagesQuery = `
+      WITH image_events AS (
+        SELECT
+          ${sessionKey} AS session_key,
+          e.target_id,
+          CASE
+            WHEN e.page LIKE '/%' THEN e.page
+            WHEN e.page LIKE 'https://www.k4studios.com/%' THEN SUBSTR(e.page, 24)
+            WHEN e.page LIKE 'https://k4studios.com/%' THEN SUBSTR(e.page, 21)
+            WHEN e.page LIKE 'http://www.k4studios.com/%' THEN SUBSTR(e.page, 23)
+            WHEN e.page LIKE 'http://k4studios.com/%' THEN SUBSTR(e.page, 20)
+            ELSE NULL
+          END AS page_path,
+          CASE WHEN e.source = 'js' AND e.event_type = 'chapter_view' THEN 1 ELSE 0 END AS js_hit,
+          CASE WHEN e.event_type IN ('state_pixel', 'action_pixel') AND e.source_layer IN ('sister_pixel_v1', 'zoom_pixel_v1') THEN 1 ELSE 0 END AS pixel_hit
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where}
+          ${qualify(galleryClause)}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND ${notCacheWarmer("e")}
+          AND COALESCE(e.is_bot, 0) = 0
+          AND e.target_id LIKE 'i-%'
+          AND e.target_id NOT LIKE '%/%'
+          AND e.target_id != 'i-j3GV785'
+          AND (
+            (e.source = 'js' AND e.event_type = 'chapter_view')
+            OR (e.event_type IN ('state_pixel', 'action_pixel') AND e.source_layer IN ('sister_pixel_v1', 'zoom_pixel_v1'))
+          )
+      ),
+      image_session_signals AS (
+        SELECT
+          session_key,
+          target_id,
+          MAX(js_hit) AS has_js,
+          MAX(pixel_hit) AS has_pixel,
+          SUM(js_hit) AS js_events,
+          SUM(pixel_hit) AS pixel_events,
+          MAX(page_path) AS chapter_path
+        FROM image_events
+        GROUP BY session_key, target_id
+      )
+      SELECT
+        target_id,
+        COUNT(*) AS views,
+        COUNT(DISTINCT session_key) AS sessions,
+        SUM(js_events) AS js_views,
+        SUM(pixel_events) AS pixel_views,
+        SUM(CASE WHEN has_js = 1 THEN 1 ELSE 0 END) AS js_sessions,
+        SUM(CASE WHEN has_pixel = 1 THEN 1 ELSE 0 END) AS pixel_sessions,
+        SUM(CASE WHEN has_js = 1 AND has_pixel = 1 THEN 1 ELSE 0 END) AS both_sessions,
+        MAX(chapter_path) AS chapter_path
+      FROM image_session_signals
+      GROUP BY target_id
+      ORDER BY views DESC, sessions DESC, target_id ASC
+      LIMIT 25
+    `;
+
+    const totalsQuery = `
+      WITH image_events AS (
+        SELECT
+          ${sessionKey} AS session_key,
+          e.target_id,
+          CASE WHEN e.source = 'js' AND e.event_type = 'chapter_view' THEN 1 ELSE 0 END AS js_hit,
+          CASE WHEN e.event_type IN ('state_pixel', 'action_pixel') AND e.source_layer IN ('sister_pixel_v1', 'zoom_pixel_v1') THEN 1 ELSE 0 END AS pixel_hit
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where}
+          ${qualify(galleryClause)}
+          ${qualify(ipClause)}
+          ${qualify(safeBotClause)}
+          ${qualify(chardonClause)}
+          AND ${notCacheWarmer("e")}
+          AND COALESCE(e.is_bot, 0) = 0
+          AND e.target_id LIKE 'i-%'
+          AND e.target_id NOT LIKE '%/%'
+          AND e.target_id != 'i-j3GV785'
+          AND (
+            (e.source = 'js' AND e.event_type = 'chapter_view')
+            OR (e.event_type IN ('state_pixel', 'action_pixel') AND e.source_layer IN ('sister_pixel_v1', 'zoom_pixel_v1'))
+          )
+      ),
+      image_session_signals AS (
+        SELECT
+          session_key,
+          target_id,
+          MAX(js_hit) AS has_js,
+          MAX(pixel_hit) AS has_pixel
+        FROM image_events
+        GROUP BY session_key, target_id
+      ),
+      image_level_signals AS (
+        SELECT
+          target_id,
+          MAX(has_js) AS has_js,
+          MAX(has_pixel) AS has_pixel
+        FROM image_session_signals
+        GROUP BY target_id
+      ),
+      session_signals AS (
+        SELECT
+          session_key,
+          MAX(has_js) AS has_js,
+          MAX(has_pixel) AS has_pixel
+        FROM image_session_signals
+        GROUP BY session_key
+      )
+      SELECT
+        COUNT(*) AS total_image_views,
+        COUNT(DISTINCT target_id) AS unique_images_viewed,
+        COUNT(DISTINCT session_key) AS total_image_sessions,
+        SUM(CASE WHEN has_js = 1 AND has_pixel = 0 THEN 1 ELSE 0 END) AS js_only_views,
+        SUM(CASE WHEN has_js = 0 AND has_pixel = 1 THEN 1 ELSE 0 END) AS pixel_only_views,
+        SUM(CASE WHEN has_js = 1 AND has_pixel = 1 THEN 1 ELSE 0 END) AS both_signal_views,
+        (SELECT SUM(CASE WHEN ils.has_js = 1 THEN 1 ELSE 0 END) FROM image_level_signals ils) AS js_images,
+        (SELECT SUM(CASE WHEN ils.has_pixel = 1 THEN 1 ELSE 0 END) FROM image_level_signals ils) AS pixel_images,
+        (SELECT SUM(CASE WHEN ils.has_js = 1 AND ils.has_pixel = 1 THEN 1 ELSE 0 END) FROM image_level_signals ils) AS both_signal_images,
+        (SELECT SUM(CASE WHEN ss.has_js = 1 AND ss.has_pixel = 0 THEN 1 ELSE 0 END) FROM session_signals ss) AS js_only_sessions,
+        (SELECT SUM(CASE WHEN ss.has_js = 0 AND ss.has_pixel = 1 THEN 1 ELSE 0 END) FROM session_signals ss) AS pixel_only_sessions,
+        (SELECT SUM(CASE WHEN ss.has_js = 1 AND ss.has_pixel = 1 THEN 1 ELSE 0 END) FROM session_signals ss) AS both_signal_sessions
+      FROM image_session_signals
+    `;
+
+    const [topImagesResult, totals] = await Promise.all([
+      env.DB.prepare(topImagesQuery).all(),
+      env.DB.prepare(totalsQuery).first()
+    ]);
+
+    return {
+      images: { results: topImagesResult?.results || [] },
+      uniqueImagesViewed: Number(totals?.unique_images_viewed || 0),
+      totalImageSessions: Number(totals?.total_image_sessions || 0),
+      totalImageViews: Number(totals?.total_image_views || 0),
+      imageSignalBreakdown: {
+        jsOnlyViews: Number(totals?.js_only_views || 0),
+        pixelOnlyViews: Number(totals?.pixel_only_views || 0),
+        bothSignalViews: Number(totals?.both_signal_views || 0),
+        jsImages: Number(totals?.js_images || 0),
+        pixelImages: Number(totals?.pixel_images || 0),
+        bothSignalImages: Number(totals?.both_signal_images || 0),
+        jsOnlySessions: Number(totals?.js_only_sessions || 0),
+        pixelOnlySessions: Number(totals?.pixel_only_sessions || 0),
+        bothSignalSessions: Number(totals?.both_signal_sessions || 0)
+      }
+    };
+  } catch (e) {
+    console.log("Top images query failed:", e.message, e.stack);
+    return {
+      images: { results: [] },
+      uniqueImagesViewed: 0,
+      totalImageSessions: 0,
+      totalImageViews: 0,
+      imageSignalBreakdown: {
+        jsOnlyViews: 0,
+        pixelOnlyViews: 0,
+        bothSignalViews: 0,
+        jsImages: 0,
+        pixelImages: 0,
+        bothSignalImages: 0,
+        jsOnlySessions: 0,
+        pixelOnlySessions: 0,
+        bothSignalSessions: 0
+      }
+    };
+  }
 }
 __name(getTopImages, "getTopImages");
 __name2(getTopImages, "getTopImages");
@@ -3160,64 +3489,45 @@ async function getEntryAnalysis(env, filters) {
     const safeBotClause = (botClause || "").replace(/\s+OR\s+device\s*=\s*'unknown'\s*/gi, " ").replace(/\bdevice\s*=\s*'unknown'\b/gi, "1=1");
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
     const entryPagesQuery = `
-      WITH filtered_events AS (
+      WITH js_page_events AS (
         SELECT
-          COALESCE(
-            NULLIF(e.session_id, ''),
-            NULLIF(e.session_id_v2, ''),
-            NULLIF(e.visitor_id, ''),
-            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
-          ) AS session_key,
+          e.visitor_id AS visitor_key,
           CASE
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
           END AS page_path,
           e.referer AS referrer,
           e.ua AS ua,
-          e.ts,
-          CASE
-            WHEN e.event_type IN ('page_pixel', 'edge_page') THEN 'P'
-            ELSE 'J'
-          END AS source_kind
-        FROM classified_events e
+          e.ts
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
         WHERE ${where}
           ${qualify(ipClause)}
           ${qualify(safeBotClause)}
           ${qualify(chardonClause)}
           AND ${notCacheWarmer("e")}
           AND COALESCE(e.is_bot, 0) = 0
-          AND (
-            e.event_type IN ('page_pixel', 'edge_page')
-            OR (e.event_type = 'page_view' AND e.source = 'js')
-          )
+          AND e.source = 'js'
+          AND e.event_type = 'page_view'
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
           AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
           AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE 'http%'
           AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '/http%'
           AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '%://%'
-          AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) NOT LIKE '%/i-%'
-          AND NOT (
-            COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) LIKE '/i-%'
-            AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) NOT LIKE '/i-%/%'
-          )
       ),
       first_hits AS (
         SELECT
-          session_key,
+          visitor_key,
           page_path,
           referrer,
           ua,
-          source_kind,
-          ROW_NUMBER() OVER (PARTITION BY session_key ORDER BY ts ASC) AS rn
-        FROM filtered_events
+          ROW_NUMBER() OVER (PARTITION BY visitor_key ORDER BY ts ASC) AS rn
+        FROM js_page_events
       ),
       not_found_hits AS (
         SELECT DISTINCT
-          COALESCE(
-            NULLIF(e.session_id, ''),
-            NULLIF(e.session_id_v2, ''),
-            NULLIF(e.visitor_id, ''),
-            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
-          ) AS session_key,
+          e.visitor_id AS visitor_key,
           CASE
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
@@ -3229,12 +3539,15 @@ async function getEntryAnalysis(env, filters) {
           ${qualify(chardonClause)}
           AND ${notCacheWarmer("e")}
           AND COALESCE(e.is_bot, 0) = 0
+          AND e.source = 'js'
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
           AND e.event_type IN ('404', '410', 'smart404_redirect', 'smart404_gone', 'smart404_fallback', 'smart404_homepage')
           AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
       )
       SELECT
         page_path,
-        source_kind,
+        'J' AS source_kind,
         CASE
           WHEN (referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct')
             AND LOWER(COALESCE(ua, '')) LIKE '%pinterest%'
@@ -3257,14 +3570,13 @@ async function getEntryAnalysis(env, filters) {
         COUNT(*) AS sessions
       FROM first_hits
       WHERE rn = 1
-        AND (referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' OR referrer NOT LIKE '%k4studios.com%')
         AND NOT EXISTS (
           SELECT 1
           FROM not_found_hits nf
-          WHERE nf.session_key = first_hits.session_key
+          WHERE nf.visitor_key = first_hits.visitor_key
             AND nf.page_path = first_hits.page_path
         )
-      GROUP BY page_path, source_kind, ref_source
+      GROUP BY page_path, ref_source
       ORDER BY sessions DESC, page_path ASC
       LIMIT 25
     `;
@@ -3574,6 +3886,99 @@ async function getEdgeEvents(env, filters) {
 }
 __name(getEdgeEvents, "getEdgeEvents");
 __name2(getEdgeEvents, "getEdgeEvents");
+const BOT_INTEL_FLAG_KEY = "bot_intel_enabled";
+const BOT_BLOCK_FLAG_KEY = "bot_block_enabled";
+const BOT_FRICTION_FLAG_KEY = "bot_friction_enabled";
+async function ensureRuntimeFlagsTable(env) {
+  if (!env?.DB) return;
+  await env.DB.prepare(
+    `
+    CREATE TABLE IF NOT EXISTS runtime_flags (
+      flag_key TEXT PRIMARY KEY,
+      flag_value TEXT NOT NULL,
+      updated_at TEXT DEFAULT CURRENT_TIMESTAMP
+    )
+  `
+  ).run();
+}
+__name(ensureRuntimeFlagsTable, "ensureRuntimeFlagsTable");
+__name2(ensureRuntimeFlagsTable, "ensureRuntimeFlagsTable");
+async function getBotIntelEnabled(env) {
+  try {
+    await ensureRuntimeFlagsTable(env);
+    const row = await env.DB.prepare(
+      `SELECT flag_value FROM runtime_flags WHERE flag_key = ? LIMIT 1`
+    ).bind(BOT_INTEL_FLAG_KEY).first();
+    if (!row) return true;
+    return String(row.flag_value || "1") !== "0";
+  } catch {
+    return true;
+  }
+}
+__name(getBotIntelEnabled, "getBotIntelEnabled");
+__name2(getBotIntelEnabled, "getBotIntelEnabled");
+async function getRuntimeFlagEnabled(env, key, defaultEnabled = true) {
+  try {
+    await ensureRuntimeFlagsTable(env);
+    const row = await env.DB.prepare(
+      `SELECT flag_value FROM runtime_flags WHERE flag_key = ? LIMIT 1`
+    ).bind(key).first();
+    if (!row) return defaultEnabled;
+    return String(row.flag_value || (defaultEnabled ? "1" : "0")) !== "0";
+  } catch {
+    return defaultEnabled;
+  }
+}
+__name(getRuntimeFlagEnabled, "getRuntimeFlagEnabled");
+__name2(getRuntimeFlagEnabled, "getRuntimeFlagEnabled");
+async function getBotBlockEnabled(env) {
+  return getRuntimeFlagEnabled(env, BOT_BLOCK_FLAG_KEY, true);
+}
+__name(getBotBlockEnabled, "getBotBlockEnabled");
+__name2(getBotBlockEnabled, "getBotBlockEnabled");
+async function getBotFrictionEnabled(env) {
+  return getRuntimeFlagEnabled(env, BOT_FRICTION_FLAG_KEY, true);
+}
+__name(getBotFrictionEnabled, "getBotFrictionEnabled");
+__name2(getBotFrictionEnabled, "getBotFrictionEnabled");
+async function setBotIntelEnabled(env, enabled) {
+  await ensureRuntimeFlagsTable(env);
+  await env.DB.prepare(
+    `
+    INSERT INTO runtime_flags (flag_key, flag_value, updated_at)
+    VALUES (?, ?, datetime('now'))
+    ON CONFLICT(flag_key) DO UPDATE SET
+      flag_value = excluded.flag_value,
+      updated_at = datetime('now')
+  `
+  ).bind(BOT_INTEL_FLAG_KEY, enabled ? "1" : "0").run();
+}
+__name(setBotIntelEnabled, "setBotIntelEnabled");
+__name2(setBotIntelEnabled, "setBotIntelEnabled");
+async function setRuntimeFlagEnabled(env, key, enabled) {
+  await ensureRuntimeFlagsTable(env);
+  await env.DB.prepare(
+    `
+    INSERT INTO runtime_flags (flag_key, flag_value, updated_at)
+    VALUES (?, ?, datetime('now'))
+    ON CONFLICT(flag_key) DO UPDATE SET
+      flag_value = excluded.flag_value,
+      updated_at = datetime('now')
+  `
+  ).bind(key, enabled ? "1" : "0").run();
+}
+__name(setRuntimeFlagEnabled, "setRuntimeFlagEnabled");
+__name2(setRuntimeFlagEnabled, "setRuntimeFlagEnabled");
+function emptyBotIntelligence() {
+  return {
+    suspects: [],
+    blocked: [],
+    verified: [],
+    stats: { total: 0, risk3: 0, risk4: 0, verified: 0, verified_bots: 0 }
+  };
+}
+__name(emptyBotIntelligence, "emptyBotIntelligence");
+__name2(emptyBotIntelligence, "emptyBotIntelligence");
 async function getBotIntelligence(env) {
   const botIntelligence = {
     suspects: [],
@@ -3939,6 +4344,7 @@ function buildDashboardData(queryResults, filterParams) {
     uniqueImagesViewed,
     totalImageSessions,
     totalImageViews,
+    imageSignalBreakdown,
     themesClicked,
     cowboyJumps,
     topDepthSessions,
@@ -3972,10 +4378,14 @@ function buildDashboardData(queryResults, filterParams) {
     viewerDepth,
     suppressionStats,
     botIntelligence,
+    botIntelEnabled,
+    botBlockEnabled,
+    botFrictionEnabled,
     periodTotals,
     statePixelTestRoaring20s,
     topGalleryLandingPages,
-    browserViewsSummary
+    browserViewsSummary,
+    imageIdMap
   } = queryResults;
   const {
     days,
@@ -4010,6 +4420,7 @@ function buildDashboardData(queryResults, filterParams) {
     uniqueImagesViewed,
     totalImageSessions,
     totalImageViews,
+    imageSignalBreakdown: imageSignalBreakdown || { jsOnlyViews: 0, pixelOnlyViews: 0, bothSignalViews: 0 },
     themesClicked: themesClicked?.results || [],
     topDepthSessions: topDepthSessions || [],
     minEngagement,
@@ -4056,10 +4467,14 @@ function buildDashboardData(queryResults, filterParams) {
     imageAccessOverview: imageAccessOverview || [],
     suppressionStats,
     botIntelligence,
+    botIntelEnabled: botIntelEnabled !== false,
+    botBlockEnabled: botBlockEnabled !== false,
+    botFrictionEnabled: botFrictionEnabled !== false,
     periodTotals: periodTotals || { total_visitors: 0, total_art_viewers: 0 },
     statePixelTestRoaring20s,
     topGalleryLandingPages: Array.isArray(topGalleryLandingPages) ? topGalleryLandingPages : topGalleryLandingPages?.results || [],
     browserViewsSummary,
+    imageIdMap: imageIdMap || {},
     authHeader: authHeader || ""
   };
 }
@@ -4086,10 +4501,12 @@ function renderDashboard({
   pages,
   topGalleryLandingPages,
   browserViewsSummary,
+  imageIdMap,
   images,
   uniqueImagesViewed,
   totalImageSessions,
   totalImageViews,
+  imageSignalBreakdown,
   themesClicked,
   topDepthSessions,
   minEngagement,
@@ -4127,10 +4544,15 @@ function renderDashboard({
   viewerDepth,
   suppressionStats,
   botIntelligence,
+  botIntelEnabled,
+  botBlockEnabled,
+  botFrictionEnabled,
   periodTotals,
   authHeader
 }) {
   const s = summary || {};
+  const frictionPillMuted = !botIntelEnabled || !botFrictionEnabled;
+  const blockPillMuted = !botIntelEnabled || !botBlockEnabled;
   const safeDeviceEngagement = Array.isArray(deviceEngagement) ? deviceEngagement : [];
   const sp = statePixelTestRoaring20s || {};
   const spSisterV1Hits = Number(sp.sister_pixel_v1_hits || 0);
@@ -4152,9 +4574,32 @@ function renderDashboard({
   const spGalleryExploreClickV1Hits = Number(
     sp.gallery_explore_click_pixel_v1_hits || 0
   );
+  const spGalleryEntryClicksV1Hits =
+    spGalleryPreviewClickV1Hits +
+    spGalleryHeroClickV1Hits +
+    spGalleryExploreClickV1Hits;
+  const spHomeLoreLegacyCollectionClickV1Hits = Number(
+    sp.home_lore_legacy_collection_click_pixel_v1_hits || 0
+  );
+  const spHomeLoreLegacyImageClickV1Hits = Number(
+    sp.home_lore_legacy_image_click_pixel_v1_hits || 0
+  );
+  const spHomeLoreLegacyCtaClickV1Hits = Number(
+    sp.home_lore_legacy_cta_click_pixel_v1_hits || 0
+  );
+  const spHomeLoreLegacyAudioClickV1Hits = Number(
+    sp.home_lore_legacy_audio_click_pixel_v1_hits || 0
+  );
+  const spThemeLoreLegacyAudioClickV1Hits = Number(
+    sp.theme_lore_legacy_audio_click_pixel_v1_hits || 0
+  );
   const spGalleryLandingViewV1Hits = Number(
     sp.gallery_landing_view_pixel_v1_hits || 0
   );
+  const spGalleryLandingToEntryClickRate =
+    spGalleryLandingViewV1Hits > 0
+      ? spGalleryEntryClicksV1Hits / spGalleryLandingViewV1Hits * 100
+      : 0;
   const spExitToGalleryV1Hits = Number(sp.exit_to_gallery_pixel_v1_hits || 0);
   const spScroll25V1Hits = Number(sp.scroll_25_pixel_v1_hits || 0);
   const spScroll50V1Hits = Number(sp.scroll_50_pixel_v1_hits || 0);
@@ -4203,6 +4648,11 @@ function renderDashboard({
     spGalleryPreviewClickV1Hits,
     spGalleryHeroClickV1Hits,
     spGalleryExploreClickV1Hits,
+    spHomeLoreLegacyCollectionClickV1Hits,
+    spHomeLoreLegacyImageClickV1Hits,
+    spHomeLoreLegacyCtaClickV1Hits,
+    spHomeLoreLegacyAudioClickV1Hits,
+    spThemeLoreLegacyAudioClickV1Hits,
     spGalleryLandingViewV1Hits,
     spExitToGalleryV1Hits,
     spScroll25V1Hits,
@@ -4233,6 +4683,40 @@ function renderDashboard({
   const spPctViewersWithDupes = Number(spViewerStats.pct_viewers_with_duplicates || 0);
   const spByGallery = Array.isArray(sp.by_gallery) ? sp.by_gallery : [];
   const spPixelImageAccess = Array.isArray(sp.pixel_image_access) ? sp.pixel_image_access : [];
+  const blendedImages = Array.isArray(images) ? images : [];
+  const pixelAccessById = /* @__PURE__ */ new Map(
+    spPixelImageAccess.map((row) => [String(row?.target_id || ""), row])
+  );
+  const masterImageRows = blendedImages.map((img) => {
+    const imageId = String(img?.target_id || "");
+    const px = pixelAccessById.get(imageId) || {};
+    const chapterPath = String(img?.chapter_path || px?.page || "");
+    return {
+      ...px,
+      target_id: imageId,
+      chapter_path: chapterPath,
+      page: px?.page || chapterPath,
+      exposures: Number(img?.views || 0),
+      sessions: Number(img?.sessions || 0),
+      viewers: Number(px?.viewers || img?.sessions || 0),
+      js_views: Number(img?.js_views || 0),
+      pixel_views: Number(img?.pixel_views || 0),
+      has_js_signal: Number(img?.js_sessions || 0) > 0 ? 1 : 0,
+      has_pixel_signal: Number(img?.pixel_sessions || 0) > 0 ? 1 : 0,
+      has_hardened_signal: Number(px?.hardened_views || 0) > 0 ? 1 : 0,
+      hardened_views: Number(px?.hardened_views || 0),
+      hardened_viewers: Number(px?.hardened_viewers || 0),
+      source_layers: String(px?.source_layers || ""),
+      buy_clicks: Number(px?.buy_clicks || 0),
+      zoom_views: Number(px?.zoom_views || 0),
+      location_labels: String(px?.location_labels || ""),
+      country: px?.country || "",
+      region: px?.region || "",
+      city: px?.city || "",
+      user_agent: px?.user_agent || "",
+      referer: px?.referer || ""
+    };
+  });
   const safeTopGalleryLandingPages = Array.isArray(topGalleryLandingPages) ? topGalleryLandingPages : [];
   const galleryLandingPathSet = /* @__PURE__ */ new Set(CANONICAL_GALLERY_LANDING_PATHS);
   const normalizeGalleryPath = /* @__PURE__ */ __name2((inputPath) => {
@@ -4275,16 +4759,12 @@ function renderDashboard({
   const chapterImageViews = Number(bvs.chapter_image_views || 0);
   const chapterImageViewers = Number(bvs.chapter_image_viewers || 0);
   const externalDirectImageLoads = Number(bvs.external_direct_image_loads || 0);
-  const imageFunnel = bvs.image_funnel || {};
-  const imagePageSessions = Number(imageFunnel.image_page_sessions || 0);
-  const pagePixelSessions = Number(imageFunnel.page_pixel_sessions || 0);
-  const sisterPixelSessions = Number(imageFunnel.sister_pixel_sessions || 0);
-  const chapterJsSessions = Number(imageFunnel.chapter_js_sessions || 0);
-  const hardenedImageSessions = Number(imageFunnel.hardened_sessions || 0);
-  const pageWithoutSisterSessions = Number(imageFunnel.page_without_sister_sessions || 0);
-  const pageWithoutChapterJsSessions = Number(imageFunnel.page_without_chapter_js_sessions || 0);
-  const funnelBase = Math.max(pagePixelSessions, imagePageSessions, 0);
-  const funnelPct = (value) => funnelBase > 0 ? Math.round(value / funnelBase * 1e3) / 10 : 0;
+  const canonicalImageViews = Number(totalImageViews || 0);
+  const jsOnlyViews = Number(imageSignalBreakdown?.jsOnlyViews || 0);
+  const pixelOnlyViews = Number(imageSignalBreakdown?.pixelOnlyViews || 0);
+  const bothSignalViews = Number(imageSignalBreakdown?.bothSignalViews || 0);
+  const viewBase = Math.max(canonicalImageViews, 0);
+  const viewPct = (value) => viewBase > 0 ? Math.round(value / viewBase * 1e3) / 10 : 0;
   const fmt2 = /* @__PURE__ */ __name2(
     (n) => Number.isFinite(Number(n)) ? Number(n).toFixed(2) : "0.00",
     "fmt2"
@@ -5179,25 +5659,14 @@ function renderDashboard({
   <h2>Pulse</h2>
   <div class="pulse">
     <div class="pulse-stat">
-      <span class="value">
-        <span style="display:inline-flex;flex-direction:column;align-items:center;line-height:1.0;">
-          <span>${chapterImageViews}</span>
-          <span style="font-size:12px;line-height:0.8;margin:0;">-</span>
-          <span>${externalDirectImageLoads}</span>
-        </span>
-      </span>
-      <span class="label">Image Views (Chapter/Direct) <span class="info-icon">i</span></span>
-      <div class="tooltip">Split image loads: <strong>${chapterImageViews}</strong> chapter page image loads from <code>page_view</code>/<code>page_pixel</code> on <code>/i-...</code> pages (Viewers: ${chapterImageViewers}), and <strong>${externalDirectImageLoads}</strong> external/direct image loads (<code>external_image</code>, <code>direct_image</code>, <code>external_image_page</code>).</div>
-    </div>
-    <div class="pulse-stat">
-      <span class="value">${s.unique_visitors > 0 ? (s.sessions / s.unique_visitors).toFixed(1) : "0"}</span>
-      <span class="label">Sessions/Visitor <span class="info-icon">i</span></span>
-      <div class="tooltip">Average number of sessions per human visitor. Higher = more return visits or deeper browsing patterns. ${s.sessions || 0} sessions from ${s.unique_visitors || 0} unique visitors.</div>
+      <span class="value">${canonicalImageViews}</span>
+      <span class="label">Image Views (Master) <span class="info-icon">i</span></span>
+      <div class="tooltip">Canonical total image views from the Master Image Viewing Report: <strong>${canonicalImageViews}</strong>. Context split: <strong>${chapterImageViews}</strong> chapter-page image loads (Viewers: ${chapterImageViewers}) and <strong>${externalDirectImageLoads}</strong> external/direct image loads.</div>
     </div>
     <div class="pulse-stat">
       <span class="value"><span style="color:#10b981">${newVisitors}</span>/<span style="color:#f59e0b">${returningVisitors}</span></span>
       <span class="label">New/Ret <span class="info-icon">i</span></span>
-      <div class="tooltip">New: IPs never seen before this period. Returning: IPs that visited previously. Green = new, Orange = returning.</div>
+      <div class="tooltip">New: visitor IDs first seen in this period. Returning: visitor IDs with prior JS history before this period. Green = new, Orange = returning.</div>
     </div>
     <div class="pulse-stat">
       <span class="value">${s.avg_events_per_session || 0}</span>
@@ -5209,83 +5678,10 @@ function renderDashboard({
       <span class="label">Avg Time <span class="info-icon">i</span></span>
       <div class="tooltip">Average session duration (first to last event). Only counts sessions with 2+ events. For art browsing, 2+ min is good engagement.</div>
     </div>
-    ${peakHours.length > 0 ? `<div class="pulse-stat">
-      <span class="value" style="color:#f472b6;">${peakHours.map((h) => h.hour).join(", ")}</span>
-      <span class="label">Peak <span class="info-icon">i</span></span>
-      <div class="tooltip">Highest traffic hour in morning (AM) and evening (PM) periods. ${peakHours.map((h) => `${h.period}: ${h.hour} (${h.sessions} sessions)`).join(", ")}. Great for social posting timing.</div>
-    </div>` : ""}
     <div class="pulse-stat">
       <span class="value" style="color: ${bounceRate > 60 ? "#ef4444" : bounceRate > 40 ? "#f59e0b" : "#10b981"};">${bounceRate}%</span>
       <span class="label" style="color: ${bounceRate > 60 ? "#fecaca" : bounceRate > 40 ? "#fed7aa" : "#a7f3d0"};">Bounce <span class="info-icon" style="background: rgba(255,255,255,0.2); color: ${bounceRate > 60 ? "#fecaca" : bounceRate > 40 ? "#fed7aa" : "#a7f3d0"};">i</span></span>
       <div class="tooltip">Sessions with only 1 event (came and left immediately). Lower is better. Above 60% = concern, below 40% = great.</div>
-    </div>
-  </div>
-
-  <div class="section" style="max-width:1780px;margin:0 auto 18px;">
-    <div class="section-header">
-      <h3>Image View Funnel</h3>
-      <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Session-based progression for image pages. Base is sessions that reached an <code>/i-...</code> page and logged a page pixel. This makes the gap between arrival and actual image-view tracking visible in one place.</div></span>
-    </div>
-    <div class="pulse-row">
-      <div class="pulse-stat" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
-        <span class="value" style="color:#e2e8f0;">${pagePixelSessions}</span>
-        <span class="label" style="color:#cbd5e1;">Image Page Sessions <span class="info-icon" style="background:rgba(255,255,255,0.14);color:#cbd5e1;">i</span></span>
-        <div class="tooltip">Sessions that reached an image page and produced a page pixel. This is the funnel baseline for on-page image behavior.</div>
-      </div>
-      <div class="pulse-stat" style="background: linear-gradient(135deg, #166534 0%, #15803d 100%);">
-        <span class="value" style="color:#f0fdf4;">${sisterPixelSessions} <span style="font-size:12px;opacity:0.9;">(${funnelPct(sisterPixelSessions)}%)</span></span>
-        <span class="label" style="color:#dcfce7;">Sister Pixel Sessions <span class="info-icon" style="background:rgba(255,255,255,0.14);color:#dcfce7;">i</span></span>
-        <div class="tooltip">Sessions with an image-targeted <code>sister_pixel_v1</code> after image-page arrival. If this lags badly behind image page sessions, the issue is either bounce or missing image-view capture.</div>
-      </div>
-      <div class="pulse-stat" style="background: linear-gradient(135deg, #92400e 0%, #b45309 100%);">
-        <span class="value" style="color:#fff7ed;">${chapterJsSessions} <span style="font-size:12px;opacity:0.9;">(${funnelPct(chapterJsSessions)}%)</span></span>
-        <span class="label" style="color:#fed7aa;">Chapter JS Sessions <span class="info-icon" style="background:rgba(255,255,255,0.14);color:#fed7aa;">i</span></span>
-        <div class="tooltip">Sessions with JS <code>chapter_view</code> on the image target. This shows how often JS confirms image progression after arrival.</div>
-      </div>
-      <div class="pulse-stat" style="background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%);">
-        <span class="value" style="color:#e0f2fe;">${hardenedImageSessions} <span style="font-size:12px;opacity:0.9;">(${funnelPct(hardenedImageSessions)}%)</span></span>
-        <span class="label" style="color:#bae6fd;">Hardened Sessions <span class="info-icon" style="background:rgba(255,255,255,0.14);color:#bae6fd;">i</span></span>
-        <div class="tooltip">Sessions with <code>qualified_chapter_view</code>. This is the strongest confirmation layer and is expected to be lower than sister pixel or chapter JS.</div>
-      </div>
-    </div>
-    <div class="pulse-row" style="margin-bottom:0;">
-      <div class="pulse-stat" style="background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 100%);">
-        <span class="value" style="color:#fee2e2;">${pageWithoutSisterSessions} <span style="font-size:12px;opacity:0.9;">(${funnelPct(pageWithoutSisterSessions)}%)</span></span>
-        <span class="label" style="color:#fecaca;">Page Without Sister <span class="info-icon" style="background:rgba(255,255,255,0.14);color:#fecaca;">i</span></span>
-        <div class="tooltip">Image-page sessions that never produced a sister pixel. This is the main discrepancy bucket between arrival and image-view tracking.</div>
-      </div>
-      <div class="pulse-stat" style="background: linear-gradient(135deg, #713f12 0%, #a16207 100%);">
-        <span class="value" style="color:#fef3c7;">${pageWithoutChapterJsSessions} <span style="font-size:12px;opacity:0.9;">(${funnelPct(pageWithoutChapterJsSessions)}%)</span></span>
-        <span class="label" style="color:#fde68a;">Page Without Chapter JS <span class="info-icon" style="background:rgba(255,255,255,0.14);color:#fde68a;">i</span></span>
-        <div class="tooltip">Image-page sessions that never produced a JS <code>chapter_view</code>. This helps separate pixel-only browsing from JS-confirmed image interaction.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section" style="max-width:1780px;margin:0 auto 18px;">
-    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-      <h3 style="margin:0;">Viewer Behavior (Sister Pixel)</h3>
-      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Identity-based view of sister pixel behavior using <code>visitor_id</code> and <code>session_id</code>. \u201CDuplicates\u201D = exposures where a visitor re-viewed the same image within the same visit (visit = session_id, with a fallback if missing).</div></span>
-    </div>
-    <div style="margin-top:10px;">
-      <table style="width:100%;border-collapse:collapse;">
-        <thead>
-          <tr style="color:#888;font-size:12px;text-align:left;">
-            <th style="padding:6px 0;border-bottom:1px solid #333;">Viewers</th>
-            <th style="padding:6px 0;border-bottom:1px solid #333;">Avg exposures / viewer</th>
-            <th style="padding:6px 0;border-bottom:1px solid #333;">Avg duplicate exposures / viewer</th>
-            <th style="padding:6px 0;border-bottom:1px solid #333;">% viewers w/ duplicates</th>
-          </tr>
-        </thead>
-        <tbody style="font-size:13px;">
-          <tr>
-            <td style="padding:8px 0;border-bottom:1px solid #222;">${spViewers}</td>
-            <td style="padding:8px 0;border-bottom:1px solid #222;">${fmt2(spAvgExposuresPerViewer)}</td>
-            <td style="padding:8px 0;border-bottom:1px solid #222;">${fmt2(spAvgDupExposuresPerViewer)}</td>
-            <td style="padding:8px 0;border-bottom:1px solid #222;">${fmt2(spPctViewersWithDupes)}%</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>
 
@@ -5321,12 +5717,30 @@ function renderDashboard({
 
   <div class="section" style="max-width:1780px;margin:0 auto 18px;">
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-      <h3 style="margin:0;">Sister Pixel Image Access Overview</h3>
-      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Per-image breakout from image-targeted pixel exposure rows. This panel includes pixel-only image traffic again, including privacy-blocked or JS-suppressed visits. <code>H</code> marks images that also earned at least one hardened JS <code>qualified_chapter_view</code>; rows without <code>H</code> remain visible as pixel-only evidence.</div></span>
-      <span style="margin-left:auto;font-size:12px;color:#888;">Rows: <strong style="color:#fff;">${spPixelImageAccess.length || 0}</strong></span>
+      <h3 style="margin:0;">Master Image Viewing Report (P + J + H)</h3>
+      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Canonical per-image report blending pixel (P) and JS (J) image signals for non-bot visitors. <code>H</code> indicates hardened JS confirmation from <code>qualified_chapter_view</code>. Rows can be pixel-only, JS-only, or blended.</div></span>
+      <span style="margin-left:auto;font-size:12px;color:#888;">Rows: <strong style="color:#fff;">${masterImageRows.length || 0}</strong></span>
+    </div>
+    <div class="pulse-row" style="margin-top:10px;">
+      <div class="pulse-stat" style="background:#1f2937;">
+        <span class="value" style="color:#e5e7eb;">${canonicalImageViews}</span>
+        <span class="label" style="color:#cbd5e1;">Total Image Views</span>
+      </div>
+      <div class="pulse-stat" style="background:#1f2937;">
+        <span class="value" style="color:#e5e7eb;">${jsOnlyViews} <span style="font-size:12px;opacity:0.9;">(${viewPct(jsOnlyViews)}%)</span></span>
+        <span class="label" style="color:#cbd5e1;">J-only Views</span>
+      </div>
+      <div class="pulse-stat" style="background:#1f2937;">
+        <span class="value" style="color:#e5e7eb;">${pixelOnlyViews} <span style="font-size:12px;opacity:0.9;">(${viewPct(pixelOnlyViews)}%)</span></span>
+        <span class="label" style="color:#cbd5e1;">P-only Views</span>
+      </div>
+      <div class="pulse-stat" style="background:#1f2937;">
+        <span class="value" style="color:#e5e7eb;">${bothSignalViews} <span style="font-size:12px;opacity:0.9;">(${viewPct(bothSignalViews)}%)</span></span>
+        <span class="label" style="color:#cbd5e1;">Both-signal Views</span>
+      </div>
     </div>
     <div style="margin-top:10px;">
-      ${spPixelImageAccess.length > 0 ? `
+      ${masterImageRows.length > 0 ? `
       <div style="max-height: var(--k4-panel-list-max); overflow-y: auto; padding-right: 4px; scrollbar-gutter: stable;" id="pixelAccessList">
         <div style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: 90px 180px minmax(120px, 1fr) minmax(140px, 1fr) 90px minmax(100px, 0.8fr) 70px 60px 60px; gap: 10px; padding: 7px 8px; background: #252525; color: #777; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #444; align-items: center;">
           <span style="display:flex;justify-content:center;">Image</span>
@@ -5339,19 +5753,27 @@ function renderDashboard({
           <span style="text-align:center;">Exp</span>
           <span style="text-align:center;">View</span>
         </div>
-        ${spPixelImageAccess.map((r, idx) => {
+        ${masterImageRows.map((r, idx) => {
     const imageId = String(r.target_id || "");
-    const rawPage = String(r.page || "");
+      const rawPage = String(r.chapter_path || r.page || "");
     const galleryPath = rawPage && rawPage.includes("/i-") ? rawPage.substring(0, rawPage.indexOf("/i-")) : rawPage;
     const displayGallery = galleryDisplayNameFromPath(galleryPath || "") || "(missing)";
     const galleryUrl = galleryPath && galleryPath.startsWith("/") ? "https://k4studios.com" + galleryPath : "";
-    const chapterPath = rawPage && rawPage.includes("/i-") ? rawPage : imageId && galleryPath && galleryPath.startsWith("/") ? `${galleryPath}/${imageId}` : "";
+      const chapterPathFromData = rawPage && rawPage.includes("/i-") ? rawPage : imageId && galleryPath && galleryPath.startsWith("/") ? `${galleryPath}/${imageId}` : "";
+      const canonicalGalleryPath = getCanonicalGalleryPathForImageId(imageIdMap, imageId) || "";
+      const chapterPathFromMap = canonicalGalleryPath && imageId ? `${canonicalGalleryPath}/${imageId}` : "";
+      const chapterPath = chapterPathFromData || chapterPathFromMap;
     const imageUrl = chapterPath && chapterPath.startsWith("/") ? "https://k4studios.com" + chapterPath : "#";
     const exposures = Number(r.exposures || 0);
+    const buyClicks = Number(r.buy_clicks || 0);
+    const hasBuyClicks = buyClicks > 0;
     const zoomViews = Number(r.zoom_views || 0);
-    const viewers = Number(r.viewers || 0);
+    const viewers = Number(r.viewers || r.sessions || 0);
     const hardenedViews = Number(r.hardened_views || 0);
     const hardenedViewers = Number(r.hardened_viewers || 0);
+      const hasPixelSignal = Number(r.has_pixel_signal || 0) > 0;
+      const hasJsSignal = Number(r.has_js_signal || 0) > 0;
+      const hasHardenedSignal = Number(r.has_hardened_signal || 0) > 0;
     const loc = fmtLoc(r.city, r.region, r.country);
     const locationLabels = String(r.location_labels || "").trim();
     const locDisplay = locationLabels || loc;
@@ -5427,24 +5849,28 @@ function renderDashboard({
       refIcon = "\u{1F310}"; refColor = "#9ca3af";
     }
     // P badge (lime green) for pixel view
-    const pBadge = '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:#84cc1622;color:#84cc16;font-size:10px;font-weight:bold;border:1px solid #84cc1655;" title="Pixel View">P</span>';
-    const hBadge = hardenedViews > 0 ? '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:#38bdf822;color:#38bdf8;font-size:10px;font-weight:bold;border:1px solid #38bdf855;" title="Hardened image view confirmed. Qualified views: ' + hardenedViews + ' / viewers: ' + hardenedViewers + '">H</span>' : '';
+    const pBadge = hasPixelSignal ? '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:#84cc1622;color:#84cc16;font-size:10px;font-weight:bold;border:1px solid #84cc1655;" title="Pixel image signal present">P</span>' : '';
+    const jBadge = hasJsSignal ? '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:#3b82f622;color:#60a5fa;font-size:10px;font-weight:bold;border:1px solid #60a5fa66;" title="JS image signal present">J</span>' : '';
+    const buyBadge = hasBuyClicks ? '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:#22d3ee22;color:#22d3ee;font-size:11px;font-weight:bold;border:1px solid #22d3ee66;" title="Buy button clicks: ' + buyClicks + '">$</span>' : '';
+    const hBadge = (hasPixelSignal && hasJsSignal) || hasHardenedSignal ? '<span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:3px;background:#d946ef22;color:#d946ef;font-size:10px;font-weight:bold;border:1px solid #d946ef66;" title="Blended P+J overlap. Hardened qualified views: ' + hardenedViews + ' / hardened viewers: ' + hardenedViewers + '">H</span>' : '';
     // Z column: numeric zoom count with the same cyan Z styling
     const zDisplay = zoomViews === 0
       ? '<span style="display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:20px;padding:0 6px;border-radius:3px;background:#6b728022;color:#6b7280;font-size:10px;font-weight:bold;border:1px solid #6b728055;" title="Zoom views: 0 / ' + exposures + '">0</span>'
       : '<span style="display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:20px;padding:0 6px;border-radius:3px;background:#06b6d422;color:#06b6d4;font-size:10px;font-weight:bold;border:1px solid #06b6d455;" title="Zoom views: ' + zoomViews + ' / ' + exposures + '">' + zoomViews + '</span>';
-    const thumb = imageId && imageId.startsWith("i-") ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (idx < 6 ? "eager" : "lazy") + '" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid #84cc1644;">' : '<span style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:1px solid #333;">\u{1F5BC}</span>';
-    const borderColor = hardenedViews > 0 ? "#38bdf844" : hasZoom ? "#06b6d444" : hasSister ? "#84cc1644" : "#64748b44";
-    return `<div class="pixel-access-row" style="display:grid;grid-template-columns: 90px 180px minmax(120px, 1fr) minmax(140px, 1fr) 90px minmax(100px, 0.8fr) 70px 60px 60px;gap:10px;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:3px solid ${borderColor};align-items:center;font-size:13px;transition:background 0.15s;" onmouseover="this.style.background='rgba(255,255,255,0.04)'" onmouseout="this.style.background='transparent'">
+    const thumb = imageId && imageId.startsWith("i-") ? '<img src="https://k4studios.com/img/' + imageId + '/s" alt="" loading="' + (idx < 6 ? "eager" : "lazy") + '" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:' + (hasBuyClicks ? '3px' : '1px') + ' solid ' + (hasBuyClicks ? '#22d3eeaa' : '#84cc1644') + ';">' : '<span style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;background:#333;border-radius:6px;font-size:18px;border:' + (hasBuyClicks ? '3px' : '1px') + ' solid ' + (hasBuyClicks ? '#22d3eeaa' : '#333') + ';">\u{1F5BC}</span>';
+    const borderColor = hasBuyClicks ? "#22d3eeaa" : hasPixelSignal && hasJsSignal ? "#d946ef66" : hasJsSignal ? "#60a5fa66" : hasZoom ? "#06b6d444" : hasSister ? "#84cc1644" : "#64748b44";
+    const rowBackground = hasBuyClicks ? "rgba(34,211,238,0.08)" : "transparent";
+    const rowHoverBackground = hasBuyClicks ? "rgba(34,211,238,0.14)" : "rgba(255,255,255,0.04)";
+    return `<div class="pixel-access-row" style="display:grid;grid-template-columns: 90px 180px minmax(120px, 1fr) minmax(140px, 1fr) 90px minmax(100px, 0.8fr) 70px 60px 60px;gap:10px;padding:8px 8px;border-bottom:1px solid #2a2a2a;border-left:${hasBuyClicks ? '5px' : '3px'} solid ${borderColor};align-items:center;font-size:13px;transition:background 0.15s;background:${rowBackground};" onmouseover="this.style.background='${rowHoverBackground}'" onmouseout="this.style.background='${rowBackground}'">
       <div style="display:flex;align-items:center;justify-content:center;">
         <a href="${imageUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;">${thumb}</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:4px;min-width:0;">
         <div style="display:flex;align-items:center;gap:6px;min-width:0;">
-          <div style="flex:0 0 auto;display:flex;gap:4px;">${hBadge}${pBadge}</div>
-          <a href="${imageUrl}" target="_blank" rel="noopener" style="color:#84cc16;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;" title="${imageId}">${imageId || "(missing)"}</a>
+          <div style="flex:0 0 auto;display:flex;gap:4px;">${buyBadge}${hBadge}${pBadge}${jBadge}</div>
+          ${imageUrl !== "#" ? `<a href="${imageUrl}" target="_blank" rel="noopener" style="color:#84cc16;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;" title="${imageId}">${imageId || "(missing)"}</a>` : `<span style="color:#cbd5e1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;" title="${imageId}">${imageId || "(missing)"}</span>`}
         </div>
-        <div style="font-size:11px;color:#6b7280;">${hardenedViews > 0 ? 'hardened + pixel' : 'pixel only'}</div>
+        <div style="font-size:11px;color:#6b7280;">${hasPixelSignal && hasJsSignal ? 'blended pixel + js' : hasJsSignal ? 'js only' : 'pixel only'}</div>
       </div>
       <div style="display:flex;align-items:center;gap:6px;min-width:0;overflow:hidden;">
         <span style="font-size:14px;flex-shrink:0;">\u{1F4C1}</span>
@@ -5467,7 +5893,7 @@ function renderDashboard({
     </div>`;
   }).join("")}
       </div>
-      ` : `<div style="color:#aaa;font-size:13px;">No pixel per-image data for this period.</div>`}
+      ` : `<div style="color:#aaa;font-size:13px;">No image-view data for this period.</div>`}
     </div>
   </div>
 
@@ -5908,6 +6334,23 @@ function renderDashboard({
           <button type="button" id="pixelSortAlpha" class="mini-btn" onclick="setPixelEventSort('alpha')" title="Sort alphabetically ascending">A-Z</button>
         </div>
       </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; margin:8px 0 10px;">
+        <div class="metric-card" style="padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:#f8fafc;">
+          <div style="font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#64748b;">Gallery Landing Impressions</div>
+          <div style="font-size:20px; font-weight:700; line-height:1.2; color:#0f172a;">${spGalleryLandingViewV1Hits}</div>
+          <div style="font-size:12px; color:#475569;">source: gallery_landing_view_pixel_v1</div>
+        </div>
+        <div class="metric-card" style="padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:#f0fdf4;">
+          <div style="font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#166534;">Gallery Entry Clicks</div>
+          <div style="font-size:20px; font-weight:700; line-height:1.2; color:#14532d;">${spGalleryEntryClicksV1Hits}</div>
+          <div style="font-size:12px; color:#166534;">hero + preview + explore</div>
+        </div>
+        <div class="metric-card" style="padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:#fff7ed;">
+          <div style="font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#9a3412;">Landing to Click Rate</div>
+          <div style="font-size:20px; font-weight:700; line-height:1.2; color:#7c2d12;">${fmt2(spGalleryLandingToEntryClickRate)}%</div>
+          <div style="font-size:12px; color:#9a3412;">clicks / landing impressions</div>
+        </div>
+      </div>
       <div id="pixelEventList" data-sort-mode="count" data-sort-direction="desc" style="padding-right: 6px;">
         <div class="bar-row" data-label="Zoom (total)" data-count="${spZoomV1Hits}">
           <span class="bar-label" title="Zoom (total)">Zoom (total)</span>
@@ -5999,6 +6442,41 @@ function renderDashboard({
             <div class="bar" style="width: ${spPixelEventMax > 0 ? (spGalleryExploreClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #10b981 0%, #065f46 100%);"></div>
           </div>
           <span class="bar-value">${spGalleryExploreClickV1Hits}</span>
+        </div>
+        <div class="bar-row" data-label="Home Lore Collection Click (total)" data-count="${spHomeLoreLegacyCollectionClickV1Hits}">
+          <span class="bar-label" title="Home Lore Collection Click (total)">Home Lore Collection Click (total)</span>
+          <div class="bar-container">
+            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spHomeLoreLegacyCollectionClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #b45309 0%, #7c2d12 100%);"></div>
+          </div>
+          <span class="bar-value">${spHomeLoreLegacyCollectionClickV1Hits}</span>
+        </div>
+        <div class="bar-row" data-label="Home Lore Image Click (total)" data-count="${spHomeLoreLegacyImageClickV1Hits}">
+          <span class="bar-label" title="Home Lore Image Click (total)">Home Lore Image Click (total)</span>
+          <div class="bar-container">
+            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spHomeLoreLegacyImageClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #c2410c 0%, #7c2d12 100%);"></div>
+          </div>
+          <span class="bar-value">${spHomeLoreLegacyImageClickV1Hits}</span>
+        </div>
+        <div class="bar-row" data-label="Home Lore CTA Click (total)" data-count="${spHomeLoreLegacyCtaClickV1Hits}">
+          <span class="bar-label" title="Home Lore CTA Click (total)">Home Lore CTA Click (total)</span>
+          <div class="bar-container">
+            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spHomeLoreLegacyCtaClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #92400e 0%, #78350f 100%);"></div>
+          </div>
+          <span class="bar-value">${spHomeLoreLegacyCtaClickV1Hits}</span>
+        </div>
+        <div class="bar-row" data-label="Home Lore Audio Click (total)" data-count="${spHomeLoreLegacyAudioClickV1Hits}">
+          <span class="bar-label" title="Home Lore Audio Click (total)">Home Lore Audio Click (total)</span>
+          <div class="bar-container">
+            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spHomeLoreLegacyAudioClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);"></div>
+          </div>
+          <span class="bar-value">${spHomeLoreLegacyAudioClickV1Hits}</span>
+        </div>
+        <div class="bar-row" data-label="Theme Lore Audio Click (total)" data-count="${spThemeLoreLegacyAudioClickV1Hits}">
+          <span class="bar-label" title="Theme Lore Audio Click (total)">Theme Lore Audio Click (total)</span>
+          <div class="bar-container">
+            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spThemeLoreLegacyAudioClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);"></div>
+          </div>
+          <span class="bar-value">${spThemeLoreLegacyAudioClickV1Hits}</span>
         </div>
         <div class="bar-row" data-label="Gallery Landing View (total)" data-count="${spGalleryLandingViewV1Hits}">
           <span class="bar-label" title="Gallery Landing View (total)">Gallery Landing View (total)</span>
@@ -6141,7 +6619,7 @@ function renderDashboard({
     <div class="section k4-split-panel" style="order: 3;">
       <div class="section-header">
         <h3>\u{1F5FA}\uFE0F Site Geography</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Geography for non-gallery, non-image page browsing (excludes gallery landing pages and <code>/i-...</code> image pages), grouped by location.</div></span>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Geography for non-image browsing (excludes <code>/i-...</code> image traffic). Gallery and other non-image pages are included.</div></span>
       </div>
       ${(() => {
     const countryColors = {
@@ -6244,11 +6722,11 @@ function renderDashboard({
   })()}
     </div>
 
-    <!-- Image Geography (JS) -->
+    <!-- Image Geography (Master Report) -->
     <div class="section k4-split-panel" style="order: 4;">
       <div class="section-header">
         <h3>\u{1F3A8} Image Geography</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Locations of visitors who interacted with images â€” derived from both pixel activity (state/action pixels on i-* targets) and JS image events (chapter_view, xl_zoom from verified humans).</div></span>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Tabulated directly from the Master Image Viewing Report rows (P + J + H), including aggregated per-image location labels.</div></span>
       </div>
       ${(() => {
     const countryColors = {
@@ -6330,13 +6808,53 @@ function renderDashboard({
     }
     __name(renderGeoRows, "renderGeoRows");
     __name2(renderGeoRows, "renderGeoRows");
-    const artGeo = (geo || []).filter((g) => g.art_viewers > 0).map((g) => ({
-      label: [g.city, g.region, g.country].filter(Boolean).join(", "),
-      city: g.city,
-      region: g.region,
-      country: g.country,
-      art_viewers: g.art_viewers || 0
-    }));
+    const parseLocationLabel = /* @__PURE__ */ __name2((label) => {
+      const parts = String(label || "").split(",").map((p) => p.trim()).filter(Boolean);
+      if (parts.length >= 3) {
+        return {
+          city: parts[0],
+          region: parts.slice(1, -1).join(", "),
+          country: parts[parts.length - 1]
+        };
+      }
+      if (parts.length === 2) {
+        return { city: "", region: parts[0], country: parts[1] };
+      }
+      if (parts.length === 1) {
+        return { city: "", region: "", country: parts[0] };
+      }
+      return { city: "", region: "", country: "" };
+    }, "parseLocationLabel");
+    const artGeo = [];
+    (masterImageRows || []).forEach((row) => {
+      const weight = Math.max(1, Number(row?.viewers || row?.sessions || 0));
+      const labelsRaw = String(row?.location_labels || "").trim();
+      const labels = labelsRaw ? labelsRaw.split(" • ").map((s) => s.trim()).filter(Boolean) : [];
+      if (labels.length > 0) {
+        labels.forEach((label) => {
+          const parsed = parseLocationLabel(label);
+          artGeo.push({
+            label,
+            city: parsed.city,
+            region: parsed.region,
+            country: parsed.country,
+            art_viewers: weight
+          });
+        });
+        return;
+      }
+      const city = String(row?.city || "").trim();
+      const region = String(row?.region || "").trim();
+      const country = String(row?.country || "").trim();
+      const label = [city, region, country].filter(Boolean).join(", ") || "Unknown";
+      artGeo.push({
+        label,
+        city,
+        region,
+        country,
+        art_viewers: weight
+      });
+    });
     const mergedGeo = {};
     artGeo.forEach((g) => {
       if (!mergedGeo[g.label]) mergedGeo[g.label] = { ...g };
@@ -6347,7 +6865,7 @@ function renderDashboard({
     if (artRows.length > 0) {
       return '<div class="k4-split-scroll">' + renderGeoRows(artRows, artMax, countryColor) + "</div>";
     }
-    return '<p style="color:#666;">No art viewer data yet</p>';
+    return '<p style="color:#666;">No image geography data yet</p>';
   })()}
     </div>
 
@@ -6610,8 +7128,8 @@ function renderDashboard({
 
     <div class="section" style="order: 2;">
       <div class="section-header">
-        <h3>Top 25 Entry Pages (Pixel-First Sessions)</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Ranks first-hit session entries by pixel-backed session counts when available, then falls back to JS session starts where pixels are missing. J means JS-only fallback. H means a qualified image confirmation.</div></span>
+        <h3>Top 25 Entry Pages (JS First-Touch)</h3>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Ranks first-hit entries from JS page_view sequences (human visitor keyed). This panel is JS-first and does not currently blend pixel entry sessions.</div></span>
       </div>
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
       <div style="max-height: 320px; overflow: auto; padding-right: 0; padding-left: 0;">
@@ -6736,15 +7254,23 @@ function renderDashboard({
   <div class="bot-intel-toolbar" style="display:flex; align-items:center; justify-content:space-between; gap: 12px; flex-wrap: wrap; color: #888; margin: -10px 0 12px 0; font-size: 12px;">
     <div class="bot-intel-toolbar-copy">
       Risk accumulates over time. \u{1F7E0} Level 3 = observe. \u{1F7E3} Level 4 = friction-managed extraction. \u{1F7E4} Level 5 = block recommended (\u226510 429s/day OR sustained high-rate pulls).
+      <span style="margin-left:8px;color:${botIntelEnabled ? "#86efac" : "#fca5a5"};">${botIntelEnabled ? "System: ON" : "System: OFF (test mode)"}</span>
+      <span style="margin-left:8px;color:${botBlockEnabled ? "#86efac" : "#fca5a5"};">${botBlockEnabled ? "Block: ON" : "Block: OFF"}</span>
+      <span style="margin-left:8px;color:${botFrictionEnabled ? "#86efac" : "#fca5a5"};">${botFrictionEnabled ? "Friction: ON" : "Friction: OFF"}</span>
     </div>
     <div class="bot-intel-actions" style="display:flex; align-items:center; gap: 10px; margin-left: auto;">
-      <div class="bot-intel-summary-pill" style="color:#666; font-size: 11px; padding: 4px 8px; border: 1px solid #333; border-radius: 999px; background: #1f1f1f; white-space: nowrap;">
+      <div class="bot-intel-summary-pill" style="color:${frictionPillMuted ? "#9ca3af" : "#666"}; font-size: 11px; padding: 4px 8px; border: 1px solid ${frictionPillMuted ? "#4b5563" : "#333"}; border-radius: 999px; background: ${frictionPillMuted ? "#111827" : "#1f1f1f"}; white-space: nowrap; opacity:${frictionPillMuted ? "0.7" : "1"};">
         Protected (selected period): \u{1F9CA} ${artViewsSummary?.harvester_friction_events || 0} slowed \xB7 \u23F3 ${artViewsSummary?.harvester_friction_delay_events || 0} delayed \xB7 \u26D4 ${artViewsSummary?.harvester_friction_429_events || 0} 429
       </div>
-      <button onclick="blockAllLevel5()" style="background:#92400e; color:#fde68a; border:1px solid #b45309; padding:3px 8px; border-radius:4px; cursor:pointer; font-size:11px; white-space: nowrap;">\u{1F7E4} Block All Level 5</button>
-      <button onclick="refreshBotIntelligence()" style="background: #333; color: #888; border: 1px solid #555; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 11px; white-space: nowrap;">\u{1F504} Refresh</button>
+      <button onclick="toggleBotIntelligence()" style="background:${botIntelEnabled ? "#065f46" : "#7f1d1d"}; color:${botIntelEnabled ? "#d1fae5" : "#fecaca"}; border:1px solid ${botIntelEnabled ? "#047857" : "#b91c1c"}; padding:3px 8px; border-radius:4px; cursor:pointer; font-size:11px; white-space: nowrap;">${botIntelEnabled ? "Turn All Off" : "Turn All On"}</button>
+      <button onclick="toggleBotBlock()" style="background:${botBlockEnabled ? "#065f46" : "#7f1d1d"}; color:${botBlockEnabled ? "#d1fae5" : "#fecaca"}; border:1px solid ${botBlockEnabled ? "#047857" : "#b91c1c"}; padding:3px 8px; border-radius:4px; cursor:pointer; font-size:11px; white-space: nowrap;">${botBlockEnabled ? "Turn Block Off" : "Turn Block On"}</button>
+      <button onclick="toggleBotFriction()" style="background:${botFrictionEnabled ? "#065f46" : "#7f1d1d"}; color:${botFrictionEnabled ? "#d1fae5" : "#fecaca"}; border:1px solid ${botFrictionEnabled ? "#047857" : "#b91c1c"}; padding:3px 8px; border-radius:4px; cursor:pointer; font-size:11px; white-space: nowrap;">${botFrictionEnabled ? "Turn Friction Off" : "Turn Friction On"}</button>
+      <button onclick="blockAllLevel5()" ${(botIntelEnabled && botBlockEnabled) ? "" : "disabled"} style="background:#92400e; color:#fde68a; border:1px solid #b45309; padding:3px 8px; border-radius:4px; cursor:${(botIntelEnabled && botBlockEnabled) ? "pointer" : "not-allowed"}; opacity:${(botIntelEnabled && botBlockEnabled) ? "1" : "0.45"}; font-size:11px; white-space: nowrap;">\u{1F7E4} Block All Level 5</button>
+      <button onclick="refreshBotIntelligence()" ${botIntelEnabled ? "" : "disabled"} style="background: #333; color: #888; border: 1px solid #555; padding: 3px 8px; border-radius: 4px; cursor: ${botIntelEnabled ? "pointer" : "not-allowed"}; opacity:${botIntelEnabled ? "1" : "0.45"}; font-size: 11px; white-space: nowrap;">\u{1F504} Refresh</button>
     </div>
   </div>
+  ${botIntelEnabled ? "" : `<div style="margin:0 0 12px 0;padding:8px 10px;border:1px solid #7f1d1d;border-radius:6px;background:#450a0a33;color:#fecaca;font-size:12px;">Bot Intelligence is OFF. Image-proxy bot blocking/friction and dashboard bot actions are disabled for search-impact testing.</div>`}
+  ${(botIntelEnabled && (!botBlockEnabled || !botFrictionEnabled)) ? `<div style="margin:0 0 12px 0;padding:8px 10px;border:1px solid #155e75;border-radius:6px;background:#08334433;color:#a5f3fc;font-size:12px;">Selective test mode active: Block is ${botBlockEnabled ? "ON" : "OFF"}, Friction is ${botFrictionEnabled ? "ON" : "OFF"}.</div>` : ""}
   
   <!-- Risk Summary Pills -->
   <div class="pulse" style="margin-bottom: 15px;">
@@ -6763,7 +7289,7 @@ function renderDashboard({
       <span class="label" style="color: #fed7aa;">High Risk <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fed7aa;">i</span></span>
       <div class="tooltip"><strong>Risk score 5-7.</strong> High-confidence scraper. Monitoring only \u2014 no automatic enforcement. Review and manually block if needed. Triggers: no referrer + high volume, no branching, datacenter IP, multi-day presence.</div>
     </div>
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);">
+    <div class="pulse-stat" style="background: ${frictionPillMuted ? "linear-gradient(135deg, #4b5563 0%, #374151 100%)" : "linear-gradient(135deg, #d946ef 0%, #a855f7 100%)"}; opacity:${frictionPillMuted ? "0.7" : "1"};">
       <span class="value" style="color: #fff;">\u{1F7E3} ${(() => {
     const suspects = (botIntelligence?.suspects || []).filter(
       (s2) => s2 && s2.status !== "blocked"
@@ -6777,7 +7303,7 @@ function renderDashboard({
       (botIntelligence?.stats?.risk4 || 0) - blockRecommendedCount
     );
   })()}</span>
-      <span class="label" style="color: #f5d0fe;">Friction-Managed <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #f5d0fe;">i</span></span>
+      <span class="label" style="color: ${frictionPillMuted ? "#d1d5db" : "#f5d0fe"};">Friction-Managed <span class="info-icon" style="background: rgba(255,255,255,0.2); color: ${frictionPillMuted ? "#d1d5db" : "#f5d0fe"};">i</span></span>
       <div class="tooltip"><strong>Friction-managed IPs (cumulative, Level 4).</strong> Total count of unique IPs classified as automated extractors over time. These clients are automatically slowed (650-1600ms delay) or rate-limited (429 at \u226540 unique images/min) by the image proxy. See <em>Protected (selected period)</em> for recent friction event volume.</div>
     </div>
     ${(() => {
@@ -6785,15 +7311,15 @@ function renderDashboard({
       (s2) => s2 && s2.status !== "blocked"
     );
     const count = suspects.filter(isLevel5BlockRecommended).length;
-    return `<div class="pulse-stat" style="background: linear-gradient(135deg, #78350f 0%, #92400e 100%);">
+    return `<div class="pulse-stat" style="background: ${blockPillMuted ? "linear-gradient(135deg, #4b5563 0%, #374151 100%)" : "linear-gradient(135deg, #78350f 0%, #92400e 100%)"}; opacity:${blockPillMuted ? "0.7" : "1"};">
         <span class="value" style="color: #fff;">\u{1F7E4} ${count}</span>
-        <span class="label" style="color: #fde68a;">Block Recommended <span class="info-icon" style="background: rgba(255,255,255,0.16); color: #fde68a;">i</span></span>
+        <span class="label" style="color: ${blockPillMuted ? "#d1d5db" : "#fde68a"};">Block Recommended <span class="info-icon" style="background: rgba(255,255,255,0.16); color: ${blockPillMuted ? "#d1d5db" : "#fde68a"};">i</span></span>
         <div class="tooltip"><strong>Level 5 governance signal (UI-only).</strong> K4 Bad Actor Day: scraper persists after friction and generates <strong>\u226510 429s/day</strong>, sustained high-rate image pulls (\u226520 unique/min), delay bursts (\u226540 in 10min), or <strong>\u2265200 requests over 3+ days</strong> at Level 4. Consider <em>Force Block</em> if clearly non-beneficial traffic.</div>
       </div>`;
   })()}
-    <div class="pulse-stat" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
+    <div class="pulse-stat" style="background: ${blockPillMuted ? "linear-gradient(135deg, #4b5563 0%, #374151 100%)" : "linear-gradient(135deg, #ef4444 0%, #dc2626 100%)"}; opacity:${blockPillMuted ? "0.7" : "1"};">
       <span class="value" style="color: #fff;"><span style="text-shadow: 0 0 2px #000, 0 0 4px #000;">\u2296</span> ${botIntelligence?.blocked?.filter((b) => Number(b.is_active) === 1)?.length || 0}</span>
-      <span class="label" style="color: #fecaca;">Blocked <span class="info-icon" style="background: rgba(255,255,255,0.2); color: #fecaca;">i</span></span>
+      <span class="label" style="color: ${blockPillMuted ? "#d1d5db" : "#fecaca"};">Blocked <span class="info-icon" style="background: rgba(255,255,255,0.2); color: ${blockPillMuted ? "#d1d5db" : "#fecaca"};">i</span></span>
       <div class="tooltip">Manually blocked IPs. Returns 403 Forbidden. Can unblock from Blocked IPs section below.</div>
     </div>
   </div>
@@ -6938,7 +7464,7 @@ function renderDashboard({
     };
     const status = statusBadges[protectionStatus] || statusBadges.observation;
     const statusHtml = '<span title="' + protectionStatus + '" style="display:inline-flex;align-items:center;gap:6px;background:' + status.bg + ";color:" + status.color + ';padding:2px 6px;border-radius:999px;font-size:10px;">' + status.text + "</span>";
-    const actionHtml = isBlocked ? '<span style="color: #666;">Blocked</span>' : isBlockRecommended ? `<button onclick="blockIP('` + s2.ip_hash + `')" title="Block recommended: \u226510 429s/day or sustained high-rate pulls" style="background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Force Block</button>` : `<button onclick="blockIP('` + s2.ip_hash + `')" title="Force a manual block (usually unnecessary; friction already mitigates most automation)" style="background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Force Block</button>`;
+    const actionHtml = (!botIntelEnabled || !botBlockEnabled) ? '<span style="color:#666;">Disabled</span>' : isBlocked ? '<span style="color: #666;">Blocked</span>' : isBlockRecommended ? `<button onclick="blockIP('` + s2.ip_hash + `')" title="Block recommended: \u226510 429s/day or sustained high-rate pulls" style="background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Force Block</button>` : `<button onclick="blockIP('` + s2.ip_hash + `')" title="Force a manual block (usually unnecessary; friction already mitigates most automation)" style="background: #dc2626; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Force Block</button>`;
     return '<tr data-level5="' + (isBlockRecommended ? "1" : "0") + '" data-iphash="' + s2.ip_hash + '" style="border-bottom: 1px solid #333; ' + rowStyle + '"><td style="padding: 6px 4px;"><span style="background: ' + riskColor + "22; color: " + riskColor + '; padding: 2px 6px; border-radius: 8px; font-weight: bold;">' + riskIcon + " " + displayRiskLevel + '</span></td><td style="padding: 6px 4px;">' + statusHtml + '</td><td style="padding: 6px 4px; font-family: monospace; font-size: 10px;">' + s2.ip_hash + '<span style="color: #666; margin-left: 4px;">' + (s2.country || "") + '</span></td><td style="padding: 6px 4px; text-align: right; font-weight: bold; color: ' + reqColor + ';">' + s2.total_requests + '</td><td style="padding: 6px 4px; color: #888; font-size: 10px;" title="' + rules.join(", ") + '">' + rulesShort + (rules.length > 2 ? "..." : "") + '</td><td style="padding: 6px 4px; text-align: center;"><span style="color: ' + daysColor + ';">' + s2.days_seen + '</span></td><td style="padding: 6px 4px; text-align: center;">' + actionHtml + "</td></tr>";
   }).join("")}
         </table>
@@ -6966,7 +7492,7 @@ function renderDashboard({
     const statusBg = isActive ? "#dc262622" : "#37415122";
     const statusColor = isActive ? "#ef4444" : "#6b7280";
     const statusText = isActive ? "\u26D4 Active" : "\u2713 Unblocked";
-    const actionHtml = isActive ? `<button onclick="unblockIP('` + b.ip_hash + `')" style="background: #374151; color: #9ca3af; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Unblock</button>` : '<span style="color: #666;">\u2014</span>';
+    const actionHtml = (!botIntelEnabled || !botBlockEnabled) ? '<span style="color:#666;">Disabled</span>' : isActive ? `<button onclick="unblockIP('` + b.ip_hash + `')" style="background: #374151; color: #9ca3af; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; font-size: 10px;">Unblock</button>` : '<span style="color: #666;">\u2014</span>';
     return '<tr style="border-bottom: 1px solid #333; ' + rowStyle + '"><td style="padding: 6px 4px;"><span style="background: ' + statusBg + "; color: " + statusColor + '; padding: 2px 6px; border-radius: 8px; font-size: 10px;">' + statusText + '</span></td><td style="padding: 6px 4px; font-family: monospace; font-size: 10px;">' + b.ip_hash + '</td><td style="padding: 6px 4px; text-align: right; color: #888;">' + (b.total_requests || "-") + '</td><td style="padding: 6px 4px; color: #666; font-size: 10px;">' + blockedDate + '</td><td style="padding: 6px 4px; text-align: center;">' + actionHtml + "</td></tr>";
   }).join("")}
         </table>
@@ -7012,12 +7538,84 @@ function renderDashboard({
     // fetch() doesn't reliably forward cached Basic Auth credentials,
     // so we pass the header explicitly on all admin POST calls.
     const _k4auth = '${(authHeader || "").replace(/'/g, "\\'")}';
+    let _botIntelEnabled = ${botIntelEnabled ? "true" : "false"};
+    let _botBlockEnabled = ${botBlockEnabled ? "true" : "false"};
+    let _botFrictionEnabled = ${botFrictionEnabled ? "true" : "false"};
 
     function k4AdminFetch(url, opts) {
       opts = opts || {};
       opts.headers = Object.assign({ 'Authorization': _k4auth }, opts.headers || {});
       opts.credentials = 'include';
       return fetch(url, opts);
+    }
+
+    async function setRuntimeFlag(flag, enabled) {
+      const res = await k4AdminFetch('/__k4stats/toggle-bot-intel', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ flag, enabled })
+      });
+      return { res, data: await res.json().catch(() => ({})) };
+    }
+
+    async function toggleBotIntelligence() {
+      const nextEnabled = !_botIntelEnabled;
+      const action = nextEnabled ? 'ENABLE' : 'DISABLE';
+      if (!confirm(action + ' Bot Intelligence system?\\n\\nThis toggles bot blocking/friction behavior for testing.')) return;
+      try {
+        document.body.classList.add('k4-loading');
+        const { res, data } = await setRuntimeFlag('bot_intel_enabled', nextEnabled);
+        if (res.ok) {
+          alert('Bot Intelligence is now ' + (data.enabled ? 'ON' : 'OFF'));
+          location.reload();
+          return;
+        }
+        alert('Error: ' + (data.error || ('HTTP ' + res.status)));
+      } catch (e) {
+        alert('Error: ' + e.message);
+      } finally {
+        document.body.classList.remove('k4-loading');
+      }
+    }
+
+    async function toggleBotBlock() {
+      const nextEnabled = !_botBlockEnabled;
+      const action = nextEnabled ? 'ENABLE' : 'DISABLE';
+      if (!confirm(action + ' manual/forced blocking?')) return;
+      try {
+        document.body.classList.add('k4-loading');
+        const { res, data } = await setRuntimeFlag('bot_block_enabled', nextEnabled);
+        if (res.ok) {
+          alert('Block is now ' + (data.enabled ? 'ON' : 'OFF'));
+          location.reload();
+          return;
+        }
+        alert('Error: ' + (data.error || ('HTTP ' + res.status)));
+      } catch (e) {
+        alert('Error: ' + e.message);
+      } finally {
+        document.body.classList.remove('k4-loading');
+      }
+    }
+
+    async function toggleBotFriction() {
+      const nextEnabled = !_botFrictionEnabled;
+      const action = nextEnabled ? 'ENABLE' : 'DISABLE';
+      if (!confirm(action + ' automated friction delays/429s?')) return;
+      try {
+        document.body.classList.add('k4-loading');
+        const { res, data } = await setRuntimeFlag('bot_friction_enabled', nextEnabled);
+        if (res.ok) {
+          alert('Friction is now ' + (data.enabled ? 'ON' : 'OFF'));
+          location.reload();
+          return;
+        }
+        alert('Error: ' + (data.error || ('HTTP ' + res.status)));
+      } catch (e) {
+        alert('Error: ' + e.message);
+      } finally {
+        document.body.classList.remove('k4-loading');
+      }
     }
 
     // Bot Intelligence functions
@@ -7456,6 +8054,12 @@ async function handleDashboardRequest(env, filters) {
     }
   ));
 
+  const [botIntelEnabled, botBlockEnabled, botFrictionEnabled] = await Promise.all([
+    getBotIntelEnabled(env),
+    getBotBlockEnabled(env),
+    getBotFrictionEnabled(env)
+  ]);
+
   // â”€â”€ Parallel batch: All independent queries â”€â”€
   const [
     eventBreakdownResult,
@@ -7475,7 +8079,8 @@ async function handleDashboardRequest(env, filters) {
     periodTotals,
     statePixelTestRoaring20s,
     topGalleryLandingPages,
-    browserViewsSummary
+    browserViewsSummary,
+    imageIdMap
   ] = await Promise.all([
     _tm('eventBreak', () => getEventBreakdown(env, { dateClause, galleryClause, ipClause, botClause, chardonClause })),
     _tm('galleries', () => getGalleryPerformance(env, { dateClause, ipClause, botClause, chardonClause })),
@@ -7484,23 +8089,24 @@ async function handleDashboardRequest(env, filters) {
     _tm('trend', () => getDailyTrend(env, { rangeDateClause, galleryClause, ipClause, botClause, chardonClause })),
     _tm('sessions', () => getSessionMetrics(env, { dateClause, galleryClause, ipClause, botClause, chardonClause })),
     _tm('topPages', () => getTopPages(env, { dateClause, ipClause, botClause, chardonClause })),
-    _tm('topImages', () => getTopImages(env, { dateClause, ipClause, botClause, chardonClause })),
+    _tm('topImages', () => getTopImages(env, { dateClause, galleryClause, ipClause, botClause, chardonClause })),
     _tm('engagement', () => getEngagementDepth(env, { dateClause, ipClause, botClause, chardonClause })),
     _tm('entry', () => getEntryAnalysis(env, { dateClause, ipClause, botClause, chardonClause })),
     _tm('exit', () => getExitAnalysis(env, { dateClause, ipClause, botClause, chardonClause })),
     _tm('edge', () => getEdgeEvents(env, { dateClause, yesterday, days })),
     _tm('artViews', () => getArtViews(env, { dateClause, ipClause, botClause, chardonClause, artIpClause, baseDateClause, hideBotsPredicate, hideBots, selectedDate })),
-    _tm('botIntel', () => getBotIntelligence(env)),
+    _tm('botIntel', () => botIntelEnabled ? getBotIntelligence(env) : Promise.resolve(emptyBotIntelligence())),
     _tm('periodTot', () => getPeriodTotals(env, { dateClause: rangeDateClause, botClause, chardonClause })),
     _tm('statePix', () => getStatePixelTestRoaring20s(env, { dateClause })),
     _tm('gallLand', () => getTopGalleryLandingPages(env, { dateClause })),
-    _tm('browser', () => getBrowserViewsSummary(env, { dateClause, ipClause, botClause, chardonClause }))
+    _tm('browser', () => getBrowserViewsSummary(env, { dateClause, ipClause, botClause, chardonClause })),
+    _tm('imageMap', () => getImageIdMapCached())
   ]);
 
   // Destructure parallel results
   const { events } = eventBreakdownResult;
   const { devices, bounceRate, avgDurationSecs, avgDurationFormatted, peakHours, deviceEngagement } = sessionMetricsResult;
-  const { images, uniqueImagesViewed, totalImageSessions, totalImageViews } = imagesResult;
+  const { images, uniqueImagesViewed, totalImageSessions, totalImageViews, imageSignalBreakdown } = imagesResult;
   const { themesClicked, cowboyJumps, topDepthSessions, minEngagement, maxEngagement, avgDepthScore, deepSessionPct, deepSessions, totalSessions, botSessions, botPct } = engagementResult;
   const { entryPages, imagePageViewsFromEvents, imageEntrySessionsFromEvents, entryRefCounts } = entryAnalysisResult;
   const { exitPages, exitSummary, exitByCategory } = exitResult;
@@ -7525,6 +8131,7 @@ async function handleDashboardRequest(env, filters) {
     uniqueImagesViewed,
     totalImageSessions,
     totalImageViews,
+    imageSignalBreakdown,
     themesClicked,
     cowboyJumps,
     topDepthSessions,
@@ -7558,10 +8165,14 @@ async function handleDashboardRequest(env, filters) {
     viewerDepth,
     suppressionStats,
     botIntelligence,
+    botIntelEnabled,
+    botBlockEnabled,
+    botFrictionEnabled,
     periodTotals,
     statePixelTestRoaring20s,
     topGalleryLandingPages,
-    browserViewsSummary
+    browserViewsSummary,
+    imageIdMap
   };
   const dashboardData = buildDashboardData(queryResults, {
     days,
@@ -9131,6 +9742,14 @@ __name(handleExportCSV, "handleExportCSV");
 __name2(handleExportCSV, "handleExportCSV");
 async function handleBlockIP(request, env) {
   try {
+    const enabled = await getBotIntelEnabled(env);
+    const blockEnabled = await getBotBlockEnabled(env);
+    if (!enabled || !blockEnabled) {
+      return new Response(JSON.stringify({ error: "bot_intel_disabled" }), {
+        status: 409,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
     const { ip_hash, reason } = await request.json();
     const normalizedIpHash = normalizeIpHash(ip_hash);
     if (!normalizedIpHash) {
@@ -9191,6 +9810,14 @@ __name(handleBlockIP, "handleBlockIP");
 __name2(handleBlockIP, "handleBlockIP");
 async function handleBulkBlockIP(request, env) {
   try {
+    const enabled = await getBotIntelEnabled(env);
+    const blockEnabled = await getBotBlockEnabled(env);
+    if (!enabled || !blockEnabled) {
+      return new Response(JSON.stringify({ error: "bot_intel_disabled" }), {
+        status: 409,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
     const { ip_hashes, reason } = await request.json();
     const hashes = Array.isArray(ip_hashes) ? ip_hashes.map((v) => normalizeIpHash(v)).filter(Boolean) : [];
     if (hashes.length === 0) {
@@ -9251,6 +9878,14 @@ __name(handleBulkBlockIP, "handleBulkBlockIP");
 __name2(handleBulkBlockIP, "handleBulkBlockIP");
 async function handleUnblockIP(request, env) {
   try {
+    const enabled = await getBotIntelEnabled(env);
+    const blockEnabled = await getBotBlockEnabled(env);
+    if (!enabled || !blockEnabled) {
+      return new Response(JSON.stringify({ error: "bot_intel_disabled" }), {
+        status: 409,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
     const { ip_hash } = await request.json();
     if (!ip_hash) {
       return new Response(JSON.stringify({ error: "ip_hash required" }), {
@@ -9287,6 +9922,13 @@ __name(handleUnblockIP, "handleUnblockIP");
 __name2(handleUnblockIP, "handleUnblockIP");
 async function handleRefreshBots(request, env) {
   try {
+    const enabled = await getBotIntelEnabled(env);
+    if (!enabled) {
+      return new Response(JSON.stringify({ success: true, updated: 0, skipped: true, reason: "bot_intel_disabled" }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
     const count = await updateBotIntelligence(env);
     return new Response(JSON.stringify({ success: true, updated: count }), {
       status: 200,
@@ -9302,6 +9944,63 @@ async function handleRefreshBots(request, env) {
 }
 __name(handleRefreshBots, "handleRefreshBots");
 __name2(handleRefreshBots, "handleRefreshBots");
+async function handleToggleBotIntelligence(request, env) {
+  try {
+    const body = await request.json().catch(() => ({}));
+    const flag = String(body?.flag || BOT_INTEL_FLAG_KEY);
+    if (typeof body?.enabled !== "boolean") {
+      return new Response(JSON.stringify({ error: "enabled boolean required" }), {
+        status: 400,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
+    const allowedFlags = /* @__PURE__ */ new Set([BOT_INTEL_FLAG_KEY, BOT_BLOCK_FLAG_KEY, BOT_FRICTION_FLAG_KEY]);
+    if (!allowedFlags.has(flag)) {
+      return new Response(JSON.stringify({ error: "invalid_flag" }), {
+        status: 400,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
+    if (flag === BOT_INTEL_FLAG_KEY) {
+      // Master switch controls both sub-switches for predictable test states.
+      await setBotIntelEnabled(env, body.enabled);
+      await setRuntimeFlagEnabled(env, BOT_BLOCK_FLAG_KEY, body.enabled);
+      await setRuntimeFlagEnabled(env, BOT_FRICTION_FLAG_KEY, body.enabled);
+    } else {
+      await setRuntimeFlagEnabled(env, flag, body.enabled);
+      // Keep master in sync with sub-switches: if both are OFF, master is OFF.
+      // If either sub-switch is ON, master is ON.
+      const blockEnabled = await getBotBlockEnabled(env);
+      const frictionEnabled = await getBotFrictionEnabled(env);
+      await setBotIntelEnabled(env, blockEnabled || frictionEnabled);
+    }
+    const [botIntelEnabled, botBlockEnabled, botFrictionEnabled] = await Promise.all([
+      getBotIntelEnabled(env),
+      getBotBlockEnabled(env),
+      getBotFrictionEnabled(env)
+    ]);
+    return new Response(JSON.stringify({
+      success: true,
+      flag,
+      enabled: body.enabled,
+      flags: {
+        bot_intel_enabled: botIntelEnabled,
+        bot_block_enabled: botBlockEnabled,
+        bot_friction_enabled: botFrictionEnabled
+      }
+    }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" }
+    });
+  } catch (e) {
+    return new Response(JSON.stringify({ error: e.message || "toggle_failed" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" }
+    });
+  }
+}
+__name(handleToggleBotIntelligence, "handleToggleBotIntelligence");
+__name2(handleToggleBotIntelligence, "handleToggleBotIntelligence");
 async function handleRecentEvents(request, env) {
   if (!checkAuth(request, env)) {
     return new Response("Unauthorized", {
@@ -9465,6 +10164,9 @@ var worker_default = {
     }
     if (url.pathname === "/__k4stats/refresh-bots" && request.method === "POST") {
       return handleRefreshBots(request, env);
+    }
+    if (url.pathname === "/__k4stats/toggle-bot-intel" && request.method === "POST") {
+      return handleToggleBotIntelligence(request, env);
     }
     if (url.pathname === "/__k4stats/recent") {
       return handleRecentEvents(request, env);

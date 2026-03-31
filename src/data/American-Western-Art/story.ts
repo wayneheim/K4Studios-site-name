@@ -15,6 +15,7 @@ export const americanWesternArtStory = [
       "At its core, Western art is about the frontier itself.",
       "The American frontier was not simply a landscape but a meeting point of cultures, economies, and survival. Indigenous nations, settlers, ranchers, soldiers, and travelers all moved through the same vast terrain, often under conditions of extreme uncertainty.",
       "The stories that emerged from that world became the foundation of Western art.",
+      "For the more historically focused branch of that tradition, see <a href='/Western-Frontier-Art'>Western Frontier Art</a>, where the frontier itself becomes the primary subject rather than a stylistic backdrop.",
       "Before the legend came the lives that built it.",
       "Western artists return to those lives again and again, exploring the decisions, conflicts, and quiet moments that formed the frontier experience."
     ]
@@ -24,6 +25,7 @@ export const americanWesternArtStory = [
     paragraphs: [
       "For much of its history Western art was dominated by painting and sculpture.",
       "Over time photography became another medium through which artists interpret the American West.",
+      "For the broader photographic umbrella centered on that larger environment, see <a href='/Fine-Art-Photography-of-the-American-West'>Fine Art Photography of the American West</a>.",
       "Early frontier photographers documented landscapes and expeditions. Over time the camera developed into a creative instrument capable of shaping atmosphere, narrative, and emotional tone.",
       "Today photography occupies a legitimate place within the Western art tradition.",
       "For a story-first branch of that tradition, see <a href=\"/Narrative-Western-Art\">Narrative Western Art</a>. For its present-tense extension, see <a href=\"/Contemporary-Western-Art\">Contemporary Western Art</a>.",
@@ -37,6 +39,7 @@ export const americanWesternArtStory = [
     paragraphs: [
       "One of the defining qualities of strong Western art is its focus on character.",
       "While Western imagery often features dramatic landscapes, horses, and sweeping skies, the most compelling works return attention to the individuals who lived within that world.",
+      "This is where Western art shifts from subject to story.",
       "A rider pausing before a long journey begins.",
       "A ranch hand measuring distance across open country.",
       "A quiet moment of reflection before a decision that cannot be undone.",

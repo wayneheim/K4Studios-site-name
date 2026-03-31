@@ -1,0 +1,297 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/narrative-western-art-vs-traditional";
+const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
+
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
+const headerImage = {
+  id: "i-B7ZSdfs",
+  src: getProxySrc("i-B7ZSdfs", "l"),
+  alt: "Narrative Western portrait suspended between history and implication"
+};
+
+const image1 = {
+  id: "i-ncFcHDM",
+  src: getProxySrc("i-ncFcHDM", "l"),
+  alt: "Cowboy portrait built around implication rather than spectacle"
+};
+const image2 = {
+  id: "i-trZrk2w",
+  src: getProxySrc("i-trZrk2w", "l"),
+  alt: "Night frontier scene where story leads the frame"
+};
+const image3 = {
+  id: "i-7hD9CCh",
+  src: getProxySrc("i-7hD9CCh", "l"),
+  alt: "Quiet portrait carrying emotional consequence beyond the visible moment"
+};
+
+const pageTitle = "Narrative Western Art vs Traditional Western Art | K4 Studios";
+const pageDescription = "Not all Western art carries a story. This guide clarifies the difference between narrative Western art and more traditional Western art shaped primarily by subject or convention.";
+
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImage.id, "l"),
+  getAbsoluteProxySrc(image1.id, "l"),
+  getAbsoluteProxySrc(image2.id, "l"),
+  getAbsoluteProxySrc(image3.id, "l"),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "Narrative Western Art", item: "https://www.k4studios.com/Narrative-Western-Art" },
+    { name: "Narrative Western Art vs Traditional Western Art", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "Narrative Western Art vs Traditional Western Art",
+    description: pageDescription,
+    url: canonicalUrl,
+    image: structuredImageUrls,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-03-30",
+    articleSection: "Narrative Western Art",
+    definedTerm: {
+      name: "Narrative Western Art vs Traditional Western Art",
+      description: pageDescription,
+    },
+    keywords: [
+      "narrative western art vs traditional western art",
+      "narrative western art",
+      "traditional western art",
+      "western art storytelling",
+      "western art comparison"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://www.k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://www.k4studios.com/"
+  }
+});
+
+const meta = {
+  description: pageDescription,
+  keywords: "narrative western art vs traditional western art, narrative western art, traditional western art, western art storytelling",
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterCard: "summary_large_image"
+};
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Narrative Western Art vs Traditional Western Art`;
+---
+
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} meta={meta}>
+  <script type="application/ld+json" set:html={breadcrumbStructuredData} />
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section class="hero-image-wrap">
+      <img src={headerImage.src} alt={headerImage.alt} loading="eager" class="hero-image" />
+    </section>
+
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        Narrative Western Art vs Traditional Western Art
+      </h1>
+      <p style="font-size:1.25rem; color:#666; font-style:italic;">
+        Where subject gives way to consequence
+      </p>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        A distinction for collectors, curators, and viewers trying to name what feels deeper
+      </p>
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+        <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
+          A comparison between Western art that presents the subject and Western art that carries the life inside it
+        </p>
+
+        <p><strong>Narrative Western art</strong> and <strong>traditional Western art</strong> often share the same visible subjects: cowboys, riders, frontier towns, wide land, and the iconography of the American West. What separates them is not the hat, the horse, or the horizon. It is what the image asks the viewer to carry.</p>
+
+        <p>Traditional Western art may honor the subject, preserve the myth, or present the recognizable language of the West with skill and conviction. <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western art</a> goes further. It builds pressure inside the frame until the image suggests a life before the moment, a consequence after it, and a human weight larger than the subject alone.</p>
+
+        <p>In other words, not all Western art tells a story.<br>
+        Some presents the subject.<br>
+        Some carries the weight of a life.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What Traditional Western Art Does Well</h2>
+        </div>
+
+        <p>Traditional Western art preserves a powerful visual inheritance. It gives form to the cowboy, the rider, the open range, the charge, the dust, the silhouette against distance. It keeps the cultural memory of the West alive.</p>
+
+        <p>That work matters. Without it, the Western canon would not exist. Painters like Remington and Russell established a visual language that still shapes how the frontier is imagined.</p>
+
+        <p>But tradition can also settle into recognition. An image may be beautifully made and still stop at presentation rather than implication. The viewer understands what is being shown, but remains outside the experience of it.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What Makes Western Art Narrative</h2>
+        </div>
+
+        <p>Narrative Western art is not defined by action. It is defined by implication.</p>
+
+        <p>The strongest narrative work suggests what happened before the frame and what may come after it. Gesture matters. Posture matters. Silence matters. The image carries more than it explains.</p>
+
+        <p>That is why narrative Western art often feels less like an illustration of the West and more like a threshold into it. The viewer is not left studying the subject from a safe distance. The frame opens enough to be mentally entered.</p>
+
+        <p>This is also where the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a> concept becomes useful. A single still frame can hold the pressure of a larger story when composition, atmosphere, and restraint carry the unseen material around the moment.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Where the Difference Appears</h2>
+        </div>
+
+        <p>Traditional Western art tends to emphasize subject, icon, and established visual language.</p>
+
+        <p>Narrative Western art tends to emphasize:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">A moment under pressure rather than a scene on display</li>
+          <li style="margin-bottom:0.5rem;">Human consequence rather than frontier shorthand</li>
+          <li style="margin-bottom:0.5rem;">Implication rather than full explanation</li>
+          <li style="margin-bottom:0.5rem;">The lived texture beneath the myth</li>
+          <li style="margin-bottom:0.5rem;">An image that lingers because it refuses to finish itself too quickly</li>
+        </ul>
+
+        <div class="section-heading-with-line">
+          <h2>What This Looks Like in Practice</h2>
+        </div>
+
+        <div class="example-images">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Character over icon — a portrait carrying consequence beyond costume
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Night and implication — the frame as hinge, not illustration
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/${image3.id}`}>
+              <img src={image3.src} alt={image3.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Presence rather than archetype — story carried in quiet attention
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>Why the Distinction Matters</h2>
+        </div>
+
+        <p>For collectors, this distinction gives language to a difference they often feel before they can explain. One work presents the familiar. Another keeps opening over time.</p>
+
+        <p>For artists, it clarifies that narrative is not a genre accessory. It is a structural choice. The West does not become narrative because a cowboy appears in the frame. It becomes narrative when the image bears a lived reality larger than the visible subject.</p>
+
+        <p>And for the broader conversation around Western art, it helps protect the difference between décor, tradition, and authored story-driven work.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Explore the Work</h2>
+        </div>
+
+        <p>If you want to see this distinction in practice, begin with the <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline; font-weight:600;">Narrative Western Art</a> page, then step into galleries where the idea is carried by atmosphere, history, and character rather than theory alone.</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Narrative-Western-Art" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Narrative Western Art</a> — The core authority page
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a> — The single-frame narrative concept behind the work
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" style="color:#8b5a2b; text-decoration:underline;">Western Cowboy Portraits</a> — Where story begins carrying more than subject
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <WesternDefinitions variant="definition" currentPage={9} />
+
+    <SiteFooter />
+  </main>
+
+  <style>
+    .story-section { line-height: 1.7; }
+    .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    .story-block h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      color: #1a1a1a;
+    }
+    .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    .hero-image-wrap {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: clamp(220px, 34vw, 360px);
+      object-fit: cover;
+      object-position: center 28%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+    .example-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .example-images figure { margin: 0; }
+    .example-images img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    @media (max-width: 768px) {
+      .example-images { grid-template-columns: 1fr; }
+      .story-section { padding-left: 1rem; padding-right: 1rem; }
+    }
+  </style>
+</BaseLayout>

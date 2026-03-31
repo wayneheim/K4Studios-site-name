@@ -4,10 +4,11 @@ export const frontierArtStory = [
     paragraphs: [
       "Western frontier art focuses on the historical era in which the American West was formed. It examines the lives, conflicts, and environments that shaped frontier society during the nineteenth century.",
       "The frontier was not simply a landscape of open range and opportunity. It was a volatile meeting point of cultures, economies, and survival.",
+      "That distinction matters because the term is often flattened into frontier-themed decor, rustic product language, or generic cowboy atmosphere.",
       "Cowboys managing cattle drives across hostile terrain.",
       "Indigenous nations fighting to preserve land and culture.",
       "Settlers building towns that might disappear within a season.",
-      "Frontier art attempts to interpret these realities rather than simply illustrating Western myth.",
+      "Western frontier art attempts to interpret these realities rather than simply illustrating Western myth or selling frontier mood as decoration.",
       "Before the legend came the lives that built it."
     ]
   },
@@ -17,8 +18,20 @@ export const frontierArtStory = [
       "Much of Western art has focused on the mythology of the West—the lone rider, the open plains, the spirit of independence.",
       "But mythology grows from lived experience.",
       "The American frontier was a place of constant uncertainty. Weather, isolation, and economic risk shaped every decision. Communities formed quickly and vanished just as quickly. Every individual carried the weight of survival.",
+      "That is why frontier art has long drawn serious artists. Painters such as Frederic Remington, Charles M. Russell, and Albert Bierstadt helped establish a visual language for frontier life, and contemporary work enters the tradition by interpreting that same historical pressure through a present-day medium.",
       "Frontier art explores those pressures.",
       "Rather than presenting the West as nostalgia, it examines the human conditions that created the frontier story in the first place."
+    ]
+  },
+  {
+    subhead: "Western Frontier Art Is Not Frontier Decor",
+    paragraphs: [
+      "Search results for frontier art often drift toward commercial wall decor, product listings, and broadly Western styling.",
+      "That overlap is understandable, but it blurs an important distinction.",
+      "Western frontier art is not defined by leather-sofa compatibility, cabin ambiance, or a generic rustic look.",
+      "It is defined by historical subject matter, artistic intent, and the ability to carry frontier experience as meaning rather than ornament.",
+      "When frontier imagery is reduced to atmosphere alone, the history disappears.",
+      "When it is treated as fine art, the frontier becomes legible again through character, consequence, and story."
     ]
   },
   {
@@ -58,6 +71,7 @@ export const frontierArtStory = [
     subhead: "For Collectors of Western Frontier Art",
     paragraphs: [
       "Frontier-themed artwork has long been collected as part of the broader Western art tradition.",
+      "Collectors who search for Western frontier art are often looking for something more historically grounded than generic frontier wall art or mass-market Western decor.",
       "The work presented here continues that lineage through painterly photographic interpretation of frontier life.",
       "Each piece is produced as a limited edition archival print on museum-grade paper, canvas, or <a href=\"/Other/K4-Select-Series/Engrained\">Engrained™</a> hardwood panels.",
       "Every edition is numbered, signed, and crafted for long-term collection.",

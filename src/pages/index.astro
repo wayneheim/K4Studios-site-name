@@ -28,6 +28,35 @@ import '../styles/global.css';
 const sectionPath = "/index"; // treat homepage as special section
 const loreLegacyUrl = "/Other/K4-Select-Series/Engrained/Engrained-Series?theme=lore-and-legacy&view=grid";
 const loreLegacyShowUrl = "/Other/Stories/Lore-and-Legacy-Show";
+const loreLegacyThemeGalleryId = "/Other/K4-Select-Series/Engrained/Engrained-Series";
+const loreLegacyShowGalleryId = "/Other/Stories/Lore-and-Legacy-Show";
+
+function buildLorePixelHandler(action: string, sourceLayer: string, galleryId: string, trigger: string): string {
+  const escapedGalleryId = JSON.stringify(galleryId);
+  const escapedTheme = JSON.stringify('lore-and-legacy');
+  const escapedTrigger = JSON.stringify(trigger);
+
+  return `if (window.k4emitActionPixel) window.k4emitActionPixel('${action}', null, { galleryId: ${escapedGalleryId}, sourceLayer: '${sourceLayer}', pageType: 'landing', theme: ${escapedTheme}, trigger: ${escapedTrigger} });`;
+}
+
+const loreLegacyImagePixelHandler = buildLorePixelHandler(
+  'home_lore_legacy_image_click',
+  'home_lore_legacy_image_click_pixel_v1',
+  loreLegacyThemeGalleryId,
+  'banner-image'
+);
+const loreLegacyCtaPixelHandler = buildLorePixelHandler(
+  'home_lore_legacy_cta_click',
+  'home_lore_legacy_cta_click_pixel_v1',
+  loreLegacyThemeGalleryId,
+  'banner-cta'
+);
+const loreLegacyAudioPixelHandler = buildLorePixelHandler(
+  'home_lore_legacy_audio_click',
+  'home_lore_legacy_audio_click_pixel_v1',
+  loreLegacyShowGalleryId,
+  'banner-audio-text'
+);
 
 const headingCount = painterlyStory.filter((block, i) => i > 0 && block.subhead).length;
 // Pool 3x more images for client-side rotation variety
@@ -149,7 +178,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
     </div>
 
     <section class="home-show-banner reveal-on-scroll" aria-label="Lore and Legacy show promotion">
-      <a class="home-show-banner__image-link" href={loreLegacyUrl}>
+      <a class="home-show-banner__image-link" href={loreLegacyUrl} data-k4-pixel="home-lore-legacy-image" data-k4-trigger="banner-image" onpointerdown={loreLegacyImagePixelHandler} onclick={loreLegacyImagePixelHandler}>
         <img
           src="/images/Lore.png"
           alt="Lore and Legacy show artwork from the Enggrained series"
@@ -172,9 +201,9 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
           Explore <strong>Lore &amp; Legacy</strong>, the collection of booth images from the show, where painterly Western fine art photography transforms each image into a moment waiting to be completed.
         </p>
         <p class="show-feature-audio-link">
-          Want to do more than see them? <a href={loreLegacyShowUrl}>Hear the narrated Lore &amp; Legacy picture show.</a>
+          Want to do more than see them? <a href={loreLegacyShowUrl} data-k4-pixel="home-lore-legacy-audio" data-k4-trigger="banner-audio-text" onpointerdown={loreLegacyAudioPixelHandler} onclick={loreLegacyAudioPixelHandler}>Hear the narrated Lore &amp; Legacy picture show.</a>
         </p>
-        <a class="home-show-banner__cta" href={loreLegacyUrl}>
+        <a class="home-show-banner__cta" href={loreLegacyUrl} data-k4-pixel="home-lore-legacy-cta" data-k4-trigger="banner-cta" onpointerdown={loreLegacyCtaPixelHandler} onclick={loreLegacyCtaPixelHandler}>
           Begin the Journey &rarr;
         </a>
       </div>
@@ -292,6 +321,105 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
         document.querySelector('.section-heading-anim-wrap')
           ?.classList.add('heading-animated');
       }, 300); // You can tweak this for heading delay as needed
+    });
+  </script>
+
+  <script is:inline>
+    const HOME_IMAGE_LAYER = 'home_lore_legacy_image_click_pixel_v1';
+    const HOME_CTA_LAYER = 'home_lore_legacy_cta_click_pixel_v1';
+    const HOME_AUDIO_LAYER = 'home_lore_legacy_audio_click_pixel_v1';
+    const THEME_GALLERY_ID = '/Other/K4-Select-Series/Engrained/Engrained-Series';
+    const AUDIO_GALLERY_ID = '/Other/Stories/Lore-and-Legacy-Show';
+
+    const pixelConfig = {
+      'home-lore-legacy-image': {
+        action: 'home_lore_legacy_image_click',
+        sourceLayer: HOME_IMAGE_LAYER,
+        galleryId: THEME_GALLERY_ID,
+        pageType: 'landing',
+        theme: 'lore-and-legacy'
+      },
+      'home-lore-legacy-cta': {
+        action: 'home_lore_legacy_cta_click',
+        sourceLayer: HOME_CTA_LAYER,
+        galleryId: THEME_GALLERY_ID,
+        pageType: 'landing',
+        theme: 'lore-and-legacy'
+      },
+      'home-lore-legacy-audio': {
+        action: 'home_lore_legacy_audio_click',
+        sourceLayer: HOME_AUDIO_LAYER,
+        galleryId: AUDIO_GALLERY_ID,
+        pageType: 'landing',
+        theme: 'lore-and-legacy'
+      }
+    };
+
+    function getLoreSessionId() {
+      try {
+        let sessionId = sessionStorage.getItem('k4_session_id');
+        if (!sessionId) {
+          sessionId = window.crypto && typeof window.crypto.randomUUID === 'function'
+            ? window.crypto.randomUUID()
+            : `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+          sessionStorage.setItem('k4_session_id', sessionId);
+        }
+        return sessionId;
+      } catch (_) {
+        return '';
+      }
+    }
+
+    function emitLorePixel(config, trigger) {
+      if (!config) return;
+
+      const params = new URLSearchParams({
+        t: 'action',
+        e: config.action,
+        v: String(Date.now()),
+        g: config.galleryId,
+        pt: config.pageType,
+        sl: config.sourceLayer,
+        th: config.theme,
+        tr: trigger || '',
+        path: window.location.pathname
+      });
+
+      const sessionId = getLoreSessionId();
+      if (sessionId) params.set('sid', sessionId);
+
+      const pixelUrl = `/_state?${params.toString()}`;
+      if (typeof fetch === 'function') {
+        fetch(pixelUrl, {
+          method: 'GET',
+          keepalive: true,
+          cache: 'no-store',
+          credentials: 'same-origin'
+        }).catch(() => {
+          const image = new Image();
+          image.referrerPolicy = 'same-origin';
+          image.src = pixelUrl;
+        });
+        return;
+      }
+
+      const image = new Image();
+      image.referrerPolicy = 'same-origin';
+      image.src = pixelUrl;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const firePixel = (element) => {
+        const pixelKey = element.getAttribute('data-k4-pixel');
+        const trigger = element.getAttribute('data-k4-trigger') || null;
+        const config = pixelKey ? pixelConfig[pixelKey] : null;
+        emitLorePixel(config, trigger);
+      };
+
+      document.querySelectorAll('[data-k4-pixel]').forEach((element) => {
+        element.addEventListener('pointerdown', () => firePixel(element), { passive: true });
+        element.addEventListener('click', () => firePixel(element), { passive: true });
+      });
     });
   </script>
 

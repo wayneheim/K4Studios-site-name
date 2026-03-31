@@ -4,16 +4,22 @@ export const painterlyStory = [
  tagline: "Embrace the Past. Live the Story.",
   subhead: "Fine Art Photography Where Every Frame Tells a Story",
   paragraphs: [
-    "There are photographs—then there are the moments that refuse to sit still.",
+    "There are photographs—then there are moments that refuse to sit still.",
 
     // ✅ NEW grounding sentence
-    "K4 Studios is the home of fine art photography by Wayne Heim — painterly and traditional styles, Western themed, historically driven, and crafted for collectors who value story, atmosphere, and authenticity.",
+    "K4 Studios is the home of fine art photography by Wayne Heim—painterly and traditional, shaped by history, and created for collectors who value story, atmosphere, and authenticity.",
 
     // ✅ Reclassification framing sentence
-    "Wayne Heim creates historically themed Western fine art photography, using narrative, painterly composition to explore the psychological lives of the American frontier.",
+    "Wayne Heim creates narrative-driven fine art photography that explores the psychological lives of people, places, and time itself. From the American frontier to lesser-seen moments across history, each image is built to suggest more than what is seen.",
 
-    "Every image here is a One-Image Movie™—a single, cinematic breath where time, myth, and memory hold still for just a moment. Painterly portraits. Western grit. Landscapes that breathe. Forgotten stories and icons of history and invention, rendered in light that feels carved from memory itself.",
-    "This is fine art photography for collectors who want more than décor. Cowboys and outlaws. WWII heroes and Civil War soldiers. Mountains that hum old hymns. Steel and steam and leather and dust. Step inside the story—and claim your place in it."
+    "At the center of the work is a simple idea: a photograph grows stronger when it does more than describe a subject and begins to imply a larger story.",
+
+    "The strongest images here do not stay at a distance. They pull the viewer inward until looking starts to feel like having been there.",
+
+    "That approach sits quietly in the lineage of pictorialist and narrative image-making, where light, gesture, and atmosphere carry meaning beyond the visible scene.",
+
+    "Every image here is a One-Image Movie™—a single, cinematic breath where time, memory, and myth hold still for just a moment. Painterly portraits. Historical figures. Landscapes that carry presence. Fragments of stories waiting to be completed.",
+    "This is fine art photography for collectors who want more than décor—work that unfolds over time and asks something of the viewer."
   ]
   },
 
@@ -22,10 +28,11 @@ export const painterlyStory = [
     subhead: "The Western Frontier — Cinematic. Painterly. Alive.",
     paragraphs: [
       "Cowboy art. Western fine art photography. Old-world grit with a mythic pulse.",
-      "In the West, nothing is ever just a portrait. A hat thrown low, a hand at rest, a shadow grazing dust—these become the architecture of character. The icons of a people built on stubborn hope.",
-      "This is Western themed art for those who want more than nostalgia. For those who want a piece of the myth that shaped the American frontier. Not painted. Not staged. Lived.",
-      "Every cowboy portrait, every outlaw silhouette, every whisper of dusk light becomes a chapter in an unwritten legend—rendered in Wayne Heim’s painterly language that feels carved from memory itself.",
-      "Welcome to the frontier as it should have been. Explore the Western Cowboy Portraits collection."
+      "In the American West, story and identity are inseparable. A hat pulled low, a quiet pause before departure, a figure standing against distance—these are not just images, but fragments of something still unfolding.",
+      "This is where narrative Western art speaks most clearly.",
+      "Not nostalgia. Not decoration. But moments shaped by consequence, resilience, and the lives that built the frontier.",
+      "Every cowboy portrait, every outlaw silhouette, every fading line of light becomes part of a larger unwritten story—rendered in a painterly language that feels carved from memory itself.",
+      "Welcome to the frontier as it lives in story. Explore the Western Cowboy Portraits collection."
     ]
   },
 
@@ -35,6 +42,7 @@ export const painterlyStory = [
     paragraphs: [
       "Fine art mountain photography. Mountain West landscapes. Windswept painterly horizons.",
       "Some places leave a fingerprint on you. The West does it with a stare.",
+      "Not as scenery—but as moments that feel like they’re still unfolding.",
       "Mountains that growl. Waterfalls that sound like old gods clearing their throats. High Desert horizons that can’t decide if they’re dreams or warnings. These painterly landscapes don’t decorate a wall—they claim it.",
       "Painterly depth. Cinematic scale. Landscapes crafted for collectors who want their home to feel like a place where something is about to happen."
     ]

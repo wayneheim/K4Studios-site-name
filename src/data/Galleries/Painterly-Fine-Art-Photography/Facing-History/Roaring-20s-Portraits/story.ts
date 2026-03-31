@@ -3,7 +3,7 @@ export const westernStory = [
   /* ───────────────────────────────────────────── 1 */
   {
     breadcrumb: "Roaring 20s Portraits | Color",
-    title: "Roaring 20s Portraits — One-Image Movie™ Jazz Age Photography by Wayne Heim",
+    title: "Roaring 20s Portraits — Painterly Jazz Age Photography by Wayne Heim",
     subhead: "The Jazz Age, Unmasked.",
     tagline: "Flappers, Bootleggers & G-Men — Step Into the Roaring 20s",
     paragraphs: [
@@ -90,8 +90,8 @@ export const westernStory = [
     tagline: "Bring Home a Story Only You Can Finish",
     paragraphs: [
       `Collectors and storytellers are drawn to these pieces because they carry more than historical detail — they carry emotional truth.`,
-      `Each limited-edition print is a One-Image Movie™ waiting for your interpretation. Through painterly composition and deliberate ambiguity, Wayne invites you into the frame: to wonder, to imagine, and to complete the story yourself.`,
-      `These portraits don’t simply remember the Roaring 20s — they ask what history leaves behind, and what it still asks of us.`
+      `Each limited-edition print is built around an unresolved narrative. Through painterly composition and deliberate ambiguity, Wayne invites you into the frame: to wonder, to imagine, and to complete the story yourself.`,
+      `These portraits do not simply remember the Roaring 20s — they ask what history leaves behind, and what it still asks of us.`
     ]
   }
 ];

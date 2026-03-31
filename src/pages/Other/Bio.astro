@@ -12,7 +12,6 @@ import { getStructuredData } from '../../components/utils/getStructuredData.ts';
 import { getLandingMeta } from '../../data/landingMeta.ts';
 
 import { siteNav } from '../../data/siteNav.ts';
-import { getSideImages } from '../../components/utils/getSideImages.ts';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 import { autoLinkKeywordsInText } from '../../components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '../../data/semantic/K4-Sem.ts';
@@ -29,15 +28,16 @@ type StorySection = {
   tagline?: string;
   paragraphs?: string[];
   list?: string[];
+  callout?: string;
 };
 
 // ----------------------
 // DYNAMIC LOGIC SECTION
 // ----------------------
 
+const pagePath = "/Other/Bio";
 const sectionPath = "/Galleries/Painterly-Fine-Art-Photography";
-const meta = getLandingMeta(sectionPath);
-
+const meta = getLandingMeta(pagePath);
 const headingCount = westernStory.filter((block, i) => i > 0 && block.subhead).length;
 
 function findNavEntry(nav, url) {
@@ -65,27 +65,52 @@ const allGalleryData = import.meta.glob<{ galleryData: any[] }>(
   '../../data/Galleries/**/*.mjs',
   { eager: true }
 );
+
+function getGalleryDataByHref(path: string) {
+  const filePath = '../../data/Galleries' + path.replace(/^\/Galleries/, '') + '.mjs';
+  const parts = path.split('/');
+  const lastSegment = parts[parts.length - 1];
+  const nestedPath = '../../data/Galleries' + path.replace(/^\/Galleries/, '') + '/' + lastSegment + '.mjs';
+  const mod: any = allGalleryData[filePath] || allGalleryData[nestedPath];
+  return mod?.galleryData || mod?.default || [];
+}
+
 const galleryDatas = galleryPaths.map((path) => {
-  const filePath = "../../data/Galleries" + path.replace(/^\/Galleries/, "") + ".mjs";
-  return allGalleryData[filePath]?.galleryData || [];
+  return getGalleryDataByHref(path);
 });
 
-const featheredImages = getSideImages({
-  sectionPath,
-  headingCount,
-  poolMultiplier: 3
-});
+const bioImageSources = [
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color',
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color',
+  '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery',
+  '/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits',
+  '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color',
+];
+
+const featheredImages = bioImageSources.flatMap((path) =>
+  getGalleryDataByHref(path)
+    .filter((img: any) => img?.id && img.id !== 'i-k4studios')
+    .sort((a: any, b: any) => (b.rating ?? 0) - (a.rating ?? 0))
+    .slice(0, 3)
+    .map((img: any) => ({
+      ...img,
+      galleryPath: path,
+      href: `${path}/${img.id}`,
+    }))
+);
 
 const landingDescription =
   landingWestern.subtitle || (landingWestern as any)?.description || "";
 const landingKeywords = (landingWestern as any)?.keywords || [];
+const closingLine = 'Embrace the Past. Live the Story.';
 
 const structuredData = getStructuredData({
   type: "gallery",
   data: {
     title: landingWestern.title,
     description: landingDescription,
-    url: `https://k4studios.com${sectionPath}`,
+    url: `https://k4studios.com${pagePath}`,
     keywords: landingKeywords,
     copyrightNotice: "© Wayne Heim"
   },
@@ -132,12 +157,15 @@ const structuredData = getStructuredData({
         <h2 class="page-subtitle fade-in reveal-on-scroll">
           {landingWestern.subtitle}
         </h2>
+        <div class="bio-heading-rule" aria-hidden="true"></div>
       </div>
     </section>
 
-    <div class="py-5">
-      <TombstoneNav items={landingWestern.tombstones} />
-    </div>
+    {landingWestern.tombstones?.length ? (
+      <div class="py-5">
+        <TombstoneNav items={landingWestern.tombstones} />
+      </div>
+    ) : null}
 
     <section class="story-layout">
       <div class="text-column">
@@ -158,14 +186,40 @@ const structuredData = getStructuredData({
               {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.paragraphs?.map((para: string, i: number) => (
-                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                <p
+                  class:list={[
+                    'reveal-on-scroll',
+                    index === 0 && i < 2 && 'bio-lead-paragraph',
+                    para === closingLine && 'bio-closing-line'
+                  ]}
+                  set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)}
+                />
               ))}
+              {section.callout && (
+                <p class="bio-anchor-line reveal-on-scroll">{section.callout}</p>
+              )}
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item: string, j: number) => (
                     <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
                   ))}
                 </ul>
+              )}
+              {index === 0 && (
+                <aside class="bio-pathways reveal-on-scroll" aria-label="Explore the work">
+                  <p class="bio-pathways-kicker">Explore the Work</p>
+                  <ul class="bio-pathways-list">
+                    <li><a href="/Galleries/Painterly-Fine-Art-Photography">Painterly Photography</a> — atmosphere, restraint, and authored image-making.</li>
+                    <li><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Narrative Historical Series</a> — story-driven work rooted in history and consequence.</li>
+                    <li><a href="/Other/One-Image-Movie">One-Image Movies™</a> — the core concept behind the work’s narrative structure.</li>
+                    <li><a href="/wayne-heim-western-fine-art-photography">Western Fine Art Photography</a> — a structured survey of one major body of work.</li>
+                  </ul>
+                </aside>
+              )}
+              {index === westernStory.length - 1 && (
+                <p class="bio-final-cta reveal-on-scroll">
+                  <a href="/Galleries/Painterly-Fine-Art-Photography">Explore the work →</a>
+                </p>
               )}
             </article>
           ))}
@@ -188,9 +242,10 @@ const structuredData = getStructuredData({
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
             client:load
-            heading="Collection Samples"
+            heading="Selected Work"
             images={featheredImages}
             displayCount={6}
+            dynamicSpacing={false}
           />
         </div>
       </div>
@@ -314,14 +369,20 @@ const structuredData = getStructuredData({
   }
 
   .section-heading-wrap {
-    margin: 1rem 0;
+    margin: 3.25rem 0 2.5rem;
     text-align: center;
+  }
+
+  .section-heading {
+    margin-top: 2rem;
+    margin-bottom: 0;
   }
 
   .section-heading .page-title {
     font-size: 2rem;
-  margin-bottom: .4rem;
-  margin-top: -2rem; /* user requested adjustment */
+    margin-bottom: .4rem;
+    margin-top: 0;
+    line-height: 1.15;
   }
 
   .section-heading .page-subtitle {
@@ -329,6 +390,18 @@ const structuredData = getStructuredData({
     font-weight: 500;
     color: #6d5b4a;
     opacity: .9;
+  }
+
+  .bio-heading-rule {
+    width: min(780px, calc(100vw - 5rem));
+    height: 2px;
+    margin: 1.75rem auto 0;
+    background: #b7aba0;
+    opacity: 0.9;
+  }
+
+  .story-layout {
+    margin-top: 1.25rem;
   }
 
   .story-section {
@@ -368,6 +441,82 @@ const structuredData = getStructuredData({
     line-height: 1.6;
     margin-bottom: 1rem;
     font-size: 1.01rem;
+  }
+
+  .story-block + .story-block {
+    padding-top: 1.1rem;
+    border-top: 1px solid rgba(116, 97, 79, 0.14);
+  }
+
+  .bio-lead-paragraph {
+    font-size: 1.12rem !important;
+    line-height: 1.68 !important;
+    color: #34261c;
+  }
+
+  .bio-anchor-line {
+    margin: 1.35rem 0 1.45rem;
+    color: #3c2f24;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  .bio-pathways {
+    margin: 1.6rem 0 1.1rem;
+    padding: 0.95rem 1rem 0.9rem;
+    border-left: 2px solid rgba(128, 109, 89, 0.24);
+    background: rgba(250, 247, 242, 0.5);
+  }
+
+  .bio-pathways-kicker {
+    margin: 0 0 0.85rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #7d6551;
+  }
+
+  .bio-pathways-list {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .bio-pathways-list li {
+    margin: 0 0 0.6rem;
+    color: #4f4134;
+    line-height: 1.55;
+    font-size: 0.98rem;
+  }
+
+  .bio-pathways-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .bio-pathways-list a {
+    color: #6c2f1e;
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+  }
+
+  .bio-closing-line {
+    text-align: center;
+    font-size: 1.28rem !important;
+    font-weight: 600;
+    color: #3a2d21;
+    margin-top: 1.65rem !important;
+  }
+
+  .bio-final-cta {
+    margin-top: 0.3rem;
+    text-align: center;
+  }
+
+  .bio-final-cta a {
+    color: #7d2f18;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(125, 47, 24, 0.32);
+    padding-bottom: 0.05rem;
   }
 
   .story-block ul {

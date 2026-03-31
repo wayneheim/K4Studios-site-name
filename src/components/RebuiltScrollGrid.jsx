@@ -47,6 +47,16 @@ export default function RebuiltScrollGrid({
   themeImageCountLabel = null,
   themeImageCount = null,
 }) {
+  const fireThemeStoryPixel = () => {
+    emitActionPixel('theme_lore_legacy_audio_click', null, {
+      galleryId: '/Other/Stories/Lore-and-Legacy-Show',
+      sourceLayer: 'theme_lore_legacy_audio_click_pixel_v1',
+      pageType: 'gallery',
+      theme: themeName ? String(themeName) : 'lore-and-legacy',
+      trigger: 'theme_header_audio_button'
+    });
+  };
+
   const [colCount, setColCount] = useState(getColCount());
   const [simIndex, setSimIndex] = useState(initialImageIndex);
   const [anchorOnNextUpdate, setAnchorOnNextUpdate] = useState(true);
@@ -299,6 +309,8 @@ export default function RebuiltScrollGrid({
                 href={themeStoryUrl}
                 className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm md:text-base"
                 style={{ color: "#f7efe4", background: "#7a4e36", textDecoration: "none" }}
+                onPointerDown={fireThemeStoryPixel}
+                onClick={fireThemeStoryPixel}
               >
                 ▶ {themeStoryCta}
               </a>

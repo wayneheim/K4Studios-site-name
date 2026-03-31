@@ -12,11 +12,7 @@ export const westernStory = [
       `Wayne Heim blends documentary truth with the depth of painterly fine art photography. Soldiers, medics, nurses, photographers — each rendered with historical authenticity and narrative intent. The uniforms are accurate, the faces real, the stories implied rather than explained.`,
 
       `Every portrait is a One-Image Movie™. A hinge moment. A breath before duty calls. A glance carrying everything they cannot say. You’re not simply observing history — you’re stepping into it.`,
-
-      // 🔥 ADDED: Ambiguity + viewer participation sentence
       `Wayne leaves the endings unresolved on purpose. His painterly ambiguity draws you into the frame — inviting you to imagine the unseen moment before, and the echo that follows after.`,
-
-      // 🔥 ADDED: The personal mirror — essential brand tone
       `In that space, the portrait becomes a mirror. Their courage becomes a question. Their uncertainty becomes familiar. You are no longer looking at history — you are living alongside it.`,
     ]
   },
@@ -86,7 +82,7 @@ export const westernStory = [
     subhead: "Own a Piece of WWII History",
     tagline: "Preserve a Legacy. Live the Story.",
     paragraphs: [
-      `Every portrait in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits">WWII Portraits</a> collection is a One-Image Movie™ — a moment rich with unresolved story, waiting for you to complete it.`,
+      `Every portrait in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits">WWII Portraits</a> collection holds an unresolved moment — a story-rich pause waiting for you to complete it.`,
 
       `Bring home a print that honors the Greatest Generation and invites reflection, conversation, and remembrance.`,
 

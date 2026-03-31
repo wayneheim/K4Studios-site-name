@@ -9,7 +9,8 @@ export const westernStory = [
     paragraphs: [
       `Civil War fine art photography explores the human experience of America’s most defining conflict through character, atmosphere, and emotional restraint. Rather than documenting battles, it focuses on the individuals who carried history forward — soldiers, civilians, and moments shaped by consequence.`,
       `Wayne Heim’s Civil War portraits invite you into that space. Through painterly fine art techniques and cinematic storytelling, these images transform historical reenactment into deeply human narratives — echoing the stillness of 19th-century photography while carrying modern psychological depth.`,
-      `Each portrait becomes a One-Image Movie™ — a moment suspended between conflict and reflection. You’re not simply observing the past; you’re stepping into it. The silence, the weight of choice, the breath before consequence — all invite you to imagine the chapters that came before and those that must follow.`
+      `Each portrait is built as a One-Image Movie™ — a hinge moment suspended between conflict and reflection. You are not simply observing the past; you are stepping into it. The silence, the weight of choice, the breath before consequence — all invite you to imagine the chapters that came before and those that must follow.`,
+      `This is not Civil War spectacle. It is Civil War history carried through face, posture, and the unresolved feeling of a life still in motion.`
     ]
   },
 
@@ -20,7 +21,8 @@ export const westernStory = [
     paragraphs: [
       `Early Civil War photography relied on stillness. Long exposures captured not action, but presence — the fatigue in a soldier’s eyes, the quiet aftershock of battle, the gravity of lives irrevocably changed.`,
       `Wayne embraces that visual language, weaving it into a painterly approach that intensifies emotion rather than freezing it. His portraits bridge documentary truth and fine art interpretation, creating historically grounded images that feel cinematic, intimate, and reflective.`,
-      `These are not reenactments made for nostalgia. They are visual meditations on courage, sacrifice, and the fragile humanity that persists even in times of profound division.`
+      `These are not reenactments made for nostalgia. They are visual meditations on courage, sacrifice, and the fragile humanity that persists even in times of profound division.`,
+      `The result is a frame that holds more than costume or setting. It holds consequence.`
     ]
   },
 
@@ -43,7 +45,8 @@ export const westernStory = [
     paragraphs: [
       `In an era before rapid shutters and instant imagery, stillness became a narrative tool. What could not be captured in motion was preserved in posture, gaze, and restraint.`,
       `Wayne channels that discipline. His painterly compositions use light, shadow, and period-authentic detail to create a cinematic quiet — a silence that holds memory, consequence, and reflection.`,
-      `The result is neither documentary reenactment nor historical replica. It is Civil War fine art photography shaped by interpretation, intention, and emotional truth.`
+      `The result is neither documentary reenactment nor historical replica. It is Civil War fine art photography shaped by interpretation, intention, and emotional truth.`,
+      `That is why the images feel unfinished in the right way: the viewer senses what has been endured, and what may have to be endured next.`
     ]
   },
 
@@ -54,7 +57,8 @@ export const westernStory = [
     paragraphs: [
       `Wayne collaborates with dedicated reenactors and living historians whose understanding of the Civil War era adds authenticity to each portrait.`,
       `Costume becomes character. Setting becomes story. Expression becomes the emotional bridge between past and present.`,
-      `This balance of historical accuracy and painterly interpretation elevates each image into fine art — created for collectors, historians, and anyone drawn to historically themed photography with emotional depth.`
+      `This balance of historical accuracy and painterly interpretation elevates each image into fine art — created for collectors, historians, and anyone drawn to historically themed photography with emotional depth.`,
+      `The goal is not to restage the war. It is to recover the human pressure inside it.`
     ]
   },
 

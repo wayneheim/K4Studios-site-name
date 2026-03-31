@@ -187,7 +187,7 @@ const webPageSchema = JSON.stringify({
   "@id": `https://k4studios.com${pagePath}#webpage`,
   url: `https://k4studios.com${pagePath}`,
   name: "Western Fine Art Photography",
-  description: "Western fine art photography by Wayne Heim featuring cowboy portraits, frontier characters, and painterly western photography.",
+  description: "Western fine art photography by Wayne Heim: authored, painterly photography of the American West centered on character, frontier history, and narrative depth rather than decor, stock imagery, or modern Western lifestyle photography.",
   inLanguage: "en",
   isPartOf: {
     "@type": "WebSite",
@@ -264,7 +264,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
 ---
 
 <BaseLayout
-  title="Western Fine Art Photography – Wayne Heim"
+  title="Western Fine Art Photography | Painterly Fine Art of the American West – Wayne Heim"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}
@@ -279,7 +279,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Western Fine Art Photography: Narrative Cowboy & Frontier Portraits of the American West",
+    "headline": "Western Fine Art Photography: Authored, Painterly Photography of the American West",
     "author": {
       "@type": "Person",
       "name": "Wayne Heim"
@@ -292,7 +292,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
         "url": "https://www.k4studios.com/images/k4-logo.png"
       }
     },
-    "description": "A comprehensive guide to western fine art photography — what it is, its historical roots, the painterly process, and how narrative cowboy and frontier portraits interpret the American West as authored fine art.",
+    "description": "Western fine art photography interprets the American West through authored, painterly photographs built for narrative depth, historical atmosphere, and long-term artistic value rather than decor or stock imagery.",
     "mainEntityOfPage": "https://www.k4studios.com/Western-Fine-Art-Photography"
   }
   </script>
@@ -317,17 +317,20 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
         <h1 class="page-title fade-in reveal-on-scroll">{landingWestern.title}</h1>
         <h2 class="page-subtitle fade-in reveal-on-scroll">{landingWestern.subtitle}</h2>
         <p class="page-summary fade-in reveal-on-scroll">
-          Western fine art photography is an authored interpretation of the American West created through painterly photographic craft, narrative restraint, and deliberate artistic vision.
+          Western fine art photography interprets the American West through narrative, atmosphere, and restraint. It draws from a painterly tradition where images are constructed with intention—shaped to carry story, memory, and emotional weight beyond the moment they depict. Each image exists as part of a larger narrative—what I call a One-Image Movie™.
         </p>
         <p class="page-context-link fade-in reveal-on-scroll">
-          Western fine art photography exists within the broader tradition of <a href="/American-Western-Art">American Western art</a>, where artists interpret the frontier experience through painting, sculpture, and now photographic craft. Explore the deeper definitions in <a href="/Western-Photography-Art">Western Photography Art</a> and step into the larger narrative world of <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier">Facing History</a>.
+          This work exists within the broader tradition of American Western art, where artists interpret the frontier through painting, sculpture, and now photographic craft. That bridge between photographic realism and artistic interpretation is explored further in <a href="/Western-Photography-Art">Western photography art</a>. From there, the larger narrative world opens into <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier">Facing History</a>.
         </p>
       </div>
     </section>
 
     <!-- Tombstones restored to top position -->
     <section class="collections-nav-section">
-      <h3 class="collections-heading fade-in reveal-on-scroll">Explore the Stories of the American West</h3>
+      <h3 class="collections-heading fade-in reveal-on-scroll">Step Into the Stories of the American West</h3>
+      <p class="page-context-link fade-in reveal-on-scroll" style="margin-top:0.5rem; margin-bottom:1rem; text-align:center;">
+        These collections show how Western fine art photography shifts from subject to story through light, atmosphere, and implication.
+      </p>
       <TombstoneNav client:load items={tombstonesWithThumbs} />
     </section>
 
@@ -585,16 +588,16 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
     /* Page summary sentence */
     .page-summary {
       max-width: 900px;
-      margin: 0.6rem auto 0;
+      margin: 0.7rem auto 0;
       font-size: 1.02rem;
-      line-height: 1.55;
+      line-height: 1.6;
       color: #6d5b4a;
       font-family: 'Glegoo', serif;
       text-align: center;
       opacity: 0.92;
     }
     .page-context-link {
-      max-width: 920px;
+      max-width: 900px;
       margin: 0.9rem auto 0;
       font-size: 0.99rem;
       line-height: 1.6;
@@ -613,7 +616,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
     }
     @media (max-width: 768px) {
       .page-summary { font-size: 0.95rem; padding: 0 1rem; max-width: 90%; }
-      .page-context-link { font-size: 0.94rem; padding: 0 1rem; max-width: 92%; }
+      .page-context-link { font-size: 0.94rem; padding: 0 1rem; max-width: 90%; }
     }
 
     .intent-grid-section {

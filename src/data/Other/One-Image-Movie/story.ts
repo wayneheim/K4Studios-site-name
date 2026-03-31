@@ -7,8 +7,9 @@ export const oneImageMoviePage = {
     {
       subhead: "A Story Told in a Single Frame",
       paragraphs: [
-        `A One-Image Movie™ is more than a photograph. It is a fully realized moment of cinema—compressed into a single frame—where character, mood, and narrative arc exist all at once. Wayne Heim created the concept to describe a new kind of fine art storytelling: imagery that doesn't just depict a scene, but unfolds like a lost frame from an unwritten film.`,
-        `Each One-Image Movie™ carries its own beginning, middle, and end. Nothing moves, yet everything is in motion. It is a medium built on suggestion, implication, and psychological resonance—inviting the viewer to step inside the story rather than simply observe it.`
+        `A One-Image Movie™ is more than a photograph. It is the kind of image that reaches for you before you have time to stand back from it, carrying the pressure of a larger story inside a single frame. Wayne Heim created the concept to describe a kind of fine art storytelling that does not simply depict a scene, but pulls you toward it like a lost moment from an unwritten film.`,
+        `<strong>What Is a One-Image Movie™ (Definition)</strong><br />A One-Image Movie™ is a single photograph charged with enough narrative weight to feel like a whole story pressing through one frame. Rather than closing the moment, it opens it—through gesture, atmosphere, and unresolved tension—until the viewer is drawn inside to complete what the image has set in motion.`,
+        `A One-Image Movie™ is not a technique to be applied, but a condition an image reaches when story, atmosphere, and implication lock together. Each one carries its own before and after. Nothing moves, yet everything feels in motion. These images are built to collapse the distance between viewer and story until looking gives way to presence.`
       ]
     },
 
@@ -33,20 +34,38 @@ export const oneImageMoviePage = {
         "Emotional ambiguity—enough clarity to anchor the story, enough mystery to invite interpretation."
       ],
       paragraphs: [
-        `A One-Image Movie™ isn't defined by subject matter—it can be Western, historical, portrait, landscape, or contemporary. Its defining trait is narrative density: the sense that a full story lives inside a single moment.`
+        `A One-Image Movie™ isn't defined by subject matter. It can surface in Western work, historical work, portraiture, landscapes, or contemporary images. What matters is the pressure inside the frame: the feeling that a full story is leaning against a single moment. It belongs to cinematic photography without needing motion to do the work. These qualities cannot be assembled mechanically; they arrive when the image carries more than it reveals.`
       ]
     },
 
-    // 4. PSYCHOLOGY AND STORYTELLING
+    // 4. HOW TO RECOGNIZE IT
+    {
+      subhead: "When an Image Becomes a One-Image Movie™",
+      bullets: [
+        "The moment sits suspended between before and after.",
+        "The figures carry a history that is not fully shown.",
+        "Tension exists without requiring visible action.",
+        "Light and atmosphere carry emotional consequence.",
+        "The image suggests continuation beyond the frame."
+      ],
+      paragraphs: [
+        `When a One-Image Movie™ emerges, these conditions tend to be present. They are not ingredients or steps, but signs that the image has crossed a threshold and begun carrying more life than it can fully show. This is the same pressure toward implication that shapes <a href="/Narrative-Western-Art">Narrative Western Art</a>, where the story is carried as much by what the image withholds as by what it reveals.`
+      ]
+    },
+
+    // 5. PSYCHOLOGY AND STORYTELLING
     {
       subhead: "The Psychology Behind a Single-Frame Narrative",
       paragraphs: [
-        `Humans create stories automatically. When given a scene with tension, atmosphere, and character, the mind fills in the gaps. One-Image Movies™ are engineered around this instinct. They provide just enough detail to ignite imagination—and just enough restraint to let the viewer participate in the storytelling.`,
-        `This is why no two viewers describe the same One-Image Movie™ the same way. The artwork becomes a collaboration between artist and audience.`
+        `The mind does not stay still in front of an image charged with tension, atmosphere, and character. It starts moving. It fills the silence. It feels around the edges for what happened before and what might come next. One-Image Movies™ lean into that instinct, giving the viewer just enough to enter the moment without explaining it away.`,
+        `That is why no two people fully experience the same One-Image Movie™ in the same way. The image reaches out, but the viewer brings the rest. Memory, emotion, and history complete the circuit.`,
+        `When it works, the image stops being something you see and becomes something you feel. The distance collapses. Observation gives way to experience.`,
+        `This becomes even more powerful when image and story are paired with restraint. The experience starts to behave less like traditional photography and more like music. You are not led to a fixed meaning. You are pulled into a felt one. The image does not resolve. It stays with you.`,
+        `This relationship between image, text, and viewer is explored further in <a href="/Blog/hearing-the-art">Hearing the Art</a>, a conversation on how visual storytelling can shift from observation to participation.`
       ]
     },
 
-    // 5. LITERARY COMPONENT
+    // 6. LITERARY COMPONENT
     {
       subhead: "The Literary Engine Behind the One-Image Movie™",
       paragraphs: [
@@ -56,20 +75,21 @@ export const oneImageMoviePage = {
       ]
     },
 
-    // 6. THE ARTISTIC DNA
+    // 7. THE ARTISTIC DNA
     {
       subhead: "Where Painting, Photography, and Cinema Meet",
       paragraphs: [
-        `The One-Image Movie™ sits at the intersection of three visual traditions:`,
-        `<strong>Painting</strong> — for its control of light, color, and emotional tone.`,
-        `<strong>Photography</strong> — for its grounding in reality and lived detail.`,
-        `<strong>Cinema</strong> — for its sense of motion, story, and framing.`,
-        `Wayne's images draw influence from painters like Remington, Wyeth, Rockwell, and the Pictorialists—yet they remain unmistakably photographic. This fusion creates the cinematic painterly aesthetic that defines the medium.`,
-        `Historically, only painters and filmmakers have told the real stories behind figures like the American cowboy — the struggle, the labor, the lives that built the legend. The One-Image Movie™ brings that same depth to photography: not illustrating the myth, but earning it from the ground up.`
+        `The One-Image Movie™ does not exist in isolation. It is forged from a lineage of visual storytellers who understood that a single image could carry the weight of an entire narrative.`,
+        `Artists like Frederic Remington, N.C. Wyeth, Charles Russell, and Norman Rockwell built worlds inside a frame—moments that felt lived-in, unresolved, and connected to something larger than what was shown.`,
+        `Their work did not simply depict the West or the human condition. It suggested it. Extended it. Left space for the viewer to step inside.`,
+        `The One-Image Movie™ carries that same DNA forward through the medium of photography, while also drawing from the atmospheric restraint of the Pictorialists.`,
+        `It speaks with the emotional cadence of cinema, where a single frame can hold tension, character, and consequence. It carries the layered resonance of literature, where meaning unfolds gradually rather than all at once. It moves like music—less concerned with explanation than with feeling, like a lyric or a note that lands and stays with you long after it is gone.`,
+        `This is not an image you simply look at. It is an image you enter. And once inside, the story is no longer just mine. It becomes yours.`,
+        `This is where photography stops recording and begins remembering.`
       ]
     },
 
-    // 7. WHY COLLECTORS VALUE IT
+    // 8. WHY COLLECTORS VALUE IT
     {
       subhead: "Why Collectors Connect With One-Image Movies™",
       paragraphs: [
@@ -78,7 +98,7 @@ export const oneImageMoviePage = {
       ]
     },
 
-    // 8. NOT TECHNIQUE — MEDIUM
+    // 9. NOT TECHNIQUE — MEDIUM
     {
       subhead: "A New Medium, Not a Technique",
       paragraphs: [
@@ -87,7 +107,20 @@ export const oneImageMoviePage = {
       ]
     },
 
-    // 9. PICTURE SHOWS — MULTI-IMAGE EVOLUTION
+    // 10. DIFFERENTIATION
+    {
+      subhead: "One-Image Movie™ vs Traditional Photography",
+      bullets: [
+        "Traditional photography captures what is present. A One-Image Movie™ constructs what is implied.",
+        "Traditional images resolve the moment. A One-Image Movie™ leaves it open.",
+        "Traditional photography shows. A One-Image Movie™ suggests."
+      ],
+      paragraphs: [
+        `This is not a matter of hierarchy but of intention. A One-Image Movie™ is built for atmosphere, implication, and fine art storytelling rather than description alone.`
+      ]
+    },
+
+    // 11. PICTURE SHOWS — MULTI-IMAGE EVOLUTION
     {
       subhead: "When One-Image Movies™ Become Chapters — The Picture Show",
       paragraphs: [
@@ -98,20 +131,22 @@ export const oneImageMoviePage = {
       ]
     },
 
-    // 10. HOW IT FITS IN THE K4 UNIVERSE
+    // 12. HOW IT FITS IN THE K4 UNIVERSE
     {
       subhead: "The Role of One-Image Movies™ Across K4 Studios",
       paragraphs: [
-        `Nearly every major gallery in the K4 portfolio—Western, Civil War, WWII, Portraits, Landscapes, and Engrained—contains works built with the One-Image Movie™ philosophy.`,
-        `It is the unifying thread that ties together Wayne's artistic identity: museum-grade storytelling through painterly photographic craft.`
+        `Nearly every major gallery in the K4 portfolio contains works built with the One-Image Movie™ philosophy. That thread is especially visible in <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History">Facing History</a>, where Western and historical images carry consequence beyond the frame.`,
+        `It remains present in <a href="/Galleries/Painterly-Fine-Art-Photography/Landscapes">Landscapes</a>, where atmosphere, memory, and silence become the story rather than the backdrop.`,
+        `Within the broader narrative system of the site, it also connects directly to <a href="/Narrative-Western-Art">Narrative Western Art</a>, where story becomes the organizing principle rather than a byproduct of subject matter.`
       ]
     },
 
-    // 11. CLOSING CTA
+    // 13. CLOSING CTA
     {
       subhead: "Explore the Collections",
       paragraphs: [
-        `To experience One-Image Movies™ within their gallery context, explore the painterly and historical collections throughout the site.`,
+        `Explore how One-Image Movies™ appear across Western, historical, and landscape collections—where each image acts as a chapter in a larger visual narrative.`,
+        `Begin with <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits">Western Cowboy Portraits</a> if you want to see the form at its most character-driven.`,
         `Each image is its own chapter. Each chapter belongs to a larger story.`
       ]
     }

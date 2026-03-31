@@ -1,0 +1,296 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/what-makes-an-image-feel-cinematic";
+const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
+
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
+const headerImage = {
+  id: "i-c5K798H",
+  src: getProxySrc("i-c5K798H", "l"),
+  alt: "Cinematic stillness shaped through tension and narrative presence"
+};
+
+const image1 = {
+  id: "i-B7ZSdfs",
+  src: getProxySrc("i-B7ZSdfs", "l"),
+  alt: "Portrait where tension lingers beyond the visible moment"
+};
+const image2 = {
+  id: "i-trZrk2w",
+  src: getProxySrc("i-trZrk2w", "l"),
+  alt: "Frame carrying suspense through atmosphere and unresolved action"
+};
+const image3 = {
+  id: "i-LCspRF4",
+  src: getProxySrc("i-LCspRF4", "l"),
+  alt: "Landscape with cinematic atmosphere and emotional direction"
+};
+
+const pageTitle = "What Makes an Image Feel Cinematic? | K4 Studios";
+const pageDescription = "Cinematic photography is not created by color grading alone. This guide explains how tension, implication, atmosphere, and framing make a still image feel cinematic.";
+
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImage.id, "l"),
+  getAbsoluteProxySrc(image1.id, "l"),
+  getAbsoluteProxySrc(image2.id, "l"),
+  getAbsoluteProxySrc(image3.id, "l"),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "One-Image Movie", item: "https://www.k4studios.com/Other/One-Image-Movie" },
+    { name: "What Makes an Image Feel Cinematic?", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "What Makes an Image Feel Cinematic?",
+    description: pageDescription,
+    url: canonicalUrl,
+    image: structuredImageUrls,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-03-30",
+    articleSection: "Cinematic Photography",
+    definedTerm: {
+      name: "What Makes an Image Feel Cinematic?",
+      description: pageDescription,
+    },
+    keywords: [
+      "what makes an image feel cinematic",
+      "cinematic photography",
+      "what makes a photo cinematic",
+      "narrative photography",
+      "visual storytelling in photography"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://www.k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://www.k4studios.com/"
+  }
+});
+
+const meta = {
+  description: pageDescription,
+  keywords: "what makes an image feel cinematic, cinematic photography, what makes a photo cinematic, narrative photography, visual storytelling in photography",
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterCard: "summary_large_image"
+};
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › What Makes an Image Feel Cinematic?`;
+---
+
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} meta={meta}>
+  <script type="application/ld+json" set:html={breadcrumbStructuredData} />
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section class="hero-image-wrap">
+      <img src={headerImage.src} alt={headerImage.alt} loading="eager" class="hero-image" />
+    </section>
+
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        What Makes an Image Feel Cinematic?
+      </h1>
+      <p style="font-size:1.25rem; color:#666; font-style:italic;">
+        Not color grading. Not spectacle. Story under pressure.
+      </p>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        A guide to the still-image qualities that create cinematic presence
+      </p>
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+        <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
+          A still image feels cinematic when it carries implication, tension, and the sense of a larger life unfolding around it
+        </p>
+
+        <p><strong>An image feels cinematic</strong> when it suggests more than it shows. The frame feels connected to a larger sequence, even though only one moment is visible. Something has just happened, or is about to. The viewer senses pressure around the image rather than receiving a complete explanation from it.</p>
+
+        <p>That feeling does not come from orange-and-teal color grading, wide lenses, or borrowed movie style by themselves. Those may affect surface aesthetics. Cinematic presence comes from tension, implication, framing, atmosphere, and consequence.</p>
+
+        <p>This is why cinematic photography so often overlaps with <a href="/Blog/what-is-narrative-photography" style="color:#8b5a2b; text-decoration:underline;">narrative photography</a>. Both depend on the viewer sensing a larger story pressing around the frame.</p>
+
+        <div class="section-heading-with-line">
+          <h2>The Core Conditions of Cinematic Presence</h2>
+        </div>
+
+        <p>A still image often feels cinematic when several of these conditions are present:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;"><strong>Tension</strong> — The frame feels caught between before and after.</li>
+          <li style="margin-bottom:0.5rem;"><strong>Atmosphere</strong> — Light, weather, darkness, or texture carry emotional pressure.</li>
+          <li style="margin-bottom:0.5rem;"><strong>Framing</strong> — Composition implies a larger world beyond the crop.</li>
+          <li style="margin-bottom:0.5rem;"><strong>Character</strong> — The subject feels inhabited rather than posed into symbol.</li>
+          <li style="margin-bottom:0.5rem;"><strong>Restraint</strong> — The image withholds enough to keep the viewer mentally moving inside it.</li>
+        </ul>
+
+        <div class="section-heading-with-line">
+          <h2>Why Motion Is Not Required</h2>
+        </div>
+
+        <p>Cinematic does not mean the image literally looks like a movie still. It means the viewer feels the momentum of unseen events around a still frame.</p>
+
+        <p>A glance, a half-turn, a silence, a delayed gesture, the shape of light on a face, the space between two figures — all of these can create cinematic pressure without visible action.</p>
+
+        <p>This is one reason the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a> idea matters. A still photograph can feel cinematic when it holds the emotional weight of a larger unwritten sequence.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What People Often Confuse With Cinematic</h2>
+        </div>
+
+        <p>People often call an image cinematic when they really mean one of three different things:</p>
+
+        <p><strong>Stylized grading</strong><br>
+        A movie-like palette can change mood, but color alone does not create narrative presence.</p>
+
+        <p><strong>Shallow depth of field</strong><br>
+        Selective focus can direct attention, but it does not automatically create story.</p>
+
+        <p><strong>Epic subject matter</strong><br>
+        A dramatic subject may be visually powerful yet still narratively empty.</p>
+
+        <p>Cinematic feeling is structural, not cosmetic.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What This Looks Like in Practice</h2>
+        </div>
+
+        <div class="example-images">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Tension held in stillness rather than action
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Atmosphere behaving like unresolved plot
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/${image3.id}`}>
+              <img src={image3.src} alt={image3.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Landscape as emotional direction, not just setting
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>Why Cinematic Feeling Matters</h2>
+        </div>
+
+        <p>When an image feels cinematic, the viewer does not stay outside it for long. The frame begins to act like an invitation or a pull. It creates a lived tension rather than a solved description.</p>
+
+        <p>That is why cinematic photographs often stay with people. They do not just show a scene. They continue behaving like a remembered fragment of something larger.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Explore the Work</h2>
+        </div>
+
+        <p>If you want to see how cinematic feeling operates inside still photography, start with the pages and galleries where story, atmosphere, and implication are treated as structural elements rather than embellishment.</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Other/One-Image-Movie" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">One-Image Movie™</a> — The concept page for cinematic stillness under narrative pressure
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a> — Where cinematic implication meets Western subject matter
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color:#8b5a2b; text-decoration:underline;">Facing History</a> — Historically themed work built on atmosphere and consequence
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <WesternDefinitions variant="definition" currentPage={11} />
+
+    <SiteFooter />
+  </main>
+
+  <style>
+    .story-section { line-height: 1.7; }
+    .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    .story-block h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      color: #1a1a1a;
+    }
+    .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    .hero-image-wrap {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: clamp(220px, 34vw, 360px);
+      object-fit: cover;
+      object-position: center 28%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+    .example-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .example-images figure { margin: 0; }
+    .example-images img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    @media (max-width: 768px) {
+      .example-images { grid-template-columns: 1fr; }
+      .story-section { padding-left: 1rem; padding-right: 1rem; }
+    }
+  </style>
+</BaseLayout>

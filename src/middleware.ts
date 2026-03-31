@@ -61,7 +61,10 @@ function normalizeK4HostInSchemaContent(content: string): string {
 function redirectToCustom404(): Response {
   return new Response(null, {
     status: 302,
-    headers: { Location: "/404" },
+    headers: {
+      Location: "/404",
+      "Cache-Control": "no-store, max-age=0",
+    },
   });
 }
 
@@ -230,7 +233,16 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
 // The React hydration fix for Error #418 was NOT caused by this middleware - 
 // it was caused by components using window.innerWidth during render instead of in useEffect
 export const onRequest: MiddlewareHandler = async (context, next) => {
-  const { pathname } = context.url;
+  const { pathname, search } = context.url;
+
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    return new Response(null, {
+      status: 301,
+      headers: {
+        Location: `${normalizePath(pathname)}${search}`,
+      },
+    });
+  }
 
   // ✅ Redirect: legacy SmugMug /Photography-Galleries/ → modern /Galleries/
   // NOTE: These paths can bypass Netlify's _redirects in SSR mode.
@@ -344,7 +356,10 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
   ) {
     return new Response(null, {
       status: 302,
-      headers: { Location: "/404" },
+      headers: {
+        Location: "/404",
+        "Cache-Control": "no-store, max-age=0",
+      },
     });
   }
 

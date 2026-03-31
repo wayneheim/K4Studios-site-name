@@ -7,13 +7,13 @@
  * 
  * Variants:
  * - "index"      → Full cornerstone card grid (Blog index page)
- * - "definition" → Numbered series nav (Definition pages 1-7)
+ * - "definition" → Numbered series nav (Definition pages 1-13)
  * - "post"       → Simple text link list (Regular blog posts)
  */
 
 interface Props {
   variant?: "index" | "definition" | "post";
-  currentPage?: number; // 1-7, used to highlight current page in definition variant
+  currentPage?: number; // 1-13, used to highlight current page in definition variant
 }
 
 const { variant = "post", currentPage } = Astro.props;
@@ -72,13 +72,43 @@ const { variant = "post", currentPage } = Astro.props;
         <h3>What Is Cowboy Fine Art Photography?</h3>
         <p>Authored portraiture — craft, narrative, and psychological depth</p>
       </a>
+
+      <a href="/Blog/narrative-western-art-vs-traditional" class="card">
+        <span class="num">9</span>
+        <h3>Narrative Western Art vs Traditional Western Art</h3>
+        <p>Where story, consequence, and lived experience separate from subject alone</p>
+      </a>
+
+      <a href="/Blog/what-is-narrative-photography" class="card">
+        <span class="num">10</span>
+        <h3>What Is Narrative Photography?</h3>
+        <p>Definition, structure, and why some photographs feel like lived moments</p>
+      </a>
+
+      <a href="/Blog/what-makes-an-image-feel-cinematic" class="card">
+        <span class="num">11</span>
+        <h3>What Makes an Image Feel Cinematic?</h3>
+        <p>Tension, implication, framing, and the felt presence of story</p>
+      </a>
+
+      <a href="/Blog/can-photography-be-narrative-western-art" class="card">
+        <span class="num">12</span>
+        <h3>Can Photography Be Narrative Western Art?</h3>
+        <p>Why medium does not determine narrative depth or artistic legitimacy</p>
+      </a>
+
+      <a href="/Blog/narrative-vs-documentary-photography" class="card">
+        <span class="num">13</span>
+        <h3>Narrative vs Documentary Photography</h3>
+        <p>How interpretation, implication, and record diverge inside the frame</p>
+      </a>
     </div>
   </section>
 )}
 
 {variant === "definition" && (
   <section class="western-series">
-    <p class="series-label">Western Art Series</p>
+    <p class="series-label">Cornerstone Series</p>
     <nav class="series-nav">
       {currentPage === 1 ? (
         <span class="current">1</span>
@@ -127,13 +157,43 @@ const { variant = "post", currentPage } = Astro.props;
       ) : (
         <a href="/Blog/what-is-cowboy-fine-art-photography" title="What Is Cowboy Fine Art Photography?">8</a>
       )}
+      <span class="sep">|</span>
+      {currentPage === 9 ? (
+        <span class="current">9</span>
+      ) : (
+        <a href="/Blog/narrative-western-art-vs-traditional" title="Narrative Western Art vs Traditional Western Art">9</a>
+      )}
+      <span class="sep">|</span>
+      {currentPage === 10 ? (
+        <span class="current">10</span>
+      ) : (
+        <a href="/Blog/what-is-narrative-photography" title="What Is Narrative Photography?">10</a>
+      )}
+      <span class="sep">|</span>
+      {currentPage === 11 ? (
+        <span class="current">11</span>
+      ) : (
+        <a href="/Blog/what-makes-an-image-feel-cinematic" title="What Makes an Image Feel Cinematic?">11</a>
+      )}
+      <span class="sep">|</span>
+      {currentPage === 12 ? (
+        <span class="current">12</span>
+      ) : (
+        <a href="/Blog/can-photography-be-narrative-western-art" title="Can Photography Be Narrative Western Art?">12</a>
+      )}
+      <span class="sep">|</span>
+      {currentPage === 13 ? (
+        <span class="current">13</span>
+      ) : (
+        <a href="/Blog/narrative-vs-documentary-photography" title="Narrative vs Documentary Photography">13</a>
+      )}
     </nav>
   </section>
 )}
 
 {variant === "post" && (
   <section class="definition-links">
-    <h3>Western Art Definitions</h3>
+    <h3>Cornerstone Definitions</h3>
     <div class="definition-row">
       <a href="/Blog/what-is-western-art">What Is Western Art?</a>
       <span class="sep">|</span>
@@ -150,6 +210,16 @@ const { variant = "post", currentPage } = Astro.props;
       <a href="/Blog/what-is-historical-western-photography">What Is Historical Western Photography?</a>
       <span class="sep">|</span>
       <a href="/Blog/what-is-cowboy-fine-art-photography">What Is Cowboy Fine Art Photography?</a>
+      <span class="sep">|</span>
+      <a href="/Blog/narrative-western-art-vs-traditional">Narrative Western Art vs Traditional Western Art</a>
+      <span class="sep">|</span>
+      <a href="/Blog/what-is-narrative-photography">What Is Narrative Photography?</a>
+      <span class="sep">|</span>
+      <a href="/Blog/what-makes-an-image-feel-cinematic">What Makes an Image Feel Cinematic?</a>
+      <span class="sep">|</span>
+      <a href="/Blog/can-photography-be-narrative-western-art">Can Photography Be Narrative Western Art?</a>
+      <span class="sep">|</span>
+      <a href="/Blog/narrative-vs-documentary-photography">Narrative vs Documentary Photography</a>
     </div>
   </section>
 )}

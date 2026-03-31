@@ -219,9 +219,53 @@ const recentTrackEventTs = new Map<string, number>();
 const recentActionPixelTs = new Map<string, number>();
 const TRACK_EVENT_DEDUPE_WINDOW_MS = 2500;
 const ACTION_PIXEL_DEDUPE_WINDOW_MS = 2500;
+const SKIP_NEXT_GALLERY_LANDING_KEY = 'k4_skip_next_gallery_landing';
+const SKIP_NEXT_GALLERY_LANDING_TTL_MS = 12000;
 const EVENT_SAMPLE_RATES: Record<string, number> = {
   site_content_view: 0.5
 };
+
+function markSkipNextGalleryLanding(galleryId?: string | null): void {
+  if (typeof window === 'undefined') return;
+  try {
+    sessionStorage.setItem(
+      SKIP_NEXT_GALLERY_LANDING_KEY,
+      JSON.stringify({
+        at: Date.now(),
+        galleryId: galleryId || null
+      })
+    );
+  } catch {
+    // ignore
+  }
+}
+
+function shouldSkipNextGalleryLanding(galleryId?: string | null): boolean {
+  if (typeof window === 'undefined') return false;
+  try {
+    const raw = sessionStorage.getItem(SKIP_NEXT_GALLERY_LANDING_KEY);
+    if (!raw) return false;
+
+    const parsed = JSON.parse(raw) as { at?: number; galleryId?: string | null };
+    const createdAt = typeof parsed.at === 'number' ? parsed.at : 0;
+    const ageMs = Date.now() - createdAt;
+    if (!createdAt || ageMs > SKIP_NEXT_GALLERY_LANDING_TTL_MS) {
+      sessionStorage.removeItem(SKIP_NEXT_GALLERY_LANDING_KEY);
+      return false;
+    }
+
+    const expectedGalleryId = parsed.galleryId || null;
+    const incomingGalleryId = galleryId || null;
+    if (expectedGalleryId && incomingGalleryId !== expectedGalleryId) {
+      return false;
+    }
+
+    sessionStorage.removeItem(SKIP_NEXT_GALLERY_LANDING_KEY);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 function stableHash(input: string): number {
   let hash = 2166136261;
@@ -397,6 +441,10 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
           : 'other'
   );
 
+  if (event === 'exit_to_gallery') {
+    markSkipNextGalleryLanding(inferredGalleryId);
+  }
+
   // Prevent accidental double-counting
   if (shouldSkipDuplicateEvent(event, context, pagePath)) return;
 
@@ -520,6 +568,29 @@ export function emitActionPixel(action: string, imageId: string | null = null, c
       return;
     }
 
+    const pixelUrl = `${PIXEL_ENDPOINT}?${params.toString()}`;
+
+    // Navigation-bound clicks can abort image-based pixels before they leave the page.
+    // Prefer keepalive fetch for action/page pixels, and fall back to image beacons.
+    if (pixelType !== 'image' && typeof fetch === 'function') {
+      fetch(pixelUrl, {
+        method: 'GET',
+        keepalive: true,
+        cache: 'no-store',
+        credentials: 'same-origin'
+      }).catch(() => {
+        const img = new Image();
+        img.referrerPolicy = 'same-origin';
+        inflightActionPixels.push(img);
+        img.onload = img.onerror = () => {
+          const idx = inflightActionPixels.indexOf(img);
+          if (idx >= 0) inflightActionPixels.splice(idx, 1);
+        };
+        img.src = pixelUrl;
+      });
+      return;
+    }
+
     const img = new Image();
     img.referrerPolicy = 'same-origin';
     inflightActionPixels.push(img);
@@ -527,7 +598,7 @@ export function emitActionPixel(action: string, imageId: string | null = null, c
       const idx = inflightActionPixels.indexOf(img);
       if (idx >= 0) inflightActionPixels.splice(idx, 1);
     };
-    img.src = `${PIXEL_ENDPOINT}?${params.toString()}`;
+    img.src = pixelUrl;
   } catch (e) {
     if (isK4Debug()) {
       console.error('[k4] emitActionPixel failed', {
@@ -651,6 +722,10 @@ function trackDerivedViewsFromLocation(): void {
 
   const galleryId = getGalleryIdFromPath(path);
   if (galleryId) {
+    if (shouldSkipNextGalleryLanding(galleryId)) {
+      return;
+    }
+
     trackEvent('gallery_view', { galleryId, pageType: 'gallery' });
     emitActionPixel('gallery_landing_view', null, {
       galleryId,
@@ -957,8 +1032,9 @@ export function getGalleryIdFromPath(path?: string): string | null {
   
   if (!isGalleryPath) return null;
   
-  // Strip the image ID suffix if present (e.g., /i-xxx at end)
-  let normalized = p.replace(/\/i-[a-zA-Z0-9_-]+\/?$/, '');
+  // Strip image detail suffix from the first image-id segment onward.
+  // Handles /.../i-abc, /.../i-abc/, /.../i-abc/A, /.../i-abc/buy, etc.
+  let normalized = p.replace(/\/i-[a-zA-Z0-9_-]+(?:\/.*)?$/, '');
   
   // Strip trailing slash
   normalized = normalized.replace(/\/$/, '');
@@ -981,6 +1057,6 @@ export function getGalleryIdFromPath(path?: string): string | null {
  */
 export function getImageIdFromPath(path?: string): string | null {
   const p = path || (typeof window !== 'undefined' ? window.location.pathname : '');
-  const match = p.match(/(i-[a-zA-Z0-9_-]+)\/?$/);
+  const match = p.match(/(?:^|\/)(i-[a-zA-Z0-9_-]+)(?:\/|$)/);
   return match ? match[1] : null;
 }

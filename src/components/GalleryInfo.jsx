@@ -146,13 +146,13 @@ export default function GalleryInfo({
   const lowestSortImage = pickFirstRealImage(galleryData);
 
   // Pick a random hero image from the gallery pool (excluding ghosts)
-  // This rotates on each page load, like the preview strip
+  // Use a deterministic hero image so the landing page keeps a stable identity
   const heroImage = useMemo(() => {
     const pool = (galleryData || []).filter(
       img => img?.id && img.id !== "i-k4studios" && img.visibility !== "ghost"
     );
     if (!pool.length) return null;
-    return pool[Math.floor(Math.random() * pool.length)];
+    return pickFirstRealImage(pool) || pool[0];
   }, [galleryData]);
 
   // "Explore the Gallery" always goes to first image in gallery
@@ -353,7 +353,6 @@ export default function GalleryInfo({
                       transition: 'opacity 0.5s ease-in-out',
                     }}
                   />
-                  <figcaption>{heroImage.title || ""}</figcaption>
                 </figure>
               </a>
             )}
@@ -400,15 +399,12 @@ export default function GalleryInfo({
               }}
             >
               <figure style={{ position: 'relative', minHeight: '280px' }}>
-                <figcaption style={{ marginBottom: '0.5rem' }}>
-                  {heroImage.title || ""}
-                </figcaption>
                 {/* Placeholder skeleton while loading */}
                 {!heroLoaded && (
                   <div
                     style={{
                       position: 'absolute',
-                      top: '2rem',
+                      top: 0,
                       left: 0,
                       right: 0,
                       bottom: 0,

@@ -9,6 +9,7 @@ import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import StorySlider        from '@/components/StorySlider.tsx';
+import WesternGuideNav    from '@/components/authority/WesternGuideNav.astro';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 
 // Gallery data for feathering + StorySlider
@@ -159,7 +160,7 @@ const webPageSchema = JSON.stringify({
   "@id": `https://k4studios.com${pagePath}#webpage`,
   url: `https://k4studios.com${pagePath}`,
   name: "Fine Art Photography of the American West",
-  description: "Fine art photography of the American West by Wayne Heim — painterly portraits and stories from the historical American frontier. Cowboys, Indigenous presence, settlers, and the landscapes that shaped them.",
+  description: "Fine art photography of the American West by Wayne Heim: historically rooted, painterly photography spanning cowboy portraits, Indigenous presence, frontier lives, and the landscapes that shaped them. Broader than cowboy-only Western imagery and distinct from decor or scenic-postcard photography.",
   inLanguage: "en",
   isPartOf: {
     "@type": "WebSite",
@@ -214,7 +215,7 @@ const tombstonesWithThumbs = landingAmericanWest.tombstones.map((stone: any) => 
 ---
 
 <BaseLayout
-  title="Fine Art Photography of the American West – Wayne Heim"
+  title="Fine Art Photography of the American West | Historical, Painterly American West Photography – Wayne Heim"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}
@@ -228,8 +229,8 @@ const tombstonesWithThumbs = landingAmericanWest.tombstones.map((stone: any) => 
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Fine Art Photography of the American West: Painterly Portraits and Stories from the Historical American Frontier",
-    "description": "Fine art photography of the American West is authored visual work that interprets the frontier era—its people, landscapes, struggles, and spirit—through deliberate artistic craft rather than simple documentation.",
+    "headline": "Fine Art Photography of the American West: Historical, Painterly Photography of Frontier Lives and Landscapes",
+    "description": "Fine art photography of the American West is authored visual work interpreting the people, landscapes, and historical atmosphere of the American frontier through painterly craft rather than decor, stock imagery, or simple documentation.",
     "author": { "@type": "Person", "name": "Wayne Heim", "url": "https://k4studios.com/" },
     "publisher": { "@type": "Organization", "name": "K4 Studios", "url": "https://k4studios.com/" },
     "mainEntityOfPage": "https://k4studios.com/Fine-Art-Photography-of-the-American-West",
@@ -258,7 +259,10 @@ const tombstonesWithThumbs = landingAmericanWest.tombstones.map((stone: any) => 
         <h1 class="page-title fade-in reveal-on-scroll">{landingAmericanWest.title}</h1>
         <h2 class="page-subtitle fade-in reveal-on-scroll">{landingAmericanWest.subtitle}</h2>
         <p class="page-summary fade-in reveal-on-scroll">
-          Fine art photography of the American West—cowboys, Indigenous presence, frontier lives, and the land that shaped them. Authored work that interprets the historical West through deliberate artistic craft.
+          Fine art photography of the American West brings together cowboy portraits, Indigenous presence, frontier lives, and the land that shaped them. It is broader than cowboy-only Western imagery and distinct from decor, stock, or scenic-postcard photography.
+        </p>
+        <p class="fade-in reveal-on-scroll" style="margin-top:0.75rem;">
+          For the narrower subject hub, visit <a href="/Western-Fine-Art-Photography" style="text-decoration: underline;"><strong>Western Fine Art Photography</strong></a>. For the larger cultural frame, continue into <a href="/American-Western-Art" style="text-decoration: underline;">American Western Art</a>.
         </p>
       </div>
     </section>
@@ -347,6 +351,8 @@ const tombstonesWithThumbs = landingAmericanWest.tombstones.map((stone: any) => 
       </div>
       <label for="faq-toggle" class="more-toggle-label"></label>
     </section>
+
+    <WesternGuideNav currentPath={pagePath} />
 
     <SiteFooter class="pt-8 pb-12" />
   </main>

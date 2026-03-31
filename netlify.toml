@@ -16,6 +16,36 @@
   autoLaunch = false
 
 ##############################
+# ✅ Analytics Worker Proxy
+# Local Netlify preview does not own these routes, but production does via
+# the Cloudflare analytics worker. Proxy them in dev so preview pages stop
+# POSTing into the local 404 handler.
+##############################
+[[redirects]]
+from = "/__k4e"
+to = "https://k4-analytics.wayneheim.workers.dev/__k4e"
+status = 200
+force = true
+
+[[redirects]]
+from = "/_state"
+to = "https://k4-analytics.wayneheim.workers.dev/_state"
+status = 200
+force = true
+
+[[redirects]]
+from = "/edge-event"
+to = "https://k4-analytics.wayneheim.workers.dev/edge-event"
+status = 200
+force = true
+
+[[redirects]]
+from = "/__k4track/event"
+to = "https://k4-analytics.wayneheim.workers.dev/__k4track/event"
+status = 200
+force = true
+
+##############################
 # ✅ Trailing Slash Normalization
 # Prevents Smart-404 function burns caused by slash variants.
 # Example: /Galleries/.../i-XXXXX/ -> /Galleries/.../i-XXXXX

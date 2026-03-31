@@ -135,9 +135,9 @@ Disallow: /
 
 # --- Ahrefs (explicit clarity) ---
 User-agent: AhrefsBot
-Allow: /
+Disallow: /
 User-agent: AhrefsSiteAudit
-Allow: /
+Disallow: /
 
 # --- Semrush standard allowed; AI variant blocked ---
 User-agent: SemrushBot

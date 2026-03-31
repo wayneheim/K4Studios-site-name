@@ -6,7 +6,8 @@ export const americanWestStory = [
     paragraphs: [
       "Fine art photography of the American West begins with people. Cowboys, Indigenous lives, frontier families, and the unforgiving land that shaped them.",
       "The West was never a single story. It was thousands of lives unfolding across a landscape that demanded endurance, ingenuity, and resolve.",
-      "These photographs return to that world—not as nostalgia, but as interpretation. Images built through <a href='/Pictorialist-Photography'>painterly photographic craft</a> and narrative restraint, exploring the lives that formed the foundation of the American frontier.",
+      "These photographs return to that world—not as nostalgia, decor, or scenic wallpaper, but as interpretation. Images built through <a href='/Pictorialist-Photography'>painterly photographic craft</a> and narrative restraint, exploring the lives that formed the foundation of the American frontier.",
+      "This page is intentionally broader than <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>. It treats the American West as a full historical environment rather than a narrower Western subject cluster.",
       "Here, 'Western art' refers to the American West—frontier life, cowboys, Indigenous presence, and 19th-century Western history—not European or Western civilization art traditions."
     ]
   },
@@ -16,6 +17,7 @@ export const americanWestStory = [
     subhead: "The American West as Historical Environment",
     paragraphs: [
       "Most Western photography narrows the frame to one familiar icon: the cowboy, the horse, the open range. But the American West was never held together by one figure alone.",
+      "That is one reason the phrase 'fine art photography of the American West' matters. It names a broader field than cowboy photography alone and a more serious one than generic American West decor language.",
       "It was a historical environment shaped by many lives moving through the same hard ground—cowboys and settlers, Indigenous communities, frontier towns, and the vast land that tested all of them.",
       "That is the larger field this work returns to. Not one myth, but a world. Not one emblem, but the human lives behind it."
     ]
@@ -30,7 +32,8 @@ export const americanWestStory = [
       "The American West works the same way.",
       "Its mythology—the legendary cowboy, the lone rider, the frontier spirit—only carries weight when grounded in the lives that built it.",
       "Before the legend came the lives that built it.",
-      "These photographs return to those foundations, bringing those lives back into focus—not as romantic myth, but as the raw human stories that created it."
+      "These photographs return to those foundations, bringing those lives back into focus—not as romantic myth, but as the raw human stories that created it.",
+      "For the more historically concentrated branch of this work, see <a href='/Western-Frontier-Art'>Western Frontier Art</a>."
     ]
   },
 

@@ -9,6 +9,7 @@ import SiteFooter         from '@/components/Footer.astro';
 import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import StorySlider        from '@/components/StorySlider.tsx';
 import HybridBookCarousel from '@/components/hybrid/HybridBookCarousel.jsx';
+import WesternGuideNav    from '@/components/authority/WesternGuideNav.astro';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 
 import { galleryData as cowboyColorDataFull }
@@ -39,9 +40,9 @@ import '@/styles/oneupheader.css';
 
 const pagePath = "/Western-Frontier-Art";
 const openingDefinition = [
-  "Western frontier art interprets the people, landscape, and historical forces that shaped the American frontier. Rather than depicting the West as myth or decoration, frontier art explores the lived reality of the frontier era—the tensions, survival, and individual lives that formed the foundation of Western history.",
-  "Within this tradition the American frontier becomes more than scenery. It becomes a stage where human decisions, cultural collisions, and the pressures of a harsh landscape created the mythology that later defined the West.",
-  "The purpose of frontier art is not to recreate legend, but to explore the world that produced it."
+  "Western frontier art is historically rooted fine art about the American frontier: the people, land, conflict, labor, and cultural pressures that shaped the nineteenth-century West. At its best, it is not frontier decor or generic Western wall art. It is an authored interpretation of frontier life.",
+  "Within this tradition the American frontier becomes more than scenery. It becomes a human stage where decision, hardship, cultural collision, endurance, and consequence created the mythology that later defined the West.",
+  "The purpose of frontier art is not to decorate with cowboy atmosphere or recycle legend, but to interpret the world that produced the legend in the first place."
 ];
 
 const signatureThesisLine = "Before the legend came the lives that built it.";
@@ -317,7 +318,7 @@ const tombstonesWithThumbs = landingFrontierArt.tombstones.map((stone: any) => {
 ---
 
 <BaseLayout
-  title="Western Frontier Art – Wayne Heim | K4 Studios"
+  title="Western Frontier Art | Painterly Fine Art of the American Frontier – Wayne Heim"
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}
@@ -329,7 +330,7 @@ const tombstonesWithThumbs = landingFrontierArt.tombstones.map((stone: any) => {
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Western Frontier Art: Painterly Fine Art Interpreting the American Frontier",
+    "headline": "Western Frontier Art: Painterly Fine Art of the American Frontier",
     "author": {
       "@type": "Person",
       "name": "Wayne Heim"
@@ -342,7 +343,7 @@ const tombstonesWithThumbs = landingFrontierArt.tombstones.map((stone: any) => {
         "url": "https://www.k4studios.com/images/k4-logo.png"
       }
     },
-    "description": "Western frontier art interprets the people, landscape, and historical forces that shaped the American frontier, exploring the lived reality behind Western mythology.",
+    "description": "Western frontier art is historically rooted fine art interpreting the people, tensions, and lived reality of the American frontier rather than generic Western decor or frontier-themed wall art.",
     "mainEntityOfPage": "https://www.k4studios.com/Western-Frontier-Art"
   }
   </script>
@@ -470,6 +471,8 @@ const tombstonesWithThumbs = landingFrontierArt.tombstones.map((stone: any) => {
       </div>
       <label for="faq-toggle" class="more-toggle-label"></label>
     </section>
+
+    <WesternGuideNav currentPath={pagePath} />
 
     <SiteFooter class="pt-8 pb-12" />
   </main>

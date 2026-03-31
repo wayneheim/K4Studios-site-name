@@ -228,6 +228,7 @@ export default function PictureShowBase({ rawData = [], basePath = "", titleBase
 
   const [volume, setVolume] = useState(defaultVolume);
   const exitHref = basePath || "/";
+  const exitNavPendingRef = useRef(false);
 
   useEffect(() => {
     currentIndexRef.current = currentIndex;
@@ -726,6 +727,23 @@ const isSpeechActive = () => {
     });
   };
 
+  const handleTrackedExitToGallery = (e, trigger, imageId = null) => {
+    if (exitNavPendingRef.current) {
+      e?.preventDefault?.();
+      return;
+    }
+
+    e?.preventDefault?.();
+    stopSpeech();
+    trackStoryAction('exit_to_gallery', imageId, { trigger });
+
+    exitNavPendingRef.current = true;
+    // Small delay improves reliability for unload-prone click tracking.
+    window.setTimeout(() => {
+      window.location.href = exitHref;
+    }, 75);
+  };
+
 
 
 
@@ -992,12 +1010,7 @@ const isSpeechActive = () => {
 
                   <a
                     href={exitHref}
-                    onClick={() => {
-                      stopSpeech();
-                      trackStoryAction('exit_to_gallery', currentImage?.id || null, {
-                        trigger: 'story_end_exit'
-                      });
-                    }}
+                    onClick={(e) => handleTrackedExitToGallery(e, 'story_end_exit', currentImage?.id || null)}
                     className="px-4 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-100 flex items-center gap-2 text-gray-700"
                     title="Exit story"
                   >
@@ -1400,12 +1413,7 @@ const isSpeechActive = () => {
                   {currentIndex > 0 && (
                     <a
                       href={exitHref}
-                      onClick={() => {
-                        stopSpeech();
-                        trackStoryAction('exit_to_gallery', currentImage?.id || null, {
-                          trigger: 'story_exit_button'
-                        });
-                      }}
+                      onClick={(e) => handleTrackedExitToGallery(e, 'story_exit_button', currentImage?.id || null)}
                       className="px-2 py-2 border border-gray-200 rounded-md text-sm bg-white hover:bg-gray-50 flex items-center gap-2"
                       title="Exit story"
                       aria-label="Exit story"

@@ -14,6 +14,7 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'historical themed western photography': '/Blog/what-is-historical-western-photography',
   'historical western art': '/Historical-Western-Art',
   'historical western photography': '/Blog/what-is-historical-western-photography',
+  'narrative western art': '/Narrative-Western-Art',
   'painterly fine art photography': '/Galleries/Painterly-Fine-Art-Photography',
   'painterly photography': '/Blog/what-is-painterly-photography',
   'western art': '/Blog/what-is-western-art',

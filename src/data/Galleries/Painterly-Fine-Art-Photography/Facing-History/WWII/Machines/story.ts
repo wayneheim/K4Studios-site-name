@@ -3,14 +3,14 @@ export const westernStory = [
   /* ───────────────────────────────────────────── 1 */
   {
     breadcrumb: "Men & Machines | WWII",
-    title: "Men & Machines — WWII Portraiture by Wayne Heim",
+    title: "Men & Machines — WWII Fine Art Photography by Wayne Heim",
     subhead: "Where Grit Meets Steel. Where Men and Their Machines Become One.",
     tagline: "Painterly Fine Art Photography of WWII Vehicles, Crews, and Frontline Resolve",
     paragraphs: [
       `Step inside the story of the men who trusted steel with their lives. War was never fought by machines alone. Every bolt, every tread, every battered fender carried the weight of the Greatest Generation who depended on it. In this series, Wayne Heim reveals that unbreakable bond — the moment a soldier stopped seeing his machine as a tool and started seeing it as a lifeline.`,
       `Captured at immersive WWII reenactments like D-Day Conneaut — where authenticity runs as deep as memory — these painterly fine art portraits don't document machinery. They humanize it.`,
       `You feel the heat of engines, the metallic heartbeat beneath the mud, the quiet conversations between grease-stained hands and the steel they trust with their lives.`,
-      `These aren't war photos. They are One-Image Movies™ — moments suspended between preparation and consequence, inviting you to stand where a soldier once stood… and finish the story yourself.`
+      `These are not war photos. They are One-Image Movies™ — moments suspended between preparation and consequence, inviting you to stand where a soldier once stood and finish the story yourself.`
     ]
   },
 
@@ -51,7 +51,7 @@ export const westernStory = [
     ],
     paragraphs: [
       `Wayne’s painterly process transforms historically accurate scenes into **timeless narrative portraits**. Each image is both artifact and artwork — layered with tension, texture, and the emotional gravity of a world at war.`,
-      `You’re not looking at history from a distance. You’re standing in it.`
+      `You are not looking at history from a distance. You are standing in it.`
     ]
   },
 
@@ -62,7 +62,7 @@ export const westernStory = [
     paragraphs: [
       `Every piece in this series is a visual conversation between memory and machinery — crafted with the detail of a historian and the dramatic touch of a cinematic storyteller.`,
       `These prints aren’t simply collectibles. They are heirlooms — tributes to endurance, innovation, and the men who shaped the outcome of a global conflict.`,
-      `For WWII enthusiasts, reenactors, military historians, and fine art collectors, Men & Machines offers a rare fusion of authenticity and artistry.`
+      `For WWII enthusiasts, reenactors, military historians, and fine art collectors, Men & Machines offers a rare fusion of authenticity, artistry, and unresolved human story.`
     ]
   },
 

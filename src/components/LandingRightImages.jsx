@@ -30,7 +30,7 @@ const shuffleArray = (arr) => {
  * 
  * On each page load, picks a random subset from the pool for display.
  */
-export default function LandingRightImages({ heading = "", images = [], displayCount }) {
+export default function LandingRightImages({ heading = "", images = [], displayCount, dynamicSpacing = true }) {
   // Client-side: pick random subset from pool on mount
   const [displayImages, setDisplayImages] = useState([]);
   
@@ -49,7 +49,7 @@ export default function LandingRightImages({ heading = "", images = [], displayC
   }, [displayImages]);
 
   return (
-    <aside className="sidebar-thumbnails" data-dynamic-sidebar>
+    <aside className="sidebar-thumbnails" data-dynamic-sidebar={dynamicSpacing ? true : undefined}>
       <div className="thumb-heading-wrapper">
         <h3 className="thumb-heading">{heading}</h3>
       </div>
@@ -60,7 +60,12 @@ export default function LandingRightImages({ heading = "", images = [], displayC
         const imageSrc = imageId ? getProxySrc(imageId, 's') : '';
         
         return (
-          <a href={href} key={href || id} data-sidebar-index={index} style={index > 0 ? { visibility: 'hidden' } : {}}>
+          <a
+            href={href}
+            key={href || id}
+            data-sidebar-index={index}
+            style={dynamicSpacing && index > 0 ? { visibility: 'hidden' } : undefined}
+          >
             <img
               src={imageSrc}
               alt={alt}
@@ -154,62 +159,62 @@ export default function LandingRightImages({ heading = "", images = [], displayC
         }
       `}</style>
 
-      {/* Vanilla JS for dynamic spacing - runs without React hydration */}
-      <script dangerouslySetInnerHTML={{ __html: `
-        (function() {
-          var attempts = 0;
-          var maxAttempts = 30; // 3 seconds max wait
-          
-          function calcSidebarSpacing() {
-            var textCol = document.querySelector('.text-column');
-            var sidebar = document.querySelector('[data-dynamic-sidebar]');
-            if (!textCol || !sidebar) return;
+      {dynamicSpacing && (
+        <script dangerouslySetInnerHTML={{ __html: `
+          (function() {
+            var attempts = 0;
+            var maxAttempts = 30; // 3 seconds max wait
             
-            var links = sidebar.querySelectorAll('a[data-sidebar-index]');
-            if (links.length <= 1) return;
-            
-            var imgs = sidebar.querySelectorAll('.thumb-img');
-            var allLoaded = Array.from(imgs).every(function(img) { return img.complete; });
-            
-            // Failsafe: reveal after max attempts even if not all loaded
-            if (!allLoaded && attempts < maxAttempts) {
-              attempts++;
-              setTimeout(calcSidebarSpacing, 100);
-              return;
-            }
-            
-            var textHeight = textCol.offsetHeight;
-            var totalImgHeight = Array.from(imgs).reduce(function(sum, img) { return sum + img.offsetHeight; }, 0);
-            var headingArea = 80;
-            var firstGap = 36;
-            var bottomBuffer = 750;
-            var available = textHeight - headingArea - firstGap - totalImgHeight - bottomBuffer;
-            var numGaps = links.length - 1;
-            
-            if (available > 0 && numGaps > 0) {
-              var gap = Math.max(available / numGaps, 36);
-              links.forEach(function(link, i) {
-                if (i > 0) {
-                  link.style.display = 'block';
-                  link.style.marginTop = gap + 'px';
+            function calcSidebarSpacing() {
+              var textCol = document.querySelector('.text-column');
+              var sidebar = document.querySelector('[data-dynamic-sidebar]');
+              if (!textCol || !sidebar) return;
+              
+              var links = sidebar.querySelectorAll('a[data-sidebar-index]');
+              if (links.length <= 1) return;
+              
+              var imgs = sidebar.querySelectorAll('.thumb-img');
+              var allLoaded = Array.from(imgs).every(function(img) { return img.complete; });
+              
+              if (!allLoaded && attempts < maxAttempts) {
+                attempts++;
+                setTimeout(calcSidebarSpacing, 100);
+                return;
+              }
+              
+              var textHeight = textCol.offsetHeight;
+              var totalImgHeight = Array.from(imgs).reduce(function(sum, img) { return sum + img.offsetHeight; }, 0);
+              var headingArea = 80;
+              var firstGap = 36;
+              var bottomBuffer = 750;
+              var available = textHeight - headingArea - firstGap - totalImgHeight - bottomBuffer;
+              var numGaps = links.length - 1;
+              
+              if (available > 0 && numGaps > 0) {
+                var gap = Math.max(available / numGaps, 36);
+                links.forEach(function(link, i) {
+                  if (i > 0) {
+                    link.style.display = 'block';
+                    link.style.marginTop = gap + 'px';
+                    link.style.visibility = 'visible';
+                  }
+                });
+              } else {
+                links.forEach(function(link) {
                   link.style.visibility = 'visible';
-                }
-              });
-            } else {
-              links.forEach(function(link) { 
-                link.style.visibility = 'visible';
-              });
+                });
+              }
             }
-          }
-          
-          if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', function() { setTimeout(calcSidebarSpacing, 150); });
-          } else {
-            setTimeout(calcSidebarSpacing, 150);
-          }
-          window.addEventListener('resize', calcSidebarSpacing);
-        })();
-      `}} />
+            
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', function() { setTimeout(calcSidebarSpacing, 150); });
+            } else {
+              setTimeout(calcSidebarSpacing, 150);
+            }
+            window.addEventListener('resize', calcSidebarSpacing);
+          })();
+        `}} />
+      )}
     </aside>
   );
 }

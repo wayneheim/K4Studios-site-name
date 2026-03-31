@@ -1782,29 +1782,58 @@ export async function getGeography(env, filters) {
 
     const where = dateClause.replace(/\bts\b/g, 'e.ts') || 'e.ts > datetime("now", "-1 day")';
 
-    // Returns both site visitors and art viewers per location.
-    // Only counts JS-verified, non-bot events so geo totals match Pulse visitor counts.
+    // Use distinct in-range visitors and their canonical human_population geo.
+    // This avoids expensive per-visitor window scans while keeping totals aligned.
     const geoQuery = `
-      SELECT 
-        e.country, e.region, e.city,
-        COUNT(DISTINCT e.visitor_id) as visitors,
-        COUNT(DISTINCT CASE 
-          WHEN e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view') 
-          THEN e.visitor_id 
-          ELSE NULL 
-        END) as art_viewers
-      FROM human_population hp
-      JOIN classified_events e ON e.visitor_id = hp.visitor_id
-      WHERE ${where}
-        AND e.source = 'js'
-        AND COALESCE(e.is_bot, 0) = 0
-        AND e.country IS NOT NULL
-        ${qualify(galleryClause)}
-        ${qualify(ipClause)}
-        ${qualify(botClause)}
-        ${qualify(chardonClause)}
-      GROUP BY e.country, e.region, e.city
-      ORDER BY visitors DESC
+      WITH in_range_visitors AS (
+        SELECT DISTINCT e.visitor_id
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where}
+          AND e.source = 'js'
+          AND COALESCE(e.is_bot, 0) = 0
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
+          ${qualify(galleryClause)}
+          ${qualify(ipClause)}
+          ${qualify(botClause)}
+          ${qualify(chardonClause)}
+      ),
+      visitor_home AS (
+        SELECT
+          irv.visitor_id,
+          hp.country,
+          hp.region,
+          hp.city
+        FROM in_range_visitors irv
+        JOIN human_population hp ON hp.visitor_id = irv.visitor_id
+        WHERE hp.country IS NOT NULL
+      ),
+      art_visitors AS (
+        SELECT DISTINCT e.visitor_id
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
+        WHERE ${where}
+          AND e.source = 'js'
+          AND COALESCE(e.is_bot, 0) = 0
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
+          AND e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view')
+          ${qualify(galleryClause)}
+          ${qualify(ipClause)}
+          ${qualify(botClause)}
+          ${qualify(chardonClause)}
+      )
+      SELECT
+        vh.country,
+        vh.region,
+        vh.city,
+        COUNT(*) AS visitors,
+        SUM(CASE WHEN av.visitor_id IS NOT NULL THEN 1 ELSE 0 END) AS art_viewers
+      FROM visitor_home vh
+      LEFT JOIN art_visitors av ON av.visitor_id = vh.visitor_id
+      GROUP BY vh.country, vh.region, vh.city
+      ORDER BY visitors DESC, vh.country, vh.region, vh.city
       LIMIT 20
     `;
     return await env.DB.prepare(geoQuery).all();
@@ -2234,64 +2263,45 @@ export async function getEntryAnalysis(env, filters) {
     const where = qualify(dateClause) || 'e.ts > datetime("now", "-1 day")';
 
     const entryPagesQuery = `
-      WITH filtered_events AS (
+      WITH js_page_events AS (
         SELECT
-          COALESCE(
-            NULLIF(e.session_id, ''),
-            NULLIF(e.session_id_v2, ''),
-            NULLIF(e.visitor_id, ''),
-            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
-          ) AS session_key,
+          e.visitor_id AS visitor_key,
           CASE
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
           END AS page_path,
           e.referer AS referrer,
           e.ua AS ua,
-          e.ts,
-          CASE
-            WHEN e.event_type IN ('page_pixel', 'edge_page') THEN 'P'
-            ELSE 'J'
-          END AS source_kind
-        FROM classified_events e
+          e.ts
+        FROM human_population hp
+        JOIN classified_events e ON e.visitor_id = hp.visitor_id
         WHERE ${where}
           ${qualify(ipClause)}
           ${qualify(safeBotClause)}
           ${qualify(chardonClause)}
           AND ${notCacheWarmer('e')}
           AND COALESCE(e.is_bot, 0) = 0
-          AND (
-            e.event_type IN ('page_pixel', 'edge_page')
-            OR (e.event_type = 'page_view' AND e.source = 'js')
-          )
+          AND e.source = 'js'
+          AND e.event_type = 'page_view'
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
           AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
           AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE 'http%'
           AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '/http%'
           AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '%://%'
-          AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) NOT LIKE '%/i-%'
-          AND NOT (
-            COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) LIKE '/i-%'
-            AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) NOT LIKE '/i-%/%'
-          )
       ),
       first_hits AS (
         SELECT
-          session_key,
+          visitor_key,
           page_path,
           referrer,
           ua,
-          source_kind,
-          ROW_NUMBER() OVER (PARTITION BY session_key ORDER BY ts ASC) AS rn
-        FROM filtered_events
+          ROW_NUMBER() OVER (PARTITION BY visitor_key ORDER BY ts ASC) AS rn
+        FROM js_page_events
       ),
       not_found_hits AS (
         SELECT DISTINCT
-          COALESCE(
-            NULLIF(e.session_id, ''),
-            NULLIF(e.session_id_v2, ''),
-            NULLIF(e.visitor_id, ''),
-            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
-          ) AS session_key,
+          e.visitor_id AS visitor_key,
           CASE
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
@@ -2303,12 +2313,15 @@ export async function getEntryAnalysis(env, filters) {
           ${qualify(chardonClause)}
           AND ${notCacheWarmer('e')}
           AND COALESCE(e.is_bot, 0) = 0
+          AND e.source = 'js'
+          AND e.visitor_id IS NOT NULL
+          AND e.visitor_id != ''
           AND e.event_type IN ('404', '410', 'smart404_redirect', 'smart404_gone', 'smart404_fallback', 'smart404_homepage')
           AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
       )
       SELECT
         page_path,
-        source_kind,
+        'J' AS source_kind,
         CASE
           WHEN (referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct')
             AND LOWER(COALESCE(ua, '')) LIKE '%pinterest%'
@@ -2331,14 +2344,13 @@ export async function getEntryAnalysis(env, filters) {
         COUNT(*) AS sessions
       FROM first_hits
       WHERE rn = 1
-        AND (referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' OR referrer NOT LIKE '%k4studios.com%')
         AND NOT EXISTS (
           SELECT 1
           FROM not_found_hits nf
-          WHERE nf.session_key = first_hits.session_key
+          WHERE nf.visitor_key = first_hits.visitor_key
             AND nf.page_path = first_hits.page_path
         )
-      GROUP BY page_path, source_kind, ref_source
+      GROUP BY page_path, ref_source
       ORDER BY sessions DESC, page_path ASC
       LIMIT 25
     `;
@@ -2666,6 +2678,21 @@ export async function getEdgeEvents(env, filters) {
             ) THEN 1
           ELSE 0
         END as is_probe_noise,
+        CASE
+          WHEN e.event_type IN ('301', 'smart404_redirect')
+            AND SUM(CASE WHEN COALESCE(e.is_bot, 0) = 0 THEN 1 ELSE 0 END) > 0
+            AND SUM(CASE WHEN COALESCE(e.is_bot, 0) = 1 THEN 1 ELSE 0 END) = 0
+            AND NOT (
+              e.target_id LIKE '/Galleries/%/i-%'
+              AND INSTR(e.target_id, '/i-') > 0
+              AND EXISTS (
+                SELECT 1
+                FROM probe_noise_families pnf
+                WHERE pnf.path_prefix = SUBSTR(e.target_id, 1, INSTR(e.target_id, '/i-') - 1)
+              )
+            ) THEN 1
+          ELSE 0
+        END as likely_human_301,
         CASE
           WHEN (
             e.target_id LIKE '/Galleries/%/i-%'

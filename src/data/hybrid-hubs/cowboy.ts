@@ -57,7 +57,7 @@ const carouselIds = carouselSlides.map((s) => s.id);
 
 // ─── Thesis: H1 + body ──────────────────────────────────────────────────────
 export const thesis = {
-  heading: "Cowboy & Western Fine Art Photography for Collectors",
+  heading: "Cowboy & Frontier Fine Art Prints for Collectors",
   subtitle: "Story-driven painterly prints by Wayne Heim",
   body: [
     "These are not illustrations of the West — they are interpretations of it. Each piece begins with a camera but ends with a process closer to painting: layered textures, sculpted light, and a narrative that lives inside the frame long after the shutter closes.",
@@ -68,13 +68,12 @@ export const thesis = {
 
 // ─── Definition: "What Is …?" block ─────────────────────────────────────────
 export const definition = {
-  heading: "What Is Western Fine Art Photography?",
+  heading: "Collector Lens: What Distinguishes This Work",
   paragraphs: [
-    "Western fine art photography is the deliberate, authored interpretation of American Western subjects — cowboys, frontier landscapes, rodeo, ranch life — through a photographic process that prioritizes artistic vision over documentary record. Unlike commercial stock, tourism imagery, or editorial coverage, the fine art practitioner controls composition, palette, and post-process to produce work intended for exhibition, collection, and long-term cultural value.",
-    "Here, 'Western art' refers to the American West — frontier life, cowboys, and 19th-century Western history — not European or Western civilization art traditions.",
-    "It’s useful to name what it is <em>not</em>: Western fine art photography is not simply ‘a photo of a cowboy’ or a scenic postcard with a Western label. It is closer to the tradition of Western art—work that carries lineage from artists like Frederic Remington and Charles M. Russell—because it is built to communicate mood, myth, labor, and place. When done well, the frame behaves like a short story: subject, setting, and tension are composed with intent. That’s why many collectors searching for <strong>fine art Western photography</strong> are really searching for authorship, not documentation.",
-    "At K4 Studios, the process is <em>painterly</em>: each image undergoes tonal sculpting, selective texture overlays, and color grading that reference the traditions of Western illustration while remaining rooted in photographic truth. The goal is not artificiality; it’s interpretation—shaping light and texture until the image reads with the weight of a painting while remaining unmistakably photographic.",
-    "If you’re exploring this genre through the collector lens, start with the <a href=\"/Cowboy-Fine-Art-Photography\">Cowboy Fine Art Photography collection</a> and the broader <a href=\"/Western-Cowboy-Photography\">Western Cowboy Photography</a> body of work. These pages show how a consistent visual language—craft, narrative, and printmaking intent—creates <strong>Western fine art photography</strong> that’s meant to live on walls and hold meaning over time.",
+    "This page is the collector-focused companion to the primary <a href=\"/Western-Fine-Art-Photography\">Western Fine Art Photography</a> hub. Rather than defining the entire field, it narrows the view to the kinds of cowboy and frontier images collectors tend to seek when they want painterly, authored Western work rather than generic decor.",
+    "What distinguishes these pieces is not subject matter alone, but the way subject is handled. Composition is deliberate. Light is sculpted. Atmosphere carries implication. The work draws on the longer tradition of Western art while remaining unmistakably photographic.",
+    "At K4 Studios, the process is <em>painterly</em>: tonal sculpting, selective texture, and disciplined color are used to create prints that reward long viewing. If you want the strict definition of the discipline, use the deep-dive essay. If you want to evaluate the work through a collector lens, this page is built for that purpose.",
+    "From here, continue into the <a href=\"/Cowboy-Fine-Art-Photography\">Cowboy Fine Art Photography collection</a>, the broader <a href=\"/Western-Cowboy-Photography\">Western Cowboy Photography</a> body of work, or return to the main <a href=\"/Western-Fine-Art-Photography\">Western Fine Art Photography</a> hub.",
   ],
   essayHref: "/Blog/what-is-western-fine-art-photography",
   essayLabel: "Read the full definition →",
@@ -145,12 +144,12 @@ export const collectorClose = {
 
 // ─── Page Meta ───────────────────────────────────────────────────────────────
 export const pageMeta = {
-  title: "Western Fine Art Photography Collection | K4 Studios",
+  title: "Cowboy & Frontier Fine Art Prints for Collectors | K4 Studios",
   description:
-    "Curated collection of cowboy and Western fine art photography by Wayne Heim. Painterly limited-edition prints for collectors — archival paper, canvas, and Engrained wood panels. Explore fine art Western photography built for exhibition and collecting.",
+    "Collector-focused selection of cowboy and frontier fine art prints by Wayne Heim. Painterly limited-edition works on archival paper, canvas, and Engrained wood panels, built for exhibition and long-term collecting.",
   ogImage: "i-ncFcHDM",
 };
 
 // ─── Breadcrumb ──────────────────────────────────────────────────────────────
 export const breadcrumb =
-  '<a class="breadcrumb-link" href="/">Home</a> / <span class="breadcrumb-current">Western Fine Art Photography Collection</span>';
+  '<a class="breadcrumb-link" href="/">Home</a> / <span class="breadcrumb-current">Cowboy & Frontier Fine Art Prints</span>';

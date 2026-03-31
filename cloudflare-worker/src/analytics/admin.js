@@ -60,8 +60,9 @@ export async function handleExportCSV(request, env) {
 
     const query = `
       SELECT 
-        ts, session_id, event_type, target_id, 
-        page, referer, ua, country, region, city, visitor_id
+        ts, session_id, event_type, target_id,
+        page, referer, ua, country, region, city, visitor_id,
+        source_layer, trigger
       FROM raw_events 
       WHERE ${dateClause}
       ORDER BY ts DESC
@@ -69,7 +70,7 @@ export async function handleExportCSV(request, env) {
     const results = await env.DB.prepare(query).all();
     const rows = results.results || [];
 
-    const headers = ['ts', 'session_id', 'event_type', 'target_id', 'page', 'referer', 'ua', 'country', 'region', 'city', 'visitor_id'];
+    const headers = ['ts', 'session_id', 'event_type', 'target_id', 'page', 'referer', 'ua', 'country', 'region', 'city', 'visitor_id', 'source_layer', 'trigger'];
     const csvRows = [headers.join(',')];
 
     for (const row of rows) {

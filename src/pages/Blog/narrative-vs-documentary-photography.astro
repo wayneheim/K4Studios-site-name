@@ -1,0 +1,292 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/narrative-vs-documentary-photography";
+const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
+
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
+const headerImage = {
+  id: "i-44jcjTQ",
+  src: getProxySrc("i-44jcjTQ", "l"),
+  alt: "Photograph shaped by authorship rather than neutral record alone"
+};
+
+const image1 = {
+  id: "i-8VPQmkW",
+  src: getProxySrc("i-8VPQmkW", "l"),
+  alt: "Everyday figure who could be documented or narratively interpreted depending on construction"
+};
+const image2 = {
+  id: "i-Txh4c8k",
+  src: getProxySrc("i-Txh4c8k", "l"),
+  alt: "Monochrome image shaped by implication rather than straightforward report"
+};
+const image3 = {
+  id: "i-B7ZSdfs",
+  src: getProxySrc("i-B7ZSdfs", "l"),
+  alt: "Portrait whose emotional weight comes from story rather than report alone"
+};
+
+const pageTitle = "Narrative vs Documentary Photography | K4 Studios";
+const pageDescription = "Documentary photography records what happened. Narrative photography shapes what the moment means. This guide clarifies the difference without collapsing one into the other.";
+
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImage.id, "l"),
+  getAbsoluteProxySrc(image1.id, "l"),
+  getAbsoluteProxySrc(image2.id, "l"),
+  getAbsoluteProxySrc(image3.id, "l"),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "What Is Narrative Photography?", item: "https://www.k4studios.com/Blog/what-is-narrative-photography" },
+    { name: "Narrative vs Documentary Photography", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "Narrative vs Documentary Photography",
+    description: pageDescription,
+    url: canonicalUrl,
+    image: structuredImageUrls,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-03-30",
+    articleSection: "Photography",
+    definedTerm: {
+      name: "Narrative vs Documentary Photography",
+      description: pageDescription,
+    },
+    keywords: [
+      "narrative vs documentary photography",
+      "narrative photography",
+      "documentary photography",
+      "storytelling photography",
+      "difference between narrative and documentary photography"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://www.k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://www.k4studios.com/"
+  }
+});
+
+const meta = {
+  description: pageDescription,
+  keywords: "narrative vs documentary photography, narrative photography, documentary photography, storytelling photography",
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterCard: "summary_large_image"
+};
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Narrative vs Documentary Photography`;
+---
+
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} meta={meta}>
+  <script type="application/ld+json" set:html={breadcrumbStructuredData} />
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section class="hero-image-wrap">
+      <img src={headerImage.src} alt={headerImage.alt} loading="eager" class="hero-image" />
+    </section>
+
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        Narrative vs Documentary Photography
+      </h1>
+      <p style="font-size:1.25rem; color:#666; font-style:italic;">
+        Record and implication are not the same task, even when they share a camera
+      </p>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        A distinction between photography that records what happened and photography that opens what it means
+      </p>
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+        <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
+          Both can use the same subjects and the same camera. They diverge in what the image is built to do.
+        </p>
+
+        <p><strong>Documentary photography</strong> records what happened. <strong>Narrative photography</strong> shapes what the moment feels like, implies what surrounds it, and opens the viewer toward what the image means rather than only what it shows.</p>
+
+        <p>This is not a hierarchy. Documentary work can be powerful, essential, and deeply human. Narrative work can also be grounded in real people, real places, and real history. The difference is not truth versus fiction. It is record versus implication.</p>
+
+        <p>If documentary photography asks, “What happened here?” narrative photography often asks, “What pressure is still living inside this moment?”</p>
+
+        <div class="section-heading-with-line">
+          <h2>What Documentary Photography Does</h2>
+        </div>
+
+        <p>Documentary photography is built around witness. It preserves events, people, places, and conditions with fidelity to what occurred.</p>
+
+        <p>Its strength lies in evidence, context, immediacy, and clarity. Even when shaped by the photographer’s eye, its core task remains tied to record.</p>
+
+        <p>The documentary image says: this happened, this was there, this was seen.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What Narrative Photography Does</h2>
+        </div>
+
+        <p>Narrative photography begins where the image is built to carry more than evidence. It still may arise from real life, real subjects, or historical truth. But the frame is shaped so that atmosphere, implication, and emotional consequence keep working after the visible facts are understood.</p>
+
+        <p>The narrative image says: remain here a little longer. There is more life pressing against this moment than the eye can settle in one pass.</p>
+
+        <p>This is one reason narrative photography often overlaps with ideas like the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a>, where a single frame behaves like a larger unwritten sequence.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Where They Overlap</h2>
+        </div>
+
+        <p>The line between documentary and narrative is not always absolute. A documentary photograph may contain narrative force. A narrative photograph may remain rooted in historical or observational truth.</p>
+
+        <p>The distinction becomes clearer when asking what the image is optimized to do:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">Documentary prioritizes witness</li>
+          <li style="margin-bottom:0.5rem;">Narrative prioritizes implication</li>
+          <li style="margin-bottom:0.5rem;">Documentary protects the fact of the moment</li>
+          <li style="margin-bottom:0.5rem;">Narrative builds the emotional architecture around the moment</li>
+        </ul>
+
+        <div class="section-heading-with-line">
+          <h2>Why the Difference Matters in Western and Historical Work</h2>
+        </div>
+
+        <p>In Western and historical subjects, this distinction matters because the same costume, landscape, or reenacted scene can be treated in radically different ways.</p>
+
+        <p>One image may document period detail accurately. Another may use that same detail to carry memory, tension, and unresolved consequence. Both can be legitimate. They are simply working toward different ends.</p>
+
+        <p>At K4 Studios, the stronger pull is toward narrative: toward images that feel entered rather than simply reviewed. That is why pages like <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a> exist as a category explanation rather than just a style note.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What This Looks Like in Practice</h2>
+        </div>
+
+        <div class="example-images">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              A figure that could be recorded, or narratively charged by construction
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Atmosphere and restraint carrying more than report alone
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image3.id}`}>
+              <img src={image3.src} alt={image3.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Story pressure surviving beyond the visible fact of the portrait
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>Explore the Distinction in Practice</h2>
+        </div>
+
+        <p>The pages and galleries below clarify how narrative photography works when it is applied to Western and historical subject matter rather than left as an abstract idea.</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Blog/what-is-narrative-photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">What Is Narrative Photography?</a> — The broader definition
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a> — Where the distinction becomes culturally specific
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color:#8b5a2b; text-decoration:underline;">Facing History</a> — Narrative historical work in practice
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <WesternDefinitions variant="definition" currentPage={13} />
+
+    <SiteFooter />
+  </main>
+
+  <style>
+    .story-section { line-height: 1.7; }
+    .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    .story-block h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      color: #1a1a1a;
+    }
+    .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    .hero-image-wrap {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: clamp(220px, 34vw, 360px);
+      object-fit: cover;
+      object-position: center 28%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+    .example-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .example-images figure { margin: 0; }
+    .example-images img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    @media (max-width: 768px) {
+      .example-images { grid-template-columns: 1fr; }
+      .story-section { padding-left: 1rem; padding-right: 1rem; }
+    }
+  </style>
+</BaseLayout>

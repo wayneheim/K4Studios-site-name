@@ -146,11 +146,47 @@ const heroImageId = candidatePool[0]?.id || null;
   document.querySelectorAll('[data-preview-click]').forEach(link => {
     link.addEventListener('click', () => {
       const imageId = link.getAttribute('data-image-id') || null;
+      const href = link.getAttribute('href') || '';
+      let previewGalleryId = null;
+      try {
+        const url = new URL(href, window.location.href);
+        previewGalleryId = url.pathname.replace(/\/i-[A-Za-z0-9_-]+\/?$/, '');
+      } catch {}
+
+      // Prefer shared analytics helpers to keep dedupe/session behavior consistent.
+      const k4track = typeof window.k4track === 'function' ? window.k4track : null;
+      const k4emitActionPixel = typeof window.k4emitActionPixel === 'function' ? window.k4emitActionPixel : null;
+
+      if (k4track) {
+        k4track('gallery_preview_click', {
+          imageId,
+          galleryId: previewGalleryId || null,
+          sourceLayer: 'gallery_preview_click_pixel_v1',
+          pageType: 'gallery',
+          trigger: 'gallery_preview_strip'
+        });
+      }
+
+      if (k4emitActionPixel) {
+        k4emitActionPixel('gallery_preview_click', imageId, {
+          galleryId: previewGalleryId || null,
+          sourceLayer: 'gallery_preview_click_pixel_v1',
+          pageType: 'gallery',
+          trigger: 'gallery_preview_strip'
+        });
+        return;
+      }
+
+      // Fallback only when global analytics helpers are unavailable.
       const sessionId = sessionStorage.getItem('k4_session_id') || crypto.randomUUID();
       sessionStorage.setItem('k4_session_id', sessionId);
       const payload = JSON.stringify({
         session_id: sessionId,
-        event: 'gallery_preview_click'
+        event: 'gallery_preview_click',
+        image_id: imageId,
+        gallery_id: previewGalleryId || null,
+        page_type: 'gallery',
+        trigger: 'gallery_preview_strip'
       });
       if (navigator.sendBeacon) {
         const blob = new Blob([payload], { type: 'application/json' });
@@ -167,26 +203,28 @@ const heroImageId = candidatePool[0]?.id || null;
       }
 
       try {
-        if (window.k4emitActionPixel) {
-          window.k4emitActionPixel('gallery_preview_click', imageId, {
-            sourceLayer: 'gallery_preview_click_pixel_v1',
-            pageType: 'gallery',
-            trigger: 'gallery_preview_strip'
-          });
-        } else {
-          const params = new URLSearchParams({
-            t: 'action',
-            e: 'gallery_preview_click',
-            sl: 'gallery_preview_click_pixel_v1',
-            pt: 'gallery',
-            tr: 'gallery_preview_strip',
-            v: String(Date.now())
-          });
-          if (imageId) params.set('id', imageId);
+        const params = new URLSearchParams({
+          t: 'action',
+          e: 'gallery_preview_click',
+          sid: sessionId,
+          path: window.location.pathname,
+          sl: 'gallery_preview_click_pixel_v1',
+          pt: 'gallery',
+          tr: 'gallery_preview_strip',
+          v: String(Date.now())
+        });
+        if (imageId) params.set('id', imageId);
+        if (previewGalleryId) params.set('g', previewGalleryId);
+        fetch(`/_state?${params.toString()}`, {
+          method: 'GET',
+          keepalive: true,
+          cache: 'no-store',
+          credentials: 'same-origin'
+        }).catch(() => {
           const img = new Image();
           img.referrerPolicy = 'same-origin';
           img.src = `/_state?${params.toString()}`;
-        }
+        });
       } catch {}
     });
   });

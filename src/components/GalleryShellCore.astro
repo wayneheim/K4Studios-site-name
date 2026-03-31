@@ -73,7 +73,7 @@ const previewPath = galleryPath;
 
 const singlePreviewImage =
   previewImages.length > 0
-    ? previewImages[Math.floor(Math.random() * previewImages.length)]
+    ? previewImages[0]
     : null;
 
 const currentIndex = allImages.findIndex(
@@ -87,8 +87,8 @@ const usedEntranceData = {
   image: selectedImage
     ? {
         src: selectedImage.src,
-        alt: selectedImage.alt || selectedImage.title || entranceData?.image?.alt,
-        caption: selectedImage.title || entranceData?.image?.caption,
+        alt: entranceData?.image?.alt || selectedImage.alt || selectedImage.title,
+        caption: entranceData?.image?.caption,
       }
     : entranceData?.image,
   breadcrumb: entranceData?.breadcrumb || breadcrumb,
@@ -385,7 +385,10 @@ let sisterLink = sitemapMatches.find(m => m.a.includes(currentImageId))?.b || nu
       });
 
       document.addEventListener('contextmenu', e => {
-        if (e.target.tagName === 'IMG') e.preventDefault();
+        const target = e.target as HTMLElement | null;
+        if (target?.tagName === 'IMG') {
+          e.preventDefault();
+        }
       });
     </script>
   )}

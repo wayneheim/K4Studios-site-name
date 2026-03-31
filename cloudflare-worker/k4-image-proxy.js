@@ -184,6 +184,65 @@ function addVisitorIdCookie(response, visitorId, isNew, request) {
 let blockedIpCache = new Set();
 let blockedIpCacheTime = 0;
 const BLOCKED_IP_CACHE_TTL = 60_000; // 60 seconds
+let botIntelEnabledCache = true;
+let botIntelEnabledCacheTime = 0;
+let botBlockEnabledCache = true;
+let botBlockEnabledCacheTime = 0;
+let botFrictionEnabledCache = true;
+let botFrictionEnabledCacheTime = 0;
+
+async function getRuntimeFlagEnabled(env, key, defaultEnabled = true) {
+  if (!env?.DB) return defaultEnabled;
+  try {
+    const row = await env.DB.prepare(
+      "SELECT flag_value FROM runtime_flags WHERE flag_key = ? LIMIT 1"
+    ).bind(key).first();
+    return !row || String(row.flag_value || (defaultEnabled ? "1" : "0")) !== "0";
+  } catch (_e) {
+    return defaultEnabled;
+  }
+}
+
+async function getBotIntelEnabled(env) {
+  if (!env?.DB) return true;
+  const now = Date.now();
+  if (now - botIntelEnabledCacheTime < BLOCKED_IP_CACHE_TTL) {
+    return botIntelEnabledCache;
+  }
+  try {
+    const row = await env.DB.prepare(
+      "SELECT flag_value FROM runtime_flags WHERE flag_key = 'bot_intel_enabled' LIMIT 1"
+    ).first();
+    botIntelEnabledCache = !row || String(row.flag_value || "1") !== "0";
+    botIntelEnabledCacheTime = now;
+    return botIntelEnabledCache;
+  } catch (_e) {
+    // Fail open to current behavior if runtime_flags is unavailable.
+    return true;
+  }
+}
+
+async function getBotBlockEnabled(env) {
+  if (!env?.DB) return true;
+  const now = Date.now();
+  if (now - botBlockEnabledCacheTime < BLOCKED_IP_CACHE_TTL) {
+    return botBlockEnabledCache;
+  }
+  botBlockEnabledCache = await getRuntimeFlagEnabled(env, 'bot_block_enabled', true);
+  botBlockEnabledCacheTime = now;
+  return botBlockEnabledCache;
+}
+
+async function getBotFrictionEnabled(env) {
+  if (!env?.DB) return true;
+  const now = Date.now();
+  if (now - botFrictionEnabledCacheTime < BLOCKED_IP_CACHE_TTL) {
+    return botFrictionEnabledCache;
+  }
+  botFrictionEnabledCache = await getRuntimeFlagEnabled(env, 'bot_friction_enabled', true);
+  botFrictionEnabledCacheTime = now;
+  return botFrictionEnabledCache;
+}
 
 async function loadBlockedIps(env) {
   if (!env?.DB) return;
@@ -207,6 +266,9 @@ async function loadBlockedIps(env) {
  */
 async function isIPBlocked(env, ipHash) {
   if (!env?.DB) return false;
+  const botIntelEnabled = await getBotIntelEnabled(env);
+  const botBlockEnabled = await getBotBlockEnabled(env);
+  if (!botIntelEnabled || !botBlockEnabled) return false;
   await loadBlockedIps(env);
   return blockedIpCache.has(ipHash);
 }
@@ -710,6 +772,8 @@ async function handleImageRequest(request, ctx, env) {
   const ua = request.headers.get('User-Agent') || '';
   const cfVerifiedBot = Boolean(request.cf?.botManagement?.verifiedBot);
   const bypassImageControls = shouldBypassImageControls(env, request, ua);
+  const botIntelEnabled = await getBotIntelEnabled(env);
+  const botFrictionEnabled = await getBotFrictionEnabled(env);
   
   if (env?.DB && ipHash && !bypassImageControls) {
     try {
@@ -744,6 +808,8 @@ async function handleImageRequest(request, ctx, env) {
     enabled: Boolean(frictionTest?.debug),
     asn: frictionTest?.asn ?? request.cf?.asn,
     discoveryBypass: bypassImageControls,
+    botIntelEnabled,
+    botFrictionEnabled,
     suspect: false,
     uniquePerMinute: null,
     delayMs: null,
@@ -760,7 +826,7 @@ async function handleImageRequest(request, ctx, env) {
       frictionDebug.discoveryBypass = discoveryBypass;
       frictionDebug.suspect = Boolean(flags?.suspect);
 
-      if (shouldProtectSize && !discoveryBypass && flags.suspect) {
+      if (shouldProtectSize && botIntelEnabled && botFrictionEnabled && !discoveryBypass && flags.suspect) {
         const { uniquePerMinute } = await getAndMarkUniqueImagesPerMinute(ctx, {
           ipHash,
           canonicalImageId: route.canonicalImageId
@@ -1558,13 +1624,18 @@ async function handleSerpDashboard(request, env) {
       ORDER BY sr1.keyword
     `).all();
     
-    const yesterday = new Date();
-    yesterday.setDate(yesterday.getDate() - 1);
-    const yesterdayStr = yesterday.toISOString().slice(0, 10);
-    
-    const previousResults = await env.DB.prepare(
-      'SELECT keyword, our_rank FROM serp_results WHERE engine = ? AND checked_at = ?'
-    ).bind('google', yesterdayStr).all();
+    const previousResults = await env.DB.prepare(`
+      SELECT keyword, our_rank
+      FROM (
+        SELECT
+          keyword,
+          our_rank,
+          ROW_NUMBER() OVER (PARTITION BY keyword ORDER BY checked_at DESC) AS row_num
+        FROM serp_results
+        WHERE engine = 'google'
+      ) ranked
+      WHERE row_num = 2
+    `).all();
     
     const prevMap = new Map();
     for (const r of (previousResults.results || [])) {
@@ -1572,16 +1643,20 @@ async function handleSerpDashboard(request, env) {
     }
     
     const trendData = await env.DB.prepare(`
-      SELECT keyword, checked_at, our_rank 
-      FROM serp_results 
-      WHERE engine = 'google' AND checked_at >= ?
+      SELECT keyword, engine, checked_at, our_rank
+      FROM serp_results
+      WHERE engine IN ('google', 'google_ai', 'bing') AND checked_at >= ?
       ORDER BY keyword, checked_at
     `).bind(cutoffStr).all();
     
     const trendByKeyword = {};
     for (const r of (trendData.results || [])) {
-      if (!trendByKeyword[r.keyword]) trendByKeyword[r.keyword] = [];
-      trendByKeyword[r.keyword].push({ date: r.checked_at, rank: r.our_rank });
+      if (!trendByKeyword[r.keyword]) {
+        trendByKeyword[r.keyword] = { google: [], google_ai: [], bing: [] };
+      }
+      if (trendByKeyword[r.keyword][r.engine]) {
+        trendByKeyword[r.keyword][r.engine].push({ date: r.checked_at, rank: r.our_rank });
+      }
     }
     
     const authHeader = request.headers.get('Authorization');
@@ -2094,14 +2169,17 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     const bRank = bingResult?.our_rank;
     
     const prevRank = previousMap.get(kw.keyword);
-    const change = gRank && prevRank ? prevRank - gRank : null;
+    const gRankValid = getValidRank(gRank);
+    const prevRankValid = getValidRank(prevRank);
+    const change = gRankValid !== null && prevRankValid !== null ? prevRankValid - gRankValid : null;
     
-    const changeIcon = change === null ? '' 
-      : change > 0 ? `<span style="color:#10b981">▲${change}</span>`
-      : change < 0 ? `<span style="color:#ef4444">▼${Math.abs(change)}</span>`
-      : '<span style="color:#888">—</span>';
+    const changeIcon = change === null ? ''
+      : change > 0 ? `<span class="delta up" title="Google change vs previous check-in">▲${change}</span>`
+      : change < 0 ? `<span class="delta down" title="Google change vs previous check-in">▼${Math.abs(change)}</span>`
+      : '<span class="delta flat" title="No change vs previous check-in">—</span>';
     
-    const trend = trendByKeyword[kw.keyword] || [];
+    const trendSet = trendByKeyword[kw.keyword] || { google: [], google_ai: [], bing: [] };
+    const trend = trendSet.google || [];
     const recentTrend = trend.slice(-14);
     const sparkline = recentTrend.map(t => {
       const v = getValidRank(t.rank) ?? MAX_RANK;
@@ -2143,7 +2221,7 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
         ${rankCell(gaiRank)}
         ${rankCell(bRank)}
         <td>
-          <div style="display:flex;align-items:center;gap:10px">
+          <div class="trend-cell-row">
             ${sparkline.length > 1 ? `
               <svg class="sparkline" viewBox="0 0 70 20" preserveAspectRatio="none">
                 <polyline fill="none" stroke="#4a9eff" stroke-width="1.5" points="${
@@ -2151,6 +2229,7 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
                 }"/>
               </svg>
             ` : '<span style="color:#666">-</span>'}
+            <button class="trend-trigger" data-keyword="${encodeURIComponent(kw.keyword)}" title="Open Google, G-AI, and Bing trend charts">View</button>
             ${trendBadge}
           </div>
         </td>
@@ -2191,6 +2270,30 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     .rank-top3 { color: #10b981; }
     .rank-top10 { color: #fbbf24; }
     .sparkline { width: 70px; height: 20px; }
+    .trend-cell-row { display:flex; align-items:center; gap:10px; }
+    .trend-trigger {
+      background: #1f2937;
+      color: #93c5fd;
+      border: 1px solid #374151;
+      border-radius: 6px;
+      font-size: 11px;
+      padding: 3px 8px;
+      cursor: pointer;
+    }
+    .trend-trigger:hover { background: #273549; color: #bfdbfe; }
+    .delta { margin-left: 6px; font-size: 12px; font-weight: 600; }
+    .delta.up { color: #10b981; }
+    .delta.down { color: #ef4444; }
+    .delta.flat { color: #888; }
+    .legend-card { background: #222; border: 1px solid #333; border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
+    .legend-title { color: #d1d5db; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 8px; }
+    .legend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px 14px; font-size: 13px; color: #b8b8b8; }
+    .chip { display: inline-block; min-width: 56px; text-align: center; border-radius: 999px; border: 1px solid #3c3c3c; padding: 1px 8px; margin-right: 6px; font-size: 11px; font-weight: 700; letter-spacing: .02em; }
+    .chip-green { color: #10b981; border-color: #215f4d; }
+    .chip-yellow { color: #fbbf24; border-color: #6e5b1f; }
+    .chip-white { color: #e5e7eb; border-color: #5f6368; }
+    .chip-red { color: #ef4444; border-color: #6f2a2a; }
+    .th-help { font-weight: 400; color: #666; text-transform: none; }
     .controls { display: flex; gap: 10px; margin-bottom: 20px; align-items: center; flex-wrap: wrap; }
     .controls a, .controls button { 
       color: #4a9eff; text-decoration: none; padding: 8px 16px; 
@@ -2203,6 +2306,65 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     .add-form input { padding: 8px 12px; border-radius: 6px; border: 1px solid #444; background: #1a1a1a; color: #e0e0e0; }
     .add-form input[type="text"] { flex: 1; min-width: 200px; }
     .last-check { color: #666; font-size: 12px; margin-left: auto; }
+    .trend-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 9999;
+    }
+    .trend-modal.open { display: flex; }
+    .trend-modal-card {
+      width: min(980px, 96vw);
+      background: #111827;
+      border: 1px solid #374151;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.55);
+    }
+    .trend-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .trend-modal-title { color: #e5e7eb; font-size: 16px; font-weight: 700; }
+    .trend-modal-subtitle { color: #93a1b4; font-size: 12px; }
+    .trend-modal-close {
+      border: 1px solid #374151;
+      background: #1f2937;
+      color: #d1d5db;
+      border-radius: 8px;
+      font-size: 13px;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+    .trend-modal-close:hover { background: #273549; }
+    .trend-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px;
+    }
+    .trend-panel {
+      background: #0b1220;
+      border: 1px solid #243247;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .trend-panel-title { font-size: 12px; color: #e5e7eb; margin-bottom: 6px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; }
+    .trend-panel-meta { font-size: 11px; color: #93a1b4; margin-top: 6px; }
+    .trend-large {
+      width: 100%;
+      height: 150px;
+      display: block;
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(37, 99, 235, 0.06), rgba(15, 23, 42, 0.02));
+      border: 1px solid rgba(55, 65, 81, 0.45);
+    }
   </style>
 </head>
 <body>
@@ -2243,16 +2405,29 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     </div>
   </div>
 
-  <h2>Keyword Rankings (Google)</h2>
+  <div class="legend-card">
+    <div class="legend-title">How To Read This</div>
+    <div class="legend-grid">
+      <div><span class="chip chip-green">Green</span>Rank is strong (Top 3) or trend is improving.</div>
+      <div><span class="chip chip-yellow">Yellow</span>Rank is 4-10 (page one, not Top 3).</div>
+      <div><span class="chip chip-white">White</span>Rank is 11+ (outside top 10).</div>
+      <div><span class="chip chip-red">Red</span>Rank/trend is moving worse.</div>
+      <div>Google <strong>▲/▼</strong> = change vs the previous Google check-in for that keyword.</div>
+      <div><strong>Trend</strong> column = Google rank sparkline plus % change across up to the last 14 checks.</div>
+      <div><strong>View</strong> button in Trend opens a popup with all 3 engines.</div>
+    </div>
+  </div>
+
+  <h2>Keyword Rankings</h2>
   
   <table>
     <thead>
       <tr>
         <th>Keyword</th>
-        <th>Google</th>
+        <th>Google <span class="th-help">(vs prev check-in)</span></th>
         <th>G-AI</th>
         <th>Bing</th>
-        <th>14-Day Trend <span style="font-weight:400;color:#666">(↓ rank is better)</span></th>
+        <th>Trend <span class="th-help">(Google rank, last up to 14 checks, lower is better)</span></th>
         <th></th>
       </tr>
     </thead>
@@ -2267,8 +2442,23 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
     <button onclick="addKeyword()">+ Add</button>
   </div>
 
+  <div id="trendModal" class="trend-modal" aria-hidden="true">
+    <div class="trend-modal-card" role="dialog" aria-modal="true" aria-labelledby="trendModalTitle">
+      <div class="trend-modal-header">
+        <div>
+          <div id="trendModalTitle" class="trend-modal-title">Trend Details</div>
+          <div class="trend-modal-subtitle">Lower rank is better. Showing last up to 14 checks per engine.</div>
+        </div>
+        <button type="button" class="trend-modal-close" id="trendModalClose">Close</button>
+      </div>
+      <div id="trendCharts" class="trend-grid"></div>
+    </div>
+  </div>
+
   <script>
     const _authHeader = ${JSON.stringify(authHeader || '')};
+    const _trendByKeyword = ${JSON.stringify(trendByKeyword || {})};
+    const _maxRank = ${JSON.stringify(MAX_RANK)};
 
     async function fetchNow() {
       const btn = document.querySelector('.controls button.primary');
@@ -2318,6 +2508,127 @@ function renderSerpDashboard({ days, keywords, latestResults, previousMap, trend
       if (res.ok) location.reload();
       else { const d = await res.json().catch(() => null); alert(d?.error || 'Error deleting keyword (' + res.status + ')'); }
     }
+
+    function normalizeSeries(rawSeries) {
+      return (rawSeries || []).slice(-14).map((point) => {
+        const num = Number(point.rank);
+        const rank = Number.isFinite(num) && num > 0 ? num : _maxRank;
+        return {
+          date: point.date || '',
+          rank: Math.min(_maxRank, Math.max(1, rank)),
+          valid: Number.isFinite(num) && num > 0
+        };
+      });
+    }
+
+    function buildTrendSvg(series, stroke) {
+      if (!series.length) {
+        return '<div style="height:150px;display:flex;align-items:center;justify-content:center;color:#64748b;font-size:12px;">No data yet</div>';
+      }
+      const width = 320;
+      const height = 150;
+      const left = 26;
+      const right = 12;
+      const top = 10;
+      const bottom = 22;
+      const innerW = width - left - right;
+      const innerH = height - top - bottom;
+      const xStep = series.length > 1 ? innerW / (series.length - 1) : 0;
+
+      const points = series.map((p, i) => {
+        const x = left + (i * xStep);
+        const y = top + ((p.rank - 1) / (_maxRank - 1)) * innerH;
+        return x.toFixed(2) + ',' + y.toFixed(2);
+      }).join(' ');
+
+      const circles = series.map((p, i) => {
+        const cx = left + (i * xStep);
+        const cy = top + ((p.rank - 1) / (_maxRank - 1)) * innerH;
+        const r = (i === series.length - 1) ? 3.2 : 2.2;
+        const pointDate = p.date || 'unknown date';
+        const pointLabel = p.valid ? ('Rank #' + p.rank) : ('No rank (plotted as #' + p.rank + ')');
+        return '<circle cx="' + cx.toFixed(2) + '" cy="' + cy.toFixed(2) + '" r="' + r + '" fill="' + stroke + '" opacity="' + (p.valid ? 1 : 0.5) + '"><title>' + pointDate + ' - ' + pointLabel + '</title></circle>';
+      }).join('');
+
+      return ''
+        + '<svg class="trend-large" viewBox="0 0 ' + width + ' ' + height + '" preserveAspectRatio="none">'
+        + '<line x1="' + left + '" y1="' + top + '" x2="' + left + '" y2="' + (height - bottom) + '" stroke="#334155" stroke-width="1" />'
+        + '<line x1="' + left + '" y1="' + (height - bottom) + '" x2="' + (width - right) + '" y2="' + (height - bottom) + '" stroke="#334155" stroke-width="1" />'
+        + '<line x1="' + left + '" y1="' + top + '" x2="' + (width - right) + '" y2="' + top + '" stroke="#1f2937" stroke-width="1" />'
+        + '<polyline fill="none" stroke="' + stroke + '" stroke-width="2" points="' + points + '" />'
+        + circles
+        + '<text x="4" y="' + (top + 9) + '" fill="#64748b" font-size="10">#1</text>'
+        + '<text x="2" y="' + (height - bottom) + '" fill="#64748b" font-size="10">#' + _maxRank + '</text>'
+        + '</svg>';
+    }
+
+    function buildPanelHtml(label, series, stroke) {
+      const valid = series.filter((p) => p.valid).map((p) => p.rank);
+      const latest = valid.length ? valid[valid.length - 1] : null;
+      const earliest = valid.length ? valid[0] : null;
+      const delta = latest !== null && earliest !== null ? (earliest - latest) : null;
+      const deltaText = delta === null
+        ? 'change: n/a'
+        : (delta > 0 ? ('change: +' + delta + ' (better)') : delta < 0 ? ('change: -' + Math.abs(delta) + ' (worse)') : 'change: 0');
+      const rangeText = series.length && series[0].date && series[series.length - 1].date
+        ? (series[0].date + ' to ' + series[series.length - 1].date)
+        : 'date range unavailable';
+
+      return ''
+        + '<div class="trend-panel">'
+        + '<div class="trend-panel-title">' + label + (latest !== null ? (' <span style="color:#93c5fd;font-weight:600">Latest: #' + latest + '</span>') : ' <span style="color:#64748b;font-weight:500">Latest: n/a</span>') + '</div>'
+        + buildTrendSvg(series, stroke)
+        + '<div class="trend-panel-meta">' + deltaText + ' | points: ' + valid.length + ' | ' + rangeText + ' | hover points for exact values</div>'
+        + '</div>';
+    }
+
+    function openTrendModal(keywordEncoded) {
+      const keyword = decodeURIComponent(keywordEncoded || '');
+      const trendSet = _trendByKeyword[keyword] || { google: [], google_ai: [], bing: [] };
+      const googleSeries = normalizeSeries(trendSet.google);
+      const googleAiSeries = normalizeSeries(trendSet.google_ai);
+      const bingSeries = normalizeSeries(trendSet.bing);
+
+      const charts = document.getElementById('trendCharts');
+      const title = document.getElementById('trendModalTitle');
+      const modal = document.getElementById('trendModal');
+      if (!charts || !title || !modal) return;
+
+      title.textContent = 'Trend Details: ' + keyword;
+      charts.innerHTML = [
+        buildPanelHtml('Google', googleSeries, '#60a5fa'),
+        buildPanelHtml('G-AI', googleAiSeries, '#34d399'),
+        buildPanelHtml('Bing', bingSeries, '#38bdf8')
+      ].join('');
+
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeTrendModal() {
+      const modal = document.getElementById('trendModal');
+      if (!modal) return;
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    document.querySelectorAll('.trend-trigger').forEach((btn) => {
+      btn.addEventListener('click', () => openTrendModal(btn.getAttribute('data-keyword')));
+    });
+
+    const trendModal = document.getElementById('trendModal');
+    const trendModalClose = document.getElementById('trendModalClose');
+    if (trendModal) {
+      trendModal.addEventListener('click', (event) => {
+        if (event.target === trendModal) closeTrendModal();
+      });
+    }
+    if (trendModalClose) {
+      trendModalClose.addEventListener('click', closeTrendModal);
+    }
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeTrendModal();
+    });
   </script>
 </body>
 </html>`;

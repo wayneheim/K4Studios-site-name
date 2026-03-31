@@ -38,6 +38,13 @@ export const americanWestFAQ = [
       "It belongs to the tradition of Remington, Russell, and Bierstadt — work built to carry meaning. In photographic form, it applies painterly techniques, narrative composition, and cinematic restraint to create images that feel inhabited rather than merely observed."
     ],
   },
+  {
+    q: "How is this different from Western Fine Art Photography?",
+    a: [
+      "Western Fine Art Photography is the narrower hub for authored Western photographic work centered on Western subject matter. Fine art photography of the American West is broader. It treats the American West as a full historical environment that includes people, landscapes, frontier towns, and the larger conditions that shaped them.",
+      "The distinction is scope. Western Fine Art Photography is one important branch inside the larger American West umbrella."
+    ],
+  },
 
   // 5. SUBJECTS
   {

@@ -688,6 +688,8 @@ export default function ChapterGalleryBase({
     document.documentElement.getAttribute("data-k4tour-open") === "1";
 
   // Nav handlers
+  const exitNavPendingRef = useRef(false);
+
   const goPrev = (e) => {
     e?.stopPropagation();
     if (tourOpen()) return;
@@ -714,7 +716,23 @@ export default function ChapterGalleryBase({
     setViewMode("grid");
     track("grid_open");
   };
-  const goExit = (e) => { e?.stopPropagation(); if (tourOpen()) return; track("exit_to_gallery"); if (basePath) window.location.href = basePath; };
+  const goExit = (e) => {
+    e?.stopPropagation();
+    e?.preventDefault?.();
+    if (tourOpen() || !basePath || exitNavPendingRef.current) return;
+
+    track("exit_to_gallery", {
+      imageId: currentId || null,
+      pageType: 'image',
+      trigger: 'chapter_exit_button'
+    });
+
+    exitNavPendingRef.current = true;
+    // Give keepalive/beacon dispatch a brief head start before hard navigation.
+    window.setTimeout(() => {
+      window.location.href = basePath;
+    }, 75);
+  };
 
   // Enter chapters
   useEffect(() => {
@@ -2163,7 +2181,14 @@ export default function ChapterGalleryBase({
                             return (
                               <a 
                                 href={href}
-                                onClick={() => track("sister_image_click", { imageId: currentId, pageType: 'image', trigger: 'explore_more_photos' })}
+                                onClick={() => {
+                                  track("sister_image_click", { imageId: currentId, pageType: 'image', trigger: 'explore_more_photos' });
+                                  emitActionPixel("sister_image_click", currentId, {
+                                    sourceLayer: "sister_image_click_pixel_v1",
+                                    pageType: "image",
+                                    trigger: "explore_more_photos"
+                                  });
+                                }}
                                 style={{
                                   display: 'block',
                                   marginTop: '1rem',

@@ -575,7 +575,7 @@ glossaryBlackWhiteWesternArt: {
     { phrase: "painterly Western photograph", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" },
     { phrase: "painterly Western images", rating: 5, use: true, link: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" },
     { phrase: "Pictorialist tradition", rating: 5, use: true, link: "/Painterly-Western-Photography" },
-    { phrase: "narrative Western art", rating: 5, use: true, link: "/Painterly-Western-Photography" },
+    { phrase: "narrative Western art", rating: 5, use: true, link: "/Narrative-Western-Art" },
     { phrase: "Baltic Birch", rating: 4, use: true, link: "/Other/K4-Select-Series/Engrained" }
   ]
 },

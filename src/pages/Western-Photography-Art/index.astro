@@ -45,6 +45,7 @@ import '@/styles/oneupheader.css';
 const pagePath = "/Western-Photography-Art";
 const openingDefinition = [
   "Western photography art is authored photographic work that interprets the American West through deliberate artistic craft, narrative intent, and historical awareness. Rather than documenting the West as scenery or modern ranch life, Western photography art interprets the frontier itself—placing photography within the same visual tradition that shaped Western painting and illustration.",
+  "At its strongest, Western photography art moves beyond subject description and into story, suggesting what happened before the frame and what may follow after it.",
   "In this tradition the camera becomes more than a recording device. Light, composition, atmosphere, and tone are shaped deliberately so a photograph carries the narrative gravity of a painting while remaining rooted in the authenticity of the photographic medium.",
   "The result is work that explores the American West not as postcard scenery, but as lived history—the people, landscapes, and pressures that created the frontier world."
 ];
@@ -333,6 +334,9 @@ const tombstonesWithThumbs = landingWesternArt.tombstones.map((stone: any) => {
     <!-- Tombstones -->
     <section class="collections-nav-section">
       <h3 class="collections-heading fade-in reveal-on-scroll">Explore the Western Art Collection</h3>
+      <p class="page-context-link fade-in reveal-on-scroll" style="margin-top:0.5rem; margin-bottom:1rem; text-align:center;">
+        These collections show Western photography art at the point where subject becomes story.
+      </p>
       <TombstoneNav client:load items={tombstonesWithThumbs} />
     </section>
 

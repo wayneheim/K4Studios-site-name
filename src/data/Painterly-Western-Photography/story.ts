@@ -5,6 +5,7 @@
     title: "Painterly Western Photography",
     paragraphs: [
       "This gallery presents painterly Western photography by <a href='/wayne-heim-western-fine-art-photography'>Wayne Heim</a> - narrative-driven images shaped by controlled light, tonal restraint, and compositional discipline. Cowboys, frontier figures, and Western landscapes appear here not as spectacle, but as atmosphere, character, and lived experience.",
+      "At its strongest, painterly Western photography turns a subject into a story, suggesting what happened before the frame and what emotional weight remains inside it.",
       "Here, 'Western art' refers to the American West — frontier life, cowboys, and 19th-century Western history — not European or Western civilization art traditions.",
       "These works are built to reward sustained viewing. Story is carried through posture, light, and stillness rather than explanation, allowing meaning to emerge gradually over time.",
       "For a deeper exploration of the tradition and discipline behind this approach, see <a href='/Blog/what-is-painterly-photography' style='color:#8b5a2b; text-decoration:underline;'>What Is Painterly Photography</a>."
@@ -24,6 +25,7 @@
   {
     subhead: "Craft Before Effect",
     paragraphs: [
+      "This is not just a visual style. It is a way of seeing the West through structure, restraint, and implied narrative.",
       "Painterly photography is often misunderstood as texture or mood added in post-processing. In this work, those qualities emerge from structure - from how light defines form, how tone establishes hierarchy, and how composition carries tension.",
       "Nothing is incidental. Texture follows intent. Color is controlled. Shadow is used not to obscure, but to suggest."
     ]

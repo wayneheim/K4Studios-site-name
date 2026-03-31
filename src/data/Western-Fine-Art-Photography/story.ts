@@ -4,7 +4,10 @@
   {
     title: "What Is Western Fine Art Photography?",
     paragraphs: [
-      "Western fine art photography is an authored interpretation of the American West shaped through painterly photographic craft, narrative restraint, and deliberate artistic vision. It is not a photo of a cowboy. It is not a scenic postcard with a Western label. It is closer to the tradition of Western art\u2014work that carries lineage from painters like Frederic Remington and Charles M. Russell\u2014because it is built to communicate mood, labor, myth, and place.",
+      "Western fine art photography is a broader category of authored work depicting the American West, encompassing multiple approaches, including artistic, documentary, and narrative styles. It is not a photo of a cowboy. It is not a scenic postcard with a Western label. It is closer to the tradition of Western art because it carries lineage from painters like Frederic Remington and Charles M. Russell and is built to communicate mood, labor, myth, and place. For a complete breakdown of the discipline, see the full definition of <a href='/Blog/what-is-western-fine-art-photography'>Western fine art photography</a>.",
+      "The wider historical environment surrounding that subject opens into <a href='/Fine-Art-Photography-of-the-American-West'>Fine Art Photography of the American West</a>, where the region is treated as a full narrative landscape rather than a Western subject cluster alone.",
+      "At its strongest, each image exists as part of a larger narrative, suggesting what happened before and what may come next.",
+      "Within this broader category, <strong>artistic Western photography</strong> represents a specific interpretive approach focused on mood, authorship, and visual storytelling, a distinction developed more fully in the definition of <a href=\"/Blog/what-is-artistic-western-photography\">artistic Western photography</a>.",
       "At K4 Studios, that tradition takes a specific form: <a href=\"/Pictorialist-Photography\">painterly photography</a> rooted in the Pictorialist conviction that a photograph should interpret the world, not simply record it. Light is sculpted. Tone is controlled. Composition serves narrative restraint rather than spectacle. The result occupies a space between painting and photography\u2014authored, layered, and built to endure.",
       "Here, \u2018Western art\u2019 refers to the American West\u2014frontier life, cowboys, and 19th-century Western history\u2014not European or Western civilization art traditions."
     ]
@@ -15,6 +18,7 @@
     subhead: "The Historical Roots of Western Fine Art Photography",
     paragraphs: [
       "Western photography emerged alongside westward expansion in the mid-1800s. Early practitioners like Timothy O\u2019Sullivan documented frontier geology and settlement, while Edward S. Curtis created extensive portraits of Native American tribes\u2014work that remains influential and contested. Through the 20th century, photographers\u2014from Ansel Adams to documentary ranch photographers\u2014shaped how the West was seen.",
+      "The historically centered branch of this subject appears in <a href='/Western-Frontier-Art'>Western Frontier Art</a>, where the American frontier itself becomes the primary lens rather than a broader Western category.",
       "Within that Western branch, the work touches <a href=\"/Narrative-Western-Art\">Narrative Western Art</a> when story leads the frame and <a href=\"/Contemporary-Western-Art\">Contemporary Western Art</a> when the tradition is carried forward in present-tense form.",
       "This work builds on that lineage while questioning its myths\u2014focusing on character, lived experience, and narrative complexity rather than spectacle. The photographs here tell the stories of the people who created the framework the modern West is built upon\u2014individual lives shaped by labor, risk, and endurance on the frontier. Before the legend came the lives that built it\u2014and that is where this work begins. That history is interpreted through painterly photographic craft, not simply recorded."
     ]
@@ -26,7 +30,7 @@
     paragraphs: [
       "The figures that appear here\u2014cowboys, ranchers, frontier individuals\u2014are presented not as archetypes, but as people. Expression, stillness, and bearing carry the story. A glance replaces gesture. A hand resting on a tool carries more weight than action.",
       "These images resist simplification. Meaning emerges slowly, through familiarity and return viewing, rather than immediate explanation. Each photograph functions as a single frame from a larger, unfinished narrative\u2014a One-Image Movie\u2122 waiting to be completed by the viewer.",
-      "For the broader stylistic framework beyond Western subject matter, see <a href=\"/Galleries/Painterly-Fine-Art-Photography\">Painterly Fine Art Photography</a>, where the same discipline is applied across multiple narrative worlds."
+      "That same discipline continues beyond Western subject matter in <a href=\"/Galleries/Painterly-Fine-Art-Photography\">Painterly Fine Art Photography</a>, where the visual language carries across multiple narrative worlds."
     ]
   },
 

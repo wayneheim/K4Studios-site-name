@@ -1,0 +1,293 @@
+---
+export const prerender = true;
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStructuredData.ts";
+
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/what-is-narrative-photography";
+const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
+
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
+const headerImage = {
+  id: "i-LCspRF4",
+  src: getProxySrc("i-LCspRF4", "l"),
+  alt: "Narrative photograph carrying atmosphere and implied story"
+};
+
+const image1 = {
+  id: "i-B7ZSdfs",
+  src: getProxySrc("i-B7ZSdfs", "l"),
+  alt: "Portrait built as a threshold into story rather than a simple record"
+};
+const image2 = {
+  id: "i-trZrk2w",
+  src: getProxySrc("i-trZrk2w", "l"),
+  alt: "Narrative scene shaped by silence, suspense, and implication"
+};
+const image3 = {
+  id: "i-jWDDpC4",
+  src: getProxySrc("i-jWDDpC4", "l"),
+  alt: "Landscape functioning as emotional environment rather than scenery"
+};
+
+const pageTitle = "What Is Narrative Photography? | K4 Studios";
+const pageDescription = "Narrative photography is photography that implies a larger story rather than simply recording a scene. This guide defines how narrative enters the frame through atmosphere, implication, and structure.";
+
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImage.id, "l"),
+  getAbsoluteProxySrc(image1.id, "l"),
+  getAbsoluteProxySrc(image2.id, "l"),
+  getAbsoluteProxySrc(image3.id, "l"),
+];
+
+const breadcrumbStructuredData = getBreadcrumbList(
+  [
+    { name: "Home", item: "https://www.k4studios.com" },
+    { name: "Narrative Western Art", item: "https://www.k4studios.com/Narrative-Western-Art" },
+    { name: "What Is Narrative Photography?", item: canonicalUrl },
+  ],
+  `${canonicalUrl}#breadcrumb`
+);
+
+const structuredData = getStructuredData({
+  type: "Article",
+  data: {
+    headline: "What Is Narrative Photography?",
+    description: pageDescription,
+    url: canonicalUrl,
+    image: structuredImageUrls,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-03-30",
+    articleSection: "Narrative Photography",
+    definedTerm: {
+      name: "Narrative Photography",
+      description: pageDescription,
+    },
+    keywords: [
+      "what is narrative photography",
+      "narrative photography",
+      "cinematic photography",
+      "visual storytelling in photography",
+      "fine art storytelling"
+    ]
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://www.k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://www.k4studios.com/"
+  }
+});
+
+const meta = {
+  description: pageDescription,
+  keywords: "what is narrative photography, narrative photography, cinematic photography, visual storytelling in photography, fine art storytelling",
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: "article",
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImage.id, "l"),
+  twitterCard: "summary_large_image"
+};
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › What Is Narrative Photography?`;
+---
+
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} meta={meta}>
+  <script type="application/ld+json" set:html={breadcrumbStructuredData} />
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section class="hero-image-wrap">
+      <img src={headerImage.src} alt={headerImage.alt} loading="eager" class="hero-image" />
+    </section>
+
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
+        What Is Narrative Photography?
+      </h1>
+      <p style="font-size:1.25rem; color:#666; font-style:italic;">
+        Photography that carries a life larger than the visible moment
+      </p>
+      <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
+        A definition of story-driven photography for collectors, artists, and serious viewers
+      </p>
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+        <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
+          A definition of photography that implies what lies before and after the frame rather than closing the moment too quickly
+        </p>
+
+        <p><strong>Narrative photography</strong> is photography shaped to imply a larger story. It does not merely show what was in front of the camera. It opens the frame outward until the viewer begins to sense what happened before the moment, what may happen after it, and what emotional pressure lives inside it.</p>
+
+        <p>That story may come through posture, atmosphere, silence, gesture, distance, or consequence. It may be overt or barely perceptible. But the defining trait is the same: the image carries more life than it fully explains.</p>
+
+        <p>Narrative photography is not a genre limited to one subject. It can appear in portraiture, historical work, landscape, street photography, and especially in forms like <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a>, where history and myth already live close to one another.</p>
+
+        <p>When narrative photography is fully realized, it often begins to behave like a <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a>: a single frame carrying the pressure of a much larger experience.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What Makes Photography Narrative</h2>
+        </div>
+
+        <p>Narrative does not come from props alone. A hat, a train, a foggy road, or a weathered face do not create story by themselves. Narrative begins when the image is structured so that the viewer feels a life pressing against the visible frame.</p>
+
+        <p>That often means:</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 1.5rem;">
+          <li style="margin-bottom:0.5rem;">A moment held between before and after</li>
+          <li style="margin-bottom:0.5rem;">A subject carrying emotional consequence</li>
+          <li style="margin-bottom:0.5rem;">Atmosphere that acts as part of the story</li>
+          <li style="margin-bottom:0.5rem;">Restraint that leaves the viewer room to enter</li>
+          <li style="margin-bottom:0.5rem;">Composition that suggests rather than summarizes</li>
+        </ul>
+
+        <div class="section-heading-with-line">
+          <h2>What Narrative Photography Is Not</h2>
+        </div>
+
+        <p>Narrative photography is not the same thing as documentation, even though both may photograph real subjects and real places.</p>
+
+        <p>It is not simply “a photo with a story attached.” And it is not a cinematic color grade pasted over an otherwise empty frame.</p>
+
+        <p>Narrative photography is authored. The story is embedded in the way the image is built: what is shown, what is withheld, where the tension sits, and how the viewer is asked to remain inside the frame.</p>
+
+        <div class="section-heading-with-line">
+          <h2>How It Feels Different</h2>
+        </div>
+
+        <p>Most photographs can be looked at and understood quickly. Narrative photography resists that closure.</p>
+
+        <p>It may be quiet, but it is not empty. It may be restrained, but it is not thin. The viewer keeps returning because the image continues to imply more than it gives away.</p>
+
+        <p>This is also why narrative photography often feels cinematic without needing motion. The frame is still, but the viewer’s mind is not.</p>
+
+        <div class="section-heading-with-line">
+          <h2>What This Looks Like in Practice</h2>
+        </div>
+
+        <div class="example-images">
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Portrait as threshold — story pressing through stillness
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Suspense and implication — the frame as hinge moment
+            </figcaption>
+          </figure>
+          <figure>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/${image3.id}`}>
+              <img src={image3.src} alt={image3.alt} loading="lazy" />
+            </a>
+            <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
+              Landscape as emotional environment rather than scenery alone
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>Why Narrative Photography Matters</h2>
+        </div>
+
+        <p>Narrative photography slows the viewer down. It asks more than recognition. It asks participation.</p>
+
+        <p>For collectors, that means the image can keep opening over time. For artists, it means the photograph can move beyond record and into authorship. For viewers, it means the frame does not remain outside them. It begins to feel lived.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Explore Narrative Photography at K4 Studios</h2>
+        </div>
+
+        <p>The pages and galleries below show how narrative photography is carried through Western subjects, history, and the One-Image Movie™ concept.</p>
+
+        <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Narrative-Western-Art" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Narrative Western Art</a> — Where story becomes the governing principle of the frame
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a> — The single-frame narrative idea at the center of the work
+          </li>
+          <li style="margin-bottom:0.75rem;">
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color:#8b5a2b; text-decoration:underline;">Facing History</a> — Historical and Western narrative work in practice
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <WesternDefinitions variant="definition" currentPage={10} />
+
+    <SiteFooter />
+  </main>
+
+  <style>
+    .story-section { line-height: 1.7; }
+    .story-block p { margin-bottom: 1rem; font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    .story-block h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      color: #1a1a1a;
+    }
+    .story-block ul { font-size: clamp(1rem, 2.5vw, 1.125rem); }
+    .hero-image-wrap {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: clamp(220px, 34vw, 360px);
+      object-fit: cover;
+      object-position: center 28%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+    .example-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .example-images figure { margin: 0; }
+    .example-images img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    @media (max-width: 768px) {
+      .example-images { grid-template-columns: 1fr; }
+      .story-section { padding-left: 1rem; padding-right: 1rem; }
+    }
+  </style>
+</BaseLayout>

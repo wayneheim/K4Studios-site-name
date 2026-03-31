@@ -14,6 +14,13 @@ export const frontierArtFAQ = [
     ],
   },
   {
+    q: "Is Western frontier art the same as frontier wall art or Western decor?",
+    a: [
+      "No. Frontier wall art and Western decor usually describe a commercial styling category. Western frontier art is a fine-art and subject-matter category centered on the historical American frontier.",
+      "The difference is intent. Decor aims to create a look. Frontier art aims to interpret a world shaped by labor, conflict, endurance, and historical consequence."
+    ],
+  },
+  {
     q: "What subjects appear in Western frontier art?",
     a: [
       "Western frontier art often includes cowboys, ranch hands, Indigenous individuals, frontier settlements, open range travel, and moments of decision shaped by land, weather, and history.",
