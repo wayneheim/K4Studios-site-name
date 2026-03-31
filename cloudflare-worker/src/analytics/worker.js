@@ -270,6 +270,44 @@ function isSyntheticTraffic(request) {
 }
 __name(isSyntheticTraffic, "isSyntheticTraffic");
 __name2(isSyntheticTraffic, "isSyntheticTraffic");
+var SEARCH_ENGINE_ASNS = [8075, 15169, 32934, 14618];
+function isCrawlerLikeUA(ua) {
+  if (!ua) return false;
+  return /bot|spider|crawler|bingpreview|adidxbot|bingbot|googlebot|google-inspectiontool|duckduckbot|slurp|baiduspider|yandex|petalbot/i.test(ua);
+}
+__name(isCrawlerLikeUA, "isCrawlerLikeUA");
+__name2(isCrawlerLikeUA, "isCrawlerLikeUA");
+function hasLikelyHumanLanguageSignal(request) {
+  const acceptLanguage = request.headers.get("Accept-Language") || "";
+  return /[a-z]{2}/i.test(acceptLanguage);
+}
+__name(hasLikelyHumanLanguageSignal, "hasLikelyHumanLanguageSignal");
+__name2(hasLikelyHumanLanguageSignal, "hasLikelyHumanLanguageSignal");
+function hasAnalyticsIdentityCookie(request) {
+  const cookieHeader = request.headers.get("cookie") || "";
+  return /(?:^|;\s*)(k4_sid|k4_vid)=/.test(cookieHeader);
+}
+__name(hasAnalyticsIdentityCookie, "hasAnalyticsIdentityCookie");
+__name2(hasAnalyticsIdentityCookie, "hasAnalyticsIdentityCookie");
+function shouldSilenceTrackingRequest(request) {
+  if (request.cf?.botManagement?.verifiedBot) {
+    return true;
+  }
+  if (isSyntheticTraffic(request)) {
+    return true;
+  }
+  const ua = (request.headers.get("User-Agent") || "").toLowerCase();
+  if (isCrawlerLikeUA(ua)) {
+    return true;
+  }
+  const asn = Number(request.cf?.asn || 0);
+  if (!hasAnalyticsIdentityCookie(request) && !hasLikelyHumanLanguageSignal(request) && SEARCH_ENGINE_ASNS.includes(asn)) {
+    return true;
+  }
+  return false;
+}
+__name(shouldSilenceTrackingRequest, "shouldSilenceTrackingRequest");
+__name2(shouldSilenceTrackingRequest, "shouldSilenceTrackingRequest");
 var GALLERY_LANDING_PATHS = [
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
@@ -10141,8 +10179,8 @@ var worker_default = {
         return requireAuth2();
       }
     }
-    if ((url.pathname.startsWith("/track") || url.pathname.startsWith("/__k4e") || url.pathname.startsWith("/_state")) && request.cf?.botManagement?.verifiedBot) {
-      return new Response(null, { status: 204 });
+    if ((url.pathname.startsWith("/track") || url.pathname.startsWith("/__k4e") || url.pathname.startsWith("/_state")) && shouldSilenceTrackingRequest(request)) {
+      return new Response(null, { status: 204, headers: applyNoStore(new Headers()) });
     }
     if (url.pathname === "/__k4stats") {
       return handleDashboardRequest2(request, env, ctx);

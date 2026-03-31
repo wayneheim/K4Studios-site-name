@@ -28,6 +28,22 @@ function isK4Debug(): boolean {
   }
 }
 
+function isCrawlerLikeUserAgent(ua: string | null | undefined): boolean {
+  if (!ua) return false;
+  return /bot|spider|crawler|bingpreview|adidxbot|bingbot|googlebot|google-inspectiontool|duckduckbot|slurp|baiduspider|yandex|petalbot|facebookexternalhit|facebot|embedly|quora link preview|pinterest|slackbot|discordbot|telegrambot/i.test(ua);
+}
+
+function shouldSuppressClientAnalytics(): boolean {
+  if (typeof window === 'undefined') return false;
+  try {
+    const nav = navigator as Navigator & { webdriver?: boolean };
+    if (nav.webdriver) return true;
+    return isCrawlerLikeUserAgent(nav.userAgent);
+  } catch {
+    return false;
+  }
+}
+
 function resolveEndpointUrl(pathname: string): string {
   if (typeof window === 'undefined') return pathname;
   try {
@@ -319,6 +335,7 @@ type SendOutcome = {
 
 function sendTrackingPayload(payloadJson: string, debugLabel?: string): void {
   if (typeof window === 'undefined') return;
+  if (shouldSuppressClientAnalytics()) return;
 
   const debug = isK4Debug();
   const endpointResolved = resolveEndpointUrl(TRACK_ENDPOINT);
@@ -422,6 +439,7 @@ function shouldSkipDuplicateEvent(event: string, context: TrackContext, pagePath
 export function trackEvent(event: string, context: TrackContext = {}): void {
   // Skip if SSR
   if (typeof window === 'undefined') return;
+  if (shouldSuppressClientAnalytics()) return;
 
   try {
 
@@ -506,6 +524,7 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
 
 export function emitActionPixel(action: string, imageId: string | null = null, context: ActionPixelContext = {}): void {
   if (typeof window === 'undefined') return;
+  if (shouldSuppressClientAnalytics()) return;
 
   try {
     const pagePath = window.location.pathname;
@@ -614,6 +633,7 @@ export function emitActionPixel(action: string, imageId: string | null = null, c
 if (typeof window !== 'undefined') {
   (window as any).k4track = trackEvent;
   (window as any).k4emitActionPixel = emitActionPixel;
+  (window as any).k4ShouldSuppressAnalytics = shouldSuppressClientAnalytics;
 }
 
 /**
@@ -621,6 +641,8 @@ if (typeof window !== 'undefined') {
  * Also initializes scroll depth tracking and updates page context for session exit
  */
 export function trackPageView(): void {
+  if (shouldSuppressClientAnalytics()) return;
+
   const debug = isK4Debug();
   if (debug) {
     console.log('[k4] bootstrap', {

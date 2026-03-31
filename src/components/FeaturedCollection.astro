@@ -159,6 +159,9 @@ const structuredData = JSON.stringify({
 
 <script define:vars={{ collectionName, ctaLink, analyticsLabel }}>
   const emitActionPixel = (action, imageId = null, extra = {}) => {
+    if (typeof window.k4ShouldSuppressAnalytics === 'function' && window.k4ShouldSuppressAnalytics()) {
+      return;
+    }
     try {
       if (window.k4emitActionPixel) {
         window.k4emitActionPixel(action, imageId, extra);
@@ -181,6 +184,9 @@ const structuredData = JSON.stringify({
   };
 
   const sendK4 = (eventName, extra = {}) => {
+    if (typeof window.k4ShouldSuppressAnalytics === 'function' && window.k4ShouldSuppressAnalytics()) {
+      return;
+    }
     try {
       if (window.k4track) {
         window.k4track(eventName, extra);

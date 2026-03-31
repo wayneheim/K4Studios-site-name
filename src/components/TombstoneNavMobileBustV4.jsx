@@ -4,6 +4,10 @@ import { warmImage } from '../utils/warmImage';
 
 /**
  * Normalize any thumb URL to a proper proxy URL
+            if (typeof window !== 'undefined' && typeof window.k4ShouldSuppressAnalytics === 'function' && window.k4ShouldSuppressAnalytics()) {
+              return;
+            }
+
  * Handles:
  * - SmugMug URLs: extracts ID → /img/{id}/s
  * - Absolute proxy URLs: converts to relative /img/{id}/s  

@@ -145,6 +145,12 @@ const heroImageId = candidatePool[0]?.id || null;
   // Track preview strip clicks
   document.querySelectorAll('[data-preview-click]').forEach(link => {
     link.addEventListener('click', () => {
+      const w = window as any;
+
+      if (typeof w.k4ShouldSuppressAnalytics === 'function' && w.k4ShouldSuppressAnalytics()) {
+        return;
+      }
+
       const imageId = link.getAttribute('data-image-id') || null;
       const href = link.getAttribute('href') || '';
       let previewGalleryId = null;
@@ -154,8 +160,8 @@ const heroImageId = candidatePool[0]?.id || null;
       } catch {}
 
       // Prefer shared analytics helpers to keep dedupe/session behavior consistent.
-      const k4track = typeof window.k4track === 'function' ? window.k4track : null;
-      const k4emitActionPixel = typeof window.k4emitActionPixel === 'function' ? window.k4emitActionPixel : null;
+  const k4track = typeof w.k4track === 'function' ? w.k4track : null;
+  const k4emitActionPixel = typeof w.k4emitActionPixel === 'function' ? w.k4emitActionPixel : null;
 
       if (k4track) {
         k4track('gallery_preview_click', {
