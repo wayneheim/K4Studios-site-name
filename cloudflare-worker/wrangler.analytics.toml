@@ -7,25 +7,20 @@ compatibility_date = "2024-01-01"
 # `wrangler deploy` will attach these automatically.
 # Otherwise, add the same patterns in Cloudflare Dashboard → Workers & Pages → k4-analytics → Settings → Triggers.
 routes = [
-	"www.k4studios.com/__k4e*",
-	"k4studios.com/__k4e*",
-	"www.k4studios.com/track*",
-	"k4studios.com/track*",
-	"www.k4studios.com/__k4track/event*",
-	"k4studios.com/__k4track/event*",
-	"www.k4studios.com/__k4stats*",
-	"k4studios.com/__k4stats*",
-	"www.k4studios.com/edge-event*",
-	"k4studios.com/edge-event*"
+	"edge.k4studios.com/__k4e*",
+	"edge.k4studios.com/track*",
+	"edge.k4studios.com/__k4track/event*",
+	"edge.k4studios.com/__k4stats*",
+	"edge.k4studios.com/edge-event*"
 ]
 
 # Route configuration
-# Deploy to: k4studios.com/__k4stats, k4studios.com/track
+# Deploy to: edge.k4studios.com/__k4stats, edge.k4studios.com/track
 #
 # In Cloudflare Dashboard:
 # 1. Workers & Pages → k4-analytics → Settings → Triggers
-# 2. Add Route: k4studios.com/__k4stats
-# 3. Add Route: k4studios.com/track
+# 2. Add Route: edge.k4studios.com/__k4stats
+# 3. Add Route: edge.k4studios.com/track
 # 4. Zone: k4studios.com
 
 [vars]

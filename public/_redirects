@@ -159,5 +159,9 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 /V2  /410.html  410
 /V2/*  /410.html  410
 
-# Analytics tracking - proxy to Cloudflare Worker
-/track  https://k4-image-proxy.wayneheim.workers.dev/track  200!
+# Analytics tracking - move to proxied edge host
+/track         https://edge.k4studios.com/track         200!
+/__k4e         https://edge.k4studios.com/__k4e         200!
+/edge-event    https://edge.k4studios.com/edge-event    200!
+/__k4stats     https://edge.k4studios.com/__k4stats     301!
+/__k4stats/*   https://edge.k4studios.com/__k4stats/:splat   301!

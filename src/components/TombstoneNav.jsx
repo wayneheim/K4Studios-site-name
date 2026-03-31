@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { buildContextualAlt, getPageContext } from '../utils/buildContextualAlt';
 import { warmImage } from '../utils/warmImage';
 
+const TRACK_ENDPOINT = 'https://edge.k4studios.com/__k4e';
+
 /**
  * Normalize any thumb URL to a proper proxy URL
             if (typeof window !== 'undefined' && typeof window.k4ShouldSuppressAnalytics === 'function' && window.k4ShouldSuppressAnalytics()) {
@@ -155,15 +157,15 @@ export default function TombstoneNav({
             // Use sendBeacon for reliable delivery during navigation
             if (navigator.sendBeacon) {
               const blob = new Blob([payload], { type: 'application/json' });
-              navigator.sendBeacon('/__k4e', blob);
+              navigator.sendBeacon(TRACK_ENDPOINT, blob);
             } else {
-              fetch('/__k4e', {
+              fetch(TRACK_ENDPOINT, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: payload,
                 keepalive: true,
                 cache: 'no-store',
-                credentials: 'same-origin'
+                credentials: 'include'
               }).catch(() => {});
             }
           };

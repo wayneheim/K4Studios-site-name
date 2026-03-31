@@ -142,6 +142,8 @@ const heroImageId = candidatePool[0]?.id || null;
 </section>
 
 <script>
+  const analyticsEndpoint = 'https://edge.k4studios.com/__k4e';
+
   // Track preview strip clicks
   document.querySelectorAll('[data-preview-click]').forEach(link => {
     link.addEventListener('click', () => {
@@ -196,15 +198,15 @@ const heroImageId = candidatePool[0]?.id || null;
       });
       if (navigator.sendBeacon) {
         const blob = new Blob([payload], { type: 'application/json' });
-        navigator.sendBeacon('/__k4e', blob);
+        navigator.sendBeacon(analyticsEndpoint, blob);
       } else {
-        fetch('/__k4e', {
+        fetch(analyticsEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: payload,
           keepalive: true,
           cache: 'no-store',
-          credentials: 'same-origin'
+          credentials: 'include'
         }).catch(() => {});
       }
 

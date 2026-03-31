@@ -5,7 +5,8 @@
  * Uses sendBeacon for reliable delivery even on page unload
  */
 
-const TRACK_ENDPOINT = '/__k4e';
+const EDGE_ANALYTICS_ORIGIN = 'https://edge.k4studios.com';
+const TRACK_ENDPOINT = `${EDGE_ANALYTICS_ORIGIN}/__k4e`;
 
 let inMemorySessionId: string | null = null;
 
@@ -372,7 +373,7 @@ function sendTrackingPayload(payloadJson: string, debugLabel?: string): void {
     headers: { 'Content-Type': 'application/json' },
     keepalive: true,
     cache: 'no-store',
-    credentials: 'same-origin'
+    credentials: 'include'
   })
     .then((res) => {
       logDebug({
