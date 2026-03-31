@@ -7,16 +7,118 @@
  * 
  * Variants:
  * - "index"      → Full cornerstone card grid (Blog index page)
- * - "definition" → Numbered series nav (Definition pages 1-13)
+ * - "definition" → Numbered series nav (Definition pages 1-14)
  * - "post"       → Simple text link list (Regular blog posts)
  */
 
 interface Props {
   variant?: "index" | "definition" | "post";
-  currentPage?: number; // 1-13, used to highlight current page in definition variant
+  currentPage?: number; // 1-14, used to highlight current page in definition variant
 }
 
 const { variant = "post", currentPage } = Astro.props;
+
+const cornerstonePages = [
+  {
+    number: 1,
+    href: "/Blog/what-is-western-art",
+    title: "What Is Western Art?",
+    description: "History, meaning, and evolution of the American West in art",
+    group: "foundations"
+  },
+  {
+    number: 2,
+    href: "/Blog/what-is-western-fine-art",
+    title: "What Is Western Fine Art?",
+    description: "Definition, distinction, and why the term matters",
+    group: "foundations"
+  },
+  {
+    number: 3,
+    href: "/Blog/what-is-western-fine-art-photography",
+    title: "What Is Western Fine Art Photography?",
+    description: "Definition, distinction, and what it is not",
+    group: "foundations"
+  },
+  {
+    number: 4,
+    href: "/Blog/what-is-artistic-western-photography",
+    title: "What Is Artistic Western Photography?",
+    description: "Craft, composition, and the expressive lens",
+    group: "foundations"
+  },
+  {
+    number: 5,
+    href: "/Blog/what-is-painterly-photography",
+    title: "What Is Painterly Photography?",
+    description: "Meaning, misuse, and the fine art distinction",
+    group: "disciplines"
+  },
+  {
+    number: 6,
+    href: "/Blog/what-is-western-cowboy-art",
+    title: "What Is Western Cowboy Art?",
+    description: "History, myth, and the enduring figure of the American cowboy",
+    group: "disciplines"
+  },
+  {
+    number: 7,
+    href: "/Blog/what-is-historical-western-photography",
+    title: "What Is Historical Western Photography?",
+    description: "Definition, distinction, and why the term matters",
+    group: "disciplines"
+  },
+  {
+    number: 8,
+    href: "/Blog/what-is-cowboy-fine-art-photography",
+    title: "What Is Cowboy Fine Art Photography?",
+    description: "Authored portraiture - craft, narrative, and psychological depth",
+    group: "disciplines"
+  },
+  {
+    number: 9,
+    href: "/Blog/narrative-western-art-vs-traditional",
+    title: "Narrative Western Art vs Traditional Western Art",
+    description: "Where story, consequence, and lived experience separate from subject alone",
+    group: "narrative"
+  },
+  {
+    number: 10,
+    href: "/Blog/what-is-narrative-photography",
+    title: "What Is Narrative Photography?",
+    description: "Definition, structure, and why some photographs feel like lived moments",
+    group: "narrative"
+  },
+  {
+    number: 11,
+    href: "/Blog/what-makes-an-image-feel-cinematic",
+    title: "What Makes an Image Feel Cinematic?",
+    description: "Tension, implication, framing, and the felt presence of story",
+    group: "narrative"
+  },
+  {
+    number: 12,
+    href: "/Blog/can-photography-be-narrative-western-art",
+    title: "Can Photography Be Narrative Western Art?",
+    description: "Why medium does not determine narrative depth or artistic legitimacy",
+    group: "narrative"
+  },
+  {
+    number: 13,
+    href: "/Blog/narrative-vs-documentary-photography",
+    title: "Narrative vs Documentary Photography",
+    description: "How interpretation, implication, and record diverge inside the frame",
+    group: "narrative"
+  },
+  {
+    number: 14,
+    href: "/Blog/what-is-visual-storytelling-in-photography",
+    title: "What Is Visual Storytelling in Photography?",
+    description: "How a photograph moves beyond description and begins carrying story",
+    group: "narrative"
+  }
+];
+
 ---
 
 {variant === "index" && (
@@ -24,85 +126,105 @@ const { variant = "post", currentPage } = Astro.props;
     <h2>Cornerstones</h2>
     <p class="subhead">Reference articles defining the disciplines behind the work.</p>
 
-    <div class="cornerstone-grid">
-      <a href="/Blog/what-is-western-art" class="card">
-        <span class="num">1</span>
-        <h3>What Is Western Art?</h3>
-        <p>History, meaning, and evolution of the American West in art</p>
-      </a>
+    <section class="cornerstone-group">
+      <div class="cornerstone-group-head">
+        <h3>Foundations</h3>
+        <p>Core definitions that establish the Western and fine art framework behind the work.</p>
+      </div>
 
-      <a href="/Blog/what-is-western-fine-art" class="card">
-        <span class="num">2</span>
-        <h3>What Is Western Fine Art?</h3>
-        <p>Definition, distinction, and why the term matters</p>
-      </a>
+      <div class="cornerstone-grid">
+        <a href="/Blog/what-is-western-art" class="card">
+          <span class="num">1</span>
+          <h3>What Is Western Art?</h3>
+          <p>History, meaning, and evolution of the American West in art</p>
+        </a>
+        <a href="/Blog/what-is-western-fine-art" class="card">
+          <span class="num">2</span>
+          <h3>What Is Western Fine Art?</h3>
+          <p>Definition, distinction, and why the term matters</p>
+        </a>
+        <a href="/Blog/what-is-western-fine-art-photography" class="card">
+          <span class="num">3</span>
+          <h3>What Is Western Fine Art Photography?</h3>
+          <p>Definition, distinction, and what it is not</p>
+        </a>
+        <a href="/Blog/what-is-artistic-western-photography" class="card">
+          <span class="num">4</span>
+          <h3>What Is Artistic Western Photography?</h3>
+          <p>Craft, composition, and the expressive lens</p>
+        </a>
+      </div>
+    </section>
 
-      <a href="/Blog/what-is-western-fine-art-photography" class="card">
-        <span class="num">3</span>
-        <h3>What Is Western Fine Art Photography?</h3>
-        <p>Definition, distinction, and what it is not</p>
-      </a>
+    <section class="cornerstone-group">
+      <div class="cornerstone-group-head">
+        <h3>Disciplines & Forms</h3>
+        <p>Specific branches, subjects, and authored traditions inside the larger Western photography field.</p>
+      </div>
 
-      <a href="/Blog/what-is-artistic-western-photography" class="card">
-        <span class="num">4</span>
-        <h3>What Is Artistic Western Photography?</h3>
-        <p>Craft, composition, and the expressive lens</p>
-      </a>
+      <div class="cornerstone-grid">
+        <a href="/Blog/what-is-painterly-photography" class="card">
+          <span class="num">5</span>
+          <h3>What Is Painterly Photography?</h3>
+          <p>Meaning, misuse, and the fine art distinction</p>
+        </a>
+        <a href="/Blog/what-is-western-cowboy-art" class="card">
+          <span class="num">6</span>
+          <h3>What Is Western Cowboy Art?</h3>
+          <p>History, myth, and the enduring figure of the American cowboy</p>
+        </a>
+        <a href="/Blog/what-is-historical-western-photography" class="card">
+          <span class="num">7</span>
+          <h3>What Is Historical Western Photography?</h3>
+          <p>Definition, distinction, and why the term matters</p>
+        </a>
+        <a href="/Blog/what-is-cowboy-fine-art-photography" class="card">
+          <span class="num">8</span>
+          <h3>What Is Cowboy Fine Art Photography?</h3>
+          <p>Authored portraiture - craft, narrative, and psychological depth</p>
+        </a>
+      </div>
+    </section>
 
-      <a href="/Blog/what-is-painterly-photography" class="card">
-        <span class="num">5</span>
-        <h3>What Is Painterly Photography?</h3>
-        <p>Meaning, misuse, and the fine art distinction</p>
-      </a>
+    <section class="cornerstone-group">
+      <div class="cornerstone-group-head">
+        <h3>Narrative & Story</h3>
+        <p>Story-first essays on implication, cinematic presence, and the narrative philosophy shaping the images.</p>
+      </div>
 
-      <a href="/Blog/what-is-western-cowboy-art" class="card">
-        <span class="num">6</span>
-        <h3>What Is Western Cowboy Art?</h3>
-        <p>History, myth, and the enduring figure of the American cowboy</p>
-      </a>
-
-      <a href="/Blog/what-is-historical-western-photography" class="card">
-        <span class="num">7</span>
-        <h3>What Is Historical Western Photography?</h3>
-        <p>Definition, distinction, and why the term matters</p>
-      </a>
-
-      <a href="/Blog/what-is-cowboy-fine-art-photography" class="card">
-        <span class="num">8</span>
-        <h3>What Is Cowboy Fine Art Photography?</h3>
-        <p>Authored portraiture — craft, narrative, and psychological depth</p>
-      </a>
-
-      <a href="/Blog/narrative-western-art-vs-traditional" class="card">
-        <span class="num">9</span>
-        <h3>Narrative Western Art vs Traditional Western Art</h3>
-        <p>Where story, consequence, and lived experience separate from subject alone</p>
-      </a>
-
-      <a href="/Blog/what-is-narrative-photography" class="card">
-        <span class="num">10</span>
-        <h3>What Is Narrative Photography?</h3>
-        <p>Definition, structure, and why some photographs feel like lived moments</p>
-      </a>
-
-      <a href="/Blog/what-makes-an-image-feel-cinematic" class="card">
-        <span class="num">11</span>
-        <h3>What Makes an Image Feel Cinematic?</h3>
-        <p>Tension, implication, framing, and the felt presence of story</p>
-      </a>
-
-      <a href="/Blog/can-photography-be-narrative-western-art" class="card">
-        <span class="num">12</span>
-        <h3>Can Photography Be Narrative Western Art?</h3>
-        <p>Why medium does not determine narrative depth or artistic legitimacy</p>
-      </a>
-
-      <a href="/Blog/narrative-vs-documentary-photography" class="card">
-        <span class="num">13</span>
-        <h3>Narrative vs Documentary Photography</h3>
-        <p>How interpretation, implication, and record diverge inside the frame</p>
-      </a>
-    </div>
+      <div class="cornerstone-grid">
+        <a href="/Blog/narrative-western-art-vs-traditional" class="card">
+          <span class="num">9</span>
+          <h3>Narrative Western Art vs Traditional Western Art</h3>
+          <p>Where story, consequence, and lived experience separate from subject alone</p>
+        </a>
+        <a href="/Blog/what-is-narrative-photography" class="card">
+          <span class="num">10</span>
+          <h3>What Is Narrative Photography?</h3>
+          <p>Definition, structure, and why some photographs feel like lived moments</p>
+        </a>
+        <a href="/Blog/what-makes-an-image-feel-cinematic" class="card">
+          <span class="num">11</span>
+          <h3>What Makes an Image Feel Cinematic?</h3>
+          <p>Tension, implication, framing, and the felt presence of story</p>
+        </a>
+        <a href="/Blog/can-photography-be-narrative-western-art" class="card">
+          <span class="num">12</span>
+          <h3>Can Photography Be Narrative Western Art?</h3>
+          <p>Why medium does not determine narrative depth or artistic legitimacy</p>
+        </a>
+        <a href="/Blog/narrative-vs-documentary-photography" class="card">
+          <span class="num">13</span>
+          <h3>Narrative vs Documentary Photography</h3>
+          <p>How interpretation, implication, and record diverge inside the frame</p>
+        </a>
+        <a href="/Blog/what-is-visual-storytelling-in-photography" class="card">
+          <span class="num">14</span>
+          <h3>What Is Visual Storytelling in Photography?</h3>
+          <p>How a photograph moves beyond description and begins carrying story</p>
+        </a>
+      </div>
+    </section>
   </section>
 )}
 
@@ -110,83 +232,16 @@ const { variant = "post", currentPage } = Astro.props;
   <section class="western-series">
     <p class="series-label">Cornerstone Series</p>
     <nav class="series-nav">
-      {currentPage === 1 ? (
-        <span class="current">1</span>
-      ) : (
-        <a href="/Blog/what-is-western-art" title="What Is Western Art?">1</a>
-      )}
-      <span class="sep">|</span>
-      {currentPage === 2 ? (
-        <span class="current">2</span>
-      ) : (
-        <a href="/Blog/what-is-western-fine-art" title="What Is Western Fine Art?">2</a>
-      )}
-      <span class="sep">|</span>
-      {currentPage === 3 ? (
-        <span class="current">3</span>
-      ) : (
-        <a href="/Blog/what-is-western-fine-art-photography" title="What Is Western Fine Art Photography?">3</a>
-      )}
-      <span class="sep">|</span>
-      {currentPage === 4 ? (
-        <span class="current">4</span>
-      ) : (
-        <a href="/Blog/what-is-artistic-western-photography" title="What Is Artistic Western Photography?">4</a>
-      )}
-      <span class="sep">|</span>
-      {currentPage === 5 ? (
-        <span class="current">5</span>
-      ) : (
-        <a href="/Blog/what-is-painterly-photography" title="What Is Painterly Photography?">5</a>
-      )}
-      <span class="sep">|</span>
-      {currentPage === 6 ? (
-        <span class="current">6</span>
-      ) : (
-        <a href="/Blog/what-is-western-cowboy-art" title="What Is Western Cowboy Art?">6</a>
-      )}
-      <span class="sep">|</span>
-      {currentPage === 7 ? (
-        <span class="current">7</span>
-      ) : (
-        <a href="/Blog/what-is-historical-western-photography" title="What Is Historical Western Photography?">7</a>
-      )}
-      <span class="sep">|</span>
-      {currentPage === 8 ? (
-        <span class="current">8</span>
-      ) : (
-        <a href="/Blog/what-is-cowboy-fine-art-photography" title="What Is Cowboy Fine Art Photography?">8</a>
-      )}
-      <span class="sep">|</span>
-      {currentPage === 9 ? (
-        <span class="current">9</span>
-      ) : (
-        <a href="/Blog/narrative-western-art-vs-traditional" title="Narrative Western Art vs Traditional Western Art">9</a>
-      )}
-      <span class="sep">|</span>
-      {currentPage === 10 ? (
-        <span class="current">10</span>
-      ) : (
-        <a href="/Blog/what-is-narrative-photography" title="What Is Narrative Photography?">10</a>
-      )}
-      <span class="sep">|</span>
-      {currentPage === 11 ? (
-        <span class="current">11</span>
-      ) : (
-        <a href="/Blog/what-makes-an-image-feel-cinematic" title="What Makes an Image Feel Cinematic?">11</a>
-      )}
-      <span class="sep">|</span>
-      {currentPage === 12 ? (
-        <span class="current">12</span>
-      ) : (
-        <a href="/Blog/can-photography-be-narrative-western-art" title="Can Photography Be Narrative Western Art?">12</a>
-      )}
-      <span class="sep">|</span>
-      {currentPage === 13 ? (
-        <span class="current">13</span>
-      ) : (
-        <a href="/Blog/narrative-vs-documentary-photography" title="Narrative vs Documentary Photography">13</a>
-      )}
+      {cornerstonePages.map((page, index) => (
+        <span class="series-item">
+          {currentPage === page.number ? (
+            <span class="current">{page.number}</span>
+          ) : (
+            <a href={page.href} title={page.title}>{page.number}</a>
+          )}
+          {index < cornerstonePages.length - 1 && <span class="sep">|</span>}
+        </span>
+      ))}
     </nav>
   </section>
 )}
@@ -195,31 +250,12 @@ const { variant = "post", currentPage } = Astro.props;
   <section class="definition-links">
     <h3>Cornerstone Definitions</h3>
     <div class="definition-row">
-      <a href="/Blog/what-is-western-art">What Is Western Art?</a>
-      <span class="sep">|</span>
-      <a href="/Blog/what-is-western-fine-art">What Is Western Fine Art?</a>
-      <span class="sep">|</span>
-      <a href="/Blog/what-is-western-fine-art-photography">What Is Western Fine Art Photography?</a>
-      <span class="sep">|</span>
-      <a href="/Blog/what-is-artistic-western-photography">What Is Artistic Western Photography?</a>
-      <span class="sep">|</span>
-      <a href="/Blog/what-is-painterly-photography">What Is Painterly Photography?</a>
-      <span class="sep">|</span>
-      <a href="/Blog/what-is-western-cowboy-art">What Is Western Cowboy Art?</a>
-      <span class="sep">|</span>
-      <a href="/Blog/what-is-historical-western-photography">What Is Historical Western Photography?</a>
-      <span class="sep">|</span>
-      <a href="/Blog/what-is-cowboy-fine-art-photography">What Is Cowboy Fine Art Photography?</a>
-      <span class="sep">|</span>
-      <a href="/Blog/narrative-western-art-vs-traditional">Narrative Western Art vs Traditional Western Art</a>
-      <span class="sep">|</span>
-      <a href="/Blog/what-is-narrative-photography">What Is Narrative Photography?</a>
-      <span class="sep">|</span>
-      <a href="/Blog/what-makes-an-image-feel-cinematic">What Makes an Image Feel Cinematic?</a>
-      <span class="sep">|</span>
-      <a href="/Blog/can-photography-be-narrative-western-art">Can Photography Be Narrative Western Art?</a>
-      <span class="sep">|</span>
-      <a href="/Blog/narrative-vs-documentary-photography">Narrative vs Documentary Photography</a>
+      {cornerstonePages.map((page, index) => (
+        <span class="definition-item">
+          <a href={page.href}>{page.title}</a>
+          {index < cornerstonePages.length - 1 && <span class="sep">|</span>}
+        </span>
+      ))}
     </div>
   </section>
 )}
@@ -246,7 +282,35 @@ const { variant = "post", currentPage } = Astro.props;
   .cornerstones .subhead {
     color: #666;
     font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .cornerstone-group {
+    margin-top: 2rem;
+    text-align: left;
+  }
+
+  .cornerstone-group:first-of-type {
+    margin-top: 0;
+  }
+
+  .cornerstone-group-head {
+    margin-bottom: 1rem;
+  }
+
+  .cornerstone-group-head h3 {
+    font-family: 'Glegoo', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0 0 0.3rem 0;
+  }
+
+  .cornerstone-group-head p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #666;
+    line-height: 1.55;
   }
 
   .cornerstone-grid {
@@ -337,6 +401,12 @@ const { variant = "post", currentPage } = Astro.props;
     flex-wrap: wrap;
   }
 
+  .series-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   .series-nav a {
     color: #555;
     text-decoration: none;
@@ -379,6 +449,12 @@ const { variant = "post", currentPage } = Astro.props;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .definition-item {
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
   }

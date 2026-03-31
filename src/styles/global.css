@@ -754,6 +754,32 @@ body.react-mounted footer {
   box-shadow: 0 1px 4px rgba(0,0,0,0.16) inset;
 }
 
+.more-about-image summary::-webkit-details-marker {
+  display: none;
+}
+
+.more-about-image .plus-minus-icon::before {
+  content: '+';
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.more-about-image[open] .plus-minus-icon::before {
+  content: '-';
+}
+
+.notes-popup-content .notes-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: none !important;
+}
+
+@media (max-width: 767px) {
+  .more-about-image {
+    margin-top: 2.5rem !important;
+  }
+}
+
 /* Play/Next button style to match sample */
 .k4-play-btn {
   position: relative;

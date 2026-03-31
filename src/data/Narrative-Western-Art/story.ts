@@ -74,7 +74,7 @@ export const narrativeWesternArtStory = [
       "Narrative Western art is not defined by action. It is defined by implication.",
       "A weathered rider at dusk. A pause before departure. A glance that suggests an unfinished conflict. These images work because they imply a larger story beyond the frame.",
       "Every strong narrative image contains more than one moment in time: the visible moment inside the frame, the implied past that gave rise to it, and the future the viewer imagines after it.",
-      "That is why the most compelling Western images feel cinematic without becoming theatrical. They behave like a one-image movie: a single frame that suggests an entire sequence of events without spelling it out."
+        "That is why the most compelling Western images feel cinematic without becoming theatrical. They feel like unfinished stories caught mid-breath, suggesting an entire sequence of events without spelling it out."
     ]
   },
   {
@@ -88,7 +88,7 @@ export const narrativeWesternArtStory = [
   {
     subhead: "Painterly Photography as Narrative Western Art",
     paragraphs: [
-      "At K4 Studios, narrative Western art is pursued through painterly photography and shaped through what we call One-Image Movies, images constructed as fragments of a larger narrative, designed to be completed in the viewer's imagination.",
+      "At K4 Studios, narrative Western art is pursued through painterly photography and shaped through what we call <a href=\"/Other/One-Image-Movie\">One-Image Movies</a>, images constructed as fragments of a larger narrative and designed to be completed in the viewer's imagination.",
       "Light is sculpted. Tone is restrained. Texture is layered until the image carries the atmosphere of remembered story while remaining unmistakably photographic.",
       "This story-first approach still belongs to the larger lineage of <a href=\"/American-Western-Art\">American Western Art</a>, and it often overlaps with <a href=\"/Western-Fine-Art-Photography\">Western Fine Art Photography</a> when photography is used to carry narrative rather than merely record subject.",
       "This process is not about turning photographs into fake paintings. It is about using photographic craft to deepen story, mood, and emotional gravity.",

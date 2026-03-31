@@ -665,7 +665,7 @@ export default function ChapterGalleryBase({
         newNotesContainer.id = `canonical-notes-${currentImage.id || 'default'}`;
         newNotesContainer.className = 'widget-notes-container';
         newNotesContainer.setAttribute('data-notes-canonical', 'true');
-        newNotesContainer.innerHTML = `<p class="widget-notes" itemprop="about">${currentImage.notes}</p>`;
+        newNotesContainer.innerHTML = `<p class="widget-notes">${currentImage.notes}</p>`;
         widget.insertBefore(newNotesContainer, expandTrigger);
       }
     } else if (notesContainer) {
@@ -1520,7 +1520,6 @@ export default function ChapterGalleryBase({
                             WebkitBoxOrient: 'vertical',
                             overflow: 'hidden'
                           }}
-                          aria-label="Caption excerpt"
                         >
                           “{imageCaptionExcerpt.text}{imageCaptionExcerpt.truncated ? '...' : ''}”
                         </p>
@@ -1675,11 +1674,13 @@ export default function ChapterGalleryBase({
                         data-jump-form
                       >
                         <input
-                          type="text"
+                          type="number"
                           id="chapterNum"
                           name="chapterNum"
                           min="1"
                           max={galleryData.length}
+                          step="1"
+                          inputMode="numeric"
                           placeholder={isMobile ? "Jump to #" : "#"}
                           className="w-20 border border-gray-200 rounded px-1 py-1 text-center"
                           style={{ fontSize: "1.0em" }}
@@ -2016,23 +2017,6 @@ export default function ChapterGalleryBase({
                     {/* More about this image - Tier 1 SEO pattern */}
                     {(galleryData[currentIndex]?.description || galleryData[currentIndex]?.notes) && (
                       <>
-                      <style>{`
-                        .more-about-image summary::-webkit-details-marker { display: none; }
-                        .more-about-image .plus-minus-icon::before { content: '+'; font-size: 1.1rem; font-weight: bold; }
-                        .more-about-image[open] .plus-minus-icon::before { content: '−'; }
-                        /* Reset styles when notes are moved to popup */
-                        .notes-popup-content .notes-section {
-                          margin-top: 0 !important;
-                          padding-top: 0 !important;
-                          border-top: none !important;
-                        }
-                        /* More breathing room on mobile */
-                        @media (max-width: 767px) {
-                          .more-about-image {
-                            margin-top: 2.5rem !important;
-                          }
-                        }
-                      `}</style>
                       <details 
                         className="more-about-image" 
                         style={{ margin: 0 }}
@@ -2094,7 +2078,7 @@ export default function ChapterGalleryBase({
                           textAlign: 'left'
                         }}>
                           {galleryData[currentIndex]?.description && (
-                            <p itemProp="description" style={{ margin: '0 0 1rem' }}>
+                            <p style={{ margin: '0 0 1rem' }}>
                               {galleryData[currentIndex].description}
                             </p>
                           )}
@@ -2116,7 +2100,7 @@ export default function ChapterGalleryBase({
                                 margin: '0 0 0.5rem',
                                 letterSpacing: '0.04em'
                               }}>Collector Notes:</p>
-                              <p itemProp="about" style={{
+                              <p style={{
                                 fontStyle: 'italic',
                                 color: '#9a9a99',
                                 margin: 0,

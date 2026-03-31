@@ -9,36 +9,36 @@ import { getBreadcrumbList, getStructuredData } from "@/components/utils/getStru
 
 import "@/styles/global.css";
 
-const sectionPath = "/Blog/what-is-narrative-photography";
+const sectionPath = "/Blog/what-is-visual-storytelling-in-photography";
 const canonicalUrl = `https://www.k4studios.com${sectionPath}`;
 
 const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
 const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
 
 const headerImage = {
-  id: "i-bfKMXS9",
-  src: getProxySrc("i-bfKMXS9", "l"),
-  alt: "Narrative photograph carrying atmosphere and implied story"
+  id: "i-Sc9hZGs",
+  src: getProxySrc("i-Sc9hZGs", "l"),
+  alt: "Photograph carrying visual storytelling through atmosphere and implication"
 };
 
 const image1 = {
-  id: "i-5TtHV8g",
-  src: getProxySrc("i-5TtHV8g", "l"),
+  id: "i-NxjDRLV",
+  src: getProxySrc("i-NxjDRLV", "l"),
   alt: "Portrait built as a threshold into story rather than a simple record"
 };
 const image2 = {
-  id: "i-5rq7gcD",
-  src: getProxySrc("i-5rq7gcD", "l"),
-  alt: "Narrative scene shaped by silence, suspense, and implication"
+  id: "i-X4SH26N",
+  src: getProxySrc("i-X4SH26N", "l"),
+  alt: "Story-driven scene shaped by silence, suspense, and implication"
 };
 const image3 = {
-  id: "i-fCG2nm8",
-  src: getProxySrc("i-fCG2nm8", "l"),
+  id: "i-QWcX7JT",
+  src: getProxySrc("i-QWcX7JT", "l"),
   alt: "Landscape functioning as emotional environment rather than scenery"
 };
 
-const pageTitle = "What Is Narrative Photography? | K4 Studios";
-const pageDescription = "Narrative photography is photography that implies a larger story rather than simply recording a scene. This guide defines how narrative enters the frame through atmosphere, implication, and structure.";
+const pageTitle = "What Is Visual Storytelling in Photography? | K4 Studios";
+const pageDescription = "Visual storytelling in photography is the shaping of a still image so it implies a larger story through atmosphere, tension, and restraint rather than simple description alone.";
 
 const structuredImageUrls = [
   getAbsoluteProxySrc(headerImage.id, "l"),
@@ -51,7 +51,7 @@ const breadcrumbStructuredData = getBreadcrumbList(
   [
     { name: "Home", item: "https://www.k4studios.com" },
     { name: "Narrative Western Art", item: "https://www.k4studios.com/Narrative-Western-Art" },
-    { name: "What Is Narrative Photography?", item: canonicalUrl },
+    { name: "What Is Visual Storytelling in Photography?", item: canonicalUrl },
   ],
   `${canonicalUrl}#breadcrumb`
 );
@@ -59,7 +59,7 @@ const breadcrumbStructuredData = getBreadcrumbList(
 const structuredData = getStructuredData({
   type: "Article",
   data: {
-    headline: "What Is Narrative Photography?",
+    headline: "What Is Visual Storytelling in Photography?",
     description: pageDescription,
     url: canonicalUrl,
     image: structuredImageUrls,
@@ -69,17 +69,17 @@ const structuredData = getStructuredData({
       name: "Wayne Heim"
     },
     datePublished: "2026-03-30",
-    articleSection: "Narrative Photography",
+    articleSection: "Visual Storytelling",
     definedTerm: {
-      name: "Narrative Photography",
+      name: "Visual Storytelling in Photography",
       description: pageDescription,
     },
     keywords: [
-      "what is narrative photography",
-      "narrative photography",
-      "cinematic photography",
+      "what is visual storytelling in photography",
       "visual storytelling in photography",
-      "fine art storytelling"
+      "storytelling photography",
+      "narrative photography",
+      "cinematic photography"
     ]
   },
   defaults: {
@@ -93,7 +93,7 @@ const structuredData = getStructuredData({
 
 const meta = {
   description: pageDescription,
-  keywords: "what is narrative photography, narrative photography, cinematic photography, visual storytelling in photography, fine art storytelling",
+  keywords: "what is visual storytelling in photography, visual storytelling in photography, storytelling photography, narrative photography, cinematic photography",
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogType: "article",
@@ -106,7 +106,7 @@ const meta = {
   twitterCard: "summary_large_image"
 };
 
-const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › What Is Narrative Photography?`;
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › What Is Visual Storytelling in Photography?`;
 ---
 
 <BaseLayout title={pageTitle} structuredDataJSON={structuredData} meta={meta}>
@@ -122,35 +122,35 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
 
     <section style="text-align:center; padding:2rem 1rem 2rem;">
       <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:0.5rem; line-height:1.2;">
-        What Is Narrative Photography?
+        What Is Visual Storytelling in Photography?
       </h1>
       <p style="font-size:1.25rem; color:#666; font-style:italic;">
-        Photography that carries a life larger than the visible moment
+        Photography that suggests a life larger than the visible frame
       </p>
       <p style="font-size:0.95rem; color:#888; margin-top:0.75rem; letter-spacing:0.02em;">
-        A definition of story-driven photography for collectors, artists, and serious viewers
+        A definition of how still images move from record into implication, atmosphere, and story
       </p>
     </section>
 
     <section class="story-section max-w-[860px] mx-auto px-4">
       <article class="story-block space-y-4">
         <p style="font-size:0.95rem; color:#666; margin-bottom:1.5rem; font-style:italic;">
-          A definition of photography that implies what lies before and after the frame rather than closing the moment too quickly
+          A definition of photography that tells story through what the frame implies rather than what it fully explains
         </p>
 
-        <p><strong>Narrative photography</strong> is photography shaped to imply a larger story. It does not merely show what was in front of the camera. It opens the frame outward until the viewer begins to sense what happened before the moment, what may happen after it, and what emotional pressure lives inside it.</p>
+        <p><strong>Visual storytelling in photography</strong> is the shaping of a still image so it implies a larger story. It does not merely show what was in front of the camera. It opens the frame outward until the viewer begins to sense what happened before the moment, what may happen after it, and what emotional pressure lives inside it.</p>
 
         <p>That story may come through posture, atmosphere, silence, gesture, distance, or consequence. It may be overt or barely perceptible. But the defining trait is the same: the image carries more life than it fully explains.</p>
 
-        <p>Narrative photography is not a genre limited to one subject. It can appear in portraiture, historical work, landscape, street photography, and especially in forms like <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a>, where history and myth already live close to one another.</p>
+        <p>Visual storytelling is not limited to one subject. It can appear in portraiture, historical work, landscape, and especially in forms like <a href="/Narrative-Western-Art" style="color:#8b5a2b; text-decoration:underline;">Narrative Western Art</a>, where history and myth already live close to one another.</p>
 
-        <p>When narrative photography is fully realized, the image starts feeling less like a static record and more like a moving story held still. At K4 Studios, that single-frame pressure is gathered under the idea of the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a>.</p>
+        <p>When visual storytelling is fully realized, the image begins to feel less like a photograph you finish quickly and more like a moving story caught in one suspended instant. That is the territory of the <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a>: a single frame carrying the pressure of a much larger experience.</p>
 
         <div class="section-heading-with-line">
-          <h2>What Makes Photography Narrative</h2>
+          <h2>What Makes an Image Story-Driven</h2>
         </div>
 
-        <p>Narrative does not come from props alone. A hat, a train, a foggy road, or a weathered face do not create story by themselves. Narrative begins when the image is structured so that the viewer feels a life pressing against the visible frame.</p>
+        <p>Story does not come from props alone. A hat, a train, a foggy road, or a weathered face do not create narrative by themselves. Visual storytelling begins when the image is structured so the viewer feels a life pressing against the visible frame.</p>
 
         <p>That often means:</p>
 
@@ -163,24 +163,24 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </ul>
 
         <div class="section-heading-with-line">
-          <h2>What Narrative Photography Is Not</h2>
+          <h2>What Visual Storytelling Is Not</h2>
         </div>
 
-        <p>Narrative photography is not the same thing as documentation, even though both may photograph real subjects and real places.</p>
+        <p>Visual storytelling is not the same thing as documentation, even though both may photograph real subjects and real places.</p>
 
-        <p>It is not simply “a photo with a story attached.” And it is not a cinematic color grade pasted over an otherwise empty frame.</p>
+        <p>It is not simply a photo with a story attached. And it is not a cinematic grade pasted over an otherwise empty frame.</p>
 
-        <p>Narrative photography is authored. The story is embedded in the way the image is built: what is shown, what is withheld, where the tension sits, and how the viewer is asked to remain inside the frame.</p>
+        <p>Visual storytelling is authored. The story is embedded in the way the image is built: what is shown, what is withheld, where the tension sits, and how the viewer is asked to remain inside the frame.</p>
 
         <div class="section-heading-with-line">
           <h2>How It Feels Different</h2>
         </div>
 
-        <p>Most photographs can be looked at and understood quickly. Narrative photography resists that closure.</p>
+        <p>Most photographs can be looked at and understood quickly. Story-driven photographs resist that closure.</p>
 
-        <p>It may be quiet, but it is not empty. It may be restrained, but it is not thin. The viewer keeps returning because the image continues to imply more than it gives away.</p>
+        <p>They may be quiet, but they are not empty. They may be restrained, but they are not thin. The viewer keeps returning because the image continues to imply more than it gives away.</p>
 
-        <p>This is also why narrative photography often feels cinematic without needing motion. The frame is still, but the viewer’s mind is not.</p>
+        <p>This is also why visual storytelling often feels cinematic without needing motion. The frame is still, but the viewer's mind is not.</p>
 
         <div class="section-heading-with-line">
           <h2>What This Looks Like in Practice</h2>
@@ -192,7 +192,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
               <img src={image1.src} alt={image1.alt} loading="lazy" />
             </a>
             <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Portrait as threshold — story pressing through stillness
+              Portrait as threshold - story pressing through stillness
             </figcaption>
           </figure>
           <figure>
@@ -200,7 +200,7 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
               <img src={image2.src} alt={image2.alt} loading="lazy" />
             </a>
             <figcaption style="font-size:0.85rem; color:#666; margin-top:0.5rem; font-style:italic;">
-              Suspense and implication — the frame as hinge moment
+              Suspense and implication - the frame as hinge moment
             </figcaption>
           </figure>
           <figure>
@@ -214,34 +214,34 @@ const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-de
         </div>
 
         <div class="section-heading-with-line">
-          <h2>Why Narrative Photography Matters</h2>
+          <h2>Why Visual Storytelling Matters</h2>
         </div>
 
-        <p>Narrative photography slows the viewer down. It asks more than recognition. It asks participation.</p>
+        <p>Visual storytelling slows the viewer down. It asks more than recognition. It asks participation.</p>
 
         <p>For collectors, that means the image can keep opening over time. For artists, it means the photograph can move beyond record and into authorship. For viewers, it means the frame does not remain outside them. It begins to feel lived.</p>
 
         <div class="section-heading-with-line">
-          <h2>Explore Narrative Photography at K4 Studios</h2>
+          <h2>Explore Story-Driven Photography at K4 Studios</h2>
         </div>
 
-        <p>The pages and galleries below show how narrative photography moves through Western subjects, history, and images built to feel larger than a single stopped moment.</p>
+        <p>The pages and galleries below show how visual storytelling is carried through Western subjects, history, and frames built to feel like more than still documents.</p>
 
         <ul style="list-style:disc; padding-left:1.5rem; margin:1rem 0 2rem;">
           <li style="margin-bottom:0.75rem;">
-            <a href="/Narrative-Western-Art" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">Narrative Western Art</a> — Where story becomes the governing principle of the frame
+            <a href="/Blog/what-is-narrative-photography" style="color:#8b5a2b; font-weight:600; text-decoration:underline;">What Is Narrative Photography?</a> - Where story becomes a structural principle inside the frame
           </li>
           <li style="margin-bottom:0.75rem;">
-            <a href="/Other/One-Image-Movie" style="color:#8b5a2b; text-decoration:underline;">One-Image Movie™</a> — Why some still images feel more like unwritten films than finished photographs
+            <a href="/Blog/what-makes-an-image-feel-cinematic" style="color:#8b5a2b; text-decoration:underline;">What Makes an Image Feel Cinematic?</a> - How still images create tension and momentum without movement
           </li>
           <li style="margin-bottom:0.75rem;">
-            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color:#8b5a2b; text-decoration:underline;">Facing History</a> — Historical and Western narrative work in practice
+            <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History" style="color:#8b5a2b; text-decoration:underline;">Facing History</a> - Historical and Western narrative work in practice
           </li>
         </ul>
       </article>
     </section>
 
-    <WesternDefinitions variant="definition" currentPage={10} />
+    <WesternDefinitions variant="definition" currentPage={14} />
 
     <SiteFooter />
   </main>

@@ -113,7 +113,7 @@ const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `${sit
     />
   )}
 
-  <div class="mx-auto max-w-xl px-4 pt-2 pb-4 footer-fade" aria-label="Footer controls and info">
+  <div class="mx-auto max-w-xl px-4 pt-2 pb-4 footer-fade">
 
     <!-- 🔗 Share Drawer (with fallback) -->
     <div class="pb-4">
@@ -121,6 +121,7 @@ const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `${sit
           client:load
           imageUrl={shareImage}
           pageTitle={title || 'K4 Studios'}
+          pageDescription=""
         />
     </div>
 
@@ -149,7 +150,7 @@ const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `${sit
     <!-- 🄯 Copyright -->
     <div class="text-xs text-[#2c2c2c] opacity-70" itemprop="name">
       <span class="block mb-1 text-[0.7rem] tracking-wide text-[#6a5a4a]"><a href="/Western-Fine-Art-Photography" class="hover:underline">Painterly Western Fine Art Photography</a> by Wayne Heim</span>
-  <time datetime={`${currentYear}`} aria-label={`Copyright ${currentYear}`}>&copy; {currentYear}</time>
+  <time datetime={`${currentYear}`}>&copy; {currentYear}</time>
       {' '}Wayne Heim |{' '}
       <a href="/Glossary" class="underline hover:no-underline" title="Story Glossary">Story Glossary</a>
       {' '}| All rights reserved.

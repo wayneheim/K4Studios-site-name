@@ -12654,8 +12654,8 @@ export const galleryData = [
   {
     "id": "i-SPd5h6X",
     "title": "Left for Dead",
-    "description": "A painterly Western fine art photograph centered on abandonment and consequence in the American frontier. Subdued light, grounded posture, and restrained composition create a narrative of survival suspended between injury and resolve. Rather than depicting violence itself, the image lingers in the aftermath—where endurance, isolation, and the weight of choice define the Western experience. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Western portrait of a wounded cowboy left behind on the American frontier",
+    "description": "A painterly Western fine art photograph depicting a wounded figure resting against a cabin wall on the American frontier, where aftermath replaces action and survival becomes uncertain. Subtle tones and grounded stillness reflect the isolation and endurance tied to frontier life, offering a restrained interpretation of hardship within narrative Western art. \n\n© Wayne Heim",
+    "alt": "Painterly Western portrait of a wounded cowboy left behind on the American frontier.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/KLBGT9kCmDpS2PXhrT6W4GFrLsmb3mJKXkMdKXjwS/XL/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/KLBGT9kCmDpS2PXhrT6W4GFrLsmb3mJKXkMdKXjwS/XL/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/NStGCnvH7KvnFbMtFs4F634vB2BVK4wzsQWwTBds4/L/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-L.jpg",
@@ -12663,6 +12663,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPd5h6X/2/KGzgts9B43MNkPsczZFfhwx4d9BggMt7WFshpkq9K/S/Wild%20West%20themed%20Cowboy%20Portrait%20Photography%20Edit%20_HF26626-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-SPd5h6X/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -12678,20 +12679,24 @@ export const galleryData = [
       "western portrait photography",
       "authentic frontier art prints"
     ],
+
     "story": "They didn’t finish the job.  \nJust enough damage to make walking feel pointless.\n\nHe listens for what won’t come back—  \nhoofbeats, voices, the careless noise of men already moving on.\n\nThe ground holds him now.  \nNot mercy.  \nNot rescue.  \nJust time deciding whether he’s still needed.",
     "notes": "This image belongs to the quieter, darker lineage of Western storytelling—where tension comes not from action, but from what follows it. The composition draws the eye downward and inward, reinforcing a sense of gravity and isolation that echoes late-19th-century pictorialist influence.\n\nIts strength lies in implication. By withholding resolution, the piece invites the viewer to confront uncertainty and endurance as defining traits of the frontier, positioning the work as a contemplative counterpoint to more heroic Western imagery.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 230
+    "sortOrder": 230,
+    contentSource: "ai"
   },
   {
     "id": "i-2Cj8j9W",
     "title": "Morning Constitution",
-    "description": "A painterly Western fine art photograph depicting a frontier couple engaged in a morning walk, where ritual and companionship become acts of quiet endurance. Soft light, restrained movement, and period detail emphasize balance and civility within the harsher realities of frontier life. The image reflects a Western narrative shaped not by conflict, but by routine, shared presence, and the steady insistence on normalcy. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Painterly Western photograph of a frontier couple walking together during a morning constitution",
+    "description": "A frontier couple walks side by side across an open landscape, the woman holding a parasol while dressed in period attire alongside a bearded man in Western clothing. This fine art Western photography image captures a quiet moment of daily life on the American frontier, with soft tones and historic detail emphasizing companionship, routine, and frontier life in the American West. \n\n© Wayne Heim",
+    "alt": "Frontier couple walking together during a morning constitution.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-2Cj8j9W/1/MH4j2LB2kHXt9qkKxKjbHsXkcTGJZRXtRKQGZxBTG/XL/Wild%20West%20reenactment%20photo_HF29401-167-169-172-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-2Cj8j9W/1/MH4j2LB2kHXt9qkKxKjbHsXkcTGJZRXtRKQGZxBTG/XL/Wild%20West%20reenactment%20photo_HF29401-167-169-172-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-2Cj8j9W/1/NWmbFVNLGjgGqKrbm3JHLDb53Bjf9z3LGhMfFsFd7/L/Wild%20West%20reenactment%20photo_HF29401-167-169-172-L.jpg",
@@ -12699,6 +12704,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-2Cj8j9W/1/KKGJ2KQw6xj7ZRvv4Cj7xZ99PqkKXgvqQqHwS58Zd/S/Wild%20West%20reenactment%20photo_HF29401-167-169-172-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-2Cj8j9W/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -12715,24 +12721,30 @@ export const galleryData = [
       "rugged spirit",
       "authentic frontier art prints"
     ],
+
     "story": "They walk not to arrive anywhere,  \nbut to remember how the day is supposed to begin.\n\nThe umbrella isn’t for rain.  \nIt’s for appearances, for order, for the small rituals that keep the world from slipping.\n\nSide by side, pace measured, they move forward—  \nas if routine itself might still hold the frontier together.",
     "notes": "This piece explores a lesser-seen Western tension—the maintenance of order amid uncertainty. The paired figures, unified in pace and posture, recall pictorialist compositions where mood and gesture outweigh spectacle.\n\nRather than dramatizing hardship, the image honors routine as resistance. Its quiet structure and softened palette invite prolonged viewing, rewarding collectors drawn to narrative restraint and the subtle psychology of frontier life.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 231,
+
     "themes": {
       "frontier-women": 54,
       "love-goodbye": 35
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-7Kwv8vc",
     "title": "Beacon of Hope",
-    "description": "A painterly Western fine art photograph portraying a lone cowboy standing guard, illuminated by soft, directional light that evokes endurance rather than confrontation. The restrained posture, period detail, and quiet tension reflect a frontier ethic where vigilance and responsibility carried equal weight. This image speaks to protection as an act of faith—hope maintained not through optimism, but through presence and resolve. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Western photograph of a cowboy standing guard in soft light, embodying frontier vigilance and hope",
+    "description": "An older lawman stands inside a wooden frontier structure, holding a rifle as soft window light filters through dust in the air. This fine art Western photography image captures a moment of quiet vigilance on the American frontier, with historic detail and subdued tones emphasizing frontier life, western portrait photography, and the enduring presence of authority in the American West. \n\n© Wayne Heim",
+    "alt": "An older lawman holding a rifle stands in soft light inside a rustic frontier building, conveying quiet vigilance and authority.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-7Kwv8vc/2/Nf5dq8GmJKZ4vCKb6vPThgv8ppWkJxHLJx9zqDgFc/XL/fine%20art%20western%20portrait%20photo%20_O1H0487-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-7Kwv8vc/2/Nf5dq8GmJKZ4vCKb6vPThgv8ppWkJxHLJx9zqDgFc/XL/fine%20art%20western%20portrait%20photo%20_O1H0487-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-7Kwv8vc/2/L4Ctwmwpwkm5C79NP2jbC9DLw2DW7nChwP6gDJLnD/L/fine%20art%20western%20portrait%20photo%20_O1H0487-Edit-Edit-L.jpg",
@@ -12740,6 +12752,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-7Kwv8vc/2/KPC8tcn5RjQB6spLCHvjCvHJgR77LS8XZXrxMFn96/S/fine%20art%20western%20portrait%20photo%20_O1H0487-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-7Kwv8vc/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -12756,23 +12769,29 @@ export const galleryData = [
       "rugged spirit",
       "authentic frontier art prints"
     ],
+
     "story": "He doesn’t stand in the light by accident.  \nIt finds him because he stays still long enough to be found.\n\nThe rifle is held low—not in warning, not in threat—  \nbut as a reminder that hope on the frontier was never unguarded.\n\nWhat keeps him upright isn’t certainty.  \nIt’s the belief that someone, somewhere behind him, is still worth protecting.",
-    "notes": "This work draws strength from restraint. The composition echoes classic Western pictorialism, where light functions as moral weight rather than spectacle.\n\nCollectors drawn to this piece often respond to its psychological steadiness—the idea that hope, in the West, was not loud or naïve, but something quietly defended. It is an image that rewards stillness, revealing its resolve slowly over time.",
+    "notes": "Grounded in restraint, the figure carries authority without motion, aligning with a lineage of Western portraiture where presence outweighs action. Light becomes more than illumination—it acts as a narrative force, shaping the viewer’s attention and reinforcing a sense of moral weight within the scene.  \n\nThe stillness invites prolonged viewing, where the rifle reads not as immediate threat but as responsibility held in balance. This tension between readiness and calm places the work within a quieter, more contemplative tradition of Western art—one where vigilance is sustained, not declared.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 232,
+
     "themes": {
       "whispering-reflection": 65
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-QGCQt7M",
     "title": "Fence-Post Confidence",
-    "description": "A painterly Western fine art photograph portraying a seasoned cowboy at rest, composed with restraint and quiet authority. Light, posture, and environment work together to evoke frontier life without spectacle, emphasizing presence over performance. This image reflects a disciplined, narrative-driven approach to Western photography rooted in consequence, memory, and earned confidence. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly Western fine art portrait of a cowboy leaning against a wooden fence, conveying quiet confidence and frontier character",
+    "description": "Set outside a frontier building, a seasoned cowboy rests against a wooden fence with an easy, familiar stance. This fine art Western photography image captures a quiet pause in frontier life, emphasizing western portrait photography through historic detail, environment, and the grounded presence of the American West.\n\n© Wayne Heim",
+    "alt": "A seasoned cowboy leans casually on a wooden fence outside a rustic frontier building, resting in a relaxed stance.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QGCQt7M/0/L9Npngb36f4Lm7GLjhHP259fbV6ZnC3Vbc8P2jgzw/L/_O2H1782-Edit-Edit-2-L.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QGCQt7M/0/L9Npngb36f4Lm7GLjhHP259fbV6ZnC3Vbc8P2jgzw/L/_O2H1782-Edit-Edit-2-L.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QGCQt7M/0/L9Npngb36f4Lm7GLjhHP259fbV6ZnC3Vbc8P2jgzw/L/_O2H1782-Edit-Edit-2-L.jpg",
@@ -12780,41 +12799,43 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QGCQt7M/0/KwQvMN2zG5kcsc2wZ6Q3F59qzpSDrQnxHHpsKJfpW/S/_O2H1782-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-QGCQt7M/A",
+
     "keywords": [
       "cowboy art",
       "cowboy portraits",
-      "painterly cowboy photography",
       "western fine art photography",
+      "painterly cowboy photography",
       "western cowboy art",
       "frontier life",
       "American West",
       "rugged spirit",
       "western portrait photography",
       "historic western imagery",
-      "western themed art",
       "narrative western art",
       "western wall art",
       "authentic frontier portraits",
-      "painterly western images",
-      "western cowboy portrait",
-      "fine art Western photography"
+      "painterly western images"
     ],
+
     "story": "He doesn’t square up.  \nDoesn’t straighten his coat or shift his weight for effect.\n\nThe fence holds him the way it always has—  \nnot as support, just as something familiar enough to lean on while the world keeps moving.\n\nConfidence like this doesn’t announce itself.  \nIt settles in quietly, earned one season at a time.",
-    "notes": "This piece draws its strength from restraint. The composition avoids drama in favor of posture, weight, and stillness—elements long favored in classic Western portraiture. The fence becomes both setting and metaphor, reinforcing themes of earned confidence and lived experience rather than momentary action. The painterly treatment softens time without diminishing character, placing the subject firmly within the lineage of enduring Western imagery.",
+    "notes": "Presence carries the weight here, not action—placing the figure within a long tradition of Western portraiture where posture and stillness define character. The fence functions as both anchor and familiar structure, reinforcing a sense of place shaped by repetition and lived experience.  \n\nRather than dramatizing the moment, the image allows confidence to settle naturally. It aligns with pictorialist influence and classic Western painting traditions, where restraint reveals more than performance, and where identity is built over time rather than declared outright.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 233,
+
     "themes": {
       "law-outlaws": 67,
       "whispering-reflection": 64
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-8W7jxkN",
     "title": "Cow Hand",
-    "description": "A painterly Western fine art photograph capturing a working cow hand at rest before the day unfolds. Framed by weathered wood and soft, directional light, the image emphasizes readiness over action, labor over legend. Texture, posture, and restraint shape a narrative rooted in frontier life, where identity was earned through repetition and responsibility rather than spectacle. © Wayne Heim. Also available as an archival fine art print and Western wall piece for collectors.",
-    "alt": "Painterly Western photograph of a working cow hand holding saddle and rope on a frontier porch",
+    "description": "Standing on a wooden frontier porch, a working cow hand holds a saddle and coiled rope as he prepares for the day ahead. This fine art Western photography image captures a moment of readiness and routine, emphasizing frontier life through historic detail, environment, and the quiet presence of the American West. \n\n© Wayne Heim",
+    "alt": "A working cow hand stands on a wooden porch holding a saddle and rope, preparing for the day on the frontier.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8W7jxkN/3/Lpn9kNJgkSw2StCT6JR89tkFKp6JCgDHL9VTGSrNg/XL/Old%20wild%20west%20reenactor%20_ANA0574-Enhanced-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8W7jxkN/3/Lpn9kNJgkSw2StCT6JR89tkFKp6JCgDHL9VTGSrNg/XL/Old%20wild%20west%20reenactor%20_ANA0574-Enhanced-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8W7jxkN/3/Lpn9kNJgkSw2StCT6JR89tkFKp6JCgDHL9VTGSrNg/XL/Old%20wild%20west%20reenactor%20_ANA0574-Enhanced-Edit-Edit-2-XL.jpg",
@@ -12822,6 +12843,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8W7jxkN/3/KVBtTWF3Dpthg4xQNTnn3gf4ShHqfdMHNp4b3Dv3K/S/Old%20wild%20west%20reenactor%20_ANA0574-Enhanced-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-8W7jxkN/A",
+
     "keywords": [
       "cow hand",
       "cowboy art",
@@ -12834,25 +12856,28 @@ export const galleryData = [
       "painterly western images",
       "western themed art",
       "wild west photography",
-      "pictorialist tradition",
       "rugged spirit",
       "authentic frontier art prints"
     ],
+
     "story": "The day hasn’t started yet—  \nit’s still deciding what it will demand.\n\nLeather hangs heavy from his arm, rope loose but ready,  \nthe quiet weight of work waiting to be claimed.\n\nHe isn’t posed.  \nHe’s paused—standing in that narrow moment where intention settles into routine.",
-    "notes": "This image leans into the dignity of labor. Its strength comes not from action, but from preparedness—the subtle tension of a man defined by what he does every day.\n\nCollectors drawn to this work often respond to its honesty: a portrait of Western identity shaped by repetition, weight, and quiet resolve rather than mythic gesture.",
+    "notes": "What carries the image is not motion, but preparation—the subtle tension before labor begins. The figure stands within a tradition of Western portraiture that honors work as identity, where tools and posture speak louder than action.  \n\nThere is a quiet honesty here, rooted in repetition and lived experience. Rather than elevating the subject into myth, the image reinforces the dignity of routine, aligning with pictorialist influence and the enduring visual language of the American West.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 234
+    "sortOrder": 234,
+    contentSource: "ai"
   },
 
   {
     "id": "i-n8TX2qS",
     "title": "Sheriff",
-    "description": "A painterly Western portrait centered on authority earned through endurance rather than force. This fine art Western photograph reflects the lived reality of the American frontier, where responsibility often arrived before certainty. Light, posture, and restraint shape a quiet narrative rooted in duty, consequence, and memory. Part of a Western fine art photography collection focused on narrative Western art and painterly Western imagery. © Wayne Heim. Collectors can acquire this image as an archival Western fine art print.",
-    "alt": "Painterly Western portrait of a frontier sheriff standing in quiet authority on the American frontier",
+    "description": "An older frontier sheriff stands facing forward with a visible badge, dressed in period Western clothing with suspenders and a hat. His stance is steady and composed, set against a softly textured, neutral background that isolates the figure. This fine art Western photography image presents a clear depiction of a lawman on the American frontier, rendered in painterly Western photography style. \n\n© Wayne Heim",
+    "alt": "A frontier sheriff stands calmly with a badge on his chest, conveying quiet authority on the American frontier.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-n8TX2qS/1/LxCFC48xxsQ33wtdVxdNGR7DFLQvrH3LxNXNS37GP/XL/Old%20West%20Cowboy%20Portrait%20_HF29152-Edit-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-n8TX2qS/1/LxCFC48xxsQ33wtdVxdNGR7DFLQvrH3LxNXNS37GP/XL/Old%20West%20Cowboy%20Portrait%20_HF29152-Edit-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-n8TX2qS/1/LxCFC48xxsQ33wtdVxdNGR7DFLQvrH3LxNXNS37GP/XL/Old%20West%20Cowboy%20Portrait%20_HF29152-Edit-Edit-2-XL.jpg",
@@ -12860,42 +12885,49 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-n8TX2qS/1/LGthNTrgNcq9SLQvm2kWBpBrnJsKp7ZqszZ44qXwW/S/Old%20West%20Cowboy%20Portrait%20_HF29152-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-n8TX2qS/A",
+
     "keywords": [
       "cowboy art",
       "sheriff portrait",
-      "Western portrait",
+      "western portrait",
       "painterly Western photography",
       "fine art Western photography",
       "narrative Western art",
       "American frontier",
-      "Western cowboy art",
+      "western cowboy art",
       "authentic frontier art prints",
       "rugged spirit",
       "Americana photography",
       "Western Cowboy Portraits",
-      "Western cowboys",
+      "western cowboys",
       "western fine art",
-      "Western themed art",
+      "western themed art",
       "wild west painterly photography"
     ],
+
     "story": "He has already seen how this ends.\nThat is why he is still standing there.\n\nThe badge does not make the decision.\nIt only reminds him which ones are his to carry.\nWhatever happens next will happen slowly.\n\nFor now, he watches.\nNot because he expects trouble—\nbut because leaving would be worse.",
-    "notes": "This piece draws from the Western pictorialist tradition, emphasizing restraint and psychological presence over action. The sheriff is presented not as a symbol of power, but as a figure shaped by accumulated decisions. The muted palette, controlled lighting, and composed stance reinforce a theme common to frontier life—authority defined by endurance rather than spectacle.",
+    "notes": "Authority here is carried, not displayed. The figure’s stillness and grounded stance place him within a lineage of Western portraiture where responsibility is implied through presence rather than action. The badge reads less as symbol and more as consequence.  \n\nMuted tones and controlled light echo pictorialist influence, reinforcing a psychological weight that builds through restraint. The work invites prolonged viewing, revealing a character defined not by conflict itself, but by the burden of standing in its path.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 236,
+
     "themes": {
       "law-outlaws": 66,
       "sketches-of-legends": 73
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-tVxgfZN",
     "title": "Still Learning",
-    "description": "A painterly Western photograph capturing a young cowboy in a moment of quiet formation, defined by restraint rather than action. Rooted in the pictorialist tradition, this fine art Western photography emphasizes posture, light, and atmosphere over spectacle. The image reflects the lived reality of the American frontier—where skill, identity, and resolve were shaped gradually, often before they were tested. Part of a narrative-driven Western fine art photography collection exploring frontier life and unspoken transition. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Painterly Western portrait of a young cowboy in early formation, standing quietly in frontier light.",
+    "description": "Soft, diffused light surrounds a young cowboy dressed in period Western clothing, his posture relaxed and gaze lowered. The scene isolates the figure against a muted background, emphasizing stillness, dress, and presence within the American frontier. This fine art Western photography image reflects early identity and quiet formation through painterly Western photography. \n\n© Wayne Heim",
+    "alt": "Young cowboy in a wide-brim hat and scarf looks downward in a softly lit frontier portrait.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-tVxgfZN/1/LqQnZzkCbd3zqr5bV8DCPShsfKcBBS2cVjrdczk85/XL/Western%20themed%20fine%20art%20photography%20_HF28337-Edit-2-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-tVxgfZN/1/LqQnZzkCbd3zqr5bV8DCPShsfKcBBS2cVjrdczk85/XL/Western%20themed%20fine%20art%20photography%20_HF28337-Edit-2-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-tVxgfZN/1/LqQnZzkCbd3zqr5bV8DCPShsfKcBBS2cVjrdczk85/XL/Western%20themed%20fine%20art%20photography%20_HF28337-Edit-2-XL.jpg",
@@ -12903,40 +12935,47 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-tVxgfZN/1/Lw7BWJqHkVG44HRmLkXHh8GN36cjQmSWw7cMnWTfD/S/Western%20themed%20fine%20art%20photography%20_HF28337-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-tVxgfZN/A",
+
     "keywords": [
       "cowboy art",
       "cowboy portraits",
       "painterly cowboy photography",
-      "Western fine art photography",
+      "western fine art photography",
       "American frontier",
       "frontier life",
       "narrative Western art",
       "pictorialist tradition",
       "Western cowboy portrait",
       "rugged spirit",
-      "Western themed art",
+      "western themed art",
       "Americana photography",
       "authentic frontier art prints",
       "wild west photography",
       "painterly Western images"
     ],
+
     "story": "He keeps his eyes down, not out of humility but habit.  \nThere’s less to explain that way.\n\nThe hat is new. The stance isn’t.\nWhat he knows, he learned by watching—by standing just far enough back to see what happens when men rush things.\n\nNothing about today feels important.\nThat’s usually when it is.",
-    "notes": "This piece belongs to the quieter side of Western storytelling—the moments before identity hardens into reputation. The composition favors understatement: softened edges, controlled light, and a posture that suggests learning rather than knowing. Influenced by pictorialist sensibilities and early Western portraiture, the image resists legend-building and instead preserves a transitional state. It rewards prolonged viewing, revealing its tension slowly, the way experience itself accumulates.",
+    "notes": "Rather than presenting a fully formed figure, this work lingers in transition—where identity is still being shaped. The downward gaze and contained posture echo traditions in Western portraiture that favor introspection over declaration.  \n\nThe softened treatment and controlled light align with pictorialist influence, allowing the image to exist between presence and becoming. It rewards slower viewing, revealing a quiet tension rooted not in action, but in what has yet to fully take form.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 237,
+
     "themes": {
       "law-outlaws": 65
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-4jRzBgC",
     "title": "Hold On Just a Minute",
-    "description": "A painterly Western photograph depicting a cowboy mid-gesture, defined by restraint rather than action. This fine art Western photography emphasizes posture, expression, and atmosphere over spectacle, reflecting the lived reality of frontier negotiation—where judgment often mattered more than speed. Rooted in narrative Western art and pictorialist influence, the image captures a suspended moment of decision within the American frontier. Part of a story-driven Western fine art photography collection. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Western portrait of a cowboy raising one hand in a moment of restraint and negotiation.",
+    "description": "A cowboy is captured mid-gesture with one hand raised, dressed in period Western clothing including a hat, vest, and holster straps. The soft, atmospheric background and diffused light isolate the figure, emphasizing posture, expression, and movement within the American frontier. This fine art Western photography image reflects a moment of pause and interaction through painterly Western photography. \n\n© Wayne Heim",
+    "alt": "A cowboy raises one hand as if signaling or pausing, standing in soft light with a blurred frontier background.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-4jRzBgC/1/LGr2J2f457WPPLCgKWw7fJ59WK3VnqnxMmb7VHhQ6/XL/Old%20West%20Cowboy%20Portrait%20_HF28461-262-263-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-4jRzBgC/1/LGr2J2f457WPPLCgKWw7fJ59WK3VnqnxMmb7VHhQ6/XL/Old%20West%20Cowboy%20Portrait%20_HF28461-262-263-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-4jRzBgC/1/KLFFFpThr3bjLczHmGZq2M6bMZmBMGnNcvKVjpgXf/L/Old%20West%20Cowboy%20Portrait%20_HF28461-262-263-L.jpg",
@@ -12944,37 +12983,42 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-4jRzBgC/1/MTtZkcK24hRsRpDcVftmg2NhNKc4zdTDT8tr5Ftnz/S/Old%20West%20Cowboy%20Portrait%20_HF28461-262-263-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-4jRzBgC/A",
+
     "keywords": [
       "cowboy art",
       "cowboy portraits",
       "painterly cowboy photography",
-      "Western fine art photography",
+      "western fine art photography",
       "American frontier",
-      "narrative Western art",
       "frontier life",
-      "Western cowboy portrait",
+      "narrative Western art",
+      "western cowboy portrait",
       "rugged spirit",
       "pictorialist tradition",
-      "Western themed art",
+      "western themed art",
       "Americana photography",
       "authentic frontier art prints",
       "wild west photography",
       "painterly Western images"
     ],
+
     "story": "He raises one hand, not to surrender, not to explain—\njust to slow the moment down.\n\nThings tend to outrun people once voices lift.\nHe’s learned that already.\n\nIf there’s still time to talk,\nit usually looks like this.",
-    "notes": "This image centers on interruption rather than outcome. The raised hand becomes a structural anchor, holding the composition in tension while avoiding overt drama. Influenced by pictorialist softness and early Western portraiture, the photograph resists mythic escalation and instead preserves the psychology of hesitation. Its strength lies in what does not happen—an image built on pause, judgment, and the fragile possibility of restraint.",
+    "notes": "The raised hand becomes the focal point—an interruption rather than a resolution. It anchors the composition in a moment of hesitation, where intent is still forming and outcome remains uncertain.  \n\nDrawing from pictorialist restraint and Western portrait traditions, the image favors implication over declaration. Its tension lies in what is withheld, inviting the viewer to linger in the space between action and consequence.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 238
+    "sortOrder": 238,
+    contentSource: "ai"
   },
   {
     "id": "i-TgkwSbh",
     "title": "Hold Still",
-    "description": "A painterly Western fine art photograph depicting an early frontier photographer preparing to expose a glass plate. Rendered with restrained tone and period authenticity, the image explores the tension between stillness and movement in frontier life. Light, posture, and compositional quiet create a narrative rooted in observation rather than spectacle, aligning with the pictorialist tradition within Western photography. © Wayne Heim. This piece is offered as an archival fine art print for Western interiors.",
-    "alt": "Painterly Western photograph of an early frontier photographer holding a large format camera, captured in a quiet moment before the exposure.",
+    "description": "A woman stands holding a large format camera, dressed in period clothing that reflects early frontier life and photographic practice. The composition centers on her direct gaze and steady posture, with soft tones and a neutral background isolating both subject and equipment. This fine art Western photography image highlights the presence of an early photographer on the American frontier, rendered through painterly Western imagery. \n\n© Wayne Heim",
+    "alt": "A woman holds a vintage large format camera, standing still and facing forward in a quiet frontier setting.",
     "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TgkwSbh/1/MsKXZZx39VHGhjQfqPkBgB63nwsPGZ8FMhRCr5V8Z/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29149-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TgkwSbh/1/MsKXZZx39VHGhjQfqPkBgB63nwsPGZ8FMhRCr5V8Z/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29149-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TgkwSbh/1/MsKXZZx39VHGhjQfqPkBgB63nwsPGZ8FMhRCr5V8Z/XL/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29149-Edit-Edit-XL.jpg",
@@ -12982,6 +13026,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TgkwSbh/1/MB9G2VrsSPnXBj3mT9dQnNN4Gm6jgVJC222r7QJ2x/S/Vintage%20Themed%20Western%20Portrait%20Photography%20_HF29149-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-TgkwSbh/A",
+
     "keywords": [
       "cowboy art",
       "western photography",
@@ -12998,17 +13043,23 @@ export const galleryData = [
       "cinematic western imagery",
       "the American West"
     ],
+
     "story": "She lifts the camera and waits.\n\nNot for the light.\nNot for the moment.\nFor the person to stop becoming something else.\n\nOut here, even a second refuses to stay put.",
-    "notes": "This image draws from the pictorialist lineage, where mood and intention outweigh documentation. The controlled palette and softened edges echo early photographic processes, while the subject’s steady posture reinforces the quiet authority of observation. It is a meditation on patience, craft, and the fragile pause required to preserve memory on the frontier.",
+    "notes": "This piece shifts the focus from subject to observer—the act of seeing becomes the subject itself. The camera, held forward, creates a subtle inversion, placing the viewer in the position of being studied rather than observing.  \n\nIts visual language draws from pictorialist traditions, where mood and atmosphere soften documentation into interpretation. The work becomes a meditation on authorship and memory—how moments are chosen, framed, and ultimately preserved.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 239,
+
     "themes": {
       "frontier-women": 59
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-S2sZdJB",
