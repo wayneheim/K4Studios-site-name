@@ -143,6 +143,7 @@ const heroImageId = candidatePool[0]?.id || null;
 
 <script>
   const analyticsEndpoint = 'https://edge.k4studios.com/__k4e';
+  const pixelEndpoint = 'https://edge.k4studios.com/_state';
 
   // Track preview strip clicks
   document.querySelectorAll('[data-preview-click]').forEach(link => {
@@ -196,19 +197,25 @@ const heroImageId = candidatePool[0]?.id || null;
         page_type: 'gallery',
         trigger: 'gallery_preview_strip'
       });
-      if (navigator.sendBeacon) {
-        const blob = new Blob([payload], { type: 'application/json' });
-        navigator.sendBeacon(analyticsEndpoint, blob);
-      } else {
+      const sendViaFetch = () => {
         fetch(analyticsEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: payload,
           keepalive: true,
           cache: 'no-store',
+          mode: 'cors',
           credentials: 'include'
         }).catch(() => {});
+      };
+
+      if (navigator.sendBeacon) {
+        const blob = new Blob([payload], { type: 'text/plain;charset=UTF-8' });
+        const ok = navigator.sendBeacon(analyticsEndpoint, blob);
+        if (ok) return;
       }
+
+      sendViaFetch();
 
       try {
         const params = new URLSearchParams({
@@ -223,15 +230,15 @@ const heroImageId = candidatePool[0]?.id || null;
         });
         if (imageId) params.set('id', imageId);
         if (previewGalleryId) params.set('g', previewGalleryId);
-        fetch(`/_state?${params.toString()}`, {
+        fetch(`${pixelEndpoint}?${params.toString()}`, {
           method: 'GET',
           keepalive: true,
           cache: 'no-store',
-          credentials: 'same-origin'
+          credentials: 'include'
         }).catch(() => {
           const img = new Image();
           img.referrerPolicy = 'same-origin';
-          img.src = `/_state?${params.toString()}`;
+          img.src = `${pixelEndpoint}?${params.toString()}`;
         });
       } catch {}
     });

@@ -9,6 +9,7 @@ compatibility_date = "2024-01-01"
 routes = [
 	"edge.k4studios.com/__k4e*",
 	"edge.k4studios.com/track*",
+	"edge.k4studios.com/_state*",
 	"edge.k4studios.com/__k4track/event*",
 	"edge.k4studios.com/__k4stats*",
 	"edge.k4studios.com/edge-event*"

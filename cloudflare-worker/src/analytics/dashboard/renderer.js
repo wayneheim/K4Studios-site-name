@@ -76,6 +76,13 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   const maxRefSessions = Math.max(...referrers.map(r => r.sessions), 1);
   const maxGeoVisitors = Math.max(...geo.map(g => g.visitors), 1);
   const maxPageSessions = Math.max(...pages.map(p => Number(p.views || p.events || p.sessions || 0)), 1);
+  const trendArr = Array.isArray(trend) ? trend : [];
+  const selectedTrend = selectedDate ? trendArr.find((d) => d?.day === selectedDate) || null : null;
+  const todayTrend = selectedTrend || (trendArr.length > 0 ? trendArr[trendArr.length - 1] : null);
+  const siteVisitorsToday = todayTrend?.visitors || 0;
+  const nonPersistentActorsToday = todayTrend?.non_persistent_actors || 0;
+  const estimatedTrafficActorsToday = siteVisitorsToday + nonPersistentActorsToday;
+  const nonPersistentShareToday = estimatedTrafficActorsToday > 0 ? Math.round(nonPersistentActorsToday / estimatedTrafficActorsToday * 100) : 0;
   
   // Build base URL for filter links (preserves current filters)
   const baseParams = new URLSearchParams();
@@ -277,7 +284,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
 </head>
 <body>
 <div class="container">
-  <h1>K4 Analytics <a href="/__k4serp" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none;margin-left:20px">📊 SERP</a> <a href="/__k4serp?op=launch" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none">🚀 Launch Pad</a></h1>
+  <h1>K4 Analytics <a href="https://www.k4studios.com/__k4serp" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none;margin-left:20px">📊 SERP</a> <a href="https://www.k4studios.com/__k4serp?op=launch" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none">🚀 Launch Pad</a></h1>
   
   <div class="controls">
     <a href="?days=1${excludeIp ? '&excludeIp=' + excludeIp : ''}${hideBots ? '&hideBots=1' : ''}${hideChardon ? '&hideChardon=1' : ''}" class="${days === 1 && !yesterday ? 'active' : ''}">Today*</a>
@@ -407,6 +414,11 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <span class="value"><span style="color:#10b981">${newVisitors}</span>/<span style="color:#f59e0b">${returningVisitors}</span></span>
       <span class="label">New/Ret <span class="info-icon">i</span></span>
       <div class="tooltip">New: IPs never seen before this period. Returning: IPs that visited previously. Green = new, Orange = returning.</div>
+    </div>
+    <div class="pulse-stat">
+      <span class="value" style="color:#f59e0b;">${nonPersistentShareToday}%</span>
+      <span class="label">Non-Persistent <span class="info-icon">i</span></span>
+      <div class="tooltip">Estimated share of ${selectedDate ? 'the selected day' : days > 1 && !yesterday ? 'the latest day in view' : 'today\'s'} traffic that lacked a stable visitor ID. Based on <strong>${nonPersistentActorsToday}</strong> non-persistent pixel actors versus <strong>${siteVisitorsToday}</strong> persistent page-view visitors. This is an estimate of weaker identity traffic, not a literal cookie-block rate.</div>
     </div>
     <div class="pulse-stat">
       <span class="value" style="color:#22d3ee;">⏱️ ${avgDurationFormatted}</span>
@@ -643,7 +655,10 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
   <!-- All sections grid -->\n  <div class="grid" style="margin-top: 20px;">
     <div class="section">
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2px;">
-        <h3 style="margin:0;">Event Breakdown</h3>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <h3 style="margin:0;">Event Breakdown</h3>
+          <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Deduped engagement counts. JS events remain canonical, and matching pixel signals fill gaps when JS is blocked. When both arrive for the same session, page/target, and 5-second burst, this panel counts one action.</div></span>
+        </div>
         <button id="eventSortToggle" onclick="toggleEventSort()" title="Toggle sort: Alphabetical / By Count" style="
           font-size:10px; padding:2px 8px; border:1px solid #ccc; border-radius:4px;
           background:#f5f0eb; color:#666; cursor:pointer; font-family:monospace; letter-spacing:0.5px;

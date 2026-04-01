@@ -161,26 +161,15 @@ function getCanonicalGalleryPathForImageId(imageIdMap, imageId) {
  * Get human count - THE canonical count
  */
 export async function getHumanCount(env, dateClause = '') {
-  // JS proof-of-life gate:
-  // A visitor_id alone is NOT proof of a human (we set cookies server-side on HTML).
-  // To avoid cookie-only bots (e.g., SG/Helsinki scraping) polluting "human" counts,
-  // require that the visitor_id has produced at least one JS beacon at any point.
-  const jsProof = `EXISTS (
-    SELECT 1 FROM classified_events j
-    WHERE j.visitor_id = e.visitor_id
-      AND j.source = 'js'
-      AND j.visitor_id IS NOT NULL
-      AND j.visitor_id != ''
-  )`;
-
   const query = dateClause
     ? `
       SELECT COUNT(DISTINCT e.visitor_id) as count
       FROM classified_events e
       WHERE e.is_bot = 0
+        AND e.source = 'js'
+        AND e.event_type = 'page_view'
         AND e.visitor_id IS NOT NULL
         AND e.visitor_id != ''
-        AND ${jsProof}
         AND ${dateClause.replace(/\bts\b/g, 'e.ts')}
     `
     : `
@@ -188,6 +177,7 @@ export async function getHumanCount(env, dateClause = '') {
       FROM classified_events e
       WHERE e.is_bot = 0
         AND e.source = 'js'
+        AND e.event_type = 'page_view'
         AND e.visitor_id IS NOT NULL
         AND e.visitor_id != ''
     `;
@@ -1566,18 +1556,17 @@ export async function getEventBreakdown(env, filters) {
       'session_exit'
     ];
     const trackedListSql = trackedEvents.map(e => `'${e}'`).join(', ');
-
     const eventsQuery = `
       SELECT
         e.event_type AS event,
         COUNT(*) AS count
-      FROM human_population hp
-      JOIN classified_events e ON e.visitor_id = hp.visitor_id
+      FROM canonical_classified_events e
       WHERE ${where}
         ${qualify(ipClause)}
         ${qualify(safeBotClause)}
         ${qualify(chardonClause)}
-        AND e.source = 'js'
+        AND ${notCacheWarmer('e')}
+        AND COALESCE(e.is_bot, 0) = 0
         AND e.event_type IN (${trackedListSql})
       GROUP BY e.event_type
       ORDER BY count DESC
@@ -1791,6 +1780,7 @@ export async function getGeography(env, filters) {
         JOIN classified_events e ON e.visitor_id = hp.visitor_id
         WHERE ${where}
           AND e.source = 'js'
+          AND e.event_type = 'page_view'
           AND COALESCE(e.is_bot, 0) = 0
           AND e.visitor_id IS NOT NULL
           AND e.visitor_id != ''
@@ -1858,7 +1848,10 @@ export async function getPeriodTotals(env, filters) {
     
     const periodQuery = `
       SELECT 
-        COUNT(DISTINCT e.visitor_id) as total_visitors,
+        COUNT(DISTINCT CASE
+          WHEN e.event_type = 'page_view' THEN e.visitor_id
+          ELSE NULL
+        END) as total_visitors,
         COUNT(DISTINCT CASE 
           WHEN e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view') 
           THEN e.visitor_id 
@@ -1914,6 +1907,18 @@ export async function getDailyTrend(env, filters) {
           END
       END
     `;
+    const nonPersistentActorExpr = `
+      CASE
+        WHEN r.visitor_id IS NULL OR r.visitor_id = '' THEN 'h:' || COALESCE(NULLIF(r.ip_hash, ''), COALESCE(NULLIF(r.ip, ''), 'unknown')) || '|' ||
+          CASE
+            WHEN LOWER(COALESCE(r.ua, '')) LIKE '%iphone%' OR LOWER(COALESCE(r.ua, '')) LIKE '%ipad%' OR LOWER(COALESCE(r.ua, '')) LIKE '%ipod%' THEN 'ios'
+            WHEN LOWER(COALESCE(r.ua, '')) LIKE '%android%' THEN 'android'
+            WHEN LOWER(COALESCE(r.ua, '')) LIKE '%mobile%' THEN 'mobile'
+            ELSE 'desktop'
+          END
+        ELSE NULL
+      END
+    `;
 
     // Daily trend (for chart): human visitors + sessions per Eastern calendar day.
     // Visitor = any JS-verified human who visited the site (any event type).
@@ -1923,12 +1928,12 @@ export async function getDailyTrend(env, filters) {
       SELECT
         date(e.ts, '-5 hours') as day,
         COUNT(DISTINCT CASE
-          WHEN e.source = 'js' AND COALESCE(e.is_bot, 0) = 0
+          WHEN e.source = 'js' AND e.event_type = 'page_view' AND COALESCE(e.is_bot, 0) = 0
           THEN e.visitor_id
           ELSE NULL
         END) as visitors,
         COUNT(DISTINCT CASE
-          WHEN e.source = 'js' AND COALESCE(e.is_bot, 0) = 0
+          WHEN e.source = 'js' AND e.event_type = 'page_view' AND COALESCE(e.is_bot, 0) = 0
           THEN NULLIF(e.session_id, '')
           ELSE NULL
         END) as sessions,
@@ -1941,9 +1946,16 @@ export async function getDailyTrend(env, filters) {
           SELECT COUNT(DISTINCT ${pixelActorExpr})
           FROM raw_events r
           WHERE date(r.ts, '-5 hours') = date(e.ts, '-5 hours')
-            AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND r.event_type IN ('page_pixel', 'state_pixel', 'action_pixel')
             AND ${notCacheWarmer('r')}
-        ) as pixel_reach
+        ) as pixel_reach,
+        (
+          SELECT COUNT(DISTINCT ${nonPersistentActorExpr})
+          FROM raw_events r
+          WHERE date(r.ts, '-5 hours') = date(e.ts, '-5 hours')
+            AND r.event_type IN ('page_pixel', 'state_pixel', 'action_pixel')
+            AND ${notCacheWarmer('r')}
+        ) as non_persistent_actors
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${where}

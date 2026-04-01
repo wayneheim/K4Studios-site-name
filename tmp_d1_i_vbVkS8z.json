@@ -1,0 +1,78 @@
+[
+  {
+    "results": [
+      {
+        "ts": "2026-04-01 02:58:10",
+        "event_type": "action_pixel",
+        "source": "pixel",
+        "source_layer": "series_info_pixel_v1",
+        "page": "/Galleries/Fine-Art-Photography/Transportation/Boats/i-vbVkS8z",
+        "target_id": "i-vbVkS8z",
+        "session_id": "abe41547-8ddf-41e8-991f-4330b4eaf054"
+      },
+      {
+        "ts": "2026-04-01 02:58:10",
+        "event_type": "action_pixel",
+        "source": "pixel",
+        "source_layer": "series_info_pixel_v1",
+        "page": "/Galleries/Fine-Art-Photography/Transportation/Boats/i-vbVkS8z",
+        "target_id": "i-vbVkS8z",
+        "session_id": "abe41547-8ddf-41e8-991f-4330b4eaf054"
+      },
+      {
+        "ts": "2026-04-01 02:58:05",
+        "event_type": "action_pixel",
+        "source": "pixel",
+        "source_layer": "order_clicked_pixel_v1",
+        "page": "/Galleries/Fine-Art-Photography/Transportation/Boats/i-vbVkS8z",
+        "target_id": "i-vbVkS8z",
+        "session_id": "abe41547-8ddf-41e8-991f-4330b4eaf054"
+      },
+      {
+        "ts": "2026-04-01 02:58:05",
+        "event_type": "action_pixel",
+        "source": "pixel",
+        "source_layer": "order_clicked_pixel_v1",
+        "page": "/Galleries/Fine-Art-Photography/Transportation/Boats/i-vbVkS8z",
+        "target_id": "i-vbVkS8z",
+        "session_id": "abe41547-8ddf-41e8-991f-4330b4eaf054"
+      },
+      {
+        "ts": "2026-04-01 02:58:03",
+        "event_type": "chapter_exposure",
+        "source": "proxy",
+        "source_layer": null,
+        "page": "https://www.k4studios.com/Galleries/Fine-Art-Photography/Transportation/Boats/i-vbVkS8z",
+        "target_id": "i-vbVkS8z",
+        "session_id": "abe41547-8ddf-41e8-991f-4330b4eaf054"
+      },
+      {
+        "ts": "2026-04-01 02:58:03",
+        "event_type": "state_pixel",
+        "source": "pixel",
+        "source_layer": "sister_pixel_v1",
+        "page": "/Galleries/Fine-Art-Photography/Transportation/Boats/i-vbVkS8z",
+        "target_id": "i-vbVkS8z",
+        "session_id": "abe41547-8ddf-41e8-991f-4330b4eaf054"
+      }
+    ],
+    "success": true,
+    "meta": {
+      "served_by": "v3-prod",
+      "served_by_region": "ENAM",
+      "served_by_colo": "ORD",
+      "served_by_primary": true,
+      "timings": {
+        "sql_duration_ms": 0.342
+      },
+      "duration": 0.342,
+      "changes": 0,
+      "last_row_id": 275355,
+      "changed_db": false,
+      "size_after": 165535744,
+      "rows_read": 167,
+      "rows_written": 0,
+      "total_attempts": 1
+    }
+  }
+]

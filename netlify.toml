@@ -45,6 +45,18 @@ to = "https://k4-analytics.wayneheim.workers.dev/__k4track/event"
 status = 200
 force = true
 
+[[redirects]]
+from = "/__k4serp"
+to = "https://k4-image-proxy.wayneheim.workers.dev/__k4serp"
+status = 200
+force = true
+
+[[redirects]]
+from = "/__k4serp/*"
+to = "https://k4-image-proxy.wayneheim.workers.dev/__k4serp/:splat"
+status = 200
+force = true
+
 ##############################
 # ✅ Trailing Slash Normalization
 # Prevents Smart-404 function burns caused by slash variants.

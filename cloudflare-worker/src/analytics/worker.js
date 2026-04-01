@@ -513,26 +513,21 @@ function getCanonicalGalleryPathForImageId(imageIdMap, imageId) {
 __name(getCanonicalGalleryPathForImageId, "getCanonicalGalleryPathForImageId");
 __name2(getCanonicalGalleryPathForImageId, "getCanonicalGalleryPathForImageId");
 async function getHumanCount(env, dateClause = "") {
-  const jsProof = `EXISTS (
-    SELECT 1 FROM classified_events j
-    WHERE j.visitor_id = e.visitor_id
-      AND j.source = 'js'
-      AND j.visitor_id IS NOT NULL
-      AND j.visitor_id != ''
-  )`;
     const query = dateClause ? `
         SELECT COUNT(DISTINCT e.visitor_id) as count
         FROM classified_events e
         WHERE e.is_bot = 0
+          AND e.source = 'js'
+          AND e.event_type = 'page_view'
           AND e.visitor_id IS NOT NULL
           AND e.visitor_id != ''
-          AND ${jsProof}
           AND ${dateClause.replace(/\bts\b/g, "e.ts")}
       ` : `
         SELECT COUNT(DISTINCT e.visitor_id) as count
         FROM classified_events e
         WHERE e.is_bot = 0
           AND e.source = 'js'
+          AND e.event_type = 'page_view'
           AND e.visitor_id IS NOT NULL
           AND e.visitor_id != ''
       `;
@@ -1557,6 +1552,7 @@ async function getDashboardStats(env, filters) {
           AND COALESCE(e.is_bot, 0) = 0
           AND ${notCacheWarmer("e")}
           AND e.source = 'js'
+          AND e.event_type = 'page_view'
           AND e.visitor_id IS NOT NULL
           AND e.visitor_id != ''
       ),
@@ -1572,6 +1568,7 @@ async function getDashboardStats(env, filters) {
           AND COALESCE(e.is_bot, 0) = 0
           AND ${notCacheWarmer("e")}
           AND e.source = 'js'
+            AND e.event_type = 'page_view'
           AND e.visitor_id IS NOT NULL
           AND e.visitor_id != ''
       )
@@ -2374,13 +2371,13 @@ async function getEventBreakdown(env, filters) {
       SELECT
         e.event_type AS event,
         COUNT(*) AS count
-      FROM classified_events e
+      FROM canonical_classified_events e
       WHERE ${where}
         ${qualify(ipClause)}
         ${qualify(safeBotClause)}
         ${qualify(chardonClause)}
         AND ${notCacheWarmer("e")}
-        AND e.source = 'js'
+        AND COALESCE(e.is_bot, 0) = 0
         AND e.event_type IN (${trackedListSql})
       GROUP BY e.event_type
       ORDER BY count DESC
@@ -2588,6 +2585,7 @@ async function getGeography(env, filters) {
         JOIN classified_events e ON e.visitor_id = hp.visitor_id
         WHERE ${dateClause.replace(/\bts\b/g, "e.ts") || 'e.ts > datetime("now", "-1 day")'}
           AND e.source = 'js'
+          AND e.event_type = 'page_view'
           AND COALESCE(e.is_bot, 0) = 0
           AND e.visitor_id IS NOT NULL
           AND e.visitor_id != ''
@@ -2678,7 +2676,10 @@ async function getPeriodTotals(env, filters) {
     );
     const periodQuery = `
       SELECT 
-        COUNT(DISTINCT e.visitor_id) as total_visitors,
+        COUNT(DISTINCT CASE
+          WHEN e.event_type = 'page_view' THEN e.visitor_id
+          ELSE NULL
+        END) as total_visitors,
         COUNT(DISTINCT CASE 
           WHEN e.event_type IN ('chapter_view', 'xl_zoom', 'gallery_view')
           THEN e.visitor_id 
@@ -2732,16 +2733,28 @@ async function getDailyTrend(env, filters) {
           END
       END
     `;
+    const nonPersistentActorExpr = `
+      CASE
+        WHEN r.visitor_id IS NULL OR r.visitor_id = '' THEN 'h:' || COALESCE(NULLIF(r.ip_hash, ''), COALESCE(NULLIF(r.ip, ''), 'unknown')) || '|' ||
+          CASE
+            WHEN LOWER(COALESCE(r.ua, '')) LIKE '%iphone%' OR LOWER(COALESCE(r.ua, '')) LIKE '%ipad%' OR LOWER(COALESCE(r.ua, '')) LIKE '%ipod%' THEN 'ios'
+            WHEN LOWER(COALESCE(r.ua, '')) LIKE '%android%' THEN 'android'
+            WHEN LOWER(COALESCE(r.ua, '')) LIKE '%mobile%' THEN 'mobile'
+            ELSE 'desktop'
+          END
+        ELSE NULL
+      END
+    `;
     const trendQuery = `
       SELECT
         date(e.ts, '-5 hours') as day,
         COUNT(DISTINCT CASE
-          WHEN e.source = 'js' AND COALESCE(e.is_bot, 0) = 0
+          WHEN e.source = 'js' AND e.event_type = 'page_view' AND COALESCE(e.is_bot, 0) = 0
           THEN e.visitor_id
           ELSE NULL
         END) as visitors,
         COUNT(DISTINCT CASE
-          WHEN e.source = 'js' AND COALESCE(e.is_bot, 0) = 0
+          WHEN e.source = 'js' AND e.event_type = 'page_view' AND COALESCE(e.is_bot, 0) = 0
           THEN NULLIF(e.session_id, '')
           ELSE NULL
         END) as sessions,
@@ -2754,9 +2767,16 @@ async function getDailyTrend(env, filters) {
           SELECT COUNT(DISTINCT ${pixelActorExpr})
           FROM raw_events r
           WHERE date(r.ts, '-5 hours') = date(e.ts, '-5 hours')
-            AND r.event_type IN ('state_pixel', 'action_pixel')
+            AND r.event_type IN ('page_pixel', 'state_pixel', 'action_pixel')
             AND ${notCacheWarmer('r')}
-        ) as pixel_reach
+        ) as pixel_reach,
+        (
+          SELECT COUNT(DISTINCT ${nonPersistentActorExpr})
+          FROM raw_events r
+          WHERE date(r.ts, '-5 hours') = date(e.ts, '-5 hours')
+            AND r.event_type IN ('page_pixel', 'state_pixel', 'action_pixel')
+            AND ${notCacheWarmer('r')}
+        ) as non_persistent_actors
       FROM human_population hp
       JOIN classified_events e ON e.visitor_id = hp.visitor_id
       WHERE ${where}
@@ -4747,14 +4767,40 @@ function renderDashboard({
       source_layers: String(px?.source_layers || ""),
       buy_clicks: Number(px?.buy_clicks || 0),
       zoom_views: Number(px?.zoom_views || 0),
-      location_labels: String(px?.location_labels || ""),
-      country: px?.country || "",
-      region: px?.region || "",
-      city: px?.city || "",
-      user_agent: px?.user_agent || "",
-      referer: px?.referer || ""
+      location_labels: String(px?.location_labels || img?.location_labels || ""),
+      country: px?.country || img?.country || img?.geo_country || "",
+      region: px?.region || img?.region || img?.geo_region || "",
+      city: px?.city || img?.city || img?.geo_city || "",
+      user_agent: px?.user_agent || img?.user_agent || "",
+      referer: px?.referer || img?.referer || img?.best_referer || ""
     };
   });
+  const popularGalleryMap = /* @__PURE__ */ new Map();
+  for (const row of masterImageRows) {
+    const rawPage = String(row?.chapter_path || row?.page || "").trim();
+    if (!rawPage || !rawPage.includes("/i-")) continue;
+    const galleryPath = rawPage.slice(0, rawPage.indexOf("/i-"));
+    if (!galleryPath || !galleryPath.startsWith("/")) continue;
+    const existing = popularGalleryMap.get(galleryPath) || {
+      gallery_path: galleryPath,
+      image_views: 0,
+      image_ids: /* @__PURE__ */ new Set()
+    };
+    existing.image_views += Number(row?.exposures || 0);
+    if (row?.target_id) existing.image_ids.add(String(row.target_id));
+    popularGalleryMap.set(galleryPath, existing);
+  }
+  const popularGalleryRows = Array.from(popularGalleryMap.values()).map((row) => ({
+    gallery_path: row.gallery_path,
+    image_views: row.image_views,
+    unique_images: row.image_ids.size
+  })).sort((a, b) => {
+    const byViews = Number(b.image_views || 0) - Number(a.image_views || 0);
+    if (byViews !== 0) return byViews;
+    const byUnique = Number(b.unique_images || 0) - Number(a.unique_images || 0);
+    if (byUnique !== 0) return byUnique;
+    return String(a.gallery_path || "").localeCompare(String(b.gallery_path || ""));
+  }).slice(0, 15);
   const safeTopGalleryLandingPages = Array.isArray(topGalleryLandingPages) ? topGalleryLandingPages : [];
   const galleryLandingPathSet = /* @__PURE__ */ new Set(CANONICAL_GALLERY_LANDING_PATHS);
   const normalizeGalleryPath = /* @__PURE__ */ __name2((inputPath) => {
@@ -4823,6 +4869,9 @@ function renderDashboard({
   const todayTrend = selectedTrend || (trendArr.length > 0 ? trendArr[trendArr.length - 1] : null);
   const artViewersToday = todayTrend?.art_viewers || 0;
   const siteVisitorsToday = todayTrend?.visitors || 0;
+  const nonPersistentActorsToday = todayTrend?.non_persistent_actors || 0;
+  const estimatedTrafficActorsToday = siteVisitorsToday + nonPersistentActorsToday;
+  const nonPersistentShareToday = estimatedTrafficActorsToday > 0 ? Math.round(nonPersistentActorsToday / estimatedTrafficActorsToday * 100) : 0;
   const summedSiteVisitors = trendArr.reduce(
     (sum, d) => sum + (d.visitors || 0),
     0
@@ -4931,6 +4980,15 @@ function renderDashboard({
     label: eventLabels[key],
     count: eventCounts[key] || 0
   })).sort((a, b) => b.count - a.count);
+  const galleryLandingImpressionCount = Math.max(
+    galleryLandingViews,
+    spGalleryLandingViewV1Hits
+  );
+  const galleryLandingEntryClickCount =
+    Number(eventCounts["gallery_hero_click"] || 0) +
+    Number(eventCounts["gallery_preview_click"] || 0) +
+    Number(eventCounts["gallery_explore_click"] || 0);
+  const galleryLandingClickRate = galleryLandingImpressionCount > 0 ? galleryLandingEntryClickCount / galleryLandingImpressionCount * 100 : 0;
   const pixelCoveredEvents = /* @__PURE__ */ __name2(new Set([
     "xl_zoom",
     "grid_open",
@@ -5615,7 +5673,7 @@ function renderDashboard({
 </head>
 <body>
 <div class="container">
-  <h1>K4 Analytics <a href="/__k4serp" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none;margin-left:20px">\u{1F4CA} SERP</a> <a href="/__k4serp?op=launch" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none">\u{1F680} Launch Pad</a></h1>
+  <h1>K4 Analytics <a href="https://www.k4studios.com/__k4serp" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none;margin-left:20px">\u{1F4CA} SERP</a> <a href="https://www.k4studios.com/__k4serp?op=launch" target="_blank" style="font-size:14px;color:#4a9eff;text-decoration:none">\u{1F680} Launch Pad</a></h1>
   
   <div class="controls">
     <a href="?days=1${excludeIp ? "&excludeIp=" + excludeIp : ""}${hideBots ? "&hideBots=1" : ""}${hideChardon ? "&hideChardon=1" : ""}" class="${days === 1 && !yesterday ? "active" : ""}">Today*</a>
@@ -5707,6 +5765,11 @@ function renderDashboard({
       <div class="tooltip">New: visitor IDs first seen in this period. Returning: visitor IDs with prior JS history before this period. Green = new, Orange = returning.</div>
     </div>
     <div class="pulse-stat">
+      <span class="value" style="color:#f59e0b;">${nonPersistentShareToday}%</span>
+      <span class="label">Non-Persistent <span class="info-icon">i</span></span>
+      <div class="tooltip">Estimated share of ${selectedDate ? 'the selected day' : days > 1 && !yesterday ? 'the latest day in view' : 'today\'s'} traffic that lacked a stable visitor ID. Based on <strong>${nonPersistentActorsToday}</strong> non-persistent pixel actors versus <strong>${siteVisitorsToday}</strong> persistent page-view visitors. This is an estimate of weaker identity traffic, not a literal cookie-block rate.</div>
+    </div>
+    <div class="pulse-stat">
       <span class="value">${s.avg_events_per_session || 0}</span>
       <span class="label">Average Engagement <span class="info-icon">i</span></span>
       <div class="tooltip">Average number of tracked engagement events per session.</div>
@@ -5726,10 +5789,12 @@ function renderDashboard({
   <div class="section" style="max-width:1780px;margin:0 auto 18px;">
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
       <h3 style="margin:0;">Most Popular Subjects/Galleries</h3>
-      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Summary from image-page pixel traffic only. We keep rows where <code>page</code> contains <code>/i-...</code>, strip the image segment, and group counts by gallery root.</div></span>
+      <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Derived directly from the Master Image Viewing Report. Each row aggregates canonical image views by gallery path, so this table stays aligned with the blended P + J + H report below.</div></span>
     </div>
-    <div style="margin-top:10px;">
-      ${spByGallery.length > 0 ? `
+    <div style="display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,0.9fr);gap:12px;margin-top:10px;align-items:start;">
+      <div style="min-height:0;display:flex;flex-direction:column;">
+      ${popularGalleryRows.length > 0 ? `
+      <div style="height:228px;max-height:228px;overflow-y:auto;padding-right:4px;scrollbar-gutter:stable;">
       <table style="width:100%;border-collapse:collapse;">
         <thead>
           <tr style="color:#888;font-size:12px;text-align:left;">
@@ -5739,7 +5804,7 @@ function renderDashboard({
           </tr>
         </thead>
         <tbody style="font-size:13px;">
-          ${spByGallery.map((r) => {
+          ${popularGalleryRows.map((r) => {
     const galleryPath = String(r.gallery_path || "");
     const displayLabel = galleryDisplayNameFromPath(galleryPath);
     const linkUrl = galleryPath && galleryPath.startsWith("/") ? "https://k4studios.com" + galleryPath : "#";
@@ -5749,7 +5814,26 @@ function renderDashboard({
   }).join("")}
         </tbody>
       </table>
-      ` : `<div style="color:#aaa;font-size:13px;">No sister pixel gallery data for this period.</div>`}
+    </div>
+      ` : `<div style="color:#aaa;font-size:13px;">No master-report gallery data for this period.</div>`}
+      </div>
+      <div style="display:grid;grid-template-columns:1fr;gap:8px;min-width:0;">
+        <div class="metric-card" style="padding:8px 10px; border:1px solid #334155; border-radius:10px; background:#172033; min-width:0;">
+          <div style="font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:#93c5fd;">Landing Impressions</div>
+          <div style="font-size:18px; font-weight:700; line-height:1.15; color:#eff6ff; margin-top:2px;">${galleryLandingImpressionCount}</div>
+          <div style="font-size:11px; color:#93c5fd; margin-top:2px;">browser + pixel coverage</div>
+        </div>
+        <div class="metric-card" style="padding:8px 10px; border:1px solid #14532d; border-radius:10px; background:#0f1f17; min-width:0;">
+          <div style="font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:#86efac;">Entry Clicks</div>
+          <div style="font-size:18px; font-weight:700; line-height:1.15; color:#f0fdf4; margin-top:2px;">${galleryLandingEntryClickCount}</div>
+          <div style="font-size:11px; color:#86efac; margin-top:2px;">hero + preview + explore</div>
+        </div>
+        <div class="metric-card" style="padding:8px 10px; border:1px solid #9a3412; border-radius:10px; background:#28140d; min-width:0;">
+          <div style="font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:#fdba74;">Click Rate</div>
+          <div style="font-size:18px; font-weight:700; line-height:1.15; color:#fff7ed; margin-top:2px;">${fmt2(galleryLandingClickRate)}%</div>
+          <div style="font-size:11px; color:#fdba74; margin-top:2px;">clicks / impressions</div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -6306,6 +6390,36 @@ function renderDashboard({
       if (hdr) hdr.style.opacity = '1';
     }
 
+    function toggleEventSort() {
+      var btn = document.getElementById('eventSortToggle');
+      var list = document.getElementById('eventList');
+      if (!list || !btn) return;
+
+      var rows = Array.prototype.slice.call(list.querySelectorAll('.bar-row'));
+      if (rows.length <= 1) return;
+
+      var mode = list.dataset.sortMode || 'count';
+      if (mode === 'count') {
+        rows.sort(function(a, b) {
+          return (a.dataset.label || '').localeCompare(b.dataset.label || '');
+        });
+        list.dataset.sortMode = 'alpha';
+        btn.textContent = '#';
+        btn.title = 'Sort by count';
+      } else {
+        rows.sort(function(a, b) {
+          return Number(b.dataset.count || '0') - Number(a.dataset.count || '0');
+        });
+        list.dataset.sortMode = 'count';
+        btn.textContent = 'A-Z';
+        btn.title = 'Sort alphabetically';
+      }
+
+      rows.forEach(function(row) {
+        list.appendChild(row);
+      });
+    }
+
     function setPixelEventSort(mode) {
       var list = document.getElementById('pixelEventList');
       if (!list) return;
@@ -6361,300 +6475,29 @@ function renderDashboard({
 
   <!-- All sections grid -->
   <div class="grid" style="margin-top: 20px;">
-    <div class="section" style="order: 5;">
+    <div class="section" style="order: 1;">
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2px;">
         <div style="display:flex; align-items:center; gap:10px;">
-          <h3 style="margin:0;">Pixel Event Tracking</h3>
-          <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Temporary pixel totals for the selected date window from <code>raw_events</code> where <code>event_type IN ('state_pixel','action_pixel')</code>. Useful while pixel trackers are being rolled into Event Breakdown.</div></span>
+          <h3 style="margin:0;">Event Breakdown</h3>
+          <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Deduped engagement counts. JS events remain canonical, and matching pixel signals fill gaps when JS is blocked. When both arrive for the same session, page/target, and 5-second burst, this panel counts one action.</div></span>
         </div>
-        <div style="display:flex; align-items:center; gap:6px;">
-          <button type="button" id="pixelSortCount" class="mini-btn active" onclick="setPixelEventSort('count')" title="Sort by highest count first">Count</button>
-          <button type="button" id="pixelSortAlpha" class="mini-btn" onclick="setPixelEventSort('alpha')" title="Sort alphabetically ascending">A-Z</button>
-        </div>
+        <button id="eventSortToggle" onclick="toggleEventSort()" title="Toggle sort: Alphabetical / By Count" style="font-size:10px; padding:2px 8px; border:1px solid #ccc; border-radius:4px; background:#f5f0eb; color:#666; cursor:pointer; font-family:monospace; letter-spacing:0.5px;">A-Z</button>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; margin:8px 0 10px;">
-        <div class="metric-card" style="padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:#f8fafc;">
-          <div style="font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#64748b;">Gallery Landing Impressions</div>
-          <div style="font-size:20px; font-weight:700; line-height:1.2; color:#0f172a;">${spGalleryLandingViewV1Hits}</div>
-          <div style="font-size:12px; color:#475569;">source: gallery_landing_view_pixel_v1</div>
-        </div>
-        <div class="metric-card" style="padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:#f0fdf4;">
-          <div style="font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#166534;">Gallery Entry Clicks</div>
-          <div style="font-size:20px; font-weight:700; line-height:1.2; color:#14532d;">${spGalleryEntryClicksV1Hits}</div>
-          <div style="font-size:12px; color:#166534;">hero + preview + explore</div>
-        </div>
-        <div class="metric-card" style="padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:#fff7ed;">
-          <div style="font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#9a3412;">Landing to Click Rate</div>
-          <div style="font-size:20px; font-weight:700; line-height:1.2; color:#7c2d12;">${fmt2(spGalleryLandingToEntryClickRate)}%</div>
-          <div style="font-size:12px; color:#9a3412;">clicks / landing impressions</div>
-        </div>
+      <div id="eventList" data-sort-mode="count" style="padding-right: 6px;">
+      ${allEvents.map((e) => `
+          <div class="bar-row" data-label="${e.label}" data-count="${e.count}">
+            <span class="bar-label" title="${e.label}">${e.label}</span>
+            <div class="bar-container">
+              <div class="bar" style="width: ${(e.count / maxEventCount * 100).toFixed(1)}%"></div>
+            </div>
+            <span class="bar-value">${e.count}</span>
+          </div>
+        `).join("")}
       </div>
-      <div id="pixelEventList" data-sort-mode="count" data-sort-direction="desc" style="padding-right: 6px;">
-        <div class="bar-row" data-label="Zoom (total)" data-count="${spZoomV1Hits}">
-          <span class="bar-label" title="Zoom (total)">Zoom (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spZoomV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);"></div>
-          </div>
-          <span class="bar-value">${spZoomV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Chapter Views (total)" data-count="${spSisterV1Hits}">
-          <span class="bar-label" title="Chapter Views (total)">Chapter Views (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spSisterV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);"></div>
-          </div>
-          <span class="bar-value">${spSisterV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Grid Open (total)" data-count="${spGridOpenV1Hits}">
-          <span class="bar-label" title="Grid Open (total)">Grid Open (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spGridOpenV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);"></div>
-          </div>
-          <span class="bar-value">${spGridOpenV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Theme Grid Open (total)" data-count="${spThemeGridOpenV1Hits}">
-          <span class="bar-label" title="Theme Grid Open (total)">Theme Grid Open (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spThemeGridOpenV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);"></div>
-          </div>
-          <span class="bar-value">${spThemeGridOpenV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Grid Image Click (total)" data-count="${spGridImageClickV1Hits}">
-          <span class="bar-label" title="Grid Image Click (total)">Grid Image Click (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spGridImageClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);"></div>
-          </div>
-          <span class="bar-value">${spGridImageClickV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Theme Grid Image Click (total)" data-count="${spThemeGridImageClickV1Hits}">
-          <span class="bar-label" title="Theme Grid Image Click (total)">Theme Grid Image Click (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spThemeGridImageClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);"></div>
-          </div>
-          <span class="bar-value">${spThemeGridImageClickV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Grid Show More (total)" data-count="${spGridShowMoreV1Hits}">
-          <span class="bar-label" title="Grid Show More (total)">Grid Show More (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spGridShowMoreV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);"></div>
-          </div>
-          <span class="bar-value">${spGridShowMoreV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Grid Show Previous (total)" data-count="${spGridShowPreviousV1Hits}">
-          <span class="bar-label" title="Grid Show Previous (total)">Grid Show Previous (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spGridShowPreviousV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #d97706 0%, #92400e 100%);"></div>
-          </div>
-          <span class="bar-value">${spGridShowPreviousV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Complete List Open (total)" data-count="${spBrowseAllOpenV1Hits}">
-          <span class="bar-label" title="Complete List Open (total)">Complete List Open (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spBrowseAllOpenV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #f59e0b 0%, #92400e 100%);"></div>
-          </div>
-          <span class="bar-value">${spBrowseAllOpenV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Complete List Image Click (total)" data-count="${spBrowseAllImageClickV1Hits}">
-          <span class="bar-label" title="Complete List Image Click (total)">Complete List Image Click (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spBrowseAllImageClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #ec4899 0%, #9d174d 100%);"></div>
-          </div>
-          <span class="bar-value">${spBrowseAllImageClickV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Gallery Preview Click (total)" data-count="${spGalleryPreviewClickV1Hits}">
-          <span class="bar-label" title="Gallery Preview Click (total)">Gallery Preview Click (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spGalleryPreviewClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #38bdf8 0%, #0369a1 100%);"></div>
-          </div>
-          <span class="bar-value">${spGalleryPreviewClickV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Gallery Hero Click (total)" data-count="${spGalleryHeroClickV1Hits}">
-          <span class="bar-label" title="Gallery Hero Click (total)">Gallery Hero Click (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spGalleryHeroClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #22c55e 0%, #166534 100%);"></div>
-          </div>
-          <span class="bar-value">${spGalleryHeroClickV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Explore Gallery Click (total)" data-count="${spGalleryExploreClickV1Hits}">
-          <span class="bar-label" title="Explore Gallery Click (total)">Explore Gallery Click (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spGalleryExploreClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #10b981 0%, #065f46 100%);"></div>
-          </div>
-          <span class="bar-value">${spGalleryExploreClickV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Home Lore Collection Click (total)" data-count="${spHomeLoreLegacyCollectionClickV1Hits}">
-          <span class="bar-label" title="Home Lore Collection Click (total)">Home Lore Collection Click (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spHomeLoreLegacyCollectionClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #b45309 0%, #7c2d12 100%);"></div>
-          </div>
-          <span class="bar-value">${spHomeLoreLegacyCollectionClickV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Home Lore Image Click (total)" data-count="${spHomeLoreLegacyImageClickV1Hits}">
-          <span class="bar-label" title="Home Lore Image Click (total)">Home Lore Image Click (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spHomeLoreLegacyImageClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #c2410c 0%, #7c2d12 100%);"></div>
-          </div>
-          <span class="bar-value">${spHomeLoreLegacyImageClickV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Home Lore CTA Click (total)" data-count="${spHomeLoreLegacyCtaClickV1Hits}">
-          <span class="bar-label" title="Home Lore CTA Click (total)">Home Lore CTA Click (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spHomeLoreLegacyCtaClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #92400e 0%, #78350f 100%);"></div>
-          </div>
-          <span class="bar-value">${spHomeLoreLegacyCtaClickV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Home Lore Audio Click (total)" data-count="${spHomeLoreLegacyAudioClickV1Hits}">
-          <span class="bar-label" title="Home Lore Audio Click (total)">Home Lore Audio Click (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spHomeLoreLegacyAudioClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);"></div>
-          </div>
-          <span class="bar-value">${spHomeLoreLegacyAudioClickV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Theme Lore Audio Click (total)" data-count="${spThemeLoreLegacyAudioClickV1Hits}">
-          <span class="bar-label" title="Theme Lore Audio Click (total)">Theme Lore Audio Click (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spThemeLoreLegacyAudioClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);"></div>
-          </div>
-          <span class="bar-value">${spThemeLoreLegacyAudioClickV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Gallery Landing View (total)" data-count="${spGalleryLandingViewV1Hits}">
-          <span class="bar-label" title="Gallery Landing View (total)">Gallery Landing View (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spGalleryLandingViewV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #22c55e 0%, #166534 100%);"></div>
-          </div>
-          <span class="bar-value">${spGalleryLandingViewV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Exit to Gallery (total)" data-count="${spExitToGalleryV1Hits}">
-          <span class="bar-label" title="Exit to Gallery (total)">Exit to Gallery (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spExitToGalleryV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);"></div>
-          </div>
-          <span class="bar-value">${spExitToGalleryV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Scroll 25% (total)" data-count="${spScroll25V1Hits}">
-          <span class="bar-label" title="Scroll 25% (total)">Scroll 25% (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spScroll25V1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #a78bfa 0%, #6d28d9 100%);"></div>
-          </div>
-          <span class="bar-value">${spScroll25V1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Scroll 50% (total)" data-count="${spScroll50V1Hits}">
-          <span class="bar-label" title="Scroll 50% (total)">Scroll 50% (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spScroll50V1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #8b5cf6 0%, #5b21b6 100%);"></div>
-          </div>
-          <span class="bar-value">${spScroll50V1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Scroll 75% (total)" data-count="${spScroll75V1Hits}">
-          <span class="bar-label" title="Scroll 75% (total)">Scroll 75% (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spScroll75V1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);"></div>
-          </div>
-          <span class="bar-value">${spScroll75V1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Scroll 100% (total)" data-count="${spScroll100V1Hits}">
-          <span class="bar-label" title="Scroll 100% (total)">Scroll 100% (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spScroll100V1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #6d28d9 0%, #3b0764 100%);"></div>
-          </div>
-          <span class="bar-value">${spScroll100V1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Cowboy Jump (total)" data-count="${spCowboyJumpV1Hits}">
-          <span class="bar-label" title="Cowboy Jump (total)">Cowboy Jump (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spCowboyJumpV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%);"></div>
-          </div>
-          <span class="bar-value">${spCowboyJumpV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Buy Button (total)" data-count="${spOrderClickedV1Hits}">
-          <span class="bar-label" title="Buy Button (total)">Buy Button (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spOrderClickedV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #f97316 0%, #c2410c 100%);"></div>
-          </div>
-          <span class="bar-value">${spOrderClickedV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Series Info (total)" data-count="${spSeriesInfoV1Hits}">
-          <span class="bar-label" title="Series Info (total)">Series Info (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spSeriesInfoV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);"></div>
-          </div>
-          <span class="bar-value">${spSeriesInfoV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="More About Image (total)" data-count="${spMoreInfoOpenV1Hits}">
-          <span class="bar-label" title="More About Image (total)">More About Image (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spMoreInfoOpenV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);"></div>
-          </div>
-          <span class="bar-value">${spMoreInfoOpenV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Explore More Photos (total)" data-count="${spSisterImageClickV1Hits}">
-          <span class="bar-label" title="Explore More Photos (total)">Explore More Photos (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spSisterImageClickV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #10b981 0%, #047857 100%);"></div>
-          </div>
-          <span class="bar-value">${spSisterImageClickV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Slideshow Start (total)" data-count="${spSlideshowStartV1Hits}">
-          <span class="bar-label" title="Slideshow Start (total)">Slideshow Start (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spSlideshowStartV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #eab308 0%, #a16207 100%);"></div>
-          </div>
-          <span class="bar-value">${spSlideshowStartV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Chapter Nav Prev (total)" data-count="${spChapterNavPrevV1Hits}">
-          <span class="bar-label" title="Chapter Nav Prev (total)">Chapter Nav Prev (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spChapterNavPrevV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #22d3ee 0%, #155e75 100%);"></div>
-          </div>
-          <span class="bar-value">${spChapterNavPrevV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Chapter Nav Next (total)" data-count="${spChapterNavNextV1Hits}">
-          <span class="bar-label" title="Chapter Nav Next (total)">Chapter Nav Next (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spChapterNavNextV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #2dd4bf 0%, #115e59 100%);"></div>
-          </div>
-          <span class="bar-value">${spChapterNavNextV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Slideshow Prev (total)" data-count="${spSlideshowNavPrevV1Hits}">
-          <span class="bar-label" title="Slideshow Prev (total)">Slideshow Prev (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spSlideshowNavPrevV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #38bdf8 0%, #0c4a6e 100%);"></div>
-          </div>
-          <span class="bar-value">${spSlideshowNavPrevV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Slideshow Next (total)" data-count="${spSlideshowNavNextV1Hits}">
-          <span class="bar-label" title="Slideshow Next (total)">Slideshow Next (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spSlideshowNavNextV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #34d399 0%, #065f46 100%);"></div>
-          </div>
-          <span class="bar-value">${spSlideshowNavNextV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Story Audio Toggle (total)" data-count="${spStoryAudioToggleV1Hits}">
-          <span class="bar-label" title="Story Audio Toggle (total)">Story Audio Toggle (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spStoryAudioToggleV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #f59e0b 0%, #92400e 100%);"></div>
-          </div>
-          <span class="bar-value">${spStoryAudioToggleV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Collector Notes (total)" data-count="${spCollectorNotesV1Hits}">
-          <span class="bar-label" title="Collector Notes (total)">Collector Notes (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spCollectorNotesV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #64748b 0%, #475569 100%);"></div>
-          </div>
-          <span class="bar-value">${spCollectorNotesV1Hits}</span>
-        </div>
-        <div class="bar-row" data-label="Guide Buttons (total)" data-count="${spGuideButtonsV1Hits}">
-          <span class="bar-label" title="Guide Buttons (total)">Guide Buttons (total)</span>
-          <div class="bar-container">
-            <div class="bar" style="width: ${spPixelEventMax > 0 ? (spGuideButtonsV1Hits / spPixelEventMax * 100).toFixed(1) : "0.0"}%; background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);"></div>
-          </div>
-          <span class="bar-value">${spGuideButtonsV1Hits}</span>
-        </div>
-      </div>
-      <script>setPixelEventSort('count');<\/script>
     </div>
 
     <!-- Site Geography -->
-    <div class="section k4-split-panel" style="order: 3;">
+    <div class="section k4-split-panel" style="order: 4;">
       <div class="section-header">
         <h3>\u{1F5FA}\uFE0F Site Geography</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Geography for non-image browsing (excludes <code>/i-...</code> image traffic). Gallery and other non-image pages are included.</div></span>
@@ -7129,7 +6972,7 @@ function renderDashboard({
     };
 
     return `
-    <div class="section k4-split-panel" style="order: 1;">
+    <div class="section k4-split-panel" style="order: 2;">
       <div class="section-header">
         <h3>Top 25 Pages (Pixel-First)</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Ranks pages by pixel-backed page counts when available, then falls back to JS page views where pixels are missing. J means JS-only fallback. H means a qualified image confirmation. Colors: blue=site, green=images, yellow=gallery landing.</div></span>
@@ -7164,7 +7007,7 @@ function renderDashboard({
   })()}
     </div>
 
-    <div class="section" style="order: 2;">
+    <div class="section" style="order: 3;">
       <div class="section-header">
         <h3>Top 25 Entry Pages (JS First-Touch)</h3>
         <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Ranks first-hit entries from JS page_view sequences (human visitor keyed). This panel is JS-first and does not currently blend pixel entry sessions.</div></span>
@@ -8774,6 +8617,203 @@ function isLevel4BlockCandidate({
 }
 __name(isLevel4BlockCandidate, "isLevel4BlockCandidate");
 __name2(isLevel4BlockCandidate, "isLevel4BlockCandidate");
+const CANONICAL_TRACKED_EVENTS = /* @__PURE__ */ new Set([
+  "xl_zoom",
+  "browse_all_click",
+  "order_clicked",
+  "collector_notes_open",
+  "cowboy_jump",
+  "exit_to_gallery",
+  "gallery_explore_click",
+  "gallery_preview_click",
+  "guide_open",
+  "guide_close",
+  "guide_done",
+  "guide_click_outside",
+  "gallery_hero_click",
+  "more_info_open",
+  "nav_next",
+  "nav_prev",
+  "order_submitted",
+  "series_info",
+  "sister_image_click",
+  "slideshow_start",
+  "story_slider_click",
+  "theme_click",
+  "all_list_click",
+  "grid_open",
+  "grid_image_click",
+  "grid_show_more",
+  "slideshow_nav_prev",
+  "slideshow_nav_next",
+  "story_audio_toggle",
+  "grid_show_previous",
+  "scroll_25",
+  "scroll_50",
+  "scroll_75",
+  "scroll_100",
+  "page_view",
+  "session_exit"
+]);
+const PIXEL_LAYER_TO_CANONICAL_EVENT = {
+  cowboy_jump_pixel_v1: "cowboy_jump",
+  more_info_open_pixel_v1: "more_info_open",
+  order_clicked_pixel_v1: "order_clicked",
+  order_submitted_pixel_v1: "order_submitted",
+  series_info_pixel_v1: "series_info",
+  sister_image_click_pixel_v1: "sister_image_click",
+  slideshow_start_pixel_v1: "slideshow_start",
+  grid_open_pixel_v1: "grid_open",
+  grid_image_click_pixel_v1: "grid_image_click",
+  grid_show_more_pixel_v1: "grid_show_more",
+  grid_show_previous_pixel_v1: "grid_show_previous"
+};
+function normalizeCanonicalEventType(eventType, source, sourceLayer) {
+  if (source === "js") {
+    return CANONICAL_TRACKED_EVENTS.has(eventType) ? eventType : null;
+  }
+  if (source === "pixel") {
+    if (eventType === "page_pixel") return "page_view";
+    if (eventType === "action_pixel" && sourceLayer) {
+      return PIXEL_LAYER_TO_CANONICAL_EVENT[sourceLayer] || null;
+    }
+  }
+  return null;
+}
+__name(normalizeCanonicalEventType, "normalizeCanonicalEventType");
+__name2(normalizeCanonicalEventType, "normalizeCanonicalEventType");
+function buildCanonicalEventRecord({
+  eventType,
+  targetId,
+  source,
+  sourceLayer,
+  sessionId,
+  visitorId,
+  ip,
+  ipHash,
+  page,
+  ua,
+  referer,
+  country,
+  region,
+  city,
+  cfAsn,
+  timestamp = new Date()
+}) {
+  const canonicalEventType = normalizeCanonicalEventType(eventType, source, sourceLayer);
+  if (!canonicalEventType) return null;
+  const eventDate = timestamp instanceof Date ? timestamp : new Date(timestamp);
+  const safeDate = Number.isNaN(eventDate.getTime()) ? new Date() : eventDate;
+  const epochSeconds = Math.floor(safeDate.getTime() / 1e3);
+  const isoMinute = safeDate.toISOString().slice(0, 16);
+  const pageKey = page || (typeof targetId === "string" && targetId.startsWith("/") ? targetId : "") || "";
+  const targetKey = targetId || "";
+  const sessionKey = sessionId || visitorId || `anon:${ipHash || ip || "unknown"}|${isoMinute}`;
+  const timeBucket = Math.floor(epochSeconds / 5);
+  return {
+    dedupeKey: [canonicalEventType, sessionKey, pageKey, targetKey, timeBucket].join("::"),
+    ts: safeDate.toISOString(),
+    eventType: canonicalEventType,
+    targetId: targetKey || null,
+    page: pageKey || null,
+    sessionId: sessionId || null,
+    sessionKey,
+    ip,
+    ipHash,
+    ua,
+    referer,
+    source: source === "js" ? "js" : "pixel",
+    country,
+    region,
+    city,
+    cfAsn,
+    visitorId: visitorId || null,
+    hasJs: source === "js" ? 1 : 0,
+    hasPixel: source === "pixel" ? 1 : 0
+  };
+}
+__name(buildCanonicalEventRecord, "buildCanonicalEventRecord");
+__name2(buildCanonicalEventRecord, "buildCanonicalEventRecord");
+async function upsertCanonicalEvent(env, record) {
+  if (!env?.DB || !record) return;
+  const sql = `
+    INSERT INTO canonical_events (
+      dedupe_key,
+      ts,
+      last_seen,
+      event_type,
+      target_id,
+      page,
+      session_id,
+      session_key,
+      ip,
+      ip_hash,
+      ua,
+      referer,
+      source,
+      country,
+      region,
+      city,
+      cf_asn,
+      visitor_id,
+      has_js,
+      has_pixel
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(dedupe_key) DO UPDATE SET
+      last_seen = excluded.last_seen,
+      has_js = MAX(canonical_events.has_js, excluded.has_js),
+      has_pixel = MAX(canonical_events.has_pixel, excluded.has_pixel),
+      source = CASE
+        WHEN MAX(canonical_events.has_js, excluded.has_js) = 1
+          AND MAX(canonical_events.has_pixel, excluded.has_pixel) = 1 THEN 'mixed'
+        WHEN MAX(canonical_events.has_js, excluded.has_js) = 1 THEN 'js'
+        ELSE 'pixel'
+      END,
+      visitor_id = COALESCE(canonical_events.visitor_id, excluded.visitor_id),
+      session_id = COALESCE(canonical_events.session_id, excluded.session_id),
+      page = CASE
+        WHEN COALESCE(canonical_events.page, '') != '' THEN canonical_events.page
+        ELSE excluded.page
+      END,
+      target_id = CASE
+        WHEN COALESCE(canonical_events.target_id, '') != '' THEN canonical_events.target_id
+        ELSE excluded.target_id
+      END,
+      referer = COALESCE(canonical_events.referer, excluded.referer)
+  `;
+  try {
+    await env.DB.prepare(sql).bind(
+      record.dedupeKey,
+      record.ts,
+      record.ts,
+      record.eventType,
+      record.targetId,
+      record.page,
+      record.sessionId,
+      record.sessionKey,
+      record.ip,
+      record.ipHash,
+      record.ua,
+      record.referer,
+      record.source,
+      record.country,
+      record.region,
+      record.city,
+      record.cfAsn,
+      record.visitorId,
+      record.hasJs,
+      record.hasPixel
+    ).run();
+  } catch (e) {
+    const msg = String(e?.message || e);
+    if (msg.includes("no such table") && msg.includes("canonical_events")) {
+      return;
+    }
+    throw e;
+  }
+}
+__name(upsertCanonicalEvent, "upsertCanonicalEvent");
+__name2(upsertCanonicalEvent, "upsertCanonicalEvent");
 async function logRawEvent(env, eventType, targetId, request, extras = {}) {
   try {
     if (!env?.DB) return;
@@ -8805,6 +8845,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
       ogPlatform = detectOGPlatform(request);
     }
     const referer = refererOverride !== null && refererOverride !== void 0 ? refererOverride : request.headers.get("Referer") || null;
+    const eventTimestamp = new Date();
     const baseColumns = [
       "ip",
       "ip_hash",
@@ -8857,6 +8898,24 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
         await env.DB.prepare(
           `INSERT INTO raw_events (${columns.join(", ")}) VALUES (${placeholders})`
         ).bind(...values).run();
+        await upsertCanonicalEvent(env, buildCanonicalEventRecord({
+          eventType,
+          targetId,
+          source,
+          sourceLayer,
+          sessionId,
+          visitorId,
+          ip,
+          ipHash,
+          page,
+          ua,
+          referer,
+          country,
+          region,
+          city,
+          cfAsn,
+          timestamp: eventTimestamp
+        }));
         if (verifiedBotName) {
           await recordCrawlerStatusDaily(env, ipHash, verifiedBotName, eventType, inferredFrom);
         }
@@ -9246,6 +9305,14 @@ function readCookieValue(cookieHeader, name) {
 }
 __name(readCookieValue, "readCookieValue");
 __name2(readCookieValue, "readCookieValue");
+function normalizeClientVisitorId(raw) {
+  if (typeof raw !== "string") return null;
+  const value = raw.trim();
+  if (!value || value.length > 128) return null;
+  return /^[A-Za-z0-9._:-]+$/.test(value) ? value : null;
+}
+__name(normalizeClientVisitorId, "normalizeClientVisitorId");
+__name2(normalizeClientVisitorId, "normalizeClientVisitorId");
 function makeSidSetCookieHeader(requestUrl, sessionId) {
   if (!sessionId) return null;
   let hostname = "";
@@ -9288,6 +9355,16 @@ function getAllowedOrigin(request) {
 }
 __name(getAllowedOrigin, "getAllowedOrigin");
 __name2(getAllowedOrigin, "getAllowedOrigin");
+function applyCors(headers, request, methods) {
+  headers.set("Access-Control-Allow-Origin", getAllowedOrigin(request));
+  headers.set("Access-Control-Allow-Methods", methods);
+  headers.set("Access-Control-Allow-Headers", "Content-Type");
+  headers.set("Access-Control-Allow-Credentials", "true");
+  headers.set("Vary", "Origin");
+  return headers;
+}
+__name(applyCors, "applyCors");
+__name2(applyCors, "applyCors");
 function applyNoStore(headers) {
   headers.set("Cache-Control", "no-store, max-age=0");
   headers.set("Pragma", "no-cache");
@@ -9310,18 +9387,15 @@ async function handleTrackRequest(request, env, ctx) {
     try {
       body = await request.json();
     } catch (e) {
-      const headers2 = new Headers({
-        "Content-Type": "text/plain",
-        "Access-Control-Allow-Origin": getAllowedOrigin(request),
-        "Access-Control-Allow-Methods": "POST",
-        "Access-Control-Allow-Headers": "Content-Type",
-        Vary: "Origin"
-      });
+      const headers2 = applyCors(new Headers({
+        "Content-Type": "text/plain"
+      }), request, "POST");
       applyNoStore(headers2);
       return new Response("Invalid JSON", { status: 400, headers: headers2 });
     }
     const {
       session_id = null,
+      visitor_id = null,
       event = null,
       gallery_id = null,
       image_id = null,
@@ -9366,8 +9440,9 @@ async function handleTrackRequest(request, env, ctx) {
     const cookieHeader = request.headers.get("cookie") || "";
     const cookieMatch = cookieHeader.match(/k4_entry_ref=([^;]+)/);
     const edgeReferrer = cookieMatch ? decodeURIComponent(cookieMatch[1]) : null;
-    const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
-    const existingVisitorId = vidCookieMatch ? vidCookieMatch[1] : null;
+    const vidCookie = readCookieValue(cookieHeader, "k4_vid");
+    const clientVisitorId = normalizeClientVisitorId(visitor_id);
+    const existingVisitorId = vidCookie || clientVisitorId || null;
     const cryptoObj = globalThis?.crypto;
     const mintedVisitorId = !existingVisitorId && typeof cryptoObj?.randomUUID === "function" ? cryptoObj.randomUUID() : !existingVisitorId ? String(Date.now()) + "-" + Math.random().toString(16).slice(2) : null;
     const visitorId = existingVisitorId || mintedVisitorId;
@@ -9422,13 +9497,8 @@ async function handleTrackRequest(request, env, ctx) {
       })
     );
     const sidSetCookie = makeSidSetCookieHeader(request.url, bestSessionId);
-    const vidSetCookie = existingVisitorId ? null : makeVidSetCookieHeader(request.url, visitorId);
-    const headers = new Headers({
-      "Access-Control-Allow-Origin": getAllowedOrigin(request),
-      "Access-Control-Allow-Methods": "POST",
-      "Access-Control-Allow-Headers": "Content-Type",
-      Vary: "Origin"
-    });
+    const vidSetCookie = vidCookie ? null : makeVidSetCookieHeader(request.url, visitorId);
+    const headers = applyCors(new Headers(), request, "POST");
     applyNoStore(headers);
     if (sidSetCookie) headers.append("Set-Cookie", sidSetCookie);
     if (vidSetCookie) headers.append("Set-Cookie", vidSetCookie);
@@ -9444,16 +9514,17 @@ async function handleTrackRequest(request, env, ctx) {
 }
 __name(handleTrackRequest, "handleTrackRequest");
 __name2(handleTrackRequest, "handleTrackRequest");
-function handleTrackOptions() {
+function handleTrackOptions(request = null) {
   return new Response(null, {
     status: 204,
     headers: applyNoStore(
-      new Headers({
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Access-Control-Max-Age": "86400"
-      })
+      applyCors(
+        new Headers({
+          "Access-Control-Max-Age": "86400"
+        }),
+        request,
+        "POST, OPTIONS"
+      )
     )
   });
 }
@@ -9548,6 +9619,11 @@ async function handleStatePixelRequest(request, env, ctx) {
       "X-Content-Type-Options": "nosniff"
     })
   );
+  if (request.headers.get("Origin")) {
+    headers.set("Access-Control-Allow-Origin", getAllowedOrigin(request));
+    headers.set("Access-Control-Allow-Credentials", "true");
+    headers.set("Vary", "Origin");
+  }
   if (isSyntheticTraffic(request)) {
     return new Response(ONE_BY_ONE_GIF_BYTES, { status: 200, headers });
   }
@@ -9573,7 +9649,8 @@ async function handleStatePixelRequest(request, env, ctx) {
     const sidQuery = (url.searchParams.get("sid") || "").trim() || null;
     const bestSessionId = sidCookie || sidQuery || null;
     const vidCookie = readCookieValue(cookieHeader, "k4_vid");
-    const existingVisitorId = vidCookie || null;
+    const vidQuery = normalizeClientVisitorId(url.searchParams.get("vid"));
+    const existingVisitorId = vidCookie || vidQuery || null;
     const cryptoObj = globalThis?.crypto;
     const mintedVisitorId = !existingVisitorId && typeof cryptoObj?.randomUUID === "function" ? cryptoObj.randomUUID() : !existingVisitorId ? String(Date.now()) + "-" + Math.random().toString(16).slice(2) : null;
     const visitorId = existingVisitorId || mintedVisitorId;
@@ -9609,7 +9686,7 @@ async function handleStatePixelRequest(request, env, ctx) {
       })
     );
     const sidSetCookie = makeSidSetCookieHeader(request.url, bestSessionId);
-    const vidSetCookie = existingVisitorId ? null : makeVidSetCookieHeader(request.url, visitorId);
+    const vidSetCookie = vidCookie ? null : makeVidSetCookieHeader(request.url, visitorId);
     if (sidSetCookie) headers.append("Set-Cookie", sidSetCookie);
     if (vidSetCookie) headers.append("Set-Cookie", vidSetCookie);
     return new Response(ONE_BY_ONE_GIF_BYTES, { status: 200, headers });
@@ -10211,7 +10288,7 @@ var worker_default = {
     }
     if (url.pathname === "/track" || url.pathname === "/__k4e") {
       if (request.method === "OPTIONS") {
-        return handleTrackOptions();
+        return handleTrackOptions(request);
       }
       return handleTrackRequest(request, env, ctx);
     }

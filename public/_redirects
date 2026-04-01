@@ -162,6 +162,9 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 # Analytics tracking - move to proxied edge host
 /track         https://edge.k4studios.com/track         200!
 /__k4e         https://edge.k4studios.com/__k4e         200!
+/_state        https://edge.k4studios.com/_state        200!
 /edge-event    https://edge.k4studios.com/edge-event    200!
 /__k4stats     https://edge.k4studios.com/__k4stats     301!
 /__k4stats/*   https://edge.k4studios.com/__k4stats/:splat   301!
+/__k4serp      https://k4-image-proxy.wayneheim.workers.dev/__k4serp      200!
+/__k4serp/*    https://k4-image-proxy.wayneheim.workers.dev/__k4serp/:splat   200!

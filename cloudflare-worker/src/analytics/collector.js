@@ -137,6 +137,13 @@ function readCookieValue(cookieHeader, name) {
   return m ? m[1] : null;
 }
 
+function normalizeClientVisitorId(raw) {
+  if (typeof raw !== 'string') return null;
+  const value = raw.trim();
+  if (!value || value.length > 128) return null;
+  return /^[A-Za-z0-9._:-]+$/.test(value) ? value : null;
+}
+
 function makeSidSetCookieHeader(requestUrl, sessionId) {
   if (!sessionId) return null;
 
@@ -182,6 +189,15 @@ function getAllowedOrigin(request) {
   return 'https://www.k4studios.com';
 }
 
+function applyCors(headers, request, methods) {
+  headers.set('Access-Control-Allow-Origin', getAllowedOrigin(request));
+  headers.set('Access-Control-Allow-Methods', methods);
+  headers.set('Access-Control-Allow-Headers', 'Content-Type');
+  headers.set('Access-Control-Allow-Credentials', 'true');
+  headers.set('Vary', 'Origin');
+  return headers;
+}
+
 function applyNoStore(headers) {
   headers.set('Cache-Control', 'no-store, max-age=0');
   headers.set('Pragma', 'no-cache');
@@ -215,13 +231,9 @@ export async function handleTrackRequest(request, env, ctx) {
     } catch (e) {
       // Avoid 500s for malformed client payloads.
       // Ad blockers, misconfigured beacons, or curl quoting issues can corrupt JSON.
-      const headers = new Headers({
-        'Content-Type': 'text/plain',
-        "Access-Control-Allow-Origin": getAllowedOrigin(request),
-        "Access-Control-Allow-Methods": "POST",
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Vary": "Origin"
-      });
+      const headers = applyCors(new Headers({
+        'Content-Type': 'text/plain'
+      }), request, 'POST');
       applyNoStore(headers);
       return new Response('Invalid JSON', { status: 400, headers });
     }
@@ -229,6 +241,7 @@ export async function handleTrackRequest(request, env, ctx) {
     // Extract event data
     const {
       session_id = null,
+      visitor_id = null,
       event = null,
       gallery_id = null,
       image_id = null,
@@ -281,8 +294,9 @@ export async function handleTrackRequest(request, env, ctx) {
 
     // Read visitor_id from k4_vid cookie (Single Population Doctrine)
     // If missing, mint it here (JS-verified by virtue of hitting /track).
-    const vidCookieMatch = cookieHeader.match(/k4_vid=([^;]+)/);
-    const existingVisitorId = vidCookieMatch ? vidCookieMatch[1] : null;
+    const vidCookie = readCookieValue(cookieHeader, 'k4_vid');
+    const clientVisitorId = normalizeClientVisitorId(visitor_id);
+    const existingVisitorId = vidCookie || clientVisitorId || null;
     const cryptoObj = globalThis?.crypto;
     const mintedVisitorId = (!existingVisitorId && typeof cryptoObj?.randomUUID === 'function')
       ? cryptoObj.randomUUID()
@@ -346,14 +360,9 @@ export async function handleTrackRequest(request, env, ctx) {
     }));
 
     const sidSetCookie = makeSidSetCookieHeader(request.url, bestSessionId);
-    const vidSetCookie = existingVisitorId ? null : makeVidSetCookieHeader(request.url, visitorId);
+    const vidSetCookie = vidCookie ? null : makeVidSetCookieHeader(request.url, visitorId);
 
-    const headers = new Headers({
-      "Access-Control-Allow-Origin": getAllowedOrigin(request),
-      "Access-Control-Allow-Methods": "POST",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Vary": "Origin"
-    });
+    const headers = applyCors(new Headers(), request, 'POST');
 
     applyNoStore(headers);
 
@@ -373,15 +382,12 @@ export async function handleTrackRequest(request, env, ctx) {
 }
 
 // Handle CORS preflight for /track
-export function handleTrackOptions() {
+export function handleTrackOptions(request = null) {
   return new Response(null, {
     status: 204,
-    headers: applyNoStore(new Headers({
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
+    headers: applyNoStore(applyCors(new Headers({
       "Access-Control-Max-Age": "86400"
-    }))
+    }), request, 'POST, OPTIONS'))
   });
 }
 

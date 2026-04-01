@@ -389,13 +389,13 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       const sessionId = getLoreSessionId();
       if (sessionId) params.set('sid', sessionId);
 
-      const pixelUrl = `/_state?${params.toString()}`;
+      const pixelUrl = `https://edge.k4studios.com/_state?${params.toString()}`;
       if (typeof fetch === 'function') {
         fetch(pixelUrl, {
           method: 'GET',
           keepalive: true,
           cache: 'no-store',
-          credentials: 'same-origin'
+          credentials: 'include'
         }).catch(() => {
           const image = new Image();
           image.referrerPolicy = 'same-origin';

@@ -142,6 +142,14 @@ export default function TombstoneNav({
           
           // Track ALL tombstone clicks for analytics
           const handleClick = () => {
+            if (typeof window !== 'undefined' && typeof window.k4track === 'function') {
+              window.k4track('gallery_explore_click', {
+                galleryId: item.trackingId || sanitizedTitle,
+                pageType: 'landing'
+              });
+              return;
+            }
+
             // Track via Cloudflare D1
             const sessionId = sessionStorage.getItem('k4_session_id') || 
               (sessionStorage.setItem('k4_session_id', crypto.randomUUID()), sessionStorage.getItem('k4_session_id'));
@@ -155,19 +163,25 @@ export default function TombstoneNav({
             });
             
             // Use sendBeacon for reliable delivery during navigation
-            if (navigator.sendBeacon) {
-              const blob = new Blob([payload], { type: 'application/json' });
-              navigator.sendBeacon(TRACK_ENDPOINT, blob);
-            } else {
+            const sendViaFetch = () => {
               fetch(TRACK_ENDPOINT, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: payload,
                 keepalive: true,
                 cache: 'no-store',
+                mode: 'cors',
                 credentials: 'include'
               }).catch(() => {});
+            };
+
+            if (navigator.sendBeacon) {
+              const blob = new Blob([payload], { type: 'text/plain;charset=UTF-8' });
+              const ok = navigator.sendBeacon(TRACK_ENDPOINT, blob);
+              if (ok) return;
             }
+
+            sendViaFetch();
           };
           
           // Animation delay: use visual position when focused, DOM index otherwise

@@ -2752,7 +2752,7 @@ export default {
       if (env.ANALYTICS_ENABLED === "true" && env.ANALYTICS) {
         return env.ANALYTICS.fetch(request);
       }
-      if (request.method === "OPTIONS") return handleTrackOptions();
+      if (request.method === "OPTIONS") return handleTrackOptions(request);
       return handleTrackRequest(request, env, ctx);
     }
 

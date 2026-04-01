@@ -278,22 +278,41 @@ const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
       }
     </script>
 
-    <!-- Session cookie bridge: make sessionStorage session_id available to same-origin image requests -->
+    <!-- Session + visitor cookie bridge: mint stable first-party IDs before analytics writes -->
     <script>
       (function () {
         try {
-          var sid = sessionStorage.getItem('k4_session_id');
-          if (!sid) {
-            sid = (window.crypto && window.crypto.randomUUID)
+          function readCookie(name) {
+            var match = document.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]+)'));
+            return match ? match[1] : null;
+          }
+
+          function randomId() {
+            return (window.crypto && window.crypto.randomUUID)
               ? window.crypto.randomUUID()
               : (String(Date.now()) + '-' + Math.random().toString(16).slice(2));
+          }
+
+          var domainAttr = (location.hostname && location.hostname.toLowerCase().endsWith('k4studios.com'))
+            ? '; Domain=.k4studios.com'
+            : '';
+
+          var sid = sessionStorage.getItem('k4_session_id');
+          if (!sid) {
+            sid = randomId();
             sessionStorage.setItem('k4_session_id', sid);
           }
+
+          var vid = readCookie('k4_vid');
+          if (!vid) {
+            vid = randomId();
+          }
+
           if (sid) {
-            var domainAttr = (location.hostname && location.hostname.toLowerCase().endsWith('k4studios.com'))
-              ? '; Domain=.k4studios.com'
-              : '';
             document.cookie = 'k4_sid=' + encodeURIComponent(sid) + '; Path=/; SameSite=Lax; Secure' + domainAttr;
+          }
+          if (vid) {
+            document.cookie = 'k4_vid=' + encodeURIComponent(vid) + '; Path=/; Max-Age=31536000; SameSite=Lax; Secure' + domainAttr;
           }
         } catch (e) {}
       })();

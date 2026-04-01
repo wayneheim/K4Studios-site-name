@@ -72,6 +72,211 @@ function isLevel4BlockCandidate({
   return hasHardSignal || isPersistent || isExtremeVolume || isNoRefHighVolume || isVeryFast;
 }
 
+const CANONICAL_TRACKED_EVENTS = new Set([
+  'xl_zoom',
+  'browse_all_click',
+  'order_clicked',
+  'collector_notes_open',
+  'cowboy_jump',
+  'exit_to_gallery',
+  'gallery_explore_click',
+  'gallery_preview_click',
+  'guide_open',
+  'guide_close',
+  'guide_done',
+  'guide_click_outside',
+  'gallery_hero_click',
+  'more_info_open',
+  'nav_next',
+  'nav_prev',
+  'order_submitted',
+  'series_info',
+  'sister_image_click',
+  'slideshow_start',
+  'story_slider_click',
+  'theme_click',
+  'all_list_click',
+  'grid_open',
+  'grid_image_click',
+  'grid_show_more',
+  'slideshow_nav_prev',
+  'slideshow_nav_next',
+  'story_audio_toggle',
+  'grid_show_previous',
+  'scroll_25',
+  'scroll_50',
+  'scroll_75',
+  'scroll_100',
+  'page_view',
+  'session_exit'
+]);
+
+const PIXEL_LAYER_TO_CANONICAL_EVENT = {
+  cowboy_jump_pixel_v1: 'cowboy_jump',
+  more_info_open_pixel_v1: 'more_info_open',
+  order_clicked_pixel_v1: 'order_clicked',
+  order_submitted_pixel_v1: 'order_submitted',
+  series_info_pixel_v1: 'series_info',
+  sister_image_click_pixel_v1: 'sister_image_click',
+  slideshow_start_pixel_v1: 'slideshow_start',
+  grid_open_pixel_v1: 'grid_open',
+  grid_image_click_pixel_v1: 'grid_image_click',
+  grid_show_more_pixel_v1: 'grid_show_more',
+  grid_show_previous_pixel_v1: 'grid_show_previous'
+};
+
+function normalizeCanonicalEventType(eventType, source, sourceLayer) {
+  if (source === 'js') {
+    return CANONICAL_TRACKED_EVENTS.has(eventType) ? eventType : null;
+  }
+
+  if (source === 'pixel') {
+    if (eventType === 'page_pixel') return 'page_view';
+    if (eventType === 'action_pixel' && sourceLayer) {
+      return PIXEL_LAYER_TO_CANONICAL_EVENT[sourceLayer] || null;
+    }
+  }
+
+  return null;
+}
+
+function buildCanonicalEventRecord({
+  eventType,
+  targetId,
+  source,
+  sourceLayer,
+  sessionId,
+  visitorId,
+  ip,
+  ipHash,
+  page,
+  ua,
+  referer,
+  country,
+  region,
+  city,
+  cfAsn,
+  timestamp = new Date()
+}) {
+  const canonicalEventType = normalizeCanonicalEventType(eventType, source, sourceLayer);
+  if (!canonicalEventType) return null;
+
+  const eventDate = timestamp instanceof Date ? timestamp : new Date(timestamp);
+  const safeDate = Number.isNaN(eventDate.getTime()) ? new Date() : eventDate;
+  const epochSeconds = Math.floor(safeDate.getTime() / 1000);
+  const isoMinute = safeDate.toISOString().slice(0, 16);
+  const pageKey = page || ((typeof targetId === 'string' && targetId.startsWith('/')) ? targetId : '') || '';
+  const targetKey = targetId || '';
+  const sessionKey = sessionId || visitorId || `anon:${ipHash || ip || 'unknown'}|${isoMinute}`;
+  const timeBucket = Math.floor(epochSeconds / 5);
+  const dedupeKey = [canonicalEventType, sessionKey, pageKey, targetKey, timeBucket].join('::');
+  const hasJs = source === 'js' ? 1 : 0;
+  const hasPixel = source === 'pixel' ? 1 : 0;
+
+  return {
+    dedupeKey,
+    ts: safeDate.toISOString(),
+    eventType: canonicalEventType,
+    targetId: targetKey || null,
+    page: pageKey || null,
+    sessionId: sessionId || null,
+    sessionKey,
+    ip,
+    ipHash,
+    ua,
+    referer,
+    source: hasJs ? 'js' : 'pixel',
+    country,
+    region,
+    city,
+    cfAsn,
+    visitorId: visitorId || null,
+    hasJs,
+    hasPixel
+  };
+}
+
+async function upsertCanonicalEvent(env, record) {
+  if (!env?.DB || !record) return;
+
+  const sql = `
+    INSERT INTO canonical_events (
+      dedupe_key,
+      ts,
+      last_seen,
+      event_type,
+      target_id,
+      page,
+      session_id,
+      session_key,
+      ip,
+      ip_hash,
+      ua,
+      referer,
+      source,
+      country,
+      region,
+      city,
+      cf_asn,
+      visitor_id,
+      has_js,
+      has_pixel
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(dedupe_key) DO UPDATE SET
+      last_seen = excluded.last_seen,
+      has_js = MAX(canonical_events.has_js, excluded.has_js),
+      has_pixel = MAX(canonical_events.has_pixel, excluded.has_pixel),
+      source = CASE
+        WHEN MAX(canonical_events.has_js, excluded.has_js) = 1
+          AND MAX(canonical_events.has_pixel, excluded.has_pixel) = 1 THEN 'mixed'
+        WHEN MAX(canonical_events.has_js, excluded.has_js) = 1 THEN 'js'
+        ELSE 'pixel'
+      END,
+      visitor_id = COALESCE(canonical_events.visitor_id, excluded.visitor_id),
+      session_id = COALESCE(canonical_events.session_id, excluded.session_id),
+      page = CASE
+        WHEN COALESCE(canonical_events.page, '') != '' THEN canonical_events.page
+        ELSE excluded.page
+      END,
+      target_id = CASE
+        WHEN COALESCE(canonical_events.target_id, '') != '' THEN canonical_events.target_id
+        ELSE excluded.target_id
+      END,
+      referer = COALESCE(canonical_events.referer, excluded.referer)
+  `;
+
+  try {
+    await env.DB.prepare(sql).bind(
+      record.dedupeKey,
+      record.ts,
+      record.ts,
+      record.eventType,
+      record.targetId,
+      record.page,
+      record.sessionId,
+      record.sessionKey,
+      record.ip,
+      record.ipHash,
+      record.ua,
+      record.referer,
+      record.source,
+      record.country,
+      record.region,
+      record.city,
+      record.cfAsn,
+      record.visitorId,
+      record.hasJs,
+      record.hasPixel
+    ).run();
+  } catch (e) {
+    const msg = String(e?.message || e);
+    if (msg.includes('no such table') && msg.includes('canonical_events')) {
+      return;
+    }
+    throw e;
+  }
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // RAW EVENT LOGGING — The ONLY write function
 // ═══════════════════════════════════════════════════════════════════════════
@@ -128,6 +333,7 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
     const referer = refererOverride !== null && refererOverride !== undefined
       ? refererOverride
       : (request.headers.get("Referer") || null);
+    const eventTimestamp = new Date();
 
     const baseColumns = [
       'ip',
@@ -188,6 +394,25 @@ async function logRawEvent(env, eventType, targetId, request, extras = {}) {
         )
           .bind(...values)
           .run();
+
+        await upsertCanonicalEvent(env, buildCanonicalEventRecord({
+          eventType,
+          targetId,
+          source,
+          sourceLayer,
+          sessionId,
+          visitorId,
+          ip,
+          ipHash,
+          page,
+          ua,
+          referer,
+          country,
+          region,
+          city,
+          cfAsn,
+          timestamp: eventTimestamp
+        }));
 
         return;
       } catch (e) {

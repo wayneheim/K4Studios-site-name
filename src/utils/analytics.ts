@@ -7,8 +7,24 @@
 
 const EDGE_ANALYTICS_ORIGIN = 'https://edge.k4studios.com';
 const TRACK_ENDPOINT = `${EDGE_ANALYTICS_ORIGIN}/__k4e`;
+const VISITOR_STORAGE_KEY = 'k4_vid';
+const VISITOR_WINDOW_KEY = '__K4_VISITOR_ID';
 
 let inMemorySessionId: string | null = null;
+let inMemoryVisitorId: string | null = null;
+
+function getK4CookieDomainAttr(): string {
+  if (typeof window === 'undefined') return '';
+  return window.location.hostname.toLowerCase().endsWith('k4studios.com')
+    ? '; Domain=.k4studios.com'
+    : '';
+}
+
+function setK4Cookie(name: string, value: string, maxAgeSeconds?: number): void {
+  if (typeof document === 'undefined') return;
+  const maxAgeAttr = typeof maxAgeSeconds === 'number' ? `; Max-Age=${maxAgeSeconds}` : '';
+  document.cookie = `${name}=${encodeURIComponent(value)}; Path=/; SameSite=Lax; Secure${maxAgeAttr}${getK4CookieDomainAttr()}`;
+}
 
 function safeRandomId(): string {
   try {
@@ -99,6 +115,70 @@ function getCookie(name: string): string | null {
   return match ? match[2] : null;
 }
 
+function getVisitorId(): string {
+  if (typeof window === 'undefined') return '';
+
+  const cookieVisitorId = getCookie('k4_vid');
+  if (cookieVisitorId) {
+    inMemoryVisitorId = cookieVisitorId;
+    try {
+      (window as any)[VISITOR_WINDOW_KEY] = cookieVisitorId;
+      localStorage.setItem(VISITOR_STORAGE_KEY, cookieVisitorId);
+    } catch {
+      // ignore
+    }
+    return cookieVisitorId;
+  }
+
+  const globalVisitorId = typeof (window as any)[VISITOR_WINDOW_KEY] === 'string'
+    ? String((window as any)[VISITOR_WINDOW_KEY])
+    : '';
+  if (globalVisitorId) {
+    inMemoryVisitorId = globalVisitorId;
+    try {
+      setK4Cookie('k4_vid', globalVisitorId, 31536000);
+    } catch {
+      // ignore
+    }
+    return globalVisitorId;
+  }
+
+  try {
+    const storedVisitorId = localStorage.getItem(VISITOR_STORAGE_KEY) || '';
+    if (storedVisitorId) {
+      inMemoryVisitorId = storedVisitorId;
+      (window as any)[VISITOR_WINDOW_KEY] = storedVisitorId;
+      try {
+        setK4Cookie('k4_vid', storedVisitorId, 31536000);
+      } catch {
+        // ignore
+      }
+      return storedVisitorId;
+    }
+  } catch {
+    // ignore
+  }
+
+  if (!inMemoryVisitorId) {
+    inMemoryVisitorId = safeRandomId();
+  }
+
+  try {
+    (window as any)[VISITOR_WINDOW_KEY] = inMemoryVisitorId;
+    localStorage.setItem(VISITOR_STORAGE_KEY, inMemoryVisitorId);
+  } catch {
+    // ignore
+  }
+
+  try {
+    setK4Cookie('k4_vid', inMemoryVisitorId, 31536000);
+  } catch {
+    // ignore
+  }
+
+  return inMemoryVisitorId;
+}
+
 type ClarityFn = (...args: any[]) => void;
 
 function getClarity(): ClarityFn | null {
@@ -124,9 +204,7 @@ function syncClarityIdentity(): void {
       // ignore
     }
 
-    // k4_vid is minted server-side and set as a cookie; it may not exist
-    // until after the first /__k4e request completes.
-    const visitorId = getCookie('k4_vid');
+    const visitorId = getVisitorId();
     const userId = visitorId || sessionId;
 
     // Clarity API: identify(userId, sessionId, pageId?)
@@ -190,7 +268,7 @@ interface ActionPixelContext {
   pixelType?: 'action' | 'image' | 'page';
 }
 
-const PIXEL_ENDPOINT = '/_state';
+const PIXEL_ENDPOINT = `${EDGE_ANALYTICS_ORIGIN}/_state`;
 const DEFAULT_PIXEL_LAYER_BY_ACTION: Record<string, string> = {
   chapter_view: 'sister_pixel_v1',
   xl_zoom: 'zoom_pixel_v1',
@@ -334,12 +412,22 @@ type SendOutcome = {
   response_url?: string;
 };
 
+function isSameOriginUrl(url: string): boolean {
+  if (typeof window === 'undefined') return true;
+  try {
+    return new URL(url, window.location.href).origin === window.location.origin;
+  } catch {
+    return false;
+  }
+}
+
 function sendTrackingPayload(payloadJson: string, debugLabel?: string): void {
   if (typeof window === 'undefined') return;
   if (shouldSuppressClientAnalytics()) return;
 
   const debug = isK4Debug();
   const endpointResolved = resolveEndpointUrl(TRACK_ENDPOINT);
+  const sameOriginEndpoint = isSameOriginUrl(endpointResolved);
 
   const logDebug = (outcome: SendOutcome) => {
     if (!debug) return;
@@ -353,26 +441,13 @@ function sendTrackingPayload(payloadJson: string, debugLabel?: string): void {
     });
   };
 
-  // Prefer sendBeacon for unload-safe delivery.
-  if (navigator.sendBeacon) {
-    const blob = new Blob([payloadJson], { type: 'application/json' });
-    const ok = navigator.sendBeacon(TRACK_ENDPOINT, blob);
-    logDebug({
-      send_method: 'sendBeacon',
-      endpoint_resolved_url: endpointResolved,
-      attempted: true,
-      beacon_ok: ok
-    });
-    return;
-  }
-
-  // Fetch fallback (keepalive + no-store)
-  fetch(TRACK_ENDPOINT, {
+  const sendViaFetch = () => fetch(TRACK_ENDPOINT, {
     method: 'POST',
     body: payloadJson,
     headers: { 'Content-Type': 'application/json' },
     keepalive: true,
     cache: 'no-store',
+    mode: 'cors',
     credentials: 'include'
   })
     .then((res) => {
@@ -396,6 +471,22 @@ function sendTrackingPayload(payloadJson: string, debugLabel?: string): void {
         attempted: true
       });
     });
+
+  // Cross-origin analytics writes are more reliable with keepalive fetch.
+  // sendBeacon can silently fail there and previously had no fallback.
+  if (sameOriginEndpoint && navigator.sendBeacon) {
+    const blob = new Blob([payloadJson], { type: 'text/plain;charset=UTF-8' });
+    const ok = navigator.sendBeacon(TRACK_ENDPOINT, blob);
+    logDebug({
+      send_method: 'sendBeacon',
+      endpoint_resolved_url: endpointResolved,
+      attempted: true,
+      beacon_ok: ok
+    });
+    if (ok) return;
+  }
+
+  sendViaFetch();
 }
 
 function shouldSkipDuplicateEvent(event: string, context: TrackContext, pagePath: string): boolean {
@@ -494,6 +585,7 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
 
   const payload = JSON.stringify({
     session_id: getSessionId(),
+    visitor_id: getVisitorId() || null,
     event,
     gallery_id: inferredGalleryId || null,
     image_id: inferredImageId || null,
@@ -549,7 +641,9 @@ export function emitActionPixel(action: string, imageId: string | null = null, c
       v: String(Date.now())
     });
     const sid = getSessionId();
+    const visitorId = getVisitorId();
     if (sid) params.set('sid', sid);
+    if (visitorId) params.set('vid', visitorId);
     if (window.location.pathname) params.set('path', window.location.pathname);
 
     if (inferredImageId) params.set('id', inferredImageId);
@@ -597,7 +691,7 @@ export function emitActionPixel(action: string, imageId: string | null = null, c
         method: 'GET',
         keepalive: true,
         cache: 'no-store',
-        credentials: 'same-origin'
+        credentials: 'include'
       }).catch(() => {
         const img = new Image();
         img.referrerPolicy = 'same-origin';
@@ -635,6 +729,7 @@ if (typeof window !== 'undefined') {
   (window as any).k4track = trackEvent;
   (window as any).k4emitActionPixel = emitActionPixel;
   (window as any).k4ShouldSuppressAnalytics = shouldSuppressClientAnalytics;
+  (window as any).k4getVisitorId = getVisitorId;
 }
 
 /**
@@ -658,7 +753,8 @@ export function trackPageView(): void {
   }
 
   // Best-effort correlation: tag Clarity with our IDs.
-  // If k4_vid doesn't exist yet, we'll retry after the first beacon.
+  // Ensure a stable visitor cookie exists before the first JS/pixel write.
+  getVisitorId();
   syncClarityIdentity();
 
   trackEvent('page_view');
@@ -953,11 +1049,7 @@ function fireSessionExit(): void {
     event_order: getNextEventOrder()
   });
   
-  // Use sendBeacon for reliable delivery on page unload
-  if (navigator.sendBeacon) {
-    const blob = new Blob([payload], { type: 'application/json' });
-    navigator.sendBeacon(TRACK_ENDPOINT, blob);
-  }
+  sendTrackingPayload(payload, 'session_exit');
 }
 
 // Set up session exit listeners

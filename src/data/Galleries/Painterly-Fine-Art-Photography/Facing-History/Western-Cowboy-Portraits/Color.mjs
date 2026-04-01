@@ -15456,8 +15456,8 @@ export const galleryData = [
   {
     "id": "i-5fm7Hhr",
     "title": "Making a Run For It",
-    "description": "Making a Run For It blurs the line between man, beast, and land—a painterly Western photograph capturing a cowboy and longhorn set against the stubborn sprawl of the open prairie.’s fine art portraiture explores the raw tension and silent partnership that defines the American West, honoring the moments where escape and endurance become one and the same. For collectors seeking authentic, story-driven cowboy art and frontier realism. © Wayne Heim",
-    "alt": "Painterly photograph of a cowboy on horseback trailing a longhorn through open prairie, sunlight breaking through clouds — a Western scene charged with tension and the promise of escape.",
+    "description": "Cowboy on horseback trailing a longhorn across open prairie, capturing a working moment rooted in frontier life and the American West. This painterly Western photography image emphasizes land, livestock, and rider in motion, reflecting the realities of western cowboy life, longhorn cattle drives, and wide prairie landscapes. Natural light, open terrain, and atmospheric depth reinforce a narrative Western art approach grounded in authenticity and western fine art photography. \n\n© Wayne Heim",
+    "alt": "A cowboy rides behind a longhorn moving through tall prairie grass under a broad sky, capturing a moment from frontier life.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5fm7Hhr/1/Lc7f2t54vdGqjwmWm2ZsFx3mq88hXChpgvLMXtT8S/XL/_WHO4884-Edit-Edit-Edit-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5fm7Hhr/1/Lc7f2t54vdGqjwmWm2ZsFx3mq88hXChpgvLMXtT8S/XL/_WHO4884-Edit-Edit-Edit-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5fm7Hhr/1/L96f9CMkmzXPBZdzVG9zNwsBQ99gH6GV63NwbgtHS/L/_WHO4884-Edit-Edit-Edit-L.jpg",
@@ -15465,45 +15465,48 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5fm7Hhr/1/NbjPpTqcRSfd78xrqkK3qMqkKDJ78K4HJqvkWn6pK/S/_WHO4884-Edit-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5fm7Hhr/A",
+
     "keywords": [
-      "making a run for it",
       "cowboy art",
-      "western art",
+      "cowboy artwork",
+      "cowboy portraits",
+      "cowboys",
       "western fine art photography",
       "painterly western photography",
-      "narrative western art",
+      "painterly cowboy photography",
+      "American frontier",
       "frontier life",
-      "American West",
+      "narrative Western art",
+      "western cowboys",
       "longhorn cattle",
       "cowboy on horseback",
       "prairie landscape",
-      "cinematic western",
-      "pictorialist tradition",
-      "western cowboy art",
-      "authentic frontier art prints",
-      "western fine art prints",
-      "cowboy portraits",
-      "cowboys",
-      "cowboy artwork",
-      "Western Cowboy Portraits",
-      "painterly Western photograph",
-      "Western cowboys"
+      "western themed art",
+      "wild west photography",
+      "rugged spirit",
+      "the American West",
+      "Americana photography",
+      "cinematic stills"
     ],
+
     "story": "Heart racing—knees clench, muscle, memory, and will moving as one.\nOne more to go. The stubborn one.\nHeadstrong, undeterred from the mission—rider, bull, or country, it hardly matters out here.\n\nThis ride, this push, this land:\nBroken and defiant, the makings of cowboys and legends.",
-    "notes": "Heim’s image trades in ambiguity, letting every line—muscle, horizon, and intent—echo the restlessness of both rider and range. The compositional tension between the longhorn’s forward thrust and the cowboy’s measured posture draws on the narrative tradition of classic Western painters and early pictorialist photographers, while remaining distinctly contemporary in vision.\n\nNotice the use of a slack rope and the deliberate space between figures—details that invite the viewer to question whether this is a moment of pursuit, partnership, or quiet rebellion. The painterly palette, achieved through layered digital technique reminiscent of hand glazing, softens the scene without sacrificing tension. This is a rare example where Western mythology and modern storytelling meet—rewarding the eye and the mind with every viewing. For those who appreciate art history: the term “pictorialism” refers to the movement where photographs aspired to painterly quality, emphasizing mood over strict realism—an approach echoed in this piece.\n\nMaking a Run For It distills the mythic West into a living moment, crafted for those who value both narrative and nuance.",
+    "notes": "The image operates on distance and control. The space between rider and animal becomes the narrative, suggesting awareness, timing, and experience rather than urgency.\n\nThis measured relationship reflects the traditions of Western imagery where land and livestock are not background elements but active forces shaping the rhythm of the scene.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 291,
+
     "themes": {
       "cowboys-and-horses": 31
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-Qx9xbv7",
     "title": "Where the Herd Pauses",
-    "description": "A group of western cowboys gathers at a river crossing, captured in a moment of stillness before movement resumes. This painterly Western fine art photograph reflects the quiet tension and collective rhythm of frontier life, blending cinematic stills with pictorialist influence. Rooted in fine art Western photography, the image evokes the rugged spirit of the American frontier and the timeless narrative of western cowboys working the land. © Wayne Heim. Available as museum-quality Western wall art in archival print form.",
-    "alt": "Western cowboys on horseback paused at a river crossing in painterly Western fine art photography © Wayne Heim",
+    "description": "Several cowboys on horseback gather along a grassy riverbank, their horses standing close as water moves in the foreground. The scene highlights posture, spacing, and natural environment, showing a quiet working moment in the American frontier landscape. Soft light and muted tones reflect the painterly western photography style while emphasizing terrain, livestock, and group presence. \n\n© Wayne Heim",
+    "alt": "A group of riders on horseback pause beside a shallow river, their horses clustered together in tall grass under a wide sky.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Qx9xbv7/2/LZNwnMHBC5XjwGtNJQPqNvWtWj6gFkxtpz4NLJf9r/XL/_WHO5915-907-XL.jpg",
     "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Qx9xbv7/2/LZNwnMHBC5XjwGtNJQPqNvWtWj6gFkxtpz4NLJf9r/XL/_WHO5915-907-XL.jpg",
     "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Qx9xbv7/2/LZNwnMHBC5XjwGtNJQPqNvWtWj6gFkxtpz4NLJf9r/XL/_WHO5915-907-XL.jpg",
@@ -15511,36 +15514,40 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Qx9xbv7/2/M5DX5m4RrnJ4TJf4VC9LfTWQmp5rb2wr9qNzrJ4F8/S/_WHO5915-907-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Qx9xbv7/A",
+
     "keywords": [
-      "fine art western photography",
-      "western cowboys",
       "cowboy art",
       "cowboy artwork",
-      "western fine art",
+      "cowboy portraits",
+      "cowboys",
+      "western cowboys",
+      "western fine art photography",
       "painterly western photography",
-      "painterly western images",
-      "narrative western art",
-      "frontier life",
-      "the American West",
+      "painterly cowboy photography",
       "American frontier",
+      "frontier life",
+      "narrative Western art",
       "western themed art",
-      "cinematic stills",
-      "pictorialist tradition",
       "rugged spirit",
-      "western grit",
-      "wild west photography",
+      "the American West",
+      "Americana photography",
+      "cinematic stills",
       "frontier photography",
-      "authentic frontier art prints"
+      "western grit"
     ],
+
     "story": "They don’t speak.  \nThey don’t need to.\n\nHorses shift weight. Water moves on without waiting.  \nThis is the moment where decisions stay unannounced, held just long enough to feel their weight.\n\nSoon enough, they’ll move.  \nBut not yet.",
-    "notes": "This work leans into restraint rather than spectacle, allowing posture, spacing, and collective pause to carry the narrative. The composition echoes the disciplined groupings found in Frederic Remington’s quieter studies, where tension lives not in action but in anticipation.\n\nThe painterly handling softens the documentary edge, aligning the image with the pictorialist tradition while preserving authenticity of place and gesture. The result is a cinematic still that invites the viewer to inhabit the moment rather than observe it, making the pause itself the subject.",
+    "notes": "The power of the image lies in collective stillness. Each rider holds position, creating a shared rhythm that replaces action with anticipation.\n\nThis grouping recalls the compositional discipline found in classic Western painting, where figures are arranged not for hierarchy, but for tension—each contributing to a moment that feels held rather than resolved.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 292,
+
     "themes": {
       "cowboys-and-horses": 27
-    }
+    },
+
+    contentSource: "ai"
   },
   {
     "id": "i-WNLSRQf",
