@@ -303,9 +303,10 @@ export async function handleTrackRequest(request, env, ctx) {
       : (!existingVisitorId ? (String(Date.now()) + '-' + Math.random().toString(16).slice(2)) : null);
     const visitorId = existingVisitorId || mintedVisitorId;
 
-    // Session continuity: accept session_id from body, otherwise fall back to cookie.
+    // Session continuity: prefer the stable cookie value first, then body fallback.
     const sidCookie = readCookieValue(cookieHeader, 'k4_sid');
-    const bestSessionId = session_id || sidCookie || null;
+    const bodySessionId = (typeof session_id === 'string' && session_id.trim()) ? session_id.trim() : null;
+    const bestSessionId = sidCookie || bodySessionId || null;
 
     // Store the raw edge referrer URL directly (for SQL LIKE matching)
     // normalizeReferrer is kept as fallback for old normalized cookie values
@@ -470,7 +471,10 @@ export async function handleTrackEvent(request, env, ctx) {
     const { type, imageId, session_id = null, sessionId = null } = body;
     const cookieHeader = request.headers.get("cookie") || "";
     const sidCookie = readCookieValue(cookieHeader, 'k4_sid');
-    const bestSessionId = session_id || sessionId || sidCookie || null;
+    const bodySessionId = (typeof session_id === 'string' && session_id.trim())
+      ? session_id.trim()
+      : ((typeof sessionId === 'string' && sessionId.trim()) ? sessionId.trim() : null);
+    const bestSessionId = sidCookie || bodySessionId || null;
 
     // xl_zoom = user intent beacon (never image request)
     // Back-compat: accept legacy zoom events, but canonicalize immediately.

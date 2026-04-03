@@ -151,7 +151,7 @@ const structuredData = getStructuredData({
       <div class="text-column">
         <section class="story-section">
           {westernStory.map((section, index) => (
-            <article class="story-block" key={index}>
+            <article class="story-block">
               {section.title && (
                 <h2
                   class="slide-in-left"
@@ -191,7 +191,7 @@ const structuredData = getStructuredData({
 
               {section.paragraphs?.map((para, i) => (
                 <p
-                  key={i}
+                 
                   class="reveal-on-scroll"
                   set:html={autoLinkKeywordsInText(
                     para,
@@ -207,7 +207,7 @@ const structuredData = getStructuredData({
                 <ul>
                   {section.list.map((item, j) => (
                     <li
-                      key={j}
+                     
                       class="reveal-on-scroll"
                       set:html={autoLinkKeywordsInText(
                         item,

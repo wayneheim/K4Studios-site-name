@@ -24,6 +24,7 @@ import { painterlyStory }    from '../data/home/story.ts';
 import { facingFAQ }         from '../data/home/faq.ts';
 
 import '../styles/global.css';
+import '../styles/home-index.css';
 
 const sectionPath = "/index"; // treat homepage as special section
 const loreLegacyUrl = "/Other/K4-Select-Series/Engrained/Engrained-Series?theme=lore-and-legacy&view=grid";
@@ -209,27 +210,27 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       </div>
     </section>
 
-    <section class="story-layout">
+    <div class="story-layout">
       <div class="text-column">
-        <section class="story-section">
+        <div class="story-section">
           {painterlyStory.map((section, index) => (
-            <article class="story-block" key={index}>
+            <article class="story-block">
               {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInText(section.title, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInText(section.subhead, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInText(section.tagline, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />}
               {section.paragraphs?.map((para, i) => (
-                <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                <p class="reveal-on-scroll" set:html={autoLinkKeywordsInText(para, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
               ))}
               {section.list && section.list.length > 0 && (
                 <ul>
                   {section.list.map((item, j) => (
-                    <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
+                    <li class="reveal-on-scroll" set:html={autoLinkKeywordsInText(item, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname)} />
                   ))}
                 </ul>
               )}
             </article>
           ))}
-        </section>
+        </div>
 
         <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
       </div>
@@ -258,9 +259,10 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
           />
         </div>
       </div>
-    </section>
+    </div>
 
     <section class="pb-10">
+      <h2 class="sr-only">Frequently Asked Questions</h2>
       <input type="checkbox" id="faq-toggle" class="more-toggle" />
       <div class="truncate-container" style="min-height:0;">
         <div class="truncate-text">
@@ -334,6 +336,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
     const pixelConfig = {
       'home-lore-legacy-image': {
         action: 'home_lore_legacy_image_click',
+        event: 'home_lore_legacy_image_click',
         sourceLayer: HOME_IMAGE_LAYER,
         galleryId: THEME_GALLERY_ID,
         pageType: 'landing',
@@ -341,6 +344,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       },
       'home-lore-legacy-cta': {
         action: 'home_lore_legacy_cta_click',
+        event: 'home_lore_legacy_cta_click',
         sourceLayer: HOME_CTA_LAYER,
         galleryId: THEME_GALLERY_ID,
         pageType: 'landing',
@@ -348,6 +352,7 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       },
       'home-lore-legacy-audio': {
         action: 'home_lore_legacy_audio_click',
+        event: 'home_lore_legacy_audio_click',
         sourceLayer: HOME_AUDIO_LAYER,
         galleryId: AUDIO_GALLERY_ID,
         pageType: 'landing',
@@ -357,13 +362,21 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
 
     function getLoreSessionId() {
       try {
-        let sessionId = sessionStorage.getItem('k4_session_id');
+        const sidMatch = document.cookie.match(/(?:^|;\s*)k4_sid=([^;]+)/);
+        let sessionId = sidMatch ? decodeURIComponent(sidMatch[1]) : '';
+        if (!sessionId) {
+          sessionId = sessionStorage.getItem('k4_session_id') || '';
+        }
         if (!sessionId) {
           sessionId = window.crypto && typeof window.crypto.randomUUID === 'function'
             ? window.crypto.randomUUID()
             : `${Date.now()}-${Math.random().toString(16).slice(2)}`;
-          sessionStorage.setItem('k4_session_id', sessionId);
         }
+        sessionStorage.setItem('k4_session_id', sessionId);
+        const cookieDomainAttr = window.location.hostname.toLowerCase().endsWith('k4studios.com')
+          ? '; Domain=.k4studios.com'
+          : '';
+        document.cookie = `k4_sid=${encodeURIComponent(sessionId)}; Path=/; SameSite=Lax; Secure${cookieDomainAttr}`;
         return sessionId;
       } catch (_) {
         return '';
@@ -409,11 +422,29 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
       image.src = pixelUrl;
     }
 
+    function emitLoreEvent(config, trigger) {
+      if (!config || !config.event) return;
+      if (typeof window.k4track !== 'function') return;
+
+      try {
+        window.k4track(config.event, {
+          galleryId: config.galleryId,
+          pageType: config.pageType,
+          sourceLayer: config.sourceLayer,
+          theme: config.theme,
+          trigger: trigger || null
+        });
+      } catch (_) {
+        // best-effort only
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       const firePixel = (element) => {
         const pixelKey = element.getAttribute('data-k4-pixel');
         const trigger = element.getAttribute('data-k4-trigger') || null;
         const config = pixelKey ? pixelConfig[pixelKey] : null;
+        emitLoreEvent(config, trigger);
         emitLorePixel(config, trigger);
       };
 
@@ -424,387 +455,5 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
     });
   </script>
 
-<style lang="css">
-/* CLS-safe carousel frame */
-.carousel-frame {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  height: 390px;
-  margin: 2rem auto 0;
-  padding: 0 1rem;
-  overflow: hidden;
-}
-@media (max-width: 768px) {
-  .carousel-frame {
-    height: 200px;
-    margin-top: 1rem;
-  }
-}
 
-.carousel-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.lcp-placeholder-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 1;
-  transition: opacity 1.0s ease-out;
-}
-
-.carousel-fade {
-  opacity: 0;
-  transform: scale(0.65);
-  transition: opacity 1.0s ease-out, transform 2.5s cubic-bezier(.36,1,.72,1);
-  visibility: hidden;
-}
-.carousel-fade.is-visible {
-  opacity: 1;
-  transform: scale(1);
-  visibility: visible;
-}
-.sample-fade {
-  opacity: 0;
-  transform: translateY(0);
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-  visibility: hidden;
-  transition-delay: 0.2s;
-  margin-top: -0.75rem;
-}
-.sample-fade.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
-/* ...rest of your existing styles... */
-.section-heading-anim-wrap {
-  margin: -1.8rem 0 1.3rem 0;
-  min-height: 138px;
-  margin-bottom: -6px;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  pointer-events: none;
-}
-@media (max-width: 768px) {
-  .section-heading-anim-wrap {
-    margin: -2rem 0 0.5rem 0;
-    min-height: 90px;
-  }
-  .section-heading-anim {
-    min-height: 80px;
-  }
-}
-.section-heading-anim {
-  position: relative;
-  width: 100%;
-  min-height: 105px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-/* Subtitle */
-.hero-subtitle-anim {
-  font-family: "Glegoo", serif;
-  font-weight: 400;
-  font-size: 1.2rem;
-  letter-spacing: -0.018em;
-  line-height: 1.1;
-  color: #6d5b4a;
-  opacity: 1;
-  transform: scale(1.7) translateY(53px);
-  transition:
-    opacity 0.7s cubic-bezier(.33,1,.68,1),
-    transform 1.625s cubic-bezier(.38,1,.74,.96),
-    filter 0.4s cubic-bezier(.4,1,.7,1);
-  transition-delay: 0.21s;
-}
-.heading-animated .hero-subtitle-anim {
-  transform: scale(1) translateY(130px);
-  opacity: 0.96;
-  transition-delay: 2.21s;
-}
-/* Title */
-.hero-title-anim {
-  font-family: "Glegoo", serif;
-  font-weight: 800;
-  font-size: 3.45rem;
-  letter-spacing: -0.04em;
-  color: #3e3220;
-  opacity: 0;
-  transform: translateY(85px) scale(0.8);
-  transition:
-    opacity 0.52s cubic-bezier(.33,1,.68,1),
-    transform 0.9s cubic-bezier(.38,1,.74,.96);
-  transition-delay: 0.41s;
-  margin-top: .5em;
-  margin-bottom: 0.02em;
-}
-.heading-animated .hero-title-anim {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  transition-delay: 2.49644s;
-}
-/* Responsive tweaks */
-@media (max-width: 800px) {
-  .hero-title-anim {
-    font-family: "Glegoo", serif;
-    font-weight: 800;
-    font-size: 2.65rem;
-    letter-spacing: -0.04em;
-    color: #3e3220;
-    opacity: 0;
-    transform: translateY(25px) scale(0.8);
-    transition:
-      opacity 0.52s cubic-bezier(.33,1,.68,1),
-      transform 0.9s cubic-bezier(.38,1,.74,.96);
-    transition-delay: 0.21s;
-    margin-top: .95em;
-    margin-bottom: 0.02em;
-  }
-  .heading-animated .hero-title-anim {
-    opacity: 1;
-    transform: translateY(-20px) scale(1);
-    transition-delay: 0.24s;
-  }
-  .heading-animated .hero-subtitle-anim {
-    font-size: 1.0rem;
-    transform: scale(1) translateY(112px);
-    opacity: 0.96;
-    filter: blur(0);
-    transition-delay: 0.13s;
-  }
-  .hero-subtitle-anim {
-    font-family: "Glegoo", serif;
-    font-weight: 400;
-    font-size: 1.02rem;
-    letter-spacing: -0.04em;
-    line-height: 1.1;
-    color: #6d5b4a;
-    opacity: 1;
-    transform: scale(1.1) translateY(75px);
-    transition:
-      opacity 0.7s cubic-bezier(.33,1,.68,1),
-      transform 1.625s cubic-bezier(.38,1,.74,.96),
-      filter 0.4s cubic-bezier(.4,1,.7,1);
-    transition-delay: 0.21s;
-  }
-}
-ul { list-style-type: disc; padding-left: 1.25em; }
-ul li { margin-top: 0.15em; margin-left: 1.5em; }
-ul li::marker { margin-top: 0.15em; font-size: 1.2em; color: gray; }
-@media (max-width: 768px) {
-  .section-heading .page-title { font-size: 1.5rem; line-height: 1.3; }
-  .section-heading .page-subtitle { max-width: 42ch; margin-left: auto; margin-right: auto; text-align: center; font-size: 1rem; line-height: 1.4; letter-spacing: -0.04em; }
-  .section-heading-wrap { margin-top: 1rem; margin-bottom: 1rem; }
-  .sidebar-column { display: none; }
-  .story-section { letter-spacing: -0.03em; }
-  .story-block h2 { letter-spacing: -0.05em; font-size: 1.4rem !important; margin-top: -0.59rem; line-height: 1.15; }
-  .story-block h3 { letter-spacing: -0.05em; font-size: 1.4rem !important; margin-top: -0.59rem; line-height: 1.15; }
-}
-.fade-in { opacity: 0; visibility: hidden; transform: translateY(1px); transition: opacity 1.75s ease, transform 1.75s ease, visibility .5s linear 1.75s; }
-.fade-in.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
-.page-title.fade-in { transition-delay: .2s; }
-.section-heading-wrap { margin: 1.5rem 0; text-align: center; }
-.section-heading .page-title { font-size: 2rem; margin-bottom: .4rem; }
-.section-heading .page-subtitle { font-size: 1rem; font-weight: 400; color: #6d5b4a; opacity: .9; }
-.story-section { line-height: 1.3; padding: 2rem 1.5rem; max-width: 860px; margin: 0 auto; font-family: 'Glegoo', serif; }
-.story-block { margin-bottom: 2.5rem; }
-.story-block h2 { font-weight: 500; font-size: 1.65rem; margin-bottom: 0.55rem; }
-.story-block h3 { font-weight: 500; font-size: 1.65rem; margin-top: -0.5rem; margin-bottom: 0.55rem; color: inherit; }
-.story-block .tagline { font-size: 1.05rem; font-weight: 500; margin-bottom: 1rem; color: #7a6250; }
-.story-block p { line-height: 1.6; margin-bottom: 1rem; font-size: 1.01rem; }
-.story-block ul { padding-left: 1.4rem; margin-top: 0.5rem; }
-.story-block li { margin-bottom: 0.5rem; font-size: 1rem; }
-.page-subtitle.fade-in { opacity: 0 !important; transform: translateY(-12px); visibility: hidden; transition: opacity 1.1s ease-out, transform 1.1s ease-out, visibility 0s linear 1.1s; transition-delay: 1s; }
-.page-subtitle.fade-in.is-visible { opacity: 1 !important; transform: translateY(0); visibility: visible; transition-delay: 1s; }
-
-.home-show-banner {
-  width: min(1200px, calc(100% - 2rem));
-  margin: 0.25rem auto 1.75rem;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  align-items: center;
-  background: linear-gradient(135deg, #1a130e 0%, #2c1f17 100%);
-  border: 1px solid rgba(186, 149, 95, 0.34);
-  border-radius: 18px;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
-  overflow: hidden;
-  font-family: 'Glegoo', serif;
-}
-
-.home-show-banner__image-link {
-  display: block;
-}
-
-.home-show-banner__image {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  transition: transform 0.35s ease, filter 0.35s ease;
-}
-
-.home-show-banner__image-link:hover .home-show-banner__image,
-.home-show-banner__image-link:focus-visible .home-show-banner__image {
-  transform: scale(1.015);
-  filter: brightness(1.05);
-}
-
-.home-show-banner__content {
-  padding: 0.15rem 0.25rem 0.35rem;
-  font-family: 'Glegoo', serif;
-  color: #eadfce;
-}
-
-.home-show-banner__content strong {
-  color: #f6ead8;
-}
-
-.home-show-banner__eyebrow {
-  margin: 0 0 0.45rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #d9b57a;
-  font-family: 'Glegoo', serif;
-}
-
-.home-show-banner__title {
-  margin: 0 0 0.75rem;
-  font-family: 'Glegoo', serif;
-  font-size: clamp(1.55rem, 2vw, 2.35rem);
-  line-height: 1.08;
-  color: #f3eadf;
-}
-
-.show-feature-bullets {
-  margin: 10px 0 14px;
-  padding-left: 18px;
-  list-style-type: disc;
-  color: #eadfce;
-  font-family: 'Glegoo', serif;
-}
-
-.show-feature-bullets li {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-bottom: 4px;
-  opacity: 0.9;
-  color: #eadfce;
-}
-
-.show-feature-bullets li::marker {
-  color: #d9b57a;
-}
-
-.show-feature-bullets a {
-  color: #e6c29f;
-  text-decoration: underline;
-}
-
-.show-feature-bullets a:visited,
-.show-feature-bullets a:hover,
-.show-feature-bullets a:focus-visible,
-.show-feature-body a,
-.show-feature-body a:visited,
-.show-feature-body a:hover,
-.show-feature-body a:focus-visible {
-  color: #f0cfab;
-}
-
-.show-feature-body {
-  margin: 0 0 1rem;
-  color: #eadfce;
-  line-height: 1.6;
-  font-size: 1rem;
-  font-family: 'Glegoo', serif;
-}
-
-.show-feature-audio-link {
-  margin: -0.15rem 0 1rem;
-  color: #e6d6c0;
-  line-height: 1.5;
-  font-size: 0.95rem;
-  font-family: 'Glegoo', serif;
-}
-
-.show-feature-audio-link a,
-.show-feature-audio-link a:visited,
-.show-feature-audio-link a:hover,
-.show-feature-audio-link a:focus-visible {
-  color: #f0cfab;
-  text-decoration: underline;
-}
-
-.home-show-banner__cta {
-  display: inline-block;
-  padding: 0.82rem 1.18rem;
-  border-radius: 999px;
-  background: #d9b57a;
-  color: #1c140f;
-  text-decoration: none;
-  font-weight: 700;
-  font-family: 'Glegoo', serif;
-  transition: transform 0.25s ease, background 0.25s ease;
-}
-
-.home-show-banner__cta:hover,
-.home-show-banner__cta:focus-visible {
-  background: #ebc88e;
-  transform: translateY(-1px);
-}
-
-@media (min-width: 900px) {
-  .home-show-banner {
-    grid-template-columns: minmax(360px, 46%) 1fr;
-    padding: 1.15rem;
-  }
-
-  .home-show-banner__content {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .home-show-banner {
-    width: min(100%, calc(100% - 1rem));
-    margin: 0 auto 1rem;
-    padding: 0.85rem;
-    gap: 1rem;
-    border-radius: 14px;
-  }
-
-  .home-show-banner__title {
-    font-size: 1.45rem;
-  }
-
-  .show-feature-body {
-    font-size: 0.96rem;
-    line-height: 1.55;
-  }
-
-  .show-feature-audio-link {
-    font-size: 0.92rem;
-    line-height: 1.5;
-  }
-
-  .show-feature-bullets li {
-    font-size: 0.93rem;
-    line-height: 1.5;
-  }
-
-  .home-show-banner__cta {
-    width: 100%;
-    text-align: center;
-  }
-}
-</style>
 </BaseLayout>

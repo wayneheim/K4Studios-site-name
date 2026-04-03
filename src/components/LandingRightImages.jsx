@@ -1,5 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { warmImage } from "../utils/warmImage";
+import "../styles/landing-right-images.css";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
@@ -18,6 +19,48 @@ const shuffleArray = (arr) => {
     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
   return shuffled;
+};
+
+const trackHomeImageNavigation = (href, imageId, sourceLayer) => {
+  if (typeof window === 'undefined' || typeof window.k4ShouldSuppressAnalytics === 'function' && window.k4ShouldSuppressAnalytics()) {
+    return;
+  }
+
+  const galleryId = href ? href.replace(/\/i-[^/]+$/, '') : null;
+
+  if (typeof window.k4track === 'function') {
+    window.k4track('gallery_preview_click', {
+      galleryId,
+      imageId,
+      pageType: 'landing',
+      sourceLayer
+    });
+  }
+
+  if (typeof window.k4emitActionPixel === 'function') {
+    window.k4emitActionPixel('gallery_preview_click', imageId, {
+      galleryId,
+      pageType: 'landing',
+      sourceLayer
+    });
+  }
+};
+
+const shouldBypassTrackedNavigation = (event) => !event || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
+
+const handleTrackedNavigation = (event, href, tracker) => {
+  if (!href || typeof window === 'undefined') return;
+
+  if (shouldBypassTrackedNavigation(event)) {
+    tracker();
+    return;
+  }
+
+  event.preventDefault();
+  tracker();
+  window.setTimeout(() => {
+    window.location.assign(href);
+  }, 80);
 };
 
 /**
@@ -64,6 +107,7 @@ export default function LandingRightImages({ heading = "", images = [], displayC
             href={href}
             key={href || id}
             data-sidebar-index={index}
+            onClick={(event) => handleTrackedNavigation(event, href, () => trackHomeImageNavigation(href, imageId, 'home_sidebar_image_click'))}
             style={dynamicSpacing && index > 0 ? { visibility: 'hidden' } : undefined}
           >
             <img
@@ -78,86 +122,6 @@ export default function LandingRightImages({ heading = "", images = [], displayC
           </a>
         );
       })}
-
-      <style jsx>{`
-        .sidebar-thumbnails {
-          width: 100%;
-          max-width: 260px;
-          margin-left: auto;
-          margin-right: 1rem;
-          text-align: center;
-        }
-
-        .thumb-heading-wrapper {
-          width: 100%;
-          margin-bottom: 1.25rem;
-        }
-
-        .thumb-heading {
-          font-family: 'Glegoo', serif;
-          font-size: 1.15rem;
-          font-weight: 600;
-          color: #3e2c1c;
-          margin-top: 3rem;
-          margin-bottom: -15px;
-        }
-
-        .thumb-img {
-          display: inline-block;
-          width: 100%;
-          max-width: 260px;
-          min-height: 180px;
-          margin: 2.25rem auto;
-          border-radius: 8px;
-          box-shadow: 0 7px 16px rgba(0, 0, 0, 0.18);
-          transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, opacity 0.5s ease-out;
-          will-change: transform, box-shadow, opacity;
-          backface-visibility: hidden;
-          opacity: 0;
-          transform: translateY(20px);
-          background: linear-gradient(90deg, #e8e4df 25%, #f5f2ed 50%, #e8e4df 75%);
-          background-size: 200% 100%;
-          animation: sidebarShimmer 1.5s ease-in-out infinite;
-        }
-
-        .thumb-img.loaded {
-          opacity: 1;
-          transform: translateY(0);
-          background: none;
-          animation: none;
-          min-height: auto;
-        }
-
-        @keyframes sidebarShimmer {
-          0% { background-position: 200% 0; }
-          100% { background-position: -200% 0; }
-        }
-
-        .thumb-img:hover {
-          transform: translateY(0) scale(1.025);
-          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
-        }
-
-        @media (max-width: 768px) {
-
-         .thumb-heading {
-         margin-top: -50px;
-         margin-bottom: 10px;
-      }
-          .sidebar-thumbnails {
-            margin: 0 auto;
-          }
-
-        .thumb-img-stack {
-        display: block;
-        margin-top: 2rem;
-        }
-
-  .thumb-img {
-      display: block;
-   }
-        }
-      `}</style>
 
       {dynamicSpacing && (
         <script dangerouslySetInnerHTML={{ __html: `

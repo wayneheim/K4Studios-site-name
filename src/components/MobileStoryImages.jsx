@@ -14,6 +14,48 @@ const shuffleArray = (arr) => {
   return shuffled;
 };
 
+const trackHomeImageNavigation = (href, imageId, sourceLayer) => {
+  if (typeof window === 'undefined' || typeof window.k4ShouldSuppressAnalytics === 'function' && window.k4ShouldSuppressAnalytics()) {
+    return;
+  }
+
+  const galleryId = href ? href.replace(/\/i-[^/]+$/, '') : null;
+
+  if (typeof window.k4track === 'function') {
+    window.k4track('gallery_preview_click', {
+      galleryId,
+      imageId,
+      pageType: 'landing',
+      sourceLayer
+    });
+  }
+
+  if (typeof window.k4emitActionPixel === 'function') {
+    window.k4emitActionPixel('gallery_preview_click', imageId, {
+      galleryId,
+      pageType: 'landing',
+      sourceLayer
+    });
+  }
+};
+
+const shouldBypassTrackedNavigation = (event) => !event || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
+
+const handleTrackedNavigation = (event, href, tracker) => {
+  if (!href || typeof window === 'undefined') return;
+
+  if (shouldBypassTrackedNavigation(event)) {
+    tracker();
+    return;
+  }
+
+  event.preventDefault();
+  tracker();
+  window.setTimeout(() => {
+    window.location.assign(href);
+  }, 80);
+};
+
 /**
  * MobileStoryImages - Inline images for mobile with client-side rotation
  * 
@@ -70,6 +112,11 @@ export default function MobileStoryImages({ images = [], displayCount }) {
         const link = document.createElement("a");
         link.href = `${match.galleryPath || "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"}/i-${match.id?.replace(/^i-/, "")}`;
         link.style.display = "block";
+        link.addEventListener('click', (event) => {
+          handleTrackedNavigation(event, link.href, () => {
+            trackHomeImageNavigation(link.href, match.id || null, 'home_story_image_click');
+          });
+        });
 
         const img = document.createElement("img");
         img.src = match.id ? getProxySrc(match.id, 's') : (match.srcS || match.srcM || match.srcL || match.src);

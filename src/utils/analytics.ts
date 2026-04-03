@@ -81,17 +81,33 @@ function getBuildId(): string | null {
 function getSessionId(): string {
   if (typeof window === 'undefined') return '';
 
+  const cookieSessionId = getCookie('k4_sid');
+  if (cookieSessionId) {
+    inMemorySessionId = cookieSessionId;
+    try {
+      sessionStorage.setItem('k4_session_id', cookieSessionId);
+    } catch {
+      // ignore
+    }
+    return cookieSessionId;
+  }
+
   // Prefer sessionStorage (best for session continuity), but never crash if unavailable.
   try {
     let sessionId = sessionStorage.getItem('k4_session_id');
     if (!sessionId) {
       sessionId = safeRandomId();
       sessionStorage.setItem('k4_session_id', sessionId);
+      setK4Cookie('k4_sid', sessionId);
     }
+    inMemorySessionId = sessionId;
     return sessionId;
   } catch {
     // Fallback: keep stable ID for this JS runtime.
-    if (!inMemorySessionId) inMemorySessionId = safeRandomId();
+    if (!inMemorySessionId) {
+      inMemorySessionId = safeRandomId();
+      setK4Cookie('k4_sid', inMemorySessionId);
+    }
     return inMemorySessionId;
   }
 }

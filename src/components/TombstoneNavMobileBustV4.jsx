@@ -151,8 +151,14 @@ export default function TombstoneNav({
             }
 
             // Track via Cloudflare D1
-            const sessionId = sessionStorage.getItem('k4_session_id') || 
-              (sessionStorage.setItem('k4_session_id', crypto.randomUUID()), sessionStorage.getItem('k4_session_id'));
+            const sidMatch = document.cookie.match(/(?:^|;\s*)k4_sid=([^;]+)/);
+            const cookieSid = sidMatch ? decodeURIComponent(sidMatch[1]) : '';
+            const sessionId = cookieSid || sessionStorage.getItem('k4_session_id') || crypto.randomUUID();
+            sessionStorage.setItem('k4_session_id', sessionId);
+            const cookieDomainAttr = window.location.hostname.toLowerCase().endsWith('k4studios.com')
+              ? '; Domain=.k4studios.com'
+              : '';
+            document.cookie = `k4_sid=${encodeURIComponent(sessionId)}; Path=/; SameSite=Lax; Secure${cookieDomainAttr}`;
             
             const sanitizedTitle = (item.title || 'Unknown').replace(/[^a-zA-Z0-9]/g, '_');
             const payload = JSON.stringify({

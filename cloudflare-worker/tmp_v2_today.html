@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K4 Analytics V2</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #161616; color: #e6e6e6; margin: 0; padding: 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1, h2 { margin: 0 0 12px; }
+    p { color: #b7b7b7; line-height: 1.5; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 20px 0; }
+    .hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 20px 0; }
+    .primary-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px; margin: 20px 0; align-items: start; }
+    .card { background: #232323; border: 1px solid #343434; border-radius: 10px; padding: 16px; }
+    .metric { font-size: 32px; font-weight: 700; color: #66aaff; }
+    .metric.small { font-size: 26px; }
+    .muted { color: #8d8d8d; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .status-row { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #333; }
+    .status-row:last-child, .list-row:last-child { border-bottom: none; }
+    .list-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; column-gap: 12px; padding: 8px 4px 8px 0; border-bottom: 1px solid #333; }
+    .list-row span { min-width: 0; overflow-wrap: anywhere; word-break: break-word; padding-right: 10px; }
+    .list-row strong { flex: 0 0 auto; padding-right: 4px; }
+    .list-row-label { display: inline-flex; align-items: center; gap: 8px; min-width: 0; }
+    .family-dot { width: 10px; height: 10px; border-radius: 999px; flex: 0 0 auto; box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset; }
+    .family-buy .family-dot { background: #ff9f43; }
+    .family-grid .family-dot { background: #54a0ff; }
+    .family-gallery .family-dot { background: #1dd1a1; }
+    .family-nav .family-dot { background: #a29bfe; }
+    .family-hint .family-dot { background: #f368e0; }
+    .family-image .family-dot { background: #feca57; }
+    .family-page .family-dot { background: #48dbfb; }
+    .family-default .family-dot { background: #8395a7; }
+    .family-buy .list-row-label { color: #ffd2a6; }
+    .family-grid .list-row-label { color: #b9d8ff; }
+    .family-gallery .list-row-label { color: #b9f5e5; }
+    .family-nav .list-row-label { color: #d5d0ff; }
+    .family-hint .list-row-label { color: #f7c6ef; }
+    .family-image .list-row-label { color: #ffe4a0; }
+    .family-page .list-row-label { color: #b8f4ff; }
+    .family-default .list-row-label { color: #d7dbe3; }
+    .group-row { border-radius: 8px; margin-top: 10px; padding: 10px 12px; border: 1px solid transparent; }
+    .group-row:first-of-type { margin-top: 0; }
+    .group-row.family-buy { background: rgba(255, 159, 67, 0.14); border-color: rgba(255, 159, 67, 0.3); }
+    .group-row.family-grid { background: rgba(84, 160, 255, 0.14); border-color: rgba(84, 160, 255, 0.3); }
+    .group-row.family-gallery { background: rgba(29, 209, 161, 0.14); border-color: rgba(29, 209, 161, 0.3); }
+    .group-row.family-nav { background: rgba(162, 155, 254, 0.14); border-color: rgba(162, 155, 254, 0.3); }
+    .group-row.family-hint { background: rgba(243, 104, 224, 0.14); border-color: rgba(243, 104, 224, 0.3); }
+    .ok { color: #2ecc71; }
+    .pending { color: #f39c12; }
+    .subtle { color: #9fa7b3; font-size: 13px; }
+    .subtle strong { color: #d7dbe3; }
+    .btn { background: #2b2b2b; color: #e6e6e6; border: 1px solid #4b4b4b; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+    .btn:disabled { opacity: 0.6; cursor: wait; }
+    .window-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 8px; }
+    .window-chip { display: inline-flex; align-items: center; justify-content: center; min-width: 90px; padding: 8px 12px; border-radius: 999px; border: 1px solid #3b3b3b; background: #202020; color: #cfd6df; text-decoration: none; font-size: 13px; }
+    .window-chip.active { background: #163251; border-color: #2d5f92; color: #e8f3ff; }
+    code { background: #111; padding: 2px 6px; border-radius: 4px; }
+    ol, ul { margin: 12px 0 0 20px; color: #cfcfcf; }
+    a { color: #66aaff; }
+    .section-title { margin-top: 28px; margin-bottom: 6px; }
+    .section-copy { margin-top: 0; }
+    .system-details { margin-top: 24px; }
+    .scroll-panel { max-height: 360px; overflow-y: auto; padding-right: 14px; scrollbar-width: thin; scrollbar-color: #4a4a4a #1c1c1c; }
+    .scroll-panel::-webkit-scrollbar { width: 8px; height: 8px; }
+    .scroll-panel::-webkit-scrollbar-track { background: #1c1c1c; border-radius: 999px; }
+    .scroll-panel::-webkit-scrollbar-thumb { background: #4a4a4a; border-radius: 999px; border: 1px solid #1c1c1c; }
+    .scroll-panel::-webkit-scrollbar-thumb:hover { background: #5a5a5a; }
+    .image-list-row { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid #333; color: #e6e6e6; text-decoration: none; }
+    .image-list-row:last-child { border-bottom: none; }
+    .image-list-row:hover { background: rgba(255,255,255,0.03); }
+    .image-thumb-wrap { display: inline-flex; align-items: center; justify-content: center; width: 56px; }
+    .image-thumb { width: 48px; height: 48px; object-fit: cover; border-radius: 6px; border: 1px solid #3f4a57; }
+    .image-thumb-fallback { display: inline-flex; align-items: center; justify-content: center; background: #333; color: #aaa; font-size: 18px; }
+    .image-meta { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+    .image-id { color: #9ac7ff; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .image-link-path { color: #8d8d8d; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    details.system-details { background: #1c1c1c; border: 1px solid #343434; border-radius: 10px; padding: 0; overflow: hidden; }
+    details.system-details summary { list-style: none; cursor: pointer; padding: 16px 18px; font-weight: 600; background: #202020; }
+    details.system-details summary::-webkit-details-marker { display: none; }
+    .system-body { padding: 4px 18px 18px; }
+    .system-body .list-row { grid-template-columns: 140px minmax(0, 1fr); align-items: start; column-gap: 14px; }
+    .system-body .list-row span { overflow-wrap: normal; word-break: normal; white-space: normal; }
+    .system-body .list-row strong { justify-self: end; text-align: right; white-space: normal; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+    .refresh-status-copy { margin: 12px 0; padding: 10px 12px; border-radius: 8px; background: #1b1b1b; border: 1px solid #303030; color: #cfd6df; overflow-wrap: anywhere; word-break: break-word; }
+    .split-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    @media (max-width: 900px) {
+      .primary-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>K4 Analytics V2</h1>
+    <p>Phase 1 minimal trusted dashboard. The top section is the site view. System wiring, refresh, schema, and debug details are kept below as operational context.</p>
+    <div class="window-nav">
+      <a class="window-chip active" href="/__k4stats-v2?window=today">Today</a><a class="window-chip" href="/__k4stats-v2?window=yesterday">Yesterday</a><a class="window-chip" href="/__k4stats-v2?window=24h">Last 24h</a><a class="window-chip" href="/__k4stats-v2?window=7d">Last 7 days</a><a class="window-chip" href="/__k4stats-v2?window=all">All time</a>
+    </div>
+    <p class="subtle">Current window: <strong>Today</strong>. All top-level metrics below are filtered through canonical or fact tables for this window only.</p>
+
+    <script>
+      async function refreshV2Incremental() {
+        const button = document.getElementById('v2-refresh-button');
+        const status = document.getElementById('v2-refresh-status');
+        if (button) {
+          button.disabled = true;
+          button.textContent = 'Refreshing...';
+        }
+        if (status) {
+          status.textContent = 'Running incremental refresh...';
+        }
+        try {
+          const response = await fetch('/__k4stats-v2/refresh', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'same-origin'
+          });
+          const data = await response.json();
+          if (!response.ok) {
+            throw new Error(data && data.error ? data.error : 'Refresh failed');
+          }
+          if (status) {
+            status.textContent = 'Refresh complete. Reloading...';
+          }
+          window.location.reload();
+        } catch (error) {
+          if (status) {
+            status.textContent = 'Refresh failed: ' + (error && error.message ? error.message : String(error));
+          }
+          if (button) {
+            button.disabled = false;
+            button.textContent = 'Refresh V2';
+          }
+        }
+      }
+    </script>
+
+    <h2 class="section-title">Site Activity</h2>
+    <p class="section-copy">Trusted V2 metrics only. These cards and lists read canonical or fact tables, not raw events.</p>
+
+    <div class="hero-grid">
+      <div class="card">
+        <div class="muted">Page Loads</div>
+        <div class="metric">0</div>
+        <div class="subtle">Persisted canonical page loads only for today, excluding suspicious internal-shallow sessions.</div>
+      </div>
+      <div class="card">
+        <div class="muted">Sessions</div>
+        <div class="metric">0</div>
+        <div class="subtle">Sessions with trusted page loads in today, excluding suspicious internal-shallow sessions.</div>
+      </div>
+      <div class="card">
+        <div class="muted">Visitors</div>
+        <div class="metric">0</div>
+        <div class="subtle">Visitors with trusted page loads in today, excluding suspicious internal-shallow sessions.</div>
+      </div>
+      <div class="card">
+        <div class="muted">Engaged Sessions</div>
+        <div class="metric">0</div>
+        <div class="subtle">0.0% of trusted sessions triggered an interaction in today.</div>
+      </div>
+      <div class="card">
+        <div class="muted">Image Views</div>
+        <div class="metric">0</div>
+        <div class="subtle">Session-backed canonical image views only for today, excluding suspicious internal-shallow sessions and external/direct fetches.</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Top 25 Entry Pages</h2>
+        <p class="subtle">Where trusted sessions began on the site, excluding suspicious internal-shallow entries.</p>
+        <div class="scroll-panel">
+          <p>No populated session facts yet.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Top 25 Site Pages</h2>
+        <p class="subtle">Most-viewed trusted non-image pages on the site, excluding suspicious internal-shallow sessions.</p>
+        <div class="scroll-panel">
+          <p>No trusted non-image page loads in this window.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Top 10 Images</h2>
+        <p class="subtle">Most-viewed trusted session-backed image detail pages.</p>
+        <div class="scroll-panel">
+          <p>No canonical image views yet.</p>
+        </div>
+        <p class="subtle">External/direct proxy image fetches are excluded from this top-10 list.</p>
+      </div>
+    </div>
+
+    <div class="primary-grid">
+      <div class="card">
+        <h2>Session Geography</h2>
+        <p class="subtle">Location for trusted session-backed canonical page loads only. External/direct fetch traffic and suspicious internal-shallow sessions are excluded.</p>
+        <div class="scroll-panel" style="max-height: 360px; margin-top: 8px;">
+          <p>No session geography in this window.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h2>External Entry Sources</h2>
+        <p class="subtle">External or direct source families for trusted session entries only. Internal re-entry and internal test traffic are excluded from this card.</p>
+        <div class="scroll-panel" style="max-height: 360px; margin-top: 8px;">
+          <p>No entry source data in this window.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="primary-grid">
+      <div class="card">
+        <h2>Image View Geography</h2>
+        <p class="subtle">Location for trusted session-backed canonical image views only. External/direct fetch traffic and suspicious internal-shallow sessions are excluded.</p>
+        <div class="scroll-panel" style="max-height: 360px; margin-top: 8px;">
+          <p>No image-view geography in this window.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Image View Sources</h2>
+        <p class="subtle">Source families for trusted session-backed canonical image views only. External/direct image fetches and suspicious internal-shallow sessions stay out of these counts.</p>
+        <div class="scroll-panel" style="max-height: 360px; margin-top: 8px;">
+          <p>No image-view source data in this window.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Core Actions and Groups</h2>
+        <p class="subtle">Human-readable action labels from trusted canonical rows.</p>
+        <p>No trusted interaction rows yet.</p>
+        <p class="subtle">Engagement hints currently include zoom, series info, more info, collector notes, and slideshow start.</p>
+      </div>
+    </div>
+
+    <details class="system-details">
+      <summary>System Details</summary>
+      <div class="system-body">
+        <p class="section-copy">Operational and debug context for V2. These explain how the system works; they are not the primary site-activity dashboard.</p>
+        <div class="split-list">
+          <div class="card">
+            <div class="muted">Refresh Status</div>
+            <div class="list-row"><span>Last refresh</span><strong>2026-04-03T00:00:44.306Z</strong></div>
+            <div class="list-row"><span>Last processed raw ID</span><strong>282374</strong></div>
+            <div class="list-row"><span>Pending raw rows</span><strong>0</strong></div>
+            <div class="list-row"><span>Last batch inserted</span><strong>0</strong></div>
+            <div class="list-row"><span>Has more batches</span><strong>no</strong></div>
+            <p id="v2-refresh-status" class="refresh-status-copy">Use incremental refresh to materialize fresh raw events into V2 canonical/fact tables.</p>
+            <button id="v2-refresh-button" class="btn" onclick="refreshV2Incremental()">Refresh V2</button>
+          </div>
+          <div class="card">
+            <div class="muted">Schema Status</div>
+            
+    <div class="status-row">
+      <span>canonical_events_v2</span>
+      <strong class="ok">ready</strong>
+    </div>
+  
+    <div class="status-row">
+      <span>session_facts_v2</span>
+      <strong class="ok">ready</strong>
+    </div>
+  
+    <div class="status-row">
+      <span>visitor_facts_v2</span>
+      <strong class="ok">ready</strong>
+    </div>
+  
+    <div class="status-row">
+      <span>canonical_page_loads_v2</span>
+      <strong class="ok">ready</strong>
+    </div>
+  
+          </div>
+          <div class="card">
+            <div class="muted">External / Direct Image Fetches</div>
+            <div class="metric small">0</div>
+            <p class="subtle">Sessionless proxy/direct-image fetches in today. These are diagnostic only and are excluded from the primary Image Views and Top Images panels.</p>
+            <div class="list-row"><span>Total proxy image-view diagnostics</span><strong>0</strong></div>
+            <div class="scroll-panel" style="max-height: 240px; margin-top: 8px;">
+              <p>No external/direct image fetches in this window.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="muted">Suspicious Internal-Shallow Sessions</div>
+            <div class="metric small">0</div>
+            <p class="subtle">Sessions excluded from the main human-like cards because they start from a K4 referrer on <code>/</code>, contain a single page load, and have zero interactions.</p>
+            <div class="list-row"><span>Distinct visitors</span><strong>0</strong></div>
+            <div class="list-row"><span>Image views in bucket</span><strong>0</strong></div>
+            <div class="scroll-panel" style="max-height: 220px; margin-top: 8px;">
+              <p>No suspicious internal-shallow sessions in this window.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="muted">Internal Test Sessions</div>
+            <div class="metric small">0</div>
+            <p class="subtle">Local dev and edge-host test sessions such as <code>localhost:8888</code> and <code>edge.k4studios.com</code>. Excluded from the main human-like cards.</p>
+            <div class="list-row"><span>Distinct visitors</span><strong>0</strong></div>
+            <div class="list-row"><span>Image views in bucket</span><strong>0</strong></div>
+          </div>
+          <div class="card">
+            <div class="muted">Internal Re-entry Sessions</div>
+            <p class="subtle">Trusted sessions whose first canonical page load was referred by another K4 page. This is a session-boundary diagnostic, not an acquisition source.</p>
+            <div class="scroll-panel" style="max-height: 220px; margin-top: 8px;">
+              <p>No internal re-entry sessions in this window.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="muted">Canonical Rules</div>
+            <div class="list-row"><span>Authority</span><strong>first qualifying page load per session_id + normalized page_path</strong></div>
+            <div class="list-row"><span>Preferred signal</span><strong>js:page_view</strong></div>
+            <div class="list-row"><span>Fallback signal</span><strong>none in Phase 1</strong></div>
+            <div class="list-row"><span>Dedupe window</span><strong>10s</strong></div>
+            <div class="list-row"><span>Visit count rule</span><strong>Only canonical_page_load = 1 can create page or visit counts.</strong></div>
+          </div>
+          <div class="card">
+            <div class="muted">Debug Surface</div>
+            <p>Use <code>/__k4stats-v2/debug</code> with <code>session_id</code>, <code>visitor_id</code>, or <code>page_path</code> to inspect raw ? canonical mapping.</p>
+            <p><a href="/__k4stats-v2/debug?limit=25">Open debug route</a></p>
+            <p><strong>Note:</strong> Debug shows raw events plus pre-persistence canonical candidates. The persisted <code>canonical_events_v2</code> table is the actual truth layer used for V2 counts.</p>
+            <p><strong>Refresh behavior:</strong> Summary metrics update through the incremental refresh path. Fresh raw events still appear in debug immediately.</p>
+          </div>
+          <div class="card">
+            <h2>Enabled Families</h2>
+            <div class="list-row"><span>page_view</span><strong>enabled</strong></div><div class="list-row"><span>image_view</span><strong>enabled</strong></div><div class="list-row"><span>image_nav</span><strong>enabled</strong></div><div class="list-row"><span>grid_action</span><strong>enabled</strong></div><div class="list-row"><span>gallery_action</span><strong>enabled</strong></div><div class="list-row"><span>story_action</span><strong>enabled</strong></div><div class="list-row"><span>guide_action</span><strong>enabled</strong></div><div class="list-row"><span>engagement_hint</span><strong>enabled</strong></div><div class="list-row"><span>buy_click</span><strong>enabled</strong></div><div class="list-row"><span>order_submit</span><strong>enabled</strong></div>
+          </div>
+          <div class="card">
+            <h2>Recent Canonical Families</h2>
+            <p>No canonical rows yet. Apply the migration and backfill/population pass next.</p>
+          </div>
+          <div class="card">
+            <h2>Excluded In Phase 1</h2>
+            <div class="list-row"><span>page_pixel</span><strong>excluded</strong></div><div class="list-row"><span>state_pixel</span><strong>excluded</strong></div><div class="list-row"><span>action_pixel</span><strong>excluded</strong></div><div class="list-row"><span>session_exit</span><strong>excluded</strong></div><div class="list-row"><span>qualified_chapter_view</span><strong>excluded</strong></div>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e63ccdf28954b67',t:'MTc3NTE3NDUwMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,4 +1,10 @@
-﻿var __defProp = Object.defineProperty;
+﻿import {
+  handleDashboardV2Request,
+  handleDashboardV2DebugRequest,
+  handleDashboardV2RefreshRequest
+} from "./v2/route.js";
+
+var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 
 // src/analytics/worker.js
@@ -2363,8 +2369,7 @@ async function getEventBreakdown(env, filters) {
       "scroll_50",
       "scroll_75",
       "scroll_100",
-      "page_view",
-      "session_exit"
+      "page_view"
     ];
     const trackedListSql = trackedEvents.map((e) => `'${e}'`).join(", ");
     const eventsQuery = `
@@ -2999,6 +3004,9 @@ async function getTopPages(env, filters) {
             OR (e.event_type = 'page_view' AND e.source = 'js')
           )
           AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
+                  AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '/__k4%'
+                  AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '/admin/%'
+                  AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '/galleries/lightbox%'
           AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE 'http%'
           AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '/http%'
           AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '%://%'
@@ -3412,17 +3420,17 @@ async function getTopImages(env, filters) {
         GROUP BY session_key, target_id
       )
       SELECT
-        target_id,
+        iss.target_id,
         COUNT(*) AS views,
-        COUNT(DISTINCT session_key) AS sessions,
-        SUM(js_events) AS js_views,
-        SUM(pixel_events) AS pixel_views,
-        SUM(CASE WHEN has_js = 1 THEN 1 ELSE 0 END) AS js_sessions,
-        SUM(CASE WHEN has_pixel = 1 THEN 1 ELSE 0 END) AS pixel_sessions,
-        SUM(CASE WHEN has_js = 1 AND has_pixel = 1 THEN 1 ELSE 0 END) AS both_sessions,
-        MAX(chapter_path) AS chapter_path
-      FROM image_session_signals
-      GROUP BY target_id
+        COUNT(DISTINCT iss.session_key) AS sessions,
+        SUM(iss.js_events) AS js_views,
+        SUM(iss.pixel_events) AS pixel_views,
+        SUM(CASE WHEN iss.has_js = 1 THEN 1 ELSE 0 END) AS js_sessions,
+        SUM(CASE WHEN iss.has_pixel = 1 THEN 1 ELSE 0 END) AS pixel_sessions,
+        SUM(CASE WHEN iss.has_js = 1 AND iss.has_pixel = 1 THEN 1 ELSE 0 END) AS both_sessions,
+        MAX(iss.chapter_path) AS chapter_path
+      FROM image_session_signals iss
+      GROUP BY iss.target_id
       ORDER BY views DESC, sessions DESC, target_id ASC
       LIMIT 25
     `;
@@ -3497,8 +3505,62 @@ async function getTopImages(env, filters) {
       env.DB.prepare(totalsQuery).first()
     ]);
 
+    const imageRows = topImagesResult?.results || [];
+    const topImageIds = imageRows
+      .map((row) => String(row?.target_id || ""))
+      .filter((imageId) => /^i-[A-Za-z0-9]+$/.test(imageId));
+
+    if (topImageIds.length > 0) {
+      const quotedIds = topImageIds.map((imageId) => `'${imageId}'`).join(",");
+      const geoQuery = `
+        WITH js_ranked AS (
+          SELECT
+            e.target_id,
+            e.country,
+            e.region,
+            e.city,
+            e.referer,
+            e.ua AS user_agent,
+            ROW_NUMBER() OVER (PARTITION BY e.target_id ORDER BY e.ts DESC) AS rn
+          FROM human_population hp
+          JOIN classified_events e ON e.visitor_id = hp.visitor_id
+          WHERE ${where}
+            ${qualify(galleryClause)}
+            ${qualify(ipClause)}
+            ${qualify(safeBotClause)}
+            ${qualify(chardonClause)}
+            AND ${notCacheWarmer("e")}
+            AND COALESCE(e.is_bot, 0) = 0
+            AND e.source = 'js'
+            AND e.event_type = 'chapter_view'
+            AND e.target_id IN (${quotedIds})
+        )
+        SELECT
+          target_id,
+          country,
+          region,
+          city,
+          referer AS best_referer,
+          user_agent
+        FROM js_ranked
+        WHERE rn = 1
+      `;
+
+      const geoResult = await env.DB.prepare(geoQuery).all();
+      const geoByImageId = new Map((geoResult?.results || []).map((row) => [String(row?.target_id || ""), row]));
+      for (const row of imageRows) {
+        const geo = geoByImageId.get(String(row?.target_id || ""));
+        if (!geo) continue;
+        row.country = geo.country || row.country || null;
+        row.region = geo.region || row.region || null;
+        row.city = geo.city || row.city || null;
+        row.best_referer = geo.best_referer || row.best_referer || null;
+        row.user_agent = geo.user_agent || row.user_agent || null;
+      }
+    }
+
     return {
-      images: { results: topImagesResult?.results || [] },
+      images: { results: imageRows },
       uniqueImagesViewed: Number(totals?.unique_images_viewed || 0),
       totalImageSessions: Number(totals?.total_image_sessions || 0),
       totalImageViews: Number(totals?.total_image_views || 0),
@@ -3549,7 +3611,7 @@ async function getEntryAnalysis(env, filters) {
     const entryPagesQuery = `
       WITH js_page_events AS (
         SELECT
-          e.visitor_id AS visitor_key,
+          COALESCE(NULLIF(e.session_id, ''), NULLIF(e.session_id_v2, ''), NULLIF(e.visitor_id, ''), 'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', CAST(strftime('%M', e.ts) AS INTEGER) / 30 * 30)) AS session_key,
           CASE
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
@@ -3576,16 +3638,16 @@ async function getEntryAnalysis(env, filters) {
       ),
       first_hits AS (
         SELECT
-          visitor_key,
+          session_key,
           page_path,
           referrer,
           ua,
-          ROW_NUMBER() OVER (PARTITION BY visitor_key ORDER BY ts ASC) AS rn
+          ROW_NUMBER() OVER (PARTITION BY session_key ORDER BY ts ASC) AS rn
         FROM js_page_events
       ),
       not_found_hits AS (
         SELECT DISTINCT
-          e.visitor_id AS visitor_key,
+          COALESCE(NULLIF(e.session_id, ''), NULLIF(e.session_id_v2, ''), NULLIF(e.visitor_id, ''), 'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', CAST(strftime('%M', e.ts) AS INTEGER) / 30 * 30)) AS session_key,
           CASE
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
@@ -3606,35 +3668,16 @@ async function getEntryAnalysis(env, filters) {
       SELECT
         page_path,
         'J' AS source_kind,
-        CASE
-          WHEN (referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct')
-            AND LOWER(COALESCE(ua, '')) LIKE '%pinterest%'
-            THEN 'pinterest'
-          WHEN referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' THEN 'direct'
-          WHEN referrer LIKE '%images.google.%' OR referrer LIKE '%google.%/imgres%' THEN 'google_images'
-          WHEN referrer LIKE '%google.%' THEN 'google_search'
-          WHEN referrer LIKE '%bing.%/images%' THEN 'bing_images'
-          WHEN referrer LIKE '%bing.%' THEN 'bing_search'
-          WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
-          WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
-          WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'twitter'
-          WHEN referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'chatgpt'
-          WHEN referrer LIKE '%instagram.%' THEN 'instagram'
-          WHEN referrer LIKE '%linkedin.%' THEN 'linkedin'
-          WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
-          WHEN referrer LIKE '%k4studios.com%' THEN 'internal'
-          ELSE 'unattributed'
-        END AS ref_source,
         COUNT(*) AS sessions
       FROM first_hits
       WHERE rn = 1
         AND NOT EXISTS (
           SELECT 1
           FROM not_found_hits nf
-          WHERE nf.visitor_key = first_hits.visitor_key
+          WHERE nf.session_key = first_hits.session_key
             AND nf.page_path = first_hits.page_path
         )
-      GROUP BY page_path, ref_source
+      GROUP BY page_path
       ORDER BY sessions DESC, page_path ASC
       LIMIT 25
     `;
@@ -4741,7 +4784,7 @@ function renderDashboard({
   const spPctViewersWithDupes = Number(spViewerStats.pct_viewers_with_duplicates || 0);
   const spByGallery = Array.isArray(sp.by_gallery) ? sp.by_gallery : [];
   const spPixelImageAccess = Array.isArray(sp.pixel_image_access) ? sp.pixel_image_access : [];
-  const blendedImages = Array.isArray(images) ? images : [];
+  const blendedImages = Array.isArray(images?.results) ? images.results : Array.isArray(images) ? images : [];
   const pixelAccessById = /* @__PURE__ */ new Map(
     spPixelImageAccess.map((row) => [String(row?.target_id || ""), row])
   );
@@ -4778,8 +4821,8 @@ function renderDashboard({
   const popularGalleryMap = /* @__PURE__ */ new Map();
   for (const row of masterImageRows) {
     const rawPage = String(row?.chapter_path || row?.page || "").trim();
-    if (!rawPage || !rawPage.includes("/i-")) continue;
-    const galleryPath = rawPage.slice(0, rawPage.indexOf("/i-"));
+    const galleryPathFromPage = rawPage && rawPage.includes("/i-") ? rawPage.slice(0, rawPage.indexOf("/i-")) : "";
+    const galleryPath = galleryPathFromPage || getCanonicalGalleryPathForImageId(imageIdMap, String(row?.target_id || "")) || "";
     if (!galleryPath || !galleryPath.startsWith("/")) continue;
     const existing = popularGalleryMap.get(galleryPath) || {
       gallery_path: galleryPath,
@@ -4929,7 +4972,7 @@ function renderDashboard({
   }, "isLevel5BlockRecommended");
   const eventLabels = {
     // -- High-value user interactions --
-    page_view: "Page View",
+    page_view: "Browser Page Load",
     xl_zoom: "XL Zoom",
     browse_all_click: "Browse All Click",
     all_list_click: "All List Click",
@@ -4963,13 +5006,15 @@ function renderDashboard({
     scroll_25: "Scroll 25%",
     scroll_50: "Scroll 50%",
     scroll_75: "Scroll 75%",
-    scroll_100: "Scroll 100%",
-    session_exit: "Session Exit"
+    scroll_100: "Scroll 100%"
   };
   const eventCounts = {};
   events.forEach((e) => {
     eventCounts[e.event] = e.count;
   });
+  if (browserViewsSummary && Number.isFinite(Number(browserViewsSummary.js_page_views))) {
+    eventCounts["page_view"] = Number(browserViewsSummary.js_page_views || 0);
+  }
   if (artViewsSummary?.slideshow_starts) {
     if (eventCounts["slideshow_start"] == null) {
       eventCounts["slideshow_start"] = artViewsSummary.slideshow_starts;
@@ -6479,7 +6524,7 @@ function renderDashboard({
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2px;">
         <div style="display:flex; align-items:center; gap:10px;">
           <h3 style="margin:0;">Event Breakdown</h3>
-          <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Deduped engagement counts. JS events remain canonical, and matching pixel signals fill gaps when JS is blocked. When both arrive for the same session, page/target, and 5-second burst, this panel counts one action.</div></span>
+          <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Deduped engagement counts. Interaction events merge JS with matching pixel fallback when JS is blocked. Browser Page Load remains JS-backed only so page totals stay aligned with real site navigation instead of pixel reach. Session Exit is excluded here because it is a noisy lifecycle signal, not a reliable engagement action.</div></span>
         </div>
         <button id="eventSortToggle" onclick="toggleEventSort()" title="Toggle sort: Alphabetical / By Count" style="font-size:10px; padding:2px 8px; border:1px solid #ccc; border-radius:4px; background:#f5f0eb; color:#666; cursor:pointer; font-family:monospace; letter-spacing:0.5px;">A-Z</button>
       </div>
@@ -7010,7 +7055,7 @@ function renderDashboard({
     <div class="section" style="order: 3;">
       <div class="section-header">
         <h3>Top 25 Entry Pages (JS First-Touch)</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Ranks first-hit entries from JS page_view sequences (human visitor keyed). This panel is JS-first and does not currently blend pixel entry sessions.</div></span>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">Ranks first-hit entries from JS page_view sequences using a session key. This panel is JS-first and does not currently blend pixel entry sessions.</div></span>
       </div>
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
       <div style="max-height: 320px; overflow: auto; padding-right: 0; padding-left: 0;">
@@ -8673,7 +8718,7 @@ function normalizeCanonicalEventType(eventType, source, sourceLayer) {
     return CANONICAL_TRACKED_EVENTS.has(eventType) ? eventType : null;
   }
   if (source === "pixel") {
-    if (eventType === "page_pixel") return "page_view";
+    if (eventType === "page_pixel") return "page_pixel";
     if (eventType === "action_pixel" && sourceLayer) {
       return PIXEL_LAYER_TO_CANONICAL_EVENT[sourceLayer] || null;
     }
@@ -10258,6 +10303,15 @@ var worker_default = {
     }
     if ((url.pathname.startsWith("/track") || url.pathname.startsWith("/__k4e") || url.pathname.startsWith("/_state")) && shouldSilenceTrackingRequest(request)) {
       return new Response(null, { status: 204, headers: applyNoStore(new Headers()) });
+    }
+    if (url.pathname === "/__k4stats-v2") {
+      return handleDashboardV2Request(request, env, ctx);
+    }
+    if (url.pathname === "/__k4stats-v2/debug") {
+      return handleDashboardV2DebugRequest(request, env, ctx);
+    }
+    if (url.pathname === "/__k4stats-v2/refresh" && request.method === "POST") {
+      return handleDashboardV2RefreshRequest(request, env, ctx);
     }
     if (url.pathname === "/__k4stats") {
       return handleDashboardRequest2(request, env, ctx);

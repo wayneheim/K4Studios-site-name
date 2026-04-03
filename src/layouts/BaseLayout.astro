@@ -246,21 +246,22 @@ const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
       }
     </style>
 
-    <!-- 
+    <!--
     ========================================
-    GA4 DISABLED - Using K4 Custom Analytics
-    Commented out 2026-02-08 to test performance improvement
+    GA4 ENABLED - Parallel comparison with K4 analytics
+    Re-enabled 2026-04-02 for data parity validation
     ========================================
     -->
-    <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1HSKFC04"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      const gaWindow = window as Window & { dataLayer?: unknown[][] };
+      gaWindow.dataLayer = gaWindow.dataLayer || [];
+      function gtag(...args: unknown[]) {
+        gaWindow.dataLayer?.push(args);
+      }
       gtag('js', new Date());
       gtag('config', 'G-0J1HSKFC04', { send_page_view: true });
     </script>
-    -->
 
     <!-- Microsoft Clarity - heatmaps & session recordings (deferred to not block render) -->
     <script>
@@ -297,9 +298,14 @@ const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
             ? '; Domain=.k4studios.com'
             : '';
 
-          var sid = sessionStorage.getItem('k4_session_id');
+          var sid = readCookie('k4_sid');
+          if (!sid) {
+            sid = sessionStorage.getItem('k4_session_id');
+          }
           if (!sid) {
             sid = randomId();
+          }
+          if (sid) {
             sessionStorage.setItem('k4_session_id', sid);
           }
 

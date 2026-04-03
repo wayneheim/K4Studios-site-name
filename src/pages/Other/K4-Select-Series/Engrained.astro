@@ -79,19 +79,19 @@ const featheredImagesSidebar = featheredImages.slice(0, 6);
         <div class="text-column">
           <section class="story-section">
             {westernStory.map((section, index) => (
-              <article class="story-block" key={index}>
+              <article class="story-block">
                 {section.title && <h2 class="slide-in-left" set:html={autoLinkKeywordsInTextM(section.title, sectionPath, featheredImages)} />}
                 {section.subhead && <h3 class="slide-in-left" set:html={autoLinkKeywordsInTextM(section.subhead, sectionPath, featheredImages)} />}
                 {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={autoLinkKeywordsInTextM(section.tagline, sectionPath, featheredImages)} />}
 
                 {section.paragraphs?.map((para, i) => (
-                  <p key={i} class="reveal-on-scroll" set:html={autoLinkKeywordsInTextM(para, sectionPath, featheredImages)} />
+                  <p class="reveal-on-scroll" set:html={autoLinkKeywordsInTextM(para, sectionPath, featheredImages)} />
                 ))}
 
                 {section.list && section.list.length > 0 && (
                   <ul>
                     {section.list.map((item, j) => (
-                      <li key={j} class="reveal-on-scroll" set:html={autoLinkKeywordsInTextM(item, sectionPath, featheredImages)} />
+                      <li class="reveal-on-scroll" set:html={autoLinkKeywordsInTextM(item, sectionPath, featheredImages)} />
                     ))}
                   </ul>
                 )}

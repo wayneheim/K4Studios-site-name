@@ -196,8 +196,15 @@ const structuredData = JSON.stringify({
       }
     } catch {}
 
-    const sessionId = sessionStorage.getItem('k4_session_id') ||
-      (sessionStorage.setItem('k4_session_id', crypto.randomUUID()), sessionStorage.getItem('k4_session_id'));
+    const sidMatch = document.cookie.match(/(?:^|;\s*)k4_sid=([^;]+)/);
+    const cookieSid = sidMatch ? decodeURIComponent(sidMatch[1]) : '';
+    const generatedSid = crypto.randomUUID();
+    const sessionId = cookieSid || sessionStorage.getItem('k4_session_id') || generatedSid;
+    sessionStorage.setItem('k4_session_id', sessionId);
+    const cookieDomainAttr = window.location.hostname.toLowerCase().endsWith('k4studios.com')
+      ? '; Domain=.k4studios.com'
+      : '';
+    document.cookie = `k4_sid=${encodeURIComponent(sessionId)}; Path=/; SameSite=Lax; Secure${cookieDomainAttr}`;
 
     const payload = JSON.stringify({
       session_id: sessionId,

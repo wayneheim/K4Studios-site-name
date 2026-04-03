@@ -1552,8 +1552,7 @@ export async function getEventBreakdown(env, filters) {
       'scroll_50',
       'scroll_75',
       'scroll_100',
-      'page_view',
-      'session_exit'
+      'page_view'
     ];
     const trackedListSql = trackedEvents.map(e => `'${e}'`).join(', ');
     const eventsQuery = `
@@ -2196,6 +2195,9 @@ export async function getTopPages(env, filters) {
             OR (e.event_type = 'page_view' AND e.source = 'js')
           )
           AND COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')) IS NOT NULL
+                  AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '/__k4%'
+                  AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '/admin/%'
+                  AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '/galleries/lightbox%'
           AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE 'http%'
           AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '/http%'
           AND LOWER(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))) NOT LIKE '%://%'
@@ -2277,7 +2279,12 @@ export async function getEntryAnalysis(env, filters) {
     const entryPagesQuery = `
       WITH js_page_events AS (
         SELECT
-          e.visitor_id AS visitor_key,
+          COALESCE(
+            NULLIF(e.session_id, ''),
+            NULLIF(e.session_id_v2, ''),
+            NULLIF(e.visitor_id, ''),
+            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
+          ) AS session_key,
           CASE
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
@@ -2304,16 +2311,21 @@ export async function getEntryAnalysis(env, filters) {
       ),
       first_hits AS (
         SELECT
-          visitor_key,
+          session_key,
           page_path,
           referrer,
           ua,
-          ROW_NUMBER() OVER (PARTITION BY visitor_key ORDER BY ts ASC) AS rn
+          ROW_NUMBER() OVER (PARTITION BY session_key ORDER BY ts ASC) AS rn
         FROM js_page_events
       ),
       not_found_hits AS (
         SELECT DISTINCT
-          e.visitor_id AS visitor_key,
+          COALESCE(
+            NULLIF(e.session_id, ''),
+            NULLIF(e.session_id_v2, ''),
+            NULLIF(e.visitor_id, ''),
+            'anon:' || COALESCE(NULLIF(e.ip_hash, ''), NULLIF(e.ip, ''), 'unknown') || '|' || strftime('%Y-%m-%dT%H:', e.ts) || printf('%02d', (CAST(strftime('%M', e.ts) AS INTEGER) / 30) * 30)
+          ) AS session_key,
           CASE
             WHEN SUBSTR(COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, '')), 1, 1) = '/' THEN COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
             ELSE '/' || COALESCE(NULLIF(e.page, ''), NULLIF(e.target_id, ''))
@@ -2334,35 +2346,16 @@ export async function getEntryAnalysis(env, filters) {
       SELECT
         page_path,
         'J' AS source_kind,
-        CASE
-          WHEN (referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct')
-            AND LOWER(COALESCE(ua, '')) LIKE '%pinterest%'
-            THEN 'pinterest'
-          WHEN referrer IS NULL OR referrer = '' OR referrer = 'unknown' OR referrer = 'direct' THEN 'direct'
-          WHEN referrer LIKE '%images.google.%' OR referrer LIKE '%google.%/imgres%' THEN 'google_images'
-          WHEN referrer LIKE '%google.%' THEN 'google_search'
-          WHEN referrer LIKE '%bing.%/images%' THEN 'bing_images'
-          WHEN referrer LIKE '%bing.%' THEN 'bing_search'
-          WHEN referrer LIKE '%pinterest.%' THEN 'pinterest'
-          WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%fb.%' THEN 'facebook'
-          WHEN referrer LIKE '%twitter.%' OR referrer LIKE '%t.co/%' OR referrer LIKE '%x.com%' THEN 'twitter'
-          WHEN referrer LIKE '%chatgpt.com%' OR referrer LIKE '%chat.openai.com%' THEN 'chatgpt'
-          WHEN referrer LIKE '%instagram.%' THEN 'instagram'
-          WHEN referrer LIKE '%linkedin.%' THEN 'linkedin'
-          WHEN referrer LIKE '%duckduckgo.%' THEN 'duckduckgo'
-          WHEN referrer LIKE '%k4studios.com%' THEN 'internal'
-          ELSE 'unattributed'
-        END AS ref_source,
         COUNT(*) AS sessions
       FROM first_hits
       WHERE rn = 1
         AND NOT EXISTS (
           SELECT 1
           FROM not_found_hits nf
-          WHERE nf.visitor_key = first_hits.visitor_key
+          WHERE nf.session_key = first_hits.session_key
             AND nf.page_path = first_hits.page_path
         )
-      GROUP BY page_path, ref_source
+      GROUP BY page_path
       ORDER BY sessions DESC, page_path ASC
       LIMIT 25
     `;

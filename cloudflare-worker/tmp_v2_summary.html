@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K4 Analytics V2</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #161616; color: #e6e6e6; margin: 0; padding: 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1, h2 { margin: 0 0 12px; }
+    p { color: #b7b7b7; line-height: 1.5; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 20px 0; }
+    .card { background: #232323; border: 1px solid #343434; border-radius: 10px; padding: 16px; }
+    .metric { font-size: 32px; font-weight: 700; color: #66aaff; }
+    .muted { color: #8d8d8d; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .status-row, .list-row { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #333; }
+    .status-row:last-child, .list-row:last-child { border-bottom: none; }
+    .ok { color: #2ecc71; }
+    .pending { color: #f39c12; }
+    .btn { background: #2b2b2b; color: #e6e6e6; border: 1px solid #4b4b4b; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+    .btn:disabled { opacity: 0.6; cursor: wait; }
+    code { background: #111; padding: 2px 6px; border-radius: 4px; }
+    ol, ul { margin: 12px 0 0 20px; color: #cfcfcf; }
+    a { color: #66aaff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>K4 Analytics V2</h1>
+    <p>Phase 1 minimal trusted dashboard. V2 is isolated from V1 and only trusts canonical/fact tables. Raw events are debug-only.</p>
+
+    <script>
+      async function refreshV2Incremental() {
+        const button = document.getElementById('v2-refresh-button');
+        const status = document.getElementById('v2-refresh-status');
+        if (button) {
+          button.disabled = true;
+          button.textContent = 'Refreshing...';
+        }
+        if (status) {
+          status.textContent = 'Running incremental refresh...';
+        }
+        try {
+          const response = await fetch('/__k4stats-v2/refresh', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'same-origin'
+          });
+          const data = await response.json();
+          if (!response.ok) {
+            throw new Error(data && data.error ? data.error : 'Refresh failed');
+          }
+          if (status) {
+            status.textContent = 'Refresh complete. Reloading...';
+          }
+          window.location.reload();
+        } catch (error) {
+          if (status) {
+            status.textContent = 'Refresh failed: ' + (error && error.message ? error.message : String(error));
+          }
+          if (button) {
+            button.disabled = false;
+            button.textContent = 'Refresh V2';
+          }
+        }
+      }
+    </script>
+
+    <div class="grid">
+      <div class="card">
+        <div class="muted">Schema Status</div>
+        
+    <div class="status-row">
+      <span>canonical_events_v2</span>
+      <strong class="ok">ready</strong>
+    </div>
+  
+    <div class="status-row">
+      <span>session_facts_v2</span>
+      <strong class="ok">ready</strong>
+    </div>
+  
+    <div class="status-row">
+      <span>visitor_facts_v2</span>
+      <strong class="ok">ready</strong>
+    </div>
+  
+    <div class="status-row">
+      <span>canonical_page_loads_v2</span>
+      <strong class="ok">ready</strong>
+    </div>
+  
+      </div>
+      <div class="card">
+        <div class="muted">Canonical Events (last populated window)</div>
+        <div class="metric">1244</div>
+        <div class="list-row"><span>Canonical page loads</span><strong>292</strong></div>
+        <div class="list-row"><span>Sessions with page loads</span><strong>243</strong></div>
+        <div class="list-row"><span>Visitors with page loads</span><strong>228</strong></div>
+      </div>
+      <div class="card">
+        <div class="muted">Trusted Interaction Summary</div>
+        <div class="list-row"><span>Engaged sessions</span><strong>12</strong></div>
+        <div class="list-row"><span>Image views</span><strong>901</strong></div>
+        <div class="list-row"><span>Buy clicks</span><strong>6</strong></div>
+        <div class="list-row"><span>Grid actions</span><strong>11</strong></div>
+        <div class="list-row"><span>Gallery actions</span><strong>8</strong></div>
+      </div>
+      <div class="card">
+        <div class="muted">Refresh Status</div>
+        <div class="list-row"><span>Last refresh</span><strong>2026-04-02T00:12:54.929Z</strong></div>
+        <div class="list-row"><span>Last processed raw ID</span><strong>277826</strong></div>
+        <div class="list-row"><span>Pending raw rows</span><strong>0</strong></div>
+        <div class="list-row"><span>Last batch inserted</span><strong>0</strong></div>
+        <div class="list-row"><span>Has more batches</span><strong>no</strong></div>
+        <p id="v2-refresh-status">Use incremental refresh to materialize fresh raw events into V2 canonical/fact tables.</p>
+        <button id="v2-refresh-button" class="btn" onclick="refreshV2Incremental()">Refresh V2</button>
+      </div>
+      <div class="card">
+        <div class="muted">Debug Surface</div>
+        <p>Use <code>/__k4stats-v2/debug</code> with <code>session_id</code>, <code>visitor_id</code>, or <code>page_path</code> to inspect raw → canonical mapping.</p>
+        <p><a href="/__k4stats-v2/debug?limit=25">Open debug route</a></p>
+        <p><strong>Note:</strong> Summary metrics now update through the incremental refresh path. Fresh raw events still appear in debug immediately.</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Canonical Page-Load Rules</h2>
+        <div class="list-row"><span>Authority</span><strong>first qualifying page load per session_id + normalized page_path</strong></div>
+        <div class="list-row"><span>Preferred signal</span><strong>js:page_view</strong></div>
+        <div class="list-row"><span>Fallback signal</span><strong>none in Phase 1</strong></div>
+        <div class="list-row"><span>Dedupe window</span><strong>10s</strong></div>
+        <div class="list-row"><span>Visit count rule</span><strong>Only canonical_page_load = 1 can create page or visit counts.</strong></div>
+      </div>
+      <div class="card">
+        <h2>Event Families</h2>
+        <div class="list-row"><span>page_view</span><strong>enabled</strong></div><div class="list-row"><span>image_view</span><strong>enabled</strong></div><div class="list-row"><span>image_nav</span><strong>enabled</strong></div><div class="list-row"><span>grid_action</span><strong>enabled</strong></div><div class="list-row"><span>gallery_action</span><strong>enabled</strong></div><div class="list-row"><span>story_action</span><strong>enabled</strong></div><div class="list-row"><span>guide_action</span><strong>enabled</strong></div><div class="list-row"><span>engagement_hint</span><strong>enabled</strong></div><div class="list-row"><span>buy_click</span><strong>enabled</strong></div><div class="list-row"><span>order_submit</span><strong>enabled</strong></div>
+      </div>
+      <div class="card">
+        <h2>Recent Canonical Families</h2>
+        <div class="list-row"><span>image_view</span><strong>901</strong></div><div class="list-row"><span>page_view</span><strong>292</strong></div><div class="list-row"><span>image_nav</span><strong>13</strong></div><div class="list-row"><span>engagement_hint</span><strong>11</strong></div><div class="list-row"><span>grid_action</span><strong>11</strong></div><div class="list-row"><span>gallery_action</span><strong>8</strong></div><div class="list-row"><span>buy_click</span><strong>6</strong></div><div class="list-row"><span>order_submit</span><strong>1</strong></div><div class="list-row"><span>story_action</span><strong>1</strong></div>
+      </div>
+      <div class="card">
+        <h2>Top Entry Pages</h2>
+        <div class="list-row"><span>/</span><strong>15</strong></div><div class="list-row"><span>/Galleries/Portraits-and-People/Portraits-Black-and-White/i-9NT8GV4</span><strong>3</strong></div><div class="list-row"><span>/Blog/what-is-painterly-photography/</span><strong>2</strong></div><div class="list-row"><span>/Blog/what-is-western-art</span><strong>2</strong></div><div class="list-row"><span>/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits</span><strong>2</strong></div><div class="list-row"><span>/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-hKcrxwf</span><strong>2</strong></div><div class="list-row"><span>/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ncFcHDM</span><strong>2</strong></div><div class="list-row"><span>/Blog/one-way-out</span><strong>1</strong></div><div class="list-row"><span>/Blog/what-is-artistic-western-photography</span><strong>1</strong></div><div class="list-row"><span>/Blog/what-is-western-cowboy-art</span><strong>1</strong></div>
+      </div>
+      <div class="card">
+        <h2>Top Images</h2>
+        <div class="list-row"><span>i-2GsTkqf</span><strong>7</strong></div><div class="list-row"><span>i-4zxZQQ2</span><strong>5</strong></div><div class="list-row"><span>i-jWFcDHr</span><strong>4</strong></div><div class="list-row"><span>i-p8JdtJM</span><strong>4</strong></div><div class="list-row"><span>i-qFwnr64</span><strong>4</strong></div><div class="list-row"><span>i-zShFkKV</span><strong>4</strong></div><div class="list-row"><span>i-44jcjTQ</span><strong>3</strong></div><div class="list-row"><span>i-4Hz6D7k</span><strong>3</strong></div><div class="list-row"><span>i-4Wsxmqv</span><strong>3</strong></div><div class="list-row"><span>i-7Mzzbvp</span><strong>3</strong></div>
+      </div>
+      <div class="card">
+        <h2>Explicitly Excluded In Phase 1</h2>
+        <div class="list-row"><span>page_pixel</span><strong>excluded</strong></div><div class="list-row"><span>state_pixel</span><strong>excluded</strong></div><div class="list-row"><span>action_pixel</span><strong>excluded</strong></div><div class="list-row"><span>session_exit</span><strong>excluded</strong></div><div class="list-row"><span>qualified_chapter_view</span><strong>excluded</strong></div>
+      </div>
+    </div>
+  </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e5b9fee4fcc962d',t:'MTc3NTA4ODc3NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

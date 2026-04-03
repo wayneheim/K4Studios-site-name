@@ -131,7 +131,7 @@ function normalizeCanonicalEventType(eventType, source, sourceLayer) {
   }
 
   if (source === 'pixel') {
-    if (eventType === 'page_pixel') return 'page_view';
+    if (eventType === 'page_pixel') return 'page_pixel';
     if (eventType === 'action_pixel' && sourceLayer) {
       return PIXEL_LAYER_TO_CANONICAL_EVENT[sourceLayer] || null;
     }

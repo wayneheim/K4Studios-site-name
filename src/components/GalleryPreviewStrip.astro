@@ -187,8 +187,14 @@ const heroImageId = candidatePool[0]?.id || null;
       }
 
       // Fallback only when global analytics helpers are unavailable.
-      const sessionId = sessionStorage.getItem('k4_session_id') || crypto.randomUUID();
+      const sidMatch = document.cookie.match(/(?:^|;\s*)k4_sid=([^;]+)/);
+      const cookieSid = sidMatch ? decodeURIComponent(sidMatch[1]) : '';
+      const sessionId = cookieSid || sessionStorage.getItem('k4_session_id') || crypto.randomUUID();
       sessionStorage.setItem('k4_session_id', sessionId);
+      const cookieDomainAttr = window.location.hostname.toLowerCase().endsWith('k4studios.com')
+        ? '; Domain=.k4studios.com'
+        : '';
+      document.cookie = `k4_sid=${encodeURIComponent(sessionId)}; Path=/; SameSite=Lax; Secure${cookieDomainAttr}`;
       const payload = JSON.stringify({
         session_id: sessionId,
         event: 'gallery_preview_click',

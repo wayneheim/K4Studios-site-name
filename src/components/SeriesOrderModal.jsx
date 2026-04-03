@@ -242,6 +242,13 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
   const effectiveSeries = seriesRegistry ? getEffectiveSeries(image, seriesRegistry) : [];
   const excludeSizes = seriesRegistry ? getExcludeSizesFromRegistry(image?.id, seriesRegistry) : {};
 
+  const hasBuyLink = typeof image?.buyLink === "string" && image.buyLink.trim().length > 0;
+  const shouldUseBuyLink = (seriesKey) => (seriesKey === "sketch" || seriesKey === "foundation") && hasBuyLink;
+  const getTierOrderHref = (seriesKey, seriesDef, editionNumber, size = null, price = null) => {
+    if (shouldUseBuyLink(seriesKey)) return image.buyLink;
+    return buildMailtoLink(image, seriesKey, seriesDef, editionNumber, size, price);
+  };
+
   // Filter to only series we have definitions for, then sort by sortOrder
   const displaySeries = effectiveSeries
     .filter((s) => SERIES_DEFINITIONS[s])
@@ -368,7 +375,9 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                             return (
                             <a
                               key={size}
-                              href={buildMailtoLink(image, seriesKey, def, editionNumber, size, price)}
+                              href={getTierOrderHref(seriesKey, def, editionNumber, size, price)}
+                              target={shouldUseBuyLink(seriesKey) ? "_blank" : undefined}
+                              rel={shouldUseBuyLink(seriesKey) ? "nofollow noopener noreferrer" : undefined}
                               className="flex items-center justify-between w-full px-3 py-2 text-white rounded text-sm transition-all font-medium"
                               style={{
                                 background: "linear-gradient(to bottom, #64748b 0%, #516474ff 100%)",
@@ -387,14 +396,19 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                               }}
                             >
                               <span>{size}: ${price.toLocaleString()}</span>
-                              {hasInventory && (
-                                <span className="text-xs text-green-200/80 font-normal italic">· Quick ship available</span>
-                              )}
+                              <span className="flex items-center gap-2">
+                                {hasInventory && (
+                                  <span className="text-xs text-green-200/80 font-normal italic">Quick ship</span>
+                                )}
+                                <span className="text-xs font-semibold uppercase tracking-wide">Order</span>
+                              </span>
                             </a>
                           );})
                         ) : (
                           <a
-                            href={buildMailtoLink(image, seriesKey, def, editionNumber)}
+                            href={getTierOrderHref(seriesKey, def, editionNumber)}
+                            target={shouldUseBuyLink(seriesKey) ? "_blank" : undefined}
+                            rel={shouldUseBuyLink(seriesKey) ? "nofollow noopener noreferrer" : undefined}
                             className="inline-block w-full text-center px-3 py-1.5 text-white rounded text-sm transition-all font-medium"
                             style={{
                               background: "linear-gradient(to bottom, #64748b 0%, #516474ff 100%)",

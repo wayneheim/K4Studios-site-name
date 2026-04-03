@@ -44,8 +44,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     'scroll_50': 'Page - 50% Scroll',
     'scroll_75': 'Page - 75% Scroll',
     'scroll_100': 'Page - 100% Scroll',
-    'page_view': 'Page View',
-    'session_exit': 'Session Exit'
+    'page_view': 'Browser Page Load'
   };
   
   // Merge DB results with canonical list - always show all events
@@ -657,7 +656,7 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2px;">
         <div style="display:flex; align-items:center; gap:10px;">
           <h3 style="margin:0;">Event Breakdown</h3>
-          <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Deduped engagement counts. JS events remain canonical, and matching pixel signals fill gaps when JS is blocked. When both arrive for the same session, page/target, and 5-second burst, this panel counts one action.</div></span>
+          <span class="section-tip"><span class="info-icon" style="cursor:help;">i</span><div class="tooltip">Deduped engagement counts. Interaction events merge JS with matching pixel fallback when JS is blocked. Browser Page Load remains JS-backed only so page totals stay aligned with real site navigation instead of pixel reach. Session Exit is excluded here because it is a noisy lifecycle signal, not a reliable engagement action.</div></span>
         </div>
         <button id="eventSortToggle" onclick="toggleEventSort()" title="Toggle sort: Alphabetical / By Count" style="
           font-size:10px; padding:2px 8px; border:1px solid #ccc; border-radius:4px;
@@ -821,25 +820,17 @@ export function renderDashboard({ days, yesterday, selectedDate, galleryFilter, 
     <div class="section">
       <div class="section-header">
         <h3>🔎 Top Entry Pages</h3>
-        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page visited in each session. 🔍=Google Search, 🖼️=Images, 🅱️=Bing, 📌=Pinterest, 🐦=Twitter, 📘=Facebook, 🔗=Direct, 🔄=Internal</div></span>
+        <span class="section-tip"><span class="info-icon">i</span><div class="tooltip">First page visited in each session. Aggregated by page path only and counted once per session.</div></span>
       </div>
       ${entryPages.length === 0 ? '<p style="color:#666">No data yet</p>' : `
       <table>
-        <tr><th>Page</th><th>S</th><th>From</th><th>Sess</th></tr>
+        <tr><th>Page</th><th>S</th><th>Sess</th></tr>
         ${entryPages.slice(0, 25).map(p => {
           const isImage = p.page_path.includes('/i-');
           const shortPath = p.page_path.length > 30 ? '...' + p.page_path.slice(-27) : p.page_path;
           const pageIcon = isImage ? '🖼️' : '📄';
           const sourceKind = String(p.source_kind || 'J').toUpperCase() === 'P' ? 'P' : 'J';
-          const refIcons = { 
-            google_search: '🔍', google_images: '🖼️', 
-            bing_search: '🅱️', bing_images: '🖼️', 
-            pinterest: '📌', twitter: '🐦', facebook: '📘', instagram: '📷', 
-            linkedin: '💼', duckduckgo: '🦆',
-            direct: '🔗', internal: '🔄', unattributed: '🔒' 
-          };
-          const refIcon = refIcons[p.ref_source] || '🔒';
-          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${sourceKind === 'P' ? 'Pixel' : 'JavaScript'}" style="text-align:center;color:${sourceKind === 'P' ? '#f59e0b' : '#60a5fa'};font-weight:700;">${sourceKind}</td><td title="${p.ref_source}">${refIcon}</td><td>${p.sessions}</td></tr>`;
+          return `<tr><td title="${p.page_path}">${pageIcon} ${shortPath}</td><td title="${sourceKind === 'P' ? 'Pixel' : 'JavaScript'}" style="text-align:center;color:${sourceKind === 'P' ? '#f59e0b' : '#60a5fa'};font-weight:700;">${sourceKind}</td><td>${p.sessions}</td></tr>`;
         }).join('')}
       </table>
       `}

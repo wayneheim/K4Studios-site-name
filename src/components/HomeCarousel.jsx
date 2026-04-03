@@ -31,6 +31,50 @@ function shuffle(arr) {
   return a;
 }
 
+function trackHomeHeroNavigation(href, imageId) {
+  if (typeof window === 'undefined' || typeof window.k4ShouldSuppressAnalytics === 'function' && window.k4ShouldSuppressAnalytics()) {
+    return;
+  }
+
+  const galleryId = href ? href.replace(/\/i-[^/]+$/, '') : null;
+
+  if (typeof window.k4track === 'function') {
+    window.k4track('gallery_hero_click', {
+      galleryId,
+      imageId,
+      pageType: 'landing',
+      sourceLayer: 'home_carousel_image_click'
+    });
+  }
+
+  if (typeof window.k4emitActionPixel === 'function') {
+    window.k4emitActionPixel('gallery_hero_click', imageId, {
+      galleryId,
+      pageType: 'landing',
+      sourceLayer: 'home_carousel_image_click'
+    });
+  }
+}
+
+function shouldBypassTrackedNavigation(event) {
+  return !event || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
+}
+
+function handleTrackedNavigation(event, href, tracker) {
+  if (!href || typeof window === 'undefined') return;
+
+  if (shouldBypassTrackedNavigation(event)) {
+    tracker();
+    return;
+  }
+
+  event.preventDefault();
+  tracker();
+  window.setTimeout(() => {
+    window.location.assign(href);
+  }, 80);
+}
+
 // Pick N random items from an array
 function pickRandom(arr, n) {
   return shuffle(arr).slice(0, n);
@@ -224,7 +268,7 @@ export default function HomeCarousel() {
             itemType="https://schema.org/ImageObject"
             aria-hidden={isDuplicate ? "true" : undefined}
           >
-            <a href={s.href} title={isDuplicate ? undefined : s.alt} aria-label={isDuplicate ? undefined : s.alt} tabIndex={isDuplicate ? -1 : undefined}>
+            <a href={s.href} title={isDuplicate ? undefined : s.alt} aria-label={isDuplicate ? undefined : s.alt} tabIndex={isDuplicate ? -1 : undefined} onClick={isDuplicate ? undefined : (event) => handleTrackedNavigation(event, s.href, () => trackHomeHeroNavigation(s.href, s.id || null))}>
               <img
                 src={s.id ? getProxySrc(s.id, 's') : (s.srcS || s.src)}
                 alt={isDuplicate ? "" : s.alt}

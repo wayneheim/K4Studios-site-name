@@ -6,6 +6,11 @@
 
 // Dashboard route — full request lifecycle
 export { handleDashboardRequest } from './dashboard/route.js';
+export {
+  handleDashboardV2Request,
+  handleDashboardV2DebugRequest,
+  handleDashboardV2RefreshRequest
+} from './v2/route.js';
 
 // Collector — classifiers + guarded storage writers + track handler
 export {

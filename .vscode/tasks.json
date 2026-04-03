@@ -156,15 +156,11 @@
 		{
 			"label": "Deploy Netlify k4studios prod",
 			"type": "shell",
-			"command": "npx",
+			"command": "powershell",
 			"args": [
-				"netlify",
-				"deploy",
-				"--prod",
-				"--dir=dist",
-				"--site",
-				"0849dde2-1b6e-4016-b0f4-1d609f1b8283",
-				"--json"
+				"-NoProfile",
+				"-Command",
+				"npx netlify deploy --prod --dir=dist --site 0849dde2-1b6e-4016-b0f4-1d609f1b8283 --json; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm run submit:indexnow -- --no-wait-live"
 			],
 			"isBackground": false
 		},
