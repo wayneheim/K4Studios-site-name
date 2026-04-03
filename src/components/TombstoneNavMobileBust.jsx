@@ -11,7 +11,7 @@ const TRACK_ENDPOINT = 'https://edge.k4studios.com/__k4e';
             }
 
  * Handles:
- * - SmugMug URLs: extracts ID → /img/{id}/s
+ * - SmugMug URLs: extracts a ID → /img/{id}/s
  * - Absolute proxy URLs: converts to relative /img/{id}/s  
  * - Already relative /img/... URLs: forces to 's' size
  * - Local static images (/images/...): returns as-is
