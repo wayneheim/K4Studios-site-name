@@ -92,6 +92,31 @@ function getFamilyDisplayLabel(family) {
   return familyMap[family] || family;
 }
 
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function formatHopLabel(hopCount) {
+  const normalized = Number(hopCount || 0);
+  return `${normalized} hop${normalized === 1 ? '' : 's'}`;
+}
+
+function buildHopPathTooltip(hopCount, pathRows) {
+  const matchingRows = pathRows.filter((row) => Number(row?.hop_count || 0) === Number(hopCount || 0));
+  if (!matchingRows.length) {
+    return '';
+  }
+
+  return matchingRows
+    .map((row) => `${row.sessions} session${Number(row.sessions || 0) === 1 ? '' : 's'}: ${row.path_sequence}`)
+    .join('\n');
+}
+
 export function renderDashboardV2({ summary }) {
   const schema = summary?.schema || {};
   const window = summary?.window || { key: 'today', label: 'Today' };
@@ -106,7 +131,8 @@ export function renderDashboardV2({ summary }) {
   const sessionGeography = summary?.sessionGeography || [];
   const imageViewGeography = summary?.imageViewGeography || [];
   const entrySourceMix = summary?.entrySourceMix || [];
-  const imageViewSourceMix = summary?.imageViewSourceMix || [];
+  const firstImageHopMix = summary?.firstImageHopMix || [];
+  const firstImagePathMix = summary?.firstImagePathMix || [];
   const suspiciousSessionGeography = summary?.suspiciousSessionGeography || [];
   const suspiciousDatacenterSessionGeography = summary?.suspiciousDatacenterSessionGeography || [];
   const internalReentryMix = summary?.internalReentryMix || [];
@@ -127,6 +153,27 @@ export function renderDashboardV2({ summary }) {
   const internalTestSessions = Number(counts?.internal_test_sessions || 0);
   const internalTestVisitors = Number(counts?.internal_test_visitors || 0);
   const internalTestImageViews = Number(counts?.internal_test_image_views || 0);
+  const homePageViews = Number(counts?.home_page_view_events || 0);
+  const pilotHomePageViews = Number(counts?.pilot_home_page_view_events || 0);
+  const homeCowboyJumpClicks = Number(counts?.home_cowboy_jump_events || 0);
+  const pilotHomeCowboyJumpClicks = Number(counts?.pilot_home_cowboy_jump_events || 0);
+  const pilotHomeCowboyGeoCoverage = Number(counts?.pilot_home_cowboy_geo_coverage || 0);
+  const pilotHomeCowboyUaCoverage = Number(counts?.pilot_home_cowboy_ua_coverage || 0);
+  const pilotHomeCowboyReferrerCoverage = Number(counts?.pilot_home_cowboy_referrer_coverage || 0);
+  const pilotHomeCowboyIpCoverage = Number(counts?.pilot_home_cowboy_ip_coverage || 0);
+  const pilotHomeCowboyCityRegionCoverage = Number(counts?.pilot_home_cowboy_city_region_coverage || 0);
+  const pilotHomeCowboySessions = Number(counts?.pilot_home_cowboy_sessions || 0);
+  const pilotHomeCowboyVisitors = Number(counts?.pilot_home_cowboy_visitors || 0);
+  const sessionsReachingFirstImage = Number(counts?.sessions_reaching_first_image || 0);
+  const directToFirstImageSessions = Number(counts?.direct_to_first_image_sessions || 0);
+  const sessionsWithoutImageReach = Math.max(0, sessions - sessionsReachingFirstImage);
+  const pilotPageViewParity = homePageViews > 0 ? ((pilotHomePageViews / homePageViews) * 100).toFixed(1) : '0.0';
+  const pilotCowboyParity = homeCowboyJumpClicks > 0 ? ((pilotHomeCowboyJumpClicks / homeCowboyJumpClicks) * 100).toFixed(1) : '0.0';
+  const pilotGeoCoveragePct = pilotHomeCowboyJumpClicks > 0 ? ((pilotHomeCowboyGeoCoverage / pilotHomeCowboyJumpClicks) * 100).toFixed(1) : '0.0';
+  const pilotUaCoveragePct = pilotHomeCowboyJumpClicks > 0 ? ((pilotHomeCowboyUaCoverage / pilotHomeCowboyJumpClicks) * 100).toFixed(1) : '0.0';
+  const pilotReferrerCoveragePct = pilotHomeCowboyJumpClicks > 0 ? ((pilotHomeCowboyReferrerCoverage / pilotHomeCowboyJumpClicks) * 100).toFixed(1) : '0.0';
+  const pilotIpCoveragePct = pilotHomeCowboyJumpClicks > 0 ? ((pilotHomeCowboyIpCoverage / pilotHomeCowboyJumpClicks) * 100).toFixed(1) : '0.0';
+  const pilotCityRegionCoveragePct = pilotHomeCowboyJumpClicks > 0 ? ((pilotHomeCowboyCityRegionCoverage / pilotHomeCowboyJumpClicks) * 100).toFixed(1) : '0.0';
   const interactionGroups = [
     { family: 'buy_click', label: 'Buy Button Clicks', count: Number(counts?.buy_clicks ?? 0), colorClass: getFamilyColorClass('buy_click') },
     { family: 'grid_action', label: 'Grid Actions', count: Number(counts?.grid_actions ?? 0), colorClass: getFamilyColorClass('grid_action') },
@@ -350,6 +397,23 @@ export function renderDashboardV2({ summary }) {
 
     <div class="grid">
       <div class="card">
+        <h2>Home Pilot Shadow Test</h2>
+        <p class="subtle">Raw-event comparison for the home-only pilot tracker. This is diagnostic parity, not trusted canonical V2 scoring.</p>
+        <div class="list-row"><span>Baseline home page views (<code>page_view</code>)</span><strong>${homePageViews}</strong></div>
+        <div class="list-row"><span>Pilot home page views (<code>pilot_home_page_view</code>)</span><strong>${pilotHomePageViews}</strong></div>
+        <div class="list-row"><span>Page-view parity</span><strong>${pilotPageViewParity}%</strong></div>
+        <div class="list-row"><span>Baseline Cowboy Jump clicks (<code>cowboy_jump</code>)</span><strong>${homeCowboyJumpClicks}</strong></div>
+        <div class="list-row"><span>Pilot Cowboy Jump clicks (<code>pilot_home_cowboy_jump_click</code>)</span><strong>${pilotHomeCowboyJumpClicks}</strong></div>
+        <div class="list-row"><span>Click parity</span><strong>${pilotCowboyParity}%</strong></div>
+        <div class="list-row"><span>Pilot click sessions</span><strong>${pilotHomeCowboySessions}</strong></div>
+        <div class="list-row"><span>Pilot click visitors</span><strong>${pilotHomeCowboyVisitors}</strong></div>
+        <div class="list-row"><span>Geo coverage (country)</span><strong>${pilotHomeCowboyGeoCoverage} (${pilotGeoCoveragePct}%)</strong></div>
+        <div class="list-row"><span>Geo coverage (city/region)</span><strong>${pilotHomeCowboyCityRegionCoverage} (${pilotCityRegionCoveragePct}%)</strong></div>
+        <div class="list-row"><span>UA coverage (OS parse source)</span><strong>${pilotHomeCowboyUaCoverage} (${pilotUaCoveragePct}%)</strong></div>
+        <div class="list-row"><span>Referrer coverage</span><strong>${pilotHomeCowboyReferrerCoverage} (${pilotReferrerCoveragePct}%)</strong></div>
+        <div class="list-row"><span>IP coverage</span><strong>${pilotHomeCowboyIpCoverage} (${pilotIpCoveragePct}%)</strong></div>
+      </div>
+      <div class="card">
         <h2>Top 25 Entry Pages</h2>
         <p class="subtle">Where trusted sessions began on the site, excluding suspicious internal-shallow and datacenter-like entries.</p>
         <div class="scroll-panel">
@@ -399,11 +463,13 @@ export function renderDashboardV2({ summary }) {
         </div>
       </div>
       <div class="card">
-        <h2>Image View Sources</h2>
-        <p class="subtle">Source families for trusted session-backed canonical image views only. External/direct image fetches plus suspicious internal-shallow and datacenter-like sessions stay out of these counts.</p>
+        <h2>Entry to 1st Image</h2>
+        <p class="subtle">Trusted sessions only. Each session is counted once, from entry until its first image chapter page. Later image-to-image browsing does not affect this distribution.</p>
         <div class="scroll-panel" style="max-height: 360px; margin-top: 8px;">
-          ${imageViewSourceMix.length ? imageViewSourceMix.map((row) => `<div class="list-row"><span>${row.source_label}</span><strong>${row.views}</strong></div>`).join('') : '<p>No image-view source data in this window.</p>'}
+          ${firstImageHopMix.length ? firstImageHopMix.map((row) => `<div class="list-row" title="${escapeHtml(buildHopPathTooltip(row.hop_count, firstImagePathMix))}"><span>${formatHopLabel(row.hop_count)}</span><strong>${row.sessions}</strong></div>`).join('') : '<p>No trusted sessions reached an image in this window.</p>'}
         </div>
+        <p class="subtle">${sessionsReachingFirstImage} trusted sessions reached a first image. ${directToFirstImageSessions} landed on an image directly. ${sessionsWithoutImageReach} never reached an image.</p>
+        <p class="subtle">Hover a hop row to see the most common path variants that produced that hop count.</p>
       </div>
     </div>
 

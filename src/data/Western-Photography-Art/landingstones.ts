@@ -1,7 +1,7 @@
 export const landingWesternArt = {
   // Western Photography Art — DOORWAY HUB
   title: "Western Photography Art",
-  subtitle: "Painterly Fine Art Photography Inspired by the American Frontier",
+  subtitle: "Western Art Photography Interpreting the American Frontier",
 
   // Keywords for structured data and semantic SEO
   keywords: [

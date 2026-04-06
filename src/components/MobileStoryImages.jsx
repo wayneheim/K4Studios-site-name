@@ -56,6 +56,21 @@ const handleTrackedNavigation = (event, href, tracker) => {
   }, 80);
 };
 
+const resolveImageHref = (match) => {
+  if (match?.href) {
+    return match.href;
+  }
+
+  const galleryBase = match?.galleryPath || "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
+  const imageId = match?.id || '';
+
+  if (!imageId) {
+    return galleryBase;
+  }
+
+  return `${galleryBase}/i-${imageId.replace(/^i-/, "")}`;
+};
+
 /**
  * MobileStoryImages - Inline images for mobile with client-side rotation
  * 
@@ -110,7 +125,7 @@ export default function MobileStoryImages({ images = [], displayCount }) {
         container.className = "mobile-inline-img-wrapper mobile-only";
 
         const link = document.createElement("a");
-        link.href = `${match.galleryPath || "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"}/i-${match.id?.replace(/^i-/, "")}`;
+        link.href = resolveImageHref(match);
         link.style.display = "block";
         link.addEventListener('click', (event) => {
           handleTrackedNavigation(event, link.href, () => {

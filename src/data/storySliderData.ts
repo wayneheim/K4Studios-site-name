@@ -18,6 +18,7 @@ export const storySliderData = [
   },
   {
     "id": "i-7Mzzbvp",
+    "title": "Last Hand",
     "story": "Dust spirals and hooves fly as the last hand is played out under a pale, unblinking sky. Three riders, every muscle and nerve taut with gamble and grit, thunder forward—there’s no room left for bluffing, no time to count the cost. In this wild rush, history is measured not by who wins, but by who dares to ride straight into the storm, knowing the deck was never meant to be fair."
   },
   {
@@ -167,7 +168,7 @@ export const storySliderData = [
   },
   {
     "id": "i-wdF6Hw3",
-    "title": "Last Light on the Cook Wagon",
-    "story": "The trail was long, the miles unforgiving, but the day always ended here—beside the wagon, where the coffee was hot and the stories were warmer. As the sun bled out behind the horizon, he lingered in the glow, cup in hand, letting the quiet settle over him like a worn blanket. \n\nTomorrow the riders would saddle up before dawn. Tonight, he allowed himself this moment—watching the firelight dance across the prairie, knowing that even the hardest trails need a heartbeat of rest."
+    "title": "Day in Review",
+    "story": "What breaks first: the trail, the day, or a man’s resolve? Funny, how the hardest part of any journey isn’t what’s ahead—it’s what you carry with you and what you left behind. Fact is, the real trouble’s between my ears, decisions that can’t be unmade. At this point, only thing certain is the ache in my bones and the twelve cans of beans I got to get us to Laramie before the snow flies."
   }
 ];

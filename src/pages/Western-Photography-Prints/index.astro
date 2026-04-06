@@ -48,6 +48,7 @@ const collectionSchema = JSON.stringify(
     },
     about: [
       { "@type": "Thing", name: "Western Photography Prints" },
+      { "@type": "Thing", name: "Limited Edition Western Photography" },
       { "@type": "Thing", name: "Limited Edition Fine Art Prints" },
       { "@type": "Thing", name: "Cowboy Photography Prints" },
     ],
@@ -96,12 +97,16 @@ const structuredDataJSON = `[${collectionSchema}]`;
 // ─── OG ──────────────────────────────────────────────────────────────────────
 const ogImageUrl = `https://www.k4studios.com/img/${pageMeta.ogImage}/l`;
 const meta = {
+  title: pageMeta.title,
   description: pageMeta.description,
+  keywords: 'Western photography prints, cowboy photography prints, black and white Western photography prints, frontier photography prints, Western fine art photography prints, archival Western prints, Wayne Heim',
+  'og:title': pageMeta.title,
   "og:type": "website",
   "og:image": ogImageUrl,
   "og:image:width": "1024",
   "og:image:height": "683",
   "og:url": canonicalUrl,
+  'twitter:title': pageMeta.title,
   "twitter:card": "summary_large_image",
   "twitter:image": ogImageUrl,
 };
@@ -150,7 +155,7 @@ const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
 
   <!-- ═══════ GRID ═══════ -->
   <div slot="grid" class="cl-grid-wrap">
-    <p class="cl-grid__intro">A curated selection from the K4 Collector Edition Western photography print collections.</p>
+    <p class="cl-grid__intro">A curated selection of Western photography prints spanning cowboy portraits, black and white frontier scenes, and Indigenous Western portraiture across K4 collector editions.</p>
     <div class="cl-grid">
       {gridImages.map((img) => (
         <a href={img.href} class="cl-grid__tile" title={img.title}>

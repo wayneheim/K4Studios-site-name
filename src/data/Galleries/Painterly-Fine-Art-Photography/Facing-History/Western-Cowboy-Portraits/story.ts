@@ -7,8 +7,10 @@ export const westernStory = [
     subhead: "The Hidden Framework Behind the Frontier Legend — Fine Art Photography Built on Silence, Grit, and Human Consequence.",
     tagline: "For collectors drawn to story over spectacle.",
     paragraphs: [
+      `Western cowboy portraits work best when the figure is treated as a person carrying weather, labor, memory, and consequence rather than as a costume or stock Western type.`,
       `The American West is crowded with legends — yet so few of the real stories survived. Not the gunfights. Not the sunsets. The quiet scaffolding beneath them: the resolve measured in a stranger’s posture, the wife who kept the ranch solvent while the legend rode out, the weathered hands that told a longer story than any dime novel ever captured.`,
       `Wayne Heim’s painterly Western fine art photography explores that hidden framework — the invisible architecture that held the frontier’s icons up. These are not costume studies or nostalgic reenactments. They are character-driven cowboy portraits shaped by grit, resolve, longing, and the fragile hope carried into an unforgiving land.`,
+      `Within the broader field of <a href="/Western-Cowboy-Photography">Western Cowboy Photography</a>, this gallery is the portrait-centered branch: Western cowboy portraits built for slow looking, narrative tension, and collector-level fine art presentation.`,
       `For collectors, the pull is not only the cowboy subject itself, but the sense that each portrait contains a larger life pressing just beyond the frame.`,
       `The strongest of these portraits do not leave you outside the legend looking in. They draw you into its weather, its silence, and the human cost hidden beneath the myth.`,
       `Every icon has scaffolding. The gunslinger who walked into legend did so because someone else held the line behind him. The trail boss earned his name because of the crew who never got one. By revealing those unseen figures and unspoken moments, each portrait expands beyond a single frame into a complete story — and the legend itself gains gravity it never had when standing alone.`,
@@ -36,7 +38,7 @@ export const westernStory = [
     subhead: "The Frontier in Light and Shadow",
     tagline: "Color for breath. Black and white for bone.",
     paragraphs: [
-      `The American West was never singular. It existed between fire and ash, dust and night, hope and reckoning. Wayne’s Western photography reflects that complexity through both color and monochrome interpretations — each revealing different layers of the hidden framework beneath the legend.`
+      `The American West was never singular. It existed between fire and ash, dust and night, hope and reckoning. Wayne’s Western cowboy portraits reflect that complexity through both color and monochrome interpretations — each revealing different layers of the hidden framework beneath the legend.`
     ],
     list: [
       `<strong>Painterly Cowboy Portraits (Color):</strong> Sun-warmed riders, dust suspended in gold, faces shaped by directional light. Color carries the breath of the frontier — the warmth of a world that was alive, dangerous, and full of consequence for those who inhabited it, not just those who became famous for it.`,

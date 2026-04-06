@@ -8,6 +8,8 @@ export const landingHistorical = {
     "historical western art",
     "historical american west art",
     "historical western photography",
+    "historically themed western photography",
+    "historical themed western photography",
     "historically themed western art",
     "frontier art photography",
     "western frontier portraiture",

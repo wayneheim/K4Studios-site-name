@@ -1,6 +1,14 @@
 export const westernFAQ = [
 
   {
+    q: "What are Western cowboy portraits?",
+    a: [
+      `Western cowboy portraits are fine art portraits centered on cowboy subjects within the historical and visual tradition of the American West. Rather than generic Western-themed imagery, they emphasize individual presence, frontier character, and narrative consequence.`,
+      `Wayne Heim’s Western cowboy portraits are painterly, historically grounded, and built for long viewing, linking portraiture to the broader tradition of <a href="/Western-Cowboy-Photography">Western Cowboy Photography</a>.`
+    ],
+  },
+
+  {
     q: "What makes Wayne Heim’s Western themed photography different from typical cowboy photography?",
     a: [
       `Wayne Heim’s work is often described as <strong>Western themed photography</strong>, but the theme is never surface-level. Each image is constructed around historical context, human presence, and narrative tension — not costumes, props, or cliché.`,

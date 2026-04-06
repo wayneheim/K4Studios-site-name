@@ -15,6 +15,8 @@
     subhead: "The Historical Roots of Cowboy Photography",
     paragraphs: [
       "The cowboy entered photography almost as soon as the camera entered the West. Early images were documentary—trail drives, cattle camps, ranch hands posed beside their string of horses. By the early 1900s, Wild West shows and Hollywood had flattened the cowboy into spectacle: a figure defined by action rather than character.",
+      "Within that broader field, <a href=\"/Cowboy-Fine-Art-Photography\">Cowboy Fine Art Photography</a> names the more portrait-centered branch of the work—where the cowboy becomes the primary subject rather than one figure inside a wider Western scene.",
+      "The longer visual tradition surrounding that subject is explored more broadly in <a href=\"/Blog/what-is-western-cowboy-art\">Western Cowboy Art</a>, where painting, photography, and myth converge around the same enduring figure.",
       "Western cowboy photography reclaims the ground between those poles. It draws from the documentary impulse—real people, real settings—while applying the interpretive craft that documentary alone resists. The photographs in this collection belong to that lineage: historically grounded, visually authored, and focused on the individual rather than the myth. Before the legend came the lives that built it—and that is where this work begins."
     ]
   },

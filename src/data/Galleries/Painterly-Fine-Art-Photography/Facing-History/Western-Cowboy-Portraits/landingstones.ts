@@ -1,15 +1,16 @@
 export const landingWestern = {
-  title: "Western Fine Art Photography — Painterly Cowboy Portraits",
-  subtitle: "Story-Driven Western Themed Photography by Wayne Heim",
+  title: "Western Cowboy Portraits — Painterly Fine Art Photography",
+  subtitle: "Story-Driven Portraits of the American West by Wayne Heim",
 
   // Keywords used internally for structured data, semantic linking, and contextual SEO
   keywords: [
+    "Western cowboy portraits",
     "Western fine art photography",
     "Western themed photography",
     "Western photography style",
     "cowboy fine art photography",
     "painterly cowboy photography",
-    "Western cowboy portraits",
+    "Western portrait photography",
     "black and white western art",
     "Native American fine art portraits",
     "old west fine art prints",
@@ -36,7 +37,7 @@ export const landingWestern = {
     >
       Facing History
     </a> 
-    | Western Fine Art Photography
+    | Western Cowboy Portraits
   `,
 
   tombstones: [

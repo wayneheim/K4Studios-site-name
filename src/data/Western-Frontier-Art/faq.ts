@@ -14,6 +14,13 @@ export const frontierArtFAQ = [
     ],
   },
   {
+    q: "Which artists shaped the tradition of Western frontier art?",
+    a: [
+      "Western frontier art was shaped first by observer-artists such as George Catlin and Karl Bodmer, who documented Indigenous life and frontier environments before settlement transformed them. It was then expanded by Albert Bierstadt and Thomas Moran, who gave the frontier a monumental landscape scale, and by Frederic Remington and Charles M. Russell, who defined much of the visual mythology of riders, labor, frontier conflict, and Old West drama.",
+      "Contemporary frontier art extends that lineage not by copying those painters, but by returning to the same historical forces—distance, weather, labor, risk, and cultural collision—that gave the frontier its artistic gravity in the first place."
+    ],
+  },
+  {
     q: "Is Western frontier art the same as frontier wall art or Western decor?",
     a: [
       "No. Frontier wall art and Western decor usually describe a commercial styling category. Western frontier art is a fine-art and subject-matter category centered on the historical American frontier.",

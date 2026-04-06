@@ -440,6 +440,19 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://k4studios.com/";
     }
 
     document.addEventListener('DOMContentLoaded', () => {
+      try {
+        if (window.location.pathname === '/' && typeof window.k4track === 'function') {
+          window.k4track('pilot_home_page_view', {
+            pageType: 'landing',
+            sourceLayer: 'pilot_home_v1_page_view',
+            theme: 'pilot_home_v1',
+            trigger: 'shadow_test'
+          });
+        }
+      } catch (_) {
+        // best-effort only
+      }
+
       const firePixel = (element) => {
         const pixelKey = element.getAttribute('data-k4-pixel');
         const trigger = element.getAttribute('data-k4-trigger') || null;

@@ -2,7 +2,7 @@ export const westernArtStory = [
   {
     title: "What Is Western Photography Art?",
     paragraphs: [
-      "Western photography art is the practice of interpreting the American West through authored photographic craft. It differs from documentary or lifestyle Western photography by prioritizing narrative, atmosphere, and artistic intent over simple visual record.",
+      "Western photography art is the practice of interpreting the American West through authored photographic craft. It is often phrased as Western art photography, but the underlying idea is the same: photography treated as art within the larger Western tradition. It differs from documentary or lifestyle Western photography by prioritizing narrative, atmosphere, and artistic intent over simple visual record.",
       "A photograph of a cowboy, horse, or desert landscape does not automatically qualify as Western art.",
       "What defines Western photography art is authorship—the deliberate shaping of light, composition, texture, and tone to communicate the emotional and historical character of frontier life.",
       "Before the legend came the lives that built it.",
@@ -17,6 +17,7 @@ export const westernArtStory = [
       "The imagery of the American West was shaped long before the camera became a primary artistic medium. Nineteenth-century painters and sculptors established the visual language that still defines Western art today—frontier encounters, solitary riders, Indigenous life, and landscapes marked by human struggle.",
       "These artists were not documenting the frontier. They were interpreting it.",
       "Photography entered that tradition gradually. Early photographers recorded expeditions and settlements, capturing moments that painters would later transform into visual mythology.",
+      "That bridge matters because Western photography art sits between medium and tradition: photographic in process, but Western art in ambition, structure, and historical intent.",
       "Western photography art continues that lineage.",
       "The subject remains the same—the American frontier and the people who shaped it.",
       "Only the medium has changed."

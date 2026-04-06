@@ -15,6 +15,8 @@
     subhead: "Where Cowboy Art and Photography Meet",
     paragraphs: [
       "The cowboy has been a subject of American art since Frederic Remington and Charles M. Russell translated frontier life into paintings that vibrated with dust, muscle, and consequence. Photography inherited that subject but often flattened it—reducing the cowboy to spectacle, nostalgia, or costume.",
+      "That larger tradition is defined more broadly in <a href=\"/Blog/what-is-western-cowboy-art\">Western Cowboy Art</a>, where the cowboy remains a serious artistic subject across painting, photography, and the evolving visual language of the American West.",
+      "For the medium-specific branch built around frontier character and historically grounded portraiture, see <a href=\"/Western-Cowboy-Photography\">Western Cowboy Photography</a>.",
       "Cowboy fine art photography reclaims the territory between those poles. It borrows the interpretive ambition of the painters—while grounding every image in real people, real settings, and documented frontier history. The photographs in this collection belong to that lineage: visually authored, historically grounded, and focused on the individual rather than the myth."
     ]
   },

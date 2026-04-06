@@ -246,23 +246,6 @@ const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
       }
     </style>
 
-    <!--
-    ========================================
-    GA4 ENABLED - Parallel comparison with K4 analytics
-    Re-enabled 2026-04-02 for data parity validation
-    ========================================
-    -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1HSKFC04"></script>
-    <script>
-      const gaWindow = window as Window & { dataLayer?: unknown[][] };
-      gaWindow.dataLayer = gaWindow.dataLayer || [];
-      function gtag(...args: unknown[]) {
-        gaWindow.dataLayer?.push(args);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-0J1HSKFC04', { send_page_view: true });
-    </script>
-
     <!-- Microsoft Clarity - heatmaps & session recordings (deferred to not block render) -->
     <script>
       // Load Clarity after page is interactive to avoid blocking LCP
@@ -298,15 +281,30 @@ const normalizedBreadcrumbsJSON = normalizeK4Host(breadcrumbsJSON);
             ? '; Domain=.k4studios.com'
             : '';
 
+          function getReferrerHost() {
+            try {
+              return document.referrer ? new URL(document.referrer).hostname.toLowerCase() : '';
+            } catch (e) {
+              return '';
+            }
+          }
+
+          var currentHost = (location.hostname || '').toLowerCase();
+          var referrerHost = getReferrerHost();
+          var shouldRotateProdSession = currentHost.endsWith('k4studios.com')
+            && currentHost !== 'edge.k4studios.com'
+            && (referrerHost === 'edge.k4studios.com' || referrerHost === 'localhost' || referrerHost.indexOf('localhost:') === 0);
+
           var sid = readCookie('k4_sid');
-          if (!sid) {
+          if (!shouldRotateProdSession && !sid) {
             sid = sessionStorage.getItem('k4_session_id');
           }
-          if (!sid) {
+          if (shouldRotateProdSession || !sid) {
             sid = randomId();
           }
           if (sid) {
             sessionStorage.setItem('k4_session_id', sid);
+            sessionStorage.removeItem('k4_event_order');
           }
 
           var vid = readCookie('k4_vid');

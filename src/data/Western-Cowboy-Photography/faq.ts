@@ -50,7 +50,7 @@ export const cowboyFAQ = [
     a: [
       "This body of work centers on authentic Western character portraits, including:",
       "<ul><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'>Western Cowboy Portraits in Color</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White'>Cowboy Portraits in Black & White</a></li><li><a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color'>Indigenous Portraits of the West</a></li></ul>",
-      "Subjects include working cowboys, ranchers, and historically informed frontier interpreters whose clothing, tools, and environments are grounded in documented Western history."
+      "Subjects include working cowboys, ranchers, and historically informed frontier interpreters whose clothing, tools, and environments are grounded in documented Western history. For the portrait-first gallery destination, enter <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits'>Western Cowboy Portraits</a>."
     ],
   },
 

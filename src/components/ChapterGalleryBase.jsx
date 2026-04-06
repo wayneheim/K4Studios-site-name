@@ -2,7 +2,7 @@ import { warmImage } from "../utils/warmImage";
 import { trackEvent, emitActionPixel, emitChapterViewPixel } from "../utils/analytics";
 import { useState, useRef, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Grid, Notebook, ShoppingCart, CircleX, SquareChevronLeft, SquareChevronRight, Info } from "lucide-react";
+import { Grid, Notebook, CircleX, SquareChevronLeft, SquareChevronRight, Info } from "lucide-react";
 import { getClosingSentence } from "../utils/seoDescriptionAppender.js";
 import { sitemapMatches } from "../data/sitemapMatches.ts";
 import ZoomOverlay from "./ZoomOverlay.jsx";
@@ -1713,38 +1713,25 @@ export default function ChapterGalleryBase({
                         <LikeButton imageId={galleryData[currentIndex]?.id} pageTitle={galleryData[currentIndex]?.title} />
                       </div>
 
-                      {/* Cart - Fifth on mobile */}
-                      {isEngrainedSeries ? (
-                        <button
-                          data-cart-btn
-                          title="Click to see pricing"
-                          className="inline-flex items-center justify-center w-8 h-8 rounded-full text-xs font-semibold shadow transition border border-gray-300 hover:border-red-200"
-                          style={{ backgroundColor: "#bbb6b1", color: "#ffffff" }}
-                          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#76807b")}
-                          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
-                          onClick={() => {
+                      {/* Pricing button */}
+                      <button
+                        data-cart-btn
+                        title={isEngrainedSeries ? "Click to see pricing" : "Click to see pricing and editions"}
+                          className={`inline-flex items-center justify-center h-8 rounded-full text-[11px] font-semibold tracking-tight leading-none shadow transition border border-gray-300 hover:border-red-200 ${isMobile ? "px-2 min-w-[48px]" : "px-2.5 min-w-[68px]"}`}
+                        style={{ backgroundColor: "#bbb6b1", color: "#ffffff" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#76807b")}
+                        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
+                        onClick={() => {
+                          if (isEngrainedSeries) {
                             setShowPricingModal(true);
-                            track("order_clicked");
-                          }}
-                        >
-                          <ShoppingCart className="w-4 h-4" />
-                        </button>
-                      ) : (
-                        <button
-                          data-cart-btn
-                          title="Click to see order options"
-                          className="inline-flex items-center justify-center w-8 h-8 rounded-full text-xs font-semibold shadow transition border border-gray-300 hover:border-red-200"
-                          style={{ backgroundColor: "#bbb6b1", color: "#ffffff" }}
-                          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#76807b")}
-                          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#bbb6b1")}
-                          onClick={() => {
+                          } else {
                             setShowSeriesOrderModal(true);
-                            track("order_clicked");
-                          }}
-                        >
-                          <ShoppingCart className="w-4 h-4" />
-                        </button>
-                      )}
+                          }
+                          track("order_clicked");
+                        }}
+                      >
+                        {isMobile ? "Price" : "Pricing"}
+                      </button>
 
                       {/* Exit - Desktop only (mobile exit is in top bar) */}
                       {!isMobile && (

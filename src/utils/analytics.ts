@@ -13,6 +13,49 @@ const VISITOR_WINDOW_KEY = '__K4_VISITOR_ID';
 let inMemorySessionId: string | null = null;
 let inMemoryVisitorId: string | null = null;
 
+function getCurrentHostname(): string {
+  if (typeof window === 'undefined') return '';
+  return String(window.location.hostname || '').toLowerCase();
+}
+
+function isProductionK4Host(hostname: string): boolean {
+  return hostname.endsWith('k4studios.com') && hostname !== 'edge.k4studios.com';
+}
+
+function getReferrerHostname(): string {
+  if (typeof document === 'undefined') return '';
+  try {
+    return new URL(document.referrer).hostname.toLowerCase();
+  } catch {
+    return '';
+  }
+}
+
+function shouldRotateSessionForProdEntry(): boolean {
+  if (typeof window === 'undefined' || typeof document === 'undefined') return false;
+  const currentHostname = getCurrentHostname();
+  if (!isProductionK4Host(currentHostname)) return false;
+
+  const referrerHostname = getReferrerHostname();
+  if (!referrerHostname) return false;
+
+  return referrerHostname === 'edge.k4studios.com'
+    || referrerHostname === 'localhost'
+    || referrerHostname.startsWith('localhost:');
+}
+
+function persistSessionId(sessionId: string): string {
+  inMemorySessionId = sessionId;
+  try {
+    sessionStorage.setItem('k4_session_id', sessionId);
+    sessionStorage.removeItem('k4_event_order');
+  } catch {
+    // ignore
+  }
+  setK4Cookie('k4_sid', sessionId);
+  return sessionId;
+}
+
 function getK4CookieDomainAttr(): string {
   if (typeof window === 'undefined') return '';
   return window.location.hostname.toLowerCase().endsWith('k4studios.com')
@@ -81,15 +124,13 @@ function getBuildId(): string | null {
 function getSessionId(): string {
   if (typeof window === 'undefined') return '';
 
+  if (shouldRotateSessionForProdEntry()) {
+    return persistSessionId(safeRandomId());
+  }
+
   const cookieSessionId = getCookie('k4_sid');
   if (cookieSessionId) {
-    inMemorySessionId = cookieSessionId;
-    try {
-      sessionStorage.setItem('k4_session_id', cookieSessionId);
-    } catch {
-      // ignore
-    }
-    return cookieSessionId;
+    return persistSessionId(cookieSessionId);
   }
 
   // Prefer sessionStorage (best for session continuity), but never crash if unavailable.
@@ -97,16 +138,13 @@ function getSessionId(): string {
     let sessionId = sessionStorage.getItem('k4_session_id');
     if (!sessionId) {
       sessionId = safeRandomId();
-      sessionStorage.setItem('k4_session_id', sessionId);
-      setK4Cookie('k4_sid', sessionId);
+      return persistSessionId(sessionId);
     }
-    inMemorySessionId = sessionId;
-    return sessionId;
+    return persistSessionId(sessionId);
   } catch {
     // Fallback: keep stable ID for this JS runtime.
     if (!inMemorySessionId) {
-      inMemorySessionId = safeRandomId();
-      setK4Cookie('k4_sid', inMemorySessionId);
+      return persistSessionId(safeRandomId());
     }
     return inMemorySessionId;
   }

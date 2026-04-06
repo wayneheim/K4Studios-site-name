@@ -8,20 +8,27 @@ import {
 } from '@data/galleryMaps/MasterGalleryData.mjs';
 
 const CANONICAL_LINK_MAP: Record<string, string> = {
+  'authentic cowboy life': '/authentic-cowboy-life',
   'artistic western photography': '/Blog/what-is-artistic-western-photography',
   'cowboy fine art photography': '/Cowboy-Fine-Art-Photography',
   'fine art photography': '/Galleries/Fine-Art-Photography',
   'historical themed western photography': '/Blog/what-is-historical-western-photography',
+  'historical cowboy life': '/authentic-cowboy-life',
   'historical western art': '/Historical-Western-Art',
   'historical western photography': '/Blog/what-is-historical-western-photography',
   'narrative western art': '/Narrative-Western-Art',
   'painterly fine art photography': '/Galleries/Painterly-Fine-Art-Photography',
   'painterly photography': '/Blog/what-is-painterly-photography',
+  'reality behind the cowboy myth': '/authentic-cowboy-life',
   'western art': '/Blog/what-is-western-art',
+  'black and white western photography': '/Western-Black-and-White-Photography',
+  'western art photography': '/Western-Photography-Art',
+  'western photography art': '/Western-Photography-Art',
   'western black and white photography': '/Western-Black-and-White-Photography',
   'western cowboy art': '/Blog/what-is-western-cowboy-art',
   'western cowboy photography': '/Western-Cowboy-Photography',
   'western cowboy portraits': '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits',
+  'western frontier art': '/Western-Frontier-Art',
   'western fine art': '/Blog/what-is-western-fine-art'
 };
 

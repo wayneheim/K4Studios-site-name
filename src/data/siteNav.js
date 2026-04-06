@@ -578,27 +578,18 @@ export const siteNav = [
  
   "children": [
     {
-      "label": "K4 Select Series",
-      "href": "",
+      "label": "Engrained Series",
+      "href": "/Other/K4-Select-Series/Engrained",
       "code": "O-S4",
-      "slug": "k4-select-series",
+      "slug": "engrained-series",
       "type": "collection",
       "children": [
         {
-          "label": "Engrained",
-          "href": "/Other/K4-Select-Series/Engrained",
+          "label": "Engrained Series",
+          "href": "/Other/K4-Select-Series/Engrained/Engrained-Series",
           "code": "O-S4-Ss1",
-          "slug": "engrained",
-          "type": "collection",
-          "children": [
-            {
-              "label": "Engrained Series",
-              "href": "/Other/K4-Select-Series/Engrained/Engrained-Series",
-              "code": "O-S4-Ss1-Sss1",
-              "slug": "engrained-series",
-              "type": "gallery-source"
-            }
-          ]
+          "slug": "engrained-series-gallery",
+          "type": "gallery-source"
         },
      //   {
   //        "label": "5x7 Prints",

@@ -231,6 +231,26 @@ export function buildContextualAlt(
  * Each includes semantic signals for sufficiency checking.
  */
 export const hubPageContexts: Record<string, PageContext> = {
+  '/Galleries/Painterly-Fine-Art-Photography': {
+    topic: 'Painterly Fine Art Photography',
+    keywordPool: [
+      'painterly fine art photography',
+      'painterly photography',
+      'painterly style photography',
+      'fine art photography',
+      'cinematic photography',
+    ],
+    semanticSignals: [
+      'painterly',
+      'fine art',
+      'photography',
+      'narrative',
+      'atmosphere',
+      'tonal',
+      'pictorialist',
+      'cinematic',
+    ],
+  },
   '/Western-Fine-Art-Photography': {
     topic: 'Western Fine Art Photography',
     keywordPool: [
@@ -253,6 +273,26 @@ export const hubPageContexts: Record<string, PageContext> = {
       'vaquero',
     ],
   },
+  '/Western-Photography-Art': {
+    topic: 'Western Photography Art',
+    keywordPool: [
+      'Western photography art',
+      'Western art photography',
+      'American West photography art',
+      'frontier photography art',
+      'painterly Western photography',
+    ],
+    semanticSignals: [
+      'western',
+      'art',
+      'photography',
+      'american west',
+      'frontier',
+      'cowboy',
+      'narrative',
+      'painterly',
+    ],
+  },
   '/Western-Cowboy-Photography': {
     topic: 'Western Cowboy Photography',
     keywordPool: [
@@ -273,10 +313,51 @@ export const hubPageContexts: Record<string, PageContext> = {
       'horseman',
     ],
   },
+  '/Western-Frontier-Art': {
+    topic: 'Western Frontier Art',
+    keywordPool: [
+      'Western frontier art',
+      'American frontier art',
+      'art of the American frontier',
+      'frontier art',
+      'old west frontier art',
+    ],
+    semanticSignals: [
+      'frontier',
+      'western',
+      'american west',
+      'cowboy',
+      'indigenous',
+      'settlement',
+      'history',
+      'nineteenth century',
+    ],
+  },
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits': {
+    topic: 'Western Cowboy Portraits',
+    keywordPool: [
+      'Western cowboy portraits',
+      'Western portrait photography',
+      'cowboy portraits',
+      'painterly cowboy portraits',
+      'frontier character portraits',
+    ],
+    semanticSignals: [
+      'cowboy',
+      'portrait',
+      'western',
+      'frontier',
+      'american west',
+      'ranch',
+      'outlaw',
+      'historical',
+    ],
+  },
   '/Western-Black-and-White-Photography': {
     topic: 'Western Black and White Photography',
     keywordPool: [
       'Western black and white photography',
+      'black and white Western photography',
       'black and white cowboy photography',
       'monochrome Western art',
       'fine art black and white Western',
@@ -308,6 +389,46 @@ export const hubPageContexts: Record<string, PageContext> = {
       'artistic',
       'cinematic',
       'frontier',
+    ],
+  },
+  '/Contemporary-Western-Art': {
+    topic: 'Contemporary Western Art',
+    keywordPool: [
+      'contemporary Western art',
+      'contemporary Western photography',
+      'modern Western art',
+      'contemporary art of the American West',
+      'present-tense Western art',
+    ],
+    semanticSignals: [
+      'contemporary',
+      'modern',
+      'western',
+      'american west',
+      'frontier',
+      'cowboy',
+      'painterly',
+      'present-tense',
+    ],
+  },
+  '/Historical-Western-Art': {
+    topic: 'Historical Western Art',
+    keywordPool: [
+      'historical Western art',
+      'historical Western photography',
+      'historically themed Western photography',
+      'frontier art photography',
+      '19th-century Western art',
+    ],
+    semanticSignals: [
+      'historical',
+      'frontier',
+      'american west',
+      'cowboy',
+      'indigenous',
+      '19th-century',
+      'painterly',
+      'western',
     ],
   },
   '/Western-Wall-Art': {

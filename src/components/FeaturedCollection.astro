@@ -248,6 +248,17 @@ const structuredData = JSON.stringify({
         if (window.location.hostname === 'localhost') return;
 
         sendK4('cowboy_jump', { galleryId: analyticsLabel, pageType: 'landing' });
+
+        // Home-only shadow event for controlled tracker comparison.
+        if (analyticsLabel === 'Cowboy_Jump_Home') {
+          sendK4('pilot_home_cowboy_jump_click', {
+            galleryId: analyticsLabel,
+            pageType: 'landing',
+            sourceLayer: 'pilot_home_v1_cowboy_jump_click',
+            theme: 'pilot_home_v1',
+            trigger: 'shadow_test'
+          });
+        }
       });
     }
     

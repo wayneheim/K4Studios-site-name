@@ -61,6 +61,7 @@ export const americanWesternArtStory = [
     paragraphs: [
       "The work presented at K4 Studios approaches Western art through painterly photography.",
       "Using tonal sculpting, layered textures, and controlled color grading, photographs are developed until they carry the visual weight of painting while remaining rooted in the authenticity of the photographic moment.",
+      "For the broader category spanning painting, sculpture, and photography, see <a href=\"/Blog/what-is-western-fine-art\">Western Fine Art</a>, where the standard is defined by authorship rather than medium.",
       "That approach becomes more specific in <a href=\"/Western-Fine-Art-Photography\">Western Fine Art Photography</a> and broader in <a href=\"/Galleries/Painterly-Fine-Art-Photography\">Painterly Fine Art Photography</a>, where the same authored discipline is applied across multiple subjects.",
       "The goal is not to imitate painting, but to continue the Western art tradition through the language of photography.",
       "Each image becomes a narrative fragment of the American West—an unfinished story the viewer is invited to enter."

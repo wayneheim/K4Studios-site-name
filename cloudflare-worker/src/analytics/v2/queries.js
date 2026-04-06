@@ -213,6 +213,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
   }
   const window = getV2WindowConfig(windowKey);
   const windowClause = window.canonicalClause;
+  const rawWindowClause = windowClause.replace(/datetime\(occurred_at\)/g, 'datetime(ts)');
   const sessionWindowClause = window.sessionClause;
   const visitorWindowClause = window.visitorClause;
   const entryWindowClause = window.entryClause;
@@ -252,7 +253,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
     ELSE referrer_host
   END`;
 
-  const [refreshStatus, counts, families, interactionActions, topEntryPages, topSitePages, topImages, externalSources, sessionGeography, imageViewGeography, entrySourceMix, imageViewSourceMix, suspiciousSessionGeography, suspiciousDatacenterSessionGeography, internalReentryMix] = await Promise.all([
+  const [refreshStatus, counts, families, interactionActions, topEntryPages, topSitePages, topImages, externalSources, sessionGeography, imageViewGeography, entrySourceMix, firstImageHopMix, firstImagePathMix, suspiciousSessionGeography, suspiciousDatacenterSessionGeography, internalReentryMix] = await Promise.all([
     getV2RefreshStatus(env),
     env.DB.prepare(
       `WITH suspicious_internal_shallow AS (
@@ -366,7 +367,123 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
               FROM canonical_events_v2
               WHERE ${windowClause}
                 AND event_family = 'image_view'
-                AND session_id IN (SELECT session_id FROM internal_test_sessions)) AS internal_test_image_views`
+                AND session_id IN (SELECT session_id FROM internal_test_sessions)) AS internal_test_image_views,
+              (SELECT COUNT(*)
+               FROM raw_events
+               WHERE ${rawWindowClause}
+                 AND lower(COALESCE(event_type, '')) = 'page_view'
+                 AND COALESCE(page, '') = '/') AS home_page_view_events,
+              (SELECT COUNT(*)
+               FROM raw_events
+               WHERE ${rawWindowClause}
+                 AND lower(COALESCE(event_type, '')) = 'pilot_home_page_view'
+                 AND COALESCE(page, '') = '/') AS pilot_home_page_view_events,
+              (SELECT COUNT(*)
+               FROM raw_events
+               WHERE ${rawWindowClause}
+                 AND lower(COALESCE(event_type, '')) = 'cowboy_jump'
+                 AND COALESCE(page, '') = '/'
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home') AS home_cowboy_jump_events,
+              (SELECT COUNT(*)
+               FROM raw_events
+               WHERE ${rawWindowClause}
+                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND COALESCE(page, '') = '/'
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home') AS pilot_home_cowboy_jump_events,
+              (SELECT COUNT(*)
+               FROM raw_events
+               WHERE ${rawWindowClause}
+                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND COALESCE(page, '') = '/'
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
+                 AND COALESCE(country, '') <> '') AS pilot_home_cowboy_geo_coverage,
+              (SELECT COUNT(*)
+               FROM raw_events
+               WHERE ${rawWindowClause}
+                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND COALESCE(page, '') = '/'
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
+                 AND COALESCE(ua, '') <> '') AS pilot_home_cowboy_ua_coverage,
+              (SELECT COUNT(*)
+               FROM raw_events
+               WHERE ${rawWindowClause}
+                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND COALESCE(page, '') = '/'
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
+                 AND COALESCE(referer, '') <> ''
+                 AND lower(COALESCE(referer, '')) <> 'unknown') AS pilot_home_cowboy_referrer_coverage,
+              (SELECT COUNT(*)
+               FROM raw_events
+               WHERE ${rawWindowClause}
+                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND COALESCE(page, '') = '/'
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
+                 AND COALESCE(ip, '') <> '') AS pilot_home_cowboy_ip_coverage,
+              (SELECT COUNT(*)
+               FROM raw_events
+               WHERE ${rawWindowClause}
+                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND COALESCE(page, '') = '/'
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
+                 AND (COALESCE(city, '') <> '' OR COALESCE(region, '') <> '')) AS pilot_home_cowboy_city_region_coverage,
+              (SELECT COUNT(DISTINCT COALESCE(NULLIF(session_id, ''), 'none'))
+               FROM raw_events
+               WHERE ${rawWindowClause}
+                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND COALESCE(page, '') = '/'
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home') AS pilot_home_cowboy_sessions,
+              (SELECT COUNT(DISTINCT COALESCE(NULLIF(visitor_id, ''), 'none'))
+               FROM raw_events
+               WHERE ${rawWindowClause}
+                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND COALESCE(page, '') = '/'
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home') AS pilot_home_cowboy_visitors,
+              (SELECT COUNT(*)
+               FROM (
+                 WITH trusted_page_loads AS (
+                   SELECT
+                     session_id,
+                     ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY occurred_at ASC, id ASC) AS seq,
+                     page_path
+                   FROM canonical_events_v2
+                   WHERE ${windowClause}
+                     AND canonical_page_load = 1
+                     AND metric_scope = 'primary'
+                     AND session_id IS NOT NULL
+                     AND is_bot = 0
+                     AND session_id NOT IN (SELECT session_id FROM suspicious_internal_shallow)
+                     AND session_id NOT IN (SELECT session_id FROM suspicious_datacenter_shallow)
+                     AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)
+                     AND page_path IS NOT NULL
+                 )
+                 SELECT session_id
+                 FROM trusted_page_loads
+                 GROUP BY session_id
+                 HAVING MIN(CASE WHEN page_path LIKE '%/i-%' THEN seq END) IS NOT NULL
+               )) AS sessions_reaching_first_image,
+              (SELECT COUNT(*)
+               FROM (
+                 WITH trusted_page_loads AS (
+                   SELECT
+                     session_id,
+                     ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY occurred_at ASC, id ASC) AS seq,
+                     page_path
+                   FROM canonical_events_v2
+                   WHERE ${windowClause}
+                     AND canonical_page_load = 1
+                     AND metric_scope = 'primary'
+                     AND session_id IS NOT NULL
+                     AND is_bot = 0
+                     AND session_id NOT IN (SELECT session_id FROM suspicious_internal_shallow)
+                     AND session_id NOT IN (SELECT session_id FROM suspicious_datacenter_shallow)
+                     AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)
+                     AND page_path IS NOT NULL
+                 )
+                 SELECT session_id
+                 FROM trusted_page_loads
+                 GROUP BY session_id
+                 HAVING MIN(CASE WHEN page_path LIKE '%/i-%' THEN seq END) = 1
+               )) AS direct_to_first_image_sessions`
     ).first(),
     env.DB.prepare(
       `SELECT event_family, COUNT(*) AS count
@@ -529,21 +646,109 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
        LIMIT 10`
     ).all(),
     env.DB.prepare(
-      `SELECT
-         ${sourceLabelExpression} AS source_label,
-         COUNT(*) AS views
-       FROM canonical_events_v2
-       WHERE ${windowClause}
-         AND event_family = 'image_view'
-         AND metric_scope = 'primary'
-         AND session_id IS NOT NULL
-         AND is_bot = 0
-         AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
-        AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
-         AND session_id NOT IN (${internalTestSessionSubquery})
-       GROUP BY source_label
-       ORDER BY views DESC, source_label ASC
-       LIMIT 10`
+      `WITH trusted_page_loads AS (
+         SELECT
+           session_id,
+           ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY occurred_at ASC, id ASC) AS seq,
+           page_path
+         FROM canonical_events_v2
+         WHERE ${windowClause}
+           AND canonical_page_load = 1
+           AND metric_scope = 'primary'
+           AND session_id IS NOT NULL
+           AND is_bot = 0
+           AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
+           AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
+           AND session_id NOT IN (${internalTestSessionSubquery})
+           AND page_path IS NOT NULL
+       ),
+       first_image AS (
+         SELECT
+           session_id,
+           MIN(seq) AS first_image_seq
+         FROM trusted_page_loads
+         WHERE page_path LIKE '%/i-%'
+         GROUP BY session_id
+       )
+       SELECT
+         first_image_seq - 1 AS hop_count,
+         COUNT(*) AS sessions
+       FROM first_image
+       GROUP BY hop_count
+       ORDER BY hop_count ASC
+       LIMIT 12`
+    ).all(),
+    env.DB.prepare(
+      `WITH trusted_page_loads AS (
+         SELECT
+           session_id,
+           ROW_NUMBER() OVER (PARTITION BY session_id ORDER BY occurred_at ASC, id ASC) AS seq,
+           page_path
+         FROM canonical_events_v2
+         WHERE ${windowClause}
+           AND canonical_page_load = 1
+           AND metric_scope = 'primary'
+           AND session_id IS NOT NULL
+           AND is_bot = 0
+           AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
+           AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
+           AND session_id NOT IN (${internalTestSessionSubquery})
+           AND page_path IS NOT NULL
+       ),
+       first_image AS (
+         SELECT
+           session_id,
+           MIN(seq) AS first_image_seq
+         FROM trusted_page_loads
+         WHERE page_path LIKE '%/i-%'
+         GROUP BY session_id
+       ),
+       session_paths AS (
+         SELECT
+           ordered.session_id,
+           ordered.first_image_seq - 1 AS hop_count,
+           ordered.path_sequence
+         FROM (
+           SELECT
+             tpl.session_id,
+             fi.first_image_seq,
+             tpl.seq,
+             GROUP_CONCAT(tpl.page_path, ' -> ') OVER (
+               PARTITION BY tpl.session_id
+               ORDER BY tpl.seq
+               ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+             ) AS path_sequence
+           FROM trusted_page_loads tpl
+           JOIN first_image fi ON fi.session_id = tpl.session_id
+           WHERE tpl.seq <= fi.first_image_seq
+         ) AS ordered
+         WHERE ordered.seq = ordered.first_image_seq
+       ),
+       grouped_paths AS (
+         SELECT
+           hop_count,
+           path_sequence,
+           COUNT(*) AS sessions
+         FROM session_paths
+         GROUP BY hop_count, path_sequence
+       ),
+       ranked_paths AS (
+         SELECT
+           hop_count,
+           path_sequence,
+           sessions,
+           ROW_NUMBER() OVER (PARTITION BY hop_count ORDER BY sessions DESC, path_sequence ASC) AS rank_within_hop
+         FROM grouped_paths
+       )
+       SELECT
+         hop_count,
+         path_sequence,
+         sessions,
+         rank_within_hop
+       FROM ranked_paths
+       WHERE rank_within_hop <= 2
+       ORDER BY hop_count ASC, rank_within_hop ASC
+       LIMIT 24`
     ).all(),
     env.DB.prepare(
       `WITH landing_rows AS (
@@ -623,7 +828,8 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
     sessionGeography: sessionGeography?.results || [],
     imageViewGeography: imageViewGeography?.results || [],
     entrySourceMix: entrySourceMix?.results || [],
-    imageViewSourceMix: imageViewSourceMix?.results || [],
+    firstImageHopMix: firstImageHopMix?.results || [],
+    firstImagePathMix: firstImagePathMix?.results || [],
     suspiciousSessionGeography: suspiciousSessionGeography?.results || [],
     suspiciousDatacenterSessionGeography: suspiciousDatacenterSessionGeography?.results || [],
     internalReentryMix: internalReentryMix?.results || []

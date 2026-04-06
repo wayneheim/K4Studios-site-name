@@ -6,6 +6,7 @@ export const painterlyStory = [
     paragraphs: [
       "Painterly fine art photography is a narrative-driven photographic discipline rooted in atmosphere, emotional weight, and intention. Rather than documenting what happened, it explores what it felt like — using light, tone, structure, and restraint to carry story through a single frame.",
       "At K4 Studios, painterly photography represents one of two core approaches to image-making. Some work here is rendered through a painterly, cinematic lens. Other work is presented as traditional fine art photography. Both are authored with intention. This page focuses on the painterly discipline.",
+      "The term is often flattened into style language — soft focus, painterly edits, or photographs that merely resemble paintings. Here it means something stricter: photographic work built with the control, hierarchy, and emotional shaping we associate with serious painting.",
       "Wayne Heim's painterly photography spans <a href='/Blog/what-is-western-fine-art-photography' style='color:#1a5f7a; text-decoration:underline;'>Western fine art</a> narratives, historically themed portraits, landscapes, and Americana subjects — unified not by subject matter, but by narrative construction and emotional truth.",
       "Within that broader discipline, <a href=\"/Western-Fine-Art-Photography\">Western Fine Art Photography</a> focuses the painterly approach on frontier subject matter, while <a href=\"/American-Western-Art\">American Western Art</a> places that work inside the longer lineage of the West."
     ]

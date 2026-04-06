@@ -3,7 +3,7 @@ export const westernArtFAQ = [
     q: "What is Western photography art?",
     a: [
       "Western photography art is photographic work that interprets the American West through artistic craft, narrative storytelling, and deliberate visual design rather than simple documentation.",
-      "It places photography within the broader Western art tradition historically shaped by painters and illustrators."
+      "It is often called Western art photography as well. In both cases, the term places photography within the broader Western art tradition historically shaped by painters and illustrators."
     ],
   },
 

@@ -68,10 +68,10 @@ export const gridImages = [...colorGrid, ...bwGrid, ...naGrid];
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
 export const hero = {
-  heading: "Western Photography Prints (Limited Edition)",
+  heading: "Western Photography Prints",
   paragraphs: [
-    "Limited edition Western photography prints from K4 Studios \u2014 cinematic cowboy portraits and frontier narratives created through Wayne Heim\u2019s <a href='/Other/One-Image-Movie' class='cl-hero__link'>One-Image Movie\u2122</a> approach to Western fine art photography. Each image is composed to carry the weight of a larger story, then produced as a museum-grade archival print built to last.",
-    "Available in structured collector tiers ranging from open archival editions to ultra-limited signed canvases and proprietary Engrained\u2122 hardwood panels. Browse the collection below or contact the studio for custom sizing and corporate installations.",
+    "Western photography prints from K4 Studios are built for collectors who want more than rustic decor language or generic Western wall art. These are authored cowboy portraits, frontier narratives, and historically grounded Western images created through Wayne Heim's <a href='/Other/One-Image-Movie' class='cl-hero__link'>One-Image Movie\u2122</a> approach to fine art photography, then produced as museum-grade prints meant to live on a wall for years.",
+    "The collections below include black and white Western photography prints, color cowboy portraits, and Indigenous portrait work, available across archival paper, premium canvas, and proprietary Engrained\u2122 hardwood presentation. Browse by subject or compare collector tiers, sizes, and materials below.",
   ],
   ctaHref: "#prints-grid",
   ctaLabel: "Browse Limited Editions",
@@ -79,8 +79,8 @@ export const hero = {
 
 // ─── Editions Block ──────────────────────────────────────────────────────────
 export const editions = {
-  heading: "The K4 Collector Edition Structure",
-  intro: "Open Edition & Limited Edition Western Photography Prints by Wayne Heim",
+  heading: "Western Photography Print Formats and Collector Editions",
+  intro: "Western photography prints are available as open and limited editions across archival paper, canvas, and Engrained\u2122 hardwood formats.",
   tiers: [
     {
       name: "Sketch",
@@ -112,44 +112,44 @@ export const editions = {
 
 // ─── Sub-Category Links ──────────────────────────────────────────────────────
 export const subCategories = {
-  heading: "Explore Western Photography Collections",
+  heading: "Shop Western Photography Print Collections",
   links: [
     {
-      title: "Cowboy Portraits \u2014 Color",
+      title: "Color Western Photography Prints",
       href: colorPath,
-      description: "Painterly cowboy character studies in full color.",
+      description: "Painterly cowboy and frontier character studies offered as collectible color Western photography prints.",
     },
     {
-      title: "Cowboy Portraits \u2014 Black & White",
+      title: "Black and White Western Photography Prints",
       href: bwPath,
-      description: "Cinematic monochrome cowboy portraits with tonal depth.",
+      description: "Cinematic monochrome cowboy portraits and frontier scenes with tonal depth and museum-quality print presence.",
     },
     {
-      title: "Native American Portraits",
+      title: "Indigenous Western Portrait Prints",
       href: naPath,
-      description: "Painterly portraits honoring Native American Western heritage.",
+      description: "Painterly portrait prints honoring Native American Western heritage through research, restraint, and narrative presence.",
     },
   ],
 };
 
 // ─── Purchase Confidence Block ───────────────────────────────────────────────
 export const confidence = {
-  heading: "Museum-Quality Presentation",
+  heading: "Why Collect These Western Photography Prints",
   points: [
     "Archival papers rated for 100+ year longevity",
     "Large format options up to 60\u2033 and beyond",
     "Hand-signed editions (Legend tier and above)",
     "Certificate of authenticity with every limited edition",
     "Proprietary Engrained\u2122 wood panel process",
-    "Custom sizing and corporate installation available",
+    "Custom sizing, framing guidance, and corporate installation available",
   ],
 };
 
 // ─── Page Meta ───────────────────────────────────────────────────────────────
 export const pageMeta = {
-  title: "Western Photography Prints | Limited Edition Fine Art",
+  title: "Western Photography Prints | Limited Edition Cowboy & Frontier Prints – K4 Studios",
   description:
-    "Limited edition Western photography prints featuring cinematic cowboy portraits, historical themes, and painterly fine art imagery. Museum-quality prints available in multiple sizes.",
+    "Western photography prints by Wayne Heim featuring cowboy portraits, black and white frontier imagery, and historically grounded fine art prints in archival paper, canvas, and Engrained\u2122 wood formats.",
   ogImage: "i-ncFcHDM",
 };
 

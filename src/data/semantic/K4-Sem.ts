@@ -159,6 +159,8 @@ facingHistory: {
 
     // Western-historical bridge (door page cross-authority)
     { phrase: "historical western photography", rating: 4, use: true },
+    { phrase: "historically themed western photography", rating: 4, use: true },
+    { phrase: "historical themed western photography", rating: 3, use: true },
     { phrase: "american frontier history", rating: 4, use: true },
 
     // Long-tail / glossary only (semantic expansion)
@@ -213,7 +215,6 @@ westernFineArtPhotographyDefinition: {
     { phrase: "Western Fine Art Photography", rating: 5, use: true },
     { phrase: "western photography", rating: 5, use: true },
     { phrase: "western fine art", rating: 5, use: true },
-    { phrase: "western art photography", rating: 5, use: true },
     { phrase: "American West photography", rating: 4, use: true },
     { phrase: "fine art western", rating: 4, use: true },
     { phrase: "western portrait photography", rating: 4, use: true },
@@ -221,6 +222,21 @@ westernFineArtPhotographyDefinition: {
     { phrase: "frontier fine art photography", rating: 4, use: true },
     { phrase: "western fine art prints", rating: 3, use: true },
     { phrase: "western art prints", rating: 3, use: true },
+  ],
+  imagePhrases: []
+},
+
+westernPhotographyArtHub: {
+  path: "/Western-Photography-Art",
+  def: "The bridge page for Western photography art — also phrased as Western art photography — connecting photographic authorship to the larger Western art tradition.",
+  fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  landingPhrases: [
+    { phrase: "Western Photography Art", rating: 5, use: true },
+    { phrase: "western photography art", rating: 5, use: true },
+    { phrase: "Western Art Photography", rating: 5, use: true },
+    { phrase: "western art photography", rating: 5, use: true },
+    { phrase: "American West photography art", rating: 4, use: true },
+    { phrase: "frontier photography art", rating: 4, use: true },
   ],
   imagePhrases: []
 },
@@ -482,6 +498,18 @@ glossaryBlackWhiteWesternArt: {
   def: "Black and white Western art strips the American frontier to its essential elements—contrast, character, and timeless form. Unlike decorative Western wall art, fine art monochrome Western photography emphasizes tonal craft, emotional weight, and narrative depth that transcends trend. See <a href='/Western-Black-and-White-Photography'>Western Black and White Photography</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
   landingPhrases: [
     { phrase: "black and white western art", rating: 3, use: false },
+  ],
+  imagePhrases: []
+},
+
+glossaryContemporaryWesternArt: {
+  path: "/Contemporary-Western-Art",
+  def: "Contemporary Western art carries the subject, history, and emotional weight of the American West into present-day visual language. In photography, it extends the Western tradition through current craft, psychological presence, and authorship rather than nostalgia alone. Explore <a href='/Contemporary-Western-Art'>Contemporary Western Art</a> | <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>.",
+  landingPhrases: [
+    { phrase: "contemporary Western art", rating: 5, use: true, link: "/Contemporary-Western-Art" },
+    { phrase: "modern Western art", rating: 4, use: true, link: "/Contemporary-Western-Art" },
+    { phrase: "contemporary Western photography", rating: 4, use: true, link: "/Contemporary-Western-Art" },
+    { phrase: "contemporary art of the American West", rating: 4, use: true, link: "/Contemporary-Western-Art" },
   ],
   imagePhrases: []
 },

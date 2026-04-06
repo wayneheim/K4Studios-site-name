@@ -1,0 +1,365 @@
+---
+export const prerender = true;
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LandingHeader from '@/components/Landing-Header.jsx';
+import SiteFooter from '@/components/Footer.astro';
+import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
+
+import '@/styles/global.css';
+
+const pagePath = '/authentic-cowboy-life';
+const canonicalUrl = `https://www.k4studios.com${pagePath}`;
+const pageTitle = 'Authentic Cowboy Life in Western Art: Before the Myth, the Work';
+const pageDescription = 'Explore authentic cowboy life through Western art and photography—bridging frontier labor, modern ranch reality, and the truth behind the cowboy myth.';
+
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}`;
+
+const headerImage = {
+  id: 'i-H8VZWJM',
+  src: getProxySrc('i-H8VZWJM', 'l'),
+  alt: 'Authentic cowboy life in Western art — portrait of a weathered cowboy carrying labor, silence, and frontier pressure'
+};
+
+const image1 = {
+  id: 'i-mqDfN5z',
+  src: getProxySrc('i-mqDfN5z', 'l'),
+  alt: 'Cowboy life in Western art — frontier labor and persistence at the waterline'
+};
+
+const image2 = {
+  id: 'i-r5Pb7zJ',
+  src: getProxySrc('i-r5Pb7zJ', 'l'),
+  alt: 'Authentic cowboy life — a frontier scout reading signs in dust and silence'
+};
+
+const image3 = {
+  id: 'i-44jcjTQ',
+  src: getProxySrc('i-44jcjTQ', 'l'),
+  alt: 'Reality behind the cowboy myth — interior frontier tension rendered as Western fine art photography'
+};
+
+const image4 = {
+  id: 'i-qMQf7b6',
+  src: getProxySrc('i-qMQf7b6', 'l'),
+  alt: 'Historical cowboy life in black and white — consequence, preparation, and frontier restraint'
+};
+
+const structuredImageUrls = [
+  getAbsoluteProxySrc(headerImage.id, 'l'),
+  getAbsoluteProxySrc(image1.id, 'l'),
+  getAbsoluteProxySrc(image2.id, 'l'),
+  getAbsoluteProxySrc(image3.id, 'l'),
+  getAbsoluteProxySrc(image4.id, 'l')
+];
+
+const breadcrumbStructuredData = getBreadcrumbList([
+  { name: 'Home', item: 'https://www.k4studios.com/' },
+  { name: 'Authentic Cowboy Life', item: canonicalUrl },
+]);
+
+const structuredData = getStructuredData({
+  type: 'Article',
+  data: {
+    headline: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl,
+    image: structuredImageUrls,
+    articleSection: [
+      'Before the Legend',
+      'The Birth of the Cowboy: Labor Before Legend',
+      'From Labor to Legend: How the Cowboy Became Myth',
+      'Witnessing a Vanishing World',
+      'Work, Risk, and Pressure in Authentic Cowboy Life',
+      'Authenticity vs Aesthetic in Western Imagery',
+      'Historical Cowboy and Modern Working Cowboy',
+      'Why Authentic Cowboy Life Matters in Western Art'
+    ],
+    keywords: [
+      'authentic cowboy life',
+      'historical cowboy life',
+      'reality behind the cowboy myth',
+      'western art cowboy life',
+      'cowboy life in western photography',
+      'working cowboy life',
+      'frontier labor in western art'
+    ],
+    author: {
+      '@type': 'Person',
+      name: 'Wayne Heim'
+    }
+  },
+  defaults: {
+    creatorName: 'Wayne Heim',
+    creatorUrl: 'https://www.k4studios.com/'
+  }
+});
+
+const meta = {
+  description: pageDescription,
+  keywords: 'authentic cowboy life, historical cowboy life, reality behind the cowboy myth, cowboy life in western photography, frontier labor in western art, working cowboy life',
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogType: 'article',
+  ogUrl: canonicalUrl,
+  ogImage: getAbsoluteProxySrc(headerImage.id, 'l'),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterUrl: canonicalUrl,
+  twitterImage: getAbsoluteProxySrc(headerImage.id, 'l'),
+  twitterCard: 'summary_large_image'
+};
+
+const pageBreadcrumb = `Other › <a href='/' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wayne Heim</a> › Authentic Cowboy Life`;
+const articleTitleStyle = 'font-size:clamp(1.6rem, 2.45vw, 2rem); font-weight:700; margin-bottom:0.5rem; line-height:1.08; letter-spacing:-0.026em;';
+const imageGridStyle = 'display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:1rem; margin:1.5rem 0 2rem; align-items:start;';
+const figureStyle = 'margin:0; text-align:center;';
+const figureImageStyle = 'width:100%; aspect-ratio:3 / 4; object-fit:cover; border-radius:8px; display:block;';
+const figureCaptionStyle = 'font-size:0.85rem; color:#666; margin-top:0.55rem; font-style:italic; text-align:center; line-height:1.5; max-width:92%; margin-left:auto; margin-right:auto;';
+const image1Style = `${figureImageStyle} object-position: 68% center;`;
+const image2Style = `${figureImageStyle} object-position: 22% center;`;
+---
+
+<BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbStructuredData} meta={meta}>
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={pageBreadcrumb} />
+    </div>
+
+    <section style="width:100%; overflow:hidden; margin-bottom:0;">
+      <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White">
+        <div style="width:100%; height:400px; overflow:hidden; position:relative;">
+          <img
+            src={headerImage.src}
+            alt={headerImage.alt}
+            style="width:100%; height:100%; object-fit:cover; object-position:center 28%;"
+          />
+        </div>
+      </a>
+    </section>
+
+    <section style="text-align:center; padding:2rem 1rem 2rem;">
+      <h1 style={articleTitleStyle}>
+        Authentic Cowboy Life in Western Art: Before the Myth, the Work
+      </h1>
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <article class="story-block space-y-4">
+        <p><strong>Before the legend, there was the life.</strong></p>
+
+        <p>The cowboy did not begin as myth, symbol, or icon. He began as labor: distance, weather, livestock, and decisions made under pressure. What we now recognize as the cowboy was shaped long before it was simplified.</p>
+
+        <p>This is where <a href="/Blog/what-is-western-art">Western art</a> either holds or collapses. The strongest work does not start with the silhouette. It returns to the conditions that created it.</p>
+
+        <div class="section-heading-with-line">
+          <h2>The Birth of the Cowboy: Labor Before Legend</h2>
+        </div>
+
+        <p>After the Civil War, cattle needed moving, land opened west, and the labor economy of the frontier demanded men who could ride, track, rope, endure weather, and survive long periods of isolation. The cowboy emerged from that pressure, not from romance. He was part trail hand, part ranch laborer, part problem-solver in a world where help was far away and failure carried real cost.</p>
+
+        <p>That life did not appear from nowhere. Vaquero traditions shaped horsemanship, equipment, rope work, and much of the practical knowledge later absorbed into Anglo cowboy culture. Add cattle drives, open-range economics, bad water, rough ground, and weeks of monotony broken by danger, and you get the conditions that gave the cowboy his historical form.</p>
+
+        <p style="font-size:0.94rem; color:#6c6258; font-style:italic; margin-top:1rem; margin-bottom:-0.25rem;">Not posed moments, but working ones:</p>
+        <div class="example-images" style={imageGridStyle}>
+          <figure style={figureStyle}>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+              <img src={image1.src} alt={image1.alt} loading="lazy" style={image1Style} />
+            </a>
+            <figcaption style={figureCaptionStyle}>Frontier labor, patience, and stubborn resolve</figcaption>
+          </figure>
+          <figure style={figureStyle}>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image2.id}`}>
+              <img src={image2.src} alt={image2.alt} loading="lazy" style={image2Style} />
+            </a>
+            <figcaption style={figureCaptionStyle}>Reading land, weather, and consequence</figcaption>
+          </figure>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>From Labor to Legend: How the Cowboy Became Myth</h2>
+        </div>
+
+        <p>Once the cowboy entered public imagination, artists and storytellers helped raise him from worker to symbol. Painters such as Frederic Remington and Charles M. Russell gave the West dramatic visual language: riders under pressure, dust, distance, action, resolve. Later, film extended that language until the cowboy became one of the clearest figures in American myth.</p>
+
+        <p>That myth is not false so much as simplified. It preserves courage, danger, and endurance, but often compresses the harder truth into a cleaner shape. Western art still draws power from that symbolic layer, yet the deepest work remembers that legend rests on labor, habit, weather, risk, and the lived texture of actual cowboy life.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Witnessing a Vanishing World</h2>
+        </div>
+
+        <p>There was a narrow window where the West was still being lived, but already slipping. A few saw it clearly enough to record it.</p>
+
+        <p>Artists like Charles M. Russell were not reconstructing a myth from a safe distance. They worked from memory, proximity, and lived contact with a world already fading. What they held onto was not spectacle, but structure: how a man sat a horse, how distance felt, how weather shaped decisions.</p>
+
+        <p>Early <a href="/Western-Cowboy-Photography">cowboy photography</a> followed similar ground. It did not begin by chasing legend. It recorded conditions: tools, faces, posture, and the quiet evidence of labor before the West was cleaned into symbol. That witness layer matters because it sits closest to the source. Before the West became a category, it was a life being observed, and in some cases preserved before it disappeared into its own mythology.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Work, Risk, and Pressure in Authentic Cowboy Life</h2>
+        </div>
+
+        <p>Authentic cowboy life is built less from spectacle than from repetition under pressure. Labor comes first: saddling, moving stock, fixing tack, watching weather, reading land, handling animals that do not care about romance. Risk is constant, but not always dramatic. It often arrives as exhaustion, misjudgment, distance, injury, or one bad decision made too late in the day.</p>
+
+        <p>Isolation is part of the psychology. Long stretches of quiet sharpen awareness. A cowboy learns to read small signs, control emotion, and act without ceremony when something turns. That is why serious Western imagery gains so much when it emphasizes posture, stillness, tools, weather, and consequence. Those are not accessories. They are the structure of the life.</p>
+
+        <p>In Wayne Heim’s work, that pressure appears as character rather than performance. The face matters. The hands matter. The wear in the clothing matters. A cowboy standing in silence can carry more truth than a staged burst of action if the image understands what that silence costs.</p>
+
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:2.4rem; margin-bottom:0.5rem; color:#555;">The Reality Behind the Cowboy Myth</h3>
+        <p style="font-size:0.94rem; color:#6c6258; font-style:italic; margin-top:0.35rem; margin-bottom:-0.25rem;">Where pressure shows, not performs:</p>
+        <div class="example-images" style={imageGridStyle}>
+          <figure style={figureStyle}>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image3.id}`}>
+              <img src={image3.src} alt={image3.alt} loading="lazy" style={figureImageStyle} />
+            </a>
+            <figcaption style={figureCaptionStyle}>Pressure held inside the frame, not played for spectacle</figcaption>
+          </figure>
+          <figure style={figureStyle}>
+            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/${image4.id}`}>
+              <img src={image4.src} alt={image4.alt} loading="lazy" style={figureImageStyle} />
+            </a>
+            <figcaption style={figureCaptionStyle}>Preparation, consequence, and interior frontier life</figcaption>
+          </figure>
+        </div>
+
+        <div class="section-heading-with-line">
+          <h2>Authenticity vs Aesthetic in Western Imagery</h2>
+        </div>
+
+        <p>The cowboy can be treated as costume, or he can be treated as condition. One gives you surface: the hat, the stance, the easy silhouette. The other gives you pressure: worn leather, a guarded posture, tools that have done real work, and silence that carries more than styling ever can.</p>
+
+        <p>Surface-level Western imagery fails when it mistakes recognition for truth. It borrows the signifiers and misses the structure. The result is decoration without consequence, nostalgia without weight, and imagery that collapses the minute you look past the outline.</p>
+
+        <p>Authenticity lives in lived detail. It lives in how clothing breaks, how a hand rests, how distance settles into the body. That is where serious <a href="/Western-Cowboy-Photography">cowboy photography</a> separates from Western aesthetic. It does not borrow the figure. It returns to the conditions that formed him.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Historical Cowboy and Modern Working Cowboy</h2>
+        </div>
+
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:1.5rem; margin-bottom:0.5rem; color:#555;">Historical Cowboy</h3>
+        <p><a href="/Blog/what-is-historical-western-photography">Historical cowboy life</a> belonged to the frontier economy: cattle drives, open range, limited infrastructure, and a harder dependence on horse, rope, weather, and distance. The stakes were shaped by the nineteenth-century West itself. Tools were simpler, isolation was deeper, and survival depended even more directly on physical skill, endurance, and judgment.</p>
+
+        <h3 style="font-size:1.1rem; font-weight:600; margin-top:1.5rem; margin-bottom:0.5rem; color:#555;">Modern Working Cowboy</h3>
+        <p>Modern working cowboy life exists in a changed world of trucks, fences, markets, and contemporary ranch operations. Yet not everything changed. The work still asks for stamina, animal knowledge, early hours, bad weather tolerance, and calm decision-making under pressure. The myth survives because the core virtues attached to cowboy life were not invented whole cloth. They were distilled from conditions that still echo today.</p>
+
+        <p>The historical-to-modern comparison sharpens the subject. It lets the viewer see both continuity and change: the old frontier reality that gave birth to the cowboy legend, and the present-day labor that keeps part of that reality alive.</p>
+
+        <div class="section-heading-with-line">
+          <h2>Why Authentic Cowboy Life Matters in Western Art</h2>
+        </div>
+
+        <p>Much Western imagery gives us the myth because the myth is legible at a glance. A hat, a horse, a horizon, and the viewer already knows the category. Stronger work goes further. It shows cost, tension, fatigue, discipline, and the moral pressure of a life built close to consequence.</p>
+
+        <p>Authentic cowboy life keeps <a href="/Blog/what-is-western-art">Western art</a> from collapsing into costume or decor. It gives the figure back his weight. In <a href="/Western-Fine-Art-Photography">Western fine art photography</a> especially, it allows the cowboy to appear not merely as symbol, but as a human presence carrying labor, memory, and the reality behind the cowboy myth.</p>
+
+        <div style="background:#f9f7f4; padding:2rem; border-radius:12px; margin-top:2.5rem;">
+          <h2 style="font-size:1.35rem; font-weight:700; margin-bottom:0.75rem; color:#2d241b;">Continue Into the Work</h2>
+          <p style="font-size:0.98rem; line-height:1.7; color:#564a3d; margin:0 0 1rem;">These ideas resolve into images. Explore how authentic cowboy life moves from condition into form:</p>
+          <div class="link-grid">
+            <a class="link-card" href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color">
+              <strong>Cowboy Gallery</strong>
+              <span>Enter the main color cowboy gallery where frontier labor, pressure, and character move from concept into images.</span>
+            </a>
+            <a class="link-card" href="/Blog/what-is-historical-western-photography">
+              <strong>Historical Western Photography</strong>
+              <span>See how historically grounded Western photography differs from modern ranch documentation and reenactment spectacle.</span>
+            </a>
+            <a class="link-card" href="/Cowboy-Fine-Art-Photography">
+              <strong>Cowboy Fine Art Photography</strong>
+              <span>Move from authentic subject matter into the cowboy portrait authority hub and its focused FAQ structure.</span>
+            </a>
+            <a class="link-card" href="/Western-Cowboy-Photography">
+              <strong>Western Cowboy Photography</strong>
+              <span>Follow the broader cowboy photography page for real subjects, working cowboys, and historically informed interpreters.</span>
+            </a>
+            <a class="link-card" href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image3.id}`}>
+              <strong>Select Image: Over My Dead Body</strong>
+              <span>A frontier interior shaped by pressure, resolve, and the kind of lived consequence that myth alone cannot explain.</span>
+            </a>
+            <a class="link-card" href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image2.id}`}>
+              <strong>Select Image: Signs</strong>
+              <span>A quieter image of cowboy judgment and attention, where work, risk, and conscience carry more than overt action.</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <SiteFooter />
+  </main>
+</BaseLayout>
+
+<style>
+  .story-section a {
+    color: #8b5a2b;
+    text-decoration: underline;
+    text-underline-offset: 0.14em;
+  }
+
+  .section-heading-with-line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+  }
+
+  .section-heading-with-line::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background: #d6c5b2;
+    margin-left: 1rem;
+  }
+
+  .section-heading-with-line h2 {
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: #2c241d;
+  }
+
+  .example-images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .link-card {
+    display: block;
+    padding: 1rem 1.05rem;
+    border: 1px solid #ded3c6;
+    border-radius: 10px;
+    background: #faf7f2;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .link-card strong {
+    display: block;
+    color: #3a2d1f;
+    font-size: 1rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .link-card span {
+    display: block;
+    color: #5e5246;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  @media (max-width: 720px) {
+    .example-images {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
