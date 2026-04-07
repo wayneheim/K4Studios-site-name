@@ -363,7 +363,7 @@ export async function refreshV2Incremental(env, { batchSize = 1000 } = {}) {
   await ensureRefreshStateTable(env);
   await ensureV2ClassificationColumns(env);
   const lastProcessedRawEventId = await getLastProcessedRawEventId(env);
-  const normalizedBatchSize = Math.max(1, Math.min(Number(batchSize || 1000), 5000));
+  const normalizedBatchSize = Math.max(1, Math.min(Number(batchSize || 1000), 1000));
   const rawRows = (await env.DB.prepare(
     `SELECT
        id,

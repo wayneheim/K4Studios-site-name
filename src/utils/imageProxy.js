@@ -39,7 +39,7 @@ export function extractImageId(url) {
   if (smugMugMatch) return smugMugMatch[1];
   
   // Proxy URL pattern: /img/i-XXXXXX/size
-  const proxyMatch = url.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)/);
+  const proxyMatch = url.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)(?:\.jpe?g)?/i);
   if (proxyMatch) return proxyMatch[1];
   
   return null;
@@ -61,7 +61,7 @@ export function normalizeImageSrc(src, size = 'm') {
   
   // Already a relative proxy URL - extract ID and rebuild with requested size
   if (src.startsWith('/img/')) {
-    const proxyMatch = src.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)/);
+    const proxyMatch = src.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)(?:\.jpe?g)?/i);
     if (proxyMatch) {
       return getProxySrc(proxyMatch[1], size);
     }
@@ -90,7 +90,7 @@ export function normalizeImageSrc(src, size = 'm') {
 export function getProxySrc(imageId, size = 'm') {
   if (!imageId) return '';
   const safeSize = VALID_SIZES.includes(size) ? size : 'm';
-  return `${IMAGE_BASE}/img/${imageId}/${safeSize}`;
+  return `${IMAGE_BASE}/img/${imageId}/${safeSize}.jpg`;
 }
 
 /**

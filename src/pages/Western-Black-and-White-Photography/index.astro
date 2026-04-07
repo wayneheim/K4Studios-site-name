@@ -41,6 +41,8 @@ import '@/styles/oneupheader.css';
 
 // ✅ The actual page URL
 const pagePath = "/Western-Black-and-White-Photography";
+const pageTitle = 'Western Black and White Photography | Cowboy and Frontier Images';
+const pageDescription = 'Western black and white photography captures the American West through light, shadow, and form, with monochrome cowboy portraits and frontier images shaped by character, contrast, and atmosphere.';
 
 // ✅ B/W gallery path for image sourcing
 const imageSectionPath =
@@ -193,13 +195,62 @@ function makeAbsoluteUrl(src?: string) {
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}`;
+  return `/img/${imageId}/${size}.jpg`;
 }
+
+function pickAltTemplate(img: any, baseTitle: string) {
+  const templates = [
+    `${baseTitle} in western black and white photography shaped by light, shadow, and atmosphere`,
+    `${baseTitle}, a black and white cowboy photography image centered on character and contrast`,
+    `${baseTitle} in monochrome Western photography with portrait-driven storytelling`,
+  ];
+  const hash = String(img.id || baseTitle)
+    .split('')
+    .reduce((sum, char) => sum + char.charCodeAt(0), 0);
+  return templates[hash % templates.length];
+}
+
+function findImage(data: any[], id: string) {
+  const image = (data || []).find((item: any) => item.id === id && item.visibility !== 'ghost');
+  if (!image) {
+    throw new Error(`Missing gallery image for black and white western photography page: ${id}`);
+  }
+  return image;
+}
+
+function makeTile(data: any[], id: string, hrefBase: string, category: string, fallback: string) {
+  const img = findImage(data, id);
+  const title = (img.title || fallback || '').trim();
+  return {
+    id: img.id,
+    title,
+    alt: pickAltTemplate(img, title),
+    href: `${hrefBase}/${img.id}`,
+    category,
+  };
+}
+
+const featuredTiles = [
+  makeTile(cowboyBWData, 'i-HfQ5NVR', imageSectionPath, 'Black and White Cowboy Photography', 'Black and white cowboy portrait'),
+  makeTile(cowboyBWData, 'i-qMQf7b6', imageSectionPath, 'Black and White Cowboy Photography', 'Black and white cowboy portrait'),
+  makeTile(cowboyBWData, 'i-SwhsL2h', imageSectionPath, 'Black and White Cowboy Photography', 'Black and white frontier portrait'),
+  makeTile(cowboyBWData, 'i-W73hxx4', imageSectionPath, 'Black and White Cowboy Photography', 'Black and white cowgirl portrait'),
+  makeTile(cowboyBWData, 'i-FnZ68h3', imageSectionPath, 'Black and White Cowboy Photography', 'Black and white cowboy portrait'),
+  makeTile(cowboyBWData, 'i-dLDF4Q6', imageSectionPath, 'Black and White Cowboy Photography', 'Black and white frontier portrait'),
+  makeTile(cowboyBWData, 'i-5s8Zkrb', imageSectionPath, 'Black and White Cowboy Photography', 'Black and white frontier portrait'),
+  makeTile(cowboyBWData, 'i-ffzG95X', imageSectionPath, 'Black and White Cowboy Photography', 'Black and white western portrait'),
+];
 
 const landingImg = featheredImages[0];
 const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
 
 const meta = getLandingMeta(pagePath, landingImgUrl);
+meta.title = pageTitle;
+meta.description = pageDescription;
+meta.ogTitle = pageTitle;
+meta.ogDescription = pageDescription;
+meta.twitterTitle = pageTitle;
+meta.twitterDescription = pageDescription;
 if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${pagePath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${pagePath}`;
 
@@ -213,7 +264,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => ({
 ---
 
 <BaseLayout
-  title="Western Black & White Photography – Wayne Heim"
+  title={pageTitle}
   structuredDataJSON={structuredData}
   breadcrumbsJSON={breadcrumbData}
   meta={meta}
@@ -255,23 +306,57 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => ({
       <div class="mobile-breadcrumb" set:html={landingWestern.breadcrumb} />
     </div>
 
+    <section class="section-heading-wrap">
+      <div class="section-heading">
+        <h1 class="page-title fade-in reveal-on-scroll">{landingWestern.title}</h1>
+        <h2 class="page-subtitle fade-in reveal-on-scroll">{landingWestern.subtitle}</h2>
+        <div class="page-intro fade-in reveal-on-scroll">
+          <p>
+            Western black and white photography captures the American West through light, shadow, and form—removing color to focus on character, contrast, and atmosphere.
+          </p>
+          <p>
+            Often associated with black and white cowboy photography and Western portraiture, these images emphasize expression, texture, and the emotional weight of a moment rather than surface detail.
+          </p>
+          <p class="page-intro-links">
+            Explore related work in <a href="/western-portrait-photography">Western portrait photography</a> and <a href="/cowboy-photography">cowboy photography</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="entry-grid-section">
+      <div class="entry-grid-section__inner">
+        <h2 class="entry-grid-title reveal-on-scroll">Black and White Western Photography: Character, Contrast, and Story</h2>
+        <div class="entry-grid reveal-on-scroll">
+          {featuredTiles.map((tile) => (
+            <article class="entry-tile">
+              <a class="entry-tile__link" href={tile.href} title={tile.title}>
+                <div class="entry-tile__image-wrap">
+                  <img
+                    src={getProxySrc(tile.id, 'm')}
+                    alt={tile.alt}
+                    loading="lazy"
+                    decoding="async"
+                    class="entry-tile__image"
+                  />
+                </div>
+                <div class="entry-tile__meta">
+                  <p class="entry-tile__category">{tile.category}</p>
+                  <h3 class="entry-tile__title">{tile.title}</h3>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <div class="w-full max-w-[1200px] mx-auto px-4">
       <div class="carousel-fade reveal-on-scroll">
         <ImageBar2 client:load />
       </div>
     </div>
 
-    <section class="section-heading-wrap">
-      <div class="section-heading">
-        <h1 class="page-title fade-in reveal-on-scroll">{landingWestern.title}</h1>
-        <h2 class="page-subtitle fade-in reveal-on-scroll">{landingWestern.subtitle}</h2>
-        <p class="page-summary fade-in reveal-on-scroll">
-          Western black and white photography is fine art photography of the American West stripped to its essential visual elements—light, shadow, form, and character.
-        </p>
-      </div>
-    </section>
-
-    <!-- Tombstones restored to top position -->
     <section class="collections-nav-section">
       <h3 class="collections-heading fade-in reveal-on-scroll">Explore the Stories of the American West</h3>
       <TombstoneNav client:load items={tombstonesWithThumbs} />
@@ -416,7 +501,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => ({
     .fade-in.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
     .page-title.fade-in { transition-delay: .2s; }
 
-    .section-heading-wrap { margin: -3.4rem 0 1.5rem; text-align: center; }
+    .section-heading-wrap { margin: 0.8rem 0 1.5rem; text-align: center; }
     .section-heading .page-title { font-size: 2rem; margin-bottom: .4rem; }
     .section-heading .page-subtitle { font-size: 1rem; font-weight: 500; color: #6d5b4a; opacity: .9; }
 
@@ -463,19 +548,116 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => ({
     }
     .sample-fade.is-visible { opacity: 1; transform: translateY(0); visibility: visible; }
 
-    /* Page summary sentence */
-    .page-summary {
+    .page-intro {
       max-width: 900px;
       margin: 0.6rem auto 0;
-      font-size: 1.02rem;
-      line-height: 1.55;
-      color: #6d5b4a;
       font-family: 'Glegoo', serif;
       text-align: center;
       opacity: 0.92;
     }
+    .page-intro p {
+      margin: 0 0 0.7rem;
+      font-size: 1.02rem;
+      line-height: 1.55;
+      color: #6d5b4a;
+    }
+    .page-intro p:last-child { margin-bottom: 0; }
+    .page-intro a {
+      color: #8b5a2b;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
     @media (max-width: 768px) {
-      .page-summary { font-size: 0.95rem; padding: 0 1rem; max-width: 90%; }
+      .page-intro { padding: 0 1rem; max-width: 90%; }
+      .page-intro p { font-size: 0.95rem; }
+    }
+
+    .entry-grid-section {
+      padding: 0.25rem 1rem 2rem;
+    }
+    .entry-grid-section__inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .entry-grid-title {
+      margin: 0 0 1rem;
+      font-size: 1.45rem;
+      line-height: 1.2;
+      color: #2f241b;
+      text-align: center;
+      font-family: 'Glegoo', serif;
+      font-weight: 500;
+    }
+    .entry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .entry-tile {
+      margin: 0;
+      background: #fbfaf7;
+      border: 1px solid #e7ddd3;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+    .entry-tile__link {
+      display: block;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+    .entry-tile:hover {
+      transform: translateY(-2px);
+      border-color: #cfbea8;
+      box-shadow: 0 8px 24px rgba(44, 33, 24, 0.08);
+    }
+    .entry-tile__image-wrap {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #efe8de;
+    }
+    .entry-tile__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.25s ease;
+    }
+    .entry-tile:hover .entry-tile__image {
+      transform: scale(1.02);
+    }
+    .entry-tile__meta {
+      padding: 0.85rem 0.9rem 0.95rem;
+      display: grid;
+      gap: 0.3rem;
+    }
+    .entry-tile__category {
+      margin: 0;
+      font-size: 0.72rem;
+      line-height: 1.2;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8d7864;
+      font-weight: 600;
+    }
+    .entry-tile__title {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.45;
+      color: #2f241b;
+      font-weight: 600;
+      font-family: 'Glegoo', serif;
+    }
+    @media (max-width: 980px) {
+      .entry-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 640px) {
+      .entry-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* Collections nav section (tombstones) */

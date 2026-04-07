@@ -160,7 +160,7 @@ const webPageSchema = JSON.stringify({
 // OG/Twitter image - use proxy URLs to avoid exposing SmugMug
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}`;
+  return `/img/${imageId}/${size}.jpg`;
 }
 
 function makeAbsoluteUrl(src?: string) {

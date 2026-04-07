@@ -19,7 +19,7 @@ import "../styles/ImageBar2.css";
 import { warmImage } from "../utils/warmImage";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
+const getProxySrc = (id, size = "s") => `/img/${id}/${size}.jpg`;
 
 // Fisher-Yates shuffle
 function shuffle(arr) {

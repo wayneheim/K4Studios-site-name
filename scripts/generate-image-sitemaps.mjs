@@ -495,7 +495,7 @@ function generateUrlEntry(image, urlBase) {
 
   const pageUrl = `${SITE_URL}${urlBase}/${image.id}`;
   // Use proxy URLs capped at L - never expose XL or raw SmugMug URLs to bots
-  const imageUrl = `${SITE_URL}/img/${image.id}/l`;
+  const imageUrl = `${SITE_URL}/img/${image.id}/l.jpg`;
   
   // Build concise caption for sitemap usage: description + optional short narrative hook
   const captionParts = [];

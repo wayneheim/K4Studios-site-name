@@ -87,7 +87,7 @@ const {
   pagePath?: string;
 };
 
-const getProxySrc = (id: string, size: string = 'm') => `/img/${id}/${size}`;
+const getProxySrc = (id: string, size: string = 'm') => `/img/${id}/${size}.jpg`;
 const sampleSourceSlides = sampleSlides.length > 0 ? sampleSlides : slides;
 const stripImages = sampleSourceSlides.slice(0, 4);
 const autoLinkExcludeImages = uniqueSlideIds(slides, sampleSlides);

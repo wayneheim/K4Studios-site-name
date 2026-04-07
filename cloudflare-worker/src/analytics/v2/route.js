@@ -21,7 +21,8 @@ export async function handleDashboardV2Request(request, env) {
     const url = new URL(request.url);
     const windowKey = normalizeV2Window(url.searchParams.get('window'));
     const summary = await getV2CanonicalSummary(env, { windowKey });
-    return new Response(renderDashboardV2({ summary, windowKey }), {
+    const authHeader = request.headers.get('Authorization') || '';
+    return new Response(renderDashboardV2({ summary, windowKey, authHeader }), {
       status: 200,
       headers: withNoCache({ 'Content-Type': 'text/html; charset=utf-8' })
     });
@@ -66,7 +67,7 @@ export async function handleDashboardV2DebugRequest(request, env) {
 export async function handleDashboardV2RefreshRequest(request, env) {
   try {
     const url = new URL(request.url);
-    const batchSize = Math.max(1, Math.min(Number(url.searchParams.get('batch') || '1000'), 5000));
+    const batchSize = Math.max(1, Math.min(Number(url.searchParams.get('batch') || '1000'), 1000));
     const result = await refreshV2Incremental(env, { batchSize });
     return new Response(JSON.stringify(result, null, 2), {
       status: 200,

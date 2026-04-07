@@ -3,7 +3,7 @@ import { warmImage } from "../utils/warmImage";
 import "../styles/landing-right-images.css";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
+const getProxySrc = (id, size = "s") => `/img/${id}/${size}.jpg`;
 
 // Extract image ID from href like "/Galleries/.../i-abc123"
 const extractIdFromHref = (href) => {

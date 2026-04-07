@@ -22,7 +22,7 @@ function normalizeThumbUrl(url) {
   // Already a relative proxy URL - force to 's' size for thumbnails
   if (url.startsWith('/img/')) {
     const proxyMatch = url.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)/);
-    if (proxyMatch) return `/img/${proxyMatch[1]}/s`;
+    if (proxyMatch) return `/img/${proxyMatch[1]}/s.jpg`;
     return url;
   }
   
@@ -32,13 +32,13 @@ function normalizeThumbUrl(url) {
   // Extract image ID from SmugMug URL pattern: /i-XXXXXX/
   const smugMugMatch = url.match(/\/(i-[a-zA-Z0-9]+)\//);
   if (smugMugMatch) {
-    return `/img/${smugMugMatch[1]}/s`;
+    return `/img/${smugMugMatch[1]}/s.jpg`;
   }
   
   // Absolute proxy URL - convert to relative with 's' size
   const proxyMatch = url.match(/\/img\/(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)/);
   if (proxyMatch) {
-    return `/img/${proxyMatch[1]}/s`;
+    return `/img/${proxyMatch[1]}/s.jpg`;
   }
   
   // Unknown format - return as-is (might be external or placeholder)

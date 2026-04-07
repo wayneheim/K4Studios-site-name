@@ -15,23 +15,23 @@ function getProxyUrl(img: any, size: string = 'l', sourcePrefix: string | null =
 
   // If we have an id, use the proxy
   if (img.id && img.id.startsWith('i-')) {
-    return `https://www.k4studios.com/img/${applyPrefix(stripPrefix(img.id))}/${size}`;
+    return `https://www.k4studios.com/img/${applyPrefix(stripPrefix(img.id))}/${size}.jpg`;
   }
   // Try to extract id from src URL
   const idMatch = img.src?.match(/\/(i-[a-zA-Z0-9]+)\//);
   if (idMatch) {
-    return `https://www.k4studios.com/img/${applyPrefix(stripPrefix(idMatch[1]))}/${size}`;
+    return `https://www.k4studios.com/img/${applyPrefix(stripPrefix(idMatch[1]))}/${size}.jpg`;
   }
   // Fallback: if it's already a k4studios URL, use it
   if (img.src?.includes('k4studios.com')) {
     try {
       const u = new URL(String(img.src));
       if (u.hostname.endsWith('k4studios.com')) {
-        const m = u.pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)\/?$/);
+        const m = u.pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)(?:\.jpe?g)?\/?$/i);
         if (m) {
           const canonicalId = m[2];
           const safeSize = m[3] || size;
-          return `https://www.k4studios.com/img/${applyPrefix(canonicalId)}/${safeSize}`;
+          return `https://www.k4studios.com/img/${applyPrefix(canonicalId)}/${safeSize}.jpg`;
         }
       }
     } catch {

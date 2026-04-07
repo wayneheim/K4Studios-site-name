@@ -101,7 +101,7 @@ const truncateStory = (story: string, maxLen = 150) => {
 };
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
 
 // ✅ Build breadcrumb JSON-LD
 const breadcrumbItems = breadcrumbHrefs.map((href, idx) => ({
@@ -407,10 +407,10 @@ const heroImage = galleryData[0];
         if (match) {
           // Fire-and-forget warming
           const img = new Image();
-          img.src = `/img/${match[1]}/s`;
+          img.src = `/img/${match[1]}/s.jpg`;
           // Also warm 'm' for responsive srcset
           const imgM = new Image();
-          imgM.src = `/img/${match[1]}/m`;
+          imgM.src = `/img/${match[1]}/m.jpg`;
         }
       }
     })();

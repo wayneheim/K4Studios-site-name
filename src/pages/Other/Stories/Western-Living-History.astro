@@ -10,7 +10,7 @@ import { normalizeImageSrc } from "@/utils/imageProxy.js";
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}`;
+  return `/img/${imageId}/${size}.jpg`;
 }
 
 const sectionPath = "/Other/Stories/Western-Living-History";

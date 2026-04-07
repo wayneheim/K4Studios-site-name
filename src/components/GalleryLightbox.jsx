@@ -8,7 +8,7 @@ const DATA_ROOTS = [
 ];
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
+const getProxySrc = (id, size = "s") => `/img/${id}/${size}.jpg`;
 
 // ✅ Use proxy URLs for grid thumbnails
 function pickImage(item) {

@@ -117,7 +117,7 @@ function buildHopPathTooltip(hopCount, pathRows) {
     .join('\n');
 }
 
-export function renderDashboardV2({ summary }) {
+export function renderDashboardV2({ summary, authHeader = '' }) {
   const schema = summary?.schema || {};
   const window = summary?.window || { key: 'today', label: 'Today' };
   const refreshStatus = summary?.refreshStatus || null;
@@ -211,7 +211,7 @@ export function renderDashboardV2({ summary }) {
     const pagePath = rawPath ? (rawPath.startsWith('/') ? rawPath : `/${rawPath}`) : '';
     const imageUrl = pagePath ? `https://www.k4studios.com${pagePath}` : `https://www.k4studios.com/art/${imageId}`;
     const thumbHtml = imageId
-      ? `<img src="https://www.k4studios.com/img/${imageId}/s" alt="" loading="${index < 4 ? 'eager' : 'lazy'}" class="image-thumb">`
+      ? `<img src="https://www.k4studios.com/img/${imageId}/s.jpg" alt="" loading="${index < 4 ? 'eager' : 'lazy'}" class="image-thumb">`
       : '<span class="image-thumb image-thumb-fallback">🖼</span>';
     return `
       <a class="image-list-row" href="${imageUrl}" target="_blank" rel="noopener">
@@ -328,28 +328,56 @@ export function renderDashboardV2({ summary }) {
     <p class="subtle">Current window: <strong>${window.label}</strong>. Today and Yesterday use Eastern calendar-day boundaries; Last 24h and Last 7 days use rolling trailing durations.</p>
 
     <script>
+      const _k4auth = ${JSON.stringify(authHeader || '')};
+
+      function k4AdminFetch(url, opts) {
+        const requestOptions = Object.assign({ credentials: 'same-origin' }, opts || {});
+        requestOptions.headers = Object.assign({ 'Authorization': _k4auth }, requestOptions.headers || {});
+        return fetch(url, requestOptions);
+      }
+
       async function refreshV2Incremental() {
         const button = document.getElementById('v2-refresh-button');
         const status = document.getElementById('v2-refresh-status');
+        const batchSize = 1000;
+        const maxBatches = 50;
         if (button) {
           button.disabled = true;
           button.textContent = 'Refreshing...';
         }
         if (status) {
-          status.textContent = 'Running incremental refresh...';
+          status.textContent = 'Running V2 refresh...';
         }
         try {
-          const response = await fetch('/__k4stats-v2/refresh', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            credentials: 'same-origin'
-          });
-          const data = await response.json();
-          if (!response.ok) {
-            throw new Error(data && data.error ? data.error : 'Refresh failed');
+          let batchCount = 0;
+          let processedRows = 0;
+          let hasMore = false;
+
+          do {
+            batchCount += 1;
+            if (status) {
+              status.textContent = 'Refreshing V2 batch ' + batchCount + '...';
+            }
+
+            const response = await k4AdminFetch('/__k4stats-v2/refresh?batch=' + batchSize, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' }
+            });
+            const data = await response.json();
+            if (!response.ok) {
+              throw new Error(data && data.error ? data.error : 'Refresh failed');
+            }
+
+            processedRows += Number(data && data.summary ? data.summary.processedRawRows || 0 : 0);
+            hasMore = Boolean(data && data.summary && data.summary.hasMore);
+          } while (hasMore && batchCount < maxBatches);
+
+          if (hasMore) {
+            throw new Error('Refresh stopped after ' + batchCount + ' batches; more data is still pending.');
           }
+
           if (status) {
-            status.textContent = 'Refresh complete. Reloading...';
+            status.textContent = 'Refresh complete. Processed ' + processedRows + ' raw rows across ' + batchCount + ' batch' + (batchCount === 1 ? '' : 'es') + '. Reloading...';
           }
           window.location.reload();
         } catch (error) {

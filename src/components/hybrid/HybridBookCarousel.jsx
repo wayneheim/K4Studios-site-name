@@ -21,7 +21,7 @@ const INTERVAL_MS = 8500;
 const FADE_MS = 1200;
 
 // Proxy helper — never expose SmugMug URLs
-const getProxySrc = (id, size = "l") => `/img/${id}/${size}`;
+const getProxySrc = (id, size = "l") => `/img/${id}/${size}.jpg`;
 
 export default function HybridBookCarousel({
   slides = [],

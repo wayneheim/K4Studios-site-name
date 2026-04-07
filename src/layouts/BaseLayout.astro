@@ -118,50 +118,32 @@ const ogUrl = ensureAbsoluteUrl(meta.ogUrl || canonicalUrl);
 
 // Convert any SmugMug URLs to proxy format for OG/Twitter images
 // Default to 'l' to protect XL from bot discovery
-const toAbsoluteProxyUrl = (src: string, size = 'l', sourcePrefix: string | null = null) => {
+const toAbsoluteProxyUrl = (src: string, size = 'l') => {
   if (!src) return '';
   // If it's already a local/static image, just make it absolute
   if (src.startsWith('/images/')) return ensureAbsoluteUrl(src);
 
-  const prefix = sourcePrefix ? String(sourcePrefix).toUpperCase() : null;
-  const applyPrefix = (imageId: string) => {
-    if (!prefix) return imageId;
-    if (/^(OG|TW|PN|SD)-/i.test(imageId)) return imageId;
-    return `${prefix}-${imageId}`;
-  };
-
   // Extract image ID and convert to absolute proxy URL
   const imageId = extractImageId(src) || (src.startsWith('i-') ? src : null);
   if (imageId) {
-    return `${canonicalOrigin}/img/${applyPrefix(imageId)}/${size}`;
+    return `${canonicalOrigin}/img/${imageId}/${size}.jpg`;
   }
   // Already a proxy URL? Make it absolute
   if (src.startsWith('/img/')) {
-    if (!prefix) return `${canonicalOrigin}${src}`;
-    try {
-      const u = new URL(`${canonicalOrigin}${src}`);
-      const m = u.pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)\/?$/);
-      if (m) {
-        const canonicalId = m[2];
-        return `${canonicalOrigin}/img/${applyPrefix(canonicalId)}/${size}`;
-      }
-    } catch {
-      // ignore and fall through
-    }
-    return `${canonicalOrigin}${src}`;
+    return `${canonicalOrigin}${src.replace(/(\/(?:s|m|l|xl|src))(?:\.jpe?g)?$/i, '$1.jpg')}`;
   }
   // Fallback - try to use as-is (shouldn't happen)
   return ensureAbsoluteUrl(src);
 };
 
 // Cap OG/Twitter images at L to keep XL out of bot-discoverable surfaces
-const ogImage = toAbsoluteProxyUrl(rawOgImage, 'l', 'OG');
+const ogImage = toAbsoluteProxyUrl(rawOgImage, 'l');
 const ogImageSecureUrl = ogImage;
 
 const ogType = isImagePage ? "article" : (meta.ogType || "website");
 
 const twitterTitle = meta.twitterTitle || cleanTitle;
-const twitterImage = toAbsoluteProxyUrl(meta.twitterImage || rawOgImage, 'l', 'TW');
+const twitterImage = toAbsoluteProxyUrl(meta.twitterImage || rawOgImage, 'l');
 const twitterUrl = ensureAbsoluteUrl(meta.twitterUrl || ogUrl);
 
 const inferMimeType = (url) => {

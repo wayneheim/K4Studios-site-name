@@ -68,7 +68,7 @@ const truncateStory = (story: string, maxLen = 150) => {
 };
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id: string, size: string) => `/img/${id}/${size}`;
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
 
 // ✅ Pre-build per-image JSON-LD to avoid streaming issues
 const imageJsonLdMap = new Map();

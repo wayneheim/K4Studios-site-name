@@ -4,7 +4,7 @@ import { slides as homeSlides } from "../data/home/carousel.ts";
 import { warmImage } from "../utils/warmImage";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
+const getProxySrc = (id, size = "s") => `/img/${id}/${size}.jpg`;
 
 export default function ImageBar2Home() {
   const trackRef = useRef(null);

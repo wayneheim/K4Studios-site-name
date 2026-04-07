@@ -390,8 +390,8 @@ function getKnownGallerySetFromImageIdMap(imageIdMap) {
 const ASSET_SOURCE_PREFIXES = new Set(['OG', 'TW', 'PN', 'SD']);
 
 function parseImageRoute(pathname) {
-  // allow optional trailing slash
-  const match = pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)\/?$/);
+  // allow optional .jpg suffix and trailing slash
+  const match = pathname.match(/^\/img\/((?:OG|TW|PN|SD)-)?(i-[a-zA-Z0-9-]+)\/(s|m|l|xl|src)(?:\.jpe?g)?\/?$/i);
   if (!match) return null;
 
   const rawPrefix = match[1] || null;
@@ -419,7 +419,7 @@ function rewriteLegacyProxyToImgRequest(request) {
 
   const imageId = prefix ? `${prefix}-${canonicalImageId}` : canonicalImageId;
 
-  url.pathname = `/img/${imageId}/l`;
+  url.pathname = `/img/${imageId}/l.jpg`;
   return new Request(url.toString(), request);
 }
 
@@ -478,16 +478,14 @@ async function proxyImage(smugMugUrl, request) {
   const headers = {
     "Content-Type": imageResponse.headers.get("Content-Type") || "image/jpeg",
     "Cache-Control": "public, max-age=31536000, immutable",
-    "X-Robots-Tag": "noindex, noai, noimageai",
+    "X-Robots-Tag": "noai, noimageai",
     "X-Content-Type-Options": "nosniff",
     "X-Frame-Options": "DENY",
     "X-Proxy-Origin": "k4studios"
   };
 
-  // `noindex` prevents the /img/ URL itself from being indexed as a page.
-  // This does NOT affect Google Image Search — images are indexed via the
-  // gallery page URLs, not the raw proxy URLs.
-  // `noai, noimageai` are opt-out signals for AI training.
+  // Keep the canonical image asset crawlable while retaining AI opt-out signals.
+  // The /img/ response also emits a rel=canonical header back to the image page.
 
   return new Response(imageResponse.body, { status: 200, headers });
 }
@@ -795,7 +793,7 @@ async function handleImageRequest(request, ctx, env) {
   // This prevents cache fragmentation when the same underlying image is requested with
   // different attribution prefixes (OG/TW/PN/SD).
   const canonicalUrl = new URL(request.url);
-  canonicalUrl.pathname = `/img/${route.canonicalImageId}/${route.size}`;
+  canonicalUrl.pathname = `/img/${route.canonicalImageId}/${route.size}.jpg`;
   canonicalUrl.searchParams.set("__k4v", IMAGE_CACHE_KEY_VERSION);
   const canonicalRequest = (canonicalUrl.pathname === url.pathname)
     ? request

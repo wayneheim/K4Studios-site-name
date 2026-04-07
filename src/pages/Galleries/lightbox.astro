@@ -10,7 +10,7 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
   const validSizes = ['s', 'm', 'l', 'xl', 'src'];
   const safeSize = validSizes.includes(size) ? size : 'm';
-  return `/img/${imageId}/${safeSize}`;
+  return `/img/${imageId}/${safeSize}.jpg`;
 }
 
 function getProxySrcset(imageId: string): string {

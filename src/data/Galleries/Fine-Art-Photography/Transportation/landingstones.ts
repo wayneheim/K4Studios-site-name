@@ -70,7 +70,7 @@ tombstones: regions.map(({ title, slug }) => {
   return {
     title,
     href,
-    thumb: img.id ? `/img/${img.id}/s` : img.src,  // use proxy URL if we have id
+    thumb: img.id ? `/img/${img.id}/s.jpg` : img.src,  // use proxy URL if we have id
     imageId: img.id,
   };
 }),

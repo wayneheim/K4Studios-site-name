@@ -69,7 +69,7 @@ const cardNumberStyles = {
 };
 
 // ✅ Proxy URL helper
-const getProxySrc = (id, size) => `/img/${id}/${size}`;
+const getProxySrc = (id, size) => `/img/${id}/${size}.jpg`;
 
 // ✅ Text cleaner
 const cleanText = (val = '') =>

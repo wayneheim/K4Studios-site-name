@@ -242,7 +242,7 @@ function makeAbsoluteUrl(src?: string) {
 
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}`;
+  return `/img/${imageId}/${size}.jpg`;
 }
 
 const landingImg = featheredImages[0];

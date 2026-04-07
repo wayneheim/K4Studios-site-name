@@ -131,7 +131,7 @@ const heroImageId = candidatePool[0]?.id || null;
           data-preview-click
         >
           <img
-            src={`/img/${img.id}/s`}
+            src={`/img/${img.id}/s.jpg`}
             alt={img.alt ?? img.title ?? "Gallery image"}
             loading="lazy"
           />
@@ -258,7 +258,7 @@ const heroImageId = candidatePool[0]?.id || null;
     // Fire-and-forget warming via Image() preload
     const warmImage = (id, size) => {
       const img = new Image();
-      img.src = `/img/${id}/${size}`;
+      img.src = `/img/${id}/${size}.jpg`;
     };
     
     stripImgs.forEach(img => {

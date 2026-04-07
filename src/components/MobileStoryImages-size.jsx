@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id, size = "s") => `/img/${id}/${size}`;
+const getProxySrc = (id, size = "s") => `/img/${id}/${size}.jpg`;
 
 // Fisher-Yates shuffle
 const shuffleArray = (arr) => {

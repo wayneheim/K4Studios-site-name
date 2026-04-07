@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
-const getProxySrc = (id, size = "xl") => `/img/${id}/${size}`;
+const getProxySrc = (id, size = "xl") => `/img/${id}/${size}.jpg`;
 
 export default function ZoomOverlay({ onClose, imageData, matColor, setMatColor, isEngrained = false }) {
   const [isMobile, setIsMobile] = useState(false);

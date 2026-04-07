@@ -21,7 +21,7 @@ import "@/styles/global.css";
 // Proxy URL helper - ensures SmugMug URLs never appear in SSR HTML
 function getProxySrc(imageId: string, size: string = 'm'): string {
   if (!imageId) return '';
-  return `/img/${imageId}/${size}`;
+  return `/img/${imageId}/${size}.jpg`;
 }
 
 // ----------------------

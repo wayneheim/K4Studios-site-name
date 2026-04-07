@@ -35,7 +35,7 @@ function getProxySrc(imageId, size = 'm') {
   // Validate size
   const validSizes = ['s', 'm', 'l', 'xl', 'src'];
   const safeSize = validSizes.includes(size) ? size : 'm';
-  return `/img/${imageId}/${safeSize}`;
+  return `/img/${imageId}/${safeSize}.jpg`;
 }
 
 function buildCaptionExcerpt(description, minChars = 150, maxChars = 280) {

@@ -59,5 +59,5 @@ export function warmImage(
 
   // IMPORTANT: Warm the canonical URL so it hits the same Cloudflare cache key
   // the real <img> requests will use.
-  img.src = `/img/${trimmedId}/${size}`;
+  img.src = `/img/${trimmedId}/${size}.jpg`;
 }
