@@ -48,7 +48,7 @@ export const landingWestern = {
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
       _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
       // Use a fixed thumb that won't match the Color tile's first-10 random pool
-      thumb: "/img/i-trZrk2w/s",
+      thumb: "/img/i-trZrk2w/s.jpg",
     },
   ],
 };

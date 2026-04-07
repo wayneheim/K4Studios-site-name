@@ -399,9 +399,9 @@ export function handleTrackOptions(request = null) {
 
 export async function handleEdgeEvent(request, env) {
   try {
-    if (isSyntheticTraffic(request)) {
-      return new Response('OK', { status: 200 });
-    }
+    // Edge-event payloads are server-generated diagnostics (smart-404/image proxy)
+    // and often originate from datacenter networks by design. Do not run them
+    // through synthetic-traffic suppression.
 
       let data;
       try {

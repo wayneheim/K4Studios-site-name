@@ -3,6 +3,10 @@
   handleDashboardV2DebugRequest,
   handleDashboardV2RefreshRequest
 } from "./v2/route.js";
+import {
+  handleLegacyPatternPageRequest,
+  handleLegacyPatternOverrideRequest
+} from "./v2/legacy-patterns.js";
 
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
@@ -9315,7 +9319,9 @@ __name(withTimeout, "withTimeout");
 __name2(withTimeout, "withTimeout");
 async function logEdgeEvent2(...args) {
   try {
-    return await withTimeout(logEdgeEvent(...args), 1500);
+    // Edge-event writes are the primary signal for legacy pattern telemetry.
+    // Avoid time-boxing these writes or they can be dropped during D1 latency.
+    return await logEdgeEvent(...args);
   } catch (err) {
     console.error("analytics failure [logEdgeEvent]:", err?.message || err);
   }
@@ -9744,9 +9750,8 @@ __name(handleStatePixelRequest, "handleStatePixelRequest");
 __name2(handleStatePixelRequest, "handleStatePixelRequest");
 async function handleEdgeEvent(request, env) {
   try {
-    if (isSyntheticTraffic(request)) {
-      return new Response("OK", { status: 200 });
-    }
+    // Edge events are server-generated diagnostics and often originate from
+    // datacenter networks by design. Do not suppress as synthetic traffic.
     let data;
     try {
       data = await request.json();
@@ -10306,6 +10311,12 @@ var worker_default = {
     }
     if (url.pathname === "/__k4stats-v2") {
       return handleDashboardV2Request(request, env, ctx);
+    }
+    if (url.pathname === "/__k4stats-v2/legacy-patterns") {
+      return handleLegacyPatternPageRequest(request, env, ctx);
+    }
+    if (url.pathname === "/__k4stats-v2/legacy-patterns/override" && request.method === "POST") {
+      return handleLegacyPatternOverrideRequest(request, env, ctx);
     }
     if (url.pathname === "/__k4stats-v2/debug") {
       return handleDashboardV2DebugRequest(request, env, ctx);

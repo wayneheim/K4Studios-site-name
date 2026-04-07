@@ -204,8 +204,8 @@ async function main() {
     // Warm 's' and 'l' sizes (most commonly used)
     const urlsToWarm = [];
     for (const id of imageIds) {
-      urlsToWarm.push(`${BASE_URL}/img/${id}/s`);
-      urlsToWarm.push(`${BASE_URL}/img/${id}/l`);
+      urlsToWarm.push(`${BASE_URL}/img/${id}/s.jpg`);
+      urlsToWarm.push(`${BASE_URL}/img/${id}/l.jpg`);
     }
     await warmUrls(urlsToWarm);
   }

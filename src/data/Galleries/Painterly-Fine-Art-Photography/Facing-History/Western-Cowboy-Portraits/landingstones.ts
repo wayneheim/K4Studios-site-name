@@ -55,7 +55,7 @@ export const landingWestern = {
       title: "Native American Fine Art Portraits",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
       imageId: "i-7hD9CCh",
-      thumb: "/img/i-7hD9CCh/s",
+      thumb: "/img/i-7hD9CCh/s.jpg",
     },
     {
       title: "The Engrained Series — Western Art on Wood",

@@ -24,13 +24,13 @@ export const landingWestern = {
       title: 'Color 20s Themed Art',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color',
       imageId: "i-WSh3Nqv",
-      thumb: "/img/i-WSh3Nqv/s",
+      thumb: "/img/i-WSh3Nqv/s.jpg",
     },
     {
       title: 'Black & White 20s Photos',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White',
       imageId: "i-tpvJWLm",
-      thumb: "/img/i-tpvJWLm/s",
+      thumb: "/img/i-tpvJWLm/s.jpg",
     },
 
   ]

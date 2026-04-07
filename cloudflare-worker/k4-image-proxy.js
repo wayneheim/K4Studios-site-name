@@ -453,7 +453,7 @@ function resolveImageUrls(manifest, imageId, requestedSize) {
   return urls;
 }
 
-async function proxyImage(smugMugUrl, request) {
+async function proxyImage(smugMugUrl, request, size = null) {
   const imageResponse = await fetch(smugMugUrl, {
     headers: {
       Accept: request.headers.get("Accept") || "image/*",
@@ -484,13 +484,18 @@ async function proxyImage(smugMugUrl, request) {
     "X-Proxy-Origin": "k4studios"
   };
 
+  // XL assets should not be indexed directly by search engines.
+  if (size === 'xl') {
+    headers["X-Robots-Tag"] = "noindex, noimageindex, noai, noimageai";
+  }
+
   // Keep the canonical image asset crawlable while retaining AI opt-out signals.
   // The /img/ response also emits a rel=canonical header back to the image page.
 
   return new Response(imageResponse.body, { status: 200, headers });
 }
 
-async function proxyImageWithFallback(smugMugUrls, request) {
+async function proxyImageWithFallback(smugMugUrls, request, size = null) {
   if (!Array.isArray(smugMugUrls) || smugMugUrls.length === 0) {
     return new Response("Image not found", {
       status: 404,
@@ -501,7 +506,7 @@ async function proxyImageWithFallback(smugMugUrls, request) {
   let lastNotOk = null;
   for (const url of smugMugUrls) {
     try {
-      const response = await proxyImage(url, request);
+      const response = await proxyImage(url, request, size);
       if (response.status === 200) {
         return response;
       }
@@ -599,14 +604,34 @@ function withFrictionDebugHeaders(response, debugInfo) {
   }
 }
 
-function ensureNoAIHeaders(response) {
+function ensureNoAIHeaders(response, forceNoIndex = false) {
   try {
     if (!response) return response;
-    const existing = response.headers?.get?.('X-Robots-Tag');
-    if (existing && String(existing).trim()) return response;
+    const existing = String(response.headers?.get?.('X-Robots-Tag') || '');
+    const tokens = existing
+      .split(',')
+      .map(t => t.trim().toLowerCase())
+      .filter(Boolean);
+    // Keep noindex/noimageindex when already present (e.g., XL images),
+    // but strip nofollow to avoid crawl graph confusion.
+    const filtered = tokens.filter(t => t !== 'nofollow');
+    const hasNoAi = filtered.includes('noai');
+    const hasNoImageAi = filtered.includes('noimageai');
+    const hasNoIndex = filtered.includes('noindex');
+    const hasNoImageIndex = filtered.includes('noimageindex');
+
+    if (hasNoAi && hasNoImageAi && (!forceNoIndex || (hasNoIndex && hasNoImageIndex)) && filtered.length === tokens.length) {
+      return response;
+    }
+
+    const normalized = [...filtered];
+    if (forceNoIndex && !hasNoIndex) normalized.push('noindex');
+    if (forceNoIndex && !hasNoImageIndex) normalized.push('noimageindex');
+    if (!hasNoAi) normalized.push('noai');
+    if (!hasNoImageAi) normalized.push('noimageai');
 
     const headers = new Headers(response.headers);
-    headers.set('X-Robots-Tag', 'noai, noimageai');
+    headers.set('X-Robots-Tag', normalized.join(', '));
     return new Response(response.body, {
       status: response.status,
       statusText: response.statusText,
@@ -741,6 +766,19 @@ async function handleImageRequest(request, ctx, env) {
     return new Response("Invalid image route", {
       status: 400,
       headers: { "Cache-Control": "no-store" }
+    });
+  }
+
+  // Legacy attribution-prefixed image URLs should not remain indexable alternatives.
+  // Force a single dominant image URL shape.
+  if (route.assetSource) {
+    const canonicalPath = `/img/${route.canonicalImageId}/${route.size}.jpg`;
+    return new Response(null, {
+      status: 301,
+      headers: {
+        Location: canonicalPath,
+        "Cache-Control": "public, max-age=86400"
+      }
     });
   }
 
@@ -885,7 +923,7 @@ async function handleImageRequest(request, ctx, env) {
   try {
     const cached = await caches.default.match(canonicalRequest);
     if (cached) {
-      const upgraded = ensureNoAIHeaders(cached);
+      const upgraded = ensureNoAIHeaders(cached, route.size === 'xl');
 
       // Refresh cache with upgraded headers so future hits are clean.
       try {
@@ -1034,7 +1072,11 @@ async function handleImageRequest(request, ctx, env) {
       }
     }
 
-    let response = await proxyImageWithFallback(smugMugUrls, canonicalRequest);
+    let response = await proxyImageWithFallback(smugMugUrls, canonicalRequest, route.size);
+
+    if (response?.status === 200) {
+      response = ensureNoAIHeaders(response, route.size === 'xl');
+    }
 
     // Add canonical Link header so Google can associate /img/ bytes with the gallery page.
     // Uses the same imageIdMap the smart-404 relies on: imageId → ['/Galleries/...']
@@ -2677,7 +2719,7 @@ export default {
       });
     }
 
-    const imageIdAtEnd = /\/(i-[a-zA-Z0-9-]+)\/?$/.test(path);
+    const imageIdAtEnd = /\/(i-[a-zA-Z0-9-]+)(?:\/[A-Z])?\/?$/.test(path);
     const isLegacyNamespace = path === '/Photography-Galleries' || path.startsWith('/Photography-Galleries/');
     const isKnownNamespace =
       isLegacyNamespace ||
@@ -2688,6 +2730,15 @@ export default {
 
     if (imageIdAtEnd && !isKnownNamespace) {
       return await createBranded404Response(request);
+    }
+
+    // Legacy SmugMug image detail variants sometimes append a single-letter
+    // segment (most commonly "/A") after the image id. These now 404 on origin,
+    // but we can recover them cheaply by canonicalizing to "/.../i-xxxxx".
+    // Scope this to known namespaces only so random probe paths are still rejected.
+    if (isKnownNamespace && /\/[iI]-[a-zA-Z0-9-]+\/[A-Z]\/?$/.test(path)) {
+      url.pathname = path.replace(/\/([A-Z])\/?$/, '');
+      return Response.redirect(url.toString(), 301);
     }
 
     // =====================================================

@@ -24,13 +24,13 @@ export const landingWestern = {
       title: 'Color Civil War Themed Art',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color',
       imageId: "i-R5L4KXL",
-      thumb: "/img/i-R5L4KXL/s",
+      thumb: "/img/i-R5L4KXL/s.jpg",
     },
     {
       title: 'Black & White Civil War Themed Photos',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White',
       imageId: "i-GqDJLmF",
-      thumb: "/img/i-GqDJLmF/s",
+      thumb: "/img/i-GqDJLmF/s.jpg",
     },
 
   ]

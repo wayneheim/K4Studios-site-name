@@ -20,6 +20,11 @@ const BRANDED_404_CACHE_TTL_MS = 300000;
 
 const SPECIAL_IMAGE_IDS = new Set(['i-k4studios']);
 const IMAGE_ID_STRICT_REGEX = /^i-[A-Za-z0-9]{6,10}$/;
+const LEGACY_RECOVERY_PREFIXES = [
+  '/photography-galleries/painterly-photography',
+  '/photography-galleries/traditional-photos'
+];
+const EDGE_EVENT_ENDPOINT = 'https://edge.k4studios.com/edge-event';
 
 function isStrictImageId(id) {
   if (!id) return false;
@@ -35,7 +40,13 @@ function normalizePath(path) {
 }
 
 function getParentGalleryPath(pathname) {
-  const normalized = normalizePath(pathname);
+  let normalized = normalizePath(pathname);
+
+  // Legacy SmugMug image links may append a single-letter suffix
+  // (commonly "/A") after the image id. Normalize to canonical image form
+  // before deriving the parent gallery path.
+  normalized = normalized.replace(/\/([iI]-[A-Za-z0-9-]+)\/[A-Z]\/?$/, '/$1');
+
   return normalized.replace(/\/[iI]-[A-Za-z0-9-]+\/?$/, '');
 }
 
@@ -143,6 +154,41 @@ async function createBranded404Response(event, reason, maxAge = 86400) {
   };
 }
 
+async function logSmart404EdgeEvent({ outcome, path, imageId, reason }) {
+  try {
+    const payload = {
+      event_type: `smart404_${String(outcome || 'unknown').toLowerCase()}`,
+      path: String(path || ''),
+      image_id: imageId || null,
+      reason: reason || null
+    };
+
+    const postOnce = async () => {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 1200);
+      try {
+        const res = await fetch(EDGE_EVENT_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          signal: controller.signal
+        });
+        return res.ok;
+      } catch {
+        return false;
+      } finally {
+        clearTimeout(timer);
+      }
+    };
+
+    // Retry once for transient network/edge hiccups.
+    const ok = await postOnce();
+    if (!ok) await postOnce();
+  } catch {
+    // Never let telemetry interfere with request handling.
+  }
+}
+
 // Best-effort, in-memory rate limiter (per warm function instance).
 // Not perfect, but it helps reduce brute-force oracle behavior.
 const _ipBuckets = new Map();
@@ -222,6 +268,12 @@ exports.handler = async (event) => {
   // Don't help exploit probes discover real URLs.
   if (isSuspiciousPath(requestedPath)) {
     console.log(`[smart-404] Suspicious path blocked (410): ${requestedPath}`);
+    await logSmart404EdgeEvent({
+      outcome: 'blocked_suspicious',
+      path: requestedPath,
+      imageId: queryId || null,
+      reason: 'blocked-suspicious'
+    });
     return {
       statusCode: 410,
       headers: {
@@ -240,10 +292,25 @@ exports.handler = async (event) => {
   const clientIp = getClientIp(event.headers);
   const highRate = isHighRateIp(clientIp);
 
-  // Lock out: no-session unknowns (bulk probes) and high-rate sources.
-  if (!hasSession || highRate) {
-    if (!hasSession) console.log('[smart-404] Locked: no session');
+  // Narrow no-session recovery exceptions for legacy crawl debt only:
+  // Allow only two approved legacy base prefixes.
+  const requestedLower = String(requestedPath || '').toLowerCase();
+  const isAllowedLegacyRecoveryPath = LEGACY_RECOVERY_PREFIXES.some(prefix =>
+    requestedLower === prefix || requestedLower.startsWith(`${prefix}/`)
+  );
+  const allowNoSessionRecovery = isAllowedLegacyRecoveryPath;
+
+  // Lock out: high-rate sources always; no-session traffic except narrow
+  // legacy-recovery exceptions above.
+  if (highRate || (!hasSession && !allowNoSessionRecovery)) {
+    if (!hasSession && !allowNoSessionRecovery) console.log('[smart-404] Locked: no session');
     if (highRate) console.log(`[smart-404] Locked: high rate from ${clientIp}`);
+    await logSmart404EdgeEvent({
+      outcome: 'locked',
+      path: requestedPath,
+      imageId: queryId || null,
+      reason: highRate ? 'high-rate' : 'no-session'
+    });
     return createBranded404Response(event, 'locked', 600);
   }
   
@@ -259,9 +326,49 @@ exports.handler = async (event) => {
     imageId = 'i-' + imageId;
   }
 
+  // Non-image legacy requests: canonicalize old namespace to /Galleries/*.
+  // This keeps old gallery URLs consolidating without forcing image lookup.
+  if (!imageId) {
+    if (/^\/Photography-Galleries\//.test(requestedPath || '')) {
+      const canonicalPath = String(requestedPath || '').replace(/^\/Photography-Galleries\//, '/Galleries/');
+      const redirectUrl = `${canonicalPath}${passthroughQuery}`;
+      console.log(`[smart-404] Legacy non-image path -> ${redirectUrl}`);
+      await logSmart404EdgeEvent({
+        outcome: 'legacy_gallery_canonicalized',
+        path: requestedPath,
+        imageId: null,
+        reason: 'legacy-gallery-canonicalized'
+      });
+      return {
+        statusCode: 301,
+        headers: {
+          'Location': redirectUrl,
+          'Cache-Control': 'public, max-age=31536000',
+          'X-Smart-404': 'legacy-gallery-canonicalized'
+        },
+        body: ''
+      };
+    }
+
+    console.log(`[smart-404] No image ID found, passing to 404`);
+    await logSmart404EdgeEvent({
+      outcome: 'no_image_id',
+      path: requestedPath,
+      imageId: null,
+      reason: 'no-image-id'
+    });
+    return createBranded404Response(event, 'no-image-id');
+  }
+
   // Fast-fail junk IDs before any map lookup
   if (!isStrictImageId(imageId)) {
     console.log(`[smart-404] Invalid image ID shape: ${imageId}`);
+    await logSmart404EdgeEvent({
+      outcome: 'invalid_id_format',
+      path: requestedPath,
+      imageId,
+      reason: 'invalid-id-format'
+    });
     return createBranded404Response(event, 'invalid-id-format');
   }
 
@@ -271,15 +378,15 @@ exports.handler = async (event) => {
   const parentGalleryLower = String(parentGalleryPath || '').toLowerCase();
   const hasKnownGalleryExact = knownGalleryPaths.has(parentGalleryLower);
   const hasKnownGalleryLeaf = knownGalleryPaths.has(`${parentGalleryLower}/gallery`);
-  if (!(hasKnownGalleryExact || hasKnownGalleryLeaf)) {
+  if (!isAllowedLegacyRecoveryPath && !(hasKnownGalleryExact || hasKnownGalleryLeaf)) {
     console.log(`[smart-404] Unknown gallery path: ${parentGalleryPath}`);
+    await logSmart404EdgeEvent({
+      outcome: 'invalid_gallery_path',
+      path: requestedPath,
+      imageId,
+      reason: 'invalid-gallery-path'
+    });
     return createBranded404Response(event, 'invalid-gallery-path');
-  }
-  
-  if (!imageId) {
-    // Not an image page request - pass through to normal 404
-    console.log(`[smart-404] No image ID found, passing to 404`);
-    return createBranded404Response(event, 'no-image-id');
   }
   
   console.log(`[smart-404] Looking up image ID: ${imageId}`);
@@ -331,6 +438,12 @@ exports.handler = async (event) => {
     // Found the image - redirect with canonical case
     const redirectUrl = `${correctGalleryPath}/${canonicalImageId}${passthroughQuery}`;
     console.log(`[smart-404] Found! Redirecting to: ${redirectUrl}`);
+    await logSmart404EdgeEvent({
+      outcome: 'image_relocated',
+      path: requestedPath,
+      imageId: canonicalImageId,
+      reason: 'image-relocated'
+    });
     
     return {
       statusCode: 301,
@@ -346,5 +459,11 @@ exports.handler = async (event) => {
   // Image ID shape and gallery path are valid, but ID is unknown.
   // Deterministic crawl-safe response for all UAs.
   console.log(`[smart-404] Unknown image ID (deterministic 404): ${imageId}`);
+  await logSmart404EdgeEvent({
+    outcome: 'notfound',
+    path: requestedPath,
+    imageId,
+    reason: 'notfound'
+  });
   return createBranded404Response(event, 'notfound');
 };

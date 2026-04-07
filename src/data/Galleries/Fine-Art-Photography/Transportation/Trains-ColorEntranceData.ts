@@ -35,7 +35,7 @@ export const entranceData = {
     Available as archival paper prints, framed artwork, and premium formats such as metal and acrylic. Perfect for studies, libraries, rustic interiors, or spaces that celebrate the history of travel and progress.
   `,
   image: {
-    src: "/img/i-tqSQMQK/l",
+    src: "/img/i-tqSQMQK/l.jpg",
     alt: "Fine art photograph of a vintage steam train by Wayne Heim",
     caption: "\"Iron Giants – Steam Locomotive at Dawn\"",
   },

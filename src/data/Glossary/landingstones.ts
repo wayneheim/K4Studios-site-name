@@ -9,7 +9,7 @@ export const landingWestern = {
    //   title: 'Painterly Landscape Photography',
   //    href: '/Galleries/Painterly-Fine-Art-Photography/Landscapes',
  //     imageId: "i-mCJv3RM",
-      thumb: "/img/i-mCJv3RM/s",
+      thumb: "/img/i-mCJv3RM/s.jpg",
 //    },
    
   ]

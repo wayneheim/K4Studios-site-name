@@ -12,31 +12,31 @@ export const landingWestern = {
       title: 'Mountain Themed Landscapes',
       href: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains',
       imageId: "i-98c9sG9",
-      thumb: "/img/i-98c9sG9/s",
+      thumb: "/img/i-98c9sG9/s.jpg",
     },
     {
       title: 'Sunset Themed Landscapes',
       href: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets',
       imageId: "i-MwLgJL5",
-      thumb: "/img/i-MwLgJL5/s",
+      thumb: "/img/i-MwLgJL5/s.jpg",
     },
     {
       title: 'Water & Waterfall Landscapes',
       href: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water',
       imageId: "i-PTKKNJK",
-      thumb: "/img/i-PTKKNJK/s",
+      thumb: "/img/i-PTKKNJK/s.jpg",
     },
     {
       title: 'Color Landscapes',
       href: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color',
       imageId: "i-xBJqD6x",
-      thumb: "/img/i-xBJqD6x/s",
+      thumb: "/img/i-xBJqD6x/s.jpg",
     },
     {
       title: 'Black & White Landscapes',
       href: '/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White',
       imageId: "i-ZgXTnCV",
-      thumb: "/img/i-ZgXTnCV/s",
+      thumb: "/img/i-ZgXTnCV/s.jpg",
     },
     
   ]

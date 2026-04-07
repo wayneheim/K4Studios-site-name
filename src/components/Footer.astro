@@ -41,7 +41,7 @@ const toShareUrl = (src: string | undefined) => {
   if (src.startsWith('/images/')) return `${siteOrigin}${src}`;
   // Extract ID from SmugMug URL and convert to proxy
   const imageId = extractImageId(src);
-  if (imageId) return `${siteOrigin}/img/${imageId}/xl`;
+  if (imageId) return `${siteOrigin}/img/${imageId}/xl.jpg`;
   // Already absolute proxy URL
   if (src.includes('k4studios.com/img/')) return src.replace(/https?:\/\/(?:www\.)?k4studios\.com/i, siteOrigin);
   // Unknown - return undefined to avoid leaking
@@ -60,7 +60,7 @@ const galleriesWithAllPages: Record<string, string> = {
 const hasAuthoredAllPage = Object.prototype.hasOwnProperty.call(galleriesWithAllPages, previewPath);
 const allPageHref = hasAuthoredAllPage ? `${previewPath}/all` : null;
 const allPageLinkText = hasAuthoredAllPage ? galleriesWithAllPages[previewPath] : null;
-const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `${siteOrigin}/img/${previewImages[0].id}/xl` : undefined);
+const shareImage = toShareUrl(rawShareImage) || (previewImages?.[0]?.id ? `${siteOrigin}/img/${previewImages[0].id}/xl.jpg` : undefined);
 ---
 
 <footer

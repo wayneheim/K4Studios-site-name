@@ -45,7 +45,7 @@ export const landingCowboy = {
       title: "Stories of the Frontier",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
       _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
-      thumb: "/img/i-trZrk2w/s",
+      thumb: "/img/i-trZrk2w/s.jpg",
     },
   ],
 };

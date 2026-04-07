@@ -324,6 +324,7 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
     <p>Phase 1 minimal trusted dashboard. The top section is the site view. System wiring, refresh, schema, and debug details are kept below as operational context.</p>
     <div class="window-nav">
       ${windowOptions.map((option) => `<a class="window-chip${option.key === window.key ? ' active' : ''}" href="/__k4stats-v2?window=${option.key}">${option.label}</a>`).join('')}
+        <a class="window-chip" href="/__k4stats-v2/legacy-patterns?days=7">Legacy Pattern Lab</a>
     </div>
     <p class="subtle">Current window: <strong>${window.label}</strong>. Today and Yesterday use Eastern calendar-day boundaries; Last 24h and Last 7 days use rolling trailing durations.</p>
 

@@ -104,6 +104,54 @@ force = true
 # In prod: Netlify edge redirect handles this (200 proxy)
 ##############################
 [[redirects]]
+from = "/img/OG-:id/:size.jpg"
+to = "/img/:id/:size.jpg"
+status = 301
+force = true
+
+[[redirects]]
+from = "/img/TW-:id/:size.jpg"
+to = "/img/:id/:size.jpg"
+status = 301
+force = true
+
+[[redirects]]
+from = "/img/PN-:id/:size.jpg"
+to = "/img/:id/:size.jpg"
+status = 301
+force = true
+
+[[redirects]]
+from = "/img/SD-:id/:size.jpg"
+to = "/img/:id/:size.jpg"
+status = 301
+force = true
+
+[[redirects]]
+from = "/img/OG-:id/:size"
+to = "/img/:id/:size.jpg"
+status = 301
+force = true
+
+[[redirects]]
+from = "/img/TW-:id/:size"
+to = "/img/:id/:size.jpg"
+status = 301
+force = true
+
+[[redirects]]
+from = "/img/PN-:id/:size"
+to = "/img/:id/:size.jpg"
+status = 301
+force = true
+
+[[redirects]]
+from = "/img/SD-:id/:size"
+to = "/img/:id/:size.jpg"
+status = 301
+force = true
+
+[[redirects]]
 from = "/img/*"
 to = "https://k4-image-proxy.wayneheim.workers.dev/img/:splat"
 status = 200

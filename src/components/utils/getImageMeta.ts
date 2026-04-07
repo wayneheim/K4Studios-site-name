@@ -19,29 +19,33 @@ export function getImageMeta(imageId, galleryDatas, fallbackMeta: any = {}, cano
     return parentGalleryMeta;
   }
 
+  const clean = (v: any) => String(v || "").trim();
+  const genericTitle = /^(untitled|image|photo|no\s*title)$/i;
+  const imageTitle = clean(imageData.title);
+  const imageAlt = clean(imageData.alt);
+
   const title =
-    imageData.title ||
-    parentGalleryMeta.ogTitle ||
-    parentGalleryMeta.title ||
+    (imageTitle && !genericTitle.test(imageTitle) ? imageTitle : "") ||
+    (imageAlt && !genericTitle.test(imageAlt) ? imageAlt : "") ||
     "Wayne Heim Fine Art Photography";
 
   // Prefer story for social/meta tags, fallback to description, then gallery meta
   const story = (imageData.story && imageData.story.trim()) ? imageData.story.trim() : null;
+  const imageDescription = (imageData.description && imageData.description.trim()) ? imageData.description.trim() : null;
+  const altDescription = (imageAlt && !genericTitle.test(imageAlt)) ? imageAlt : null;
   const description =
     story && story.length <= 160
       ? story
       : story
       ? story.slice(0, 157) + "…"
-      : imageData.description && imageData.description.length <= 160
-      ? imageData.description
-      : imageData.description
-      ? imageData.description.slice(0, 157) + "…"
-      : parentGalleryMeta.ogDescription ||
-        parentGalleryMeta.description ||
-        "Painterly and fine art photography by Wayne Heim.";
+      : imageDescription && imageDescription.length <= 160
+      ? imageDescription
+      : imageDescription
+      ? imageDescription.slice(0, 157) + "…"
+      : altDescription || "Painterly and fine art photography by Wayne Heim.";
 
   const imageUrl =
-    imageData.smugmugUrl || imageData.imageUrl || parentGalleryMeta.ogImage;
+    imageData.smugmugUrl || imageData.imageUrl || imageData.src || parentGalleryMeta.ogImage;
 
   return {
     ...imageData, // ✅ keep all fields (alt, notes, keywords, etc.)

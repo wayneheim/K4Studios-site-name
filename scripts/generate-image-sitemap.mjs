@@ -68,13 +68,13 @@ function generateUrlEntry(image, urlBase) {
     return null;
   }
 
-  // Skip images without a valid SmugMug src
-  if (!image.src || !image.src.includes('smugmug.com')) {
+  // Skip images without a valid ID
+  if (!image.id || !image.id.startsWith('i-')) {
     return null;
   }
 
   const pageUrl = `${SITE_URL}${urlBase}/${image.id}`;
-  const imageUrl = image.srcXL || image.srcL || image.src;
+  const imageUrl = `${SITE_URL}/img/${image.id}/l.jpg`;
   
   // Build caption from description, truncate if too long
   let caption = image.description || image.title;

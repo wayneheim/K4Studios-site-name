@@ -35,7 +35,7 @@ export const entranceData = {
     Available as archival paper prints, framed artwork, or premium display formats including metal and acrylic. Perfect for offices, libraries, aviation museums, or personal collections that celebrate the history and wonder of flight.
   `,
   image: {
-    src: "/img/i-pwMVKTQ/l",
+    src: "/img/i-pwMVKTQ/l.jpg",
     alt: "Fine art photograph of a vintage airplane by Wayne Heim",
     caption: "\"Wings of Time – WWII Prop Plane\"",
   },

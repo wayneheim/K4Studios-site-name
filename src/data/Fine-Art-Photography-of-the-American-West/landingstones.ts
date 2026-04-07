@@ -29,22 +29,22 @@ export const landingAmericanWest = {
     {
       title: "Cowboy Portraits",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
-      thumb: "/img/i-trZrk2w/s",
+      thumb: "/img/i-trZrk2w/s.jpg",
     },
     {
       title: "Indigenous Portraits",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
-      thumb: "/img/i-4Hz6D7k/s",
+      thumb: "/img/i-4Hz6D7k/s.jpg",
     },
     {
       title: "Stories of the Frontier",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
-      thumb: "/img/i-kp5NHNw/s",
+      thumb: "/img/i-kp5NHNw/s.jpg",
     },
     {
       title: "Frontier Reckoning",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
-      thumb: "/img/i-FXNxqTK/s",
+      thumb: "/img/i-FXNxqTK/s.jpg",
     },
   ],
 };

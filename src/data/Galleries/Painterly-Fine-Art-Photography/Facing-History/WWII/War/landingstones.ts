@@ -25,13 +25,13 @@ export const landingWestern = {
       title: 'Color Art of War Photos',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color',
       imageId: "i-dMQWS6q",
-      thumb: "/img/i-dMQWS6q/s",
+      thumb: "/img/i-dMQWS6q/s.jpg",
     },
     {
       title: 'Black & White Art of War Photos',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White',
       imageId: "i-p8JdtJM",
-      thumb: "/img/i-p8JdtJM/s",
+      thumb: "/img/i-p8JdtJM/s.jpg",
     },
 
   ]

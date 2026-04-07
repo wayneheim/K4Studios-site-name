@@ -25,19 +25,19 @@ export const landingWestern = {
       title: 'WWII: The Art of War',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War',
       imageId: "i-LN9Tdvr",
-      thumb: "/img/i-LN9Tdvr/s",
+      thumb: "/img/i-LN9Tdvr/s.jpg",
     },
     {
       title: 'Men and Machines',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines',
       imageId: "i-K2qMML6",
-      thumb: "/img/i-K2qMML6/s",
+      thumb: "/img/i-K2qMML6/s.jpg",
     },
     {
       title: 'Portraits and People',
       href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits',
       imageId: "i-S5mtbjv",
-      thumb: "/img/i-S5mtbjv/s",
+      thumb: "/img/i-S5mtbjv/s.jpg",
     },
 
   ]

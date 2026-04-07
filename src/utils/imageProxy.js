@@ -85,7 +85,7 @@ export function normalizeImageSrc(src, size = 'm') {
  * Generate a proxy URL for an image
  * @param {string} imageId - The image ID (e.g., "i-abc123")
  * @param {string} size - Size: 's', 'm', 'l', 'xl', or 'src'
- * @returns {string} Proxy URL like "/img/i-abc123/m" (or full worker URL in dev)
+ * @returns {string} Proxy URL like "/img/i-abc123/m.jpg" (or full worker URL in dev)
  */
 export function getProxySrc(imageId, size = 'm') {
   if (!imageId) return '';

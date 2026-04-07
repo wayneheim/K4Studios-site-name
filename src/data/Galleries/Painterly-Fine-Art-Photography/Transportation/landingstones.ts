@@ -21,19 +21,19 @@ export const landingWestern = {
       title: 'Trains & Locomotives: Color Photos',
       href: '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color',
       imageId: "i-38H7pXm",
-      thumb: "/img/i-38H7pXm/s",
+      thumb: "/img/i-38H7pXm/s.jpg",
     },
     {
       title: 'Trains & Locomotives: B/W Photos',
       href: '/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White',
       imageId: "i-FrDFN7V",
-      thumb: "/img/i-FrDFN7V/s",
+      thumb: "/img/i-FrDFN7V/s.jpg",
     },
      {
       title: 'Classic Car Photos',
       href: '/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars',
       imageId: "i-wkRb273",
-      thumb: "/img/i-wkRb273/s",
+      thumb: "/img/i-wkRb273/s.jpg",
     },
     
   ]

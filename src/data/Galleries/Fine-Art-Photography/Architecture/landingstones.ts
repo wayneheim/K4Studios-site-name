@@ -10,7 +10,7 @@ export const landingWestern = {
       title: 'Architecture Gallery',
       href: '/Galleries/Fine-Art-Photography/Architecture/Gallery',
       imageId: "i-fszvgmq",
-      thumb: "/img/i-fszvgmq/s",
+      thumb: "/img/i-fszvgmq/s.jpg",
     },
 
     

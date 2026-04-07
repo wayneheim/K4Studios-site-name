@@ -52,8 +52,21 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 /Scheduled-Shoots/*  https://wayne-heim.smugmug.com/Other/Photo-Shoots  301!
 
 # Legacy Photography-Galleries paths (old SmugMug structure)
+# Route all legacy requests through smart-404 for deterministic recovery.
+# smart-404 will:
+# - image paths: resolve canonical image redirect when possible
+# - non-image paths: 301 to /Galleries/:splat
+/Photography-Galleries/*  /.netlify/functions/smart-404?path=/Photography-Galleries/:splat  404!
+
+# Legacy SmugMug /A suffix normalization (deterministic one-hop)
+^/(Photography-Galleries|Galleries|galleries)/(.*)/(i-[^/]+)/A/?$  /$1/$2/$3  301!
+
+# Legacy image detail rescue (regex fallback because mixed splat+param
+# patterns can miss and fall through to generic rewrites)
+^/Photography-Galleries/(.*)/(i-[^/]+)/?$  /.netlify/functions/smart-404?id=$2&path=/Photography-Galleries/$1/$2  404
+
 /Photography-Galleries/*/i-:id  /.netlify/functions/smart-404?id=:id&path=/Photography-Galleries/:splat/i-:id  404!
-/Photography-Galleries/*  /Galleries/:splat  301
+/Photography-Galleries/*/i-:id/A  /.netlify/functions/smart-404?id=:id&path=/Photography-Galleries/:splat/i-:id/A  404!
 
 # Legacy Pictorialist paths → redirect to current page
 /Pictorialist-Photography/*/i-*  /Pictorialist-Photography  301!
@@ -87,7 +100,10 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 # If image page doesn't exist, call smart-404 function to find/redirect
 # Note: Netlify splat (*) captures everything, :id captures the image ID segment
 # The ! force flag ensures this runs even with framework 404 handling
+^/(Galleries|galleries)/(.*)/(i-[^/]+)/?$  /.netlify/functions/smart-404?id=$3&path=/$1/$2/$3  404
+
 /Galleries/*/i-:id  /.netlify/functions/smart-404?id=:id&path=/Galleries/:splat/i-:id  404!
+/Galleries/*/i-:id/A  /.netlify/functions/smart-404?id=:id&path=/Galleries/:splat/i-:id/A  404!
 
 # i-TTLmLd3 was removed from West Gallery - redirect to gallery landing page
 /Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery/i-TTLmLd3  /Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery  301
@@ -136,6 +152,7 @@ https://k4studios.com/(.+)/$  https://www.k4studios.com/$1  301!
 
 # Lowercase galleries path with image IDs - route to smart-404
 /galleries/*/i-:id  /.netlify/functions/smart-404?id=:id&path=/galleries/:splat/i-:id  404!
+/galleries/*/i-:id/A  /.netlify/functions/smart-404?id=:id&path=/galleries/:splat/i-:id/A  404!
 
 # Lowercase galleries path (case mismatch)
 /galleries  /Galleries  301

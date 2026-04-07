@@ -19,19 +19,19 @@ export const landingWestern = {
       title: 'Mountain Themed Landscapes',
       href: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains',
       imageId: "i-zk7zXP3",
-      thumb: "/img/i-zk7zXP3/s",
+      thumb: "/img/i-zk7zXP3/s.jpg",
     },
     {
       title: 'Sunset Themed Landscapes',
       href: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets',
       imageId: "i-ZNSFtRg",
-      thumb: "/img/i-ZNSFtRg/s",
+      thumb: "/img/i-ZNSFtRg/s.jpg",
     },
     {
       title: 'Water & Waterfall Landscapes',
       href: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water',
       imageId: "i-Pgks2np",
-      thumb: "/img/i-Pgks2np/s",
+      thumb: "/img/i-Pgks2np/s.jpg",
     },
     
   ]

@@ -95,7 +95,7 @@ function extractImageId(src) {
 }
 
 function buildWarmUrl(imageId, size) {
-  return `${BASE_URL}/img/${imageId}/${size}`;
+  return `${BASE_URL}/img/${imageId}/${size}.jpg`;
 }
 
 // ============================================================================

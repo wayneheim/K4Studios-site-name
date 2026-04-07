@@ -42,7 +42,7 @@ export const landingNarrativeWesternArt = {
       title: "One-Image Movies",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
       _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
-      thumb: "/img/i-LCspRF4/s",
+      thumb: "/img/i-LCspRF4/s.jpg",
     },
   ],
 };

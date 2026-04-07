@@ -3,7 +3,7 @@
  * 
  * One-time migration script to:
  * 1. Add explicit imageId fields to all tombstone entries
- * 2. Convert thumb URLs to proxy format (/img/{id}/s)
+ * 2. Convert thumb URLs to proxy format (/img/{id}/s.jpg)
  * 3. Report any entries that cannot be normalized (hard fail)
  * 
  * This eliminates regex parsing entropy from the warming pipeline.
@@ -77,7 +77,7 @@ function processFile(filePath) {
     }
     
     // Build replacement with imageId field and proxy thumb
-    const proxyUrl = `/img/${imageId}/s`;
+    const proxyUrl = `/img/${imageId}/s.jpg`;
     const replacement = `imageId: "${imageId}",\n      thumb: "${proxyUrl}"`;
     
     replacements.push({
@@ -114,7 +114,7 @@ function processFile(filePath) {
           continue;
         }
         
-        const proxyUrl = `/img/${imageId}/s`;
+        const proxyUrl = `/img/${imageId}/s.jpg`;
         content = content.replace(urlMatch, `"${proxyUrl}"`);
         modified = true;
       }

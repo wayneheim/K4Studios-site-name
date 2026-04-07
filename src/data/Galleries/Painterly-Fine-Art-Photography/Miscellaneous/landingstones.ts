@@ -17,7 +17,7 @@ export const landingWestern = {
       title: 'Fine Art Painterly Portrait Photos',
       href: '/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits',
       imageId: "i-LcWbnLw",
-      thumb: "/img/i-LcWbnLw/s",
+      thumb: "/img/i-LcWbnLw/s.jpg",
     },
       
   ]
