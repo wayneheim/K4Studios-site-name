@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { siteNav } from "../data/siteNav";
+import "../styles/gallery-header-react.css";
 
 // Helper to normalize path
 function normalize(path) {
@@ -66,56 +67,6 @@ export default function GalleryToggleButton({ currentPath }) {
         );
       })}
 
-      {/* Styles */}
-      <style jsx>{`
-        .gallery-toggle {
-          margin-left: 0.75rem;
-          display: inline-flex;
-          gap: 0.35rem;
-          z-index: 5;
-          min-width: 50px;
-          justify-content: center;
-        }
-
-        .toggle-pill {
-          width: 22px;
-          height: 22px;
-          min-width: 22px;
-          min-height: 22px;
-          flex-shrink: 0;
-          aspect-ratio: 1;
-          border-radius: 50%;
-          font-size: 0.75rem;
-          font-weight: 600;
-            background: #493e3a;
-            border: 1.8px solid #c2b7afff;
-            color: #fff;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.2s ease;
-          cursor: pointer;
-          padding-top: 1px;
-        }
-
-        .toggle-pill:hover {
-            background: #a7331fff;
-            border: 1.8px solid #a7331fff;
-            color: #fff;
-          
-        }
-
-        .toggle-pill.active {
-            background: #c5bdbb;
-            color: #000;
-          pointer-events: none;
-        }
-
-        .toggle-pill.active.active-fade {
-            background: #695748ff;
-            color: #a8a6a3ff;
-        }
-      `}</style>
     </div>
   );
 }

@@ -19,6 +19,8 @@ function renderSchemaStatus(schema) {
 function humanizeCoreActionLabel(row) {
   const family = row?.event_family || '';
   const action = row?.event_action || '';
+  const rawEventType = row?.raw_event_type || '';
+  const rawSourceLayer = row?.raw_source_layer || '';
   const actionMap = {
     order_clicked: 'Buy Button Click',
     order_submitted: 'Order Submitted',
@@ -43,11 +45,31 @@ function humanizeCoreActionLabel(row) {
     exit: 'Exit to Gallery',
     series_info: 'Series Info',
     chapter_view: 'Image View',
-    load: 'Browser Page Load'
+    load: 'Browser Page Load',
+    all_list_click: 'All Galleries Click'
   };
+
+  const titleizeToken = (value) => String(value || '')
+    .replace(/_pixel_v\d+$/i, '')
+    .replace(/_v\d+$/i, '')
+    .replace(/[_-]+/g, ' ')
+    .replace(/\b\w/g, (char) => char.toUpperCase())
+    .trim();
 
   if (actionMap[action]) {
     return actionMap[action];
+  }
+
+  if (action) {
+    return titleizeToken(action);
+  }
+
+  if (rawEventType) {
+    return titleizeToken(rawEventType);
+  }
+
+  if (rawSourceLayer) {
+    return titleizeToken(rawSourceLayer);
   }
 
   const familyMap = {
@@ -120,6 +142,7 @@ function buildHopPathTooltip(hopCount, pathRows) {
 export function renderDashboardV2({ summary, authHeader = '' }) {
   const schema = summary?.schema || {};
   const window = summary?.window || { key: 'today', label: 'Today' };
+  const filters = summary?.filters || { excludeIp: null, viewerIp: null, hideChardon: false };
   const refreshStatus = summary?.refreshStatus || null;
   const counts = summary?.counts;
   const recentFamilies = summary?.recentFamilies || [];
@@ -164,6 +187,7 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
   const pilotHomeCowboyCityRegionCoverage = Number(counts?.pilot_home_cowboy_city_region_coverage || 0);
   const pilotHomeCowboySessions = Number(counts?.pilot_home_cowboy_sessions || 0);
   const pilotHomeCowboyVisitors = Number(counts?.pilot_home_cowboy_visitors || 0);
+  const showPilotTrustMismatchNote = sessions === 0 && (homePageViews > 0 || pilotHomePageViews > 0);
   const sessionsReachingFirstImage = Number(counts?.sessions_reaching_first_image || 0);
   const directToFirstImageSessions = Number(counts?.direct_to_first_image_sessions || 0);
   const sessionsWithoutImageReach = Math.max(0, sessions - sessionsReachingFirstImage);
@@ -205,24 +229,59 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
     { key: '7d', label: 'Last 7 days' },
     { key: 'all', label: 'All time' }
   ];
-  const topImageRows = topImages.map((row, index) => {
+  const isSingleDayWindow = window.key === 'today' || window.key === 'yesterday';
+  const baseParams = new URLSearchParams();
+  if (filters.excludeIp) baseParams.set('excludeIp', filters.excludeIp);
+  if (filters.hideChardon) baseParams.set('hideChardon', '1');
+  const buildDashboardUrl = (overrides = {}) => {
+    const params = new URLSearchParams(baseParams.toString());
+    Object.entries(overrides).forEach(([key, value]) => {
+      if (value === null || value === undefined || value === false || value === '') {
+        params.delete(key);
+        return;
+      }
+      params.set(key, String(value));
+    });
+    const query = params.toString();
+    return query ? `/__k4stats-v2?${query}` : '/__k4stats-v2';
+  };
+  const excludeMeUrl = filters.viewerIp ? buildDashboardUrl({ window: window.key, excludeIp: filters.viewerIp }) : null;
+  const showAllUrl = buildDashboardUrl({ window: window.key, excludeIp: null });
+  const hideTeamUrl = buildDashboardUrl({ window: window.key, hideChardon: '1' });
+  const showTeamUrl = buildDashboardUrl({ window: window.key, hideChardon: null });
+  const topImagesTitle = isSingleDayWindow
+    ? `Images Accessed ${window.key === 'today' ? 'Today' : 'Yesterday'}`
+    : 'Top 10 Images';
+  const topImagesIntro = isSingleDayWindow
+    ? 'All trusted images accessed in this calendar-day window. Buy-clicked images are pinned to the top and highlighted in green.'
+    : 'Most-active trusted image IDs from image views plus image-linked interactions. Buy-clicked images are pinned to the top and highlighted in green.';
+  const topImagesFootnote = isSingleDayWindow
+    ? 'External/direct proxy image fetches and suspicious/internal-test sessions are excluded from this daily list.'
+    : 'External/direct proxy image fetches and suspicious/internal-test sessions are excluded from this top-10 list.';
+  const renderImageRows = (rows) => rows.map((row, index) => {
     const imageId = row.image_id;
+    const buyClicks = Number(row.buy_clicks || 0);
     const rawPath = row.page_path || '';
     const pagePath = rawPath ? (rawPath.startsWith('/') ? rawPath : `/${rawPath}`) : '';
     const imageUrl = pagePath ? `https://www.k4studios.com${pagePath}` : `https://www.k4studios.com/art/${imageId}`;
     const thumbHtml = imageId
-      ? `<img src="https://www.k4studios.com/img/${imageId}/s.jpg" alt="" loading="${index < 4 ? 'eager' : 'lazy'}" class="image-thumb">`
+      ? `<img src="https://www.k4studios.com/img/${imageId}/s" alt="" loading="${index < 4 ? 'eager' : 'lazy'}" class="image-thumb">`
       : '<span class="image-thumb image-thumb-fallback">🖼</span>';
+    const buyBadge = buyClicks > 0
+      ? `<span class="image-buy-badge">Buy ${buyClicks}</span>`
+      : '';
     return `
-      <a class="image-list-row" href="${imageUrl}" target="_blank" rel="noopener">
+      <a class="image-list-row${buyClicks > 0 ? ' image-list-row-buy' : ''}" href="${imageUrl}" target="_blank" rel="noopener">
         <span class="image-thumb-wrap">${thumbHtml}</span>
         <span class="image-meta">
-          <span class="image-id" title="${imageId}">${imageId}</span>
+          <span class="image-id" title="${imageId}">${imageId}${buyBadge}</span>
           <span class="image-link-path" title="${pagePath || imageUrl}">${pagePath || '/art/' + imageId}</span>
         </span>
         <strong>${row.views}</strong>
       </a>`;
   });
+  const topTenImageRows = renderImageRows(topImages.slice(0, 10));
+  const allImageRows = renderImageRows(topImages);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -235,10 +294,12 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
     .container { max-width: 1200px; margin: 0 auto; }
     h1, h2 { margin: 0 0 12px; }
     p { color: #b7b7b7; line-height: 1.5; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 20px 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 20px 0; align-items: stretch; }
     .hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 20px 0; }
-    .primary-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px; margin: 20px 0; align-items: start; }
-    .card { background: #232323; border: 1px solid #343434; border-radius: 10px; padding: 16px; }
+    .primary-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px; margin: 20px 0; align-items: stretch; }
+    .card { background: #232323; border: 1px solid #343434; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; min-height: 0; }
+    .grid > .card { height: 420px; min-height: 420px; overflow: hidden; }
+    .primary-grid > .card { height: 420px; min-height: 420px; overflow: hidden; }
     .metric { font-size: 32px; font-weight: 700; color: #66aaff; }
     .metric.small { font-size: 26px; }
     .muted { color: #8d8d8d; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -282,15 +343,30 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
     .btn { background: #2b2b2b; color: #e6e6e6; border: 1px solid #4b4b4b; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
     .btn:disabled { opacity: 0.6; cursor: wait; }
     .window-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 8px; }
+    .filter-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
     .window-chip { display: inline-flex; align-items: center; justify-content: center; min-width: 90px; padding: 8px 12px; border-radius: 999px; border: 1px solid #3b3b3b; background: #202020; color: #cfd6df; text-decoration: none; font-size: 13px; }
     .window-chip.active { background: #163251; border-color: #2d5f92; color: #e8f3ff; }
+    .filter-chip { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; border-radius: 999px; border: 1px solid #3b3b3b; background: #1d1d1d; color: #d5dce5; text-decoration: none; font-size: 12px; }
+    .filter-chip.active { background: rgba(46, 204, 113, 0.12); border-color: rgba(46, 204, 113, 0.4); color: #c9f7d8; }
+    .filter-chip.badge { border-style: dashed; color: #f0d2a6; }
+    .card-title-row { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; }
+    .card-title-row h2 { margin: 0; }
+    .info-dot { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 999px; border: 1px solid #4a5a6d; color: #9ecbff; font-size: 11px; font-weight: 700; cursor: help; flex: 0 0 auto; }
+    .info-dot::after { content: attr(data-tooltip); position: absolute; left: 50%; top: calc(100% + 8px); transform: translateX(-50%); width: 240px; padding: 8px 10px; border-radius: 8px; background: #11161c; border: 1px solid #35506b; color: #d8e8f8; font-size: 12px; line-height: 1.4; white-space: normal; opacity: 0; pointer-events: none; box-shadow: 0 10px 28px rgba(0,0,0,0.35); z-index: 20; }
+    .info-dot:hover::after { opacity: 1; }
     code { background: #111; padding: 2px 6px; border-radius: 4px; }
     ol, ul { margin: 12px 0 0 20px; color: #cfcfcf; }
     a { color: #66aaff; }
     .section-title { margin-top: 28px; margin-bottom: 6px; }
     .section-copy { margin-top: 0; }
     .system-details { margin-top: 24px; }
-    .scroll-panel { max-height: 360px; overflow-y: auto; padding-right: 14px; scrollbar-width: thin; scrollbar-color: #4a4a4a #1c1c1c; }
+    .scroll-panel { flex: 1 1 auto; min-height: 0; max-height: 260px; overflow-y: auto; padding-right: 14px; scrollbar-width: thin; scrollbar-color: #4a4a4a #1c1c1c; }
+    .card-compact .scroll-panel { max-height: none; }
+    .card-scroll-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; padding-right: 14px; scrollbar-width: thin; scrollbar-color: #4a4a4a #1c1c1c; }
+    .card-scroll-body::-webkit-scrollbar { width: 8px; height: 8px; }
+    .card-scroll-body::-webkit-scrollbar-track { background: #1c1c1c; border-radius: 999px; }
+    .card-scroll-body::-webkit-scrollbar-thumb { background: #4a4a4a; border-radius: 999px; border: 1px solid #1c1c1c; }
+    .card-scroll-body::-webkit-scrollbar-thumb:hover { background: #5a5a5a; }
     .scroll-panel::-webkit-scrollbar { width: 8px; height: 8px; }
     .scroll-panel::-webkit-scrollbar-track { background: #1c1c1c; border-radius: 999px; }
     .scroll-panel::-webkit-scrollbar-thumb { background: #4a4a4a; border-radius: 999px; border: 1px solid #1c1c1c; }
@@ -298,12 +374,17 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
     .image-list-row { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid #333; color: #e6e6e6; text-decoration: none; }
     .image-list-row:last-child { border-bottom: none; }
     .image-list-row:hover { background: rgba(255,255,255,0.03); }
+    .image-list-row-buy { background: rgba(46, 204, 113, 0.10); }
+    .image-list-row-buy:hover { background: rgba(46, 204, 113, 0.16); }
     .image-thumb-wrap { display: inline-flex; align-items: center; justify-content: center; width: 56px; }
     .image-thumb { width: 48px; height: 48px; object-fit: cover; border-radius: 6px; border: 1px solid #3f4a57; }
     .image-thumb-fallback { display: inline-flex; align-items: center; justify-content: center; background: #333; color: #aaa; font-size: 18px; }
     .image-meta { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-    .image-id { color: #9ac7ff; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .image-id { color: #9ac7ff; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; }
+    .image-list-row-buy .image-id { color: #bdf3cf; }
     .image-link-path { color: #8d8d8d; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .image-buy-badge { display: inline-flex; align-items: center; justify-content: center; padding: 2px 8px; border-radius: 999px; background: rgba(46, 204, 113, 0.18); border: 1px solid rgba(46, 204, 113, 0.38); color: #7ef0a8; font-size: 11px; font-weight: 600; }
+    .warn-note { margin: 0 0 12px; padding: 10px 12px; border-radius: 8px; background: rgba(243, 156, 18, 0.10); border: 1px solid rgba(243, 156, 18, 0.26); color: #f6cf8c; font-size: 12px; line-height: 1.45; }
     details.system-details { background: #1c1c1c; border: 1px solid #343434; border-radius: 10px; padding: 0; overflow: hidden; }
     details.system-details summary { list-style: none; cursor: pointer; padding: 16px 18px; font-weight: 600; background: #202020; }
     details.system-details summary::-webkit-details-marker { display: none; }
@@ -312,6 +393,8 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
     .system-body .list-row span { overflow-wrap: normal; word-break: normal; white-space: normal; }
     .system-body .list-row strong { justify-self: end; text-align: right; white-space: normal; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
     .refresh-status-copy { margin: 12px 0; padding: 10px 12px; border-radius: 8px; background: #1b1b1b; border: 1px solid #303030; color: #cfd6df; overflow-wrap: anywhere; word-break: break-word; }
+    .card > .subtle:last-child,
+    .card > p.subtle:last-child { margin-top: auto; }
     .split-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
     @media (max-width: 900px) {
       .primary-grid { grid-template-columns: 1fr; }
@@ -323,8 +406,16 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
     <h1>K4 Analytics V2</h1>
     <p>Phase 1 minimal trusted dashboard. The top section is the site view. System wiring, refresh, schema, and debug details are kept below as operational context.</p>
     <div class="window-nav">
-      ${windowOptions.map((option) => `<a class="window-chip${option.key === window.key ? ' active' : ''}" href="/__k4stats-v2?window=${option.key}">${option.label}</a>`).join('')}
+      ${windowOptions.map((option) => `<a class="window-chip${option.key === window.key ? ' active' : ''}" href="${buildDashboardUrl({ window: option.key })}">${option.label}</a>`).join('')}
         <a class="window-chip" href="/__k4stats-v2/legacy-patterns?days=7">Legacy Pattern Lab</a>
+    </div>
+    <div class="filter-nav">
+      ${filters.excludeIp
+        ? `<span class="filter-chip badge active">Excluding IP: ${escapeHtml(filters.excludeIp)}</span><a class="filter-chip" href="${showAllUrl}">Show All IPs</a>`
+        : (excludeMeUrl ? `<a class="filter-chip" href="${excludeMeUrl}">Exclude My IP</a>` : '<span class="filter-chip badge">Viewer IP unavailable</span>')}
+      ${filters.hideChardon
+        ? `<span class="filter-chip active">Team Traffic Hidden</span><a class="filter-chip" href="${showTeamUrl}">Show Team</a>`
+        : `<a class="filter-chip" href="${hideTeamUrl}">Hide Team</a>`}
     </div>
     <p class="subtle">Current window: <strong>${window.label}</strong>. Today and Yesterday use Eastern calendar-day boundaries; Last 24h and Last 7 days use rolling trailing durations.</p>
 
@@ -341,7 +432,7 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
         const button = document.getElementById('v2-refresh-button');
         const status = document.getElementById('v2-refresh-status');
         const batchSize = 1000;
-        const maxBatches = 50;
+        const maxBatches = 10;
         if (button) {
           button.disabled = true;
           button.textContent = 'Refreshing...';
@@ -350,31 +441,26 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
           status.textContent = 'Running V2 refresh...';
         }
         try {
-          let batchCount = 0;
-          let processedRows = 0;
-          let hasMore = false;
+          if (status) {
+            status.textContent = 'Refreshing V2...';
+          }
 
-          do {
-            batchCount += 1;
-            if (status) {
-              status.textContent = 'Refreshing V2 batch ' + batchCount + '...';
-            }
+          const response = await k4AdminFetch('/__k4stats-v2/refresh?batch=' + batchSize + '&maxBatches=' + maxBatches + '&forceFacts=1', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+          });
+          const data = await response.json();
+          if (!response.ok) {
+            throw new Error(data && data.error ? data.error : 'Refresh failed');
+          }
 
-            const response = await k4AdminFetch('/__k4stats-v2/refresh?batch=' + batchSize, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' }
-            });
-            const data = await response.json();
-            if (!response.ok) {
-              throw new Error(data && data.error ? data.error : 'Refresh failed');
-            }
-
-            processedRows += Number(data && data.summary ? data.summary.processedRawRows || 0 : 0);
-            hasMore = Boolean(data && data.summary && data.summary.hasMore);
-          } while (hasMore && batchCount < maxBatches);
+          const summary = data && data.summary ? data.summary : null;
+          const processedRows = Number(summary ? summary.processedRawRows || 0 : 0);
+          const batchCount = Number(summary ? summary.batchCount || 0 : 0);
+          const hasMore = Boolean(summary && summary.hasMore);
 
           if (hasMore) {
-            throw new Error('Refresh stopped after ' + batchCount + ' batches; more data is still pending.');
+            throw new Error('Refresh processed ' + processedRows + ' raw rows across ' + batchCount + ' batches, but more data is still pending. Click refresh again.');
           }
 
           if (status) {
@@ -425,44 +511,66 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
     </div>
 
     <div class="grid">
-      <div class="card">
-        <h2>Home Pilot Shadow Test</h2>
-        <p class="subtle">Raw-event comparison for the home-only pilot tracker. This is diagnostic parity, not trusted canonical V2 scoring.</p>
-        <div class="list-row"><span>Baseline home page views (<code>page_view</code>)</span><strong>${homePageViews}</strong></div>
-        <div class="list-row"><span>Pilot home page views (<code>pilot_home_page_view</code>)</span><strong>${pilotHomePageViews}</strong></div>
-        <div class="list-row"><span>Page-view parity</span><strong>${pilotPageViewParity}%</strong></div>
-        <div class="list-row"><span>Baseline Cowboy Jump clicks (<code>cowboy_jump</code>)</span><strong>${homeCowboyJumpClicks}</strong></div>
-        <div class="list-row"><span>Pilot Cowboy Jump clicks (<code>pilot_home_cowboy_jump_click</code>)</span><strong>${pilotHomeCowboyJumpClicks}</strong></div>
-        <div class="list-row"><span>Click parity</span><strong>${pilotCowboyParity}%</strong></div>
-        <div class="list-row"><span>Pilot click sessions</span><strong>${pilotHomeCowboySessions}</strong></div>
-        <div class="list-row"><span>Pilot click visitors</span><strong>${pilotHomeCowboyVisitors}</strong></div>
-        <div class="list-row"><span>Geo coverage (country)</span><strong>${pilotHomeCowboyGeoCoverage} (${pilotGeoCoveragePct}%)</strong></div>
-        <div class="list-row"><span>Geo coverage (city/region)</span><strong>${pilotHomeCowboyCityRegionCoverage} (${pilotCityRegionCoveragePct}%)</strong></div>
-        <div class="list-row"><span>UA coverage (OS parse source)</span><strong>${pilotHomeCowboyUaCoverage} (${pilotUaCoveragePct}%)</strong></div>
-        <div class="list-row"><span>Referrer coverage</span><strong>${pilotHomeCowboyReferrerCoverage} (${pilotReferrerCoveragePct}%)</strong></div>
-        <div class="list-row"><span>IP coverage</span><strong>${pilotHomeCowboyIpCoverage} (${pilotIpCoveragePct}%)</strong></div>
-      </div>
-      <div class="card">
-        <h2>Top 25 Entry Pages</h2>
-        <p class="subtle">Where trusted sessions began on the site, excluding suspicious internal-shallow and datacenter-like entries.</p>
+      <div class="card card-compact">
+        <div class="card-title-row">
+          <h2>Top 25 Entry Pages</h2>
+          <span class="info-dot" data-tooltip="Where trusted sessions began on the site, excluding suspicious internal-shallow and datacenter-like entries.">i</span>
+        </div>
         <div class="scroll-panel">
           ${topEntryPages.length ? topEntryPages.map((row) => `<div class="list-row"><span>${row.page_path}</span><strong>${row.sessions}</strong></div>`).join('') : '<p>No populated session facts yet.</p>'}
         </div>
       </div>
-      <div class="card">
-        <h2>Top 25 Site Pages</h2>
-        <p class="subtle">Most-viewed trusted non-image pages on the site, excluding suspicious internal-shallow and datacenter-like sessions.</p>
+      <div class="card card-compact">
+        <div class="card-title-row">
+          <h2>Top 25 Site Pages</h2>
+          <span class="info-dot" data-tooltip="Most-viewed trusted non-image pages on the site, excluding suspicious internal-shallow and datacenter-like sessions.">i</span>
+        </div>
         <div class="scroll-panel">
           ${topSitePages.length ? topSitePages.map((row) => `<div class="list-row"><span>${row.page_path}</span><strong>${row.loads}</strong></div>`).join('') : '<p>No trusted non-image page loads in this window.</p>'}
         </div>
       </div>
-      <div class="card">
-        <h2>Top 10 Images</h2>
-        <p class="subtle">Most-active trusted image IDs from image views plus image-linked interactions.</p>
-        <div class="scroll-panel">
-          ${topImageRows.length ? topImageRows.join('') : '<p>No trusted image-linked activity yet.</p>'}
+      <div class="card card-compact">
+        <div class="card-title-row">
+          <h2>Top 10 Images</h2>
+          <span class="info-dot" data-tooltip="Most-active trusted image IDs from image views plus image-linked interactions. Buy-clicked images are pinned to the top and highlighted in green. External/direct proxy image fetches and suspicious/internal-test sessions are excluded from this list.">i</span>
         </div>
-        <p class="subtle">External/direct proxy image fetches and suspicious/internal-test sessions are excluded from this top-10 list.</p>
+        <div class="scroll-panel">
+          ${topTenImageRows.length ? topTenImageRows.join('') : '<p>No trusted image-linked activity yet.</p>'}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      ${isSingleDayWindow ? `
+      <div class="card card-compact">
+        <div class="card-title-row">
+          <h2>${topImagesTitle}</h2>
+          <span class="info-dot" data-tooltip="${escapeHtml(`${topImagesIntro} ${topImagesFootnote}`)}">i</span>
+        </div>
+        <div class="scroll-panel">
+          ${allImageRows.length ? allImageRows.join('') : '<p>No trusted image-linked activity yet.</p>'}
+        </div>
+      </div>
+      ` : ''}
+      <div class="card">
+        <h2>Home Pilot Shadow Test</h2>
+        <p class="subtle">Raw-event comparison for the home-only pilot tracker. This is diagnostic parity, not trusted canonical V2 scoring.</p>
+        ${showPilotTrustMismatchNote ? '<p class="warn-note">Raw home or pilot homepage events exist in this window, but trusted site metrics remain at 0 because the observed homepage session was excluded from trusted V2 scoring as a shallow K4-internal re-entry.</p>' : ''}
+        <div class="card-scroll-body">
+          <div class="list-row"><span>Baseline home page views (<code>page_view</code>)</span><strong>${homePageViews}</strong></div>
+          <div class="list-row"><span>Pilot home page views (<code>pilot_home_page_view</code>)</span><strong>${pilotHomePageViews}</strong></div>
+          <div class="list-row"><span>Page-view parity</span><strong>${pilotPageViewParity}%</strong></div>
+          <div class="list-row"><span>Baseline Cowboy Jump clicks (<code>cowboy_jump</code>)</span><strong>${homeCowboyJumpClicks}</strong></div>
+          <div class="list-row"><span>Pilot Cowboy Jump clicks (<code>pilot_home_cowboy_jump_click</code>)</span><strong>${pilotHomeCowboyJumpClicks}</strong></div>
+          <div class="list-row"><span>Click parity</span><strong>${pilotCowboyParity}%</strong></div>
+          <div class="list-row"><span>Pilot click sessions</span><strong>${pilotHomeCowboySessions}</strong></div>
+          <div class="list-row"><span>Pilot click visitors</span><strong>${pilotHomeCowboyVisitors}</strong></div>
+          <div class="list-row"><span>Geo coverage (country)</span><strong>${pilotHomeCowboyGeoCoverage} (${pilotGeoCoveragePct}%)</strong></div>
+          <div class="list-row"><span>Geo coverage (city/region)</span><strong>${pilotHomeCowboyCityRegionCoverage} (${pilotCityRegionCoveragePct}%)</strong></div>
+          <div class="list-row"><span>UA coverage (OS parse source)</span><strong>${pilotHomeCowboyUaCoverage} (${pilotUaCoveragePct}%)</strong></div>
+          <div class="list-row"><span>Referrer coverage</span><strong>${pilotHomeCowboyReferrerCoverage} (${pilotReferrerCoveragePct}%)</strong></div>
+          <div class="list-row"><span>IP coverage</span><strong>${pilotHomeCowboyIpCoverage} (${pilotIpCoveragePct}%)</strong></div>
+        </div>
       </div>
     </div>
 
@@ -504,12 +612,16 @@ export function renderDashboardV2({ summary, authHeader = '' }) {
 
     <div class="grid">
       <div class="card">
-        <h2>Core Actions and Groups</h2>
-        <p class="subtle">Human-readable action labels from trusted canonical rows.</p>
-        ${groupedInteractionRows.length ? groupedInteractionRows.map((group) => `
-          <div class="list-row group-row ${group.colorClass}"><span class="list-row-label"><span class="family-dot"></span><strong>${getFamilyDisplayLabel(group.family)}</strong></span><strong>${group.count}</strong></div>
-          ${group.actions.map((row) => `<div class="list-row ${row.colorClass}"><span class="list-row-label" style="padding-left: 18px;"><span class="family-dot"></span>${row.label}</span><strong>${row.count}</strong></div>`).join('')}
-        `).join('') : '<p>No trusted interaction rows yet.</p>'}
+        <div class="card-title-row">
+          <h2>Core Actions and Groups</h2>
+          <span class="info-dot" data-tooltip="Human-readable action labels from trusted canonical rows. Family totals include all trusted rows in that family; detail rows only show explicitly labeled actions, so vague blank-action entries are not listed as generic lines.">i</span>
+        </div>
+        <div class="card-scroll-body">
+          ${groupedInteractionRows.length ? groupedInteractionRows.map((group) => `
+            <div class="list-row group-row ${group.colorClass}"><span class="list-row-label"><span class="family-dot"></span><strong>${getFamilyDisplayLabel(group.family)}</strong></span><strong>${group.count}</strong></div>
+            ${group.actions.map((row) => `<div class="list-row ${row.colorClass}"><span class="list-row-label" style="padding-left: 18px;"><span class="family-dot"></span>${row.label}</span><strong>${row.count}</strong></div>`).join('')}
+          `).join('') : '<p>No trusted interaction rows yet.</p>'}
+        </div>
         <p class="subtle">Engagement hints currently include zoom, series info, more info, collector notes, and slideshow start.</p>
       </div>
     </div>

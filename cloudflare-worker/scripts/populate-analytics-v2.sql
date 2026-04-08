@@ -283,11 +283,46 @@ SELECT
   aggregated.engaged_event_count,
   CASE aggregated.confidence_rank WHEN 3 THEN 'persistent' WHEN 2 THEN 'session_only' ELSE 'fallback' END,
   CASE
-    WHEN aggregated.canonical_page_loads = 1
-     AND aggregated.engaged_event_count = 0
+    WHEN aggregated.engaged_event_count = 0
      AND landing.referrer_host IS NOT NULL
      AND lower(landing.referrer_host) LIKE '%k4studios.com%'
      AND COALESCE(landing.referrer_path, '') = '/'
+     AND (
+       (
+         aggregated.canonical_page_loads = 1
+         AND (
+           COALESCE(
+             NULLIF(trim(COALESCE(json_extract(landing.metadata_json, '$.country'), '')), ''),
+             NULLIF(trim(COALESCE(json_extract(landing.metadata_json, '$.region'), '')), ''),
+             NULLIF(trim(COALESCE(json_extract(landing.metadata_json, '$.city'), '')), '')
+           ) IS NULL
+           OR (
+             aggregated.event_count <= 2
+             AND landing.page_path LIKE '%/i-%'
+           )
+           OR (
+             aggregated.event_count = 1
+             AND COALESCE(landing.page_path, '') <> '/'
+           )
+           OR (
+             aggregated.event_count = 1
+             AND COALESCE(landing.page_path, '') = '/'
+             AND CASE
+               WHEN UPPER(COALESCE(json_extract(landing.metadata_json, '$.country'), '')) IN ('US', 'CA', 'AU', 'NZ') THEN 4
+               WHEN UPPER(COALESCE(json_extract(landing.metadata_json, '$.country'), '')) IN ('AD', 'AT', 'BE', 'BG', 'CH', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IE', 'IS', 'IT', 'LI', 'LT', 'LU', 'LV', 'MC', 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK', 'SM', 'VA') THEN 3
+               WHEN UPPER(COALESCE(json_extract(landing.metadata_json, '$.country'), '')) IN ('HK', 'ID', 'IN', 'SG', 'VN') THEN 1
+               WHEN trim(COALESCE(json_extract(landing.metadata_json, '$.country'), '')) = '' THEN 0
+               ELSE 2
+             END <= 1
+           )
+         )
+       )
+       OR (
+         aggregated.canonical_page_loads = 0
+         AND aggregated.event_count <= 2
+         AND landing.page_path LIKE '%/i-%'
+       )
+     )
     THEN 1 ELSE 0 END,
   CASE
     WHEN aggregated.engaged_event_count = 0
@@ -320,6 +355,23 @@ SELECT
     'has_engagement', CASE WHEN aggregated.engaged_event_count > 0 THEN 1 ELSE 0 END,
     'referrer_host', landing.referrer_host,
     'referrer_path', landing.referrer_path,
+    'country', json_extract(landing.metadata_json, '$.country'),
+    'region', json_extract(landing.metadata_json, '$.region'),
+    'city', json_extract(landing.metadata_json, '$.city'),
+    'geo_trust_tier', CASE
+      WHEN UPPER(COALESCE(json_extract(landing.metadata_json, '$.country'), '')) IN ('US', 'CA', 'AU', 'NZ') THEN 'core'
+      WHEN UPPER(COALESCE(json_extract(landing.metadata_json, '$.country'), '')) IN ('AD', 'AT', 'BE', 'BG', 'CH', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IE', 'IS', 'IT', 'LI', 'LT', 'LU', 'LV', 'MC', 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK', 'SM', 'VA') THEN 'established'
+      WHEN UPPER(COALESCE(json_extract(landing.metadata_json, '$.country'), '')) IN ('HK', 'ID', 'IN', 'SG', 'VN') THEN 'low'
+      WHEN trim(COALESCE(json_extract(landing.metadata_json, '$.country'), '')) = '' THEN 'unknown'
+      ELSE 'neutral'
+    END,
+    'geo_trust_score', CASE
+      WHEN UPPER(COALESCE(json_extract(landing.metadata_json, '$.country'), '')) IN ('US', 'CA', 'AU', 'NZ') THEN 4
+      WHEN UPPER(COALESCE(json_extract(landing.metadata_json, '$.country'), '')) IN ('AD', 'AT', 'BE', 'BG', 'CH', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IE', 'IS', 'IT', 'LI', 'LT', 'LU', 'LV', 'MC', 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK', 'SM', 'VA') THEN 3
+      WHEN UPPER(COALESCE(json_extract(landing.metadata_json, '$.country'), '')) IN ('HK', 'ID', 'IN', 'SG', 'VN') THEN 1
+      WHEN trim(COALESCE(json_extract(landing.metadata_json, '$.country'), '')) = '' THEN 0
+      ELSE 2
+    END,
     'ashburn_signal', COALESCE(bot_context.has_ashburn_signal, 0),
     'datacenter_ip_signal', COALESCE(bot_context.has_datacenter_ip_signal, 0),
     'high_risk_bot_signal', COALESCE(bot_context.has_high_risk_bot_signal, 0),
@@ -349,6 +401,49 @@ SET is_suspicious_datacenter_shallow = CASE
      OR (
        COALESCE(CAST(json_extract(metadata_json, '$.high_risk_bot_signal') AS INTEGER), 0) = 1
        AND COALESCE(CAST(json_extract(metadata_json, '$.automation_ua_signal') AS INTEGER), 0) = 1
+     )
+   )
+  THEN 1 ELSE 0 END;
+
+UPDATE session_facts_v2
+SET is_suspicious_internal_shallow = CASE
+  WHEN engaged_event_count = 0
+   AND lower(COALESCE(source_family, '')) = 'k4 internal'
+   AND COALESCE(json_extract(metadata_json, '$.referrer_path'), '') = '/'
+   AND (
+     (
+       canonical_page_loads = 1
+       AND (
+         COALESCE(
+           NULLIF(trim(COALESCE(json_extract(metadata_json, '$.country'), '')), ''),
+           NULLIF(trim(COALESCE(json_extract(metadata_json, '$.region'), '')), ''),
+           NULLIF(trim(COALESCE(json_extract(metadata_json, '$.city'), '')), '')
+         ) IS NULL
+         OR (
+           event_count <= 2
+           AND COALESCE(landing_page_path, '') LIKE '%/i-%'
+         )
+         OR (
+           event_count = 1
+           AND COALESCE(landing_page_path, '') <> '/'
+         )
+         OR (
+           event_count = 1
+           AND COALESCE(landing_page_path, '') = '/'
+           AND CASE
+             WHEN UPPER(COALESCE(json_extract(metadata_json, '$.country'), '')) IN ('US', 'CA', 'AU', 'NZ') THEN 4
+             WHEN UPPER(COALESCE(json_extract(metadata_json, '$.country'), '')) IN ('AD', 'AT', 'BE', 'BG', 'CH', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IE', 'IS', 'IT', 'LI', 'LT', 'LU', 'LV', 'MC', 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK', 'SM', 'VA') THEN 3
+             WHEN UPPER(COALESCE(json_extract(metadata_json, '$.country'), '')) IN ('HK', 'ID', 'IN', 'SG', 'VN') THEN 1
+             WHEN trim(COALESCE(json_extract(metadata_json, '$.country'), '')) = '' THEN 0
+             ELSE 2
+           END <= 1
+         )
+       )
+     )
+     OR (
+       canonical_page_loads = 0
+       AND event_count <= 2
+       AND COALESCE(landing_page_path, '') LIKE '%/i-%'
      )
    )
   THEN 1 ELSE 0 END;

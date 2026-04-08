@@ -3,6 +3,7 @@ import { ChevronRight } from "lucide-react";
 import { siteNav } from "../data/siteNav.ts";
 import { handleGalleryNavClick } from "../utils/prefetchGallery.ts";
 import "../styles/siteNavMenu.css";
+import "../styles/gallery-header-react.css";
 
 export default function SiteNavMenu({ forceMobile = false }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -304,40 +305,6 @@ export default function SiteNavMenu({ forceMobile = false }) {
   />
   <span className="visually-hidden">K4 Studios Home – Fine Art Photography</span>
 </a>
-
-<style jsx>{`
-  .k4-logo-hover {
-    margin-top: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Optional: remove if vertical centering isn’t needed */
-    width: 100%;         /* or use a fixed width container if needed */
-  }
-
-  .k4-watermark-opacity {
-    opacity: 0.25;
-    transition: opacity 0.3s ease;
-    width: 115px;
-    height: auto;
-    max-width: 100%;
-  }
-
-  .k4-logo-hover:hover .k4-watermark-opacity {
-    opacity: 1;
-  }
-  .visually-hidden {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    margin: -1px !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    clip: rect(0 0 0 0) !important;
-    border: 0 !important;
-    white-space: nowrap !important;
-  }
-`}</style>
-
 
             </div>
           ) : (

@@ -147,6 +147,89 @@ function getV2WindowConfig(windowKey = 'today', now = new Date()) {
   }
 }
 
+function escapeSqlString(value) {
+  return String(value ?? '').replace(/'/g, "''");
+}
+
+function qualifyColumn(alias, columnName) {
+  return alias ? `${alias}.${columnName}` : columnName;
+}
+
+function normalizeV2FilterState({ excludeIp = null, viewerIp = null, hideChardon = false } = {}) {
+  return {
+    excludeIp: excludeIp || null,
+    viewerIp: viewerIp || null,
+    hideChardon: Boolean(hideChardon)
+  };
+}
+
+function buildRawFilterMatchClause(filterState, alias = '') {
+  const parts = [];
+  const normalized = normalizeV2FilterState(filterState);
+
+  if (normalized.excludeIp) {
+    parts.push(`${qualifyColumn(alias, 'ip')} = '${escapeSqlString(normalized.excludeIp)}'`);
+  }
+
+  if (normalized.hideChardon) {
+    if (normalized.viewerIp) {
+      parts.push(`${qualifyColumn(alias, 'ip')} = '${escapeSqlString(normalized.viewerIp)}'`);
+    }
+    parts.push(`lower(COALESCE(${qualifyColumn(alias, 'city')}, '')) = 'chardon'`);
+    parts.push(`lower(COALESCE(${qualifyColumn(alias, 'referer')}, '')) LIKE '%localhost%'`);
+  }
+
+  return parts.join(' OR ');
+}
+
+function buildRawFilterExclusionClause(filterState, alias = '') {
+  const matchClause = buildRawFilterMatchClause(filterState, alias);
+  return matchClause ? ` AND NOT (${matchClause})` : '';
+}
+
+function buildCanonicalRawFilterPredicate(filterState, canonicalAlias = 'canonical_events_v2') {
+  const rawMatchClause = buildRawFilterMatchClause(filterState, 'raw');
+  if (!rawMatchClause) {
+    return '1=1';
+  }
+
+  return `NOT EXISTS (
+    SELECT 1
+    FROM raw_events raw
+    WHERE raw.id = ${canonicalAlias}.raw_event_id
+      AND (${rawMatchClause})
+  )`;
+}
+
+function getViewerExcludedSessionSubquery(sessionClause, filterState) {
+  const normalized = normalizeV2FilterState(filterState);
+  const rawMatchClause = buildRawFilterMatchClause(normalized, 'raw');
+  const sessionParts = [];
+
+  if (rawMatchClause) {
+    sessionParts.push(rawMatchClause);
+  }
+
+  if (normalized.hideChardon) {
+    sessionParts.push(`lower(COALESCE(json_extract(sf.metadata_json, '$.city'), '')) = 'chardon'`);
+    sessionParts.push(`lower(COALESCE(sf.source_family, '')) = 'internal test'`);
+  }
+
+  if (!sessionParts.length) {
+    return null;
+  }
+
+  return `
+    SELECT DISTINCT sf.session_id
+    FROM session_facts_v2 sf
+    LEFT JOIN canonical_events_v2 canonical ON canonical.session_id = sf.session_id
+    LEFT JOIN raw_events raw ON raw.id = canonical.raw_event_id
+    WHERE ${sessionClause}
+      AND sf.session_id IS NOT NULL
+      AND (${sessionParts.join(' OR ')})
+  `;
+}
+
 function getSuspiciousInternalShallowSessionSubquery(sessionClause) {
   return `
     SELECT session_id
@@ -198,12 +281,14 @@ export async function getV2SchemaStatus(env) {
   };
 }
 
-export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
+export async function getV2CanonicalSummary(env, { windowKey = 'today', excludeIp = null, viewerIp = null, hideChardon = false } = {}) {
   const schema = await getV2SchemaStatus(env);
+  const filterState = normalizeV2FilterState({ excludeIp, viewerIp, hideChardon });
   if (!schema.ready) {
     return {
       schema,
       window: getV2WindowConfig(windowKey),
+      filters: filterState,
       refreshStatus: null,
       counts: null,
       recentFamilies: [],
@@ -221,7 +306,20 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
   const suspiciousInternalShallowSessionSubquery = getSuspiciousInternalShallowSessionSubquery(sessionWindowClause);
   const suspiciousDatacenterSessionSubquery = getSuspiciousDatacenterSessionSubquery(sessionWindowClause);
   const internalTestSessionSubquery = getInternalTestSessionSubquery(sessionWindowClause);
-  const trustedSessionPredicate = `(session_id IS NULL OR (session_id NOT IN (${suspiciousInternalShallowSessionSubquery}) AND session_id NOT IN (${suspiciousDatacenterSessionSubquery}) AND session_id NOT IN (${internalTestSessionSubquery})))`;
+  const viewerExcludedSessionSubquery = getViewerExcludedSessionSubquery(sessionWindowClause, filterState);
+  const trustedSessionExclusionParts = [
+    `session_id NOT IN (${suspiciousInternalShallowSessionSubquery})`,
+    `session_id NOT IN (${suspiciousDatacenterSessionSubquery})`,
+    `session_id NOT IN (${internalTestSessionSubquery})`
+  ];
+  if (viewerExcludedSessionSubquery) {
+    trustedSessionExclusionParts.push(`session_id NOT IN (${viewerExcludedSessionSubquery})`);
+  }
+  const trustedSessionPredicate = `(session_id IS NULL OR (${trustedSessionExclusionParts.join(' AND ')}))`;
+  const trustedSessionFactExclusionClause = viewerExcludedSessionSubquery ? `
+                AND session_id NOT IN (SELECT session_id FROM viewer_excluded_sessions)` : '';
+  const rawViewerExclusionClause = buildRawFilterExclusionClause(filterState);
+  const canonicalViewerPredicate = buildCanonicalRawFilterPredicate(filterState);
   const geoLabelExpression = `CASE
     WHEN json_extract(metadata_json, '$.city') IS NOT NULL AND trim(json_extract(metadata_json, '$.city')) <> '' THEN
       json_extract(metadata_json, '$.city') ||
@@ -252,6 +350,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
     WHEN referrer_host LIKE '%www.k4studios.com%' OR referrer_host = 'k4studios.com' THEN 'K4 Internal'
     ELSE referrer_host
   END`;
+  const topImageLimitClause = (window.key === 'today' || window.key === 'yesterday') ? '' : 'LIMIT 10';
 
   const [refreshStatus, counts, families, interactionActions, topEntryPages, topSitePages, topImages, externalSources, sessionGeography, imageViewGeography, entrySourceMix, firstImageHopMix, firstImagePathMix, suspiciousSessionGeography, suspiciousDatacenterSessionGeography, internalReentryMix] = await Promise.all([
     getV2RefreshStatus(env),
@@ -264,40 +363,46 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
        ),
        internal_test_sessions AS (
          ${internalTestSessionSubquery}
+       )${viewerExcludedSessionSubquery ? `,
+       viewer_excluded_sessions AS (
+         ${viewerExcludedSessionSubquery}
        )
+       ` : ''}
        SELECT
          (SELECT COUNT(*)
           FROM canonical_events_v2
           WHERE ${windowClause}
             AND metric_scope = 'primary'
-            AND ${trustedSessionPredicate}) AS canonical_events,
+            AND ${trustedSessionPredicate}
+            AND ${canonicalViewerPredicate}) AS canonical_events,
          (SELECT COUNT(*)
           FROM canonical_events_v2
           WHERE ${windowClause}
             AND canonical_page_load = 1
             AND metric_scope = 'primary'
-            AND ${trustedSessionPredicate}) AS canonical_page_loads,
+            AND ${trustedSessionPredicate}
+            AND ${canonicalViewerPredicate}) AS canonical_page_loads,
          (SELECT COUNT(*)
           FROM session_facts_v2
             WHERE ${sessionWindowClause}
               AND canonical_page_loads > 0
                 AND session_id NOT IN (SELECT session_id FROM suspicious_internal_shallow)
                   AND session_id NOT IN (SELECT session_id FROM suspicious_datacenter_shallow)
-                AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)) AS sessions_with_page_loads,
+                AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)${trustedSessionFactExclusionClause}) AS sessions_with_page_loads,
          (SELECT COUNT(DISTINCT COALESCE(NULLIF(visitor_id, ''), 'session:' || session_id))
           FROM session_facts_v2
             WHERE ${sessionWindowClause}
               AND canonical_page_loads > 0
                 AND session_id NOT IN (SELECT session_id FROM suspicious_internal_shallow)
                   AND session_id NOT IN (SELECT session_id FROM suspicious_datacenter_shallow)
-                AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)) AS visitors_with_page_loads,
+                AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)${trustedSessionFactExclusionClause}) AS visitors_with_page_loads,
            (SELECT COUNT(*)
           FROM session_facts_v2
             WHERE ${sessionWindowClause}
               AND engaged_event_count > 0
                 AND session_id NOT IN (SELECT session_id FROM suspicious_internal_shallow)
                   AND session_id NOT IN (SELECT session_id FROM suspicious_datacenter_shallow)
-                AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)) AS engaged_sessions,
+                AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)${trustedSessionFactExclusionClause}) AS engaged_sessions,
            (SELECT COUNT(*)
           FROM canonical_events_v2
           WHERE ${windowClause}
@@ -306,39 +411,48 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
             AND session_id IS NOT NULL
               AND session_id NOT IN (SELECT session_id FROM suspicious_internal_shallow)
                 AND session_id NOT IN (SELECT session_id FROM suspicious_datacenter_shallow)
-              AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)) AS image_views,
+              AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)${trustedSessionFactExclusionClause}
+              AND ${canonicalViewerPredicate}) AS image_views,
          (SELECT COUNT(*)
           FROM canonical_events_v2
           WHERE ${windowClause}
-            AND diagnostic_class = 'external_direct_image_fetch') AS direct_image_fetches,
+            AND diagnostic_class = 'external_direct_image_fetch'
+            AND ${canonicalViewerPredicate}) AS direct_image_fetches,
          (SELECT COUNT(*)
           FROM canonical_events_v2
           WHERE ${windowClause}
-            AND metric_scope = 'diagnostic') AS proxy_image_views,
+            AND metric_scope = 'diagnostic'
+            AND ${canonicalViewerPredicate}) AS proxy_image_views,
          (SELECT COUNT(*)
           FROM canonical_events_v2
           WHERE ${windowClause} AND event_family = 'buy_click'
-            AND ${trustedSessionPredicate}) AS buy_clicks,
+            AND ${trustedSessionPredicate}
+            AND ${canonicalViewerPredicate}) AS buy_clicks,
          (SELECT COUNT(*)
           FROM canonical_events_v2
           WHERE ${windowClause} AND event_family = 'grid_action'
-            AND ${trustedSessionPredicate}) AS grid_actions,
+            AND ${trustedSessionPredicate}
+            AND ${canonicalViewerPredicate}) AS grid_actions,
          (SELECT COUNT(*)
             FROM canonical_events_v2
             WHERE ${windowClause} AND event_family = 'gallery_action'
-              AND ${trustedSessionPredicate}) AS gallery_actions,
+              AND ${trustedSessionPredicate}
+              AND ${canonicalViewerPredicate}) AS gallery_actions,
            (SELECT COUNT(*)
             FROM canonical_events_v2
             WHERE ${windowClause} AND event_family = 'image_nav'
-              AND ${trustedSessionPredicate}) AS image_nav_actions,
+              AND ${trustedSessionPredicate}
+              AND ${canonicalViewerPredicate}) AS image_nav_actions,
            (SELECT COUNT(*)
             FROM canonical_events_v2
             WHERE ${windowClause} AND event_family = 'story_action'
-              AND ${trustedSessionPredicate}) AS story_actions,
+              AND ${trustedSessionPredicate}
+              AND ${canonicalViewerPredicate}) AS story_actions,
            (SELECT COUNT(*)
             FROM canonical_events_v2
             WHERE ${windowClause} AND event_family = 'engagement_hint'
-              AND ${trustedSessionPredicate}) AS engagement_hints,
+              AND ${trustedSessionPredicate}
+              AND ${canonicalViewerPredicate}) AS engagement_hints,
            (SELECT COUNT(*)
             FROM suspicious_internal_shallow) AS suspicious_internal_shallow_sessions,
            (SELECT COUNT(DISTINCT COALESCE(NULLIF(visitor_id, ''), 'session:' || session_id))
@@ -348,7 +462,8 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
             FROM canonical_events_v2
             WHERE ${windowClause}
               AND event_family = 'image_view'
-                AND session_id IN (SELECT session_id FROM suspicious_internal_shallow)) AS suspicious_internal_shallow_image_views,
+                AND session_id IN (SELECT session_id FROM suspicious_internal_shallow)
+                AND ${canonicalViewerPredicate}) AS suspicious_internal_shallow_image_views,
               (SELECT COUNT(*)
             FROM suspicious_datacenter_shallow) AS suspicious_datacenter_shallow_sessions,
               (SELECT COUNT(DISTINCT COALESCE(NULLIF(visitor_id, ''), 'session:' || session_id))
@@ -358,7 +473,8 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
               FROM canonical_events_v2
               WHERE ${windowClause}
                 AND event_family = 'image_view'
-                AND session_id IN (SELECT session_id FROM suspicious_datacenter_shallow)) AS suspicious_datacenter_shallow_image_views,
+                AND session_id IN (SELECT session_id FROM suspicious_datacenter_shallow)
+                AND ${canonicalViewerPredicate}) AS suspicious_datacenter_shallow_image_views,
               (SELECT COUNT(*) FROM internal_test_sessions) AS internal_test_sessions,
               (SELECT COUNT(DISTINCT COALESCE(NULLIF(visitor_id, ''), 'session:' || session_id))
               FROM session_facts_v2
@@ -367,43 +483,44 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
               FROM canonical_events_v2
               WHERE ${windowClause}
                 AND event_family = 'image_view'
-                AND session_id IN (SELECT session_id FROM internal_test_sessions)) AS internal_test_image_views,
+                AND session_id IN (SELECT session_id FROM internal_test_sessions)
+                AND ${canonicalViewerPredicate}) AS internal_test_image_views,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
                  AND lower(COALESCE(event_type, '')) = 'page_view'
-                 AND COALESCE(page, '') = '/') AS home_page_view_events,
+                 AND COALESCE(page, '') = '/'${rawViewerExclusionClause}) AS home_page_view_events,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
                  AND lower(COALESCE(event_type, '')) = 'pilot_home_page_view'
-                 AND COALESCE(page, '') = '/') AS pilot_home_page_view_events,
+                 AND COALESCE(page, '') = '/'${rawViewerExclusionClause}) AS pilot_home_page_view_events,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
                  AND lower(COALESCE(event_type, '')) = 'cowboy_jump'
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home') AS home_cowboy_jump_events,
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'${rawViewerExclusionClause}) AS home_cowboy_jump_events,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
                  AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home') AS pilot_home_cowboy_jump_events,
-              (SELECT COUNT(*)
-               FROM raw_events
-               WHERE ${rawWindowClause}
-                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
-                 AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
-                 AND COALESCE(country, '') <> '') AS pilot_home_cowboy_geo_coverage,
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'${rawViewerExclusionClause}) AS pilot_home_cowboy_jump_events,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
                  AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
                  AND COALESCE(page, '') = '/'
                  AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
-                 AND COALESCE(ua, '') <> '') AS pilot_home_cowboy_ua_coverage,
+                 AND COALESCE(country, '') <> ''${rawViewerExclusionClause}) AS pilot_home_cowboy_geo_coverage,
+              (SELECT COUNT(*)
+               FROM raw_events
+               WHERE ${rawWindowClause}
+                 AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
+                 AND COALESCE(page, '') = '/'
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
+                 AND COALESCE(ua, '') <> ''${rawViewerExclusionClause}) AS pilot_home_cowboy_ua_coverage,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
@@ -411,33 +528,33 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
                  AND COALESCE(page, '') = '/'
                  AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
                  AND COALESCE(referer, '') <> ''
-                 AND lower(COALESCE(referer, '')) <> 'unknown') AS pilot_home_cowboy_referrer_coverage,
+                 AND lower(COALESCE(referer, '')) <> 'unknown'${rawViewerExclusionClause}) AS pilot_home_cowboy_referrer_coverage,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
                  AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
                  AND COALESCE(page, '') = '/'
                  AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
-                 AND COALESCE(ip, '') <> '') AS pilot_home_cowboy_ip_coverage,
+                 AND COALESCE(ip, '') <> ''${rawViewerExclusionClause}) AS pilot_home_cowboy_ip_coverage,
               (SELECT COUNT(*)
                FROM raw_events
                WHERE ${rawWindowClause}
                  AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
                  AND COALESCE(page, '') = '/'
                  AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'
-                 AND (COALESCE(city, '') <> '' OR COALESCE(region, '') <> '')) AS pilot_home_cowboy_city_region_coverage,
+                 AND (COALESCE(city, '') <> '' OR COALESCE(region, '') <> '')${rawViewerExclusionClause}) AS pilot_home_cowboy_city_region_coverage,
               (SELECT COUNT(DISTINCT COALESCE(NULLIF(session_id, ''), 'none'))
                FROM raw_events
                WHERE ${rawWindowClause}
                  AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home') AS pilot_home_cowboy_sessions,
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'${rawViewerExclusionClause}) AS pilot_home_cowboy_sessions,
               (SELECT COUNT(DISTINCT COALESCE(NULLIF(visitor_id, ''), 'none'))
                FROM raw_events
                WHERE ${rawWindowClause}
                  AND lower(COALESCE(event_type, '')) = 'pilot_home_cowboy_jump_click'
                  AND COALESCE(page, '') = '/'
-                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home') AS pilot_home_cowboy_visitors,
+                 AND COALESCE(target_id, '') = 'Cowboy_Jump_Home'${rawViewerExclusionClause}) AS pilot_home_cowboy_visitors,
               (SELECT COUNT(*)
                FROM (
                  WITH trusted_page_loads AS (
@@ -454,6 +571,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
                      AND session_id NOT IN (SELECT session_id FROM suspicious_internal_shallow)
                      AND session_id NOT IN (SELECT session_id FROM suspicious_datacenter_shallow)
                      AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)
+                     ${viewerExcludedSessionSubquery ? 'AND session_id NOT IN (SELECT session_id FROM viewer_excluded_sessions)' : ''}
                      AND page_path IS NOT NULL
                  )
                  SELECT session_id
@@ -477,6 +595,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
                      AND session_id NOT IN (SELECT session_id FROM suspicious_internal_shallow)
                      AND session_id NOT IN (SELECT session_id FROM suspicious_datacenter_shallow)
                      AND session_id NOT IN (SELECT session_id FROM internal_test_sessions)
+                     ${viewerExcludedSessionSubquery ? 'AND session_id NOT IN (SELECT session_id FROM viewer_excluded_sessions)' : ''}
                      AND page_path IS NOT NULL
                  )
                  SELECT session_id
@@ -491,6 +610,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
        WHERE ${windowClause}
          AND metric_scope = 'primary'
          AND ${trustedSessionPredicate}
+         AND ${canonicalViewerPredicate}
        GROUP BY event_family
        ORDER BY count DESC
        LIMIT 10`
@@ -498,15 +618,18 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
     env.DB.prepare(
       `SELECT
          event_family,
-         COALESCE(event_action, '(none)') AS event_action,
+         COALESCE(event_action, '') AS event_action,
+         COALESCE(json_extract(metadata_json, '$.raw_event_type'), '') AS raw_event_type,
+         COALESCE(json_extract(metadata_json, '$.raw_source_layer'), '') AS raw_source_layer,
          COUNT(*) AS count
        FROM canonical_events_v2
        WHERE ${windowClause}
          AND metric_scope = 'primary'
          AND ${trustedSessionPredicate}
+         AND ${canonicalViewerPredicate}
          AND event_family IN ('buy_click', 'gallery_action', 'grid_action', 'image_nav', 'story_action', 'engagement_hint')
-       GROUP BY event_family, COALESCE(event_action, '(none)')
-       ORDER BY event_family ASC, count DESC, event_action ASC`
+       GROUP BY event_family, COALESCE(event_action, ''), COALESCE(json_extract(metadata_json, '$.raw_event_type'), ''), COALESCE(json_extract(metadata_json, '$.raw_source_layer'), '')
+       ORDER BY event_family ASC, count DESC, event_action ASC, raw_event_type ASC`
     ).all(),
     env.DB.prepare(
       `SELECT landing_page_path AS page_path, COUNT(*) AS sessions
@@ -517,6 +640,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
          AND is_suspicious_internal_shallow = 0
         AND COALESCE(is_suspicious_datacenter_shallow, 0) = 0
          AND lower(COALESCE(source_family, '')) <> 'internal test'
+        ${viewerExcludedSessionSubquery ? `AND session_id NOT IN (${viewerExcludedSessionSubquery})` : ''}
        GROUP BY landing_page_path
        ORDER BY sessions DESC, page_path ASC
        LIMIT 25`
@@ -531,6 +655,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
          AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
         AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
          AND session_id NOT IN (${internalTestSessionSubquery})
+         ${viewerExcludedSessionSubquery ? `AND session_id NOT IN (${viewerExcludedSessionSubquery})` : ''}
          AND page_path IS NOT NULL
          AND page_path NOT LIKE '%/i-%'
          AND page_path NOT LIKE '/__k4%'
@@ -542,20 +667,22 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
     env.DB.prepare(
       `SELECT image_id,
               MIN(page_path) AS page_path,
-              COUNT(*) AS views
+              COUNT(*) AS views,
+              SUM(CASE WHEN event_family = 'buy_click' THEN 1 ELSE 0 END) AS buy_clicks
        FROM canonical_events_v2
        WHERE ${windowClause}
-         AND event_family IN ('image_view', 'image_nav', 'grid_action', 'gallery_action', 'story_action')
+         AND event_family IN ('buy_click', 'image_view', 'image_nav', 'grid_action', 'gallery_action', 'story_action')
          AND metric_scope = 'primary'
          AND session_id IS NOT NULL
          AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
         AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
          AND session_id NOT IN (${internalTestSessionSubquery})
+         ${viewerExcludedSessionSubquery ? `AND session_id NOT IN (${viewerExcludedSessionSubquery})` : ''}
          AND image_id IS NOT NULL
          AND (page_path IS NULL OR page_path LIKE '%/i-%' OR image_id LIKE 'i-%')
        GROUP BY image_id
-       ORDER BY views DESC, image_id ASC
-       LIMIT 10`
+       ORDER BY buy_clicks DESC, views DESC, image_id ASC
+       ${topImageLimitClause}`
     ).all(),
     env.DB.prepare(
       `SELECT
@@ -576,6 +703,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
        WHERE ${windowClause}
          AND event_family = 'image_view'
          AND metric_scope = 'diagnostic'
+         AND ${canonicalViewerPredicate}
        GROUP BY source_label
        ORDER BY views DESC, source_label ASC
        LIMIT 10`
@@ -595,6 +723,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
            AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
              AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
              AND session_id NOT IN (${internalTestSessionSubquery})
+             ${viewerExcludedSessionSubquery ? `AND session_id NOT IN (${viewerExcludedSessionSubquery})` : ''}
        )
        SELECT geo_label, COUNT(*) AS sessions
        FROM landing_rows
@@ -616,6 +745,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
          AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
         AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
          AND session_id NOT IN (${internalTestSessionSubquery})
+         ${viewerExcludedSessionSubquery ? `AND session_id NOT IN (${viewerExcludedSessionSubquery})` : ''}
        GROUP BY geo_label
        ORDER BY views DESC, geo_label ASC
        LIMIT 10`
@@ -634,6 +764,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
            AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
              AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
              AND session_id NOT IN (${internalTestSessionSubquery})
+             ${viewerExcludedSessionSubquery ? `AND session_id NOT IN (${viewerExcludedSessionSubquery})` : ''}
        )
       SELECT COALESCE(sf.source_family, landing_rows.source_label) AS source_label, COUNT(*) AS sessions
       FROM landing_rows
@@ -660,6 +791,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
            AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
            AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
            AND session_id NOT IN (${internalTestSessionSubquery})
+          ${viewerExcludedSessionSubquery ? `AND session_id NOT IN (${viewerExcludedSessionSubquery})` : ''}
            AND page_path IS NOT NULL
        ),
        first_image AS (
@@ -693,6 +825,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
            AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
            AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
            AND session_id NOT IN (${internalTestSessionSubquery})
+          ${viewerExcludedSessionSubquery ? `AND session_id NOT IN (${viewerExcludedSessionSubquery})` : ''}
            AND page_path IS NOT NULL
        ),
        first_image AS (
@@ -803,6 +936,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
            AND is_bot = 0
            AND session_id NOT IN (${suspiciousInternalShallowSessionSubquery})
            AND session_id NOT IN (${suspiciousDatacenterSessionSubquery})
+           ${viewerExcludedSessionSubquery ? `AND session_id NOT IN (${viewerExcludedSessionSubquery})` : ''}
        )
        SELECT COALESCE(sf.source_family, landing_rows.source_label) AS source_label, COUNT(*) AS sessions
        FROM landing_rows
@@ -817,6 +951,7 @@ export async function getV2CanonicalSummary(env, { windowKey = 'today' } = {}) {
   return {
     schema,
     window,
+    filters: filterState,
     refreshStatus,
     counts: counts || null,
     recentFamilies: families?.results || [],
