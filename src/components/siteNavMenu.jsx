@@ -3,7 +3,6 @@ import { ChevronRight } from "lucide-react";
 import { siteNav } from "../data/siteNav.ts";
 import { handleGalleryNavClick } from "../utils/prefetchGallery.ts";
 import "../styles/siteNavMenu.css";
-import "../styles/gallery-header-react.css";
 
 export default function SiteNavMenu({ forceMobile = false }) {
   const [mobileOpen, setMobileOpen] = useState(false);

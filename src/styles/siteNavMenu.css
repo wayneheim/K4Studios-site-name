@@ -385,6 +385,38 @@
   width: 100%;
 }
 
+.k4-logo-hover {
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.k4-watermark-opacity {
+  opacity: 0.25;
+  transition: opacity 0.3s ease;
+  width: 115px;
+  height: auto;
+  max-width: 100%;
+}
+
+.k4-logo-hover:hover .k4-watermark-opacity {
+  opacity: 1;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
 /* ---------- Row & arrow styling ---------- */
 
 

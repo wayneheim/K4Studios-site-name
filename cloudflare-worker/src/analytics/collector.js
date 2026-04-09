@@ -144,37 +144,6 @@ function normalizeClientVisitorId(raw) {
   return /^[A-Za-z0-9._:-]+$/.test(value) ? value : null;
 }
 
-function makeSidSetCookieHeader(requestUrl, sessionId) {
-  if (!sessionId) return null;
-
-  let hostname = '';
-  try {
-    hostname = new URL(requestUrl).hostname || '';
-  } catch (_) {
-    hostname = '';
-  }
-
-  // Only set a cross-subdomain cookie on the real site.
-  const domainAttr = hostname.endsWith('k4studios.com') ? '; Domain=.k4studios.com' : '';
-  const value = encodeURIComponent(String(sessionId));
-  return `k4_sid=${value}; Path=/; SameSite=Lax; Secure${domainAttr}`;
-}
-
-function makeVidSetCookieHeader(requestUrl, visitorId) {
-  if (!visitorId) return null;
-  let hostname = '';
-  try {
-    hostname = new URL(requestUrl).hostname || '';
-  } catch (_) {
-    hostname = '';
-  }
-
-  const domainAttr = hostname.endsWith('k4studios.com') ? '; Domain=.k4studios.com' : '';
-  const value = encodeURIComponent(String(visitorId));
-  // 1 year
-  return `k4_vid=${value}; Path=/; Max-Age=31536000; SameSite=Lax; Secure${domainAttr}`;
-}
-
 function getAllowedOrigin(request) {
   const origin = request?.headers?.get?.('Origin') || null;
   if (!origin) return 'https://www.k4studios.com';
@@ -360,15 +329,9 @@ export async function handleTrackRequest(request, env, ctx) {
       refererOverride: bestReferrer || null
     }));
 
-    const sidSetCookie = makeSidSetCookieHeader(request.url, bestSessionId);
-    const vidSetCookie = vidCookie ? null : makeVidSetCookieHeader(request.url, visitorId);
-
     const headers = applyCors(new Headers(), request, 'POST');
 
     applyNoStore(headers);
-
-    if (sidSetCookie) headers.append('Set-Cookie', sidSetCookie);
-    if (vidSetCookie) headers.append('Set-Cookie', vidSetCookie);
 
     return new Response(null, {
       status: 204,
@@ -499,13 +462,11 @@ export async function handleTrackEvent(request, env, ctx) {
 
     ctx.waitUntil(logArtView(env, canonicalType, imageId, request, bestSessionId, 'js', visitorId));
 
-    const sidSetCookie = makeSidSetCookieHeader(request.url, bestSessionId);
     return new Response('ok', {
       status: 200,
       headers: {
         'Content-Type': 'text/plain',
-        'Access-Control-Allow-Origin': '*',
-        ...(sidSetCookie ? { 'Set-Cookie': sidSetCookie } : {})
+        'Access-Control-Allow-Origin': '*'
       }
     });
   } catch (e) {

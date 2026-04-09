@@ -125,15 +125,30 @@ function stripNestedTags(html: string): { cleaned: string; changed: boolean } {
     return m;
   });
 
-  // 🚨 Strip <title>, <meta>, <link> inside body
+  // 🚨 Strip <title> and <meta> inside body, but preserve CSS assets by moving
+  // body-level <link> and <style> tags into <head>.
+  const bodyLinks: string[] = [];
+  const bodyStyles: string[] = [];
   html = html.replace(/<body[\s\S]*?<\/body>/gi, (bodyBlock) => {
     const cleaned = bodyBlock
       .replace(/<title[\s\S]*?<\/title>/gi, "")
       .replace(/<meta[^>]*>/gi, "")
-      .replace(/<link[^>]*>/gi, "");
+      .replace(/<link[^>]*>/gi, (linkTag) => {
+        bodyLinks.push(linkTag);
+        return "";
+      })
+      .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, (styleTag) => {
+        bodyStyles.push(styleTag);
+        return "";
+      });
     if (cleaned.length !== bodyBlock.length) changed = true;
     return cleaned;
   });
+
+  const preservedBodyHeadTags = Array.from(new Set([...bodyLinks, ...bodyStyles]));
+  if (preservedBodyHeadTags.length > 0) {
+    html = html.replace(/<\/head>/i, preservedBodyHeadTags.join("") + "</head>");
+  }
 
   // 🚨 Deduplicate <div id="overlay-root">
   html = html.replace(
@@ -272,17 +287,8 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     });
   }
 
-  // ✅ EARLY EXIT: Redirect /img/* to Cloudflare Worker
-  // This handles ALL image requests (including hardcoded paths in data files)
-  // Uses 302 redirect so browser fetches from worker directly - no Netlify proxy needed
-  // Works identically in dev and prod - no switches, no toggles
-  if (pathname.startsWith("/img/")) {
-    const workerUrl = `https://k4-image-proxy.wayneheim.workers.dev${pathname}`;
-    return new Response(null, {
-      status: 302,
-      headers: { Location: workerUrl },
-    });
-  }
+  // Keep /img on the first-party host. Edge routing and worker bindings handle
+  // image delivery; SSR middleware should not expose the public workers.dev host.
 
   // ✅ EARLY EXIT: Return 410 Gone for legacy SmugMug photo shoots
   // These paths bypass Netlify's _redirects in SSR mode, so we must kill them here

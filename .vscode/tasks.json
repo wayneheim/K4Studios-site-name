@@ -302,7 +302,7 @@
 			"args": [
 				"-NoProfile",
 				"-Command",
-				"Set-Location cloudflare-worker; npx wrangler deploy"
+				"$root=(Get-Location).Path; $workerDir=Join-Path $root 'cloudflare-worker'; $tmp=Join-Path $workerDir 'tmp-deploy-cwd'; New-Item -ItemType Directory -Force -Path $tmp | Out-Null; npx wrangler deploy \"$workerDir\\k4-image-proxy.js\" --config \"$workerDir\\wrangler.toml\" --cwd \"$tmp\""
 			],
 			"isBackground": false
 		},
@@ -313,7 +313,7 @@
 			"args": [
 				"-NoProfile",
 				"-Command",
-				"Set-Location cloudflare-worker; cmd /c \"echo y| npx wrangler deploy\"; Set-Location ..; $urls=@('https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/hack/Northeast/i-pxM7nq8','https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Locatiion/Northeast/i-pxM7nq8','https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/i-pxM7nq8'); foreach($u in $urls){ $h=curl.exe -s -I $u; $status=($h|Select-String '^HTTP/'|Select-Object -First 1).Line; $loc=($h|Select-String '^location:'|Select-Object -First 1).Line; if(-not $loc){$loc='location: (none)'}; Write-Output \"$status | $u | $loc\" }"
+				"$root=(Get-Location).Path; $workerDir=Join-Path $root 'cloudflare-worker'; $tmp=Join-Path $workerDir 'tmp-deploy-cwd'; New-Item -ItemType Directory -Force -Path $tmp | Out-Null; npx wrangler deploy \"$workerDir\\k4-image-proxy.js\" --config \"$workerDir\\wrangler.toml\" --cwd \"$tmp\"; $urls=@('https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/hack/Northeast/i-pxM7nq8','https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Locatiion/Northeast/i-pxM7nq8','https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/i-pxM7nq8'); foreach($u in $urls){ $h=curl.exe -s -I $u; $status=($h|Select-String '^HTTP/'|Select-Object -First 1).Line; $loc=($h|Select-String '^location:'|Select-Object -First 1).Line; if(-not $loc){$loc='location: (none)'}; Write-Output \"$status | $u | $loc\" }"
 			],
 			"isBackground": false
 		},
@@ -324,7 +324,7 @@
 			"args": [
 				"-NoProfile",
 				"-Command",
-				"Set-Location cloudflare-worker; cmd /c \"echo y| npx wrangler deploy\""
+				"$root=(Get-Location).Path; $workerDir=Join-Path $root 'cloudflare-worker'; $tmp=Join-Path $workerDir 'tmp-deploy-cwd'; New-Item -ItemType Directory -Force -Path $tmp | Out-Null; npx wrangler deploy \"$workerDir\\k4-image-proxy.js\" --config \"$workerDir\\wrangler.toml\" --cwd \"$tmp\""
 			],
 			"isBackground": false
 		},

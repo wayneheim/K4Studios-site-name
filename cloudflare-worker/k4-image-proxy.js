@@ -80,14 +80,6 @@ const SIZE_FALLBACK = {
 // Single Population Doctrine: 1 cookie = 1 human
 // --------------------
 const K4_VID_COOKIE_NAME = 'k4_vid';
-const K4_VID_MAX_AGE = 31536000; // 1 year in seconds
-
-/**
- * Generate a UUID v4 for new visitors
- */
-function generateVisitorId() {
-  return crypto.randomUUID();
-}
 
 /**
  * Parse k4_vid from Cookie header
@@ -98,82 +90,6 @@ function getVisitorIdFromRequest(request) {
   
   const match = cookieHeader.match(new RegExp(`(?:^|;)\\s*${K4_VID_COOKIE_NAME}=([^;]+)`));
   return match ? match[1] : null;
-}
-
-/**
- * Get or create visitor_id for this request
- * Returns { visitorId, isNew } where isNew indicates cookie should be set
- */
-function getOrCreateVisitorId(request) {
-  const existingId = getVisitorIdFromRequest(request);
-  if (existingId) {
-    return { visitorId: existingId, isNew: false };
-  }
-  return { visitorId: generateVisitorId(), isNew: true };
-}
-
-/**
- * Create Set-Cookie header for k4_vid
- */
-function createVisitorIdCookie(visitorId, hostname) {
-  const host = String(hostname || '').toLowerCase();
-  const domainAttr = host.endsWith('k4studios.com') ? '; Domain=.k4studios.com' : '';
-  return `${K4_VID_COOKIE_NAME}=${visitorId}; Path=/; Max-Age=${K4_VID_MAX_AGE}; Secure; SameSite=Lax${domainAttr}`;
-}
-
-/**
- * Add visitor_id cookie to response if needed
- */
-/**
- * Returns true if this request is from a bot/crawler and should not receive
- * a Set-Cookie header. Bots don't store cookies anyway, and Set-Cookie on a
- * public Cache-Control page causes Bing Webmaster Tools URL inspection to fail
- * with "Error encountered while inspecting URL" even though the page is 200.
- *
- * Signals checked (any one is sufficient):
- * 1. UA matches known discovery/social/SEO bot list (isDiscoveryBotUA)
- * 2. UA contains generic bot/crawler/spider/preview tokens
- * 3. Sec-Fetch-Site header is absent — real browsers always send it on
- *    navigation; bots universally omit all Sec-Fetch-* headers
- * 4. Sec-Fetch-Site is "none" with no Sec-Fetch-Mode — direct fetches without
- *    browser navigation context (e.g. headless scrapers)
- */
-function shouldSuppressCookie(request) {
-  const ua = request?.headers?.get('User-Agent') || '';
-
-  // 1. Known discovery/social/SEO bots
-  if (isDiscoveryBotUA(ua)) return true;
-
-  // 2. Generic bot/crawler/spider/preview tokens in UA
-  if (/bot|crawler|spider|preview/i.test(ua)) return true;
-
-  // 3. Sec-Fetch-Site absent → not a browser navigation
-  const secFetchSite = request?.headers?.get('Sec-Fetch-Site');
-  if (secFetchSite === null || secFetchSite === undefined) return true;
-
-  // 4. Sec-Fetch-Site: none with no Sec-Fetch-Mode (headless / non-browser fetch)
-  const secFetchMode = request?.headers?.get('Sec-Fetch-Mode');
-  if (secFetchSite === 'none' && !secFetchMode) return true;
-
-  return false;
-}
-
-function addVisitorIdCookie(response, visitorId, isNew, request) {
-  if (shouldSuppressCookie(request)) return response;
-
-  if (!isNew) return response;
-
-  // Clone response to add Set-Cookie header
-  const newHeaders = new Headers(response.headers);
-  let hostname;
-  try { hostname = new URL(request?.url || '').hostname; } catch(e) { hostname = null; }
-  newHeaders.append('Set-Cookie', createVisitorIdCookie(visitorId, hostname));
-  
-  return new Response(response.body, {
-    status: response.status,
-    statusText: response.statusText,
-    headers: newHeaders
-  });
 }
 
 /**
@@ -485,7 +401,7 @@ async function proxyImage(smugMugUrl, request, size = null) {
   };
 
   // XL assets should not be indexed directly by search engines.
-  if (size === 'xl') {
+  if (size === 'xl' || shouldForceNoIndexForWorkerHost(request)) {
     headers["X-Robots-Tag"] = "noindex, noimageindex, noai, noimageai";
   }
 
@@ -604,6 +520,15 @@ function withFrictionDebugHeaders(response, debugInfo) {
   }
 }
 
+function shouldForceNoIndexForWorkerHost(request) {
+  try {
+    const hostname = new URL(request?.url || '').hostname.toLowerCase();
+    return hostname === 'k4-image-proxy.wayneheim.workers.dev';
+  } catch {
+    return false;
+  }
+}
+
 function ensureNoAIHeaders(response, forceNoIndex = false) {
   try {
     if (!response) return response;
@@ -665,24 +590,37 @@ function isDiscoveryBotUA(uaRaw) {
   return /(googlebot|google-inspectiontool|googleother|apis-google|adsbot-google|googlebot-image|bingbot|bingpreview|msnbot|bingimagesbot|adidxbot|applebot|duckduckbot|yandex|baiduspider|slurp|petalbot|ahrefsbot|ahrefssiteaudit|semrushbot|facebookexternalhit|facebot|twitterbot|pinterestbot|linkedinbot|slackbot|discordbot|telegrambot)/i.test(ua);
 }
 
+function isCleanHtmlCrawlerUA(uaRaw) {
+  const ua = String(uaRaw || '');
+  return /(perplexity|oai-search|bingbot|bingpreview|msnbot)/i.test(ua);
+}
+
+function isImageQualityBypassUA(uaRaw) {
+  const ua = String(uaRaw || '');
+  return /(bingbot|bingpreview|msnbot|bingimagesbot|adidxbot)/i.test(ua);
+}
+
 function shouldBypassImageControls(env, request, uaRaw) {
-  if (String(env?.IMAGE_VERIFIED_BOT_BYPASS || '').toLowerCase() !== 'true') {
+  if (String(env?.IMAGE_VERIFIED_BOT_BYPASS || '').toLowerCase() === 'false') {
     return false;
   }
 
-  if (!request?.cf?.botManagement?.verifiedBot) {
-    return false;
+  if (request?.cf?.botManagement?.verifiedBot) {
+    return isDiscoveryBotUA(uaRaw);
   }
 
-  return isVerifiedSearchBot(uaRaw) || isDiscoveryBotUA(uaRaw);
+  return isImageQualityBypassUA(uaRaw);
 }
 
 function getSuspicionFlags({ request, asn, ua }) {
-  // Behavior-based: no referrer + no session cookies + hosting ASN.
-  // Do NOT trigger on UA alone.
+  // Behavior-based: protect large image fetches from suspicious direct access
+  // without changing the bytes returned for a given /img URL.
   const referer = request.headers.get('Referer') || request.headers.get('referer') || '';
   const noReferrer = !referer;
   const noSession = !hasK4SessionCookies(request);
+  const browserLike = looksLikeBrowser(request);
+  const safeDiscoveryCrawler = isDiscoveryBotUA(ua) || isImageQualityBypassUA(ua);
+  const suspiciousUA = !safeDiscoveryCrawler && (/\b(perplexity|oai-search|gptbot|claudebot|claude-web|bytespider|diffbot|imagesiftbot|scrapy)\b/i.test(ua) || (/(bot|crawler|spider)/i.test(ua) && !browserLike));
 
   const hostingASNs = new Set([
     14618, // Amazon.com, Inc. (AWS) — common origin for bulk bots/scrapers
@@ -697,8 +635,13 @@ function getSuspicionFlags({ request, asn, ua }) {
   return {
     noReferrer,
     noSession,
+    suspiciousUA,
     hostingASN,
-    suspect: !isCacheWarmer && noReferrer && noSession && hostingASN
+    suspect: !isCacheWarmer && (
+      suspiciousUA ||
+      (noReferrer && noSession && !browserLike) ||
+      (noReferrer && noSession && hostingASN)
+    )
   };
 }
 
@@ -923,7 +866,7 @@ async function handleImageRequest(request, ctx, env) {
   try {
     const cached = await caches.default.match(canonicalRequest);
     if (cached) {
-      const upgraded = ensureNoAIHeaders(cached, route.size === 'xl');
+      const upgraded = ensureNoAIHeaders(cached, route.size === 'xl' || shouldForceNoIndexForWorkerHost(request));
 
       // Refresh cache with upgraded headers so future hits are clean.
       try {
@@ -1075,7 +1018,7 @@ async function handleImageRequest(request, ctx, env) {
     let response = await proxyImageWithFallback(smugMugUrls, canonicalRequest, route.size);
 
     if (response?.status === 200) {
-      response = ensureNoAIHeaders(response, route.size === 'xl');
+      response = ensureNoAIHeaders(response, route.size === 'xl' || shouldForceNoIndexForWorkerHost(request));
     }
 
     // Add canonical Link header so Google can associate /img/ bytes with the gallery page.
@@ -1363,6 +1306,8 @@ async function handleGatewayRequest(request, env) {
   const url = new URL(request.url);
   const ua = request.headers.get("user-agent") || "";
   const accept = request.headers.get("accept") || "";
+  const isVerifiedBot = Boolean(request.cf?.botManagement?.verifiedBot);
+  const bypassHtmlSecurity = isVerifiedBot || isCleanHtmlCrawlerUA(ua);
 
   // Always allow these paths + HEAD/OPTIONS
   if (
@@ -1377,6 +1322,11 @@ async function handleGatewayRequest(request, env) {
   const isHTML = accept.includes("text/html");
 
   if (isHTML) {
+    if (bypassHtmlSecurity) {
+      console.log("PROXY TARGET (crawler-bypass):", request.url);
+      return fetch(request);
+    }
+
     // Country blocking (HTML only)
     const blockedCountries = (env.BLOCKED_COUNTRIES || "CN,RU,IR,KP")
       .split(",")
@@ -1405,61 +1355,6 @@ async function handleGatewayRequest(request, env) {
       });
     }
 
-    // EDGE REFERRER CAPTURE: Maintain k4_entry_ref on true top-level navigations.
-    // Goal: capture the *external* entry source before SPA navigation loses it,
-    // while also clearing stale external attribution on bookmark/typed visits.
-    const cookies = request.headers.get("cookie") || "";
-
-    // Only set cookie on true top-level navigation (not SPA transitions or iframes)
-    const isTopLevelNav =
-      request.headers.get("Sec-Fetch-Dest") === "document" &&
-      request.headers.get("Sec-Fetch-Mode") === "navigate";
-
-    if (isTopLevelNav) {
-      // Capture the raw referrer from the edge (most reliable source)
-      // Store the full URL so SQL can distinguish google_images vs google_search, etc.
-      const edgeReferer = request.headers.get("referer") || "";
-
-      const cookieMatch = cookies.match(/(?:^|;\s*)k4_entry_ref=([^;]+)/);
-      const existingCookieValue = cookieMatch ? cookieMatch[1] : null;
-
-      // Do not treat internal navigation as a new "entry".
-      let isInternalReferer = false;
-      try {
-        if (edgeReferer) {
-          const u = new URL(edgeReferer);
-          const host = (u.hostname || '').toLowerCase();
-          isInternalReferer = host === 'localhost' || host === '127.0.0.1' || host.endsWith('k4studios.com');
-        }
-      } catch {
-        isInternalReferer = false;
-      }
-
-      // Overwrite rules:
-      // - No referer (bookmark/typed/new-tab) => overwrite to direct (clears stale Google).
-      // - External referer => overwrite to that referer (new entry source).
-      // - Internal referer => do not overwrite.
-      const desiredCookieValue = edgeReferer ? encodeURIComponent(edgeReferer) : 'direct';
-      const shouldSetCookie = (!edgeReferer || !isInternalReferer) && existingCookieValue !== desiredCookieValue;
-      if (shouldSetCookie) {
-        const cookieValue = desiredCookieValue;
-
-        // Log for debugging
-        console.log("Edge referrer capture:", { raw: edgeReferer, cookieValue });
-
-        // Fetch the origin response
-        console.log("PROXY TARGET (cookie-set):", request.url);
-        const originResponse = await fetch(request);
-
-        // Clone response and add the cookie
-        const newResponse = new Response(originResponse.body, originResponse);
-        newResponse.headers.append(
-          "Set-Cookie",
-          `k4_entry_ref=${cookieValue}; Max-Age=3600; Path=/; Secure; SameSite=Lax`
-        );
-        return newResponse;
-      }
-    }
   }
 
   console.log("PROXY TARGET (default):", request.url);
@@ -2782,8 +2677,11 @@ export default {
     }
     
     // === VISITOR ID (Single Population Doctrine) ===
-    // Every request gets a visitor_id. Cookie ensures 1 browser = 1 human.
-    const { visitorId, isNew: visitorIdIsNew } = getOrCreateVisitorId(request);
+    // Crawlable documents never persist identity server-side.
+    // If the browser has not set k4_vid yet, treat this request as anonymous
+    // rather than inventing a canonical identity in the worker.
+    const visitorId = getVisitorIdFromRequest(request);
+    const hasVisitorIdCookie = Boolean(visitorId);
 
     // 0) Bot short-circuit for /track — prevent Netlify function burn
     // Verified bots (Googlebot, Applebot, Bingbot, etc.) get 204 No Content
@@ -2856,7 +2754,7 @@ export default {
     // 1) Image detail pages: apply policy first, then log art view
     if (isImagePageRoute(url.pathname)) {
       const policyResponse = await handleImagePagePolicy(request, url.pathname, ctx, env);
-      if (policyResponse) return addVisitorIdCookie(policyResponse, visitorId, visitorIdIsNew, request);
+      if (policyResponse) return policyResponse;
       
       // Log image page view (someone viewing an image detail page)
       const imageId = extractImageId(url.pathname);
@@ -2865,7 +2763,7 @@ export default {
         
         // No k4_vid cookie = external/bot/no-JS access (not a returning human)
         // These get their own classification separate from chapter_view
-        if (visitorIdIsNew) {
+        if (!hasVisitorIdCookie) {
           ctx.waitUntil(logArtView(env, 'external_image_page', imageId, request, null, 'proxy', visitorId));
         }
       }
@@ -2873,9 +2771,9 @@ export default {
       const response = await fetch(request);
       if (response.status === 404) {
         const branded404 = await createBranded404Response(request);
-        return addVisitorIdCookie(branded404, visitorId, visitorIdIsNew, request);
+        return branded404;
       }
-      return addVisitorIdCookie(response, visitorId, visitorIdIsNew, request);
+      return response;
     }
 
     // 2) Gallery pages: pass through.
@@ -2883,7 +2781,7 @@ export default {
     if ((url.pathname.startsWith("/Galleries/") || url.pathname.startsWith("/Other/") || url.pathname.startsWith("/galleries/") || url.pathname.startsWith("/other/")) && 
         !url.pathname.includes("/i-")) {
       const response = await fetch(request);
-      return addVisitorIdCookie(response, visitorId, visitorIdIsNew, request);
+      return response;
     }
 
     // 3) /img proxy routes — no cookie for binary image responses
@@ -2905,13 +2803,11 @@ export default {
     // 4) Everything else: gateway firewall
     try {
       console.log("PROXY TARGET (gateway):", request.url);
-      const response = await handleGatewayRequest(request, env);
-      return addVisitorIdCookie(response, visitorId, visitorIdIsNew, request);
+      return await handleGatewayRequest(request, env);
     } catch (err) {
       console.error("Gateway error (failing open):", err);
       console.log("PROXY TARGET (fallback):", request.url);
-      const response = await fetch(request);
-      return addVisitorIdCookie(response, visitorId, visitorIdIsNew, request);
+      return fetch(request);
     }
   }
 };

@@ -160,9 +160,8 @@ function getNextEventOrder(): number {
   return next;
 }
 
-// Read the entry referrer from the edge-set cookie (k4_entry_ref)
-// The Cloudflare Worker sets this cookie on the first HTML request
-// using the true Referer header before SPA navigation can lose it
+// Read cookies written by the browser-side bridge.
+// Public HTML responses no longer persist referrer or visitor identity server-side.
 function getCookie(name: string): string | null {
   if (typeof document === 'undefined') return null;
   const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
@@ -277,22 +276,14 @@ function syncClarityIdentity(): void {
   }
 }
 
-// Get the entry referrer - always prefer the edge-set cookie (worker updates it
-// on every top-level navigation), fall back to sessionStorage only when the
-// cookie has expired or is missing.
+// Get the session entry referrer without relying on server-set document cookies.
+// Session storage is the durable source for the current tab; document.referrer
+// seeds it on the first page load.
 function getEntryReferrer(): string | null {
   if (typeof window === 'undefined') return null;
 
-  // Cookie is the source of truth — the worker rewrites it on each top-level
-  // navigation (bookmark → "direct", external → encoded URL, internal → no-op).
-  const cookieRef = getCookie('k4_entry_ref');
-  if (cookieRef) {
-    // Sync sessionStorage so it survives cookie expiry within the same tab
-    sessionStorage.setItem('k4_entry_referrer', cookieRef);
-    return cookieRef;
-  }
-
-  // Cookie absent (expired / not yet set) — use cached sessionStorage value
+  // Use cached sessionStorage value when available so SPA navigation and later
+  // beacons keep the original external entry source for the tab.
   const cached = sessionStorage.getItem('k4_entry_referrer');
   if (cached !== null) {
     return cached || null;
