@@ -1,0 +1,542 @@
+---
+export const prerender = true;
+import BaseLayout    from "@/layouts/BaseLayout.astro";
+import BlogJsonLd    from "@/components/blog/BlogJsonLd.astro";
+import LandingHeader from "@/components/Landing-Header.jsx";
+import SiteFooter    from "@/components/Footer.astro";
+import WesternDefinitions from "@/components/blog/WesternDefinitions.astro";
+import { getStructuredData, getBlogBreadcrumbList } from "@/components/utils/getStructuredData.ts";
+import { getLandingMeta } from "@/data/landingMeta.ts";
+import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
+import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
+import {
+  galleryDataMap,
+  allImages
+} from "@/data/galleryMaps/MasterGalleryData.mjs";
+import { galleryData as painterlyImages } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
+import { galleryData as civilWarColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs";
+import { galleryData as civilWarBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White.mjs";
+import { galleryData as roaring20sColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color.mjs";
+import { galleryData as roaring20sBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White.mjs";
+import { galleryData as wwiiPortraitsColor } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs";
+import { galleryData as wwiiPortraitsBW } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White.mjs";
+import "@/styles/global.css";
+
+const sectionPath = "/Blog/armature-beneath-the-legend";
+
+const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
+const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}.jpg`;
+
+const coverImageId = "i-svbQj25";
+const coverImage = getProxySrc(coverImageId, "xl");
+const coverImageAbsolute = getAbsoluteProxySrc(coverImageId, "l");
+
+const structuredData = getStructuredData({
+  type: "BlogPosting",
+  data: {
+    headline: "Inside the Frame: Armature Beneath the Legend",
+    description: "A conversation with Quill about the hidden structure beneath the Western legend — the labor, sacrifice, endurance, and unnamed lives that gave the myth its strength.",
+    url: `https://k4studios.com${sectionPath}`,
+    copyrightNotice: "© Wayne Heim",
+    author: {
+      "@type": "Person",
+      name: "Wayne Heim"
+    },
+    datePublished: "2026-04-09",
+    image: coverImageAbsolute,
+    articleSection: "Western Fine Art Photography",
+    keywords: [
+      "western fine art photography",
+      "western spirit",
+      "western mythology",
+      "narrative western art",
+      "painterly photography",
+      "Wayne Heim",
+      "Inside the Frame",
+      "Armature Beneath the Legend"
+    ],
+    wordCount: 1700
+  },
+  defaults: {
+    copyrightNotice: "© Wayne Heim",
+    license: "https://k4studios.com/copyright",
+    creditText: "Wayne Heim",
+    creatorName: "Wayne Heim",
+    creatorUrl: "https://k4studios.com/"
+  }
+});
+
+const breadcrumbsJSON = getBlogBreadcrumbList({
+  title: "Inside the Frame: Armature Beneath the Legend",
+  url: `https://k4studios.com${sectionPath}`
+});
+
+const meta = {
+  ...getLandingMeta(sectionPath, coverImageAbsolute),
+  description: "A conversation with Quill about the hidden structure beneath the Western legend — the labor, sacrifice, endurance, and unnamed lives that gave the myth its strength.",
+  ogUrl: `https://k4studios.com${sectionPath}`,
+  ogTitle: "Inside the Frame: Armature Beneath the Legend",
+  ogDescription: "A conversation with Quill about the hidden structure beneath the Western legend — the labor, sacrifice, endurance, and unnamed lives that gave the myth its strength.",
+  ogImage: coverImageAbsolute,
+  ogImageAlt: "Lifted cover — a frontier woman on horseback with face raised into the morning light",
+  ogType: "article",
+  twitterUrl: `https://k4studios.com${sectionPath}`,
+  twitterTitle: "Inside the Frame: Armature Beneath the Legend",
+  twitterDescription: "A conversation with Quill about the hidden structure beneath the Western legend — the labor, sacrifice, endurance, and unnamed lives that gave the myth its strength.",
+  twitterImage: coverImageAbsolute,
+  twitterCard: "summary_large_image"
+};
+
+function shuffleArray<T>(arr: T[]): T[] {
+  return arr
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+const allGalleryImages = [
+  ...painterlyImages.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" })),
+  ...civilWarColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color" })),
+  ...civilWarBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White" })),
+  ...roaring20sColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color" })),
+  ...roaring20sBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White" })),
+  ...wwiiPortraitsColor.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color" })),
+  ...wwiiPortraitsBW.map(img => ({ ...img, galleryPath: "Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White" }))
+].filter(img => img.visibility !== "ghost");
+
+const previewImages = shuffleArray(allGalleryImages).slice(0, 6);
+const previewPath = "/Galleries";
+
+const galleryDatas = Object.values(galleryDataMap).flat();
+const featheredImages = allImages.filter(img => (img as any).visibility !== "ghost").slice(0, 12);
+const galleryPaths = Object.keys(galleryDataMap);
+
+const linkKeywords = (text: string) =>
+  autoLinkKeywordsInText(text, galleryDatas, featheredImages, galleryPaths, k4Semantic, Astro.url.pathname);
+
+const blogBreadcrumb = `Other › <a href='/Blog' style='color: inherit; text-decoration: none;' onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Blog</a> › Armature Beneath the Legend`;
+---
+
+<BaseLayout
+  title="Inside the Frame: Armature Beneath the Legend"
+  breadcrumbsJSON={breadcrumbsJSON}
+  meta={meta}
+>
+  <link rel="canonical" href={`https://k4studios.com${sectionPath}`} />
+  <main class="bg-white text-[#2c2c2c] min-h-screen overflow-x-hidden" style="font-family: 'Glegoo', serif;">
+    <div class="drawer-mode">
+      <LandingHeader client:load breadcrumb={blogBreadcrumb} />
+    </div>
+
+    <section style="text-align:center; padding:3rem 0 2rem;">
+      <h1 style="font-size:3rem; font-weight:700; margin-bottom:0.5rem;">Armature Beneath the Legend</h1>
+      <p style="font-size:1.5rem; color:#4a4a4a;">Inside the Frame — Ep: 10</p>
+    </section>
+
+    <section class="cover-split-wrap">
+      <div class="cover-split-card">
+        <a
+          href="/Other/K4-Select-Series/Engrained/i-svbQj25"
+          class="cover-link"
+          onmouseenter="this.querySelector('img').style.boxShadow='0 0 0 2px rgba(255,255,255,0.85), 0 4px 15px 4px rgba(134,134,134,0.85)'"
+          onmouseleave="this.querySelector('img').style.boxShadow='none'"
+        >
+          <img
+            src={coverImage}
+            alt="Frontier woman on horseback pausing on a steep hillside trail with eyes closed and face lifted into the morning sun."
+            class="cover-split-image"
+          />
+          <div class="cover-caption">Click for details</div>
+        </a>
+
+        <div class="cover-split-copy">
+          <h2>Inside the Frame — Episode</h2>
+          <p class="cover-kicker">Looking beneath the Western legend.</p>
+
+          <h3>Summary</h3>
+          <p>
+            This episode of <em>Inside the Frame</em> looks beyond the familiar icons of the American West to the hidden armature beneath them — the unnamed lives, labor, sacrifice, and determination that gave the Western story its strength in the first place.
+          </p>
+
+          <h3>In this Episode</h3>
+          <p>
+            In this conversation, Wayne and I discuss how his work reaches past the dime-novel version of the West to explore the human structure beneath the legend — why the Western spirit is found as much in endurance as in heroism, and what those forgotten lives still have to teach us now.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section max-w-[860px] mx-auto px-4">
+      <BlogJsonLd json={structuredData}>
+      <article class="story-block space-y-4">
+
+        <h3>💬 Conversation</h3>
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> Wayne, you've been circling something lately that feels bigger than just one image. This idea of what sits beneath the Western legend. What are you seeing there?
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          I think we've been trained to see the West through its icons.<br/><br/>
+          The gunslinger.<br/>
+          The lawman.<br/>
+          The rider on the horizon.<br/><br/>
+          The dime-store version of it.<br/><br/>
+          And I get it — I love that stuff too. It's part of the mythology.<br/><br/>
+          But that's not the whole story. Not even close.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> So what's missing?
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          Context.<br/><br/>
+          Everything that made those figures possible.<br/><br/>
+          The cook who stretched six cans of beans to get them to Laramie before snowfall.<br/>
+          The mothers doing the wash, tending the children, holding everything together.<br/>
+          The men doing the kind of work that never gets written down.<br/><br/>
+          Endless cogs in the wheel of history… just keeping the wheels moving.<br/><br/>
+          Their struggles.<br/>
+          Their sacrifices.<br/>
+          Their determination.<br/><br/>
+          That's the part that gets left out.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> You used the word armature earlier. That stuck with me.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          Yeah. That's the best way I can describe it.<br/><br/>
+          We talk about the legend like it stands on its own.<br/><br/>
+          Like it just is.<br/><br/>
+          But it doesn't.<br/><br/>
+          It has a structure beneath it. A hidden framework that supports everything we recognize as the West.<br/><br/>
+          That's the armature.<br/><br/>
+          That's where the real stories live.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> So the legend is the surface… and the armature is what made it possible.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          Exactly.<br/><br/>
+          If you strip that away, all you've got left is a pose. A silhouette. Something that looks right — but doesn't carry much.<br/><br/>
+          History wasn't built by symbols.<br/>
+          It created symbols.<br/><br/>
+          History is built from the actions and stories of people most of us will never know the names of.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> Why do you think we default to the icons?
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          Because they're clean.<br/><br/>
+          We like to simplify. It's safer that way.<br/><br/>
+          They're easy to understand. Easy to package. Easy to repeat.<br/><br/>
+          Less need for reflection.<br/><br/>
+          Hollywood — even when it gets closer to hardship, loss, and drama — still orbits the hero. Just in a more romantic way.<br/><br/>
+          I'm not saying there's no place for heroes.<br/><br/>
+          I'm just saying if you want to understand — to feel — you have to pull back the curtain and see what's underneath.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> So even when the tone changes, the center doesn't.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          Exactly.<br/><br/>
+          We're still pointing at the same figure and saying, that's the story.<br/><br/>
+          I just try to give people a richer one.<br/><br/>
+          To get them to step inside and imagine what it might have been like to stand in those shoes…<br/>
+          to make those decisions…<br/>
+          to carry those sacrifices.<br/><br/>
+          To learn something about history — and maybe something about themselves.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> Then what is the real story?
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          The structure beneath the legend.<br/><br/>
+          The people who carried it.<br/><br/>
+          The ones who didn't get the painting.<br/>
+          Didn't get the credit.<br/>
+          Didn't get remembered.<br/><br/>
+          The Western spirit is every bit — if not more — about them as it is about the iconic characters we grew up with.<br/><br/>
+          Not because they matter more…<br/><br/>
+          …but because you can't have one without the other.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> That shifts the meaning of “Western spirit.”
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          It should.<br/><br/>
+          Because when people talk about it, they talk about grit, toughness, resilience…<br/><br/>
+          …but they attach it to the icon.<br/><br/>
+          The reality is — it lived everywhere.<br/><br/>
+          In endurance.<br/>
+          In repetition.<br/>
+          In people getting knocked down and getting back up again.<br/><br/>
+          Over and over.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> That sounds less like myth… and more like something you recognize in real life.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          That's the point.<br/><br/>
+          These aren't just stories to be impressed by.<br/><br/>
+          They're stories to learn from.<br/>
+          To respect.<br/>
+          To carry forward.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> Carry forward how?
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          By letting them become part of your own armature.<br/><br/>
+          That's what matters to me.<br/><br/>
+          If these people could endure what they did — uncertainty, loss, hardship — and still keep going…<br/><br/>
+          then what are we waiting for?
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> That's a different energy than how Western imagery is usually received.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          Yeah.<br/><br/>
+          Because I'm not trying to make dark images just to shock people.<br/><br/>
+          I'm not saying, “look how hard this was.”<br/><br/>
+          I'm reframing that whole glass-half-empty conversation.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> Into what?
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          Into:<br/><br/>
+          “You can do this too.”
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> That's a powerful turn.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          It is.<br/><br/>
+          Because once you stop looking at these people as distant history — and start seeing them as everyday human beings who figured out how to keep going —<br/><br/>
+          you realize something.<br/><br/>
+          They're not that different from us.<br/><br/>
+          They're examples.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> So the work isn't just about preserving the past.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          Not entirely.<br/><br/>
+          It's about using the past to build something in the present.<br/><br/>
+          To remind people what's possible.<br/><br/>
+          To show them what it looks like to get kicked in the teeth a dozen times…<br/>
+          and still stand back up.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> And your images… where do they sit in all of this?
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          They're not there to decorate the legend.<br/><br/>
+          They're there to push you underneath it.<br/><br/>
+          To make you feel that structure.<br/><br/>
+          To ask:<br/><br/>
+          What did this life cost?<br/>
+          What held this moment up?<br/>
+          What's still happening outside the frame?
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Quill:</strong> That's where the weight comes from.
+        `)} />
+
+        <p set:html={linkKeywords(`
+          <strong>Wayne:</strong><br/><br/>
+          Exactly.<br/><br/>
+          Without that, it's just a picture.<br/><br/>
+          With it…<br/><br/>
+          it becomes something you carry.
+        `)} />
+
+        <h3>🖋️ Quill's Reflection</h3>
+
+        <p set:html={linkKeywords(`
+          The legend gives us something to recognize.<br/>
+          The armature gives it something to stand on.<br/><br/>
+          The West was never built by symbols alone.<br/><br/>
+          It was carried forward by people whose names rarely made it into the telling — people who endured, adapted, sacrificed, and kept moving long after the story stopped watching.<br/><br/>
+          If the icon is what we remember,<br/>
+          the armature is what made it possible.
+        `)} />
+
+        <h3>🧭 Final Thought</h3>
+
+        <p set:html={linkKeywords(`
+          You can't claim to understand the Western spirit by knowing only its legends.<br/><br/>
+          To understand it, you have to look beneath them —<br/>
+          into the lives, labor, and determination that held everything together.<br/><br/>
+          Not just to admire it.<br/><br/>
+          But to learn from it.<br/>
+          To carry it.<br/>
+          To build your own armature from it.
+        `)} />
+
+        <p>📌 <em>Inside the Frame</em> continues — not to explain images, but to reveal what they're built on.</p>
+
+        <h3>🖋️ About the Artist</h3>
+        <p set:html={linkKeywords(`Wayne Heim is a fine art photographer and certified medical illustrator. His painterly storytelling explores Western mythology, historical reenactment, endurance, sacrifice, and the emotional structures that hold narrative images together. He blends light, composition, and human tension to create work that feels lived in, story-rich, and lasting.`)} />
+
+        <p>🔗 <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" class="text-[#8b0000] hover:underline">Explore the full Western Fine Art Photography collection</a> | <a href="/Other/K4-Select-Series/Engrained" class="text-[#8b0000] hover:underline">See the Engrained Series</a></p>
+      </article>
+      </BlogJsonLd>
+    </section>
+
+    <WesternDefinitions variant="post" />
+
+    <SiteFooter
+      previewImages={previewImages}
+      previewPath={previewPath}
+      title="Inside the Frame: Armature Beneath the Legend"
+      label="Explore Galleries"
+      class="pt-12 pb-12"
+    />
+  </main>
+
+  <style>
+    .cover-split-wrap {
+      max-width: 1040px;
+      margin: 0 auto 2.5rem;
+      padding: 0 1rem;
+    }
+
+    .cover-split-card {
+      display: grid;
+      grid-template-columns: minmax(238px, 306px) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .cover-link {
+      display: block;
+      text-decoration: none;
+    }
+
+    .cover-split-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      transition: box-shadow .3s;
+    }
+
+    .cover-caption {
+      font-size: 0.95rem;
+      color: #888;
+      text-align: right;
+      margin-top: 0.25rem;
+    }
+
+    .cover-split-copy {
+      max-width: 29rem;
+      padding-top: 0.35rem;
+      justify-self: start;
+    }
+
+    .cover-split-copy h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 0.25rem;
+    }
+
+    .cover-kicker {
+      font-size: 1.05rem;
+      color: #6b6b6b;
+      margin-bottom: 1.35rem;
+      font-style: italic;
+    }
+
+    .cover-split-copy h3 {
+      margin-top: 1.15rem;
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+
+    .cover-split-copy p {
+      line-height: 1.88;
+      margin: 0 0 2.9rem;
+    }
+
+    .cover-split-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-section {
+      line-height: 1.6;
+    }
+
+    .story-block p {
+      margin-bottom: 0.85rem;
+    }
+
+    .story-block h3 {
+      margin-top: 1.6rem;
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 820px) {
+      .cover-split-card {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+      }
+
+      .cover-link {
+        max-width: 360px;
+        margin: 0 auto;
+      }
+
+      .cover-split-copy {
+        max-width: none;
+        text-align: left;
+      }
+    }
+  </style>
+</BaseLayout>

@@ -1,5 +1,12 @@
 export const posts = [
   {
+    slug: "armature-beneath-the-legend",
+    title: "Inside the Frame: Armature Beneath the Legend",
+    date: "2026-04-09",
+    excerpt: "A conversation with Quill about the hidden structure beneath the Western legend — the labor, sacrifice, endurance, and unnamed lives that gave the myth its strength.",
+    cover: "https://photos.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-svbQj25/0/KcLqjr3b2KBWCp63m47HBHRzcKm8ccZSGr4SR4j53/M/Lifted%2016%20x%2036%20copy-M.jpg"
+  },
+  {
     slug: "special-delivery",
     title: "Inside the Frame: Special Delivery",
     date: "2026-01-08",
