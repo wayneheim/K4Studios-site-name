@@ -1,6 +1,15 @@
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CircleX } from "lucide-react";
-import { getProxySrc } from "../utils/imageProxy.js";
+import {
+  SERIES_DEFINITIONS,
+  fetchPricingConfig,
+  getEffectiveSeries,
+  getExcludeSizesFromRegistry,
+  getSeriesPricingList,
+  loadSeriesRegistry,
+} from "../data/seriesDefinitions.js";
+import { getProxySrc, normalizeImageSrc } from "../utils/imageProxy.js";
 
 function getInStockCount(inventory = {}) {
   return inventory.inStock || Math.max(0, (inventory.printed || 0) - (inventory.sold || 0));
@@ -31,7 +40,117 @@ function buildEngrainedMailtoLink(image) {
   return `mailto:info@k4studios.com?subject=${subject}&body=${encodeURIComponent(body)}`;
 }
 
+function normalizeDatasetPathToPublicPath(input = "") {
+  if (!input || typeof input !== "string") return "";
+
+  let normalized = input.replace(/\\/g, "/").trim();
+  normalized = normalized.replace(/^src\/(data|pages)\//, "");
+  normalized = normalized.replace(/\.(mjs|astro)$/i, "");
+  normalized = normalized.replace(/^\/+/, "");
+
+  if (!normalized) return "";
+  if (normalized.startsWith("Galleries/") || normalized.startsWith("Other/")) {
+    return `/${normalized}`;
+  }
+  if (normalized.startsWith("K4-Select-Series/")) {
+    return `/Other/${normalized}`;
+  }
+
+  return `/${normalized}`;
+}
+
+function buildPaperGalleryUrl(galleryPath, imageId) {
+  const basePath = normalizeDatasetPathToPublicPath(galleryPath);
+  if (!basePath || !imageId) return "";
+  return `${basePath}/${imageId}`;
+}
+
+async function fetchGalleryImage(datasetPath, imageId) {
+  if (!datasetPath || !imageId) return null;
+
+  const response = await fetch(
+    `/.netlify/functions/updateGalleryItem?datasetPath=${encodeURIComponent(datasetPath)}`,
+    { cache: "no-store" }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Failed to load linked gallery (${response.status})`);
+  }
+
+  const data = await response.json();
+  const image = (data.items || []).find((item) => item.id === imageId);
+  return image || null;
+}
+
+async function fetchPaperAlternative(image) {
+  if (!image?.linkedImageId || !image?.linkedGalleryPath) return null;
+
+  const [masterImage, registry, pricingConfig] = await Promise.all([
+    fetchGalleryImage(image.linkedGalleryPath, image.linkedImageId),
+    loadSeriesRegistry(),
+    fetchPricingConfig(),
+  ]);
+
+  if (!masterImage) return null;
+
+  const excludeSizes = getExcludeSizesFromRegistry(masterImage.id, registry);
+  const displaySeries = getEffectiveSeries(masterImage, registry)
+    .filter((seriesKey) => SERIES_DEFINITIONS[seriesKey] && seriesKey !== "engrained")
+    .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));
+
+  const seriesOptions = displaySeries.map((seriesKey) => ({
+    key: seriesKey,
+    definition: SERIES_DEFINITIONS[seriesKey],
+    pricingList: getSeriesPricingList(seriesKey, pricingConfig.pricing, excludeSizes),
+  }));
+
+  return {
+    title: masterImage.title || image.title,
+    url: buildPaperGalleryUrl(image.linkedGalleryPath, image.linkedImageId),
+    previewSrc: normalizeImageSrc(masterImage.srcM || masterImage.srcS || masterImage.src || "", "m"),
+    seriesOptions,
+  };
+}
+
 export default function EngrainedOrderModal({ isOpen, onClose, image, trackEvent }) {
+  const [paperAlternative, setPaperAlternative] = useState(null);
+  const [paperAlternativeLoading, setPaperAlternativeLoading] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    if (!isOpen || !image?.linkedImageId || !image?.linkedGalleryPath) {
+      setPaperAlternative(null);
+      setPaperAlternativeLoading(false);
+      return () => {
+        cancelled = true;
+      };
+    }
+
+    setPaperAlternativeLoading(true);
+    fetchPaperAlternative(image)
+      .then((result) => {
+        if (!cancelled) {
+          setPaperAlternative(result);
+        }
+      })
+      .catch((error) => {
+        console.error("[EngrainedOrderModal] Failed to load paper alternative:", error);
+        if (!cancelled) {
+          setPaperAlternative(null);
+        }
+      })
+      .finally(() => {
+        if (!cancelled) {
+          setPaperAlternativeLoading(false);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isOpen, image]);
+
   if (!image) return null;
 
   const hasInventory = getInStockCount(image.inventory || {}) > 0;
@@ -153,6 +272,70 @@ export default function EngrainedOrderModal({ isOpen, onClose, image, trackEvent
                     {hasInventory && <span className="text-xs text-green-200/90 font-normal italic">· Quick ship available</span>}
                   </a>
                 </div>
+
+                {(paperAlternativeLoading || paperAlternative) && (
+                  <div className="p-4 rounded-lg border" style={{ backgroundColor: "#f7f5ef", borderColor: "#d6d1c5" }}>
+                    <h4 className="font-semibold mb-2" style={{ color: "#1b1a19" }}>Also Available as Paper Editions</h4>
+                    <p className="text-sm mb-3" style={{ color: "#534b45" }}>
+                      Prefer the standard collector print series? This Engrained piece is linked to its paper-gallery edition as well.
+                    </p>
+
+                    {paperAlternativeLoading && (
+                      <p className="text-sm" style={{ color: "#6b645d" }}>Loading paper edition pricing...</p>
+                    )}
+
+                    {paperAlternative && (
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-3 rounded-lg bg-white/80 p-2 border" style={{ borderColor: "#e5dfd0" }}>
+                          {paperAlternative.previewSrc && (
+                            <img
+                              src={paperAlternative.previewSrc}
+                              alt={paperAlternative.title}
+                              className="w-14 h-14 rounded object-cover shadow-sm"
+                            />
+                          )}
+                          <div>
+                            <div className="text-sm font-semibold" style={{ color: "#1b1a19" }}>{paperAlternative.title}</div>
+                            <div className="text-xs" style={{ color: "#6b645d" }}>Paper collector formats</div>
+                          </div>
+                        </div>
+
+                        <div className="space-y-2">
+                          {paperAlternative.seriesOptions.map(({ key, definition, pricingList }) => (
+                            <div key={key} className="rounded-lg border bg-white px-3 py-2" style={{ borderColor: "#e5dfd0" }}>
+                              <div className="text-sm font-semibold mb-1" style={{ color: "#1b1a19" }}>
+                                {definition.icon} {definition.label} Series
+                              </div>
+                              <div className="text-xs leading-relaxed" style={{ color: "#534b45" }}>
+                                {pricingList && pricingList.length > 0
+                                  ? pricingList.map(({ size, price }) => `${size}: $${price.toLocaleString()}`).join(" · ")
+                                  : "Contact for current sizing and pricing."}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+
+                        {paperAlternative.url && (
+                          <a
+                            href={paperAlternative.url}
+                            className="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded text-sm font-medium transition-all"
+                            style={{
+                              background: "linear-gradient(to bottom, #ebe7dd 0%, #ddd6c8 100%)",
+                              border: "1px solid #c8bfaf",
+                              color: "#3f352c",
+                              boxShadow: "0 1px 3px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.4)",
+                            }}
+                            onClick={() => {
+                              trackEvent?.("gallery_navigate");
+                            }}
+                          >
+                            View Paper Options
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
 
               <button
