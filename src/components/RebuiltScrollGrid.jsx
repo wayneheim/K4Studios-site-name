@@ -117,6 +117,50 @@ export default function RebuiltScrollGrid({
     }
   };
 
+  const goBackWithFallbacks = () => {
+    if (typeof window === "undefined") return;
+
+    const parentGalleryUrl = getParentGalleryUrl();
+    const sectionLandingUrl = getSectionLandingUrl();
+    const internalReferrerUrl = getInternalReferrerUrl();
+
+    if (window.history.length > 1) {
+      const currentHref = window.location.href;
+
+      window.history.back();
+
+      window.setTimeout(() => {
+        if (window.location.href !== currentHref) return;
+
+        if (internalReferrerUrl) {
+          window.location.href = internalReferrerUrl;
+          return;
+        }
+
+        if (parentGalleryUrl) {
+          window.location.href = parentGalleryUrl;
+          return;
+        }
+
+        window.location.href = sectionLandingUrl;
+      }, 120);
+
+      return;
+    }
+
+    if (internalReferrerUrl) {
+      window.location.href = internalReferrerUrl;
+      return;
+    }
+
+    if (parentGalleryUrl) {
+      window.location.href = parentGalleryUrl;
+      return;
+    }
+
+    window.location.href = sectionLandingUrl;
+  };
+
   // Close handler: plain exit back to the parent gallery
   const handleClose = () => {
     if (typeof window === "undefined") return;
@@ -129,19 +173,7 @@ export default function RebuiltScrollGrid({
 
     e.preventDefault();
 
-    const internalReferrerUrl = getInternalReferrerUrl();
-    if (internalReferrerUrl) {
-      window.location.href = internalReferrerUrl;
-      return;
-    }
-
-    const parentGalleryUrl = getParentGalleryUrl();
-    if (parentGalleryUrl) {
-      window.location.href = parentGalleryUrl;
-      return;
-    }
-
-    window.location.href = getSectionLandingUrl();
+    goBackWithFallbacks();
   };
 
   const parentGalleryUrl = getParentGalleryUrl();

@@ -183,10 +183,14 @@ const canonicalUrl = "https://www.k4studios.com/wayne-heim-western-fine-art-phot
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://www.k4studios.com/#wayne-heim",
+  "@id": "https://www.k4studios.com/wayne-heim-western-fine-art-photography#person",
   "name": "Wayne Heim",
   "jobTitle": "Western Fine Art Photographer",
   "description": "Wayne Heim is a contemporary western fine art photographer known for painterly, narrative-driven imagery rooted in pictorialist tradition.",
+  "sameAs": [
+    "https://www.k4studios.com",
+    "https://www.instagram.com/k4studios/"
+  ],
   "knowsAbout": [
     "Western Fine Art Photography",
     "Cowboy Portraiture",
@@ -209,7 +213,7 @@ const creativeWorkSchema = {
   "name": "Western Fine Art Photography by Wayne Heim",
   "creator": {
     "@type": "Person",
-    "@id": "https://www.k4studios.com/#wayne-heim"
+    "@id": "https://www.k4studios.com/wayne-heim-western-fine-art-photography#person"
   },
   "about": [
     "Western Fine Art Photography",
@@ -232,6 +236,7 @@ const creativeWorkSchemaJson = JSON.stringify(creativeWorkSchema, null, 2);
 // Meta for BaseLayout
 // Cap OG/Twitter images at L to keep XL out of bot-discoverable surfaces
 const meta = {
+  canonicalUrl,
   description: pageDescription,
   ogTitle: pageTitle,
   ogDescription: pageDescription,
