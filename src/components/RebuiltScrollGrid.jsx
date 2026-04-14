@@ -87,25 +87,65 @@ export default function RebuiltScrollGrid({
     return getProxySrc(entry.id, 'm');
   };
 
-  // Close handler: go back if there's history (came from image), otherwise go to gallery landing
-  const handleClose = () => {
-    // Check if we have navigation history (user came from viewing an image)
-    // history.length > 1 means there's something to go back to
-    // But history.length isn't reliable - it includes entries from other sites
-    // Instead, check if we entered via theme/view param (no previous image context)
-    const params = new URLSearchParams(window.location.search);
-    const isThemeEntry = params.has('theme') || params.has('view');
-    
-    if (isThemeEntry) {
-      // Entered via shared link - go to gallery landing page
-      const path = window.location.pathname;
-      const basePath = path.replace(/\/i-[a-zA-Z0-9_-]+\/?$/, '');
-      window.location.href = basePath || '/';
-    } else {
-      // Normal grid access - go back to previous image
-      window.history.back();
+  const getParentGalleryUrl = () => {
+    if (typeof window === "undefined") return "/";
+    const path = window.location.pathname;
+    return path.replace(/\/i-[a-zA-Z0-9_-]+\/?$/, '') || '/';
+  };
+
+  const getSectionLandingUrl = () => {
+    const parentGalleryUrl = getParentGalleryUrl();
+    const parts = parentGalleryUrl.split('/').filter(Boolean);
+    if (parts.length <= 1) return '/';
+    return `/${parts.slice(0, -1).join('/')}`;
+  };
+
+  const getInternalReferrerUrl = () => {
+    if (typeof window === "undefined" || typeof document === "undefined") return null;
+    if (!document.referrer) return null;
+
+    try {
+      const referrerUrl = new URL(document.referrer);
+      const currentUrl = new URL(window.location.href);
+
+      if (referrerUrl.origin !== currentUrl.origin) return null;
+      if (referrerUrl.href === currentUrl.href) return null;
+
+      return `${referrerUrl.pathname}${referrerUrl.search}${referrerUrl.hash}`;
+    } catch {
+      return null;
     }
   };
+
+  // Close handler: plain exit back to the parent gallery
+  const handleClose = () => {
+    if (typeof window === "undefined") return;
+
+    window.location.href = getParentGalleryUrl();
+  };
+
+  const handleLogoClick = (e) => {
+    if (typeof window === "undefined") return;
+
+    e.preventDefault();
+
+    const internalReferrerUrl = getInternalReferrerUrl();
+    if (internalReferrerUrl) {
+      window.location.href = internalReferrerUrl;
+      return;
+    }
+
+    const parentGalleryUrl = getParentGalleryUrl();
+    if (parentGalleryUrl) {
+      window.location.href = parentGalleryUrl;
+      return;
+    }
+
+    window.location.href = getSectionLandingUrl();
+  };
+
+  const parentGalleryUrl = getParentGalleryUrl();
+  const sectionLandingUrl = getSectionLandingUrl();
 
   // ESC key triggers close
   useEffect(() => {
@@ -259,20 +299,60 @@ export default function RebuiltScrollGrid({
           style={{ fontFamily: "'Glegoo', serif" }}
         >
           <div className="flex justify-center mb-3">
-            <img
-              src="/images/K4Logo-web.webp"
-              alt="K4 Studios"
+            <a
+              href={getInternalReferrerUrl() || parentGalleryUrl || sectionLandingUrl}
+              title="Go back or return to gallery"
+              aria-label="Go back or return to gallery"
               style={{
-                width: 64,
-                height: 64,
-                borderRadius: '50%',
-                objectFit: 'cover',
-                opacity: 0.18,
-                filter: 'grayscale(10%)',
-                userSelect: 'none'
+                display: 'inline-flex',
+                borderRadius: '9999px'
               }}
-              draggable={false}
-            />
+              onClick={handleLogoClick}
+              onMouseEnter={(e) => {
+                const img = e.currentTarget.querySelector('img');
+                if (img) {
+                  img.style.opacity = '0.42';
+                  img.style.filter = 'contrast(1.35) brightness(0.68)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                const img = e.currentTarget.querySelector('img');
+                if (img) {
+                  img.style.opacity = '0.18';
+                  img.style.filter = 'grayscale(10%)';
+                }
+              }}
+              onFocus={(e) => {
+                const img = e.currentTarget.querySelector('img');
+                if (img) {
+                  img.style.opacity = '0.42';
+                  img.style.filter = 'contrast(1.35) brightness(0.68)';
+                }
+              }}
+              onBlur={(e) => {
+                const img = e.currentTarget.querySelector('img');
+                if (img) {
+                  img.style.opacity = '0.18';
+                  img.style.filter = 'grayscale(10%)';
+                }
+              }}
+            >
+              <img
+                src="/images/K4Logo-web.webp"
+                alt="K4 Studios"
+                style={{
+                  width: 64,
+                  height: 64,
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  opacity: 0.18,
+                  filter: 'grayscale(10%)',
+                  transition: 'opacity 180ms ease, filter 180ms ease',
+                  userSelect: 'none'
+                }}
+                draggable={false}
+              />
+            </a>
           </div>
           <h1 
             className="text-2xl md:text-3xl font-semibold"
@@ -280,6 +360,17 @@ export default function RebuiltScrollGrid({
           >
             {themeName}
           </h1>
+          {themeImageCountLabel ? (
+            <p className="mt-2 text-xs text-gray-400">
+              {themeImageCountLabel}
+            </p>
+          ) : (
+            themeImageCount && (
+              <p className="mt-2 text-xs text-gray-400">
+                {themeImageCount} image{themeImageCount !== 1 ? 's' : ''} in this collection
+              </p>
+            )
+          )}
           {themeIntroLead && (
             <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto" style={{ color: "#4b392d", lineHeight: 1.45 }}>
               {themeIntroLead}
@@ -315,17 +406,6 @@ export default function RebuiltScrollGrid({
                 ▶ {themeStoryCta}
               </a>
             </div>
-          )}
-          {themeImageCountLabel ? (
-            <p className="mt-3 text-xs text-gray-400">
-              {themeImageCountLabel}
-            </p>
-          ) : (
-            themeImageCount && (
-              <p className="mt-2 text-xs text-gray-400">
-                {themeImageCount} image{themeImageCount !== 1 ? 's' : ''} in this collection
-              </p>
-            )
           )}
         </header>
       )}

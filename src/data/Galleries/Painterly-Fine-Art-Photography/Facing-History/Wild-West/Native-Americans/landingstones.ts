@@ -55,22 +55,32 @@ export const landingWestern = {
 
   tombstones: [
     {
-      title: "Native American Portraits - Color",
+      title: "Portraits",
+      subtitle: "Color",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
       imageId: "i-qLzRgbS",
       thumb: "/img/i-qLzRgbS/s.jpg",
     },
     {
-      title: "Native American Portraits - Black and White",
+      title: "Portraits",
+      subtitle: "B/W",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White",
       imageId: "i-Z54nXZm",
       thumb: "/img/i-Z54nXZm/s.jpg",
     },
     {
-      title: "Native American Narrative Works",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans",
+      title: "Narrative Works",
+      subtitle: "Color",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color?theme=na-narrative-color-images&view=grid",
       imageId: "i-7hD9CCh",
       thumb: "/img/i-7hD9CCh/s.jpg",
+    },
+    {
+      title: "Narrative Works",
+      subtitle: "B/W",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White?theme=na-narrative-b-w-images&view=grid",
+      imageId: "i-Z54nXZm",
+      thumb: "/img/i-Z54nXZm/s.jpg",
     },
   ]
 };

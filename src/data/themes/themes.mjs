@@ -183,5 +183,27 @@ export const themes = [
     "firstImage": "i-rxQn29x",
     "createdAt": "2026-01-26T01:47:00.341Z",
     "updatedAt": "2026-01-26T01:51:58.675Z"
+  },
+  {
+    "name": "NA Narrative Color Images",
+    "slug": "na-narrative-color-images",
+    "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+    "description": "Color images rooted in Native American narrative, where presence, posture, and moment carry the story. These painterly photographs draw from living history to explore identity, resilience, and the human reality beneath the legend.",
+    "visible": true,
+    "imageCount": 46,
+    "firstImage": "i-7hD9CCh",
+    "createdAt": "2026-04-14T17:44:19.021Z",
+    "updatedAt": "2026-04-14T17:44:19.021Z"
+  },
+  {
+    "name": "NA Narrative B/W Images",
+    "slug": "na-narrative-b-w-images",
+    "dataset": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+    "description": "Painterly black and white photography of Native American life, created with living historians during reenactments. These narrative-driven images focus on authentic presence, cultural identity, and the human stories behind the American frontier.",
+    "visible": true,
+    "imageCount": 15,
+    "firstImage": "i-7vSccct",
+    "createdAt": "2026-04-14T17:49:40.219Z",
+    "updatedAt": "2026-04-14T17:49:40.219Z"
   }
 ];

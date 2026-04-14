@@ -54,6 +54,7 @@ export default function TombstoneNav({
   title = null,
   subtitle = null,
   pageContext: propPageContext = null,
+  dividerMaxWidth = null,
 } = {}) {
   const gridClass = `tile-grid${items.length === 2 ? ' two-tiles' : ''}`;
 
@@ -131,18 +132,24 @@ export default function TombstoneNav({
       {title && <h2 className="western-title">{title}</h2>}
       {subtitle && <p className="subhead">{subtitle}</p>}
 
-      <div className="tombstone-divider" />
+      <div
+        className="tombstone-divider"
+        style={dividerMaxWidth ? { maxWidth: dividerMaxWidth } : undefined}
+      />
 
       <div className={`${gridClass}${focusIndex >= 0 ? ' has-focus' : ''}`}>
         {items.map((item, index) => {
+          const displayTitle = [item.title, item.subtitle].filter(Boolean).join(' - ');
           // Build contextual alt text with Tier B (navigation) - functional alt only, no enrichment
-          const contextualAlt = buildContextualAlt(item.title, resolvedContext, { index, tier: 'B' });
+          const contextualAlt = buildContextualAlt(displayTitle, resolvedContext, { index, tier: 'B' });
           const isFocused = focusIndex >= 0 && index === focusIndex;
           const isDimmed = focusIndex >= 0 && index !== focusIndex;
           const isMutedByHover = isFocused && hoveredNonFocusIndex !== null;
           
           // Track ALL tombstone clicks for analytics
           const handleClick = () => {
+            const sanitizedTitle = displayTitle.replace(/[^a-zA-Z0-9]/g, '_');
+
             if (typeof window !== 'undefined' && typeof window.k4track === 'function') {
               window.k4track('gallery_explore_click', {
                 galleryId: item.trackingId || sanitizedTitle,
@@ -161,7 +168,6 @@ export default function TombstoneNav({
               : '';
             document.cookie = `k4_sid=${encodeURIComponent(sessionId)}; Path=/; SameSite=Lax; Secure${cookieDomainAttr}`;
             
-            const sanitizedTitle = (item.title || 'Unknown').replace(/[^a-zA-Z0-9]/g, '_');
             const payload = JSON.stringify({
               session_id: sessionId,
               event: 'gallery_explore_click',
@@ -196,7 +202,7 @@ export default function TombstoneNav({
 
           return (
             <a 
-              key={item.title} 
+              key={displayTitle} 
               href={item.href} 
               className={`tile${item.mobileOnly ? ' mobile-only-tile' : ''}${isFocused ? ' is-focused' : ''}${isDimmed ? ' is-dimmed' : ''}${isMutedByHover ? ' is-muted-by-hover' : ''}`}
               title={contextualAlt}
@@ -232,7 +238,8 @@ export default function TombstoneNav({
                   animationDelay: `${1.27 + visualPos * 0.2}s, ${2.8 + visualPos * 0.42}s`,
                 }}
               >
-                {item.title}
+                <span className="tombstone-title-main">{item.title}</span>
+                {item.subtitle && <span className="tombstone-title-sub">{item.subtitle}</span>}
               </p>
             </a>
           );
