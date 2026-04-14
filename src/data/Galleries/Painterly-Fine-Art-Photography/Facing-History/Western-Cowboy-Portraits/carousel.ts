@@ -1,3 +1,5 @@
+import { resolveCarouselGalleryHref } from '@/data/carousel/westernRouting.ts';
+
 // carousel.ts for Fine Art Landscapes → By-Theme
 
 // Import all gallery mjs modules for Western-Cowboy-Portraits and its children
@@ -45,8 +47,9 @@ function toSlide(img, path) {
   if (img.srcS && img.srcS.endsWith('-L.jpg')) {
     src = img.srcS;
   }
+  const resolvedPath = resolveCarouselGalleryHref(img.id, path);
   return {
-    href: `${path}/${img.id}`,
+    href: `${resolvedPath}/${img.id}`,
     id: img.id,
     src,
     alt: img.alt || img.title || '',

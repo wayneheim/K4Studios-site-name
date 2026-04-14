@@ -5,15 +5,16 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import LandingHeader from '@/components/Landing-Header.jsx';
 import SiteFooter from '@/components/Footer.astro';
 import { getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
-
-import { galleryData as cowboyColor } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
-import { galleryData as cowboyBW } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
-import { galleryData as cowboyNA } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
+import { findWesternLandingImage } from '@/data/carousel/westernLandingContent.ts';
 
 const pagePath = '/western-portrait-photography';
 const canonicalUrl = `https://www.k4studios.com${pagePath}`;
 const pageTitle = 'Western Portrait Photography | Cowboy Portraits of the American West';
 const pageDescription = 'Explore Western portrait photography featuring cowboy portraits, black and white Western images, and character-driven scenes from the American West.';
+
+const COWBOY_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color';
+const COWBOY_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White';
+const NATIVE_AMERICANS_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color';
 
 const breadcrumb =
   `<a href="/" title="Home" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wayne Heim</a> | Western Portrait Photography`;
@@ -45,112 +46,38 @@ function pickAltTemplate(img: any, category: string, baseTitle: string) {
   return templates[hash % templates.length];
 }
 
-function findImage(data: any[], id: string) {
-  const image = (data || []).find((item: any) => item.id === id && item.visibility !== 'ghost');
-  if (!image) {
-    throw new Error(`Missing gallery image for western portrait photography page: ${id}`);
-  }
-  return image;
-}
-
-function makeTile(data: any[], id: string, hrefBase: string, category: string, fallback: string) {
-  const img = findImage(data, id);
+function makeTile(id: string, preferredPath: string, category: string, fallback: string) {
+  const resolved = findWesternLandingImage(id, preferredPath);
+  const img = resolved?.img;
+  if (!img?.id || !resolved?.href) return null;
   const title = (img.title || fallback || '').trim();
   return {
     id: img.id,
     title,
     alt: pickAltTemplate(img, category, title),
-    href: `${hrefBase}/${img.id}`,
+    href: resolved.href,
     category,
   };
 }
 
+function isTile(tile: ReturnType<typeof makeTile>): tile is NonNullable<ReturnType<typeof makeTile>> {
+  return Boolean(tile);
+}
+
 const photoTiles = [
-  makeTile(
-    cowboyColor,
-    'i-ncFcHDM',
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
-    'Cowboy Portrait Photography',
-    'Western cowboy portrait'
-  ),
-  makeTile(
-    cowboyColor,
-    'i-c5K798H',
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
-    'Cowboy Portrait Photography',
-    'Western cowboy portrait'
-  ),
-  makeTile(
-    cowboyBW,
-    'i-HfQ5NVR',
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
-    'Black and White Western Portrait Photography',
-    'Black and white Western portrait'
-  ),
-  makeTile(
-    cowboyBW,
-    'i-qMQf7b6',
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
-    'Black and White Western Portrait Photography',
-    'Black and white Western portrait'
-  ),
-  makeTile(
-    cowboyBW,
-    'i-SwhsL2h',
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
-    'Black and White Western Portrait Photography',
-    'Black and white Western portrait'
-  ),
-  makeTile(
-    cowboyBW,
-    'i-W73hxx4',
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
-    'Black and White Western Portrait Photography',
-    'Black and white Western portrait'
-  ),
-  makeTile(
-    cowboyBW,
-    'i-dLDF4Q6',
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
-    'Black and White Western Portrait Photography',
-    'Black and white Western portrait'
-  ),
-  makeTile(
-    cowboyBW,
-    'i-FnZ68h3',
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
-    'Black and White Western Portrait Photography',
-    'Black and white Western portrait'
-  ),
-  makeTile(
-    cowboyNA,
-    'i-7hD9CCh',
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
-    'Indigenous Western Portrait Photography',
-    'Indigenous Western portrait'
-  ),
-  makeTile(
-    cowboyNA,
-    'i-4Hz6D7k',
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
-    'Indigenous Western Portrait Photography',
-    'Indigenous Western portrait'
-  ),
-  makeTile(
-    cowboyNA,
-    'i-LmpRvHw',
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
-    'Indigenous Western Portrait Photography',
-    'Indigenous Western portrait'
-  ),
-  makeTile(
-    cowboyNA,
-    'i-WfRwfpM',
-    '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
-    'Indigenous Western Portrait Photography',
-    'Indigenous Western portrait'
-  ),
-];
+  makeTile('i-ncFcHDM', COWBOY_COLOR_PATH, 'Cowboy Portrait Photography', 'Western cowboy portrait'),
+  makeTile('i-c5K798H', COWBOY_COLOR_PATH, 'Cowboy Portrait Photography', 'Western cowboy portrait'),
+  makeTile('i-HfQ5NVR', COWBOY_BW_PATH, 'Black and White Western Portrait Photography', 'Black and white Western portrait'),
+  makeTile('i-qMQf7b6', COWBOY_BW_PATH, 'Black and White Western Portrait Photography', 'Black and white Western portrait'),
+  makeTile('i-SwhsL2h', COWBOY_BW_PATH, 'Black and White Western Portrait Photography', 'Black and white Western portrait'),
+  makeTile('i-W73hxx4', COWBOY_BW_PATH, 'Black and White Western Portrait Photography', 'Black and white Western portrait'),
+  makeTile('i-dLDF4Q6', COWBOY_BW_PATH, 'Black and White Western Portrait Photography', 'Black and white Western portrait'),
+  makeTile('i-FnZ68h3', COWBOY_BW_PATH, 'Black and White Western Portrait Photography', 'Black and white Western portrait'),
+  makeTile('i-7hD9CCh', NATIVE_AMERICANS_COLOR_PATH, 'Indigenous Western Portrait Photography', 'Indigenous Western portrait'),
+  makeTile('i-4Hz6D7k', NATIVE_AMERICANS_COLOR_PATH, 'Indigenous Western Portrait Photography', 'Indigenous Western portrait'),
+  makeTile('i-LmpRvHw', NATIVE_AMERICANS_COLOR_PATH, 'Indigenous Western Portrait Photography', 'Indigenous Western portrait'),
+  makeTile('i-WfRwfpM', NATIVE_AMERICANS_COLOR_PATH, 'Indigenous Western Portrait Photography', 'Indigenous Western portrait'),
+].filter(isTile);
 
 const relatedLinks = [
   {
@@ -276,7 +203,7 @@ const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
             These images often emphasize expression, posture, and atmosphere, capturing both the visible character of the subject and the implied story surrounding them.
           </p>
           <p>
-            Explore related work in <a href="/cowboy-photography">cowboy photography</a> and <a href="/black-and-white-cowboy-photos">black and white Western photography</a>.
+            Explore related work in <a href="/Cowboy-Photography">cowboy photography</a> and <a href="/Western-Black-and-White-Photography">black and white Western photography</a>.
           </p>
         </div>
         <p class="wp-grid-context">

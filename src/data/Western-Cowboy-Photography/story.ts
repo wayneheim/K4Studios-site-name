@@ -26,7 +26,8 @@
     subhead: "Character Over Costume",
     paragraphs: [
       "The figures that appear here—cowboys, ranchers, frontier interpreters—are presented as individuals, not archetypes. Expression carries more than action. A hand resting on a saddle horn carries more weight than a thrown rope. Stillness replaces spectacle.",
-      "Each portrait functions as a One-Image Movie\u2122—a single frame from a larger, unfinished narrative waiting to be completed by the viewer. Meaning emerges slowly, through return viewing, not immediate explanation."
+      "Each portrait functions as a One-Image Movie\u2122—a single frame from a larger, unfinished narrative waiting to be completed by the viewer. Meaning emerges slowly, through return viewing, not immediate explanation.",
+      "That story-first approach is part of the larger tradition explored in <a href=\"/Narrative-Western-Art\">Narrative Western Art</a>, where frontier character, atmosphere, and implied action matter as much as documentary detail."
     ]
   },
 

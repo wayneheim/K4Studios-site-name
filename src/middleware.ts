@@ -5,6 +5,8 @@ import imageIdMap from "@/data/imageIdMap.json";
 // Type assertion for the imageIdMap
 const imageMap = imageIdMap as Record<string, string[]>;
 
+let imageMapLower: Record<string, { canonicalId: string; paths: string[] }> | null = null;
+
 let knownGalleryPathsLower: Set<string> | null = null;
 
 function normalizePath(pathname: string): string {
@@ -34,6 +36,55 @@ function getKnownGalleryPathsLower(): Set<string> {
 
   knownGalleryPathsLower = paths;
   return knownGalleryPathsLower;
+}
+
+function getImageMapLower(): Record<string, { canonicalId: string; paths: string[] }> {
+  if (imageMapLower) return imageMapLower;
+
+  const lower: Record<string, { canonicalId: string; paths: string[] }> = {};
+  for (const [id, rawPaths] of Object.entries(imageMap)) {
+    const key = String(id || '').toLowerCase();
+    const values = Array.isArray(rawPaths) ? rawPaths : [rawPaths as unknown as string];
+    const normalizedPaths = values
+      .map((p) => normalizePath(String(p || '')))
+      .filter(Boolean);
+    lower[key] = {
+      canonicalId: id,
+      paths: normalizedPaths,
+    };
+  }
+
+  imageMapLower = lower;
+  return lower;
+}
+
+function pickCanonicalGalleryPath(requestedPath: string, candidates: string[]): string {
+  if (!Array.isArray(candidates) || candidates.length === 0) return '';
+  if (candidates.length === 1) return candidates[0];
+
+  const requestedLower = String(requestedPath || '').toLowerCase();
+
+  const matchedByType = candidates.find((candidate) => {
+    const c = String(candidate || '').toLowerCase();
+    if (requestedLower.includes('/painterly-fine-art-photography/') && c.includes('/painterly-fine-art-photography/')) {
+      return true;
+    }
+    if (
+      requestedLower.includes('/fine-art-photography/') &&
+      !requestedLower.includes('/painterly-fine-art-photography/') &&
+      c.includes('/fine-art-photography/') &&
+      !c.includes('/painterly-fine-art-photography/')
+    ) {
+      return true;
+    }
+    return false;
+  });
+  if (matchedByType) return matchedByType;
+
+  const painterlyPreferred = candidates.find((candidate) =>
+    String(candidate || '').toLowerCase().includes('/painterly-fine-art-photography/')
+  );
+  return painterlyPreferred || candidates[0];
 }
 
 function isWhitelistedGalleryParent(pathname: string): boolean {
@@ -348,6 +399,31 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
       status: 301,
       headers: { Location: "/Pictorialist-Photography" },
     });
+  }
+
+  // Universal image rematch: if a URL ends with /i-xxxx and that ID exists in the
+  // manifest-derived map, 301 to the canonical gallery path.
+  const imageIdMatch = pathname.match(/\/(i-[A-Za-z0-9]+)\/?$/);
+  const isImageNamespace = /^\/(?:Galleries|galleries|Other|other|Photography-Galleries)\//.test(pathname);
+  if (isImageNamespace && imageIdMatch) {
+    const requestedId = imageIdMatch[1];
+    const lookup = getImageMapLower()[requestedId.toLowerCase()];
+
+    if (lookup?.paths?.length) {
+      const requestedNormalized = normalizePath(pathname);
+      const canonicalGalleryPath = pickCanonicalGalleryPath(requestedNormalized, lookup.paths);
+      const canonicalUrlPath = normalizePath(`${canonicalGalleryPath}/${lookup.canonicalId}`);
+
+      if (canonicalUrlPath && requestedNormalized.toLowerCase() !== canonicalUrlPath.toLowerCase()) {
+        console.log(`[image-rematch-301] ${requestedNormalized} -> ${canonicalUrlPath}`);
+        return new Response(null, {
+          status: 301,
+          headers: {
+            Location: `${canonicalUrlPath}${search}`,
+          },
+        });
+      }
+    }
   }
 
   const response = await next();

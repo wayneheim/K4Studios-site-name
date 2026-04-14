@@ -16,7 +16,12 @@ const DATA_ROOTS = [
 function escapeForTemplate(str = "") {
   // For String.raw templates, backticks cannot be escaped with backslash
   // Replace backticks with a Unicode lookalike (grave accent → modifier letter grave accent)
-  let s = String(str).replace(/\r\n/g, "\n");
+  let s = String(str)
+    .replace(/[\u2018\u2019]/g, "'")
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/[\u2013\u2014]/g, "-")
+    .replace(/\u2026/g, "...")
+    .replace(/\r\n/g, "\n");
   s = s.replace(/`/g, "ˋ"); // Unicode U+02CB (modifier letter grave accent)
   s = s.replace(/\$\{/g, "\\${");
   return s;

@@ -1,7 +1,7 @@
-// carousel.ts for Fine Art Landscapes → By-Theme
+import { resolveCarouselGalleryHref } from '@/data/carousel/westernRouting.ts';
 
-// Import all gallery mjs modules for Western-Cowboy-Portraits and its children
-const modules = import.meta.glob('@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/**/*.mjs', { eager: true });
+// Import all gallery mjs modules for Wild-West and its children
+const modules = import.meta.glob('@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/**/*.mjs', { eager: true });
 
 // Collect gallery datasets and URL paths
 const galleryDatas = [];
@@ -20,10 +20,10 @@ for (const filePath in modules) {
   const visible = data.filter(img => img.id !== 'i-k4studios' && img.visibility !== 'ghost');
   if (visible.length === 0) continue;
   // Extract subfolder name from file path for path building (exclude .mjs extension)
-  const match = filePath.match(/Western-Cowboy-Portraits\/?([^/]*?)(?:\.mjs)?$/);
+  const match = filePath.match(/Wild-West\/?([^/]*?)(?:\.mjs)?$/);
   const subfolder = match && match[1] ? `/${match[1]}` : '';
   galleryDatas.push(visible);
-  galleryPaths.push(`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits${subfolder}`);
+  galleryPaths.push(`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West${subfolder}`);
 }
 
 // Helper: Build a pool prioritized by rating (5 → 4 → 3 → others), randomized per rating
@@ -45,8 +45,9 @@ function toSlide(img, path) {
   if (img.srcS && img.srcS.endsWith('-L.jpg')) {
     src = img.srcS;
   }
+  const resolvedPath = resolveCarouselGalleryHref(img.id, path);
   return {
-    href: `${path}/${img.id}`,
+    href: `${resolvedPath}/${img.id}`,
     id: img.id,
     src,
     alt: img.alt || img.title || '',

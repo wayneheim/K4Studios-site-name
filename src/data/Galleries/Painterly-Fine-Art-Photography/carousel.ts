@@ -1,3 +1,5 @@
+import { resolveCarouselGalleryHref } from '@/data/carousel/westernRouting.ts';
+
 // --- Carousel: Images from Painterly Section Only ---
 // Import all gallery .mjs files from the painterly section
 const allModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
@@ -26,8 +28,9 @@ function toSlide(img, path, idx, loading = "lazy") {
   if (img.srcS && img.srcS.endsWith('-L.jpg')) {
     src = img.srcS;
   }
+  const resolvedPath = resolveCarouselGalleryHref(img.id, path);
   return {
-    href: `${path}/${img.id}`,
+    href: `${resolvedPath}/${img.id}`,
     id: img.id,
     src,
     srcS: img.srcS || '',

@@ -1,4 +1,6 @@
 
+import { resolveCarouselGalleryHref } from '@/data/carousel/westernRouting.ts';
+
 // --- Carousel: Random Alternating Images from Painterly & Traditional ---
 // Import all gallery .mjs files from both painterly and traditional sections
 const allModules = import.meta.glob('@/data/Galleries/**/*.mjs', { eager: true });
@@ -27,8 +29,9 @@ function toSlide(img, path) {
   if (img.srcS && img.srcS.endsWith('-L.jpg')) {
     src = img.srcS;
   }
+  const resolvedPath = resolveCarouselGalleryHref(img.id, path);
   return {
-    href: `${path}/${img.id}`,
+    href: `${resolvedPath}/${img.id}`,
     id: img.id,
     src,
     alt: img.alt || img.title || '',

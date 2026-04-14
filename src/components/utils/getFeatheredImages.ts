@@ -44,37 +44,41 @@ export function getFeatheredImages({
     return source.sort(() => 0.5 - Math.random()).slice(0, count);
   }
 
-  const half = Math.floor(headingCount / 2);
-  const extra = headingCount % 2;
-
-  const colorGallery = Array.isArray(galleryDatas[0]) ? galleryDatas[0] : [];
-  const bwGallery    = Array.isArray(galleryDatas[1]) ? galleryDatas[1] : [];
-  const naColorGallery = Array.isArray(galleryDatas[2]) ? galleryDatas[2] : [];
-
   // Map index to gallery path (fallback to sectionPath if missing)
   const galleryPathForIndex = (idx: number) => {
     const p = galleryPaths[idx];
     return p && p.startsWith('/') ? p : `${sectionPath}`;
   };
 
-  // Distribute images evenly from all galleries (using poolSize for client rotation)
-  const perGallery = Math.ceil(poolSize / 3);
-  
-  const colorImages = filterAndSort(colorGallery, perGallery);
-  colorImages.forEach(img => excludeIds.add(img.id));
+  const preparedPools = galleryDatas
+    .map((data, idx) => ({
+      index: idx,
+      images: Array.isArray(data) ? data : [],
+    }))
+    .filter((pool) => pool.images.length > 0);
 
-  const bwImages = filterAndSort(bwGallery, perGallery);
-  bwImages.forEach(img => excludeIds.add(img.id));
+  if (preparedPools.length === 0) {
+    return [];
+  }
 
-  const naColorImages = filterAndSort(naColorGallery, perGallery);
-  naColorImages.forEach(img => excludeIds.add(img.id));
+  const perGallery = Math.max(1, Math.ceil(poolSize / preparedPools.length));
+  const poolQueues = preparedPools.map((pool) => {
+    const picks = filterAndSort(pool.images, perGallery);
+    picks.forEach((img) => excludeIds.add(img.id));
+    return {
+      index: pool.index,
+      images: picks,
+    };
+  });
 
   const output: (Image & { __galleryIndex?: number })[] = [];
-  // Interleave images from all three galleries
-  while (output.length < poolSize && (colorImages.length || bwImages.length || naColorImages.length)) {
-    if (colorImages.length) output.push({ ...(colorImages.shift()!), __galleryIndex: 0 });
-    if (bwImages.length && output.length < poolSize) output.push({ ...(bwImages.shift()!), __galleryIndex: 1 });
-    if (naColorImages.length && output.length < poolSize) output.push({ ...(naColorImages.shift()!), __galleryIndex: 2 });
+  while (output.length < poolSize && poolQueues.some((pool) => pool.images.length > 0)) {
+    for (const pool of poolQueues) {
+      if (output.length >= poolSize) break;
+      const nextImage = pool.images.shift();
+      if (!nextImage) continue;
+      output.push({ ...nextImage, __galleryIndex: pool.index });
+    }
   }
 
   return output.slice(0, poolSize).map((img) => {
@@ -83,7 +87,7 @@ export function getFeatheredImages({
     const cleanId = img.id.startsWith('i-') ? img.id : `i-${img.id}`;
     return {
       ...img,
-      href: `${base}/${cleanId}`.replace(/\/+/, '/'),
+      href: `${base}/${cleanId}`.replace(/\/+/g, '/'),
     };
   });
 }

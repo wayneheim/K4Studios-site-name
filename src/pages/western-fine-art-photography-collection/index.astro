@@ -19,6 +19,7 @@ import { getBreadcrumbList } from "@/components/utils/getStructuredData.ts";
 import { autoLinkKeywordsInText } from "@/components/utils/autoLinkKeywordsInText.ts";
 import { semantic as k4Semantic } from "@/data/semantic/K4-Sem.ts";
 import { siteNav } from "@/data/siteNav.ts";
+import { getOrderedWesternGalleryPaths } from "@/data/carousel/westernRouting.ts";
 import { getFeatheredImages } from "@/components/utils/getFeatheredImages.ts";
 
 // ─── Hub data ────────────────────────────────────────────────────────────────
@@ -53,8 +54,7 @@ function findNavEntry(nav: any[], url: string): any | null {
   return null;
 }
 
-const landingNav = findNavEntry(siteNav as any, imageSectionPath);
-const galleryPaths: string[] = landingNav?.children?.map((c: any) => c.href) || [];
+const galleryPaths: string[] = getOrderedWesternGalleryPaths(imageSectionPath);
 
 const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true }) as any;
 const galleryDatas = galleryPaths.map((path) => {
@@ -110,7 +110,7 @@ const faqStructuredData = JSON.stringify(
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "@id": `${canonicalUrl}#faq`,
-    mainEntity: faqItems.map((item) => ({
+    mainEntity: faqItems.map((item: any) => ({
       "@type": "Question",
       name: item.q,
       acceptedAnswer: {
@@ -182,6 +182,12 @@ const meta = {
   "twitter:card": "summary_large_image",
   "twitter:image": ogImageUrl,
 };
+
+const carouselSlidesClient = carouselSlides.map((slide: any) => ({ ...slide })) as any;
+const carouselProps = {
+  slides: carouselSlidesClient,
+  galleryBasePath,
+} as any;
 ---
 
 <HybridHubLayout
@@ -195,8 +201,7 @@ const meta = {
   <!-- ── B: Hero Carousel ── -->
   <HybridBookCarousel
     slot="carousel"
-    slides={carouselSlides}
-    galleryBasePath={galleryBasePath}
+    {...carouselProps}
     client:load
   />
 

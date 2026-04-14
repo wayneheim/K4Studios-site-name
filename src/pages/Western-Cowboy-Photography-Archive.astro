@@ -15,46 +15,64 @@ export const prerender = true;
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Footer from "@/components/Footer.astro";
 
-// Gallery data imports for accurate counts
-import { galleryData as colorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
-import { galleryData as bwData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs";
-import { galleryData as naColorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs";
+import { getOrderedWesternGalleryPaths } from "@/data/carousel/westernRouting.ts";
+import { westernLandingGalleryDataMap } from "@/data/carousel/westernLandingContent.ts";
 
-// Filter out ghosts
-const colorCount = colorData.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
-const bwCount = bwData.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
-const naColorCount = naColorData.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
-const totalCount = colorCount + bwCount + naColorCount;
+const preferredWesternPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
 
-// Page metadata
-const pageTitle = `Western Cowboy Photography Archive – ${totalCount} Painterly Portraits | Wayne Heim`;
-const pageDescription = `Complete archive of ${totalCount} Western cowboy portraits by fine art photographer Wayne Heim. Browse color, black & white, and Native American collections. Museum-quality painterly photography.`;
-const canonicalUrl = "https://www.k4studios.com/Western-Cowboy-Photography-Archive";
-
-// Sub-collection definitions
-const subCollections = [
-  {
+const westernCollectionMeta: Record<string, { name: string; description: string }> = {
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color": {
     name: "Color Western Portraits",
-    url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
-    allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/all",
-    count: colorCount,
     description: "Vibrant painterly portraits of cowboys, outlaws, and frontier characters in full color."
   },
-  {
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White": {
     name: "Black & White Western Portraits",
-    url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
-    allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/all",
-    count: bwCount,
     description: "Timeless monochrome studies evoking the gravitas and grit of the Old West."
   },
-  {
-    name: "Native American Portraits",
-    url: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
-    allUrl: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/all",
-    count: naColorCount,
-    description: "Respectful portrayals honoring Native American heritage and living tradition."
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color": {
+    name: "Western Narratives - Color",
+    description: "Painterly frontier scenes that expand the cowboy archive into broader Wild West storytelling."
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White": {
+    name: "Western Narratives - Black & White",
+    description: "Cinematic black and white frontier narratives shaped by atmosphere, restraint, and story."
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color": {
+    name: "Native American Portraits - Color",
+    description: "Respectful color portraits honoring Native American heritage, presence, and living tradition."
+  },
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White": {
+    name: "Native American Portraits - Black & White",
+    description: "Monochrome Native American portrait studies centered on presence, identity, and atmosphere."
   }
-];
+};
+
+function getVisibleImageCount(galleryData: any[]): number {
+  return galleryData.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios").length;
+}
+
+const subCollections = getOrderedWesternGalleryPaths(preferredWesternPath).map((path) => {
+  const galleryData = westernLandingGalleryDataMap[path] || [];
+  const meta = westernCollectionMeta[path] || {
+    name: path.split("/").pop()?.replace(/-/g, " ") || "Western Collection",
+    description: "Curated frontier photography from Wayne Heim's Western archive."
+  };
+
+  return {
+    name: meta.name,
+    url: path,
+    allUrl: `${path}/all`,
+    count: getVisibleImageCount(galleryData),
+    description: meta.description
+  };
+});
+
+const totalCount = subCollections.reduce((sum, collection) => sum + collection.count, 0);
+
+// Page metadata
+const pageTitle = `Western Cowboy Photography Archive – ${totalCount} Frontier Images | Wayne Heim`;
+const pageDescription = `Complete archive of ${totalCount} Western cowboy, Wild West narrative, and Native American images by fine art photographer Wayne Heim. Browse the full grouped frontier collection in color and black and white.`;
+const canonicalUrl = "https://www.k4studios.com/Western-Cowboy-Photography-Archive";
 
 // CollectionPage + ItemList structured data
 const structuredData = JSON.stringify({
@@ -79,7 +97,7 @@ const structuredData = JSON.stringify({
       },
       "mainEntity": {
         "@type": "ItemList",
-        "numberOfItems": 3,
+        "numberOfItems": subCollections.length,
         "itemListElement": subCollections.map((col, i) => ({
           "@type": "ListItem",
           "position": i + 1,
@@ -99,8 +117,7 @@ const structuredData = JSON.stringify({
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.k4studios.com" },
-        { "@type": "ListItem", "position": 2, "name": "Galleries", "item": "https://www.k4studios.com/Galleries" },
-        { "@type": "ListItem", "position": 3, "name": "Western Cowboy Portraits", "item": "https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" },
+        { "@type": "ListItem", "position": 2, "name": "Cowboy Fine Art Photography", "item": "https://www.k4studios.com/Cowboy-Fine-Art-Photography" },
         { "@type": "ListItem", "position": 4, "name": "Archive", "item": canonicalUrl }
       ]
     }
@@ -118,7 +135,7 @@ const meta = {
   twitterTitle: pageTitle,
   twitterDescription: pageDescription,
   twitterImage: "/og/cowboy-archive.jpg",
-  keywords: "western cowboy photography, cowboy portraits, western fine art, Wayne Heim, painterly photography, cowboy art collection, western wall art, Old West photography"
+  keywords: "western cowboy photography, cowboy portraits, wild west photography, western narratives, native american portraits, western fine art, Wayne Heim, painterly photography, western wall art"
 };
 ---
 
@@ -131,7 +148,7 @@ const meta = {
     <nav class="max-w-4xl mx-auto px-4 py-4 text-sm text-[#666]" aria-label="Breadcrumb">
       <ol class="flex flex-wrap gap-1">
         <li><a href="/" class="hover:text-[#8b0000]">Home</a></li>
-        <li class="before:content-['›'] before:mx-2"><a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits" class="hover:text-[#8b0000]">Western Portraits</a></li>
+        <li class="before:content-['›'] before:mx-2"><a href="/Cowboy-Fine-Art-Photography" class="hover:text-[#8b0000]">Cowboy Fine Art Photography</a></li>
         <li class="before:content-['›'] before:mx-2 text-[#8b0000]" aria-current="page">Archive</li>
       </ol>
     </nav>
@@ -142,7 +159,7 @@ const meta = {
         Western Cowboy Photography Archive
       </h1>
       <p class="text-lg md:text-xl text-[#555] max-w-2xl mx-auto">
-        A curated collection of <strong>{totalCount}</strong> painterly fine art portraits capturing the spirit of the American West.
+        A curated collection of <strong>{totalCount}</strong> painterly frontier images spanning cowboy portraits, Wild West narratives, and Native American work.
       </p>
     </header>
 
@@ -165,7 +182,7 @@ const meta = {
       <p>
         This archive represents over a decade of work documenting the American West through 
         <strong>painterly fine art photography</strong>—a technique that merges the emotional depth of painting 
-        with the immediacy of the photographic moment. Each of the {totalCount} portraits in this collection 
+        with the immediacy of the photographic moment. Each of the {totalCount} images in this collection 
         captures not just a face or a scene, but a fragment of frontier narrative.
       </p>
 
@@ -194,8 +211,8 @@ const meta = {
       <h3 class="text-xl font-semibold text-[#2c2c2c] mt-8 mb-3">Collection Structure</h3>
       
       <p>
-        The archive is organized into three distinct galleries, each representing a different 
-        approach to Western portraiture:
+        The archive is organized into six distinct galleries, spanning portraits, narrative scenes,
+        and Native American work across both color and black and white:
       </p>
 
       <ul class="list-none p-0 space-y-4">

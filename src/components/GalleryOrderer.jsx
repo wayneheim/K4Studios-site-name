@@ -32,9 +32,19 @@ function isGhost(d) { return d && d.id === "i-k4studios"; }
 function isRealItem(d) { return d && !isGhost(d); }
 function isHidden(d) { return d && String(d.visibility).toLowerCase() === "hidden"; }
 
+function normalizeSmartPunctuation(value) {
+  return typeof value === "string"
+    ? value
+        .replace(/[\u2018\u2019]/g, "'")
+        .replace(/[\u201C\u201D]/g, '"')
+        .replace(/[\u2013\u2014]/g, "-")
+        .replace(/\u2026/g, "...")
+    : value;
+}
+
 /** Normalize item -> your JSON-style schema (quoted keys/values) */
 function normalizeItem(raw) {
-  const notes = raw.notes ?? raw.collectorNotes;
+  const notes = normalizeSmartPunctuation(raw.notes ?? raw.collectorNotes);
   const keywords = Array.isArray(raw.keywords)
     ? raw.keywords
     : Array.isArray(raw.tags)
@@ -42,30 +52,30 @@ function normalizeItem(raw) {
     : undefined;
 
   const out = {};
-  if (raw.id != null) out.id = raw.id;
-  if (raw.title != null) out.title = raw.title;
-  if (raw.description != null) out.description = raw.description;
-  if (raw.alt != null) out.alt = raw.alt;
-  if (raw.src != null || raw.url != null) out.src = raw.src || raw.url;
-  if (raw.srcXL != null) out.srcXL = raw.srcXL;
-  if (raw.srcL != null) out.srcL = raw.srcL;
-  if (raw.srcM != null) out.srcM = raw.srcM;
-  if (raw.srcS != null) out.srcS = raw.srcS;
-  if (raw.srcOriginal != null) out.srcOriginal = raw.srcOriginal;
-  if (raw.buyLink != null) out.buyLink = raw.buyLink;
-  if (keywords != null) out.keywords = keywords;
-  if (raw.story != null) out.story = raw.story;
+  if (raw.id != null) out.id = normalizeSmartPunctuation(raw.id);
+  if (raw.title != null) out.title = normalizeSmartPunctuation(raw.title);
+  if (raw.description != null) out.description = normalizeSmartPunctuation(raw.description);
+  if (raw.alt != null) out.alt = normalizeSmartPunctuation(raw.alt);
+  if (raw.src != null || raw.url != null) out.src = normalizeSmartPunctuation(raw.src || raw.url);
+  if (raw.srcXL != null) out.srcXL = normalizeSmartPunctuation(raw.srcXL);
+  if (raw.srcL != null) out.srcL = normalizeSmartPunctuation(raw.srcL);
+  if (raw.srcM != null) out.srcM = normalizeSmartPunctuation(raw.srcM);
+  if (raw.srcS != null) out.srcS = normalizeSmartPunctuation(raw.srcS);
+  if (raw.srcOriginal != null) out.srcOriginal = normalizeSmartPunctuation(raw.srcOriginal);
+  if (raw.buyLink != null) out.buyLink = normalizeSmartPunctuation(raw.buyLink);
+  if (keywords != null) out.keywords = keywords.map(normalizeSmartPunctuation);
+  if (raw.story != null) out.story = normalizeSmartPunctuation(raw.story);
   if (notes != null) out.notes = notes;
   if (typeof raw.rating === "number") out.rating = raw.rating;
-  if (Array.isArray(raw.galleries)) out.galleries = raw.galleries;
-  if (raw.visibility != null) out.visibility = raw.visibility;
+  if (Array.isArray(raw.galleries)) out.galleries = raw.galleries.map(normalizeSmartPunctuation);
+  if (raw.visibility != null) out.visibility = normalizeSmartPunctuation(raw.visibility);
   if (typeof raw.sortOrder === "number") out.sortOrder = raw.sortOrder;
   if (raw.themes && typeof raw.themes === "object") out.themes = raw.themes;
-  if (raw.contentSource != null) out.contentSource = raw.contentSource;
+  if (raw.contentSource != null) out.contentSource = normalizeSmartPunctuation(raw.contentSource);
   // NOTE: availableSeries is NOT stored in .mjs files - it's stored only in seriesRegistry.json
   if (raw.noSketch === true) out.noSketch = true;
   // Preserve first_seen date for Photo Shoots tracking
-  if (raw.first_seen != null) out.first_seen = raw.first_seen;
+  if (raw.first_seen != null) out.first_seen = normalizeSmartPunctuation(raw.first_seen);
   return out;
 }
 

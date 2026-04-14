@@ -4,20 +4,19 @@ export const prerender = true;
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CornerstoneArticle from '@/components/authority/CornerstoneArticle.astro';
 import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
-
-import { galleryData as cowboyColor }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
-import { galleryData as cowboyBW }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
-import { galleryData as cowboyNA }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
 import { galleryData as westLandscapes }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs';
+import {
+  cowboyColorDataFull as cowboyColor,
+  westernNarrativesColorData,
+  westernNarrativesBWData,
+  westernNAColorData as cowboyNA,
+} from '@/data/carousel/westernLandingContent.ts';
 
 const pagePath = '/Photography-in-Western-Art';
 const canonicalUrl = `https://www.k4studios.com${pagePath}`;
 const pageTitle = 'Photography in Western Art | From Frontier Documentation to Narrative Western Photography';
-const pageDescription = 'Learn how photography entered the Western art tradition, moving from frontier documentation toward authorship, atmosphere, and narrative Western fine art photography.';
+const pageDescription = 'Learn how photography entered the Western art tradition, moving from frontier documentation toward authorship, atmosphere, and narrative Western art photography.';
 
 function ensureAlt(img: any, fallback: string) {
   return (img?.alt || img?.title || fallback || '').trim();
@@ -28,6 +27,7 @@ function findImage(data: any[], id: string) {
 }
 
 function makeSlide(img: any, hrefBase: string, fallback: string) {
+  if (!img?.id) return null;
   return {
     id: img.id,
     title: img.title,
@@ -57,8 +57,8 @@ const slides = uniqueSlides([
   ...['i-rRdrQBg'].map((id) =>
     makeSlide(
       findImage(cowboyNA, id),
-      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
-      'Western portrait photograph'
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color',
+      'Native American portrait photograph'
     )
   ),
   ...['i-jWDDpC4'].map((id) =>
@@ -70,19 +70,19 @@ const slides = uniqueSlides([
   ),
   ...['i-Sc9hZGs', 'i-NxjDRLV'].map((id) =>
     makeSlide(
-      findImage(cowboyColor, id),
-      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+      findImage(westernNarrativesColorData, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color',
       'Narrative cowboy portrait'
     )
   ),
   ...['i-Txh4c8k'].map((id) =>
     makeSlide(
-      findImage(cowboyBW, id),
-      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
-      'Black and white Western portrait'
+      findImage(westernNarrativesBWData, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White',
+      'Black and white narrative Western photograph'
     )
   ),
-]);
+].filter(Boolean));
 
 const sampleSlides = uniqueSlides([
   ...['i-NHkKNbH'].map((id) =>
@@ -94,26 +94,26 @@ const sampleSlides = uniqueSlides([
   ),
   ...['i-kQfftQ2'].map((id) =>
     makeSlide(
-      findImage(cowboyColor, id),
-      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+      findImage(westernNarrativesColorData, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color',
       'Narrative cowboy portrait'
     )
   ),
   ...['i-kxnK2MM'].map((id) =>
     makeSlide(
-      findImage(cowboyBW, id),
-      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White',
-      'Black and white Western portrait'
+      findImage(westernNarrativesBWData, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White',
+      'Black and white narrative Western photograph'
     )
   ),
   ...['i-4Hz6D7k'].map((id) =>
     makeSlide(
       findImage(cowboyNA, id),
-      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
-      'Western portrait photograph'
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color',
+      'Native American portrait photograph'
     )
   ),
-]);
+].filter(Boolean));
 
 const breadcrumb = `Home › Photography in Western Art`;
 
@@ -141,7 +141,7 @@ const sections = [
     heading: 'From Documentation to Interpretation',
     paragraphs: [
       'The turning point came when photographers began using composition, atmosphere, tonal structure, and point of view to shape meaning rather than merely collect evidence. The West could now be photographed not only as a place that existed, but as a subject that could be interpreted.',
-      'This shift from documentation to interpretation is where photographic art begins. Narrative photography, painterly technique, and deliberate sequencing of light and gesture allow the image to carry emotional and symbolic force. That bridge leads directly toward <a href="/Western-Fine-Art-Photography">Western Fine Art Photography</a>, where authorship becomes central.'
+      'This shift from documentation to interpretation is where photographic art begins. Narrative photography, painterly technique, and deliberate sequencing of light and gesture allow the image to carry emotional and symbolic force. That bridge leads directly toward <a href="/Western-Fine-Art-Photography">Western Fine Art Photography</a>, and more specifically into <a href="/Narrative-Western-Art">Narrative Western Art</a>, where authorship becomes central.'
     ]
   },
   {
@@ -180,6 +180,11 @@ const relatedLinks = [
     href: '/Western-Fine-Art-Photography',
     label: 'Western Fine Art Photography',
     description: 'A deeper treatment of authored Western photography shaped by painterly process and narrative intent.'
+  },
+  {
+    href: '/Narrative-Western-Art',
+    label: 'Narrative Western Art',
+    description: 'The story-driven branch where Western photography leans into tension, atmosphere, and implied sequence.'
   },
   {
     href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier',
@@ -228,6 +233,7 @@ const structuredData = getStructuredData({
       'western photography history',
       'photography of the American West',
       'western fine art photography',
+      'narrative western art',
       'western photography artists',
       'narrative western photography'
     ],
@@ -269,7 +275,7 @@ const meta = {
       title="Photography in Western Art"
       subtitle="A guide connecting frontier documentation, photographic interpretation, and the larger tradition of Western art."
       summary="This page explains how photography moved from record-making into authorship, atmosphere, and narrative Western fine art—without stepping outside the American West tradition it ultimately extends."
-      contextHtml="This guide connects <a href='/Masters-of-American-Western-Art'>Masters of American Western Art</a> to <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a>, with <a href='/American-Western-Art'>American Western Art</a> serving as the interpretive bridge between them."
+      contextHtml="This guide connects <a href='/Masters-of-American-Western-Art'>Masters of American Western Art</a> to <a href='/Western-Fine-Art-Photography'>Western Fine Art Photography</a> and <a href='/Narrative-Western-Art'>Narrative Western Art</a>, with <a href='/American-Western-Art'>American Western Art</a> serving as the interpretive bridge between them."
       contextPlacement="below-carousel"
       introParagraphs={introParagraphs}
       quoteFirstIntroParagraph={true}

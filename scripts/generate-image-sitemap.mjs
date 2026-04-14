@@ -27,7 +27,7 @@ function isHiddenImage(image) {
   return false;
 }
 
-// Gallery data sources for Cowboy section
+// Gallery data sources for the grouped Western section
 const COWBOY_GALLERIES = [
   {
     dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs',
@@ -40,9 +40,24 @@ const COWBOY_GALLERIES = [
     name: 'Black-White'
   },
   {
-    dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color.mjs',
-    urlBase: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color',
+    dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs',
+    urlBase: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color',
+    name: 'Western-Narratives-Color'
+  },
+  {
+    dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs',
+    urlBase: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White',
+    name: 'Western-Narratives-Black-White'
+  },
+  {
+    dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs',
+    urlBase: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color',
     name: 'NA-Color'
+  },
+  {
+    dataPath: '../src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White.mjs',
+    urlBase: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White',
+    name: 'NA-Black-White'
   }
 ];
 

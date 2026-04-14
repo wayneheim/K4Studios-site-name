@@ -86,34 +86,44 @@ function createGhostEntry() {
   };
 }
 
+function normalizeSmartPunctuation(value) {
+  return typeof value === "string"
+    ? value
+        .replace(/[\u2018\u2019]/g, "'")
+        .replace(/[\u201C\u201D]/g, '"')
+        .replace(/[\u2013\u2014]/g, "-")
+        .replace(/\u2026/g, "...")
+    : value;
+}
+
 // Normalize image data for storage
 function normalizeImage(raw, sourceGalleryPath) {
   const out = {};
   
   // Required fields
-  if (raw.id != null) out.id = raw.id;
-  if (raw.title != null) out.title = raw.title;
-  if (raw.description != null) out.description = raw.description;
-  if (raw.alt != null) out.alt = raw.alt;
-  if (raw.story != null) out.story = raw.story;
+  if (raw.id != null) out.id = normalizeSmartPunctuation(raw.id);
+  if (raw.title != null) out.title = normalizeSmartPunctuation(raw.title);
+  if (raw.description != null) out.description = normalizeSmartPunctuation(raw.description);
+  if (raw.alt != null) out.alt = normalizeSmartPunctuation(raw.alt);
+  if (raw.story != null) out.story = normalizeSmartPunctuation(raw.story);
   
   // Image sources
-  if (raw.src != null || raw.url != null) out.src = raw.src || raw.url;
-  if (raw.srcXL != null) out.srcXL = raw.srcXL;
-  if (raw.srcL != null) out.srcL = raw.srcL;
-  if (raw.srcM != null) out.srcM = raw.srcM;
-  if (raw.srcS != null) out.srcS = raw.srcS;
-  if (raw.srcOriginal != null) out.srcOriginal = raw.srcOriginal;
+  if (raw.src != null || raw.url != null) out.src = normalizeSmartPunctuation(raw.src || raw.url);
+  if (raw.srcXL != null) out.srcXL = normalizeSmartPunctuation(raw.srcXL);
+  if (raw.srcL != null) out.srcL = normalizeSmartPunctuation(raw.srcL);
+  if (raw.srcM != null) out.srcM = normalizeSmartPunctuation(raw.srcM);
+  if (raw.srcS != null) out.srcS = normalizeSmartPunctuation(raw.srcS);
+  if (raw.srcOriginal != null) out.srcOriginal = normalizeSmartPunctuation(raw.srcOriginal);
   
   // Metadata
-  if (raw.buyLink != null) out.buyLink = raw.buyLink;
-  if (Array.isArray(raw.keywords)) out.keywords = raw.keywords;
-  if (raw.notes != null) out.notes = raw.notes;
+  if (raw.buyLink != null) out.buyLink = normalizeSmartPunctuation(raw.buyLink);
+  if (Array.isArray(raw.keywords)) out.keywords = raw.keywords.map(normalizeSmartPunctuation);
+  if (raw.notes != null) out.notes = normalizeSmartPunctuation(raw.notes);
   if (typeof raw.rating === "number") out.rating = raw.rating;
   
   // Archive-specific: always "show" in Archive, and track where it came from
   out.visibility = "show";
-  out.archivedFrom = sourceGalleryPath; // Track original location for potential unarchive
+  out.archivedFrom = normalizeSmartPunctuation(sourceGalleryPath); // Track original location for potential unarchive
   
   // Preserve sortOrder for ordering within Archive
   if (typeof raw.sortOrder === "number") out.sortOrder = raw.sortOrder;

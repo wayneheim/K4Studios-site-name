@@ -25,6 +25,7 @@ import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStru
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
+import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts';
 import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
@@ -75,8 +76,7 @@ function findNavEntry(nav: any[], url: string): any | null {
 }
 
 // Cowboy page uses children-only; keep same behavior for a clean pool.
-const landingNav = findNavEntry(siteNav as any, imageSectionPath);
-const galleryPaths: string[] = landingNav?.children?.map((c: any) => c.href) || [];
+const galleryPaths: string[] = getOrderedWesternGalleryPaths(imageSectionPath);
 
 // Load galleryData for those galleryPaths
 const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true }) as any;
@@ -132,6 +132,7 @@ const structuredData = getStructuredData({
       { "@type": "Thing", name: "Western Fine Art Photography" },
       { "@type": "Thing", name: "American West Art" },
       { "@type": "Thing", name: "Cowboy Portraiture" },
+      { "@type": "Thing", name: "Narrative Western Art" },
       { "@type": "Thing", name: "American Frontier" },
       { "@type": "Thing", name: "19th Century United States" },
       { "@type": "Thing", name: "Indigenous Portraits" },
@@ -199,6 +200,7 @@ const webPageSchema = JSON.stringify({
     { "@type": "Thing", name: "Western Fine Art Photography" },
     { "@type": "Thing", name: "Cowboy Photography" },
     { "@type": "Thing", name: "Frontier Portraiture" },
+    { "@type": "Thing", name: "Narrative Western Art" },
     { "@type": "Thing", name: "American West Photography" }
   ],
   author: { "@id": "https://k4studios.com/#person" },
@@ -245,8 +247,19 @@ function getTombstoneThumbs(galleryData: any[]): string[] {
 const tombstoneGalleryMap: Record<string, any[]> = {
   '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color': cowboyColorDataFull,
   '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White': cowboyBWData,
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color': cowboyNAData,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color': cowboyNAData,
 };
+
+const mobileStoryImageProps = {
+  images: sanitizeForClient(featheredImages),
+  displayCount: headingCount,
+} as any;
+
+const sidebarImageProps = {
+  heading: 'Collection Samples',
+  images: featheredImages,
+  displayCount: 6,
+} as any;
 
 // Build tombstones with thumbs array for client-side random selection
 const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
@@ -431,16 +444,14 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
+        <MobileStoryImages client:only="react" {...mobileStoryImageProps} />
       </div>
 
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll">
           <LandingRightImages
             client:load
-            heading="Collection Samples"
-            images={featheredImages}
-            displayCount={6}
+            {...sidebarImageProps}
           />
         </div>
       </div>

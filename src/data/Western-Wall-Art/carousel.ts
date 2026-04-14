@@ -1,16 +1,20 @@
 // --- Carousel: Images for Western Wall Art hub ---
 // Mix of cowboy portraits and western landscapes - all print-worthy wall art
-import { galleryData as cowboyColor } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
-import { galleryData as cowboyBW } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
-import { galleryData as cowboyNA } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
+import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts';
+import { westernLandingGalleryDataMap } from '@/data/carousel/westernLandingContent.ts';
 import { galleryData as landscapeWest } from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs';
 import { galleryData as themeMountains } from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains/Mountains.mjs';
 
+const preferredWesternPath = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits';
+
 // Define gallery sources with their paths
+const westernGallerySources = getOrderedWesternGalleryPaths(preferredWesternPath).map((path) => ({
+  data: westernLandingGalleryDataMap[path] || [],
+  path,
+}));
+
 const gallerySources = [
-  { data: cowboyColor, path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color' },
-  { data: cowboyBW, path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White' },
-  { data: cowboyNA, path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color' },
+  ...westernGallerySources,
   { data: landscapeWest, path: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery' },
   { data: themeMountains, path: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains' },
 ];

@@ -8,7 +8,8 @@
  * This page does NOT compete for "western fine art photography" (pillar owns that).
  * It converts: editions, materials, buy-readiness.
  *
- * Grid images pulled from the 3 Western Cowboy Portraits galleries only.
+ * Grid images pulled from grouped western print surfaces: cowboy portraits,
+ * Wild West narrative work, and Native American portraiture.
  */
 
 // ─── Gallery imports ─────────────────────────────────────────────────────────
@@ -16,6 +17,10 @@ import { galleryData as colorGallery }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
 import { galleryData as bwGallery }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
+import { galleryData as narrativeColorGallery }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
+import { galleryData as narrativeBWGallery }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs';
 import { galleryData as naGallery }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
 
@@ -24,8 +29,12 @@ const colorPath =
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
 const bwPath =
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White";
+const narrativeColorPath =
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+const narrativeBWPath =
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White";
 const naPath =
-  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color";
+  "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color";
 
 export const galleryBasePath = colorPath;
 
@@ -49,29 +58,43 @@ function ensureAlt(img: any) {
 }
 
 // Skip first 9 per gallery so we don't duplicate the pillar page's picks.
-// 30 color + 18 B&W + 12 NA = 60 total grid images (15 rows × 4 cols).
+// Balance the print grid across cowboy portraits, narrative western art, and Native American portraiture.
 const OFFSET = 9;
-const colorGrid = topRated(colorGallery, 30, OFFSET).map((img: any) => ({
+const colorGrid = topRated(colorGallery, 16, OFFSET).map((img: any) => ({
   id: img.id, title: img.title, alt: ensureAlt(img),
   href: `${colorPath}/${img.id}`,
 }));
-const bwGrid = topRated(bwGallery, 18, OFFSET).map((img: any) => ({
+const bwGrid = topRated(bwGallery, 12, OFFSET).map((img: any) => ({
   id: img.id, title: img.title, alt: ensureAlt(img),
   href: `${bwPath}/${img.id}`,
 }));
-const naGrid = topRated(naGallery, 12, OFFSET).map((img: any) => ({
+const narrativeColorGrid = topRated(narrativeColorGallery, 16, OFFSET).map((img: any) => ({
+  id: img.id, title: img.title, alt: ensureAlt(img),
+  href: `${narrativeColorPath}/${img.id}`,
+}));
+const narrativeBWGrid = topRated(narrativeBWGallery, 8, OFFSET).map((img: any) => ({
+  id: img.id, title: img.title, alt: ensureAlt(img),
+  href: `${narrativeBWPath}/${img.id}`,
+}));
+const naGrid = topRated(naGallery, 8, OFFSET).map((img: any) => ({
   id: img.id, title: img.title, alt: ensureAlt(img),
   href: `${naPath}/${img.id}`,
 }));
 
-export const gridImages = [...colorGrid, ...bwGrid, ...naGrid];
+export const gridImages = [
+  ...colorGrid,
+  ...bwGrid,
+  ...narrativeColorGrid,
+  ...narrativeBWGrid,
+  ...naGrid,
+];
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
 export const hero = {
   heading: "Western Photography Prints",
   paragraphs: [
-    "Western photography prints from K4 Studios are built for collectors who want more than rustic decor language or generic Western wall art. These are authored cowboy portraits, frontier narratives, and historically grounded Western images created through Wayne Heim's <a href='/Other/One-Image-Movie' class='cl-hero__link'>One-Image Movie\u2122</a> approach to fine art photography, then produced as museum-grade prints meant to live on a wall for years.",
-    "The collections below include black and white Western photography prints, color cowboy portraits, and Indigenous portrait work, available across archival paper, premium canvas, and proprietary Engrained\u2122 hardwood presentation. Browse by subject or compare collector tiers, sizes, and materials below.",
+    "Western photography prints from K4 Studios are built for collectors who want more than rustic decor language or generic Western wall art. These are authored cowboy portraits, frontier narratives, and historically grounded Western images created through Wayne Heim's <a href='/Other/One-Image-Movie' class='cl-hero__link'>One-Image Movie\u2122</a> approach to fine art photography. That story-driven branch also connects to the site's broader <a href='/Narrative-Western-Art' class='cl-hero__link'>Narrative Western Art</a> classification, then resolves here as museum-grade prints meant to live on a wall for years.",
+    "The collections below include black and white Western photography prints, color cowboy portraits, narrative western art prints, and Indigenous portrait work, available across archival paper, premium canvas, and proprietary Engrained\u2122 hardwood presentation. Browse by subject or compare collector tiers, sizes, and materials below.",
   ],
   ctaHref: "#prints-grid",
   ctaLabel: "Browse Limited Editions",
@@ -125,6 +148,11 @@ export const subCategories = {
       description: "Cinematic monochrome cowboy portraits and frontier scenes with tonal depth and museum-quality print presence.",
     },
     {
+      title: "Narrative Western Art Prints",
+      href: narrativeColorPath,
+      description: "Story-driven Wild West scenes and One-Image Movie compositions translated into collectible narrative western art prints.",
+    },
+    {
       title: "Indigenous Western Portrait Prints",
       href: naPath,
       description: "Painterly portrait prints honoring Native American Western heritage through research, restraint, and narrative presence.",
@@ -149,7 +177,7 @@ export const confidence = {
 export const pageMeta = {
   title: "Western Photography Prints | Limited Edition Cowboy & Frontier Prints – K4 Studios",
   description:
-    "Western photography prints by Wayne Heim featuring cowboy portraits, black and white frontier imagery, and historically grounded fine art prints in archival paper, canvas, and Engrained\u2122 wood formats.",
+    "Western photography prints by Wayne Heim featuring cowboy portraits, black and white frontier imagery, narrative western art prints, and historically grounded fine art prints in archival paper, canvas, and Engrained\u2122 wood formats.",
   ogImage: "i-ncFcHDM",
 };
 

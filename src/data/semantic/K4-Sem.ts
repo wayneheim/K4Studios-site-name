@@ -1639,10 +1639,13 @@ oneImageMovie: {
 
   landingPhrases: [
     // Primary targets — highest intent
+    { phrase: "One Image Movie", rating: 5, use: true },
+    { phrase: "One Image Movies", rating: 5, use: true },
     { phrase: "One-Image Movie", rating: 5, use: true },
     { phrase: "One-Image Movie™", rating: 5, use: true },
     { phrase: "One-Image Movies", rating: 5, use: true },
     { phrase: "One-Image Movies™", rating: 5, use: true },
+    { phrase: "What is a One Image Movie", rating: 5, use: true },
     { phrase: "What is a One-Image Movie", rating: 5, use: true },
     { phrase: "single-frame narrative", rating: 5, use: true },
     { phrase: "cinematic still frame", rating: 5, use: true },

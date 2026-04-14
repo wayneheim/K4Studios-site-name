@@ -4,20 +4,17 @@ export const prerender = true;
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CornerstoneArticle from '@/components/authority/CornerstoneArticle.astro';
 import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
-
-import { galleryData as cowboyColor }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
-import { galleryData as cowboyNA }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
 import { galleryData as westLandscapes }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs';
-import { galleryData as civilWarColor }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color.mjs';
+import {
+  westernNarrativesColorData,
+  westernNAColorData as cowboyNA,
+} from '@/data/carousel/westernLandingContent.ts';
 
 const pagePath = '/Masters-of-American-Western-Art';
 const canonicalUrl = `https://www.k4studios.com${pagePath}`;
 const pageTitle = 'Masters of American Western Art | History of the Artists Who Defined the West';
-const pageDescription = 'Explore the masters of American Western art through frontier history, landscape painting, and the rise of photography in the visual tradition of the American West.';
+const pageDescription = 'Explore the masters of American Western art through frontier history, landscape painting, and the rise of photography into narrative Western art within the visual tradition of the American West.';
 
 function topRated(data: any[], count: number, skip = 0) {
   return (data || [])
@@ -54,6 +51,10 @@ function makeSlide(img: any, hrefBase: string, fallback: string) {
   };
 }
 
+function withOptionalSlide(slide: any, extra: Record<string, any> = {}) {
+  return slide ? [{ ...slide, ...extra }] : [];
+}
+
 function uniqueSlides(slides: any[]) {
   const seen = new Set<string>();
   return slides.filter((slide) => {
@@ -64,35 +65,35 @@ function uniqueSlides(slides: any[]) {
 }
 
 const slides = uniqueSlides([
-  {
-    ...makeSlide(
-      findImage(cowboyColor, 'i-bfKMXS9'),
-      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+  ...withOptionalSlide(
+    makeSlide(
+      findImage(westernNarrativesColorData, 'i-bfKMXS9'),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color',
       'Western rider portrait'
-    ),
-  },
-  ...topRatedExcludingTitles(cowboyColor, 1, ['Meant What I Said!', 'One Last Look'], 0).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color', 'Western rider portrait')),
+    )
+  ),
+  ...topRatedExcludingTitles(westernNarrativesColorData, 1, ['Meant What I Said!', 'One Last Look'], 0).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color', 'Western rider portrait')),
   ...topRatedExcludingTitles(westLandscapes, 2, ['Open Country', 'Closed'], 0).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery', 'Western landscape')),
-  {
-    ...makeSlide(
-      findImage(cowboyColor, 'i-7VWX9vk'),
-      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+  ...withOptionalSlide(
+    makeSlide(
+      findImage(westernNarrativesColorData, 'i-7VWX9vk'),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color',
       'Western rider portrait'
     ),
-    imageScale: 1.1,
-  },
+    { imageScale: 1.1 }
+  ),
   ...topRated(cowboyNA, 1, 0).map((img: any) => makeSlide(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color', 'Portrait from the American West')),
-]);
+].filter(Boolean));
 
 const sampleSlides = uniqueSlides([
   ...['i-bq4FKvX', 'i-r5Pb7zJ', 'i-trZrk2w', 'i-LL2Gp5r'].map((id) =>
     makeSlide(
-      findImage(cowboyColor, id),
-      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color',
+      findImage(westernNarrativesColorData, id),
+      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color',
       'Western rider portrait'
     )
   ),
-]);
+].filter(Boolean));
 
 const breadcrumb = `Home › Masters of American Western Art`;
 
@@ -128,7 +129,7 @@ const sections = [
     heading: 'Photography Enters Western Art',
     paragraphs: [
       'Photography first entered Western art as documentation. Early photographs of the American West served surveys, expeditions, railroad promotion, and historical record. They showed terrain, settlements, encampments, and individuals with a degree of factual immediacy that painting could not provide in the same way.',
-      'But the medium did not remain purely documentary. Over time, photography became interpretive. Composition, atmosphere, tone, authorship, and narrative intent allowed photographers to move from record-making toward art-making. That transition matters because it opens the path to <a href="/Photography-in-Western-Art">Photography in Western Art</a>, where the medium becomes part of the larger Western art tradition rather than remaining a separate category outside it.'
+      'But the medium did not remain purely documentary. Over time, photography became interpretive. Composition, atmosphere, tone, authorship, and narrative intent allowed photographers to move from record-making toward art-making. That transition matters because it opens the path to <a href="/Photography-in-Western-Art">Photography in Western Art</a>, where the medium becomes part of the larger Western art tradition rather than remaining a separate category outside it. In Wayne Heim\'s work, that modern continuation often appears as <a href="/Narrative-Western-Art">Narrative Western Art</a>, where frontier subjects are carried by implied story and authored tension.'
     ]
   },
   {
@@ -150,6 +151,11 @@ const relatedLinks = [
     href: '/Western-Fine-Art-Photography',
     label: 'Western Fine Art Photography',
     description: 'A deeper look at authored Western photography as fine art rather than documentary or decorative imagery.'
+  },
+  {
+    href: '/Narrative-Western-Art',
+    label: 'Narrative Western Art',
+    description: 'The modern story-driven branch where Western art continues through frontier atmosphere, gesture, and implied sequence.'
   },
   {
     href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier',
@@ -198,6 +204,7 @@ const structuredData = getStructuredData({
       'western art masters',
       'famous western artists',
       'western art painters',
+      'narrative western art',
       'Remington and Russell',
       'American West art history'
     ],
@@ -239,7 +246,7 @@ const meta = {
       title="Masters of American Western Art"
       subtitle="A historical guide to the painters, landscapes, and frontier imagery that shaped the visual tradition of the American West."
       summary="This page sits above American Western Art and traces how frontier experience became artistic tradition through myth-making, monumental landscape painting, and the later arrival of photography."
-      contextHtml="For a working definition of the larger tradition, visit <a href='/Blog/what-is-western-art'>What Is Western Art</a>. From there continue into <a href='/American-Western-Art'>American Western Art</a> and the gallery world of <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier'>Facing History</a>."
+      contextHtml="For a working definition of the larger tradition, visit <a href='/Blog/what-is-western-art'>What Is Western Art</a>. From there continue into <a href='/American-Western-Art'>American Western Art</a>, <a href='/Narrative-Western-Art'>Narrative Western Art</a>, and the gallery world of <a href='/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier'>Facing History</a>."
       contextPlacement="below-carousel"
       introParagraphs={introParagraphs}
       quoteFirstIntroParagraph={true}

@@ -33,7 +33,8 @@
     subhead: "Contrast as Narrative",
     paragraphs: [
       "Every image here is constructed through contrast—between light and dark, stillness and motion, presence and void, the spoken and the withheld. These tensions mirror the moral landscape of the West itself: justice and survival, myth and reality, endurance and loss.",
-      "In black and white, those dualities find natural expression. A face half in shadow carries more story than any caption. A silhouette against open sky speaks to isolation without a word."
+      "In black and white, those dualities find natural expression. A face half in shadow carries more story than any caption. A silhouette against open sky speaks to isolation without a word.",
+      "That story-first strain also belongs to <a href=\"/Narrative-Western-Art\">Narrative Western Art</a>, where monochrome images can carry frontier tension and implied action without depending on color to set the scene."
     ]
   },
 

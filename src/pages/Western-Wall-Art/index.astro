@@ -20,7 +20,8 @@ import { galleryData as landscapeWestData }
 import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
-import { siteNav } from '@/data/siteNav.ts';
+import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts';
+import { westernLandingGalleryDataMap } from '@/data/carousel/westernLandingContent.ts';
 import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
@@ -39,22 +40,7 @@ import '@/styles/oneupheader.css';
 const pagePath = "/Western-Wall-Art";
 const imageSectionPath = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits";
 
-// ----------------------
-// NAV HELPERS
-// ----------------------
-function findNavEntry(nav: any[], url: string): any | null {
-  for (const entry of nav) {
-    if (entry.href === url) return entry;
-    if (entry.children) {
-      const found = findNavEntry(entry.children, url);
-      if (found) return found;
-    }
-  }
-  return null;
-}
-
-const landingNav = findNavEntry(siteNav as any, imageSectionPath);
-const galleryPaths: string[] = landingNav?.children?.map((c: any) => c.href) || [];
+const galleryPaths: string[] = getOrderedWesternGalleryPaths(imageSectionPath);
 
 // Load galleryData for those galleryPaths
 const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true }) as any;
@@ -77,6 +63,13 @@ const featheredImages = getFeatheredImages({
 });
 // Pass full pool to component for client-side rotation
 
+const westernCollectionItemCount = galleryDatas.reduce((total, galleryData) => {
+  return total + galleryData.filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost').length;
+}, 0);
+
+const clientFeatheredImages = sanitizeForClient(featheredImages) as unknown as never[];
+const sidebarFeatheredImages = featheredImages as unknown as never[];
+
 // ----------------------
 // STRUCTURED DATA
 // ----------------------
@@ -91,6 +84,7 @@ const structuredData = getStructuredData({
     about: [
       { "@type": "Thing", name: "Western Wall Art" },
       { "@type": "Thing", name: "Cowboy Wall Art" },
+      { "@type": "Thing", name: "Narrative Western Art" },
       { "@type": "Thing", name: "Western Fine Art Prints" },
       { "@type": "Thing", name: "Museum Quality Art" },
     ],
@@ -147,6 +141,7 @@ const webPageSchema = JSON.stringify({
   },
   about: [
     { "@type": "Thing", name: "Western Wall Art" },
+    { "@type": "Thing", name: "Narrative Western Art" },
     { "@type": "Thing", name: "Fine Art Prints" },
     { "@type": "Thing", name: "Museum Quality Art" },
     { "@type": "Thing", name: "Cowboy Art Prints" },
@@ -200,7 +195,8 @@ function getTombstoneThumbs(galleryData: any[]): string[] {
 }
 
 const tombstoneGalleryMap: Record<string, any[]> = {
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color': cowboyColorDataFull,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color': westernLandingGalleryDataMap['/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color'] || cowboyColorDataFull,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color': westernLandingGalleryDataMap['/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color'] || [],
   '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery': landscapeWestData || [],
 };
 
@@ -270,7 +266,7 @@ const tombstonesWithThumbs = landingWallArt.tombstones.map((stone: any) => {
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
+        <MobileStoryImages client:only="react" images={clientFeatheredImages} displayCount={headingCount} />
       </div>
 
       <div class="sidebar-column hidden md:block">
@@ -278,13 +274,13 @@ const tombstonesWithThumbs = landingWallArt.tombstones.map((stone: any) => {
         <div class="reveal-on-scroll" style="margin-top: 1.5rem; margin-bottom: 6rem;">
           <FeaturedCollection
             image={featuredCollectionImage}
-            title="Western Cowboy Collection"
-            subtitle="Painterly portraits of the American West"
+            title="Western Frontier Collection"
+            subtitle="Cowboy portraits, narrative Western art, and Wild West wall art"
             ctaText="Enter the Frontier"
-            ctaLink="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits"
-            collectionName="Western Cowboy Portraits"
+            ctaLink="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier"
+            collectionName="Western Cowboy Portraits, Narrative Western Art, and Wild West"
             trackingId="Cowboy_Jump_WallArt"
-            itemCount={250}
+            itemCount={westernCollectionItemCount}
           />
         </div>
         
@@ -292,7 +288,7 @@ const tombstonesWithThumbs = landingWallArt.tombstones.map((stone: any) => {
           <LandingRightImages
             client:load
             heading="Explore Other Themes"
-            images={featheredImages}
+            images={sidebarFeatheredImages}
             displayCount={6}
           />
         </div>

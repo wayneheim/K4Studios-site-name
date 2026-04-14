@@ -11,18 +11,20 @@ import StorySlider        from '@/components/StorySlider.tsx';
 import HybridBookCarousel from '@/components/hybrid/HybridBookCarousel.jsx';
 import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 
-import { galleryData as cowboyColorDataFull }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
-import { galleryData as cowboyBWData }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
-import { galleryData as cowboyNAData }
-  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
+import {
+  cowboyColorDataFull,
+  cowboyBWData,
+  westernNarrativesColorData,
+  westernNarrativesBWData,
+  westernNAColorData as cowboyNAData,
+} from '@/data/carousel/westernLandingContent.ts';
 import { storySliderImageIds } from '@/data/storySlider.ts';
 
 import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
+import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts';
 import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
@@ -54,9 +56,10 @@ const carouselGalleryBasePath =
   "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
 
 const carouselLinkMap: Record<string, string> = {
-  color: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
-  bw: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
-  na: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
+  color: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+  bw: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
+  cowboy: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  na: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
 };
 
 const curatedSampleIds = [
@@ -85,19 +88,26 @@ function topRated(data: any[], count: number, skipCount: number = 0) {
 }
 
 const carouselSlides = [
-  ...topRated(cowboyColorDataFull, 2, 10).map((img: any) => ({
+  ...topRated(westernNarrativesColorData, 2, 0).map((img: any) => ({
     id: img.id,
     title: img.title,
     alt: ensureAlt(img),
     story: img.story || '',
     href: `${carouselLinkMap.color}/${img.id}`,
   })),
-  ...topRated(cowboyBWData, 2, 10).map((img: any) => ({
+  ...topRated(westernNarrativesBWData, 2, 0).map((img: any) => ({
     id: img.id,
     title: img.title,
     alt: ensureAlt(img),
     story: img.story || '',
     href: `${carouselLinkMap.bw}/${img.id}`,
+  })),
+  ...topRated(cowboyColorDataFull, 1, 8).map((img: any) => ({
+    id: img.id,
+    title: img.title,
+    alt: ensureAlt(img),
+    story: img.story || '',
+    href: `${carouselLinkMap.cowboy}/${img.id}`,
   })),
   ...topRated(cowboyNAData, 2, 5).map((img: any) => ({
     id: img.id,
@@ -125,8 +135,7 @@ function findNavEntry(nav: any[], url: string): any | null {
   return null;
 }
 
-const landingNav = findNavEntry(siteNav as any, imageSectionPath);
-const galleryPaths: string[] = landingNav?.children?.map((c: any) => c.href) || [];
+const galleryPaths: string[] = getOrderedWesternGalleryPaths(imageSectionPath);
 
 const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true }) as any;
 const galleryDatas = galleryPaths.map((path) => {
@@ -158,6 +167,33 @@ const reorderedSampleImages = [...topSampleImages].sort((a: any, b: any) => {
   return aRank - bRank;
 });
 const sampleImages = reorderedSampleImages.length >= 6 ? reorderedSampleImages : featheredImages;
+
+const carouselSlidesClient = carouselSlides.map((slide: any) => ({ ...slide })) as any;
+const carouselProps = {
+  slides: carouselSlidesClient,
+  galleryBasePath: carouselGalleryBasePath,
+  kicker: "Story Lives Here",
+  counterLabel: "Scene",
+} as any;
+const storySliderStoriesClient = cowboyColorData.map((story: any) => ({ ...story })) as any;
+const storySliderProps: any = {
+  stories: storySliderStoriesClient,
+  galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  variant: "secondary",
+};
+const mobileStoryImagesClient = sanitizeForClient(
+  sampleImages.map((image: any) => ({ ...image }))
+) as any;
+const sidebarImagesClient = sampleImages.map((image: any) => ({ ...image })) as any;
+const mobileStoryImageProps = {
+  images: mobileStoryImagesClient,
+  displayCount: headingCount,
+} as any;
+const sidebarImageProps = {
+  heading: "Collection Samples",
+  images: sidebarImagesClient,
+  displayCount: 6,
+} as any;
 
 const structuredData = getStructuredData({
   type: "gallery",
@@ -265,7 +301,9 @@ function getTombstoneThumbs(galleryData: any[]): string[] {
 const tombstoneGalleryMap: Record<string, any[]> = {
   '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color': cowboyColorDataFull,
   '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White': cowboyBWData,
-  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color': cowboyNAData,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color': cowboyNAData,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color': westernNarrativesColorData,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White': westernNarrativesBWData,
 };
 
 const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: any) => {
@@ -324,10 +362,7 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
       <div class="hero-carousel-section reveal-on-scroll">
         <HybridBookCarousel
           client:load
-          slides={carouselSlides}
-          galleryBasePath={carouselGalleryBasePath}
-          kicker="Story Lives Here"
-          counterLabel="Scene"
+          {...carouselProps}
         />
       </div>
     </div>
@@ -400,12 +435,7 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
                     </div>
                   </div>
 
-                  <StorySlider
-                    client:only="react"
-                    stories={cowboyColorData}
-                    galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
-                    variant="secondary"
-                  />
+                  <StorySlider client:only="react" {...storySliderProps} />
 
                   <p class="story-slider-caption reveal-on-scroll">
                     See how a single image can suggest<br />an entire Western story beyond the frame.
@@ -420,17 +450,12 @@ const tombstonesWithThumbs = landingNarrativeWesternArt.tombstones.map((stone: a
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(sampleImages)} displayCount={headingCount} />
+        <MobileStoryImages client:only="react" {...mobileStoryImageProps} />
       </div>
 
       <div class="sidebar-column hidden md:block">
         <div class="sample-fade reveal-on-scroll">
-          <LandingRightImages
-            client:load
-            heading="Collection Samples"
-            images={sampleImages}
-            displayCount={6}
-          />
+          <LandingRightImages client:load {...sidebarImageProps} />
         </div>
       </div>
     </section>

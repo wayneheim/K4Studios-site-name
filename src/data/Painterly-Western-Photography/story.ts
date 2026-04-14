@@ -18,7 +18,8 @@
     subhead: "Story Lives Inside the Frame",
     paragraphs: [
       "These photographs exist in the space between moments - after something has occurred, but before its consequence is revealed. A hand lowers. A gaze holds. Dust settles without fully giving up its motion.",
-      "This suspended narrative is the foundation of the One-Image Movie. Each photograph functions as a single cinematic frame, inviting the viewer to complete what it begins."
+      "This suspended narrative is the foundation of the One-Image Movie. Each photograph functions as a single cinematic frame, inviting the viewer to complete what it begins.",
+      "That method-centered storytelling also places this work inside <a href='/Narrative-Western-Art'>Narrative Western Art</a>, where painterly restraint and frontier atmosphere do as much narrative work as overt action."
     ]
   },
 

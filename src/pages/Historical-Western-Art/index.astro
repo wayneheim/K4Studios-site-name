@@ -14,12 +14,19 @@ import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 // Gallery data for feathering + StorySlider
 import { galleryData as cowboyColorDataFull }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
+import { galleryData as cowboyBWData }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
+import { galleryData as cowboyNAData }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
+import { galleryData as westernNarrativesColorData }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs';
 import { storySliderImageIds } from '@/data/storySlider.ts';
 
 import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
+import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts';
 import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
@@ -67,8 +74,7 @@ function findNavEntry(nav: any[], url: string): any | null {
   return null;
 }
 
-const landingNav = findNavEntry(siteNav as any, imageSectionPath);
-const galleryPaths: string[] = landingNav?.children?.map((c: any) => c.href) || [];
+const galleryPaths: string[] = getOrderedWesternGalleryPaths(imageSectionPath);
 
 // Load galleryData for those galleryPaths
 const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true }) as any;
@@ -91,6 +97,29 @@ const featheredImages = getFeatheredImages({
   poolMultiplier: 3
 });
 
+const mobileStoryImagesClient = sanitizeForClient(
+  featheredImages.map((image: any) => ({ ...image }))
+) as any;
+const sidebarImagesClient = featheredImages.map((image: any) => ({ ...image })) as any;
+const storySliderStoriesClient = colorStoryData.map((story: any) => ({ ...story })) as any;
+
+const mobileStoryImageProps: any = {
+  images: mobileStoryImagesClient,
+  displayCount: headingCount,
+};
+
+const sidebarImageProps: any = {
+  heading: "Historical Western Collection",
+  images: sidebarImagesClient,
+  displayCount: 6,
+};
+
+const storySliderProps: any = {
+  stories: storySliderStoriesClient,
+  galleryPath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+  variant: "secondary",
+};
+
 // ----------------------
 // STRUCTURED DATA (URL MUST BE THE HUB PAGE)
 // ----------------------
@@ -107,6 +136,7 @@ const structuredData = getStructuredData({
       { "@type": "Thing", name: "Historical Western Photography" },
       { "@type": "Thing", name: "Frontier Art Photography" },
       { "@type": "Thing", name: "Narrative Western Photography" },
+      { "@type": "Thing", name: "Narrative Western Art" },
       { "@type": "Thing", name: "Painterly Western Art" },
     ],
     genre: "Historical Western Art",
@@ -174,6 +204,7 @@ const webPageSchema = JSON.stringify({
     { "@type": "Thing", name: "Cowboy Art" },
     { "@type": "Thing", name: "Frontier Art Photography" },
     { "@type": "Thing", name: "Historical Western Photography" },
+    { "@type": "Thing", name: "Narrative Western Art" },
     { "@type": "Thing", name: "Narrative Western Photography" },
   ],
   author: { "@id": "https://k4studios.com/#person" },
@@ -204,12 +235,38 @@ if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${pagePath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${pagePath}`;
 
 // ----------------------
-// TOMBSTONE THUMBNAILS (all hardcoded)
+// TOMBSTONE THUMBNAILS (dynamic pools, frontier funnel preserved)
 // ----------------------
-const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => ({
-  ...stone,
-  thumbs: [stone.thumb],
-}));
+function getTombstoneThumbs(galleryData: any[]): string[] {
+  const validImages = galleryData
+    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost')
+    .slice(0, 10);
+  return validImages
+    .map((img: any) => img.id ? getProxySrc(img.id, 's') : '')
+    .filter((src: string) => src !== '');
+}
+
+const tombstoneGalleryMap: Record<string, any[]> = {
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color': cowboyColorDataFull,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White': cowboyBWData,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color': cowboyNAData,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color': westernNarrativesColorData,
+};
+
+const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => {
+  const thumbSourcePaths = Array.isArray(stone._thumbSources)
+    ? stone._thumbSources
+    : [stone._thumbSource || stone.href];
+  const thumbs = thumbSourcePaths.flatMap((path: string) => {
+    const galleryData = tombstoneGalleryMap[path];
+    return galleryData ? getTombstoneThumbs(galleryData) : [];
+  });
+  return {
+    ...stone,
+    thumb: thumbs[0] || stone.thumb || '',
+    thumbs,
+  };
+});
 ---
 
 <BaseLayout
@@ -287,7 +344,7 @@ const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => ({
 
                   <StorySlider
                     client:only="react"
-                    stories={colorStoryData}
+                    stories={storySliderStoriesClient as unknown as never[]}
                     galleryPath="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color"
                     variant="secondary"
                   />
@@ -323,7 +380,11 @@ const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => ({
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
+        <MobileStoryImages
+          client:only="react"
+          images={mobileStoryImagesClient as unknown as never[]}
+          displayCount={headingCount}
+        />
       </div>
 
       <div class="sidebar-column hidden md:block">
@@ -331,7 +392,7 @@ const tombstonesWithThumbs = landingHistorical.tombstones.map((stone: any) => ({
           <LandingRightImages
             client:load
             heading="Historical Western Collection"
-            images={featheredImages}
+            images={sidebarImagesClient as unknown as never[]}
             displayCount={6}
           />
         </div>

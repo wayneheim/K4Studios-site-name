@@ -11,7 +11,7 @@ import '@/styles/global.css';
 const pagePath = '/authentic-cowboy-life';
 const canonicalUrl = `https://www.k4studios.com${pagePath}`;
 const pageTitle = 'Authentic Cowboy Life in Western Art: Before the Myth, the Work';
-const pageDescription = 'Explore authentic cowboy life through Western art and photography—bridging frontier labor, modern ranch reality, and the truth behind the cowboy myth.';
+const pageDescription = 'Explore authentic cowboy life through Western art, narrative Western photography, and frontier labor—bridging ranch reality and the truth behind the cowboy myth.';
 
 const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
 const getAbsoluteProxySrc = (id: string, size: string) => `https://www.k4studios.com/img/${id}/${size}.jpg`;
@@ -81,6 +81,8 @@ const structuredData = getStructuredData({
       'historical cowboy life',
       'reality behind the cowboy myth',
       'western art cowboy life',
+      'narrative western art',
+      'narrative western photography',
       'cowboy life in western photography',
       'working cowboy life',
       'frontier labor in western art'
@@ -98,7 +100,7 @@ const structuredData = getStructuredData({
 
 const meta = {
   description: pageDescription,
-  keywords: 'authentic cowboy life, historical cowboy life, reality behind the cowboy myth, cowboy life in western photography, frontier labor in western art, working cowboy life',
+  keywords: 'authentic cowboy life, historical cowboy life, reality behind the cowboy myth, narrative western art, narrative western photography, cowboy life in western photography, frontier labor in western art, working cowboy life',
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogType: 'article',
@@ -119,6 +121,10 @@ const figureImageStyle = 'width:100%; aspect-ratio:3 / 4; object-fit:cover; bord
 const figureCaptionStyle = 'font-size:0.85rem; color:#666; margin-top:0.55rem; font-style:italic; text-align:center; line-height:1.5; max-width:92%; margin-left:auto; margin-right:auto;';
 const image1Style = `${figureImageStyle} object-position: 68% center;`;
 const image2Style = `${figureImageStyle} object-position: 22% center;`;
+
+const WESTERN_COWBOY_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White';
+const WESTERN_NARRATIVES_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
+const WESTERN_NARRATIVES_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White';
 ---
 
 <BaseLayout title={pageTitle} structuredDataJSON={structuredData} breadcrumbsJSON={breadcrumbStructuredData} meta={meta}>
@@ -128,7 +134,7 @@ const image2Style = `${figureImageStyle} object-position: 22% center;`;
     </div>
 
     <section style="width:100%; overflow:hidden; margin-bottom:0;">
-      <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White">
+      <a href={WESTERN_COWBOY_BW_PATH}>
         <div style="width:100%; height:400px; overflow:hidden; position:relative;">
           <img
             src={headerImage.src}
@@ -164,13 +170,13 @@ const image2Style = `${figureImageStyle} object-position: 22% center;`;
         <p style="font-size:0.94rem; color:#6c6258; font-style:italic; margin-top:1rem; margin-bottom:-0.25rem;">Not posed moments, but working ones:</p>
         <div class="example-images" style={imageGridStyle}>
           <figure style={figureStyle}>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image1.id}`}>
+            <a href={`${WESTERN_NARRATIVES_COLOR_PATH}/${image1.id}`}>
               <img src={image1.src} alt={image1.alt} loading="lazy" style={image1Style} />
             </a>
             <figcaption style={figureCaptionStyle}>Frontier labor, patience, and stubborn resolve</figcaption>
           </figure>
           <figure style={figureStyle}>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image2.id}`}>
+            <a href={`${WESTERN_NARRATIVES_COLOR_PATH}/${image2.id}`}>
               <img src={image2.src} alt={image2.alt} loading="lazy" style={image2Style} />
             </a>
             <figcaption style={figureCaptionStyle}>Reading land, weather, and consequence</figcaption>
@@ -193,7 +199,7 @@ const image2Style = `${figureImageStyle} object-position: 22% center;`;
 
         <p>Artists like Charles M. Russell were not reconstructing a myth from a safe distance. They worked from memory, proximity, and lived contact with a world already fading. What they held onto was not spectacle, but structure: how a man sat a horse, how distance felt, how weather shaped decisions.</p>
 
-        <p>Early <a href="/Western-Cowboy-Photography">cowboy photography</a> followed similar ground. It did not begin by chasing legend. It recorded conditions: tools, faces, posture, and the quiet evidence of labor before the West was cleaned into symbol. That witness layer matters because it sits closest to the source. Before the West became a category, it was a life being observed, and in some cases preserved before it disappeared into its own mythology.</p>
+        <p>Early <a href="/Western-Cowboy-Photography">cowboy photography</a> followed similar ground. It did not begin by chasing legend. It recorded conditions: tools, faces, posture, and the quiet evidence of labor before the West was cleaned into symbol. That witness layer matters because it sits closest to the source. Before the West became a category, it was a life being observed, and in some cases preserved before it disappeared into its own mythology. In Wayne Heim's work, that pressure often resolves as <a href="/Narrative-Western-Art">narrative Western art</a>, where frontier labor and consequence are carried through implied story rather than spectacle.</p>
 
         <div class="section-heading-with-line">
           <h2>Work, Risk, and Pressure in Authentic Cowboy Life</h2>
@@ -209,13 +215,13 @@ const image2Style = `${figureImageStyle} object-position: 22% center;`;
         <p style="font-size:0.94rem; color:#6c6258; font-style:italic; margin-top:0.35rem; margin-bottom:-0.25rem;">Where pressure shows, not performs:</p>
         <div class="example-images" style={imageGridStyle}>
           <figure style={figureStyle}>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image3.id}`}>
+            <a href={`${WESTERN_NARRATIVES_COLOR_PATH}/${image3.id}`}>
               <img src={image3.src} alt={image3.alt} loading="lazy" style={figureImageStyle} />
             </a>
             <figcaption style={figureCaptionStyle}>Pressure held inside the frame, not played for spectacle</figcaption>
           </figure>
           <figure style={figureStyle}>
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/${image4.id}`}>
+            <a href={`${WESTERN_NARRATIVES_BW_PATH}/${image4.id}`}>
               <img src={image4.src} alt={image4.alt} loading="lazy" style={figureImageStyle} />
             </a>
             <figcaption style={figureCaptionStyle}>Preparation, consequence, and interior frontier life</figcaption>
@@ -256,9 +262,13 @@ const image2Style = `${figureImageStyle} object-position: 22% center;`;
           <h2 style="font-size:1.35rem; font-weight:700; margin-bottom:0.75rem; color:#2d241b;">Continue Into the Work</h2>
           <p style="font-size:0.98rem; line-height:1.7; color:#564a3d; margin:0 0 1rem;">These ideas resolve into images. Explore how authentic cowboy life moves from condition into form:</p>
           <div class="link-grid">
-            <a class="link-card" href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color">
-              <strong>Cowboy Gallery</strong>
-              <span>Enter the main color cowboy gallery where frontier labor, pressure, and character move from concept into images.</span>
+            <a class="link-card" href="/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier">
+              <strong>Frontier Gallery</strong>
+              <span>Enter the broader frontier gallery world where cowboy labor, pressure, and character extend into narrative Western art and Wild West images.</span>
+            </a>
+            <a class="link-card" href="/Narrative-Western-Art">
+              <strong>Narrative Western Art</strong>
+              <span>Follow the story-driven branch where frontier labor, silence, and consequence become one-image movies.</span>
             </a>
             <a class="link-card" href="/Blog/what-is-historical-western-photography">
               <strong>Historical Western Photography</strong>
@@ -272,11 +282,11 @@ const image2Style = `${figureImageStyle} object-position: 22% center;`;
               <strong>Western Cowboy Photography</strong>
               <span>Follow the broader cowboy photography page for real subjects, working cowboys, and historically informed interpreters.</span>
             </a>
-            <a class="link-card" href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image3.id}`}>
+            <a class="link-card" href={`${WESTERN_NARRATIVES_COLOR_PATH}/${image3.id}`}>
               <strong>Select Image: Over My Dead Body</strong>
               <span>A frontier interior shaped by pressure, resolve, and the kind of lived consequence that myth alone cannot explain.</span>
             </a>
-            <a class="link-card" href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${image2.id}`}>
+            <a class="link-card" href={`${WESTERN_NARRATIVES_COLOR_PATH}/${image2.id}`}>
               <strong>Select Image: Signs</strong>
               <span>A quieter image of cowboy judgment and attention, where work, risk, and conscience carry more than overt action.</span>
             </a>

@@ -9,7 +9,7 @@ import { galleryData as themeMountains } from '@/data/Galleries/Painterly-Fine-A
 const gallerySources = [
   { data: cowboyColor, path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color' },
   { data: cowboyBW, path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White' },
-  { data: cowboyNA, path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color' },
+  { data: cowboyNA, path: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color' },
   { data: landscapeWest, path: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery' },
   { data: themeMountains, path: '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains' },
 ];

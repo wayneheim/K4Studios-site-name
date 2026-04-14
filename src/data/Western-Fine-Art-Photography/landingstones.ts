@@ -40,13 +40,13 @@ export const landingWestern = {
     {
       title: "Indigenous People of the West",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
-      _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
+      _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
       thumb: "",
     },
     {
       title: "Stories of the Frontier",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History?focus=frontier",
-      _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+      _thumbSource: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
       // Use a fixed thumb that won't match the Color tile's first-10 random pool
       thumb: "/img/i-trZrk2w/s.jpg",
     },

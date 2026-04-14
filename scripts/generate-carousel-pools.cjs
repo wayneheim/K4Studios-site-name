@@ -23,8 +23,23 @@ const HERO_WEBP_SRCS = {
   'i-rqk5Kdk': '/images/i-rqk5Kdk.webp'
 };
 
+const WESTERN_POOL_PATHS = [
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits',
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West'
+];
+
+const WESTERN_HREF_PRIORITY = [
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits',
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives',
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans'
+];
+
 // Max images per pool (to keep JSON file size reasonable)
 const MAX_IMAGES_PER_POOL = 20;
+const imageIdMapPath = path.join(__dirname, '..', 'public', 'imageIdMap.json');
+const imageIdMap = fs.existsSync(imageIdMapPath)
+  ? JSON.parse(fs.readFileSync(imageIdMapPath, 'utf-8'))
+  : {};
 
 /**
  * Parse siteNav.ts and extract the siteNav array
@@ -140,12 +155,46 @@ function getProxyUrl(imageId, size) {
   return `/img/${imageId}/${size}`;
 }
 
+function isWesternGalleryHref(href) {
+  return typeof href === 'string' && WESTERN_POOL_PATHS.some(prefix => href.startsWith(prefix));
+}
+
+function getMappedGalleryHrefs(imageId) {
+  const hrefs = imageIdMap[imageId];
+  return Array.isArray(hrefs) ? hrefs.filter(Boolean) : [];
+}
+
+function pickPreferredWesternHref(hrefs) {
+  for (const preferredPrefix of WESTERN_HREF_PRIORITY) {
+    const match = hrefs.find(href => href.startsWith(preferredPrefix));
+    if (match) return match;
+  }
+
+  return hrefs[0] || null;
+}
+
+function resolveGalleryHref(imageId, sourceGalleryHref) {
+  const mappedHrefs = getMappedGalleryHrefs(imageId);
+
+  if (mappedHrefs.length === 0 || mappedHrefs.includes(sourceGalleryHref)) {
+    return sourceGalleryHref;
+  }
+
+  if (isWesternGalleryHref(sourceGalleryHref) || mappedHrefs.some(isWesternGalleryHref)) {
+    return pickPreferredWesternHref(mappedHrefs) || sourceGalleryHref;
+  }
+
+  return mappedHrefs[0] || sourceGalleryHref;
+}
+
 /**
  * Normalize an image for carousel use
  * IMPORTANT: Uses proxy URLs, never raw SmugMug URLs
  */
 function normalizeImage(img, galleryHref) {
   // Keep the full gallery path including database name (Color, Black-White, etc.)
+  const resolvedGalleryHref = resolveGalleryHref(img.id, galleryHref);
+
   return {
     id: img.id,
     // All src fields now use proxy URLs
@@ -158,7 +207,7 @@ function normalizeImage(img, galleryHref) {
     width: img.width || 0,
     height: img.height || 0,
     rating: img.rating || 0,
-    href: `${galleryHref}/${img.id}`
+    href: `${resolvedGalleryHref}/${img.id}`
   };
 }
 
@@ -241,9 +290,7 @@ function main() {
   
   // Define collection paths for each pool category
   const POOL_DEFINITIONS = {
-    westernCowboy: [
-      '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits'
-    ],
+    westernCowboy: WESTERN_POOL_PATHS,
     civilWar: [
       '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits'
     ],

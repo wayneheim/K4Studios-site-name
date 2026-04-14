@@ -9,16 +9,16 @@ export const storySliderData = [
   {
     "id": "i-ncFcHDM",
     "title": "One Last Look",
-    "story": "As the lone coach disappeared down the lonely road, he stood silent—rooted by more than trail dust. Would their paths ever cross again? As a man of few but deliberate words, had he said too little… too much? Should he have asked her not to go?\n\nThe questions would hang heavy on his heart — like the low-lying clouds blanketing the valley floor, choking out the day’s first light.\n\nBut the decision was made. And the road ahead—was now his alone to walk."
+    "story": "As the lone coach disappeared down the lonely road, he stood silent-rooted by more than trail dust. Would their paths ever cross again? As a man of few but deliberate words, had he said too little... too much? Should he have asked her not to go?\n\nThe questions would hang heavy on his heart - like the low-lying clouds blanketing the valley floor, choking out the day's first light.\n\nBut the decision was made. And the road ahead-was now his alone to walk."
   },
   {
     "id": "i-3SxncXS",
     "title": "The Keeper of Old Winds",
-    "story": "He didn’t speak much, not because he lacked words, but because he carried too many. The land had carved its lessons deep into him—etched into the creases around his eyes, threaded through the long silver of his beard, whispered in every slow turn of his gaze.\n\nSome men grow older. \nOthers become part of the horizon.\n\nHe was the latter."
+    "story": "He didn't speak much, not because he lacked words, but because he carried too many. The land had carved its lessons deep into him-etched into the creases around his eyes, threaded through the long silver of his beard, whispered in every slow turn of his gaze.\n\nSome men grow older. \nOthers become part of the horizon.\n\nHe was the latter."
   },
   {
     "id": "i-6xn5rMd",
     "title": "Carved in Stone",
-    "story": "Grizzled and chiseled, full of lines and cracks, he looks as if he was hewn from the rock itself—etched by years of sun, wind, and memory. He stands half in sunlight, half in legend, and in the hush before he speaks you sense he’s about to share the tale of his latest discovery, or maybe the sorrow of a love long lost. There’s a world written across that weathered face—waiting for anyone brave enough to ask."
+    "story": "Grizzled and chiseled, full of lines and cracks, he looks as if he was hewn from the rock itself-etched by years of sun, wind, and memory. He stands half in sunlight, half in legend, and in the hush before he speaks you sense he's about to share the tale of his latest discovery, or maybe the sorrow of a love long lost. There's a world written across that weathered face-waiting for anyone brave enough to ask."
   }
 ];

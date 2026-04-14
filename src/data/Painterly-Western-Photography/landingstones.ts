@@ -32,7 +32,7 @@ export const landingWestern = {
     },
     {
       title: "Indigenous Portraits of the West",
-      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
       thumb: "", // Dynamically populated at page level
     },
     {

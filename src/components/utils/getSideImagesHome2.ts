@@ -1,4 +1,5 @@
 import { siteNav } from '../../data/siteNav';
+import { WESTERN_POOL_PATHS, resolveCarouselGalleryHref } from '@/data/carousel/westernRouting.ts';
 import { normalizeImage } from './normalizeImage';
 
 type Image = {
@@ -125,8 +126,9 @@ function pullImagesFromGalleries(
 
   // Normalize and add to picked images
   for (const img of selectedImages) {
-    const href = `${img.galleryPath}/${img.id}`.replace(/\/+/g, '/');
-    const normalized = normalizeImage({ ...img, href });
+    const resolvedGalleryPath = resolveCarouselGalleryHref(img.id, img.galleryPath || '');
+    const href = `${resolvedGalleryPath}/${img.id}`.replace(/\/+/g, '/');
+    const normalized = normalizeImage({ ...img, href, galleryPath: resolvedGalleryPath });
     pickedImages.push(normalized);
     excludeIds.add(img.id);
   }
@@ -152,9 +154,7 @@ export function getSideImagesHome2({
   const perCategory = Math.max(1, Math.ceil(poolSize / 6)); // 6 categories
   
   // Define gallery categories
-  const westernCowboyPaths = [
-    "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits"
-  ];
+  const westernCowboyPaths = WESTERN_POOL_PATHS;
 
   const painterlyLandscapePaths = [
     "/Galleries/Painterly-Fine-Art-Photography/Landscapes"

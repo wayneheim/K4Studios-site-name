@@ -19,7 +19,7 @@ export const frontierArtStory = [
       "But mythology grows from lived experience.",
       "The American frontier was a place of constant uncertainty. Weather, isolation, and economic risk shaped every decision. Communities formed quickly and vanished just as quickly. Every individual carried the weight of survival.",
       "That is why frontier art has long drawn serious artists. Early explorer-artists such as George Catlin and Karl Bodmer treated the frontier as something that had to be witnessed before it disappeared from view. Later painters such as Albert Bierstadt and Thomas Moran gave the frontier its monumental scale, while Frederic Remington and Charles M. Russell translated frontier labor, danger, and myth into the visual language most viewers now associate with the West.",
-      "Contemporary Western frontier art enters that same lineage by returning to the historical pressures those artists confronted: survival, collision, distance, weather, work, and the uneasy boundary between record and legend.",
+      "Contemporary Western frontier art enters that same lineage by returning to the historical pressures those artists confronted: survival, collision, distance, weather, work, and the uneasy boundary between record and legend. Its more cinematic, story-driven edge also opens into <a href=\"/Narrative-Western-Art\">Narrative Western Art</a>, where frontier tension is carried through implication, atmosphere, and suspended action.",
       "Frontier art explores those pressures.",
       "Rather than presenting the West as nostalgia, it examines the human conditions that created the frontier story in the first place."
     ]

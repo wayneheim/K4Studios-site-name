@@ -14,6 +14,13 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import LandingHeader from "@/components/Landing-Header.jsx";
 import SiteFooter from "@/components/Footer.astro";
 import { buildContextualAlt } from "@/utils/buildContextualAlt";
+import {
+  cowboyColorDataFull,
+  cowboyBWData,
+  westernNarrativesColorData,
+  westernNarrativesBWData,
+  westernNAColorData,
+} from "@/data/carousel/westernLandingContent.ts";
 
 import "@/styles/global.css";
 import "@/styles/oneupheader.css";
@@ -24,15 +31,24 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
   return `/img/${imageId}/${size}.jpg`;
 }
 
-// Import curated images from galleries
-import { galleryData as colorData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs";
-import { galleryData as bwData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs";
-import { galleryData as naData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs";
+const COWBOY_COLOR_PATH = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color";
+const COWBOY_BW_PATH = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White";
+const WESTERN_NARRATIVES_COLOR_PATH = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color";
+const WESTERN_NARRATIVES_BW_PATH = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White";
+const NATIVE_AMERICANS_COLOR_PATH = "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color";
 
-// Filter out ghost entries
-const colorImages = colorData.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios");
-const bwImages = bwData.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios");
-const naImages = naData.filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios");
+function withGalleryPath(galleryData: any[], galleryPath: string) {
+  return galleryData
+    .filter((img: any) => img.visibility !== "ghost" && img.id !== "i-k4studios")
+    .map((img: any) => ({ ...img, galleryPath }));
+}
+
+const colorImages = withGalleryPath(cowboyColorDataFull, COWBOY_COLOR_PATH);
+const bwImages = withGalleryPath(cowboyBWData, COWBOY_BW_PATH);
+const narrativeColorImages = withGalleryPath(westernNarrativesColorData, WESTERN_NARRATIVES_COLOR_PATH);
+const narrativeBWImages = withGalleryPath(westernNarrativesBWData, WESTERN_NARRATIVES_BW_PATH);
+const narrativeImages = [...narrativeColorImages, ...narrativeBWImages];
+const naImages = withGalleryPath(westernNAColorData, NATIVE_AMERICANS_COLOR_PATH);
 
 // =====================================================
 // Section-specific alt text contexts (K4-Sem powered)
@@ -108,24 +124,26 @@ const nativeContext = {
 const bwPortraits = bwImages.slice(0, 6);
 
 // Section 2: Cinematic Color Western Photography (6 images)
-const cinematicColor = colorImages.filter((img: any) => 
+const cinematicSourceImages = [...colorImages, ...narrativeColorImages];
+
+const cinematicColor = cinematicSourceImages.filter((img: any) => 
   img.title?.toLowerCase().includes('day') || 
   img.title?.toLowerCase().includes('staging') ||
   img.title?.toLowerCase().includes('distance') ||
   img.id === 'i-ncFcHDM' ||
   img.id === 'i-LCspRF4'
 ).slice(0, 6);
-const cinematicFallback = colorImages.slice(0, 6);
+const cinematicFallback = cinematicSourceImages.slice(0, 6);
 const cinematicSection = cinematicColor.length >= 6 ? cinematicColor : cinematicFallback;
 
 // Section 3: Narrative Western Scenes (6 images)
-const narrativeScenes = colorImages.filter((img: any) => 
+const narrativeScenes = narrativeImages.filter((img: any) => 
   img.title?.toLowerCase().includes('stand') || 
   img.title?.toLowerCase().includes('fire') ||
   img.title?.toLowerCase().includes('meant') ||
   img.story?.length > 200
 ).slice(0, 6);
-const narrativeFallback = colorImages.slice(6, 12);
+const narrativeFallback = narrativeImages.slice(0, 6);
 const narrativeSection = narrativeScenes.length >= 6 ? narrativeScenes : narrativeFallback;
 
 // Section 4: Western Character Studies (6 images)
@@ -143,7 +161,7 @@ const nativePortraits = naImages.slice(0, 6);
 
 // Page metadata
 const pageTitle = "Wayne Heim | Western Fine Art Photography";
-const pageDescription = "Wayne Heim is a contemporary western fine art photographer whose painterly photography explores the American West through narrative restraint and cinematic atmosphere. View curated works spanning black and white cowboy portraits, color western scenes, and Native American portraits.";
+const pageDescription = "Wayne Heim is a contemporary western fine art photographer whose painterly photography explores the American West through narrative restraint, cinematic atmosphere, and narrative western art photography. View curated works spanning black and white cowboy portraits, Wild West narrative scenes, and Native American portraits.";
 const canonicalUrl = "https://www.k4studios.com/wayne-heim-western-fine-art-photography";
 
 /**
@@ -172,6 +190,7 @@ const personSchema = {
   "knowsAbout": [
     "Western Fine Art Photography",
     "Cowboy Portraiture",
+    "Narrative Western Art",
     "Pictorialism",
     "Narrative Photography",
     "Historical Reenactment Photography"
@@ -195,10 +214,11 @@ const creativeWorkSchema = {
   "about": [
     "Western Fine Art Photography",
     "Cowboy Portraiture",
+    "Narrative Western Art",
     "Narrative Western Imagery",
     "Pictorialist Photography"
   ],
-  "description": "A representative survey of Wayne Heim's western fine art photography, spanning black and white portraiture, cinematic color work, and narrative-driven scenes of the American West.",
+  "description": "A representative survey of Wayne Heim's western fine art photography, spanning black and white portraiture, cinematic color work, and narrative-driven scenes that extend into narrative western art.",
   "isPartOf": {
     "@type": "WebSite",
     "name": "K4 Studios",
@@ -268,7 +288,7 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
               The body of work documented here reflects Heim's ongoing investigation of frontier themes: cowboy portraiture, working ranch culture, and Indigenous presence in the contemporary West. His images have been compared to the tonal studies of Andrew Wyeth and the compositional discipline of early western illustrators.
             </p>
             <p class="reveal-on-scroll">
-              Heim's photographic output divides into several distinct bodies: monochromatic character portraits emphasizing form and texture; saturated color work informed by golden-hour landscape painting; and multi-figure narrative scenes that function as implied story fragments. Each category is represented in the selections below.
+              Heim's photographic output divides into several distinct bodies: monochromatic character portraits emphasizing form and texture; saturated color work informed by golden-hour landscape painting; and multi-figure narrative scenes that function as implied story fragments. That narrative branch connects directly to the site's broader <a href="/Narrative-Western-Art" class="editorial-link">Narrative Western Art</a> classification, where staged frontier scenes are treated as story-bearing fine art rather than documentary record.
             </p>
           </article>
         </section>
@@ -282,7 +302,7 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
       <div class="authority-image-grid">
         {bwPortraits.map((img: any, idx: number) => (
           <figure class="authority-image-figure">
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/${img.id}`}>
+            <a href={`${img.galleryPath}/${img.id}`}>
               <img 
                 src={getProxySrc(img.id, 'm')} 
                 alt={buildContextualAlt(img.alt, bwContext, { index: idx, tier: 'A', fallbackTitle: img.title, fallbackDescription: img.description })}
@@ -300,11 +320,11 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
     <!-- Section 2: Cinematic Color Western Photography -->
     <section class="image-section-wrap reveal-on-scroll">
       <h2 class="image-section-title">Cinematic Color Western Photography</h2>
-      <p class="image-section-intro">A distinct body of cinematic color western photography characterized by saturated palette and directional golden-hour light. These images reflect Heim's background in illustration, treating the American West as a stage for implied narrative. Selected works are also presented in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" class="editorial-link">Color Cowboy Portraits</a> gallery.</p>
+      <p class="image-section-intro">A distinct body of cinematic color western photography characterized by saturated palette and directional golden-hour light. These images reflect Heim's background in illustration, treating the American West as a stage for implied narrative. Selected works here draw from both the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" class="editorial-link">Color Cowboy Portraits</a> gallery and the broader <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" class="editorial-link">Western Narratives</a> section.</p>
       <div class="authority-image-grid">
         {cinematicSection.map((img: any, idx: number) => (
           <figure class="authority-image-figure">
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${img.id}`}>
+            <a href={`${img.galleryPath}/${img.id}`}>
               <img 
                 src={getProxySrc(img.id, 'm')} 
                 alt={buildContextualAlt(img.alt, cinematicContext, { index: idx, tier: 'A', fallbackTitle: img.title, fallbackDescription: img.description })}
@@ -322,11 +342,11 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
     <!-- Section 3: Narrative Western Scenes -->
     <section class="image-section-wrap reveal-on-scroll">
       <h2 class="image-section-title">Narrative Western Scenes</h2>
-      <p class="image-section-intro">A distinct body of narrative western scenes depicting implied action or suspended tension. Heim refers to these works as "One-Image Movies" — single frames designed to carry the weight of an unseen sequence. Additional narrative works appear in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color" class="editorial-link">Western Cowboy Portraits</a> collection.</p>
+      <p class="image-section-intro">A distinct body of narrative western scenes depicting implied action or suspended tension. Heim refers to these works as "One-Image Movies" — single frames designed to carry the weight of an unseen sequence. Within the site taxonomy, this body of work sits inside <a href="/Narrative-Western-Art" class="editorial-link">Narrative Western Art</a>. Additional narrative works appear in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color" class="editorial-link">Western Narratives</a> collection.</p>
       <div class="authority-image-grid">
         {narrativeSection.map((img: any, idx: number) => (
           <figure class="authority-image-figure">
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/${img.id}`}>
+            <a href={`${img.galleryPath}/${img.id}`}>
               <img 
                 src={getProxySrc(img.id, 'm')} 
                 alt={buildContextualAlt(img.alt, narrativeContext, { index: idx, tier: 'A', fallbackTitle: img.title, fallbackDescription: img.description })}
@@ -348,7 +368,7 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
       <div class="authority-image-grid">
         {characterSection.map((img: any, idx: number) => (
           <figure class="authority-image-figure">
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/${img.id}`}>
+            <a href={`${img.galleryPath}/${img.id}`}>
               <img 
                 src={getProxySrc(img.id, 'm')} 
                 alt={buildContextualAlt(img.alt, characterContext, { index: idx, tier: 'A', fallbackTitle: img.title, fallbackDescription: img.description })}
@@ -366,11 +386,11 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
     <!-- Section 5: Native American Western Portraits -->
     <section class="image-section-wrap reveal-on-scroll">
       <h2 class="image-section-title">Native American Western Portraits</h2>
-      <p class="image-section-intro">A distinct body of Native American western portraits created in collaboration with Indigenous communities. This work addresses historical representation while documenting contemporary presence and cultural continuity. The full body of work is presented in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color" class="editorial-link">Native American Portraits</a> gallery.</p>
+      <p class="image-section-intro">A distinct body of Native American western portraits created in collaboration with Indigenous communities. This work addresses historical representation while documenting contemporary presence and cultural continuity. The full body of work is presented in the <a href="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color" class="editorial-link">Native American Portraits</a> gallery.</p>
       <div class="authority-image-grid">
         {nativePortraits.map((img: any, idx: number) => (
           <figure class="authority-image-figure">
-            <a href={`/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color/${img.id}`}>
+            <a href={`${img.galleryPath}/${img.id}`}>
               <img 
                 src={getProxySrc(img.id, 'm')} 
                 alt={buildContextualAlt(img.alt, nativeContext, { index: idx, tier: 'A', fallbackTitle: img.title, fallbackDescription: img.description })}
@@ -391,7 +411,7 @@ const breadcrumb = '<a href="/">Home</a> / <span>Wayne Heim</span>';
         <section class="story-section authority-closing-section">
           <article class="story-block reveal-on-scroll">
             <p>
-              Heim's western photography is positioned within the broader tradition of American western art, following visual precedents established by Frederic Remington, Charles Russell, and later photographic interpreters of frontier subjects. His work is held in private collections focused on Western Americana and contemporary pictorialist photography.
+              Heim's western photography is positioned within the broader tradition of American western art, following visual precedents established by Frederic Remington, Charles Russell, and later photographic interpreters of frontier subjects. Across the site, that body of work bridges outward to both <a href="/Western-Fine-Art-Photography" class="editorial-link">Western Fine Art Photography</a> and <a href="/Narrative-Western-Art" class="editorial-link">Narrative Western Art</a>, where his staged frontier scenes function as story-centered counterparts to the portrait studies shown above. His work is held in private collections focused on Western Americana and contemporary pictorialist photography.
             </p>
           </article>
         </section>

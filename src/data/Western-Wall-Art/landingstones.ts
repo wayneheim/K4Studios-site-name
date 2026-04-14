@@ -1,7 +1,7 @@
 export const landingWallArt = {
   // Western Wall Art — COLLECTOR & DISCOVERY HUB
   title: "Western Wall Art",
-  subtitle: "Museum-Quality Cowboy & Western Fine Art Prints for Collectors",
+  subtitle: "Museum-Quality Cowboy, Narrative Western, and Frontier Fine Art Prints",
 
   // Keywords for structured data and semantic SEO (not meta keywords)
   keywords: [
@@ -10,9 +10,10 @@ export const landingWallArt = {
     "cowboy wall art",
     "western fine art prints",
     "western photography wall art",
+    "narrative western art",
+    "narrative western wall art",
     "western art for collectors",
     "museum quality western art",
-    "narrative western art",
     "cowboy fine art prints",
     "western fine art prints",
     "western portrait photography",
@@ -29,6 +30,11 @@ export const landingWallArt = {
     {
       title: "Western Cowboy Portraits",
       href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+      thumb: "", // Dynamically populated
+    },
+    {
+      title: "Narrative Western Art",
+      href: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
       thumb: "", // Dynamically populated
     },
     {

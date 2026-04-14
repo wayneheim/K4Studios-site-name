@@ -14,12 +14,17 @@ import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 // B/W Western gallery data (for StorySlider + structured data)
 import { galleryData as cowboyBWData }
   from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
+import { galleryData as westernNarrativesBWData }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs';
+import { galleryData as nativeAmericansBWData }
+  from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White.mjs';
 import { storySliderImageIds } from '@/data/storySlider.ts';
 
 import { getStructuredData, getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import { siteNav } from '@/data/siteNav.ts';
+import { getOrderedWesternGalleryPaths } from '@/data/carousel/westernRouting.ts';
 import { getFeatheredImages } from '@/components/utils/getFeatheredImages.ts';
 import { autoLinkKeywordsInText } from '@/components/utils/autoLinkKeywordsInText.ts';
 import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
@@ -69,8 +74,7 @@ function findNavEntry(nav: any[], url: string): any | null {
   return null;
 }
 
-// B/W gallery only
-const galleryPaths: string[] = [imageSectionPath];
+const galleryPaths: string[] = getOrderedWesternGalleryPaths(imageSectionPath);
 
 // Load galleryData for those galleryPaths
 const allGalleryData = import.meta.glob('../../data/Galleries/**/*.mjs', { eager: true }) as any;
@@ -113,6 +117,7 @@ const structuredData = getStructuredData({
       { "@type": "Thing", name: "Monochrome Photography" },
       { "@type": "Thing", name: "Cowboy Portraiture" },
       { "@type": "Thing", name: "American West" },
+      { "@type": "Thing", name: "Narrative Western Art" },
       { "@type": "Thing", name: "Fine Art Photography" },
     ],
     genre: "Western Black and White Photography",
@@ -177,6 +182,7 @@ const webPageSchema = JSON.stringify({
     { "@type": "Thing", name: "Monochrome Fine Art" },
     { "@type": "Thing", name: "Cowboy Portraiture" },
     { "@type": "Thing", name: "American West" },
+    { "@type": "Thing", name: "Narrative Western Art" },
     { "@type": "Thing", name: "Narrative Photography" },
   ],
   author: { "@id": "https://k4studios.com/#person" },
@@ -210,16 +216,21 @@ function pickAltTemplate(img: any, baseTitle: string) {
   return templates[hash % templates.length];
 }
 
+type FeaturedTile = {
+  id: string;
+  title: string;
+  alt: string;
+  href: string;
+  category: string;
+};
+
 function findImage(data: any[], id: string) {
-  const image = (data || []).find((item: any) => item.id === id && item.visibility !== 'ghost');
-  if (!image) {
-    throw new Error(`Missing gallery image for black and white western photography page: ${id}`);
-  }
-  return image;
+  return (data || []).find((item: any) => item.id === id && item.visibility !== 'ghost');
 }
 
-function makeTile(data: any[], id: string, hrefBase: string, category: string, fallback: string) {
+function makeTile(data: any[], id: string, hrefBase: string, category: string, fallback: string): FeaturedTile | null {
   const img = findImage(data, id);
+  if (!img?.id) return null;
   const title = (img.title || fallback || '').trim();
   return {
     id: img.id,
@@ -239,13 +250,15 @@ const featuredTiles = [
   makeTile(cowboyBWData, 'i-dLDF4Q6', imageSectionPath, 'Black and White Cowboy Photography', 'Black and white frontier portrait'),
   makeTile(cowboyBWData, 'i-5s8Zkrb', imageSectionPath, 'Black and White Cowboy Photography', 'Black and white frontier portrait'),
   makeTile(cowboyBWData, 'i-ffzG95X', imageSectionPath, 'Black and White Cowboy Photography', 'Black and white western portrait'),
-];
+].filter(Boolean) as FeaturedTile[];
 
 const landingImg = featheredImages[0];
 const landingImgUrl = landingImg?.id ? makeAbsoluteUrl(getProxySrc(landingImg.id, 'l')) : '';
 
-const meta = getLandingMeta(pagePath, landingImgUrl);
-meta.title = pageTitle;
+const meta: any = {
+  ...getLandingMeta(pagePath, landingImgUrl),
+  title: pageTitle,
+};
 meta.description = pageDescription;
 meta.ogTitle = pageTitle;
 meta.ogDescription = pageDescription;
@@ -255,12 +268,37 @@ if (!meta.ogUrl) meta.ogUrl = `https://k4studios.com${pagePath}`;
 if (!meta.twitterUrl) meta.twitterUrl = `https://k4studios.com${pagePath}`;
 
 // ----------------------
-// TOMBSTONE THUMBNAILS (all B&W, hardcoded)
+// TOMBSTONE THUMBNAILS (B/W pools, frontier funnel preserved)
 // ----------------------
-const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => ({
-  ...stone,
-  thumbs: [stone.thumb],
-}));
+function getTombstoneThumbs(galleryData: any[]): string[] {
+  const validImages = galleryData
+    .filter((img: any) => img.id !== 'i-k4studios' && img.visibility !== 'ghost')
+    .slice(0, 10);
+  return validImages
+    .map((img: any) => img.id ? getProxySrc(img.id, 's') : '')
+    .filter((src: string) => src !== '');
+}
+
+const tombstoneGalleryMap: Record<string, any[]> = {
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White': cowboyBWData,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White': westernNarrativesBWData,
+  '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White': nativeAmericansBWData,
+};
+
+const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => {
+  const thumbSourcePaths = Array.isArray(stone._thumbSources)
+    ? stone._thumbSources
+    : [stone._thumbSource || stone.href];
+  const thumbs = thumbSourcePaths.flatMap((path: string) => {
+    const galleryData = tombstoneGalleryMap[path];
+    return galleryData ? getTombstoneThumbs(galleryData) : [];
+  });
+  return {
+    ...stone,
+    thumb: thumbs[0] || stone.thumb || '',
+    thumbs,
+  };
+});
 ---
 
 <BaseLayout
@@ -418,7 +456,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => ({
           ))}
         </section>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
+        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages) as never[]} displayCount={headingCount} />
       </div>
 
       <div class="sidebar-column hidden md:block">
@@ -426,7 +464,7 @@ const tombstonesWithThumbs = landingWestern.tombstones.map((stone: any) => ({
           <LandingRightImages
             client:load
             heading="Collection Samples"
-            images={featheredImages}
+            images={featheredImages as never[]}
             displayCount={6}
           />
         </div>

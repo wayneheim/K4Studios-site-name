@@ -5,16 +5,25 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import LandingHeader from '@/components/Landing-Header.jsx';
 import SiteFooter from '@/components/Footer.astro';
 import { getBreadcrumbList } from '@/components/utils/getStructuredData.ts';
-
-import { galleryData as cowboyColor } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs';
-import { galleryData as cowboyBW } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs';
-import { galleryData as cowboyNA } from '@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs';
 import { galleryData as westLandscapes } from '@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery.mjs';
+import {
+  cowboyColorDataFull,
+  cowboyBWData,
+  westernNarrativesColorData,
+  westernNarrativesBWData,
+  westernNAColorData,
+} from '@/data/carousel/westernLandingContent.ts';
 
 const pagePath = '/western-photos';
 const canonicalUrl = `https://www.k4studios.com${pagePath}`;
 const pageTitle = 'Western Photos | Fine Art Photography of the American West';
 const pageDescription = 'Explore Western photos featuring cinematic cowboy scenes, portraits, and landscapes of the American West. Fine art photography with a painterly, storytelling approach.';
+
+const COWBOY_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color';
+const COWBOY_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White';
+const WESTERN_NARRATIVES_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color';
+const WESTERN_NARRATIVES_BW_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White';
+const NATIVE_AMERICANS_COLOR_PATH = '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color';
 
 const breadcrumb =
   `<a href="/" title="Home" style="color: inherit; text-decoration: none; cursor: pointer; pointer-events: auto; position: relative; z-index: 9999; transition: color 0.2s ease;" onmouseover="this.style.color='darkred'" onmouseout="this.style.color='inherit'">Wayne Heim</a> | Western Photos`;
@@ -25,6 +34,19 @@ function topRated(data: any[], count: number, skip = 0) {
     .sort((a: any, b: any) => a.sortOrder - b.sortOrder)
     .slice(skip, skip + count);
 }
+
+function withGalleryPath(data: any[], galleryPath: string) {
+  return (data || []).map((img: any) => ({ ...img, galleryPath }));
+}
+
+const cowboyColor = withGalleryPath(cowboyColorDataFull, COWBOY_COLOR_PATH);
+const cowboyBW = withGalleryPath(cowboyBWData, COWBOY_BW_PATH);
+const narrativeColor = withGalleryPath(westernNarrativesColorData, WESTERN_NARRATIVES_COLOR_PATH);
+const narrativeBW = withGalleryPath(westernNarrativesBWData, WESTERN_NARRATIVES_BW_PATH);
+const cowboyNA = withGalleryPath(westernNAColorData, NATIVE_AMERICANS_COLOR_PATH);
+
+const cowboyColorPool = [...cowboyColor, ...narrativeColor];
+const cowboyBWPool = [...cowboyBW, ...narrativeBW];
 
 function pickAltTemplate(img: any, category: string, baseTitle: string) {
   const templatesByCategory: Record<string, string[]> = {
@@ -37,6 +59,11 @@ function pickAltTemplate(img: any, category: string, baseTitle: string) {
       `${baseTitle} in black and white Western photography with strong tone and atmosphere`,
       `${baseTitle}, a monochrome Western photograph of cowboy life and open country`,
       `${baseTitle} in black and white Western photography shaped by shadow and grit`,
+    ],
+    'Narrative Western Art': [
+      `${baseTitle} in narrative Western art shaped by tension, gesture, and implied story`,
+      `${baseTitle}, a cinematic Western photograph built like a one-image movie`,
+      `${baseTitle} in painterly narrative Western photography from the American frontier`,
     ],
     'Indigenous Portrait Photography': [
       `${baseTitle} in Indigenous portrait photography connected to the American West`,
@@ -70,14 +97,17 @@ function makeTile(img: any, hrefBase: string, category: string, fallback: string
 }
 
 const photoTiles = [
-  ...topRated(cowboyColor, 5, 1).map((img: any) =>
-    makeTile(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color', 'Cowboy Portrait Photography', 'Western cowboy portrait')
+  ...topRated(cowboyColor, 4, 1).map((img: any) =>
+    makeTile(img, img.galleryPath, 'Cowboy Portrait Photography', 'Western cowboy portrait')
   ),
-  ...topRated(cowboyBW, 4, 1).map((img: any) =>
-    makeTile(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White', 'Black and White Western Photography', 'Black and white Western photo')
+  ...topRated(narrativeColor, 4, 0).map((img: any) =>
+    makeTile(img, img.galleryPath, 'Narrative Western Art', 'Narrative Western photograph')
+  ),
+  ...topRated(cowboyBWPool, 3, 1).map((img: any) =>
+    makeTile(img, img.galleryPath, 'Black and White Western Photography', 'Black and white Western photo')
   ),
   ...topRated(cowboyNA, 3, 0).map((img: any) =>
-    makeTile(img, '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/NA-Color', 'Indigenous Portrait Photography', 'Western portrait')
+    makeTile(img, img.galleryPath, 'Indigenous Portrait Photography', 'Western portrait')
   ),
   ...topRated(westLandscapes, 6, 0).map((img: any) =>
     makeTile(img, '/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery', 'Western Landscape Photography', 'Western landscape photo')
@@ -96,9 +126,14 @@ const relatedLinks = [
     description: 'A broader entry point into cowboy images, portraits, and the artistic side of the subject.',
   },
   {
-    href: '/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits',
+    href: '/western-portrait-photography',
     label: 'Western Portrait Photography',
     description: 'Character-driven portraits from the frontier world in color and black and white.',
+  },
+  {
+    href: '/Narrative-Western-Art',
+    label: 'Narrative Western Art',
+    description: 'The classification page for story-driven Western images built around tension, atmosphere, and implied sequence.',
   },
   {
     href: '/Western-Black-and-White-Photography',
@@ -115,7 +150,7 @@ const relatedLinks = [
     label: 'Photography in Western Art',
     description: 'A deeper authority page on how photography entered the Western art tradition.',
   },
-];
+].slice(0, 6);
 
 const breadcrumbsJSON = getBreadcrumbList([
   { name: 'Home', item: 'https://www.k4studios.com/' },
@@ -197,7 +232,7 @@ const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
             Western photos capture more than landscape—they hold moments of tension, character, and story from the American West.
           </p>
           <p>
-            This collection moves between cowboy portraits, black and white studies, landscapes, and narrative scenes. Some are quiet. Some feel like they’re about to break.
+            This collection moves between cowboy portraits, narrative Western art, black and white studies, Indigenous portraiture, and landscapes. Some are quiet. Some feel like they’re about to break.
           </p>
           <p>
             These are not stock Western images. Each photograph is built as a complete moment—something you step into, not just look at.
@@ -214,10 +249,10 @@ const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
         <div class="wp-bridge-copy">
           <h2 class="wp-section-title">Western Photography: Cowboys, Landscapes, and Story-Driven Fine Art</h2>
           <p>
-            Western photography spans more than a single subject—it moves between cowboy portraits, black and white Western images, landscapes, and narrative moments shaped by life in the American West.
+            Western photography spans more than a single subject—it moves between cowboy portraits, narrative Western art, black and white Western images, landscapes, and Indigenous portraiture shaped by life in the American West.
           </p>
           <p>
-            From quiet portraits to action-driven scenes, these images reflect both the iconic and the overlooked sides of Western life—capturing character, environment, and story in a single frame.
+            From quiet portraits to action-driven scenes, these images reflect both the iconic and the overlooked sides of Western life—capturing character, environment, and story in a single frame. The narrative branch sits in its own classification now, linking this page directly to story-driven frontier work.
           </p>
         </div>
         <div class="wp-grid">
@@ -248,7 +283,7 @@ const getProxySrc = (id: string, size: string) => `/img/${id}/${size}.jpg`;
       <div class="wp-links-section__inner">
         <h2 class="wp-section-title">Explore More</h2>
         <p class="wp-links-intro">
-          Explore key areas of Western photography, from cowboy portraits to painterly interpretations of the American West.
+          Explore key areas of Western photography, from cowboy portraits and narrative Western art to painterly interpretations of the American West.
         </p>
         <div class="wp-links-grid">
           {relatedLinks.map((link) => (

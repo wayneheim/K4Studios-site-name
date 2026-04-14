@@ -1,0 +1,76 @@
+---
+import imageIdMap from '@/data/imageIdMap.json';
+
+export const prerender = false;
+
+const imageMap = imageIdMap as Record<string, string[] | string>;
+
+function normalizePath(pathname: string) {
+  if (!pathname) return '';
+  const trimmed = String(pathname).trim();
+  if (!trimmed) return '';
+  return trimmed.length > 1 ? trimmed.replace(/\/+$/g, '') : trimmed;
+}
+
+function getImageMapLower() {
+  const lower: Record<string, { canonicalId: string; paths: string[] }> = {};
+  for (const [id, rawPaths] of Object.entries(imageMap)) {
+    const values = Array.isArray(rawPaths) ? rawPaths : [rawPaths];
+    lower[String(id || '').toLowerCase()] = {
+      canonicalId: id,
+      paths: values.map((value) => normalizePath(String(value || ''))).filter(Boolean),
+    };
+  }
+  return lower;
+}
+
+function pickCanonicalGalleryPath(requestedPath: string, candidates: string[]) {
+  if (!Array.isArray(candidates) || candidates.length === 0) return '';
+  if (candidates.length === 1) return candidates[0];
+
+  const requestedLower = String(requestedPath || '').toLowerCase();
+
+  const matchedByType = candidates.find((candidate) => {
+    const candidateLower = String(candidate || '').toLowerCase();
+    if (requestedLower.includes('/painterly-fine-art-photography/') && candidateLower.includes('/painterly-fine-art-photography/')) {
+      return true;
+    }
+    if (
+      requestedLower.includes('/fine-art-photography/') &&
+      !requestedLower.includes('/painterly-fine-art-photography/') &&
+      candidateLower.includes('/fine-art-photography/') &&
+      !candidateLower.includes('/painterly-fine-art-photography/')
+    ) {
+      return true;
+    }
+    return false;
+  });
+
+  if (matchedByType) return matchedByType;
+
+  const painterlyPreferred = candidates.find((candidate) =>
+    String(candidate || '').toLowerCase().includes('/painterly-fine-art-photography/')
+  );
+
+  return painterlyPreferred || candidates[0];
+}
+
+const pathname = normalizePath(Astro.url.pathname);
+const imageIdMatch = pathname.match(/\/(i-[A-Za-z0-9]+)\/?$/);
+const isImageNamespace = /^\/(?:Galleries|galleries|Other|other|Photography-Galleries)\//.test(pathname);
+
+if (isImageNamespace && imageIdMatch) {
+  const lookup = getImageMapLower()[imageIdMatch[1].toLowerCase()];
+  if (lookup?.paths?.length) {
+    const canonicalGalleryPath = pickCanonicalGalleryPath(pathname, lookup.paths);
+    const canonicalUrlPath = normalizePath(`${canonicalGalleryPath}/${lookup.canonicalId}`);
+    if (canonicalUrlPath && pathname.toLowerCase() !== canonicalUrlPath.toLowerCase()) {
+      return Astro.redirect(`${canonicalUrlPath}${Astro.url.search}`, 301);
+    }
+  }
+}
+
+Astro.response.status = 404;
+Astro.response.headers.set('Cache-Control', 'no-store, max-age=0');
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+---

@@ -17,6 +17,12 @@ const CANONICAL_LINK_MAP: Record<string, string> = {
   'historical western art': '/Historical-Western-Art',
   'historical western photography': '/Blog/what-is-historical-western-photography',
   'narrative western art': '/Narrative-Western-Art',
+  'one image movie': '/Other/One-Image-Movie',
+  'one image movies': '/Other/One-Image-Movie',
+  'one-image movie': '/Other/One-Image-Movie',
+  'one-image movies': '/Other/One-Image-Movie',
+  'one-image movie™': '/Other/One-Image-Movie',
+  'one-image movies™': '/Other/One-Image-Movie',
   'painterly fine art photography': '/Galleries/Painterly-Fine-Art-Photography',
   'painterly photography': '/Blog/what-is-painterly-photography',
   'reality behind the cowboy myth': '/authentic-cowboy-life',
@@ -76,18 +82,47 @@ function getSectionForKW(
   semantic: typeof defaultSemantic
 ): { section: any; type: 'landing' | 'image' | 'universal' } | null {
   const normKW = normalizeKW(kwLower);
-  // Only check landingPhrases for sections that have them (not universal)
+  let bestMatch: { section: any; type: 'landing' | 'image' | 'universal'; rating: number } | null = null;
+
+  // Prefer the strongest section-specific match instead of the first object-order hit.
   for (const key of Object.keys(semantic)) {
-    if (key === 'synonymMap') continue;
+    if (key === 'synonymMap' || key === 'universal') continue;
     const sec = (semantic as any)[key];
-    if (sec.landingPhrases && sec.landingPhrases.some((p: any) => p.use && normalizeKW(p.phrase) === normKW)) {
-      return { section: sec, type: 'landing' };
+
+    const landingMatch = sec.landingPhrases?.find(
+      (p: any) => p.use && normalizeKW(p.phrase) === normKW
+    );
+    if (landingMatch) {
+      const candidate = {
+        section: sec,
+        type: 'landing' as const,
+        rating: Number(landingMatch.rating || 0),
+      };
+      if (!bestMatch || candidate.rating > bestMatch.rating || (candidate.rating === bestMatch.rating && bestMatch.type !== 'landing')) {
+        bestMatch = candidate;
+      }
     }
-    if (sec.imagePhrases && sec.imagePhrases.some((p: any) => p.use && normalizeKW(p.phrase) === normKW)) {
-      return { section: sec, type: 'image' };
+
+    const imageMatch = sec.imagePhrases?.find(
+      (p: any) => p.use && normalizeKW(p.phrase) === normKW
+    );
+    if (imageMatch) {
+      const candidate = {
+        section: sec,
+        type: 'image' as const,
+        rating: Number(imageMatch.rating || 0),
+      };
+      if (!bestMatch || candidate.rating > bestMatch.rating) {
+        bestMatch = candidate;
+      }
     }
   }
-  // Only check imagePhrases for universal
+
+  if (bestMatch) {
+    return { section: bestMatch.section, type: bestMatch.type };
+  }
+
+  // Universal is only a fallback when no stronger section-specific match exists.
   if (
     semantic.universal?.imagePhrases?.some(
       p => p.use && normalizeKW(p.phrase) === normKW
@@ -154,6 +189,8 @@ function getPhraseLinkForKW(
   semantic: typeof defaultSemantic
 ): string | null {
   const normKW = normalizeKW(kwLower);
+  let bestLink: { link: string; rating: number } | null = null;
+
   for (const key of Object.keys(semantic)) {
     if (key === 'synonymMap') continue;
     const sec = (semantic as any)[key];
@@ -163,11 +200,14 @@ function getPhraseLinkForKW(
         (p: any) => p?.use && p?.link && normalizeKW(p.phrase) === normKW
       );
       if (found?.link) {
-        return found.link;
+        const candidate = { link: found.link, rating: Number(found.rating || 0) };
+        if (!bestLink || candidate.rating > bestLink.rating) {
+          bestLink = candidate;
+        }
       }
     }
   }
-  return null;
+  return bestLink?.link || null;
 }
 
 function getAllImageSectionsForKW(
